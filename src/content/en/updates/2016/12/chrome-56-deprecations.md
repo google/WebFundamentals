@@ -17,6 +17,16 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 56,
 which is in beta as of December xx. This list is subject to change at any time.
 
+## Replace CSP 'referrer' directive
+
+The CSP `referrer` directive allowed site owners to set a referrer policy from an HTTP header. Not only does this feature have [very low usage](https://www.chromestatus.com/metrics/feature/popularity#CSPReferrerDirective), it has also no longer part of any W3C spec.
+
+Sites that still need this functionality should use `<meta name="referrer">` or the new [Referrer-Policy header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy).
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/JqUlPA-HFfU/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5680800376815616) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=658761)
+
 ## Remove CBC-mode ECDSA ciphers in TLS
 
 TLS's CBC-mode construction is flawed, making it fragile and very difficult to implement securely. Although CBC-mode ciphers are still widely used with RSA, they are virtually nonexistent with ECDSA. Other browsers still support these ciphers,  we believe the risk is low. Additionally, ECDSA in TLS is used by few organizations and usually with a more complex setup (some older clients only support RSA), so we expect ECDSA sites to be better maintained and more responsive in case of problems.
