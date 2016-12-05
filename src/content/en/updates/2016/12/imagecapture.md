@@ -71,9 +71,8 @@ features enabled.
 
 The API has four methods:
 
-* `takePhoto()` returns a `Blob`, [the result of a single photographic exposure](https://www.w3.org/TR/image-capture/#dom-imagecapture-takephoto), which can be downloaded, stored by the browser
-or displayed in an `img` element.
-* `grabFrame()` returns an `ImageBitmap` object, [a snapshot of live video](https://www.w3.org/TR/image-capture/#dom-imagecapture-grabframe), which could (for example) be drawn on a canvas and then post-processed to selectively change color values.
+* `takePhoto()` returns a `Blob`, [the result of a single photographic exposure](https://www.w3.org/TR/image-capture/#dom-imagecapture-takephoto), which can be downloaded, stored by the browser or displayed in an `img` element. This method uses the highest available still-image camera resolution.
+* `grabFrame()` returns an `ImageBitmap` object, [a snapshot of live video](https://www.w3.org/TR/image-capture/#dom-imagecapture-grabframe), which could (for example) be drawn on a canvas and then post-processed to selectively change color values. Note that the `ImageBitmap` will only have the resolution of the video (which will be lower than the potential still image resolution).
 * `getPhotoCapabilities()` returns a `PhotoCapabilities` object that provides
 access to available camera options and their current values.
 * `setOptions()` is used to configure
