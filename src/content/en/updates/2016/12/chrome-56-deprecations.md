@@ -17,6 +17,14 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 56,
 which is in beta as of December xx. This list is subject to change at any time.
 
+## Remove MediaStreamTrack.getSources()
+
+This method is no longer part of the spec and is not supported by any other major browser. It has been replaced by `MediaDevices.enumerateDevices()`, which Blink has supported without flags since version 47 and which is also supported by other browsers.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/do3t86PtHCY/discussion) &#124;
+[Chromestatus Tracker](https://bugs.chromium.org/p/chromium/issues/detail?id=649710) &#124;
+[Chromium Bug](https://www.chromestatus.com/feature/4765305641369600)
+
 ## Remove reflected-xss CSP directive
 
 Early drafts of the [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/) spec contained a `reflected-xss` directive which offered nothing more than the `X-XSS-Protection` header other than a different syntax. This directive was removed from the spec in 2015, but not before it was implemented in Chrome. Support for this directive is now being removed.
