@@ -23,7 +23,7 @@ Love it or hate it, parallaxing is here to stay. When used judiciously it can ad
 * Use CSS 3D transforms to create a more accurate parallax effect.
 * For Mobile Safari use `position: sticky` to ensure that the parallax effect gets propagated.
 
-If you want the drop-in solution head over to the [UI Element Samples GitHub repo](https://github.com/GoogleChrome/ui-element-samples) and grab the [Parallax helper JS](https://github.com/GoogleChrome/ui-element-samples/blob/gh-pages/parallax/scripts/parallax.js)! A live demo of the parallax scroller can be found [here](http://googlechrome.github.io/ui-element-samples/parallax/).
+If you want the drop-in solution head over to the [UI Element Samples GitHub repo](https://github.com/GoogleChrome/ui-element-samples) and grab the [Parallax helper JS](https://github.com/GoogleChrome/ui-element-samples/blob/gh-pages/parallax/scripts/parallax.js)! You can see a [live demo of the parallax scroller](http://googlechrome.github.io/ui-element-samples/parallax/) in the GitHub repo.
 
 ## Problem parallaxers
 
