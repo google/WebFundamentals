@@ -594,7 +594,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
           <li>Intercept the `beforeinstallprompt` event and prompt later</li>
           <li>
             Chrome manages when to trigger the prompt but for situations this
-            might not be ideal. You can [defer the prompt](https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/#deferring_or_cancelling_the_prompt)
+            might not be ideal. You can [defer the prompt](/web/fundamentals/engage-and-retain/app-install-banners/#deferring_or_cancelling_the_prompt)
             to a later time in the app's usage. It may also help to dim the screen,
             as advised for requesting permissions below.
           </li>
