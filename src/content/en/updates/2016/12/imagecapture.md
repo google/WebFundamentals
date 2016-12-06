@@ -293,12 +293,8 @@ function gotDevices(deviceInfos) {
 function gotStream(stream) {
   console.log('getUserMedia() got stream: ', stream);
   mediaStream = stream;
-  if (window.URL) {
-    video.src = window.URL.createObjectURL(stream);
-    video.classList.remove('hidden');
-  } else {
-    video.src = stream;
-  }
+  video.srcObject = stream;
+  video.classList.remove('hidden');
   imageCapture = new ImageCapture(stream.getVideoTracks()[0]);
   getCapabilities();
 }
