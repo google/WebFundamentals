@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Image Capture is an API for controlling camera settings and taking photos.
+description: Image Capture is an API to control camera settings and take photos.
 
 {# wf_updated_on: 2016-12-05 #}
 {# wf_published_on: 2016-12-05 #}
 {# wf_tags: canvas,chrome56,media,webrtc #}
 {# wf_featured_image: /web/updates/images/2016/12/imagecapture/featured.jpg #}
-{# wf_featured_snippet: Image Capture is an API for controlling camera settings and taking photos. #}
+{# wf_featured_snippet: Image Capture is an API to control camera settings and take photos. #}
 
 <style>
 #ic-demo .hidden {
@@ -29,6 +29,12 @@ margin: 0 0 20px 0;
 display: block;
 margin: 0 0 20px 0;
 max-width: 100%;
+}
+
+div#ic-demo {
+border-top: 1px solid #eee;
+margin: 20px 0 0 0;
+padding: 20px 0 0 0;
 }
 
 #ic-demo img {
@@ -57,11 +63,13 @@ max-width: 100%;
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
-Image Capture is an API to capture still images and control camera settings.
+Image Capture is an API to capture still images and configure camera hardware
+settings.
 
-The API enables control over camera hardware features such as zoom, focus mode,
-contrast, ISO and white balance. Best of all, Image Capture enables access to the full resolution capabilities. Previous techniques for
-taking photos on the Web have used snapshots from a video stream, which are
+The API enables control over camera features such as zoom, focus mode,
+contrast, ISO and white balance. Best of all, Image Capture enables access to
+the full resolution capabilities of each available camera. Previous techniques
+for taking photos on the Web have used snapshots from a video stream, which are
 lower resolution than those available for still images.
 
 Image Capture is available in Chrome 56 on desktop and Android as an
@@ -71,8 +79,15 @@ features enabled.
 
 The API has four methods:
 
-* `takePhoto()` returns a `Blob`, [the result of a single photographic exposure](https://www.w3.org/TR/image-capture/#dom-imagecapture-takephoto), which can be downloaded, stored by the browser or displayed in an `img` element. This method uses the highest available still-image camera resolution.
-* `grabFrame()` returns an `ImageBitmap` object, [a snapshot of live video](https://www.w3.org/TR/image-capture/#dom-imagecapture-grabframe), which could (for example) be drawn on a canvas and then post-processed to selectively change color values. Note that the `ImageBitmap` will only have the resolution of the video (which will be lower than the potential still image resolution).
+* `takePhoto()` returns a `Blob`, [the result of a single photographic exposure](https://www.w3.org/TR/image-capture/#dom-imagecapture-takephoto),
+which can be downloaded, stored by the browser or displayed in an `img` element.
+This method uses the highest available photographic camera resolution.
+* `grabFrame()` returns an `ImageBitmap` object,
+[a snapshot of live video](https://www.w3.org/TR/image-capture/#dom-imagecapture-grabframe),
+which could (for example) be drawn on a canvas and then post-processed to
+selectively change color values. Note that the `ImageBitmap` will only have the
+resolution of the video source — which will be lower than the camera's
+still-image capabilities.
 * `getPhotoCapabilities()` returns a `PhotoCapabilities` object that provides
 access to available camera options and their current values.
 * `setOptions()` is used to configure
@@ -132,6 +147,12 @@ result in an `<img>`.
 
 * If the camera you are using supports zoom, a zoom slider will be displayed.
 
+Three variables from the demo are available from the console:
+
+* **constraints**
+* **imageCapture**
+* **mediaStream**
+
 <div id="ic-demo">
   <button id="grabFrame">Grab Frame</button>
   <button id="takePhoto">Take Photo</button>
@@ -160,9 +181,10 @@ capabilities of the camera. Previously, it was only possible to 'take a photo' b
 calling `drawImage()` on a `canvas` element, using a video as the source (as per the
 example [here](https://webrtc.github.io/samples/src/content/getusermedia/canvas/)).
 
-In this demo, the `canvas` dimensions are set to the resolution of the video
-stream, whereas the (natural) size of the `<img>` is the maximum resolution of
-the camera — though, of course, CSS is used to set the display size of both.
+In this demo, the `<canvas>` dimensions are set to the resolution of the video
+stream, whereas the (natural) size of the `<img>` is the maximum still-image
+resolution of the camera — though, of course, CSS is used to set the display
+size of both.
 
 The full range of possible camera resolutions for still images can be accessed
 via the `MediaSettingsRange` values for `PhotoCapabilities.imageHeight` and
@@ -209,6 +231,7 @@ out more about the API from Paul Kinlan's [blog post](https://paul.kinlan.me/fac
 
 var constraints;
 var imageCapture;
+var mediaStream;
 
 var grabFrameButton = document.querySelector('#ic-demo button#grabFrame');
 var takePhotoButton = document.querySelector('#ic-demo button#takePhoto');
@@ -225,15 +248,16 @@ videoSelect.onchange = getStream;
 zoomInput.oninput = setZoom;
 
 // Get a list of available media input (and output) devices.
-navigator.mediaDevices.enumerateDevices().then(gotDevices).
-catch(error => {
-  console.log('Error getting devices: ', error);
-});
+navigator.mediaDevices.enumerateDevices()
+  .then(gotDevices)
+  .catch(error => {console.log('enumerateDevices() error: ', error);})
+  .then(getStream);
+
 
 // Get a video stream from the currently selected camera source.
 function getStream() {
-  if (window.stream) {
-    window.stream.getTracks().forEach(track => {
+  if (mediaStream) {
+    mediaStream.getTracks().forEach(track => {
       track.stop();
     });
   }
@@ -242,9 +266,10 @@ function getStream() {
     audio: false,
     video: {deviceId: videoSource ? {exact: videoSource} : undefined}
   };
-  navigator.mediaDevices.getUserMedia(constraints).
-  then(gotStream).then(gotDevices).catch(error => {
-    console.log('getUserMedia error: ', error);
+  navigator.mediaDevices.getUserMedia(constraints)
+    .then(gotStream)
+    .catch(error => {
+      console.log('getUserMedia error: ', error);
   });
 }
 
@@ -261,22 +286,21 @@ function gotDevices(deviceInfos) {
       videoSelect.appendChild(option);
     }
   }
-  getStream();
 }
 
 // Display the stream from the currently selected camera source, and then
 // create an ImageCapture object, using the video from the stream.
 function gotStream(stream) {
   console.log('getUserMedia() got stream: ', stream);
-window.stream = stream; // global scope visible in browser console
-if (window.URL) {
-  video.src = window.URL.createObjectURL(stream);
-  video.classList.remove('hidden');
-} else {
-  video.src = stream;
-}
-imageCapture = new ImageCapture(stream.getVideoTracks()[0]);
-setTimeout(getCapabilities, 100);
+  mediaStream = stream;
+  if (window.URL) {
+    video.src = window.URL.createObjectURL(stream);
+    video.classList.remove('hidden');
+  } else {
+    video.src = stream;
+  }
+  imageCapture = new ImageCapture(stream.getVideoTracks()[0]);
+  getCapabilities();
 }
 
 // Get the PhotoCapabilities for the currently selected camera source.
@@ -290,7 +314,7 @@ function getCapabilities() {
       zoomInput.classList.remove('hidden');
     }
   }).catch(function(error) {
-    console.log('navigator.getUserMedia error: ', error);
+    console.log('getCapabilities() error: ', error);
   });
 }
 
