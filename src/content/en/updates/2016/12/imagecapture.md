@@ -68,7 +68,7 @@ settings.
 
 The API enables control over camera features such as zoom, focus mode,
 contrast, ISO and white balance. Best of all, Image Capture enables access to
-the full resolution capabilities of each available camera. Previous techniques
+the full camera resolution capabilities. Previous techniques
 for taking photos on the Web have used snapshots from a video stream, which are
 lower resolution than those available for still images.
 
@@ -133,7 +133,7 @@ it on a `<canvas>`:
       })
       .catch(error => console.error('grabFrame() error:', error));
 
-You can try this out in the demo below — if you're using a browser that supports `ImageCapture`:
+You can try this out in the demo below — if you're using a browser that supports the Image Capture API:
 
 * The `<video>` displays a stream from a camera via `getUserMedia()`.
 
@@ -198,7 +198,7 @@ shows how to set `getUserMedia()` constraints for resolution.
 
 ## Anything Else?
 
-* The [**Shape Detection API**](https://www.chromestatus.com/feature/4757990523535360) works well with `ImageCapture`: call `grabFrame()`
+* The [**Shape Detection API**](https://www.chromestatus.com/feature/4757990523535360) works well with Image Capture: call `grabFrame()`
 repeatedly to feed `ImageBitmap`s to a `FaceDetector` or `BarcodeDetector`. Find
 out more about the API from Paul Kinlan's [blog post](https://paul.kinlan.me/face-detection/).
 
@@ -206,7 +206,7 @@ out more about the API from Paul Kinlan's [blog post](https://paul.kinlan.me/fac
 [`FillLightMode`](https://w3c.github.io/mediacapture-image/#FillLightMode).
 
 ## Demos &amp; Code Samples
-* [Chrome Samples demo]( https://googlechrome.github.io/samples/image-capture/index.html)
+* [Chrome Samples demo](https://googlechrome.github.io/samples/image-capture/index.html)
 * [simpl.info/ic](https://simpl.info/ic)
 * [WebRTC samples](https://webrtc.github.io/samples)
 
