@@ -87,7 +87,7 @@ Payment Request API がどのように動作するのか、コードを追いな
           headers: {
             'Content-Type': 'application/json'
           },
-          body: result.toJSON()
+          body: JSON.stringify(result.toJSON())
         }).then(response => {
           // Examine server response
           if (response.status === 200) {
@@ -143,7 +143,7 @@ Payment Request API がどのように動作するのか、コードを追いな
           headers: {
             'Content-Type': 'application/json'
           },
-          body: result.toJSON()
+          body: JSON.stringify(result.toJSON())
         }).then(response => {
           // Examine server response
           if (response.status === 200) {

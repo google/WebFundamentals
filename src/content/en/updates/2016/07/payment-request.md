@@ -81,7 +81,7 @@ Let's peek at how Payment Request API works in some code. Here's a minimal examp
           headers: {
             'Content-Type': 'application/json'
           },
-          body: result.toJSON()
+          body: JSON.stringify(result.toJSON())
         }).then(response => {
           // Examine server response
           if (response.status === 200) {
@@ -138,7 +138,7 @@ Upon user tapping on "PAY" button, a promise will be resolved and payment inform
           headers: {
             'Content-Type': 'application/json'
           },
-          body: result.toJSON()
+          body: JSON.stringify(result.toJSON())
         }).then(response => {
           // Examine server response
           if (response.status === 200) {

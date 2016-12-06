@@ -178,7 +178,7 @@ Repeated or calculated values used in the `details` can be specified either as s
   </figure>
 </div>
 
-Activate the `PaymentRequest` interface by calling its [`show`](https://www.w3.org/TR/payment-request/#show) method. This method invokes a native UI that allows the user to examine the details of the purchase, add or change information, and finally, pay. A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) (indicated by its `then` method and callback function) that resolves will be returned when the user accepts or rejects the payment request.
+Activate the `PaymentRequest` interface by calling its [`show()`](https://www.w3.org/TR/payment-request/#show) method. This method invokes a native UI that allows the user to examine the details of the purchase, add or change information, and finally, pay. A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) (indicated by its `then()` method and callback function) that resolves will be returned when the user accepts or rejects the payment request.
 
 <div style="clear:both;"></div>
 
@@ -193,11 +193,11 @@ Activate the `PaymentRequest` interface by calling its [`show`](https://www.w3.o
 *PaymentRequest show method*
 
 ### Abort a Payment Request {: #abort-paymentrequest }
-You can intentionally abort a `PaymentRequest` by calling its [`abort`](https://www.w3.org/TR/payment-request/#abort) method. This is particulary useful when the shopping session is timed out or the goods is sold out in between a user's transaction.
+You can intentionally abort a `PaymentRequest` by calling its [`abort()`](https://www.w3.org/TR/payment-request/#abort) method. This is particulary useful when the shopping session is timed out or an item in the cart sells out during the transaction.
 
-Use this method if the app needs to cancel the payment request after the `show` method has been called but before the promise has been resolved&mdash;for example, if an item is no longer available, or the user fails to confirm the purchase within an allotted amount of time.
+Use this method if the app needs to cancel the payment request after the `show()` method has been called but before the promise has been resolved &mdash; For example, if an item is no longer available, or the user fails to confirm the purchase within an allotted amount of time.
 
-If you abort a request, you'll need to create a new instance of `PaymentRequest` before you can call `show` again.
+If you abort a request, you'll need to create a new instance of `PaymentRequest` before you can call `show()` again.
 
 
     var paymentTimeout = window.setTimeout(function() {
@@ -213,7 +213,7 @@ If you abort a request, you'll need to create a new instance of `PaymentRequest`
 *PaymentRequest abort method*
 
 ### Process the PaymentResponse {: # process-paymentresponse}
-Upon a user approval for a payment request, the [`show`](https://www.w3.org/TR/payment-request/#show) method's promise resolves, resulting in a `PaymentResponse` object.
+Upon a user approval for a payment request, the [`show()`](https://www.w3.org/TR/payment-request/#show) method's promise resolves, resulting in a `PaymentResponse` object.
 
 <table class="properties responsive">
 <tr>
@@ -259,7 +259,7 @@ For credit card payments, the response is standardized. For non-credit card paym
 `cardSecurityCode`
 `billingAddress`
 
-After payment information is received, the app should submit the payment information to your payment processor for processing. The UI will show a spinner while the request takes place. When a response has come back, the app should call `complete` to close the UI.
+After payment information is received, the app should submit the payment information to your payment processor for processing. The UI will show a spinner while the request takes place. When a response has come back, the app should call `complete()` to close the UI.
 
 
     payment.show().then(paymentResponse => {
@@ -299,7 +299,7 @@ After payment information is received, the app should submit the payment informa
   </figure>
 </div>
 
-The [`complete`](https://www.w3.org/TR/payment-request/#complete) method tells the user agent that the user interaction is over and allows the app to notify the user of the result and to address the disposition of any remaining UI elements.
+The [`complete()`](https://www.w3.org/TR/payment-request/#complete) method tells the user agent that the user interaction is over and allows the app to notify the user of the result and to address the disposition of any remaining UI elements.
 
 <div style="clear:both;"></div>
 
@@ -325,7 +325,7 @@ The [`complete`](https://www.w3.org/TR/payment-request/#complete) method tells t
 
 If you are a merchant selling physical goods, you may want to collect the user's shipping address using the Payment Request API. This is accomplished by adding `requestShipping: true` to the `options` parameter. With this parameter set, "Shipping" will be added to the UI, and users can select from a list of stored addresses or add a new shipping address.
 
-You can alternatively use "Delivery" or "Pickup" instead of "Shipping" in the UI by specifying `shippingType`. This is solely display purpose.
+You can alternatively use "Delivery" or "Pickup" instead of "Shipping" in the UI by specifying `shippingType`. This is solely for display purposes.
 
 <div style="clear:both;"></div>
 
@@ -400,7 +400,7 @@ Note: Resolving <code>shippingaddresschange</code> event and leaving <code>detai
   </figure>
 </div>
 
-Upon user approval for a payment request, the [`show`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `.shippingAddress` property of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the shipping address, along with other properties.
+Upon user approval for a payment request, the [`show()`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `.shippingAddress` property of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the shipping address, along with other properties.
 
 <div style="clear:both;"></div>
 
@@ -489,7 +489,7 @@ Changing shipping options may have different prices. In order to add the shippin
   </figure>
 </div>
 
-Upon user approval for a payment request, the [`show`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `.shippingOption` property of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the shipping option, along with other properties.
+Upon user approval for a payment request, the [`show()`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `.shippingOption` property of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the shipping option, along with other properties.
 
 <div style="clear:both;"></div>
 
@@ -529,7 +529,7 @@ You can also collect a user's email address, phone number or name by configuring
   </figure>
 </div>
 
-Upon user approval for a payment request, the [`show`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `.payerPhone`, `.payerEmail` and/or `.payerName` properties of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the user choice, along with other properties.
+Upon user approval for a payment request, the [`show()`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `.payerPhone`, `.payerEmail` and/or `.payerName` properties of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the user choice, along with other properties.
 
 <div style="clear:both;"></div>
 
@@ -666,7 +666,7 @@ As Payment Request API is an emerging feature, many browsers don't yet support i
           headers: {
             'Content-Type': 'application/json'
           },
-          body: result.toJSON()
+          body: JSON.stringify(result.toJSON())
         }).then(res => {
           // Only if successful
           if (res.status === 200) {

@@ -83,7 +83,7 @@ figure {
 * Make sure you have the Android Pay app installed on your device. You need to be in one of the supported countries to install it. Check on [android.com/pay](https://www.android.com/pay/){: .external } to see if your country is supported.
 * For testing, you need to [add a credit card](https://support.google.com/androidpay/answer/6289372) to Android Pay on your device.
 * Sign up for Android Pay
-    * Add your company, site origin, and a company email etc using [this form.](https://androidpay.developers.google.com/signup)
+    * Add your company, site origin, and a company email etc. using [this form.](https://androidpay.developers.google.com/signup)
 * Ensure that [your payment gateway / processor supports Android Pay tokens](/android-pay/#processors).
 * Acquire a key-pair used to encrypt the response from Android Pay if you are using [the network token approach](#integration-using-network-token).
     * Google recommends that you work with your payment processor to obtain a public key. This simplifies the process as your processor will be able to handle decryption of the Android Pay Payload. Find more information at your payment processor documentation.
@@ -142,7 +142,7 @@ In order to use Android Pay with the gateway token approach, add a JSON object t
 
 * `supportedMethods: [ 'https://android.com/pay' ]`: Indicate this is a payment method using Android Pay.
 * `data`: These are Android Pay specific values which are not yet standardized.
-    * `merchantId`: The Android Pay Merchant ID you have obtained by [signing up to Android Pay](https://androidpay.developers.google.com/signup).
+    * `merchantId`: The Android Pay Merchant ID you obtained by [signing up to Android Pay](https://androidpay.developers.google.com/signup).
     * `environment:'TEST'`: Add this if you are testing with Android Pay. The generated gateway token will be invalid.
     * `allowedCardNetworks`: Provide an array of credit card networks that constitute a valid Android Pay response. It accepts "AMEX", "DISCOVER", "MASTERCARD" and "VISA".
     * `paymentMethodTokenizationParameters`:
@@ -293,7 +293,7 @@ How you handle a submitted gateway token depends on the payment gateway. Please 
           headers: {
             'Content-Type': 'application/json'
           },
-          body: result.toJSON()
+          body: JSON.stringify(result.toJSON())
         }).then(res => {
           // Only if successful
           if (res.status === 200) {
@@ -360,7 +360,7 @@ In order to use Android Pay with the network token approach, add a JSON object t
 
 * `supportedMethods: [ 'https://android.com/pay' ]`: Indicate this is a payment method using Android Pay.
 * `data`:
-    * `merchantId`: The Android Pay Merchant ID you have obtained by [signing up to Android Pay](https://androidpay.developers.google.com/signup).
+    * `merchantId`: The Android Pay Merchant ID you obtained by [signing up to Android Pay](https://androidpay.developers.google.com/signup).
     * `environment:'TEST'`: Add this if you are testing with Android Pay. The generated token will be invalid.  For production environment, remove this line.
     * `allowedCardNetworks`: Provide an array of credit card networks that constitute a valid Android Pay response.
     * `paymentMethodTokenizationParameters`:
