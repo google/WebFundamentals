@@ -147,7 +147,7 @@ result in an `<img>`.
 
 * If the camera you are using supports zoom, a zoom slider will be displayed.
 
-Three variables from the demo are available from the console:
+Several variables from the demo are available from the console:
 
 * **constraints**
 * **imageCapture**
@@ -306,6 +306,7 @@ function getCapabilities() {
     if (capabilities.zoom.max > 0) {
       zoomInput.min = capabilities.zoom.min;
       zoomInput.max = capabilities.zoom.max;
+      zoomInput.step = capabilities.zoom.step;
       zoomInput.value = capabilities.zoom.current;
       zoomInput.classList.remove('hidden');
     }
