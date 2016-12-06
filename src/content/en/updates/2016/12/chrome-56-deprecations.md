@@ -36,7 +36,7 @@ However, since touch events cannot support hover, hovering mousemoves followed a
 Starting with Chrome 56, a mouse on Android M Or later will:
 
 * No longer fire `TouchEvents`.
-* Fire a cosistent sequence of `MouseEvents` with appropriate buttons and other properties. 
+* Fire a consistent sequence of `MouseEvents` with appropriate buttons and other properties. 
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cNaFvMaYtNA/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5642080642662400) &#124;
@@ -56,7 +56,7 @@ Currently, Chrome's preload scanner fetches items in `<scripts>` elements regard
 
 The use case of using invalid scripts to ping servers is adequately covered by the [sendBeacon API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon).
 
-This change alligns Chrome with Safari, though Firebox still requests scripts regardless of type or language.
+This change aligns Chrome with Safari, though FireFox still requests scripts regardless of type or language.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/eu57SCNltls/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5760718284521472) &#124;
@@ -64,7 +64,7 @@ This change alligns Chrome with Safari, though Firebox still requests scripts re
 
 ## Remove MediaStreamTrack.getSources()
 
-This method is no longer part of the spec and is not supported by any other major browser. It has been replaced by `MediaDevices.enumerateDevices()`, which Blink has supported without flags since version 47 and which is also supported by other browsers.
+This method is no longer part of the spec and is not supported by any other major browser. It has been replaced by [`MediaDevices.enumerateDevices()`](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices), which Blink has supported without flags since version 47 and which is also supported by other browsers.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/do3t86PtHCY/discussion) &#124;
 [Chromestatus Tracker](https://bugs.chromium.org/p/chromium/issues/detail?id=649710) &#124;
