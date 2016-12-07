@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Payment Request is a new API for the open web that makes checkout flows easier, faster and consistent.
 
-{# wf_updated_on: 2016-07-30 #}
+{# wf_updated_on: 2016-12-06 #}
 {# wf_published_on: 2016-07-30 #}
 {# wf_tags: javascript,payment #}
 {# wf_featured_image: /web/updates/images/2016/07/payment-request/0.png #}
@@ -43,7 +43,7 @@ Let's peek at how Payment Request API works in some code. Here's a minimal examp
         location.href = '/checkout';
         return;
       }
-    
+
       // Supported payment methods
       var supportedInstruments = [{
         supportedMethods: [
@@ -51,7 +51,7 @@ Let's peek at how Payment Request API works in some code. Here's a minimal examp
           'diners', 'jcb', 'unionpay'
         ]
       }];
-    
+
       // Checkout details
       var details = {
         displayItems: [{
@@ -66,18 +66,14 @@ Let's peek at how Payment Request API works in some code. Here's a minimal examp
           amount: { currency: 'USD', value : '55.00' }
         }
       };
-    
+
       // 1. Create a `PaymentRequest` instance
       var request = new PaymentRequest(supportedInstruments, details);
-    
+
       // 2. Show the native UI with `.show()`
       request.show()
       // 3. Process the payment
       .then(result => {
-        var data = {};
-        data.methodName = result.methodName;
-        data.details    = result.details;
-    
         // POST the payment information to the server
         return fetch('/pay', {
           method: 'POST',
@@ -85,7 +81,7 @@ Let's peek at how Payment Request API works in some code. Here's a minimal examp
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify(result.toJSON())
         }).then(response => {
           // Examine server response
           if (response.status === 200) {
@@ -100,9 +96,9 @@ Let's peek at how Payment Request API works in some code. Here's a minimal examp
         });
       });
     }
-    
+
     document.querySelector('#start').addEventListener('click', onBuyClicked);
-    
+
 
 ![](/web/updates/images/2016/07/payment-request/1.png)
 
@@ -112,7 +108,7 @@ When a  user taps on "Checkout", start a payment procedure by instantiating `Pay
 
 
     var request = new PaymentRequest(supportedInstruments, details);
-    
+
 
 ### 2. Show the native UI with .show()
 
@@ -123,7 +119,7 @@ Show the native payment UI with `show()`. Within this UI, a user can determine a
       .then(payment => {
         // pressed "Pay"
       });
-    
+
 
  <img src="/web/updates/images/2016/07/payment-request/2.png" style="max-width:340px">
  <img src="/web/updates/images/2016/07/payment-request/3.png" style="max-width:340px">
@@ -135,10 +131,6 @@ Upon user tapping on "PAY" button, a promise will be resolved and payment inform
 
       request.show()
       .then(result => {
-        var data = {};
-        data.methodName = result.methodName;
-        data.details    = result.details;
-    
         // POST the payment information to the server
         return fetch('/pay', {
           method: 'POST',
@@ -146,7 +138,7 @@ Upon user tapping on "PAY" button, a promise will be resolved and payment inform
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify(result.toJSON())
         }).then(response => {
           // Examine server response
           if (response.status === 200) {
@@ -160,7 +152,7 @@ Upon user tapping on "PAY" button, a promise will be resolved and payment inform
           return result.complete('fail');
         });
       });
-    
+
 
  <img src="/web/updates/images/2016/07/payment-request/4.png" style="max-width:340px">
  <img src="/web/updates/images/2016/07/payment-request/5.png" style="max-width:340px">
@@ -177,7 +169,7 @@ If you are selling physical goods, you'll probably need to collect the user's sh
 
 ### Adding more payment solutions
 
-Credit card is not the only supported payment solution for Payment Request. There are a number of other payment services and solutions in the wild and the Payment Request API is designed to support as many of those as possible. Google is working to bring Android Pay to Chrome. Other third party solutions will be supported in the near future as well. Stay tuned for updates.
+Credit card is not the only supported payment solution for Payment Request. There are a number of other payment services and solutions in the wild and the Payment Request API is designed to support as many of those as possible. Google is working to bring [Android Pay to Chrome](/web/fundamentals/discovery-and-monetization/payment-request/android-pay). Other third party solutions will be supported in the near future as well. Stay tuned for updates.
 
 ## FAQ
 
@@ -187,8 +179,8 @@ Use Chrome for Android with version 53 or later. Requires secure origin - HTTPS,
 
 ### Is it possible to query the available payment methods?
 
-Currently not supported, but we're investigating ways of exposing this API in a privacy-sensitive way.  
-Payment Request API is designed to support the broadest possible array of payment methods. Each payment method is identified by a [payment method identifier](https://w3c.github.io/browser-payment-api/specs/architecture.html#dfn-payment-method-identifier).  
+Currently not supported, but we're investigating ways of exposing this API in a privacy-sensitive way.
+Payment Request API is designed to support the broadest possible array of payment methods. Each payment method is identified by a [payment method identifier](https://w3c.github.io/browser-payment-api/specs/architecture.html#dfn-payment-method-identifier).
 Payment Method Identifiers will support distributed extensibility, meaning that there does not need to be a central machine-readable registry to discover or register [payment methods](https://w3c.github.io/browser-payment-api/specs/architecture.html#dfn-payment-method).
 
 ### Do you plan on offering a coupon code?

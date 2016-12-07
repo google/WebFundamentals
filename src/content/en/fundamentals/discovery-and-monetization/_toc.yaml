@@ -11,7 +11,7 @@ toc:
       path: https://www.google.com/adsense
     - title: Handling Payments
       section:
-      - title: Integration Guide
+      - title: Payment Request API - an Integration Guide
         path: /web/fundamentals/discovery-and-monetization/payment-request/
       - title: Integrating Android Pay into Payment Request
         path: /web/fundamentals/discovery-and-monetization/payment-request/android-pay

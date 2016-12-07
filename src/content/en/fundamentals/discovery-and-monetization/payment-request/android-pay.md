@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Android Pay enables simple and secure purchases online and eliminates the need for users to remember and manually enter their payment information. Integrate Android Pay to reach millions of Android users, drive higher conversion, and give users a true one-touch checkout experience.
 
-{# wf_updated_on: 2016-09-20 #}
+{# wf_updated_on: 2016-12-06 #}
 {# wf_published_on: 2016-09-07 #}
 
 # Integrating Android Pay into Payment Request {: .page-title }
@@ -82,9 +82,8 @@ figure {
 
 * Make sure you have the Android Pay app installed on your device. You need to be in one of the supported countries to install it. Check on [android.com/pay](https://www.android.com/pay/){: .external } to see if your country is supported.
 * For testing, you need to [add a credit card](https://support.google.com/androidpay/answer/6289372) to Android Pay on your device.
-* Sign up for a merchant ID from Android Pay
-    * Add your company, site origin, and a company email using [this form.](https://goo.gl/forms/SiKd7GAESCPNg9H83)
-    * Google will provide a merchant ID within 1 business day.
+* Sign up for Android Pay
+    * Add your company, site origin, and a company email etc. using [this form.](https://androidpay.developers.google.com/signup)
 * Ensure that [your payment gateway / processor supports Android Pay tokens](/android-pay/#processors).
 * Acquire a key-pair used to encrypt the response from Android Pay if you are using [the network token approach](#integration-using-network-token).
     * Google recommends that you work with your payment processor to obtain a public key. This simplifies the process as your processor will be able to handle decryption of the Android Pay Payload. Find more information at your payment processor documentation.
@@ -137,13 +136,13 @@ In requesting a gateway token, Android Pay makes a call to your processor on you
         }
       }
     ];
-    
+
 
 In order to use Android Pay with the gateway token approach, add a JSON object that contains the following parameters per the above example.
 
 * `supportedMethods: [ 'https://android.com/pay' ]`: Indicate this is a payment method using Android Pay.
 * `data`: These are Android Pay specific values which are not yet standardized.
-    * `merchantId`: [Android Pay Merchant ID](https://goo.gl/forms/SiKd7GAESCPNg9H83) you have obtained from Google.
+    * `merchantId`: The Android Pay Merchant ID you obtained by [signing up to Android Pay](https://androidpay.developers.google.com/signup).
     * `environment:'TEST'`: Add this if you are testing with Android Pay. The generated gateway token will be invalid.
     * `allowedCardNetworks`: Provide an array of credit card networks that constitute a valid Android Pay response. It accepts "AMEX", "DISCOVER", "MASTERCARD" and "VISA".
     * `paymentMethodTokenizationParameters`:
@@ -181,14 +180,14 @@ How you handle a submitted gateway token depends on the payment gateway. Please 
 
     function onBuyClicked() {
       const ANDROID_PAY = 'https://android.com/pay';
-    
+
       if (!window.PaymentRequest) {
         // PaymentRequest API is not available. Forwarding to
         // legacy form based experience.
         location.href = '/checkout';
         return;
       }
-    
+
       var supportedInstruments = [
         {
           supportedMethods: [
@@ -213,7 +212,7 @@ How you handle a submitted gateway token depends on the payment gateway. Please 
           }
         }
       ];
-    
+
       var details = {
         displayItems: [{
           label: 'Original donation amount',
@@ -227,16 +226,17 @@ How you handle a submitted gateway token depends on the payment gateway. Please 
           amount: { currency: 'USD', value : '55.00' }
         }
       };
-    
+
       var options = {
         requestShipping: true,
         requestPayerEmail: true,
-        requestPayerPhone: true
+        requestPayerPhone: true,
+        requestPayerName: true
       };
-    
+
       // Initialization
       var request = new PaymentRequest(supportedInstruments, details, options);
-    
+
       // When user selects a shipping address
       request.addEventListener('shippingaddresschange', e => {
         e.updateWith(((details, addr) => {
@@ -271,11 +271,11 @@ How you handle a submitted gateway token depends on the payment gateway. Please 
             details.displayItems.push(shippingOption);
           }
           details.shippingOptions = [shippingOption];
-    
+
           return Promise.resolve(details);
         })(details, request.shippingAddress));
       });
-    
+
       // When user selects a shipping option
       request.addEventListener('shippingoptionchange', e => {
         e.updateWith(((details) => {
@@ -283,26 +283,17 @@ How you handle a submitted gateway token depends on the payment gateway. Please 
           return Promise.resolve(details);
         })(details));
       });
-    
+
       // Show UI then continue with user payment info
       request.show().then(result => {
-        // Manually clone the resulting object
-        var data = {};
-        data.methodName = result.methodName;
-        data.details    = result.details;
-        data.payerEmail = result.payerEmail;
-        data.payerPhone = result.payerPhone;
-        data.address    = toDict(result.shippingAddress);
-        data.shipping   = result.shippingOption;
-    
-        // POST the object to the server
+        // POST the result to the server
         return fetch('/pay', {
           method: 'POST',
           credentials: 'include',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify(result.toJSON())
         }).then(res => {
           // Only if successful
           if (res.status === 200) {
@@ -319,9 +310,9 @@ How you handle a submitted gateway token depends on the payment gateway. Please 
           }
         }).then(() => {
           console.log('Thank you!',
-              result.shippingAddress,
+              result.shippingAddress.toJSON(),
               result.methodName,
-              result.details);
+              result.details.toJSON());
         }).catch(() => {
           return result.complete('fail');
         });
@@ -329,29 +320,9 @@ How you handle a submitted gateway token depends on the payment gateway. Please 
         console.error('Uh oh, something bad happened: ' + err.message);
       });
     }
-    
-    // convert `addr` into a dictionary
-    var toDict = function(addr) {
-      var dict = {};
-      if (addr) {
-        dict.country           = addr.country;
-        dict.region            = addr.region;
-        dict.city              = addr.city;
-        dict.dependentLocality = addr.dependentLocality;
-        dict.addressLine       = addr.addressLine;
-        dict.postalCode        = addr.postalCode;
-        dict.sortingCode       = addr.sortingCode;
-        dict.languageCode      = addr.languageCode;
-        dict.organization      = addr.organization;
-        dict.recipient         = addr.recipient;
-        dict.careOf            = addr.careOf;
-        dict.phone             = addr.phone;
-      }
-      return dict;
-    };
-    
+
     document.querySelector('#start').addEventListener('click', onBuyClicked);
-    
+
 
 ### Integration using Network Token
 Requesting a network token requires two pieces of information to be included in the PaymentRequest.
@@ -383,13 +354,13 @@ Requesting a network token requires two pieces of information to be included in 
         }
       }
     ];
-    
+
 
 In order to use Android Pay with the network token approach, add a JSON object that contains the following parameters per the above example.
 
 * `supportedMethods: [ 'https://android.com/pay' ]`: Indicate this is a payment method using Android Pay.
 * `data`:
-    * `merchantId`: [Android Pay Merchant ID](https://goo.gl/forms/SiKd7GAESCPNg9H83) you have obtained from Google.
+    * `merchantId`: The Android Pay Merchant ID you obtained by [signing up to Android Pay](https://androidpay.developers.google.com/signup).
     * `environment:'TEST'`: Add this if you are testing with Android Pay. The generated token will be invalid.  For production environment, remove this line.
     * `allowedCardNetworks`: Provide an array of credit card networks that constitute a valid Android Pay response.
     * `paymentMethodTokenizationParameters`:
@@ -405,14 +376,14 @@ After you add the Android Pay object, Chrome can request a chargeable network to
       details,              // required information about transaction
       options               // optional parameter for things like shipping, etc.
     );
-    
+
     payment.show().then(function(response) {
       // Process response
       response.complete("success");
     }).catch(function(err) {
       console.error("Uh oh, something bad happened", err.message);
     });
-    
+
 
 The encrypted response from PaymentRequest will contain the shipping and contact information as in the examples outlined in the [PaymentRequest integration guide](.), but now includes an additional response from Android Pay containing
 
