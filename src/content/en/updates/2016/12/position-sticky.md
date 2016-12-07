@@ -30,13 +30,13 @@ implementation has been worked on since 2013.
 The great news is that as of Chrome 56 (currently beta as of December 2016,
 stable in Jan 2017) `position: sticky` is now back in Chrome.
 
-## What is position:sticky
+## What is position:sticky?
 
 It's taken a little while to get here, so why am I excited about it?
 
-`position:sticky` is a CSS positioning attribute that allows you to have an
-element that is fixed to the viewport (i.e, anchored to the top of the screen)
-but only when its parent is in the visible in the viewport and it is within the
+`position:sticky` is a CSS positioning attribute that allows you to fix an
+element to the viewport (i.e, anchor it to the top of the screen)
+but only when its parent is visible in the viewport and it is within the
 threshold value. When it is not fixed to the viewport, the element will act like
 it is `position: relative`. It is a very nice and simple addition to the
 platform that removes the need to use JavaScript in an `onscroll` event handler
@@ -49,21 +49,19 @@ rather long and laborious articles :\
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2EmbqcTMqQw"
         frameborder="0" allowfullscreen></iframe>
 
-To implement this feature you can simply specify that the `position` attribute
+To implement this feature specify that the `position` attribute
 should have the value of `sticky` on the element that you want to be, er, stuck.
 Additionally, you can also add in the offset at where it needs to be stuck.
 
-```
-h3 { 
-  /* Element will be 'fixed' when it ... */
-  position: sticky;
-  /* ... is 10px from the top of the viewport */
-  top: 10px;
-}
-```
+    h3 { 
+      /* Element will be 'fixed' when it ... */
+      position: sticky;
+      /* ... is 10px from the top of the viewport */
+      top: 10px;
+    }
 
-The previous example will fix the `h3` element at 10px from the top of the
-viewport. To have it fixed directly to the top of the viewport you would set
+The previous example will fix the `<h3>` element at 10px from the top of the
+viewport. To fix it directly to the top of the viewport you would set
 the `top` attribute as `top: 0px`.
 
 Support for this feature is pretty strong. It is available on Chrome (yay),
