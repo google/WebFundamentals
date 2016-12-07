@@ -222,7 +222,7 @@ The following tests are verifiable with the Lighthouse tool.
 <table class="responsive">
   <tbody>
     <tr>
-      <th colspan=2><h3>Each pages has a URL</h3></th>
+      <th colspan=2><h3>Each page has a URL</h3></th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -316,7 +316,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
             AMP support</a>.
           </li>
           <li>
-            An e-commerce app should have the
+            An ecommerce app should have the
             <a href="/search/docs/data-types/products">Product type markup</a>
             for Rich Cards.
           </li>
@@ -715,7 +715,7 @@ Note: This check list only applies if notifications are implemented
 <table class="responsive">
   <tbody>
     <tr>
-      <th colspan=2><h3>Ensure that the UI that encourages users to turn on Push Notifications isn't overly aggressive</h3></th>
+      <th colspan=2><h3>Ensure that the UI encouraging users to turn on Push Notifications isn't overly aggressive</h3></th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
