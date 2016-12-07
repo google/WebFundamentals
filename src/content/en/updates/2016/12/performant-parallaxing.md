@@ -4,7 +4,7 @@ description: With a little mathematical wriggling, it's possible to have paralla
 
 {# wf_updated_on: 2016-12-02 #}
 {# wf_published_on: 2016-12-02 #}
-{# wf_tags: performance,parallax,sticky,3d,style #}
+{# wf_tags: performance,parallax,css,3d,style #}
 {# wf_featured_image: /web/updates/images/2016/12/performant-parallaxing/featured-image.jpg #}
 {# wf_featured_snippet: When used judiciously paralaxing can add of depth and subtlety to a web app. #}
 

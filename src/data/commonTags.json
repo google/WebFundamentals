@@ -1,4 +1,5 @@
 [
+  "3d",
   "absolute-positioned",
   "accessibility",
   "addtohomescreen",
@@ -144,6 +145,7 @@
   "pagespeed",
   "pagevisibility",
   "paint",
+  "parallax",
   "payload",
   "payment",
   "performance",

@@ -4,7 +4,7 @@ description: position:sticky. It's back!
 
 {# wf_updated_on: 2016-12-07 #}
 {# wf_published_on: 2016-12-07 #}
-{# wf_tags: performance,sticky,style #}
+{# wf_tags: performance,css,style #}
 {# wf_featured_image: /web/updates/images/generic/visibility.png #} #}
 {# wf_featured_snippet: After a long time absent from Chrome, position:sticky is back. #}
 
