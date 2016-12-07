@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome is blocking some scripts that are added using document.write()
 
-{# wf_updated_on: 2016-09-05 #}
+{# wf_updated_on: 2016-12-02 #}
 {# wf_published_on: 2016-08-29 #}
-{# wf_tags: interventions,chrome53 #}
+{# wf_tags: interventions,chrome55 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: Chrome is blocking some scripts that are added using <code>document.write()</code>. #}
 
@@ -61,8 +61,8 @@ the load of these scripts, we saw the following improvements on those loads:
   improvement of nearly six seconds, dramatically reducing the time 
   it takes to display what matters to the user.
 
-With this data in mind, the Chrome team have recently announced an intention to 
-[intervene](https://github.com/WICG/interventions/issues/17) on behalf of all 
+With this data in mind, Chrome, starting with version 55, 
+[intervenes](https://github.com/WICG/interventions/issues/17) on behalf of all 
 users when we detect this known-bad pattern by changing how `document.write()` is 
 handled in Chrome (See [Chrome Status](https://www.chromestatus.com/feature/5718547946799104)).
 Specifically Chrome will not execute the `<script>` elements injected via 
