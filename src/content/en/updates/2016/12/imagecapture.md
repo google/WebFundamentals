@@ -59,7 +59,7 @@ max-width: 100%;
 
 </style>
 
-# Take Photos & Control Camera Settings {: .page-title }
+# Take Photos and Control Camera Settings {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
@@ -111,20 +111,24 @@ You can try out this code from the DevTools console.
 Note: To choose between different cameras, such as the front and back camera on
 a phone, get a list of available devices via the
 `MediaDevices.enumerateDevices()` method, then set `deviceId` in `getUserMedia()`
-constraints — as per the demo [here](https://webrtc.github.io/samples/src/content/devices/input-output/).
+constraints as per the demo [here](https://webrtc.github.io/samples/src/content/devices/input-output/).
 
 You can use `takePhoto()` to get a still image and then set it as the `src` of
 an `<img>`:
 
+    const img = document.querySelector('img');
+    // ...
     imageCapture.takePhoto()
       .then(blob => {
-        image.src = URL.createObjectURL(blob);
+        img.src = URL.createObjectURL(blob);
       })
       .catch(error => console.error('takePhoto() error:', error));
 
 Use `grabFrame()` to get data for a frame of video and then draw
 it on a `<canvas>`:
 
+    const canvas = document.querySelector('canvas');
+    // ...
     imageCapture.grabFrame()
       .then(imageBitmap => {
         canvas.width = imageBitmap.width;
@@ -133,7 +137,7 @@ it on a `<canvas>`:
       })
       .catch(error => console.error('grabFrame() error:', error));
 
-You can try this out in the demo below — if you're using a browser that supports the Image Capture API:
+You can try this out in the demo below if you're using a browser that supports the Image Capture API:
 
 * The `<video>` displays a stream from a camera via `getUserMedia()`.
 
@@ -149,9 +153,10 @@ result in an `<img>`.
 
 Several variables from the demo are available from the console:
 
-* **constraints**
-* **imageCapture**
-* **mediaStream**
+* constraints
+* imageCapture
+* mediaStream
+* video
 
 <div id="ic-demo">
   <button id="grabFrame">Grab Frame</button>
@@ -165,7 +170,7 @@ Several variables from the demo are available from the console:
   <img class="hidden">
 </div>
 
-## Camera Capabilities
+## Camera capabilities
 
 In the demo above, you'll notice a difference in dimensions between the
 `grabFrame()` and `takePhoto()` results.
@@ -176,18 +181,18 @@ The `takePhoto()` method gives access to the camera's maximum resolution.
 inside the renderer process, whereas `takePhoto()` interrupts the `MediaStream`,
 reconfigures the camera, takes the photo (usually in a compressed format,
 hence the `Blob`) and then resumes the `MediaStream`. In essence, this means
-that `takePhoto()` can give access to the full still-image resolution
+that `takePhoto()` gives access to the full still-image resolution
 capabilities of the camera. Previously, it was only possible to 'take a photo' by
 calling `drawImage()` on a `canvas` element, using a video as the source (as per the
 example [here](https://webrtc.github.io/samples/src/content/getusermedia/canvas/)).
 
 In this demo, the `<canvas>` dimensions are set to the resolution of the video
-stream, whereas the (natural) size of the `<img>` is the maximum still-image
-resolution of the camera — though, of course, CSS is used to set the display
+stream, whereas the natural size of the `<img>` is the maximum still-image
+resolution of the camera. CSS, of course, is used to set the display
 size of both.
 
-The full range of possible camera resolutions for still images can be accessed
-via the `MediaSettingsRange` values for `PhotoCapabilities.imageHeight` and
+The full range of available camera resolutions for still images can be get and set
+using the `MediaSettingsRange` values for `PhotoCapabilities.imageHeight` and
 `imageWidth`. Note that the minimum and maximum width and height constraints for
 `getUserMedia()` are for video, which (as discussed) may be different from the
 camera capabilities for still images. In other words, you may not be able to
@@ -196,16 +201,16 @@ access the full resolution capabilities of your device when saving from
 demo](https://webrtc.github.io/samples/src/content/getusermedia/resolution)
 shows how to set `getUserMedia()` constraints for resolution.
 
-## Anything Else?
+## Anything else?
 
 * The [**Shape Detection API**](https://www.chromestatus.com/feature/4757990523535360) works well with Image Capture: call `grabFrame()`
 repeatedly to feed `ImageBitmap`s to a `FaceDetector` or `BarcodeDetector`. Find
 out more about the API from Paul Kinlan's [blog post](https://paul.kinlan.me/face-detection/).
 
-* The **Camera flash** (torch) can be accessed via
+* The **Camera flash** (device light) can be accessed via
 [`FillLightMode`](https://w3c.github.io/mediacapture-image/#FillLightMode).
 
-## Demos &amp; Code Samples
+## Demos and code samples
 * [Chrome Samples demo](https://googlechrome.github.io/samples/image-capture/index.html)
 * [simpl.info/ic](https://simpl.info/ic)
 * [WebRTC samples](https://webrtc.github.io/samples)
@@ -214,7 +219,7 @@ out more about the API from Paul Kinlan's [blog post](https://paul.kinlan.me/fac
 * Chrome 56 on desktop and Android as an [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
 * Chrome Canary on desktop and Android with **Experimental Web Platform** features enabled.
 
-## Find Out More
+## Find out more
 * [Image Capture spec](https://www.w3.org/TR/image-capture/)
 * [Image Capture implementation status](https://github.com/w3c/mediacapture-image/blob/gh-pages/implementation-status.md)
 * [Shape Detection API](https://wicg.github.io/shape-detection-api/#introduction)
