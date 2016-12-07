@@ -10,25 +10,25 @@ description: position:sticky. It's back!
 
 # position:sticky is back in Chrome {: .page-title }
 
-4 years ago Eric Bidelman created a rather awesome blog post about the fact that
+Four years ago Eric Bidelman created a rather awesome blog post about the fact that
 `position: sticky` [landed in
 WebKit](/web/updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit),
 which at the time was the engine that powered Chrome (as well as many other
-browsers including Safari). 1 year later, and much to the consternation of web
-developers we [removed position:sticky from Chrome 
+browsers including Safari). One year later, and much to the consternation of web
+developers we [removed `position:sticky` from Chrome 
 because](https://bugs.chromium.org/p/chromium/issues/detail?id=389638#c4) "the
 current implementation isn't designed in a way that integrates well with the
 existing scrolling and compositing system".
 
-We've always wanted to get it back in to Chrome as the bug stated "Once we've
-got our scrolling and compositing house in order, we should return to position:
-sticky and implement the feature in a way that integrates well with the rest of
-the engine" &mdash; The [meta
+We've always wanted to get it back in to Chrome as the bug stated, "Once we've
+got our scrolling and compositing house in order, we should return to `position:
+sticky` and implement the feature in a way that integrates well with the rest of
+the engine". The [meta
 bug](https://bugs.chromium.org/p/chromium/issues/detail?id=231752) tracking the
 implementation has been worked on since 2013. 
 
 The great news is that as of Chrome 56 (currently beta as of December 2016,
-Stable in Jan 2017) `position: sticky` is now back in Chrome.
+stable in Jan 2017) `position: sticky` is now back in Chrome.
 
 ## What is position:sticky
 
