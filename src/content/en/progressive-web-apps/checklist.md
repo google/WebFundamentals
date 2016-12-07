@@ -46,7 +46,7 @@ The following tests are verifiable with the Lighthouse tool.
 <table class="responsive">
   <tbody>
     <tr>
-      <th colspan=2><h3>Pages are responsive to tablets &amp; mobile devices</h3></th>
+      <th colspan=2><h3>Pages are responsive on tablets &amp; mobile devices</h3></th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -222,7 +222,7 @@ The following tests are verifiable with the Lighthouse tool.
 <table class="responsive">
   <tbody>
     <tr>
-      <th colspan=2><h3>Pages each have a URL</h3></th>
+      <th colspan=2><h3>Each page has a URL</h3></th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -273,8 +273,8 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
       <td>
         <a href="https://webmasters.googleblog.com/2014/05/understanding-web-pages-better.html">
         Google's indexing system does run JavaScript</a> but some issues 
-        may need to be fixed to make content accessible, for example ensure
-        if you are using new browser features like the Fetch API that they are
+        may need to be fixed to make content accessible. For example,
+        if you are using new browser features like the Fetch API, ensure that they are
         polyfilled in browsers without support.
       </td>
     </tr>
@@ -297,7 +297,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
       <td><b>To Test</b></td>
       <td>
         Use the <a href="https://search.google.com/structured-data/testing-tool">
-        testing tool</a> to ensure title, image, description etc are available.
+        testing tool</a> to ensure title, image, description etc. are available.
       </td>
     </tr>
     <tr>
@@ -310,7 +310,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
             Recipe type markup</a> for Rich Cards.
           </li>
           <li>
-            A news app you should have the <a href="/search/docs/data-types/articles">
+            A news app should have the <a href="/search/docs/data-types/articles">
             NewsArticle type markup</a> for Rich Cards and/or 
             <a href="https://www.ampproject.org/docs/reference/spec.html">
             AMP support</a>.
@@ -338,7 +338,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
           <li>
             Open a representative page in
             <a href="https://developers.facebook.com/tools/debug/">Facebook's crawler</a>
-            and ensure the looks reasonable.
+            and ensure it looks reasonable.
           </li>
           <li>
             Check that <a href="https://dev.twitter.com/cards/overview">Twitter
@@ -351,7 +351,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Mark up content with <a href="http://ogp.me/">Open Graph</a> and as
+        Mark up content with <a href="http://ogp.me/">Open Graph</a> tags and as
         advised by <a href="https://dev.twitter.com/cards/overview">Twitter</a>.
       </td>
     </tr>
@@ -389,7 +389,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
       <td>
         Mark up content with <a href="http://ogp.me/">Open Graph</a>
         and as advised by <a href="https://dev.twitter.com/cards/overview">
-        Twitter</a>
+        Twitter</a>.
       </td>
     </tr>
   </tbody>
@@ -436,7 +436,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Ensure all content, especially images and ads have fixed sizing in
+        Ensure all content, especially images and ads, have fixed sizing in
         CSS  or inline on the element. Before the image loads you may want
         to show a grey square or blurred/small version (if available) as
         a placeholder.
@@ -457,14 +457,14 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
         Find a list view in the app. Scroll down. Tap an item to enter the 
         detail page. Scroll around on the detail page. Press back and ensure 
         the list view is scrolled to the same place it was at before the 
-        detail page was tapped.
+        detail link/button was tapped.
       </td>
     </tr>
     <tr>
       <td><b>To Fix</b></td>
       <td>
         Restore the scroll position in lists when the user presses 'back'. 
-        Some routing libraries have a feature to do this for you
+        Some routing libraries have a feature to do this for you.
       </td>
     </tr>
   </tbody>
@@ -500,7 +500,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
 <table class="responsive">
   <tbody>
     <tr>
-      <th colspan=2><h3>Content is easily sharable from 'standalone'/full screen mode</h3></th>
+      <th colspan=2><h3>Content is easily sharable from 'standalone'/'full screen' mode</h3></th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -517,7 +517,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
         UI. If a generic button, you may want to directly copy the URL to the 
         user's clipboard when tapped, offer them social networks to share to, 
         or try out the new <a href="/web/updates/2016/10/navigator-share">Web Share API</a> 
-        to integrate with the native share system on Android
+        to integrate with the native sharing system on Android.
       </td>
     </tr>
   </tbody>
@@ -540,7 +540,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
       <td><b>To Fix</b></td>
       <td>
         Review our guide on <a href="/web/fundamentals/design-and-ui/responsive/">
-        implementing responsive UIs</a>
+        implementing responsive UIs</a>.
       </td>
     </tr>
   </tbody>
@@ -668,8 +668,8 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Use the Network Information API to show the user an indication 
-        when they're offline.
+        Use the [Network Information API](https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API)
+        to show the user an indication when they're offline.
       </td>
     </tr>
   </tbody>
@@ -677,7 +677,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
 
 ### Push Notifications (Optional) 
 
-Note: This check list only applies if notifications implemented
+Note: This check list only applies if notifications are implemented
 
 <table class="responsive">
   <tbody>
@@ -688,10 +688,10 @@ Note: This check list only applies if notifications implemented
       <td><b>To Test</b></td>
       <td>
         <ul>
-          <li>Visit the site, and find the push notifications opt in flow</li>
+          <li>Visit the site, and find the push notifications opt-in flow</li>
           <li>
-            Ensure that at the point you are shown the permission request by 
-            Chrome that context has been provided explaining what the site wants 
+            When you are shown the permission request by Chrome, ensure
+            that context has been provided explaining what the site wants 
             the permission for.
           </li>
           <li>
@@ -706,7 +706,7 @@ Note: This check list only applies if notifications implemented
       <td><b>To Fix</b></td>
       <td>
         See our guide to <a href="https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE/view">
-        creating user friendly Notifications permissions flows.</a>
+        creating user-friendly Notifications permissions flows.</a>
       </td>
     </tr>
   </tbody>
@@ -715,7 +715,7 @@ Note: This check list only applies if notifications implemented
 <table class="responsive">
   <tbody>
     <tr>
-      <th colspan=2><h3>Ensure that the UI that encourages users to turn on Push Notifications isn't overly aggressive.</h3></th>
+      <th colspan=2><h3>Ensure that the UI encouraging users to turn on Push Notifications isn't overly aggressive</h3></th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -743,8 +743,8 @@ Note: This check list only applies if notifications implemented
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Visit the site and find the push notifications opt in flow. Ensure 
-        that when they are showing the permission request itself that they are 
+        Visit the site and find the push notifications opt-in flow. When
+        Chrome is showing the permission request, ensure that the page is
         "dimming" (placing a dark overlay over) all content not relevant to 
         explaining why the site needs push notifications.
       </td>
@@ -768,7 +768,7 @@ Note: This check list only applies if notifications implemented
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Enable push notifications from the site and ensure the use case 
+        Enable push notifications from the site and ensure the use cases 
         they're using the push notifications for are:
         <ul>
           <li>
