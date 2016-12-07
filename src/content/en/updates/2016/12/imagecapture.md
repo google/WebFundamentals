@@ -67,12 +67,12 @@ Image Capture is an API to capture still images and configure camera hardware
 settings.
 
 The API enables control over camera features such as zoom, focus mode,
-contrast, ISO and white balance. Best of all, Image Capture enables access to
-the full camera resolution capabilities. Previous techniques
-for taking photos on the Web have used snapshots from a video stream, which are
-lower resolution than those available for still images.
+contrast, ISO and white balance. Best of all, Image Capture allows you to access
+the full resolution capabilities of any available device camera or webcam.
+Previous techniques for taking photos on the Web have used video snapshots,
+which are lower resolution than that available for still images.
 
-Image Capture is available in Chrome 56 on desktop and Android as an
+Image Capture is available in Chrome 56 on Android and desktop as an
 [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md),
 or in Chrome Canary on desktop and Android with **Experimental Web Platform**
 features enabled.
@@ -153,8 +153,10 @@ result in an `<img>`.
 
 Several variables from the demo are available from the console:
 
+* canvas
 * constraints
 * imageCapture
+* img
 * mediaStream
 * video
 
@@ -216,8 +218,8 @@ out more about the API from Paul Kinlan's [blog post](https://paul.kinlan.me/fac
 * [WebRTC samples](https://webrtc.github.io/samples)
 
 ## Support
-* Chrome 56 on desktop and Android as an [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
-* Chrome Canary on desktop and Android with **Experimental Web Platform** features enabled.
+* Chrome 56 on Android and desktop as an [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
+* Chrome Canary on Android and desktop with **Experimental Web Platform** features enabled.
 
 ## Find out more
 * [Image Capture spec](https://www.w3.org/TR/image-capture/)
