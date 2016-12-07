@@ -388,7 +388,7 @@ function validateMarkdown(filename, commonTags) {
         logError(filename, errMsg)
         errors++;
       }
-      matched = content.match(/^#[^#].*/gm);
+      matched = content.match(/^#\s{1}[^#].*/gm)
       if (matched) {
         numH1 += matched.length;
       }
