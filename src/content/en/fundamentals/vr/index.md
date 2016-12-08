@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: WebVR
 
 {# wf_updated_on: 2016-12-12 #}
-{# wf_published_on: 2016-12-12#}
+{# wf_published_on: 2016-12-12 #}
 
 # WebVR {: .page-title }
 
@@ -70,7 +70,7 @@ In order to minimize discomfort for the people using WebVR experiences, they mus
 
 On mobile devices the refresh rate is typically 60Hz, which means the target is 60fps (or 16ms per frame *including* the per-frame browser’s overhead). On desktop the target is typically 90Hz (11ms including overhead).
 
-To meet those goals you will need to test [regularly on your target devices](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/), and should [use Chrome DevTools’ Timeline to measure your per-frame costs](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool).
+To meet those goals you will need to test [regularly on your target devices](/web/tools/chrome-devtools/remote-debugging/), and should [use Chrome DevTools’ Timeline to measure your per-frame costs](/web/tools/chrome-devtools/evaluate-performance/timeline-tool).
 
 ## Embrace Progressive Enhancement
 
