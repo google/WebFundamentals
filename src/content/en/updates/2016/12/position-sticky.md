@@ -10,6 +10,8 @@ description: position:sticky. It's back!
 
 # position:sticky is back in Chrome {: .page-title }
 
+{% include "web/_shared/contributors/samdutton.html" %}
+
 Four years ago Eric Bidelman created a rather awesome blog post about the fact that
 `position: sticky` [landed in
 WebKit](/web/updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit),
