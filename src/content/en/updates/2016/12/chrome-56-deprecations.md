@@ -66,7 +66,7 @@ This change aligns Chrome with Safari, though FireFox still requests scripts reg
 
 This method is no longer part of the spec and is not supported by any other major browser. It has been replaced by [`MediaDevices.enumerateDevices()`](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices), which Blink has supported without flags since version 47 and which is also supported by other browsers. An example of this is shown below. This hypothetical `getCameras()` function first uses feature detection to find and use `enumerateDevices()`. If the feature detection fails, it looks for `getSources()` in `MediaStreamTrack`. Finally, if there is no API support of any kind return the empty `cameras` array.
 
-    function getCameras() {
+    function getCameras(camerasCallback) {
       var cameras = [];
       if('enumerateDevices' in navigator.mediaDevices) {
          navigator.mediaDevices.enumerateDevices()
@@ -85,7 +85,7 @@ This method is no longer part of the spec and is not supported by any other majo
                 cameras.push(source);
               }
             });
-            return cameras;
+            camerasCallback(cameras);
           });
       }
       else if('getSources' in MediaStreamTrack) {
@@ -104,12 +104,12 @@ This method is no longer part of the spec and is not supported by any other majo
               }
             }
           }
-          return cameras;
+          camerasCallback(cameras);
         });
       }
       else {
         // We can't pick the correct camera because the API doesn't support it.
-        return cameras;
+        camerasCallback(cameras);
       }
     };
 
