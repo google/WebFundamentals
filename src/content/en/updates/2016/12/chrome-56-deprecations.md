@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the deprecations and removals in Chrome to help you plan.
+description: A round up of the deprecations and removals in Chrome 56 to help you plan.
 
 {# wf_updated_on: 2016-12-08 #}
 {# wf_published_on: 2016-12-08 #}
 {# wf_tags: deprecations,removals,chrome56 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: A round up of the deprecations and removals in Chrome to help you plan. #}
+{# wf_featured_snippet: A round up of the deprecations and removals in Chrome 56 to help you plan. #}
 
 # API Deprecations and Removals in Chrome 56 {: .page-title }
 
@@ -64,7 +64,54 @@ This change aligns Chrome with Safari, though FireFox still requests scripts reg
 
 ## Remove MediaStreamTrack.getSources()
 
-This method is no longer part of the spec and is not supported by any other major browser. It has been replaced by [`MediaDevices.enumerateDevices()`](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices), which Blink has supported without flags since version 47 and which is also supported by other browsers.
+This method is no longer part of the spec and is not supported by any other major browser. It has been replaced by [`MediaDevices.enumerateDevices()`](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices), which Blink has supported without flags since version 47 and which is also supported by other browsers. An example of this is shown below. This hypothetical `getCameras()` function first uses feature detection to find and use `enumerateDevices()`. If the feature detection fails, it looks for `getSources()` in `MediaStreamTrack`. Finally, if there is no API support of any kind return the empty `cameras` array.
+
+    function getCameras() {
+      var cameras = [];
+      if('enumerateDevices' in navigator.mediaDevices) {
+         navigator.mediaDevices.enumerateDevices()
+          .then(function(sources) {
+            return sources.filter(function(source) { 
+              return source.kind == 'videoinput' 
+            });
+          })
+          .then(function(sources) {
+            sources.forEach(function(source) {
+              if(source.label.indexOf('facing back') >= 0) {
+                // move front facing to the front.
+                cameras.unshift(source);
+              }
+              else {
+                cameras.push(source);
+              }
+            });
+            return cameras;
+          });
+      }
+      else if('getSources' in MediaStreamTrack) {
+        MediaStreamTrack.getSources(function(sources) {
+
+          for(var i = 0; i < sources.length; i++) {
+            var source = sources[i];
+            if(source.kind === 'video') {
+
+              if(source.facing === 'environment') {
+                // cameras facing the environment are pushed to the front of the page
+                cameras.unshift(source);
+              }
+              else {
+                cameras.push(source);
+              }
+            }
+          }
+          return cameras;
+        });
+      }
+      else {
+        // We can't pick the correct camera because the API doesn't support it.
+        return cameras;
+      }
+    };
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/do3t86PtHCY/discussion) &#124;
 [Chromestatus Tracker](https://bugs.chromium.org/p/chromium/issues/detail?id=649710) &#124;
