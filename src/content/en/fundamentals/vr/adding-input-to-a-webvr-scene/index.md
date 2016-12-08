@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Discover how to use the Ray Input library to add input to your WebVR scene.
 
 {# wf_updated_on: 2016-12-12 #}
-{# wf_published_on: 2016-12-12#}
+{# wf_published_on: 2016-12-12 #}
 
 # Adding Input to a WebVR Scene {: .page-title }
 
@@ -32,7 +32,7 @@ In the future, as WebVR matures, we may even see new input types, which means ou
 
 Starting from our previous scene, let’s [add input handlers with Ray Input](https://googlechrome.github.io/samples/web-vr/basic-input/). If you want to look at the final code you should check out the [Google Chrome samples repo](https://github.com/GoogleChrome/samples/tree/gh-pages/web-vr/basic-input/).
 
-# Add the Ray Input library to the page
+## Add the Ray Input library to the page
 
 For simplicity’s sake, we can add Ray Input directly with a script tag:
 
@@ -41,7 +41,7 @@ For simplicity’s sake, we can add Ray Input directly with a script tag:
 
 If you’re using Ray Input as part of a bigger build system, you can import it that way, too. The [Ray Input README has more info](https://github.com/borismus/ray-input/blob/master/README.md), so you should check that out.
 
-# Get access to inputs
+## Get access to inputs
 
 After getting access to any VR Displays we can request access to any inputs that are available. From there we can add event listeners, and we’ll update the scene to default our box’s state as "deselected".
 
@@ -67,7 +67,7 @@ Creating a Ray Input involves passing it the Three.js camera from the scene, and
 
 The other thing you need to do is tell it how big an area it needs to work with, which in most cases is the area of the WebGL canvas element.
 
-# Enable interactivity for scene entities
+## Enable interactivity for scene entities
 
 Next we need to tell Ray Input what to track, and what events we’re interested in receiving.
 
@@ -106,7 +106,7 @@ For this to work we’ll need to make sure that we tell Three.js that the box’
 
 That should now cover mouse and touch interactions. Let’s see what’s involved with adding in a controller with 3 degrees of freedom, like the Daydream controller.
 
-# Enable the Gamepad API extensions
+## Enable the Gamepad API extensions
 
 There are two important notes to understand about using the Gamepad API in WebVR today:
 
@@ -169,7 +169,7 @@ Finally in the `_render` function we can watch for interactions, and use that to
       …
     }
 
-# Add the pointer mesh to the scene
+## Add the pointer mesh to the scene
 
 As well as allowing interactions it’s highly likely that we will want to display something to the user that shows where they’re pointing. Ray Input provides a mesh that you can add to your scene to do just that.
 
@@ -179,7 +179,7 @@ With this we get a reticle for HMDs with no freedom of movement in their control
 
 ![A ray beam showing input in a WebVR Scene](./img/ray-input.jpg)
 
-# Closing thoughts
+## Closing thoughts
 
 There are some things to keep in mind as you add input to your experiences.
 

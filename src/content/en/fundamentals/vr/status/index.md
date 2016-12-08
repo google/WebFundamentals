@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Get the latest info on WebVR's status, as well as things to keep in mind when building WebVR experiences.
 
 {# wf_updated_on: 2016-12-12 #}
-{# wf_published_on: 2016-12-12#}
+{# wf_published_on: 2016-12-12 #}
 
 # WebVR Status and Considerations {: .page-title }
 
@@ -27,7 +27,7 @@ More information on browser implementation status can be found on [chromestatus.
 Here are things to remember when building WebVR experiences today.
 
 * **You must serve your WebVR content over HTTPS.** If you don’t your users will get warnings from the browser.
-    * See [Enabling HTTPS on Your Servers](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/enable-https) for more guidance.
+    * See [Enabling HTTPS on Your Servers](/web/fundamentals/security/encrypt-in-transit/enable-https) for more guidance.
 * **Chrome only supports native WebVR on Android today.** You must be using a Daydream headset with a Pixel phone.
 * **The [WebVR Polyfill](https://github.com/googlevr/webvr-polyfill) may not always be a 1:1 match with native implementations of the spec.** If you plan to use the Polyfill, be sure to check on both VR-capable and non-VR devices.
 * **Users must click a VR controller button before it's available to your code**. You must account for this in your code, typically by showing the user a message requesting they press a controller button at the start of their VR experience.

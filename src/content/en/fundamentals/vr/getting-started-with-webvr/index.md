@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Learn how to take a WebGL scene in Three.js and add WebVR capabilities.
 
 {# wf_updated_on: 2016-12-12 #}
-{# wf_published_on: 2016-12-12#}
+{# wf_published_on: 2016-12-12 #}
 
 # Getting Started with WebVR {: .page-title }
 
@@ -57,7 +57,7 @@ There are a few things to notice in this code.
 
 ## Install a WebVR Emulation Chrome DevTools Extension
 
-Perhaps you find yourself not having a VR-capable device to test against. If that’s the case, help is at hand! Jaume Elias has created a [Chrome DevTools Extension which emulates a VR device](https://chrome.google.com/webstore/detail/webvr-api-emulation/gbdnpaebafagioggnhkacnaaahpiefil?hl=en).
+Perhaps you find yourself not having a VR-capable device to test against. If that’s the case, help is at hand! Jaume Elias has created a [Chrome DevTools Extension which emulates a VR device](https://chrome.google.com/webstore/detail/webvr-api-emulation/gbdnpaebafagioggnhkacnaaahpiefil).
 
 ![Emulating WebVR with Jaume Elias's Chrome Extension](./img/webvr-emulation.jpg)
 
@@ -71,7 +71,7 @@ To begin presenting in "VR mode", we have to request it from the device:
       source: this._renderer.domElement
     }]);
 
-`requestPresent` takes an array of what the [Web VR spec](https://w3c.github.io/webvr/#vrlayer) calls "VRLayers", which is essentially a wrapper around a Canvas element given to the VR device. In the code snippet above we’re taking the Canvas element — `WebGLRenderer.domElement` — provided by Three.js, and passing it in as the source property of a single VRLayer. In return, `requestPresent` will give you a [Promise](https://developers.google.com/web/fundamentals/getting-started/primers/promises), which will resolve if the request is successful, and will reject if not.
+`requestPresent` takes an array of what the [Web VR spec](https://w3c.github.io/webvr/#vrlayer) calls "VRLayers", which is essentially a wrapper around a Canvas element given to the VR device. In the code snippet above we’re taking the Canvas element — `WebGLRenderer.domElement` — provided by Three.js, and passing it in as the source property of a single VRLayer. In return, `requestPresent` will give you a [Promise](/web/fundamentals/getting-started/primers/promises), which will resolve if the request is successful, and will reject if not.
 
 ## Draw your VR scene
 
