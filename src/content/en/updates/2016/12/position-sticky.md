@@ -10,7 +10,7 @@ description: position:sticky. It's back!
 
 # position:sticky is back in Chrome {: .page-title }
 
-{% include "web/_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 Four years ago Eric Bidelman created a rather awesome blog post about the fact that
 `position: sticky` [landed in
