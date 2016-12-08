@@ -8,57 +8,6 @@ description: Image Capture is an API to control camera settings and take photos.
 {# wf_featured_image: /web/updates/images/2016/12/imagecapture/featured.jpg #}
 {# wf_featured_snippet: Image Capture is an API to control camera settings and take photos. #}
 
-<style>
-#ic-demo .hidden {
-display: none;
-}
-
-#ic-demo button {
-display: block;
-float: left;
-margin: 0 10px 20px 0;
-width: 120px;
-}
-
-#ic-demo button:last-of-type {
-float: none;
-margin: 0 0 20px 0;
-}
-
-#ic-demo canvas {
-display: block;
-margin: 0 0 20px 0;
-max-width: 100%;
-}
-
-div#ic-demo {
-border-top: 1px solid #eee;
-margin: 20px 0 0 0;
-padding: 20px 0 0 0;
-}
-
-#ic-demo img {
-display: block;
-margin: 0 0 20px 0;
-}
-
-#ic-demo input#zoom {
-margin: 0 0 20px 0;
-width: 100%;
-}
-
-#ic-demo select {
-margin: 0 0 20px 0;
-}
-
-#ic-demo video {
-margin: 0 0 20px 0;
-vertical-align: top;
-max-width: 100%;
-}
-
-</style>
-
 # Take Photos and Control Camera Settings {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
@@ -160,6 +109,58 @@ Several variables from the demo are available from the console:
 * mediaStream
 * video
 
+{% framebox height="700px" %}
+
+<style>
+#ic-demo .hidden {
+display: none;
+}
+
+#ic-demo button {
+display: block;
+float: left;
+margin: 0 10px 20px 0;
+width: 120px;
+}
+
+#ic-demo button:last-of-type {
+float: none;
+margin: 0 0 20px 0;
+}
+
+#ic-demo canvas {
+display: block;
+margin: 0 0 20px 0;
+max-width: 100%;
+}
+
+div#ic-demo {
+border-top: 1px solid #eee;
+margin: 20px 0 0 0;
+padding: 20px 0 0 0;
+}
+
+#ic-demo img {
+display: block;
+margin: 0 0 20px 0;
+}
+
+#ic-demo input#zoom {
+margin: 0 0 20px 0;
+width: 100%;
+}
+
+#ic-demo select {
+margin: 0 0 20px 0;
+}
+
+#ic-demo video {
+margin: 0 0 20px 0;
+vertical-align: top;
+max-width: 100%;
+}
+</style>
+
 <div id="ic-demo">
   <button id="grabFrame">Grab Frame</button>
   <button id="takePhoto">Take Photo</button>
@@ -172,70 +173,8 @@ Several variables from the demo are available from the console:
   <img class="hidden">
 </div>
 
-## Camera capabilities
-
-In the demo above, you'll notice a difference in dimensions between the
-`grabFrame()` and `takePhoto()` results.
-
-The `takePhoto()` method gives access to the camera's maximum resolution.
-
-`grabFrame()` just takes the next-available `VideoFrame` in the `MediaStream`
-inside the renderer process, whereas `takePhoto()` interrupts the `MediaStream`,
-reconfigures the camera, takes the photo (usually in a compressed format,
-hence the `Blob`) and then resumes the `MediaStream`. In essence, this means
-that `takePhoto()` gives access to the full still-image resolution
-capabilities of the camera. Previously, it was only possible to 'take a photo' by
-calling `drawImage()` on a `canvas` element, using a video as the source (as per the
-example [here](https://webrtc.github.io/samples/src/content/getusermedia/canvas/)).
-
-In this demo, the `<canvas>` dimensions are set to the resolution of the video
-stream, whereas the natural size of the `<img>` is the maximum still-image
-resolution of the camera. CSS, of course, is used to set the display
-size of both.
-
-The full range of available camera resolutions for still images can be get and set
-using the `MediaSettingsRange` values for `PhotoCapabilities.imageHeight` and
-`imageWidth`. Note that the minimum and maximum width and height constraints for
-`getUserMedia()` are for video, which (as discussed) may be different from the
-camera capabilities for still images. In other words, you may not be able to
-access the full resolution capabilities of your device when saving from
-`getUserMedia()` to a canvas. The WebRTC [resolution constraint
-demo](https://webrtc.github.io/samples/src/content/getusermedia/resolution)
-shows how to set `getUserMedia()` constraints for resolution.
-
-## Anything else?
-
-* The [**Shape Detection API**](https://www.chromestatus.com/feature/4757990523535360) works well with Image Capture: call `grabFrame()`
-repeatedly to feed `ImageBitmap`s to a `FaceDetector` or `BarcodeDetector`. Find
-out more about the API from Paul Kinlan's [blog post](https://paul.kinlan.me/face-detection/).
-
-* The **Camera flash** (device light) can be accessed via
-[`FillLightMode`](https://w3c.github.io/mediacapture-image/#FillLightMode).
-
-## Demos and code samples
-* [Chrome Samples demo](https://googlechrome.github.io/samples/image-capture/index.html)
-* [simpl.info/ic](https://simpl.info/ic)
-* [WebRTC samples](https://webrtc.github.io/samples)
-
-## Support
-* Chrome 56 on Android and desktop as an [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
-* Chrome Canary on Android and desktop with **Experimental Web Platform** features enabled.
-
-## Find out more
-* [Image Capture spec](https://www.w3.org/TR/image-capture/)
-* [Image Capture implementation status](https://github.com/w3c/mediacapture-image/blob/gh-pages/implementation-status.md)
-* [Shape Detection API](https://wicg.github.io/shape-detection-api/#introduction)
-* [Shape Detection explainer and readme](https://github.com/WICG/shape-detection-api)
-* [Face detection demo](https://codepen.io/miguelao/pen/VKOPdX)
-* [Barcode detection demo](https://codepen.io/miguelao/pen/bBWOzM)
-
-{% include "comment-widget.html" %}
-
 <script>
-'use strict';
-
-/* globals ImageCapture */
-
+console.log('foo');
 var constraints;
 var imageCapture;
 var mediaStream;
@@ -354,3 +293,64 @@ function takePhoto() {
   });
 }
 </script>
+
+{% endframebox %}
+
+## Camera capabilities
+
+In the demo above, you'll notice a difference in dimensions between the
+`grabFrame()` and `takePhoto()` results.
+
+The `takePhoto()` method gives access to the camera's maximum resolution.
+
+`grabFrame()` just takes the next-available `VideoFrame` in the `MediaStream`
+inside the renderer process, whereas `takePhoto()` interrupts the `MediaStream`,
+reconfigures the camera, takes the photo (usually in a compressed format,
+hence the `Blob`) and then resumes the `MediaStream`. In essence, this means
+that `takePhoto()` gives access to the full still-image resolution
+capabilities of the camera. Previously, it was only possible to 'take a photo' by
+calling `drawImage()` on a `canvas` element, using a video as the source (as per the
+example [here](https://webrtc.github.io/samples/src/content/getusermedia/canvas/)).
+
+In this demo, the `<canvas>` dimensions are set to the resolution of the video
+stream, whereas the natural size of the `<img>` is the maximum still-image
+resolution of the camera. CSS, of course, is used to set the display
+size of both.
+
+The full range of available camera resolutions for still images can be get and set
+using the `MediaSettingsRange` values for `PhotoCapabilities.imageHeight` and
+`imageWidth`. Note that the minimum and maximum width and height constraints for
+`getUserMedia()` are for video, which (as discussed) may be different from the
+camera capabilities for still images. In other words, you may not be able to
+access the full resolution capabilities of your device when saving from
+`getUserMedia()` to a canvas. The WebRTC [resolution constraint
+demo](https://webrtc.github.io/samples/src/content/getusermedia/resolution)
+shows how to set `getUserMedia()` constraints for resolution.
+
+## Anything else?
+
+* The [**Shape Detection API**](https://www.chromestatus.com/feature/4757990523535360) works well with Image Capture: call `grabFrame()`
+repeatedly to feed `ImageBitmap`s to a `FaceDetector` or `BarcodeDetector`. Find
+out more about the API from Paul Kinlan's [blog post](https://paul.kinlan.me/face-detection/).
+
+* The **Camera flash** (device light) can be accessed via
+[`FillLightMode`](https://w3c.github.io/mediacapture-image/#FillLightMode).
+
+## Demos and code samples
+* [Chrome Samples demo](https://googlechrome.github.io/samples/image-capture/index.html)
+* [simpl.info/ic](https://simpl.info/ic)
+* [WebRTC samples](https://webrtc.github.io/samples)
+
+## Support
+* Chrome 56 on Android and desktop as an [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
+* Chrome Canary on Android and desktop with **Experimental Web Platform** features enabled.
+
+## Find out more
+* [Image Capture spec](https://www.w3.org/TR/image-capture/)
+* [Image Capture implementation status](https://github.com/w3c/mediacapture-image/blob/gh-pages/implementation-status.md)
+* [Shape Detection API](https://wicg.github.io/shape-detection-api/#introduction)
+* [Shape Detection explainer and readme](https://github.com/WICG/shape-detection-api)
+* [Face detection demo](https://codepen.io/miguelao/pen/VKOPdX)
+* [Barcode detection demo](https://codepen.io/miguelao/pen/bBWOzM)
+
+{% include "comment-widget.html" %}
