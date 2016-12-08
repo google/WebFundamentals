@@ -567,17 +567,18 @@ As Payment Request API is an emerging feature, many browsers don't yet support i
       // Continue with existing form based solution
     }
 
+Note: It is best to have a normal link to the regular checkout process and use JavaScript prevent the navigation if PaymentRequest is supported.
 
 ## Putting them all together {: #putting-them-together}
 
 
-    function onBuyClicked() {
+    function onBuyClicked(event) {
       if (!window.PaymentRequest) {
-        // PaymentRequest API is not available. Forwarding to
-        // legacy form based experience.
-        location.href = '/checkout';
         return;
       }
+      // Payment Request API is available.
+      // Stop the default anchor redirect.
+      event.preventDefault();
 
       var supportedInstruments = [{
         supportedMethods: [
@@ -694,5 +695,6 @@ As Payment Request API is an emerging feature, many browsers don't yet support i
       });
     }
 
+    // Assuming an anchor is the target for the event listener.
     document.querySelector('#start').addEventListener('click', onBuyClicked);
 
