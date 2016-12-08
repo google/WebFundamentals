@@ -1,0 +1,12 @@
+toc:
+  - title: VR
+    status: beta
+    section:
+    - title: Overview
+      path: /web/fundamentals/vr/
+    - title: WebVR Status and Considerations
+      path: /web/fundamentals/vr/status/
+    - title: Getting Started with WebVR
+      path: /web/fundamentals/vr/getting-started-with-webvr/
+    - title: Adding Input to a WebVR Scene
+      path: /web/fundamentals/vr/adding-input-to-a-webvr-scene/
