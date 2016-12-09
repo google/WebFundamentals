@@ -7,16 +7,18 @@ description: Going fullscreen.
 
 # Making Fullscreen Experiences {: .page-title }
 
-<figure class="attempt-right">
-  <iframe width="324" height="576" src="//www.youtube.com/embed/ZRqr5x73-ng" frameborder="0" allowfullscreen></iframe>
-  <figcaption>Example of a site going fullscreen in Chrome for Android</figcaption>
-</figure>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="ZRqr5x73-ng"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 We have the ability to easily make immersive fullscreen websites and
 applications, but like anything on the web there are a couple of ways to do it.
 This is especially important now that more browsers are supporting an "installed
 web app" experience which launch fullscreen.
 
+<div class="clearfix"></div>
 
 ## Getting your app or site fullscreen
 
