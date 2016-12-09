@@ -567,7 +567,7 @@ As Payment Request API is an emerging feature, many browsers don't yet support i
       // Continue with existing form based solution
     }
 
-Note: It is best to have a normal link to the regular checkout process and use JavaScript prevent the navigation if PaymentRequest is supported.
+Note: It is best to have a normal link to the regular checkout process. Then use JavaScript to prevent the navigation if PaymentRequest is supported.
 
 ## Putting them all together {: #putting-them-together}
 
