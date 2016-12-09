@@ -134,12 +134,7 @@ The browser will render the labels as you define them and automatically render t
       displayItems: [
         {
           label: "Original donation amount",
-          amount: {
-            currency: "USD",
-            value : "65.00",
-            // ISO4217 is default. You can ommit.
-            currencySystem: "urn:iso:std:iso:4217"
-          },
+          amount: { currency: "USD", value : "65.00" }, // US$65.00
         },
         {
           label: "Friends and family discount",
