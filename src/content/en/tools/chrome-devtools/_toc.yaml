@@ -41,7 +41,7 @@ toc:
         path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
     - title: Remote Debugging Android Devices
       section:
-      - title: Overview
+      - title: Get Started
         path: /web/tools/chrome-devtools/remote-debugging/
       - title: Access Local Servers
         path: /web/tools/chrome-devtools/remote-debugging/local-server
