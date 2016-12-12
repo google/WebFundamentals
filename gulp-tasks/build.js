@@ -118,6 +118,11 @@ gulp.task('build:updates', function() {
     options.title = year;
     wfTemplateHelper.generateTOCbyMonth(filesByYear[year], options);
   });
+  options = {
+    outputPath: GLOBAL.WF.src.content,
+    articlesToShow: 2
+  }
+  wfTemplateHelper.generateLatestWidget(files, options);
 });
 
 gulp.task('build:codelabs', function() {

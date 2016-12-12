@@ -95,6 +95,7 @@ function readMetadataForFile(file) {
     datePublishedPretty: published.format('dddd, MMMM Do YYYY'),
     yearPublished: published.format('YYYY'),
     dateUpdated: updated.format(),
+    dateUpdatedPretty: updated.format('dddd, MMMM Do YYYY'),
     tags: []
   };
   var tags = getRegEx(RE_TAGS, content);
