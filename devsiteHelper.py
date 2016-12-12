@@ -227,7 +227,7 @@ def renderDevSiteContent(content, lang='en'):
       replaceWith += 'height: 100px;'
     replaceWith += '" '
     # The sandbox attr will emulate being on a different origin
-    replaceWith += '" sandbox="allow-forms allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-scripts allow-top-navigation" '
+    replaceWith += 'sandbox="allow-forms allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-scripts allow-top-navigation" '
     replaceWith += 'src="' + fbMemcacheKey + '"></iframe>'
     content = content.replace(framebox, replaceWith)
     memcache.set(fbMemcacheKey, fbContent)
