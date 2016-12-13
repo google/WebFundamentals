@@ -177,7 +177,7 @@ Activate the `PaymentRequest` interface by calling its [`show()`](https://www.w3
 
 <div style="clear:both;"></div>
 
-    payment.show().then(function(paymentResponse) {
+    request.show().then(function(paymentResponse) {
       // Process paymentResponse here
       paymentResponse.complete("success");
     }).catch(function(err) {
@@ -197,7 +197,7 @@ If you abort a request, you'll need to create a new instance of `PaymentRequest`
 
     var paymentTimeout = window.setTimeout(function() {
       window.clearTimeout(paymentTimeout);
-      payment.abort().then(function() {
+      request.abort().then(function() {
         console.log('Payment timed out after 20 minutes.');
       }).catch(function() {
         console.log('Unable to abort.');
@@ -257,7 +257,7 @@ For credit card payments, the response is standardized. For non-credit card paym
 After payment information is received, the app should submit the payment information to your payment processor for processing. The UI will show a spinner while the request takes place. When a response has come back, the app should call `complete()` to close the UI.
 
 
-    payment.show().then(paymentResponse => {
+    request.show().then(paymentResponse => {
       var paymentData = {
         // payment method string, e.g. “visa”
         method: paymentResponse.methodName,
@@ -353,7 +353,7 @@ In order to reject an address for reasons such as non-supported region, pass `de
 Note: Resolving <code>shippingaddresschange</code> event and leaving <code>details.shippingOptions</code> as an empty array also means address rejection (in other words you cannot ship to that location). Always make sure your shipping options are up-to-date and match whatever address the user provided.
 
 
-    payment.addEventListener('shippingaddresschange', e => {
+    request.addEventListener('shippingaddresschange', e => {
       e.updateWith(((details, addr) => {
         if (addr.country === 'US') {
           var shippingOption = {
@@ -400,7 +400,7 @@ Upon user approval for a payment request, the [`show()`](https://www.w3.org/TR/p
 <div style="clear:both;"></div>
 
 
-    payment.show().then(paymentResponse => {
+    request.show().then(paymentResponse => {
       var paymentData = {
         // payment method string
         method: paymentResponse.methodName,
@@ -452,7 +452,7 @@ Note: As noted earlier, <code><a href="https://www.w3.org/TR/payment-request/#pa
 Changing shipping options may have different prices. In order to add the shipping fee and change the total price, you may add an event listener for the `shippingoptionchange` event, which fires on user selection of a shipping option, so that you can run a programmatic examination of the option data. You may change the shipping fee depending on the shipping address as well.
 
 
-    payment.addEventListener('shippingoptionchange', e => {
+    request.addEventListener('shippingoptionchange', e => {
       e.updateWith(((details, shippingOption) => {
         var selectedShippingOption;
         var otherShippingOption;
@@ -488,7 +488,7 @@ Upon user approval for a payment request, the [`show()`](https://www.w3.org/TR/p
 
 <div style="clear:both;"></div>
 
-    payment.show().then(paymentResponse => {
+    request.show().then(paymentResponse => {
       var paymentData = {
         // payment method string
         method: paymentResponse.methodName,
@@ -528,7 +528,7 @@ Upon user approval for a payment request, the [`show()`](https://www.w3.org/TR/p
 
 <div style="clear:both;"></div>
 
-    payment.show().then(paymentResponse => {
+    request.show().then(paymentResponse => {
       var paymentData = {
         // payment method string
         method: paymentResponse.methodName,
