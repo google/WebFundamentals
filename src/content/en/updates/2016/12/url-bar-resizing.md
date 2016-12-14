@@ -5,7 +5,7 @@ description: Hiding the URL bar no longer resizes mobile pages.
 {# wf_updated_on: 2016-12-16 #}
 {# wf_published_on: 2016-12-16 #}
 {# wf_tags: chrome56,android,ux #}
-{# wf_featured_image: TODO #}
+{# wf_featured_image: /web/updates/images/generic/quilt.png #}
 {# wf_featured_snippet: Hiding the URL bar no longer resizes mobile pages. #}
 
 # URL Bar Resizing {: .page-title }
