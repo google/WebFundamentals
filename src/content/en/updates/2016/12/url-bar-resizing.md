@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Hiding the URL bar no longer resizes mobile pages.
 
-{# wf_updated_on: TODO #}
-{# wf_published_on: TODO #}
-{# wf_tags: TODO #}
+{# wf_updated_on: 2016-12-16 #}
+{# wf_published_on: 2016-12-16 #}
+{# wf_tags: chrome56,android,ux #}
 {# wf_featured_image: TODO #}
 {# wf_featured_snippet: Hiding the URL bar no longer resizes mobile pages. #}
 
