@@ -45,8 +45,8 @@ toc:
         path: /web/tools/lighthouse/audits/notifications-on-load
       - title: Site Does Not Use console.time()
         path: /web/tools/lighthouse/audits/console-time
-      - title: Site Does Not Use Links Tags That Delay First Paint
-        path: /web/tools/lighthouse/audits/blocking-links
+      - title: Site Does Not Use Resources That Delay First Paint
+        path: /web/tools/lighthouse/audits/blocking-resources
       - title: Site Does Not Use Date.now()
         path: /web/tools/lighthouse/audits/date-now
       - title: Site Does Not Use document.write()
