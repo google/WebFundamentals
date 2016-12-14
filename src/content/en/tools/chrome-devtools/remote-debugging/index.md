@@ -2,151 +2,152 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Remote debug live content on an Android device from a Windows,  Mac or Linux computer.
 
-{# wf_updated_on: 2016-04-06 #}
+{# wf_updated_on: 2016-12-09 #}
 {# wf_published_on: 2015-04-13 #}
 
-# Remote Debugging Android Devices {: .page-title }
+<style>
+.devtools-inline {
+  max-height: 1em;
+  vertical-align: middle;
+}
+</style>
+
+# Get Started with Remote Debugging Android Devices {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
-{% include "web/_shared/contributors/megginkearney.html" %}
 
 Remote debug live content on an Android device from your 
-Windows, Mac, or Linux computer.
+Windows, Mac, or Linux computer. This tutorial teaches you how to:
+
+* Set up your Android device for remote debugging, and discover it from
+  your development machine.
+* Inspect and debug live content on your Android device from your development
+  machine.
+* Screencast content from your Android device onto a DevTools instance on your
+  development machine.
 
 ![remote debugging illustration](imgs/remote-debugging.png)
 
-
-### TL;DR {: .hide-from-toc }
-- Set up your Android device for remote debugging, and discover it from your development machine.
-- Inspect and debug live content on your Android device from your development machine.
-- Screencast content from your Android device into DevTools.
-
-
-## Requirements
-
-To begin remote debugging, you need:
+## Requirements {: #requirements }
 
 * Chrome 32 or later installed on your development machine.
 * [USB drivers][drivers] installed on your development machine, if you're using
-  Windows. (Ensure _Device Manager_ reports the USB driver correctly)
+  Windows. Ensure _Device Manager_ reports the correct USB driver.
 * A USB cable to connect your Android device to your development machine.
 * Android 4.0 or later.
 * Chrome for Android installed on your Android device.
 
 [drivers]: https://developer.android.com/tools/extras/oem-usb.html
 
-## Enable USB debugging on your Android device
+## Step 1: Discover your Android device {: #discover }
 
-On your Android device, open up **Settings**, find the **Developer options**
-section, and enable **USB debugging**. If you're running Android 4.2 or later
-and you can't find **Developer options** you may need to [enable 
-it](http://developer.android.com/tools/device.html#device-developer-options).
+1. On your Android device, select **Settings** > **Developer Options** >
+   **Enable USB Debugging**. **Developer Options** is hidden by default on
+   Android 4.2 and later. See [Enabling On-Device Developer Options][android]
+   to learn how to enable it.
 
-## Connect and discover your Android device
+[android]: https://developer.android.com/studio/run/device.html#developer-device-options
 
-On your development machine, open Chrome. You should be logged in to one of 
-your user profiles. Remote debugging does not work in incognito or guest mode.
+1. On your development machine, open Chrome. You should be signed in to
+   Chrome with one of your Google accounts. Remote debugging does not work in
+   [Incognito Mode][incognito] or [Guest Mode][guest].
 
-Open DevTools and select **More tools** > **Inspect devices**. 
+[guest]: https://support.google.com/chrome/answer/6130773
+[incognito]: https://support.google.com/chrome/answer/95464
 
-![opening the inspect devices dialog](imgs/open-inspect-devices.png)
+1. [Open DevTools](/web/tools/chrome-devtools/#open).
 
-From here you can see the status of all connected remote devices. You don't
-have any devices connected right now, so your dialog should look similar to the
-following screenshot. Make sure that **Discover USB devices** is enabled. 
+1. In DevTools, click the **Main Menu** ![Main Menu][main]{:.devtools-inline} 
+   then select **More tools** > **Remote devices**. 
 
-![empty inspect devices dialog](imgs/empty-inspect-devices.png)
+     ![Opening remote devices drawer][open]
 
-Connect your Android device to your development machine using a USB cable. You 
-should connect your Android device directly to your development machine, not
-through any intermediate hubs. 
+[main]: /web/tools/chrome-devtools/images/three-dot.png
+[open]: /web/tools/chrome-devtools/remote-debugging/imgs/open-remote-devices.png
 
-If this is your first time connecting this Android device to this development
-machine, you should see an unknown device that is pending authorization on
-your Inspect Devices dialog.
+1. In DevTools, click the **Settings** tab, if another tab is showing.
 
-![pending authorization](imgs/pending-authorization.png)
+1. Make sure that **Discover USB devices** is enabled.
 
-If this is the case, then you need to open the **Allow USB debugging** prompt
-on your Android device and grant the permissions. 
+     ![Discover USB devices is enabled][discover]
 
-**Tip**: If you have encounter any issues during the discovery process, you 
-can start the process anew by going back to **Developer options** and tapping 
-**Revoke USB debugging authorizations**. 
+[discover]: /web/tools/chrome-devtools/remote-debugging/imgs/discover-usb-devices.png
 
-After allowing USB debugging, you should see your device in the Inspect Devices
-dialog. 
+1. Connect your Android device directly to your development machine using a USB
+   cable. Don't use any intermediate USB hubs. If this is your first time
+   connecting your Android device to this development machine, your device
+   shows up under **Unknown**, with the text **Pending Authorization** below
+   it.
 
-![inspect devices dialog with connection](imgs/connected-inspect-devices.png)
+       ![Unknown device, pending authorization][unknown]
 
-## Debug content on Android device from development machine
+[unknown]: /web/tools/chrome-devtools/remote-debugging/imgs/unknown-device.png
 
-From the Inspect Devices dialog, select your device from the menu on the left.
+1. If your device is showing up as **Unknown**, accept the **Allow USB
+   Debugging** permission prompt on your Android device. **Unknown** is
+   replaced with the model name of your Android device. The green circle
+   and the **Connected** text indicate that you are all set to remotely
+   debug your Android device from your development machine.
 
-![inspecting a device](imgs/selected-inspect-device.png)
+Note: If you have any issues during the discovery process, you 
+can restart it by selecting **Settings** > **Developer Options** >
+**Revoke USB Debugging Authorizations** on your Android device.
 
-From here you can see a variety of information about your connected Andoid 
-device:
+## Step 2: Debug content on your Android device from your development machine {: #debug }
 
-* At the top you can see the model name of your Android device followed by 
-  its serial number (for example, `Nexus 5 #08ae8c2700f43a61`).
-* If one or more Chrome tabs are open, then you'll see a **Chrome** heading
-  followed by the version number of Chrome that's running (for example,
-  `Chrome (49.0.2623.105)`). If no Chrome tabs are open, you won't see a 
-  Chrome heading. 
-* Underneath the **Chrome** heading, each open tab gets its own heading. 
-  You can interact with that tab from this section. 
-* If there are any running apps using [WebView](webviews), you'll see a heading 
-  for each app. 
+1. If you don't already have Chrome open on your Android device, open it now.
 
-To open a new Chrome tab, enter a URL in the textfield under the Chrome heading
-and then click **Open**. A new tab automatically opens and loads the specified
-URL. 
+1. Back in DevTools, click the tab that matches your device's
+   model name. At the top of this page, you see your Android device's model
+   name, followed by its serial number. Below that, you can see the version
+   of Chrome that's running on the device, with the version number in
+   parentheses. Each open Chrome tab gets its own section. You can interact
+   with that tab from this section. If there are any apps using WebView, you
+   see a section for each of those apps, too. The screenshot below does not
+   have any tabs or WebViews open.
 
-To reload, focus, or close an open tab, click the **more options** icon next
-to the **inspect** button. 
+       ![Connected remote device][connected]
 
-![reload, focus, or close a tab](imgs/more-options.png)
+[connected]: /web/tools/chrome-devtools/remote-debugging/imgs/connected-remote-device.png
 
-To open up DevTools on your development machine and inspect or debug the live
-content on your Android device, click the **Inspect** button next to the tab
-that you want to investigate. A new instance of DevTools opens up on your
-development machine. 
+1. Next to **New tab**, enter a URL and then click **Open**. The page opens
+   on a new tab on your Android device.
 
-![devtools instance for remote content](imgs/remote-devtools.png)
+1. Click **Inspect** next to the URL that you just opened. A new DevTools
+   instance opens. The version of Chrome running on your Android device
+   determines the version of DevTools that opens on your development machine.
+   So, if your Android device is running a very old version of Chrome, the
+   DevTools instance may look very different than what you're used to.
 
-**Note**: The version of Chrome on your Android device determines the version 
-of DevTools on your development machine used during remote debugging. So, the
-DevTools window on your development machine may look different than what 
-you're used to. 
+### More actions: reload, focus, or close a tab {: #more-actions }
 
-When you hover over or select an element in the **Elements** panel, that
-element is highlighted on your Android device. 
+Click **More Options** ![More Options][more]{:.devtools-inline} next to the
+tab that you want to reload, focus, or close.
 
-You can also tap on your Android device screen to select an element. First,
-click on the **select element** 
-(![select element button](imgs/select-element.png){:.inline})
-button in DevTools, and then tap on your
-Android device screen. The element is selected in the **Elements** panel of 
-DevTools. Note that the **select element** button is automatically disabled
-after the first touch, so you need to re-enable it every time that you want 
-to use this feature. 
+[more]: /web/tools/chrome-devtools/images/three-dot.png
 
-## Screencast from Android device to development machine
+![reload, focus, or close a tab](imgs/reload.png)
 
-Enable the **toggle screencast** button 
-(![toggle screencast button](imgs/toggle-screencast.png){:.inline})
-to view a screencast of the content on your Android device from within your 
-DevTools window. 
+### Inspect elements {: #inspect }
 
-![screencasted android device content in devtools](imgs/screencast.png)
+Go to the **Elements** panel of your DevTools instance, and hover over an
+element to highlight it in the viewport of your Android device.
 
-Screencasts only display page content. Transparent portions of the screencast 
-represent device interfaces, such as the Chrome omnibox, the Android status 
-bar, or the Android keyboard. 
+You can also tap an element on your Android device screen to select it in the
+**Elements** panel. Click **Select Element** ![Select
+Element][select]{:.devtools-inline} on your DevTools instance, and then tap
+the element on your Android device screen. Note that **Select Element**
+is disabled after the first touch, so you need to re-enable it every time
+you want to use this feature.
 
-**Note**: Screencasts continuously capture frames, so you should disable 
-your screencast if your test is sensitive to frame rates. 
+[select]: imgs/select-element.png
+
+### Screencast from Android device to development machine {: #screencast }
+
+Click **Toggle Screencast** ![Toggle Screencast][screencast]{:.devtools-inline}
+to view the content of your Android device in your DevTools instance.
+
+[screencast]: imgs/toggle-screencast.png
 
 You can interact with the screencast in multiple ways:
 
@@ -156,3 +157,36 @@ You can interact with the screencast in multiple ways:
 * To scroll, use your trackpad or mouse wheel, or fling with your mouse
   pointer.
 
+Some notes on screencasts:
+
+* Screencasts only display page content. Transparent portions of the screencast 
+  represent device interfaces, such as the Chrome omnibox, the Android status 
+  bar, or the Android keyboard.
+* Screencasts negatively affect frame rates. Disable screencasting while
+  measuring scrolls or animations to get a more accurate picture of your
+  page's performance.
+* If your Android device screen locks, the content of your screencast
+  disappears. Unlock your Android device screen to automatically resume the
+  screencast.
+
+## Feedback {: #feedback }
+
+If you'd like to help us improve this tutorial, please answer the
+questions below!
+
+{% framebox width="auto" height="auto" %}
+<p>Did you complete the tutorial successfully?</p>
+<button class="gc-analytics-event"
+   data-category="DevTools / Remote Debugging"
+   data-label="Completed / Yes">Yes</button>
+<button class="gc-analytics-event"
+   data-category="DevTools / Remote Debugging"
+   data-label="Completed / No">No</button>
+<p>Did the tutorial contain the information you were looking for?</p>
+<button class="gc-analytics-event"
+   data-category="DevTools / Remote Debugging"
+   data-label="Relevant / Yes">Yes</button>
+<button class="gc-analytics-event"
+   data-category="DevTools / Remote Debugging"
+   data-label="Relevant / No">No</button>
+{% endframebox %}
