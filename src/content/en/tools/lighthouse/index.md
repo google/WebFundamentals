@@ -7,8 +7,6 @@ description: Learn how to set up Lighthouse to audit your web apps.
 
 # Audit Web Apps With Lighthouse {: .page-title }
 
-{% include "web/_shared/contributors/kaycebasques.html" %}
-
 [Lighthouse](https://github.com/GoogleChrome/lighthouse) is an open-source,
 automated tool for improving the quality of your web apps. You can run it as a
 Chrome Extension or from the command line. You give Lighthouse a URL that you
