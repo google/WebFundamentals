@@ -12,7 +12,7 @@ description: position:sticky. It's back!
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-Four years ago Eric Bidelman created a rather awesome blog post about the fact that
+Four years ago [Eric Bidelman](https://twitter.com/ebidel) created a rather awesome blog post about the fact that
 `position: sticky` [landed in
 WebKit](/web/updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit),
 which at the time was the engine that powered Chrome (as well as many other
