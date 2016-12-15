@@ -31,8 +31,7 @@ with how to connect this data set. I did a variety of initial experiments
 looking at image similarity and different ways of filtering and organizing them.
 
 <figure>
-  <img src="/web/showcase/2016/images/land-lines/landlines_casestudy_1.png"  />
-  <img src="/web/showcase/2016/images/land-lines/landlines_casestudy_2.png" />
+  <img src="/web/showcase/2016/images/land-lines/landlines_casestudy_tsne.jpg"  />
   <figcaption>
   (t-sne similarity layout, <a href="https://dl.dropboxusercontent.com/u/92337283/misc/result_L_1457431104.png">high res 50 
   mb</a>)
