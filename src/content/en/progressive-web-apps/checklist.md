@@ -851,3 +851,58 @@ Note: This check list only applies if notifications are implemented
     </tr>
   </tbody>
 </table>
+
+
+
+### Additional features {: .hide-from-toc }
+
+Note: This check only applies your site has a sign in flow
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan=2><h3>
+        User is kept logged in and state synced between devices with 
+        Credential Management API
+      </h3></th>
+    </tr>
+    <tr>
+      <td><b>To Test</b></td>
+      <td>
+        TODO
+      </td>
+    </tr>
+    <tr>
+      <td><b>To Fix</b></td>
+      <td>
+        Follow our [Credential Management API Integration Guide](https://developers.google.com/web/fundamentals/security/credential-management/)
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Note: This check only applies if your site accepts payments
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan=2><h3>
+        User can pay easily via native UI from Payment Request API
+      </h3></th>
+    </tr>
+    <tr>
+      <td><b>To Test</b></td>
+      <td>
+        Enter the payment flow. Instead of filling out a conventional form, the user 
+        should be able to pay easily via the native UI provided by the 
+        Payment Request API. 
+      </td>
+    </tr>
+    <tr>
+      <td><b>To Fix</b></td>
+      <td>
+        Follow our [Payment Request API Integration Guide](https://developers.google.com/web/fundamentals/discovery-and-monetization/payment-request/)
+      </td>
+    </tr>
+  </tbody>
+</table>
