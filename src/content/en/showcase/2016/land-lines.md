@@ -13,7 +13,7 @@ book_path: /web/showcase/_book.yaml
 
 *By <a href="https://www.instagram.com/zach.lieberman/?hl=en">Zach Lieberman</a>.*
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 
 Land Lines is an experiment that lets you explore Google Earth satellite images 
 through gesture. Using a combination of machine learning, optimized algorithms, 
