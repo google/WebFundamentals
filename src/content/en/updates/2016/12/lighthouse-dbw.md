@@ -22,18 +22,18 @@ figure {
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an [open-source](https://github.com/GoogleChrome/lighthouse), automated tool for improving the quality of your web apps. You can install it as a [Chrome Extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) or run it as a Node command line tool. When you give Lighthouse a URL, it runs a barrage of tests against the page and then generates a report explaining how well the page did and indicating areas for improvement.
+[Lighthouse](/web/tools/lighthouse/) is an [open-source](https://github.com/GoogleChrome/lighthouse), automated tool for improving the quality of your web apps. You can install it as a [Chrome Extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) or run it as a Node command line tool. When you give Lighthouse a URL, it runs a barrage of tests against the page and then generates a report explaining how well the page did and indicating areas for improvement.
 {: .note }
 
 <img src="/web/progressive-web-apps/images/pwa-lighthouse.png" class="lighthouse-logo attempt-right" alt="Lighthouse Logo">
 
-Since Google I/O, we've been hard at work making Lighthouse an awesome companion for building great [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/):
+Since Google I/O, we've been hard at work making Lighthouse an awesome companion for building great [Progressive Web Apps](/web/progressive-web-apps/):
 
 - Welcomed 50 new [contributors](https://github.com/GoogleChrome/lighthouse/graphs/contributors) to the project
 - Shipped 15 [releases](https://github.com/GoogleChrome/lighthouse/releases)
 - Added ~20 additional [audit tests](https://github.com/GoogleChrome/lighthouse/tree/master/lighthouse-core/audits) (~50 total)
 
-Today, we're happy to announce the 1.3 release of Lighthouse. Lighthouse 1.3 includes a bunch of big new features, audits, and the usual bug fixes. You can install it from npm (npm i -g lighthouse) or [download the extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) from the Chrome Web Store.
+Today, we're happy to announce the 1.3 release of Lighthouse. Lighthouse 1.3 includes a bunch of big new features, audits, and the usual bug fixes. You can install it from npm (npm i -g lighthouse) or [download the extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) from the Chrome Web Store.
 
 So what's new?
 
@@ -49,7 +49,7 @@ To date, Lighthouse has focused on performance metrics and the quality of PWAs. 
 
 "Do Better Web" is an effort within the Lighthouse project to help developers do better on the web. In other words, help them modernize and optimize their web applications. Oftentimes, web devs use outdated practices, antipatterns, or hit known performance pitfalls without realizing it. For example, it is [widely known](https://www.html5rocks.com/en/tutorials/speed/animations/) that JS-based animations should be done with [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) instead of [`setInterval()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval). However, if the developer is unaware of the newer API, their web app needlessly suffers.
 
-Lighthouse 1.3 includes 20+ [new best practice](https://github.com/GoogleChrome/lighthouse/tree/master/lighthouse-core/audits/dobetterweb) suggestions ranging from tips for modernizing CSS & JavaScript features to performance recommendations like: "Reduce the number of render-blocking assets", "Use [passive event listeners](https://developers.google.com/web/updates/2016/06/passive-event-listeners) to improve scrolling performance".
+Lighthouse 1.3 includes 20+ [new best practice](https://github.com/GoogleChrome/lighthouse/tree/master/lighthouse-core/audits/dobetterweb) suggestions ranging from tips for modernizing CSS & JavaScript features to performance recommendations like: "Reduce the number of render-blocking assets", "Use [passive event listeners](/web/updates/2016/06/passive-event-listeners) to improve scrolling performance".
 
 <img src="/web/updates/images/2016/12/lighthouse-dbw/bestpractices.png" class="screenshot" alt="Do Better Web Best Practices">
 
