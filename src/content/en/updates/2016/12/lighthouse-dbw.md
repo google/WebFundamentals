@@ -31,7 +31,7 @@ Since Google I/O, we've been hard at work making Lighthouse an awesome companion
 
 - Welcomed 50 new [contributors](https://github.com/GoogleChrome/lighthouse/graphs/contributors) to the project
 - Shipped 15 [releases](https://github.com/GoogleChrome/lighthouse/releases)
-- Added 18 additional [audit tests](https://github.com/GoogleChrome/lighthouse/tree/master/lighthouse-core/audits) (47 total)
+- Added ~20 additional [audit tests](https://github.com/GoogleChrome/lighthouse/tree/master/lighthouse-core/audits) (~50 total)
 
 Today, we're happy to announce the 1.3 release of Lighthouse. Lighthouse 1.3 includes a bunch of big new features, audits, and the usual bug fixes. You can install it from npm (npm i -g lighthouse) or [download the extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) from the Chrome Web Store.
 
