@@ -11,7 +11,7 @@ book_path: /web/showcase/_book.yaml
 
 # Land lines {: .page-title }
 
-*By <a href="https://www.instagram.com/zach.lieberman/?hl=en">Zach Lieberman</a>.*
+*By <a href="https://www.instagram.com/zach.lieberman/">Zach Lieberman</a>.*
 
 ### TL;DR {: .hide-from-toc }
 
