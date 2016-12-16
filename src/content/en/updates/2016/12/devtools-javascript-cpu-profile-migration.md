@@ -15,7 +15,7 @@ description: Now that "Record JavaScript CPU Profile" has been removed from Chro
 }
 </style>
 
-# Chrome DevTools: What Happened To "Record JavaScript CPU Profile"? {: .page-title }
+# Chrome DevTools: JavaScript CPU Profiling in Chrome 57 {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -65,13 +65,13 @@ flame chart (bottom arrow) in the new workflow.
 
 [chart]: /web/updates/images/2016/12/flame-map.png
 
-The **Bottom Up** view is available in the **Bottom-Up** tab:
+The **Heavy (Bottom Up)** view is available in the **Bottom-Up** tab:
 
 ![Bottom-up view mapping][bottom]
 
 [bottom]: /web/updates/images/2016/12/bottom-up-map.png
 
-And the **Tree** view is available in the **Call Tree** tab:
+And the **Tree (Top Down)** view is available in the **Call Tree** tab:
 
 ![Tree view mapping][tree]
 
@@ -82,7 +82,7 @@ And the **Tree** view is available in the **Call Tree** tab:
 How was this article? Great? Terrible? Let us know by answering the questions
 below.
 
-{% framebox %}
+{% framebox width="auto" height="auto" %}
 
 <p>
   Did this article adequately explain how the old workflow maps to the new
