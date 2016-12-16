@@ -591,10 +591,10 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
       <td><b>To Fix</b></td>
       <td>
         <ul>
-          <li>Intercept the `beforeinstallprompt` event and prompt later</li>
+          <li>Intercept the <code>beforeinstallprompt</code> event and prompt later</li>
           <li>
             Chrome manages when to trigger the prompt but for situations this
-            might not be ideal. You can [defer the prompt](/web/fundamentals/engage-and-retain/app-install-banners/#deferring_or_cancelling_the_prompt)
+            might not be ideal. You can <a href="/web/fundamentals/engage-and-retain/app-install-banners/#deferring_or_cancelling_the_prompt">defer the prompt</a>
             to a later time in the app's usage. It may also help to dim the screen,
             as advised for requesting permissions below.
           </li>
@@ -636,7 +636,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
             <a href="/speed/pagespeed/insights/">Pagespeed Insights</a>
             (aim for a score &gt;85) and <b>SpeedIndex</b> on
             <a href="https://www.webpagetest.org">WebPageTest</a>
-            (aim for a score &lt;3000 on the first view on Mobile 3G Nexus 
+            (aim for a score &lt;4000 on the first view on Mobile 3G Nexus 
             5 Chrome).
           </li>
           <li>
@@ -700,8 +700,8 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Use the [Network Information API](https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API)
-        to show the user an indication when they're offline.
+        Use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API">
+        Network Information API</a> to show the user an indication when they're offline.
       </td>
     </tr>
   </tbody>
