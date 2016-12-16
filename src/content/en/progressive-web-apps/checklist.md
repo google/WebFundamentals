@@ -53,7 +53,7 @@ The following tests are verifiable with the Lighthouse tool.
       <td>
         <ul>
           <li>Use Lighthouse to verify: Yes to all of "Design is mobile-friendly", although manually checking can also be helpful.</li>
-          <li>Check the <a href="https://www.google.com/webmasters/tools/mobile-friendly/">Mobile Friendly Test</a></li>
+          <li>Check the <a href="//search.google.com/search-console/mobile-friendly">Mobile Friendly Test</a></li>
         </ul>
       </td>
     </tr>
