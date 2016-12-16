@@ -3,15 +3,15 @@ book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2016-12-15T19:00:00.000Z #}
 {# wf_updated_on: 2016-12-15T19:00:00.000Z #}
-{# wf_featured_image: /web/showcase/2016/images/land-lines/land-lines.gif #}
+{# wf_featured_image: /web/showcase/2016/images/land-lines/card.png #}
 {# wf_featured_snippet: Land Lines is an experiment that lets you explore Google Earth satellite images through gesture. Using a combination of machine learning, optimized algorithms,and graphics card power, the experiment is able to run efficiently on yourphone's web browser without a need for backend servers. This is a look into our development process and the various approaches we tried leading us to the final result. #}
 
 
-<img src="/web/showcase/2016/images/land-lines/land-lines.gif" class="attempt-right">
-
 # Land Lines {: .page-title }
 
-*By <a href="https://www.instagram.com/zach.lieberman/">Zach Lieberman</a>*
+<img src="/web/showcase/2016/images/land-lines/land-lines.gif" class="attempt-right">
+
+By <a href="https://www.instagram.com/zach.lieberman/">Zach Lieberman</a>
 
 ### TL;DR {: .hide-from-toc }
 
@@ -33,17 +33,20 @@ looking at image similarity and different ways of filtering and organizing them.
 <figure>
   <img src="/web/showcase/2016/images/land-lines/landlines_casestudy_tsne.jpg"  />
   <figcaption>
-  (t-sne similarity layout, <a href="https://dl.dropboxusercontent.com/u/92337283/misc/result_L_1457431104.png">high res 50 
-  mb</a>)
+    t-sne similarity layout,
+    <a href="https://dl.dropboxusercontent.com/u/92337283/misc/result_L_1457431104.png">
+      high res 50 mb
+    </a>
   </figcaption>
 </figure>
+
 As a group we kept coming back to the beautiful and dominant lines in the 
 images. These lines were easy to spot &mdash; highways, rivers, edges of mountains 
 and plots of land &mdash; and we designed a few projects to explore these. As an 
 artist I was inspired by the beautiful things you can do with collections of 
-lines &mdash; see for example [Cassandra C Jones's work with 
-lightning](http://www.cassandracjones.com/lightning-drawing-series) &mdash; and I was 
-excited to work with this data set. 
+lines &mdash; see for example
+[Cassandra C Jones's work with lightning](http://www.cassandracjones.com/lightning-drawing-series)
+&mdash; and I was excited to work with this data set. 
 
 ## Line Detection
 
@@ -54,25 +57,23 @@ vision algorithms for finding lines tend to not work well across very diverse
 images. 
 
 I developed a previous version of the search by drawing algorithm on a project 
-with [Local Projects ](https://localprojects.net/)and for that we hand annotated 
+with [Local Projects](https://localprojects.net/) and for that we hand annotated 
 the lines to search for. It was fun to draw on top of artworks but tedious as 
 you move from dozens of images to thousands. I wanted to try to automate the 
 process of finding lines. 
 
 With these aerial images I tried traditional line detection algorithms like 
-openCv's [canny edge 
-detection](https://en.wikipedia.org/wiki/Canny_edge_detector) algorithm but 
-found they gave either very discontinuous line segments or if the threshold were 
-too relaxed, tons of spurious lines. Also, the thresholds to get good results 
-were different across different image sets and I wanted an algorithm for finding 
-a consistent set of good lines without supervision.
+openCv's [canny edge detection](https://en.wikipedia.org/wiki/Canny_edge_detector)
+algorithm but found they gave either very discontinuous line segments or if the
+threshold were too relaxed, tons of spurious lines. Also, the thresholds to
+get good results were different across different image sets and I wanted an
+algorithm for finding a consistent set of good lines without supervision.
 
 I experimented with a variety of line detection algorithms including recent ones 
-like [gPb (PDF) 
-](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwj20_GN3fTQAhUsKsAKHb-5CgwQFgggMAA&url=https%3A%2F%2Fwww2.eecs.berkeley.edu%2FResearch%2FProjects%2FCS%2Fvision%2Fgrouping%2Fpapers%2Famfm_pami2010.pdf&usg=AFQjCNGjRrzopJAkuv0Ohqky4bjN_WsFgA&sig2=P3-_6E7MzntAjHZBszvkcw)which 
-although producing amazing results, required minutes to run per image. In the 
-end I settled with [Structured Forest edge 
-detection](http://docs.opencv.org/3.1.0/d0/da5/tutorial_ximgproc_prediction.html), 
+like [gPb (PDF)](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/papers/amfm_pami2010.pdf)
+which  although producing amazing results, required minutes to run per image.
+In the end I settled with
+[Structured Forest edge detection](http://docs.opencv.org/3.1.0/d0/da5/tutorial_ximgproc_prediction.html), 
 an algorithm that ships with [openCV](http://opencv.org/). 
  
 Once I had a good "line image", I still had the problem of actually getting the 
@@ -81,16 +82,15 @@ this raster data and make it vector. Often times when I'm looking at computer
 vision problems, I investigate [imageJ](https://imagej.nih.gov/ij/), an open 
 source java based image processing environment used by scientists and 
 researchers which has a healthy ecosystem of 
-[plugins](https://imagej.nih.gov/ij/plugins/). I found a plugin called [ridge 
-detection](http://imagej.net/Ridge_Detection), which helps take an intensity 
-image and turn that into a set of line segments. (As a side note, I also found 
-this [edge detection and 
-labeling](http://www.peterkovesi.com/matlabfns/#edgelink) code from Matlab 
-useful)
+[plugins](https://imagej.nih.gov/ij/plugins/). I found a plugin called
+[ridge detection](http://imagej.net/Ridge_Detection), which helps take an
+intensity image and turn that into a set of line segments. (As a side note,
+I also found this [edge detection and labeling](http://www.peterkovesi.com/matlabfns/#edgelink)
+code from Matlab useful).
 
 <figure>
-<img src="/web/showcase/2016/images/land-lines/landlines_casestudy_3.png" /> 
-<figcaption>(Image with detected line segments)</figcaption>
+  <img src="/web/showcase/2016/images/land-lines/landlines_casestudy_3.png" /> 
+  <figcaption>Image with detected line segments</figcaption>
 </figure> 
 
 ## Serverless
@@ -106,27 +106,27 @@ only use the server just for serving json and image data.
 For the draw application, the matching is a very heavy operation. When you draw 
 a line, we need to find the closest match among over tens of thousands of line 
 segments. To calculate the distance of one drawing to another we use a metric 
-from [dollar gesture 
-recognizer](https://depts.washington.edu/aimgroup/proj/dollar/) which itself 
-involves many distance calculations. In the past, I've used threading and 
+from [dollar gesture recognizer](https://depts.washington.edu/aimgroup/proj/dollar/)
+which itself involves many distance calculations. In the past, I've used threading and 
 other tricks but in order to make it work in real time on a client device 
-(including mobile phones) I needed something better. I looked into [metric 
-trees](https://en.wikipedia.org/wiki/Metric_tree) for finding closest / nearest 
-neighbors and I settled on [vantage point 
-trees](https://en.wikipedia.org/wiki/Vantage-point_tree) ([javascript 
-implementation](http://fpirsch.github.io/vptree.js/)). The vantage point tree 
-basically gets built off a set of data and a distance metric and when you put in 
-a new piece of data it gives you quite quickly a list of the closest values. 
-The first time I saw this work on a mobile phone instantly I was floored. One 
-of the great benefits of this particular vantage point tree implementation is 
-that you can [save out the tree](https://github.com/fpirsch/vptree.js) after 
-it's computed and save on the costs of computing this tree. 
+(including mobile phones) I needed something better. I looked into
+[metric trees](https://en.wikipedia.org/wiki/Metric_tree) for finding closest/nearest 
+neighbors and I settled on [vantage point trees](https://en.wikipedia.org/wiki/Vantage-point_tree)
+([javascript implementation](http://fpirsch.github.io/vptree.js/)). The vantage
+point tree basically gets built off a set of data and a distance metric and 
+when you put in a new piece of data it gives you quite quickly a list of the
+closest values. The first time I saw this work on a mobile phone instantly I
+was floored. One of the great benefits of this particular vantage point tree
+implementation is that you can [save out the tree](https://github.com/fpirsch/vptree.js)
+after it's computed and save on the costs of computing this tree. 
 
-<figure>
-<img src="/web/showcase/2016/images/land-lines/landlines_casestudy_4.png" />
-<img src="/web/showcase/2016/images/land-lines/landlines_casestudy_5.png" /> 
-<figcaption>(examples of results from the vantage point tree, drawn input is on the right 
- side and the closest results are on the left)</figcaption>
+<figure class="clearfix">
+  <img class="attempt-left" src="/web/showcase/2016/images/land-lines/landlines_casestudy_4.png" />
+  <img class="attempt-right" src="/web/showcase/2016/images/land-lines/landlines_casestudy_5.png" /> 
+  <figcaption>
+    Examples of results from the vantage point tree, drawn input is on the right 
+    side and the closest results are on the left.
+  </figcaption>
 </figure>
 
 Another challenge of making it work without a server is getting the data loaded
@@ -141,9 +141,8 @@ In the drag app was also worked hard to cache images so that as you drag, new
 images are loaded in the background.
 
 Finally, one thing I found harder than expected was making a pre-loader for both
-apps, so you the initial delay as data loads would be understandable. I used
-the [progress
-callback](http://stackoverflow.com/questions/19126994/what-is-the-cleanest-way-to-get-the-progress-of-jquery-ajax-request)
+apps, so you the initial delay as data loads would be understandable. I used the
+[progress callback](http://stackoverflow.com/questions/19126994/what-is-the-cleanest-way-to-get-the-progress-of-jquery-ajax-request)
 on the ajax requests and on the pixi.js side, checked images that were loading
 asynchronously had actually loaded and use that to drive the preload message.
 
@@ -154,10 +153,10 @@ detection. The first step was to filter lines from the line detection algorithm
 and identify long lines that start on one edge and end on one of the three other 
 edges.
 
-<figure>
-  <img src="/web/showcase/2016/images/land-lines/landlines_casestudy_6.png" />
-  <img src="/web/showcase/2016/images/land-lines/landlines_casestudy_7.png" />
-  <figcaption>(good lines for connecting marked in red)</figcaption>
+<figure class="clearfix">
+  <img class="attempt-left" src="/web/showcase/2016/images/land-lines/landlines_casestudy_6.png" />
+  <img class="attempt-right" src="/web/showcase/2016/images/land-lines/landlines_casestudy_7.png" />
+  <figcaption>Good lines for connecting marked in red</figcaption>
 </figure>
 
 Once I had a set of long lines (or to use a more accurate term, 
@@ -167,10 +166,9 @@ angle changes. Usually when you think of a polyline you imagine it as a set of
 points: point a is connected to point b which is connected to point c. Instead, 
 you can treat the line as a set of angle changes: Move forward and rotate some 
 amount, move forward and rotate some amount. A good way to visualize this is to 
-think about [wire bending 
-machines](https://www.youtube.com/watch?v=hSi9ew4bU6o), which take a piece of 
-wire and as it's being extruded perform rotations. The shape of the drawing 
-comes from turning. 
+think about [wire bending machines](https://www.youtube.com/watch?v=hSi9ew4bU6o),
+which take a piece of wire and as it's being extruded perform rotations.
+The shape of the drawing comes from turning. 
 
 If you consider the line as angle changes and not points, it becomes easier to 
 combine lines into one larger line with less discontinuities &mdash; rather than 
