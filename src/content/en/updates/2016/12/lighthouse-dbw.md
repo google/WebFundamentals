@@ -33,7 +33,7 @@ Since Google I/O, we've been hard at work making Lighthouse an awesome companion
 - Shipped 15 [releases](https://github.com/GoogleChrome/lighthouse/releases)
 - Added ~20 additional [audit tests](https://github.com/GoogleChrome/lighthouse/tree/master/lighthouse-core/audits) (~50 total)
 
-Today, we're happy to announce the 1.3 release of Lighthouse. Lighthouse 1.3 includes a bunch of big new features, audits, and the usual bug fixes. You can install it from npm (npm i -g lighthouse) or [download the extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) from the Chrome Web Store.
+Today, we're happy to announce the 1.3 release of Lighthouse. Lighthouse 1.3 includes a bunch of big new features, audits, and the usual bug fixes. You can install it from npm (`npm i -g lighthouse`) or [download the extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) from the Chrome Web Store.
 
 So what's new?
 
@@ -47,7 +47,7 @@ If you've used an earlier version of Lighthouse, you may have noticed that the l
 
 To date, Lighthouse has focused on performance metrics and the quality of PWAs. However, an overarching goal of the project is to provide a guidebook for all of web development. This includes guidance on general best practices, performance and accessibility tips, and end-to-end help on making quality apps. 
 
-"Do Better Web" is an effort within the Lighthouse project to help developers do better on the web. In other words, help them modernize and optimize their web applications. Oftentimes, web devs use outdated practices, antipatterns, or hit known performance pitfalls without realizing it. For example, it is [widely known](https://www.html5rocks.com/en/tutorials/speed/animations/) that JS-based animations should be done with [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) instead of [`setInterval()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval). However, if the developer is unaware of the newer API, their web app needlessly suffers.
+"Do Better Web" is an effort within the Lighthouse project to help developers do better on the web. In other words, help them modernize and optimize their web applications. Oftentimes, web devs use outdated practices, antipatterns, or hit known performance pitfalls without realizing it. For example, it is [widely known](https://developers.google.com/web/fundamentals/design-and-ui/animations/) that JS-based animations should be done with [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) instead of [`setInterval()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval). However, if the developer is unaware of the newer API, their web app needlessly suffers.
 
 Lighthouse 1.3 includes 20+ [new best practice](https://github.com/GoogleChrome/lighthouse/tree/master/lighthouse-core/audits/dobetterweb) suggestions ranging from tips for modernizing CSS & JavaScript features to performance recommendations like: "Reduce the number of render-blocking assets", "Use [passive event listeners](/web/updates/2016/06/passive-event-listeners) to improve scrolling performance".
 
