@@ -30,5 +30,9 @@ time to first render of our pages. Further, understanding the critical
 rendering path also serves as a foundation for building well-performing
 interactive applications. The interactive updates process is the same, just done in a continuous loop and ideally at 60 frames per second! But first, an overview of how the browser displays a simple page.
 
+<a href="constructing-the-object-model" class="gc-analytics-event"
+    data-category="CRP" data-label="Next / Constructing the Object Model">
+  <button>Next Up: Constructing the Object Model</button>
+</a>
 
 {% include "web/_shared/udacity/ud884.html" %}
