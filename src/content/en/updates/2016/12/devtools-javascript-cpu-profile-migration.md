@@ -13,6 +13,9 @@ description: Now that "Record JavaScript CPU Profile" has been removed from Chro
   max-height: 1em;
   vertical-align: middle;
 }
+figcaption {
+  text-align: center;
+}
 </style>
 
 # Chrome DevTools: JavaScript CPU Profiling in Chrome 57 {: .page-title }
@@ -38,22 +41,20 @@ workflow that you're used to.
 
 1. Open DevTools.
 1. Click the **Performance** tab.
-1. Set the performance profile to **JavaScript**.
 
-     ![JS Performance Profile][js-profile]
+     <figure>
+       <img src="/web/updates/images/2016/12/js-perf-profile.png"
+         alt="The Chrome DevTools Performance panel">
+       <figcaption><b>Figure 1</b>. The Performance panel.</figcaption>
+     </figure>
 
-You can record in two ways:
+1. Record in one of the following ways:
 
-* To profile a page load, press <kbd>Command</kbd>+<kbd>R</kbd> (Mac) or
-  <kbd>Control</kbd>+<kbd>R</kbd> (Windows, Linux) to reload the page.
-  DevTools automatically starts the recording and then automatically
-  stops when it detects that the page has finished loading.
-* To profile a running page, press **Record**
-  ![Record][record]{:.devtools-inline}, perform the actions that you want
-  to profile, and then click **Record** again when you're finished.
-
-[js-profile]: /web/updates/images/2016/12/js-perf-profile.png
-[record]: /web/updates/images/2016/12/record.png
+     * To profile a page load, click **Record Page Load**.
+       DevTools automatically starts the recording and then automatically
+       stops when it detects that the page has finished loading.
+     * To profile a running page, click **Record**, perform the actions that
+       you want to profile, and then click **Stop** when you're finished.
 
 ## How the old workflow maps to the new {: #mind-map }
 
@@ -61,21 +62,36 @@ From the **Chart** view of the old workflow, the screenshot below shows
 you the position of the CPU usage overview chart (top arrow) and the 
 flame chart (bottom arrow) in the new workflow.
 
-![Chart view mapping][chart]
-
-[chart]: /web/updates/images/2016/12/flame-map.png
+<figure>
+  <img src="/web/updates/images/2016/12/flame-map.png"
+    alt="Mapping between flame chart in old workflow and new workflow.">
+  <figcaption>
+    <b>Figure 2</b>. Mapping between flame chart in old workflow (left) and
+    new workflow (right).
+  </figcaption>
+</figure>
 
 The **Heavy (Bottom Up)** view is available in the **Bottom-Up** tab:
 
-![Bottom-up view mapping][bottom]
-
-[bottom]: /web/updates/images/2016/12/bottom-up-map.png
+<figure>
+  <img src="/web/updates/images/2016/12/bottom-up-map.png"
+    alt="Mapping betwen Bottom-Up view in old workflow and new workflow.">
+  <figcaption>
+    <b>Figure 3</b>. Mapping between Bottom-Up view in old workflow (left) and
+    new workflow (right).
+  </figcaption>
+</figure>
 
 And the **Tree (Top Down)** view is available in the **Call Tree** tab:
 
-![Tree view mapping][tree]
-
-[tree]: /web/updates/images/2016/12/tree-map.png
+<figure>
+  <img src="/web/updates/images/2016/12/tree-map.png"
+    alt="Mapping betwen Tree view in old workflow and new workflow.">
+  <figcaption>
+    <b>Figure 4</b>. Mapping between Tree view in old workflow (left) and
+    new workflow (right).
+  </figcaption>
+</figure>
 
 ## Feedback {: #feedback }
 
