@@ -252,7 +252,7 @@ are not yet implemented in Lighthouse
 ### Indexability & social {: .hide-from-toc }
 
 Note: for general tips see our guide to
-[social optimization](/web/fundamentals/discovery-and-monetization/search-optimization/) 
+[socialoptimization](/web/fundamentals/discovery-and-monetization/search-optimization/) 
 and [social discovery](/web/fundamentals/discovery-and-monetization/social-discovery/).
 
 <table class="responsive">
@@ -875,13 +875,12 @@ Note: This check only applies your site has a sign in flow
              password/account dialog show up. Click on "Save".
           </li>
           <li>Clear cookies for the site (via clicking on the padlock or Chrome
-              settings) and refresh the site. Esure that you either see an 
-              account picker (e.g. if there are multiple accounts saved) or you 
-              are automatically signed-in.
+              settings) and refresh the site. Ensure that you either see an 
+              account picker (e.g. if there are multiple accounts saved) or 
+              are automatically signed back in.
           </li>
           <li>
-            Sign out and check if you're seeing an account picker next time you 
-            visit the site.
+            Sign out and refresh the site. Ensure you see the account picker.
           </li>
           </ul>
       </td>
@@ -907,8 +906,8 @@ Note: This check only applies if your site accepts payments
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Enter the payment flow. Instead of filling out a conventional form, the user 
-        should be able to pay easily via the native UI provided by the 
+        Enter the payment flow. Instead of filling out a conventional form, 
+        verify the user is able to pay easily via the native UI provided by the 
         Payment Request API. 
       </td>
     </tr>
