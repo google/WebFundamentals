@@ -862,7 +862,7 @@ Note: This check only applies your site has a sign in flow
   <tbody>
     <tr>
       <th colspan=2><h3>
-        User is kept logged in and state synced between devices with 
+        User is logged in across devices via
         Credential Management API
       </h3></th>
     </tr>
