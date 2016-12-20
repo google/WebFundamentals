@@ -869,7 +869,21 @@ Note: This check only applies your site has a sign in flow
     <tr>
       <td><b>To Test</b></td>
       <td>
-        TODO
+      <ul>
+          <li>
+             Create an account for a service and ensure you see the save 
+             password/account dialog show up. Click on "Save".
+          </li>
+          <li>Clear cookies for the site (via clicking on the padlock or Chrome
+              settings) and refresh the site. Esure that you either see an 
+              account picker (e.g. if there are multiple accounts saved) or you 
+              are automatically signed-in.
+          </li>
+          <li>
+            Sign out and check if you're seeing an account picker next time you 
+            visit the site.
+          </li>
+          </ul>
       </td>
     </tr>
     <tr>
