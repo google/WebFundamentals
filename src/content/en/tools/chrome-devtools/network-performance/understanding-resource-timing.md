@@ -167,7 +167,7 @@ Being able to find these requires a good understanding of how clients and server
 ### Queued or Stalled series
 
 The most common issue seen is a series of items that are queued or stalled.
-This indicates that too many resources are being retrieved from a single client.
+This indicates that too many resources are being retrieved from a single domain.
 On HTTP 1.0/1.1 connections, Chrome enforces a maximum of six TCP connections per host.
 If you are requesting twelve items at once, the first six will begin and the last half will be queued.
 Once one of the original half is finished, the first item in the queue will begin its request process.
