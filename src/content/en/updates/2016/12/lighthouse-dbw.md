@@ -4,7 +4,7 @@ description: What's new in Lighthouse. Redesign, new best practice audits, and a
 
 {# wf_updated_on: 2016-12-19 #}
 {# wf_published_on: 2016-12-19 #}
-{# wf_tags: lighthouse,tools,performance,pwa #}
+{# wf_tags: lighthouse,tools,performance,progressive-web-apps #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
 {# wf_featured_snippet: What's new in Lighthouse. Redesign, new best practice audits, and an online report viewer. #}
 
