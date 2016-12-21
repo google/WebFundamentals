@@ -15,7 +15,7 @@ It is crucial to understand the phases in which resources are gathered over the 
 ### TL;DR {: .hide-from-toc }
 - Understand the phases of resource timing.
 - Know what each phase provides to the Resource Timing API.
-- Realize different indicators of performance problems in the timeline graph. Such as series of transparent bars or large green chunks.
+- Realize different indicators of performance problems in the timeline graph, such as series of transparent bars or large green chunks.
 
 
 All network requests are considered resources.
@@ -102,7 +102,7 @@ dt.content-download:before {
 
   <dt class="queued"><strong>Queuing</strong></dt>
   <dd>
-    If a request is queued it indicated that:
+    A request being queued indicates that:
       <ul>
         <li>
         The request was postponed by the rendering engine because it's considered lower priority than critical resources (such as scripts/styles).
@@ -214,5 +214,5 @@ The simplest method to test reducing this is to put your application on another 
 
 ![Throughput capacity Indicator](imgs/indicator-of-large-content.png)
 
-If you see lots time spent in the Content Download phases, then improving server response or concatenating won't help.
+If you see lots of time spent in the Content Download phases, then improving server response or concatenating won't help.
 The primary solution is to send fewer bytes.
