@@ -53,7 +53,7 @@ restart Chrome and you should be able to
 [scan for](#scan-for-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
 nearby Bluetooth devices,
 [read](#read-a-bluetooth-characteristic)/[write](#write-to-a-bluetooth-characteristic)
-Bluetooth characteristics, [receive GATT Notifications](#receive-gatt-notifications) and know when a [Bluetooth device gets
+Bluetooth characteristics, [receive GATT Notifications](#receive-gatt-notifications), and know when a [Bluetooth device gets
 disconnected](#get-disconnected-from-a-bluetooth-device).
 
 ### Available for Origin Trials
@@ -103,9 +103,16 @@ the new Certificate Authority [Let's Encrypt](https://letsencrypt.org/){: .exter
 
 ### User Gesture Required
 
-As a security feature, discovering nearby Bluetooth devices with
-`navigator.bluetooth.requestDevice` must be called via a user gesture
-like a touch or mouse click.
+As a security feature, discovering Bluetooth devices with
+`navigator.bluetooth.requestDevice` must be triggered by [a user
+gesture](https://html.spec.whatwg.org/multipage/interaction.html#activation)
+such as a touch or a mouse click. We're talking about listening to
+[`pointerup`](https://developers.google.com/web/updates/2016/10/pointer-events),
+`click`, and `touchend` events.
+
+    button.addEventListener('pointerup', function(event) {
+      // Call navigator.bluetooth.requestDevice
+    });
 
 ## Get into the Code
 
