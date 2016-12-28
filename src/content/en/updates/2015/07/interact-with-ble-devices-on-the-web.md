@@ -107,7 +107,7 @@ As a security feature, discovering Bluetooth devices with
 `navigator.bluetooth.requestDevice` must be triggered by [a user
 gesture](https://html.spec.whatwg.org/multipage/interaction.html#activation)
 such as a touch or a mouse click. We're talking about listening to
-[`pointerup`](https://developers.google.com/web/updates/2016/10/pointer-events),
+[`pointerup`](/web/updates/2016/10/pointer-events),
 `click`, and `touchend` events.
 
     button.addEventListener('pointerup', function(event) {
