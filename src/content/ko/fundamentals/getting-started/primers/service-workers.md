@@ -155,6 +155,7 @@ Incognito 윈도우에서는 이전 서비스워커가 새로운 윈도우에 �
 2. 파일들을 캐쉬한다.
 3. 필요한 파일들이 모두 캐쉬가 되었는지 확인한다.
 
+<div style="clear:both;"></div>
 
     var CACHE_NAME = 'my-site-cache-v1';
     var urlsToCache = [
@@ -173,7 +174,7 @@ Incognito 윈도우에서는 이전 서비스워커가 새로운 윈도우에 �
           })
       );
     });
-    
+
 
 위 코드처럼 `caches.open()`에 원하는 캐쉬 이름을 넣어 호출합니다.
 그리고 `cache.addAll()`에 캐쉬할 파일의 배열을 값을 추가합니다. 이 두가지 메서드는 promise로 연결되어 있습니다.
