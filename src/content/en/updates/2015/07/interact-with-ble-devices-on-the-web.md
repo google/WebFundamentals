@@ -295,14 +295,10 @@ characteristic changes on the device:
     .then(device => device.gatt.connect())
     .then(server => server.getPrimaryService('heart_rate'))
     .then(service => service.getCharacteristic('heart_rate_measurement'))
+    .then(characteristic => characteristic.startNotifications())
     .then(characteristic => {
-      return characteristic.startNotifications()
-      .then(_ => {
-        characteristic.addEventListener('characteristicvaluechanged',
-                                        handleCharacteristicValueChanged);
-      });
-    })
-    .then(_ => {
+      characteristic.addEventListener('characteristicvaluechanged',
+                                      handleCharacteristicValueChanged);
       console.log('Notifications have been started.');
     })
     .catch(error => { console.log(error); });
