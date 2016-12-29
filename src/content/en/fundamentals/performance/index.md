@@ -7,7 +7,7 @@ description: Improving performance starts with minimizing, or at least, optimizi
 
 # Performance {: .page-title }
 
-Improving performance is a process that starts with minimizing, or at lease, optimizing the data that users download. Understanding how a browser renders those resources is a prerequisite for improving code efficiency. After improving it, you need a way to test it. 
+Improving performance is a process that starts with minimizing, or at least, optimizing the data that users download. Understanding how a browser renders those resources is a prerequisite for improving code efficiency. After improving it, you need a way to test it. 
 
 ## Optimizing Content Efficiency
 
