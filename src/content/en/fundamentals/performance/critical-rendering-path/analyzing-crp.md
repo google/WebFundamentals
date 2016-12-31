@@ -214,3 +214,8 @@ Finally, if the CSS stylesheet were only needed for print, how would that look?
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, non-blocking CSS, and async JavaScript CRP" >
 
 Because the style.css resource is only used for print, the browser doesn't need to block on it to render the page. Hence, as soon as DOM construction is complete, the browser has enough information to render the page. As a result, this page has only a single critical resource (the HTML document), and the minimum critical rendering path length is one roundtrip.
+
+<a href="optimizing-critical-rendering-path" class="gc-analytics-event"
+    data-category="CRP" data-label="Next / Optimizing CRP">
+  <button>Next Up: Optimizing the Critical Rendering Path</button>
+</a>

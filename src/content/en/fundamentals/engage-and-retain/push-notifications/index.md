@@ -27,7 +27,6 @@ you to re-engage with your users.
 Yes. Push is based on service workers because service workers operate in the
 background. This means the only time code is run for a push notification (in
 other words, the only time the battery is used) is when the user interacts with
-
 a notification by clicking it or closing it.   If you're not familiar with them,
 check out the  [service worker introduction][service-worker-primer]. We will use
 service worker code in later sections when we show you how to implement pushes

@@ -102,3 +102,8 @@ illustrate CRP concepts, DevTools is currently not well-suited for CRP
 measurements because it does not have a built-in mechanism for isolating
 critical resources. Run a [Lighthouse](#lighthouse) audit to help
 identify such resources.
+
+<a href="analyzing-crp" class="gc-analytics-event"
+    data-category="CRP" data-label="Next / Analyzing CRP">
+  <button>Next Up: Analyzing Critical Rendering Path Performance</button>
+</a>

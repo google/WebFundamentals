@@ -81,7 +81,7 @@ spec compliance and will be removed altogether in Chrome 54.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dqlJguVuIHs) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/features/5730982598541312) &#124;
-[CRBug Issue](https://code.google.com/p/chromium/issues/detail?id=522100)
+[Chromium Bug](https://code.google.com/p/chromium/issues/detail?id=522100)
 
 For a long time developers have been able to create synthetic touch events in Chrome
 using the `initTouchEvent` API. These are frequently used to simulate Touch Events

@@ -3,3 +3,7 @@ redirects:
 
 - from: /web/fundamentals/getting-started/codelabs/
   to: /web/fundamentals/getting-started/#codelabs
+- from: /web/fundamentals/getting-started/primers/payment-request/
+  to: /web/fundamentals/discovery-and-monetization/payment-request/
+- from: /web/fundamentals/getting-started/primers/payment-request/android-pay
+  to: /web/fundamentals/discovery-and-monetization/payment-request/android-pay

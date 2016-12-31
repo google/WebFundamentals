@@ -23,7 +23,7 @@ headers, cookies, and more.
 ### TL;DR {: .hide-from-toc }
 - Use the Network panel to record and analyze network activity.
 - View load information in aggregate or for individual resources.
-- Filter and sort how resources are dispalyed.
+- Filter and sort how resources are displayed.
 - Save, copy, and clear network recordings.
 - Customize the Network panel to your needs.
 
@@ -35,8 +35,9 @@ The Network panel consists of five panes:
 1. **Controls**. Use these options to control how the **Network** panel looks 
    and functions.
 2. **Filters**. Use these options to control which resources are displayed in 
-   the **Requests Table**. Tip: hold <kbd>cmd</kbd> and then click on a filter 
-   to select multiple filters at the same time.
+   the **Requests Table**. Tip: hold <kbd>Cmd</kbd> (Mac) or <kbd>Ctrl</kbd>
+   (Window/Linux), and then click on a filter to select multiple filters at the
+   same time.
 3. **Overview**. This graph shows a timeline of when resources were retrieved. 
    If you see multiple bars stacked vertically, it means that those resources 
    were retrieved simultaneously.
@@ -60,7 +61,7 @@ The **Requests Table** displays the following columns by default. You can
 * **Initiator**. The object or process that initiated the request. It can 
   have one of the following values:
   * **Parser**. Chrome's HTML parser initiated the request.
-  * **Redirect**. A HTTP redirect initiated the request.
+  * **Redirect**. An HTTP redirect initiated the request.
   * **Script**. A script initiated the request.
   * **Other**. Some other process or action initiated the request, 
     such as the user navigating to a page via a link, or by entering a 
@@ -84,7 +85,7 @@ You can tell whether or not DevTools is recording via the
 (![record button on](imgs/record-on.png){:.inline}), DevTools is recording. 
 When it's grey (![record button off](imgs/record-off.png){:.inline}), DevTools 
 is not recording. Click this button to start or stop recording, or press 
-the keyboard shortcut <kbd>cmd</kbd>+<kbd>e</kbd>.
+the keyboard shortcut <kbd>Cmd/Ctrl</kbd>+<kbd>e</kbd>.
 
 ## Capture screenshots during recording {:#filmstrip}
 
@@ -142,7 +143,7 @@ to view more information about that resource.
 The tabs available change depending on what type of resource you've selected,
 but the four tabs below are most common:
 
-* **Headers**. HTTP headers associated to the resource.
+* **Headers**. HTTP headers associated with the resource.
 * **Preview**. Previews of JSON, image, and text resources.
 * **Response**. HTTP response data (if any).
 * **Timing**. A granular breakdown of the request lifecycle for the 
@@ -162,7 +163,7 @@ The lifecycle shows how much time is spent in the following categories:
 
 * Queuing
 * Stalled
-* Request/Response
+* If applicable: DNS lookup, initial connection, SSL handshake
 * Request sent
 * Waiting (Time to first byte (TTFB))
 * Content Download
@@ -196,7 +197,7 @@ link next to each section.
 
 ![view header source](imgs/view-header-source.png)
 
-You can also view query string parameters in URL encoded or decoded format by
+You can also view query string parameters in URL-encoded or decoded format by
 clicking the `view URL encoded` or `view decoded` link next to that section.
 
 ![view URL encoded](imgs/view-url-encoded.png)
@@ -248,7 +249,7 @@ initiated a `WebSocket` connection.
 
 ![websocket frames tab](imgs/websocket-frames.png)
 
-The table below describes each of the columns in the table on the **Frames**
+The list below describes each of the columns in the table on the **Frames**
 tab:
 
 * **Data**. The message payload. If the message is plain text, it's 
@@ -395,7 +396,7 @@ in the screenshot below typing `domain:` triggered the autocomplete dropdown.
 ## Copy, save, and clear network information
 
 Right-click within the **Requests Table** to copy, save, or
-delete network information. Some of the options are context-senstive, so 
+delete network information. Some of the options are context-sensitive, so 
 if you want to operate on a single resource, you need to right-click on
 that resource's row. The list below describes each of the options.
 
@@ -404,11 +405,12 @@ that resource's row. The list below describes each of the options.
 * **Copy as cURL**. Copies the network request of the selected resource as a
   [cURL](http://curl.haxx.se/){: .external } command string to the system clipboard. 
   See [Copying requests as cURL commands](#copy-requests-as-curl-commands).
-* **Copy All as HAR**. Copies all resources to the system clipboard as HAR data.
+* **Copy All as HAR**. Copies all resources to the system clipboard as
+  [HAR](https://en.wikipedia.org/wiki/.har){: .external } data.
   A HAR file contains a JSON data structure that describes the network 
-  "waterfall". Several [third-party](https://ericduran.github.io/chromeHAR/){: .external } 
-  [tools](https://code.google.com/p/harviewer/){: .external } can reconstruct the network 
-  waterfall from the data in the HAR file. See 
+  "waterfall". Several [third-party](https://ericduran.github.io/chromeHAR/){: .external }
+  [tools](https://code.google.com/p/harviewer/){: .external } can reconstruct the network
+  waterfall from the data in the HAR file. See
   [Web Performance Power Tool: HTTP Archive 
   (HAR)](https://www.igvita.com/2012/08/28/web-performance-power-tool-http-archive-har/)
   for more information.
@@ -416,7 +418,6 @@ that resource's row. The list below describes each of the options.
   HAR file along with each page resource. Binary resources, including images, 
   are encoded as Base64-encoded text.
 * **Clear Browser Cache**. Clear the browser cache.
-
   **Tip**: You can also enable or disable the browser cache from the 
   [**Network Conditions**][nc] drawer.
 * **Clear Browser Cookies**. Clear the browser's cookies.

@@ -11,7 +11,4 @@ description: Reference documentation for the "AUDIT_NAME" Lighthouse audit.
 
 ## How to pass the audit {: #how }
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}

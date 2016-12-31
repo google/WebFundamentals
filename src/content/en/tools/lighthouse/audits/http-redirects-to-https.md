@@ -25,10 +25,7 @@ traffic to your site is redirected to HTTPS.
 2. Configure your server to redirect HTTP traffic to HTTPS. See your server's
    documentation to figure out the best way to do this.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse changes the page's URL to `http`, loads the page, and then waits for
 the event from the Chrome Debugger that indicates that the page is secure. If

@@ -9,6 +9,8 @@ toc:
       path: /web/tools/chrome-devtools/progressive-web-apps
     - title: Understand Security Issues
       path: /web/tools/chrome-devtools/security
+    - title: Keyboard Shortcuts Reference
+      path: /web/tools/chrome-devtools/shortcuts
     - title: Inspect and Edit Pages and Styles
       section:
       - title: Overview
@@ -19,8 +21,6 @@ toc:
         path: /web/tools/chrome-devtools/inspect-styles/animations
       - title: Edit the DOM
         path: /web/tools/chrome-devtools/inspect-styles/edit-dom
-      - title: Keyboard and UI Shortcuts Reference
-        path: /web/tools/chrome-devtools/inspect-styles/shortcuts
     - title: Inspect and Manage Storage, Caches, and Resources
       section:
       - title: Inspect and Manage Storage, Databases, and Caches
@@ -41,7 +41,7 @@ toc:
         path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
     - title: Remote Debugging Android Devices
       section:
-      - title: Overview
+      - title: Get Started
         path: /web/tools/chrome-devtools/remote-debugging/
       - title: Access Local Servers
         path: /web/tools/chrome-devtools/remote-debugging/local-server

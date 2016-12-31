@@ -89,3 +89,7 @@ Our demo page may look simple, but it requires quite a bit of work. If either th
 
 **_Optimizing the critical rendering path_ is the process of minimizing the total amount of time spent performing steps 1 through 5 in the above sequence.** Doing so renders content to the screen as quickly as possible and also reduces the amount of time between screen updates after the initial render; that is, achieve higher refresh rates for interactive content.
 
+<a href="render-blocking-css" class="gc-analytics-event"
+    data-category="CRP" data-label="Next / Render-Blocking CSS">
+  <button>Next Up: Render-Blocking CSS</button>
+</a>

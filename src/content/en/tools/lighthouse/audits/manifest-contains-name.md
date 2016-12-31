@@ -32,10 +32,7 @@ Check out [Manifest Exists](manifest-exists#how)
 for a list of guides that teach you how to properly
 implement and test "Add to Homescreen" support in your app.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse fetches the manifest and verifies that it has a `name` property.
 The manifest that Lighthouse fetches is separate from the one that Chrome is

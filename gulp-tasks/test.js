@@ -19,6 +19,7 @@ var STD_EXCLUDES = [
 ];
 var MAX_DESCRIPTION_LENGTH = 485;
 var ERROR_STRINGS = [
+  {label: 'YouTube videos must use DevSite embed.', regEx: /<iframe .*? src="(https?:)?\/\/(www\.)?youtube.com\/.*?>/g},
   {label: 'Possible template tag ({{)', regEx: /{{/g},
   {label: 'Invalid named anchor', regEx: /{#\w+}/m},
   {label: 'Hard coded language URL in link (hl=xx)', regEx: /[\?|&]hl=\w\w/g},
@@ -388,7 +389,7 @@ function validateMarkdown(filename, commonTags) {
         logError(filename, errMsg)
         errors++;
       }
-      matched = content.match(/^#[^#].*/gm);
+      matched = content.match(/^#\s{1}[^#].*/gm)
       if (matched) {
         numH1 += matched.length;
       }

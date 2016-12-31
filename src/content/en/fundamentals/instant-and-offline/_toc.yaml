@@ -13,3 +13,5 @@ toc:
         path: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
     - title: The Service Worker Lifecycle
       path: /web/fundamentals/instant-and-offline/service-worker/lifecycle
+    - title: Service Worker Registration
+      path: /web/fundamentals/instant-and-offline/service-worker/registration
