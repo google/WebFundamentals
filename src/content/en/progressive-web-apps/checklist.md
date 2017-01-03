@@ -252,7 +252,7 @@ are not yet implemented in Lighthouse
 ### Indexability & social {: .hide-from-toc }
 
 Note: for general tips see our guide to
-[socialoptimization](/web/fundamentals/discovery-and-monetization/search-optimization/) 
+[social optimization](/web/fundamentals/discovery-and-monetization/search-optimization/) 
 and [social discovery](/web/fundamentals/discovery-and-monetization/social-discovery/).
 
 <table class="responsive">
