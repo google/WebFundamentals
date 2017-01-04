@@ -43,6 +43,8 @@ toc:
         path: /web/tools/lighthouse/audits/geolocation-on-load
       - title: Page Does Not Automatically Request Notfication Permissions On Page Load
         path: /web/tools/lighthouse/audits/notifications-on-load
+      - title: Site Does Not Use Application Cache
+        path: /web/tools/lighthouse/audits/app-cache
       - title: Site Does Not Use console.time()
         path: /web/tools/lighthouse/audits/console-time
       - title: Site Does Not Use Resources That Delay First Paint
