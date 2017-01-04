@@ -51,10 +51,8 @@ toc:
         path: /web/tools/chrome-devtools/remote-debugging/webviews
     - title: Inspect and Debug JavaScript
       section:
-      - title: Overview
-        path: /web/tools/chrome-devtools/javascript/overview
       - title: Get Started
-        path: /web/tools/chrome-devtools/javascript/get-started
+        path: /web/tools/chrome-devtools/javascript/
       - title: Set Breakpoints
         path: /web/tools/chrome-devtools/javascript/add-breakpoints
       - title: Step Through Code

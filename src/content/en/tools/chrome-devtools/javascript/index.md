@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with debugging JavaScript using Chrome DevTools in this interactive tutorial.
 
-{# wf_updated_on: 2016-11-08 #}
-{# wf_published_on: 2016-11-08 #}
+{# wf_updated_on: 2017-01-04 #}
+{# wf_published_on: 2017-01-04 #}
 
 <style>
 .devtools-inline {
@@ -71,14 +71,9 @@ pausing your code is called a **breakpoint**. Try it now:
 1. Check the **click** checkbox.
 1. Back on the demo, click **Add Number 1 and Number 2** again. DevTools
    pauses the demo and highlights a line of code in the **Sources** panel.
-1. Check that DevTools is highlighting this line of code:
+   DevTools highlights this line of code:
 
-       `function onClick() {`
-
-1. If it's highlighting any other line, keep pressing **Resume script
-   execution** ![Resume script execution][resume]{: .devtools-inline }
-   until DevTools highlights the line of code above. The highlighted line
-   represents the line of code that you're currently paused on.
+       if (inputsAreEmpty()) {
 
 When you checked the **click** checkbox, you set up an event-based breakpoint on
 all `click` events. When *any* node is clicked, and that node has a `click`
@@ -114,7 +109,7 @@ That's the basic idea of stepping through code. If you look at the code in
 `get-started-1.js`, you can see that the bug is probably somewhere in the
 `updateLabel()` function. Rather than stepping through every line of code,
 you can use another type of breakpoint to pause the code closer to the
-probably location of the bug.
+location of the bug.
 
 [into]: /web/tools/chrome-devtools/images/step-into.png
 [over]: /web/tools/chrome-devtools/images/step-over.png
@@ -129,7 +124,7 @@ line-of-code breakpoint. Try it now:
 
        `label.textContent = addend1 + ' + ' + addend2 + ' = ' + sum;`
 
-1. To the left of this code you can see the line number of this particular
+1. To the left of this code, you can see the line number of this particular
    line of code: **25**. Click on **25**. DevTools puts a blue icon on top
    of **25**. This means that there is a line of code breakpoint on this line.
    DevTools now always pauses before this line of code is executed.
@@ -171,8 +166,8 @@ Developers commonly use the Console to overwrite the variable values
 when debugging. In your case, the Console can help you test out potential
 fixes for the bug you just discovered. Try it now:
 
-1. Press <kbd>Escape</kbd> to open the Console drawer. It opens at the bottom
-   of your DevTools window.
+1. If you don't have the Console drawer open, press <kbd>Escape</kbd> to open
+   it. It opens at the bottom of your DevTools window.
 1. In the Console, type `parseInt(addend1) + parseInt(addend2)`.
 1. Press <kbd>Enter</kbd>. DevTools evaluates the statement and prints out
    `6`, which is the result you expect the demo to produce.
