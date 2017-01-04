@@ -12,6 +12,10 @@ description: Get started with debugging JavaScript using Chrome DevTools in this
 }
 </style>
 
+<!-- TODO
+     make demo responsive
+-->
+
 # Get Started with Debugging JavaScript in Chrome DevTools {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
@@ -60,20 +64,43 @@ pausing your code is called a **breakpoint**. Try it now:
 1. Open DevTools on the demo by pressing
    <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) or
    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows, Linux).
+
 1. Click the **Sources** tab.
+
+<!-- TODO add a screenshot. Don't create the screenshot until demo design is
+     finished. Add it here rather than previous screenshot in case Sources
+     is hidden -->
+
 1. Click **Event Listener Breakpoints** to expand the section. DevTools reveals
    a list of expandable event categories, such as **Animation** and
    **Clipboard**.
+
+<!-- TODO or maybe add it here -->
+
 1. Next to the **Mouse** event category, click **Expand** ![Expand
    icon](/web/tools/chrome-devtools/images/expand.png){: .devtools-inline}.
    DevTools reveals a list of mouse events, such as **click**,
    with checkboxes next to them.
 1. Check the **click** checkbox.
+
+     <figure>
+       <img src="imgs/get-started-click-breakpoint.png"
+         alt="DevTools opened on the demo, with the Sources panel in focus
+              and click event listener breakpoints enabled."
+       <figcaption>
+         <b>Figure 1</b>: DevTools opened on the demo, with the
+         Sources panel in focus and click event listener breakpoints enabled.
+         If your DevTools window is large, the location of the <b>Event
+         Listener Breakpoints</b> pane is on the right, rather than the
+         bottom-left, like in the screenshot.
+       </figcaption>
+     </figure>
+
 1. Back on the demo, click **Add Number 1 and Number 2** again. DevTools
    pauses the demo and highlights a line of code in the **Sources** panel.
    DevTools highlights this line of code:
 
-       if (inputsAreEmpty()) {
+       `function onClick() {`
 
 When you checked the **click** checkbox, you set up an event-based breakpoint on
 all `click` events. When *any* node is clicked, and that node has a `click`
@@ -106,7 +133,7 @@ executing in a different order than you expected. Try it now:
    statement's block of code didn't execute.
 
 That's the basic idea of stepping through code. If you look at the code in
-`get-started-1.js`, you can see that the bug is probably somewhere in the
+`get-started.js`, you can see that the bug is probably somewhere in the
 `updateLabel()` function. Rather than stepping through every line of code,
 you can use another type of breakpoint to pause the code closer to the
 location of the bug.
@@ -125,8 +152,8 @@ line-of-code breakpoint. Try it now:
        `label.textContent = addend1 + ' + ' + addend2 + ' = ' + sum;`
 
 1. To the left of this code, you can see the line number of this particular
-   line of code: **25**. Click on **25**. DevTools puts a blue icon on top
-   of **25**. This means that there is a line of code breakpoint on this line.
+   line of code: **32**. Click on **32**. DevTools puts a blue icon on top
+   of **32**. This means that there is a line-of-code breakpoint on this line.
    DevTools now always pauses before this line of code is executed.
 1. Click **Resume script execution** ![Resume script
    execution][resume]{:.devtools-inline}. The script continues executing
@@ -157,6 +184,17 @@ can store any valid JavaScript expression in a Watch Expression. Try it now:
 1. Press <kbd>Enter</kbd>. DevTools shows `typeof sum: "string"`. The value
    to the right of the colon is the result of your Watch Expression.
 
+     <figure>
+       <img src="imgs/get-started-watch-expression.png"
+         alt="The Watch Expression pane."
+       <figcaption>
+         <b>Figure 1</b>: The Watch Expression pane (bottom-right), after
+         creating the <code>typeof sum</code> Watch Expression.
+         If your DevTools window is large, the Watch Expression pane is on
+         the right, above the <b>Event Listener Breakpoints</b> pane.
+       </figcaption>
+     </figure>
+
 As suspected, `sum` is being evaluated as a string, when it should be a
 number. This is the cause of the demo's bug.
 
@@ -172,6 +210,15 @@ fixes for the bug you just discovered. Try it now:
 1. Press <kbd>Enter</kbd>. DevTools evaluates the statement and prints out
    `6`, which is the result you expect the demo to produce.
 
+     <figure>
+       <img src="imgs/get-started-console.png"
+         alt="The Console drawer, after evaluating a statement."
+       <figcaption>
+         <b>Figure 1</b>: The Console drawer, after evaluating
+         <code>parseInt(addend1) + parseInt(addend2)</code>.
+       </figcaption>
+     </figure>
+
 [add]: /web/tools/chrome-devtools/javascript/imgs/add-expression.png
 
 ## Step 6: Apply a fix
@@ -183,17 +230,18 @@ within the DevTools UI. Try it now:
 
 1. In the code editor on the **Sources** panel of DevTools, replace
    `var sum = addend1 + addend2` with
-   `var sum = parseInt(addend1) + parseInt(addend2);`.
+   `var sum = parseInt(addend1) + parseInt(addend2);`. This is one line
+   above where you are currently paused.
 1. Press <kbd>Command</kbd>+<kbd>S</kbd> (Mac) or
    <kbd>Control</kbd>+<kbd>S</kbd> (Windows, Linux) to save your change.
    The background of the code changes to red to indicate that the script has
    been changed within DevTools.
 1. Click **Deactivate breakpoints** ![Deactivate
-   breakpoints][deactivate]{:.devtools-inline}. While this is set, DevTools
-   ignores any breakpoints you've set.
+   breakpoints][deactivate]{:.devtools-inline}. It changes blue to indicate
+   that it is active. While this is set, DevTools ignores any breakpoints
+   you've set.
 1. Click **Resume script execution** ![Resume script
-   execution][resume]{:.devtools-inline}. The script executes with the new
-   code, and the demo displays the correct result.
+   execution][resume]{:.devtools-inline}.
 1. Try out the demo with different values. The demo should now be calculating
    the sums correctly.
 
@@ -234,7 +282,7 @@ tutorial. Check out the link below to learn more about them.
 
 Help us make this tutorial better by answering the questions below.
 
-{% framebox %}
+{% framebox width="auto" height="auto" %}
 
 <p>Did you complete the tutorial successfully?</p>
 
@@ -246,15 +294,15 @@ Help us make this tutorial better by answering the questions below.
         data-category="DevTools / JS / Get Started"
         data-label="Completed / No">No</button>
 
-<p>Was the tutorial helpful?</p>
+<p>Did this tutorial contain the information you were looking for?</p>
 
 <button class="gc-analytics-event"
         data-category="DevTools / JS / Get Started"
-        data-label="Helpful / Yes">Yes</button>
+        data-label="Relevant / Yes">Yes</button>
 
 <button class="gc-analytics-event"
         data-category="DevTools / JS / Get Started"
-        data-label="Helpful / No">No</button>
+        data-label="Relevant / No">No</button>
 
 <p>Was the tutorial too long?</p>
 
