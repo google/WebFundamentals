@@ -47,7 +47,7 @@ Every watched item will be updated with the current values.
 
 ## Removing variables
 
-To keep what your are looking at minimal for faster work you may need to remove variables from the watch list.
+To keep what you are looking at minimal for faster work you may need to remove variables from the watch list.
 This can be done by hovering the variable and then clicking the removal icon that appears to the right.
 
 ![Hover variable to remove from watch list](imgs/hover-to-delete-watched-variable.png)
