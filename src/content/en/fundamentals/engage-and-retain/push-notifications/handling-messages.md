@@ -80,8 +80,6 @@ Finally, we'll process the user's response using the `notificationclick` and
 
 Everything else is just an elaboration of these basic ideas.
 
-Note: Earlier versions of the [Notification API spec](https://notifications.spec.whatwg.org/){: .external } contained a `notificationclose`. You should avoid this even though it may be supported on some browsers.
-
 ## Choosing not to show a notification {: #choosing-not-to-show }
 
 There may be times when it's not necessary to show a notification when a push
