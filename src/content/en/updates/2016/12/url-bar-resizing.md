@@ -54,7 +54,7 @@ of making `vh` units the largest possible viewport but the ICB the smallest
 possible is to match Safari's behavior.
 
 ## Demo
-* Here's a [demonstration](https://googlechrome.github.io/samples/image-capture/index.html).
+* Here's a [demonstration](https://bokand.github.io/demo/urlbarsize.html).
 The four bars on the right of the page are all possible combinations of `99%`,
 `99vh`, `position:fixed` and `position:absolute` provided on a scrollable page.
 Hiding the URL bar shows how it affects each. Resize events are printed down
