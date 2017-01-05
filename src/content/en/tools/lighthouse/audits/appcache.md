@@ -9,7 +9,7 @@ description: Reference documentation for the "Site Does Not Use Application Cach
 
 ## Why the audit is important {: #why }
 
-Application Cache, also known as App Cache, is [deprecated][deprecated].
+Application Cache, also known as AppCache, is [deprecated][deprecated].
 
 [deprecated]: https://html.spec.whatwg.org/multipage/browsers.html#offline
 
@@ -17,9 +17,9 @@ Application Cache, also known as App Cache, is [deprecated][deprecated].
 
 Consider using the service worker [Cache API][API] instead.
 
-To help migrate from App Cache to service workers, consider the
+To help migrate from AppCache to service workers, consider the
 [sw-appcache-behavior][sw-appcache-behavior] library. This library generates a
-service-worker-based implementation of the behavior defined in an App Cache
+service-worker-based implementation of the behavior defined in an AppCache
 manifest.
 
 See the [URL Responds With a 200 When Offline](http-200-when-offline) audit
@@ -32,4 +32,4 @@ offline.
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
-The audit passes if no App Cache manifest is detected.
+The audit passes if no AppCache manifest is detected.
