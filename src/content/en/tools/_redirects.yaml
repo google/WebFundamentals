@@ -19,7 +19,7 @@ redirects:
   to: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
 
 - from: /web/tools/chrome-devtools/javascript/
-  to: /web/tools/chrome-devtools/javascript/add-breakpoints
+  to: /web/tools/chrome-devtools/javascript/overview
 
 - from: /web/tools/chrome-devtools/manage-data/
   to: /web/tools/chrome-devtools/manage-data/local-storage
@@ -91,7 +91,10 @@ redirects:
   to: /web/tools/chrome-devtools/remote-debugging/
 
 - from: /web/tools/chrome-devtools/debug/snippets/
-  to: /web/tools/chrome-devtools/javascript/snippets
+  to: /web/tools/chrome-devtools/snippets
+
+- from: /web/tools/chrome-devtools/javascript/snippets
+  to: /web/tools/chrome-devtools/snippets
 
 - from: /web/tools/chrome-devtools/debug/watch-variables/
   to: /web/tools/chrome-devtools/javascript/watch-variables

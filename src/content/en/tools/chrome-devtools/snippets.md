@@ -31,14 +31,14 @@ You can also use snippets as an alternative to
 To create a snippet, open the **Sources** panel, click on the **Snippets** tab,
 right-click within the Navigator, and then select **New**.
 
-![create snippet](imgs/create-snippet.png)
+![create snippet](images/create-snippet.png)
 
 Enter your code in the editor. When you have unsaved changes, your script
 name has an asterisk next to it, like in the screenshot below. 
 Press <kbd>Command</kbd>+<kbd>S</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>S</kbd>
 (Windows, Linux) to save your changes. 
 
-![unsaved snippet](imgs/unsaved-snippet.png)
+![unsaved snippet](images/unsaved-snippet.png)
 
 ## Run snippet
 
@@ -47,7 +47,7 @@ There are three ways to run your snippet:
 * Right-click on the snippet filename (in the pane on the left that lists
   all your snippets) and select **Run**.
 * Click the **Run** button (![run snippet 
-  button](imgs/run.png){:.inline}).
+  button](images/run.png){:.inline}).
 * Press <kbd>Command</kbd>+<kbd>Enter</kbd> (Mac) or 
   <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (Windows, Linux).
 
@@ -57,7 +57,7 @@ Console**, or use the keyboard shortcut
 <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> (Mac) or
 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> (Windows, Linux).
 
-![evaluate in console](imgs/evaluate-in-console.png)
+![evaluate in console](images/evaluate-in-console.png)
 
 ## View local modifications
 
@@ -66,11 +66,11 @@ Console**, or use the keyboard shortcut
 To view a diff of modifications you've made to a snippet, right-click in 
 the editor (while the snippet is displayed) and select **Local modifications**.
 
-![local modifications](imgs/local-modifications.png)
+![local modifications](images/local-modifications.png)
 
 A new tab named **History** pops up in the Console drawer.
 
-![snippet history](imgs/snippet-history.png)
+![snippet history](images/snippet-history.png)
 
 Each of the timestamps represent a modification. Expand the carat next to
 a timestamp to view a diff of the modifications at that point in time.

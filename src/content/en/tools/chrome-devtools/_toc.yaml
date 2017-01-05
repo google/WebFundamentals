@@ -11,6 +11,8 @@ toc:
       path: /web/tools/chrome-devtools/security
     - title: Keyboard Shortcuts Reference
       path: /web/tools/chrome-devtools/shortcuts
+    - title: Run Snippets of Code From Any Page
+      path: /web/tools/chrome-devtools/snippets
     - title: Inspect and Edit Pages and Styles
       section:
       - title: Overview
@@ -49,12 +51,12 @@ toc:
         path: /web/tools/chrome-devtools/remote-debugging/webviews
     - title: Inspect and Debug JavaScript
       section:
+      - title: Get Started
+        path: /web/tools/chrome-devtools/javascript/
       - title: Set Breakpoints
         path: /web/tools/chrome-devtools/javascript/add-breakpoints
       - title: Step Through Code
         path: /web/tools/chrome-devtools/javascript/step-code
-      - title: Run Snippets of Code From Any Page
-        path: /web/tools/chrome-devtools/javascript/snippets
       - title: Pretty-Print Minified JavaScript
         path: /web/tools/chrome-devtools/javascript/pretty-print
       - title: Watch Variables in Sources

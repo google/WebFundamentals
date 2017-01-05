@@ -130,9 +130,8 @@ breakpoints** button
 
 ## Set a breakpoint on DOM change {:#dom}
 
-There's a bug somewhere in your code that's incorrectly changing, deleting,
-or adding a DOM node. DevTools provides a fast way to root cause this issue:
-DOM change breakpoints.
+Use a DOM change breakpoint when there's a bug in your code that's incorrectly
+changing, deleting, or adding a DOM node.
 
 Rather than manually searching around for the code that's causing the change,
 DevTools enables you to set a breakpoint on the node. Whenever the node, or
@@ -181,10 +180,12 @@ To **add the DOM change breakpoint**:
    causing the change.
 
 1. Press **Resume script execution** ![resume script execution
-   button](imgs/resume-script-execution.png){:.devtools-inline} twice to resume
+   button][resume]{:.devtools-inline} twice to resume
    script execution. You need to press it twice because the breakpoint is
    triggered once when the count text is deleted, and then again when the
    text is updated with the new count.
+
+[resume]: /web/tools/chrome-devtools/images/resume-script-execution.png
 
 To break when an attribute of the selected node is changed, or when the 
 selected node is deleted, just select **Attributes modifications** or
@@ -273,13 +274,48 @@ event belongs to, and then enable the checkbox next to your target event.
 
 [eelbp]: imgs/expanded-event-listener-breakpoints-pane.png
 
-## Break on uncaught exceptions {:#exceptions}
+## Exception breakpoints {:#exceptions}
 
-If your code is throwing exceptions, and you don't know where they're coming
-from, press the **pause on exception** button 
-(![pause on exception button][poeb]{:.devtools-inline})
-on the **Sources** panel.
+Use exception breakpoints to pause a script when an
+exception is thrown, and then jump to the line of code that's throwing
+the exception.
 
-DevTools automatically breaks at the line where the exception is thrown.
+The demo below has a bug in it. Follow along with the instructions below
+to learn how to fix the bug using an exception breakpoint.
 
-[poeb]: imgs/pause-on-exception-button.png
+{% framebox height="auto" width="auto" %}
+<button>Print Random Number</button>
+<p>Random Number: <span></span></p>
+<script src="/web/tools/chrome-devtools/javascript/uncaught-exception-breakpoint.js"></script>
+{% endframebox %}
+
+1. Click **Print Random Number**. The **Random Number** label below the
+   button is supposed to print a random number, but that's not happening.
+   This is the bug that you're going to fix.
+1. Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) or
+   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows, Linux) to
+   open DevTools.
+1. Click the **Sources** tab.
+1. Click **Pause on exceptions** ![Pause on
+   exceptions][pause on exception]{:.devtools-inline}.
+1. Click **Print Random Number** again to trigger the breakpoint.
+   DevTools should be paused on the line of code containing
+   `nodes.number.textContent = Math.random();`. You now know everything
+   you need to use exception breakpoints. The rest of the instructions
+   explain how to solve this particular bug.
+1. On the line of code that DevTools is currently paused on, hover over `nodes`
+   to make sure that the object is being referenced properly. You should see
+   that it contains three properties: `button`, `num`, and `__proto__`.
+   Everything looks OK here; this is not the source of the bug.
+1. Hover over `number`. You should see that it is evaluating to `undefined`.
+   This is the cause of the bug. The name of the property should be
+   `num`, not `number`.
+1. In DevTools, change `nodes.number.textContent` to `nodes.num.textContent`.
+1. Press <kbd>Command</kbd>+<kbd>S</kbd> (Mac) or
+   <kbd>Control</kbd>+<kbd>S</kbd> (Windows, Linux) to save your change.
+   DevTools automatically resumes script execution upon a save.
+1. Press **Print Random Number** again to make sure that your fix solved
+   the bug. DevTools should no longer pause after clicking the button, which
+   means that the script is no longer throwing an exception.
+
+[pause on exception]: /web/tools/chrome-devtools/images/pause-on-exception.png
