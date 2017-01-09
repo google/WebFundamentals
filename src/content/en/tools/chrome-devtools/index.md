@@ -46,7 +46,7 @@ Use the Elements panel to iterate on the layout and design of your site by freel
 Use the Console to log diagnostic information during development or use it as a shell to interact with the JavaScript on the page.
 
 * [Using the Console](/web/tools/chrome-devtools/console/)
-* [Interact from Command Line](/web/tools/chrome-devtools/console/)
+* [Interact from Command Line](/web/tools/chrome-devtools/console/command-line-reference)
 
 <div style="clear:both;"></div>
 
