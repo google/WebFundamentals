@@ -1142,6 +1142,19 @@ yoichiro:
   description:
     en: Yoichiro is a Google Developers Expert
 
+dtapuska:
+  name:
+    given: Dave
+    family: Tapuska
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  twitter: dtapuska
+  email: dtapuska@google.com
+
 samthorogood:
   name:
     given: Sam
