@@ -856,7 +856,7 @@ Note: This check list only applies if notifications are implemented
 
 ### Additional features {: .hide-from-toc }
 
-Note: This check only applies your site has a sign in flow
+Note: This check only applies if your site has a sign in flow
 
 <table class="responsive">
   <tbody>
@@ -872,7 +872,7 @@ Note: This check only applies your site has a sign in flow
       <ul>
           <li>
              Create an account for a service and ensure you see the save 
-             password/account dialog show up. Click on "Save".
+             password/account dialog show up. Click "Save".
           </li>
           <li>Clear cookies for the site (via clicking on the padlock or Chrome
               settings) and refresh the site. Ensure that you either see an 
@@ -880,7 +880,7 @@ Note: This check only applies your site has a sign in flow
               are automatically signed back in.
           </li>
           <li>
-            Sign out and refresh the site. Ensure you see the account picker.
+            Sign out and refresh the site. Ensure that you see the account picker.
           </li>
           </ul>
       </td>
@@ -888,7 +888,7 @@ Note: This check only applies your site has a sign in flow
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Follow our [Credential Management API Integration Guide](https://developers.google.com/web/fundamentals/security/credential-management/)
+        Follow our [Credential Management API Integration Guide](/web/fundamentals/security/credential-management/)
       </td>
     </tr>
   </tbody>
@@ -900,21 +900,21 @@ Note: This check only applies if your site accepts payments
   <tbody>
     <tr>
       <th colspan=2><h3>
-        User can pay easily via native UI from Payment Request API
+        User can pay easily via native UI from Payment Request API.
       </h3></th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
       <td>
         Enter the payment flow. Instead of filling out a conventional form, 
-        verify the user is able to pay easily via the native UI provided by the 
+        verify the user is able to pay easily via the native UI triggered by the 
         Payment Request API. 
       </td>
     </tr>
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Follow our [Payment Request API Integration Guide](https://developers.google.com/web/fundamentals/discovery-and-monetization/payment-request/)
+        Follow our [Payment Request API Integration Guide](/web/fundamentals/discovery-and-monetization/payment-request/)
       </td>
     </tr>
   </tbody>
