@@ -286,7 +286,14 @@ to learn how to fix the bug using an exception breakpoint.
 {% framebox height="auto" width="auto" %}
 <button>Print Random Number</button>
 <p>Random Number: <span></span></p>
-<script src="/web/tools/chrome-devtools/javascript/uncaught-exception-breakpoint.js"></script>
+<script type="text/javascript">
+  var nodes = {};
+  nodes.button = document.querySelector('button');
+  nodes.num = document.querySelector('span');
+  nodes.button.addEventListener('click', function onClick() {
+    nodes.number.textContent = Math.random();
+  });
+</script>
 {% endframebox %}
 
 1. Click **Print Random Number**. The **Random Number** label below the
