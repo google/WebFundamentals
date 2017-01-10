@@ -141,7 +141,7 @@ cases developers may notice unintended scrolling.
 Although it's still necessary to do so for mobile Safari, websites should not
 rely on calling `preventDefault()` inside of `touchstart` and `touchmove`
 listeners as this is no longer guaranteed to be honored in Chrome. Developers
-should apply the touch-action CSS property on elements where scrolling and
+should apply the `touch-action` CSS property on elements where scrolling and
 zooming should be disabled to notify the browser before any touch events occur.
 To suppress the default behavior of a tap (such as the generation of a click
 event), call `preventDefault()` inside of a `touchend` listener.
