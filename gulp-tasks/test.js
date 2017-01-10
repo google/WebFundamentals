@@ -258,7 +258,7 @@ function findBadMDExtensions() {
     var files = wfHelper.getFileList(contentPath, patterns);
     files.forEach(function(filename) {
       summary.files++;
-      logError(filename.filePath, '\n\tJS files must be in a directory named _code/.')
+      logError(filename.filePath, 'JavaScript files are not allowed.')
     });
     resolve();
   });
