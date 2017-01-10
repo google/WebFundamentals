@@ -242,6 +242,27 @@ function findBadMDExtensions() {
 }
 
 /**
+ * Chec to ensure there an o JavaSCript files in the content/ folder.
+ *
+ * Note: the promise will always be fulfilled, even if it fails.
+ *
+ * @return {promise} An empty promsie
+ */
+ function findJavaSCriptFiles() {
+  return new Promise(function(resolve, reject) {
+    var contentPath = GLOBAL.WF.src.content;
+    // var files = wfHelper.getFileList(contentPath, ['*.js', '!*/_code*']);
+    var patterns = ['**/*.js', '!**/_code/*.js', '!**/event-map.js'];
+    var files = wfHelper.getFileList(contentPath, patterns);
+    files.forEach(function(filename) {
+      summary.files++;
+      logError(filename.filePath, '\n\tJS files must be in a directory named /_code.')
+    });
+    resolve();
+  });
+ }
+
+/**
  * Tests all .MD files
  * 
  * Note: the promise will only be fulfilled, when all of the files have been
@@ -520,7 +541,8 @@ gulp.task('test', function(callback) {
       return Promise.all([
         testAllYaml(),
         testAllMarkdown(),
-        findBadMDExtensions()
+        findBadMDExtensions(),
+        findJavaSCriptFiles()
       ]);
     })
     .catch(function(err) {
