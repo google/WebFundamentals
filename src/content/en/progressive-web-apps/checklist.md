@@ -851,3 +851,71 @@ Note: This check list only applies if notifications are implemented
     </tr>
   </tbody>
 </table>
+
+
+
+### Additional features {: .hide-from-toc }
+
+Note: This check only applies if your site has a sign in flow
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan=2><h3>
+        User is logged in across devices via
+        Credential Management API
+      </h3></th>
+    </tr>
+    <tr>
+      <td><b>To Test</b></td>
+      <td>
+      <ul>
+          <li>
+             Create an account for a service and ensure you see the save 
+             password/account dialog show up. Click "Save".
+          </li>
+          <li>Clear cookies for the site (via clicking on the padlock or Chrome
+              settings) and refresh the site. Ensure that you either see an 
+              account picker (e.g. if there are multiple accounts saved) or 
+              are automatically signed back in.
+          </li>
+          <li>
+            Sign out and refresh the site. Ensure that you see the account picker.
+          </li>
+          </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><b>To Fix</b></td>
+      <td>
+        Follow our [Credential Management API Integration Guide](/web/fundamentals/security/credential-management/)
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Note: This check only applies if your site accepts payments
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan=2><h3>
+        User can pay easily via native UI from Payment Request API.
+      </h3></th>
+    </tr>
+    <tr>
+      <td><b>To Test</b></td>
+      <td>
+        Enter the payment flow. Instead of filling out a conventional form, 
+        verify the user is able to pay easily via the native UI triggered by the 
+        Payment Request API. 
+      </td>
+    </tr>
+    <tr>
+      <td><b>To Fix</b></td>
+      <td>
+        Follow our [Payment Request API Integration Guide](/web/fundamentals/discovery-and-monetization/payment-request/)
+      </td>
+    </tr>
+  </tbody>
+</table>
