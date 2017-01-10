@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: We know that scrolling responsiveness is critical to the user's engagement with a website on mobile, yet touch event listeners often cause serious scrolling performance problems.
+description: Scrolling responsiveness is critical to the user's engagement with a website on mobile, yet touch event listeners often cause serious scrolling performance problems. Learn how we are helping users and developers to be fast by default.
 
 {# wf_updated_on: 2017-01-10 #}
 {# wf_published_on: 2017-01-10 #}
 {# wf_tags: intervention,chrome56 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: We know that scrolling responsiveness is critical to the user's engagement with a website on mobile, yet touch event listeners often cause serious scrolling performance problems. #}
+{# wf_featured_snippet: Scrolling responsiveness is critical to the user's engagement with a website on mobile, yet touch event listeners often cause serious scrolling performance problems. Learn how we are helping users and developers to be fast by default. #}
 
 # Making touch scrolling fast by default {: .page-title }
 
@@ -45,17 +45,16 @@ details, how to know if you are impacted, and what you can do about it.
   </iframe>
 </div>
 
-
-If you call 
-[preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) 
-in the `touchstart` or first `touchmove` events then you will prevent scrolling. The 
-problem is that most often listeners will not call `preventDefault()`, but the 
-browser needs to wait for the event to finish to be sure of that. Developer 
-defined "passive event listeners" solve this. When you add a touch event with a 
-`{passive: true}` object as the third parameter in your event handler then you are 
-telling the browser that the "touchstart" listener will not call 
-`preventDefault()` and the browser can safely perform the scroll without blocking 
-on the listener. For example:
+If you call
+[preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+in the `touchstart` or first `touchmove` events then you will prevent scrolling.
+The problem is that most often listeners will not call `preventDefault()`, but
+the browser needs to wait for the event to finish to be sure of that. Developer
+defined "passive event listeners" solve this. When you add a touch event with a
+`{passive: true}` object as the third parameter in your event handler then you
+are telling the browser that the "touchstart" listener will not call
+`preventDefault()` and the browser can safely perform the scroll without
+blocking on the listener. For example:
 
     window.addEventListener("touchstart", func, {passive: true} );
 
@@ -83,13 +82,13 @@ becomes equivalent to:
 
 Now calls to `preventDefault()` inside the listener will be ignored.
 
-The graph below shows the time taken by the top 1% of scrolls from the time a 
-user touches the screen to scroll to the time the display is updated. This data 
-is for all websites in Chrome for Android. Before the intervention was enabled 
-1% of scrolls took just over 400ms. That has now been reduced to just over 250ms 
-in Chrome 56 Beta; a reduction of about 38%. In the future we hope to make 
-passive true the default for _all_ `touchstart` and `touchmove` listeners, reducing 
-this to below 50ms.
+The graph below shows the time taken by the top 1% of scrolls from the time a
+user touches the screen to scroll to the time the display is updated. This data
+is for all websites in Chrome for Android. Before the intervention was enabled
+1% of scrolls took just over 400ms. That has now been reduced to just over 250ms
+in Chrome 56 Beta; a reduction of about 38%. In the future we hope to make
+passive true the default for _all_ `touchstart` and `touchmove` listeners,
+reducing this to below 50ms.
 
 <img src="/web/updates/images/2017/01/scrolling-intervention/image00.png" 
   class="attempt-float"/>
@@ -146,3 +145,5 @@ should apply the touch-action CSS property on elements where scrolling and
 zooming should be disabled to notify the browser before any touch events occur.
 To suppress the default behavior of a tap (such as the generation of a click
 event), call `preventDefault()` inside of a `touchend` listener.
+
+{% include "comment-widget.html" %}
