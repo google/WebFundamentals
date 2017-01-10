@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Root Document Scroller Intervention
+description: We know that scrolling responsiveness is critical to the user's engagement with a website on mobile, yet touch event listeners often cause serious scrolling performance problems.
 
 {# wf_updated_on: 2017-01-10 #}
 {# wf_published_on: 2017-01-10 #}
