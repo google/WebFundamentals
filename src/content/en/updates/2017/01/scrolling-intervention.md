@@ -16,10 +16,10 @@ We know that scrolling responsiveness is critical to the user's engagement with
 a website on mobile, yet touch event listeners often cause serious scrolling
 performance problems. Chrome has been addressing this by allowing touch event
 listeners to be
-[passive](https://developers.google.com/web/updates/2016/06/passive-event-listeners?hl=en)
+[passive](/web/updates/2016/06/passive-event-listeners?hl=en)
 (passing the `{passive: true}` option to `addEventListener()`) and shipping the
 [pointer
-events](https://developers.google.com/web/updates/2016/10/pointer-events) API.
+events](/web/updates/2016/10/pointer-events) API.
 These are great features to drive new content into models that don't block
 scrolling, but developers sometimes find them hard to understand and adopt.
 
