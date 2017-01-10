@@ -48,13 +48,13 @@ details, how to know if you are impacted, and what you can do about it.
 
 If you call 
 [preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) 
-in the touchstart or first touchmove events then you will prevent scrolling. The 
-problem is that most often listeners will not call preventDefault(), but the 
+in the `touchstart` or first `touchmove` events then you will prevent scrolling. The 
+problem is that most often listeners will not call `preventDefault()`, but the 
 browser needs to wait for the event to finish to be sure of that. Developer 
 defined "passive event listeners" solve this. When you add a touch event with a 
 `{passive: true}` object as the third parameter in your event handler then you are 
 telling the browser that the "touchstart" listener will not call 
-preventDefault() and the browser can safely perform the scroll without blocking 
+`preventDefault()` and the browser can safely perform the scroll without blocking 
 on the listener. For example:
 
     window.addEventListener("touchstart", func, {passive: true} );
@@ -104,9 +104,7 @@ want it. In rare cases, developers may also notice unexpected **click** events
 In Chrome 56 and later, DevTools will log a warning when you call 
 `preventDefault()` in an event where the intervention is active.
 
-`touch-passive.html:19 Unable to preventDefault inside passive event listener due 
-to target being treated as passive. See 
-https://www.chromestatus.com/features/5093566007214080`
+    touch-passive.html:19 Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/5093566007214080
 
 Your application can determine whether it may be hitting this in the wild by 
 checking if calling preventDefault had any effect via the 
