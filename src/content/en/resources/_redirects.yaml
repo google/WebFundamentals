@@ -1,10 +1,18 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+
 redirects:
 
 - from: /web/resources/contributors/
   to: /web/resources/contributors
 
-- from: /web/resources/jekyll/...
-  to: /web/resources/
+- from: /web/resources/styleguide/
+  to: /web/resources/style-guide
+
+- from: /web/resources/styleguide/sample-article
+  to: /web/resources/writing-an-article
 
 - from: /web/resources/translations/
   to: /web/resources/translations
+
+- from: /web/resources/jekyll/...
+  to: /web/resources/
