@@ -1,42 +1,63 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+
 redirects:
-
-- from: /web/showcase/case-study/beyond-the-rack
-  to: /web/showcase/2015/beyond-the-rack
-- from: /web/showcase/case-study/chrome-dev-summit
-  to: /web/showcase/2015/chrome-dev-summit
-- from: /web/showcase/case-study/googleplus
-  to: /web/showcase/2015/googleplus
-- from: /web/showcase/case-study/lightsaber
-  to: /web/showcase/2015/lightsaber
-- from: /web/showcase/case-study/service-workers-iowa
-  to: /web/showcase/2015/service-workers-iowa
-- from: /web/showcase/case-study/art-sessions
-  to: /web/showcase/2016/art-sessions
-- from: /web/showcase/case-study/flipkart
-  to: /web/showcase/2016/flipkart
-- from: /web/showcase/case-study/net-a-porter
-  to: /web/showcase/2016/net-a-porter
-
-- from: /web/showcase/spotlight/0hh1
-  to: /web/showcase/2015/0hh1
-- from: /web/showcase/spotlight/adsy_me
-  to: /web/showcase/2015/adsy_me
-- from: /web/showcase/spotlight/airhorner
-  to: /web/showcase/2015/airhorner
-- from: /web/showcase/spotlight/hn_premii
-  to: /web/showcase/2015/hn_premii
-- from: /web/showcase/spotlight/hummbingbirdlibrary
-  to: /web/showcase/2015/hummingbirdlibrary
-- from: /web/showcase/spotlight/little_alchemy
-  to: /web/showcase/2015/little_alchemy
-- from: /web/showcase/spotlight/merry_pixmas
-  to: /web/showcase/2015/merry_pixmas
-- from: /web/showcase/spotlight/svgomg
-  to: /web/showcase/2015/svgomg
-- from: /web/showcase/spotlight/web_filter
-  to: /web/showcase/2015/web_filter
 
 - from: /web/showcase/case-study/
   to: /web/showcase/
+
+- from: /web/showcase/case-study/art-sessions
+  to: /web/showcase/2016/art-sessions
+
+- from: /web/showcase/case-study/beyond-the-rack
+  to: /web/showcase/2015/beyond-the-rack
+
+- from: /web/showcase/case-study/chrome-dev-summit
+  to: /web/showcase/2015/chrome-dev-summit
+
+- from: /web/showcase/case-study/flipkart
+  to: /web/showcase/2016/flipkart
+
+- from: /web/showcase/case-study/googleplus
+  to: /web/showcase/2015/googleplus
+
+- from: /web/showcase/case-study/lightsaber
+  to: /web/showcase/2015/lightsaber
+
+- from: /web/showcase/case-study/net-a-porter
+  to: /web/showcase/2016/net-a-porter
+
+- from: /web/showcase/case-study/service-workers-iowa
+  to: /web/showcase/2015/service-workers-iowa
+
+- from: /web/showcase/feed.xml
+  to: /web/showcase/rss.xml
+
 - from: /web/showcase/spotlight/
   to: /web/showcase/
+
+- from: /web/showcase/spotlight/0hh1
+  to: /web/showcase/2015/0hh1
+
+- from: /web/showcase/spotlight/adsy_me
+  to: /web/showcase/2015/adsy_me
+
+- from: /web/showcase/spotlight/airhorner
+  to: /web/showcase/2015/airhorner
+
+- from: /web/showcase/spotlight/hn_premii
+  to: /web/showcase/2015/hn_premii
+
+- from: /web/showcase/spotlight/hummbingbirdlibrary
+  to: /web/showcase/2015/hummingbirdlibrary
+
+- from: /web/showcase/spotlight/little_alchemy
+  to: /web/showcase/2015/little_alchemy
+
+- from: /web/showcase/spotlight/merry_pixmas
+  to: /web/showcase/2015/merry_pixmas
+
+- from: /web/showcase/spotlight/svgomg
+  to: /web/showcase/2015/svgomg
+
+- from: /web/showcase/spotlight/web_filter
+  to: /web/showcase/2015/web_filter
