@@ -76,7 +76,7 @@ to see the launch of an updated
 the web components community - including an integrated catalog for developers to
 share their elements.
 
-<img src="/web/updates/images/2017/01/webcomponents.org/image01.png"
+<img src="/web/updates/images/2017/01/webcomponents.org/webcomponents.gif"
      alt="webcomponents.org">
 
 The webcomponents.org site contains information about the Web Components
