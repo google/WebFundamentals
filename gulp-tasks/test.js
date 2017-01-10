@@ -251,7 +251,6 @@ function findBadMDExtensions() {
  function findJavaSCriptFiles() {
   return new Promise(function(resolve, reject) {
     var contentPath = GLOBAL.WF.src.content;
-    // var files = wfHelper.getFileList(contentPath, ['*.js', '!*/_code*']);
     var patterns = ['**/*.js', '!**/_code/*.js', '!**/event-map.js'];
     var files = wfHelper.getFileList(contentPath, patterns);
     files.forEach(function(filename) {
