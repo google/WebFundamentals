@@ -9,6 +9,10 @@ landing_page:
       <p>
         A new way to deliver amazing user experiences on the web.
       </p>
+    buttons:
+      - label: PWA Checklist
+        path: /web/progressive-web-apps/checklist
+
 
   rows:
 
