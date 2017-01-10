@@ -108,7 +108,7 @@ In Chrome 56 and later, DevTools will log a warning when you call
 
 Your application can determine whether it may be hitting this in the wild by 
 checking if calling `preventDefault` had any effect via the 
-[defaultPrevented](https://developer.mozilla.org/en-US/docs/Web/API/Event/defaultPrevented) 
+[`defaultPrevented`](https://developer.mozilla.org/en-US/docs/Web/API/Event/defaultPrevented) 
 property. 
 
 We've found that a large majority of impacted pages are fixed relatively easily
