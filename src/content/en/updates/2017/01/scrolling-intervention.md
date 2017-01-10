@@ -107,7 +107,7 @@ In Chrome 56 and later, DevTools will log a warning when you call
     touch-passive.html:19 Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/5093566007214080
 
 Your application can determine whether it may be hitting this in the wild by 
-checking if calling preventDefault had any effect via the 
+checking if calling `preventDefault` had any effect via the 
 [defaultPrevented](https://developer.mozilla.org/en-US/docs/Web/API/Event/defaultPrevented) 
 property. 
 
@@ -115,7 +115,7 @@ We've found that a large majority of impacted pages are fixed relatively easily
 by applying the
 [touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action)
 CSS property whenever possible. If you wish to prevent all browser scrolling and
-zooming within an element apply touch-action: none to it. If you have a
+zooming within an element apply `touch-action: none` to it. If you have a
 horizontal carousel consider applying `touch-action: pan-y pinch-zoom` to it so
 that the user can still scroll vertically and zoom as normal. Applying
 touch-action correctly is already necessary on browsers such as desktop Edge
