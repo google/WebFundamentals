@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/progressive-web-apps/_book.yaml
-description: A checklist which breaks down all the things we think it takes to be a Baseline PWA, and how to take that a step further with an Exemplary PWA. 
+description: A checklist which breaks down all the things we think it takes to be a baseline progressive web app, and how to take it a step further with an exemplary progressive web app. 
 
-{# wf_updated_on: 2016-11-07 #}
+{# wf_updated_on: 2017-01-10 #}
 {# wf_published_on: 2016-11-07 #}
 
 # Progressive Web App Checklist {: .page-title }
@@ -16,44 +16,58 @@ PWA, and how to take that a step further with an [Exemplary](#exemplary) PWA by 
 more meaningful offline experience, reaching interactive even faster and taking 
 care of many more important details.
 
-The [Lighthouse tool](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) 
-is able to automatically verify many items on the [Baseline](#baseline) list and may prove 
-helpful in easily testing sites.
+[lighthouse]: https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk
 
-## Baseline PWA checklist {: #baseline }
+<style>
+  @media screen and (min-width: 1001px) {
+    table.pwa-cl td:first-of-type { width: 175px; min-width: 175px; }
+  }
+</style>
 
-The following tests are verifiable with the Lighthouse tool.
+## Baseline Progressive Web App Checklist {: #baseline }
 
-<table class="responsive">
+The [Lighthouse tool][lighthouse] is able to automatically verify many items
+on the this list and may prove helpful in easily testing sites.
+
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>Site is served over HTTPS</h3></th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
-      <td>Use Lighthouse to verify "Served over HTTPS"</td>
+      <td>Use Lighthouse to verify <b>Served over HTTPS</b></td>
     </tr>
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Implement HTTPS - check out 
+        <a href="/web/fundamentals/security/encrypt-in-transit/enable-https">
+        Implement HTTPS</a> and check out 
         <a href="https://letsencrypt.org/">letsencrypt.org</a> to get started.
       </td>
     </tr>
   </tbody>
 </table>
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>Pages are responsive on tablets &amp; mobile devices</h3></th>
+      <th colspan=2>
+        <h3>Pages are responsive on tablets &amp; mobile devices</h3>
+      </th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
       <td>
         <ul>
-          <li>Use Lighthouse to verify: Yes to all of "Design is mobile-friendly", although manually checking can also be helpful.</li>
-          <li>Check the <a href="//search.google.com/search-console/mobile-friendly">Mobile Friendly Test</a></li>
+          <li>
+            Use Lighthouse to verify Yes to all of <b>Design is mobile-friendly</b>,
+            although manually checking can also be helpful.
+          </li>
+          <li>
+            Check the <a href="//search.google.com/search-console/mobile-friendly">
+            Mobile Friendly Test</a>
+          </li>
         </ul>
       </td>
     </tr>
@@ -68,8 +82,7 @@ The following tests are verifiable with the Lighthouse tool.
   </tbody>
 </table>
 
-
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>The start URL (at least) loads while offline</h3></th>
@@ -77,7 +90,7 @@ The following tests are verifiable with the Lighthouse tool.
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Use Lighthouse to verify: "URL responds with a 200 when offline".
+        Use Lighthouse to verify <b>URL responds with a 200 when offline</b>.
       </td>
     </tr>
     <tr>
@@ -89,7 +102,7 @@ The following tests are verifiable with the Lighthouse tool.
   </tbody>
 </table>
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>Metadata provided for Add to Home screen</h3></th>
@@ -97,7 +110,7 @@ The following tests are verifiable with the Lighthouse tool.
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Use Lighthouse to verify "User can be prompted to Add to Home screen"
+        Use Lighthouse to verify <b>User can be prompted to Add to Home screen</b>
         is all Yes.
       </td>
     </tr>
@@ -111,7 +124,7 @@ The following tests are verifiable with the Lighthouse tool.
   </tbody>
 </table>
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>First load fast even on 3G</h3></th>
@@ -127,7 +140,10 @@ The following tests are verifiable with the Lighthouse tool.
       <td><b>To Fix</b></td>
       <td>
         <ul>
-          <li>There are <a href="/web/fundamentals/performance/">many ways to improve performance</a>.</li>
+          <li>
+            There are <a href="/web/fundamentals/performance/">many ways to
+            improve performance</a>.
+          </li>
           <li>
             You can understand your performance better by using
             <a href="/speed/pagespeed/insights/">Pagespeed Insights</a>
@@ -145,7 +161,7 @@ The following tests are verifiable with the Lighthouse tool.
           <li>
             You can also look into using the
             <a href="/web/fundamentals/performance/prpl-pattern/">PRPL pattern</a>
-            and tools like <a href="/speed/pagespeed/module/">modepagespeed</a>
+            and tools like <a href="/speed/pagespeed/module/">PageSpeed Module</a>
             on the server.
           </li>
         </ul>
@@ -154,7 +170,7 @@ The following tests are verifiable with the Lighthouse tool.
   </tbody>
 </table>
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>Site works cross-browser</h3></th>
@@ -174,7 +190,7 @@ The following tests are verifiable with the Lighthouse tool.
   </tbody>
 </table>
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2>
@@ -218,8 +234,7 @@ The following tests are verifiable with the Lighthouse tool.
   </tbody>
 </table>
 
-
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>Each page has a URL</h3></th>
@@ -244,18 +259,19 @@ The following tests are verifiable with the Lighthouse tool.
 </table>
 
 
-## Exemplary PWA Checklist {: #exemplary }
+## Exemplary Progressive Web App Checklist {: #exemplary }
 
-Note: All of these checks currently must be performed manually as they
-are not yet implemented in Lighthouse
+Many of these checks must be performed manually, as they are not yet
+implemented in [Lighthouse][lighthouse].
+
 
 ### Indexability & social {: .hide-from-toc }
 
-Note: for general tips see our guide to
+For more information, see our guide to 
 [social optimization](/web/fundamentals/discovery-and-monetization/search-optimization/) 
 and [social discovery](/web/fundamentals/discovery-and-monetization/social-discovery/).
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>Site's content is indexed by Google</h3></th>
@@ -281,8 +297,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
   </tbody>
 </table>
 
-
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>Schema.org metadata is provided where appropriate</h3></th>
@@ -326,7 +341,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
   </tbody>
 </table>
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>Social metadata is provided where appropriate</h3></th>
@@ -358,8 +373,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
   </tbody>
 </table>
 
-
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>Canonical URLs are provided when necessary</h3></th>
@@ -387,15 +401,16 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Mark up content with <a href="http://ogp.me/">Open Graph</a>
-        and as advised by <a href="https://dev.twitter.com/cards/overview">
-        Twitter</a>.
+        Add a canonical link tag to the <code>&lt;head&gt;</code> of each page,
+        pointing to the canonical source document. See 
+        <a href="//support.google.com/webmasters/answer/139066">Use canonical
+        URLs</a> for more information.
       </td>
     </tr>
   </tbody>
 </table>
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>Pages use the History API</h3></th>
@@ -419,9 +434,9 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
 </table>
 
 
-### User Experience {: .hide-from-toc }
+### User experience {: .hide-from-toc }
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>Content doesn't jump as the page loads</h3></th>
@@ -445,11 +460,15 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
   </tbody>
 </table>
 
-
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>Pressing back from a detail page retains scroll position on the previous list page</h3></th>
+      <th colspan=2>
+        <h3>
+          Pressing back from a detail page retains scroll position on the
+          previous list page
+        </h3>
+      </th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -470,11 +489,12 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
   </tbody>
 </table>
 
-
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>When tapped, inputs aren't obscured by the on screen keyboard</h3></th>
+      <th colspan=2>
+        <h3>When tapped, inputs aren't obscured by the on screen keyboard</h3>
+      </th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -488,19 +508,23 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
       <td><b>To Fix</b></td>
       <td>
         Explore using features like 
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView"><code>Element.scrollIntoView()</code></a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView">
+        <code>Element.scrollIntoView()</code></a>
         and
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded"><code>Element.scrollIntoViewIfNeeded()</code></a> 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded">
+        <code>Element.scrollIntoViewIfNeeded()</code></a> 
         to ensure the input is visible when tapped.
       </td>
     </tr>
   </tbody>
 </table>
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>Content is easily sharable from 'standalone'/'full screen' mode</h3></th>
+      <th colspan=2>
+        <h3>Content is easily sharable from standalone or full screen mode</h3>
+      </th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -516,18 +540,19 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
         Provide social share buttons, or a generic share button within your 
         UI. If a generic button, you may want to directly copy the URL to the 
         user's clipboard when tapped, offer them social networks to share to, 
-        or try out the new <a href="/web/updates/2016/10/navigator-share">Web Share API</a> 
-        to integrate with the native sharing system on Android.
+        or try out the new <a href="/web/updates/2016/10/navigator-share">
+        Web Share API</a> to integrate with the native sharing system on Android.
       </td>
     </tr>
   </tbody>
 </table>
 
-
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>Site is responsive across phone, tablet and desktop screen sizes</h3></th>
+      <th colspan=2>
+        <h3>Site is responsive across phone, tablet and desktop screen sizes</h3>
+      </th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -546,8 +571,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
   </tbody>
 </table>
 
-
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>Any app install prompts are not used excessively</h3></th>
@@ -562,10 +586,10 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
       <td><b>To Fix</b></td>
       <td>
         <ul>
-          <li>There should only be one top/bottom app install banner</li>
+          <li>There should only be <b>one</b> top or bottom app install banner</li>
           <li>
             After the PWA is added to the user's home screen, any top/bottom 
-            banners should be removed
+            banners should be removed.
           </li>
         </ul>
       </td>
@@ -573,8 +597,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
   </tbody>
 </table>
 
-
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>The Add to Home Screen prompt is intercepted</h3></th>
@@ -605,11 +628,9 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
 </table>
 
 
-
-
 ### Performance {: .hide-from-toc }
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>First load very fast even on 3G</h3></th>
@@ -654,7 +675,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
 
 ### Caching {: .hide-from-toc }
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
       <th colspan=2><h3>Site uses cache-first networking</h3></th>
@@ -684,11 +705,12 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
   </tbody>
 </table>
 
-
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>Site appropriately informs the user when they're offline</h3></th>
+      <th colspan=2>
+        <h3>Site appropriately informs the user when they're offline</h3>
+      </th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -707,14 +729,17 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
   </tbody>
 </table>
 
-### Push Notifications (Optional) 
+### Push notifications {: .hide-from-toc }
 
-Note: This check list only applies if notifications are implemented
+This check list only applies if notifications are implemented. Adding push
+notifications is not a requirement for an exemplary progressive web app.
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>Provide context to the user about how notifications will be used.</h3></th>
+      <th colspan=2>
+        <h3>Provide context to the user about how notifications will be used</h3>
+      </th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -722,7 +747,7 @@ Note: This check list only applies if notifications are implemented
         <ul>
           <li>Visit the site, and find the push notifications opt-in flow</li>
           <li>
-            When you are shown the permission request by Chrome, ensure
+            When you are shown the permission request by the browser, ensure
             that context has been provided explaining what the site wants 
             the permission for.
           </li>
@@ -744,10 +769,15 @@ Note: This check list only applies if notifications are implemented
   </tbody>
 </table>
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>Ensure that the UI encouraging users to turn on Push Notifications isn't overly aggressive</h3></th>
+      <th colspan=2>
+        <h3>
+          UI encouraging users to turn on Push Notifications must not be
+          overly aggressive.
+        </h3>
+      </th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -767,10 +797,12 @@ Note: This check list only applies if notifications are implemented
   </tbody>
 </table>
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>Ensure the site 'dims' the screen when Chrome's permission is showing</h3></th>
+      <th colspan=2>
+        <h3>Site dims the screen when permission request is showing</h3>
+      </th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -792,10 +824,12 @@ Note: This check list only applies if notifications are implemented
   </tbody>
 </table>
 
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>Ensure any push notifications sent are timely, precise and relevant</h3></th>
+      <th colspan=2>
+        <h3>Push notifications must be timely, precise and relevant</h3>
+      </th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -829,11 +863,12 @@ Note: This check list only applies if notifications are implemented
   </tbody>
 </table>
 
-
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>Ensure the site provides controls to enable/disable notifications</h3></th>
+      <th colspan=2>
+        <h3>Provides controls to enable and disable notifications</h3>
+      </th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -853,55 +888,61 @@ Note: This check list only applies if notifications are implemented
 </table>
 
 
-
 ### Additional features {: .hide-from-toc }
 
-Note: This check only applies if your site has a sign in flow
-
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>
-        User is logged in across devices via
-        Credential Management API
-      </h3></th>
+      <th colspan=2>
+        <h3>User is logged in across devices via Credential Management API</h3>
+      </th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        This only applies if your site has a sign in flow.
+      </td>
     </tr>
     <tr>
       <td><b>To Test</b></td>
       <td>
-      <ul>
+        <ul>
           <li>
-             Create an account for a service and ensure you see the save 
-             password/account dialog show up. Click "Save".
+            Create an account for a service and ensure you see the save 
+            password/account dialog show up. Click "Save".
           </li>
-          <li>Clear cookies for the site (via clicking on the padlock or Chrome
-              settings) and refresh the site. Ensure that you either see an 
-              account picker (e.g. if there are multiple accounts saved) or 
-              are automatically signed back in.
+          <li>
+            Clear cookies for the site (via clicking on the padlock or Chrome
+            settings) and refresh the site. Ensure that you either see an 
+            account picker (e.g. if there are multiple accounts saved) or 
+            are automatically signed back in.
           </li>
           <li>
             Sign out and refresh the site. Ensure that you see the account picker.
           </li>
-          </ul>
+        </ul>
       </td>
     </tr>
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Follow our [Credential Management API Integration Guide](/web/fundamentals/security/credential-management/)
+        Follow our <a href="/web/fundamentals/security/credential-management/">
+        Credential Management API Integration Guide</a>
       </td>
     </tr>
   </tbody>
 </table>
 
-Note: This check only applies if your site accepts payments
-
-<table class="responsive">
+<table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>
-        User can pay easily via native UI from Payment Request API.
-      </h3></th>
+      <th colspan=2>
+        <h3>User can pay easily via native UI from Payment Request API.</h3>
+      </th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        This check only applies if your site accepts payments.
+      </td>
     </tr>
     <tr>
       <td><b>To Test</b></td>
@@ -914,7 +955,8 @@ Note: This check only applies if your site accepts payments
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Follow our [Payment Request API Integration Guide](/web/fundamentals/discovery-and-monetization/payment-request/)
+        Follow our <a href="/web/fundamentals/discovery-and-monetization/payment-request/">
+        Payment Request API Integration Guide</a>.
       </td>
     </tr>
   </tbody>
