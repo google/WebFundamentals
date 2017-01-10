@@ -242,6 +242,29 @@ function findBadMDExtensions() {
 }
 
 /**
+ * Checks to ensure there are no JavaSCript files in the content/ folder.
+ *
+ * Note: the promise will always be fulfilled, even if it fails.
+ *
+ * @return {Promise} An empty promsie
+ */
+ function findJavaScriptFiles() {
+  return new Promise(function(resolve, reject) {
+    var contentPath = GLOBAL.WF.src.content;
+    if (GLOBAL.WF.options.testPath) {
+      contentPath = GLOBAL.WF.options.testPath;
+    }
+    var patterns = ['**/*.js', '!**/_code/*.js', '!**/event-map.js'];
+    var files = wfHelper.getFileList(contentPath, patterns);
+    files.forEach(function(filename) {
+      summary.files++;
+      logError(filename.filePath, 'JavaScript files are not allowed.')
+    });
+    resolve();
+  });
+ }
+
+/**
  * Tests all .MD files
  * 
  * Note: the promise will only be fulfilled, when all of the files have been
@@ -520,7 +543,8 @@ gulp.task('test', function(callback) {
       return Promise.all([
         testAllYaml(),
         testAllMarkdown(),
-        findBadMDExtensions()
+        findBadMDExtensions(),
+        findJavaScriptFiles()
       ]);
     })
     .catch(function(err) {
