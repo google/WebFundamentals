@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web Components are gaining cross-browser support, the community is growing in leaps and bounds, and there’s a brand-new Web Component catalog to find exactly the component you need.
 
-{# wf_updated_on: 2017-01-04 #}
-{# wf_published_on: 2017-01-04 #}
+{# wf_updated_on: 2017-01-10 #}
+{# wf_published_on: 2017-01-10 #}
 {# wf_tags: webcomponents #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
 {# wf_featured_snippet: Web Components are gaining cross-browser support, the community is growing in leaps and bounds, and there’s a brand-new Web Component catalog to find exactly the component you need. #}
