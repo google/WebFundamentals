@@ -8,16 +8,6 @@ description: What's new in Lighthouse. Redesign, new best practice audits, and a
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
 {# wf_featured_snippet: What's new in Lighthouse. Redesign, new best practice audits, and an online report viewer. #}
 
-<style>
-figure {
-  text-align: center;
-}
-.lighthouse-logo {
-  height: 150px;
-  width: auto;
-}
-</style>
-
 # Building a Better Web with Lighthouse {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
@@ -33,6 +23,16 @@ improvement.
 
 <img src="/web/progressive-web-apps/images/pwa-lighthouse.png"
      class="lighthouse-logo attempt-right" alt="Lighthouse Logo">
+     
+<style>
+figure {
+  text-align: center;
+}
+.lighthouse-logo {
+  height: 150px;
+  width: auto;
+}
+</style>
 
 Since Google I/O, we've been hard at work making Lighthouse an awesome companion
 for building great [Progressive Web Apps](/web/progressive-web-apps/):
