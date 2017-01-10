@@ -242,20 +242,23 @@ function findBadMDExtensions() {
 }
 
 /**
- * Chec to ensure there an o JavaSCript files in the content/ folder.
+ * Checks to ensure there are no JavaSCript files in the content/ folder.
  *
  * Note: the promise will always be fulfilled, even if it fails.
  *
- * @return {promise} An empty promsie
+ * @return {Promise} An empty promsie
  */
- function findJavaSCriptFiles() {
+ function findJavaScriptFiles() {
   return new Promise(function(resolve, reject) {
     var contentPath = GLOBAL.WF.src.content;
+    if (GLOBAL.WF.options.testPath) {
+      contentPath = GLOBAL.WF.options.testPath;
+    }
     var patterns = ['**/*.js', '!**/_code/*.js', '!**/event-map.js'];
     var files = wfHelper.getFileList(contentPath, patterns);
     files.forEach(function(filename) {
       summary.files++;
-      logError(filename.filePath, '\n\tJS files must be in a directory named /_code.')
+      logError(filename.filePath, '\n\tJS files must be in a directory named _code/.')
     });
     resolve();
   });
@@ -541,7 +544,7 @@ gulp.task('test', function(callback) {
         testAllYaml(),
         testAllMarkdown(),
         findBadMDExtensions(),
-        findJavaSCriptFiles()
+        findJavaScriptFiles()
       ]);
     })
     .catch(function(err) {
