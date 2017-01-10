@@ -965,6 +965,22 @@ rupl:
   description:
     en: Chris is a frontend developer and web performance advocate.
 
+taylorsavage:
+  name:
+    given: Taylor
+    family: Savage
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - author
+  twitter: taylorthesavage
+  email: tjsavage@google.com
+  description:
+    en: 'Taylor is a PM on the Chrome Team, focusing on Web Components and Polymer.'
+
+
 mscales:
   name:
     given: Mat
