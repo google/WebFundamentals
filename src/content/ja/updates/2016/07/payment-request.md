@@ -89,7 +89,8 @@ Payment Request API がどのように動作するのか、コードを追いな
           },
           body: JSON.stringify(result.toJSON())
         }).then(response => {
-          // Examine server response
+          // 4. Display payment results
+          // 4. 決済結果を表示する
           if (response.status === 200) {
             // Payment successful
             return result.complete('success');
