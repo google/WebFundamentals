@@ -643,7 +643,7 @@ way is to use the tag name as a selector:
 if the user writes the selector `fancy-tabs { width: 500px; }`, it will trump
 the component's rule: `:host { width: 650px;}`.
 
-Style the component itself will only get you so far. But what happens if you
+Styling the component itself will only get you so far. But what happens if you
 want to style the internals of a component? For that, we need CSS custom
 properties.
 
@@ -688,7 +688,7 @@ public interface. Make sure to document styling hooks!
 
 ### Creating closed shadow roots (should avoid) {: #closed}
 
-There's another flavor of shadow DOM is called "closed" mode. When you create a
+There's another flavor of shadow DOM called "closed" mode. When you create a
 closed shadow tree, outside JavaScript won't be able to access the internal DOM
 of your component. This is similar to how native elements like `<video>` work.
 JavaScript cannot access the shadow DOM of `<video>` because the browser
@@ -951,14 +951,14 @@ If you were to set `delegatesFocus: false`, here's what you would see instead:
 <figure>
   <img src="imgs/delegateFocusFalse.png">
   <figcaption>
-    <code>delegateFocus: false</code> and the internal <code>&lt;input></code> is focused.
+    <code>delegatesFocus: false</code> and the internal <code>&lt;input></code> is focused.
   </figcaption>
 </figure>
 
 <figure>
   <img src="imgs/delegateFocusFalseFocus.png">
   <figcaption>
-    <code>delegateFocus: false</code> and <code>&lt;x-focus></code>
+    <code>delegatesFocus: false</code> and <code>&lt;x-focus></code>
     gains focus (e.g. it has <code>tabindex="0"</code>).
   </figcaption>
 </figure>
@@ -966,7 +966,7 @@ If you were to set `delegatesFocus: false`, here's what you would see instead:
 <figure>
   <img src="imgs/delegateFocusNothing.png">
   <figcaption>
-    <code>delegateFocus: false</code> and "Clickable Shadow DOM text" is 
+    <code>delegatesFocus: false</code> and "Clickable Shadow DOM text" is 
     clicked (or other empty area within the element's shadow DOM is clicked).
   </figcaption>
 </figure>
