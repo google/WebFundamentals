@@ -346,6 +346,8 @@ Note: <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dicti
 
 Shipping options can be dynamically calculated whenever a user selects or adds a new shipping address. You can add an event listener for the `shippingaddresschange` event, which fires on user selection of a shipping address. You can then validate the ability to ship to that address, calculate shipping options, and update your [`details`](https://www.w3.org/TR/payment-request/#paymentdetails-dictionary)`shippingOptions` with the new shipping options and pricing information. You can offer a default shipping option by setting `selected` to `true` on an option.
 
+Beware, if you specify `requestShipping: true`, then you must define an event listener for the `shippingaddresschange` event, even if the shipping price does not change based on the address. Ignoring the event will **eventually abort the payment** even if you are not making any changes.
+
 In order to reject an address for reasons such as non-supported region, pass `details.shippingOptions` an empty array. The UI will tell the user that the selected address is not available for shipping.
 
 <div style="clear:both;"></div>
@@ -567,12 +569,14 @@ Note: It is best to have a normal link to the regular checkout process. Then use
 
 ## Check payment method availability
 
-Before showing the payment UI, you can check to see if the user has an available payment method on the device and decide to provide a legacy checkout form experience instead. To do so, use `canMakePayment()`.
+Before calling `show()` and showing the PaymentRequest UI, you can optionally check to see if the user has a payment method available for payment. This gives developers more control over the final user experience they want to provide. To do so, use `canMakePayment()`.
 
-    if (!request.canMakePayment) {
+    // Check if `canMakePayment()` exists as older Chrome versions
+    // don't support it.
+    if (request.canMakePayment) {
       request.canMakePayment().then(result => {
         if (result) {
-          return request.show();
+          request.show();
         } else {
           // The user doesn't have an active payment method.
           // Forwarding to legacy form based experience
@@ -580,7 +584,10 @@ Before showing the payment UI, you can check to see if the user has an available
         }
       }).catch(error => {
         // Unable to determine.
+        request.show();
       });
+    } else {
+      request.show();
     }
 
 Note: This is only optional. Users can still add a new payment method in the Payment Request UI in general.
