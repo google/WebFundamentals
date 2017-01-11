@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
 
-{# wf_updated_on: 2016-11-02T10:11:19Z #}
+{# wf_updated_on: 2017-01-05T16:32:36Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -37,6 +37,18 @@ A Progressive Web App is:
 This codelab will walk you through creating your own Progressive Web App, including the design considerations, as well as implementation details to ensure that your app meets the key principles of a Progressive Web App.
 
 ### What are we going to be building?
+
+In this codelab, you're going to build a Weather web app using Progressive Web
+App techniques. Let's consider the properties of a Progressive Web App:
+
+* **Progressive** - we'll use progressive enhancement throughout.
+* **Responsive** - we'll ensure it fits any form factor.
+* **Connectivity** independent - we'll cache the app shell with service workers.
+* **App-like** - we'll use app-style interactions to add cities and refresh the data.
+* **Fresh** - we'll cache the latest data with service workers.
+* **Safe** - we'll deploy the app to a host that support HTTPS.
+* **Discoverable and installable** - we'll include a manifest making it easy for search engines to find our app.
+* **Linkable** - it's the web!
 
 ### What you'll learn
 
@@ -133,6 +145,14 @@ Ask yourself:
 * What needs to be on screen immediately?
 * What other UI components are key to our app?
 * What supporting resources are needed for the app shell? For example images, JavaScript, styles, etc.
+
+We're going to create a Weather app as our first Progressive Web App. The key components will consist of:
+
+* Header with a title, and add/refresh buttons
+* Container for forecast cards
+* A forecast card template
+* A dialog box for adding new cities
+* A loading indicator
 
 When designing a more complex app, content that isn't needed for the initial load can be requested later and then cached for future use. For example, we could defer the loading of the New City dialog until after we've rendered the first run experience and have some idle cycles available.
 
