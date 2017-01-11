@@ -120,12 +120,14 @@ landing_page:
       - description: >
           <ul class="checkmarks">
             <li>
-              <a href="#">Worthy of being on the home screen</a><br>
+              <a href="/web/fundamentals/engage-and-retain/app-install-banners/">
+              Worthy of being on the home screen</a><br>
               When the Progressive Web App criteria are met, Chrome prompts
               users to add the Progressive Web Apps to their home screen.
             </li>
             <li>
-              <a href="/web/showcase/2016/konga">Work reliably, no matter the network conditions</a><br>
+              <a href="/web/showcase/2016/konga">
+              Work reliably, no matter the network conditions</a><br>
               Service workers enabled Konga to send 63% less data for
               initial page loads, and 84% less data to complete the first
               transaction!
