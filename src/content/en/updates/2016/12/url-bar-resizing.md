@@ -53,6 +53,11 @@ Safari behaves, making life easier for web developers. The unintuitive choice
 of making `vh` units the largest possible viewport but the ICB the smallest
 possible is to match Safari's behavior.
 
+For fullscreen scenarios, where the URL bar is locked to a hidden state, the
+ICB will use the full screen height. This is consistent with the definitions
+above since "smallest possible viewport" will be the full viewport as the URL
+bar doesn't show on scroll.
+
 ## Demo
 * Here's a [demonstration](https://googlechrome.github.io/samples/image-capture/index.html).
 The four bars on the right of the page are all possible combinations of `99%`,
