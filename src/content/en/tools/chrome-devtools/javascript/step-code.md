@@ -107,7 +107,7 @@ is dimmer than the `confirm` property in the screenshot below.
 The darker properties are enumerable. The lighter, dimmed down properties are
 not. See the following Stack Overflow thread for more information:
 [What do the colors mean in Chrome Developer Tools Scope
-panel?](What do the colors mean in Chrome Developer Tools Scope panel?)
+panel?](http://stackoverflow.com/a/36545767/1669860)
 
 ## The call stack
 
