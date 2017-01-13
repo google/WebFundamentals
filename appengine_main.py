@@ -33,6 +33,10 @@ class HomePage(webapp2.RequestHandler):
     def get(self):
         self.redirect('/web/', permanent=True)
 
+class DevSiteRedirect(webapp2.RequestHandler):
+    def get(self, path):
+        self.redirect('https://developers.google.com/' + path, permanent=True)
+
 class Framebox(webapp2.RequestHandler):
     def get(self, path):
         response = None
@@ -98,5 +102,6 @@ class DevSitePages(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', HomePage),
     ('/web/(.*)', DevSitePages),
-    ('/framebox/(.*)', Framebox)
+    ('/framebox/(.*)', Framebox),
+    ('/(.*)', DevSiteRedirect)
 ], debug=DEVENV)
