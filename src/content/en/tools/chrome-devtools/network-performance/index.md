@@ -253,5 +253,5 @@ of skills and knowledge.
   Get Started" data-label="Next Steps / Issues Guide" href="issues">Network
   Issues Guide</a> to learn how to spot more network issues.
 * See <a class="gc-analytics-event" data-category="DevTools / Network /
-  Get Started" data-label="Next Steps / Reference" href="issues">Network
+  Get Started" data-label="Next Steps / Reference" href="reference">Network
   Panel Reference</a> for a comprehensive list of Network panel features.
