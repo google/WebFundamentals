@@ -1,0 +1,41 @@
+{% framebox width="auto" height="auto" %}
+<style>
+  .devtools-feedback {
+    position: relative;
+  }
+  .devtools-feedback section.expandable {
+    position: static;
+  }
+</style>
+<p><b>Feedback</b>: {{ question }}</p>
+<div class="devtools-feedback">
+  <section class="expandable">
+    <button type="button" class="button button-primary expand-control once gc-analytics-event"
+        data-category="{{ category }}" data-label="{{ label }} / Success">
+      {{ success_button }}
+    </button>
+    <p>
+      {{ success_text }}
+    </p>
+  </section>
+  <section class="expandable">
+    <button type="button" class="button expand-control once gc-analytics-event"
+        data-category="{{ category }}" data-label="{{ label }} / Fail">
+      {{ fail_button }}
+    </button>
+    <p>
+      {{ fail_text }} Please <a href="https://github.com/google/webfundamentals/issues/new?title={{ category}} / {{ label }}">
+      open an issue on our docs repo</a> and let us know what happened.
+    </p>
+  </section>
+</div>
+<script>
+  function disableButtons() {
+    buttons[0].disabled = true;
+    buttons[1].disabled = true;
+  }
+  var buttons = document.querySelectorAll('button');
+  buttons[0].addEventListener('click', disableButtons);
+  buttons[1].addEventListener('click', disableButtons);
+</script>
+{% endframebox %}

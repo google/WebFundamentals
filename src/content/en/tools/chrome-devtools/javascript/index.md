@@ -2,19 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with debugging JavaScript using Chrome DevTools in this interactive tutorial.
 
-{# wf_updated_on: 2017-01-04 #}
+{# wf_updated_on: 2017-01-13 #}
 {# wf_published_on: 2017-01-04 #}
 
-<style>
-.devtools-inline {
-  max-height: 1em;
-  vertical-align: middle;
-}
-</style>
-
-<!-- TODO
-     make demo responsive
--->
+{% include "web/tools/chrome-devtools/_shared/_styles.html" %}
 
 # Get Started with Debugging JavaScript in Chrome DevTools {: .page-title }
 
@@ -55,6 +46,8 @@ to fix in this tutorial.
 Whoops. That result is wrong. The result should be `6`. This is the bug that
 you're going to fix.
 
+{% include "web/tools/chrome-devtools/javascript/_feedback/_1.html" %}
+
 ## Step 2: Pause the code with a breakpoint
 
 DevTools lets you pause your code in the middle of its execution, and
@@ -67,15 +60,9 @@ pausing your code is called a **breakpoint**. Try it now:
 
 1. Click the **Sources** tab.
 
-<!-- TODO add a screenshot. Don't create the screenshot until demo design is
-     finished. Add it here rather than previous screenshot in case Sources
-     is hidden -->
-
 1. Click **Event Listener Breakpoints** to expand the section. DevTools reveals
    a list of expandable event categories, such as **Animation** and
    **Clipboard**.
-
-<!-- TODO or maybe add it here -->
 
 1. Next to the **Mouse** event category, click **Expand** ![Expand
    icon](/web/tools/chrome-devtools/images/expand.png){: .devtools-inline}.
