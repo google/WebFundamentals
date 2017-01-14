@@ -5,6 +5,8 @@ toc:
       path: /web/tools/lighthouse/
     - title: Audit References
       section:
+      - title: Element ARIA Attributes Are Allowed For This Role
+        path: /web/tools/lighthouse/audits/aria-allowed-attributes
       - title: Cache Contains start_url From Manifest
         path: /web/tools/lighthouse/audits/cache-contains-start_url
       - title: Content Sized Correctly for Viewport
