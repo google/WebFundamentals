@@ -28,24 +28,24 @@ sure that all of the resources have CORS headers.
 The Resource Timing API provides a rich level of detail about each individual asset's time to be received.
 The primary phases of the request lifecycle are:
 
-* Redirect
-  * Immediately begins `startTime`.
-  * If a redirect is happening, `redirectStart` begins as well.
-  * If a redirect is occurring at the end of this phase then `redirectEnd` will be taken.
-* App Cache
-  * If it’s application cache fulfilling the request, a `fetchStart` time will be taken.
-* DNS
-  * `domainLookupStart` time is taken at the beginning of the DNS request.
-  * `domainLookupEnd` time is taken at the end of the DNS request.
+*   Redirect
+    *   Immediately begins `startTime`.
+    *   If a redirect is happening, `redirectStart` begins as well.
+    *   If a redirect is occurring at the end of this phase then `redirectEnd` will be taken.
+*   App Cache
+    *   If it’s application cache fulfilling the request, a `fetchStart` time will be taken.
+*   DNS
+    *   `domainLookupStart` time is taken at the beginning of the DNS request.
+    *   `domainLookupEnd` time is taken at the end of the DNS request.
 * TCP
-  * `connectStart` is taken when initially connecting to the server.
-  * If TLS or SSL are in use then `secureConnectionStart` will start when the handshake begins for securing the connection.
-  * `connectEnd` is taken when the connection to the server is complete.
-* Request
-  * `requestStart` is taken once the request for a resource has been sent to the server.
-* Response
-  * `responseStart` is the time when the server initially responds to the request.
-  * `responseEnd` is the time when the request ends and the data is retrieved.
+    *   `connectStart` is taken when initially connecting to the server.
+    *   If TLS or SSL are in use then `secureConnectionStart` will start when the handshake begins for securing the connection.
+    *   `connectEnd` is taken when the connection to the server is complete.
+*   Request
+    *   `requestStart` is taken once the request for a resource has been sent to the server.
+*   Response
+    *   `responseStart` is the time when the server initially responds to the request.
+    *   `responseEnd` is the time when the request ends and the data is retrieved.
 
 ![Resource Timing API diagram](imgs/resource-timing-api.png)
 
