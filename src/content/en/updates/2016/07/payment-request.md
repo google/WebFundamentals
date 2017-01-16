@@ -83,7 +83,7 @@ Let's peek at how Payment Request API works in some code. Here's a minimal examp
           },
           body: JSON.stringify(result.toJSON())
         }).then(response => {
-          // Examine server response
+          // 4. Display payment results
           if (response.status === 200) {
             // Payment successful
             return result.complete('success');
@@ -107,7 +107,7 @@ Let's peek at how Payment Request API works in some code. Here's a minimal examp
 When a  user taps on "Checkout", start a payment procedure by instantiating `PaymentRequest`.
 
 
-    var request = new PaymentRequest(supportedInstruments, details);
+      var request = new PaymentRequest(supportedInstruments, details);
 
 
 ### 2. Show the native UI with .show()

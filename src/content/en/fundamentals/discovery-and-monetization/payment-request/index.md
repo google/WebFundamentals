@@ -344,7 +344,9 @@ Note: <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dicti
   </figure>
 </div>
 
-Shipping options can be dynamically calculated whenever a user selects or adds a new shipping address. You can add an event listener for the `shippingaddresschange` event, which fires on user selection of a shipping address. You can then validate the ability to ship to that address, calculate shipping options, and update your [`details`](https://www.w3.org/TR/payment-request/#paymentdetails-dictionary)`.shippingOptions` with the new shipping options and pricing information. You can offer a default shipping option by setting `selected` to `true` on an option.
+Shipping options can be dynamically calculated whenever a user selects or adds a new shipping address. You can add an event listener for the `shippingaddresschange` event, which fires on user selection of a shipping address. You can then validate the ability to ship to that address, calculate shipping options, and update your [`details`](https://www.w3.org/TR/payment-request/#paymentdetails-dictionary)`shippingOptions` with the new shipping options and pricing information. You can offer a default shipping option by setting `selected` to `true` on an option.
+
+Beware, if you specify `requestShipping: true`, then you must define an event listener for the `shippingaddresschange` event, even if the shipping price does not change based on the address. Ignoring the event will **eventually abort the payment** even if you are not making any changes.
 
 In order to reject an address for reasons such as non-supported region, pass `details.shippingOptions` an empty array. The UI will tell the user that the selected address is not available for shipping.
 
@@ -395,7 +397,7 @@ Note: Resolving <code>shippingaddresschange</code> event and leaving <code>detai
   </figure>
 </div>
 
-Upon user approval for a payment request, the [`show()`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `.shippingAddress` property of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the shipping address, along with other properties.
+Upon user approval for a payment request, the [`show()`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `shippingAddress` property of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the shipping address, along with other properties.
 
 <div style="clear:both;"></div>
 
@@ -484,7 +486,7 @@ Changing shipping options may have different prices. In order to add the shippin
   </figure>
 </div>
 
-Upon user approval for a payment request, the [`show()`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `.shippingOption` property of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the shipping option, along with other properties.
+Upon user approval for a payment request, the [`show()`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `shippingOption` property of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the shipping option, along with other properties.
 
 <div style="clear:both;"></div>
 
@@ -524,7 +526,7 @@ You can also collect a user's email address, phone number or name by configuring
   </figure>
 </div>
 
-Upon user approval for a payment request, the [`show()`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `.payerPhone`, `.payerEmail` and/or `.payerName` properties of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the user choice, along with other properties.
+Upon user approval for a payment request, the [`show()`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `payerPhone`, `payerEmail` and/or `payerName` properties of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the user choice, along with other properties.
 
 <div style="clear:both;"></div>
 
@@ -564,11 +566,40 @@ As Payment Request API is an emerging feature, many browsers don't yet support i
 
 Note: It is best to have a normal link to the regular checkout process. Then use JavaScript to prevent the navigation if PaymentRequest is supported.
 
+
+## Check payment method availability
+
+Before calling `show()` and showing the PaymentRequest UI, you can optionally check to see if the user has a payment method available for payment. This gives developers more control over the final user experience they want to provide. To do so, use `canMakePayment()`.
+
+    // Check if `canMakePayment()` exists as older Chrome versions
+    // don't support it.
+    if (request.canMakePayment) {
+      request.canMakePayment().then(result => {
+        if (result) {
+          request.show();
+        } else {
+          // The user doesn't have an active payment method.
+          // Forwarding to legacy form based experience
+          location.href = '/checkout';
+        }
+      }).catch(error => {
+        // Unable to determine.
+        request.show();
+      });
+    } else {
+      request.show();
+    }
+
+Note: This is only optional. Users can still add a new payment method in the Payment Request UI in general.
+
 ## Putting them all together {: #putting-them-together}
 
 
     function onBuyClicked(event) {
       if (!window.PaymentRequest) {
+        // Payment Request API is not available. Forwarding to
+        // legacy form based experience
+        location.href = '/checkout';
         return;
       }
       // Payment Request API is available.
