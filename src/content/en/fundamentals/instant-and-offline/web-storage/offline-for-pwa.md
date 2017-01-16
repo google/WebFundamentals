@@ -114,7 +114,7 @@ sufficiently mature or standardized to encourage widespread adoption yet.
     </tr>
     <tr>
       <td>Edge</td>
-      <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/dev-guide/storage/IndexedDB/">Dependent on volume size</a>
+      <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/dev-guide/storage/IndexedDB/">Dependent on volume size</a></td>
     </tr>
   <tbody>
 </table>
