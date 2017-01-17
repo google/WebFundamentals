@@ -139,7 +139,7 @@ def getPage(requestPath, lang):
         'announcementBanner': devsiteHelper.getAnnouncementBanner(lang),
         'gitHubIssueUrl': gitHubIssueUrl,
         'gitHubEditUrl': gitHubEditUrl,
-        'requestPath': requestPath.replace('index', ''),
+        'requestPath': requestPath.replace('/index', ''),
         'leftNav': leftNav,
         'content': content,
         'toc': toc,

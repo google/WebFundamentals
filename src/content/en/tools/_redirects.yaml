@@ -9,6 +9,9 @@ redirects:
 - from: /web/tools/lighthouse/audits/blocking-links
   to: /web/tools/lighthouse/audits/blocking-resources
 
+- from: /web/tools/lighthouse/audits/app-cache
+  to: /web/tools/lighthouse/audits/appcache
+
 - from: /web/tools/chrome-devtools/memory-problems/memory-diagnosis
   to: /web/tools/chrome-devtools/memory-problems/
 
