@@ -378,6 +378,9 @@ redirects:
 - from: /web/fundamentals/primers/payment-request/android-pay
   to: /web/fundamentals/getting-started/primers/payment-request/android-pay
 
+- from: /web/fundamentals/primers/promises
+  to: /web/fundamentals/getting-started/primers/promises
+
 - from: /web/fundamentals/primers/promises/
   to: /web/fundamentals/getting-started/primers/promises
 
