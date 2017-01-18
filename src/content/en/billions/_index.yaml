@@ -104,7 +104,7 @@ landing_page:
         path: /web/fundamentals/getting-started/principles/
         classname: wf-small-link
       - label: Avoid expensive animations
-        path: /web/fundamentals/design-and-ui/animations/animations-and-performance/
+        path: /web/fundamentals/design-and-ui/animations/animations-and-performance
         classname: wf-small-link
 
     - heading: Optimize for device capability
@@ -155,7 +155,7 @@ landing_page:
       image_path: images/monetization.png
       buttons:
       - label: Streamline transactions
-        path: /web/fundamentals/getting-started/principles/commerce-and-conversion/
+        path: /web/fundamentals/getting-started/principles/#commerce-and-conversion
         classname: wf-small-link
       - label: Streamline forms
         path: /web/fundamentals/design-and-ui/input/forms/

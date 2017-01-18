@@ -200,7 +200,7 @@ Because you need a service worker, and since service workers can completely redi
 Yes, Glad you asked:
 
 * [Google I/O 2015 web app](https://events.google.com/io2015/){: .external }
-* [Chrome Dev Summit](https://developers.chrome.com/devsummit/){: .external }
+* [Chrome Dev Summit](https://developer.chrome.com/devsummit/){: .external }
 * [SVG OMG](https://jakearchibald.github.io/svgomg/){: .external }
   [[Code](https://github.com/jakearchibald/svgomg)]
 * [QR Snapper](https://qrsnapper.appspot.com)
