@@ -101,7 +101,7 @@ sufficiently mature or standardized to encourage widespread adoption yet.
       <td>&lt;6% of free space</td>
     </tr>
     <tr>
-      <td>Firebox</td>
+      <td>Firefox</td>
       <td>&lt;10% of free space</td>
     </tr>
     <tr>
@@ -111,6 +111,10 @@ sufficiently mature or standardized to encourage widespread adoption yet.
     <tr>
       <td>IE10</td>
       <td>&lt;250MB</td>
+    </tr>
+    <tr>
+      <td>Edge</td>
+      <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/dev-guide/storage/IndexedDB/">Dependent on volume size</a></td>
     </tr>
   <tbody>
 </table>
@@ -150,7 +154,7 @@ Promises.
       <td>LRU once Chrome runs out of space</td>
     </tr>
     <tr>
-      <td>Firebox</td>
+      <td>Firefox</td>
       <td>LRU if the whole disk gets full</td>
     </tr>
     <tr>
