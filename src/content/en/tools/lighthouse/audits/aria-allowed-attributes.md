@@ -14,24 +14,15 @@ page.
 
 ## How to pass the audit {: #how }
 
-Below the audit, Lighthouse displays something like `1 element fails
-this test`. The number varies depending on how many elements are failing.
-Click this label to expand the list.
+<<_shared/query.md>>
 
-To find each listed element's invalid combination:
+To find each element's invalid combination(s):
 
-1. Find the element in your DOM. The [`$()`][qs], [`$$()`][qsa], and
-   [`$x()`][xp] functions can help you programmatically select the element
-   from the Chrome DevTools Console.
+1. Note the `role` and `aria-*` attributes of the element.
 
-1. Find the `role` attribute of the element, as well as its `aria-*`
-   attributes. This role is incompatible with one or more of these `aria-*`
-   attributes. The HTML below is an example of an invalid combination.
+1. Go to [Definition of Roles][roles].
 
-       `<input role="input" aria-autocomplete="inline"/>`
-
-1. Go to [Definition of Roles][roles] and go to the page for this element's
-   role.
+1. Go to the page for this element's `role`.
 
 1. Check the `aria-*` attributes of the element against the **Required
    States and Properties** or **Supported States and Properties** lists. Any
