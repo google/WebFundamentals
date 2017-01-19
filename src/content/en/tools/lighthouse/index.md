@@ -152,8 +152,8 @@ in the top right corner of the report.
 2.  Drag and drop the JSON output of a Lighthouse run onto the app or click to
 upload a report file. If you're a CLI user, run Lighthouse with the `--output=json` flag to
 generate a json file that can be opened in the Viewer.
-3. Add the `?gist=<GISTID>"` parameter to the URL of the Viewer.
-4. Paste the URL of a Github gist that contains a Lighthouse json report onto the app.
+3. Add the `?gist=GISTID"` parameter to the URL of the Viewer.
+4. Paste the URL of a [Github gist](https://gist.github.com/) that contains a Lighthouse json report onto the app.
 
 ![Export or share options](images/viewer_icons.png)
 {.attempt-right}
