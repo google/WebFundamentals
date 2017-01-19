@@ -1,21 +1,23 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Customize media metadata (artist, album, title, artwork) and respond to media controls (play, pause, etc.) on the Web.
+description: Customize media metadata (title, artist, album name, artwork) and respond to media related events (seek, track change) on the Web with the new Media Session API.
 
 {# wf_updated_on: 2017-02-06 #}
 {# wf_published_on: 2017-02-06 #}
-{# wf_tags: news,mediasession,play,pause #}
-{# wf_featured_image: /web/updates/images/2017/02/featured.png #}
+{# wf_tags: news,chrome57,media,notifications,play #}
+{# wf_featured_image: /web/updates/images/2017/02/tldr.png #}
+{# wf_featured_snippet: Finally! We can customize web media notifications (title, artist, album name, artwork) and respond to media related events such as seeking or track changing with the new Media Session API. #}
 
-# Customize Media Metadata & Controls {: .page-title }
+# Customize Media Notifications & Handle Playlists {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-With the brand new [Media Session API], the ability to **set the artist, album,
-title, and artwork** of the media (audio or video) you're playing in your web
-app is now possible in Chrome 57 (beta in January 2017, stable in March 2017).
-It also allows you to **respond to media control events** (play, pause, etc.)
-which may come from notifications or media keys.
+With the brand new [Media Session API], you can now **customize media
+notifications** by providing metadata information such as the title, artist,
+album name, and artwork of the media (audio or video) your web app is playing
+in Chrome 57 (beta in February 2017, stable in March 2017). It also
+allows you to **handle media related events** such as seeking or track
+changing which may come from notifications or media keys.
 
 <figure>
   <img src="/web/updates/images/2017/02/tldr.png"
@@ -31,8 +33,8 @@ copy and paste with no shame some boilerplate code? So here it is.
 
       navigator.mediaSession.metadata = new MediaMetadata({
         title: 'Never Gonna Give You Up',
-        album: 'Whenever You Need Somebody',
         artist: 'Rick Astley',
+        album: 'Whenever You Need Somebody',
         artwork: [
           { src: 'https://dummyimage.com/96x96',   sizes: '96x96',   type: 'image/png' },
           { src: 'https://dummyimage.com/128x128', sizes: '128x128', type: 'image/png' },
@@ -84,7 +86,10 @@ actually make some noise.
     });
 
 If you don't want to play audio right after the first interaction, I recommend
-you use the `load()` method of the audio element.
+you use the `load()` method of the audio element. This is one way for the
+browser to keep track of whether the user interacted with the element. Note
+that it may also help the playback to be smoother because the content will be
+loaded.
 
 <pre class="prettyprint">
 
@@ -116,27 +121,27 @@ it can find.
 <div class="clearfix"></div>
 <div class="attempt-left">
   <figure>
-    <img src="https://placehold.it/350x350?text=With no Media Session" alt="TODO">
+    <img src="/web/updates/images/2017/02/without-media-session.png" alt="Without Media Session">
     <figcaption>With no Media Session</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img src="https://placehold.it/350x350?text=With Media Session" alt="TODO">
+    <img src="/web/updates/images/2017/02/with-media-session.png" alt="With Media Session">
     <figcaption>With Media Session</figcaption>
   </figure>
 </div>
 
 Let's see how to customize this media notification by setting some media
-session metadata such as the title, album, artist, and artwork with the Media
-Session API.
+session metadata such as the title, artist, album name, and artwork with the
+Media Session API.
 
     if ('mediaSession' in navigator) {
 
       navigator.mediaSession.metadata = new MediaMetadata({
         title: 'Never Gonna Give You Up',
-        album: 'Whenever You Need Somebody',
         artist: 'Rick Astley',
+        album: 'Whenever You Need Somebody',
         artwork: [
           { src: 'https://dummyimage.com/96x96',   sizes: '96x96',   type: 'image/png' },
           { src: 'https://dummyimage.com/128x128', sizes: '128x128', type: 'image/png' },
@@ -199,7 +204,7 @@ skipped.
 Note: As the browser may consider the web app is not be playing when media
 files are seeking or loading, you can override this behaviour by setting
 `navigator.mediaSession.playbackState` to `"playing"` or `"paused"`.  This
-comes handy when you want to make sure your web app UI state is synced with the
+comes handy when you want to make sure your web app UI stays in sync with the
 media notification controls.
 
 The cool thing about the Media Session API is that the notification tray is not
@@ -210,14 +215,14 @@ shows up on lock screens.
 <div class="clearfix"></div>
 <div class="attempt-left">
   <figure>
-    <img src="https://placehold.it/350x350?text=Lock screen" alt="TODO">
-    <figcaption>Lockscreen</figcaption>
+    <img src="/web/updates/images/2017/02/lock-screen.png" alt="Lock Screen">
+    <figcaption>Lock screen</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img src="https://placehold.it/350x350?text=Wear notification" alt="TODO">
-    <figcaption>Wear</figcaption>
+    <img src="/web/updates/images/2017/02/wear.png" alt="Wear Notification">
+    <figcaption>Wear Notification</figcaption>
   </figure>
 </div>
 <div class="clearfix"></div>
@@ -283,20 +288,20 @@ browser can't fetch it. Here's how you could implement this for instance:
     }
     
     function getNetworkArtwork(request) {
-       // Fetch network artwork.
-       return fetch(request)
-       .then(networkResponse => {
-         if (networkResponse.status !== 200) {
-           return Promise.reject('Network artwork response is not valid');
-         }
-         // Add artwork to the cache for later use and return network response.
-         addArtworkToCache(request, networkResponse.clone())
-         return networkResponse;
-       })
-       .catch(error => {
-         // Return cached fallback artwork.
-         return getCacheArtwork(new Request(FALLBACK_ARTWORK_URL))
-       });
+      // Fetch network artwork.
+      return fetch(request)
+      .then(networkResponse => {
+        if (networkResponse.status !== 200) {
+          return Promise.reject('Network artwork response is not valid');
+        }
+        // Add artwork to the cache for later use and return network response.
+        addArtworkToCache(request, networkResponse.clone())
+        return networkResponse;
+      })
+      .catch(error => {
+        // Return cached fallback artwork.
+        return getCacheArtwork(new Request(FALLBACK_ARTWORK_URL))
+      });
     }
     
     function addArtworkToCache(request, response) {
@@ -332,14 +337,18 @@ doing so is pretty easy with the [Cache API].
 
 ## Implementation nits
 
-- Chrome Media notifications show only if media files duration is [at least 5 seconds].
-- Muted media files won't trigger Chrome media notifications.
-- Media notifications use the favicon if no artworks are defined.
+- Chrome for Android requests "full" audio focus to show media notifications
+  only when media files duration is [at least 5 seconds].
+- If no artwork is defined and there is a favicon at a desirable size, media
+  notifications will use it.
 - Notification artwork size in Chrome for Android is `512x512`. For
   [low-end devices], it is `256x256`.
 - Dismiss media notifications with `audio.src = ''`.
-- Hook up an `<audio>` element as the input source to the [Web Audio API] makes
-  it work with the Media Session API.
+- As the [Web Audio API] doesn't request Android Audio Focus for historical
+  reasons, the only way to make it work with the Media Session API is to hook
+  up an `<audio>` element as the input source to the Web Audio API. Hopefully,
+  the proposed [Web AudioFocus API] will help improving that situation in a
+  near future.
 
 ## Support
 
@@ -354,21 +363,22 @@ Check out our official [Media Session Chrome samples].
 ## Resources
 
 - Chrome Feature Status: [https://www.chromestatus.com/feature/5639924124483584](https://www.chromestatus.com/feature/5639924124483584)
-- Chrome Implementation Bugs: [https://crbug.com/?q=component:Internals>Media>Session](https://crbug.com/?q=component:Internals>Media>Session)
 - Media Session Spec: [https://wicg.github.io/mediasession](https://wicg.github.io/mediasession)
 - Spec Issues: [https://github.com/WICG/mediasession/issues](https://github.com/WICG/mediasession/issues)
+- Chrome Bugs: [https://crbug.com/?q=component:Internals>Media>Session](https://crbug.com/?q=component:Internals>Media>Session)
 
 {% include "comment-widget.html" %}
 
 [Media Session API]: https://wicg.github.io/mediasession/
 [a user gesture]: https://html.spec.whatwg.org/multipage/interaction.html#activation
-[low-end devices]: TODO
+[low-end devices]: https://chromium.googlesource.com/chromium/src/+/a66fe8713400ed760cd5d78931e536f33c5828d5/chrome/android/java/src/org/chromium/chrome/browser/media/ui/MediaNotificationManager.java#514
 [Service Worker]: /web/fundamentals/instant-and-offline/service-worker/lifecycle
 [Caching checklist]: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
 [Cache, falling back to network]: https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network
-[the first page load]: /web/fundamentals/instant-and-offline/service-worker/lifecycle#clientsclaim
+[the very first page load]: /web/fundamentals/instant-and-offline/service-worker/lifecycle#clientsclaim
 [at least 5 seconds]: https://chromium.googlesource.com/chromium/src/+/5d8eab739eb23c4fd27ba6a18b0e1afc15182321/media/base/media_content_type.cc#10 
 [Cache API]: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
 [Media Session Chrome Samples]: https://googlechrome.github.io/samples/media-session
 [Web Audio API]: /web/updates/2012/02/HTML5-audio-and-the-Web-Audio-API-are-BFFs
 [chromestatus.com]: https://www.chromestatus.com/feature/5639924124483584?embed
+[Web AudioFocus API]: https://wicg.github.io/audio-focus/explainer.html
