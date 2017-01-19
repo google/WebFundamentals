@@ -201,6 +201,20 @@ skipped.
       audio.currentTime = Math.min(audio.currentTime + skipTime, audio.duration);
     });
 
+The "Play/Pause" icon is always shown in the media notification and the related
+events are handled automatically by the browser. If for some reason the default
+behaviour doesn't work out, you can still handle "Play" and "Pause" media events.
+
+    navigator.mediaSession.setActionHandler('play', function() {
+      // User clicked "Play" media notification icon.
+      // Do something more than just playing current audio...
+    });
+
+    navigator.mediaSession.setActionHandler('pause', function() {
+      // User clicked "Pause" media notification icon.
+      // Do something more than just pausing current audio...
+    });
+
 Note: As the browser may consider the web app is not be playing when media
 files are seeking or loading, you can override this behaviour by setting
 `navigator.mediaSession.playbackState` to `"playing"` or `"paused"`.  This
