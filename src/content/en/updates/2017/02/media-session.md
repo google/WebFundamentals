@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Customize media metadata (title, artist, album name, artwork) and respond to media related events (seek, track change) on the Web with the new Media Session API.
+description: Customize web media notifications and respond to media related events with the new Media Session API.
 
 {# wf_updated_on: 2017-02-06 #}
 {# wf_published_on: 2017-02-06 #}
@@ -13,11 +13,11 @@ description: Customize media metadata (title, artist, album name, artwork) and r
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 With the brand new [Media Session API], you can now **customize media
-notifications** by providing metadata information such as the title, artist,
-album name, and artwork of the media (audio or video) your web app is playing
-in Chrome 57 (beta in February 2017, stable in March 2017). It also
-allows you to **handle media related events** such as seeking or track
-changing which may come from notifications or media keys.
+notifications** by providing metadata information of the media your web app is
+playing in Chrome 57 (beta in February 2017, stable in March 2017). It also
+allows you to **handle media related events** such as seeking or track changing
+which may come from notifications or media keys. Excited? Try out the official
+[Media Session sample]!
 
 <figure>
   <img src="/web/updates/images/2017/02/tldr.png"
@@ -65,12 +65,13 @@ that the browser can choose which one works best.
       <source src="audio.ogg" type="audio/ogg"/>
     </audio>
 
-Note: I could have used a `<video>` tag as well there to showcase the Media
-Session API.
+Note: I could have used a `<video>` tag instead to showcase the Media Session
+API.
 
-As you may know, `autoplay` is disabled on Chrome for Android which
-means we have to use the `play()` method of the audio element there. This
-method must be triggered by [a user gesture] such as a touch or a mouse click.
+As you may know, `autoplay` is disabled for audio elements on Chrome
+for Android which means we have to use the `play()` method of the audio
+element. This method must be triggered by [a user gesture] such as a touch or a
+mouse click.
 We're talking about listening to
 [`pointerup`](/web/updates/2016/10/pointer-events), `click`, and `touchend`
 events. In other words, the user must click on a button before your web app can
@@ -84,6 +85,10 @@ actually make some noise.
       .then(_ => { /* Set up Media Session... */ })
       .catch(error => { console.log(error) });
     });
+
+Note: If the `<audio>` element has the `controls` attribute, you can simply set
+up the Media Session in the audio `play` event listener instead which occurs
+when user taps the "play" audio control.
 
 If you don't want to play audio right after the first interaction, I recommend
 you use the `load()` method of the audio element. This is one way for the
@@ -114,7 +119,7 @@ playButton.addEventListener('pointerup', function(event) {
 ### Customize the notification
 
 When your web app is playing audio, you can already see a media notification
-sitting in the notification tray. On Android, Chrome does its best there to show
+sitting in the notification tray. On Android, Chrome does its best to show
 appropriate information by using the document's title and the largest favicon
 it can find.
 
@@ -131,11 +136,15 @@ it can find.
     <figcaption>With Media Session</figcaption>
   </figure>
 </div>
+<div class="clearfix"></div>
+
+#### Set Metadata
 
 Let's see how to customize this media notification by setting some media
 session metadata such as the title, artist, album name, and artwork with the
 Media Session API.
 
+    // When audio starts playing...
     if ('mediaSession' in navigator) {
 
       navigator.mediaSession.metadata = new MediaMetadata({
@@ -152,6 +161,14 @@ Media Session API.
         ]
       });
     }
+
+Once playback is done, you don't have to "release" the media session as the
+notification will automatically disappear. Keep in mind that current
+`navigator.mediaSession.metadata` will be used when any playback starts. This
+is why you need to update it to make sure you're always showing relevant
+information in the media notification.
+
+#### Previous Track / Next Track
 
 If your web app provides a playlist for instance, you may want to allow the
 user to navigate through your playlist directly from the media notification
@@ -185,11 +202,21 @@ with some "Previous Track" and "Next Track" icons.
       playAudio();
     });
 
-The Media Session API allows you as well to show "Seek Backward" and "Seek
-Forward" media notification icons if you want to control the amount of time
-skipped.
 
-    let skipTime= 10; /* Time to skip in seconds */
+Note that media action handlers will persist. This is very similar to the event
+listener pattern except that handling an event means that the browser steps
+doing any default behaviour and uses this as a signal that your web app
+supports the media action. Hence, media action controls won't be shown unless
+you set the proper action handler.
+
+By the way, unsetting a media action handler is as easy as assigning it to `null`.
+
+#### Seek Backward / Seek Forward
+
+The Media Session API allows you to show "Seek Backward" and "Seek Forward"
+media notification icons if you want to control the amount of time skipped.
+
+    let skipTime = 10; // Time to skip in seconds
 
     navigator.mediaSession.setActionHandler('seekbackward', function() {
       // User clicked "Seek Backward" media notification icon.
@@ -200,6 +227,8 @@ skipped.
       // User clicked "Seek Forward" media notification icon.
       audio.currentTime = Math.min(audio.currentTime + skipTime, audio.duration);
     });
+
+#### Play / Pause
 
 The "Play/Pause" icon is always shown in the media notification and the related
 events are handled automatically by the browser. If for some reason the default
@@ -220,6 +249,8 @@ files are seeking or loading, you can override this behaviour by setting
 `navigator.mediaSession.playbackState` to `"playing"` or `"paused"`.  This
 comes handy when you want to make sure your web app UI stays in sync with the
 media notification controls.
+
+## Notifications everywhere
 
 The cool thing about the Media Session API is that the notification tray is not
 the only place where media metadata and controls are visible. The media
@@ -337,9 +368,26 @@ doing so is pretty easy with the [Cache API].
     // Here's how I'd compute how much cache is used by artworks... 
     caches.open('artworks-cache-v1')
     .then(cache => cache.matchAll())
-    .then(responses => Promise.all(responses.map(r => r.blob())))
-    .then(blobs => blobs.map(blob => blob.size).reduce((acc, cur) => acc + cur, 0))
-    .then(cacheSize => { console.log('Artworks cache is ' + cacheSize + ' bytes.'); })
+    .then(responses => {
+      let cacheSize = 0;
+      let blobQueue = Promise.resolve();
+
+       responses.forEach(response => {
+        let responseSize = response.headers.get('content-length');
+        if (responseSize) {
+          // Use content-length HTTP header when possible.
+          cacheSize += Number(responseSize);
+        } else {
+          // Otherwise, use the uncompressed blob size.
+          blobQueue = blobQueue.then(_ => response.blob())
+              .then(blob => { cacheSize += blob.size; blob.close(); });
+        }
+      });
+
+      return blobQueue.then(_ => {
+        console.log('Artworks cache is about ' + cacheSize + ' Bytes.');
+      });
+    })
     .catch(error => { console.log(error); });
 
     // And here's how to delete some artworks...
@@ -368,15 +416,14 @@ doing so is pretty easy with the [Cache API].
 
 At the time of writing, Chrome for Android is the only platform that supports
 the Media Session API. More up-to-date information on browser implementation
-status can be found on [chromestatus.com].
+status can be found on [Chrome Platform Status].
 
 ## Samples & Demos
 
-Check out our official [Media Session Chrome samples].
+Check out our official Chrome [Media Session sample].
 
 ## Resources
 
-- Chrome Feature Status: [https://www.chromestatus.com/feature/5639924124483584](https://www.chromestatus.com/feature/5639924124483584)
 - Media Session Spec: [https://wicg.github.io/mediasession](https://wicg.github.io/mediasession)
 - Spec Issues: [https://github.com/WICG/mediasession/issues](https://github.com/WICG/mediasession/issues)
 - Chrome Bugs: [https://crbug.com/?q=component:Internals>Media>Session](https://crbug.com/?q=component:Internals>Media>Session)
@@ -392,7 +439,7 @@ Check out our official [Media Session Chrome samples].
 [the very first page load]: /web/fundamentals/instant-and-offline/service-worker/lifecycle#clientsclaim
 [at least 5 seconds]: https://chromium.googlesource.com/chromium/src/+/5d8eab739eb23c4fd27ba6a18b0e1afc15182321/media/base/media_content_type.cc#10 
 [Cache API]: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
-[Media Session Chrome Samples]: https://googlechrome.github.io/samples/media-session
+[Media Session sample]: https://googlechrome.github.io/samples/media-session
 [Web Audio API]: /web/updates/2012/02/HTML5-audio-and-the-Web-Audio-API-are-BFFs
-[chromestatus.com]: https://www.chromestatus.com/feature/5639924124483584?embed
+[Chrome Platform Status]: https://www.chromestatus.com/feature/5639924124483584
 [Web AudioFocus API]: https://wicg.github.io/audio-focus/explainer.html
