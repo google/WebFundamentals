@@ -8,9 +8,12 @@ description: Option 1
 # Chrome DevTools {: .page-title }
 
 The Chrome DevTools are a set of web authoring and debugging tools built
-into Google Chrome. Use the DevTools to iterate, debug and profile your site.
+into Google Chrome. Use the DevTools to iterate, debug, and profile your site.
 
-Dogfood: Looking for the latest, [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) always has the latest DevTools.
+Note: Many of the DevTools docs are based on [Chrome Canary][canary], which
+provides the latest Chrome features.
+
+[canary]: https://www.google.com/intl/en/chrome/browser/canary.html
 
 ## Opening the Chrome DevTools {: #open }
 
@@ -23,7 +26,7 @@ Dogfood: Looking for the latest, [Chrome Canary](https://www.google.com/intl/en/
 
 ### Device Mode
 <img src="/web/tools/chrome-devtools/images/devicemode.png" alt="Device Mode" class="attempt-right">
-Use the Device Mode to build fully responsive, mobile-first web experiences.</p>
+Build fully responsive, mobile-first web experiences.</p>
 
 * [Device Mode](/web/tools/chrome-devtools/device-mode/)
 * [Test Responsive and Device-specific Viewports](/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports)
@@ -33,7 +36,7 @@ Use the Device Mode to build fully responsive, mobile-first web experiences.</p>
 
 ### Elements
 <img src="images/elements-panel.png" alt="Elements Panel" class="attempt-right">
-Use the Elements panel to iterate on the layout and design of your site by freely manipulating the DOM and CSS.
+Iterate on the layout and design of your site by freely manipulating the DOM and CSS.
 
 * [Inspect and Tweak Your Pages](/web/tools/chrome-devtools/inspect-styles/)
 * [Edit Styles](/web/tools/chrome-devtools/inspect-styles/edit-styles)
@@ -43,7 +46,7 @@ Use the Elements panel to iterate on the layout and design of your site by freel
 
 ### Console
 <img src="images/console-panel.png" alt="Console Panel" class="attempt-right">
-Use the Console to log diagnostic information during development or use it as a shell to interact with the JavaScript on the page.
+Log diagnostic information during development or interact with the JavaScript on the page.
 
 * [Using the Console](/web/tools/chrome-devtools/console/)
 * [Interact from Command Line](/web/tools/chrome-devtools/console/command-line-reference)
@@ -52,17 +55,17 @@ Use the Console to log diagnostic information during development or use it as a 
 
 ### Sources
 <img src="images/sources-panel.png" alt="Sources Panel" class="attempt-right">
-Debug your JavaScript using breakpoints in the Sources Panel or connect your local files via Workspaces to use DevTools live editor.
+Debug your JavaScript using breakpoints or connect your local files via Workspaces to use DevTools as a code editor.
 
+* [Get Started With Debugging JavaScript](/web/tools/chrome-devtools/javascript)
 * [Debugging with Breakpoints](/web/tools/chrome-devtools/javascript/add-breakpoints)
-* [Debug Obfuscated Code](/web/tools/chrome-devtools/javascript/add-breakpoints)
 * [Set Up Persistence with DevTools Workspaces](/web/tools/setup/setup-workflow)
 
 <div style="clear:both;"></div>
 
 ### Network
 <img src="images/network-panel.png" alt="Network Panel" class="attempt-right">
-Use the Network panel to get insights into requested and downloaded resources and optimize your page load performance.
+Get insights into requested and downloaded resources and optimize your page load performance.
 
 * [Network Panel Basics](/web/tools/chrome-devtools/network-performance/resource-loading)
 * [Understanding Resource Timing](/web/tools/chrome-devtools/network-performance/understanding-resource-timing)
@@ -72,7 +75,7 @@ Use the Network panel to get insights into requested and downloaded resources an
 
 ### Timeline
 <img src="images/timeline-panel.png" alt="Timeline Panel" class="attempt-right">
-Use the Timeline to improve the run time performance of your page by recording and exploring the various events that happen during the lifecycle of a site.
+Improve the runtime performance of your page by recording and exploring the various events that happen during the lifecycle of a site.
 
 * [How to look at performance](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 * [Analyze runtime performance](/web/tools/chrome-devtools/rendering-tools/)
@@ -82,16 +85,16 @@ Use the Timeline to improve the run time performance of your page by recording a
 
 ### Profiles
 <img src="images/profiles-panel.png" alt="Profiles Panel" class="attempt-right">
-Use the Profiles panel if you need more information than the Timeline provide, for instance to track down memory leaks.
+Profile memory usage and track down leaks.
 
+* [Fix Memory Problems](/web/tools/chrome-devtools/memory-problems/)
 * [JavaScript CPU Profiler](/web/tools/chrome-devtools/rendering-tools/js-execution)
-* [Heap Profiler](/web/tools/chrome-devtools/memory-problems/)
 
 <div style="clear:both;"></div>
 
 ### Application
 <img src="images/application-panel.png" alt="Application Panel" class="attempt-right">
-Use the Resources panel to inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and session storage, cookies, Application Cache, images, fonts, and stylesheets.
+Inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and session storage, cookies, Application Cache, images, fonts, and stylesheets.
 
 * [Manage data](/web/tools/chrome-devtools/manage-data/local-storage)
 
@@ -99,9 +102,9 @@ Use the Resources panel to inspect all resources that are loaded, including Inde
 
 ### Security
 <img src="images/security-panel.png" alt="Security Panel" class="attempt-right">
-Use the Security Panel to debug mixed content issues, problems with your certificate and more.
+Debug mixed content issues, certificate problems, and more.
 
-* [Security](/web/tools/chrome-devtools/security)
+* [Understand Security Issues](/web/tools/chrome-devtools/security)
 
 <div style="clear:both;"></div>
 
