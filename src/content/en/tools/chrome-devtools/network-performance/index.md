@@ -22,6 +22,9 @@ figcaption {
 Learn how to use the Chrome DevTools Network panel to understand why a page
 loads slowly in this step-by-step, interactive tutorial.
 
+Note: This tutorial is based on Chrome 57, which is currently
+[Canary](https://www.google.com/chrome/browser/canary.html).
+
 ## Step 1: Set up DevTools {: #set-up }
 
 Suppose that you're receiving reports from mobile users that a particular page

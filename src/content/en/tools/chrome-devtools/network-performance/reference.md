@@ -25,8 +25,11 @@ figcaption {
 
 This page is a comprehensive reference of Network panel features.
 
+Note: This tutorial is based on Chrome 57, which is currently
+[Canary](https://www.google.com/chrome/browser/canary.html).
+
 <figure>
-  <img src="/web/tools/chrome-devtools/images/network-panel.png"
+  <img src="/web/tools/chrome-devtools/images/panels/network.png"
     alt="The Chrome DevTools Network panel.">
   <figcaption><b>Figure 1</b>. The Chrome DevTools Network panel.</figcaption>
 </figure>
