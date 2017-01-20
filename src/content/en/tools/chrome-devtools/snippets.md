@@ -5,7 +5,7 @@ description: Snippets are small scripts that you can author and execute within t
 {# wf_updated_on: 2016-06-26 #}
 {# wf_published_on: 2015-10-12 #}
 
-# Run snippets of code from any page {: .page-title }
+# Run Snippets Of Code From Any Page {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
