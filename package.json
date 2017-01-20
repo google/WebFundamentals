@@ -36,6 +36,8 @@
   },
   "scripts": {
     "postinstall": "gulp build",
+    "build": "gulp build",
+    "test": "gulp test",
     "start": "./start-appengine.sh"
   }
 }
