@@ -17,7 +17,7 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 57,
 which is in beta as of February XX. This list is subject to change at any time.
 
-## Deprecate and Remove webkitCancelRequestAnimationFrame
+## Deprecate and remove webkitCancelRequestAnimationFrame
 
 The `webkitCancelRequestAnimationFrame()` method is a an obsolete, vendor-specific API and the standard `cancelAnimationFrame()` has long been supported in Chromium. Therefore the webkit version is being removed.
 
@@ -34,6 +34,14 @@ line with the current specification. You can retrieve a UUID by calling
 [device.watchAdvertisements()](https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothdevice-watchadvertisements).
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=653317&desc=2)
+
+## Remove key generation element
+
+Since Chrome 49, &lt;keygen&gt;'s default behaviour has been to return the empty string, unless a permission was granted to this page. IE/Edge do not support &lt;keygen&gt; and have not indicated public signals to support &lt;keygen&gt;. Firefox already gates &lt;keygen&gt; behind a user gesture, but is publicly supportive of removing it. Safari ships &lt;keygen&gt; and has not expressed public views regarding its continued support. With Chrome 57, this element is removed.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/pX5NbX0Xack/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/features/5716060992962560) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=568184)
 
 ## Deprecation policy
 
