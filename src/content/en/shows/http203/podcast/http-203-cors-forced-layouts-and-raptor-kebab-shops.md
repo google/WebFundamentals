@@ -31,7 +31,4 @@ In this episode:
   Subscribe
 </a>
 
-<audio src="https://storage.googleapis.com/http-203-podcast/episode-2.mp3" controls preload="none">
-
-
-
+<audio src="https://storage.googleapis.com/http-203-podcast/episode-2.mp3" controls preload="none" class="devsite-podcast-audio">

@@ -22,6 +22,7 @@
         box-shadow: 0 1px 4px rgba(0,0,0,.37);
       }
       .devsite-rating-stars { text-align:right; }
+      .devsite-podcast-audio { width: 100%; }
     </style>
     <title>{{ title }}</title>
   </head>
