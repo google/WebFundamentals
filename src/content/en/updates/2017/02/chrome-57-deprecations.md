@@ -17,6 +17,15 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 57,
 which is in beta as of February XX. This list is subject to change at any time.
 
+## Deprecate and Remove webkitCancelRequestAnimationFrame
+
+The `webkitCancelRequestAnimationFrame()` method is a an obsolete, vendor-specific API and the standard `cancelAnimationFrame()` has long been supported in Chromium. Therefore the webkit version is being removed.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/RiDsdLsIdWc/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/features/5588435494502400) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=146849)
+
+
 ## Remove BluetoothDevice.uuids attribute
 
 The `BluetoothDevice.uuids` attribute is being removed to bring the
