@@ -52,7 +52,7 @@ All step options are represented through clickable icons ![Breakpoints button ba
     <tr>
       <td data-th="Icon/Button"><img src="imgs/image_10.png" alt="Step Over" class="inline"></td>
       <td data-th="Action">Step Over</td>
-      <td data-th="Description">Executes whatever happens on the next line and jumps to the next line.</td>
+      <td data-th="Description">Executes whatever happens on the current line and jumps to the next line.</td>
     </tr>
     <tr>
       <td data-th="Icon/Button"><img src="imgs/image_11.png" alt="Step Into" class="inline"></td>
