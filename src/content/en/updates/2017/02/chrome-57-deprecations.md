@@ -50,6 +50,24 @@ Since Chrome 49, &lt;keygen&gt;'s default behaviour has been to return the empty
 [Chromestatus Tracker](https://www.chromestatus.com/features/5716060992962560) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=568184)
 
+## Remove webkit-prefixed IndexedDB global aliases
+
+The `IndexedDB` entry point and global constructors were exposed with `webkit` prefixes somewhere around Chrome 11. The non-prefixed versions were added in Chrome 24 and the prefixed versions were deprecated in Chrome 38. The following interfaces are affected:
+
+* `webkitIndexedDB` (main entry point)
+* `webkitIDBKeyRange` (non-callable global constructor, but has useful static methods)
+* `webkitIDBCursor`
+* `webkitIDBDatabase`
+* `webkitIDBFactory`
+* `webkitIDBIndex`
+* `webkitIDBObjectStore`
+* `webkitIDBRequest`
+* `webkitIDBTransaction` (non-callable global constructors)
+
+[Intent to Remove]() &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5775330191081472) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=665243)
+
 ## Deprecation policy
 
 To keep the platform healthy, we sometimes remove APIs from the Web Platform
