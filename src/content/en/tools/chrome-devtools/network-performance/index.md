@@ -58,7 +58,7 @@ on your site is slow. Your job is to make the page fast.
 
      <aside class="note">
        <b>Note:</b> For the rest of the screenshots, DevTools is <a
-       href="/web/tools/chrome-devtools/settings#placement" target="_blank">
+       href="/web/tools/chrome-devtools/ui#placement" target="_blank">
        undocked to a separate window</a>, so that you can see its contents
        better.
      </aside>

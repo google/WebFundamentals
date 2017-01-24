@@ -329,6 +329,17 @@ will probably resolve somewhere in the framework or library code.
 
 ![framework listeners disabled](imgs/framework-listeners-disabled.png)
 
-
-
 [inspect]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
+
+## Show HTML comments {: #show-html-comments }
+
+To show or hide HTML comments in the Elements panel:
+
+1. Open [Settings](/web/tools/chrome-devtools/ui#settings).
+1. Click the **Preferences** tab.
+1. Under the **Elements** section, check the **Show HTML comments**
+   checkbox.
+
+To show or hide HTML comments in the **Elements** panel, [open
+**Settings**](#settings), go to the **Preferences** panel, find the
+**Elements** section, and then toggle the **Show HTML comments** checkbox.
