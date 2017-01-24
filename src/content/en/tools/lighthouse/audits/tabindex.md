@@ -22,7 +22,9 @@ for more information.
 <<_shared/query.md>>
 
 Set the `tabindex` of each of these elements to either `-1`, for elements
-that should not be keyboard navigable, or `0`, for elements that should.
+that should not be keyboard navigable, or `0`, for elements that should. If
+you need an element to appear earlier in the tab order, consider moving
+it earlier in the DOM.
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
