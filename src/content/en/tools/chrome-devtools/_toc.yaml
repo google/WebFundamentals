@@ -55,14 +55,19 @@ toc:
         path: /web/tools/chrome-devtools/javascript/
       - title: Pause Your Code With Breakpoints
         path: /web/tools/chrome-devtools/javascript/breakpoints
-      - title: Step Through Code
-        path: /web/tools/chrome-devtools/javascript/step-code
-      - title: Pretty-Print Minified JavaScript
-        path: /web/tools/chrome-devtools/javascript/pretty-print
-      - title: Watch Variables in Sources
-        path: /web/tools/chrome-devtools/javascript/watch-variables
       - title: Map Preprocessed Code to Source Code
         path: /web/tools/chrome-devtools/javascript/source-maps
+      - title: JS Debugging Reference
+        path: /web/tools/chrome-devtools/javascript/reference
+      - title: Step Through Code
+        path: /web/tools/chrome-devtools/javascript/step-code
+        status: deprecated
+      - title: Pretty-Print Minified JavaScript
+        path: /web/tools/chrome-devtools/javascript/pretty-print
+        status: deprecated
+      - title: Watch Variables in Sources
+        path: /web/tools/chrome-devtools/javascript/watch-variables
+        status: deprecated
     - title: Using the Console
       section:
       - title: Overview
