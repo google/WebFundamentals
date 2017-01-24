@@ -25,6 +25,7 @@ provides the latest Chrome features.
 ## Discover DevTools
 
 ### Device Mode
+
 <img src="images/device-mode.png" alt="Device Mode" class="attempt-right">
 Build fully responsive, mobile-first web experiences.</p>
 
@@ -82,10 +83,10 @@ Optimize page load performance and debug request issues.
 
 ### Performance panel (previously Timeline panel)
 
+Note: In Chrome 57 the Timeline panel was renamed to the Performance panel.
+
 <img src="images/panels/performance.png" alt="Timeline Panel" class="attempt-right">
 Improve the runtime performance of your page by recording and exploring the various events that happen during the lifecycle of a site.
-
-<b>Note</b>: In Chrome 57 the Timeline panel was renamed to the Performance panel.
 
 * [How to look at performance](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 * [Analyze runtime performance](/web/tools/chrome-devtools/rendering-tools/)
@@ -95,10 +96,10 @@ Improve the runtime performance of your page by recording and exploring the vari
 
 ### Memory panel (previously Profiles panel)
 
+Note: In Chrome 57 the Profiles panel was renamed to the Memory panel.
+
 <img src="images/panels/memory.png" alt="Profiles Panel" class="attempt-right">
 Profile memory usage and track down leaks.
-
-<b>Note</b>: In Chrome 57 the Profiles panel was renamed to the Memory panel.
 
 * [Fix Memory Problems](/web/tools/chrome-devtools/memory-problems/)
 * [JavaScript CPU Profiler](/web/tools/chrome-devtools/rendering-tools/js-execution)
@@ -107,10 +108,10 @@ Profile memory usage and track down leaks.
 
 ### Application panel (previously Resources panel)
 
+Note: In Chrome 52 the Resources panel was renamed to the Application panel.
+
 <img src="images/panels/application.png" alt="Application Panel" class="attempt-right">
 Inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and session storage, cookies, Application Cache, images, fonts, and stylesheets.
-
-<b>Note</b>: In Chrome 52 the Resources panel was renamed to the Application panel.
 
 * [Debug Progressive Web Apps](/web/tools/chrome-devtools/progressive-web-apps)
 * [Inspect and Manage Storage, Databases, and Caches](/web/tools/chrome-devtools/manage-data/local-storage)
