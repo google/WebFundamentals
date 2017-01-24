@@ -1,3 +1,5 @@
+{# wf_md_include #}
+
 Below the audit, Lighthouse displays something like `1 element fails
 this test`. The number varies depending on how many elements are failing.
 Click this label to expand the list. You can find each element in your

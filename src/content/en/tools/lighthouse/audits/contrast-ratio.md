@@ -45,7 +45,7 @@ To find and fix each of element that does not have a sufficient contrast ratio:
    recommended ratio. See [contrast ratio][CR] to calculate
    ratios.
 
-[CL]: https://chrome.google.com/webstore/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd?hl=en
+[CL]: https://chrome.google.com/webstore/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd
 [CR]: http://leaverou.github.io/contrast-ratio/
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
