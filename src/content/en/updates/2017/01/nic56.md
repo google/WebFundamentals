@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: What's new in Chrome 56 for developers? Web Bluetooth API, CSS Position Sticky, HTML5 by Default is enabled for all users.
+description: What's new in Chrome 56 for developers? Web Bluetooth API, CSS Position Sticky, and HTML5 by Default is enabled for all users.
 
 {# wf_published_on: 2017-01-25 #}
 {# wf_updated_on: 2017-01-25 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome55,new-in-chrome,css,layout,html5,flash,webbluetooth,webvr #}
-{# wf_featured_snippet: With Chrome 56, web apps can now communicate with nearby Bluetooth Low Energy devices using the <b>Web Bluetooth API</b>, CSS <code>position: sticky;</code> is back - making it easy to create elements that scroll normally until sticking to the top of the viewport. And HTML5 by Default is enabled for all users. #}
+{# wf_featured_snippet: With Chrome 56, web apps can now communicate with nearby Bluetooth Low Energy devices using the <b>Web Bluetooth API</b>. CSS <code>position: sticky;</code> is back - making it easy to create elements that scroll normally until sticking to the top of the viewport. And HTML5 by Default is enabled for all users. #}
 
 # New In Chrome 56 {: .page-title }
 
@@ -26,24 +26,22 @@ description: What's new in Chrome 56 for developers? Web Bluetooth API, CSS Posi
   elements that scroll normally until sticking to the top of the viewport.
 * And [HTML5 by Default](#html5-by-default) is enabled for all users.
 
-I’m Pete LePage, let’s dive in and see what’s new for developers in Chrome 56! 
+I’m Pete LePage, let’s dive in and see what’s new for developers in Chrome 56. 
 
 <div class="clearfix"></div>
 
 ## Web Bluetooth API {: #webbluetooth }
 
 Until now, the ability to interact with bluetooth devices has only been
-possible for native apps.
-
-With Chrome 56, your web apps can communicate with nearby Bluetooth Low Energy
-devices in a secure and private manner using the
-[Web Bluetooth API](//webbluetoothcg.github.io/web-bluetooth/). 
+possible for native apps. With Chrome 56, your web apps can communicate
+with nearby Bluetooth Low Energy devices in a secure and private manner
+using the [Web Bluetooth API](//webbluetoothcg.github.io/web-bluetooth/). 
 
 The Web Bluetooth API uses the [GATT protocol](https://webbluetoothcg.github.io/web-bluetooth/),
 which enables your app to connect to devices such as light bulbs, toys,
 heart-rate monitors, LED displays and more with just a
 [few lines of JavaScript](https://googlechrome.github.io/samples/web-bluetooth/).
-Web Bluetooth can also be combined with Physical Web beacons to discover and control nearby devices.
+Web Bluetooth can also be combined with physical web beacons to discover and control nearby devices.
 
 Francois has a great
 [article on Updates](/web/updates/2015/07/interact-with-ble-devices-on-the-web),
@@ -56,7 +54,6 @@ to go along with it. And be sure to check out the
 Previously, building content headers that scrolled normally until sticking
 to the top of the viewport required listening to scroll events and
 switching an element’s position from relative to fixed at a specified threshold. 
-
 It was difficult to synchronize, and often results in small visual jumps.
 
 Chrome now supports CSS
@@ -66,7 +63,7 @@ a new way to position elements.
 An element that is position sticky, starts relative; but becomes fixed,
 after the element reaches a certain scroll position.
 
-Simply set position sticky, and set a threshold for it to become sticky.
+Simply set `position: sticky`, and set a threshold for it to become sticky.
 
     h3 {
       /* Element will be 'fixed' when it ... */
