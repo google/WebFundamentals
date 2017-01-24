@@ -9,10 +9,10 @@ description: Reference documentation for the "Background and Foreground Colors H
 
 ## Why the audit is important {: #why }
 
-Some users have low-contrast vision. They don't see many areas that are very
-bright or very dark. Everything looks about the same brightness. If the text
-doesn't have a high contrast ratio, these users literally have trouble seeing
-it at all.
+Some users with low vision have a difficult time sensing contrast. They don't
+see many areas that are very bright or very dark. Everything looks about the
+same brightness. If text doesn't have a high contrast ratio, these users
+literally have trouble seeing it at all.
 
 ## How to pass the audit {: #how }
 
