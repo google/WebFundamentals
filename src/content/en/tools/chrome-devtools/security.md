@@ -5,7 +5,7 @@ description: Use the Security Panel to ensure that all resources on your  site a
 {# wf_updated_on: 2016-03-09 #}
 {# wf_published_on: 2015-12-21 #}
 
-# Understand security issues {: .page-title }
+# Understand Security Issues {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
