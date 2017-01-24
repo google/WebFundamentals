@@ -79,12 +79,14 @@ about it.
 
 Last August, we announced that we’d be
 [moving to HTML5 By Default](//blog.google/products/chrome/flash-and-chrome/)
-to offer a safer, more power-efficient experience. This change disables Adobe Flash Player unless there’s a user indication that they want Flash content on specific sites, and eventually all websites will require the user’s permission to run Flash. 
+to offer a safer, more power-efficient experience. This change disables Adobe
+Flash Player unless there’s a user indication that they want Flash content on
+specific sites, and eventually all websites will require the user’s permission
+to run Flash. 
 
 In Chrome 56,
 [HTML5 By Default has been enabled for all users](//blog.chromium.org/2016/12/roll-out-plan-for-html5-by-default.html ),
-which means they will be prompted to run Flash on a site-by-site basis
-for sites that they have never visited before. 
+which means they will be prompted to run Flash on sites they've never visited.
 
 More details about
 [how and when users will be prompted](https://sites.google.com/a/chromium.org/dev/flash-roadmap#TOC-HTML5-By-Default-Target:-Chrome-55---Dec-2016-),
