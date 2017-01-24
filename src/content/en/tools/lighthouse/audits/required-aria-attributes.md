@@ -10,7 +10,7 @@ description: Reference documentation for the "Elements With ARIA Roles Have Requ
 ## Why the audit is important {: #why }
 
 The `role` attribute helps screen readers understand the purpose of an ARIA
-widget. Each `role` has a set of required, additional attributes that
+widget. A `role` may have a set of required, additional attributes that
 describe the state of the widget to the screen reader.
 
 ## How to pass the audit {: #how }
