@@ -25,6 +25,13 @@ The `webkitCancelRequestAnimationFrame()` method is a an obsolete, vendor-specif
 [Chromestatus Tracker](https://www.chromestatus.com/features/5588435494502400) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=146849)
 
+## Prefixed resource timing buffer-management API (removed)
+
+Two methods and an event handler, `webkitClearResourceTimings()`, `webkitSetResourceTimingBufferSize()`, and `onwebkitresourcetimingbufferfull` are obsolete and vendor-specific. The standard versions of these APIs have been [supported in Chrome since version 46](https://www.chromestatus.com/features/5710624386449408). These features were originally implemented in WebKit, but Safari has not enabled them. Firefox, IE 10+, and Edge have only unprefixed version of the API. Therefore the webkit versions are being removed.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Ou_Dwfp8Ons/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5688905986736128) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=678547)
 
 ## Remove BluetoothDevice.uuids attribute
 
