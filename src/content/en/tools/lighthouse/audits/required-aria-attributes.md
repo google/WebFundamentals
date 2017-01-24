@@ -30,9 +30,6 @@ To find each element's missing required attributes:
 
 1. Add any attributes that are missing.
 
-[qs]: /web/tools/chrome-devtools/console/command-line-reference#queryselector
-[qsa]: /web/tools/chrome-devtools/console/command-line-reference#queryselectorall
-[xp]: /web/tools/chrome-devtools/console/command-line-reference#xpath
 [roles]: https://www.w3.org/TR/wai-aria/roles#role_definitions
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
