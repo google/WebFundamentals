@@ -13,11 +13,13 @@ description: Customize web media notifications and respond to media related even
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 With the brand new [Media Session API], you can now **customize media
-notifications** by providing metadata information of the media your web app is
-playing in Chrome 57 (beta in February 2017, stable in March 2017). It also
-allows you to **handle media related events** such as seeking or track changing
-which may come from notifications or media keys. Excited? Try out the official
-[Media Session sample]!
+notifications** by providing metadata information for the media your web app is
+playing. It also allows you to **handle media related events** such as seeking
+or track changing which may come from notifications or media keys. Excited? Try
+out the official [Media Session sample]!
+
+The Media Session API is supported in Chrome 57 (beta in February 2017, stable
+in March 2017).
 
 <figure>
   <img src="/web/updates/images/2017/02/tldr.png"
@@ -57,7 +59,7 @@ copy and paste with no shame some boilerplate code? So here it is.
 
 ### Let's play 🎷
 
-Add a simple `<audio>` tag to your web page and assign several media sources so
+Add a simple `<audio>` element to your web page and assign several media sources so
 that the browser can choose which one works best.
 
     <audio controls>
@@ -65,7 +67,7 @@ that the browser can choose which one works best.
       <source src="audio.ogg" type="audio/ogg"/>
     </audio>
 
-Note: I could have used a `<video>` tag instead to showcase the Media Session
+Note: I could have used a `<video>` element instead to showcase the Media Session
 API.
 
 As you may know, `autoplay` is disabled for audio elements on Chrome
@@ -93,8 +95,8 @@ when user taps the "play" audio control.
 If you don't want to play audio right after the first interaction, I recommend
 you use the `load()` method of the audio element. This is one way for the
 browser to keep track of whether the user interacted with the element. Note
-that it may also help the playback to be smoother because the content will be
-loaded.
+that it may also help playback to be smoother because the content will already
+be loaded.
 
 <pre class="prettyprint">
 
@@ -120,8 +122,8 @@ playButton.addEventListener('pointerup', function(event) {
 
 When your web app is playing audio, you can already see a media notification
 sitting in the notification tray. On Android, Chrome does its best to show
-appropriate information by using the document's title and the largest favicon
-it can find.
+appropriate information by using the document's title and the largest icon
+image it can find.
 
 <div class="clearfix"></div>
 <div class="attempt-left">
@@ -138,7 +140,7 @@ it can find.
 </div>
 <div class="clearfix"></div>
 
-#### Set Metadata
+#### Set metadata
 
 Let's see how to customize this media notification by setting some media
 session metadata such as the title, artist, album name, and artwork with the
@@ -170,9 +172,9 @@ information in the media notification.
 
 #### Previous Track / Next Track
 
-If your web app provides a playlist for instance, you may want to allow the
-user to navigate through your playlist directly from the media notification
-with some "Previous Track" and "Next Track" icons.
+If your web app provides a playlist, you may want to allow the user to navigate
+through your playlist directly from the media notification with some "Previous
+Track" and "Next Track" icons.
 
     let audio = document.createElement('audio');
 
@@ -204,7 +206,7 @@ with some "Previous Track" and "Next Track" icons.
 
 
 Note that media action handlers will persist. This is very similar to the event
-listener pattern except that handling an event means that the browser steps
+listener pattern except that handling an event means that the browser stops
 doing any default behaviour and uses this as a signal that your web app
 supports the media action. Hence, media action controls won't be shown unless
 you set the proper action handler.
@@ -244,11 +246,11 @@ behaviour doesn't work out, you can still handle "Play" and "Pause" media events
       // Do something more than just pausing current audio...
     });
 
-Note: As the browser may consider the web app is not be playing when media
-files are seeking or loading, you can override this behaviour by setting
+Note: The browser may consider that the web app is not playing media when files
+are seeking or loading. You can override this behaviour by setting
 `navigator.mediaSession.playbackState` to `"playing"` or `"paused"`.  This
-comes handy when you want to make sure your web app UI stays in sync with the
-media notification controls.
+comes in handy when you want to make sure your web app UI stays in sync with
+the media notification controls.
 
 ## Notifications everywhere
 
@@ -291,7 +293,7 @@ apps to fetch and consume HTTP responses from your web server.
 Regarding media files, I would recommend a simple "[Cache, falling back to
 network]" strategy as illustrated by Jake Archibald.
 
-For artworks though, I'd be a little bit more specific and choose the approach
+For artwork though, I'd be a little bit more specific and choose the approach
 below:
 
 - `If` artwork is already in cache, serve it from the cache
@@ -306,11 +308,11 @@ browser can't fetch it. Here's how you could implement this for instance:
     
     self.addEventListener('install', event => {
       self.skipWaiting();
-      event.waitUntil(initArtworksCache());
+      event.waitUntil(initArtworkCache());
     });
     
-    function initArtworksCache() {
-      caches.open('artworks-cache-v1')
+    function initArtworkCache() {
+      caches.open('artwork-cache-v1')
       .then(cache => cache.add(FALLBACK_ARTWORK_URL));
     }
     
@@ -328,7 +330,7 @@ browser can't fetch it. Here's how you could implement this for instance:
     }
     
     function getCacheArtwork(request) {
-      return caches.open('artworks-cache-v1')
+      return caches.open('artwork-cache-v1')
       .then(cache => cache.match(request));
     }
     
@@ -350,7 +352,7 @@ browser can't fetch it. Here's how you could implement this for instance:
     }
     
     function addArtworkToCache(request, response) {
-      return caches.open('artworks-cache-v1')
+      return caches.open('artwork-cache-v1')
       .then(cache => cache.put(request, response));
     }
 
@@ -360,13 +362,13 @@ network requests on [the very first page load], you may want to call
 
 ### Let user control cache
 
-As user will consume content from your web app, media files and artworks may
-take a lot of space on user's device. It is **your responsibility to show how
+As the user consumes content from your web app, media and artwork files may
+take a lot of space on their device. It is **your responsibility to show how
 much cache is used and give user the ability to clear it**. Thankfully for us,
 doing so is pretty easy with the [Cache API].
 
-    // Here's how I'd compute how much cache is used by artworks... 
-    caches.open('artworks-cache-v1')
+    // Here's how I'd compute how much cache is used by artwork files...
+    caches.open('artwork-cache-v1')
     .then(cache => cache.matchAll())
     .then(responses => {
       let cacheSize = 0;
@@ -385,23 +387,23 @@ doing so is pretty easy with the [Cache API].
       });
 
       return blobQueue.then(_ => {
-        console.log('Artworks cache is about ' + cacheSize + ' Bytes.');
+        console.log('Artwork cache is about ' + cacheSize + ' Bytes.');
       });
     })
     .catch(error => { console.log(error); });
 
-    // And here's how to delete some artworks...
-    const artworksToDelete = ['artwork1.png', 'artwork2.png', 'artwork3.png'];
+    // And here's how to delete some artwork files...
+    const artworkFilesToDelete = ['artwork1.png', 'artwork2.png', 'artwork3.png'];
 
-    caches.open('artworks-cache-v1')
-    .then(cache => Promise.all(artworksToDelete.map(artwork => cache.delete(artwork))))
+    caches.open('artwork-cache-v1')
+    .then(cache => Promise.all(artworkFilesToDelete.map(artwork => cache.delete(artwork))))
     .catch(error => { console.log(error); });
 
 ## Implementation nits
 
 - Chrome for Android requests "full" audio focus to show media notifications
-  only when media files duration is [at least 5 seconds].
-- If no artwork is defined and there is a favicon at a desirable size, media
+  only when media file duration is [at least 5 seconds].
+- If no artwork is defined and there is an icon image at a desirable size, media
   notifications will use it.
 - Notification artwork size in Chrome for Android is `512x512`. For
   [low-end devices], it is `256x256`.
