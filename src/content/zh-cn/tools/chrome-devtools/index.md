@@ -1,15 +1,15 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Option 1
+description: 选项1
 
-{# wf_updated_on: 2016-07-26 #}
+{# wf_updated_on: 2017-01-25 #}
 {# wf_published_on: 2016-03-28 #}
 
 # Chrome 开发者工具 {: .page-title }
 
 Chrome 开发者工具是一套内置于Google Chrome中的Web开发和调试工具，可用来对网站进行迭代、调试和分析。
 
-提示: 寻找最新版本的Chrome 开发者工具, [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) 总是有最新的DevTools.
+Dogfood: 寻找最新版本的Chrome 开发者工具, [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) 总是有最新的DevTools.
 
 ## 打开Chrome 开发者工具 {: #open }
 
@@ -22,7 +22,7 @@ Chrome 开发者工具是一套内置于Google Chrome中的Web开发和调试工
 
 ### 设备模式
 <img src="/web/tools/chrome-devtools/images/devicemode.png" alt="Device Mode" class="attempt-right">
-使用设备模式构建完全响应式，移动优先的网络体验。</p>
+使用设备模式构建完全响应式，移动优先的网络体验。
 
 * [Device Mode](/web/tools/chrome-devtools/device-mode/)
 * [Test Responsive and Device-specific Viewports](/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports)
