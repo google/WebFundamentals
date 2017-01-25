@@ -3,16 +3,16 @@ toc:
     section:
     - title: Overview
       path: /web/tools/chrome-devtools/
-    - title: Configure and Customize DevTools
-      path: /web/tools/chrome-devtools/settings
     - title: Debug Progressive Web Apps
       path: /web/tools/chrome-devtools/progressive-web-apps
     - title: Understand Security Issues
       path: /web/tools/chrome-devtools/security
-    - title: Keyboard Shortcuts Reference
-      path: /web/tools/chrome-devtools/shortcuts
     - title: Run Snippets of Code From Any Page
       path: /web/tools/chrome-devtools/snippets
+    - title: Keyboard Shortcuts Reference
+      path: /web/tools/chrome-devtools/shortcuts
+    - title: UI Reference
+      path: /web/tools/chrome-devtools/ui
     - title: Inspect and Edit Pages and Styles
       section:
       - title: Overview

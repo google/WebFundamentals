@@ -284,4 +284,11 @@ When you save changes to a CSS preprocessor file in DevTools, the CSS preprocess
 
 Learn how to setup source maps in [Setup CSS & JS Preprocessors](/web/tools/setup/setup-preprocessors).
 
+## Emulate print media {:#emulate-print-media}
 
+To view a page in print mode:
+
+1. Open the [Main Menu](ui#main-menu).
+1. Select **More Tools** > **Rendering Settings**. The Rendering Settings
+   tab opens at the bottom of your DevTools window.
+1. Set **Emulate media** to **Print**.

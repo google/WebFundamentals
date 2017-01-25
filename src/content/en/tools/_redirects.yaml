@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/settings
+  to: /web/tools/chrome-devtools/ui
+
 - from: /web/tools/lighthouse/audits/has-viewport-meta-tag%22
   to: /web/tools/lighthouse/audits/has-viewport-meta-tag
 
