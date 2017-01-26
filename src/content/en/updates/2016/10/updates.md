@@ -66,7 +66,7 @@ As we create and update [developers.google.com/web](/web/)
 we also have to think about the future of our other resources. Many of you will 
 know that our team created and, through the community, supported the growth of
 HTML5Rocks but over the last two years it has seen no updates. We've already 
-migrated [updates.html5rocks.com](https://updates.html5rocks.com) to 
+migrated _updates.html5rocks.com_ to 
 [Web **Updates**](/web/updates/) and we are working to move additional content
 from HTML5Rocks to here. We've added support for HTTPS to HTML5Rocks, and
 are commited to ensuring that the great content that's there, won't

@@ -62,7 +62,7 @@ For a comparison between the two polyfills, please [see the homepage](https://gi
 
 To use either polyfill in your code, you have a few options.
 
-1. Use a CDN, such as [cdnjs](https://cdnjs.com/libraries/web-animations), [jsDelivr](http://www.jsdelivr.com/projects/web-animations), or target a specific release via [rawgit.com](https://rawgit.com)
+1. Use a CDN, such as [cdnjs](https://cdnjs.com/libraries/web-animations), [jsDelivr](https://www.jsdelivr.com/projects/web-animations), or target a specific release via [rawgit.com](https://rawgit.com)
 
 1. Install via NPM or Bower
 
