@@ -49,11 +49,11 @@ If you call
 [preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
 in the `touchstart` or first `touchmove` events then you will prevent scrolling.
 The problem is that most often listeners will not call `preventDefault()`, but
-the browser needs to wait for the event to finish to be sure of that. Developer
-defined "passive event listeners" solve this. When you add a touch event with a
-`{passive: true}` object as the third parameter in your event handler then you
-are telling the browser that the "touchstart" listener will not call
-`preventDefault()` and the browser can safely perform the scroll without
+the browser needs to wait for the event to finish to be sure of that.
+Developer-defined "passive event listeners" solve this. When you add a touch
+event with a `{passive: true}` object as the third parameter in your event
+handler then you are telling the browser that the `touchstart` listener will not
+call `preventDefault()` and the browser can safely perform the scroll without
 blocking on the listener. For example:
 
     window.addEventListener("touchstart", func, {passive: true} );
