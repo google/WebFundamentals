@@ -78,9 +78,9 @@ The `IndexedDB` entry point and global constructors were exposed with `webkit` p
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5775330191081472) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=665243)
 
-## WebAudio: Deprecate prefixed AudioContext and OfflineAudioContext
+## WebAudio: Remove prefixed AudioContext and OfflineAudioContext
 
-Chrome has supported `WebAudio` since mid 2011, including `AudioContext`. `OfflineAudioContext` was added the following year. Given how long the standard interfaces and Googles long-term goal of removing prefixed features, the prefixed versions of these interfaces are being deprecated in Chrome 57 with removal expected in Chrome 58. 
+Chrome has supported `WebAudio` since mid 2011, including `AudioContext`. `OfflineAudioContext` was added the following year. Given how long the standard interfaces and Googles long-term goal of removing prefixed features, the prefixed versions of these interfaces have been deprecated since late 2014 and are now being removed.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/of6S04dUf54/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4571020824412160) &#124;
