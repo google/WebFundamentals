@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the deprecations and removals in Chrome to help you plan.
+description: A round up of the deprecations and removals in Chrome 57 to help you plan.
 
 {# wf_updated_on: 2017-02-xx #}
 {# wf_published_on: 2017-02-xx #}
@@ -17,12 +17,22 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 57,
 which is in beta as of February XX. This list is subject to change at any time.
 
+## Deprecate case-insensitive matching for usemap attribute
+
+The `usemap` attribute was formerly defined as caseless. Unfortunately implementing this was complicated enough that no browsers implemented it correctly. Research suggested that such complicated algorithm is unnecessary, and even ASCII case-insensitive matching is unnecessary. 
+
+Consequently, the specification was updated so that case-sensitive matching is applied. The old behavior is deprecated in Chrome 57, with removal expected in Chrome 58.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/8pHdFzN0YQc/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5760965337415680) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=659464)
+
 ## Deprecate and remove webkitCancelRequestAnimationFrame
 
 The `webkitCancelRequestAnimationFrame()` method is a an obsolete, vendor-specific API and the standard `cancelAnimationFrame()` has long been supported in Chromium. Therefore the webkit version is being removed.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/RiDsdLsIdWc/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/features/5588435494502400) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5588435494502400) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=146849)
 
 ## Prefixed resource timing buffer-management API (removed)
@@ -47,7 +57,7 @@ line with the current specification. You can retrieve a UUID by calling
 Since Chrome 49, &lt;keygen&gt;'s default behaviour has been to return the empty string, unless a permission was granted to this page. IE/Edge do not support &lt;keygen&gt; and have not indicated public signals to support &lt;keygen&gt;. Firefox already gates &lt;keygen&gt; behind a user gesture, but is publicly supportive of removing it. Safari ships &lt;keygen&gt; and has not expressed public views regarding its continued support. With Chrome 57, this element is removed.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/pX5NbX0Xack/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/features/5716060992962560) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5716060992962560) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=568184)
 
 ## Remove webkit-prefixed IndexedDB global aliases
