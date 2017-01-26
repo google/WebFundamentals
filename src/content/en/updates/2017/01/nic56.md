@@ -96,7 +96,7 @@ and [recommendations](https://sites.google.com/a/chromium.org/dev/flash-roadmap#
 
 And of course, there’s plenty more.
 
-* [WebVR](/web/fundamentals/webvr/) is available as an Origin Trial.
+* [WebVR](/web/fundamentals/vr/) is available as an Origin Trial.
 * The [WebGL 2.0 API](//www.khronos.org/registry/webgl/specs/latest/2.0/) is now available.
 * And the Payment Request API has a [variety of new features](https://docs.google.com/document/d/1I8ha1ySrPWhx80EB4CVPmThkD4ILFM017AfOA5gEFg4/preview).
 
