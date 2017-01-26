@@ -422,7 +422,13 @@ status can be found on [Chrome Platform Status].
 
 ## Samples & Demos
 
-Check out our official Chrome [Media Session sample].
+Check out our official Chrome [Media Session sample] featuring [Jan Morgenstern's work].
+
+<video autoplay loop muted style="max-width: 100%"
+    poster="https://storage.googleapis.com/media-session/screenrecord.png">
+  <source src="https://storage.googleapis.com/media-session/screenrecord.webm" type="video/webm; codecs=vp8">
+  <source src="https://storage.googleapis.com/media-session/screenrecord.mp4" type="video/mp4; codecs=h264">
+</video>
 
 ## Resources
 
@@ -445,3 +451,4 @@ Check out our official Chrome [Media Session sample].
 [Web Audio API]: /web/updates/2012/02/HTML5-audio-and-the-Web-Audio-API-are-BFFs
 [Chrome Platform Status]: https://www.chromestatus.com/feature/5639924124483584
 [Web AudioFocus API]: https://wicg.github.io/audio-focus/explainer.html
+[Jan Morgenstern's work]: http://www.wavemage.com/category/music/
