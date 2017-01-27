@@ -38,11 +38,13 @@ gulp.task('build:showcase', function() {
     outputPath: baseOutputPath
   };
   var startPath = path.join(GLOBAL.WF.src.content, 'showcase');
-  var patterns = ['**/*.md', '!**/index.md'];
+  var patterns = ['**/*.md', '!tags/*', '!**/index.md'];
   var files = wfHelper.getFileList(startPath, patterns);
   files.sort(wfHelper.publishedComparator);
   wfTemplateHelper.generateIndex(files, options);
   wfTemplateHelper.generateFeeds(files, options);
+  options.outputPath = path.join(baseOutputPath, 'tags');
+  wfTemplateHelper.generateTagPages(files, options);
   var filesByYear = wfHelper.splitByYear(files);
   Object.keys(filesByYear).forEach(function(year) {
     options.year = year;

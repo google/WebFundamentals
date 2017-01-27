@@ -12,6 +12,7 @@ var wfHelper = require('./wfHelper');
 var STD_EXCLUDES = [
   '!**/_common-links.md',
   '!**/updates/tags/*',
+  '!**/showcase/tags/*',
   '!**/fundamentals/getting-started/codelabs/*/*.md',
   '!**/updates/201?/index.md',
   '!**/showcase/201?/index.md',
