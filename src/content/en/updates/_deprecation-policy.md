@@ -1,3 +1,5 @@
+{# wf_md_include #}
+
 ## Deprecation policy
 
 To keep the platform healthy, we sometimes remove APIs from the Web Platform
