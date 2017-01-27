@@ -46,10 +46,13 @@ Let's peek at how Payment Request API works in some code. Here's a minimal examp
 
       // Supported payment methods
       var supportedInstruments = [{
-        supportedMethods: [
-          'visa', 'mastercard', 'amex', 'discover',
-          'diners', 'jcb', 'unionpay'
-        ]
+          supportedMethods: ['basic-card']
+          data: {
+            supportedNetworks: [
+              'visa', 'mastercard', 'amex', 'discover',
+              'diners', 'jcb', 'unionpay'
+            ]
+          }
       }];
 
       // Checkout details
@@ -185,11 +188,13 @@ Payment Method Identifiers will support distributed extensibility, meaning that 
 
 ### Do you plan on offering a coupon code?
 
-We  are investigating how to best do this. For now, you can manually ask for coupon code before or after calling the API.
+We are investigating how to best do this. For now, you can manually ask for coupon code before or after calling the API.
 
 ### Does this work with iframes?
 
-Currently not allowed. But planned to be allowed in the future.
+Starting Chrome M57, using Payment Request API inside `iframe` is supported. Simply add `allowpaymentrequest` attribute to allow the `iframe` to use the API.
+
+    <iframe src="URL_INCLUDING_PAYMENT_REQUEST_CALL" allowpaymentrequest></iframe>
 
 ### Are there any polyfills available to support incompatible browsers for this API?
 

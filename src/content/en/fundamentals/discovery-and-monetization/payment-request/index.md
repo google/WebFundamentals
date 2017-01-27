@@ -104,12 +104,12 @@ The `methodData` parameter contains a list of supported payment methods and, if 
 Right now, `PaymentRequest` in Chrome only supports the following standard credit cards: '`amex`', '`diners`', '`discover`', '`jcb`', '`maestro`', '`mastercard`', '`unionpay`', and '`visa`'.
 
 
-    var methodData = [
-      {
-        supportedMethods: ["visa", "mastercard"]
+    var methodData = [{
+      supportedMethods: [ "basic-card" ],
+      data: {
+        supportedNetworks: [ "visa", "mastercard" ]
       }
-    ]
-
+    }]
 
 *Payment methods and data*
 
@@ -607,10 +607,13 @@ Note: This is only optional. Users can still add a new payment method in the Pay
       event.preventDefault();
 
       var supportedInstruments = [{
-        supportedMethods: [
-          'visa', 'mastercard', 'amex', 'discover', 'maestro',
-          'diners', 'jcb', 'unionpay', 'bitcoin'
-        ]
+        supportedMethods: [ 'basic-card' ],
+        data: {
+          supportedNetworks: [
+            'visa', 'mastercard', 'amex', 'discover', 'maestro',
+            'diners', 'jcb', 'unionpay'
+          ]
+        }
       }];
 
       var details = {

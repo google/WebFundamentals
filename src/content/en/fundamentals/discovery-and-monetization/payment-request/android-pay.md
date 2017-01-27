@@ -114,7 +114,10 @@ In requesting a gateway token, Android Pay makes a call to your processor on you
 
     var supportedInstruments = [
       {
-        supportedMethods: ['amex', 'discover','mastercard','visa']
+        supportedMethods: ['basic-card']
+        data: {
+          supportedNetworks: ['amex', 'discover','mastercard','visa']
+        }
       },
       {
         supportedMethods: ['https://android.com/pay'],
@@ -190,10 +193,11 @@ How you handle a submitted gateway token depends on the payment gateway. Please 
 
       var supportedInstruments = [
         {
-          supportedMethods: [
-            'visa', 'mastercard', 'amex', 'discover', 'maestro',
-            'diners', 'jcb', 'unionpay', 'bitcoin'
-          ]
+          supportedMethods: ['basic-card']
+          data: {
+            supportedNetworks: ['amex', 'discover','mastercard','visa'],
+            supportedTypes: ['credit']
+          }
         },
         {
           supportedMethods: [ ANDROID_PAY ],
@@ -335,9 +339,12 @@ Requesting a network token requires two pieces of information to be included in 
 
     var supportedInstruments = [
       {
-        supportedMethods: ['amex', 'discover','mastercard','visa']
-      },
-      {
+        supportedMethods: ['basic-card']
+        data: {
+          supportedNetworks: ['amex', 'discover','mastercard','visa'],
+          supportedTypes: ['credit']
+        }
+      }, {
         supportedMethods: ['https://android.com/pay'],
         data: {
           //merchant ID obtained from Google that maps to your origin

@@ -49,10 +49,13 @@ Payment Request API がどのように動作するのか、コードを追いな
 
       // Supported payment methods
       var supportedInstruments = [{
-        supportedMethods: [
-          'visa', 'mastercard', 'amex', 'discover',
-          'diners', 'jcb', 'unionpay'
-        ]
+          supportedMethods: ['basic-card']
+          data: {
+            supportedNetworks: [
+              'visa', 'mastercard', 'amex', 'discover',
+              'diners', 'jcb', 'unionpay'
+            ]
+          }
       }];
 
       // Checkout details
@@ -199,6 +202,10 @@ Payment Method Identifier は分散型拡張性をサポートしています。
 
 ### この API は、 iframe でも使えますか ?
 現在のところ iframe での Payment Request API の使用は許可されていませんが、将来できるようになる予定です。
+
+Chrome M57 から `iframe` 内で Payment Request API を使うことができます。`allowpaymentrequest` を `iframe` することで、`src` で指定された URL 内の Payment Request が有効になります。
+
+    <iframe src="URL_INCLUDING_PAYMENT_REQUEST_CALL" allowpaymentrequest></iframe>
 
 ### Payment Request API に対応していないブラウザ向けの polyfill はありますか ?
 現在のところ、ありません。
