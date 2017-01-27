@@ -63,7 +63,7 @@ content over HTTPS.
 
 AppCache is a feature that allows offline and persistent access to an origin,
 which is a powerful privilege escalation for an cross-site scripting attack. As
-part of a larger effort to [remove powerful features on insecure origins](ttps://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins).
+part of a larger effort to [remove powerful features on insecure origins](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins).
 
 Chrome is removing this attack vector by only allowing it over HTTPS. We're
 deprecating HTTP support in Chrome 50 and expect to remove it entirely in Chrome

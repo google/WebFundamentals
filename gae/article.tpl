@@ -7,7 +7,7 @@
     <meta name="robots" content="noindex">
     <link rel="canonical" href="https://developers.google.com/web/{{requestPath}}">
     <style>
-      .wf-stage-warning { 
+      .wf-stage-warning {
         color: white !important;
         font-weight: bold !important;
       }

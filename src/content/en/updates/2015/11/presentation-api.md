@@ -27,9 +27,9 @@ img.screenshot {
 
 Imagine being able to use a web app from your phone to present a slide deck to a conference projector — or share images, play games or watch videos on a TV screen — using the mobile web app as a controller.
 
-The latest release of Chrome on Android allows sites to [present to Google Cast devices](https://storage.googleapis.com/castapi/CastHelloVideo/index.html) using the [Cast Web SDK](/cast/docs/chrome_sender). This means you can now create Cast sender apps using the Web SDK with Chrome on Android or iOS (or on desktop with the extension) as well as creating apps that use the native Cast SDK for Android and iOS. (Previously, a Google Cast sender application needed the Google Cast Chrome extension, so on Android it was only possible to interact with Cast devices from native apps.)
+The latest release of Chrome on Android allows sites to [present to Google Cast devices](https://storage.googleapis.com/castapi/CastHelloVideo/index.html) using the [Cast Web SDK](/cast/docs/chrome_sender_setup). This means you can now create Cast sender apps using the Web SDK with Chrome on Android or iOS (or on desktop with the extension) as well as creating apps that use the native Cast SDK for Android and iOS. (Previously, a Google Cast sender application needed the Google Cast Chrome extension, so on Android it was only possible to interact with Cast devices from native apps.)
 
-Below is a brief introduction to building a Cast sender app using the Web SDK. More comprehensive information is available from the [Chrome Sender App Development Guide](/cast/docs/chrome_sender).
+Below is a brief introduction to building a Cast sender app using the Web SDK. More comprehensive information is available from the [Chrome Sender App Development Guide](/cast/docs/chrome_sender_setup).
 
 All pages using Cast must include the Cast library:
 
@@ -148,7 +148,7 @@ If Chrome on Android allows casting media from your website but you want to disa
 
 ![Alt Sender and receiver devices](/web/updates/images/2015/11/presentation-api/screens.jpg)
 
-The [Cast Web SDK guide](/cast/docs/chrome_sender) has links to sample apps, and information about Cast features such as session management, text tracks (for subtitles and captions) and status updates.
+The [Cast Web SDK guide](/cast/docs/chrome_sender_setup) has links to sample apps, and information about Cast features such as session management, text tracks (for subtitles and captions) and status updates.
 
 At present, you can only present to a Cast [Receiver Application](/cast/docs/receiver_apps) using the Cast Web SDK, but there is work underway to enable the [Presentation  API](https://w3c.github.io/presentation-api/) to be used without the Cast SDK (on desktop and Android) to present any web page to a Cast device without registration with Google. Unlike the Chrome-only Cast SDK, using the standard API will allow the page work with other user agents and devices that support the API.
 

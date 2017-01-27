@@ -83,9 +83,9 @@ wrong.
 
 If you're looking for a good place to host your minified test case, there are several good places available:
 
-* [JSBin](//jsbin.com)
-* [JSFiddle](//jsfiddle.net)
-* [CodePen](//codepen.io)
+* [JSBin](https://jsbin.com)
+* [JSFiddle](https://jsfiddle.net)
+* [CodePen](https://codepen.io)
 
 ### Include details of the environment
 

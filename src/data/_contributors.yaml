@@ -421,8 +421,6 @@ mychaelgo:
   twitter: mychaelgo
   github: mychaelgo
   google: "113952063964933941833"
-  homepage: 'http://mychaelgo.com'
-  email: admin@mychaelgo.com
   description:
     en: Mychael Go is Fullstack Software Engineer
 
@@ -965,6 +963,22 @@ rupl:
   description:
     en: Chris is a frontend developer and web performance advocate.
 
+taylorsavage:
+  name:
+    given: Taylor
+    family: Savage
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - author
+  twitter: taylorthesavage
+  email: tjsavage@google.com
+  description:
+    en: 'Taylor is a PM on the Chrome Team, focusing on Web Components and Polymer.'
+
+
 mscales:
   name:
     given: Mat
@@ -1141,6 +1155,19 @@ yoichiro:
   email: yoichiro@eisbahn.jp
   description:
     en: Yoichiro is a Google Developers Expert
+
+dtapuska:
+  name:
+    given: Dave
+    family: Tapuska
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  twitter: dtapuska
+  email: dtapuska@google.com
 
 samthorogood:
   name:

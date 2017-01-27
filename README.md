@@ -28,8 +28,7 @@ git clone https://github.com/google/WebFundamentals.git
 
 ## Getting set up
 The new DevSite infrastructure simplifies the dependencies a lot. Ensure
-you have a recent version of [Node](https://nodejs.org/en/), 
-[Gulp](http://gulpjs.com/) and the 
+you have a recent version of [Node](https://nodejs.org/en/) and the 
 [AppEngine SDK for Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
 already installed.
 
@@ -42,7 +41,7 @@ this is done for you. However, when you add a case study, update, etc., you'll
 need to re-build those files using:
 
 ```
-gulp build
+npm run build
 ```
 
 ## Update the code labs
@@ -58,11 +57,11 @@ access to the original Doc files. This will likely only work for Googlers.
 1. Run `npm start`
 
 ## Test your changes before submitting a PR
-Please run your changes through gulp test before submitting a PR. The test
+Please run your changes through npm test before submitting a PR. The test
 looks for things that may cause issues with DevSite and tries to keep our
 content consistent. It's part of the deployment process, so PRs will fail
 if there are any errors! To run:
 
 ```
-gulp test
+npm test
 ```

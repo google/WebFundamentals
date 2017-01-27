@@ -155,7 +155,7 @@ We recommend:
 
     button.onclick = function() {
       var startPos;
-      var element = document.getElementById("nudge");
+      var nudge = document.getElementById("nudge");
 
       var showNudgeBanner = function() {
         nudge.style.display = "block";
@@ -183,6 +183,7 @@ We recommend:
             // The user didn't accept the callout
             showNudgeBanner();
             break;
+        }
       };
 
       navigator.geolocation.getCurrentPosition(geoSuccess, geoError);

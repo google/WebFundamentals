@@ -9,6 +9,10 @@ landing_page:
       <p>
         A new way to deliver amazing user experiences on the web.
       </p>
+    buttons:
+      - label: PWA Checklist
+        path: /web/progressive-web-apps/checklist
+
 
   rows:
 
@@ -34,7 +38,7 @@ landing_page:
           </li>
         </ul>
         <p>
-          This new level of of quality allows Progressive Web Apps to earn a
+          This new level of quality allows Progressive Web Apps to earn a
           place on the user's home screen.
         </p>
       image_path: images/pwa-intro.png
@@ -116,12 +120,14 @@ landing_page:
       - description: >
           <ul class="checkmarks">
             <li>
-              <a href="#">Worthy of being on the home screen</a><br>
+              <a href="/web/fundamentals/engage-and-retain/app-install-banners/">
+              Worthy of being on the home screen</a><br>
               When the Progressive Web App criteria are met, Chrome prompts
               users to add the Progressive Web Apps to their home screen.
             </li>
             <li>
-              <a href="/web/showcase/2016/konga">Work reliably, no matter the network conditions</a><br>
+              <a href="/web/showcase/2016/konga">
+              Work reliably, no matter the network conditions</a><br>
               Service workers enabled Konga to send 63% less data for
               initial page loads, and 84% less data to complete the first
               transaction!
@@ -149,11 +155,10 @@ landing_page:
     items:
     - heading: Lighthouse
       description: >
-          Verifying that your Progressive Web App meets previously required a
-          great deal of manual testing. Thanks to the new Lighthouse project,
-          it's possible to automate checks for many of these properties. You
-          can even integrate Lighthouse into continuous integration systems to
-          catch regressions.
+          Lighthouse is an open-source, automated tool for improving the
+          quality of your Progressive Web Apps, and eliminates much of the
+          manual testing that was previously required. You can even integrate
+          Lighthouse into continuous integration systems to catch regressions.
       image_path: images/pwa-lighthouse.png
 
       buttons:

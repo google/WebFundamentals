@@ -38,7 +38,7 @@ offline:
 * For URL addressable resources, use the [**Cache API**](https://davidwalsh.name/cache)
   (part of [service workers](/web/fundamentals/primers/service-worker/)).
 * For all other data, use [**IndexedDB**](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
-  (with a [Promises](/web/fundamentals/getting-started/primers/promises) wrapper).
+  (with a [promises wrapper](https://www.npmjs.com/package/idb)).
 
 Here’s the rationale:
 
@@ -101,7 +101,7 @@ sufficiently mature or standardized to encourage widespread adoption yet.
       <td>&lt;6% of free space</td>
     </tr>
     <tr>
-      <td>Firebox</td>
+      <td>Firefox</td>
       <td>&lt;10% of free space</td>
     </tr>
     <tr>
@@ -111,6 +111,10 @@ sufficiently mature or standardized to encourage widespread adoption yet.
     <tr>
       <td>IE10</td>
       <td>&lt;250MB</td>
+    </tr>
+    <tr>
+      <td>Edge</td>
+      <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/dev-guide/storage/IndexedDB/">Dependent on volume size</a></td>
     </tr>
   <tbody>
 </table>
@@ -150,7 +154,7 @@ Promises.
       <td>LRU once Chrome runs out of space</td>
     </tr>
     <tr>
-      <td>Firebox</td>
+      <td>Firefox</td>
       <td>LRU if the whole disk gets full</td>
     </tr>
     <tr>
@@ -277,10 +281,16 @@ precaching for static assets/application shells)
 
 ### IndexedDB libraries worth checking out
 
-* [localForage](https://github.com/localForage/localForage)(~8KB, Promises, good
-legacy browser support)
+* [localForage](https://github.com/localForage/localForage) (~8KB, promises,
+good legacy browser support)
 
-* [Dexie](http://dexie.org/) (~16KB, Promises, complex queries, secondary
+* [IDB-keyval](https://www.npmjs.com/package/idb-keyval) (500 byte alternative
+to localForage, for modern browsers)
+
+* [IDB-promised](https://www.npmjs.com/package/idb) (~2k, same IndexedDB API,
+but with promises)
+
+* [Dexie](http://dexie.org/) (~16KB, promises, complex queries, secondary
 indices)
 
 * [PouchDB](https://pouchdb.com/) (~45KB (supports [custom

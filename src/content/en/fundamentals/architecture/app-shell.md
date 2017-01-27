@@ -17,7 +17,7 @@ The app "shell" is the minimal HTML, CSS and JavaScript required to power the
 user interface and when cached offline can ensure **instant, reliably good
 performance** to users on repeat visits. This means the application shell is
 not loaded from the network every time the user visits. Only the necessary
-content is needed from the networi.
+content is needed from the network.
 
 For [single-page
 applications](https://en.wikipedia.org/wiki/Single-page_application) with

@@ -29,6 +29,9 @@ If you're using `console.log()` to find and fix bugs in your code, consider
 using the workflow outlined in this tutorial instead. It's often much faster
 and more effective.
 
+Note: This tutorial is based on Chrome 57, which is currently
+[Canary](https://www.google.com/chrome/browser/canary.html).
+
 ## Step 1: Reproduce the bug {: #step-1 }
 
 Reproducing the bug is always the first step to debugging.
@@ -67,15 +70,9 @@ pausing your code is called a **breakpoint**. Try it now:
 
 1. Click the **Sources** tab.
 
-<!-- TODO add a screenshot. Don't create the screenshot until demo design is
-     finished. Add it here rather than previous screenshot in case Sources
-     is hidden -->
-
 1. Click **Event Listener Breakpoints** to expand the section. DevTools reveals
    a list of expandable event categories, such as **Animation** and
    **Clipboard**.
-
-<!-- TODO or maybe add it here -->
 
 1. Next to the **Mouse** event category, click **Expand** ![Expand
    icon](/web/tools/chrome-devtools/images/expand.png){: .devtools-inline}.

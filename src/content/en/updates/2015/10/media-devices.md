@@ -156,7 +156,7 @@ stream. There is also a `MediaDevices` extension proposal for
     * [Select sources &amp; outputs](https://webrtc.github.io/samples/src/content/devices/input-output/)
     * [Output device
       selection](https://webrtc.github.io/samples/src/content/devices/multi/){: .external }
-* [MediaDevices shim](https://webrtc.github.io/samples/src/js/adapter.js)
+* [MediaDevices shim](https://github.com/webrtc/adapter)
 
 ### Find out more
 

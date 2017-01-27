@@ -242,6 +242,29 @@ function findBadMDExtensions() {
 }
 
 /**
+ * Checks to ensure there are no JavaSCript files in the content/ folder.
+ *
+ * Note: the promise will always be fulfilled, even if it fails.
+ *
+ * @return {Promise} An empty promsie
+ */
+ function findJavaScriptFiles() {
+  return new Promise(function(resolve, reject) {
+    var contentPath = GLOBAL.WF.src.content;
+    if (GLOBAL.WF.options.testPath) {
+      contentPath = GLOBAL.WF.options.testPath;
+    }
+    var patterns = ['**/*.js', '!**/_code/*.js', '!**/event-map.js'];
+    var files = wfHelper.getFileList(contentPath, patterns);
+    files.forEach(function(filename) {
+      summary.files++;
+      logError(filename.filePath, 'JavaScript files are not allowed.')
+    });
+    resolve();
+  });
+ }
+
+/**
  * Tests all .MD files
  * 
  * Note: the promise will only be fulfilled, when all of the files have been
@@ -283,21 +306,32 @@ function validateMarkdown(filename, commonTags) {
   return new Promise(function(resolve, reject) {
     readFile(filename)
     .then(function(content) {
+      var isInclude = false;
       var errMsg;
       var matched;
       var errors = 0;
       var warnings = 0;
 
+      // Check if this is a markdown include file
+      matched = content.match(/{# wf_md_include #}/gm);
+      if (matched) {
+        isInclude = true;
+      }
+
       // Validate book_path and project_path
       if (wfHelper.getRegEx(/^book_path: (.*)\n/m, content, null) === null) {
-        errMsg = 'Attribute `book_path` missing from top of document';
-        logError(filename, errMsg)
-        errors++;
+        if (isInclude === false) {
+          errMsg = 'Attribute `book_path` missing from top of document';
+          logError(filename, errMsg)
+          errors++;
+        }
       }
       if (wfHelper.getRegEx(/^project_path: (.*)\n/m, content, null) === null) {
-        errMsg = 'Attribute `project_path` missing from top of document';
-        logError(filename, errMsg)
-        errors++;
+        if (isInclude === false) {
+          errMsg = 'Attribute `project_path` missing from top of document';
+          logError(filename, errMsg)
+          errors++;
+        }
       }
 
       // Validate description
@@ -321,22 +355,24 @@ function validateMarkdown(filename, commonTags) {
         }
       }
 
-
-
       // Validate wf_updated and wf_published
       matched = wfHelper.getRegEx(/{# wf_updated_on: (.*?) #}/, content, 'NOT_FOUND');
-      if (!moment(matched, VALID_DATE_FORMATS, true).isValid()) {
-        errMsg = 'WF Tag `wf_updated_on` missing or invalid format (YYYY-MM-DD)';
-        errMsg += ', found: ' + matched;
-        logError(filename, errMsg)
-        errors++;
+      if (isInclude === false) {
+        if (!moment(matched, VALID_DATE_FORMATS, true).isValid()) {
+          errMsg = 'WF Tag `wf_updated_on` missing or invalid format (YYYY-MM-DD)';
+          errMsg += ', found: ' + matched;
+          logError(filename, errMsg)
+          errors++;
+        }
       }
       matched = wfHelper.getRegEx(/{# wf_published_on: (.*?) #}/, content, 'NOT_FOUND');
-      if (!moment(matched, VALID_DATE_FORMATS, true).isValid()) {
-        errMsg = 'WF Tag `wf_published_on` missing or invalid format (YYYY-MM-DD)';
-        errMsg += ', found: ' + matched;
-        logError(filename, errMsg)
-        errors++;
+      if (isInclude === false) {
+        if (!moment(matched, VALID_DATE_FORMATS, true).isValid()) {
+          errMsg = 'WF Tag `wf_published_on` missing or invalid format (YYYY-MM-DD)';
+          errMsg += ', found: ' + matched;
+          logError(filename, errMsg)
+          errors++;
+        }
       }
 
       // Validate featured image path
@@ -373,7 +409,11 @@ function validateMarkdown(filename, commonTags) {
       // Validate page title, and H1's
       var numH1 = 0;
       matched = content.match(/^# (.*) {: \.page-title[ ]*}/gm);
-      if (matched) {
+      if (matched && isInclude === true) {
+        errMsg = 'Includes cannot contain page titles.';
+        logError(filename, errMsg)
+        errors++;
+      } else if (matched) {
         if (matched.length > 1) {
           errMsg = 'Page must only have one title tag: ' + matched.join(',');
           logError(filename, errMsg)
@@ -384,7 +424,7 @@ function validateMarkdown(filename, commonTags) {
           logError(filename, errMsg)
           errors++;
         }
-      } else {
+      } else if (isInclude === false) {
         errMsg = 'Page is missing page title eg: # TITLE {: .page-title }';
         logError(filename, errMsg)
         errors++;
@@ -396,10 +436,15 @@ function validateMarkdown(filename, commonTags) {
       matched = content.match(/^<h1.*?>/gmi);
       if (matched) {
         numH1 += matched.length;
-      } 
-      if (numH1 > 1) {
+      }
+      if (isInclude === false && numH1 > 1) {
         errMsg = 'Page should only have ONE H1 tag, found ' + numH1;
-        warnings.push(logWarning(filename, errMsg));
+        logWarning(filename, errMsg);
+        warnings++;
+      } else if (isInclude === true && numH1 >= 1) {
+        errMsg = 'Includes should not contain any H1 tags, found ' + numH1;
+        logWarning(filename, errMsg);
+        warnings++;
       }
 
       // Verify authors/translators are in the contributors file
@@ -520,7 +565,8 @@ gulp.task('test', function(callback) {
       return Promise.all([
         testAllYaml(),
         testAllMarkdown(),
-        findBadMDExtensions()
+        findBadMDExtensions(),
+        findJavaScriptFiles()
       ]);
     })
     .catch(function(err) {
