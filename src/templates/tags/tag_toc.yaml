@@ -5,5 +5,5 @@ toc:
   path: /web/{{section}}/tags/
   alternate_paths:
 {{#each tags}}
-  - /web/{{section}}/tags/{{this}}
+  - /web/{{../section}}/tags/{{this}}
 {{/each}}
