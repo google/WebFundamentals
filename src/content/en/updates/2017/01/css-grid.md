@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: CSS Grid is a new layouting system for the web.
+description: CSS Grid is a new layout system for the web.
 
 
 {# wf_published_on: 2017-01-27 #}
 {# wf_updated_on: 2017-01-27 #}
 {# wf_featured_image: /web/updates/images/2017/01/css-grid/grid.png #}
 {# wf_tags: css,layout,grid #}
-{# wf_featured_snippet: CSS Grid is a new layouting system for the web. #}
+{# wf_featured_snippet: CSS Grid Layout makes creating two dimensional grid based layouts easy. It's been in development for over 5 years, but is now available in Chrome and coming to other browsers soon. Let's take a peek at what's new and how you can use it on your sites! #}
 
 # CSS Grid – Table layout is back. Be there and be square. {: .page-title }
 
@@ -27,7 +27,7 @@ Flexbox made a lot of complex layout tasks easier, like equi-distant spacing
 between elements, top-to-bottom layouts or the holy grail of CSS wizardry:
 vertical centering.
 
-<img width="50%" src="/web/updates/images/2017/01/css-grid/alignproblem.png" alt="There's no way to align elements across multiple flexbox containers.">
+<img src="/web/updates/images/2017/01/css-grid/alignproblem.png" alt="There's no way to align elements across multiple flexbox containers." class="attempt-right">
 
 But alas, screens commonly have a second dimension we need to worry about.
 Short of taking care of sizing the elements yourself, sadly, you can't have
@@ -49,7 +49,7 @@ lays out in one and the both have a lot of synergy when used together.
 ## Defining a grid
 
 To get familiar with the individual properties of Grid I heartily recommend
-\Rachel Andrew’s [Grid By Example](http://gridbyexample.com) or CSS Tricks'
+Rachel Andrew’s [Grid By Example](http://gridbyexample.com) or CSS Tricks'
 [Cheat Sheet](https://css-tricks.com/snippets/css/complete-guide-grid/). If you
 are familiar with Flexbox, a lot of the properties and their meaning should be
 familiar.
@@ -58,7 +58,7 @@ Let's take a look at a standard 12-column grid layout. The classic 12-column
 layout is very popular as the number 12 is divisible by 2, 3, 4 and 6 and is
 therefore useful for a lot different designs. Let's implement this layout:
 
-<img width="50%" src="/web/updates/images/2017/01/css-grid/examplelayout.png" alt="There's no way to align elements across multiple flexbox containers.">
+<img src="/web/updates/images/2017/01/css-grid/examplelayout.png" alt="There's no way to align elements across multiple flexbox containers." class="attempt-right">
 
 Let's start with our markup code:
 
@@ -90,7 +90,7 @@ implement all 12 columns in our mockup, but as we are not using every column,
 doing this would make our CSS unnecessarily messy. For the sake of simplicity,
 we'll implement the layout this way:
 
-<img width="50%" src="/web/updates/images/2017/01/css-grid/simplifiedexamplelayout.png">
+<img src="/web/updates/images/2017/01/css-grid/simplifiedexamplelayout.png" class="attempt-right">
 
 The header and the footer are variable in width and the content is variable in
 both dimensions. The nav will be variable in both dimensions as well, but we are
@@ -124,12 +124,12 @@ flex-shrink here, but in Grid it's a little different:
       grid-template-columns: minmax(200px, 3fr) 9fr;
     }
 
-We are defining 2 columns. The first column is defined using the minmax()
+We are defining 2 columns. The first column is defined using the `minmax()`
 function, which takes 2 values: The minimum and the maximum size of that track
-(it's like min-width and max-width in one). The minimum width is, as we
-discussed before, 200px. The maximum width is 3fr. Fr is a grid-specific unit
-that allows you distribute available space to the grid elements
-([fr probably stands for "fraction unit", but might also mean "free unit" soon](https://twitter.com/DasSurma/status/815910270023430144)).
+(it's like `min-width` and `max-width` in one). The minimum width is, as we
+discussed before, 200px. The maximum width is `3fr`. `fr` is a grid-specific
+unit that allows you distribute available space to the grid elements
+([`fr` probably stands for "fraction unit", but might also mean "free unit" soon](https://twitter.com/DasSurma/status/815910270023430144)).
 Our values here mean that both columns will grow to fill the screen, but the
 content column will always be 3 times as wide as the nav column (provided the
 nav column stays wider than 200px).
@@ -137,7 +137,7 @@ nav column stays wider than 200px).
 While the *placement* of our grid items is not correct yet, the *size* of the
 rows and columns behave correctly and yield the behavior we were aiming for:
 
-<video controls autoplay loop muted poster="[url to poster image]">
+<video controls autoplay loop muted poster="/web/updates/images/2017/01/css-grid/poster.png">
   <source src="https://storage.googleapis.com/webfundamentals-assets/css-grid/responsive_vp8.webm" type="video/webm; codecs=vp8">
   <source src="https://storage.googleapis.com/webfundamentals-assets/css-grid/responsive_x264.mp4" type="video/mp4; codecs=h264">
 </video>
@@ -164,7 +164,7 @@ a start point and a span:
       grid-row: 2 / span 2;
     }
 
-<img width="50%" src="/web/updates/images/2017/01/css-grid/manualplacement.png">
+<img src="/web/updates/images/2017/01/css-grid/manualplacement.png"  class="attempt-right">
 
 We want our header to start in the first column and end *before* the 3rd column.
 Our nav should start in the second row and span 2 rows in total.
@@ -215,7 +215,7 @@ code will generate the same layout as before.
 
 Yes, yes there is, way too much to cover in a single blog post, Grid is very
 powerful. [Rachel Andrew](https://twitter.com/Rachelandrew), who is also a
-[GDE](https://developers.google.com/experts/people/rachel-andrew), is an Invited
+[GDE](/experts/people/rachel-andrew), is an Invited
 Expert in CSS Working Group and has been working with them from the very start
 to make sure Grid will make web design easier in the future and and even wrote a
 [book](https://abookapart.com/products/get-ready-for-css-grid-layout) on it. Her
@@ -223,3 +223,5 @@ website [Grid By Example](http://gridbyexample.com/) is an extremely valuable
 resource to get familiar with Grid. Many people think Grid is a revolutionary
 step for web design and it is now enabled by default in Chrome so you can start
 using it today.
+
+{% include "comment-widget.html" %}
