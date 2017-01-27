@@ -12,8 +12,6 @@ description: An round up of the deprecations and removals in Chrome to help you 
 {% include "web/_shared/contributors/josephmedley.html" %}
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-<<../../_deprecation-policy.md>>
-
 In nearly every version of Chrome, we see a significant number of updates and improvements to the product, its performance, and also capabilities of the Web Platform. This article describes the deprecations and removals in Chrome 54, which is in beta as of Setempber 15. This list is subject to change at any time.
 
 ## Disable navigations in the unload handler
