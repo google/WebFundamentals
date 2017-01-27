@@ -192,7 +192,7 @@ We are investigating how to best do this. For now, you can manually ask for coup
 
 ### Does this work with iframes?
 
-Starting Chrome M57, using Payment Request API inside `iframe` is supported. Simply add `allowpaymentrequest` attribute to allow the `iframe` to use the API.
+Starting with Chrome 57, using the Payment Request API inside an `iframe` is supported. Simply add `allowpaymentrequest` attribute to allow the `iframe` to use the API.
 
     <iframe src="URL_INCLUDING_PAYMENT_REQUEST_CALL" allowpaymentrequest></iframe>
 
