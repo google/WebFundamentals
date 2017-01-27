@@ -8,15 +8,15 @@ description: Customize web media notifications and respond to media related even
 {# wf_featured_image: /web/updates/images/2017/02/tldr.png #}
 {# wf_featured_snippet: Finally! We can customize web media notifications (title, artist, album name, artwork) and respond to media related events such as seeking or track changing with the new Media Session API. #}
 
-# Customize Media Notifications & Handle Playlists {: .page-title }
+# Customize Media Notifications and Handle Playlists {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 With the brand new [Media Session API], you can now **customize media
-notifications** by providing metadata information for the media your web app is
+notifications** by providing metadata for the media your web app is
 playing. It also allows you to **handle media related events** such as seeking
 or track changing which may come from notifications or media keys. Excited? Try
-out the official [Media Session sample]!
+out the official [Media Session sample].
 
 The Media Session API is supported in Chrome 57 (beta in February 2017, stable
 in March 2017).
@@ -28,7 +28,7 @@ in March 2017).
 
 ## Gimme What I Want
 
-You already know all about the Media Session API and are simply coming back to
+You already know about the Media Session API and are simply coming back to
 copy and paste with no shame some boilerplate code? So here it is.
 
     if ('mediaSession' in navigator) {
@@ -74,10 +74,10 @@ As you may know, `autoplay` is disabled for audio elements on Chrome
 for Android which means we have to use the `play()` method of the audio
 element. This method must be triggered by [a user gesture] such as a touch or a
 mouse click.
-We're talking about listening to
+That means listening to
 [`pointerup`](/web/updates/2016/10/pointer-events), `click`, and `touchend`
-events. In other words, the user must click on a button before your web app can
-actually make some noise.
+events. In other words, the user must click a button before your web app can
+actually make noise.
 
     playButton.addEventListener('pointerup', function(event) {
       let audio = document.querySelector('audio');
@@ -95,7 +95,7 @@ when user taps the "play" audio control.
 If you don't want to play audio right after the first interaction, I recommend
 you use the `load()` method of the audio element. This is one way for the
 browser to keep track of whether the user interacted with the element. Note
-that it may also help playback to be smoother because the content will already
+that it may also help smooth the playback because the content will already
 be loaded.
 
 <pre class="prettyprint">
@@ -296,13 +296,13 @@ network]" strategy as illustrated by Jake Archibald.
 For artwork though, I'd be a little bit more specific and choose the approach
 below:
 
-- `If` artwork is already in cache, serve it from the cache
-- `Else` fetch artwork from network
+- `If` artwork is already in the cache, serve it from the cache
+- `Else` fetch artwork from the network
     - `If` fetch is successful, add network artwork to the cache and serve it
-    - `Else` serve fallback artwork from the cache
+    - `Else` serve the fallback artwork from the cache
 
-That way, media notifications would always have a nice artwork icon even when
-browser can't fetch it. Here's how you could implement this for instance:
+That way, media notifications will always have a nice artwork icon even when
+browser can't fetch them. Here's how you could implement this:
 
     const FALLBACK_ARTWORK_URL = 'fallbackArtwork.png';
     
@@ -364,7 +364,7 @@ network requests on [the very first page load], you may want to call
 
 As the user consumes content from your web app, media and artwork files may
 take a lot of space on their device. It is **your responsibility to show how
-much cache is used and give user the ability to clear it**. Thankfully for us,
+much cache is used and give users the ability to clear it**. Thankfully for us,
 doing so is pretty easy with the [Cache API].
 
     // Here's how I'd compute how much cache is used by artwork files...
@@ -402,7 +402,7 @@ doing so is pretty easy with the [Cache API].
 ## Implementation nits
 
 - Chrome for Android requests "full" audio focus to show media notifications
-  only when media file duration is [at least 5 seconds].
+  only when the media file duration is [at least 5 seconds].
 - If no artwork is defined and there is an icon image at a desirable size, media
   notifications will use it.
 - Notification artwork size in Chrome for Android is `512x512`. For
@@ -411,7 +411,7 @@ doing so is pretty easy with the [Cache API].
 - As the [Web Audio API] doesn't request Android Audio Focus for historical
   reasons, the only way to make it work with the Media Session API is to hook
   up an `<audio>` element as the input source to the Web Audio API. Hopefully,
-  the proposed [Web AudioFocus API] will help improving that situation in a
+  the proposed [Web AudioFocus API] will improve the situation in the
   near future.
 
 ## Support
