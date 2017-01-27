@@ -1,16 +1,16 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: In Chrome 56 and 57, there are a few changes made to the Payment Request API following the spec changes. Learn what they are and make changes to your own implementations.
+description: In Chrome 56 and 57, there are a few changes to the Payment Request API following the spec changes. Learn what they are and make changes to your own implementations.
 
 {# wf_updated_on: 2017-01-31 #}
 {# wf_published_on: 2017-01-31 #}
 {# wf_tags: paymentrequest,chrome56,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: In Chrome 56 and 57, there are quite a few changes made to the Payment Request API following the spec changes. Learn what they are and make changes to your own implementation. #}
+{# wf_featured_snippet: In Chrome 56 and 57, there are quite a few changes to the Payment Request API following the spec changes. Learn what they are and make changes to your own implementation. #}
 
-Since launch of the Payment Request API in Chrome 53, there are a few changes
+Since the launch of the Payment Request API in Chrome 53, a few changes have been
 made to the API. These changes won't break the functionalities of your working
-code, but we will never. We recommend you to add [a
+code, but we will never. We recommend you add [a
 shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) to your code so
 that future changes won't break your product.
 
@@ -18,8 +18,8 @@ Note: All changes described here are already reflected in [the existing
 integration guides](https://developers.google.com/web/fundamentals/discovery-and-monetization/payment-request/). You can
 
 ## Chrome 57
-### PaymentRequest is now available inside iframe
-Payment Request API can now be called from within an `iframe` by adding the
+### PaymentRequest is now available inside iframes
+The Payment Request API can now be called from within an `iframe` by adding the
 `allowpaymentrequest` attribute to the `iframe` element.
 
     <iframe src="URL_INCLUDING_PAYMENT_REQUEST_CALL" allowpaymentrequest></iframe>
@@ -47,12 +47,12 @@ release.
     }];
     var request = new PaymentRequest(methodData, details, options);
 
-The format of `data` property depends on the value in `supportedMethods` and is
-based on [Basic Card](https://w3c.github.io/webpayments-methods-card/#request)
+The format of the `data` property depends on the value in `supportedMethods` and is
+based on the [Basic Card](https://w3c.github.io/webpayments-methods-card/#request)
 specification. Note that [the
 spec](https://w3c.github.io/webpayments-methods-card/#basiccardrequest) includes
 `supportedTypes` which accepts `credit`, `debit` or `prepaid`, but Chrome 57
-will ignore this property and treat any values in `supoprtedNetworks` as credit
+ignores this property and treats any values in `supoprtedNetworks` as credit
 cards.
 
     var methodData = [{
@@ -71,7 +71,7 @@ Note: The older format will remain functional for the time being.
 As part of [payment item
 information](https://developers.google.com/web/fundamentals/getting-started/primers/payment-request/#create-paymentrequest),
 developers can add `pending` to indicate that the price is not fully determined
-yet. The field `pending` accepts a boolean value.
+yet. The `pe nding` fieldaccepts a boolean value.
 
     {
      label: "State tax",
@@ -80,7 +80,7 @@ yet. The field `pending` accepts a boolean value.
     },
 
 This is commonly used to show positions such as shipping or tax amounts that
-depend upon selection of shipping address or shipping options. Chrome indicates
+depend on selection of shipping address or shipping options. Chrome indicates
 pending fields in the UI for the payment request.
 
 ### requestPayerName
@@ -94,7 +94,7 @@ to request the payer's name separate from shipping address information.
 As part of [shipping
 option](https://developers.google.com/web/fundamentals/getting-started/primers/payment-request/#contact-information)
 (third argument to `PaymentRequest`), developers can now add `shippingType` to
-request the UI to show "delivery" or "pickup" instead of "shipping".
+request that the UI show "delivery" or "pickup" instead of "shipping".
 `shippingType` accepts the strings `shipping` (default), `delivery`, or
 `pickup`.
 
@@ -121,9 +121,9 @@ cumbersome `toDict()` functions.
     });
 
 ### canMakePayment
-In addition to the API availability, you can check to see if a user has active
-payment method before invoking Payment Request API. Remember that this is
-optional as users can still add a new payment method on Payment UI.
+In addition to the API availability, you can check to see if a user has an active
+payment method before invoking the Payment Request API. Remember that this is
+optional as users can still add a new payment method on the payment UI.
 
     let request = new PaymentRequest(methods, details, options);
     if (request.canMakePayment) {
