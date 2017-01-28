@@ -1,50 +1,6 @@
 {% comment %}
-
-# Inline Feedback Widget
-
-Gain more feedback on your doc by asking your readers yes / no questions.
-
-## Example
-
-See question at bottom of:
-https://developers.google.com/web/tools/chrome-devtools/javascript/#step-1
-
-## Usage
-
-1. Make a directory called _feedback near the doc that'll include the feedback.
-2. Copy `/src/content/en/tools/chrome-devtools/javascript/_feedback/1.html`
-   into your _feedback directory.
-3. Modify all of the variables to suit your question. All variables are
-   required.
-4. Include `_feedback/1.html` into your doc, like this:
-
-       {% include "web/path/to/_feedback/1.html" %}
-
-   Path must always start with relative reference to `web/`. This is just
-   how the `include` tag works.
-
-Other stuff:
-
-* The widget is hard-coded (and styled) to expect a success / fail scenario.
-  It won't make sense in other contexts.
-* Can be used more than once on a doc!
-* Doesn't work on Web Fundamentals' local development server, because that
-  server is just an approximation of DevSite's real capabilities. You'll
-  see all of the variables printed on the page.
-
-Email kayce@ for questions.
-
-## Viewing data
-
-See Google Analytics > Behavior > Events. When the user clicks "fail",
-a value of 0 is sent for this label. When user clicks "success", a value
-of 1 is sent. So, you can determine how much users are clicking
-"success" or "fail" based on a 0 to 1 scale.
-
-## Author
-
-Kayce Basques <kayce@google.com>
-
+  See https://developers.google.com/web/resources/widgets#inline-feedback for
+  usage.
 {% endcomment %}
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 {% setvar url %}https://github.com/google/webfundamentals/issues/new?title=[{{ category }} / {{ label }}] {% endsetvar %}
