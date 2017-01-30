@@ -24,6 +24,7 @@ in March 2017).
 <figure>
   <img src="/web/updates/images/2017/02/tldr.png"
     alt="Media Session TL;DR;"/>
+  <figcaption><a href="https://en.wikipedia.org/wiki/Rick_Astley#/media/File:Rick_Astley_Tivoli_Gardens.jpg">Photo</a> by Michael Alø-Nielsen / <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
 </figure>
 
 ## Gimme what I want
