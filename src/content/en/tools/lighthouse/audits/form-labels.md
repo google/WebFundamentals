@@ -29,12 +29,12 @@ Explicit labels:
 
 `aria-label`:
 
-    <label>First Name <input type="text" aria-label="First Name"/></label>
+    <button class="hamburger-menu" aria-label="menu">...</button>
 
 `aria-labelledby`:
 
-    <label id="name">First Name</label>
-    <input type="text" aria-labelledby="name"/>
+    <span id="foo">Select seat:</span>
+    <custom-dropdown aria-labelledby="foo">...</custom-dropdown>
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
