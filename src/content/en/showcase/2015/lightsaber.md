@@ -7,6 +7,7 @@ description: How to set up a high FPS WebGL project with Polymer.
 {# wf_author: yatesbuckley,maciejzasada,fouadvaladbeigi #}
 {# wf_featured_image: /web/showcase/2015/images/lightsaber/card.jpg #}
 {# wf_featured_snippet: How we used Polymer to create a high-performance WebGL mobile controlled Lightsaber that is modular and configurable. We review some of the key details of our <a href="https://lightsaber.withgoogle.com/"> project</a> to help you save time when creating your own next time you run into a pack of angry Stormtroopers. #}
+{# wf_tags: casestudy,webgl,experiment #}
 
 # Creating a Lightsaber with Polymer {: .page-title }
 

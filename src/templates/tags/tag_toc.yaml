@@ -2,8 +2,8 @@
 
 toc:
 - title: Tags
-  path: /web/updates/tags/
+  path: /web/{{section}}/tags/
   alternate_paths:
 {{#each tags}}
-  - /web/updates/tags/{{this}}
+  - /web/{{../section}}/tags/{{this}}
 {{/each}}

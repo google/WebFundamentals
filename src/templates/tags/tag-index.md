@@ -7,5 +7,5 @@ book_path: /web/{{section}}/_book.yaml
 # {{ title }} {: .page-title }
 
 {{#each tags}}
-* [{{this}}](/web/updates/tags/{{this}})
+* [{{this}}](/web/{{../section}}/tags/{{this}})
 {{/each}}

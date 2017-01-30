@@ -169,7 +169,7 @@ function generateIndex(files, options) {
 }
 
 function generateTagPages(files, options) {
-  gutil.log(' ', 'Generating tag pages...');
+  gutil.log(' ', 'Generating tag pages for ' + options.section + '...');
   var allTags = {};
   files.forEach(function(file) {
     var tags = file.tags;
@@ -189,15 +189,16 @@ function generateTagPages(files, options) {
     tags: Object.keys(allTags).sort(),
     section: options.section
   };
-  var tmpl = path.join(GLOBAL.WF.src.templates, 'updates', 'tag-index.md');
+  var tmpl = path.join(GLOBAL.WF.src.templates, 'tags', 'tag-index.md');
   var outputFile = path.join(options.outputPath, 'index.md');
   renderTemplate(tmpl, context, outputFile);
-  tmpl = path.join(GLOBAL.WF.src.templates, 'updates' ,'tag_toc.yaml');
+  tmpl = path.join(GLOBAL.WF.src.templates, 'tags' ,'tag_toc.yaml');
   outputFile = path.join(options.outputPath, '_toc.yaml');
   renderTemplate(tmpl, context, outputFile);
   Object.keys(allTags).forEach(function(key) {
+    var name = options.section.replace(/(\w)(\w+[^s])(s|S)?\b/, (_, a, b) => a.toUpperCase() + b + 's');
     var opts = {
-      title: 'All Updates tagged: ' + key + '',
+      title: 'All ' + name + ' tagged: ' + key + '',
       section: options.section,
       outputFile: path.join(options.outputPath, key + '.md')
     };

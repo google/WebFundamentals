@@ -5,6 +5,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_updated_on: 2015-04-01 #}
 {# wf_author: paulkinlan #}
 {# wf_featured_image: /web/showcase/2015/images/hn_premii/card.jpg #}
+{# wf_tags: spotlight #}
 
 # Hacker News Reader {: .page-title }
 

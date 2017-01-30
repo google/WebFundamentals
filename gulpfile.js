@@ -84,6 +84,7 @@ gulp.task('clean', function() {
     'src/content/*/showcase/_index.yaml',
     'src/content/*/showcase/*/_toc.yaml',
     'src/content/*/showcase/*/index.md',
+    'src/content/*/showcase/tags/*',
     'src/content/*/shows/_index.yaml',
     'src/content/*/shows/index.md',
     'src/content/*/shows/**/feed.xml',

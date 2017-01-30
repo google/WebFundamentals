@@ -5,6 +5,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_updated_on: 2015-05-04 #}
 {# wf_author: pbakaus #}
 {# wf_featured_image: /web/showcase/2015/images/adsy_me/card.jpg #}
+{# wf_tags: spotlight #}
 
 # Adsy.me {: .page-title }
 
