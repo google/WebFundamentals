@@ -9,7 +9,7 @@
     <title>{{ title }}</title>
     {% autoescape off %}{{ customcss }}{% endautoescape %}
     <style>
-      .wf-stage-warning { 
+      .wf-stage-warning {
         color: white !important;
         font-weight: bold !important;
       }

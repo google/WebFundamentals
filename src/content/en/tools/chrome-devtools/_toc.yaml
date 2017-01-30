@@ -3,16 +3,16 @@ toc:
     section:
     - title: Overview
       path: /web/tools/chrome-devtools/
-    - title: Configure and Customize DevTools
-      path: /web/tools/chrome-devtools/settings
     - title: Debug Progressive Web Apps
       path: /web/tools/chrome-devtools/progressive-web-apps
     - title: Understand Security Issues
       path: /web/tools/chrome-devtools/security
-    - title: Keyboard Shortcuts Reference
-      path: /web/tools/chrome-devtools/shortcuts
     - title: Run Snippets of Code From Any Page
       path: /web/tools/chrome-devtools/snippets
+    - title: Keyboard Shortcuts Reference
+      path: /web/tools/chrome-devtools/shortcuts
+    - title: UI Reference
+      path: /web/tools/chrome-devtools/ui
     - title: Inspect and Edit Pages and Styles
       section:
       - title: Overview
@@ -99,12 +99,12 @@ toc:
         path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
     - title: Measure Network Performance
       section:
-      - title: Measure Resource Loading Times
-        path: /web/tools/chrome-devtools/network-performance/resource-loading
-      - title: Understand Resource Timing
-        path: /web/tools/chrome-devtools/network-performance/understanding-resource-timing
-      - title: Optimize Performance Under Varying Network Conditions
-        path: /web/tools/chrome-devtools/network-performance/network-conditions
+      - title: Get Started
+        path: /web/tools/chrome-devtools/network-performance/
+      - title: Network Issues Guide
+        path: /web/tools/chrome-devtools/network-performance/issues
+      - title: Reference
+        path: /web/tools/chrome-devtools/network-performance/reference
     - title: Fix Memory Problems
       section:
       - title: Overview

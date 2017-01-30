@@ -88,7 +88,7 @@ content is already visible to the user.
 
 Fortunately, service workers have a way to test whether the application is open.
 Service workers support an interface called
-[`clients`](https://developer.mozilla.org/en-US/docs/Web/API/Clients) is a list
+[`clients`](https://developer.mozilla.org/en-US/docs/Web/API/Clients) which is a list
 of all active clients controlled by the current service worker. To find out if
 any clients are active, call `clients.length`. If this property returns `0`
 show a notification. Otherwise do something else.

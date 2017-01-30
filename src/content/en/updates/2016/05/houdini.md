@@ -402,7 +402,7 @@ If you want to get involved, there’s always the [Houdini mailing list].
 [Web Components]: http://webcomponents.org/
 [parallax scrolling]: https://en.wikipedia.org/wiki/Parallax_scrolling
 [CSS Custom Properties]: https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care
-[Houdini Demo]: https://googlechrome.github.io/houdini-samples/compositor-worklet/twitter-header
+[Houdini Demo]: https://googlechrome.github.io/houdini-samples/animation-worklet/twitter-header/
 [Paint Worklet demo]: http://googlechrome.github.io/houdini-samples/paint-worklet/ripple/
 [Paint Worklet source]: https://github.com/GoogleChrome/houdini-samples/tree/master/paint-worklet/ripple
 

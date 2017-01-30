@@ -2,12 +2,17 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: It is crucial to understand the phases in which resources are gathered over the network. This is the foundation for fixing load issues.
 
-{# wf_published_on: 2016-02-03 #}
+{# wf_published_on: 2016-12-29 #}
 {# wf_updated_on: 2016-02-03 #}
 
 # Understanding Resource Timing {: .page-title }
 
 {% include "web/_shared/contributors/jonathangarbee.html" %}
+
+<aside class="note">
+  <b>Note:</b> This page is deprecated. At the top of each section, there's a
+  link to an up-to-date page where you can find similar information.
+</aside>
 
 It is crucial to understand the phases in which resources are gathered over the network. This is the foundation for fixing load issues.
 
@@ -28,28 +33,37 @@ sure that all of the resources have CORS headers.
 The Resource Timing API provides a rich level of detail about each individual asset's time to be received.
 The primary phases of the request lifecycle are:
 
-* Redirect
-  * Immediately begins `startTime`.
-  * If a redirect is happening, `redirectStart` begins as well.
-  * If a redirect is occurring at the end of this phase then `redirectEnd` will be taken.
-* App Cache
-  * If it’s application cache fulfilling the request, a `fetchStart` time will be taken.
-* DNS
-  * `domainLookupStart` time is taken at the beginning of the DNS request.
-  * `domainLookupEnd` time is taken at the end of the DNS request.
+*   Redirect
+    *   Immediately begins `startTime`.
+    *   If a redirect is happening, `redirectStart` begins as well.
+    *   If a redirect is occurring at the end of this phase then `redirectEnd` will be taken.
+*   App Cache
+    *   If it’s application cache fulfilling the request, a `fetchStart` time will be taken.
+*   DNS
+    *   `domainLookupStart` time is taken at the beginning of the DNS request.
+    *   `domainLookupEnd` time is taken at the end of the DNS request.
 * TCP
-  * `connectStart` is taken when initially connecting to the server.
-  * If TLS or SSL are in use then `secureConnectionStart` will start when the handshake begins for securing the connection.
-  * `connectEnd` is taken when the connection to the server is complete.
-* Request
-  * `requestStart` is taken once the request for a resource has been sent to the server.
-* Response
-  * `responseStart` is the time when the server initially responds to the request.
-  * `responseEnd` is the time when the request ends and the data is retrieved.
+    *   `connectStart` is taken when initially connecting to the server.
+    *   If TLS or SSL are in use then `secureConnectionStart` will start when the handshake begins for securing the connection.
+    *   `connectEnd` is taken when the connection to the server is complete.
+*   Request
+    *   `requestStart` is taken once the request for a resource has been sent to the server.
+*   Response
+    *   `responseStart` is the time when the server initially responds to the request.
+    *   `responseEnd` is the time when the request ends and the data is retrieved.
 
 ![Resource Timing API diagram](imgs/resource-timing-api.png)
 
 ## Viewing in DevTools
+
+<aside class="note">
+  <b>Note:</b> This page is deprecated. See following sections for up-to-date
+  information:
+  <ul>
+    <li><a href="reference#timing-breakdown">View timing breakdown</a></li>
+    <li><a href="reference#timing">Timing tab</a></li>
+  </ul>
+</aside>
 
 To view the full timing information for a given entry of the Network Panel you have three options.
 
@@ -160,6 +174,12 @@ dt.content-download:before {
 
 
 ## Diagnosing Network Issues
+
+<aside class="note">
+  <b>Note:</b> This page is deprecated. See
+  <a href="issues">Network Issues Guide</a>
+  for up-to-date information.
+</aside>
 
 There are numerous possible issues that can be uncovered through the Network Panel.
 Being able to find these requires a good understanding of how clients and servers communicate and the limitations imposed by the protocols.

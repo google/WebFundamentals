@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/settings
+  to: /web/tools/chrome-devtools/ui
+
 - from: /web/tools/lighthouse/audits/has-viewport-meta-tag%22
   to: /web/tools/lighthouse/audits/has-viewport-meta-tag
 
@@ -8,6 +11,9 @@ redirects:
 
 - from: /web/tools/lighthouse/audits/blocking-links
   to: /web/tools/lighthouse/audits/blocking-resources
+
+- from: /web/tools/lighthouse/audits/app-cache
+  to: /web/tools/lighthouse/audits/appcache
 
 - from: /web/tools/chrome-devtools/memory-problems/memory-diagnosis
   to: /web/tools/chrome-devtools/memory-problems/
