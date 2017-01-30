@@ -7,14 +7,14 @@
 
 var RE_BOOK_PATH = /^book_path: (.*)\n/m;
 var RE_PROJECT_PATH = /^project_path: (.*)\n/m;
-var RE_DESCRIPTION = /^description:(.*)\n/m;
+var RE_DESCRIPTION = /^description:\s?(.*)\n/m;
 
-var RE_UPDATED = /^{#\s?wf_updated_on: (.*?)\s?#}\s?\n/m;
-var RE_PUBLISHED = /^{#\s?wf_published_on: (.*?)\s?#}\s?\n/m;
+var RE_UPDATED = /^{#\s?wf_updated_on:\s?(.*?)\s?#}\s?\n/m;
+var RE_PUBLISHED = /^{#\s?wf_published_on:\s?(.*?)\s?#}\s?\n/m;
 
-var RE_IMAGE = /^{#\s?wf_featured_image: (.*?)\s?#}\s?\n/m;
-var RE_TAGS = /^{#\s?wf_tags: (.*?)\s?#}\s?\n/m;
-var RE_SNIPPET = /^{#\s?wf_featured_snippet: (.*?)\s?#}\s?\n/m;
+var RE_IMAGE = /^{#\s?wf_featured_image:\s?(.*?)\s?#}\s?\n/m;
+var RE_TAGS = /^{#\s?wf_tags:\s?(.*?)\s?#}\s?\n/m;
+var RE_SNIPPET = /^{#\s?wf_featured_snippet:\s?(.*?)\s?#}\s?\n/m;
 
 var RE_TITLE = /^# (.*) {: \.page-title\s?}/m;
 
