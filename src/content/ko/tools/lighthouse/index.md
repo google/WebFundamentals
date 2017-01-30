@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to set up Lighthouse to audit and improve your web apps.
 
-{# wf_updated_on: 2017-01-18 #}
+{# wf_updated_on: 2017-01-31 #}
 {# wf_published_on: 2016-09-27 #}
 
 # Lighthouse {: .page-title }
@@ -44,7 +44,7 @@ figure {
 [Lighthouse](/web/tools/lighthouse/)는 웹 앱의 품질을 개선하는
 [오픈 소스](https://github.com/GoogleChrome/lighthouse) 자동화 도구입니다.
 
-Lighthouse는 크롬 확장프로그램, 커맨드 라인에서, 노드 모듈에서 프로그램으로도 사용할 수 있습니다.
+Lighthouse는 Chrome 확장프로그램, 커맨드 라인에서, 노드 모듈에서 프로그램으로도 사용할 수 있습니다.
 Lighthouse에 확인할 URL을 지정하고, 페이지에 대한 테스트를 실행한 다음, 페이지에 대한 보고서를 생성합니다.
 여기에서 실패한 테스트는 앱을 개선하기 위해 할 수 있는 것에 대한 지표로 사용할 수 있습니다.
 
@@ -70,21 +70,21 @@ Note: Lighthouse는 현재 [홈스크린에 추가](/web/fundamentals/engage-and
 
 ## Lighthouse 설정하기
 
-Lighthouse는 크롬 확장프로그램, 커맨드 라인 도구로 실행할 수 있습니다.
-크롬 확장프로그램은 리포트를 읽는데 더 유저에 친숙한 인터페이스를 제공합니다.
+Lighthouse는 Chrome 확장프로그램, 커맨드 라인 도구로 실행할 수 있습니다.
+Chrome 확장프로그램은 리포트를 읽는데 더 유저에 친숙한 인터페이스를 제공합니다.
 커맨드 라인 도구는 Lighthouse를 지속적 통합 시스템에 넣을 수 있습니다.
 
-### 크롬 확장프로그램 설치하기
+### Chrome 확장프로그램 설치하기
 
-크롬 확장프로그램은 아래 순서대로 설치합니다:
+Chrome 확장프로그램은 아래 순서대로 설치합니다:
 
-1. 54 버전 이상 Google 크롬을 설치합니다.
-- 크롬 웹스토어에서 <a class="gc-analytics-event"
+1. 54 버전 이상 Google Chrome을 설치합니다.
+- Chrome 웹스토어에서 <a class="gc-analytics-event"
      data-category="crx-install" data-label="lighthouse-install-button"
      href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk"
      title="Install Lighthouse Chrome Extension" target="_blank">
     <span class="material-icons" style="vertical-align:middle">file_download</span>
-    Lighthouse 크롬 확장프로그램</a>을 설치합니다.
+    Lighthouse Chrome 확장프로그램</a>을 설치합니다.
 
 ### 노드 커맨드 라인 도구 설치
 
@@ -108,11 +108,11 @@ Note: Lighthouse는 프로그래밍 방식의 노드 모듈로도 사용할 수 
 
 ## 시작하기
 
-### 크롬 확장프로그램
+### Chrome 확장프로그램
 
 심사하고자 하는 페이지로 갑니다.
 
-크롬 툴바에서 Lighthouse 아이콘(![Lighthouse icon](images/lighthouse-icon-16.png))을 클릭합니다. 메뉴에 나타납니다.
+Chrome 툴바에서 Lighthouse 아이콘(![Lighthouse icon](images/lighthouse-icon-16.png))을 클릭합니다. 메뉴에 나타납니다.
 
 ![Lighthouse icon on Chrome Toolbar](images/icon-on-toolbar.jpg)
 
@@ -154,4 +154,4 @@ Lighthouse는 오픈소스이며 [기여를 환영합니다](https://github.com/
 저장소의 [이슈 트래커](https://github.com/GoogleChrome/lighthouse/issues)를 확인하여 수정할 수 있는 버그를 찾거나, 심사를 만들거나 개선할 수 있습니다.
 이슈 트래커는 심사 메트릭스, 새로운 심사를 위한 아이디어, Lighthouse와 관련한 기타 사항을 논의하기에 좋은 장소입니다.
 
-[예제]: https://github.com/justinribeiro/lighthouse-mocha-example/blob/master/test/lighthouse-tests.js
+[example]: https://github.com/justinribeiro/lighthouse-mocha-example/blob/master/test/lighthouse-tests.js
