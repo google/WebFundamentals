@@ -32,7 +32,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 <div class="clearfix"></div>
 
-## Изображения в разметке {: .page-title }
+## Изображения в разметке
 
 
 

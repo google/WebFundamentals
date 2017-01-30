@@ -67,7 +67,9 @@ Caution: Do not</span> include &lt;code&gt; blocks (or `) in the description fie
 The page title is defined by the first H1-like tag with the `.page-title` class.
 For example:
 
-    # Writing an Article {: .page-title }
+<pre class="prettyprint">
+&num; Writing an Article &#123;: .page-title }
+</pre>
 
 Caution: Page titles should not include any markdown or HTML tags.
 

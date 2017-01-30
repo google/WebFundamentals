@@ -341,7 +341,7 @@ Pamiętaj, by podczas wybierania ikon wziąć pod uwagę dodatkowe żądania HTT
 
 
 
-## Optymalizowanie obrazów pod kątem wydajności {: .page-title }
+## Optymalizowanie obrazów pod kątem wydajności
 
 
 Obrazy często stanowią większość pobranych danych i zajmują znaczną część powierzchni strony. W efekcie ich optymalizacja może przynieść zauważalny spadek ilości pobieranych danych i zwiększenie wydajności witryny. Im mniej bajtów musi pobrać przeglądarka, tym szybciej pobierze i wyświetli wszystkie zasoby oraz w mniejszym stopniu obciąży łącze klienta.
@@ -397,7 +397,7 @@ Leniwe wczytywanie może znacznie przyspieszyć wyświetlanie długich stron, kt
 Podczas tworzenia takich stron zachowaj jednak ostrożność, bo wyszukiwarki mogą nie wykryć treści, które wczytują się dopiero po przewinięciu. Podobnie użytkownicy szukający informacji, które zwykle są w stopce, nigdy jej nie zobaczą, bo zawsze będą wczytywać się nowe treści.
 
 
-## Całkowite unikanie obrazów {: .page-title }
+## Całkowite unikanie obrazów
 
 
 Czasami najlepszym rozwiązaniem jest całkowita rezygnacja z dodawania obrazu. Gdy to możliwe, warto używać natywnych funkcji przeglądarki, które dają takie same lub podobne efekty. Przeglądarki mogą obecnie generować elementy wizualne, które dawniej wymagały stosowania obrazów. Dzięki temu przeglądarka nie musi już pobierać osobnych plików graficznych i nie wyświetla obrazów w dziwnej skali. Ikony można renderować, korzystając ze standardu Unicode lub specjalnych czcionek z ikonami.

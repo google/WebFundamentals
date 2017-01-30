@@ -19,7 +19,7 @@ description: Forms are hard to fill out on mobile. The best forms are the ones w
 Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs. Good forms provide semantic input types. Keys should change to match the user's input type; users pick a date in a calendar. Keep your user informed. Validation tools should tell the user what they need to do before submitting the form.
 
 
-## Design efficient forms {: .page-title }
+## Design efficient forms
 
 
 Design efficient forms by avoiding repeated actions, asking for only the necessary information and guide users by showing them how far along they are in multi-part forms.
