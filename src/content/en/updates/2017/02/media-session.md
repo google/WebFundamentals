@@ -26,7 +26,7 @@ in March 2017).
     alt="Media Session TL;DR;"/>
 </figure>
 
-## Gimme What I Want
+## Gimme what I want
 
 You already know about the Media Session API and are simply coming back to
 copy and paste with no shame some boilerplate code? So here it is.
@@ -84,12 +84,12 @@ actually make noise.
 
       // User interacted with the page. Let's play audio...
       audio.play()
-      .then(_ => { /* Set up Media Session... */ })
+      .then(_ => { /* Set up media session... */ })
       .catch(error => { console.log(error) });
     });
 
 Note: If the `<audio>` element has the `controls` attribute, you can simply set
-up the Media Session in the audio `play` event listener instead which occurs
+up the media session in the audio `play` event listener instead which occurs
 when user taps the "play" audio control.
 
 If you don't want to play audio right after the first interaction, I recommend
@@ -112,7 +112,7 @@ welcomeButton.addEventListener('pointerup', function(event) {
 // Later...
 playButton.addEventListener('pointerup', function(event) {
   <strong>audio.play()</strong>
-  .then(_ => { /* Set up Media Session... */ })
+  .then(_ => { /* Set up media session... */ })
   .catch(error => { console.log(error) });
 });
 
@@ -128,14 +128,14 @@ image it can find.
 <div class="clearfix"></div>
 <div class="attempt-left">
   <figure>
-    <img src="/web/updates/images/2017/02/without-media-session.png" alt="Without Media Session">
-    <figcaption>With no Media Session</figcaption>
+    <img src="/web/updates/images/2017/02/without-media-session.png" alt="Without media session">
+    <figcaption>Without media session</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img src="/web/updates/images/2017/02/with-media-session.png" alt="With Media Session">
-    <figcaption>With Media Session</figcaption>
+    <img src="/web/updates/images/2017/02/with-media-session.png" alt="With media session">
+    <figcaption>With media session</figcaption>
   </figure>
 </div>
 <div class="clearfix"></div>
@@ -170,7 +170,7 @@ notification will automatically disappear. Keep in mind that current
 is why you need to update it to make sure you're always showing relevant
 information in the media notification.
 
-#### Previous Track / Next Track
+#### Previous track / next track
 
 If your web app provides a playlist, you may want to allow the user to navigate
 through your playlist directly from the media notification with some "Previous
@@ -196,7 +196,7 @@ Track" and "Next Track" icons.
     function playAudio() {
       audio.src = playlist[index];
       audio.play()
-      .then(_ => { /* Set up Media Session... */ })
+      .then(_ => { /* Set up media session... */ })
       .catch(error => { console.log(error); });
     }
 
@@ -213,7 +213,7 @@ you set the proper action handler.
 
 By the way, unsetting a media action handler is as easy as assigning it to `null`.
 
-#### Seek Backward / Seek Forward
+#### Seek backward / seek forward
 
 The Media Session API allows you to show "Seek Backward" and "Seek Forward"
 media notification icons if you want to control the amount of time skipped.
@@ -230,7 +230,7 @@ media notification icons if you want to control the amount of time skipped.
       audio.currentTime = Math.min(audio.currentTime + skipTime, audio.duration);
     });
 
-#### Play / Pause
+#### Play / pause
 
 The "Play/Pause" icon is always shown in the media notification and the related
 events are handled automatically by the browser. If for some reason the default
@@ -248,7 +248,7 @@ behaviour doesn't work out, you can still handle "Play" and "Pause" media events
 
 Note: The browser may consider that the web app is not playing media when files
 are seeking or loading. You can override this behaviour by setting
-`navigator.mediaSession.playbackState` to `"playing"` or `"paused"`.  This
+`navigator.mediaSession.playbackState` to `"playing"` or `"paused"`. This
 comes in handy when you want to make sure your web app UI stays in sync with
 the media notification controls.
 
@@ -276,22 +276,22 @@ shows up on lock screens.
 
 ## Make it play nice offline
 
-I know what you're thinking now... *[Service Worker] to the rescue!*
+I know what you're thinking now... *[service worker] to the rescue!*
 
 True but first and foremost, you want to make sure **all items in this
 checklist are checked**:
 
-1. All media and artwork files are served with the appropriate `Cache-Control`
+- All media and artwork files are served with the appropriate `Cache-Control`
 HTTP header. This will allow the browser to cache and reuse previously fetched
 resources. See the [Caching checklist].
-2. Make sure all media and artwork files are served with the
+- Make sure all media and artwork files are served with the
 `Allow-Control-Allow-Origin: *` HTTP header. This will allow third-party web
 apps to fetch and consume HTTP responses from your web server.
 
-### The Service Worker caching strategy
+### The service worker caching strategy
 
-Regarding media files, I would recommend a simple "[Cache, falling back to
-network]" strategy as illustrated by Jake Archibald.
+Regarding media files, I recommend a simple "[Cache, falling back to network]"
+strategy as illustrated by Jake Archibald.
 
 For artwork though, I'd be a little bit more specific and choose the approach
 below:
@@ -399,7 +399,7 @@ doing so is pretty easy with the [Cache API].
     .then(cache => Promise.all(artworkFilesToDelete.map(artwork => cache.delete(artwork))))
     .catch(error => { console.log(error); });
 
-## Implementation nits
+## Implementation notes
 
 - Chrome for Android requests "full" audio focus to show media notifications
   only when the media file duration is [at least 5 seconds].
@@ -420,7 +420,7 @@ At the time of writing, Chrome for Android is the only platform that supports
 the Media Session API. More up-to-date information on browser implementation
 status can be found on [Chrome Platform Status].
 
-## Samples & Demos
+## Samples & demos
 
 Check out our official Chrome [Media Session sample] featuring [Jan Morgenstern's work].
 
