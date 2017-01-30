@@ -116,7 +116,7 @@ In requesting a gateway token, Android Pay makes a call to your processor on you
       {
         supportedMethods: ['basic-card']
         data: {
-          supportedNetworks: ['amex', 'discover','mastercard','visa']
+          supportedNetworks: ['amex', 'discover', 'mastercard', 'visa']
         }
       },
       {

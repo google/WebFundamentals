@@ -4,46 +4,47 @@ description: In Chrome 56 and 57, there are a few changes to the Payment Request
 
 {# wf_updated_on: 2017-01-31 #}
 {# wf_published_on: 2017-01-31 #}
-{# wf_tags: paymentrequest,chrome56,chrome57 #}
-{# wf_featured_image: /web/updates/images/generic/warning.png #}
+{# wf_tags: payment,chrome56,chrome57 #}
+{# wf_featured_image: /web/updates/images/2016/07/payment-request/0.png #}
 {# wf_featured_snippet: In Chrome 56 and 57, there are quite a few changes to the Payment Request API following the spec changes. Learn what they are and make changes to your own implementation. #}
 
-Since the launch of the Payment Request API in Chrome 53, a few changes have been
-made to the API. These changes won't break the functionalities of your working
-code, but we will never. We recommend you add [a
+# Changes in the Payment Request API {: .page-title}
+
+Since the launch of the Payment Request API in Chrome 53, a few changes have
+been made to the API. These changes won't break the functionalities of your
+working code, but we recommend you to add [a
 shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) to your code so
 that future changes won't break your product.
 
 Note: All changes described here are already reflected in [the existing
-integration guides](https://developers.google.com/web/fundamentals/discovery-and-monetization/payment-request/). You can
+integration guides](/web/fundamentals/discovery-and-monetization/payment-request/).
 
 ## Chrome 57
 ### PaymentRequest is now available inside iframes
 The Payment Request API can now be called from within an `iframe` by adding the
 `allowpaymentrequest` attribute to the `iframe` element.
 
-    <iframe src="URL_INCLUDING_PAYMENT_REQUEST_CALL" allowpaymentrequest></iframe>
+    <iframe src="/totally/fake/url" allowpaymentrequest></iframe>
 
 ### PaymentMethodData supports "basic-card"
-The first argument to `PaymentRequest` initialization involves an array of
-payment method data. The `PaymentMethodData` format has been altered in this
-release.
+The first argument to `PaymentRequest()` constructor is an array of payment
+method data. The `PaymentMethodData` format has been altered in this release.
 
-**Old:**
+<p><span class="compare-yes">Old</span> - still works for the time being.</p>
 
     var methodData = [{
-     supportedMethods: ['visa', 'mastercard', 'amex', 'jcb']
+      supportedMethods: ['visa', 'mastercard', 'amex', 'jcb']
     }];
     var request = new PaymentRequest(methodData, details, options);
 
-**New:**
+<p><span class="compare-yes">New</span> - the new structure.</p>
 
     var methodData = [{
-     supportedMethods: ['basic-card'],
-     data: {
-       supportedNetworks: ['visa', 'mastercard', 'amex', 'jcb',
-         'diners', 'discover', 'mir', 'unionpay']
-     }
+      supportedMethods: ['basic-card'],
+      data: {
+        supportedNetworks: ['visa', 'mastercard', 'amex', 'jcb',
+          'diners', 'discover', 'mir', 'unionpay']
+      }
     }];
     var request = new PaymentRequest(methodData, details, options);
 
@@ -56,43 +57,41 @@ ignores this property and treats any values in `supoprtedNetworks` as credit
 cards.
 
     var methodData = [{
-     supportedMethods: ['basic-card'],
-     data: {
-       supportedNetworks: ['visa', 'mastercard', 'amex', 'jcb',
-         'diners', 'discover', 'mir', 'unionpay'],
-       supportedTypes: ['credit'] &lt;= not available
-     }
+      supportedMethods: ['basic-card'],
+      data: {
+        supportedNetworks: ['visa', 'mastercard', 'amex', 'jcb',
+          'diners', 'discover', 'mir', 'unionpay'],
+        supportedTypes: ['credit'] <= not available
+      }
     }];
-
-Note: The older format will remain functional for the time being.
 
 ## Chrome 56
 ### pending
 As part of [payment item
-information](https://developers.google.com/web/fundamentals/getting-started/primers/payment-request/#create-paymentrequest),
+information](/web/fundamentals/getting-started/primers/payment-request/#create-paymentrequest),
 developers can add `pending` to indicate that the price is not fully determined
 yet. The `pe nding` fieldaccepts a boolean value.
 
     {
-     label: "State tax",
-     amount: { currency: "USD", value : "5.00" },
-     pending: true
+      label: "State tax",
+      amount: { currency: "USD", value : "5.00" },
+      pending: true
     },
 
-This is commonly used to show positions such as shipping or tax amounts that
+This is commonly used to show line items such as shipping or tax amounts that
 depend on selection of shipping address or shipping options. Chrome indicates
 pending fields in the UI for the payment request.
 
 ### requestPayerName
 As part of [shipping
-option](https://developers.google.com/web/fundamentals/getting-started/primers/payment-request/#contact-information)
+option](/web/fundamentals/getting-started/primers/payment-request/#contact-information)
 (third argument to `PaymentRequest`), developers can now add `requestPayerName`
 to request the payer's name separate from shipping address information.
 `requestPayerName` accepts a boolean value.
 
 ### shippingType
 As part of [shipping
-option](https://developers.google.com/web/fundamentals/getting-started/primers/payment-request/#contact-information)
+option](/web/fundamentals/getting-started/primers/payment-request/#contact-information)
 (third argument to `PaymentRequest`), developers can now add `shippingType` to
 request that the UI show "delivery" or "pickup" instead of "shipping".
 `shippingType` accepts the strings `shipping` (default), `delivery`, or
@@ -111,13 +110,13 @@ request that the UI show "delivery" or "pickup" instead of "shipping".
 
 ### Serializer functions available to PaymentResponse and PaymentAddress
 [PaymentResponse
-object](https://developers.google.com/web/fundamentals/getting-started/primers/payment-request/#shipping-address)
+object](/web/fundamentals/getting-started/primers/payment-request/#shipping-address)
 and `PaymentAddress` object are now JSON-serializable. Developers can convert
-one to a JSON object by calling the `.toJSON()` function and avoid creating
+one to a JSON object by calling the `toJSON()` function and avoid creating
 cumbersome `toDict()` functions.
 
-    request.show().then(response =&gt; {
-     let res = response.toJSON();
+    request.show().then(response => {
+      let res = response.toJSON();
     });
 
 ### canMakePayment
@@ -127,13 +126,14 @@ optional as users can still add a new payment method on the payment UI.
 
     let request = new PaymentRequest(methods, details, options);
     if (request.canMakePayment) {
-     request.canMakePayment().then(result =&gt; {
-       if (result) {
-         // Payment methods are available.
-       } else {
-         // Payment methods are not available.
-       }
-     }).catch(error =&gt; {
-       // Unable to determine.
-     });
+      request.canMakePayment().then(result => {
+        if (result) {
+          // Payment methods are available.
+        } else {
+          // Payment methods are not available, but users can still add
+          // a new payment method in Payment UI.
+        }
+      }).catch(error => {
+        // Unable to determine.
+      });
     }
