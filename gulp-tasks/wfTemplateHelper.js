@@ -64,7 +64,7 @@ function getFullFeedEntries(articles) {
         rssAuthorName += author.name.family;
         atomAuthorName += author.name.family + ' ';
       }
-      article.rssAuthor = 'not@public.com' + ' (' + rssAuthorName.trim() + ')';
+      article.rssAuthor = rssAuthorName.trim();
       article.atomAuthor = atomAuthorName.trim();
     }
     var rssPubDate = moment(article.datePublished);
