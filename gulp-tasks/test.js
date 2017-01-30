@@ -7,6 +7,7 @@ var glob = require('globule');
 var moment = require('moment');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
+var wfRegEx = require('./wfRegEx');
 var wfHelper = require('./wfHelper');
 
 var STD_EXCLUDES = [
@@ -296,51 +297,58 @@ function testAllMarkdown() {
 }
 
 /**
+ * Gets the line number of the current string up to the index point
+ * 
+ * @param {string} content The content of the string to check
+ * @param {Number} idx Where in the string to stop
+ * @return {Number} The line number the index ends on
+ */
+function getLineNumber(content, idx) {
+  var subStr = content.substring(0, idx);
+  var lineNum = subStr.split(/\r\n|\r|\n/).length;
+  return lineNum;
+}
+
+/**
  * Reads & validates the an individual markdown file
  *
  * Note: the promise will always be fulfilled, even if it fails.
- * 
+ *
+ * @param {string} filename The file to read
+ * @param {Array} commonTags The list of common tags to verify against
  * @return {Promise} An empty promise
  */
 function validateMarkdown(filename, commonTags) {
   return new Promise(function(resolve, reject) {
     readFile(filename)
     .then(function(content) {
-      var isInclude = false;
+      // Check if this is a markdown include file
+      var isInclude = wfRegEx.RE_MD_INCLUDE.test(content);
       var errMsg;
       var matched;
       var errors = 0;
       var warnings = 0;
 
-      // Check if this is a markdown include file
-      matched = content.match(/{# wf_md_include #}/gm);
-      if (matched) {
-        isInclude = true;
-      }
-
       // Validate book_path and project_path
-      if (wfHelper.getRegEx(/^book_path: (.*)\n/m, content, null) === null) {
-        if (isInclude === false) {
-          errMsg = 'Attribute `book_path` missing from top of document';
-          logError(filename, errMsg)
-          errors++;
-        }
+      if (!wfRegEx.RE_BOOK_PATH.test(content) && !isInclude) {
+        errMsg = 'Attribute `book_path` missing from top of document';
+        logError(filename, errMsg)
+        errors++;
       }
-      if (wfHelper.getRegEx(/^project_path: (.*)\n/m, content, null) === null) {
-        if (isInclude === false) {
-          errMsg = 'Attribute `project_path` missing from top of document';
-          logError(filename, errMsg)
-          errors++;
-        }
+      if (!wfRegEx.RE_PROJECT_PATH.test(content) && !isInclude) {
+        errMsg = 'Attribute `project_path` missing from top of document';
+        logError(filename, errMsg)
+        errors++;
       }
 
       // Validate description
-      matched = wfHelper.getRegEx(/^description:(.*)\n/m, content, null);
+      matched = wfRegEx.getMatch(wfRegEx.RE_DESCRIPTION, content, null);
       if (matched) {
         matched = matched.trim();
         if (matched.length === 0) {
           errMsg = 'Attribute `description` cannot be empty';
-          errors.push(logError(filename, errMsg));
+          logError(filename, errMsg);
+          errors++;
         } else if (matched.length > MAX_DESCRIPTION_LENGTH) {
           errMsg = 'Attribute `description` cannot exceed ' + MAX_DESCRIPTION_LENGTH
           errMsg += ' characters, was: ' + matched.length;
@@ -356,7 +364,7 @@ function validateMarkdown(filename, commonTags) {
       }
 
       // Validate wf_updated and wf_published
-      matched = wfHelper.getRegEx(/{# wf_updated_on: (.*?) #}/, content, 'NOT_FOUND');
+      matched = wfRegEx.getMatch(wfRegEx.RE_UPDATED_ON, content, 'NOT_FOUND');
       if (isInclude === false) {
         if (!moment(matched, VALID_DATE_FORMATS, true).isValid()) {
           errMsg = 'WF Tag `wf_updated_on` missing or invalid format (YYYY-MM-DD)';
@@ -365,7 +373,7 @@ function validateMarkdown(filename, commonTags) {
           errors++;
         }
       }
-      matched = wfHelper.getRegEx(/{# wf_published_on: (.*?) #}/, content, 'NOT_FOUND');
+      matched = wfRegEx.getMatch(wfRegEx.RE_PUBLISHED_ON, content, 'NOT_FOUND');
       if (isInclude === false) {
         if (!moment(matched, VALID_DATE_FORMATS, true).isValid()) {
           errMsg = 'WF Tag `wf_published_on` missing or invalid format (YYYY-MM-DD)';
@@ -376,8 +384,7 @@ function validateMarkdown(filename, commonTags) {
       }
 
       // Validate featured image path
-      matched = wfHelper.getRegEx(/{# wf_featured_image: (.*?) #}/, content, null);
-      var bp = './src/content/en';
+      matched = wfRegEx.getMatch(wfRegEx.RE_IMAGE, content);
       if (matched) {
         var imgPath = matched;
         if (imgPath.indexOf('/web') === 0) {
@@ -395,7 +402,7 @@ function validateMarkdown(filename, commonTags) {
       }
 
       // Check for uncommon tags
-      matched = wfHelper.getRegEx(/{# wf_tags: (.*?) #}/, content);
+      matched = wfRegEx.getMatch(wfRegEx.RE_TAGS, content);
       if (matched) {
         matched.split(',').forEach(function(tag) {
           if (commonTags.indexOf(tag.trim()) === -1) {
@@ -406,29 +413,8 @@ function validateMarkdown(filename, commonTags) {
         });
       } 
 
-      // Validate page title, and H1's
+      // Count the number of H1 and # tags
       var numH1 = 0;
-      matched = content.match(/^# (.*) {: \.page-title[ ]*}/gm);
-      if (matched && isInclude === true) {
-        errMsg = 'Includes cannot contain page titles.';
-        logError(filename, errMsg)
-        errors++;
-      } else if (matched) {
-        if (matched.length > 1) {
-          errMsg = 'Page must only have one title tag: ' + matched.join(',');
-          logError(filename, errMsg)
-          errors++;
-        }
-        if (matched[0].indexOf('<') >= 0 || matched[0].indexOf('&gt;') >= 0 || matched[0].indexOf('`') >= 0) {
-          errMsg = 'Page title must not contain HTML or markdown ' + matched[0];
-          logError(filename, errMsg)
-          errors++;
-        }
-      } else if (isInclude === false) {
-        errMsg = 'Page is missing page title eg: # TITLE {: .page-title }';
-        logError(filename, errMsg)
-        errors++;
-      }
       matched = content.match(/^#\s{1}[^#].*/gm)
       if (matched) {
         numH1 += matched.length;
@@ -437,22 +423,55 @@ function validateMarkdown(filename, commonTags) {
       if (matched) {
         numH1 += matched.length;
       }
-      if (isInclude === false && numH1 > 1) {
-        errMsg = 'Page should only have ONE H1 tag, found ' + numH1;
-        logWarning(filename, errMsg);
-        warnings++;
-      } else if (isInclude === true && numH1 >= 1) {
+
+      // Warn if there is an H1 in an include
+      if (isInclude === true && numH1 > 0) {
         errMsg = 'Includes should not contain any H1 tags, found ' + numH1;
         logWarning(filename, errMsg);
         warnings++;
       }
 
+      // Warn if there is more than 1 H1 in a document
+      if (isInclude === false && numH1 > 1) {
+        errMsg = 'Page should only have ONE H1 tag, found ' + numH1;
+        logWarning(filename, errMsg);
+        warnings++;
+      }
+
+      // Verify there is only ONE .page-title
+      matched = content.match(/{:\s?\.page-title\s?}/gm);
+      if (isInclude === true && matched) {
+        errMsg = 'Includes must not contain the page title.';
+        logError(filename, errMsg);
+        errors++;
+      }
+      if (isInclude === false && matched && matched.length > 1) {
+        errMsg = 'Page must only have one title tag, found: ' + matched.length;
+        logError(filename, errMsg)
+        errors++;
+      }
+
+      // Verify there is no markup/down in the title
+      matched = wfRegEx.getMatch(wfRegEx.RE_TITLE, content);
+      if (isInclude === false && matched) {
+        if (matched.indexOf('<') >= 0 || 
+            matched.indexOf('&gt;') >= 0 ||
+            matched.indexOf('`') >= 0) {
+          errMsg = 'Page title must not contain HTML or markdown ' + matched;
+          logError(filename, errMsg);
+          errors++;
+        }
+      } else if (isInclude === false) {
+        errMsg = 'Page is missing page title eg: # TITLE {: .page-title }';
+        logError(filename, errMsg)
+        errors++;
+      }
+
       // Verify authors/translators are in the contributors file
-      var reContrib = /{%[ ]?include "web\/_shared\/contributors\/(.*)"[ ]?%}/gm;
-      matched = content.match(reContrib);
+      matched = content.match(wfRegEx.RE_AUTHOR_LIST);
       if (matched) {
         matched.forEach(function(contributor) {
-          var key = wfHelper.getRegEx(/\/contributors\/(.*)\.html"/, contributor);
+          var key = wfRegEx.getMatch(wfRegEx.RE_AUTHOR_KEY, contributor);
           if (!contributorList[key]) {
             errMsg = 'Unable to find contributor (' + key + ') in contributors file.'
             logError(filename, errMsg)
@@ -462,11 +481,10 @@ function validateMarkdown(filename, commonTags) {
       }
 
       // Verify all includes start with web/
-      var reInclude = /{%[ ]?include .*?[ ]?%}/g;
-      matched = content.match(reInclude);
+      matched = content.match(wfRegEx.RE_INCLUDES);
       if (matched) {
         matched.forEach(function(include) {
-          var inclFile = wfHelper.getRegEx(/"(.*)"/, include, '');
+          var inclFile = wfRegEx.getMatch(wfRegEx.RE_INCLUDE_FILE, include, '');
           if (inclFile === 'comment-widget.html') {
             return;
           }

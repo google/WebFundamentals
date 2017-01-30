@@ -27,7 +27,7 @@
         ]]>
       </description>
       {{#each tags}}<category>{{ this }}</category> {{/each}}
-      <author>{{ rssAuthor }}</author>
+      <author>{{ feedAuthor }}</author>
     </item>
     {{/each}}
   </channel>

@@ -12,6 +12,7 @@ var marked = require('marked');
 var mkdirp = require('mkdirp');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
+var wfRegEx = require('./wfRegEx');
 var Handlebars = require('handlebars');
 require('handlebars-helpers')();
 
@@ -47,25 +48,23 @@ function getFullFeedEntries(articles) {
     var content = fs.readFileSync(article.filePath, 'utf8');
     content = content.replace(/{#.*#}/g, '');
     content = content.replace(/{%.*%}/g, '');
-    content = content.replace(/book_path: .*\n/, '');
-    content = content.replace(/project_path: .*\n/, '');
-    content = content.replace(/description: .*\n/, '');
+    content = content.replace(wfRegEx.RE_BOOK_PATH, '');
+    content = content.replace(wfRegEx.RE_PROJECT_PATH, '');
+    content = content.replace(wfRegEx.RE_DESCRIPTION, '');
     content = content.replace(/{:.*}/g, '');
     article.content = marked(content);
     if (article.authors && article.authors[0]) {
       var author = contributors[article.authors[0]];
-      var atomAuthorName = '';
-      var rssAuthorName = '';
-      if (author.name.given) {
-        rssAuthorName += author.name.given + ' ';
-        atomAuthorName += author.name.given + ' ';
+      if (author) {
+        var authorName = '';
+        if (author.name.given) {
+          authorName += author.name.given + ' ';
+        }
+        if (author.name.family) {
+          authorName += author.name.family;
+        }
+        article.feedAuthor = authorName.trim();
       }
-      if (author.name.family) {
-        rssAuthorName += author.name.family;
-        atomAuthorName += author.name.family + ' ';
-      }
-      article.rssAuthor = 'not@public.com' + ' (' + rssAuthorName.trim() + ')';
-      article.atomAuthor = atomAuthorName.trim();
     }
     var rssPubDate = moment(article.datePublished);
     article.rssPubDate = rssPubDate.format('DD MMM YYYY HH:mm:ss [GMT]');
