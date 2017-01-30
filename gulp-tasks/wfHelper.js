@@ -13,7 +13,7 @@ var STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md'];
 var RE_UPDATED = /{# wf_updated_on: (.*?) #}/;
 var RE_PUBLISHED = /{# wf_published_on: (.*?) #}/;
 var RE_DESCRIPTION = /^description: (.*)/m;
-var RE_TITLE = /^# (.*) {: .page-title }/m;
+var RE_TITLE = /^# (.*) {: .page-title\s?}/m;
 var RE_TAGS = /{# wf_tags: (.*?) #}/;
 var RE_IMAGE = /{# wf_featured_image: (.*?) #}/;
 var RE_SNIPPET = /{# wf_featured_snippet: (.*?) #}/;
@@ -22,6 +22,7 @@ var RE_PODCAST = /{# wf_podcast_audio: (.*?) #}/;
 var RE_PODCAST_DURATION = /{# wf_podcast_duration: (.*?) #}/;
 var RE_PODCAST_SUBTITLE = /{# wf_podcast_subtitle: (.*?) #}/;
 var RE_PODCAST_SIZE = /{# wf_podcast_fileSize: (.*?) #}/;
+var RE_INCLUDE = /{#\s?wf_md_include\s?#}/gm;
 
 if (!String.prototype.endsWith) {
   Object.defineProperty(String.prototype, 'endsWith', {
@@ -76,6 +77,9 @@ function getRegEx(regEx, content, defaultResponse) {
 
 function readMetadataForFile(file) {
   var content = fs.readFileSync(file, 'utf8');
+  if (content.match(RE_INCLUDE)) {
+    return null;
+  }
   var description = getRegEx(RE_SNIPPET, content);
   if (!description) {
     description = getRegEx(RE_DESCRIPTION, content);
@@ -128,7 +132,10 @@ function getFileList(base, patterns) {
   };
   var files = glob.find(patterns, STD_EXCLUDES, opts);
   files.forEach(function(file) {
-    results.push(readMetadataForFile(file));
+    var metaData = readMetadataForFile(file);
+    if (metaData) {
+      results.push(metaData);
+    }
   });
   // var filename = path.join(base, '_files.json');
   // fs.writeFileSync(filename, JSON.stringify(results, null, 2));
