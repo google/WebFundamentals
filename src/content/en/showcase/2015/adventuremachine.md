@@ -4,15 +4,16 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2015-08-14 #}
 {# wf_updated_on: 2015-08-14 #}
 {# wf_author: pbakaus #}
-{# wf_featured_image: /web/showcase/2015/images/adventuremachine/featured.png #}
+{# wf_featured_image: /web/showcase/2015/images/adventuremachine/card.jpg #}
+{# wf_tags: spotlight #}
 
 # Madeon Adventure Machine {: .page-title }
 
 <img src="images/adventuremachine/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
-[Madeon Adventure Machine](http://www.madeon.fr/adventuremachine/) is a clever
+[Madeon Adventure Machine](http://www.madeon.fr/adventuremachine/){: .external } is a clever
 promotion for Madeon's new album that is a fun drum machine.
 
 ### What we like?

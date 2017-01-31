@@ -5,14 +5,14 @@ description: Six artists were invited to paint, design, and sculpt in VR.
 {# wf_published_on: 2016-04-19 #}
 {# wf_updated_on: 2016-04-19 #}
 {# wf_author: michaelchang,jeffnusz #}
-{# wf_featured_image: /web/showcase/2016/images/art-sessions/featured.png #}
 {# wf_featured_snippet: Six artists were invited to paint, design, and sculpt in VR. This is the process for how we recorded their sessions, converted the data, and presented it in real-time with web browsers. #}
+{# wf_tags: experiment,vr,casestudy #}
 
 # Virtual Art Sessions {: .page-title }
 
 <img src="images/art-sessions/device.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 Six artists were invited to paint, design, and sculpt in VR. This is the
 process for how we recorded their sessions, converted the data, and presented
@@ -118,7 +118,7 @@ we render the strokes out to avoid gimbal lock.
 ## Playing Back Sketches with WebGL
 
 In order to show the sketches in a web browser, we used 
-[THREE.js](http://threejs.org/) and wrote geometry generation code that mimicked 
+[THREE.js](http://threejs.org/){: .external } and wrote geometry generation code that mimicked 
 what Tilt Brush does under the hood.
 
 While Tilt Brush produces triangle strips in real-time based on the user's hand 
@@ -303,7 +303,7 @@ pointing at the center.
 
 In addition to the depth information, we also captured the color information of 
 the scene with standard DSLR cameras. We used the excellent 
-[DepthKit](http://www.depthkit.tv/) software to calibrate and merge 
+[DepthKit](http://www.depthkit.tv/){: .external } software to calibrate and merge 
 the footage from the depth camera and the color cameras. The Kinect is capable 
 of recording color, but we chose to use DSLRs because we could control the 
 exposure settings, use beautiful high-end lenses, and record in high definition. 
@@ -319,7 +319,7 @@ that was white.
 
 The resulting video recordings gave us enough information to project a particle 
 system. We wrote some additional tools in 
-[openFrameworks](http://openframeworks.cc/) to further clean up the footage, in 
+[openFrameworks](http://openframeworks.cc/){: .external } to further clean up the footage, in 
 particular removing the floors, walls and ceiling.
 
 <img src="images/art-sessions/image10.png" />  
@@ -353,7 +353,7 @@ space as well as time. Then the footage from these two camera rigs needed to be
 aligned with each other to form a single artist. Then we needed to align our 3d 
 artist with the data captured from their drawing. Phew! We wrote browser based 
 tools to help with most of these tasks, and you can try them yourself 
-[here](https://virtualart.chromeexperiments.com/test/).
+[here](https://virtualart.chromeexperiments.com/test/){: .external }.
 
 <img src="images/art-sessions/image12.png" />
 

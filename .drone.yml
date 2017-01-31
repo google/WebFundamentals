@@ -5,27 +5,23 @@ clone:
   depth: 1
 cache:
   mount:
-    - vendor/bundle
     - node_modules
 build:
-  image: crhym3/ci-image
+  image: b.gcr.io/wf-ci-images/drone:20160928
   commands:
-    - eval "$(rbenv init -)"
-    - bundle install --deployment --jobs=3 --retry=3
-    - npm install
-    - gulp build:staging
+    - npm install -qq
+    - gulp presubmit
+    - gulp build
 deploy:
-  wf:
-    image: crhym3/drone-plugin-wf
-    auth_key: >
-      $$SERVICE_ACCOUNT
-    github_token: $$GITHUB_TOKEN
-    wpt_api_key: $$WPT_API_KEY
-    rig_url: $$RIG_URL
-    rig_secret: $$RIG_SECRET
-    project: web-central
-    server_suffix: -dot-weasel-dot-web-central.appspot.com
-    bucket_suffix: -webcentral-appspot-weasel
-    source: build
-    gzip: [js, css, html, svg]
-    cache_control: public,max-age=300
+  bash:
+    when:
+      repo: google/WebFundamentals
+      branch: master
+    image: crhym3/drone-plugin-bash-node
+    env:
+      - ROBOT_PASSPHRASE=$$ROBOT_PASSPHRASE
+    script:
+      - gpg --no-use-agent --output tools/builder-key.json --passphrase $ROBOT_PASSPHRASE tools/builder-key.json.enc
+      - gcloud config set project web-central
+      - gcloud auth activate-service-account --key-file=tools/builder-key.json
+      - gcloud preview app deploy app.yaml -q --no-promote --version master

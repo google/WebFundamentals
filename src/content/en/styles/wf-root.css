@@ -1,0 +1,25 @@
+ul.checkmarks {
+  list-style-type:none;
+  padding:0;
+}
+
+ul.checkmarks li {
+  background-image:url("//developers.google.com/maps/images/lhimages/compare-yes.svg");
+  background-repeat:no-repeat;
+  background-position:0 1px;
+  padding-left:30px;
+}
+
+h2.wf-header-title {
+  margin-top:0;
+}
+
+article.hentry:first-of-type {
+  margin-top: 0;
+}
+
+a.wf-small-link {
+ display:block;
+ margin:0 4px;
+ padding:2px 8px;
+}

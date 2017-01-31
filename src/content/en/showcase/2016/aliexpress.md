@@ -5,12 +5,13 @@ book_path: /web/showcase/_book.yaml
 {# wf_updated_on: 2016-05-17T23:00:00.000Z #}
 {# wf_featured_image: /web/showcase/2016/images/aliexpress/featured.png #}
 {# wf_featured_snippet: "Smarter shopping, better living!" is the motto of AliExpress, a website where shoppers can buy everything from baby clothes to refrigerators directly from China. Part of the Alibaba Group, the global online retail marketplace is now a popular e-commerce site in America, Russia, and Brazil. #}
+{# wf_tags: progressive-web-apps,serviceworker,casestudy #}
 
 # AliExpress {: .page-title }
 
 <img src="images/aliexpress/aliexpress_framed.gif" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 AliExpress increases conversion rate for new users by 104% with new
 Progressive Web App

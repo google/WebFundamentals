@@ -4,15 +4,16 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2015-05-04 #}
 {# wf_updated_on: 2015-05-04 #}
 {# wf_author: pbakaus #}
-{# wf_featured_image: /web/showcase/2015/images/adsy_me/featured.png #}
+{# wf_featured_image: /web/showcase/2015/images/adsy_me/card.jpg #}
+{# wf_tags: spotlight #}
 
 # Adsy.me {: .page-title }
 
 <img src="images/adsy_me/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
-[Adsy.me](http://adsy.me/) is a super quick and easy way to build mobile
+[Adsy.me](http://adsy.me/){: .external } is a super quick and easy way to build mobile
 micro sites.
 
 ### What we like?

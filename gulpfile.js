@@ -1,155 +1,118 @@
 'use strict';
 
 var del = require('del');
-var minimist = require('minimist');
+var gulp = require('gulp');
 var chalk = require('chalk');
+var gutil = require('gulp-util');
+var minimist = require('minimist');
+var requireDir = require('require-dir');
+var runSequence = require('run-sequence');
 
-var knownOptions = {
-  string: ['lang', 'section'],
-  default: {
-    lang: null,
-    section: null
-  }
-};
+requireDir('./gulp-tasks');
 
 GLOBAL.WF = {
   gae: 'appengine-config',
   src: {
-    content: 'src/content',
-    jekyll: 'src/jekyll',
-    jekyllConfigs: 'src/jekyll/_config',
-    imgs: 'src/static/imgs',
-    styles: 'src/static/styles',
-    fonts: 'src/static/fonts',
-    scripts: 'src/static/scripts',
-    thirdParty: 'src/static/third_party'
+    content: 'src/content/en/',
+    data: 'src/data/',
+    templates: 'src/templates/',
   },
-  build: {
-    root: 'build',
-    jekyll: 'build/langs',
-    imgs: 'build/imgs',
-    styles: 'build/styles',
-    fonts: 'build/fonts',
-    scripts: 'build/scripts'
-  }
+  maxArticlesInFeed: 10,
+  langs: [
+    'en', 'ar', 'de', 'es', 'fr', 'he', 'hi', 'id', 'it', 'ja',
+    'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw'
+  ],
 };
-GLOBAL.WF.options = minimist(process.argv.slice(2), knownOptions);
-
-console.log('');
-console.log('---------------------------------');
-console.log('');
-if (GLOBAL.WF.options.lang === null) {
-  console.log(chalk.dim('    Building all languages.'));
-  console.log(chalk.white('    Add ') +
-    chalk.magenta('--lang <Language Code>') +
-    chalk.white(' to build a specific language.'));
-} else {
-  console.log(chalk.dim('    Building language: ') +
-    chalk.white(GLOBAL.WF.options.lang));
+var defaultOptions = {
+  string: ['lang', 'skipReviewRequired', 'testWarnOnly', 'cl', 'verbose'],
+  default: {
+    lang: null,
+    skipReviewRequired: false,
+    testWarnOnly: false,
+    cl: null,
+    verbose: false,
+    buildType: 'dev'
+  }
 }
-console.log('');
-if (GLOBAL.WF.options.section === null) {
-  console.log(chalk.dim('    Building all sections.'));
-  console.log(chalk.white('    Add ') +
-    chalk.magenta('--section <Section Folder Name>') +
-    chalk.white(' to build a specific section.'));
+GLOBAL.WF.options = minimist(process.argv.slice(2), defaultOptions);
+
+var optionsOK = true;
+gutil.log('---------------------------------');
+gutil.log(gutil.colors.dim('Web') + gutil.colors.bold('Fundamentals'), 'Build Script');
+gutil.log('---------------------------------');
+if (GLOBAL.WF.options.lang) {
+  var langs = GLOBAL.WF.options.lang.split(',');
+  langs.forEach(function(lang) {
+    if (GLOBAL.WF.langs.indexOf(lang) === -1) {
+      gutil.log(' ', 'ERROR: Language ', chalk.red(lang), 'not supported.');
+      optionsOK = false;
+    }
+  });
+  GLOBAL.WF.options.lang = langs;
+  
 } else {
-  console.log(chalk.dim('    Building section: ') +
-    chalk.white(GLOBAL.WF.options.section));
+  GLOBAL.WF.options.lang = GLOBAL.WF.langs;
 }
-console.log('');
-console.log('---------------------------------');
-console.log('');
+gutil.log('Language: ', gutil.colors.cyan(GLOBAL.WF.options.lang));
+if (GLOBAL.WF.options.cl) {
+  gutil.log('Change list: ', gutil.colors.cyan(GLOBAL.WF.options.cl));
+}
+if (GLOBAL.WF.options.verbose !== false) {
+  GLOBAL.WF.options.verbose = true;
+}
+gutil.log('Verbose: ', gutil.colors.cyan(GLOBAL.WF.options.verbose));
+if (GLOBAL.WF.options.skipReviewRequired !== false) {
+  gutil.log('skipReviewRequired: ', gutil.colors.cyan('true'));
+  GLOBAL.WF.options.skipReviewRequired = true;
+}
+if (GLOBAL.WF.options.testWarnOnly !== false) {
+  gutil.log('testWarnOnly: ', gutil.colors.cyan('true'));
+  GLOBAL.WF.options.testWarnOnly = true;
+}
+if (optionsOK === false) {
+  throw new Error('Invalid options were provided.');
+}
+gutil.log('');
 
-var gulp = require('gulp');
-var runSequence = require('run-sequence');
-var requireDir = require('require-dir');
-
-requireDir('./gulp-tasks');
-
-gulp.task('clean', del.bind(null,
-  [
-    GLOBAL.WF.build.root
-  ], {dot: true}));
-
-gulp.task('develop', function(cb) {
-  runSequence(
-    'clean',
-    [
-      'generate-dev-css',
-      'cp-images',
-      'cp-fonts',
-      'cp-scripts',
-    ],
-    'compile-jekyll:localhost',
-    'showcase',
-    'start-gae-dev-server',
-    'dev-watch-tasks',
-    cb);
+gulp.task('clean', function() {
+  var filesToDelete = [
+    'src/content/en/_shared/contributors/*',
+    'src/content/**/rss.xml',
+    'src/content/**/atom.xml',
+    'src/content/**/_files.json',
+    'src/content/en/sitemap.xml',
+    'src/content/*/showcase/_index.yaml',
+    'src/content/*/showcase/*/_toc.yaml',
+    'src/content/*/showcase/*/index.md',
+    'src/content/*/showcase/tags/*',
+    'src/content/*/shows/_index.yaml',
+    'src/content/*/shows/index.md',
+    'src/content/*/shows/**/feed.xml',
+    'src/content/*/shows/http203/podcast/index.md',
+    'src/content/*/updates/_index.yaml',
+    'src/content/*/updates/*/index.md',
+    'src/content/*/updates/tags/*',
+    '!src/content/*/**/_generated.md'
+  ];
+  var opts = {dryRun: false, dot: true};
+  var deletedFiles = del.sync(filesToDelete, opts);
+  gutil.log(' ', 'Deleted', gutil.colors.magenta(deletedFiles.length + ' files'));
 });
 
-gulp.task('develop:prod', function(cb) {
-  runSequence(
-    'clean',
-    'tests',
-    [
-      'generate-prod-css',
-      'minify-images',
-      'cp-fonts',
-      'cp-scripts',
-    ],
-    'compile-jekyll:localhost',
-    [
-      'html',
-      'minify-images:content'
-    ],
-    'showcase',
-    'start-gae-dev-server',
-    'prod-watch-tasks',
-    cb);
+gulp.task('presubmit', function(cb) {
+  runSequence('clean', 'test', cb);
 });
 
-gulp.task('build:staging', function(cb) {
-  runSequence(
-    'clean',
-    'tests',
-    [
-      'generate-prod-css',
-      'minify-images',
-      'cp-fonts',
-      'cp-scripts',
-      'copy-appengine-config'
-    ],
-    'compile-jekyll:staging',
-    [
-      'html',
-      'minify-images:content'
-    ],
-    'showcase',
-    cb);
+gulp.task('default', function(cb) {
+  console.log(chalk.red('ERROR:'), 'no command specified.');
+  console.log('Usage: gulp <command> [arguments]');
+  console.log(' ', 'Commands');
+  console.log('  ', gutil.colors.cyan('build'), 'Builds all auto-generated files...');
+  console.log('  ', gutil.colors.cyan('clean'), 'Removes all auto-generated files from src/content/...');
+  console.log('  ', gutil.colors.cyan('presubmit'), 'Clean & test');
+  console.log('  ', gutil.colors.cyan('test'), 'Checks the files for any issues');
+  console.log(' ', 'Optional Arguments');
+  console.log('  ', chalk.cyan('--lang'), 'Comma separated list of languages to use', chalk.gray('eg: --lang=en,fr'));
+  console.log('  ', chalk.cyan('--verbose'), 'Log with verbose output');
+  console.log('');
 });
-
-gulp.task('build', function(cb) {
-  runSequence(
-    'clean',
-    'tests',
-    [
-      'generate-prod-css',
-      'minify-images',
-      'cp-fonts',
-      'copy-appengine-config'
-    ],
-    'compile-jekyll:devsite',
-    [
-      'html',
-      'minify-images:content'
-    ],
-    'showcase',
-    cb);
-});
-
-/**
- * By default we'll kick of the development
- * build of WF
- **/
-gulp.task('default', ['develop']);

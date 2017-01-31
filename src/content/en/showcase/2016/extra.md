@@ -5,12 +5,13 @@ book_path: /web/showcase/_book.yaml
 {# wf_updated_on: 2016-05-17T22:00:00.000Z #}
 {# wf_featured_image: /web/showcase/2016/images/extra/featured.png #}
 {# wf_featured_snippet: "Push Notifications are a huge part of our mobile engagement strategy. It’s a more personal way to communicate with our customers. That’s incredibly valuable to our bottom line."<br><b>Mujeeb Hazzaa</b>, Chief Business Development Officer #}
+{# wf_tags: progressive-web-apps,webpush,notifications,serviceworker,casestudy #}
 
 # eXtra Electronics {: .page-title }
 
 <img src="images/extra/extra_framed.gif" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 United eXtra Electronics grows eCommerce sales by 100% with Web Push Notifications
 

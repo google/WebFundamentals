@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+<channel>
+  <title>{{ title }}</title>
+  <link>{{ baseUrl }}</link>
+  <language>en</language>
+  <copyright>Google</copyright>
+  <itunes:subtitle>{{ subtitle }}</itunes:subtitle>
+  <itunes:author>{{ author.name }}</itunes:author>
+  <itunes:summary>{{ summary }}</itunes:summary>
+  <itunes:owner>
+    <itunes:name>{{ author.name }}</itunes:name>
+    <itunes:email>{{ author.email }}</itunes:email>
+  </itunes:owner>
+  <itunes:image href="{{ image }}" />
+  <itunes:category text="Technology"/>
+  {{#each articles}}
+  <item>
+    <title>{{ title }}</title>
+    <itunes:author>{{ ../author.name }}</itunes:author>
+    <itunes:subtitle>{{ podcast.subtitle }}</itunes:subtitle>
+    <itunes:summary>
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1{{#if analyticsUrl }}{{ analyticsUrl }}{{else}}{{ url }}{{/if}}?feed_type=podcast&pixel">
+        {{{ description }}}
+      ]]></itunes:summary>
+    <itunes:image href="{{ image }}" />
+    <enclosure url="{{ podcast.audioUrl }}" length="{{podcast.fileSize}}" type="audio/mpeg"/>
+    <guid isPermaLink="true">{{ ../host }}{{ url }}</guid>
+    <pubDate>{{ podcast.pubDate }}</pubDate>
+    <itunes:duration>{{ podcast.duration }}</itunes:duration>
+  </item>
+  {{/each}}
+</channel>
+</rss>

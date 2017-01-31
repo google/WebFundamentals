@@ -4,13 +4,14 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2015-03-27 #}
 {# wf_updated_on: 2015-03-27 #}
 {# wf_author: pbakaus #}
-{# wf_featured_image: /web/showcase/2015/images/merry_pixmas/featured.png #}
+{# wf_featured_image: /web/showcase/2015/images/merry_pixmas/card.jpg #}
+{# wf_tags: spotlight,css,3d #}
 
 # Merry Pixmas {: .page-title }
 
 <img src="images/merry_pixmas/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 [Merry Pixmas](http://merrypixmas.com): Christmas fun with 3D CSS Transforms.
 
@@ -32,7 +33,7 @@ quite a bit.
 
 ### Why the web?
 
-At [Tokyo](https://tokyo.uk/), we’ve long been advocates of the responsive
+At [Tokyo](https://tokyo.uk/){: .external }, we’ve long been advocates of the responsive
 and mobile web, rather than native for the sake of it. Pixmas was a result of
 HTML5 & CSS3 experimentation during down time in-between projects. We are
 always trying out new things to keep our knowledge current; so naturally,

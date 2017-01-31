@@ -1,0 +1,29 @@
+toc:
+  - title: Security and Identity
+    section:
+    - title: Overview
+      path: /web/fundamentals/security/
+    - title: Content Security Policy
+      path: /web/fundamentals/security/csp/
+    - title: Encrypting Data In Transit
+      section:
+      - title: Why HTTPS
+        path: /web/fundamentals/security/encrypt-in-transit/why-https
+      - title: Important Security Terminology
+        path: /web/fundamentals/security/encrypt-in-transit/intro-to-security-terminology
+      - title: Enabling HTTPS on Your Servers
+        path: /web/fundamentals/security/encrypt-in-transit/enable-https
+    - title: Preventing Mixed Content
+      section:
+      - title: What is Mixed Content?
+        path: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+      - title: Preventing Mixed Content
+        path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
+    - title: Credential Management API
+      section:
+      - title: Overview
+        path: /web/fundamentals/security/credential-management/
+      - title: Retrieve Credentials
+        path: /web/fundamentals/security/credential-management/retrieve-credentials
+      - title: Store Credentials
+        path: /web/fundamentals/security/credential-management/store-credentials        
