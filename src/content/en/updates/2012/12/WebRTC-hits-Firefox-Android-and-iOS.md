@@ -43,7 +43,7 @@ book_path: /web/updates/_book.yaml
       channel = dc1;
       channel.binaryType = "blob";
       log("pc1 new binarytype = " + dc1.binaryType);
-    
+
       // Since we create the datachannel, don't wait for onDataChannel!
       channel.onmessage = function(evt) {
         if (evt.data instanceof Blob) {
@@ -62,7 +62,7 @@ book_path: /web/updates/_book.yaml
       };
       log("pc1 state:" + channel.readyState);
           }
-    
+
 
 <p>More information and demos for the Firefox implementation are available from the <a href="https://hacks.mozilla.org/2012/11/progress-update-on-webrtc-for-firefox-on-desktop/comment-page-1/#comment-1851192" title="Progress update on WebRTC for Firefox on desktop">hacks.mozilla.org blog</a>. Basic WebRTC support is due for release in Firefox 18 at the beginning of 2013, and support is planned for additional features including <code>getUserMedia</code> and createOffer/Answer constraints, as well as TURN (to allow communication between browsers behind firewalls).</p>
 
@@ -72,13 +72,13 @@ book_path: /web/updates/_book.yaml
 
 <p><a href="http://tools.ietf.org/html/draft-alvestrand-constraints-resolution-00#page-4" title="IETF Resolution Constraints draft specification">Constraints</a> have been implemented in Chrome 24 and above. These can be used to set values for video resolution for <code>getUserMedia()</code> and RTCPeerConnection <code>addStream()</code> calls.</p>
 
-<p>There's an example at <a href="http://simpl.info/getusermedia/constraints/index.html" title="Resolution Constraints example on simpl.info">simpl.info/getusermedia/constraints</a>. Play around with different constraints by setting a breakpoint and tweaking values.</p>
+<p>There's an example at <a href="https://simpl.info/getusermedia/constraints/index.html" title="Resolution Constraints example on simpl.info">simpl.info/getusermedia/constraints</a>. Play around with different constraints by setting a breakpoint and tweaking values.</p>
 
 <p>A couple of gotchas... <code>getUserMedia</code> constraints set in one browser tab affect constraints for all tabs opened subsequently. Setting a disallowed value for constraints gives a rather cryptic error message:<br />
 
 
     navigator.getUserMedia error:  NavigatorUserMediaError {code: 1, PERMISSION_DENIED: 1}
-    
+
 
 <p>Likewise the error if you try to use <code>getUserMedia</code> from the local file system, not on a server!</p>
 

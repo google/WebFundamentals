@@ -57,7 +57,7 @@ If you feel C++ in your blood and want to write C++ with us, all of our code is 
 
 **Slides:** [Blink](https://docs.google.com/a/chromium.org/presentation/d/1E30GMRaN-9Uj54pfjej8STWz5uwI8ZEg3K_t29_DHs4)
 
- 
+
 ## Security
 
 by Parisa Tabriz
@@ -140,7 +140,7 @@ So what do we have for web developers? An ecosystem of media APIs for the open W
 + EME enables playback of protected content.
 + Transcripts, captions and the [track element](http://www.html5rocks.com/en/tutorials/track/basics/){: .external } enable subtitles, captions, timed metadata,  deep linking and deep search.
 
-**Slides:** [Media APIs for the multi-device Web](http://simpl.info/media/#1)
+**Slides:** [Media APIs for the multi-device Web](https://developers.google.com/web/shows/cds/2013/media-apis-for-the-web)
 
 
 {% include "comment-widget.html" %}
