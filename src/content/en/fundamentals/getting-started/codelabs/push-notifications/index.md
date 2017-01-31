@@ -58,11 +58,11 @@ While you're free to use your own web server, this codelab is designed to work w
 
 [Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
+After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar:
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-In the ensuing window, click on the Web Server icon: 
+In the ensuing window, click on the Web Server icon:
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -270,7 +270,7 @@ function subscribeUser() {
     applicationServerKey: applicationServerKey
   })
   .then(function(subscription) {
-    console.log('User is subscribed:', subscription);
+    console.log('User is subscribed.');
 
     updateSubscriptionOnServer(subscription);
 
@@ -314,7 +314,7 @@ swRegistration.pushManager.subscribe({
   applicationServerKey: applicationServerKey
 })
 .then(function(subscription) {
-  console.log('User is subscribed:', subscription);
+  console.log('User is subscribed.');
 
   updateSubscriptionOnServer(subscription);
 
@@ -356,7 +356,7 @@ If you go back to your web app and try clicking the button you should see a perm
 
 ![5b8a7e9905f2237b.png](img/5b8a7e9905f2237b.png)
 
-If you grant the permission you should see the console print `User is subscribed:` with the `PushSubscription`, the button's text will change to ‘Disable Push Messaging'  and you'll be able to view the subscription as JSON at the bottom of the page.
+If you grant the permission you should see the console print "User is subscribed.", the button's text will change to ‘Disable Push Messaging'  and you'll be able to view the subscription as JSON at the bottom of the page.
 
 ![bfdc9f92e001934a.png](img/bfdc9f92e001934a.png)
 
@@ -643,7 +643,7 @@ You should be able to press the  *Enable Push Messaging*  /  *Disable Push Messa
 
 Congratulations on completing this codelab!
 
-This code lab has shown you how to get up and running with adding push to your web app. If you want to learn more about what web notifications can do,  [check out theses docs](/web/fundamentals/engage-and-retain/push-notifications/). 
+This code lab has shown you how to get up and running with adding push to your web app. If you want to learn more about what web notifications can do,  [check out theses docs](/web/fundamentals/engage-and-retain/push-notifications/).
 
 If you are looking to deploy push on your site, you may be interested in adding support for older / non-standards compliant browsers which use GCM,  [learn more here](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/).
 
@@ -664,5 +664,5 @@ If you are looking to deploy push on your site, you may be interested in adding 
 
 
 ## Found an issue, or have feedback? {: .hide-from-toc }
-Help us make our code labs better by submitting an 
+Help us make our code labs better by submitting an
 [issue](https://github.com/googlechrome/push-notifications/issues) today. And thanks!
