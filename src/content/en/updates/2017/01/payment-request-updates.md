@@ -72,7 +72,7 @@ cards.
 As part of [payment item
 information](/web/fundamentals/getting-started/primers/payment-request/#create-paymentrequest),
 developers can add `pending` to indicate that the price is not fully determined
-yet. The `pe nding` fieldaccepts a boolean value.
+yet. The `pending` field accepts a boolean value.
 
     {
       label: "State tax",
