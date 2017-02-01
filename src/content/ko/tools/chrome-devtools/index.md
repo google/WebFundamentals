@@ -16,7 +16,7 @@ Note: 많은 DevTools 문서는 최신 Chrome 피쳐를 제공하는 [Chrome Can
 
 ## Chrome DevTools 열기 {: #open }
 
-* Chrome 메뉴에서 **More Tools** > **Developer Tools** 선택
+* Chrome 메뉴에서 **도구 더보기** > **개발자 도구** 선택
 * 페이지 요소를 오른 클릭하고 검사를 선택
 * [키보드 단축키](/web/tools/chrome-devtools/inspect-styles/shortcuts)
 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows)나 <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>I</kbd> (Mac)를 사용할 수 있습니다.
@@ -72,7 +72,7 @@ DOM과 CSS를 자유롭게 조작하여 사이트의 레이아웃과 디자인�
 
 <img src="images/panels/network.png" alt="Network Panel" class="attempt-right">
 
-페이지 로딩 성능 최적화 및 요청 이슈 디버깅
+요청 관련 문제의 디버깅과 페이지 로딩 성능을 최적화하세요.
 
 * [시작하기](/web/tools/chrome-devtools/network-performance/)
 * [네트워크 이슈 가이드](/web/tools/chrome-devtools/network-performance/issues)
@@ -80,12 +80,12 @@ DOM과 CSS를 자유롭게 조작하여 사이트의 레이아웃과 디자인�
 
 <div style="clear:both;"></div>
 
-### Performance 패널 (이전 Timeline 패널)
+### Performance 패널 (이전의 Timeline 패널)
 
 Note: Chrome 57부터 Timeline 패널이 Performance 패널로 이름이 바뀌었습니다.
 
 <img src="images/panels/performance.png" alt="Timeline Panel" class="attempt-right">
-사이트의 라이프사이클이 도는 동안 발생한 다양한 이벤트를 기록하고 탐색하여 페이지의 런타임 성능을 향상합니다.
+사이트의 라이프사이클 동안 발생한 다양한 이벤트를 기록하고 탐색하여 페이지의 런타임 성능을 향상합니다.
 
 * [성능 보는 법](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 * [런타임 성능 분석](/web/tools/chrome-devtools/rendering-tools/)
@@ -93,19 +93,19 @@ Note: Chrome 57부터 Timeline 패널이 Performance 패널로 이름이 바뀌�
 
 <div style="clear:both;"></div>
 
-### Memory 패널 (이전 Profiles 패널)
+### Memory 패널 (이전의 Profiles 패널)
 
 Note: Chrome 57부터 Profile 패널이 Memory 패널로 이름이 바뀌었습니다.
 
 <img src="images/panels/memory.png" alt="Profiles Panel" class="attempt-right">
-메모리 사용량을 수집하고 누수를 찾습니다.
+메모리 사용 행태를 작성하고, 누수를 탐색합니다.
 
 * [메모리 문제 해결](/web/tools/chrome-devtools/memory-problems/)
 * [자바스크립트 CPU 프로파일러](/web/tools/chrome-devtools/rendering-tools/js-execution)
 
 <div style="clear:both;"></div>
 
-### Application 패널 (이전 Resources 패널)
+### Application 패널 (이전의 Resources 패널)
 
 Note: Chrome 52부터 Resources 패널이 Application 패널로 이름이 바뀌었습니다.
 
@@ -122,7 +122,7 @@ IndexedDB와 웹 SQL 데이터베이스, 로컬 및 세션 스토리지, 쿠키,
 ### Security 패널 
 
 <img src="images/panels/security.png" alt="Security Panel" class="attempt-right">
-혼합 콘텐츠 이슈, 인증서 문제 등을 디버깅합니다.
+Mixed content 이슈, 인증서 문제 등을 디버깅합니다.
 
 * [보안 이슈 이해하기](/web/tools/chrome-devtools/security)
 
