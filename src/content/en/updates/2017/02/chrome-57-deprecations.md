@@ -61,11 +61,11 @@ are being removed.
 ## Remove BluetoothDevice.uuids attribute
 
 The `BluetoothDevice.uuids` attribute is being removed to bring the
-[Bluetooth API](https://www.chromestatus.com/features/5264933985976320) in
-line with the current specification. You can retrieve a UUID by calling
-[device.watchAdvertisements()](https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothdevice-watchadvertisements).
+[Web Bluetooth API](https://www.chromestatus.com/features/5264933985976320) in
+line with the current specification. You can retrieve all allowed GATT services by calling
+[device.getPrimaryServices()](https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattserver-getprimaryservices).
 
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=653317&desc=2)
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=653317)
 
 ## Remove key generation element
 
