@@ -10,6 +10,8 @@ description: Progressive Web Apps are becoming more integrated with your device.
 
 # The new and improved Add to Home screen {: .page-title }
 
+{% include "web/_shared/contributors/paulkinlan.html" %}
+
 Chrome first introduced the ["Add to Home
 screen"](https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/)[
 banners](https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/)
