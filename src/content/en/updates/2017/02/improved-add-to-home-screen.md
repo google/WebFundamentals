@@ -224,4 +224,9 @@ No.
 The Progressive Web Apps will be able to be installed on all versions of
 Android that Chrome for Android runs on (Jelly Bean and above).
 
+### I developer another browser on Android, can I have this seamless install process?
+
+We are working on it. We are comitted to making this available to browsers
+on Android and we will have more details soon.
+
 {% include "comment-widget.html" %}
