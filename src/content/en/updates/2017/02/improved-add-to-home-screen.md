@@ -205,4 +205,9 @@ No, the site opens in the version of Chrome the user added the site from.
 No. The update to the SW will be processed the next time that the user visits 
 the page.
 
+### When will the "Unknown sources" restriction be removed?
+
+It is being removed right now in a staged manner.  We anticipate that when 
+this hits stable channel of Chrome this will not be needed at all.
+
 {% include "comment-widget.html" %}
