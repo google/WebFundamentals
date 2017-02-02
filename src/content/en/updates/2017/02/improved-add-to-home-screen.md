@@ -210,4 +210,12 @@ the page.
 It is being removed right now in a staged manner.  We anticipate that when 
 this hits stable channel of Chrome this will not be needed at all.
 
+### Can we upload the APKs that are created to the Play Store?
+
+No. There is no key signing information supplied to enable you to create your own PWA that can be in the store.
+
+### Are these listed in the Play Store?
+
+No.
+
 {% include "comment-widget.html" %}
