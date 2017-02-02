@@ -55,12 +55,12 @@ def checkForRedirect(requestedPath, lang, useMemcache):
       redirectFile = os.path.join(requestDir, '_redirects.yaml')
       if os.path.isfile(redirectFile):
         memcacheKey = 'redirectFile-' + redirectFile
-        parsed = memcache.get(memcacheKey)
+        parsed = getFromMemCache(memcacheKey)
         if parsed is None:
           raw = open(redirectFile, 'r').read().decode('utf8')
           parsed = yaml.load(raw)
           if useMemcache:
-            memcache.set(memcacheKey, parsed)
+            setMemCache(memcacheKey, parsed)
         if 'redirects' in parsed:
           redirects += parsed['redirects']
         else:
@@ -230,7 +230,7 @@ def renderDevSiteContent(content, lang='en'):
     replaceWith += 'sandbox="allow-forms allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-scripts allow-top-navigation" '
     replaceWith += 'src="' + fbMemcacheKey + '"></iframe>'
     content = content.replace(framebox, replaceWith)
-    memcache.set(fbMemcacheKey, fbContent)
+    setMemCache(fbMemcacheKey, fbContent)
 
   # Escapes content between {% htmlescape %} tags
   htmlescapes = re.findall(r'{%[ ]?htmlescape[ ]?%}(.*?){%[ ]?endhtmlescape[ ]?%}(?ms)', content)
