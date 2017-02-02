@@ -212,7 +212,8 @@ this hits stable channel of Chrome this will not be needed at all.
 
 ### Can we upload the APKs that are created to the Play Store?
 
-No. There is no key signing information supplied to enable you to create your own PWA that can be in the store.
+No. There is no key signing information supplied to enable you to create your
+own PWA that can be in the store.
 
 ### Are these listed in the Play Store?
 
@@ -220,6 +221,7 @@ No.
 
 ### What versions of Android will this work on?
 
-The Progressive Web Apps will be able to be installed on all versions of Android that Chrome for Android runs on (Jelly Bean and above).
+The Progressive Web Apps will be able to be installed on all versions of
+Android that Chrome for Android runs on (Jelly Bean and above).
 
 {% include "comment-widget.html" %}
