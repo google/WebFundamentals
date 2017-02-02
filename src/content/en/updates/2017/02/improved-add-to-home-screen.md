@@ -8,7 +8,7 @@ description: Progressive Web Apps are becoming more integrated with your device.
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_featured_snippet: Progressive Web Apps are becoming more integrated with your device. Learn how. #}
 
-# The new and improved Add to Home screen {: .page-title }
+# The New and Improved Add to Home screen {: .page-title }
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
