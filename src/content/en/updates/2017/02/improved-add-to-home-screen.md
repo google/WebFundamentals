@@ -218,4 +218,8 @@ No. There is no key signing information supplied to enable you to create your ow
 
 No.
 
+### What versions of Android will this work on?
+
+The Progressive Web Apps will be able to be installed on all versions of Android that Chrome for Android runs on (Jelly Bean and above).
+
 {% include "comment-widget.html" %}
