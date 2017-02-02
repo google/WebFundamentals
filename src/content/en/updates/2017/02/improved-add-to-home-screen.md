@@ -4,7 +4,7 @@ description: Progressive Web Apps are becoming more integrated with your device.
 
 {# wf_updated_on: 2017-02-02 #}
 {# wf_published_on: 2017-02-02 #}
-{# wf_tags: pwa,chrome57 #}
+{# wf_tags: addtohomescreen,progressive-web-apps,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_featured_snippet: Progressive Web Apps are becoming more integrated with your device. Learn how. #}
 
@@ -12,15 +12,14 @@ description: Progressive Web Apps are becoming more integrated with your device.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-Chrome first introduced the ["Add to Home
-screen"](https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/)[
-banners](https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/)
-in Chrome 51. This was a big step for the web as it provided users the ability
-to easily keep a favorite site on their Home screen, much like native apps.
-We've heard from developers like [Alibaba that users re-engage 4 times more
-often](https://developers.google.com/web/showcase/2016/alibaba) with their site
-added to Home screen. We've also seen that tuning the heuristics for add to Home
-screen to prompt sooner yields to 48% more installs.
+Chrome first introduced the ["Add to Home screen"
+banners](/web/fundamentals/engage-and-retain/app-install-banners/) in Chrome 51.
+This was a big step for the web as it provided users the ability to easily keep
+a favorite site on their Home screen, much like native apps. We've heard from
+developers like [Alibaba that users re-engage 4 times more
+often](/web/showcase/2016/alibaba) with their site added to Home screen. We've
+also seen that tuning the heuristics for add to Home screen to prompt sooner
+yields to 48% more installs.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="xkme8WFyoXw"
@@ -116,13 +115,12 @@ will be still stored the next time that the user opens the App.
 This can cause some issues because if the user clears the Chrome profile, then 
 your data in your app will also be cleared. To ensure that your user data is 
 held more permanently, please use the [Persistent 
-Storage](https://developers.google.com/web/updates/2016/06/persistent-storage)[ 
-API](https://developers.google.com/web/updates/2016/06/persistent-storage).
+Storage API](/web/updates/2016/06/persistent-storage).
 
 Please let us know if you have any feedback or questions. If you encounter a 
 bug, you can file it on the Chromium bug tracker 
 [here](https://bugs.chromium.org/p/chromium/issues/entry?components=Mobile%3EWebAPKs&labels=OS-Android,Type-Bug,Pri-2,Source-devpreview-feedback&cc=sbirch@google.com&comment=Android%20version%3A%0AChrome%20version%3A%20%0A%0ASite%3A%20%0A%0ASteps%20to%20reproduce%3A%0A(1)%0A(2)%0A(3)%0A%0AExpected%20result%3A%0A%0A%0AActual%20result%3A%0A). 
-Please also take a look at **FAQs below**** **that aim to answer any additional 
+Please also take a look at **FAQs below** that aim to answer any additional 
 questions you might have.
 
 - - -
@@ -130,13 +128,11 @@ questions you might have.
 ## FAQs 
 ### What are the requirements for a site to use improved add to Home screen?
 
-The requirements are designed to be the same as the [technical requirements for 
-the add to Home screen 
-banner](https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/). 
+The requirements are designed to be the same as the [technical requirements for
+the add to Home screen
+banner](/web/fundamentals/engage-and-retain/app-install-banners/).
 
-We recommend using 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) to audit your 
-PWA.
+We recommend using [Lighthouse](/web/tools/lighthouse/) to audit your PWA.
 
 Note though that there is no engagement threshold for improved add to Home 
 screen from the menu.
