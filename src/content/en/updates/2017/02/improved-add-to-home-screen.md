@@ -78,14 +78,14 @@ When a Progressive Web App is installed via this new Improved Add to Home screen
 experience it will be registered with the system to be a target for the URL
 space for its domain. This means that the when a user clicks on a link that is
 contained within the scope of your Progressive Web App, your app will be opened
-up instead of Chrome with your PWA running.
+instead of Chrome openning with your PWA running.
 
 When you install a Progressive Web App, we look at your Web App Manifest and
 other meta-data and create the APK that is installed on to the user's device. In
 that APK we define an [Android Intent
 Filter](https://developer.android.com/guide/components/intents-filters.html)
 that defines when your web application should be opened. For example, to
-open the [https://airhorner.com](https://airhorner.com/) app when ever that link
+open the [https://airhorner.com](https://airhorner.com/) app whenever that link
 is clicked, Chrome would create the following `<intent-filter>`.
 
     <intent-filter>
