@@ -276,11 +276,6 @@ own PWA that can be in the store.
 
 No.
 
-### What versions of Android will this work on?
-
-The Progressive Web Apps will be able to be installed on all versions of
-Android that Chrome for Android runs on (Jelly Bean and above).
-
 ### I am developer of another browser on Android, can I have this seamless install process?
 
 We are working on it. We are committed to making this available to all browsers
