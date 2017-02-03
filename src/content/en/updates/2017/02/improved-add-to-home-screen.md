@@ -28,7 +28,7 @@ yields to 48% more installs.
   </iframe>
 </div>
 
-We are happy to share that the team has worked on an improved add to Home 
+We are happy to share that the team has worked on an improved Add to Home 
 screen experience that makes web apps first-class citizens of Android. 
 Instead of simply being a shortcut icon, web apps will now be integrated with 
 Android. This means that users that add a PWA to their Home screen will be able 
@@ -66,7 +66,7 @@ This new experience is a huge improvement over the original version of Add to
 Home screen, but there are some differences between these installed Progressive
 Web Apps and Android Apps.
 
-## Updating your App's icon and name
+## Updating your app's icon and name
 
 You now have the ability to update your Progressive Web App's icon and name and 
 have it reflected to the user. Changing your icon or name in the manifest will 
@@ -75,7 +75,7 @@ site.
 
 ## Android Intent Filters
 
-When a Progressive Web App is installed via this new Improved Add to Home screen
+When a Progressive Web App is installed via this new improved add to home screen
 experience it will be registered with the system to be a target for the URL
 space for its domain. This means that the when a user clicks on a link that is
 contained within the scope of your Progressive Web App, your app will be opened
@@ -104,13 +104,14 @@ simply says when a link that is clicked or intercepted in Android for the entire
 domain of `https://airhorner.com/` open the App.
 
 But what if you don't want your PWA to open for all paths on your domain? That
-is where the `scope` [Web App
+is where the `scope` [web app
 manifest](https://www.w3.org/TR/appmanifest/#scope-member) property comes in to
-play. The `scope` defines a sub path (essentially it alters the
-`android:pathPrefix` attribute in the APK's `AndroidManifest.xml`) defaults to
-the origin. You can set it to a path that is relative to your origin and
-subsequently when a user navigates to a URL contained by the scope, your
-installed Progressive Web App will open.
+play. The `scope` is a string that defines the URL path that encompasses your
+web app. It tells the Android system to only open your web app if the URL being
+navigated to matches the `origin` + `scope` (essentially it alters the
+`android:pathPrefix` attribute in the APK's `AndroidManifest.xml`.) For example,
+a `scope` of `/paul/` on `https://airhorner.com` would only launch AirHorner if
+the URL was `https://airhorner.com/paul/`.
 
 Note: directly navigating to your site from the address bar will work exactly 
 the same as it does for native apps that have an intent filter, Chrome assumes 
@@ -140,11 +141,11 @@ Note: The `scope` in the Web App Manifest, is not the same as the `scope` of
 your Service Worker. It is possible for one installed Web Application to be
 controlled by several different Service Workers.
 
-## Navigating outside of my Progresive Web App
+## Navigating outside of my progressive web app
 
-When 
+When the
 
-## Managing Permissions
+## Managing permissions
 
 By Installing your Progressive Web App it now becomes part of the system. Added 
 sites show up on the Home screen, app drawer and throughout the Android 
@@ -160,7 +161,7 @@ Android normally gives instant access notifications, Installed Progressive Web
 Apps do not have this permission granted by default and your user must 
 explicitly opt-in to receiving notifications
 
-## Storage and App State
+## Storage and app state
 
 When the user adds your Progressive Web App to their system Chrome will use the 
 same profile and will not segregate the data. This means your service worker 
@@ -249,7 +250,8 @@ prompts to grant permissions and will be able to edit them in Chrome settings.
 
 ### What versions of Android will this work on?
 
-The feature is supported wherever Chrome is, back to Android Jelly Bean.
+Progressive web apps can be installed on all versions of Android that run Chrome
+for Android, specifically Jelly Bean and above.
 
 ### Does this use the WebView?
 
@@ -281,7 +283,7 @@ Android that Chrome for Android runs on (Jelly Bean and above).
 
 ### I am developer of another browser on Android, can I have this seamless install process?
 
-We are working on it. We are comitted to making this available to browsers
+We are working on it. We are committed to making this available to all browsers
 on Android and we will have more details soon.
 
 {% include "comment-widget.html" %}
