@@ -16,10 +16,10 @@ Chrome first introduced the ["Add to Home screen"
 banners](/web/fundamentals/engage-and-retain/app-install-banners/) in [Chrome
 42](https://blog.chromium.org/2015/03/chrome-42-beta-push-notifications_12.html).
 This was a big step for the web as it provided users the ability to easily keep
-a favorite site on their Home screen, much like native apps. We've heard from
+a favorite site on their home screen, much like native apps. We've heard from
 developers like [Alibaba that users re-engage 4 times more
-often](/web/showcase/2016/alibaba) with their site added to Home screen. We've
-also seen that tuning the heuristics for add to Home screen to prompt sooner
+often](/web/showcase/2016/alibaba) with their site added to home screen. We've
+also seen that tuning the heuristics for add to home screen to prompt sooner
 yields to 48% more installs.
 
 <div class="video-wrapper">
@@ -31,14 +31,14 @@ yields to 48% more installs.
 We are happy to share that the team has worked on an improved add to home 
 screen experience that makes web apps first-class citizens of Android. 
 Instead of simply being a shortcut icon, web apps will now be integrated with 
-Android. This means that users that add a PWA to their Home screen will be able 
+Android. This means that users that add a PWA to their home screen will be able 
 to find it anywhere they see other apps (e.g. in the app drawer or searching for 
 apps), and open the site from intents. We see this as the first step among a 
 number of improvements to come and intend to make it the default experience for 
-add to Home screen in the coming months.
+add to home screen in the coming months.
 
 
-The improved add to Home screen experience is already available in Chrome Canary 
+The improved add to home screen experience is already available in Chrome Canary 
 and will be rolling out to Chrome 57 beta over the next few weeks.
 
 **You can test your site by following these steps:**
@@ -47,7 +47,7 @@ and will be rolling out to Chrome 57 beta over the next few weeks.
    Dev](https://play.google.com/store/apps/details?id=com.chrome.dev) or [Chrome
    Beta](https://play.google.com/store/apps/details?id=com.chrome.beta) from the
    Play Store if you don't have it already.
-1. Enable improved add to Home screen. These steps are only needed during the 
+1. Enable improved add to home screen. These steps are only needed during the 
    developer preview.
     1. Open chrome://flags in Chrome dev and enable the flag 
        `#enable-improved-a2hs` ("Find in page" in the triple-dot menu is helpful 
@@ -62,15 +62,15 @@ and will be rolling out to Chrome 57 beta over the next few weeks.
     1. In the developer preview you'll additionally see a prompt from the 
        package installer to confirm.
 
-This new experience is a huge improvement over the original version of Add to
-Home screen, but there are some differences between these installed Progressive
+This new experience is a huge improvement over the original version of add to
+home screen, but there are some differences between these installed Progressive
 Web Apps and Android Apps.
 
 ## Updating your app's icon and name
 
 You now have the ability to update your Progressive Web App's icon and name and 
 have it reflected to the user. Changing your icon or name in the manifest will 
-update the icon on the Home screen after the user has subsequently opened the 
+update the icon on the home screen after the user has subsequently opened the 
 site.
 
 ## Android Intent Filters
@@ -148,7 +148,7 @@ When the
 ## Managing permissions
 
 By Installing your Progressive Web App it now becomes part of the system. Added 
-sites show up on the Home screen, app drawer and throughout the Android 
+sites show up on the home screen, app drawer and throughout the Android 
 System-UI as a user would expect. Permissions are handled differently, by 
 default your app can only have the same permissions surface as Chrome would 
 normally have when installed - you can't ask for Camera access at install time 
@@ -185,17 +185,17 @@ questions you might have.
 ### What are the requirements for a site to use improved add to Home screen?
 
 The requirements are designed to be the same as the [technical requirements for
-the add to Home screen
+the add to home screen
 banner](/web/fundamentals/engage-and-retain/app-install-banners/).
 
 We recommend using [Lighthouse](/web/tools/lighthouse/) to audit your PWA.
 
-Note though that there is no engagement threshold for improved add to Home 
+Note though that there is no engagement threshold for improved add to home 
 screen from the menu.
 
 ### Does this change the triggering of the add to Home screen banner?
 
-Improved add to Home screen does not itself change the triggering or behavior of 
+Improved add to home screen does not itself change the triggering or behavior of 
 the banner. Nevertheless, Chrome has recently lowered the site-engagement 
 threshold for the banner to trigger and is constantly experimenting with 
 improvements to this system. (See [the 
@@ -204,24 +204,24 @@ Summit.)
 
 ### What happens to users who have already added a site to their Home screen?
 
-Users will continue to get the existing add to Home screen experience, though if 
+Users will continue to get the existing add to home screen experience, though if 
 they add it again manually via the menu button, the new icon will use improved 
-add to Home screen.
+add to home screen.
 
 ### What will happen to the current add to Home screen experience?
 
-Improved add to Home screen will replace add to Home screen for PWAs. There is 
-no change to the existing functionality of add to Home screen for non-PWAs. 
+Improved add to home screen will replace add to home screen for PWAs. There is 
+no change to the existing functionality of add to home screen for non-PWAs. 
 
 ### What happens if the user has already installed the native app for the site?
 
-Like add to Home screen today, users will be able to add a site independent of 
+Like add to home screen today, users will be able to add a site independent of 
 any native apps. If you expect users to potentially install both, we recommend 
 differentiating the icon or name of your site from your native app.
 
 ### When a user opens a site installed via improved add to Home screen, will Chrome be running?
 
-Yes, once the site is opened from the Home screen the primary activity is still 
+Yes, once the site is opened from the home screen the primary activity is still 
 Chrome. Cookies, permissions, and all other browser state will be shared.
 
 ### Will my installed site's storage be cleared if the user clears Chrome's cache?
