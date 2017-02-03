@@ -107,19 +107,19 @@ is where the `scope` [Web App
 manifest](https://www.w3.org/TR/appmanifest/#scope-member) property comes in to
 play. The `scope` defines a sub path (essentially it alters the
 `android:pathPrefix` attribute in the APK's `AndroidManifest.xml`) defaults to
-the origin. You can set it to an path that is relative to your origin and
-subsequently when a user navigates to a URL contained by the scope your
-installed Progressive Web App will be open.
+the origin. You can set it to a path that is relative to your origin and
+subsequently when a user navigates to a URL contained by the scope, your
+installed Progressive Web App will open.
 
 Note: directly navigating to your site from the address bar will work exactly 
 the same as it does for native apps that have an intent filter, Chrome assumes 
 that the user intended to visit the site and will open the site.
 
-A specific example, is that of a large web site, that has many different content
+A specific example is that of a large web site that has many different content
 sections (/tech-news/ , /celebs/, /business/) and the they would like to have a
-PWA just for their '/tech-news/' section, they would set the scope to be `scope:
+PWA just for their '/tech-news/' section. The site would set the scope to be `scope:
 '/tech-news/',` in the manifest to ensure that only links to that part of the
-site open up the Progressive Web App.
+site open the Progressive Web App.
 
 If you were to define a `scope` in your Web App Manifest, you would see an
 updated `pathPrefix` in the `<intent-filter>` in your apps
@@ -262,7 +262,7 @@ the page.
 ### When will the "Unknown sources" restriction be removed?
 
 It is being removed right now in a staged manner.  We anticipate that when 
-this hits stable channel of Chrome this will not be needed at all.
+this hits the stable channel of Chrome this will not be needed at all.
 
 ### Can we upload the APKs that are created to the Play Store?
 
