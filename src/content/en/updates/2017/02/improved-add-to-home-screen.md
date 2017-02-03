@@ -80,10 +80,11 @@ space for its domain. This means that the when a user clicks on a link that is
 contained within the scope of your Progressive Web App, your app will be opened 
 up instead of Chrome with your PWA running.
 
-The scope is property in the Web App manifest and it defaults to the origin. You 
-can set it to an path that is relative to your origin and subsequently when a 
-user navigates to a URL contained by the scope your installed Progressive Web 
-App will be open.
+The `scope` is property in the [Web App 
+manifest](https://www.w3.org/TR/appmanifest/#scope-member) and it defaults to 
+the origin. You can set it to an path that is relative to your origin and
+subsequently when a user navigates to a URL contained by the scope your
+installed Progressive Web App will be open.
 
 Note: directly navigating to your site from the address bar will work exactly 
 the same as it does for native apps that have an intent filter, Chrome assumes 
