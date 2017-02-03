@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab you'll how to add push notifications to your web app.
 
-{# wf_updated_on: 2016-11-21T15:42:20Z #}
+{# wf_updated_on: 2017-01-31T18:54:09Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -270,7 +270,7 @@ function subscribeUser() {
     applicationServerKey: applicationServerKey
   })
   .then(function(subscription) {
-    console.log('User is subscribed:', subscription);
+    console.log('User is subscribed.');
 
     updateSubscriptionOnServer(subscription);
 
@@ -314,7 +314,7 @@ swRegistration.pushManager.subscribe({
   applicationServerKey: applicationServerKey
 })
 .then(function(subscription) {
-  console.log('User is subscribed:', subscription);
+  console.log('User is subscribed.');
 
   updateSubscriptionOnServer(subscription);
 
@@ -356,9 +356,9 @@ If you go back to your web app and try clicking the button you should see a perm
 
 ![5b8a7e9905f2237b.png](img/5b8a7e9905f2237b.png)
 
-If you grant the permission you should see the console print `User is subscribed:` with the `PushSubscription`, the button's text will change to ‘Disable Push Messaging'  and you'll be able to view the subscription as JSON at the bottom of the page.
+If you grant the permission you should see the console print "User is subscribed.", the button's text will change to ‘Disable Push Messaging'  and you'll be able to view the subscription as JSON at the bottom of the page.
 
-![bfdc9f92e001934a.png](img/bfdc9f92e001934a.png)
+![55a8185dcec3a71a.png](img/55a8185dcec3a71a.png)
 
 
 ## Handle Permission Denied
@@ -633,7 +633,7 @@ Calling `unsubscribe()` returns a promise as it can take some time to complete, 
 
 You should be able to press the  *Enable Push Messaging*  /  *Disable Push Messaging*   in your web app and the logs will show the user being subscribed and unsubscribed.
 
-![32acb7ec17ef75a8.png](img/32acb7ec17ef75a8.png)
+![e9c3b85838d190cb.png](img/e9c3b85838d190cb.png)
 
 
 ## Finished
