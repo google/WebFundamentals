@@ -147,6 +147,7 @@ a single location.
        alt="Deactivated breakpoints in the Breakpoints pane."
   <figcaption>
     <b>Figure 4</b>: Deactivated breakpoints in the <b>Breakpoints</b> pane
+    are disabled and transparent
   </figcaption>
 </figure>
 
