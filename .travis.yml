@@ -7,15 +7,15 @@ git:
 cache:
   directories:
   - node_modules
-before_install:
-- openssl aes-256-cbc -K $encrypted_7c1b14c4fe42_key -iv $encrypted_7c1b14c4fe42_iv -in client-secret.json.enc -out client-secret.json -d
+# before_install:
+#   - openssl aes-256-cbc -K $encrypted_7c1b14c4fe42_key -iv $encrypted_7c1b14c4fe42_iv -in client-secret.json.enc -out client-secret.json -d
 install:
-- npm install
-- npm run clean
-- ls
+  - npm install
+  - npm run clean
+  - ls
 script:
-- npm run build
-- npm run test
+  - npm run build
+  - npm run test
 # deploy:
 #   provider: gae
 #   keyfile: client-secret.json
