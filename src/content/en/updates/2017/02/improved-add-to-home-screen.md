@@ -78,14 +78,15 @@ When a Progressive Web App is installed via this new Improved Add to Home screen
 experience it will be registered with the system to be a target for the URL
 space for its domain. This means that the when a user clicks on a link that is
 contained within the scope of your Progressive Web App, your app will be opened
-up instead of Chrome with your PWA running. It can do this because we create an
-[Android Intent
-Filter](https://developer.android.com/guide/components/intents-filters.html)
-that is used that matches your sc
+up instead of Chrome with your PWA running.
 
-When you install a Progressive Web App, we look at your Web App Manifest and 
-other meta-data and create the APK that is installed. In that APK we define
-an Android Intent Filter that 
+When you install a Progressive Web App, we look at your Web App Manifest and
+other meta-data and create the APK that is installed on to the user's device. In
+that APK we define an [Android Intent
+Filter](https://developer.android.com/guide/components/intents-filters.html)
+that defines when your web application should be opened. For example, to
+open the [https://airhorner.com](https://airhorner.com/) app when ever that link
+is clicked, Chrome would create the following `<intent-filter>`.
 
     <intent-filter>
       <action android:name="android.intent.action.VIEW" />
@@ -98,8 +99,8 @@ an Android Intent Filter that
     </intent-filter>
 
 This is incredibly powerful, but not very flexible. This `<intent-filter>`
-simply says link that is clicked or intercepted in Android for the entire domain
-of `https://airhorner.com/` will open the App.
+simply says when a link that is clicked or intercepted in Android for the entire
+domain of `https://airhorner.com/` open the App.
 
 But what if you don't want your PWA to open for all paths on your domain? That
 is where the `scope` [Web App
@@ -137,6 +138,10 @@ updated `pathPrefix` in the `<intent-filter>` in your apps
 Note: The `scope` in the Web App Manifest, is not the same as the `scope` of
 your Service Worker. It is possible for one installed Web Application to be
 controlled by several different Service Workers.
+
+## Navigating outside of my Progresive Web App
+
+When 
 
 ## Managing Permissions
 
