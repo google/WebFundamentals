@@ -27,6 +27,7 @@ var ERROR_STRINGS = [
   {label: 'Hard coded language URL in link (hl=xx)', regEx: /[\?|&]hl=\w\w/g},
   {label: 'Hard coded https://developers.google.com in link (MD)', regEx: /\(https:\/\/developers.google.com/},
   {label: 'Hard coded https://developers.google.com in link (HTML)', regEx: /href="https:\/\/developers.google.com/},
+  {label: 'Google Sandboxed domain', regEx: /sandbox\.google\.com/g}
 ];
 var VALID_DATE_FORMATS = ['YYYY-MM-DD', 'YYYY-MM-DDTHH:mm:ss.sssZ'];
 
