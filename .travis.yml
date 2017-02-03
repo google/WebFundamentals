@@ -1,6 +1,5 @@
 language: node_js
-node_js:
-- '4'
+node_js: '4'
 dist: trusty
 sudo: false
 git:
@@ -9,8 +8,7 @@ cache:
   directories:
   - node_modules
 before_install:
-- openssl aes-256-cbc -K $encrypted_7c1b14c4fe42_key -iv $encrypted_7c1b14c4fe42_iv
-  -in client-secret.json.enc -out client-secret.json -d
+- openssl aes-256-cbc -K $encrypted_7c1b14c4fe42_key -iv $encrypted_7c1b14c4fe42_iv -in client-secret.json.enc -out client-secret.json -d
 install:
 - npm install
 - npm run clean
