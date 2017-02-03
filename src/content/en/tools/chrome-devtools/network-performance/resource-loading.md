@@ -10,15 +10,13 @@ description: Measure the network performance of your web application using the C
 {% include "web/_shared/contributors/kaycebasques.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. At the top of each section, there's a
-  link to an up-to-date page where you can find similar information.
-</aside>
+
+Warning: This page is deprecated. At the top of each section, there's a
+link to an up-to-date page where you can find similar information.
 
 Measure the network performance of your site using the
 <strong>Network</strong> panel.
 
-![the chrome devtools network panel](/web/tools/chrome-devtools/images/network-panel.png)
 
 The **Network** panel records information about each network operation on
 a page, including detailed timing data, HTTP request and response
@@ -34,8 +32,8 @@ headers, cookies, and more.
 
 ## Network panel overview
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See following sections for up-to-date
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See following sections for up-to-date
   information:
   <ul>
     <li><a href="reference#controls">Controls pane</a></li>
@@ -92,8 +90,8 @@ The **Requests Table** displays the following columns by default. You can
 
 ## Record network activity
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#record">Start or stop recording</a>
   for up-to-date information.
 </aside>
@@ -111,8 +109,8 @@ the keyboard shortcut <kbd>Cmd/Ctrl</kbd>+<kbd>e</kbd>.
 
 ## Capture screenshots during recording {:#filmstrip}
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#screenshots">Capture screenshots during recording</a>
   for up-to-date information.
 </aside>
@@ -143,8 +141,8 @@ to navigate between screenshots.
 
 ## View DOMContentLoaded and load event information
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#load">View load events</a>
   for up-to-date information.
 </aside>
@@ -171,8 +169,8 @@ parsed. It is displayed in two places on the **Network** panel:
 
 ## View details for a single resource
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#details">View details</a>
   for up-to-date information.
 </aside>
@@ -193,8 +191,8 @@ but the four tabs below are most common:
 
 ### View network timing
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#timing">Timing tab</a>
   for up-to-date information.
 </aside>
@@ -229,8 +227,8 @@ Related Guides:
 
 ### View HTTP headers
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#headers">Headers tab</a>
   for up-to-date information.
 </aside>
@@ -256,8 +254,8 @@ clicking the `view URL encoded` or `view decoded` link next to that section.
 
 ### Preview a resource
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#preview">Preview tab</a>
   for up-to-date information.
 </aside>
@@ -270,8 +268,8 @@ resource you've selected.
 
 ### View HTTP response content
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#response">Response tab</a>
   for up-to-date information.
 </aside>
@@ -284,8 +282,8 @@ depending on the type of resource you've selected.
 
 ### View cookies
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#cookies">Cookies tab</a>
   for up-to-date information.
 </aside>
@@ -312,8 +310,8 @@ Below is a description of each of the columns in the table:
 
 ### View WebSocket frames
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#frames">Frames tab</a>
   for up-to-date information.
 </aside>
@@ -354,8 +352,8 @@ Messages are color-coded according to their type:
 
 ## View resource initiators and dependencies {:#initiators-dependencies}
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#initiators-dependencies">View initiators and
   dependencies</a> for up-to-date information.
 </aside>
@@ -382,8 +380,8 @@ may not be able to see all of the initiators or dependencies.
 
 ## Sort requests
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#sort-by-activity">Sort by activity phase</a>
   for up-to-date information.
 </aside>
@@ -414,8 +412,8 @@ a menu of sort fields:
 
 ## Filter requests
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#filters">Filters panel</a>
   for up-to-date information.
 </aside>
@@ -489,8 +487,8 @@ in the screenshot below typing `domain:` triggered the autocomplete dropdown.
 
 ## Copy, save, and clear network information
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See following sections for up-to-date
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See following sections for up-to-date
   information:
   <ul>
     <li><a href="reference#copy">Copy one or all requests</a></li>
@@ -542,8 +540,8 @@ that resource's row. The list below describes each of the options.
 
 ### Copy one or all requests as cURL commands {: #curl }
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#copy">Copy one or all requests</a>
   for up-to-date information.
 </aside>
@@ -566,8 +564,8 @@ all the detected resources, not just the CSS).
 
 ## Customize the Network panel
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#request-rows">Use large or small requests rows</a>
   for up-to-date information.
 </aside>
@@ -585,8 +583,8 @@ secondary field.
 
 ### Add and remove table columns
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See following sections for up-to-date
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See following sections for up-to-date
   information:
   <ul>
     <li><a href="reference#columns">Show or hide columns</a></li>
@@ -601,8 +599,8 @@ columns.
 
 ### Preserve the network log upon navigation
 
-<aside class="note">
-  <b>Note:</b> This page is deprecated. See
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See
   <a href="reference#preserve-log">Preserve log</a>
   for up-to-date information.
 </aside>
