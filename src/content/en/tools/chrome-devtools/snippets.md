@@ -81,5 +81,5 @@ to not work as intended.
 ## Set breakpoints
 
 Just like other scripts, you can set breakpoints on snippets. See
-[Add breakpoints](/web/tools/chrome-devtools/debug/breakpoints/add-breakpoints)
+[Breakpoints Guide](/web/tools/chrome-devtools/debug/breakpoints/breakpoints)
 to learn how to add breakpoints from within the **Sources** panel.

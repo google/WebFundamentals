@@ -259,7 +259,7 @@ other ways, including:
 
 <a class="gc-analytics-event"
    data-category="DevTools / Debug JS / Get Started / Next Steps / Breakpoints"
-   href="add-breakpoints" target="_blank"
+   href="breakpoints" target="_blank"
    rel="noopener noreferrer"><button>Show Me All The Breakpoints</button></a>
 
 There's a couple of code stepping controls that weren't explained in this

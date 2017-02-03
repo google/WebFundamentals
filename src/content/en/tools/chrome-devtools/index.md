@@ -63,7 +63,7 @@ Log diagnostic information during development or interact with the JavaScript on
 Debug your JavaScript using breakpoints or connect your local files via Workspaces to use DevTools as a code editor.
 
 * [Get Started With Debugging JavaScript](/web/tools/chrome-devtools/javascript)
-* [Debugging with Breakpoints](/web/tools/chrome-devtools/javascript/add-breakpoints)
+* [Breakpoints Guide](/web/tools/chrome-devtools/javascript/breakpoints)
 * [Set Up Persistence with DevTools Workspaces](/web/tools/setup/setup-workflow)
 * [Run Snippets Of Code From Any Page](/web/tools/chrome-devtools/snippets)
 
