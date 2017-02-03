@@ -29,8 +29,11 @@ redirects:
 - from: /web/updates/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API
   to: /web/updates/2014/01/Web-apps-that-talk-Introduction-to-the-Speech-Synthesis-API
 
+- from: /web/updates/2014/05/Web-Animations-element.animate-is-now-in-Chrome-36
+  to: /web/updates/2014/05/Web-Animations-element-animate-is-now-in-Chrome-36
+
 - from: /web/updates/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36
-  to: /web/updates/2014/05/Web-Animations-element.animate-is-now-in-Chrome-36
+  to: /web/updates/2014/05/Web-Animations-element-animate-is-now-in-Chrome-36
 
 - from: /web/updates/2014/08/Easier-ArrayBuffer---String-conversion-with-the-Encoding-API
   to: /web/updates/2014/08/Easier-ArrayBuffer-String-conversion-with-the-Encoding-API
