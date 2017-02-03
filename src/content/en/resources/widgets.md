@@ -199,7 +199,7 @@ Gain more feedback on your doc by asking your readers yes / no questions.
 
 See question at bottom of [Get Started Debugging JS][inline feedback example].
 
-[inline feedback example]: https://developers.google.com/web/tools/chrome-devtools/javascript/#step-1
+[inline feedback example]: /web/tools/chrome-devtools/javascript/#step-1
 
 ### Usage
 
