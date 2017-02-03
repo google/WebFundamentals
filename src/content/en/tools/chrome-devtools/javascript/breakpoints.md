@@ -26,7 +26,7 @@ yourself time when debugging by knowing how and when to use the other types
 of breakpoints.
 
 <table>
-  <tr><th>Breakpoint Type</th><th>Use This Type When You...</th></tr>
+  <tr><th>Breakpoint Type</th><th>Use This When You...</th></tr>
   <tr>
     <td><a href="#loc">Line-of-code</a></td>
     <td>
@@ -87,8 +87,7 @@ To set a line-of-code breakpoint in DevTools:
   <img src="imgs/loc-breakpoint.png"
        alt="A line-of-code breakpoint."
   <figcaption>
-    <b>Figure 1</b>: The blue icon on top of <b>29</b> indicates that there's
-    a line-of-code breakpoint set on that line.
+    <b>Figure 1</b>: A line-of-code breakpoint set on line <b>29</b>
   </figcaption>
 </figure>
 
@@ -103,8 +102,7 @@ To set a conditional line-of-code breakpoint:
 1. Click the **Sources** tab.
 1. Open the file containing the line of code you want to break on.
 1. Go the line of code.
-1. To the left of the line of code is the line number column. Right-click on
-   it.
+1. To the left of the line of code is the line number column. Right-click it.
 1. Select **Add conditional breakpoint**. A dialog displays underneath the
    line of code.
 1. Enter your condition in the dialog.
@@ -115,8 +113,8 @@ To set a conditional line-of-code breakpoint:
   <img src="imgs/conditional-loc-breakpoint.png"
        alt="A conditional line-of-code breakpoint."
   <figcaption>
-    <b>Figure 2</b>: The orange icon on top of <b>32</b> indicates that there's
-    a conditional line-of-code breakpoint set on that line.
+    <b>Figure 2</b>: A conditional line-of-code breakpoint set on line
+    <b>32</b>
   </figcaption>
 </figure>
 
@@ -125,22 +123,30 @@ To set a conditional line-of-code breakpoint:
 Use the **Breakpoints** pane to disable or remove line-of-code breakpoints from
 a single location.
 
+<figure>
+  <img src="imgs/breakpoints-pane.png"
+       alt="The Breakpoints pane."
+  <figcaption>
+    <b>Figure 3</b>: The <b>Breakpoints</b> pane showing two line-of-code
+    breakpoints: one on line 15 of <code>get-started.js</code>, another on
+    line 32
+  </figcaption>
+</figure>
+
 * Check the checkbox next to an entry to disable that breakpoint.
-* Right-click over an entry to remove that breakpoint.
+* Right-click an entry to remove that breakpoint.
 * Right-click anywhere in the **Breakpoints** pane to deactivate all
   breakpoints, disable all breakpoints, or remove all breakpoints. Disabling
   all breakpoints is equivalent to unchecking each one. Deactivating all
   breakpoints instructs DevTools to ignore all line-of-code breakpoints, but to
   also maintain preserve their enabled state so that they are in the same
-  state as before when you re-activate them.
+  state as before when you reactivate them.
 
 <figure>
-  <img src="imgs/breakpoints-pane.png"
-       alt="The Breakpoints pane."
+  <img src="imgs/deactivated-breakpoints.png"
+       alt="Deactivated breakpoints in the Breakpoints pane."
   <figcaption>
-    <b>Figure 3</b>: The <b>Breakpoints</b> pane shows that there are two
-    line-of-code breakpoints: one on line 15 of <code>get-started.js</code>,
-    and another on line 32.
+    <b>Figure 4</b>: Deactivated breakpoints in the <b>Breakpoints</b> pane
   </figcaption>
 </figure>
 
@@ -153,7 +159,7 @@ To set a DOM change breakpoint:
 
 1. Click the **Elements** tab.
 1. Go the element that you want to set the breakpoint on.
-1. Right-click on the element.
+1. Right-click the element.
 1. Hover over **Break on** then select **Subtree modifications**, **Attribute
   modifications**, or **Node removal**.
 
@@ -161,11 +167,11 @@ To set a DOM change breakpoint:
   <img src="imgs/dom-change-breakpoint.png"
        alt="The context menu for creating a DOM change breakpoint."
   <figcaption>
-    <b>Figure 4</b>: The context menu for creating a DOM change breakpoint.
+    <b>Figure 5</b>: The context menu for creating a DOM change breakpoint
   </figcaption>
 </figure>
 
-### More information on each type of DOM change breakpoint
+### Types of DOM change breakpoints {: #dom-types }
 
 * **Subtree modifications**. Triggered when a child of the currently-selected
   node is removed or added, or the contents of a child are changed. Not
@@ -183,6 +189,8 @@ Use an XHR breakpoint when you want to break when the request URL of an XHR
 contains a specified string. DevTools pauses on the line of code where the
 XHR calls `send()`.
 
+Note: This feature also works with [Fetch][Fetch] requests.
+
 To set an XHR breakpoint:
 
 1. Click the **Sources** tab.
@@ -196,11 +204,12 @@ To set an XHR breakpoint:
   <img src="imgs/xhr-breakpoint.png"
        alt="Creating an XHR breakpoint."
   <figcaption>
-    <b>Figure 5</b>: Creating an XHR breakpoint in the <b>XHR Breakpoints</b>
-    pane. Whenever an XHR's request URL contains <code>org</code>, DevTools
-    pauses on the line of code where the XHR calls <code>send()</code>.
+    <b>Figure 6</b>: Creating an XHR breakpoint in the <b>XHR Breakpoints</b>
+    for any request that contains <code>org</code> in the URL
   </figcaption>
 </figure>
+
+[Fetch]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 
 ## Event listener breakpoints {: #event-listeners }
 
@@ -214,16 +223,14 @@ as `click`, or categories of events, such as all mouse events.
 1. Check one of these categories to pause whenever any event from that category
    is fired, or expand the category and check a specific event.
 
- <figure>
-   <img src="imgs/event-listener-breakpoint.png"
-        alt="Creating an event listener breakpoint."
-   <figcaption>
-     <b>Figure 6</b>: Creating an event listener breakpoint in the <b>Event
-     Listener Breakpoints</b> pane. Whenever a <code>deviceorientation</code>
-     event is fired, and there's a listener registered for that event,
-     DevTools pauses on the first line of the listener.
-   </figcaption>
- </figure>
+<figure>
+  <img src="imgs/event-listener-breakpoint.png"
+       alt="Creating an event listener breakpoint."
+  <figcaption>
+    <b>Figure 7</b>: Creating an event listener breakpoint for
+    <code>deviceorientation</code>
+  </figcaption>
+</figure>
 
 ## Exception breakpoints {: #exceptions }
 
@@ -236,3 +243,12 @@ throwing a caught or uncaught exception.
    when enabled.
 1. (Optional) Check the **Pause On Caught Exceptions** checkbox if you also
    want to pause on caught exceptions, in addition to uncaught ones.
+
+<figure>
+  <img src="imgs/uncaught-exception.png"
+       alt="Paused on an uncaught exception."
+  <figcaption>
+    <b>Figure 7</b>: Paused on an uncaught exception
+  </figcaption>
+</figure>
+
