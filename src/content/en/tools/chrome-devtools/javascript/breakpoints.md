@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Learn about all the types of breakpoints you can use while debugging JS in Chrome DevTools.
+description: Learn about all the types of breakpoints you can use while debugging JavaScript in Chrome DevTools.
 
 {# wf_updated_on: 2017-02-03 #}
 {# wf_published_on: 2017-02-03 #}
