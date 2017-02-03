@@ -13,7 +13,8 @@ description: Progressive Web Apps are becoming more integrated with your device.
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
 Chrome first introduced the ["Add to Home screen"
-banners](/web/fundamentals/engage-and-retain/app-install-banners/) in Chrome 51.
+banners](/web/fundamentals/engage-and-retain/app-install-banners/) in [Chrome
+42](https://blog.chromium.org/2015/03/chrome-42-beta-push-notifications_12.html).
 This was a big step for the web as it provided users the ability to easily keep
 a favorite site on their Home screen, much like native apps. We've heard from
 developers like [Alibaba that users re-engage 4 times more
