@@ -28,7 +28,7 @@ yields to 48% more installs.
   </iframe>
 </div>
 
-We are happy to share that the team has worked on an improved Add to Home 
+We are happy to share that the team has worked on an improved add to home 
 screen experience that makes web apps first-class citizens of Android. 
 Instead of simply being a shortcut icon, web apps will now be integrated with 
 Android. This means that users that add a PWA to their Home screen will be able 
@@ -58,7 +58,7 @@ and will be rolling out to Chrome 57 beta over the next few weeks.
        testing.) If you don't see the prompt you can find it in Android Settings 
        &gt; Security &gt; Device Administration.
 1. Visit your PWA. You can start install from the three dot menu &gt; "Add to 
-   Home screen" or through the Add to Home screen banner.
+   Home screen" or through the add to home screen banner.
     1. In the developer preview you'll additionally see a prompt from the 
        package installer to confirm.
 
@@ -79,7 +79,7 @@ When a Progressive Web App is installed via this new improved add to home screen
 experience it will be registered with the system to be a target for the URL
 space for its domain. This means that the when a user clicks on a link that is
 contained within the scope of your Progressive Web App, your app will be opened
-instead of Chrome openning with your PWA running.
+instead of Chrome opening with your PWA running.
 
 When you install a Progressive Web App, we look at your Web App Manifest and
 other meta-data and create the APK that is installed on to the user's device. In
