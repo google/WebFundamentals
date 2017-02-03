@@ -18,7 +18,7 @@ install:
 script:
 - npm run build
 - npm run test
-deploy:
-  provider: gae
-  keyfile: client-secret.json
-  project: web-central
+# deploy:
+#   provider: gae
+#   keyfile: client-secret.json
+#   project: web-central
