@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Learn about all the types of breakpoints you can use while debugging JavaScript in Chrome DevTools.
+description: Learn about all the ways you can pause your code in Chrome DevTools.
 
 {# wf_updated_on: 2017-02-03 #}
 {# wf_published_on: 2017-02-03 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Breakpoints Guide {: .page-title }
+# Pause Your Code With Breakpoints {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
