@@ -1,16 +1,23 @@
 language: node_js
 node_js:
-  - "4"
+- '4'
 sudo: required
 dist: trusty
 git:
   depth: 1
 cache:
-   directories:
-     - node_modules
+  directories:
+  - node_modules
 install:
-  - npm install
-  - npm run clean
+- npm install
+- npm run clean
 script:
-  - npm run build
-  - npm run test
+- npm run build
+- npm run test
+deploy:
+  provider: gae
+  keyfile: client-secret.json
+  project: web-central
+before_install:
+- openssl aes-256-cbc -K $encrypted_7c1b14c4fe42_key -iv $encrypted_7c1b14c4fe42_iv
+  -in client-secret.json.enc -out client-secret.json -d
