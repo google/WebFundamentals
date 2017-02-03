@@ -49,7 +49,7 @@ and will be rolling out to Chrome 57 beta over the next few weeks.
 1. Enable improved add to Home screen. These steps are only needed during the 
    developer preview.
     1. Open chrome://flags in Chrome dev and enable the flag 
-       \#enable-improved-a2hs ("Find in page" in the triple-dot menu is helpful 
+       `#enable-improved-a2hs` ("Find in page" in the triple-dot menu is helpful 
        for finding it.) You'll be prompted to restart Chrome.
     1. Once Chrome is restarted, you'll be prompted to go to settings to turn on 
        "Unknown sources" if it's not enabled already. (In general you shouldn't 
