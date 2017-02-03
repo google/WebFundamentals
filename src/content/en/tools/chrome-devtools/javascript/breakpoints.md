@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Learn about all the types of breakpoints you can use while debugging JS in Chrome DevTools.
+description: Learn about all the types of breakpoints you can use while debugging JavaScript in Chrome DevTools.
 
 {# wf_updated_on: 2017-02-03 #}
 {# wf_published_on: 2017-02-03 #}
@@ -102,7 +102,7 @@ To set a conditional line-of-code breakpoint:
 
 1. Click the **Sources** tab.
 1. Open the file containing the line of code you want to break on.
-1. Go the line of code.
+1. Go to the line of code.
 1. To the left of the line of code is the line number column. Right-click on
    it.
 1. Select **Add conditional breakpoint**. A dialog displays underneath the
