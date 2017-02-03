@@ -282,16 +282,15 @@ reduces the number of bytes, but also has the potential to delay text rendering.
 
 ### Optimizing font rendering with the Font Loading API
 
-The [Font Loading API](http://dev.w3.org/csswg/css-font-loading/) provides a scripting interface to define and manipulate CSS font faces, track their download progress, and override their default lazyload behavior. For example, if you're sure that a particular font variant is required, you can define it and tell the browser to initiate an immediate fetch of the font resource:
+The [Font Loading API](https://www.w3.org/TR/css-font-loading/) provides a scripting interface to define and manipulate CSS font faces, track their download progress, and override their default lazyload behavior. For example, if you're sure that a particular font variant is required, you can define it and tell the browser to initiate an immediate fetch of the font resource:
 
 
     var font = new FontFace("Awesome Font", "url(/fonts/awesome.woff2)", {
       style: 'normal', unicodeRange: 'U+000-5FF', weight: '400'
     });
     
-    font.load(); // don't wait for the render tree, initiate an immediate fetch!
-    
-    font.ready().then(function() {
+    // don't wait for the render tree, initiate an immediate fetch!
+    font.load().then(function() {
       // apply the font (which may re-render text and cause a page reflow)
       // after the font has finished downloading
       document.fonts.add(font);
@@ -306,7 +305,7 @@ The [Font Loading API](http://dev.w3.org/csswg/css-font-loading/) provides a scr
     });
     
 
-Further, because you can check the font status (via the [check()](http://dev.w3.org/csswg/css-font-loading/#font-face-set-check)) method and track its download progress, you can also define a custom strategy for rendering text on your pages: 
+Further, because you can check the font status (via the [check()](https://www.w3.org/TR/css-font-loading/#font-face-set-check)) method and track its download progress, you can also define a custom strategy for rendering text on your pages: 
 
 * You can hold all text rendering until the font is available.
 * You can implement a custom timeout for each font.
