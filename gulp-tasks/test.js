@@ -323,6 +323,15 @@ function validateMarkdown(filename, commonTags) {
   return new Promise(function(resolve, reject) {
     readFile(filename)
     .then(function(content) {
+
+      // Verify there are no dots in the filename
+      var numDots = filename.split('.');
+      if (numDots.length !== 2) {
+        errMsg = 'Filename or path should not contain dots.';
+        logError(filename, errMsg);
+        errors++;
+      }
+
       // Check if this is a markdown include file
       var isInclude = wfRegEx.RE_MD_INCLUDE.test(content);
       var errMsg;
