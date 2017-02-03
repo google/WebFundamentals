@@ -2,19 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with debugging JavaScript using Chrome DevTools in this interactive tutorial.
 
-{# wf_updated_on: 2017-01-04 #}
+{# wf_updated_on: 2017-01-13 #}
 {# wf_published_on: 2017-01-04 #}
 
-<style>
-.devtools-inline {
-  max-height: 1em;
-  vertical-align: middle;
-}
-</style>
-
-<!-- TODO
-     make demo responsive
--->
+{% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
 # Get Started with Debugging JavaScript in Chrome DevTools {: .page-title }
 
@@ -57,6 +48,8 @@ to fix in this tutorial.
 
 Whoops. That result is wrong. The result should be `6`. This is the bug that
 you're going to fix.
+
+{% include "web/tools/chrome-devtools/javascript/_feedback/1.html" %}
 
 ## Step 2: Pause the code with a breakpoint
 
@@ -106,6 +99,8 @@ handler, DevTools automatically pauses on the first line of that node's
 
 Note: This is just one of the many types of breakpoints that DevTools offers.
 What breakpoint you should use depends on what type of issue you're debugging.
+
+{% include "web/tools/chrome-devtools/javascript/_feedback/2.html" %}
 
 [resume]: /web/tools/chrome-devtools/images/resume-script-execution.png
 
