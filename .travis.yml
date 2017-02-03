@@ -10,7 +10,7 @@ cache:
      - node_modules
 install:
   - npm install
-script:
   - npm run clean
+script:
   - npm run build
   - npm run test
