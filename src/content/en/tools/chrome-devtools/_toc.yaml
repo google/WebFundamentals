@@ -53,7 +53,7 @@ toc:
       section:
       - title: Get Started
         path: /web/tools/chrome-devtools/javascript/
-      - title: Breakpoints Guide
+      - title: Pause Your Code With Breakpoints
         path: /web/tools/chrome-devtools/javascript/breakpoints
       - title: Step Through Code
         path: /web/tools/chrome-devtools/javascript/step-code
