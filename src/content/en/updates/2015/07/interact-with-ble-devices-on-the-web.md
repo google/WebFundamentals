@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT.
 
-{# wf_updated_on: 2016-12-29 #}
+{# wf_updated_on: 2017-02-06 #}
 {# wf_published_on: 2015-07-21 #}
 {# wf_tags: news,iot,webbluetooth,physicalweb,origintrials #}
 {# wf_featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png #}
@@ -169,7 +169,25 @@ you'll get an error later when trying to access them.
     })
     .then(device => { /* ... */ })
     .catch(error => { console.log(error); });
-    
+
+
+Finally, instead of `filters` you can use the `acceptAllDevices` key to show
+all nearby Bluetooth devices. You will also need to define the
+`optionalServices` key to be able to access some services. If you don't, you'll
+get an error later when trying to access them.
+
+
+    navigator.bluetooth.requestDevice({
+      acceptAllDevices: true,
+      optionalServices: ['battery_service']
+    })
+    .then(device => { /* ... */ })
+    .catch(error => { console.log(error); });
+
+
+Caution: This may result in a bunch of unrelated devices being shown in the
+chooser and energy being wasted as there are no filters. Use it with caution.
+
 
 ### Connect to a Bluetooth Device
 
@@ -264,7 +282,7 @@ page](https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicV
     .then(service => service.getCharacteristic('heart_rate_control_point'))
     .then(characteristic => {
       // Writing 1 is the signal to reset energy expended.
-      var resetEnergyExpended = new Uint8Array([1]);
+      var resetEnergyExpended = Uint8Array.of(1);
       return characteristic.writeValue(resetEnergyExpended);
     })
     .then(_ => {
@@ -372,6 +390,7 @@ Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/de
 ## Libraries
 
 - [web-bluetooth-utils](https://www.npmjs.com/package/web-bluetooth-utils) is a npm module that adds some convenience functions to the API.
+- A Web Bluetooth API shim is available in [noble](https://github.com/sandeepmistry/noble), the most popular Node.js BLE central module. This allows you to webpack/browserify noble without the need for a WebSocket server or other plugins.
 - [angular-web-bluetooth](https://github.com/manekinekko/angular-web-bluetooth) is a module for [Angular](https://angularjs.org/) that abstracts away all the boilerplate needed to configure the Web Bluetooth API.
 - [&lt;platinum-bluetooth>](https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device) is a set of [Polymer](https://www.polymer-project.org/) elements to discover and communicate with nearby Bluetooth devices based on the Web Bluetooth API. For instance, here's how to read battery level from a nearby bluetooth device advertising a Battery service:
 
