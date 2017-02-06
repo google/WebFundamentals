@@ -15,9 +15,5 @@ install:
 script:
   - npm run build
   - npm run test
-deploy:
-  provider: gae
-  keyfile: client-secret.json
-  project: web-central
-  version: travis
-  on: travis
+after_script:
+  - ./tools/travis-deploy.sh
