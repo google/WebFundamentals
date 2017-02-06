@@ -12,11 +12,11 @@ before_install:
 install:
   - npm install
   - npm run clean
-  - ls
 script:
   - npm run build
   - npm run test
-# deploy:
-#   provider: gae
-#   keyfile: client-secret.json
-#   project: web-central
+deploy:
+  provider: gae
+  keyfile: client-secret.json
+  project: web-central
+  version: master
