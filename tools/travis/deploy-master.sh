@@ -13,3 +13,4 @@ fi
 echo "Travis Auto-Deployment (master)"
 
 $HOME/google-cloud-sdk/bin/gcloud app deploy app.yaml -q --no-promote --version master
+curl https://web-central.appspot.com/flushMemCache
