@@ -29,6 +29,11 @@ DEFAULT_LANG = 'en'
 DEVENV = os.environ['SERVER_SOFTWARE'].startswith('Dev')
 USE_MEMCACHE = not DEVENV
 
+class FlushMemCache(webapp2.RequestHandler):
+    def get(self):
+        memcache.flush_all()
+        self.response.out.write('Flushed')
+
 class HomePage(webapp2.RequestHandler):
     def get(self):
         self.redirect('/web/', permanent=True)
@@ -100,6 +105,7 @@ class DevSitePages(webapp2.RequestHandler):
 
 # The '/' entry is a redirect to /web/ - just a convenience thing
 app = webapp2.WSGIApplication([
+    ('/flushMemCache', FlushMemCache),
     ('/', HomePage),
     ('/web/(.*)', DevSitePages),
     ('/framebox/(.*)', Framebox),
