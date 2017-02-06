@@ -210,7 +210,9 @@ See question at bottom of [Get Started Debugging JS][inline feedback example].
    required.
 4. Include `_feedback/1.html` into your doc, like this:
 
-       {% include "web/path/to/_feedback/1.html" %}
+<pre class="prettyprint">
+&#123;% include "web/path/to/_feedback/1.html" %}
+</pre>
 
 Path must always start with relative reference to `web/`. This
 is just how the `include` tag works.
