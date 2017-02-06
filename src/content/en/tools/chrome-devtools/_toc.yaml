@@ -53,8 +53,8 @@ toc:
       section:
       - title: Get Started
         path: /web/tools/chrome-devtools/javascript/
-      - title: Set Breakpoints
-        path: /web/tools/chrome-devtools/javascript/add-breakpoints
+      - title: Pause Your Code With Breakpoints
+        path: /web/tools/chrome-devtools/javascript/breakpoints
       - title: Step Through Code
         path: /web/tools/chrome-devtools/javascript/step-code
       - title: Pretty-Print Minified JavaScript
