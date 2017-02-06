@@ -1,13 +1,7 @@
 #!/bin/bash
 
-function installGAE {
-  curl https://sdk.cloud.google.com | bash
-  $HOME/google-cloud-sdk/bin/gcloud components update app -q
-}
-
 function pullRequest {
   echo "*** PULL REQUEST ***"
-  installGAE
 }
 
 function deployMaster {
