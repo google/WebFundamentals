@@ -41,7 +41,7 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 
 A subset of the Web Bluetooth API is available in Chrome 56 for Chrome OS,
 Chrome for Android M, and Mac. This means you should be able to
-[scan for](#scan-for-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
+[request](#request-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
 nearby Bluetooth devices,
 [read](#read-a-bluetooth-characteristic)/[write](#write-to-a-bluetooth-characteristic)
 Bluetooth characteristics, [receive GATT Notifications](#receive-gatt-notifications), and know when a [Bluetooth device gets
@@ -113,7 +113,7 @@ functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions
 -- they have a shorter syntax compared to function expressions and lexically
 bind the `this` value.
 
-### Scan for Bluetooth Devices
+### Request Bluetooth Devices
 
 This version of the Web Bluetooth API specification allows websites,
 running in the Central role, to connect to remote GATT Servers over a BLE
@@ -124,13 +124,17 @@ When a website requests access to nearby devices using
 `navigator.bluetooth.requestDevice`, Google Chrome will prompt user with a
 device chooser where they can pick one device or simply cancel the request.
 
-<img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-device-chooser.png" alt="Bluetooth Device Chooser screenshot"/>
+<video autoplay loop muted style="max-width: 100%"
+    poster="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-device-chooser.png">
+  <source src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-device-chooser.webm" type="video/webm; codecs=vp8">
+  <source src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-device-chooser.mp4" type="video/mp4; codecs=h264">
+</video>
 
 The `navigator.bluetooth.requestDevice` function takes a mandatory Object that
 defines filters. These filters are used to return only devices that match some
 advertised Bluetooth GATT services and/or the device name.
 
-For instance, scanning for Bluetooth devices advertising the [Bluetooth GATT Battery Service](https://developer.bluetooth.org/gatt/services/Pages/ServiceViewer.aspx?u=org.bluetooth.service.battery_service.xml) is this simple:
+For instance, requesting Bluetooth devices advertising the [Bluetooth GATT Battery Service](https://developer.bluetooth.org/gatt/services/Pages/ServiceViewer.aspx?u=org.bluetooth.service.battery_service.xml) is this simple:
 
 
     navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }] })
@@ -154,7 +158,7 @@ form.
     .catch(error => { console.log(error); });
     
 
-You can also scan for Bluetooth devices based on the device name being
+You can also request Bluetooth devices based on the device name being
 advertised with the `name` filters key, or even a prefix of this name with the
 `namePrefix` filters key. Note that in this case, you will also need to define
 the `optionalServices` key to be able to access some services. If you don't,
