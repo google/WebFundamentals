@@ -36,6 +36,7 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
+    "clean": "gulp clean",
     "postinstall": "gulp build",
     "build": "gulp build",
     "test": "gulp test",
