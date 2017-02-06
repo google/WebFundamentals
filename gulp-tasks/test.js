@@ -27,6 +27,7 @@ var ERROR_STRINGS = [
   {label: 'Hard coded language URL in link (hl=xx)', regEx: /[\?|&]hl=\w\w/g},
   {label: 'Hard coded https://developers.google.com in link (MD)', regEx: /\(https:\/\/developers.google.com/},
   {label: 'Hard coded https://developers.google.com in link (HTML)', regEx: /href="https:\/\/developers.google.com/},
+  {label: 'Google Sandboxed domain', regEx: /sandbox\.google\.com/g}
 ];
 var VALID_DATE_FORMATS = ['YYYY-MM-DD', 'YYYY-MM-DDTHH:mm:ss.sssZ'];
 
@@ -323,6 +324,15 @@ function validateMarkdown(filename, commonTags) {
   return new Promise(function(resolve, reject) {
     readFile(filename)
     .then(function(content) {
+
+      // Verify there are no dots in the filename
+      var numDots = filename.split('.');
+      if (numDots.length !== 2) {
+        errMsg = 'Filename or path should not contain dots.';
+        logError(filename, errMsg);
+        errors++;
+      }
+
       // Check if this is a markdown include file
       var isInclude = wfRegEx.RE_MD_INCLUDE.test(content);
       var errMsg;

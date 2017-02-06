@@ -17,7 +17,7 @@ description: WebM just added alpha transparency, and support for it has landed i
   <iframe class="devsite-embedded-youtube-video" data-video-id="LIH_myX3Zp0"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 Chrome Canary now supports video alpha transparency in WebM.
 
@@ -26,7 +26,7 @@ screen](https://en.wikipedia.org/wiki/Chroma_key)' videos encoded to WebM with
 an alpha channel. This means you can play videos with transparent backgrounds: over web pages, images or even other videos.
 
 There's a demo at
-[simpl.info/videoalpha](http://simpl.info/videoalpha). This only works in Chrome Canary at this point, and you'll need to enable VP8 alpha transparency from the chrome://flags page. Somewhat surreal, and a bit rough around the edges (literally) but you get the idea!
+[simpl.info/videoalpha](https://simpl.info/videoalpha). This only works in Chrome Canary at this point, and you'll need to enable VP8 alpha transparency from the chrome://flags page. Somewhat surreal, and a bit rough around the edges (literally) but you get the idea!
 
 ## How to make alpha videos
 

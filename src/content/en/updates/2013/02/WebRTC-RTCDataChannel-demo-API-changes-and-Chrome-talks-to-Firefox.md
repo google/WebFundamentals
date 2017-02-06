@@ -16,7 +16,7 @@ book_path: /web/updates/_book.yaml
 
 <h2>RTCDataChannel for Chrome</h2>
 
-<p>RTCDataChannel has been implemented in Chrome, and there's a great little demo at <a href="http://www.simpl.info/rtcdatachannel" title="Data Channel">simpl.info/dc</a>.</p>
+<p>RTCDataChannel has been implemented in Chrome, and there's a great little demo at <a href="https://simpl.info/rtcdatachannel" title="Data Channel">simpl.info/dc</a>.</p>
 
 <p>This demo shows peer-to-peer communication of arbitrary data &ndash; in less than a hundred lines of code. You'll need Chrome 25 or above for this, which at this point means <a href="https://www.google.com/intl/en/chrome/browser/beta.html" title="Download Chrome Beta">Beta</a> or <a href="https://www.google.com/intl/en/chrome/browser/canary.html" title="Download Chrome Canary">Canary</a>.</p>
 
@@ -33,7 +33,7 @@ book_path: /web/updates/_book.yaml
 	<li>RTCPeerConnection now has <code>getLocalStreams()</code> instead of <code>localStreams</code>, and <code>getRemoteStreams()</code> instead of <code>remoteStreams</code>.</li>
 </ol>
 
-<p>To get a glimpse of MediaStream in action, take a look at the <a href="http://simpl.info/getusermedia/" title="Simple getUserMedia demo">simpl.info/gum</a> <code>getUserMedia</code> demo. The <code>stream</code> variable is in global scope: examine it from the console. Likewise for RTCPeerConnection at <a href="Single page RTCPeerConnection demo" title="">simpl.info/pc</a>: the RTCPeerConnection objects <code>pc1</code> and <code>pc2</code> are in global scope.</p>
+<p>To get a glimpse of MediaStream in action, take a look at the <a href="https://simpl.info/getusermedia/" title="Simple getUserMedia demo">simpl.info/gum</a> <code>getUserMedia</code> demo. The <code>stream</code> variable is in global scope: examine it from the console. Likewise for RTCPeerConnection at <a href="https://simpl.info/pc" title="RTCPeerConnection demo">simpl.info/pc</a>: the RTCPeerConnection objects <code>pc1</code> and <code>pc2</code> are in global scope.</p>
 
 <h2>Chrome &lt;=&gt; Firefox</h2>
 
@@ -47,7 +47,7 @@ book_path: /web/updates/_book.yaml
   <iframe class="devsite-embedded-youtube-video" data-video-id="MsAWR_rJ5n8"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 <p>Happy coding! And please let us know of any bugs, either by commenting on this post, or at <a href="http://crbug.com/new" title="File a Chrome bug">crbug.com/new</a>.</p>
 

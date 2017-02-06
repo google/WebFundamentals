@@ -10,6 +10,8 @@ description: In Chrome 56 and 57, there are a few changes to the Payment Request
 
 # Changes in the Payment Request API {: .page-title}
 
+{% include "web/_shared/contributors/agektmr.html" %}
+
 Since the launch of the Payment Request API in Chrome 53, a few changes have
 been made to the API. These changes won't break the functionalities of your
 working code, but we recommend you to add [a
@@ -70,7 +72,7 @@ cards.
 As part of [payment item
 information](/web/fundamentals/getting-started/primers/payment-request/#create-paymentrequest),
 developers can add `pending` to indicate that the price is not fully determined
-yet. The `pe nding` fieldaccepts a boolean value.
+yet. The `pending` field accepts a boolean value.
 
     {
       label: "State tax",

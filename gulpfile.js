@@ -76,6 +76,7 @@ gutil.log('');
 
 gulp.task('clean', function() {
   var filesToDelete = [
+    'build/**',
     'src/content/en/_shared/contributors/*',
     'src/content/**/rss.xml',
     'src/content/**/atom.xml',
@@ -108,6 +109,7 @@ gulp.task('default', function(cb) {
   console.log('Usage: gulp <command> [arguments]');
   console.log(' ', 'Commands');
   console.log('  ', gutil.colors.cyan('build'), 'Builds all auto-generated files...');
+  console.log('  ', gutil.colors.cyan('static'), 'Builds static versions of all files');
   console.log('  ', gutil.colors.cyan('clean'), 'Removes all auto-generated files from src/content/...');
   console.log('  ', gutil.colors.cyan('presubmit'), 'Clean & test');
   console.log('  ', gutil.colors.cyan('test'), 'Checks the files for any issues');

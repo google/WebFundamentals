@@ -105,6 +105,9 @@ toc:
         path: /web/tools/chrome-devtools/network-performance/issues
       - title: Reference
         path: /web/tools/chrome-devtools/network-performance/reference
+      - title: Resource Loading
+        path: /web/tools/chrome-devtools/network-performance/resource-loading
+        status: deprecated
     - title: Fix Memory Problems
       section:
       - title: Overview

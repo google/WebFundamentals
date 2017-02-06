@@ -35,6 +35,9 @@ redirects:
 - from: /web/shows/pwa-devsummit/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb
 
+- from: /web/shows/polycasts/season-2/first-look-polymer-0.8
+  to: /web/shows/polycasts/season-2/first-look-polymer-0-8
+
 - from: /web/shows/polycasts/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDdS7HWIC_BYRunV6MHs5xo
 
