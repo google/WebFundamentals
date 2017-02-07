@@ -174,7 +174,7 @@ resources from its cache on repeat visits.
 To experience your page like first-time users experience it, enable the
 **Disable Cache** checkbox.
 
-### Simulate offline
+### Simulate offline {: #offline }
 
 There is a new class of web apps, called [Progressive Web Apps][pwa], which can
 function offline with the help of [service workers][sw]. When you're building
@@ -187,7 +187,7 @@ experience.
 [pwa]: /web/progressive-web-apps/
 [sw]: /web/fundamentals/getting-started/primers/service-workers
 
-### Simulate network throttling
+### Simulate network throttling {: #throttling }
 
 Use the **Network Throttling** menu to simulate how your page loads in areas
 with poor connectivity.
@@ -715,7 +715,7 @@ From left to right, the Summary pane shows you:
   </figcaption>
 </figure>
 
-## Network Conditions drawer
+## Network Conditions drawer {: #network-conditions }
 
 While working in other DevTools panels, you can access network features from
 the Network Conditions drawer, including:
