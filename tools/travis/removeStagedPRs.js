@@ -1,7 +1,7 @@
 'use strict';
 
 /*
-    cleanupDeployedPRs.js
+    removeStagedPRs.js
     Removes Staged PRs that are either closed or merged.
  */
 

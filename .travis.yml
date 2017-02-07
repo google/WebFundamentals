@@ -21,7 +21,7 @@ after_success:
   - ./tools/travis/install-gc-sdk.sh
   - ./tools/travis/deploy-master.sh
   - ./tools/travis/deploy-pr.sh
-  - node ./tools/travis/cleanUpStagedPRs.js
+  - node ./tools/travis/removeStagedPRs.js
 branches:
   only:
     - master
