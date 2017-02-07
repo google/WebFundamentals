@@ -154,46 +154,38 @@ within the origin. Any navigation to a url inside your origin, but outside the
 scope will cause a new web context to be opened for the user. This allows you to
 have multiple progressive web apps per origin.
 
-## Effectivly managing the scope
-
-We've seen that the scope attribute helps users navigate into your progressive
-web app and it also controls how users can break out of your progressive web
-app.
-
-
-
 ## Managing permissions
 
-By Installing your Progressive Web App it now becomes part of the system. Added 
-sites show up on the home screen, app drawer and throughout the Android 
-System-UI as a user would expect. Permissions are handled differently, by 
-default your app can only have the same permissions surface as Chrome would 
-normally have when installed - you can't ask for Camera access at install time 
-for example. This means that as developer you must request permission for 
-sensitive API's such as Camera and Microphone access, notifications etc at 
-runtime as you would for any normal web site and the Chrome runtime will prompt 
+By Installing your Progressive Web App it now becomes part of the system. Added
+sites show up on the home screen, app drawer and throughout the Android
+System-UI as a user would expect. Permissions are handled differently, by
+default your app can only have the same permissions surface as Chrome would
+normally have when installed - you can't ask for Camera access at install time
+for example. This means that as developer you must request permission for
+sensitive API's such as Camera and Microphone access, notifications etc at
+runtime as you would for any normal web site and the Chrome runtime will prompt
 you for access.
 
-Android normally gives instant access notifications, Installed Progressive Web 
-Apps do not have this permission granted by default and your user must 
+Android normally gives instant access notifications, Installed Progressive Web
+Apps do not have this permission granted by default and your user must
 explicitly opt-in to receiving notifications
 
 ## Storage and app state
 
-When the user adds your Progressive Web App to their system Chrome will use the 
-same profile and will not segregate the data. This means your service worker 
-will already be installed, your cookies still active any client-side storage 
+When the user adds your Progressive Web App to their system Chrome will use the
+same profile and will not segregate the data. This means your service worker
+will already be installed, your cookies still active any client-side storage
 will be still stored the next time that the user opens the App.
 
-This can cause some issues because if the user clears the Chrome profile, then 
-your data in your app will also be cleared. To ensure that your user data is 
-held more permanently, please use the [Persistent 
-Storage API](/web/updates/2016/06/persistent-storage).
+This can cause some issues because if the user clears the Chrome profile, then
+your data in your app will also be cleared. To ensure that your user data is
+held more permanently, please use the [Persistent Storage
+API](/web/updates/2016/06/persistent-storage).
 
-Please let us know if you have any feedback or questions. If you encounter a 
-bug, you can file it on the Chromium bug tracker 
-[here](https://bugs.chromium.org/p/chromium/issues/entry?components=Mobile%3EWebAPKs&labels=OS-Android,Type-Bug,Pri-2,Source-devpreview-feedback&cc=sbirch@google.com&comment=Android%20version%3A%0AChrome%20version%3A%20%0A%0ASite%3A%20%0A%0ASteps%20to%20reproduce%3A%0A(1)%0A(2)%0A(3)%0A%0AExpected%20result%3A%0A%0A%0AActual%20result%3A%0A). 
-Please also take a look at **FAQs below** that aim to answer any additional 
+Please let us know if you have any feedback or questions. If you encounter a
+bug, you can file it on the Chromium bug tracker
+[here](https://bugs.chromium.org/p/chromium/issues/entry?components=Mobile%3EWebAPKs&labels=OS-Android,Type-Bug,Pri-2,Source-devpreview-feedback&cc=sbirch@google.com&comment=Android%20version%3A%0AChrome%20version%3A%20%0A%0ASite%3A%20%0A%0ASteps%20to%20reproduce%3A%0A(1)%0A(2)%0A(3)%0A%0AExpected%20result%3A%0A%0A%0AActual%20result%3A%0A).
+Please also take a look at **FAQs below** that aim to answer any additional
 questions you might have.
 
 - - -
@@ -207,7 +199,7 @@ banner](/web/fundamentals/engage-and-retain/app-install-banners/).
 
 We recommend using [Lighthouse](/web/tools/lighthouse/) to audit your PWA.
 
-Note though that there is no engagement threshold for improved add to home 
+Note though that there is no engagement threshold for improved add to home
 screen from the menu.
 
 ### Does this change the triggering of the add to Home screen banner?
