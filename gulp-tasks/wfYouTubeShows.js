@@ -15,7 +15,10 @@ var wfTemplateHelper = require('./wfTemplateHelper');
 function buildFeeds(buildType, callback) {
   var apiKey;
   try {
-    apiKey = fs.readFileSync('./src/data/youtubeAPIKey.txt', 'utf8');
+    apiKey = process.env.YOUTUBE_API_KEY;
+    if (!apiKey) {
+      apiKey = fs.readFileSync('./src/data/youtubeAPIKey.txt', 'utf8');
+    }
   } catch (ex) {
     gutil.log(' ', 'YouTube feed build skipped, youtubeAPIKey.txt not found.');
     if (buildType === 'production') {
