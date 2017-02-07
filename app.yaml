@@ -2,7 +2,8 @@ runtime: python27
 api_version: 1
 threadsafe: true
 # application: petele-scratch
-# version: wf-devsite
+application: google.com:milkbone
+version: wf-devsite
 
 handlers:
 - url: /robots.txt
