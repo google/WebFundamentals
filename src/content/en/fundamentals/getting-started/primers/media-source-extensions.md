@@ -207,11 +207,6 @@ function sourceOpen(e) {
   }
 }</pre>
 
-In Chrome I have the option of getting the media file's contents as a
-`ReadableStream` or an `ArrayBuffer`. Virtually all other browsers return an
-`ArrayBuffer`. I'm going to show both methods. The procedure for getting an
-`ArrayBuffer` from `fetch()` is slightly different from what's done in XHR.
-
 ## Process the response object
 
 The code looks almost done, but the media doesn't play. We need to get media
