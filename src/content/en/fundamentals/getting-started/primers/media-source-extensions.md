@@ -20,7 +20,7 @@ that does such things as:
 +  Time shifting
 +  Control performance and download size
 
-You can almost think of it as a chain. Between the downloaded file and the media
+You can almost think of MSE as a chain. Between the downloaded file and the media
 elements are several layers.
 
 +  An `<audio>` or `<video>` element to play the media.
@@ -55,7 +55,7 @@ In practice, the chain looks like this:
         })
         .then(function(arrayBuffer) {
           sourceBuffer.onupdateend = function(e) {
-            if (sourceBuffer.updating && mediaSource.readyState == 'open') {
+            if (sourceBuffer.updating && mediaSource.readyState === 'open') {
               mediaSource.endOfStream();
             }
           }
@@ -103,7 +103,7 @@ MediaSource instance ready?', which matches the title of the next section.
 
 That a `MediaSource` object can be passed to a `src` attribute might seem a bit
 odd. Aren't `src` attributes usually strings? A media element's `src`
-[attribute can also be a blob](https://www.w3.org/TR/FileAPI/#url) undefined. 
+[attribute can also be a blob](https://www.w3.org/TR/FileAPI/#url). 
 If you inspect the example and examine the `<video>` element, you'll see what I
 mean.
 
@@ -111,12 +111,12 @@ mean.
 
 ### Is the MediaSource instance ready?
 
-`URL.createObjectURL() is itself synchronous; however, it processes the
-`attachment asynchronously. This causes a slight delay before you can do
-`anything with the MediaSource instance. Fortunately, there are ways to test for
-`this. The simplest way is with a MediaSource property called readyState. The
-`readyState property describes the relation between a MediaSource instance and a
-`media element. It can have one of the following values:
+`URL.createObjectURL()` is itself synchronous; however, it processes the
+attachment asynchronously. This causes a slight delay before you can do anything
+with the `MediaSource` instance. Fortunately, there are ways to test for this.
+The simplest way is with a `MediaSource` property called `readyState`. The
+`readyState` property describes the relation between a `MediaSource` instance and
+a media element. It can have one of the following values:
 
 +  `closed` - The `MediaSource` instance is not attached to a media element. 
 +  `open` - The `MediaSource` instance is attached to a media element and is
@@ -152,13 +152,15 @@ Now it's time to create the `SourceBuffer`, which is the object that actually
 does the work of shuttling data between media sources and media elements. A
 `SourceBuffer` has to be specific to the type of media file you're loading.
 
-codecs. Rather than trying to sort all this out, it's better to just include
-both.In practice you can do this by calling `addSourceBuffer()` with the
-appropriate mime type and codecs. Notice that the mime type string contains a
-mime type and a codec. Version 1 of the MSE spec allows user agents to differ on
-whether to require both. Some user agents don't require, but do allow just the
-mime type. Some user agents, Chrome for example, require a codec for mime types
-that don't self-describe their
+In practice you can do this by calling `addSourceBuffer()` with the appropriate
+mime type and codecs. Notice that the mime type string contains a mime type and
+a codec. Version 1 of the MSE spec allows user agents to differ on whether to
+require both. Some user agents don't require, but do allow just the mime type.
+Some user agents, Chrome for example, require a codec for mime types that don't
+self-describe their codecs. Rather than trying to sort all this out, it's better
+to just include both.
+
+Note: For simplicity, the example only shows one codec type, even though MSE only makes sense in practice for scenarios with multiple segments of video.  
 
 <pre class="prettyprint">
 var vidElement = document.querySelector('video');
@@ -185,8 +187,8 @@ function sourceOpen(e) {
 If you do an internet search for MSE examples, you'll find plenty that retrieve
 media files using XHR. Just to keep things simple, not to mention cutting edge,
 I'm going to use the [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch)
-undefined API and the Promise it returns. If you're trying to do this in Safari,
-it won't work without a fetch polyfill.
+API and the Promise it returns. If you're trying to do this in Safari,
+it won't work without a `fetch()` polyfill.
 
 Note: Just to help things fit on the screen, from here to the end I'm only going
 to show part of the example we're building. If you want to see it in context,
@@ -206,9 +208,9 @@ function sourceOpen(e) {
 }</pre>
 
 In Chrome I have the option of getting the media file's contents as a
-ReadableStream or an arrayBuffer. Virtually all other browsers return an
-arrayBuffer. I'm going to show both methods. The procedure for getting an array
-buffer from fetch is slightly different from what's done in XHR.
+`ReadableStream` or an `ArrayBuffer`. Virtually all other browsers return an
+`ArrayBuffer`. I'm going to show both methods. The procedure for getting an
+`ArrayBuffer` from `fetch()` is slightly different from what's done in XHR.
 
 ## Process the response object
 
@@ -227,7 +229,7 @@ function sourceOpen(e) {
   var mediaSource = this;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
   var video = 'droid.webm';
-  fetch(video)
+  `fetch()`(video)
     .then(function(response) {
       <strong>return response.arrayBuffer();</strong>
     })
@@ -249,7 +251,7 @@ function sourceOpen(e) {
   var mediaSource = this;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
   var video = 'droid.webm';
-  fetch(video)
+  `fetch()`(video)
     .then(function(response) {
       return response.arrayBuffer();
     })
@@ -282,13 +284,13 @@ Here's the complete code example.
       var mediaSource = this;
       var sourceBuffer = mediaSource.addSourceBuffer(mime);
       var video = 'droid.webm';
-      fetch(video)
+      `fetch()`(video)
         .then(function(response) {
           return response.arrayBuffer();
         })
         .then(function(arrayBuffer) {
           sourceBuffer.onupdateend = function(e) {
-            if (sourceBuffer.updating && mediaSource.readyState == 'open') {
+            if (sourceBuffer.updating && mediaSource.readyState === 'open') {
               mediaSource.endOfStream();
             }
           }
