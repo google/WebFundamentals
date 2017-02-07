@@ -575,6 +575,20 @@ function addCommitComment(data, body) {
   });
 }
 
+function addReviewComment(data, state, body) {
+  gutil.log('Adding commit comment...');
+  let github = new GitHubApi({debug: false, Promise: Promise});
+  github.authenticate({type: 'oauth', token: data.token});
+  return github.pullRequests.createReview({
+    owner: data.owner,
+    repo: data.repo,
+    number: data.pullRequest,
+    event: state,
+    body: body
+  });
+}
+
+
 /**
  * Prints a summary of the test results
  *
@@ -633,6 +647,7 @@ gulp.task('test', function(callback) {
     .then(printSummary)
     .then(function(data) {
       if (data) {
+        let state = 'APPROVE';
         if (summary.errors.length > 0 || summary.warnings.length > 0) {
           let body = '**Oops!** It looks like something in this commit broke ';
           body += 'the build. Please take a look and fix it.\n\n';
@@ -645,8 +660,10 @@ gulp.task('test', function(callback) {
             body += '**Warnings:**\n';
             body += summary.warnings.join('\n');
           }
-          addCommitComment(data, body);
+          state = 'REQUEST_CHANGES';
+          //addCommitComment(data, body);
         }
+        addReviewComment(data, state, body)
       }
     })
     .then(finalizeTests);
