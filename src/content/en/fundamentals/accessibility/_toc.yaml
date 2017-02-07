@@ -31,3 +31,5 @@ toc:
         path: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
     - title: Accessible Styles
       path: /web/fundamentals/accessibility/accessible-styles
+    - title: How To Do an Accessibility Audit
+      path: /web/fundamentals/accessibility/how-to-audit
