@@ -83,7 +83,7 @@ Optimize page load performance and debug request issues.
 
 ### Performance panel (previously Timeline panel)
 
-Note: In Chrome 57 the Timeline panel was renamed to the Performance panel.
+Note: In Chrome 58 the Timeline panel was renamed to the Performance panel.
 
 <img src="images/panels/performance.png" alt="Timeline Panel" class="attempt-right">
 Improve the runtime performance of your page by recording and exploring the various events that happen during the lifecycle of a site.
@@ -96,7 +96,7 @@ Improve the runtime performance of your page by recording and exploring the vari
 
 ### Memory panel (previously Profiles panel)
 
-Note: In Chrome 57 the Profiles panel was renamed to the Memory panel.
+Note: In Chrome 58 the Profiles panel was renamed to the Memory panel.
 
 <img src="images/panels/memory.png" alt="Profiles Panel" class="attempt-right">
 Profile memory usage and track down leaks.
