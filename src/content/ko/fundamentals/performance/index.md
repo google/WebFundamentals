@@ -87,3 +87,6 @@ web apps that maintain 60 frames per second performance.
 [HTTP/1 에서 HTTP/2 까지](https://udacity.com/ud897)<br>
 Surma 가 HTTP/1 기본부터 HTTP/2 까지 모두 알려줄 겁니다. 어떻게 자원을 효율적으로 로딩하고, 해당 프로토콜들의 보안 측면은 어떻게 신경 써야 하는지에 대해서 다룹니다.
 <div style="clear:both;"></div>
+
+Translated By:
+{% include "web/_shared/contributors/captainpangyo.html" %}
