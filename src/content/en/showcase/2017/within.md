@@ -3,7 +3,7 @@ book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2017-02-02T18:00:00.000Z #}
 {# wf_updated_on: 2017-02-02T18:00:00.000Z #}
-{# wf_featured_image: /web/showcase/2017/images/with.in/featured.png #}
+{# wf_featured_image: /web/showcase/2017/images/within/featured.png #}
 {# wf_featured_snippet: Within is a platform for storytelling in Virtual Reality and is available everywhere VR is. This includes the web. Leveraging WebVR, viewers are able to go to the website, click a link, and immediately watch Within’s films in immersive VR - including high end head-mounted displays. During the development process the team discovered rendering text is difficult in this new environment, and they created an example using shaders to make it a smoother process. #}
 {# wf_tags: webvr,casestudy #}
 
@@ -16,7 +16,7 @@ book_path: /web/showcase/_book.yaml
 
 **Working Files:** [https://vr.with.in/archive/text-sdf-bitmap.zip](https://vr.with.in/archive/text-sdf-bitmap.zip)
 
-<img src="/web/showcase/2017/images/with.in/0.png">
+<img src="/web/showcase/2017/images/within/0.png">
 
 ## Introduction
 
@@ -29,8 +29,8 @@ Like other Virtual Reality specific rendering environments, the web predominantl
 As we got further into our exploration of WebVR we ran into an issue. If we look at the contents of the web, text is an integral part of it. While the majority of our content is video based, if you go to the Within site ([http://with.in/#films](http://with.in/#films)) text surrounds the content; user-interface, additional information about a film or related films are all constructed with text. Furthermore all of this text is created in the DOM. Our WebVR explorations and [https://vr.with.in/](https://vr.with.in/) are all in `<canvas>`.
 
 <figure>
-  <img src="/web/showcase/2017/images/with.in/1.jpg" class="attempt-left">
-  <img src="/web/showcase/2017/images/with.in/2.jpg" class="attempt-right">
+  <img src="/web/showcase/2017/images/within/1.jpg" class="attempt-left">
+  <img src="/web/showcase/2017/images/within/2.jpg" class="attempt-right">
   <figcaption>Text used in WebVR for <a href="https://vr.with.in/">vr.with.in</a></figcaption>
 </figure>
 
@@ -119,7 +119,7 @@ Bitmap fonts use one quad (two triangles) per character, so it uses less geometr
 
 
 <figure>
-  <img src="/web/showcase/2017/images/with.in/diagram.png">
+  <img src="/web/showcase/2017/images/within/diagram.png">
   <figcaption>Font to SDF Bitmap Workflow</figcaption>
 </figure>
 
@@ -145,14 +145,14 @@ Once Hiero is running, open a .ttf or .otf desktop font, enter any extra charact
 
 
 <figure>
-  <img src="/web/showcase/2017/images/with.in/3.png">
+  <img src="/web/showcase/2017/images/within/3.png">
   <figcaption>Hiero Interface</figcaption>
 </figure>
 
 <figure>
   <div>
-    <img src="/web/showcase/2017/images/with.in/4.png" class="attempt-left">
-    <img src="/web/showcase/2017/images/with.in/5.png" class="attempt-right">
+    <img src="/web/showcase/2017/images/within/4.png" class="attempt-left">
+    <img src="/web/showcase/2017/images/within/5.png" class="attempt-right">
   </div>
   <figcaption>Hiero Output (Bitmap PNG and .fnt file)</figcaption>
 </figure>
@@ -177,7 +177,7 @@ node load-bmfont.js
 [roboto-bold.json](https://vr.with.in/archive/text-sdf-bitmap/fonts/roboto/bitmap/roboto-bold.json)
 
 <figure>
-  <img src="/web/showcase/2017/images/with.in/6.png">
+  <img src="/web/showcase/2017/images/within/6.png">
   <figcaption>Example of output JSON</figcaption>
 </figure>
 
@@ -237,7 +237,7 @@ For convenience, I created a TextBitmap wrapper class for the browserified three
 [vr.with.in/archive/text-sdf-bitmap/](https://vr.with.in/archive/text-sdf-bitmap/)
 
 <figure>
-  <img src="/web/showcase/2017/images/with.in/7.png">
+  <img src="/web/showcase/2017/images/within/7.png">
   <figcaption>Text-sdf-bitmap in action</figcaption>
 </figure>
 
@@ -274,11 +274,11 @@ TextBitmap also includes an invisible hitbox for three.js raycast interaction, t
 
 Bmtext.group is added to the three.js scene. If you need to access the children / Object3D's, the scene graph for the text looks like:
 
-<img src="/web/showcase/2017/images/with.in/diagram2.png">
+<img src="/web/showcase/2017/images/within/diagram2.png">
 
 ## 6. Unminify json and modify xoffsets
 
-<img src="/web/showcase/2017/images/with.in/8.gif">
+<img src="/web/showcase/2017/images/within/8.gif">
 
 
 If your kernings look off, you may need to edit the xoffsets in the json. Paste the json into [Jsbeautifier.org](http://jsbeautifier.org/)** **to get an unminified version of the file.
@@ -313,7 +313,7 @@ If you have multiple blocks of text and want it to flow from top to bottom like 
 That's what text layout in 3D is like. In the detail view: title, author, description, and duration are each a new TextBitmap object with their own styles, color, scale, etc.:
 
 
-<img src="/web/showcase/2017/images/with.in/9.jpg">
+<img src="/web/showcase/2017/images/within/9.jpg">
 
 
 
