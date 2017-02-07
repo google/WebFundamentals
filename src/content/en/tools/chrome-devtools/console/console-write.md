@@ -14,10 +14,10 @@ Console logging is a powerful way to inspect what your page or application does.
 
 
 ### TL;DR {: .hide-from-toc }
-- Use <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolelogobject--object-''>console.log()</a> for basic logging
-- Use <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consoleerrorobject--object-''>console.error()</a> and <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolewarnobject--object-''>console.warn()</a> for eye-catching stuff
-- Use <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolegroupobject-object-''>console.group()</a> and <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolegroupend''>console.groupEnd()</a> to group related messages and avoid clutter
-- Use <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consoleassertexpression-object''>console.assert()</a> to show conditional error messages
+- Use <a href="/web/tools/chrome-devtools/console/console-reference#log">console.log()</a> for basic logging
+- Use <a href="/web/tools/chrome-devtools/debug/console/console-reference#error">console.error()</a> and <a href="/web/tools/chrome-devtools/debug/console/console-reference#warn">console.warn()</a> for eye-catching stuff
+- Use <a href="/web/tools/chrome-devtools/debug/console/console-reference#group">console.group()</a> and <a href="/web/tools/chrome-devtools/debug/console/console-reference#groupend">console.groupEnd()</a> to group related messages and avoid clutter
+- Use <a href="/web/tools/chrome-devtools/debug/console/console-reference#assert">console.assert()</a> to show conditional error messages
 
 
 ## Writing to the console

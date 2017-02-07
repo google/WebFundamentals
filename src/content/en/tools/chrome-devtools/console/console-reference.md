@@ -95,7 +95,7 @@ on HTML and XML elements is equivalent to calling [`console.log()`](#log).
 
 ![console.dirxml() example](images/dirxml.png)
 
-## console.error(object [, object, ...]) {:#error}
+## console.error(object [, object, ...]) {: #error }
 
 Prints a message similar to [`console.log()`](#log), styles the 
 message like an error, and includes a stack trace from where the method was 
@@ -107,7 +107,7 @@ called.
 
 ![console.error() example](images/error.png)
 
-## console.group(object[, object, ...])
+## console.group(object[, object, ...]) {: #group }
 
 Starts a new logging group with an optional title. All console output that
 occurs after `console.group()` and before `console.groupEnd()` is visually
@@ -161,7 +161,7 @@ Creates a new logging group that is initially collapsed instead of open.
     console.groupEnd();
     
 
-## console.groupEnd() {:#groupend}
+## console.groupEnd() {: #groupend }
 
 Closes a logging group. See [`console.group`](#group) for an example.
 
@@ -274,7 +274,7 @@ Prints a stack trace from the point where the method was called.
 
 ![console.trace() example](images/trace.png)
 
-## console.warn(object [, object, ...]) {:#warn}
+## console.warn(object [, object, ...]) {: #warn }
 
 Prints a message like [`console.log()`](#log), but also displays a yellow 
 warning icon next to the logged message.
