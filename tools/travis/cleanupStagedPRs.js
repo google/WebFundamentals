@@ -9,12 +9,13 @@ let chalk = require('chalk');
 let GitHubApi = require('github');
 const exec = require('child_process').exec;
 
-console.log('Travis Deployment Cleanup');
-
-if (process.env.TRAVIS_EVENT_TYPE !== 'cron') {
-  console.log(chalk.yellow('EXITING...'), 'Not a cron job');
+let travisIsPush = process.env.TRAVIS_EVENT_TYPE === 'push';
+let travisIsOnMaster = process.env.TRAVIS_BRANCH === 'master';
+if (!travisIsPush || !travisIsOnMaster) {
   process.exit(0);
 }
+
+console.log('Travis Deployment Cleanup');
 
 const GCLOUD = process.env.HOME + '/google-cloud-sdk/bin/gcloud';
 const REPO_SLUG = process.env.TRAVIS_REPO_SLUG.split('/');
