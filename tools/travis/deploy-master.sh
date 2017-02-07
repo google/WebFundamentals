@@ -1,16 +1,28 @@
 #!/bin/bash
+set -ev
 
-# If branch is NOT master, abort.
-if [ "${TRAVIS_BRANCH}" != "master" ]; then
+#
+# Auto-Deploy MASTER
+#
+
+# If this isn't a push, abort.
+if [ "${TRAVIS_EVENT_TYPE}" != "push" ]; then
   exit
 fi
 
-# If there were build failures, abort
+# If this isn't master, abort.
+if [ "${TRAVIS_BRANCH}" = "master" ]; then
+  exit
+fi
+
+# If there were build failures, abort...
 if [ "${TRAVIS_TEST_RESULT}" = "1" ]; then
+  echo "Deploy aborted, there were test failures."
   exit
 fi
 
-echo "Travis Auto-Deployment (master)"
-
+# Deploy to AppEngine
 $HOME/google-cloud-sdk/bin/gcloud app deploy app.yaml -q --no-promote --version master
-curl https://web-central.appspot.com/flushMemCache
+
+# Flush the MemCache
+curl https://$AE_APP_ID.appspot.com/flushMemCache
