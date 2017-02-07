@@ -5,13 +5,8 @@ set -ev
 # Clean-up Deployed PRs
 #
 
-# If this isn't a push, abort.
-if [ "${TRAVIS_EVENT_TYPE}" != "push" ]; then
-  exit
-fi
-
-# If this isn't master, abort.
-if [ "${TRAVIS_BRANCH}" = "master" ]; then
+# If this isn't a cron job, abort.
+if [ "${TRAVIS_EVENT_TYPE}" != "cron" ]; then
   exit
 fi
 

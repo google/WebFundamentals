@@ -11,7 +11,7 @@ if [ "${TRAVIS_EVENT_TYPE}" != "push" ]; then
 fi
 
 # If this isn't master, abort.
-if [ "${TRAVIS_BRANCH}" = "master" ]; then
+if [ "${TRAVIS_BRANCH}" != "master" ]; then
   exit
 fi
 
