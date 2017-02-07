@@ -647,9 +647,10 @@ gulp.task('test', function(callback) {
     .then(printSummary)
     .then(function(data) {
       if (data) {
+        let body = '';
         let state = 'APPROVE';
         if (summary.errors.length > 0 || summary.warnings.length > 0) {
-          let body = '**Oops!** It looks like something in this commit broke ';
+          body = '**Oops!** It looks like something in this commit broke ';
           body += 'the build. Please take a look and fix it.\n\n';
           if (summary.errors.length > 0) {
             body += '**Errors:**\n';
