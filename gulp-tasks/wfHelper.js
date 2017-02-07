@@ -88,6 +88,7 @@ function readMetadataForFile(file) {
     datePublishedPretty: published.format('dddd, MMMM Do YYYY'),
     yearPublished: published.format('YYYY'),
     dateUpdated: updated.format(),
+    dateUpdatedPretty: updated.format('dddd, MMMM Do YYYY'),
     tags: []
   };
   var authorList = content.match(wfRegEx.RE_AUTHOR_LIST);

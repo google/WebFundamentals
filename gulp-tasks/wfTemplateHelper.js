@@ -168,6 +168,16 @@ function generateIndex(files, options) {
   renderTemplate(template, context, outputFile);
 }
 
+function generateLatestWidget(files, options) {
+  gutil.log(' ', 'Generating latest updates widget...');
+  var context = {
+    articles: files.splice(0, options.articlesToShow)
+  };
+  var template = path.join(GLOBAL.WF.src.templates, 'latest_articles.html');
+  var outputFile = path.join(options.outputPath, '_shared', 'latest_articles.html');
+  renderTemplate(template, context, outputFile);
+}
+
 function generateTagPages(files, options) {
   gutil.log(' ', 'Generating tag pages for ' + options.section + '...');
   var allTags = {};
@@ -206,6 +216,7 @@ function generateTagPages(files, options) {
   });
 }
 
+exports.generateLatestWidget = generateLatestWidget;
 exports.generateIndex = generateIndex;
 exports.generateFeeds = generateFeeds;
 exports.generatePodcastFeed = generatePodcastFeed;
