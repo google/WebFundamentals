@@ -143,7 +143,24 @@ controlled by several different Service Workers.
 
 ## Navigating outside of my progressive web app
 
-When the
+It is important for users to feel like they are using an app-like experience
+when using your progressive web app. This means that we need to handle
+navigations sensetively. If the user navigates to another origin then your
+progressive web app should not act like a container, instead a new context will
+be opened for the user.
+
+The `scope` attribute also is used to define the reach of your web application
+within the origin. Any navigation to a url inside your origin, but outside the
+scope will cause a new web context to be opened for the user. This allows you to
+have multiple progressive web apps per origin.
+
+## Effectivly managing the scope
+
+We've seen that the scope attribute helps users navigate into your progressive
+web app and it also controls how users can break out of your progressive web
+app.
+
+
 
 ## Managing permissions
 
