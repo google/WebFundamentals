@@ -28,17 +28,17 @@ yields to 48% more installs.
   </iframe>
 </div>
 
-We are happy to share that the team has worked on an improved add to home 
-screen experience that makes web apps first-class citizens of Android. 
-Instead of simply being a shortcut icon, web apps will now be integrated with 
-Android. This means that users that add a PWA to their home screen will be able 
-to find it anywhere they see other apps (e.g. in the app drawer or searching for 
-apps), and open the site from intents. We see this as the first step among a 
-number of improvements to come and intend to make it the default experience for 
-add to home screen in the coming months.
+We are happy to share that the team has worked on an improved add to home screen
+experience that makes web apps first-class citizens of Android. Instead of
+simply being a shortcut icon, web apps will now be integrated with Android. This
+means that users that add a PWA to their home screen will be able to find it
+anywhere they see other apps (e.g. in the app drawer or searching for apps), and
+open the site from intents. We see this as the first step among a number of
+improvements to come and intend to make it the default experience for add to
+home screen in the coming months.
 
 
-The improved add to home screen experience is already available in Chrome Canary 
+The improved add to home screen experience is already available in Chrome Canary
 and will be rolling out to Chrome 57 beta over the next few weeks.
 
 **You can test your site by following these steps:**
@@ -52,10 +52,10 @@ and will be rolling out to Chrome 57 beta over the next few weeks.
     1. Open chrome://flags in Chrome dev and enable the flag 
        `#enable-improved-a2hs` ("Find in page" in the triple-dot menu is helpful 
        for finding it.) You'll be prompted to restart Chrome.
-    1. Once Chrome is restarted, you'll be prompted to go to settings to turn on 
-       "Unknown sources" if it's not enabled already. (In general you shouldn't 
-       have this enabled, so we recommend disabling it when you're done 
-       testing.) If you don't see the prompt you can find it in Android Settings 
+    1. Once Chrome is restarted, you'll be prompted to go to settings to turn on
+       "Unknown sources" if it's not enabled already. (In general you shouldn't
+       have this enabled, so we recommend disabling it when you're done
+       testing.) If you don't see the prompt you can find it in Android Settings
        &gt; Security &gt; Device Administration.
 1. Visit your PWA. You can start install from the three dot menu &gt; "Add to 
    Home screen" or through the add to home screen banner.
@@ -68,9 +68,9 @@ Web Apps and Android Apps.
 
 ## Updating your app's icon and name
 
-You now have the ability to update your Progressive Web App's icon and name and 
-have it reflected to the user. Changing your icon or name in the manifest will 
-update the icon on the home screen after the user has subsequently opened the 
+You now have the ability to update your Progressive Web App's icon and name and
+have it reflected to the user. Changing your icon or name in the manifest will
+update the icon on the home screen after the user has subsequently opened the
 site.
 
 ## Android Intent Filters
@@ -85,9 +85,9 @@ When you install a Progressive Web App, we look at your Web App Manifest and
 other meta-data and create the APK that is installed on to the user's device. In
 that APK we define an [Android Intent
 Filter](https://developer.android.com/guide/components/intents-filters.html)
-that defines when your web application should be opened. For example, to
-open the [https://airhorner.com](https://airhorner.com/) app whenever that link
-is clicked, Chrome would create the following `<intent-filter>`.
+that defines when your web application should be opened. For example, to open
+the [https://airhorner.com](https://airhorner.com/) app whenever that link is
+clicked, Chrome would create the following `<intent-filter>`.
 
     <intent-filter>
       <action android:name="android.intent.action.VIEW" />
@@ -119,9 +119,9 @@ that the user intended to visit the site and will open the site.
 
 A specific example is that of a large web site that has many different content
 sections (/tech-news/ , /celebs/, /business/) and the they would like to have a
-PWA just for their '/tech-news/' section. The site would set the scope to be `scope:
-'/tech-news/',` in the manifest to ensure that only links to that part of the
-site open the Progressive Web App.
+PWA just for their '/tech-news/' section. The site would set the scope to be
+`scope: '/tech-news/',` in the manifest to ensure that only links to that part
+of the site open the Progressive Web App.
 
 If you were to define a `scope` in your Web App Manifest, you would see an
 updated `pathPrefix` in the `<intent-filter>` in your apps
@@ -268,13 +268,13 @@ No, the site opens in the version of Chrome the user added the site from.
 
 ### If I update my site's service worker, will this update automatically in the background even without the user visiting the site?
 
-No. The update to the SW will be processed the next time that the user visits 
+No. The update to the SW will be processed the next time that the user visits
 the page.
 
 ### When will the "Unknown sources" restriction be removed?
 
-It is being removed right now in a staged manner.  We anticipate that when 
-this hits the stable channel of Chrome this will not be needed at all.
+It is being removed right now in a staged manner.  We anticipate that when this
+hits the stable channel of Chrome this will not be needed at all.
 
 ### Can we upload the APKs that are created to the Play Store?
 
