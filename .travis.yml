@@ -18,7 +18,6 @@ script:
   - npm run build
   - npm run test
 after_script:
-  - ./tools/travis/post-build.sh
   - ./tools/travis/install-gc-sdk.sh
   - ./tools/travis/deploy-master.sh
   - ./tools/travis/deploy-pr.sh

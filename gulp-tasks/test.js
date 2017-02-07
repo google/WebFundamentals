@@ -7,6 +7,7 @@ var glob = require('globule');
 var moment = require('moment');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
+let GitHubApi = require('github');
 var wfRegEx = require('./wfRegEx');
 var wfHelper = require('./wfHelper');
 
@@ -32,12 +33,13 @@ var ERROR_STRINGS = [
 var VALID_DATE_FORMATS = ['YYYY-MM-DD', 'YYYY-MM-DDTHH:mm:ss.sssZ'];
 
 var contributorList;
-var summary = {
-  files: 0,
-  filesWithErrors: {},
-  errors: 0,
-  warnings: 0
+let summary = {
+  fileCount: 0,
+  errors: [],
+  warnings: [],
+  filesWithIssues: {}
 };
+
 
 /**
  * Logs a message to the console
@@ -47,17 +49,15 @@ var summary = {
  * @param {string} message The message to be displayed
  */
 function logMessage(level, filename, message) {
-  var msgLevel;
   level = level.toUpperCase();
   if (level === 'ERROR') {
-    summary.errors++;
-    msgLevel = chalk.red('ERROR:');
+    gutil.log(chalk.red('ERROR:'), chalk.cyan(filename), message);
+    summary.errors.push('`' + filename + '`: ' + message);
   } else {
-    summary.warnings++;
-    msgLevel = chalk.yellow('WARNING:');
+    gutil.log(chalk.yellow('WARNING:'), chalk.cyan(filename), message);
+    summary.warnings.push('`' + filename + '`: ' + message);
   }
-  gutil.log(msgLevel, chalk.cyan(filename), message);
-  summary.filesWithErrors[filename] = true; 
+  summary.filesWithIssues[filename] = true; 
 }
 
 /**
@@ -76,8 +76,8 @@ function logError(filename, message) {
  * @param {string} filename The file the issue occured in
  * @param {string} message The message to be displayed
  */
-function logWarning(filename, message, extra) {
-  logMessage('WARNING', filename, message, extra);
+function logWarning(filename, message) {
+  logMessage('WARNING', filename, message);
 }
 
 /**
@@ -118,9 +118,8 @@ function getFilelist(extension, extension2) {
 function readFile(filename) {
   return new Promise(function(resolve, reject) {
     fs.readFile(filename, 'utf8', function(err, data) {
-      summary.files++;
+      summary.fileCount++;
       if (err) {
-        summary.filesWithErrors++;
         logError(filename, 'Unable to read file', err);
         reject(err);
         return;
@@ -144,7 +143,6 @@ function parseYaml(filename) {
           var parsed = jsYaml.safeLoad(fileContents);
           resolve(parsed);
         } catch(ex) {
-          summary.filesWithIssues++;
           reject(logError(filename, 'Unable to parse YAML', ex));
         }
       })
@@ -171,7 +169,6 @@ function readAndValidateContributors() {
   return new Promise(function(resolve, reject) {
     parseYaml('./src/data/_contributors.yaml')
     .then(function(contributors) {
-      var errors = 0;
       var prevFamilyName = '';
       Object.keys(contributors).forEach(function(key) {
         var errMsg;
@@ -181,12 +178,10 @@ function readAndValidateContributors() {
           errMsg = 'Contributors must be sorted by family name. ';
           errMsg += prevFamilyName + ' came before ' + familyName;
           logError('_contributors.yaml', errMsg)
-          errors++;
         }
         if (contributor.google && typeof contributor.google !== 'string') {
           errMsg = 'Google+ ID for ' + key + ' must be a string';
           logError('_contributors.yaml', errMsg);
-          errors++;
         }
         prevFamilyName = familyName;
       });
@@ -237,7 +232,7 @@ function findBadMDExtensions() {
   return new Promise(function(resolve, reject) {
     var files = getFilelist('markdown', 'mdown');
     files.forEach(function(filename) {
-      summary.files++;
+      summary.fileCount++;
       logError(filename, 'File extension must be .md');
     });
     resolve();
@@ -260,7 +255,7 @@ function findBadMDExtensions() {
     var patterns = ['**/*.js', '!**/_code/*.js', '!**/event-map.js'];
     var files = wfHelper.getFileList(contentPath, patterns);
     files.forEach(function(filename) {
-      summary.files++;
+      summary.fileCount++;
       logError(filename.filePath, 'JavaScript files are not allowed.')
     });
     resolve();
@@ -281,13 +276,9 @@ function testAllMarkdown() {
   .then(function(tags) {
     var files = getFilelist('md');
     return new Promise(function(resolve, reject) {
-      var filesCompleted = 0;
-      var filesRejected = 0;
+      let filesCompleted = 0;
       files.forEach(function(filename) {
         return validateMarkdown(filename, tags)
-          .catch(function() {
-            filesRejected++;
-          })
           .then(function() {
             if (++filesCompleted === files.length) {
               resolve();
@@ -325,31 +316,26 @@ function validateMarkdown(filename, commonTags) {
     readFile(filename)
     .then(function(content) {
 
+      // Check if this is a markdown include file
+      var isInclude = wfRegEx.RE_MD_INCLUDE.test(content);
+      var errMsg;
+      var matched;
+
       // Verify there are no dots in the filename
       var numDots = filename.split('.');
       if (numDots.length !== 2) {
         errMsg = 'Filename or path should not contain dots.';
         logError(filename, errMsg);
-        errors++;
       }
-
-      // Check if this is a markdown include file
-      var isInclude = wfRegEx.RE_MD_INCLUDE.test(content);
-      var errMsg;
-      var matched;
-      var errors = 0;
-      var warnings = 0;
 
       // Validate book_path and project_path
       if (!wfRegEx.RE_BOOK_PATH.test(content) && !isInclude) {
         errMsg = 'Attribute `book_path` missing from top of document';
         logError(filename, errMsg)
-        errors++;
       }
       if (!wfRegEx.RE_PROJECT_PATH.test(content) && !isInclude) {
         errMsg = 'Attribute `project_path` missing from top of document';
         logError(filename, errMsg)
-        errors++;
       }
 
       // Validate description
@@ -359,18 +345,15 @@ function validateMarkdown(filename, commonTags) {
         if (matched.length === 0) {
           errMsg = 'Attribute `description` cannot be empty';
           logError(filename, errMsg);
-          errors++;
         } else if (matched.length > MAX_DESCRIPTION_LENGTH) {
           errMsg = 'Attribute `description` cannot exceed ' + MAX_DESCRIPTION_LENGTH
           errMsg += ' characters, was: ' + matched.length;
           logError(filename, errMsg)
-          errors++;
         }
         if (matched.indexOf('<') >= 0 || matched.indexOf('`') >= 0) {
           errMsg = 'Attribute `description` cannot contain HTML or markdown, ';
           errMsg += 'found: ' + matched;
           logError(filename, errMsg)
-          errors++;
         }
       }
 
@@ -381,7 +364,6 @@ function validateMarkdown(filename, commonTags) {
           errMsg = 'WF Tag `wf_updated_on` missing or invalid format (YYYY-MM-DD)';
           errMsg += ', found: ' + matched;
           logError(filename, errMsg)
-          errors++;
         }
       }
       matched = wfRegEx.getMatch(wfRegEx.RE_PUBLISHED_ON, content, 'NOT_FOUND');
@@ -390,7 +372,6 @@ function validateMarkdown(filename, commonTags) {
           errMsg = 'WF Tag `wf_published_on` missing or invalid format (YYYY-MM-DD)';
           errMsg += ', found: ' + matched;
           logError(filename, errMsg)
-          errors++;
         }
       }
 
@@ -408,7 +389,6 @@ function validateMarkdown(filename, commonTags) {
           errMsg = 'WF Tag `wf_featured_image` found, but couldn\'t find ';
           errMsg += 'image - ' + matched;
           logError(filename, errMsg);
-          errors++;
         }
       }
 
@@ -419,7 +399,6 @@ function validateMarkdown(filename, commonTags) {
           if (commonTags.indexOf(tag.trim()) === -1) {
             errMsg = 'Uncommon tag (' + tag.trim() + ') found.';
             logWarning(filename, errMsg)
-            warnings++;
           }
         });
       } 
@@ -439,14 +418,12 @@ function validateMarkdown(filename, commonTags) {
       if (isInclude === true && numH1 > 0) {
         errMsg = 'Includes should not contain any H1 tags, found ' + numH1;
         logWarning(filename, errMsg);
-        warnings++;
       }
 
       // Warn if there is more than 1 H1 in a document
       if (isInclude === false && numH1 > 1) {
         errMsg = 'Page should only have ONE H1 tag, found ' + numH1;
         logWarning(filename, errMsg);
-        warnings++;
       }
 
       // Verify there is only ONE .page-title
@@ -454,12 +431,10 @@ function validateMarkdown(filename, commonTags) {
       if (isInclude === true && matched) {
         errMsg = 'Includes must not contain the page title.';
         logError(filename, errMsg);
-        errors++;
       }
       if (isInclude === false && matched && matched.length > 1) {
         errMsg = 'Page must only have one title tag, found: ' + matched.length;
         logError(filename, errMsg)
-        errors++;
       }
 
       // Verify there is no markup/down in the title
@@ -470,12 +445,10 @@ function validateMarkdown(filename, commonTags) {
             matched.indexOf('`') >= 0) {
           errMsg = 'Page title must not contain HTML or markdown ' + matched;
           logError(filename, errMsg);
-          errors++;
         }
       } else if (isInclude === false) {
         errMsg = 'Page is missing page title eg: # TITLE {: .page-title }';
         logError(filename, errMsg)
-        errors++;
       }
 
       // Verify authors/translators are in the contributors file
@@ -486,7 +459,6 @@ function validateMarkdown(filename, commonTags) {
           if (!contributorList[key]) {
             errMsg = 'Unable to find contributor (' + key + ') in contributors file.'
             logError(filename, errMsg)
-            errors++;
           }
         });
       }
@@ -502,7 +474,6 @@ function validateMarkdown(filename, commonTags) {
           if (inclFile.indexOf('web/') !== 0) {
             errMsg = 'Include path MUST start with web/ - ' + include;
             logError(filename, errMsg)
-            errors++;
           }
         });
       }
@@ -513,7 +484,6 @@ function validateMarkdown(filename, commonTags) {
         errMsg = 'Found sample code block(s) wrapped in ```.';
         errMsg += ' Required style is indented by 4 spaces.';
         logError(filename, errMsg);
-        errors++;
       }
 
       // Verify all TL;DRs are H3 and include hide-from-toc   
@@ -524,7 +494,6 @@ function validateMarkdown(filename, commonTags) {
             errMsg = 'TL;DRs should be H3 and inclue {: .hide-from-toc }';
             errMsg += ' Found: ' + tag.replace('\n', '');
             logWarning(filename, errMsg)
-            warnings++;
           }
         });
       }
@@ -535,7 +504,6 @@ function validateMarkdown(filename, commonTags) {
         errMsg = 'Found ' + matched.length + ' non-secure goo.gl shortlinks.';
         errMsg += ' Preferred style: //goo.gl/XXXXXX (without protocol).';
         logWarning(filename, errMsg);
-        warnings++;
       }
 
       // Look for bad strings
@@ -545,16 +513,52 @@ function validateMarkdown(filename, commonTags) {
           matched.forEach(function(m) {
             errMsg = reObj.label + ' -- ' + m;
             logError(filename, errMsg)
-            errors++;
           });
         }
       });
-      if (errors === 0) {
-        resolve();
-        return;
-      }
-      reject('failed.');
+      resolve();
     });
+  });
+}
+
+/**
+ * Gets the Travis CI details
+ *
+ * @return {Promise} An  promise with the build information
+ */
+function getTravisDetails() {
+  return new Promise(function(resolve, reject) {
+    let repoSlug = process.env.TRAVIS_REPO_SLUG;
+    if (!repoSlug) {
+      resolve(null);
+    }
+    repoSlug = repoSlug.split('/');
+    let result = {
+      owner: repoSlug[0],
+      repo: repoSlug[1],
+      token: process.env.GIT_TOKEN,
+      sha: process.env.TRAVIS_COMMIT
+    };
+    resolve(result);
+  });
+}
+
+/**
+ * Adds a commit comment on GitHub
+ *
+ * @param {Object} data The Travis information to update
+ * @param {string} body The body of the message to add
+ * @return {Promise} An  promise with the build information
+ */
+function addCommitComment(data, body) {
+  gutil.log('Adding commit comment...');
+  let github = new GitHubApi({debug: false, Promise: Promise});
+  github.authenticate({type: 'oauth', token: data.token});
+  return github.repos.createCommitComment({
+    owner: data.owner,
+    repo: data.repo,
+    sha: data.sha,
+    body: body
   });
 }
 
@@ -565,18 +569,28 @@ function validateMarkdown(filename, commonTags) {
  */
 function printSummary() {
   return new Promise(function(resolve, reject) {
-    var filesWithErrors = Object.keys(summary.filesWithErrors).length;
+    var filesWithIssues = Object.keys(summary.filesWithIssues).length;
     gutil.log('');
     gutil.log('Test Completed.');
-    gutil.log('Files checked: ', gutil.colors.blue(summary.files));
-    gutil.log(' - with issues:', gutil.colors.yellow(filesWithErrors));
-    gutil.log(' - warnings:   ', gutil.colors.yellow(summary.warnings));
-    gutil.log(' - errors:     ', gutil.colors.red(summary.errors));
-    if (summary.errors === 0) {
+    gutil.log('Files checked: ', gutil.colors.blue(summary.fileCount));
+    gutil.log(' - with issues:', gutil.colors.yellow(filesWithIssues));
+    gutil.log(' - warnings:   ', gutil.colors.yellow(summary.warnings.length));
+    gutil.log(' - errors:     ', gutil.colors.red(summary.errors.length));
+    resolve();
+  });
+}
+
+/**
+ * Prints a summary of the test results
+ *
+ * @return {Promise} An empty promise.
+ */
+function finalizeTests() {
+  return new Promise(function(resolve, reject) {
+    if (summary.errors.length === 0) {
       resolve();
-      return;
     }
-    reject(new Error('There were ' + summary.errors + ' errors.'));
+    reject(new Error('There were ' + summary.errors.length + ' errors.'));
   });
 }
 
@@ -602,5 +616,25 @@ gulp.task('test', function(callback) {
       gutil.log('');
       gutil.log(chalk.red('ABORT:'), 'Exception:', err);
     })
-    .then(printSummary);
+    .then(printSummary)
+    .then(getTravisDetails)
+    .then(function(data) {
+      if (data) {
+        if (summary.errors.length > 0 || summary.warnings.length > 0) {
+          let body = '**Oops!** It looks like something in this commit broke ';
+          body += 'the build. Please take a look and fix it.\n\n';
+          if (summary.errors.length > 0) {
+            body += '**Errors:**\n';
+            body += summary.errors.join('\n');
+            body += '\n\n';
+          }
+          if (summary.warnings.length > 0) {
+            body += '**Warnings:**\n';
+            body += summary.warnings.join('\n');
+          }
+          addCommitComment(data, body);
+        }
+      }
+    })
+    .then(finalizeTests);
 });
