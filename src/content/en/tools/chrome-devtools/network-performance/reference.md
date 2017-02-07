@@ -635,7 +635,7 @@ download phases.
   </figcaption>
 </figure>
 
-Here's more information about each of the phases:
+Here's more information about each of the phases.
 
 * **Queueing**. The browser queues requests when:
     * There are higher priority requests.
@@ -647,6 +647,9 @@ Here's more information about each of the phases:
 * **Proxy negotiation**. The browser is negotiating the request with a [proxy
   server](https://en.wikipedia.org/wiki/Proxy_server).
 * **Request sent**. The request is being sent.
+* **ServiceWorker Preparation**. The browser is starting up the service worker.
+* **Request to ServiceWorker**. The request is being sent to the service
+  worker.
 * **Waiting (TTFB)**. The browser is waiting for the first byte of a response.
   TTFB stands for Time To First Byte.
 * **Content Download**. The browser is receiving the response.
