@@ -141,7 +141,7 @@ Note: The `scope` in the Web App Manifest, is not the same as the `scope` of
 your Service Worker. It is possible for one installed Web Application to be
 controlled by several different Service Workers.
 
-## Navigating outside of my progressive web app
+## Navigating outside of your progressive web app
 
 It is important for users to feel like they are using an app-like experience
 when using your progressive web app. This means that we need to handle
