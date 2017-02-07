@@ -150,7 +150,7 @@ The [`console.assert()`](./console-reference#consoleassertexpression-object) met
 The following code will cause an error message in the console only if the number of child nodes belonging to the `list` element is greater than 500.
 
 
-    console.assert(list.childNodes.length < 500, "Node count is > 500");
+    console.assert(list.childNodes.length <= 500, "Node count is > 500");
     
 
 How an assertion failure displays in the console:
