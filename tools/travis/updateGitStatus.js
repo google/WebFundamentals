@@ -5,6 +5,7 @@
     Updates the Git Status based on Deployment Success Failure
  */
 
+var chalk = require('chalk');
 let GitHubApi = require('github');
 
 const AE_APP_ID = process.env.AE_APP_ID;
@@ -29,8 +30,9 @@ let opts = {
   repo: REPO_NAME,
   sha: PR_SHA,
   context: 'wf/staging'
-  
 }
+
+console.log('Git Build Status Updater');
 
 if (process.argv[2] === 'pending') {
   opts.state = 'pending';
@@ -43,8 +45,16 @@ if (process.argv[2] === 'pending') {
   opts.state = 'failure';
   opts.description = 'Unable to stage build on ' + AE_APP_ID;
 } else {
-  console.log('Unknown git status, exiting...');
+  console.log(chalk.red('ERROR!'), 'Unknown state, exiting...');
   process.exit(0);
 }
 
-return github.repos.createStatus(opts);
+console.log('State:', chalk.cyan(opts.state))
+
+github.repos.createStatus(opts)
+  .catch(function(err) {
+    console.log(chalk.red('ERROR'), 'unable to set status:', err);
+  })
+  .then(function(a, b, c) {
+    console.log('result', a, b, c);
+  })
