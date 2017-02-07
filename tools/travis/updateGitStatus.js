@@ -49,12 +49,12 @@ if (process.argv[2] === 'pending') {
   process.exit(0);
 }
 
-console.log('State:', chalk.cyan(opts.state))
+console.log('State:', chalk.cyan(opts.state));
 
 github.repos.createStatus(opts)
-  .catch(function(err) {
-    console.log(chalk.red('ERROR'), 'unable to set status:', err);
-  })
-  .then(function(a, b, c) {
-    console.log('result', a, b, c);
-  })
+.catch(function(err) {
+  console.log(chalk.red('ERROR'), 'unable to set status:', err);
+})
+.then(function(result) {
+  console.log('Updated.');
+});
