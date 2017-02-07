@@ -10,21 +10,15 @@ book_path: /web/showcase/_book.yaml
 
 # Rendering Text in WebVR {: .page-title }
 
-**Project:** [https://vr.with.in/](https://vr.with.in/)
-
-**Demo:** [https://vr.with.in/archive/text-sdf-bitmap/](https://vr.with.in/archive/text-sdf-bitmap/)
-
-**Working Files:** [https://vr.with.in/archive/text-sdf-bitmap.zip](https://vr.with.in/archive/text-sdf-bitmap.zip)
-
-<img src="/web/showcase/2017/images/within/0.png">
+<img src="/web/showcase/2017/images/within/0.png" class="attempt-right">
 
 ## Introduction
 
 Within ([http://with.in/](http://with.in/)) is a platform for storytelling in
 Virtual Reality. So when the team heard about WebVR in 2015 we were immediately
 interested in its potential. Today that interest manifests into a unique
-subdomain of our Web Platform, [https://vr.with.in/](https://vr.with.in/. Anyone
-with a VR Enabled Browser can go to the site click a button and throw on a
+subdomain of our Web Platform, [https://vr.with.in/](https://vr.with.in/). Anyone
+with a VR-enabled browser can go to the site, click a button and throw on a
 headset to be immersed in our portfolio of VR films.
 
 *Today that includes but is not limited to Chrome on Daydream View. For
@@ -43,14 +37,14 @@ for creating a viewport for each eye and
 [THREE.VRControls](https://github.com/mrdoob/three.js/blob/dev/examples/js/controls/VRControls.js)
 for translating the perspective (e.g the rotation and position of the
 head-mounted display) convincingly into your scene. There are many examples of
-how to implement this. Check out
-[https://threejs.org/examples/?q=webvr](https://threejs.org/examples/?q=webvr)
+how to implement this. Check out the
+[Three.js WebVR examples](https://threejs.org/examples/?q=webvr)
 for ways to get started.
 
 As we got further into our exploration of WebVR we ran into an issue. If we look
 at the contents of the web, text is an integral part of it. While the majority
-of our content is video based, if you go to the Within site
-([http://with.in/#films](http://with.in/#films)) text surrounds the content;
+of our content is video based, if you go to the
+[Within site](http://with.in/#films) text surrounds the content;
 user-interface, additional information about a film or related films are all
 constructed with text. Furthermore all of this text is created in the DOM. Our
 WebVR explorations and [https://vr.with.in/](https://vr.with.in/) are all in
@@ -144,15 +138,20 @@ far. You could increase the size of the canvas texture, but might hit an upper
 limit in texture size or performance could suffer if the texture is too big.
 
 Extruded 3D text is essentially the same as triangulated vector text, but with
-depth and possibly a bevel, so it has at least twice as much geometry. Either of
+depth and possibly a bevel so it has at least twice as much geometry. Either of
 these could work in small doses for titles or logos, but wouldn't perform as
-well for large quantities of text, and neither has typographic features.
+well for large quantities of text and neither has typographic features.
+
+<figure class="attempt-right">
+  <img src="/web/showcase/2017/images/within/diagram.png">
+  <figcaption>Font to SDF Bitmap Workflow</figcaption>
+</figure>
 
 Bitmap fonts use one quad (two triangles) per character, so it uses less
 geometry and performs better than
 [triangulated vectors](https://vr.with.in/archive/text-triangulated-vector/).
 They're still raster based since they use a texture map sprite, but with an SDF
-shader, they're basically resolution independent, so they look nicer than a 2D
+shader they're basically resolution independent so they look nicer than a 2D
 canvas texture. Matt DesLauriers' three-bmfont-text also includes reliable
 typographic features for text wrapping, letter spacing, line height and
 alignment. Overflow doesn't get cut off. Font size is controlled through scale.
@@ -167,13 +166,12 @@ through the steps in hopes to alleviate fellow developers working in WebVR.
 [github.com/mattdesl/physical-text](https://github.com/mattdesl/physical-text)
 
 
-<figure>
-  <img src="/web/showcase/2017/images/within/diagram.png">
-  <figcaption>Font to SDF Bitmap Workflow</figcaption>
-</figure>
-
-
 ## 1. Generate bitmap font (.png + .fnt)
+
+<figure class="attempt-right">
+  <img src="/web/showcase/2017/images/within/3.png">
+  <figcaption>Hiero Interface</figcaption>
+</figure>
 
 [libgdx.badlogicgames.com/tools.html](https://libgdx.badlogicgames.com/tools.html)
 
@@ -181,15 +179,20 @@ through the steps in hopes to alleviate fellow developers working in WebVR.
 
 [github.com/libgdx/libgdx/wiki/Distance-field-fonts](https://github.com/libgdx/libgdx/wiki/Distance-field-fonts)
 
+<figure class="attempt-right">
+  <div>
+    <img src="/web/showcase/2017/images/within/4.png"><img src="/web/showcase/2017/images/within/5.png">
+  </div>
+  <figcaption>Hiero Output (Bitmap PNG and .fnt file)</figcaption>
+</figure>
+
 Hiero is a bitmap font packing tool that runs with Java. The Hiero documentation
 doesn't really explain how to run it without going through a complicated build
 process. First, install Java if you haven't already. Then if double clicking on
 the runnable-hiero.jar doesn't open Hiero, try running it with this command in
 the console:
 
-```
-java -jar runnable-hiero.jar
-```
+    java -jar runnable-hiero.jar
 
 Once Hiero is running, open a .ttf or .otf desktop font, enter any extra
 characters you want included, change Rendering to Java to enable Effects,
@@ -199,19 +202,6 @@ scale value is like a resolution. The higher it is, the less blurry it will be,
 but the longer it will take for Hiero to render the preview. Then save your
 bitmap font. It generates a bitmap font is consisting of a .png image and an
 AngelCode .fnt font description file.
-
-<figure>
-  <img src="/web/showcase/2017/images/within/3.png">
-  <figcaption>Hiero Interface</figcaption>
-</figure>
-
-<figure>
-  <div>
-    <img src="/web/showcase/2017/images/within/4.png" class="attempt-left">
-    <img src="/web/showcase/2017/images/within/5.png" class="attempt-right">
-  </div>
-  <figcaption>Hiero Output (Bitmap PNG and .fnt file)</figcaption>
-</figure>
 
 ## 2. Convert AngelCode to JSON
 
@@ -227,14 +217,12 @@ going to run
 [load-bmfont.js](https://vr.with.in/archive/text-sdf-bitmap/load-bmfont.js) with
 Node to convert and save Hiero's AngelCode .fnt to a .json file:
 
-```
-npm install
-node load-bmfont.js
-```
+    npm install
+    node load-bmfont.js
 
 [roboto-bold.json](https://vr.with.in/archive/text-sdf-bitmap/fonts/roboto/bitmap/roboto-bold.json)
 
-<figure>
+<figure class="attempt-right">
   <img src="/web/showcase/2017/images/within/6.png">
   <figcaption>Example of output JSON</figcaption>
 </figure>
@@ -242,28 +230,26 @@ node load-bmfont.js
 Now we can bypass load-bmfont and just do an XHR (XMLHttpRequest) request on the
 .json font file.
 
-```
-var r = new XMLHttpRequest();
-r.open('GET', 'fonts/roboto/bitmap/roboto-bold.json');
+    var r = new XMLHttpRequest();
+    r.open('GET', 'fonts/roboto/bitmap/roboto-bold.json');
 
-r.onreadystatechange = function() {
-  if (r.readyState === 4 && r.status === 200) {
-    setup(JSON.parse(r.responseText));
-  }
-};
+    r.onreadystatechange = function() {
+      if (r.readyState === 4 && r.status === 200) {
+        setup(JSON.parse(r.responseText));
+      }
+    };
 
-r.send();
+    r.send();
 
-function setup(font) {
-  // pass font into TextBitmap object
-}
-```
+    function setup(font) {
+      // pass font into TextBitmap object
+    }
 
 ## 3. Browserify three-bmfont-text
 
 Once we have the font loaded, Matt's three-bmfont-text will take care of the
 rest. Since we're not using Node for our own app, we're going to browserify
-[three-bmfont-text.js](https://vr.with.in/archive/text-sdf-bitmap/three-bmfont-text.js)** **into a usable [three-bmfont-text-bundle.js](https://vr.with.in/archive/text-sdf-bitmap/three-bmfont-text-bundle.js)
+[three-bmfont-text.js](https://vr.with.in/archive/text-sdf-bitmap/three-bmfont-text.js) into a usable [three-bmfont-text-bundle.js](https://vr.with.in/archive/text-sdf-bitmap/three-bmfont-text-bundle.js)
 
 [jam3.github.io/three-bmfont-text/test/](http://jam3.github.io/three-bmfont-text/test/)
 
@@ -273,12 +259,8 @@ rest. Since we're not using Node for our own app, we're going to browserify
 
 [browserify.org](http://browserify.org/)
 
-
-```
-npm install -g browserify
-browserify three-bmfont-text.js -o three-bmfont-text-bundle.js
-```
-
+    npm install -g browserify
+    browserify three-bmfont-text.js -o three-bmfont-text-bundle.js
 
 ## 4. SDF shader
 
@@ -303,27 +285,21 @@ three-bmfont-text
   <figcaption>Text-sdf-bitmap in action</figcaption>
 </figure>
 
-```
-<script src="three-bmfont-text-bundle.js"></script>
-<script src="sdf-shader.js"></script>
-<script src="text-bitmap.js"></script>
-```
+    <script src="three-bmfont-text-bundle.js"></script>
+    <script src="sdf-shader.js"></script>
+    <script src="text-bitmap.js"></script>
 
 Create an XHR request for the .json font file and create text object in the
 callback:
 
-```
-var bmtext = new TextBitmap({ options });
-```
+    var bmtext = new TextBitmap({ options });
 
 To change text:
 
-```
-bmtext.text = 'The quick brown fox jumps over the lazy dog.';
+    bmtext.text = 'The quick brown fox jumps over the lazy dog.';
 
-scene.add( bmtext.group );
-hitBoxes.push( bmtext.hitBox );
-```
+    scene.add( bmtext.group );
+    hitBoxes.push( bmtext.hitBox );
 
 The bitmap font's .png is loaded with THREE.TextureLoader in text-bitmap.js
 
@@ -355,12 +331,8 @@ characters go with which char id in the json.
 
 In [three-bmfont-text-bundle.js](https://vr.with.in/archive/text-sdf-bitmap/three-bmfont-text-bundle.js), insert a console.log after line 240:
 
-
-```
-var id = text.charCodeAt(i)
-// console.log(id);
-```
-
+    var id = text.charCodeAt(i)
+    // console.log(id);
 
 Then type into dat.gui text field on
 [https://vr.with.in/archive/text-sdf-bitmap/](https://vr.with.in/archive/text-sdf-bitmap/)
@@ -370,19 +342,13 @@ For example, in our bitmap font, "j" is consistently too far to the right. Its
 char id is 106. So find "id": 106 in the json and change its xoffset from -1 to
 -10.
 
-[animated gif of pre xoffset edits and post xoffset edits]
-
 ## 7. Layout
 
 If you have multiple blocks of text and want it to flow from top to bottom like
 HTML, everything has to be manually positioned, similar to absolute positioning
 every dom element yourself with CSS. Can you imagine doing this in CSS?
 
-
-```
-* { position: absolute; }
-```
-
+    * { position: absolute; }
 
 That's what text layout in 3D is like. In the detail view: title, author,
 description, and duration are each a new TextBitmap object with their own
@@ -391,11 +357,9 @@ styles, color, scale, etc.:
 
 <img src="/web/showcase/2017/images/within/9.jpg">
 
-```
-author.group.position.y = title.group.position.y - title.height - padding;
-description.group.position.y = author.group.position.y - author.height - padding;
-duration.group.position.y = description.group.position.y - description.height - padding;
-```
+    author.group.position.y = title.group.position.y - title.height - padding;
+    description.group.position.y = author.group.position.y - author.height - padding;
+    duration.group.position.y = description.group.position.y - description.height - padding;
 
 This assumes that the local origin of each TextBitmap group is vertically
 aligned with the top of the TextBitmap mesh (see centering in

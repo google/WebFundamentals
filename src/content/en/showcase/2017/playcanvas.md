@@ -4,7 +4,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2017-02-02T18:00:00.000Z #}
 {# wf_updated_on: 2017-02-02T18:00:00.000Z #}
 {# wf_featured_image: /web/showcase/2017/images/playcanvas/vr-lab.png #}
-{# wf_featured_snippet: The PlayCanvas WebVR Lab is a living project from the PlayCanvas team. It represents the team's research into developing scalable and responsive WebVR applications for all devices. It elegantly scales from a Google Cardboard or a Daydream headset to a desktop VR device. The project is continually updated with new experiments that implement core interactions like teleportation, grabbing, manipulating objects, user interface and controllers. #}
+{# wf_featured_snippet: The PlayCanvas WebVR Lab is a living project from the PlayCanvas team. It represents the team's research into developing scalable and responsive WebVR applications for all devices. It elegantly scales from a Google Cardboard or a Daydream View headset to a desktop VR device. The project is continually updated with new experiments that implement core interactions like teleportation, grabbing, manipulating objects, user interface and controllers. #}
 {# wf_tags: webvr,casestudy #}
 
 # Core Interactions in the WebVR Lab {: .page-title }
@@ -16,17 +16,17 @@ website to work across different devices, such as mobile phones, tablets and
 computers and different screen resolutions and pixel ratios. WebVR introduces
 new challenges to the idea of responsive design.
 
-We can categorize a WebVR experience by two metrics. The level of immersion and
+We can categorize a WebVR experience by two metrics - the level of immersion and
 the level of input. These levels are distinguished by "degrees of freedom"
 (DOF). 6 DOF refers to tracking both position and orientation, 3 DOF is only
 tracking orientation and 0 DOF tracks neither position nor orientation.
 
 ### Immersion Level
 
-No VR - monitor or mobile display.
-Stationary VR - Device with 3 DOF tracking.
-Seated VR - 6 DOF tracking but in a limited area and angle range.
-Room Scale VR - 6 DOF tracking with a room sized environment.
+- No VR - monitor or mobile display.
+- Stationary VR - Device with 3 DOF tracking.
+- Seated VR - 6 DOF tracking but in a limited area and angle range.
+- Room Scale VR - 6 DOF tracking with a room sized environment.
 
 ### Input Level
 - 0 DOF - The only input available is a click or tap. This input method is tied
@@ -184,9 +184,9 @@ constantly under development and experiences are added and updated as we do more
 research into building WebVR applications.
 
 It scales from a "magic window" style mobile experience to a desktop interactive
-playground. We’ve started to define a set core interactions that users can use
-for their own projects. We hope that the WebVR Lab is a good learning experience
-for everyone who wishes to build 3D worlds with WebVR.
+playground. We’ve started to define a set of core interactions that users can
+use for their own projects. We hope that the WebVR Lab is a good learning
+experience for everyone who wishes to build 3D worlds with WebVR.
 
 If you have a PlayCanvas account you can drop straight into the WebVR Lab
 Project to learn more.

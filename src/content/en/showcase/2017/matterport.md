@@ -49,7 +49,7 @@ download. This experience is currently limited to Daydream but will be expanded
 to additional VR platforms and browsers.
 
 Now a user needs to simply tap the VR button in a Matterport 3D Showcase, slip
-their phone into a Google Daydream headset, and start exploring. When they are
+their phone into a Daydream View, and start exploring. When they are
 finished, they are returned directly to the website they were browsing, so
 companies can keep their customers fully engaged.
 
@@ -59,8 +59,10 @@ fostering content discovery. WebVR directly helps us accomplish these goals
 while ensuring a win-win strategy for all stakeholders.
 
 ## Try it for yourself!
-Just tap the Play button on your Daydream-enabled smartphone, then tap the VR
+Just tap the Play button on your Daydream-ready phone, then tap the VR
 goggles in the bottom right hand corner.
 
-<iframe src="https://my.matterport.com/show/?m=FYBseauDW4G" frameborder="0" allowfullscreen allowvr></iframe>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56%;">
+  <iframe style="position: absolute; left: 0; top: 0; width: 100%; height: 100%" src="https://my.matterport.com/show/?m=FYBseauDW4G" frameborder="0" allowfullscreen allowvr></iframe>
+</div>
 

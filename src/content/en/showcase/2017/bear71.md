@@ -47,7 +47,7 @@ harder and harder to view. But with Flash's decline has come the maturation of
 HTML 5. Furthermore, VR is being taken more seriously than ever as a real
 platform for storytelling.
 
-To our eyes and ears, VR is naturally immersive. But VR has several barriers in
+To our eyes and ears, VR is naturally immersive, but VR has several barriers in
 its way. At first glance, the variety of headsets should suit many needs and
 budgets, and the variety of app stores involved in distribution is more choice.
 But users are known to prefer to do as much in a browser as possible. Users
@@ -71,25 +71,26 @@ available. The WebVR API is evolving quickly, and the WebVR standard is
 currently being drafted. But that didn't stop the community from patching
 together a suitable stopgap: the WebVR polyfill. It provided useable head
 tracking and stereo rendering via the gyroscope and WebGL. This polyfill, along
-with Google's cardboard, allowed us to start building and testing content. When
-Google Pixel and Daydream became available, along with the first real builds of
-WebVR, our content was ready to take advantage of it. For the purposes of quick
-development, we still include and use the polyfill where WebVR is not yet
-available. For instance, we do much of our developing and debugging on chrome
-55's mobile emulator. Also, it was common to develop and debug on whatever was
-readily available, including but not limited to HTC One M9, iPhone 5S, Samsung
-Galaxy and of course Google Pixel. The versatility of the polyfill cannot be
-understated.
+with Google Cardboard, allowed us to start building and testing content. When
+Google Pixel and Daydream View became available, along with the first real
+builds of WebVR in Chrome, our content was ready to take advantage of it. For
+the purposes of quick development, we still include and use the polyfill where
+WebVR is not yet available. For instance, we do much of our developing and
+debugging on Chrome 55's mobile emulator. Also, it was common to develop and
+debug on whatever was readily available, including but not limited to HTC One
+M9, iPhone 5S, Samsung Galaxy and of course Pixel by Google. The versatility of
+the polyfill cannot be understated.
 
 Despite the polyfill's utility, some essential WebVR features simply cannot be
 emulated. It's worth noting that one of the biggest hurdle that VR faces is
 motion sickness. Motion sickness is tied to, among many things, framerates and
 fast and accurate head tracking. WebVR has a few essential features like
-reprojection (link to explanation) and high-speed orientation sensors. That
-said, maintaining high framerates is still the responsibility of the content
-creators. Since WebVR requires rendering the scene twice (once for each eye)
-per frame, optimization is doubly important. Properly optimizing your webGL
-content is outside the scope of this article, but here are a few key points:
+reprojection and high-speed orientation sensors. That said, maintaining high
+framerates is still the responsibility of the content creators. Since WebVR
+requires rendering the scene twice (once for each eye) per frame, optimization
+is doubly important. Properly optimizing your WebGL content is outside the scope
+of this article, but here are a few key points:
+
 - Reduce your draw calls. A great way of doing this is merging many elements
   that share a material into just a few.
 - Keep your shaders simple. Standard materials and shaders do a great job of
