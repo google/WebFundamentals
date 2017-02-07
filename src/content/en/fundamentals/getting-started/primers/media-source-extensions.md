@@ -8,3 +8,292 @@ description:
 # Media Source Extensions {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
+
+Media Source Extensions (MSE) is a JavaScript API that lets you build streams
+for playback from segments of audio or video. Although not covered in this
+article, understanding MSE is needed if you want to embed videos in your site
+that does such things as:
+
++  Adaptive streaming, which is another way of saying adapting to device
+   capabilities and network conditions
++  Adaptive splicing
++  Time shifting
++  Control performance and download size
+
+You can almost think of it as a chain. Between the downloaded file and the media
+elements are several layers.
+
++  An `<audio>` or `<video>` element to play the media.
++  A `MediaSource` instance with a `SourceBuffer` to feed the media element.
++  A fetch or XHR call to retrieve media data in a Response object.
++  A call to `Response.arrayBuffer()` to feed `MediaSource.SourceBuffer`.
+
+This is illustrated below. 
+
+![Basic MSE data flow](imgs/basic-mse-flow.png)
+
+In practice, the chain looks like this:
+
+    var vidElement = document.querySelector('video');
+    
+    if (window.MediaSource) {
+      var mediaSource = new MediaSource();
+      vidElement.src = URL.createObjectURL(mediaSource);
+      mediaSource.addEventListener('sourceopen', sourceOpen);
+    } else {
+      console.log("The Media Source Extensions API is not supported.")
+    }
+    
+    function sourceOpen(e) {
+      var mime = 'video/webm; codecs="opus, vp9"';
+      var mediaSource = this;
+      var sourceBuffer = mediaSource.addSourceBuffer(mime);
+      var video = 'droid.webm';
+      fetch(video)
+        .then(function(response) {
+          return response.arrayBuffer();
+        })
+        .then(function(arrayBuffer) {
+          sourceBuffer.onupdateend = function(e) {
+            if (sourceBuffer.updating && mediaSource.readyState == 'open') {
+              mediaSource.endOfStream();
+            }
+          }
+          sourceBuffer.appendBuffer(arrayBuffer);
+        });
+    }
+
+  
+If you can sort things out from the explanations so far, feel free to stop
+reading now. If you want a more detailed explanation, then please keep reading.
+I'm going to walk through this chain by building a simple MSE example. Each of
+the build steps will add code to the previous step. Will it tell you everything
+you need to know about playing media on a web page? No, but it will help you
+understand the code elsewhere on this site and elsewhere on the Internet.
+
+### A few things not covered
+
+Here, in no particular order, are a few things I won't cover.
+
++  Playback controls. We get those for free by virtue of using the HTML5
+   `<audio>` and `<video>` elements.
++  For the sake of clarity, the example code has nothing in the way of error
+   handling.
+
+## Attach a MediaSource instance to a media element
+
+As with many things in web development these days, you start with feature
+detection. Next, get a media element, either an `<audio>` or `<video>` element.
+Finally create an instance of MediaSource. It gets turned into a URL and passed
+to the media element's source attribute.
+
+    var vidElement = document.querySelector('video');
+
+    if (window.MediaSource) {
+      var mediaSource = new MediaSource();
+      vidElement.src = URL.createObjectURL(mediaSource);
+      // Is the MediaSource instance ready?
+    } else {
+      console.log("The Media Source Extensions API is not supported.")
+    }
+
+Note: Each incomplete code example contains a comment that gives you a hint of
+what I'll add in the next step. In the example above, this comment says, 'Is the
+MediaSource instance ready?', which matches the title of the next section.
+
+That a `MediaSource` object can be passed to a `src` attribute might seem a bit
+odd. Aren't `src` attributes usually strings? A media element's `src`
+[attribute can also be a blob](https://www.w3.org/TR/FileAPI/#url) undefined. 
+If you inspect the example and examine the `<video>` element, you'll see what I
+mean.
+
+![A source attribute as a blob](imgs/media-url.png)
+
+### Is the MediaSource instance ready?
+
+`URL.createObjectURL() is itself synchronous; however, it processes the
+`attachment asynchronously. This causes a slight delay before you can do
+`anything with the MediaSource instance. Fortunately, there are ways to test for
+`this. The simplest way is with a MediaSource property called readyState. The
+`readyState property describes the relation between a MediaSource instance and a
+`media element. It can have one of the following values:
+
++  `closed` - The `MediaSource` instance is not attached to a media element. 
++  `open` - The `MediaSource` instance is attached to a media element and is
+   ready to receive data or is receiving data.
++  `ended` - The `MediaSource` instance is attached to a media element and all of
+   its data has been passed to that element.
+
+Querying these options directly can negatively affect performance. Fortunately,
+`MediaSource` also fires events when `readyState` changes, specifically
+`sourceopen`, `sourceclosed`, `sourceended`. For the example we're building, I'm
+going to use the `sourceopen` event to tell me when to fetch and buffer the
+video.
+
+<pre class="prettyprint">
+var vidElement = document.querySelector('video');
+
+if (window.MediaSource) {
+  var mediaSource = new MediaSource();
+  vidElement.src = URL.createObjectURL(mediaSource);
+  <strong>mediaSource.addEventListener('sourceopen', sourceOpen);</strong>
+} else {
+  console.log("The Media Source Extensions API is not supported.")
+}
+
+<strong>function sourceOpen(e) {
+  // Create a SourceBuffer and get the media file.
+}</strong>
+</pre>  
+
+## Create a SourceBuffer
+
+Now it's time to create the `SourceBuffer`, which is the object that actually
+does the work of shuttling data between media sources and media elements. A
+`SourceBuffer` has to be specific to the type of media file you're loading.
+
+codecs. Rather than trying to sort all this out, it's better to just include
+both.In practice you can do this by calling `addSourceBuffer()` with the
+appropriate mime type and codecs. Notice that the mime type string contains a
+mime type and a codec. Version 1 of the MSE spec allows user agents to differ on
+whether to require both. Some user agents don't require, but do allow just the
+mime type. Some user agents, Chrome for example, require a codec for mime types
+that don't self-describe their
+
+<pre class="prettyprint">
+var vidElement = document.querySelector('video');
+
+if (window.MediaSource) {
+  var mediaSource = new MediaSource();
+  vidElement.src = URL.createObjectURL(mediaSource);
+  mediaSource.addEventListener('sourceopen', sourceOpen);
+} else {
+  console.log("The Media Source Extensions API is not supported.")
+}
+
+function sourceOpen(e) {
+  <strong>var mime = 'video/webm; codecs="opus, vp9"';
+  // this refers to the mediaSource instance.
+  // Store it in a variable so it can be used in a closure.
+  var mediaSource = this;
+  var sourceBuffer = mediaSource.addSourceBuffer(mime);
+  // Fetch and process the video.</strong>
+}</pre>
+
+## Get the media file
+
+If you do an internet search for MSE examples, you'll find plenty that retrieve
+media files using XHR. Just to keep things simple, not to mention cutting edge,
+I'm going to use the [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch)
+undefined API and the Promise it returns. If you're trying to do this in Safari,
+it won't work without a fetch polyfill.
+
+Note: Just to help things fit on the screen, from here to the end I'm only going
+to show part of the example we're building. If you want to see it in context,
+you can always, [jump to the end](#the_final_version).
+
+<pre class="prettyprint">
+function sourceOpen(e) {  
+  var mime = 'video/webm; codecs="opus, vp9"';  
+  var mediaSource = this;  
+  var sourceBuffer = mediaSource.addSourceBuffer(mime);  
+  var video = 'droid.webm'; 
+  <strong>fetch(video)
+    .then(function(response) {
+      // Process the response object.
+    });</strong>
+  }
+}</pre>
+
+In Chrome I have the option of getting the media file's contents as a
+ReadableStream or an arrayBuffer. Virtually all other browsers return an
+arrayBuffer. I'm going to show both methods. The procedure for getting an array
+buffer from fetch is slightly different from what's done in XHR.
+
+## Process the response object
+
+The code looks almost done, but the media doesn't play. We need to get media
+data from the `Response` object to the `SourceBuffer`.
+
+The typical way to pass data from the response object to the `MediaSource`
+instance is to get an arrayBuffer from the response object and pass it to the
+`SourceBuffer`. Start by calling `response.arrayBuffer()`, which returns a
+promise to the buffer. In my code, I've passed this promise to a second `then()`
+clause where I append it to the `SourceBuffer`.
+
+<pre class="prettyprint">
+function sourceOpen(e) {
+  var mime = 'video/webm; codecs="opus, vp9"';
+  var mediaSource = this;
+  var sourceBuffer = mediaSource.addSourceBuffer(mime);
+  var video = 'droid.webm';
+  fetch(video)
+    .then(function(response) {
+      <strong>return response.arrayBuffer();</strong>
+    })
+    <strong>.then(function(arrayBuffer) {
+      sourceBuffer.appendBuffer(arrayBuffer);
+    });</strong>
+}</pre>
+
+#### Call endOfStream() 
+
+At the end of processing the media file, `MediaSource.readyState` should be set
+to `ended` and a `sourceended` event should fire. Neither of these happen
+automatically, but we can trigger them by calling `MediaSource.endOfStream()`.
+Do this inside the `SourceBuffer.onupdateend`.
+
+<pre class="prettyprint">
+function sourceOpen(e) {
+  var mime = 'video/webm; codecs="opus, vp9"';
+  var mediaSource = this;
+  var sourceBuffer = mediaSource.addSourceBuffer(mime);
+  var video = 'droid.webm';
+  fetch(video)
+    .then(function(response) {
+      return response.arrayBuffer();
+    })
+    .then(function(arrayBuffer) {
+      <strong>sourceBuffer.onupdateend = function(e) {
+        mediaSource.endOfStream();
+      }</strong>
+      sourceBuffer.appendBuffer(arrayBuffer);
+    });
+}</pre>
+
+
+## The final version
+
+Here's the complete code example.
+
+    var vidElement = document.querySelector('video');
+    
+    if (window.MediaSource) {
+      var mediaSource = new MediaSource();
+      vidElement.src = URL.createObjectURL(mediaSource);
+      mediaSource.addEventListener('sourceopen', sourceOpen);
+    } else {
+      console.log("The Media Source Extensions API is not supported.")
+    }
+    
+    
+    function sourceOpen(e) {
+      var mime = 'video/webm; codecs="opus, vp9"';
+      var mediaSource = this;
+      var sourceBuffer = mediaSource.addSourceBuffer(mime);
+      var video = 'droid.webm';
+      fetch(video)
+        .then(function(response) {
+          return response.arrayBuffer();
+        })
+        .then(function(arrayBuffer) {
+          sourceBuffer.onupdateend = function(e) {
+            if (sourceBuffer.updating && mediaSource.readyState == 'open') {
+              mediaSource.endOfStream();
+            }
+          }
+          sourceBuffer.appendBuffer(arrayBuffer);
+        });
+    }
+
+<<../../../_common-links.md>>

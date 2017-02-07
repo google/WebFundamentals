@@ -3,6 +3,8 @@ api_version: 1
 threadsafe: true
 # application: petele-scratch
 # version: wf-devsite
+application: milkbone
+version: wf-devsite
 
 handlers:
 - url: /robots.txt
