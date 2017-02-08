@@ -154,6 +154,36 @@ within the origin. Any navigation to a url inside your origin, but outside the
 scope will cause a new web context to be opened for the user. This allows you to
 have multiple progressive web apps per origin.
 
+## Effectively managing your app's scope
+
+The `scope` attribute in your web app manifest is one of the most important
+things that you will need to do to ensure your app functions as expected.
+
+The `scope` controls the url structure that encompasses all the entry and exit
+points in your web app. Your `start_url` needs to reside in the your `scope`.
+
+Here are some simple rules:
+
+* If you don't include a `scope` in your manifest, then the default implied
+  `scope` is the directory that your web app manifest resides in.
+* The `scope` attr can be "../" or any higher level path ('/' origin) which
+  would allow for an increase in coverage of navigations in your web app.
+* The `start_url` must be in the scope.
+* The `start_url` is relative to the path defined in the `scope` attribute.
+* A `start_url` starting with '/' will always be the root of the origin.
+
+Some examples:
+
+|`start_url` property|`scope` property|JS|href|result|
+|--------------------|----------------|--|----|------|
+|/tech-today/|tech-today/manifest.json|`new URL('/tech-today/?utm_source=homescreen', '/tech-today/manifest.json')`|https://cnet.com/tech-today/?utm_source=homescreen|VALID - what they have today|
+|./index.html|/tech-today/manifest.json|`new URL('./index.html', 'https://cnet.com/tech-today/manifest.json')`|https://cnet.com/tech-today/index.html|VALID - hypothetical|
+|./index.html|/tech-today/|`new URL('./index.html', 'https://cnet.com/tech-today/')`|https://cnet.com/tech-today/index.html|VALID - hypothetical|
+|/index.html|/tech-today/|`new URL('/index.html', 'https://cnet.com/tech-today/')`|https://cnet.com/index.html|INVALID - starturl is not in scope|
+|/|/tech-today/|`new URL('/', 'https://cnet.com/tech-today/')`|https://cnet.com/|INVALID - starturl is not in scope|
+
+
+
 ## Managing permissions
 
 By Installing your Progressive Web App it now becomes part of the system. Added
