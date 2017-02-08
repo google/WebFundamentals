@@ -267,6 +267,11 @@ Chrome. Cookies, permissions, and all other browser state will be shared.
 
 Yes.
 
+### Will my app be re-installed when I get a new device?
+
+Not at this time, but we think it is an important area and we are investigating
+ways to make it work.
+
 ### Will I get auto granted Push Notifications permissions like I do in Android?
 
 No, but we intend to experiment with this at a later date. (See [the 
