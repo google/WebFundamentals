@@ -147,7 +147,7 @@ to know to get started quickly and easily.
 <div style="clear:both"></div>
 
 <div class="attempt-left">
-  <a href="primers/media-source-extensions/">
+  <a href="primers/media-source-extensions">
     Media Source Extensions
   </a>
   <p>
