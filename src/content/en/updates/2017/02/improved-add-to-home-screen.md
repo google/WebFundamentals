@@ -176,7 +176,7 @@ Some examples:
 
 |`start_url` property|`scope` property|JS|href|result|
 |--------------------|----------------|--|----|------|
-|/tech-today/|tech-today/manifest.json|`new URL('/tech-today/?utm_source=homescreen', '/tech-today/manifest.json')`|https://cnet.com/tech-today/?utm_source=homescreen|VALID - what they have today|
+|/tech-today/|tech-today/manifest.json|`new URL('/tech-today/', '/tech-today/manifest.json')`|https://cnet.com/tech-today/|VALID - what they have today|
 |./index.html|/tech-today/manifest.json|`new URL('./index.html', 'https://cnet.com/tech-today/manifest.json')`|https://cnet.com/tech-today/index.html|VALID - hypothetical|
 |./index.html|/tech-today/|`new URL('./index.html', 'https://cnet.com/tech-today/')`|https://cnet.com/tech-today/index.html|VALID - hypothetical|
 |/index.html|/tech-today/|`new URL('/index.html', 'https://cnet.com/tech-today/')`|https://cnet.com/index.html|INVALID - starturl is not in scope|
