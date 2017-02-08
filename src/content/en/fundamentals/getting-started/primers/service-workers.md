@@ -391,7 +391,8 @@ install due to an error being thrown, or a rejected promise being passed to
 To work around this, go to `chrome://serviceworker-internals` and check "Open
 DevTools window and pause JavaScript execution on service worker startup for
 debugging", and put a debugger statement at the start of your install event. 
-This, along with <a href="/web/tools/chrome-devtools/javascript/add-breakpoints#exceptions">Pause on uncaught exceptions</a>,
+This, along with
+[Pause on uncaught exceptions](/web/tools/chrome-devtools/javascript/breakpoints),
 should reveal the issue.
 
 

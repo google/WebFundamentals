@@ -57,8 +57,6 @@ Click **View request in Network Panel** to open up a filtered view of the
 Network Panel and see exactly which requests were served over HTTP. This shows 
 all unprotected requests from all origins. 
 
-![network panel, non-secure resources, all origins](images/network-all.png)
-
 ## Inspect origins
 
 Use the left panel to inspect an individual secure or non-secure origin. 

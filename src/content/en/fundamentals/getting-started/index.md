@@ -94,7 +94,7 @@ to know to get started quickly and easily.
     JavaScript Promises
   </a>
   <p>
-    So much in web development is asynchornous, yet JavaScript only has one
+    So much in web development is asynchronous, yet JavaScript only has one
     thread. Callback functions were once the standard. Increasingly, promises
     are taking their place.
   </p>

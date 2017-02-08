@@ -326,5 +326,3 @@ Source Extenstions. We recommend [stackoverflow](http://stackoverflow.com/questi
           sourceBuffer.appendBuffer(arrayBuffer);
         });
     }
-
-<<../../../_common-links.md>>
