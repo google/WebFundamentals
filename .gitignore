@@ -33,5 +33,6 @@ src/content/*/showcase/*/index.md
 src/content/*/showcase/tags/*
 src/content/*/rss.xml
 src/content/*/atom.xml
+src/content/*/resources/glossary.md
 
 

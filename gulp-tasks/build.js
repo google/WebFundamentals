@@ -1,5 +1,6 @@
 'use strict';
 
+var fs = require('fs');
 var gulp = require('gulp');
 var path = require('path');
 var runSequence = require('run-sequence');
@@ -11,6 +12,21 @@ var wfCodeLabHelper = require('./wfCodeLabHelper');
 
 gulp.task('build:contributors', function() {
   wfContributors.build();
+});
+
+gulp.task('build:glossary', function() {
+  let terms = [];
+  try {
+    terms = JSON.parse(fs.readFileSync('./src/data/_terms.json', 'utf8'));
+  } catch (ex) {
+    console.log('failed', ex);
+  }
+  let templateFile = path.join(GLOBAL.WF.src.templates, 'glossary.md');
+  let context = {
+    terms: terms
+  };
+  let outputFile = path.join(GLOBAL.WF.src.content, 'resources/glossary.md');
+  wfTemplateHelper.renderTemplate(templateFile, context, outputFile);
 });
 
 gulp.task('build:fundamentals', function() {
@@ -138,6 +154,7 @@ gulp.task('build', function(cb) {
   runSequence(
     [
       'build:contributors',
+      'build:glossary',
       'build:fundamentals',
       'build:showcase',
       'build:shows',

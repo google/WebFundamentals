@@ -27,4 +27,6 @@ upper_tabs:
           path: /web/resources/contributors
         - title: Translation Guideance
           path: /web/resources/translations
+        - title: Glossary
+          path: /web/resources/glossary
 
