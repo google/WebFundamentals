@@ -174,11 +174,11 @@ Here are some simple rules:
 
 Some examples:
 
-|`start_url` property|`scope` property|JS|href|result|
+|`start_url` property|`scope` property|Equivilent JS|Page that is launched|Valid?|
 |--------------------|----------------|--|----|------|
-|/tech-today/|tech-today/manifest.json|`new URL('/tech-today/', '/tech-today/manifest.json')`|https://cnet.com/tech-today/|VALID - what they have today|
-|./index.html|/tech-today/manifest.json|`new URL('./index.html', 'https://cnet.com/tech-today/manifest.json')`|https://cnet.com/tech-today/index.html|VALID - hypothetical|
-|./index.html|/tech-today/|`new URL('./index.html', 'https://cnet.com/tech-today/')`|https://cnet.com/tech-today/index.html|VALID - hypothetical|
+|/tech-today/|tech-today/manifest.json|`new URL('/tech-today/', '/tech-today/manifest.json')`|https://cnet.com/tech-today/|VALID|
+|./index.html|/tech-today/manifest.json|`new URL('./index.html', 'https://cnet.com/tech-today/manifest.json')`|https://cnet.com/tech-today/index.html|VALID|
+|./index.html|/tech-today/|`new URL('./index.html', 'https://cnet.com/tech-today/')`|https://cnet.com/tech-today/index.html|VALID|
 |/index.html|/tech-today/|`new URL('/index.html', 'https://cnet.com/tech-today/')`|https://cnet.com/index.html|INVALID - starturl is not in scope|
 |/|/tech-today/|`new URL('/', 'https://cnet.com/tech-today/')`|https://cnet.com/|INVALID - starturl is not in scope|
 
