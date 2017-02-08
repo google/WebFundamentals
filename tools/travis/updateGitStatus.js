@@ -8,12 +8,19 @@
 var chalk = require('chalk');
 let GitHubApi = require('github');
 
+console.log('Git Build Status Updater');
+
 const AE_APP_ID = process.env.AE_APP_ID;
 const REPO_SLUG = process.env.TRAVIS_REPO_SLUG.split('/');
 const REPO_OWNER = REPO_SLUG[0];
 const REPO_NAME = REPO_SLUG[1];
 const OAUTH_TOKEN = process.env.GIT_TOKEN;
 const PR_SHA = process.env.TRAVIS_PULL_REQUEST_SHA;
+
+if (!OAUTH_TOKEN) {
+  console.log('Unable to update Git Status, GIT_TOKEN unavailable.');
+  process.exit(0);
+}
 
 let github = new GitHubApi({
   debug: false,
@@ -31,8 +38,6 @@ let opts = {
   sha: PR_SHA,
   context: 'wf/staging'
 }
-
-console.log('Git Build Status Updater');
 
 if (process.argv[2] === 'pending') {
   opts.state = 'pending';

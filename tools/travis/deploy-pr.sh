@@ -5,8 +5,15 @@ set -ev
 # Auto-Deploy Pull Request
 #
 
+# If encrypted variables aren't available, abort
+if [ -z "${GIT_TOKEN}" ]; then
+  echo "Encrypted variables are unavailable, skipping."
+  exit
+fi
+
 # If this isn't a pull request, abort.
 if [ "${TRAVIS_EVENT_TYPE}" != "pull_request" ]; then
+  echo "This only runs on pull_request events. Event was $TRAVIS_EVENT_TYPE"
   exit
 fi
 
