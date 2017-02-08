@@ -5,8 +5,9 @@ set -ev
 # Install the Google Cloud SDK
 #
 
-# If there were build failures, abort
-if [ "${TRAVIS_TEST_RESULT}" = "1" ]; then
+# If encrypted variables aren't available, abort
+if [ -z "${GIT_TOKEN}" ]; then
+  echo "Encrypted variables are unavailable, skipping."
   exit
 fi
 

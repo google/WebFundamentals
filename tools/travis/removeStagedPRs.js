@@ -9,19 +9,30 @@ let chalk = require('chalk');
 let GitHubApi = require('github');
 const exec = require('child_process').exec;
 
-let travisIsPush = process.env.TRAVIS_EVENT_TYPE === 'push';
-let travisIsOnMaster = process.env.TRAVIS_BRANCH === 'master';
-if (!travisIsPush || !travisIsOnMaster) {
+console.log('Travis Deployment Cleanup');
+
+const OAUTH_TOKEN = process.env.GIT_TOKEN;
+if (!OAUTH_TOKEN) {
+  console.log(chalk.red('OOPS:'), 'Encrypted variables are unavailable.');
   process.exit(0);
 }
 
-console.log('Travis Deployment Cleanup');
+let travisIsPush = process.env.TRAVIS_EVENT_TYPE === 'push';
+if (travisIsPush !== true) {
+  console.log(chalk.yellow('Skipping:'), 'Event type must be push.');
+  process.exit(0);
+}
+
+let travisIsOnMaster = process.env.TRAVIS_BRANCH === 'master';
+if (travisIsOnMaster !== true) {
+  console.log(chalk.yellow('Skipping:'), 'Must be on master');
+  process.exit(0);
+}
 
 const GCLOUD = process.env.HOME + '/google-cloud-sdk/bin/gcloud';
 const REPO_SLUG = process.env.TRAVIS_REPO_SLUG.split('/');
 const REPO_OWNER = REPO_SLUG[0];
 const REPO_NAME = REPO_SLUG[1];
-const OAUTH_TOKEN = process.env.GIT_TOKEN;
 
 let github = new GitHubApi({
   debug: false,

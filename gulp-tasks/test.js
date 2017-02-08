@@ -564,14 +564,24 @@ function getTravisDetails() {
  * @return {Promise} An  promise with the build information
  */
 function addCommitComment(data, body) {
+  if (!data.token) {
+    gutil.log('Unable to add commit comment, no GitHub token.');
+    return;
+  }
   gutil.log('Adding commit comment...');
   let github = new GitHubApi({debug: false, Promise: Promise});
   github.authenticate({type: 'oauth', token: data.token});
-  return github.repos.createCommitComment({
+  github.repos.createCommitComment({
     owner: data.owner,
     repo: data.repo,
     sha: data.sha,
     body: body
+  })
+  .catch(function(err) {
+    gutil.log(chalk.red('OOPS:'), 'Unable to add commit comment.', err);
+  })
+  .then(function(result) {
+    gutil.log('Commit comment added.');
   });
 }
 
