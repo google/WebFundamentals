@@ -229,8 +229,8 @@ banner](/web/fundamentals/engage-and-retain/app-install-banners/).
 
 We recommend using [Lighthouse](/web/tools/lighthouse/) to audit your PWA.
 
-Note though that there is no engagement threshold for improved add to home
-screen from the menu.
+Note: there is no engagement threshold for improved add to home screen from the
+menu, it is only used to determine when to prompt users to install directly.
 
 ### Does this change the triggering of the add to Home screen banner?
 
