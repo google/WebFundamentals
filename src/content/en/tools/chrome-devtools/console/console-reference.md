@@ -47,7 +47,7 @@ See [Clearing the console](index#clearing) for more information.
 
 ## console.count(label) {:#count}
 
-Writes the the number of times that `count()` has been invoked at the same 
+Writes the number of times that `count()` has been invoked at the same 
 line and with the same label.
 
 
