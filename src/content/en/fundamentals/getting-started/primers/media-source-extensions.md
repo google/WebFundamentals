@@ -50,10 +50,10 @@ In practice, the chain looks like this:
     
     function sourceOpen(e) {
       var mime = 'video/webm; codecs="opus, vp9"';
-      var mediaSource = this;
+      var mediaSource = e.target;
       var sourceBuffer = mediaSource.addSourceBuffer(mime);
-      var video = 'droid.webm';
-      fetch(video)
+      var videoUrl = 'droid.webm';
+      fetch(videoUrl)
         .then(function(response) {
           return response.arrayBuffer();
         })
@@ -88,7 +88,7 @@ Here, in no particular order, are a few things I won't cover.
 
 +  Playback controls. We get those for free by virtue of using the HTML5
    `<audio>` and `<video>` elements.
-+  Error handling for the sake of simplicyt and clarity.
++  Error handling for the sake of simplicity and clarity.
 
 ## Attach a MediaSource instance to a media element
 
@@ -117,7 +117,7 @@ MediaSource instance ready?', which matches the title of the next section.
   <figcaption><b>Figure 1</b>: A source attribute as a blob</figcaption>
 </figure>
 
-<div class="clear-fix"></div>
+<div class="clearfix"></div>
 
 That a `MediaSource` object can be passed to a `src` attribute might seem a bit
 odd. They're usually strings, but 
@@ -197,7 +197,7 @@ function sourceOpen(e) {
   <strong>var mime = 'video/webm; codecs="opus, vp9"';
   // this refers to the mediaSource instance.
   // Store it in a variable so it can be used in a closure.
-  var mediaSource = this;
+  var mediaSource = e.target;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
   // Fetch and process the video.</strong>
 }</pre>
@@ -219,12 +219,11 @@ function sourceOpen(e) {
   var mime = 'video/webm; codecs="opus, vp9"';  
   var mediaSource = this;  
   var sourceBuffer = mediaSource.addSourceBuffer(mime);  
-  var video = 'droid.webm'; 
-  <strong>fetch(video)
+  var videoUrl = 'droid.webm'; 
+  <strong>fetch(videoUrl)
     .then(function(response) {
       // Process the response object.
     });</strong>
-  }
 }</pre>
 
 A production quality player would have the same file in multiple versions to
@@ -255,8 +254,8 @@ function sourceOpen(e) {
   var mime = 'video/webm; codecs="opus, vp9"';
   var mediaSource = this;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
-  var video = 'droid.webm';
-  fetch(video)
+  var videoUrl = 'droid.webm';
+  fetch(videoUrl)
     .then(function(response) {
       <strong>return response.arrayBuffer();</strong>
     })
@@ -277,8 +276,8 @@ function sourceOpen(e) {
   var mime = 'video/webm; codecs="opus, vp9"';
   var mediaSource = this;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
-  var video = 'droid.webm';
-  fetch(video)
+  var videoUrl = 'droid.webm';
+  fetch(videoUrl)
     .then(function(response) {
       return response.arrayBuffer();
     })
@@ -311,8 +310,8 @@ Source Extenstions. We recommend [stackoverflow](http://stackoverflow.com/questi
       var mime = 'video/webm; codecs="opus, vp9"';
       var mediaSource = this;
       var sourceBuffer = mediaSource.addSourceBuffer(mime);
-      var video = 'droid.webm';
-      fetch(video)
+      var videoUrl = 'droid.webm';
+      fetch(videoUrl)
         .then(function(response) {
           return response.arrayBuffer();
         })
