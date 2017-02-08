@@ -34,7 +34,7 @@ downloaded file and the media elements are several layers.
 +  A `fetch()` or XHR call to retrieve media data in a `Response` object.
 +  A call to `Response.arrayBuffer()` to feed `MediaSource.SourceBuffer`.
 
-<div class="clear-fix"></div>
+<div class="clearfix"></div>
 
 In practice, the chain looks like this:
 
