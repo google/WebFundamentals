@@ -247,7 +247,7 @@ function sourceOpen(e) {
   var mediaSource = this;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
   var video = 'droid.webm';
-  `fetch()`(video)
+  fetch(video)
     .then(function(response) {
       <strong>return response.arrayBuffer();</strong>
     })
@@ -269,7 +269,7 @@ function sourceOpen(e) {
   var mediaSource = this;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
   var video = 'droid.webm';
-  `fetch()`(video)
+  fetch(video)
     .then(function(response) {
       return response.arrayBuffer();
     })
@@ -306,7 +306,7 @@ get you an answer more quickly, if your question isn't already answered there.
       var mediaSource = this;
       var sourceBuffer = mediaSource.addSourceBuffer(mime);
       var video = 'droid.webm';
-      `fetch()`(video)
+      fetch(video)
         .then(function(response) {
           return response.arrayBuffer();
         })
