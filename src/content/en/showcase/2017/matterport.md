@@ -68,7 +68,24 @@ while ensuring a win-win strategy for all stakeholders.
 Just tap the Play button on your Daydream-ready phone, then tap the VR
 goggles in the bottom right hand corner.
 
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56%;">
-  <iframe style="position: absolute; left: 0; top: 0; width: 100%; height: 100%" src="https://my.matterport.com/show/?m=FYBseauDW4G" frameborder="0" allowfullscreen allowvr></iframe>
+<style>
+  .aspect-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56%;
+  }
+
+  .aspect-container .aspect-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+  }
+</style>
+
+<div class="aspect-container">
+  <iframe class="aspect-content" src="https://my.matterport.com/show/?m=FYBseauDW4G" frameborder="0" allowfullscreen allowvr></iframe>
 </div>
 
