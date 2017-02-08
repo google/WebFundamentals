@@ -33,14 +33,16 @@
      "wordKind": "noun",
      "termType": "technical term",
      "acronyms": ["FLIP"],
-     "description": "TODO"
+     "description": "TODO",
+     "primaryLink": "https://aerotwist.com/blog/flip-your-animations/"
   },
   {
     "term": "HTTP/2",
     "wordKind": "noun",
     "termType": "technical term",
     "acronyms": ["H/2"],
-    "description": "TODO"
+    "description": "TODO",
+    "primaryLink": "/web/fundamentals/performance/http2/"
   },
   {
      "term": "Internet Explorer",
@@ -90,14 +92,16 @@
     "wordKind": "noun",
     "termType": "technical term",
     "acronyms": ["RAIL"],
-    "description": "TODO"
+    "description": "TODO",
+    "primaryLink": "web/fundamentals/performance/rail"
   },
   {
      "term": "Service Worker",
      "wordKind": "noun",
      "termType": "technical term",
      "acronyms": ["SW"],
-     "description": "TODO"
+     "description": "TODO",
+     "primaryLink": "/web/fundamentals/getting-started/primers/service-workers"
   },
   {
      "term": "Single Page App",
