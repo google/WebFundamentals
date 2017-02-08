@@ -174,14 +174,15 @@ Here are some simple rules:
 
 Some examples:
 
-|`start_url` property|`scope` property|Equivilent JS|Page that is launched|Valid?|
-|--------------------|----------------|--|----|------|
-|/tech-today/|tech-today/manifest.json|`new URL('/tech-today/', '/tech-today/manifest.json')`|https://cnet.com/tech-today/|VALID|
-|./index.html|/tech-today/manifest.json|`new URL('./index.html', 'https://cnet.com/tech-today/manifest.json')`|https://cnet.com/tech-today/index.html|VALID|
-|./index.html|/tech-today/|`new URL('./index.html', 'https://cnet.com/tech-today/')`|https://cnet.com/tech-today/index.html|VALID|
-|/index.html|/tech-today/|`new URL('/index.html', 'https://cnet.com/tech-today/')`|https://cnet.com/index.html|INVALID - starturl is not in scope|
-|/|/tech-today/|`new URL('/', 'https://cnet.com/tech-today/')`|https://cnet.com/|INVALID - starturl is not in scope|
-
+|  `manifest url` | `start_url` | `scope attr` | `calculated scope` | `caluclated start_url` | `valid?` |
+|  ------ | ------ | ------ | ------ | ------ | ------ |
+|  /tech-today/manifest.json | ./index.html | undefined | /tech-today/ | /tech-today/index.html | valid |
+|  /tech-today/manifest.json | ./index.html | ../ | / | /index.html | valid - but scope leaks to higher level |
+|  /tech-today/manifest.json | / | / | / | /index.html | valid - but scope leaks to higher level |
+|  /tech-today/manifest.json | / | undefined | /tech-today/ | / | invalid - start url out of scope |
+|  /tech-today/manifest.json | ./tech-today/index.html | undefined | /tech-today/ | /tech-today/tech-today/index.html | valid - but undesired |
+|  /manifest.json | ./tech-today/index.html | undefined | / | /tech-today/index.html | valid - broad scope |
+|  /manifest.json | /tech-today/index.html | tech-today | /tech-today/ | /tech-today/index.html | valid - tight scope |
 
 
 ## Managing permissions
