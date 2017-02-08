@@ -162,6 +162,65 @@ function parseYaml(filename) {
  * 
  * @return {Promise} An empty promise
  */
+function readAndValidateTerms() {
+  let requiredProperties = ['term', 'wordKind', 'termType', 'description'];
+  let wordKinds = ['noun'];
+  let termTypes = ['technical term', 'product name'];
+  if (GLOBAL.WF.options.verbose) { 
+    gutil.log(' ', 'Validating terms.json');
+  }
+  return new Promise(function(resolve, reject) {
+    let errMsg;
+    let terms;
+    let termsFile = './src/data/_terms.json';
+    try {
+      terms = JSON.parse(fs.readFileSync(termsFile, 'utf8'));
+    } catch (ex) {
+      errMsg = 'Unable to read or parse terms file: ' + ex.message;
+      logError(termsFile, errMsg);
+      resolve();
+    }
+    let prevTerm = '';
+    terms.forEach(function(term) {
+      let currentTerm = term.term;
+      if (!term.description) {
+        errMsg = `${currentTerm} - description is a required field.`;
+        logError(termsFile, errMsg);
+      }
+      if (term.description && term.description.trim().length === 0) {
+        errMsg = `${currentTerm} - description must not be empty.`;
+        logError(termsFile, errMsg);
+      }
+      if (wordKinds.indexOf(term.wordKind) === -1) {
+        errMsg = `${currentTerm} - wordKind (${term.wordKind}) is invalid`;
+        logError(termsFile, errMsg);
+      }
+      if (termTypes.indexOf(term.termType) === -1) {
+        errMsg = `${currentTerm} - termType (${term.termType}) is invalid`;
+        logError(termsFile, errMsg);
+      }
+      if (prevTerm.toLowerCase() > currentTerm.toLowerCase()) {
+        errMsg = 'Terms must be sorted alphabetically by term. ';
+        errMsg += `'${prevTerm}' came before '${currentTerm}'`;
+        logError(termsFile, errMsg);
+      }
+      prevTerm = currentTerm;
+    });
+    resolve();
+  });
+}
+
+
+/**
+ * Reads & validates the _contributors.yaml file checking for:
+ *  * Proper YAML format
+ *  * Entries are sorted by family name
+ *  * Google+ IDs are strings, not integers
+ *
+ * Note: the promise will always be fulfilled, even if it fails.
+ * 
+ * @return {Promise} An empty promise
+ */
 function readAndValidateContributors() {
   if (GLOBAL.WF.options.verbose) { 
     gutil.log(' ', 'Validating _contributors.yaml');
@@ -630,6 +689,7 @@ gulp.task('test', function(callback) {
     .then(function() {
       return Promise.all([
         testAllYaml(),
+        readAndValidateTerms(),
         testAllMarkdown(),
         findBadMDExtensions(),
         findJavaScriptFiles()
