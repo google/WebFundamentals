@@ -179,9 +179,8 @@ the mime type. Some user agents, Chrome for example, require a codec for mime
 types that don't self-describe their codecs. Rather than trying to sort all this
 out, it's better to just include both.
 
-Note: For simplicity, the example only shows one codec type, even though MSE
-only makes sense in practice for scenarios with multiple segments of video or
-audio.
+Note: For simplicity, the example only shows a single segment of media though in
+practice, MSE only makes sense for scenarios with multiple segments.
 
 <pre class="prettyprint">
 var vidElement = document.querySelector('video');
