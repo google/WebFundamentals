@@ -404,6 +404,7 @@ doing so is pretty easy with the [Cache API].
 
 - Chrome for Android requests "full" audio focus to show media notifications
   only when the media file duration is [at least 5 seconds].
+- Notification artwork support blob URLs and data URLs.
 - If no artwork is defined and there is an icon image at a desirable size, media
   notifications will use it.
 - Notification artwork size in Chrome for Android is `512x512`. For
