@@ -20,7 +20,7 @@ that does such things as:
 +  Time shifting
 +  Control of performance and download size
 
-<figure id="basic-mse">
+<figure id="basic-mse" class="attempt-right">
   <img src="imgs/basic-mse-flow.png"
     alt="Basic MSE data flow">
   <figcaption><b>Figure 1</b>: Basic MSE data flow</figcaption>
@@ -111,7 +111,7 @@ Note: Each incomplete code example contains a comment that gives you a hint of
 what I'll add in the next step. In the example above, this comment says, 'Is the
 MediaSource instance ready?', which matches the title of the next section.
 
-<figure id="src-as-blob">
+<figure id="src-as-blob" class="attempt-right">
   <img src="imgs/media-url.png"
     alt="A source attribute as a blob">
   <figcaption><b>Figure 1</b>: A source attribute as a blob</figcaption>
