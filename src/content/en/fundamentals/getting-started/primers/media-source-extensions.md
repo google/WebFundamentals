@@ -119,7 +119,7 @@ MediaSource instance ready?', which matches the title of the next section.
 
 <div class="clearfix"></div>
 
-A `MediaSource` object can be passed to a `src` attribute might seem a bit
+That a `MediaSource` object can be passed to a `src` attribute might seem a bit
 odd. They're usually strings, but 
 [they can also be blobs](https://www.w3.org/TR/FileAPI/#url).
 If you inspect a page with embedded media and examine its media element, you'll
