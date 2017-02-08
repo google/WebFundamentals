@@ -6,18 +6,23 @@ book_path: /web/resources/_book.yaml
 
 # Glossary {: .page-title }
 
+Here's a list of key terms, jargon, abbreviations and TLAs that are used 
+across the web by web developers. 
+
+## A
+
 {{#each terms}}
-
-## {{ term }}
-
-{{{description}}}
-
-{{#if acronyms}}**Acronyms:** {{#each acronyms}}`{{this}}` {{/each}}{{/if}}
-
-{{#if primaryLink}}[Read more]({{primaryLink}}){{/if}}
+{{#if primaryLink}}[{{/if}}{{ term }}{{#if primaryLink}}]({{primaryLink}}){{/if}}
+: {{{description}}}
+{{#if acronyms}}: **Acronyms:** {{#each acronyms}}`{{this}}` {{/each}}{{/if}}
 
 <div style="clear:both"></div>
 
 {{/each}}
 
+## B
+
+asdf
+
+asdf
 
