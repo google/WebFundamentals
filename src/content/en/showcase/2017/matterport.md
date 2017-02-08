@@ -9,7 +9,13 @@ book_path: /web/showcase/_book.yaml
 
 # Matterport VR for WebVR {: .page-title }
 
+*By Matt Bell, Cofounder, Matterport*
+
 <img src="/web/showcase/2017/images/matterport/VR_FourSeason_InGame01.jpg" class="attempt-right">
+
+<a class="button button-primary" href="https://matterport.com/gallery/">
+  View the site
+</a>
 
 ### TL;DR {: .hide-from-toc }
 By adding WebVR support, Matterport makes it even easier to explore real-world

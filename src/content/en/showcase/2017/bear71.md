@@ -9,7 +9,13 @@ book_path: /web/showcase/_book.yaml
 
 # Bear 71 and WebVR {: .page-title }
 
+*By Tom Dysinski, Senior Developer, Jam3*
+
 <img src="/web/showcase/2017/images/bear71/featured.png" class="attempt-right">
+
+<a class="button button-primary" href="https://bear71vr.nfb.ca/">
+  View the documentary
+</a>
 
 ### TL;DR {: .hide-from-toc }
 

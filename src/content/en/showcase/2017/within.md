@@ -10,7 +10,13 @@ book_path: /web/showcase/_book.yaml
 
 # Rendering Text in WebVR {: .page-title }
 
+*By David Lyons, Lead WebVR Developer, Within*
+
 <img src="/web/showcase/2017/images/within/0.png" class="attempt-right">
+
+<a class="button button-primary" href="https://vr.with.in/">
+  View the site
+</a>
 
 ## Introduction
 

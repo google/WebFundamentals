@@ -9,7 +9,13 @@ book_path: /web/showcase/_book.yaml
 
 # Core Interactions in the WebVR Lab {: .page-title }
 
+*By Dave Evans, Chief Technology Officer, PlayCanvas*
+
 <img src="/web/showcase/2017/images/playcanvas/vr-lab.png" class="attempt-right">
+
+<a class="button button-primary" href="http://webvr.playcanvas.com">
+  View the Lab
+</a>
 
 Website designers are familiar with the idea of responsive design, building a
 website to work across different devices, such as mobile phones, tablets and
@@ -34,7 +40,7 @@ tracking orientation and 0 DOF tracks neither position nor orientation.
   controller.
 - 3 DOF - A controller that tracks its orientation can be used like a laser
   pointer to specify a direction or a location. The position of the controller
-  is estimated based on the user’s viewpoint.  This includes the Daydream
+  is estimated based on the user's viewpoint.  This includes the Daydream
   Controller.
 - 6 DOF - A controller that tracks its position and orientation. This can be
   used to closely simulate a hand in VR.
@@ -45,9 +51,9 @@ scale experience with two fully tracked hand controllers.
 
 ## WebVR Lab
 
-In the PlayCanvas WebVR Lab we’ve implemented some of the core interactions that
-you might need in your application and scaled them across the different levels
-of experience.
+In the [PlayCanvas WebVR Lab](http://webvr.playcanvas.com) we've implemented
+some of the core interactions that you might need in your application and scaled
+them across the different levels of experience.
 
 ### How Interactions Work
 
@@ -97,17 +103,17 @@ environment will be larger than the small area that a user can see without
 moving. The WebVR Lab, for example, has three sections. A main room, a mezzanine
 floor and a side room for the Hi-fi music player.
 
-Moving the user’s viewport through the world will often lead to discomfort. In
+Moving the user's viewport through the world will often lead to discomfort. In
 the WebVR Lab we allow the user to highlight a location and click to teleport
-instantaneously. The user’s viewpoint never moves and so despite the somewhat
+instantaneously. The user's viewpoint never moves and so despite the somewhat
 unnatural sensation of moving instantaneously the user can move around a large
 space with no discomfort.
 
 In the case of a hand controller, we require the user to push and hold a button
-to activate the teleport target. This keeps the user’s vision uncluttered while
+to activate the teleport target. This keeps the user's vision uncluttered while
 they are looking around.
 
-#### Moving the user’s viewpoint
+#### Moving the user's viewpoint
 
 Sometimes it is absolutely necessary to move the viewpoint. For example, when
 using Stationary or Seated VR it is possible to end up facing a wall with no
@@ -117,8 +123,10 @@ Daydream Controller will rotate the camera.
 
 To prevent discomfort when we move the camera in this way we reduce the amount
 of peripheral vision by applying a restricted view across the camera. This is
-based on work by Ubisoft and we’ve found that focusing the view on just the
-center of the screen reduces the discomfort.
+based on work by
+[Ubisoft](http://www.gdcvault.com/play/1023922/Full-Speed-Flying-in-VR) and
+we've found that focusing the view on just the center of the screen reduces the
+discomfort.
 
 ### Activate
 
@@ -145,7 +153,7 @@ control. Releasing the button will activate a Combine or Drop action with the
 item.
 
 For less maneuverable controllers a click will pick up the item and attach it to
-the user’s viewport. Usually keeping a section of the item visible in the "lower
+the user's viewport. Usually keeping a section of the item visible in the "lower
 third" of the display. A second click will either Drop or Combine the item.
 
 ### Combine
@@ -167,13 +175,13 @@ other item highlighted.
 In the WebVR Lab we have kept performance requirements low by not using a
 physics simulation on any items. That means that instead of dropping an item to
 the ground we simple allow it to float in the position that it was dropped.
-After an item has been dropped, if it isn’t activated within a certain time
+After an item has been dropped, if it isn't activated within a certain time
 frame, it will "restore" itself back to its original location. This restore
 functionality allows a user with a low degree of input (0 DOF or 3 DOF) to
 operate on many items and maintain a usable work area. Older items will
 automatically clear themselves up.
 
-With a 6 DOF input it’s easier to move items out of the way. Having a delay on
+With a 6 DOF input it's easier to move items out of the way. Having a delay on
 the restore operation lets a 6 DOF user immerse themselves in moving items
 around, but still facilitate self-cleaning of the area.
 
@@ -184,9 +192,10 @@ constantly under development and experiences are added and updated as we do more
 research into building WebVR applications.
 
 It scales from a "magic window" style mobile experience to a desktop interactive
-playground. We’ve started to define a set of core interactions that users can
+playground. We've started to define a set of core interactions that users can
 use for their own projects. We hope that the WebVR Lab is a good learning
 experience for everyone who wishes to build 3D worlds with WebVR.
 
-If you have a PlayCanvas account you can drop straight into the WebVR Lab
-Project to learn more.
+If you have a PlayCanvas account you can drop straight into the [WebVR Lab
+Project](https://playcanvas.com/project/446331/overview/webvr-labs) to learn
+more.
