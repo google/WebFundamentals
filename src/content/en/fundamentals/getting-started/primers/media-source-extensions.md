@@ -207,6 +207,21 @@ function sourceOpen(e) {
   }
 }</pre>
 
+For the sake of clarity this example shows one media file and one stream. Real-
+world code is more complex, which is one of the reasons for using a library such
+as [Google's Shaka Player](https://shaka-player-demo.appspot.com/demo/). A
+production quality player would have the same file in multiple versions to
+support different browsers. It could use separate files for audio and video to
+allow audio to be selected based on language settings.
+
+Real world code would have multiple copies of media files files at different
+resolutions so that it could adapt to different device capabilities and network
+conditions. Such an application is able to load and play videos in chunks either
+using range requests or segments. This allows the adaption to network conditions
+to occur while media are playing. You may have heard the terms DASH or HLS,
+which are two methods of accomplishing this. A full discussion of this topic is
+beyond the scope of this introduction.
+
 ## Process the response object
 
 The code looks almost done, but the media doesn't play. We need to get media
