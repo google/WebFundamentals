@@ -20,17 +20,21 @@ that does such things as:
 +  Time shifting
 +  Control of performance and download size
 
-You can almost think of MSE as a chain. Between the downloaded file and the media
-elements are several layers.
+<figure id="basic-mse">
+  <img src="imgs/basic-mse-flow.png"
+    alt="Basic MSE data flow">
+  <figcaption><b>Figure 1</b>: Basic MSE data flow</figcaption>
+</figure>
+
+You can almost think of MSE as a chain. As illustrated above, between the
+downloaded file and the media elements are several layers.
 
 +  An `<audio>` or `<video>` element to play the media.
 +  A `MediaSource` instance with a `SourceBuffer` to feed the media element.
 +  A `fetch()` or XHR call to retrieve media data in a `Response` object.
 +  A call to `Response.arrayBuffer()` to feed `MediaSource.SourceBuffer`.
 
-This is illustrated below. 
-
-![Basic MSE data flow](imgs/basic-mse-flow.png)
+<div class="clear-fix"></div>
 
 In practice, the chain looks like this:
 
@@ -107,13 +111,19 @@ Note: Each incomplete code example contains a comment that gives you a hint of
 what I'll add in the next step. In the example above, this comment says, 'Is the
 MediaSource instance ready?', which matches the title of the next section.
 
+<figure id="src-as-blob">
+  <img src="imgs/media-url.png"
+    alt="A source attribute as a blob">
+  <figcaption><b>Figure 1</b>: A source attribute as a blob</figcaption>
+</figure>
+
+<div class="clear-fix"></div>
+
 That a `MediaSource` object can be passed to a `src` attribute might seem a bit
-odd. Aren't `src` attributes usually strings? A media element's `src`
-[attribute can also be a blob](https://www.w3.org/TR/FileAPI/#url).
+odd. They're usually strings, but 
+[they can also be blobs](https://www.w3.org/TR/FileAPI/#url).
 If you inspect a page with embedded media and examine its media element, you'll
 see what I mean.
-
-![A source attribute as a blob](imgs/media-url.png)
 
 ### Is the MediaSource instance ready?
 
@@ -198,12 +208,12 @@ function sourceOpen(e) {
 If you do an internet search for MSE examples, you'll find plenty that retrieve
 media files using XHR. Just to keep things simple, not to mention cutting edge,
 I'm going to use the [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch)
-API and the Promise it returns. If you're trying to do this in Safari,
+API and the [Promise](/web/fundamentals/getting-started/primers/promises) it returns. If you're trying to do this in Safari,
 it won't work without a `fetch()` polyfill.
 
 Note: Just to help things fit on the screen, from here to the end I'm only going
 to show part of the example we're building. If you want to see it in context,
-you can always, [jump to the end](#the_final_version).
+[jump to the end](#the_final_version).
 
 <pre class="prettyprint">
 function sourceOpen(e) {  
@@ -285,10 +295,7 @@ function sourceOpen(e) {
 ## The final version
 
 Here's the complete code example. I hope you have learned something about Media
-Source Extenstions. There's a form below where you can comment. I'm happy to
-answer questions, but suggest that
-[stackoverflow](http://stackoverflow.com/questions/tagged/media-source) might
-get you an answer more quickly, if your question isn't already answered there.
+Source Extenstions. We recommend [stackoverflow](http://stackoverflow.com/questions/tagged/media-source).
 
     var vidElement = document.querySelector('video');
     
