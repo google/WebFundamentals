@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 56 for developers? Web Bluetooth API, CSS Position Sticky, and HTML5 by Default is enabled for all users.
 
 {# wf_published_on: 2017-01-25 #}
-{# wf_updated_on: 2017-01-25 #}
+{# wf_updated_on: 2017-02-09 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome55,new-in-chrome,css,layout,html5,flash,webbluetooth,webvr #}
 {# wf_featured_snippet: With Chrome 56, web apps can now communicate with nearby Bluetooth Low Energy devices using the <b>Web Bluetooth API</b>. CSS <code>position: sticky;</code> is back - making it easy to create elements that scroll normally until sticking to the top of the viewport. And HTML5 by Default is enabled for all users. #}
@@ -20,8 +20,8 @@ description: What's new in Chrome 56 for developers? Web Bluetooth API, CSS Posi
   </iframe>
 </div>
 
-* Web apps can now communicate with nearby Bluetooth Low Energy
-  devices using the [Web Bluetooth API](#webbluetooth).
+* Users can now select Bluetooth Low Energy
+  devices to connect to web sites that use the [Web Bluetooth API](#webbluetooth).
 * [`position: sticky`](#position-sticky) is back - making it easy to create
   elements that scroll normally until sticking to the top of the viewport.
 * And [HTML5 by Default](#html5-by-default) is enabled for all users.
@@ -32,16 +32,22 @@ I’m Pete LePage, let’s dive in and see what’s new for developers in Chrome
 
 ## Web Bluetooth API {: #webbluetooth }
 
-Until now, the ability to interact with bluetooth devices has only been
-possible for native apps. With Chrome 56, your web apps can communicate
-with nearby Bluetooth Low Energy devices in a secure and private manner
-using the [Web Bluetooth API](//webbluetoothcg.github.io/web-bluetooth/). 
+Until now, users who have bluetooth devices were forced to install
+native apps to communicate with them. With Chrome 56, users can select
+nearby Bluetooth Low Energy devices to provide to web sites that use
+the [Web Bluetooth API](//webbluetoothcg.github.io/web-bluetooth/).
+
+Similar to selecting files to share with a web site, this is more
+secure than installing a native application that can read data from
+anything. Users are in full control of when and which device is
+shared with a specific web site.
 
 The Web Bluetooth API uses the [GATT protocol](https://webbluetoothcg.github.io/web-bluetooth/),
-which enables your app to connect to devices such as light bulbs, toys,
+which enables apps to connect to devices such as light bulbs, toys,
 heart-rate monitors, LED displays and more with just a
 [few lines of JavaScript](https://googlechrome.github.io/samples/web-bluetooth/).
-Web Bluetooth can also be combined with physical web beacons to discover and control nearby devices.
+Web Bluetooth can also be combined with physical web beacons to make discovering
+nearby devices even easier.
 
 Francois has a great
 [article on Updates](/web/updates/2015/07/interact-with-ble-devices-on-the-web),
