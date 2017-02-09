@@ -29,7 +29,7 @@ tracking orientation and 0 DOF tracks neither position nor orientation.
 
 ### Immersion Level
 
-- No VR - monitor or mobile display.
+- No VR - Monitor or mobile display.
 - Stationary VR - Device with 3 DOF tracking.
 - Seated VR - 6 DOF tracking but in a limited area and angle range.
 - Room Scale VR - 6 DOF tracking with a room sized environment.
@@ -61,9 +61,9 @@ The basic mechanics of how interactions work in the WebVR Lab are ray
 intersections. The floor, the room and any objects that can be interacted with
 are defined in terms of one of three shape primitives:
 
-- Axis-aligned bounding box (or AABB): a box that is not rotated.
-- Oriented bounding box: a box that can be rotated.
-- Sphere: defined as a radius around a point in space.
+- Axis-aligned bounding box (or AABB): A box that is not rotated.
+- Oriented bounding box: A box that can be rotated.
+- Sphere: Defined as a radius around a point in space.
 
 To see if an action is possible we fire a ray into the world and test whether
 the ray intersects with the shape of the objects in the world. Different types
@@ -101,7 +101,7 @@ the WebVR Lab.
 When building a virtual environment for a user to explore, it is likely that the
 environment will be larger than the small area that a user can see without
 moving. The WebVR Lab, for example, has three sections. A main room, a mezzanine
-floor and a side room for the Hi-fi music player.
+floor and a side room for the hi-fi music player.
 
 Moving the user's viewport through the world will often lead to discomfort. In
 the WebVR Lab we allow the user to highlight a location and click to teleport
@@ -119,7 +119,7 @@ Sometimes it is absolutely necessary to move the viewpoint. For example, when
 using Stationary or Seated VR it is possible to end up facing a wall with no
 ability to turn in the physical world. So we allow the user to rotate the camera
 using the controller. In the WebVR Labs using the left or right pad on the
-Daydream Controller will rotate the camera.
+Daydream Controller rotates the camera.
 
 To prevent discomfort when we move the camera in this way we reduce the amount
 of peripheral vision by applying a restricted view across the camera. This is
@@ -136,7 +136,7 @@ Activating is the VR equivalent of clicking a button on a webpage. In WebVR Lab
 we have taken this literally and provided a simple Button that can be activated.
 
 For 0 DOF and 3 DOF controllers, activating is a highlight and click. For a 6
-DOF controller we can upgrade the experience to let you "push" a button but
+DOF controller we can upgrade the experience to let you "push" a button by
 directly checking to see if your hand controller is inside the button.
 
 ### Grab
@@ -162,7 +162,7 @@ third" of the display. A second click will either Drop or Combine the item.
 
 Combine is an action that occurs when you "use" an item with another item. This
 covers a huge variety of use cases. In the WebVR Lab we use this to play records
-on the hi-fi. When an item grabbed it becomes possible to combine the grabbed
+on the hi-fi. When an item is grabbed, it becomes possible to combine the grabbed
 item with another item in the world. With all types of controller highlighting
 the target item whilst grabbing another item and then releasing the grab will
 combine the two items.
@@ -176,10 +176,10 @@ In the WebVR Lab we have kept performance requirements low by not using a
 physics simulation on any items. That means that instead of dropping an item to
 the ground we simple allow it to float in the position that it was dropped.
 After an item has been dropped, if it isn't activated within a certain time
-frame, it will "restore" itself back to its original location. This restore
+frame, it will "restore" itself to its original location. This restore
 functionality allows a user with a low degree of input (0 DOF or 3 DOF) to
 operate on many items and maintain a usable work area. Older items will
-automatically clear themselves up.
+automatically clear themselves.
 
 With a 6 DOF input it's easier to move items out of the way. Having a delay on
 the restore operation lets a 6 DOF user immerse themselves in moving items
