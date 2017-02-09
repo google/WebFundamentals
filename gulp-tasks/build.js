@@ -128,8 +128,16 @@ gulp.task('build:updates', function() {
 });
 
 gulp.task('build:codelabs', function() {
-  var startPath = path.join(GLOBAL.WF.src.content, 'fundamentals/getting-started/codelabs');
-  wfCodeLabHelper.migrate(startPath);
+  let src = path.join(GLOBAL.WF.src.content, 'fundamentals/getting-started/codelabs');
+  let bookPath = '/web/fundamentals/_book.yaml';
+  wfCodeLabHelper.migrate(src, bookPath);
+});
+
+gulp.task('build:ilt-pwa', function() {
+  // let src = path.join(GLOBAL.WF.src.content, 'ilt/pwa');
+  let src = 'src/ilt/pwa';
+  let bookPath = '/web/ilt/_book.yaml';
+  wfCodeLabHelper.migrate(src, bookPath);
 });
 
 gulp.task('build:sitelevel', function() {});

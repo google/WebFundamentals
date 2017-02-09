@@ -93,6 +93,8 @@ gulp.task('clean', function() {
     'src/content/*/updates/_index.yaml',
     'src/content/*/updates/*/index.md',
     'src/content/*/updates/tags/*',
+    'src/ilt/pwa/*/index.md',
+    'src/ilt/pwa/*/img/**',
     '!src/content/*/**/_generated.md'
   ];
   var opts = {dryRun: false, dot: true};

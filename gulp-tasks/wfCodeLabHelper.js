@@ -10,7 +10,7 @@ var glob = require('globule');
 var moment = require('moment');
 var gutil = require('gulp-util');
 
-function updateCodeLab(fileName) {
+function updateCodeLab(fileName, bookPath) {
   gutil.log(' ', 'Processing', fileName);
   var authorId;
   var metadataFile = fileName.replace('index.md', 'codelab.json');
@@ -31,7 +31,7 @@ function updateCodeLab(fileName) {
   var result = [];
   var markdown = fs.readFileSync(fileName, 'utf8');
   result.push('project_path: /web/_project.yaml');
-  result.push('book_path: /web/fundamentals/_book.yaml');
+  result.push('book_path: ' + bookPath);
   if (metadata.summary) {
     result.push('description: ' + metadata.summary);
   }
@@ -58,6 +58,14 @@ function updateCodeLab(fileName) {
   markdown = markdown.replace(/^\*Duration is \d+ min\*\n/gm, '');
   markdown = markdown.replace(/\(https:\/\/developers.google.com\//g, '(\/');
   markdown = markdown.replace(/^\[\]\(/gm, '[Link](');
+  markdown = markdown.replace(/__\s?Note:\s?__\s?/g, 'Note: ');
+  markdown = markdown.replace(/<div class="note">((.|\n)*?)<\/div>/g, '$1');
+  markdown = markdown.replace(/<aside markdown="1" class="special">/g, '<aside class="key-point">');
+  markdown = markdown.replace(/<aside markdown="1" class="warning">/g, '<aside class="warning">');
+  markdown = markdown.replace(/^<a id="(.*?)"\s*\/*?>/gm, '<div id="$1"></div>');
+  markdown = markdown.replace(/!\[.+?\]\((.+?)\)\[IMAGEINFO\]:.+,\s*(.+?)\n/gm, '![$2]($1)\n');
+  markdown = markdown.replace(/^## Contents?(\n|\s)*(__.*__(\s|\n)*)*/gm, '');
+  markdown = markdown.replace(/^(#+) __(.*)__/gm, '$1 $2')
   result.push(markdown);
   if (metadata.feedback) {
     result.push('');
@@ -71,13 +79,15 @@ function updateCodeLab(fileName) {
   fs.writeFileSync(metadataFile, JSON.stringify(metadata, null, 2));
 }
 
-function migrate(startPath) {
+function migrate(startPath, bookPath) {
   var opts = {
     srcBase: startPath,
     prefixBase: true
   };
   var files = glob.find('**/index.md', opts);
-  files.forEach(updateCodeLab);
+  files.forEach(function(file) {
+    updateCodeLab(file, bookPath);
+  });
 }
 
 exports.migrate = migrate;

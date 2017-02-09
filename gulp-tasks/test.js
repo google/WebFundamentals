@@ -18,7 +18,8 @@ var STD_EXCLUDES = [
   '!**/fundamentals/getting-started/codelabs/*/*.md',
   '!**/updates/201?/index.md',
   '!**/showcase/201?/index.md',
-  '!**/shows/http203/podcast/index.md'
+  '!**/shows/http203/podcast/index.md',
+  '!**/ilt/pwa/*'
 ];
 var MAX_DESCRIPTION_LENGTH = 485;
 var ERROR_STRINGS = [
@@ -30,7 +31,11 @@ var ERROR_STRINGS = [
   {label: 'Hard coded https://developers.google.com in link (HTML)', regEx: /href="https:\/\/developers.google.com/},
   {label: 'Google Sandboxed domain', regEx: /sandbox\.google\.com/g}
 ];
-var VALID_DATE_FORMATS = ['YYYY-MM-DD', 'YYYY-MM-DDTHH:mm:ss.sssZ'];
+var VALID_DATE_FORMATS = [
+  'YYYY-MM-DD',
+  'YYYY-MM-DDTHH:mm:ssZ',
+  'YYYY-MM-DDTHH:mm:ss.sssZ'
+];
 
 var contributorList;
 let summary = {
