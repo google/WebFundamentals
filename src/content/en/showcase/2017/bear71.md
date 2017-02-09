@@ -4,7 +4,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2017-02-02T18:00:00.000Z #}
 {# wf_updated_on: 2017-02-02T18:00:00.000Z #}
 {# wf_featured_image: /web/showcase/2017/images/bear71/featured.png #}
-{# wf_featured_snippet: <emphasis>Bear</emphasis> 71 is an interactive documentary launched by the National Film Board of Canada in 2012 to much critical acclaim. When it was built, Flash was in its golden years but with the deprecation of browser support for Flash, we were eager to explore WebVR, both as a way to preserve the project's legacy and a chance to innovate how the story is experienced. #}
+{# wf_featured_snippet: <emphasis>Bear 71</emphasis> is an interactive documentary launched by the National Film Board of Canada in 2012 to much critical acclaim. When it was built, Flash was in its golden years but with the deprecation of browser support for Flash, we were eager to explore WebVR, both as a way to preserve the project's legacy and a chance to innovate how the story is experienced. #}
 {# wf_tags: webvr,casestudy #}
 
 # Bear 71 and WebVR {: .page-title }
@@ -19,18 +19,18 @@ book_path: /web/showcase/_book.yaml
 
 ### TL;DR {: .hide-from-toc }
 
-WebVR is an API built into browsers that combines stereo rendering with
-real-time head tracking, enabling a quick and easy way to enjoy VR content
-online. With WebVR, content creators can create immersive VR content that lives
-online and runs on a wide range of VR hardware.
+[WebVR is an API](/web/fundamentals/vr/) built into browsers that combines
+stereo rendering with real-time head tracking, enabling a quick and easy way to
+enjoy VR content online. With WebVR, content creators can create immersive VR
+content that lives online and runs on a wide range of VR hardware.
 
 ## About Bear 71
 
-*Bear 71* is an interactive documentary produced by the National Film Board of
-Canada. Originally built in Flash, *Bear 71* was released in 2011 to critical
-acclaim. The backbone of the experience is a 23 minute track of audio and video,
-highlighting the relationship between humans, nature, technology, and one
-particular brown bear. The viewer is a voyeur in a world of information
+*Bear 71* is an interactive documentary produced by the National Film Board
+(NFB) of Canada. Originally built in Flash, *Bear 71* was released in 2011 to
+critical acclaim. The backbone of the experience is a 23 minute track of audio
+and video, highlighting the relationship between humans, nature, technology, and
+one particular brown bear. The viewer is a voyeur in a world of information
 represented as an abstract grid of symbols. Surprisingly, this doesn't hamper
 the emotional story within, and it should be experienced first-hand to be
 understood.
@@ -39,9 +39,9 @@ understood.
 
 The original *Bear 71* was developed in Flash; arguably the best interactive
 storytelling medium of the time. A lot of care went into the technology and it
-was considered cutting edge. 5 Years later, the original vision holds up and
+was considered cutting edge. Five years later, the original vision holds up and
 the story is still relevant, but the technology behind it needs an update. Any
-technology, used creatively, can assist a good story, but Virtual Reality
+technology, used creatively, can assist a good story, but virtual reality
 deserves special attention. VR has come and gone several times before, but it's
 finally arrived in the mainstream. This is a huge opportunity for storytelling.
 Stories which traditionally happened in front of you, can now happen around you
@@ -75,37 +75,39 @@ stereo vision, on various platforms including mobile phones?
 During the start of development in late 2016, WebVR was not yet readily
 available. The WebVR API is evolving quickly, and the WebVR standard is
 currently being drafted. But that didn't stop the community from patching
-together a suitable stopgap: the WebVR polyfill. It provided useable head
-tracking and stereo rendering via the gyroscope and WebGL. This polyfill, along
-with Google Cardboard, allowed us to start building and testing content. When
-Google Pixel and Daydream View became available, along with the first real
-builds of WebVR in Chrome, our content was ready to take advantage of it. For
-the purposes of quick development, we still include and use the polyfill where
-WebVR is not yet available. For instance, we do much of our developing and
-debugging on Chrome 55's mobile emulator. Also, it was common to develop and
-debug on whatever was readily available, including but not limited to HTC One
-M9, iPhone 5S, Samsung Galaxy and of course Pixel by Google. The versatility of
-the polyfill cannot be understated.
+together a suitable stopgap: the
+[WebVR polyfill](https://github.com/googlevr/webvr-polyfill). It provided
+useable head tracking and stereo rendering via the gyroscope and WebGL. This
+polyfill, along with Google Cardboard, allowed us to start building and testing
+content. When Google Pixel and Daydream View became available, along with the
+first real builds of WebVR in Chrome, our content was ready to take advantage of
+it. For quick development, we still include and use the polyfill where WebVR is
+not yet available. For instance, we do much of our developing and debugging on
+Chrome 55's mobile emulator. Also, it was common to develop and debug on
+whatever was readily available, including but not limited to HTC One M9, iPhone
+5S, Samsung Galaxy and of course Pixel by Google. The versatility of the
+polyfill cannot be understated.
 
 Despite the polyfill's utility, some essential WebVR features simply cannot be
 emulated. It's worth noting that one of the biggest hurdles that VR faces is
-motion sickness. Motion sickness is tied to, among many things, framerates and
-fast and accurate head tracking. WebVR has a few essential features like
+motion sickness. Motion sickness is tied to, among many things, frame rates and
+speed and accuracy of head tracking. WebVR has a few essential features like
 reprojection and high-speed orientation sensors. That said, maintaining high
-framerates is still the responsibility of the content creators. Since WebVR
+frame rates is still the responsibility of the content creators. Since WebVR
 requires rendering the scene twice (once for each eye) per frame, optimization
 is doubly important. Properly optimizing your WebGL content is outside the scope
 of this article, but here are a few key points:
 
-- Reduce your draw calls. A great way of doing this is merging many elements
-  that share a material into just a few.
+- Reduce your draw calls. A great way of doing this is merging elements that
+  share a material.
 - Keep your shaders simple. Standard materials and shaders do a great job of
   optimizing out unused features, but sometimes writing brutally optimized
   shaders by hand is the best way.
 - Keep your draw distance close and use fog effectively.
-- Texture-based text reads better and renders faster than text geometry
-- Be sure your art style is economical to render. It's better to look like Super
-  *Mario 64* at 60fps than *Mario Galaxy* at 6 fps.
+- Prefer texture-based text, which reads better and renders faster than text
+  geometry.
+- Be sure your art style is economical to render. It's better to look like
+  *Super Mario 64* at 60fps than *Mario Galaxy* at 6 fps.
 - Treat the user as a solipsist: find ways to only simulate the world around the
   player.
 - Look for opportunities to cache results of expensive computations in typed

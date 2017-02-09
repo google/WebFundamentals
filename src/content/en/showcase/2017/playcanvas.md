@@ -19,8 +19,9 @@ book_path: /web/showcase/_book.yaml
 
 Website designers are familiar with the idea of responsive design, building a
 website to work across different devices, such as mobile phones, tablets and
-computers and different screen resolutions and pixel ratios. WebVR introduces
-new challenges to the idea of responsive design.
+computers and different screen resolutions and pixel ratios.
+[WebVR](/web/fundamentals/vr/) introduces new challenges to the idea of
+responsive design.
 
 We can categorize a WebVR experience by two metrics - the level of immersion and
 the level of input. These levels are distinguished by "degrees of freedom"
@@ -29,20 +30,20 @@ tracking orientation and 0 DOF tracks neither position nor orientation.
 
 ### Immersion Level
 
-- No VR - Monitor or mobile display.
-- Stationary VR - Device with 3 DOF tracking.
-- Seated VR - 6 DOF tracking but in a limited area and angle range.
-- Room Scale VR - 6 DOF tracking with a room sized environment.
+- **No VR** - Monitor or mobile display.
+- **Stationary VR** - Device with 3 DOF tracking.
+- **Seated VR** - 6 DOF tracking but in a limited area and angle range.
+- **Room Scale VR** - 6 DOF tracking with a room sized environment.
 
 ### Input Level
-- 0 DOF - The only input available is a click or tap. This input method is tied
+- **0 DOF** - The only input available is a click or tap. This input method is tied
   to the direction the user is facing. Sometimes we refer to this as a gaze
   controller.
-- 3 DOF - A controller that tracks its orientation can be used like a laser
+- **3 DOF** - A controller that tracks its orientation can be used like a laser
   pointer to specify a direction or a location. The position of the controller
-  is estimated based on the user's viewpoint.  This includes the Daydream
+  is estimated based on the user's viewpoint. This includes the Daydream
   Controller.
-- 6 DOF - A controller that tracks its position and orientation. This can be
+- **6 DOF** - A controller that tracks its position and orientation. This can be
   used to closely simulate a hand in VR.
 
 So you can see that a single application might support anything from a non-VR
@@ -61,9 +62,9 @@ The basic mechanics of how interactions work in the WebVR Lab are ray
 intersections. The floor, the room and any objects that can be interacted with
 are defined in terms of one of three shape primitives:
 
-- Axis-aligned bounding box (or AABB): A box that is not rotated.
-- Oriented bounding box: A box that can be rotated.
-- Sphere: Defined as a radius around a point in space.
+- **Axis-aligned bounding box (or AABB)** - A box that is not rotated.
+- **Oriented bounding box** - A box that can be rotated.
+- **Sphere** - A radius around a point in space.
 
 To see if an action is possible we fire a ray into the world and test whether
 the ray intersects with the shape of the objects in the world. Different types
@@ -73,8 +74,8 @@ a distance).
 
 ### Simple Actions
 
-First we define a few simple actions that can be performed and how they are used
-with different controllers.
+First we define a few simple actions and how they are used with different
+controllers.
 
 #### Highlight
 
@@ -118,7 +119,7 @@ they are looking around.
 Sometimes it is absolutely necessary to move the viewpoint. For example, when
 using Stationary or Seated VR it is possible to end up facing a wall with no
 ability to turn in the physical world. So we allow the user to rotate the camera
-using the controller. In the WebVR Labs using the left or right pad on the
+using the controller. In the WebVR Lab using the left or right pad on the
 Daydream Controller rotates the camera.
 
 To prevent discomfort when we move the camera in this way we reduce the amount
@@ -132,8 +133,9 @@ discomfort.
 
 <img src="/web/showcase/2017/images/playcanvas/activate.png" class="attempt-right">
 
-Activating is the VR equivalent of clicking a button on a webpage. In WebVR Lab
-we have taken this literally and provided a simple Button that can be activated.
+Activating is the VR equivalent of clicking a button on a webpage. In the WebVR
+Lab we have taken this literally and provided a simple button that can be
+activated.
 
 For 0 DOF and 3 DOF controllers, activating is a highlight and click. For a 6
 DOF controller we can upgrade the experience to let you "push" a button by
@@ -144,17 +146,17 @@ directly checking to see if your hand controller is inside the button.
 <img src="/web/showcase/2017/images/playcanvas/grab.png" class="attempt-right">
 
 The WebVR Lab contains a number of "grabbable" items. With this behaviour, when
-the object is activated it can be picked up and moved. There are two obvious
+the object is activated it can be picked up and moved. There are two obvious,
 different behaviors depending on the level of input you wish to support.
 
 For 6 DOF controllers holding down an input button will attach the grabbable
 item to the controller. It can then be moved and positioned with fine-grained
-control. Releasing the button will activate a Combine or Drop action with the
+control. Releasing the button will activate a combine or drop action with the
 item.
 
 For less maneuverable controllers a click will pick up the item and attach it to
 the user's viewport. Usually keeping a section of the item visible in the "lower
-third" of the display. A second click will either Drop or Combine the item.
+third" of the display. A second click will either drop or combine the item.
 
 ### Combine
 
@@ -163,9 +165,9 @@ third" of the display. A second click will either Drop or Combine the item.
 Combine is an action that occurs when you "use" an item with another item. This
 covers a huge variety of use cases. In the WebVR Lab we use this to play records
 on the hi-fi. When an item is grabbed, it becomes possible to combine the grabbed
-item with another item in the world. With all types of controller highlighting
-the target item whilst grabbing another item and then releasing the grab will
-combine the two items.
+item with another item. With all types of controller highlighting the target
+item whilst grabbing another item and then releasing the grab will combine the
+two items.
 
 ### Drop / Restoring
 

@@ -13,12 +13,12 @@ book_path: /web/showcase/_book.yaml
 
 <img src="/web/showcase/2017/images/matterport/VR_FourSeason_InGame01.jpg" class="attempt-right">
 
-<a class="button button-primary" href="https://matterport.com/gallery/">
+<a class="button button-primary" href="https://try.matterport.com/virtual-reality/webvr/">
   View the site
 </a>
 
 ### TL;DR {: .hide-from-toc }
-By adding WebVR support, Matterport makes it even easier to explore real-world
+By adding WebVR support, Matterport makes it easier to explore real-world
 places in immersive virtual reality. With no apps to download, WebVR will reduce
 drop-offs and enable partners to retain the user on their own website. [WebVR is
 a key lever in Matterport's
@@ -48,11 +48,11 @@ concerned about their customers leaving their website.
 
 ## Solution
 Matterport's philosophy is to keep things push-button simple and delight their
-customers. Using the WebVR API support in Chrome 56, Matterport was able to
-create [virtual reality that can be experienced directly from a mobile web
-browser](https://matterport.com/virtual-reality/webvr/), with no apps to
-download. This experience is currently limited to Daydream but will be expanded
-to additional VR platforms and browsers.
+customers. Using the [WebVR API](/web/fundamentals/vr/) support in Chrome 56,
+Matterport was able to create [virtual reality that can be experienced directly
+from a mobile web browser](https://matterport.com/virtual-reality/webvr/), with
+no apps to download. This experience is currently limited to Daydream but will
+be expanded to additional VR platforms and browsers.
 
 Now a user needs to simply tap the VR button in a Matterport 3D Showcase, slip
 their phone into a Daydream View, and start exploring. When they are
