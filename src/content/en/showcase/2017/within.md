@@ -4,7 +4,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2017-02-02T18:00:00.000Z #}
 {# wf_updated_on: 2017-02-02T18:00:00.000Z #}
 {# wf_featured_image: /web/showcase/2017/images/within/featured.png #}
-{# wf_featured_snippet: Within is a platform for storytelling in Virtual Reality and is available everywhere VR is. This includes the web. Leveraging WebVR, viewers are able to go to the website, click a link, and immediately watch Within’s films in immersive VR - including high end head-mounted displays. During the development process the team discovered rendering text is difficult in this new environment, and they created an example using shaders to make it a smoother process. #}
+{# wf_featured_snippet: Within is a platform for storytelling in Virtual Reality and is available everywhere VR is. This includes the web. Leveraging WebVR, viewers are able to go to a website, click a link, and immediately watch Within’s films in immersive VR - including high end head-mounted displays. During the development process the team discovered rendering text is difficult in this new environment, and they created an example using shaders to make it a smoother process. #}
 {# wf_tags: webvr,casestudy #}
 
 
@@ -22,8 +22,8 @@ book_path: /web/showcase/_book.yaml
 
 Within ([http://with.in/](http://with.in/)) is a platform for storytelling in
 Virtual Reality. So when the team heard about WebVR in 2015 we were immediately
-interested in its potential. Today that interest manifests into a unique
-subdomain of our Web Platform, [https://vr.with.in/](https://vr.with.in/). Anyone
+interested in its potential. Today, that interest manifests into a unique
+subdomain of our Web platform, [https://vr.with.in/](https://vr.with.in/). Anyone
 with a VR-enabled browser can go to the site, click a button and throw on a
 headset to be immersed in our portfolio of VR films.
 
@@ -68,7 +68,7 @@ WebVR explorations and [https://vr.with.in/](https://vr.with.in/) are all in
 
 Luckily, there is work being done to make this possible. In fact in our research
 we found a number of effective ways to render text in a three-dimensional
-environment on a `<canvas />` element. Below is a matrix of a few we found
+environment on a `<canvas>` element. Below is a matrix of a few we found
 marked with pros and cons for each:
 
 
@@ -153,17 +153,17 @@ well for large quantities of text and neither has typographic features.
   <figcaption>Font to SDF Bitmap Workflow</figcaption>
 </figure>
 
-Bitmap fonts use one quad (two triangles) per character, so it uses less
-geometry and performs better than
+Bitmap fonts use one quad (two triangles) per character, so they use less
+geometry and perform better than
 [triangulated vectors](https://vr.with.in/archive/text-triangulated-vector/).
 They're still raster based since they use a texture map sprite, but with an SDF
-shader they're basically resolution independent so they look nicer than a 2D
+shader they're basically resolution-independent so they look nicer than a 2D
 canvas texture. Matt DesLauriers' three-bmfont-text also includes reliable
 typographic features for text wrapping, letter spacing, line height and
 alignment. Overflow doesn't get cut off. Font size is controlled through scale.
-We chose this route because it gave us the best options for design while still
+We chose this route because it gave us the best options for design while
 staying performant. Unfortunately, it wasn't as easy to implement so we'll go
-through the steps in hopes to alleviate fellow developers working in WebVR.
+through the steps in the hopes of helping fellow developers working in WebVR.
 
 [mattdesl.svbtle.com/material-design-on-the-gpu](https://mattdesl.svbtle.com/material-design-on-the-gpu)
 
@@ -172,7 +172,7 @@ through the steps in hopes to alleviate fellow developers working in WebVR.
 [github.com/mattdesl/physical-text](https://github.com/mattdesl/physical-text)
 
 
-## 1. Generate bitmap font (.png + .fnt)
+## 1. Generate a bitmap font (.png + .fnt)
 
 <figure class="attempt-right">
   <img src="/web/showcase/2017/images/within/3.png">
@@ -194,7 +194,7 @@ through the steps in hopes to alleviate fellow developers working in WebVR.
 
 Hiero is a bitmap font packing tool that runs with Java. The Hiero documentation
 doesn't really explain how to run it without going through a complicated build
-process. First, install Java if you haven't already. Then if double clicking on
+process. First, install Java if you haven't already. Then, if double clicking on
 the runnable-hiero.jar doesn't open Hiero, try running it with this command in
 the console:
 
@@ -255,7 +255,8 @@ Now we can bypass load-bmfont and just do an XHR (XMLHttpRequest) request on the
 
 Once we have the font loaded, Matt's three-bmfont-text will take care of the
 rest. Since we're not using Node for our own app, we're going to browserify
-[three-bmfont-text.js](https://vr.with.in/archive/text-sdf-bitmap/three-bmfont-text.js) into a usable [three-bmfont-text-bundle.js](https://vr.with.in/archive/text-sdf-bitmap/three-bmfont-text-bundle.js)
+[three-bmfont-text.js](https://vr.with.in/archive/text-sdf-bitmap/three-bmfont-text.js)
+into a usable [three-bmfont-text-bundle.js](https://vr.with.in/archive/text-sdf-bitmap/three-bmfont-text-bundle.js)
 
 [jam3.github.io/three-bmfont-text/test/](http://jam3.github.io/three-bmfont-text/test/)
 
@@ -295,7 +296,7 @@ three-bmfont-text
     <script src="sdf-shader.js"></script>
     <script src="text-bitmap.js"></script>
 
-Create an XHR request for the .json font file and create text object in the
+Create an XHR request for the .json font file and create a text object in the
 callback:
 
     var bmtext = new TextBitmap({ options });
@@ -309,9 +310,9 @@ To change text:
 
 The bitmap font's .png is loaded with THREE.TextureLoader in text-bitmap.js
 
-TextBitmap also includes an invisible hitbox for three.js raycast interaction,
+TextBitmap also includes an invisible hitbox for three.js raycast interaction
 through a mouse, camera, or hand tracked motion controllers like Oculus Touch or
-the Vive controllers. The hitbox's size auto updates when you change the text
+the Vive controllers. The hitbox's size auto-updates when you change the text
 options.
 
 Bmtext.group is added to the three.js scene. If you need to access the children
@@ -335,7 +336,8 @@ edit, so you can empty that array to decrease the file size of the json. Then
 edit the xoffsets for kerning. But first you'll have to figure out which
 characters go with which char id in the json.
 
-In [three-bmfont-text-bundle.js](https://vr.with.in/archive/text-sdf-bitmap/three-bmfont-text-bundle.js), insert a console.log after line 240:
+In [three-bmfont-text-bundle.js](https://vr.with.in/archive/text-sdf-bitmap/three-bmfont-text-bundle.js),
+insert `console.log` after line 240:
 
     var id = text.charCodeAt(i)
     // console.log(id);
@@ -371,9 +373,9 @@ This assumes that the local origin of each TextBitmap group is vertically
 aligned with the top of the TextBitmap mesh (see centering in
 [text-bitmap.js](https://vr.with.in/archive/text-sdf-bitmap/text-bitmap.js)
 update). If you change the text for any of those objects later, and the height
-of that object changes, you will also need to recalculate those positions. Here
+of that object changes, you will also need to recalculate those positions. Here,
 only the y-position of the text is modified, but one opportunity of working in
-3D is that we can push and pull the text in the z-direction, as well rotate
+3D is that we can push and pull the text in the z-direction, as well as rotate
 around the x, y and z axis.
 
 ## Conclusion
