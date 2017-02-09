@@ -47,7 +47,7 @@ Note that:
 
 With the [Media Session API](/web/updates/2017/02/media-session), you can
 customize media notifications by providing metadata for the media your web app
-is playing. It also allows you to handle media related events such as seeking
-or track changing which may come from notifications or media keys.
+is playing. This API also allows you to handle media related events such as
+seeking or track changing which may come from notifications or media keys.
 
 {% include "comment-widget.html" %}
