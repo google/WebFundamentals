@@ -6,9 +6,12 @@
  */
 
 var fs = require('fs');
+var chalk = require('chalk');
 var glob = require('globule');
 var moment = require('moment');
+var gutil = require('gulp-util');
 var wfRegEx = require('./wfRegEx');
+const exec = require('child_process').exec;
 
 var STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md'];
 
@@ -23,6 +26,42 @@ if (!String.prototype.endsWith) {
       var lastIndex = subjectString.indexOf(searchString, position);
       return lastIndex !== -1 && lastIndex === position;
     }
+  });
+}
+
+/**
+ * Executes a shell command and returns the result in a promise.
+ *
+ * @param {string} cmd The command to run.
+ * @param {string} cwd The working directory to run the command in.
+ * @return {Promise} The promise that will be resolved on completion.
+ */
+function promisedExec(cmd, cwd) {
+  return new Promise(function(resolve, reject) {
+    const cmdLog = chalk.cyan(`$ ${cmd}`);
+    gutil.log(' ', cmdLog);
+    const execOptions = {
+      cwd: cwd,
+      maxBuffer: 1024 * 1024
+    };
+    exec(cmd, execOptions, function(err, stdOut, stdErr) {
+      stdOut = stdOut.trim();
+      stdErr = stdErr.trim();
+      if (err) {
+        gutil.log(' ', cmdLog, chalk.red('FAILED'));
+        const output = (stdOut + '\n' + stdErr).trim();
+        if (GLOBAL.WF.options.verbose && output.length > 0) {
+          console.log(output);
+        }
+        reject(err);
+        return;
+      }
+      gutil.log(' ', cmdLog, chalk.green('OK'));
+      if (GLOBAL.WF.options.verbose && stdOut.length > 0) {
+        console.log(stdOut);
+      }
+      resolve(stdOut);
+    });
   });
 }
 
@@ -156,4 +195,4 @@ exports.getFileList = getFileList;
 exports.publishedComparator = publishedComparator;
 exports.updatedComparator = updatedComparator;
 exports.splitByYear = splitByYear;
-
+exports.promisedExec = promisedExec;
