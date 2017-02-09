@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 56 for developers? Web Bluetooth API, CSS Position Sticky, and HTML5 by Default is enabled for all users.
 
 {# wf_published_on: 2017-01-25 #}
-{# wf_updated_on: 2017-01-25 #}
+{# wf_updated_on: 2017-02-09 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome55,new-in-chrome,css,layout,html5,flash,webbluetooth,webvr #}
 {# wf_featured_snippet: With Chrome 56, web apps can now communicate with nearby Bluetooth Low Energy devices using the <b>Web Bluetooth API</b>. CSS <code>position: sticky;</code> is back - making it easy to create elements that scroll normally until sticking to the top of the viewport. And HTML5 by Default is enabled for all users. #}
@@ -32,7 +32,7 @@ I’m Pete LePage, let’s dive in and see what’s new for developers in Chrome
 
 ## Web Bluetooth API {: #webbluetooth }
 
-Until now, users who have a bluetooth devices were forced to install
+Until now, users who have bluetooth devices were forced to install
 native apps to communicate with them. With Chrome 56, users can select
 nearby Bluetooth Low Energy devices to provide to web sites that use
 the [Web Bluetooth API](//webbluetoothcg.github.io/web-bluetooth/).
