@@ -130,6 +130,8 @@ That's the basic idea of stepping through code. If you look at the code in
 you can use another type of breakpoint to pause the code closer to the
 location of the bug.
 
+{% include "web/tools/chrome-devtools/javascript/_feedback/3.html" %}
+
 [into]: /web/tools/chrome-devtools/images/step-into.png
 [over]: /web/tools/chrome-devtools/images/step-over.png
 
@@ -155,6 +157,8 @@ line-of-code breakpoint. Try it now:
 
 The value of `sum` looks suspicious. It looks like it's being evaluated as
 a string, when it should be a number. This may be the cause of the bug.
+
+{% include "web/tools/chrome-devtools/javascript/_feedback/4.html" %}
 
 ## Step 5: Check variable values
 
@@ -211,6 +215,8 @@ fixes for the bug you just discovered. Try it now:
        </figcaption>
      </figure>
 
+{% include "web/tools/chrome-devtools/javascript/_feedback/5.html" %}
+
 [add]: /web/tools/chrome-devtools/javascript/imgs/add-expression.png
 
 ## Step 6: Apply a fix
@@ -241,6 +247,8 @@ Keep in mind that this workflow only applies a fix to the code that is
 running in your browser. It won't fix the code for all users that run your
 page. To do that, you need to fix the code that's running on the servers
 that serve your page.
+
+{% include "web/tools/chrome-devtools/javascript/_feedback/6.html" %}
 
 [deactivate]: /web/tools/chrome-devtools/images/deactivate-breakpoints-button.png
 
@@ -274,36 +282,6 @@ tutorial. Check out the link below to learn more about them.
 
 Help us make this tutorial better by answering the questions below.
 
-{% framebox width="auto" height="auto" %}
+{% include "web/tools/chrome-devtools/javascript/_feedback/7.html" %}
 
-<p>Did you complete the tutorial successfully?</p>
-
-<button class="gc-analytics-event"
-        data-category="DevTools / JS / Get Started"
-        data-label="Completed / Yes">Yes</button>
-
-<button class="gc-analytics-event"
-        data-category="DevTools / JS / Get Started"
-        data-label="Completed / No">No</button>
-
-<p>Did this tutorial contain the information you were looking for?</p>
-
-<button class="gc-analytics-event"
-        data-category="DevTools / JS / Get Started"
-        data-label="Relevant / Yes">Yes</button>
-
-<button class="gc-analytics-event"
-        data-category="DevTools / JS / Get Started"
-        data-label="Relevant / No">No</button>
-
-<p>Was the tutorial too long?</p>
-
-<button class="gc-analytics-event"
-        data-category="DevTools / JS / Get Started"
-        data-label="Too Long / Yes">Yes</button>
-
-<button class="gc-analytics-event"
-        data-category="DevTools / JS / Get Started"
-        data-label="Too Long / No">No</button>
-
-{% endframebox %}
+{% include "web/tools/chrome-devtools/javascript/_feedback/8.html" %}
