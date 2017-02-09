@@ -116,7 +116,7 @@ beaufortfrancois:
   role:
     - author
   homepage: 'https://plus.google.com/+FrancoisBeaufort'
-  google: +FrancoisBeaufort
+  github: beaufortfrancois
   description:
     en: Dives into Chromium source code
 
