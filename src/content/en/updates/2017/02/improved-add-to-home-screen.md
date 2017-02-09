@@ -145,14 +145,15 @@ controlled by several different Service Workers.
 
 It is important for users to feel like they are using an app-like experience
 when using your progressive web app. This means that we need to handle
-navigations sensetively. If the user navigates to another origin then your
-progressive web app should not act like a container, instead a new context will
+navigations sensitively. If the user navigates to another origin then your
+progressive web app should not act like a container. Instead, a new context will
 be opened for the user.
 
 The `scope` attribute also is used to define the reach of your web application
-within the origin. Any navigation to a url inside your origin, but outside the
-scope will cause a new web context to be opened for the user. This allows you to
-have multiple progressive web apps per origin.
+within the origin and is different to the `scope` property of your service
+worker. Any navigation to a url inside your origin, but outside the scope will
+cause a new web context to be opened for the user. This allows you to have
+multiple progressive web apps per origin.
 
 ## Effectively managing your app's scope
 
@@ -189,24 +190,24 @@ Some examples:
 
 By Installing your Progressive Web App it now becomes part of the system. Added
 sites show up on the home screen, app drawer and throughout the Android
-System-UI as a user would expect. Permissions are handled differently, by
+System UI as a user would expect. Permissions are handled differently, by
 default your app can only have the same permissions surface as Chrome would
-normally have when installed - you can't ask for Camera access at install time
+normally have when installed - you can't ask for camera access at install time
 for example. This means that as developer you must request permission for
-sensitive API's such as Camera and Microphone access, notifications etc at
+sensitive API's such as camera and microphone access, notifications etc. at
 runtime as you would for any normal web site and the Chrome runtime will prompt
 you for access.
 
-Android normally gives instant access notifications, Installed Progressive Web
-Apps do not have this permission granted by default and your user must
-explicitly opt-in to receiving notifications
+Android normally grants immediate access to notifications. Installed Progressive
+Web Apps do not have access to the notifications permission granted unless the
+user has explicitly opted to receiving notifications.
 
 ## Storage and app state
 
 When the user adds your Progressive Web App to their system Chrome will use the
 same profile and will not segregate the data. This means your service worker
-will already be installed, your cookies still active any client-side storage
-will be still stored the next time that the user opens the App.
+will already be installed, your cookies are still active and any client-side
+storage will be still stored the next time that the user opens the App.
 
 This can cause some issues because if the user clears the Chrome profile, then
 your data in your app will also be cleared. To ensure that your user data is
@@ -230,8 +231,8 @@ banner](/web/fundamentals/engage-and-retain/app-install-banners/).
 
 We recommend using [Lighthouse](/web/tools/lighthouse/) to audit your PWA.
 
-Note: there is no engagement threshold for improved add to home screen from the
-menu, it is only used to determine when to prompt users to install directly.
+Note: There is no engagement threshold for improved add to home screen from the
+menu. It is only used to determine when to prompt users to install directly.
 
 ### Does this change the triggering of the add to Home screen banner?
 
@@ -304,8 +305,8 @@ No, the site opens in the version of Chrome the user added the site from.
 
 ### If I update my site's service worker, will this update automatically in the background even without the user visiting the site?
 
-No. The update to the SW will be processed the next time that the user visits
-the page.
+No. The update to the service worker will be processed the next time that the
+user visits the page.
 
 ### When will the "Unknown sources" restriction be removed?
 
