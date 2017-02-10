@@ -6,30 +6,30 @@
  */
 
 var fs = require('fs');
+var chalk = require('chalk');
 var glob = require('globule');
 var moment = require('moment');
 var gutil = require('gulp-util');
 
-function updateCodeLab(fileName, bookPath) {
-  gutil.log(' ', 'Processing', fileName);
+function updateCodeLab(sourceFile, destFile, bookPath) {
+  gutil.log(' ', 'Processing', sourceFile);
   var authorId;
-  var metadataFile = fileName.replace('index.md', 'codelab.json');
+  var metadataFile = sourceFile.replace('index.md', 'codelab.json');
   var metadata = fs.readFileSync(metadataFile);
   metadata = JSON.parse(metadata);
   if (metadata.wfProcessed === true) {
-    gutil.log(' ', 'Skipping', fileName);
+    gutil.log(' ', 'Skipping', sourceFile);
     return;
   }
   try {
-    var authorJSON = fs.readFileSync(fileName.replace('index.md', 'author.json'));
+    var authorJSON = fs.readFileSync(sourceFile.replace('index.md', 'author.json'));
     authorJSON = JSON.parse(authorJSON);
     authorId = authorJSON.author;
   } catch (ex) {
-    gutil.log('  ', 'No author.json file found.');
   }
   metadata.wfProcessed = true;
   var result = [];
-  var markdown = fs.readFileSync(fileName, 'utf8');
+  var markdown = fs.readFileSync(sourceFile, 'utf8');
   result.push('project_path: /web/_project.yaml');
   result.push('book_path: ' + bookPath);
   if (metadata.summary) {
@@ -75,19 +75,8 @@ function updateCodeLab(fileName, bookPath) {
     result.push('[issue](' + metadata.feedback + ') today. And thanks!');
   }
   result = result.join('\n');
-  fs.writeFileSync(fileName, result);
-  fs.writeFileSync(metadataFile, JSON.stringify(metadata, null, 2));
+  gutil.log('  ', chalk.cyan('->'), destFile);
+  fs.writeFileSync(destFile, result);
 }
 
-function migrate(startPath, bookPath) {
-  var opts = {
-    srcBase: startPath,
-    prefixBase: true
-  };
-  var files = glob.find('**/index.md', opts);
-  files.forEach(function(file) {
-    updateCodeLab(file, bookPath);
-  });
-}
-
-exports.migrate = migrate;
+exports.updateCodeLab = updateCodeLab;

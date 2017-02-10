@@ -1,11 +1,18 @@
 'use strict';
 
-let gulp = require('gulp');
-let path = require('path');
-let glob = require('globule');
-let wfHelper = require('./wfHelper');
+const gulp = require('gulp');
+const path = require('path');
+const glob = require('globule');
+const wfHelper = require('./wfHelper');
 const runSequence = require('run-sequence');
+const wfCodeLabHelper = require('./wfCodeLabHelper');
 
+/**
+ * Update the files using the claat tool then return a list of files
+ *
+ * @param {string} srcPath Where to run the claat tool.
+ * @return {Promise} The promise with the list of all files updated.
+ */
 function getCLAATFiles(srcPath) {
   let cmd = '../../../tools/claat update';
   return new Promise(function(resolve, reject) {
@@ -21,42 +28,46 @@ function getCLAATFiles(srcPath) {
   });
 }
 
-function pete(src, dest) {
-  return new Promise(function(resolve, reject) {
-    setTimeout(function() {
-      console.log('f', src, dest);
-      resolve();
-    }, 1000 * Math.floor(Math.random() * 4) + 2);
-  })
-  .catch(function(err) { console.log('e3', err)});
+
+/**
+ * Updates files, and copies them to the appropriate directory
+ *
+ * @param {string} srcPath The source directory to find the files.
+ * @param {string} destBase The destination to copy to.
+ * @param {Boolean} flatten Whether to flatten the files to one directory.
+ * @param {string} bookPath The location of the book.yaml file
+ * @return {Promise} The promise that will be resolved on completion.
+ */
+function exportAndUpdate(srcPath, destBase, flatten, bookPath) {
+  return getCLAATFiles(srcPath)
+  .then(function(files) {
+    return Promise.all(files.map(function(file) {
+      let srcFile = file;
+      let srcImgPath = file.replace('index.md', 'img/');
+      let destDir = file.replace(srcPath, '').replace('/index.md', '');
+      destDir = path.join(destBase, destDir);
+      let destFile = path.join(destDir, 'index.md');
+      if (flatten === true) {
+        destDir = path.resolve(destDir, '..');
+        destFile = destFile.replace('/index.md', '.md');
+      }
+      let destImgPath = path.join(destDir, 'img');
+      wfCodeLabHelper.updateCodeLab(srcFile, destFile, bookPath)
+      return wfHelper.promisedRSync(srcImgPath, destImgPath);
+    }));
+  });
 }
 
-gulp.task('claat:ilt-pwa', function() {
-  let srcPath = 'src/ilt/pwa';
-  let destPath = 'ilt/pwa';
-  return new Promise(function(resolve, reject) {
-    getCLAATFiles(srcPath)
-    .then(function(files) {
-      resolve(Promise.all(files.map(function(file) {
-        let srcFile = file;
-        let destFile = file.replace(srcPath, '').replace('/index.md', '');
-        destFile = path.join(GLOBAL.WF.src.content, destPath, destFile + '.md');
-        return pete(srcFile, destFile);
-      })));
-    })
-    .catch(function(err) { console.log('e1', err)});
-
-
-  })
-  .catch(function(err) { console.log('e2', err)});
+gulp.task('claat:ilt', function() {
+  let srcPath = 'src/data/ilt-pwa';
+  let destPath = path.join(GLOBAL.WF.src.content, 'ilt/pwa');
+  let bookPath = '/web/ilt/_book.yaml';
+  return exportAndUpdate(srcPath, destPath, true, bookPath);
 });
 
-
-
-//   // return getCLAATFiles('src/ilt/pwa')
-//   // .then(function(files) {
-//   //   console.log('f', files);
-//   // });
-
-
-// });
+gulp.task('claat:codelabs', function() {
+  let srcPath = 'src/data/codelabs';
+  let destPath = path.join(GLOBAL.WF.src.content, 'fundamentals/getting-started/codelabs');
+  let bookPath = '/web/fundamentals/_book.yaml';
+  return exportAndUpdate(srcPath, destPath, false, bookPath);
+});

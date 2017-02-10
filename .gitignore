@@ -33,7 +33,8 @@ src/content/*/showcase/*/index.md
 src/content/*/showcase/tags/*
 src/content/*/rss.xml
 src/content/*/atom.xml
-src/ilt/pwa/*/img/*
-src/ilt/pwa/*/*.md
-
+src/data/codelabs/*/img/*
+src/data/codelabs/*/*.md
+src/data/ilt-pwa/*/img/*
+src/data/ilt-pwa/*/*.md
 

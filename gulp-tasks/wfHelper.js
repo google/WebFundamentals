@@ -9,6 +9,8 @@ var fs = require('fs');
 var chalk = require('chalk');
 var glob = require('globule');
 var moment = require('moment');
+const RSync = require('rsync');
+const mkdirp = require('mkdirp');
 var gutil = require('gulp-util');
 var wfRegEx = require('./wfRegEx');
 const exec = require('child_process').exec;
@@ -61,6 +63,39 @@ function promisedExec(cmd, cwd) {
         console.log(stdOut);
       }
       resolve(stdOut);
+    });
+  });
+}
+
+/**
+ * Uses RSync to copy files from one directory to another.
+ *
+ * @param {string} src The source to copy.
+ * @param {string} dest The destination to copy to.
+ * @return {Promise} The promise that will be resolved on completion.
+ */
+function promisedRSync(src, dest) {
+  gutil.log(' ', chalk.blue('rsync'), src, '->', dest);
+  return new Promise(function(resolve, reject) {
+    if (fs.existsSync(src) === false) {
+      console.log(src, 'doesnt exist');
+      resolve();
+    }
+    const rsync = new RSync()
+      .source(src)
+      .destination(dest)
+      .archive()
+      .exclude('.git*')
+      .exclude('.DS_Store');
+    mkdirp.sync(dest);
+    rsync.execute(function(error, code, cmd) {
+      if (code !== 0) {
+        gutil.log(' ', 'Copying', chalk.blue(src), chalk.red('Failed!'));
+        console.log(error);
+        reject(error);
+        return;
+      }
+      resolve();
     });
   });
 }
@@ -196,3 +231,4 @@ exports.publishedComparator = publishedComparator;
 exports.updatedComparator = updatedComparator;
 exports.splitByYear = splitByYear;
 exports.promisedExec = promisedExec;
+exports.promisedRSync = promisedRSync;
