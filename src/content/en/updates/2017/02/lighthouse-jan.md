@@ -26,9 +26,6 @@ improvement.
      class="lighthouse-logo attempt-right" alt="Lighthouse Logo">
 
 <style>
-figure {
-  text-align: center;
-}
 .lighthouse-logo {
   height: 150px;
   width: auto;
