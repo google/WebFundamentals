@@ -52,9 +52,9 @@ generates a report on how well the page did. From here you can use the
 failing tests as indicators on what you can do to improve your app.
 
 <p class="lighthouse-install-container">
-  <a class="button button-primary lighthouse-install gc-analytics-event"
+  <a class="button button-primary lighthouse-install devsite-crx-install gc-analytics-event"
      data-category="lighthouse" data-action="install" data-label="blipmdconlkpinefehnmjammfjpmpbjk"
-     href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk"
+     href="https://chrome.google.com/webstore/detail/blipmdconlkpinefehnmjammfjpmpbjk"
      title="Install Lighthouse Chrome Extension" target="_blank">
     <span class="material-icons">file_download</span>
     Install Lighthouse

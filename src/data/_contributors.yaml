@@ -136,8 +136,8 @@ ericbidelman:
     - author
   email: e.bidelman@google.com
   description:
-    en: 'Engineer @ Google working on Polymer, Chrome, and the web'
-  
+    en: 'Engineer @ Google working on Lighthouse, Web Components, Chrome, and the web'
+
 bokan:
   name:
     given: David
@@ -150,7 +150,7 @@ bokan:
     - engineer
   twitter: david_bokan
   email: bokan@google.com
-  
+
 aliceboxhall:
   name:
     given: Alice
@@ -616,6 +616,8 @@ brendankenny:
   homepage: 'http://twitter.com/brendankenny/'
   twitter: brendankenny
   email: bckenny@google.com
+  description:
+    en: Lighthouse Bulb Installer
 
 jeokrang:
   name:
@@ -741,7 +743,7 @@ ericlawrence:
   homepage: 'https://textslashplain.com/'
   twitter: ericlaw
   email: elawrence@chromium.org
-  
+
 nurinamu:
   name:
     given: Wonjae
