@@ -8,7 +8,7 @@ description: Navigation preload lets you overcome service worker startup time by
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_featured_snippet: Navigation preload lets you overcome service worker startup time by making requests in parallel. #}
 
-# Speed Up Service Worker With Navigation Preloads {: .page-title }
+# Speed up Service Worker with Navigation Preloads {: .page-title }
 
 {% include "web/_shared/contributors/jakearchibald.html" %}
 
@@ -20,9 +20,9 @@ description: Navigation preload lets you overcome service worker startup time by
   allowing you to make the request in parallel with service worker boot-up.
 * You can distinguish preload requests from regular navigations using a header,
   and [serve different content](#header).
-* Navigation preload is in Canary behind a flag, and the API may change in
+* Navigation preload is in Chrome 57 Canary behind a flag, and the API may change in
   response to developer feedback.
-* It'll remain behind a flag in Chrome stable 57 (likely to be released in
+* It'll remain behind a flag in Chrome 57 stable (likely to be released in
   March), but you can [apply for an origin trial](#origin-trial) to test it with
   real users.
 
@@ -125,8 +125,8 @@ way to perform the network request in parallel:
 
 ## "Navigation preload" to the rescue {: #the-solution }
 
-Navigation preload is a new experimental feature that lets you say "Hey, when
-the user makes a GET navigation request, start making the network request while
+Navigation preload is a new experimental feature that lets you say, "Hey, when
+the user makes a GET navigation request, start the network request while
 the service worker is booting up.
 
 The startup delay is still there, but it doesn't block the network request, so
@@ -261,7 +261,7 @@ requests than it would for a regular navigation request. Just remember to add a
 `Vary: Service-Worker-Navigation-Preload` header, so caches know that your
 responses differ.
 
-Now we can make use of the preload request:
+Now we can use the preload request:
 
 <pre class="prettyprint">
 <strong>// Try to use the preload
@@ -298,7 +298,7 @@ locally, so the server only returns newer data.
 
 ## Getting the state
 
-You can lookup the state of navigation preload using `getState`:
+You can look up the state of navigation preload using `getState`:
 
     navigator.serviceWorker.ready.then(registration => {
       return registration.navigationPreload.getState();
