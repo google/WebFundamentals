@@ -616,6 +616,8 @@ brendankenny:
   homepage: 'http://twitter.com/brendankenny/'
   twitter: brendankenny
   email: bckenny@google.com
+  description:
+    en: Lighthouse Bulb Installer
 
 jeokrang:
   name:

@@ -46,7 +46,7 @@ cost/time savings of optimizing them:
 
 ![Optimized Images AudiT](/web/updates/images/2017/02/lighthouse/image_2.png)
 
-The **Responsive Images Audit** reports images that are too big and their
+The **Responsive Images Audit** reports images that are too big and the
 potential cost/time savings of sizing them correctly for the given device:
 
 ![Responsive Images Audit](/web/updates/images/2017/02/lighthouse/image_3.png)
@@ -61,7 +61,7 @@ if your page is using deprecated APIs or features that have
 
 As you've seen, we've focused on making the report less visually cluttered by
 adding tabular data, hiding extraneous help text, and adding new features to
-make navigating the data, easier.
+make it easier to navigate the data.
 
 ### Emulation settings
 
