@@ -32,7 +32,7 @@ improvement.
 }
 </style>
 
-Today, we're happy to announce the [1.5 release](https://github.com/GoogleChrome/lighthouse/releases/tag/1.5.0) of Lighthouse, a huge release, with over **128 PRs**. Lighthouse 1.5 includes a bunch of big new features, audits, and the usual bug fixes. You can install it from npm (`npm i -g lighthouse`) or [download the extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) from the Chrome Web Store.
+Today, we're happy to announce the [1.5 release](https://github.com/GoogleChrome/lighthouse/releases/tag/1.5.0) of Lighthouse, a huge release, with over **128 PRs**. Lighthouse 1.5 includes a bunch of big new features, audits, and the usual bug fixes. You can install it from npm (`npm i -g lighthouse`) or [download the extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) from the Chrome Web Store.
 
 ## New Audits
 
@@ -132,7 +132,7 @@ then reruns Lighthouse on that page with those resources blocked.
 ## New Documentation
 
 Last but not least, we've modernized the documentation at
-[https://developers.google.com/web/tools/lighthouse/](https://developers.google.com/web/tools/lighthouse/)
+[developers.google.com/web/tools/lighthouse/](/web/tools/lighthouse/)
 and added new audit references.
 
 ![New documentation](../../images/2017/02/lighthouse/image_11.png)
