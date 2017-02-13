@@ -1,7 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 보안은 범위가 넓은 주제입니다. HTTPS 가 왜 중요한지, 그리고 당신의 서버에 어떻게 HTTPS 를 디플로이 할 수 있는지 배워보세요.
-Security is a big topic, learn about HTTPS, why it's important and how you can deploy it to your servers.
 
 {# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
