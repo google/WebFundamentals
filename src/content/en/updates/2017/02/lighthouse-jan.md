@@ -32,14 +32,20 @@ improvement.
 }
 </style>
 
-Today, we're happy to announce the [1.5 release](https://github.com/GoogleChrome/lighthouse/releases/tag/1.5.0) of Lighthouse, a huge release, with over **128 PRs**. Lighthouse 1.5 includes a bunch of big new features, audits, and the usual bug fixes. You can install it from npm (`npm i -g lighthouse`) or [download the extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) from the Chrome Web Store.
+Today, we're happy to announce the
+[1.5 release](https://github.com/GoogleChrome/lighthouse/releases/tag/1.5.0)
+of Lighthouse, a huge release, with over **128 PRs**. Lighthouse 1.5 includes
+a bunch of big new features, audits, and the usual bug fixes. You can install
+it from npm (`npm i -g lighthouse`) or
+[download the extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
+from the Chrome Web Store.
 
 ## New Audits
 
 The **CSS Usage Audit** reports the number of unused style rules in your page
 and the cost/time savings of removing them:
 
-## ![CSS Usage Audit](/web/updates/images/2017/02/lighthouse/image_1.png)
+![CSS Usage Audit](/web/updates/images/2017/02/lighthouse/image_1.png)
 
 The **Optimized Images Audit** reports images that are unoptimized and the
 cost/time savings of optimizing them:
@@ -106,7 +112,8 @@ the Viewer's permission to create gists under your
 
 ## Performance Experiment
 
-The first version of the [Performance Experiment](https://github.com/GoogleChrome/lighthouse/issues/1143)
+The first version of the
+[Performance Experiment](https://github.com/GoogleChrome/lighthouse/issues/1143)
 project has landed in 1.5.0. This lets you experiment with your page load performance,
 interactively testing the effects of blocking or delaying assets in your critical
 path **during development**.
@@ -133,9 +140,11 @@ That's it for now!
 
 For all the details on the latest in Lighthouse, see the
 [full release notes](https://github.com/GoogleChrome/lighthouse/releases/tag/1.5.0)
-over on Github. As always, [hit us up](https://github.com/GoogleChrome/lighthouse/graphs/contributors)
+over on Github. As always,
+[hit us up](https://github.com/GoogleChrome/lighthouse/graphs/contributors)
 to [report bugs](https://github.com/GoogleChrome/lighthouse/issues), file
-feature requests, or brainstorm [ideas](https://github.com/GoogleChrome/lighthouse/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+bug%22)
+feature requests, or brainstorm
+[ideas](https://github.com/GoogleChrome/lighthouse/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+bug%22)
 on what you'd like to see next.
 
 {% include "comment-widget.html" %}
