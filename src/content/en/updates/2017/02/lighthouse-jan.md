@@ -16,10 +16,10 @@ description: What's new in Lighthouse 1.5.
 [Lighthouse](/web/tools/lighthouse/) is an
 [open-source](https://github.com/GoogleChrome/lighthouse), automated tool for
 improving the quality of your web apps. You can install it as a
-[Chrome Extension][crx] or run it as a Node command line tool. When you
-give Lighthouse a URL, it runs a barrage of tests against the page and then
-generates a report explaining how well the page did and indicating areas for
-improvement.
+[Chrome Extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
+or run it as a Node command line tool. When you give Lighthouse a URL, it runs
+a barrage of tests against the page and then generates a report explaining
+how well the page did and indicating areas for improvement.
 {: .note }
 
 <img src="/web/progressive-web-apps/images/pwa-lighthouse.png"
