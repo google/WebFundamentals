@@ -12,7 +12,7 @@ description: Navigation preload lets you overcome service worker startup time by
 
 {% include "web/_shared/contributors/jakearchibald.html" %}
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 * In some situations, [service worker boot-up time can delay a network
   response](#the-problem).
