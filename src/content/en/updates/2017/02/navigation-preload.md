@@ -32,8 +32,8 @@ When you navigate to a site that uses a service worker to handle fetch events,
 the browser asks the service worker for a response. This involves booting up the
 service worker (if it isn't already running), and dispatching the fetch event.
 
-The bootup time depends on the device & conditions. It's usually around 50ms, on
-mobile it's more like 250ms, but in extreme cases (slow devices, CPU in
+The bootup time depends on the device and conditions. It's usually around 50ms.
+On mobile it's more like 250ms. In extreme cases (slow devices, CPU in
 distress) it can be over 500ms. However, since the service worker stays awake
 for a browser-determined time between events, you only get this delay
 occasionally, such as when the user navigates to your site from a fresh tab, or
@@ -71,7 +71,7 @@ responding using the network…
 </style>
 <div class="group">
   <div class="sw-startup">SW boot</div>
-  <div class="network-request">Network request</div>
+  <div class="network-request">Navigation request</div>
 </div>
 {% endframebox %}
 
@@ -83,10 +83,10 @@ service workers that don't have a fetch
 event](https://bugs.chromium.org/p/chromium/issues/detail?id=605844), by
 [launching serivce workers
 speculatively](https://codereview.chromium.org/2045153003), and other
-optimisations, but it'll always be greater than zero.
+optimisations. However, bootup time will always be greater than zero.
 
 Facebook brought the impact of this problem to our attention, and asked for a
-way to perform the network request in parallel:
+way to perform navigation requests in parallel:
 
 {% framebox height="77px" %}
 <style>
@@ -117,7 +117,7 @@ way to perform the network request in parallel:
 </style>
 <div class="group">
   <div class="sw-startup">SW boot</div>
-  <div class="network-request">Network request</div>
+  <div class="network-request">Navigation request</div>
 </div>
 {% endframebox %}
 
@@ -143,7 +143,7 @@ Here's a video of it in action, where the service worker is given a deliberate
 
 [Here's the demo
 itself](https://jakearchibald.github.io/isserviceworkerready/demos/nav-preload/).
-To get the benefits of navigation preload, you'll need [Chrome
+To get the benefits of navigation preload, you'll need [Chrome 57
 Canary](https://www.google.com/chrome/browser/canary.html) with
 `chrome://flags/#enable-service-worker-navigation-preload` enabled.
 
