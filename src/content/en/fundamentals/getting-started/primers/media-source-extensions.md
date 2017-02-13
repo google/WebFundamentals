@@ -16,7 +16,7 @@ needed if you want to embed videos in your site that does such things as:
 
 +  Adaptive streaming, which is another way of saying adapting to device
    capabilities and network conditions
-+  Adaptive splicing
++  Adaptive splicing, such as ad insertion
 +  Time shifting
 +  Control of performance and download size
 
@@ -26,8 +26,8 @@ needed if you want to embed videos in your site that does such things as:
   <figcaption><b>Figure 1</b>: Basic MSE data flow</figcaption>
 </figure>
 
-You can almost think of MSE as a chain. As illustrated above, between the
-downloaded file and the media elements are several layers.
+You can almost think of MSE as a chain. As illustrated in the figure, between
+the downloaded file and the media elements are several layers.
 
 +  An `<audio>` or `<video>` element to play the media.
 +  A `MediaSource` instance with a `SourceBuffer` to feed the media element.
@@ -58,11 +58,12 @@ In practice, the chain looks like this:
           return response.arrayBuffer();
         })
         .then(function(arrayBuffer) {
-          sourceBuffer.onupdateend = function(e) {
-            if (sourceBuffer.updating && mediaSource.readyState === 'open') {
+          sourceBuffer.addEventListener('updateend', function(e) {
+            if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
               mediaSource.endOfStream();
+              // window.URL.revokeObjectURL(vidElement.src);
             }
-          }
+          });
           sourceBuffer.appendBuffer(arrayBuffer);
         });
     }
@@ -195,7 +196,7 @@ if (window.MediaSource) {
 
 function sourceOpen(e) {
   <strong>var mime = 'video/webm; codecs="opus, vp9"';
-  // this refers to the mediaSource instance.
+  // e.target refers to the mediaSource instance.
   // Store it in a variable so it can be used in a closure.
   var mediaSource = e.target;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
@@ -266,10 +267,14 @@ function sourceOpen(e) {
 
 #### Call endOfStream() 
 
-At the end of processing the media file, `MediaSource.readyState` should be set
-to `ended` and a `sourceended` event should fire. Neither of these happen
-automatically, but we can trigger them by calling `MediaSource.endOfStream()`.
-Do this inside the `SourceBuffer.onupdateend`.
+After all `ArrayBuffers` are appended, and no further media data is expect, call
+`MediaSource.endOfStream()`.  This will change `MediaSource.readyState` to
+`ended` and fire the `sourceended` event. 
+
+You also need to disconnect the blob URL from the `MediaSource` object. This
+allows the browser to reclaim the resources alocated to the `MediaSource`
+instance, assuming there are no references to it elsewhere. Do this by calling
+`revokeObjectURL()` on the source itself.
 
 <pre class="prettyprint">
 function sourceOpen(e) {
@@ -284,6 +289,7 @@ function sourceOpen(e) {
     .then(function(arrayBuffer) {
       <strong>sourceBuffer.onupdateend = function(e) {
         mediaSource.endOfStream();
+        window.URL.revokeObjectURL(vidElement.src);
       }</strong>
       sourceBuffer.appendBuffer(arrayBuffer);
     });
@@ -305,10 +311,9 @@ Source Extenstions. We recommend [stackoverflow](http://stackoverflow.com/questi
       console.log("The Media Source Extensions API is not supported.")
     }
     
-    
     function sourceOpen(e) {
       var mime = 'video/webm; codecs="opus, vp9"';
-      var mediaSource = this;
+      var mediaSource = e.target;
       var sourceBuffer = mediaSource.addSourceBuffer(mime);
       var videoUrl = 'droid.webm';
       fetch(videoUrl)
@@ -316,11 +321,12 @@ Source Extenstions. We recommend [stackoverflow](http://stackoverflow.com/questi
           return response.arrayBuffer();
         })
         .then(function(arrayBuffer) {
-          sourceBuffer.onupdateend = function(e) {
-            if (sourceBuffer.updating && mediaSource.readyState === 'open') {
+          sourceBuffer.addEventListener('updateend', function(e) {
+            if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
               mediaSource.endOfStream();
+              // window.URL.revokeObjectURL(vidElement.src);
             }
-          }
+          });
           sourceBuffer.appendBuffer(arrayBuffer);
         });
     }
