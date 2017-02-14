@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Customize web media notifications and respond to media related events with the new Media Session API.
 
-{# wf_updated_on: 2017-02-06 #}
+{# wf_updated_on: 2017-02-14 #}
 {# wf_published_on: 2017-02-06 #}
 {# wf_tags: news,chrome57,media,notifications,play #}
 {# wf_featured_image: /web/updates/images/2017/02/tldr.png #}
@@ -307,7 +307,7 @@ browser can't fetch them. Here's how you could implement this:
 
     const FALLBACK_ARTWORK_URL = 'fallbackArtwork.png';
     
-    self.addEventListener('install', event => {
+    addEventListener('install', event => {
       self.skipWaiting();
       event.waitUntil(initArtworkCache());
     });
@@ -317,7 +317,7 @@ browser can't fetch them. Here's how you could implement this:
       .then(cache => cache.add(FALLBACK_ARTWORK_URL));
     }
     
-    self.addEventListener('fetch', event => {
+    addEventListener('fetch', event => {
       if (/artwork-[0-9]+\.png$/.test(event.request.url)) {
         event.respondWith(handleFetchArtwork(event.request));
       }
