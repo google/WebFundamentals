@@ -1,17 +1,26 @@
+/**
+ * @fileoverview Gulp Task for staging and publishing /web from a Git repo.
+ *
+ * @author Pete LePage <petele@google.com>
+ */
+
 'use strict';
 
-var fs = require('fs');
-var gulp = require('gulp');
-var chalk = require('chalk');
-var glob = require('globule');
-var moment = require('moment');
-var jsYaml = require('js-yaml');
-var gutil = require('gulp-util');
-let GitHubApi = require('github');
-var wfRegEx = require('./wfRegEx');
-var wfHelper = require('./wfHelper');
+const fs = require('fs');
+const path = require('path');
+const gulp = require('gulp');
+const chalk = require('chalk');
+const vfile = require('vfile');
+const glob = require('globule');
+const moment = require('moment');
+const remark = require('remark');
+const jsYaml = require('js-yaml');
+const gutil = require('gulp-util');
+const wfRegEx = require('./wfRegEx');
+const remarkLint = require('remark-lint');
+const runSequence = require('run-sequence');
 
-var STD_EXCLUDES = [
+const STD_EXCLUDES = [
   '!**/_common-links.md',
   '!**/updates/tags/*',
   '!**/showcase/tags/*',
@@ -20,273 +29,149 @@ var STD_EXCLUDES = [
   '!**/showcase/201?/index.md',
   '!**/shows/http203/podcast/index.md'
 ];
-var MAX_DESCRIPTION_LENGTH = 485;
-var ERROR_STRINGS = [
-  {label: 'YouTube videos must use DevSite embed.', regEx: /<iframe .*? src="(https?:)?\/\/(www\.)?youtube.com\/.*?>/g},
-  {label: 'Possible template tag ({{)', regEx: /{{/g},
-  {label: 'Invalid named anchor', regEx: /{#\w+}/m},
-  {label: 'Hard coded language URL in link (hl=xx)', regEx: /[\?|&]hl=\w\w/g},
-  {label: 'Hard coded https://developers.google.com in link (MD)', regEx: /\(https:\/\/developers.google.com/},
-  {label: 'Hard coded https://developers.google.com in link (HTML)', regEx: /href="https:\/\/developers.google.com/},
-  {label: 'Google Sandboxed domain', regEx: /sandbox\.google\.com/g}
-];
-var VALID_DATE_FORMATS = ['YYYY-MM-DD', 'YYYY-MM-DDTHH:mm:ss.sssZ'];
+const TEST_LOG_FILE = './test-results.json';
+const MD_EXTENSTIONS = ['md', 'markdown', 'mdown'];
+const VALID_DATE_FORMATS = ['YYYY-MM-DD', 'YYYY-MM-DDTHH:mm:ss.sssZ'];
+const MAX_DESCRIPTION_LENGTH = 485;
 
-var contributorList;
-let summary = {
-  fileCount: 0,
-  errors: [],
-  warnings: [],
-  filesWithIssues: {}
+let remarkLintOptions = {
+  external: [
+    './gulp-tasks/remark-lint-tests/check-links.js',
+    './gulp-tasks/remark-lint-tests/check-headings.js',
+    './gulp-tasks/remark-lint-tests/check-html',
+    './gulp-tasks/remark-lint-tests/check-images',
+  ],
+
+  /* from check-links.js */
+  wfLinksDGC: true,
+  wfLinksInternal: true,
+  wfLinksForcedLang: true,
+  wfLinksUnsafeShort: true,
+
+  /* from check-headings.js */
+  wfHeadingsTldr: true,
+  wfHeadingsBlank: true,
+  wfHeadingsInMarkdown: true,
+  wfHeadingsNoMarkupInTitle: true,
+
+  /* from check-html.js */
+  wfHtmlYouTube: true,
+  wfHtmlDgcLinks: true,
+  wfHtmlLinkForcedLang: true,
+  wfHtmlInternalLinks: true,
+  wfHtmlUnsafeShortLinks: true,
+
+  /* from check-images.js */
+  wfImagesMd: false,
+  wfImagesHtml: false,
+
+  /* from remark */
+  codeBlockStyle: 'indented',
+  firstHeadingLevel: 1,
+  headingStyle: 'atx',
+  maximumHeadingLength: false,
+  maximumLineLength: false,
+  noDuplicateDefinitions: true,
+  noDuplicateHeadingsInSection: true,
+  noEmphasisAsHeading: false,
+  noEmptyLinkURL: true,
+  noMultipleToplevelHeadings: true,
+  noUnusedDefinitions: false,
 };
 
+let fileCount = 0;
+let allErrors = [];
+let allWarnings = [];
+let filesWithIssues = {};
 
 /**
  * Logs a message to the console
  *
  * @param {string} level ERROR or WARNING, the level of the error
  * @param {string} filename The file the issue occured in
+ * @param {Object} position The line/column the error occured on
  * @param {string} message The message to be displayed
+ * @param {Object} extra Any extra information to show
  */
-function logMessage(level, filename, message) {
-  level = level.toUpperCase();
-  if (level === 'ERROR') {
-    gutil.log(chalk.red('ERROR:'), chalk.cyan(filename), message);
-    summary.errors.push('`' + filename + '`: ' + message);
-  } else {
-    gutil.log(chalk.yellow('WARNING:'), chalk.cyan(filename), message);
-    summary.warnings.push('`' + filename + '`: ' + message);
+function logMessage(level, filename, position, message, extra) {
+  let logMsg = {
+    filename: filename,
+    position: position,
+    message: message,
+    extra: extra
   }
-  summary.filesWithIssues[filename] = true; 
+  level = level.toUpperCase();
+  filename = chalk.cyan(filename);
+  if (position) {
+    if (position.line) {
+      filename += ':' + chalk.cyan(position.line);
+    }
+  }
+  if (level === 'ERROR') {
+    gutil.log(chalk.red('ERROR:'), filename, message);
+    allErrors.push(logMsg);
+  } else {
+    gutil.log(chalk.yellow('WARNING:'), filename, message);
+    allWarnings.push(logMsg);
+  }
+  filesWithIssues[filename] = true; 
 }
 
 /**
  * Logs an ERROR message to the console
  *
  * @param {string} filename The file the issue occured in
+ * @param {Object} position The line/column the error occured on
  * @param {string} message The message to be displayed
+ * @param {Object} extra Any extra information to show
  */
-function logError(filename, message) {
-  logMessage('ERROR', filename, message);
+function logError(filename, position, message, extra) {
+  logMessage('ERROR', filename, position, message, extra);
 }
 
 /**
  * Logs a WARNING message to the console
  *
  * @param {string} filename The file the issue occured in
+ * @param {Object} position The line/column the error occured on
  * @param {string} message The message to be displayed
+ * @param {Object} extra Any extra information to show
  */
-function logWarning(filename, message) {
-  logMessage('WARNING', filename, message);
+function logWarning(filename, position, message, extra) {
+  logMessage('WARNING', filename, position, message, extra);
 }
 
 /**
  * Gets a list of all files with that extension for the languages
  * specified in the options or the test root.
  *
- * @param {string} extension The extension of files to search for
- * @param {string} extension2 A second extension of files to search for
+ * @param {Array} extensions An array of extensions to search for
+ * @param {Array} excludes An array of files to exclude from the search
  * @return {Array} A list of files matching the patterns
  */
-function getFilelist(extension, extension2) {
+function getFilelist(extensions, excludes) {
+  if (Array.isArray(extensions) === false) {
+    extensions = [extensions];
+  }
   var opts = {prefixBase: true};
   var globs = [];
   if (GLOBAL.WF.options.testPath) {
     opts.srcBase = GLOBAL.WF.options.testPath;
-    globs.push('**/*.' + extension);
-    if (extension2) {
-      globs.push('**/*.' + extension2);
-    }
+    extensions.forEach(function(ext) {
+      globs.push('**/*.' + ext);
+    });
   } else {
     opts.srcBase = './src/content';
     GLOBAL.WF.options.lang.forEach(function(lang) {
-      globs.push(lang + '/**/*.' + extension);
-      if (extension2) {
-        globs.push(lang + '/**/*.' + extension2);
-      }
+      extensions.forEach(function(ext) {
+        globs.push('**/*.' + ext);
+      });
     });    
   }
-  return glob.find(globs, STD_EXCLUDES, opts);
-}
-
-/**
- * Reads a file from the file system
- *
- * @param {string} filename The file to read
- * @return {Promise} A promise with the file contents
- */
-function readFile(filename) {
-  return new Promise(function(resolve, reject) {
-    fs.readFile(filename, 'utf8', function(err, data) {
-      summary.fileCount++;
-      if (err) {
-        logError(filename, 'Unable to read file', err);
-        reject(err);
-        return;
-      }
-      resolve(data);
-    });
-  });
-}
-
-/**
- * Reads a file and parses it from YAML into JSON
- *
- * @param {string} filename The file to read
- * @return {Promise} A promise with the file contents
- */
-function parseYaml(filename) {
-  return new Promise(function(resolve, reject) {
-    readFile(filename)
-      .then(function(fileContents) {
-        try {
-          var parsed = jsYaml.safeLoad(fileContents);
-          resolve(parsed);
-        } catch(ex) {
-          reject(logError(filename, 'Unable to parse YAML', ex));
-        }
-      })
-      .catch(function(err) {
-        reject(err);
-      });
-  });
-}
-
-/**
- * Reads & validates the _contributors.yaml file checking for:
- *  * Proper YAML format
- *  * Entries are sorted by family name
- *  * Google+ IDs are strings, not integers
- *
- * Note: the promise will always be fulfilled, even if it fails.
- * 
- * @return {Promise} An empty promise
- */
-function readAndValidateContributors() {
-  if (GLOBAL.WF.options.verbose) { 
-    gutil.log(' ', 'Validating _contributors.yaml');
+  if (!excludes) {
+    excludes = STD_EXCLUDES;
   }
-  return new Promise(function(resolve, reject) {
-    parseYaml('./src/data/_contributors.yaml')
-    .then(function(contributors) {
-      var prevFamilyName = '';
-      Object.keys(contributors).forEach(function(key) {
-        var errMsg;
-        var contributor = contributors[key];
-        var familyName = contributor.name.family || contributor.name.given;
-        if (prevFamilyName.toLowerCase() > familyName.toLowerCase()) {
-          errMsg = 'Contributors must be sorted by family name. ';
-          errMsg += prevFamilyName + ' came before ' + familyName;
-          logError('_contributors.yaml', errMsg)
-        }
-        if (contributor.google && typeof contributor.google !== 'string') {
-          errMsg = 'Google+ ID for ' + key + ' must be a string';
-          logError('_contributors.yaml', errMsg);
-        }
-        prevFamilyName = familyName;
-      });
-      contributorList = contributors;
-      resolve();
-    });
-  });
-}
-
-/**
- * Reads & validates all YAML files in the project checking for:
- *  * Proper YAML format
- *
- * Note: the promise will always be fulfilled, even if it fails.
- * 
- * @return {Promise} An empty promise
- */
-function testAllYaml() {
-  if (GLOBAL.WF.options.verbose) { 
-    gutil.log(' ', 'Validating YAML files...');
-  }
-  var files = getFilelist('yaml');
-  return new Promise(function(resolve, reject) {
-    var filesCompleted = 0;
-    var filesRejected = 0;
-    files.forEach(function(filename) {
-      return parseYaml(filename)
-        .catch(function() {
-          filesRejected++;
-        })
-        .then(function() {
-          if (++filesCompleted === files.length) {
-            resolve();
-          }
-        });
-    });
-  });
-}
-
-/**
- * Checks to ensure there are no .markdown or .mdown files in the project
- *
- * Note: the promise will always be fulfilled, even if it fails.
- * 
- * @return {Promise} An empty promise
- */
-function findBadMDExtensions() {
-  return new Promise(function(resolve, reject) {
-    var files = getFilelist('markdown', 'mdown');
-    files.forEach(function(filename) {
-      summary.fileCount++;
-      logError(filename, 'File extension must be .md');
-    });
-    resolve();
-  });
-}
-
-/**
- * Checks to ensure there are no JavaSCript files in the content/ folder.
- *
- * Note: the promise will always be fulfilled, even if it fails.
- *
- * @return {Promise} An empty promsie
- */
- function findJavaScriptFiles() {
-  return new Promise(function(resolve, reject) {
-    var contentPath = GLOBAL.WF.src.content;
-    if (GLOBAL.WF.options.testPath) {
-      contentPath = GLOBAL.WF.options.testPath;
-    }
-    var patterns = ['**/*.js', '!**/_code/*.js', '!**/event-map.js'];
-    var files = wfHelper.getFileList(contentPath, patterns);
-    files.forEach(function(filename) {
-      summary.fileCount++;
-      logError(filename.filePath, 'JavaScript files are not allowed.')
-    });
-    resolve();
-  });
- }
-
-/**
- * Tests all .MD files
- * 
- * Note: the promise will only be fulfilled, when all of the files have been
- * tested and their promises have been returned. It will be fulfilled even if
- * there are any failures.
- *  
- * @return {Promise} An empty promise
- */
-function testAllMarkdown() {
-  return readFile('./src/data/commonTags.json')
-  .then(function(tags) {
-    var files = getFilelist('md');
-    return new Promise(function(resolve, reject) {
-      let filesCompleted = 0;
-      files.forEach(function(filename) {
-        return validateMarkdown(filename, tags)
-          .then(function() {
-            if (++filesCompleted === files.length) {
-              resolve();
-            }
-          });
-      });
-    });
-  });
+  return glob.find(globs, excludes, opts);
 }
 
 /**
@@ -303,361 +188,456 @@ function getLineNumber(content, idx) {
 }
 
 /**
- * Reads & validates the an individual markdown file
+ * Reads a file from the file system
  *
- * Note: the promise will always be fulfilled, even if it fails.
- *
- * @param {string} filename The file to read
- * @param {Array} commonTags The list of common tags to verify against
- * @return {Promise} An empty promise
+ * @param {string} file The file to read
+ * @return {Promise} A promise with the file contents
  */
-function validateMarkdown(filename, commonTags) {
+function readFile(file) {
   return new Promise(function(resolve, reject) {
-    readFile(filename)
-    .then(function(content) {
-
-      // Check if this is a markdown include file
-      var isInclude = wfRegEx.RE_MD_INCLUDE.test(content);
-      var errMsg;
-      var matched;
-
-      // Verify there are no dots in the filename
-      var numDots = filename.split('.');
-      if (numDots.length !== 2) {
-        errMsg = 'Filename or path should not contain dots.';
-        logError(filename, errMsg);
+    fs.readFile(file, 'utf8', function(err, data) {
+      if (err) {
+        logError(file, null, 'Unable to read file.', err);
+        reject();
       }
-
-      // Validate book_path and project_path
-      if (!wfRegEx.RE_BOOK_PATH.test(content) && !isInclude) {
-        errMsg = 'Attribute `book_path` missing from top of document';
-        logError(filename, errMsg)
-      }
-      if (!wfRegEx.RE_PROJECT_PATH.test(content) && !isInclude) {
-        errMsg = 'Attribute `project_path` missing from top of document';
-        logError(filename, errMsg)
-      }
-
-      // Validate description
-      matched = wfRegEx.getMatch(wfRegEx.RE_DESCRIPTION, content, null);
-      if (matched) {
-        matched = matched.trim();
-        if (matched.length === 0) {
-          errMsg = 'Attribute `description` cannot be empty';
-          logError(filename, errMsg);
-        } else if (matched.length > MAX_DESCRIPTION_LENGTH) {
-          errMsg = 'Attribute `description` cannot exceed ' + MAX_DESCRIPTION_LENGTH
-          errMsg += ' characters, was: ' + matched.length;
-          logError(filename, errMsg)
-        }
-        if (matched.indexOf('<') >= 0 || matched.indexOf('`') >= 0) {
-          errMsg = 'Attribute `description` cannot contain HTML or markdown, ';
-          errMsg += 'found: ' + matched;
-          logError(filename, errMsg)
-        }
-      }
-
-      // Validate wf_updated and wf_published
-      matched = wfRegEx.getMatch(wfRegEx.RE_UPDATED_ON, content, 'NOT_FOUND');
-      if (isInclude === false) {
-        if (!moment(matched, VALID_DATE_FORMATS, true).isValid()) {
-          errMsg = 'WF Tag `wf_updated_on` missing or invalid format (YYYY-MM-DD)';
-          errMsg += ', found: ' + matched;
-          logError(filename, errMsg)
-        }
-      }
-      matched = wfRegEx.getMatch(wfRegEx.RE_PUBLISHED_ON, content, 'NOT_FOUND');
-      if (isInclude === false) {
-        if (!moment(matched, VALID_DATE_FORMATS, true).isValid()) {
-          errMsg = 'WF Tag `wf_published_on` missing or invalid format (YYYY-MM-DD)';
-          errMsg += ', found: ' + matched;
-          logError(filename, errMsg)
-        }
-      }
-
-      // Validate featured image path
-      matched = wfRegEx.getMatch(wfRegEx.RE_IMAGE, content);
-      if (matched) {
-        var imgPath = matched;
-        if (imgPath.indexOf('/web') === 0) {
-          imgPath = imgPath.replace('/web', '');
-        }
-        imgPath = './src/content/en' + imgPath;
-        try {
-          fs.accessSync(imgPath, fs.R_OK);
-        } catch (ex) {
-          errMsg = 'WF Tag `wf_featured_image` found, but couldn\'t find ';
-          errMsg += 'image - ' + matched;
-          logError(filename, errMsg);
-        }
-      }
-
-      // Check for uncommon tags
-      matched = wfRegEx.getMatch(wfRegEx.RE_TAGS, content);
-      if (matched) {
-        matched.split(',').forEach(function(tag) {
-          if (commonTags.indexOf(tag.trim()) === -1) {
-            errMsg = 'Uncommon tag (' + tag.trim() + ') found.';
-            logWarning(filename, errMsg)
-          }
-        });
-      } 
-
-      // Count the number of H1 and # tags
-      var numH1 = 0;
-      matched = content.match(/^#\s{1}[^#].*/gm)
-      if (matched) {
-        numH1 += matched.length;
-      }
-      matched = content.match(/^<h1.*?>/gmi);
-      if (matched) {
-        numH1 += matched.length;
-      }
-
-      // Warn if there is an H1 in an include
-      if (isInclude === true && numH1 > 0) {
-        errMsg = 'Includes should not contain any H1 tags, found ' + numH1;
-        logWarning(filename, errMsg);
-      }
-
-      // Warn if there is more than 1 H1 in a document
-      if (isInclude === false && numH1 > 1) {
-        errMsg = 'Page should only have ONE H1 tag, found ' + numH1;
-        logWarning(filename, errMsg);
-      }
-
-      // Verify there is only ONE .page-title
-      matched = content.match(/{:\s?\.page-title\s?}/gm);
-      if (isInclude === true && matched) {
-        errMsg = 'Includes must not contain the page title.';
-        logError(filename, errMsg);
-      }
-      if (isInclude === false && matched && matched.length > 1) {
-        errMsg = 'Page must only have one title tag, found: ' + matched.length;
-        logError(filename, errMsg)
-      }
-
-      // Verify there is no markup/down in the title
-      matched = wfRegEx.getMatch(wfRegEx.RE_TITLE, content);
-      if (isInclude === false && matched) {
-        if (matched.indexOf('<') >= 0 || 
-            matched.indexOf('&gt;') >= 0 ||
-            matched.indexOf('`') >= 0) {
-          errMsg = 'Page title must not contain HTML or markdown ' + matched;
-          logError(filename, errMsg);
-        }
-      } else if (isInclude === false) {
-        errMsg = 'Page is missing page title eg: # TITLE {: .page-title }';
-        logError(filename, errMsg)
-      }
-
-      // Verify authors/translators are in the contributors file
-      matched = content.match(wfRegEx.RE_AUTHOR_LIST);
-      if (matched) {
-        matched.forEach(function(contributor) {
-          var key = wfRegEx.getMatch(wfRegEx.RE_AUTHOR_KEY, contributor);
-          if (!contributorList[key]) {
-            errMsg = 'Unable to find contributor (' + key + ') in contributors file.'
-            logError(filename, errMsg)
-          }
-        });
-      }
-
-      // Verify all includes start with web/
-      matched = content.match(wfRegEx.RE_INCLUDES);
-      if (matched) {
-        matched.forEach(function(include) {
-          var inclFile = wfRegEx.getMatch(wfRegEx.RE_INCLUDE_FILE, include, '');
-          if (inclFile === 'comment-widget.html') {
-            return;
-          }
-          if (inclFile.indexOf('web/') !== 0) {
-            errMsg = 'Include path MUST start with web/ - ' + include;
-            logError(filename, errMsg)
-          }
-        });
-      }
-
-      // Search for ``` wrapped code blocks
-      matched = content.match(/```/g);
-      if (matched) {
-        errMsg = 'Found sample code block(s) wrapped in ```.';
-        errMsg += ' Required style is indented by 4 spaces.';
-        logError(filename, errMsg);
-      }
-
-      // Verify all TL;DRs are H3 and include hide-from-toc   
-      matched = content.match(/^#+ TL;DR.*\n/gm);
-      if (matched) {
-        matched.forEach(function(tag) {
-          if (tag.indexOf('### ') === -1 || tag.indexOf('.hide-from-toc') === -1) {
-            errMsg = 'TL;DRs should be H3 and inclue {: .hide-from-toc }';
-            errMsg += ' Found: ' + tag.replace('\n', '');
-            logWarning(filename, errMsg)
-          }
-        });
-      }
-
-      // Verify all TL;DRs are H3 and include hide-from-toc   
-      matched = content.match(/http:\/\/goo.gl\//g);
-      if (matched) {
-        errMsg = 'Found ' + matched.length + ' non-secure goo.gl shortlinks.';
-        errMsg += ' Preferred style: //goo.gl/XXXXXX (without protocol).';
-        logWarning(filename, errMsg);
-      }
-
-      // Look for bad strings
-      ERROR_STRINGS.forEach(function(reObj) {
-        matched = content.match(reObj.regEx);
-        if (matched) {
-          matched.forEach(function(m) {
-            errMsg = reObj.label + ' -- ' + m;
-            logError(filename, errMsg)
-          });
-        }
-      });
-      resolve();
+      resolve(data);
     });
   });
 }
 
 /**
- * Gets the Travis CI details
+ * Reads a file and parses it from YAML into JSON
  *
- * @return {Promise} An  promise with the build information
+ * @param {string} file The file to read and parse into JSON
+ * @return {Promise} The JSON object that the file has been parsed into
  */
-function getTravisDetails() {
+function parseYaml(file) {
   return new Promise(function(resolve, reject) {
-    if (process.env.TRAVIS_EVENT_TYPE !== 'pull_request') {
-      resolve(null);
-    }
-    let travisPR;
-    let repoName;
-    let repoOwner;
-    let gitToken = process.env.GIT_TOKEN;
-    let prSHA = process.env.TRAVIS_PULL_REQUEST_SHA;
-    try {
-      travisPR = parseInt(process.env.TRAVIS_PULL_REQUEST, 10);
-      let repoSlug = process.env.TRAVIS_REPO_SLUG;
-      repoSlug = repoSlug.split('/');
-      repoOwner = repoSlug[0];
-      repoName = repoSlug[1];
-    } catch (ex) {
-      resolve(null);
-    }
-    let result = {
-      owner: repoOwner,
-      repo: repoName,
-      pullRequest: travisPR,
-      token: gitToken,
-      sha: prSHA
-    };
-    resolve(result);
-  });
-}
-
-/**
- * Adds a commit comment on GitHub
- *
- * @param {Object} data The Travis information to update
- * @param {string} body The body of the message to add
- * @return {Promise} An  promise with the build information
- */
-function addCommitComment(data, body) {
-  if (!data.token) {
-    gutil.log('Unable to add commit comment, no GitHub token.');
-    return;
-  }
-  gutil.log('Adding commit comment...');
-  let github = new GitHubApi({debug: false, Promise: Promise});
-  github.authenticate({type: 'oauth', token: data.token});
-  github.repos.createCommitComment({
-    owner: data.owner,
-    repo: data.repo,
-    sha: data.sha,
-    body: body
-  })
-  .catch(function(err) {
-    gutil.log(chalk.red('OOPS:'), 'Unable to add commit comment.', err);
-  })
-  .then(function(result) {
-    gutil.log('Commit comment added.');
-  });
-}
-
-/**
- * Prints a summary of the test results
- *
- * @return {Promise} An empty promise.
- */
-function printSummary(data) {
-  return new Promise(function(resolve, reject) {
-    var filesWithIssues = Object.keys(summary.filesWithIssues).length;
-    gutil.log('');
-    gutil.log('Test Completed.');
-    gutil.log('Files checked: ', gutil.colors.blue(summary.fileCount));
-    gutil.log(' - with issues:', gutil.colors.yellow(filesWithIssues));
-    gutil.log(' - warnings:   ', gutil.colors.yellow(summary.warnings.length));
-    gutil.log(' - errors:     ', gutil.colors.red(summary.errors.length));
-    resolve(data);
-  });
-}
-
-/**
- * Prints a summary of the test results
- *
- * @return {Promise} An empty promise.
- */
-function finalizeTests() {
-  return new Promise(function(resolve, reject) {
-    if (summary.errors.length === 0) {
-      resolve();
-    }
-    reject(new Error('There were ' + summary.errors.length + ' errors.'));
-  });
-}
-
-gulp.task('test', function(callback) {
-  if (GLOBAL.WF.options.testPath) {
-    gutil.log('Test Base Dir:', chalk.cyan(GLOBAL.WF.options.testPath));
-    gutil.log('');
-  }
-  return readAndValidateContributors()
-    .catch(function(err) {
-      gutil.log('');
-      gutil.log(chalk.red('ABORT:'), 'Exception:', err);
-    })
-    .then(function() {
-      return Promise.all([
-        testAllYaml(),
-        testAllMarkdown(),
-        findBadMDExtensions(),
-        findJavaScriptFiles()
-      ]);
-    })
-    .catch(function(err) {
-      gutil.log('');
-      gutil.log(chalk.red('ABORT:'), 'Exception:', err);
-    })
-    .then(getTravisDetails)
-    .then(printSummary)
-    .then(function(data) {
-      if (data) {
-        if (summary.errors.length > 0 || summary.warnings.length > 0) {
-          let body = '**Oops!** It looks like something in this commit broke ';
-          body += 'the build. Please take a look and fix it.\n\n';
-          if (summary.errors.length > 0) {
-            body += '**Errors:**\n';
-            body += summary.errors.join('\n');
-            body += '\n\n';
-          }
-          if (summary.warnings.length > 0) {
-            body += '**Warnings:**\n';
-            body += summary.warnings.join('\n');
-          }
-          addCommitComment(data, body);
+    readFile(file)
+    .then(function(contents) {
+      try {
+        let parsed = jsYaml.safeLoad(contents);
+        resolve(parsed);
+      } catch (ex) {
+        let msg = 'Unable to parse YAML';
+        if (ex.reason) {
+          msg = ex.reason;
         }
+        let position = null;
+        if (ex.mark && ex.mark.line) {
+          position = {
+            line: ex.mark.line + 1
+          };
+        }
+        if (position && ex.mark && ex.mark.column) {
+          position.column = ex.mark.column;
+        }
+        logError(file, position, msg, ex);
+        resolve(null);
       }
     })
-    .then(finalizeTests);
+  });
+}
+
+/**
+ * Lints and validates the Markdown File against a set of rules
+ *
+ * @param {string} file The file to read and validate
+ * @param {Array} commonTags An array of commonly used tags
+ * @param {Object} contributors A collection of all contributors
+ * @return {Promise} The JSON object that the file has been parsed into
+ */
+function validateMDFile(file, commonTags, contributors) {
+  return new Promise(function(resolve, reject) {
+
+    let errMsg;
+    let matched;
+    let position;
+    let content = fs.readFileSync(file, 'utf8');
+    let metadata = {};
+    metadata.include = wfRegEx.RE_MD_INCLUDE.test(content);
+
+    // Verify there are no dots in the filename
+    let numDots = file.split('.');
+    if (numDots.length !== 2) {
+      logError(file, null, 'Filename or path should not contain dots.');
+    }
+
+    // Verify extension on file is .md
+    if (path.extname(file.toLowerCase()) !== '.md') {
+      logError(file, null, 'File extension must be .md');
+    }
+
+    // Validate book_path and project_path
+    if (!wfRegEx.RE_BOOK_PATH.test(content) && !metadata.include) {
+      errMsg = 'Attribute `book_path` missing from top of document';
+      logError(file, null, errMsg)
+    }
+    if (!wfRegEx.RE_PROJECT_PATH.test(content) && !metadata.include) {
+      errMsg = 'Attribute `project_path` missing from top of document';
+      logError(file, null, errMsg)
+    }
+
+    // Validate description
+    matched = wfRegEx.RE_DESCRIPTION.exec(content);
+    if (matched) {
+      let description = matched[1].trim();
+      position = {line: getLineNumber(content, matched.index)};
+      if (metadata.include) {
+        errMsg = 'Included files should not include `description` tags.';
+        logError(file, position, errMsg);
+      }
+      if (description.length === 0) {
+        errMsg = 'Attribute `description` cannot be empty';
+        logError(file, position, errMsg);
+      } else if (description.length > MAX_DESCRIPTION_LENGTH) {
+        errMsg = 'Attribute `description` cannot exceed ' + MAX_DESCRIPTION_LENGTH
+        errMsg += ' characters, was: ' + description.length;
+        logError(file, position, errMsg);
+      }
+      if (description.indexOf('<') >= 0 || description.indexOf('`') >= 0) {
+        errMsg = 'Attribute `description` cannot contain HTML or markdown, ';
+        errMsg += 'found: ' + description;
+        logError(file, position, errMsg);
+      }
+    };
+
+    // Validate wf_updated
+    matched = wfRegEx.RE_UPDATED_ON.exec(content);
+    if (!metadata.include) {
+      if (!matched) {
+        errMsg = 'WF Tag `wf_updated_on` is missing (YYYY-MM-DD)';
+        logError(file, null, errMsg);
+      } else {
+        position = {line: getLineNumber(content, matched.index)};
+        let d = moment(matched[1], VALID_DATE_FORMATS, true);
+        if (d.isValid() === false) {
+          errMsg = 'WF Tag `wf_updated_on` invalid format (YYYY-MM-DD)';
+          errMsg += ', found: ' + matched[1];
+          logError(file, position, errMsg);
+        }
+      }
+    }
+
+    // Validate wf_published
+    matched = wfRegEx.RE_PUBLISHED_ON.exec(content);
+    if (!metadata.include) {
+      if (!matched) {
+        errMsg = 'WF Tag `wf_published_on` is missing (YYYY-MM-DD)';
+        logError(file, null, errMsg);
+      } else {
+        position = {line: getLineNumber(content, matched.index)};
+        let d = moment(matched[1], VALID_DATE_FORMATS, true);
+        if (d.isValid() === false) {
+          errMsg = 'WF Tag `wf_published_on` invalid format (YYYY-MM-DD)';
+          errMsg += ', found: ' + matched[1];
+          logError(file, position, errMsg);
+        }      
+      }
+    }
+
+    // Validate featured image path
+    matched = wfRegEx.RE_IMAGE.exec(content);
+    if (matched) {
+      var imgPath = matched[1];
+      if (imgPath.indexOf('/web') === 0) {
+        imgPath = imgPath.replace('/web', '');
+      }
+      imgPath = './src/content/en' + imgPath;
+      try {
+        fs.accessSync(imgPath, fs.R_OK);
+      } catch (ex) {
+        position = {line: getLineNumber(content, matched.index)};
+        errMsg = 'WF Tag `wf_featured_image` found, but couldn\'t find ';
+        errMsg += 'image - ' + matched[1];
+        logError(file, position, errMsg);
+      }
+    }
+
+    // Check for uncommon tags
+    matched = wfRegEx.RE_TAGS.exec(content);
+    if (matched) {
+      position = {line: getLineNumber(content, matched.index)};
+      matched[1].split(',').forEach(function(tag) {
+        if (commonTags.indexOf(tag.trim()) === -1) {
+          errMsg = 'Uncommon tag (' + tag.trim() + ') found.';
+          logWarning(file, position, errMsg);
+        }
+      });
+    }
+
+    // Check for a single level 1 heading with page title
+    matched = wfRegEx.RE_TITLE.exec(content);
+    if (!matched && !metadata.include) {
+      errMsg = 'Page is missing page title eg: # TITLE {: .page-title }';
+      logError(file, null, errMsg);
+    }
+    if (matched && metadata.include) {
+      errMsg = 'Include file should not contain a page title!';
+      position = {line: getLineNumber(matched.index)};
+      logError(file, position, errMsg);
+    }
+
+    // Check for only a single instance of the {: .page-title } class
+    matched = wfRegEx.getMatches(wfRegEx.RE_TITLE_CLASS, content);
+    errMsg = 'Page can only contain ONE title class {: .page-title }';
+    let maxMatches = 1;
+    if (metadata.include) {
+      errMsg = 'Includes should not contain any {: .page-title } classes.';
+      maxMatches = 0;
+    }
+    if (matched.length > maxMatches) {
+      matched.forEach(function(match) {
+        position = {line: getLineNumber(content, match.index)};
+        logError(file, position, errMsg);
+      });
+    }
+
+    // Verify authors/translators are in the contributors file
+    matched = wfRegEx.getMatches(wfRegEx.RE_AUTHOR_LIST, content);
+    matched.forEach(function(match) {
+      let key = match[1];
+      if (!contributors[key]) {
+        position = {line: getLineNumber(content, match.index)};
+        errMsg = 'Unable to find contributor (' + key;
+        errMsg += ') in contributors file.';
+        logError(file, position, errMsg);
+      }
+    });
+
+    // Verify all includes start with web/
+    matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDES, content);
+    matched.forEach(function(include) {
+      let inclFile = include[1];
+      if (inclFile === 'comment-widget.html' || 
+          inclFile.indexOf('web/_shared/contributors/') === 0) {
+        return;
+      }
+      position = {line: getLineNumber(content, include.index)};
+      if (inclFile.indexOf('web/') === 0) {
+        let inclPath = inclFile.replace('web/', 'src/content/en/');
+        try {
+          fs.accessSync(inclPath, fs.R_OK);
+        } catch (ex) {
+          errMsg = 'Include tag found, but couldn\'t find related include: '
+          errMsg += inclFile + ' -- ' + inclPath;
+          logError(file, position, errMsg);
+        }
+      } else {
+        errMsg = 'Include path MUST start with web/ - ' + inclFile;
+        logError(file, position, errMsg);
+      }
+    });
+
+    // Verify all <<include.md>> markdown files are accessible
+    matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDE_MD, content);
+    matched.forEach(function(match) {
+      let inclPath;
+      let inclFile = match[1];
+      try {
+        inclPath = path.resolve(path.parse(file).dir, inclFile);
+        fs.accessSync(inclPath, fs.R_OK);
+      } catch (ex) {
+        position = {line: getLineNumber(content, match.index)};
+        errMsg = `Markdown include ${match[0]} found, but couldn't find `;
+        errMsg += `actual file: ${inclPath}`;
+        logError(file, position, errMsg);
+      }
+    });
+
+    // Warn on unescaped template tags
+    matched = wfRegEx.getMatches(/\{\{/g, content);
+    matched.forEach(function(match) {
+      position = {line: getLineNumber(content, match.index)};
+      errMsg = 'Template tags ({{) should be escaped to &#123;&#123;';
+      logError(file, position, errMsg);
+    });
+
+    // Warn on bad anchor tags
+    matched = wfRegEx.getMatches(/{#\w+}/gm, content);
+    matched.forEach(function(match) {
+      position = {line: getLineNumber(content, match.index)};
+      errMsg = 'Unsuppored anchor style used, use {: #anchor }, found: ';
+      errMsg += match[0];
+      logError(file, position, errMsg);
+    });
+
+    // Warn on missing comment widgets
+    let reComment = /^{%\s?include "comment-widget\.html"\s?%}/m;
+    let reUpdatesPath = /src\/content\/.+?\/updates\/\d{4}\//;
+    if (reUpdatesPath.test(file)) {
+      if (!reComment.test(content)) {
+        position = {line: getLineNumber(content, content.length -1)};
+        errMsg = 'Updates post is missing comment widget: '
+        errMsg += '{% include "comment-widget.html" %}';
+        logWarning(file, position, errMsg);
+      }
+    }
+
+    if (metadata.include) {
+      remarkLintOptions.firstHeadingLevel = 2;
+    } else {
+      remarkLintOptions.firstHeadingLevel = 1;
+    }
+
+    // Use remark to lint the markdown
+    let vFile = vfile({path: file, extname: '.md', contents:content});
+    remark()
+    .use(remarkLint, remarkLintOptions)
+    .process(vFile, function(err, vFileResult) {
+      if (err) {
+        let msg = `Critical linting error: ${err.message}`;
+        logError(file, null, msg, err);
+        guilt.log('Full Error:', err);
+      }
+      if (vFileResult) {
+        vFileResult.messages.forEach(function(msg) {
+          let level = 'ERROR';
+          if (msg.level) {
+            level = msg.level.toUpperCase();
+          }
+          let position = {
+            line: msg.line,
+            column: msg.column
+          };
+          logMessage(level, file, position, msg.message, msg);
+        });
+      }
+      resolve();
+    });
+  });
+}
+
+
+
+
+
+
+gulp.task('test:yaml', function() {
+  return new Promise(function(resolve, reject) {
+    let files = getFilelist('yaml');
+    let yamlFileCount = files.length;
+    fileCount += yamlFileCount;
+    files.forEach(function(file) {
+      parseYaml(file)
+      .then(function(yaml) {
+        if (--yamlFileCount === 0) {
+          resolve();
+        }      
+      });
+    });
+  });
+});
+
+gulp.task('test:contributors', function() {
+  return new Promise(function(resolve, reject) {
+    fileCount++;
+    parseYaml('./src/data/_contributors.yaml')
+    .then(function(contributors) {
+      let prevFamilyName = '';
+      let keys = Object.keys(contributors);
+      let contribCount = keys.length;
+      Object.keys(contributors).forEach(function(key) {
+        let errMsg;
+        let contributor = contributors[key];
+        let familyName = contributor.name.family || contributor.name.given;
+        if (prevFamilyName.toLowerCase() > familyName.toLowerCase()) {
+          errMsg = 'Contributors must be sorted by family name. ';
+          errMsg += prevFamilyName + ' came before ' + familyName;
+          logError('_contributors.yaml', null, errMsg);
+        }
+        if (contributor.google && typeof contributor.google !== 'string') {
+          errMsg = 'Google+ ID for ' + key + ' must be a string';
+          logError('_contributors.yaml', null, errMsg);
+        }
+        prevFamilyName = familyName;
+      });
+      resolve();
+    });
+  });
+});
+
+gulp.task('test:findJSFiles', function() {
+  return new Promise(function(resolve, reject) {
+    let exclude = ['!**/_code/*.js', '!**/event-map.js']
+    let files = getFilelist(['js'], exclude);
+    fileCount += files.length;
+    files.forEach(function(file) {
+      logError(file, null, 'JavaScript files are not allowed.');
+    });
+    resolve();
+  });
+});
+
+gulp.task('test:validateMarkdown', function() {
+  return new Promise(function(resolve, reject) {
+    let commonTags;
+    let contributors;
+    gutil.log(' ', 'Reading', chalk.cyan('commonTags.json'));
+    readFile('./src/data/commonTags.json')
+    .then(function(tags) {
+      commonTags = JSON.parse(tags);
+    })
+    .then(function() {
+      gutil.log(' ', 'Reading', chalk.cyan('contributors.yaml'));
+      return parseYaml('./src/data/_contributors.yaml')
+      .then(function(yaml) {
+        contributors = yaml;
+      });
+    })
+    .then(function() {
+      gutil.log(' ', 'Searching for files:', chalk.cyan(MD_EXTENSTIONS.join(', ')));
+      let files = getFilelist(MD_EXTENSTIONS);
+      gutil.log(' ', 'Validating markdown files...');
+      if (files.length === 0) {
+        resolve();
+      }
+      let mdFileCount = files.length;
+      fileCount += mdFileCount;
+      files.forEach(function(file) {
+        validateMDFile(file, commonTags, contributors)
+        .then(function(mdResult) {
+          if (--mdFileCount === 0) {
+            resolve();
+          }
+        })
+      });
+    })
+  });
+});
+
+gulp.task('test:summary', function() {
+  return new Promise(function(resolve, reject) {
+    var cFilesWithIssues = Object.keys(filesWithIssues).length;
+    gutil.log('');
+    gutil.log('Test Completed.');
+    gutil.log('Files checked: ', gutil.colors.blue(fileCount));
+    gutil.log(' - with issues:', gutil.colors.yellow(cFilesWithIssues));
+    gutil.log(' - warnings:   ', gutil.colors.yellow(allWarnings.length));
+    gutil.log(' - errors:     ', gutil.colors.red(allErrors.length));
+    let result = {
+      summary: {
+        filesChecked: fileCount,
+        filesWithIssues: cFilesWithIssues,
+        numWarnings: allWarnings.length,
+        numErrors: allErrors.length,
+      },
+      errors: allErrors,
+      warnings: allWarnings
+    };
+    result = JSON.stringify(result, null, 2);
+    fs.writeFileSync(TEST_LOG_FILE, result, 'utf8');
+    resolve();
+  });
+});
+
+gulp.task('test', function(callback) {
+  runSequence(
+    'test:yaml',
+    'test:contributors',
+    'test:findJSFiles',
+    'test:validateMarkdown',
+    'test:summary',
+    callback
+  );
 });
