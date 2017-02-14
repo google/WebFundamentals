@@ -31,10 +31,8 @@ After [setting breakpoints](breakpoints), return to the page and use it normally
 
 ## Stepping in action
 
-<aside class="warning">
-  <b>Warning:</b> This page is deprecated. See following section for up-to-date
-  information: <a href="reference#stepping">Step through code</a>
-</aside>
+Warning: This page is deprecated. See [Step through code](reference#stepping)
+for up-to-date information.
 
 All step options are represented through clickable icons ![Breakpoints button bar](imgs/image_7.png){:.inline} in the sidebar, but can also be triggered via shortcut. Here's the rundown:
 
@@ -91,11 +89,8 @@ Use [Pause on exceptions](breakpoints#exceptions) when you suspect an uncaught e
 
 ## View properties by scope {: #scope }
 
-<aside class="warning">
-  <b>Warning:</b> This page is deprecated. See following section for up-to-date
-  information: <a href="reference#scope">View and edit local, closure, and
-  global properties</a>
-</aside>
+Warning: This page is deprecated. See [View and edit local, closure, and
+global properties](reference#scope) for up-to-date information.
 
 When you pause a script, the **Scope** pane shows you all of the
 currently-defined properties at that moment in time.
@@ -125,10 +120,8 @@ panel?](http://stackoverflow.com/a/36545767/1669860)
 
 ## The call stack
 
-<aside class="warning">
-  <b>Warning:</b> This page is deprecated. See following section for up-to-date
-  information: <a href="reference#call-stack">View the current call stack</a>
-</aside>
+Warning: This page is deprecated. See [View the current call
+stack](reference#call-stack) for up-to-date information.
 
 Near the top of the sidebar is the **Call Stack** section. When the code is paused at a breakpoint, the call stack shows the execution path, in reverse chronological order, that brought the code to that breakpoint. This is helpful in understanding not just where the execution is *now*, but how it got there, an important factor in debugging.
 
@@ -201,11 +194,8 @@ Call stack with named functions:
 
 ### Blackbox third-party code
 
-<aside class="warning">
-  <b>Warning:</b> This page is deprecated. See following section for up-to-date
-  information: <a href="reference#blackbox">Ignore a script or pattern of
-  scripts</a>
-</aside>
+Warning: This page is deprecated. See [Ignore a script or pattern of
+scripts](reference#blackbox) for up-to-date information.
 
 Blackbox script files to omit third-party files from your call stacks.
 
@@ -266,10 +256,8 @@ change it to 3 before resuming execution.
 
 ## Live editing
 
-<aside class="warning">
-  <b>Warning:</b> This page is deprecated. See <a href="reference#edit">Edit a
-  script</a> for up-to-date information.
-</aside>
+Warning: This page is deprecated. See [Edit a script](reference#edit) for
+up-to-date information.
 
 Observing and pausing the executing code helps you locate errors, and live editing allows you to quickly preview changes without the need to reload.
 
@@ -290,10 +278,8 @@ we add line 17 at the beginning of the function, commit with
 
 ## Managing thread execution {: #threads }
 
-<aside class="warning">
-  <b>Warning:</b> This page is deprecated. See following section for up-to-date
-  information: <a href="reference#threads">Change thread context</a>
-</aside>
+Warning: This page is deprecated. See [Change thread context](reference#threads)
+for up-to-date information.
 
 Use the **Threads** pane on the Sources panel to pause, step into, and
 inspect other threads, such as service worker or web worker threads.
