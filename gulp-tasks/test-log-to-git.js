@@ -157,10 +157,16 @@ gulp.task('test-and-log-to-git', ['test'], function() {
   return getTravisInfo()
   .then(function(data) {
     if (data) {
-      let body = generateCommitMessage(data.testResults);
+      let testResults = data.testResults;
+      let body = generateCommitMessage(testResults);
       return addCommitComment(data.git, body)
       .catch(function(err) {
         gutil.log(chalk.red('✖'), err.message);
+      })
+      .then(function(resp) {
+        if (testResults.errors.length > 0) {
+          throw new Error(`${testResults.errors.length} tests failed.`);
+        }
       });
     }
   });

@@ -16,7 +16,7 @@ install:
   - npm run clean
 script:
   - npm run build
-  - npm run test
+  - npm run test-and-report
 after_success:
   - ./tools/travis/install-gc-sdk.sh
   - ./tools/travis/deploy-master.sh

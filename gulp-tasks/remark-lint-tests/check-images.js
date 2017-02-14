@@ -14,27 +14,27 @@ const reImgTag = /<img /i;
 const reImgSrc = /src=['|"](.*?)['|"|>|\s]/i;
 
 function doesImageExist(file, imgPath, node) {
-  // if (reRemote.test(imgPath)) {
-  //   if (imgPath.indexOf('developers.google.com') > 0) {
-  //     file.message('Do not hard code developers.google.com in paths.', node);
-  //     imgPath = imgPath.replace(/https?:\/\/developers\.google\.com/i, '');
-  //   } else {
-  //     return;
-  //   }
-  // }
-  // let filePath = file.cwd;
-  // if (imgPath.indexOf('/') === 0) {
-  //   filePath = path.join(filePath, 'src/content/en', imgPath.replace('/web/', '')); 
-  // } else {
-  //   filePath = path.join(filePath, file.dirname, imgPath);
-  // }
-  // try {
-  //   fs.accessSync(filePath, fs.R_OK);
-  //   return true;
-  // } catch (ex) {
-  //   let msg = `Unable to find image '${imgPath}'`;
-  //   file.message(msg, node);
-  // }
+  if (reRemote.test(imgPath)) {
+    if (imgPath.indexOf('developers.google.com') > 0) {
+      file.message('Do not hard code developers.google.com in paths.', node);
+      imgPath = imgPath.replace(/https?:\/\/developers\.google\.com/i, '');
+    } else {
+      return;
+    }
+  }
+  let filePath = file.cwd;
+  if (imgPath.indexOf('/') === 0) {
+    filePath = path.join(filePath, 'src/content/en', imgPath.replace('/web/', '')); 
+  } else {
+    filePath = path.join(filePath, file.dirname, imgPath);
+  }
+  try {
+    fs.accessSync(filePath, fs.R_OK);
+    return true;
+  } catch (ex) {
+    let msg = `Unable to find image '${imgPath}'`;
+    file.message(msg, node);
+  }
 }
 
 function wfImagesInMD(ast, file, setting) {
