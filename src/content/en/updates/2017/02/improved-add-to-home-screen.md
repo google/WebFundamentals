@@ -185,6 +185,8 @@ Some examples:
 |  /manifest.json | ./tech-today/index.html | undefined | / | /tech-today/index.html | valid - broad scope |
 |  /manifest.json | /tech-today/index.html | tech-today | /tech-today/ | /tech-today/index.html | valid - tight scope |
 
+Note: The `scope` attribute is still being specified and implemented in Chrome
+
 
 ## Managing permissions
 
