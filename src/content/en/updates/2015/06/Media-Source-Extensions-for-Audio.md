@@ -85,7 +85,7 @@ In addition to the padding at the end, each file also had padding added to the b
   <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap.png" alt="Beginning of sintel_1.mp3">
 </p>
 
-The sections of silence at the beginning and end of each file are what causes the _glitches_ between segments in the previous demo. To achieve gapless playback, we need to remove these sections of silence. Luckily, this is easily done with `MediaSource`! Below, we'll modify our `onAudioLoaded()` method to use an [append window](https://w3c.github.io/media-source#definitions) and a [timestamp offset](https://w3c.github.io/media-source#definitions) to remove this silence.
+The sections of silence at the beginning and end of each file are what cause the _glitches_ between segments in the previous demo. To achieve gapless playback, we need to remove these sections of silence. Luckily, this is easily done with `MediaSource`. Below, we'll modify our `onAudioLoaded()` method to use an [append window](https://w3c.github.io/media-source#definitions) and a [timestamp offset](https://w3c.github.io/media-source#definitions) to remove this silence.
 
 ## Example Code
 
@@ -101,7 +101,7 @@ The sections of silence at the beginning and end of each file are what causes th
       var gaplessMetadata = ParseGaplessData(data);
 
       // Each appended segment must be appended relative to the next.  To avoid any
-      // overlaps, we'll use the ending timestamp of the last append as the starting
+      // overlaps, we'll use the end timestamp of the last append as the starting
       // point for our next append or zero if we haven't appended anything yet.
       var appendTime = index > 0 ? sourceBuffer.buffered.end(0) : 0;
 
@@ -160,7 +160,7 @@ Let's see what our shiny new code has accomplished by taking another look at the
 
 ## Conclusion
 
-With that we've stitched all five segments seamlessly into one and have subsequently reached the end of our demo. Before we go, you may have noticed that our `onAudioLoaded()` method has no consideration for containers or codecs. That means all of these techniques will work irrespective of the container or codec type. Below you can replay the original demo DASH-ready fragmented MP4 instead of MP3.
+With that, we've stitched all five segments seamlessly into one and have subsequently reached the end of our demo. Before we go, you may have noticed that our `onAudioLoaded()` method has no consideration for containers or codecs. That means all of these techniques will work irrespective of the container or codec type. Below you can replay the original demo DASH-ready fragmented MP4 instead of MP3.
 
 <p style="text-align: center;">
   <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
@@ -177,7 +177,7 @@ Thanks for reading!
 
 ## Appendix A: Creating Gapless Content
 
-Creating gapless content can be hard to get right. Below we'll walk through how the [Sintel](http://www.sintel.org/){: .external } media used in this demo were created. To start you'll need a copy of the [lossless FLAC soundtrack](http://media.xiph.org/sintel/Jan_Morgenstern-Sintel-FLAC.zip) for Sintel; for posterity, the SHA1 is included below. For tools, you'll need [FFmpeg](http://ffmpeg.org/), [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box/), [LAME](http://lame.sourceforge.net/), and an OSX installation with [afconvert](https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man1/afconvert.1.html).
+Creating gapless content can be hard to get right. Below we'll walk through creation of the [Sintel](http://www.sintel.org/){: .external } media used in this demo. To start you'll need a copy of the [lossless FLAC soundtrack](http://media.xiph.org/sintel/Jan_Morgenstern-Sintel-FLAC.zip) for Sintel; for posterity, the SHA1 is included below. For tools, you'll need [FFmpeg](http://ffmpeg.org/), [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box/), [LAME](http://lame.sourceforge.net/), and an OSX installation with [afconvert](https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man1/afconvert.1.html).
 
 
     unzip Jan_Morgenstern-Sintel-FLAC.zip
@@ -352,11 +352,11 @@ Now that we have the total number of samples we can move on to reading out the n
     }
 
 
-With that we have a complete function for parsing the vast majority of gapless content out there. Edge cases certainly abound though, so caution is recommended before using similar code in production.
+With that we have a complete function for parsing the vast majority of gapless content. Edge cases certainly abound though, so caution is recommended before using similar code in production.
 
 ## Appendix C: On Garbage Collection
 
-Memory belonging to `SourceBuffer`s is actively [garbage collected](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) according to content type, platform specific limits, and the current play position. In Chrome, memory will first be reclaimed from already played buffers. However, if memory usage exceeds platform specific limits, it will remove memory from unplayed buffers.
+Memory belonging to `SourceBuffer` instances s is actively [garbage collected](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) according to content type, platform specific limits, and the current play position. In Chrome, memory will first be reclaimed from already played buffers. However, if memory usage exceeds platform specific limits, it will remove memory from unplayed buffers.
 
 When playback reaches a gap in the timeline due to reclaimed memory it may glitch if the gap is small enough or stall completely if the gap is too large. Neither is a great user experience, so it's important to avoid appending too much data at once and to manually remove ranges from the media timeline that are no longer necessary.
 
@@ -364,6 +364,6 @@ Ranges can be removed via the [`remove()`](https://w3c.github.io/media-source/#w
 
 On desktop Chrome, you can keep approximately 12 megabytes of audio content and 150 megabytes of video content in memory at once. You should not rely on these values across browsers or platforms; e.g., they are most certainly not representative of mobile devices.
 
-Garbage collection only impacts data added to SourceBuffers; there are no limits on how much data you can keep buffered in JavaScript variables. You may also reappend the same data in the same position if necessary.
+Garbage collection only impacts data added to `SourceBuffers`; there are no limits on how much data you can keep buffered in JavaScript variables. You may also reappend the same data in the same position if necessary.
 
 {% include "comment-widget.html" %}
