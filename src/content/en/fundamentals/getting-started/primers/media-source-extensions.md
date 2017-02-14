@@ -61,7 +61,7 @@ In practice, the chain looks like this:
           sourceBuffer.addEventListener('updateend', function(e) {
             if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
               mediaSource.endOfStream();
-              // window.URL.revokeObjectURL(vidElement.src);
+              URL.revokeObjectURL(vidElement.src);
             }
           });
           sourceBuffer.appendBuffer(arrayBuffer);
@@ -208,8 +208,9 @@ function sourceOpen(e) {
 If you do an internet search for MSE examples, you'll find plenty that retrieve
 media files using XHR. Just to keep things simple, not to mention cutting edge,
 I'm going to use the [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch)
-API and the [Promise](/web/fundamentals/getting-started/primers/promises) it returns. If you're trying to do this in Safari,
-it won't work without a `fetch()` polyfill.
+API and the [Promise](/web/fundamentals/getting-started/primers/promises) it
+returns. If you're trying to do this in Safari, it won't work without a
+`fetch()` polyfill.
 
 Note: Just to help things fit on the screen, from here to the end I'm only going
 to show part of the example we're building. If you want to see it in context,
@@ -218,7 +219,7 @@ to show part of the example we're building. If you want to see it in context,
 <pre class="prettyprint">
 function sourceOpen(e) {  
   var mime = 'video/webm; codecs="opus, vp9"';  
-  var mediaSource = this;  
+  var mediaSource = e.target;  
   var sourceBuffer = mediaSource.addSourceBuffer(mime);  
   var videoUrl = 'droid.webm'; 
   <strong>fetch(videoUrl)
@@ -253,7 +254,7 @@ clause where I append it to the `SourceBuffer`.
 <pre class="prettyprint">
 function sourceOpen(e) {
   var mime = 'video/webm; codecs="opus, vp9"';
-  var mediaSource = this;
+  var mediaSource = e.target;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
   var videoUrl = 'droid.webm';
   fetch(videoUrl)
@@ -267,19 +268,19 @@ function sourceOpen(e) {
 
 #### Call endOfStream() 
 
-After all `ArrayBuffers` are appended, and no further media data is expect, call
+After all `ArrayBuffers` are appended, and no further media data is expected, call
 `MediaSource.endOfStream()`.  This will change `MediaSource.readyState` to
 `ended` and fire the `sourceended` event. 
 
-You also need to disconnect the blob URL from the `MediaSource` object. This
-allows the browser to reclaim the resources alocated to the `MediaSource`
+You also need to release the blob URL from the `MediaSource` object. This
+allows the browser to reclaim the resources allocated to the `MediaSource`
 instance, assuming there are no references to it elsewhere. Do this by calling
 `revokeObjectURL()` on the source itself.
 
 <pre class="prettyprint">
 function sourceOpen(e) {
   var mime = 'video/webm; codecs="opus, vp9"';
-  var mediaSource = this;
+  var mediaSource = e.target;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
   var videoUrl = 'droid.webm';
   fetch(videoUrl)
@@ -287,10 +288,12 @@ function sourceOpen(e) {
       return response.arrayBuffer();
     })
     .then(function(arrayBuffer) {
-      <strong>sourceBuffer.onupdateend = function(e) {
-        mediaSource.endOfStream();
-        window.URL.revokeObjectURL(vidElement.src);
-      }</strong>
+      <strong>sourceBuffer.addEventListener('updateend', function(e) {
+        if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
+          mediaSource.endOfStream();
+          URL.revokeObjectURL(vidElement.src);
+        }
+      });</strong>
       sourceBuffer.appendBuffer(arrayBuffer);
     });
 }</pre>
@@ -324,7 +327,7 @@ Source Extenstions. We recommend [stackoverflow](http://stackoverflow.com/questi
           sourceBuffer.addEventListener('updateend', function(e) {
             if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
               mediaSource.endOfStream();
-              // window.URL.revokeObjectURL(vidElement.src);
+              URL.revokeObjectURL(vidElement.src);
             }
           });
           sourceBuffer.appendBuffer(arrayBuffer);
