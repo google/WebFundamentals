@@ -6,9 +6,14 @@
  */
 
 var fs = require('fs');
+var chalk = require('chalk');
 var glob = require('globule');
 var moment = require('moment');
+const RSync = require('rsync');
+const mkdirp = require('mkdirp');
+var gutil = require('gulp-util');
 var wfRegEx = require('./wfRegEx');
+const exec = require('child_process').exec;
 
 var STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md'];
 
@@ -23,6 +28,75 @@ if (!String.prototype.endsWith) {
       var lastIndex = subjectString.indexOf(searchString, position);
       return lastIndex !== -1 && lastIndex === position;
     }
+  });
+}
+
+/**
+ * Executes a shell command and returns the result in a promise.
+ *
+ * @param {string} cmd The command to run.
+ * @param {string} cwd The working directory to run the command in.
+ * @return {Promise} The promise that will be resolved on completion.
+ */
+function promisedExec(cmd, cwd) {
+  return new Promise(function(resolve, reject) {
+    const cmdLog = chalk.cyan(`$ ${cmd}`);
+    gutil.log(' ', cmdLog);
+    const execOptions = {
+      cwd: cwd,
+      maxBuffer: 1024 * 1024
+    };
+    exec(cmd, execOptions, function(err, stdOut, stdErr) {
+      stdOut = stdOut.trim();
+      stdErr = stdErr.trim();
+      if (err) {
+        gutil.log(' ', cmdLog, chalk.red('FAILED'));
+        const output = (stdOut + '\n' + stdErr).trim();
+        if (GLOBAL.WF.options.verbose && output.length > 0) {
+          console.log(output);
+        }
+        reject(err);
+        return;
+      }
+      gutil.log(' ', cmdLog, chalk.green('OK'));
+      if (GLOBAL.WF.options.verbose && stdOut.length > 0) {
+        console.log(stdOut);
+      }
+      resolve(stdOut);
+    });
+  });
+}
+
+/**
+ * Uses RSync to copy files from one directory to another.
+ *
+ * @param {string} src The source to copy.
+ * @param {string} dest The destination to copy to.
+ * @return {Promise} The promise that will be resolved on completion.
+ */
+function promisedRSync(src, dest) {
+  gutil.log(' ', chalk.blue('rsync'), src, '->', dest);
+  return new Promise(function(resolve, reject) {
+    if (fs.existsSync(src) === false) {
+      console.log(src, 'doesnt exist');
+      resolve();
+    }
+    const rsync = new RSync()
+      .source(src)
+      .destination(dest)
+      .archive()
+      .exclude('.git*')
+      .exclude('.DS_Store');
+    mkdirp.sync(dest);
+    rsync.execute(function(error, code, cmd) {
+      if (code !== 0) {
+        gutil.log(' ', 'Copying', chalk.blue(src), chalk.red('Failed!'));
+        console.log(error);
+        reject(error);
+        return;
+      }
+      resolve();
+    });
   });
 }
 
@@ -156,4 +230,5 @@ exports.getFileList = getFileList;
 exports.publishedComparator = publishedComparator;
 exports.updatedComparator = updatedComparator;
 exports.splitByYear = splitByYear;
-
+exports.promisedExec = promisedExec;
+exports.promisedRSync = promisedRSync;

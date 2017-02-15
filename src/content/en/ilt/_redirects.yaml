@@ -1,0 +1,7 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+
+redirects:
+
+- from: /web/ilt/
+  to: /web/ilt/pwa/
+  temporary: true
