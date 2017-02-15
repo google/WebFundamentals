@@ -10,14 +10,11 @@ const runSequence = require('run-sequence');
 const TEST_LOG_FILE = './test-results.json';
 
 function generateCommitMessage(gitData, testResults) {
-  let body;
-
-  if (testResults.errors.length === 0 && testResults.warnings === 0) {
-    body = ':+1';
-    return body;
+  if (testResults.errors.length === 0 && testResults.warnings.length === 0) {
+    return ':1:';
   }
 
-  body = ['**Whoops!**\n\n'];
+  let body = ['**Whoops!**\n\n'];
   
   if (testResults.errors.length > 0) {
     body.push(`There were **${testResults.errors.length} critical errors** `);
