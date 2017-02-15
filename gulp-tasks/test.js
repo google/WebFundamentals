@@ -253,7 +253,6 @@ function checkIfUpdateOnUpdated() {
   return wfHelper.promisedExec(cmd, '.')
   .then(function(rawDiff) {
     rawDiff = rawDiff.replace(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, '');
-    fs.writeFileSync('scratch/changes.diff', rawDiff, 'utf8');
     let filesChanged = parseDiff(rawDiff);
     filesChanged.forEach(function(file) {
       if (!file.from.endsWith('.md')) {
