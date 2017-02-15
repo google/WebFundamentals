@@ -17,6 +17,8 @@ const remark = require('remark');
 const jsYaml = require('js-yaml');
 const gutil = require('gulp-util');
 const wfRegEx = require('./wfRegEx');
+const wfHelper = require('./wfHelper');
+const parseDiff = require('parse-diff');
 const remarkLint = require('remark-lint');
 const runSequence = require('run-sequence');
 
@@ -235,6 +237,40 @@ function parseYaml(file) {
         resolve(null);
       }
     })
+  });
+}
+
+/**
+ * Does a git diff to find out which files have changed and warns if the
+ * `wf_last_updated` field isn't updated.
+ *
+ * @return {Promise}
+ */
+function checkIfUpdateOnUpdated() {
+  const errMsg = 'The file was updated, but the `wf_updated_on` field wasn\'t. (experimental)';
+  const RE_UPDATED_ON = /{#\s?wf_updated_on:\s?(.*?)\s?#}/;
+  const cmd = 'git --no-pager diff FETCH_HEAD $(git merge-base FETCH_HEAD master)';
+  return wfHelper.promisedExec(cmd, '.')
+  .then(function(rawDiff) {
+    rawDiff = rawDiff.replace(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, '');
+    fs.writeFileSync('scratch/changes.diff', rawDiff, 'utf8');
+    let filesChanged = parseDiff(rawDiff);
+    filesChanged.forEach(function(file) {
+      if (!file.from.endsWith('.md')) {
+        return;
+      }
+      let wasAdded = false;
+      file.chunks.forEach(function(chunk) {
+        chunk.changes.forEach(function(change) {
+          if (change.add && RE_UPDATED_ON.test(change.content)) {
+            wasAdded = true;
+          }
+        });
+      });
+      if (wasAdded === false) {
+        logWarning(file.from, null, errMsg);
+      }
+    });
   });
 }
 
@@ -523,6 +559,9 @@ function validateMDFile(file, commonTags, contributors) {
 
 
 
+gulp.task('test:date-updated', function() {
+  return checkIfUpdateOnUpdated();
+});
 
 gulp.task('test:yaml', function() {
   return new Promise(function(resolve, reject) {
@@ -653,6 +692,7 @@ gulp.task('test', function(callback) {
     'test:yaml',
     'test:contributors',
     'test:findJSFiles',
+    'test:date-updated',
     'test:validateMarkdown',
     'test:summary',
     callback

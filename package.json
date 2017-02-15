@@ -35,6 +35,7 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "moment": "^2.14.1",
+    "parse-diff": "^0.4.0",
     "remark": "^6.2.0",
     "remark-lint": "^5.4.0",
     "require-dir": "^0.3.0",
