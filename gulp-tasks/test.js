@@ -265,7 +265,7 @@ function validateMDFile(file, commonTags, contributors) {
 
     // Verify extension on file is .md
     if (path.extname(file.toLowerCase()) !== '.md') {
-      logError(file, null, 'File extension must be .md');
+      logError(file, null, 'File extension must be `.md`');
     }
 
     // Validate book_path and project_path
@@ -291,13 +291,13 @@ function validateMDFile(file, commonTags, contributors) {
         errMsg = 'Attribute `description` cannot be empty';
         logError(file, position, errMsg);
       } else if (description.length > MAX_DESCRIPTION_LENGTH) {
-        errMsg = 'Attribute `description` cannot exceed ' + MAX_DESCRIPTION_LENGTH
-        errMsg += ' characters, was: ' + description.length;
+        errMsg = `Attribute \`description\` cannot exceed ${MAX_DESCRIPTION_LENGTH}`;
+        errMsg += ` characters, was: ${description.length}`;
         logError(file, position, errMsg);
       }
       if (description.indexOf('<') >= 0 || description.indexOf('`') >= 0) {
         errMsg = 'Attribute `description` cannot contain HTML or markdown, ';
-        errMsg += 'found: ' + description;
+        errMsg += `found: ${description}`;
         logError(file, position, errMsg);
       }
     };
@@ -313,7 +313,7 @@ function validateMDFile(file, commonTags, contributors) {
         let d = moment(matched[1], VALID_DATE_FORMATS, true);
         if (d.isValid() === false) {
           errMsg = 'WF Tag `wf_updated_on` invalid format (YYYY-MM-DD)';
-          errMsg += ', found: ' + matched[1];
+          errMsg += `, found: ${matched[1]}`;
           logError(file, position, errMsg);
         }
       }
@@ -330,7 +330,7 @@ function validateMDFile(file, commonTags, contributors) {
         let d = moment(matched[1], VALID_DATE_FORMATS, true);
         if (d.isValid() === false) {
           errMsg = 'WF Tag `wf_published_on` invalid format (YYYY-MM-DD)';
-          errMsg += ', found: ' + matched[1];
+          errMsg += `, found: ${matched[1]}`;
           logError(file, position, errMsg);
         }      
       }
@@ -349,7 +349,7 @@ function validateMDFile(file, commonTags, contributors) {
       } catch (ex) {
         position = {line: getLineNumber(content, matched.index)};
         errMsg = 'WF Tag `wf_featured_image` found, but couldn\'t find ';
-        errMsg += 'image - ' + matched[1];
+        errMsg += `image - ${matched[1]}`;
         logError(file, position, errMsg);
       }
     }
@@ -360,7 +360,7 @@ function validateMDFile(file, commonTags, contributors) {
       position = {line: getLineNumber(content, matched.index)};
       matched[1].split(',').forEach(function(tag) {
         if (commonTags.indexOf(tag.trim()) === -1) {
-          errMsg = 'Uncommon tag (' + tag.trim() + ') found.';
+          errMsg = `Uncommon tag (\`${tag.trim()}\`) found.`;
           logWarning(file, position, errMsg);
         }
       });
@@ -369,7 +369,7 @@ function validateMDFile(file, commonTags, contributors) {
     // Check for a single level 1 heading with page title
     matched = wfRegEx.RE_TITLE.exec(content);
     if (!matched && !metadata.include) {
-      errMsg = 'Page is missing page title eg: # TITLE {: .page-title }';
+      errMsg = 'Page is missing page title eg: `# TITLE {: .page-title }`';
       logError(file, null, errMsg);
     }
     if (matched && metadata.include) {
@@ -380,10 +380,10 @@ function validateMDFile(file, commonTags, contributors) {
 
     // Check for only a single instance of the {: .page-title } class
     matched = wfRegEx.getMatches(wfRegEx.RE_TITLE_CLASS, content);
-    errMsg = 'Page can only contain ONE title class {: .page-title }';
+    errMsg = 'Page can only contain ONE title class `{: .page-title }`';
     let maxMatches = 1;
     if (metadata.include) {
-      errMsg = 'Includes should not contain any {: .page-title } classes.';
+      errMsg = 'Includes should not contain any `{: .page-title }` classes.';
       maxMatches = 0;
     }
     if (matched.length > maxMatches) {
@@ -399,8 +399,7 @@ function validateMDFile(file, commonTags, contributors) {
       let key = match[1];
       if (!contributors[key]) {
         position = {line: getLineNumber(content, match.index)};
-        errMsg = 'Unable to find contributor (' + key;
-        errMsg += ') in contributors file.';
+        errMsg = `Unable to find contributor (\`${key}\`) in contributors file.`;
         logError(file, position, errMsg);
       }
     });
@@ -419,12 +418,12 @@ function validateMDFile(file, commonTags, contributors) {
         try {
           fs.accessSync(inclPath, fs.R_OK);
         } catch (ex) {
-          errMsg = 'Include tag found, but couldn\'t find related include: '
-          errMsg += inclFile + ' -- ' + inclPath;
+          errMsg = '`{% include %}` tag found, but couldn\'t find related '
+          errMsg += 'include ' + inclFile + ' -- ' + inclPath;
           logError(file, position, errMsg);
         }
       } else {
-        errMsg = 'Include path MUST start with web/ - ' + inclFile;
+        errMsg = `Include path MUST start with \`web/\` - ${inclFile}`;
         logError(file, position, errMsg);
       }
     });
@@ -449,7 +448,7 @@ function validateMDFile(file, commonTags, contributors) {
     matched = wfRegEx.getMatches(/\{\{/g, content);
     matched.forEach(function(match) {
       position = {line: getLineNumber(content, match.index)};
-      errMsg = 'Template tags ({{) should be escaped to &#123;&#123;';
+      errMsg = 'Template tags (`{{`) should be escaped to `&#123;&#123;`';
       logError(file, position, errMsg);
     });
 
@@ -457,8 +456,8 @@ function validateMDFile(file, commonTags, contributors) {
     matched = wfRegEx.getMatches(/{#\w+}/gm, content);
     matched.forEach(function(match) {
       position = {line: getLineNumber(content, match.index)};
-      errMsg = 'Unsuppored anchor style used, use {: #anchor }, found: ';
-      errMsg += match[0];
+      errMsg = 'Unsuppored anchor style used, use `{: #anchor }`, found: ';
+      errMsg += `\`${match[0]}\``;
       logError(file, position, errMsg);
     });
 
@@ -469,7 +468,7 @@ function validateMDFile(file, commonTags, contributors) {
       if (!reComment.test(content)) {
         position = {line: getLineNumber(content, content.length -1)};
         errMsg = 'Updates post is missing comment widget: '
-        errMsg += '{% include "comment-widget.html" %}';
+        errMsg += '`{% include "comment-widget.html" %}`';
         logWarning(file, position, errMsg);
       }
     }
@@ -587,6 +586,7 @@ gulp.task('test:validateMarkdown', function() {
     })
     .then(function() {
       gutil.log(' ', 'Searching for files:', chalk.cyan(MD_EXTENSTIONS.join(', ')));
+      // GLOBAL.WF.options.testPath = './src/tests/';
       let files = getFilelist(MD_EXTENSTIONS);
       gutil.log(' ', 'Validating markdown files...');
       if (files.length === 0) {

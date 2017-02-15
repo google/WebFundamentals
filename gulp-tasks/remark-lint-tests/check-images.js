@@ -13,10 +13,12 @@ const reRemote = /(https?:)?\/\//i;
 const reImgTag = /<img /i;
 const reImgSrc = /src=['|"](.*?)['|"|>|\s]/i;
 
+
 function doesImageExist(file, imgPath, node) {
+  let msgHardCoded = 'Do not hard code `developers.google.com` in paths.';
   if (reRemote.test(imgPath)) {
     if (imgPath.indexOf('developers.google.com') > 0) {
-      file.message('Do not hard code developers.google.com in paths.', node);
+      file.message(msgHardCoded, node);
       imgPath = imgPath.replace(/https?:\/\/developers\.google\.com/i, '');
     } else {
       return;
@@ -32,7 +34,7 @@ function doesImageExist(file, imgPath, node) {
     fs.accessSync(filePath, fs.R_OK);
     return true;
   } catch (ex) {
-    let msg = `Unable to find image '${imgPath}'`;
+    let msg = `Unable to find image \`${imgPath}\``;
     file.message(msg, node);
   }
 }

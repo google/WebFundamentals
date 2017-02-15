@@ -12,7 +12,7 @@ module.exports = {
 
 // Check for links with hard coded languages
 function wfForcedLang(ast, file, setting) {
-  let msg = 'Hard coded language URL in link (hl=xx)';
+  let msg = 'Hard coded language URL in link (`hl=xx`)';
   visit(ast, 'link', function (node) {
     let parsedUrl = url.parse(node.url);
     let queryString = parsedUrl.query;
@@ -24,8 +24,8 @@ function wfForcedLang(ast, file, setting) {
 
 // Check for links with FQDN to DevSite
 function wfDGCLinks(ast, file, setting) {
+  let msg = 'Do not hard code `developers.google.com` in links.';
   visit(ast, 'link', function (node) {
-    let msg = 'Hard coded developers.google.com in link, links must be absolute.';
     let parsedUrl = url.parse(node.url);
     let hostname = parsedUrl.hostname;
     if (hostname && hostname.toLowerCase() === 'developers.google.com') {
@@ -60,5 +60,3 @@ function wfInternalLinks(ast, file, setting) {
     }
   });
 }
-
-

@@ -29,7 +29,7 @@ function wfYouTube(ast, file, setting) {
 }
 
 function wfHTMLDGCLinks(ast, file, setting) {
-  let msg = 'Hard coded developers.google.com in link.';
+  let msg = 'Do not hard code `developers.google.com` in links.';
   visit(ast, 'html', function (node) {
     if (reDGCLink.test(node.value)) {
       file.message(msg, node);
@@ -56,7 +56,7 @@ function wfUnsafeShortLinks(ast, file, setting) {
 }
 
 function wfForcedLang(ast, file, setting) {
-  let msg = 'Hard coded language URL in link (hl=xx).';
+  let msg = 'Hard coded language URL in link (`hl=xx`).';
   visit(ast, 'html', function (node) {
     let match = reHref.exec(node.value);
     if (match && match[1]) {

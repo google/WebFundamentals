@@ -55,8 +55,8 @@ function wfNoMarkupInTitle(ast, file, setting) {
 }
 
 function wfTLDR(ast, file, setting) {
-  let msgLevel = 'TL;DR headings should be level 3 or greater.';
-  let msgHide = 'TL;DR headings should be hidden from the TOC with `{: .hide-from-toc }`';
+  let msgLevel = 'TL;DR headings must be level 3 or greater.';
+  let msgHide = 'TL;DR headings must be hidden from the TOC with `{: .hide-from-toc }`';
   visit(ast, 'heading', function(node) {
     let body = toString(node);
     if (reTLDR.test(body)) {
