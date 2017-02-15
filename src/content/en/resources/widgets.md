@@ -197,17 +197,21 @@ Gain more feedback on your doc by asking your readers yes / no questions.
 
 ### Example
 
-See question at bottom of [Get Started Debugging JS][inline feedback example].
+See [Get Started Debugging JS][inline feedback example] for examples. Each of
+the questions at the bottom of the sections use the Inline Feedback widget.
 
-[inline feedback example]: /web/tools/chrome-devtools/javascript/#step-1
+[inline feedback example]: /web/tools/chrome-devtools/javascript/
 
 ### Usage
 
 1. Make a directory called `_feedback` near the doc that'll include the feedback.
+2. If you want to include a question before your buttons, then copy
+   `/src/content/en/tools/chrome-devtools/javascript/_feedback/7.html` into
+   your `_feedback` directory. Else, copy `.../1.html`.
 2. Copy `/src/content/en/tools/chrome-devtools/javascript/_feedback/1.html`
    into your `_feedback` directory.
-3. Modify all of the variables to suit your question. All variables are
-   required.
+3. Modify all of the variables to suit your question. All variables except
+   `question` are required.
 4. Include `_feedback/1.html` into your doc, like this:
 
 <pre class="prettyprint">
@@ -234,5 +238,5 @@ analytics data.
 
 See Google Analytics > Behavior > Events. When the user clicks "fail",
 a value of 0 is sent for this label. When user clicks "success", a value
-of 1 is sent. So, you can determine how much users are clicking
-"success" or "fail" based on a 0 to 1 scale.
+of 1 is sent. So, a value of 1 means that users are always clicking your
+"success" button.
