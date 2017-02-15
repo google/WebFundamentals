@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 57 to help you plan.
 
-{# wf_updated_on: 2017-02-01 #}
+{# wf_updated_on: 2017-02-15 #}
 {# wf_published_on: 2017-02-01 #}
 {# wf_tags: deprecations,removals,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -18,6 +18,31 @@ Platform. This article describes the deprecations and removals in Chrome 57,
 which is in beta as of early February. This list is subject to change at any
 time.
 
+## Deprecate and remove legacy caller for HTMLEmbedElement and HTMLObjectElement
+
+That an interface has a legacy caller means that an instance can be called as a
+function. Currently, `HTMLEmbedElement` and `HTMLObjectElement` support this
+functionality. In Chrome 57 this ability is deprecated. After removal, which is
+expected in Chrome 58, calling will throw and exception.
+
+This change brings Chrome in line with recent spec changes. The legacy behavior
+is not supported in Edge or Safari, and it is being
+[removed from Firfox](https://bugzilla.mozilla.org/show_bug.cgi?id=909656).
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/AiDZ7ru9mGg/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5715026367217664) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663662)
+
+## Deprecate and remove webkitCancelRequestAnimationFrame
+
+The `webkitCancelRequestAnimationFrame()` method is a an obsolete,
+vendor-specific API and the standard `cancelAnimationFrame()` has long
+been supported in Chromium. Therefore the webkit version is being removed.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/RiDsdLsIdWc/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5588435494502400) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=146849)
+
 ## Deprecate case-insensitive matching for usemap attribute
 
 The `usemap` attribute was formerly defined as caseless. Unfortunately
@@ -32,16 +57,6 @@ Chrome 58.
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/8pHdFzN0YQc/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5760965337415680) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=659464)
-
-## Deprecate and remove webkitCancelRequestAnimationFrame
-
-The `webkitCancelRequestAnimationFrame()` method is a an obsolete,
-vendor-specific API and the standard `cancelAnimationFrame()` has long
-been supported in Chromium. Therefore the webkit version is being removed.
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/RiDsdLsIdWc/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5588435494502400) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=146849)
 
 ## Prefixed resource timing buffer-management API (removed)
 
