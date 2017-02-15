@@ -4,15 +4,14 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-02-09T17:51:42Z",
+  "updated": "2017-02-13T08:34:05Z",
   "id": "caching-files-with-the-service-worker",
   "duration": 0,
-  "title": "Caching files with the service worker",
+  "title": "Caching Files with the Service Worker",
   "summary": "",
   "theme": "",
   "status": null,
   "category": null,
   "tags": [],
-  "url": "caching-files-with-the-service-worker",
-  "wfProcessed": true
+  "url": "caching-files-with-the-service-worker"
 }

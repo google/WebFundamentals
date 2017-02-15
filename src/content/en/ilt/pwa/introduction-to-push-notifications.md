@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
-{# wf_updated_on: 2016-12-16T00:05:50Z #}
+{# wf_updated_on: 2017-02-13T08:41:45Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -85,13 +85,13 @@ Notification.requestPermission(function(status) {
 });
 ```
 
-We call the  [requestPermission](https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPermission) method on the global Notification object. This displays a pop-up message from the browser requesting permission to allow notifications. The user's response is stored along with your app, so calling this again returns the user's last choice. Once the user grants permission, the app can display notifications. 
+We call the  [`requestPermission`](https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPermission) method on the global Notification object. This displays a pop-up message from the browser requesting permission to allow notifications. The user's response is stored along with your app, so calling this again returns the user's last choice. Once the user grants permission, the app can display notifications. 
 
 <div id="shownotification"></div>
 
 ### Display a notification
 
-We can show a notification from the app's main script with the  [showNotification](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification) method (the "Invocation API"). Here is an example:
+We can show a notification from the app's main script with the  [`showNotification`](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification) method (the "Invocation API"). Here is an example:
 
 #### main.js
 
@@ -367,7 +367,7 @@ That completes the path from server push to user notification. Let's look at eac
 
 Let's see how the service worker handles push messages. The service worker both receives the push message and creates the notification. 
 
-When a  [browser that supports push messages](http://caniuse.com/#search=notification) receives a message, it sends a `push` event to the service worker. We can create a "push" event listener in the service worker to handle the message:
+When a  [browser that supports push messages](http://caniuse.com/#search=notification) receives a message, it sends a `push` event to the service worker. We can create a `push` event listener in the service worker to handle the message:
 
 #### serviceworker.js
 
@@ -394,17 +394,17 @@ self.addEventListener('push', function(e) {
 });
 ```
 
-This code is very similar to what we have covered before in this tutorial, the difference being that this is happening inside the service worker in response to a push event, instead of in the app's main script. 
+This code is very similar to what we have covered before in this tutorial, the difference being that this is happening inside the service worker in response to a `push` event, instead of in the app's main script. 
 
-Another important difference is that the `showNotification` method is wrapped in an  [e.waitUntil method](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil). This extends the lifetime of the push event until the `showNotification` promise resolves. In general, we use the `waitUntil` method to ensure the service worker doesn't terminate before an asynchronous operation has completed.
+Another important difference is that the `showNotification` method is wrapped in an  [`e.waitUntil` method](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil). This extends the lifetime of the push event until the `showNotification` promise resolves. In general, we use the `waitUntil` method to ensure the service worker doesn't terminate before an asynchronous operation has completed.
 
 ### Subscribing to Push Notifications
 
-Before we can send a push message we must first subscribe to a push service. Subscribing returns a subscription object, or  *subscription* . The subscription is a critical piece of the process to send push messages. It tells us, the developer, to which push service we should send our push messages (remember, each browser will provide their own push service). The subscription also details which client the push service should route the messages to. Finally, the subscription contains the public key to encrypt the data so that it is delivered securely to the user.
+Before we can send a push message we must first subscribe to a push service. Subscribing returns a subscription object, or `subscription`. The `subscription` is a critical piece of the process to send push messages. It tells us, the developer, to which push service we should send our push messages (remember, each browser will provide their own push service). The subscription also details which client the push service should route the messages to. Finally, the `subscription` contains the public key to encrypt the data so that it is delivered securely to the user.
 
-It is your job to take this subscription object and store it somewhere on your system. For instance, you might store it in a database attached to a user object. In our examples, we will log results to the console.
+It is your job to take this `subscription` object and store it somewhere on your system. For instance, you might store it in a database attached to a user object. In our examples, we will log results to the console.
 
-First, we need to check if we already have a subscription object and update the UI accordingly. 
+First, we need to check if we already have a `subscription` object and update the UI accordingly. 
 
 #### main.js
 
@@ -429,7 +429,7 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-We should perform this check whenever the user accesses our app because subscription objects may change during their lifetime. We need to make sure that it is synchronized with our server. If there is no subscription object we can update our UI to ask the user if they would like receive notifications.
+We should perform this check whenever the user accesses our app because `subscription` objects may change during their lifetime. We need to make sure that it is synchronized with our server. If there is no `subscription` object we can update our UI to ask the user if they would like receive notifications.
 
 Assume the user enabled notifications. Now we can subscribe to the push service:
 
@@ -458,7 +458,7 @@ function subscribeUser() {
 
 It's best practice to call the `subscribeUser()` function in response to a user action signalling they would like to subscribe to push messages from our app.
 
-In the above example we call the  [subscribe method](https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe) on the  [pushManager](https://developer.mozilla.org/en-US/docs/Web/API/PushManager) and log the subscription object to the console.
+In the above example we call the  [`subscribe` method](https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe) on the  [`pushManager`](https://developer.mozilla.org/en-US/docs/Web/API/PushManager) and log the subscription object to the console.
 
 Notice we are passing a flag named `userVisibleOnly` to the subscribe method. By setting this to `true`, the browser ensures that every incoming message has a matching (and visible) notification. 
 
@@ -588,7 +588,7 @@ We are using Mozilla's  [web-push library](https://www.npmjs.com/package/web-pus
 webpush.sendNotification(pushSubscription, payload, options)
 ```
 
-The first argument is the the subscription object. The second argument  is the payload. The third is an options object that contains various options to configure the message. See  [the documentation](https://github.com/web-push-libs/web-push/) for details.
+The first argument is the the `subscription` object. The second argument  is the `payload`. The third is an `options` object that contains various options to configure the message. See  [the documentation](https://github.com/web-push-libs/web-push/) for details.
 
 While we recommend using a library, this is a new feature and there are many popular languages that don't yet have any libraries. Here is a list of some available  [web-push libraries](https://github.com/web-push-libs) for various languages. If you do need to implement encryption manually, use Peter Beverloo's  [encryption verifier](https://tests.peter.sh/push-encryption-verifier/).
 

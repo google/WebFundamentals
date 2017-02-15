@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
-{# wf_updated_on: 2017-01-26T00:30:52Z #}
+{# wf_updated_on: 2017-02-13T08:25:04Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -22,9 +22,9 @@ A  [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Wor
 
 Because workers run separately from the main thread, service workers are independent of the application they are associated with. This has several consequences:
 
-* Because the service worker is not blocking (it's designed to be fully asynchronous) synchronous XHR and localStorage cannot be used in a service worker.
+* Because the service worker is not blocking (it's designed to be fully asynchronous) synchronous XHR and `localStorage` cannot be used in a service worker.
 * The service worker can receive push messages from a server when the app is not active. This lets your app show push notifications to the user, even when the browser is not open.
-* The service worker can't access the DOM directly. To communicate with the page, the service worker uses the  [postMessage()](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) method to send data and a "message" event listener to receive data.
+* The service worker can't access the DOM directly. To communicate with the page, the service worker uses the  [`postMessage()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) method to send data and a "message" event listener to receive data.
 
 Things to note about a service worker:
 
@@ -33,7 +33,7 @@ Things to note about a service worker:
 
 
 
-<strong>Note:</strong>Services like <a href="https://letsencrypt.org/">Letsencrypt</a> let you procure SSL certificates for free to install on your server. 
+Note: Services like <a href="https://letsencrypt.org/">Letsencrypt</a> let you procure SSL certificates for free to install on your server. 
 
 
 
@@ -85,7 +85,7 @@ A service worker goes through three steps in its lifecycle:
 
 ### Registration and scope
 
-To __install__ a service worker, you need to __register__ it in your main JavaScript code. Registration tells the browser where your service worker is located, and to start installing it in the background. For example, you could include a <script> element in your site's __index.html__ file with the following code:
+To __install__ a service worker, you need to __register__ it in your main JavaScript code. Registration tells the browser where your service worker is located, and to start installing it in the background. For example, you could include a `<script>` element in your site's __index.html__ file with the following code:
 
 #### index.html
 
@@ -106,9 +106,9 @@ navigator.serviceWorker.register('/service-worker.js')
 });
 ```
 
-This code starts by checking for browser support by examining `navigator.serviceWorker`. The service worker is then registered with `navigator.serviceWorker.register`, which returns a promise that resolves when the service worker has been successfully registered. The __scope__ of the service worker is then logged with `registration.scope`. 
+This code starts by checking for browser support by examining `navigator.serviceWorker`. The service worker is then registered with `navigator.serviceWorker.register`, which returns a promise that resolves when the service worker has been successfully registered. The `scope` of the service worker is then logged with `registration.scope`. 
 
-The __scope__ of the service worker determines which files the service worker controls, in other words, from which path the service worker will intercept requests. The default scope is the location of the service worker file, and extends to all directories below. So if __service-worker.js__ is located in the root directory, the service worker will control requests from all files at this domain.
+The `scope` of the service worker determines which files the service worker controls, in other words, from which path the service worker will intercept requests. The default scope is the location of the service worker file, and extends to all directories below. So if __service-worker.js__ is located in the root directory, the service worker will control requests from all files at this domain.
 
 You can also set an arbitrary scope by passing in an additional parameter when registering. The code below shows an example.
 
@@ -147,7 +147,7 @@ Once a service worker has successfully installed, it transitions into the __acti
 
 
 
-<strong>Note:</strong> Simply refreshing the page is not sufficient to transfer control to a new service worker, because the new page will be requested before the the current page is unloaded, and there won't be a time when the old service worker is not in use.
+Note: Simply refreshing the page is not sufficient to transfer control to a new service worker, because the new page will be requested before the the current page is unloaded, and there won't be a time when the old service worker is not in use.
 
 
 
@@ -163,7 +163,7 @@ self.addEventListener('activate', function(event) {
 
 Once activated, the service worker controls all pages that load within its scope, and starts listening for events from those pages. 
 
-However the pages in your app that are open are not under the service worker's scope since the service worker was not loaded when the pages opened. To put currently open pages under service worker control you must reload the page or pages (or use  [Clients.claim()](https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim)). Until then, requests from this page will bypass the service worker and operate like they normally would. This ensures consistency in your site; if a page loads without the service worker, so do its subresources.
+However the pages in your app that are open are not under the service worker's scope since the service worker was not loaded when the pages opened. To put currently open pages under service worker control you must reload the page or pages (or use  [`Clients.claim()`](https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim)). Until then, requests from this page will bypass the service worker and operate like they normally would. This ensures consistency in your site; if a page loads without the service worker, so do its subresources.
 
 <div id="events"></div>
 
@@ -173,7 +173,7 @@ However the pages in your app that are open are not under the service worker's s
 
 
 
-Service workers are event driven. Both the installation and activation processes trigger corresponding __install__ and __activate__ events to which the service workers can respond. There are also __message__ events, where the service worker can receive information from other scripts, and functional events such as__ fetch__, __push__, and __sync__. 
+Service workers are event driven. Both the installation and activation processes trigger corresponding `install` and `activate` events to which the service workers can respond. There are also `message` events, where the service worker can receive information from other scripts, and functional events such as `fetch`, `push`, and `sync`. 
 
 To examine service workers, navigate to the Service Worker section in your browser's developer tools. The process is different in each browser that supports service workers. For information about using your browser's developer tools to check the status of service workers, see [Debugging Service Workers in Browsers](debugging_service_workers_in_browsers.md).
 

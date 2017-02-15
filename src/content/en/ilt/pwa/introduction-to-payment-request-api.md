@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
-{# wf_updated_on: 2016-12-15T20:58:41Z #}
+{# wf_updated_on: 2017-02-13T08:12:57Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -14,7 +14,7 @@ The PaymentRequest API improves mobile web checkout (shopping cart) and accepts 
 
 
 
-<strong>Note:</strong> The <a href="https://github.com/w3c/browser-payment-api">PaymentRequest API</a> is very new and still subject to developmental changes. Google tracks updates on <a class="https://developers.google.com/web/fundamentals/primers/payment-request/">this page</a>. Please keep checking back. Also on this page is <a class="https://storage.googleapis.com/prshim/v1/payment-shim.js">a shim</a> that you can embed on your site to paper over API differences for two major Chrome versions.
+Note: The <a href="https://github.com/w3c/browser-payment-api">PaymentRequest API</a> is very new and still subject to developmental changes. Google tracks updates on <a class="https://developers.google.com/web/fundamentals/primers/payment-request/">this page</a>. Please keep checking back. Also on this page is <a class="https://storage.googleapis.com/prshim/v1/payment-shim.js">a shim</a> that you can embed on your site to paper over API differences for two major Chrome versions.
 
 
 
@@ -90,11 +90,11 @@ Using the Payment Request API, the transaction process is made as seamless as po
 
 ![Payment Request Processing](img/e108534a11ad1075.png)
 
-The process begins when the merchant site creates a new PaymentRequest and passes to the browser all the information required to make the purchase: the amount to be charged, what currency they expect payment in, and what payment methods are accepted by the site. The browser determines compatibility between the accepted payment methods for the site and the methods the user has installed on the target device.
+The process begins when the merchant site creates a new `PaymentRequest` and passes to the browser all the information required to make the purchase: the amount to be charged, what currency they expect payment in, and what payment methods are accepted by the site. The browser determines compatibility between the accepted payment methods for the site and the methods the user has installed on the target device.
 
 The browser then presents the payments UI to the user, who selects a payment method and authorizes the transaction. A payment method can be as straightforward as a credit card that is already stored by the browser, or as esoteric as a third-party system (for example, Android Pay or PayPal) written specifically to deliver payments to the site (this functionality is coming soon). After the user authorizes the transaction, all the necessary payment details are sent directly back to the site. For example, for a credit card payment, the site gets a card number, a cardholder name, an expiration date, and a CVC.
 
-PaymentRequest can also be extended to return additional information, such as shipping addresses and options, payer email, and payer phone. This allows you to get all the information you need to finalize a payment without ever showing the user a checkout form.
+`PaymentRequest` can also be extended to return additional information, such as shipping addresses and options, payer email, and payer phone. This allows you to get all the information you need to finalize a payment without ever showing the user a checkout form.
 
 From the user's perspective, all the previously tedious interaction—request, authorization, payment, and result—now takes place in a single step; from the web site's perspective, it requires only a single JavaScript API call. From the payment method's perspective, there is no process change whatsoever.
 

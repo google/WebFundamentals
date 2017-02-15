@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
-{# wf_updated_on: 2017-02-09T18:06:53Z #}
+{# wf_updated_on: 2017-02-15T18:17:29Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -52,13 +52,13 @@ Note: The Google Analytics UI is subject to updates and may not look exactly lik
 
 
 
-* If you already have a Google Analytics account:
+#### If you already have a Google Analytics account
 
 Create another one. Select the __Admin__ tab. Under __account__, select your current Google Analytics account and choose __create new account__. A single Gmail account can have multiple (currently 100) Google Analytics accounts. 
 
 ![Adding an account](img/638621a4df8de3ce.png)
 
-* If you don't have a Google Analytics account:
+#### If you don't have a Google Analytics account
 
 Select __Sign up__ to begin creating your account.
 
@@ -80,7 +80,7 @@ A property must be associated with a website (for web apps). The website name ca
 
 
 
-Note: Analytics will still work even if this URL does not match your site. The only thing that ties analytics data to your account is the value of your <strong>tracking / property ID</strong>. The site URL that you use to create your Google Analytics account is only used for things like automated testing. 
+Note: Analytics will still work even if this URL does not match your site. The only thing that ties analytics data to your account is the value of your __tracking / property ID__. The site URL that you use to create your Google Analytics account is only used for things like automated testing. 
 
 
 
@@ -105,7 +105,7 @@ Once you have created an account, you need to add the tracking snippet to your a
 
 ![Finding the snippet](img/e6c84f2ccde27125.png)
 
-Your tracking ID looks like __UA-XXXXXXXX-Y__ and your tracking code snippet looks like:
+Your tracking ID looks like `UA-XXXXXXXX-Y` and your tracking code snippet looks like:
 
 #### index.html
 
@@ -235,7 +235,7 @@ ga('send', {
 });
 ```
 
-Here the hit type is set to 'event' and values associated with the event are added as parameters. These values represent the __eventCategory__, __eventAction__, and __eventLabel__. All of these are arbitrary, and used to organize events. Sending these custom events allow us to deeply understand user interactions with our site.
+Here the hit type is set to 'event' and values associated with the event are added as parameters. These values represent the `eventCategory`, `eventAction`, and `eventLabel`. All of these are arbitrary, and used to organize events. Sending these custom events allow us to deeply understand user interactions with our site.
 
 
 
@@ -267,7 +267,7 @@ You can view past events in the Google Analytics dashboard from the __Reporting_
 
 Service workers do not have access to the analytics command queue, `ga`, because the command queue is in the main thread (not the service worker thread) and requires the `window` object. You need to use the  [Measurement Protocol](/analytics/devguides/collection/protocol/v1/) interface to send hits from the service worker.
 
-This interface allows us to make HTTP requests to send hits, regardless of the execution context. This can be achieved by sending a URI containing your __tracking ID__ and the custom event parameters (__eventCategory__, __eventAction__, and __eventLabel__) along with some  [required parameters](/analytics/devguides/collection/protocol/v1/devguide) (__version number__, __client ID__, and __hit type)__ to the  [API endpoint](/analytics/devguides/collection/protocol/v1/reference) (__https://www.google<span></span>-analytics.com/collect__). Let's look at an example using the Measurement Protocol interface to send hits related to push events in the service worker.
+This interface allows us to make HTTP requests to send hits, regardless of the execution context. This can be achieved by sending a URI containing your __tracking ID__ and the custom event parameters (`eventCategory`, `eventAction`, and `eventLabel`) along with some  [required parameters](/analytics/devguides/collection/protocol/v1/devguide) (__version number__, __client ID__, and __hit type)__ to the  [API endpoint](/analytics/devguides/collection/protocol/v1/reference) (__https://www.google-analytics.com/collect__). Let's look at an example using the Measurement Protocol interface to send hits related to push events in the service worker.
 
 A helper script, __analytics-helper.js__ has the following code:
 
@@ -380,7 +380,7 @@ var payloadData = {
 };
 ```
 
-Again, the __version number__, __client ID__, __tracking ID__, and __hit type__ parameters are  [required by the API](/analytics/devguides/collection/protocol/v1/devguide). The __eventCategory__, __eventAction__, and __eventLabel__ are the same parameters that we have been using with the command queue interface.
+Again, the __version number__, __client ID__, __tracking ID__, and __hit type__ parameters are  [required by the API](/analytics/devguides/collection/protocol/v1/devguide). The `eventCategory`, `eventAction`, and `eventLabel` are the same parameters that we have been using with the command queue interface.
 
 Next, the hit data is  [formatted into a URI](/analytics/devguides/collection/protocol/v1/reference) with the following code:
 
@@ -397,7 +397,7 @@ var payloadString = Object.keys(payloadData)
 .join('&');
 ```
 
-Finally the data is sent to the  [API endpoint](/analytics/devguides/collection/protocol/v1/reference) (__https://www.google<span></span>-analytics.com/collect__) with the following code:
+Finally the data is sent to the  [API endpoint](/analytics/devguides/collection/protocol/v1/reference) (__https://www.google-analytics.com/collect__) with the following code:
 
 #### analytics-helper.js
 

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
-{# wf_updated_on: 2017-01-25T22:45:58Z #}
+{# wf_updated_on: 2017-02-13T08:36:44Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -440,7 +440,7 @@ fetch('http://bar.com/data.json', {
 
 
 
-*  [Fetch API Codelab](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_fetch_api_practice.html)
+*  [Fetch API Codelab](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/lab_fetch_api_practice.html)
 *  [Learn more about the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 *  [Learn more about Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 *  [Learn more about GlobalFetch.fetch()](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch)

@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-01-25T21:58:11Z",
+  "updated": "2017-02-15T18:25:57Z",
   "id": "lab-caching-files-with-service-worker",
   "duration": 0,
   "title": "Lab: Caching Files with Service Worker",
@@ -13,6 +13,5 @@
   "status": null,
   "category": null,
   "tags": [],
-  "url": "lab-caching-files-with-service-worker",
-  "wfProcessed": true
+  "url": "lab-caching-files-with-service-worker"
 }

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
-{# wf_updated_on: 2017-01-26T22:08:12Z #}
+{# wf_updated_on: 2017-02-13T06:54:41Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -206,7 +206,7 @@ If you lost your place:
 
 ![Finding the snippet](img/e6c84f2ccde27125.png)
 
-Your tracking ID looks like __UA-XXXXXXXX-Y__ and your tracking code snippet looks like:
+Your tracking ID looks like `UA-XXXXXXXX-Y` and your tracking code snippet looks like:
 
 #### index.html
 
@@ -372,7 +372,7 @@ Now return to the real-time reporting section of the Google Analytics dashboard 
 
 #### Explanation
 
-When using the send command in the `ga` command queue, the hit type can be set to 'event', and values associated with an event can be added as parameters. These values represent the __eventCategory__, __eventAction__, and __eventLabel__. All of these are arbitrary, and used to organize events. Sending these custom events allows us to deeply understand user interactions with our site.
+When using the send command in the `ga` command queue, the hit type can be set to 'event', and values associated with an event can be added as parameters. These values represent the `eventCategory`, `eventAction`, and `eventLabel`. All of these are arbitrary, and used to organize events. Sending these custom events allows us to deeply understand user interactions with our site.
 
 
 
@@ -467,7 +467,7 @@ __Optional__: Add analytics hits for the `catch` blocks of the `subscribe` and `
 We have added Google Analytics send commands inside our push subscription code. This lets us track how often users are subscribing and unsubscribing to our push notifications, and if they are experiencing errors in the process.
 
 
-## <a id="8"/>
+## <a id="8" />
 
 
 
@@ -605,7 +605,7 @@ var payloadData = {
 };
 ```
 
-The __version number__, __client ID__, __tracking ID__, and __hit type__ parameters are  [required by the API](/analytics/devguides/collection/protocol/v1/devguide). The __eventCategory__, __eventAction__, and __eventLabel__ are the same parameters that we have been using with the command queue interface.
+The __version number__, __client ID__, __tracking ID__, and __hit type__ parameters are  [required by the API](/analytics/devguides/collection/protocol/v1/devguide). The __event category__, __event action__, and __event label__ are the same parameters that we have been using with the command queue interface.
 
 Next, the hit data is  [formatted into a URI](/analytics/devguides/collection/protocol/v1/reference) with the following code:
 
@@ -622,7 +622,7 @@ var payloadString = Object.keys(payloadData)
 .join('&');
 ```
 
-Finally the data is sent to the  [API endpoint](/analytics/devguides/collection/protocol/v1/reference) (__https://__<span></span>__www.google-analytics.com/collect__) with the following code:
+Finally the data is sent to the  [API endpoint](/analytics/devguides/collection/protocol/v1/reference) (__https://www.google-analytics.com/collect__) with the following code:
 
 #### analytics-helper.js
 
@@ -702,7 +702,7 @@ Do you see console logs for each event? Do you see events on Google Analytics?
 
 #### Explanation
 
-We start by using  [ImportScripts](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts) to import the __analytics-helper.js__ file with our `sendAnalyticsEvent` helper function. Then we use this function to send custom events at appropriate places (such as when push events are received, or notifications are interacted with). We pass in the __eventAction__ and __eventCategory__ that we want to associate with the event as parameters. 
+We start by using  [ImportScripts](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts) to import the __analytics-helper.js__ file with our `sendAnalyticsEvent` helper function. Then we use this function to send custom events at appropriate places (such as when push events are received, or notifications are interacted with). We pass in the `eventAction` and `eventCategory` that we want to associate with the event as parameters. 
 
 
 

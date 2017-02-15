@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-01-25T22:45:58Z",
+  "updated": "2017-02-13T08:36:44Z",
   "id": "working-with-the-fetch-api",
   "duration": 0,
   "title": "Working with the Fetch API",
@@ -13,6 +13,5 @@
   "status": null,
   "category": null,
   "tags": [],
-  "url": "working-with-the-fetch-api",
-  "wfProcessed": true
+  "url": "working-with-the-fetch-api"
 }

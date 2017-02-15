@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-01-26T22:08:12Z",
+  "updated": "2017-02-13T06:54:41Z",
   "id": "lab-integrating-analytics",
   "duration": 0,
   "title": "Lab: Integrating Analytics",
@@ -13,6 +13,5 @@
   "status": null,
   "category": null,
   "tags": [],
-  "url": "lab-integrating-analytics",
-  "wfProcessed": true
+  "url": "lab-integrating-analytics"
 }

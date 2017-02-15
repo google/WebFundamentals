@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
-{# wf_updated_on: 2017-02-09T17:51:42Z #}
+{# wf_updated_on: 2017-02-13T08:34:05Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
-# Caching files with the service worker {: .page-title }
+# Caching Files with the Service Worker {: .page-title }
 
 
 
@@ -59,7 +59,7 @@ Note: It is important to note that while this event is happening, any previous v
 
 
 
-[event.waitUntil](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil) extends the lifetime of the `install` event until the passed promise resolves successfully. If the promise rejects, the installation is considered a failure and this service worker is abandoned (if an older version is running, it stays active). 
+[`event.waitUntil`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil) extends the lifetime of the `install` event until the passed promise resolves successfully. If the promise rejects, the installation is considered a failure and this service worker is abandoned (if an older version is running, it stays active). 
 
 `cache.addAll` will reject if any of the resources fail to cache. This means the service worker will only install if all of the resources in `cache.addAll` have been cached.
 
@@ -83,7 +83,7 @@ One method is to give the user a "Read later" or "Save for offline" button. When
   });
 });`
 
-In the above example, when the user clicks an element with the "cache-article" class, we are getting the article ID, fetching the article with that ID, and adding the article to the cache.
+In the above example, when the user clicks an element with the `cache-article` class, we are getting the article ID, fetching the article with that ID, and adding the article to the cache.
 
 
 
@@ -128,7 +128,7 @@ To serve content from the cache and make your app available offline you need to 
 * network falling back to cache
 * cache then network
 
-There are a few approaches we don't cover here. See Jake Archibald's  [Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/) for a full list.
+There are a few approaches we don't cover here. See Jake Archibald's  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) for a full list.
 
 #### Cache only
 
@@ -348,7 +348,7 @@ We can check if the browser supports the Cache API like this:
 
 ### Creating the cache
 
-An origin can have multiple named Cache objects. To create a cache or open a connection to an existing cache we use the  [caches.open](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open) method. 
+An origin can have multiple named Cache objects. To create a cache or open a connection to an existing cache we use the  [`caches.open`](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open) method. 
 
 `caches.open(cacheName)`
 
@@ -362,7 +362,7 @@ The Cache API comes with several methods that let us create and manipulate data 
 
 #### Create data
 
-There are three methods we can use to add data to the cache. These are  [add](https://developer.mozilla.org/en-US/docs/Web/API/Cache/add),  [addAll](https://developer.mozilla.org/en-US/docs/Web/API/Cache/addAll), and  [put](https://developer.mozilla.org/en-US/docs/Web/API/Cache/put). In practice, we will call these methods on the cache object returned from `caches.open()`. For example:
+There are three methods we can use to add data to the cache. These are  [`add`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/add),  [`addAll`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/addAll), and  [`put`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/put). In practice, we will call these methods on the cache object returned from `caches.open()`. For example:
 
 `caches.open('example-cache').then(function(cache) {`
 
@@ -370,7 +370,7 @@ There are three methods we can use to add data to the cache. These are  [add](ht
 
 `});`
 
-`Caches.open` returns the 'example-cache' Cache object, which is passed to the callback in `.then`. We call the `add` method on this object to add the file to that cache.
+`Caches.open` returns the `example-cache` Cache object, which is passed to the callback in `.then`. We call the `add` method on this object to add the file to that cache.
 
 `cache.add(request)` - The add method takes a URL, retrieves it, and adds the resulting response object to the given cache. The key for that object will be the request, so we can retrieve this response object again later by this request.
 
@@ -384,16 +384,16 @@ There are three methods we can use to add data to the cache. These are  [add](ht
 
 #### Match data
 
-There are a couple of methods to search for specific content in the cache:  [match](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match) and  [matchAll](https://developer.mozilla.org/en-US/docs/Web/API/Cache/matchAll). These can be called on the `caches` object to search through all of the existing caches, or on a specific cache returned from `caches.open()`.
+There are a couple of methods to search for specific content in the cache:  [`match`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match) and  [`matchAll`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/matchAll). These can be called on the `caches` object to search through all of the existing caches, or on a specific cache returned from `caches.open()`.
 
-`caches.match(request, options)` -  This method returns a Promise that resolves to the response object associated with the first matching request in the cache or caches. It returns  *undefined*  if no match is found. The first parameter is the request, and the second is an optional list of options to refine the search. Here are the options as defined by MDN:
+`caches.match(request, options)` -  This method returns a Promise that resolves to the response object associated with the first matching request in the cache or caches. It returns `undefined` if no match is found. The first parameter is the request, and the second is an optional list of options to refine the search. Here are the options as defined by MDN:
 
-* `ignoreSearch`: A Boolean that specifies whether to ignore the query string in the URL.  For example, if set to true the `?value=bar` part of `http://foo.com/?value=bar` would be ignored when performing a match. It defaults to false.
-* `ignoreMethod`: A Boolean that, when set to true, prevents matching operations from validating the Request HTTP method (normally only GET and HEAD are allowed.) It defaults to false.
-* `ignoreVary`: A Boolean that when set to true tells the matching operation not to perform VARY header matching — that is, if the URL matches you will get a match regardless of whether the Response object has a VARY header. It defaults to false.
+* `ignoreSearch`: A Boolean that specifies whether to ignore the query string in the URL.  For example, if set to `true` the `?value=bar` part of `http://foo.com/?value=bar` would be ignored when performing a match. It defaults to `false`.
+* `ignoreMethod`: A Boolean that, when set to `true`, prevents matching operations from validating the Request HTTP method (normally only GET and HEAD are allowed.) It defaults to false.
+* `ignoreVary`: A Boolean that when set to `true` tells the matching operation not to perform VARY header matching — that is, if the URL matches you will get a match regardless of whether the Response object has a VARY header. It defaults to `false`.
 * `cacheName`: A DOMString that represents a specific cache to search within. Note that this option is ignored by `Cache.match()`.
 
-`caches.matchAll(request, options)` -  This method is the same as .`match` except that it returns all of the matching responses from the cache instead of just the first. For example, if your app has cached some images contained in an image folder, we could return all images and perform some operation on them like this:
+`caches.matchAll(request, options)` -  This method is the same as `.match` except that it returns all of the matching responses from the cache instead of just the first. For example, if your app has cached some images contained in an image folder, we could return all images and perform some operation on them like this:
 
 `caches.open('example-cache').then(function(cache) {
   cache.matchAll('/images/').then(function(response) {
@@ -405,7 +405,7 @@ There are a couple of methods to search for specific content in the cache:  [mat
 
 #### Delete data
 
-We can delete items in the cache with `cache.delete(request, options)`. This method finds the item in the cache matching the request, deletes it, and returns a Promise that resolves to true. If it doesn't find the item, it resolves to false. It also has the same optional options parameter available to it as the match method.
+We can delete items in the cache with `cache.delete(request, options)`. This method finds the item in the cache matching the request, deletes it, and returns a Promise that resolves to `true`. If it doesn't find the item, it resolves to false. It also has the same optional options parameter available to it as the match method.
 
 #### Retrieve keys
 
@@ -424,10 +424,10 @@ The keys method can also be called on the caches entry point to return the keys 
 #### Learn about the Cache API
 
 *  [Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache) - MDN
-*  [The Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/) - Jake Archibald
+*  [The Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) - Jake Archibald
 
 #### Learn about using service workers
 
-*  [Using Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) - MDN
+*  [Using Service Workers](/web/fundamentals/getting-started/primers/service-workers) - MDN
 
 

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
-{# wf_updated_on: 2017-01-27T22:22:11Z #}
+{# wf_updated_on: 2017-02-13T08:04:35Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -49,7 +49,7 @@ Open your browser and navigate to __localhost:8080/lighthouse-lab/app__.
 
 
 
-<strong>Note:</strong> If you have already installed a service worker on localhost, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If you have already installed a service worker on localhost, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
@@ -71,7 +71,7 @@ This folder contains:
 
 Lighthouse is available as a Chrome extension for  [Chrome](https://www.google.com/chrome/browser/desktop/index.html) 52 and later. 
 
-Download the Lighthouse Chrome extension from the  [Chrome Web Store](http://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk). When installed it places an [ICON HERE] icon in your taskbar.  ![91e97511ef44e440.png](img/91e97511ef44e440.png) [IMAGEINFO]: ic_lighthouse-icon.png, Lighthouse Icon 
+Download the Lighthouse Chrome extension from the  [Chrome Web Store](http://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk). When installed it places an [ICON HERE] icon in your taskbar.  ![Lighthouse Icon ](img/91e97511ef44e440.png)
 
 <div id="3"></div>
 
@@ -89,7 +89,7 @@ Lighthouse runs the report and generates an HTML page with the results. The repo
 
 
 
-<strong>Note: </strong> The UI for Lighthouse is still being updated, so your report may not look exactly like this one.
+Note: The UI for Lighthouse is still being updated, so your report may not look exactly like this one.
 
 
 
@@ -109,7 +109,7 @@ The report indicates that we need a manifest file.
 
 Create an empty file called __manifest.json__ in the __app__ directory. 
 
-Replace TODO 4.1 in <strong>index.html</strong> with the following:
+Replace TODO 4.1 in __index.html__ with the following:
 
 #### index.html
 
@@ -283,8 +283,8 @@ Save the file and refresh the page (for the app, not the Lighthouse page). Check
 
 We have created a service worker for our app and registered it. Here is what it does:
 
-1. The first block (install event listener) caches the files our app's files, so that they are saved locally. This lets us access them even when offline, which is what the next block does.
-2. The second block (fetch event listener) intercepts requests for resources and checks first if they are cached locally. If they are, the browser gets them from the cache without needing to make a network request. This lets us respond with a 200 even when offline. 
+1. The first block (`install` event listener) caches the files our app's files, so that they are saved locally. This lets us access them even when offline, which is what the next block does.
+2. The second block (`fetch` event listener) intercepts requests for resources and checks first if they are cached locally. If they are, the browser gets them from the cache without needing to make a network request. This lets us respond with a 200 even when offline. 
 
 Once we have loaded the app initially, all the files needed to run the app are saved in the cache. If the page is loaded again, the browser grabs the files from the cache regardless of network conditions. This also lets us satisfy the requirement of having our starting URL (__index.html__) cached.
 
@@ -310,7 +310,7 @@ Now we should have passed many more tests.
 
 
 
-<strong>Note:</strong> You may need to <a href="tools_for_pwa_developers.md#clearcache">clear the cache</a> to see the improved results. Then refresh the app and run Lighthouse again.
+Note: You may need to <a href="tools_for_pwa_developers.md#clearcache">clear the cache</a> to see the improved results. Then refresh the app and run Lighthouse again.
 
 
 

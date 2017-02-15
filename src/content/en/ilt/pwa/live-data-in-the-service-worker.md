@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
-{# wf_updated_on: 2017-01-25T22:36:38Z #}
+{# wf_updated_on: 2017-02-15T18:47:57Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -30,7 +30,7 @@ Debugging support for IndexedDB is available in Chrome, Opera, Firefox and Safar
 
 
 
-Some developers have run into issues with Safari 10's IndexedDB implementation. Test your app to make sure it works on your target browser. File browser bugs with your browser's vendor so that browser implementors and library maintainers can investigate. 
+Note: Some developers have run into issues with Safari 10's IndexedDB implementation. Test your app to make sure it works on your target browser. File browser bugs with your browser's vendor so that browser implementors and library maintainers can investigate. 
 
 
 
@@ -182,15 +182,15 @@ function createDB() {
 
 
 
-All IndexedDB code in this text uses Jake Archibald's  [IndexedDB Promised](https://github.com/jakearchibald/indexeddb-promised) library, which enables promise syntax for IndexedDB.
+Note: All IndexedDB code in this text uses Jake Archibald's  [IndexedDB Promised](https://github.com/jakearchibald/indexeddb-promised) library, which enables promise syntax for IndexedDB.
 
 
 
-Here we create a  'products' database, version 1. Inside the 'products' database, we create a 'beverages' object store. This holds all of the beverage objects. The 'beverages' object store has a keypath of 'id'. This means that the objects in this store will be organized and accessed by the 'id' property of the 'beverage' objects. Finally, we add some example beverages to the object store.
+Here we create a  'products' database, version 1. Inside the 'products' database, we create a 'beverages' object store. This holds all of the beverage objects. The `beverages` object store has a keypath of `id`. This means that the objects in this store will be organized and accessed by the `id` property of the `beverage` objects. Finally, we add some example beverages to the object store.
 
 
 
-If you're familiar with IndexedDB, you may be asking why we didn't use a transaction when creating and populating the database. In IndexedDB, a transaction is built into the database creation operation. 
+Note: If you're familiar with IndexedDB, you may be asking why we didn't use a transaction when creating and populating the database. In IndexedDB, a transaction is built into the database creation operation. 
 
 
 
@@ -208,7 +208,7 @@ self.addEventListener('activate', function(event) {
 
 ### 
 
-<code>event.waitUntil</code> ensures that a service worker does not terminate during asynchronous operations.
+Note: `event.waitUntil` ensures that a service worker does not terminate during asynchronous operations.
 
 
 
@@ -228,11 +228,11 @@ function readDB() {
 }
 ```
 
-Here we open the 'products' database and create a new transaction on the 'beverages' store of type 'readonly' (we don't need to write data). We then access the store, and retrieve all of the items. These items can then be used to update the UI or perform whatever action is needed.
+Here we open the `products` database and create a new transaction on the `beverages` store of type `readonly` (we don't need to write data). We then access the store, and retrieve all of the items. These items can then be used to update the UI or perform whatever action is needed.
 
 
 
-A transaction is wrapper around an operation, or group of operations, that ensures database integrity. If one of the actions within a transaction fail, none of them are applied and the database returns to the state it was in before the transaction began. All read or write operations in IndexedDB must be part of a transaction. This allows for atomic read-modify-write operations without worrying about other threads acting on the database at the same time.
+Note: A transaction is wrapper around an operation, or group of operations, that ensures database integrity. If one of the actions within a transaction fail, none of them are applied and the database returns to the state it was in before the transaction began. All read or write operations in IndexedDB must be part of a transaction. This allows for atomic read-modify-write operations without worrying about other threads acting on the database at the same time.
 
 
 
@@ -256,7 +256,7 @@ function cacheAssets() {
 }
 ```
 
-This code opens a 'cache-v1' cache, and stores __index.html__, __main.css__, __offline.js__, and __coke.jpg__.
+This code opens a `cache-v1` cache, and stores __index.html__, __main.css__, __offline.js__, and __coke.jpg__.
 
 The service worker installation event is a good time to cache static assets like these. This ensures that all the resources a service worker is expected to have are cached when the service worker is installed. The following code (in the service worker file) could be used to cache these types of files during the service worker install event:
 
@@ -285,7 +285,7 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 
-This code adds a fetch listener on the service worker that attempts to get resources from the cache before going to the network. If the resource isn't found in the cache, a regular network request is still made. 
+This code adds a `fetch` listener on the service worker that attempts to get resources from the cache before going to the network. If the resource isn't found in the cache, a regular network request is still made. 
 
 <div id="resources"></div>
 

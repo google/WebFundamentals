@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
-{# wf_updated_on: 2017-01-25T21:58:11Z #}
+{# wf_updated_on: 2017-02-15T18:25:57Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -53,7 +53,7 @@ Open your browser and navigate to __localhost:8080/cache-api-lab/app__.
 
 
 
-<strong>Note:</strong> If you have installed a service worker on localhost before, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If you have installed a service worker on localhost before, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
@@ -78,7 +78,7 @@ This folder contains:
 
 Cache the application shell in the "install" event handler in the service worker.
 
-Replace TODO 2 in <strong>serviceworker.js</strong> with the following code:
+Replace TODO 2 __inserviceworker.js__ with the following code:
 
 #### service-worker.js
 
@@ -116,7 +116,7 @@ Open the first QUnit test page, __app/test/test1.html__, in another browser tab.
 
 
 
-<strong>Note:</strong> Be sure to open the test page using the localhost address so that it opens from the server and not directly from the file system.
+Note: Be sure to open the test page using the localhost address so that it opens from the server and not directly from the file system.
 
  
 
@@ -124,13 +124,13 @@ This page contains several tests for testing our app at each stage of the codela
 
 
 
-<strong>Important:</strong> Close the test page when you're finished with it, otherwise you won't be able to activate the updated service worker in the next sections. See the  [Introduction to service worker](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-concepts/content/docs/introduction_to_service_workers.html#activation) text for an explanation. 
+__Caution:__ Close the test page when you're finished with it, otherwise you won't be able to activate the updated service worker in the next sections. See the  [Introduction to service worker](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-concepts/content/docs/introduction_to_service_workers.html#activation) text for an explanation. 
 
 
 
 
 
-<strong>Note:</strong> In Chrome, you can <a href="tools_for_pwa_developers.md#clearcache">delete the cache</a> in <strong>DevTools</strong>.
+Note: In Chrome, you can <a href="tools_for_pwa_developers.md#clearcache">delete the cache</a> in <strong>DevTools</strong>.
 
 
 
@@ -138,7 +138,7 @@ This page contains several tests for testing our app at each stage of the codela
 
 We first define the files to cache and assign them the to the `filesToCache` variable. These files make up the "application shell" (the static HTML,CSS, and image files that give your app a unified look and feel). We also assign a cache name to a variable so that updating the cache name (and by extension the cache version) happens in one place.
 
-In the install event handler we create the cache with  [caches.open](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open) and use the  [addAll method](https://developer.mozilla.org/en-US/docs/Web/API/Cache/addAll) to add the files to the cache. We wrap this in  [event.waitUntil](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil) to extend the lifetime of the event until all of the files are added to the cache and `addAll` resolves successfully.
+In the install event handler we create the cache with  [`caches.open`](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open) and use the  [`addAll` method](https://developer.mozilla.org/en-US/docs/Web/API/Cache/addAll) to add the files to the cache. We wrap this in  [`event.waitUntil`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil) to extend the lifetime of the event until all of the files are added to the cache and `addAll` resolves successfully.
 
 #### For more information
 
@@ -186,7 +186,7 @@ Save the code and [update the service worker](tools_for_pwa_developers.md#update
 
 #### Explanation
 
-The `fetch` event listener intercepts all requests. We use  [event.respondWith](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith) to create a custom response to the request. Here we are using the  [Cache falling back to network](https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network) strategy: we first check the cache for the requested resource (with  [caches.match](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match)) and then, if that fails, we send the request to the network.
+The `fetch` event listener intercepts all requests. We use  [`event.respondWith`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith) to create a custom response to the request. Here we are using the  [Cache falling back to network](https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network) strategy: we first check the cache for the requested resource (with  [`caches.match`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match)) and then, if that fails, we send the request to the network.
 
 #### For more information
 
@@ -204,7 +204,7 @@ The `fetch` event listener intercepts all requests. We use  [event.respondWith](
 
 We can add files to the cache as they are requested.
 
-Replace TODO 4 in the fetch event handler with the code to add the files returned from the fetch to the cache:
+Replace TODO 4 in the `fetch` event handler with the code to add the files returned from the fetch to the cache:
 
 #### service-worker.js
 
@@ -230,9 +230,9 @@ Take the app back online and open __app/test/test1.html__ in a new tab. Your app
 
 Here we are taking the responses returned from the network requests and putting them into the cache. 
 
-We need to pass a clone of the response to <code>cache.put</code>, because the response can only be read once. See Jake Archibald's <a href="https://jakearchibald.com/2014/reading-responses/">What happens when you read a response</a> article for an explanation.
+We need to pass a clone of the response `tocache.put`, because the response can only be read once. See Jake Archibald's <a href="https://jakearchibald.com/2014/reading-responses/">What happens when you read a response</a> article for an explanation.
 
-We have wrapped the code to cache the response in an <code>if</code> statement to ensure we are not caching our test page.
+We have wrapped the code to cache the response in an `if` statement to ensure we are not caching our test page.
 
 #### For more information
 
@@ -246,7 +246,7 @@ We have wrapped the code to cache the response in an <code>if</code> statement t
 
 
 
-Below TODO 5 in <strong>service-worker.js</strong>, write the code to respond with the <strong>404.html</strong> page from the cache if the response status is <code>404</code>. You can check the response status with <code>response.status</code>.
+Below TODO 5 in __service-worker.js__, write the code to respond with the <strong>404.html</strong> page from the cache if the response status is <code>404</code>. You can check the response status with <code>response.status</code>.
 
 To test your code, save what you've written and then [update the service worker](tools_for_pwa_developers.md#update) in the browser. Click the __Non-existent file__ link to request a resource that doesn't exist.
 
@@ -278,7 +278,7 @@ The solution code can be found in the __05-404-page__ directory.
 
 
 
-Below TODO 6 in the <code>.catch</code> in <strong>service-worker.js</strong>, write the code to respond with the <strong>offline.html</strong> page from the cache. The catch will trigger if the fetch to the network fails. 
+Below TODO 6 in the `.catch` in <strong>service-worker.js</strong>, write the code to respond with the <strong>offline.html</strong> page from the cache. The catch will trigger if the fetch to the network fails. 
 
 To test your code, save what you've written and then update the service worker in the browser. [Take the app offline](tools_for_pwa_developers.md#offline) and navigate to a page you haven't visited before to see the custom offline page.
 
@@ -332,13 +332,13 @@ Try changing the name of the cache to "pages-cache-v2":
 var staticCacheName = 'pages-cache-v2';
 ```
 
-Save the code and [update the service worker](tools_for_pwa_developers.md#update) in the browser. [Inspect the cache storage](tools_for_pwa_developers.md#storage) in your browser. You should see just the new cache. The old cache, "pages-cache-v1", has been removed.
+Save the code and [update the service worker](tools_for_pwa_developers.md#update) in the browser. [Inspect the cache storage](tools_for_pwa_developers.md#storage) in your browser. You should see just the new cache. The old cache, "`pages-cache-v1`", has been removed.
 
-Open __app/test/test2.html__ in a new browser tab. The test checks whether "pages-cache-v1" has been deleted and that "pages-cache-v2" has been created.
+Open __app/test/test2.html__ in a new browser tab. The test checks whether "`pages-cache-v1`" has been deleted and that "`pages-cache-v2`" has been created.
 
 #### Explanation
 
-We delete old caches in the "activate" event to make sure that we aren't deleting caches before the new service worker has taken over the page. We create an array of caches that are currently in use and delete all other caches.
+We delete old caches in the `activate` event to make sure that we aren't deleting caches before the new service worker has taken over the page. We create an array of caches that are currently in use and delete all other caches.
 
 #### For more information
 

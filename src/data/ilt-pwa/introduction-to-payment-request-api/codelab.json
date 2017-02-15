@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2016-12-15T20:58:41Z",
+  "updated": "2017-02-13T08:12:57Z",
   "id": "introduction-to-payment-request-api",
   "duration": 0,
   "title": "Introduction to Payment Request API",
@@ -13,6 +13,5 @@
   "status": null,
   "category": null,
   "tags": [],
-  "url": "introduction-to-payment-request-api",
-  "wfProcessed": true
+  "url": "introduction-to-payment-request-api"
 }

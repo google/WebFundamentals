@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-01-30T16:41:24Z",
+  "updated": "2017-02-15T18:34:25Z",
   "id": "lab-fetch-api",
   "duration": 0,
   "title": "Lab: Fetch API",
@@ -13,6 +13,5 @@
   "status": null,
   "category": null,
   "tags": [],
-  "url": "lab-fetch-api",
-  "wfProcessed": true
+  "url": "lab-fetch-api"
 }

@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-01-26T00:30:52Z",
+  "updated": "2017-02-13T08:25:04Z",
   "id": "introduction-to-service-worker",
   "duration": 0,
   "title": "Introduction to Service Worker",
@@ -13,6 +13,5 @@
   "status": null,
   "category": null,
   "tags": [],
-  "url": "introduction-to-service-worker",
-  "wfProcessed": true
+  "url": "introduction-to-service-worker"
 }

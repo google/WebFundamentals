@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-01-27T22:22:11Z",
+  "updated": "2017-02-13T08:04:35Z",
   "id": "lab-auditing-with-lighthouse",
   "duration": 0,
   "title": "Lab: Auditing with Lighthouse",
@@ -13,6 +13,5 @@
   "status": null,
   "category": null,
   "tags": [],
-  "url": "lab-auditing-with-lighthouse",
-  "wfProcessed": true
+  "url": "lab-auditing-with-lighthouse"
 }
