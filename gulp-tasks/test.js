@@ -72,7 +72,7 @@ let remarkLintOptions = {
   maximumHeadingLength: false,
   maximumLineLength: false,
   noDuplicateDefinitions: true,
-  noDuplicateHeadingsInSection: true,
+  noDuplicateHeadingsInSection: false,
   noEmphasisAsHeading: false,
   noEmptyLinkURL: true,
   noMultipleToplevelHeadings: true,
@@ -409,7 +409,8 @@ function validateMDFile(file, commonTags, contributors) {
     matched.forEach(function(include) {
       let inclFile = include[1];
       if (inclFile === 'comment-widget.html' || 
-          inclFile.indexOf('web/_shared/contributors/') === 0) {
+          inclFile.indexOf('web/_shared/contributors/') === 0 ||
+          inclFile.indexOf('web/_shared/latest_show.html') === 0) {
         return;
       }
       position = {line: getLineNumber(content, include.index)};

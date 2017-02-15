@@ -290,7 +290,7 @@ CSP — não apenas nas páginas HTML!
 - Você precisa colocar um link canônico no cabeçalho da sua página para dizer aos mecanismos de pesquisa qual https é a melhor forma de chegar ao seu site.
 
 
-Defina tags &lt;link rel="canonical" href="https://…"/&gt; em suas páginas. [Isso
+Defina tags `<link rel="canonical" href="https://…"/>` em suas páginas. [Isso
 ajuda os mecanismos de pesquisa](https://support.google.com/webmasters/answer/139066)
 a conhecer a melhor forma de chegar ao seu site.
 

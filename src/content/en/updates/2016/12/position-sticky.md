@@ -75,3 +75,5 @@ Firefox and Safari. Here are more details about `position:sticky`:
 
 * [Specification](https://drafts.csswg.org/css-position/#sticky-pos)
 * [MDN](https://developer.mozilla.org/en/docs/Web/CSS/position#Sticky_positioning)
+
+{% include "comment-widget.html" %}

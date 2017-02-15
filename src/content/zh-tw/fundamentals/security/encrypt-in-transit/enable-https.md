@@ -316,7 +316,7 @@ Configuration
 - 您需要在頁面的頁首 (head) 放置一標準連結，以告之搜尋引擎 https 是到達您網站的最佳方法。
 
 
-在您頁面中設定 &lt; link rel="canonical" href="https://…"/&gt; 標籤。 [這有助於搜尋引擎]
+在您頁面中設定 `<link rel="canonical" href="https://…"/>` 標籤。 [這有助於搜尋引擎]
 (https://support.google.com/webmasters/answer/139066){: .external}知道前往您網站的最佳方法。
 
 

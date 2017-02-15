@@ -226,3 +226,5 @@ Payment Request API についてさらに知るために、いくつかのドキ
 
 Translated By:
 {% include "web/_shared/contributors/kazukikanamori.html" %}
+
+{% include "comment-widget.html" %}

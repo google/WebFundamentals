@@ -16,7 +16,9 @@ description: A quick tip looking at Page Speed Insights and how it can improve y
 </div>
 
 
-A quick tip looking at Page Speed Insights and how it can improve your site's performance. Check it out at: https://developers.google.com/speed/pagespeed/insights/
+A quick tip looking at Page Speed Insights and how it can improve your site's
+performance. Check it out at:
+[https://developers.google.com/speed/pagespeed/insights/](/speed/pagespeed/insights/)
 
 Matt made a video on improving your page speed score last year which is worth checking out as well: https://www.youtube.com/watch?v=pNKnhBIVj4w
 
