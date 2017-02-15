@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 57 to help you plan.
 
-{# wf_updated_on: 2017-02-01 #}
+{# wf_updated_on: 2017-02-15 #}
 {# wf_published_on: 2017-02-01 #}
 {# wf_tags: deprecations,removals,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
