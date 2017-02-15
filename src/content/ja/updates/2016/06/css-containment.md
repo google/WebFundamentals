@@ -153,3 +153,5 @@ CSS Containment は `contain` という新しいプロパティに以下の値�
 
 Translated By: 
 {% include "web/_shared/contributors/myakura.html" %}
+
+{% include "comment-widget.html" %}

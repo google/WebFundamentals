@@ -53,7 +53,7 @@ This technique isn't supported in Firefox, so the viewport tag is much prefered.
 
 No. Pinch zoom continues to work, and OS features cater for users who find this gesture difficult. On Android, [maginification gestures](https://support.google.com/accessibility/android/answer/6006949) takes care of it. Tools like this even work outside the browser.
 
-<h2>What about older browsers?</h2>
+## What about older browsers?
 
 <p><a href="https://github.com/ftlabs/fastclick">FastClick by FT Labs</a> uses touch events to trigger clicks faster &amp; removes the double-tap gesture. It looks at the amount your finger moved between <code>touchstart</code> and <code>touchend</code> to differentiate scrolls and taps.</p>
 

@@ -311,7 +311,7 @@ HTML 페이지뿐만 아니라 스타일시트, JavaScript, 리디렉션 규칙,
 - 기본 링크를 페이지 헤드에 추가하여 검색 엔진에 https가 사이트에 액세스할 수 있는 가장 좋은 방법임을 알려야 합니다.
 
 
-페이지에 &lt;link rel="canonical" href="https://…"/&gt; 태그를 설정합니다. [그러면
+페이지에 `<link rel="canonical" href="https://…"/>` 태그를 설정합니다. [그러면
 검색 엔진](https://support.google.com/webmasters/answer/139066){: .external }이
 사이트에 액세스할 수 있는 가장 좋은 방법을 파악하는 데 도움이 됩니다.
 

@@ -77,7 +77,7 @@ There are many more options. Just like with its CSS counterparts, Web Animations
     
 
 
-<h2>AnimationPlayer</h2>
+## AnimationPlayer
 
 <code>element.animate()</code> actually returns an AnimationPlayer object, which will become increasingly important as more of the Web Animations spec is launched. Both JavaScript- and CSS-created animations will have associated AnimationPlayers, allowing them to be seamlessly combined in useful and interesting ways.
 
@@ -106,13 +106,13 @@ And, to the relief of everyone who has attempted to build an animation system ar
     
 
 
-<h2>Try it out</h2>
+## Try it out
 
 This is all shipping in Chrome 36, moving to beta today! If you'd like to try it, try working with the native implementation in Chrome 36. However, there is a [Web Animations polyfill](https://github.com/web-animations/web-animations-js), which brings a significantly larger part of the full Web Animations specification to any of the modern, evergreen browsers.
 
 A demo of the snow effect is available for you to try using both the <a href="http://jsbin.com/novuf/1/watch?js,output">native</a> version of <code>element.animate()</code> and the <a href="http://jsbin.com/rewev/2/watch?html,js,output">polyfill</a>.
 
-<h2>Let us know what you think</h2>
+## Let us know what you think
 
 Really, though, this is a preview of what's to come, and is being released specifically to get developer feedback right away. We're not sure yet if we've hit every use case, or sanded down every rough edge of the current APIs for animation. The only way for us to know and to really get this right is for developers to try it out and let us know what they think.
 

@@ -4,7 +4,7 @@ description: Scrolling responsiveness is critical to the user's engagement with 
 
 {# wf_updated_on: 2017-01-10 #}
 {# wf_published_on: 2017-01-10 #}
-{# wf_tags: intervention,chrome56 #}
+{# wf_tags: interventions,chrome56 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: Scrolling responsiveness is critical to the user's engagement with a website on mobile, yet touch event listeners often cause serious scrolling performance problems. Learn how we are helping users and developers to be fast by default. #}
 

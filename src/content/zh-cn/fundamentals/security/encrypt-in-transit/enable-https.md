@@ -316,7 +316,7 @@ HTTPS 的全部能力。
 - 您需要在网页的头部放一个规范链接，以告诉搜索引擎 https 是访问您网站的最佳方法。
 
 
-在网页中设置 &lt;link rel="canonical" href="https://…"/&gt; 标签。 [这样
+在网页中设置 `<link rel="canonical" href="https://…"/>` 标签。 [这样
 可帮助搜索引擎](https://support.google.com/webmasters/answer/139066)
 了解访问您网站的最佳方法。
 

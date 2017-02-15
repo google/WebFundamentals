@@ -362,3 +362,5 @@ mediation モードを有効にすることができます。
 * [デモ](https://credential-management-sample.appspot.com)
 * [デモのソースコード](https://github.com/GoogleChrome/credential-management-sample)
 * [コードラボ "Enabling auto sign-in with Credential Management API"](https://g.co/codelabs/cmapi)
+
+{% include "comment-widget.html" %}
