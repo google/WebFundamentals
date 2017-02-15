@@ -4,7 +4,7 @@ description: Description of Web Audio standards cleanup work in m36
 
 {# wf_updated_on: 2014-07-24 #}
 {# wf_published_on: 2014-07-24 #}
-{# wf_tags: news,webaudio #}
+{# wf_tags: deprecations,removals,news,webaudio #}
 
 # Web Audio Changes in m36 {: .page-title }
 
