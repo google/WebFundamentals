@@ -9,7 +9,7 @@ const runSequence = require('run-sequence');
 
 const TEST_LOG_FILE = './test-results.json';
 
-function generateCommitMessage(testResults) {
+function generateCommitMessage(gitData, testResults) {
   let body;
 
   if (testResults.errors.length === 0 && testResults.warnings === 0) {
@@ -17,45 +17,46 @@ function generateCommitMessage(testResults) {
     return body;
   }
 
-  body = ['**Whoops!**'];
+  body = ['**Whoops!**\n\n'];
   
   if (testResults.errors.length > 0) {
-    body.push(`There were **${testResults.errors.length} critical errors**`);
-    body.push('that broke the build and prevented it from being automatically');
+    body.push(`There were **${testResults.errors.length} critical errors** `);
+    body.push('that broke the build and prevented it from being automatically ');
     body.push('deployed.\n\n');
   }
   if (testResults.warnings.length > 0) {
-    body.push(`There were *${testResults.warnings.length} warnings* that`);
-    body.push('will prevent this PR from being merged. Please take a look,');
-    body.push('and either fix, or provide a justification for why they can\'t');
+    body.push(`There were *${testResults.warnings.length} warnings* that `);
+    body.push('will prevent this PR from being merged. Please take a look, ');
+    body.push('and either fix, or provide a justification for why they can\'t ');
     body.push('be fixed.\n\n');
   }
-  if (testResults.errors.length > 0) {
-    body.push('\n\n**ERRORS**');
-    testResults.errors.forEach(function(err) {
-      let line = '`' + err.filename;
-      if (err.position && err.position.line) {
-        line += ':' + err.position.line;
+
+  function buildMessages(msgs) {
+    msgs.forEach(function(msg) {
+      let filename = msg.filename;
+      if (msg.position && msg.position.line) {
+        filename += `#L${msg.position.line}`;
       }
-      line += '` ' + err.message;
-      body.push(line + '\n');
+      let urlToFile = `https://github.com/${gitData.repoOwner}/${gitData.repoName}/`;
+      urlToFile += `blob/${gitData.prSHA}/${filename}`;
+      body.push(`[\`${filename}\`](${urlToFile}) - ${msg.message}\n`);
     });
   }
+
+  if (testResults.errors.length > 0) {
+    body.push('\n\n**ERRORS**\n');
+    buildMessages(testResults.errors);    
+  }
+
+
 
   if (testResults.warnings.length > 0) {
-    body.push('\n\n**WARNINGS**');
-    testResults.warnings.forEach(function(err) {
-      let line = '`' + err.filename;
-      if (err.position && err.position.line) {
-        line += ':' + err.position.line;
-      }
-      line += '` ' + err.message;
-      body.push(line + '\n');
-    });
+    body.push('\n\n**WARNINGS**\n');
+    buildMessages(testResults.warnings);
   }
 
-  body.push('\n\n');
-  return body.join(' ');
+  body.push('\n');
+  return body.join('');
 }
 
 
@@ -159,16 +160,11 @@ gulp.task('report-to-git', function() {
   .then(function(data) {
     if (data) {
       let testResults = data.testResults;
-      let body = generateCommitMessage(testResults);
+      let body = generateCommitMessage(data.git, testResults);
       return addCommitComment(data.git, body)
       .catch(function(err) {
         gutil.log(chalk.red('✖'), err.message);
       })
-      .then(function(resp) {
-        if (testResults.errors.length > 0) {
-          throw new Error(`${testResults.errors.length} tests failed.`);
-        }
-      });
     }
   });
 });
