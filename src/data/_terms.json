@@ -1,0 +1,134 @@
+[
+  {
+     "term": "Add to Home Screen",
+     "wordKind": "noun",
+     "termType": "technical term",
+     "acronyms": ["A2HS"],
+     "description": "TODO",
+     "primaryLink": "/web/fundamentals/engage-and-retain/app-install-banners/"
+  },
+  {
+     "term": "Firefox",
+     "wordKind": "noun",
+     "termType": "product name",
+     "acronyms": ["FF"],
+     "description": "TODO"
+  },
+  {
+     "term": "First Contentful Paint",
+     "wordKind": "noun",
+     "termType": "technical term",
+     "acronyms": ["FCP"],
+     "description": "TODO"
+  },
+  {
+     "term": "First Meaningful Paint",
+     "wordKind": "noun",
+     "termType": "technical term",
+     "acronyms": ["FPM"],
+     "description": "TODO"
+  },
+  {
+     "term": "First, Last, Invert, Play",
+     "wordKind": "noun",
+     "termType": "technical term",
+     "acronyms": ["FLIP"],
+     "description": "TODO",
+     "primaryLink": "https://aerotwist.com/blog/flip-your-animations/"
+  },
+  {
+    "term": "HTTP/2",
+    "wordKind": "noun",
+    "termType": "technical term",
+    "acronyms": ["H/2"],
+    "description": "TODO",
+    "primaryLink": "/web/fundamentals/performance/http2/"
+  },
+  {
+     "term": "Internet Explorer",
+     "wordKind": "noun",
+     "termType": "product name",
+     "acronyms": ["IE"],
+     "description": "TODO"
+  },
+  {
+    "term": "Progressive Web App",
+    "wordKind": "noun",
+    "termType": "technical term",
+    "acronyms": ["PWA"],
+    "description": "TODO",
+    "primaryLink": "/web/progressive-web-apps/"
+  },
+  {
+     "term": "Push",
+     "wordKind": "noun",
+     "termType": "technical term",
+     "description": "TODO"
+  },
+  {
+     "term": "Push, Render, Pre-cache, Lazy-load",
+     "wordKind": "noun",
+     "termType": "technical term",
+     "acronyms": ["PRPL"],
+     "description": "PRPL is a pattern for structuring and serving Progressive Web Apps, with an emphasis on the performance of app delivery and launch",
+     "primaryLink": "/web/fundamentals/performance/prpl-pattern/"
+  },
+  {
+     "term": "requestAnimationFrame",
+     "wordKind": "noun",
+     "termType": "technical term",
+     "acronyms": ["rAF"],
+     "description": "TODO"
+  },
+  {
+     "term": "requestIdleCallback",
+     "wordKind": "noun",
+     "termType": "technical term",
+     "acronyms": ["rIC"],
+     "description": "TODO"
+  },
+  {
+    "term": "Response, Animate, Idle, Load",
+    "wordKind": "noun",
+    "termType": "technical term",
+    "acronyms": ["RAIL"],
+    "description": "TODO",
+    "primaryLink": "web/fundamentals/performance/rail"
+  },
+  {
+     "term": "Service Worker",
+     "wordKind": "noun",
+     "termType": "technical term",
+     "acronyms": ["SW"],
+     "description": "TODO",
+     "primaryLink": "/web/fundamentals/getting-started/primers/service-workers"
+  },
+  {
+     "term": "Single Page App",
+     "wordKind": "noun",
+     "termType": "technical term",
+     "acronyms": ["SPA"],
+     "description": "TODO"
+  },
+  {
+     "term": "Time to First Byte",
+     "wordKind": "noun",
+     "termType": "technical term",
+     "acronyms": ["TTFB"],
+     "description": "TODO"
+  },
+  {
+     "term": "Time to First Paint",
+     "wordKind": "noun",
+     "termType": "technical term",
+     "acronyms": ["TTFP"],
+     "description": "TODO"
+  },
+  {
+     "term": "Time to Interactive",
+     "wordKind": "noun",
+     "termType": "technical term",
+     "acronyms": ["TTI"],
+     "description": "TODO"
+  }
+]

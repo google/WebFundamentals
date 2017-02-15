@@ -82,6 +82,7 @@ gulp.task('clean', function() {
     'src/content/**/atom.xml',
     'src/content/**/_files.json',
     'src/content/en/sitemap.xml',
+    'src/content/*/resources/glossary.md',
     'src/content/*/showcase/_index.yaml',
     'src/content/*/showcase/*/_toc.yaml',
     'src/content/*/showcase/*/index.md',
