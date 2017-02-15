@@ -598,7 +598,7 @@ gulp.task('test:validateMarkdown', function() {
     })
     .then(function() {
       gutil.log(' ', 'Searching for files:', chalk.cyan(MD_EXTENSTIONS.join(', ')));
-      GLOBAL.WF.options.testPath = './src/tests/';
+      // GLOBAL.WF.options.testPath = './src/tests/';
       let files = getFilelist(MD_EXTENSTIONS);
       gutil.log(' ', 'Validating markdown files...');
       if (files.length === 0) {
