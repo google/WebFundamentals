@@ -48,7 +48,6 @@
     "postinstall": "gulp build",
     "build": "gulp build",
     "test": "gulp test",
-    "report-to-git": "gulp report-to-git",
     "prestart": "gulp build",
     "start": "./start-appengine.sh"
   }

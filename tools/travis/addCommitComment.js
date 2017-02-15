@@ -1,17 +1,21 @@
 'use strict';
 
+/*
+    addCommitComment.js
+    Adds a comment to the current commit with the build status.
+ */
+
 const fs = require('fs');
-const gulp = require('gulp');
 const chalk = require('chalk');
-const gutil = require('gulp-util');
 const GitHubApi = require('github');
-const runSequence = require('run-sequence');
 
 const TEST_LOG_FILE = './test-results.json';
 
+console.log('Travis Add Commit Comment');
+
 function generateCommitMessage(gitData, testResults) {
   if (testResults.errors.length === 0 && testResults.warnings.length === 0) {
-    return ':1:';
+    return ':+1:';
   }
 
   let body = ['**Whoops!**\n\n'];
@@ -44,8 +48,6 @@ function generateCommitMessage(gitData, testResults) {
     body.push('\n\n**ERRORS**\n');
     buildMessages(testResults.errors);    
   }
-
-
 
   if (testResults.warnings.length > 0) {
     body.push('\n\n**WARNINGS**\n');
@@ -87,63 +89,63 @@ function getTravisInfo() {
     };
 
     if (process.env.TRAVIS !== 'true') {
-      gutil.log(chalk.red('✖'), 'Travis CI');
+      console.log(chalk.red('✖'), 'Travis CI');
       resolve(null);
       return;
     }
-    gutil.log(chalk.green('✓'), 'Travis CI');
+    console.log(chalk.green('✓'), 'Travis CI');
 
     if (process.env.TRAVIS_SECURE_ENV_VARS !== 'true') {
-      gutil.log(chalk.red('✖'), 'Travis Secure Variables');
+      console.log(chalk.red('✖'), 'Travis Secure Variables');
       resolve(null);
       return;
     }
-    gutil.log(chalk.green('✓'), 'Travis Secure Variables');
+    console.log(chalk.green('✓'), 'Travis Secure Variables');
 
     result.git.token = process.env.GIT_TOKEN;
     if (!result.git.token) {
-      gutil.log(chalk.red('✖'), 'Git Token', chalk.red('undefined'));
+      console.log(chalk.red('✖'), 'Git Token', chalk.red('undefined'));
       resolve(null);
       return;
     }
 
     let eventType = process.env.TRAVIS_EVENT_TYPE;
     if (!eventType || eventType.toLowerCase() !== 'pull_request') {
-      gutil.log(chalk.red('✖'), 'Event Type:', chalk.red(eventType));
+      console.log(chalk.red('✖'), 'Event Type:', chalk.red(eventType));
       resolve(null);
       return;
     }
-    gutil.log(chalk.green('✓'), 'Event Type:', chalk.cyan(eventType));
+    console.log(chalk.green('✓'), 'Event Type:', chalk.cyan(eventType));
 
     let prNum = process.env.TRAVIS_PULL_REQUEST;
     let prSHA = process.env.TRAVIS_PULL_REQUEST_SHA;
     if (!prNum || !prSHA) {
-      gutil.log(chalk.red('✖'), 'PR', chalk.red(prNum), chalk.red(prSHA));
+      console.log(chalk.red('✖'), 'PR', chalk.red(prNum), chalk.red(prSHA));
       resolve(null);
       return;
     }
     result.git.prNum = parseInt(prNum, 10);
     result.git.prSHA = prSHA;
-    gutil.log(chalk.green('✓'), 'PR', chalk.cyan(prNum), chalk.cyan(prSHA));
+    console.log(chalk.green('✓'), 'PR', chalk.cyan(prNum), chalk.cyan(prSHA));
 
     let repoName;
     let repoOwner;
     let repoSlug = process.env.TRAVIS_REPO_SLUG;
     if (!repoSlug || repoSlug.toLowerCase() !== 'google/webfundamentals') {
-      gutil.log(chalk.red('✖'), 'Repo', chalk.red('undefined'), '/', chalk.red('undefined'));
+      console.log(chalk.red('✖'), 'Repo', chalk.red('undefined'), '/', chalk.red('undefined'));
       resolve(null);
       return;
     } else {
       result.git.repoName = 'WebFundamentals';
       result.git.repoOwner = 'Google';
-      gutil.log(chalk.green('✓'), 'Repo', chalk.cyan(result.git.repoOwner), chalk.cyan(result.git.repoName));
+      console.log(chalk.green('✓'), 'Repo', chalk.cyan(result.git.repoOwner), chalk.cyan(result.git.repoName));
     }
     try {
       let contents = fs.readFileSync(TEST_LOG_FILE, 'utf8');
       result.testResults = JSON.parse(contents);
-      gutil.log(chalk.green('✓'), 'Test File', chalk.cyan(TEST_LOG_FILE));
+      console.log(chalk.green('✓'), 'Test File', chalk.cyan(TEST_LOG_FILE));
     } catch(ex) {
-      gutil.log(chalk.red('✖'), 'Unable to parse test results.');
+      console.log(chalk.red('✖'), 'Unable to parse test results.');
       resolve(null);
       return;
     }
@@ -152,16 +154,14 @@ function getTravisInfo() {
 }
 
 
-gulp.task('report-to-git', function() {
-  return getTravisInfo()
+getTravisInfo()
   .then(function(data) {
     if (data) {
       let testResults = data.testResults;
       let body = generateCommitMessage(data.git, testResults);
       return addCommitComment(data.git, body)
       .catch(function(err) {
-        gutil.log(chalk.red('✖'), err.message);
+        console.log(chalk.red('✖'), err.message);
       })
     }
   });
-});

@@ -17,7 +17,7 @@ install:
 script:
   - npm run build
   - npm run test
-  - npm run report-to-git
+  - node ./tools/travis/addCommitComment.js
 after_success:
   - ./tools/travis/install-gc-sdk.sh
   - ./tools/travis/deploy-master.sh
