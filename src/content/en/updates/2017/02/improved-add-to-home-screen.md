@@ -141,10 +141,6 @@ Note: The `scope` in the Web App Manifest, is not the same as the `scope` of
 your Service Worker. It is possible for one installed Web Application to be
 controlled by several different Service Workers.
 
-## Navigating outside of my progressive web app
-
-When the
-
 ## Managing permissions
 
 By Installing your Progressive Web App it now becomes part of the system. Added 
