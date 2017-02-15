@@ -29,6 +29,7 @@ const STD_EXCLUDES = [
   '!**/showcase/201?/index.md',
   '!**/shows/http203/podcast/index.md'
 ];
+const ENFORCE_LINE_LENGHT_AFTER = moment('2017-01-01');
 const TEST_LOG_FILE = './test-results.json';
 const MD_EXTENSTIONS = ['md', 'markdown', 'mdown'];
 const VALID_DATE_FORMATS = ['YYYY-MM-DD', 'YYYY-MM-DDTHH:mm:ss.sssZ'];
@@ -100,18 +101,16 @@ function logMessage(level, filename, position, message, extra) {
     message: message,
     extra: extra
   }
+  let fileLoc = chalk.cyan(filename);
   level = level.toUpperCase();
-  filename = chalk.cyan(filename);
-  if (position) {
-    if (position.line) {
-      filename += chalk.gray('#') + chalk.cyan(position.line);
-    }
+  if (position && position.line) {
+    fileLoc += chalk.gray('#') + chalk.cyan(position.line);
   }
   if (level === 'ERROR') {
-    gutil.log(chalk.red('ERROR:'), filename, message);
+    gutil.log(chalk.red('ERROR:'), fileLoc, message);
     allErrors.push(logMsg);
   } else {
-    gutil.log(chalk.yellow('WARNING:'), filename, message);
+    gutil.log(chalk.yellow('WARNING:'), fileLoc, message);
     allWarnings.push(logMsg);
   }
   filesWithIssues[filename] = true; 
@@ -253,6 +252,7 @@ function validateMDFile(file, commonTags, contributors) {
     let errMsg;
     let matched;
     let position;
+    let enforceLineLength = false;
     let content = fs.readFileSync(file, 'utf8');
     let metadata = {};
     metadata.include = wfRegEx.RE_MD_INCLUDE.test(content);
@@ -311,6 +311,9 @@ function validateMDFile(file, commonTags, contributors) {
       } else {
         position = {line: getLineNumber(content, matched.index)};
         let d = moment(matched[1], VALID_DATE_FORMATS, true);
+        if (d.isAfter(ENFORCE_LINE_LENGHT_AFTER)) {
+          enforceLineLength = true;
+        }
         if (d.isValid() === false) {
           errMsg = 'WF Tag `wf_updated_on` invalid format (YYYY-MM-DD)';
           errMsg += `, found: ${matched[1]}`;
@@ -328,6 +331,9 @@ function validateMDFile(file, commonTags, contributors) {
       } else {
         position = {line: getLineNumber(content, matched.index)};
         let d = moment(matched[1], VALID_DATE_FORMATS, true);
+        if (d.isAfter(ENFORCE_LINE_LENGHT_AFTER)) {
+          enforceLineLength = true;
+        }
         if (d.isValid() === false) {
           errMsg = 'WF Tag `wf_published_on` invalid format (YYYY-MM-DD)';
           errMsg += `, found: ${matched[1]}`;
@@ -474,11 +480,16 @@ function validateMDFile(file, commonTags, contributors) {
       }
     }
 
+    remarkLintOptions.firstHeadingLevel = 1;
     if (metadata.include) {
       remarkLintOptions.firstHeadingLevel = 2;
-    } else {
-      remarkLintOptions.firstHeadingLevel = 1;
     }
+
+    // remarkLintOptions.maximumLineLength = false;
+    // if (enforceLineLength) {
+    //   content = content.replace(wfRegEx.RE_DESCRIPTION, '\n');
+    //   remarkLintOptions.maximumLineLength = 120;
+    // }
 
     // Use remark to lint the markdown
     let vFile = vfile({path: file, extname: '.md', contents:content});
@@ -587,7 +598,7 @@ gulp.task('test:validateMarkdown', function() {
     })
     .then(function() {
       gutil.log(' ', 'Searching for files:', chalk.cyan(MD_EXTENSTIONS.join(', ')));
-      // GLOBAL.WF.options.testPath = './src/tests/';
+      GLOBAL.WF.options.testPath = './src/tests/';
       let files = getFilelist(MD_EXTENSTIONS);
       gutil.log(' ', 'Validating markdown files...');
       if (files.length === 0) {
