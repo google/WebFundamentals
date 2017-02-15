@@ -104,7 +104,7 @@ function logMessage(level, filename, position, message, extra) {
   filename = chalk.cyan(filename);
   if (position) {
     if (position.line) {
-      filename += ':' + chalk.cyan(position.line);
+      filename += chalk.gray('#') + chalk.cyan(position.line);
     }
   }
   if (level === 'ERROR') {

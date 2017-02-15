@@ -38,7 +38,7 @@ function generateCommitMessage(gitData, testResults) {
         filename += `#L${msg.position.line}`;
       }
       let urlToFile = `https://github.com/${gitData.repoOwner}/${gitData.repoName}/`;
-      urlToFile += `blob/${gitData.prSHA}/${filename}`;
+      urlToFile += `blame/${gitData.prSHA}/${filename}`;
       body.push(`[\`${filename}\`](${urlToFile}) - ${msg.message}\n`);
     });
   }
