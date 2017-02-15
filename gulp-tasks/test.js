@@ -627,7 +627,12 @@ gulp.task('test:summary', function() {
     };
     result = JSON.stringify(result, null, 2);
     fs.writeFileSync(TEST_LOG_FILE, result, 'utf8');
-    resolve();
+    if (allErrors.length === 0) {
+      resolve();
+      return;
+    }
+    let errorMessage = `There were ${allErrors.length} errors.`;
+    reject(new Error(errorMessage));
   });
 });
 

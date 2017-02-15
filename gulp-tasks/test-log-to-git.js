@@ -31,30 +31,31 @@ function generateCommitMessage(testResults) {
     body.push('be fixed.\n\n');
   }
   if (testResults.errors.length > 0) {
-    body.push('\n\n**ERRORS** :bangbang:');
+    body.push('\n\n**ERRORS**');
     testResults.errors.forEach(function(err) {
       let line = '`' + err.filename;
       if (err.position && err.position.line) {
         line += ':' + err.position.line;
       }
       line += '` ' + err.message;
-      body.push(line);
+      body.push(line + '\n');
     });
   }
 
   if (testResults.warnings.length > 0) {
-    body.push('\n\n**WARNINGS** :heavy_exclamation_mark:');
+    body.push('\n\n**WARNINGS**');
     testResults.warnings.forEach(function(err) {
       let line = '`' + err.filename;
       if (err.position && err.position.line) {
         line += ':' + err.position.line;
       }
       line += '` ' + err.message;
-      body.push(line);
+      body.push(line + '\n');
     });
   }
 
-  return body.join('\n');
+  body.push('\n\n');
+  return body.join(' ');
 }
 
 
@@ -153,7 +154,7 @@ function getTravisInfo() {
 }
 
 
-gulp.task('test-and-log-to-git', ['test'], function() {
+gulp.task('report-to-git', function() {
   return getTravisInfo()
   .then(function(data) {
     if (data) {
