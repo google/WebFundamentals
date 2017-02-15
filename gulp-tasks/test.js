@@ -241,39 +241,6 @@ function parseYaml(file) {
 }
 
 /**
- * Does a git diff to find out which files have changed and warns if the
- * `wf_last_updated` field isn't updated.
- *
- * @return {Promise}
- */
-function checkIfUpdateOnUpdated() {
-  const errMsg = 'The file was updated, but the `wf_updated_on` field wasn\'t. (experimental)';
-  const RE_UPDATED_ON = /{#\s?wf_updated_on:\s?(.*?)\s?#}/;
-  const cmd = 'git --no-pager diff FETCH_HEAD $(git merge-base FETCH_HEAD master)';
-  return wfHelper.promisedExec(cmd, '.')
-  .then(function(rawDiff) {
-    rawDiff = rawDiff.replace(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, '');
-    let filesChanged = parseDiff(rawDiff);
-    filesChanged.forEach(function(file) {
-      if (!file.from.endsWith('.md')) {
-        return;
-      }
-      let wasAdded = false;
-      file.chunks.forEach(function(chunk) {
-        chunk.changes.forEach(function(change) {
-          if (change.add && RE_UPDATED_ON.test(change.content)) {
-            wasAdded = true;
-          }
-        });
-      });
-      if (wasAdded === false) {
-        logWarning(file.from, null, errMsg);
-      }
-    });
-  });
-}
-
-/**
  * Lints and validates the Markdown File against a set of rules
  *
  * @param {string} file The file to read and validate
@@ -691,7 +658,6 @@ gulp.task('test', function(callback) {
     'test:yaml',
     'test:contributors',
     'test:findJSFiles',
-    'test:date-updated',
     'test:validateMarkdown',
     'test:summary',
     callback
