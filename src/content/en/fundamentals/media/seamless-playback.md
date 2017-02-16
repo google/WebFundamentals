@@ -21,9 +21,9 @@ You've likely listened to a music album where songs flowed seamlessly across tra
 We'll get into the details of why below, but for now let's start with a demonstration. Below is the first thirty seconds of the excellent [Sintel](http://www.sintel.org/){: .external } chopped into five separate MP3 files and reassembled using MSE. The red lines indicate gaps introduced during the creation (encoding) of each MP3; you'll hear glitches at these points.
 
 <p style="text-align: center;">
-  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster-red.jpg">
-    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gap.webm" type="video/webm" />
-    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gap.mp4" type="video/mp4" />
+  <video controls poster="/web/fundamentals/media/videos/poster-red.jpg">
+    <source src="/web/fundamentals/media/videos/gap.webm" type="video/webm" />
+    <source src="/web/fundamentals/media/videos/gap.mp4" type="video/mp4" />
   </video>
 </p>
 
@@ -32,9 +32,9 @@ We'll get into the details of why below, but for now let's start with a demonstr
 Yuck! That's not a great experience; we can do better. With a little more work, using the exact same MP3 files in the above demo, we can use MSE to remove those annoying gaps. The green lines in the next demo indicate where the files have been joined and the gaps removed. On Chrome 38+ this will playback seamlessly!
 
 <p style="text-align: center;">
-  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster-green.jpg">
-    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gapless.webm" type="video/webm" />
-    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gapless.mp4" type="video/mp4" />
+  <video controls poster="/web/fundamentals/media/videos/poster-green.jpg">
+    <source src="/web/fundamentals/media/videos/gapless.webm" type="video/webm" />
+    <source src="/web/fundamentals/media/videos/gapless.mp4" type="video/mp4" />
   </video>
 </p>
 
@@ -75,7 +75,7 @@ Once the `MediaSource` object is connected, it will perform some initialization 
 We'll come back to the code in a moment, but let's now look more closely at the file we've just appended, specifically at the end of it. Below, is a graph of the last 3000 samples averaged across both channels from the [`sintel_0.mp3`](https://storage.googleapis.com/wf-assets/audio/sintel_0.mp3) track. Each pixel on the red line is a [floating point sample](https://en.wikipedia.org/wiki/Audio_bit_depth) in the range of `[-1.0, 1.0]`.
 
 <p style="text-align: center;">
-  <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap_end.png" alt="End of sintel_0.mp3">
+  <img src="/web/fundamentals/media/images/mp3_gap_end.png" alt="End of sintel_0.mp3">
 </p>
 
 
@@ -84,7 +84,7 @@ What's with all that those zero (silent) samples!? They're actually due to [comp
 In addition to the padding at the end, each file also had padding added to the beginning. If we peek ahead at the [`sintel_1.mp3`](https://storage.googleapis.com/wf-assets/audio/sintel_1.mp3) track we'll see another 576 samples of padding exists at the front. The amount of padding varies by encoder and content, but we know the exact values based on [`metadata`](#appendix-b-parsing-gapless-metadata) included within each file.
 
 <p style="text-align: center;">
-  <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap.png" alt="Beginning of sintel_1.mp3">
+  <img src="/web/fundamentals/media/images/mp3_gap.png" alt="Beginning of sintel_1.mp3">
 </p>
 
 The sections of silence at the beginning and end of each file are what cause the _glitches_ between segments in the previous demo. To achieve gapless playback, we need to remove these sections of silence. Luckily, this is easily done with `MediaSource`. Below, we'll modify our `onAudioLoaded()` method to use an [append window](https://w3c.github.io/media-source#definitions) and a [timestamp offset](https://w3c.github.io/media-source#definitions) to remove this silence.
@@ -158,7 +158,7 @@ The sections of silence at the beginning and end of each file are what cause the
 Let's see what our shiny new code has accomplished by taking another look at the waveform after we've applied our append windows. Below, you can see that the silent section at the end of [`sintel_0.mp3`](https://storage.googleapis.com/wf-assets/audio/sintel_0.mp3) (in red) and the silent section at the beginning of [`sintel_1.mp3`](https://storage.googleapis.com/wf-assets/audio/sintel_1.mp3) (in blue) have been removed; leaving us with a seamless transition between segments.
 
 <p style="text-align: center;">
-  <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_mid.png" alt="Joining of sintel_0.mp3 and sintel_1.mp3">
+  <img src="/web/fundamentals/media/images/mp3_mid.png" alt="Joining of sintel_0.mp3 and sintel_1.mp3">
 </p>
 
 ## Conclusion
@@ -166,9 +166,9 @@ Let's see what our shiny new code has accomplished by taking another look at the
 With that, we've stitched all five segments seamlessly into one and have subsequently reached the end of our demo. Before we go, you may have noticed that our `onAudioLoaded()` method has no consideration for containers or codecs. That means all of these techniques will work irrespective of the container or codec type. Below you can replay the original demo DASH-ready fragmented MP4 instead of MP3.
 
 <p style="text-align: center;">
-  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
-    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/mp4gapless.webm" type="video/webm" />
-    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/mp4gapless.mp4" type="video/mp4" />
+  <video controls poster="/web/fundamentals/media/videos/poster.jpg">
+    <source src="/web/fundamentals/media/videos/mp4gapless.webm" type="video/webm" />
+    <source src="/web/fundamentals/media/videos/mp4gapless.mp4" type="video/mp4" />
   </video>
 </p>
 
