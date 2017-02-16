@@ -58,6 +58,7 @@ function updateCodeLab(fileName) {
   markdown = markdown.replace(/^\*Duration is \d+ min\*\n/gm, '');
   markdown = markdown.replace(/\(https:\/\/developers.google.com\//g, '(\/');
   markdown = markdown.replace(/^\[\]\(/gm, '[Link](');
+  markdown = markdown.replace(/^(#+)? __(.*?)__/gm, '$1 $2');
   result.push(markdown);
   if (metadata.feedback) {
     result.push('');
