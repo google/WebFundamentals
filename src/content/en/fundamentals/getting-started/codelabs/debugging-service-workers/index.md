@@ -15,8 +15,6 @@ description: In this codelab, you'll learn how to debug a service worker using t
 ## Introduction
 
 
-
-
 Service Workers give developers the amazing ability to handle spotty networks and create truly offline-first web apps. But being a new technology means they can sometimes be difficult to debug, especially as we wait for our tools to catch up.
 
 This codelab will walk you through creating a basic Service Worker and demonstrate how to use the new Application panel in Chrome DevTools to debug and inspect your worker.
