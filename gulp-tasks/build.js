@@ -40,7 +40,7 @@ gulp.task('build:showcase', function() {
   var startPath = path.join(GLOBAL.WF.src.content, 'showcase');
   var patterns = ['**/*.md', '!tags/*', '!**/index.md'];
   var files = wfHelper.getFileList(startPath, patterns);
-  files.sort(wfHelper.publishedComparator);
+  files.sort(wfHelper.updatedComparator);
   wfTemplateHelper.generateIndex(files, options);
   wfTemplateHelper.generateFeeds(files, options);
   options.outputPath = path.join(baseOutputPath, 'tags');
