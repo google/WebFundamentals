@@ -61,9 +61,9 @@ First, let's backtrack and cover the basic setup of a `MediaSource` instance. Me
       // entire segment at once, but we could also retrieve it in chunks and append
       // each chunk separately.  MSE will take care of assembling the pieces.
       GET('sintel/sintel_0.mp3', function(data) { onAudioLoaded(data, 0); } );
-    }, false);
+    });
 
-    audio.src = window.URL.createObjectURL(mediaSource);
+    audio.src = URL.createObjectURL(mediaSource);
 
 
 Once the `MediaSource` object is connected, it will perform some initialization and eventually fire a `sourceopen` event; at which point we can create a [`SourceBuffer`](http://www.w3.org/TR/media-source/#sourcebuffer). In the example above, we're creating an `audio/mpeg` one, which is able to parse and decode our MP3 segments; there are several [other types](http://www.w3.org/2013/12/byte-stream-format-registry/) available.
@@ -136,6 +136,7 @@ The sections of silence at the beginning and end of each file are what cause the
             // We've loaded all available segments, so tell MediaSource there are no
             // more buffers which will be appended.
             mediaSource.endOfStream();
+            URL.revokeObjectURL(audio.src);
           }
         });
       }
@@ -265,8 +266,7 @@ Just like creating gapless content, parsing the gapless metadata can be tricky s
 
     function ParseGaplessData(arrayBuffer) {
       // Gapless data is generally within the first 512 bytes, so limit parsing.
-      var byteStr = String.fromCharCode.apply(
-          null, new Uint8Array(arrayBuffer.slice(0, 512)));
+      var byteStr = new TextDecoder().decode(arrayBuffer.slice(0, 512));
 
       var frontPadding = 0, endPadding = 0, realSamples = 0;
 
@@ -356,7 +356,7 @@ With that we have a complete function for parsing the vast majority of gapless c
 
 ## Appendix C: On Garbage Collection
 
-Memory belonging to `SourceBuffer` instances s is actively [garbage collected](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) according to content type, platform specific limits, and the current play position. In Chrome, memory will first be reclaimed from already played buffers. However, if memory usage exceeds platform specific limits, it will remove memory from unplayed buffers.
+Memory belonging to `SourceBuffer` instances is actively [garbage collected](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) according to content type, platform specific limits, and the current play position. In Chrome, memory will first be reclaimed from already played buffers. However, if memory usage exceeds platform specific limits, it will remove memory from unplayed buffers.
 
 When playback reaches a gap in the timeline due to reclaimed memory it may glitch if the gap is small enough or stall completely if the gap is too large. Neither is a great user experience, so it's important to avoid appending too much data at once and to manually remove ranges from the media timeline that are no longer necessary.
 
