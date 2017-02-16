@@ -19,7 +19,7 @@ You've likely listened to a music album where songs flowed seamlessly across tra
 We'll get into the details of why below, but for now let's start with a demonstration. Below is the first thirty seconds of the excellent [Sintel](http://www.sintel.org/){: .external } chopped into five separate MP3 files and reassembled using MSE. The red lines indicate gaps introduced during the creation (encoding) of each MP3; you'll hear glitches at these points.
 
 <p style="text-align: center;">
-  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
+  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster-red.jpg">
     <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gap.webm" type="video/webm" />
     <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gap.mp4" type="video/mp4" />
   </video>
@@ -30,7 +30,7 @@ We'll get into the details of why below, but for now let's start with a demonstr
 Yuck! That's not a great experience; we can do better. With a little more work, using the exact same MP3 files in the above demo, we can use MSE to remove those annoying gaps. The green lines in the next demo indicate where the files have been joined and the gaps removed. On Chrome 38+ this will playback seamlessly!
 
 <p style="text-align: center;">
-  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
+  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster-green.jpg">
     <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gapless.webm" type="video/webm" />
     <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gapless.mp4" type="video/mp4" />
   </video>
