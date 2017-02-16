@@ -24,14 +24,14 @@ GLOBAL.WF = {
   ],
 };
 var defaultOptions = {
-  string: ['lang', 'skipReviewRequired', 'testWarnOnly', 'cl', 'verbose'],
+  string: ['lang', 'verbose', 'testAll', 'testTests', 'testWarnOnly', ],
   default: {
     lang: null,
-    skipReviewRequired: false,
-    testWarnOnly: false,
-    cl: null,
     verbose: false,
-    buildType: 'dev'
+    buildType: 'dev',
+    testAll: false,
+    testTests: false,
+    testWarnOnly: false
   }
 }
 GLOBAL.WF.options = minimist(process.argv.slice(2), defaultOptions);
@@ -49,26 +49,28 @@ if (GLOBAL.WF.options.lang) {
     }
   });
   GLOBAL.WF.options.lang = langs;
-  
 } else {
   GLOBAL.WF.options.lang = GLOBAL.WF.langs;
 }
 gutil.log('Language: ', gutil.colors.cyan(GLOBAL.WF.options.lang));
-if (GLOBAL.WF.options.cl) {
-  gutil.log('Change list: ', gutil.colors.cyan(GLOBAL.WF.options.cl));
-}
 if (GLOBAL.WF.options.verbose !== false) {
   GLOBAL.WF.options.verbose = true;
 }
 gutil.log('Verbose: ', gutil.colors.cyan(GLOBAL.WF.options.verbose));
-if (GLOBAL.WF.options.skipReviewRequired !== false) {
-  gutil.log('skipReviewRequired: ', gutil.colors.cyan('true'));
-  GLOBAL.WF.options.skipReviewRequired = true;
+
+if (GLOBAL.WF.options.testAll !== false) {
+  gutil.log('testAll:', chalk.cyan('true'));
+  GLOBAL.WF.options.testAll = true;
+}
+if (GLOBAL.WF.options.testTests !== false) {
+  gutil.log('testTests:', chalk.cyan('true'));
+  GLOBAL.WF.options.testTests = true;
 }
 if (GLOBAL.WF.options.testWarnOnly !== false) {
   gutil.log('testWarnOnly: ', gutil.colors.cyan('true'));
   GLOBAL.WF.options.testWarnOnly = true;
 }
+
 if (optionsOK === false) {
   throw new Error('Invalid options were provided.');
 }
