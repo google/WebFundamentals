@@ -1,0 +1,7 @@
+toc:
+  - title: Media
+    section:
+    - title: Overview
+      path: /web/fundamentals/media/
+      - title: Seamless Playback
+        path: /web/fundamentals/media/seamless-playback
