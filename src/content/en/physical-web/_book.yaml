@@ -1,0 +1,16 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+upper_tabs:
+  - include: /web/_upper_tabs-Fundamentals.yaml
+  - include: /web/_upper_tabs-Tools.yaml
+  - include: /web/_upper_tabs-Updates.yaml
+  - include: /web/_upper_tabs-Showcase.yaml
+  - name: Physical Web
+    path: /web/physical-web/
+    lower_tabs:
+      other:
+      - name: Physical Web
+        contents:
+        - title: Physical Web
+          path: /web/physical-web/
+        - title: Build on Magic
+          path: /web/physical-web/magic

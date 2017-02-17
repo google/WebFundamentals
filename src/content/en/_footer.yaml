@@ -40,6 +40,8 @@ footer:
       path: /web/progressive-web-apps/
     - label: Building for Billions
       path: /web/billions/
+    - label: Physical Web
+      path: /web/physical-web/
     - label: Code Labs
       path: https://codelabs.developers.google.com/?cat=Web
     - label: Learn with Udacity
