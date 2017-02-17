@@ -63,3 +63,10 @@ gulp.task('claat:codelabs', function() {
   let bookPath = '/web/fundamentals/_book.yaml';
   return exportAndUpdate(srcPath, destPath, false, bookPath);
 });
+
+gulp.task('claat:ilt-pwa', function() {
+  let srcPath = 'src/data/ilt-pwa';
+  let destPath = path.join(GLOBAL.WF.src.content, 'ilt/pwa');
+  let bookPath = '/web/ilt/_book.yaml';
+  return exportAndUpdate(srcPath, destPath, true, bookPath);
+});
