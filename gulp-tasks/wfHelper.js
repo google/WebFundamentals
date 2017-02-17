@@ -50,16 +50,10 @@ function promisedExec(cmd, cwd) {
       if (err) {
         gutil.log(' ', cmdLog, chalk.red('FAILED'));
         const output = (stdOut + '\n' + stdErr).trim();
-        if (GLOBAL.WF.options.verbose && output.length > 0) {
-          console.log(output);
-        }
         reject(err);
         return;
       }
       gutil.log(' ', cmdLog, chalk.green('OK'));
-      if (GLOBAL.WF.options.verbose && stdOut.length > 0) {
-        console.log(stdOut);
-      }
       resolve(stdOut);
     });
   });

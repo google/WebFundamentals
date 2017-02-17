@@ -22,6 +22,10 @@ const parseDiff = require('parse-diff');
 const remarkLint = require('remark-lint');
 const runSequence = require('run-sequence');
 
+/******************************************************************************
+ * Constants & Remark Lint Options
+ *****************************************************************************/
+
 const MAX_DESCRIPTION_LENGTH = 485;
 const MD_FILES = ['.md', '.mdown', '.markdown'];
 const STD_EXCLUDES = [
@@ -37,6 +41,10 @@ const VALID_DATE_FORMATS = [
   'YYYY-YY-YYTHH:mm:ssZ',
   'YYYY-MM-DDTHH:mm:ss.sssZ'
 ];
+const RE_SRC_BASE = /src\/content\//;
+const RE_DATA_BASE = /src\/data\//;
+const COMMON_TAGS_FILE = 'src/data/commonTags.json';
+const CONTRIBUTORS_FILE = 'src/data/_contributors.yaml';
 
 let remarkLintOptions = {
   external: [
@@ -83,12 +91,20 @@ let remarkLintOptions = {
   noUnusedDefinitions: false,
 };
 
+/******************************************************************************
+ * Results
+ *****************************************************************************/
+
 let fileCount = 0;
 let allErrors = [];
 let allWarnings = [];
 let filesWithIssues = {};
 let filesNotTested = [];
 let filesIgnored = [];
+
+/******************************************************************************
+ * Logging Functions
+ *****************************************************************************/
 
 /**
  * Logs a message to the console
@@ -162,7 +178,7 @@ function printSummary() {
   gutil.log(' - with issues:', chalk.yellow(cFilesWithIssues));
   gutil.log('Errors  :      ', chalk.red(allErrors.length));
   gutil.log('Warnings:      ', chalk.yellow(allWarnings.length));
-  if (GLOBAL.WF.options.testSaveResults) {
+  if (process.env.TRAVIS === 'true') {
     let result = {
       summary: {
         filesChecked: fileCount,
@@ -179,6 +195,20 @@ function printSummary() {
     fs.writeFileSync('./test-results.json', result, 'utf8');
   }
 }
+
+/**
+ * Throws an exception if there are any test failures.
+ */
+function throwIfFailed() {
+  if (allErrors.length >= 1 && !GLOBAL.WF.options.testWarnOnly) {
+    let errorMessage = `There were ${allErrors.length} errors.`;
+    throw new Error(errorMessage);
+  }
+}
+
+/******************************************************************************
+ * Helper Functions
+ *****************************************************************************/
 
 /**
  * Gets the line number of the current string up to the index point
@@ -204,9 +234,52 @@ function readFile(filename) {
     let contents = fs.readFileSync(filename, 'utf8');
     return contents;
   } catch (ex) {
-    logError(filename, null, 'Unable to read file.', ex);
+    logWarning(filename, null, 'Unable to read file, was it deleted?', ex);
     return null;
   }
+}
+
+/**
+ * Parses a JSON file
+ *   Note: The returned promise always resolves, it will never reject.
+ *
+ * @param {string} filename The name of the file to be tested
+ * @param {string} contents The contents of the file to be tested
+ * @return {Object} The parsed JSON object
+ */
+function parseJSON(filename, contents) {
+  try {
+    return JSON.parse(contents);
+  } catch (ex) {
+    let msg = `Unable to parse JSON: ${ex.message}`;
+    logError(filename, null, msg, ex);
+  }
+  return null;
+}
+
+/**
+ * Parses a YAML file
+ *   Note: The returned promise always resolves, it will never reject.
+ *
+ * @param {string} filename The name of the file to be tested
+ * @param {string} contents The contents of the file to be tested
+ * @return {Object} The parsed YAML object
+ */
+function parseYAML(filename, contents) {
+  try {
+    return jsYaml.safeLoad(contents);
+  } catch (ex) {
+    let msg = 'Unable to parse YAML';
+    if (ex.reason) {
+      msg = ex.reason;
+    }
+    let position = ex.mark;
+    if (position && position.line) {
+      position.line++;
+    }
+    logError(filename, position, msg, ex);
+  }
+  return null;
 }
 
 /**
@@ -237,13 +310,28 @@ function getFiles() {
     });
   } else {
     gutil.log(' ', 'Searching for changed files');
-    const cmd = 'git diff --name-only ..origin/master';
+    let cmd = 'git --no-pager diff --name-only ';
+    if (process.env.TRAVIS === 'true') {
+      cmd += 'FETCH_HEAD $(git merge-base FETCH_HEAD master)';
+    } else {
+      cmd += '$(git merge-base master HEAD)';
+    }
     return wfHelper.promisedExec(cmd, '.')
     .then(function(results) {
-      return results.split('\n');
+      let files = [];
+      results.split('\n').forEach(function(filename) {
+        if (RE_SRC_BASE.test(filename) || RE_DATA_BASE.test(filename)) {
+          files.push(filename);
+        }
+      });
+      return files;
     });
   }
 }
+
+/******************************************************************************
+ * File Tests
+ *****************************************************************************/
 
 /**
  * Tests & validates a markdown file.
@@ -256,16 +344,6 @@ function getFiles() {
  */
 function testMarkdown(filename, contents, options) {
   return new Promise(function(resolve, reject) {
-    let fileObj = path.parse(filename);
-    if (MD_FILES.indexOf(fileObj.ext) === -1) {
-      resolve(false);
-      return;
-    }
-    if (wfRegEx.RE_AUTO_GENERATED.test(contents)) {
-      filesIgnored.push(filename);
-      resolve(true);
-      return;
-    }
 
     let msg;
     let matched;
@@ -537,32 +615,6 @@ function testMarkdown(filename, contents, options) {
 }
 
 /**
- * Parses a YAML file
- *   Note: The returned promise always resolves, it will never reject.
- *
- * @param {string} filename The name of the file to be tested
- * @param {string} contents The contents of the file to be tested
- * @return {Object} The parsed YAML object
- */
-function parseYAML(filename, contents) {
-  try {
-    let result = jsYaml.safeLoad(contents);
-    return result;
-  } catch (ex) {
-    let msg = 'Unable to parse YAML';
-    if (ex.reason) {
-      msg = ex.reason;
-    }
-    let position = ex.mark;
-    if (position && position.line) {
-      position.line++;
-    }
-    logError(filename, position, msg, ex);
-  }
-  return null;
-}
-
-/**
  * Tests a YAML file
  *   Note: The returned promise always resolves, it will never reject.
  *
@@ -573,15 +625,6 @@ function parseYAML(filename, contents) {
  */
 function testYAML(filename, contents) {
   return new Promise(function(resolve, reject) {
-    if (filename.toLowerCase().endsWith('.yaml') === false) {
-      resolve(false);
-      return;
-    }
-    if (wfRegEx.RE_AUTO_GENERATED.test(contents)) {
-      filesIgnored.push(filename);
-      resolve(true);
-      return;
-    }
     parseYAML(filename, contents);
     resolve(true);
   })
@@ -590,25 +633,6 @@ function testYAML(filename, contents) {
     logError(filename, null, msg, ex);
     return false;
   });
-}
-
-/**
- * Parses a JSON file
- *   Note: The returned promise always resolves, it will never reject.
- *
- * @param {string} filename The name of the file to be tested
- * @param {string} contents The contents of the file to be tested
- * @return {Object} The parsed JSON object
- */
-function parseJSON(filename, contents) {
-  try {
-    let result = JSON.parse(contents);
-    return result;
-  } catch (ex) {
-    let msg = `Unable to parse JSON: ${ex.message}`;
-    logError(filename, null, msg, ex);
-  }
-  return null;
 }
 
 /**
@@ -622,10 +646,6 @@ function parseJSON(filename, contents) {
  */
 function testJSON(filename, contents) {
   return new Promise(function(resolve, reject) {
-    if (filename.toLowerCase().endsWith('.json') === false) {
-      resolve(false);
-      return;
-    }
     parseJSON(filename, contents);
     resolve(true);
   })
@@ -647,10 +667,6 @@ function testJSON(filename, contents) {
  */
 function testJavaScript(filename, contents, options) {
   return new Promise(function(resolve, reject) {
-    if (filename.toLowerCase().endsWith('.js') === false) {
-      resolve(false);
-      return;
-    }
     let isInCodeFolder = filename.indexOf('/_code/') > 0;
     if (options.warnOnJavaScript && !isInCodeFolder) {
       logWarning(filename, null, 'JavaScript files are generally not allowed.');
@@ -673,12 +689,21 @@ function testJavaScript(filename, contents, options) {
  * @return {Promise} A promise that resolves with TRUE if the file was tested
  *  or FALSE if the file was not tested.
  */
-function testHTML(filename, contents) {
+function testHTML(filename, contents, options) {
   return new Promise(function(resolve, reject) {
-    if (filename.toLowerCase().endsWith('.html') === false) {
-      resolve(false);
-      return;
+
+    let isInCodeFolder = filename.indexOf('/_code/') > 0;
+
+    // Throw error on hard coded developers.google.com
+    if (!isInCodeFolder) {
+      let matched = wfRegEx.getMatches(/developers\.google\.com/g, contents);
+      matched.forEach(function(match) {
+        let position = {line: getLineNumber(contents, match.index)};
+        let msg = 'Do not use hard coded developers.google.com.';
+        logError(filename, position, msg);
+      });
     }
+
     resolve(true);
   })
   .catch(function(ex) {
@@ -689,58 +714,58 @@ function testHTML(filename, contents) {
 }
 
 /**
- * Reads and tests the commonTags.json file.
+ * Tests and validates a commonTags.json file.
+ *   Note: The returned promise always resolves, it will never reject.
  *
  * @param {string} filename The name of the file to be tested.
  * @return {Array} An array of common tags.
  */
-function readAndTestCommonTags(filename) {
-  fileCount++;
-  let contents = readFile(filename);
-  if (!contents) {
-    return null;
-  }
-  contents = parseJSON(filename, contents);
-  if (Array.isArray(contents) === true) {
-    return contents;
-  } else {
-    logError(filename, null, 'Common Tags file is not an array.');
-    return null;
-  }
+function testCommonTags(filename, contents) {
+  return new Promise(function(resolve, reject) {
+    let tags = parseJSON(filename, contents);
+    if (Array.isArray(tags) === true) {
+      resolve(true);
+    } else {
+      let msg = `Common tags file must be an array, was ${typeof tags}`
+      logError(filename, null, msg);
+      resolve(false);
+    }
+  });
 }
 
 /**
- * Reads and tests the contributors.yaml file.
+ * Tests and validates a contributors.yaml file.
+ *   Note: The returned promise always resolves, it will never reject.
  *
  * @param {string} filename The name of the file to be tested.
  * @return {Object} An object with all of the contributors.
  */
-function readAndTestContributors(filename) {
-  fileCount++;
-
-  let msg;
-  let contents = readFile(filename);
-  if (!contents) {
-    return null;
-  }
-  let contributors = parseYAML(filename, contents);
-  let prevFamilyName = '';
-  Object.keys(contributors).forEach(function(key) {
-    let contributor = contributors[key];
-    let familyName = contributor.name.family || contributor.name.given;
-    if (prevFamilyName.toLowerCase() > familyName.toLowerCase()) {
-      msg = `Contributors must be sorted by family name. `;
-      msg += `${prevFamilyName} came before ${familyName}`;
-      logError(filename, null, msg);
-    }
-    if (contributor.google && typeof contributor.google !== 'string') {
-      msg = `Google+ ID for ${key} must be a string.`;
-      logError(filename, null, msg);
-    }
-    prevFamilyName = familyName;
+function testContributors(filename, contents) {
+  return new Promise(function(resolve, reject) {
+    let msg;
+    let contributors = parseYAML(filename, contents);
+    let prevFamilyName = '';
+    Object.keys(contributors).forEach(function(key) {
+      let contributor = contributors[key];
+      let familyName = contributor.name.family || contributor.name.given;
+      if (prevFamilyName.toLowerCase() > familyName.toLowerCase()) {
+        msg = `Contributors must be sorted by family name. `;
+        msg += `${prevFamilyName} came before ${familyName}`;
+        logError(filename, null, msg);
+      }
+      if (contributor.google && typeof contributor.google !== 'string') {
+        msg = `Google+ ID for ${key} must be a string.`;
+        logError(filename, null, msg);
+      }
+      prevFamilyName = familyName;
+    });
+    resolve();
   });
-  return contributors;
 }
+
+/******************************************************************************
+ * Primary File Test
+ *****************************************************************************/
 
 /**
  * Tests & validates a file.
@@ -751,60 +776,70 @@ function readAndTestContributors(filename) {
  * @return {Promise} A promise that resolves after the tests have completed.
  */
 function testFile(filename, opts) {
-  fileCount++;
   return new Promise(function(resolve, reject) {
-    let tests = [];
+    fileCount++;
+    if (GLOBAL.WF.options.verbose) {
+      gutil.log('Testing:', chalk.cyan(filename));
+    }
 
+    // Attempt to read the file contents
     let contents = readFile(filename);
     if (!contents) {
-      logError(filename, null, 'Unable to read file!');
       resolve();
       return;
     }
 
-    try {
-      tests.push(testMarkdown(filename, contents, opts));
-      tests.push(testYAML(filename, contents));
-      tests.push(testJSON(filename, contents));
-      tests.push(testJavaScript(filename, contents, opts));
-      tests.push(testHTML(filename, contents));
-      Promise.all(tests)
-      .then(function(results) {
-        let wasTested = results.some(r => r);
-        if (!wasTested) {
-          filesNotTested.push(filename);
-          let msg = 'No tests found for file type, was not tested.';
-          gutil.log(chalk.yellow('WARNING:'), chalk.cyan(filename), msg);
-        }
-        resolve();
-      })
-      .catch(function(ex) {
-        console.log('CATCH3', ex);
-      });
-    } catch (ex) {
-      console.log('CATCH1', filename, ex);
+    // Check if the file is auto-generated, if it is, ignore it
+    if (wfRegEx.RE_AUTO_GENERATED.test(contents)) {
+      filesIgnored.push(filename);
       resolve();
+      return;
     }
+
+    let testPromise;
+    let filenameObj = path.parse(filename.toLowerCase());
+    if (filenameObj.base === '_contributors.yaml') {
+      testPromise = testContributors(filename, contents);
+    } else if (filenameObj.base === 'commontags.json') {
+      testPromise = testCommonTags(filename, contents);
+    } else if (MD_FILES.indexOf(filenameObj.ext) >= 0) {
+      testPromise = testMarkdown(filename, contents, opts);
+    } else if (filenameObj.ext === '.html') {
+      testPromise = testHTML(filename, contents);
+    } else if (filenameObj.ext === '.yaml') {
+      testPromise = testYAML(filename, contents);
+    } else if (filenameObj.ext === '.json') {
+      testPromise = testJSON(filename, contents);
+    } else if (filenameObj.ext === '.js') {
+      testPromise = testJavaScript(filename, contents, opts);
+    } else {
+      filesNotTested.push(filename);
+      let msg = 'No tests found for file type, was not tested.';
+      gutil.log(chalk.yellow('WARNING:'), chalk.cyan(filename), msg);
+      resolve();
+      return;
+    }
+    testPromise.then(function() {
+      resolve();
+    });
+  })
+  .catch(function(ex) {
+    let msg = `A critical test exception occured: ${ex.message}`;
+    logError(filename, null, msg, ex);
   });
 }
 
-/**
- * Throws an exception if there are any test failures.
- */
-function throwIfFailed() {
-  if (allErrors.length >= 1 && !GLOBAL.WF.options.testWarnOnly) {
-    let errorMessage = `There were ${allErrors.length} errors.`;
-    throw new Error(errorMessage);
-  }
-}
+/******************************************************************************
+ * Gulp Test Task
+ *****************************************************************************/
 
 gulp.task('test', function() {
-  const commonTagsFile = 'src/data/commonTags.json';
-  const contributorsFile = 'src/data/_contributors.yaml';
   let opts = {
     enforceLineLengths: true,
     lastUpdateMaxDays: 7,
-    warnOnJavaScript: true
+    warnOnJavaScript: true,
+    commonTags: parseJSON(COMMON_TAGS_FILE, readFile(COMMON_TAGS_FILE)),
+    contributors: parseYAML(CONTRIBUTORS_FILE, readFile(CONTRIBUTORS_FILE))
   }
   if (GLOBAL.WF.options.testTests) {
     GLOBAL.WF.options.testPath = './src/tests';
@@ -816,17 +851,13 @@ gulp.task('test', function() {
   }
   return getFiles()
   .then(function(files) { 
-    if (GLOBAL.WF.options.testTests) {
-      readAndTestContributors('src/tests/_contributors.yaml');
-    }
-    opts.commonTags = readAndTestCommonTags(commonTagsFile);
-    opts.contributors = readAndTestContributors(contributorsFile);
-    return Promise.all(files.map(function(file) {
-      return testFile(file, opts);
+    return Promise.all(files.map(function(filename) {
+      return testFile(filename, opts);
     }));
   })
   .catch(function(ex) {
-    console.log('CATCH2', ex);
+    let msg = `A critical gulp task exception occured: ${ex.message}`;
+    logError('gulp-tasks/test.js', null, msg, ex);
   })
   .then(printSummary)
   .then(throwIfFailed);
