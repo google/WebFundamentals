@@ -29,12 +29,13 @@ const runSequence = require('run-sequence');
 const MAX_DESCRIPTION_LENGTH = 485;
 const MD_FILES = ['.md', '.mdown', '.markdown'];
 const STD_EXCLUDES = [
-  '!**/fundamentals/getting-started/codelabs/*/*.md',
-  '!**/*.gif', '!**/*.ico', '!**/*.jpg', '!**/*.png', '!**/*.psd', '!**/*.svg',
-  '!**/*.css',
-  '!**/*.mp4', '!**/*.webm', '!**/*.mov', '!**/*.mp3', '!**/*.vtt',
-  '!**/*.pdf',
-  '!**/*.xml',
+  '!**/fundamentals/getting-started/codelabs/*/*.md'
+];
+const EXTENSIONS_TO_SKIP = [
+  '.css',
+  '.gif', '.ico', '.jpg', '.png', '.psd', '.svg',
+  '.mov', '.mp3', '.mp4', '.webm', '.vtt',
+  '.pdf', '.xml'
 ];
 const VALID_DATE_FORMATS = [
   'YYYY-MM-DD',
@@ -95,12 +96,10 @@ let remarkLintOptions = {
  * Results
  *****************************************************************************/
 
-let fileCount = 0;
+let filesTested = 0;
 let allErrors = [];
 let allWarnings = [];
 let filesWithIssues = {};
-let filesNotTested = [];
-let filesIgnored = [];
 
 /******************************************************************************
  * Logging Functions
@@ -133,6 +132,9 @@ function logMessage(level, filename, position, message, extra) {
   } else {
     gutil.log(chalk.yellow('WARNING:'), fileLoc, message);
     allWarnings.push(logMsg);
+  }
+  if (GLOBAL.WF.options.verbose && extra) {
+    console.log(extra);
   }
   filesWithIssues[filename] = true; 
 }
@@ -172,24 +174,18 @@ function printSummary() {
   var cFilesWithIssues = Object.keys(filesWithIssues).length;
   gutil.log('');
   gutil.log('Test Completed.');
-  gutil.log('Files checked: ', chalk.cyan(fileCount));
-  gutil.log(' - not tested: ', chalk.yellow(filesNotTested.length));
-  gutil.log(' - ignored:    ', chalk.gray(filesIgnored.length));
+  gutil.log('Files tested:  ', chalk.cyan(filesTested));
   gutil.log(' - with issues:', chalk.yellow(cFilesWithIssues));
-  gutil.log('Errors  :      ', chalk.red(allErrors.length));
-  gutil.log('Warnings:      ', chalk.yellow(allWarnings.length));
+  gutil.log('Errors  : ', chalk.red(allErrors.length));
+  gutil.log('Warnings: ', chalk.yellow(allWarnings.length));
   if (process.env.TRAVIS === 'true') {
     let result = {
       summary: {
-        filesChecked: fileCount,
+        filesTested: filesTested,
         filesWithIssues: cFilesWithIssues,
-        numWarnings: allWarnings.length,
-        numErrors: allErrors.length,
       },
       errors: allErrors,
-      warnings: allWarnings,
-      filesNotTested: filesNotTested,
-      filesIgnored: filesIgnored
+      warnings: allWarnings
     };
     result = JSON.stringify(result, null, 2);
     fs.writeFileSync('./test-results.json', result, 'utf8');
@@ -777,27 +773,41 @@ function testContributors(filename, contents) {
  */
 function testFile(filename, opts) {
   return new Promise(function(resolve, reject) {
-    fileCount++;
-    if (GLOBAL.WF.options.verbose) {
-      gutil.log('Testing:', chalk.cyan(filename));
+    let msg;
+    let testPromise;
+    let filenameObj = path.parse(filename.toLowerCase());
+    
+    // Check if the file is an extension we skip
+    if (EXTENSIONS_TO_SKIP.indexOf(filenameObj.ext) >= 0) {
+      if (GLOBAL.WF.options.verbose) {
+        msg = 'Skipped (extension).';
+        gutil.log(chalk.gray('SKIP:'), chalk.cyan(filename), msg);
+      }
+      resolve(false);
+      return;
     }
 
     // Attempt to read the file contents
     let contents = readFile(filename);
     if (!contents) {
-      resolve();
+      resolve(false);
       return;
     }
 
     // Check if the file is auto-generated, if it is, ignore it
     if (wfRegEx.RE_AUTO_GENERATED.test(contents)) {
-      filesIgnored.push(filename);
-      resolve();
+      if (GLOBAL.WF.options.verbose) {
+        msg = 'Skipped (auto-generated).';
+        gutil.log(chalk.gray('SKIP:'), chalk.cyan(filename), msg);
+      }
+      resolve(false);
       return;
     }
 
-    let testPromise;
-    let filenameObj = path.parse(filename.toLowerCase());
+    if (GLOBAL.WF.options.verbose) {
+      gutil.log('TEST:', chalk.cyan(filename));
+    }
+
     if (filenameObj.base === '_contributors.yaml') {
       testPromise = testContributors(filename, contents);
     } else if (filenameObj.base === 'commontags.json') {
@@ -816,16 +826,21 @@ function testFile(filename, opts) {
       filesNotTested.push(filename);
       let msg = 'No tests found for file type, was not tested.';
       gutil.log(chalk.yellow('WARNING:'), chalk.cyan(filename), msg);
-      resolve();
+      resolve(false);
       return;
     }
     testPromise.then(function() {
-      resolve();
+      resolve(true);
     });
   })
   .catch(function(ex) {
     let msg = `A critical test exception occured: ${ex.message}`;
     logError(filename, null, msg, ex);
+  })
+  .then(function(wasTested) {
+    if (wasTested) {
+      filesTested++;
+    }
   });
 }
 
