@@ -5,7 +5,7 @@ description: A comprehensive reference of Chrome DevTools Network panel features
 {# wf_updated_on: 2016-12-22 #}
 {# wf_published_on: 2015-04-13 #}
 
-{% include web/tools/chrome-devtools/_shared/styles.html %}
+{% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
 <style>
 figcaption {
