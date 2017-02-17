@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: This codelab will help you learn to identify and fix web app performance bottlenecks.
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2016-10-20T18:16:09Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -102,7 +103,7 @@ Zoom in on your recording and you will see that after the scroll event is a func
 
 ![d6fb17faaa99e6f.png](img/d6fb17faaa99e6f.png)
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 __Discussion: Forced synchronous layout__
 
@@ -198,7 +199,7 @@ This function makes visible changes to the page by inserting new stories to the 
 
 The `loadStoryBatch` function is catch-as-catch-can; it runs whenever it needs to, based on the `loadThreshold` test, without regard to what else is going on in the page or where the browser is in the frame construction process. This is because the JavaScript engine pays no attention to the rendering pipeline when executing scripts. That immediacy will cause a performance problem, especially as more stories are added to the list. We can address this issue by using  *requestAnimationFrame* .
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 __Discussion: requestAnimationFrame__
 
@@ -269,7 +270,7 @@ function animate () {
 
 One of the first things you'll notice is the `setTimeout` that sets up the next call to `animate`. As you learned in the previous exercise, visible work that is done to the page should typically go inside a `requestAnimationFrame` call. But that `setTimeout` in particular is a problem.
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 __Discussion: setTimeout and setInterval__
 
@@ -398,7 +399,7 @@ After the first group of variable declarations, notice the four lines that const
 
 At first, that isn't necessarily a problem, but it becomes increasingly wasteful as the app is used. Of course, the user only ever sees one story at a time, but the new nodes that are created for each viewed story are never discarded. After a few clicks, the DOM will be cluttered with abandoned nodes that take up memory and slow down the app -- and the longer the app is used, the worse its performance will get.
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 __Discussion: appendChild, removeChild, and replaceChild__
 
@@ -515,7 +516,7 @@ Then, to make sure that the story's appearance actually looks like an animation 
 
 Finally, we use the `will-change` property to notify the browser about the likely `transform` changes.
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 __Discussion: will-change__
 

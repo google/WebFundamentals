@@ -16,6 +16,8 @@ description: In this codelab, you'll learn how to debug a service worker using t
 ## Introduction
 
 
+
+
 Service Workers give developers the amazing ability to handle spotty networks and create truly offline-first web apps. But being a new technology means they can sometimes be difficult to debug, especially as we wait for our tools to catch up.
 
 This codelab will walk you through creating a basic Service Worker and demonstrate how to use the new Application panel in Chrome DevTools to debug and inspect your worker.
@@ -72,7 +74,7 @@ After installing the Web Server for Chrome app, click on the Apps shortcut on th
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 More help:  [Add and open Chrome apps](https://support.google.com/chrome_webstore/answer/3060053?hl=en)
 </aside>
@@ -101,7 +103,7 @@ Now visit your work site in your web browser (by clicking on the highlighted Web
 
 Obviously, this app is not yet doing anything interesting. We'll add functionality so we can verify it works offline in subsequent steps. 
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 From this point forward, all testing/verification should be performed using this web server setup. You'll usually be able to get away with simply refreshing your test browser tab.
 </aside>
@@ -187,7 +189,7 @@ Note the ID of the first Service Worker. It should match the original Service Wo
 
 The second status indicator shows the new Service Worker we just edited. Right now it's in a waiting state.
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 __Try it!__
 
@@ -204,7 +206,7 @@ Note that the console now logs the message from the `activate` event handler
 
 `Finally active. Ready to start serving content!`
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 __Skip waiting__
 
@@ -286,7 +288,7 @@ If you go back and click on `my-site-cache-v1` you'll now see that all the store
 
 ![317d24238f05e69c.png](img/317d24238f05e69c.png)
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 __TIP:__ You can also use a new Incognito window for testing and debugging Service Workers. When the Incognito window is closed, Chrome will remove any cached data or installed Service Worker, ensuring that you always start from a clean state.
 </aside>
@@ -304,7 +306,7 @@ In the Network panel, you should see an initial set of request for files like `m
 
 The gear icon signifies that these requests came from the Service Worker itself. Specifically, these are the requests being made by the Service Worker's `install` handler to populate the offline cache.
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 __Learn More__: For a deeper understanding of the Network panel identifies Service Worker traffic take a look at  [this StackOverflow discussion](http://stackoverflow.com/a/33655173/385997).
 </aside>
@@ -393,7 +395,7 @@ Now our response times jump down to a blazing fast few milliseconds per resource
 
 ![f0f6d3b0a1b1f18d.png](img/f0f6d3b0a1b1f18d.png)
 
-<aside markdown="1" class="warning">
+<aside class="warning">
 
 Before proceeding make sure you set the __Network Throttle__ back to `No throttling`
 </aside>
@@ -437,7 +439,7 @@ The application will pause execution and switch panels over to __Sources__ where
 
 ![d960b322c020d6cc.png](img/d960b322c020d6cc.png)
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 __Learn More__: A full explanation of the __Sources__ panel is outside the scope of this codelab but you can  [learn more about the debugging capabilities of the DevTools](/web/tools/chrome-devtools/debug/?hl=en) on the Google Developers site.
 </aside>
@@ -494,7 +496,7 @@ You may have noticed a button in the center of the application asking for the us
 
 ![3e7f08f9d8c1fc5c.png](img/3e7f08f9d8c1fc5c.png)
 
-<aside markdown="1" class="warning">
+<aside class="warning">
 
 The code used to set up this Push subscription is just for demo purposes and should not be used in production. For a thorough guide on setting up Push notifications  [see this post](/web/updates/2015/03/push-notifications-on-the-open-web?hl=en) on the Google Developers site.
 </aside>
