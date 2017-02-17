@@ -49,7 +49,7 @@ responding using the network…
     height: 38px;
     display: flex;
   }
-  .group > div {
+  .group div {
     display: flex;
     align-items: center;
     font: normal 1.2rem/1 sans-serif;
@@ -94,7 +94,7 @@ way to perform navigation requests in parallel:
     height: 38px;
     display: flex;
   }
-  .group > div {
+  .group div {
     display: flex;
     align-items: center;
     font: normal 1.2rem/1 sans-serif;
