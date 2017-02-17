@@ -28,9 +28,6 @@ const runSequence = require('run-sequence');
 
 const MAX_DESCRIPTION_LENGTH = 485;
 const MD_FILES = ['.md', '.mdown', '.markdown'];
-const STD_EXCLUDES = [
-  '!**/fundamentals/getting-started/codelabs/*/*.md'
-];
 const EXTENSIONS_TO_SKIP = [
   '.css',
   '.gif', '.ico', '.jpg', '.png', '.psd', '.svg',
@@ -302,7 +299,7 @@ function getFiles() {
           globs.push(`${lang}/**/*`);
         }); 
       }
-      resolve(glob.find(globs, STD_EXCLUDES, opts));
+      resolve(glob.find(globs, opts));
     });
   } else {
     gutil.log(' ', 'Searching for changed files');

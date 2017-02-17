@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to integrate a service worker into an existing application to make the application work offline.
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2016-11-09T18:31:19Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -63,7 +64,7 @@ Run the site from a local web server.  You can use any web server, but for the r
     $ cd app
     $ python -m SimpleHTTPServer 3000
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 This repository has one main folder __"app"__. This folder contains the static assets (HTML, CSS, and JavaScript) that you will use for this project.
 </aside>
@@ -136,7 +137,7 @@ Now it's time to add offline support back into the app. This consists of two ste
 
 First, create a blank file called `sw.js` and place it in the `/app` folder. 
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 __The location of the service worker is important! __For security reasons, a service worker can only control the pages that are in its same directory or its subdirectories. This means that if you place the service worker file in a scripts directory it will only be able to interact with pages in the scripts directory or below.
 </aside>
@@ -205,7 +206,7 @@ The first line adds the Cache polyfill. This polyfill is already included in the
 
 The next step is to program our service worker to return the intercept the requests to any of these resources and use the `caches` object to return the locally stored version of each resource.
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 #### Frequently Asked Questions
 
@@ -267,7 +268,7 @@ Reload your page now and look at the DevTools window again. For one, we're expec
 
 In the __Status __there's a new service worker that's waiting to activate. That must be the new service worker that includes the changes that we just made. So, for some reason, the old service worker that we installed (which was just a blank file) is still controlling the page. If you click on the `sw.js` link next to __Source __you can verify that the old service worker is still running. 
 
-<aside markdown="1" class="special">
+<aside class="key-point">
 
 This behavior is by design. Check out  [Update a Service Worker](/web/fundamentals/primers/service-worker/update-a-service-worker?hl=en) to learn more about the service worker lifecycle.
 </aside>
