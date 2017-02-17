@@ -11,6 +11,9 @@ var glob = require('globule');
 var moment = require('moment');
 var gutil = require('gulp-util');
 const path = require('path');
+const remark = require('remark');
+const remarkHtml = require('remark-html');
+const wfRegEx = require('./wfRegEx');
 const mkdirp = require('mkdirp');
 
 function updateCodeLab(sourceFile, destFile, bookPath) {
@@ -63,12 +66,31 @@ function updateCodeLab(sourceFile, destFile, bookPath) {
   markdown = markdown.replace(/^\[\]\(/gm, '[Link](');
   markdown = markdown.replace(/__\s?Note:\s?__\s?/g, 'Note: ');
   markdown = markdown.replace(/<div class="note">((.|\n)*?)<\/div>/g, '$1');
-  markdown = markdown.replace(/<aside markdown="1" class="special">/g, '<aside class="key-point">');
-  markdown = markdown.replace(/<aside markdown="1" class="warning">/g, '<aside class="warning">');
+  markdown = markdown.replace(/<aside markdown="1" class="special">/g, '<aside markdown="1" class="key-point">');
+  markdown = markdown.replace(/<aside markdown="1" class="warning">/g, '<aside markdown="1" class="warning">');
   markdown = markdown.replace(/^<a id="(.*?)"\s*\/*?>/gm, '<div id="$1"></div>');
   markdown = markdown.replace(/!\[.+?\]\((.+?)\)\[IMAGEINFO\]:.+,\s*(.+?)\n/gm, '![$2]($1)\n');
   markdown = markdown.replace(/^## Contents?(\n|\s)*(__.*__(\s|\n)*)*/gm, '');
-  markdown = markdown.replace(/^(#+) __(.*)__/gm, '$1 $2')
+  markdown = markdown.replace(/^(#+) __(.*)__/gm, '$1 $2');
+
+  // Convert markdown inside a set of HTML elements to HTML.
+  //   This is required because DevSite's MD parser doesn't handle markdown
+  //   inside of HTML. :(
+  let matches;
+  let RE_ASIDE = /<aside markdown="1" .*?>\n?((.|\n)*?)\n?<\/aside>/gm;
+  matches = wfRegEx.getMatches(RE_ASIDE, markdown);
+  matches.forEach(function(match) {
+    let htmlAside = remark().use(remarkHtml).process(match[0]);
+    markdown = markdown.replace(match[0], String(htmlAside));
+  });
+
+  let RE_TABLE = /<table markdown="1">((.|\n)*?)<\/table>/gm;
+  matches = wfRegEx.getMatches(RE_TABLE, markdown);
+  matches.forEach(function(match) {
+    let htmlTable = remark().use(remarkHtml).process(match[0]);
+    markdown = markdown.replace(match[0], String(htmlTable));
+  });
+
   result.push(markdown);
   if (metadata.feedback) {
     result.push('');

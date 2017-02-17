@@ -103,19 +103,16 @@ Zoom in on your recording and you will see that after the scroll event is a func
 
 ![d6fb17faaa99e6f.png](img/d6fb17faaa99e6f.png)
 
-<aside class="key-point">
-
-__Discussion: Forced synchronous layout__
-
-Forced synchronous layout occurs when the browser runs layout inside a script, and then does something that forces it to recalculate styles, thus requiring it to run layout again. This typically happens inside a loop, as seen in the code below, which iterates through an array of divs and resets their width properties, causing forced synchronous layout.
-
-var newWidth = container.offsetWidth;
+<aside markdown="1" class="key-point">
+<p><strong>Discussion: Forced synchronous layout</strong></p>
+<p>Forced synchronous layout occurs when the browser runs layout inside a script, and then does something that forces it to recalculate styles, thus requiring it to run layout again. This typically happens inside a loop, as seen in the code below, which iterates through an array of divs and resets their width properties, causing forced synchronous layout.</p>
+<p>var newWidth = container.offsetWidth;
 divs.forEach(function(elem, index, arr) {
-    elem.style.width = newWidth;
-})
-
-There are many CSS properties that cause layout to happen; you can see a list of properties and their pipeline effects at  [CSS Triggers](http://csstriggers.com/).
+elem.style.width = newWidth;
+})</p>
+<p>There are many CSS properties that cause layout to happen; you can see a list of properties and their pipeline effects at  <a href="http://csstriggers.com/">CSS Triggers</a>.</p>
 </aside>
+
 
 Hover to identify a layout event, and then click on it to view its details. 
 
@@ -199,14 +196,12 @@ This function makes visible changes to the page by inserting new stories to the 
 
 The `loadStoryBatch` function is catch-as-catch-can; it runs whenever it needs to, based on the `loadThreshold` test, without regard to what else is going on in the page or where the browser is in the frame construction process. This is because the JavaScript engine pays no attention to the rendering pipeline when executing scripts. That immediacy will cause a performance problem, especially as more stories are added to the list. We can address this issue by using  *requestAnimationFrame* .
 
-<aside class="key-point">
-
-__Discussion: requestAnimationFrame__
-
-When a JavaScript function is called without specific timing, it runs immediately, basically interrupting the browser's current task. Recall that at 60fps, the browser has a maximum of 16ms (realistically, 10-12ms) to render a frame. Unexpected scripts can easily take up a lot of that time, and may cause some previously completed work to be redone, which could result in a missed frame.
-
-[requestAnimationFrame](http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) schedules a script to run at the earliest possible moment in the frame pipeline, giving the browser as much time as possible to complete the remaining steps: style recalculation, layout, painting, and compositing. Thus, __requestAnimationFrame__ is the go-to tool for running scripts that animate some part of the page, such as our loadStoryBatch function.
+<aside markdown="1" class="key-point">
+<p><strong>Discussion: requestAnimationFrame</strong></p>
+<p>When a JavaScript function is called without specific timing, it runs immediately, basically interrupting the browser's current task. Recall that at 60fps, the browser has a maximum of 16ms (realistically, 10-12ms) to render a frame. Unexpected scripts can easily take up a lot of that time, and may cause some previously completed work to be redone, which could result in a missed frame.</p>
+<p><a href="http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame</a> schedules a script to run at the earliest possible moment in the frame pipeline, giving the browser as much time as possible to complete the remaining steps: style recalculation, layout, painting, and compositing. Thus, <strong>requestAnimationFrame</strong> is the go-to tool for running scripts that animate some part of the page, such as our loadStoryBatch function.</p>
 </aside>
+
 
 Ideally, anything that makes a visible change to the page should happen inside a requestAnimationFrame call. Let's make that modification to the `scroll` event listener code.
 
@@ -270,16 +265,13 @@ function animate () {
 
 One of the first things you'll notice is the `setTimeout` that sets up the next call to `animate`. As you learned in the previous exercise, visible work that is done to the page should typically go inside a `requestAnimationFrame` call. But that `setTimeout` in particular is a problem.
 
-<aside class="key-point">
-
-__Discussion: setTimeout and setInterval__
-
-A great deal of older code on the web uses __setTimeout__ or __setInterval__ for animations. That's because these functions existed before requestAnimationFrame. As we noted earlier, the JavaScript engine pays no attention to the rendering pipeline when scheduling these functions, so they just run whenever they are called.
-
-They are perfectly good functions to use when you want to wait for some time to elapse before continuing, or when you want to do some repeated work inside a loop, as long as that work doesn't involve screen animation.
-
-Again, the best tool at our disposal for page animation work today is __requestAnimationFrame__.
+<aside markdown="1" class="key-point">
+<p><strong>Discussion: setTimeout and setInterval</strong></p>
+<p>A great deal of older code on the web uses <strong>setTimeout</strong> or <strong>setInterval</strong> for animations. That's because these functions existed before requestAnimationFrame. As we noted earlier, the JavaScript engine pays no attention to the rendering pipeline when scheduling these functions, so they just run whenever they are called.</p>
+<p>They are perfectly good functions to use when you want to wait for some time to elapse before continuing, or when you want to do some repeated work inside a loop, as long as that work doesn't involve screen animation.</p>
+<p>Again, the best tool at our disposal for page animation work today is <strong>requestAnimationFrame</strong>.</p>
 </aside>
+
 
 The obvious -- and easy -- fix here is to force each call to `animate` to be scheduled at the beginning of its frame sequence by putting it inside a `requestAnimationFrame`.
 
@@ -399,16 +391,13 @@ After the first group of variable declarations, notice the four lines that const
 
 At first, that isn't necessarily a problem, but it becomes increasingly wasteful as the app is used. Of course, the user only ever sees one story at a time, but the new nodes that are created for each viewed story are never discarded. After a few clicks, the DOM will be cluttered with abandoned nodes that take up memory and slow down the app -- and the longer the app is used, the worse its performance will get.
 
-<aside class="key-point">
-
-__Discussion: appendChild, removeChild, and replaceChild__
-
-If you understand the problem we've just described, your first thought for a potential fix might be to simply remove the node after the story is viewed (or, more accurately, before the next one is viewed) with __removeChild__ -- or replacing it with __replaceChild__ -- thereby avoiding the clutter of multiple abandoned nodes.
-
-That's not an unreasonable idea, but both methods still require a significant amount of DOM work by the browser, manipulating the DOM tree to add and remove nodes every time a story is clicked.
-
-Let's consider whether we can accomplish the same thing without manipulating the DOM tree at all.
+<aside markdown="1" class="key-point">
+<p><strong>Discussion: appendChild, removeChild, and replaceChild</strong></p>
+<p>If you understand the problem we've just described, your first thought for a potential fix might be to simply remove the node after the story is viewed (or, more accurately, before the next one is viewed) with <strong>removeChild</strong> -- or replacing it with <strong>replaceChild</strong> -- thereby avoiding the clutter of multiple abandoned nodes.</p>
+<p>That's not an unreasonable idea, but both methods still require a significant amount of DOM work by the browser, manipulating the DOM tree to add and remove nodes every time a story is clicked.</p>
+<p>Let's consider whether we can accomplish the same thing without manipulating the DOM tree at all.</p>
 </aside>
+
 
 A better way to accomplish this feature is to create just one permanent `storyDetails` node earlier in the script to hold the current story and then use the trusty `innerHTML` property to reset its content each time instead of creating a new node. In other words, you would simply this code: 
 
@@ -516,16 +505,13 @@ Then, to make sure that the story's appearance actually looks like an animation 
 
 Finally, we use the `will-change` property to notify the browser about the likely `transform` changes.
 
-<aside class="key-point">
-
-__Discussion: will-change__
-
-In Chrome and Firefox, you can use the new __will-change__ property to tell the browser to expect changes to a specific property. This allows the browser to place the affected element on a new compositor layer, which can significantly reduce the amount of pipeline work it has to do when the element does change later.
-
-In this case, we've told the browser to expect the element's __transform__ property to change. The benefit comes from the fact that creating and painting layers on demand can be expensive time-wise; giving the browser advance warning of imminent changes lets it create and paint the layer on its own schedule when it has the time.
-
-It's good to let the browser decide how to handle things when you can, and __will-change__ is an excellent way to do that. It is effectively a hint that the browser can acknowledge or disregard at its discretion, improving performance in the background without direct developer action.
+<aside markdown="1" class="key-point">
+<p><strong>Discussion: will-change</strong></p>
+<p>In Chrome and Firefox, you can use the new <strong>will-change</strong> property to tell the browser to expect changes to a specific property. This allows the browser to place the affected element on a new compositor layer, which can significantly reduce the amount of pipeline work it has to do when the element does change later.</p>
+<p>In this case, we've told the browser to expect the element's <strong>transform</strong> property to change. The benefit comes from the fact that creating and painting layers on demand can be expensive time-wise; giving the browser advance warning of imminent changes lets it create and paint the layer on its own schedule when it has the time.</p>
+<p>It's good to let the browser decide how to handle things when you can, and <strong>will-change</strong> is an excellent way to do that. It is effectively a hint that the browser can acknowledge or disregard at its discretion, improving performance in the background without direct developer action.</p>
 </aside>
+
 
 Returning to the `showStory` and `hideStory` functions, we can now greatly simplify them to just add or remove the new `visible` and `hidden` classes, accomplishing the desired visual change without complex scripting.
 
