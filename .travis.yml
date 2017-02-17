@@ -26,3 +26,9 @@ after_success:
 branches:
   only:
     - master
+notifications:
+  email:
+    recipients:
+      - petele@google.com
+    on_success: never
+    on_failure: always

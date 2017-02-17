@@ -850,6 +850,11 @@ function testFile(filename, opts) {
  *****************************************************************************/
 
 gulp.task('test', function() {
+  const travisEventType = process.env.TRAVIS_EVENT_TYPE;
+  const travisBranch = process.env.TRAVIS_BRANCH;
+  if (travisEventType === 'push' && travisBranch === 'master') {
+    GLOBAL.WF.options.testAll = true;
+  }
   let opts = {
     enforceLineLengths: true,
     lastUpdateMaxDays: 7,
