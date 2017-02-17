@@ -138,5 +138,5 @@ gulp.task('build', function(cb) {
       'build:tools',
       'build:updates'
     ],
-    'build:sitelevel', cb);
+    cb);
 });
