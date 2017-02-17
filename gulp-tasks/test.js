@@ -580,6 +580,7 @@ function testMarkdown(filename, contents, options) {
     if (options.enforceLineLengths) {
       remarkLintOptions.maximumLineLength = 100;
       contents = contents.replace(wfRegEx.RE_DESCRIPTION, '\n');
+      contents = contents.replace(wfRegEx.RE_SNIPPET, '\n\n');
     }
 
     // Use remark to lint the markdown
