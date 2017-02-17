@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll learn how to debug a service worker using the new DevTools Application panel. You'll also learn how to simulate a Push notification to verify your subscription is properly setup.
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2016-10-19T18:28:32Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -13,8 +14,6 @@ description: In this codelab, you'll learn how to debug a service worker using t
 
 
 ## Introduction
-
-
 
 
 Service Workers give developers the amazing ability to handle spotty networks and create truly offline-first web apps. But being a new technology means they can sometimes be difficult to debug, especially as we wait for our tools to catch up.
