@@ -12,8 +12,8 @@ description: Payment Request API is for fast, easy payments on the web.
 {% include "web/_shared/contributors/zkoch.html" %}
 
 Dogfood: `PaymentRequest` is still in development. While we think it's stable
-enough to implement, it may continue to change. We'll keep this page updated to
-always reflect the current status of the API([M56 changes](https://docs.google.com/document/d/1I8ha1ySrPWhx80EB4CVPmThkD4ILFM017AfOA5gEFg4/edit#)).
+enough to implement, it may continue to change. We'll [keep this page updated](/web/updates/2017/01/payment-request-updates)
+to always reflect the current status of the API.
 Meanwhile, to protect yourself from API changes that may be backwards
 incompatible, we're offering [a shim](https://storage.googleapis.com/prshim/v1/payment-shim.js)
 that can be embedded on your site. The shim will paper over any API
@@ -156,7 +156,7 @@ The browser will render the labels as you define them and automatically render t
 Repeated or calculated values used in the `details` can be specified either as string literals or as individual string variables.
 
 
-    var currency = "USD";
+    var currency = "USD"; // Currency definition supports ISO4217.
     var amount = "65.00";
     var discount = "-10.00";
     var total = "55.00";
