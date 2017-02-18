@@ -147,8 +147,8 @@ a useful way for viewing and sharing reports, online.
 
 There are several ways to view a report:
 
-1. When viewing the HTML version of a report, click the "Open in viewer" button
-in the top right corner of the report.
+1. When viewing the HTML version of a report, click the "Export" button
+in the top right corner of the report and choose "Open in Viewer".
 2.  Drag and drop the JSON output of a Lighthouse run onto the app or click to
 upload a report file. If you're a CLI user, run Lighthouse with the `--output=json` flag to
 generate a json file that can be opened in the Viewer.
