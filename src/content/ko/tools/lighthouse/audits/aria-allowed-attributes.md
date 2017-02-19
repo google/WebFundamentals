@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Element ARIA Attributes Are Allowed For This Role" Lighthouse audit.
+description: Lighthouse 검사 항목 "역할을 위해 요소에 ARIA 속성을 허용합니다"를 위한 참조 문서
 
 {# wf_updated_on: 2017-02-12 #}
 {# wf_published_on: 2017-01-13 #}
@@ -17,7 +17,7 @@ description: Reference documentation for the "Element ARIA Attributes Are Allowe
 
 각 요소의 잘못된 조합(들)을 찾으려면 다음을 수행하세요:
 
-1. 요소의 `role` 및 `aria-*` 속성을 보십시오.
+1. 요소의 `role` 및 `aria-*` 속성을 확인하세요.
 
 1. [Definition of Roles][roles]로 이동하세요.
 
@@ -26,7 +26,7 @@ description: Reference documentation for the "Element ARIA Attributes Are Allowe
 1. **Required States and Properties**나 **Supported States and Properties** 목록에서
   요소의 `aria-*` 속성을 다시한번 체크하세요. 이 두 목록 중 하나에없는 속성은 유효하지 않습니다.
 
-유효하지 않은 콤보를 수정하려면 요소에서 유효하지 않은 속성을 
+유효하지 않은 조합을 수정하려면 요소에서 유효하지 않은 속성을 
 제거하거나 요소의 역할을 속성이 지원하는 것으로 변경하십시오.
 
 [qs]: /web/tools/chrome-devtools/console/command-line-reference#queryselector

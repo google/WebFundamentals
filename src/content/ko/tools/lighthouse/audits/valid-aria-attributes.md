@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Element ARIA Attributes Are Valid" Lighthouse audit.
+description: Lighthouse 검사 항목 "요소의 ARIA 속성은 유효해야 한다"를 위한 참조 문서
 
 {# wf_updated_on: 2017-02-12 #}
 {# wf_published_on: 2017-01-18 #}
@@ -19,7 +19,7 @@ description: Reference documentation for the "Element ARIA Attributes Are Valid"
 
 리스트의 각 요소에서 잘못된 속성명을 찾으려면 다음을 수행하세요:
 
-1. 요소의 `role` 및 `aria-*` 속성을 보십시오.
+1. 요소의 `role` 및 `aria-*` 속성을 확인하세요.
 
 1. [Definition of Roles][roles]로 이동하세요.
 

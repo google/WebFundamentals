@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Critical Request Chains" Lighthouse audit.
+description: Lighthouse 검사 항목 "크리티컬 요청 체인"을 위한 참조 문서
 
 {# wf_updated_on: 2017-02-12 #}
 {# wf_published_on: 2016-10-06 #}
