@@ -11,9 +11,9 @@ description: Web App Manifest ✔︎, Service Worker ✔.Get ready for Web App I
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-Warning: This article is out of date. The [latest guidance for Add to Homescreen
-can be found in Web
-Fundamentals.](/web/fundamentals/engage-and-retain/app-install-banners/)
+Warning: This article is out of date. The <a
+href="/web/fundamentals/engage-and-retain/app-install-banners/">latest guidance
+for Add to Homescreen can be found in Web Fundamentals.</a>
 
 <img src="/web/updates/images/2015-03-03/add-to-home-screen.gif" 
      alt="IO Site with install banner" class="attempt-right" />
