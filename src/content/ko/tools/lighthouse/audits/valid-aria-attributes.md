@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse 검사 항목 "요소의 ARIA 속성은 유효해야 한다"를 위한 참조 문서
 
-{# wf_updated_on: 2017-02-12 #}
+{# wf_updated_on: 2017-02-20 #}
 {# wf_published_on: 2017-01-18 #}
 
 # 요소의 ARIA 속성은 유효해야 한다 {: .page-title }
