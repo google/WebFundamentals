@@ -57,6 +57,8 @@ Initial navigation
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse는 네트워크 우선 순위를 렌더링 차단 주요 리소스를 식별하는 프록시로 사용합니다.
-Chrome에서 이러한 우선 순위를 정의하는 방법에 대한 자세한 내용은 [Chrome Resource Priorities and Scheduling](https://docs.google.com/document/d/1bCDuq9H1ih9iNjgzyAL0gpwNFiEP4TZS-YLRp_RuMlc)을 참고하세요.
+Chrome에서 이러한 우선 순위를 정의하는 방법에 대한 자세한 내용은 
+[Chrome Resource Priorities and Scheduling](https://docs.google.com/document/d/1bCDuq9H1ih9iNjgzyAL0gpwNFiEP4TZS-YLRp_RuMlc)을 
+참고하세요.
 
 Chrome Debugger Protocol에서 크리티컬 요청 체인, 리소스 크기 및 리소스 다운로드 시간에 대한 데이터가 추출됩니다.
