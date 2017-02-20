@@ -11,6 +11,9 @@ description: Web App Manifest ✔︎, Service Worker ✔.Get ready for Web App I
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
+Warning: This article is out of date. The [latest guidance for Add to Homescreen
+can be found in Web
+Fundamentals.](/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android)
 
 <img src="/web/updates/images/2015-03-03/add-to-home-screen.gif" alt="IO Site with install banner" class="attempt-right" />
 
