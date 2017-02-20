@@ -15,7 +15,8 @@ Warning: This article is out of date. The [latest guidance for Add to Homescreen
 can be found in Web
 Fundamentals.](/web/fundamentals/engage-and-retain/app-install-banners/)
 
-<img src="/web/updates/images/2015-03-03/add-to-home-screen.gif" alt="IO Site with install banner" class="attempt-right" />
+<img src="/web/updates/images/2015-03-03/add-to-home-screen.gif" 
+     alt="IO Site with install banner" class="attempt-right" />
 
 We recently enhanced the "Add to Home Screen" function in Chrome which allows
 users to add your Web App to their home screen with the addition of the
@@ -38,11 +39,9 @@ In Chrome 42, we introduced "App Install Banners". App Install Banners give you
 the ability to have your users quickly and seamlessly install your Web App as
 per the images below.
 
-
-
-<span id="criteria">"This looks great, I want it on my site"</span> I hear you shout. "Please tell me how
-to add it!". The good news is if you currently meet the following criteria Chrome will
-manage the prompting of users:
+<span id="criteria">"This looks great, I want it on my site"</span> I hear you
+shout. "Please tell me how to add it!". The good news is if you currently meet
+the following criteria Chrome will manage the prompting of users:
 
 * You have a [web app manifest
   file](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android), which defines how your app appears on the user's system and how it should be launched
@@ -60,10 +59,12 @@ manage the prompting of users:
   (service worker requires HTTPS for security)
 * The user has visited your site at least twice, with at least five minutes between visits.
 
-Note: The criteria will change over time. For more information read the [FAQ](#criteria-faq).
+Note: The criteria will change over time. For more information read the
+[FAQ](#criteria-faq).
 
-A sample manifest is [provided in our samples](https://github.com/GoogleChrome/samples/tree/gh-pages/app-install-banner) and one here for quick reference:
-
+A sample manifest is [provided in our
+samples](https://github.com/GoogleChrome/samples/tree/gh-pages/app-install-banner)
+and one here for quick reference:
 
     {
       "short_name": "Kinlan's Amaze App",
@@ -82,7 +83,6 @@ A sample manifest is [provided in our samples](https://github.com/GoogleChrome/s
 
 If you are interested in the implementation, check out [crbug
 452825](https://bugs.chromium.org/p/chromium/issues/detail?id=452825).
-
 
 ## <span id="cancel">Canceling the prompt</span>
 
@@ -139,7 +139,9 @@ install prompt.
 
 ## <span id="native">Native app install banner</span>
 
-<img class="attempt-right" src="/web/updates/images/2015-03-03/inlineinstall.gif" alt="Native app install banner" />
+<img class="attempt-right" 
+     src="/web/updates/images/2015-03-03/inlineinstall.gif" 
+     alt="Native app install banner" />
 
 A new powerful feature for native app developers also landed in Chrome 44 Beta.
 Native App install banners are similar to Web app install banners, but instead
@@ -229,7 +231,9 @@ and therefore would offer a better launchable experience.
 
 ##Why do I need SSL?
 
-Because you need a service worker, and since service workers can completely redirect any HTTP requests, we wouldn't want a man-in-the-middle attack to insert a different service worker than the one your app and user expects.
+Because you need a service worker, and since service workers can completely
+redirect any HTTP requests, we wouldn't want a man-in-the-middle attack to
+insert a different service worker than the one your app and user expects.
 
 ### Are there any good examples of this in action?
 
