@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 57 to help you plan.
 
-{# wf_updated_on: 2017-02-15 #}
+{# wf_updated_on: 2017-02-21 #}
 {# wf_published_on: 2017-02-01 #}
 {# wf_tags: deprecations,removals,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -17,6 +17,22 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 57,
 which is in beta as of early February. This list is subject to change at any
 time.
+
+## Deprecate FileReaderSync in service workers
+
+The Service Worker spec has always had the (non-normative) note that "any
+type of synchronous requests must not be initiated inside of a service
+worker", to avoid blocking the service worker. Blocking the service worker
+would block all network requests from controlled pages. Unfortunately, the
+`FileReaderSync` API has long been available in service workers. 
+
+Currently only Firefox and Chrome expose `FileReaderSync` in service workers.
+There's agreement from firefox in the [spec discussion](https://github.com/w3c/ServiceWorker/issues/735)
+that this should be fixed. Removal is anticipated in Chrome 59.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cjWtqRD6iw8/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5739144722513920) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688586)
 
 ## Deprecate and remove legacy caller for HTMLEmbedElement and HTMLObjectElement
 
