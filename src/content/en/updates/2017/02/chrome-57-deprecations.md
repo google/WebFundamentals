@@ -20,14 +20,15 @@ time.
 
 ## Deprecate FileReaderSync in service workers
 
-The Service Worker spec has always had the (non-normative) note that "any
+The [Service Worker spec](https://www.w3.org/TR/service-workers/)
+has always had the (non-normative) note that "any
 type of synchronous requests must not be initiated inside of a service
 worker", to avoid blocking the service worker. Blocking the service worker
 would block all network requests from controlled pages. Unfortunately, the
 `FileReaderSync` API has long been available in service workers. 
 
 Currently only Firefox and Chrome expose `FileReaderSync` in service workers.
-There's agreement from firefox in the [spec discussion](https://github.com/w3c/ServiceWorker/issues/735)
+There's agreement from Firefox in the [spec discussion](https://github.com/w3c/ServiceWorker/issues/735)
 that this should be fixed. Removal is anticipated in Chrome 59.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cjWtqRD6iw8/discussion) &#124;
