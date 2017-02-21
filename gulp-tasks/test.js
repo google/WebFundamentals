@@ -39,6 +39,11 @@ const VALID_DATE_FORMATS = [
   'YYYY-YY-YYTHH:mm:ssZ',
   'YYYY-MM-DDTHH:mm:ss.sssZ'
 ];
+const REMARK_WARNING_ONLY = [
+  'maximum-line-length',
+  'code-block-style',
+  'heading-style'
+];
 const RE_SRC_BASE = /src\/content\//;
 const RE_DATA_BASE = /src\/data\//;
 const COMMON_TAGS_FILE = 'src/data/commonTags.json';
@@ -405,7 +410,7 @@ function testMarkdown(filename, contents, options) {
           if (d.isBefore(moment().subtract(options.lastUpdateMaxDays, 'days'))) {
             msg = 'WF Tag `wf_updated_on` must be within the last ';
             msg += options.lastUpdateMaxDays + ' days.';
-            logError(filename, position, msg);
+            logWarning(filename, position, msg);
           }
         }
       }
@@ -595,7 +600,11 @@ function testMarkdown(filename, contents, options) {
             line: vMsg.line,
             column: vMsg.column
           };
-          logError(filename, position, vMsg.message, vMsg);
+          if (REMARK_WARNING_ONLY.indexOf(vMsg.ruleId) >= 0) {
+            logWarning(filename, position, vMsg.message, vMsg);
+          } else {
+            logError(filename, position, vMsg.message, vMsg);
+          }
         });
       }
       resolve(true);
