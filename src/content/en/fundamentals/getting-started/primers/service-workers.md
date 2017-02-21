@@ -32,10 +32,8 @@ experience.
 
 Before service worker, there was one other API that gave users an offline
 experience on the web called [AppCache](//www.html5rocks.com/en/tutorials/appcache/beginner/){: .external }. 
-The major issues with AppCache are the [number of gotcha's](http://alistapart.com/article/application-cache-is-a-douchebag) 
-that exist as well as the fact that while the design works particularly well for single page web 
-apps, it's not so good with for multi-page sites. Service workers have been designed to 
-avoid these common pain points.
+There are a number of issues that exist with the AppCache API, which service workers have been designed to 
+avoid.
 
 Things to note about a service worker:
 
