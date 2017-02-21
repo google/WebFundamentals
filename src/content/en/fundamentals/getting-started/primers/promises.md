@@ -9,7 +9,7 @@ description: "Promises simplify deferred and asynchronous computations. A promis
 
 {% include "web/_shared/contributors/jakearchibald.html" %}
 
-Ladies and gentlemen, prepare yourself for a pivotal moment in the history of
+Developers, prepare yourself for a pivotal moment in the history of
 web development.
 
 <em>[Drumroll begins]</em>
