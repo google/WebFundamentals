@@ -44,7 +44,7 @@ expected in Chrome 58, calling will throw and exception.
 
 This change brings Chrome in line with recent spec changes. The legacy behavior
 is not supported in Edge or Safari, and it is being
-[removed from Firfox](https://bugzilla.mozilla.org/show_bug.cgi?id=909656).
+[removed from Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=909656).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/AiDZ7ru9mGg/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5715026367217664) &#124;
