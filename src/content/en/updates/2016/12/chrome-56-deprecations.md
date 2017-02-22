@@ -17,6 +17,12 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 56,
 which is in beta as of December 8. This list is subject to change at any time.
 
+## Stop trusting SHA-1 certificates
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/2-R4XziFc7A/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/6601657605423104) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=653691)
+
 ## Remove CBC-mode ECDSA ciphers in TLS
 
 TLS's CBC-mode construction is flawed, making it fragile and very difficult to
@@ -207,7 +213,7 @@ specification and it's usage is small or nonexistent. This attribute was
 deprecated in Chrome 54 and has now been removed.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/X3kyDbj9xlA/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/features/5665473114931200) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5665473114931200) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=633908)
 
 <<../../_deprecation-policy.md>>
