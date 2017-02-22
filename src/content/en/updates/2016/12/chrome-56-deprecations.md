@@ -17,7 +17,11 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 56,
 which is in beta as of December 8. This list is subject to change at any time.
 
-## Stop trusting SHA-1 certificates
+## Remove support for SHA-1 certificates
+
+The SHA-1 cryptographic hash algorithm [first showed signs of weakness](https://www.schneier.com/blog/archives/2005/02/cryptanalysis_o.html) over eleven years ago and [recent research](https://eprint.iacr.org/2015/967) points to the imminent possibility of attacks that could directly impact the integrity of the web public key infrastructure (PKI). 
+
+To protect users from such attacks, Chrome no longer supports SHA-1 certificates starting in Chrome 56, whose stable release is in January 2017. Visiting a site using such a certificate results in an interstitial warning. We provide more details on the [Chrome Security Blog](https://security.googleblog.com/2016/11/sha-1-certificates-in-chrome.html).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/2-R4XziFc7A/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/6601657605423104) &#124;
