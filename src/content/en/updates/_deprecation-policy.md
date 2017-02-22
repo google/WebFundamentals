@@ -30,6 +30,7 @@ essentially:
 
 You can find a list of all deprecated features on chromestatus.com using the 
 [deprecated filter](https://www.chromestatus.com/features#deprecated){: .external }
-and removed features by applying the [removed filter](https://www.chromestatus.com/features#removed){: .external }.
+and removed features by applying the
+[removed filter](https://www.chromestatus.com/features#removed){: .external }.
 We will also try to summarize some of the changes, reasoning, and migration
 paths in these posts.
