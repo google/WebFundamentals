@@ -1,10 +1,10 @@
 {
   "environment": "web",
-  "source": "1mLCbrTL_20r3OY7MTsdXg9NThUJbto3mx9nYBoxc-Os",
+  "source": "https://docs.google.com/document/d/1mLCbrTL_20r3OY7MTsdXg9NThUJbto3mx9nYBoxc-Os",
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-01-27T22:20:33Z",
+  "updated": "2017-02-22T21:31:45Z",
   "id": "debugging-service-workers-in-browsers",
   "duration": 0,
   "title": "Debugging Service Workers in Browsers",

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-01-27T23:26:22Z #}
+{# wf_updated_on: 2017-02-22T21:08:23Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -56,7 +56,7 @@ In the command window, change to the __app__ directory in the __push-notificatio
 
     npm install
 
-This reads the dependencies in __package.json __and installs the web-push module for Node.js, which we will use in the second half of the lab to push a message to our app.
+This reads the dependencies in __package.json__ and installs the web-push module for Node.js, which we will use in the second half of the lab to push a message to our app.
 
 Then install web-push globally so we can use it from the command line:
 
@@ -66,11 +66,11 @@ Open your browser and navigate __localhost:8080/push-notification-lab/app/__.
 
 
 
-<strong>Note:</strong> If you have installed a service worker on localhost before, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If you have installed a service worker on localhost before, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
-If you have a text editor that lets you open a project, open the __push-notification-lab/app __folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
+If you have a text editor that lets you open a project, open the __push-notification-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
 
 This folder contains:
 
@@ -78,9 +78,9 @@ This folder contains:
 * __js/main.js__ is the main JavaScript for the app, and where you will write the app's script
 * __node/main.js__ is the Node.js server
 * __samples__ folder contains sample landing pages
-* __index.html __is the main HTML page for our sample site/application
-* __manifest.json __is the Firebase manifest file
-* __package.json __is the Node.js manifest file
+* __index.html__ is the main HTML page for our sample site/application
+* __manifest.json__ is the Firebase manifest file
+* __package.json__ is the Node.js manifest file
 * __sw.js__ is the service worker file where we will write the script to handle notifications
 
 <div id="notificationapi"></div>
@@ -110,7 +110,7 @@ if (!('Notification' in window)) {
 
 
 
-<strong>Note:</strong> In a practical application we would perform some logic to compensate for lack of support, but for our purposes we can log an error and return.
+Note: In a practical application we would perform some logic to compensate for lack of support, but for our purposes we can log an error and return.
 
 
 
@@ -157,7 +157,7 @@ Save the file and reload the page in the browser. Click __allow__ on the permiss
 
 #### For more information
 
-*  [showNotification method - MDN](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification)
+*  [`showNotification` method - MDN](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification)
 
 ### 2.4 Add notification options
 
@@ -248,7 +248,7 @@ This code gets the notification object from the event and then gets the data fro
 
 
 
-<strong>Tip:</strong> The <code>notificationclose</code> event is a great place to add Google analytics to see how often users are closing our notifications. You can learn more about this in the <a href="lab_integrating_analytics.md">Google Analytics codelab</a>.
+__Tip:__  The <code>notificationclose</code> event is a great place to add Google analytics to see how often users are closing our notifications. You can learn more about this in the <a href="lab_integrating_analytics.md">Google Analytics codelab</a>.
 
 
 
@@ -280,7 +280,7 @@ To complete TODO 2.8 inside the <code>notificationclick</code> event, write the 
 3. Replace the URL in `clients.openWindow` with `'samples/page' + primaryKey + '.html'`.
 4. Finally, at the bottom of the listener, add a line to close the notification. Refer to the Methods section in the  [Notification article on MDN](https://developer.mozilla.org/en-US/docs/Web/API/notification) to see how to programmatically close the notification.
 
-Save the code and [update the service worker](tools_for_pwa_developers.md#update) in the browser. Click __Notify me! __to create a new notification and then click the notification. It should take you to __page1.html__ and the notification should close after it is clicked. Try changing the `primaryKey` in __main.js__ to 2 and test it again. This should take you to __page2.html__ when you click the notification.
+Save the code and [update the service worker](tools_for_pwa_developers.md#update) in the browser. Click __Notify me!__ to create a new notification and then click the notification. It should take you to __page1.html__ and the notification should close after it is clicked. Try changing the `primaryKey` in __main.js__ to 2 and test it again. This should take you to __page2.html__ when you click the notification.
 
 ### 2.9 Handle actions
 
@@ -308,11 +308,11 @@ self.addEventListener('notificationclick', function(e) {
 });
 ```
 
-Save the code and [update the service worker](tools_for_pwa_developers.md#update) in the browser. Click __Notify me! __to create a new notification. Try clicking the actions.
+Save the code and [update the service worker](tools_for_pwa_developers.md#update) in the browser. Click __Notify me!__ to create a new notification. Try clicking the actions.
 
 
 
-<strong>Note:</strong> Notice we check for the "close" action first and handle the "explore" action in an `else` block. This is a best practice as not every platform supports action buttons, and not every platform displays all your actions. Handling actions in this way provides a default experience that works everywhere.
+Note: Notice we check for the "close" action first and handle the "explore" action in an `else` block. This is a best practice as not every platform supports action buttons, and not every platform displays all your actions. Handling actions in this way provides a default experience that works everywhere.
 
 
 
@@ -370,7 +370,7 @@ Save the code and [update the service worker](tools_for_pwa_developers.md#update
 
 
 
-<strong>Note:</strong> Push notifications are currently only supported in Chrome and Firefox. See the entry for "push" on <a href="http://caniuse.com/#search=push">caniuse.com [</a>](http://caniuse.com/#search=push) for the latest browser support status.
+Note: Push notifications are currently only supported in Chrome and Firefox. See the entry for "push" on <a href="http://caniuse.com/#search=push">caniuse.com [</a>](http://caniuse.com/#search=push) for the latest browser support status.
 
 
 
@@ -394,7 +394,7 @@ If you are using Firefox, you can skip this step and continue to step 3.3.
 
 
 
-<strong>Note:</strong> Recent changes to Firebase Cloud Messaging let developers avoid creating a Firebase account if the VAPID protocol is used. See the <a href="#vapid">section on VAPID</a> for more information.
+Note: Recent changes to Firebase Cloud Messaging let developers avoid creating a Firebase account if the VAPID protocol is used. See the <a href="#vapid">section on VAPID</a> for more information.
 
 
 
@@ -420,7 +420,7 @@ Chrome uses Firebase Cloud Messaging (FCM) to route its push messages. All push 
 
 
 
-<strong>Note:</strong> FCM has replaced Google Cloud Messaging (GCM). Some of the code to push messages to Chrome still contains references to GCM. These references are correct and work for both GCM and FCM.
+Note: FCM has replaced Google Cloud Messaging (GCM). Some of the code to push messages to Chrome still contains references to GCM. These references are correct and work for both GCM and FCM.
 
 
 
@@ -513,7 +513,7 @@ The `.catch` handles the case in which the user has denied permission for notifi
 
 
 
-<strong>Note:</strong> We are setting the <code>userVisibleOnly</code> option to <code>true</code> in the subscribe method. By setting this to <code>true</code>, we ensure that every incoming message has a matching notification. The default setting is <code>false</code>. Setting this option to <code>true</code> is required in Chrome.
+Note: We are setting the <code>userVisibleOnly</code> option to <code>true</code> in the subscribe method. By setting this to <code>true</code>, we ensure that every incoming message has a matching notification. The default setting is <code>false</code>. Setting this option to <code>true</code> is required in Chrome.
 
 
 
@@ -563,7 +563,7 @@ Let's use cURL to test pushing a message to our app.
 
 
 
-<strong>Note:</strong> Windows machines do not come with cURL preinstalled. If you are using Windows, you can skip this step.
+Note: Windows machines do not come with cURL preinstalled. If you are using Windows, you can skip this step.
 
 
 
@@ -573,7 +573,7 @@ If you are using Chrome, replace `SERVER_KEY` in the Authorization header with t
 
 
 
-<strong>Note:</strong> The Firebase Cloud Messaging server key can be found in your project on <a href="https://console.firebase.google.com/">Firebase</a> by clicking the Settings icon in the Navigation panel, clicking <strong>Project settings</strong> and then opening the <strong>Cloud messaging</strong> tab.
+Note: The Firebase Cloud Messaging server key can be found in your project on <a href="https://console.firebase.google.com/">Firebase</a> by clicking the Settings icon in the Navigation panel, clicking <strong>Project settings</strong> and then opening the <strong>Cloud messaging</strong> tab.
 
 
 
@@ -583,17 +583,15 @@ Paste the following cURL command (with your values substituted into the appropri
 
 Here is an example of what the cURL should look like:
 
-    curl "https://android.googleapis.com/gcm/send/fYFVeJQJ2CY:APA91bGrFGRmy-sY6NaF8atX11K0bKUUNXLVzkomGJFcP-lvne78UzYeE91IvWMxU2hBAUJkFlBVdYDkcwLG8vO8cYV0X3Wgvv6MbVodUfc0gls7HZcwJL4LFxjg0y0-ksEhKjpeFC5P" --request POST --header "TTL: 60" --header "Content-Length: 0" --header "Authorization: key=
-
-AAAANVIuLLA:APA91bFVym0UAy836uQh-__S8sFDX0_MN38aZaxGR2TsdbVgPeFxhZH0vXw_-E99y9UIczxPGHE1XC1CHXen5KPJlEASJ5bAnTUNMOzvrxsGuZFAX1_ZB-ejqBwaIo24RUU5QQkLQb9IBUFwLKCvaUH9tzOl9mPhFw
-
-    "
+```
+curl "https://android.googleapis.com/gcm/send/fYFVeJQJ2CY:APA91bGrFGRmy-sY6NaF8atX11K0bKUUNXLVzkomGJFcP-lvne78UzYeE91IvWMxU2hBAUJkFlBVdYDkcwLG8vO8cYV0X3Wgvv6MbVodUfc0gls7HZcwJL4LFxjg0y0-ksEhKjpeFC5P" --request POST --header "TTL: 60" --header "Content-Length: 0" --header "Authorization: key=AAAANVIuLLA:APA91bFVym0UAy836uQh-__S8sFDX0_MN38aZaxGR2TsdbVgPeFxhZH0vXw_-E99y9UIczxPGHE1XC1CHXen5KPJlEASJ5bAnTUNMOzvrxsGuZFAX1_ZB-ejqBwaIo24RUU5QQkLQb9IBUFwLKCvaUH9tzOl9mPhFw"
+```
 
 You can send a message to Firefox's push service by opening the app in Firefox, getting the endpoint URL, and executing the same cURL without the <code>Authorization</code> header.
 
 
 
-<strong>Note:</strong> Remember to <a href="tools_for_pwa_developers.md#firefoxunregister">unregister the previous service worker</a> at localhost if it exists.
+Note: Remember to <a href="tools_for_pwa_developers.md#firefoxunregister">unregister the previous service worker</a> at localhost if it exists.
 
 
 
@@ -756,7 +754,7 @@ Copy your keys and save them somewhere safe. Use these keys for all future messa
 
 
 
-<strong>Note:</strong> The keys are URL Safe Base64 encoded strings.
+Note: The keys are URL Safe Base64 encoded strings.
 
 
 
@@ -819,7 +817,7 @@ Next, replace TODO 4.3b in the <code>options</code> object with the following co
 
 
 
-<strong>Note:</strong> You'll need to replace <code>YOUR_EMAIL_ADDRESS</code> in the <code>subject</code> property with your actual email.
+Note: You'll need to replace <code>YOUR_EMAIL_ADDRESS</code> in the <code>subject</code> property with your actual email.
 
 
 
@@ -847,7 +845,7 @@ A push notification should pop up on the screen. It may take a few seconds to ap
 
 
 
-<strong>Note:</strong> The notification may not surface if you're in full screen mode.
+Note: The notification may not surface if you're in full screen mode.
 
 
 
@@ -961,13 +959,13 @@ Save the code, open the app again, and [update the service worker](tools_for_pwa
 
 
 
-<strong>Note:</strong> If you don't want to clear out all of the notifications, you can filter based on the <code>tag</code> attribute by passing the tag into the <code>getNotifications</code> function. See the <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/getNotifications">getNotifications reference on MDN</a> for more information.
+Note: If you don't want to clear out all of the notifications, you can filter based on the <code>tag</code> attribute by passing the tag into the <code>getNotifications</code> function. See the <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/getNotifications">getNotifications reference on MDN</a> for more information.
 
 
 
 
 
-<strong>Note:</strong> You can also filter out the notifications directly inside the promise returned from <code>getNotifications</code>. For example there might be some custom data attached to the notification that you would use as your filter criteria.
+Note: You can also filter out the notifications directly inside the promise returned from <code>getNotifications</code>. For example there might be some custom data attached to the notification that you would use as your filter criteria.
 
 
 
@@ -1009,7 +1007,7 @@ Save the code and [update the service worker](tools_for_pwa_developers.md#update
 
 
 
-<strong>Note:</strong> The <code>clients.openWindow</code> method can only open a window when called as the result of a <code>notificationclick</code> event. Therefore, we need to wrap the method in a <code>waitUntil</code>, so that the event does not complete before <code>openWindow</code> is called. Otherwise, the browser throws an error.
+Note: The <code>clients.openWindow</code> method can only open a window when called as the result of a <code>notificationclick</code> event. Therefore, we need to wrap the method in a <code>waitUntil</code>, so that the event does not complete before <code>openWindow</code> is called. Otherwise, the browser throws an error.
 
 
 

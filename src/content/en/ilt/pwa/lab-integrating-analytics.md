@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-13T06:54:41Z #}
+{# wf_updated_on: 2017-02-22T21:17:58Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -60,11 +60,11 @@ Open Chrome and navigate to __localhost:8080/google-analytics-lab/app__.
 
 
 
-<strong>Note:</strong> If you have already installed a service worker on localhost, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab.  
+Note: If you have already installed a service worker on localhost, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab.  
 
 
 
-If you have a text editor that lets you open a project, open the __google-analytics-lab/app __folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
+If you have a text editor that lets you open a project, open the __google-analytics-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
 
 This folder contains:
 
@@ -74,9 +74,9 @@ This folder contains:
 * __images__ folder contains images to style our notifications
 * __index.html__ is the main HTML page for our sample site/application
 * __main.js__ is the main JavaScript for the app
-* __analytics-helper.js __is an empty helper file
+* __analytics-helper.js__ is an empty helper file
 * __sw.js__ is the service worker file
-* __manifest.json __is the manifest for push notifications
+* __manifest.json__ is the manifest for push notifications
 
 In the browser, you should be prompted to allow notifications. If the prompt does not appear, then [manually allow notifications](tools_for_pwa_developers.md#permissions). You should see a permission status of "granted" in the console.
 
@@ -94,13 +94,13 @@ A notification should appear on your screen. Try clicking it. It should take you
 
 
 
-<strong>Note:</strong> The developer tools UI is constantly changing and, depending on the browser, may look a little different when you try it.
+Note: The developer tools UI is constantly changing and, depending on the browser, may look a little different when you try it.
 
 
 
 
 
-<strong>Note:</strong> Simulated push notifications can be sent from the browser even if the subscription object is null.
+Note: Simulated push notifications can be sent from the browser even if the subscription object is null.
 
 
 
@@ -118,7 +118,7 @@ You can learn how to build the starter app and learn more about push in <a href=
 
 
 
-<strong>Note:</strong> The Google Analytics UI is subject to updates and may not look exactly like the screenshots presented in this lab.
+Note: The Google Analytics UI is subject to updates and may not look exactly like the screenshots presented in this lab.
 
 
 
@@ -144,13 +144,13 @@ Choose website.
 
 
 
-<strong>Note:</strong> Websites and mobile apps implement Google Analytics differently. This lab covers web sites. For mobile apps, see <a href="https://support.google.com/analytics/answer/2587086?hl=en&ref_topic=2587085&rd=1">analytics for mobile applications</a>.
+Note: Websites and mobile apps implement Google Analytics differently. This lab covers web sites. For mobile apps, see <a href="https://support.google.com/analytics/answer/2587086?hl=en&ref_topic=2587085&rd=1">analytics for mobile applications</a>.
 
 
 
 
 
-<strong>Note:</strong> All the names we use for the account and website are arbitrary. They are only used for reference and don't affect analytics.
+Note: All the names we use for the account and website are arbitrary. They are only used for reference and don't affect analytics.
 
 
 
@@ -167,7 +167,7 @@ The property must be associated with a site. We will use a mock  [GitHub Pages](
 
 
 
-<strong>Note:</strong> For this lab, the site is just a placeholder, you do not need to set up a GitHub Pages site or be familiar with GitHub Pages or even GitHub. The site URL that you use to create your Google Analytics account is only used for things like automated testing. 
+Note: For this lab, the site is just a placeholder, you do not need to set up a GitHub Pages site or be familiar with GitHub Pages or even GitHub. The site URL that you use to create your Google Analytics account is only used for things like automated testing. 
 
 
 
@@ -237,7 +237,7 @@ You should see yourself being tracked. The screen should look similar to this (n
 
 
 
-<strong>Note:</strong> If you don't see this, refresh the <strong>app</strong> page and check again.
+Note: If you don't see this, refresh the <strong>app</strong> page and check again.
 
 
 
@@ -293,7 +293,7 @@ We are using the real-time viewing mode because we have just created the app. No
 
 
 
-<strong>Note:</strong> Data for our app is not available yet. It takes some time to process the data, typically <a href="https://support.google.com/analytics/answer/1070983?hl=en#DataProcessingLatency">24-48 hours</a>.
+Note: Data for our app is not available yet. It takes some time to process the data, typically <a href="https://support.google.com/analytics/answer/1070983?hl=en#DataProcessingLatency">24-48 hours</a>.
 
 
 
@@ -323,7 +323,7 @@ TODO: Replace <strong>analytics.js</strong> in the tracking snippet (in <strong>
 
 
 
-<strong>Note:</strong> Don't use <strong>analytics_debug.js</strong> in production. It is much larger than <strong>analytics.js</strong>.
+Note: Don't use <strong>analytics_debug.js</strong> in production. It is much larger than <strong>analytics.js</strong>.
 
 
 
@@ -331,7 +331,7 @@ Save the scripts and refresh the page. You should see the browser console loggin
 
 
 
-<strong>Note:</strong> There is also a <a href="https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna">Chrome debugger extension</a> that can be used alternatively. 
+Note: There is also a <a href="https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna">Chrome debugger extension</a> that can be used alternatively. 
 
 
 
@@ -377,7 +377,7 @@ When using the send command in the `ga` command queue, the hit type can be set t
 
 
 
-<strong>Note:</strong> Many of the <code>ga</code> commands are flexible and can use multiple signatures. 
+Note: Many of the <code>ga</code> commands are flexible and can use multiple signatures. 
 
 You can see all method signatures in the <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/command-queue-reference">command queue reference</a>.
 
@@ -433,7 +433,7 @@ Chrome uses Firebase Cloud Messaging (FCM) to route its push messages. All push 
 
 
 
-<strong>Note:</strong> FCM has replaced Google Cloud Messaging (GCM). Some of the code to push messages to Chrome still contains references to GCM. These references are correct and work for both GCM and FCM.
+Note: FCM has replaced Google Cloud Messaging (GCM). Some of the code to push messages to Chrome still contains references to GCM. These references are correct and work for both GCM and FCM.
 
 
 
@@ -467,11 +467,7 @@ __Optional__: Add analytics hits for the `catch` blocks of the `subscribe` and `
 
 We have added Google Analytics send commands inside our push subscription code. This lets us track how often users are subscribing and unsubscribing to our push notifications, and if they are experiencing errors in the process.
 
-
-## <a id="8" />
-
-
-
+<div id="8"></div>
 
 
 ## 8. Using analytics in the service worker
@@ -638,7 +634,7 @@ The hit is sent with the  [Fetch API](https://developer.mozilla.org/en-US/docs/W
 
 
 
-<strong>Note:</strong> You can learn more about the Fetch API in the <a href="lab_fetch_api_practice.md">fetch codelab</a>
+Note: You can learn more about the Fetch API in the <a href="lab_fetch_api_practice.md">fetch codelab</a>
 
 
 
@@ -697,7 +693,7 @@ Do you see console logs for each event? Do you see events on Google Analytics?
 
 
 
-<strong>Note:</strong> Because these events use the Measurement Protocol interface instead of <strong>analytics_debug.js</strong>, the debug console logs don't appear. You can debug the Measurement Protocol hits with <a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/validating-hits"> hit validation</a>.
+Note: Because these events use the Measurement Protocol interface instead of <strong>analytics_debug.js</strong>, the debug console logs don't appear. You can debug the Measurement Protocol hits with <a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/validating-hits"> hit validation</a>.
 
 
 
@@ -707,7 +703,7 @@ We start by using  [ImportScripts](https://developer.mozilla.org/en-US/docs/Web/
 
 
 
-<strong>Note:</strong> We have used <code>event.waitUntil</code> to wrap all of our asynchronous operations. If unfamiliar, <code>event.waitUntil</code> extends the life of an event until the asynchronous actions inside of it have completed. This ensures that the service worker will not be terminated pre-emptively while waiting for an asynchronous action to complete.
+Note: We have used <code>event.waitUntil</code> to wrap all of our asynchronous operations. If unfamiliar, <code>event.waitUntil</code> extends the life of an event until the asynchronous actions inside of it have completed. This ensures that the service worker will not be terminated pre-emptively while waiting for an asynchronous action to complete.
 
 
 
@@ -761,19 +757,19 @@ Now check the Google Analytics dashboard. You should see the custom event!
 
 #### Explanation
 
-Here we import and initialize the __offline-google-analytics-import.js __library. You can check out the  [documentation](/web/updates/2016/07/offline-google-analytics?hl=en) for details, but this library adds a fetch event handler to the service worker that only listens for requests made to the Google Analytics domain. The handler attempts to send Google Analytics data just like we have done so far, by network requests. If the network request fails, the request is stored in IndexedDB. The requests are then sent later when connectivity is re-established.
+Here we import and initialize the __offline-google-analytics-import.js__ library. You can check out the  [documentation](/web/updates/2016/07/offline-google-analytics?hl=en) for details, but this library adds a fetch event handler to the service worker that only listens for requests made to the Google Analytics domain. The handler attempts to send Google Analytics data just like we have done so far, by network requests. If the network request fails, the request is stored in IndexedDB. The requests are then sent later when connectivity is re-established.
 
 This strategy won't work for hits sent from our service worker because the service worker doesn't listen to fetch events from itself (that could cause some serious problems!). This isn't so important in this case because all the hits that we would want to send from the service worker are tied to online events (like push notifications) anyways.
 
 
 
-<strong>Note:</strong> These events don't use <strong>analytics_debug.js</strong>, so the debug console logs don't appear.
+Note: These events don't use <strong>analytics_debug.js</strong>, so the debug console logs don't appear.
 
 
 
 
 
-<strong>Note:</strong> Some users have reported a bug in Chrome that recreates deleted databases on reload.
+Note: Some users have reported a bug in Chrome that recreates deleted databases on reload.
 
 
 
@@ -796,15 +792,11 @@ Add two actions to the push notifications. Send a distinct analytics hit for eac
 
 
 
-<strong>Note:</strong> Notification actions may not be available in Firefox.
+Note: Notification actions may not be available in Firefox.
 
 
 
-
-## <a id="11" />
-
-
-
+<div id="11"></div>
 
 
 ## 11. Optional: Use hitCallback
@@ -818,7 +810,7 @@ Research the  [hitCallback](/analytics/devguides/collection/analyticsjs/sending-
 
 
 
-<strong>Note:</strong> If the user's browser supports <code>navigator.sendBeacon</code> then 'beacon' can be specified as the transport mechanism. This avoids the need for a hitCallback. See the <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/sending-hits">documentation</a> for more info.
+Note: If the user's browser supports <code>navigator.sendBeacon</code> then 'beacon' can be specified as the transport mechanism. This avoids the need for a hitCallback. See the <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/sending-hits">documentation</a> for more info.
 
 
 
@@ -830,11 +822,7 @@ Research the  [hitCallback](/analytics/devguides/collection/analyticsjs/sending-
 
 To get a copy of the working code, navigate to the __solution__ folder.
 
-
-## <a id="12" />
-
-
-
+<div id="12"></div>
 
 
 ## Congratulations!

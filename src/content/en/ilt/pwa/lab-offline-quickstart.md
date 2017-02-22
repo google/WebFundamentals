@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-01-27T01:02:13Z #}
+{# wf_updated_on: 2017-02-22T20:17:05Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -51,7 +51,7 @@ Open your browser and navigate to __localhost:8080/offline-quickstart-lab/app__.
 
 
 
-<strong>Note:</strong> If you have already installed a service worker on localhost, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If you have already installed a service worker on localhost, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
@@ -62,7 +62,7 @@ This folder contains:
 * __images__ folder contains sample images
 * __styles/main.css__ is the main cascading stylesheet for the app
 * __index.html__ is the main HTML page for our sample site/application
-* __service-worker.js __is the service worker file (currently empty)
+* __service-worker.js__ is the service worker file (currently empty)
 
 <div id="2"></div>
 
@@ -107,7 +107,7 @@ Note that __.__ is also cached. This represents the current directory, in this c
 
 
 
-<strong>Note:</strong> Don't worry if you don't understand all of this code; this lab is meant as an overview. The <code>event.waitUntil</code> code can be particularly confusing. This operation simply tells the browser not to preemptively terminate the service worker before the asynchronous operations inside of it have completed.
+Note: Don't worry if you don't understand all of this code; this lab is meant as an overview. The <code>event.waitUntil</code> code can be particularly confusing. This operation simply tells the browser not to preemptively terminate the service worker before the asynchronous operations inside of it have completed.
 
 
 
@@ -160,7 +160,7 @@ This code adds a fetch event listener to the service worker. When a resource is 
 
 <div class=`"`note`"`>
 
-<strong>Note:</strong> We <code>clone</code> the response because the request is a stream that can only be consumed once. Because we want to put it in the cache and serve it to the user, we need to clone a copy. See Jake Archibald's <a href="https://jakearchibald.com/2014/reading-responses/">What happens when you read a response</a> article for a more in-depth explanation.
+Note: We <code>clone</code> the response because the request is a stream that can only be consumed once. Because we want to put it in the cache and serve it to the user, we need to clone a copy. See Jake Archibald's <a href="https://jakearchibald.com/2014/reading-responses/">What happens when you read a response</a> article for a more in-depth explanation.
 
 </div>
 
@@ -198,7 +198,7 @@ Stop the server (use `Ctrl+c` if your server is running from the command line) o
 
 
 
-<strong>Note:</strong> You may see an error when the page tries to fetch the service worker script. This is because the browser attempts to re-fetch the service worker file for every navigation request. If offline, the attempt fails (causing an error log). However, the browser should default to the installed service worker and work as expected.
+Note: You may see an error when the page tries to fetch the service worker script. This is because the browser attempts to re-fetch the service worker file for every navigation request. If offline, the attempt fails (causing an error log). However, the browser should default to the installed service worker and work as expected.
 
 
 
@@ -208,7 +208,7 @@ When our app opens for the first time, the service worker is registered, install
 
 
 
-<strong>Note:</strong> You might be thinking, why didn't we just cache everything on install? Or, why did we cache anything on install, if all fetched resources are cached? This lab is intended as an overview of how you can bring offline functionality to an app. In practice, there are a variety of caching strategies and tools that let you customize your app's offline experience. Check out the <a href="https://jakearchibald.com/2014/offline-cookbook/">Offline Cookbook</a> for more info.
+Note: You might be thinking, why didn't we just cache everything on install? Or, why did we cache anything on install, if all fetched resources are cached? This lab is intended as an overview of how you can bring offline functionality to an app. In practice, there are a variety of caching strategies and tools that let you customize your app's offline experience. Check out the <a href="https://jakearchibald.com/2014/offline-cookbook/">Offline Cookbook</a> for more info.
 
 
 

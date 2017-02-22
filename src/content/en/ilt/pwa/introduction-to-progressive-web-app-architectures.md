@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-16T23:08:35Z #}
+{# wf_updated_on: 2017-02-22T19:43:12Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -538,63 +538,43 @@ Assume you are building a simple blog reader. The components of a simple app she
 
 Your index.html file in your work directory should look something like the following code. This is a subset of the actual contents and is not a complete index file. See  [appspot](https://app-shell.appspot.com/) for a real-life look at a very simple app shell.
 
-`<!DOCTYPE html>`
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>App Shell</title>
+  <link rel="manifest" href="/manifest.json">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Shell</title>
+  <link rel="stylesheet" type="text/css" href="styles/inline.css">
+</head>
+<body>
 
-`<html>`
+  <header class="header">
+    <h1 class="header__title">App Shell</h1>
+  </header>
 
-`<head>`
+  <main class="main">
+  ...
+  </main>
 
-`  <meta charset="utf-8">`
+  <div class="dialog-container">
+  . . .
+  </div>
 
-`  <title>App Shell</title>`
+  <div class="loader">
+    <svg viewBox="0 0 32 32" width="32" height="32">
+      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+    </svg>
+  </div>
 
-__`  <link rel="manifest" href="/manifest.json">`__
-
-`  <meta http-equiv="X-UA-Compatible" content="IE=edge">`
-
-`  <meta name="viewport" content="width=device-width, initial-scale=1.0">`
-
-`  <title>App Shell</title>`
-
-`  <link rel="stylesheet" type="text/css" href="styles/inline.css">`
-
-`</head>`
-
-`<body>`
-
-`  <header class="header">`
-
-`    <h1 class="header__title">App Shell</h1>`
-
-`  </header>`
-
-`  <main class="main">`
-
-`  ...`
-
-`  </main>`
-
-`  <div class="dialog-container">`
-
-`  . . .`
-
-`  </div>`
-
-`  <div class="loader">`
-
-`    <svg viewBox="0 0 32 32" width="32" height="32">`
-
-`      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>`
-
-`    </svg>`
-
-`  </div>`
-
-`  <script src="app.js" async></script>`
-
-`</body>`
-
-`</html>`
+  <script src="app.js" async></script>
+  
+</body>
+</html>
+```
 
 In this example, the key change is to add the link to the manifest file as shown in the bold text. The rest of this file is standard HTML.
 
@@ -648,17 +628,18 @@ The `sw-toolbox` library and `sw-precache` module go hand-in-hand and are built 
 
 You can install `sw-toolbox` through `Bower`, `npm` or direct from  [`GitHub`](https://github.com/GoogleChrome/sw-toolbox):
 
-`bower install --save sw-toolbox`
-
-`npm install --save sw-toolbox`
-
-`git clone ` [`https://github.com/GoogleChrome/sw-toolbox.git`](https://github.com/GoogleChrome/sw-toolbox.git)
+    bower install --save sw-toolbox
+    
+    npm install --save sw-toolbox
+    
+    git clone https://github.com/GoogleChrome/sw-toolbox.git
 
 To load `sw-toolbox`, use `importScripts` in your service worker file. For example:
 
-`importScripts('js/sw-toolbox/sw-toolbox.js'); `
-
-`// Update path to match your setup`
+```
+importScripts('js/sw-toolbox/sw-toolbox.js'); 
+// Update path to match your setup
+```
 
 A full code example is shown later in the Using `sw-precache` to Create the App Shell section.
 
@@ -700,7 +681,7 @@ A code example is shown in the Using `sw-precache` to Create the App Shell secti
 
 <div id="bestcaching"></div>
 
-### Caching Strategies Supported by `sw-toolb``ox`
+### Caching Strategies Supported by `sw-toolbox`
 
 The best caching strategy for your dynamic content is not always clear-cut and there are many situations that can affect your strategy.  For example, when using video or large files, or you do not know the amount of storage on your customer devices, then that forces you to evaluate different strategies. 
 
@@ -724,9 +705,7 @@ __The service worker ...__
 __Best strategy for ....__
 </td><td colspan="1" rowspan="1">
 
-__Corresponding __
-
-__`sw-toolbox`____ handler __
+__Corresponding  ____`sw-toolbox`____ handler__
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
@@ -806,11 +785,11 @@ While you can implement these strategies yourself manually, using `sw-toolbox` i
 
 Note that you do not have to choose just one strategy. The `sw-toolbox` routing syntax allows you to apply different strategies to different URL patterns. For example:
 
-`toolbox.router.get('/images', toolbox.cacheFirst);`
-
-`toolbox.router.get('/api', toolbox.networkFirst);`
-
-`toolbox.router.get('/profile', toolbox.fastest);`
+```
+toolbox.router.get('/images', toolbox.cacheFirst);
+toolbox.router.get('/api', toolbox.networkFirst);
+toolbox.router.get('/profile', toolbox.fastest);
+```
 
 For more information about caching strategies, see Jake Archibald's  [Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/).
 
@@ -838,6 +817,9 @@ __Caching Strategy__
 </tr>
 <tr><td colspan="1" rowspan="1">
 
+&nbsp;
+</td><td colspan="1" rowspan="1">
+
 ☐Almost never changes
 
 ☐User can see old value
@@ -847,10 +829,16 @@ __Caching Strategy__
 ☐User must always see latest value
 
 ☐Secure information - do not cache
+</td><td colspan="1" rowspan="1">
+
+ &nbsp;
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
 
+ &nbsp;
+</td><td colspan="1" rowspan="1">
+
 ☐Almost never changes
 
 ☐User can see old value
@@ -860,10 +848,16 @@ __Caching Strategy__
 ☐User must always see latest value
 
 ☐Secure information - do not cache
+</td><td colspan="1" rowspan="1">
+
+ &nbsp;
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
 
+ &nbsp;
+</td><td colspan="1" rowspan="1">
+
 ☐Almost never changes
 
 ☐User can see old value
@@ -873,10 +867,16 @@ __Caching Strategy__
 ☐User must always see latest value
 
 ☐Secure information - do not cache
+</td><td colspan="1" rowspan="1">
+
+ &nbsp;
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
 
+ &nbsp;
+</td><td colspan="1" rowspan="1">
+
 ☐Almost never changes
 
 ☐User can see old value
@@ -886,6 +886,9 @@ __Caching Strategy__
 ☐User must always see latest value
 
 ☐Secure information - do not cache
+</td><td colspan="1" rowspan="1">
+
+ &nbsp;
 </td>
 </tr></table>
 
@@ -1062,73 +1065,47 @@ It is a simple JSON file that provides developers with:
 
 The following manifest file is for the simple app shell at  [appspot.com](https://app-shell.appspot.com/).
 
-`{`
-
-`  "short_name": "App shell",`
-
-`  "name": "App shell",`
-
-`  "start_url": "/index.html",`
-
-`  "icons": [{`
-
-`        "src": "images/icon-128x128.png",`
-
-`        "sizes": "128x128",`
-
-`        "type": "image/png"`
-
-`      }, {`
-
-`        "src": "images/apple-touch-icon.png",`
-
-`        "sizes": "152x152",`
-
-`        "type": "image/png"`
-
-`      }, {`
-
-`        "src": "images/ms-touch-icon-144x144-precomposed.png",`
-
-`        "sizes": "144x144",`
-
-`        "type": "image/png"`
-
-`      }, {`
-
-`        "src": "images/chrome-touch-icon-192x192.png",`
-
-`        "sizes": "192x192",`
-
-`        "type": "image/png"`
-
-`      },{`
-
-`        "src": "images/chrome-splashscreen-icon-384x384.png",`
-
-`        "sizes": "384x384",`
-
-`        "type": "image/png"`
-
-`      }],`
-
-`  "display": "standalone",`
-
-`  "orientation": "portrait",`
-
-`  "background_color": "#3E4EB8",`
-
-`  "theme_color": "#2E3AA1"`
-
-`}`
+```
+{
+  "short_name": "App shell",
+  "name": "App shell",
+  "start_url": "/index.html",
+  "icons": [{
+        "src": "images/icon-128x128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      }, {
+        "src": "images/apple-touch-icon.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      }, {
+        "src": "images/ms-touch-icon-144x144-precomposed.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      }, {
+        "src": "images/chrome-touch-icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },{
+        "src": "images/chrome-splashscreen-icon-384x384.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      }],
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#3E4EB8",
+  "theme_color": "#2E3AA1"
+}
+```
 
 To include the manifest file in your app, include a link tag in your index.html to tell the browser where to find your manifest file:
 
-`<!-- Add to your index.html -->`
+```
+<!-- Add to your index.html -->
 
-`<!-- Web Application Manifest -->`
-
-`<link rel="manifest" href="manifest.json">`
+<!-- Web Application Manifest -->
+<link rel="manifest" href="manifest.json">
+```
 
 __Tip:__
 
@@ -1152,15 +1129,14 @@ Here's a high-level overview of the steps required to make your app work offline
 
  For example, add the following code to your app:
 
-`  if ('serviceWorker' in navigator) {`
-
-`    navigator.serviceWorker`
-
-`             .register('./service-worker.js')`
-
-`             .then(function() { console.log('Service Worker Registered'); });`
-
-`  }`
+```
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js')
+  .then(function() {
+    console.log('Service Worker Registered');
+  });
+}
+```
 
 2. Cache the site assets
 3. Serve the app shell from the cache
@@ -1183,16 +1159,15 @@ Note: The examples are provided for general information and illustrative purpose
 
 #### Caching the App Shell Manually
 
-`var cacheName = 'shell-content';
+```
+var cacheName = 'shell-content';
 var filesToCache = [
   '/css/bootstrap.css',
   '/css/main.css',
   '/js/bootstrap.min.js',
-  '/js/jquery.min.js',`
-
-`  '/offline.html',`
-
-`  '/',
+  '/js/jquery.min.js',
+  '/offline.html',
+  '/',
 ];
 
 self.addEventListener('install', function(e) {
@@ -1203,7 +1178,8 @@ self.addEventListener('install', function(e) {
       return cache.addAll(filesToCache);
     })
   );
-});`
+});
+```
 
 <div id="swprecache"></div>
 
@@ -1219,23 +1195,17 @@ To test the result of using `sw-precache` without changing your build system for
 
 First, create a `sw-precache-config.json` file with our `sw-precache` configuration.  In this example `staticFileGlobs` indicates the path to each file that we want to precache and `stripPrefix` tells `sw-precache` what part of each file path to remove. 
 
-`{`
-
-`  "staticFileGlobs": [`
-
-`    "app/index.html",`
-
-`    "app/js/main.js",`
-
-`    "app/css/main.css",`
-
-`    "app/img/**/*.{svg,png,jpg,gif}"`
-
-`  ],`
-
-`  "stripPrefix": "app/"`
-
-`}`
+```
+{
+  "staticFileGlobs": [
+    "app/index.html",
+    "app/js/main.js",
+    "app/css/main.css",
+    "app/img/**/*.{svg,png,jpg,gif}"
+  ],
+  "stripPrefix": "app/"
+}
+```
 
 Once the `sw-precache` configuration is ready then run it with the following command:
 
@@ -1245,77 +1215,57 @@ Once the `sw-precache` configuration is ready then run it with the following com
 
 The following code example uses the `gulp` command to build a project. It first creates a `gulp` task that uses the `sw-precache` module to generate a `service-worker.js` file. The following code is added to the `gulp` file:
 
-`/*jshint node:true*/`
+```
+/*jshint node:true*/
+(function() {
+  'use strict';
 
-`(function() {`
+  var gulp = require('gulp');
+  var path = require('path');
+  var swPrecache = require('sw-precache');
 
-`  'use strict';`
+  var paths = {
+    src: 'app/'
+  };
+```
 
-`  var gulp = require('gulp');`
+      
 
-`  var path = require('path');`
+```
+gulp.task('generate-service-worker', function(callback) {
+    swPrecache.write(path.join(paths.src, 'service-worker.js'), {
 
-`  var swPrecache = require('sw-precache');`
-
-`  var paths = {`
-
-`    src: 'app/'`
-
-`  };`
-
-`  gulp.task('generate-service-worker', function(callback) {`
-
-`    swPrecache.write(path.join(paths.src, 'service-worker.js'), {`
-
-`      //1`
-
-`      staticFileGlobs: [`
-
-`        paths.src + 'index.html',`
-
-`        paths.src + 'js/main.js',`
-
-`        paths.src + 'css/main.css',`
-
-`        paths.src + 'img/**/*.{svg,png,jpg,gif}'`
-
-`      ],`
-
-`      // 2`
-
-`      importScripts: [`
-
-`        paths.src + '/js/sw-toolbox.js',`
-
-`        paths.src + '/js/toolbox-scripts.js'`
-
-`      ],`
-
-`      // 3`
-
-`      stripPrefix: paths.src`
-
-`    }, callback);`
-
-`  });`
-
-`})();`
+      //1
+      staticFileGlobs: [
+        paths.src + 'index.html',
+        paths.src + 'js/main.js',
+        paths.src + 'css/main.css',
+        paths.src + 'img/**/*.{svg,png,jpg,gif}'
+      ],
+      // 2
+      importScripts: [
+        paths.src + '/js/sw-toolbox.js',
+        paths.src + '/js/toolbox-scripts.js'
+      ],
+      // 3
+      stripPrefix: paths.src
+    }, callback);
+  });
+})();
+```
 
 #### What Happens Next?
 
 When you run `gulp` you should see output similar to the following:
 
-`$ gulp generate-service-worker`
-
-`[11:56:22] Using gulpfile ~/gulpfile.js`
-
-`[11:56:22] Starting 'generate-service-worker'...`
-
-`Total precache size is about 75.87 kB for 11 resources.`
-
-`[11:56:22] Finished 'generate-service-worker' after 49 ms`
-
-`$`
+```
+$ gulp generate-service-worker
+[11:56:22] Using gulpfile ~/gulpfile.js
+[11:56:22] Starting 'generate-service-worker'...
+Total precache size is about 75.87 kB for 11 resources.
+[11:56:22] Finished 'generate-service-worker' after 49 ms
+$
+```
 
 This process generates a new `service-worker.js` file in the app directory of your project. All resources that are precached are fetched by a service worker running in a separate thread as soon as the service worker is installed. 
 

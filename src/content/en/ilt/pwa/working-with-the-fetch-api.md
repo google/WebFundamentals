@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-13T08:36:44Z #}
+{# wf_updated_on: 2017-02-22T19:47:47Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -251,7 +251,7 @@ In this example a text file is being fetched, __examples/words.txt__. Like the p
 
 
 
-Note: It may be tempting to fetch HTML and append that using the <code>innerHTML<code> attribute, but be careful⸺this can expose your site to <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">cross site scripting attacks</a>!
+Note: It may be tempting to fetch HTML and append that using the <code>innerHTML</code> attribute, but be careful -- this can expose your site to <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">cross site scripting attacks</a>!
 
 
 
@@ -415,7 +415,7 @@ There have been attempts to work around the same-origin policy (such as  [JSONP]
 
 If the server you are requesting from doesn't support CORS, you should get an error in the console indicating that the cross-origin request is blocked due to the CORS `Access-Control-Allow-Origin` header being missing. 
 
-You can use  [no-cors](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) mode to request opaque resources. Opaque responses can't be accessed with JavaScript but the response can still be served or cached by a service worker. Using `no-cors` mode with fetch is relatively simple. To update the above example with `no-cors`, we pass in the `init` object with `mode` set to `no-cors`:
+You can use  [`no-cors`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) mode to request opaque resources. Opaque responses can't be accessed with JavaScript but the response can still be served or cached by a service worker. Using `no-cors` mode with fetch is relatively simple. To update the above example with `no-cors`, we pass in the `init` object with `mode` set to `no-cors`:
 
 #### main.js
 

@@ -2,13 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-01-26T21:37:07Z #}
+{# wf_updated_on: 2017-02-22T19:32:13Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
-# Lighthouse
- PWA Analysis Tool {: .page-title }
- PWA Analysis Tool
+# Lighthouse PWA Analysis Tool {: .page-title }
 
 
 
@@ -50,9 +48,7 @@ Run Lighthouse on your application by selecting the icon and choosing __Generate
 
 Lighthouse generates an HTML page with the results. An example page is shown below. 
 
-![76f48671607bf2b2.png](img/76f48671607bf2b2.png)
-
-[IMAGEINFO]: lighthouse-lab-solution-score.png, Lighthouse report
+![Lighthouse report](img/76f48671607bf2b2.png)
 
 
 

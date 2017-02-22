@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-15T18:25:57Z #}
+{# wf_updated_on: 2017-02-22T20:37:58Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -67,7 +67,7 @@ This folder contains:
 * __style__ folder contains the app's cascading stylesheet
 * __test__ folder contains QUnit tests
 * __index.html __is the main HTML page for our sample site/application
-* __service-worker.js __is the service worker file where we set up the interactions with the cache
+* __service-worker.js__ is the service worker file where we set up the interactions with the cache
 
 <div id="2"></div>
 

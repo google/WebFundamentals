@@ -62,6 +62,7 @@ function updateCodeLab(sourceFile, destFile, bookPath) {
   markdown = markdown.replace(/\(https:\/\/developers.google.com\//g, '(\/');
   markdown = markdown.replace(/^\[\]\(/gm, '[Link](');
   markdown = markdown.replace(/__\s?Note:\s?__\s?/g, 'Note: ');
+  markdown = markdown.replace(/^<strong>Note:<\/strong>/gm, 'Note: ');
   markdown = markdown.replace(/<div class="note">((.|\n)*?)<\/div>/g, '$1');
   markdown = markdown.replace(/<aside markdown="1" class="special">/g, '<aside class="key-point">');
   markdown = markdown.replace(/<aside markdown="1" class="warning">/g, '<aside class="warning">');

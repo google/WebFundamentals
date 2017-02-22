@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-13T08:41:45Z #}
+{# wf_updated_on: 2017-02-21T22:43:13Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -520,19 +520,19 @@ We can test push messaging in our app using  [cURL](https://curl.haxx.se/docs/ma
 
 The cURL command that sends a request to FCM to issue a push message looks like this:
 
-`curl "ENDPOINT_URL" --request POST --header "TTL: 60" --header "Content-Length: 0" --header "Authorization: key=SERVER_KEY"`
+    curl "ENDPOINT_URL" --request POST --header "TTL: 60" --header "Content-Length: 0" --header "Authorization: key=SERVER_KEY"
 
 For example:
 
-`curl "https://android.googleapis.com/gcm/send/fYFVeJQJ2CY:APA91bGrFGRmy-sY6NaF8atX11K0bKUUNXLVzkomGJFcP-lvne78UzYeE91IvWMxU2hBAUJkFlBVdYDkcwLG8vO8cYV0X3Wgvv6MbVodUfc0gls7HZcwJL4LFxjg0y0-ksEhKjpeFC5P" --request POST --header "TTL: 60" --header "Content-Length: 0" --header "Authorization: key=AIzaSyD1JcZ8WM1vTtH6Y0tXq_Pnuw4jgj_92yg"`
+    curl "https://android.googleapis.com/gcm/send/fYFVeJQJ2CY:APA91bGrFGRmy-sY6NaF8atX11K0bKUUNXLVzkomGJFcP-lvne78UzYeE91IvWMxU2hBAUJkFlBVdYDkcwLG8vO8cYV0X3Wgvv6MbVodUfc0gls7HZcwJL4LFxjg0y0-ksEhKjpeFC5P" --request POST --header "TTL: 60" --header "Content-Length: 0" --header "Authorization: key=AIzaSyD1JcZ8WM1vTtH6Y0tXq_Pnuw4jgj_92yg"
 
 You can send a message to Firefox using the same cURL command, but without the `Authorization` header:
 
-`curl "ENDPOINT_URL" --request POST --header "TTL: 60" --header "Content-Length: 0" --header`
+    curl "ENDPOINT_URL" --request POST --header "TTL: 60" --header "Content-Length: 0" --header
 
 For example:
 
-`curl "https://updates.push.services.mozilla.com/wpush/v1/gAAAAABYGml8oAFQC2a-HYbtOZP_HGa0kSB2atFqUY_PQISawx9WEOiI40yH0TL6uDTRBmGCENXaddq-50MuEgZGL5-b_gWSVC2x_FnvK2WQwI6yStyVgAQ9CSPl-7hKVuiuvs2s9zuT" --request POST --header "TTL: 60" --header "Content-Length: 0"`
+    curl "https://updates.push.services.mozilla.com/wpush/v1/gAAAAABYGml8oAFQC2a-HYbtOZP_HGa0kSB2atFqUY_PQISawx9WEOiI40yH0TL6uDTRBmGCENXaddq-50MuEgZGL5-b_gWSVC2x_FnvK2WQwI6yStyVgAQ9CSPl-7hKVuiuvs2s9zuT" --request POST --header "TTL: 60" --header "Content-Length: 0"
 
 ### Working with Data Payloads
 
@@ -670,41 +670,32 @@ Here's the relevant section from the spec regarding the format of the VAPID publ
 
 You can see how to do this in the  [web-push node library](https://github.com/web-push-libs/web-push):
 
-`function generateVAPIDKeys() {  `
+```
+function generateVAPIDKeys() {  
+  const vapidKeys = webpush.generateVAPIDKeys();
 
-`  const vapidKeys = webpush.generateVAPIDKeys();`
-
-`  return {`
-
-`    publicKey: vapidKeys.publicKey,  `
-
-`    privateKey: vapidKeys.privateKey,  `
-
-`  };  `
-
-`}`
+  return {
+    publicKey: vapidKeys.publicKey,  
+    privateKey: vapidKeys.privateKey,  
+  };  
+}
+```
 
 #### Subscribing with the public key
 
 To subscribe a Chrome user for push with the VAPID public key, pass the public key as a `Uint8Array` using the `applicationServerKey` parameter of the `subscribe()` method.
 
-`const publicKey = new Uint8Array([0x4, 0x37, 0x77, 0xfe, .... ]);  `
+```
+const publicKey = new Uint8Array([0x4, 0x37, 0x77, 0xfe, .... ]);  
+serviceWorkerRegistration.pushManager.subscribe(  
+  {  
+    userVisibleOnly: true,  
+    applicationServerKey: publicKey  
+  }  
+);
+```
 
-`serviceWorkerRegistration.pushManager.subscribe(  `
-
-`  {  `
-
-`    userVisibleOnly: true,  `
-
-`    applicationServerKey: publicKey  `
-
-`  }  `
-
-`);`
-
-You'll know if it has worked by examining the endpoint in the resulting subscription object, if the origin is __fcm.googleapis.com__, it's working.
-
-`https://fcm.googleapis.com/fcm/send/ABCD1234`
+You'll know if it has worked by examining the endpoint in the resulting subscription object; if the origin is __fcm.googleapis.com__, it's working.
 
 
 
@@ -714,7 +705,7 @@ Note: Even though this is an FCM URL, use the <a href="https://tools.ietf.org/ht
 
 #### Sending a push message
 
-To send a message using VAPID, you make a normal Web Push Protocol request with two additional HTTP headers: an Authorization header and a Crypto-Key header. Let's look at these new headers in detail.
+To send a message using VAPID, you make a normal Web Push Protocol request with two additional HTTP headers: an `Authorization` header and a `Crypto-Key` header. Let's look at these new headers in detail.
 
 
 
@@ -724,23 +715,22 @@ Note: This is where web push <a href="https://github.com/web-push-libs">librarie
 
 ##### Authorization header
 
-The <code>Authorization</code> header is a signed  [JSON Web Token (JWT)](https://jwt.io/) with "WebPush " in front of it.
+The `Authorization` header is a signed  [JSON Web Token (JWT)](https://jwt.io/) with "WebPush " in front of it.
 
 A JWT is a way of sharing a JSON object with a second party in such a way that the sending party can sign it and the receiving party can verify the signature is from the expected sender. The structure of a JWT is three encrypted strings, joined with a single dot between them.
 
-<code>&lt;JWTHeader&gt;.&lt;Payload&gt;.&lt;Signature&gt;</code>
+`&lt;JWTHeader&gt;.&lt;Payload&gt;.&lt;Signature&gt;`
 
 ##### JWT header
 
 The JWT Header contains the algorithm name used for signing and the type of token. For VAPID this must be:
 
-`{  `
-
-`  "typ": "JWT",  `
-
-`  "alg": "ES256"  `
-
-`}`
+```
+{  
+  "typ": "JWT",  
+  "alg": "ES256"  
+}
+```
 
 This is then base64 url encoded and forms the first part of the JWT.
 
@@ -748,24 +738,22 @@ This is then base64 url encoded and forms the first part of the JWT.
 
 The Payload is another JSON object containing the following:
 
-* Audience ("aud")
+* Audience ("`aud`")
 * This is the origin of the push service (NOT the origin of your site). In JavaScript, you could do the following to get the audience: <code>const audience = new URL(subscription.endpoint).origin</code>
-* Expiration Time ("exp")
+* Expiration Time ("`exp`")
 * This is the number of seconds until the request should be regarded as expired. This MUST be within 24 hours of the request being made, in UTC.
-* Subject ("sub")
+* Subject ("`sub`")
 * The subject needs to be a URL or a mailto: URL. This provides a point of contact in case the push service needs to contact the message sender.
 
 An example payload could look like the following:
 
-`{  `
-
-`    "aud": "http://push-service.example.com",  `
-
-`    "exp": Math.floor((Date.now() / 1000) + (12 * 60 * 60)),  `
-
-`    "sub": "mailto: my-email@some-url.com"  `
-
-`}`
+```
+{  
+    "aud": "http://push-service.example.com",  
+    "exp": Math.floor((Date.now() / 1000) + (12 * 60 * 60)),  
+    "sub": "mailto: my-email@some-url.com"  
+}
+```
 
 This JSON object is base64 url encoded and forms the second part of the JWT.
 
@@ -775,23 +763,22 @@ The Signature is the result of joining the encoded header and payload with a dot
 
 There are a  [number of libraries](https://jwt.io/#libraries-io) that will take the header and payload JSON objects and generate this signature for you.
 
-The signed JWT is used as the `Authorization` header, with "WebPush " prepended to it, and looks something like the following:
+The signed JWT is used as the `Authorization` header, with "WebPush" prepended to it, and looks something like the following:
 
-`WebPush eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJodHRwczovL2ZjbS5nb29nbGVhcGlzLmNvbSIsImV4cCI6MTQ2NjY2ODU5NCwic3ViIjoibWFpbHRvOnNpbXBsZS1wdXNoLWRlbW9AZ2F1bnRmYWNlLmNvLnVrIn0.Ec0VR8dtf5qb8Fb5Wk91br-evfho9sZT6jBRuQwxVMFyK5S8bhOjk8kuxvilLqTBmDXJM5l3uVrVOQirSsjq0A`
+    WebPush eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJodHRwczovL2ZjbS5nb29nbGVhcGlzLmNvbSIsImV4cCI6MTQ2NjY2ODU5NCwic3ViIjoibWFpbHRvOnNpbXBsZS1wdXNoLWRlbW9AZ2F1bnRmYWNlLmNvLnVrIn0.Ec0VR8dtf5qb8Fb5Wk91br-evfho9sZT6jBRuQwxVMFyK5S8bhOjk8kuxvilLqTBmDXJM5l3uVrVOQirSsjq0A
 
-There are a few things to point out here. First, the Authorization header literally contains the word 'WebPush' and should be followed by a space then the JWT. Also notice the dots separating the JWT header, payload, and signature.
+There are a few things to point out here. First, the `Authorization` header literally contains the word `WebPush` and should be followed by a space then the JWT. Also notice the dots separating the JWT header, payload, and signature.
 
 ##### Crypto-Key header
 
 As well as the `Authorization` header, you must add your VAPID public key to the `Crypto-Key` header as a base64 url encoded string with `p256ecdsa=` prepended to it.
 
-`p256ecdsa=BDd3_hVL9fZi9Ybo2UUzA284WG5FZR30_95YeZJsiApwXKpNcF1rRPF3foIiBHXRdJI2Qhumhf6_LFTeZaNndIo`
+    p256ecdsa=BDd3_hVL9fZi9Ybo2UUzA284WG5FZR30_95YeZJsiApwXKpNcF1rRPF3foIiBHXRdJI2Qhumhf6_LFTeZaNndIo
 
 When you are sending a notification with encrypted data, you will already be using the `Crypto-Key` header, so to add the application server key, you just need to add a comma before adding the above content, resulting in:
 
-`dh=BGEw2wsHgLwzerjvnMTkbKrFRxdmwJ5S_k7zi7A1coR_sVjHmGrlvzYpAT1n4NPbioFlQkIrTNL8EH4V3ZZ4vJE,`
-
-`p256ecdsa=BDd3_hVL9fZi9Ybo2UUzA284WG5FZR30_95YeZJsiApwXKpNcF1rRPF3foIiBHXRdJI2Qhumhf6_LFTeZaN`
+    dh=BGEw2wsHgLwzerjvnMTkbKrFRxdmwJ5S_k7zi7A1coR_sVjHmGrlvzYpAT1n4NPbioFlQkIrTNL8EH4V3ZZ4vJE,
+    p256ecdsa=BDd3_hVL9fZi9Ybo2UUzA284WG5FZR30_95YeZJsiApwXKpNcF1rRPF3foIiBHXRdJI2Qhumhf6_LFTeZaN
 
 
 
@@ -908,7 +895,7 @@ It's not unreasonable for a site to send the user lots of important and relevant
 
 A simple technique is to group messages that are contextually relevant into one notification. For example, if you are building a social app, group notifications by sender and show one per person. If you have an auction site, group notifications by the item being bid on. 
 
-The notification object includes a `tag` attribute that is the grouping key. When creating a notification with a tag and there is already a notification with the same tag visible to the user, the system automatically replaces it without creating a new notification. For example:
+The notification object includes a `tag` attribute that is the grouping key. When creating a notification with a `tag` and there is already a notification with the same `tag` visible to the user, the system automatically replaces it without creating a new notification. For example:
 
 #### serviceworker.js
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-13T08:04:35Z #}
+{# wf_updated_on: 2017-02-22T20:13:31Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -293,11 +293,7 @@ Once we have loaded the app initially, all the files needed to run the app are s
 
 To get a copy of the working code, navigate to the __solution__ folder.
 
-
-## <a id="6" />
-
-
-
+<div id="6"></div>
 
 
 ## 6. Test the updated app

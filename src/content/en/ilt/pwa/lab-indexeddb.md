@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-01-26T22:01:34Z #}
+{# wf_updated_on: 2017-02-22T20:49:38Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -54,18 +54,18 @@ Open your browser and navigate to __localhost:8080/indexed-db-lab/app__.
 
 
 
-<strong>Note:</strong> If you have installed a service worker on localhost before, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If you have installed a service worker on localhost before, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
-If you have a text editor that lets you open a project, open the __indexed-db-lab/app __folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
+If you have a text editor that lets you open a project, open the __indexed-db-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
 
 This folder contains:
 
 * __js/main.js__ is where we will write the scripts to interact with the database
 * __js/idb.js__ is the IndexedDB Promised library
 * __test/test.html__ is a QUnit test page
-* __index.html __is the main HTML page for our sample site/application, and which contains some forms for interacting with our IndexedDB database
+* __index.html__ is the main HTML page for our sample site/application, and which contains some forms for interacting with our IndexedDB database
 
 <div id="2"></div>
 
@@ -114,7 +114,7 @@ Open the QUnit test page, __app/test/test.html__, in another browser tab. This p
 
 
 
-<strong>Note:</strong> Be sure to open the test page using the localhost address so that it opens from the server and not directly from the file system.
+Note: Be sure to open the test page using the localhost address so that it opens from the server and not directly from the file system.
 
 
 
@@ -124,7 +124,7 @@ Open the QUnit test page, __app/test/test.html__, in another browser tab. This p
 
 
 
-<strong>Note:</strong> If at any point in the codelab your database gets into a bad state, you can delete it from the console with the following command: <code>indexedDB.deleteDatabase('couches-n-things');</code>. Note that you can't delete the database while the testing page is open.
+Note: If at any point in the codelab your database gets into a bad state, you can delete it from the console with the following command: <code>indexedDB.deleteDatabase('couches-n-things');</code>. Note that you can't delete the database while the testing page is open.
 
 
 
@@ -134,7 +134,7 @@ Let's create an object store in the database to hold the furniture objects.
 
 
 
-<strong>Note:</strong> Close the test page. The database version can't be changed while another page is using the database.
+Note: Close the test page. The database version can't be changed while another page is using the database.
 
 
 
@@ -146,7 +146,9 @@ To complete TODO 3.2 in <strong>main.js</strong>, replace <code>var dbPromise = 
 var dbPromise = idb.open('couches-n-things', 2, function(upgradeDb) {
   switch (upgradeDb.oldVersion) {
     case 0:
-      // a placeholder case so that the switch block will execute when the database is first created (oldVersion is 0)
+      // a placeholder case so that the switch block will 
+      // execute when the database is first created
+      // (oldVersion is 0)
     case 1:
       console.log('Creating the products object store');
       upgradeDb.createObjectStore('products', {keyPath: 'id'});
@@ -175,14 +177,14 @@ We have specified the `id` property as the `keyPath` for the object store. Objec
 
 
 
-<strong>Note:</strong> We are deliberately not including break statements in the switch block to ensure all of the cases after the starting case will execute.
+Note: We are deliberately not including `break` statements in the switch block to ensure all of the cases after the starting case will execute.
 
 
 
 #### For more information
 
-*  [idb - Github](https://github.com/jakearchibald/idb)
-*  [createObjectStore method](https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/createObjectStore)
+*  [`idb` - Github](https://github.com/jakearchibald/idb)
+*  [`createObjectStore` method](https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/createObjectStore)
 
 ### 3.3 Add objects to the object store
 
@@ -274,7 +276,7 @@ All database operations must be carried out within a  [transaction](https://deve
 
 
 
-<strong>Note:</strong> Specify the transaction mode as <code>readwrite</code> when making changes to the database (that is, using the <code>add</code>, <code>put</code>, or <code>delete</code> methods).
+Note: Specify the transaction mode as <code>readwrite</code> when making changes to the database (that is, using the <code>add</code>, <code>put</code>, or <code>delete</code> methods).
 
 
 
@@ -297,7 +299,7 @@ Create some indexes on your object store.
 
 
 
-<strong>Note:</strong> Close the test page. The database version can't be changed while another page is using the database.
+Note: Close the test page. The database version can't be changed while another page is using the database.
 
 
 
@@ -314,7 +316,7 @@ case 2:
 
 
 
-<strong>Important:</strong> Remember to change the version number to 3 before you test the code in the browser.
+__Important:__ Remember to change the version number to 3 before you test the code in the browser.
 
 
 
@@ -326,7 +328,9 @@ The full `idb.open` method should look like this:
 var dbPromise = idb.open('couches-n-things', 3, function(upgradeDb) {
   switch (upgradeDb.oldVersion) {
     case 0:
-      // a placeholder case so that the switch block will execute when the database is first created (oldVersion is 0)
+      // a placeholder case so that the switch block will 
+      // execute when the database is first created
+      // (oldVersion is 0)
     case 1:
       console.log('Creating the products object store');
       upgradeDb.createObjectStore('products', {keyPath: 'id'});
@@ -345,7 +349,7 @@ var dbPromise = idb.open('couches-n-things', 3, function(upgradeDb) {
 
 
 
-<strong>Note:</strong> We did not include break statements in the switch block so that all of the latest updates to the database will execute even if the user is one or more versions behind.
+Note: We did not include break statements in the switch block so that all of the latest updates to the database will execute even if the user is one or more versions behind.
 
 
 
@@ -359,8 +363,8 @@ In the example, we create an index on the "name" property, allowing us to search
 
 #### For more information
 
-*  [IDBIndex - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex)
-*  [createIndex method - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex)
+*  [`IDBIndex` - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex)
+*  [`createIndex` method - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex)
 
 ### 4.2 Create "price" and "description" indexes
 
@@ -368,13 +372,13 @@ To complete TODO 4.2 in <strong>main.js</strong>, write a case 3 to add "price" 
 
 
 
-<strong>Note:</strong> Remember to change the version number of the database to 4 before testing the code.
+Note: Remember to change the version number of the database to 4 before testing the code.
 
 
 
 
 
-<strong>Note:</strong> Remember to close the test page. The database version can't be changed while another page is using the database.
+Note: Remember to close the test page. The database version can't be changed while another page is using the database.
 
 
 
@@ -403,7 +407,7 @@ Save the code and refresh the page in the browser.
 
 
 
-<strong>Note:</strong> Make sure the items we added to the database in the previous step are still in the database. If the database is empty, click <strong>Add Products</strong> to populate it.
+Note: Make sure the items we added to the database in the previous step are still in the database. If the database is empty, click <strong>Add Products</strong> to populate it.
 
 
 
@@ -413,7 +417,7 @@ Refresh the test page. The app should pass the seventh test, which checks if the
 
 
 
-<strong>Note:</strong> The <code>get</code> method is case sensitive.
+Note: The <code>get</code> method is case sensitive.
 
 
 
@@ -423,7 +427,7 @@ This code calls the `get` method on the 'name' index to retrieve an item by its 
 
 #### For more information
 
-*  [Get method - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/get)
+*  [`Get` method - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/get)
 
 ### 4.4 Use a cursor object
 
@@ -481,9 +485,9 @@ After getting the price values from the page, we determine which method to call 
 
 #### For more information
 
-*  [IDBCursor - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor)
-*  [IDBKeyRange - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange)
-*  [cursor.continue() - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continue)
+*  [`IDBCursor` - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor)
+*  [`IDBKeyRange` - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange)
+*  [`cursor.continue()` - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continue)
 
 #### Solution code
 
@@ -507,13 +511,13 @@ To complete TODO 5.1 in <strong>main.js</strong>, write a case 4 that adds an "o
 
 
 
-<strong>Important:</strong> Remember to change the version number of the database to 5 so the callback executes.
+__Important:__ Remember to change the version number of the database to 5 so the callback executes.
 
 
 
 
 
-<strong>Note:</strong> Remember to close the test page. The database version can't be changed while another page is using the database.
+Note: Remember to close the test page. The database version can't be changed while another page is using the database.
 
 
 
@@ -527,7 +531,7 @@ To complete TODO 5.2 in <strong>main.js</strong>, add the following items to the
 
 
 
-<strong>Note:</strong> You'll need to write the code to actually add the items.
+Note: You'll need to write the code to actually add the items.
 
 
 
@@ -581,9 +585,7 @@ To complete TODO 5.4 in the <code>getOrders</code> function in <strong>main.js</
 
 
 
-<strong>Hint: </strong>
-
-Return the call to <code>dbPromise</code> otherwise the orders array will not be passed to the <code>processOrders</code> function.
+__Hint:__ Return the call to <code>dbPromise</code> otherwise the orders array will not be passed to the <code>processOrders</code> function.
 
 
 
@@ -651,7 +653,7 @@ Here we are subtracting the quantity ordered from the quantity left in the "prod
 
 #### For more information
 
-*  [new Promise - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+*  [new `Promise` - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 ### 5.7 Update the "products" object store
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-13T08:34:05Z #}
+{# wf_updated_on: 2017-02-21T21:45:57Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -33,24 +33,23 @@ In this section, we outline a few common patterns for caching resources:  *on se
 
 We can cache the HTML, CSS, JS, and any static files that make up the application shell in the `install` event of the service worker:
 
-`self.addEventListener('install', function(event) {
+```
+self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(cacheName).then(function(cache) {
-      return cache.addAll(`
-
-`        [
+      return cache.addAll(
+        [
           '/css/bootstrap.css',
           '/css/main.css',
           '/js/bootstrap.min.js',
-          '/js/jquery.min.js',`
-
-`          '/offline.html'
-        ]`
-
-`      );
+          '/js/jquery.min.js',
+          '/offline.html'
+        ]
+      );
     })
   );
-});`
+});
+```
 
 This event listener triggers when the service worker is first installed.
 
@@ -70,7 +69,8 @@ If the whole site can't be taken offline, you can let the user select the conten
 
 One method is to give the user a "Read later" or "Save for offline" button. When it's clicked, fetch what you need from the network and put it in the cache:
 
-`document.querySelector('.cache-article').addEventListener('click', function(event) {
+```
+document.querySelector('.cache-article').addEventListener('click', function(event) {
   event.preventDefault();
   var id = this.dataset.articleId;
   caches.open('mysite-article-' + id).then(function(cache) {
@@ -82,7 +82,8 @@ One method is to give the user a "Read later" or "Save for offline" button. When
       cache.addAll(urls);
     });
   });
-});`
+});
+```
 
 In the above example, when the user clicks an element with the `cache-article` class, we are getting the article ID, fetching the article with that ID, and adding the article to the cache.
 
@@ -96,7 +97,8 @@ Note: The Cache API is available on the window object, meaning you don't need to
 
 If a request doesn't match anything in the cache, get it from the network, send it to the page and add it to the cache at the same time.
 
-`self.addEventListener('fetch', function(event) {
+```
+self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.open('mysite-dynamic').then(function(cache) {
       return cache.match(event.request).then(function (response) {
@@ -107,7 +109,8 @@ If a request doesn't match anything in the cache, get it from the network, send 
       });
     })
   );
-});`
+});
+```
 
 This approach works best for resources that frequently update, such as a user's inbox or article contents. This is also useful for non-essential content such as avatars, but care is needed. If you do this for a range of URLs, be careful not to bloat the storage of your origin — if the user needs to reclaim disk space you don't want to be the prime candidate. Make sure you get rid of items in the cache you don't need any more.
 
@@ -137,10 +140,11 @@ You don't often need to handle this case specifically. Cache falling back to net
 
 This approach is good for any static assets that are part of your app's main code (part of that "version" of your app). You should have cached these in the install event, so you can depend on them being there.
 
-`self.addEventListener('fetch', function(event) {`
-
-`  event.respondWith(caches.match(event.request));
-});`
+```
+self.addEventListener('fetch', function(event) {
+  event.respondWith(caches.match(event.request));
+});
+```
 
 If a match isn't found in the cache, the response will look like a connection error.
 
@@ -148,9 +152,11 @@ If a match isn't found in the cache, the response will look like a connection er
 
 This is the correct approach for things that can't be performed offline, such as analytics pings and non-GET requests. Again, you don't often need to handle this case specifically and the cache falling back to network approach will often be more appropriate.
 
-`self.addEventListener('fetch', function(event) {
+```
+self.addEventListener('fetch', function(event) {
   event.respondWith(fetch(event.request));
-});`
+});
+```
 
 Alternatively, simply don't call `event.respondWith`, which will result in default browser behaviour.
 
@@ -160,14 +166,15 @@ Alternatively, simply don't call `event.respondWith`, which will result in defau
 
 If you're making your app offline-first, this is how you'll handle the majority of requests. Other patterns will be exceptions based on the incoming request.
 
-`self.addEventListener('fetch', function(event) {
+```
+self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
       return response || fetch(event.request);
     })
-  );`
-
-`});`
+  );
+});
+```
 
 This gives you the "Cache only" behavior for things in the cache and the "Network only" behaviour for anything not cached (which includes all non-GET requests, as they cannot be cached).
 
@@ -177,13 +184,15 @@ This is a good approach for resources that update frequently, and are not part o
 
 However, this method has flaws. If the user has an intermittent or slow connection they'll have to wait for the network to fail before they get content from the cache. This can take an extremely long time and is a frustrating user experience. See the next approach, Cache then network, for a better solution.
 
-`self.addEventListener('fetch', function(event) {
+```
+self.addEventListener('fetch', function(event) {
   event.respondWith(
     fetch(event.request).catch(function() {
       return caches.match(event.request);
     })
   );
-});`
+});
+```
 
 Here we first send the request to the network using `fetch()`, and only if it fails do we look for a response in the cache. 
 
@@ -229,7 +238,8 @@ We are sending a request to the network and the cache. The cache will most likel
 
 Here is the code in the service worker:
 
-`self.addEventListener('fetch', function(event) {
+```
+self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.open('mysite-dynamic').then(function(cache) {
       return fetch(event.request).then(function(response) {
@@ -238,7 +248,8 @@ Here is the code in the service worker:
       });
     })
   );
-});`
+});
+```
 
 This caches the network responses as they are fetched.
 
@@ -248,7 +259,8 @@ Sometimes you can replace the current data when new data arrives (for example, g
 
 If you fail to serve something from the cache and/or network you may want to provide a generic fallback. This technique is ideal for secondary imagery such as avatars, failed POST requests, "Unavailable while offline" page.
 
-`self.addEventListener('fetch', function(event) {
+```
+self.addEventListener('fetch', function(event) {
   event.respondWith(
     // Try the cache
     caches.match(event.request).then(function(response) {
@@ -262,39 +274,34 @@ If you fail to serve something from the cache and/or network you may want to pro
       // Eg, a fallback silhouette image for avatars.
     })
   );
-});`
+});
+```
 
 The item you fallback to is likely to be an install dependency.
 
 You can also provide different fallbacks based on the network error:
 
-`self.addEventListener('fetch', function(event) {
+```
+self.addEventListener('fetch', function(event) {
   event.respondWith(
     // Try the cache
     caches.match(event.request).then(function(response) {
-      if (response) {`
-
-`        return response;`
-
-`      }`
-
-`      return fetch(event.request).then(function(response) {`
-
-`        if (response.status === 404) {`
-
-`          return caches.match('pages/404.html');`
-
-`        }`
-
-`        return response`
-
-`      });
+      if (response) {
+        return response;
+      }
+      return fetch(event.request).then(function(response) {
+        if (response.status === 404) {
+          return caches.match('pages/404.html');
+        }
+        return response
+      });
     }).catch(function() {
       // If both fail, show a generic fallback:
       return caches.match('/offline.html');
     })
   );
-});`
+});
+```
 
 Network response errors do not throw an error in the `fetch` promise. Instead, `fetch` returns the response object containing the error code of the network error. This means we handle network errors in a `.then` instead of a `.catch`.
 
@@ -304,7 +311,8 @@ Network response errors do not throw an error in the `fetch` promise. Instead, `
 
 Once a new service worker has installed and a previous version isn't being used, the new one activates, and you get an `activate` event. Because the old version is out of the way, it's a good time to delete unused caches.
 
-`self.addEventListener('activate', function(event) {
+```
+self.addEventListener('activate', function(event) {
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
@@ -319,7 +327,7 @@ Once a new service worker has installed and a previous version isn't being used,
     })
   );
 });
-`
+```
 
 During activation, other events such as `fetch` are put into a queue, so a long activation could potentially block page loads. Keep your activation as lean as possible, only using it for things you couldn't do while the old version was active.
 
@@ -339,11 +347,11 @@ Here we cover the Cache API properties and methods.
 
 We can check if the browser supports the Cache API like this:
 
-`if ('caches' in window) {`
-
-`        // has support`
-
-`}`
+```
+if ('caches' in window) {
+        // has support
+}
+```
 
 <div id="createcache"></div>
 
@@ -351,7 +359,9 @@ We can check if the browser supports the Cache API like this:
 
 An origin can have multiple named Cache objects. To create a cache or open a connection to an existing cache we use the  [`caches.open`](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open) method. 
 
-`caches.open(cacheName)`
+```
+caches.open(cacheName)
+```
 
 This returns a promise that resolves to the cache object. `caches.open` accepts a string that will be the name of the cache.
 
@@ -365,11 +375,11 @@ The Cache API comes with several methods that let us create and manipulate data 
 
 There are three methods we can use to add data to the cache. These are  [`add`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/add),  [`addAll`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/addAll), and  [`put`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/put). In practice, we will call these methods on the cache object returned from `caches.open()`. For example:
 
-`caches.open('example-cache').then(function(cache) {`
-
-`        cache.add('/example-file.html');`
-
-`});`
+```
+caches.open('example-cache').then(function(cache) {
+        cache.add('/example-file.html');
+});
+```
 
 `Caches.open` returns the `example-cache` Cache object, which is passed to the callback in `.then`. We call the `add` method on this object to add the file to that cache.
 
@@ -379,9 +389,11 @@ There are three methods we can use to add data to the cache. These are  [`add`](
 
 `cache.put(request, response)` - This method takes both the request and response object and adds them to the cache. This lets you manually insert the response object. Often, you will just want to `fetch()` one or more requests and then add the result straight to your cache. In such cases you are better off just using `cache.add` or `cache.addAll`, as they are shorthand functions for one or more of these operations:
 
-`fetch(url).then(function (response) {
+```
+fetch(url).then(function (response) {
   return cache.put(url, response);
-})`
+})
+```
 
 #### Match data
 
@@ -396,13 +408,15 @@ There are a couple of methods to search for specific content in the cache:  [`ma
 
 `caches.matchAll(request, options)` -  This method is the same as `.match` except that it returns all of the matching responses from the cache instead of just the first. For example, if your app has cached some images contained in an image folder, we could return all images and perform some operation on them like this:
 
-`caches.open('example-cache').then(function(cache) {
+```
+caches.open('example-cache').then(function(cache) {
   cache.matchAll('/images/').then(function(response) {
     response.forEach(function(element, index, array) {
       cache.delete(element);
     });
   });
-})`
+})
+```
 
 #### Delete data
 

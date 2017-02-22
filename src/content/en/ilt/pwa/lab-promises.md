@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-01-27T18:45:09Z #}
+{# wf_updated_on: 2017-02-22T20:32:26Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -55,7 +55,7 @@ Open your browser and navigate to __localhost:8080/promises-lab/app__.
 
 
 
-<strong>Note:</strong> If a service worker is already registered on localhost, then <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If a service worker is already registered on localhost, then <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
@@ -106,13 +106,13 @@ return promiseOfImageName;
 
 Save the script and refresh the page. 
 
-Enter "Spain" into the app's __Country Name __field . Then, click __Get Image Name__. You should see a  [Promise object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) logged in the console.
+Enter "Spain" into the app's __Country Name__ field. Then, click __Get Image Name__. You should see a  [Promise object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) logged in the console.
 
-Now enter "Hello World" into the __Country Name __field and click __Get Image Name__. You should see another Promise object logged in the console, followed by an error.
+Now enter "Hello World" into the __Country Name__ field and click __Get Image Name__. You should see another Promise object logged in the console, followed by an error.
 
 
 
-<strong>Note:</strong> Navigate to <strong>app/test/test.html</strong> in the browser to check your function implementations. Functions that are incorrectly implemented or unimplemented show red errors. Be sure to open the test page using the localhost address so that it opens from the server and not directly from the file system.
+Note: Navigate to <strong>app/test/test.html</strong> in the browser to check your function implementations. Functions that are incorrectly implemented or unimplemented show red errors. Be sure to open the test page using the localhost address so that it opens from the server and not directly from the file system.
 
 
 
@@ -154,7 +154,7 @@ return getImageName(country)
 
 Save the script and refresh the page. 
 
-Enter "Spain" into the app's __Country Name __field again. Now click __Flag Chain__. In addition to the promise object, "Spain.png" should now be logged.
+Enter "Spain" into the app's __Country Name__ field again. Now click __Flag Chain__. In addition to the promise object, "Spain.png" should now be logged.
 
 Now enter "Hello World" into the __Country Name__ text input and click __Flag Chain__ again. You should see another promise logged in the console, followed by a custom error message.
 
@@ -169,7 +169,7 @@ If the first function is called, then it is implicitly passed the resolved promi
 
 
 
-<strong>Note:</strong> We used named functions inside <code>then</code> as good practice, but we could use <a href="https://en.wikibooks.org/wiki/JavaScript/Anonymous_functions">anonymous functions</a> as well.
+Note: We used named functions inside <code>then</code> as good practice, but we could use <a href="https://en.wikibooks.org/wiki/JavaScript/Anonymous_functions">anonymous functions</a> as well.
 
 
 
@@ -269,7 +269,7 @@ Add a `catch` to the promise chain that uses the `fallbackName` function to supp
 
 
 
-<strong>Note:</strong> This test is asynchronous and may take a few moments to complete.
+Note: This test is asynchronous and may take a few moments to complete.
 
 
 
@@ -320,7 +320,7 @@ Save the script and refresh the page. The console should log each promise object
 
 
 
-<strong>Note:</strong> In this example we are using an <a href="https://en.wikibooks.org/wiki/JavaScript/Anonymous_functions">anonymous function</a> inside the <code>then</code> call. This is not related to <code>Promise.all</code>.
+Note: In this example we are using an <a href="https://en.wikibooks.org/wiki/JavaScript/Anonymous_functions">anonymous function</a> inside the <code>then</code> call. This is not related to <code>Promise.all</code>.
 
 
 
@@ -332,13 +332,13 @@ Change one of the inputs in the `getImageName` calls inside the `promises` varia
 
 
 
-<strong>Note:</strong> <strong>Promise.all</strong> would not work if the promises passed in were from <code>flagChain</code> calls because <code>flagChain</code> uses <code>catch</code> to ensure that the returned promise always resolves.
+Note: <code>Promise.all</code> would not work if the promises passed in were from <code>flagChain</code> calls because <code>flagChain</code> uses <code>catch</code> to ensure that the returned promise always resolves.
 
 
 
 
 
-<strong>Note:</strong> Even if an input promise rejects, causing <code>Promise.all</code> to reject, the remaining input promises still settle. In other words, the remaining promises still execute, they simply are not returned by <code>Promise.all</code>.
+Note: Even if an input promise rejects, causing <code>Promise.all</code> to reject, the remaining input promises still settle. In other words, the remaining promises still execute, they simply are not returned by <code>Promise.all</code>.
 
 
 
@@ -380,7 +380,7 @@ In this example, if `promise2` resolves before `promise1` settles, the `then` bl
 
 
 
-<strong>Note:</strong> Because <code>Promise.race</code> rejects immediately if one of the supplied promises rejects (even if another supplied promise resolves later) <code>Promise.race</code> by itself can't be used to reliably return the first promise that resolves. See the <a href="https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-concepts/content/docs/working_with_promises.html#race">concepts section</a> for more details. 
+Note: Because <code>Promise.race</code> rejects immediately if one of the supplied promises rejects (even if another supplied promise resolves later) <code>Promise.race</code> by itself can't be used to reliably return the first promise that resolves. See the <a href="https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-concepts/content/docs/working_with_promises.html#race">concepts section</a> for more details. 
 
 
 

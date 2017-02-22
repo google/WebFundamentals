@@ -11,4 +11,7 @@ upper_tabs:
       other:
       - name: ILT
         contents:
-        - include: /web/ilt/pwa/_toc.yaml
+        - title: Progressive Web Apps
+          path: /web/ilt/pwa/
+        - include: /web/ilt/pwa/_concepts.yaml
+        - include: /web/ilt/pwa/_codelabs.yaml

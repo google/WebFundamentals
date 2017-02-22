@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-15T18:48:53Z #}
+{# wf_updated_on: 2017-02-22T21:44:47Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -79,6 +79,9 @@ Mobile Safari
 </td><td colspan="1" rowspan="1">
 
 50MB
+</td><td colspan="1" rowspan="1">
+
+&nbsp;
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
@@ -162,7 +165,7 @@ __Value__
 </td>
 </tr></table>
 
-The data is organized by a __keypath__, which in this case is the item's __id__ property. You can learn more about IndexedDB in the [corresponding text](working_with_indexed_db.md), or in the  [code lab](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_indexed_db.html).
+The data is organized by a __`keypath`__, which in this case is the item's __`id`__ property. You can learn more about IndexedDB in the [corresponding text](working_with_indexed_db.md), or in the  [code lab](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_indexed_db.html).
 
 The following function could be used to create an IndexedDB object store like the example above:
 
@@ -207,7 +210,7 @@ self.addEventListener('activate', function(event) {
 });
 ```
 
-### 
+
 
 Note: `event.waitUntil` ensures that a service worker does not terminate during asynchronous operations.
 

@@ -1,42 +1,5 @@
-# ATTENTION - This file is auto-generated, changes must be made to the template!
 toc:
 - title: Progressive Web Apps
-  section:
-  - title: Overview
-    path: /web/ilt/pwa/
-  - title: PWA Architectures
-    path: /web/ilt/pwa/introduction-to-progressive-web-app-architectures
-  - title: Service Workers
-    path: /web/ilt/pwa/introduction-to-service-worker
-  - title: Auditing an Existing Site With Lighthouse
-    path: /web/ilt/pwa/lighthouse-pwa-analysis-tool
-  - title: "Lab: Auditing an Existing Site With Lab"
-    path: /web/ilt/pwa/lab-auditing-with-lighthouse
-  - title: Offline Quickstart
-    path: /web/ilt/pwa/offline-quickstart
-  - title: "Lab: Offline Quickstart"
-    path: /web/ilt/pwa/lab-offline-quickstart
-  - title: Working with Promises
-    path: /web/ilt/pwa/working-with-promises
-  - title: "Lab: Working with Promises"
-    path: /web/ilt/pwa/lab-promises
-  - title: Working with the Fetch API
-    path: /web/ilt/pwa/working-with-the-fetch-api
-  - title: Caching Files with the Service Worker
-    path: /web/ilt/pwa/caching-files-with-the-service-worker
-  - title: Working with IndexedDB
-    path: /web/ilt/pwa/working-with-indexeddb
-  - title: Live Data in the Service Worker
-    path: /web/ilt/pwa/live-data-in-the-service-worker
-  - title: Intro to Tooling and Automation
-    path: /web/ilt/pwa/introduction-to-tooling-and-automation
-  - title: Using Code Generation for Easier Caching
-    path: /web/ilt/pwa/using-code-generation-for-easier-caching-sw-precache-sw-toolbox-
-  - title: Introduction to Push Notifications
-    path: /web/ilt/pwa/introduction-to-push-notifications
-  - title: Introduction to the Payment Request API
-    path: /web/ilt/pwa/introduction-to-payment-request-api
-  - title: Integrating Analytics
-    path: /web/ilt/pwa/integrating-analytics
-  - title: Debugging Service Workers in the Browser
-    path: /web/ilt/pwa/debugging-service-workers-in-browsers
+  contents:
+  - include: /web/ilt/pwa/_concepts.yaml
+  - include: /web/ilt/pwa/_codelabs.yaml

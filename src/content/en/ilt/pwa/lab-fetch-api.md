@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-15T18:34:25Z #}
+{# wf_updated_on: 2017-02-22T20:35:17Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -555,7 +555,7 @@ var formData = new FormData(document.getElementById('myForm'));
 
 Then replace the value of the `body` parameter with the `formData` variable. 
 
-Save the script and refresh the page. Fill out the form (the __Name __and __Message __fields) on the page, and then click __POST request__. Do you see the form content logged in the console?
+Save the script and refresh the page. Fill out the form (the __Name__ and __Message__ fields) on the page, and then click __POST__ request. Do you see the form content logged in the console?
 
 #### Explanation
 
@@ -580,7 +580,7 @@ To get a copy of the working code, navigate to the __06-post-requests__ folder.
 
 ### 7.1 Start a new echo server
 
-Stop the previous echo server (by pressing __Ctrl+C__ from the command line) and start a new echo server from the __fetch-lab-api/app __directory by running the following command:
+Stop the previous echo server (by pressing __Ctrl+C__ from the command line) and start a new echo server from the __fetch-lab-api/app__ directory by running the following command:
 
     node echo-servers/echo-server-no-cors.js
 
