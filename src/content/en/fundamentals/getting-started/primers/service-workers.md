@@ -33,8 +33,8 @@ experience.
 Before service worker, there was one other API that gave users an offline
 experience on the web called
 [AppCache](//www.html5rocks.com/en/tutorials/appcache/beginner/){: .external }. 
-There are a number of issues that exist with the AppCache API, which service workers
-have been designed to  avoid.
+There are a number of issues with the AppCache API that service workers
+were designed to avoid.
 
 Things to note about a service worker:
 
