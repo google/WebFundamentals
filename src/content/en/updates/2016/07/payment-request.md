@@ -253,6 +253,7 @@ To learn more about Payment Request API, a few documents and resources are avail
 * [Official specification](https://www.w3.org/TR/payment-request/)
 * [Payment Request API integration guide](/web/fundamentals/primers/payment-request/)
 * [Demo](https://emerald-eon.appspot.com/)
-* [Simple demos and sample code](https://googlechrome.github.io/samples/paymentrequest/){: .external }
+* [Simple demos and sample
+  code](https://googlechrome.github.io/samples/paymentrequest/){: .external }
 
 {% include "comment-widget.html" %}
