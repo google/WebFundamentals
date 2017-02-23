@@ -81,7 +81,6 @@ function updateCodeLab(sourceFile, destFile, bookPath) {
   markdown = markdown.replace(/^<strong>Note:<\/strong>/gm, 'Note: ');
   markdown = markdown.replace(/<div class="note">((.|\n)*?)<\/div>/g, '$1');
 
-
   // Change any Specials to key-point
   markdown = markdown.replace(/<aside markdown="1" class="special">/g, '<aside markdown="1" class="key-point">');
   
@@ -89,8 +88,11 @@ function updateCodeLab(sourceFile, destFile, bookPath) {
   markdown = markdown.replace(/^<a id="(.*?)"\s*\/*?>/gm, '<div id="$1"></div>');
   
   // Add image info to images using IMAGEINFO syntax
-  markdown = markdown.replace(/!\[.+?\]\((.+?)\)\[IMAGEINFO\]:.+,\s*(.+?)\n/gm, '![$2]($1)\n');
+  markdown = markdown.replace(/!\[.+?\]\((.+?)\)\[IMAGEINFO\]:.+,\s*(.+?)\n/g, '![$2]($1)\n');
   
+  // Replace [ICON HERE] with the correct icon
+  markdown = markdown.replace(/(\[ICON HERE\])(.*?)!\[(.*?)]\((.*?)\)/g, '<img src="$4" style="width:20px;height:20px;" alt="$3"> $2');
+
   // Remove the table of contents section
   markdown = markdown.replace(/^## Contents?(\n|\s)*(__.*__(\s|\n)*)*/gm, '');
   
