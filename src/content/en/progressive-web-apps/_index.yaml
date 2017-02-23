@@ -70,9 +70,22 @@ landing_page:
     items:
     - heading: Fast
       description: >
-        53% of users will abandon a site if it takes longer than 3 seconds to
-        load! And once loaded, they expect them to be fast, no janky scrolling
-        or slow to respond interfaces.
+        <p>
+          Speed is at the foundation of building a Progressive Web
+          App. Achieving a speedy load helps lowering bounce rate and
+          increases conversion.
+        </p>
+        <p>
+          53% of users will abandon a site if it takes longer than 3 seconds to
+          load! Sites that loaded in 5 seconds vs 19 seconds were observed to
+          have:
+          <ul class="checkmarks">
+            <li>60% greater pageviews per visit</li>
+            <li>70% longer sessions</li>
+            <li>35% lower bounce rates</li>
+            <li>25% higher viewability</li>
+          </ul>
+        </p>
       image_path: images/pwa-fast.png
       buttons:
       - label: Learn More
@@ -107,6 +120,7 @@ landing_page:
         path: /web/fundamentals/engage-and-retain/push-notifications/
         classname: button button-white
 
+
   - heading: Why build a Progressive Web App?
     classname: devsite-landing-row-100
     items:
@@ -115,56 +129,103 @@ landing_page:
         incredible benefits, making it easy to delight your users,
         grow engagement and increase conversions.
 
-  - columns:
-    - items:
-      - description: >
-          <ul class="checkmarks">
-            <li>
-              <a href="/web/fundamentals/engage-and-retain/app-install-banners/">
-              Worthy of being on the home screen</a><br>
-              When the Progressive Web App criteria are met, Chrome prompts
-              users to add the Progressive Web Apps to their home screen.
-            </li>
-            <li>
-              <a href="/web/showcase/2016/konga">
-              Work reliably, no matter the network conditions</a><br>
-              Service workers enabled Konga to send 63% less data for
-              initial page loads, and 84% less data to complete the first
-              transaction!
-            </li>
-          </ul>
-    - items:
-      - description: >
-          <ul class="checkmarks">
-            <li>
-              <a href="/web/showcase/2016/extra">Increased engagement</a><br>
-              Web push notifications helped eXtra Electronics increase
-              engagement by 4X. And those users spend twice as much time on
-              the site.
-            </li>
-            <li>
-              <a href="/web/showcase/2016/aliexpress">Improved conversions</a><br>
-              The ability to deliver an amazing user experience helped AliExpress
-              improve conversions for new users across all browsers by 104%
-              and an 82% increase for iOS conversions.
-            </li>
-          </ul>
-
-
-  - classname: devsite-landing-row-67 devsite-landing-row-no-image-background devsite-landing-row-grey devsite-landing-row-colored
+  - classname: devsite-landing-row-no-image-background
     items:
-    - heading: Lighthouse
+    - heading: Acquisition
       description: >
-          Lighthouse is an open-source, automated tool for improving the
-          quality of your Progressive Web Apps, and eliminates much of the
-          manual testing that was previously required. You can even integrate
-          Lighthouse into continuous integration systems to catch regressions.
-      image_path: images/pwa-lighthouse.png
+        <ul class="checkmarks">
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+        </ul>
 
+    - heading: Engagement
+      description: >
+        <ul class="checkmarks">
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+        </ul>
+
+    - heading: Distribution & Reach
+      description: >
+        <ul class="checkmarks">
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+        </ul>
+
+    - heading: Revenue & Monetization
+      description: >
+        <ul class="checkmarks">
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+        </ul>
+
+  - items:
+    - heading: Cross Platform & Cost Effective
+      description: >
+        <ul class="checkmarks">
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+        </ul>
+
+    - heading: Tailored for Constrained Markets
+      description: >
+        <ul class="checkmarks">
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+        </ul>
+
+
+
+  - classname: devsite-landing-row-cta
+    items:
+    - heading: Start developing today
+      description: Write your first Progressive Web App with our step by step code lab.
       buttons:
-      - label: Learn More
-        path: /web/tools/lighthouse/
-
+      - label: Get started
+        path: https://g.co/codelabs/pwa
+        classname: button
 
 
   - heading: Dive Deeper
@@ -218,11 +279,4 @@ landing_page:
           </ul>
 
 
-  - classname: devsite-landing-row-cta
-    items:
-    - heading: Start developing today
-      description: Write your first Progressive Web App with our step by step code lab.
-      buttons:
-      - label: Get started
-        path: https://g.co/codelabs/pwa
-        classname: button
+
