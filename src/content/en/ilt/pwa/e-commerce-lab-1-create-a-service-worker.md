@@ -30,9 +30,9 @@ book_path: /web/ilt/_book.yaml
 
 * Basic JavaScript and HTML
 * Familiarity with the concept and basic syntax of ES2015  [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/)
-* Have completed  [Lab: Scripting the service worker](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/lab_scripting_the_service_worker.html)
-* Have completed  [Lab: Fetch API](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/lab_fetch_api_practice.html)
-* Have completed  [Lab: Caching files with Service Worker](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/lab_caching_files_with_the_service_worker.html)
+* Have completed  [Lab: Scripting the service worker](lab-scripting-the-service-worker)
+* Have completed  [Lab: Fetch API](lab-fetch-api-practice)
+* Have completed  [Lab: Caching files with Service Worker](lab-caching-files-with-the-service-worker)
 
 #### What you will need
 
@@ -75,7 +75,7 @@ Then run the following:
 
 This runs the "serve" task in __gulpfile.babel.js__ which copies the project files to the appropriate folder, starts a server, and opens the app in the browser. The app is a mock furniture website, "Modern Furniture Store". Several furniture items should display on the front page. 
 
-When the app opens, confirm that a service worker is not registered at local host by  [checking developer tools](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/tools_for_pwa_developers.html#accesssw). If there is a service worker at localhost,  [unregister it](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/tools_for_pwa_developers.html#unregister) so it doesn't interfere with the lab.
+When the app opens, confirm that a service worker is not registered at local host by  [checking developer tools](tools-for-pwa-developers#accesssw). If there is a service worker at localhost,  [unregister it](tools-for-pwa-developers#unregister) so it doesn't interfere with the lab.
 
 
 
@@ -165,7 +165,7 @@ To complete TODO SW-5 in __app/service-worker.js__, write the code to delete unu
 
 
 
-Note: If you get stuck, you can use  [Lab: Caching files with Service Worker](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/lab_caching_files_with_the_service_worker.html) for clues.
+Note: If you get stuck, you can use  [Lab: Caching files with Service Worker](lab-caching-files-with-the-service-worker) for clues.
 
  
 
@@ -183,7 +183,7 @@ Run the following in the command line to clean out the old files in the __dist__
 
     gulp serve
 
-When the app opens in the browser,  [inspect the cache](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/tools_for_pwa_developers.html#storage) to make sure that the specified files are cached when the service worker is installed.  [Take the app offline](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/tools_for_pwa_developers.html#offline) and refresh the page. The app should load normally!
+When the app opens in the browser,  [inspect the cache](tools-for-pwa-developers#storage) to make sure that the specified files are cached when the service worker is installed.  [Take the app offline](tools-for-pwa-developers#offline) and refresh the page. The app should load normally!
 
 <div id="congrats"></div>
 

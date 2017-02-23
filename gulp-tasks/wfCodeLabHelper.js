@@ -58,19 +58,42 @@ function updateCodeLab(sourceFile, destFile, bookPath) {
   if (feedbackLink && feedbackLink[0]) {
     markdown = markdown.replace(feedbackLink[0], '');
   }
+
+  // Eliminate any links to GitBooks
+  let reGitBooks = /https:\/\/google-developer-training\.gitbooks\.io\/progressive-web-apps-ilt-.*?\/content\/docs\/(.*?)\.html/g;
+  markdown = markdown.replace(reGitBooks, function(match) { match = match.replace(reGitBooks, '$1').replace(/_/g, '-'); return match });
+
+  // Eliminate the Duration on Codelabs
   markdown = markdown.replace(/^\*Duration is \d+ min\*\n/gm, '');
+
+  // Make any links to d.g.c absolute, but not fully qualified
   markdown = markdown.replace(/\(https:\/\/developers.google.com\//g, '(\/');
   markdown = markdown.replace(/href="https:\/\/developers.google.com\//g, 'href="/');
+
+  // Change any empty markdown links to simply [Link](url)
   markdown = markdown.replace(/^\[\]\(/gm, '[Link](');
+
+  // Convert Notes to the DevSite syntax
   markdown = markdown.replace(/__\s?Note:\s?__\s?/g, 'Note: ');
   markdown = markdown.replace(/^<strong>Note:<\/strong>/gm, 'Note: ');
   markdown = markdown.replace(/<div class="note">((.|\n)*?)<\/div>/g, '$1');
+
+  // Change any Specials or Warning to key-point or warning
   markdown = markdown.replace(/<aside markdown="1" class="special">/g, '<aside class="key-point">');
   markdown = markdown.replace(/<aside markdown="1" class="warning">/g, '<aside class="warning">');
+  
+  // Convert any unclosed named anchors to simple div's
   markdown = markdown.replace(/^<a id="(.*?)"\s*\/*?>/gm, '<div id="$1"></div>');
+  
+  // Add image info to images using IMAGEINFO syntax
   markdown = markdown.replace(/!\[.+?\]\((.+?)\)\[IMAGEINFO\]:.+,\s*(.+?)\n/gm, '![$2]($1)\n');
+  
+  // Remove the table of contents section
   markdown = markdown.replace(/^## Contents?(\n|\s)*(__.*__(\s|\n)*)*/gm, '');
-  markdown = markdown.replace(/^(#+) __(.*)__/gm, '$1 $2')
+  
+  // Remove any bold from headings
+  markdown = markdown.replace(/^(#+) __(.*)__/gm, '$1 $2');
+
   result.push(markdown);
   if (metadata.feedback) {
     result.push('');

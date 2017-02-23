@@ -188,8 +188,8 @@ To examine service workers, navigate to the Service Worker section in your brows
 
 * A more detailed introduction to  [The Service Worker Lifecycle](/web/fundamentals/instant-and-offline/service-worker/lifecycle)
 * More on  [Service Worker Registration](/web/fundamentals/instant-and-offline/service-worker/registration)
-*  [Create your own service worker](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/lab_scripting_the_service_worker.html) (lab)
-*  [Take a blog site offline](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/lab_offline_quickstart.html) (lab)
-*  [Cache files with the service worker](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/lab_caching_files_with_the_service_worker.html) (lab)
+*  [Create your own service worker](lab-scripting-the-service-worker) (lab)
+*  [Take a blog site offline](lab-offline-quickstart) (lab)
+*  [Cache files with the service worker](lab-caching-files-with-the-service-worker) (lab)
 
 

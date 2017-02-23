@@ -23,7 +23,7 @@ The  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) is 
 
 
 
-Note: Fetch supports the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Cross Origin Resource Sharing (CORS)</a>. Testing generally requires <a href="https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/running_a_local_web_server.html">running a local server</a>. Note that although fetch does not require HTTPS, service workers do and so using fetch in a service worker requires HTTPS. Local servers are exempt from this.
+Note: Fetch supports the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Cross Origin Resource Sharing (CORS)</a>. Testing generally requires <a href="running-a-local-web-server">running a local server</a>. Note that although fetch does not require HTTPS, service workers do and so using fetch in a service worker requires HTTPS. Local servers are exempt from this.
 
 
 
@@ -441,7 +441,7 @@ fetch('http://bar.com/data.json', {
 
 
 
-*  [Fetch API Codelab](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/lab_fetch_api_practice.html)
+*  [Fetch API Codelab](lab-fetch-api-practice)
 *  [Learn more about the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 *  [Learn more about Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 *  [Learn more about GlobalFetch.fetch()](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch)

@@ -27,7 +27,7 @@ The Notification and Push API's are built on top of the  [Service Worker API](ht
 
 
 
-Note: Service workers require secure origins so testing Push Notifications requires <a href="https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/running_a_local_web_server.html">running a local server</a>.
+Note: Service workers require secure origins so testing Push Notifications requires <a href="running-a-local-web-server">running a local server</a>.
 
 
 

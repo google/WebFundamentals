@@ -256,7 +256,7 @@ Step 4. Finally, the JSON data from the original request to __examples/animals.j
 
 *  [Response.json()](https://developer.mozilla.org/en-US/docs/Web/API/Body/json)
 *  [Response methods](https://developer.mozilla.org/en-US/docs/Web/API/Response#Methods)
-*  [Promise chaining](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/lab_promises.html)
+*  [Promise chaining](lab-promises)
 
 #### Solution code
 

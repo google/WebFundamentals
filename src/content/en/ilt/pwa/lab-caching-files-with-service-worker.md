@@ -19,7 +19,7 @@ book_path: /web/ilt/_book.yaml
 
 
 
-This lab covers the basics of caching files with the service worker. The technologies involved are the  [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) and the  [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). See the <a href="https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-concepts/content/docs/caching_files_with_the_service_worker.html">Caching files with the service worker</a> doc for a full tutorial on the Cache API. See <a href="https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-concepts/content/docs/introduction_to_service_workers.html">Introduction to Service Worker</a> and <a href="lab_scripting_the_service_worker.md">Lab: Scripting the service worker</a> for more information on service workers.
+This lab covers the basics of caching files with the service worker. The technologies involved are the  [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) and the  [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). See the <a href="caching-files-with-the-service-worker">Caching files with the service worker</a> doc for a full tutorial on the Cache API. See <a href="introduction-to-service-workers">Introduction to Service Worker</a> and <a href="lab_scripting_the_service_worker.md">Lab: Scripting the service worker</a> for more information on service workers.
 
 #### What you will learn
 
@@ -125,7 +125,7 @@ This page contains several tests for testing our app at each stage of the codela
 
 
 
-__Caution:__ Close the test page when you're finished with it, otherwise you won't be able to activate the updated service worker in the next sections. See the  [Introduction to service worker](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-concepts/content/docs/introduction_to_service_workers.html#activation) text for an explanation. 
+__Caution:__ Close the test page when you're finished with it, otherwise you won't be able to activate the updated service worker in the next sections. See the  [Introduction to service worker](introduction-to-service-workers#activation) text for an explanation. 
 
 
 
@@ -143,7 +143,7 @@ In the install event handler we create the cache with  [`caches.open`](https://d
 
 #### For more information
 
-* <a href="https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-concepts/content/docs/introduction_to_the_app_shell_architecture.html">The Application Shell</a>
+* <a href="introduction-to-the-app-shell-architecture">The Application Shell</a>
 *  [The install event - MDN](https://developer.mozilla.org/en-US/docs/Web/API/InstallEvent)
 
 <div id="3"></div>

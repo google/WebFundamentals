@@ -23,8 +23,8 @@ book_path: /web/ilt/_book.yaml
 
 * Integrate `sw-precache` in your app to generate a production-ready service worker
 * Integrate `sw-toolbox` in your app to create custom handlers for specific requests
-* Have completed  [Lab: Gulp setup](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/lab_gulp_setup.html)
-* Have completed  [Lab: sw-precache and sw-toolbox](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/lab_sw-precache_and_sw-toolbox.html)
+* Have completed  [Lab: Gulp setup](lab-gulp-setup)
+* Have completed  [Lab: sw-precache and sw-toolbox](lab-sw-precache-and-sw-toolbox)
 
 #### What you should know
 
@@ -50,7 +50,7 @@ If you have a text editor that lets you open a project, then open the __project_
 
 
 
-Note: [Unregister the service worker](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/tools_for_pwa_developers.html#unregister) at localhost so it doesn't interfere with the lab.
+Note: [Unregister the service worker](tools-for-pwa-developers#unregister) at localhost so it doesn't interfere with the lab.
 
 
 
@@ -90,7 +90,7 @@ Save the code.
 
 
 
-Note: See  [Lab: sw-precache and sw-toolbox](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/lab_sw-precache_and_sw-toolbox.html) for examples of Express-style routes.
+Note: See  [Lab: sw-precache and sw-toolbox](lab-sw-precache-and-sw-toolbox) for examples of Express-style routes.
 
 
 
@@ -231,7 +231,7 @@ Run the following in the command line to clean out the old files in the __dist__
 
     gulp serve
 
-When the app opens in the browser,  [update the service worker](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/tools_for_pwa_developers.html#update).  [Inspect the cache](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/docs/tools_for_pwa_developers.html#storage). In the cache, you should see all the application files matching the glob patterns in the `staticFileGlobs` have been cached.
+When the app opens in the browser,  [update the service worker](tools-for-pwa-developers#update).  [Inspect the cache](tools-for-pwa-developers#storage). In the cache, you should see all the application files matching the glob patterns in the `staticFileGlobs` have been cached.
 
 <div id="congrats"></div>
 

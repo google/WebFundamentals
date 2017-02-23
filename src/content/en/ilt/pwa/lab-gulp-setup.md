@@ -23,7 +23,7 @@ This lab shows you how you can automate tasks with  [gulp](https://github.com/gu
 
 #### Concepts
 
-[Introduction to Tooling and Automation](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-concepts/content/docs/intro_to_developer_tooling_npm,_gulp.html)
+[Introduction to Tooling and Automation](intro-to-developer-tooling-npm,-gulp)
 
 #### What you will learn
 
