@@ -44,13 +44,13 @@ This lab shows you how you can use  [Lighthouse](https://github.com/GoogleChrome
 
 
 
-If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting_up_the_labs.md).
+If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 Open your browser and navigate to __localhost:8080/lighthouse-lab/app__.
 
 
 
-Note: If you have already installed a service worker on localhost, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If you have already installed a service worker on localhost, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
@@ -307,7 +307,7 @@ Now we should have passed many more tests.
 
 
 
-Note: You may need to <a href="tools_for_pwa_developers.md#clearcache">clear the cache</a> to see the improved results. Then refresh the app and run Lighthouse again.
+Note: You may need to <a href="tools-for-pwa-developers#clearcache">clear the cache</a> to see the improved results. Then refresh the app and run Lighthouse again.
 
 
 

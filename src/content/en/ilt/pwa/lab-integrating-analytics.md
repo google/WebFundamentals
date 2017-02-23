@@ -54,13 +54,13 @@ This lab shows you how to integrate Google Analytics into your web apps.
 
 
 
-If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting_up_the_labs.md).
+If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 Open Chrome and navigate to __localhost:8080/google-analytics-lab/app__.
 
 
 
-Note: If you have already installed a service worker on localhost, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab.  
+Note: If you have already installed a service worker on localhost, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab.  
 
 
 
@@ -78,7 +78,7 @@ This folder contains:
 * __sw.js__ is the service worker file
 * __manifest.json__ is the manifest for push notifications
 
-In the browser, you should be prompted to allow notifications. If the prompt does not appear, then [manually allow notifications](tools_for_pwa_developers.md#permissions). You should see a permission status of "granted" in the console.
+In the browser, you should be prompted to allow notifications. If the prompt does not appear, then [manually allow notifications](tools-for-pwa-developers#permissions). You should see a permission status of "granted" in the console.
 
 You should also see that a service worker registration is logged to the console.
 
@@ -88,7 +88,7 @@ __main.js__ requests notification permission and registers a service worker, __s
 
 __main.js__ also contains functions for subscribing and unsubscribing for push notifications. We will address that later (subscribing to push isn't yet possible because we haven't registered with a push service).
 
-Test the notification code by using developer tools to [send a push notification](tools_for_pwa_developers.md#push).
+Test the notification code by using developer tools to [send a push notification](tools-for-pwa-developers#push).
 
 A notification should appear on your screen. Try clicking it. It should take you to a sample page.
 
@@ -106,7 +106,7 @@ Note: Simulated push notifications can be sent from the browser even if the subs
 
 #### For more information
 
-You can learn how to build the starter app and learn more about push in <a href="lab_integrating_web_push.md">Push Notifications codelab</a>.
+You can learn how to build the starter app and learn more about push in <a href="lab-integrating-web-push">Push Notifications codelab</a>.
 
 <div id="2"></div>
 
@@ -634,7 +634,7 @@ The hit is sent with the  [Fetch API](https://developer.mozilla.org/en-US/docs/W
 
 
 
-Note: You can learn more about the Fetch API in the <a href="lab_fetch_api_practice.md">fetch codelab</a>
+Note: You can learn more about the Fetch API in the <a href="lab-fetch-api-practice">fetch codelab</a>
 
 
 
@@ -741,13 +741,13 @@ Where `path/to/offline-google-analytics-import.js` is the path to the __offline-
 
 Now save the script. Update the service worker by refreshing the page and closing and reopening the app (remember to close all tabs and windows running the app).
 
-Now [simulate offline behavior](tools_for_pwa_developers.md#offline).
+Now [simulate offline behavior](tools-for-pwa-developers#offline).
 
 Click __BUY NOW!!!__ to fire our first custom analytics event. 
 
 You will see an error in the console because we are offline and can't make requests to Google Analytics servers. You can confirm by checking the real-time section of Google Analytics dashboard and noting that the event is not shown.
 
-[Now check IndexedDB](tools_for_pwa_developers.md#indexeddb). Open __offline-google-analytics__. You should see a URL cached. If you are using Chrome (see screenshot below), it is shown in __urls__.You may need to click the refresh icon in the __urls __interface.
+[Now check IndexedDB](tools-for-pwa-developers#indexeddb). Open __offline-google-analytics__. You should see a URL cached. If you are using Chrome (see screenshot below), it is shown in __urls__.You may need to click the refresh icon in the __urls __interface.
 
 ![Offline hits](img/88188d9545f98f83.png)
 

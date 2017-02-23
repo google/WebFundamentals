@@ -64,7 +64,28 @@ function updateCodeLab(sourceFile, destFile, bookPath) {
 
   // Eliminate any links to GitBooks
   let reGitBooks = /https:\/\/google-developer-training\.gitbooks\.io\/progressive-web-apps-ilt-.*?\/content\/docs\/(.*?)\.html/g;
-  markdown = markdown.replace(reGitBooks, function(match) { match = match.replace(reGitBooks, '$1').replace(/_/g, '-'); return match });
+  markdown = markdown.replace(reGitBooks, function(match) {
+    match = match.replace(reGitBooks, '$1').replace(/_/g, '-');
+    return match; 
+  });
+
+  // Remove .md from URLs in the current directory and change _ to -
+  let reLinks = /href="(.*?)\.md(.*?)"/g;
+  markdown = markdown.replace(reLinks, function(match) {
+    if (match.indexOf('/') > 0) {
+      return match;
+    }
+    match = match.replace(reLinks, 'href="$1$2"').replace(/_/g, '-');
+    return match;
+  });
+  reLinks = /\[(.*?)\]\((.*?)\.md(.*?)\)/g;
+  markdown = markdown.replace(reLinks, function(match) {
+    if (match.indexOf('/') > 0) {
+      return match;
+    }
+    match = match.replace(reLinks, '[$1]($2$3)').replace(/_/g, '-');
+    return match;
+  });
 
   // Eliminate the Duration on Codelabs
   markdown = markdown.replace(/^\*Duration is \d+ min\*\n/gm, '');

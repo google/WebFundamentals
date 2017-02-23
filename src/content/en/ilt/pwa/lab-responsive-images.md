@@ -43,13 +43,13 @@ This lab shows you how to make images on your web page look good on all devices.
 
 
 
-If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting_up_the_labs.md).
+If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 Open your browser and navigate to __localhost:8080/responsive-images-lab/app__.
 
 
 
-Note: If you have installed a service worker on localhost before, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If you have installed a service worker on localhost before, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
@@ -113,7 +113,7 @@ To complete TODO 3.1 in <strong>index.html</strong>, add the following <code>src
 srcset="images/sfo-1600_large.jpg, images/sfo-1000_large.jpg, images/sfo-800_medium.jpg, images/sfo-500_small.jpg"
 ```
 
-Save the code and refresh the page in the browser. Open your browser's Developer Tools and [look at the network requests](tools_for_pwa_developers.md#viewnetwork). Try refreshing the page at different window sizes. You should see that the browser is fetching __images/sfo-1600_large.jpg__ no matter the window size.
+Save the code and refresh the page in the browser. Open your browser's Developer Tools and [look at the network requests](tools-for-pwa-developers#viewnetwork). Try refreshing the page at different window sizes. You should see that the browser is fetching __images/sfo-1600_large.jpg__ no matter the window size.
 
 #### Explanation
 
@@ -131,7 +131,7 @@ To complete TODO 3.2 in <strong>index.html</strong>, add width descriptors to th
 srcset="images/sfo-1600_large.jpg 1600w, images/sfo-1000_large.jpg 1000w, images/sfo-800_medium.jpg 800w, images/sfo-500_small.jpg 500w"
 ```
 
-Save the code and refresh the page in the browser. Refresh the page at various window sizes and [check the network requests](tools_for_pwa_developers.md#viewnetwork) to see which version of the image is fetched at each size. On a 1x display, the browser fetches __sfo-500_small.jpg__ when the window is narrower than 500px, __sfo-800_medium.jpg__ when it is narrower than 800px, and so forth.
+Save the code and refresh the page in the browser. Refresh the page at various window sizes and [check the network requests](tools-for-pwa-developers#viewnetwork) to see which version of the image is fetched at each size. On a 1x display, the browser fetches __sfo-500_small.jpg__ when the window is narrower than 500px, __sfo-800_medium.jpg__ when it is narrower than 800px, and so forth.
 
 
 
@@ -172,7 +172,7 @@ img#sfo {
 }
 ```
 
-Save the code and refresh the page in the browser. Try refreshing the page at various window sizes and [check the network requests](tools_for_pwa_developers.md#viewnetwork) at each size. The browser is fetching the same sized images as before.
+Save the code and refresh the page in the browser. Try refreshing the page at various window sizes and [check the network requests](tools-for-pwa-developers#viewnetwork) at each size. The browser is fetching the same sized images as before.
 
 #### Explanation
 
@@ -190,7 +190,7 @@ To complete TODO 4.2 in <strong>index.html</strong> add <code>sizes="50vw"</code
 <img id="sfo" src="images/sfo-500_small.jpg" srcset="images/sfo-1600_large.jpg 1600w, images/sfo-1000_large.jpg 1000w, images/sfo-800_medium.jpg 800w, images/sfo-500_small.jpg 500w" sizes="50vw" alt="View from aircraft window near San Francisco airport">
 ```
 
-Save the code and refresh the page in the browser. Refresh the page at various window sizes and [check the network requests](tools_for_pwa_developers.md#viewnetwork) each time. You should see that for the same approximate window sizes you used to test the previous step, the browser is fetching a smaller image.
+Save the code and refresh the page in the browser. Refresh the page at various window sizes and [check the network requests](tools-for-pwa-developers#viewnetwork) each time. You should see that for the same approximate window sizes you used to test the previous step, the browser is fetching a smaller image.
 
 #### Explanation
 

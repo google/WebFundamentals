@@ -48,13 +48,13 @@ This lab builds a furniture store app,  *Couches-n-Things* , to demonstrate the 
 
 
 
-If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting_up_the_labs.md).
+If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 Open your browser and navigate to __localhost:8080/indexed-db-lab/app__.
 
 
 
-Note: If you have installed a service worker on localhost before, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If you have installed a service worker on localhost before, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
@@ -108,7 +108,7 @@ In <strong>js/main.js</strong>, replace `var dbPromise;` with the following code
 var dbPromise = idb.open('couches-n-things', 1);
 ```
 
-In the browser, [open IndexedDB](tools_for_pwa_developers.md#indexeddb) in the developer tools and confirm that your database exists.
+In the browser, [open IndexedDB](tools-for-pwa-developers#indexeddb) in the developer tools and confirm that your database exists.
 
 Open the QUnit test page, __app/test/test.html__, in another browser tab. This page contains several tests for testing our app at each stage of the codelab. Passed tests are blue and failed tests are red. Your app should pass the first test that checks whether the "couches-n-things" database exists in the browser.
 

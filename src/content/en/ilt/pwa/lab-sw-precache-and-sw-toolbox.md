@@ -51,13 +51,13 @@ The sw-precache module and sw-toolbox (Node.js) library make it easy to create p
 
 
 
-If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting_up_the_labs.md).
+If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 Open your browser and navigate to __localhost:8080/sw-precache-lab/app__.
 
 
 
-Note: If you have installed a service worker on localhost before, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If you have installed a service worker on localhost before, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
@@ -188,7 +188,7 @@ Save the file. To test the code, enter the following command at the project root
 
 A __service-worker.js__ script is created in __app/__. Open the __service-worker.js__ file in a text editor and look at the code for yourself.
 
-Refresh the app in the browser and then [inspect the cache](tools_for_pwa_developers.md#storage) (you may need to refresh the cache). You should see that all files in the `staticFileGlobs` array have been added to the cache.
+Refresh the app in the browser and then [inspect the cache](tools-for-pwa-developers#storage) (you may need to refresh the cache). You should see that all files in the `staticFileGlobs` array have been added to the cache.
 
 #### Explanation
 
@@ -234,7 +234,7 @@ global.toolbox.router.get(/\.(?:png|gif|jpg)$/, global.toolbox.cacheFirst, {
 });
 ```
 
-Save the code and [unregister the service worker](tools_for_pwa_developers.md#unregister) in the browser. Refresh the page once or twice so that the new service worker installs and begins to intercept the network requests. [Inspect the cache](tools_for_pwa_developers.md#storage) in the browser. You should see the `googleapis` cache populated with the Google web font, and the `images-cache` containing all of the fetched images.
+Save the code and [unregister the service worker](tools-for-pwa-developers#unregister) in the browser. Refresh the page once or twice so that the new service worker installs and begins to intercept the network requests. [Inspect the cache](tools-for-pwa-developers#storage) in the browser. You should see the `googleapis` cache populated with the Google web font, and the `images-cache` containing all of the fetched images.
 
 #### Explanation
 

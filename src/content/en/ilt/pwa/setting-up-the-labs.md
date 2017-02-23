@@ -40,7 +40,7 @@ If you have an existing version of Node installed that you would like to keep, y
 
 ### Global settings
 
-Although not a hard requirement, for general development it can be useful to <a href="tools_for_pwa_developers.md#disablehttpcache">disable the HTTP cache</a>.
+Although not a hard requirement, for general development it can be useful to <a href="tools-for-pwa-developers#disablehttpcache">disable the HTTP cache</a>.
 
 
 ## Set up Node and install the lab repository

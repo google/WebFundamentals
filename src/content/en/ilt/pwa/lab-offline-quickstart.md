@@ -45,13 +45,13 @@ This lab shows you how to add offline capabilities to an application using servi
 
 
 
-If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting_up_the_labs.md).
+If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 Open your browser and navigate to __localhost:8080/offline-quickstart-lab/app__.
 
 
 
-Note: If you have already installed a service worker on localhost, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If you have already installed a service worker on localhost, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
@@ -190,11 +190,11 @@ This code first checks that service worker is supported by the browser. If it is
 
 ### 2.4 Test the app offline
 
-Now our app has offline functionality. Save all files and refresh the __app/__ in the browser. You can [check the cache](tools_for_pwa_developers.md#cache) and see that the HTML and CSS are cached from the service worker installation event.
+Now our app has offline functionality. Save all files and refresh the __app/__ in the browser. You can [check the cache](tools-for-pwa-developers#cache) and see that the HTML and CSS are cached from the service worker installation event.
 
 Refresh the page again. This fetches all of the page's assets, and the fetch listener caches any asset that isn't already cached.
 
-Stop the server (use `Ctrl+c` if your server is running from the command line) or [switch the browser to offline mode](tools_for_pwa_developers.md#offline) to simulate going offline. Then refresh the page. The page should load normally!
+Stop the server (use `Ctrl+c` if your server is running from the command line) or [switch the browser to offline mode](tools-for-pwa-developers#offline) to simulate going offline. Then refresh the page. The page should load normally!
 
 
 

@@ -47,13 +47,13 @@ This lab walks you through creating a simple service worker.
 
 
 
-If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting_up_the_labs.md). 
+If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs). 
 
 Open your browser and navigate to __localhost:8080/service-worker-lab/app__.
 
 
 
-Note: If you have installed a service worker on localhost before, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If you have installed a service worker on localhost before, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
@@ -108,7 +108,7 @@ navigator.serviceWorker.register('service-worker.js')
 });
 ```
 
-Save the script and refresh the page. The <a href="tools_for_pwa_developers.md#console">console</a> should return a message indicating that the service worker was registered. 
+Save the script and refresh the page. The <a href="tools-for-pwa-developers#console">console</a> should return a message indicating that the service worker was registered. 
 
 In your browser, navigate to __test-registered.html__ (__app/test/test-registered.html__) to confirm that you have registered the service worker. This is a unit test. Passed tests are blue and failed tests are red. If you've done everything correctly so far, this test should be blue. Close the test page when you are done with it.
 
@@ -154,7 +154,7 @@ self.addEventListener('activate', function(event) {
 });
 ```
 
-Save the file. Close __app/test/test-registered.html__ page if you have not already. Manually <a href="tools_for_pwa_developers.md#unregister">unregister the service worker</a> and refresh the page to install and activate the updated service worker. The console log should indicate that the new service worker was registered, installed, and activated. 
+Save the file. Close __app/test/test-registered.html__ page if you have not already. Manually <a href="tools-for-pwa-developers#unregister">unregister the service worker</a> and refresh the page to install and activate the updated service worker. The console log should indicate that the new service worker was registered, installed, and activated. 
 
 
 
@@ -186,7 +186,7 @@ Note: Simply refreshing the page is not sufficient to transfer control to a new 
 
 
 
-Note: You can also manually activate a new service worker using some browsers' <a href="tools_for_pwa_developers.md#accesssw">developer tools</a> and programatically with <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting"><code>skipWaiting()</code></a>. 
+Note: You can also manually activate a new service worker using some browsers' <a href="tools-for-pwa-developers#accesssw">developer tools</a> and programatically with <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting"><code>skipWaiting()</code></a>. 
 
 
 
@@ -212,7 +212,7 @@ Close all pages associated with the service worker (including the __app/test/tes
 
 
 
-Note: If you are getting unexpected results, make sure your <a href="tools_for_pwa_developers.md#disablehttpcache">HTTP cache is disabled</a> in developer tools.
+Note: If you are getting unexpected results, make sure your <a href="tools-for-pwa-developers#disablehttpcache">HTTP cache is disabled</a> in developer tools.
 
 
 
@@ -244,7 +244,7 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 
-Manually <a href="tools_for_pwa_developers.md#unregister">unregister the service worker</a> and refresh the page to install and activate the updated service worker. 
+Manually <a href="tools-for-pwa-developers#unregister">unregister the service worker</a> and refresh the page to install and activate the updated service worker. 
 
 Check the console and observe that no fetch events were logged. Refresh the page and check the console again. You should see fetch events this time for the page and its assets (like CSS).
 
@@ -314,7 +314,7 @@ The default scope is the path to the service worker file, and extends to all low
 
 ### 5.2 Move the service worker 
 
-Move the service worker into the __app/below__ directory and update the service worker URL in the registration code. <a href="tools_for_pwa_developers.md#unregister">Unregister the service worker</a> and refresh the page. 
+Move the service worker into the __app/below__ directory and update the service worker URL in the registration code. <a href="tools-for-pwa-developers#unregister">Unregister the service worker</a> and refresh the page. 
 
 The console shows that the scope of the service worker is now __localhost:8080/service-worker-lab/app/below/__. 
 
@@ -330,7 +330,7 @@ The service worker's default scope is the path to the service worker file. Since
 
 Move the service worker back out into the project root directory (__app__) and update the service worker URL in the registration code.
 
-Use the  [reference on MDN](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register) to set the scope of the service worker to the __app/below/__ directory using the optional parameter in `register()`. <a href="tools_for_pwa_developers.md#unregister">Unregister the service worker</a> and refresh the page. Click __Other page__, __Another page__ and __Back__.
+Use the  [reference on MDN](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register) to set the scope of the service worker to the __app/below/__ directory using the optional parameter in `register()`. <a href="tools-for-pwa-developers#unregister">Unregister the service worker</a> and refresh the page. Click __Other page__, __Another page__ and __Back__.
 
 Again the console shows that the scope of the service worker is now __localhost:8080/service-worker-lab/app/below__, and logs fetch events only for __another.html__, __another.css__, and __another.js__. 
 

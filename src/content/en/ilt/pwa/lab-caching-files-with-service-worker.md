@@ -48,13 +48,13 @@ This lab covers the basics of caching files with the service worker. The technol
 
 
 
-If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting_up_the_labs.md).
+If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 Open your browser and navigate to __localhost:8080/cache-api-lab/app__.
 
 
 
-Note: If you have installed a service worker on localhost before, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If you have installed a service worker on localhost before, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
@@ -111,7 +111,7 @@ self.addEventListener('install', function(event) {
 });
 ```
 
-Save the code and reload the page in the browser. [Update the service worker](tools_for_pwa_developers.md#update) and then [open the cache storage](tools_for_pwa_developers.md#storage) in the browser. You should see the files appear in the table. You may need to refresh the page again for the changes to appear.
+Save the code and reload the page in the browser. [Update the service worker](tools-for-pwa-developers#update) and then [open the cache storage](tools-for-pwa-developers#storage) in the browser. You should see the files appear in the table. You may need to refresh the page again for the changes to appear.
 
 Open the first QUnit test page, __app/test/test1.html__, in another browser tab.
 
@@ -131,7 +131,7 @@ __Caution:__ Close the test page when you're finished with it, otherwise you won
 
 
 
-Note: In Chrome, you can <a href="tools_for_pwa_developers.md#clearcache">delete the cache</a> in <strong>DevTools</strong>.
+Note: In Chrome, you can <a href="tools-for-pwa-developers#clearcache">delete the cache</a> in <strong>DevTools</strong>.
 
 
 
@@ -183,7 +183,7 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 
-Save the code and [update the service worker](tools_for_pwa_developers.md#update) in the browser (make sure you have closed the __test.html__ page). Refresh the page to see the network requests being logged to the console. Now [take the app offline](tools_for_pwa_developers.md#offline) and refresh the page. The page should load normally!
+Save the code and [update the service worker](tools-for-pwa-developers#update) in the browser (make sure you have closed the __test.html__ page). Refresh the page to see the network requests being logged to the console. Now [take the app offline](tools-for-pwa-developers#offline) and refresh the page. The page should load normally!
 
 #### Explanation
 
@@ -223,7 +223,7 @@ Replace TODO 4 in the `fetch` event handler with the code to add the files retur
 });
 ```
 
-Save the code. Take the app back online and [update the service worker](tools_for_pwa_developers.md#update). Visit at least one of the links on the homepage, then take the app offline again. Now if you revisit the pages they should load normally! Try navigating to some pages you haven't visited before.
+Save the code. Take the app back online and [update the service worker](tools-for-pwa-developers#update). Visit at least one of the links on the homepage, then take the app offline again. Now if you revisit the pages they should load normally! Try navigating to some pages you haven't visited before.
 
 Take the app back online and open __app/test/test1.html__ in a new tab. Your app should now pass the third test that checks whether network responses are being added to the cache. Remember to close the test page when you're done.
 
@@ -249,7 +249,7 @@ We have wrapped the code to cache the response in an `if` statement to ensure we
 
 Below TODO 5 in __service-worker.js__, write the code to respond with the <strong>404.html</strong> page from the cache if the response status is <code>404</code>. You can check the response status with <code>response.status</code>.
 
-To test your code, save what you've written and then [update the service worker](tools_for_pwa_developers.md#update) in the browser. Click the __Non-existent file__ link to request a resource that doesn't exist.
+To test your code, save what you've written and then [update the service worker](tools-for-pwa-developers#update) in the browser. Click the __Non-existent file__ link to request a resource that doesn't exist.
 
 #### Explanation
 
@@ -281,7 +281,7 @@ The solution code can be found in the __05-404-page__ directory.
 
 Below TODO 6 in the `.catch` in <strong>service-worker.js</strong>, write the code to respond with the <strong>offline.html</strong> page from the cache. The catch will trigger if the fetch to the network fails. 
 
-To test your code, save what you've written and then update the service worker in the browser. [Take the app offline](tools_for_pwa_developers.md#offline) and navigate to a page you haven't visited before to see the custom offline page.
+To test your code, save what you've written and then update the service worker in the browser. [Take the app offline](tools-for-pwa-developers#offline) and navigate to a page you haven't visited before to see the custom offline page.
 
 #### Explanation
 
@@ -333,7 +333,7 @@ Try changing the name of the cache to "pages-cache-v2":
 var staticCacheName = 'pages-cache-v2';
 ```
 
-Save the code and [update the service worker](tools_for_pwa_developers.md#update) in the browser. [Inspect the cache storage](tools_for_pwa_developers.md#storage) in your browser. You should see just the new cache. The old cache, "`pages-cache-v1`", has been removed.
+Save the code and [update the service worker](tools-for-pwa-developers#update) in the browser. [Inspect the cache storage](tools-for-pwa-developers#storage) in your browser. You should see just the new cache. The old cache, "`pages-cache-v1`", has been removed.
 
 Open __app/test/test2.html__ in a new browser tab. The test checks whether "`pages-cache-v1`" has been deleted and that "`pages-cache-v2`" has been created.
 

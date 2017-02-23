@@ -27,7 +27,7 @@ There are a  [variety of reasons](https://medium.com/dev-channel/offline-storage
 
 In this text we use Jake Archibald's  [IndexedDB Promised](https://github.com/jakearchibald/indexeddb-promised) library, which enables promise syntax for IndexedDB. There are also  [other IndexedDB libraries](https://medium.com/dev-channel/offline-storage-for-progressive-web-apps-70d52695513c#.lm82vlyt8) that can be used to abstract some of the less convenient aspects of the API. 
 
-Debugging support for IndexedDB is available in Chrome, Opera, Firefox and Safari. Debugging support for Cache Storage is available in Chrome, Opera, and Firefox. Most of these are similar to the [service worker debugging tools](debugging_service_workers_in_browsers.md).
+Debugging support for IndexedDB is available in Chrome, Opera, Firefox and Safari. Debugging support for Cache Storage is available in Chrome, Opera, and Firefox. Most of these are similar to the [service worker debugging tools](debugging-service-workers-in-browsers).
 
 
 
@@ -137,7 +137,7 @@ IndexedDB is a noSQL database. IndexedDB data is stored as key-value pairs in __
 </tr></table>
 
 
-The data is organized by a __`keypath`__, which in this case is the item's __`id`__ property. You can learn more about IndexedDB in the [corresponding text](working_with_indexed_db.md), or in the  [code lab](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_indexed_db.html).
+The data is organized by a __`keypath`__, which in this case is the item's __`id`__ property. You can learn more about IndexedDB in the [corresponding text](working-with-indexed-db), or in the  [code lab](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_indexed_db.html).
 
 The following function could be used to create an IndexedDB object store like the example above:
 

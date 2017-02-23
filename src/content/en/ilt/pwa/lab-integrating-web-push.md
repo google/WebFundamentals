@@ -29,8 +29,8 @@ This lab shows you the basics of sending, receiving, and displaying push notific
 
 #### What you should know
 
-* Have completed the [Service Worker](lab_scripting_the_service_worker.md) course or have equivalent experience with Service Worker
-* Have completed the [Promises](lab_promises.md) codelab or have equivalent experience
+* Have completed the [Service Worker](lab-scripting-the-service-worker) course or have equivalent experience with Service Worker
+* Have completed the [Promises](lab-promises) codelab or have equivalent experience
 * Intermediate experience using the command line interface
 * Intermediate-to-advanced experience with JavaScript
 
@@ -50,7 +50,7 @@ This lab shows you the basics of sending, receiving, and displaying push notific
 
 
 
-If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting_up_the_labs.md).
+If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 In the command window, change to the __app__ directory in the __push-notification-lab__ and run `npm install`:
 
@@ -66,7 +66,7 @@ Open your browser and navigate __localhost:8080/push-notification-lab/app/__.
 
 
 
-Note: If you have installed a service worker on localhost before, <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If you have installed a service worker on localhost before, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
@@ -130,7 +130,7 @@ Notification.requestPermission(function(status) {
 
 Let's test this function in the browser. Save the code and refresh the page in the browser. A message box should appear at the top of the browser window prompting you to allow notifications. 
 
-If the prompt does not appear, you can [set the permissions](tools_for_pwa_developers.md#permissions) manually by clicking the __Information__ icon in the URL bar. As an experiment, try rejecting permission and then check the console. Now reload the page and this time allow notifications. You should see a permission status of "granted" in the console.
+If the prompt does not appear, you can [set the permissions](tools-for-pwa-developers#permissions) manually by clicking the __Information__ icon in the URL bar. As an experiment, try rejecting permission and then check the console. Now reload the page and this time allow notifications. You should see a permission status of "granted" in the console.
 
 #### Explanation
 
@@ -240,7 +240,7 @@ self.addEventListener('notificationclose', function(e) {
 });
 ```
 
-Save the code and [update the service worker](tools_for_pwa_developers.md#update) in the browser. Now, in the page, click __Notify me!__ and then close the notification. [Check the console](tools_for_pwa_developers.md#console) to see the log message appear when the notification closes.
+Save the code and [update the service worker](tools-for-pwa-developers#update) in the browser. Now, in the page, click __Notify me!__ and then close the notification. [Check the console](tools-for-pwa-developers#console) to see the log message appear when the notification closes.
 
 #### Explanation
 
@@ -248,7 +248,7 @@ This code gets the notification object from the event and then gets the data fro
 
 
 
-__Tip:__  The <code>notificationclose</code> event is a great place to add Google analytics to see how often users are closing our notifications. You can learn more about this in the <a href="lab_integrating_analytics.md">Google Analytics codelab</a>.
+__Tip:__  The <code>notificationclose</code> event is a great place to add Google analytics to see how often users are closing our notifications. You can learn more about this in the <a href="lab-integrating-analytics">Google Analytics codelab</a>.
 
 
 
@@ -269,7 +269,7 @@ self.addEventListener('notificationclick', function(e) {
 });
 ```
 
-Save the code and reload the page. [Update the service worker](tools_for_pwa_developers.md#update) in the browser. Click __Notify me!__ to create a new notification and click it. You should land on the Google homepage.
+Save the code and reload the page. [Update the service worker](tools-for-pwa-developers#update) in the browser. Click __Notify me!__ to create a new notification and click it. You should land on the Google homepage.
 
 ### 2.8 Optional: Open a custom page from the notification
 
@@ -280,7 +280,7 @@ To complete TODO 2.8 inside the <code>notificationclick</code> event, write the 
 3. Replace the URL in `clients.openWindow` with `'samples/page' + primaryKey + '.html'`.
 4. Finally, at the bottom of the listener, add a line to close the notification. Refer to the Methods section in the  [Notification article on MDN](https://developer.mozilla.org/en-US/docs/Web/API/notification) to see how to programmatically close the notification.
 
-Save the code and [update the service worker](tools_for_pwa_developers.md#update) in the browser. Click __Notify me!__ to create a new notification and then click the notification. It should take you to __page1.html__ and the notification should close after it is clicked. Try changing the `primaryKey` in __main.js__ to 2 and test it again. This should take you to __page2.html__ when you click the notification.
+Save the code and [update the service worker](tools-for-pwa-developers#update) in the browser. Click __Notify me!__ to create a new notification and then click the notification. It should take you to __page1.html__ and the notification should close after it is clicked. Try changing the `primaryKey` in __main.js__ to 2 and test it again. This should take you to __page2.html__ when you click the notification.
 
 ### 2.9 Handle actions
 
@@ -308,7 +308,7 @@ self.addEventListener('notificationclick', function(e) {
 });
 ```
 
-Save the code and [update the service worker](tools_for_pwa_developers.md#update) in the browser. Click __Notify me!__ to create a new notification. Try clicking the actions.
+Save the code and [update the service worker](tools-for-pwa-developers#update) in the browser. Click __Notify me!__ to create a new notification. Try clicking the actions.
 
 
 
@@ -366,7 +366,7 @@ self.addEventListener('push', function(e) {
 });
 ```
 
-Save the code and [update the service worker](tools_for_pwa_developers.md#update). Try [sending a push message](tools_for_pwa_developers.md#push) from the browser to your service worker. A notification should appear on your screen.
+Save the code and [update the service worker](tools-for-pwa-developers#update). Try [sending a push message](tools-for-pwa-developers#push) from the browser to your service worker. A notification should appear on your screen.
 
 
 
@@ -591,7 +591,7 @@ You can send a message to Firefox's push service by opening the app in Firefox, 
 
 
 
-Note: Remember to <a href="tools_for_pwa_developers.md#firefoxunregister">unregister the previous service worker</a> at localhost if it exists.
+Note: Remember to <a href="tools-for-pwa-developers#firefoxunregister">unregister the previous service worker</a> at localhost if it exists.
 
 
 
@@ -667,7 +667,7 @@ We can get all the information we need to send the push message to the right pus
 
 Replace TODO 3.8 in <strong>node/main.js</strong> with the code below.
 
-Make sure you save the changes you made to the service worker in the last step and then [unregister the service worker](tools_for_pwa_developers.md#unregister) and refresh the page in the browser. Click __Enable Push Messaging __and copy the whole subscription object. Replace `YOUR_SUBSCRIPTION_OBJECT` in the code you just pasted into __node/main.js__ with the subscription object.
+Make sure you save the changes you made to the service worker in the last step and then [unregister the service worker](tools-for-pwa-developers#unregister) and refresh the page in the browser. Click __Enable Push Messaging __and copy the whole subscription object. Replace `YOUR_SUBSCRIPTION_OBJECT` in the code you just pasted into __node/main.js__ with the subscription object.
 
 If you are working in Chrome, replace `YOUR_SERVER_KEY` in the `options` object with your own Server Key from your project on Firebase. Do not overwrite the single quotes.
 
@@ -911,7 +911,7 @@ e.waitUntil(
 );
 ```
 
-Save the file and [update the service worker](tools_for_pwa_developers.md#update), then refresh the page in the browser. Click __Enable Push Messaging__. Copy the subscription object and replace the old subscription object in __node/main.js__ with it.
+Save the file and [update the service worker](tools-for-pwa-developers#update), then refresh the page in the browser. Click __Enable Push Messaging__. Copy the subscription object and replace the old subscription object in __node/main.js__ with it.
 
 Execute the command to run the node server in the command window at the __app__ directory:
 
@@ -955,7 +955,7 @@ Comment out the `tag` attribute in the `displayNotification` function in __main.
 // tag: 'id1',
 ```
 
-Save the code, open the app again, and [update the service worker](tools_for_pwa_developers.md#update). Click __Notify me!__ a few times to display multiple notifications. If you click "Close the notification" on one notification they should all disappear. 
+Save the code, open the app again, and [update the service worker](tools-for-pwa-developers#update). Click __Notify me!__ a few times to display multiple notifications. If you click "Close the notification" on one notification they should all disappear. 
 
 
 
@@ -1003,7 +1003,7 @@ e.waitUntil(
 );
 ```
 
-Save the code and [update the service worker](tools_for_pwa_developers.md#update) in the browser. Click __Notify me! __to create a new notification. Try clicking on a notification once with your app open and focused, and once with a different tab open.
+Save the code and [update the service worker](tools-for-pwa-developers#update) in the browser. Click __Notify me! __to create a new notification. Try clicking on a notification once with your app open and focused, and once with a different tab open.
 
 
 

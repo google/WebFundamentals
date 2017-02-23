@@ -176,7 +176,7 @@ However the pages in your app that are open are not under the service worker's s
 
 Service workers are event driven. Both the installation and activation processes trigger corresponding `install` and `activate` events to which the service workers can respond. There are also `message` events, where the service worker can receive information from other scripts, and functional events such as `fetch`, `push`, and `sync`. 
 
-To examine service workers, navigate to the Service Worker section in your browser's developer tools. The process is different in each browser that supports service workers. For information about using your browser's developer tools to check the status of service workers, see [Debugging Service Workers in Browsers](debugging_service_workers_in_browsers.md).
+To examine service workers, navigate to the Service Worker section in your browser's developer tools. The process is different in each browser that supports service workers. For information about using your browser's developer tools to check the status of service workers, see [Debugging Service Workers in Browsers](debugging-service-workers-in-browsers).
 
 <div id="resources"></div>
 

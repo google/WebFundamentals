@@ -49,13 +49,13 @@ This lab teaches you how to use JavaScript  [Promises](https://developer.mozilla
 
 
 
-If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting_up_the_labs.md). 
+If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs). 
 
 Open your browser and navigate to __localhost:8080/promises-lab/app__.
 
 
 
-Note: If a service worker is already registered on localhost, then <a href="tools_for_pwa_developers.md#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: If a service worker is already registered on localhost, then <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
 
 
 
