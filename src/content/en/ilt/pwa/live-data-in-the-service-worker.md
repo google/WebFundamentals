@@ -41,71 +41,54 @@ Different browsers allow different amounts of offline storage. This table summar
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">
-
-__Browser __
+<p><strong>Browser </strong></p>
 </td><td colspan="1" rowspan="1">
-
-__Limitation__
+<p><strong>Limitation</strong></p>
 </td><td colspan="1" rowspan="1">
-
-__Notes__
+<p><strong>Notes</strong></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Chrome and Opera
+<p>Chrome and Opera</p>
 </td><td colspan="1" rowspan="1">
-
-Up to a  [quota](https://www.html5rocks.com/en/tutorials/offline/quota-research/). Check usage with the  [Quota API](https://www.w3.org/TR/quota-api/)
+<p>Up to a  <a href="https://www.html5rocks.com/en/tutorials/offline/quota-research/">quota</a>. Check usage with the  <a href="https://www.w3.org/TR/quota-api/">Quota API</a></p>
 </td><td colspan="1" rowspan="1">
-
-Storage is per origin not per API (local storage, session storage, service worker cache and IndexedDB all share the same space)
+<p>Storage is per origin not per API (local storage, session storage, service worker cache and IndexedDB all share the same space)</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Firefox
+<p>Firefox</p>
 </td><td colspan="1" rowspan="1">
-
-No limit
+<p>No limit</p>
 </td><td colspan="1" rowspan="1">
-
-Prompts after 50 MB of data is stored
+<p>Prompts after 50 MB of data is stored</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Mobile Safari
+<p>Mobile Safari</p>
 </td><td colspan="1" rowspan="1">
-
-50MB
+<p>50MB</p>
 </td><td colspan="1" rowspan="1">
-
-&nbsp;
+<p> </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Desktop Safari
+<p>Desktop Safari</p>
 </td><td colspan="1" rowspan="1">
-
-No limit
+<p>No limit</p>
 </td><td colspan="1" rowspan="1">
-
-Prompts after 5MB of data is stored
+<p>Prompts after 5MB of data is stored</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Internet Explorer (10+)
+<p>Internet Explorer (10+)</p>
 </td><td colspan="1" rowspan="1">
-
-250MB
+<p>250MB</p>
 </td><td colspan="1" rowspan="1">
-
-Prompts after 10MB of data is stored
+<p>Prompts after 10MB of data is stored</p>
 </td>
 </tr></table>
+
 
 <div id="examples"></div>
 
@@ -121,49 +104,38 @@ IndexedDB is a noSQL database. IndexedDB data is stored as key-value pairs in __
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">
-
-__#__
+<p><strong>#</strong></p>
 </td><td colspan="1" rowspan="1">
-
-__Key (keypath 'id')__
+<p><strong>Key (keypath 'id')</strong></p>
 </td><td colspan="1" rowspan="1">
-
-__Value__
+<p><strong>Value</strong></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-0
+<p>0</p>
 </td><td colspan="1" rowspan="1">
-
-1234
+<p>1234</p>
 </td><td colspan="1" rowspan="1">
-
-{id: 123, name: 'coke', price: 10.99, quantity: 200}
+<p>{id: 123, name: 'coke', price: 10.99, quantity: 200}</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-1
+<p>1</p>
 </td><td colspan="1" rowspan="1">
-
-9876
+<p>9876</p>
 </td><td colspan="1" rowspan="1">
-
-{id: 321, name: 'pepsi', price: 8.99, quantity: 100}
+<p>{id: 321, name: 'pepsi', price: 8.99, quantity: 100}</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-2
+<p>2</p>
 </td><td colspan="1" rowspan="1">
-
-4567
+<p>4567</p>
 </td><td colspan="1" rowspan="1">
-
-{id: 222, name: 'water', price: 11.99, quantity: 300}
+<p>{id: 222, name: 'water', price: 11.99, quantity: 300}</p>
 </td>
 </tr></table>
+
 
 The data is organized by a __`keypath`__, which in this case is the item's __`id`__ property. You can learn more about IndexedDB in the [corresponding text](working_with_indexed_db.md), or in the  [code lab](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_indexed_db.html).
 

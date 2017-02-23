@@ -655,59 +655,45 @@ Here is a short reference of the differences between the IndexedDB API and the I
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">
-
-&nbsp;
+<p> </p>
 </td><td colspan="1" rowspan="1">
-
-IndexedDB Promised
+<p>IndexedDB Promised</p>
 </td><td colspan="1" rowspan="1">
-
-IndexedDB API
+<p>IndexedDB API</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Open database
+<p>Open database</p>
 </td><td colspan="1" rowspan="1">
-
-<code>idb.open(name, version, upgradeCallback)</code>
+<p><code>idb.open(name, version, upgradeCallback)</code></p>
 </td><td colspan="1" rowspan="1">
-
-<code>indexedDB.open(name, version)</code>
+<p><code>indexedDB.open(name, version)</code></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Upgrade database
+<p>Upgrade database</p>
 </td><td colspan="1" rowspan="1">
-
-Inside upgradeCallback
+<p>Inside upgradeCallback</p>
 </td><td colspan="1" rowspan="1">
-
-<code>request.onupgradeneeded</code>
+<p><code>request.onupgradeneeded</code></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Success
+<p>Success</p>
 </td><td colspan="1" rowspan="1">
-
-<code>.then</code>
+<p><code>.then</code></p>
 </td><td colspan="1" rowspan="1">
-
-<code>request.onsuccess</code>
+<p><code>request.onsuccess</code></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Error
+<p>Error</p>
 </td><td colspan="1" rowspan="1">
-
-<code>.catch</code>
+<p><code>.catch</code></p>
 </td><td colspan="1" rowspan="1">
-
-<code>request.onerror</code>
+<p><code>request.onerror</code></p>
 </td>
 </tr></table>
+
 
 

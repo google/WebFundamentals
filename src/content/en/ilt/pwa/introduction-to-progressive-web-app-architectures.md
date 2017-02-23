@@ -91,124 +91,96 @@ The app shell model is great but how does it work in browsers that do not suppor
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">
-
-__Component__
+<p><strong>Component</strong></p>
 </td><td colspan="1" rowspan="1">
-
-__Description__
+<p><strong>Description</strong></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-app shell
+<p>app shell</p>
 </td><td colspan="1" rowspan="1">
-
-The minimal HTML, CSS, and JavaScript and any other static resources that provide the structure for your page, minus the actual content specific to the page. 
+<p>The minimal HTML, CSS, and JavaScript and any other static resources that provide the structure for your page, minus the actual content specific to the page. </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-cache
+<p>cache</p>
 </td><td colspan="1" rowspan="1">
-
-There are two types of cache: the automatic browser cache and program-controlled caches (Cache API and IndexedDB). 
-
-* The __browser cache__ is a temporary storage location on your computer for files downloaded by your browser to display websites. Files that are cached locally include any documents that make up a website, such as HTML files, CSS style sheets, JavaScript scripts, as well as graphic images and other multimedia content.
-* The service worker also creates cache independent of the browser cache using the  [Cache Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) or IndexedDB. The  [__cache objects__](https://www.w3.org/TR/service-workers/#cache-objects) hold the same kinds of assets as a browser cache but make them offline accessible.The service worker provides these to enable offline support in browsers. This is referred to as "__Cache (Storage) API__" in this document.
-
-The cache objects are one tool you can use when building your app, but you must use them appropriately for each resource. Several caching strategies are described in Caching Strategies Supported by sw-toolbox. 
+<p>There are two types of cache: the automatic browser cache and program-controlled caches (Cache API and IndexedDB). </p>
+<ul>
+<li>The <strong>browser cache</strong> is a temporary storage location on your computer for files downloaded by your browser to display websites. Files that are cached locally include any documents that make up a website, such as HTML files, CSS style sheets, JavaScript scripts, as well as graphic images and other multimedia content.</li>
+<li>The service worker also creates cache independent of the browser cache using the  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache Storage API</a> or IndexedDB. The  <a href="https://www.w3.org/TR/service-workers/#cache-objects"><strong>cache objects</strong></a> hold the same kinds of assets as a browser cache but make them offline accessible.The service worker provides these to enable offline support in browsers. This is referred to as "<strong>Cache (Storage) API</strong>" in this document.</li>
+</ul>
+<p>The cache objects are one tool you can use when building your app, but you must use them appropriately for each resource. Several caching strategies are described in Caching Strategies Supported by sw-toolbox. </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-client-side rendering (CSR)
+<p>client-side rendering (CSR)</p>
 </td><td colspan="1" rowspan="1">
-
-Client-side rendering means JavaScript running in the browser produces HTML (probably via templating). The benefit is that you can update the screen instantly when the user clicks, rather than waiting a few hundred milliseconds at least while the server is contacted to ask what to display. Sites where you mostly navigate and view static content can get away with mostly server-side rendering. Any portion of a page that is animated or highly interactive (a draggable slider, a sortable table, a dropdown menu) almost certainly uses client-side rendering.
+<p>Client-side rendering means JavaScript running in the browser produces HTML (probably via templating). The benefit is that you can update the screen instantly when the user clicks, rather than waiting a few hundred milliseconds at least while the server is contacted to ask what to display. Sites where you mostly navigate and view static content can get away with mostly server-side rendering. Any portion of a page that is animated or highly interactive (a draggable slider, a sortable table, a dropdown menu) almost certainly uses client-side rendering.</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-dynamic content
+<p>dynamic content</p>
 </td><td colspan="1" rowspan="1">
-
-Dynamic content is all of the data, images, and other resources that your web app needs to function, but exists independently from your app shell. Although the app shell is intended to quickly populate the content of your site, users might expect dynamic content, in which case your app must fetch data specific to the user's needs. Sometimes an app pulls this data from external, third-party APIs, and sometimes from first-party data that is dynamically generated or frequently updated.
+<p>Dynamic content is all of the data, images, and other resources that your web app needs to function, but exists independently from your app shell. Although the app shell is intended to quickly populate the content of your site, users might expect dynamic content, in which case your app must fetch data specific to the user's needs. Sometimes an app pulls this data from external, third-party APIs, and sometimes from first-party data that is dynamically generated or frequently updated.</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Fetch API
+<p>Fetch API</p>
 </td><td colspan="1" rowspan="1">
-
-You can optionally implement the  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to help the service worker get data.  For example, if your web app is for a newspaper, it might make use of a first-party API to fetch recent articles, and a third-party API to fetch the current weather. Both of those types of requests fall into the category of dynamic content.
+<p>You can optionally implement the  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a> to help the service worker get data.  For example, if your web app is for a newspaper, it might make use of a first-party API to fetch recent articles, and a third-party API to fetch the current weather. Both of those types of requests fall into the category of dynamic content.</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-progressive enhancement
+<p>progressive enhancement</p>
 </td><td colspan="1" rowspan="1">
-
-An approach to web development that begins with common browser features, and then adds in functionality or enhancements when the user's browser supports more modern technologies.
+<p>An approach to web development that begins with common browser features, and then adds in functionality or enhancements when the user's browser supports more modern technologies.</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-PWA architecture styles
+<p>PWA architecture styles</p>
 </td><td colspan="1" rowspan="1">
-
-Any of several approaches to building PWAs based on the back-end technologies available and the performance requirements. The patterns include using an app shell, server-side rendering, client-side rendering, and others. These patterns are listed in PWA Architectural Patterns.  
+<p>Any of several approaches to building PWAs based on the back-end technologies available and the performance requirements. The patterns include using an app shell, server-side rendering, client-side rendering, and others. These patterns are listed in PWA Architectural Patterns.  </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-server-side rendering (SSR)
+<p>server-side rendering (SSR)</p>
 </td><td colspan="1" rowspan="1">
-
-SSR means when the browser navigates to a URL fetches the page, it immediately gets back HTML describing the page. SSR is nice because the page loads faster (this can be a server-rendered version of the full page, just the app shell or the content). There's no  *white page*  displayed while the browser downloads the rendering code and data and runs the code.  If rendering content on the server-side, users can get meaningful text on their screens even if a spotty network connection prevents assets like JavaScript from being fully fetched and parsed. SSR also maintains the idea that pages are documents, and if you ask a server for a document by its URL, then the text of the document is returned, rather than a program that generates that text using a complicated API.
+<p>SSR means when the browser navigates to a URL fetches the page, it immediately gets back HTML describing the page. SSR is nice because the page loads faster (this can be a server-rendered version of the full page, just the app shell or the content). There's no  <em>white page</em>  displayed while the browser downloads the rendering code and data and runs the code.  If rendering content on the server-side, users can get meaningful text on their screens even if a spotty network connection prevents assets like JavaScript from being fully fetched and parsed. SSR also maintains the idea that pages are documents, and if you ask a server for a document by its URL, then the text of the document is returned, rather than a program that generates that text using a complicated API.</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-service worker
+<p>service worker</p>
 </td><td colspan="1" rowspan="1">
-
-A type of  [web worker](http://www.w3.org/TR/workers/) that runs alongside your web app but with a life span that is tied to the execution of the app's events. Some of its services include a network proxy written in JavaScript that intercepts HTTP/HTTPS requests made from web pages. It also receives push messages. Additional features are planned in the future.
+<p>A type of  <a href="http://www.w3.org/TR/workers/">web worker</a> that runs alongside your web app but with a life span that is tied to the execution of the app's events. Some of its services include a network proxy written in JavaScript that intercepts HTTP/HTTPS requests made from web pages. It also receives push messages. Additional features are planned in the future.</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-`sw-precache`
+<p><code>sw-precache</code></p>
 </td><td colspan="1" rowspan="1">
-
-The `sw-precache` module integrates with your build process and generates code for caching and maintaining all the resources in your app shell. 
+<p>The <code>sw-precache</code> module integrates with your build process and generates code for caching and maintaining all the resources in your app shell. </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-`sw-toolbox`
+<p><code>sw-toolbox</code></p>
 </td><td colspan="1" rowspan="1">
-
-The `sw-toolbox` library is loaded by your service worker at run time and provides pre-written tools for applying common caching strategies to different URL patterns.
+<p>The <code>sw-toolbox</code> library is loaded by your service worker at run time and provides pre-written tools for applying common caching strategies to different URL patterns.</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Universal JavaScript rendering
+<p>Universal JavaScript rendering</p>
 </td><td colspan="1" rowspan="1">
-
-Universal or Isomorphic JavaScript apps have code that can run on the client-side and the server-side. This means that some of your application view logic can be executed on both the server and the client. This means better performance time to first paint and more stateful web apps. Universal apps come with interesting sets of challenges around routing (ideally, having a single set of routes mapping URI patterns to route handlers), universal data fetching (describing resources for a component independent from the fetching mechanism so they can be rendered entirely on the server or the client) and view rendering. (Views must be renderable on either the client or the server depending on our app needs.)
+<p>Universal or Isomorphic JavaScript apps have code that can run on the client-side and the server-side. This means that some of your application view logic can be executed on both the server and the client. This means better performance time to first paint and more stateful web apps. Universal apps come with interesting sets of challenges around routing (ideally, having a single set of routes mapping URI patterns to route handlers), universal data fetching (describing resources for a component independent from the fetching mechanism so they can be rendered entirely on the server or the client) and view rendering. (Views must be renderable on either the client or the server depending on our app needs.)</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-web app manifest
+<p>web app manifest</p>
 </td><td colspan="1" rowspan="1">
-
-The app shell is deployed alongside a  [__web app manifest__](https://www.w3.org/TR/appmanifest/), which is a simple JSON file that controls how the application appears to the user and how it can be launched. (This is typically named `manifest.json`.) When connecting to a network for the first time, a web browser reads the manifest file, downloads the resources given and stores them locally. Then, if there is no network connection, the browser uses the local cache to render the web app while offline.
-
-__ *Note:* __ * Do not confuse this with the older *  *`.manifest`*  * file used by AppCache. PWAs should use the service worker to implement caching and the web app manifest to enable "add to homescreen" and push messaging. * 
+<p>The app shell is deployed alongside a  <a href="https://www.w3.org/TR/appmanifest/"><strong>web app manifest</strong></a>, which is a simple JSON file that controls how the application appears to the user and how it can be launched. (This is typically named <code>manifest.json</code>.) When connecting to a network for the first time, a web browser reads the manifest file, downloads the resources given and stores them locally. Then, if there is no network connection, the browser uses the local cache to render the web app while offline.</p>
+<p><strong> <em>Note:</em> </strong> <em> Do not confuse this with the older </em>  <em><code>.manifest</code></em>  <em> file used by AppCache. PWAs should use the service worker to implement caching and the web app manifest to enable "add to homescreen" and push messaging. </em> </p>
 </td>
 </tr></table>
+
 
 <div id="styles"></div>
 
@@ -295,128 +267,90 @@ Note: For browsers that do not support service workers, we gracefully degrade to
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">
-
-__Use-case__
+<p><strong>Use-case</strong></p>
 </td><td colspan="1" rowspan="1">
-
-__Patterns__
+<p><strong>Patterns</strong></p>
 </td><td colspan="1" rowspan="1">
-
-__Examples__
+<p><strong>Examples</strong></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Publishing
+<p>Publishing</p>
 </td><td colspan="1" rowspan="1">
-
-Full SSR
+<p>Full SSR</p>
 </td><td colspan="1" rowspan="1">
-
-[https://babe.news/](https://babe.news/read/7787068/begini-dalih-ahok-tanggapi-teguran-presiden-soal-apbd)
-
-[https://ampbyexample.com](https://ampbyexample.com)
-
-[https://ampproject.org](https://ampproject.org)
+<p><a href="https://babe.news/read/7787068/begini-dalih-ahok-tanggapi-teguran-presiden-soal-apbd">https://babe.news/</a></p>
+<p><a href="https://ampbyexample.com">https://ampbyexample.com</a></p>
+<p><a href="https://ampproject.org">https://ampproject.org</a></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Publishing
+<p>Publishing</p>
 </td><td colspan="1" rowspan="1">
-
-Application Shell
+<p>Application Shell</p>
 </td><td colspan="1" rowspan="1">
-
-[https://app.jalantikus.com/](https://app.jalantikus.com/) 
-
-[https://m.geo.tv/](https://m.geo.tv/) 
-
-[https://app.kompas.com/](https://app.kompas.com/) 
-
-[https://www.nfl.com/now/](https://www.nfl.com/now/) 
-
-[https://www.chromestatus.com](https://www.chromestatus.com) 
+<p><a href="https://app.jalantikus.com/">https://app.jalantikus.com/</a> </p>
+<p><a href="https://m.geo.tv/">https://m.geo.tv/</a> </p>
+<p><a href="https://app.kompas.com/">https://app.kompas.com/</a> </p>
+<p><a href="https://www.nfl.com/now/">https://www.nfl.com/now/</a> </p>
+<p><a href="https://www.chromestatus.com">https://www.chromestatus.com</a> </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Publishing
+<p>Publishing</p>
 </td><td colspan="1" rowspan="1">
-
-AppShell + SSR content for entry pages
+<p>AppShell + SSR content for entry pages</p>
 </td><td colspan="1" rowspan="1">
-
-[https://react-hn.appspot.com](https://react-hn.appspot.com)
-
-[https://www.polymer-project.org/1.0/](https://www.polymer-project.org/1.0/) 
+<p><a href="https://react-hn.appspot.com">https://react-hn.appspot.com</a></p>
+<p><a href="https://www.polymer-project.org/1.0/">https://www.polymer-project.org/1.0/</a> </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Publishing
+<p>Publishing</p>
 </td><td colspan="1" rowspan="1">
-
-Streams for body content / UI
+<p>Streams for body content / UI</p>
 </td><td colspan="1" rowspan="1">
-
-[https://wiki-offline.jakearchibald.com/wiki/The_Raccoons](https://wiki-offline.jakearchibald.com/wiki/The_Raccoons) 
+<p><a href="https://wiki-offline.jakearchibald.com/wiki/The_Raccoons">https://wiki-offline.jakearchibald.com/wiki/The_Raccoons</a> </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Social
+<p>Social</p>
 </td><td colspan="1" rowspan="1">
-
-AppShell
+<p>AppShell</p>
 </td><td colspan="1" rowspan="1">
-
-[https://web.telegram.org/](https://web.telegram.org/) 
+<p><a href="https://web.telegram.org/">https://web.telegram.org/</a> </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-E-commerce
+<p>E-commerce</p>
 </td><td colspan="1" rowspan="1">
-
-Application Shell
+<p>Application Shell</p>
 </td><td colspan="1" rowspan="1">
-
-[https://m.aliexpress.com/](https://m.aliexpress.com/) 
-
-[https://kongax.konga.com/](https://kongax.konga.com/) 
-
-[https://m.flipkart.com](https://m.flipkart.com) (mobile/emulate)
-
-[https://m.airberlin.com/en/pwa](https://m.airberlin.com/en/pwa)
-
-[https://shop.polymer-project.org/](https://shop.polymer-project.org/) 
+<p><a href="https://m.aliexpress.com/">https://m.aliexpress.com/</a> </p>
+<p><a href="https://kongax.konga.com/">https://kongax.konga.com/</a> </p>
+<p><a href="https://m.flipkart.com">https://m.flipkart.com</a> (mobile/emulate)</p>
+<p><a href="https://m.airberlin.com/en/pwa">https://m.airberlin.com/en/pwa</a></p>
+<p><a href="https://shop.polymer-project.org/">https://shop.polymer-project.org/</a> </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-E-commerce
+<p>E-commerce</p>
 </td><td colspan="1" rowspan="1">
-
-AppShell + SSR content for entry page
+<p>AppShell + SSR content for entry page</p>
 </td><td colspan="1" rowspan="1">
-
-[https://selio.com/](https://selio.com/) (try on mobile/emulate) 
-
-[https://lite.5milesapp.com/](https://lite.5milesapp.com/) (partial)
+<p><a href="https://selio.com/">https://selio.com/</a> (try on mobile/emulate) </p>
+<p><a href="https://lite.5milesapp.com/">https://lite.5milesapp.com/</a> (partial)</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Conference
+<p>Conference</p>
 </td><td colspan="1" rowspan="1">
-
-AppShell
+<p>AppShell</p>
 </td><td colspan="1" rowspan="1">
-
-[https://events.google.com/io2016/schedule](https://events.google.com/io2016/schedule) 
+<p><a href="https://events.google.com/io2016/schedule">https://events.google.com/io2016/schedule</a> </p>
 </td>
 </tr></table>
+
 
 <div id="migrating"></div>
 
@@ -695,91 +629,67 @@ Use the following table to determine which caching strategy is most appropriate 
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">
-
-__Strategy__
+<p><strong>Strategy</strong></p>
 </td><td colspan="1" rowspan="1">
-
-__The service worker ...__
+<p><strong>The service worker ...</strong></p>
 </td><td colspan="1" rowspan="1">
-
-__Best strategy for ....__
+<p><strong>Best strategy for ....</strong></p>
 </td><td colspan="1" rowspan="1">
-
-__Corresponding  ____`sw-toolbox`____ handler__
+<p><strong>Corresponding  __</strong><code>sw-toolbox</code>_<strong>_ handler</strong></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Cache first,
-
-Network fallback
+<p>Cache first,</p>
+<p>Network fallback</p>
 </td><td colspan="1" rowspan="1">
-
-Loads the local (cached) HTML and JavaScript first, if possible, bypassing the network. If cached content is not available, then the service worker returns a response from the network instead and caches the network response. 
+<p>Loads the local (cached) HTML and JavaScript first, if possible, bypassing the network. If cached content is not available, then the service worker returns a response from the network instead and caches the network response. </p>
 </td><td colspan="1" rowspan="1">
-
-When dealing with remote resources that are very unlikely to change, such as static images. 
+<p>When dealing with remote resources that are very unlikely to change, such as static images. </p>
 </td><td colspan="1" rowspan="1">
-
-`toolbox.cacheFirst`
+<p><code>toolbox.cacheFirst</code></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Network first, Cache fallback
+<p>Network first, Cache fallback</p>
 </td><td colspan="1" rowspan="1">
-
-Checks the network first for a response and, if successful, returns current data to the page. If the network request fails, then the service worker returns the cached entry instead. 
+<p>Checks the network first for a response and, if successful, returns current data to the page. If the network request fails, then the service worker returns the cached entry instead. </p>
 </td><td colspan="1" rowspan="1">
-
-When data must be as fresh as possible, such as a real-time API response, but you still want to display something as a fallback when the network is unavailable.
+<p>When data must be as fresh as possible, such as a real-time API response, but you still want to display something as a fallback when the network is unavailable.</p>
 </td><td colspan="1" rowspan="1">
-
-`toolbox.networkFirst`
+<p><code>toolbox.networkFirst</code></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Cache/network race
+<p>Cache/network race</p>
 </td><td colspan="1" rowspan="1">
-
-Fires the same request to the network and the cache simultaneously. In most cases, the cached data loads first and that is returned directly to the page. Meanwhile, the network response updates the previously cached entry. The cache updates keep the cached data relatively fresh. The updates occur in the background and do not block rendering of the cached content. 
+<p>Fires the same request to the network and the cache simultaneously. In most cases, the cached data loads first and that is returned directly to the page. Meanwhile, the network response updates the previously cached entry. The cache updates keep the cached data relatively fresh. The updates occur in the background and do not block rendering of the cached content. </p>
 </td><td colspan="1" rowspan="1">
-
-When content is updated frequently, such as for articles, social media timelines, and game leaderboards. It can also be useful when chasing performance on devices with slow disk access where getting resources from the network might be quicker than pulling data from cache.
+<p>When content is updated frequently, such as for articles, social media timelines, and game leaderboards. It can also be useful when chasing performance on devices with slow disk access where getting resources from the network might be quicker than pulling data from cache.</p>
 </td><td colspan="1" rowspan="1">
-
-`toolbox.fastest`
+<p><code>toolbox.fastest</code></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Network only
+<p>Network only</p>
 </td><td colspan="1" rowspan="1">
-
-Only checks the network. There is no going to the cache for data. If the network fails, then the request fails. 
+<p>Only checks the network. There is no going to the cache for data. If the network fails, then the request fails. </p>
 </td><td colspan="1" rowspan="1">
-
-When only fresh data can be displayed on your site. 
+<p>When only fresh data can be displayed on your site. </p>
 </td><td colspan="1" rowspan="1">
-
-`toolbox.networkOnly`
+<p><code>toolbox.networkOnly</code></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Cache only
+<p>Cache only</p>
 </td><td colspan="1" rowspan="1">
-
-The data is cached during the `install` event so you can depend on the data being there.
+<p>The data is cached during the <code>install</code> event so you can depend on the data being there.</p>
 </td><td colspan="1" rowspan="1">
-
-When displaying static data on your site.
+<p>When displaying static data on your site.</p>
 </td><td colspan="1" rowspan="1">
-
-`toolbox.cacheOnly`
+<p><code>toolbox.cacheOnly</code></p>
 </td>
 </tr></table>
+
 
 While you can implement these strategies yourself manually, using `sw-toolbox` is recommended for caching your app's dynamic content. The last column in the table shows the `sw-toolbox` library that provides a canonical implementation of each strategy. If you do implement additional caching logic, put the code in a separate JavaScript file and include it using the `importScripts()` method.
 
@@ -805,191 +715,127 @@ Use the following table to identify which caching strategy provides the right ba
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">
-
-__Kind of data__
+<p><strong>Kind of data</strong></p>
 </td><td colspan="1" rowspan="1">
-
-__When data changes...__
+<p><strong>When data changes...</strong></p>
 </td><td colspan="1" rowspan="1">
-
-__Caching Strategy__
+<p><strong>Caching Strategy</strong></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-&nbsp;
+<p> </p>
 </td><td colspan="1" rowspan="1">
-
-☐Almost never changes
-
-☐User can see old value
-
-☐User should see new value when possible
-
-☐User must always see latest value
-
-☐Secure information - do not cache
+<p>☐Almost never changes</p>
+<p>☐User can see old value</p>
+<p>☐User should see new value when possible</p>
+<p>☐User must always see latest value</p>
+<p>☐Secure information - do not cache</p>
 </td><td colspan="1" rowspan="1">
-
- &nbsp;
+<p>  </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
- &nbsp;
+<p>  </p>
 </td><td colspan="1" rowspan="1">
-
-☐Almost never changes
-
-☐User can see old value
-
-☐User should see new value when possible
-
-☐User must always see latest value
-
-☐Secure information - do not cache
+<p>☐Almost never changes</p>
+<p>☐User can see old value</p>
+<p>☐User should see new value when possible</p>
+<p>☐User must always see latest value</p>
+<p>☐Secure information - do not cache</p>
 </td><td colspan="1" rowspan="1">
-
- &nbsp;
+<p>  </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
- &nbsp;
+<p>  </p>
 </td><td colspan="1" rowspan="1">
-
-☐Almost never changes
-
-☐User can see old value
-
-☐User should see new value when possible
-
-☐User must always see latest value
-
-☐Secure information - do not cache
+<p>☐Almost never changes</p>
+<p>☐User can see old value</p>
+<p>☐User should see new value when possible</p>
+<p>☐User must always see latest value</p>
+<p>☐Secure information - do not cache</p>
 </td><td colspan="1" rowspan="1">
-
- &nbsp;
+<p>  </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
- &nbsp;
+<p>  </p>
 </td><td colspan="1" rowspan="1">
-
-☐Almost never changes
-
-☐User can see old value
-
-☐User should see new value when possible
-
-☐User must always see latest value
-
-☐Secure information - do not cache
+<p>☐Almost never changes</p>
+<p>☐User can see old value</p>
+<p>☐User should see new value when possible</p>
+<p>☐User must always see latest value</p>
+<p>☐Secure information - do not cache</p>
 </td><td colspan="1" rowspan="1">
-
- &nbsp;
+<p>  </p>
 </td>
 </tr></table>
+
 
 #### Example
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">
-
-__Kind of data__
+<p><strong>Kind of data</strong></p>
 </td><td colspan="1" rowspan="1">
-
-__When data changes...__
+<p><strong>When data changes...</strong></p>
 </td><td colspan="1" rowspan="1">
-
-__Caching Strategy__
+<p><strong>Caching Strategy</strong></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-User name
+<p>User name</p>
 </td><td colspan="1" rowspan="1">
-
-☑Almost never changes
-
-☐User can see old value
-
-☐User should see new value when possible
-
-☐User must always see latest value
-
-☐Secure information - do not cache
+<p>☑Almost never changes</p>
+<p>☐User can see old value</p>
+<p>☐User should see new value when possible</p>
+<p>☐User must always see latest value</p>
+<p>☐Secure information - do not cache</p>
 </td><td colspan="1" rowspan="1">
-
-Cache first,
-
-Network fallback
+<p>Cache first,</p>
+<p>Network fallback</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Product description
+<p>Product description</p>
 </td><td colspan="1" rowspan="1">
-
-☑Almost never changes
-
-☐User can see old value
-
-☐User should see new value when possible
-
-☐User must always see latest value
-
-☐Secure information - do not cache
+<p>☑Almost never changes</p>
+<p>☐User can see old value</p>
+<p>☐User should see new value when possible</p>
+<p>☐User must always see latest value</p>
+<p>☐Secure information - do not cache</p>
 </td><td colspan="1" rowspan="1">
-
-Cache first,
-
-Network fallback
+<p>Cache first,</p>
+<p>Network fallback</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Product price
+<p>Product price</p>
 </td><td colspan="1" rowspan="1">
-
-☐Almost never changes
-
-☐User can see old value
-
-☑User should see new value when possible
-
-☐User must always see latest value
-
-☐Secure information - do not cache
+<p>☐Almost never changes</p>
+<p>☐User can see old value</p>
+<p>☑User should see new value when possible</p>
+<p>☐User must always see latest value</p>
+<p>☐Secure information - do not cache</p>
 </td><td colspan="1" rowspan="1">
-
-Network first, Cache fallback 
-
-or
-
-Cache/network race
+<p>Network first, Cache fallback </p>
+<p>or</p>
+<p>Cache/network race</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-
-Product availability
+<p>Product availability</p>
 </td><td colspan="1" rowspan="1">
-
-☐Almost never changes
-
-☐User can see old value
-
-☐User should see new value when possible
-
-☑User must always see latest value
-
-☐Secure information - do not cache
+<p>☐Almost never changes</p>
+<p>☐User can see old value</p>
+<p>☐User should see new value when possible</p>
+<p>☑User must always see latest value</p>
+<p>☐Secure information - do not cache</p>
 </td><td colspan="1" rowspan="1">
-
-Network only
+<p>Network only</p>
 </td>
 </tr></table>
+
 
 Regardless of which caching strategy you choose, you can use `sw-precache` to handle the implementation for you. All of the standard caching strategies, along with control over advanced options like maximum cache size and age, are supported via the automatic inclusion of the `sw-toolbox` library.
 
