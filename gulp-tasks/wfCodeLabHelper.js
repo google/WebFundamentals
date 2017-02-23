@@ -11,6 +11,9 @@ var glob = require('globule');
 var moment = require('moment');
 var gutil = require('gulp-util');
 const path = require('path');
+const remark = require('remark');
+const remarkHtml = require('remark-html');
+const wfRegEx = require('./wfRegEx');
 const mkdirp = require('mkdirp');
 
 function updateCodeLab(sourceFile, destFile, bookPath) {
@@ -78,9 +81,9 @@ function updateCodeLab(sourceFile, destFile, bookPath) {
   markdown = markdown.replace(/^<strong>Note:<\/strong>/gm, 'Note: ');
   markdown = markdown.replace(/<div class="note">((.|\n)*?)<\/div>/g, '$1');
 
-  // Change any Specials or Warning to key-point or warning
-  markdown = markdown.replace(/<aside markdown="1" class="special">/g, '<aside class="key-point">');
-  markdown = markdown.replace(/<aside markdown="1" class="warning">/g, '<aside class="warning">');
+
+  // Change any Specials to key-point
+  markdown = markdown.replace(/<aside markdown="1" class="special">/g, '<aside markdown="1" class="key-point">');
   
   // Convert any unclosed named anchors to simple div's
   markdown = markdown.replace(/^<a id="(.*?)"\s*\/*?>/gm, '<div id="$1"></div>');
@@ -93,6 +96,24 @@ function updateCodeLab(sourceFile, destFile, bookPath) {
   
   // Remove any bold from headings
   markdown = markdown.replace(/^(#+) __(.*)__/gm, '$1 $2');
+
+  // Convert markdown inside a set of HTML elements to HTML.
+  //   This is required because DevSite's MD parser doesn't handle markdown
+  //   inside of HTML. :(
+  let matches;
+  let RE_ASIDE = /<aside markdown="1" .*?>\n?((.|\n)*?)\n?<\/aside>/gm;
+  matches = wfRegEx.getMatches(RE_ASIDE, markdown);
+  matches.forEach(function(match) {
+    let htmlAside = remark().use(remarkHtml).process(match[0]);
+    markdown = markdown.replace(match[0], String(htmlAside));
+  });
+
+  let RE_TABLE = /<table markdown="1">((.|\n)*?)<\/table>/gm;
+  matches = wfRegEx.getMatches(RE_TABLE, markdown);
+  matches.forEach(function(match) {
+    let htmlTable = remark().use(remarkHtml).process(match[0]);
+    markdown = markdown.replace(match[0], String(htmlTable));
+  });
 
   result.push(markdown);
   if (metadata.feedback) {
