@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-01-17T13:36:24Z #}
+{# wf_updated_on: 2017-02-23T16:20:29Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -28,7 +28,7 @@ book_path: /web/ilt/_book.yaml
 
 The promise libraries listed above and promises that are part of the ES2015 JavaScript specification (also referred to as ES6) are all   [Promises/A+](https://github.com/promises-aplus/promises-spec) compatible. 
 
-See  [Is Service Worker Ready?](https://jakearchibald.github.io/isserviceworkerready/#promises) for an up-to-date list of browsers that support promises.
+See  [Can I Use](http://caniuse.com/#feat=promises) for an up-to-date list of browsers that support promises.
 
 <div id="why"></div>
 

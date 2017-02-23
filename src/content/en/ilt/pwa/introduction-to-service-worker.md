@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-13T08:25:04Z #}
+{# wf_updated_on: 2017-02-23T15:50:40Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -55,7 +55,7 @@ Service workers depend on two APIs to make an app work offline:  [Fetch](https:/
 
 ### Improve performance of your application/site
 
-Caching resources will make content load faster under most network conditions. See  [Caching files with the service worker](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_caching_files_with_the_service_worker.html) and  [The Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/) for a full list of caching strategies.
+Caching resources will make content load faster under most network conditions. See  [Caching files with the service worker](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_caching_files_with_the_service_worker.html) and  [The Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) for a full list of caching strategies.
 
 ### Make your app "offline-first"
 
@@ -67,7 +67,7 @@ Service workers provide the starting point for features that make web applicatio
 
 *  [Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API): A way to display and interact with notifications using the operating system's native notification system.
 *  [Push API: ](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) An API that enables your app to subscribe to a push service and receive push messages. Push messages are delivered to a service worker, which can use the information in the message to update the local state or display a notification to the user. Because service workers run independently of the main app, they can receive and display notifications even when the browser is not running. 
-*  [Background Sync API](/web/updates/2015/12/background-sync?hl=en): Lets you defer actions until the user has stable connectivity. This is useful to ensure that whatever the user wants to send is actually sent. This API also allows servers to push periodic updates to the app so the app can update when it's next online
+*  [Background Sync API](/web/updates/2015/12/background-sync): Lets you defer actions until the user has stable connectivity. This is useful to ensure that whatever the user wants to send is actually sent. This API also allows servers to push periodic updates to the app so the app can update when it's next online
 *  [Channel Messaging API](https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API): Lets web workers and service workers communicate with each other and with the host application. Examples of this API include new content notification and updates that require user interaction.
 
 <div id="lifecycle"></div>
@@ -129,7 +129,7 @@ If the service worker is already installed, `navigator.serviceWorker.register` j
 
 Once the the browser registers a service worker, __installation__ can be attempted. This occurs if the service worker is considered to be new by the browser, either because the site currently doesn't have a registered service worker, or because there is a byte difference between the new service worker and the previously installed one. 
 
-A service worker installation triggers an `install` event in the installing service worker. We can include an `install` event listener in the service worker to perform some task when the service worker installs (such as  [caching the application shell](https://jakearchibald.com/2014/offline-cookbook/#on-install-as-a-dependency)). An example of an installation event listener looks like this: 
+A service worker installation triggers an `install` event in the installing service worker. We can include an `install` event listener in the service worker to perform some task when the service worker installs (such as  [caching the application shell](/web/fundamentals/instant-and-offline/offline-cookbook/#on-install-as-dependency)). An example of an installation event listener looks like this: 
 
 #### service-worker.js
 

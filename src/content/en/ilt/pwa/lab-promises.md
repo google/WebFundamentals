@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T20:32:26Z #}
+{# wf_updated_on: 2017-02-23T16:13:22Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -36,7 +36,7 @@ This lab teaches you how to use JavaScript  [Promises](https://developer.mozilla
 
 #### What you will need
 
-* A browser that supports  [supports Promises](https://jakearchibald.github.io/isserviceworkerready/#promises)  [and Fetch](https://jakearchibald.github.io/isserviceworkerready/#fetch-event)
+* A browser that supports  [Promises](http://caniuse.com/#feat=promises) and  [Fetch](http://caniuse.com/#feat=fetch)
 * A text editor
 * Computer with terminal/shell access
 * Connection to the internet 

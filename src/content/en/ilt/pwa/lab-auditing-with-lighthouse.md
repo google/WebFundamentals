@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T20:13:31Z #}
+{# wf_updated_on: 2017-02-23T15:51:48Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -201,7 +201,7 @@ This lets us satisfy the manifest related requirements of Lighthouse (and a PWA)
 #### For more information
 
 *  [Add to home screen](https://developer.chrome.com/multidevice/android/installtohomescreen)
-*  [Web app manifests](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android?hl=en)
+*  [Web app manifests](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android)
 
 <div id="5"></div>
 

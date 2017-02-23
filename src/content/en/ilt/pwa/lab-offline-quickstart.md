@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T20:17:05Z #}
+{# wf_updated_on: 2017-02-23T16:17:08Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -34,7 +34,7 @@ This lab shows you how to add offline capabilities to an application using servi
 
 * Computer with terminal/shell access
 * Connection to the internet 
-* A  [browser that supports service worker](https://jakearchibald.github.io/isserviceworkerready/#fetch-event)
+* A browser that supports  [fetch](http://caniuse.com/#feat=fetch) and  [service workers](http://caniuse.com/#feat=serviceworkers)
 * A text editor
 
 <div id="1"></div>
@@ -208,7 +208,7 @@ When our app opens for the first time, the service worker is registered, install
 
 
 
-Note: You might be thinking, why didn't we just cache everything on install? Or, why did we cache anything on install, if all fetched resources are cached? This lab is intended as an overview of how you can bring offline functionality to an app. In practice, there are a variety of caching strategies and tools that let you customize your app's offline experience. Check out the <a href="https://jakearchibald.com/2014/offline-cookbook/">Offline Cookbook</a> for more info.
+Note: You might be thinking, why didn't we just cache everything on install? Or, why did we cache anything on install, if all fetched resources are cached? This lab is intended as an overview of how you can bring offline functionality to an app. In practice, there are a variety of caching strategies and tools that let you customize your app's offline experience. Check out the <a href="/web/fundamentals/instant-and-offline/offline-cookbook/">Offline Cookbook</a> for more info.
 
 
 

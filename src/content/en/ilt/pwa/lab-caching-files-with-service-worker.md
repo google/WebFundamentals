@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T20:37:58Z #}
+{# wf_updated_on: 2017-02-23T15:53:45Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -187,7 +187,7 @@ Save the code and [update the service worker](tools_for_pwa_developers.md#update
 
 #### Explanation
 
-The `fetch` event listener intercepts all requests. We use  [`event.respondWith`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith) to create a custom response to the request. Here we are using the  [Cache falling back to network](https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network) strategy: we first check the cache for the requested resource (with  [`caches.match`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match)) and then, if that fails, we send the request to the network.
+The `fetch` event listener intercepts all requests. We use  [`event.respondWith`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith) to create a custom response to the request. Here we are using the  [Cache falling back to network](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network) strategy: we first check the cache for the requested resource (with  [`caches.match`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match)) and then, if that fails, we send the request to the network.
 
 #### For more information
 
@@ -369,7 +369,7 @@ You have learned the basics of using the Cache API in the service worker. We hav
 #### Learn more about caching and the Cache API
 
 *  [Cache - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
-*  [The Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/)
+*  [The Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/)
 
 #### Learn more about using service workers
 

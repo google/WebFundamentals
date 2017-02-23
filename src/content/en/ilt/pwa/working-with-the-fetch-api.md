@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T19:47:47Z #}
+{# wf_updated_on: 2017-02-23T16:21:29Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -39,7 +39,7 @@ if (!('fetch' in window)) {
 // We can safely use fetch from now on
 ```
 
-There is a  [polyfill](https://github.com/github/fetch) for  [browsers that are not currently supported](https://jakearchibald.github.io/isserviceworkerready/#fetch-event) (but see the readme for important caveats.). 
+There is a  [polyfill](https://github.com/github/fetch) for  [browsers that are not currently supported](http://caniuse.com/#feat=fetch) (but see the readme for important caveats.). 
 
 The  [fetch() method](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) takes the path to a resource as input. The method returns a  [promise](http://www.html5rocks.com/en/tutorials/es6/promises/) that resolves to the  [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) of that request. 
 
@@ -445,7 +445,7 @@ fetch('http://bar.com/data.json', {
 *  [Learn more about the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 *  [Learn more about Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 *  [Learn more about GlobalFetch.fetch()](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch)
-*  [Get an Introduction to Fetch](/web/updates/2015/03/introduction-to-fetch?hl=en)
+*  [Get an Introduction to Fetch](/web/updates/2015/03/introduction-to-fetch)
 *  [David Welsh's blog on fetch](https://davidwalsh.name/fetch)
 *  [Jake Archibald's blog on fetch](https://jakearchibald.com/2015/thats-so-fetch/)
 

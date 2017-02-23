@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-21T22:43:13Z #}
+{# wf_updated_on: 2017-02-23T15:48:14Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -1070,13 +1070,13 @@ There are a number of options available to solve this:
 
 #### Your first push notifications
 
-*  [Adding Push Notifications to a Web App](/web/fundamentals/getting-started/push-notifications/?hl=en) 
+*  [Adding Push Notifications to a Web App](/web/fundamentals/getting-started/push-notifications/) 
 *  [Adding Push Notifications to a Web App (Codelab)](https://codelabs.developers.google.com/codelabs/push-notifications/index.html?index=..%2F..%2Findex#0)
 *  [Using the Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API/Using_the_Push_API)
 
 #### When to use push notifications
 
-*  [Web Push Notifications: Timely, Relevant, and Precise](/web/fundamentals/engage-and-retain/push-notifications/?hl=en)
+*  [Web Push Notifications: Timely, Relevant, and Precise](/web/fundamentals/engage-and-retain/push-notifications/)
 
 #### Demos
 
@@ -1105,7 +1105,7 @@ There are a number of options available to solve this:
 
 #### Encryption
 
-*  [Web Push Payload Encryption](/web/updates/2016/03/web-push-encryption?hl=en)
+*  [Web Push Payload Encryption](/web/updates/2016/03/web-push-encryption)
 *  [Push Encryption Verifier](https://tests.peter.sh/push-encryption-verifier/)
 *  [Message Encryption for Web Push](https://tools.ietf.org/html/draft-ietf-webpush-encryption-01)
 

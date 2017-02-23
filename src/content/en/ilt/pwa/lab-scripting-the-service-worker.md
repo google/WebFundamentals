@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T20:10:06Z #}
+{# wf_updated_on: 2017-02-23T16:01:06Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -268,7 +268,7 @@ Why didn't any fetch events log on the first refresh? By default, fetch events f
 
 *  [Fetch Event - MDN](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent)
 *  [Using Fetch - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-*  [Introduction to Fetch - Google Developer](/web/updates/2015/03/introduction-to-fetch?hl=en)
+*  [Introduction to Fetch - Google Developer](/web/updates/2015/03/introduction-to-fetch)
 
 #### Solution code
 

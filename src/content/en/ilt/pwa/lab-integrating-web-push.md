@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T21:08:23Z #}
+{# wf_updated_on: 2017-02-23T16:00:20Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -1045,8 +1045,8 @@ In this lab we have learned how to create notifications and configure them so th
 
 #### Introduction to push notifications
 
-*  [Enable Push Notifications for your Web App](/web/fundamentals/getting-started/push-notifications/?hl=en)
-*  [Web Push Notifications: Timely, Relevant, and Precise](/web/fundamentals/engage-and-retain/push-notifications/?hl=en)
+*  [Enable Push Notifications for your Web App](/web/fundamentals/getting-started/push-notifications/)
+*  [Web Push Notifications: Timely, Relevant, and Precise](/web/fundamentals/engage-and-retain/push-notifications/)
 
 #### Demos
 
@@ -1059,7 +1059,7 @@ In this lab we have learned how to create notifications and configure them so th
 
 #### Learn about encryption
 
-*  [Web Push Payload Encryption](/web/updates/2016/03/web-push-encryption?hl=en)
+*  [Web Push Payload Encryption](/web/updates/2016/03/web-push-encryption)
 *  [Web Push: Data Encryption Test Page](https://jrconlin.github.io/WebPushDataTestPage/)
 
 #### Learn about Firebase Cloud Messaging

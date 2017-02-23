@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-15T18:17:29Z #}
+{# wf_updated_on: 2017-02-23T15:41:24Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -69,7 +69,7 @@ The account creation screen should look like this:
 
 #### What would you like to track? 
 
-Websites and mobile apps implement Google Analytics differently. This document assumes a web app is being used. For mobile apps, see  [analytics for mobile applications](https://support.google.com/analytics/answer/2587086?hl=en&ref_topic=2587085&rd=1).
+Websites and mobile apps implement Google Analytics differently. This document assumes a web app is being used. For mobile apps, see  [analytics for mobile applications](https://support.google.com/analytics/answer/2587086?ref_topic=2587085&rd=1).
 
 #### Setting up your account
 
@@ -151,7 +151,7 @@ The code so far provides the basic functionality of Google Analytics. A tracker 
 
 
 
-Note: Tracker objects do not update themselves. If a user changes the size of the window, or if code running on the page updates the URL (such as in a single page app), tracker objects do not automatically capture this information. In order for the tracker object to reflect these changes, you must <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/accessing-trackers">manually update it</a>.
+Note: Tracker objects do not update themselves. If a user changes the size of the window, or if code running on the page updates the URL (such as in a single page app), tracker objects do not automatically capture this information. In order for the tracker object to reflect these changes, you must <a href="/analytics/devguides/collection/analyticsjs/accessing-trackers">manually update it</a>.
 
 
 
@@ -240,7 +240,7 @@ Here the hit type is set to 'event' and values associated with the event are add
 
 
 
-Note: Many of the <code>ga</code> commands are flexible and can use multiple signatures. You can see all method signatures in the <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/command-queue-reference">command queue reference</a>.
+Note: Many of the <code>ga</code> commands are flexible and can use multiple signatures. You can see all method signatures in the <a href="/analytics/devguides/collection/analyticsjs/command-queue-reference">command queue reference</a>.
 
 
 
@@ -435,7 +435,7 @@ Observe that we have used `event.waitUntil` to wrap an asynchronous operation. I
 
 
 
-Note: Because this event uses the Measurement Protocol interface instead of <strong>analytics_debug.js</strong>, the debug console log won't appear. You can debug Measurement Protocol hits with <a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/validating-hits"> hit validation</a>.
+Note: Because this event uses the Measurement Protocol interface instead of <strong>analytics_debug.js</strong>, the debug console log won't appear. You can debug Measurement Protocol hits with <a href="/analytics/devguides/collection/protocol/v1/validating-hits"> hit validation</a>.
 
 
 
@@ -508,7 +508,7 @@ Note: Some users have reported a bug in Chrome that recreates deleted databases 
 
 #### For more information
 
-*  [Offline Google Analytics Made Easy](/web/updates/2016/07/offline-google-analytics?hl=en)
+*  [Offline Google Analytics Made Easy](/web/updates/2016/07/offline-google-analytics)
 *  [Google I/O offline example](/web/showcase/2015/service-workers-iowa#offline_google_analytics)
 *  [Node package manager (npm)](https://docs.npmjs.com/getting-started/what-is-npm)
 *  [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)

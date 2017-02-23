@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T20:57:16Z #}
+{# wf_updated_on: 2017-02-23T16:02:52Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -240,7 +240,7 @@ Save the code and [unregister the service worker](tools_for_pwa_developers.md#un
 
 This code sets up several  [routes](https://googlechrome.github.io/sw-toolbox/docs/master/tutorial-usage) that serve specific URLs, file types, and origins.
 
-Route #1 creates a new cache called `googleapis` and stores up to 20 items (the `maxEntries` value) originating from any domain that matches the origin (any URL that ends with __googleapis.com__). The route uses the  [cache-first](https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network) strategy to access resources. It first checks if the cache contains the resource. If that fails, it sends the request to the network and caches the response.
+Route #1 creates a new cache called `googleapis` and stores up to 20 items (the `maxEntries` value) originating from any domain that matches the origin (any URL that ends with __googleapis.com__). The route uses the  [cache-first](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network) strategy to access resources. It first checks if the cache contains the resource. If that fails, it sends the request to the network and caches the response.
 
 Route #2 also uses the cache-first strategy. It matches all the files ending in __png__, __gif__, or __jpg__ (image files) using a regular expression and stores them in the `images-cache` cache with a limit of 50 items in the cache. If a new item is added to a full cache, then the oldest is deleted to make space. 
 
@@ -343,7 +343,7 @@ You have learned how to use `sw-precache` and `sw-toolbox` to build a service wo
 *  [sw-precache - npm](https://www.npmjs.com/package/sw-precache)
 *  [sw-toolbox - Github](https://github.com/GoogleChrome/sw-toolbox)
 *  [sw-toolbox Usage Tutorial](https://googlechrome.github.io/sw-toolbox/docs/master/tutorial-usage)
-*  [Offline-first, fast, with the sw-precache module](/web/updates/2015/02/offline-first-with-sw-precache?hl=enzjnnb)
+*  [Offline-first, fast, with the sw-precache module](/web/updates/2015/02/offline-first-with-sw-precache)
 *  [Instant Loading Web Apps With A Service Worker Application Shell Architecture](https://addyosmani.com/blog/application-shell/)
 *  [Service Worker Toolbox](https://github.com/GoogleChrome/sw-toolbox/blob/master/README.md)
 

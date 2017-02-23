@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T20:22:15Z #}
+{# wf_updated_on: 2017-02-23T15:58:46Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -156,7 +156,7 @@ This loads two web fonts,  *Lobster*  and  *Raleway* , from Google Fonts.
 
 
 
-Note: Loading fonts like this increases the load time of your page and may cause strange visual effects for your users when the font finishes loading and takes over from the fallback font. See <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css?hl=en">Render blocking CSS</a> in Web Fundamentals for more information on this and other elements that block rendering of your web content. 
+Note: Loading fonts like this increases the load time of your page and may cause strange visual effects for your users when the font finishes loading and takes over from the fallback font. See <a href="/web/fundamentals/performance/critical-rendering-path/render-blocking-css">Render blocking CSS</a> in Web Fundamentals for more information on this and other elements that block rendering of your web content. 
 
 
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T19:43:12Z #}
+{# wf_updated_on: 2017-02-23T15:46:46Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -440,7 +440,7 @@ Note: Understanding the network traffic is key to successful migration. You can 
 
 ### Migrating an Existing Site with Server Rendering to PWA
 
-Server-rendered pages can vary in complexity, either being (primarily) static HTML pages or involve more dynamic content. It is useful to think about how you might want to handle dynamic content as a number of different offline caching strategies can be used here. Jake Archibald's [ Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/) is a good reference point once you moved your site over to  [HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https?hl=en), added a  [Web App manifest](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android?hl=en) and can start crafting your service worker story.
+Server-rendered pages can vary in complexity, either being (primarily) static HTML pages or involve more dynamic content. It is useful to think about how you might want to handle dynamic content as a number of different offline caching strategies can be used here. The  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) is a good reference point once you moved your site over to  [HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https), added a  [Web App manifest](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) and can start crafting your service worker story.
 
 
 
@@ -451,8 +451,8 @@ Note: If your website is a templated site (i.e. built using multiple templates c
 Once you decide on a strategy for caching then you must implement it. A SPA architecture is often recommended when using an app shell, but it can take some time to refactor an existing site/app over to this architecture. If refactoring is a daunting task or if using an exclusively SSR approach is your only option for now, then you can still take advantage of service worker caching. But, you might end up treating your UI app shell the same way you would dynamic content. 
 
 * A cache-first strategy will not be entirely safe here if your server-rendered content is not entirely static and may change.
-* A  [cache/network race](https://jakearchibald.com/2014/offline-cookbook/#cache-network-race) approach might work as with some combinations of hardware, getting resources from the network can be quicker than going to disk. Just keep in mind that requesting content from the network when the user has some copy of it on their device can waste potentially costly data.
-* A  [network-first approach that falls back to the cache](https://jakearchibald.com/2014/offline-cookbook/#network-falling-back-to-cache) might also work. Effectively, provide online users with the most up to date version of the content, but offline users get an older cached version. If a network request succeeds, then ensure the cached version gets updated. 
+* A  [cache/network race](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-and-network-race) approach might work as with some combinations of hardware, getting resources from the network can be quicker than going to disk. Just keep in mind that requesting content from the network when the user has some copy of it on their device can waste potentially costly data.
+* A  [network-first approach that falls back to the cache](/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache) might also work. Effectively, provide online users with the most up to date version of the content, but offline users get an older cached version. If a network request succeeds, then ensure the cached version gets updated. 
 
 Any of these strategies implements a web app that works offline. However, it is possible for data (any common HTML between /route1, /route2 , /route3, etc) to be cached twice. There can be performance and bandwidth hits when going to the network for the full content of the page as opposed to the app shell approach only fetches content (instead of content + UI). This can be mitigated using proper  [HTTP browser caching headers](/web/fundamentals/performance/optimizing-content-efficiency/http-caching).
 
@@ -791,7 +791,7 @@ toolbox.router.get('/api', toolbox.networkFirst);
 toolbox.router.get('/profile', toolbox.fastest);
 ```
 
-For more information about caching strategies, see Jake Archibald's  [Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/).
+For more information about caching strategies, see the  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/).
 
 
 
@@ -999,7 +999,7 @@ Remember that `sw-precache` integrates with your build process, but `sw-toolbox`
 
 * Service worker caching should be considered a progressive enhancement. If your web app follows the model of conditionally registering a service worker only if it is supported (determined by `if('serviceWorker' in navigator)`), then you get offline support on browsers with service workers and on browsers that do not support service workers. The offline-specific code is never called and there is no overhead or breakage for older browsers. Registering a Service Worker shows an example of this.
 * All resources that are precached are fetched by a service worker running in a separate thread as soon as the service worker is installed. You should be judicious in what you cache, because listing files that are non essential (large images that are not shown on every page, for instance) result in browsers downloading more data than is strictly necessary.
-* Precaching does not make sense for all architectures (described in the PWA Architectural Styles and Patterns section and also outlined in the  [Offline Cookbook](http://jakearchibald.com/2014/offline-cookbook/),). Several caching strategies are described later in this document that can be used in conjunction with the `sw-precache` module to provide the best experience for your users. If you do implement additional caching logic, put the code in a separate JavaScript file and include it using the `importScripts()` method.
+* Precaching does not make sense for all architectures (described in the PWA Architectural Styles and Patterns section and also outlined in the  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/),). Several caching strategies are described later in this document that can be used in conjunction with the `sw-precache` module to provide the best experience for your users. If you do implement additional caching logic, put the code in a separate JavaScript file and include it using the `importScripts()` method.
 * The `sw-precache` library uses a cache-first strategy, which results in a copy of any cached content being returned without consulting the network. A useful pattern to adopt with this strategy is to display an alert to your users when new content is available, and give them an opportunity to reload the page to pick up that new content (which the service worker adds to the cache, and makes available at the next page load). The code for listening for a service worker update lives in the JavaScript for the page that registers the service worker. To see an example, go to this  [Github repository](https://github.com/GoogleChrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L27). 
 
 ### The Key to Designing UIs for PWAs

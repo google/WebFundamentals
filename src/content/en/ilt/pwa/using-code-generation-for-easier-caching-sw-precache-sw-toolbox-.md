@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-21T22:25:45Z #}
+{# wf_updated_on: 2017-02-23T16:05:25Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -41,7 +41,7 @@ toolbox.router.get(urlPattern, handler, options)
 
 A route intercepts requests that match the specified URL pattern and HTTP request method, and responds according to the rules defined in the request handler. The HTTP request method is called on `toolbox.router` (in the example above it's `get`) and can be any of the methods defined  [here](https://googlechrome.github.io/sw-toolbox/docs/master/tutorial-api.html). The `options` parameter lets us define a cache to use for that route, as well as a network timeout if the handler is the built-in `toolbox.networkFirst`. See the  [Tutorial: API](https://googlechrome.github.io/sw-toolbox/docs/master/tutorial-api.html) for more details.
 
-`sw-toolbox` has five built-in handlers to cover the most common caching strategies (see the  [Tutorial: API](https://googlechrome.github.io/sw-toolbox/docs/master/tutorial-api.html) for the full list and the Caching strategies table below for a quick reference). For more information about caching strategies see the  [Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/).
+`sw-toolbox` has five built-in handlers to cover the most common caching strategies (see the  [Tutorial: API](https://googlechrome.github.io/sw-toolbox/docs/master/tutorial-api.html) for the full list and the Caching strategies table below for a quick reference). For more information about caching strategies see the  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/).
 
 Let's look at an example:
 

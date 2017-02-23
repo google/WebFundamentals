@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T21:17:58Z #}
+{# wf_updated_on: 2017-02-23T15:57:19Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -122,7 +122,7 @@ Note: The Google Analytics UI is subject to updates and may not look exactly lik
 
 
 
-In a separate tab or window, navigate to  [analytics.google.com](https://analytics.google.com/). Sign in with your  [Gmail account](https://accounts.google.com/signup?hl=en), and follow the step that matches your status:
+In a separate tab or window, navigate to  [analytics.google.com](https://analytics.google.com/). Sign in with your  [Gmail account](https://accounts.google.com/signup), and follow the step that matches your status:
 
 * If you already have a Google Analytics account:
 
@@ -144,7 +144,7 @@ Choose website.
 
 
 
-Note: Websites and mobile apps implement Google Analytics differently. This lab covers web sites. For mobile apps, see <a href="https://support.google.com/analytics/answer/2587086?hl=en&ref_topic=2587085&rd=1">analytics for mobile applications</a>.
+Note: Websites and mobile apps implement Google Analytics differently. This lab covers web sites. For mobile apps, see <a href="https://support.google.com/analytics/answer/2587086?ref_topic=2587085&rd=1">analytics for mobile applications</a>.
 
 
 
@@ -182,10 +182,10 @@ Your account is the top most level of organization. For example, an account migh
 
 #### For more information
 
-*  [Analytics for mobile applications](https://support.google.com/analytics/answer/2587086?hl=en&ref_topic=2587085&rd=1)
+*  [Analytics for mobile applications](https://support.google.com/analytics/answer/2587086?ref_topic=2587085&rd=1)
 *  [GitHub](https://github.com/) and  [GitHub Pages](https://pages.github.com/)
 *  [Properties](https://support.google.com/analytics/answer/2649554)
-*  [Google/Gmail accounts](https://accounts.google.com/signup?hl=en)
+*  [Google/Gmail accounts](https://accounts.google.com/signup)
 *  [Google Analytics](https://analytics.google.com/)
 
 <div id="3"></div>
@@ -293,7 +293,7 @@ We are using the real-time viewing mode because we have just created the app. No
 
 
 
-Note: Data for our app is not available yet. It takes some time to process the data, typically <a href="https://support.google.com/analytics/answer/1070983?hl=en#DataProcessingLatency">24-48 hours</a>.
+Note: Data for our app is not available yet. It takes some time to process the data, typically <a href="https://support.google.com/analytics/answer/1070983#DataProcessingLatency">24-48 hours</a>.
 
 
 
@@ -379,11 +379,11 @@ When using the send command in the `ga` command queue, the hit type can be set t
 
 Note: Many of the <code>ga</code> commands are flexible and can use multiple signatures. 
 
-You can see all method signatures in the <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/command-queue-reference">command queue reference</a>.
+You can see all method signatures in the <a href="/analytics/devguides/collection/analyticsjs/command-queue-reference">command queue reference</a>.
 
 
 
-__Optional__: Update the custom event that you just added to use the alternative signature described in the <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/command-queue-reference">command queue reference</a>. Hint: Look for the "send" command examples.
+__Optional__: Update the custom event that you just added to use the alternative signature described in the <a href="/analytics/devguides/collection/analyticsjs/command-queue-reference">command queue reference</a>. Hint: Look for the "send" command examples.
 
 You can view past events in the Google Analytics dashboard from the __Reporting__ tab by selecting __Behavior__, followed by __Events__ and then __Overview__. However your account won't yet have any past events to view (because you just created it).
 
@@ -693,7 +693,7 @@ Do you see console logs for each event? Do you see events on Google Analytics?
 
 
 
-Note: Because these events use the Measurement Protocol interface instead of <strong>analytics_debug.js</strong>, the debug console logs don't appear. You can debug the Measurement Protocol hits with <a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/validating-hits"> hit validation</a>.
+Note: Because these events use the Measurement Protocol interface instead of <strong>analytics_debug.js</strong>, the debug console logs don't appear. You can debug the Measurement Protocol hits with <a href="/analytics/devguides/collection/protocol/v1/validating-hits"> hit validation</a>.
 
 
 
@@ -757,7 +757,7 @@ Now check the Google Analytics dashboard. You should see the custom event!
 
 #### Explanation
 
-Here we import and initialize the __offline-google-analytics-import.js__ library. You can check out the  [documentation](/web/updates/2016/07/offline-google-analytics?hl=en) for details, but this library adds a fetch event handler to the service worker that only listens for requests made to the Google Analytics domain. The handler attempts to send Google Analytics data just like we have done so far, by network requests. If the network request fails, the request is stored in IndexedDB. The requests are then sent later when connectivity is re-established.
+Here we import and initialize the __offline-google-analytics-import.js__ library. You can check out the  [documentation](/web/updates/2016/07/offline-google-analytics) for details, but this library adds a fetch event handler to the service worker that only listens for requests made to the Google Analytics domain. The handler attempts to send Google Analytics data just like we have done so far, by network requests. If the network request fails, the request is stored in IndexedDB. The requests are then sent later when connectivity is re-established.
 
 This strategy won't work for hits sent from our service worker because the service worker doesn't listen to fetch events from itself (that could cause some serious problems!). This isn't so important in this case because all the hits that we would want to send from the service worker are tied to online events (like push notifications) anyways.
 
@@ -776,7 +776,7 @@ Note: Some users have reported a bug in Chrome that recreates deleted databases 
 #### For more information
 
 *  [ImportScripts](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts)
-*  [Offline Google Analytics](/web/updates/2016/07/offline-google-analytics?hl=en)
+*  [Offline Google Analytics](/web/updates/2016/07/offline-google-analytics)
 *  [Google I/O offline example](/web/showcase/2015/service-workers-iowa#offline_google_analytics)
 *  [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 
@@ -810,7 +810,7 @@ Research the  [hitCallback](/analytics/devguides/collection/analyticsjs/sending-
 
 
 
-Note: If the user's browser supports <code>navigator.sendBeacon</code> then 'beacon' can be specified as the transport mechanism. This avoids the need for a hitCallback. See the <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/sending-hits">documentation</a> for more info.
+Note: If the user's browser supports <code>navigator.sendBeacon</code> then 'beacon' can be specified as the transport mechanism. This avoids the need for a hitCallback. See the <a href="/analytics/devguides/collection/analyticsjs/sending-hits">documentation</a> for more info.
 
 
 

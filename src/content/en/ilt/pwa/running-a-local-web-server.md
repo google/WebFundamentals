@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T21:26:30Z #}
+{# wf_updated_on: 2017-02-23T16:04:54Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -40,7 +40,7 @@ Most of the code labs will require to run from a web server. To meet this requir
 
 Web Server for Chrome is a Chrome extension that creates a local web server. It will run on all platforms where Chrome runs including Chromebooks.
 
-[Install Web Server for Chrome from the Chrome Store](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en).
+[Install Web Server for Chrome from the Chrome Store](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb).
 
 To open the web server extension:
 

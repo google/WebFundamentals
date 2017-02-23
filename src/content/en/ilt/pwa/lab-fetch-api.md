@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T20:35:17Z #}
+{# wf_updated_on: 2017-02-23T16:16:06Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -38,13 +38,13 @@ This lab walks you through using the  [Fetch API](https://developer.mozilla.org/
 
 * Computer with terminal/shell access
 * Connection to the internet 
-* A  [browser that supports Fetch](https://jakearchibald.github.io/isserviceworkerready/#fetch-event)
+* A browser that supports  [Fetch](http://caniuse.com/#feat=fetch)
 * A text editor
 *  [Node](https://nodejs.org/en/) and  [npm](https://www.npmjs.com/)
 
 
 
-Note: Although the Fetch API is <a href="https://jakearchibald.github.io/isserviceworkerready/#fetch-event">not currently supported in all browsers</a>, there is a <a href="https://github.com/github/fetch">polyfill</a> (but see the readme for important caveats). 
+Note: Although the Fetch API is <a href="http://caniuse.com/#feat=fetch">not currently supported in all browsers</a>, there is a <a href="https://github.com/github/fetch">polyfill</a> (but see the readme for important caveats). 
 
 
 
@@ -683,7 +683,7 @@ You now know how to use the Fetch API to request resources and post data to serv
 *  [Learn more about the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 *  [Learn more about Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 *  [Learn more about GlobalFetch.fetch()](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch)
-*  [Get an Introduction to Fetch](/web/updates/2015/03/introduction-to-fetch?hl=en)
+*  [Get an Introduction to Fetch](/web/updates/2015/03/introduction-to-fetch)
 *  [David Walsh's blog on fetch](https://davidwalsh.name/fetch)
 *  [Jake Archibald's blog on fetch](https://jakearchibald.com/2015/thats-so-fetch/)
 

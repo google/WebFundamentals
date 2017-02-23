@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-21T21:45:57Z #}
+{# wf_updated_on: 2017-02-23T15:40:40Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -27,7 +27,7 @@ You are responsible for implementing how your script (service worker) handles up
 
 ### Storing resources
 
-In this section, we outline a few common patterns for caching resources:  *on service worker install* ,  *on user interaction* , and  *on network response* . There are a few patterns we don't cover here. See Jake Archibald's  [Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/) for a more complete list.
+In this section, we outline a few common patterns for caching resources:  *on service worker install* ,  *on user interaction* , and  *on network response* . There are a few patterns we don't cover here. See the  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) for a more complete list.
 
 #### On install - caching the application shell
 
