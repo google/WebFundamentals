@@ -60,6 +60,7 @@ function updateCodeLab(sourceFile, destFile, bookPath) {
   }
   markdown = markdown.replace(/^\*Duration is \d+ min\*\n/gm, '');
   markdown = markdown.replace(/\(https:\/\/developers.google.com\//g, '(\/');
+  markdown = markdown.replace(/href="https:\/\/developers.google.com\//g, 'href="/');
   markdown = markdown.replace(/^\[\]\(/gm, '[Link](');
   markdown = markdown.replace(/__\s?Note:\s?__\s?/g, 'Note: ');
   markdown = markdown.replace(/^<strong>Note:<\/strong>/gm, 'Note: ');
