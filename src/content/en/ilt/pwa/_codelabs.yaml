@@ -5,8 +5,6 @@ toc:
     path: /web/ilt/pwa/setting-up-the-labs
   - title: Running a Local Web Server
     path: /web/ilt/pwa/running-a-local-web-server
-  - title: Debugging Service Workers in Browsers
-    path: /web/ilt/pwa/debugging-service-workers-in-browsers
   - title: Tools for PWA Developers
     path: /web/ilt/pwa/tools-for-pwa-developers
   - break: True
