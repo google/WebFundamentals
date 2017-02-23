@@ -176,7 +176,7 @@ When a service worker is registered, the browser detects if the service worker i
 
 The service worker emits an `activate` event when it takes control of the page. We log a message here, but this event is often used to update caches. 
 
-Only one service worker can be active at a time for a given scope (see Exploring service worker scope), so a newly installed service worker isn't activated until the existing service worker is no longer in use. This is why all pages controlled by a service worker must be closed before a new service worker can take over. Since we unregistered the existing service worker, the new service worker was activated immediately.
+Only one service worker can be active at a time for a given scope (see  [Exploring service worker scope](#explore-scope)), so a newly installed service worker isn't activated until the existing service worker is no longer in use. This is why all pages controlled by a service worker must be closed before a new service worker can take over. Since we unregistered the existing service worker, the new service worker was activated immediately.
 
 
 

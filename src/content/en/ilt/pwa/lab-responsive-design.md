@@ -277,7 +277,7 @@ The  [Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/) (Flexbox
 
 ### 6.1 Comment out .container rules in CSS
 
-Now in <strong>styles/main.css</strong>, comment out all rules that start with <code>.container</code> by wrapping them in <code>/*</code> and <code>*/</code>. We will make these our fallback rules for when Flexbox is not supported in the Flexbox as progressive enhancement section.
+Now in <strong>styles/main.css</strong>, comment out all rules that start with <code>.container</code> by wrapping them in <code>/*</code> and <code>*/</code>. We will make these our fallback rules for when Flexbox is not supported in the  [Flexbox as progressive enhancement](#7) section.
 
 ### 6.2 Add Flexbox layout
 

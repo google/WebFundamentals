@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T21:35:24Z #}
+{# wf_updated_on: 2017-02-23T20:48:30Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -84,7 +84,7 @@ The __Web Inspector__ window opens in your Safari browser.
 To open the dedicated __Console__ panel, either:
 
 * Press `Ctrl + Shift + J` (Windows / Linux) or `⌘ +` ⌥ + J (Mac).
-* Open __DevTools__ and select the __Console__ panel. 
+*  [Open __DevTools__](#chromedevtools) and select the __Console__ panel. 
 
 ![Console in Chrome](img/37a8715708d445b7.png)
 
@@ -98,7 +98,7 @@ To open the Web Console, either:
 
 * Press `Ctrl + Shift + K` (Windows/Linux) or `⌘ +` ⌥ + K (Mac).
 * From the Firefox menu (or Tools menu if you display the menu bar or are on Mac OS X), select __Developer > Web Console. __
-* Open the __Toolbox__ and select the __Console__ panel.
+*  [Open the __Toolbox__](#firefoxdevtools) and select the __Console__ panel.
 
 ![Console in Firefox](img/5bb4aaabd00ed850.png)
 
@@ -108,21 +108,21 @@ See  [Opening the Web Console](https://developer.mozilla.org/en-US/docs/Tools/We
 
 ### Opera
 
-Open __Dragonfly__ and select the __Console__ panel.
+[Open __Dragonfly__](#operadevtools) and select the __Console__ panel.
 
 ![Console in Opera](img/8403c7af6f2e2281.png)
 
 ### Internet Explorer
 
-Open Developer Tools and select the __Console__ panel.
+[Open Developer Tools](#iedevtools) and select the __Console__ panel.
 
 ### Safari
 
 To open the __Console__, either:
 
-* Enable the Developer menu. From the menu bar, select __Develop__ > __Show Error Console__.
+*  [Enable the Developer menu](#safaridevtools). From the menu bar, select __Develop__ > __Show Error Console__.
 * Press `⌘ + ⌥ + C`
-* Open the Web Inspector and select the __Console__ panel.
+*  [Open the Web Inspector](#safaridevtools) and select the __Console__ panel.
 
 ![Console in Safari](img/5569b9d73d1c879.png)
 
@@ -142,7 +142,7 @@ To open the __Console__, either:
 
 #### Chrome
 
-Open __DevTools__ and select the __Network__ panel. Requests are displayed in the __Network__ panel's __Requests Table__. See  [Measure Resource Loading Times](/web/tools/chrome-devtools/network-performance/resource-loading?utm_source=dcc&utm_medium=redirect&utm_campaign=2016q3) for more information.
+[Open __DevTools__](#chromedevtools) and select the __Network__ panel. Requests are displayed in the __Network__ panel's __Requests Table__. See  [Measure Resource Loading Times](/web/tools/chrome-devtools/network-performance/resource-loading?utm_source=dcc&utm_medium=redirect&utm_campaign=2016q3) for more information.
 
 ![View Network Requests in Chrome](img/1fcd33a8eacc126b.png)
 
@@ -150,7 +150,7 @@ Open __DevTools__ and select the __Network__ panel. Requests are displayed in th
 
 #### Firefox
 
-Open the __Toolbox__ and select the __Network__ panel. See  [Network Monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor) for more information.
+[Open the __Toolbox__](#firefoxdevtools) and select the __Network__ panel. See  [Network Monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor) for more information.
 
 ![View Network Requests in Firefox](img/d5cfb7d13588d98d.png)
 
@@ -158,19 +158,19 @@ Open the __Toolbox__ and select the __Network__ panel. See  [Network Monitor](ht
 
 #### Opera
 
-See View Network Requests in Chrome.
+See  [View Network Requests in Chrome](#chromerequests).
 
 <div id="ierequests"></div>
 
 #### Internet Explorer
 
-Open Developer Tools, and then open the __Network__ panel. See  [Network](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/network/) for more information.
+[Open Developer Tools](#iedevtools), and then open the __Network__ panel. See  [Network](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/network/) for more information.
 
 <div id="safarirequests"></div>
 
 #### Safari
 
-Open the __Web Inspector__, and then open the __Network__ panel.
+[Open the __Web Inspector__](#safaridevtools), and then open the __Network__ panel.
 
 ![View Network Requests in Safari](img/8175f2de298b5ea8.png)
 
@@ -182,7 +182,7 @@ Open the __Web Inspector__, and then open the __Network__ panel.
 
 #### Chrome
 
-Open __DevTools__ and select the Network panel. Check the __Offline__ checkbox. Check out  [Optimize Performance Under Varying Network Conditions](/web/tools/chrome-devtools/network-performance/network-conditions) for more information.
+[Open __DevTools__](#chromedevtools) and select the Network panel. Check the __Offline__ checkbox. Check out  [Optimize Performance Under Varying Network Conditions](/web/tools/chrome-devtools/network-performance/network-conditions) for more information.
 
 ![Simulate Offline in Chrome](img/fe171eca066e4ee.png)
 
@@ -210,7 +210,7 @@ On Mac, you can enable offline mode from the menu bar by clicking __File__ > __W
 
 #### Chrome
 
-Open __DevTools__ in Chrome. Click the __Application__ panel, and then click __Manifest__ in the navigation bar.
+[Open __DevTools__](#chromedevtools) in Chrome. Click the __Application__ panel, and then click __Manifest__ in the navigation bar.
 
 ![View Manifest in Chrome](img/29e17a75fcd9df99.png)
 
@@ -236,7 +236,7 @@ You can test the add to homescreen feature from this pane. Click __Add to homesc
 
 #### Chrome
 
-Open __DevTools__ in Chrome. Click the __Application__ panel, and then click __Service Workers__ in the navigation bar.
+[Open __DevTools__](#chromedevtools) in Chrome. Click the __Application__ panel, and then click __Service Workers__ in the navigation bar.
 
 ![Service Workers in DevTools](img/e825904b1ab30ff7.png)
 
@@ -273,7 +273,7 @@ Then click the Developer icon (<img src="img/71072a17a8634436.png" style="width:
 
 #### Chrome
 
-Open the Service Workers pane in __DevTools__. Click __Unregister__ next to the service worker.
+[Open the Service Workers pane](#chromesw) in __DevTools__. Click __Unregister__ next to the service worker.
 
 ![Unregister a Service Worker in Chrome](img/43a5fb58b30c942e.png)
 
@@ -281,7 +281,7 @@ Open the Service Workers pane in __DevTools__. Click __Unregister__ next to the 
 
 #### Firefox
 
-Open the Workers page in __about:debugging__. Click __Unregister__ next to the service worker scope.
+[Open the Workers page in __about:debugging__](#firefoxsw). Click __Unregister__ next to the service worker scope.
 
 ![Unregister a Service Worker in Firefox](img/1426bd86abcf7ae8.png)
 
@@ -296,7 +296,7 @@ Open the Workers page in __about:debugging__. Click __Unregister__ next to the s
 There are several ways to force-update the service worker in Chrome:
 
 1. Refresh your app in the browser so the new service worker is recognized. Then hold `Shift` and click the Reload icon (<img src="img/879b00a99b4bcb97.png" style="width:20px;height:20px;" alt="Chrome Reload Icon"> ). 
-2. Open the Service Workers pane in __DevTools__. Click __Update__. When the new service worker installs, click __skipWaiting__.
+2.  [Open the Service Workers pane](#chromesw) in __DevTools__. Click __Update__. When the new service worker installs, click __skipWaiting__.
 
 ![Skip Waiting in Chrome](img/77b5eaa130252f7e.png)
 
@@ -304,7 +304,7 @@ There are several ways to force-update the service worker in Chrome:
 
 ![Update Service Worker on Reload in Chrome](img/3431837468013f78.png)
 
-4. Unregister the service worker and refresh the app in the browser.
+4.  [Unregister the service worker](#chromeunregister) and refresh the app in the browser.
 
 <div id="firefoxupdate"></div>
 
@@ -312,7 +312,7 @@ There are several ways to force-update the service worker in Chrome:
 
 To update the service worker in Firefox, close all pages controlled by the service worker and then reopen them. The service worker only updates when there are no pages open in Firefox that are within its scope.
 
-If you want to be absolutely certain (for testing reasons) that the service worker will update, you can unregister the service worker from the __about:debugging__ page and refresh your app in the browser. The new service worker installs on page reload.
+If you want to be absolutely certain (for testing reasons) that the service worker will update, you can  [unregister the service worker](#firefoxunregister) from the __about:debugging__ page and refresh your app in the browser. The new service worker installs on page reload.
 
 
 
@@ -328,7 +328,7 @@ Note that unregistering the service worker will change the subscription object i
 
 #### Chrome
 
-Open the Service Workers pane in __DevTools__. Click __Push__ to ping the service worker. 
+[Open the Service Workers pane](#chromesw) in __DevTools__. Click __Push__ to ping the service worker. 
 
 ![Send Push from DevTools](img/5032f49fde7b0274.png)
 
@@ -380,13 +380,13 @@ Click the Information icon in the URL bar. Use the __Receive Notifications __dro
 
 #### Chrome
 
-Open __DevTools__ and select the __Application__ panel. In the navigation bar click __Cache Storage__ to see a list of caches. Click a specific cache to see the resources it contains.
+[Open __DevTools__](#chromedevtools) and select the __Application__ panel. In the navigation bar click __Cache Storage__ to see a list of caches. Click a specific cache to see the resources it contains.
 
 ![View the Service Worker Cache in Chrome](img/b46b92cc3c6d3d3a.png)
 
 #### Firefox
 
-Open the __Toolbox__ and click the Settings icon to open __Settings__. Under __Default Firefox Developer Tools__, check __Storage__.
+[Open the __Toolbox__](#firefoxdevtools) and click the Settings icon to open __Settings__. Under __Default Firefox Developer Tools__, check __Storage__.
 
 ![Enable Storage Inspector in Firefox](img/fcc0b0ed0728e578.png)
 
@@ -402,7 +402,7 @@ See the MDN article on the  [Storage Inspector](https://developer.mozilla.org/en
 
 #### Chrome
 
-Go to __Cache Storage__ in __DevTools__. In the navigation pane, expand __Cache Storage,__, right-click the cache name and then select __Delete__.
+[Go to __Cache Storage__](#chromecache) in __DevTools__. In the navigation pane, expand __Cache Storage,__, right-click the cache name and then select __Delete__.
 
 ![Clear the Service Worker Cache in Chrome](img/dd0b5fd1762c05c0.png)
 
@@ -422,7 +422,7 @@ In __DevTools__, navigate to the __Application__ tab. Select __IndexedDB__. You 
 
 #### Firefox
 
-Open the __Toolbox__ and click the Settings icon to open __Settings__. Under __Default Firefox Developer Tools, __check __Storage__.
+[Open the __Toolbox__](#firefoxdevtools) and click the Settings icon to open __Settings__. Under __Default Firefox Developer Tools, __check __Storage__.
 
 ![Enable Storage Inspector in Firefox](img/fcc0b0ed0728e578.png)
 
@@ -442,7 +442,7 @@ Where `database_name` is the name of the database to delete.
 
 #### Chrome
 
-Open __IndexedDB__ in __DevTools__. In the navigation pane, expand __IndexedDB__, right-click the object store to clear, and then click __Clear__.
+[Open __IndexedDB__](#chromeindexeddb) in __DevTools__. In the navigation pane, expand __IndexedDB__, right-click the object store to clear, and then click __Clear__.
 
 ![Clear IndexedDB in Chrome](img/ef127d70355d5e4.png)
 
@@ -452,13 +452,13 @@ Open __IndexedDB__ in __DevTools__. In the navigation pane, expand __IndexedDB__
 
 #### Chrome
 
-Open __DevTools__ and open the __Network__ panel. Check the __Disable cache__ checkbox.
+[Open __DevTools__](#chromedevtools) and open the __Network__ panel. Check the __Disable cache__ checkbox.
 
 ![Disable HTTP Cache in Chrome](img/625447d2942ef3da.png)
 
 #### Firefox
 
-Open the __Toolbox __and click the Settings icon to open the __Settings__. Under __Advanced settings__, select __Disable HTTP Cache__.
+[Open the __Toolbox__](#firefoxdevtools) and click the Settings icon to open the __Settings__. Under __Advanced settings__, select __Disable HTTP Cache__.
 
 ![Disable HTTP Cache in Firefox](img/df759390516a0bae.png)
 

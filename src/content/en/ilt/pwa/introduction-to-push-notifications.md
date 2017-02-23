@@ -58,7 +58,7 @@ Note: Service workers require secure origins so testing Push Notifications requi
 
 Push notifications let your app extend beyond the browser, and are an incredibly powerful way to engage with the user. They can do simple things, such as alert the user to an important event, display an icon and a small piece of text that the user can then click to open up your site. You can also integrate action buttons in the notification so that the user can interact with your site or application without needing to go back to your web page.
 
-There are several pieces that come together to make push notifications work. Browsers that support web push each implement their own push service, which is a system for processing messages and routing them to the correct clients. Push messages destined to become notifications are sent from a server directly to the push service, and contain the information necessary for the push service to send it to the right client and wake up the correct service worker. The section on the Push API describes this process in detail.
+There are several pieces that come together to make push notifications work. Browsers that support web push each implement their own push service, which is a system for processing messages and routing them to the correct clients. Push messages destined to become notifications are sent from a server directly to the push service, and contain the information necessary for the push service to send it to the right client and wake up the correct service worker. The section on the  [Push API](#pushapi) describes this process in detail.
 
 When it receives a message, the service worker wakes up just long enough to display the notification and then goes back to sleep. Because notifications are paired with a service worker, the service worker can listen for notification interactions in the background without using resources. When the user interacts with the notification, by clicking or closing it, the service worker wakes up for a brief time to handle the interaction before going back to sleep.
 
@@ -485,7 +485,7 @@ The Web Push protocol is complex, but we don't need to understand all of the det
 
 Chrome currently uses  [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) as its push service.  [FCM recently adopted the Web Push protocol](/web/updates/2016/07/web-push-interop-wins). FCM is the successor to Google Cloud Messaging (GCM) and supports the same functionality and more. 
 
-To use Firebase Cloud Messaging, you need to set up a project on  [Firebase](https://firebase.google.com/) (see the section on VAPID to get around this step). Here's how:
+To use Firebase Cloud Messaging, you need to set up a project on  [Firebase](https://firebase.google.com/) (see the  [section on VAPID](#vapid) to get around this step). Here's how:
 
 1. In the  [Firebase console](https://firebase.corp.google.com/), select __Create New Project__.
 2. Supply a project name and click __Create Project__.

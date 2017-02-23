@@ -94,7 +94,7 @@ function updateCodeLab(sourceFile, destFile, bookPath) {
   markdown = markdown.replace(/(\[ICON HERE\])(.*?)!\[(.*?)]\((.*?)\)/g, '<img src="$4" style="width:20px;height:20px;" alt="$3"> $2');
 
   // Remove the table of contents section
-  markdown = markdown.replace(/^## Contents?(\n|\s)*(__.*__(\s|\n)*)*/gm, '');
+  markdown = markdown.replace(/^## Contents?(\n|\s)+(\[.*?]\(.*?\).*\n+)+/gm, '');
   
   // Remove any bold from headings
   markdown = markdown.replace(/^(#+) __(.*)__/gm, '$1 $2');

@@ -26,9 +26,9 @@ Most of the code labs will require to run from a web server. To meet this requir
 
 
 
-* If you are running Chrome (on any OS) then install Web Server for Chrome
-* If you're running Chrome OS install Web Server for Chrome
-* If you are running Linux or Macintosh use Python's Built in Server
+* If you are running Chrome (on any OS) then install  [Web Server for Chrome](#h.mvthdromm89i)
+* If you're running Chrome OS install  [Web Server for Chrome](#h.mvthdromm89i)
+* If you are running Linux or Macintosh use  [Python's Built in Server](#h.e41f3ni8r678)
 
 <div id="serverchrome"></div>
 

@@ -23,7 +23,7 @@ IndexedDB is a large-scale, noSQL storage system. It lets you store just about a
 
 "IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. This API uses indexes to enable high performance searches of this data. While DOM Storage is useful for storing smaller amounts of data, it is less useful for storing larger amounts of structured data. IndexedDB provides a solution."
 
-Each IndexedDB database is unique to an origin (typically, this is the site domain or subdomain), meaning it cannot access or be accessed by any other origin.  [Data storage limits](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) are usually quite large, if they exist at all, but different browsers handle limits and data eviction differently. See the Further reading section for more information.
+Each IndexedDB database is unique to an origin (typically, this is the site domain or subdomain), meaning it cannot access or be accessed by any other origin.  [Data storage limits](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) are usually quite large, if they exist at all, but different browsers handle limits and data eviction differently. See the  [Further reading](#resources) section for more information.
 
 <div id="terms"></div>
 
@@ -407,7 +407,7 @@ The simplest way to retrieve all of the data is to call the `getAll` method on t
 someObjectStore.getAll(optionalConstraint);
 ```
 
-This method returns all the objects in the object store matching the specified key or key range (see Working with ranges and indexes), or all objects in the store if no parameter is given. As with all other database operations, this operation happens inside a transaction. Here is a short example:
+This method returns all the objects in the object store matching the specified key or key range (see  [Working with ranges and indexes](#ranges)), or all objects in the store if no parameter is given. As with all other database operations, this operation happens inside a transaction. Here is a short example:
 
 ```
 dbPromise.then(function(db) {

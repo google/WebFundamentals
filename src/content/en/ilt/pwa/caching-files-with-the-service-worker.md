@@ -136,7 +136,7 @@ There are a few approaches we don't cover here. See Jake Archibald's  [Offline C
 
 #### Cache only
 
-You don't often need to handle this case specifically. Cache falling back to network is more often the appropriate approach.
+You don't often need to handle this case specifically.  [Cache falling back to network](#cachefallback) is more often the appropriate approach.
 
 This approach is good for any static assets that are part of your app's main code (part of that "version" of your app). You should have cached these in the install event, so you can depend on them being there.
 
@@ -150,7 +150,7 @@ If a match isn't found in the cache, the response will look like a connection er
 
 #### Network only
 
-This is the correct approach for things that can't be performed offline, such as analytics pings and non-GET requests. Again, you don't often need to handle this case specifically and the cache falling back to network approach will often be more appropriate.
+This is the correct approach for things that can't be performed offline, such as analytics pings and non-GET requests. Again, you don't often need to handle this case specifically and the  [cache falling back to network](#cachefallback) approach will often be more appropriate.
 
 ```
 self.addEventListener('fetch', function(event) {
@@ -182,7 +182,7 @@ This gives you the "Cache only" behavior for things in the cache and the "Networ
 
 This is a good approach for resources that update frequently, and are not part of the "version" of the site (for example, articles, avatars, social media timelines, game leader boards). Handling network requests this way means the online users get the most up-to-date content, and offline users get an older cached version.
 
-However, this method has flaws. If the user has an intermittent or slow connection they'll have to wait for the network to fail before they get content from the cache. This can take an extremely long time and is a frustrating user experience. See the next approach, Cache then network, for a better solution.
+However, this method has flaws. If the user has an intermittent or slow connection they'll have to wait for the network to fail before they get content from the cache. This can take an extremely long time and is a frustrating user experience. See the next approach,  [Cache then network](#cachethen), for a better solution.
 
 ```
 self.addEventListener('fetch', function(event) {

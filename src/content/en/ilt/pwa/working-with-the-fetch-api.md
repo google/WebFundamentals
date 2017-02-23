@@ -355,7 +355,7 @@ fetch('someurl/comment', {
 
 ### Custom headers
 
-The `init` parameter can be used with the  [Headers](https://developer.mozilla.org/en-US/docs/Web/API/Headers) interface to perform various actions on HTTP request and response headers, including retrieving, setting, adding, and removing them. An example of reading response headers was shown in a previous section. The following code demonstrates how a custom  [Headers](https://developer.mozilla.org/en-US/docs/Web/API/Headers) object can be created and used with a fetch request:
+The `init` parameter can be used with the  [Headers](https://developer.mozilla.org/en-US/docs/Web/API/Headers) interface to perform various actions on HTTP request and response headers, including retrieving, setting, adding, and removing them. An example of reading response headers was shown in a  [previous section](#head). The following code demonstrates how a custom  [Headers](https://developer.mozilla.org/en-US/docs/Web/API/Headers) object can be created and used with a fetch request:
 
 #### main.js
 

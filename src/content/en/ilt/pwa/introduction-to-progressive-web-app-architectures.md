@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T15:46:46Z #}
+{# wf_updated_on: 2017-02-23T21:02:19Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -35,15 +35,15 @@ Service workers provide services such as:
 
 * Intercepting HTTP/HTTPS requests so your app can decide what gets served from a cache,the  local data store, or the network.
 
- A service worker cannot access the DOM but it can access the  [Cache Storage API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage), make network requests using the  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), and persist data using the  [IndexedDB API](https://developer.mozilla.org/en/docs/Web/API/IndexedDB_API). Besides intercepting network requests, service workers can use `postMessage()` to communicate between the service worker and pages it controls (e.g. to request DOM updates).
+A service worker cannot access the DOM but it can access the  [Cache Storage API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage), make network requests using the  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), and persist data using the  [IndexedDB API](https://developer.mozilla.org/en/docs/Web/API/IndexedDB_API). Besides intercepting network requests, service workers can use `postMessage()` to communicate between the service worker and pages it controls (e.g. to request DOM updates).
 
 * Receiving push messages from your server.
 
- The service worker runs independently from the rest of your web app and provides hooks into the underlying operating system. It responds to events from the OS, including push messages.
+The service worker runs independently from the rest of your web app and provides hooks into the underlying operating system. It responds to events from the OS, including push messages.
 
 * Letting the user do work when offline by holding onto a set of tasks until the browser is on the network (that is, background synchronization).
 
- Think of a service worker as being a butler for your application, waking when needed and carrying out tasks for the app. Effectively, the service worker is an efficient background event handler in the browser. A service worker has an intentionally short lifetime. It wakes up when it gets an event and runs only as long as necessary to process it.
+Think of a service worker as being a butler for your application, waking when needed and carrying out tasks for the app. Effectively, the service worker is an efficient background event handler in the browser. A service worker has an intentionally short lifetime. It wakes up when it gets an event and runs only as long as necessary to process it.
 
 The concept of caching is exciting because it allows you to support offline experiences and it gives developers complete control over what exactly that experience is. But, to take full advantage of the service worker and progressively incorporate more and more PWA capabilities also invites a new way of thinking about building web sites by using the  *application shell architecture* . 
 
@@ -51,7 +51,7 @@ __Application shell (app shell)__: PWAs tend to be architected around an  *appli
 
 The shell of the functionality is loaded and displayed to the user (and potentially cached by the service worker so that it can be accessed offline), and then the page content is loaded dynamically as the user navigates around the app. This reliably and instantly loads on your users' screens, similar to what is seen in native applications.
 
-The What is an Application Shell? section in this document goes into detail about using an app shell, which is the recommended approach to migrate existing single-page apps (SPAs) and structure your PWA. This architecture provides connectivity resilience and it is what makes a PWA feel like a native app to the user, giving it application-like interaction and navigation, and reliable performance.
+The  [What is an Application Shell?](#what) section in this document goes into detail about using an app shell, which is the recommended approach to migrate existing single-page apps (SPAs) and structure your PWA. This architecture provides connectivity resilience and it is what makes a PWA feel like a native app to the user, giving it application-like interaction and navigation, and reliable performance.
 
 
 
@@ -110,7 +110,7 @@ The app shell model is great but how does it work in browsers that do not suppor
 <li>The <strong>browser cache</strong> is a temporary storage location on your computer for files downloaded by your browser to display websites. Files that are cached locally include any documents that make up a website, such as HTML files, CSS style sheets, JavaScript scripts, as well as graphic images and other multimedia content.</li>
 <li>The service worker also creates cache independent of the browser cache using the  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache Storage API</a> or IndexedDB. The  <a href="https://www.w3.org/TR/service-workers/#cache-objects"><strong>cache objects</strong></a> hold the same kinds of assets as a browser cache but make them offline accessible.The service worker provides these to enable offline support in browsers. This is referred to as "<strong>Cache (Storage) API</strong>" in this document.</li>
 </ul>
-<p>The cache objects are one tool you can use when building your app, but you must use them appropriately for each resource. Several caching strategies are described in Caching Strategies Supported by sw-toolbox. </p>
+<p>The cache objects are one tool you can use when building your app, but you must use them appropriately for each resource. Several caching strategies are described in  <a href="#bestcaching">Caching Strategies Supported by sw-toolbox</a>. </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
@@ -140,7 +140,7 @@ The app shell model is great but how does it work in browsers that do not suppor
 <tr><td colspan="1" rowspan="1">
 <p>PWA architecture styles</p>
 </td><td colspan="1" rowspan="1">
-<p>Any of several approaches to building PWAs based on the back-end technologies available and the performance requirements. The patterns include using an app shell, server-side rendering, client-side rendering, and others. These patterns are listed in PWA Architectural Patterns.  </p>
+<p>Any of several approaches to building PWAs based on the back-end technologies available and the performance requirements. The patterns include using an app shell, server-side rendering, client-side rendering, and others. These patterns are listed in  <a href="#patterns">PWA Architectural Patterns</a>.  </p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
@@ -223,7 +223,7 @@ In an app shell architecture, a server-side component should be able to treat th
 
 PWAs can be built with any architectural style (SSR, CSR, or a hybrid of the two) but service workers imply some subtle changes in how you build your application architecture. 
 
-The following patterns are known styles for building PWAs, listed in recommended order. See the Table of Known Patterns for Building PWAs for examples of real-world businesses using each pattern. 
+The following patterns are known styles for building PWAs, listed in recommended order. See the  [Table of Known Patterns for Building PWAs](#patternstable) for examples of real-world businesses using each pattern. 
 
 1. Application shell (SSR) + use JavaScript to fetch content once the app shell is loaded
 
@@ -395,7 +395,7 @@ If you have time for a larger refactor, then try to implement a hybrid approach 
 ### Additional Migration and Architectural Considerations
 
 * The app shell architecture comes with some challenges because the network request for content is delayed by the app shell loading from the cache, the JavaScript executing, and initiating the fetch. Eventually, Streams is a viable option in this case. Until then, the four known patterns described earlier for building PWAs are valid approaches.
-* The app shell should be managed with a cache-first strategy (cache-first, network-fallback). The point is to get reliable performance and to achieve this you must get the cache out of the network. See the Table of Common Caching Strategies for more information.
+* The app shell should be managed with a cache-first strategy (cache-first, network-fallback). The point is to get reliable performance and to achieve this you must get the cache out of the network. See the  [Table of Common Caching Strategies](#commonstrategies) for more information.
 
 <div id="what"></div>
 
@@ -526,7 +526,7 @@ Other great examples include  [AliExpress](/web/showcase/2016/aliexpress), one o
 
 
 
-So, your next step could be to add a service worker to your existing web app. Using a service worker is one of the things that turns a single-page app into an app shell. (See the App Shell Features section earlier in this document for a description of the service worker.) 
+So, your next step could be to add a service worker to your existing web app. Using a service worker is one of the things that turns a single-page app into an app shell. (See the  [App Shell Features](#features) section earlier in this document for a description of the service worker.) 
 
 However, there are many situations that can affect your strategy for structuring your PWA and its app shell. It is important to understand the network traffic so you know what to actually precache and what to request as far as dynamic content. These decisions cannot be arbitrary. 
 
@@ -556,7 +556,7 @@ The `sw-toolbox` library and `sw-precache` module go hand-in-hand and are built 
 
 #### The `sw-toolbox` Library
 
-`sw-toolbox` is loaded by your service worker at run time and provides pre-written tools for  applying common caching strategies to different URL patterns. Specifically, it provides common caching patterns and an expressive approach to using those strategies for runtime requests. (Caching Strategies Supported by `sw-toolbox` describes this in more.)
+`sw-toolbox` is loaded by your service worker at run time and provides pre-written tools for  applying common caching strategies to different URL patterns. Specifically, it provides common caching patterns and an expressive approach to using those strategies for runtime requests. ( [Caching Strategies Supported by `sw-toolbox`](#bestcaching) describes this in more.)
 
 ##### Setting Up `sw-toolbox` for Common Caching Strategies 
 
@@ -575,7 +575,7 @@ importScripts('js/sw-toolbox/sw-toolbox.js');
 // Update path to match your setup
 ```
 
-A full code example is shown later in the Using `sw-precache` to Create the App Shell section.
+A full code example is shown later in the  [Using `sw-precache` to Create the App Shell](#swprecache) section.
 
 More usage information is available in the  [Tutorial](https://googlechrome.github.io/sw-toolbox/docs/master/tutorial-usage) on Github. 
 
@@ -611,7 +611,7 @@ The service worker code generated by `sw-precache` caches and serves the resourc
 
 You can combine `sw-precache` with one of the service worker "recipes" or techniques outlined in the  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) to provide a robust offline experience with sensible fallbacks. For example, when a large, uncached image is requested offline, serve up a smaller, cached placeholder image instead. You can also use wildcards to precache all of the resources that match a given pattern. There is no list of files or URLs that require manual maintenance.
 
-A code example is shown in the Using `sw-precache` to Create the App Shell section. There is also a lot more information on the  [GitHub project page](https://github.com/jeffposnick/sw-precache), including a demo project with  [`gulpfile.js`](https://github.com/jeffposnick/sw-precache/blob/master/demo/gulpfile.js) and  [`Gruntfile.js`](https://github.com/jeffposnick/sw-precache/blob/master/demo/Gruntfile.js) samples, and a  [script](https://github.com/jeffposnick/sw-precache/blob/master/demo/app/js/service-worker-registration.js) you can use to register the generated service worker. To see it in action, look at the  [app-shell-demo on Github](https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo). 
+A code example is shown in the  [Using `sw-precache` to Create the App Shell](#swprecache) section. There is also a lot more information on the  [GitHub project page](https://github.com/jeffposnick/sw-precache), including a demo project with  [`gulpfile.js`](https://github.com/jeffposnick/sw-precache/blob/master/demo/gulpfile.js) and  [`Gruntfile.js`](https://github.com/jeffposnick/sw-precache/blob/master/demo/Gruntfile.js) samples, and a  [script](https://github.com/jeffposnick/sw-precache/blob/master/demo/app/js/service-worker-registration.js) you can use to register the generated service worker. To see it in action, look at the  [app-shell-demo on Github](https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo). 
 
 <div id="bestcaching"></div>
 
@@ -711,7 +711,7 @@ Note: If your website is a templated site (i.e. built using multiple templates c
 
 #### Exercise: Determine the Best Caching Strategy for Your App
 
-Use the following table to identify which caching strategy provides the right balance between speed and data freshness for each of your data sources. Use the Table of Common Caching Strategies to fill in the last column. An example is provided after the table.
+Use the following table to identify which caching strategy provides the right balance between speed and data freshness for each of your data sources. Use the  [Table of Common Caching Strategies](#commonstrategies) to fill in the last column. An example is provided after the table.
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">
@@ -843,9 +843,9 @@ Remember that `sw-precache` integrates with your build process, but `sw-toolbox`
 
 ### Considerations
 
-* Service worker caching should be considered a progressive enhancement. If your web app follows the model of conditionally registering a service worker only if it is supported (determined by `if('serviceWorker' in navigator)`), then you get offline support on browsers with service workers and on browsers that do not support service workers. The offline-specific code is never called and there is no overhead or breakage for older browsers. Registering a Service Worker shows an example of this.
+* Service worker caching should be considered a progressive enhancement. If your web app follows the model of conditionally registering a service worker only if it is supported (determined by `if('serviceWorker' in navigator)`), then you get offline support on browsers with service workers and on browsers that do not support service workers. The offline-specific code is never called and there is no overhead or breakage for older browsers.  [Registering a Service Worker](#register) shows an example of this.
 * All resources that are precached are fetched by a service worker running in a separate thread as soon as the service worker is installed. You should be judicious in what you cache, because listing files that are non essential (large images that are not shown on every page, for instance) result in browsers downloading more data than is strictly necessary.
-* Precaching does not make sense for all architectures (described in the PWA Architectural Styles and Patterns section and also outlined in the  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/),). Several caching strategies are described later in this document that can be used in conjunction with the `sw-precache` module to provide the best experience for your users. If you do implement additional caching logic, put the code in a separate JavaScript file and include it using the `importScripts()` method.
+* Precaching does not make sense for all architectures (described in the  [PWA Architectural Styles and Patterns](#h.hol27nvxqkin) section and also outlined in the  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/),). Several  [caching strategies](#bestcaching) are described later in this document that can be used in conjunction with the `sw-precache` module to provide the best experience for your users. If you do implement additional caching logic, put the code in a separate JavaScript file and include it using the `importScripts()` method.
 * The `sw-precache` library uses a cache-first strategy, which results in a copy of any cached content being returned without consulting the network. A useful pattern to adopt with this strategy is to display an alert to your users when new content is available, and give them an opportunity to reload the page to pick up that new content (which the service worker adds to the cache, and makes available at the next page load). The code for listening for a service worker update lives in the JavaScript for the page that registers the service worker. To see an example, go to this  [Github repository](https://github.com/GoogleChrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L27). 
 
 ### The Key to Designing UIs for PWAs
@@ -1031,7 +1031,7 @@ self.addEventListener('install', function(e) {
 
 #### Using `sw-precache` to Cache the App Shell
 
-The `sw-precache Module` section in this document describes this API in detail. This section describes how you can run the  [`sw-precache`](https://developer.mozilla.org/en-US/docs/Web/API/Cache) API as a command-line tool or as part of your build process. 
+The  [`sw-precache Module`](#precachemodule) section in this document describes this API in detail. This section describes how you can run the  [`sw-precache`](https://developer.mozilla.org/en-US/docs/Web/API/Cache) API as a command-line tool or as part of your build process. 
 
 __Important:__ Every time you make changes to local files and are ready to deploy a new version of your site, re-run this step. To ensure this is done, include the task that generates your service worker code in your list of tasks that are automatically run as part of your deployment process. 
 
