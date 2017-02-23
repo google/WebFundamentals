@@ -146,7 +146,7 @@ Horner](https://airhorner.com)。它是 Web Audio API 来播放并操作汽笛�
 
 <img src="images/image03.png" width="624" height="350" />
 
-### 常见问题
+### 高频问答
 
 **为什么要把 service worker 放在根目录？我为什么不能将它放在 `/scripts` 目录下？**
 
