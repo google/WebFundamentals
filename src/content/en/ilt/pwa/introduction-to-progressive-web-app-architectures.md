@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T22:28:27Z #}
+{# wf_updated_on: 2017-02-23T22:35:40Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -227,7 +227,7 @@ The following patterns are known styles for building PWAs, listed in recommended
 
 1. Application shell (SSR) + use JavaScript to fetch content once the app shell is loaded
 
-SSR is optional. Your shell is likely to be highly static, but SSR provides slightly better performance in some cases.
+    SSR is optional. Your shell is likely to be highly static, but SSR provides slightly better performance in some cases.
 
 
 
@@ -446,15 +446,15 @@ The benefits of an app shell architecture with a service worker include:
 
 * Reliable performance that is consistently fast
 
-Repeat visits are extremely quick.  Static assets (e.g. HTML, JavaScript, images and CSS) are immediately cached locally so there is no need to re-fetch the shell (and optionally the content if that is cached too). The UI is cached locally and content is updated dynamically as required. 
+    Repeat visits are extremely quick.  Static assets (e.g. HTML, JavaScript, images and CSS) are immediately cached locally so there is no need to re-fetch the shell (and optionally the content if that is cached too). The UI is cached locally and content is updated dynamically as required. 
 
 * Application-like interactions
 
-By adopting the  *app shell-plus-content*  application model, you can create experiences  with application-like navigation and interactions, complete with offline support.
+    By adopting the  *app shell-plus-content*  application model, you can create experiences  with application-like navigation and interactions, complete with offline support.
 
 * Economical use of data
 
-Design for minimal data usage and be judicious in what you cache because listing files that are non-essential (large images that are not shown on every page, for instance) result in browsers downloading more data than is strictly necessary. Even though data is relatively cheap in western countries, this is not the case in emerging markets where connectivity is expensive and data is costly.
+    Design for minimal data usage and be judicious in what you cache because listing files that are non-essential (large images that are not shown on every page, for instance) result in browsers downloading more data than is strictly necessary. Even though data is relatively cheap in western countries, this is not the case in emerging markets where connectivity is expensive and data is costly.
 
 ### Example HTML for an App Shell
 

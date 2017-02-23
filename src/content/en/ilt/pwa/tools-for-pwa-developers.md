@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T22:27:55Z #}
+{# wf_updated_on: 2017-02-23T23:17:54Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -25,7 +25,7 @@ book_path: /web/ilt/_book.yaml
 
 To access __Developer Tools__ ("[DevTools](/web/tools/chrome-devtools/)"__)__ in Chrome, open a web page or web app in Google Chrome. Click the __Chrome menu__ <img src="img/dc66ff026f4af280.png" style="width:20px;height:20px;" alt="Chrome Menu Icon">  icon, and then select __More Tools__ > __Developer Tools__.  
 
-You can also use the keyboard shortcut `Control+Shift+I` on Windows and Linux, or `⌘ + alt` + I on Mac (see the  [Keyboard and UI Shortcuts Reference](/web/tools/chrome-devtools/inspect-styles/shortcuts?utm_source=dcc&utm_medium=redirect&utm_campaign=2016q3)). Alternatively, right-click anywhere on the page and select __Inspect__.
+You can also use the keyboard shortcut <code>Control+Shift+I</code> on Windows and Linux, or <code>⌘+alt+I</code> on Mac (see the  [Keyboard and UI Shortcuts Reference](/web/tools/chrome-devtools/inspect-styles/shortcuts)). Alternatively, right-click anywhere on the page and select Inspect. :)
 
 On a Mac, you can also select __View__ > __Developer__ > __Developer Tools__ in the Chrome menu bar at the top of the screen.
 
