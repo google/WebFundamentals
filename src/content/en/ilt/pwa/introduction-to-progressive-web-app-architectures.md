@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T21:40:39Z #}
+{# wf_updated_on: 2017-02-23T21:51:00Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -1073,12 +1073,8 @@ The following code example uses the `gulp` command to build a project. It first 
   var paths = {
     src: 'app/'
   };
-```
 
-      
-
-```
-gulp.task('generate-service-worker', function(callback) {
+  gulp.task('generate-service-worker', function(callback) {
     swPrecache.write(path.join(paths.src, 'service-worker.js'), {
 
       //1
