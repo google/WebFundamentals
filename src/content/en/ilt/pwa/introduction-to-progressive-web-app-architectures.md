@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T21:02:19Z #}
+{# wf_updated_on: 2017-02-23T21:11:01Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -577,7 +577,7 @@ importScripts('js/sw-toolbox/sw-toolbox.js');
 
 A full code example is shown later in the  [Using `sw-precache` to Create the App Shell](#swprecache) section.
 
-More usage information is available in the  [Tutorial](https://googlechrome.github.io/sw-toolbox/docs/master/tutorial-usage) on Github. 
+More usage information is available in the  [Tutorial](https://github.com/GoogleChrome/sw-precache) on Github. 
 
 ##### Additional Caching Solutions with `sw-toolbox`
 
