@@ -15,7 +15,7 @@ description: A regular round-up of articles, videos and talks authored by the Ye
 
 Allo’ Allo’. Welcome to the first issue of the [Yeoman](http://yeoman.io) monthly digest - a regular round-up of community articles, videos and talks to help you stay on top of what's new with your favourite man-in-a-hat.  We hope you find the articles, videos and updates below helpful!
 
-<h2>Articles</h2>
+## Articles
 
 * [Building Web Apps With Yeoman And Polymer](http://www.html5rocks.com/en/tutorials/webcomponents/yeoman/){: .external } <span class="external-domain">[html5rocks.com]</span>
 * [Introducing a Yeoman Generator For Full-stack Angular + Express Development](http://tylerhenkel.com/introducing-yeoman-angularjs-express-full-stack-generator/) <span class="external-domain">[tylerHenkel.com]</span>
@@ -28,13 +28,13 @@ Allo’ Allo’. Welcome to the first issue of the [Yeoman](http://yeoman.io) mo
 * [An Interview With The Creator Of The Hoodie Generator For Yeoman](http://blog.hood.ie/2013/10/a-hoodie-for-you-interviews-with-hoodie-users-2-robert-katzki-and-the-yeoman-generator/) <span class="external-domain">[hood.ie]</span>
 * [Articles In The Wiki](https://github.com/yeoman/yeoman/wiki/Articles) <span class="external-domain">[github.com/yeoman]</span>
 
-<h2>Slides</h2>
+## Slides
 
 * [Automating Development Workflow (with Yo, Grunt, Bower and more)](http://updates.html5rocks.com/2013/11/The-Landscape-Of-Front-end-Development-Automation-Slides) <span class="external-domain">[html5rocks.com]</span>
 * [Front-end Tooling Workflows](https://speakerdeck.com/dmosher/frontend-workflows-and-tooling) <span class="external-domain">[speakerdeck.com/dmosher]</span>
 * [Modern Workflows For Modern WebApps](http://slid.es/passy/yeoman/fullscreen) <span class="external-domain">[slid.es/passy]</span>
 
-<h2>Videos</h2>
+## Videos
 
 * [Introduction to the MEAN Stack](https://www.youtube.com/watch?v=1Sy3vWJ1N2U) with Yeoman, Grunt and Bower <span class="external-domain">[youtube.com]</span>
 * ['yo dude' a talk on Yeoman and Cordova from IBM](https://www.youtube.com/watch?v=RPMIz0id7eE) <span class="external-domain">[youtube.com]</span>
@@ -43,7 +43,7 @@ Allo’ Allo’. Welcome to the first issue of the [Yeoman](http://yeoman.io) mo
 * [Getting started with Yeoman and generator-webapp](https://www.youtube.com/watch?v=zBt2g9ekiug) <span class="external-domain">[youtube.com]</span>
 * [Yeoman generator for Twitter Bootstrap](https://www.youtube.com/watch?v=RO8TdD5EuNs) <span class="external-domain">[youtube.com]</span>
 
-<h2>Generator updates</h2>
+## Generator updates
 
 * [Bones - a Yeoman generator for basic web projects](https://github.com/matt-bailey/generator-bones) <span class="external-domain">[github.com/matt-bailey]</span>
 * [Generator MEAN - scaffolding for Mongo, Express, Angular and Node](https://github.com/jrcryer/generator-mean) <span class="external-domain">[github.com/jrcryer]</span>

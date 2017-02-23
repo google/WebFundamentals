@@ -9,14 +9,14 @@ description: Media Source Extensions (MSE) is a JavaScript API that lets you bui
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
-Media Source Extensions (MSE) is a JavaScript API that lets you build streams
-for playback from segments of audio or video. Although not covered in this
-article, understanding MSE is needed if you want to embed videos in your site
-that does such things as:
+[Media Source Extensions (MSE)](https://www.w3.org/TR/media-source/)
+is a JavaScript API that lets you build streams for playback from segments of
+audio or video. Although not covered in this article, understanding MSE is
+needed if you want to embed videos in your site that does such things as:
 
 +  Adaptive streaming, which is another way of saying adapting to device
    capabilities and network conditions
-+  Adaptive splicing
++  Adaptive splicing, such as ad insertion
 +  Time shifting
 +  Control of performance and download size
 
@@ -26,8 +26,8 @@ that does such things as:
   <figcaption><b>Figure 1</b>: Basic MSE data flow</figcaption>
 </figure>
 
-You can almost think of MSE as a chain. As illustrated above, between the
-downloaded file and the media elements are several layers.
+You can almost think of MSE as a chain. As illustrated in the figure, between
+the downloaded file and the media elements are several layers.
 
 +  An `<audio>` or `<video>` element to play the media.
 +  A `MediaSource` instance with a `SourceBuffer` to feed the media element.
@@ -58,11 +58,12 @@ In practice, the chain looks like this:
           return response.arrayBuffer();
         })
         .then(function(arrayBuffer) {
-          sourceBuffer.onupdateend = function(e) {
-            if (sourceBuffer.updating && mediaSource.readyState === 'open') {
+          sourceBuffer.addEventListener('updateend', function(e) {
+            if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
               mediaSource.endOfStream();
+              URL.revokeObjectURL(vidElement.src);
             }
-          }
+          });
           sourceBuffer.appendBuffer(arrayBuffer);
         });
     }
@@ -195,7 +196,7 @@ if (window.MediaSource) {
 
 function sourceOpen(e) {
   <strong>var mime = 'video/webm; codecs="opus, vp9"';
-  // this refers to the mediaSource instance.
+  // e.target refers to the mediaSource instance.
   // Store it in a variable so it can be used in a closure.
   var mediaSource = e.target;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
@@ -207,8 +208,9 @@ function sourceOpen(e) {
 If you do an internet search for MSE examples, you'll find plenty that retrieve
 media files using XHR. Just to keep things simple, not to mention cutting edge,
 I'm going to use the [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch)
-API and the [Promise](/web/fundamentals/getting-started/primers/promises) it returns. If you're trying to do this in Safari,
-it won't work without a `fetch()` polyfill.
+API and the [Promise](/web/fundamentals/getting-started/primers/promises) it
+returns. If you're trying to do this in Safari, it won't work without a
+`fetch()` polyfill.
 
 Note: Just to help things fit on the screen, from here to the end I'm only going
 to show part of the example we're building. If you want to see it in context,
@@ -217,7 +219,7 @@ to show part of the example we're building. If you want to see it in context,
 <pre class="prettyprint">
 function sourceOpen(e) {  
   var mime = 'video/webm; codecs="opus, vp9"';  
-  var mediaSource = this;  
+  var mediaSource = e.target;  
   var sourceBuffer = mediaSource.addSourceBuffer(mime);  
   var videoUrl = 'droid.webm'; 
   <strong>fetch(videoUrl)
@@ -252,7 +254,7 @@ clause where I append it to the `SourceBuffer`.
 <pre class="prettyprint">
 function sourceOpen(e) {
   var mime = 'video/webm; codecs="opus, vp9"';
-  var mediaSource = this;
+  var mediaSource = e.target;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
   var videoUrl = 'droid.webm';
   fetch(videoUrl)
@@ -266,15 +268,19 @@ function sourceOpen(e) {
 
 #### Call endOfStream() 
 
-At the end of processing the media file, `MediaSource.readyState` should be set
-to `ended` and a `sourceended` event should fire. Neither of these happen
-automatically, but we can trigger them by calling `MediaSource.endOfStream()`.
-Do this inside the `SourceBuffer.onupdateend`.
+After all `ArrayBuffers` are appended, and no further media data is expected, call
+`MediaSource.endOfStream()`.  This will change `MediaSource.readyState` to
+`ended` and fire the `sourceended` event. 
+
+You also need to release the blob URL from the `MediaSource` object. This
+allows the browser to reclaim the resources allocated to the `MediaSource`
+instance, assuming there are no references to it elsewhere. Do this by calling
+`revokeObjectURL()` on the source itself.
 
 <pre class="prettyprint">
 function sourceOpen(e) {
   var mime = 'video/webm; codecs="opus, vp9"';
-  var mediaSource = this;
+  var mediaSource = e.target;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
   var videoUrl = 'droid.webm';
   fetch(videoUrl)
@@ -282,9 +288,12 @@ function sourceOpen(e) {
       return response.arrayBuffer();
     })
     .then(function(arrayBuffer) {
-      <strong>sourceBuffer.onupdateend = function(e) {
-        mediaSource.endOfStream();
-      }</strong>
+      <strong>sourceBuffer.addEventListener('updateend', function(e) {
+        if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
+          mediaSource.endOfStream();
+          URL.revokeObjectURL(vidElement.src);
+        }
+      });</strong>
       sourceBuffer.appendBuffer(arrayBuffer);
     });
 }</pre>
@@ -305,10 +314,9 @@ Source Extenstions. We recommend [stackoverflow](http://stackoverflow.com/questi
       console.log("The Media Source Extensions API is not supported.")
     }
     
-    
     function sourceOpen(e) {
       var mime = 'video/webm; codecs="opus, vp9"';
-      var mediaSource = this;
+      var mediaSource = e.target;
       var sourceBuffer = mediaSource.addSourceBuffer(mime);
       var videoUrl = 'droid.webm';
       fetch(videoUrl)
@@ -316,11 +324,12 @@ Source Extenstions. We recommend [stackoverflow](http://stackoverflow.com/questi
           return response.arrayBuffer();
         })
         .then(function(arrayBuffer) {
-          sourceBuffer.onupdateend = function(e) {
-            if (sourceBuffer.updating && mediaSource.readyState === 'open') {
+          sourceBuffer.addEventListener('updateend', function(e) {
+            if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
               mediaSource.endOfStream();
+              URL.revokeObjectURL(vidElement.src);
             }
-          }
+          });
           sourceBuffer.appendBuffer(arrayBuffer);
         });
     }

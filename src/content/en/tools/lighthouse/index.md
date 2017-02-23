@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to set up Lighthouse to audit and improve your web apps.
 
-{# wf_updated_on: 2017-01-18 #}
+{# wf_updated_on: 2017-02-18 #}
 {# wf_published_on: 2016-09-27 #}
 
 # Lighthouse {: .page-title }
@@ -147,13 +147,14 @@ a useful way for viewing and sharing reports, online.
 
 There are several ways to view a report:
 
-1. When viewing the HTML version of a report, click the "Open in viewer" button
-in the top right corner of the report.
+1. When viewing the HTML version of a report, click the "Export" button
+in the top right corner of the report and choose "Open in Viewer".
 2.  Drag and drop the JSON output of a Lighthouse run onto the app or click to
 upload a report file. If you're a CLI user, run Lighthouse with the `--output=json` flag to
 generate a json file that can be opened in the Viewer.
 3. Add the `?gist=GISTID"` parameter to the URL of the Viewer.
-4. Paste the URL of a [Github gist](https://gist.github.com/) that contains a Lighthouse json report onto the app.
+4. Paste the URL of a [Github gist](https://gist.github.com/) that contains a Lighthouse
+JSON report onto the app.
 
 ![Export or share options](images/viewer_icons.png){: .attempt-right}
 
@@ -165,8 +166,8 @@ version control.
 
 ## Contributing
 
-Lighthouse is open source and [contributions are welcome](https://github.com/GoogleChrome/lighthouse/blob/master/CONTRIBUTING.md). Check out the
-repository's [issues tracker](https://github.com/GoogleChrome/lighthouse/issues)
+Lighthouse is open source and [contributions are welcome](https://github.com/GoogleChrome/lighthouse/blob/master/CONTRIBUTING.md).
+Check out the repository's [issues tracker](https://github.com/GoogleChrome/lighthouse/issues)
 to find bugs that you can fix, or audits that you can create or improve upon.
 The issues tracker is also a good place to discuss audit metrics, ideas for
 new audits, or anything else related to Lighthouse.

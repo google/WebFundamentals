@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Payment Request is a new API for the open web that makes checkout flows easier, faster and consistent.
 
-{# wf_updated_on: 2016-12-06 #}
+{# wf_updated_on: 2017-02-20 #}
 {# wf_published_on: 2016-07-30 #}
 {# wf_tags: javascript,payment #}
 {# wf_featured_image: /web/updates/images/2016/07/payment-request/0.png #}
@@ -253,6 +253,7 @@ To learn more about Payment Request API, a few documents and resources are avail
 * [Official specification](https://www.w3.org/TR/payment-request/)
 * [Payment Request API integration guide](/web/fundamentals/primers/payment-request/)
 * [Demo](https://emerald-eon.appspot.com/)
-* [Simple demos and sample code](https://googlechrome.github.io/samples/paymentrequest/){: .external }
+* [Simple demos and sample
+  code](https://googlechrome.github.io/samples/paymentrequest/){: .external }
 
 {% include "comment-widget.html" %}

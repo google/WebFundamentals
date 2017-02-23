@@ -17,6 +17,7 @@ install:
 script:
   - npm run build
   - npm run test
+  - node ./tools/travis/addCommitComment.js
 after_success:
   - ./tools/travis/install-gc-sdk.sh
   - ./tools/travis/deploy-master.sh
@@ -25,3 +26,9 @@ after_success:
 branches:
   only:
     - master
+notifications:
+  email:
+    recipients:
+      - petele@google.com
+    on_success: never
+    on_failure: always

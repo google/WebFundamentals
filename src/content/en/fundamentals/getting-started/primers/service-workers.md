@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features rely on.
 
 {# wf_published_on: 2014-12-01 #}
-{# wf_updated_on: 2016-01-18 #}
+{# wf_updated_on: 2017-02-21 #}
 
 # Service Workers: an Introduction {: .page-title }
 
@@ -31,11 +31,10 @@ experiences, giving developers complete control over the
 experience.
 
 Before service worker, there was one other API that gave users an offline
-experience on the web called [AppCache](//www.html5rocks.com/en/tutorials/appcache/beginner/){: .external }. 
-The major issues with AppCache are the [number of gotcha's](http://alistapart.com/article/application-cache-is-a-douchebag) 
-that exist as well as the fact that while the design works particularly well for single page web 
-apps, it's not so good with for multi-page sites. Service workers have been designed to 
-avoid these common pain points.
+experience on the web called
+[AppCache](//www.html5rocks.com/en/tutorials/appcache/beginner/){: .external }. 
+There are a number of issues that exist with the AppCache API, which service workers
+have been designed to  avoid.
 
 Things to note about a service worker:
 

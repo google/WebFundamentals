@@ -109,8 +109,8 @@ using [Web Components](http://webcomponents.org/):
 dependencies](images/app-build-components.png)
 
 Note: although HTML Imports are Polymer's preferred bundling strategy, you can
-use code-splitting and route-based chunking to get a similar setup achieved with
-modern JavaScript module bundlers
+use code-splitting and route-based chunking to achieve a similar setup with
+modern JavaScript module bundlers.
 
 In this diagram, the solid lines represent _static dependencies_: external
 resources identified in the files using `<link>` and `<script>` tags. Dotted

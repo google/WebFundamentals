@@ -4,6 +4,7 @@ description: Dalam codelab ini, Anda akan membangun sebuah Aplikasi Web Progresi
 translators:
   - abdsomad
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2016-10-10T14:59:33Z #}
 {# wf_published_on: 2016-01-01 #}
 

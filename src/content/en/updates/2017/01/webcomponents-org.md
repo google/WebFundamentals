@@ -94,3 +94,5 @@ Component API’s directly. Then [publish your
 element](https://www.webcomponents.org/publish) on webcomponents.org.
 
 Happy componentizing!
+
+{% include "comment-widget.html" %}

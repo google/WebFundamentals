@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Media Source Extensions (MSE) provide extended buffering and playback control for the HTML5 audio and video elements. While originally developed to facilitate Dynamic Adaptive Streaming over HTTP (DASH) based video players, MSE can be used for audio; specifically for gapless playback.
 
-{# wf_updated_on: 2015-06-21 #}
+{# wf_updated_on: 2017-02-15 #}
 {# wf_published_on: 2015-06-11 #}
 {# wf_tags: news,audio,codecs,mse #}
 
@@ -19,7 +19,7 @@ You've likely listened to a music album where songs flowed seamlessly across tra
 We'll get into the details of why below, but for now let's start with a demonstration. Below is the first thirty seconds of the excellent [Sintel](http://www.sintel.org/){: .external } chopped into five separate MP3 files and reassembled using MSE. The red lines indicate gaps introduced during the creation (encoding) of each MP3; you'll hear glitches at these points.
 
 <p style="text-align: center;">
-  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
+  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster-red.jpg">
     <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gap.webm" type="video/webm" />
     <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gap.mp4" type="video/mp4" />
   </video>
@@ -30,7 +30,7 @@ We'll get into the details of why below, but for now let's start with a demonstr
 Yuck! That's not a great experience; we can do better. With a little more work, using the exact same MP3 files in the above demo, we can use MSE to remove those annoying gaps. The green lines in the next demo indicate where the files have been joined and the gaps removed. On Chrome 38+ this will playback seamlessly!
 
 <p style="text-align: center;">
-  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
+  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster-green.jpg">
     <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gapless.webm" type="video/webm" />
     <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gapless.mp4" type="video/mp4" />
   </video>
@@ -61,9 +61,9 @@ First, let's backtrack and cover the basic setup of a `MediaSource` instance. Me
       // entire segment at once, but we could also retrieve it in chunks and append
       // each chunk separately.  MSE will take care of assembling the pieces.
       GET('sintel/sintel_0.mp3', function(data) { onAudioLoaded(data, 0); } );
-    }, false);
+    });
 
-    audio.src = window.URL.createObjectURL(mediaSource);
+    audio.src = URL.createObjectURL(mediaSource);
 
 
 Once the `MediaSource` object is connected, it will perform some initialization and eventually fire a `sourceopen` event; at which point we can create a [`SourceBuffer`](http://www.w3.org/TR/media-source/#sourcebuffer). In the example above, we're creating an `audio/mpeg` one, which is able to parse and decode our MP3 segments; there are several [other types](http://www.w3.org/2013/12/byte-stream-format-registry/) available.
@@ -85,7 +85,7 @@ In addition to the padding at the end, each file also had padding added to the b
   <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap.png" alt="Beginning of sintel_1.mp3">
 </p>
 
-The sections of silence at the beginning and end of each file are what causes the _glitches_ between segments in the previous demo. To achieve gapless playback, we need to remove these sections of silence. Luckily, this is easily done with `MediaSource`! Below, we'll modify our `onAudioLoaded()` method to use an [append window](https://w3c.github.io/media-source#definitions) and a [timestamp offset](https://w3c.github.io/media-source#definitions) to remove this silence.
+The sections of silence at the beginning and end of each file are what cause the _glitches_ between segments in the previous demo. To achieve gapless playback, we need to remove these sections of silence. Luckily, this is easily done with `MediaSource`. Below, we'll modify our `onAudioLoaded()` method to use an [append window](https://w3c.github.io/media-source#definitions) and a [timestamp offset](https://w3c.github.io/media-source#definitions) to remove this silence.
 
 ## Example Code
 
@@ -101,7 +101,7 @@ The sections of silence at the beginning and end of each file are what causes th
       var gaplessMetadata = ParseGaplessData(data);
 
       // Each appended segment must be appended relative to the next.  To avoid any
-      // overlaps, we'll use the ending timestamp of the last append as the starting
+      // overlaps, we'll use the end timestamp of the last append as the starting
       // point for our next append or zero if we haven't appended anything yet.
       var appendTime = index > 0 ? sourceBuffer.buffered.end(0) : 0;
 
@@ -136,6 +136,7 @@ The sections of silence at the beginning and end of each file are what causes th
             // We've loaded all available segments, so tell MediaSource there are no
             // more buffers which will be appended.
             mediaSource.endOfStream();
+            URL.revokeObjectURL(audio.src);
           }
         });
       }
@@ -160,7 +161,7 @@ Let's see what our shiny new code has accomplished by taking another look at the
 
 ## Conclusion
 
-With that we've stitched all five segments seamlessly into one and have subsequently reached the end of our demo. Before we go, you may have noticed that our `onAudioLoaded()` method has no consideration for containers or codecs. That means all of these techniques will work irrespective of the container or codec type. Below you can replay the original demo DASH-ready fragmented MP4 instead of MP3.
+With that, we've stitched all five segments seamlessly into one and have subsequently reached the end of our demo. Before we go, you may have noticed that our `onAudioLoaded()` method has no consideration for containers or codecs. That means all of these techniques will work irrespective of the container or codec type. Below you can replay the original demo DASH-ready fragmented MP4 instead of MP3.
 
 <p style="text-align: center;">
   <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
@@ -177,7 +178,7 @@ Thanks for reading!
 
 ## Appendix A: Creating Gapless Content
 
-Creating gapless content can be hard to get right. Below we'll walk through how the [Sintel](http://www.sintel.org/){: .external } media used in this demo were created. To start you'll need a copy of the [lossless FLAC soundtrack](http://media.xiph.org/sintel/Jan_Morgenstern-Sintel-FLAC.zip) for Sintel; for posterity, the SHA1 is included below. For tools, you'll need [FFmpeg](http://ffmpeg.org/), [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box/), [LAME](http://lame.sourceforge.net/), and an OSX installation with [afconvert](https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man1/afconvert.1.html).
+Creating gapless content can be hard to get right. Below we'll walk through creation of the [Sintel](http://www.sintel.org/){: .external } media used in this demo. To start you'll need a copy of the [lossless FLAC soundtrack](http://media.xiph.org/sintel/Jan_Morgenstern-Sintel-FLAC.zip) for Sintel; for posterity, the SHA1 is included below. For tools, you'll need [FFmpeg](http://ffmpeg.org/), [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box/), [LAME](http://lame.sourceforge.net/), and an OSX installation with [afconvert](https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man1/afconvert.1.html).
 
 
     unzip Jan_Morgenstern-Sintel-FLAC.zip
@@ -265,8 +266,7 @@ Just like creating gapless content, parsing the gapless metadata can be tricky s
 
     function ParseGaplessData(arrayBuffer) {
       // Gapless data is generally within the first 512 bytes, so limit parsing.
-      var byteStr = String.fromCharCode.apply(
-          null, new Uint8Array(arrayBuffer.slice(0, 512)));
+      var byteStr = new TextDecoder().decode(arrayBuffer.slice(0, 512));
 
       var frontPadding = 0, endPadding = 0, realSamples = 0;
 
@@ -352,11 +352,11 @@ Now that we have the total number of samples we can move on to reading out the n
     }
 
 
-With that we have a complete function for parsing the vast majority of gapless content out there. Edge cases certainly abound though, so caution is recommended before using similar code in production.
+With that we have a complete function for parsing the vast majority of gapless content. Edge cases certainly abound though, so caution is recommended before using similar code in production.
 
 ## Appendix C: On Garbage Collection
 
-Memory belonging to `SourceBuffer`s is actively [garbage collected](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) according to content type, platform specific limits, and the current play position. In Chrome, memory will first be reclaimed from already played buffers. However, if memory usage exceeds platform specific limits, it will remove memory from unplayed buffers.
+Memory belonging to `SourceBuffer` instances is actively [garbage collected](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) according to content type, platform specific limits, and the current play position. In Chrome, memory will first be reclaimed from already played buffers. However, if memory usage exceeds platform specific limits, it will remove memory from unplayed buffers.
 
 When playback reaches a gap in the timeline due to reclaimed memory it may glitch if the gap is small enough or stall completely if the gap is too large. Neither is a great user experience, so it's important to avoid appending too much data at once and to manually remove ranges from the media timeline that are no longer necessary.
 
@@ -364,6 +364,6 @@ Ranges can be removed via the [`remove()`](https://w3c.github.io/media-source/#w
 
 On desktop Chrome, you can keep approximately 12 megabytes of audio content and 150 megabytes of video content in memory at once. You should not rely on these values across browsers or platforms; e.g., they are most certainly not representative of mobile devices.
 
-Garbage collection only impacts data added to SourceBuffers; there are no limits on how much data you can keep buffered in JavaScript variables. You may also reappend the same data in the same position if necessary.
+Garbage collection only impacts data added to `SourceBuffers`; there are no limits on how much data you can keep buffered in JavaScript variables. You may also reappend the same data in the same position if necessary.
 
 {% include "comment-widget.html" %}

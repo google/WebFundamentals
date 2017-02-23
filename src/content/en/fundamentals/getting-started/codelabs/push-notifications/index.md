@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab you'll how to add push notifications to your web app.
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2017-01-31T18:54:09Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -44,7 +45,7 @@ Push messaging provides a simple and effective way to re-engage with your users 
 
 You can get the sample code for this code by either downloading the zip here:
 
-[Link](https://github.com/googlechrome/push-notifications/archive/master.zip)
+[Download source code](https://github.com/googlechrome/push-notifications/archive/master.zip)
 
 or by cloning this git repo:
 
@@ -56,7 +57,7 @@ If you downloaded the source as a zip, unpacking it should give you a root folde
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
+[Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
 
@@ -84,7 +85,7 @@ Now visit your site in your web browser (by clicking on the highlighted Web Serv
 
 ![49b343a07e2c92d.png](img/49b343a07e2c92d.png)
 
-### Always update the service worker
+### Always update the s__ervice worker__
 
 During development it's helpful to ensure your service worker is always up to date and has the latest changes.
 

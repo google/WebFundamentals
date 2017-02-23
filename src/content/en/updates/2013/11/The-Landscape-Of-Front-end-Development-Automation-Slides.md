@@ -17,7 +17,7 @@ Writing a modern web app these days can sometimes feel like a tedious process; f
 
 In the [slides](https://speakerdeck.com/addyosmani/automating-front-end-workflow) from my FOWA keynote, I walk through a landscape of tools to keep you productive on the front-end. Learn how to iterate faster, get real-time feedback, avoid bugs through tools and incorporate these into a functional developer workflow. 
 
-<h2>Some key points</h2>
+## Some key points
 
 * Desktop tools for workflow automation can save time on **simple** projects.
 * Command-line automation tools are better for **complex** projects where you need more flexibility.
@@ -26,7 +26,7 @@ In the [slides](https://speakerdeck.com/addyosmani/automating-front-end-workflow
 * Augment your system workflow with productivity tools like Alfred
 * Use cross-device testing, network throttling and visual regression testing for a better mobile workflow.
 
-<h2>Choose tools you'll use</h2>
+## Choose tools you'll use
 
 Front-end tooling has come a long way in the last few years. That said, it's hard not to think that developing for the web today is awesome without thinking that it's now more complex. 
 
