@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T21:34:48Z #}
+{# wf_updated_on: 2017-02-24T21:53:57Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -679,7 +679,7 @@ You now know how to use the Fetch API to request resources and post data to serv
 
 ### Resources
 
-*  [Fetch API Concepts](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-text/content/docs/working_with_the_fetch_api.html)
+*  [Fetch API Concepts](working-with-the-fetch-api)
 *  [Learn more about the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 *  [Learn more about Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 *  [Learn more about GlobalFetch.fetch()](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch)
