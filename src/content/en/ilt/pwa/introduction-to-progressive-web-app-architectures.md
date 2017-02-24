@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T18:28:25Z #}
+{# wf_updated_on: 2017-02-24T20:07:55Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -1140,7 +1140,7 @@ What you get:
 * Works even when page is closed
 * Helps to avoid abandoned shopping carts
 
-Service workers are the driving force behind push notifications. Push notifications with PWAs is described in  [Introduction to Push Notifications](introduction-to-push-notifications) (textbook) and  [Lab: Integrating Web Push](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_integrating_web_push.html) (codelab).
+Service workers are the driving force behind push notifications. Push notifications with PWAs is described in  [Introduction to Push Notifications](introduction-to-push-notifications) (textbook) and  [Lab: Integrating Web Push](lab-integrating-web-push) (codelab).
 
 ### What Happens When an Inactive App Gets a Push Message? 
 
