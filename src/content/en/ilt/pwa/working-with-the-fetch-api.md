@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T16:21:29Z #}
+{# wf_updated_on: 2017-02-24T19:21:54Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -23,7 +23,7 @@ The  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) is 
 
 
 
-Note: Fetch supports the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Cross Origin Resource Sharing (CORS)</a>. Testing generally requires <a href="running-a-local-web-server">running a local server</a>. Note that although fetch does not require HTTPS, service workers do and so using fetch in a service worker requires HTTPS. Local servers are exempt from this.
+Note: Fetch supports the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Cross Origin Resource Sharing (CORS)</a>. Testing generally requires running a local server. Note that although fetch does not require HTTPS, service workers do and so using fetch in a service worker requires HTTPS. Local servers are exempt from this.
 
 
 
@@ -155,7 +155,7 @@ function fetchJSON(pathToResource) {
 fetchJSON('examples/example.json');
 ```
 
-(This is  [promise chaining](https://docs.google.com/document/d/1H3GaE6JQhydNaPzII9hgGZL-uL73VvgQ02FYijeK0js/edit#).)
+(This is  [promise chaining](working-with-promises).)
 
  To summarize what's happening:
 
@@ -171,7 +171,6 @@ Step 4. Finally, the JSON data from the original request to __examples/example.j
 
 *  [Response interface](https://developer.mozilla.org/en-US/docs/Web/API/Response)
 *  [Response.json()](https://developer.mozilla.org/en-US/docs/Web/API/Body/json)
-*  [Response methods](https://developer.mozilla.org/en-US/docs/Web/API/Response)
 *  [Promise chaining](https://docs.google.com/document/d/1H3GaE6JQhydNaPzII9hgGZL-uL73VvgQ02FYijeK0js/edit#)
 
 ### Example: fetching images
@@ -251,7 +250,7 @@ In this example a text file is being fetched, __examples/words.txt__. Like the p
 
 
 
-Note: It may be tempting to fetch HTML and append that using the <code>innerHTML</code> attribute, but be careful -- this can expose your site to <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">cross site scripting attacks</a>!
+Note: It may be tempting to fetch HTML and append that using the <code>innerHTML</code> attribute, but be careful -- this can expose your site to <a href="https://www.google.com/about/appsecurity/learning/xss/">cross site scripting attacks</a>!
 
 
 
@@ -279,7 +278,7 @@ Note: For completeness, the methods we have used are actually methods of <a href
 
 ### Example: HEAD requests
 
-By default fetch uses the GET  [method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), which retrieves a specific resource, but other request HTTP methods can also be used.
+By default fetch uses the GET method, which retrieves a specific resource, but other request HTTP methods can also be used.
 
 HEAD requests are just like GET requests except the body of the response is empty. You can use this kind of request when all you want the file's metadata, and you want or need the file's data to be transported.
 

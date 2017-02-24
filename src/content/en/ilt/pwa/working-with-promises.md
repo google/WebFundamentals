@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T16:20:29Z #}
+{# wf_updated_on: 2017-02-24T19:11:33Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -279,7 +279,7 @@ function processImage(imageName, domNode) {
 
 
 
-Note: The promise chain continues executing after a `catch()` until it reaches the last `catch()` in the chain.
+Note: The promise chain continues executing after a `catch()` until it reaches the last `then()` or `catch()` in the chain.
 
 
 
@@ -385,7 +385,7 @@ Promise.race([promise1, promise2])
 });
 ```
 
-This example appears to race the cache against the network, using the fastest returned resource. However, both the  [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage) and  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) can resolve with "bad" responses ( [fetch](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) resolves even for 404s, and  [Cache API methods](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match) resolve with falsey values if a resource is not available). In this example, if a resource is not available in the cache (which typically responds faster than the network), `Promise.race` resolves with the falsey value from the cache, and ignores the network request (which may resolve). 
+This example appears to race the cache against the network, using the fastest returned resource. However, both the  [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage) and  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) can resolve with "bad" responses ( [fetch](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) resolves even for 404s, and  [caches.match](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match) resolves with falsey values if a resource is not available). In this example, if a resource is not available in the cache (which typically responds faster than the network), `Promise.race` resolves with the falsey value from the cache, and ignores the network request (which may resolve). 
 
 <div id="further"></div>
 

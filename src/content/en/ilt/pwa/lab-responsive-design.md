@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T15:58:46Z #}
+{# wf_updated_on: 2017-02-24T18:29:45Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -34,6 +34,7 @@ This lab shows you how to style your content to make it responsive.
 #### What you will need
 
 * Computer with terminal/shell access
+* Connection to the internet
 * Text editor
 
 <div id="1"></div>

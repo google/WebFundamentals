@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T16:04:21Z #}
+{# wf_updated_on: 2017-02-24T18:54:58Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -53,7 +53,7 @@ Caching data locally results in speed and cost benefits for mobile users (many o
 
 ### Access to browser independent features
 
-Service workers are the foundation for browser independent features for web applications. Because a service worker's lifecycle is independent of the web app's lifecycle, the service worker can take actions even when the web app isn't running (for example, receiving push notifications, syncing data in the background, and geofencing). Combined with progressive enhancement, these features can be safely added to your app without breaking it in unsupported browsers. To see if a target browser supports a given service worker feature, check  [Is Service Worker Ready](https://jakearchibald.github.io/isserviceworkerready/)?
+Service workers are the foundation for browser independent features for web applications. Because a service worker's lifecycle is independent of the web app's lifecycle, the service worker can take actions even when the web app isn't running (for example, receiving push notifications, syncing data in the background, and geofencing). Combined with progressive enhancement, these features can be safely added to your app without breaking it in unsupported browsers. To see if a target browser supports a given service worker feature, check  [Is Service Worker Ready?](https://jakearchibald.github.io/isserviceworkerready/)
 
 <div id="how"></div>
 

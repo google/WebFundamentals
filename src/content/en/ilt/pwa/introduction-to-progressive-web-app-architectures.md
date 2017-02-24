@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T01:21:28Z #}
+{# wf_updated_on: 2017-02-24T18:28:25Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -47,7 +47,7 @@ Service workers provide services such as:
 
 The concept of caching is exciting because it allows you to support offline experiences and it gives developers complete control over what exactly that experience is. But, to take full advantage of the service worker and progressively incorporate more and more PWA capabilities also invites a new way of thinking about building web sites by using the  *application shell architecture* . 
 
-__Application shell (app shell)__: PWAs tend to be architected around an  *application shell* . This contains the local resources that your web app needs to load the skeleton of your user interface so it works offline and populates its content using JavaScript. If the application shell has been cached by service worker, then on repeat visits the app shell allows you to get meaningful pixels on the screen really fast without the network. Making use of an app shell is not a hard requirement for building PWAs, but it can result in significant performance gains when cached and served correctly.
+__Application Shell (app shell): __PWAs tend to be architected around an application shell. This contains the local resources that your web app needs to load the skeleton of your user interface so it works offline and populates its content using JavaScript. If the application shell has been cached by service worker, then on repeat visits the app shell allows you to get meaningful pixels on the screen really fast without the network. Making use of an app shell is not a hard requirement for building PWAs, but it can result in significant performance gains when cached and served correctly.
 
 The shell of the functionality is loaded and displayed to the user (and potentially cached by the service worker so that it can be accessed offline), and then the page content is loaded dynamically as the user navigates around the app. This reliably and instantly loads on your users' screens, similar to what is seen in native applications.
 
@@ -1140,15 +1140,13 @@ What you get:
 * Works even when page is closed
 * Helps to avoid abandoned shopping carts
 
-Service workers are the driving force behind push notifications. Push notifications with PWAs is described in  [Introduction to Push Notifications](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-text/content/docs/intro_to_web_push_&_notifications.html) (textbook) and  [Lab: Integrating Web Push](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_integrating_web_push.html) (codelab).
+Service workers are the driving force behind push notifications. Push notifications with PWAs is described in  [Introduction to Push Notifications](introduction-to-push-notifications) (textbook) and  [Lab: Integrating Web Push](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_integrating_web_push.html) (codelab).
 
-### What Happens When the App Shell Gets a Push Message? 
+### What Happens When an Inactive App Gets a Push Message? 
 
-What happens when push notifications are enabled when using an app shell but the user is offline? The  [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) allows the server to push the message even while the app is not active. 
+What happens when push notifications are enabled but the user is offline? The  [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) allows the server to push the message even while the app is not active. 
 
-The app shell gets a token that is used to register for push notifications. The app shell keeps the token for decoding messages later (or unregistering from the notifications). Because the server is not sending any data to the client right now, it just sends a simple message called a  *tickle*  that wakes up the service worker and triggers the `push` event in the service worker. Inside the `push` event handler the service worker can retrieve the data from the push message, perform some logic based on the data, and display the notification.
-
-Once the user sees the notification they can ignore it until later, dismiss it, or action it. The user  normally taps the notification to choose. These actions raise events in the service worker that you can handle any way you choose. For example, if the user dismisses the notification the app might log this to our analytics. If they click the notification, the app could take them to the specific part of the app that was referenced in the notification.
+Once the user sees the notification they can ignore it until later, dismiss it, or action it. The user  normally taps the notification to choose. These actions raise events in the service worker that you can handle any way you choose. For example, if the user dismisses the notification the app might log this to your analytics. If they click the notification, the app could take them to the specific part of the app that was referenced in the notification.
 
 <div id="conclusion"></div>
 

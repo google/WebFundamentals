@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T20:24:25Z #}
+{# wf_updated_on: 2017-02-24T19:21:41Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -34,6 +34,7 @@ This lab shows you how to make images on your web page look good on all devices.
 #### What you will need
 
 * Text editor
+* Computer with terminal/shell access
 
 <div id="1"></div>
 
@@ -89,7 +90,7 @@ The value in `max-width` represents a percentage of the containing element, in t
 
 
 
-Note: You could also specify the <code>max-width</code> in terms of the viewport width using <code>vw</code> units (for example, 100vw). In this case we are using a percentage value to keep the images the same width as the text.
+Note: You could also specify the <code>max-width</code> in terms of the viewport width using <code>vw</code> units (for example, <code>100vw</code>). In this case we are using a percentage value to keep the images the same width as the text.
 
 
 
