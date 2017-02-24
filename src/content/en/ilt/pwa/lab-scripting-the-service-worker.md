@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T23:05:38Z #}
+{# wf_updated_on: 2017-02-24T01:09:10Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -28,7 +28,7 @@ This lab walks you through creating a simple service worker.
 #### What you should know
 
 * Basic JavaScript and HTML
-* Concepts and basic syntax of ES2015  [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/) 
+* Concepts and basic syntax of ES2015  [Promises](/web/fundamentals/getting-started/primers/promises) 
 * Concept of an  [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (IIFE)
 * How to enable the developer console
 
@@ -80,7 +80,7 @@ This folder contains:
 
 
 
-Open service-worker.js in your text editor. Note that the file contains only an empty function. We have not added any code to run within the service worker yet. 
+Open __service-worker.js__ in your text editor. Note that the file contains only an empty function. We have not added any code to run within the service worker yet. 
 
 
 
@@ -324,7 +324,7 @@ Back on the main page, click __Other page__,  __Another page__ and  __Back__. Wh
 
 #### Explanation
 
-The service worker's default scope is the path to the service worker file. Since the service worker file is now in __app/below/__, that is its scope. The console is now only logging fetch events for __another.html__ *, * __another.css__ *, * and __another.js__, because these are the only resources within the service worker's scope (__app/below/__).
+The service worker's default scope is the path to the service worker file. Since the service worker file is now in __app/below/__, that is its scope. The console is now only logging fetch events for __another.html__, __another.css__, and __another.js__, because these are the only resources within the service worker's scope (__app/below/__).
 
 ### 5.3 Set an arbitrary scope
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T23:00:44Z #}
+{# wf_updated_on: 2017-02-24T00:58:48Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -36,7 +36,7 @@ Part of the value of progressive web apps is in their ability to scale functiona
 
 We recommend installing the latest long term support (LTS) version of  [Node](https://nodejs.org/en/) (currently v6.9.2, which includes npm 3.10.9) rather than the most current version with the latest features. 
 
-If you have an existing version of Node installed that you would like to keep, you can install a Node version manager (for  [macOS and Linux platforms](https://github.com/creationix/nvm) and  [Windows](https://github.com/coreybutler/nvm-windows)). This tool (nvm) lets you install multiple versions of Node, and easily switch between them. If you have issues with a specific version of Node, you can <a href="https://github.com/creationix/nvm">switch to another version</a> with a single command.
+If you have an existing version of Node installed that you would like to keep, you can install a Node version manager (for  [macOS and Linux platforms](https://github.com/creationix/nvm) and  [Windows](https://github.com/coreybutler/nvm-windows)). This tool (nvm) lets you install multiple versions of Node, and easily switch between them. If you have issues with a specific version of Node, you can <a href="https://github.com/creationix/nvm#usage">switch to another version</a> with a single command.
 
 ### Global settings
 

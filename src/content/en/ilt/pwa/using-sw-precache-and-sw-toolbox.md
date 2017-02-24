@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T16:05:25Z #}
+{# wf_updated_on: 2017-02-24T01:05:55Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
-# Using Code Generation for Easier Caching (sw-precache, sw-toolbox) {: .page-title }
+# Using sw-precache and sw-toolbox {: .page-title }
 
 
 

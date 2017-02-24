@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T15:51:48Z #}
+{# wf_updated_on: 2017-02-24T01:12:50Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -307,7 +307,7 @@ Now we should have passed many more tests.
 
 
 
-Note: You may need to <a href="tools-for-pwa-developers#clearcache">clear the cache</a> to see the improved results. Then refresh the app and run Lighthouse again.
+Note: You may need to <a href="tools-for-pwa-developers#disablehttpcache">disable the browser cache</a> to see the improved results. Then refresh the app and run Lighthouse again.
 
 
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T23:17:50Z #}
+{# wf_updated_on: 2017-02-24T00:46:37Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -191,9 +191,5 @@ To examine service workers, navigate to the Service Worker section in your brows
 *  [Create your own service worker](lab-scripting-the-service-worker) (lab)
 *  [Take a blog site offline](lab-offline-quickstart) (lab)
 *  [Cache files with the service worker](lab-caching-files-with-the-service-worker) (lab)
-
-[lab-offline-quickstart](lab-offline-quickstart)
-
-lab-caching-files-with-the-service-worker
 
 

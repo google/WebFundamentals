@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T23:17:54Z #}
+{# wf_updated_on: 2017-02-24T01:07:01Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -23,9 +23,9 @@ book_path: /web/ilt/_book.yaml
 
 ### Chrome
 
-To access __Developer Tools__ ("[DevTools](/web/tools/chrome-devtools/)"__)__ in Chrome, open a web page or web app in Google Chrome. Click the __Chrome menu__ <img src="img/dc66ff026f4af280.png" style="width:20px;height:20px;" alt="Chrome Menu Icon">  icon, and then select __More Tools__ > __Developer Tools__.  
+To access __Developer Tools__ ("[DevTools](/web/tools/chrome-devtools/)") in Chrome, open a web page or web app in Google Chrome. Click the __Chrome menu__ <img src="img/dc66ff026f4af280.png" style="width:20px;height:20px;" alt="Chrome Menu Icon">  icon, and then select __More Tools__ > __Developer Tools__.  
 
-You can also use the keyboard shortcut <code>Control+Shift+I</code> on Windows and Linux, or <code>⌘+alt+I</code> on Mac (see the  [Keyboard and UI Shortcuts Reference](/web/tools/chrome-devtools/inspect-styles/shortcuts)). Alternatively, right-click anywhere on the page and select Inspect. :)
+You can also use the keyboard shortcut <code>Control+Shift+I</code> on Windows and Linux, or <code>⌘+alt+I</code> on Mac (see the  [Keyboard and UI Shortcuts Reference](/web/tools/chrome-devtools/inspect-styles/shortcuts)). Alternatively, right-click anywhere on the page and select Inspect.
 
 On a Mac, you can also select __View__ > __Developer__ > __Developer Tools__ in the Chrome menu bar at the top of the screen.
 
@@ -57,7 +57,7 @@ The __Dragonfly__ window opens in your Opera browser.
 
 ### Internet Explorer
 
-To open Developer Tools in Internet Explorer, open a web page or web app in Internet Explorer. Press F12 or click __Developer Tools__ from the __Tools__ menu.
+To open Developer Tools in Internet Explorer, open a web page or web app in Internet Explorer. Press `F12` or click __Developer Tools__ from the __Tools__ menu.
 
 <div id="safaridevtools"></div>
 
@@ -182,7 +182,7 @@ See  [View Network Requests in Chrome](#chromerequests).
 
 #### Chrome
 
-[Open __DevTools__](#chromedevtools) and select the Network panel. Check the __Offline__ checkbox. Check out  [Optimize Performance Under Varying Network Conditions](/web/tools/chrome-devtools/network-performance/network-conditions) for more information.
+[Open __DevTools__](#chromedevtools) and select the __Network__ panel. Check the __Offline__ checkbox. Check out  [Optimize Performance Under Varying Network Conditions](/web/tools/chrome-devtools/network-performance/network-conditions) for more information.
 
 ![Simulate Offline in Chrome](img/fe171eca066e4ee.png)
 
@@ -257,9 +257,9 @@ The __about:debugging__ page provides an interface for interacting with Service 
 There are several different ways to open __about:debugging__:
 
 * On Mac, in the __Tools__ > __Web Developer__ menu, click __Service Workers__.
-* Click the Menu icon (<img src="img/7fe46717c086da27.png" style="width:20px;height:20px;" alt="Firefox Menu Icon"> ) in the browser toolbar. 
+* Click the Menu icon <img src="img/7fe46717c086da27.png" style="width:20px;height:20px;" alt="Firefox Menu Icon">  in the browser toolbar. 
 
-Then click the Developer icon (<img src="img/71072a17a8634436.png" style="width:20px;height:20px;" alt="Firefox Menu Icon"> ) and select __Service Workers__.  
+Then click the Developer icon <img src="img/71072a17a8634436.png" style="width:20px;height:20px;" alt="Firefox Menu Icon">  and select __Service Workers__.  
 
 * Enter "about:debugging" in the Firefox URL bar and click __Workers__.
 
@@ -295,7 +295,7 @@ Then click the Developer icon (<img src="img/71072a17a8634436.png" style="width:
 
 There are several ways to force-update the service worker in Chrome:
 
-1. Refresh your app in the browser so the new service worker is recognized. Then hold `Shift` and click the Reload icon (<img src="img/879b00a99b4bcb97.png" style="width:20px;height:20px;" alt="Chrome Reload Icon"> ). 
+1. Refresh your app in the browser so the new service worker is recognized. Then hold `Shift` and click the Reload icon <img src="img/879b00a99b4bcb97.png" style="width:20px;height:20px;" alt="Chrome Reload Icon"> . 
 2.  [Open the Service Workers pane](#chromesw) in __DevTools__. Click __Update__. When the new service worker installs, click __skipWaiting__.
 
 ![Skip Waiting in Chrome](img/77b5eaa130252f7e.png)
@@ -414,7 +414,7 @@ See the MDN article on the  [Storage Inspector](https://developer.mozilla.org/en
 
 #### Chrome
 
-In __DevTools__, navigate to the __Application__ tab. Select __IndexedDB__. You may need to click Reload (<img src="img/879b00a99b4bcb97.png" style="width:20px;height:20px;" alt="Chrome Reload Icon"> ) to update the contents. 
+In __DevTools__, navigate to the __Application__ tab. Select __IndexedDB__. You may need to click Reload <img src="img/879b00a99b4bcb97.png" style="width:20px;height:20px;" alt="Chrome Reload Icon">  to update the contents. 
 
 ![View IndexedDB in Chrome](img/e9220dcc82da209e.png)
 

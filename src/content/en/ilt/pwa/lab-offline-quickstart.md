@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T16:17:08Z #}
+{# wf_updated_on: 2017-02-24T01:27:45Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -28,13 +28,13 @@ This lab shows you how to add offline capabilities to an application using servi
 #### What you should know
 
 * Basic HTML, CSS, and JavaScript
-* Familiarity with ES2015  [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/)
+* Familiarity with ES2015  [Promises](/web/fundamentals/getting-started/primers/promises)
 
 #### What you will need
 
 * Computer with terminal/shell access
 * Connection to the internet 
-* A browser that supports  [fetch](http://caniuse.com/#feat=fetch) and  [service workers](http://caniuse.com/#feat=serviceworkers)
+* A browser that supports  [service workers](https://jakearchibald.github.io/isserviceworkerready/)
 * A text editor
 
 <div id="1"></div>
@@ -82,11 +82,13 @@ Replace the TODO 2.1 comment in <strong>service-worker.js</strong> with the foll
 
 ```
 var CACHE_NAME = 'static-cache';
+
 var urlsToCache = [
   '.',
   'index.html',
   'styles/main.css'
 ];
+
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
