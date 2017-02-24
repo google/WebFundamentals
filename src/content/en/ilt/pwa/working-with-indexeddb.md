@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T20:23:43Z #}
+{# wf_updated_on: 2017-02-24T20:24:25Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,6 +10,16 @@ book_path: /web/ilt/_book.yaml
 
 
 
+
+<div id="overview"></div>
+
+
+## Overview
+
+
+
+
+This text guides you through the basics of the  [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). We are using Jake Archibald's  [IndexedDB Promised](https://github.com/jakearchibald/indexeddb-promised) library, which is very similar to the IndexedDB API, but uses promises rather than events. This simplifies the API while maintaining its structure, so anything you learn using this library can be applied to the IndexedDB API directly.
 
 <div id="what"></div>
 
