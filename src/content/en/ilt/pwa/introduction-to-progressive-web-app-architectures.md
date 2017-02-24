@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T20:07:55Z #}
+{# wf_updated_on: 2017-02-24T20:21:34Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -47,7 +47,7 @@ Service workers provide services such as:
 
 The concept of caching is exciting because it allows you to support offline experiences and it gives developers complete control over what exactly that experience is. But, to take full advantage of the service worker and progressively incorporate more and more PWA capabilities also invites a new way of thinking about building web sites by using the  *application shell architecture* . 
 
-__Application Shell (app shell): __PWAs tend to be architected around an application shell. This contains the local resources that your web app needs to load the skeleton of your user interface so it works offline and populates its content using JavaScript. If the application shell has been cached by service worker, then on repeat visits the app shell allows you to get meaningful pixels on the screen really fast without the network. Making use of an app shell is not a hard requirement for building PWAs, but it can result in significant performance gains when cached and served correctly.
+__Application Shell (app shell):__ PWAs tend to be architected around an application shell. This contains the local resources that your web app needs to load the skeleton of your user interface so it works offline and populates its content using JavaScript. If the application shell has been cached by service worker, then on repeat visits the app shell allows you to get meaningful pixels on the screen really fast without the network. Making use of an app shell is not a hard requirement for building PWAs, but it can result in significant performance gains when cached and served correctly.
 
 The shell of the functionality is loaded and displayed to the user (and potentially cached by the service worker so that it can be accessed offline), and then the page content is loaded dynamically as the user navigates around the app. This reliably and instantly loads on your users' screens, similar to what is seen in native applications.
 

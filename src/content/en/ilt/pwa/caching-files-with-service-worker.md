@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T00:46:54Z #}
+{# wf_updated_on: 2017-02-24T20:22:02Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -349,7 +349,7 @@ We can check if the browser supports the Cache API like this:
 
 ```
 if ('caches' in window) {
-        // has support
+  // has support
 }
 ```
 
@@ -439,10 +439,10 @@ The keys method can also be called on the caches entry point to return the keys 
 #### Learn about the Cache API
 
 *  [Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache) - MDN
-*  [The Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) - Jake Archibald
+*  [The Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/)
 
 #### Learn about using service workers
 
-*  [Using Service Workers](/web/fundamentals/getting-started/primers/service-workers) - MDN
+*  [Using Service Workers](/web/fundamentals/getting-started/primers/service-workers)
 
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T20:17:20Z #}
+{# wf_updated_on: 2017-02-24T20:17:44Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -440,7 +440,7 @@ fetch('http://bar.com/data.json', {
 
 
 
-*  [Fetch API Codelab](lab-fetch-api-practice)
+*  [Fetch API Codelab](lab-fetch-api)
 *  [Learn more about the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 *  [Learn more about Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 *  [Learn more about GlobalFetch.fetch()](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch)
