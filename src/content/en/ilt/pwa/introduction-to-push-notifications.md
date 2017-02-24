@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T15:48:14Z #}
+{# wf_updated_on: 2017-02-24T21:21:54Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -27,7 +27,7 @@ The Notification and Push API's are built on top of the  [Service Worker API](ht
 
 
 
-Note: Service workers require secure origins so testing Push Notifications requires <a href="running-a-local-web-server">running a local server</a>.
+Note: Service workers require secure origins so testing Push Notifications requires running a local server.
 
 
 
@@ -110,7 +110,7 @@ Notice the `showNotification` method is called on the service worker registratio
 
 
 
-Note: You can also create a notification using a <a href=" [https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification](https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification)">notification constructor</a>. However, a notification created this way is not paired with a service worker and is therefore not interactive.
+Note: You can also create a notification using a  [notification constructor](https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification). However, a notification created this way is not paired with a service worker and is therefore not interactive.
 
 
 
@@ -487,7 +487,7 @@ Chrome currently uses  [Firebase Cloud Messaging](https://firebase.google.com/do
 
 To use Firebase Cloud Messaging, you need to set up a project on  [Firebase](https://firebase.google.com/) (see the  [section on VAPID](#vapid) to get around this step). Here's how:
 
-1. In the  [Firebase console](https://firebase.corp.google.com/), select __Create New Project__.
+1. In the  [Firebase console](https://console.firebase.google.com/), select __Create New Project__.
 2. Supply a project name and click __Create Project__.
 3. Click the Settings icon next to your project name in the Navigation panel and select __Project Settings__.
 4. Open the __Cloud Messaging__ tab. You can find your __Server key__ and __Sender ID__ in this page. Save these values.

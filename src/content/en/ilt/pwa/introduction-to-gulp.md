@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T20:59:22Z #}
+{# wf_updated_on: 2017-02-24T21:06:17Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -180,15 +180,13 @@ A common pattern for gulp tasks is the following:
 2. Process these files with one or more functions using Node's `pipe` functionality
 3. Write the modified files to a destination directory (creating the directory if doesn't exist) with  [`gulp.dest`](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpdestpath-options)
 
-#### gulpfile.js
+        gulp.task('task-name', function() {
+          gulp.src('source-files') // 1
+          .pipe(gulpPluginFunction()) // 2
+          .pipe(gulp.dest('destination')); // 3
+        });
+        
 
-```
-gulp.task('task-name', function() {
-  gulp.src('source-files') // 1
-  .pipe(gulpPluginFunction()) // 2
-  .pipe(gulp.dest('destination')); // 3
-});
-```
 
 A complete gulpfile might look like this:
 
@@ -234,40 +232,44 @@ Uglifying (or minifying) JavaScript is a common developer chore. The following s
 
 1. Create a new project & __package.json__ by running the following in the command line (from the project's working directory):
 
-    npm init
+        npm init
+        
+
 
 2. Install the gulp package by running the following in the command line:
 
-    npm install gulp --save-dev
+        npm install gulp --save-dev
+        
+
 
 3. Install the  [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) package by running the following in the command line:
 
-    npm install gulp-uglify --save-dev
+        npm install gulp-uglify --save-dev
+        
+
 
 4. Create a __gulpfile.js__ and add the following code to include gulp and gulp-uglify:
 
-#### gulpfile.js
+        var gulp = require('gulp');
+        var uglify = require('gulp-uglify');
+        
 
-```
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-```
 
 5. Define the `uglify` task by adding the following code to __gulpfile.js__:
 
-#### gulpfile.js
+        gulp.task('uglify', function() {
+          gulp.src('js/**/*.js')
+          .pipe(uglify())
+          .pipe(gulp.dest('build'));
+        });
+        
 
-```
-gulp.task('uglify', function() {
-  gulp.src('js/**/*.js')
-  .pipe(uglify())
-  .pipe(gulp.dest('build'));
-});
-```
 
 6. Run the task from the command line with the following:
 
-    gulp uglify
+        gulp uglify
+        
+
 
 The task reads all JavaScript files in the __js__ directory (relative to the __gulpfile.js__ file), executes the `uglify` function on them (uglifying/minifying the code), and then puts them in a __build__ directory (creating it if it doesn't exist).
 
@@ -277,34 +279,32 @@ Multiple plugins can be used in a single task. The following steps set up a gulp
 
 1. As in the previous example, create a new project and install gulp,  [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer), and  [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps) by running the following in the command line (from the project's working directory):
 
-    npm init
-    npm install gulp --save-dev
-    npm install gulp-autoprefixer --save-dev
-    npm install gulp-sourcemaps --save-dev
+        npm init
+        npm install gulp --save-dev
+        npm install gulp-autoprefixer --save-dev
+        npm install gulp-sourcemaps --save-dev
+        
+
 
 2. Include the installed plugins by adding the following code to a __gulpfile.js__ file:
 
-#### gulpfile.js
+        var gulp = require('gulp');
+        var autoprefixer = require('gulp-autoprefixer');
+        var sourcemaps = require('gulp-sourcemaps');
+        
 
-```
-var gulp = require('gulp');
-var autoprefixer = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
-```
 
 3. Create a task that prefixes CSS files, creates sourcemaps on the files, and writes the new files to the __build__ directory by adding the following code to __gulpfile.js__:
 
-#### gulpfile.js
+        gulp.task('processCSS', function() {
+          gulp.src('styles/**/*.css')
+          .pipe(sourcemaps.init())
+          .pipe(autoprefixer())
+          .pipe(sourcemaps.write())
+          .pipe(gulp.dest('build'));
+        });
+        
 
-```
-gulp.task('processCSS', function() {
-  gulp.src('styles/**/*.css')
-  .pipe(sourcemaps.init())
-  .pipe(autoprefixer())
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest('build'));
-});
-```
 
 This task uses two plugins in the same task.
 

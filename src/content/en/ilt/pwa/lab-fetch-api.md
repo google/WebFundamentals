@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T16:16:06Z #}
+{# wf_updated_on: 2017-02-24T21:34:48Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -118,7 +118,7 @@ Note: We are using the <a href="https://addyosmani.com/resources/essentialjsdesi
 
 
 
-__Optional__: Open the site on an  [unsupported browser](http://caniuse.com/#search=service%20worker) and verify that the support check conditional works. 
+__Optional__: Open the site on an  [unsupported browser](http://caniuse.com/#search=fetch) and verify that the support check conditional works. 
 
 #### Explanation
 
@@ -146,7 +146,7 @@ function fetchJSON() {
 
 Save the script and refresh the page. Click __Fetch JSON__ again to try and fetch this new resource. 
 
-Now find the __status__, __URL__, and __ok__ properties of the response for this new fetch we just made. What are these values?
+Now find the `status`, `URL`, and `ok` properties of the response for this new fetch we just made. What are these values?
 
 The values should be different for the two files (do you understand why?). If you got any console errors, do the values match up with the context of the error? 
 
@@ -162,7 +162,7 @@ Why didn't a failed response activate the `catch` block? This is an important no
 
 We need to update our code to check the validity of responses.
 
-Complete the function called `validateResponse` in TODO 2.3. The function should accept a response object as input. If the response object's <strong>ok</strong> property is false, the function should throw an error containing <strong>response.statusText</strong>. If the response object's <strong>ok</strong> property is true, the function should simply return the response object.
+Complete the function called `validateResponse` in TODO 2.3. The function should accept a response object as input. If the response object's <code>ok</code> property is false, the function should throw an error containing <code>response.statusText</code>. If the response object's <code>ok</code> property is true, the function should simply return the response object.
 
 You can confirm that you have written the function correctly by navigating to __app/test/test.html__. This page runs tests on some of the functions you write. If there are errors with your implementation of a function (or you haven't implemented them yet), the test displays in red. Passed tests display in blue. Refresh the __test.html__ page to retest your functions.
 
@@ -185,7 +185,7 @@ function fetchJSON() {
 }
 ```
 
-This is  [promise chaining](http://www.html5rocks.com/en/tutorials/es6/promises/#toc-chaining).
+This is  [promise chaining](/web/fundamentals/getting-started/primers/promises#chaining).
 
 Save the script and refresh the page. Click __Fetch JSON__. Now the response for __examples/non-existent.json__ should trigger the `catch` block, unlike in section 2.2. Check the console to confirm this.
 
@@ -256,7 +256,7 @@ Step 4. Finally, the JSON data from the original request to __examples/animals.j
 
 *  [Response.json()](https://developer.mozilla.org/en-US/docs/Web/API/Body/json)
 *  [Response methods](https://developer.mozilla.org/en-US/docs/Web/API/Response#Methods)
-*  [Promise chaining](lab-promises)
+*  [Promise chaining](/web/fundamentals/getting-started/primers/promises#chaining)
 
 #### Solution code
 
@@ -286,7 +286,7 @@ function showImage(responseAsBlob) {
 }
 ```
 
-To complete TODO3b, finish writing the `readResponseAsBlob` function. The function should accept a response object as input. The function should return a promise that resolves to a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob">Blob</a>. 
+To complete TODO 3b, finish writing the `readResponseAsBlob` function. The function should accept a response object as input. The function should return a promise that resolves to a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob">Blob</a>. 
 
 
 
@@ -353,7 +353,7 @@ function showText(responseAsText) {
 }
 ```
 
-To complete TODO4b, finish writing the `readResponseAsText` function.. This function should accept a response object as input. The function should return a promise that resolves to text. 
+To complete TODO 4b, finish writing the `readResponseAsText` function.. This function should accept a response object as input. The function should return a promise that resolves to text. 
 
 
 

@@ -18,6 +18,7 @@ const mkdirp = require('mkdirp');
 
 function updateCodeLab(sourceFile, destFile, bookPath) {
   gutil.log(' ', 'Processing', sourceFile);
+  let matches;
   var authorId;
   var metadataFile = sourceFile.replace('index.md', 'codelab.json');
   var metadata = fs.readFileSync(metadataFile);
@@ -87,6 +88,17 @@ function updateCodeLab(sourceFile, destFile, bookPath) {
     return match;
   });
 
+  let reCodeInOL = /(^\d+\. .*?)\n+(#### .*?)?\n*```\n((.|\n)*?)```/gm;
+  matches = wfRegEx.getMatches(reCodeInOL, markdown);
+  matches.forEach(function(match) {
+    let result = match[1] + '\n\n';
+    let code = match[3].split('\n');
+    code.forEach(function(line) {
+      result += '        ' + line + '\n';
+    });
+    markdown = markdown.replace(match[0], result);
+  });
+
   // Eliminate the Duration on Codelabs
   markdown = markdown.replace(/^\*Duration is \d+ min\*\n/gm, '');
 
@@ -123,7 +135,6 @@ function updateCodeLab(sourceFile, destFile, bookPath) {
   // Convert markdown inside a set of HTML elements to HTML.
   //   This is required because DevSite's MD parser doesn't handle markdown
   //   inside of HTML. :(
-  let matches;
   let RE_ASIDE = /<aside markdown="1" .*?>\n?((.|\n)*?)\n?<\/aside>/gm;
   matches = wfRegEx.getMatches(RE_ASIDE, markdown);
   matches.forEach(function(match) {
