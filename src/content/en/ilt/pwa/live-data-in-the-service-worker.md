@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T21:44:57Z #}
+{# wf_updated_on: 2017-02-24T20:57:06Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,6 +10,16 @@ book_path: /web/ilt/_book.yaml
 
 
 
+
+<div id="introduction"></div>
+
+
+## Introduction
+
+
+
+
+Offline support and reliable performance are key features of Progressive Web Apps. This text describes some recommendations for storing different kinds of data in a PWA.
 
 <div id="where"></div>
 
@@ -27,7 +37,7 @@ There are a  [variety of reasons](https://medium.com/dev-channel/offline-storage
 
 In this text we use Jake Archibald's  [IndexedDB Promised](https://github.com/jakearchibald/indexeddb-promised) library, which enables promise syntax for IndexedDB. There are also  [other IndexedDB libraries](https://medium.com/dev-channel/offline-storage-for-progressive-web-apps-70d52695513c#.lm82vlyt8) that can be used to abstract some of the less convenient aspects of the API. 
 
-Debugging support for IndexedDB is available in Chrome, Opera, Firefox and Safari. Debugging support for Cache Storage is available in Chrome, Opera, and Firefox. Most of these are similar to the [service worker debugging tools](debugging-service-workers-in-browsers).
+Debugging support for IndexedDB is available in Chrome, Opera, Firefox and Safari. Debugging support for Cache Storage is available in Chrome, Opera, and Firefox. These are covered in [Tools for PWA Developers](tools-for-pwa-developers).
 
 
 
@@ -137,7 +147,7 @@ IndexedDB is a noSQL database. IndexedDB data is stored as key-value pairs in __
 </tr></table>
 
 
-The data is organized by a __`keypath`__, which in this case is the item's __`id`__ property. You can learn more about IndexedDB in the [corresponding text](working-with-indexed-db), or in the  [code lab](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_indexed_db.html).
+The data is organized by a __`keypath`__, which in this case is the item's __`id`__ property. You can learn more about IndexedDB in the corresponding  [text](working-with-indexeddb), or in the  [code lab](lab-indexeddb).
 
 The following function could be used to create an IndexedDB object store like the example above:
 

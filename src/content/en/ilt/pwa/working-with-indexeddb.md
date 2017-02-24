@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T20:24:25Z #}
+{# wf_updated_on: 2017-02-24T20:45:25Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -11,10 +11,10 @@ book_path: /web/ilt/_book.yaml
 
 
 
-<div id="overview"></div>
+<div id="introduction"></div>
 
 
-## Overview
+## Introduction
 
 
 
@@ -317,7 +317,7 @@ We can then open the "store" object store on this transaction and assign it to t
 
 ### Reading data
 
-To read data, call the  [get](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/get) method on the object store. The `get` method takes the primary key of the object you want to retrieve from the store. Here is a basic example:
+To read data, call the  [`get`](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/get) method on the object store. The `get` method takes the primary key of the object you want to retrieve from the store. Here is a basic example:
 
 ```
 someObjectStore.get(primaryKey);

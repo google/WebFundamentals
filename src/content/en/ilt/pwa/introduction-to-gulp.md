@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T19:56:00Z #}
+{# wf_updated_on: 2017-02-24T20:59:22Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,6 +10,16 @@ book_path: /web/ilt/_book.yaml
 
 
 
+
+<div id="introduction"></div>
+
+
+## Introduction
+
+
+
+
+Modern web development has many repetitive tasks like running a local server, minifying code, optimizing images, preprocessing CSS and more. This text discusses  [gulp](http://gulpjs.com/), a build tool for automating these tasks.
 
 <div id="what"></div>
 
