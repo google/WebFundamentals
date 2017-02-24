@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T19:21:54Z #}
+{# wf_updated_on: 2017-02-24T20:17:20Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -274,7 +274,7 @@ Note: For completeness, the methods we have used are actually methods of <a href
 
 `fetch()` can also receive a second optional parameter, `init`, that allows you to create custom settings for the request, such as the  [request method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), cache mode, credentials,  [and more](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch).
 
-### <a id="head" />
+<div id="head"></div>
 
 ### Example: HEAD requests
 
