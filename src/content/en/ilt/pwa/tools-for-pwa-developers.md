@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T01:07:01Z #}
+{# wf_updated_on: 2017-02-24T20:26:55Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -352,7 +352,7 @@ Navigate to __about:debugging__ in Firefox and select __Workers__. Click __Push_
 
 ### Chrome
 
-Click the Information icon in the URL bar. Use the __Notifications __dropdown menu to set the permission status for __Notifications__. 
+Click the Information icon in the URL bar. Use the __Notifications__ dropdown menu to set the permission status for __Notifications__. 
 
 ![Access Site Permissions in Chrome](img/eae0f39fca38f6f2.png)
 
