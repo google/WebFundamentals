@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T18:29:45Z #}
+{# wf_updated_on: 2017-02-24T20:00:39Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -278,7 +278,7 @@ The  [Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/) (Flexbox
 
 ### 6.1 Comment out .container rules in CSS
 
-Now in <strong>styles/main.css</strong>, comment out all rules that start with <code>.container</code> by wrapping them in <code>/*</code> and <code>*/</code>. We will make these our fallback rules for when Flexbox is not supported in the  [Flexbox as progressive enhancement](#7) section.
+Now in <strong>styles/main.css</strong>, comment out all rules that start with <code>.container</code> by wrapping them in `/*` and `*/`. We will make these our fallback rules for when Flexbox is not supported in the  [Flexbox as progressive enhancement](#7) section.
 
 ### 6.2 Add Flexbox layout
 
