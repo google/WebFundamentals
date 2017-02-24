@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T21:37:25Z #}
+{# wf_updated_on: 2017-02-24T21:50:56Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -75,7 +75,6 @@ Best of all, the browser acts as an intermediary, storing all the information ne
 
 Payment Request demos are available at these URLs:
 
-* Demo of Web Payment Request API:  [g.co/payment request api](http://g.co/payment%20request%20api)
 * Demo:  [https://emerald-eon.appspot.com/](https://emerald-eon.appspot.com/)
 * Simple demos and sample code:  [https://googlechrome.github.io/samples/paymentrequest/](https://googlechrome.github.io/samples/paymentrequest/)
 
@@ -107,9 +106,9 @@ From the user's perspective, all the previously tedious interaction—request, a
 
 
 
-For a high-level introduction and FAQ for the Payment Request API:  [https://developers.google.com/web/updates/2016/07/payment-request](/web/updates/2016/07/payment-request)
+[Bringing Easy and Fast Checkout with Payment Request API](/web/updates/2016/07/payment-request)
 
-For a step-by-step tutorial that describes implementing the Payment Request API, see the Integration Guide at:  [https://developers.google.com/web/fundamentals/primers/payment-request/](/web/fundamentals/primers/payment-request/)
+[Payment Request API: an Integration Guide](/web/fundamentals/primers/payment-request/)
 
 <div id="resources"></div>
 
