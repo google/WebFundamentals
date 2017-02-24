@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T16:00:20Z #}
+{# wf_updated_on: 2017-02-24T22:10:43Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -853,7 +853,7 @@ Note: The notification may not surface if you're in full screen mode.
 
 Both Chrome and Firefox support the  [The Voluntary Application Server Identification for Web Push (VAPID) protocol](https://tools.ietf.org/html/draft-thomson-webpush-vapid-02) for the identification of your service.
 
-The web-push library makes using VAPID relatively simple, but the process is actually quite complex behind the scenes. For a full explanation of VAPID, see the  [Introduction to Web Push](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-text/content/docs/intro_to_web_push_&_notifications.html#vapid) and the links below.
+The web-push library makes using VAPID relatively simple, but the process is actually quite complex behind the scenes. For a full explanation of VAPID, see the  [Introduction to Web Push](introduction-to-push-notifications#vapid) and the links below.
 
 #### For more information
 

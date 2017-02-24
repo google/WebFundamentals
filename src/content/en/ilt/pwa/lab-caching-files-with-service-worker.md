@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T15:53:45Z #}
+{# wf_updated_on: 2017-02-24T22:08:48Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -192,7 +192,7 @@ The `fetch` event listener intercepts all requests. We use  [`event.respondWith`
 #### For more information
 
 *  [caches.match - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match)
-*  [The Fetch API](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-text/content/docs/working_with_the_fetch_api.html)
+*  [The Fetch API](working-with-the-fetch-api)
 *  [The fetch event - MDN](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent)
 
 <div id="4"></div>

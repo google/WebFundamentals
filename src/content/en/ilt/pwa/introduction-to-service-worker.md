@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T17:56:58Z #}
+{# wf_updated_on: 2017-02-24T22:07:15Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -55,11 +55,11 @@ Service workers depend on two APIs to make an app work offline:  [Fetch](https:/
 
 ### Improve performance of your application/site
 
-Caching resources will make content load faster under most network conditions. See  [Caching files with the service worker](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_caching_files_with_the_service_worker.html) and  [The Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) for a full list of caching strategies.
+Caching resources will make content load faster under most network conditions. See  [Caching files with the service worker](lab-caching-files-with-service-worker) and  [The Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) for a full list of caching strategies.
 
 ### Make your app "offline-first"
 
-Using the Fetch API inside a service worker, we can intercept network requests and then modify the response with content other than the requested resource. We can use this technique to serve resources from the cache when the user is offline. See  [Caching files with the service worker](https://google-progweb-ilt.gitbooks.io/progressive-web-apps-ilt-with-cover/content/docs/lab_caching_files_with_the_service_worker.html) to get hands-on experience with this technique.
+Using the Fetch API inside a service worker, we can intercept network requests and then modify the response with content other than the requested resource. We can use this technique to serve resources from the cache when the user is offline. See  [Caching files with the service worker](lab-caching-files-with-service-worker) to get hands-on experience with this technique.
 
 ### Act as the base for advanced features
 
