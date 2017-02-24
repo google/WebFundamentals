@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 57 to help you plan.
 
-{# wf_updated_on: 2017-02-15 #}
+{# wf_updated_on: 2017-02-23 #}
 {# wf_published_on: 2017-02-01 #}
 {# wf_tags: deprecations,removals,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -18,6 +18,38 @@ Platform. This article describes the deprecations and removals in Chrome 57,
 which is in beta as of early February. This list is subject to change at any
 time.
 
+## Deprecate support for embedded credentials in subresource requests
+
+Hard-coding credentials into subresource requests is problematic from a
+security perspective, as it's allowed hackers to brute-force credentials in
+the past. These dangers are exacerbated for credentialed subresource requests
+that reach into internal IP ranges (your routers, etc.). Given the low usage,
+closing this (small) security hole seems quite reasonable.
+
+Developers can embed resources that do not require basic/digest auth, relying
+instead on cookies and other session management mechanisms.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/lx-U_JR2BF0/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5669008342777856) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=435547)
+
+## Deprecate FileReaderSync in service workers
+
+The [Service Worker spec](https://www.w3.org/TR/service-workers/)
+has always had the (non-normative) note that "any
+type of synchronous requests must not be initiated inside of a service
+worker", to avoid blocking the service worker. Blocking the service worker
+would block all network requests from controlled pages. Unfortunately, the
+`FileReaderSync` API has long been available in service workers. 
+
+Currently only Firefox and Chrome expose `FileReaderSync` in service workers.
+There's agreement from Firefox in the [spec discussion](https://github.com/w3c/ServiceWorker/issues/735)
+that this should be fixed. Removal is anticipated in Chrome 59.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cjWtqRD6iw8/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5739144722513920) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688586)
+
 ## Deprecate and remove legacy caller for HTMLEmbedElement and HTMLObjectElement
 
 That an interface has a legacy caller means that an instance can be called as a
@@ -27,7 +59,7 @@ expected in Chrome 58, calling will throw and exception.
 
 This change brings Chrome in line with recent spec changes. The legacy behavior
 is not supported in Edge or Safari, and it is being
-[removed from Firfox](https://bugzilla.mozilla.org/show_bug.cgi?id=909656).
+[removed from Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=909656).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/AiDZ7ru9mGg/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5715026367217664) &#124;

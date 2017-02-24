@@ -49,7 +49,7 @@ responding using the network…
     height: 38px;
     display: flex;
   }
-  .group > div {
+  .group div {
     display: flex;
     align-items: center;
     font: normal 1.2rem/1 sans-serif;
@@ -81,7 +81,7 @@ We're continuing to reduce the boot-up time by [using code-caching in
 V8](http://v8project.blogspot.com/2015/07/code-caching.html), by [skipping
 service workers that don't have a fetch
 event](https://bugs.chromium.org/p/chromium/issues/detail?id=605844), by
-[launching serivce workers
+[launching service workers
 speculatively](https://codereview.chromium.org/2045153003), and other
 optimisations. However, bootup time will always be greater than zero.
 
@@ -94,7 +94,7 @@ way to perform navigation requests in parallel:
     height: 38px;
     display: flex;
   }
-  .group > div {
+  .group div {
     display: flex;
     align-items: center;
     font: normal 1.2rem/1 sans-serif;

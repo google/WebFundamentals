@@ -6,10 +6,10 @@ To keep the platform healthy, we sometimes remove APIs from the Web Platform
 which have run their course. There can be many reasons why we would remove an
 API, such as: 
 
-* they are superseded by newer APIs
-* they are updated to reflect changes to specifications to bring alignment and
-  consistency with other browsers
-* they are early experiments that never came to fruition in other browsers
+* They are superseded by newer APIs.
+* They are updated to reflect changes to specifications to bring alignment and
+  consistency with other browsers.
+* They are early experiments that never came to fruition in other browsers
   and thus can increase the burden of support for web developers.
 
 Some of these changes will have an effect on a very small number of sites. To
@@ -30,6 +30,7 @@ essentially:
 
 You can find a list of all deprecated features on chromestatus.com using the 
 [deprecated filter](https://www.chromestatus.com/features#deprecated){: .external }
-and removed features by applying the [removed filter](https://www.chromestatus.com/features#removed){: .external }.
+and removed features by applying the
+[removed filter](https://www.chromestatus.com/features#removed){: .external }.
 We will also try to summarize some of the changes, reasoning, and migration
 paths in these posts.

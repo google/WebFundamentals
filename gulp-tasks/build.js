@@ -127,13 +127,6 @@ gulp.task('build:updates', function() {
   wfTemplateHelper.generateLatestWidget(files, options);
 });
 
-gulp.task('build:codelabs', function() {
-  var startPath = path.join(GLOBAL.WF.src.content, 'fundamentals/getting-started/codelabs');
-  wfCodeLabHelper.migrate(startPath);
-});
-
-gulp.task('build:sitelevel', function() {});
-
 gulp.task('build', function(cb) {
   runSequence(
     [
@@ -145,5 +138,5 @@ gulp.task('build', function(cb) {
       'build:tools',
       'build:updates'
     ],
-    'build:sitelevel', cb);
+    cb);
 });

@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2017-02-07T11:41:09Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -36,31 +37,33 @@ A Progressive Web App is:
 
 This codelab will walk you through creating your own Progressive Web App, including the design considerations, as well as implementation details to ensure that your app meets the key principles of a Progressive Web App.
 
-<aside markdown="1" class="special">
-
-Looking for more? Check out the talks from the  [2016 Progressive Web App Summit](https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb).
+<aside markdown="1" class="key-point">
+<p>Looking for more? Check out the talks from the  <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb">2016 Progressive Web App Summit</a>.</p>
 </aside>
+
 
 ### What are we going to be building?
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">
-
-In this codelab, you're going to build a Weather web app using Progressive Web App techniques. Let's consider the properties of a Progressive Web App:
-
-* __Progressive__ - we'll use progressive enhancement throughout.
-* __Responsive__ - we'll ensure it fits any form factor.
-* __Connectivity independent__ - we'll cache the app shell with service workers.
-* __App-like__ - we'll use app-style interactions to add cities and refresh the data.
-* __Fresh__ - we'll cache the latest data with service workers.
-* __Safe__ - we'll deploy the app to a host that support HTTPS.
-* __Discoverable and installable__ - we'll include a manifest making it easy for search engines to find our app.
-* __Linkable__ - it's the web!
+<p>In this codelab, you're going to build a Weather web app using Progressive Web App techniques. Let's consider the properties of a Progressive Web App:</p>
+<ul>
+<li><strong>Progressive</strong> - we'll use progressive enhancement throughout.</li>
+<li><strong>Responsive</strong> - we'll ensure it fits any form factor.</li>
+<li><strong>Connectivity independent</strong> - we'll cache the app shell with service workers.</li>
+<li><strong>App-like</strong> - we'll use app-style interactions to add cities and refresh the data.</li>
+<li><strong>Fresh</strong> - we'll cache the latest data with service workers.</li>
+<li><strong>Safe</strong> - we'll deploy the app to a host that support HTTPS.</li>
+<li><strong>Discoverable and installable</strong> - we'll include a manifest making it easy for search engines to find our app.</li>
+<li>
+<p><strong>Linkable</strong> - it's the web!</p>
 </td><td colspan="1" rowspan="1">
-
-![166c3b4982e4a0ad.png](img/166c3b4982e4a0ad.png)
+</li>
+</ul>
+<p><img src="img/166c3b4982e4a0ad.png" alt="166c3b4982e4a0ad.png"></p>
 </td>
 </tr></table>
+
 
 ### What you'll learn
 
@@ -104,10 +107,10 @@ After installing the Web Server for Chrome app, click on the Apps shortcut on th
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
-<aside markdown="1" class="special">
-
-More help:  [Add and open Chrome apps](https://support.google.com/chrome_webstore/answer/3060053?hl=en)
+<aside markdown="1" class="key-point">
+<p>More help:  <a href="https://support.google.com/chrome_webstore/answer/3060053?hl=en">Add and open Chrome apps</a></p>
 </aside>
+
 
 In the ensuing window, click on the Web Server icon: 
 
@@ -133,10 +136,10 @@ Now visit your work site in your web browser (by clicking on the highlighted Web
 
 Obviously, this app is not yet doing anything interesting - so far, it's just a minimal skeleton with a spinner we're using to verify your web server functionality. We'll add functionality and UI features in subsequent steps. 
 
-<aside markdown="1" class="special">
-
-From this point forward, all testing/verification (e.g. the__ Test It Out__ sections in subsequent steps) should be performed using this web server setup.
+<aside markdown="1" class="key-point">
+<p>From this point forward, all testing/verification (e.g. the<strong> Test It Out</strong> sections in subsequent steps) should be performed using this web server setup.</p>
 </aside>
+
 
 
 ## Architect your App Shell
@@ -172,17 +175,20 @@ We're going to create a Weather app as our first Progressive Web App. The key co
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">
-
-* Header with a title, and add/refresh buttons
-* Container for forecast cards
-* A forecast card template
-* A dialog box for adding new cities
-* A loading indicator
+<ul>
+<li>Header with a title, and add/refresh buttons</li>
+<li>Container for forecast cards</li>
+<li>A forecast card template</li>
+<li>A dialog box for adding new cities</li>
+<li>
+<p>A loading indicator</p>
 </td><td colspan="1" rowspan="1">
-
-![166c3b4982e4a0ad.png](img/166c3b4982e4a0ad.png)
+</li>
+</ul>
+<p><img src="img/166c3b4982e4a0ad.png" alt="166c3b4982e4a0ad.png"></p>
 </td>
 </tr></table>
+
 
 When designing a more complex app, content that isn't needed for the initial load can be requested later and then cached for future use. For example, we could defer the loading of the New City dialog until after we've rendered the first run experience and have some idle cycles available.
 
@@ -194,10 +200,10 @@ When designing a more complex app, content that isn't needed for the initial loa
 
 There are multiple ways to get started with any project, and we generally recommend using Web Starter Kit. But, in this case, to keep our project as simple as possible and concentrate on Progressive Web Apps, we've provided you with all of the resources you'll need.
 
-<aside markdown="1" class="special">
-
-__Learn more__ about  [Web Starter Kit](/web/tools/starter-kit/)
+<aside markdown="1" class="key-point">
+<p><strong>Learn more</strong> about  <a href="/web/tools/starter-kit/">Web Starter Kit</a></p>
 </aside>
+
 
 ### Create the HTML for the App Shell
 
@@ -255,10 +261,10 @@ Notice the loader is visible by default. This ensures that the user sees the loa
 
 To save time, we've also already created the stylesheet for you to use.
 
-<aside markdown="1" class="special">
-
-We've given you the markup and styles to save you some time and make sure you're starting on a solid foundation. In the next section, you'll have an opportunity to write your own code.
+<aside markdown="1" class="key-point">
+<p>We've given you the markup and styles to save you some time and make sure you're starting on a solid foundation. In the next section, you'll have an opportunity to write your own code.</p>
 </aside>
+
 
 ### Check out the key JavaScript app code
 
@@ -313,10 +319,10 @@ But, how do we know when to display this information, which may not be relevant 
 
 User preferences, like the list of cities a user has subscribed to, should be stored locally using IndexedDB or another fast storage mechanism. To simplify this code lab as much as possible, we've used  [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), which is not ideal for production apps because it is a blocking, synchronous storage mechanism that is potentially very slow on some devices.
 
-<aside markdown="1" class="special">
-
-__Extra Credit__: Replace `localStorage` implementation with  [idb](https://www.npmjs.com/package/idb), check out  [localForage](https://github.com/localForage/localForage) as a simple wrapper to idb.
+<aside markdown="1" class="key-point">
+<p><strong>Extra Credit</strong>: Replace <code>localStorage</code> implementation with  <a href="https://www.npmjs.com/package/idb">idb</a>, check out  <a href="https://github.com/localForage/localForage">localForage</a> as a simple wrapper to idb.</p>
 </aside>
+
 
 First, let's add the code required to save user preferences. Find the following TODO comment in your code.
 
@@ -421,10 +427,10 @@ If you're unfamiliar with service workers, you can get a basic understanding by 
 
 Features provided via service workers should be considered a progressive enhancement, and added only if supported by the browser. For example, with service workers you can cache the app shell and data for your app, so that it's available even when the network isn't. When service workers aren't supported, the offline code isn't called, and the user gets a basic experience. Using feature detection to provide progressive enhancement has little overhead and it won't break in older browsers that don't support that feature.
 
-<aside markdown="1" class="special">
-
-__Remember__: Service worker functionality is only available on pages that are accessed via HTTPS (http://localhost and equivalents will also work, to facilitate testing). To learn about the rationale behind this restriction check out  [Prefer Secure Origins For Powerful New Features](http://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features) from the Chromium team.
+<aside markdown="1" class="key-point">
+<p><strong>Remember</strong>: Service worker functionality is only available on pages that are accessed via HTTPS (<a href="http://localhost">http://localhost</a> and equivalents will also work, to facilitate testing). To learn about the rationale behind this restriction check out  <a href="http://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features">Prefer Secure Origins For Powerful New Features</a> from the Chromium team.</p>
 </aside>
+
 
 ### Register the service worker if it's available
 
@@ -450,9 +456,9 @@ First, we need to check if the browser supports service workers, and if it does,
 When the service worker is registered, an install event is triggered the first time the user visits the page. In this event handler, we will cache all the assets that are needed for the application.
 
 <aside markdown="1" class="warning">
-
-The code below must NOT be used in production, it covers only the most basic use cases and it's easy to get yourself into a state where your app shell will never update. Be sure to review the section below that discusses the pitfalls of this implementation and how to avoid them.
+<p>The code below must NOT be used in production, it covers only the most basic use cases and it's easy to get yourself into a state where your app shell will never update. Be sure to review the section below that discusses the pitfalls of this implementation and how to avoid them.</p>
 </aside>
+
 
 When the service worker is fired, it should open the  [`caches`](https://developer.mozilla.org/en-US/docs/Web/API/Cache) object and populate it with the assets necessary to load the App Shell. Create a file called `service-worker.js` in your application root folder (which should be `your-first-pwapp-master/work` directory). This file must live in the application root because the scope for service workers is defined by the directory in which the file resides. Add this code to your new `service-worker.js` file:
 
@@ -505,7 +511,7 @@ Basically, the old service worker continues to control the page as long as there
 
 Enable the __update on reload __checkbox now and reload the page to confirm that the new service worker gets activated.
 
-__Note:__ You may see an error in the Service Worker pane of the Application panel similar to the one below, it's __safe__ to ignore this error.
+Note: You may see an error in the Service Worker pane of the Application panel similar to the one below, it's __safe__ to ignore this error.
 
 ![b1728ef310c444f5.png](img/b1728ef310c444f5.png)
 
@@ -534,10 +540,10 @@ This code ensures that your service worker updates its cache whenever any of the
 
 The last statement fixes a corner-case which you can read about in the (optional) information box below.
 
-<aside markdown="1" class="special">
-
-When the app is complete, `self.clients.claim()` fixes a corner case in which the app wasn't returning the latest data. You can reproduce the corner case by commenting out the line below and then doing the following steps: 1) load app for first time so that the initial New York City data is shown 2) press the refresh button on the app 3) go offline 4) reload the app. You expect to see the newer NYC data, but you actually see the initial data. This happens because the service worker is not yet activated. `self.clients.claim()` essentially lets you activate the service worker faster.
+<aside markdown="1" class="key-point">
+<p>When the app is complete, <code>self.clients.claim()</code> fixes a corner case in which the app wasn't returning the latest data. You can reproduce the corner case by commenting out the line below and then doing the following steps: 1) load app for first time so that the initial New York City data is shown 2) press the refresh button on the app 3) go offline 4) reload the app. You expect to see the newer NYC data, but you actually see the initial data. This happens because the service worker is not yet activated. <code>self.clients.claim()</code> essentially lets you activate the service worker faster.</p>
 </aside>
+
 
 Finally, let's update the list of files required for the app shell. In the array, we need to include all of the files our app needs, including images, JavaScript, stylesheets, etc. Near the top of your `service-worker.js` file, replace `var filesToCache = [];` with the code below:
 
@@ -563,10 +569,10 @@ var filesToCache = [
 ];
 ```
 
-<aside markdown="1" class="special">
-
-Be sure to include all permutations of file names, for example our app is served from `index.html`, but it may also be requested as `/` since the server sends `index.html` when a root folder is requested. You could deal with this in the `fetch` method, but it would require special casing which may become complex.
+<aside markdown="1" class="key-point">
+<p>Be sure to include all permutations of file names, for example our app is served from <code>index.html</code>, but it may also be requested as <code>/</code> since the server sends <code>index.html</code> when a root folder is requested. You could deal with this in the <code>fetch</code> method, but it would require special casing which may become complex.</p>
 </aside>
+
 
 Our app doesn't work offline quite yet. We've cached the app shell components, but we still need to load them from the local cache.
 
@@ -598,9 +604,9 @@ self.addEventListener('fetch', function(e) {
 Stepping from inside, out, `caches.match()` evaluates the web request that triggered the  [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) event, and checks to see if it's available in the cache. It then either responds with the cached version, or uses `fetch` to get a copy from the network. The `response` is passed back to the web page with `e.respondWith()`.
 
 <aside markdown="1" class="warning">
-
-If you're not seeing the `[ServiceWorker]` logging in the console, be sure you've changed the `cacheName` variable and that you're inspecting the right service worker by opening the Service Worker pane in the Applications panel and clicking __inspect__ on the running service worker. If that doesn't work, see the section on Tips for testing live service workers.
+<p>If you're not seeing the <code>[ServiceWorker]</code> logging in the console, be sure you've changed the <code>cacheName</code> variable and that you're inspecting the right service worker by opening the Service Worker pane in the Applications panel and clicking <strong>inspect</strong> on the running service worker. If that doesn't work, see the section on Tips for testing live service workers.</p>
 </aside>
+
 
 ### Test it out
 
@@ -926,9 +932,9 @@ This is the desktop equivalent of mobile's add to homescreen feature. If you can
 The second way to test is via Web Server for Chrome. With this approach, you expose your local development server (on your desktop or laptop) to other computers, and then you just access your progressive web app from a real mobile device.
 
 <aside markdown="1" class="warning">
-
-Opening up a port for remote access is handy for testing this step but may be blocked by your computer's firewall rules or network administrator. Opening ports for remote access is generally not a good thing to leave running on your computer. So, for security reasons, when you've completed testing this step, disable the `Accessible on local network` option and restart your web server.
+<p>Opening up a port for remote access is handy for testing this step but may be blocked by your computer's firewall rules or network administrator. Opening ports for remote access is generally not a good thing to leave running on your computer. So, for security reasons, when you've completed testing this step, disable the <code>Accessible on local network</code> option and restart your web server.</p>
 </aside>
+
 
 On Web Server for Chrome configuration dialog, select the `Accessible on local network` option:
 
@@ -962,10 +968,10 @@ See how small you can get the initial request with everything inlined.
 
 Further Reading:  [PageSpeed Insight Rules](/speed/docs/insights/rules)
 
-<aside markdown="1" class="special">
-
-This step requires you to have  [Node & NPM](https://docs.npmjs.com/getting-started/installing-node) installed on your system. If it's not, you can use any other hosting provider that supports HTTP__S__. We've used Firebase because it automatically redirects users from HTTP to HTTP__S__. If you use a different provider, be sure they're always redirects to HTTP__S__.
+<aside markdown="1" class="key-point">
+<p>This step requires you to have  <a href="https://docs.npmjs.com/getting-started/installing-node">Node &#x26; NPM</a> installed on your system. If it's not, you can use any other hosting provider that supports HTTP<strong>S</strong>. We've used Firebase because it automatically redirects users from HTTP to HTTP<strong>S</strong>. If you use a different provider, be sure they're always redirects to HTTP<strong>S</strong>.</p>
 </aside>
+
 
 ### Deploy to Firebase
 

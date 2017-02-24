@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to integrate a service worker into an existing application to make the application work offline.
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2016-11-09T18:31:19Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -63,10 +64,10 @@ Run the site from a local web server.  You can use any web server, but for the r
     $ cd app
     $ python -m SimpleHTTPServer 3000
 
-<aside markdown="1" class="special">
-
-This repository has one main folder __"app"__. This folder contains the static assets (HTML, CSS, and JavaScript) that you will use for this project.
+<aside markdown="1" class="key-point">
+<p>This repository has one main folder <strong>"app"</strong>. This folder contains the static assets (HTML, CSS, and JavaScript) that you will use for this project.</p>
 </aside>
+
 
 Open up the site in Chrome. You should see: ![9246b0abd8d860da.png](img/9246b0abd8d860da.png)
 
@@ -136,10 +137,10 @@ Now it's time to add offline support back into the app. This consists of two ste
 
 First, create a blank file called `sw.js` and place it in the `/app` folder. 
 
-<aside markdown="1" class="special">
-
-__The location of the service worker is important! __For security reasons, a service worker can only control the pages that are in its same directory or its subdirectories. This means that if you place the service worker file in a scripts directory it will only be able to interact with pages in the scripts directory or below.
+<aside markdown="1" class="key-point">
+<p><strong>The location of the service worker is important! </strong>For security reasons, a service worker can only control the pages that are in its same directory or its subdirectories. This means that if you place the service worker file in a scripts directory it will only be able to interact with pages in the scripts directory or below.</p>
 </aside>
+
 
 Now open `index.html` and add the following code to the bottom of `<body>`.
 
@@ -205,17 +206,20 @@ The first line adds the Cache polyfill. This polyfill is already included in the
 
 The next step is to program our service worker to return the intercept the requests to any of these resources and use the `caches` object to return the locally stored version of each resource.
 
-<aside markdown="1" class="special">
-
-#### Frequently Asked Questions
-
-* Where is the polyfill?
-*  [https://github.com/coonsta/cache-polyfill](https://github.com/coonsta/cache-polyfill) 
-* Why do I need to polyfill?
-* Currently Chrome and other browsers don't yet fully support the `addAll` method (__note:__ Chrome 46 will be compliant).
-* Why do you have ?homescreen=1
-* URLs with query string parameters are treated as individual URLs and need to be cached separately.
+<aside markdown="1" class="key-point">
+<h4>Frequently Asked Questions</h4>
+<ul>
+<li>Where is the polyfill?</li>
+<li><a href="https://github.com/coonsta/cache-polyfill">https://github.com/coonsta/cache-polyfill</a> </li>
+<li>Why do I need to polyfill?</li>
+<li>Currently Chrome and other browsers don't yet fully support the <code>addAll</code> method (<strong>note:</strong> Chrome 46 will be compliant).</li>
+<li>Why do you have ?homescreen=1</li>
+<li>
+<p>URLs with query string parameters are treated as individual URLs and need to be cached separately.</p>
 </aside>
+</li>
+</ul>
+
 
 
 ## Intercept the web page requests
@@ -230,12 +234,9 @@ Add the following code to the bottom of your `sw.js` to log the requests made fr
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="9">
-
-`self.addEventListener('fetch', function(event) {`
-
-` console.log(event.request.url);`
-
-`});`
+<p><code>self.addEventListener('fetch', function(event) {</code></p>
+<p><code>console.log(event.request.url);</code></p>
+<p><code>});</code></p>
 </td>
 </tr>
 <tr>
@@ -255,6 +256,7 @@ Add the following code to the bottom of your `sw.js` to log the requests made fr
 <tr>
 </tr></table>
 
+
 Let's test this out. __Heads up!__ You're about to see some more unexpected service worker behavior. 
 
 Open DevTools and go to the __Application__ panel. The __Offline __checkbox should be disabled. Press the `Esc` key to open the __Console __drawer at the bottom of your DevTools window. Your DevTools window should look similar to the following screenshot:
@@ -267,10 +269,10 @@ Reload your page now and look at the DevTools window again. For one, we're expec
 
 In the __Status __there's a new service worker that's waiting to activate. That must be the new service worker that includes the changes that we just made. So, for some reason, the old service worker that we installed (which was just a blank file) is still controlling the page. If you click on the `sw.js` link next to __Source __you can verify that the old service worker is still running. 
 
-<aside markdown="1" class="special">
-
-This behavior is by design. Check out  [Update a Service Worker](/web/fundamentals/primers/service-worker/update-a-service-worker?hl=en) to learn more about the service worker lifecycle.
+<aside markdown="1" class="key-point">
+<p>This behavior is by design. Check out  <a href="/web/fundamentals/primers/service-worker/update-a-service-worker?hl=en">Update a Service Worker</a> to learn more about the service worker lifecycle.</p>
 </aside>
+
 
 To fix this inconvenience, enable the __Update on reload__ checkbox.
 
@@ -290,22 +292,14 @@ Update your fetch event listener to match the code below.
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="9">
-
-`self.addEventListener('fetch', function(event) {`
-
-` console.log(event.request.url);`
-
-` event.respondWith(`
-
-`   caches.match(event.request).then(function(response) {`
-
-`     return response || fetch(event.request);`
-
-`   })`
-
-` );`
-
-`});`
+<p><code>self.addEventListener('fetch', function(event) {</code></p>
+<p><code>console.log(event.request.url);</code></p>
+<p><code>event.respondWith(</code></p>
+<p><code>caches.match(event.request).then(function(response) {</code></p>
+<p><code>return response || fetch(event.request);</code></p>
+<p><code>})</code></p>
+<p><code>);</code></p>
+<p><code>});</code></p>
 </td>
 </tr>
 <tr>
@@ -324,6 +318,7 @@ Update your fetch event listener to match the code below.
 </tr>
 <tr>
 </tr></table>
+
 
 The `event.respondWith()` method tells the browser to evaluate the result of the event in the future. `caches.match(event.request)` takes the current web request that triggered the fetch event and looks in the cache for a resource that matches. The match is performed by looking at the URL string. The `match` method returns a promise that resolves even if the file is not found in the cache. This means that you get a choice about what you do. In your simple case, when the file is not found, you simply want to `fetch` it from the network and return it to the browser.
 

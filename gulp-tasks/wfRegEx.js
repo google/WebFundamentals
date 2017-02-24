@@ -32,6 +32,7 @@ var RE_INCLUDE_FILE = /["|'](.*)["|']/;
 var RE_INCLUDES = /^{%\s?include ["|'](.*)["|']\s?%}/gm;
 
 var RE_MD_INCLUDE = /^{#\s?wf_md_include\s?#}/m;
+var RE_AUTO_GENERATED = /^{#\s?wf_auto_generated\s?#}/m;
 
 
 function getMatch(regEx, content, defaultResponse) {
@@ -73,4 +74,4 @@ exports.RE_MD_INCLUDE = RE_MD_INCLUDE;
 exports.RE_INCLUDES = RE_INCLUDES;
 exports.RE_INCLUDE_MD = RE_INCLUDE_MD;
 exports.RE_INCLUDE_FILE = RE_INCLUDE_FILE;
-
+exports.RE_AUTO_GENERATED = RE_AUTO_GENERATED;
