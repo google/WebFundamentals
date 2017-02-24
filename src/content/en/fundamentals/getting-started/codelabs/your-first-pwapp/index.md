@@ -72,7 +72,7 @@ This codelab will walk you through creating your own Progressive Web App, includ
 * [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb), or your own web server of choice
 * [The sample code](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 * A text editor
-* Basic knowledge of HTML, CSS, JavaScript, and Chrome DevTools
+* Basic knowledge of HTML, CSS, JavaScript, and [Chrome DevTools](https://developer.chrome.com/devtools)
 
 
 ## Getting set up
