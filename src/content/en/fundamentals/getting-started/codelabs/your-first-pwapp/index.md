@@ -33,7 +33,7 @@ A Progressive Web App is:
 * __Discoverable__ - Is identifiable as an "application" thanks to [W3C manifest](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android)
   and [service worker registration](/web/fundamentals/instant-and-offline/service-worker/registration) scope, allowing search engines to find it.
 * __Re-engageable__ - Makes re-engagement easy through features like push notifications.
-* __Installable__ - Allows users to add apps they find most useful on their home screen without the hassle of an app store.
+* __Installable__ - Allows users to add apps they find most useful to their home screen without the hassle of an app store.
 * __Linkable__ - Easily share the application via URL, does not require complex installation.
 
 This codelab will walk you through creating your own Progressive Web App, including the design considerations, as well as implementation details, to ensure that your app meets the above key principles of a Progressive Web App.
