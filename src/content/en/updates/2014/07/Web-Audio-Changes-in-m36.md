@@ -4,15 +4,15 @@ description: Description of Web Audio standards cleanup work in m36
 
 {# wf_updated_on: 2014-07-24 #}
 {# wf_published_on: 2014-07-24 #}
-{# wf_tags: news,webaudio #}
+{# wf_tags: deprecations,removals,news,webaudio #}
 
 # Web Audio Changes in m36 {: .page-title }
 
 {% include "web/_shared/contributors/chriswilson.html" %}
 
 
-Web Audio changes
---------------------
+## Web Audio changes
+
 
 At Google, we love standards.  We’re on a mission to build out the standards-defined Web platform.  One of the small warts on that for some time has been the webkit- prefixed implementation of the Web Audio API (notably the webkitAudioContext object), and some of the deprecated bits of Web Audio that we’ve continued to support.
 
@@ -26,8 +26,8 @@ The rest of this update provides a guide to fixing things that may be broken in 
 
 If you just want to get up and running, you may want to take a look at a [monkey-patch](http://en.wikipedia.org/wiki/Monkey_patch) [library I wrote for applications that were written to the old Web Audio code](https://github.com/cwilso/webkitAudioContext-MonkeyPatch) - this can help you get up and running in a minimum amount of time, as it will alias the objects and methods appropriately.  Indeed, the patches the library lists is a good guide to the things that have changed.
 
-First and foremost:
-------------------
+## First and foremost:
+
 Any references to `window.webkitAudioContext` should be made to `window.AudioContext` instead.  Frequently, this has been fixed with a simple:
 
 

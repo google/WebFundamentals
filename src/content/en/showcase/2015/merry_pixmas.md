@@ -5,6 +5,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_updated_on: 2015-03-27 #}
 {# wf_author: pbakaus #}
 {# wf_featured_image: /web/showcase/2015/images/merry_pixmas/card.jpg #}
+{# wf_tags: spotlight,css,3d #}
 
 # Merry Pixmas {: .page-title }
 

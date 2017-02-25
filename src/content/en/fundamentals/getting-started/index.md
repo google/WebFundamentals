@@ -94,7 +94,7 @@ to know to get started quickly and easily.
     JavaScript Promises
   </a>
   <p>
-    So much in web development is asynchornous, yet JavaScript only has one
+    So much in web development is asynchronous, yet JavaScript only has one
     thread. Callback functions were once the standard. Increasingly, promises
     are taking their place.
   </p>
@@ -141,6 +141,18 @@ to know to get started quickly and easily.
     Google and AnswerLab undertook a study examining how users interact with a
     diverse set of mobile sites. The goal was to answer the question,
     'What makes a good mobile site?'
+  </p>
+</div>
+
+<div style="clear:both"></div>
+
+<div class="attempt-left">
+  <a href="primers/media-source-extensions">
+    Media Source Extensions
+  </a>
+  <p>
+    Media Source Extensions (MSE) is a JavaScript API that lets you build
+    streams for playback from segments of audio or video.
   </p>
 </div>
 

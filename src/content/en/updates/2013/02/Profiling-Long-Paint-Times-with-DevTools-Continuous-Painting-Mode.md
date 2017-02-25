@@ -184,7 +184,7 @@ general.
 Eberhard Gräther is student of <a href="http://multimediatechnology.at/in-english/">MultiMediaTechnology</a> at <a href="http://www.fh-salzburg.ac.at/en/">Salzburg University of Applied Sciences</a>. He interned in the Chrome GPU team from 10/2012 to 03/2013 where he worked on rendering profiling tools. Follow him at  <a href="https://twitter.com/egraether">@egraether</a> or visit <a href="http://egraether.com">his site</a> to find graphics demos and web games he has built.
 </aside>
 
-<h3>Live Demo</h3>
+### Live Demo
 
 <p>
 Click below for a demo where Paul Irish uses continuous painting to identify a uniquely expensive paint operation.</p>

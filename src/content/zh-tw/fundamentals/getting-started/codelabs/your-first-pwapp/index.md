@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Progressive Web Apps 是結合了 web 和 原生應用中最好功能的一種體驗。在這個指南的引導下，你將會建立你自己的 Progressive Web Apps。你也會學到建立 Progressive Web App 的基礎，包括 app shell 模式, 如何使用 service worker 來緩存 App Shell 和你應用中的關鍵數據等等。
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2016-09-08 #}
 {# wf_published_on: 2000-01-01 #}
 

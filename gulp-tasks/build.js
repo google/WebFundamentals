@@ -38,11 +38,13 @@ gulp.task('build:showcase', function() {
     outputPath: baseOutputPath
   };
   var startPath = path.join(GLOBAL.WF.src.content, 'showcase');
-  var patterns = ['**/*.md', '!**/index.md'];
+  var patterns = ['**/*.md', '!tags/*', '!**/index.md'];
   var files = wfHelper.getFileList(startPath, patterns);
-  files.sort(wfHelper.publishedComparator);
+  files.sort(wfHelper.updatedComparator);
   wfTemplateHelper.generateIndex(files, options);
   wfTemplateHelper.generateFeeds(files, options);
+  options.outputPath = path.join(baseOutputPath, 'tags');
+  wfTemplateHelper.generateTagPages(files, options);
   var filesByYear = wfHelper.splitByYear(files);
   Object.keys(filesByYear).forEach(function(year) {
     options.year = year;
@@ -118,14 +120,12 @@ gulp.task('build:updates', function() {
     options.title = year;
     wfTemplateHelper.generateTOCbyMonth(filesByYear[year], options);
   });
+  options = {
+    outputPath: GLOBAL.WF.src.content,
+    articlesToShow: 2
+  }
+  wfTemplateHelper.generateLatestWidget(files, options);
 });
-
-gulp.task('build:codelabs', function() {
-  var startPath = path.join(GLOBAL.WF.src.content, 'fundamentals/getting-started/codelabs');
-  wfCodeLabHelper.migrate(startPath);
-});
-
-gulp.task('build:sitelevel', function() {});
 
 gulp.task('build', function(cb) {
   runSequence(
@@ -138,5 +138,5 @@ gulp.task('build', function(cb) {
       'build:tools',
       'build:updates'
     ],
-    'build:sitelevel', cb);
+    cb);
 });

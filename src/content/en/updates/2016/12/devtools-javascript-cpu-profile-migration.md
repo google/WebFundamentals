@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Now that "Record JavaScript CPU Profile" has been removed from Chrome 57, here's how to profile your JS in DevTools.
+description: "Record JavaScript CPU Profile" has been changed in Chrome 58.
 
-{# wf_updated_on: 2016-12-15 #}
+{# wf_updated_on: 2017-02-07 #}
 {# wf_published_on: 2016-12-15 #}
-{# wf_tags: devtools, chrome57 #}
+{# wf_tags: devtools, chrome58 #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet:  Now that "Record JavaScript CPU Profile" has been removed from Chrome 57, here's how to profile your JS in DevTools. #} 
+{# wf_featured_snippet:  "Record JavaScript CPU Profile" has been changed in Chrome 58. #} 
 
 <style>
 .devtools-inline {
@@ -18,24 +18,33 @@ figcaption {
 }
 </style>
 
-# Chrome DevTools: JavaScript CPU Profiling in Chrome 57 {: .page-title }
+# Chrome DevTools: JavaScript CPU Profiling in Chrome 58 {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-In Chrome 57, which is currently Canary, the Timeline panel has been renamed
+In Chrome 58, which is currently Canary, the Timeline panel has been renamed
 to the Performance panel, the Profiles panel has been
 renamed to the Memory panel, and the Record JavaScript CPU Profile feature
-on the Profiles panel has been removed.
+on the Profiles panel has been moved to a more hidden location.
 
-Have no fear, you can still profile your JavaScript from the Performance
-panel. In fact, that's why the Record JavaScript CPU Profile feature was
-removed. The workflows and layouts are a little different, but the
-Performance panel provides all of the same information as the old workflow,
-and then some.
+The long-term goal is to remove the old JavaScript CPU Profiler, and
+get everyone working with the new workflow.
 
 This little migration guide shows you how to record a JS profile in the 
 Performance panel, and how the Performance panel's UI maps to the old
 workflow that you're used to.
+
+## Accessing the old JavaScript CPU profiler {: #old }
+
+If you prefer the old "Record JavaScipt CPU Profile" workflow that used to
+be available on the Profiles panel, you can still access it like so:
+
+1. Open the DevTools [main menu](/web/tools/chrome-devtools/ui#main-menu).
+1. Select **More tools** > **JavaScript Profiler**. The old profiler opens
+   in a new panel called **JavaScript Profiler**.
+
+Warning: The long-term goal is to migrate everyone to the new workflow.
+This workflow may be removed in future DevTools versions.
 
 ## How to record a JS profile {: #record }
 
@@ -132,3 +141,5 @@ Ping [@ChromeDevTools](https://twitter.com/chromedevtools) on Twitter or
 have any other questions about this article.
 
 [GH]: https://github.com/google/WebFundamentals/issues/new?title=[DevTools%20CPU%20Profile%20Migration]
+
+{% include "comment-widget.html" %}

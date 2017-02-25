@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab you'll how to add push notifications to your web app.
 
-{# wf_updated_on: 2016-11-21T15:42:20Z #}
+{# wf_auto_generated #}
+{# wf_updated_on: 2017-01-31T18:54:09Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -44,7 +45,7 @@ Push messaging provides a simple and effective way to re-engage with your users 
 
 You can get the sample code for this code by either downloading the zip here:
 
-[Link](https://github.com/googlechrome/push-notifications/archive/master.zip)
+[Download source code](https://github.com/googlechrome/push-notifications/archive/master.zip)
 
 or by cloning this git repo:
 
@@ -56,7 +57,7 @@ If you downloaded the source as a zip, unpacking it should give you a root folde
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
+[Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
 
@@ -84,7 +85,7 @@ Now visit your site in your web browser (by clicking on the highlighted Web Serv
 
 ![49b343a07e2c92d.png](img/49b343a07e2c92d.png)
 
-### Always update the service worker
+### Always update the s__ervice worker__
 
 During development it's helpful to ensure your service worker is always up to date and has the latest changes.
 
@@ -270,7 +271,7 @@ function subscribeUser() {
     applicationServerKey: applicationServerKey
   })
   .then(function(subscription) {
-    console.log('User is subscribed:', subscription);
+    console.log('User is subscribed.');
 
     updateSubscriptionOnServer(subscription);
 
@@ -314,7 +315,7 @@ swRegistration.pushManager.subscribe({
   applicationServerKey: applicationServerKey
 })
 .then(function(subscription) {
-  console.log('User is subscribed:', subscription);
+  console.log('User is subscribed.');
 
   updateSubscriptionOnServer(subscription);
 
@@ -356,9 +357,9 @@ If you go back to your web app and try clicking the button you should see a perm
 
 ![5b8a7e9905f2237b.png](img/5b8a7e9905f2237b.png)
 
-If you grant the permission you should see the console print `User is subscribed:` with the `PushSubscription`, the button's text will change to ‘Disable Push Messaging'  and you'll be able to view the subscription as JSON at the bottom of the page.
+If you grant the permission you should see the console print "User is subscribed.", the button's text will change to ‘Disable Push Messaging'  and you'll be able to view the subscription as JSON at the bottom of the page.
 
-![bfdc9f92e001934a.png](img/bfdc9f92e001934a.png)
+![55a8185dcec3a71a.png](img/55a8185dcec3a71a.png)
 
 
 ## Handle Permission Denied
@@ -633,7 +634,7 @@ Calling `unsubscribe()` returns a promise as it can take some time to complete, 
 
 You should be able to press the  *Enable Push Messaging*  /  *Disable Push Messaging*   in your web app and the logs will show the user being subscribed and unsubscribed.
 
-![32acb7ec17ef75a8.png](img/32acb7ec17ef75a8.png)
+![e9c3b85838d190cb.png](img/e9c3b85838d190cb.png)
 
 
 ## Finished

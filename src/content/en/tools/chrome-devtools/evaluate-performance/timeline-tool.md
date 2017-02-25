@@ -109,7 +109,7 @@ is most relevant to you, and automatically zooms to that portion.
   [Chrome user profile][new chrome profile] to ensure that your environment
   has no extensions.
 
-[nc]: /web/tools/chrome-devtools/profile/network-performance/network-conditions#network-conditions
+[nc]: /web/tools/chrome-devtools/network-performance/reference#network-conditions
 [incognito]: https://support.google.com/chrome/answer/95464
 [new chrome profile]: https://support.google.com/chrome/answer/142059
 

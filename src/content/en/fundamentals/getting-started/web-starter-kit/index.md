@@ -194,7 +194,7 @@ starts a server, and opens a browser for you. This **doesn’t have Live Reload 
 Browser Sync**, but it’s a reliable way of testing your site before deploying it.
 
 
-## Set up Web Starter Kit {: .page-title }
+## Set up Web Starter Kit
 
 
 Web Starter Kit relies on NodeJS, NPM, and Sass to work. Once these are installed, you'll have everything you need to start using Web Starter Kit in your projects.

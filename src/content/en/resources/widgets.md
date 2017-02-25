@@ -189,3 +189,50 @@ automatically maintain a 16:9 ratio.
 
 
 [common-links]: https://github.com/google/WebFundamentals/blob/next-version/src/content/en/_common-links.md
+
+
+## Inline Feedback {: #inline-feedback }
+
+Gain more feedback on your doc by asking your readers yes / no questions.
+
+### Example
+
+See question at bottom of [Get Started Debugging JS][inline feedback example].
+
+[inline feedback example]: /web/tools/chrome-devtools/javascript/#step-1
+
+### Usage
+
+1. Make a directory called `_feedback` near the doc that'll include the feedback.
+2. Copy `/src/content/en/tools/chrome-devtools/javascript/_feedback/1.html`
+   into your `_feedback` directory.
+3. Modify all of the variables to suit your question. All variables are
+   required.
+4. Include `_feedback/1.html` into your doc, like this:
+
+<pre class="prettyprint">
+&#123;% include "web/path/to/_feedback/1.html" %}
+</pre>
+
+Path must always start with relative reference to `web/`. This
+is just how the `include` tag works.
+
+Other stuff:
+
+* The widget is hard-coded (and styled) to expect a success /
+  fail scenario. It won't make sense in other contexts.
+* Can be used more than once on a doc!
+* Doesn't work on Web Fundamentals' local development
+  server, because that server is just an approximation of
+  DevSite's real capabilities. You'll see all of the variables
+  printed on the page.
+
+### Viewing data
+
+Note: only relevant to users who have access to Web Fundamentals'
+analytics data.
+
+See Google Analytics > Behavior > Events. When the user clicks "fail",
+a value of 0 is sent for this label. When user clicks "success", a value
+of 1 is sent. So, you can determine how much users are clicking
+"success" or "fail" based on a 0 to 1 scale.

@@ -25,6 +25,18 @@ landing_page:
         path: /web/tools/chrome-devtools/
         classname: button button-primary
 
+  - heading: Lighthouse
+    classname: devsite-landing-row-67 devsite-landing-row-no-image-background
+    items:
+    - description: >
+        Lighthouse is an open-source, automated tool for improving the quality
+        of your web apps. Run it as a Chrome Extension or from the command line.
+      image_path: /web/progressive-web-apps/images/pwa-lighthouse.png
+      buttons:
+      - label: Get Started
+        path: /web/tools/lighthouse/
+        classname: button button-primary
+
   - heading: Libraries
     items:
     - heading: Service Worker Libraries
@@ -46,7 +58,7 @@ landing_page:
         path: https://getmdl.io/
 
   - heading: Frameworks
-    classname: devsite-landing-row-no-image-background wf-small-logos
+    classname: devsite-landing-row-no-image-background
     items:
     - description: >
         The Polymer Project helps you deliver amazing user experiences by
@@ -73,15 +85,6 @@ landing_page:
   - heading: Other Tools
     classname: devsite-landing-row-no-image-background
     items:
-    - heading: Lighthouse
-      icon:
-        path: lighthouse/images/lighthouse-icon-128.png
-      description: >
-        Lighthouse is an open-source, automated tool for improving the quality
-        of your web apps. Run it as a Chrome Extension or from the command line.
-      buttons:
-      - label: Learn more
-        path: /web/tools/lighthouse/
     - heading: PageSpeed Module
       description: >
         The PageSpeed modules are open-source server modules that optimize

@@ -23,7 +23,7 @@ To deliver great performance you need to optimize delivery of each and every byt
 
 <img src="images/crp.png" class="attempt-right">
 
-Do you understanding what happens in the intermediate steps between receiving HTML, CSS, and JavaScript and the processing to turn them into rendered pixels?
+Do you understand what happens in the intermediate steps between receiving HTML, CSS, and JavaScript and the processing to turn them into rendered pixels?
 
 [Learn More](critical-rendering-path/)
 
@@ -43,7 +43,7 @@ To write performant sites and apps you need to understand how HTML, JavaScript a
 
 <img src="images/low.png" class="attempt-right">
 
-It's important to understand what your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help.
+It's important to understand what using your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help.
 
 [Learn More](poor-connectivity/)
 
@@ -73,7 +73,7 @@ This codelab will help you learn to identify and fix web app performance bottlen
 
 * [How to Look at Performance](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 * [Runtime Performance](/web/tools/chrome-devtools/rendering-tools/)
-* [Page Load Performance](/web/tools/chrome-devtools/network-performance/resource-loading)
+* [Get Started with Analyzing Network Performance](/web/tools/chrome-devtools/network-performance)
 
 
 ### Udacity Courses

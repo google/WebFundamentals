@@ -439,7 +439,7 @@ turn up; when you're satisfied with its effect, start enforcing the new policy.
 
 CSP 1 is quite usable in Chrome, Safari, and Firefox, but has very limited
 support in IE 10. You can <a href="http://caniuse.com/#feat=contentsecuritypolicy">
-view specifics at canisue.com</a>. CSP Level 2 has been available in Chrome since
+view specifics at caniuse.com</a>. CSP Level 2 has been available in Chrome since
 version 40. Massive sites like Twitter and Facebook have deployed the header
 (<a href="https://blog.twitter.com/2011/improving-browser-security-with-csp">Twitter's
 case study</a> is worth a read), and the standard is very much ready

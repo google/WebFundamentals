@@ -15,7 +15,10 @@ var wfTemplateHelper = require('./wfTemplateHelper');
 function buildFeeds(buildType, callback) {
   var apiKey;
   try {
-    apiKey = fs.readFileSync('./src/data/youtubeAPIKey.txt', 'utf8');
+    apiKey = process.env.YOUTUBE_API_KEY;
+    if (!apiKey) {
+      apiKey = fs.readFileSync('./src/data/youtubeAPIKey.txt', 'utf8');
+    }
   } catch (ex) {
     gutil.log(' ', 'YouTube feed build skipped, youtubeAPIKey.txt not found.');
     if (buildType === 'production') {
@@ -67,7 +70,6 @@ function buildFeeds(buildType, callback) {
         };
         articles.push(result);
         var shortDesc = video.snippet.description.replace(/\n/g, '<br>');
-        // shortDesc = shortDesc.
         if (shortDesc.length > 256) {
           shortDesc = shortDesc.substring(0, 254) + '...';
         }
@@ -78,6 +80,13 @@ function buildFeeds(buildType, callback) {
       };
       var template = path.join(GLOBAL.WF.src.templates, 'shows', 'index.md');
       var outputFile = path.join(GLOBAL.WF.src.content, 'shows', 'index.md');
+      wfTemplateHelper.renderTemplate(template, context, outputFile);
+
+      var context = {
+        video: response.items[0]
+      };
+      template = path.join(GLOBAL.WF.src.templates, 'shows', 'latest.html');
+      outputFile = path.join(GLOBAL.WF.src.content, '_shared', 'latest_show.html');
       wfTemplateHelper.renderTemplate(template, context, outputFile);
 
       context = {

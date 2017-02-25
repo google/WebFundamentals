@@ -17,3 +17,9 @@ h2.wf-header-title {
 article.hentry:first-of-type {
   margin-top: 0;
 }
+
+a.wf-small-link {
+ display:block;
+ margin:0 4px;
+ padding:2px 8px;
+}

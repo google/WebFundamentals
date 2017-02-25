@@ -5,14 +5,28 @@ toc:
       path: /web/tools/lighthouse/
     - title: Audit References
       section:
+      - title: Background and Foreground Colors Have Sufficient Contrast Ratio
+        path: /web/tools/lighthouse/audits/contrast-ratio
       - title: Cache Contains start_url From Manifest
         path: /web/tools/lighthouse/audits/cache-contains-start_url
       - title: Content Sized Correctly for Viewport
         path: /web/tools/lighthouse/audits/content-sized-correctly-for-viewport
       - title: Critical Request Chains
         path: /web/tools/lighthouse/audits/critical-request-chains
+      - title: Element ARIA Attributes Are Allowed For This Role
+        path: /web/tools/lighthouse/audits/aria-allowed-attributes
+      - title: Element ARIA Attributes Are Valid
+        path: /web/tools/lighthouse/audits/valid-aria-attributes
+      - title: Element ARIA Attributes Have Valid Values
+        path: /web/tools/lighthouse/audits/valid-aria-values
+      - title: Elements With ARIA Roles Have Required Attributes
+        path: /web/tools/lighthouse/audits/required-aria-attributes
       - title: Estimated Input Latency
         path: /web/tools/lighthouse/audits/estimated-input-latency
+      - title: Every Form Element Has A Label
+        path: /web/tools/lighthouse/audits/form-labels
+      - title: Every Image Has An Alt Attribute
+        path: /web/tools/lighthouse/audits/alt-attribute
       - title: First Meaningful Paint
         path: /web/tools/lighthouse/audits/first-meaningful-paint
       - title: Has a Registered Service Worker
@@ -37,12 +51,16 @@ toc:
         path: /web/tools/lighthouse/audits/manifest-has-display-set
       - title: Manifest's Short Name Won't Be Truncated
         path: /web/tools/lighthouse/audits/manifest-short_name-is-not-truncated
+      - title: No Element Has A Tabindex Attribute Greater Than Zero
+        path: /web/tools/lighthouse/audits/tabindex
       - title: Page Contains Some Content When Its Scripts Are Not Available
         path: /web/tools/lighthouse/audits/no-js
       - title: Page Does Not Automatically Request Geolocation On Page Load
         path: /web/tools/lighthouse/audits/geolocation-on-load
       - title: Page Does Not Automatically Request Notfication Permissions On Page Load
         path: /web/tools/lighthouse/audits/notifications-on-load
+      - title: Site Does Not Use Application Cache
+        path: /web/tools/lighthouse/audits/appcache
       - title: Site Does Not Use console.time()
         path: /web/tools/lighthouse/audits/console-time
       - title: Site Does Not Use Resources That Delay First Paint

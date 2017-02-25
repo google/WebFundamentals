@@ -12,6 +12,7 @@ var marked = require('marked');
 var mkdirp = require('mkdirp');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
+var wfRegEx = require('./wfRegEx');
 var Handlebars = require('handlebars');
 require('handlebars-helpers')();
 
@@ -47,25 +48,23 @@ function getFullFeedEntries(articles) {
     var content = fs.readFileSync(article.filePath, 'utf8');
     content = content.replace(/{#.*#}/g, '');
     content = content.replace(/{%.*%}/g, '');
-    content = content.replace(/book_path: .*\n/, '');
-    content = content.replace(/project_path: .*\n/, '');
-    content = content.replace(/description: .*\n/, '');
+    content = content.replace(wfRegEx.RE_BOOK_PATH, '');
+    content = content.replace(wfRegEx.RE_PROJECT_PATH, '');
+    content = content.replace(wfRegEx.RE_DESCRIPTION, '');
     content = content.replace(/{:.*}/g, '');
     article.content = marked(content);
     if (article.authors && article.authors[0]) {
       var author = contributors[article.authors[0]];
-      var atomAuthorName = '';
-      var rssAuthorName = '';
-      if (author.name.given) {
-        rssAuthorName += author.name.given + ' ';
-        atomAuthorName += author.name.given + ' ';
+      if (author) {
+        var authorName = '';
+        if (author.name.given) {
+          authorName += author.name.given + ' ';
+        }
+        if (author.name.family) {
+          authorName += author.name.family;
+        }
+        article.feedAuthor = authorName.trim();
       }
-      if (author.name.family) {
-        rssAuthorName += author.name.family;
-        atomAuthorName += author.name.family + ' ';
-      }
-      article.rssAuthor = 'not@public.com' + ' (' + rssAuthorName.trim() + ')';
-      article.atomAuthor = atomAuthorName.trim();
     }
     var rssPubDate = moment(article.datePublished);
     article.rssPubDate = rssPubDate.format('DD MMM YYYY HH:mm:ss [GMT]');
@@ -169,8 +168,18 @@ function generateIndex(files, options) {
   renderTemplate(template, context, outputFile);
 }
 
+function generateLatestWidget(files, options) {
+  gutil.log(' ', 'Generating latest updates widget...');
+  var context = {
+    articles: files.splice(0, options.articlesToShow)
+  };
+  var template = path.join(GLOBAL.WF.src.templates, 'latest_articles.html');
+  var outputFile = path.join(options.outputPath, '_shared', 'latest_articles.html');
+  renderTemplate(template, context, outputFile);
+}
+
 function generateTagPages(files, options) {
-  gutil.log(' ', 'Generating tag pages...');
+  gutil.log(' ', 'Generating tag pages for ' + options.section + '...');
   var allTags = {};
   files.forEach(function(file) {
     var tags = file.tags;
@@ -190,15 +199,16 @@ function generateTagPages(files, options) {
     tags: Object.keys(allTags).sort(),
     section: options.section
   };
-  var tmpl = path.join(GLOBAL.WF.src.templates, 'updates', 'tag-index.md');
+  var tmpl = path.join(GLOBAL.WF.src.templates, 'tags', 'tag-index.md');
   var outputFile = path.join(options.outputPath, 'index.md');
   renderTemplate(tmpl, context, outputFile);
-  tmpl = path.join(GLOBAL.WF.src.templates, 'updates' ,'tag_toc.yaml');
+  tmpl = path.join(GLOBAL.WF.src.templates, 'tags' ,'tag_toc.yaml');
   outputFile = path.join(options.outputPath, '_toc.yaml');
   renderTemplate(tmpl, context, outputFile);
   Object.keys(allTags).forEach(function(key) {
+    var name = options.section.replace(/(\w)(\w+[^s])(s|S)?\b/, (_, a, b) => a.toUpperCase() + b + 's');
     var opts = {
-      title: 'All Updates tagged: ' + key + '',
+      title: 'All ' + name + ' tagged: ' + key + '',
       section: options.section,
       outputFile: path.join(options.outputPath, key + '.md')
     };
@@ -206,6 +216,7 @@ function generateTagPages(files, options) {
   });
 }
 
+exports.generateLatestWidget = generateLatestWidget;
 exports.generateIndex = generateIndex;
 exports.generateFeeds = generateFeeds;
 exports.generatePodcastFeed = generatePodcastFeed;

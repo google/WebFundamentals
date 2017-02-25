@@ -428,7 +428,7 @@ log that I added to ease the development.
 Web Bluetooth makes it easy to communicate with Bluetooth Low Energy
 devices, so let's look at a simplified version of my connection code.
 If you don't know how promises work, check out
-[this resource](/web/fundamentals/primers/promises)
+[this resource](/web/fundamentals/getting-started/primers/service-workers)
 before reading further.
 
 Connecting to a Bluetooth device involves a chain of promises.

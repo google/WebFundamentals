@@ -297,7 +297,7 @@ Google has released a [limited polyfill for Proxy](https://github.com/GoogleChro
 * [ES6 Proxies and Reflect on TagTree](http://tagtree.tv/es6-proxies)
 * [MDN: The Reflect Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect)
 * [ES6 Reflection in depth](https://ponyfoo.com/articles/es6-reflection-in-depth)
-* [Proxies: Design Principles for Robust Object-oriented Intercession APIs](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36574.pdf)
+* [Proxies: Design Principles for Robust Object-oriented Intercession APIs](https://research.google.com/pubs/pub36574.html)
 * [2ality: Metaprogramming with ES6](http://www.2ality.com/2014/12/es6-proxies.html)
 * [Metaprogramming in ES6 using Reflect](http://blog.keithcirkel.co.uk/metaprogramming-in-es6-part-2-reflect/)
 * [ES6 everyday Reflect](http://www.loganfranken.com/blog/902/es6-everyday-reflect/)

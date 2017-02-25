@@ -146,7 +146,7 @@ Entre los sitios que utilizan este patrón, se incluyen los siguientes:
 </pre>
 
 
-## Off canvas {: .page-title }
+## Off canvas
 
 
 En lugar de apilar contenido verticalmente, en el patrón Off canvas, el contenido  menos usado (tal vez los menús de navegación o de las aplicaciones) se coloca fuera de la pantalla y solo se muestra cuando el tamaño de la pantalla es lo suficientemente grande; en las pantallas más pequeñas, el contenido está solo a un clic de distancia.

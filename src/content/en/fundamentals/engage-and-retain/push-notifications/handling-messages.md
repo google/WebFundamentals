@@ -80,8 +80,6 @@ Finally, we'll process the user's response using the `notificationclick` and
 
 Everything else is just an elaboration of these basic ideas.
 
-Note: Earlier versions of the [Notification API spec](https://notifications.spec.whatwg.org/){: .external } contained a `notificationclose`. You should avoid this even though it may be supported on some browsers.
-
 ## Choosing not to show a notification {: #choosing-not-to-show }
 
 There may be times when it's not necessary to show a notification when a push
@@ -90,7 +88,7 @@ content is already visible to the user.
 
 Fortunately, service workers have a way to test whether the application is open.
 Service workers support an interface called
-[`clients`](https://developer.mozilla.org/en-US/docs/Web/API/Clients) is a list
+[`clients`](https://developer.mozilla.org/en-US/docs/Web/API/Clients) which is a list
 of all active clients controlled by the current service worker. To find out if
 any clients are active, call `clients.length`. If this property returns `0`
 show a notification. Otherwise do something else.

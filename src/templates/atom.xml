@@ -24,7 +24,7 @@
     </content>
     {{#each tags}}<category term="{{this}}" label="{{this}}"/> {{/each}}
     <author>
-      <name>{{ atomAuthor }}</name>
+      <name>{{ feedAuthor }}</name>
     </author>
   </entry>
   {{/each}}

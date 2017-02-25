@@ -234,19 +234,18 @@ the definition in source code.
 
 Toggle this option to show pixel-based rulers next to the viewport.
 
-### Configure network (UA, network throttling)
+### Configure network (UA, network throttling) {: #network }
 
-Selecting this option will open a panel in the Drawer that allows you to change
-network related behaviours:
+Selecting this option opens the [Network Conditions drawer][nc], where you can
+change the following network behaviors:
 
   1. **Disk Cache**: Disable Disk Cache stops pages and their assets from being
      cached by the browser while the DevTools are open.
-  2. **Network Throttling**: Read more about [Network Throttling here](/web/tools/chrome-devtools/network-performance/network-conditions).
+  2. **Network Throttling**: Simulate slow network connections.
   3. **User Agent**: Allows you to set a specific UA (User Agent) string
      override.
 
-**Tip**: You can also open the **Network conditions** drawer from the 
-[main menu][nc].
+[nc]: /web/tools/chrome-devtools/network-performance/reference#network-conditions
 
 ## Limitations
 
@@ -273,4 +272,3 @@ When you need to test on a real device, you can use
 for additional insight.
 
 
-[nc]: /web/tools/chrome-devtools/profile/network-performance/network-conditions#network-conditions
