@@ -43,8 +43,6 @@ description: Improving performance starts with minimizing, or at least, optimizi
 
 <img src="images/low.png" class="attempt-right">
 
-It's important to understand what your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help.
-
 理解你的网站或应用在连接很糟糕或不稳定时是什么样子非常重要，这样你就可以据此来搭建它们。有很多工具可以帮你做到这一点。
 
 [了解更多](poor-connectivity/)
@@ -54,10 +52,6 @@ It's important to understand what your app or site feels like when connectivity 
 ## PRPL 范式
 
 <img src="images/prpl.png" class="attempt-right">
-
-PRPL (push, render, pre-cache and lazy-load) is a pattern for structuring
-and serving Progressive Web Apps (PWAs), with an emphasis on the performance
-of app delivery and launch.
 
 PRPL (push, render, pre-cache and lazy-load) 是渐进式网页应用（Progressive Web Apps）开发的结构和服务范式。它强调分发（delivery）和启动（launch）的表现。
 
@@ -83,14 +77,11 @@ This codelab will help you learn to identify and fix web app performance bottlen
 ### 优达学城课程
 
 [浏览器渲染优化（Browser Rendering Optimization）](https://udacity.com/ud860)<br>
-Google performance guru Paul Lewis is here to help you destroy jank and create
-web apps that maintain 60 frames per second performance.
+谷歌性能优化大师 Paul Lewis 在这里帮助你消灭 jank，写出拥有 60 幅每秒加载表现的网页应用。
 
-[关键优化路径（Critical Rendering Path）](https://udacity.com/ud884)<br>
-Learn about the Critical Rendering Path, or the set of steps browsers must take
-to convert HTML, CSS and JavaScript into living, breathing websites.
+[关键渲染路径（Critical Rendering Path）](https://udacity.com/ud884)<br>
+学习“关键渲染路径”，或者叫“浏览器将 HTML，CSS 和 JavaScript 转化为栩栩如生的网页的步骤”。
 
 [从 HTTP/1 到 HTTP/2（HTTP/1 to HTTP/2）](https://udacity.com/ud897)<br>
-Surma starts with the basics of HTTP/1 and goes all the way to HTTP/2, how to
-load assets efficiently and also covers security aspects of these protocols. 
+Surma 从基本的 HTTP/1 一直讲到 HTTP/2，关于怎样高效加载，以及这些协议的安全性。 
 <div style="clear:both;"></div>
