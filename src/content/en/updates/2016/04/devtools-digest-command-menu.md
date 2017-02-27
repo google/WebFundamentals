@@ -47,7 +47,7 @@ associated with that shortcut? It is still there, just hit
 ![Pretty HTML](/web/updates/images/2016/04/devtools-digest/pretty-html.jpg)
 
 We've had pretty-print for JS and CSS sources built into the Sources panel for 
-a while now, but have just extended it to supoort full-blown 
+a while now, but have just extended it to support full-blown 
 HTML pretty-printing. Give it a try – not only does it reformat the HTML, it 
 also reformats the JavaScript and CSS within it!
 
