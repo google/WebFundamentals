@@ -8,7 +8,7 @@ description: What's new in Chrome 57 for developers? Grid based layouts, Media S
 {# wf_tags: chrome57,new-in-chrome,css,progressive-web-apps,media,grids #}
 {# wf_featured_snippet: With Chrome 57, you can now use <code>display: grid</code> for grid based layouts, use the <b>media session API</b> to customize the lock screen and notifications with information about the media being played, and more. Pete LePage has all the details and how you can use these new developer features in Chrome 57! #}
 
-# New In Chrome 57 {: .page-title }
+# New in Chrome 57 {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
