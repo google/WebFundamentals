@@ -45,6 +45,22 @@ is not supported in Edge or Safari, and it is being
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5715026367217664) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663662)
 
+## Remove deprecated names for motion path properties
+
+Motion path CSS properties allow authors to animate any graphical object along an author-specified path. In climpliance with the spec, several properties were [implemented in Chrome 45](https://www.chromestatus.com/feature/6190642178818048). The names of these properties were changed in the spec in mid 2016. Chrome implemented the [new names in Chrome 55 and Chrome 56](https://www.chromestatus.com/feature/6390764217040896). Console deprecation warnings were also implemented. 
+
+In Chrome 58, the old versions are being removed. The affected properties and their new names are shown below.
+
+| Removed Property | Current Name |
+|------------------|--------------|
+| motion-path | offset-path |
+| motion-offset | offset-distance |
+| motion-rotation | offset-rotate |
+| motion | offset |
+
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/o1C5NzGf9Q0/discussion) 
+
 <<../../_deprecation-policy.md>>
 
 {% include "comment-widget.html" %}
