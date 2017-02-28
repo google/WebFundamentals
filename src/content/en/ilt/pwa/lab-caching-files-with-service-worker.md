@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T22:08:48Z #}
+{# wf_updated_on: 2017-02-27T21:10:53Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -19,7 +19,11 @@ book_path: /web/ilt/_book.yaml
 
 
 
-This lab covers the basics of caching files with the service worker. The technologies involved are the  [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) and the  [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). See the <a href="caching-files-with-the-service-worker">Caching files with the service worker</a> doc for a full tutorial on the Cache API. See <a href="introduction-to-service-workers">Introduction to Service Worker</a> and <a href="lab_scripting_the_service_worker.md">Lab: Scripting the service worker</a> for more information on service workers.
+This lab covers the basics of caching files with the service worker. The technologies involved are the  [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) and the  [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). See the  [Caching files with the service worker](caching-files-with-service-worker) doc for a full tutorial on the Cache API. See  [Introduction to Service Worker](introduction-to-service-worker) and  [Lab: Scripting the service worker](lab-scripting-the-service-worker) for more information on service workers.
+
+#### Concepts
+
+[Caching Files with Service Worker](caching-files-with-service-worker)
 
 #### What you will learn
 
@@ -31,7 +35,7 @@ This lab covers the basics of caching files with the service worker. The technol
 #### What you should know
 
 * Basic JavaScript and HTML
-* Familiarity with the concept and basic syntax of ES2015  [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/)
+* Familiarity with the concept and basic syntax of ES2015  [Promises](/web/fundamentals/getting-started/primers/promises)
 
 #### What you will need
 
@@ -79,7 +83,7 @@ This folder contains:
 
 Cache the application shell in the "install" event handler in the service worker.
 
-Replace TODO 2 __inserviceworker.js__ with the following code:
+Replace TODO 2 in __serviceworker.js__ with the following code:
 
 #### service-worker.js
 
@@ -143,7 +147,7 @@ In the install event handler we create the cache with  [`caches.open`](https://d
 
 #### For more information
 
-* <a href="introduction-to-the-app-shell-architecture">The Application Shell</a>
+*  [The Application Shell](introduction-to-progressive-web-app-architectures)
 *  [The install event - MDN](https://developer.mozilla.org/en-US/docs/Web/API/InstallEvent)
 
 <div id="3"></div>
@@ -231,7 +235,7 @@ Take the app back online and open __app/test/test1.html__ in a new tab. Your app
 
 Here we are taking the responses returned from the network requests and putting them into the cache. 
 
-We need to pass a clone of the response `tocache.put`, because the response can only be read once. See Jake Archibald's <a href="https://jakearchibald.com/2014/reading-responses/">What happens when you read a response</a> article for an explanation.
+We need to pass a clone of the response to `cache.put`, because the response can only be read once. See Jake Archibald's <a href="https://jakearchibald.com/2014/reading-responses/">What happens when you read a response</a> article for an explanation.
 
 We have wrapped the code to cache the response in an `if` statement to ensure we are not caching our test page.
 
@@ -333,9 +337,9 @@ Try changing the name of the cache to "pages-cache-v2":
 var staticCacheName = 'pages-cache-v2';
 ```
 
-Save the code and [update the service worker](tools-for-pwa-developers#update) in the browser. [Inspect the cache storage](tools-for-pwa-developers#storage) in your browser. You should see just the new cache. The old cache, "`pages-cache-v1`", has been removed.
+Save the code and [update the service worker](tools-for-pwa-developers#update) in the browser. [Inspect the cache storage](tools-for-pwa-developers#storage) in your browser. You should see just the new cache. The old cache, `pages-cache-v1`, has been removed.
 
-Open __app/test/test2.html__ in a new browser tab. The test checks whether "`pages-cache-v1`" has been deleted and that "`pages-cache-v2`" has been created.
+Open __app/test/test2.html__ in a new browser tab. The test checks whether `pages-cache-v1` has been deleted and that `pages-cache-v2` has been created.
 
 #### Explanation
 

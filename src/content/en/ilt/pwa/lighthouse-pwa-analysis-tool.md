@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T19:32:13Z #}
+{# wf_updated_on: 2017-02-27T20:49:03Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,6 +10,13 @@ book_path: /web/ilt/_book.yaml
 
 
 
+
+## Codelab
+
+
+
+
+[Auditing with Lighthouse](lab-auditing-with-lighthouse)
 
 <div id="introduction"></div>
 

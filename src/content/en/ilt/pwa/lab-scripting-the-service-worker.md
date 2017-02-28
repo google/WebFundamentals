@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T01:09:10Z #}
+{# wf_updated_on: 2017-02-27T21:57:40Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -20,6 +20,10 @@ book_path: /web/ilt/_book.yaml
 
 
 This lab walks you through creating a simple service worker. 
+
+#### Concepts
+
+[Introduction to Service Worker](introduction-to-service-worker)
 
 #### What you will learn
 
@@ -61,11 +65,7 @@ If you have a text editor that lets you open a project, open the __service-worke
 
 This folder contains:
 
-* Sample resources that we use in experimenting:
-* __other.html__
-* __js/other.js__
-* __below/another.html__
-* __js/another.js__
+* __other.html__, __js/other.js__, __below/another.html__, and __js/another.js__ are sample resources that we use to experiment
 * __index.html__ is the main HTML page for our sample site/application
 * __index.css__ is the cascading stylesheet for __index.html__
 * __service-worker.js__ is the JavaScript file that is used to create our service worker

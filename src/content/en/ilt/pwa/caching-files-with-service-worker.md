@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T20:35:47Z #}
+{# wf_updated_on: 2017-02-27T20:52:25Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,6 +10,13 @@ book_path: /web/ilt/_book.yaml
 
 
 
+
+## Codelab
+
+
+
+
+[Caching Files with Service Worker](lab-caching-files-with-service-worker)
 
 <div id="cacheinsw"></div>
 

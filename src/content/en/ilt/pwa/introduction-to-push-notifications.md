@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T21:21:54Z #}
+{# wf_updated_on: 2017-02-27T20:57:11Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,6 +10,13 @@ book_path: /web/ilt/_book.yaml
 
 
 
+
+## Codelab
+
+
+
+
+[Integrating Web Push](lab-integrating-web-push)
 
 <div id="what"></div>
 
@@ -520,11 +527,14 @@ We can test push messaging in our app using  [cURL](https://curl.haxx.se/docs/ma
 
 The cURL command that sends a request to FCM to issue a push message looks like this:
 
-    curl "ENDPOINT_URL" --request POST --header "TTL: 60" --header "Content-Length: 0" --header "Authorization: key=SERVER_KEY"
+    curl "ENDPOINT_URL" --request POST --header "TTL: 60" --header "Content-Length: 0" \
+    --header "Authorization: key=SERVER_KEY"
 
 For example:
 
-    curl "https://android.googleapis.com/gcm/send/fYFVeJQJ2CY:APA91bGrFGRmy-sY6NaF8atX11K0bKUUNXLVzkomGJFcP-lvne78UzYeE91IvWMxU2hBAUJkFlBVdYDkcwLG8vO8cYV0X3Wgvv6MbVodUfc0gls7HZcwJL4LFxjg0y0-ksEhKjpeFC5P" --request POST --header "TTL: 60" --header "Content-Length: 0" --header "Authorization: key=AIzaSyD1JcZ8WM1vTtH6Y0tXq_Pnuw4jgj_92yg"
+    curl "https://android.googleapis.com/gcm/send/fYFVeJQJ2CY:APA91bGrFGRmy-sY6NaF8a...gls7HZcwJL4 \ 
+    LFxjg0y0-ksEhKjpeFC5P" --request POST --header "TTL: 60" --header "Content-Length: 0" \
+     --header "Authorization: key=AIzaSyD1JcZ8WM1vTtH6Y0tXq_Pnuw4jgj_92yg"
 
 You can send a message to Firefox using the same cURL command, but without the `Authorization` header:
 
@@ -532,7 +542,8 @@ You can send a message to Firefox using the same cURL command, but without the `
 
 For example:
 
-    curl "https://updates.push.services.mozilla.com/wpush/v1/gAAAAABYGml8oAFQC2a-HYbtOZP_HGa0kSB2atFqUY_PQISawx9WEOiI40yH0TL6uDTRBmGCENXaddq-50MuEgZGL5-b_gWSVC2x_FnvK2WQwI6yStyVgAQ9CSPl-7hKVuiuvs2s9zuT" --request POST --header "TTL: 60" --header "Content-Length: 0"
+    curl "https://updates.push.services.mozilla.com/wpush/v1/gAAAAABYGml8oAFQC2a-HYb...7hKVui9zuT" \
+    --request POST --header "TTL: 60" --header "Content-Length: 0"
 
 ### Working with Data Payloads
 

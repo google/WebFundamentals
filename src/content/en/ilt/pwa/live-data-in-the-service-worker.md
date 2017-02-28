@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T20:57:06Z #}
+{# wf_updated_on: 2017-02-27T17:17:11Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
-# Live data in the Service Worker {: .page-title }
+# Live Data in the Service Worker {: .page-title }
 
 
 

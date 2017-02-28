@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T20:21:45Z #}
+{# wf_updated_on: 2017-02-27T22:05:31Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -243,7 +243,7 @@ __Notes:__
 
 <ul>
 
-<li>In the future, consider a server-side render of UI with Streams for body content model (even better). See  [https://jakearchibald.com/2016/streams-ftw/](https://jakearchibald.com/2016/streams-ftw/) to learn more.</li>
+<li>In the future, consider a server-side render of UI with Streams for body content model (even better). See <a href="https://jakearchibald.com/2016/streams-ftw/">https://jakearchibald.com/2016/streams-ftw/</a> to learn more.</li>
 
 <li>If you are building a PWA using Polymer leveraging this pattern, then it might be worth exploring SSR of content in the Light DOM</li>
 

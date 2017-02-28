@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T16:02:52Z #}
+{# wf_updated_on: 2017-02-27T21:16:14Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -20,6 +20,10 @@ book_path: /web/ilt/_book.yaml
 
 
 The sw-precache module and sw-toolbox (Node.js) library make it easy to create production-quality service workers. This lab shows you how to use `sw-precache` and `sw-toolbox` to build the service worker programmatically, and provide different routing mechanisms for your service worker to use.
+
+#### Concepts
+
+[Using sw-precache and sw-toolbox](using-sw-precache-and-sw-toolbox)
 
 #### What you will learn
 

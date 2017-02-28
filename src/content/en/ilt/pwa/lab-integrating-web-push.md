@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T22:10:43Z #}
+{# wf_updated_on: 2017-02-27T21:24:32Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -20,6 +20,10 @@ book_path: /web/ilt/_book.yaml
 
 
 This lab shows you the basics of sending, receiving, and displaying push notifications. Notifications are messages that display on a user's device, outside of the context of the browser or app. Push notifications are notifications created in response to a message from a server, and work even when the user is not actively using your application. The notification system is built on top of the  [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API), which receives push messages in the background and relays them to your application. 
+
+#### Concepts
+
+[Introduction to Push Notifications](introduction-to-push-notifications)
 
 #### What you will learn
 
@@ -39,7 +43,7 @@ This lab shows you the basics of sending, receiving, and displaying push notific
 * Computer with terminal/shell access
 * Connection to the Internet 
 * A Google or Gmail account
-* Chrome or Firefox (see  [caniuse.com](http://caniuse.com/#search=push) for supported versions)
+* A  [browser that supports web push](http://caniuse.com/#search=push)
 *  [Node](https://nodejs.org/en/) and  [npm](https://www.npmjs.com/)
 
 <div id="setup"></div>
@@ -921,7 +925,7 @@ Send the message once with the app open, and once without. With the app open, th
 
 #### Explanation
 
-The  *clients*  global in the service worker lists all of the active clients of the service worker on this machine. If there are no clients active, we create a notification.
+The `clients` global in the service worker lists all of the active clients of the service worker on this machine. If there are no clients active, we create a notification.
 
 If there  *are*  active clients it means that the user has your site open in one or more windows. The best practice is usually to relay the message to each of those windows. 
 

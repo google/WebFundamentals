@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T21:23:52Z #}
+{# wf_updated_on: 2017-02-27T18:50:32Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -60,13 +60,13 @@ Note: If you have completed the E-Commerce App labs up to this point, your app i
 
 
 
-If you did not complete labs 1 and 2, copy the contents of the __lab4-sw-precache__ folder and overwrite the contents of the __project__ directory. Then run `npm install` in the command line at the __project__ directory.
+If you did not complete ecommerce labs 1 and 2, copy the contents of the __lab4-sw-precache__ folder and overwrite the contents of the __project__ directory. Then run `npm install` in the command line at the __project__ directory.
 
 At the project directory, run `gulp serve` so the files in the __dist__ folder are up-to-date. The app should open in your browser.
 
 
 
-Note: The e-commerce app is based on Google's  [Web Starter Kit](https://github.com/google/web-starter-kit/), which is an "opinionated boilerplate" designed as a starting point for new projects.  [It allows us to take advantage of several](https://github.com/google/web-starter-kit/) preconfigured tools that facilitate development, and are optimized both for speed and multiple devices. You can learn more about Web Starter Kit  [here](/web/tools/starter-kit/).
+Note: The e-commerce app is based on Google's  [Web Starter Kit](https://github.com/google/web-starter-kit/), which is an "opinionated boilerplate" designed as a starting point for new projects. It allows us to take advantage of several preconfigured tools that facilitate development, and are optimized both for speed and multiple devices. You can learn more about Web Starter Kit  [here](/web/tools/starter-kit/).
 
 
 
@@ -100,7 +100,7 @@ The `fastest` strategy sends the request to the cache and to the network simulta
 
 #### For more information
 
-[sw-toolbox Tutorial: API](https://googlechrome.github.io/sw-toolbox/docs/master/tutorial-api)
+[sw-toolbox Tutorial: API](https://googlechrome.github.io/sw-toolbox/api.html#main)
 
 <div id="3"></div>
 
@@ -185,7 +185,7 @@ The `importScripts` option writes an importScripts method in the service worker,
 
 `stripPrefix` translates a static file path to the relative URL that it's served from.
 
-`runtimeCaching` configures runtime caching for dynamic content. In our code, the service worker uses the `sw-toolbox` `networkFirst` strategy to cache the resources matching the `urlPattern`. The `urlPattern` follows the conventions of the `sw-toolbox` library's  [routing configuration](https://googlechrome.github.io/sw-toolbox/docs/master/tutorial-usage.html).
+`runtimeCaching` configures runtime caching for dynamic content. In our code, the service worker uses the `sw-toolbox` `networkFirst` strategy to cache the resources matching the `urlPattern`. The `urlPattern` follows the conventions of the `sw-toolbox` library's  [routing configuration](https://googlechrome.github.io/sw-toolbox/usage.html#basic-routes).
 
 #### For more information
 

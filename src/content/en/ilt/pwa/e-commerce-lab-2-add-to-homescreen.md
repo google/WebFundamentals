@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T21:22:09Z #}
+{# wf_updated_on: 2017-02-27T17:45:20Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -57,7 +57,7 @@ At the project directory, run `gulp serve` so the files in the __dist__ folder a
 
 
 
-Note: The e-commerce app is based on Google's  [Web Starter Kit](https://github.com/google/web-starter-kit/), which is an "opinionated boilerplate" designed as a starting point for new projects.  [It allows us to take advantage of several](https://github.com/google/web-starter-kit/) preconfigured tools that facilitate development, and are optimized both for speed and multiple devices. You can learn more about Web Starter Kit  [here](/web/tools/starter-kit/).
+Note: The e-commerce app is based on Google's  [Web Starter Kit](https://github.com/google/web-starter-kit/), which is an "opinionated boilerplate" designed as a starting point for new projects. It allows us to take advantage of several preconfigured tools that facilitate development, and are optimized both for speed and multiple devices. You can learn more about Web Starter Kit  [here](/web/tools/starter-kit/).
 
 
 

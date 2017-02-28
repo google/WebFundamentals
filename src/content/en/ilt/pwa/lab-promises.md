@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T21:00:53Z #}
+{# wf_updated_on: 2017-02-27T21:58:37Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -20,6 +20,10 @@ book_path: /web/ilt/_book.yaml
 
 
 This lab teaches you how to use JavaScript  [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+
+#### Concepts
+
+[Working with Promises](working-with-promises)
 
 #### What you will learn
 
@@ -63,10 +67,7 @@ If you have a text editor that lets you open a project, open the __promises-lab/
 
 This folder contains:
 
-* Sample resources that we use to experiment:
-* __flags/chile.png__
-* __flags/peru.png__
-* __flags/spain.png__
+* __flags/chile.png__, __flags/peru.png__, __flags/spain.png__ - sample resources that we use to experiment
 * __js/main.js__ is the main JavaScript file for the app
 * __test/test.html__ is a file for testing your progress
 * __index.html__ is the main HTML page for our sample site/application

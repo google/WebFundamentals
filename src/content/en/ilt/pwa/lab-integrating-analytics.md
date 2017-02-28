@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-23T15:57:19Z #}
+{# wf_updated_on: 2017-02-27T21:25:49Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -20,6 +20,10 @@ book_path: /web/ilt/_book.yaml
 
 
 This lab shows you how to integrate Google Analytics into your web apps.
+
+#### Concepts
+
+[Integrating Analytics](integrating-analytics)
 
 #### What you will learn
 
@@ -124,13 +128,13 @@ Note: The Google Analytics UI is subject to updates and may not look exactly lik
 
 In a separate tab or window, navigate to  [analytics.google.com](https://analytics.google.com/). Sign in with your  [Gmail account](https://accounts.google.com/signup), and follow the step that matches your status:
 
-* If you already have a Google Analytics account:
+#### If you already have a Google Analytics account:
 
 Create another one. Select the __Admin__ tab. Under __account__, select your current Google Analytics account and choose __create new account__. A single Gmail account can have multiple (currently 100) Google Analytics accounts. 
 
 ![Adding an account](img/67167bdc1b3d25ee.png)
 
-* If you don't have a Google Analytics account:
+#### If you don't have a Google Analytics account:
 
 Select __Sign up__ to begin creating your account.
 
@@ -213,7 +217,10 @@ Your tracking ID looks like `UA-XXXXXXXX-Y` and your tracking code snippet looks
 
 ```
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]) \ 
+.push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0]; \
+a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script', \
+'https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-XXXXXXXX-Y', 'auto');
   ga('send', 'pageview');
@@ -634,7 +641,7 @@ The hit is sent with the  [Fetch API](https://developer.mozilla.org/en-US/docs/W
 
 
 
-Note: You can learn more about the Fetch API in the <a href="lab-fetch-api-practice">fetch codelab</a>
+Note: You can learn more about the Fetch API in the  [fetch codelab](lab-fetch-api).
 
 
 

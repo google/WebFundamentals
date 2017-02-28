@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T21:50:56Z #}
+{# wf_updated_on: 2017-02-27T17:17:53Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
-# Introduction to Payment Request API {: .page-title }
+# Introduction to the Payment Request API {: .page-title }
 
 
 

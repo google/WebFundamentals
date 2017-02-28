@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T20:53:48Z #}
+{# wf_updated_on: 2017-02-27T22:01:19Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -23,7 +23,7 @@ This lab shows you how you can automate tasks with  [gulp](https://github.com/gu
 
 #### Concepts
 
-[Introduction to Tooling and Automation](intro-to-developer-tooling-npm,-gulp)
+[Introduction to Gulp](introduction-to-gulp)
 
 #### What you will learn
 
@@ -57,9 +57,7 @@ If you have a text editor that lets you open a project, open the __gulp-lab/app_
 
 This folder contains:
 
-* Sample resources that we use in experimenting:
-* __js/main.js__
-* __styles/main.css__
+* __js/main.js__ and __styles/main.css__ are sample resources that we use to experiment
 * __index.html__ is the main HTML page for the sample site/application
 * __gulpfile.js__ is the file that gulp uses to execute tasks, and where you will write your code
 
@@ -300,7 +298,7 @@ Your browser should open __app/__ at __localhost:3000__ (if it doesn't, open the
 
 #### Explanation
 
-The gulp  [browsersync](https://www.browsersync.io/docs/gulp) package starts a local server at the specified directory. In this case we are specifying the target directory as ‘__.__', which is the current working directory (__app/__). We also specify the port as 3000.
+The gulp  [browsersync](https://www.browsersync.io/docs/gulp) package starts a local server at the specified directory. In this case we are specifying the target directory as '__.__', which is the current working directory (__app/__). We also specify the port as 3000.
 
 ### 6.4 Put it all together
 
@@ -321,7 +319,7 @@ gulp.task('serve', ['processCSS'], function() {
 });
 ```
 
-Close the app from the browser and delete __app/build/main.css__. From __app/__, run the following in the command line:
+Close the app from the browser and delete __app/build/main.css__. From __app/__, run the following in the command line: 
 
     gulp
 

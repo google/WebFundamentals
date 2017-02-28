@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T21:53:57Z #}
+{# wf_updated_on: 2017-02-27T21:09:37Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -20,6 +20,10 @@ book_path: /web/ilt/_book.yaml
 
 
 This lab walks you through using the  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), a simple interface for fetching resources, as an improvement over the  [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) API.
+
+#### Concepts
+
+[Working with the Fetch API](working-with-the-fetch-api)
 
 #### What you will learn
 

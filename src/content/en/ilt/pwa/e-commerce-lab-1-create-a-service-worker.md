@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T21:21:27Z #}
+{# wf_updated_on: 2017-02-27T17:49:59Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -31,8 +31,8 @@ book_path: /web/ilt/_book.yaml
 * Basic JavaScript and HTML
 * Familiarity with the concept and basic syntax of ES2015  [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/)
 * Have completed  [Lab: Scripting the service worker](lab-scripting-the-service-worker)
-* Have completed  [Lab: Fetch API](lab-fetch-api-practice)
-* Have completed  [Lab: Caching files with Service Worker](lab-caching-files-with-the-service-worker)
+* Have completed  [Lab: Fetch API](lab-fetch-api)
+* Have completed  [Lab: Caching files with Service Worker](lab-caching-files-with-service-worker)
 
 #### What you will need
 
@@ -55,7 +55,7 @@ Clone the E-Commerce lab repository with Git using the following command:
 
 
 
-Note:  If you do not use Git, then download the repo from <a class="btn" role="button" href="https://github.com/google-developer-training/pwa-ecommerce-demo/archive/master.zip">GitHub</a>.
+Note:  If you do not use Git, then <a class="btn" role="button" href="https://github.com/google-developer-training/pwa-ecommerce-demo/archive/master.zip">download the repo</a> from GitHub.
 
 
 
@@ -79,7 +79,7 @@ When the app opens, confirm that a service worker is not registered at local hos
 
 
 
-Note: The e-commerce app is based on Google's  [Web Starter Kit](https://github.com/google/web-starter-kit/), which is an "opinionated boilerplate" designed as a starting point for new projects.  [It allows us to take advantage of several](https://github.com/google/web-starter-kit/) preconfigured tools that facilitate development, and are optimized both for speed and multiple devices. You can learn more about Web Starter Kit  [here](/web/tools/starter-kit/).
+Note: The e-commerce app is based on Google's  [Web Starter Kit](https://github.com/google/web-starter-kit/), which is an "opinionated boilerplate" designed as a starting point for new projects. It allows us to take advantage of several preconfigured tools that facilitate development, and are optimized both for speed and multiple devices. You can learn more about Web Starter Kit  [here](/web/tools/starter-kit/).
 
 
 
@@ -165,7 +165,7 @@ To complete TODO SW-5 in __app/service-worker.js__, write the code to delete unu
 
 
 
-Note: If you get stuck, you can use  [Lab: Caching files with Service Worker](lab-caching-files-with-the-service-worker) for clues.
+Note: If you get stuck, you can use  [Lab: Caching files with Service Worker](lab-caching-files-with-service-worker) for clues.
 
  
 

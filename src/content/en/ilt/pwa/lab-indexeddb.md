@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-22T20:49:38Z #}
+{# wf_updated_on: 2017-02-27T21:12:54Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -22,6 +22,10 @@ book_path: /web/ilt/_book.yaml
 This lab guides you through the basics of the  [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) using Jake Archibald's  [IndexedDB Promised](https://github.com/jakearchibald/indexeddb-promised) library. The IndexedDB Promised library is very similar to the IndexedDB API, but uses promises rather than events. This simplifies the API while maintaining its structure, so anything you learn using this library can be applied to the IndexedDB API directly.
 
 This lab builds a furniture store app,  *Couches-n-Things* , to demonstrate the basics of IndexedDB.
+
+#### Concepts
+
+[Working with IndexedDB](working-with-indexeddb)
 
 #### What you will learn
 
