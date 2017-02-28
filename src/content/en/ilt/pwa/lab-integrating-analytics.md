@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T21:25:49Z #}
+{# wf_updated_on: 2017-02-28T19:47:47Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -754,7 +754,7 @@ Click __BUY NOW!!!__ to fire our first custom analytics event.
 
 You will see an error in the console because we are offline and can't make requests to Google Analytics servers. You can confirm by checking the real-time section of Google Analytics dashboard and noting that the event is not shown.
 
-[Now check IndexedDB](tools-for-pwa-developers#indexeddb). Open __offline-google-analytics__. You should see a URL cached. If you are using Chrome (see screenshot below), it is shown in __urls__.You may need to click the refresh icon in the __urls __interface.
+[Now check IndexedDB](tools-for-pwa-developers#indexeddb). Open __offline-google-analytics__. You should see a URL cached. If you are using Chrome (see screenshot below), it is shown in __urls__.You may need to click the refresh icon in the __urls__ interface.
 
 ![Offline hits](img/88188d9545f98f83.png)
 

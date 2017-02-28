@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T21:10:53Z #}
+{# wf_updated_on: 2017-02-28T19:41:38Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -62,7 +62,7 @@ Note: If you have installed a service worker on localhost before, <a href="tools
 
 
 
-If you have a text editor that lets you open a project, open the __cache-api-lab/app __folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
+If you have a text editor that lets you open a project, open the __cache-api-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
 
 This folder contains:
 
@@ -70,7 +70,7 @@ This folder contains:
 * __pages__ folder contains sample pages and a custom offline page
 * __style__ folder contains the app's cascading stylesheet
 * __test__ folder contains QUnit tests
-* __index.html __is the main HTML page for our sample site/application
+* __index.html__ is the main HTML page for our sample site/application
 * __service-worker.js__ is the service worker file where we set up the interactions with the cache
 
 <div id="2"></div>

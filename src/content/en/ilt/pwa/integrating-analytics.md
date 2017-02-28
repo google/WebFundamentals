@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T20:58:05Z #}
+{# wf_updated_on: 2017-02-28T19:48:47Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -490,7 +490,7 @@ Where `path/to/offline-google-analytics-import.js` is the path to the __offline-
 node_modules/sw-offline-google-analytics/offline-google-analytics-import.js
 ```
 
-We import and initialize the __offline-google-analytics-import.js __library. This library adds a fetch event handler to the service worker that only listens for requests made to the Google Analytics domain. The handler attempts to send Google Analytics data first by network requests. If the network request fails, the request is stored in  [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). The requests are then sent later when connectivity is re-established.
+We import and initialize the __offline-google-analytics-import.js__ library. This library adds a fetch event handler to the service worker that only listens for requests made to the Google Analytics domain. The handler attempts to send Google Analytics data first by network requests. If the network request fails, the request is stored in  [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). The requests are then sent later when connectivity is re-established.
 
 You can test this by  [simulating offline behavior](tools-for-pwa-developers#offline), and then firing hit events. You will see an error in the console since you are offline and can't make requests to Google Analytics servers. Then  [check IndexedDB](tools-for-pwa-developers#indexeddb). Open __offline-google-analytics__. You should see URLs cached in __urls__ (you may need to click the refresh icon inside the indexedDB interface). These are the stored hits.
 

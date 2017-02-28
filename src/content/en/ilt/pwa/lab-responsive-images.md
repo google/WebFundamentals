@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T19:21:41Z #}
+{# wf_updated_on: 2017-02-28T19:35:28Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -54,7 +54,7 @@ Note: If you have installed a service worker on localhost before, <a href="tools
 
 
 
-If you have a text editor that lets you open a project, open the __responsive-images-lab/app __folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
+If you have a text editor that lets you open a project, open the __responsive-images-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
 
 This folder contains:
 

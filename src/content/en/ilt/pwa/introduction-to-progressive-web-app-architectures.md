@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T22:05:31Z #}
+{# wf_updated_on: 2017-02-28T19:24:20Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -635,7 +635,7 @@ Use the following table to determine which caching strategy is most appropriate 
 </td><td colspan="1" rowspan="1">
 <p><strong>Best strategy for ....</strong></p>
 </td><td colspan="1" rowspan="1">
-<p><strong>Corresponding  __</strong><code>sw-toolbox</code>_<strong>_ handler</strong></p>
+<p><strong>Corresponding __</strong><code>sw-toolbox</code>__ <strong>handler</strong></p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T21:24:32Z #}
+{# wf_updated_on: 2017-02-28T19:46:57Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -196,7 +196,7 @@ Be sure to add the options object to the second parameter of `showNotification`:
 reg.showNotification('Hello world!', options);
 ```
 
-Save the code and reload the page in the browser. Click __Notify me! __in the browser to see the new additions to the notification.
+Save the code and reload the page in the browser. Click __Notify me!__ In the browser to see the new additions to the notification.
 
 #### Explanation
 
@@ -671,7 +671,7 @@ We can get all the information we need to send the push message to the right pus
 
 Replace TODO 3.8 in <strong>node/main.js</strong> with the code below.
 
-Make sure you save the changes you made to the service worker in the last step and then [unregister the service worker](tools-for-pwa-developers#unregister) and refresh the page in the browser. Click __Enable Push Messaging __and copy the whole subscription object. Replace `YOUR_SUBSCRIPTION_OBJECT` in the code you just pasted into __node/main.js__ with the subscription object.
+Make sure you save the changes you made to the service worker in the last step and then [unregister the service worker](tools-for-pwa-developers#unregister) and refresh the page in the browser. Click __Enable Push Messaging__ and copy the whole subscription object. Replace `YOUR_SUBSCRIPTION_OBJECT` in the code you just pasted into __node/main.js__ with the subscription object.
 
 If you are working in Chrome, replace `YOUR_SERVER_KEY` in the `options` object with your own Server Key from your project on Firebase. Do not overwrite the single quotes.
 
@@ -880,7 +880,7 @@ The solution code can be found in the __04-3-vapid__ directory.
 
 To complete TODO 5.1 in <strong>main.js</strong> in the <code>displayNotification</code> function, give the notification a <code>tag</code> attribute of <code>'id1'</code>.
 
-Save the code and refresh the page in the browser. Click __Notify me! __multiple times. The notifications should replace themselves instead of creating new notifications.
+Save the code and refresh the page in the browser. Click __Notify me!__ multiple times. The notifications should replace themselves instead of creating new notifications.
 
 #### Explanation
 

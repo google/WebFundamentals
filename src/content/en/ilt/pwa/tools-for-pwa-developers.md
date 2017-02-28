@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-24T20:27:22Z #}
+{# wf_updated_on: 2017-02-28T19:28:47Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -360,7 +360,7 @@ Click the Information icon in the URL bar. Use the __Notifications__ dropdown me
 
 ### Firefox
 
-Click the Information icon in the URL bar. Use the __Receive Notifications __dropdown menu to set the permission status for notifications.
+Click the Information icon in the URL bar. Use the __Receive Notifications__ dropdown menu to set the permission status for notifications.
 
 ![Access Site Permissions in Firefox](img/95e5d187eaa95142.png)
 
@@ -386,7 +386,7 @@ Click the Information icon in the URL bar. Use the __Receive Notifications __dro
 
 #### Firefox
 
-[Open the __Toolbox__](#firefoxdevtools) and click the Settings icon to open __Settings__. Under __Default Firefox Developer Tools__, check __Storage__.
+[Open the __Toolbox__](#firefoxdevtools) and click the Settings icon to open __Settings__. Under __Default Firefox Developer Tools__, check __Storage__. 
 
 ![Enable Storage Inspector in Firefox](img/fcc0b0ed0728e578.png)
 
@@ -426,7 +426,7 @@ In __DevTools__, navigate to the __Application__ tab. Select __IndexedDB__. You 
 
 ![Enable Storage Inspector in Firefox](img/fcc0b0ed0728e578.png)
 
-Open the __Storage__ panel and expand the __Indexed DB __node. Select a database, object store, or index to see its contents.
+Open the __Storage__ panel and expand the __IndexedDB__ node. Select a database, object store, or index to see its contents.
 
 ![View IndexedDB in Firefox](img/22f05b596d20ec66.png)
 

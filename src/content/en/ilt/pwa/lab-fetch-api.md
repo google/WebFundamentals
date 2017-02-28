@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T21:09:37Z #}
+{# wf_updated_on: 2017-02-28T19:39:06Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -70,7 +70,7 @@ Note: If you have installed a service worker on localhost before, <a href="tools
 
  
 
-If you have a text editor that lets you open a project, open the __fetch-api-lab/app __folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
+If you have a text editor that lets you open a project, open the __fetch-api-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
 
 This folder contains:
 
@@ -492,7 +492,7 @@ Fetch can also send data with POST requests.
 
 ### 6.1 Set up an echo server
 
-For this example you need to run an echo server. From the __fetch-api-lab/app __directory run the following commands:
+For this example you need to run an echo server. From the __fetch-api-lab/app__ directory run the following commands:
 
     npm install
     node echo-servers/echo-server-cors.js

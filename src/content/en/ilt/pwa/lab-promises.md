@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T21:58:37Z #}
+{# wf_updated_on: 2017-02-28T19:36:29Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -63,7 +63,7 @@ Note: If a service worker is already registered on localhost, then <a href="tool
 
 
 
-If you have a text editor that lets you open a project, open the __promises-lab/app __folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
+If you have a text editor that lets you open a project, open the __promises-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
 
 This folder contains:
 
