@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 보안은 범위가 넓은 주제입니다. HTTPS 가 왜 중요한지, 그리고 당신의 서버에 어떻게 HTTPS 를 디플로이 할 수 있는지 배워보세요.
+description: 보안은 범위가 넓은 주제입니다. HTTPS 가 왜 중요한지, 그리고 당신의 서버에 어떻게 HTTPS 를 배포할 수 있는지 배워보세요.
 
 {# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
@@ -23,8 +23,10 @@ description: 보안은 범위가 넓은 주제입니다. HTTPS 가 왜 중요한
 <img src="/web/images/content-https-2x.jpg" class="attempt-right">
 
 가장 중요한 보안 기술 중 한가지 이자, 다수의 최신 API 와 [프로그레시브 웹 앱](/web/progressive-web-apps/) 을 사용하기 위해 필요한 보안 기술은
-[Secure HTTP 또는 HTTPS](encrypt-in-transit/why-https) 입니다. HTTPS 에 대한 흔한 오해 중 한 가지는 민감한 정보를 다루는 사이트만 HTTPS 를 필요로 한다고 생각하는 점입니다.
-만약 개인정보보호와 보안이 사용자 정보를 보호하기 충분하지 않으면, 서비스 워커와 Payment Request API 등의 대다수의 최신 브라우저 기능이 HTTPS 통신을 요구할 것입니다.
+[HTTPS 라고도 불리우는 Secure HTTP](encrypt-in-transit/why-https) 입니다.
+HTTPS 에 대한 흔한 오해 중 한 가지는 민감한 정보를 다루는 사이트만 HTTPS 를 필요로 한다고 생각하는 점입니다.
+만약 개인 정보와 보안이 사용자 정보를 보호하기 위한 이유로 충분하지 않다면,
+서비스 워커와 Payment Request API 등의 대다수의 최신 브라우저 기능이 HTTPS 통신을 요구한다는 것이 또 다른 이유가 될 수 있을 것입니다.
 
 [서버에 HTTPS 활성화 하기](/web/fundamentals/security/encrypt-in-transit/enable-https)
 
