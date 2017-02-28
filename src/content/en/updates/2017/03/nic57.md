@@ -6,7 +6,7 @@ description: What's new in Chrome 57 for developers? Grid based layouts, Media S
 {# wf_updated_on: 2017-03-08 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome57,new-in-chrome,css,progressive-web-apps,media,grids #}
-{# wf_featured_snippet: With Chrome 57, you can now use <code>display: grid</code> for grid based layouts, use the <b>media session API</b> to customize the lock screen and notifications with information about the media being played and more. Pete LePage has all the details and how you can use these new developer features in Chrome 57! #}
+{# wf_featured_snippet: With Chrome 57, you can now use <code>display: grid</code> for grid based layouts, use the <b>media session API</b> to customize the lock screen and notifications with information about the media being played, and more. Pete LePage has all the details and how you can use these new developer features in Chrome 57! #}
 
 # New In Chrome 57 {: .page-title }
 
@@ -37,7 +37,7 @@ I’m Pete LePage, let’s dive in and see what’s new for developers in Chrome
 
 <img src="/web/updates/images/2017/03/nic57/grid-layout.png" class="attempt-right">
 
-Flexbox is a powerful layout tool, it makes many complex layouts possible,
+Flexbox is a powerful layout tool. It makes many complex layouts possible,
 but it can only do layout in one dimension. Chrome 57 adds support for
 [`display: grid`](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids)
 - the new [CSS Grid Layout specification](https://www.w3.org/TR/css3-grid-layout/),
@@ -108,12 +108,11 @@ These are just a few of the changes in Chrome 57 for developers.
 
 ## Shout out to Igalia
 
-Finally, a big shout out to engineers and team at 
+Finally, a big shout out to the engineers and team at 
 [Igalia](https://www.igalia.com/) for their awesome work on Blink. They
 were instrumental on landing the new CSS Grid and `caret-color` features.
 
 ## Stay up to date
-
 
 If you want to stay up to date with Chrome and know what’s coming, be sure to
 [subscribe](https://goo.gl/6FP1a5), follow 
