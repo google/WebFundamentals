@@ -24,8 +24,8 @@ toc:
   - title: Using sw-toolbox and sw-precache
     path: /web/ilt/pwa/using-sw-precache-and-sw-toolbox
   - title: Introduction to Push Notifications
-    path: /web/ilt/pwa/introduction-to-the-payment-request-api
+    path: /web/ilt/pwa/introduction-to-push-notifications
   - title: Introduction to the Payment Request API
-    path: /web/ilt/pwa/introduction-to-payment-request-api
+    path: /web/ilt/pwa/introduction-to-the-payment-request-api
   - title: Integrating Analytics
     path: /web/ilt/pwa/integrating-analytics
