@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Connect with your users and keep them coming back. Use any to improve your site. Use all if you're working towards a progressive web app.
+description: 사용자와 연결되어 그들이 사이트를 재방문하도록 합니다. 사이트를 향상시키기 위해 어떤 방법이든 사용하세요.
+프로그레시브 웹 앱 을 만들고 있다면 모든 방법을 활용해야 합니다.
 
 {# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
@@ -9,7 +10,8 @@ description: Connect with your users and keep them coming back. Use any to impro
 
 사용자와 연결되어 그들이 사이트를 재방문하도록 합니다. 사이트를 향상시키기 위해 어떤 방법이든 사용하세요. [프로그레시브 웹 앱](/web/progressive-web-apps/) 을 만들고 있다면 **모든** 방법을 활용해야 합니다.
 
-이 모든 기술들의 기반은 [웹 앱 매니페스트](web-app-manifest/) 입니다, 만약 사이트에 포함되어 있지 않다면 추가하는 것을 고려해보세요.
+이 모든 기술들의 기반은 [웹 앱 매니페스트](web-app-manifest/) 입니다.
+만약 사이트에 포함되어 있지 않다면 추가하는 것을 고려해보세요.
 다음과 같은 것을 가능하게 하는 간단한 파일이니까요.
 
 * 사용자가 앱이 나타날거라고 생각하는 영역에서 앱을 어떻게 나타낼지 제어할 수 있습니다. (예, 모바일 홈 화면)
