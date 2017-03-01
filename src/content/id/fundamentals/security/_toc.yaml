@@ -1,0 +1,29 @@
+toc:
+  - title: Keamanan dan identitas
+    section:
+    - title: Ringkasan
+      path: /web/fundamentals/security/
+    - title: Content Security Policy
+      path: /web/fundamentals/security/csp/
+    - title: Mengenkripsi data dalam Pengiriman
+      section:
+      - title: Mengapa HTTPS
+        path: /web/fundamentals/security/encrypt-in-transit/why-https
+      - title: Istilah Keamanan yang Penting
+        path: /web/fundamentals/security/encrypt-in-transit/intro-to-security-terminology
+      - title: Mengaktifkan HTTPS di Server Anda
+        path: /web/fundamentals/security/encrypt-in-transit/enable-https
+    - title: Mencegah Materi Campuran
+      section:
+      - title: Apa yang Dimaksud Dengan Materi Campuran?
+        path: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+      - title: Mencegah Materi Campuran
+        path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
+    - title: API Manajemen Kredensial
+      section:
+      - title: Ringkasan
+        path: /web/fundamentals/security/credential-management/
+      - title: Ambil Kredensial
+        path: /web/fundamentals/security/credential-management/retrieve-credentials
+      - title: Simpan Kredensial
+        path: /web/fundamentals/security/credential-management/store-credentials        

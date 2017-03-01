@@ -1,0 +1,17 @@
+toc:
+  - title: Pemuatan Offline &amp; Instan
+    section:
+    - title: Pertimbangan UX Offline
+      path: /web/fundamentals/instant-and-offline/offline-ux
+    - title: Buku Petunjuk Offline
+      path: /web/fundamentals/instant-and-offline/offline-cookbook/
+    - title: Web Storage
+      section:
+      - title: Ringkasan
+        path: /web/fundamentals/instant-and-offline/web-storage/
+      - title: Offline Storage untuk PWA
+        path: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
+    - title: Daur Hidup Service Worker
+      path: /web/fundamentals/instant-and-offline/service-worker/lifecycle
+    - title: Pendaftaran Service Worker
+      path: /web/fundamentals/instant-and-offline/service-worker/registration

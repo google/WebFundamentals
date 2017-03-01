@@ -1,0 +1,18 @@
+toc:
+  - title: Memulai
+    section:
+    - title: Ringkasan
+      path: /web/tools/setup/
+    - title: Persiapkan Editor Anda
+      path: /web/tools/setup/setup-editor
+    - title: Persiapkan Persistensi dengan DevTools Workspace
+      path: /web/tools/setup/setup-workflow
+    - title: Persiapkan Praprosesor CSS &amp; JS
+      path: /web/tools/setup/setup-preprocessors
+    - title: Persiapkan Pintasan Baris Perintah
+      path: /web/tools/setup/setup-shortcuts
+    - title: Persiapkan Ekstensi Browser
+      path: /web/tools/setup/setup-extensions
+    - title: Persiapkan Alat Pembangunan Anda
+      path: /web/tools/setup/setup-buildtools
+

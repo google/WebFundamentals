@@ -1,0 +1,33 @@
+toc:
+  - title: Aksesibilitas
+    section:
+    - title: Ringkasan
+      path: /web/fundamentals/accessibility/
+    - title: Fokus
+      section:
+      - title: Pengantar Fokus
+        path: /web/fundamentals/accessibility/focus/
+      - title: Pentingnya Urutan DOM
+        path: /web/fundamentals/accessibility/focus/dom-order-matters
+      - title: Menggunakan tabindex
+        path: /web/fundamentals/accessibility/focus/using-tabindex
+    - title: Semantik Bawaan
+      section:
+      - title: Pengantar Semantik
+        path: /web/fundamentals/accessibility/semantics-builtin/
+      - title: Pohon Aksesibilitas
+        path: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
+      - title: Alternatif Teks untuk Gambar
+        path: /web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images
+      - title: Melakukan Navigasi Materi
+        path: /web/fundamentals/accessibility/semantics-builtin/navigating-content
+    - title: Semantik dan ARIA
+      section:
+      - title: Pengantar ARIA
+        path: /web/fundamentals/accessibility/semantics-aria/
+      - title: Label dan Hubungan ARIA
+        path: /web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships
+      - title: Menyembunyikan dan Memperbarui Materi
+        path: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
+    - title: Gaya yang Dapat Diakses
+      path: /web/fundamentals/accessibility/accessible-styles

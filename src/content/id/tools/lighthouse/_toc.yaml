@@ -1,0 +1,79 @@
+toc:
+  - title: Lighthouse
+    section:
+    - title: Ringkasan
+      path: /web/tools/lighthouse/
+    - title: Referensi Audit
+      section:
+      - title: Cache Berisi start_url Dari Manifes
+        path: /web/tools/lighthouse/audits/cache-contains-start_url
+      - title: Ukuran Materi Disesuaikan dengan Benar untuk Tampilan yang Terlihat
+        path: /web/tools/lighthouse/audits/content-sized-correctly-for-viewport
+      - title: Rantai Permintaan Penting
+        path: /web/tools/lighthouse/audits/critical-request-chains
+      - title: Perkiraan Latensi Masukan
+        path: /web/tools/lighthouse/audits/estimated-input-latency
+      - title: Gambar Pertama yang Penuh Makna
+        path: /web/tools/lighthouse/audits/first-meaningful-paint
+      - title: Memiliki Service Worker Terdaftar
+        path: /web/tools/lighthouse/audits/registered-service-worker
+      - title: HTML Memiliki Tag Meta Viewport
+        path: /web/tools/lighthouse/audits/has-viewport-meta-tag
+      - title: Manifes Berisi Ikon yang Setidaknya 192 px
+        path:  /web/tools/lighthouse/audits/manifest-contains-192px-icon
+      - title: Manifes Berisi Warna Latar Belakang
+        path: /web/tools/lighthouse/audits/manifest-contains-background_color
+      - title: Manifes Berisi Nama
+        path: /web/tools/lighthouse/audits/manifest-contains-name
+      - title: Manifes Berisi Nama Singkat
+        path: /web/tools/lighthouse/audits/manifest-contains-short_name
+      - title: Manifes Berisi URL Mulai
+        path: /web/tools/lighthouse/audits/manifest-contains-start_url
+      - title: Manifes Berisi Warna Tema
+        path: /web/tools/lighthouse/audits/manifest-contains-theme_color
+      - title: Manifes Ada
+        path: /web/tools/lighthouse/audits/manifest-exists
+      - title: Properti Display Manifes Telah Disetel
+        path: /web/tools/lighthouse/audits/manifest-has-display-set
+      - title: Nama Singkat Manifes Tidak Akan Terpotong
+        path: /web/tools/lighthouse/audits/manifest-short_name-is-not-truncated
+      - title: Laman Berisi Beberapa Materi Bila Skripnya Tidak Tersedia
+        path: /web/tools/lighthouse/audits/no-js
+      - title: Laman Tidak Secara Otomatis Meminta Geolokasi Saat Pemuatan Laman
+        path: /web/tools/lighthouse/audits/geolocation-on-load
+      - title: Laman Tidak Secara Otomatis Meminta Izin Notifikasi Saat Pemuatan Laman
+        path: /web/tools/lighthouse/audits/notifications-on-load
+      - title: Situs Tidak Menggunakan Cache Aplikasi
+        path: /web/tools/lighthouse/audits/app-cache
+      - title: Situs Tidak Menggunakan console.time()
+        path: /web/tools/lighthouse/audits/console-time
+      - title: Situs Tidak Menggunakan Sumber Daya Yang Menunda Gambar Pertama
+        path: /web/tools/lighthouse/audits/blocking-resources
+      - title: Situs Tidak Menggunakan Date.now()
+        path: /web/tools/lighthouse/audits/date-now
+      - title: Situs Tidak Menggunakan document.write()
+        path: /web/tools/lighthouse/audits/document-write
+      - title: Situs Tidak Menggunakan Kejadian Mutasi
+        path: /web/tools/lighthouse/audits/mutation-events
+      - title: Situs Tidak Menggunakan CSS Flexbox Lama
+        path: /web/tools/lighthouse/audits/old-flexbox
+      - title: Situs Tidak Menggunakan Web SQL
+        path: /web/tools/lighthouse/audits/web-sql
+      - title: Situs Berada Di HTTPS
+        path: /web/tools/lighthouse/audits/https
+      - title: Situs Membuka Jangkar Eksternal Dengan Menggunakan rel="noopener"
+        path: /web/tools/lighthouse/audits/noopener
+      - title: Situs Mengalihkan Lalu Lintas HTTP ke HTTPS
+        path: /web/tools/lighthouse/audits/http-redirects-to-https
+      - title: Situs Menggunakan HTTP/2
+        path: /web/tools/lighthouse/audits/http2
+      - title: Situs Menggunakan Event Listener Pasif
+        path: /web/tools/lighthouse/audits/passive-event-listeners
+      - title: Indeks Kecepatan
+        path: /web/tools/lighthouse/audits/speed-index
+      - title: Saatnya untuk Interaktif
+        path: /web/tools/lighthouse/audits/time-to-interactive
+      - title: URL Merespons dengan 200 Bila Offline
+        path: /web/tools/lighthouse/audits/http-200-when-offline
+      - title: Ukuran dan Tanda Pengaturan Waktu Pengguna
+        path: /web/tools/lighthouse/audits/user-timing

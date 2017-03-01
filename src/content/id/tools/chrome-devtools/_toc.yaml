@@ -1,0 +1,128 @@
+toc:
+  - title: Chrome DevTools
+    section:
+    - title: Ringkasan
+      path: /web/tools/chrome-devtools/
+    - title: Konfigurasi dan Sesuaikan DevTools
+      path: /web/tools/chrome-devtools/settings
+    - title: Debug Progressive Web App
+      path: /web/tools/chrome-devtools/progressive-web-apps
+    - title: Pahami Masalah Keamanan
+      path: /web/tools/chrome-devtools/security
+    - title: Referensi Pintasan Keyboard
+      path: /web/tools/chrome-devtools/shortcuts
+    - title: Jalankan Cuplikan Kode dari Laman Apa Saja
+      path: /web/tools/chrome-devtools/snippets
+    - title: Periksa dan Edit Laman dan Gaya
+      section:
+      - title: Ringkasan
+        path: /web/tools/chrome-devtools/inspect-styles/
+      - title: Edit Gaya
+        path: /web/tools/chrome-devtools/inspect-styles/edit-styles
+      - title: Periksa Animasi
+        path: /web/tools/chrome-devtools/inspect-styles/animations
+      - title: Edit DOM
+        path: /web/tools/chrome-devtools/inspect-styles/edit-dom
+    - title: Periksa dan Kelola Storage, Cache, dan Sumber Daya
+      section:
+      - title: Periksa dan Kelola Storage, Database, dan Cache
+        path: /web/tools/chrome-devtools/manage-data/local-storage
+      - title: Periksa dan Hapus Cookie
+        path: /web/tools/chrome-devtools/manage-data/cookies
+      - title: Periksa Sumber Daya
+        path: /web/tools/chrome-devtools/manage-data/page-resources
+    - title: Simulasikan Perangkat Seluler dengan Device Mode
+      section:
+      - title: Ringkasan
+        path: /web/tools/chrome-devtools/device-mode/
+      - title: Uji Tampilan yang Terlihat dan Khusus-Perangkat yang Responsif
+        path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+      - title: Emulasikan Sensor Akselerometer dan Geolokasi
+        path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
+      - title: Emulasikan dan Uji Browser Lainnya
+        path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
+    - title: Men-debug Perangkat Android dari Jauh
+      section:
+      - title: Memulai
+        path: /web/tools/chrome-devtools/remote-debugging/
+      - title: Akses Server Lokal
+        path: /web/tools/chrome-devtools/remote-debugging/local-server
+      - title: Men-debug WebView dari Jauh
+        path: /web/tools/chrome-devtools/remote-debugging/webviews
+    - title: Periksa dan Debug JavaScript
+      section:
+      - title: Memulai
+        path: /web/tools/chrome-devtools/javascript/
+      - title: Menyetel Breakpoint
+        path: /web/tools/chrome-devtools/javascript/add-breakpoints
+      - title: Merunut Kode
+        path: /web/tools/chrome-devtools/javascript/step-code
+      - title: Pretty-Print JavaScript yang Diperkecil
+        path: /web/tools/chrome-devtools/javascript/pretty-print
+      - title: Lihat Variabel di Sumber
+        path: /web/tools/chrome-devtools/javascript/watch-variables
+      - title: Petakan Kode Praproses ke Kode Sumber
+        path: /web/tools/chrome-devtools/javascript/source-maps
+    - title: Menggunakan Konsol
+      section:
+      - title: Ringkasan
+        path: /web/tools/chrome-devtools/console/
+      - title: Diagnosis dan Masuk ke Konsol
+        path: /web/tools/chrome-devtools/console/console-write
+      - title: Bandingkan Objek Data Serupa
+        path: /web/tools/chrome-devtools/console/structured-data
+      - title: Ukur dan Hitung Eksekusi
+        path: /web/tools/chrome-devtools/console/track-executions
+      - title: Tangani Pengecualian dan Kesalahan
+        path: /web/tools/chrome-devtools/console/track-exceptions
+      - title: Referensi Console API
+        path: /web/tools/chrome-devtools/console/console-reference
+      - title: Evaluasi Ekspresi
+        path: /web/tools/chrome-devtools/console/expressions
+      - title: Memantau Kejadian
+        path: /web/tools/chrome-devtools/console/events
+      - title: Referensi Baris Perintah
+        path: /web/tools/chrome-devtools/console/command-line-reference
+    - title: Cara Memeriksa Kinerja
+      section:
+      - title: Cara Menggunakan Alat (Bantu) Timeline
+        path: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
+      - title: Referensi Kejadian Timeline
+        path: /web/tools/chrome-devtools/evaluate-performance/performance-reference
+    - title: Analisis Kinerja Waktu Proses
+      section:
+      - title: Ringkasan
+        path: /web/tools/chrome-devtools/rendering-tools/
+      - title: Percepat Eksekusi JavaScript
+        path: /web/tools/chrome-devtools/rendering-tools/js-execution
+      - title: Diagnosis Layout Sinkron Paksa
+        path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
+    - title: Ukur Kinerja Jaringan
+      section:
+      - title: Ukur Waktu Pemuatan Sumber Daya
+        path: /web/tools/chrome-devtools/network-performance/resource-loading
+      - title: Pahami Resource Timing
+        path: /web/tools/chrome-devtools/network-performance/understanding-resource-timing
+      - title: Optimalkan Kinerja pada Berbagai Kondisi Jaringan
+        path: /web/tools/chrome-devtools/network-performance/network-conditions
+    - title: Perbaiki Masalah Memori
+      section:
+      - title: Ringkasan
+        path: /web/tools/chrome-devtools/memory-problems/
+      - title: Memahami Terminologi Memori
+        path: /web/tools/chrome-devtools/memory-problems/memory-101
+      - title: Rekam Cuplikan Heap
+        path: /web/tools/chrome-devtools/memory-problems/heap-snapshots
+      - title: Gunakan Allocation Profiler
+        path: /web/tools/chrome-devtools/memory-problems/allocation-profiler
+    - title: Perluas Chrome DevTools
+      section:
+      - title: Mengintegrasikan dengan DevTools dan Chrome
+        path: https://developer.chrome.com/devtools/docs/integrating
+        status: external
+      - title: DevTools Extensions API
+        path: https://developer.chrome.com/extensions/devtools
+        status: external
+      - title: Protokol Debugger
+        path: https://developer.chrome.com/devtools/docs/debugger-protocol
+        status: external

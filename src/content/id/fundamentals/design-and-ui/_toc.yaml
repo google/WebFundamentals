@@ -1,0 +1,47 @@
+toc:
+  - title: Desain &amp; UI
+    section:
+    - title: Ringkasan
+      path: /web/fundamentals/design-and-ui/
+    - title: Dasar-Dasar UX
+      path: /web/fundamentals/design-and-ui/ux-basics/
+    - title: Desain Web Responsif
+      section:
+      - title: Dasar-Dasar Desain Web Responsif
+        path: /web/fundamentals/design-and-ui/responsive/
+      - title: Pola Desain Web Responsif
+        path: /web/fundamentals/design-and-ui/responsive/patterns
+      - title: Gambar
+        path: /web/fundamentals/design-and-ui/media/images
+      - title: Video
+        path: /web/fundamentals/design-and-ui/media/video
+      - title: Materi Multi-Perangkat
+        path: /web/fundamentals/design-and-ui/responsive/content
+    - title: Masukan Pengguna
+      section:
+      - title: Membuat Formulir yang Mengagumkan
+        path: /web/fundamentals/design-and-ui/input/forms/
+      - title: Tambahkan Sentuh Ke Situs Anda
+        path: /web/fundamentals/design-and-ui/input/touch/
+    - title: Ikon &amp; Warna Browser
+      path: /web/fundamentals/design-and-ui/browser-customization/
+    - title: Animasi
+      section:
+      - title: Ringkasan
+        path: /web/fundamentals/design-and-ui/animations/
+      - title: CSS Versus JavaScript
+        path: /web/fundamentals/design-and-ui/animations/css-vs-javascript
+      - title: Dasar-Dasar Easing
+        path: /web/fundamentals/design-and-ui/animations/the-basics-of-easing
+      - title: Easing khusus
+        path: /web/fundamentals/design-and-ui/animations/custom-easing
+      - title: Menganimasikan Antar Tampilan
+        path: /web/fundamentals/design-and-ui/animations/animating-between-views
+      - title: Memilih Easing yang Tepat
+        path: /web/fundamentals/design-and-ui/animations/choosing-the-right-easing
+      - title: Menganimasikan Tampilan Modal
+        path: /web/fundamentals/design-and-ui/animations/animating-modal-views
+      - title: Pengaturan Waktu Animasi Asimetris
+        path: /web/fundamentals/design-and-ui/animations/asymmetric-animation-timing
+      - title: Animasi dan Kinerja
+        path: /web/fundamentals/design-and-ui/animations/animations-and-performance

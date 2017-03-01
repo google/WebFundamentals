@@ -6,38 +6,35 @@ book_path: /web/fundamentals/_book.yaml
 
 # Selamat Datang {: .page-title }
 
-Apakah Anda pengembang web baru, atau pengembang lama yang sudah pro? 
-Kami memiliki bahan ajar untuk keduanya.
+Apakah Anda baru di dunia development web, atau sudah berkecimpung lama? Kami menyediakan sumber daya untuk keduanya. 
 
 
-## Codelabs {: #codelabs }
+## Codelab {: #codelabs }
 
-Code Lab menyediakan panduan, tutorial, dan panduan memprogram 
-langkah-demi-langkah. Code Lab akan memandu Anda melalui proses membangun 
-sebuah aplikasi kecil, atau menambahkan fitur baru dari aplikasi yang 
-sudah ada. Temukan lebih lanjut tentang Code Lab di 
-[codelabs.developers.google.com](https://codelabs.developers.google.com/?cat=Web){: .external }
+Codelab ini menyediakan pengalaman pengkodean langsung yang terpandu dan ber-tutorial. Sebagian besar
+codelab memandu Anda dalam proses menyusun aplikasi kecil,
+atau menambahkan fitur baru ke aplikasi yang ada.  Temukan codelab selengkapnya di
+[codelabs.developers.google.com](https://codelabs.developers.google.com/?cat=Web)
 
 <div class="attempt-left">
   <a href="codelabs/your-first-pwapp/">
     Progressive Web App Anda yang Pertama
-  </a>
+ </a>
   <p>
-    Dalam codelab ini, Anda akan membangun Progressive Web App, yang bisa 
-    tampil dengan sangat cepat, bahkan pada jaringan yang tidak stabil sekali pun, 
-    memiliki ikon di halaman utama, dan termuat sebagai aplikasi layar penuh.
-  </p>
+    Di codelab ini, Anda membangun Progressive Web App, yang dimuat dengan cepat,
+ di jaringan yang tidak stabil sekalipun, memiliki ikon di homescreen, dan dimuat dengan pengalaman
+ selayar penuh tingkat atas.
+ </p>
 </div>
 <div class="attempt-right">
   <a href="codelabs/debugging-service-workers/">
     Men-debug Service Worker
-  </a>
+ </a>
   <p>
-    Dalam codelab ini, Anda akan belajar bagaimana men-debug service worker 
-    menggunakan panel DevTools Application. Anda juga akan belajar bagaimana 
-    mensimulasikan Push Notification untuk menguji bahwa fitur subscription 
-    Anda telah disetup dengan benar.
-  </p>
+    Dalam codelab ini, Anda akan mempelajari cara men-debug service worker menggunakan
+ panel Aplikasi DevTools yang baru. Anda juga akan mempelajari cara menyimulasikan pemberitahuan Push
+ untuk memastikan bahwa langganan Anda disetel dengan benar.
+ </p>
 </div>
 
 <div style="clear:both"></div>
@@ -45,85 +42,84 @@ sudah ada. Temukan lebih lanjut tentang Code Lab di
 <div class="attempt-left">
   <a href="codelabs/offline/">
     Aplikasi Web Offline Anda yang Pertama
-  </a>
+ </a>
   <p>
-    Belajar bagaimana mengintegrasikan service worker ke aplikasi yang sudah ada untuk
-    membuat aplikasi berjalan secara offline.
-  </p>
+    Pelajari cara mengintegrasikan service worker ke aplikasi yang ada untuk
+ membuat aplikasi itu bekerja offline.
+ </p>
 </div>
 <div class="attempt-right">
   <a href="codelabs/debugging-service-workers/">
-    Menambahkan Push Notification
-  </a>
+    Menambahkan Pemberitahuan Push
+ </a>
   <p>
-    Dalam codelab ini, Anda akan belajar bagaimana mengaktifkan Push Messaging and 
-    Notification untuk aplikasi dan situs web Anda.
-  </p>
+    Dalam codelab ini, Anda akan mempelajari cara mengaktifkan pemberitahuan dan
+ perpesanan push untuk aplikasi dan situs web.
+ </p>
 </div>
 
 <div style="clear:both"></div>
 
 [Temukan dan Perbaiki Masalah Kinerja Aplikasi Web](codelabs/web-perf/)
-Codelab ini akan membantu Anda belajar untuk mengidentifikasi dan memperbaiki kinerja aplikasi web.
+Codelab ini akan membantu Anda belajar menemukan dan memperbaiki bottleneck kinerja aplikasi web.
 
-[Situs Multi-Device Anda yang Pertama](your-first-multi-screen-site/)
-Web bisa diakses di banyak sekali perangkat yang berbeda-beda, dari ponsel layar 
-kecil sampai televisi layar lebar. Setiap perangkat memiliki kelebihan dan 
-kekurangan tersendiri. Sebagai pengembang web, Anda diharapkan untuk mendukung 
-berbagai perangkat yang bermacam ragamnya.
+[Situs Multi-Perangkat Anda yang Pertama](your-first-multi-screen-site/)
+Web ini bisa diakses dari berbagai perangkat, dari ponsel berlayar-kecil hingga
+televisi berlayar-besar. Setiap perangkat memiliki keunggulan dan kekurangan masing-masing.
+Sebagai developer web, Anda diharapkan untuk mendukung semua perangkat.
 
-[Mulai Situs Anda dengan Web Starter Kit](web-starter-kit/)
-Kadang-kadang bagian tersulit dari sebuah proyek adalah bagaimana memulainya. 
-Web Starter Kit memberikan dasar yang mantap dengan berbagai alat untuk membantu
-Anda selama proses pengembangan.
+[Memulai Situs Anda dengan Web Starter Kit](web-starter-kit/)
+Kadang-kadang bagian tersulit dari proyek baru adalah memulainya. Web Starter
+Kit memberikan Anda dasar yang kuat dengan berbagai alat untuk membantu Anda selama
+proses development.
 
 
 ## Baru, Menyenangkan, dan Keren
 
-Mencari panduan awal dengan API baru atau fitur yang belum pernah 
-Anda gunakan sebelumnya? Panduan memulai ini akan membantu Anda untuk memahami
-semua yang Anda ingin ketahui untuk memulai dengan cepat dan mudah.
+Ingin memulai dengan fitur atau API baru yang belum pernah Anda gunakan sebelumnya?
+Panduan memulai ini membantu Anda memahami semua hal yang perlu
+diketahui untuk memulai dengan cepat dan mudah.
 
 <div class="attempt-left">
   <a href="primers/service-workers">
     Service Worker
-  </a>
+ </a>
   <p>
-    Apakah Anda ingin membangun halaman dengan kemampuan offline yang sebelumnya
-    hanya dimiliki oleh aplikasi native? Service worker adalah pondasinya.
-  </p>
+    Apakah Anda ingin membangun laman dengan pengalaman offline lengkap yang sebelumnya
+ terbatas untuk aplikasi asli? Service worker merupakan landasannya.
+ </p>
 </div>
 <div class="attempt-right">
   <a href="primers/promises">
-    JavaScript Promise
-  </a>
+    Promise JavaScript
+ </a>
   <p>
-    Banyak pengembangan web menggunakan mekanisme asynchronous, tapi 
-    JavaScript adalah bahasa yang single thread. Fungsi callback sebelumnya
-    digunakan sebagai standar. Kemudian, JavaScript Promise mengambil alih.
-  </p>
+    Banyak development web yang bersifat asinkron, tetapi JavaScript hanya memiliki satu
+ thread. Fungsi callback dahulu merupakan hal yang standar. Namun, sekarang promise
+ mulai menggeser posisinya.
+ </p>
 </div>
 
 <div style="clear:both"></div>
 
 <div class="attempt-left">
   <a href="primers/shadowdom">
-    Shadow DOM v1: Web Component yang Dapat Berdiri Sendiri (Self-Contained)
-  </a>
+    Shadow DOM v1: Komponen Web Pakai-Ulang
+ </a>
   <p>
-    Shadow DOM adalah DOM subtree ter-enkapsulasi yang di-render, tetapi tidak 
-    ditampilkan. Dengan Shadow DOM, Anda dapat membangun komponen web yang 
-    bisa berdiri sendiri.
-  </p>
+    Shadow DOM adalah subpohon DOM terenkapsulasi yang dirender tetapi tidak ditampilkan.
+    Dengan ini Anda dapat membangun komponen yang terisolasi dari sifat global
+ development web yang biasa.
+ </p>
 </div>
 <div class="attempt-right">
   <a href="primers/customelements">
-    Custom Elements v1: Web Component yang Bisa Digunakan Ulang (Reusable) 
-  </a>
+    Elemen Khusus v1: Komponen Web Pakai-Ulang
+ </a>
   <p>
-    Membuat tag HTML baru, menambahkan fungsi baru dari tag HTML sudah ada, 
-    atau memperluas fungsi dari komponen yang telah ditulis oleh pengembang lain.
-  </p>
+    Membuat tag HTML baru, menambah tag HTML yang ada, atau memperluas
+ komponen yang dibuat developer lain.
+ </p>
 </div>
 
 <div style="clear:both"></div>
@@ -131,23 +127,26 @@ semua yang Anda ingin ketahui untuk memulai dengan cepat dan mudah.
 <div class="attempt-left">
   <a href="primers/payment-request/">
     Payment Request API: Panduan Integrasi
-  </a>
+ </a>
   <p>
-    Perlu standarisasi proses pembayaran untuk memudahkan pengguna dan 
-    menaikkan tingkat konversi pembayaran melalui mobile.
-  </p>
+    Menstandarkan alur pembayaran bertujuan menyederhanakan proses bagi pengguna
+ dan menaikkan tingkat rasio konversi pembayaran seluler yang sangat rendah.
+ </p>
 </div>
 <div class="attempt-right">
   <a href="principles/">
-    Prinsip-Prinsip Dasar Desain Situs
-  </a>
+    Prinsip Desain Situs
+ </a>
   <p>
-    Google dan AnswerLab melakukan kajian untuk meneliti bagaimana pengguna
-    berinteraksi dengan beragam situs mobile. Tujuannya adalah untuk menjawab 
-    pertanyaan, 'Apa yang membuat situs mobile menarik?'
-  </p>
+    Google dan AnswerLab melakukan penelitian mengenai cara pengguna berinteraksi dengan
+ berbagai situs seluler. Tujuannya adalah menjawab pertanyaan,
+ "Apa yang membuat sebuah situs seluler bagus?"
+ </p>
 </div>
 
 <div style="clear:both"></div>
 
-[service-worker-primer]: /web/fundamentals/getting-started/primers/service-workers "Service Workers: An Introduction"
+<<../../_common-links.md>>
+
+
+{# wf_devsite_translation #}

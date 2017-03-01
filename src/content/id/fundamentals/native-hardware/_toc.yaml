@@ -1,0 +1,17 @@
+toc:
+  - title: Mengakses Perangkat Keras Bawaan
+    section:
+    - title: Ringkasan
+      path: /web/fundamentals/native-hardware/
+    - title: Lokasi Pengguna
+      path: /web/fundamentals/native-hardware/user-location/
+    - title: Orientasi &amp; Gerakan Perangkat
+      path: /web/fundamentals/native-hardware/device-orientation/
+    - title: Merekam Audio dari Pengguna
+      path: /web/fundamentals/native-hardware/recording-audio/
+    - title: Mengambil Gambar dari Pengguna
+      path: /web/fundamentals/native-hardware/capturing-images/
+    - title: Membuat Pengalaman Layar Penuh
+      path: /web/fundamentals/native-hardware/fullscreen/
+    - title: Klik untuk Menelepon
+      path: /web/fundamentals/native-hardware/click-to-call/
