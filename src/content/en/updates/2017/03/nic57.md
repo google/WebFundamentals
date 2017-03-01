@@ -95,7 +95,8 @@ And there’s lots more!
   [`.redirected`](https://developer.mozilla.org/en-US/docs/Web/API/Response/redirected)
   attribute to help avoid untrustworthy responses and reduce the risk of open
   redirectors. 
-* All `-webkit-` prefixed IndexedDB global aliases have been removed, after
+* All `-webkit-` prefixed [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+  global aliases have been removed, after
   their deprecation in M38. 
 * And one of my favorites &mdash; new
   [`padStart`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
