@@ -18,7 +18,7 @@ In this episode:
 
 * Jake is bad at quizzes.
 * [NodeIterator](https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator) and [TreeWalker](https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker).
-* New exciting stuff in Safari.
+* New, exciting stuff in Safari.
 * [Firefox `<select>`](https://hg.mozilla.org/mozilla-central/rev/544ad41d3dcf9059a70aeae55a9dcce031f22b1c).
 * Animating height with performance.
 * [Fetch canceling](https://github.com/whatwg/fetch/issues/447#issuecomment-281731850).
