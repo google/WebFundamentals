@@ -33,7 +33,7 @@ I’m Pete LePage, let’s dive in and see what’s new for developers in Chrome
 
 <div class="clearfix"></div>
 
-## CSS Grid Layout {: #gridlayout }
+## CSS grid layout {: #gridlayout }
 
 <img src="/web/updates/images/2017/03/nic57/grid-layout.png" class="attempt-right">
 
@@ -97,7 +97,7 @@ And there’s lots more!
   redirectors. 
 * All `-webkit-` prefixed IndexedDB global aliases have been removed, after
   their deprecation in M38. 
-* And one of my favorites -- new
+* And one of my favorites &mdash; new
   [`padStart`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
   and 
   [`padEnd`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd)
@@ -115,8 +115,8 @@ were instrumental on landing the new CSS Grid and `caret-color` features.
 ## Stay up to date
 
 If you want to stay up to date with Chrome and know what’s coming, be sure to
-[subscribe](https://goo.gl/6FP1a5), follow 
-[@ChromiumDev](//twitter.com/chromiumdev) on Twitter and be sure to check out the
+[subscribe](https://goo.gl/6FP1a5) to our channel, or follow 
+[@ChromiumDev](//twitter.com/chromiumdev) on Twitter. And be sure to check out the
 [videos from the Chrome Dev Summit](https://www.youtube.com/playlist?list=PLNYkxOF6rcIBTs2KPy1E6tIYaWoFcG3uj)
 for a deeper dive into some of the awesome things the Chrome team is working on.
 
