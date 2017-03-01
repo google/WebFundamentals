@@ -348,6 +348,11 @@ function testMarkdown(filename, contents, options) {
     let position;
     let isInclude = wfRegEx.RE_MD_INCLUDE.test(contents);
 
+    if (wfRegEx.RE_DEVSITE_TRANSLATION.test(contents)) {
+      options.enforceLineLengths = false;
+      options.lastUpdateMaxDays = null;
+    }
+
     // Verify there are no dots in the filename
     let numDots = filename.split('.');
     if (numDots.length !== 2) {
