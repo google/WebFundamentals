@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 이 코드랩에서는 웹 앱에 푸시 알림을 추가하는 방법을 배워봅니다.
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2016-11-21T15:42:20Z #}
 {# wf_published_on: 2016-01-01 #}
 

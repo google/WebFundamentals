@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Neste codelab você aprenderá como adicionar notificações push ao seu app da Web.
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2016-11-21T15:42:20Z #}
 {# wf_published_on: 2016-01-01 #}
 

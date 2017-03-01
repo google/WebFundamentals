@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Neste codelab, você vai criar um Progressive Web App, que é carregado com rapidez, mesmo em redes instáveis, tem um ícone na tela inicial e é carregado como uma experiência de tela inteira de alto nível.
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2017-01-05T16:32:36Z #}
 {# wf_published_on: 2016-01-01 #}
 

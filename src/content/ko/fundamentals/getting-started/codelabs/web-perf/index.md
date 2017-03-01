@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 이 코드랩은 웹 앱 성능 병목 현상을 찾아서 해결하도록 도와드립니다.
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2016-10-20T18:16:09Z #}
 {# wf_published_on: 2016-01-01 #}
 

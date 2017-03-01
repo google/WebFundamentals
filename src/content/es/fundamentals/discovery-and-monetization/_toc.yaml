@@ -12,7 +12,7 @@ toc:
       status: external
     - title: Manejo de pagos
       section:
-      - title: Payment Request API: Una guía de integración
+      - title: "Payment Request API: Una guía de integración"
         path: /web/fundamentals/discovery-and-monetization/payment-request/
       - title: Integración de Android Pay en Payment Request
         path: /web/fundamentals/discovery-and-monetization/payment-request/android-pay

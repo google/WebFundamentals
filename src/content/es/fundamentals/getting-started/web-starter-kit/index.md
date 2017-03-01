@@ -194,7 +194,7 @@ se inicia un servidor y se abre un navegador. **No se cuenta con las herramienta
 Browser Sync**, pero es un método confiable para probar tu sitio antes de implementarlo.
 
 
-## Configuración de Web Starter Kit {: .page-title }
+## Configuración de Web Starter Kit
 
 
 El funcionamiento de Web Starter Kit se basa en NodeJS, NPM y Sass. Una vez que estén instalados, tendrás todo lo que necesitas para comenzar a usar Web Starter Kit en tus proyectos.

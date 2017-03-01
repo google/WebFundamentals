@@ -4,7 +4,7 @@ description: Melhorando a acessibilidade para páginas da Web
 
 
 {# wf_updated_on: 2016-06-26 #}
-{# wf_published_on: 2016-06-26 #}****
+{# wf_published_on: 2016-06-26 #}
 
 #  Acessibilidade {: .page-title }
 

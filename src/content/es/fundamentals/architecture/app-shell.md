@@ -1,6 +1,6 @@
-Descripción deproject_path: /web/_project.yaml 
+project_path: /web/_project.yaml 
 book_path: /web/fundamentals/_book.yaml
-: La arquitectura de shell de la app mantiene tu IU local y carga contenido dinámicamente sin sacrificar las vínculos y la visibilidad de la Web. 
+description: La arquitectura de shell de la app mantiene tu IU local y carga contenido dinámicamente sin sacrificar las vínculos y la visibilidad de la Web. 
 
 {# wf_updated_on: 2016-09-26 #} 
 {# wf_published_on: 2016-09-27 #}

@@ -19,7 +19,7 @@ una ubicación específica.
 
 Advertencia: No todos los navegadores usan el mismo sistema de coordenadas, y podrían informar diferentes valores en situaciones idénticas. Esto ha mejorado con el tiempo, pero asegúrate de probar tu situación.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 * Detecta qué lado del dispositivo se encuentra orientado hacia arriba y cómo rota el mismo.
 * Obtén más información sobre cómo y cuándo responder a los eventos de movimiento y orientación.

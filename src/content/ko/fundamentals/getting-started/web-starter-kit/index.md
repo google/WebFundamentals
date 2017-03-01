@@ -194,7 +194,7 @@ SVG의 경우 필요하지 않은 속성이 모두 제거되거나, 존재하는
 브라우저 동기화 기능이 없지만** 사이트를 배포하기 전에 테스트할 수 있는 신뢰할 수 있는 방법입니다.
 
 
-## Web Starter Kit 설정 {: .page-title }
+## Web Starter Kit 설정
 
 
 Web Starter Kit는 NodeJS, NPM 및 Sass를 사용하여 작동됩니다. 이들이 모두 구축되었다면 프로젝트에서 Web Starter Kit 사용을 시작하는 데 필요한 모든 것이 갖추어진 것입니다.

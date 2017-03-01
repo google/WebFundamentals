@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Este codelab te ayudará a aprender a identificar y solucionar los cuellos de botella de rendimiento de la app web.
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2016-10-20T18:16:09Z #}
 {# wf_published_on: 2016-01-01 #}
 

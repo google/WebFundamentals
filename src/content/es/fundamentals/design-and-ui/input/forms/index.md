@@ -19,7 +19,7 @@ description: Es complicado completar formularios desde el celular. Los mejores f
 Es complicado completar formularios desde el celular. Los mejores formularios son aquellos que poseen menos entradas. En los buenos formularios se proporcionan tipos de entradas semánticas. Las claves deben cambiar para que coincidan con los tipos de entradas de los usuarios; estos últimos eligen una fecha en un calendario. Mantén a tu usuario informado. Las herramientas de validación deben informar al usuario lo que debe hacer antes de enviar el formulario.
 
 
-## Diseña formularios eficaces {: .page-title }
+## Diseña formularios eficaces
 
 
 Para diseñar formularios eficaces, evita las acciones repetidas, solicita solo la información necesaria y orienta a los usuarios mostrándoles el punto en que se encuentren en los formularios de muchas partes.

@@ -19,7 +19,7 @@ description: Formulir sulit diisi pada perangkat seluler. Formulir terbaik adala
 Formulir sulit diisi pada perangkat seluler. Formulir terbaik adalah formulir dengan input paling sedikit. Formulir yang baik menyediakan tipe input semantik. Kunci harus berubah sesuai jenis input pengguna; pengguna memilih tanggal di kalender. Selalu beri tahu pengguna. Alat validasi harus memberi tahu pengguna apa yang harus mereka lakukan sebelum mengirimkan formulir.
 
 
-## Mendesain formulir efisien {: .page-title }
+## Mendesain formulir efisien
 
 
 Mendesain formulir efisien dengan menghindari tindakan yang berulang, hanya meminta informasi yang diperlukan dan memandu pengguna dengan menunjukkan seberapa jauh mereka dalam formulir multi-bagian.
