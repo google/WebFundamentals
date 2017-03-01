@@ -1,240 +1,318 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: A Web pode ser acessada por uma grande variedade de dispositivos, de celulares com telas minúsculas a TVs com telas enormes. Saiba como criar um site que funcione de maneira eficaz em todos esses dispositivos.
+description: A Web pode ser acessada por diversos tipos de dispositivos, desde celulares com pequenas telas até televisores com grandes telas. Cada dispositivo inclui seus próprios benefícios e limitações. Como um desenvolvedor Web, você deve oferecer suporte a todos os tipos de dispositivos.
 
-{# wf_updated_on: 2014-01-05 #}
+{# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2013-12-31 #}
 
-# Seu primeiro site para múltiplos dispositivos {: .page-title }
+# Seu Primeiro Site para Vários Dispositivos {: .page-title }
+
+Atenção: Este artigo não é atualizado há algum tempo e pode não refletir a realidade. Confira o curso gratuito de [Web design responsivo](https://udacity.com/ud893) no Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
+<img src="images/finaloutput-2x.jpg" alt="muitos dispositivos mostrando o projeto final" class="attempt-right">
+
+Criar experiências para vários dispositivos não é tão difícil quando parece.
+Neste guia, criaremos uma página de destino de produto para o 
+[CS256: Curso de desenvolvimento para Web móvel](https://www.udacity.com/course/cs256)
+ que funciona bem em diferentes tipos de dispositivos.
+
+O desenvolvimento para vários dispositivos com diferentes recursos, tamanhos de tela
+e métodos de interação amplamente diferentes pode parecer assustador, se não impossível
+de começar.
+
+Criar um site totalmente responsivo não é tão difícil quanto você imagina e, para mostrar isso a
+você, este guia orienta você pelas etapas que podem ser usadas para começar o trabalho.
+Nós dividimos o guia em duas etapas simples:
+
+1. Definir a arquitetura de informações (comumente conhecida como IA) e a estrutura da página,
+2. Adicionar elementos de design para tornar a página responsiva e bonita em todos os dispositivos.
 
 
-O desenvolvimento de experiências para diversos dispositivos não é tão difícil quanto parece. Ao seguir as instruções deste guia, criaremos um exemplo de página de destino do produto para nosso <a href='https://www.udacity.com/course/cs256'>curso CS256 Desenvolvimento da Web para dispositivos móveis</a> que funcionará de maneira eficiente em diferentes tipos de dispositivos.
+## Crie seu conteúdo e sua estrutura
 
-<img src="images/finaloutput-2x.jpg" alt="muitos dispositivos que exibem o projeto final">
-
-Criar um site para múltiplos dispositivos com funcionalidades, tamanhos de telas e métodos de interação completamente distintos pode parecer uma tarefa assustadora e até impossível.
-
-Na verdade, criar sites totalmente responsivos não é tão difícil assim e, para comprovar, este guia orientará você ao longo das etapas necessárias para desenvolver esse projeto.  Dividimos a tarefa em duas etapas simples:
-
-1. Definir a arquitetura de informações e a estrutura da página, 2. Adicionar elementos de design para tornar o site responsivo e eficaz em todos os dispositivos.
-
-
-
-
-## Crie seu conteúdo e uma estrutura 
-
-
-
-
-O conteúdo é o elemento mais importante de qualquer site. Então vamos criar um design a partir do conteúdo, evitando que o conteúdo seja limitado pelo design. Neste guia, identificaremos o conteúdo necessário, criaremos uma estrutura de páginas a partir desse conteúdo e apresentaremos a página em um layout simples e linear que funciona de maneira eficaz em janelas de visualização de tamanhos variados.
+O conteúdo é o aspecto mais importante de qualquer site. Então, vamos criar o design para o
+conteúdo e não deixar que o design defina o conteúdo. Neste guia, identificaremos
+o conteúdo de que precisamos primeiro, criaremos uma estrutura de página com
+base nesse conteúdo e apresentaremos a página em um layout linear simples que
+funciona bem em janelas de visualização estreitas e largas.
 
 
 ### Crie a estrutura da página
 
-Identificamos o que é necessário:
+Nós identificamos que precisamos de:
 
-1.  Uma área que descreva em alto nível nosso produto, o curso `CS256: desenvolvimento da Web para dispositivos móveis`
-2.  Um formulário para coletar informações dos usuários que estão interessados no nosso produto
-3.  Uma descrição detalhada e um vídeo
-4. Imagens do produto em ação
-5. Uma tabela de dados com informações que comprovem o que foi dito
+1. Uma área que descreve com alto nível nosso produto "CS256: Curso de desenvolvimento para Web móvel"
+2.  Um formulário para coletar informações de usuários interessados no nosso produto
+3.  Uma descrição aprofundada e um vídeo
+4.  Imagens do produto em ação
+5.  Uma tabela de dados com informações para suportar as afirmações
 
-### TL;DR {: .hide-from-toc }
-- Primeiramente, identifique o conteúdo de que você precisa.
-- Faça um esboço da arquitetura de informações para janelas de visualização largas e estreitas.
-- Crie uma visualização básica da página que inclua o conteúdo sem detalhes de estilo.
+#### TL;DR {: .hide-from-toc }
+- Primeiro, identifique o conteúdo de que precisa.
+- Esboce a Arquitetura de Informações (IA) para janelas de visualização largas e estreitas.
+- Crie uma visualização básica da página com o conteúdo, mas sem o estilo.
 
+Também criamos uma arquitetura de informações básica e um layout para
+janelas de visualização estreitas e largas.
 
-Também criamos uma arquitetura básica de informações e um layout para janelas de visualização largas e estreitas.
+<div class="attempt-left">
+  <figure>
+    <img src="images/narrowviewport.png" alt="IA de janela de visualização estreita">
+    <figcaption>
+      IA de janela de visualização estreita
+     </figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/wideviewport.png" alt="IA de janela de visualização larga">
+    <figcaption>
+      IA de janela de visualização larga
+     </figcaption>
+  </figure>
+</div>
 
-<img class="attempt-left" src="images/narrowviewport.png" alt="Janela estreita IA">
-<img  class="attempt-right" src="images/wideviewport.png" alt="Janela larga IA">
-<div class="clearfix"></div>
+<div style="clear:both;"></div>
 
-
-Isso pode ser facilmente convertido nas seções básicas da estrutura de uma página que usaremos em todo este projeto.
+Isso pode ser facilmente convertido nas seções esboçadas de uma página básica que
+usaremos para o restante deste projeto.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addstructure.html){: target="_blank" .external }
+
 ### Adicione conteúdo à página
 
-A estrutura básica do site está completa. Sabemos quais seções são necessárias, o conteúdo que será exibido nessas seções e onde ele deve ser posicionado na arquitetura geral de informações. Agora podemos desenvolver nosso site.
+A estrutura básica do site está completa. Sabemos de que seções precisamos, o
+conteúdo que será exibido nessas seções e onde posicionar a
+arquitetura de informações geral. Agora podemos começar a compilar o site.
 
-Note: Estilo virá mais tarde
+Observação: Aplicaremos o estilo depois
 
-#### Crie o título e o formulário
+### Crie o título e o formulário
 
-O título e o formulário de notificação de solicitação são os componentes fundamentais da nossa página. Eles devem ser apresentados imediatamente ao usuário.
+O título e o formulário de notificação de solicitação são componentes essenciais da
+nossa página. Eles devem ser apresentados ao usuário imediatamente.
 
-No título, adicione texto simples para descrever o curso:
+No título, adicione um texto simples para descrever o curso:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
-Também é necessário preencher o formulário.
-O formulário é simplificado e será usado para coletar o nome e o número de telefone dos usuários, além de uma indicação de horário para que possamos entrar em contato com eles.
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addheadline.html){: target="_blank" .external }
 
-Todos os formulários devem ter rótulos e marcadores de posição para que os usuários possam identificar facilmente os elementos, entender quais informações serão inseridas em cada campo e também ajudar as ferramentas de acessibilidade a compreender a estrutura do formulário.  O atributo de nome não apenas envia os dados do formulário ao servidor, mas também é usado para fornecer dicas importantes ao navegador sobre como preencher automaticamente o formulário para o usuário.
+Também precisamos preencher o formulário.
+Ele será um formulário simples que coleta o nome dos usuários, seus endereços de e-mail
+e números de telefone.
 
-Adicionaremos tipos de semântica para agilizar e simplificar a inserção de dados pelos usuários em dispositivos móveis.  Por exemplo, ao inserir o número de telefone, o usuário verá apenas o teclado numérico.
+Todos os formulários devem ter rótulos e marcadores para permitir que os usuários
+foquem em elementos, entendam as informações que devem ser preenchidas e para ajudar
+ferramentas de acessibilidade a entender a estrutura do formulário.  O atributo name
+não só envia o valor do formulário ao servidor, como também é usado para fornecer dicas importantes
+ao navegador sobre como preencher o formulário automaticamente para o usuário.
+
+Adicionaremos tipos semânticos para que os usuários possam inserir
+conteúdo em dispositivos móveis de forma simples e rápida.  Por exemplo, ao inserir um número
+de telefone, o usuário deve ver apenas um teclado numérico.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
-{# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addform.html){: target="_blank" .external }
 
-#### Crie a seção `Vídeo e informações`
+#### Crie a seção de vídeo e informações
 
-A seção `Vídeo e informações` incluirá um conteúdo mais detalhado.
-Ela oferecerá uma lista de recursos do nosso produto e um marcador de posição de vídeo que mostra aos usuários a utilização do produto.
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
-</pre>
-
-Os vídeos são muito usados para descrever conteúdo de forma mais interativa e também para demonstrar um produto ou conceito.
-
-Ao seguir as práticas recomendadas, você conseguirá integrar vídeos ao seu site de forma facilitada:
-
-* Adicione um atributo `controles` para facilitar a reprodução do vídeo.
-* Adicione uma imagem em formato pôster para oferecer uma visualização do conteúdo.
-* Adicione diversos elementos `<source>` com base nos formatos de vídeo compatíveis.
-* Adicione um texto substituto para permitir que os visitantes façam o download do vídeo se não conseguirem visualizá-lo na janela.
+A seção de vídeo e informações do conteúdo será um pouco mais aprofundada.
+Ela conterá uma lista de recursos dos nossos produtos e um
+marcador de vídeo que mostra o produto em funcionamento para o usuário.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
-{# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addvideo.html){: target="_blank" .external }
 
-#### Crie a seção `Imagens`
+Vídeos são frequentemente usados para descrever conteúdo de forma mais interativa
+e para demonstrar um produto ou conceito.
 
-Os sites sem imagem geralmente são mais entediantes. Existem dois tipos de imagens:
+Ao seguir as práticas recomendadas, você pode integrar um vídeo em seu site com facilidade:
 
-*  Imagens de conteúdo &mdash; são adicionadas de forma in-line ao documento e usadas para fornecer informações adicionais sobre o conteúdo.
-*  Imagens de estilo &mdash; em sua maioria, são posicionadas em segundo plano, com padrões e gradientes, e usadas para deixar o site mais atraente.  Essas imagens serão abordadas no [próximo artigo](#).
-
-A seção `Imagens` da nossa página é um conjunto de imagens de conteúdo.
-
-As imagens de conteúdo são importantes para transmitir o significado da página. Pense nelas como as imagens usadas em artigos de jornais. As imagens usadas são fotos dos tutores do projeto: Chris Wilson, Peter Lubbers e Sean Bennet.
+*  Adicione um atributo `controls` para facilitar a reprodução do vídeo.
+*  Adicione uma imagem de `poster` para dar uma prévia do conteúdo.
+*  Adicione vários elementos `<source>` de acordo com os formatos de vídeo suportados.
+*  Adicione texto reserva para que as pessoas possam fazer download do vídeo se não conseguirem reproduzi-lo na janela.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" adjust_indentation="auto" %}
 </pre>
 
-As imagens são dimensionadas em 100% da largura da tela. Essa formatação funciona com eficiência em dispositivos com tela estreita e não apresenta a mesma eficácia em janelas de visualização largas (como computadores).  Essa questão será abordada na seção de design ágil.
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addvideo.html){: target="_blank" .external }
 
-{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
+#### Crie a seção de imagens
 
-Muitas pessoas não conseguem visualizar as imagens e precisam fazer uso de tecnologias de assistência, como leitores de tela, que analisam os dados na página e transmitem verbalmente essas informações ao usuário.  É preciso incluir uma tag `alt` de descrição das imagens de conteúdo que possa ser informada pelo leitor de tela ao usuário.
+Sites sem imagens podem ser um pouco chatos. Existem dois tipos de imagem:
 
-Quando adicionar tags `alt`, procure manter o texto alternativo o mais breve possível ao descrever a imagem por completo.  Por exemplo, em nossa demonstração, esse atributo foi formatado para `Nome: função`. Assim, fornecemos informações suficientes para que o usuário entenda que a seção aborda os criadores e as funções deles.
+*  Imagens de conteúdo &mdash; imagens em linha no documento e que são usadas
+ para transmitir informações adicionais sobre o conteúdo.
+*  Imagens estilísticas &mdash; imagens usadas para que o site
+ pareça mais bonito; frequentemente, são imagens de fundo, padrões e gradientes.  Abordaremos
+ esse tópico na [próxima seção](#make-it-responsive).
+
+A seção de imagens da nossa página é um conjunto de imagens de conteúdo.
+
+Imagens de conteúdo são essenciais para transmitir o significado da página. Considere-as
+como as imagens usadas em artigos de jornais.  As imagens que estamos usando são
+fotos dos instrutores do projeto:  Chris Wilson, Peter Lubbers e Sean
+Bennet.
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" adjust_indentation="auto" %}
+</pre>
+
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addimages.html){: target="_blank" .external }
+
+As imagens estão configuradas para serem dimensionadas a 100% da largura da tela. Isso funciona
+bem em dispositivos com uma janela de visualização estreita, mas não tão bem nos que têm uma
+janela de visualização larga (como um computador).  Isso será administrado na seção de design
+responsivo.
+
+Muitas pessoas não têm a capacidade de visualizar imagens e frequentemente usam tecnologias
+de assistência, como um leitor de telas, para analisar os dados na página e
+transmitir essas informações ao usuário verbalmente.  Certifique-se de que todas as suas imagens
+de conteúdo tenham uma tag `alt` descritiva que o leitor de tela possa ler para
+o usuário.
+
+Ao adicionar tags `alt`, mantenha o texto delas o mais conciso possível
+para descrever a imagem por completo.  Por exemplo, na nossa demonstração, nós simplesmente
+formatamos o atributo como "Nome: Função", pois isso apresenta informações suficientes
+para que o usuário entenda que a seção é sobre os autores e seus
+cargos.
 
 #### Adicione a seção de dados tabulados
 
-A última seção é uma tabela simples que usamos para mostrar dados estatísticos específicos sobre o produto.
+A última seção é uma tabela simples usada para mostrar estatísticas específicas
+sobre o produto.
 
-As tabelas devem ser usadas unicamente para apresentar dados, por exemplo, em matrizes de informações.
+As tabelas só devem ser usadas para dados tabulares, como matrizes de informações.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addtable.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
+
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addtable.html){: target="_blank" .external }
 
 #### Adicione um rodapé
 
-A maioria dos sites precisa de um rodapé para exibir informações como Termos e Condições, isenções de responsabilidade e outros tipos de conteúdo que não precisam ser exibidos na área principal de navegação nem junto ao conteúdo principal da página.
+A maioria dos sites precisa de um rodapé para exibir conteúdo como Termos e Condições,
+avisos e outros conteúdos que não devem ser inseridos na navegação principal
+ou na área principal de conteúdo da página.
 
-Em nosso site, incluiremos links para os Termos e Condições, uma página com informações de contato e nossos perfis nas mídias sociais.
+No nosso site, criaremos um simples rodapé de marcador.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
-### Índice
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addcontent.html){: target="_blank" .external }
 
-Criamos o esboço do site e identificamos todos os principais elementos estruturais.  Também verificamos se todo o conteúdo relevante está pronto e adequado para atender às nossas necessidades comerciais.
+### Resumo
 
+Nós criamos o esboço do site e identificamos todos os principais
+elementos estruturais.  Também garantimos que todo o conteúdo
+relevante esteja pronto e no local adequado para atender às nossas necessidades de negócios.
 
-<img class="attempt-left" src="images/content.png" alt="Content">
-<img class="attempt-right" src="images/narrowsite.png" alt="">
+<div class="attempt-left">
+  <figure>
+    <img src="images/content.png" alt="Conteúdo">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Conteúdo e estrutura  </a>
+    </figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img  src="images/narrowsite.png" alt="Site projetado" style="max-width: 100%;">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Site final  </a>
+    </figcaption>
+  </figure>
+</div>
 
-
-Você perceberá que a página ainda não está visualmente agradável, mas isso é algo intencional. 
-O conteúdo é o aspecto mais importante de qualquer site, e precisamos garantir que a densidade e a arquitetura de informações estejam solidificadas. Este guia nos forneceu uma excelente base a partir da qual poderemos evoluir. No próximo guia, adicionaremos elementos de estilo ao conteúdo.
-
-
-
-
-
-## Torne o site responsivo 
-
-
-
-
-A Web pode ser acessada por uma grande variedade de dispositivos, de celulares com telas minúsculas a TVs com telas enormes. Cada dispositivo oferece benefícios e limitações específicos. Como desenvolvedor da Web, você precisa oferecer suporte a todos os tipos de dispositivos.
-
-
-Desenvolveremos um site que funcione em todos os tamanhos de tela e tipos de dispositivos. No [artigo anterior](#), projetamos a arquitetura de informações da página e definimos a estrutura básica.
-Neste guia, aproveitaremos a estrutura básica e o conteúdo e os transformaremos em uma página incrível que será responsiva em um grande número de tamanhos de tela.
-
-
-<figure class="attempt-left">
-  <img  src="images/content.png" alt="Conteúdo">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Conteúdo e estrutura </a> </figcaption>
-</figure>
-<figure class="attempt-right">
-  <img  src="images/narrowsite.png" alt="Designed site">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Versão final do site </a> </figcaption>
-</figure>
-<div class="clearfix"></div>
+Você perceberá que, no momento, a aparência da página está péssima; isso é intencional.
+O conteúdo é o aspecto mais importante de qualquer site e precisamos garantir que
+tenhamos uma arquitetura e densidade de informações robustas. Este guia nos proporcionou uma ótima
+base para desenvolver. Definiremos o estilo do nosso conteúdo no próximo guia.
 
 
-Ao seguir os princípios de desenvolver um site primeiramente para celulares, começamos com uma janela de visualização estreita, similar à tela de um celular, e fazemos todos os ajustes iniciais voltados para essa experiência.
-Em um segundo momento, redimensionamos o projeto para dispositivos maiores.
-Para fazer isso, ampliaremos a janela de visualização e decidiremos se o design e o layout estão visualmente adequados.
 
-Anteriormente, criamos dois designs para apresentar nosso conteúdo. Agora, precisamos adaptar nossa página de acordo com esses layouts.
-Para isso, precisamos decidir onde serão colocados os pontos de quebra, ou seja, pontos em que o layout e os estilos são alterados, com base na forma como o conteúdo é mostrado em diferentes tamanhos de tela.
+## Adote o design responsivo {: #make-it-responsive }
+
+A Web pode ser acessada por diversos tipos de dispositivos, desde celulares com pequenas
+telas até televisores com grandes telas. Cada dispositivo apresenta seus próprios
+benefícios e limitações. Como um desenvolvedor Web, você deve oferecer
+suporte a todos os tipos de dispositivos.
+
+
+Estamos criando um site que funciona em diversos tamanhos de tela e tipos
+de dispositivo. Nós criamos a arquitetura de informações da página e uma
+estrutura básica. Nesta seção, transformaremos nossa estrutura básica com
+conteúdo em uma bela página que é responsiva em uma grande quantidade
+de tamanhos de tela.
+
+Seguindo os princípios do desenvolvimento Web que prioriza os dispositivos móveis,
+começamos com uma janela de visualização estreita &mdash; similar a um celular &mdash; e compilamos
+primeiro para essa experiência. Em seguida, expandimos para classes de dispositivos maiores. Podemos fazer isso
+tornando a janela de visualização mais larga e verificando se o design e o
+layout estão adequados.
+
+Anteriormente, nós criamos alguns designs de alto nível diferentes para como o conteúdo
+deve ser exibido. Agora, precisamos fazer com que nossa página se adapte a esses diferentes layouts.
+Para isso, devemos decidir onde posicionar nossos pontos de interrupção &mdash; pontos
+onde o layout e os estilos mudam &mdash; com base em como o conteúdo se encaixa no
+tamanho da tela.
 
 ### TL;DR {: .hide-from-toc }
 - Sempre use uma janela de visualização.
-- Sempre comece com uma janela de visualização estreita e redimensione-a para dispositivos maiores.
-- Estabeleça os pontos de quebra de acordo com a necessidade de adaptar o conteúdo.
-- Crie uma visão de alto nível do layout nos principais pontos de quebra.
+- Sempre comece com uma janela de visualização estreita e vá ampliando.
+- Baseie seus pontos de interrupção em quando precisar adaptar o conteúdo.
+- Crie uma visão de alto nível do seu layout nos principais pontos de interrupção.
 
 
-### Adicionar um janela de visualização
+### Adicione uma janela de visualização
 
-Mesmo no caso de uma página básica, sempre é **obrigatório** incluir uma metatag de janela de visualização.
-A janela de visualização é o componente crucial da criação de experiências adequadas a múltiplos dispositivos.
-Sem ela, o site não funcionará de forma eficaz em um dispositivo móvel.
+Mesmo para uma página básica, você **precisa** sempre incluir uma meta tag de janela de visualização.
+A janela de visualização é o componente mais importante para criar experiências
+para vários dispositivos. Sem ela, seu site não funcionará bem em um dispositivo móvel.
 
-A janela de visualização indica ao navegador que a página precisa ser redimensionada para se ajustar ao tamanho da tela.  Existem várias configurações de janela de visualização que podem ser especificadas para controlar a exibição da página. Por padrão, recomendamos:
+A janela de visualização indica para o navegador que a página precisa ser dimensionada para caber
+na tela. Existem muitas configurações diferentes que podem ser especificadas para
+a janela de visualização para controlar a exibição da página.  Como padrão, recomendamos:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
-A janela de visualização fica no título do documento e só precisa ser informada uma vez.
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/viewport.html){: target="_blank" .external }
 
-{# include shared/related_guides.liquid inline=true list=page.related-guides.responsive #}
+A janela de visualização se encontra no cabeçalho do documento e só precisa ser declarada uma vez.
 
-### Aplicar um estilo simples 
+### Aplique um estilo simples
 
-Nosso produto e nossa empresa já dispõem de diretrizes muito específicas em um guia de estilo para configurar fontes e a promoção da marca.
+Nosso produto e nossa empresa já têm diretrizes de fonte e marca específicas apresentadas
+em um guia de estilo.
 
-#### Guia de estil
+#### Guia de estilo
 
-O guia de estilo é uma maneira útil de conseguir uma compreensão de alto nível da representação visual da página, além de ajudar a manter um trabalho consistente em todo o projeto de criação do design.
+Um guia de estilo é uma forma útil de obter uma compreensão de alto nível da representação visual
+da página e ajuda você a garantir um design totalmente consistente.
 
-##### Cores 
+#### Cores
 
 <div class="styles" style="font-family: monospace;">
   <div style="background-color: #39b1a4">#39b1a4</div>
@@ -245,18 +323,22 @@ O guia de estilo é uma maneira útil de conseguir uma compreensão de alto nív
   <div style="background-color: #dc4d38">#dc4d38</div>
 </div>
 
-#### Adicione imagens de estilo
+#### Adicione imagens estilísticas
 
-No guia anterior, adicionamos imagens denominadas `imagens de conteúdo`.  Essas imagens eram importantes para descrever o produto.  As imagens de estilo não fazem parte do conteúdo fundamental do site, mas adicionam um elemento visual de destaque e ajudam a direcionar a atenção do usuário para uma parte específica do conteúdo.
+<img  src="images/narrowsite.png" alt="Site projetado"  class="attempt-right" />
 
-Um bom exemplo disso é uma imagem para a seção do título no conteúdo `acima da dobra`. Ela é geralmente usada para convencer o usuário a ler mais detalhes sobre o produto.
+No guia anterior, nós adicionamos imagens chamadas "imagens de conteúdo".  Essas eram
+imagens que eram importantes para a narrativa do nosso produto.  Imagens estilísticas
+são imagens que não são necessárias como parte do conteúdo principal, mas que agregam um impacto visual
+ou ajudam a orientar a atenção do usuário para um conteúdo específico.
 
+Um bom exemplo disso é uma imagem de título para o conteúdo "acima da dobra".  Esse
+tipo de imagem é frequentemente usado para incentivar o usuário a ler mais sobre o produto.
 
-  <img  src="images/narrowsite.png" alt="Site projetado">
+Elas podem ser muito fáceis de incluir. No nosso caso, ela será o plano de fundo do
+cabeçalho e a aplicaremos com um CSS simples.
 
-
-É muito simples incluir essa imagem. No nosso caso, ela será colocada em segundo plano no cabeçalho e será aplicada por meio de um simples código CSS.
-
+<div style="clear:both;"></div>
 
     #headline {
       padding: 0.8em;
@@ -267,181 +349,243 @@ Um bom exemplo disso é uma imagem para a seção do título no conteúdo `acima
     }
     
 
-Escolhemos uma imagem simples de segundo plano, levemente borrada para não retirar atenção do conteúdo e configurada para `cobrir` todo o elemento. Dessa forma, ela manterá a proporção correta sempre que for ampliada.
+Nós escolhemos uma imagem de fundo simples que é desfocada e não desvia a atenção
+do conteúdo. Nós a definimos como `cover` para todo o elemento, para que ela seja sempre
+ampliada, mas mantenha a taxa de proporção correta.
 
-<br style="clear: both;">
 
-### Defina o seu primeiro ponto de quebra
+### Defina seu primeiro ponto de interrupção
 
-O design começa a apresentar um aspecto desagradável por volta de 600 px de largura.  Em nosso caso, o comprimento da linha está acima de dez palavras (o comprimento de leitura ideal), por isso queremos fazer uma modificação.
+O design começa a ficar inadequado em cerca de 600 pixels de largura.  No nosso caso, o comprimento da
+linha ficará acima de 10 palavras (o comprimento ideal de leitura) e é isso
+que queremos alterar.
 
 <video controls poster="images/firstbreakpoint.png" style="width: 100%;">
   <source src="videos/firstbreakpoint.mov" type="video/mov"></source>
   <source src="videos/firstbreakpoint.webm" type="video/webm"></source>
-  <p>Lamentamos, seu navegador não é compatível com vídeo.
-     <a href="videos/firstbreakpoint.mov">Fazer o download do vídeo</a>.
+  <p>Seu navegador não oferece suporte a vídeos.
+     <a href="videos/firstbreakpoint.mov">Faça download do vídeo</a>.
   </p>
 </video>
 
-Em 600 pixels, podemos criar nosso primeiro ponto de quebra para reposicionar os elementos a fim de adequá-los à tela de forma mais eficiente.  Para fazer isso, usamos uma tecnologia chamada [consultas de mídia](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
-
+600 pixels parece ser um bom local para criar nosso primeiro ponto de interrupção,
+pois ele nos dará o escopo para reposicionar elementos para que eles caibam na tela.
+Podemos fazer isso usando uma tecnologia chamada [consultas de mídia](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries).
 
     @media (min-width: 600px) {
     
     }
     
+Uma tela maior tem mais espaço, portanto, há mais flexibilidade para a exibição
+do conteúdo.
 
-Existe mais espaço disponível em uma tela mais larga e, consequentemente, há uma maior flexibilidade quanto à forma como o conteúdo pode ser exibido.
+Observação: Não é preciso mover todos os elementos de uma fez. Você pode fazer ajustes menores se necessário.
 
-Note: Não é preciso mover todos os elementos ao mesmo tempo, ou seja, é possível fazer ajustes menores quando necessário.
+No contexto da nossa página de produto, parece que
+precisaremos:
 
-No contexto da página do nosso produto, parece que precisaremos:
+*  Limitar a largura máxima do design.
+*  Alterar o preenchimento dos elementos e reduzir o tamanho do texto.
+*  Mover o formulário para flutuar em linha com o conteúdo do cabeçalho.
+*  Fazer o vídeo flutuar em torno do conteúdo.
+*  Reduzir o tamanho das imagens e fazê-las aparecer em uma grade melhor.
 
-*  Limitar a largura máxima do layout.
-*  Alterar o espaçamento dos elementos e reduzir o tamanho do texto.
-*  Mover o formulário para flutuar in-line com o conteúdo do título.
-*  Fazer o vídeo flutuar conforme o conteúdo.
-*  Reduzir o tamanho das imagens e fazer com que elas sejam exibidas em uma grade mais agradável.
 
-{# include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point #}
+### Limitar a largura máxima do design
 
-### Limitar a largura máxima do layout
+Nós escolhemos ter apenas dois layouts principais: uma janela de visualização estreita e uma larga,
+o que simplifica nosso processo de compilação de forma significativa.
 
-Optamos por manter apenas dois layouts: uma janela de visualização estreita e uma mais larga, simplificando o processo de desenvolvimento do site.
+Também decidimos criar seções com sangria total na janela de visualização estreita que
+permanecem com a sangria total na janela de visualização larga.  Isso significa que devemos limitar a
+largura máxima da tela para que o texto e os parágrafos não se estendam em uma só
+longa linha em telas muito largas.  Nós escolhemos posicionar esse ponto
+a cerca de 800 pixels.
 
-Também decidimos criar seções sem bordas na janela de visualização estreita que permanecerão sem bordas na janela de visualização larga.  Isso significa que devemos limitar a largura máxima da tela para que o texto e os parágrafos não se transformem em uma única linha em telas muito largas.  Esse ponto foi estabelecido em aproximadamente 800 px.
+Para isso, precisamos limitar a largura e centralizar os elementos.  Precisamos
+criar um contêiner em torno de cada seção principal e aplicar um `margin:
+auto`.  Isso permitirá que a tela seja expandida, mas o conteúdo permanecerá centralizado
+e terá um tamanho máximo de 800 pixels.
 
-Para conseguir isso, precisamos limitar a largura e centralizar os elementos.  É preciso criar um recipiente para cada seção principal e aplicar uma instrução de `margem automática`. Isso permitirá que o conteúdo permaneça centralizado e com um tamanho máximo de 800 pixels, mesmo em telas maiores.
+O contêiner será um simples `div` no seguinte formulário:
 
-O recipiente será um `div` simples na seguinte forma:
-
-    <div class="container">
-    ...
-    </div>
+    <div class="container">...</div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/constrainwidth.html" region_tag="containerhtml" adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/constrainwidth.html" region_tag="container" adjust_indentation="auto" %}
 </pre>
 
-### Altere o espaçamento e reduza o tamanho do texto
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/constrainwidth.html){: target="_blank" .external }
 
-Não há muito espaço para exibir conteúdo na janela de visualização estreita, por isso, o tamanho e o padrão das fontes geralmente são bastante reduzidos para se adequar à tela.
+### Alterar o preenchimento e reduzir o tamanho do texto
 
-Em uma janela de visualização maior, é preciso considerar que o usuário provavelmente estará diante de uma tela maior, mas também estará mais distante dessa tela.  Para aumentar a legibilidade do conteúdo, podemos aumentar o tamanho e o padrão da fonte e alterar o espaçamento para dar mais destaque a áreas específicas.
+Na janela de visualização estreita, não temos muito espaço para exibir conteúdo, portanto,
+o tamanho e o peso da tipografia frequentemente são muito reduzidos para caber na
+tela.
 
-Na página do produto, aumentaremos o espaçamento dos elementos da seção. Para isso, manteremos o espaçamento em 5% da largura.  Também aumentaremos o tamanho dos cabeçalhos de cada uma das seções.
+Com uma janela de visualização maior, precisamos considerar que o usuário tem mais probabilidade de estar usando
+uma tela maior, mas a uma distância maior.  Para aumentar a legibilidade do
+conteúdo, podemos aumentar o tamanho e o peso da tipografia, além de
+alterar o preenchimento para destacar mais áreas distintas.
+
+Na nossa página de produto, aumentaremos o preenchimento dos elementos de seção ao
+defini-lo para permanecer em 5% da largura.  Também aumentaremos o tamanho dos
+cabeçalhos para cada seção.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/alterpadding.html" region_tag="padding" adjust_indentation="auto" %}
 </pre>
 
-### Adapte os elementos à janela de visualização mais larga
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/alterpadding.html){: target="_blank" .external }
 
-A janela de visualização estreita apresentava uma exibição com empilhamento linear.  As seções principais e o conteúdo delas eram exibidos em ordem, de cima para baixo.
+### Adaptar elementos a uma janela de visualização larga
 
-Uma janela de visualização larga oferece espaço adicional que podemos usar para exibir o conteúdo de forma otimizada de acordo com o tamanho da tela.  Para a página do produto, e ainda de acordo com a arquitetura de informações, isso significa que podemos:
+Nossa janela de visualização estreita era uma exibição linear empilhada.  Cada seção principal e seu respectivo conteúdo
+foi exibida, em ordem, da parte superior à inferior.
 
-*  Mover o formulário de acordo com as informações do cabeçalho.
-*  Posicionar o vídeo à direita dos recursos mais importantes.
-*  Dividir as imagens em blocos.
+Uma janela de visualização larga nos proporciona espaço adicional para exibir o conteúdo da maneira ideal
+para a tela em questão.  Para nossa página de produto, isso significa que, de acordo com nossa IA, podemos:
+
+*  Mover o formulário em volta das informações de cabeçalho.
+*  Posicionar o vídeo à direita dos pontos principais.
+*  Organizar as imagens em blocos.
 *  Expandir a tabela.
 
-#### Faça o formulário flutuar
+#### Flutuar o elemento form
 
-A janela de visualização estreita significa que temos menos espaço horizontal disponível para posicionar de maneira espaçada os elementos na tela.
+A janela de visualização estreita significa que temos muito menos espaço horizontal disponível para
+posicionar os elementos de forma confortável na tela.
 
-Para fazer um uso mais efetivo do espaço horizontal disponível, precisamos quebrar o fluxo linear do cabeçalho e mover o formulário e a lista para que fiquem lado a lado.
+Para fazer um uso mais eficaz do espaço em tela horizontal, precisamos romper
+p fluxo linear do cabeçalho e mover o formulário e a lista para que eles fiquem
+lado a lado.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/floattheform.html" region_tag="formfloat" adjust_indentation="auto" %}
 </pre>
 
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
-</pre>
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/floattheform.html){: target="_blank" .external }
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
   <source src="videos/floatingform.mov" type="video/mov"></source>
   <source src="videos/floatingform.webm" type="video/webm"></source>
-  <p>Lamentamos, seu navegador não é compatível com vídeo.
-     <a href="videos/floatingform.mov">Fazer o download do vídeo</a>.
+  <p>Seu navegador não oferece suporte a vídeos.
+     <a href="videos/floatingform.mov">Faça download do vídeo</a>.
   </p>
 </video>
 
-#### Faça o vídeo flutuar
+#### Flutue o elemento video
 
-O vídeo na interface da janela de visualização estreita foi projetado para ocupar toda a largura da tela e ficar posicionado após a lista dos principais recursos. Em uma janela de visualização larga, o vídeo será dimensionado para um tamanho demasiado grande, assumindo um aspecto desagradável quando estiver colocado ao lado da lista de recursos.
+O vídeo na janela de visualização estreita foi projetado para ocupar toda a largura da
+tela e ser posicionado após a lista de principais recursos. Em uma janela de visualização larga,
+o vídeo será ampliado demais e parecerá incorreto ao lado
+da nossa lista de recursos.
 
-O elemento de vídeo precisa sair do fluxo vertical da janela de visualização estreita e ser exibido lado a lado com a lista do conteúdo em uma janela de visualização larga.
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo"   adjust_indentation="auto" %}
-</pre>
-
-#### Divida as imagens em blocos
-
-As imagens na interface da janela de visualização estreita (na maioria, dispositivos móveis) estão definidas para ocupar toda a largura da tela e ser empilhadas verticalmente.  O redimensionamento dessas imagens para uma janela de visualização larga não funciona de forma eficiente.
-
-Para fazer com que as imagens sejam exibidas de forma correta em uma janela de visualização larga, as imagens devem ser redimensionadas em 30% da largura do recipiente e dispostas horizontalmente (não verticalmente, como na visualização estreita). Também adicionamos bordas arredondadas e sombreamento para dar maior destaque às imagens.
-
-<img src="images/imageswide.png" style="width:100%">
+O elemento video precisa ser removido do fluxo vertical da janela de visualização
+estreita e deve ser exibido ao lado da lista de tópicos de conteúdo em uma janela de visualização larga.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/floatthevideo.html" region_tag="floatvideo" adjust_indentation="auto" %}
 </pre>
 
-#### Torne as imagens mais responsivas ao DPI
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/floatthevideo.html){: target="_blank" .external }
 
-Ao usar imagens, leve em consideração o tamanho da janela de visualização e a densidade da exibição.
+#### Organizar as imagens em blocos
 
-A Web foi criada para o uso de telas com 96 dpi.  Com a introdução dos dispositivos móveis, ocorreu um grande aumento na densidade de pixels das telas, sem mencionar as telas tipo Retina de alguns laptops.  Dessa forma, as imagens que são codificadas para telas com 96 dpi acabam apresentando uma exibição horrível em dispositivos com alto dpi.
+<img src="images/imageswide.png" class="attempt-right">
 
-Temos uma solução que ainda não foi amplamente adotada.
-Para os navegadores que oferecem esse tipo de suporte, é possível exibir uma imagem de alta densidade em uma tela de alta densidade.
+As imagens na interface de janela de visualização estreita (dispositivos móveis, em sua maioria) são definidas para
+ocupar toda a largura da tela e empilhadas verticalmente.  Essas imagens não são
+dimensionadas corretamente em uma janela de visualização larga.
+
+Para que as imagens fiquem adequadas em uma janela de visualização larga, elas são dimensionadas a 30%
+da largura do contêiner e dispostas horizontalmente (em vez de verticalmente, como na
+visualização estreita). Também adicionaremos raio de borda e box-shadow para que
+as imagens fiquem mais atraentes.
+
+<div style="clear:both;"></div>
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/tiletheimages.html" region_tag="tileimages" adjust_indentation="auto" %}
+</pre>
+
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/tiletheimages.html){: target="_blank" .external }
+
+#### Tornar as imagens responsivas ao DPI
+
+Ao usar imagens, leve em consideração o tamanho da janela de visualização
+e a densidade da tela.
+
+A Web foi feita para telas de 96 dpi.  Com a introdução dos dispositivos móveis,
+observamos um aumento incrível da densidade de pixels das telas, sem falar nas
+telas de classe Retina em laptops.  Dessa forma, imagens codificadas para 96 dpi
+frequentemente ficam péssimas em um dispositivo de alto dpi.
+
+Temos uma solução que ainda não foi amplamente adotada. Para navegadores compatíveis,
+você pode exibir uma imagem de alta densidade em uma tela de alta densidade.
 
 
     <img src="photo.png" srcset="photo@2x.png 2x">
     
 
-{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
-
 #### Tabelas
 
-É difícil configurar tabelas em dispositivos com uma janela de visualização estreita, por isso, é preciso tomar cuidado com esse tipo de recurso.
+É muito difícil de exibir tabelas corretamente em dispositivos que têm uma janela de visualização estreita e precisam de
+consideração especial.
 
-Em janelas de visualização estreitas, recomendamos criar as tabelas em duas linhas, transpondo o título e as células em uma linha para criar as colunas.
+Para uma janela de visualização estreita, recomendamos que você transforme
+cada linha da sua tabela em um bloco de pares de chave-valor (onde a chave é o elemento que
+era o cabeçalho da coluna e o valor continua sendo o valor da célula).
+Felizmente, essa não é uma tarefa difícil. Primeiro, anote cada elemento `td` com
+o cabeçalho correspondente como um atributo de dados. (Isso não terá efeitos
+visíveis até que adicionemos mais CSS.)
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/updatingtablehtml.html" region_tag="table-tbody" adjust_indentation="auto" %}
+</pre>
+
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/updatingtablehtml.html){: target="_blank" .external }
+
+Agora, basta adicionar o CSS para ocultar o `thead` original e
+mostrar os rótulos `data-th` usando um pseudoelemento `:before`. Isso resultará na
+experiência de vários dispositivos vista no vídeo a seguir.
 
 <video controls poster="images/responsivetable.png" style="width: 100%;">
   <source src="videos/responsivetable.mov" type="video/mov"></source>
   <source src="videos/responsivetable.webm" type="video/webm"></source>
-  <p>Lamentamos, seu navegador não é compatível com vídeo.
-     <a href="videos/responsivetable.mov">Fazer o download do vídeo</a>.
+  <p>Seu navegador não oferece suporte a vídeos.
+     <a href="videos/responsivetable.mov">Faça download do vídeo</a>.
   </p>
 </video>
 
-Em nosso site, tivemos que criar um ponto de quebra adicional somente para o conteúdo da tabela.
-Ao criar conteúdo primeiramente para dispositivos móveis, é mais difícil remover os estilos aplicados, por isso, precisamos separar o código CSS da tabela de uma janela estreita e o código CSS da janela larga.
-Dessa forma, temos uma quebra limpa e consistente.
+No nosso site, precisamos criar um ponto de interrupção adicional apenas para o conteúdo da tabela.
+Ao compilar para um dispositivo móvel primeiro, é mais difícil desfazer estilos aplicativos,
+portanto, precisamos separar o CSS da tabela da janela de visualização estreita do CSS da janela de visualização larga.
+Isso proporciona uma interrupção clara e consistente.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" adjust_indentation="auto" %}
 </pre>
 
-### Finalização
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html){: target="_blank" .external }
 
-**PARABÉNS.** Se estiver lendo isto, você já criou sua primeira página de destino do produto que funciona em diversos dispositivos, formatos e tamanhos de tela.
+## Conclusão
 
-Se seguir estas diretrizes, você desenvolverá um excelente projeto:
+Sucesso: Ao ler isto, você terá criado sua
+primeira página de destino de produto simples que funciona em diversos tipos de dispositivos,
+formatos e tamanhos de tela.
 
-1. Crie uma arquitetura básica de informações e entenda o conteúdo antes de criar o código.
+Se seguir essas diretrizes, você começará bem:
+
+1. Crie a IA básica e entenda seu conceito antes de criar o código.
 2. Sempre defina uma janela de visualização.
-3. Crie uma experiência com base na abordagem inicial dos dispositivos móveis.
-4. Depois de criar a experiência para dispositivos móveis, amplie a largura da tela até que a exibição apresente problemas. Nesse momento, crie um ponto de quebra.
-5. Continue repetindo.
+3. Cria sua experiência básica com uma abordagem que prioriza os dispositivos móveis.
+4. Quando criar sua experiência de dispositivos móveis, aumente a largura da tela até que a aparência se degrade e defina seu ponto de interrupção nesse momento.
+5. Continue iterando.
 
 
-
+{# wf_devsite_translation #}

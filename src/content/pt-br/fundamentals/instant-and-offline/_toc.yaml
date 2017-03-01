@@ -1,0 +1,17 @@
+toc:
+  - title: Carregamento instantâneo e off-line
+    section:
+    - title: Considerações sobre a experiência do usuário off-line
+      path: /web/fundamentals/instant-and-offline/offline-ux
+    - title: The Offline Cookbook
+      path: /web/fundamentals/instant-and-offline/offline-cookbook/
+    - title: Armazenamento Web
+      section:
+      - title: Visão geral
+        path: /web/fundamentals/instant-and-offline/web-storage/
+      - title: Armazenamento off-line para PWAs
+        path: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
+    - title: Ciclo de vida do Service Worker
+      path: /web/fundamentals/instant-and-offline/service-worker/lifecycle
+    - title: Registro do Service Worker
+      path: /web/fundamentals/instant-and-offline/service-worker/registration

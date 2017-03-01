@@ -1,0 +1,47 @@
+toc:
+  - title: Design e IU
+    section:
+    - title: Visão geral
+      path: /web/fundamentals/design-and-ui/
+    - title: Conceitos básicos da UX
+      path: /web/fundamentals/design-and-ui/ux-basics/
+    - title: Web design responsivo
+      section:
+      - title: Princípios básicos do Web design responsivo
+        path: /web/fundamentals/design-and-ui/responsive/
+      - title: Padrões de Web design responsivo
+        path: /web/fundamentals/design-and-ui/responsive/patterns
+      - title: Imagens
+        path: /web/fundamentals/design-and-ui/media/images
+      - title: Vídeo
+        path: /web/fundamentals/design-and-ui/media/video
+      - title: Conteúdo para vários dispositivos
+        path: /web/fundamentals/design-and-ui/responsive/content
+    - title: Entrada do usuário
+      section:
+      - title: Crie formulários incríveis
+        path: /web/fundamentals/design-and-ui/input/forms/
+      - title: Adicione recurso de toque ao seu site
+        path: /web/fundamentals/design-and-ui/input/touch/
+    - title: Cores de ícones e navegador
+      path: /web/fundamentals/design-and-ui/browser-customization/
+    - title: Animações
+      section:
+      - title: Visão geral
+        path: /web/fundamentals/design-and-ui/animations/
+      - title: CSS vs. JavaScript
+        path: /web/fundamentals/design-and-ui/animations/css-vs-javascript
+      - title: Os conceitos básicos de easing
+        path: /web/fundamentals/design-and-ui/animations/the-basics-of-easing
+      - title: Easing personalizado
+        path: /web/fundamentals/design-and-ui/animations/custom-easing
+      - title: Animar entre visualizações
+        path: /web/fundamentals/design-and-ui/animations/animating-between-views
+      - title: Escolher o easing certo
+        path: /web/fundamentals/design-and-ui/animations/choosing-the-right-easing
+      - title: Animar visualizações modais
+        path: /web/fundamentals/design-and-ui/animations/animating-modal-views
+      - title: Precisão de animação assimétrica
+        path: /web/fundamentals/design-and-ui/animations/asymmetric-animation-timing
+      - title: Animações e desempenho
+        path: /web/fundamentals/design-and-ui/animations/animations-and-performance

@@ -1,0 +1,128 @@
+toc:
+  - title: Chrome DevTools
+    section:
+    - title: Visão geral
+      path: /web/tools/chrome-devtools/
+    - title: Configurar e personalizar o DevTools
+      path: /web/tools/chrome-devtools/settings
+    - title: Depurar Progressive Web Apps
+      path: /web/tools/chrome-devtools/progressive-web-apps
+    - title: Compreender problemas de segurança
+      path: /web/tools/chrome-devtools/security
+    - title: Referência de atalhos de teclado
+      path: /web/tools/chrome-devtools/shortcuts
+    - title: Executar snippets de código em qualquer página
+      path: /web/tools/chrome-devtools/snippets
+    - title: Inspecionar e editar páginas e estilos
+      section:
+      - title: Visão geral
+        path: /web/tools/chrome-devtools/inspect-styles/
+      - title: Editar estilos
+        path: /web/tools/chrome-devtools/inspect-styles/edit-styles
+      - title: Inspecionar animações
+        path: /web/tools/chrome-devtools/inspect-styles/animations
+      - title: Editar o DOM
+        path: /web/tools/chrome-devtools/inspect-styles/edit-dom
+    - title: Inspecionar e gerenciar armazenamento, caches e recursos
+      section:
+      - title: Inspecionar e gerenciar armazenamento, bancos de dados e caches
+        path: /web/tools/chrome-devtools/manage-data/local-storage
+      - title: Inspecionar e excluir cookies
+        path: /web/tools/chrome-devtools/manage-data/cookies
+      - title: Inspecionar recursos
+        path: /web/tools/chrome-devtools/manage-data/page-resources
+    - title: Simular dispositivos móveis com Device Mode
+      section:
+      - title: Visão geral
+        path: /web/tools/chrome-devtools/device-mode/
+      - title: Testar janelas de visualização responsivas e específicas de dispositivo
+        path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+      - title: Emular sensores de geolocalização e acelerômetro
+        path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
+      - title: Emular e testar outros navegadores
+        path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
+    - title: Depurar dispositivos Android remotamente
+      section:
+      - title: Primeiros passos
+        path: /web/tools/chrome-devtools/remote-debugging/
+      - title: Acessar servidores locais
+        path: /web/tools/chrome-devtools/remote-debugging/local-server
+      - title: Depurar WebViews remotamente
+        path: /web/tools/chrome-devtools/remote-debugging/webviews
+    - title: Inspecionar e depurar JavaScript
+      section:
+      - title: Primeiros passos
+        path: /web/tools/chrome-devtools/javascript/
+      - title: Definir pontos de interrupção
+        path: /web/tools/chrome-devtools/javascript/add-breakpoints
+      - title: Percorrer o código
+        path: /web/tools/chrome-devtools/javascript/step-code
+      - title: JavaScript minimizado do Pretty-Print
+        path: /web/tools/chrome-devtools/javascript/pretty-print
+      - title: Acompanhar variáveis no Sources
+        path: /web/tools/chrome-devtools/javascript/watch-variables
+      - title: Mapear código pré-processado ao código-fonte
+        path: /web/tools/chrome-devtools/javascript/source-maps
+    - title: Usar o Console
+      section:
+      - title: Visão geral
+        path: /web/tools/chrome-devtools/console/
+      - title: Diagnosticar e registrar no Console
+        path: /web/tools/chrome-devtools/console/console-write
+      - title: Comparar objetos de dados similares
+        path: /web/tools/chrome-devtools/console/structured-data
+      - title: Medir e contar execuções
+        path: /web/tools/chrome-devtools/console/track-executions
+      - title: Processar exceções e erros
+        path: /web/tools/chrome-devtools/console/track-exceptions
+      - title: Referência da Console API
+        path: /web/tools/chrome-devtools/console/console-reference
+      - title: Avaliar expressões
+        path: /web/tools/chrome-devtools/console/expressions
+      - title: Monitorar eventos
+        path: /web/tools/chrome-devtools/console/events
+      - title: Referência da linha de comando
+        path: /web/tools/chrome-devtools/console/command-line-reference
+    - title: Como avaliar o desempenho
+      section:
+      - title: Como usar a ferramenta Timeline
+        path: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
+      - title: Referência de eventos da Timeline
+        path: /web/tools/chrome-devtools/evaluate-performance/performance-reference
+    - title: Analisar o desempenho em tempo de execução
+      section:
+      - title: Visão geral
+        path: /web/tools/chrome-devtools/rendering-tools/
+      - title: Acelerar a execução do JavaScript
+        path: /web/tools/chrome-devtools/rendering-tools/js-execution
+      - title: Diagnosticar layouts de sincronia forçada
+        path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
+    - title: Medir desempenho da rede
+      section:
+      - title: Medir tempos de carregamento de recursos
+        path: /web/tools/chrome-devtools/network-performance/resource-loading
+      - title: Compreender o Resource Timing
+        path: /web/tools/chrome-devtools/network-performance/understanding-resource-timing
+      - title: Otimizar desempenho sob condições de rede diversas
+        path: /web/tools/chrome-devtools/network-performance/network-conditions
+    - title: Consertar problemas de memória
+      section:
+      - title: Visão geral
+        path: /web/tools/chrome-devtools/memory-problems/
+      - title: Compreender a terminologia de memória
+        path: /web/tools/chrome-devtools/memory-problems/memory-101
+      - title: Registrar instantâneos de pilha
+        path: /web/tools/chrome-devtools/memory-problems/heap-snapshots
+      - title: Usar o gerador de perfis de alocação
+        path: /web/tools/chrome-devtools/memory-problems/allocation-profiler
+    - title: Estender as Chrome DevTools
+      section:
+      - title: Integrar com DevTools e Chrome
+        path: https://developer.chrome.com/devtools/docs/integrating
+        status: external
+      - title: DevTools Extensions API
+        path: https://developer.chrome.com/extensions/devtools
+        status: external
+      - title: Protocolo de depurador
+        path: https://developer.chrome.com/devtools/docs/debugger-protocol
+        status: external

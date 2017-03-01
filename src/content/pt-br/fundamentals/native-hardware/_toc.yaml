@@ -1,0 +1,17 @@
+toc:
+  - title: Como acessar hardware nativo
+    section:
+    - title: Visão geral
+      path: /web/fundamentals/native-hardware/
+    - title: Localização do usuário
+      path: /web/fundamentals/native-hardware/user-location/
+    - title: Orientação e movimentação do dispositivo
+      path: /web/fundamentals/native-hardware/device-orientation/
+    - title: Como gravar áudio do usuário
+      path: /web/fundamentals/native-hardware/recording-audio/
+    - title: Como capturar uma imagem do usuário
+      path: /web/fundamentals/native-hardware/capturing-images/
+    - title: Como criar experiências em tela cheia
+      path: /web/fundamentals/native-hardware/fullscreen/
+    - title: Clicar para chamar
+      path: /web/fundamentals/native-hardware/click-to-call/

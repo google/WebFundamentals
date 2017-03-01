@@ -1,0 +1,33 @@
+toc:
+  - title: Acessibilidade
+    section:
+    - title: Visão geral
+      path: /web/fundamentals/accessibility/
+    - title: Focus
+      section:
+      - title: Introdução ao Focus
+        path: /web/fundamentals/accessibility/focus/
+      - title: A Ordem de DOM É Importante
+        path: /web/fundamentals/accessibility/focus/dom-order-matters
+      - title: Uso do tabindex
+        path: /web/fundamentals/accessibility/focus/using-tabindex
+    - title: Semântica Integrada
+      section:
+      - title: Introdução à semântica
+        path: /web/fundamentals/accessibility/semantics-builtin/
+      - title: A Árvore de Acessibilidade
+        path: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
+      - title: Alternativas em texto para imagens
+        path: /web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images
+      - title: Navegação de conteúdo
+        path: /web/fundamentals/accessibility/semantics-builtin/navigating-content
+    - title: Semântica e ARIA
+      section:
+      - title: Introdução a ARIA
+        path: /web/fundamentals/accessibility/semantics-aria/
+      - title: Rótulos e Relações de ARIA
+        path: /web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships
+      - title: Ocultação e Atualização de Conteúdo
+        path: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
+    - title: Estilos Acessíveis
+      path: /web/fundamentals/accessibility/accessible-styles

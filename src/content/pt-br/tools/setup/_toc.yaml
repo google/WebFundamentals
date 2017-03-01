@@ -1,0 +1,18 @@
+toc:
+  - title: Primeiros passos
+    section:
+    - title: Visão geral
+      path: /web/tools/setup/
+    - title: Configurar o editor
+      path: /web/tools/setup/setup-editor
+    - title: Configurar persistência com os Espaços de trabalho do DevTools
+      path: /web/tools/setup/setup-workflow
+    - title: Configurar pré-processadores de CSS e JS
+      path: /web/tools/setup/setup-preprocessors
+    - title: Configurar atalhos de linha de comando
+      path: /web/tools/setup/setup-shortcuts
+    - title: Configurar extensões de navegador
+      path: /web/tools/setup/setup-extensions
+    - title: Configurar ferramentas de compilação
+      path: /web/tools/setup/setup-buildtools
+

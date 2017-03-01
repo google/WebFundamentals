@@ -1,0 +1,21 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+upper_tabs:
+  - include: /web/_upper_tabs-Fundamentals.yaml
+  - name: Ferramentas
+    heading: Ferramentas
+    path: /web/tools/
+    lower_tabs:
+      other:
+      - name: Ferramentas
+        contents:
+        - include: /web/tools/setup/_toc.yaml
+        - include: /web/tools/chrome-devtools/_toc.yaml
+        - include: /web/tools/lighthouse/_toc.yaml
+        - title: Bibliotecas de service worker
+          path: /web/tools/service-worker-libraries/
+        - title: Kit do iniciante na Web
+          path: /web/tools/starter-kit/
+        - title: Kit do iniciante no Polymer
+          path: /web/tools/polymer-starter-kit/
+  - include: /web/_upper_tabs-Updates.yaml
+  - include: /web/_upper_tabs-Showcase.yaml

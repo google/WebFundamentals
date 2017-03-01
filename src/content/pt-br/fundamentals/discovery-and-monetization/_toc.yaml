@@ -1,0 +1,18 @@
+toc:
+  - title: Descoberta e monetização
+    section:
+    - title: Visão geral
+      path: /web/fundamentals/discovery-and-monetization/
+    - title: Otimização para buscas
+      path: /web/fundamentals/discovery-and-monetization/search-optimization/
+    - title: Descoberta social
+      path: /web/fundamentals/discovery-and-monetization/social-discovery/
+    - title: Monetização com anúncios
+      path: https://www.google.com/adsense
+      status: external
+    - title: Gerenciamento de pagamentos
+      section:
+      - title: Guia de integração da Payment Request API
+        path: /web/fundamentals/discovery-and-monetization/payment-request/
+      - title: Como integrar o Android Pay ao Payment Request
+        path: /web/fundamentals/discovery-and-monetization/payment-request/android-pay
