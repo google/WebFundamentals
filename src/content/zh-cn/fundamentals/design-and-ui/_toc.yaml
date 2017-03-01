@@ -1,0 +1,47 @@
+toc:
+  - title: 设计和 UI
+    section:
+    - title: 概览
+      path: /web/fundamentals/design-and-ui/
+    - title: 用户体验基础知识
+      path: /web/fundamentals/design-and-ui/ux-basics/
+    - title: 自适应网页设计
+      section:
+      - title: 自适应网页设计基础知识
+        path: /web/fundamentals/design-and-ui/responsive/
+      - title: 自适应网页设计模式
+        path: /web/fundamentals/design-and-ui/responsive/patterns
+      - title: 图像
+        path: /web/fundamentals/design-and-ui/media/images
+      - title: 视频
+        path: /web/fundamentals/design-and-ui/media/video
+      - title: 多设备内容
+        path: /web/fundamentals/design-and-ui/responsive/content
+    - title: 用户输入
+      section:
+      - title: 创建出色的表单
+        path: /web/fundamentals/design-and-ui/input/forms/
+      - title: 为网站添加触摸功能
+        path: /web/fundamentals/design-and-ui/input/touch/
+    - title: 图标和浏览器颜色
+      path: /web/fundamentals/design-and-ui/browser-customization/
+    - title: 动画
+      section:
+      - title: 概览
+        path: /web/fundamentals/design-and-ui/animations/
+      - title: CSS Versus JavaScript
+        path: /web/fundamentals/design-and-ui/animations/css-vs-javascript
+      - title: 缓动的基础知识
+        path: /web/fundamentals/design-and-ui/animations/the-basics-of-easing
+      - title: 自定义缓动
+        path: /web/fundamentals/design-and-ui/animations/custom-easing
+      - title: 在视图之间设置动画
+        path: /web/fundamentals/design-and-ui/animations/animating-between-views
+      - title: 选择合适的缓动
+        path: /web/fundamentals/design-and-ui/animations/choosing-the-right-easing
+      - title: 给模态视图设置动画
+        path: /web/fundamentals/design-and-ui/animations/animating-modal-views
+      - title: 不对称的动画定时
+        path: /web/fundamentals/design-and-ui/animations/asymmetric-animation-timing
+      - title: 动画与性能
+        path: /web/fundamentals/design-and-ui/animations/animations-and-performance

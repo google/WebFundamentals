@@ -1,44 +1,41 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 布局，就是浏览器计算DOM元素的几何信息的过程：元素大小和在页面中的位置。每个元素都有一个显式或隐式的大小信息，决定于其CSS属性的设置、或是元素本身内容的大小、抑或是其父元素的大小。在Blink/WebKit内核的浏览器和IE中，这个过程称为布局。在基于Gecko的浏览器（比如Firefox）中，这个过程称为Reflow。虽然称呼不一样，但二者在本质上是一样的。
+description:布局是浏览器计算各元素几何信息的过程：元素的大小以及在页面中的位置。根据所用的 CSS、元素的内容或父级元素，每个元素都将有显式或隐含的大小信息。此过程在 Chrome 中称为布局 (Layout)。
 
-{# wf_updated_on: 2015-03-19 #}
-{# wf_published_on: 2000-01-01 #}
+# 避免大型、复杂的布局和布局抖动 {: .page-title }
 
-# 避免大规模、复杂的布局 {: .page-title }
+{# wf_updated_on: 2015-03-20 #}
+{# wf_published_on: 2015-03-20 #}
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
+布局是浏览器计算各元素几何信息的过程：元素的大小以及在页面中的位置。
+根据所用的 CSS、元素的内容或父级元素，每个元素都将有显式或隐含的大小信息。此过程在 Chrome、Opera、Safari 和 Internet Explorer 中称为布局 (Layout)。
+在 Firefox 中称为自动重排 (Reflow)，但实际上其过程是一样的。
 
-Translated By: 
 
-{% include "web/_shared/contributors/samchen.html" %}
+与样式计算相似，布局开销的直接考虑因素如下：
 
-
-布局，就是浏览器计算DOM元素的几何信息的过程：元素大小和在页面中的位置。每个元素都有一个显式或隐式的大小信息，决定于其CSS属性的设置、或是元素本身内容的大小、抑或是其父元素的大小。在Blink/WebKit内核的浏览器和IE中，这个过程称为布局。在基于Gecko的浏览器（比如Firefox）中，这个过程称为Reflow。虽然称呼不一样，但二者在本质上是一样的。
+1. 需要布局的元素数量。
+2. 这些布局的复杂性。
 
 ### TL;DR {: .hide-from-toc }
-- 布局通常是在整个文档范围内发生。
-- 需要布局的DOM元素的数量直接影响到性能；应该尽可能避免触发布局。
-- 分析页面布局模型的性能；新的Flexbox比旧的Flexbox和基于浮动的布局模型更高效。
-- 避免强制同步布局事件的发生；对于元素的样式属性值，要先读再写。
 
+* 布局的作用范围一般为整个文档。
+* DOM 元素的数量将影响性能；应尽可能避免触发布局。
+* 评估布局模型的性能；新版 Flexbox 一般比旧版 Flexbox 或基于浮动的布局模型更快。
+* 避免强制同步布局和布局抖动；先读取样式值，然后进行样式更改。
 
-与样式计算类似，布局的时间消耗主要在于：
+## 尽可能避免布局操作
 
-1. 需要布局的DOM元素的数量
-2. 布局过程的复杂程度
-
-## 尽可能避免触发布局
-
-当你修改了元素的样式属性之后，浏览器会将会检查为了使这个修改生效是否需要重新计算布局以及更新渲染树。对于DOM元素的“几何属性”的修改，比如width/height/left/top等，都需要重新计算布局。
+当您更改样式时，浏览器会检查任何更改是否需要计算布局，以及是否需要更新渲染树。对“几何属性”（如宽度、高度、左侧或顶部）的更改都需要布局计算。
 
 
     .box {
       width: 20px;
       height: 20px;
     }
-    
+
     /**
      * Changing width and height
      * triggers layout.
@@ -47,112 +44,115 @@ Translated By:
       width: 200px;
       height: 350px;
     }
-    
 
-**几乎所有的布局都是在整个文档范围内发生的。** 如果你的页面中含有很多元素，那么计算这些元素的位置和维度的工作将耗费很长时间。
 
-如果确实无法避免布局的发生，那么同样，你应该使用Chrome的DevTools来分析一下它到底耗费了多长时间，从而判断布局过程是否是页面性能的瓶颈。首先，打开DevTools，选择Timeline标签，，点击左上角红色record按钮，然后在页面上做一些互动操作。再点击一次那个红色按钮结束记录，你就会看到页面性能的分解图：
+**布局几乎总是作用到整个文档。** 如果有大量元素，将需要很长时间来算出所有元素的位置和尺寸。
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg"  alt="DevTools showing a long time in Layout" />
+如果无法避免布局，关键还是要使用 Chrome DevTools 来查看布局要花多长时间，并确定布局是否为造成瓶颈的原因。首先，打开 DevTools，选择“Timeline”标签，点击“record”按钮，然后与您的网站交互。当您停止记录时，将看到网站表现情况的详细分析：
 
-我们再仔细分析一下上面的例子，会发现布局耗费的时间超过20毫秒。前面已经说过，为了保障流畅的动画效果，我们需要控制每一帧的时间消耗在16毫秒以内，而现在这个消耗显然太长了。我们还可以看到其他一些细节，比如布局树的大小（此例中为1618个节点）、需要布局的DOM节点数量。
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg" alt="DevTools 显示布局要较长时间" />
 
-Note: 想要一份详细的能触发布局、绘制或渲染层合并的CSS属性清单？去<a href="http://csstriggers.com/">CSS Triggers</a>看看吧。
+在仔细研究上例中的框架时，我们看到超过 20 毫秒用在布局上，当我们在动画中设置 16 毫秒来获取屏幕上的框架时，此布局时间太长。您还可以看到，DevTools 将说明树的大小（本例中为 1618 个元素）以及需要布局的节点数。
 
-## 使用flexbox替代老的布局模型
-web页面有许多种布局模型，浏览器对它们的支持程度各不相同。最老式的布局模型能以相对、绝对和浮动的方式将元素定位到屏幕上。
+注：想要一个有关哪些 CSS 属性会触发布局、绘制或合成的确切列表？请查看 [CSS 触发器](https://csstriggers.com)。
 
-下图显示了对页面中1300个盒对象使用浮动布局的时间消耗分析。当然这个例子有点极端，因为它只用了一种定位方式，而在大多数实际应用中会混用多种定位方式。
+## 使用 flexbox 而不是较早的布局模型
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg"  alt="Using floats as layout" />
+网页有各种布局模型，一些模式比其他模式受到更广泛的支持。最早的 CSS 布局模型使我们能够在屏幕上对元素进行相对、绝对定位或通过浮动元素定位。
 
-如果我们对这个示例中的元素使用Flexbox的布局方式（这是web平台上最近新添加的一种布局方式），我们将得到一张完全不同的布局时间消耗图：
+下面的屏幕截图显示了在 1,300 个框上使用浮动的布局开销。当然，这是一个人为的例子，因为大多数应用将使用各种手段来定位元素。
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg"  alt="Using flexbox as layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg" alt="使用浮动作为布局" />
 
-可以看到，对_同样数量的元素_改用Flexbox布局之后，达到了同样的显示效果，但是时间消耗却得到大幅改进（由14毫秒减少到3.5毫秒）。同时需要注意的是，在有些场景下你可能无法使用Flexbox布局方式，因为它[不像浮动布局那样被浏览器广泛支持](http://caniuse.com/#search=flexbox)。但不管怎样，至少你得在对页面布局模型的性能分析的基础之上，来选择一种性能最优的布局方式，而不是随意地选择布局方式。
+如果我们更新此示例以使用 Flexbox（Web 平台的新模型），则出现不同的情况：
 
-在任何情况下，不管是是否使用Flexbox，你都应该**努力避免同时触发所有布局**，特别在页面对性能敏感的时候（比如执行动画效果或页面滚动时）。
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg" alt="使用 flexbox 作为布局" />
 
-## 避免强制同步布局事件的发生
-将一帧画面渲染到屏幕上的处理顺序如下所示：
+现在，对于相同数量的元素和相同的视觉外观，布局的时间要少得多（本例中为分别 3.5 毫秒和 14 毫秒）。务必记住，对于某些情况，可能无法选择 Flexbox，因为它[没有浮动那么受支持](http://caniuse.com/#search=flexbox)，但是在可能的情况下，至少应研究布局模型对网站性能的影响，并且采用最大程度减少网页执行开销的模型。
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg"  alt="Using flexbox as layout" />
+在任何情况下，不管是否选择 Flexbox，都应当在应用的高压力点期间**尝试完全避免触发布局**！
 
-首先是执行JavaScript脚本，_然后_是样式计算，_然后_是布局。但是，我们还可以强制浏览器在执行JavaScript脚本之前先执行布局过程，这就是所谓的**强制同步布局**。
+## 避免强制同步布局
 
-首先你得记住，在JavaScript脚本运行的时候，它能获取到的元素样式属性值都是上一帧画面的，都是旧的值。因此，如果你想在这一帧开始的时候，读取一个元素（暂且称其为“box”）的height属性，你可以会写出这样的JavaScript代码：
+将一帧送到屏幕会采用如下顺序：
+
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg" alt="使用 flexbox 作为布局" />
+
+首先 JavaScript 运行，然后计算样式，然后布局。但是，可以使用 JavaScript 强制浏览器提前执行布局。这被称为**强制同步布局**。
+
+要记住的第一件事是，在 JavaScript 运行时，来自上一帧的所有旧布局值是已知的，并且可供您查询。因此，如果（例如）您要在帧的开头写出一个元素（让我们称其为“框”）的高度，可能编写一些如下代码：
 
 
     // Schedule our function to run at the start of the frame.
     requestAnimationFrame(logBoxHeight);
-    
+
     function logBoxHeight() {
       // Gets the height of the box in pixels and logs it out.
       console.log(box.offsetHeight);
     }
-    
 
-如果你在读取height属性之前，修改了box的样式，那么可能就会有问题了：
+
+如果在请求此框的高度之前，已更改其样式，就会出现问题：
 
 
     function logBoxHeight() {
-    
+
       box.classList.add('super-big');
-    
+
       // Gets the height of the box in pixels
       // and logs it out.
       console.log(box.offsetHeight);
     }
-    
 
-现在，为了给你返回box的height属性值，浏览器必须_首先_应用box的属性修改（因为对其添加了`super-big`样式），_接着_执行布局过程。在这之后，浏览器才能返回正确的height属性值。但其实我们可以避免这个不必要且耗费昂贵的布局过程。
 
-为了避免触发不必要的布局过程，你应该首先批量读取元素样式属性（浏览器将直接返回上一帧的样式属性值），然后再对样式属性进行写操作。
+现在，为了回答高度问题，浏览器必须先应用样式更改（由于增加了 `super-big` 类），然后运行布局。这时它才能返回正确的高度。这是不必要的，并且可能是开销很大的工作。
 
-上面的JavaScript函数的正确写法应该是：
+因此，始终应先批量读取样式并执行（浏览器可以使用上一帧的布局值），然后执行任何写操作：
+
+正确完成时，以上函数应为：
 
 
     function logBoxHeight() {
       // Gets the height of the box in pixels
       // and logs it out.
       console.log(box.offsetHeight);
-    
+
       box.classList.add('super-big');
     }
-    
 
-大多数情况下，你应该都不需要先修改然后再读取元素的样式属性值，使用上一帧的值就足够了。过早地同步执行样式计算和布局是潜在的页面性能的瓶颈之一，你大概也不想这样做。
 
-## 避免快速连续的布局
-还有一种情况比强制同步布局更糟：_连续快速的多次执行它_。我们看看这段代码：
+大部分情况下，并不需要应用样式然后查询值；使用上一帧的值就足够了。与浏览器同步（或比其提前）运行样式计算和布局可能成为瓶颈，并且您一般不想做这种设计。
+
+## 避免布局抖动
+有一种方式会使强制同步布局甚至更糟：接二连三地执行大量这种布局。看看这个代码：
 
 
     function resizeAllParagraphsToMatchBlockWidth() {
-    
+
       // Puts the browser into a read-write-read-write cycle.
       for (var i = 0; i < paragraphs.length; i++) {
         paragraphs[i].style.width = box.offsetWidth + 'px';
       }
     }
-    
 
-这段代码对一组段落标签执行循环操作，设置`<p>`标签的width属性值，使其与box元素的宽度相同。看上去这段代码是OK的，但问题在于，在每次循环中，都读取了box元素的一个样式属性值，然后立即使用该值来更新`<p>`元素的width属性。在下一次循环中读取box元素`offsetwidth`属性的时候，浏览器必须先使得上一次循环中的样式更新操作生效，也就是执行布局过程，然后才能响应本次循环中的样式读取操作。也就意味着，布局过程将在_每次循环_中发生。
 
-我们使用_先读后写_的原则，来修复上述代码中的问题：
+此代码循环处理一组段落，并设置每个段落的宽度以匹配一个称为“box”的元素的宽度。这看起来没有害处，但问题是循环的每次迭代读取一个样式值 (`box.offsetWidth`)，然后立即使用此值来更新段落的宽度 (`paragraphs[i].style.width`)。在循环的下次迭代时，浏览器必须考虑样式已更改这一事实，因为 `offsetWidth` 是上次请求的（在上一次迭代中），因此它必须应用样式更改，然后运行布局。每次迭代都将出现此问题！
+
+此示例的修正方法还是先读取值，然后写入值：
 
 
     // Read.
     var width = box.offsetWidth;
-    
+
     function resizeAllParagraphsToMatchBlockWidth() {
       for (var i = 0; i < paragraphs.length; i++) {
         // Now write.
         paragraphs[i].style.width = width + 'px';
       }
     }
-    
-
-如果你想确保编写的读写操作是安全的，你可以使用[FastDOM](https://github.com/wilsonpage/fastdom)。它能帮你自动完成读写操作的批处理，还能避免意外地触发强制同步布局或快速连续的布局。
 
 
+如果要保证安全，应当查看 [FastDOM](https://github.com/wilsonpage/fastdom)，它会自动为您批处理读取和写入，应当能防止您意外触发强制同步布局或布局抖动。
+
+
+{# wf_devsite_translation #}

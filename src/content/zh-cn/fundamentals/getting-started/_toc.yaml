@@ -1,0 +1,33 @@
+toc:
+  - title: 入门指南
+    section:
+    - title: 欢迎
+      path: /web/fundamentals/getting-started/
+    - title: 代码实验室
+      section:
+      - title: 您的第一个 Progressive Web App
+        path: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
+      - title: 调试服务工作线程
+        path: /web/fundamentals/getting-started/codelabs/debugging-service-workers/
+      - title: 您的第一个离线网络应用
+        path: /web/fundamentals/getting-started/codelabs/offline/
+      - title: 您的第一个网络推送通知
+        path: /web/fundamentals/getting-started/codelabs/push-notifications/
+      - title: 发现并解决网络应用性能问题
+        path: /web/fundamentals/getting-started/codelabs/web-perf/
+      - title: 使用 Web Starter Kit 开始制作您的网站
+        path: /web/fundamentals/getting-started/web-starter-kit/
+      - title: 您的第一个多设备网站
+        path: /web/fundamentals/getting-started/your-first-multi-screen-site/
+    - title: 怎样才算出色的移动网站？
+      path: /web/fundamentals/getting-started/principles/
+    - title: "服务工作线程：简介"
+      path: /web/fundamentals/getting-started/primers/service-workers
+    - title: "JavaScript Promise：简介"
+      path: /web/fundamentals/getting-started/primers/promises
+    - title: JavaScript 异步函数
+      path: /web/fundamentals/getting-started/primers/async-functions
+    - title: "Shadow DOM v1：独立的网络组件"
+      path: /web/fundamentals/getting-started/primers/shadowdom
+    - title: "自定义元素 v1：可重复使用的网络组件"
+      path: /web/fundamentals/getting-started/primers/customelements

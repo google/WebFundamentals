@@ -1,0 +1,21 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+upper_tabs:
+  - include: /web/_upper_tabs-Fundamentals.yaml
+  - name: 工具
+    heading: 工具
+    path: /web/tools/
+    lower_tabs:
+      other:
+      - name: 工具
+        contents:
+        - include: /web/tools/setup/_toc.yaml
+        - include: /web/tools/chrome-devtools/_toc.yaml
+        - include: /web/tools/lighthouse/_toc.yaml
+        - title: Service Worker Libraries
+          path: /web/tools/service-worker-libraries/
+        - title: Web Starter Kit
+          path: /web/tools/starter-kit/
+        - title: Polymer Starter Kit
+          path: /web/tools/polymer-starter-kit/
+  - include: /web/_upper_tabs-Updates.yaml
+  - include: /web/_upper_tabs-Showcase.yaml

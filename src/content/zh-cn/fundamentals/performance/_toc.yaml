@@ -1,0 +1,63 @@
+toc:
+  - title: 性能
+    section:
+    - title: 概览
+      path: /web/fundamentals/performance/
+    - title: 使用 RAIL 模型评估性能
+      path: /web/fundamentals/performance/rail
+    - title: 优化内容效率
+      section:
+      - title: 概览
+        path: /web/fundamentals/performance/optimizing-content-efficiency/
+      - title: 避免不必要的下载
+        path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
+      - title: 优化基于文本的资产的编码和传送大小
+        path: /web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer
+      - title: 图像优化
+        path: /web/fundamentals/performance/optimizing-content-efficiency/image-optimization
+      - title: 网页字体优化
+        path: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
+      - title: HTTP 缓存
+        path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
+    - title: 关键渲染路径
+      section:
+      - title: 概览
+        path: /web/fundamentals/performance/critical-rendering-path/
+      - title: 构建对象模型
+        path: /web/fundamentals/performance/critical-rendering-path/constructing-the-object-model
+      - title: 渲染树构建、布局及绘制
+        path: /web/fundamentals/performance/critical-rendering-path/render-tree-construction
+      - title: 阻塞渲染的 CSS
+        path: /web/fundamentals/performance/critical-rendering-path/render-blocking-css
+      - title: 使用 JavaScript 添加交互
+        path: /web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
+      - title: 评估关键渲染路径
+        path: /web/fundamentals/performance/critical-rendering-path/measure-crp
+      - title: 分析关键渲染路径性能
+        path: /web/fundamentals/performance/critical-rendering-path/analyzing-crp
+      - title: 优化关键渲染路径
+        path: /web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path
+      - title: PageSpeed 规则和建议
+        path: /web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations
+    - title: 渲染性能
+      section:
+      - title: 概览
+        path: /web/fundamentals/performance/rendering/
+      - title: 优化 JavaScript 执行
+        path: /web/fundamentals/performance/rendering/optimize-javascript-execution
+      - title: 缩小样式计算的范围并降低其复杂性
+        path: /web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations
+      - title: 避免大型、复杂的布局和布局抖动
+        path: /web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing
+      - title: 简化绘制的复杂度、减小绘制区域
+        path: /web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
+      - title: 坚持仅合成器的属性和管理层计数
+        path: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
+      - title: 使输入处理程序去除抖动
+        path: /web/fundamentals/performance/rendering/debounce-your-input-handlers
+    - title: 了解低带宽和高延迟
+      path: /web/fundamentals/performance/poor-connectivity/
+    - title: HTTP/2 简介
+      path: /web/fundamentals/performance/http2/
+    - title: PRPL 模式
+      path: /web/fundamentals/performance/prpl-pattern/

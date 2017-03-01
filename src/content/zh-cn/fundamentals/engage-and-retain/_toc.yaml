@@ -1,0 +1,24 @@
+toc:
+  - title: 吸引并留住用户
+    section:
+    - title: 概览
+      path: /web/fundamentals/engage-and-retain/
+    - title: 网络应用清单
+      path: /web/fundamentals/engage-and-retain/web-app-manifest/
+    - title: 网络推送通知
+      section:
+      - title: 概览
+        path: /web/fundamentals/engage-and-retain/push-notifications/
+      - title: 怎样才算好的通知
+        path: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+      - title: 请求权限和订阅用户
+        path: /web/fundamentals/engage-and-retain/push-notifications/permissions-subscriptions
+      - title: 发送消息
+        path: /web/fundamentals/engage-and-retain/push-notifications/sending-messages
+      - title: 处理消息
+        path: /web/fundamentals/engage-and-retain/push-notifications/handling-messages
+      - title: "视频：网络推送通知 (I/O 2016)"
+        path: /web/fundamentals/engage-and-retain/push-notifications/video
+    - title: 应用安装横幅
+      path: /web/fundamentals/engage-and-retain/app-install-banners/
+

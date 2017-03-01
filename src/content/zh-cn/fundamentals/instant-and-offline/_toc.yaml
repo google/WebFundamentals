@@ -1,0 +1,17 @@
+toc:
+  - title: 瞬时加载与离线加载
+    section:
+    - title: 离线用户体验注意事项
+      path: /web/fundamentals/instant-and-offline/offline-ux
+    - title: 离线手册
+      path: /web/fundamentals/instant-and-offline/offline-cookbook/
+    - title: 网络存储
+      section:
+      - title: 概览
+        path: /web/fundamentals/instant-and-offline/web-storage/
+      - title: PWA 的离线存储
+        path: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
+    - title: 服务工作线程生命周期
+      path: /web/fundamentals/instant-and-offline/service-worker/lifecycle
+    - title: 服务工作线程注册
+      path: /web/fundamentals/instant-and-offline/service-worker/registration
