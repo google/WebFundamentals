@@ -1,0 +1,6 @@
+toc:
+- title: Arquitectura
+  section:
+  - title: El modelo de "shell de app"
+    path: /web/fundamentals/architecture/app-shell
+    

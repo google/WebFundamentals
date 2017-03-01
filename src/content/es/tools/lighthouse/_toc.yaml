@@ -1,0 +1,79 @@
+toc:
+  - title: Lighthouse
+    section:
+    - title: Información general
+      path: /web/tools/lighthouse/
+    - title: Referencias de la auditoría
+      section:
+      - title: La caché contiene la propiedad start_url del manifiesto
+        path: /web/tools/lighthouse/audits/cache-contains-start_url
+      - title: Contenido dimensionado correctamente para la ventana de visualización
+        path: /web/tools/lighthouse/audits/content-sized-correctly-for-viewport
+      - title: Cadenas de solicitudes críticas
+        path: /web/tools/lighthouse/audits/critical-request-chains
+      - title: Latencia de entrada estimada
+        path: /web/tools/lighthouse/audits/estimated-input-latency
+      - title: Primer dibujo significativo
+        path: /web/tools/lighthouse/audits/first-meaningful-paint
+      - title: Tiene un service worker registrado
+        path: /web/tools/lighthouse/audits/registered-service-worker
+      - title: HTML tiene una metaetiqueta de ventana de visualización
+        path: /web/tools/lighthouse/audits/has-viewport-meta-tag
+      - title: El manifiesto contiene íconos de al menos 192 píxeles
+        path:  /web/tools/lighthouse/audits/manifest-contains-192px-icon
+      - title: El manifiesto contiene color de fondo
+        path: /web/tools/lighthouse/audits/manifest-contains-background_color
+      - title: El manifiesto contiene nombre
+        path: /web/tools/lighthouse/audits/manifest-contains-name
+      - title: El manifiesto contiene nombre corto
+        path: /web/tools/lighthouse/audits/manifest-contains-short_name
+      - title: El manifiesto contiene URL de inicio
+        path: /web/tools/lighthouse/audits/manifest-contains-start_url
+      - title: El manifiesto contiene color de tema
+        path: /web/tools/lighthouse/audits/manifest-contains-theme_color
+      - title: El manifiesto existe
+        path: /web/tools/lighthouse/audits/manifest-exists
+      - title: La propiedad de visualización de manifiesto está establecida
+        path: /web/tools/lighthouse/audits/manifest-has-display-set
+      - title: El nombre corto de manifiesto no se truncará
+        path: /web/tools/lighthouse/audits/manifest-short_name-is-not-truncated
+      - title: La página incluye cierto contenido cuando sus secuencias de comandos no están disponibles
+        path: /web/tools/lighthouse/audits/no-js
+      - title: La página no solicita automáticamente la ubicación geográfica cuando se carga
+        path: /web/tools/lighthouse/audits/geolocation-on-load
+      - title: La página no solicita automáticamente los permisos de notificación cuando se carga
+        path: /web/tools/lighthouse/audits/notifications-on-load
+      - title: El sitio no usa caché de la app
+        path: /web/tools/lighthouse/audits/app-cache
+      - title: El sitio no usa console.time()
+        path: /web/tools/lighthouse/audits/console-time
+      - title: El sitio no usa recursos que demoran la primera pintura
+        path: /web/tools/lighthouse/audits/blocking-resources
+      - title: El sitio no usa Date.now()
+        path: /web/tools/lighthouse/audits/date-now
+      - title: El sitio no usa document.write()
+        path: /web/tools/lighthouse/audits/document-write
+      - title: El sitio no usa eventos de mutación
+        path: /web/tools/lighthouse/audits/mutation-events
+      - title: El sitio no usa el antiguo Flexbox de CSS
+        path: /web/tools/lighthouse/audits/old-flexbox
+      - title: El sitio no usa SQL Web
+        path: /web/tools/lighthouse/audits/web-sql
+      - title: El sitio está en HTTPS
+        path: /web/tools/lighthouse/audits/https
+      - title: El sitio abre anclajes externos mediante rel="noopener"
+        path: /web/tools/lighthouse/audits/noopener
+      - title: El sitio redirecciona el tráfico HTTP a HTTPS
+        path: /web/tools/lighthouse/audits/http-redirects-to-https
+      - title: El sitio usa HTTP/2
+        path: /web/tools/lighthouse/audits/http2
+      - title: El sitio usa receptores de eventos pasivos
+        path: /web/tools/lighthouse/audits/passive-event-listeners
+      - title: Índice de velocidad
+        path: /web/tools/lighthouse/audits/speed-index
+      - title: Tiempo para ser interactivo
+        path: /web/tools/lighthouse/audits/time-to-interactive
+      - title: La URL responde con un 200 cuando está sin conexión
+        path: /web/tools/lighthouse/audits/http-200-when-offline
+      - title: Marcas y medidas de sincronización del usuario
+        path: /web/tools/lighthouse/audits/user-timing

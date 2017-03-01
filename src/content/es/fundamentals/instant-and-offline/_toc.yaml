@@ -1,0 +1,17 @@
+toc:
+  - title: Carga instantánea y sin conexión
+    section:
+    - title: Consideraciones sobre la experiencia de usuario sin conexión
+      path: /web/fundamentals/instant-and-offline/offline-ux
+    - title: La guía sin conexión
+      path: /web/fundamentals/instant-and-offline/offline-cookbook/
+    - title: Almacenamiento web
+      section:
+      - title: Información general
+        path: /web/fundamentals/instant-and-offline/web-storage/
+      - title: Almacenamiento sin conexión para PWA
+        path: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
+    - title: El ciclo de vida del service worker
+      path: /web/fundamentals/instant-and-offline/service-worker/lifecycle
+    - title: Registro de los service worker
+      path: /web/fundamentals/instant-and-offline/service-worker/registration
