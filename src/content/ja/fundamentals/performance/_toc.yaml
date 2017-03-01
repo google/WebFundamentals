@@ -1,0 +1,63 @@
+toc:
+  - title: パフォーマンス
+    section:
+    - title: 概要
+      path: /web/fundamentals/performance/
+    - title: RAIL Model のパフォーマンスを測定する
+      path: /web/fundamentals/performance/rail
+    - title: コンテンツの効率の最適化
+      section:
+      - title: 概要
+        path: /web/fundamentals/performance/optimizing-content-efficiency/
+      - title: 不要なダウンロードを回避する
+        path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
+      - title: テキストベースのアセットのエンコードと転送サイズの最適化
+        path: /web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer
+      - title: 画像の最適化
+        path: /web/fundamentals/performance/optimizing-content-efficiency/image-optimization
+      - title: ウェブフォントの最適化
+        path: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
+      - title: HTTP キャッシュ
+        path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
+    - title: クリティカル レンダリング パス
+      section:
+      - title: 概要
+        path: /web/fundamentals/performance/critical-rendering-path/
+      - title: オブジェクト モデルの構築
+        path: /web/fundamentals/performance/critical-rendering-path/constructing-the-object-model
+      - title: レンダリング ツリーの構築、レイアウト、ペイント
+        path: /web/fundamentals/performance/critical-rendering-path/render-tree-construction
+      - title: レンダリングをブロックする CSS
+        path: /web/fundamentals/performance/critical-rendering-path/render-blocking-css
+      - title: JavaScript を使用してインタラクティブにする
+        path: /web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
+      - title: クリティカル レンダリング パスの測定
+        path: /web/fundamentals/performance/critical-rendering-path/measure-crp
+      - title: クリティカル レンダリング パスのパフォーマンスを分析する
+        path: /web/fundamentals/performance/critical-rendering-path/analyzing-crp
+      - title: クリティカル レンダリング パスの最適化
+        path: /web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path
+      - title: PageSpeed ルールおよび推奨事項
+        path: /web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations
+    - title: レンダリング パフォーマンス
+      section:
+      - title: 概要
+        path: /web/fundamentals/performance/rendering/
+      - title: JavaScript 実行の最適化
+        path: /web/fundamentals/performance/rendering/optimize-javascript-execution
+      - title: スタイル計算のスコープと複雑さの軽減
+        path: /web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations
+      - title: 大きく複雑なレイアウトとレイアウト スラッシングの回避
+        path: /web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing
+      - title: ペイントの複雑さの簡略化とペイントエリアの縮小
+        path: /web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
+      - title: コンポジタ専用プロパティのみの使用、およびレイヤー数の管理
+        path: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
+      - title: 入力ハンドラのデバウンス
+        path: /web/fundamentals/performance/rendering/debounce-your-input-handlers
+    - title: 低帯域幅と高レイテンシの理解
+      path: /web/fundamentals/performance/poor-connectivity/
+    - title: HTTP/2 の概要
+      path: /web/fundamentals/performance/http2/
+    - title: PRPL パターン
+      path: /web/fundamentals/performance/prpl-pattern/

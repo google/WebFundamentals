@@ -1,36 +1,44 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: CSS または JavaScript でアニメーション化することができます。 どちらを使いますか? またその理由は ?」
+description: アニメーション化には CSS または JavaScript を使用できます。条件に応じて、どちらを使用すべきかを見ていきましょう。
 
-{# wf_updated_on: 2014-10-20 #}
+{# wf_updated_on: 2016-08-25 #}
 {# wf_published_on: 2014-08-08 #}
 
-# CSS 対 JavaScript のアニメーション {: .page-title }
+# CSS アニメーションと JavaScript のアニメーションの比較 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 {% include "web/_shared/contributors/samthorogood.html" %}
 
-
-ウェブ上でアニメーションを作成するには、主に 2 通りの方法（CSS の使用および JavaScript の使用）があります。 どちらの方法を選択するのかは、プロジェクトの他の従属関係、および実現しようとする効果の種類に大きく依存します。
+ウェブ上でアニメーションを作成するには、主に 2 通りの方法（CSS の使用および JavaScript の使用）があります。どちらの方法を選択するのかは、プロジェクトの他の依存関係、および実現しようとする効果の種類に大きく依存します。
 
 ### TL;DR {: .hide-from-toc }
-- UI 要素の状態の切り替えなど、単純な「ワンショット」遷移には、CSS アニメーションを使用します。
-- バウンド、停止、一時停止、巻き戻し、スローダウンなど、高度な効果を実現したい場合は、JavaScript アニメーションを使用します。
-- JavaScript によるアニメーションを選択した場合は、TweenMax を使用します。または、簡易版のソリューションが望ましい場合は、TweenLite を使用します。
+* UI 要素の状態の切り替えなど単純な一度切りの遷移には、CSS アニメーションを使用します。
+* バウンス、停止、一時停止、巻き戻し、スローダウンなど、高度な効果を実現したい場合は、JavaScript アニメーションを使用します。
+* JavaScript でアニメーション化する場合は、Web Animations API などの使いやすい最新のフレームワークを使用します。
 
 
-ほとんどの基本アニメーションは CSS または JavaScript で作成できますが、作業負荷と時間は異なります (参照 [CSS 対 JavaScript のパフォーマンス](/web/fundamentals/design-and-ui/animations/animations-and-performance#css-vs-javascript-performance))。 各方法には長所と短所がありますが、適切な経験則は次のとおりです。
+基本的なアニメーションはほとんど CSS でも JavaScript でも作成できますが、作業負荷と所要時間に差が出ます（[CSS と JavaScript のパフォーマンス比較](animations-and-performance#css-vs-javascript-performance) を参照してください）。それぞれに長所と短所があるため、以下のガイドラインを参考にしてください。
 
-* ** より単純で自己充足的な状態を UI 要素に持たせる場合は、CSS を使用します。** 側面からナビゲーション メニューを取り込んだり、ツールヒントを表示したりするには、CSS 遷移とアニメーションが理想的です。 状態を制御するために最終的に JavaScript を使用することになっても、アニメーション自身は CSS 内にあります。
-* ** アニメーションを細かく制御する必要がある場合は、JavaScript を使用します。** タッチ位置を動的に追跡する場合や、停止/一時停止/スローダウン/逆再生を行うアニメーションを作成する場合は、通常、JavaScript を使用する必要があります。
+* **UI 要素の状態がシンプルで自己完結的な場合は、CSS を使用します。**サイドからナビゲーション メニューをスライドさせたり、ツールチップを表示したりする場合は、CSS 遷移とアニメーションが理想的です。状態を制御するために最終的に JavaScript を使用することになっても、アニメーション自身は CSS 内にあります。
+* **アニメーションを細かく制御する必要がある場合は、JavaScript を使用します。**Web Animations API は、現在 Chrome と Opera で利用できる標準ベースのアプローチです。実際のオブジェクトを使用できるため、複雑なオブジェクト指向のアプリケーションにとっては理想的です。停止、一時停止、スローダウン、逆再生が必要な場合は、JavaScript も便利です。
+* **シーン全体を手動で調整する場合は、`requestAnimationFrame` を直接使用します。**これは JavaScript の高度なアプローチですが、ゲームを作成する場合や HTML キャンバスに描画する場合に役立ちます。
 
-アニメーション機能を含む jQuery または JavaScript フレームワークをすでに使用している場合は、通常、CSS に切り替えるよりも、既存のアニメーション機能をそのまま使用するほうが便利です。
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="WaNoqBAp8NI"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
-### CSS によるアニメーション
+一方、jQuery の [`.animate()`](https://api.jquery.com/animate/){: .external } メソッドや [GreenSock の TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) など、アニメーション機能を含む JavaScript フレームワークを既に使用している場合は、通常、それを継続して使用するほうが便利です。
 
-画面上で何かを動かすのに CSS によるアニメーションが最も単純な方法であることに、疑いの余地はありません。
+<div class="clearfix"></div>
 
-X 軸と Y 軸の両方向に要素を 100px 移動させる CSS を下記に示します。 この処理を実行するのに、500ms かかるように設定された CSS 遷移を使用します。 `move` クラスが追加されると、`transform` 値が変更されて遷移が始まります。
+##  CSS によるアニメーション
+
+画面上で何かを動かすには、 CSS によるアニメーションを使用するのが最も単純な方法です。動作を自分で指定するこのアプローチは、*宣言型*といいます。
+
+X 軸と Y 軸の両方に対して、要素を 100 ピクセルずつ動かす CSS を以下に示します。ここでは、移動時間を 500 ミリ秒に設定した CSS 遷移を使用しています。`move` クラスが追加されると、`transform` 値が変更されて遷移が始まります。
 
 
     .box {
@@ -46,20 +54,19 @@ X 軸と Y 軸の両方向に要素を 100px 移動させる CSS を下記に示
       transform: translate(100px, 100px);
     }
     
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html">サンプルを参照してください。</a>
+遷移の継続時間のほかに、「イージング」のオプションもあります。基本的に、アニメーションの印象はイージングによって決まります。イージングについての詳細は、[イージングの基本](the-basics-of-easing)のガイドを参照してください。
 
-遷移の持続時間のほかに、軽減化のためのオプションがあります。それは本質的にアニメーションの感じ方です。 詳細については、[“The Basics of Easing”](the-basics-of-easing.html) ガイドを参照してください。
-
-上記のスニペットと同様に、アニメーションを管理するために別個の CSS クラスを作成する場合は、JavaScript を使用して各アニメーションのオンとオフを切り替えることができます。
+上記のスニペットと同様に、アニメーションを管理するために別の CSS クラスを作成する場合は、JavaScript を使用して各アニメーションのオンとオフを切り替えることができます。
 
 
     box.classList.add('move');
     
 
-こうすると、アプリケーションが最適に均衡化されます。 JavaScript による状態の管理に焦点を当てて、ターゲット要素に対して適切なクラスを単に設定し、アニメーションの操作をブラウザに任せることができます。 この手法を採用し続ける場合は、要素に対する `transitionend` イベントを監視できます。ただし、旧バージョンの Internet Explorer のサポートを無視できる場合に限ります (これらのイベントをサポートする最初のバージョンは IE バージョン 10 でした)。 他のすべてのブラウザは、しばらくの間、イベントをサポートしていました。
+こうすると、アプリケーションが均衡化されます。ターゲット要素に対して適切なクラスを設定すれば、アニメーションの操作はブラウザに任せて、JavaScript による状態の管理に専念できます。この手法を採用すると、要素の `transitionend` イベントを監視できます。ただし、旧バージョンの Internet Explorer をサポートしなくてもよい場合に限ります（これらのイベントはバージョン 10 以降でサポートされます）。他のブラウザはすべて、当面は、このイベントをサポートしています。
 
-遷移の最後を監視するのに必要な JavaScript は次のとおりです。
+遷移の終了を監視するのに必要な JavaScript は次のとおりです。
 
 
     var box = document.querySelector('.box');
@@ -70,17 +77,17 @@ X 軸と Y 軸の両方向に要素を 100px 移動させる CSS を下記に示
     }
     
 
-CSS 遷移を使用するほかに、CSS アニメーションも使用できます。こうすると、個々のアニメーション キーフレーム、時速時間と反復をより細かく制御できます。
+CSS 遷移のほかに、CSS アニメーションも使用できます。これにより、個々のアニメーション キーフレーム、継続時間、反復処理をより細かく制御できます。
 
-Note: アニメーションという用語に慣れていない場合、手書きアニメーションからの旧用語はキーフレームです。 アニメーション作者は、一定のアクションに対してキーフレームと呼ばれる特定のフレームを作成します。キーフレームは特定のモーションの最も極端な部分を捕捉するものです。その後、アニメーション作者は、キーフレームの間にすべての個別フレームを描き始めます。 本日、CSS アニメーションで同様のプロセスを実行します。このプロセスでは、特定の時点で CSS プロパティが持つ必要のある値をブラウザに指示すると、ブラウザがギャップを埋めます。
+注: アニメーションになじみのない方のために説明すると、キーフレームは手書きのアニメーションに由来する古い用語です。アニメーション作成者は、あるアクションに対してキーフレームと呼ばれる特定のフレームを作成します。キーフレームは特定のモーションの主要な部分をキャプチャするものです。その後、アニメーション作成者は、キーフレームの間にすべての個別フレームを描き始めます。本日、CSS アニメーションで同様のプロセスを実行します。このプロセスでは、特定の時点で CSS プロパティが持つ必要のある値をブラウザに指示すると、ブラウザがギャップを埋めます。
 
-たとえば、遷移と同じ方法でボックスをアニメーション化できますが、クリックのようなユーザ操作なしでのアニメーション化や、反復回数が無限のアニメーション化が可能です。 また、複数のプロパティを同時に変更することもできます。
+たとえば遷移と同じ方法を用いて、クリックなどのユーザー操作がなくても無限に繰り返すアニメーションをボックスに適用することが可能です。また、複数のプロパティを同時に変更することもできます。
 
 
     /**
      * This is a simplified version without
-     * vendor prefixes. With them included
-     * (which you will need) things get far
+     * vendor prefixes.With them included
+     * (which you will need), things get far
      * more verbose!
      */
     .box {
@@ -121,54 +128,36 @@ Note: アニメーションという用語に慣れていない場合、手書�
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html">サンプルを参照してください。</a>
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html){: target="_blank" .external }
 
-CSS アニメーションでは、ターゲット要素とは別個にアニメーション自身を定義し、アニメーション名プロパティを使用して必要なアニメーションを選択します。
+CSS アニメーションでは、ターゲット要素とは別にアニメーション自体を定義し、アニメーション名プロパティを使用して必要なアニメーションを選択します。
 
-依然としてほとんどの CSS アニメーションはベンダーのプレフィックス付きであり、Chrome、Safari、Opera、Safari Mobile、Android の各ブラウザでは `-webkit-` が使用されています。 Internet Explorer と Firefox の両ブラウザはプレフィックスなしで出荷されています。 プレフィックス付きバージョンの必要な CSS を作成するのに役立つ数多くのツールがあります。これらのツールを使用して、ソースファイル内でプレフィックスなしのバージョンを書くことができます。
+一部の CSS アニメーションには今でもベンダー プレフィックスが付いており、Safari、Safari Mobile、Android では `-webkit-` が使用されています。Chrome、Opera、Internet Explorer、Firefox はすべてプレフィックスなしでリリースされています。プレフィックスを付けたバージョンの CSS を作成する必要がある場合は、さまざまなツールを利用できます。これらのツールを使用すると、ソースファイル内ではプレフィックスなしのバージョンを書くことができます。
 
-### JavaScript によるアニメーション
+##  JavaScript と Web Animations API によるアニメーション
 
-JavaScript によるアニメーションの作成は、CSS による遷移またはアニメーションの作成よりも複雑ですが、通常、より広範なパワーを開発者に提供します。 一般的なアプローチでは `requestAnimationFrame` を使用し、アニメーションの各フレームで、アニメーション化対象の要素の各プロパティ値を手作業で確定します。
+JavaScript によるアニメーションの作成は、CSS による遷移やアニメーションの作成よりも複雑ですが、通常、デベロッパーにとっては非常に強力な手法となります。[Web Animations API](https://w3c.github.io/web-animations/) を使用すると、特定の CSS プロパティのアニメーション化や、構成可能な効果オブジェクトの作成が可能になります。
 
-Note: アニメーション用に setInterval または setTimeout を使用するウェブ関連コードを見かけることがあります。 アニメーションは画面のリフレッシュ レートに同期しないため、これは不適切な手法です。アニメーションは激しく震動してスキップする可能性があります。 このようなコードは常に避けて、代わりに、正しく同期される requestAnimationFrame を使用してください。
-
-前述の CSS 遷移を再作成するのに必要な JavaScript を下記に示します。
+JavaScript アニメーションは、コードの一部としてインラインで記述する*命令型*です。他のオブジェクト内にカプセル化することもできます。前述の CSS 遷移を再現するために必要な JavaScript を以下に示します。
 
 
-    function Box () {
-    
-      var animationStartTime = 0;
-      var animationDuration = 500;
-      var target = document.querySelector('.box');
-    
-      this.startAnimation = function() {
-        animationStartTime = Date.now();
-        requestAnimationFrame(update);
-      };
-    
-      function update() {
-        var currentTime = Date.now();
-        var positionInAnimation = (currentTime - animationStartTime) / animationDuration;
-    
-        var xPosition = positionInAnimation * 100;
-        var yPosition = positionInAnimation * 100;
-    
-        target.style.transform = 'translate(' + xPosition + 'px, ' + yPosition + 'px)';
-    
-        if (positionInAnimation <= 1)
-          requestAnimationFrame(update);
-      }
-    }
-    
-    var box = new Box();
-    box.startAnimation();
+    var target = document.querySelector('.box');
+    var player = target.animate([
+      {transform: 'translate(0)'},
+      {transform: 'translate(100px, 100px)'}
+    ], 500);
+    player.addEventListener('finish', function() {
+      target.style.transform = 'translate(100px, 100px)';
+    });
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-js.html">サンプルを参照してください。</a>
+デフォルトでは、ウェブ アニメーションは要素の体裁のみを変更します。オブジェクトを移動先の位置に保持したい場合は、サンプルのように、アニメーションが完了したときにその基盤となるスタイルを変更する必要があります。
 
-より多くのケースに適用できるよう拡張しようとすると、このコードは非常に複雑で管理が難しくなるように思われます。したがって、一般的に、アニメーション用に使用できる数多くの JavaScript ライブラリのいずれかを選択するのが適切です。 プロジェクトで jQuery をすでに使用している場合は、既存の機能を維持して、[`.animate()`](http://api.jquery.com/animate/) 関数を使用するほうが適切です。 一方、専用のライブラリが必要な場合は、非常に強力な [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) を使用してください。 TweenLite と呼ばれる簡易版の TweenMax があります。TweenLite はファイルサイズの観点から使いやすく設計されています。
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-wa.html){: target="_blank" .external }
 
-JavaScript によるアニメーションでは、すべてのステップで要素スタイルを細かく制御できるため、アニメーションの停止、一時停止、スローダウン、逆再生、操作などを適切な方法で実行することができます。
+Web Animations API は、W3C の新しい標準です。Chrome と Opera ではネイティブでサポートされており、[Firefox 向けの API は積極的に開発中です](https://birtles.github.io/areweanimatedyet/){: .external }。その他の最新ブラウザについては、[Polyfill を利用できます](https://github.com/web-animations/web-animations-js)。
+
+JavaScript アニメーションを使用すると、あらゆるステップで要素のスタイルを細かく制御できるため、アニメーションのスローダウン、一時停止、停止、逆再生、要素の操作などを適切に実行することができます。動作を適切にカプセル化できるため、複雑なオブジェクト指向のアプリケーションを作成する場合に特に便利な方法です。
 
 
+{# wf_devsite_translation #}

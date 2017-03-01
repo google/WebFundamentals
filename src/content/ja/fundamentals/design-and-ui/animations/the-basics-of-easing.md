@@ -1,30 +1,29 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: アニメーションをソフトにして重みを与える方法について説明します。
+description: アニメーションをやわらかく見せたり、重みを与えたりする方法を学習します。
 
-{# wf_updated_on: 2014-10-20 #}
-{# wf_published_on: 2014-08-08 #}
+{# wf_updated_on:2016-08-23 #}
+{# wf_published_on:2014-08-08 #}
 
-# The Basics of Easing {: .page-title }
+# イージングの基本 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-
-自然界の中で、一地点から別の場所に直線的に移動するものは何もありません。 実際には、移動すると加速または減速する傾向があります。 私たちの脳は、この種の動きを予測るように配線されているので、アニメーション化するときはこれを活用する必要があります。 自然な動きはより快適に感じ、全体的なエクスペリエンスの向上につながります。
+自然界の中で、一地点から別の場所に直線的に移動するものはありません。実際には、物は移動するときに加速または減速する傾向があります。私たちの脳は、この種の動きを自然と予測するようにできているので、アニメーション化するときは、この傾向を生かします。ユーザーが快適に感じる自然な動きをアプリに取り入れることで、全体的なエクスペリエンスを向上させることができます。
 
 ### TL;DR {: .hide-from-toc }
-- イージングはアニメーションをより自然に感じさせます。
-- ease-out アニメーションを UI 要素に使用します。
-- ease-in または ease-in-out アニメーションは、それらを短くできる場合以外は使用しません。エンド ユーザー緩慢な印象を与える傾向があります。
+* イージングによって、アニメーションはより自然に見えます。
+* UI 要素には ease-out アニメーションを使用します。
+* ease-in または ease-in-out アニメーションはエンドユーザーに緩慢な印象を与える傾向があるため、継続時間を短くできる場合を除いては、使用を控えてください。
 
 
-古典的なアニメーションでは、ゆっくりと開始し加速する動きは「スローイン」といいます。また、減速する動きは「スローアウト」と呼ばれます。しかし、ウェブ上で最も一般的に使用される専門用語は“ease in” と “ease out” です。 時にはこれらを組み合わせて “ease in out” と呼ばれます。 イージングは実際、アニメーションを深刻または顕著にするプロセスです。
+従来のアニメーションでは、ゆっくりと動き出して加速する動きは「スローイン」、高速で動き出して減速する動きは「スローアウト」と呼ばれます。一般的に、ウェブの世界ではこれを「ease in」と「ease out」という専門用語で表現します。これらを組み合わせた「ease in out」という用語が使われることもあります。イージングとは、アニメーションを滑らかで自然に見せるためのプロセスです。
 
-## イージングのキーワード
+##  イージングのキーワード
 
-CSS トランジションとアニメーションから次のことがわかります[choose the kind of easing you want to use for your animations](/web/fundamentals/design-and-ui/animations/choosing-the-right-easing)。 当該の動画のイージングに影響するキーワードを使用することができます (タイミングともいいます)。 また、次のことも可能です [go completely custom with your easing](/web/fundamentals/design-and-ui/animations/custom-easing)、これによって、アプリの個性を表現する方法により多くの自由を与えます。
+CSS 遷移とアニメーションではどちらも、[アニメーションに使用するイージングの種類を選択できます](choosing-the-right-easing)。また、対象とするアニメーションのイージング（`timing` とも言います）に作用するキーワードを使用することも可能です。さらに、[イージングを全面的にカスタマイズ](custom-easing)すると、より自由に独創的なアプリに仕上げることができます。
 
-CSS で使用できるキーワードの一部は以下のとおりです。
+以下は CSS で使用できるキーワードの一部です。
 
 * `linear`
 * `ease-in`
@@ -33,73 +32,104 @@ CSS で使用できるキーワードの一部は以下のとおりです。
 
 Source: [CSS Transitions, W3C](http://www.w3.org/TR/css3-transitions/#transition-timing-function-property)
 
-`steps` のキーワードを使用することもでき、これによって離散的なステップのトランジションを作成することができますが、上に列挙したものは自然を感じるアニメーションを作成するために最も有用です。
+`steps` キーワードを使用すると、離散的なステップから成る遷移を構成できますが、自然に感じるアニメーションを作成する上で最も有用なキーワードは上に挙げたものです。
 
-## リニア アニメーション
+##  リニア アニメーション
 
-イージングが何もないアニメーションは**linear**と呼ばれます。 リニア推移のグラフは次のようになります。
+<div class="attempt-right">
+  <figure>
+    <img src="images/linear.png" alt="リニア イーズのアニメーション曲線。" />
+  </figure>
+</div>
 
-<img src="images/linear.png" style="max-width: 300px" alt="リニア イーズのアニメーション曲線。" />
+イージングが何もないアニメーションは**リニア**と呼ばれます。リニア遷移のグラフは次のようになります。
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html"> リニア アニメーションを参照。</a>
+時間に比例して、一定の割合で値が増加します。直線運動はロボットのように不自然に見えやすく、ユーザーに不快感を与える場合があります。そのため、一般的には直線運動は避けたほうがよいでしょう。
 
-時間に伴って値が等しい量で移動します。 直線運動ではロボットのように不自然に感じる傾向があり、ユーザーの目障りになります。 一般的には、直線運動を避ける必要があります。
+CSS や JavaScript を使用してアニメーションのコーディングをする場合は、直線運動用のオプションを使用できます。 
 
-アニメーションのコーディングが CSS や JavaScript で行われている場合、直線運動のためのオプションがあることがわかります。 CSS で上記の効果を達成するためのコードは次のようになります。
+[リニア アニメーションを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html){: target="_blank" .external }
+
+<div style="clear:both;"></div>
+
+CSS で上記の効果を実現するためのコードは次のようになります。
 
 
     transition: transform 500ms linear;
     
 
 
-## Ease-out アニメーション
+##  ease-out アニメーション
 
-Easing out では、アニメーションは線形のものよりも早く開始し、最後に減速します。
+<div class="attempt-right">
+  <figure>
+    <img src="images/ease-out.png" alt="Ease-out のアニメーション曲線。" />
+  </figure>
+</div>
 
-<img src="images/ease-out.png" style="max-width: 300px" alt="Ease-out のアニメーション曲線。" />
+Easing out では、アニメーションはリニアのものよりも高速で動き出し、最後に減速します。
 
-Ease out 効果を使う多くの方法がありますが、最も単純なのは CSS の`ease-out` キーワードです。
+一般的に、ease out はユーザー インターフェースの動作に最適です。動き始めのスピードが速いのでアニメーションの反応が早く感じられ、最後は減速するので自然に見えます。
+
+[ease-out アニメーションを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html){: target="_blank" .external }
+
+<div style="clear:both;"></div>
+
+Ease out 効果を実現する方法はたくさんありますが、最も単純なのは CSS の `ease-out` キーワードを使う方法です。
 
 
     transition: transform 500ms ease-out;
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html"> Ease-out アニメーションを参照。</a>
 
-Easing out は一般的に、ユーザー·インターフェースの作業に最適です。高速起動はアニメーションの応答性を感じさせ、最後に自然に減速します。
+##  ease-in アニメーション
 
-## Ease-in アニメーション
+<div class="attempt-right">
+  <figure>
+    <img src="images/ease-in.png" alt="Ease-in のアニメーション曲線。" />
+  </figure>
+</div>
 
-Ease-in アニメーションは、ゆっくり始まり、最後に高速になります。つまり ease-out と逆です。
+ease-in アニメーションは、動き始めはゆっくりで、最後に速くなります。つまり ease-out の逆です。
 
-<img src="images/ease-in.png" style="max-width: 300px" alt="Ease-in のアニメーション曲線。" />
+この種のアニメーションは、重い石が落下するときの動きに似ています。つまり、ゆっくりと動き始め、最後は勢いよく地面にぶつかって止まります。
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html"> Ease-in アニメーションを参照。</a>
+ただ、相互作用という観点では、ease-in は唐突に終了するので少し不自然に見えます（現実の世界では、動いている物は突然止まるのではなく、徐々に減速します）。さらに、ease-in には動き出しが重く感じられるという難点があるため、サイトやアプリの反応が悪く見えるおそれがあります。
 
-この種のアニメーションのは、ゆっくりと開始し、防音強打で素早く地面を打つ落下重い石のようなものです。
+[ease-in アニメーションを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html){: target="_blank" .external }
 
-ease-in アニメーションを使用するには、ease-out やリニア アニメーションと同様に、そのキーワードを使用することができます。
+<div style="clear:both;"></div>
+
+ease-in アニメーションを使用するには、ease-out やリニア アニメーションと同様に、そのキーワードを使用します。
 
 
     transition: transform 500ms ease-in;
     
 
-しかし、相互操作の観点からは、ease-in は突然終わるため、少し不自然に感じます。現実の世界で動くものは突然止まるのではなく、徐々に減速します。 Ease-in はまた、慣れるまでは緩慢な印象を与えます。このことは、サイトやアプリで応答性についてネガティブな影響を与えることがあります。
+##  ease-in-out アニメーション
 
-## Ease-in-out アニメーション
+<div class="attempt-right">
+  <figure>
+    <img src="images/ease-in-out.png" alt="Ease-in-out のアニメーション曲線。" />
+  </figure>
+</div>
 
- Ease-in-out は、車は加速と減速で慎重に使用するべきです。ease out よりも劇的な効果をもたらします。
+Ease-in-out は、車の加速と減速に似ています。慎重に使用すれば、ease out よりもさらに劇的な効果を実現できます。
 
-<img src="images/ease-in-out.png" style="max-width: 300px" alt="Ease-in-out のアニメーション曲線。" />
+アニメーションの継続時間は、極端に長くしないでください。長すぎると、ease-in の効果によってアニメーションの始まりが重く見えます。一般的には 300 ～ 500 ミリ秒の範囲が妥当です。ただし具体的な数値は、そのプロジェクトの雰囲気によって大きく異なります。ease-in-out はゆっくりと立ち上がり、中盤で加速し、ゆっくりと終了するので、全体としてアニメーションのコントラストが強調されるため、ユーザーには好まれると考えられます。
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html">ease-in-out アニメーションを参照。</a>
+[ease-in-out アニメーション見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html){: target="_blank" .external }
 
-アニメーションの再生時間を長くしないでください。ease-in によりアニメーションの使い勝手が低下します。 300 - 500 ミリ秒の範囲が適切です。正確な数が何であるかに関して、プロジェクトの感触に大きく依存することになります。 つまり、開始が遅く、中盤が早く、終わりが遅いために、アニメーションのコントラストが増加し、ユーザーの満足につながります。
+<div style="clear:both;"></div>
 
-Ease-in-out animation アニメーションを取得するには、`ease-in-out` CSS キーワードを使用します。
+
+ease-in-out のアニメーションには、CSS キーワードの `ease-in-out` を使用します。
 
 
     transition: transform 500ms ease-in-out;
     
 
 
+
+
+{# wf_devsite_translation #}

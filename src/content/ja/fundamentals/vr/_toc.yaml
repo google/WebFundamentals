@@ -1,0 +1,12 @@
+toc:
+  - title: VR
+    status: beta
+    section:
+    - title: 概要
+      path: /web/fundamentals/vr/
+    - title: WebVR のステータスと考慮事項
+      path: /web/fundamentals/vr/status/
+    - title: WebVR のスタートガイド
+      path: /web/fundamentals/vr/getting-started-with-webvr/
+    - title: WebVR シーンに入力を追加する
+      path: /web/fundamentals/vr/adding-input-to-a-webvr-scene/

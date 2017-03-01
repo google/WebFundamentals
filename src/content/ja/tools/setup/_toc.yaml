@@ -1,0 +1,18 @@
+toc:
+  - title: スタートガイド
+    section:
+    - title: 概要
+      path: /web/tools/setup/
+    - title: エディタの設定
+      path: /web/tools/setup/setup-editor
+    - title: DevTools ワークスペースによる永続化の設定
+      path: /web/tools/setup/setup-workflow
+    - title: CSS と JS のプリプロセッサの設定
+      path: /web/tools/setup/setup-preprocessors
+    - title: コマンドライン ショートカットの設定
+      path: /web/tools/setup/setup-shortcuts
+    - title: ブラウザ拡張機能の設定
+      path: /web/tools/setup/setup-extensions
+    - title: ビルドツールの設定
+      path: /web/tools/setup/setup-buildtools
+

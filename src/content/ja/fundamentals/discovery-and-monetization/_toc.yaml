@@ -1,0 +1,18 @@
+toc:
+  - title: 見つけやすくして収益化する
+    section:
+    - title: 概要
+      path: /web/fundamentals/discovery-and-monetization/
+    - title: 検索の最適化
+      path: /web/fundamentals/discovery-and-monetization/search-optimization/
+    - title: ソーシャル ディスカバリー
+      path: /web/fundamentals/discovery-and-monetization/social-discovery/
+    - title: 広告で収益を得る
+      path: https://www.google.com/adsense
+      status: external
+    - title: 支払いを処理する
+      section:
+      - title: "Payment Request API: 統合ガイド"
+        path: /web/fundamentals/discovery-and-monetization/payment-request/
+      - title: Android Pay を支払いリクエストに統合する
+        path: /web/fundamentals/discovery-and-monetization/payment-request/android-pay

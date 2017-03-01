@@ -1,0 +1,33 @@
+toc:
+  - title: ユーザー補助機能
+    section:
+    - title: 概要
+      path: /web/fundamentals/accessibility/
+    - title: フォーカス
+      section:
+      - title: フォーカスの概要
+        path: /web/fundamentals/accessibility/focus/
+      - title: DOM 順序の重要性
+        path: /web/fundamentals/accessibility/focus/dom-order-matters
+      - title: tabindex の使用
+        path: /web/fundamentals/accessibility/focus/using-tabindex
+    - title: 組み込みのセマンティクス
+      section:
+      - title: セマンティクスの概要
+        path: /web/fundamentals/accessibility/semantics-builtin/
+      - title: アクセシビリティ ツリー
+        path: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
+      - title: 画像の代替テキスト
+        path: /web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images
+      - title: コンテンツのナビゲート
+        path: /web/fundamentals/accessibility/semantics-builtin/navigating-content
+    - title: セマンティクスと ARIA
+      section:
+      - title: ARIA の概要
+        path: /web/fundamentals/accessibility/semantics-aria/
+      - title: ARIA ラベルと関係性
+        path: /web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships
+      - title: コンテンツの非表示と更新
+        path: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
+    - title: 見やすいスタイル
+      path: /web/fundamentals/accessibility/accessible-styles

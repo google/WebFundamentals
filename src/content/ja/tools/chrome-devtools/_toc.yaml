@@ -1,0 +1,128 @@
+toc:
+  - title: Chrome DevTools
+    section:
+    - title: 概要
+      path: /web/tools/chrome-devtools/
+    - title: DevTools の設定とカスタマイズ
+      path: /web/tools/chrome-devtools/settings
+    - title: Progressive Web App のデバッグ
+      path: /web/tools/chrome-devtools/progressive-web-apps
+    - title: セキュリティの問題を理解する
+      path: /web/tools/chrome-devtools/security
+    - title: キーボード ショートカット リファレンス
+      path: /web/tools/chrome-devtools/shortcuts
+    - title: 任意のページからのコード スニペットの実行
+      path: /web/tools/chrome-devtools/snippets
+    - title: ページとスタイルの調査と編集
+      section:
+      - title: 概要
+        path: /web/tools/chrome-devtools/inspect-styles/
+      - title: スタイルの編集
+        path: /web/tools/chrome-devtools/inspect-styles/edit-styles
+      - title: アニメーションの調査
+        path: /web/tools/chrome-devtools/inspect-styles/animations
+      - title: DOM の編集
+        path: /web/tools/chrome-devtools/inspect-styles/edit-dom
+    - title: ストレージ、キャッシュ、およびリソースの調査と管理
+      section:
+      - title: ストレージ、データベース、およびキャッシュの調査と管理
+        path: /web/tools/chrome-devtools/manage-data/local-storage
+      - title: Cookie の調査と削除
+        path: /web/tools/chrome-devtools/manage-data/cookies
+      - title: リソースの調査
+        path: /web/tools/chrome-devtools/manage-data/page-resources
+    - title: Device Mode でのモバイル端末のシミュレート
+      section:
+      - title: 概要
+        path: /web/tools/chrome-devtools/device-mode/
+      - title: レスポンシブな端末固有ビューポートのテスト
+        path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+      - title: 位置情報および加速度計センサーのエミュレート
+        path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
+      - title: 他のブラウザのエミュレートとテスト
+        path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
+    - title: Android 端末のリモート デバッグ
+      section:
+      - title: スタートガイド
+        path: /web/tools/chrome-devtools/remote-debugging/
+      - title: ローカル サーバーへのアクセス
+        path: /web/tools/chrome-devtools/remote-debugging/local-server
+      - title: WebView のリモート デバッグ
+        path: /web/tools/chrome-devtools/remote-debugging/webviews
+    - title: JavaScript の調査とデバッグ
+      section:
+      - title: スタートガイド
+        path: /web/tools/chrome-devtools/javascript/
+      - title: ブレークポイントの設定
+        path: /web/tools/chrome-devtools/javascript/add-breakpoints
+      - title: コードのステップ実行
+        path: /web/tools/chrome-devtools/javascript/step-code
+      - title: 最小化した JavaScript の整形出力
+        path: /web/tools/chrome-devtools/javascript/pretty-print
+      - title: Sources パネルでの変数の監視
+        path: /web/tools/chrome-devtools/javascript/watch-variables
+      - title: ソースコードへの前処理済みコードのマッピング
+        path: /web/tools/chrome-devtools/javascript/source-maps
+    - title: コンソールの使用
+      section:
+      - title: 概要
+        path: /web/tools/chrome-devtools/console/
+      - title: 診断とコンソールへのログ出力
+        path: /web/tools/chrome-devtools/console/console-write
+      - title: 類似データ オブジェクトの比較
+        path: /web/tools/chrome-devtools/console/structured-data
+      - title: 実行の測定とカウント
+        path: /web/tools/chrome-devtools/console/track-executions
+      - title: 例外とエラーの処理
+        path: /web/tools/chrome-devtools/console/track-exceptions
+      - title: コンソール API リファレンス
+        path: /web/tools/chrome-devtools/console/console-reference
+      - title: 式の評価
+        path: /web/tools/chrome-devtools/console/expressions
+      - title: イベントの監視
+        path: /web/tools/chrome-devtools/console/events
+      - title: コマンドライン リファレンス
+        path: /web/tools/chrome-devtools/console/command-line-reference
+    - title: パフォーマンスの考え方
+      section:
+      - title: Timeline ツールの使い方
+        path: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
+      - title: Timeline イベント リファレンス
+        path: /web/tools/chrome-devtools/evaluate-performance/performance-reference
+    - title: 実行時のパフォーマンスの分析
+      section:
+      - title: 概要
+        path: /web/tools/chrome-devtools/rendering-tools/
+      - title: JavaScript 実行の高速化
+        path: /web/tools/chrome-devtools/rendering-tools/js-execution
+      - title: レイアウトの強制同期の診断
+        path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
+    - title: ネットワーク パフォーマンスの測定
+      section:
+      - title: リソース読み込み時間の測定
+        path: /web/tools/chrome-devtools/network-performance/resource-loading
+      - title: Resource Timing について
+        path: /web/tools/chrome-devtools/network-performance/understanding-resource-timing
+      - title: さまざまなネットワーク状態でのパフォーマンスの最適化
+        path: /web/tools/chrome-devtools/network-performance/network-conditions
+    - title: メモリの問題の解決
+      section:
+      - title: 概要
+        path: /web/tools/chrome-devtools/memory-problems/
+      - title: メモリに関する用語の説明
+        path: /web/tools/chrome-devtools/memory-problems/memory-101
+      - title: ヒープのスナップショットの記録
+        path: /web/tools/chrome-devtools/memory-problems/heap-snapshots
+      - title: Allocation Profiler の使用
+        path: /web/tools/chrome-devtools/memory-problems/allocation-profiler
+    - title: Chrome DevTools の拡張
+      section:
+      - title: DevTools および Chrome との統合
+        path: https://developer.chrome.com/devtools/docs/integrating
+        status: external
+      - title: DevTools 拡張 API
+        path: https://developer.chrome.com/extensions/devtools
+        status: external
+      - title: デバッガー プロトコル
+        path: https://developer.chrome.com/devtools/docs/debugger-protocol
+        status: external

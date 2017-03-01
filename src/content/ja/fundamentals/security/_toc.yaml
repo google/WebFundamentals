@@ -1,0 +1,29 @@
+toc:
+  - title: セキュリティとアイデンティティ
+    section:
+    - title: 概要
+      path: /web/fundamentals/security/
+    - title: コンテンツ セキュリティ ポリシー
+      path: /web/fundamentals/security/csp/
+    - title: 送信中のデータの暗号化
+      section:
+      - title: HTTPS を使用する理由
+        path: /web/fundamentals/security/encrypt-in-transit/why-https
+      - title: 重要なセキュリティ用語
+        path: /web/fundamentals/security/encrypt-in-transit/intro-to-security-terminology
+      - title: サーバーでの HTTPS の有効化
+        path: /web/fundamentals/security/encrypt-in-transit/enable-https
+    - title: 混合コンテンツの防止
+      section:
+      - title: 混合コンテンツとは
+        path: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+      - title: 混合コンテンツの防止
+        path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
+    - title: Credential Management API
+      section:
+      - title: 概要
+        path: /web/fundamentals/security/credential-management/
+      - title: 認証情報を取得する
+        path: /web/fundamentals/security/credential-management/retrieve-credentials
+      - title: 認証情報を保存する
+        path: /web/fundamentals/security/credential-management/store-credentials        

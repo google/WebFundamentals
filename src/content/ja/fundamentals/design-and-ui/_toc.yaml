@@ -1,0 +1,47 @@
+toc:
+  - title: デザインと UI
+    section:
+    - title: 概要
+      path: /web/fundamentals/design-and-ui/
+    - title: UX の基本
+      path: /web/fundamentals/design-and-ui/ux-basics/
+    - title: レスポンシブ ウェブデザイン
+      section:
+      - title: レスポンシブ ウェブデザインの基本
+        path: /web/fundamentals/design-and-ui/responsive/
+      - title: レスポンシブ ウェブデザイン パターン
+        path: /web/fundamentals/design-and-ui/responsive/patterns
+      - title: 画像
+        path: /web/fundamentals/design-and-ui/media/images
+      - title: Video
+        path: /web/fundamentals/design-and-ui/media/video
+      - title: さまざまな端末に対応したコンテンツ
+        path: /web/fundamentals/design-and-ui/responsive/content
+    - title: ユーザー入力
+      section:
+      - title: 最適なフォームの作成
+        path: /web/fundamentals/design-and-ui/input/forms/
+      - title: サイト上でのタップ操作をサポートする
+        path: /web/fundamentals/design-and-ui/input/touch/
+    - title: アイコンとブラウザの色
+      path: /web/fundamentals/design-and-ui/browser-customization/
+    - title: アニメーション
+      section:
+      - title: 概要
+        path: /web/fundamentals/design-and-ui/animations/
+      - title: CSS と JavaScript の比較
+        path: /web/fundamentals/design-and-ui/animations/css-vs-javascript
+      - title: イージングの基本
+        path: /web/fundamentals/design-and-ui/animations/the-basics-of-easing
+      - title: カスタム イージング
+        path: /web/fundamentals/design-and-ui/animations/custom-easing
+      - title: ビュー切り替えのアニメーション
+        path: /web/fundamentals/design-and-ui/animations/animating-between-views
+      - title: 適切なイージングの選択
+        path: /web/fundamentals/design-and-ui/animations/choosing-the-right-easing
+      - title: モーダルビューのアニメーション化
+        path: /web/fundamentals/design-and-ui/animations/animating-modal-views
+      - title: さまざまなタイミングでアニメーションを表示する
+        path: /web/fundamentals/design-and-ui/animations/asymmetric-animation-timing
+      - title: アニメーションとパフォーマンス
+        path: /web/fundamentals/design-and-ui/animations/animations-and-performance
