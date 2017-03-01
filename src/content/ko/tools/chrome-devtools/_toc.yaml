@@ -1,0 +1,128 @@
+toc:
+  - title: Chrome DevTools
+    section:
+    - title: 개요
+      path: /web/tools/chrome-devtools/
+    - title: DevTools 구성 및 사용자설정
+      path: /web/tools/chrome-devtools/settings
+    - title: Progressive Web App 디버그
+      path: /web/tools/chrome-devtools/progressive-web-apps
+    - title: 보안 문제 이해
+      path: /web/tools/chrome-devtools/security
+    - title: 단축키 참조
+      path: /web/tools/chrome-devtools/shortcuts
+    - title: 모든 페이지에서 코드 스니펫 실행
+      path: /web/tools/chrome-devtools/snippets
+    - title: 페이지와 스타일 검사 및 편집
+      section:
+      - title: 개요
+        path: /web/tools/chrome-devtools/inspect-styles/
+      - title: 스타일 편집
+        path: /web/tools/chrome-devtools/inspect-styles/edit-styles
+      - title: 애니메이션 검사
+        path: /web/tools/chrome-devtools/inspect-styles/animations
+      - title: DOM 편집
+        path: /web/tools/chrome-devtools/inspect-styles/edit-dom
+    - title: 저장소, 캐시 및 리소스를 검사하고 관리
+      section:
+      - title: 저장소, 데이터베이스 및 캐시를 검사하고 관리
+        path: /web/tools/chrome-devtools/manage-data/local-storage
+      - title: 쿠키 검사 및 삭제
+        path: /web/tools/chrome-devtools/manage-data/cookies
+      - title: 리소스 검사
+        path: /web/tools/chrome-devtools/manage-data/page-resources
+    - title: Device Mode로 휴대기기 시뮬레이션
+      section:
+      - title: 개요
+        path: /web/tools/chrome-devtools/device-mode/
+      - title: 응답형 및 기기별 뷰포트 테스트
+        path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+      - title: Geolocation 및 가속도계 센서 에뮬레이트
+        path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
+      - title: 다른 브라우저 에뮬레이트 및 테스트
+        path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
+    - title: Android 기기 원격 디버깅
+      section:
+      - title: 시작하기
+        path: /web/tools/chrome-devtools/remote-debugging/
+      - title: 로컬 서버 액세스
+        path: /web/tools/chrome-devtools/remote-debugging/local-server
+      - title: WebView 원격 디버깅
+        path: /web/tools/chrome-devtools/remote-debugging/webviews
+    - title: 자바스크립트 검사 및 디버깅
+      section:
+      - title: 시작하기
+        path: /web/tools/chrome-devtools/javascript/
+      - title: 중단점 설정
+        path: /web/tools/chrome-devtools/javascript/add-breakpoints
+      - title: 단계별 코드 실행
+        path: /web/tools/chrome-devtools/javascript/step-code
+      - title: Pretty-Print를 사용하여 자바스크립트 최소화
+        path: /web/tools/chrome-devtools/javascript/pretty-print
+      - title: 소스에서 변수 조사
+        path: /web/tools/chrome-devtools/javascript/watch-variables
+      - title: 전처리된 코드를 소스 코드에 매핑
+        path: /web/tools/chrome-devtools/javascript/source-maps
+    - title: 콘솔 사용
+      section:
+      - title: 개요
+        path: /web/tools/chrome-devtools/console/
+      - title: 진단 및 콘솔에 로그
+        path: /web/tools/chrome-devtools/console/console-write
+      - title: 유사한 데이터 객체 비교
+        path: /web/tools/chrome-devtools/console/structured-data
+      - title: 실행 측정 및 계산
+        path: /web/tools/chrome-devtools/console/track-executions
+      - title: 예외 및 오류 처리
+        path: /web/tools/chrome-devtools/console/track-exceptions
+      - title: 콘솔 API 참조
+        path: /web/tools/chrome-devtools/console/console-reference
+      - title: 식 평가
+        path: /web/tools/chrome-devtools/console/expressions
+      - title: 이벤트 모니터링
+        path: /web/tools/chrome-devtools/console/events
+      - title: 명령줄 참조
+        path: /web/tools/chrome-devtools/console/command-line-reference
+    - title: 성능을 판단하는 관점
+      section:
+      - title: 타임라인 도구 사용법
+        path: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
+      - title: 타임라인 이벤트 참조
+        path: /web/tools/chrome-devtools/evaluate-performance/performance-reference
+    - title: 런타임 성능 분석
+      section:
+      - title: 개요
+        path: /web/tools/chrome-devtools/rendering-tools/
+      - title: 자바스크립트 실행 속도 개선
+        path: /web/tools/chrome-devtools/rendering-tools/js-execution
+      - title: 강제 동기식 레이아웃 진단
+        path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
+    - title: 네트워크 성능 측정
+      section:
+      - title: 리소스 로드 시간 측정
+        path: /web/tools/chrome-devtools/network-performance/resource-loading
+      - title: Resource Timing의 이해
+        path: /web/tools/chrome-devtools/network-performance/understanding-resource-timing
+      - title: 다양한 네트워크 조건 하에서 성능 최적화
+        path: /web/tools/chrome-devtools/network-performance/network-conditions
+    - title: 메모리 문제 해결
+      section:
+      - title: 개요
+        path: /web/tools/chrome-devtools/memory-problems/
+      - title: 메모리 용어 이해
+        path: /web/tools/chrome-devtools/memory-problems/memory-101
+      - title: 힙 스냅샷 기록
+        path: /web/tools/chrome-devtools/memory-problems/heap-snapshots
+      - title: 할당 프로파일러 사용
+        path: /web/tools/chrome-devtools/memory-problems/allocation-profiler
+    - title: Chrome DevTools 확장
+      section:
+      - title: DevTools 및 Chrome과 통합
+        path: https://developer.chrome.com/devtools/docs/integrating
+        status: external
+      - title: DevTools 확장 API
+        path: https://developer.chrome.com/extensions/devtools
+        status: external
+      - title: 디버거 프로토콜
+        path: https://developer.chrome.com/devtools/docs/debugger-protocol
+        status: external

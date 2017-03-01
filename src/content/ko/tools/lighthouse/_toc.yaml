@@ -1,0 +1,79 @@
+toc:
+  - title: Lighthouse
+    section:
+    - title: 개요
+      path: /web/tools/lighthouse/
+    - title: 참조 감사
+      section:
+      - title: 매니페스트의 start_url을 캐시에 포함
+        path: /web/tools/lighthouse/audits/cache-contains-start_url
+      - title: 뷰포트에 맞게 정확히 크기가 조정된 콘텐츠
+        path: /web/tools/lighthouse/audits/content-sized-correctly-for-viewport
+      - title: 주요 요청 체인
+        path: /web/tools/lighthouse/audits/critical-request-chains
+      - title: 예상되는 입력 지연 시간
+        path: /web/tools/lighthouse/audits/estimated-input-latency
+      - title: First Meaningful Paint
+        path: /web/tools/lighthouse/audits/first-meaningful-paint
+      - title: 등록된 서비스 워커가 있음
+        path: /web/tools/lighthouse/audits/registered-service-worker
+      - title: HTML에 뷰포트 메타 태그가 있음
+        path: /web/tools/lighthouse/audits/has-viewport-meta-tag
+      - title: 192px 이상 아이콘이 포함된 매니페스트
+        path:  /web/tools/lighthouse/audits/manifest-contains-192px-icon
+      - title: 배경색이 포함된 매니페스트
+        path: /web/tools/lighthouse/audits/manifest-contains-background_color
+      - title: 이름을 포함한 매니페스트
+        path: /web/tools/lighthouse/audits/manifest-contains-name
+      - title: 짧은 이름을 포함한 매니페스트
+        path: /web/tools/lighthouse/audits/manifest-contains-short_name
+      - title: 시작 URL을 포함한 매니페스트
+        path: /web/tools/lighthouse/audits/manifest-contains-start_url
+      - title: 테마 색상을 포함한 매니페스트
+        path: /web/tools/lighthouse/audits/manifest-contains-theme_color
+      - title: 매니페스트의 존재
+        path: /web/tools/lighthouse/audits/manifest-exists
+      - title: 매니페스트의 디스플레이 속성 설정
+        path: /web/tools/lighthouse/audits/manifest-has-display-set
+      - title: 홈 화면에 표시되었을 때 매니페스트의 short_name이 잘리지 않음
+        path: /web/tools/lighthouse/audits/manifest-short_name-is-not-truncated
+      - title: 해당 스크립트를 사용할 수 없을 때 페이지에 일부 콘텐츠 포함
+        path: /web/tools/lighthouse/audits/no-js
+      - title: 페이지 로드 시 위치정보를 자동 요청하지 않는 페이지
+        path: /web/tools/lighthouse/audits/geolocation-on-load
+      - title: 페이지 로드 시 알림 권한을 자동 요청하지 않는 페이지
+        path: /web/tools/lighthouse/audits/notifications-on-load
+      - title: Application Cache를 사용하지 않는 사이트
+        path: /web/tools/lighthouse/audits/app-cache
+      - title: document.write()를 사용하지 않는 사이트
+        path: /web/tools/lighthouse/audits/console-time
+      - title: 첫 번째 페인트를 지연시키는 리소스를 사용하지 않는 사이트
+        path: /web/tools/lighthouse/audits/blocking-resources
+      - title: Date.now()를 사용하지 않는 사이트
+        path: /web/tools/lighthouse/audits/date-now
+      - title: document.write()를 사용하지 않는 사이트
+        path: /web/tools/lighthouse/audits/document-write
+      - title: 스크립트에서 변이 이벤트를 사용하지 않는 사이트
+        path: /web/tools/lighthouse/audits/mutation-events
+      - title: 이전 CSS Flexbox를 사용하지 않는 사이트
+        path: /web/tools/lighthouse/audits/old-flexbox
+      - title: Web SQL을 사용하지 않는 사이트
+        path: /web/tools/lighthouse/audits/web-sql
+      - title: 사이트가 HTTPS에 있음
+        path: /web/tools/lighthouse/audits/https
+      - title: rel="noopender"을 사용하여 외부 앵커를 여는 사이트"
+        path: /web/tools/lighthouse/audits/noopener
+      - title: 사이트가 HTTP 트래픽을 HTTPS로 리디렉션
+        path: /web/tools/lighthouse/audits/http-redirects-to-https
+      - title: HTTP/2를 사용하는 사이트
+        path: /web/tools/lighthouse/audits/http2
+      - title: 패시브 이벤트 리스너를 사용하는 사이트
+        path: /web/tools/lighthouse/audits/passive-event-listeners
+      - title: Speed Index
+        path: /web/tools/lighthouse/audits/speed-index
+      - title: Time to Interactive
+        path: /web/tools/lighthouse/audits/time-to-interactive
+      - title: 오프라인일 때 URL이 200으로 응답
+        path: /web/tools/lighthouse/audits/http-200-when-offline
+      - title: 사용자 타이밍 표시 및 측정
+        path: /web/tools/lighthouse/audits/user-timing

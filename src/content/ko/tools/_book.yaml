@@ -1,0 +1,21 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+upper_tabs:
+  - include: /web/_upper_tabs-Fundamentals.yaml
+  - name: 도구
+    heading: 도구
+    path: /web/tools/
+    lower_tabs:
+      other:
+      - name: 도구
+        contents:
+        - include: /web/tools/setup/_toc.yaml
+        - include: /web/tools/chrome-devtools/_toc.yaml
+        - include: /web/tools/lighthouse/_toc.yaml
+        - title: 서비스 워커 라이브러리
+          path: /web/tools/service-worker-libraries/
+        - title: 웹 Starter Kit
+          path: /web/tools/starter-kit/
+        - title: Polymer Starter Kit
+          path: /web/tools/polymer-starter-kit/
+  - include: /web/_upper_tabs-Updates.yaml
+  - include: /web/_upper_tabs-Showcase.yaml

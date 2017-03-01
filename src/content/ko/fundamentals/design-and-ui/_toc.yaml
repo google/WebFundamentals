@@ -1,0 +1,47 @@
+toc:
+  - title: 디자인 및 UI
+    section:
+    - title: 개요
+      path: /web/fundamentals/design-and-ui/
+    - title: UX의 기본 사항
+      path: /web/fundamentals/design-and-ui/ux-basics/
+    - title: 반응형 웹 디자인
+      section:
+      - title: 반응형 웹 디자인 기본 사항
+        path: /web/fundamentals/design-and-ui/responsive/
+      - title: 반응형 웹 디자인 패턴
+        path: /web/fundamentals/design-and-ui/responsive/patterns
+      - title: 이미지
+        path: /web/fundamentals/design-and-ui/media/images
+      - title: 동영상
+        path: /web/fundamentals/design-and-ui/media/video
+      - title: 다중 기기 콘텐츠
+        path: /web/fundamentals/design-and-ui/responsive/content
+    - title: 사용자 입력
+      section:
+      - title: 멋진 양식 만들기
+        path: /web/fundamentals/design-and-ui/input/forms/
+      - title: 사이트에 터치 추가
+        path: /web/fundamentals/design-and-ui/input/touch/
+    - title: 아이콘 및 브라우저 색상
+      path: /web/fundamentals/design-and-ui/browser-customization/
+    - title: 애니메이션
+      section:
+      - title: 개요
+        path: /web/fundamentals/design-and-ui/animations/
+      - title: CSS와 자바스크립트
+        path: /web/fundamentals/design-and-ui/animations/css-vs-javascript
+      - title: Easing의 기본 사항
+        path: /web/fundamentals/design-and-ui/animations/the-basics-of-easing
+      - title: 사용자설정 Easing
+        path: /web/fundamentals/design-and-ui/animations/custom-easing
+      - title: 뷰 간 애니메이션
+        path: /web/fundamentals/design-and-ui/animations/animating-between-views
+      - title: 적합한 Easing 선택
+        path: /web/fundamentals/design-and-ui/animations/choosing-the-right-easing
+      - title: 모달 뷰 애니메이션
+        path: /web/fundamentals/design-and-ui/animations/animating-modal-views
+      - title: 비대칭 애니메이션 타이밍
+        path: /web/fundamentals/design-and-ui/animations/asymmetric-animation-timing
+      - title: 애니메이션 및 성능
+        path: /web/fundamentals/design-and-ui/animations/animations-and-performance

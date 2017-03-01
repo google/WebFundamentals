@@ -1,0 +1,17 @@
+toc:
+  - title: 즉석 및 오프라인 로드
+    section:
+    - title: 오프라인 UX 고려 사항
+      path: /web/fundamentals/instant-and-offline/offline-ux
+    - title: 오프라인 설명서
+      path: /web/fundamentals/instant-and-offline/offline-cookbook/
+    - title: 웹 저장소
+      section:
+      - title: 개요
+        path: /web/fundamentals/instant-and-offline/web-storage/
+      - title: PWA용 오프라인 저장소
+        path: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
+    - title: 서비스 워커 수명 주기
+      path: /web/fundamentals/instant-and-offline/service-worker/lifecycle
+    - title: 서비스 워커 등록
+      path: /web/fundamentals/instant-and-offline/service-worker/registration

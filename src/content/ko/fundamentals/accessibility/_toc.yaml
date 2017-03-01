@@ -1,0 +1,33 @@
+toc:
+  - title: 접근성
+    section:
+    - title: 개요
+      path: /web/fundamentals/accessibility/
+    - title: 포커스
+      section:
+      - title: 포커스 소개
+        path: /web/fundamentals/accessibility/focus/
+      - title: DOM 순서가 중요
+        path: /web/fundamentals/accessibility/focus/dom-order-matters
+      - title: tabindex 사용
+        path: /web/fundamentals/accessibility/focus/using-tabindex
+    - title: 기본 제공 의미 체계
+      section:
+      - title: 의미 체계 소개
+        path: /web/fundamentals/accessibility/semantics-builtin/
+      - title: 접근성 트리
+        path: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
+      - title: 이미지 대체 텍스트
+        path: /web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images
+      - title: 콘텐츠 탐색
+        path: /web/fundamentals/accessibility/semantics-builtin/navigating-content
+    - title: 의미 체계와 ARIA
+      section:
+      - title: ARIA 소개
+        path: /web/fundamentals/accessibility/semantics-aria/
+      - title: ARIA 레이블과 관계
+        path: /web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships
+      - title: 콘텐츠 숨기기 및 업데이트
+        path: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
+    - title: 액세스 가능한 스타일
+      path: /web/fundamentals/accessibility/accessible-styles
