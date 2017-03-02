@@ -275,7 +275,7 @@ tutorial. Check out the link below to learn more about them.
 
 <a class="gc-analytics-event"
    data-category="DevTools / Debug JS / Get Started / Next Steps / Breakpoints"
-   href="step-code#stepping_in_action" target="_blank"
+   href="reference#stepping" target="_blank"
    rel="noopener noreferrer"><button>I Want To Master Code Stepping</button></a>
 
 ## Feedback
