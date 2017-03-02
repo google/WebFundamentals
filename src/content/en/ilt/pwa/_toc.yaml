@@ -1,5 +1,0 @@
-toc:
-- title: Progressive Web Apps
-  contents:
-  - include: /web/ilt/pwa/_concepts.yaml
-  - include: /web/ilt/pwa/_codelabs.yaml

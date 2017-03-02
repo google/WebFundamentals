@@ -41,6 +41,7 @@ function exportAndUpdate(srcPath, destBase, flatten, bookPath) {
   return getCLAATFiles(srcPath)
   .then(function(files) {
     return Promise.all(files.map(function(file) {
+      console.log(file);
       let srcFile = file;
       let srcImgPath = file.replace('index.md', 'img/');
       let destDir = file.replace(srcPath, '').replace('/index.md', '');
@@ -67,6 +68,6 @@ gulp.task('claat:codelabs', function() {
 gulp.task('claat:ilt-pwa', function() {
   let srcPath = 'src/data/ilt-pwa';
   let destPath = path.join(GLOBAL.WF.src.content, 'ilt/pwa');
-  let bookPath = '/web/ilt/_book.yaml';
-  return exportAndUpdate(srcPath, destPath, true, bookPath);
+  let bookPath = '/web/ilt/pwa/_book.yaml';
+  return exportAndUpdate(srcPath, destPath, false, bookPath);
 });
