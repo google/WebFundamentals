@@ -26,8 +26,8 @@ ipsum quis ex sagittis posuere a vel felis.
 <div class="video-wrapper-full-width">
   <iframe frameborder="0" width="100%" allowfullscreen="true"
     mozallowfullscreen="true" webkitallowfullscreen="true"
-    src="https://docs.google.com/presentation/d/1pySKLv9XNSRlw-PusU0IQL6hRpnKyrjMeZ0UYfrmqwI/embed">
+    src="https://docs.google.com/presentation/d/1GgHeG2iUemP3Qz3n8fLT1j2v8T-tADSJqsC07MzgAa4/embed">
   </iframe>
 </div>
 
-[View in Google Docs](https://docs.google.com/presentation/d/1pySKLv9XNSRlw-PusU0IQL6hRpnKyrjMeZ0UYfrmqwI/pub)
+[View in Google Docs](https://docs.google.com/presentation/d/1GgHeG2iUemP3Qz3n8fLT1j2v8T-tADSJqsC07MzgAa4/pub)
