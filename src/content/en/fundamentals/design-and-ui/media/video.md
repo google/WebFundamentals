@@ -64,7 +64,7 @@ For example:
 
 When the browser parses the `<source>` tags, it uses the optional `type`
 attribute to help decide which file to download and play. If the browser
-supports `WebM`, it play chrome.webm; if not, it checks whether it can
+supports `WebM`, it plays chrome.webm; if not, it checks whether it can
 play MPEG-4 videos.
 
 Check out [A Digital Media Primer for Geeks](//www.xiph.org/video/vid1.shtml)

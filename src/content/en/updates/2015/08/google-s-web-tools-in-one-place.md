@@ -22,7 +22,7 @@ The DevTools homepage – along with all documentation – moved from [https://d
 
 ## Action-oriented tutorials
 
-The docs that show you how to use DevTools are now goal- or action-oriented, similar to how [Web Fundamentals](/web/fundamentals/) structures its pages. So instead of "Learn everything about the network panel", you'll get ["Measure Resource Loading Times"](/web/tools/chrome-devtools/network-performance/resource-loading).
+The docs that show you how to use DevTools are now goal- or action-oriented, similar to how [Web Fundamentals](/web/fundamentals/) structures its pages. So instead of "Learn everything about the network panel", you'll get ["Get Started with Analyzing Network Performance"](/web/tools/chrome-devtools/network-performance).
 
 Going forward, our tutorials and guides will tell an overarching tooling story independent of any specific tool. What matters is that you're productive and efficient, and sometimes the combination of multiple tools gets you there. Tutorials from the old Tools section in Web Fundamentals have already been moved and we'll work on adding more non-DevTools related content in the future.
 

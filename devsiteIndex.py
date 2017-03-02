@@ -198,6 +198,7 @@ def generateYaml(lang, requestPath, rawYaml):
     section += '</section>'
     section = section.replace('[[SECTION_CLASSES]]', ' '.join(sectionClass))
     content += section
+    content = devsiteHelper.renderDevSiteContent(content, lang)
   text = render('gae/home.tpl', {
                 'title': title,
                 'announcementBanner': banner,

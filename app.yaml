@@ -5,6 +5,10 @@ threadsafe: true
 # version: wf-devsite
 
 handlers:
+- url: /test-results.json
+  static_files: test-results.json
+  upload: test-results.json
+
 - url: /robots.txt
   static_files: gae/robots.txt
   upload: gae/robots.txt

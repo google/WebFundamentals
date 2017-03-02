@@ -1,0 +1,10 @@
+# {# wf_auto_generated #}
+# ATTENTION - This file is auto-generated, changes must be made to the template!
+
+toc:
+- title: Tags
+  path: /web/{{section}}/tags/
+  alternate_paths:
+{{#each tags}}
+  - /web/{{../section}}/tags/{{this}}
+{{/each}}

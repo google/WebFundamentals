@@ -99,6 +99,20 @@ landing_page:
       path: https://www.ampproject.org/docs/get_started/create
 
 
+  - items:
+    - heading: Developer Feedback
+      description: >
+        <p>
+          Check the state of existing bugs through the Browser Bug Searcher and
+          learn how to give feedback for web platform features on all browsers
+          and platforms.
+        </p>
+      icon:
+        icon_name: bug_report
+      path: feedback/
+    - heading: ''
+      description: ''
+
   - heading: Latest updates for Web Developers
     items:
     - description: >

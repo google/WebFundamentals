@@ -130,7 +130,7 @@ Finally, updates have also been made to our official [Ember.js](https://github.c
 
 ## Until next time
 
-If you’ve written an article, given a talk or created a generator you think would be useful to others, please feel free to share it with us on [Twitter](http://twitter.com/yeoman) or [Google+](https://plus.sandbox.google.com/101063139999404044459/posts). We’re always interested in seeing how our tools are used.
+If you’ve written an article, given a talk or created a generator you think would be useful to others, please feel free to share it with us on [Twitter](http://twitter.com/yeoman) or [Google+](https://plus.google.com/101063139999404044459/posts). We’re always interested in seeing how our tools are used.
 
 Until the next time we run `yo digest`, happy scaffolding and don't be afraid - Yeoman is here to help, not replace you :D
 

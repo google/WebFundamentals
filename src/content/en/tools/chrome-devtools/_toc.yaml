@@ -3,14 +3,16 @@ toc:
     section:
     - title: Overview
       path: /web/tools/chrome-devtools/
-    - title: Configure and Customize DevTools
-      path: /web/tools/chrome-devtools/settings
     - title: Debug Progressive Web Apps
       path: /web/tools/chrome-devtools/progressive-web-apps
     - title: Understand Security Issues
       path: /web/tools/chrome-devtools/security
+    - title: Run Snippets of Code From Any Page
+      path: /web/tools/chrome-devtools/snippets
     - title: Keyboard Shortcuts Reference
       path: /web/tools/chrome-devtools/shortcuts
+    - title: UI Reference
+      path: /web/tools/chrome-devtools/ui
     - title: Inspect and Edit Pages and Styles
       section:
       - title: Overview
@@ -49,18 +51,23 @@ toc:
         path: /web/tools/chrome-devtools/remote-debugging/webviews
     - title: Inspect and Debug JavaScript
       section:
-      - title: Set Breakpoints
-        path: /web/tools/chrome-devtools/javascript/add-breakpoints
-      - title: Step Through Code
-        path: /web/tools/chrome-devtools/javascript/step-code
-      - title: Run Snippets of Code From Any Page
-        path: /web/tools/chrome-devtools/javascript/snippets
-      - title: Pretty-Print Minified JavaScript
-        path: /web/tools/chrome-devtools/javascript/pretty-print
-      - title: Watch Variables in Sources
-        path: /web/tools/chrome-devtools/javascript/watch-variables
+      - title: Get Started
+        path: /web/tools/chrome-devtools/javascript/
+      - title: Pause Your Code With Breakpoints
+        path: /web/tools/chrome-devtools/javascript/breakpoints
       - title: Map Preprocessed Code to Source Code
         path: /web/tools/chrome-devtools/javascript/source-maps
+      - title: JS Debugging Reference
+        path: /web/tools/chrome-devtools/javascript/reference
+      - title: Step Through Code
+        path: /web/tools/chrome-devtools/javascript/step-code
+        status: deprecated
+      - title: Pretty-Print Minified JavaScript
+        path: /web/tools/chrome-devtools/javascript/pretty-print
+        status: deprecated
+      - title: Watch Variables in Sources
+        path: /web/tools/chrome-devtools/javascript/watch-variables
+        status: deprecated
     - title: Using the Console
       section:
       - title: Overview
@@ -97,12 +104,15 @@ toc:
         path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
     - title: Measure Network Performance
       section:
-      - title: Measure Resource Loading Times
+      - title: Get Started
+        path: /web/tools/chrome-devtools/network-performance/
+      - title: Network Issues Guide
+        path: /web/tools/chrome-devtools/network-performance/issues
+      - title: Reference
+        path: /web/tools/chrome-devtools/network-performance/reference
+      - title: Resource Loading
         path: /web/tools/chrome-devtools/network-performance/resource-loading
-      - title: Understand Resource Timing
-        path: /web/tools/chrome-devtools/network-performance/understanding-resource-timing
-      - title: Optimize Performance Under Varying Network Conditions
-        path: /web/tools/chrome-devtools/network-performance/network-conditions
+        status: deprecated
     - title: Fix Memory Problems
       section:
       - title: Overview

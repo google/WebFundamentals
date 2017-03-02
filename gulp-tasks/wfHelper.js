@@ -2,26 +2,19 @@
 
 /*
     wfHelper.js
-    TODO
  */
 
-var fs = require('fs');
-var glob = require('globule');
-var moment = require('moment');
+const fs = require('fs');
+const chalk = require('chalk');
+const RSync = require('rsync');
+const glob = require('globule');
+const moment = require('moment');
+const mkdirp = require('mkdirp');
+const gutil = require('gulp-util');
+const wfRegEx = require('./wfRegEx');
+const exec = require('child_process').exec;
 
 var STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md'];
-var RE_UPDATED = /{# wf_updated_on: (.*?) #}/;
-var RE_PUBLISHED = /{# wf_published_on: (.*?) #}/;
-var RE_DESCRIPTION = /^description: (.*)/m;
-var RE_TITLE = /^# (.*) {: .page-title }/m;
-var RE_TAGS = /{# wf_tags: (.*?) #}/;
-var RE_IMAGE = /{# wf_featured_image: (.*?) #}/;
-var RE_SNIPPET = /{# wf_featured_snippet: (.*?) #}/;
-var RE_AUTHOR = /{%[ ]?include "web\/_shared\/contributors\/(.*?)\.html"[ ]?%}/;
-var RE_PODCAST = /{# wf_podcast_audio: (.*?) #}/;
-var RE_PODCAST_DURATION = /{# wf_podcast_duration: (.*?) #}/;
-var RE_PODCAST_SUBTITLE = /{# wf_podcast_subtitle: (.*?) #}/;
-var RE_PODCAST_SIZE = /{# wf_podcast_fileSize: (.*?) #}/;
 
 if (!String.prototype.endsWith) {
   Object.defineProperty(String.prototype, 'endsWith', {
@@ -36,6 +29,70 @@ if (!String.prototype.endsWith) {
     }
   });
 }
+
+/**
+ * Executes a shell command and returns the result in a promise.
+ *
+ * @param {string} cmd The command to run.
+ * @param {string} cwd The working directory to run the command in.
+ * @return {Promise} The promise that will be resolved on completion.
+ */
+function promisedExec(cmd, cwd) {
+  return new Promise(function(resolve, reject) {
+    const cmdLog = chalk.cyan(`$ ${cmd}`);
+    gutil.log(' ', cmdLog);
+    const execOptions = {
+      cwd: cwd,
+      maxBuffer: 1024 * 1024
+    };
+    exec(cmd, execOptions, function(err, stdOut, stdErr) {
+      stdOut = stdOut.trim();
+      stdErr = stdErr.trim();
+      if (err) {
+        gutil.log(' ', cmdLog, chalk.red('FAILED'));
+        const output = (stdOut + '\n' + stdErr).trim();
+        reject(err);
+        return;
+      }
+      gutil.log(' ', cmdLog, chalk.green('OK'));
+      resolve(stdOut);
+    });
+  });
+}
+
+/**
+ * Uses RSync to copy files from one directory to another.
+ *
+ * @param {string} src The source to copy.
+ * @param {string} dest The destination to copy to.
+ * @return {Promise} The promise that will be resolved on completion.
+ */
+function promisedRSync(src, dest) {
+  gutil.log(' ', chalk.blue('rsync'), src, '->', dest);
+  return new Promise(function(resolve, reject) {
+    if (fs.existsSync(src) === false) {
+      console.log(src, 'doesnt exist');
+      resolve();
+    }
+    const rsync = new RSync()
+      .source(src)
+      .destination(dest)
+      .archive()
+      .exclude('.git*')
+      .exclude('.DS_Store');
+    mkdirp.sync(dest);
+    rsync.execute(function(error, code, cmd) {
+      if (code !== 0) {
+        gutil.log(' ', 'Copying', chalk.blue(src), chalk.red('Failed!'));
+        console.log(error);
+        reject(error);
+        return;
+      }
+      resolve();
+    });
+  });
+}
+
 
 function genericComparator(a, b) {
   if (a < b) {
@@ -67,6 +124,7 @@ function updatedComparator(a, b) {
 }
 
 function getRegEx(regEx, content, defaultResponse) {
+  console.log(chalk.red('WARN:'), chalk.cyan('wfHelper.getRegEx'), 'is deprecated');
   var result = content.match(regEx);
   if (result && result[1]) {
     return result[1];
@@ -76,28 +134,39 @@ function getRegEx(regEx, content, defaultResponse) {
 
 function readMetadataForFile(file) {
   var content = fs.readFileSync(file, 'utf8');
-  var description = getRegEx(RE_SNIPPET, content);
-  if (!description) {
-    description = getRegEx(RE_DESCRIPTION, content);
+  if (content.match(wfRegEx.RE_MD_INCLUDE)) {
+    return null;
   }
-  var published = moment(getRegEx(RE_PUBLISHED, content));
-  var updated = moment(getRegEx(RE_UPDATED, content));
+  var description = wfRegEx.getMatch(wfRegEx.RE_SNIPPET, content);
+  if (!description) {
+    description = wfRegEx.getMatch(wfRegEx.RE_DESCRIPTION, content);
+  }
+  var published = moment(wfRegEx.getMatch(wfRegEx.RE_PUBLISHED_ON, content));
+  var updated = moment(wfRegEx.getMatch(wfRegEx.RE_UPDATED_ON, content));
   var url = file.replace('src/content/en/', '/web/');
   url = url.replace('.md', '');
   var result = {
     filePath: file,
     url: url,
-    title: getRegEx(RE_TITLE, content),
+    title: wfRegEx.getMatch(wfRegEx.RE_TITLE, content),
     description: description,
-    authors: [getRegEx(RE_AUTHOR, content)],
-    image: getRegEx(RE_IMAGE, content),
+    authors: [],
+    image: wfRegEx.getMatch(wfRegEx.RE_IMAGE, content),
     datePublished: published.format(),
     datePublishedPretty: published.format('dddd, MMMM Do YYYY'),
     yearPublished: published.format('YYYY'),
     dateUpdated: updated.format(),
+    dateUpdatedPretty: updated.format('dddd, MMMM Do YYYY'),
     tags: []
   };
-  var tags = getRegEx(RE_TAGS, content);
+  var authorList = content.match(wfRegEx.RE_AUTHOR_LIST);
+  if (authorList) {
+    authorList.forEach(function(contributor) {
+      var author = wfRegEx.getMatch(wfRegEx.RE_AUTHOR_KEY, contributor).trim();
+      result.authors.push(author);
+    });
+  }
+  var tags = wfRegEx.getMatch(wfRegEx.RE_TAGS, content);
   if (tags) {
     result.tags = [];
     tags.split(',').forEach(function(tag) {
@@ -107,13 +176,13 @@ function readMetadataForFile(file) {
       }
     });
   }
-  var podcast = getRegEx(RE_PODCAST, content);
+  var podcast = wfRegEx.getMatch(wfRegEx.RE_PODCAST, content);
   if (podcast) {
     result.podcast = {
       audioUrl: podcast,
-      duration: getRegEx(RE_PODCAST_DURATION, content),
-      subtitle: getRegEx(RE_PODCAST_SUBTITLE, content),
-      fileSize: getRegEx(RE_PODCAST_SIZE, content),
+      duration: wfRegEx.getMatch(wfRegEx.RE_PODCAST_DURATION, content),
+      subtitle: wfRegEx.getMatch(wfRegEx.RE_PODCAST_SUBTITLE, content),
+      fileSize: wfRegEx.getMatch(wfRegEx.RE_PODCAST_SIZE, content),
       pubDate: published.format('DD MMM YYYY HH:mm:ss [GMT]')
     };
   }
@@ -128,7 +197,10 @@ function getFileList(base, patterns) {
   };
   var files = glob.find(patterns, STD_EXCLUDES, opts);
   files.forEach(function(file) {
-    results.push(readMetadataForFile(file));
+    var metaData = readMetadataForFile(file);
+    if (metaData) {
+      results.push(metaData);
+    }
   });
   // var filename = path.join(base, '_files.json');
   // fs.writeFileSync(filename, JSON.stringify(results, null, 2));
@@ -147,9 +219,10 @@ function splitByYear(files) {
   return result;
 }
 
+exports.promisedRSync = promisedRSync;
+exports.promisedExec = promisedExec;
 exports.getRegEx = getRegEx;
 exports.getFileList = getFileList;
 exports.publishedComparator = publishedComparator;
 exports.updatedComparator = updatedComparator;
 exports.splitByYear = splitByYear;
-

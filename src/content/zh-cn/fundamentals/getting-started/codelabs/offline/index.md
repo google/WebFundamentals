@@ -152,7 +152,7 @@ Horner](https://airhorner.com)。它是 Web Audio API 来播放并操作汽笛�
 
 为了安全，一个 service worker 只能控制与它相同目录或者相同目录下子目录中的页面。这意味着如果你将 service worker 放在 scripts 目录下，它只会作用于 `/scripts` 目录，以及 scripts 中的子目录（比如：`/scripts/test/`)。你的应用应该不会只存在于那么。
 
-## 按装应用资源
+## 安装应用资源
 
 
 

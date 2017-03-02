@@ -5,7 +5,7 @@ description: Use the Security Panel to ensure that all resources on your  site a
 {# wf_updated_on: 2016-03-09 #}
 {# wf_published_on: 2015-12-21 #}
 
-# Understand security issues {: .page-title }
+# Understand Security Issues {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -56,8 +56,6 @@ content is accessible to sniffers and vulnerable to man-in-the-middle attacks.
 Click **View request in Network Panel** to open up a filtered view of the 
 Network Panel and see exactly which requests were served over HTTP. This shows 
 all unprotected requests from all origins. 
-
-![network panel, non-secure resources, all origins](images/network-all.png)
 
 ## Inspect origins
 

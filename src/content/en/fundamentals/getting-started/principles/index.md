@@ -89,10 +89,8 @@ of a mobile page, and they become frustrated when it isnâ€™t available or doesnâ
 
 Large app install interstitials (e.g., full-page promotions that hide content
 and prompt users to install an app) annoy users and make it difficult to
-perform tasks. On top of annoying users, sites that use app install interstitials
-fail the
-[Google Mobile-Friendly Test](https://search.google.com/search-console/mobile-friendly),
-which may negatively impact their search rankings.
+perform tasks. In addition to annoying users, [sites that use interstitials
+may see a negative impact to their search rankings](https://webmasters.googleblog.com/2016/08/helping-users-easily-access-content-on.html).
 
 <div class="attempt-left">
   <figure id="fig1">

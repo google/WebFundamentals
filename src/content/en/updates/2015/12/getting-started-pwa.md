@@ -248,7 +248,7 @@ src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-5-@1x.jpg" alt=
 
 ### React
 
-* [iFixit](https://github.com/GoogleChrome/sw-precache/tree/app-shell-demo/app-shell-demo) by Jeff Posnick - uses `sw-precache` for application shell caching ([slides](https://speakerdeck.com/jeffposnick/instant-loading-with-service-workers-chrome-dev-summit-15))
+* [iFixit](https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo) by Jeff Posnick - uses `sw-precache` for application shell caching ([slides](https://speakerdeck.com/jeffposnick/instant-loading-with-service-workers-chrome-dev-summit-15))
 
 ### Virtual-DOM
 

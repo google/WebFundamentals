@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features rely on.
 
 {# wf_published_on: 2014-12-01 #}
-{# wf_updated_on: 2016-01-18 #}
+{# wf_updated_on: 2017-02-22 #}
 
 # Service Workers: an Introduction {: .page-title }
 
@@ -31,11 +31,10 @@ experiences, giving developers complete control over the
 experience.
 
 Before service worker, there was one other API that gave users an offline
-experience on the web called [AppCache](//www.html5rocks.com/en/tutorials/appcache/beginner/){: .external }. 
-The major issues with AppCache are the [number of gotcha's](http://alistapart.com/article/application-cache-is-a-douchebag) 
-that exist as well as the fact that while the design works particularly well for single page web 
-apps, it's not so good with for multi-page sites. Service workers have been designed to 
-avoid these common pain points.
+experience on the web called
+[AppCache](//www.html5rocks.com/en/tutorials/appcache/beginner/){: .external }. 
+There are a number of issues with the AppCache API that service workers
+were designed to avoid.
 
 Things to note about a service worker:
 
@@ -391,7 +390,8 @@ install due to an error being thrown, or a rejected promise being passed to
 To work around this, go to `chrome://serviceworker-internals` and check "Open
 DevTools window and pause JavaScript execution on service worker startup for
 debugging", and put a debugger statement at the start of your install event. 
-This, along with <a href="/web/tools/chrome-devtools/javascript/add-breakpoints#exceptions">Pause on uncaught exceptions</a>,
+This, along with
+[Pause on uncaught exceptions](/web/tools/chrome-devtools/javascript/breakpoints),
 should reveal the issue.
 
 

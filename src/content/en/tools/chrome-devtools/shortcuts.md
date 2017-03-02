@@ -501,7 +501,7 @@ Shortcuts available in the Styles sidebar:
     <tr>
       <td data-th="Console Shortcuts">Multi-line entry</td>
       <td data-th="Windows"><kbd class="kbd">Shift</kbd> + <kbd class="kbd">Enter</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Return</kbd></td>
+      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Return</kbd></td>
     </tr>
     <tr>
       <td data-th="Console Shortcuts">Execute</td>

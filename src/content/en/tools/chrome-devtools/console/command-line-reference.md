@@ -54,7 +54,7 @@ while `$1` returns the previously selected one:
 
 ![Example of $1](images/element-1.png)
 
-## $(selector)
+## $(selector) {: #queryselector }
 
 `$(selector)` returns the reference to the first DOM element
 with the specified CSS selector.
@@ -76,7 +76,7 @@ The following example returns a reference to the currently selected element and 
 
 Note: If you are using a library such as jQuery that uses <code>$</code>, this functionality will be overwritten, and <code>$</code> will correspond to that library's implementation.
 
-## $$(selector)
+## $$(selector) {: #queryselectorall }
 
 `$$(selector)` returns an array of elements
 that match the given CSS selector.
@@ -96,7 +96,7 @@ displays the value of each element's `src` property:
 
 Note: Press <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> in the console to start a new line without executing the script.
 
-## $x(path)
+## $x(path) {: #xpath }
 
 `$x(path)` returns an array of DOM elements
 that match the given XPath expression.
@@ -142,7 +142,8 @@ Use `undebug(fn)` to stop breaking on the function,
 or use the UI to disable all breakpoints.
 
 For more information on breakpoints,
-see [Debug with Breakpoints](/web/tools/chrome-devtools/javascript/add-breakpoints).
+see [Pause Your Code With
+Breakpoints](/web/tools/chrome-devtools/javascript/breakpoints).
 
 ## dir(object)
 

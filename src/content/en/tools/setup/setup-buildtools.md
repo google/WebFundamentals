@@ -58,7 +58,7 @@ will be less flexible.
   <tbody>
     <tr>
       <td data-th="Supported Platforms">OS X / Windows</td>
-      <td data-th="Gulp"><a href="http://alphapixels.com/prepros/">Prepros</a></td>
+      <td data-th="Gulp"><a href="https://prepros.io/">Prepros</a></td>
     </tr>
     <tr>
       <td data-th="Supported Platforms">OS X</td>
@@ -158,9 +158,6 @@ For concatentation, use the following:
     </tr>
   </tbody>
 </table>
-
-**Note**: You can use Sass by taking advantage of the 'import' feature ([See Web Starter
-Kit for an example](https://github.com/google/web-starter-kit/blob/master/app/styles/main.scss)).
 
 ### Optimize your images
 

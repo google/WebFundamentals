@@ -190,7 +190,7 @@ To send messages, you need an an Authorization header. It contains four parts:
 <pre class="prettyprint">WebPush &lt;JWTHeader&gt;.&lt;Payload&gt;.&lt;Signature&gt;</pre>
 
 The word WebPush is a literal that must be followed by a space. The remaining
-portions, which are encrypted and concatenated using a period form a signed JSON
+portions are encrypted and concatenated using a period from a signed JSON
 web token (JWT). A JWT is a way of sharing a JSON object with a second party in
 such a way that the sending party can sign it and the receiving party can verify
 the signature is from the expected sender.   

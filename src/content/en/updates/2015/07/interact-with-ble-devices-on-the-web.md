@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT.
 
-{# wf_updated_on: 2016-11-16 #}
+{# wf_updated_on: 2017-02-06 #}
 {# wf_published_on: 2015-07-21 #}
 {# wf_tags: news,iot,webbluetooth,physicalweb,origintrials #}
 {# wf_featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png #}
@@ -10,8 +10,6 @@ description: A Web API has been added to Chrome that makes it possible for websi
 # Interact with Bluetooth devices on the Web {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
-
-
 
 What if I told you websites could communicate with nearby Bluetooth devices
 in a secure and privacy-preserving way? This way, heart rate monitors, singing
@@ -41,36 +39,26 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 [feedback on the spec](https://github.com/WebBluetoothCG/web-bluetooth/issues) and
 [feedback on the implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EBluetooth).
 
-A subset of the Web Bluetooth API is aiming to [ship on Chrome OS, Chrome for Android M, and Mac](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/Ono3RWkejAA/2skvuBhSCQAJ) 
-in Chrome 56. In Chrome 55 or earlier, it can be enabled experimentally 
-on your origin in Origin Trials, or locally on your machine using an experimental flag.
-The implementation is partially complete and currently available on Chrome OS, 
-Chrome for Android M, Linux, and Mac.
-
-In Chrome 56 or later, go to `chrome://flags/#enable-experimental-web-platform-features` 
-otherwise go to `chrome://flags/#enable-web-bluetooth`, enable the highlighted flag,
-restart Chrome and you should be able to
-[scan for](#scan-for-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
+A subset of the Web Bluetooth API is available in Chrome 56 for Chrome OS,
+Chrome for Android M, and Mac. This means you should be able to
+[request](#request-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
 nearby Bluetooth devices,
 [read](#read-a-bluetooth-characteristic)/[write](#write-to-a-bluetooth-characteristic)
 Bluetooth characteristics, [receive GATT Notifications](#receive-gatt-notifications), and know when a [Bluetooth device gets
 disconnected](#get-disconnected-from-a-bluetooth-device).
 
+On Linux, you still have to go to
+`chrome://flags/#enable-experimental-web-platform-features`, enable the
+highlighted flag, and restart Chrome for now.
+
 ### Available for Origin Trials
 
 In order to get as much feedback as possible from developers using the Web
-Bluetooth API in the field, we're also adding this feature in Chrome 53 as an
-[origin trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md) for Chrome
-OS, Android M, and Mac. **Origin Trials allow you to temporarily enable the
-feature for all of users of your website.** During the origin trial, the API may
-still change in backward-incompatible ways before we freeze it into the web
-platform.  To use this experimental API in Chrome with no flag, you'll need to
-[request a token for your origin](http://bit.ly/WebBluetoothOriginTrial) and
-[insert it in your application](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
+Bluetooth API in the field, we've previously added this feature in Chrome 53 as
+an [origin trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md) for Chrome
+OS, Android M, and Mac.
 
-The trial will end in January 2017. By that point, we expect to have figured
-out any changes necessary to stabilize the feature and move it out from Origin
-Trials.
+The trial has successfully ended in January 2017.
 
 ## Security Requirements
 
@@ -125,7 +113,7 @@ functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions
 -- they have a shorter syntax compared to function expressions and lexically
 bind the `this` value.
 
-### Scan for Bluetooth Devices
+### Request Bluetooth Devices
 
 This version of the Web Bluetooth API specification allows websites,
 running in the Central role, to connect to remote GATT Servers over a BLE
@@ -136,13 +124,17 @@ When a website requests access to nearby devices using
 `navigator.bluetooth.requestDevice`, Google Chrome will prompt user with a
 device chooser where they can pick one device or simply cancel the request.
 
-<img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-device-chooser.png" alt="Bluetooth Device Chooser screenshot"/>
+<video autoplay loop muted style="max-width: 100%"
+    poster="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-device-chooser.png">
+  <source src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-device-chooser.webm" type="video/webm; codecs=vp8">
+  <source src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-device-chooser.mp4" type="video/mp4; codecs=h264">
+</video>
 
 The `navigator.bluetooth.requestDevice` function takes a mandatory Object that
 defines filters. These filters are used to return only devices that match some
 advertised Bluetooth GATT services and/or the device name.
 
-For instance, scanning for Bluetooth devices advertising the [Bluetooth GATT Battery Service](https://developer.bluetooth.org/gatt/services/Pages/ServiceViewer.aspx?u=org.bluetooth.service.battery_service.xml) is this simple:
+For instance, requesting Bluetooth devices advertising the [Bluetooth GATT Battery Service](https://developer.bluetooth.org/gatt/services/Pages/ServiceViewer.aspx?u=org.bluetooth.service.battery_service.xml) is this simple:
 
 
     navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }] })
@@ -166,7 +158,7 @@ form.
     .catch(error => { console.log(error); });
     
 
-You can also scan for Bluetooth devices based on the device name being
+You can also request Bluetooth devices based on the device name being
 advertised with the `name` filters key, or even a prefix of this name with the
 `namePrefix` filters key. Note that in this case, you will also need to define
 the `optionalServices` key to be able to access some services. If you don't,
@@ -181,7 +173,25 @@ you'll get an error later when trying to access them.
     })
     .then(device => { /* ... */ })
     .catch(error => { console.log(error); });
-    
+
+
+Finally, instead of `filters` you can use the `acceptAllDevices` key to show
+all nearby Bluetooth devices. You will also need to define the
+`optionalServices` key to be able to access some services. If you don't, you'll
+get an error later when trying to access them.
+
+
+    navigator.bluetooth.requestDevice({
+      acceptAllDevices: true,
+      optionalServices: ['battery_service']
+    })
+    .then(device => { /* ... */ })
+    .catch(error => { console.log(error); });
+
+
+Caution: This may result in a bunch of unrelated devices being shown in the
+chooser and energy being wasted as there are no filters. Use it with caution.
+
 
 ### Connect to a Bluetooth Device
 
@@ -276,7 +286,7 @@ page](https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicV
     .then(service => service.getCharacteristic('heart_rate_control_point'))
     .then(characteristic => {
       // Writing 1 is the signal to reset energy expended.
-      var resetEnergyExpended = new Uint8Array([1]);
+      var resetEnergyExpended = Uint8Array.of(1);
       return characteristic.writeValue(resetEnergyExpended);
     })
     .then(_ => {
@@ -295,14 +305,10 @@ characteristic changes on the device:
     .then(device => device.gatt.connect())
     .then(server => server.getPrimaryService('heart_rate'))
     .then(service => service.getCharacteristic('heart_rate_measurement'))
+    .then(characteristic => characteristic.startNotifications())
     .then(characteristic => {
-      return characteristic.startNotifications()
-      .then(_ => {
-        characteristic.addEventListener('characteristicvaluechanged',
-                                        handleCharacteristicValueChanged);
-      });
-    })
-    .then(_ => {
+      characteristic.addEventListener('characteristicvaluechanged',
+                                      handleCharacteristicValueChanged);
       console.log('Notifications have been started.');
     })
     .catch(error => { console.log(error); });
@@ -388,7 +394,9 @@ Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/de
 ## Libraries
 
 - [web-bluetooth-utils](https://www.npmjs.com/package/web-bluetooth-utils) is a npm module that adds some convenience functions to the API.
-- [&lt;platinum-bluetooth>](https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device) is a new set of [Polymer](https://www.polymer-project.org/) elements to discover and communicate with nearby Bluetooth devices based on the Web Bluetooth API. For instance, here's how to read battery level from a nearby bluetooth device advertising a Battery service:
+- A Web Bluetooth API shim is available in [noble](https://github.com/sandeepmistry/noble), the most popular Node.js BLE central module. This allows you to webpack/browserify noble without the need for a WebSocket server or other plugins.
+- [angular-web-bluetooth](https://github.com/manekinekko/angular-web-bluetooth) is a module for [Angular](https://angularjs.org/) that abstracts away all the boilerplate needed to configure the Web Bluetooth API.
+- [&lt;platinum-bluetooth>](https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device) is a set of [Polymer](https://www.polymer-project.org/) elements to discover and communicate with nearby Bluetooth devices based on the Web Bluetooth API. For instance, here's how to read battery level from a nearby bluetooth device advertising a Battery service:
 
 <div class="clearfix"></div>
 

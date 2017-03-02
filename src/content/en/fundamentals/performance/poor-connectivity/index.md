@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: It's important to understand what your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help you.
+description: It's important to understand what using your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help you.
 
 {# wf_updated_on: 2016-08-29 #}
 {# wf_published_on: 2016-05-09 #}
@@ -9,13 +9,13 @@ description: It's important to understand what your app or site feels like when 
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
-It's important to understand what your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help you.
+It's important to understand what using your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help you.
 
 ## Test with low bandwidth and high latency {: #testing }
 
 An <a href="http://adwords.blogspot.co.uk/2015/05/building-for-next-moment.html">increasing proportion</a> of people experience the web on mobile devices. Even at home, <a href="https://www.washingtonpost.com/news/the-switch/wp/2016/04/18/new-data-americans-are-abandoning-wired-home-internet/">many people are abandoning fixed broadband for mobile</a>.
 
-In this context, it's important to understand what your app or site feels like when connectivity is poor or unreliable. A range of software tools can help you [emulate and simulate](https://stackoverflow.com/questions/1584617/simulator-or-emulator-what-is-the-difference) low bandwidth and high [latency](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/).
+In this context, it's important to understand what using your app or site feels like when connectivity is poor or unreliable. A range of software tools can help you [emulate and simulate](https://stackoverflow.com/questions/1584617/simulator-or-emulator-what-is-the-difference) low bandwidth and high [latency](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/).
 
 ### Emulate network throttling
 
@@ -23,9 +23,15 @@ When building or updating a site, you must ensure adequate performance in a vari
 
 #### Browser tools
 
-The [Chrome DevTools](/web/tools/chrome-devtools/network-performance/network-conditions) enable you to test your site with a variety of upload/download speeds and [round-trip times](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/), using presets or custom settings from the Chrome DevTools Network panel:
+[Chrome DevTools](/web/tools/chrome-devtools) lets you test your site with a
+variety of upload/download speeds and [round-trip times][rtt], using presets
+or custom settings from the Network panel. See [Get Started with Analyize
+Network Performance](/web/tools/chrome-devtools/network-performance) to
+learn the basics.
 
 ![Chrome DevTools throttling](images/chrome-devtools-throttling.png)
+
+[rtt]: https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/
 
 #### System tools
 

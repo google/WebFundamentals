@@ -154,7 +154,7 @@ up.
 ![service worker with errors][errors]
 
 [sw]: images/sw.png
-[cm]: /web/tools/chrome-devtools/settings#command-menu
+[cm]: /web/tools/chrome-devtools/ui#command-menu
 [tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
 [errors]: images/sw-error.png
 

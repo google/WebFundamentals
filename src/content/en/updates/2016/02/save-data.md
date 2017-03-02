@@ -92,7 +92,7 @@ In turn, if your application is [using a service worker](/web/fundamentals/getti
 
 * **Opera 35+ will advertise `Save-Data`** whenever the user enables "[Opera Turbo](http://www.opera.com/computer/features/fast-browser)" mode on desktop, or the "[Data savings](http://www.opera.com/help/mobile/android#turbo)" option on Android browsers.
 
-* **Yandex 16.2+ will advertise `Save-Data`** whenever [Turbo mode](https://yandex.com/support/newbrowser/search-and-browse/turbo.xml) is enabled on desktop, or [mobile browsers](https://yandex.com/support/browser-mobile-android-phone/navigation_turbo-mode.xml#navigation_turbo-mode).
+* **Yandex 16.2+ will advertise `Save-Data`** whenever [Turbo mode](https://yandex.com/support/newbrowser/search-and-browse/turbo.xml) is enabled on desktop, or [mobile browsers](https://yandex.com/support/browser-mobile-android-phone/navigation/turbo-mode.xml).
 
 ## Implementation tips and best practices
 

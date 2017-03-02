@@ -6,32 +6,37 @@
  */
 
 var fs = require('fs');
+var chalk = require('chalk');
 var glob = require('globule');
 var moment = require('moment');
 var gutil = require('gulp-util');
+const path = require('path');
+const remark = require('remark');
+const remarkHtml = require('remark-html');
+const wfRegEx = require('./wfRegEx');
+const mkdirp = require('mkdirp');
 
-function updateCodeLab(fileName) {
-  gutil.log(' ', 'Processing', fileName);
+function updateCodeLab(sourceFile, destFile, bookPath) {
+  gutil.log(' ', 'Processing', sourceFile);
   var authorId;
-  var metadataFile = fileName.replace('index.md', 'codelab.json');
+  var metadataFile = sourceFile.replace('index.md', 'codelab.json');
   var metadata = fs.readFileSync(metadataFile);
   metadata = JSON.parse(metadata);
   if (metadata.wfProcessed === true) {
-    gutil.log(' ', 'Skipping', fileName);
+    gutil.log(' ', 'Skipping', sourceFile);
     return;
   }
   try {
-    var authorJSON = fs.readFileSync(fileName.replace('index.md', 'author.json'));
+    var authorJSON = fs.readFileSync(sourceFile.replace('index.md', 'author.json'));
     authorJSON = JSON.parse(authorJSON);
     authorId = authorJSON.author;
   } catch (ex) {
-    gutil.log('  ', 'No author.json file found.');
   }
   metadata.wfProcessed = true;
   var result = [];
-  var markdown = fs.readFileSync(fileName, 'utf8');
+  var markdown = fs.readFileSync(sourceFile, 'utf8');
   result.push('project_path: /web/_project.yaml');
-  result.push('book_path: /web/fundamentals/_book.yaml');
+  result.push('book_path: ' + bookPath);
   if (metadata.summary) {
     result.push('description: ' + metadata.summary);
   }
@@ -40,6 +45,7 @@ function updateCodeLab(fileName) {
   if (!dateUpdated) {
     dateUpdated = moment().format('YYYY-MM-DD');
   }
+  result.push('{# wf_auto_generated #}');
   result.push('{# wf_updated_on: ' + dateUpdated + ' #}');
   result.push('{# wf_published_on: 2016-01-01 #}');
   result.push('');
@@ -58,6 +64,33 @@ function updateCodeLab(fileName) {
   markdown = markdown.replace(/^\*Duration is \d+ min\*\n/gm, '');
   markdown = markdown.replace(/\(https:\/\/developers.google.com\//g, '(\/');
   markdown = markdown.replace(/^\[\]\(/gm, '[Link](');
+  markdown = markdown.replace(/__\s?Note:\s?__\s?/g, 'Note: ');
+  markdown = markdown.replace(/<div class="note">((.|\n)*?)<\/div>/g, '$1');
+  markdown = markdown.replace(/<aside markdown="1" class="special">/g, '<aside markdown="1" class="key-point">');
+  markdown = markdown.replace(/<aside markdown="1" class="warning">/g, '<aside markdown="1" class="warning">');
+  markdown = markdown.replace(/^<a id="(.*?)"\s*\/*?>/gm, '<div id="$1"></div>');
+  markdown = markdown.replace(/!\[.+?\]\((.+?)\)\[IMAGEINFO\]:.+,\s*(.+?)\n/gm, '![$2]($1)\n');
+  markdown = markdown.replace(/^## Contents?(\n|\s)*(__.*__(\s|\n)*)*/gm, '');
+  markdown = markdown.replace(/^(#+) __(.*)__/gm, '$1 $2');
+
+  // Convert markdown inside a set of HTML elements to HTML.
+  //   This is required because DevSite's MD parser doesn't handle markdown
+  //   inside of HTML. :(
+  let matches;
+  let RE_ASIDE = /<aside markdown="1" .*?>\n?((.|\n)*?)\n?<\/aside>/gm;
+  matches = wfRegEx.getMatches(RE_ASIDE, markdown);
+  matches.forEach(function(match) {
+    let htmlAside = remark().use(remarkHtml).process(match[0]);
+    markdown = markdown.replace(match[0], String(htmlAside));
+  });
+
+  let RE_TABLE = /<table markdown="1">((.|\n)*?)<\/table>/gm;
+  matches = wfRegEx.getMatches(RE_TABLE, markdown);
+  matches.forEach(function(match) {
+    let htmlTable = remark().use(remarkHtml).process(match[0]);
+    markdown = markdown.replace(match[0], String(htmlTable));
+  });
+
   result.push(markdown);
   if (metadata.feedback) {
     result.push('');
@@ -67,17 +100,10 @@ function updateCodeLab(fileName) {
     result.push('[issue](' + metadata.feedback + ') today. And thanks!');
   }
   result = result.join('\n');
-  fs.writeFileSync(fileName, result);
-  fs.writeFileSync(metadataFile, JSON.stringify(metadata, null, 2));
+  gutil.log('  ', chalk.cyan('->'), destFile);
+  let destDir = path.parse(destFile).dir;
+  mkdirp.sync(destDir);
+  fs.writeFileSync(destFile, result);
 }
 
-function migrate(startPath) {
-  var opts = {
-    srcBase: startPath,
-    prefixBase: true
-  };
-  var files = glob.find('**/index.md', opts);
-  files.forEach(updateCodeLab);
-}
-
-exports.migrate = migrate;
+exports.updateCodeLab = updateCodeLab;

@@ -116,7 +116,7 @@ beaufortfrancois:
   role:
     - author
   homepage: 'https://plus.google.com/+FrancoisBeaufort'
-  google: +FrancoisBeaufort
+  github: beaufortfrancois
   description:
     en: Dives into Chromium source code
 
@@ -136,8 +136,8 @@ ericbidelman:
     - author
   email: e.bidelman@google.com
   description:
-    en: 'Engineer @ Google working on Polymer, Chrome, and the web'
-  
+    en: 'Engineer @ Google working on Lighthouse, Web Components, Chrome, and the web'
+
 bokan:
   name:
     given: David
@@ -150,7 +150,7 @@ bokan:
     - engineer
   twitter: david_bokan
   email: bokan@google.com
-  
+
 aliceboxhall:
   name:
     given: Alice
@@ -421,8 +421,6 @@ mychaelgo:
   twitter: mychaelgo
   github: mychaelgo
   google: "113952063964933941833"
-  homepage: 'http://mychaelgo.com'
-  email: admin@mychaelgo.com
   description:
     en: Mychael Go is Fullstack Software Engineer
 
@@ -618,6 +616,8 @@ brendankenny:
   homepage: 'http://twitter.com/brendankenny/'
   twitter: brendankenny
   email: bckenny@google.com
+  description:
+    en: Lighthouse Bulb Installer
 
 jeokrang:
   name:
@@ -743,7 +743,7 @@ ericlawrence:
   homepage: 'https://textslashplain.com/'
   twitter: ericlaw
   email: elawrence@chromium.org
-  
+
 nurinamu:
   name:
     given: Wonjae
@@ -965,6 +965,22 @@ rupl:
   description:
     en: Chris is a frontend developer and web performance advocate.
 
+taylorsavage:
+  name:
+    given: Taylor
+    family: Savage
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - author
+  twitter: taylorthesavage
+  email: tjsavage@google.com
+  description:
+    en: 'Taylor is a PM on the Chrome Team, focusing on Web Components and Polymer.'
+
+
 mscales:
   name:
     given: Mat
@@ -1141,6 +1157,19 @@ yoichiro:
   email: yoichiro@eisbahn.jp
   description:
     en: Yoichiro is a Google Developers Expert
+
+dtapuska:
+  name:
+    given: Dave
+    family: Tapuska
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  twitter: dtapuska
+  email: dtapuska@google.com
 
 samthorogood:
   name:

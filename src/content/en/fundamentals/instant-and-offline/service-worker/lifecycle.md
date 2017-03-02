@@ -249,7 +249,7 @@ Here's its service worker, `sw.js`:
     self.addEventListener('fetch', event => {
       const url = new URL(event.request.url);
 
-      // serve the horse SVG from the cache if the request is
+      // serve the cat SVG from the cache if the request is
       // same-origin and the path is '/dog.svg'
       if (url.origin == location.origin && url.pathname == '/dog.svg') {
         event.respondWith(caches.match('/cat.svg'));
@@ -572,7 +572,7 @@ a horse rather than a cat:
     self.addEventListener('fetch', event => {
       const url = new URL(event.request.url);
 
-      // serve the cat SVG from the cache if the request is
+      // serve the horse SVG from the cache if the request is
       // same-origin and the path is '/dog.svg'
       if (url.origin == location.origin && url.pathname == '/dog.svg') {
         event.respondWith(caches.match('/horse.svg'));
@@ -651,7 +651,7 @@ Caution: The cache storage API is "origin storage" (like localStorage, and
 IndexedDB). If you run many sites on the same origin (for example,
 `yourname.github.io/myapp`), be careful that you don't delete caches for your other
 sites. To avoid this, give your cache names a prefix unique to the current site,
-eg `myapp-static-v1`, and don't touch caches unless they begin `myapp-`.
+eg `myapp-static-v1`, and don't touch caches unless they begin with `myapp-`.
 
 ### Skip the waiting phase
 

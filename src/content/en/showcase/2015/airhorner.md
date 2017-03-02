@@ -6,6 +6,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_author: paulkinlan #}
 {# wf_featured_image: /web/showcase/2015/images/airhorner/card.jpg #}
 {# wf_featured_snippet: AirHorner is a simple but powerful Progressive Web App that shows the power of Service Workers and the Web Audio API to give you your very own air horn. Use it to annoy your friends or co-workers, no matter whether you're online, offline or on a flaky 2G network. #}
+{# wf_tags: spotlight,serviceworker,offline,addtohomescreen #}
 
 # AirHorner.com {: .page-title }
 
