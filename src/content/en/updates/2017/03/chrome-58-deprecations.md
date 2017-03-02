@@ -31,6 +31,16 @@ applied. The old behavior was deprecated in Chrome 57, and is now removed.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5760965337415680) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=659464)
 
+## Remove EME from unsecurecContexts
+
+Some usages of [Encrypted Media Extenions (EME)](https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API) expose digital rights management implementations that are not open source, involve access to persistent unique identifiers, and/or run unsandboxed or with privileged access. Security risks are increased sites exposed via insecure HTTP because they can be attacked by anyone on the channel. Additionally, permissions for an insecure HTTP site can be explited when explicit permissions are required.
+
+Support for non-secure contexts was removed from EME version 1 spec and will not be in the upcoming proposed recommendation or subsequent final recommendation. The API has been showing a deprecation message on insecure origins since Chrome 44 (May 2015). In Chrome 58, it is now removed. This change is part of our broader effort to [remove powerful features from unsecure origins](https://bugs.chromium.org/p/chromium/issues/detail?id=520765).
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/tXmKPlXsnCQ/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5724389932793856) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=672605)
+
 ## Remove legacy caller for HTMLEmbedElement and HTMLObjectElement
 
 That an interface has a legacy caller means that an instance can be called as a
