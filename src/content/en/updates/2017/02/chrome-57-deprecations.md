@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 57 to help you plan.
 
-{# wf_updated_on: 2017-02-21 #}
+{# wf_updated_on: 2017-02-23 #}
 {# wf_published_on: 2017-02-01 #}
 {# wf_tags: deprecations,removals,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -17,6 +17,21 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 57,
 which is in beta as of early February. This list is subject to change at any
 time.
+
+## Deprecate support for embedded credentials in subresource requests
+
+Hard-coding credentials into subresource requests is problematic from a
+security perspective, as it's allowed hackers to brute-force credentials in
+the past. These dangers are exacerbated for credentialed subresource requests
+that reach into internal IP ranges (your routers, etc.). Given the low usage,
+closing this (small) security hole seems quite reasonable.
+
+Developers can embed resources that do not require basic/digest auth, relying
+instead on cookies and other session management mechanisms.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/lx-U_JR2BF0/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5669008342777856) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=435547)
 
 ## Deprecate FileReaderSync in service workers
 
@@ -81,7 +96,8 @@ Two methods and an event handler, `webkitClearResourceTimings()`,
 `webkitSetResourceTimingBufferSize()`, and `onwebkitresourcetimingbufferfull`
 are obsolete and vendor-specific. The 
 [standard versions of these APIs](https://www.chromestatus.com/features/5710624386449408)
-have been supported in since Chrome 46. These features were originally
+have been supported in since Chrome 46, and the prefixed functions were
+deprecated in that version as well. These features were originally
 implemented in WebKit, but Safari has not enabled them. Firefox, IE 10+, and
 Edge have only unprefixed version of the API. Therefore the webkit versions
 are being removed.
