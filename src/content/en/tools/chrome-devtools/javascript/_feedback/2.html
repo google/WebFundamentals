@@ -1,8 +1,8 @@
-{% setvar question "Were you able to trigger the breakpoint?" %}
 {% setvar category "DevTools" %}
-{% setvar label "JS / Get Started / Triggered The Breakpoint" %}
-{% setvar success_button "Yes" %}
+{% setvar label "JS / Get Started / (2) Triggered The Breakpoint" %}
+{% setvar url %}https://github.com/google/webfundamentals/issues/new?title=[{{ category }} / {{ label }}] {% endsetvar %}
+{% setvar success_button "I triggered the breakpoint" %}
 {% setvar success_response "Good job!" %}
-{% setvar fail_button "No" %}
-{% setvar fail_response "Ah, dang." %}
+{% setvar fail_button "I can't trigger the breakpoint" %}
+{% setvar fail_response %}Ah, dang. Please <a href="{{url}}">open an issue</a> and tell us what happened.{% endsetvar %}
 {% include "web/_shared/feedback.html" %}
