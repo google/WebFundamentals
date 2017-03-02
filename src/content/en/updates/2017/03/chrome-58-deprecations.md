@@ -17,6 +17,28 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 58,
 which is in beta as of March 16. This list is subject to change at any time.
 
+## Mouse on Android stops firing TouchEvents
+
+Until version 55, Android low-level mouse events in Chrome primarily followed an
+event path designed for touch interactions. For example, mouse drag motion while
+a mouse button is pressed generates `MotionEvents` delivered through
+`View.onTouchEvent`.
+
+However, since touch events cannot support hover, hovering mousemoves followed a
+separate path. The whole design had quite a few side-effects including mouse
+interactions firing `TouchEvents`, all moue buttons appearing as *left* mouse
+buttons, and `MouseEvents` being suppressed by `TouchEvents`.
+
+Starting with Chrome 58, a mouse on Android M or later will:
+
+* No longer fire `TouchEvents`.
+* Fire a consistent sequence of `MouseEvents` with appropriate buttons and
+  other properties. 
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cNaFvMaYtNA/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5642080642662400) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=468806)
+
 ## Remove case-insensitive matching for usemap attribute
 
 The `usemap` attribute was formerly defined as caseless. Unfortunately
