@@ -22,13 +22,13 @@ upper_tabs:
         - title: Responsive Design
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/responsive-design/slides
+            path: /web/ilt/pwa/responsive-design-slides
           - title: Lab
-            path: /web/ilt/pwa/lab-responsive-design/
+            path: /web/ilt/pwa/lab-responsive-design
         - title: Responsive Images
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/responsive-images/slides
+            path: /web/ilt/pwa/responsive-images-slides
           - title: Lab
             path: /web/ilt/pwa/lab-responsive-images
         - title: Core Technologies
@@ -36,109 +36,109 @@ upper_tabs:
         - title: Introduction to Service Workers
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/introduction-to-service-worker/slides
+            path: /web/ilt/pwa/introduction-to-service-worker-slides
           - title: Concepts
-            path: /web/ilt/pwa/introduction-to-service-worker/
+            path: /web/ilt/pwa/introduction-to-service-worker
           - title: Lab
             path: /web/ilt/pwa/lab-scripting-the-service-worker
         - title: Offline Quickstart
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/offline-quickstart/slides
+            path: /web/ilt/pwa/offline-quickstart-slides
           - title: Concepts
-            path: /web/ilt/pwa/offline-quickstart/
+            path: /web/ilt/pwa/offline-quickstart
           - title: Lab
             path: /web/ilt/pwa/lab-offline-quickstart
-        - title: Introduction to Promises
+        - title: Working with Promises
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/working-with-promises/slides
+            path: /web/ilt/pwa/working-with-promises-slides
           - title: Concepts
-            path: /web/ilt/pwa/working-with-promises/
+            path: /web/ilt/pwa/working-with-promises
           - title: Lab
             path: /web/ilt/pwa/lab-promises
-        - title: Introduction to the Fetch API
+        - title: Working with the Fetch API
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/working-with-the-fetch-api/slides
+            path: /web/ilt/pwa/working-with-the-fetch-api-slides
           - title: Concepts
-            path: /web/ilt/pwa/working-with-the-fetch-api/
+            path: /web/ilt/pwa/working-with-the-fetch-api
           - title: Lab
             path: /web/ilt/pwa/lab-fetch-api
         - title: Caching Files With the Service Worker
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/caching-files-with-service-worker/slides
+            path: /web/ilt/pwa/caching-files-with-service-worker-slides
           - title: Concepts
-            path: /web/ilt/pwa/caching-files-with-service-worker/
+            path: /web/ilt/pwa/caching-files-with-service-worker
           - title: Lab
             path: /web/ilt/pwa/lab-caching-files-with-service-worker
         - title: Introduction to PWA Architectures
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/introduction-to-progressive-web-app-architectures/slides
+            path: /web/ilt/pwa/introduction-to-progressive-web-app-architectures-slides
           - title: Concepts
-            path: /web/ilt/pwa/introduction-to-progressive-web-app-architectures/
-        - title: Introduction to IndexedDB
+            path: /web/ilt/pwa/introduction-to-progressive-web-app-architectures
+        - title: Working with IndexedDB
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/working-with-indexeddb/slides
+            path: /web/ilt/pwa/working-with-indexeddb-slides
           - title: Concepts
-            path: /web/ilt/pwa/working-with-indexeddb/
+            path: /web/ilt/pwa/working-with-indexeddb
           - title: Lab
             path: /web/ilt/pwa/lab-indexeddb
         - title: Live Data in the Service Worker
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/live-data-in-the-service-worker/slides
+            path: /web/ilt/pwa/live-data-in-the-service-worker-slides
           - title: Concepts
-            path: /web/ilt/pwa/live-data-in-the-service-worker/
-        - title: Using Lighthouse
+            path: /web/ilt/pwa/live-data-in-the-service-worker
+        - title: Lighthouse PWA Analysis Tool
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/lighthouse-pwa-analysis-tool/slides
+            path: /web/ilt/pwa/lighthouse-pwa-analysis-tool-slides
           - title: Concepts
-            path: /web/ilt/pwa/lighthouse-pwa-analysis-tool/
+            path: /web/ilt/pwa/lighthouse-pwa-analysis-tool
           - title: Lab
             path: /web/ilt/pwa/lab-auditing-with-lighthouse
-        - title: Gulp Setup
+        - title: Working with Gulp
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/introduction-to-gulp/slides
+            path: /web/ilt/pwa/introduction-to-gulp-slides
           - title: Concepts
-            path: /web/ilt/pwa/introduction-to-gulp/
+            path: /web/ilt/pwa/introduction-to-gulp
           - title: Lab
             path: /web/ilt/pwa/lab-gulp-setup
-        - title: sw-precache and sw-toolbox
+        - title: Using sw-precache and sw-toolbox
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/using-sw-precache-and-sw-toolbox/slides
+            path: /web/ilt/pwa/using-sw-precache-and-sw-toolbox-slides
           - title: Concepts
-            path: /web/ilt/pwa/using-sw-precache-and-sw-toolbox/
+            path: /web/ilt/pwa/using-sw-precache-and-sw-toolbox
           - title: Lab
             path: /web/ilt/pwa/lab-sw-precache-and-sw-toolbox
-        - title: Introduction to Web Push and Notifications
+        - title: Introduction to Push Notifications
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/introduction-to-web-push-notifications/slides
+            path: /web/ilt/pwa/introduction-to-push-notifications-slides
           - title: Concepts
-            path: /web/ilt/pwa/introduction-to-web-push-notifications/
+            path: /web/ilt/pwa/introduction-to-push-notifications
           - title: Lab
             path: /web/ilt/pwa/lab-integrating-web-push
-        - title: Analytics
+        - title: Integrating Analytics
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/integrating-analytics/slides
+            path: /web/ilt/pwa/integrating-analytics-slides
           - title: Concepts
-            path: /web/ilt/pwa/integrating-analytics/
+            path: /web/ilt/pwa/integrating-analytics
           - title: Lab
             path: /web/ilt/pwa/lab-integrating-analytics
-        - title: Payment Integration
+        - title: Working with the Payment Request API
           section:
           - title: Slides & Video
-            path: /web/ilt/pwa/introduction-to-the-payment-request-api/slides
+            path: /web/ilt/pwa/introduction-to-the-payment-request-api-slides
           - title: Concepts
-            path: /web/ilt/pwa/introduction-to-the-payment-request-api/
+            path: /web/ilt/pwa/introduction-to-the-payment-request-api
         - title: Appendix
           section:
           - title: Setting Up the Labs
