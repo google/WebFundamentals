@@ -65,7 +65,7 @@ PRPL (push, render, pre-cache and lazy-load) 是渐进式网页应用（Progress
 ### Codelabs
 
 [发现和解决网页应用表现问题（Find and Fix Web App Performance Issues）](/web/fundamentals/getting-started/codelabs/web-perf/) <br>
-This codelab will help you learn to identify and fix web app performance bottlenecks.
+这个代码实验室会帮你学习识别和处理影响网页应用性能表现的瓶颈。
 
 ### Chrome 开发工具 Chrome DevTools
 
