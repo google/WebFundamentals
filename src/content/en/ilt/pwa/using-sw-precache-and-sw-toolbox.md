@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T20:55:35Z #}
+{# wf_updated_on: 2017-03-03T01:03:52Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -11,12 +11,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
-## Codelab
-
-
-
-
-[sw-precache and sw-toolbox](lab-sw-precache-and-sw-toolbox)
+#### Codelab:  [sw-precache and sw-toolbox](lab-sw-precache-and-sw-toolbox)
 
 <div id="intro"></div>
 

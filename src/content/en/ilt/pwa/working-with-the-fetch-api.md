@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T20:51:38Z #}
+{# wf_updated_on: 2017-03-03T01:04:41Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -11,12 +11,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
-## Codelab
-
-
-
-
-[Fetch API](lab-fetch-api)
+#### Codelab:  [Fetch API](lab-fetch-api)
 
 <div id="whatisfetch"></div>
 
