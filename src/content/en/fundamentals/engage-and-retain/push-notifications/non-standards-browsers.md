@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-02 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Non-Standards Browsers {: .page-title }
@@ -27,7 +27,7 @@ In this section we are going to look at how we can add support for these browser
  that this isn't recommended, but if you have a large audience on any of these browsers /
  browser versions, you should consider this.
 
-(/web/
+## What is gcm_sender_id?
 
 The "gcm_sender_id" parameter came about in the early versions of Chrome
 when web push was first implemented. Google had a push service called "Google

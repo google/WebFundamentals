@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-02 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Common Notification Patterns {: .page-title }
@@ -15,7 +15,7 @@ There are a few common patterns that developers are implementing in their web ap
 
 This will involve using a few different API's that are available in the service worker.
 
-(/web/
+## Notification Close Event
 
 In the last section saw how we can listen for `notificationclick` events.
 
@@ -404,4 +404,4 @@ This requires having your service worker set-up to handle `fetch` events, but if
  assets you'll need before showing your notification.
 
 For more information check out this [introduction to service workers
- post](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers).
+ post](/web/fundamentals/getting-started/primers/service-workers).

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-02 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Sending Messages with Web Push Libraries {: .page-title }
@@ -45,7 +45,7 @@ and how that can be saved.
 1. What it looks like to retrieve the saved subscriptions and trigger a push
 message.
 
-(/web/
+## Saving Subscriptions
 
 Saving and querying PushSubscriptions from a database will vary depending on
 your server side language and database choice but it might be useful to see

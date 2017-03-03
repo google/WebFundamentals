@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-02 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Displaying a Notification {: .page-title }
@@ -21,7 +21,7 @@ All of the source code for these demo's is taken from a demo page I put together
 
 <a class="button" href="/demos/notification-examples/" target="\_blank">Notification Demos</a>
 
-(/web/
+## Visual Options
 
 The API for showing a notification is simply:
 

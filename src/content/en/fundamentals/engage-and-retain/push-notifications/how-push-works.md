@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-02 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2016-06-30 #}
 
 # How Push Works {: .page-title }
@@ -24,7 +24,7 @@ The three key steps when implementing push are:
 
 Let's look at what each of these steps entails in a little more detail.
 
-(/web/
+## Step 1: Client Side
 
 The first step is to "subscribe" a user to push messaging.
 

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-02 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2016-06-30 #}
 
 # The Web Push Protocol {: .page-title }
@@ -26,7 +26,7 @@ server keys and how the encrypted payload and associated data is sent.
 This isn't a pretty side of web push and I'm no expert at encryption, but let's look through
  each piece since it's handy to know what these libraries are doing under the hood.
 
-(/web/
+## Application Server Keys
 
 When we subscribe a user, we pass in an `applicationServerKey`. This key is
 passed to the push service and used to check the application that subscribed
@@ -272,8 +272,7 @@ In node this could be implemented like so:
       return infoHmac.digest().slice(0, length);
     }
 
-H/T to [Mat Scale's article for this example
- code](https://developers.google.com/web/updates/2016/03/web-push-encryption).
+H/T to [Mat Scale's article for this example code](/web/updates/2016/03/web-push-encryption).
 
 This loosely covers [ECDH](https://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman)
  and [HKDF](https://tools.ietf.org/html/rfc5869).

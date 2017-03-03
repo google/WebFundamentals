@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-02 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Push Events {: .page-title }
@@ -14,7 +14,7 @@ By this point covered subscribing a user for push sending them a message. The ne
  receive this push message on the users device and display a notification (as well as any other
  work we might want to do).
 
-(/web/
+## The Push Event
 
 When a message is received, it'll result in a push event being dispatched in your service worker.
 

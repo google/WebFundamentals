@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-02 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Notification Behaviour {: .page-title }
@@ -27,7 +27,7 @@ period of time while others will show the notification unless the user interacts
 In this section we are going to look at how we can alter these default behaviours using options
  alone. These are relatively easy to implement and take advantage of.
 
-(/web/
+### Notification Click Event
 
 When a user clicks on a notification the default behaviour is for nothing
 to happen, it doesn't even close / remove the notification.

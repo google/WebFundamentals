@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-02 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2016-06-30 #}
 
 # FAQ {: .page-title }
@@ -10,7 +10,7 @@ book_path: /web/fundamentals/_book.yaml
 
 
 
-(/web/
+## Why Doesn't Push Work when the Browser is Closed?
 
 This question crops up quite a bit, largely because there are a few scenarios that make it
  difficult to reason with / understand.
