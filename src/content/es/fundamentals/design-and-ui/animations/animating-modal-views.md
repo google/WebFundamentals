@@ -1,28 +1,33 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Aprenda a animar vistas modales en sus aplicaciones.
+description: Aprende a animar vistas modales en tus apps.
 
-{# wf_updated_on: 2014-10-20 #}
+{# wf_updated_on: 2016-08-24 #}
 {# wf_published_on: 2014-08-08 #}
 
-# Animación de las vistas modales {: .page-title }
+# Animación de vistas modales {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
+<div class="attempt-right">
+  <figure>
+    <img src="images/dont-press.gif" alt="Animación de una vista modal." />
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html" target="_blank" class="external">Probar</a>
+    </figcaption>
+  </figure>
+</div>
 
-Las vistas modales se utilizan para mensajes importantes, y se pueden utilizar para bloquear la interfaz del usuario. Se debe tener precaución al utilizarlas, ya que pueden ser perturbadoras y pueden arruinar fácilmente la experiencia del usuario si se las usa en exceso. Sin embargo, en algunos casos son las vistas adecuadas, ya que cobran vida cuando se les agrega algún tipo de animación.
+Las vistas modales se usan para mensajes importantes. Por ello, tienes muy buenos motivos emplear para bloquear la interfaz del usuario. Úsalas con cuidado ya que, si se usan demasiado, pueden resultar molestas y arruinar la experiencia del usuario. Sin embargo, en algunos casos son las vistas adecuadas, y cobran vida cuando se les agrega algún tipo de animación.
 
 ### TL;DR {: .hide-from-toc }
-- Las vistas modales se deben utilizar de forma moderada, ya que los usuarios se frustrarán si interrumpe su experiencia innecesariamente.
-- Se puede agregar una escala a la animación para lograr un agradable efecto de 'colocación'.
-- Asegúrese de hacer desaparecer rápidamente la vista modal cuando el usuario la descarta, pero debe hacerla aparecer en la pantalla un poco más lentamente para que el usuario no se sorprenda.
+* Usa las vistas modales con moderación. Los usuarios se molestan si interrumpes su experiencia sin necesidad.
+* Se puede agregar una escala a la animación para lograr un agradable efecto de “aparición”.
+* Quita rápidamente la vista modal cuando el usuario la descarte. Sin embargo, trae la vista modal a la pantalla de manera más lenta para que no sorprenda al usuario.
 
+<div class="clearfix"></div>
 
-<img src="images/dont-press.gif" alt="Animating a modal view." />
-
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html">Ver el ejemplo</a>
-
-La superposición modal debe estar alineada con la ventanilla, por lo que el atributo `position` debe configurarse en `fixed`:
+La superposición modal debería estar alineada con la ventana de visualización; para ello, configura su `position` en `fixed`:
 
 
     .modal {
@@ -39,9 +44,9 @@ La superposición modal debe estar alineada con la ventanilla, por lo que el atr
     }
     
 
-Este atributo posee un valor inicial de 0 de `opacity`, y por ello está oculto, pero luego también se deberá configurar `pointer-events` en `none` para que se puedan ejecutar los clics y los toques. Si esto no se realiza, se bloquearán todas las interacciones, y la página completa dejará de responder. Finalmente, puesto que se animarán los atributos `opacity` y `transform`, estos deberán marcarse con`will-change` como modificaciones (consulte también [Uso de la propiedad will-change](animations-and-performance#using-the-will-change-property)).
+Posee un valor inicial de 0 de `opacity` y por ello está oculta, pero luego también deberá configurarse `pointer-events` en `none` para que los clics y los toques pasen a la capa inferior. Si esto no se realiza, se bloquearán todas las interacciones y toda la página dejará de responder. Finalmente, puesto que se animarán los atributos `opacity` y `transform`, estos deberán marcarse como modificaciones con `will-change` (consulta también [Uso de la propiedad will-change](animations-and-performance#using-the-will-change-property)).
 
-Cuando la vista esté visible, esta deberá aceptar las interacciones y deberá tener un valor de 1 de `opacity`:
+Cuandvero la vista sea visible, deberá aceptar las interacciones y deberá tener un valor 1 de `opacity`:
 
 
     .modal.visible {
@@ -50,14 +55,14 @@ Cuando la vista esté visible, esta deberá aceptar las interacciones y deberá 
     }
     
 
-Ahora bien, cada vez que se requiera la vista modal, podrá utilizar JavaScript para alternar la clase "visible":
+Cada vez que se requiera la vista modal, podrás usar JavaScript para alternar la clase “visible”:
 
 
     modal.classList.add('visible');
     
 
-En este punto, la vista modal aparecerá sin ninguna animación, por lo que ahora se podrá agregar 
-(consulte también [Aceleración personalizada](custom-easing)):
+En este momento, la vista modal aparece sin animación, por lo que ahora puedes agregar eso
+(consulta también [Aceleración personalizada](custom-easing)):
 
 
     .modal {
@@ -75,9 +80,9 @@ En este punto, la vista modal aparecerá sin ninguna animación, por lo que ahor
     }
     
 
-Si se agrega `scale` a la propiedad transform, la vista se colocará en la pantalla suavemente, el cual es un efecto agradable. La transición predeterminada se aplica a las propiedades transform y opacity con una curva personalizada y una duración de 0,1 segundos.
+Si agregas `scale` a la propiedad transform, la vista parecerá posarse en la pantalla suavemente, lo cual generará un efecto agradable. La transición predeterminada se aplica a las propiedades transform y opacity con una curva personalizada y una duración de 0,1 segundos.
 
-La duración es bastante breve, pero es ideal para los casos en los que el usuario descarta la vista y desea regresar a su aplicación. El punto negativo es que, probablemente, la aparición de la vista modal es demasiado agresiva. Para solucionarlo, debe anular los valores de transición para la clase `visible`:
+La duración es bastante breve, pero resulta ideal para los casos en los cuales el usuario descarte la vista y desee regresar a tu app. El punto negativo es que esto probablemente sea demasiado agresivo para el momento en que aparezca la vista modal. Para solucionarlo, anula los valores de transición para la clase `visible`:
 
 
     .modal.visible {
@@ -96,7 +101,10 @@ La duración es bastante breve, pero es ideal para los casos en los que el usuar
     }
     
 
-Ahora, la vista modal demorará 0,3 segundos en aparecer en la pantalla, lo cual es un poco menos agresivo, pero se descartará rápidamente, que es algo que el usuario seguro valorará.
+Ahora, la vista modal tarda 0.3 segundos en aparecer en pantalla. Esto es un poco menos agresivo, pero se descarta rápidamente y el usuario seguro lo valorará.
 
 
 
+
+
+{# wf_devsite_translation #}

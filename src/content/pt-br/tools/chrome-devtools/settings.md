@@ -1,108 +1,130 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Altere a aparência do DevTools e acesse recursos escondidos.
+description: Mude a aparência do DevTools e acesse recursos ocultos.
 
-{# wf_updated_on: 2016-03-28 #}
+{# wf_updated_on: 2016-07-26 #}
 {# wf_published_on: 2016-03-28 #}
 
-# Configure e customize o DevTools {: .page-title }
+# Configurar e personalizar o DevTools {: .page-title }
 
-Altere a aparência do DevTools e acesse recursos escondidos.
+{% include "web/_shared/contributors/kaycebasques.html" %}
+
+Mude a aparência do DevTools e acesse recursos 
+ocultos.
 
 
 ### TL;DR {: .hide-from-toc }
-- Abra os menus Principal e Settings.
-- Customize a aparência do DevTools.
+- Abra os menus Main e Settings.
+- Personalize a aparência do DevTools.
 - Acesse recursos ocultos.
 
 
-## Abra o menu principal {: #main-menu}
+## Abra o Main Menu {:#main-menu}
 
-O **Menu Principal** do DevTools é um menu dropdown para configurar a aparência
-do DevTools, acessar ferramentas adicionais, abrir as configurações, e outras coisas.
+O **Main Menu** do DevTools é um menu suspenso para configurar o visual
+do DevTools, acessar ferramentas adicionais, abrir as configurações e muito mais.
 
-Para acessar o Menu Principal, clique no botão **Main Menu** no canto superior direito
+Para abrir o Main Menu, clique no botão **Main Menu** na parte superior direita
 da janela do DevTools.
 
 ![main menu](images/main-menu.png)
 
-## Abra o menu Settings {: #settings}
+## Abrir Settings {:#settings}
 
-Para abrir as configurações do DevTools, pressione <kbd>F1</kbd> com o DevTools com foco,
-ou [abra o Menu Principal](#main-menu) e então selecione **Settings**.
+Para abrir as configurações do DevTools, pressione <kbd>F1</kbd> com o DevTools em foco
+ou [abra o Main Menu](#main-menu) e selecione **Settings**.
 
-## Reordene as abas dos painéis {: #panel-tabs}
+## Abrir Command Menu {:#command-menu}
 
-Clique, segure, e arraste a aba de um painel para mudar a ordenação. Sua ordenação customizada
-persiste através das sessões do DevTools.
+Pressione <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) ou
+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux) para abrir o
+Command Menu.
 
-Por exemplo, por padrão a aba **Network** fica normalmente na quarta posição para esquerda.
+![command menu](images/command-menu.png)
 
-![antes de reordenar](images/before-reorder.png)
+## Reorganizar guias do painel {:#panel-tabs}
 
-Você pode arrastá-lo para qualquer posição, podendo até deixá-lo como o primeiro no lado esquerdo.
+Clique, mantenha e arraste uma guia do painel para alterar a ordem de listagem. Sua ordem personalizada para as guias
+se mantém em todas as sessões do DevTools.
 
-![depois de reordenar](images/after-reorder.png)
+Por exemplo, por padrão, a guia **Network** normalmente é a quarta da esquerda para a direita.
 
-## Customize o posicionamento do DevTools {: #placement}
+![antes da reorganização](images/before-reorder.png)
 
-Você pode encaixar o DevTools na parte inferior da página, no canto direito da página, ou
-você pode abri-lo em uma nova janela.
+Você pode arrastá-la para qualquer posição, como primeira da esquerda para a direita.
 
-Para alterar o posicionamento do DevTools, [abra o Menu Principal](#main-menu) e selecione
-o botão **Undock into separate window**
-(![undock button](images/undock.png){:.inline})
-button, **Dock to bottom**
-(![dock to bottom button](images/dock-bottom.png){:.inline}), ou
-o botão **Dock to right**
-(![dock to right button](images/dock-right.png){:.inline}).
+![depois da reorganização](images/after-reorder.png)
 
-## Use tema escuro {#dark-theme}
+## Personalizar posicionamento do DevTools {:#placement}
 
-Para usar o tema escuro do DevTools, [abra as configurações do DevTools](#settings),
-vá até a página **Preferences**, encontre a sessão **Appearance**, e então
-selecione **Dark** do menu **Theme**.
+Você pode ancorar o DevTools no fundo da página, à direita dela ou 
+pode abri-lo em uma nova janela. 
 
-![dark theme](images/dark-theme.png)
+Para alterar o local do DevTools, [abra o Main Menu](#main-menu) e selecione
+o botão **Undock into separate window** 
+(![botão undock](images/undock.png){:.inline})
+, **Dock to bottom** 
+(![botão dock to bottom](images/dock-bottom.png){:.inline})
+ ou 
+**Dock to right** 
+(![botão dock to right](images/dock-right.png){:.inline})
+. 
 
-## Abra e feche os Drawers {: #drawer-tabs}
+## Usar tema escuro {:#dark-theme}
 
-Pressione <kbd>Esc</kbd> para abrir e fechar as **Abas Inferiores** no DevTools. A imagem
-abaixo mostra um exemplo do painel **Elements** enquanto o painel **Console**
-está aberto no canto inferior.
+Para usar um tema escuro no DevTools, [abra Settings no DevTools](#settings),
+acesse a página **Preferences**, encontre a seção **Appearance** e
+selecione **Dark** no menu suspenso **Theme**.
 
-![painel Elements com Drawers](images/drawer.png)
+![tema escuro](images/dark-theme.png)
 
-A partir dos Drawers você pode executar comandos no Console, ver o Animation
-Inspector, configurar condições de rede e configurações de renderização, procurar por
-textos e arquivos, e emular sensores de dispositivos móveis.
+## Abrir e fechar as guias da gaveta {:#drawer-tabs}
 
-Enquanto ele estiver aberto, clique no ícone com três pontos
-(![three dot icon](images/three-dot.png){:.inline}) no lado esquerdo da aba
-**Console** e então selecione alguma das opções para abrir outras abas.
+Pressione <kbd>Esc</kbd> para abrir e fechar a **Drawer** do DevTools. A imagem
+abaixo mostra um exemplo do painel **Elements** com a gaveta **Console**
+aberta na parte inferior.
 
-![drawer tabs menu](images/drawer-tabs.png)
+![Painel Elements com gaveta](images/drawer.png)
 
-## Habilite os experimentos {: #experiments}
+Na gaveta, você pode executar comandos no Console, visualizar o Animation 
+Inspector, ajustar condições de rede e configurações de renderização, buscar 
+strings e arquivos e emular sensores de dispositivos móveis.
 
-Quando o DevTools Experiment estiver habilitado, uma nova página chamada **Experiments**
-vai aparecer nas configurações do DevTools. A partir dessa página você pode habilitar e desabilitar
+Com a Drawer aberta, clique no ícone de reticências
+(![ícone de reticências](images/three-dot.png){:.inline}) à esquerda da 
+guia **Console** e selecione uma das opções do menu suspenso para abrir as
+outras guias.
+
+![menu de guias da gaveta](images/drawer-tabs.png)
+
+## Ativar experimentos {:#experiments}
+
+Quando os DevTools Experiments estão ativados, uma nova página chamada **Experiments**
+ aparece em Settings. Nesta página, você pode ativar e desativar
 recursos experimentais.
 
-Para habilitar os experimentos, vá para `chrome://flags/#enable-devtools-experiments`
-e clique em **Enable**. Clique no botão **Relaunch Now** no canto inferior da página.
+Para ativar os experimentos, acesse `chrome://flags/#enable-devtools-experiments`
+e clique em **Enable**. Clique no botão **Relaunch Now** no fim da
+página. 
 
-Você deverá ver uma nova página chamada **Experiments** ao abrir as configurações do DevTools.
+Agora você verá uma nova página chamada **Experiments** quando abrir Settings
+no DevTools.
 
-![DevTools Experiments](images/experiments.png)
+![Experimentos do DevTools](images/experiments.png)
 
-## Emule mídia de impressão {: #emulate-print-media}
+## Emular mídia de impressão {:#emulate-print-media}
 
-Para visualizar uma página no modo preview de impressão, [abra o menu principal do DevTools](#main-menu),
-selecione **More Tools** > **Rendering Settings**, e depois habilite
-o checkbox **emulate media** com o menu dropdown selecionado com **print**.
+Para visualizar uma página em modo de prévia de impressão, [abra o menu principal do 
+DevTools](#main-menu), selecione **More Tools** > **Rendering Settings** e 
+marque a caixa de seleção **emulate media** com o menu suspenso definido como **print**.
 
-![enabling print preview mode](images/emulate-print-media.png)
+![como ativar o modo de prévia de impressão](images/emulate-print-media.png)
 
-Translated By: 
-{% include "web/_shared/contributors/alansilva.html" %}
+## Exibir comentários HTML {: #show-html-comments }
+
+Para exibir ou ocultar comentários HTML no painel **Elements**, [abra
+**Settings**](#settings), selecione o painel **Preferences**, encontre a seção
+**Elements** e marque a caixa de seleção **Show HTML comments**.
+
+
+{# wf_devsite_translation #}

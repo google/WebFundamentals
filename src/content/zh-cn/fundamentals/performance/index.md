@@ -13,9 +13,11 @@ description: Improving performance starts with minimizing, or at least, optimizi
 
 <img src="images/oce.png" class="attempt-right" style="max-height: 200px;">
 
-要让你的网站表现优异，就要优化网站上的每一个比特。
 
-[现在开始](optimizing-content-efficiency/)
+为提供卓越的性能，您需要优化网站中每一个字节的传送！
+
+[使用入门](optimizing-content-efficiency/)
+
 
 <div style="clear:both;"></div>
 
@@ -23,65 +25,78 @@ description: Improving performance starts with minimizing, or at least, optimizi
 
 <img src="images/crp.png" class="attempt-right">
 
-你知道浏览器在得到 HTML，CSS 和 JavaScript 后是通过哪些步骤把它们渲染成像素的吗？
+从收到 HTML、CSS 和 JavaScript 字节到对其进行必需的处理，从而将它们转变成渲染的像素这一过程中有一些中间步骤，您了解这些步骤吗？
 
-[了解更多](critical-rendering-path/)
+[了解详情](critical-rendering-path/)
 
 <div style="clear:both;"></div>
 
-## 渲染表现
+## 渲染性能
 
 <img src="images/rend.png" class="attempt-right">
 
-要写一个表现良好的网站或者应用，你需要理解浏览器是如何处理 HTML，JavaScript 和 CSS 的，并且确保你写的代码（以及你用到的第三方代码）尽可能地高效。
+要想编写高性能的网站或应用，您需要了解浏览器是如何处理 HTML、JavaScript 和 CSS 的，从而确保您编写的代码（和包含的第三方代码）尽可能高效运行。
 
-[了解更多](rendering/)
+[了解详情](rendering/)
 
 <div style="clear:both;"></div>
 
-## 理解低带宽（Low Bandwidth）和高等待时间（High Latency）
+## 了解低带宽和高延迟
 
 <img src="images/low.png" class="attempt-right">
 
-理解你的网站或应用在连接很糟糕或不稳定时是什么样子非常重要，这样你就可以据此来搭建它们。有很多工具可以帮你做到这一点。
+很重要的一点是，您需要了解应用或网站在连接不佳或不可靠时的使用情况，并相应地进行构建。有一些工具可以帮助您。
 
-[了解更多](poor-connectivity/)
+[了解详情](poor-connectivity/)
 
 <div style="clear:both;"></div>
 
-## PRPL 范式
+## PRPL 模式
 
 <img src="images/prpl.png" class="attempt-right">
 
-PRPL (push, render, pre-cache and lazy-load) 是渐进式网页应用（Progressive Web Apps）开发的结构和服务范式。它强调分发（delivery）和启动（launch）的表现。
+PRPL（推送、渲染、预先缓存和延迟加载）是一种用于结构化和提供渐进式网络应用 (PWA) 的模式，该模式强调应用交付和启动的性能。
 
-[了解更多](prpl-pattern/)
+
+
+[了解详情](prpl-pattern/)
+
 
 <div style="clear:both;"></div>
 
 
 ## 相关资源
 
-### Codelabs
 
-[发现和解决网页应用表现问题（Find and Fix Web App Performance Issues）](/web/fundamentals/getting-started/codelabs/web-perf/) <br>
-这个代码实验室会帮你学习识别和处理影响网页应用性能表现的瓶颈。
+### 代码实验室
 
-### Chrome 开发工具 Chrome DevTools
+[发现并解决网络应用性能的问题](/web/fundamentals/getting-started/codelabs/web-perf/) <br>
+此代码实验室将帮助您学习如何识别和解决网络应用性能的瓶颈。
 
-* [怎样看待性能表现（How to Look at Performance）](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
-* [运行性能表现（Runtime Performance）](/web/tools/chrome-devtools/rendering-tools/)
-* [页面加载表现（Page Load Performance）](/web/tools/chrome-devtools/network-performance/resource-loading)
+### Chrome DevTools
+
+* [如何了解性能](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
+* [运行时性能](/web/tools/chrome-devtools/rendering-tools/)
+* [页面加载性能](/web/tools/chrome-devtools/network-performance/resource-loading)
 
 
-### 优达学城课程
+### Udacity 课程
 
-[浏览器渲染优化（Browser Rendering Optimization）](https://udacity.com/ud860)<br>
-谷歌性能优化大师 Paul Lewis 在这里帮助你消灭 jank，写出拥有 60 幅每秒加载表现的网页应用。
+[浏览器渲染优化](https://udacity.com/ud860)<br>
+Google 性能大师 Paul Lewis 将帮助您消除卡顿并创建可以保持每秒 60 帧性能的网络应用。
 
-[关键渲染路径（Critical Rendering Path）](https://udacity.com/ud884)<br>
-学习“关键渲染路径”，或者叫“浏览器将 HTML，CSS 和 JavaScript 转化为栩栩如生的网页的步骤”。
 
-[从 HTTP/1 到 HTTP/2（HTTP/1 to HTTP/2）](https://udacity.com/ud897)<br>
-Surma 从基本的 HTTP/1 一直讲到 HTTP/2，关于怎样高效加载，以及这些协议的安全性。 
+[关键渲染路径](https://udacity.com/ud884)<br>
+了解关键渲染路径，或者浏览器为将 HTML、CSS 和 JavaScript 转换成生动、逼真的网站而必须采取的步骤。
+
+
+[HTTP/1 至 HTTP/2](https://udacity.com/ud897)<br>
+Surma 将从 HTTP/1 的基础知识开始，一直讲解到 HTTP/2 和如何有效加载资产，他还会介绍这些协议的安全方面。
 <div style="clear:both;"></div>
+
+
+
+
+
+{# wf_devsite_translation #}
+

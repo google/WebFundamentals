@@ -1,42 +1,45 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: イージング イン、アウト、または両方の中から、プロジェクトに適したイージングを選択します。 多少快活にするのもよいでしょう!
+description: イーズイン、イーズアウト、またはその併用など、プロジェクトに合ったイージング タイプを選択します。バウンスも使用すると、さらに楽しい画面に仕上がるはずです。
 
-{# wf_updated_on: 2014-10-20 #}
+{# wf_updated_on: 2016-08-23 #}
 {# wf_published_on: 2014-08-08 #}
 
-# Choosing the Right Easing {: .page-title }
+# 適切なイージングの選択 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-
-アニメーションのイージングのさまざまなオプションの利用について説明しましたが、どの種類をプロジェクトで使用するか、また、アニメーションの継続時間についても考慮する必要があります。
+これまでにアニメーションのイージングで使用できるオプションを複数紹介してきました。次は、その中のどれをプロジェクトで使用するか、またアニメーションの継続時間について考慮する必要があります。
 
 ### TL;DR {: .hide-from-toc }
-- UI 要素のための ease-out アウトアニメーションを使用します。Quintic ease-out は、非常使いやすく便利です。
-- アニメーションの ease-out と ease-in の継続時間は、200 ～ 500 ミリ秒にしてください。一方、 bounce および  elastic eases は、800 ～ 1200 ミリ秒にします。
+* UI 要素にイーズアウト アニメーションを適用します。Quintic の ease-out は非常に使いやすく、高速かつ滑らかに動きます。
+* アニメーションの継続時間は、ease-out と ease-in は 200 ～ 500 ミリ秒に、bounce と elastic ease は、800 ～ 1200 ミリ秒に設定します。
 
 
-一般的に、**ease-out** は正しいコールで、適切なデフォルトです。 これによって迅速に起動でき、アニメーションに適切な応答性を与え、しかも最後には効果的に減速します。
+<img src="images/quintic-ease-out-markers.png" alt="Quintic ease-out のアニメーション曲線" style="max-width: 300px" class="attempt-right"/>
 
-CSS の `ease-out` キーワードで指定されたものを超える周知の ease-out 方程式のグループがありますが、これらは ‘aggressiveness’ の範疇に入ります。 極めて快活な ease-out 効果については、[Quintic ease-out](http://easings.net/#easeOutQuint) を検討してください。
+一般的には **ease-out** を使うのが正しい判断で、デフォルトとしても最適です。ease-out は動き始めが速いため、アニメーションが迅速に応答している印象を与え、最後には効果的に減速します。
 
-<img src="images/quintic-ease-out-markers.png" alt="Quintic ease-out のアニメーション曲線" style="max-width: 300px"/>
-
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">Quintic ease-out のアニメーションをご覧ください。</a>
-
-他のイージングの方程式、特に bounce または elastic ease は、プロジェクトで適切な場合にのみ、慎重に使用する必要があります。 不快なアニメーションがユーザーの目に触れないようにするために、いくつかのポイントがあります。 プロジェクトが陽気で楽しいものでない場合は、UI 要素に bounce を用いないでください!逆に、気軽で楽しいサイトを作る場合は、是非 bounce を用いてください!
-
-気軽にいろいろと試してみて、のプロジェクトの性格と一致しているかを確認し、そこから始めます。 イージング タイプの完全なリストとデモについては、 [easings.net](http://easings.net) を参照してください。
-
-## アニメーションの正しい継続時間を選択します。
-
-プロジェクトに追加されたアニメーションが、正しい持続時間を有することが重要です。 短すぎるとアニメーションが攻撃的でシャープな感じになります。長すぎると目障りで迷惑になります。
-
-* **Ease-out: 200 ～ 500 ミリ秒**。 これによってアニメーションを視認できますが、目障りに感じることはありません。
-* **Ease-in: 200 ～ 500 ミリ秒**。 最後に衝撃を与えるすと、その感触を柔らげる時間がなくなることを覚えておいてください。
-* **Bounce または elastic 効果: 800 ～ 1200 ミリ秒**。 Elastic または bounce 効果では、「落ち着く」ための時間が必要です。 この余分な時間がないと、アニメーションの elastic または bounce 部分は非常に攻撃的になり、目障りになります。
-
-もちろんこれらはガイドラインにすぎません。 ご自身で自由に実験し、プロジェクトに適した効果を選んでください。
+CSS の `ease-out` キーワードでは規定されていませんが、他にも有名な ease-out 方程式が複数あります。これらは、かなりインパクトの強いアニメーションの部類に入ります。高速な ease-out 効果が必要な場合は、[Quintic ease-out](http://easings.net/#easeOutQuint) の使用を検討してください。
 
 
+[Quintic ease-out のアニメーションを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
+
+他のイージング方程式、特に bounce や elastic ease は、プロジェクトで適切な場合にのみ、慎重に使用してください。ユーザーに不快感を与えるアニメーションが表示されないようにするために、注意すべきポイントがあります。楽しい雰囲気を出したいサイトを除いて、UI 上で要素をバウンスさせないようにしてください。逆に、楽しいサイトを作る場合は、積極的に bounce を使ってください。
+
+まずは気軽にいろいろと試し、自身のプロジェクトの雰囲気と合っているかを確認することから始めてください。イージング タイプの完全なリストとデモについては、[easings.net](http://easings.net) を参照してください。
+
+##  アニメーションの適切な継続時間を選択
+
+プロジェクトに追加するアニメーションの持続時間は、必ず適切な値に設定します。短すぎるとアニメーションが攻撃的でシャープな感じになり、長すぎると目障りで邪魔になります。
+
+* **Ease-out: 200 ～ 500 ミリ秒**。アニメーションが目に入りますが、目障りに感じることはありません。
+* **Ease-in: 200 ～ 500 ミリ秒**。最後に動きを大きくする場合、そのインパクトを和らげる時間がなくなる点に注意してください。
+* **Bounce または elastic 効果: 800 ～ 1200 ミリ秒**。Elastic や bounce 効果では、「落ち着かせる」ための時間が必要です。この時間の余裕がないと、アニメーションで elastic や bounce の部分が悪目立ちしてしまいます。
+
+上記の内容は、もちろんガイドラインにすぎません。自身で自由に実験し、プロジェクトに適した効果を選んでください。
+
+
+
+
+{# wf_devsite_translation #}

@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: プログレッシブ ウェブアプリはウェブとアプリの両方の利点を兼ね備えたアプリです。このステップバイステップガイドでは、あなた自身のプログレッシブ ウェブアプリを構築し、そしてプログレッシブウェブアプリの開発で必要とされる基礎を学ぶことになります。それは、App Shellモデルや、App ShellやあなたのアプリケーションのキーデータなどをキャッシュするためのService Workerの使い方を含みます。
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2016-04-06 #}
 {# wf_published_on: 2016-02-04 #}
 

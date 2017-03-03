@@ -1,119 +1,110 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 添加或移除一个DOM元素、修改元素属性和样式类、应用动画效果等操作，都会引起DOM结构的改变，从而导致浏览器需要重新计算每个元素的样式、对页面或其一部分重新布局（多数情况下）。这就是所谓的样式计算。
+description:视觉变化通常是通过 JavaScript 触发的。有时是直接通过样式操作，有时是会产生视觉变化的计算，例如搜索某些数据或将其排序。时机不当或长时间运行的 JavaScript 可能是导致性能问题的常见原因，您应当设法尽可能减少其影响。
 
-{# wf_updated_on: 2015-03-19 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_updated_on:2015-03-20 #}
+{# wf_published_on:2015-03-20 #}
 
-# 降低样式计算的范围和复杂度 {: .page-title }
+# 缩小样式计算的范围并降低其复杂性 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
+通过添加和删除元素，更改属性、类或通过动画来更改 DOM，全都会导致浏览器重新计算元素样式，在很多情况下还会对页面或页面的一部分进行布局（即自动重排）。这就是所谓的<em>计算样式的计算</em>。
 
-Translated By: 
+计算样式的第一部分是创建一组匹配选择器，这实质上是浏览器计算出给指定元素应用哪些类、伪选择器和 ID。
 
-{% include "web/_shared/contributors/samchen.html" %}
+第二部分涉及从匹配选择器中获取所有样式规则，并计算出此元素的最终样式。在 Blink（Chrome 和 Opera 的渲染引擎）中，这些过程的开销至少在目前是大致相同的：
 
-
-添加或移除一个DOM元素、修改元素属性和样式类、应用动画效果等操作，都会引起DOM结构的改变，从而导致浏览器需要重新计算每个元素的样式、对页面或其一部分重新布局（多数情况下）。这就是所谓的样式计算。
+> 用于计算某元素计算样式的时间中大约有 50% 用来匹配选择器，而另一半时间用于从匹配的规则中构建 RenderStyle（计算样式的表示）。
+> Rune Lillesveen, Opera / [Blink 中的样式失效机制](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/view)
 
 ### TL;DR {: .hide-from-toc }
-- 降低样式选择器的复杂度；使用基于class的方式，比如BEM。
-- 减少需要执行样式计算的元素的个数。
 
+* 降低选择器的复杂性；使用以类为中心的方法，例如 BEM。
+* 减少必须计算其样式的元素数量。
 
-计算样式的第一步是创建一套匹配的样式选择器，浏览器就是靠它们来对一个元素应用样式的。
+## 降低选择器的复杂性
 
-第二步是根据匹配的样式选择器来获取对应的具体样式规则，计算出最终具体有哪些样式是要应用在DOM元素上的。在Blink（Chrome和Opera的渲染引擎）中，至少从现在来看，以上两步在时间消耗上是差不多的。
-
-<div class="quote" style="margin-top: 30px;">
-  <div class="container">
-    <blockquote>Roughly 50% of the time used to calculate the computed style for an element is used to match selectors, and the other half of the time is used for constructing the RenderStyle (computed style representation) from the matched rules.
-    <p>Rune Lillesveen, Opera / <a href="https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit">Style Invalidation in Blink</a></p>
-    </blockquote>
-  </div>
-</div>
-
-
-## 降低样式选择器的复杂度
-
-最简单的情况是，你在CSS中仅使用一个class就能对一个DOM元素指定具体样式规则：
+在最简单的情况下，您在 CSS 中引用只有一个类的元素：
 
 
     .title {
       /* styles */
     }
-    
 
-但是，随着项目的发展，很可能会有越来越复杂的CSS，最终你可能写出这样的样式选择器：
+
+但是，随着项目的增长，将可能产生更复杂的 CSS，最终您的选择器可能变成这样：
 
 
     .box:nth-last-child(-n+1) .title {
       /* styles */
     }
-    
 
-对于这种样式选择器，为了弄清楚究竟要不要对一个DOM元素使用这个样式，浏览器必须要确认“这个元素是不是有一个值为title的class属性？同时该元素还有一个父元素，这个父元素正好是一个值为box属性的元素的倒数第（-n+1）个子元素？”。这个确认过程看上去就觉得麻烦，真正计算起来也非常耗时间。换个方式，我们可以这样定义这个样式选择器，达到的效果一样，但效率更高：
+
+为了知道是否需要应用样式，浏览器实际上必须询问“这是否为有 title 类的元素，其父元素恰好是负第 N 个子元素加上 1 个带  box 类的元素？”计算此结果可能需要大量时间，具体取决于所用的选择器和相应的浏览器。选择器的预期行为可以更改为一个类：
 
 
     .final-box-title {
       /* styles */
     }
-    
 
-你可以用个更好的class名字，但不管怎么说，这样做之后能大大减轻浏览器的负担。在之前的版本中，浏览器为了确认该元素是某个元素的倒数某位的子元素，需要先检查那个元素的所有子元素，然后再检查次序。这比直接匹配class名要复杂得多。
 
-## 减少需要执行样式计算的元素的个数
-另一个性能问题，也是_更重要的因素_，就是元素样式发生改变时的样式计算量。
+您可能对该类的名称有疑问，但此工作对于浏览器而言要简单得多。在上一版本中，为了知道（例如）该元素是否为其类型的最后一个，浏览器首先必须知道关于其他元素的所有情况，以及其后面是否有任何元素会是第 N 个最后子元素，因为其类匹配，这可能比简单地将选择器与元素匹配的开销要大得多。
 
-一般来说在最坏的情况下，样式计算量 = 元素个数 x 样式选择器个数。因为对每个元素最少需要检查一次所有的样式，以确认是否匹配。
+## 减少要计算样式的元素数量
+另一个性能考虑，对于_许多样式更新而言是更重要的因素_，即减少在元素更改时需要计算的工作量。
 
-Note: 在过去，如果你修改了body元素的class属性，那么页面里所有元素都要重新计算样式。幸运的是，在某些现代的浏览器中不再这样做了。他们会对每个DOM元素维护一个独有的样式规则小集合，如果这个集合发生改变，才重新计算该元素的样式。也就是说，某个元素样式的改变不一定会导致对其他所有元素重新计算样式，得看这个元素在DOM树中的位置、具体是什么样式发生改变。
+总体来说，计算元素的计算样式的最糟糕的开销情况是元素数量乘以选择器数量，因为需要对照每个样式对每个元素都检查至少一次，看它是否匹配。
 
-样式计算一般是直接对那些目标元素执行，而不是对整个页面执行。在现代浏览器中，样式计算进一步被优化，因为浏览器不会检查所有受到样式变化影响的元素。而以前的浏览器对于这种情况的处理没有进行这种优化。因此，你最好尽可能**减少需要执行样式计算的元素的个数**。
+注：以前曾经是这样：如果您改变了（例如）body 元素上的一个类，则该页的所有子元素将需要重新计算其计算样式。幸好情况不再是这样；对于更改时会导致重新计算样式的元素，某些浏览器维护一小组每个这种元素独有的规则。这意味着，根据元素在树中的位置以及所改变的具体属性，元素不一定需要重新计算。
 
-Note: 如果你对Web Components很感兴趣，那这篇文章对你就没什么意义了。因为Web Components中的样式计算不会跨越Shadow DOM范围，仅在单个的Web Component中进行，而不是在整个页面的DOM树上进行。但从整体上看，本质是一样的：对于样式计算来说，范围越小、规则越简单的话，处理效率越高。
+样式计算可能经常是直接针对少量元素，而不是声明整个页面无效。在现代浏览器中，这往往不再是个问题，因为浏览器并不一定需要检查一项更改可能影响的所有元素。另一方面，较早的浏览器不一定针对此类任务进行了优化。应当尽可能**减少声明为无效的元素的数量**。
 
-## 评估样式计算的成本
-最简单最好的评估样式计算成本的方式就是使用Chrome DevTools的Timeline功能。打开DevTools，选择Timeline标签，点击左上角红色record按钮，然后在页面上做一些互动操作。再点击一次那个红色按钮结束记录，你就会看到类似下图的画面：
+注：如果您热衷于网页组件，有一点值得注意，样式计算在这方面稍有不同，因为默认情况下样式不会跨越 Shadow DOM 的边界，并且范围限于单个组件，而不是整个树。但是，总体来看，同样的概念仍然适用：规则简单的小树比规则复杂的大树会得到更高效地处理。
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg"  alt="DevTools showing long-running style calculations.">
+## 测量样式重新计算的开销
 
-顶部的横线表示该页面每秒渲染的帧数，如果你看到有柱状条超过了下面的那条横线，也就是表示60fps的那条线，那就说明你的页面里有运行时间过长的帧。
+测量样式重新计算的最简单、最好的方法是使用 Chrome DevTools 的 Timeline 模式。首先，打开 DevTools，转至 Timeline 选项卡，选中记录并与您的网站交互。停止记录后，将看到下图所示情况。
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg"  alt="Zooming in on a trouble area in Chrome DevTools.">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg"  alt="DevTools 显示长时间运行的样式计算。">
 
-如果页面在与用户交互的过程（比如页面滚动）中有运行时间过长的帧，那么我们就得对这些帧好好分析一下了。
+顶部的条表示每秒帧数，如果看到柱形超过较低的线，即 60fps 线，则存在长时间运行的帧。
 
-如果你看到了很高的紫色柱状条，就像下图所示。那么点击那个紫色条，你会看到更多细节信息。
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg"  alt="详细了解 Chrome DevTools 中的问题区域。">
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg"  alt="Getting the details of long-running style calculations.">
+如果一些滚动之类的交互或其他交互时出现长时间运行的帧，则应当进一步审查。
 
-在细节信息中，我们可以看到一个耗时很长的样式计算事件，该事件的执行耗时超过了18毫秒。不巧的是，它正好是在页面滚动过程中发生的，因此给用户带来了一个很明显的卡顿效果。
+如果出现较大的紫色块，如上例所示，请点击记录了解到更多细节。
 
-再点击一下JavaScript事件，你就会看到一个JavaScript事件调用栈。在这个栈中你能准确找到是哪个JavaScript事件触发了样式改动。另外，你还能看到这个样式改动影响到的元素个数（在本示例中这个数字超过400）、样式计算耗时多久。这些信息有助于你寻找改进代码的方法。
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg"  alt="获取长时间运行的样式计算的细节。">
 
-## 使用块、元素、修饰语
-以[BEM (Block, Element, Modifier)](https://bem.info/){: .external }的方式编写CSS代码，能达到最好的样式计算的性能，因为这种方式建议对每个DOM元素都只使用一个样式class。对于需要层级结构的情况，只需要把层级信息合并到class名里面：
+在这次抓取中，有一个长时间运行的重新计算样式事件，其时间刚好超过 18 毫秒，并且恰好发生在滚动期间，导致用户体验到明显的抖动。
+
+如果点击事件本身，将看到一个调用栈，精确指出了您的 JavaScript 中导致触发样式更改的位置。此外，您还获得样式受更改影响的元素数量（本例中刚好超过 400 个元素），以及执行样式计算所花的时间。您可以使用此信息来开始尝试在代码中查找修正点。
+
+## 使用块、元素、修饰符
+
+[BEM（块、元素、修饰符）](https://bem.info/){: .external }之类的编码方法实际上纳入了上述选择器匹配的性能优势，因为它建议所有元素都有单个类，并且在需要层次结构时也纳入了类的名称：
 
 
     .list { }
     .list__list-item { }
-    
 
-如果你需要用修饰语，比如前面那个需要获取最后一个子元素的例子，你可以这样处理：
+
+如果需要一些修饰符，像在上面我们想为最后一个子元素做一些特别的东西，就可以按如下方式添加：
 
 
     .list__list-item--last-child {}
-    
-
-如果你正在寻找一种更好的组织CSS代码的方式，BEM是一个很好的选择，不管是在代码结构、还是样式查找速度方面，它的表现都是很棒的。
-
-如果你不喜欢用BEM，当然还有其他编写CSS的方式可用，不过在使用它之前，你得好好评估一下它在性能方面的表现。
-
-## 参考链接
-
-* [Style invalidation in Blink](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit)
-* [BEM (Block, Element, Modifier)](https://bem.info/){: .external }
 
 
+如果您在寻找一种好方法来组织您的 CSS，则 BEM 真的是个很好的起点，不仅从结构的角度如此，还因为样式查找得到了简化。
+
+如果不喜欢 BEM，还可使用其他方法来组织您的 CSS，但是应评估其性能注意事项以及方法的人体工学。
+
+##  资源
+
+* [Blink 中的样式失效机制](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit)
+* [BEM（块、元素、修饰符）](https://bem.info/){: .external }
+
+
+{# wf_devsite_translation #}

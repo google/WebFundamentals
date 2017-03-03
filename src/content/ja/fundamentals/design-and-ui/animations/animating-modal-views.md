@@ -1,29 +1,33 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: アプリ内のモーダル ビューにアニメーションを付ける方法の学習
+description: アプリ内のモーダルビューにアニメーションを付ける方法を学習します。
 
+{# wf_updated_on:2016-08-24 #}
+{# wf_published_on:2014-08-08 #}
 
-{# wf_updated_on: 2014-10-20 #}
-{# wf_published_on: 2014-08-08 #}
-
-# Animating Modal Views {: .page-title }
+# モーダルビューのアニメーション化 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
+<div class="attempt-right">
+  <figure>
+    <img src="images/dont-press.gif" alt="モーダルビューをアニメーション化。" />
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html" target="_blank" class="external">お試しください</a>
+    </figcaption>
+  </figure>
+</div>
 
-モーダル ビューは、重要なメッセージのためのものであり、ユーザー インターフェースをブロックする必要があります。 それらは破壊的であり、過剰に使用するとユーザーの操作を台無しにしてしまうため、使用するときは注意する必要があります。 しかし、特定の環境では適切なビューであり、いくつかのアニメーションを追加することによって活用できます。
+モーダル ビューは重要なメッセージを表示するためのビューです。ユーザー インターフェースをブロックしてでも表示したい理由がある場合にのみ、使用するようにしてください。モーダルビューは過度に使用するとユーザー操作の妨げになり、ユーザー エクスペリエンスを低下させるため、使用する際は注意が必要です。しかし状況によっては最適なビューでもあり、アニメーションを追加することによって躍動感を出すことができます。
 
 ### TL;DR {: .hide-from-toc }
-- モーダル ビューは慎重に使用する必要があります。ユーザーの操作を不必要に妨げると、ユーザーはイライラします。
-- アニメーションにスケールを追加すると、効果的な「ドロップオン」が得られます。
-- ユーザーが受け付けない場合はすぐにモーダル ビューを除外し、ユーザーが驚かないようにもう少しゆっくりと画面に表示させるようにしてください。
+* モーダルビューは慎重に使用する必要があります。ユーザー操作を不必要に妨げると、ユーザーはストレスを感じます。
+* アニメーションにスケールを追加すると、優れた「ドロップオン」効果が得られます。
+* ユーザーがモーダルビューを消した場合は、すぐにビューを非表示にします。一方、モーダルビューを表示する際は、ユーザーが驚かないように表示速度を少し落とします。
 
+<div class="clearfix"></div>
 
-<img src="images/dont-press.gif" alt="モーダルビューをアニメーション化。" />
-
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html">サンプルを参照してください。</a>
-
-モーダル オーバーレイはビューポートに配列する必要があり、`position` を `fixed` に設定しなければなりません。
+モーダル オーバーレイはビューポートに合わせる必要があるため、`position` を `fixed` に設定します。
 
 
     .modal {
@@ -40,9 +44,9 @@ description: アプリ内のモーダル ビューにアニメーションを付
     }
     
 
-初期には 0 の `opacity` があるため、ビューでは非表示になっています。しかし、承認をクリックしてタッチできるよう、`pointer-events` を `none` に設定する必要もあります。 これを行わないとすべての相互操作がブロックされ、ページ全体の応答がなくなります。 最後に、これは `opacity` および `transform` をアニメーション化するため、`will-change` で変更されたマークが必要です。([Using the will-change property](/web/fundamentals/design-and-ui/animations/animations-and-performance#using-the-will-change-property) も参照してください)。
+`opacity` の初期値は 0 であるため、ビューでは非表示になっています。ただし、クリックやタッチイベントを通過させるため、`pointer-events` を `none` に設定しておく必要があります。この設定をしないと、すべての操作がブロックされてページ全体の応答性が低下します。最後に、`opacity` と `transform` をアニメーション化するために、これらを変更予定の要素として `will-change` で指定しておく必要があります（[will-change プロパティの使用](animations-and-performance#using-the-will-change-property)を参照してください）。
 
-ビューが表示されているときは、相互操作に同意し、1 の`opacity` を保持する必要があります。
+ビューが表示されているときは操作を受け付け、`opacity` を 1 にしておく必要があります。
 
 
     .modal.visible {
@@ -51,14 +55,14 @@ description: アプリ内のモーダル ビューにアニメーションを付
     }
     
 
-モーダル ビューが必要なときにいつでも、JavaScript を使用してクラスを"視覚的に"切り替えることができます。
+モーダル ビューが必要なときにいつでも、JavaScript を使用して「表示する」クラスを切り替えることができます。
 
 
     modal.classList.add('visible');
     
 
-この時点でモーダル ビューは、アニメーションなしで表示され、
-に追加されます ([Custom Easing](/web/fundamentals/design-and-ui/animations/custom-easing) も参照してください)。
+この時点では、モーダルビューはアニメーションなしで表示されます。以下でアニメーションを追加しましょう（[カスタム イージング](custom-easing)を参照してください）。
+
 
 
     .modal {
@@ -76,9 +80,9 @@ description: アプリ内のモーダル ビューにアニメーションを付
     }
     
 
-`scale` を変換に追加すると、ビューが画面上にかすかに落下するように見え、素敵な効果が得られます。 デフォルトのトランジションは、カスタム曲線および 0.1 秒の持続時間で、遷移と不透明度プロパティの両方に適用されます。
+`scale` を transform に追加すると、わずかにビューが画面上に落下するように見え、素敵な効果が得られます。デフォルトの遷移として、transform プロパティと opacity プロパティの両方にカスタム曲線と 0.1 秒の継続時間を指定します。
 
-持続時間はかなり短いですが、それは、ユーザーがビューを閉じてアプリを取得したいときに最適です。 難点は、モーダル ビューが表示されたときに目立ちすぎる可能性があることです。 この問題を解決するには、`visible` クラスの遷移値をオーバーライドする必要があります。
+この持続時間はかなり短いですが、ユーザーがビューを閉じてアプリに戻りたい場面には最適です。しかし、モーダル ビューが表示時に目立ちすぎるという難点もあります。この問題を解決するには、`visible` クラスの transition の値をオーバーライドします。
 
 
     .modal.visible {
@@ -97,7 +101,10 @@ description: アプリ内のモーダル ビューにアニメーションを付
     }
     
 
-これで、モーダル ビューは画面に表示されるまでの時間は 0.3 秒になります。あまり目立たなくなりますが、すぐに消えることを好むユーザーもいます。
+これでモーダルビューが画面に表示されるまでの時間は 0.3 秒になるので、唐突感は軽減されます。一方、モーダルビューを消すスピードは速い方がユーザーに好まれます。
 
 
 
+
+
+{# wf_devsite_translation #}
