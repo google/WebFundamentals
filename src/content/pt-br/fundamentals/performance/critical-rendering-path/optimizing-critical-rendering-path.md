@@ -1,36 +1,41 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Para que a primeira renderização aconteça o mais rápido possível, precisamos otimizar três variáveis: minimizar o número de recursos essenciais, minimizar o número de bytes essenciais e minimizar a extensão do caminho essencial.
+description: Conheça os principais fatores na otimização do caminho crítico de renderização.
 
-{# wf_updated_on: 2014-04-27 #}
+{# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Como otimizar o caminho de processamento essencial {: .page-title }
+# Otimização do caminho crítico de renderização {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
+  Para obter a maior rapidez possível na primeira renderização, precisamos 
+  minimizar três variáveis:
 
-Para que a primeira renderização aconteça o mais rápido possível, precisamos otimizar três variáveis:
+  <ul>
+    <li>O número de recursos críticos.</li>
+    <li>O tamanho do caminho crítico.</li>
+    <li>O número de bytes críticos.</li>
+  </ul>
 
-* **Minimizar o número de recursos essenciais.**
-* **Minimizar o número de bytes essenciais.**
-* ** Minimizar a extensão do caminho essencial.**
+Um recurso crítico é aquele que pode bloquear a renderização inicial da página. Quanto menos desses recursos houver, menor será o trabalho do navegador, do CPU e de outros componentes.
 
-Um recurso essencial é qualquer recurso que possa bloquear a renderização inicial da página. Quanto menos recursos desse tipo houver na página, menos trabalho o navegador precisa fazer para exibir o conteúdo na tela, e menor é a contenção de CPU e outros recursos.
+De modo parecido, o tamanho do caminho crítico é uma função do gráfico de dependências entre os recursos críticos e seu tamanho em bytes: alguns downloads de recursos só podem ser iniciados depois que um recurso anterior já tiver sido processado, e quanto maior o recurso, mais idas e voltas são necessárias para baixá-lo.
 
-Da mesma forma, quanto menos bytes essenciais o navegador precisar fazer o download, mais rápido ele poderá começar a processar o conteúdo e exibi-lo na tela. Para reduzir o número de bytes, podemos reduzir o número de recursos (eliminá-los ou torná-los não essenciais) e também garantir a diminuição do tamanho da transferência por meio da compactação e otimização de cada recurso.
+Por fim, quanto menos bytes críticos o navegador precisar baixar, mais rápido poderá processar conteúdo e renderizá-lo na tela. Para reduzir o número de bytes, podemos diminuir o número de recursos (eliminá-los ou torná-los não críticos) e assegurar a redução do tamanho da transferência compactando e otimizando cada recurso.
 
-Finalmente, a extensão do caminho essencial é uma função do gráfico de dependência entre todos os recursos essenciais necessários para a página e seu número de bytes: o download de alguns recursos só pode ser iniciado uma vez que um recurso anterior é processado, e, quanto maior o recurso, mais idas e voltas serão necessárias para fazer o download.
+**A sequência geral de etapas para otimizar o caminho crítico de renderização é:**
 
-Em outras palavras, o número de recursos, seu número de bytes e a extensão do caminho essencial estão relacionados uns aos outros, mas não são exatamente iguais. Por exemplo, pode não ser possível reduzir o número de recursos essenciais ou diminuir a extensão do caminho essencial, mas a redução do número de bytes essenciais ainda pode ser uma otimização importante &mdash; e vice-versa.
+1. Analisar e caracterizar o caminho crítico: número de recursos, bytes e tamanho.
+1. Minimizar o número de recursos críticos: eliminá-los, adiar o download, marcá-los como assíncronos etc.
+1. Otimizar o número de bytes críticos para reduzir o tempo de download (número de idas e voltas).
+1. Otimizar a ordem de carregamento dos recursos críticos restantes: baixar todos os ativos críticos o quanto antes para reduzir o tamanho do caminho crítico.
 
-**A sequência geral de etapas para otimizar o caminho de processamento essencial é:**
-
-1. Analisar e caracterizar seu caminho essencial: número de recursos, bytes, extensão.
-2. Minimizar o número de recursos essenciais: eliminá-los, adiar seu download, marcá-los como assíncronos etc.
-3. Otimizar a ordem em que os recursos essenciais restantes são carregados: é melhor fazer o download de todos os recursos essenciais o quanto antes para diminuir a extensão do caminho essencial.
-4. Otimizar o número de bytes essenciais para reduzir o tempo de download (número de idas e voltas).
-
+<a href="page-speed-rules-and-recommendations" class="gc-analytics-event"
+    data-category="CRP" data-label="Next / PageSpeed">
+  <button>A seguir: Regras e recomendações para o PageSpeed</button>
+</a>
 
 
+{# wf_devsite_translation #}

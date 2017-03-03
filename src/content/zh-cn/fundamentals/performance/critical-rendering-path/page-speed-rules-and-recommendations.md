@@ -1,53 +1,111 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: PageSpeed Insights 规则使用背景：优化关键呈现路径时需要注意的地方及其原因。
+description:本指南审视 PageSpeed Insights 规则背景：优化关键渲染路径时的注意事项以及原因。
 
-{# wf_updated_on: 2014-04-27 #}
-{# wf_published_on: 2014-03-31 #}
+{# wf_updated_on:2015-10-05 #}
+{# wf_published_on:2014-03-31 #}
 
 # PageSpeed 规则和建议 {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
+本指南审视 PageSpeed Insights 规则背景：优化关键渲染路径时的注意事项以及原因。
 
 
-PageSpeed Insights 规则使用背景：优化关键呈现路径时需要注意的地方及其原因。
+## 消除阻塞渲染的 JavaScript 和 CSS
 
-## 删除阻止呈现的 JavaScript 和 CSS
-
-若要尽快完成首次呈现，您需要尽量减少甚至删除（如果有可能）网页所呈现关键资源的数量、尽量减少下载的关键字节数以及尽量缩短关键路径的长度。
+要以最快速度完成首次渲染，需要最大限度减少网页上关键资源的数量并（尽可能）消除这些资源，最大限度减少下载的关键字节数，以及优化关键路径长度。
 
 ## 优化 JavaScript 的使用
 
-默认情况下，JavaScript 资源会阻止解析器，除非将其标为 _async_，或者使用特殊的 JavaScript 代码段进行添加。阻塞解析器的 JavaScript 强制浏览器等待 CSSOM，并暂停 DOM 的构建，继而大大延迟首次呈现的时间。
+默认情况下，JavaScript 资源会阻塞解析器，除非将其标记为 `async` 或通过专门的 JavaScript 代码段进行添加。阻塞解析器的 JavaScript 会强制浏览器等待 CSSOM 并暂停 DOM 的构建，继而大大延迟首次渲染的时间。
 
-### **推荐使用异步 JavaScript 资源**
+### 首选使用异步 JavaScript 资源
 
-异步资源会取消阻止文档解析器，使浏览器可以在执行标记之前不会在 CSSOM 上实施阻止。通常，如果可以将标记设置为异步，也就意味着该标记不是首次呈现所必需的 - 考虑在首次呈现之后加载异步标记。
+异步资源不会阻塞文档解析器，让浏览器能够避免在执行脚本之前受阻于 CSSOM。通常，如果脚本可以使用 `async` 属性，也就意味着它并非首次渲染所必需。可以考虑在首次渲染后异步加载脚本。
 
-### **延迟解析 JavaScript**
+### 避免同步服务器调用
 
-任何非必需的标记（即对构建首次呈现的内容无关紧要的标记）都应予以延迟，从而尽量降低浏览器呈现网页时所需的工作量。
+使用 `navigator.sendBeacon()` 方法来限制 XMLHttpRequests 在 `unload` 处理程序中发送的数据。
+因为许多浏览器都对此类请求有同步要求，所以可能减慢网页转换速度，有时还很明显。
+以下代码展示了如何利用 `navigator.sendBeacon()` 向 `pagehide` 处理程序而不是 `unload` 处理程序中的服务器发送数据。
 
-### **避免运行时间长的 JavaScript**
 
-运行时间长的 JavaScript 会阻止浏览器构建 DOM、CSSOM 以及呈现网页。因此，任何对首次呈现无关紧要的初始化逻辑和功能都应该延迟执行。如果需要运行较长的初始化序列，可以考虑分割成几个阶段，使浏览器可以间隔处理其他事件。
+
+
+    <script>
+      function() {
+        window.addEventListener('pagehide', logData, false);
+        function logData() {
+          navigator.sendBeacon(
+            'https://putsreq.herokuapp.com/Dt7t2QzUkG18aDTMMcop',
+            'Sent by a beacon!');
+        }
+      }();
+    </script>
+    
+
+新增的 `fetch()` 方法提供了一种方便的数据异步请求方式。由于它尚未做到随处可用，因此您应该利用功能检测来测试其是否存在，然后再使用。该方法通过 Promise 而非多个事件处理程序来处理响应。不同于对 XMLHttpRequest 的响应，从 Chrome 43 开始，fetch 响应将是 stream 对象。这意味着调用 `json()` 也会返回 Promise。 
+
+
+    <script>
+    fetch('./api/some.json')  
+      .then(  
+        function(response) {  
+          if (response.status !== 200) {  
+            console.log('Looks like there was a problem. Status Code: ' +  response.status);  
+            return;  
+          }
+          // Examine the text in the response  
+          response.json().then(function(data) {  
+            console.log(data);  
+          });  
+        }  
+      )  
+      .catch(function(err) {  
+        console.log('Fetch Error :-S', err);  
+      });
+    </script>
+    
+
+`fetch()` 方法也可处理 POST 请求。
+
+
+    <script>
+    fetch(url, {
+      method: 'post',
+      headers: {  
+        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
+      },  
+      body: 'foo=bar&lorem=ipsum'  
+    }).then(function() { // Aditional code });
+    </script>
+    
+
+### 延迟解析 JavaScript
+
+为了最大限度减少浏览器渲染网页的工作量，应延迟任何非必需的脚本（即对构建首次渲染的可见内容无关紧要的脚本）。
+
+### 避免运行时间长的 JavaScript
+
+运行时间长的 JavaScript 会阻止浏览器构建 DOM、CSSOM 以及渲染网页，所以任何对首次渲染无关紧要的初始化逻辑和功能都应延后执行。如果需要运行较长的初始化序列，请考虑将其拆分为若干阶段，以便浏览器可以间隔处理其他事件。
 
 ## 优化 CSS 的使用
 
-CSS 是构建呈现树的必备元素，但在首次构建网页时，JavaScript 常常会在 CSS 上实施阻止。应该确保将任何非必需的 CSS 标记为非关键资源（例如 print 或者其他媒体查询），并应确保尽可能减少关键 CSS 数，尽可能缩短传输时间。
+CSS 是构建渲染树的必备元素，首次构建网页时，JavaScript 常常受阻于 CSS。确保将任何非必需的 CSS 都标记为非关键资源（例如打印和其他媒体查询），并应确保尽可能减少关键 CSS 的数量，以及尽可能缩短传送时间。
 
-### **将 CSS 放入文档的 head 标签内**
+### 将 CSS 置于文档 head 标签内
 
-应该尽早在 HTML 文档中指定所有 CSS 资源，使浏览器可以尽早发现`<link>`标签，并尽早发出 CSS 请求。
+尽早在 HTML 文档内指定所有 CSS 资源，以便浏览器尽早发现 `<link>` 标记并尽早发出 CSS 请求。
 
-### **避免使用 CSS import**
+### 避免使用 CSS import
 
-CSS import (`@import`) 指令使一个样式表可以从另一个样式表文件中导入规则。但是，应避免使用这些指令，因为这会在关键路径中增加往返次数：只有在收到并解析完带有 @import 规则的 CSS 样式表之后，才会发现导入的 CSS 资源。
+一个样式表可以使用 CSS import (`@import`) 指令从另一样式表文件导入规则。不过，应避免使用这些指令，因为它们会在关键路径中增加往返次数：只有在收到并解析完带有 `@import` 规则的 CSS 样式表之后，才会发现导入的 CSS 资源。
 
-### **内联阻止呈现的 CSS**
+### 内联阻塞渲染的 CSS
 
-为了获得最佳效果，您也许会考虑将关键 CSS 直接内联到 HTML 文档中。这可以在关键路径中减少额外的往返次数。如果方法得当，在只有 HTML 是阻止资源时，就能实现'一次往返'的关键路径长度。
+为获得最佳性能，您可能会考虑将关键 CSS 直接内联到 HTML 文档内。这样做不会增加关键路径中的往返次数，并且如果实现得当，在只有 HTML 是阻塞渲染的资源时，可实现“一次往返”关键路径长度。
 
 
 
+{# wf_devsite_translation #}

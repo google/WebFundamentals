@@ -1,112 +1,111 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Após eliminar todos os recursos desnecessários, a próxima etapa é minimizar o tamanho total dos recursos que dos quais o navegador precisa fazer o download. Isso significa compactá-los por meio de algoritmos de compactação genéricos (GZip) ou específicos para cada tipo de conteúdo.
+description: Depois da eliminação de downloads de recursos desnecessários, o melhor que podemos fazer para aprimorar a velocidade da carga é minimizar o tamanho geral do download otimizando e comprimindo os recursos restantes.
 
-{# wf_updated_on: 2014-09-11 #}
+{# wf_updated_on: 2016-08-26 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Otimização da codificação e do tamanho de transferência de recursos baseados em texto {: .page-title }
+# Otimizar codificação e tamanho de ativos baseados em texto destinados a transferência {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
+Depois da eliminação de downloads de recursos desnecessários, o melhor que se pode fazer para aprimorar a velocidade da carga é minimizar o tamanho geral do download otimizando e comprimindo os recursos restantes.
 
 
-A funcionalidade, as pretensões e o escopo dos nossos aplicativos da Web continuam a crescer e isso é bom. No entanto, a incessante caminhada em direção a uma Web mais avançada leva a outra tendência: o volume de dados transferidos por cada aplicativo continua a crescer em ritmo constante. Para proporcionar um bom desempenho, é preciso otimizar a exibição de absolutamente todos os bytes.
+## Introdução à compressão de dados
 
+Depois de eliminar todos os recursos desnecessários, a próxima etapa é comprimir os recursos restantes que o navegador tem de baixar. Dependendo do tipo de recurso&mdash;texto, imagens, fontes, e assim por diante&mdash;existem muitas técnicas diferentes à escolha: ferramentas genéricas que podem ser ativadas no servidor, otimizações de pré-processamento para tipos de conteúdo específicos e otimizações de recursos específicos que exigem interação do desenvolvedor.
 
-
-## Introdução à compactação de dados
-
-Após eliminar todos os recursos desnecessários, a próxima etapa é minimizar o tamanho total dos recursos que o navegador precisa transferir por download, ou seja, compactá-los. Dependendo do tipo de recurso (texto, imagens, fontes etc.), temos várias técnicas diferentes disponíveis: ferramentas genéricas que podem ser habilitadas no servidor, otimizações pré-processamento para tipos específicos de conteúdo e otimizações para recursos específicos que exigem dados fornecidos pelo programador.
-
-Proporcionar o melhor desempenho possível depende da combinação de todas essas técnicas.
+O fornecimento do melhor desempenho exige uma combinação de todas essas técnicas.
 
 ### TL;DR {: .hide-from-toc }
-- A compactação é o processo de codificar informações usando menos bits
-- Eliminar dados desnecessários sempre leva aos melhores resultados
-- Há vários algoritmos e técnicas de compactação diferentes
-- É preciso usar várias técnicas para alcançar a melhor compactação
+* A compressão é o processo de codificar informações usando menos bits.
+* A eliminação de dados desnecessários sempre proporciona os melhores resultados.
+* Há diversas técnicas e algoritmos de compressão diferentes.
+* Serão necessárias diversas técnicas para conseguir a melhor compressão.
 
 
-O processo de redução do tamanho dos dados é chamado de `compactação de dados` e consiste em uma área de estudo independente: muitas pessoas dedicam suas carreiras ao desenvolvimento de algoritmos, técnicas e otimizações para melhorar as taxas de compactação, a agilidade e os requisitos de memória de vários compactadores. Obviamente, não abordaremos esse assunto em detalhes. Mesmo assim, é importante entender como a compactação funciona em alto nível e quais técnicas estão disponíveis para reduzir o tamanho dos vários recursos exigidos pelas páginas.
+O processo de reduzir o tamanho dos dados é a *compressão de dados*. Muitas pessoas contribuíram com algoritmos, técnicas e otimizações para melhorar as taxas de compressão, velocidade e requisitos de memória de vários compressores. Uma discussão completa sobre a compressão de dados está além do escopo deste tópico. No entanto, é importante entender, em um nível elevado, como funciona a compressão e as técnicas que você pode usar para reduzir o tamanho de vários ativos que suas páginas exigem.
 
-Para ilustrar os princípios fundamentais dessas técnicas na prática, pensaremos em como otimizar um simples formato de mensagem de texto inventado exclusivamente para este exemplo:
+Para ilustrar os princípios fundamentais destas técnicas, considere o processo de otimização de um formato de mensagem de texto simples que foi inventado apenas para este exemplo:
 
-  #Veja abaixo uma mensagem de texto que consiste em um conjunto de cabeçalhos no
-  #formato valor-chave, seguido por uma nova linha e pela mensagem criptografada.
+    # Below is a secret message, which consists of a set of headers in
+    # key-value format followed by a newline and the encrypted message.
     format: secret-cipher
-    date: 04/04/14
+    date: 08/25/16
     AAAZZBBBBEEEMMM EEETTTAAA
 
-1. As mensagens podem conter anotações aleatórias indicadas pelo prefixo `#`. As anotações não afetam o significado nem o comportamento da mensagem.
-2. As mensagens podem conter `cabeçalhos` que são pares de valor-chave (separados por `:`) e precisam aparecer no início da mensagem.
-3. As mensagens também possuem cargas de texto.
+1. As mensagens podem conter anotações arbitrárias, indicadas pelo prefixo "#". As anotações não afetam o significado ou qualquer outro comportamento da mensagem.
+2. As mensagens podem conter *cabeçalhos*, que são pares de chave-valor (separados por ":") e que devem aparecer no início da mensagem.
+3. As mensagens podem conter cargas úteis de texto.
 
-O que podemos fazer para reduzir o tamanho da mensagem acima, que atualmente tem 200 caracteres?
+O que você pode fazer para reduzir o tamanho da mensagem acima, que atualmente é de 200 caracteres?
 
-1. O comentário é interessante, mas sabemos que não afeta o significado da mensagem, então é melhor eliminá-lo ao transmitir a mensagem.
-2. Provavelmente existem algumas técnicas inteligentes para codificar os cabeçalhos de maneira eficiente. Por exemplo, não sabemos se todas as mensagens possuem `formato` e `data`, mas se soubéssemos, poderíamos convertê-los em códigos inteiros e enviar somente eles. Como não sabemos se esse é o caso, deixaremos como está.
-3. A carga é somente texto e, mesmo não conhecendo seu verdadeiro conteúdo (aparentemente é uma `mensagem secreta`), só de olhar para ela já dá pra ver várias redundâncias. Será que há uma maneira de, em vez de enviar letras repetidas, simplesmente contá-las e codificá-las de maneira mais eficiente?
-    * Por exemplo, `AAA` se torna `3A` (sequência de três letras `A`).
+1. O comentário é interessante, mas, na verdade, não afeta o significado da mensagem. Elimine-o ao transmitir a mensagem.
+2. Existem boas técnicas para codificar cabeçalhos de uma maneira eficiente. Por exemplo, se você sabe que todas as mensagens têm "format" e "date", você pode convertê-los em IDs inteiros curtos e apenas enviar esses IDs. No entanto, não sabemos se isso é verdade, então não faremos nada por enquanto.
+3. A carga útil é apenas texto e, embora o seu conteúdo real seja desconhecido (aparentemente, é uma "mensagem secreta"), basta olhar o texto para perceber que existe muita redundância. Em vez de enviar letras repetidas, talvez você possa contar o número de letras repetidas e codificá-las com mais eficiência. Por exemplo, "AAA" torna-se "3A", o que representa uma sequência de três As.
 
 
-Com a combinação das técnicas, chegamos ao seguinte resultado:
+Combinar estas técnicas produz o seguinte resultado:  
 
     format: secret-cipher
-    date: 04/04/14
+    date: 08/25/16
     3A2Z4B3E3M 3E3T3A
 
-A nova mensagem tem 56 caracteres, indicando que conseguimos reduzir a mensagem original em 72%. Nada mal, considerando as limitações. E estamos somente começando.
+A nova mensagem tem 56 caracteres, o que significa que você comprimiu a mensagem original em impressionantes 72%.
 
-Talvez você esteja se perguntando como isso pode ajudar a otimizar suas páginas da Web. Será que precisaremos criar nossos próprios algoritmos de compactação? Não. No entanto, você verá que usaremos exatamente as mesmas técnicas e o mesmo modo de pensar para otimizar vários recursos em nossas páginas: pré-processamento, otimizações baseadas no contexto e algoritmos diferentes para conteúdos diferentes.
+Ótimo, mas como isso pode ajudar a otimizar nossas páginas da Web? Não tentaremos inventar nossos algoritmos de compressão, mas, como você verá, podemos usar exatamente as mesmas técnicas e processos de pensamento ao otimizar vários recursos em nossas páginas: pré-processamento, otimizações específicas ao contexto e algoritmos diferentes para diferentes conteúdo.
 
 
-## Minificação: processamento e otimizações baseadas no contexto
+## Minimização: pré-processamento e otimizações específicas por contexto
 
 ### TL;DR {: .hide-from-toc }
-- As otimizações específicas para cada tipo de conteúdo podem reduzir de maneira significativa o tamanho dos recursos exibidos.
-- As otimizações específicas para cada tipo de conteúdo são mais bem aplicadas como parte de nosso ciclo de criação/lançamento.
+- As otimizações específicas por conteúdo podem reduzir substancialmente o tamanho dos recursos entregues.
+- Elas são melhor aplicadas como parte do ciclo de compilação/versão.
 
 
-A melhor maneira de compactar dados redundantes ou desnecessários é simplesmente os excluindo. Não podemos apagar dados aleatoriamente, mas em alguns contextos em que conhecemos o conteúdo específico do formato de dados e suas propriedades, é possível reduzir de maneira significativa o tamanho da carga sem afetar o significado.
+A melhor forma de comprimir dados redundantes ou desnecessários é eliminá-los totalmente. Não podemos simplesmente excluir dados arbitrários. No entanto, em alguns contextos em que temos conhecimento específico do conteúdo do formato de dados e de suas propriedades, muitas vezes é possível reduzir consideravelmente o tamanho da carga útil sem afetar seu significado real.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-Considere a simples página HTML acima e os três tipos diferentes de conteúdo que ela possui: marcações HTML, estilos CSS e JavaScript. Cada um desses tipos de conteúdo tem regras diferentes para definir quais marcações HTML, regras CSS ou conteúdo JavaScript são válidos, regras diferentes para indicar comentários etc. Como podemos reduzir o tamanho dessa página?
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/optimizing-content-efficiency/minify.html){: target="_blank" .external }
 
-* Comentários de código são o melhor amigo de um programador, mas o navegador não precisa vê-los. A simples remoção dos comentários de CSS (`/* ... */`), HTML (`<!-- ... -->`) e JavaScript (`// ...`) pode reduzir bastante o tamanho total da página.
-* Um compactador CSS `inteligente` pode detectar que estamos definindo regras para `.awesome-container` de maneira ineficiente e transformar as duas declarações em apenas uma sem afetar outros estilos e reduzindo ainda mais o número de bytes.
-* Os espaços em branco (espaços e tabulações) são uma comodidade para os desenvolvedores de HTML, CSS e JavaScript. Um compactador extra pode remover todas as tabulações e espaços.
+Considere a página HTML simples acima e os três tipos de conteúdo diferentes que contém: marcação HTML, estilos CSS e JavaScript. Cada um desses tipos de conteúdo tem regras diferentes para o que constitui conteúdo válido, regras diferentes para indicar comentários e assim por diante. Como podemos reduzir o tamanho dessa página?
 
+* Os comentários de código ajudam muito aos desenvolvedores, mas o navegador não precisa deles. A simples eliminação dos comentários CSS (`/* … */`), HTML (`<!-- … -->`) e JavaScript (`// …`) pode reduzir substancialmente o tamanho total da página.
+* Um compressor de CSS "inteligente" pode notar que estamos usando uma forma ineficiente de definir regras para ".awesome-container" e consolidar as duas declarações em uma, sem afetar os outros estilos e economizando mais bytes.
+* O espaço em branco (espaços e tabulações) são convenientes para desenvolvedores no HTML, no CSS e no JavaScript. Um compressor adicional pode eliminar todas as tabulações e espaços.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-Após executar as etapas acima, nossa página passou de 406 para 150 caracteres: uma compactação de 63%. A verdade é que não ficou muito legível, mas também não precisa ficar. É possível manter a página original como a `versão em desenvolvimento` e depois executar as etapas acima quando a página estiver pronta para ser ativada no site.
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/optimizing-content-efficiency/minified.html){: target="_blank" .external }
 
-Recapitulando, o exemplo acima ilustra uma questão importante: um compactador genérico (do tipo desenvolvido para compactar textos aleatórios) também poderia realizar uma boa compactação da página acima. No entanto, ele nunca seria capaz de remover os comentários, recolher as regras CSS ou realizar as várias otimizações específicas para o tipo de conteúdo. É por isso que o pré-processamento, a minificação e a otimização voltada para o contexto podem ser ferramentas poderosas.
+Após aplicar as etapas acima, a página diminui de 406 para 150 caracteres, uma economia de compressão de 63%. Sim, não é muito legível. Mas não precisa ser: você pode manter a página original como sua "versão de desenvolvimento" e aplicar as etapas acima sempre que a página estiver pronta para ser enviada ao seu website.
 
-Note: Atualmente a versão de desenvolvimento descompactada da biblioteca JQuery se aproxima de 300 KB. A mesma biblioteca, porém reduzida (com comentários removidos etc.) é cerca de 3 x menor: ~100 KB.
+Voltando um pouco, o exemplo acima ilustra um ponto importante: um compressor genérico&mdash;como, por exemplo, um compressor projetado para comprimir texto arbitrário&mdash; provavelmente pode comprimir a página acima com eficiência, mas não saberia como eliminar comentários, consolidar as regras CSS ou executar dezenas de outras otimizações específicas do conteúdo. É por isso que pré-processamento/minimização /otimização sensível a contexto pode ser uma ferramenta tão poderosa.
 
-Da mesma forma, as técnicas acima podem ser ampliadas para além dos recursos baseados em texto. Imagens, vídeos e outros tipos de conteúdo também têm suas próprias formas de metadados e várias cargas. Por exemplo, sempre que você fotografa com uma câmera, a foto normalmente agrega várias informações adicionais: configuração da câmera, localização etc. Dependendo do seu aplicativo, esses dados podem ser essenciais (por exemplo, um site de compartilhamento de fotos) ou completamente inúteis, e você deve considerar se vale a pena removê-los. Na prática, esses metadados podem adicionar até dezenas de kilobytes em cada imagem.
+Observação: Um bom exemplo é a versão de desenvolvimento não comprimida da biblioteca JQuery, que está se aproximando ~300 KB. A mesma biblioteca minimizada (comentários removidos etc.) é cerca de 3 vezes menor: aproximadamente 100 KB.
 
-Resumindo, o primeiro passo para otimizar a eficiência dos seus recursos é criar um inventário de diferentes tipos de conteúdo e considerar quais otimizações específicas é possível aplicar para reduzir o tamanho deles. Isso pode gerar reduções significativas. Em seguida, depois de decidir quais são as otimizações, faça a automação adicionando-as aos processos de criação e lançamento. Essa é a única maneira de garantir que as otimizações permanecerão.
+Da mesma forma, as técnicas descritas acima podem ser estendidas para além de simples ativos baseados em texto. Imagens, vídeo e outros tipos de conteúdo contêm suas próprias formas de metadados e diversas cargas úteis. Por exemplo, sempre que você tira uma fotografia com uma câmera, a foto normalmente incorpora várias informações adicionais: configurações da câmera, localização e assim por diante. Dependendo do aplicativo, esses dados podem ser essenciais (por exemplo, um site de compartilhamento de fotos) ou totalmente inúteis e você deve considerar se vale a pena removê-los. Na prática, esses metadados podem chegar a dezenas de kilobytes para cada imagem.
 
-## Compactação de texto com o GZIP
+Resumindo, como primeira etapa na otimização da eficiência dos ativos, crie um inventário dos diferentes tipos de conteúdo e considere quais tipos de otimizações específicas podem ser aplicados a esses tipos de conteúdo para reduzir seu tamanho. Então, depois que descobriu o que são, automatize essas otimizações, adicionando-as aos seus processos de construção e de lançamento para garantir que as otimizações sejam aplicadas.
+
+## Compressão de texto com GZIP
 
 ### TL;DR {: .hide-from-toc }
-- O GZIP funciona melhor em recursos baseados em texto: CSS, JavaScript e HTML
-- Todos os navegadores modernos aceitam a compactação com o GZIP e a solicitam automaticamente
-- É preciso configurar o servidor para ativar a compactação com o GZIP
-- Algumas CDNs exigem cuidados especiais para ativar o GZIP
+- O GZIP tem melhor desempenho em ativos baseados em texto: CSS, JavaScript e HTML.
+- Todos os navegadores modernos são compatíveis com a compressão GZIP e a solicitam automaticamente.
+- Seu servidor deve ser configurado para ativar a compressão GZIP.
+- Algumas CDNs exigem atenção especial para garantir que o GZIP está ativado.
 
 
-O [GZIP](http://en.wikipedia.org/wiki/Gzip) é um compactador genérico que pode ser aplicado a qualquer fluxo de bytes. Internamente, ele lembra alguns conteúdos vistos antes e tenta encontrar e substituir fragmentos de dados duplicados de uma maneira eficiente. Os curiosos podem ler essa [ótima explicação sobre como o GZIP funciona nos bastidores](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s). No entanto, na prática o GZIP funciona melhor para conteúdo baseado em texto, frequentemente alcançando taxas de compactação de até 70% a 90% para arquivos maiores. Já para os recursos que foram compactados com outros algoritmos (por exemplo, a maioria dos formatos de imagem), o GZIP traz pouca ou nenhuma melhoria.
+[GZIP](https://en.wikipedia.org/wiki/Gzip) é um compressor genérico que pode ser aplicado a qualquer fluxo de bytes. Nos bastidores, ele lembra de alguns dos conteúdos previamente vistos e tenta localizar e substituir fragmentos de dados duplicados de forma eficiente. (Caso tenha curiosidade, eis uma [ótima explicação de baixo nível de GZIP](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s).) No entanto, na prática, o GZIP tem seu melhor desempenho com conteúdo baseado em texto, conseguindo muitas vezes taxas de compressão de até 70% a 90% nos arquivos maiores. Por outro lado, a execução do GZIP em ativos que já estão comprimidos com outros algoritmos (por exemplo, a maioria dos formatos de imagem) proporciona pouca ou nenhuma melhoria.
 
-Todos os navegadores modernos oferecem suporte e negociam automaticamente a compactação com GZIP para todas as solicitações HTTP. Nosso trabalho é garantir que o servidor esteja configurado corretamente para exibir o recurso compactado quando ele for solicitado pelo cliente.
+Todos os navegadores modernos suportam e automaticamente negociam a compressão GZIP para todas as solicitações de HTTP. Você deve garantir que o servidor esteja configurado corretamente para servir o recurso comprimido quando o cliente solicita.
 
 
 <table>
@@ -114,80 +113,81 @@ Todos os navegadores modernos oferecem suporte e negociam automaticamente a comp
   <tr>
     <th>Biblioteca</th>
     <th>Tamanho</th>
-    <th>Tamanho compactado</th>
-    <th>Taxa de compactação</th>
+    <th>Tamanho comprimido</th>
+    <th>Taxa de compressão</th>
   </tr>
 </thead>
 <tbody>
 <tr>
-  <td data-th="biblioteca">jquery-1.11.0.js</td>
-  <td data-th="tamanho">276 KB</td>
-  <td data-th="compactado">82 KB</td>
-  <td data-th="redução">70%</td>
+  <td data-th="library">jquery-1.11.0.js</td>
+  <td data-th="size">276 KB</td>
+  <td data-th="compressed">82 KB</td>
+  <td data-th="savings">70%</td>
 </tr>
 <tr>
-  <td data-th="biblioteca">jquery-1.11.0.min.js</td>
-  <td data-th="tamanho">94 KB</td>
-  <td data-th="compactado">33 KB</td>
-  <td data-th="redução">65%</td>
+  <td data-th="library">jquery-1.11.0.min.js</td>
+  <td data-th="size">94 KB</td>
+  <td data-th="compressed">33 KB</td>
+  <td data-th="savings">65%</td>
 </tr>
 <tr>
-  <td data-th="biblioteca">angular-1.2.15.js</td>
-  <td data-th="tamanho">729 KB</td>
-  <td data-th="compactado">182 KB</td>
-  <td data-th="redução">75%</td>
+  <td data-th="library">angular-1.2.15.js</td>
+  <td data-th="size">729 KB</td>
+  <td data-th="compressed">182 KB</td>
+  <td data-th="savings">75%</td>
 </tr>
 <tr>
-  <td data-th="biblioteca">angular-1.2.15.min.js</td>
-  <td data-th="tamanho">101 KB</td>
-  <td data-th="compactado">37 KB</td>
-  <td data-th="redução">63%</td>
+  <td data-th="library">angular-1.2.15.min.js</td>
+  <td data-th="size">101 KB</td>
+  <td data-th="compressed">37 KB</td>
+  <td data-th="savings">63%</td>
 </tr>
 <tr>
-  <td data-th="biblioteca">bootstrap-3.1.1.css</td>
-  <td data-th="tamanho">118 KB</td>
-  <td data-th="compactado">18 KB</td>
-  <td data-th="redução">85%</td>
+  <td data-th="library">bootstrap-3.1.1.css</td>
+  <td data-th="size">118 KB</td>
+  <td data-th="compressed">18 KB</td>
+  <td data-th="savings">85%</td>
 </tr>
 <tr>
-  <td data-th="biblioteca">bootstrap-3.1.1.min.css</td>
-  <td data-th="tamanho">98 KB</td>
-  <td data-th="compactado">17 KB</td>
-  <td data-th="redução">83%</td>
+  <td data-th="library">bootstrap-3.1.1.min.css</td>
+  <td data-th="size">98 KB</td>
+  <td data-th="compressed">17 KB</td>
+  <td data-th="savings">83%</td>
 </tr>
 <tr>
-  <td data-th="biblioteca">foundation-5.css</td>
-  <td data-th="tamanho">186 KB</td>
-  <td data-th="compactado">22 KB</td>
-  <td data-th="redução">88%</td>
+  <td data-th="library">foundation-5.css</td>
+  <td data-th="size">186 KB</td>
+  <td data-th="compressed">22 KB</td>
+  <td data-th="savings">88%</td>
 </tr>
 <tr>
-  <td data-th="biblioteca">foundation-5.min.css</td>
-  <td data-th="tamanho">146 KB</td>
-  <td data-th="compactado">18 KB</td>
-  <td data-th="redução">88%</td>
+  <td data-th="library">foundation-5.min.css</td>
+  <td data-th="size">146 KB</td>
+  <td data-th="compressed">18 KB</td>
+  <td data-th="savings">88%</td>
 </tr>
 </tbody>
 </table>
 
-A tabela acima ilustra as reduções alcançadas pela compactação com o GZIP de algumas das bibliotecas JavaScript e estruturas CSS. As reduções variam de 60% a 88% e a combinação dos arquivos reduzidos (identificados pela extensão `.min` no nome do arquivo), juntamente com o GZIP, aumentam ainda mais a taxa de compactação.
+A tabela acima mostra as economias que a compressão do GZIP produz para algumas bibliotecas JavaScript e frameworks CSS mais populares. As economias variam de 60% a 88%, e a combinação de arquivos minimizados (identificados por ".min" nos seus nomes de arquivo) com o GZIP oferece economia ainda maior.
 
-1. **Aplique primeiro as otimizações específicas para o tipo de conteúdo: minificadores de CSS, JS e HTML.**
-2. **Execute o GZIP para compactar o resultado reduzido.**
+1. **Aplique antes as otimizações específicas do conteúdo: Minimizadores CSS, JS e HTML.**
+1. **Aplique o GZIP para compactar a saída minimizada.**
 
-O melhor é que a ativação do GZIP é uma das otimizações mais simples e que mais compensam. Porém, muitas pessoas ainda se esquecem de implementá-la. A maioria dos navegadores faz a compactação de dados automaticamente, e você só precisa verificar se o servidor está configurado corretamente para compactar todos os tipos de conteúdo que podem se beneficiar da compactação com o GZIP.
+Ativar GZIP é uma das otimizações mais simples e mais recompensadoras a implementar e, no entanto, muitas pessoas não implementam. A maioria dos servidores da Web compactam o conteúdo por você. Basta verificar se o servidor está configurado corretamente para compactar todos os tipos de conteúdo que se beneficiam com a compactação do GZIP.
 
-Qual é a melhor configuração para seu servidor? O projeto HTML5 Boilerplate contém [exemplos de arquivos de configuração](https://github.com/h5bp/server-configs) para todos os servidores mais conhecidos, com comentários detalhados sobre cada sinalizador e configuração: encontre seu servidor preferido na lista, procure a seção do GZIP e verifique se o servidor está com as configurações recomendadas.
+O projeto HTML5 Boilerplate contém [exemplos de arquivos de configuração](https://github.com/h5bp/server-configs) para todos os servidores mais populares, com comentários detalhados para cada sinalizador e definição da configuração. Para determinar a melhor configuração para seu servidor, faça o seguinte: 
+* Encontre seu servidor favorito na lista.
+* Procure a seção GZIP.
+* Confirme se seu servidor está configurado com as configurações recomendadas.
 
-<img src="images/transfer-vs-actual-size.png" class="center" alt="Demonstração do tamanho de transferência vs. tamanho real no DevTools">
+<img src="images/transfer-vs-actual-size.png"  alt="Demonstração de tamanho real vs tamanho de transferência no DevTools">
 
-Uma forma simples e rápida de ver o GZIP em ação é abrir o Chrome DevTools e inspecionar a coluna `Tamanho / Conteúdo` no painel de Rede: `tamanho` indica o tamanho de transferência do recurso e `conteúdo` indica o tamanho descompactado. Para o recurso HTML do exemplo acima, o GZIP gerou uma redução de 24,8 KB durante a transferência.
+Uma forma rápida e simples de ver o GZIP funcionando é abrir o Chrome DevTools e examinar a coluna "Size / Content" no painel Network: "Size" indica o tamanho da transferência do ativo e "Content" o tamanho não comprimido do ativo. Para o ativo HTML no exemplo anterior, GZIP economizou 98,8 KB durante a transferência.
 
-Note: Surpreendentemente, há casos em que o GZIP pode até aumentar o tamanho do recurso. Normalmente, isso acontece quando o recurso é muito pequeno e a sobrecarga do dicionário do GZIP é mais alta do que a redução alcançada pela compactação. Isso também pode ocorrer quando o recurso já está bem compactado. Alguns servidores permitem que você especifique um `limite mínimo de tamanho do arquivo` para evitar esse problema.
+Observação: Às vezes, GZIP aumenta o tamanho do ativo. Normalmente, isso ocorre quando o ativo é muito pequeno e a sobrecarga do dicionário do GZIP é maior que a economia da compressão ou se o recurso já está bem comprimido. Para evitar este problema, alguns servidores permitem especificar um limite mínimo de tamanho de arquivo.
 
-Por fim, embora a maioria dos navegadores faça a compactação automática dos recursos ao exibi-los para o usuário, algumas CDNs exigem maiores cuidados e ações manuais para garantir que o recurso compactado pelo GZIPseja exibido. Faça uma auditoria no seu site para verificar se seus recursos estão realmente [compactados](http://www.whatsmyip.org/http-compression-test/).
-
-
+Finalmente, embora a maioria dos servidores compacte automaticamente os ativos ao servi-los para o usuário, algumas CDNs exigem cuidados especiais e esforço manual para garantir que o ativo do GZIP seja servido. Audite o site e verifique se os ativos estão realmente [sendo comprimidos](http://www.whatsmyip.org/http-compression-test/).
 
 
-
+{# wf_devsite_translation #}
