@@ -142,6 +142,6 @@ upper_tabs:
         - title: Appendix
           section:
           - title: Setting Up the Labs
-            path: /web/ilt/pwa/setting-up-the-labs/
+            path: /web/ilt/pwa/setting-up-the-labs
           - title: Tools for PWA Developers
-            path: /web/ilt/pwa/tools-for-pwa-developers/
+            path: /web/ilt/pwa/tools-for-pwa-developers

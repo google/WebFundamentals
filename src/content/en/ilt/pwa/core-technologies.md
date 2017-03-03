@@ -11,23 +11,7 @@ mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
 eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
 ipsum quis ex sagittis posuere a vel felis.
 
-## Video
+{% setvar videoId "videoId" %}
+{% setvar slidesId "1CxS9SD8DEm5qsonsg_M41A6lmZrdLwrBXuayQBGoK3g" %}
 
-<div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="dQw4w9WgXcQ"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
-
-[View on YouTube](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-
-## Slides
-
-<div class="video-wrapper-full-width">
-  <iframe frameborder="0" width="100%" allowfullscreen="true"
-    mozallowfullscreen="true" webkitallowfullscreen="true"
-    src="https://docs.google.com/presentation/d/1CxS9SD8DEm5qsonsg_M41A6lmZrdLwrBXuayQBGoK3g/embed">
-  </iframe>
-</div>
-
-[View in Google Docs](https://docs.google.com/presentation/d/1CxS9SD8DEm5qsonsg_M41A6lmZrdLwrBXuayQBGoK3g/pub)
+{% include web/ilt/pwa/_slides.html %}
