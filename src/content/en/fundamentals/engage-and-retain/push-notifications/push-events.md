@@ -14,7 +14,7 @@ By this point covered subscribing a user for push sending them a message. The ne
  receive this push message on the users device and display a notification (as well as any other
  work we might want to do).
 
-## The Push Event
+(/web/
 
 When a message is received, it'll result in a push event being dispatched in your service worker.
 

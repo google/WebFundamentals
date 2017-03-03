@@ -10,7 +10,7 @@ book_path: /web/fundamentals/_book.yaml
 
 
 
-## Why Doesn't Push Work when the Browser is Closed?
+(/web/
 
 This question crops up quite a bit, largely because there are a few scenarios that make it
  difficult to reason with / understand.

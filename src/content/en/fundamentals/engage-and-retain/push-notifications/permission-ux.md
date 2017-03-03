@@ -17,7 +17,7 @@ The natural step after getting a `PushSubscription` and saving it our server is 
 Sadly, very few sites give much consideration as to how they ask their user for permission, so
  lets take a brief aside to look at both good and bad UX.
 
-## Common Patterns
+(/web/
 
 There have been a few common patterns emerging that should guide / help you when deciding what
  is best for your users and use case.

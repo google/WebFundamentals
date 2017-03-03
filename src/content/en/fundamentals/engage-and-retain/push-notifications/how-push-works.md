@@ -24,7 +24,7 @@ The three key steps when implementing push are:
 
 Let's look at what each of these steps entails in a little more detail.
 
-## Step 1: Client Side
+(/web/
 
 The first step is to "subscribe" a user to push messaging.
 

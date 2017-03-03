@@ -21,7 +21,7 @@ All of the source code for these demo's is taken from a demo page I put together
 
 <a class="button" href="/demos/notification-examples/" target="\_blank">Notification Demos</a>
 
-## Visual Options
+(/web/
 
 The API for showing a notification is simply:
 

@@ -27,7 +27,7 @@ In this section we are going to look at how we can add support for these browser
  that this isn't recommended, but if you have a large audience on any of these browsers /
  browser versions, you should consider this.
 
-## What is gcm_sender_id?
+(/web/
 
 The "gcm_sender_id" parameter came about in the early versions of Chrome
 when web push was first implemented. Google had a push service called "Google

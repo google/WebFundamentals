@@ -27,7 +27,7 @@ period of time while others will show the notification unless the user interacts
 In this section we are going to look at how we can alter these default behaviours using options
  alone. These are relatively easy to implement and take advantage of.
 
-### Notification Click Event
+(/web/
 
 When a user clicks on a notification the default behaviour is for nothing
 to happen, it doesn't even close / remove the notification.

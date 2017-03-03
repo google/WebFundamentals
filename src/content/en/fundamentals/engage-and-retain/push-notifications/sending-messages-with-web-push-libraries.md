@@ -45,7 +45,7 @@ and how that can be saved.
 1. What it looks like to retrieve the saved subscriptions and trigger a push
 message.
 
-## Saving Subscriptions
+(/web/
 
 Saving and querying PushSubscriptions from a database will vary depending on
 your server side language and database choice but it might be useful to see

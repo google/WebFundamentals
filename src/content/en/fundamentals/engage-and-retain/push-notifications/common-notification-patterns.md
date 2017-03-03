@@ -15,7 +15,7 @@ There are a few common patterns that developers are implementing in their web ap
 
 This will involve using a few different API's that are available in the service worker.
 
-## Notification Close Event
+(/web/
 
 In the last section saw how we can listen for `notificationclick` events.
 

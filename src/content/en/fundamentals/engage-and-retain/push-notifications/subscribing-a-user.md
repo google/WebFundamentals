@@ -15,7 +15,7 @@ The first step is to get permission from the user to send them push messages and
 
 The JavaScript API to do this is reasonably straight forward, so let's step through the logic flow.
 
-## Feature Detection
+(/web/
 
 First we need check if the current browser actually supports push messaging. We can check if
  push is supported with two simple checks.

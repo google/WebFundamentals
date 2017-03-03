@@ -26,7 +26,7 @@ server keys and how the encrypted payload and associated data is sent.
 This isn't a pretty side of web push and I'm no expert at encryption, but let's look through
  each piece since it's handy to know what these libraries are doing under the hood.
 
-## Application Server Keys
+(/web/
 
 When we subscribe a user, we pass in an `applicationServerKey`. This key is
 passed to the push service and used to check the application that subscribed
