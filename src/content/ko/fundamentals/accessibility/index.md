@@ -134,7 +134,7 @@ WCAG는 네 가지 원칙으로 구성되며 주로 *POUR*라는 약자로 표�
 
 WCAG는 콘텐츠 접근성의 의미에 대한 종합적 개요를 제공하지만
 이는 다소 소화하기 어려울 수 있습니다. 이런 어려움을 줄이기 위해서
-[WebAIM](http://webaim.org/){: .external }(Web Accessibility in Mind) 그룹이
+[WebAIM](http://webaim.org/){: .external } (Web Accessibility in Mind) 그룹이
 WCAG 가이드라인을 웹 콘텐츠를 대상으로 하는 따라 하기 쉬운 목록으로
 간결히 작성했습니다.
 
