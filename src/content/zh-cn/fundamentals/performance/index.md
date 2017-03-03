@@ -1,21 +1,23 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description:提升性能从最小化（至少是优化）用户下载的数据开始。了解浏览器渲染这些资源的方式是提升代码效率的先决条件。提升效率后，您还需要对其进行测试。 
+description: Improving performance starts with minimizing, or at least, optimizing the data that users download. Understanding how a browser renders those resources is a prerequisite for improving code efficiency. After improving it, you need a way to test it. 
 
-{# wf_updated_on: 2016-09-09 #}
-{# wf_published_on: 2015-09-08 #}
+{# wf_updated_on: 2017-02-22 #}
+{# wf_published_on: 2017-02-22 #}
 
-# 性能 {: .page-title }
+# 性能表现 {: .page-title }
 
-提升性能从最小化（至少是优化）用户下载的数据开始。了解浏览器渲染这些资源的方式是提升代码效率的先决条件。提升效率后，您还需要对其进行测试。 
+提高性能表现的过程要从最小化，或者至少从优化用户下载数据开始。提高代码效率的前提是要理解浏览器是如何渲染这些文件的。最后，你需要一些方法来测试。
 
 ## 优化内容效率
 
 <img src="images/oce.png" class="attempt-right" style="max-height: 200px;">
 
+
 为提供卓越的性能，您需要优化网站中每一个字节的传送！
 
 [使用入门](optimizing-content-efficiency/)
+
 
 <div style="clear:both;"></div>
 
@@ -59,10 +61,12 @@ PRPL（推送、渲染、预先缓存和延迟加载）是一种用于结构化�
 
 [了解详情](prpl-pattern/)
 
+
 <div style="clear:both;"></div>
 
 
 ## 相关资源
+
 
 ### 代码实验室
 
@@ -95,3 +99,4 @@ Surma 将从 HTTP/1 的基础知识开始，一直讲解到 HTTP/2 和如何有�
 
 
 {# wf_devsite_translation #}
+
