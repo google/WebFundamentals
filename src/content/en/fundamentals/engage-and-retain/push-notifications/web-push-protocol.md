@@ -8,13 +8,13 @@ book_path: /web/fundamentals/_book.yaml
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
-# The Web Push Protocol
+
 
 We've seen how a library can be used to trigger push messages, but what
 exactly are these libraries doing?
 
-Well, it's primarily making a network request, making sure it's the right format and sent the right
- way. The spec that defines this network request is the [Web Push
+Well, it's primarily making a network request, making sure it's the right format and sent the
+ right way. The spec that defines this network request is the [Web Push
  Protocol](https://tools.ietf.org/html/draft-ietf-webpush-protocol).
 
 ![Diagram of sending a push message from your server to a push
@@ -23,8 +23,8 @@ Well, it's primarily making a network request, making sure it's the right format
 This section outlines how the server can identify itself with application
 server keys and how the encrypted payload and associated data is sent.
 
-This isn't a pretty side of web push and I'm no expert at encryption, but let's look through each
- piece since it's handy to know what these libraries are doing under the hood.
+This isn't a pretty side of web push and I'm no expert at encryption, but let's look through
+ each piece since it's handy to know what these libraries are doing under the hood.
 
 ## Application Server Keys
 
@@ -42,13 +42,13 @@ What does all this actually mean and what exactly happens? Well these are the st
 1. The application signs some information with it's **private application key**.
 1. This signed information is sent to the push service as a header in the POST request.
 1. The push service uses the stored public key is received from `subscribe()` to check that the
- signed information is signed by the private key relating to the public key. *Remember*: The public
- key is the `applicationServerKey` passed into the subscribe call.
+ signed information is signed by the private key relating to the public key. *Remember*: The
+ public key is the `applicationServerKey` passed into the subscribe call.
 1. If the signed information is valid the push service sends the push
 message to the user.
 
-An example of this flow of information is below (Not the legend in the bottom left to indicate public
- and private keys):
+An example of this flow of information is below (Not the legend in the bottom left to indicate
+ public and private keys):
 
 ![Illustration of how the private application server key is used when sending a
  message.](./images/svgs/application-server-key-send.svg)
@@ -57,10 +57,10 @@ The "signed information" added to a header in the request is a JSON Web Token.
 
 ### JSON Web Token
 
-A [JSON web token](https://jwt.io/) (or JWT for short) is a way of sending a message to a third party
- such that if the third party has an applications public key, they can validate the signature of the
- JWT using the public key and check that it's from the expected application because it has to have
- been signed by the matching private key.
+A [JSON web token](https://jwt.io/) (or JWT for short) is a way of sending a message to a third
+ party such that if the third party has an applications public key, they can validate the
+ signature of the JWT using the public key and check that it's from the expected application
+ because it has to have been signed by the matching private key.
 
 There are a host of libraries on [https://jwt.io/](https://jwt.io/) that can
 do the signing for you and I'd recommend you do that where you can, but let's
@@ -80,8 +80,8 @@ that have been base 64 encoded, meaning it's publicly readable.
 The first string is information about the JWT itself, indicating what algorithm
 was used to create the signature.
 
-The JWT info for web push must be be JSON containing the following information, encoded as a URL safe
- base64 string.
+The JWT info for web push must be be JSON containing the following information, encoded as a
+ URL safe base64 string.
 
 
     {  
@@ -90,8 +90,8 @@ The JWT info for web push must be be JSON containing the following information, 
     }
 
 
-The second string is the JWT Data. This provides information about the sender of the JWT, who it's
- intended for and how long it's valid.
+The second string is the JWT Data. This provides information about the sender of the JWT, who
+ it's intended for and how long it's valid.
 
 For web push, the data would look something like this:
 
@@ -112,12 +112,12 @@ able to re-use a JWT if they intercept it. The expiration is a timestamp in
 seconds and must be no longer 24 hours.
 
 In the Node.js library the expiration is set to
-`Math.floor(Date.now() / 1000) + (12 * 60 * 60)`. It's 12 hours rather than 24 hours to avoid any
- issues with time differences between the sending application and the push service.
+`Math.floor(Date.now() / 1000) + (12 * 60 * 60)`. It's 12 hours rather than 24 hours to avoid
+ any issues with time differences between the sending application and the push service.
 
-Finally, the 'sub' value needs to be either a URL or a "mailto" email address. This is so that if a
- push service needed to reach out to sender, it can find contact info from the JWT. (This is why the
- web-push library needed an email address).
+Finally, the 'sub' value needs to be either a URL or a "mailto" email address. This is so that
+ if a push service needed to reach out to sender, it can find contact info from the JWT. (This
+ is why the web-push library needed an email address).
 
 Just like the JWT Info, the JWT Data is encoded as a URL safe base64
 string.
@@ -127,8 +127,8 @@ The third string, the signature, is the result of taking the first two strings
 call the "unsigned token", and signing it.
 
 The signing process requires encrypting the "unsigned token" using ES256. According to the [JWT
- spec](https://tools.ietf.org/html/rfc7519), ES256 is short for "ECDSA using the P-256 curve and the
- SHA-256 hash algorithm". Using web crypto you can create the signature like so:
+ spec](https://tools.ietf.org/html/rfc7519), ES256 is short for "ECDSA using the P-256 curve
+ and the SHA-256 hash algorithm". Using web crypto you can create the signature like so:
 
     // Utility function for UTF-8 encoding a string to an ArrayBuffer.
     const utf8Encoder = new TextEncoder('utf-8');
@@ -165,9 +165,9 @@ The signing process requires encrypting the "unsigned token" using ES256. Accord
       console.log('Signature: ', signature);
     });
 
-For the push service receiving our JWT, they can check the application sending the JWT by using the
- public key to decrypt the signature and make sure the decrypted string is the same as the "unsigned
- token" (i.e. the first two strings in the JWT).
+For the push service receiving our JWT, they can check the application sending the JWT by using
+ the public key to decrypt the signature and make sure the decrypted string is the same as the
+ "unsigned token" (i.e. the first two strings in the JWT).
 
 The signed JWT (i.e. all three strings joined by dots), is sent to the web
 push service as the *Authorization* header with 'WebPush ' prepended, like so:
@@ -189,23 +189,23 @@ A common question that arises from any who's used other push services is why doe
  payload need to be encrypted? With native apps, push messages can send data as plain text.
 
 Part of the beauty of web push is that because all push services use the same API (the web push
- protocol), developers don't have to care who the push service is. We can make a request in the right
- format and expect a push message to be sent. The downside of this is that developers could
- conceivably send messages to a push service that isn't trustworthy. By encrypting the payload, push
- service can't read the data thats sent, only the browser can decrypt the information. This protects
- the users data.
+ protocol), developers don't have to care who the push service is. We can make a request in the
+ right format and expect a push message to be sent. The downside of this is that developers
+ could conceivably send messages to a push service that isn't trustworthy. By encrypting the
+ payload, push service can't read the data thats sent, only the browser can decrypt the
+ information. This protects the users data.
 
 The encryption of the payload is defined in the [Message Encryption
 spec](https://tools.ietf.org/html/draft-ietf-webpush-encryption).
 
-Before we look at the specific steps to encrypt our payload for a PushSubscription, we should cover
- some techniques that'll be used during the encryption process (Massive H/T to Mat Scales for his
- excellent article on push encryption).
+Before we look at the specific steps to encrypt our payload for a PushSubscription, we should
+ cover some techniques that'll be used during the encryption process (Massive H/T to Mat Scales
+ for his excellent article on push encryption).
 
 ### ECDH and HKDF
 
-Both ECDH and HKDF are used throughout the encryption process and offer benefits for the purpose of
- encrypting information.
+Both ECDH and HKDF are used throughout the encryption process and offer benefits for the
+ purpose of encrypting information.
 
 #### ECDH: Elliptic Curve Diffie-Hellman Key Exchange
 
@@ -218,11 +218,11 @@ create the same secret value 'X'.
 
 Now Bob and Alice can use 'X' to encrypt and decrypt messages between them.
 
-ECDH, to the best of my knowledge, defines the properties of curves which allow this "feature" of
- making a shared secret 'X'.
+ECDH, to the best of my knowledge, defines the properties of curves which allow this "feature"
+ of making a shared secret 'X'.
 
-This is a high level explanation of ECDH, if you want to learn more [I recommend checking out this
- video](https://www.youtube.com/watch?v=F3zzNa42-tQ).
+This is a high level explanation of ECDH, if you want to learn more [I recommend checking out
+ this video](https://www.youtube.com/watch?v=F3zzNa42-tQ).
 
 In terms of code; most languages / platforms come with libraries to make it
 easy to generate these keys.
@@ -275,14 +275,14 @@ In node this could be implemented like so:
 H/T to [Mat Scale's article for this example
  code](https://developers.google.com/web/updates/2016/03/web-push-encryption).
 
-This loosely covers [ECDH](https://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman) and
- [HKDF](https://tools.ietf.org/html/rfc5869).
+This loosely covers [ECDH](https://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman)
+ and [HKDF](https://tools.ietf.org/html/rfc5869).
 
-ECDH a secure way to share public keys and generate a shared secret. HKDF is a way to take insecure
- material and make it secure.
+ECDH a secure way to share public keys and generate a shared secret. HKDF is a way to take
+ insecure material and make it secure.
 
-This will be used during the encryption of our payload, so next let's look at what we take as input
- and how that's encrypted.
+This will be used during the encryption of our payload, so next let's look at what we take as
+ input and how that's encrypted.
 
 ### Inputs
 
@@ -292,8 +292,8 @@ When we want to send a push message to a user with a payload, there are three in
 1. The 'auth' secret from the PushSubscription.
 1. The 'p256dh' key from the PushSubscription.
 
-We've seen the auth and p256dh values being retreieved from a `PushSubscription` but for a quick
- reminder, given a subscription we'd need these values:
+We've seen the auth and p256dh values being retreieved from a `PushSubscription` but for a
+ quick reminder, given a subscription we'd need these values:
 
     subscription.joJSON().keys.auth
     subscription.joJSON().keys.p256dh
@@ -303,13 +303,14 @@ We've seen the auth and p256dh values being retreieved from a `PushSubscription`
 
 The 'auth' value should be treated as a secret and not shared outside of your application.
 
-The 'p256dh' key is a public key, this is sometimes referred to as the client public key. Here we'll
- refer to p256dh as the subscription public key. The subscription public key is generated by the
- browser. The browser will keep the private key secret and use it for decrypting the payload.
+The 'p256dh' key is a public key, this is sometimes referred to as the client public key. Here
+ we'll refer to p256dh as the subscription public key. The subscription public key is generated
+ by the browser. The browser will keep the private key secret and use it for decrypting the
+ payload.
 
-These three values, auth, p256dh and payload are needed as inputs and the result of the encryption
- process will be the encrypted payload, a salt value and a public key used just for encrypting the
- data.
+These three values, auth, p256dh and payload are needed as inputs and the result of the
+ encryption process will be the encrypted payload, a salt value and a public key used just for
+ encrypting the data.
 
 **Salt**
 
@@ -328,16 +329,16 @@ which we'd do in Node like so:
     const localPublicKey = localKeysCurve.getPublicKey();
     const localPrivateKey = localKeysCurve.getPrivateKey();
 
-We'll refer these keys as "local keys". They are used *just* for encryption and have **nothing** to
- do with application server keys.
+We'll refer these keys as "local keys". They are used *just* for encryption and have
+ **nothing** to do with application server keys.
 
-With the payload, auth secret and subscription public key as inputs and with a newly generated salt
- and set of local keys, we are ready to actually do some encryption.
+With the payload, auth secret and subscription public key as inputs and with a newly generated
+ salt and set of local keys, we are ready to actually do some encryption.
 
 ### Shared Secret
 
-The first step is to create a shared secret using the subscription public key and our new private key
- (remember the ECDH explanation with Alice and Bob? Just like that).
+The first step is to create a shared secret using the subscription public key and our new
+ private key (remember the ECDH explanation with Alice and Bob? Just like that).
 
     const sharedSecret = localKeysCurve.computeSecret(
       subscription.keys.p256dh, 'base64');
@@ -354,9 +355,9 @@ secret, the shared secret we just created.
 
 What is up with the create this 'Content-Encoding: auth' buffer?
 
-This piece of information is included in the final output of the HKDF and I imagine is largely there
- to help browsers identify that the decryption was successful / what the decrypted information is.
- *Note* the '\0' is just to add a byte with value of 0 to end of the Buffer.
+This piece of information is included in the final output of the HKDF and I imagine is largely
+ there to help browsers identify that the decryption was successful / what the decrypted
+ information is. *Note* the '\0' is just to add a byte with value of 0 to end of the Buffer.
 
 So our Pseudo Random Key is simply running the auth, shared secret and a piece of encoding info
  through HKDF (i.e. making it cryptographically stronger).
@@ -364,8 +365,8 @@ So our Pseudo Random Key is simply running the auth, shared secret and a piece o
 ### Context
 
 The "context" is a set of bytes that is used to calculate two values later on in the encryption
- browser. It's essentially an array of bytes containing the subscription public key and the local
- public key.
+ browser. It's essentially an array of bytes containing the subscription public key and the
+ local public key.
 
     const keyLabel = new Buffer('P-256\0', 'utf8');
 
@@ -388,20 +389,22 @@ The "context" is a set of bytes that is used to calculate two values later on in
       localPublicKey,
     ]);
 
-The final context buffer is a label, the number of bytes in the subscription public key, followed by
- the key itself, then the number of bytes local public key, followed by the key itself.
+The final context buffer is a label, the number of bytes in the subscription public key,
+ followed by the key itself, then the number of bytes local public key, followed by the key
+ itself.
 
-With this context value we can use it in the creation of a nonce and a content encryption key (CEK).
+With this context value we can use it in the creation of a nonce and a content encryption key
+ (CEK).
 
 ### Content Encryption Key and Nonce
 
-A [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) is a value that prevents replay attacks
- as it should only be used once.
+A [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) is a value that prevents replay
+ attacks as it should only be used once.
 
 The content encryption key (CEK) is the key that will ultimately be used to encrypt our payload.
 
-First we need to create the bytes of data for the nonce and CEK, which is simply a content encoding
- string followed by the context buffer we just calculated:
+First we need to create the bytes of data for the nonce and CEK, which is simply a content
+ encoding string followed by the context buffer we just calculated:
 
     const nonceEncBuffer = new Buffer('Content-Encoding: nonce\0', 'utf8');
     const nonceInfo = Buffer.concat([nonceEncBuffer, contextBuffer]);
@@ -435,9 +438,9 @@ Before we encrypt our payload, we need to define how much padding we wish to
 add to the front of the payload. The reason you'd want to add padding is that
 it further hides what the content of the payload *could* be.
 
-The padding needs to be at least 2 bytes and these first two bytes should indicate the length of the
- padding. If you do add padding, create enough bytes of data to add the two bytes used to include the
- padding length.
+The padding needs to be at least 2 bytes and these first two bytes should indicate the length
+ of the padding. If you do add padding, create enough bytes of data to add the two bytes used
+ to include the padding length.
 
     const padding = new Buffer(2 + paddingLength);
     // The buffer must be only zeros, except the length
@@ -480,13 +483,13 @@ the payload.
 
 The resulting header looks like this:
 
-    Crypto-Key: dh=<URL Safe Base64 Encoded Local Public Key String>; p256ecdsa=<URL Safe Base64
- Encoded Public Application Server Key>
+    Crypto-Key: dh=<URL Safe Base64 Encoded Local Public Key String>; p256ecdsa=<URL Safe
+ Base64 Encoded Public Application Server Key>
 
 #### Content Type, Length & Encoding Headers
 
-The 'Content-Length' header is the number of bytes in the encrypted payload and 'Content-Type' and
- 'Content-Encoding' headers are fixed values, as shown below:
+The 'Content-Length' header is the number of bytes in the encrypted payload and 'Content-Type'
+ and 'Content-Encoding' headers are fixed values, as shown below:
 
     Content-Length: <Number of Bytes in Encrypted Payload>
     Content-Type: 'application/octet-stream'
@@ -494,7 +497,8 @@ The 'Content-Length' header is the number of bytes in the encrypted payload and 
 
 With these headers set, we need to send the encrypted payload as the body of
 our request. Notice that the Content-Type is set to
-'application/octet-stream'. This is because the encrypted payload must be sent as a stream of bytes.
+'application/octet-stream'. This is because the encrypted payload must be sent as a stream of
+ bytes.
 
 In NodeJS we would do this like so:
 
@@ -505,10 +509,11 @@ In NodeJS we would do this like so:
 ## More Headers?
 
 We've covered the headers used for JWT / Application Server Keys (i.e. how to identify the
- application with the push service) and we've covered the headers used to send an encrypted payload.
+ application with the push service) and we've covered the headers used to send an encrypted
+ payload.
 
-There are some additional headers that can be used by Push Services to alter the behavior of the send
- messages. Some of these headers are required, while others are optional.
+There are some additional headers that can be used by Push Services to alter the behavior of
+ the send messages. Some of these headers are required, while others are optional.
 
 ### TTL Header
 
@@ -525,8 +530,8 @@ If you set a TTL of zero, the push service will attempt to deliver the message
 immediately **but** if the device can't be reached, your message will be
 immediately dropped from the push service queue.
 
-Technically a push service can reduce the TTL of a push message if it wants. You can tell if this has
- happened by examining the TTL header in the response from a push service.
+Technically a push service can reduce the TTL of a push message if it wants. You can tell if
+ this has happened by examining the TTL header in the response from a push service.
 
 ##### Topic
 
@@ -535,30 +540,30 @@ This is an **optional header**.
 Topics are strings that can be used to replace any pending notifications with
 new notifications if they have matching topic names.
 
-This is useful in scenarios where the user's device might have been offline during which you might
- have sent three messages and you may want the user to receive only the latest message when their
- device is eventually turned back on.
+This is useful in scenarios where the user's device might have been offline during which you
+ might have sent three messages and you may want the user to receive only the latest message
+ when their device is eventually turned back on.
 
 ##### Urgency
 
 This is an **optional header**.
 
-This can be used to indicate to the push service how important a message is to the user. This could
- be used by the push service to help conserve the battery life of a users device by only waking up
- for important messages when battery is low.
+This can be used to indicate to the push service how important a message is to the user. This
+ could be used by the push service to help conserve the battery life of a users device by only
+ waking up for important messages when battery is low.
 
-The header value should a string value of "very-low" | "low" | "normal" | "high". The default value
- is "normal".
+The header value should a string value of "very-low" | "low" | "normal" | "high". The default
+ value is "normal".
 
     Urgency: <very-low | low | normal | high>
 
 ### Everything Together
 
-If you have further questions about how this all works you can always see how libraries trigger push
- messages on [the web-push-libs org](https://github.com/web-push-libs).
+If you have further questions about how this all works you can always see how libraries trigger
+ push messages on [the web-push-libs org](https://github.com/web-push-libs).
 
-Once you have an encrypted payload, and the headers above, you just need to make a POST request to
- the `endpoint` in a `PushSubscription`.
+Once you have an encrypted payload, and the headers above, you just need to make a POST request
+ to the `endpoint` in a `PushSubscription`.
 
 So what do we do with the response to this POST request?
 
@@ -604,7 +609,8 @@ or not.
   <tr>
     <td>413</td>
     <td>Payload size too large. The minimum size payload a push service must
-    support is <a href="https://tools.ietf.org/html/draft-ietf-webpush-protocol-10#section-7.2">4096
- bytes</a> (or 4kb).</td>
+    support is <a
+ href="https://tools.ietf.org/html/draft-ietf-webpush-protocol-10#section-7.2">4096 bytes</a>
+ (or 4kb).</td>
   </tr>
 </table>

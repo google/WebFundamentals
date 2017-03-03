@@ -7,4 +7,6 @@ and what options you have available with this guide.
 {# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2016-06-30 #}
 
+# Push Notifications {: .page-title }
+
 {% include "web/_shared/contributors/mattgaunt.html" %}

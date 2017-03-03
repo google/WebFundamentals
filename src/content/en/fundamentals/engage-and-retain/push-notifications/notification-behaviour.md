@@ -8,10 +8,10 @@ book_path: /web/fundamentals/_book.yaml
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
-# Notification Behaviour
 
-So far we've looked at the options that alter the visual appearance of a notification. There are
- options that alter the behaviour of notifications.
+
+So far we've looked at the options that alter the visual appearance of a notification. There
+ are options that alter the behaviour of notifications.
 
 Be default, calling `showNotification()` with just visual options will have
 the following behaviours:
@@ -32,11 +32,11 @@ In this section we are going to look at how we can alter these default behaviour
 When a user clicks on a notification the default behaviour is for nothing
 to happen, it doesn't even close / remove the notification.
 
-The common practice for a notification click is for it to close and perform some other logic (i.e.
- open a window or make some API call to the application).
+The common practice for a notification click is for it to close and perform some other logic
+ (i.e. open a window or make some API call to the application).
 
-To achieve this we need to add a 'notificationclick' event listener to our service worker. This will
- be called when ever a notification is clicked.
+To achieve this we need to add a 'notificationclick' event listener to our service worker. This
+ will be called when ever a notification is clicked.
 
 
     self.addEventListener('notificationclick', function(event) {
@@ -50,12 +50,12 @@ To achieve this we need to add a 'notificationclick' event listener to our servi
 
 
 As you can see in this example, the notification was clicked can be accessed via the
- `event.notification parameter`. From this we can via the properties on the notification, in this
- case we call it's `close()` method and then we are free to perform any task we wish in the
- background like a normal event.
+ `event.notification parameter`. From this we can via the properties on the notification, in
+ this case we call it's `close()` method and then we are free to perform any task we wish in
+ the background like a normal event.
 
-> Remember: You still need to make use of event.waitUntil() to keep the service worker running while
- your code is busy.
+> Remember: You still need to make use of event.waitUntil() to keep the service worker running
+ while your code is busy.
 
 ### Actions
 
@@ -104,8 +104,8 @@ In the previous section you saw how to define actions when calling
         registration.showNotification(title, options);
 
 
-If / when the user clicks an action button, check the `event.action` value in the `noticationclick`
- event to tell if / which action button was clicked.
+If / when the user clicks an action button, check the `event.action` value in the
+ `noticationclick` event to tell if / which action button was clicked.
 
 `event.action` will contain the `action` value set in the options. In the example about the
  `event.action` values would be one of the following: 'coffee-action', 'doughnut-action',
@@ -146,9 +146,9 @@ With this we would detect notification clicks or action clicks like so:
 
 ### Tag
 
-The *tag* option is a essentially a String ID that "groups" notifications together, providing an easy
- way to determine how multiple notifications are displayed to the user. This is easiest to explain
- with an example.
+The *tag* option is a essentially a String ID that "groups" notifications together, providing
+ an easy way to determine how multiple notifications are displayed to the user. This is easiest
+ to explain with an example.
 
 Let's display a notification and give it a tag, of
 'message-group-1'. We'd display the notification with this code:
@@ -183,8 +183,8 @@ Let's display a second notification with a new tag of 'message-group-2', like so
 ![Two notifications where the second tag is message group
  2.](./images/notification-screenshots/desktop/chrome-second-tag.png){: .center-image }
 
-Now let's show a third notification but re-use the first tag of 'message-group-1'. Doing this will
- close the first notification and replace it with our new notification.
+Now let's show a third notification but re-use the first tag of 'message-group-1'. Doing this
+ will close the first notification and replace it with our new notification.
 
 
             const title = 'Notification 3 of 3';
@@ -198,13 +198,14 @@ Now let's show a third notification but re-use the first tag of 'message-group-1
 Now we have 2 notifications even though `showNotification()` was 3 times.
 
 ![Two notifications where the first notification is replaced by a third
- notification.](./images/notification-screenshots/desktop/chrome-third-tag.png){: .center-image }
+ notification.](./images/notification-screenshots/desktop/chrome-third-tag.png){: .center-image
+ }
 
-The `tag` option is simply a way of group messages like this so that any old notifications that are
- currently displayed will be closed if they have the same tag as a new notification.
+The `tag` option is simply a way of group messages like this so that any old notifications that
+ are currently displayed will be closed if they have the same tag as a new notification.
 
-A subtlety to using `tag` is that the browser will replace any old notification without any sound and
- vibration that would normally be played for a new notification.
+A subtlety to using `tag` is that the browser will replace any old notification without any
+ sound and vibration that would normally be played for a new notification.
 
 This is where the `renotify` option comes in.
 
@@ -214,9 +215,9 @@ This largely applies to mobile devices at the time of writing. Setting this opti
  notifications vibrate and play a system sound.
 
 There are scenarios where you might want a replacing notification to notify
-the user rather than silently update. Chat applications are a good example where you would want one
- notification but would want to inform the user a new message has been received. In this case you
- could use `tag` with `renotify` set to true.
+the user rather than silently update. Chat applications are a good example where you would want
+ one notification but would want to inform the user a new message has been received. In this
+ case you could use `tag` with `renotify` set to true.
 
 
             const title = 'Notification 2 of 2';
@@ -230,8 +231,8 @@ the user rather than silently update. Chat applications are a good example where
 **Note:** If you set `renotify: true` on a notification without a tag, you'll get the following
  error:
 
-    TypeError: Failed to execute 'showNotification' on 'ServiceWorkerRegistration': Notifications
- which set the renotify flag must specify a non-empty tag
+    TypeError: Failed to execute 'showNotification' on 'ServiceWorkerRegistration':
+ Notifications which set the renotify flag must specify a non-empty tag
 
 ### Silent
 
@@ -253,12 +254,13 @@ from the user.
 
 ### Requires Interaction
 
-Chrome on desktop will show notifications for a set time period before hiding it. Chrome on Android
- doesn't have this behaviour, notifications are displayed until the user interacts with it.
+Chrome on desktop will show notifications for a set time period before hiding it. Chrome on
+ Android doesn't have this behaviour, notifications are displayed until the user interacts with
+ it.
 
-To force a notification to stay visible until the user has interacted with it you can define the
- `requireInteraction` option. This will show the notification permanently until the user dismisses /
- clicks your notification.
+To force a notification to stay visible until the user has interacted with it you can define
+ the `requireInteraction` option. This will show the notification permanently until the user
+ dismisses / clicks your notification.
 
 
         const title = 'Require Interaction Notification';
@@ -269,8 +271,9 @@ To force a notification to stay visible until the user has interacted with it yo
         registration.showNotification(title, options);
 
 
-Please use this option with consideration. Showing a notification and forcing the user to stop what
- they are doing to dismiss you notification can be frustrating.
+Please use this option with consideration. Showing a notification and forcing the user to stop
+ what they are doing to dismiss you notification can be frustrating.
 
-In the next section we are going to look at some of the common patterns used on the web for managing
- notifications and performing actions liking open pages when a notification is clicked.
+In the next section we are going to look at some of the common patterns used on the web for
+ managing notifications and performing actions liking open pages when a notification is
+ clicked.
