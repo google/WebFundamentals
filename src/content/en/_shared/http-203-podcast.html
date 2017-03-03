@@ -1,0 +1,30 @@
+<a href="http://feeds.feedburner.com/Http203Podcast">
+  <span class="material-icons">rss_feed</span>
+  Subscribe
+</a>
+
+<script>
+  if ('mediaSession' in navigator) {
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var audio = document.querySelector('#podcast');
+
+      audio.addEventListener('play', function() {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: document.title,
+          artist: 'Paul Lewis & Jake Archibald',
+          album: 'HTTP 203',
+          artwork: [{ src: document.querySelector('#artwork').src }]
+        });
+      });
+
+      navigator.mediaSession.setActionHandler('seekbackward', function() {
+        audio.currentTime = Math.max(audio.currentTime - 30, 0);
+      });
+
+      navigator.mediaSession.setActionHandler('seekforward', function() {
+        audio.currentTime = Math.min(audio.currentTime + 30, audio.duration);
+      });
+    });
+  }
+</script>

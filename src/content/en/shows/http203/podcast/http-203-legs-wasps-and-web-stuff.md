@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Paul's been booting frameworks, and unfortunately Jake connected his brain to Twitter
 
-{# wf_updated_on: 2017-01-17 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2017-01-17 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-6.mp3 #}
 {# wf_podcast_duration: 00:45:42 #}
@@ -12,7 +12,7 @@ description: Paul's been booting frameworks, and unfortunately Jake connected hi
 
 # Legs, Wasps, and Eventually Some Web Stuff. {: .page-title }
 
-<img src="/web/shows/http203/podcast/images/http203-episode-5-art.jpg" class="attempt-right">
+<img id="artwork" src="/web/shows/http203/podcast/images/http203-episode-5-art.jpg" class="attempt-right">
 
 In this episode:
 
@@ -21,12 +21,10 @@ In this episode:
 * How to fight for quality in the face of deadlines.
 * What we're planning on doing in 2017, which includes: media, presentation APIs, cancelable fetch, background fetch, & range requests.
 
-<a href="http://feeds.feedburner.com/Http203Podcast">
-  <span class="material-icons">rss_feed</span>
-  Subscribe
-</a>
 
-<audio src="https://storage.googleapis.com/http-203-podcast/episode-6.mp3" controls preload="none">
+{% include "web/_shared/http-203-podcast.html" %}
+
+<audio id="podcast" src="https://storage.googleapis.com/http-203-podcast/episode-6.mp3" controls preload="none">
 
 
 

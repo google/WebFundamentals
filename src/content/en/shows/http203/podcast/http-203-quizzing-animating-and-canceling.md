@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Jake is worse at quizzes than Paul.
 
-{# wf_updated_on: 2017-03-01 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2017-03-01 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-7.mp3 #}
 {# wf_podcast_duration: 00:47:39 #}
@@ -12,7 +12,7 @@ description: Jake is worse at quizzes than Paul.
 
 # Quizzing, animating, and canceling {: .page-title }
 
-<img src="/web/shows/http203/podcast/images/http203-episode-5-art.jpg" class="attempt-right">
+<img id="artwork" src="/web/shows/http203/podcast/images/http203-episode-5-art.jpg" class="attempt-right">
 
 In this episode:
 
@@ -23,12 +23,10 @@ In this episode:
 * Animating height with performance.
 * [Fetch canceling](https://github.com/whatwg/fetch/issues/447#issuecomment-281731850).
 
-<a href="http://feeds.feedburner.com/Http203Podcast">
-  <span class="material-icons">rss_feed</span>
-  Subscribe
-</a>
 
-<audio src="https://storage.googleapis.com/http-203-podcast/episode-7.mp3" controls preload="none">
+{% include "web/_shared/http-203-podcast.html" %}
+
+<audio id="podcast" src="https://storage.googleapis.com/http-203-podcast/episode-7.mp3" controls preload="none">
 
 
 
