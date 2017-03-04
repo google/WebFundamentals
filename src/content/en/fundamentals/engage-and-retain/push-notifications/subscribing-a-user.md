@@ -174,26 +174,23 @@ The concern was that developers could do nasty things like track a user's locati
  ongoing basis without the user knowing.
 
 To avoid this scenario and to give spec authors time to consider how best to support this
- feature, the `userVisibleOnly` option was added and passing in a value of **true** is a
- symbolic agreement with the browser that the web app will show a notification every time a
- push is received (i.e. no silent push).
+ feature, the `userVisibleOnly` option was added and passing in a value of `true` is a symbolic
+ agreement with the browser that the web app will show a notification every time a push is
+ received (i.e. no silent push).
 
-At the moment you **must** pass in a value of true. If you don't include the
-`userVisibleOnly` key or pass in false you'll get the following error:
+At the moment you **must** pass in a value of `true`. If you don't include the
+`userVisibleOnly` key or pass in `false` you'll get the following error:
 
 > Chrome currently only supports the Push API for subscriptions that will result in
  user-visible messages. You can indicate this by calling
- pushManager.subscribe({userVisibleOnly: true}) instead. See https://goo.gl/yqv4Q4 for more
- details.
+ `pushManager.subscribe({userVisibleOnly: true})` instead. See
+ [https://goo.gl/yqv4Q4](https://goo.gl/yqv4Q4) for more details.
 
 It's currently looking like blanket silent push will never be implemented in Chrome. Instead,
  spec authors are exploring the notion of a budget API which will be allow web apps a certain
  number of silent push messages based on the usage of a web app.
 
-Firefox doesn't require `userVisibleOnly`, however Firefox does have some notion of a budget
- behind the scenes but there isn't much detail beyond it expiring `PushSubscription`'s if the
- budget it gets too low. This is most likely calculated by the number of interactions a user
- has with notifications displayed.
+
 
 ### applicationServerKey Option
 
@@ -306,10 +303,10 @@ The `PushSubscription` object contains all the required information needed to se
 }
 ```
 
-The **endpoint** is the push services URL, you make a POST request to this URL to trigger a
- push message.
+The `endpoint` is the push services URL, you make a POST request to this URL to trigger a push
+ message.
 
-The **keys** object contains the values used to encrypt message data sent with a push message
+The `keys` object contains the values used to encrypt message data sent with a push message
  (which we'll discuss later on in this book).
 
 ## Send a Subscription to Your Server

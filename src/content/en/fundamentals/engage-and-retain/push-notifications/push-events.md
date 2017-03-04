@@ -90,7 +90,7 @@ Calling `self.registration.showNotification()` is the method that displays a not
 For the sake of keeping this example as clear as possible I've assigned this promise to a
  variables called `promiseChain`. This is then passed into `event.waitUntil()`. I know this is
  very verbose, but I've seen a number of issues that have culminated as a result of
- misunderstanding what should be passed into *waitUntil()* or is the result of a broken promise
+ misunderstanding what should be passed into `waitUntil()` or is the result of a broken promise
  chains.
 
 A more complicated example with a network request for data and tracking the push event with
@@ -127,7 +127,7 @@ We are also making a network request, getting the response and showing a
 notification using the responses data for the title and message of the notification.
 
 We can ensure the service worker is kept alive while both of these tasks are done by combining
- these promises with *Promise.all()*. The resulting promise is passed into `event.waitUntil()`
+ these promises with `Promise.all()`. The resulting promise is passed into `event.waitUntil()`
  meaning the browser will wait until both promises have finished before checking a notification
  has been displayed and terminating the service worker.
 
@@ -147,10 +147,10 @@ The reason we should be concerned about `waitUntil()` and how to use it is that 
 
 Chrome will only show the "This site has been updated in the background." notification when a
  push message is received and the push event in the service worker **does not** show a
- notification after the promise passed to *event.waitUntil()* has finished.
+ notification after the promise passed to `event.waitUntil()` has finished.
 
 The main reason developers get caught out by this is that their code will
-often call *self.registration.showNotification()* but they **aren't** doing
+often call `self.registration.showNotification()` but they **aren't** doing
 anything with the promise it returns. This intermittently results in the default notification
  being displayed. For example, we could remove the return for
  `self.registration.showNotification()` in the example above and we run the risk of seeing this
@@ -183,7 +183,7 @@ self.addEventListener('push', function(event) {
 
 You can see how it's an easy thing to miss.
 
-Just remember - if you see that notification, check your promise chains and *event.waitUntil()*.
+Just remember - if you see that notification, check your promise chains and `event.waitUntil()`.
 
 In the next section we're going to look at what we can do in terms of styling notifications /
  what content we can display.

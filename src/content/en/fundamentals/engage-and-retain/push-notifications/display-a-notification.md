@@ -26,7 +26,9 @@ All of the source code for these demo's is taken from a demo page I put together
 
 The API for showing a notification is simply:
 
-    <ServiceWorkerRegistration>.showNotification(<title>, <options>);
+```
+<ServiceWorkerRegistration>.showNotification(<title>, <options>);
+```
 
 Where the title is a string and options can be any of the following:
 
@@ -108,7 +110,7 @@ The reason I've included these examples is two fold. There will be differences b
 
 ### Icon
 
-The "icon" option is essentially a small image you can show next to the title and body text.
+The `icon` option is essentially a small image you can show next to the title and body text.
 
 In your code you just need to provide a URL to the image you'd like to load.
 
@@ -142,7 +144,7 @@ If we assume the highest pixel ratio for a device will be 3, an icon size of >= 
 
 ### Badge
 
-The badge is a small monochrome icon that is used to portray a little more information to the
+The `badge` is a small monochrome icon that is used to portray a little more information to the
  user about where the notification is from.
 
 ``` javascript
@@ -171,7 +173,7 @@ Meaning an image of >= 72px should be good (assuming a max device pixel ratio of
 
 ### Image
 
-The "image" option can be used to display a larger image to the user. This is particularly
+The `image` option can be used to display a larger image to the user. This is particularly
  useful to display a preview image to the user.
 
 ``` javascript
@@ -205,8 +207,7 @@ Using this guideline, an image of width >= 1350px would be a good bet.
 
 ### Actions
 
-Actions allow you to define buttons that are displayed along with a notification and can be
- interacted with by the user.
+You can defined `actions` to display buttons with a notification.
 
 ``` javascript
     const title = 'Actions Notification';
