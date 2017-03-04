@@ -50,8 +50,7 @@ The only time a push won't be received is if the browser is completely closed, i
 On Chrome for Android, a web app can be added to the home screen and when the web app is opened
  from the homescreen, it can launch in a fullscreen mode without the URL bar, as shown below.
 
-![Homescreen Icon to Fullscreen](./images/faq/gauntface-homescreen-to-fullscreen.png){:
- .center-image }
+![Homescreen Icon to Fullscreen](./images/faq/gauntface-homescreen-to-fullscreen.png){: .center-image }
 
 To keep this experience consistent, developers want their notifications clicked to open their
  web app in fullscreen as well.

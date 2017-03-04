@@ -38,16 +38,16 @@ The common practice for a notification click is for it to close and perform some
 To achieve this we need to add a 'notificationclick' event listener to our service worker. This
  will be called when ever a notification is clicked.
 
+``` javascript
+self.addEventListener('notificationclick', function(event) {
+  const clickedNotification = event.notification;
+  clickedNotification.close();
 
-    self.addEventListener('notificationclick', function(event) {
-      const clickedNotification = event.notification;
-      clickedNotification.close();
-    
-      // Do something as the result of the notification click
-      const promiseChain = doSomething();
-      event.waitUntil(promiseChain);
-    });
-
+  // Do something as the result of the notification click
+  const promiseChain = doSomething();
+  event.waitUntil(promiseChain);
+});
+```
 
 As you can see in this example, the notification was clicked can be accessed via the
  `event.notification parameter`. From this we can via the properties on the notification, in
@@ -65,44 +65,44 @@ over just clicking the notification.
 In the previous section you saw how to define actions when calling
 `showNotification()`:
 
-
-        const title = 'Actions Notification';
-        const options = {
-          actions: [
-            {
-              action: 'coffee-action',
-              title: 'Coffee',
-              icon: '/images/demos/action-1-128x128.png'
-            },
-            {
-              action: 'doughnut-action',
-              title: 'Doughnut',
-              icon: '/images/demos/action-2-128x128.png'
-            },
-            {
-              action: 'gramophone-action',
-              title: 'gramophone',
-              icon: '/images/demos/action-3-128x128.png'
-            },
-            {
-              action: 'atom-action',
-              title: 'Atom',
-              icon: '/images/demos/action-4-128x128.png'
-            }
-          ]
-        };
-    
-        const maxVisibleActions = Notification.maxActions;
-        if (maxVisibleActions < 4) {
-          options.body = `This notification will only display ` +
-            `${maxVisibleActions} actions.`;
-        } else {
-          options.body = `This notification can display up to ` +
-            `${maxVisibleActions} actions.`;
+``` javascript
+    const title = 'Actions Notification';
+    const options = {
+      actions: [
+        {
+          action: 'coffee-action',
+          title: 'Coffee',
+          icon: '/images/demos/action-1-128x128.png'
+        },
+        {
+          action: 'doughnut-action',
+          title: 'Doughnut',
+          icon: '/images/demos/action-2-128x128.png'
+        },
+        {
+          action: 'gramophone-action',
+          title: 'gramophone',
+          icon: '/images/demos/action-3-128x128.png'
+        },
+        {
+          action: 'atom-action',
+          title: 'Atom',
+          icon: '/images/demos/action-4-128x128.png'
         }
-    
-        registration.showNotification(title, options);
+      ]
+    };
 
+    const maxVisibleActions = Notification.maxActions;
+    if (maxVisibleActions < 4) {
+      options.body = `This notification will only display ` +
+        `${maxVisibleActions} actions.`;
+    } else {
+      options.body = `This notification can display up to ` +
+        `${maxVisibleActions} actions.`;
+    }
+
+    registration.showNotification(title, options);
+```
 
 If / when the user clicks an action button, check the `event.action` value in the
  `noticationclick` event to tell if / which action button was clicked.
@@ -113,36 +113,35 @@ If / when the user clicks an action button, check the `event.action` value in th
 
 With this we would detect notification clicks or action clicks like so:
 
+``` javascript
+self.addEventListener('notificationclick', function(event) {
+  if (!event.action) {
+    // Was a normal notification click
+    console.log('Notification Click.');
+    return;
+  }
 
-    self.addEventListener('notificationclick', function(event) {
-      if (!event.action) {
-        // Was a normal notification click
-        console.log('Notification Click.');
-        return;
-      }
-    
-      switch (event.action) {
-        case 'coffee-action':
-          console.log('User ❤️️\'s coffee.');
-          break;
-        case 'doughnut-action':
-          console.log('User ❤️️\'s doughnuts.');
-          break;
-        case 'gramophone-action':
-          console.log('User ❤️️\'s music.');
-          break;
-        case 'atom-action':
-          console.log('User ❤️️\'s science.');
-          break;
-        default:
-          console.log(`Unknown action clicked: '${event.action}'`);
-          break;
-      }
-    });
+  switch (event.action) {
+    case 'coffee-action':
+      console.log('User ❤️️\'s coffee.');
+      break;
+    case 'doughnut-action':
+      console.log('User ❤️️\'s doughnuts.');
+      break;
+    case 'gramophone-action':
+      console.log('User ❤️️\'s music.');
+      break;
+    case 'atom-action':
+      console.log('User ❤️️\'s science.');
+      break;
+    default:
+      console.log(`Unknown action clicked: '${event.action}'`);
+      break;
+  }
+});
+```
 
-
-![Logs for action button clicks and notification
- click.](./images/notification-screenshots/action-button-click-logs.png){: .center-image }
+![Logs for action button clicks and notification click.](./images/notification-screenshots/action-button-click-logs.png){: .center-image }
 
 ### Tag
 
@@ -153,53 +152,49 @@ The *tag* option is a essentially a String ID that "groups" notifications togeth
 Let's display a notification and give it a tag, of
 'message-group-1'. We'd display the notification with this code:
 
+``` javascript
+    const title = 'Notification 1 of 3';
+    const options = {
+      body: 'With \'tag\' of \'message-group-1\'',
+      tag: 'message-group-1'
+    };
+    registration.showNotification(title, options);
+```
 
-        const title = 'Notification 1 of 3';
+Which will show our first notification.
+
+![First notification with tag of message group 1.](./images/notification-screenshots/desktop/chrome-first-tag.png){: .center-image }
+
+Let's display a second notification with a new tag of 'message-group-2', like so:
+
+``` javascript
+        const title = 'Notification 2 of 3';
+        const options = {
+          body: 'With \'tag\' of \'message-group-2\'',
+          tag: 'message-group-2'
+        };
+        registration.showNotification(title, options);
+```
+
+ This will display a second notification to the user.
+
+![Two notifications where the second tag is message group 2.](./images/notification-screenshots/desktop/chrome-second-tag.png){: .center-image }
+
+Now let's show a third notification but re-use the first tag of 'message-group-1'. Doing this
+ will close the first notification and replace it with our new notification.
+
+``` javascript
+        const title = 'Notification 3 of 3';
         const options = {
           body: 'With \'tag\' of \'message-group-1\'',
           tag: 'message-group-1'
         };
         registration.showNotification(title, options);
-
-
-Which will show our first notification.
-
-![First notification with tag of message group
- 1.](./images/notification-screenshots/desktop/chrome-first-tag.png){: .center-image }
-
-Let's display a second notification with a new tag of 'message-group-2', like so:
-
-
-            const title = 'Notification 2 of 3';
-            const options = {
-              body: 'With \'tag\' of \'message-group-2\'',
-              tag: 'message-group-2'
-            };
-            registration.showNotification(title, options);
-
-
- This will display a second notification to the user.
-
-![Two notifications where the second tag is message group
- 2.](./images/notification-screenshots/desktop/chrome-second-tag.png){: .center-image }
-
-Now let's show a third notification but re-use the first tag of 'message-group-1'. Doing this
- will close the first notification and replace it with our new notification.
-
-
-            const title = 'Notification 3 of 3';
-            const options = {
-              body: 'With \'tag\' of \'message-group-1\'',
-              tag: 'message-group-1'
-            };
-            registration.showNotification(title, options);
-
+```
 
 Now we have 2 notifications even though `showNotification()` was 3 times.
 
-![Two notifications where the first notification is replaced by a third
- notification.](./images/notification-screenshots/desktop/chrome-third-tag.png){: .center-image
- }
+![Two notifications where the first notification is replaced by a third notification.](./images/notification-screenshots/desktop/chrome-third-tag.png){: .center-image }
 
 The `tag` option is simply a way of group messages like this so that any old notifications that
  are currently displayed will be closed if they have the same tag as a new notification.
@@ -219,14 +214,14 @@ the user rather than silently update. Chat applications are a good example where
  one notification but would want to inform the user a new message has been received. In this
  case you could use `tag` with `renotify` set to true.
 
-
-            const title = 'Notification 2 of 2';
-            const options = {
-              tag: 'renotify',
-              renotify: true
-            };
-            registration.showNotification(title, options);
-
+``` javascript
+        const title = 'Notification 2 of 2';
+        const options = {
+          tag: 'renotify',
+          renotify: true
+        };
+        registration.showNotification(title, options);
+```
 
 **Note:** If you set `renotify: true` on a notification without a tag, you'll get the following
  error:
@@ -242,13 +237,13 @@ behavior of vibration, sound and turning on the devices display.
 This is ideal if your notifications that don't require immediate attention
 from the user.
 
-
-        const title = 'Silent Notification';
-        const options = {
-          silent: true
-        };
-        registration.showNotification(title, options);
-
+``` javascript
+    const title = 'Silent Notification';
+    const options = {
+      silent: true
+    };
+    registration.showNotification(title, options);
+```
 
 **Note:** If you define both *silent* and *renotify*, silent will take precedence.
 
@@ -262,14 +257,14 @@ To force a notification to stay visible until the user has interacted with it yo
  the `requireInteraction` option. This will show the notification permanently until the user
  dismisses / clicks your notification.
 
-
-        const title = 'Require Interaction Notification';
-        const options = {
-          body: 'With "requireInteraction: \'true\'".',
-          requireInteraction: true
-        };
-        registration.showNotification(title, options);
-
+``` javascript
+    const title = 'Require Interaction Notification';
+    const options = {
+      body: 'With "requireInteraction: \'true\'".',
+      requireInteraction: true
+    };
+    registration.showNotification(title, options);
+```
 
 Please use this option with consideration. Showing a notification and forcing the user to stop
  what they are doing to dismiss you notification can be frustrating.

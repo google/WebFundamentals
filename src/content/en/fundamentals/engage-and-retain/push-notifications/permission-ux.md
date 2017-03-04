@@ -46,8 +46,7 @@ is a clear value proposition for them to enable push notifications.
 After the user has booked a flight asks if the user would like notifications in case of flight
  delays.
 
-![Owen Campbell-Moore's example of good UX for
- push.](./images/ux-examples/owen/owen-good-example.png){: .device-image .center-image }
+![Owen Campbell-Moore's example of good UX for push.](./images/ux-examples/owen/owen-good-example.png){: .device-image .center-image }
 
 Note that this isn't the browser UI as well, this is a custom UI in the web site asking the
  user, allowing the site full control over the messaging to the user.
@@ -56,14 +55,12 @@ Another nice touch to Owen's demo is that if the user does click to enable notif
  site adds a semi-transparent overlay over the entire page when it shows the permission prompt.
  This helps draw the users attention to the permission prompt.
 
-![Owen Campbell-Moore's example of good UX for the permission
- prompt.](./images/ux-examples/owen/owen-permission-prompt.png){: .device-image .center-image }
+![Owen Campbell-Moore's example of good UX for the permission prompt.](./images/ux-examples/owen/owen-permission-prompt.png){: .device-image .center-image }
 
 The alternative to this example, the **bad UX** for asking permission, is to  request
  permission as soon as a user lands on the airline's site.
 
-![Owen Campbell-Moore's example of bad UX for
- push.](./images/ux-examples/owen/owen-bad-ux.png){: .device-image .center-image }
+![Owen Campbell-Moore's example of bad UX for push.](./images/ux-examples/owen/owen-bad-ux.png){: .device-image .center-image }
 
 No context as to what the notifications are for, if the user wanted to get a task done (i.e.
  check a flight or book a flight), this permission prompt gets in the way of that and secondly
@@ -97,21 +94,16 @@ A good example of this is [Google I/O's 2016 site](https://events.google.com/io2
  first load up the Google I/O site, you aren't asked to do anything,
 the user is left to explore the site.
 
-![When you first load the page, no prompt, just calm on Google
- IO.](./images/ux-examples/google-io/google-io-first-load.png){: .device-image .center-image }
+![When you first load the page, no prompt, just calm on Google IO.](./images/ux-examples/google-io/google-io-first-load.png){: .device-image .center-image }
 
 After a few visits of clicking the menu item on the right, a settings panel is reveal to the
  user, allowing them to set up and manage notifications.
 
-![Settings panel on Google IO's web app for push
- messaging.](./images/ux-examples/google-io/google-io-settings-panel.png){: .device-image
- .center-image }
+![Settings panel on Google IO's web app for push messaging.](./images/ux-examples/google-io/google-io-settings-panel.png){: .device-image .center-image }
 
 Clicking on the checkbox displays the permission prompt, no hidden surprises.
 
-![Google IO's web app displaying the permission
- prompt.](./images/ux-examples/google-io/google-io-permission-prompt.png){: .device-image
- .center-image }
+![Google IO's web app displaying the permission prompt.](./images/ux-examples/google-io/google-io-permission-prompt.png){: .device-image .center-image }
 
 After the permission has been granted the checkbox is checked and the user is good to go. The
  great thing about this UX is that the location to sign up for push is the same location to

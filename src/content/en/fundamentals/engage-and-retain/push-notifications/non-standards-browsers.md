@@ -64,22 +64,18 @@ The first step is to create a new Firebase project on
 Creating a new project is simple, just fill in your project name and select
 your country.
 
-![Firebase Create Project](./images/firebase-setup/02-firebase-create-project.png){:
- .center-image }
+![Firebase Create Project](./images/firebase-setup/02-firebase-create-project.png){: .center-image }
 
 Once you've created your project, you'll find all the important push specific
 info in settings, which can be found by hovering / clicking the cog next
 to your projects name.
 
-![Firebase Settings Pop
- Up](./images/firebase-setup/05-firebase-project-settings-pop-up-highlight.png){: .center-image
- }
+![Firebase Settings Pop Up](./images/firebase-setup/05-firebase-project-settings-pop-up-highlight.png){: .center-image }
 
 In settings, click on the "Cloud Messaging" tab and here you'll find a "Server
 key" and a "Sender ID". We'll need these two pieces of information shortly.
 
-![Firebase Cloud Messaging Settings](./images/firebase-setup/07-firebase-cloud-settings.png){:
- .center-image }
+![Firebase Cloud Messaging Settings](./images/firebase-setup/07-firebase-cloud-settings.png){: .center-image }
 
 ## Adding a Web App Manifest
 
@@ -92,11 +88,11 @@ The non-standards browsers will look for your sender ID in a web app manifest. F
 For push, all we need is a JSON file with the field "gcm_sender_id" and we'll give it a value
  of the Sender ID from our Firebase project, like this:
 
-
-    {
-      "gcm_sender_id": "547903344792"
-    }
-
+``` json
+{
+  "gcm_sender_id": "547903344792"
+}
+```
 
 Save this JSON as a file on your site, the demo for this site has a file
 called 'manifest.json' at the root of the site, i.e. '/manifest.json'.
@@ -104,31 +100,31 @@ called 'manifest.json' at the root of the site, i.e. '/manifest.json'.
 Browsers will look for the manifest by looking for a "manifest" `link` tag in the `head` of our
  page.
 
-
-    <link rel="manifest" href="/manifest.json">
-
+```html
+<link rel="manifest" href="/manifest.json">
+```
 
 With this set up, when `subscribe()` is called, browsers that require this will retrieve the
  web app manifest and use the `gcm_sender_id` value to subscribe the user to "GCM".
 
 If anything does wrong, you might receive an error like this:
 
+```
+Registration failed - no sender id provided
+```
 
-    Registration failed - no sender id provided
+```
+Registration failed - manifest empty or missing
+```
 
+```
+Registration failed - gcm_sender_id not found in manifest
+```
 
-
-    Registration failed - manifest empty or missing
-
-
-
-    Registration failed - gcm_sender_id not found in manifest
-
-
-
-    Failed to subscribe the user. DOMException: Registration failed - missing
- applicationServerKey, and manifest empty or missing
-
+```
+Failed to subscribe the user. DOMException: Registration failed - missing applicationServerKey,
+ and manifest empty or missing
+```
 
 If this happens, make sure your manifest is valid JSON and make sure you have the write sender
  ID value.
@@ -159,16 +155,16 @@ Remember, the 'Authorization' header would normally be the signed JWT using your
 
 The code that does this for the Node Web Library is:
 
-
-    const isGCM = subscription.endpoint.indexOf(
-      'https://android.googleapis.com/gcm/send') === 0;
-    if (isGCM) {
-      requestDetails.headers.Authorization = 'key=' + currentGCMAPIKey;
-    } else {
-      // Add Application Server Key Details
-      ...
-    }
-
+```javascript
+const isGCM = subscription.endpoint.indexOf(
+  'https://android.googleapis.com/gcm/send') === 0;
+if (isGCM) {
+  requestDetails.headers.Authorization = 'key=' + currentGCMAPIKey;
+} else {
+  // Add Application Server Key Details
+  ...
+}
+```
 
 ## Browser Specifics
 
@@ -193,10 +189,10 @@ complication. If you fall into the bracket of requiring payload support you
 can feature detect payload support by checking for the existence of `getKey()` on the
  `PushSubscription` prototype.
 
-
-    // payloadSupport is true when supported, false otherwise.
-    const payloadSupport = 'getKey' in PushSubscription.prototype;
-
+```javascript
+// payloadSupport is true when supported, false otherwise.
+const payloadSupport = 'getKey' in PushSubscription.prototype;
+```
 
 ## Conclusion
 

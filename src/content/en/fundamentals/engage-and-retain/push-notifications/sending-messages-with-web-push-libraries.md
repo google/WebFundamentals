@@ -53,58 +53,58 @@ an example of how it could be done.
 
 In the demo web page the PushSubscription is sent to our backend by making a simple POST request:
 
-
-    function sendSubscriptionToBackEnd(subscription) {
-      return fetch('/api/save-subscription/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(subscription)
-      })
-      .then(function(response) {
-        if (!response.ok) {
-          throw new Error('Bad status code from server.');
-        }
-    
-        return response.json();
-      })
-      .then(function(responseData) {
-        if (!(responseData.data && responseData.data.success)) {
-          throw new Error('Bad response from server.');
-        }
-      });
+``` javascript
+function sendSubscriptionToBackEnd(subscription) {
+  return fetch('/api/save-subscription/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(subscription)
+  })
+  .then(function(response) {
+    if (!response.ok) {
+      throw new Error('Bad status code from server.');
     }
 
+    return response.json();
+  })
+  .then(function(responseData) {
+    if (!(responseData.data && responseData.data.success)) {
+      throw new Error('Bad response from server.');
+    }
+  });
+}
+```
 
 The [Express](http://expressjs.com/) server in our demo has a matching request listener for
  `/api/save-subscription/` endpoint:
 
-
-    app.post('/api/save-subscription/', function (req, res) {
-
+``` javascript
+app.post('/api/save-subscription/', function (req, res) {
+```
 
 In this route we validate the subscription, just to make sure the request is ok and not full of
  garbage:
 
-
-    const isValidSaveRequest = (req, res) => {
-      // Check the request body has at least an endpoint.
-      if (!req.body || !req.body.endpoint) {
-        // Not a valid subscription.
-        res.status(400);
-        res.setHeader('Content-Type', 'application/json');
-        res.send(JSON.stringify({
-          error: {
-            id: 'no-endpoint',
-            message: 'Subscription must have an endpoint.'
-          }
-        }));
-        return false;
+``` javascript
+const isValidSaveRequest = (req, res) => {
+  // Check the request body has at least an endpoint.
+  if (!req.body || !req.body.endpoint) {
+    // Not a valid subscription.
+    res.status(400);
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({
+      error: {
+        id: 'no-endpoint',
+        message: 'Subscription must have an endpoint.'
       }
-      return true;
-    };
-
+    }));
+    return false;
+  }
+  return true;
+};
+```
 
 > In this route we only check for an endpoint. If you **require** payload support, make sure
  you check for the auth and p256dh keys as well.
@@ -112,43 +112,43 @@ In this route we validate the subscription, just to make sure the request is ok 
 If the subscription is valid, we need to save it and return an appropriate
 JSON response:
 
-
-      return saveSubscriptionToDatabase(req.body)
-      .then(function(subscriptionId) {
-        res.setHeader('Content-Type', 'application/json');
-        res.send(JSON.stringify({ data: { success: true } }));
-      })
-      .catch(function(err) {
-        res.status(500);
-        res.setHeader('Content-Type', 'application/json');
-        res.send(JSON.stringify({
-          error: {
-            id: 'unable-to-save-subscription',
-            message: 'The subscription was received but we were unable to save it to our database.'
-          }
-        }));
-      });
-
+``` javascript
+  return saveSubscriptionToDatabase(req.body)
+  .then(function(subscriptionId) {
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({ data: { success: true } }));
+  })
+  .catch(function(err) {
+    res.status(500);
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({
+      error: {
+        id: 'unable-to-save-subscription',
+        message: 'The subscription was received but we were unable to save it to our database.'
+      }
+    }));
+  });
+```
 
 This demo uses [nedb](https://github.com/louischatriot/nedb) to store the subscriptions, it's a
  simple file based database, but you could use any database you chose. We are only using this
  as it requires zero set-up. For production you'd want to use something more reliable (I tend
  to stick with good old MySQL).
 
+``` javascript
+function saveSubscriptionToDatabase(subscription) {
+  return new Promise(function(resolve, reject) {
+    db.insert(subscription, function(err, newDoc) {
+      if (err) {
+        reject(err);
+        return;
+      }
 
-    function saveSubscriptionToDatabase(subscription) {
-      return new Promise(function(resolve, reject) {
-        db.insert(subscription, function(err, newDoc) {
-          if (err) {
-            reject(err);
-            return;
-          }
-    
-          resolve(newDoc._id);
-        });
-      });
-    };
-
+      resolve(newDoc._id);
+    });
+  });
+};
+```
 
 ## Sending Push Messages
 
@@ -176,13 +176,13 @@ When we discussed subscribing a user we covered adding an `applicationServerKey`
 In the demo these values are added to our node app like so (boring code I know, but just want
  you to know there is no magic):
 
-
-    const vapidKeys = {
-      publicKey:
+``` javascript
+const vapidKeys = {
+  publicKey:
  'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U',
-      privateKey: 'UUxI4O8-FbRouAevSmBQ6o18hgE4nSG3qwvJTfKc-ls'
-    };
-
+  privateKey: 'UUxI4O8-FbRouAevSmBQ6o18hgE4nSG3qwvJTfKc-ls'
+};
+```
 
 Next we need to install the `web-push` module for our node server:
 
@@ -191,27 +191,27 @@ Next we need to install the `web-push` module for our node server:
 Then in our node script we require in the `web-push` module
 like so:
 
-
-    const webpush = require('web-push');
-
+``` javascript
+const webpush = require('web-push');
+```
 
 Now we can start to use the `web-push` module. First we need to tell the web-push module about
  our application server keys (remember they are also known as VAPID keys because that's the
  name of the spec).
 
-
-    const vapidKeys = {
-      publicKey:
+``` javascript
+const vapidKeys = {
+  publicKey:
  'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U',
-      privateKey: 'UUxI4O8-FbRouAevSmBQ6o18hgE4nSG3qwvJTfKc-ls'
-    };
-    
-    webpush.setVapidDetails(
-      'mailto:web-push-book@gauntface.com',
-      vapidKeys.publicKey,
-      vapidKeys.privateKey
-    );
+  privateKey: 'UUxI4O8-FbRouAevSmBQ6o18hgE4nSG3qwvJTfKc-ls'
+};
 
+webpush.setVapidDetails(
+  'mailto:web-push-book@gauntface.com',
+  vapidKeys.publicKey,
+  vapidKeys.privateKey
+);
+```
 
 We also include a "mailto:" string as well. This string needs to be either a URL or a mailto
  email address. This piece of information will actually be sent to web push service as part of
@@ -229,44 +229,44 @@ Clicking the "Trigger Push Message" button will make a POST request to `/api/tri
  which is the signal for our backend to start send push messages, so we create the route in
  express for this endpoint:
 
-
-    app.post('/api/trigger-push-msg/', function (req, res) {
-
+``` javascript
+app.post('/api/trigger-push-msg/', function (req, res) {
+```
 
 When this request is received, we grab the subscriptions from the database and
 for each one, we trigger a push message.
 
+``` javascript
+  return getSubscriptionsFromDatabase()
+  .then(function(subscriptions) {
+    let promiseChain = Promise.resolve();
 
-      return getSubscriptionsFromDatabase()
-      .then(function(subscriptions) {
-        let promiseChain = Promise.resolve();
-    
-        for (let i = 0; i < subscriptions.length; i++) {
-          const subscription = subscriptions[i];
-          promiseChain = promiseChain.then(() => {
-            return triggerPushMsg(subscription, dataToSend);
-          });
-        }
-    
-        return promiseChain;
-      })
+    for (let i = 0; i < subscriptions.length; i++) {
+      const subscription = subscriptions[i];
+      promiseChain = promiseChain.then(() => {
+        return triggerPushMsg(subscription, dataToSend);
+      });
+    }
 
+    return promiseChain;
+  })
+```
 
 The function `triggerPushMsg()` can then use the web-push library to send a message to the
  provided subscription.
 
-
-    const triggerPushMsg = function(subscription, dataToSend) {
-      return webpush.sendNotification(subscription, dataToSend)
-      .catch((err) => {
-        if (err.statusCode === 410) {
-          return deleteSubscriptionFromDatabase(subscription._id);
-        } else {
-          console.log('Subscription is no longer valid: ', err);
-        }
-      });
-    };
-
+``` javascript
+const triggerPushMsg = function(subscription, dataToSend) {
+  return webpush.sendNotification(subscription, dataToSend)
+  .catch((err) => {
+    if (err.statusCode === 410) {
+      return deleteSubscriptionFromDatabase(subscription._id);
+    } else {
+      console.log('Subscription is no longer valid: ', err);
+    }
+  });
+};
+```
 
 The call to `webpush.sendNotification()` will return a promise. If the message was sent
  successfully the promise will resolves and there is nothing we need to do. If the promise
@@ -290,23 +290,23 @@ We'll cover some of the other status codes in the next section when we look at t
 
 After looping through the subscriptions, we need to return a JSON response.
 
-
-      .then(() => {
-        res.setHeader('Content-Type', 'application/json');
-          res.send(JSON.stringify({ data: { success: true } }));
-      })
-      .catch(function(err) {
-        res.status(500);
-        res.setHeader('Content-Type', 'application/json');
-        res.send(JSON.stringify({
-          error: {
-            id: 'unable-to-send-messages',
-            message: `We were unable to send messages to all subscriptions : ` +
-              `'${err.message}'`
-          }
-        }));
-      });
-
+``` javascript
+  .then(() => {
+    res.setHeader('Content-Type', 'application/json');
+      res.send(JSON.stringify({ data: { success: true } }));
+  })
+  .catch(function(err) {
+    res.status(500);
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({
+      error: {
+        id: 'unable-to-send-messages',
+        message: `We were unable to send messages to all subscriptions : ` +
+          `'${err.message}'`
+      }
+    }));
+  });
+```
 
 We've gone over the major implementation steps.
 

@@ -21,15 +21,15 @@ When a message is received, it'll result in a push event being dispatched in you
 The code for setting up a push event listener should be pretty similar to any other event
  listener you'd write in JavaScript:
 
-
-    self.addEventListener('push', function(event) {
-      if (event.data) {
-        console.log('This push event has data: ', event.data.text());
-      } else {
-        console.log('This push event has no data.');
-      }
-    });
-
+``` javascript
+self.addEventListener('push', function(event) {
+  if (event.data) {
+    console.log('This push event has data: ', event.data.text());
+  } else {
+    console.log('This push event has no data.');
+  }
+});
+```
 
 The weirdest bit of this code to most developers who are new to service workers is the `self`
  variable. `self` is commonly used in Web Workers, which a service worker is. `self` refers to
@@ -43,19 +43,19 @@ Inside the push event example we check if there is any data and print something 
 
 There are other ways you can parse data from a push event:
 
+```javascript
+// Returns string
+event.data.text()
 
-    // Returns string
-    event.data.text()
-    
-    // Parses data as JSON string and returns an Object
-    event.data.json()
-    
-    // Returns blob of data
-    event.data.blob()
-    
-    // Returns an arrayBuffer
-    event.data.arrayBuffer()
+// Parses data as JSON string and returns an Object
+event.data.json()
 
+// Returns blob of data
+event.data.blob()
+
+// Returns an arrayBuffer
+event.data.arrayBuffer()
+```
 
 Most people use `json()` or `text()` depending on what they are expecting from their application.
 
@@ -76,13 +76,13 @@ With push events there is an additional requirement that you must display a noti
 
 Here's a basic example of showing a notification:
 
-
-    self.addEventListener('push', function(event) {
-      const promiseChain = self.registration.showNotification('Hello, World.');
-      
-      event.waitUntil(promiseChain);
-    });
-
+``` javascript
+self.addEventListener('push', function(event) {
+  const promiseChain = self.registration.showNotification('Hello, World.');
+  
+  event.waitUntil(promiseChain);
+});
+```
 
 Calling `self.registration.showNotification()` is the method that displays a notification to
  the user and it returns a promise that will resolve once the notification has been displayed.
@@ -96,30 +96,30 @@ For the sake of keeping this example as clear as possible I've assigned this pro
 A more complicated example with a network request for data and tracking the push event with
  analytics could look like this:
 
+``` javascript
+self.addEventListener('push', function(event) {
+  const analyticsPromise = pushReceivedTracking();
+  const pushInfoPromise = fetch('/api/get-more-data')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(response) {
+      const title = response.data.userName + ' says...';
+      const message = response.data.message;
 
-    self.addEventListener('push', function(event) {
-      const analyticsPromise = pushReceivedTracking();
-      const pushInfoPromise = fetch('/api/get-more-data')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(response) {
-          const title = response.data.userName + ' says...';
-          const message = response.data.message;
-    
-          return self.registration.showNotification(title, {
-            body: message
-          });
-        });
-    
-      const promiseChain = Promise.all([
-        analyticsPromise,
-        pushInfoPromise
-      ]);
-    
-      event.waitUntil(promiseChain);
+      return self.registration.showNotification(title, {
+        body: message
+      });
     });
 
+  const promiseChain = Promise.all([
+    analyticsPromise,
+    pushInfoPromise
+  ]);
+
+  event.waitUntil(promiseChain);
+});
+```
 
 Here we are calling a function that returns a promise `pushReceivedTracking()`, which we can
  pretend will make a network request to our analytics provider.
@@ -156,30 +156,30 @@ anything with the promise it returns. This intermittently results in the default
  `self.registration.showNotification()` in the example above and we run the risk of seeing this
  notification.
 
+```javascript
+self.addEventListener('push', function(event) {
+  const analyticsPromise = pushReceivedTracking();
+  const pushInfoPromise = fetch('/api/get-more-data')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(response) {
+      const title = response.data.userName + ' says...';
+      const message = response.data.message;
 
-    self.addEventListener('push', function(event) {
-      const analyticsPromise = pushReceivedTracking();
-      const pushInfoPromise = fetch('/api/get-more-data')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(response) {
-          const title = response.data.userName + ' says...';
-          const message = response.data.message;
-    
-          self.registration.showNotification(title, {
-            body: message
-          });
-        });
-    
-      const promiseChain = Promise.all([
-        analyticsPromise,
-        pushInfoPromise
-      ]);
-    
-      event.waitUntil(promiseChain);
+      self.registration.showNotification(title, {
+        body: message
+      });
     });
 
+  const promiseChain = Promise.all([
+    analyticsPromise,
+    pushInfoPromise
+  ]);
+
+  event.waitUntil(promiseChain);
+});
+```
 
 You can see how it's an easy thing to miss.
 

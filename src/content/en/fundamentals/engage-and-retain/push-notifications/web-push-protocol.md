@@ -83,25 +83,25 @@ was used to create the signature.
 The JWT info for web push must be be JSON containing the following information, encoded as a
  URL safe base64 string.
 
-
-    {  
-      "typ": "JWT",  
-      "alg": "ES256"  
-    }
-
+```json
+{  
+  "typ": "JWT",  
+  "alg": "ES256"  
+}
+```
 
 The second string is the JWT Data. This provides information about the sender of the JWT, who
  it's intended for and how long it's valid.
 
 For web push, the data would look something like this:
 
-
-    {  
-      "aud": "https://some-push-service.org",
-      "exp": "1469618703",
-      "sub": "mailto:example@web-push-book.org"  
-    }
-
+```json
+{  
+  "aud": "https://some-push-service.org",
+  "exp": "1469618703",
+  "sub": "mailto:example@web-push-book.org"  
+}
+```
 
 The 'aud' value is the "audience", i.e. who the JWT is for. For web push the
 audience is the push service, so we set it to the **origin of the push

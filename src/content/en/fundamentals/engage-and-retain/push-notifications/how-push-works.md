@@ -79,16 +79,16 @@ To get the appropriate URL to trigger a push message (i.e. the URL for the push 
 
 Below is an example of the values you'll get from a **PushSubscription**:
 
-
-    {
-      "endpoint": "https://random-push-service.com/some-kind-of-unique-id-1234/v2/",
-      "keys": {
-        "p256dh" :
+``` json
+{
+  "endpoint": "https://random-push-service.com/some-kind-of-unique-id-1234/v2/",
+  "keys": {
+    "p256dh" :
  "BNcRdreALRFXTkOOUHK1EtK2wtaz5Ry4YfYCA_0QTpQtUbVlUls0VJXg7A8u-Ts1XbjhazAkj7I99e8QcYP7DkM=",
-        "auth"   : "tBHItJI5svbpez7KI4CCXg=="
-      }
-    }
-
+    "auth"   : "tBHItJI5svbpez7KI4CCXg=="
+  }
+}
+```
 
 The **endpoint** in this case is
  *https://random-push-service.com/some-kind-of-unique-id-1234/v2/*. The push service would be
