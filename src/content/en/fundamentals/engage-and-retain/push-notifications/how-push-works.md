@@ -147,7 +147,7 @@ Once we've sent a push message, the push service will keep your message on it's 
 When the push service does deliver a message, the browser will receive the message, decrypt any
  data and dispatch a `push` event in your service worker.
 
-A [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) is a
+A [service worker](/web/fundamentals/getting-started/primers/service-workers) is a
  "special" JavaScript file. The browser can execute this JavaScript without your page being
  open. It can even execute this JavaScript when the browser is closed. A service worker also
  has API's, like push, that aren't available in the web page (i.e. API's that aren't available

@@ -54,7 +54,7 @@ As you can see in this example, the notification was clicked can be accessed via
  this case we call it's `close()` method and then we are free to perform any task we wish in
  the background like a normal event.
 
-> Remember: You still need to make use of event.waitUntil() to keep the service worker running
+Note: You still need to make use of event.waitUntil() to keep the service worker running
  while your code is busy.
 
 ### Actions

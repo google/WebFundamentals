@@ -79,7 +79,7 @@ Here's a basic example of showing a notification:
 ``` javascript
 self.addEventListener('push', function(event) {
   const promiseChain = self.registration.showNotification('Hello, World.');
-  
+
   event.waitUntil(promiseChain);
 });
 ```
@@ -131,13 +131,13 @@ We can ensure the service worker is kept alive while both of these tasks are don
  meaning the browser will wait until both promises have finished before checking a notification
  has been displayed and terminating the service worker.
 
-> **Tip:** If you ever find your promise chains confusing or a little messy
-> I find that breaking things into functions help to reduce complication.
-> I'd also recommend
-> [this blog post by Philip Walton on untangling promise
+Note: If you ever find your promise chains confusing or a little messy
+I find that breaking things into functions help to reduce complication.
+I'd also recommend
+[this blog post by Philip Walton on untangling promise
  chains](https://philipwalton.com/articles/untangling-deeply-nested-promise-chains/).
-> The main point to take away is that you should experiment with how promises can be written
- and chained to find a style that works for you.
+The main point to take away is that you should experiment with how promises can be written
+and chained to find a style that works for you.
 
 The reason we should be concerned about `waitUntil()` and how to use it is that one of the most
  common issues developers face is that when the promise chain is incorrect / broken, Chrome

@@ -139,7 +139,7 @@ Sadly there aren't any solid guidelines for what size image to use for an icon.
 If we assume the highest pixel ratio for a device will be 3, an icon size of >= 192px is a safe
  bet.
 
-> **Note**: Some browsers may require the image be served over HTTPS. Just calling it out in
+Note: Some browsers may require the image be served over HTTPS. Just calling it out in
  case you intend to use a third party image over HTTP.
 
 ### Badge
@@ -399,14 +399,14 @@ Some common pitfalls to avoid:
 
 1. Don't put your website in the title or the body. Browsers include your domain in the
  notification so **don't duplicate it**.
-   
+
 
 1. Use all information you have available to you. If you send a push message because someone
  sent a message to a user, rather than using a title of 'New Message' and body of 'Click here
  to read it.' use a title of 'John just sent a new message' and set the body of the
  notification to part of the message.
 
-    
+
 
 ## Browsers and Feature Detection
 

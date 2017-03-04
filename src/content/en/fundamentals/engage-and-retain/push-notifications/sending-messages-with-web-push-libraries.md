@@ -35,7 +35,7 @@ In this section we'll be using the [ web-push for node
  but they won't be too dissimilar. We are looking at Node since it's JavaScript and should be
  the most accessible for readers.
 
-> **Remember**: If you want a library for a different language, checkout the [web-push-libs org
+Note: If you want a library for a different language, checkout the [web-push-libs org
  on Github](https://github.com/web-push-libs/).
 
 We'll go through the following steps:
@@ -106,8 +106,8 @@ const isValidSaveRequest = (req, res) => {
 };
 ```
 
-> In this route we only check for an endpoint. If you **require** payload support, make sure
- you check for the auth and p256dh keys as well.
+Note: In this route we only check for an endpoint. If you **require** payload support, make sure
+you check for the auth and p256dh keys as well.
 
 If the subscription is valid, we need to save it and return an appropriate
 JSON response:
@@ -280,9 +280,9 @@ In this example it checks for status code '404' and '410', which are the HTTP st
 We'll cover some of the other status codes in the next section when we look at the web push
  protocol in more detail.
 
-> If you hit problems at this stage, it's worth looking at the error logs from Firefox before
- Chrome. The Mozilla push service has much more helpful error messages compared to Chrome /
- FCM.
+Note: If you hit problems at this stage, it's worth looking at the error logs from Firefox before
+Chrome. The Mozilla push service has much more helpful error messages compared to Chrome /
+FCM.
 
 After looping through the subscriptions, we need to return a JSON response.
 
