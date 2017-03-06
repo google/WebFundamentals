@@ -755,7 +755,7 @@ do so, use `canMakePayment()`.
     }
 
 Warning: In order to protect user privacy, invocation of <code>canMakePayment()
-</code> API is rate limited in Google Chrome. You'll receive "Quota exceeded"
+</code> API is rate limited in Google Chrome. You'll receive a "Quota exceeded"
 error when you call <code>canMakePayment()</code> too frequently within a
 short time range.
 
