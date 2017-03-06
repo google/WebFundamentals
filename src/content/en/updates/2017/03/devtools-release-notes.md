@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New features and changes coming to DevTools in Chrome 58.
 
-{# wf_updated_on: 2017-03-03 #}
-{# wf_published_on: 2017-03-03 #}
+{# wf_updated_on: 2017-03-06 #}
+{# wf_published_on: 2017-03-06 #}
 {# wf_tags: chrome58,devtools #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: New features and changes coming to DevTools in Chrome 58. #}
@@ -25,7 +25,7 @@ out, the first time you open a new version of Chrome, DevTools opens the
 * Cookie values are now editable.
 * DevTools now automatically pauses before out-of-memory errors.
 
-## New Features
+## New features
 
 ### Editable cookies {: #cookies }
 
@@ -40,7 +40,7 @@ Double-click on a cell in the **Cookies** tab to edit that value.
 
 Thanks to [kdzwinel](https://twitter.com/kdzwinel) for the contribution!
 
-### Inspectable and Editable CSS variables in the Styles pane {: #css-variables }
+### Inspectable and editable CSS variables in the Styles pane {: #css-variables }
 
 You can now inspect and edit CSS variables in the Styles pane. See [CSS
 Variables Demo][css vars] to try it out yourself.
@@ -143,7 +143,7 @@ easily accessible.
 * The **Filters** button and pane is gone. Use the dropdown menu instead.
 * The text box for filtering logs is now always shown. It was previously
   hidden in the Filters pane.
-* The filtering text box automatically excepts RegEx, so the
+* The filtering text box automatically accepts RegEx, so the
   **Regex** checkbox is gone.
 * The **Hide violations** checkbox is gone. Set the logging level dropdown to
   **Verbose** to see violations.
@@ -163,4 +163,5 @@ easily accessible.
 ### WebGL event listener breakpoints have moved {: #webgl }
 
 The WebGL [event listener breakpoints][event-listener-breakpoint]
-have moved from the **WebGL **category to the **Canvas **category.
+have moved from the **WebGL **category to the **Canvas **category. The
+**WebGL** category has been removed.
