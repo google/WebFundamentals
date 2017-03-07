@@ -39,3 +39,6 @@ the features in your own app:
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Checks if the Chrome Debugger returns a service worker version.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/registered-service-worker.html" %}

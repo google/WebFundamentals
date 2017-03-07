@@ -32,3 +32,6 @@ This audit is powered by the aXe Accessibility Engine. See [Elements should not
 have tabindex greater than zero][axe] for more information.
 
 [axe]: https://dequeuniversity.com/rules/axe/1.1/tabindex
+
+
+{% include "web/tools/lighthouse/audits/_feedback/tabindex.html" %}

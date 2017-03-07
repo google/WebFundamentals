@@ -38,3 +38,6 @@ This audit is powered by the aXe Accessibility Engine. See [Required ARIA
 attributes must be provided][axe] for more information.
 
 [axe]: https://dequeuniversity.com/rules/axe/1.1/aria-required-attr
+
+
+{% include "web/tools/lighthouse/audits/_feedback/required-aria-attributes.html" %}

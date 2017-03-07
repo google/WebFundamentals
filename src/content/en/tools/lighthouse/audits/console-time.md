@@ -42,3 +42,6 @@ scripts that are on the same host as the page. Scripts from other hosts are
 excluded, because Lighthouse assumes that you don't have control over these
 scripts. So, there may be other scripts using `console.time()` on your page,
 but these won't show up in your Lighthouse report.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/console-time.html" %}

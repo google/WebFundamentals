@@ -35,3 +35,6 @@ See [`MutationObserver`][mdn] on MDN for more help.
 Lighthouse collects all of the event listeners on the page, and flags
 any listener that uses one of the types listed in [Why the audit is
 important](#why).
+
+
+{% include "web/tools/lighthouse/audits/_feedback/mutation-events.html" %}

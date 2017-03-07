@@ -61,3 +61,6 @@ A `<link rel="stylesheet">` tag that:
 A `<link rel="import">` tag that:
 
 * Does not have an `async` attribute.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/blocking-resources.html" %}

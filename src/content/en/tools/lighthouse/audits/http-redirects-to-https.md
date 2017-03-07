@@ -30,3 +30,6 @@ traffic to your site is redirected to HTTPS.
 Lighthouse changes the page's URL to `http`, loads the page, and then waits for
 the event from the Chrome Debugger that indicates that the page is secure. If
 Lighthouse does not receive the event within 10 seconds then the audit fails.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/http-redirects-to-https.html" %}

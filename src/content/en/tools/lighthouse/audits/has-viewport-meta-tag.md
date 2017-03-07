@@ -38,3 +38,6 @@ of the document. It also checks that the node contains a `content` attribute
 and that the value of this attribute contains the text `width=`. However,
 it does not check that `width` equals `device-width`. Lighthouse also does not
 check for a `initial-scale` key-value pair.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/has-viewport-meta-tag.html" %}

@@ -42,3 +42,6 @@ So, if you don't include a `short_name` in your manifest, but your `name` is
 less than 12 characters, then the audit passes. The manifest that Lighthouse
 fetches is separate from the one that Chrome is using on the page, which can
 possibly cause inaccurate results.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/manifest-short_name-is-not-truncated.html" %}
