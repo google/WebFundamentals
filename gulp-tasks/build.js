@@ -79,6 +79,25 @@ gulp.task('build:http203Podcast', function() {
   wfTemplateHelper.generatePodcastFeed(files, options);
 });
 
+gulp.task('build:DesignerVsDeveloper', function() {
+  var src = 'shows/designer-vs-developer/podcast/';
+  var baseOutputPath = path.join(GLOBAL.WF.src.content, src);
+  var options = {
+    title: 'Designer Vs Developer',
+    subtitle: 'A show that tries to solve the challenges faced in industry by having an open conversation between the two.',
+    author: {name: 'Mustafa Kurtuldu', email: 'mustafa.kurtuldu@gmail.com'},
+    summary: 'A show that tries to solve the challenges faced in industry by having an open conversation between the two.',
+    image: 'https://developers.google.com/web/shows/designer-vs-developer/podcast/images/dvd-series-cover.jpg',
+    section: 'shows',
+    outputPath: baseOutputPath,
+    baseUrl: 'https://developers.google.com/web/shows/designer-vs-developer/podcast/'
+  };
+  var files = wfHelper.getFileList(baseOutputPath, ['*.md', '!index.md']);
+  files.sort(wfHelper.updatedComparator);
+  wfTemplateHelper.generateListPage(files, options);
+  wfTemplateHelper.generatePodcastFeed(files, options);
+});
+
 gulp.task('build:tools', function() {
   var section = 'tools';
   var baseOutputPath = path.join(GLOBAL.WF.src.content, section);
