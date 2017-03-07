@@ -158,7 +158,8 @@ generate a json file that can be opened in the Viewer.
 4. Paste the URL of a [Github gist](https://gist.github.com/) that contains a Lighthouse
 JSON report onto the app.
 
-![Export or share options](images/viewer_icons.png){: .attempt-right}
+![Export or share options](images/viewer_icons.png)
+{: .attempt-right}
 
 The Viewer also lets you share reports with others. Reports can be shared
 by clicking the share icon in the top right corner and signing in to Github.
