@@ -132,6 +132,15 @@ The interface elements regions, addRegion() and removeRegion() have been removed
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=690014)
 
 
+## WebAudio: remove AudioSourceNode interface
+
+The `AudioSourceNode` interface is not part of the WebAudio specification, is not constructible, and has no attributes so it basically has no developer-accessible functionality. Therefore it is being removed.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/D-QJm9GCisc/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/features/5753709124386816) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663818)
+
+
 <<../../_deprecation-policy.md>>
 
 {% include "comment-widget.html" %}
