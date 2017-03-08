@@ -141,6 +141,17 @@ The `AudioSourceNode` interface is not part of the WebAudio specification, is no
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663818)
 
 
+## Remove webkitdropzone global attribute
+
+The dropzone global attribute was introduced by the [HTML5 drag and drop specification](http://w3c.github.io/html/editing.html#drag-and-drop) as a declarative method for specifying an HTML element's willingness to be the target of a drag-and-drop operation, the content types that can be dropped onto the element, and the drag-and-drop operation (copy/move/link).
+
+Unfortunately, no browser implemented the unprefixed version. Blink and WebKit only implement a prefixed form of the attribute, webkitdropzone. Because the `dropzone` attribute was removed from the spec in [early March 2017](https://github.com/whatwg/html/pull/2402) the prefixed version is being removed from Chrome.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/rdGvTDPU7mM/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5718005866561536) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688943)
+
+
 <<../../_deprecation-policy.md>>
 
 {% include "comment-widget.html" %}
