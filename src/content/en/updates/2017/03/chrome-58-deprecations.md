@@ -119,9 +119,9 @@ The use of the `subjectAlternativeName` fields leaves it unambiguous whether a c
 
 The compatibility risk is low. RFC 2818 has deprecated this for nearly two decades, and the Baseline Requirements (which all publicly trusted CAs must abide by) has required the presence of a `subjectAltName` since 2012. Mozilla Firefox already requires the `subjectAltName` for any newly issued publicly trusted certificates since [Firefox 48]( https://bugzilla.mozilla.org/show_bug.cgi?id=1245280 ).
 
-[Intent to Remove]() &#124;
-[Chromestatus Tracker]() &#124;
-[Chromium Bug]()
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/4v82AueNjaQ/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/4981025180483584) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=308330)
 
 
 <<../../_deprecation-policy.md>>
