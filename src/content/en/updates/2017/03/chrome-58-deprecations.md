@@ -20,7 +20,7 @@ which is in beta as of March 16. This list is subject to change at any time.
 
 ## Deprecate RTCRtcpMuxPolicy of "negotiate"
 
-The `rtcpMuxPolicy` is used by Chrome to specify its preferred policy regarding use of RTP/RTCP multiplexing. In M57, we changed the default `rtcpMuxPolicy` to "require" and deprecated "negotiate" for following reasons:
+The `rtcpMuxPolicy` is used by Chrome to specify its preferred policy regarding use of RTP/RTCP multiplexing. In Chrome 57, we changed the default `rtcpMuxPolicy` to "require" and deprecated "negotiate" for following reasons:
 
 * Non-muxed RTCP uses extra network resources.
 * Removing it will make the API surface simpler, since an "RtpSender"/"RtpReceiver" will then only ever have a single transport.
@@ -126,7 +126,7 @@ The compatibility risk is low. RFC 2818 has deprecated this for nearly two decad
 
 ## VTTRegion-related bits of TextTrack
 
-The interface elements regions, addRegion() and removeRegion() have been removed from the WebVTT spec and will be removed from Chrome.
+The interface elements regions, `addRegion()` and `removeRegion()` have been removed from the WebVTT spec and will be removed from Chrome.
 
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5308626495340544) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=690014)
