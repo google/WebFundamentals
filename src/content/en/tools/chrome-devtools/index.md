@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Option 1
+description: Get started with Google Chrome's built-in authoring, debugging, and profiling development tools.
 
 {# wf_updated_on: 2016-07-26 #}
 {# wf_published_on: 2016-03-28 #}
