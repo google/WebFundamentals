@@ -90,8 +90,20 @@ In Chrome 58, the old versions are being removed. The affected properties and th
 | motion-rotation | offset-rotate |
 | motion | offset |
 
-
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/o1C5NzGf9Q0/discussion) 
+
+
+## Support for commonName matching in certificates
+
+[RFC 2818](https://tools.ietf.org/html/rfc2818) describes two methods to match a domain name against a certificate: using the available names within the `subjectAlternativeName` extension, or, in the absence of a SAN extension, falling back to the `commonName`. The fallback to the `commonName` was deprecated in RFC 2818 (published in 2000), but support remains in a number of TLS clients, often incorrectly.
+
+The use of the `subjectAlternativeName` fields leaves it unambiguous whether a certificate is expressing a binding to an IP address or a domain name, and is fully defined in terms of its interaction with Name Constraints. However, the `commonName` is ambiguous, and because of this, support for it has been a source of security bugs in Chrome, the libraries it uses and within the TLS ecosystem at large.
+
+The compatibility risk is low. RFC 2818 has deprecated this for nearly two decades, and the Baseline Requirements (which all publicly trusted CAs must abide by) has required the presence of a `subjectAltName` since 2012. Mozilla Firefox already requires the `subjectAltName` for any newly issued publicly trusted certificates since [Firefox 48]( https://bugzilla.mozilla.org/show_bug.cgi?id=1245280 ).
+
+[Intent to Remove]() &#124;
+[Chromestatus Tracker]() &#124;
+[Chromium Bug]()
 
 <<../../_deprecation-policy.md>>
 
