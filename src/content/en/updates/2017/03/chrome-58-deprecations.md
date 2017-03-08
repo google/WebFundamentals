@@ -128,7 +128,7 @@ Note: Enterprises that need to support such certificates for internal purposes m
 
 ## VTTRegion-related bits of TextTrack
 
-The interface elements regions, `addRegion()` and `removeRegion()`, have been removed from the WebVTT spec and will be removed from Chrome.
+The interface elements regions, `addRegion()` and `removeRegion()`, have been removed from the WebVTT spec and will be removed from Chrome in compliance with the [latest spec](https://w3c.github.io/webvtt/). Those needing an alternative can use the `VTTCue.region` property which is being added in Chrome 58.
 
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5308626495340544) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=690014)
