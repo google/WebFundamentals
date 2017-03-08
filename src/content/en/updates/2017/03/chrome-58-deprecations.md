@@ -117,7 +117,9 @@ In Chrome 58, the old versions are being removed. The affected properties and th
 
 The use of the `subjectAlternativeName` fields leaves it unambiguous whether a certificate is expressing a binding to an IP address or a domain name, and is fully defined in terms of its interaction with Name Constraints. However, the `commonName` is ambiguous, and because of this, support for it has been a source of security bugs in Chrome, the libraries it uses, and within the TLS ecosystem at large.
 
-The compatibility risk is low. RFC 2818 has deprecated this for nearly two decades, and the baseline requirements (which all publicly trusted CAs must abide by) has required the presence of a `subjectAltName` since 2012. Mozilla Firefox already requires the `subjectAltName` for any newly issued publicly trusted certificates since [Firefox 48]( https://bugzilla.mozilla.org/show_bug.cgi?id=1245280 ).
+The compatibility risk is low. RFC 2818 has deprecated this for nearly two decades, and the [Baseline Requirements](https://cabforum.org/baseline-requirements-documents/) (which all publicly trusted CAs must abide by) has required the presence of a `subjectAltName` since 2012. Mozilla Firefox already requires the `subjectAltName` for any newly issued publicly trusted certificates since [Firefox 48]( https://bugzilla.mozilla.org/show_bug.cgi?id=1245280 ). 
+
+Note: Enterprises that need to support such certificates for internal purposes may set the `EnableCommonNameFallbackForLocalAnchors` Enterprise policy.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/4v82AueNjaQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4981025180483584) &#124;
