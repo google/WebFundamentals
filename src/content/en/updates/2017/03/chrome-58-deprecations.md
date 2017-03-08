@@ -124,6 +124,14 @@ The compatibility risk is low. RFC 2818 has deprecated this for nearly two decad
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=308330)
 
 
+## VTTRegion-related bits of TextTrack
+
+The interface elements regions, addRegion() and removeRegion() have been removed from the WebVTT spec and will be removed from Chrome.
+
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5308626495340544) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=690014)
+
+
 <<../../_deprecation-policy.md>>
 
 {% include "comment-widget.html" %}
