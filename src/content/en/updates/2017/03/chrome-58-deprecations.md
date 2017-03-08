@@ -17,6 +17,20 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 58,
 which is in beta as of March 16. This list is subject to change at any time.
 
+
+## Deprecate RTCRtcpMuxPolicy of "negotiate"
+
+The `rtcpMuxPolicy` is used by Chrome to specify its preferred policy regarding use of RTP/RTCP multiplexing. In M57, we changed the default `rtcpMuxPolicy` to "require" and deprecated "negotiate" for following reasons:
+
+* Non-muxed RTCP uses extra network resources.
+* Removing it will make the API surface simpler, since an "RtpSender"/"RtpReceiver" will then only ever have a single transport.
+
+We believe this is non-breaking change sine the user will get a deprecation message and the `webkitRTCPeerConnection` can still be created successfully.
+
+[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/OP2SGSWF5lo/discussion) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=685727)
+
+
 ## Mouse on Android stops firing TouchEvents
 
 Until version 55, Android low-level mouse events in Chrome primarily followed an
@@ -39,6 +53,7 @@ Starting with Chrome 58, a mouse on Android M or later will:
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5642080642662400) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=468806)
 
+
 ## Remove case-insensitive matching for usemap attribute
 
 The `usemap` attribute was formerly defined as caseless. Unfortunately
@@ -53,6 +68,7 @@ applied. The old behavior was deprecated in Chrome 57, and is now removed.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5760965337415680) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=659464)
 
+
 ## Remove EME from unsecure contexts
 
 Some usages of [Encrypted Media Extenions (EME)](https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API) expose digital rights management implementations that are not open source, involve access to persistent unique identifiers, and/or run unsandboxed or with privileged access. Security risks are increased sites exposed via insecure HTTP because they can be attacked by anyone on the channel. Additionally, permissions for an insecure HTTP site can be explited when explicit permissions are required.
@@ -62,6 +78,7 @@ Support for non-secure contexts was removed from EME version 1 spec and will not
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/tXmKPlXsnCQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5724389932793856) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=672605)
+
 
 ## Remove legacy caller for HTMLEmbedElement and HTMLObjectElement
 
@@ -76,6 +93,7 @@ is not supported in Edge or Safari, and it is being
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/AiDZ7ru9mGg/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5715026367217664) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663662)
+
 
 ## Remove deprecated names for motion path properties
 
@@ -93,7 +111,7 @@ In Chrome 58, the old versions are being removed. The affected properties and th
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/o1C5NzGf9Q0/discussion) 
 
 
-## Support for commonName matching in certificates
+## Remove support for commonName matching in certificates
 
 [RFC 2818](https://tools.ietf.org/html/rfc2818) describes two methods to match a domain name against a certificate: using the available names within the `subjectAlternativeName` extension, or, in the absence of a SAN extension, falling back to the `commonName`. The fallback to the `commonName` was deprecated in RFC 2818 (published in 2000), but support remains in a number of TLS clients, often incorrectly.
 
@@ -104,6 +122,7 @@ The compatibility risk is low. RFC 2818 has deprecated this for nearly two decad
 [Intent to Remove]() &#124;
 [Chromestatus Tracker]() &#124;
 [Chromium Bug]()
+
 
 <<../../_deprecation-policy.md>>
 
