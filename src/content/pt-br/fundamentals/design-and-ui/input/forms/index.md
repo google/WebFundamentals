@@ -2,12 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Preencher formulários em celulares não é fácil. Os melhores formulários são aqueles com menos entradas.
 
-{# wf_updated_on: 2014-10-20 #}
+{# wf_updated_on: 2014-10-21 #}
 {# wf_published_on: 2014-04-30 #}
 
-# Create Amazing Forms {: .page-title }
+# Crie formulários incríveis {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
+
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="iYYHRwLqrKM"
@@ -17,100 +18,105 @@ description: Preencher formulários em celulares não é fácil. Os melhores for
 
 Preencher formulários em celulares não é fácil. Os melhores formulários são aqueles com menos entradas. Bons formulários fornecem tipos de entrada semântica. As teclas de acesso devem ser adaptadas aos tipo de entrada do usuário; o usuário escolhe uma data em um calendário. Mantenha seu usuário informado. O usuário deve ser notificado pelas ferramentas de validação sobre o que fazer antes de enviar o formulário.
 
-Para obter uma visão geral dos guias sobre como criar formulários eficientes, veja o vídeo abaixo.
 
-## Design efficient forms
+## Crie formulários eficientes
 
-Crie formulários eficientes evitando ações repetidas, perguntando apenas o necessária e oriente o usuário mostrando o ponto em que se encontra em formulários de várias partes.
+
+Crie formulários eficientes evitando ações repetidas, perguntando apenas o necessário e oriente o usuário mostrando o ponto em que ele se encontra em formulários de várias partes.
 
 
 ### TL;DR {: .hide-from-toc }
-- Use dados existentes para oferecer sugestões ao preencher campos e certifique-se de habilitar o preenchimento automático.
-- Use barras de progresso claramente indicadas para ajudar os usuários a finalizar formulários de várias partes.
+- Use dados existentes para oferecer sugestões ao preencher campos e ative o preenchimento automático.
+- Use barras de progresso claramente indicadas para ajudar o usuário a finalizar formulários de várias partes.
 - Forneça um calendário visual para que os usuários não precisem sair do seu site e ir para o aplicativo de calendário em seus smartphones.
 
 
 ### Minimize ações e campos repetidos
 
-Certifique-se de que seus formulários não têm ações repetidas, e apenas a quantidade de campos 
-necessária e tire proveito do 
-[preenchimento automático](/web/fundamentals/input/form/#use_metadata_to_enable_auto-complete),
-para que o usuário possa facilmente preencher os formulários com dados sugeridos.
-
-<figure>
+<figure class="attempt-right">
   <img src="imgs/forms-multipart-good.png" srcset="imgs/forms-multipart-good.png 1x, imgs/forms-multipart-good-2x.png 2x" alt="Mostre o progresso em formulários de várias partes">
   <figcaption>
-    No site Progressive.com, a primeira informação solicitada ao usuário é o CEP. Dessa forma, a próxima parte do formulário é preenchida automaticamente.
+    No site Progressive.com, a primeira informação solicitada ao usuário é o CEP e essa informação é preenchida automaticamente na próxima parte do formulário.
   </figcaption>
 </figure>
 
-Busque oportunidades de sugerir informações já conhecidas ou que podem
+Certifique-se de que seus formulários não tenham ações repetidas e apenas a quantidade necessária de campos 
+e tire proveito do 
+[preenchimento automático](/web/fundamentals/design-and-ui/input/forms/#use-metadata-to-enable-auto-complete),
+para que o usuário possa facilmente preencher os formulários com dados sugeridos.
+
+Busque oportunidades de sugerir informações já conhecidas ou que podem 
 ser antecipadas para evitar que o usuário precise fornecê-las.  Por exemplo, 
-sugerir o endereço de envio com o último endereço de envio fornecido pelo
+pré-preencha o endereço de envio com o último endereço de envio fornecido pelo 
 usuário.
 
+<div style="clear:both;"></div>
+
 ### Mostre ao usuário seu progresso
+
+<figure class="attempt-right">
+  <img src="imgs/forms-multipart-good.png" srcset="imgs/forms-multipart-good.png 1x, imgs/forms-multipart-good-2x.png 2x" alt="Mostre o progresso em formulários de várias partes">
+  <figcaption>
+    Use barras de progresso claramente rotuladas para ajudar os usuários a preencher formulários de várias partes.
+  </figcaption>
+</figure>
 
 As barras de progresso e menus devem transmitir precisamente o progresso geral em 
 formulários e processos de várias etapas.
 
-<figure>
-  <img src="imgs/forms-multipart-good.png" srcset="imgs/forms-multipart-good.png 1x, imgs/forms-multipart-good-2x.png 2x" alt="Mostre o progresso em formulários de várias partes">
-  <figcaption>
-    - Use barras de progresso claramente indicadas para ajudar o usuário a finalizar formulários de várias partes.
-  </figcaption>
-</figure>
-
 Se você inserir um formulário complexo demais em uma etapa inicial, o usuário 
 provavelmente sairá de seu site antes de terminar o processo. 
 
+<div style="clear:both;"></div>
 
 ### Forneça calendários visuais ao selecionar datas
 
-O usuário frequentemente precisa de maior contexto ao para agendamentos e datas de viagem. 
-Para facilitar e evitar que saiam do seu site para verificar o 
-aplicativo de calendário, forneça um calendário visual com indicação clara para selecionar 
-datas de início e término. 
-
-<figure>
+<figure class="attempt-right">
   <img src="imgs/forms-calendar-good.png" srcset="imgs/forms-calendar-good.png 1x, imgs/forms-calendar-good-2x.png 2x" alt="Site do hotel com facilidade de uso do calendário">
   <figcaption>
-    Site do hotel com facilidade de uso do widget de calendário para selecionar datas.
+    Site do hotel com widget de calendário de fácil uso para selecionar datas.
   </figcaption>
 </figure>
 
+O usuário frequentemente precisa de mais contexto ao agendar compromissos e datas de viagem. 
+Para facilitar o processo e evitar que o usuário saia do seu site para consultar o 
+aplicativo de calendário, forneça um calendário visual com indicação clara para selecionar 
+datas de início e término. 
 
-## Choose the best input type
+<div style="clear:both;"></div>
 
+## Escolha o melhor tipo de entrada
 
-Agilize a entrada de informações usando o tipo de entrada correto. Os usuários gostam de sites que apresentem automaticamente teclados numéricos para inserir números de telefone ou quando os campos avançam automaticamente conforme são preenchidos. Procure por oportunidades de eliminar toques desnecessários em seus formulários.
+Agilize a entrada de informações usando o tipo de entrada correto. Os usuários gostam de
+sites que apresentem automaticamente teclados numéricos para inserir números de telefone ou
+quando os campos avançam automaticamente conforme são preenchidos. Procure oportunidades de eliminar
+toques desnecessários em seus formulários.
 
 
 ### TL;DR {: .hide-from-toc }
 - Selecione o tipo de entrada mais adequado para seus dados para simplificar a entrada.
-- Ofereça sugestões conforme o usuário digita com o elemento <code>datalist</code>.
+- Ofereça sugestões conforme o usuário digita com o elemento  <code>datalist</code>.
 
 
-#### Tipos de entrada HTML5
+### Tipos de entrada HTML5
 
 O HTML5 introduziu vários tipos de entrada novos. Esses novos tipos de entrada dão dicas
 para o navegador sobre qual tipo de layout de teclado exibir para teclados
-na tela.  Os usuários podem inserir mais facilmente a informação solicitada sem
-precisar alterar seu teclado e ver apenas as teclas adequadas para esse tipo de
+na tela.  Os usuários podem inserir as informações necessárias com mais facilidade, sem
+precisar alterar seu teclado e vendo apenas as teclas adequadas para esse tipo de
 entrada.
 
-<table>
+<table class="responsive">
   <thead>
     <tr>
-      <th data-th="Input type">Entrada <code>type</code></th>
-      <th data-th="Typical keyboard">Teclado comum</th>
+      <th colspan="2">Entrada <code>type</code></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td data-th="Input type">
-        <code>url</code><br> Para inserir uma URL. Deve começar com um esquema de URI válido,
-        por exemplo, <code>http://</code>, <code>ftp://</code> ou <code>mailto:</code>.
+        <code>url</code><br> Para inserir um URL. Deve começar com um esquema de URI válido,
+        como <code>http://</code>, <code>ftp://</code> ou  <code>mailto:</code>.
       </td>
       <td data-th="Typical keyboard">
         <img src="imgs/url-ios.png" srcset="imgs/url-ios.png 1x, imgs/url-ios-2x.png 2x">
@@ -118,7 +124,7 @@ entrada.
     </tr>
     <tr>
       <td data-th="Input type">
-        <code>tel</code><br>Para inserir números de telefone. <b>Não</b>
+        <code>tel</code><br>Para inserir números de telefone. Esse elemento <b>não</b>
         força uma determinada sintaxe para validação, portanto, se você deseja garantir
         um determinado formato, é possível usar um padrão.
       </td>
@@ -128,9 +134,9 @@ entrada.
     </tr>
     <tr>
       <td data-th="Input type">
-        <code>email</code><br>Para inserir endereços de email e dicas de que
+        <code>email</code><br>Para inserir endereços de e-mail e dicas de que
         a @ deve ser mostrada no teclado por padrão. Você pode adicionar o
-        atributo multiple se mais de um endereço de email será fornecido.
+        atributo multiple se mais de um endereço de e-mail será fornecido.
       </td>
       <td data-th="Typical keyboard">
         <img src="imgs/email-android.png" srcset="imgs/email-android.png 1x, imgs/email-android-2x.png 2x">
@@ -220,7 +226,10 @@ entrada.
   </tbody>
 </table>
 
-#### Ofereça sugestões durante a entrada com o datalist
+Atenção: Lembre-se de ter a localização em mente ao escolher o tipo de entrada,
+pois algumas localidades usam um ponto (.) como separador em vez de uma vírgula (,)
+
+### Ofereça sugestões durante a entrada com o datalist
 
 O elemento `datalist` não é um tipo de entrada, mas uma lista de valores de entrada sugeridos
 para associar com um campo de formulário. Permite que o navegador sugira opções de
@@ -229,45 +238,49 @@ listas para encontrar o valor que estão procurando e os limita apenas a essas
 listas, o elemento `datalist` fornece dicas conforme o usuário digita.
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
-Note: Os valores <code>datalist</code> são fornecidos como sugestões e o usuário não fica restrito às sugestões fornecidas.
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
-## Label and name inputs properly
+Observação: Os valores  <code>datalist</code> são fornecidos como sugestões e o usuário não fica restrito às sugestões fornecidas.
+
+## Rotule e nomeie as entradas corretamente
 
 Preencher formulários em celulares não é fácil. Os melhores formulários são aqueles com menos entradas. Bons formulários fornecem tipos de entrada semântica. As teclas de acesso devem ser adaptadas aos tipo de entrada do usuário; o usuário escolhe uma data em um calendário. Mantenha seu usuário informado. O usuário deve ser notificado pelas ferramentas de validação sobre o que fazer antes de enviar o formulário.
 
 
 ### TL;DR {: .hide-from-toc }
-- Sempre use <code>label</code> em entradas de formulário e certifique-se de que estão visíveis quando o campo estiver em foco.
-- Use <code>placeholder</code> para fornecer orientações sobre o que é esperado.
-- Para ajudar o navegador a preencher automaticamente o formulário, use o <code>name</code> estabelecido para elementos e inclua o atributo <code>autocomplete</code>.
+- Sempre use  <code>label</code> em entradas de formulário e certifique-se de que elas estejam visíveis quando o campo estiver em foco.
+- Use  <code>placeholder</code> para fornecer orientações sobre o que é esperado.
+- Para ajudar o navegador a preencher automaticamente o formulário, use o  <code>name</code> estabelecido para elementos e inclua o atributo  <code>autocomplete</code>.
 
 
-#### A importância das etiquetas
+### A importância dos rótulos
 
-O elemento `label` fornece orientação para o usuário, dizendo qual
-informação é necessária em um elemento de formulário.  Cada `label` é associado a um
+O elemento `label` fornece orientações para o usuário, dizendo qual
+informação é necessária em um elemento do formulário.  Cada `label` é associado a um
 elemento de entrada colocando-o dentro do elemento `label` ou usando o atributo "`for`"
-.  Aplicar etiquetas para elementos de formulário também ajuda a melhorar o tamanho
-alvo do toque: o usuário pode tocar na etiqueta ou entrada para colocar
-foco no elemento de entrada.
+.  Aplicar rótulos em elementos de formulário também ajuda a melhorar o tamanho
+de destino do toque: o usuário pode tocar no rótulo ou na entrada para colocar
+o foco no elemento de entrada.
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
 </pre>
 
-#### Posicionamento e dimensionamento da etiqueta
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
-As etiquetas e entradas devem ser grandes o suficiente para facilitar a seleção.  Em portas de visualização
-verticais, as etiquetas de campo devem estar acima dos elementos de entrada e ao lado deles na
-horizontal.  Certifique-se de que as etiquetas de campo e as caixas de entrada correspondente estejam visíveis ao
-mesmo tempo.  Tenha cuidado com os manipuladores de rolagem personalizados que podem rolar elementos
-de entrada no topo da página ocultando a etiquetas ou teclado virtual pode ocultar etiquetas 
+### Posicionamento e dimensionamento do rótulo
+
+Rótulos e entradas devem ser grandes o suficiente para facilitar a seleção.  Em portas de visualização
+verticais, os rótulos de campo devem estar acima dos elementos de entrada e ao lado deles na
+horizontal.  Certifique-se de que os rótulos de campo e as caixas de entrada correspondentes estejam visíveis ao
+mesmo tempo.  Tenha cuidado com gerenciadores de rolagem personalizados que podem rolar elementos
+de entrada no topo da página ocultando o rótulo ou o teclado virtual pode ocultar rótulos
 que estiverem abaixo dos elementos de entrada.
 
-#### Use espaços reservados
+### Use marcadores
 
 O atributo placeholder fornece uma dica para o usuário sobre o que é esperado na
 entrada, geralmente exibindo o valor como texto claro até que o usuário
@@ -279,44 +292,48 @@ comece a digitar no elemento.
     <input type="text" placeholder="MM-YYYY" ...>
 
 
+Atenção: Os marcadores desaparecem assim que o usuário começa a digitar em um elemento, portanto, não são uma substituição para rótulos.  Eles devem ser usados como um guia para ajudar a orientar o usuário no formato e conteúdo exigidos.
 
-Note: Os espaços reservados desaparecem assim que o usuário começa a digitar em um elemento, portanto, eles não são uma substituição para etiquetas.  Eles devem ser usados como um auxílio para ajudar a orientar o usuário no formato e conteúdo exigidos.
-
-#### Use metadados para habilitar o preenchimento automático
+### Use metadados para ativar o preenchimento automático
 
 O usuário gosta quando os sites economizam tempo preenchendo automaticamente campos
-comuns como nomes, endereços de email e outros campos usados com frequência. Além disso, ajuda
+comuns como nomes, endereços de e-mail e outros campos usados com frequência. Além disso, isso ajuda
 a reduzir possíveis erros de entrada, especialmente em teclados virtuais e
 pequenos dispositivos.
 
 Os navegadores podem usar heurística para determinar quais campos podem
-[preencher automaticamente](https://support.google.com/chrome/answer/142893) [com base nos
-dados especificados anteriormente pelo
-usuário](https://support.google.com/chrome/answer/142893) e você pode dar dicas
-para o navegador com os atributos name e autocomplete
-em cada elemento de entrada.
+[preencher automaticamente](https://support.google.com/chrome/answer/142893)
+ [com base nos dados especificados anteriormente pelo usuário](https://support.google.com/chrome/answer/142893)
+ e você pode dar dicas para o navegador com os atributos `name` e 
+`autocomplete` em cada elemento de entrada.
+
+Observação: O Chrome exige que elementos `input` sejam inseridos em uma tag `<form>` para ativar o
+preenchimento automático. Se eles não estiverem inseridos em uma tag `form`, o Chrome oferecerá
+sugestões, mas **não** preencherá o formulário.
 
 Por exemplo, para avisar o navegador que ele deve preencher automaticamente o formulário com
-o nome do usuário, endereço de email e telefone, você deve usar:
+o nome do usuário, endereço de e-mail e telefone, você deve usar:
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
 
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
-#### Valores de atributo `name` e `autocomplete` de entrada recomendados
 
 
-Os valores de atributo `autocomplete` fazem parte do [Padrão HTML WHATWG] atual(https://html.spec.whatwg.org/multipage/forms.html#autofill). Abaixo estão os atributos `autocomplete` usados com frequência.
+### Valores de atributo `name` e `autocomplete` de entrada recomendados
 
-Os atributos `autocomplete` podem vir acompanhados de um nome de seção, como **`shipping `**`given-name` ou **`billing `**`street-address`. O navegador preencherá automaticamente diferentes seções separadamente e não como formulário contínuo.
+Os valores de atributo `autocomplete` fazem parte do [Padrão HTML WHATWG](https://html.spec.whatwg.org/multipage/forms.html#autofill) atual. Abaixo estão os atributos `autocomplete` usados com frequência.
+
+Os atributos `autocomplete` podem vir acompanhados de um nome de seção, como **`shipping `**`given-name` ou **`billing `**`street-address`. O navegador preencherá automaticamente diferentes seções de forma individual, não como um formulário contínuo.
 
 <table>
-    <thead>
+  <thead>
     <tr>
       <th data-th="Content type">Tipo de conteúdo</th>
-      Atributo <th data-th="name attribute"><code>name</code></th>
-      Atributo <th data-th="autocomplete attribute"><code>autocomplete</code></th>
+      <th data-th="name attribute">Atributo <code>name</code></th>
+      <th data-th="autocomplete attribute">Atributo <code>autocomplete</code></th>
     </tr>
   </thead>
   <tbody>
@@ -338,7 +355,7 @@ Os atributos `autocomplete` podem vir acompanhados de um nome de seção, como *
       </td>
     </tr>
     <tr>
-      <td data-th="Content type">Email</td>
+      <td data-th="Content type">E-mail</td>
       <td data-th="name attribute"><code>email</code></td>
       <td data-th="autocomplete attribute"><code>email</code></td>
     </tr>
@@ -411,22 +428,46 @@ Os atributos `autocomplete` podem vir acompanhados de um nome de seção, como *
         </ul>
       </td>
     </tr>
+    <tr>
+      <td data-th="Content type">Nomes de usuário</td>
+      <td data-th="name attribute">
+        <code>username</code>
+      </td>
+      <td data-th="autocomplete attribute">
+        <ul>
+          <li><code>username</code></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Content type">Senhas</td>
+      <td data-th="name attribute">
+        <code>password</code>
+      </td>
+      <td data-th="autocomplete attribute">
+        <ul>
+          <li><code>current-password</code> (para formulários de login)</li>
+          <li><code>new-password</code> (para formulários de inscrição e de alteração de senha)</li>
+        </ul>
+      </td>
+    </tr>
   </tbody>
 </table>
 
-Note: Use apenas <code>street-address</code> ou <code>address-line1</code> e <code>address-line2</code>. <code>address-level1</code> e <code>address-level2</code> são necessários apenas se forem exigidos pelo seu formato de endereço.
+
+Observação: Use somente  <code>street-address</code> ou  <code>address-line1</code> e  <code>address-line2</code>. <code>address-level1</code> e <code>address-level2</code> são necessários apenas se forem exigidos pelo seu formato de endereço.
 
 
-#### O atributo `autofocus`
+### O atributo `autofocus`
 
-Em alguns formulários, por exemplo, a página inicial do Google, onde a única coisa que
+Em alguns formulários, como a página inicial do Google, onde a única coisa que
 o usuário deve fazer é preencher um determinado campo, é possível adicionar o atributo `autofocus`
 .  Quando ativado, o navegador desktop move o foco imediatamente para o campo
 de entrada, tornando mais fácil para o usuário começar usar o formulário com mais rapidez.  Navegadores
 móveis ignoram o atributo `autofocus`, para evitar que o teclado apareça
 aleatoriamente.
 
-Tenha cuidado ao usar o atributo autofocus porque roubará o foco do teclado
+Tenha cuidado ao usar o atributo autofocus porque ele roubará o foco do teclado
 e possivelmente evitará que o caractere backspace seja usado para
 navegação.
 
@@ -434,38 +475,37 @@ navegação.
     <input type="text" autofocus ...>
     
 
-## Provide real-time validation
+
+## Forneça validação em tempo real
 
 A validação de dados em tempo real não apenas ajuda a manter seus dados limpos, mas também ajuda a melhorar a experiência do usuário.  Os navegadores modernos têm várias ferramentas integradas para ajudar a fornecer validação de dados em tempo real e podem evitar que o usuário envie um formulário inválido.  Use dicas visuais para indicar se um formulário foi preenchido corretamente.
 
 
 ### TL;DR {: .hide-from-toc }
-- Tire partido de atributos de validação integrados do navegador como <code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code>, etc.
-- Use JavaScript e a API do Constraints Validation para requisitos de validação mais complexos.
-- Mostre erros de validação em tempo real e se o usuário tentar enviar um formulário inválido, mostre todos os campos que precisam ser corrigidos.
+- Utilize os atributos de validação integrados do navegador, como  <code>pattern</code>,  <code>required</code>,  <code>min</code>,  <code>max</code> etc.
+- Use JavaScript e Constraints Validation API para requisitos de validação mais complexos.
+- Mostre erros de validação em tempo real e, se o usuário tentar enviar um formulário inválido, mostre todos os campos que precisam ser corrigidos.
 
 
 ### Use esses atributos para validar a entrada
 
-##### O atributo `pattern`
+#### O atributo `pattern`
 
-O atributo `pattern` especifica uma [expressão
-regular](http://en.wikipedia.org/wiki/Regular_expression) usada para validar um
-campo de entrada. Por exemplo, para validar um código postal dos EUA (5 dígitos, algumas vezes
-seguido por um traço e mais 4 dígitos), precisaríamos definir o `pattern` como 
-a seguir:
+O atributo `pattern` especifica uma [expressão regular](https://en.wikipedia.org/wiki/Regular_expression)
+usada para validar um campo de entrada. Por exemplo, para validar um código postal dos EUA
+(5 dígitos, algumas vezes seguido por um traço e mais 4 dígitos), precisaríamos definir
+o `pattern` da seguinte forma:
 
 
     <input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
     
 
-##### Padrões de expressão regular comum
+##### Padrões de expressão regular comuns
 
-<table>
+<table class="responsive">
   <thead>
     <tr>
-      <th data-th="Description">Descrição</th>
-      <th data-th="Regular expression">Expressão regular</th>
+      <th colspan="2">Expressão regular</th>
     </tr>
   </thead>
   <tbody>
@@ -478,20 +518,17 @@ a seguir:
       <td data-th="Regular expression"><code>^\d{5,6}(?:[-\s]\d{4})?$</code></td>
     </tr>
     <tr>
-      <td data-th="Description">Endereço de IP (IPv4)</td>
+      <td data-th="Description">Endereço IP (IPv4)</td>
       <td data-th="Regular expression"><code>^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$</code></td>
     </tr>
-    
-<tr>
-      <td data-th="Description">Endereço de IP (IPv6)</td>
+    <tr>
+      <td data-th="Description">Endereço IP (IPv6)</td>
       <td data-th="Regular expression"><code>^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$</code></td>
     </tr>
-    
-<tr>
-      <td data-th="Description">Endereço de IP (ambos)</td>
+    <tr>
+      <td data-th="Description">Endereço IP (ambos)</td>
       <td data-th="Regular expression"><code>^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$</code></td>
     </tr>
-    
     <tr>
       <td data-th="Description">Número do cartão de crédito</td>
       <td data-th="Regular expression"><code>^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11})$</code></td>
@@ -507,56 +544,56 @@ a seguir:
   </tbody>
 </table>
 
-##### O atributo `required`
+#### O atributo `required`
 
-Se o atributo `required` estiver presente, o campo deve conter um valor antes
-que o formulário seja enviado. Por exemplo, para criar o código postal necessário, apenas
+Se o atributo `required` estiver presente, o campo deve conter um valor para
+que o formulário possa ser enviado. Por exemplo, para criar o código postal necessário, apenas
 adicionamos o atributo necessário:
 
 
     <input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
     
 
-##### Os atributos `min`, `max` e `step`
+#### Os atributos `min`, `max` e `step`
 
-Para tipos de entrada numérica como número ou intervalo, assim como entradas de data/hora, pode-se
+Para tipos de entrada numérica como um número ou intervalo, assim como entradas de data/hora, pode-se
 especificar os valores mínimo e máximo, assim como quanto cada um deve
 aumentar/diminuir quando ajustado pelo controle deslizante ou giratório.  Por exemplo, uma
-entrada de tamanho de sapato define um tamanho mínimo de 1 e um tamanho máximo de 13, com uma diferença
+entrada de tamanho de sapato define um tamanho mínimo de 1 e um tamanho máximo de 13, com incrementos
 de 0,5
 
 
     <input type="number" min="1" max="13" step="0.5" ...>
     
 
-##### O atributo `maxlength`
+#### O atributo `maxlength`
 
 O atributo `maxlength` pode ser usado para especificar o comprimento máximo de uma entrada ou
-caixa de texto e é útil para se limitar o comprimento da informação que o
-usuário pode fornecer. Por exemplo, se deseja limitar um nome de arquivo para 12 caracteres,
+caixa de texto e é útil para limitar o tamanho da informação que o
+usuário pode fornecer. Por exemplo, se deseja limitar um nome de arquivo a 12 caracteres,
 é possível usar o seguinte.
 
 
     <input type="text" id="83filename" maxlength="12" ...>
     
 
-##### O atributo `minlength`
+#### O atributo `minlength`
 
-O atributo `minlength` pode ser usado para especificar o comprimento mínimo de uma entrada ou
-caixa de texto e é útil para se especificar o comprimento mínimo que o usuário deve
-fornecer. Por exemplo, se deseja especificar que um nome de arquivo exige pelo menos 
+O atributo `minlength` pode ser usado para especificar o tamanho mínimo de uma entrada ou
+caixa de texto e é útil para se especificar o tamanho mínimo que o usuário deve
+fornecer. Por exemplo, se deseja especificar que um nome de arquivo deve ter pelo menos 
 8 caracteres, é possível usar o seguinte.
 
 
     <input type="text" id="83filename" minlength="8" ...>
     
 
-##### O atributo `novalidate`
+#### O atributo `novalidate`
 
-Em alguns casos, pode permitir que o usuário envie o formulário mesmo contendo
- entradas inválidas. Para isso, adicione o atributo `novalidate` ao elemento de
-formulário ou campos de entrada individuais. Nesse caso, todas as pseudo classes e
-APIs do JavaScript ainda permitirão que você verifique se o formulário é válido.
+Em alguns casos, você pode permitir que o usuário envie o formulário mesmo que ele contenha
+entradas inválidas. Para isso, adicione o atributo `novalidate` ao elemento de
+formulário ou campos de entrada individuais. Nesse caso, todas as pseudoclasses e
+JavaScript APIs ainda permitirão que você verifique se o formulário é válido.
 
 
     <form role="form" novalidate>
@@ -565,27 +602,27 @@ APIs do JavaScript ainda permitirão que você verifique se o formulário é vá
     </form>
     
 
-Note: Mesmo com validação de entrada do lado do cliente, é importante validar dados no servidor para garantir consistência e segurança em seus dados.
 
-#### Use JavaScript para validação em tempo real mais complexa
+Sucesso: Mesmo com validação de entrada do lado do cliente, é importante validar dados no servidor para garantir consistência e segurança em seus dados.
+
+### Use JavaScript para validações em tempo real mais complexas
 
 Quando a validação integrada e as expressões regulares não são suficientes, você pode usar
-a [API do Constraint Validation](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation),
+a [Constraint Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation),
 uma excelente ferramenta para lidar com validação personalizada.  A API permite que você faça coisas
 como definir um erro personalizado, verificar se um elemento é válido e determinar o
 motivo pelo qual um elemento é inválido:
 
-<table>
+<table class="responsive">
   <thead>
     <tr>
-      <th data-th="API">API</th>
-      <th data-th="Description">Descrição</th>
+      <th colspan="2">Validação de limitação</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td data-th="API"><code>setCustomValidity()</code></td>
-      <td data-th="Description">Define uma mensagem de validação personalizada e a propriedade <code>customError</code> do objeto <code>ValidityState</code> para <code>true</code>.</td>
+      <td data-th="Description">Define uma mensagem de validação personalizada e a propriedade  <code>customError</code> do objeto  <code>ValidityState</code> para  <code>true</code>.</td>
     </tr>
     <tr>
       <td data-th="API"><code>validationMessage</code></td>
@@ -593,53 +630,58 @@ motivo pelo qual um elemento é inválido:
     </tr>
     <tr>
       <td data-th="API"><code>checkValidity()</code></td>
-      <td data-th="Description">Retorna <code>true</code> se o elemento atender todas as exigências, caso contrário, <code>false</code>. Decidir como a página responde quando a verificação retorna <code>false</code> é responsabilidade do desenvolvedor.</td>
+      <td data-th="Description">Retorna  <code>true</code> se o elemento atender a todas as exigências, caso contrário,  <code>false</code>. Decidir como a página responde quando a verificação retorna  <code>false</code> é responsabilidade do desenvolvedor.</td>
     </tr>
     <tr>
       <td data-th="API"><code>reportValidity()</code></td>
-      <td data-th="Description">Retorna <code>true</code> se o elemento atender todas as exigências, caso contrário, <code>false</code>. Quando a página responde <code>false</code>, problemas de restrição são relatados ao usuário.</td>
+      <td data-th="Description">Retorna  <code>true</code> se o elemento atender a todas as exigências, caso contrário,  <code>false</code>. Quando a página responde  <code>false</code>, problemas de restrição são relatados ao usuário.</td>
     </tr>
     <tr>
       <td data-th="API"><code>validity</code></td>
-      <td data-th="Description">Retorna um objeto <code>ValidityState</code> quem representam os estados de validação do elemento.</td>
+      <td data-th="Description">Retorna um objeto  <code>ValidityState</code> que representa os estados de validação do elemento.</td>
     </tr>
   </tbody>
 </table>
 
-##### Defina mensagens de validação personalizadas
+
+
+### Defina mensagens de validação personalizadas
 
 Se a validação de um campo falhar, use `setCustomValidity()` para marcar o campo inválido
-e explique porquê o campo não foi validado.  Por exemplo, um formulário de inscrição pode
+e explique porque o campo não foi validado.  Por exemplo, um formulário de inscrição pode
 pedir que o usuário confirme seu endereço de email inserindo-o duas vezes.  Use o evento blur
 na segunda entrada para validar as duas entradas e defina a resposta
 adequada.  Por exemplo:
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
 </pre>
 
-##### Evite o envio de formulários inválidos
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
-Como nem todos os navegadores evitam que o usuário envie o formulário se houver
-dados inválidos, você deve verificar o evento de envio e usar `checkValidity()`
+### Impeça o envio de formulários inválidos
+
+Como nem todos os navegadores impedem que o usuário envie o formulário se ele contiver
+dados inválidos, você deve interceptar o evento submit e usar `checkValidity()`
 no elemento form para determinar se o formulário é válido.  Por exemplo:
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
 </pre>
 
-#### Mostre comentários em tempo real
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
-Recomenda-se fornecer uma indicação visual em cada campo que indica se
-o usuário concluiu o formulário corretamente antes de enviar.
-O HTML5 também introduz uma variedade de pseudo-classes que podem ser usadas para entradas de
-estilo com base em seu valor ou atributos.
+### Mostre feedback em tempo real
 
-<table>
+É útil fornecer uma indicação visual em cada campo para informar se
+o usuário preencheu o formulário corretamente antes do envio.
+O HTML5 também introduz diversas novas pseudoclasses que podem ser usadas para estilizar
+as entradas com base em seus valores ou atributos.
+
+<table class="responsive">
   <thead>
     <tr>
-      <th data-th="Pseudo-class">Pseudo-classe</th>
-      <th data-th="Use">Use</th>
+      <th colspan="2">Feedback em tempo real</th>
     </tr>
   </thead>
   <tbody>
@@ -677,10 +719,18 @@ estilo inválido ao digitar. Para evitar esse problema, combine o CSS com
 JavaScript para mostrar o estilo inválido apenas quando o usuário já tiver visitado o campo.
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" adjust_indentation="auto" %}
 </pre>
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
 </pre>
 
-Note: Mostre ao usuário todos os problemas no formulário de uma vez ao invés de mostrá-los um a um.
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+
+
+Sucesso: Mostre ao usuário todos os problemas no formulário de uma vez em vez de um a um.
+
+
+
+
+{# wf_devsite_translation #}

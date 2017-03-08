@@ -35,8 +35,8 @@ best to ahear to these guideslines.
 ## Heading 2 {: #heading-what-what }
 
 Caution: If you plan to link to specific headings
-[`<a href="#heading-what-what">`](#heading-what-what) within your document, it
-is **strongly** recommended you define them yourself with the 
+[`&lt;a href="#heading-what-what"&gt;`](#heading-what-what) within your document,
+it is **strongly** recommended you define them yourself with the 
 `{: #anchor-name }` syntax. This ensures that when documents are localized,
 the anchor will still work, but also ensures that any difference between 
 Markdown processors are a non-issue.

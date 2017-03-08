@@ -1,235 +1,318 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Se puede acceder a la Web desde una amplia gama de dispositivos, desde teléfonos de pantalla pequeña a televisores de pantalla gigante. Aprende a crear un sitio que funcione bien en todos los dispositivos.
+description: Se puede acceder a la web desde una gran variedad de dispositivos, desde teléfonos de pantalla pequeña hasta televisiones de pantalla grande. Cada dispositivo tiene sus limitaciones y beneficios propios. Como programador web, se espera que soportes una gran variedad de dispositivos.
 
-{# wf_updated_on: 2014-01-05 #}
+{# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2013-12-31 #}
 
 # Tu primer sitio multidispositivo {: .page-title }
 
+Advertencia: Este artículo no se ha actualizado durante un largo tiempo y puede ser que no refleje la realidad. En cambio, consulta el curso gratuito [Diseño web adaptable](https://udacity.com/ud893) en Udacity.
+
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-Crear experiencias multipantalla es más fácil de lo que parece. En esta guía, aprenderemos a crear una página de destino de ejemplo para nuestro <a href='https://www.udacity.com/course/cs256'>curso `CS256: Desarrollo web para móviles`</a> que funcione bien en dispositivos de todo tipo.
+<img src="images/finaloutput-2x.jpg" alt="muchos dispositivos que muestran el proyecto final" class="attempt-right">
 
-<img src="images/finaloutput-2x.jpg" alt="varios dispositivos mostrando la versión final del proyecto">
+La creación de experiencias multidispositivos no es tan difícil como podría parecer.
+En esta guía, crearemos una página de destino de producto para el 
+[Curso de desarrollo web móvil CS256](https://www.udacity.com/course/cs256)
+que funcione bien en distintos tipos de dispositivos.
 
-Parece difícil, cuando no imposible, empezar a crear sitios para varios dispositivos con distintas capacidades, con tamaños de pantalla y métodos de interacción muy diferentes.
+Compilar para múltiples dispositivos con diferentes características, tamaños de pantalla
+y métodos de interacción muy diversos puede parecer intimidante, si no imposible
+para dar los primeros pasos.
 
-Crear sitios totalmente adaptables es más fácil de lo que parece. Para demostrártelo, empezaremos siguiendo los pasos de esta guía.  Los hemos dividido en dos pasos sencillos:
+No es tan difícil crear sitios completamente adaptables, y para demostrártelo,
+esta guía te orientará en los pasos para comenzar.
+Lo hemos dividido en dos simples pasos:
 
-1.  Definir la arquitectura de información (normalmente denominada AI) y la estructura de la página, 
-2.  Añadir los elementos de diseño necesarios para que la página sea adaptable y tenga buen aspecto.
-
-
-
-
-## Crear el contenido y la estructura 
-
-
-
-
-El contenido es lo más importante de cualquier sitio. Por eso, vamos a diseñar pensando en el contenido sin dejar que este dependa del diseño. En esta guía decidiremos en primer lugar el contenido que necesitamos, crearemos una estructura de página basada en este contenido y, a continuación, presentaremos la página en un diseño simple y lineal que funcione bien en ventanas gráficas estrechas y anchas.
+1.  Definir la arquitectura de la información (comúnmente denominada AI) y la estructura de la página.
+2.  Agregar elementos de diseño para hacerla receptiva y asegurarte de que se vea bien en todos los dispositivos.
 
 
-### Crear la estructura de la página
+## Crea tu contenido y estructura
 
-Ya sabemos lo que necesitamos:
-
-1.  Una sección que describa de forma general nuestro producto, el curso `CS256: Desarrollo web para móviles`
-2.  Un formulario para recopilar información de los usuarios interesados en nuestro producto
-3.  Una descripción y un vídeo en los que se explique el producto detalladamente
-4.  Imágenes del producto en acción
-5.  Una tabla de datos con información que refleje lo que ofrece el producto
-
-### TL;DR {: .hide-from-toc }
-- Piensa primero en el contenido que necesitas.
-- Esboza la arquitectura de información (AI) para ventanas gráficas estrechas y anchas.
-- Crea una versión básica de la página sin aplicar estilos al contenido.
+El contenido es el aspecto más importante de cualquier sitio. Así que, diseñemos para el
+contenido y no permitamos que el diseño dicte el contenido. En esta guía, identificaremos
+el contenido que necesitamos primer, crearemos una estructura de página basada en este contenido y
+luego presentaremos la página en un simple diseño lineal que funcione bien en ventanas de visualización estrechas
+y anchas.
 
 
-Además, ya hemos pensando en una arquitectura de información y en un diseño generales tanto para las ventanas gráficas estrechas como para las anchas.
+### Crea la estructura de la página
 
-<img class="attempt-left" src="images/narrowviewport.png" alt="AI para ventanas gráficas estrechas">
-<img  class="attempt-right" src="images/wideviewport.png" alt="AI para ventanas gráficas anchas">
+Hemos identificado que necesitamos lo siguiente:
 
-<div class="clearfix"></div>
+1. Un área en la que se describa de forma detallada nuestro producto “CS256: Desarrollo de Web móvil”.
+2.  Un formulario para recopilar información de los usuarios interesados en nuestro producto.
+3.  Una descripción detallada y un video.
+4.  Imágenes del producto en acción.
+5.  Una tabla de datos con información para respaldar las afirmaciones.
 
+#### TL;DR {: .hide-from-toc }
+- Primero, identifica el contenido que necesitas.
+- Delimita la arquitectura de la información (AI) para ventanas de visualización estrechas y anchas.
+- Crea una vista preliminar de la página con contenido, pero sin estilo.
 
-Esta podría ser perfectamente la estructura básica de la página que usaremos durante el proyecto.
+También hemos creado una arquitectura de la información y un diseño preliminares para las
+ventanas de visualización ancha y estrecha.
+
+<div class="attempt-left">
+  <figure>
+    <img src="images/narrowviewport.png" alt="AI para la ventana de visualización estrecha">
+    <figcaption>
+      AI para la ventana de visualización estrecha
+     </figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/wideviewport.png" alt="AI para la ventana de visualización ancha">
+    <figcaption>
+      AI para la ventana de visualización ancha
+     </figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
+
+Esto se puede convertir fácilmente en las secciones generales de una página preliminar que
+usaremos durante el resto de este proyecto.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
-### Añadir contenido a la página
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addstructure.html){: target="_blank" .external }
 
-Ya hemos acabado con la estructura básica del sitio. Ya sabemos qué secciones necesitamos, qué contenido se mostrará en estas secciones y en qué lugar de la arquitectura de información general colocarlo. Ha llegado el momento de crear el sitio.
+### Agrega contenido a la página
 
-Note: Estilo vendrá después
+La estructura básica del sitio está completa. Tenemos conocimiento de las secciones que necesitamos, del
+contenido que queremos mostrar en esas secciones y de dónde ubicarlo en la arquitectura
+de la información general. Ahora podemos comenzar a compilar el sitio.
 
-#### Crear el título y el formulario
+Nota: Más adelante agregaremos el estilo
 
-El título y el formulario de notificación de solicitudes son componentes esenciales de nuestra página. El usuario debería verlos de forma inmediata.
+### Crea el título y el formulario
 
-En el título, basta con añadir un texto que describa el curso:
+El título y el formulario de notificación de solicitud son los componentes fundamentales de
+nuestra página y se le deben presentar al usuario de inmediato.
+
+En el título, ingresa texto sencillo para describir el curso:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
-También debemos rellenar el formulario.
-Se trata de un formulario simple que recopila los nombres de los usuarios, sus números de teléfono y la hora ideal para llamarlos.
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addheadline.html){: target="_blank" .external }
 
-Todos los formularios deberían contener etiquetas y marcadores de posición para facilitar que los usuarios se centren en determinados elementos, para que sepan lo que deben escribir en ellos y para que las herramientas de accesibilidad interpreten la estructura del formulario.  El atributo de nombre no solo envía el valor del formulario al servidor, sino que también se usa para dar indicaciones importantes al navegador sobre cómo rellenar automáticamente el formulario para el usuario.
+También debemos llenar el formulario.
+Será sencillo y en él se registrarán el nombre, la dirección de correo electrónico
+y el número de teléfono de los usuarios.
 
-Añadiremos tipos semánticos para que los usuarios puedan introducir contenido en un dispositivo móvil de forma rápida y sencilla.  Por ejemplo, al introducir un número de teléfono, el usuario debería ver un panel con números.
+Todos los formularios deben tener etiquetas y marcadores de posición para que los usuarios
+puedan, con mayor facilidad, enfocar los elementos, comprender qué deben contener y contribuir a que las
+herramientas de accesibilidad identifiquen la estructura del formulario.  El atributo name
+no solo envía el valor del formulario al servidor, sino también se usa para dar
+pautas importantes al navegador sobre cómo completar el formulario de forma automática para el usuario.
+
+Agregaremos tipos semánticos para que los usuarios puedan ingresar contenido en un
+dispositivo móvil de forma rápida y simple.  Por ejemplo, al ingresar un número de
+teléfono, el usuario solo debe ver un teclado de marcado.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
-#### Crear una sección con vídeos e información
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addform.html){: target="_blank" .external }
 
-La sección de contenido con vídeos e información debe contener más detalles.
-Tendrá una lista de viñetas con las características de nuestros productos, además de un marcador de posición en formato de vídeo que muestre cómo se usa nuestro producto.
+#### Crea la sección de video e información
+
+La sección de contenido de video e información es un poco más compleja.
+Tendrá una lista de viñetas con las características de nuestros productos y un
+marcador de posición de video que mostrará al usuario el producto en funcionamiento.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
-Los vídeos suelen usarse para describir contenido de manera más interactiva y presentar un producto o un concepto.
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addvideo.html){: target="_blank" .external }
 
-Es posible integrar vídeo en tu sitio siguiendo las recomendaciones siguientes:
+Los videos generalmente se usan para describir contenido de forma más interactiva y, con
+frecuencia, para ofrecer una demostración de un producto o concepto.
 
-*  Añade un atributo `controls` para facilitar a los usuarios la reproducción del vídeo.
-*  Añade una imagen `poster` para ofrecer una vista previa del contenido.
-*  Añade varios elementos <source> basados en formatos de vídeo compatibles.
-*  Añade texto de respaldo para que los usuarios puedan descargar el vídeo si no pudieran reproducirlo en la ventana.
+Si sigues las prácticas recomendadas, podrás integrar fácilmente video a tu sitio:
+
+*  Agrega un atributo `controls` para permitir que las personas puedan reproducir el video de forma sencilla.
+*  Agrega una imagen `poster` para proporcionar una vista previa del contenido.
+*  Agrega varios elementos `<source>` según los formatos de video compatibles.
+*  Agrega texto de referencia para que las personas descarguen el video si no pueden reproducirlo en la ventana.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" adjust_indentation="auto" %}
 </pre>
 
-#### Crear la sección de imágenes
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addvideo.html){: target="_blank" .external }
 
-Los sitios sin imágenes pueden resultar aburridos. Hay dos tipos de imágenes:
+#### Crea la sección de imágenes
 
-*  Imágenes de contenido: imágenes que se muestran junto al contenido del documento para presentar información adicional relacionada con el contenido.
-*  Imágenes con fines estéticos: imágenes que se usan para mejorar el aspecto del sitio; suelen ser imágenes de fondo, patrones y gradientes.  Trataremos este tema en el [artículo siguiente](#).
+Los sitios sin imágenes pueden ser un poco aburridos. Hay dos tipos de imágenes:
+
+*  Imágenes de contenido: imágenes alineadas en el documento que se usan
+   para proporcionar información adicional sobre el contenido.
+*  Imágenes estilísticas: imágenes que se usan para mejorar la apariencia del
+   sitio; generalmente son imágenes de fondo, patrones y gradientes.  Cubriremos
+   esto en la [siguiente sección](#make-it-responsive).
 
 La sección de imágenes de nuestra página es una colección de imágenes de contenido.
 
-Estas imágenes son importantes para darle significado a la página; son como las imágenes de los artículos de un periódico. Las imágenes que usamos son imágenes de los tutores del proyecto: Chris Wilson, Peter Lubbers y Sean Bennet.
+Las imágenes de contenido son fundamentales para transmitir el sentido de la página. Piensa en
+ellas como las imágenes que se usan en los artículos periodísticos.  Las imágenes que usamos son
+imágenes de los tutores del proyecto:  Chris Wilson, Peter Lubbers y Sean
+Bennet.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" adjust_indentation="auto" %}
 </pre>
 
-Las imágenes están configuradas para ajustar su tamaño al 100% del ancho de la pantalla. Esto es ideal en dispositivos con una ventana gráfica estrecha, y no tanto en aquellos con ventana gráfica ancha (como un ordenador).  Veremos este tema en la sección de diseño adaptable.
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addimages.html){: target="_blank" .external }
 
+Las imágenes están configuradas para que puedan agrandarse hasta ocupar el 100% del ancho de la pantalla. Esto funciona
+bien en dispositivos con una ventana de visualización estrecha, aunque no tan bien en los que tienen una
+ventana de visualización ancha (como una computadora de escritorio).  Abordaremos esto en la sección de
+diseño adaptable.
 
-Hay muchos usuarios que no pueden ver imágenes y usan tecnologías de apoyo como lectores de pantalla que procesan los datos de la página y leérselos al usuario.  Deberías asegurarte de que todas las imágenes de contenido tengan una etiqueta `alt` descriptiva para que el lector de pantalla pueda leer el texto de la etiqueta al usuario.
+Muchas personas no pueden ver imágenes y, a menudo, usan una tecnología
+de asistencia, como un lector de pantalla que analizará los datos de la página y se los
+transmitirá al usuario verbalmente.  Debes asegurarte de que todas tus imágenes de
+contenido tengan una etiqueta descriptiva `alt` que el lector de pantalla pueda reproducir
+para el usuario.
 
-Cuando añadas etiquetas `alt`, procura que el texto describa la imagen de la forma más concisa y completa posible.  Por ejemplo, en nuestra demostración, solo damos el siguiente formato al atributo: `Nombre: Rol`. De este modo, incluimos suficiente información para dejar claro que esta sección incluye información sobre los autores y su trabajo.
+Al agregar etiquetas `alt`, asegúrate de que el texto alt sea lo más conciso
+posible para describir la imagen por completo.  Por ejemplo, en nuestra demostración, simplemente
+aplicamos formato al atributo para que sea “Name: Role”; esto presenta suficiente información
+al usuario para que comprenda que esta sección es sobre los autores y
+su trabajo.
 
-#### Añadir la sección de datos tabulados
+#### Agrega la sección de datos tabulados
 
-La última sección no es más que una tabla que refleja estadísticas específicas del producto.
+La última sección es una tabla sencilla que se usa para mostrar las estadísticas específicas
+para un producto.
 
-Las tablas solo deben usarse para incluir datos tabulados, como matrices de información.
+Las tablas solo deben usarse para datos tabulares; es decir, matrices de información.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addtable.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
-#### Añadir un pie de página
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addtable.html){: target="_blank" .external }
 
-En la mayoría de los sitios es necesario un pie de página para incluir los términos y condiciones del servicio, texto legal y otro contenido que no deba estar en el área de navegación principal ni en el área de contenido principal de la página.
+#### Agrega un pie de página
 
-En nuestro sitio, solo enlazaremos a los términos y condiciones, a una página de contacto y a nuestros perfiles en los medios sociales.
+La mayoría de los sitios necesitan un pie de página para mostrar contenido como Términos y condiciones,
+exenciones de responsabilidad y otro contenido que no se haya previsto para el área de navegación principal
+o el área de contenido principal de la página.
+
+En nuestro sitio, solo crearemos un pie de página con un marcador de posición sencillo.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addcontent.html){: target="_blank" .external }
+
 ### Resumen
 
-Hemos creado un borrador del sitio y hemos identificado los elementos principales de su estructura.  Además, nos hemos asegurado de redactar todo el contenido relevante y de colocarlo en el lugar que más se adecúe a nuestros objetivos comerciales.
+Creamos el boceto del sitio e identificado todos los elementos
+estructurales más importantes.  También nos aseguramos de tener preparado todo el contenido
+correspondiente para satisfacer nuestras necesidades comerciales.
+
+<div class="attempt-left">
+  <figure>
+    <img src="images/content.png" alt="Contenido">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html">Contenido y estructura</a>
+    </figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img  src="images/narrowsite.png" alt="Sitio diseñado" style="max-width: 100%;">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html">Sitio final</a>
+    </figcaption>
+  </figure>
+</div>
+
+Notarás que el aspecto de la página es muy malo en este momento; esto es intencional.
+El contenido es el aspecto más importante de cualquier sitio, y necesitábamos asegurarnos de tener
+una arquitectura y densidad de información buenas y sólidas. Esta guía nos proporcionó una
+excelente base sobre la que seguiremos aprendiendo. En la próxima guía, aplicaremos estilo a nuestro contenido.
 
 
-<img class="attempt-left" src="images/content.png" alt="Contenido">
-<img  class="attempt-right" src="images/narrowsite.png" alt="">
 
-<div class="clearfix"></div>
+## Que sea adaptable {: #make-it-responsive }
 
-
-Verás que la página ahora mismo tiene un aspecto horrible. Lo hemos hecho a propósito. 
-El contenido es el aspecto más importante de cualquier sitio, y debíamos asegurarnos de contar con una arquitectura de información completa y abundante. Esta guía nos ha proporcionado los cimientos necesarios para crear nuestro sitio. Aplicaremos estilos a nuestro contenido en la siguiente guía.
-
+Se puede acceder a la web desde una gran variedad de dispositivos, desde teléfonos de pantalla pequeña
+hasta televisiones de pantalla enorme. Cada dispositivo presenta sus propios
+beneficios y restricciones únicos. Como programador web, se espera que
+soportes todas las variedades de dispositivos.
 
 
+Estamos compilando un sitio que funcione en diferentes pantallas y tipos de
+dispositivos. Hemos creado la arquitectura de la información de la página y creado una 
+estructura básica. En esta sección, tomaremos nuestra estructura básica con
+contenido y la convertiremos en una hermosa página que sea receptiva en una gran 
+cantidad de tamaños de pantalla.
 
+Siguiendo los principios de desarrollo web con prioridad en los dispositivos móviles, comenzamos con una 
+ventana de visualización estrecha &mdash; similar a la de un teléfono móvil &mdash; y desarrollaremos 
+primero para ese tipo de experiencia. Luego ascendemos a clases de dispositivos más grandes. Podemos hacerlo
+generando una ventana de visualización más ancha y tomando una decisión sobre si el
+diseño luce bien.
 
-## Ser adaptable 
-
-
-
-
-Se puede acceder a la Web desde una amplia gama de dispositivos, desde teléfonos de pantalla pequeña a televisiones de grandes dimensiones. Cada dispositivo presenta ciertas ventajas propias, pero también limitaciones. Como desarrollador web, el público espera que crees sitios compatibles con todas las gamas de dispositivos.
-
-
-Vamos a crear un sitio que funciona en varios tamaños de pantalla y tipos de dispositivo. En el [artículo anterior](#), creamos la arquitectura de información de la página y creamos una estructura básica.
-En esta guía, vamos a utilizar esa estructura básica con contenido y la vamos a convertir en una atractiva página que se adapte a un gran número de tamaños de pantalla.
-
-
-<figure class="attempt-left">
-  <img  src="images/content.png" alt="Contenido">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Contenido y estructura </a> </figcaption>
-</figure>
-<figure class="attempt-right">
-  <img  src="images/narrowsite.png" alt="Designed site">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Sitio finalizado </a> </figcaption>
-</figure>
-
-<div class="clearfix"></div>
-
-Siguiendo los principios del desarrollo web Mobile First, vamos a empezar con una ventana gráfica estrecha (parecida a un dispositivo móvil) y vamos a desarrollar primero para esa experiencia.
-Después ampliaremos el tamaño para dispositivos más grandes.
-Para ello, ampliaremos el ancho de la ventana gráfica y decidimos si el diseño nos satisface.
-
-Antes hemos creado un par de diseños diferentes de alto nivel que definen la visualización del contenido. Ahora tenemos que definir que la página se adapte a esos diferentes diseños.
-La forma de definirlo es decidir dónde queremos colocar los puntos de interrupción (un punto en el que el diseño y el estilo cambian) en función del modo en el que el contenido se adapta al tamaño de pantalla.
+Anteriormente, creamos un par de diseños diferentes de alto nivel para establecer cómo se debe
+mostrar nuestro contenido. Ahora necesitamos adaptar nuestra página a esos diferentes diseños.
+Para esto, debemos decidir dónde ubicar los puntos de interrupción (un punto
+donde el diseño y los estilos cambian) en función de cómo se adapta el contenido al
+tamaño de la pantalla.
 
 ### TL;DR {: .hide-from-toc }
-- Utiliza siempre una ventana gráfica.
-- Empieza siempre con una ventana gráfica estrecha y después aumenta el tamaño.
-- Basa los puntos de interrupción en los momentos en los que es necesario adaptar el contenido.
-- Crea una visión de nivel alto de tu diseño con los puntos de interrupción principales.
+- Usa siempre una ventana de visualización.
+- Comienza siempre con una ventana de visualización estrecha y luego agrándala.
+- Basa tus puntos de interrupción cuando necesites adaptar contenido.
+- Crea una vista de alto nivel de tu diseño en los principales puntos de interrupción.
 
 
-### Añadir una ventana gráfica
+### Agregar una ventana de visualización
 
-Aunque la página sea básica, siempre **tienes** que incluir una metaetiqueta de ventana gráfica.
-La ventana gráfica es el componente más importante que necesitas para crear experiencias multidispositivo.
-Sin ella, el sitio no funcionará bien en un dispositivo móvil.
+Incluso para una página básica, siempre **tienes** que incluir la metaetiqueta de una ventana de visualización.
+La ventana de visualización es el componente más crítico que necesitas para compilar experiencias
+multidispositivo. Sin ella, tu sitio no funcionará bien en un dispositivo móvil.
 
-La ventana gráfica indica al navegador que el tamaño de la página se tiene que adaptar a la pantalla.  Puede que haya muchas configuraciones diferentes que puedes especificar para que la ventana gráfica controle la visualización de la página.  De forma predeterminada, recomendamos esta configuración:
+La ventana de visualización indica al navegador que se debe modificar el tamaño de la página para que quepa
+en la pantalla. Existen muchas configuraciones diferentes que puedes especificar para
+tu ventana de visualización a fin de controlar la visualización de la página.  Como opción predeterminada, te recomendamos la siguiente:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
-La ventana gráfica reside en el encabezamiento del documento y solo se tiene que declarar una vez.
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/viewport.html){: target="_blank" .external }
 
-### Aplicar un estilo sencillo 
+La ventana de visualización se encuentra en el encabezado del documento y solo se debe declarar una vez.
 
-Nuestro producto y nuestra empresa ya tienen unas directrices de marca y de fuente muy específicas indicadas en una guía de estilo.
+### Aplica un estilo sencillo
 
-#### Guía de estilo 
+Nuestro producto y nuestra empresa ya tienen pautas de marca y fuente que se proporcionan
+en una guía de estilo.
 
-Una guía de estilo es una forma práctica de obtener una explicación de nivel alto de la representación visual de la página y, además, ayuda a garantizar la homogeneidad del diseño.
+#### Guía de estilo
 
-##### Color
+Una guía de estilo es una manera útil de comprender en detalle la representación visual
+de la página y te ayuda a asegurarte de mantener la uniformidad en todo el diseño.
+
+#### Colores
 
 <div class="styles" style="font-family: monospace;">
   <div style="background-color: #39b1a4">#39b1a4</div>
@@ -240,18 +323,22 @@ Una guía de estilo es una forma práctica de obtener una explicación de nivel 
   <div style="background-color: #dc4d38">#dc4d38</div>
 </div>
 
-#### Añadir imágenes estilísticas
+#### Agrega imágenes estilísticas
 
-En la guía anterior, hemos añadido imágenes llamadas `imágenes de contenido`.  Eran imágenes importantes para la narrativa de nuestro producto.  Las imágenes estilísticas son imágenes que no forman parte del contenido central pero que añaden un toque visual o ayudan a guiar la atención del usuario a una parte específica del contenido.
+<img  src="images/narrowsite.png" alt="Sitio diseñado"  class="attempt-right" />
 
-Un buen ejemplo sería una imagen de título para el contenido situado en la mitad superior de la página. A menudo se utiliza para atraer al usuario para que obtenga más información del producto.
+En la guía anterior, agregamos imágenes llamadas “imágenes de contenido”.  Estas eran
+imágenes importantes para la narrativa de nuestro producto.  Las imágenes estilísticas
+son imágenes que no se necesitan como parte del contenido principal, pero agregan un toque visual
+o ayudan a atraer la atención del usuario hacia un elemento de contenido específico.
 
+Un buen ejemplo de esto es una imagen de título para el contenido de la “mitad superior de la página”.  Generalmente,
+se usa para incentivar al usuario a leer más acerca del producto.
 
-<img  src="images/narrowsite.png" alt="Sitio diseñado">
+Incluirlas puede ser muy sencillo. En nuestro caso, será el fondo del
+encabezado y lo aplicaremos mediante CSS sencilla.
 
-
-Incluirlas puede ser muy sencillo. En nuestro caso, va a hacer de fondo del encabezado y la vamos a aplicar con un CSS sencillo.
-
+<div style="clear:both;"></div>
 
     #headline {
       padding: 0.8em;
@@ -262,141 +349,184 @@ Incluirlas puede ser muy sencillo. En nuestro caso, va a hacer de fondo del enca
     }
     
 
-Hemos elegido una imagen de fondo sencilla que está difuminada para que no interfiera con el contenido. Además, hemos establecido que ocupe todo el elemento, así se amplía sin modificar la relación de aspecto.
+Escogimos una imagen de fondo simple que se ve borrosa de modo que no se quite
+del contenido, y la configuramos para que `cover` todo el elemento; de ese modo, cuando
+se estira mantiene la relación de aspecto correcta.
 
-<div class="clearfix"></div>
 
-### Establezca su primer punto de interrupción
+### Configura el primer punto de interrupción
 
-El diseño empieza a perder calidad a los 600 px de ancho.  En nuestro caso, la longitud de la línea va a ser superior a diez palabras (la longitud de lectura óptima) y conviene cambiarla llegada esa cifra.
+El diseño comienza a verse mal a los 600 píxeles de ancho aproximadamente.  En nuestro caso, la extensión de
+la línea supera las 10 palabras (extensión de lectura óptima), y ahí
+es donde deseamos cambiarla.
 
 <video controls poster="images/firstbreakpoint.png" style="width: 100%;">
   <source src="videos/firstbreakpoint.mov" type="video/mov"></source>
   <source src="videos/firstbreakpoint.webm" type="video/webm"></source>
-  <p>Lo sentimos, pero tu navegador no permite reproducir vídeo.
-     <a href="videos/firstbreakpoint.mov">Descarga el vídeo</a>.
+  <p>Lo sentimos, tu navegador no admite video.
+     <a href="videos/firstbreakpoint.mov">Descargar el video</a>.
   </p>
 </video>
 
-Parece que los 600 px es un buen sitio para crear el primer punto de interrupción, ya que nos proporcionará el punto de mira para recolocar elementos y que así se ajusten mejor a la pantalla.  Para crearlo, podemos utilizar una tecnología llamada [consultas multimedia](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
-
+600 px parece ser un buen lugar para crear nuestro primer punto de interrupción, ya que 
+nos brindará alcance para volver a ubicar los elementos para que entren mejor en la pantalla.
+Podemos hacerlo usando una tecnología llamada [Consultas de medios](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries).
 
     @media (min-width: 600px) {
     
     }
+    
+Una pantalla más grande ofrece más espacio; por lo tanto, existe más flexibilidad con respecto a cómo
+puede mostrarse el contenido.
 
+Nota: No necesitas mover todos los elementos a la vez; puedes realizar ajustes más pequeños, si fuera necesario.
 
-En las pantallas de mayor tamaño hay más espacio, así que también hay más flexibilidad en cuanto a la forma de mostrar contenido.
+En el contexto de la página para nuestro producto, al parecer deberemos hacer
+lo siguiente:
 
-
-Note: No tienes que mover todos los elementos a la vez, sino que, si es necesario, puedes hacer ajustes menores.
-
-En el contexto de nuestra página de producto, parece necesario:
-
-*  restringir el ancho máximo del diseño,
-*  modificar el espaciado interno de elementos y disminuir el tamaño del texto,
-*  mover el formulario para que esté alineado con el contenido de encabezado,
-*  establecer que el vídeo flote alrededor del contenido,
-*  reducir el tamaño de las imágenes y definir que aparezcan según una cuadrícula más atractiva.
+*  restringir el ancho máximo del diseño;
+*  modificar el relleno de los elementos y reducir el tamaño del texto;
+*  mover el formulario para que flote en línea con el contenido del encabezado;
+*  hacer que el video flote alrededor del contenido;
+*  reducir el tamaño de las imágenes y hacer que aparezcan en una cuadrícula más atractiva.
 
 
 ### Restringir el ancho máximo del diseño
 
-Hemos decidido utilizar solo dos diseños principales: una ventana gráfica estrecha y una ventana gráfica ancha, de modo que nuestro proceso de creación se simplifica en gran medida.
+Decidimos tener solo dos diseños principales: una ventana de visualización estrecha y una
+ancha, lo cual simplifica notablemente nuestro proceso de compilación.
 
-También hemos decidido crear secciones de sangrado completo en la ventana gráfica estrecha que sigan siendo de sangrado completo en la ventana gráfica ancha.  Esto quiere decir que debemos restringir el ancho máximo de la pantalla para que el texto y los párrafos no se prolonguen en una sola línea larga en las pantallas de anchura extrema.  Hemos decidido que ese punto sean los 800 px aproximadamente.
+También decidimos crear secciones sin borde en la ventana de visualización estrecha que
+continuarán sin bordes en la ventana de visualización ancha.  Esto significa que debemos limitar el
+ancho máximo de la pantalla de modo que el texto y los párrafos no se extiendan en una
+sola línea larga en las pantallas ultraanchas.  Decidimos que este punto será de
+aproximadamente 800 píxeles.
 
-Para lograrlo, tenemos que restringir el ancho y centrar los elementos.  Tenemos que crear un contenedor alrededor de cada sección principal y aplicar un atributo `margin: auto`. Así la pantalla podrá crecer pero el contenido seguirá centrado y a un tamaño máximo de 800 px.
+Para lograr esto, debemos limitar el ancho y centrar los elementos.  Debemos
+crear un contenedor alrededor de cada sección principal y aplicar un `margin:
+auto`.  Esto permitirá que se agrande la pantalla, pero el contenido se mantendrá centrado
+y en un tamaño máximo de 800 píxeles.
 
-El contenedor será un atributo `div` sencillo con la forma siguiente:
+El contenedor será un `div` simple con la siguiente forma:
 
-    <div class="container">
-    </div>
-
+    <div class="container">...</div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/constrainwidth.html" region_tag="containerhtml" adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/constrainwidth.html" region_tag="container" adjust_indentation="auto" %}
 </pre>
 
-### Modificar el espaciado interno y reducir el tamaño de texto
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/constrainwidth.html){: target="_blank" .external }
 
-En la ventana gráfica estrecha no tenemos mucho espacio para mostrar contenido, por lo que el tamaño y el peso de la tipografía se suelen reducir de forma drástica para que se ajusten a la pantalla.
+### Modificar el relleno y reducir el tamaño del texto
 
-Si la ventana gráfica es más ancha, tenemos que tener en cuenta que es más probable que el usuario se encuentre ante una pantalla más grande pero más alejado.  Para incrementar la facilidad de lectura del contenido, podemos aumentar el tamaño y el peso de la tipografía, además de modificar el espaciado interno para resaltar ciertas áreas.
+En la ventana de visualización estrecha, no tenemos mucho espacio para mostrar contenido, por lo que
+el tamaño y el peso de la tipografía a menudo se reducen drásticamente para ajustarse a la
+pantalla.
 
-En nuestra página de producto, para aumentar el espaciado interno de los elementos de la sección, estableceremos que el ancho del contenido siga estando a un 5%.  También aumentaremos el tamaño de los encabezados de cada sección.
+Con una ventana de visualización más grande, debemos tener en cuenta que es más probable que el usuario use
+una pantalla más grande a mayor distancia.  Para facilitar la lectura del
+contenido, podemos aumentar el tamaño y el volumen de la tipografía, y también podemos
+modificar el relleno para lograr que se destaquen más determinadas áreas.
+
+En nuestra página de productos, aumentaremos el relleno de los elementos de la sección
+configurándola para que conserve un 5% del ancho.  También aumentaremos el tamaño de
+los encabezados para cada una de las secciones.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" adjust_indentation="auto"%}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/alterpadding.html" region_tag="padding" adjust_indentation="auto" %}
 </pre>
 
-### Adaptar elementos a una ventana gráfica ancha
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/alterpadding.html){: target="_blank" .external }
 
-Nuestra ventana gráfica estrecha era una pantalla lineal apilada.  Cada sección importante y el contenido incluido se mostraban en orden de arriba abajo.
+### Adaptar elementos a la ventana de visualización ancha
 
-Las ventanas gráficas anchas nos proporcionan espacio adicional que podemos utilizar para mostrar el contenido de forma óptima para la pantalla en cuestión.  Para nuestra página de producto, esto quiere decir que, de acuerdo con nuestra arquitectura de información, podemos:
+Nuestra ventana de visualización estrecha era una visualización lineal apilada.  Cada sección principal y el contenido
+dentro de ellas se exhibían en orden de arriba abajo.
 
-*  mover el formulario alrededor de la información del encabezado,
-*  colocar el vídeo a la derecha de los puntos clave,
-*  titular las imágenes,
-*  ampliar la tabla.
+Una ventana de visualización ancha nos da más espacio destinado a mostrar el contenido de forma óptima
+para esa pantalla.  Para nuestra página de productos, esto significa que de acuerdo con nuestra AI podemos:
+
+*  mover el formulario alrededor de la información del encabezado;
+*  ubicar el video a la derecha de los puntos claves;
+*  disponer las imágenes en mosaico;
+*  expandir la tabla.
 
 #### Hacer flotar el elemento de formulario
 
-Al tener una ventana gráfica estrecha, tenemos disponible mucho menos espacio horizontal para colocar con comodidad los elementos de la pantalla.
+La ventana de visualización estrecha implica que contamos con mucho menos espacio horizontal disponible para
+ubicar elementos en la pantalla de forma cómoda.
 
-Para utilizar el espacio horizontal de la pantalla de forma más eficiente, tenemos que romper el flujo lineal del encabezado y mover el formulario y la lista para que estén uno al lado del otro.
+Para usar el espacio horizontal de la pantalla de forma más eficaz, debemos separar el
+flujo lineal del encabezado y mover el formulario y la lista de modo que
+queden a la par.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/floattheform.html" region_tag="formfloat" adjust_indentation="auto" %}
 </pre>
 
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" adjust_indentation="auto" %}
-</pre>
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/floattheform.html){: target="_blank" .external }
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
   <source src="videos/floatingform.mov" type="video/mov"></source>
   <source src="videos/floatingform.webm" type="video/webm"></source>
-  <p>Lo sentimos, pero tu navegador no permite reproducir vídeo.
-     <a href="videos/floatingform.mov">Descarga el vídeo</a>.
+  <p>Lo sentimos, tu navegador no admite video.
+     <a href="videos/floatingform.mov">Descargar el video</a>.
   </p>
 </video>
 
-#### Hacer flotar el elemento de vídeo
+#### Hacer flotar el elemento de video
 
-El vídeo de la interfaz de ventana gráfica estrecha está diseñado para que ocupe el ancho total de la pantalla y se sitúe después de la lista de funciones clave. En una ventana gráfica ancha, el vídeo se amplía demasiado y parece incorrecto cuando se sitúa junto a nuestra lista de funciones.
+El video de la interfaz de la ventana de visualización estrecha está diseñado para ocupar el ancho total de
+la pantalla y ubicarlo después de la lista de funciones claves. En una ventana de visualización ancha,
+el video se agrandará demasiado y no se verá bien cuando se disponga junto
+a nuestra lista de funciones.
 
-El elemento de vídeo se tiene que sacar del flujo vertical de la ventana gráfica estrecha y se tiene que mostrar en paralelo a la lista con viñetas de contenido de una ventana gráfica ancha.
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" adjust_indentation="auto" %}
-</pre>
-
-#### Titular las imágenes
-
-Las imágenes de la interfaz de ventana gráfica estrecha (sobre todo en dispositivos móviles) están configuradas para que ocupen el ancho total de la pantalla y se apilen en vertical.  Este diseño no se amplía bien en una ventana gráfica ancha.
-
-Para que el aspecto de las imágenes sea correcto, se amplían un 30% del ancho del contenedor y se colocan en horizontal (en vez de en vertical en la ventana gráfica ancha). También vamos a añadir algunos radios de borde y sombra del cuadro para que las imágenes sean más atractivas.
-
-<img src="images/imageswide.png" style="width:100%">
+El elemento de video debe desplazarse del flujo vertical de la ventana de visualización
+estrecha y mostrarse junto a la lista de viñetas de contenido en una ventana de visualización ancha.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/floatthevideo.html" region_tag="floatvideo" adjust_indentation="auto" %}
 </pre>
 
-#### Definir que las imágenes se adapten a los puntos por pulgada
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/floatthevideo.html){: target="_blank" .external }
 
-Si usas imágenes, ten en cuenta el tamaño de la ventana gráfica y la densidad de la pantalla.
+#### Disponer las imágenes en mosaico
 
-La Web está creada para pantallas de 96 ppp.  Con la introducción de los dispositivos móviles, hemos visto cómo aumentaba en gran medida la densidad de píxeles de las pantallas, por no hablar las pantallas de clase Retina de los portátiles.  Por eso, las imágenes codificadas para 96 ppp suelen mostrarse mal en los dispositivos con ppp alto.
+<img src="images/imageswide.png" class="attempt-right">
 
-Tenemos una solución que aún no se ha extendido.
-En el caso de los navegadores compatibles, puedes mostrar una imagen de alta densidad en una pantalla de alta densidad,
+Las imágenes de la interfaz de la ventana de visualización estrecha (mayormente en dispositivos móviles) están configuradas
+para ocupar el ancho total de la pantalla y se apilan verticalmente.  Esto no se ajusta bien a escala
+en una ventana de visualización ancha.
+
+Para lograr que las imágenes se vean correctamente en una ventana de visualización ancha, se ajustan al 30%
+del ancho del contenedor y se exhiben horizontalmente (en lugar de verticalmente
+en la vista estrecha). También agregaremos radio de borde y sombra de cuadro para que
+las imágenes se vean más atractivas.
+
+<div style="clear:both;"></div>
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/tiletheimages.html" region_tag="tileimages" adjust_indentation="auto" %}
+</pre>
+
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/tiletheimages.html){: target="_blank" .external }
+
+#### Hacer que las imágenes sean sensibles a los PPP
+
+Cuando uses imágenes, ten en cuenta el tamaño de la ventana de visualización y la densidad de la
+pantalla.
+
+La Web fue creada para pantallas de 96 ppp.  Con la introducción de los dispositivos móviles,
+observamos un aumento enorme en la densidad de píxeles de las pantallas, por no mencionar las
+pantallas de clase Retina de las laptops.  Las imágenes codificadas para 96 ppp
+generalmente tienen un muy mal aspecto en dispositivos con valores altos de ppp.
+
+Tenemos una solución que aún no se ha adoptado ampliamente. En navegadores que la
+soportan, puedes mostrar una imagen de alta densidad en una pantalla de alta densidad.
 
 
     <img src="photo.png" srcset="photo@2x.png 2x">
@@ -404,37 +534,58 @@ En el caso de los navegadores compatibles, puedes mostrar una imagen de alta den
 
 #### Tablas
 
-Es muy difícil mostrar bien las tablas en los dispositivos que tienen una ventana gráfica estrecha y, por eso, necesitan una consideración especial.
+Es muy difícil reproducir tablas correctamente en dispositivos con ventana de visualización estrecha, por lo que se les debe dar
+consideración especial.
 
-Te recomendamos que, en una ventana gráfica estrecha, dividas la tabla en dos filas y pases el encabezado y las celdas a una fila para crear el columnado.
+Te recomendamos que en una ventana de visualización estrecha transformes tu tabla convirtiendo
+cada fila en un bloque de pares de clave/valor (donde la clave sea lo que era
+anteriormente el encabezado de la columna y el valor aún sea el valor de la celda).
+Por suerte, no es tan difícil. Primero, anota cada elemento `td` con
+el encabezado correspondiente como un atributo de datos. (Esto no podrá
+visualizarse hasta que agregues más CSS).
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/updatingtablehtml.html" region_tag="table-tbody" adjust_indentation="auto" %}
+</pre>
+
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/updatingtablehtml.html){: target="_blank" .external }
+
+Ahora solo necesitamos agregar la CSS para ocultar el `thead` original y, en su lugar, mostrar
+las etiquetas `data-th` usando un seudoelemento `:before`. Como resultado, se obtendrá la
+experiencia para diferentes dispositivos que verás en el siguiente video.
 
 <video controls poster="images/responsivetable.png" style="width: 100%;">
   <source src="videos/responsivetable.mov" type="video/mov"></source>
   <source src="videos/responsivetable.webm" type="video/webm"></source>
-  <p>Lo sentimos, pero tu navegador no permite reproducir vídeo.
-     <a href="videos/responsivetable.mov">Descarga el vídeo</a>.
+  <p>Lo sentimos, tu navegador no admite video.
+     <a href="videos/responsivetable.mov">Descargar el video</a>.
   </p>
 </video>
 
-En nuestro sitio, hemos tenido que crear un punto de interrupción adicional para el contenido de la tabla.
-Como al crear primero para un dispositivo móvil es más difícil deshacer los estilos aplicados, tenemos que seccionar el CSS de tablas de la ventana gráfica estrecha a partir del CSS de la ventana gráfica ancha.
-Así obtenemos una interrupción clara y constante.
+En nuestro sitio, tuvimos que crear un punto de interrupción adicional solo para el contenido de la tabla.
+Cuando compilas primero para un dispositivo móvil, es más difícil deshacer los estilos aplicados,
+así que tenemos que separar el CSS de la tabla de la ventana de visualización estrecha del css de la ventana de visualización ancha.
+Esto nos brinda una clara y consistente interrupción.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" adjust_indentation="auto" %}
 </pre>
 
-### Conclusión
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html){: target="_blank" .external }
 
-**ENHORABUENA.** Para cuando leas esto, habrás creado tu primera página de destino sencilla para el producto que funcione en una amplia gama de dispositivos, factores de formulario y tamaños de pantalla.
+## Resumen
 
-Si sigues estas directrices, empezarás con buen pie:
+Éxito: Para cuando leas esto, habrás creado tu
+primera página de destino de producto simple que funciona en una gran variedad de dispositivos,
+factores de forma y tamaños de pantalla.
 
-1.  Crea una arquitectura de información básica y entiende el contenido antes de crear código.
-2.  Configura siempre una ventana gráfica.
-3.  Crea tu experiencia básica a partir del método de `dispositivo móvil primero`.
-4.  Cuando ya tengas la experiencia para dispositivos móviles, incrementa el ancho de la pantalla hasta que no se vea bien y establece ahí el punto de interrupción.
-5.  Repite los pasos.
+Si sigues estas pautas, empezarás con el pie derecho:
+
+1.  Crea una AI básica y comprende tu contenido antes de codificar.
+2.  Siempre establece una ventana de visualización.
+3.  Crea tu experiencia base sobre un acercamiento que priorice los dispositivos móviles.
+4.  Una vez que tengas tu experiencia móvil, aumenta el ancho de la pantalla hasta que no se vea bien y establece allí tu punto de interrupción.
+5.  Continúa iterando.
 
 
-
+{# wf_devsite_translation #}

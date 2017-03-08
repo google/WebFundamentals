@@ -1,36 +1,46 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Aprenda a colocar animaciones entre dos vistas en sus aplicaciones.
+description: Aprende a animar la transición entre dos vistas en tus apps.
 
-{# wf_updated_on: 2014-10-21 #}
+{# wf_updated_on: 2016-08-23 #}
 {# wf_published_on: 2014-08-08 #}
 
-# Animaciones entre vistas {: .page-title }
+# Animaciones envertre vistas {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-
-Muchas veces querrá llevar a los usuarios de una vista a la otra dentro de su aplicación, ya sea de una vista de lista a una vista de detalles, o mostrar una barra lateral de navegación. Las animaciones entre estas vistas resultan eficientes para mantener la atención del usuario y agregarle incluso más vida a sus proyectos.
+En muchos casos, quieres llevar a los usuarios de una vista a la otra dentro de tu app, ya sea desde una vista de lista a una de detalles, o bien para mostrar una barra lateral de navegación. Las animaciones entre estas vistas mantienen la atención del usuario y agregan incluso más vida a tus proyectos.
 
 ### TL;DR {: .hide-from-toc }
-- Utilice transiciones para desplazarse entre las vistas; evite utilizar `left`, `top` u otras propiedades que desencadenen diseños.
-- Asegúrese de que las animaciones que utilice sean ingeniosas y breves.
-- Tenga en cuenta que las animaciones y los diseños pueden cambiar a medida que aumentan los tamaños de las pantallas; lo que funciona correctamente en una pantalla más chica puede verse extraño en un contexto de escritorio.
+* Usa transiciones para desplazarte entre las vistas. Evita usar `left`, `top` u otras propiedades que desencadenen diseños.
+* Asegúrate de que las animaciones que uses sean rápidas y de corta duración.
+* Ten en cuenta cómo pueden cambiar las animaciones y los diseños a medida que aumenten los tamaños de las pantallas. Lo que funciona correctamente en una pantalla más chica puede verse extraño en un contexto de escritorio.
 
+La forma en la que estas vistas se ven y se comportan depende del tipo de vistas con el que trabajes. Por ejemplo, animar una superposición modal sobre una vista debería ser una experiencia diferente a la transición entre una vista de lista y una de detalles.
 
-El aspecto y el comportamiento de las transiciones de esta vista dependerán, en mayor medida, del tipo de vistas con las que está trabajando; por ejemplo, animar una superposición modal sobre una vista debe ser una experiencia diferente de la de realizar una transición entre una vista de lista y una vista de detalles.
+Éxito: Intenta mantener 60 fps para todas tus animaciones. De ese modo, tus usuarios no verán animaciones entrecortadas que interfieran con su experiencia. Asegúrate de que todos los elementos de las animaciones estén configurados con `will-change` para todo lo que desees modificar mucho antes de que se inicie la animación. Para las transiciones de vistas, es muy probable que desees usar `will-change: transform`.
 
-Note: El objetivo debe ser mantener 60 fotograma/s para todas las animaciones. De ese modo, sus usuarios no experimentarán animaciones entrecortadas que los saquen de la experiencia. Mucho antes de que se inicie la animación, asegúrese de que will-change esté establecido en todos los elementos de las animaciones para todo lo que desea modificar. Para las transiciones de vistas, es muy probable que desee utilizar `will-change: transform`.
+## Usa traslaciones para desplazarte entre vistas
 
-## Use traslaciones para desplazarse entre vistas
+<div class="attempt-left">
+  <figure>
+    <img src="images/view-translate.gif" alt="Traducción entre dos vistas" />
+  </figure>
+</div>
 
-Para hacerlo simple, supongamos que hay dos vistas: una vista de lista y una vista de detalles. Cuando el usuario presione un elemento de la lista que se encuentra dentro de la vista de lista, aparecerá la vista de detalles y desaparecerá la vista de lista.
+Para hacerlo más simple, piensa que existen dos vistas: una vista de lista y una de detalles. Cuando el usuario presione un elemento de la lista que se encuentre dentro de la vista de lista, aparecerá la vista de detalles y desaparecerá la vista de lista.
 
-<img src="images/view-translate.gif" alt="Translating between two views" />
+<div style="clear:both;"></div>
 
-Para lograr este efecto, necesitará un contenedor para ambas vistas con el parámetro `overflow: hidden` configurado. De este modo, las dos vistas pueden estar dentro del contenedor una al lado de la otra, sin mostrar barras de desplazamiento horizontal, y cada vista se puede deslizar de lado a lado dentro del contenedor según sea necesario.
+<div class="attempt-right">
+  <figure>
+    <img src="images/container-two-views.svg" alt="Jerarquía de vistas." />
+  </figure>
+</div>
 
-<img src="images/container-two-views.svg" alt="View hierarchy." />
+A fin de lograr este efecto, necesitas un contenedor para ambas vistas con el parámetro `overflow: hidden` configurado. De este modo, las dos vistas pueden estar dentro del contenedor una al lado de la otra, sin mostrar barras de desplazamiento horizontal, y cada vista se puede deslizar de lado a lado dentro del contenedor según sea necesario.
+
+<div style="clear:both;"></div>
 
 La CSS para el contenedor es la siguiente:
 
@@ -43,7 +53,7 @@ La CSS para el contenedor es la siguiente:
     }
     
 
-La posición del contenedor se establece como `relative`. Esto significa que cada vista que se coloque dentro del contenedor se puede posicionar completamente en la esquina superior izquierda y, luego, mover de un lado a otro mediante el parámetro transforms. Este enfoque es mejor para el rendimiento que si se utiliza la propiedad `left` (ya que esta propiedad desencadena diseños y pinturas), y generalmente es más fácil de racionalizar.
+La posición del contenedor se establece como `relative`. Esto significa que cada vista que se encuentre dentro de él puede posicionarse de manera absoluta en la esquina superior izquierda y, luego, moverse de un lado a otro mediante transformaciones. Este enfoque es mejor para el rendimiento que el uso de la propiedad `left` (ya que esta propiedad desencadena diseños y pinturas) y generalmente es más fácil de racionalizar.
 
 
     .view {
@@ -59,7 +69,7 @@ La posición del contenedor se establece como `relative`. Esto significa que cad
     }
     
 
-Si se agrega una `transition` en la propiedad `transform`, se logra un buen efecto de desplazamiento. Para lograr una linda apariencia, se recomienda utilizar una curva `cubic-bezier` personalizada, la cual mencionamos en la [guía de Aceleración personalizada](custom-easing.html).
+Si se agrega un elemento `transition` en la propiedad `transform`, se logra un efecto de desplazamiento atractivo. Para darle una sensación agradable, se usa una curva `cubic-bezier` personalizada, que mencionamos en la [guía de aceleración personalizada](custom-easing).
 
 
     .view {
@@ -69,7 +79,7 @@ Si se agrega una `transition` en la propiedad `transform`, se logra un buen efec
     }
     
 
-La vista que no se muestra en la pantalla se debe desplazar hacia la derecha, por lo que, en este caso, es necesario mover la vista de detalles:
+La vista que no se muestra en la pantalla se debe desplazar hacia la derecha, por lo cual en este caso es necesario mover la vista de detalles:
 
 
     .details-view {
@@ -78,7 +88,7 @@ La vista que no se muestra en la pantalla se debe desplazar hacia la derecha, po
     }
     
 
-Ahora, se necesita una pequeña cantidad de JavaScript para manipular las clases. Esto hará que se alternen las clases apropiadas en las vistas.
+Ahora se necesita poco lenguaje JavaScript para manipular las clases. Esto hará que se alternen las clases apropiadas en las vistas.
 
 
     var container = document.querySelector('.container');
@@ -93,12 +103,12 @@ Ahora, se necesita una pequeña cantidad de JavaScript para manipular las clases
       container.classList.toggle('view-change');
     }
     
-    // When you click on a list item bring on the details view.
+    // When you click a list item, bring on the details view.
     for (var i = 0; i < listItems.length; i++) {
       listItems[i].addEventListener('click', onViewChange, false);
     }
     
-    // And switch it back again when you click on the back button
+    // And switch it back again when you click the back button
     backButton.addEventListener('click', onViewChange);
     
 
@@ -115,19 +125,27 @@ Finalmente, agregamos las declaraciones de CSS para esas clases.
       transform: translateX(0);
     }
     
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html){: target="_blank" .external }
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html">Ver el ejemplo</a>
+Puedes expandir esto para que abarque varias vistas y el concepto básico seguirá siendo el mismo; cada vista no visible debe estar fuera de la pantalla y aparecer cuando sea necesario, y la pantalla que se muestra actualmente debe dejar de visualizarse.
 
-Podría expandir esto para que abarcara múltiples vistas, y el concepto básico seguiría siendo el mismo: cada vista no visible debe estar fuera de la pantalla y debe aparecer cuando sea necesario, y la pantalla que se muestra actualmente debe dejar de mostrarse.
+Advertencia: Establecer este tipo de jerarquía entre navegadores puede ser todo un desafío. Por ejemplo, en iOS se requiere una propiedad adicional de CSS: <code>-webkit-overflow-scrolling: touch</code>, para ‘volver a habilitar’ el desplazamiento, pero esto no permite tener control sobre el eje en el que se aplica, tal como se puede hacer con la propiedad estándar de desbordamiento. ¡Asegúrate de probar la implementación en diferentes dispositivos!
 
-Note: El uso de este tipo de jerarquía entre exploradores puede ser todo un desafío. Por ejemplo, en iOS se requiere una propiedad adicional de CSS: <code>-webkit-overflow-scrolling: touch</code> para ‘volver a habilitar’ el desplazamiento, pero esto no permite tener control sobre el eje en el que se aplica, tal como se puede hacer con la propiedad estándar de desbordamiento. Asegúrese de probar la implementación en diferentes dispositivos.
+Además de usarse para transiciones entre vistas, esta técnica también se puede aplicar a otros elementos de deslizamiento, como los elementos de navegación de la barra lateral. La única diferencia real es que no será necesario desplazar las otras vistas.
 
-Además de realizar transiciones entre las vistas, esta técnica también se puede aplicar a otros elementos de deslizamiento, como los elementos de navegación de la barra lateral. La única diferencia real es que no sería necesario desplazar las otras vistas.
+## Asegúrate de que tu animación funcione bien en pantallas más grandes
 
-## Asegúrese de que la animación funcione bien en pantallas más grandes
+<div class="attempt-right">
+  <figure>
+    <img src="images/container-two-views-ls.svg" alt="Jerarquía de vistas en una pantalla grande." />
+  </figure>
+</div>
 
-En el caso de las pantallas más grandes, debe mantener la vista de lista a mano todo el tiempo en lugar de retirarla, y deslizar la vista de detalles hacia adentro desde la derecha. Es más o menos lo mismo que utilizar una vista de navegación.
-
-<img src="images/container-two-views-ls.svg" alt="View hierarchy on a large screen." />
+En el caso de las pantallas más grandes, deberías mantener cerca la vista de lista todo el tiempo (en lugar de retirarla) y deslizar la vista de detalles hacia adentro desde la derecha. Es prácticamente lo mismo que usar una vista de navegación.
 
 
+
+
+
+
+{# wf_devsite_translation #}
