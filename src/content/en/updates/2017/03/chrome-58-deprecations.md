@@ -116,7 +116,7 @@ is not supported in Edge or Safari, and it is being
 ## Remove deprecated names for motion path properties
 
 Motion path CSS properties allow authors to animate any graphical object along
-an author-specified path. In climpliance with the spec, several properties were
+an author-specified path. In compliance with the spec, several properties were
 [implemented in Chrome 45](https://www.chromestatus.com/feature/6190642178818048).
 The names of these properties were changed in the spec in mid 2016. Chrome
 implemented the
