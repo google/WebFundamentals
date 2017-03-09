@@ -18,14 +18,14 @@ Platform. This article describes the deprecations and removals in Chrome 58,
 which is in beta as of March 16. This list is subject to change at any time.
 
 
-## Deprecate RTCRtcpMuxPolicy of "negotiate"
+## Remove RTCRtcpMuxPolicy of "negotiate"
 
 The `rtcpMuxPolicy` is used by Chrome to specify its preferred policy regarding use of RTP/RTCP multiplexing. In Chrome 57, we changed the default `rtcpMuxPolicy` to "require" and deprecated "negotiate" for following reasons:
 
 * Non-muxed RTCP uses extra network resources.
 * Removing "negotiate" will make the API surface simpler, since an "RtpSender"/"RtpReceiver" will then only ever have a single transport.
 
-In Chrome 58, "negotiate" is deprecated. We believe this is a non-breaking change since the user will get a deprecation message and the `webkitRTCPeerConnection` can still be created successfully.
+In Chrome 58, "negotiate" is removed. We believe this is a non-breaking change since the user will get a deprecation message and the `webkitRTCPeerConnection` can still be created successfully.
 
 [Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/OP2SGSWF5lo/discussion) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=685727)
@@ -147,7 +147,7 @@ The `AudioSourceNode` interface is not part of the [Web Audio specification](htt
 
 The dropzone global attribute was introduced by the [HTML5 drag and drop specification](http://w3c.github.io/html/editing.html#drag-and-drop) as a declarative method for specifying an HTML element's willingness to be the target of a drag-and-drop operation, the content types that can be dropped onto the element, and the drag-and-drop operation (copy/move/link).
 
-Unfortunately, no browser implemented the unprefixed version. Blink and WebKit only implement a prefixed form of the attribute, webkitdropzone. Because the `dropzone` attribute was removed from the spec in [early March 2017](https://github.com/whatwg/html/pull/2402) the prefixed version is being removed from Chrome.
+The attribute failed to gain traction among browser vendors. Blink and WebKit only implement a prefixed form of the attribute, webkitdropzone. Because the `dropzone` attribute was removed from the spec in [early March 2017](https://github.com/whatwg/html/pull/2402) the prefixed version is being removed from Chrome.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/rdGvTDPU7mM/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5718005866561536) &#124;
