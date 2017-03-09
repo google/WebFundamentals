@@ -5,7 +5,7 @@ description: Background tabs in Chrome 57.
 {# wf_updated_on: 2017-03-09 #}
 {# wf_published_on: 2017-03-09 #}
 {# wf_tags: chrome57 #}
-{# wf_featured_snippet: Background tab behavior in Chrome 57. #}
+{# wf_featured_snippet: Background tabs can have a dramatic negative effect on battery life. Chrome 57 brings new power saving changes to background tab behaviours by throttling timers if a page is using too much CPU. #}
 
 # Background tabs in Chrome 57 {: .page-title }
 
