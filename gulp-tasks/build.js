@@ -79,7 +79,7 @@ gulp.task('build:http203Podcast', function() {
   wfTemplateHelper.generatePodcastFeed(files, options);
 });
 
-gulp.task('build:DesignerVsDeveloper', function() {
+gulp.task('build:DVDPodcast', function() {
   var src = 'shows/designer-vs-developer/podcast/';
   var baseOutputPath = path.join(GLOBAL.WF.src.content, src);
   var options = {
@@ -93,7 +93,9 @@ gulp.task('build:DesignerVsDeveloper', function() {
     baseUrl: 'https://developers.google.com/web/shows/designer-vs-developer/podcast/'
   };
   var files = wfHelper.getFileList(baseOutputPath, ['*.md', '!index.md']);
+  console.log(files);
   files.sort(wfHelper.updatedComparator);
+
   wfTemplateHelper.generateListPage(files, options);
   wfTemplateHelper.generatePodcastFeed(files, options);
 });
@@ -154,6 +156,7 @@ gulp.task('build', function(cb) {
       'build:showcase',
       'build:shows',
       'build:http203Podcast',
+      'build:DVDPodcast',
       'build:tools',
       'build:updates'
     ],

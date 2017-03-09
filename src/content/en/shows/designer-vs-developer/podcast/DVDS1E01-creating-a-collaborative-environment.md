@@ -1,22 +1,23 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: Just make it look pretty...
+description: This week we speak to Jake Archibald about communication and the assumption that designers and developers sole role is to either make things look pretty or to be a cog in a machine with no soul.
 
-{# wf_updated_on: 2017-07-03 #}
-{# wf_published_on: 2017-07-03 #}
-{# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-2.mp3 #}
-{# wf_podcast_duration: 00:13:08 #}
+
+{# wf_updated_on: 2017-03-07 #}
+{# wf_published_on: 2017-03-07 #}
+{# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3 #}
+{# wf_podcast_duration: 00:13:28 #}
 {# wf_podcast_fileSize: 12609607 #}
 {# wf_podcast_subtitle: This week we speak to Jake Archibald about communication and the assumption that designers and developers sole role is to either make things look pretty or to be a cog in a machine with no soul. #}
-{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s1-ep01.png #}
+{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-series-cover.jpg #}
 
-# Just make it look pretty... {: .page-title }
+# Creating a collaborative environment {: .page-title }
 
 Welcome to Designer Vs Developer, a show that tries to solve the challenges faced in industry by having an open conversation between the two, providing take aways, solutions to workflows, tools & discussions on everyday struggles. 
 
 This week we speak to Jake Archibald about communication and the assumption that designers and developers sole role is to either make things look pretty or to be a cog in a machine with no soul.
 
-<img src="/web/shows/designer-vs-developer/podcast/images/dvd-s1-ep01.png" class="attempt-right">
+<img src="/web/shows/designer-vs-developer/podcast/images/dvd-s01-e01-cover.jpg" class="attempt-right">
 
 In this episode:
 
@@ -26,9 +27,9 @@ In this episode:
 * Jake's Service Workers
 * Designers lack of version control
 
-<a href="http://feeds.feedburner.com/Http203Podcast">
+<!-- <a href="http://feeds.feedburner.com/Http203Podcast">
   <span class="material-icons">rss_feed</span>
   Subscribe
-</a>
+</a> -->
 
-<audio src="https://storage.googleapis.com/http-203-podcast/episode-2.mp3" controls preload="none">
+<audio src="https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3" controls preload="none">

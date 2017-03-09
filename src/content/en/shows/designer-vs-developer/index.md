@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Welcome to Designer Vs Developer, a show that tries to solve the challenges faced in industry by opening a conversation between the two, providing take aways, solutions to workflows, tools & discussions on everyday struggles. 
 
-{# wf_updated_on: 2017-07-03 #}
-{# wf_published_on: 2017-07-03 #}
+{# wf_updated_on: 2016-08-24 #}
+{# wf_published_on: 2016-08-24 #}
 
-# HTTP 203 {: .page-title }
+# Designer Vs Developer {: .page-title }
 
-<img src="../imgs/http203_rect.jpg" class="attempt-right">
+<img src="images/dvd-s1-ep01.png" class="attempt-right">
 
 **Welcome to Designer Vs Developer** A show that tries to solve the challenges faced in industry by opening a conversation between the two, providing take aways, solutions to workflows, tools & discussions on everyday struggles. 
 
