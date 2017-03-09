@@ -93,9 +93,7 @@ gulp.task('build:DVDPodcast', function() {
     baseUrl: 'https://developers.google.com/web/shows/designer-vs-developer/podcast/'
   };
   var files = wfHelper.getFileList(baseOutputPath, ['*.md', '!index.md']);
-  console.log(files);
   files.sort(wfHelper.updatedComparator);
-
   wfTemplateHelper.generateListPage(files, options);
   wfTemplateHelper.generatePodcastFeed(files, options);
 });
