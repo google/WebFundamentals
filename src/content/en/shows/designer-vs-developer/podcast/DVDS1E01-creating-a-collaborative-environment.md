@@ -1,9 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: This week we speak to Jake Archibald about communication and the
- assumption that designers and developers sole role is to either make things
-look pretty or to be a cog in a machine with no soul.
-
+description: This week we speak to Jake Archibald about communication.
 
 {# wf_updated_on: 2017-03-07 #}
 {# wf_published_on: 2017-03-07 #}
