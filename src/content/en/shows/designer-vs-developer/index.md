@@ -9,7 +9,9 @@ description: Welcome to Designer Vs Developer, a show that tries to solve the ch
 
 <img src="images/dvd-s1-ep01.png" class="attempt-right">
 
-**Welcome to Designer Vs Developer** A show that tries to solve the challenges faced in industry by opening a conversation between the two, providing take aways, solutions to workflows, tools & discussions on everyday struggles. 
+**Welcome to Designer Vs Developer** A show that tries to solve the challenges 
+faced in industry by opening a conversation between the two, providing take
+aways, solutions to workflows, tools & discussions on everyday struggles. 
 
 [YouTube](https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9)
 

@@ -1,6 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: This week we speak to Jake Archibald about communication and the assumption that designers and developers sole role is to either make things look pretty or to be a cog in a machine with no soul.
+description: This week we speak to Jake Archibald about communication and the
+ assumption that designers and developers sole role is to either make things
+look pretty or to be a cog in a machine with no soul.
 
 
 {# wf_updated_on: 2017-03-07 #}
@@ -8,16 +10,21 @@ description: This week we speak to Jake Archibald about communication and the as
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3 #}
 {# wf_podcast_duration: 00:13:28 #}
 {# wf_podcast_fileSize: 12609607 #}
-{# wf_podcast_subtitle: This week we speak to Jake Archibald about communication and the assumption that designers and developers sole role is to either make things look pretty or to be a cog in a machine with no soul. #}
+{# wf_podcast_subtitle: This week we speak to Jake Archibald about communication. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-series-cover.jpg #}
 
 # Creating a collaborative environment {: .page-title }
 
-Welcome to Designer Vs Developer, a show that tries to solve the challenges faced in industry by having an open conversation between the two, providing take aways, solutions to workflows, tools & discussions on everyday struggles. 
+Welcome to Designer Vs Developer, a show that tries to solve the challenges
+faced in industry by having an open conversation between the two, providing 
+take aways, solutions to workflows, tools & discussions on everyday struggles. 
 
-This week we speak to Jake Archibald about communication and the assumption that designers and developers sole role is to either make things look pretty or to be a cog in a machine with no soul.
+This week we speak to Jake Archibald about communication and the assumption
+that designers and developers sole role is to either make things look pretty
+or to be a cog in a machine with no soul.
 
-<img src="/web/shows/designer-vs-developer/podcast/images/dvd-s01-e01-cover.jpg" class="attempt-right">
+<img src="/web/shows/designer-vs-developer/podcast/images/dvd-s01-e01-cover.jpg
+" class="attempt-right">
 
 In this episode:
 
@@ -32,4 +39,5 @@ In this episode:
   Subscribe
 </a> -->
 
-<audio src="https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3" controls preload="none">
+<audio src="https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3"
+controls preload="none">
