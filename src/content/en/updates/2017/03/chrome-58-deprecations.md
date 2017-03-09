@@ -29,8 +29,8 @@ use of RTP/RTCP multiplexing. In Chrome 57, we changed the default
   "RtpSender"/"RtpReceiver" will then only ever have a single transport.
 
 In Chrome 58, "negotiate" is removed. We believe this is a non-breaking change
-since the user will get a deprecation message and the `webkitRTCPeerConnection`
-can still be created successfully.
+since the user will get a deprecation message and `RTCPeerConnection` can still
+be created.
 
 [Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/OP2SGSWF5lo/discussion) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=685727)
@@ -171,8 +171,10 @@ may set the `EnableCommonNameFallbackForLocalAnchors` Enterprise policy.
 
 The interface elements regions, `addRegion()` and `removeRegion()`, have been
 removed from the WebVTT spec and will be removed from Chrome in compliance with
-the [latest spec](https://w3c.github.io/webvtt/). Those needing an alternative
-can use the `VTTCue.region` property which is being added in Chrome 58.
+the [latest spec](https://w3c.github.io/webvtt/). We expect little impact from
+this removal since the feature was never enabled by default (meaning it was
+behind a flag). Those needing an alternative can use the `VTTCue.region`
+property which is being added in Chrome 58.
 
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5308626495340544) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=690014)
