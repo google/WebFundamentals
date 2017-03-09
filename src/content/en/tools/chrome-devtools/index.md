@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Option 1
+description: Get started with Google Chrome's built-in authoring, debugging, and profiling development tools.
 
 {# wf_updated_on: 2016-07-26 #}
 {# wf_published_on: 2016-03-28 #}
@@ -66,6 +66,7 @@ Debug your JavaScript using breakpoints or connect your local files via Workspac
 * [Pause Your Code With Breakpoints](/web/tools/chrome-devtools/javascript/breakpoints)
 * [Set Up Persistence with DevTools Workspaces](/web/tools/setup/setup-workflow)
 * [Run Snippets Of Code From Any Page](/web/tools/chrome-devtools/snippets)
+* [JavaScript Debugging Reference](/web/tools/chrome-devtools/reference)
 
 <div style="clear:both;"></div>
 
