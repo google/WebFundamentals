@@ -25,10 +25,10 @@ or to be a cog in a machine with no soul.
 
 In this episode:
 
-* Roles and place in Design and Development
+* Roles and place in design and development
 * Designing in an open space
-* Design Sprints
-* Jake's Service Workers
+* Design sprints
+* Jake's service workers
 * Designers lack of version control
 
 <!-- <a href="http://feeds.feedburner.com/Http203Podcast">
