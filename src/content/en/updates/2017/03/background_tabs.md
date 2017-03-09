@@ -91,8 +91,8 @@ It’s a good approximation of CPU time and penalises blocking main thread for a
 Finally, remember that if you are using long tasks in background, your application
 can be throttled for a very long period of time (up to 100x times the duration of your task).
 Split your work in to chunks of 50ms or less per [the performance guidelines](
-https://developers.google.com/web/fundamentals/performance/rail) and use visibilityChange
-listener to avoid doing unnecessary work in background.
+/web/fundamentals/performance/rail) and use visibilityChange listener to avoid
+doing unnecessary work in background.
 
 ### Opt-outs
 
