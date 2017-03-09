@@ -38,7 +38,7 @@ be created.
 
 ## Mouse on Android stops firing TouchEvents
 
-Until Chrome 55, Android low-level mouse events in Chrome primarily followed an
+Until Chrome 57, Android low-level mouse events in Chrome primarily followed an
 event path designed for touch interactions. For example, mouse drag motion while
 a mouse button is pressed generates `MotionEvents` delivered through
 `View.onTouchEvent`.
