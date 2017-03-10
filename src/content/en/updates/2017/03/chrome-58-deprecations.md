@@ -18,24 +18,6 @@ Platform. This article describes the deprecations and removals in Chrome 58,
 which is in beta as of March 16. This list is subject to change at any time.
 
 
-## Remove RTCRtcpMuxPolicy of "negotiate"
-
-The `rtcpMuxPolicy` is used by Chrome to specify its preferred policy regarding
-use of RTP/RTCP multiplexing. In Chrome 57, we changed the default
-`rtcpMuxPolicy` to "require" and deprecated "negotiate" for following reasons:
-
-* Non-muxed RTCP uses extra network resources.
-* Removing "negotiate" will make the API surface simpler, since an 
-  "RtpSender"/"RtpReceiver" will then only ever have a single transport.
-
-In Chrome 58, "negotiate" is removed. We believe this is a non-breaking change
-since the user will get a deprecation message and `RTCPeerConnection` can still
-be created.
-
-[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/OP2SGSWF5lo/discussion) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=685727)
-
-
 ## Mouse on Android stops firing TouchEvents
 
 Until Chrome 57, Android low-level mouse events in Chrome primarily followed an
