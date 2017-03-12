@@ -167,7 +167,7 @@ if (window.MediaSource) {
 Notice that I've also called `revokeObjectURL()`. I can do this any time after
 the media element's `src` attribute is connected to a `MediaSource` instance.
 Calling this method doesn't destroy any objects. It _does_ allow the platform to
-handle garbage collecction at an appropriate time.
+handle garbage collection at an appropriate time.
 
 ## Create a SourceBuffer
 
