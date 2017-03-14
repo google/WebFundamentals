@@ -27,3 +27,6 @@ storage options.
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse checks if the page has a Web SQL database instance.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/web-sql.html" %}

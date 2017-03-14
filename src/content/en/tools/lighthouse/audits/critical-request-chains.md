@@ -69,3 +69,6 @@ for more information on how Chrome defines these priorities.
 
 Data on critical request chains, resource sizes, and time spent downloading
 resources is extracted from the Chrome Debugger Protocol.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/critical-request-chains.html" %}

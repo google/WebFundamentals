@@ -29,3 +29,6 @@ First Meaningful Paint is essentially the paint after which the biggest
 above-the-fold layout change has happened, and web fonts have loaded. See the
 spec to learn more:
 [First Meaningful Paint: A Layout-Based Aproach](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view).
+
+
+{% include "web/tools/lighthouse/audits/_feedback/first-meaningful-paint.html" %}

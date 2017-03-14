@@ -55,3 +55,6 @@ must have sufficient color contrast against the background][axe] for more
 information.
 
 [axe]: https://dequeuniversity.com/rules/axe/1.1/color-contrast
+
+
+{% include "web/tools/lighthouse/audits/_feedback/contrast-ratio.html" %}

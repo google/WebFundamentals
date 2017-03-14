@@ -33,3 +33,6 @@ JavaScript performance.
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse extracts User Timing data from Chrome's Trace Event Profiling Tool.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/user-timing.html" %}
