@@ -36,4 +36,4 @@ In this episode:
 
 <a href="http://feeds.feedburner.com/DesignerVsDeveloper">
   Subscribe to Designer Vs Developer
-</a>
+</a> or watch <a href="https://www.youtube.com/watch?v=8T94qu8IWWk">the video here</a>
