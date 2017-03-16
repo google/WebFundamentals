@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 58 to help you plan.
 
-{# wf_updated_on: 2017-03-16 #}
-{# wf_published_on: 2017-03-16 #}
+{# wf_updated_on: 2017-03-17 #}
+{# wf_published_on: 2017-03-17 #}
 {# wf_tags: deprecations,removals,chrome58 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 58 to help you plan. #}
@@ -25,7 +25,7 @@ event path designed for touch interactions. For example, mouse drag motion while
 a mouse button is pressed generates `MotionEvents` delivered through
 `View.onTouchEvent`.
 
-However, since touch events cannot support hover, hovering mousemoves followed a
+But since touch events cannot support hover, hovering mousemoves followed a
 separate path. The design had many side-effects including mouse interactions
 firing `TouchEvents`, all mouse buttons appearing as *left* mouse buttons, and
 `MouseEvents` being suppressed by `TouchEvents`.
@@ -64,7 +64,7 @@ expose digital rights management implementations that are not open source,
 involve access to persistent unique identifiers, and/or run unsandboxed or with
 privileged access. Security risks are increased for sites exposed via non-secure
 HTTP because they can be attacked by anyone on the channel. Additionally,
-permissions for an non-secure HTTP site can be exploited when explicit permissions
+permissions for a non-secure HTTP site can be exploited when explicit permissions
 are required.
 
 Support for non-secure contexts was removed from the
@@ -84,7 +84,8 @@ is part of our broader effort to
 
 That an interface has a legacy caller means that an instance can be called as a
 function. Currently, `HTMLEmbedElement` and `HTMLObjectElement` support this
-functionality. In Chrome 57 this ability was deprecated. Calling now throws an exception.
+functionality. In Chrome 57 this ability was deprecated. Starting in Chrome 58,
+calling throws an exception.
 
 This change brings Chrome in line with recent spec changes. The legacy behavior
 is not supported in Edge or Safari, and it is being
@@ -105,8 +106,8 @@ implemented the
 [new names in Chrome 55 and Chrome 56](https://www.chromestatus.com/feature/6390764217040896).
 Console deprecation warnings were also implemented. 
 
-In Chrome 58, the old versions are being removed. The affected properties and
-their new names are shown below.
+In Chrome 58, the old property names are being removed. The affected properties
+and their new names are shown below.
 
 | Removed Property | Current Name |
 |------------------|--------------|
@@ -121,11 +122,11 @@ their new names are shown below.
 ## Remove support for commonName matching in certificates
 
 [RFC 2818](https://tools.ietf.org/html/rfc2818) describes two methods to match a
-[domain name against a certificate: using the available names within the
-[`subjectAlternativeName` extension, or, in the absence of a SAN extension,
-[falling back to the `commonName`. The fallback to the `commonName` was
-[deprecated in RFC 2818 (published in 2000), but support remains in a number of
-[TLS clients, often incorrectly.
+domain name against a certificate: using the available names within the
+`subjectAlternativeName` extension, or, in the absence of a SAN extension,
+falling back to the `commonName`. The fallback to the `commonName` was
+deprecated in RFC 2818 (published in 2000), but support remains in a number of
+TLS clients, often incorrectly.
 
 The use of the `subjectAlternativeName` fields leaves it unambiguous whether a
 certificate is expressing a binding to an IP address or a domain name, and is
@@ -134,10 +135,11 @@ fully defined in terms of its interaction with Name Constraints. However, the
 of security bugs in Chrome, the libraries it uses, and within the TLS ecosystem
 at large.
 
-The compatibility risk is low. RFC 2818 has deprecated this for nearly two
-decades, and the [Baseline Requirements](https://cabforum.org/baseline-requirements-documents/)
-(which all publicly trusted CAs must abide by) has required the presence of a
-`subjectAltName` since 2012. Mozilla Firefox already requires the
+The compatibility risk for removing `commonName` is low. RFC 2818 has
+deprecated this for nearly two decades, and the
+[baseline requirements](https://cabforum.org/baseline-requirements-documents/)
+(which all publicly trusted certificate authorities must abide by) has required
+the presence of a `subjectAltName` since 2012. Firefox already requires the
 `subjectAltName` for any newly issued publicly trusted certificates since
 [Firefox 48]( https://bugzilla.mozilla.org/show_bug.cgi?id=1245280 ).
 
@@ -149,10 +151,29 @@ may set the `EnableCommonNameFallbackForLocalAnchors` Enterprise policy.
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=308330)
 
 
+## Remove webkitdropzone global attribute
+
+The `dropzone` global attribute was introduced by the
+[HTML5 drag and drop specification](http://w3c.github.io/html/editing.html#drag-and-drop)
+as a declarative method for specifying an HTML element's willingness to be the
+target of a drag-and-drop operation, the content types that can be dropped onto
+the element, and the drag-and-drop operation (copy/move/link).
+
+The attribute failed to gain traction among browser vendors. Blink and WebKit
+only implement a prefixed form of the attribute, `webkitdropzone`. Because the
+`dropzone` attribute was removed from the spec in
+[early March 2017](https://github.com/whatwg/html/pull/2402)
+the prefixed version is being removed from Chrome.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/rdGvTDPU7mM/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5718005866561536) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688943)
+
+
 ## VTTRegion-related bits of TextTrack
 
 The interface elements regions, `addRegion()` and `removeRegion()`, have been
-removed from the WebVTT spec and will be removed from Chrome in compliance with
+removed from the WebVTT spec and is removed in Chrome 58 to comply with
 the [latest spec](https://w3c.github.io/webvtt/). We expect little impact from
 this removal since the feature was never enabled by default (meaning it was
 behind a flag). Those needing an alternative can use the `VTTCue.region`
@@ -172,25 +193,6 @@ accessible functionality. Therefore it is being removed.
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/D-QJm9GCisc/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5753709124386816) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663818)
-
-
-## Remove webkitdropzone global attribute
-
-The dropzone global attribute was introduced by the
-[HTML5 drag and drop specification](http://w3c.github.io/html/editing.html#drag-and-drop)
-as a declarative method for specifying an HTML element's willingness to be the
-target of a drag-and-drop operation, the content types that can be dropped onto
-the element, and the drag-and-drop operation (copy/move/link).
-
-The attribute failed to gain traction among browser vendors. Blink and WebKit
-only implement a prefixed form of the attribute, webkitdropzone. Because the
-`dropzone` attribute was removed from the spec in
-[early March 2017](https://github.com/whatwg/html/pull/2402)
-the prefixed version is being removed from Chrome.
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/rdGvTDPU7mM/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5718005866561536) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688943)
 
 
 <<../../_deprecation-policy.md>>
