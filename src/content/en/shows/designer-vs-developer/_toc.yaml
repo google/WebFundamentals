@@ -5,8 +5,6 @@ toc:
       section:
       - title: 'Creating a collaborative environment'
         path: /web/shows/designer-vs-developer/podcast/DVDS1E01-creating-a-collaborative-environment
-    # - title: Videos
-    #   path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
-    #   status: external
-      
-      
+    - title: Video
+      path: https://www.youtube.com/watch?v=8T94qu8IWWk
+      status: external
