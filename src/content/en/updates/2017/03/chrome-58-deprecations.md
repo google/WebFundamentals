@@ -63,16 +63,19 @@ Some usages of
 expose digital rights management implementations that are not open source,
 involve access to persistent unique identifiers, and/or run unsandboxed or with
 privileged access. Security risks are increased for sites exposed via non-secure
-HTTP because they can be attacked by anyone on the channel. Additionally,
-permissions for a non-secure HTTP site can be exploited when explicit permissions
-are required.
+HTTP because they can be attacked by anyone on the channel. Additionally, when
+user consent is required, acceptance persisted for a non-secure HTTP site can be
+exploited by such an attacker.
+
 
 Support for non-secure contexts was removed from the
 [EME version 1 spec](https://w3c.github.io/encrypted-media/)
-and will not be in the upcoming proposed recommendation or subsequent final
-recommendation. The API has been showing a deprecation message on non-secure
-origins since Chrome 44 (May 2015). In Chrome 58, it is now removed. This change
-is part of our broader effort to
+and is not supported in the
+[proposed recommendation](https://www.w3.org/TR/encrypted-media/) nor
+anticipated in the subsequent final. will not be in the upcoming proposed
+recommendation or subsequent final recommendation. The API has been showing a
+deprecation message on non-secure origins since Chrome 44 (May 2015). In Chrome
+58, it is now removed. This change is part of our broader effort to
 [remove powerful features from unsecure origins](https://bugs.chromium.org/p/chromium/issues/detail?id=520765).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/tXmKPlXsnCQ/discussion) &#124;
