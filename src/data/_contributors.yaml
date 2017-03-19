@@ -814,6 +814,25 @@ henrylim:
   description:
     en: 'Co-Organizer @ GDG Kuala Lumpur'
 
+wayouliu:  
+  name:
+    given: Wayou
+    family: Liu
+  homepage: https://wayou.github.io/
+  google: +WayouLiu
+  twitter: liuwayong
+  github: wayou
+  lanyrd:
+  description:
+    en: "Wayou is a developer and loves the web"
+  org:
+    name:
+    unit:
+  country:
+  role:
+    - translator
+  email: liuwayong@gmail.com
+
 heathermahan:
   name:
     given: Heather
