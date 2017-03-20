@@ -16,13 +16,21 @@ visit will have to feature an immersive and re-engaging user experience.
 
 The goal here is to show you how to enhance in progressive way your media
 experience and make it more immersive thanks to a plethora of Web APIs. That's
-why we're going to build a complete mobile player experience with custom
+why we're going to build a simple mobile player experience with custom
 controls, fullscreen, and background playback.
 
 
 ## Custom controls [0%]
 
-TODO
+Let's start simple:
+
+    playPauseButton.addEventListener('click', function() {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
 
 
 ## Fullscreen [90%]
@@ -49,11 +57,11 @@ enter fullscreen mode when playback begins.
 
 <pre class="prettyprint lang-html">
 &lt;div id="videoContainer"&gt;
+  &lt;video id="video" src="file.mp4" <strong>playsinline</strong>&gt;&lt;/video&gt;
   &lt;div id="videoControls"&gt;
     &lt;button id="playPauseButton">&lt;/button&gt;
     &lt;button id="fullscreenButton">&lt;/button&gt;
   &lt;/div&gt;
-  &lt;video id="video" src="file.mp4" <strong>playsinline</strong>&gt;&lt;/video&gt;
 &lt;/div&gt;
 </pre>
 
@@ -94,7 +102,8 @@ method `requestFullscreen()` if available or fallback to
 Note: I'm going to use a [tiny shim] for the Fullscren API in code snippets below that
 will take care of prefixes as the API is not unprefixed yet at that time.
 
-    fullscreenButton.addEventListener('click', function() {
+    fullscreenButton.addEventListener('click', function(event) {
+      event.stopPropagation();
       if (document.fullscreenElement) {
         document.exitFullscreen();
       } else {
@@ -155,7 +164,8 @@ be held in one hand with `matchMedia('(max-device-width: 768px)')` as this
 wouldn't be a great experience for users on tablet.
 
 <pre class="prettyprint">
-fullscreenButton.addEventListener('click', function() {
+fullscreenButton.addEventListener('click', function(event) {
+  event.stopPropagation();
   if (document.fullscreenElement) {
     document.exitFullscreen();
   } else {
