@@ -308,8 +308,6 @@ This code updates caches before showing a notification:
 
 <img src="images/cm-on-bg-sync.png">
 
-Dogfood: Background sync hasn't yet landed in Chrome stable.
-
 [Background sync](/web/updates/2015/12/background-sync)
 is another feature built on top of
 ServiceWorker. It allows you to request background data synchronisation
