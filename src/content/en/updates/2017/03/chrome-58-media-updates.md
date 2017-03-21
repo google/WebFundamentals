@@ -75,12 +75,21 @@ exception. This is no longer true. From now on, sites installed using the
 served from origins included in the [web app manifest's scope] without
 restrictions.
 
-Note: The manifest `scope` is not the same as the service worker's scope. It is
-the navigation scope of the site's application context. If not defined,
-`start_url` is used.
+<pre class="prettyprint lang-json">
+{
+  "name": "My Web App",
+  "description": "An awesome app",
+  <b>"scope": "/foo",</b>
+  ...
+}
+</pre>
 
 <pre class="prettyprint lang-html">
-&lt;audio <b>autoplay</b> src="file-in-manifest-scope.mp4">&lt;/audio>
+&lt;!-- Audio will autoplay as /foo is in the scope. -->
+&lt;audio autoplay src="/foo/file.mp4">&lt;/audio>
+
+&lt;!-- Audio fails to autoplay as /bar is NOT in the scope. -->
+&lt;audio autoplay src="/bar/file.mp4">&lt;/audio>
 </pre>
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/d/topic/blink-dev/DW7_yxL_HjE/discussion) &#124;
