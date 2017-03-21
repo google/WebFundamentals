@@ -26,6 +26,17 @@ The Service Worker spec has always had the (non-normative) note that "any type o
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688586)
 
 
+## Remove cross-origin top navigation without a user gesture
+
+Content in an <iframe> can generally navigate the top level browsing context unless explicitly forbidden by the sandbox attribute (sometimes called 'framebusting'). Framebusting was originally used by content that wanted to prevent being placed in an <iframe>. Not only are there more specific tools to accomplish this (see below), but this specific framebusting technique is being used by malicious content to forcibly navigate users to a different URL. 
+
+Starting in Chrome 57, cross-origin framebusting requires a user gesture unless the frame and the top-level content are from the same origin. Sites that want to prevent their content from appearing in an <iframe> should use the [CSP frame-ancestors directive](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) or [X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options).
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Xi8-y4ySjA4/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5851021045661696) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=640057)
+
+
 ## Remove webkit-prefixed IndexedDB global aliases
 
 IndexedDB was originally implemented with prefixed aliases and constructors around the time of Chrome 11. The non-prefixed versions were shipped in Chrome 24 and the prefixed versions deprecated in Chrome 38. In Chrome 57, the prefixed constructors are removed. The effected interfaces include:
