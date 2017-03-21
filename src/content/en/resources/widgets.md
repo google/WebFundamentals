@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: Widgets you can use to simplify your writing and development
 
-{# wf_updated_on: 2016-09-13 #}
+{# wf_updated_on: 2017-03-21 #}
 {# wf_published_on: 2016-09-13 #}
 
 # Widgets {: .page-title }
@@ -161,7 +161,8 @@ bottom of the page. For example:
 &#123;% include "comment-widget.html" %}
 </pre>
 
-Note: the comment widget does **not** render in the staging or development environment, and will only be visible when the page is published on DevSite.
+Note: the comment widget does **not** render in the staging or development
+environment, and will only be visible when the page is published on DevSite.
 
 
 ## Videos
@@ -188,7 +189,7 @@ automatically maintain a 16:9 ratio.
     </div>
 
 
-[common-links]: https://github.com/google/WebFundamentals/blob/next-version/src/content/en/_common-links.md
+[common-links]: https://github.com/google/WebFundamentals/blob/master/src/content/en/_common-links.md
 
 
 ## Inline Feedback {: #inline-feedback }
