@@ -49,23 +49,23 @@ figure {
 
 <div class="figures">
   <figure>
-    <img src="images/how_it_works_1.png">
+    <img src="../images/how_it_works_1.png">
     <figcaption>1. Press "Checkout".</figcaption>
   </figure>
   <figure>
-    <img src="images/how_it_works_2.png">
+    <img src="../images/how_it_works_2.png">
     <figcaption>2. Payment Request UI pops up.</figcaption>
   </figure>
   <figure>
-    <img src="images/how_it_works_3.png">
+    <img src="../images/how_it_works_3.png">
     <figcaption>3. Choose payment method, etc., and press "Pay".</figcaption>
   </figure>
   <figure>
-    <img src="images/how_it_works_4.png">
+    <img src="../images/how_it_works_4.png">
     <figcaption>4. When the Android Pay app pops up, click to continue (the user may be prompted to unlock phone / authenticate with fingerprint)</figcaption>
   </figure>
   <figure>
-    <img src="images/how_it_works_5.png">
+    <img src="../images/how_it_works_5.png">
     <figcaption>5. Checkout is complete.</figcaption>
   </figure>
 </div>
@@ -97,12 +97,12 @@ Android Pay does not process the payment. The merchant would still need to invok
 
 Let Android Pay API return a gateway token. This is the recommended flow if you are using Braintree, Stripe, or Vantiv.
 
-<a href="images/gateway_token.png" target="_blank"><img src="images/gateway_token.png"></a>
+<a href="../images/gateway_token.png" target="_blank"><img src="../images/gateway_token.png"></a>
 
 ### Network Token approach
 Let Android Pay API return an encrypted network token bundle. You may then either decrypt the token yourself or leverage your processor APIs to handle decryption and charge the token.
 
-<a href="images/network_token.png" target="_blank"><img src="images/network_token.png"></a>
+<a href="../images/network_token.png" target="_blank"><img src="../images/network_token.png"></a>
 
 ## Integration using Gateway Token
 The following example outlines how to request a token directly from your payment gateway. In this example we outline how to request a Stripe token. If you use other payment gateways such as Braintree or Vantiv please contact your processor for for payment gateway specific parameters.

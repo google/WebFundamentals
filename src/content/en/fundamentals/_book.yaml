@@ -16,6 +16,7 @@ upper_tabs:
         - include: /web/fundamentals/security/_toc.yaml
         - include: /web/fundamentals/design-and-ui/_toc.yaml
         - include: /web/fundamentals/engage-and-retain/_toc.yaml
+        - include: /web/fundamentals/handle-payments/_toc.yaml
         - include: /web/fundamentals/discovery-and-monetization/_toc.yaml
         - include: /web/fundamentals/native-hardware/_toc.yaml
         - include: /web/fundamentals/accessibility/_toc.yaml

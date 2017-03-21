@@ -1,0 +1,23 @@
+toc:
+  - title: Handle Payments
+    section:
+      - title: Introduction to Payments on the Web
+        path: /web/fundamentals/handle-payments/
+      - title: Merchant Guide for Taking Payments
+        section:
+          - title: Implementing the Payment Request API
+            path: /web/fundamentals/handle-payments/merchants/
+          - title: UX Best Practices
+            path: /web/fundamentals/handle-payments/merchants/ux-best-practices
+          - title: FAQ
+            path: /web/fundamentals/handle-payments/merchants/faq
+          - title: Integrating with Android Pay
+            path: /web/fundamentals/handle-payments/merchants/android-pay
+      - title: Payment Processors Guides
+        section:
+          - title: Integrating Android Apps into the Payment Request API
+            path: /web/fundamentals/handle-payments/payment-processors/android
+          - title: Integrating Web Apps into the Payment Request API
+            path: /web/fundamentals/handle-payments/payment-processors/web
+      - title: "Video: Web Payments (Chrome Dev Summit 2016)"
+        path: /web/fundamentals/handle-payments/video
