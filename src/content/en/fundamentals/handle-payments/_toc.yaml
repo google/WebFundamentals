@@ -3,7 +3,7 @@ toc:
     section:
       - title: Introduction to Payments on the Web
         path: /web/fundamentals/handle-payments/
-      - title: Merchant Guide for Taking Payments
+      - title: Merchants Guide for Taking Payments
         section:
           - title: Implementing the Payment Request API
             path: /web/fundamentals/handle-payments/merchants/
