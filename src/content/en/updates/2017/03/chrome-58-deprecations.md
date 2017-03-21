@@ -40,9 +40,9 @@ IndexedDB was originally implemented with prefixed aliases and constructors arou
 * `webkitIDBRequest`
 * `webkitIDBTransaction` (non-callable global constructors)
 
-[Intent to Remove]() &#124;
-[Chromestatus Tracker]() &#124;
-[Chromium Bug]()
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/L-EY3r4HnMc/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5775330191081472) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=665243)
 
 
 ## Mouse on Android stops firing TouchEvents
