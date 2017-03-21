@@ -72,7 +72,12 @@ Usage in Javascript:
 Previously, Chrome used to block all `autoplay` with sound on Android without
 exception. This is no longer true. From now on, sites installed using the
 [improved Add to Home screen] flow are allowed to autoplay audio and video
-served from origins included in the [manifest's scope] without restrictions.
+served from origins included in the [web app manifest's scope] without
+restrictions.
+
+Note: The manifest `scope` is not the same as the service worker's scope. It is
+the navigation scope of the site's application context. If not defined,
+`start_url` is used.
 
 <pre class="prettyprint lang-html">
 &lt;audio <b>autoplay</b> src="file-in-manifest-scope.mp4">&lt;/audio>
