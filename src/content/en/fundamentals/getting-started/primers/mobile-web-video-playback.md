@@ -20,11 +20,47 @@ why we're going to build a simple mobile player experience with custom
 controls, fullscreen, and background playback.
 
 
-## Custom controls [0%]
+## Custom controls [50%]
+
+### HTML layout
+
+As you can see below, the HTML layout is pretty simple: a `<div>` root element
+that contains the `<video>` element and another `<div>` element dedicated to
+video controls. It contains the play/pause button, the fullscreen button, two
+buttons to seek backward and forward, and some elements for current time,
+duration and time tracking.
+
+    <div id="videoContainer">
+      <video id="video" src="file.mp4">
+      <div id="videoControls">
+        <button id="playPauseButton"></button>
+        <button id="fullscreenButton"></button>
+        <button id="seekForwardButton"></button>
+        <button id="seekBackwardButton"></button>
+        <div id="videoCurrentTime"></div>
+        <div id="videoDuration"></div>
+        <div id="videoTimeTrack"></div>
+      </div>
+    </div>
+
+### Video metadata
 
 Let's start simple:
 
-    playPauseButton.addEventListener('click', function() {
+    video.addEventListener('loadedmetadata', function() {
+      videoDuration.textContent = formatTime(video.duration);
+      videoCurrentTime.textContent = formatTime(video.currentTime);
+      videoTimeTrack.style.width = `${video.currentTime * 100 / video.duration}%`;
+    });
+
+The `formatTime` function is a simple utility function that formats time in 00:00:00.
+
+### Play/pause video
+
+Then, let's code the play/pause button actions:
+
+    playPauseButton.addEventListener('click', function(event) {
+      event.stopPropagation();
       if (video.paused) {
         video.play();
       } else {
@@ -32,6 +68,76 @@ Let's start simple:
       }
     });
 
+Let's adjust our controls based on play and paused video events:
+
+    video.addEventListener('play', function() {
+      playPauseButton.classList.toggle('paused', true);
+      updateTimeTracking();
+      hideMyVideoControls();
+    });
+
+    video.addEventListener('pause', function() {
+      playPauseButton.classList.toggle('paused', false);
+      showMyVideoControls();
+    });
+
+    function updateTimeTracking() {
+      requestAnimationFrame(function() {
+        if (!video.paused) {
+          // Let's continously update time tracking when video is playing.
+          updateTimeTracking();
+        }
+        videoCurrentTime.textContent = formatTime(video.currentTime);
+        videoTimeTrack.style.width = `${video.currentTime * 100 / video.duration}%`;
+      });
+    }
+
+### Video ends
+
+What happens when video ends?
+
+    video.addEventListener('ended', function() {
+      playPauseButton.classList.toggle('paused', false);
+      showMyVideoControls();
+    });
+
+### Seek backward and forward
+
+And seek backward and seek forward buttons now!
+
+    seekForwardButton.addEventListener('click', function(event) {
+      event.stopPropagation();
+      seekForward();
+    });
+
+    seekBackwardButton.addEventListener('click', function(event) {
+      event.stopPropagation();
+      seekBackward();
+    });
+
+    const skipTimeInSeconds = 10;
+
+    function seekForward() {
+      video.currentTime = Math.min(video.currentTime + skipTimeInSeconds, video.duration);
+    }
+
+    function seekBackward() {
+      video.currentTime = Math.max(video.currentTime - skipTimeInSeconds, 0);
+    }
+
+    video.addEventListener('seeking', function() {
+      video.classList.toggle('seeking', true);
+    });
+
+    video.addEventListener('seeked', function() {
+      video.classList.toggle('seeking', false);
+      updateTimeTracking();
+    });
+
+<video controls muted playsinline>
+  <source src="/web/fundamentals/getting-started/primers/videos/perfect-fullscreen.webm"
+          type="video/webm; codecs=vp8">
+</video>
 
 ## Fullscreen [90%]
 
@@ -58,10 +164,7 @@ enter fullscreen mode when playback begins.
 <pre class="prettyprint lang-html">
 &lt;div id="videoContainer"&gt;
   &lt;video id="video" src="file.mp4" <strong>playsinline</strong>&gt;&lt;/video&gt;
-  &lt;div id="videoControls"&gt;
-    &lt;button id="playPauseButton">&lt;/button&gt;
-    &lt;button id="fullscreenButton">&lt;/button&gt;
-  &lt;/div&gt;
+  &lt;div id="videoControls"&gt;...&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -118,6 +221,10 @@ will take care of prefixes as the API is not unprefixed yet at that time.
         video.webkitEnterFullscreen();
       }
     }
+
+    document.addEventListener('fullscreenchange', function() {
+      fullscreenButton.classList.toggle('active', document.fullscreenElement);
+    });
 
 ### Toggle fullscreen on screen orientation change
 
