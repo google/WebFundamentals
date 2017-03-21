@@ -72,7 +72,7 @@ Usage in Javascript:
 Previously, Chrome used to block all `autoplay` with sound on Android without
 exception. This is no longer true. From now on, sites installed using the
 [improved Add to Home screen] flow are allowed to autoplay audio and video
-served from origins included in the [web app manifest's scope] without
+served from origins included in the [web app manifest]'s scope without
 restrictions.
 
 <pre class="prettyprint lang-json">
@@ -174,23 +174,37 @@ Usage in JavaScript
       document.querySelector('main').style.backgroundImage = 'url("photo-rec2020.jpg")';
     }
 
-{% framebox height="240px" %}
 <p>For info, this screen currently supports approximately:</p>
+{% framebox height="100%" %}
+<style>
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style-type: none
+  }
+</style>
 <ul>
-  <li id="srgb" hidden>
+  <li>
+    <span id="srgb"></span>
     the sRGB gamut or more.
   </li>
-  <li id="p3" hidden>
+  <li>
+    <span id="p3"></span>
     the gamut specified by the DCI P3 Color Space or more.
   </li>
-  <li id="rec2020" hidden>
+  <li>
+    <span id="rec2020"></span>
     the gamut specified by the ITU-R Recommendation BT.2020 Color Space or more.
   </li>
 </ul>
 <script>
-  document.querySelector('#srgb').hidden = !window.matchMedia("(color-gamut: srgb)").matches;
-  document.querySelector('#p3').hidden = !window.matchMedia("(color-gamut: p3)").matches;
-  document.querySelector('#rec2020').hidden = !window.matchMedia("(color-gamut: rec2020)").matches;
+  document.querySelector('#srgb').innerHTML = 
+      (window.matchMedia("(color-gamut: srgb)").matches) ? '&#x2714;' : '&#x274C;';
+  document.querySelector('#p3').innerHTML =
+      (window.matchMedia("(color-gamut: p3)").matches) ? '&#x27014;' : '&#x274C;';
+  document.querySelector('#rec2020').innerHTML =
+      (window.matchMedia("(color-gamut: rec2020)").matches) ? '&#x2714;' : '&#x274C;';
 </script>
 {% endframebox %}
 
@@ -203,5 +217,5 @@ Usage in JavaScript
 [remoteplayback]: https://w3c.github.io/remote-playback/
 [ControlsList API]: https://github.com/WICG/controls-list/blob/gh-pages/explainer.md
 [improved Add to Home screen]: https://blog.chromium.org/2017/02/integrating-progressive-web-apps-deeply.html
-[manifest's scope]: /web/fundamentals/engage-and-retain/web-app-manifest/
+[web app manifest]: /web/fundamentals/engage-and-retain/web-app-manifest/
 [Improving Color on the Web]: https://webkit.org/blog/6682/improving-color-on-the-web/
