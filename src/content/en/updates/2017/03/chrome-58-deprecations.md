@@ -26,6 +26,25 @@ The Service Worker spec has always had the (non-normative) note that "any type o
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688586)
 
 
+## Remove webkit-prefixed IndexedDB global aliases
+
+IndexedDB was originally implemented with prefixed aliases and constructors around the time of Chrome 11. The non-prefixed versions were shipped in Chrome 24 and the prefixed versions deprecated in Chrome 38. In Chrome 57, the prefixed constructors are removed. The effected interfaces include:
+
+* `webkitIndexedDB` (main entry point) 
+* `webkitIDBKeyRange` (non-callable global constructor, but has useful static methods)
+* `webkitIDBCursor`
+* `webkitIDBDatabase`
+* `webkitIDBFactory`
+* `webkitIDBIndex`
+* `webkitIDBObjectStore`
+* `webkitIDBRequest`
+* `webkitIDBTransaction` (non-callable global constructors)
+
+[Intent to Remove]() &#124;
+[Chromestatus Tracker]() &#124;
+[Chromium Bug]()
+
+
 ## Mouse on Android stops firing TouchEvents
 
 Until Chrome 57, Android low-level mouse events in Chrome primarily followed an
