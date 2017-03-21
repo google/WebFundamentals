@@ -17,6 +17,14 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 58,
 which is in beta as of March 16. This list is subject to change at any time.
 
+## Deprecate FileReaderSync from service workers
+
+The Service Worker spec has always had the (non-normative) note that "any type of synchronous requests must not be initiated inside of a service worker", to avoid blocking the service worker (as blocking the service worker would block all network requests from controlled pages). However synchronous APIs such as `FileReaderSync` were still available in service workers. Starting in Chrome 57, `FileReaderSync` is deprecated. Removal is anticipated in Chrome 59.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cjWtqRD6iw8/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5739144722513920) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688586)
+
 
 ## Mouse on Android stops firing TouchEvents
 
