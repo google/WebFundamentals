@@ -41,7 +41,7 @@ figure {
 }
 </style>
 
-[Lighthouse](/web/tools/lighthouse/)는 웹 앱의 품질을 개선하는
+Lighthouse는 웹 앱의 품질을 개선하는
 [오픈 소스](https://github.com/GoogleChrome/lighthouse) 자동화 도구입니다.
 
 Lighthouse는 Chrome 확장프로그램, 커맨드 라인에서, 노드 모듈에서 프로그램으로도 사용할 수 있습니다.

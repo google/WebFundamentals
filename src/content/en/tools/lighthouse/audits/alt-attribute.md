@@ -40,3 +40,6 @@ This audit is powered by the aXe Accessibility Engine. See [Images must have
 alternate text][axe] for more information.
 
 [axe]: https://dequeuniversity.com/rules/axe/1.1/image-alt
+
+
+{% include "web/tools/lighthouse/audits/_feedback/alt-attribute.html" %}

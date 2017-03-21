@@ -299,10 +299,10 @@ Dogfood: This type of callout is for notes that apply temporarily during interna
 <p><span class="compare-worse">Not recommended</span> — indent with tabs</p>
 <pre class="prettyprint">(bad sample code)</pre>
 
-<p><span class="compare-better">Recommended</span> — indend with spaces</p>
+<p><span class="compare-better">Recommended</span> — indent with spaces</p>
 <pre class="prettyprint">(good sample code)</pre>
 
-<p><span class="compare-no">Not allowed</span> — indend with spaces</p>
+<p><span class="compare-no">Not allowed</span> — indent with spaces</p>
 <pre class="prettyprint">(very bad sample code)</pre>
 
 ## Lists

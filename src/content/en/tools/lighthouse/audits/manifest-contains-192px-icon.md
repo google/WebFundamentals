@@ -48,3 +48,6 @@ separate from the one that Chrome is using on the page, which can possibly
 cause inaccurate results. Note also that Lighthouse does not check whether
 the icon actually exists in the cache. It just makes sure that the Web App
 Manifest defines a 192-pixel icon.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/manifest-contains-192px-icon.html" %}

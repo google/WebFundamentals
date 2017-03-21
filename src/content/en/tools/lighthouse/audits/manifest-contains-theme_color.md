@@ -34,3 +34,6 @@ Audit passes if the manifest contains a `theme_color` property.
 The manifest that Lighthouse fetches is separate from the one that Chrome is
 using on the page, which can possibly cause inaccurate results. Lighthouse does
 not validate that the value is a valid CSS color.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/manifest-contains-theme_color.html" %}

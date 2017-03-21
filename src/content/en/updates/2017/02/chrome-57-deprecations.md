@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 57 to help you plan.
 
-{# wf_updated_on: 2017-02-23 #}
+{# wf_updated_on: 2017-03-10 #}
 {# wf_published_on: 2017-02-01 #}
 {# wf_tags: deprecations,removals,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -128,6 +128,25 @@ is removed.
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/pX5NbX0Xack/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5716060992962560) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=568184)
+
+
+## Remove RTCRtcpMuxPolicy of "negotiate"
+
+The `rtcpMuxPolicy` is used by Chrome to specify its preferred policy regarding
+use of RTP/RTCP multiplexing. In Chrome 57, we changed the default
+`rtcpMuxPolicy` to "require" and deprecated "negotiate" for following reasons:
+
+* Non-muxed RTCP uses extra network resources.
+* Removing "negotiate" will make the API surface simpler, since an 
+  "RtpSender"/"RtpReceiver" will then only ever have a single transport.
+
+In Chrome 57, "negotiate" is removed. We believe this is a non-breaking change
+since the user will get a deprecation message and `RTCPeerConnection` can still
+be created.
+
+[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/OP2SGSWF5lo/discussion) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=685727)
+
 
 ## Remove webkit-prefixed IndexedDB global aliases
 

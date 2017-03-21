@@ -39,3 +39,6 @@ code contains calls to `geolocation.getCurrentPosition()` or
 granted, then the user's location was requested.
 
 [help]: https://support.google.com/chrome/answer/6148059
+
+
+{% include "web/tools/lighthouse/audits/_feedback/geolocation-on-load.html" %}

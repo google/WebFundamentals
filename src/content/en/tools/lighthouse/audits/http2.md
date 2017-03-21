@@ -36,3 +36,6 @@ page, and then checks the HTTP protocol version of each resource.
 
 Lighthouse excludes resources from other hosts from this audit, because it
 assumes that you have no control over how these resources are served.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/http2.html" %}

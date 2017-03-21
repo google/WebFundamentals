@@ -34,3 +34,6 @@ old properties map to the new ones.
 Lighthouse collects all of the stylesheets used on the page and checks if any of
 them uses `display: box`. Lighthouse does not check if the stylesheets use any
 other deprecated properties.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/old-flexbox.html" %}

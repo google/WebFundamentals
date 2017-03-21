@@ -38,3 +38,6 @@ exists and that it's value is `fullscreen`, `standalone`, or `browser`.
 
 The manifest that Lighthouse fetches is separate from the one that Chrome
 is using on the page, which can possibly cause inaccurate results.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/manifest-has-display-set.html" %}
