@@ -20,44 +20,63 @@ why we're going to build a simple mobile player experience with custom
 controls, fullscreen, and background playback.
 
 
-## Custom controls [50%]
+## Custom controls [90%]
 
-### HTML layout
+As you can see below, the HTML layout we're going to use for our media player
+is pretty simple: a `<div>` root element contains a `<video>` media element and
+a `<div>` child element dedicated to video controls.
 
-As you can see below, the HTML layout is pretty simple: a `<div>` root element
-that contains the `<video>` element and another `<div>` element dedicated to
-video controls. It contains the play/pause button, the fullscreen button, two
-buttons to seek backward and forward, and some elements for current time,
-duration and time tracking.
+Video controls will contain as we implement them the play/pause button, the
+fullscreen button, seek backward and forward buttons, and some elements for
+current time, duration and time tracking.
 
     <div id="videoContainer">
-      <video id="video" src="file.mp4">
-      <div id="videoControls">
-        <button id="playPauseButton"></button>
-        <button id="fullscreenButton"></button>
-        <button id="seekForwardButton"></button>
-        <button id="seekBackwardButton"></button>
-        <div id="videoCurrentTime"></div>
-        <div id="videoDuration"></div>
-        <div id="videoTimeTrack"></div>
-      </div>
+      <video id="video" src="file.mp4"></video>
+      <div id="videoControls"></div>
     </div>
 
-### Video metadata
+### Read video metadata
 
-Let's start simple:
+First, let's wait for the video metadata to be loaded to show the video
+duration and the current time. The `secondsToTimeCode` function is a custom utility
+function that converts a number of seconds to a string in "hh:mm:ss" format
+which is better suited in our case.
+
+<pre class="prettyprint lang-html">
+&lt;div id="videoContainer">
+  &lt;video id="video" src="file.mp4">&lt;/video&gt;
+  &lt;div id="videoControls">
+    <strong>&lt;div id="videoCurrentTime">&lt;/div>
+    &lt;div id="videoDuration">&lt;/div>
+    &lt;div id="videoTimeTrack">&lt;/div></strong>
+  &lt;/div>
+&lt;/div>
+</pre>
 
     video.addEventListener('loadedmetadata', function() {
-      videoDuration.textContent = formatTime(video.duration);
-      videoCurrentTime.textContent = formatTime(video.currentTime);
+      videoDuration.textContent = secondsToTimeCode(video.duration);
+      videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
       videoTimeTrack.style.width = `${video.currentTime * 100 / video.duration}%`;
     });
 
-The `formatTime` function is a simple utility function that formats time in 00:00:00.
 
 ### Play/pause video
 
-Then, let's code the play/pause button actions:
+Now that the video is loaded, let's code our first button that lets user play
+and pause video with `video.play()` and `video.pause()` depending on its
+playback state.
+
+<pre class="prettyprint lang-html">
+&lt;div id="videoContainer">
+  &lt;video id="video" src="file.mp4">&lt;/video&gt;
+  &lt;div id="videoControls">
+    <strong>&lt;button id="playPauseButton">&lt;/button></strong>
+    &lt;div id="videoCurrentTime">&lt;/div>
+    &lt;div id="videoDuration">&lt;/div>
+    &lt;div id="videoTimeTrack">&lt;/div>
+  &lt;/div>
+&lt;/div>
+</pre>
 
     playPauseButton.addEventListener('click', function(event) {
       event.stopPropagation();
@@ -68,7 +87,11 @@ Then, let's code the play/pause button actions:
       }
     });
 
-Let's adjust our controls based on play and paused video events:
+Rather than adjusting our video controls in the `click` event listener, we'll
+use the fired `play` and `pause` video events. When video starts playing, we'll
+change button state to "pause", make sure time tracking is updated continuously
+and hide video controls. When video pauses, we'll simply change button state to
+"play" and show video controls.
 
     video.addEventListener('play', function() {
       playPauseButton.classList.toggle('paused', true);
@@ -87,14 +110,18 @@ Let's adjust our controls based on play and paused video events:
           // Let's continously update time tracking when video is playing.
           updateTimeTracking();
         }
-        videoCurrentTime.textContent = formatTime(video.currentTime);
+        videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
         videoTimeTrack.style.width = `${video.currentTime * 100 / video.duration}%`;
       });
     }
 
-### Video ends
+Note: I'm using `requestAnimationFrame` to make sure time tracking is updated
+only when needed and as efficiently as possible.
 
-What happens when video ends?
+When video ends, we'll simply change button state to "play" and show video
+controls for now as well. Note that we could also chose to load automatically
+the next video in the context of a playlist if user has enabled an "AutoPlay"
+feature.
 
     video.addEventListener('ended', function() {
       playPauseButton.classList.toggle('paused', false);
@@ -103,19 +130,38 @@ What happens when video ends?
 
 ### Seek backward and forward
 
-And seek backward and seek forward buttons now!
+Let's continue and implement "seek backward" and "seek forward" buttons so that
+user can easily skip some content.
 
-    const skipTimeInSeconds = 10;
+<pre class="prettyprint lang-html">
+&lt;div id="videoContainer">
+  &lt;video id="video" src="file.mp4">&lt;/video&gt;
+  &lt;div id="videoControls">
+    &lt;button id="playPauseButton">&lt;/button>
+    <strong>&lt;button id="seekForwardButton">&lt;/button>
+    &lt;button id="seekBackwardButton">&lt;/button></strong>
+    &lt;div id="videoCurrentTime">&lt;/div>
+    &lt;div id="videoDuration">&lt;/div>
+    &lt;div id="videoTimeTrack">&lt;/div>
+  &lt;/div>
+&lt;/div>
+</pre>
+
+    let skipTime = 10; // Time to skip in seconds
 
     seekForwardButton.addEventListener('click', function(event) {
       event.stopPropagation();
-      video.currentTime = Math.min(video.currentTime + skipTimeInSeconds, video.duration);
+      video.currentTime = Math.min(video.currentTime + skipTime, video.duration);
     });
 
     seekBackwardButton.addEventListener('click', function(event) {
       event.stopPropagation();
-      video.currentTime = Math.max(video.currentTime - skipTimeInSeconds, 0);
+      video.currentTime = Math.max(video.currentTime - skipTime, 0);
     });
+
+As before, rather than adjusting video styling in the `click` event listeners
+of these buttons, we'll use the fired `seeking` and `seeked` video events for
+that.
 
     video.addEventListener('seeking', function() {
       video.classList.toggle('seeking', true);
@@ -126,8 +172,11 @@ And seek backward and seek forward buttons now!
       updateTimeTracking();
     });
 
-<video controls muted playsinline>
-  <source src="/web/fundamentals/getting-started/primers/videos/perfect-fullscreen.webm"
+Here's below what we have created so far. In the next section, we'll implement
+the fullscreen button.
+
+<video autoplay loop muted playsinline>
+  <source src="/web/fundamentals/getting-started/primers/videos/custom-controls.webm"
           type="video/webm; codecs=vp8">
 </video>
 
@@ -196,6 +245,21 @@ method `requestFullscreen()` if available or fallback to
 
 Note: I'm going to use a [tiny shim] for the Fullscren API in code snippets below that
 will take care of prefixes as the API is not unprefixed yet at that time.
+
+<pre class="prettyprint lang-html">
+&lt;div id="videoContainer">
+  &lt;video id="video" src="file.mp4">&lt;/video&gt;
+  &lt;div id="videoControls">
+    &lt;button id="playPauseButton">&lt;/button>
+    &lt;button id="seekForwardButton">&lt;/button>
+    &lt;button id="seekBackwardButton">&lt;/button>
+    <strong>&lt;button id="fullscreenButton">&lt;/button></strong>
+    &lt;div id="videoCurrentTime">&lt;/div>
+    &lt;div id="videoDuration">&lt;/div>
+    &lt;div id="videoTimeTrack">&lt;/div>
+  &lt;/div>
+&lt;/div>
+</pre>
 
     fullscreenButton.addEventListener('click', function(event) {
       event.stopPropagation();
