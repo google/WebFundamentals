@@ -59,6 +59,12 @@ which is better suited in our case.
       videoTimeTrack.style.width = `${video.currentTime * 100 / video.duration}%`;
     });
 
+<figure>
+  <img src="/web/fundamentals/getting-started/primers/imgs/video-metadata.png">
+  <figcaption>
+    <b>Figure 1.</b> Media Player showing video metadata
+  </figcaption>
+</figure>
 
 ### Play/pause video
 
