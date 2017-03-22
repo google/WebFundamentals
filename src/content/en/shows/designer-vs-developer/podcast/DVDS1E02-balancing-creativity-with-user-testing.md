@@ -17,8 +17,8 @@ faced in the industry by opening a conversation between the two, providing
 take aways, solutions to workflows, tools & discussions on everyday struggles.
 
 
-This week Mustafa Kurtuldu Speaks to Ewa Gasperowicz, Front End Developer on
-the Developer Relations Team at Google, about whether the UX movement has over
+This week Mustafa Speaks to Ewa Gasperowicz, a Front End Developer on the
+Developer Relations Team at Google, about whether the UX movement has over
 regulated the creative process and how we can bring back that sparkle into a
 project by making sandwiches.
 
