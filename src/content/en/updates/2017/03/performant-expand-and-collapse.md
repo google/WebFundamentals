@@ -14,8 +14,9 @@ description: When making expand and collapse effects you can use scale transform
 {% include "web/_shared/contributors/paullewis.html" %}
 {% include "web/_shared/contributors/smcgruer.html" %}
 
-**TL;DR - use scale transforms when animating clips. You can prevent the children from being
-stretched and skewed during the animation by counter-scaling them.**
+### TL;DR {: .hide-from-toc }
+Use scale transforms when animating clips. You can prevent the children from being
+stretched and skewed during the animation by counter-scaling them.
 
 Previously we’ve posted updates on how to create performant 
 [parallax effects](/web/updates/2016/12/performant-parallaxing) and 
@@ -52,7 +53,7 @@ The immediate problem with this approach is that it requires animating `width` a
 These properties require calculating layout and paint the results on every frame of the animation, 
 which can be very expensive, and will typically cause you to miss out on 60fps. If that’s news to 
 you then read our 
-[Google Web Fundamentals Rendering Performance](/web/fundamentals/performance/rendering/)
+[Rendering Performance](/web/fundamentals/performance/rendering/)
 guides, where you can get more information on how the rendering process works.
 
 ## Bad: Use the CSS clip or clip-path properties.
@@ -268,13 +269,13 @@ The code for the circular expand effect can be found in
 So there you have it, a way to do performant clip animations using scale transforms. In a perfect
 world it would be great to see clip animations be accelerated (there’s
 [a Chromium bug for that](https://bugs.chromium.org/p/chromium/issues/detail?id=686074) made by 
-Jake Archibald), but until we get there you should be cautious when animating clip or clip-path,
-and definitely avoid animating width or height. 
+Jake Archibald), but until we get there you should be cautious when animating `clip` or `clip-path`,
+and definitely avoid animating `width` or `height`. 
 
-It would also be handy to use Web Animations for effects like this, because they have a JavaScript
-API but can run on the compositor thread if you only animate transforms and opacity. 
+It would also be handy to use [Web Animations](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API) for effects like this, because they have a JavaScript
+API but can run on the compositor thread if you only animate `transform` and `opacity`. 
 Unfortunately [support for Web Animations isn’t great](http://caniuse.com/#feat=web-animation), 
-though you could use Progressive Enhancement to use them if they’re available.
+though you could use progressive enhancement to use them if they’re available.
 
     if ('animate' in HTMLElement.prototype) {
       // Animate with Web Animations.
@@ -283,7 +284,7 @@ though you could use Progressive Enhancement to use them if they’re available.
     }
 
 Until that changes, while you *can* use JavaScript-based libraries to do the animation, you might
-find that you get more reliable performance by baking out a CSS animation and using that instead.
+find that you get more reliable performance by baking a CSS animation and using that instead.
 Equally, if your app already relies on JavaScript for its animations you may be better served by
 being at least consistent with your existing codebase.
 
