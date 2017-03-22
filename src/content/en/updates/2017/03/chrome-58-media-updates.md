@@ -36,10 +36,9 @@ download, fullscreen and [remoteplayback] buttons using the new [ControlsList AP
 </figure>
 </div>
 
-This API aims to offer a way to control the native controls elements/buttons
-that are being shown by the browser to remove some features that do not make
-sense or are not part of the expected user experience, or only whitelist a
-limited amount of features.
+This API aims to offer a way to show/hide some native media controls that do
+not make sense or are not part of the expected user experience, or only
+whitelist a limited amount of features.
 
 The current implementation for now is a blacklist mechanism on native controls
 with the ability to set them directly from HTML content using the new 
