@@ -105,25 +105,17 @@ What happens when video ends?
 
 And seek backward and seek forward buttons now!
 
+    const skipTimeInSeconds = 10;
+
     seekForwardButton.addEventListener('click', function(event) {
       event.stopPropagation();
-      seekForward();
+      video.currentTime = Math.min(video.currentTime + skipTimeInSeconds, video.duration);
     });
 
     seekBackwardButton.addEventListener('click', function(event) {
       event.stopPropagation();
-      seekBackward();
-    });
-
-    const skipTimeInSeconds = 10;
-
-    function seekForward() {
-      video.currentTime = Math.min(video.currentTime + skipTimeInSeconds, video.duration);
-    }
-
-    function seekBackward() {
       video.currentTime = Math.max(video.currentTime - skipTimeInSeconds, 0);
-    }
+    });
 
     video.addEventListener('seeking', function() {
       video.classList.toggle('seeking', true);
