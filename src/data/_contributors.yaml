@@ -862,6 +862,17 @@ renatomangini:
   twitter: renatomangini
   email: mangini@google.com
 
+smcgruer:
+  name:
+    given: Stephen
+    family: McGruer
+  org:
+    name: Google
+    unit: Chrome
+  country: Canada
+  role:
+    - author
+
 josephmedley:
   name:
     given: Joseph
