@@ -110,13 +110,11 @@ controls) from being notified of the click event.
 
 Rather than adjusting our video controls in the `click` event listener, we use
 the `play` and `pause` video events. When video starts playing, we change the
-button state to "pause", make sure time tracking is updated continuously and
-hide video controls. When the video pauses, we simply change button state to
-"play" and show video controls.
+button state to "pause" and hide video controls. When the video pauses, we
+simply change button state to "play" and show video controls.
 
     video.addEventListener('play', function() {
       playPauseButton.classList.toggle('paused', true);
-      updateTimeTracking();
       hideMyVideoControls();
     });
 
@@ -125,19 +123,13 @@ hide video controls. When the video pauses, we simply change button state to
       showMyVideoControls();
     });
 
-    function updateTimeTracking() {
-      requestAnimationFrame(function() {
-        if (!video.paused) {
-          // Let's continously update time tracking when video is playing.
-          updateTimeTracking();
-        }
-        videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
-        videoProgressBar.style.width = `${video.currentTime * 100 / video.duration}%`;
-      });
-    }
+When time indicated by video `currentTime` attribute changed via the
+`timeupdate` video event, we also update our custom controls.
 
-Note: I use `requestAnimationFrame` to make sure time tracking is updated as
-efficiently as possible.
+    video.addEventListener('timeupdate', function() {
+      videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
+      videoProgressBar.style.width = `${video.currentTime * 100 / video.duration}%`;
+    }
 
 When video ends, we simply change button state to "play" and show video
 controls for now as well. Note that we could also choose to load automatically
@@ -189,7 +181,6 @@ that.
 
     video.addEventListener('seeked', function() {
       video.classList.toggle('seeking', false);
-      updateTimeTracking();
     });
 
 Here's below what we have created so far. In the next section, we'll implement
