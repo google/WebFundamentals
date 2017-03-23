@@ -22,13 +22,24 @@ controls, fullscreen, and background playback.
 
 ## Custom controls [90%]
 
-As you can see below, the HTML layout we're going to use for our media player
-is pretty simple: a `<div>` root element contains a `<video>` media element and
-a `<div>` child element dedicated to video controls.
+<div class="attempt-right">
+  <figure>
+    <img src="/web/fundamentals/getting-started/primers/imgs/html-layout.jpg">
+    <figcaption>
+      <b>Figure 1.</b>HTML Layout
+    </figcaption>
+  </figure>
+</div>
 
-Video controls will contain as we implement them the play/pause button, the
+As you can see, the HTML layout we're going to use for our media player is
+pretty simple: a `<div>` root element contains a `<video>` media element and a
+`<div>` child element dedicated to video controls.
+
+Video controls will feature as we implement them a play/pause button, a
 fullscreen button, seek backward and forward buttons, and some elements for
 current time, duration and time tracking.
+
+<div class="clearfix"></div>
 
     <div id="videoContainer">
       <video id="video" src="file.mp4"></video>
@@ -37,10 +48,11 @@ current time, duration and time tracking.
 
 ### Read video metadata
 
-First, let's wait for the video metadata to be loaded to show the video
-duration and the current time. The `secondsToTimeCode` function is a custom utility
-function that converts a number of seconds to a string in "hh:mm:ss" format
-which is better suited in our case.
+First, let's wait for the video metadata to be loaded to set the video
+duration, the current time and initialize the progress bar. Note that the
+`secondsToTimeCode` function is a custom utility function I've written that
+converts a number of seconds to a string in "hh:mm:ss" format which is better
+suited in our case.
 
 <pre class="prettyprint lang-html">
 &lt;div id="videoContainer">
@@ -48,7 +60,7 @@ which is better suited in our case.
   &lt;div id="videoControls">
     <strong>&lt;div id="videoCurrentTime">&lt;/div>
     &lt;div id="videoDuration">&lt;/div>
-    &lt;div id="videoTimeTrack">&lt;/div></strong>
+    &lt;div id="videoProgressBar">&lt;/div></strong>
   &lt;/div>
 &lt;/div>
 </pre>
@@ -56,20 +68,20 @@ which is better suited in our case.
     video.addEventListener('loadedmetadata', function() {
       videoDuration.textContent = secondsToTimeCode(video.duration);
       videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
-      videoTimeTrack.style.width = `${video.currentTime * 100 / video.duration}%`;
+      videoProgressBar.style.width = `${video.currentTime * 100 / video.duration}%`;
     });
 
 <figure>
   <img src="/web/fundamentals/getting-started/primers/imgs/video-metadata.png">
   <figcaption>
-    <b>Figure 1.</b> Media Player showing video metadata
+    <b>Figure 2.</b> Media Player showing video metadata
   </figcaption>
 </figure>
 
 ### Play/pause video
 
-Now that the video is loaded, let's code our first button that lets user play
-and pause video with `video.play()` and `video.pause()` depending on its
+Now that video metadata are loaded, let's add our first button that lets user
+play and pause video with `video.play()` and `video.pause()` depending on its
 playback state.
 
 <pre class="prettyprint lang-html">
@@ -79,7 +91,7 @@ playback state.
     <strong>&lt;button id="playPauseButton">&lt;/button></strong>
     &lt;div id="videoCurrentTime">&lt;/div>
     &lt;div id="videoDuration">&lt;/div>
-    &lt;div id="videoTimeTrack">&lt;/div>
+    &lt;div id="videoProgressBar">&lt;/div>
   &lt;/div>
 &lt;/div>
 </pre>
@@ -93,10 +105,13 @@ playback state.
       }
     });
 
-Rather than adjusting our video controls in the `click` event listener, we'll
-use the fired `play` and `pause` video events. When video starts playing, we'll
-change button state to "pause", make sure time tracking is updated continuously
-and hide video controls. When video pauses, we'll simply change button state to
+Note: I call `event.stopPropagation()` to prevent parent handlers (eg.  video
+controls) from being notified of the click event.
+
+Rather than adjusting our video controls in the `click` event listener, we use
+the `play` and `pause` video events. When video starts playing, we change the
+button state to "pause", make sure time tracking is updated continuously and
+hide video controls. When the video pauses, we simply change button state to
 "play" and show video controls.
 
     video.addEventListener('play', function() {
@@ -117,17 +132,16 @@ and hide video controls. When video pauses, we'll simply change button state to
           updateTimeTracking();
         }
         videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
-        videoTimeTrack.style.width = `${video.currentTime * 100 / video.duration}%`;
+        videoProgressBar.style.width = `${video.currentTime * 100 / video.duration}%`;
       });
     }
 
-Note: I'm using `requestAnimationFrame` to make sure time tracking is updated
-only when needed and as efficiently as possible.
+Note: I use `requestAnimationFrame` to make sure time tracking is updated as
+efficiently as possible.
 
-When video ends, we'll simply change button state to "play" and show video
-controls for now as well. Note that we could also chose to load automatically
-the next video in the context of a playlist if user has enabled an "AutoPlay"
-feature.
+When video ends, we simply change button state to "play" and show video
+controls for now as well. Note that we could also choose to load automatically
+another video if user has enabled some kind of "AutoPlay" feature.
 
     video.addEventListener('ended', function() {
       playPauseButton.classList.toggle('paused', false);
@@ -136,8 +150,8 @@ feature.
 
 ### Seek backward and forward
 
-Let's continue and implement "seek backward" and "seek forward" buttons so that
-user can easily skip some content.
+Let's continue and add "seek backward" and "seek forward" buttons so that user
+can easily skip some content.
 
 <pre class="prettyprint lang-html">
 &lt;div id="videoContainer">
@@ -148,7 +162,7 @@ user can easily skip some content.
     &lt;button id="seekBackwardButton">&lt;/button></strong>
     &lt;div id="videoCurrentTime">&lt;/div>
     &lt;div id="videoDuration">&lt;/div>
-    &lt;div id="videoTimeTrack">&lt;/div>
+    &lt;div id="videoProgressBar">&lt;/div>
   &lt;/div>
 &lt;/div>
 </pre>
@@ -262,7 +276,7 @@ will take care of prefixes as the API is not unprefixed yet at that time.
     <strong>&lt;button id="fullscreenButton">&lt;/button></strong>
     &lt;div id="videoCurrentTime">&lt;/div>
     &lt;div id="videoDuration">&lt;/div>
-    &lt;div id="videoTimeTrack">&lt;/div>
+    &lt;div id="videoProgressBar">&lt;/div>
   &lt;/div>
 &lt;/div>
 </pre>
@@ -418,7 +432,7 @@ To see this in action, check out the [fullscreen sample]{: .external }.
           type="video/webm; codecs=vp8">
 </video>
 
-## Background playback [50%]
+## Background playback [80%]
 
 When you detect a web page or a video in the web page is not visible anymore,
 you may want to update your analytics to reflect this. This could also affect
@@ -514,6 +528,7 @@ TODO
 
 <pre class="prettyprint">
 playPauseButton.addEventListener('click', function() {
+  event.stopPropagation();
   if (video.paused) {
     video.play()
     <strong>.then(function() {
@@ -549,8 +564,6 @@ notification will automatically disappear. Keep in mind that current
 `navigator.mediaSession.metadata` will be used when any playback starts. This
 is why you need to update it to make sure you're always showing relevant
 information in the media notification.
-
-### Handle playlists
 
 If your web app provides a playlist, you may want to allow the user to navigate
 through your playlist directly from the media notification with some "Previous
