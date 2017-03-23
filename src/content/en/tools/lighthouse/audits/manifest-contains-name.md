@@ -37,3 +37,6 @@ implement and test "Add to Homescreen" support in your app.
 Lighthouse fetches the manifest and verifies that it has a `name` property.
 The manifest that Lighthouse fetches is separate from the one that Chrome is
 using on the page, which can possibly cause inaccurate results.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/manifest-contains-name.html" %}

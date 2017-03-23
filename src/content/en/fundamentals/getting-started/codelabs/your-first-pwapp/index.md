@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-07T11:41:09Z #}
+{# wf_updated_on: 2017-03-23T14:31:55Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -27,36 +27,31 @@ A Progressive Web App is:
 * __Progressive__ - Works for every user, regardless of browser choice because it's built with progressive enhancement as a core tenet.
 * __Responsive__ - Fits any form factor: desktop, mobile, tablet, or whatever is next.
 * __Connectivity independent__ - Enhanced with service workers to work offline or on low-quality networks.
-* __App-like__ - Feels like an app to the user with app-style interactions and navigation because it's built on the app shell model.
-* __Fresh__ - Always up-to-date thanks to the service worker update process.
+* __App-like__ - Feels like an app, because the app shell model separates the application  *functionality*  from application  *content* .
+* __Fresh__ - Always up-to-date thanks to the  [service worker](/web/fundamentals/getting-started/primers/service-workers) update process.
 * __Safe__ - Served via HTTPS to prevent snooping and to ensure content hasn't been tampered with.
-* __Discoverable__ - Is identifiable as an "application" thanks to W3C manifest and service worker registration scope, allowing search engines to find it.
+* __Discoverable__ - Is identifiable as an "application" thanks to  [W3C manifest](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) and  [service worker registration](/web/fundamentals/instant-and-offline/service-worker/registration) scope, allowing search engines to find it.
 * __Re-engageable__ - Makes re-engagement easy through features like push notifications.
-* __Installable__ - Allows users to "keep" apps they find most useful on their home screen without the hassle of an app store.
-* __Linkable__ - Easily share via URL, does not require complex installation.
+* __Installable__ - Allows users to add apps they find most useful to their home screen without the hassle of an app store.
+* __Linkable__ - Easily share the application via URL, does not require complex installation.
 
-This codelab will walk you through creating your own Progressive Web App, including the design considerations, as well as implementation details to ensure that your app meets the key principles of a Progressive Web App.
+This codelab will walk you through creating your own Progressive Web App, including the design considerations, as well as implementation details, to ensure that your app meets the above key principles of a Progressive Web App.
 
 <aside markdown="1" class="key-point">
 <p>Looking for more? Check out the talks from the  <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb">2016 Progressive Web App Summit</a>.</p>
 </aside>
 
 
-### What are we going to be building?
+### What you will build
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">
-<p>In this codelab, you're going to build a Weather web app using Progressive Web App techniques. Let's consider the properties of a Progressive Web App:</p>
+<p>In this codelab, you're going to build a Weather web app using Progressive Web App techniques. Your app will:</p>
 <ul>
-<li><strong>Progressive</strong> - we'll use progressive enhancement throughout.</li>
-<li><strong>Responsive</strong> - we'll ensure it fits any form factor.</li>
-<li><strong>Connectivity independent</strong> - we'll cache the app shell with service workers.</li>
-<li><strong>App-like</strong> - we'll use app-style interactions to add cities and refresh the data.</li>
-<li><strong>Fresh</strong> - we'll cache the latest data with service workers.</li>
-<li><strong>Safe</strong> - we'll deploy the app to a host that support HTTPS.</li>
-<li><strong>Discoverable and installable</strong> - we'll include a manifest making it easy for search engines to find our app.</li>
+<li>Utilize and demonstrate the above principles of Progressive Web Apps.</li>
+<li>Use live weather data.</li>
 <li>
-<p><strong>Linkable</strong> - it's the web!</p>
+<p>Provide app-like interactions to allow the user to add cities.</p>
 </td><td colspan="1" rowspan="1">
 </li>
 </ul>
@@ -69,15 +64,15 @@ This codelab will walk you through creating your own Progressive Web App, includ
 
 * How to design and construct an app using the "app shell" method
 * How to make your app work offline
-* How to store data for use offline later
+* How to store data for later offline use
 
 ### What you'll need
 
-* Chrome 52 or above
+* A recent version of  [Chrome](https://www.google.com/chrome/). Note, this works in other browsers as well, but we'll be using a few features of the Chrome DevTools to better understand what's happening at the browser level.
 *  [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb), or your own web server of choice
-* The sample code
+*  [The sample code](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 * A text editor
-* Basic knowledge of HTML, CSS, JavaScript, and Chrome DevTools
+* Basic knowledge of HTML, CSS, JavaScript, and  [Chrome DevTools](https://developer.chrome.com/devtools)
 
 This codelab is focused on Progressive Web Apps. Non-relevant concepts and code blocks are glossed over and are provided for you to simply copy and paste.
 
@@ -89,7 +84,7 @@ This codelab is focused on Progressive Web Apps. Non-relevant concepts and code 
 
 ### Download the Code
 
-Click the following button to download all the code for this codelab:
+Click the following link to download all the code for this codelab:
 
 [Download source code](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 
@@ -108,7 +103,7 @@ After installing the Web Server for Chrome app, click on the Apps shortcut on th
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
 <aside markdown="1" class="key-point">
-<p>More help:  <a href="https://support.google.com/chrome_webstore/answer/3060053?hl=en">Add and open Chrome apps</a></p>
+<p>More help:  <a href="https://support.google.com/chrome_webstore/answer/3060053">Add and open Chrome apps</a></p>
 </aside>
 
 
@@ -134,7 +129,7 @@ Now visit your work site in your web browser (by clicking on the highlighted Web
 
 ![aa64e93e8151b642.png](img/aa64e93e8151b642.png)
 
-Obviously, this app is not yet doing anything interesting - so far, it's just a minimal skeleton with a spinner we're using to verify your web server functionality. We'll add functionality and UI features in subsequent steps. 
+This app is not yet doing anything interesting - so far, it's just a minimal skeleton with a spinner we're using to verify your web server functionality. We'll add functionality and UI features in subsequent steps. 
 
 <aside markdown="1" class="key-point">
 <p>From this point forward, all testing/verification (e.g. the<strong> Test It Out</strong> sections in subsequent steps) should be performed using this web server setup.</p>
@@ -151,7 +146,9 @@ Obviously, this app is not yet doing anything interesting - so far, it's just a 
 
 The app's shell is the minimal HTML, CSS, and JavaScript that is required to power the user interface of a progressive web app and is one of the components that ensures reliably good performance. Its first load should be extremely quick and immediately cached. "Cached" means that the shell files are loaded once over the network and then saved to the local device. Every subsequent time that the user opens the app, the shell files are loaded from the local device's cache, which results in blazing-fast startup times. 
 
-App shell architecture separates the core application infrastructure and UI from the data. All of the UI and infrastructure is cached locally using a service worker so that on subsequent loads, the Progressive Web App only needs to retrieve the necessary data, instead of having to load everything.
+App shell architecture separates the core application infrastructure and UI from the data. All of the UI and infrastructure is cached locally using a  [service worker](/web/fundamentals/getting-started/primers/service-workers) so that on subsequent loads, the Progressive Web App only needs to retrieve the necessary data, instead of having to load everything.
+
+A  [service worker](/web/fundamentals/getting-started/primers/service-workers) is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction.
 
 ![156b5e3cc8373d55.png](img/156b5e3cc8373d55.png)
 
@@ -628,7 +625,7 @@ Check out the `else` clause in `app.getForecast()` to understand why the app is 
 
 The next step is to modify the app and service worker logic to be able to cache weather data, and return the most recent data from the cache when the app is offline.
 
-__Tip:__ To start fresh and clear all saved data (localStoarge, indexedDB data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
+__Tip:__ To start fresh and clear all saved data (`localStoarge`, `indexedDB` data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
 
 [TRY IT](https://weather-pwa-sample.firebaseapp.com/step-06/)
 
@@ -988,7 +985,7 @@ Once your account has been created and you've signed in, you're ready to deploy!
 4. Finally, deploy the app to Firebase: `firebase deploy`
 5. Celebrate. You're done! Your app will be deployed to the domain: `https://YOUR-FIREBASE-APP.firebaseapp.com`
 
-Further reading:  [Firebase Hosting Guide](https://www.firebase.com/docs/hosting/guide/)
+Further reading:  [Firebase Hosting Guide](https://firebase.google.com/docs/hosting/)
 
 ### Test it out
 

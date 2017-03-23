@@ -1,209 +1,331 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Adicione breakpoints no Chrome DevTools para rapidamente e efetivamente debugar código problemático.
+description: Use pontos de interrupção para suspender código JavaScript e investigar valores de variáveis e da pilha de chamadas no momento da interrupção.
 
-{# wf_updated_on: 2015-09-02 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_updated_on: 2016-07-17 #}
+{# wf_published_on: 2015-04-13 #}
 
-# Como trabalhar com breakpoints {: .page-title }
+<style>
+.devtools-inline {
+  max-height: 1em;
+  vertical-align: middle;
+}
+</style>
 
+# Como configurar pontos de interrupção {: .page-title }
 
-Usar breakpoints é uma das maneiras mais efetivas de debugar código. Breakpoints
-permitem que você pause a execução de um script e então investigue o <i>call stack</i>
-e os valores das variáveis em um determinado momento. Existem dois tipos de breakpoints
-à sua disposição: manuais qe condicionais.
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
-* Breakpoints manuais são breakpoints individuais que você define em uma
-  linha específica de código. Você pode defini-los usando a interface do Chrome DevTools, ou
-  inserindo a palavra chave `debugger` no seu código.
-* Breakpoints condicionais são acionados quando uma condição específica for
-  válida (por exemplo, um evento `onclick` é disparado, uma exceção é lançada, e
-  assim por diante). Você habilita eles através da interface do DevTools,
-  e então o DevTools automaticamente interrompe a execução sempre
-  que a condição especificada for válida.
+Use pontos de interrupção para suspender código JavaScript e investigar
+valores de variáveis e da pilha de chamadas no momento da
+interrupção.
+
+Após configurar os pontos de interrupção, aprenda a percorrer o código
+e investigar variáveis e pilhas de chamadas em [Como percorrer o
+código](step-code).
 
 
 ### TL;DR {: .hide-from-toc }
-- Use breakpoints manuais para pausar a execução do script em uma determinada linha de código.
-- Use breakpoints condicionais para pausar quando uma determinada condição for valida.
-- 'Defina breakpoints condicionais para alterações do DOM, requisições XHR, event listeners, e exceções não tratadas.'
+- A forma mais básica de configurar um ponto de interrupção é adicionar manualmente um deles a uma linha específica do código. Você pode configurar esses pontos de interrupção para serem acionados somente quando uma determinada condição é atendida.
+- Além disso, é possível configurar pontos de interrupção que são acionados quando condições gerais são atendidas, como um evento, uma modificação do DOM ou uma exceção não capturada.
 
 
-## Visualize os breakpoints
+## Configurar um ponto de interrupção em uma determinada linha de código {:#line-number}
 
-Visualize os breakpoints existentes a qualquer momento no painel Sources:
+A configuração de um ponto de interrupção em uma determinada linha de código é útil quando você sabe
+qual instrução quer investigar. Por exemplo, se o
+seu fluxo de trabalho de acesso não estiver funcionando como o esperado e só houver uma função no
+código que trata do acesso, é seguro presumir que o erro
+provavelmente está nessa função. Nesse caso, faz sentido adicionar um
+ponto de interrupção na primeira linha dessa função.
 
-1. Abra o menu do Chrome ![menu do Chrome](imgs/image_0.png){:.inline}.
-2. Escolha **Mais ferramentas** > **Ferramentas do desenvolvedor**, ou clique com o botão direito em algum elemento
-   da página e escolha **Inspecionar** no menu de contexto.
-3. Selecione o painel **Sources**.
+Quando você configurar um ponto de interrupção em uma linha de código, o código será sempre interrompido nessa
+linha de código até que você remova ou desative o ponto de interrupção, ou torne-o
+condicional.
 
-Os breakpoints são exibidos na barra lateral, agrupados por tipos.
-
-![Barra lateral de breakpoints](imgs/image_1.png)
-
-## Crie breakpoints manuais
-
-Breakpoints manuais são breakpoints que você define em uma única linha de código. Existem duas maneiras de
-de definir breakpoints manuais, por meio da interface do DevTools, ou inserindo a palavra chave `debugger`
-no seu código.
-
-Use breakpoints manuais quando você tiver uma forte suspeita de onde seu código está falhando,
-e quiser inspecionar a pilha de chamadas e os valores das variáveis naquele exato momento.
-
-### Adicione um breakpoint manual em uma única linha de código
-
-Para adicionar um breakpoint de linha:
-
-* Clique no número da linha na linha em que você deseja
-  definir o breakpoint. Você pode adicionar múltiplos breakpoints clicando no
-  número de cada linha.
-* Insira a palavra chave `debugger`no seu código, do qual é
-  equivalente a definir um breakpoint naquela linha.
-
-![Line breakpoint](imgs/image_2.png)
-
-Para temporariamente desabilitar um breakpoint, desmarque seu respectivo checkbox na barra lateral.
-
-Para remover um breakpoint, clique no número da linha novamente. Ou, clique com o botão direito
-no breakpoint na barra lateral, e então selecione **Remove breakpoint**.
-
-## Crie breakpoints condicionais
-
-Breakpoints condicionais são disparados quando uma condição específica for
-cumprida (por exemplo, um evento `onclick` é disparado, ou uma exceção é lançada).
-Você habilita eles usando a interface do DevTools,
-e então o DevTools automaticamente pausa a execução sempre que a condição
-especificada for atendida.
-
-Use breakpoints condicionais quando você precisar definir diversos breakpoints de uma vez.
-Por exemplo, suponha que você está tendo erros quando nós do DOM são removidos.
-Existem 20 lugares diferentes de onde o erro pode estar se originando. Ao invés de
-colocar um breakpoint manual antes de cada instrução suspeita, você pode definir
-apenas um breakpoint condicional. O breakpoint é acionado sempre que qualquer código
-remover um nó do DOM.
-
-O DevTools fornece quatro tipos de breakpoints condicionais:
-
-* Eventos de mutação do DOM (inserções, modificações, deleções)
-* `XMLHttpRequest`
-* listeners de eventos do JavaScript
-* Exceções não tratadas
-
-### Pause antes do evento de mutação do DOM
-
-Use o breakpoint do evento de mutação do DOM quando o script estiver prestes a inserir, alterar,
-ou deletar um nó do DOM e você quiser isolar e observar a mudança enquanto ela ocorre.
-A execução pausa pausa quando um nó específico do DOM estiver prestes a ser modificado, antes que a modificação
-seja aplicada (veja também [Edite o DOM](/web/tools/chrome-devtools/inspect-styles/edit-dom)).
-
-Para adicionar um breakpoint de mutação do DOM, abra o painel Elements e clique com o botão direito em algum elemento.
-A partir do menu de contexto, clique **Break on…**, e então escolha uma das opções:
-**Subtree modifications**, **Attributes modifications**, ou **Node removal**.
-
-![Breakpoint de mutação do DOM](imgs/image_3.png)
-
-Temporariamente desabilit um breakpoint do DOM limpando seu checkbox na barra lateral.
-
-Para remover um breakpoint do DOM, clique com o botão direito no elemento novamente, e então clique
-**Break on…**, e então escolha a opção já habilitada. Ou, clique com o botão direito no
-breakpoint na barra lateral e escolha **Remove breakpoint**.
-
-### Pause no `XMLHttpRequest`
-
-Existem duas maneiras de você criar breakpoints condicionais para um `XMLHttpRequest`:
-
-* Quando a URL de uma requisição conter uma string específica. O DevTools pausa antes
-  que a requisição seja enviada.
-* Antes de um evento `XMLHttpRequest` específico (por exemplo, `load`, `timeout`, `error`). O DevTools
-  pausa antes que o evento `XMLHttpRequest` específico seja disparado.
-
-#### Pause quando a URL do XMLHttpRequest tiver uma string específica
-
-Para pausar quando a URL de uma `XMLHttpRequest` tiver uma string específica:
-
-1. Clique no botão **Add XHR breakpoint**
-   ![Adicione o breakpoint XHR](imgs/image_4.png){:.inline} na barra lateral.
-2. No campo **Break when URL contains**, digite a string que a
-   URL deverá conter quando você quiser que a requisição XHR pare e pressione
-   **Enter**.
-
-![XMLHttpRequest breakpoint](imgs/image_5.png)
-
-Para editar o campo, dê um clique duplo no breakpoint.
-
-Para remover o breakpoint, clique direito no breakpoint na barra lateral, e então
-escolha **Remove breakpoint**.
-
-#### Pause antes de evento `XMLHttpRequest` específico
-
-Para pausar antes que um evento `XMLHttpRequest` específico seja disparado:
-
-1. Vá para o painel **Event Listener Breakpoints**.
-2. Abra o menu dropdown **XHR**.
-3. Selecione o estágio no ciclo de vida do evento do qual você pausar.
-   O DevTools naquele estágio para todos os eventos `XMLHttpRequest`.
-
-![Breakpoints disponíveis para eventos XMLHttpRequest](imgs/xhr-events.png)
-
-### Pause antes que o listener do evento JavaScript seja disparado
-
-Use o breakpoint do listener do evento JavaScript
-quando você quiser ver como um determinado evento
-(tal como keypress ou dblclick) for processado pelo script.
-A execução pausa antes que o listener do evento seja disparado (veja também
-[Veja listeners de evento do elemento](/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom#view-element-event-listeners)).
-
-Para adicionar um breakpoint de listener de evento JavaScript:
-
-1. Expanda a seção **Event Listener Breakpoints** na barra lateral,
-   e então expanda a categoria do listener onde você quer pausar
-   (**Animation**, **Clipboard**, **Control**, etc.).
-2. Sob a categoria expandida, clique no checkbox para o(s) tipo(s)
-   de listener que devem disparar uma pausa. Para escolher todos os possíveis
-   tipos de listener em uma categoria, clique no checkbox para a própria categoria.
-
-![Breakpoint de listener de evento](imgs/image_6.png)
-
-Remova um breakpoint de listener de evento limpando seu checkbox.
-
-### Pause em exceções não tratadas
-
-Clique no botão **Pause on Exceptions**
-(![botão "pause on exceptions"](imgs/pause-on-exception-button.png){:.inline})
-no painel **Sources** do DevTools para pausar a execução do script em qualquer
-exceção não tratada.
-
-Na animação abaixo, o botão **Pause on Exceptions** é clicado, um
-botão na página é clicado, e uma exceção não tratada é disparada.
-O DevTools automaticamente pausa na linha onde a exceção é lançada.
-
-<video src="animations/pause-on-uncaught-exception.mp4">
-</video>
-
-You can also view the call stack leading up to an uncaught exception
-in the DevTools console. In the animation below, a button is clicked,
-an uncaught exception is triggered,
-and then the carat next to the uncaught exception message (`Uncaught 0`) in the
-DevTools console is clicked. The call stack leading up to the exception
-is displayed in the console.
-
-<video src="animations/exception-in-console.mp4">
-</video>
-
-## Nunca Pause Aqui {#never-pause-here}
-
-Ás vezes breakpoints condicionais farão o DevTools pausar repetidamente
-em uma linha que não é relevante ao problema que você está debugando. Você pode dizer
-para o debugger nunca pausar em uma linha específica.
-
-1. Clique com o botão direito no número da linha.
-2. Selecione "Never pause here" a partir do menu de contexto.
-
-![Never Pause Here](imgs/never-pause-here.png)
-
-Você também pode usar essa técnica para desabilitar as instruções `debugger`.
+Para configurar um ponto de interrupção em uma determinada linha de código, abra antes o painel **Sources**
+e selecione o script na seção **File Navigator** à
+esquerda. Se não conseguir ver o **File Navigator**, pressione o botão **Toggle file
+navigator**
+(![botão hide/show file navigator][fn]{:.devtools-inline}).
 
 
-Translated By: 
-{% include "web/_shared/contributors/alansilva.html" %}
+**Dica**: Se estiver trabalhando com código minificado, pressione o botão **pretty print**
+
+(![botão pretty print][pp]{:.devtools-inline})
+para torná-lo legível. 
+
+No lado esquerdo do código-fonte, você pode ver números de linha. Esta região
+é chamada de **calha de número de linha**. Clique na calha do número de linha para
+adicionar um ponto de interrupção nessa linha de código.
+
+![ponto de interrupção de número de linha][lnb]
+
+Se uma expressão for distribuída em diversas linhas e você inserir um
+ponto de interrupção em uma linha no meio da expressão, o DevTools configurará o ponto de interrupção
+na próxima expressão. Por exemplo, se você tentar configurar o ponto de interrupção na linha
+4 na captura de tela abaixo, o DevTools colocará o ponto de interrupção na linha 6.
+
+![ponto de interrupção no meio da expressão](imgs/mid-expression-breakpoint.png)
+
+[pp]: imgs/pretty-print.png
+[fn]: imgs/file-navigator.png
+[lnb]: imgs/line-number-breakpoint.png
+
+### Tornar condicional um ponto de interrupção de número de linha
+
+Um ponto de interrupção condicional somente será acionado quando a condição especificada
+for verdadeira.
+
+Clique com o botão direito em um número de linha que ainda não tem um ponto de interrupção e
+pressione **Add conditional breakpoint** para criar um ponto de interrupção condicional.
+Se você já adicionou um ponto de interrupção a uma linha de código e quiser tornar
+esse ponto de interrupção condicional, clique com o botão direito e pressione **Edit breakpoint**.
+
+Insira a condição no campo de texto e pressione <kbd>Enter</kbd>.
+
+![adicionar condição][ac]
+
+Os pontos de interrupção condicionais são dourados. 
+
+![ponto de interrupção condicional][cb]
+
+[ac]: imgs/adding-condition.png
+[cb]: imgs/conditional-breakpoint.png
+
+### Excluir ou desativar um ponto de interrupção de número de linha
+
+Se você quiser ignorar temporariamente um ponto de interrupção, desative-o.
+Clique com o botão direito na **calha do número de linha** e selecione **Disable
+breakpoint**.
+
+![desativar ponto de interrupção][db]
+
+Se você não precisar mais de um ponto de interrupção, exclua-o. Clique com o botão direito na 
+**calha do número de linha** e selecione **Remove breakpoint**.
+
+Você também pode gerenciar todos os pontos de interrupção de número de linha em todos os
+scripts a partir de um único local. Esse local é o painel **Breakpoints**
+no painel **Sources**.
+
+Para excluir um ponto de interrupção da IU do painel **Breakpoints**, clique com o botão direito nele
+e selecione **Remove breakpoint**.
+
+![painel de pontos de interrupção][bp]
+
+Para desativar um ponto de interrupção nesse painel, desative sua caixa de seleção.
+
+Para desativar todos os pontos de interrupção, clique com o botão direito nesse painel e selecione **Deactivate
+breakpoints**. O resultado será o mesmo da opção **Disable All
+Breakpoints**.
+
+Também é possível desativar todos os pontos de interrupção pressionando o botão **deactivate
+breakpoints**
+(![botão deactivate breakpoints][dbb]{:.devtools-inline}), também no painel 
+**Sources**.
+
+[db]: imgs/disable-breakpoint.png
+[bp]: imgs/breakpoints-pane.png
+[dbb]: imgs/deactivate-breakpoints-button.png
+
+## Configurar um ponto de interrupção em uma modificação do DOM {:#dom}
+
+Use um ponto de interrupção de modificação do DOM quando houver um bug no código que
+modifica, exclui ou adiciona incorretamente um nó do DOM.
+
+Em vez de procurar manualmente o código que causa a mudança, o
+DevTools permite que você configure um ponto de interrupção no nó. Sempre que o nó ou,
+em alguns casos, um de seus filhos, for adicionado, excluído ou alterado,
+o DevTools interromperá a página e mostrará a linha exata de código
+responsável pela mudança.
+
+Veja a seguir uma demonstração ao vivo para aprender a configurar pontos de interrupção de modificação do DOM.
+Clique em **Increment** para incrementar **Count** em um. Teste agora.
+
+Neste tutorial interativo, o seu objetivo é configurar um ponto de interrupção de modificação do DOM
+acionado quando **Count** for incrementado, permitindo que você inspecione o
+código que modificou **Count**.
+
+{% framebox height="auto" %}
+<p><b>Demonstração de pontos de interrupção de modificação do DOM</b></p>
+<button>Increment</button>
+<p>Count: <span>0</span></p>
+<script>
+var buttons = document.querySelectorAll('button');
+var increment = buttons[0];
+var toggle = buttons[1];
+var count = document.querySelector('span');
+increment.addEventListener('click', function() {
+  count.textContent = parseInt(count.textContent) + 1;
+});
+</script>
+{% endframebox %}
+
+Para **adicionar o ponto de interrupção de modificação do DOM**:
+
+1. Clique com o botão direito em **Count** e selecione **Inspect**. O DevTools destaca
+   o nó com azul. Ele deveria ser um nó `<p>`. Você pode confirmar que está no
+   nó correto clicando duas vezes nele, o que expande o nó e
+   exibe seu conteúdo.
+
+1. Clique com o botão direito no nó destacado e selecione **Break on** >
+   **Subtree Modifications**. O ícone azul ![ícone DOM 
+   breakpoint][icon]{:.devtools-inline} à esquerda do nó indica que um ponto de interrupção
+   do DOM está configurado no nó. É um pouco difícil ver o ícone enquanto
+   o nó está destacado, pois é um ícone azul em um fundo
+   azul.
+
+1. Voltando à demonstração, clique em **Increment**. O DevTools interrompe a página,
+   vai para **Sources** e destaca a linha de código do script que está
+   fazendo a mudança.
+
+1. Pressione **Resume script execution** ![botão resume script
+   execution][resume]{:.devtools-inline} duas vezes para
+   retomar a execução do script. Você precisa pressionar o botão duas vezes porque o ponto de interrupção é
+   acionado uma vez quando o texto da contagem é excluído e mais uma vez quando o
+   texto é atualizado com a nova contagem.
+
+[resume]: /web/tools/chrome-devtools/images/resume-script-execution.png
+
+Para interromper quando um atributo do nó selecionado for alterado ou quando o 
+nó selecionado for excluído, basta selecionar **Attributes modifications** ou
+**Node Removal** em vez de **Subtree Modifications** na etapa 2 acima.
+
+Dica: esses pontos de interrupção não são exclusivos. É possível ter dois ou todos esses três pontos de interrupção ativados em um único nó ao mesmo tempo.
+
+Para **desativar temporariamente o ponto de interrupção**:
+
+1. No DevTools, volte para **Elements**.
+1. Clique em **DOM Breakpoints**. Se a janela do DevTools for pequena, **DOM
+   Breakpoints** poderá estar oculto atrás do menu flutuante ![menu
+   flutuante][overflow]{:.devtools-inline}. Você deverá ver uma caixa de seleção com o texto `p`
+   ao lado e **Subtree Modified** abaixo do `p`.
+1. Desative a caixa de seleção ao lado de **Subtree Modified**.
+1. Tente clicar novamente em **Increment**. O contador é incrementado e o DevTools não
+   interrompe a página.
+
+Dica: passe o cursor sobre `p` para destacar o nó na janela de visualização. Clique em `p` para
+selecionar o nó em **Elements**.
+
+Para **excluir o ponto de interrupção**:
+
+1. Acesse **DOM Breakpoints**.
+1. Clique com o botão direito no ponto de interrupção que deseja excluir e selecione
+   **Remove breakpoint**.
+
+[icon]: imgs/dom-breakpoint-icon.png
+[overflow]: imgs/overflow.png
+
+### Mais informações sobre os tipos de ponto de interrupção de modificação do DOM
+
+Veja a seguir informações mais detalhadas sobre exatamente quando e como cada tipo de
+ponto de interrupção de modificação do DOM é acionado:
+
+* **Modificações de subárvore**. Acionadas quando um secundário do nó
+  selecionado é removido, adicionado, ou o conteúdo de um secundário é alterado. Não
+  acionadas em mudanças de atributo do nó secundário nem em mudanças do
+  nó atualmente selecionado.
+
+* **Modificações de atributos**: Acionadas quando um atributo é adicionado ou removido
+  no nó atualmente selecionado ou quando o valor de uma tributo muda.
+
+* **Remoção de nó**: Acionado quando o nó selecionado no momento é removido.
+
+## Interromper em XHR
+
+Há duas formas de acionar pontos de interrupção em XHRs: quando *qualquer* XHR atinge
+uma determinada fase do seu ciclo de vida (`readystatechange`, `load`, etc.) ou
+quando o URL de um XHR corresponder a uma string específica. 
+
+Se você quiser interromper em uma determinada fase do ciclo de vida do XHR, confira a categoria
+**XHR** no [painel de pontos de interrupção de detector de evento](#events).
+
+Para interromper quando o URL de um XHR corresponder a uma string específica, use a seção **XHR
+Breakpoints** no painel **Sources**. 
+
+![painel XHR breakpoints][xbp]
+
+[xbp]: imgs/xhr-breakpoints-pane.png
+
+Clique no botão como sinal de mais para adicionar um novo padrão de ponto de interrupção. Insira a string
+no campo de texto e pressione <kbd>Enter</kbd> para salvá-la.
+
+**Dica**: clique no sinal de mais e pressione imediatamente <kbd>Enter</kbd> para
+acionar um ponto de interrupção antes que qualquer XHR seja enviado.
+
+## Interromper quando um evento é acionado {:#events}
+
+Use a seção **Event Listener Breakpoints** no painel **Sources** para
+interromper quando um determinado evento (por exemplo, `click`) ou categoria de eventos (por exemplo, qualquer
+evento de `mouse`) for acionado.
+
+![painel event listener breakpoints][elbp]
+
+O nível superior representa as categorias de eventos. Marque uma destas caixas de seleção
+para pausar sempre que algum evento da categoria for acionado. Expanda
+a categoria de nível superior para ver quais eventos ela abrange.
+
+Se você quiser monitorar um evento específicos, encontre a categoria de nível superior à qual
+o evento pertence e ative a caixa de seleção ao lado do evento de destino.
+
+![painel event listener breakpoints expandido][eelbp]
+
+[elbp]: imgs/event-listener-breakpoints-pane.png
+
+[eelbp]: imgs/expanded-event-listener-breakpoints-pane.png
+
+## Pontos de interrupção de exceção {:#exceptions}
+
+Use pontos de interrupção de exceção para interromper um script quando
+uma exceção é acionada e acessar a linha de código que acionou
+a exceção.
+
+A demonstração a seguir tem um bug. Siga as instruções abaixo
+para aprender a corrigir o bug usando um ponto de interrupção de exceção.
+
+{% framebox height="auto" width="auto" %}
+<button>Print Random Number</button>
+<p>Random Number: <span></span></p>
+<script type="text/javascript">
+  var nodes = {};
+  nodes.button = document.querySelector('button');
+  nodes.num = document.querySelector('span');
+  nodes.button.addEventListener('click', function onClick() {
+    nodes.number.textContent = Math.random();
+  });
+</script>
+{% endframebox %}
+
+1. Clique em **Print Random Number**. O rótulo **Random Number** abaixo do
+   botão deveria imprimir um número aleatório, mas isso não está acontecendo.
+   Esse é o bug que você corrigirá.
+1. Pressione <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) ou
+   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows, Linux) para
+   abrir o DevTools.
+1. Clique na guia **Sources**.
+1. Clique em **Pause on exceptions** ![Pausar em
+   exceções][pause on exception]{:.devtools-inline}.
+1. Clique em **Print Random Number** novamente para acionar o ponto de interrupção.
+   O DevTools deve estar pausado na linha de código que contém
+   `nodes.number.textContent = Math.random();`. Agora você sabe tudo
+   o que é necessário para usar pontos de interrupção de exceção. O resto das instruções
+   explica como resolver esse bug específico.
+1. Na linha de código em que o DevTools está pausado, passe o cursor sobre `nodes`
+   para garantir que o objeto esteja devidamente referenciado. Você verá
+   que ele contém três propriedades: `button`, `num` e `__proto__`.
+   Tudo aqui parece estar OK. A origem do bug não está aqui.
+1. Passe o cursor sobre `number`. Você verá que ele é avaliado como `undefined`.
+   Esse é o motivo do bug. O nome da propriedade deveria ser
+   `num` e não `number`.
+1. No DevTools, altere `nodes.number.textContent` para `nodes.num.textContent`.
+1. Pressione <kbd>Command</kbd>+<kbd>S</kbd> (Mac) ou
+   <kbd>Control</kbd>+<kbd>S</kbd> (Windows, Linux) para salvar a alteração.
+   O DevTools retoma automaticamente a execução do script após salvar uma alteração.
+1. Pressione **Print Random Number** novamente para verificar se a correção resolveu
+   o bug. O DevTools não deve mais pausar após o clique no botão, o que
+   significa que o script não está mais acionando uma exceção.
+
+[pause on exception]: /web/tools/chrome-devtools/images/pause-on-exception.png
+
+
+{# wf_devsite_translation #}

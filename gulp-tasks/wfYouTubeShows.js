@@ -97,6 +97,7 @@ function buildFeeds(buildType, callback) {
         baseUrl: 'https://youtube.com/user/ChromeDevelopers/',
         analyticsQS: '',
         atomPubDate: moment().format('YYYY-MM-DDTHH:mm:ss[Z]'),
+        rssPubDate: moment().format('ddd, DD MMM YYYY HH:mm:ss ZZ'),
         articles: articles
       };
       template = path.join(GLOBAL.WF.src.templates, 'atom.xml');

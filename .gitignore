@@ -13,6 +13,7 @@ test-results.json
 src/content/**/*/_files.json
 src/content/**/*/atom.xml
 src/content/**/*/rss.xml
+src/content/**/*/feed.xml
 src/content/*/_shared/contributors/*.html
 src/content/*/_shared/latest_show.html
 src/content/*/_shared/latest_articles.html
@@ -25,7 +26,7 @@ src/content/*/shows/**/feed.xml
 src/content/*/shows/_index.yaml
 src/content/*/shows/index.md
 src/content/*/shows/http203/podcast/index.md
-src/content/*/shows/http203/podcast/feed.xml
+src/content/*/shows/designer-vs-developer/podcast/index.md
 src/content/*/showcase/_index.yaml
 src/content/*/showcase/*/_toc.yaml
 src/content/*/showcase/*/index.md

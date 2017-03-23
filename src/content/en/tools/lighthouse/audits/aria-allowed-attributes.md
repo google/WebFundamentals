@@ -43,3 +43,6 @@ This audit is powered by the aXe Accessibility Engine. See [Elements must only
 use allowed ARIA attributes][axe] for more information.
 
 [axe]: https://dequeuniversity.com/rules/axe/1.1/aria-allowed-attr
+
+
+{% include "web/tools/lighthouse/audits/_feedback/aria-allowed-attributes.html" %}

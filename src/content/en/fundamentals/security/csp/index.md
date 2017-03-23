@@ -459,7 +459,7 @@ includes a script from `https://apis.google.com`, and embeds an `<iframe>` from
 origins in order to embed the button. A minimal policy would be `script-src
 https://apis.google.com; child-src https://plusone.google.com`. You also need
 to ensure that the snippet of JavaScript that Google provides is pulled out into
-an external JavaScript file. If you have an existing policy using `child-src`,
+an external JavaScript file. If you have an existing policy using `frame-src`,
 you need to change it to `child-src`.
 
 * Facebook's [Like button](//developers.facebook.com/docs/plugins/like-button){: .external }

@@ -41,7 +41,9 @@ figure {
 }
 </style>
 
-[Lighthouse](/web/tools/lighthouse/) is an
+<script src="/_static/js/managed/cws_install.js" async></script>
+
+Lighthouse is an
 [open-source](https://github.com/GoogleChrome/lighthouse),
 automated tool for improving the quality of your web apps.
 

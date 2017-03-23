@@ -42,3 +42,6 @@ This audit is powered by the aXe Accessibility Engine. See [Form elements must
 have labels][axe] for more information.
 
 [axe]: https://dequeuniversity.com/rules/axe/1.1/label
+
+
+{% include "web/tools/lighthouse/audits/_feedback/form-labels.html" %}

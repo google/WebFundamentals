@@ -28,3 +28,6 @@ key webfonts are visible, and the main thread is available enough to handle
 user input.
 
 Note that this metric is in early phases and is subject to change.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/time-to-interactive.html" %}

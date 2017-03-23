@@ -58,3 +58,6 @@ don't have control over these scripts. Because of this, note that Lighthouse's
 audit does not represent the full scroll performance of your page. There
 may be third-party scripts that are harming your page's scroll performance,
 but these aren't listed in your Lighthouse report.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/passive-event-listeners.html" %}

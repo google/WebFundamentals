@@ -43,3 +43,6 @@ might want to be aware of if you're working on a large site. If your page opens
 a link to another section of your site without using `rel="noopener"`, the
 performance implications of this audit still apply. However, you won't see these
 links in your Lighthouse results.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/noopener.html" %}

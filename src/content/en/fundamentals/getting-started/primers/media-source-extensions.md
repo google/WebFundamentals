@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Media Source Extensions (MSE) is a JavaScript API that lets you build streams for playback from segments of audio or video.
 
 {# wf_published_on: 2017-02-08 #}
-{# wf_updated_on: 2017-02-08 #}
+{# wf_updated_on: 2017-03-09 #}
 
 # Media Source Extensions {: .page-title }
 
@@ -49,6 +49,7 @@ In practice, the chain looks like this:
     }
     
     function sourceOpen(e) {
+      URL.revokeObjectURL(vidElement.src);
       var mime = 'video/webm; codecs="opus, vp9"';
       var mediaSource = e.target;
       var sourceBuffer = mediaSource.addSourceBuffer(mime);
@@ -61,7 +62,6 @@ In practice, the chain looks like this:
           sourceBuffer.addEventListener('updateend', function(e) {
             if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
               mediaSource.endOfStream();
-              URL.revokeObjectURL(vidElement.src);
             }
           });
           sourceBuffer.appendBuffer(arrayBuffer);
@@ -112,7 +112,7 @@ Note: Each incomplete code example contains a comment that gives you a hint of
 what I'll add in the next step. In the example above, this comment says, 'Is the
 MediaSource instance ready?', which matches the title of the next section.
 
-<figure id="src-as-blob" class="attempt-right">
+<figure id="src-as-blob">
   <img src="imgs/media-url.png"
     alt="A source attribute as a blob">
   <figcaption><b>Figure 1</b>: A source attribute as a blob</figcaption>
@@ -159,9 +159,15 @@ if (window.MediaSource) {
 }
 
 <strong>function sourceOpen(e) {
+  URL.revokeObjectURL(vidElement.src);
   // Create a SourceBuffer and get the media file.
 }</strong>
 </pre>  
+
+Notice that I've also called `revokeObjectURL()`. I can do this any time after
+the media element's `src` attribute is connected to a `MediaSource` instance.
+Calling this method doesn't destroy any objects. It _does_ allow the platform to
+handle garbage collection at an appropriate time.
 
 ## Create a SourceBuffer
 
@@ -195,6 +201,7 @@ if (window.MediaSource) {
 }
 
 function sourceOpen(e) {
+  URL.revokeObjectURL(vidElement.src);
   <strong>var mime = 'video/webm; codecs="opus, vp9"';
   // e.target refers to the mediaSource instance.
   // Store it in a variable so it can be used in a closure.
@@ -217,7 +224,8 @@ to show part of the example we're building. If you want to see it in context,
 [jump to the end](#the_final_version).
 
 <pre class="prettyprint">
-function sourceOpen(e) {  
+function sourceOpen(e) {
+  URL.revokeObjectURL(vidElement.src);
   var mime = 'video/webm; codecs="opus, vp9"';  
   var mediaSource = e.target;  
   var sourceBuffer = mediaSource.addSourceBuffer(mime);  
@@ -253,6 +261,7 @@ clause where I append it to the `SourceBuffer`.
 
 <pre class="prettyprint">
 function sourceOpen(e) {
+  URL.revokeObjectURL(vidElement.src);
   var mime = 'video/webm; codecs="opus, vp9"';
   var mediaSource = e.target;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
@@ -272,13 +281,9 @@ After all `ArrayBuffers` are appended, and no further media data is expected, ca
 `MediaSource.endOfStream()`.  This will change `MediaSource.readyState` to
 `ended` and fire the `sourceended` event. 
 
-You also need to release the blob URL from the `MediaSource` object. This
-allows the browser to reclaim the resources allocated to the `MediaSource`
-instance, assuming there are no references to it elsewhere. Do this by calling
-`revokeObjectURL()` on the source itself.
-
 <pre class="prettyprint">
 function sourceOpen(e) {
+  URL.revokeObjectURL(vidElement.src);
   var mime = 'video/webm; codecs="opus, vp9"';
   var mediaSource = e.target;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
@@ -291,7 +296,6 @@ function sourceOpen(e) {
       <strong>sourceBuffer.addEventListener('updateend', function(e) {
         if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
           mediaSource.endOfStream();
-          URL.revokeObjectURL(vidElement.src);
         }
       });</strong>
       sourceBuffer.appendBuffer(arrayBuffer);
@@ -315,6 +319,7 @@ Source Extenstions. We recommend [stackoverflow](http://stackoverflow.com/questi
     }
     
     function sourceOpen(e) {
+      URL.revokeObjectURL(vidElement.src);
       var mime = 'video/webm; codecs="opus, vp9"';
       var mediaSource = e.target;
       var sourceBuffer = mediaSource.addSourceBuffer(mime);
@@ -327,7 +332,6 @@ Source Extenstions. We recommend [stackoverflow](http://stackoverflow.com/questi
           sourceBuffer.addEventListener('updateend', function(e) {
             if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
               mediaSource.endOfStream();
-              URL.revokeObjectURL(vidElement.src);
             }
           });
           sourceBuffer.appendBuffer(arrayBuffer);
