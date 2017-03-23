@@ -22,10 +22,20 @@ figcaption {
 Learn how to use the Chrome DevTools Network panel to understand why a page
 loads slowly in this step-by-step, interactive tutorial.
 
-Note: This tutorial is based on Chrome 57, which is currently
-[Canary](https://www.google.com/chrome/browser/canary.html).
+Note: [Get Started With Analyzing Load Performance][net] also teaches
+you how to analyze load performance, but from the Performance panel. In general,
+the Performance panel workflow should be your starting point because it 
+provides better detail about all the various potential causes of slow load 
+times. Once you've narrowed down the issue to the network, you can use the
+Network panel workflow explained on this page to dive into each request in
+greater depth.
+
+[net]: /web/tools/chrome-devtools/evaluate-performance/load
 
 ## Step 1: Set up DevTools {: #set-up }
+
+Note: This tutorial is based on Chrome 57. If you use other versions of
+Chrome, the features and UI of DevTools may be different.
 
 Suppose that you're receiving reports from mobile users that a particular page
 on your site is slow. Your job is to make the page fast.
