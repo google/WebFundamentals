@@ -1,4 +1,4 @@
-roject_path: /web/_project.yaml
+project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) sued to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs.
 
