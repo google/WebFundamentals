@@ -36,9 +36,9 @@ download, fullscreen and [remoteplayback] buttons using the new [ControlsList AP
 </figure>
 </div>
 
-This API aims to offer a way to show/hide some native media controls that do
-not make sense or are not part of the expected user experience, or only
-whitelist a limited amount of features.
+This API offers a way to show or hide native media controls that do not make
+sense or are not part of the expected user experience, or only whitelist a
+limited set of features.
 
 The current implementation for now is a blacklist mechanism on native controls
 with the ability to set them directly from HTML content using the new 
@@ -98,13 +98,13 @@ restrictions.
 ## Pause autoplaying muted video when invisible {: #offscreen }
 
 As you may already know, Chrome on Android allows `muted` videos to begin playing
-without user interaction. If the video is marked as `muted` and has the `autoplay`
-attribute, Chrome starts playing the video when it becomes visible to the
-user.
+without user interaction. If a video is marked as `muted` and has the
+`autoplay` attribute, Chrome starts playing the video when it becomes visible
+to the user.
 
-And now, in order to reduce the power usage, videos using the `autoplay`
-attribute will be paused when offscreen and resumed when back in view,
-following Safari iOS behavior.
+From Chrome 58, in order to reduce power usage, playback of videos with
+the `autoplay` attribute will be paused when offscreen and resumed when back in
+view, following Safari iOS behavior.'
 
 Note: This only applies to videos that are declared as `autoplay` but not videos
 that start playing with `play()`.
@@ -122,8 +122,8 @@ approximate range of colors supported by Chrome and output devices using the
 If you're not familiar yet with the definitions of color space, color profile,
 gamut, wide-gamut and color depth, I highly recommend you read the 
 [Improving Color on the Web] WebKit blog post. It goes into much detail on how
-to use of the `color-gamut` media query to serve wide-gamut images to users
-on wide-gamut displays, and fallback to sRGB images otherwise.
+to use the `color-gamut` media query to serve wide-gamut images when the user
+is on wide-gamut displays and fallback to sRGB images otherwise.
  
 The current implementation in Chrome accepts the `srgb`, `p3` (gamut specified
 by the DCI P3 Color Space), and `rec2020` (gamut specified by the ITU-R
