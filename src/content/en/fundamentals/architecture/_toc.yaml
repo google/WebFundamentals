@@ -3,4 +3,6 @@ toc:
   section:
   - title: The App Shell Model
     path: /web/fundamentals/architecture/app-shell
-    
+  - title: Custom Elements school
+    path: /web/fundamentals/architecture/custom-elements-school/custom-elements-school
+

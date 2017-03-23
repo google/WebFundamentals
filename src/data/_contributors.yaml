@@ -1329,3 +1329,16 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
+
+noms:
+  name:
+    given: Monica
+    family: Dinculescu
+  org:
+    name: Google
+    unit: Software Engineer
+  country: US
+  role:
+    - author
+  twitter: notwaldorf
+  email: noms@google.com
