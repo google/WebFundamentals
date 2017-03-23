@@ -1,12 +1,12 @@
 roject_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Background tabs in Chrome 57. 
+description: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) sued to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs.
 
 {# wf_updated_on: 2017-03-24 #}
 {# wf_published_on: 2017-03-24 #}
 {# wf_tags: policy,dialog,javascript #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet:  #}
+{# wf_featured_snippet: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) sued to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs. #}
 
 # Proposed Chromium policy on JavaScript dialogs {: .page-title }
 
@@ -26,7 +26,7 @@ because the dialogs are app-modal, they commonly (and unfortunately) are used to
 [our](https://blog.malwarebytes.org/fraud-scam/2016/02/tech-support-scammers-use-new-browser-trick-to-defeat-blocking/)
 [users](https://blog.malwarebytes.com/cybercrime/2013/12/android-pop-ups-warn-of-infection/).
 
-Because of this, the Chromium team highly recommends that JavaScript dialogs not be used.
+Because of this, the Chromium team highly recommends that you not use JavaScript dialogs.
 
 ## Alternatives
 
