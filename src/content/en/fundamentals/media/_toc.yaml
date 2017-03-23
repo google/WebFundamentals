@@ -1,7 +1,11 @@
 toc:
   - title: Media
     section:
-    - title: Overview
-      path: /web/fundamentals/media/
+    - title: Video
+      path: /web/fundamentals/media/video
+    - title: Encrypted Media Extensions
+      path: /web/fundamentals/media/eme
+    - title: Media Source Extensions
+      path: /web/fundamentals/media/mse
     - title: Seamless Playback
       path: /web/fundamentals/media/seamless-playback

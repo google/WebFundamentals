@@ -21,7 +21,7 @@ needed if you want to embed videos in your site that does such things as:
 +  Control of performance and download size
 
 <figure id="basic-mse" class="attempt-right">
-  <img src="imgs/basic-mse-flow.png"
+  <img src="images/basic-mse-flow.png"
     alt="Basic MSE data flow">
   <figcaption><b>Figure 1</b>: Basic MSE data flow</figcaption>
 </figure>
@@ -113,7 +113,7 @@ what I'll add in the next step. In the example above, this comment says, 'Is the
 MediaSource instance ready?', which matches the title of the next section.
 
 <figure id="src-as-blob">
-  <img src="imgs/media-url.png"
+  <img src="images/media-url.png"
     alt="A source attribute as a blob">
   <figcaption><b>Figure 1</b>: A source attribute as a blob</figcaption>
 </figure>
