@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-28T19:41:38Z #}
+{# wf_updated_on: 2017-03-03T21:13:28Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,6 +10,8 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
+
+Concepts:  [Caching Files with Service Worker](caching-files-with-service-worker)
 
 <div id="overview"></div>
 
@@ -20,10 +22,6 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 This lab covers the basics of caching files with the service worker. The technologies involved are the  [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) and the  [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). See the  [Caching files with the service worker](caching-files-with-service-worker) doc for a full tutorial on the Cache API. See  [Introduction to Service Worker](introduction-to-service-worker) and  [Lab: Scripting the service worker](lab-scripting-the-service-worker) for more information on service workers.
-
-#### Concepts
-
-[Caching Files with Service Worker](caching-files-with-service-worker)
 
 #### What you will learn
 

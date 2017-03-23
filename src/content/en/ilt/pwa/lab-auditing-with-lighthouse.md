@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-28T19:32:46Z #}
+{# wf_updated_on: 2017-03-03T21:12:58Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,6 +10,8 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
+
+Concepts:  [Lighthouse PWA Analysis Tool](lighthouse-pwa-analysis-tool)
 
 <div id="overview"></div>
 
@@ -20,10 +22,6 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 This lab shows you how you can use  [Lighthouse](https://github.com/GoogleChrome/lighthouse), an open-source tool from Google, to audit a web app for PWA features. Lighthouse provides a set of metrics to help guide you in building a PWA with a full application-like experience for your users. 
-
-#### Concepts
-
-[Lighthouse PWA Analysis Tool](lighthouse-pwa-analysis-tool)
 
 #### What you will learn
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T22:01:19Z #}
+{# wf_updated_on: 2017-03-03T21:14:30Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,6 +10,8 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
+
+Concepts:  [Introduction to Gulp](introduction-to-gulp)
 
 <div id="overview"></div>
 
@@ -20,10 +22,6 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 This lab shows you how you can automate tasks with  [gulp](https://github.com/gulpjs/gulp/tree/master/docs), a build tool and task runner.
-
-#### Concepts
-
-[Introduction to Gulp](introduction-to-gulp)
 
 #### What you will learn
 

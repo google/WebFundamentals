@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-28T19:36:29Z #}
+{# wf_updated_on: 2017-03-03T21:17:06Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,6 +10,8 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
+
+Concepts:  [Working with Promises](working-with-promises)
 
 <div id="overview"></div>
 
@@ -20,10 +22,6 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 This lab teaches you how to use JavaScript  [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
-#### Concepts
-
-[Working with Promises](working-with-promises)
 
 #### What you will learn
 

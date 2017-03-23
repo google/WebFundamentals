@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-28T19:47:47Z #}
+{# wf_updated_on: 2017-03-03T21:15:39Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,6 +10,8 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
+
+Concepts:  [Integrating Analytics](integrating-analytics)
 
 <div id="overview"></div>
 
@@ -20,10 +22,6 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 This lab shows you how to integrate Google Analytics into your web apps.
-
-#### Concepts
-
-[Integrating Analytics](integrating-analytics)
 
 #### What you will learn
 

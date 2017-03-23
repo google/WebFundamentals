@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-28T19:33:56Z #}
+{# wf_updated_on: 2017-03-03T21:16:38Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,6 +10,8 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
+
+Concepts:  [Offline Quickstart](offline-quickstart)
 
 <div id="overview"></div>
 
@@ -20,10 +22,6 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 This lab shows you how to add offline capabilities to an application using service workers. 
-
-#### Concepts
-
-[Offline Quickstart](offline-quickstart)
 
 #### What you will learn
 

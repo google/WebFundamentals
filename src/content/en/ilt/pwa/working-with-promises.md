@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T01:04:23Z #}
+{# wf_updated_on: 2017-03-03T21:11:26Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -11,7 +11,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
-#### Codelab:  [Promises](lab-promises)
+Codelab:  [Promises](lab-promises)
 
 <div id="intro"></div>
 

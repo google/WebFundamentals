@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-28T19:31:19Z #}
+{# wf_updated_on: 2017-03-03T21:17:52Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,6 +10,8 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
+
+Concepts:  [Introduction to Service Worker](introduction-to-service-worker)
 
 <div id="overview"></div>
 
@@ -20,10 +22,6 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 This lab walks you through creating a simple service worker. 
-
-#### Concepts
-
-[Introduction to Service Worker](introduction-to-service-worker)
 
 #### What you will learn
 

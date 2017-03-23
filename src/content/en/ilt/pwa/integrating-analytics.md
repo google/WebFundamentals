@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T01:01:06Z #}
+{# wf_updated_on: 2017-03-03T21:08:35Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -11,7 +11,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
-#### Codelab:  [Integrating Analytics](lab-integrating-analytics)
+Codelab:  [Integrating Analytics](lab-integrating-analytics)
 
 <div id="what"></div>
 
