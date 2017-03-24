@@ -13,9 +13,6 @@ description: Custom transforms matrices allow you to build frame-perfect custom 
 
 {% include "web/_shared/contributors/surma.html" %}
 
-<!-- HTML comments in this article contain LaTeX code that can be rendered to
-SVG using https://viereck.ch/latex-to-svg/ -->
-
 Scrollbars are one of the remaining bits on the web that are pretty much
 unstylable (I’m looking at you, date picker) and are a thorn in the side of many
 designers. You can use JavaScript to build your own, but that’s expensive, low
@@ -25,7 +22,7 @@ JavaScript while scrolling, just some setup code.
 
 ### TL;DR: {: .hide-from-toc }
 You don’t care about the nitty gritty? You just want to look at the
-[Nyan cat demo](http://googlechrome.github.io/ui-element-samples/custom-scrollbar/) and
+[Nyan cat demo](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/) and
 get the library? You can find the demo’s code in our
 [GitHub repo](https://github.com/GoogleChrome/ui-element-samples/tree/gh-pages/custom-scrollbar).
 
@@ -110,7 +107,7 @@ Before we can make use of `matrix3d()`, we need a 3D context – because without
 homogeneous coordinates. To create a 3D context we need a container with a
 `perspective` and some elements inside that we can transform in the newly
 created 3D space. For
-[example](http://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-1.html):
+[example](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-1.html):
 
 <img src="/web/updates/images/2017/03/custom-scrollbar/perspective.png"
   alt="A piece of CSS code that distorts a div using CSS’
@@ -140,29 +137,6 @@ algorithm above.
 Our box is inside a perspective container with value p for the `perspective`
 attribute, and let’s assume the container is scrollable and is scrolled down by
 ∇ pixels.
-
-<!--
-\begin{array}{c}
-\text{Perspective matrix} \cdot \text{Scroll matrix}
-\cdot \text{Element transform matrix}\\
-= \\
-\left( \begin{array}{ccc}
-1 & 0 & 0 & 0 \\
-0 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 \\
-0 & 0 & -1/p & 1 \\
-\end{array}\right)
-\cdot
-\left( \begin{array}{ccc}
-1 & 0 & 0 & 0 \\
-0 & 1 & 0 & -\nabla \\
-0 & 0 & 1 & 0 \\
-0 & 0 & 0 & 1 \\
-\end{array}\right)
-\cdot
-\text{Element transform matrix}
-\end{array}
--->
 
 <img src="/web/updates/images/2017/03/custom-scrollbar/matrixmath01.svg"
   alt="Perspective matrix times scroll matrix times element transform matrix
@@ -195,59 +169,6 @@ This matrix will do nothing else then negating _w_. So when the CSS engine has
 turned each corner into a vector of the form `[x,y,z,1]`, the matrix will
 convert it into `[x,y,z,-1]`.
 
-<!--
-\begin{array}{c}
-\underbrace{\left( \begin{array}{ccc}
-1 & 0 & 0 & 0 \\
-0 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 \\
-0 & 0 & -1/p & 1 \\
-\end{array}\right)}_{\text{Perspective matrix}}
-\cdot
-\underbrace{\left( \begin{array}{ccc}
-1 & 0 & 0 & 0 \\
-0 & 1 & 0 & -\nabla \\
-0 & 0 & 1 & 0 \\
-0 & 0 & 0 & 1 \\
-\end{array}\right)}_{\text{Scroll matrix}}
-\cdot
-\underbrace{\left( \begin{array}{ccc}
-1 & 0 & 0 & 0 \\
-0 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 \\
-0 & 0 & 0 & -1 \\
-\end{array}\right)}_{\text{Element transform matrix}}
-\cdot
-\left( \begin{array}{ccc}
-x \\
-y\\
-z \\
-1 \\
-\end{array}\right) \\
-=
-\left( \begin{array}{ccc}
-1 & 0 & 0 & 0 \\
-0 & 1 & 0 & \nabla \\
-0 & 0 & 1 & 0 \\
-0 & 0 & -1/p & -1 \\
-\end{array}\right)
-\cdot
-\left( \begin{array}{ccc}
-x \\
-y \\
-z \\
-1 \\
-\end{array}\right) \\
-=
-\left( \begin{array}{ccc}
-x \\
-y + \nabla\\
-z \\
--\frac{z}p - 1 \\
-\end{array}\right) \\
-\end{array}
--->
-
 <img src="/web/updates/images/2017/03/custom-scrollbar/matrixmath02.svg"
   alt="Four by four identity matrix with minus one over p in the fourth row
   third column time four by four identity matrix with minus nabla in the second
@@ -265,7 +186,7 @@ coordinate instead of subtracting it. The element will be translated _downwards_
 if we scroll _down_.
 
 However, if we just put this matrix in our
-[example](http://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-2.html),
+[example](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-2.html),
 the element will not be displayed. This is because the CSS spec defines that any
 vertex with _w_ < 0 blocks the element from being rendered. And since our z
 coordinate is currently 0, and p is 1, _w_ will be -1.
@@ -285,7 +206,7 @@ to set z = -2.
     }
 
 And lo and behold, our
-[box is back](http://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-3.html)!
+[box is back](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-3.html)!
 
 ## Step 2: Make it move
 Now our box is there and is looking the same way it would have without any
@@ -311,7 +232,7 @@ spacer element that takes up space:
     </style>
 
 And now
-[scroll the box](http://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-4.html)!
+[scroll the box](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-4.html)!
 The red box moves down.
 
 ## Step 3: Give it a size
@@ -336,16 +257,6 @@ content is visible.
 visible. The ratio of vertical space the thumb covers should be equal to the
 ratio of content that is visible:
 
-<!--
-\begin{array}{rlc}
-\frac{\text{thumb.style.height}}{\text{scrollerHeight}} &=&
-\frac{\text{scrollerHeight}}{\text{scroller.scrollHeight}}\\
-& \Leftrightarrow & \\
-\text{thumb.style.height} & =& \text{scrollerHeight} \cdot
-\frac{\text{scrollerHeight}}{\text{scroller.scrollHeight}}\\
-\end{array}
--->
-
 <img src="/web/updates/images/2017/03/custom-scrollbar/thumbmath01.svg"
   alt="thumb dot style dot height over scrollerHeight equals scroller height
   over scroller dot scroll height if and only if thumb dot style dot height
@@ -366,7 +277,7 @@ with permanent native scrollbars. We will completely hide the native scrollbars
 later with a trick.
 
 The size of the thumb is
-[looking good](http://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-5.html),
+[looking good](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-5.html),
 but it’s moving way too fast. This is where we can grab our technique from the
 parallax scroller. If we move the element further back it will move slower while
 scrolling. We can correct the size by scaling it up. But how much should we push
@@ -380,10 +291,6 @@ down. In other words: If we have scrolled
 translated by `scroller.height - thumb.height`. For every pixel scroller, we
 want our thumb should move a fraction of a pixel:
 
-<!--
-\text{factor} = \frac{\text{scroller.height} -
-\text{thumb.height}}{\text{scroller.scrollHeight} - \text{scroller.height}}
--->
 <img src="/web/updates/images/2017/03/custom-scrollbar/thumbmath02.svg"
   alt="factor equals scroller dot height minus thumb dot height over scroller
   dot scroll height minus scroller dot height.">
@@ -418,7 +325,7 @@ codify this!
     </script>
 
 We have a
-[scrollbar](http://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-6.html)!
+[scrollbar](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-6.html)!
 And it’s just a DOM element that we can style however we like. One thing that is
 important to do in terms of accessibility is to make the thumb respond to
 click-and-drag, as many users are used to interacting with a scrollbar that way.
@@ -449,7 +356,7 @@ now out of view.
 ## Fin
 Putting it all together, we can now build a frame-perfect custom
 scrollbar – like the one in our
-[Nyan cat demo](http://googlechrome.github.io/ui-element-samples/custom-scrollbar/).
+[Nyan cat demo](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/).
 
 If you can’t see Nyan cat, you are experiencing
 [a bug that we found and filed](https://crbug.com/699140)
