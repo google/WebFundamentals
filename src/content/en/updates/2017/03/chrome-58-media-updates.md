@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the media updates in Chrome 58.
 
-{# wf_updated_on: 2017-03-21 #}
+{# wf_updated_on: 2017-03-24 #}
 {# wf_published_on: 2017-03-21 #}
 {# wf_tags: news,chrome58,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
@@ -19,6 +19,8 @@ description: A round up of the media updates in Chrome 58.
 - Chrome on Android now [pauses autoplaying a muted video when it is invisible](#offscreen).
 - Developers can now access the approximate range of colors supported by Chrome and
   output devices using the [`color-gamut` Media Query](#colorgamut).
+- When using Media Source Extensions, it's now possible to
+  [switch between encrypted and clear streams]{: .external }.
 
 ## Media controls customization {: #controlslist}
 
@@ -218,3 +220,4 @@ Usage in JavaScript:
 [improved Add to Home screen]: https://blog.chromium.org/2017/02/integrating-progressive-web-apps-deeply.html
 [web app manifest]: /web/fundamentals/engage-and-retain/web-app-manifest/
 [Improving Color on the Web]: https://webkit.org/blog/6682/improving-color-on-the-web/
+[switch between encrypted and clear streams]: /web/updates/2017/03/mixing-streams
