@@ -23,8 +23,8 @@ JavaScript while scrolling, just some setup code.
 
 ### TL;DR: {: .hide-from-toc }
 You don’t care about the nitty gritty? You just want to look at the
-[Nyan cat demo](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/) and
-get the library? You can find the demo’s code in our
+[Nyan cat demo](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/)
+and get the library? You can find the demo’s code in our
 [GitHub repo](https://github.com/GoogleChrome/ui-element-samples/tree/gh-pages/custom-scrollbar).
 
 ### LAM;WRA (Long and mathematical; will read anyways): {: .hide-from-toc }
@@ -120,7 +120,7 @@ The elements inside a perspective container are processed by the CSS engine
 as follows:
 
 * Turn each corner (vertex) of an element into homogenous coordinates
-  `[x,y,z,w]` (relative to the perspective container).
+  `[x,y,z,w]`, relative to the perspective container.
 * Apply all of the element’s transforms as matrices from _right to left_.
 * If the perspective element is scrollable, apply a scroll matrix.
 * Apply the perspective matrix.
@@ -140,12 +140,12 @@ algorithm above.
 
 Our box is inside a perspective container with value p for the `perspective`
 attribute, and let’s assume the container is scrollable and is scrolled down by
-∇ pixels.
+n pixels.
 
 <img src="/web/updates/images/2017/03/custom-scrollbar/matrixmath01.svg"
   alt="Perspective matrix times scroll matrix times element transform matrix
   equals four by four identity matrix with minus one over p in the fourth row
-  third column times four by four identity matrix with minus nabla in the second
+  third column times four by four identity matrix with minus n in the second
   row fourth column times element transform matrix.">
 
 The first matrix is the perspective matrix, the second matrix is the scroll
@@ -175,17 +175,17 @@ convert it into `[x,y,z,-1]`.
 
 <img src="/web/updates/images/2017/03/custom-scrollbar/matrixmath02.svg"
   alt="Four by four identity matrix with minus one over p in the fourth row
-  third column times four by four identity matrix with minus nabla in the second
+  third column times four by four identity matrix with minus n in the second
   row fourth column times four by four identity matrix with minus one in the
   fourth row fourth column times four dimensional vector x, y, z, 1 equals four
   by four identity matrix with minus one over p in the fourth row third column,
-  minus nabla in the second row fourth column and minus one in the fourth row
-  fourth column equals four dimensional vector x, y plus nabla, z, minus z over
+  minus n in the second row fourth column and minus one in the fourth row
+  fourth column equals four dimensional vector x, y plus n, z, minus z over
   p minus 1.">
 
 I listed an intermediate step to show the effect of our element transform
 matrix. If you are not comfortable with matrix math, that is okay. The Eureka
-moment is that in the last line we end up adding the scroll offset ∇ to our y
+moment is that in the last line we end up adding the scroll offset n to our y
 coordinate instead of subtracting it. The element will be translated _downwards_
 if we scroll _down_.
 

@@ -8,7 +8,7 @@
 \cdot
 \underbrace{\left( \begin{array}{ccc}
 1 & 0 & 0 & 0 \\
-0 & 1 & 0 & -\nabla \\
+0 & 1 & 0 & -n \\
 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 1 \\
 \end{array}\right)}_{\text{Scroll matrix}}
@@ -29,7 +29,7 @@ z \\
 =
 \left( \begin{array}{ccc}
 1 & 0 & 0 & 0 \\
-0 & 1 & 0 & \nabla \\
+0 & 1 & 0 & n \\
 0 & 0 & 1 & 0 \\
 0 & 0 & -1/p & -1 \\
 \end{array}\right)
@@ -43,7 +43,7 @@ z \\
 =
 \left( \begin{array}{ccc}
 x \\
-y + \nabla\\
+y + n\\
 z \\
 -\frac{z}p - 1 \\
 \end{array}\right) \\
