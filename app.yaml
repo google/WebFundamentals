@@ -2,8 +2,7 @@ runtime: python27
 api_version: 1
 threadsafe: true
 # application: petele-scratch
-application: google.com:milkbone
-version: wf-devsite
+# version: wf-devsite
 
 handlers:
 - url: /test-results.json
