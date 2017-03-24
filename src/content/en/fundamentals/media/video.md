@@ -150,7 +150,8 @@ image&ndash;we've made the poster image grayscale to prove it's not the video:
 
 <div class="attempt-left">
   <figure>
-    <img alt="Android Chrome screenshot, portrait: no poster" src="img/Chrome-Android-video-no-poster.png">
+    <img alt="Android Chrome screenshot, portrait: no poster"
+    src="img/Chrome-Android-video-no-poster.png">
     <figcaption>
       Android Chrome screenshot, portrait: no poster
      </figcaption>
@@ -158,7 +159,8 @@ image&ndash;we've made the poster image grayscale to prove it's not the video:
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Android Chrome screenshot, portrait: with poster" src="img/Chrome-Android-video-poster.png">
+    <img alt="Android Chrome screenshot, portrait: with poster"
+    src="img/Chrome-Android-video-poster.png">
     <figcaption>
       Android Chrome screenshot, portrait: with poster
      </figcaption>
@@ -272,7 +274,8 @@ When it comes to keeping your users happy, file size is important.
 ### TL;DR {: .hide-from-toc }
 - Don't serve videos with a larger frame size or higher quality than the platform can handle.
 - Don't make your videos any longer than they need be.
-- Long videos can cause hiccups with download and seeking; some browsers may have to wait until the video downloads before beginning playback.
+- Long videos can cause hiccups with download and seeking; some browsers may
+  have to wait until the video downloads before beginning playback.
 
 
 ### Check video size

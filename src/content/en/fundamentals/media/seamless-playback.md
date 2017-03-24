@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Media Source Extensions (MSE) provide extended buffering and playback control for the HTML5 audio and video elements. While originally developed to facilitate Dynamic Adaptive Streaming over HTTP (DASH) based video players, MSE can be used for audio; specifically for gapless playback.
 
-{# wf_updated_on: 2017-03-34 #}
+{# wf_updated_on: 2017-03-23 #}
 {# wf_published_on: 2015-06-11 #}
 {# wf_tags: news,audio,codecs,mse #}
 
@@ -13,7 +13,8 @@ description: Media Source Extensions (MSE) provide extended buffering and playba
 ## Introduction
 
 [Media Source Extensions (MSE)](https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API)
-provide extended buffering and playback control for the HTML5 `<audio>` and `<video>` elements. While originally developed to facilitate
+provide extended buffering and playback control for the HTML5 `<audio>` and
+`<video>` elements. While originally developed to facilitate
 [Dynamic Adaptive Streaming over HTTP (DASH)](http://dashif.org/about/)
 based video players, below we'll see how they can be used for audio; specifically for
 [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback).
@@ -217,7 +218,8 @@ silent section at the end of
 segments.
 
 <p style="text-align: center;">
-  <img src="/web/fundamentals/media/images/mp3_mid.png" alt="Joining of sintel_0.mp3 and sintel_1.mp3">
+  <img src="/web/fundamentals/media/images/mp3_mid.png"
+  alt="Joining of sintel_0.mp3 and sintel_1.mp3">
 </p>
 
 ## Conclusion
