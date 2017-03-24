@@ -20,7 +20,7 @@ description: A round up of the media updates in Chrome 58.
 - Developers can now access the approximate range of colors supported by Chrome and
   output devices using the [`color-gamut` Media Query](#colorgamut).
 - When using Media Source Extensions, it's now possible to
-  [switch between encrypted and clear streams]{: .external }.
+  [switch between encrypted and clear streams].
 
 ## Media controls customization {: #controlslist}
 
