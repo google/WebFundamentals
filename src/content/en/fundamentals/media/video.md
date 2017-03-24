@@ -57,7 +57,7 @@ support one of them.
 For example:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html)
@@ -335,13 +335,13 @@ from the original video. Squashed or stretched looks bad.
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="styling" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="styling" adjust_indentation="auto" %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html)
@@ -491,7 +491,7 @@ It's very easy to add captions to your video&ndash;simply add a track
 element as a child of the video element:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
 </pre>
 
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/track.html)
