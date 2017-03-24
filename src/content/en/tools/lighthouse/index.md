@@ -61,14 +61,16 @@ well as how to fix it.
 
 <p class="lighthouse-install-container">
   <a class="button button-primary lighthouse-install devsite-crx-install gc-analytics-event"
-     data-category="lighthouse" data-action="install" data-label="blipmdconlkpinefehnmjammfjpmpbjk"
+     data-category="Lighthouse" data-action="click"
+     data-label="Home / Install Extension (Primary CTA)"
      href="https://chrome.google.com/webstore/detail/blipmdconlkpinefehnmjammfjpmpbjk"
      title="Install Lighthouse Chrome Extension" target="_blank">
     <span class="material-icons">file_download</span>
     Install Lighthouse
   </a>
   <a class="button button-primary gc-analytics-event"
-     data-category="ligthhouse" data-action="bug"
+     data-category="Lighthouse" data-action="click"
+     data-label="Home / File Bug"
      href="https://github.com/GoogleChrome/lighthouse/issues/new"
      title="File an issue or feature request" target="_blank">
     <span class="material-icons">bug_report</span>
@@ -90,7 +92,7 @@ To install the extension:
 1. Download [Google Chrome for Desktop][desktop].
 
 1. Install the <a class="gc-analytics-event" data-category="Lighthouse"
-   data-label="Home / Install Extension" href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk"
+   data-label="Home / Install Extension (Secondary CTA)" href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk"
    title="Install Lighthouse Chrome Extension" target="_blank">Lighthouse
    Chrome Extension</a> from the Chrome Webstore.
 
@@ -146,10 +148,10 @@ To see audit options:
 
 #### Run the Node module programmatically {: #programmatic }
 
-See [lighthouse-tests.js][programmatic] for an example of running Lighthouse
+See [Using programmatically][programmatic] for an example of running Lighthouse
 programmatically, as a Node module.
 
-[programmatic]: https://github.com/justinribeiro/lighthouse-mocha-example/blob/master/test/lighthouse-tests.js
+[programmatic]: https://github.com/GoogleChrome/lighthouse#using-programmatically
 
 ## Share and view reports online {: #report-viewer }
 
