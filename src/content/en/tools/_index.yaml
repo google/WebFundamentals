@@ -72,15 +72,15 @@ landing_page:
       - label: Learn more
         path: https://www.polymer-project.org/
     - description: >
-        Angular is a development platform for building applications across web,
+        Angular2 is a development platform for building applications across web,
         mobile, and desktop. With simple, declarative templates, reusable
         components, and support for all parts of the development experience,
-        Angular makes it easy to write, test, and deploy high performing
+        Angular2 makes it easy to write, test, and deploy high performing
         applications at any scale.
       image_path: images/angular.png
       buttons:
       - label: Learn more
-        path: https://angularjs.org/
+        path: https://angular.io/
 
   - heading: Other Tools
     classname: devsite-landing-row-no-image-background
