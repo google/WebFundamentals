@@ -1,22 +1,23 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Custom transforms matrices allow you to build frame-perfect custom scrollbars.
+description: Custom transform matrices allow you to build frame-perfect custom scrollbars.
 
 {# wf_updated_on: 2017-03-23 #}
 {# wf_published_on: 2017-03-23 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/2017/03/custom-scrollbar/poster.jpg #}
-{# wf_featured_snippet: Custom transforms matrices allow you to build frame-perfect custom scrollbars. #}
+{# wf_featured_snippet: Custom transform matrices allow you to build frame-perfect custom scrollbars. #}
 
 
 # CSS deep-dive: matrix3d() for a frame-perfect custom scrollbar {: .page-title }
 
 {% include "web/_shared/contributors/surma.html" %}
 
-Scrollbars are one of the remaining bits on the web that are pretty much
-unstylable (I’m looking at you, date picker) and are a thorn in the side of many
-designers. You can use JavaScript to build your own, but that’s expensive, low
-fidelity and can lag behind. In this article we will leverage some
+Custom scrollbars are extremely rare and that’s mostly due to the fact that
+scrollbars are one of the remaining bits on the web that are pretty much
+unstylable (I’m looking at you, date picker).
+You can use JavaScript to build your own, but that’s expensive, low
+fidelity and can feel laggy. In this article we will leverage some
 unconventional CSS matrices to build a custom scroller that doesn’t require any
 JavaScript while scrolling, just some setup code.
 
@@ -30,7 +31,7 @@ get the library? You can find the demo’s code in our
 Note: This article does some weird stuff with homogeneous coordinates as well as
 matrix calculations. It is good to have some basic understanding of these
 concepts if you want to understand the intricate details of this trick. However,
-we hope that – even if matrix math is not enjoyable for you – you can still
+we hope that – even if you don’t enjoy matrix math – you can still
 follow along and see how we used them.
 
 A while ago we built a parallax scroller (Did you read
@@ -39,7 +40,7 @@ It’s really good, well worth your time!). By pushing elements back using CSS 3
 transforms, elements moved _slower_ than our actual scrolling speed.
 
 ## Recap
-Let’s start off with a recap on how the parallax scroller worked.
+Let’s start off with a recap of how the parallax scroller worked.
 
 <video muted autoplay loop controls
   poster="/web/updates/images/2017/03/custom-scrollbar/poster.jpg">
@@ -63,7 +64,7 @@ Of course, moving an element back in space will also make it appear smaller,
 which we correct by scaling the element back up. We figured out the exact math
 when we built the
 [parallax scroller](/web/updates/2016/12/performant-parallaxing),
-so I won’t repeat all the details here of it here.
+so I won’t repeat all the details.
 
 ## Step 0: What do we wanna do?
 Scrollbars. That’s what we are going to build. But have you ever really thought
@@ -71,8 +72,8 @@ about what they do? I certainly didn’t. Scrollbars are an indicator of
 _how much_ of the available content is currently visible and _how much progress_
 you as the reader have made. If you scroll down, so does the scrollbar to
 indicate that you are making progress towards the end. If all the content fits
-into the viewport the scrollbar is either hidden or it is scaled to fill the
-height of the viewport. If the content has 2x the height of the viewport, the
+into the viewport the scrollbar is usually hidden.
+If the content has 2x the height of the viewport, the
 scrollbar fills ½ of the height of the viewport. Content worth 3x the height of
 the viewport scales the scrollbar to ⅓ of the viewport etc. You see the pattern.
 Instead of scrolling you can also click-and-drag the scrollbar to move through
@@ -91,15 +92,17 @@ likely end up using
 [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates).
 I’m not going into detail what they are and why they work, but you can think of
 them like 3D coordinates with an additional, fourth coordinate called _w_. This
-coordinate should be 1 except if you want to have perspective distortion. So all
-points are 4-dimensional vectors [x, y, z, w=1] and consequently matrices need
+coordinate should be 1 except if you want to have perspective distortion. We
+don’t need to worry about the detials of _w_ as we are not going to use any
+other value than 1. Therefore all points are from now on 4-dimensional vectors
+[x, y, z, w=1] and consequently matrices need
 to be 4x4 as well.
 
 One occasion where you can see that CSS uses homogeneous coordinates under the
 hood is when you define your own 4x4 matrices in a transform property using the
 `matrix3d()` function. `matrix3d` takes 16 arguments (because the matrix is
 4x4), specifying one column after the other. So we can use this function to
-manually specify rotations, translations etc. But what it also allows us to do
+manually specify rotations, translations etc.. But what it also allows us to do
 is mess around with that _w_ coordinate!
 
 Before we can make use of `matrix3d()`, we need a 3D context – because without a
@@ -113,7 +116,8 @@ created 3D space. For
   alt="A piece of CSS code that distorts a div using CSS’
     perspective attribute.">
 
-The elements inside a perspective container are processed as follows:
+The elements inside a perspective container are processed by the CSS engine
+as follows:
 
 * Turn each corner (vertex) of an element into homogenous coordinates
   `[x,y,z,w]` (relative to the perspective container).
@@ -141,7 +145,7 @@ attribute, and let’s assume the container is scrollable and is scrolled down b
 <img src="/web/updates/images/2017/03/custom-scrollbar/matrixmath01.svg"
   alt="Perspective matrix times scroll matrix times element transform matrix
   equals four by four identity matrix with minus one over p in the fourth row
-  third column time four by four identity matrix with minus nabla in the second
+  third column times four by four identity matrix with minus nabla in the second
   row fourth column times element transform matrix.">
 
 The first matrix is the perspective matrix, the second matrix is the scroll
@@ -171,7 +175,7 @@ convert it into `[x,y,z,-1]`.
 
 <img src="/web/updates/images/2017/03/custom-scrollbar/matrixmath02.svg"
   alt="Four by four identity matrix with minus one over p in the fourth row
-  third column time four by four identity matrix with minus nabla in the second
+  third column times four by four identity matrix with minus nabla in the second
   row fourth column times four by four identity matrix with minus one in the
   fourth row fourth column times four dimensional vector x, y, z, 1 equals four
   by four identity matrix with minus one over p in the fourth row third column,
