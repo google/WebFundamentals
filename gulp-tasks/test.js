@@ -318,8 +318,10 @@ function getFiles() {
     .then(function(results) {
       let files = [];
       results.split('\n').forEach(function(filename) {
-        if (RE_SRC_BASE.test(filename) || RE_DATA_BASE.test(filename)) {
-          files.push(filename);
+        if (RE_SRC_BASE.test(filename) || 
+            RE_DATA_BASE.test(filename) ||
+            filename === 'app.yaml') {
+              files.push(filename);
         }
       });
       return files;
@@ -820,7 +822,11 @@ function testFile(filename, opts) {
       gutil.log('TEST:', chalk.cyan(filename));
     }
 
-    if (filenameObj.base === '_contributors.yaml') {
+    if (filenameObj.base === 'app.yaml') {
+      let msg = 'app.yaml was changed, was that intentional?';
+      logWarning(filename, null, msg);
+      testPromise = testYAML(filename, contents);
+    } else if (filenameObj.base === '_contributors.yaml') {
       testPromise = testContributors(filename, contents);
     } else if (filenameObj.base === 'commontags.json') {
       testPromise = testCommonTags(filename, contents);
@@ -834,10 +840,13 @@ function testFile(filename, opts) {
       testPromise = testJSON(filename, contents);
     } else if (filenameObj.ext === '.js') {
       testPromise = testJavaScript(filename, contents, opts);
+    } else if (filenameObj.ext === '.txt') {
+      // Text files are allowed and don't need to be tested.
+      resolve(true);
+      return; 
     } else {
-      filesNotTested.push(filename);
       let msg = 'No tests found for file type, was not tested.';
-      gutil.log(chalk.yellow('WARNING:'), chalk.cyan(filename), msg);
+      logWarning(filename, null, msg);
       resolve(false);
       return;
     }
