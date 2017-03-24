@@ -68,7 +68,7 @@ suited in our case.
     video.addEventListener('loadedmetadata', function() {
       videoDuration.textContent = secondsToTimeCode(video.duration);
       videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
-      videoProgressBar.style.width = `${video.currentTime * 100 / video.duration}%`;
+      videoProgressBar.style.transform = `scaleX(${video.currentTime / video.duration})`;
     });
 
 <figure>
@@ -129,6 +129,7 @@ When time indicated by video `currentTime` attribute changed via the
     video.addEventListener('timeupdate', function() {
       videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
       videoProgressBar.style.width = `${video.currentTime * 100 / video.duration}%`;
+      videoProgressBar.style.transform = `scaleX(${video.currentTime / video.duration})`;
     }
 
 When the video ends, we simply change button state to "play" and show video
