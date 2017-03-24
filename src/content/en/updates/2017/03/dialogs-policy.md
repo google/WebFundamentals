@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) sued to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs.
+description: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) used to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs.
 
 {# wf_updated_on: 2017-03-24 #}
 {# wf_published_on: 2017-03-24 #}
 {# wf_tags: policy,dialog,javascript #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) sued to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs. #}
+{# wf_featured_snippet: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) used to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs. #}
 
 # Proposed Chromium policy on JavaScript dialogs {: .page-title }
 
@@ -43,8 +43,8 @@ should be used. For XSS proofs-of-concept, devtool’s
 As for `onbeforeunload`, it should be noted that it is _already_ unreliable. As
 Ilya Grigorik [points out](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/),
 “You _cannot rely_ on `pagehide`, `beforeunload`, and `unload` events to fire on
-“mobile platforms.” If you need to save state, you should use the [Page
-“Visibility API](http://w3c.github.io/page-visibility/#introduction).
+mobile platforms.” If you need to save state, you should use the
+[Page Visibility API](https://w3c.github.io/page-visibility/#introduction).
 
 ## Changes
 
@@ -53,7 +53,7 @@ The ability for a page to specify the `onbeforeunload` string was
 (It was also removed by Safari starting with Safari 9.1 and in Firefox 4.)
 
 It is planned that `alert()/confirm()/prompt()` dialogs will not be app-modal,
-but rather [will be dismissed when their tab is switched from](http://crbug.com/629964).
+but rather [will be dismissed when their tab is switched from](https://crbug.com/629964).
 (Safari 9.1 already does this.)
 
 We are investigating the possibility of
@@ -64,8 +64,5 @@ shown. Details have yet to be ironed out.
 Because of these changes, if your site uses dialogs, it is highly recommended
 that you move to using the earlier-mentioned alternatives so that this will not
 affect you.
-
-Thank you for your understanding. We appreciate your help in moving the web
-forward.
 
 {% include "comment-widget.html" %}
