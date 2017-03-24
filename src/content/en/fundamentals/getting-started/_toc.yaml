@@ -31,5 +31,3 @@ toc:
       path: /web/fundamentals/getting-started/primers/shadowdom
     - title: "Custom Elements v1: Reusable Web Components"
       path: /web/fundamentals/getting-started/primers/customelements
-    - title: "Media Source Extensions"
-      path: /web/fundamentals/getting-started/primers/media-source-extensions

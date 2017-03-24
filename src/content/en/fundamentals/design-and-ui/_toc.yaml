@@ -13,8 +13,6 @@ toc:
         path: /web/fundamentals/design-and-ui/responsive/patterns
       - title: Images
         path: /web/fundamentals/design-and-ui/media/images
-      - title: Video
-        path: /web/fundamentals/design-and-ui/media/video
       - title: Multi-Device Content
         path: /web/fundamentals/design-and-ui/responsive/content
     - title: User Input
