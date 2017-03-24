@@ -80,7 +80,7 @@ the site faster. That’s a surprising amount of behavior for an inconspicuous
 element like that. Let’s fight one battle at a time.
 
 ## Step 1: Putting it in reverse
-Okay – we can make elements move slower than the scrolling speed with CSS 3D
+Okay, we can make elements move slower than the scrolling speed with CSS 3D
 transforms as outlined in the parallax scrolling article. Can we also reverse
 the direction? It turns out we can and that’s our way in for building a
 frame-perfect, custom scrollbar. To understand how this works we need to cover a
@@ -116,10 +116,10 @@ created 3D space. For
 The elements inside a perspective container are processed as follows:
 
 * Turn each corner (vertex) of an element into homogenous coordinates
-  `[x,y,z,w]` (relative to the perspective container)
-* Apply all of the element’s transforms as matrices from _right to left_
-* If the perspective element is scrollable, apply a scroll matrix
-* Apply the perspective matrix
+  `[x,y,z,w]` (relative to the perspective container).
+* Apply all of the element’s transforms as matrices from _right to left_.
+* If the perspective element is scrollable, apply a scroll matrix.
+* Apply the perspective matrix.
 
 The scroll matrix is a translation along the y axis. If we _scroll down_ by
 400px, all elements need to be _moved up_ by 400px. The perspective matrix is a
@@ -145,7 +145,7 @@ attribute, and let’s assume the container is scrollable and is scrolled down b
   row fourth column times element transform matrix.">
 
 The first matrix is the perspective matrix, the second matrix is the scroll
-matrix. To recap: The scroll matrix’ job is to make element _move up_ when we
+matrix. To recap: The scroll matrix’ job is to make an element _move up_ when we
 are _scrolling down_, hence the negative sign.
 
 For our scrollbar however we want the _opposite_ – we want our element to
@@ -187,7 +187,7 @@ if we scroll _down_.
 
 However, if we just put this matrix in our
 [example](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-2.html),
-the element will not be displayed. This is because the CSS spec defines that any
+the element will not be displayed. This is because the CSS spec requires that any
 vertex with _w_ < 0 blocks the element from being rendered. And since our z
 coordinate is currently 0, and p is 1, _w_ will be -1.
 
@@ -205,14 +205,14 @@ to set z = -2.
         translateZ(-2px);
     }
 
-And lo and behold, our
+Lo and behold, our
 [box is back](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-3.html)!
 
 ## Step 2: Make it move
 Now our box is there and is looking the same way it would have without any
 transforms. Right now the perspective container is not scrollable, so we can’t
-see it, but _we know_ we that our element will go the _other direction_ when
-being scrolled. So let’s make the container scroll, shall we? We can just add a
+see it, but _we know_ that our element will go the _other direction_ when
+scrolled. So let’s make the container scroll, shall we? We can just add a
 spacer element that takes up space:
 
     <div class="container">
@@ -288,8 +288,8 @@ The crucial bit of information is that we want the bottom edge of the thumb to
 line up with the bottom edge of the scrollable element when scrolled all the way
 down. In other words: If we have scrolled
 `scroller.scrollHeight - scroller.height` pixels, we want our thumb to be
-translated by `scroller.height - thumb.height`. For every pixel scroller, we
-want our thumb should move a fraction of a pixel:
+translated by `scroller.height - thumb.height`. For every pixel of scroller, we
+want our thumb to move a fraction of a pixel:
 
 <img src="/web/updates/images/2017/03/custom-scrollbar/thumbmath02.svg"
   alt="factor equals scroller dot height minus thumb dot height over scroller
@@ -303,7 +303,7 @@ The scaling factor is equal to p/(p − z). We can solve this equation for z to
 figure out how much we we need to translate our thumb along the z axis. But keep
 in mind that due to our w coordinate shenanigans we need to translate an
 additional `-2px` along z. Also note that an element’s transforms are applied
-right to left, meaning that all translations before our special matri will not
+right to left, meaning that all translations before our special matrix will not
 be inverted, all translations after our special matrix, however, will! Let’s
 codify this!
 
@@ -337,7 +337,7 @@ for details if you want to see how it’s done.
 ## What about iOS?
 Ah, my old friend iOS Safari. As with the parallax scrolling, we run into an
 issue here. Because we are scrolling on an element, we need to specify
-`-webkit-overflow-scrolling: touch`, but that cause 3D flattening and our entire
+`-webkit-overflow-scrolling: touch`, but that causes 3D flattening and our entire
 scrolling effect stops working. We solved this problem in the parallax scroller
 by detecting iOS Safari and relying on `position: sticky` as a workaround, and
 we’ll do exactly the same thing here. Take a look at the
