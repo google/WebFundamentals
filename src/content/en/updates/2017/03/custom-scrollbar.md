@@ -23,13 +23,13 @@ fidelity and can lag behind. In this article we will leverage some
 unconventional CSS matrices to build a custom scroller that doesn’t require any
 JavaScript while scrolling, just some setup code.
 
-### TL;DR:
+### TL;DR: {: .hide-from-toc }
 You don’t care about the nitty gritty? You just want to look at the
 [Nyan cat demo](http://googlechrome.github.io/ui-element-samples/custom-scrollbar/) and
 get the library? You can find the demo’s code in our
 [GitHub repo](https://github.com/GoogleChrome/ui-element-samples/tree/gh-pages/custom-scrollbar).
 
-### LAM;WRA (Long and mathematical; will read anyways):
+### LAM;WRA (Long and mathematical; will read anyways): {: .hide-from-toc }
 Note: This article does some weird stuff with homogeneous coordinates as well as
 matrix calculations. It is good to have some basic understanding of these
 concepts if you want to understand the intricate details of this trick. However,
@@ -37,16 +37,21 @@ we hope that – even if matrix math is not enjoyable for you – you can still
 follow along and see how we used them.
 
 A while ago we built a parallax scroller (Did you read
-[that article](https://developers.google.com/web/updates/2016/12/performant-parallaxing)?
+[that article](/web/updates/2016/12/performant-parallaxing)?
 It’s really good, well worth your time!). By pushing elements back using CSS 3D
 transforms, elements moved _slower_ than our actual scrolling speed.
 
 ## Recap
 Let’s start off with a recap on how the parallax scroller worked.
 
-<video muted autoplay loop controls poster="/web/updates/images/2017/03/custom-scrollbar/poster.jpg">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/custom-scrollbar/parallax_vp8.webm" type="video/webm; codecs=vp8">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/custom-scrollbar/parallax_x264.mp4" type="video/mp4; codecs=h264">
+<video muted autoplay loop controls
+  poster="/web/updates/images/2017/03/custom-scrollbar/poster.jpg">
+  <source
+    src="https://storage.googleapis.com/webfundamentals-assets/custom-scrollbar/parallax_vp8.webm"
+    type="video/webm; codecs=vp8">
+  <source
+    src="https://storage.googleapis.com/webfundamentals-assets/custom-scrollbar/parallax_x264.mp4"
+    type="video/mp4; codecs=h264">
 </video>
 
 As shown in the animation, we achieved the parallax effect by pushing elements
@@ -60,7 +65,7 @@ the desired parallax effect.
 Of course, moving an element back in space will also make it appear smaller,
 which we correct by scaling the element back up. We figured out the exact math
 when we built the
-[parallax scroller](https://developers.google.com/web/updates/2016/12/performant-parallaxing),
+[parallax scroller](/web/updates/2016/12/performant-parallaxing),
 so I won’t repeat all the details here of it here.
 
 ## Step 0: What do we wanna do?
@@ -107,7 +112,9 @@ homogeneous coordinates. To create a 3D context we need a container with a
 created 3D space. For
 [example](http://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-1.html):
 
-<img src="/web/updates/images/2017/03/custom-scrollbar/perspective.png" alt="A piece of CSS code that distorts a div using CSS’ perspective attribute.">
+<img src="/web/updates/images/2017/03/custom-scrollbar/perspective.png"
+  alt="A piece of CSS code that distorts a div using CSS’
+    perspective attribute.">
 
 The elements inside a perspective container are processed as follows:
 
@@ -136,7 +143,8 @@ attribute, and let’s assume the container is scrollable and is scrolled down b
 
 <!--
 \begin{array}{c}
-\text{Perspective matrix} \cdot \text{Scroll matrix} \cdot \text{Element transform matrix}\\
+\text{Perspective matrix} \cdot \text{Scroll matrix}
+\cdot \text{Element transform matrix}\\
 = \\
 \left( \begin{array}{ccc}
 1 & 0 & 0 & 0 \\
@@ -156,7 +164,11 @@ attribute, and let’s assume the container is scrollable and is scrolled down b
 \end{array}
 -->
 
-<img src="/web/updates/images/2017/03/custom-scrollbar/matrixmath01.svg" alt="Perspective matrix times scroll matrix times element transform matrix equals four by four identity matrix with minus one over p in the fourth row third column time four by four identity matrix with minus nabla in the second row fourth column times element transform matrix.">
+<img src="/web/updates/images/2017/03/custom-scrollbar/matrixmath01.svg"
+  alt="Perspective matrix times scroll matrix times element transform matrix
+  equals four by four identity matrix with minus one over p in the fourth row
+  third column time four by four identity matrix with minus nabla in the second
+  row fourth column times element transform matrix.">
 
 The first matrix is the perspective matrix, the second matrix is the scroll
 matrix. To recap: The scroll matrix’ job is to make element _move up_ when we
@@ -236,7 +248,15 @@ z \\
 \end{array}
 -->
 
-<img src="/web/updates/images/2017/03/custom-scrollbar/matrixmath02.svg" alt="Four by four identity matrix with minus one over p in the fourth row third column time four by four identity matrix with minus nabla in the second row fourth column times four by four identity matrix with minus one in the fourth row fourth column times four dimensional vector x, y, z, 1 equals four by four identity matrix with minus one over p in the fourth row third column, minus nabla in the second row fourth column and minus one in the fourth row fourth column equals four dimensional vector x, y plus nabla, z, minus z over p minus 1.">
+<img src="/web/updates/images/2017/03/custom-scrollbar/matrixmath02.svg"
+  alt="Four by four identity matrix with minus one over p in the fourth row
+  third column time four by four identity matrix with minus nabla in the second
+  row fourth column times four by four identity matrix with minus one in the
+  fourth row fourth column times four dimensional vector x, y, z, 1 equals four
+  by four identity matrix with minus one over p in the fourth row third column,
+  minus nabla in the second row fourth column and minus one in the fourth row
+  fourth column equals four dimensional vector x, y plus nabla, z, minus z over
+  p minus 1.">
 
 I listed an intermediate step to show the effect of our element transform
 matrix. If you are not comfortable with matrix math, that is okay. The Eureka
@@ -318,19 +338,27 @@ ratio of content that is visible:
 
 <!--
 \begin{array}{rlc}
-\frac{\text{thumb.style.height}}{\text{scrollerHeight}} &=& \frac{\text{scrollerHeight}}{\text{scroller.scrollHeight}}\\
+\frac{\text{thumb.style.height}}{\text{scrollerHeight}} &=&
+\frac{\text{scrollerHeight}}{\text{scroller.scrollHeight}}\\
 & \Leftrightarrow & \\
-\text{thumb.style.height} & =& \text{scrollerHeight} \cdot \frac{\text{scrollerHeight}}{\text{scroller.scrollHeight}}\\
+\text{thumb.style.height} & =& \text{scrollerHeight} \cdot
+\frac{\text{scrollerHeight}}{\text{scroller.scrollHeight}}\\
 \end{array}
 -->
 
-<img src="/web/updates/images/2017/03/custom-scrollbar/thumbmath01.svg" alt="thumb dot style dot height over scrollerHeight equals scroller height over scroller dot scroll height if and only if thumb dot style dot height equals scroller height times scroller height over scroller dot scroll height.">
+<img src="/web/updates/images/2017/03/custom-scrollbar/thumbmath01.svg"
+  alt="thumb dot style dot height over scrollerHeight equals scroller height
+  over scroller dot scroll height if and only if thumb dot style dot height
+  equals scroller height times scroller height over scroller dot scroll
+  height.">
 
     <script>
       // …
-      thumb.style.height = scrollerHeight * scrollerHeight / scroller.scrollHeight + 'px';
+      thumb.style.height =
+        scrollerHeight * scrollerHeight / scroller.scrollHeight + 'px';
       // Accommodate for native scrollbars
-      thumb.style.right = (scroller.clientWidth - scroller.getBoundingClientRect().width) + 'px';
+      thumb.style.right =
+        (scroller.clientWidth - scroller.getBoundingClientRect().width) + 'px';
     </script>
 
 Note: We need to adjust `right` so our custom scrollbar is visible on systems
@@ -353,9 +381,12 @@ translated by `scroller.height - thumb.height`. For every pixel scroller, we
 want our thumb should move a fraction of a pixel:
 
 <!--
-\text{factor} = \frac{\text{scroller.height} - \text{thumb.height}}{\text{scroller.scrollHeight} - \text{scroller.height}}
+\text{factor} = \frac{\text{scroller.height} -
+\text{thumb.height}}{\text{scroller.scrollHeight} - \text{scroller.height}}
 -->
-<img src="/web/updates/images/2017/03/custom-scrollbar/thumbmath02.svg" alt="factor equals scroller dot height minus thumb dot height over scroller dot scroll height minus scroller dot height.">
+<img src="/web/updates/images/2017/03/custom-scrollbar/thumbmath02.svg"
+  alt="factor equals scroller dot height minus thumb dot height over scroller
+  dot scroll height minus scroller dot height.">
 
 That’s our scaling factor. Now we need to convert the scaling factor into a
 translation along the z axis, which we already did in the parallax scrolling
@@ -371,7 +402,8 @@ codify this!
 
     <script>
       // ... code from above...
-      const factor = (scrollerHeight - thumbHeight)/(scroller.scrollHeight - scrollerHeight);
+      const factor =
+        (scrollerHeight - thumbHeight)/(scroller.scrollHeight - scrollerHeight);
       thumb.style.transform = `
         matrix3d(
           1, 0, 0, 0,
@@ -402,7 +434,7 @@ issue here. Because we are scrolling on an element, we need to specify
 scrolling effect stops working. We solved this problem in the parallax scroller
 by detecting iOS Safari and relying on `position: sticky` as a workaround, and
 we’ll do exactly the same thing here. Take a look at the
-[parallaxing article](https://developers.google.com/web/updates/2016/12/performant-parallaxing)
+[parallaxing article](/web/updates/2016/12/performant-parallaxing)
 to refresh your memory.
 
 ## What about the browser scrollbar?
@@ -434,7 +466,7 @@ except when a customized scrollbar is an essential part of the experience. But
 good to know that it is possible, no? The fact that it is this hard to do a
 custom scrollbar shows that there’s work to be done on CSS’s side. But fear not!
 In the future,
-[Houdini](https://developers.google.com/web/updates/2016/05/houdini)’s
+[Houdini](/web/updates/2016/05/houdini)’s
 [AnimationWorklet](https://dassur.ma/things/animworklet/) is going to make
 frame-perfect scroll-linked effects like this a lot easier.
 
