@@ -23,17 +23,15 @@ push is supported with two simple checks.
 1. Check the *serviceWorker* API on the *navigator*.
 1. Check *PushManager* on  the *window*.
 
-``` javascript
-  if (!('serviceWorker' in navigator)) {
-    // Service Worker isn't supported on this browser, disable or hide UI.
-    return;
-  }
+      if (!('serviceWorker' in navigator)) {
+        // Service Worker isn't supported on this browser, disable or hide UI.
+        return;
+      }
 
-  if (!('PushManager' in window)) {
-    // Push isn't supported on this browser, disable or hide UI.
-    return;
-  }
-```
+      if (!('PushManager' in window)) {
+        // Push isn't supported on this browser, disable or hide UI.
+        return;
+      }
 
 While browser support is growing quickly for both service worker and
 push messaging support, it's always a good idea to feature detect for both and
@@ -52,18 +50,16 @@ environment.
 To register a service worker, call `navigator.serviceWorker.register()`, passing in the path to
 our file. Like so:
 
-``` javascript
-function registerServiceWorker() {
-  return navigator.serviceWorker.register('service-worker.js')
-  .then(function(registration) {
-    console.log('Service worker successfully registered.');
-    return registration;
-  })
-  .catch(function(err) {
-    console.error('Unable to register service worker.', err);
-  });
-}
-```
+    function registerServiceWorker() {
+      return navigator.serviceWorker.register('service-worker.js')
+      .then(function(registration) {
+        console.log('Service worker successfully registered.');
+        return registration;
+      })
+      .catch(function(err) {
+        console.error('Unable to register service worker.', err);
+      });
+    }
 
 This code above tells the browser that we have a service worker file and where its located. In
 this case, the service worker file is at `/service-worker.js`. Behind the scenes the browser
@@ -93,24 +89,22 @@ Promise](https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPe
 problem with this, is that we can't tell what version of the API is implemented by the current
 browser, so you have to implement both and handle both.
 
-``` javascript
-function askPermission() {
-  return new Promise(function(resolve, reject) {
-    const permissionResult = Notification.requestPermission(function(result) {
-      resolve(result);
-    });
+    function askPermission() {
+      return new Promise(function(resolve, reject) {
+        const permissionResult = Notification.requestPermission(function(result) {
+          resolve(result);
+        });
 
-    if (permissionResult) {
-      permissionResult.then(resolve, reject);
+        if (permissionResult) {
+          permissionResult.then(resolve, reject);
+        }
+      })
+      .then(function(permissionResult) {
+        if (permissionResult !== 'granted') {
+          throw new Error('We weren\'t granted permission.');
+        }
+      });
     }
-  })
-  .then(function(permissionResult) {
-    if (permissionResult !== 'granted') {
-      throw new Error('We weren\'t granted permission.');
-    }
-  });
-}
-```
 
 In the above code, the important snippet of code is the call to
 `Notification.requestPermission()`. This method will display a prompt to the user:
@@ -139,25 +133,23 @@ We'll look at how some popular sites ask for permission later on.
 Once we have our service worker registered and we've got permission, we can subscribe a user by
 calling `registration.pushManager.subscribe()`.
 
-``` javascript
-function subscribeUserToPush() {
-  return getSWRegistration()
-  .then(function(registration) {
-    const subscribeOptions = {
-      userVisibleOnly: true,
-      applicationServerKey: urlBase64ToUint8Array(
-        'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U'
-      )
-    };
+    function subscribeUserToPush() {
+      return getSWRegistration()
+      .then(function(registration) {
+        const subscribeOptions = {
+          userVisibleOnly: true,
+          applicationServerKey: urlBase64ToUint8Array(
+            'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U'
+          )
+        };
 
-    return registration.pushManager.subscribe(subscribeOptions);
-  })
-  .then(function(pushSubscription) {
-    console.log('Received PushSubscription: ', JSON.stringify(pushSubscription));
-    return pushSubscription;
-  });
-}
-```
+        return registration.pushManager.subscribe(subscribeOptions);
+      })
+      .then(function(pushSubscription) {
+        console.log('Received PushSubscription: ', JSON.stringify(pushSubscription));
+        return pushSubscription;
+      });
+    }
 
 When calling the `subscribe()` method, we pass in an *options* object, which consists of both
 required and optional parameters.
@@ -268,40 +260,36 @@ that we used earlier.
 We call `subscribe()`, pass in some options, in return we get a promise that resolves to a
 `PushSubscription` resulting in some code like so:
 
-``` javascript
-function subscribeUserToPush() {
-  return getSWRegistration()
-  .then(function(registration) {
-    const subscribeOptions = {
-      userVisibleOnly: true,
-      applicationServerKey: urlBase64ToUint8Array(
-        'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U'
-      )
-    };
+    function subscribeUserToPush() {
+      return getSWRegistration()
+      .then(function(registration) {
+        const subscribeOptions = {
+          userVisibleOnly: true,
+          applicationServerKey: urlBase64ToUint8Array(
+            'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U'
+          )
+        };
 
-    return registration.pushManager.subscribe(subscribeOptions);
-  })
-  .then(function(pushSubscription) {
-    console.log('Received PushSubscription: ', JSON.stringify(pushSubscription));
-    return pushSubscription;
-  });
-}
-```
+        return registration.pushManager.subscribe(subscribeOptions);
+      })
+      .then(function(pushSubscription) {
+        console.log('Received PushSubscription: ', JSON.stringify(pushSubscription));
+        return pushSubscription;
+      });
+    }
 
 The `PushSubscription` object contains all the required information needed to send a push
 messages to that user. If you print out the contents using `JSON.stringify()`, you'll see the
 following:
 
-```json
-{
-  "endpoint": "https://some.pushservice.com/something-unique",
-  "keys": {
-    "p256dh":
-"BIPUL12DLfytvTajnryr2PRdAgXS3HGKiLqndGcJGabyhHheJYlNGCeXl1dn18gSJ1WAkAPIxr4gK0_dQds4yiI=",
-    "auth":"FPssNDTKnInHVndSTdbKFw=="
-  }
-}
-```
+    {
+      "endpoint": "https://some.pushservice.com/something-unique",
+      "keys": {
+        "p256dh":
+    "BIPUL12DLfytvTajnryr2PRdAgXS3HGKiLqndGcJGabyhHheJYlNGCeXl1dn18gSJ1WAkAPIxr4gK0_dQds4yiI=",
+        "auth":"FPssNDTKnInHVndSTdbKFw=="
+      }
+    }
 
 The `endpoint` is the push services URL, you make a POST request to this URL to trigger a push
 message.
@@ -315,19 +303,17 @@ Once you have a push subscription you'll want to send it to your server. It's up
 do that but a tiny tip is to use `JSON.strinigify()` to get all the necessary data out of the
 subscription object, otherwise you can piece together the same result manually:
 
-```javascript
-const subscriptionObject = {
-  endpoint: pushSubscription.endpoint,
-  keys: {
-    p256dh: pushSubscription.getKeys('p256dh'),
-    auth: pushSubscription.getKeys('auth')
-  }
-};
+    const subscriptionObject = {
+      endpoint: pushSubscription.endpoint,
+      keys: {
+        p256dh: pushSubscription.getKeys('p256dh'),
+        auth: pushSubscription.getKeys('auth')
+      }
+    };
 
-// The above is the same output as:
+    // The above is the same output as:
 
-const subscriptionObjectToo = JSON.stringify(pushSubscription);
-```
+    const subscriptionObjectToo = JSON.stringify(pushSubscription);
 
 In [the demo used throughout this
 book](https://github.com/gauntface/web-push-book/tree/master/src/demos/node-server), we make a
@@ -336,55 +322,51 @@ database.
 
 Sending the subscription is done in the web page like so:
 
-``` javascript
-function sendSubscriptionToBackEnd(subscription) {
-  return fetch('/api/save-subscription/', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(subscription)
-  })
-  .then(function(response) {
-    if (!response.ok) {
-      throw new Error('Bad status code from server.');
-    }
+    function sendSubscriptionToBackEnd(subscription) {
+      return fetch('/api/save-subscription/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(subscription)
+      })
+      .then(function(response) {
+        if (!response.ok) {
+          throw new Error('Bad status code from server.');
+        }
 
-    return response.json();
-  })
-  .then(function(responseData) {
-    if (!(responseData.data && responseData.data.success)) {
-      throw new Error('Bad response from server.');
+        return response.json();
+      })
+      .then(function(responseData) {
+        if (!(responseData.data && responseData.data.success)) {
+          throw new Error('Bad response from server.');
+        }
+      });
     }
-  });
-}
-```
 
 The node server receives this request and saves the data to a database for use later on.
 
-``` javascript
-app.post('/api/save-subscription/', function (req, res) {
-  if (!isValidSaveRequest(req, res)) {
-    return;
-  }
-
-  return saveSubscriptionToDatabase(req.body)
-  .then(function(subscriptionId) {
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({ data: { success: true } }));
-  })
-  .catch(function(err) {
-    res.status(500);
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({
-      error: {
-        id: 'unable-to-save-subscription',
-        message: 'The subscription was received but we were unable to save it to our database.'
+    app.post('/api/save-subscription/', function (req, res) {
+      if (!isValidSaveRequest(req, res)) {
+        return;
       }
-    }));
-  });
-});
-```
+
+      return saveSubscriptionToDatabase(req.body)
+      .then(function(subscriptionId) {
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({ data: { success: true } }));
+      })
+      .catch(function(err) {
+        res.status(500);
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({
+          error: {
+            id: 'unable-to-save-subscription',
+            message: 'The subscription was received but we were unable to save it to our database.'
+          }
+        }));
+      });
+    });
 
 With the `PushSubscription` details on our server we are good to send our user
 a message whenever we want.

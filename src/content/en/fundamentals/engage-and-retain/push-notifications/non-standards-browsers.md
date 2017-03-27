@@ -88,11 +88,9 @@ docs](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 For push, all we need is a JSON file with the field "gcm_sender_id" and we'll give it a value
 of the Sender ID from our Firebase project, like this:
 
-``` json
-{
-  "gcm_sender_id": "547903344792"
-}
-```
+	{
+	  "gcm_sender_id": "547903344792"
+	}
 
 Save this JSON as a file on your site, the demo for this site has a file
 called 'manifest.json' at the root of the site, i.e. '/manifest.json'.
@@ -100,9 +98,7 @@ called 'manifest.json' at the root of the site, i.e. '/manifest.json'.
 Browsers will look for the manifest by looking for a "manifest" `link` tag in the `head` of our
 page.
 
-```html
-<link rel="manifest" href="/manifest.json">
-```
+	<link rel="manifest" href="/manifest.json">
 
 With this set up, when `subscribe()` is called, browsers that require this will retrieve the
 web app manifest and use the `gcm_sender_id` value to subscribe the user to "GCM".
@@ -155,16 +151,14 @@ libraries on Github](https://github.com/web-push-libs/) will manage this for you
 
 The code that does this for the Node Web Library is:
 
-```javascript
-const isGCM = subscription.endpoint.indexOf(
-  'https://android.googleapis.com/gcm/send') === 0;
-if (isGCM) {
-  requestDetails.headers.Authorization = 'key=' + currentGCMAPIKey;
-} else {
-  // Add Application Server Key Details
-  ...
-}
-```
+	const isGCM = subscription.endpoint.indexOf(
+	  'https://android.googleapis.com/gcm/send') === 0;
+	if (isGCM) {
+	  requestDetails.headers.Authorization = 'key=' + currentGCMAPIKey;
+	} else {
+	  // Add Application Server Key Details
+	  ...
+	}
 
 ## Browser Specifics
 
@@ -189,10 +183,8 @@ complication. If you fall into the bracket of requiring payload support you
 can feature detect payload support by checking for the existence of `getKey()` on the
 `PushSubscription` prototype.
 
-```javascript
-// payloadSupport is true when supported, false otherwise.
-const payloadSupport = 'getKey' in PushSubscription.prototype;
-```
+	// payloadSupport is true when supported, false otherwise.
+	const payloadSupport = 'getKey' in PushSubscription.prototype;
 
 ## Conclusion
 

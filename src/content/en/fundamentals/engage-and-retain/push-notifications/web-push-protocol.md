@@ -83,25 +83,23 @@ was used to create the signature.
 The JWT info for web push must be be JSON containing the following information, encoded as a
 URL safe base64 string.
 
-```json
-{  
-  "typ": "JWT",  
-  "alg": "ES256"  
-}
-```
+    {  
+      "typ": "JWT",  
+      "alg": "ES256"  
+    }
+
 
 The second string is the JWT Data. This provides information about the sender of the JWT, who
 it's intended for and how long it's valid.
 
 For web push, the data would look something like this:
 
-```json
-{  
-  "aud": "https://some-push-service.org",
-  "exp": "1469618703",
-  "sub": "mailto:example@web-push-book.org"  
-}
-```
+    {  
+      "aud": "https://some-push-service.org",
+      "exp": "1469618703",
+      "sub": "mailto:example@web-push-book.org"  
+    }
+
 
 The `aud` value is the "audience", i.e. who the JWT is for. For web push the
 audience is the push service, so we set it to the **origin of the push
@@ -130,42 +128,40 @@ The signing process requires encrypting the "unsigned token" using ES256. Accord
 spec](https://tools.ietf.org/html/rfc7519), ES256 is short for "ECDSA using the P-256 curve and
 the SHA-256 hash algorithm". Using web crypto you can create the signature like so:
 
-```
-// Utility function for UTF-8 encoding a string to an ArrayBuffer.
-const utf8Encoder = new TextEncoder('utf-8');
+    // Utility function for UTF-8 encoding a string to an ArrayBuffer.
+    const utf8Encoder = new TextEncoder('utf-8');
 
-// The unsigned token is the concatenation of the URL-safe base64 encoded
-// header and body.
-const unsignedToken = .....;
+    // The unsigned token is the concatenation of the URL-safe base64 encoded
+    // header and body.
+    const unsignedToken = .....;
 
-// Sign the |unsignedToken| using ES256 (SHA-256 over ECDSA).
-const key = {
-  kty: 'EC',
-  crv: 'P-256',
-  x: window.uint8ArrayToBase64Url(
-    applicationServerKeys.publicKey.subarray(1, 33)),
-  y: window.uint8ArrayToBase64Url(
-    applicationServerKeys.publicKey.subarray(33, 65)),
-  d: window.uint8ArrayToBase64Url(applicationServerKeys.privateKey),
-};
+    // Sign the |unsignedToken| using ES256 (SHA-256 over ECDSA).
+    const key = {
+      kty: 'EC',
+      crv: 'P-256',
+      x: window.uint8ArrayToBase64Url(
+        applicationServerKeys.publicKey.subarray(1, 33)),
+      y: window.uint8ArrayToBase64Url(
+        applicationServerKeys.publicKey.subarray(33, 65)),
+      d: window.uint8ArrayToBase64Url(applicationServerKeys.privateKey),
+    };
 
-// Sign the |unsignedToken| with the server's private key to generate
-// the signature.
-return crypto.subtle.importKey('jwk', key, {
-  name: 'ECDSA', namedCurve: 'P-256',
-}, true, ['sign'])
-.then((key) => {
-  return crypto.subtle.sign({
-    name: 'ECDSA',
-    hash: {
-      name: 'SHA-256',
-    },
-  }, key, utf8Encoder.encode(unsignedToken));
-})
-.then((signature) => {
-  console.log('Signature: ', signature);
-});
-```
+    // Sign the |unsignedToken| with the server's private key to generate
+    // the signature.
+    return crypto.subtle.importKey('jwk', key, {
+      name: 'ECDSA', namedCurve: 'P-256',
+    }, true, ['sign'])
+    .then((key) => {
+      return crypto.subtle.sign({
+        name: 'ECDSA',
+        hash: {
+          name: 'SHA-256',
+        },
+      }, key, utf8Encoder.encode(unsignedToken));
+    })
+    .then((signature) => {
+      console.log('Signature: ', signature);
+    });
 
 For the push service receiving our JWT, they can check the application sending the JWT by using
 the public key to decrypt the signature and make sure the decrypted string is the same as the
@@ -174,18 +170,14 @@ the public key to decrypt the signature and make sure the decrypted string is th
 The signed JWT (i.e. all three strings joined by dots), is sent to the web
 push service as the `Authorization` header with `WebPush ` prepended, like so:
 
-```
-Authorization: 'WebPush <JWT Info>.<JWT Payload>.<Signature>'
-```
-
+    Authorization: 'WebPush <JWT Info>.<JWT Payload>.<Signature>'
+    
 The Web Push Protocol also states the public application server key must be
 sent in the `Crypto-Key` header as a URL safe base64 encoded string with
 `p256ecdsa=` prepended to it.
 
-```
-Crypto-Key: p256ecdsa=<URL Safe Base64 Public Application Server Key>
-```
-
+    Crypto-Key: p256ecdsa=<URL Safe Base64 Public Application Server Key>
+    
 ## The Payload Encryption
 
 Next let's look at how we can send a payload with a push message so that our when our web app
@@ -235,14 +227,12 @@ easy to generate these keys.
 
 In node we'd do the following:
 
-```
-const keyCurve = crypto.createECDH('prime256v1');
-keyCurve.generateKeys();
+    const keyCurve = crypto.createECDH('prime256v1');
+    keyCurve.generateKeys();
 
-const publicKey = keyCurve.getPublicKey();
-const privateKey = keyCurve.getPrivateKey();
-```
-
+    const publicKey = keyCurve.getPublicKey();
+    const privateKey = keyCurve.getPrivateKey();
+    
 #### HKDF: HMAC Based Key Deriviation Function
 
 Wikipedia has a succinct description of [HKDF](https://tools.ietf.org/html/rfc5869):
@@ -262,26 +252,24 @@ and the resulting keys for HKDF in web push should be no longer than 256 bits
 
 In node this could be implemented like so:
 
-```
-// Simplified HKDF, returning keys up to 32 bytes long
-function hkdf(salt, ikm, info, length) {
-  // Extract
-  const keyHmac = crypto.createHmac('sha256', salt);
-  keyHmac.update(ikm);
-  const key = keyHmac.digest();
+    // Simplified HKDF, returning keys up to 32 bytes long
+    function hkdf(salt, ikm, info, length) {
+      // Extract
+      const keyHmac = crypto.createHmac('sha256', salt);
+      keyHmac.update(ikm);
+      const key = keyHmac.digest();
 
-  // Expand
-  const infoHmac = crypto.createHmac('sha256', key);
-  infoHmac.update(info);
+      // Expand
+      const infoHmac = crypto.createHmac('sha256', key);
+      infoHmac.update(info);
 
-  // A one byte long buffer containing only 0x01
-  const ONE_BUFFER = new Buffer(1).fill(1);
-  infoHmac.update(ONE_BUFFER);
+      // A one byte long buffer containing only 0x01
+      const ONE_BUFFER = new Buffer(1).fill(1);
+      infoHmac.update(ONE_BUFFER);
 
-  return infoHmac.digest().slice(0, length);
-}
-```
-
+      return infoHmac.digest().slice(0, length);
+    }
+    
 H/T to [Mat Scale's article for this example code](/web/updates/2016/03/web-push-encryption).
 
 This loosely covers [ECDH](https://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman)
@@ -304,14 +292,12 @@ When we want to send a push message to a user with a payload, there are three in
 We've seen the `auth` and `p256dh` values being retreieved from a `PushSubscription` but for a
 quick reminder, given a subscription we'd need these values:
 
-```
-subscription.joJSON().keys.auth
-subscription.joJSON().keys.p256dh
+    subscription.joJSON().keys.auth
+    subscription.joJSON().keys.p256dh
 
-subscription.getKey('auth')
-subscription.getKey('p256dh')
-```
-
+    subscription.getKey('auth')
+    subscription.getKey('p256dh')
+    
 The `auth` value should be treated as a secret and not shared outside of your application.
 
 The `p256dh` key is a public key, this is sometimes referred to as the client public key. Here
@@ -327,23 +313,19 @@ encrypting the data.
 
 The salt needs to be 16 bytes of random data. In NodeJS, we'd do the following to create a salt:
 
-```
-const salt = crypto.randomBytes(16);
-```
-
+    const salt = crypto.randomBytes(16);
+    
 **Public / Private Keys**
 
 The public and private keys should be generated using a P-256 elliptic curve,
 which we'd do in Node like so:
 
-```
-const localKeysCurve = crypto.createECDH('prime256v1');
-localKeysCurve.generateKeys();
+    const localKeysCurve = crypto.createECDH('prime256v1');
+    localKeysCurve.generateKeys();
 
-const localPublicKey = localKeysCurve.getPublicKey();
-const localPrivateKey = localKeysCurve.getPrivateKey();
-```
-
+    const localPublicKey = localKeysCurve.getPublicKey();
+    const localPrivateKey = localKeysCurve.getPrivateKey();
+    
 We'll refer these keys as "local keys". They are used *just* for encryption and have
 **nothing** to do with application server keys.
 
@@ -355,11 +337,9 @@ salt and set of local keys, we are ready to actually do some encryption.
 The first step is to create a shared secret using the subscription public key and our new
 private key (remember the ECDH explanation with Alice and Bob? Just like that).
 
-```
-const sharedSecret = localKeysCurve.computeSecret(
-  subscription.keys.p256dh, 'base64');
-```
-
+    const sharedSecret = localKeysCurve.computeSecret(
+      subscription.keys.p256dh, 'base64');
+    
 This is used in the next step to calculate the Pseudo Random Key (PRK).
 
 ### Pseudo Random Key
@@ -367,11 +347,9 @@ This is used in the next step to calculate the Pseudo Random Key (PRK).
 The Pseudo Random Key (PRK) is the combination of the push subscription's auth
 secret, the shared secret we just created.
 
-```
-const authEncBuff = new Buffer('Content-Encoding: auth\0', 'utf8');
-const prk = hkdf(subscription.keys.auth, sharedSecret, authEncBuff, 32);
-```
-
+    const authEncBuff = new Buffer('Content-Encoding: auth\0', 'utf8');
+    const prk = hkdf(subscription.keys.auth, sharedSecret, authEncBuff, 32);
+    
 What is up with the create this `Content-Encoding: auth` buffer?
 
 This piece of information is included in the final output of the HKDF and I imagine is largely
@@ -387,29 +365,27 @@ The "context" is a set of bytes that is used to calculate two values later on in
 browser. It's essentially an array of bytes containing the subscription public key and the
 local public key.
 
-```
-const keyLabel = new Buffer('P-256\0', 'utf8');
+    const keyLabel = new Buffer('P-256\0', 'utf8');
 
-// Convert subscription public key into a buffer.
-const subscriptionPubKey = new Buffer(subscription.keys.p256dh, 'base64');
+    // Convert subscription public key into a buffer.
+    const subscriptionPubKey = new Buffer(subscription.keys.p256dh, 'base64');
 
-const subscriptionPubKeyLength = new Uint8Array(2);
-subscriptionPubKeyLength[0] = 0;
-subscriptionPubKeyLength[1] = subscriptionPubKey.length;
+    const subscriptionPubKeyLength = new Uint8Array(2);
+    subscriptionPubKeyLength[0] = 0;
+    subscriptionPubKeyLength[1] = subscriptionPubKey.length;
 
-const localPublicKeyLength = new Uint8Array(2);
-subscriptionPubKeyLength[0] = 0;
-subscriptionPubKeyLength[1] = localPublicKey.length;
+    const localPublicKeyLength = new Uint8Array(2);
+    subscriptionPubKeyLength[0] = 0;
+    subscriptionPubKeyLength[1] = localPublicKey.length;
 
-const contextBuffer = Buffer.concat([
-  keyLabel,
-  subscriptionPubKeyLength.buffer,
-  subscriptionPubKey,
-  localPublicKeyLength.buffer,
-  localPublicKey,
-]);
-```
-
+    const contextBuffer = Buffer.concat([
+      keyLabel,
+      subscriptionPubKeyLength.buffer,
+      subscriptionPubKey,
+      localPublicKeyLength.buffer,
+      localPublicKey,
+    ]);
+    
 The final context buffer is a label, the number of bytes in the subscription public key,
 followed by the key itself, then the number of bytes local public key, followed by the key
 itself.
@@ -427,24 +403,20 @@ The content encryption key (CEK) is the key that will ultimately be used to encr
 First we need to create the bytes of data for the nonce and CEK, which is simply a content
 encoding string followed by the context buffer we just calculated:
 
-```
-const nonceEncBuffer = new Buffer('Content-Encoding: nonce\0', 'utf8');
-const nonceInfo = Buffer.concat([nonceEncBuffer, contextBuffer]);
+    const nonceEncBuffer = new Buffer('Content-Encoding: nonce\0', 'utf8');
+    const nonceInfo = Buffer.concat([nonceEncBuffer, contextBuffer]);
 
-const cekEncBuffer = new Buffer('Content-Encoding: aesgcm\0');
-const cekInfo = Buffer.concat([cekEncBuffer, contextBuffer]);
-```
-
+    const cekEncBuffer = new Buffer('Content-Encoding: aesgcm\0');
+    const cekInfo = Buffer.concat([cekEncBuffer, contextBuffer]);
+    
 This information is run through HKDF combining the salt and PRK with the nonceInfo and cekInfo:
 
-```
-// The nonce should be 12 bytes long
-const nonce = hkdf(salt, prk, nonceInfo, 12);
+    // The nonce should be 12 bytes long
+    const nonce = hkdf(salt, prk, nonceInfo, 12);
 
-// The CEK should be 16 bytes long
-const contentEncryptionKey = hkdf(salt, prk, cekInfo, 16);
-```
-
+    // The CEK should be 16 bytes long
+    const contentEncryptionKey = hkdf(salt, prk, cekInfo, 16);
+    
 This gives us our nonce and content encryption key.
 
 ### Perform the Encryption
@@ -456,11 +428,9 @@ as the key and the nonce is as an initialization vector.
 
 In Node this is done like so:
 
-```
-const cipher = crypto.createCipheriv(
-  'id-aes128-GCM', contentEncryptionKey, nonce);
-```
-
+    const cipher = crypto.createCipheriv(
+      'id-aes128-GCM', contentEncryptionKey, nonce);
+    
 Before we encrypt our payload, we need to define how much padding we wish to
 add to the front of the payload. The reason you'd want to add padding is that
 it further hides what the content of the payload *could* be.
@@ -469,24 +439,20 @@ The padding needs to be at least 2 bytes and these first two bytes should indica
 of the padding. If you do add padding, create enough bytes of data to add the two bytes used to
 include the padding length.
 
-```
-const padding = new Buffer(2 + paddingLength);
-// The buffer must be only zeros, except the length
-padding.fill(0);
-padding.writeUInt16BE(paddingLength, 0);
-```
-
+    const padding = new Buffer(2 + paddingLength);
+    // The buffer must be only zeros, except the length
+    padding.fill(0);
+    padding.writeUInt16BE(paddingLength, 0);
+    
 We then run our padding and payload through this cipher.
 
-```
-const result = cipher.update(Buffer.concat(padding, payload));
-cipher.final();
+    const result = cipher.update(Buffer.concat(padding, payload));
+    cipher.final();
 
-// Append the auth tag to the result -
-// https://nodejs.org/api/crypto.html#crypto_cipher_getauthtag
-const encryptedPayload = Buffer.concat([result, cipher.getAuthTag()]);
-```
-
+    // Append the auth tag to the result -
+    // https://nodejs.org/api/crypto.html#crypto_cipher_getauthtag
+    const encryptedPayload = Buffer.concat([result, cipher.getAuthTag()]);
+    
 We now have our encrypted payload - Yay.
 
 The remaining piece of work is to determine how this payload is sent to the push service.
@@ -502,10 +468,8 @@ The 'Encryption' header must contain the *salt* used for encrypting the payload.
 
 The 16 byte salt should be base64 URL safe encoded and added to the Encryption header, like so:
 
-```
-Encryption: salt=<URL Safe Base64 Encoded Salt>
-```
-
+    Encryption: salt=<URL Safe Base64 Encoded Salt>
+    
 #### Crypto-Key Header
 
 We saw that the 'Crypto-Key' header is used under the 'Application Server Keys'
@@ -516,22 +480,18 @@ the payload.
 
 The resulting header looks like this:
 
-```
-Crypto-Key: dh=<URL Safe Base64 Encoded Local Public Key String>; p256ecdsa=<URL Safe Base64
-Encoded Public Application Server Key>
-```
-
+    Crypto-Key: dh=<URL Safe Base64 Encoded Local Public Key String>; p256ecdsa=<URL Safe Base64
+    Encoded Public Application Server Key>
+    
 #### Content Type, Length & Encoding Headers
 
 The 'Content-Length' header is the number of bytes in the encrypted payload and 'Content-Type'
 and 'Content-Encoding' headers are fixed values, as shown below:
 
-```
-Content-Length: <Number of Bytes in Encrypted Payload>
-Content-Type: 'application/octet-stream'
-Content-Encoding: 'aesgcm'
-```
-
+    Content-Length: <Number of Bytes in Encrypted Payload>
+    Content-Type: 'application/octet-stream'
+    Content-Encoding: 'aesgcm'
+    
 With these headers set, we need to send the encrypted payload as the body of
 our request. Notice that the Content-Type is set to
 'application/octet-stream'. This is because the encrypted payload must be sent as a stream of
@@ -539,12 +499,10 @@ bytes.
 
 In NodeJS we would do this like so:
 
-```
-const pushRequest = https.request(httpsOptions, function(pushResponse) {
-pushRequest.write(encryptedPayload);
-pushRequest.end();
-```
-
+    const pushRequest = https.request(httpsOptions, function(pushResponse) {
+    pushRequest.write(encryptedPayload);
+    pushRequest.end();
+    
 ## More Headers?
 
 We've covered the headers used for JWT / Application Server Keys (i.e. how to identify the
