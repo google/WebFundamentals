@@ -8,7 +8,7 @@ description: Synchronous, app-modal JavaScript dialogs are commonly (and unfortu
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) used to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs. #}
 
-# Proposed Chromium policy on JavaScript dialogs {: .page-title }
+# Chromium policy on JavaScript dialogs {: .page-title }
 
 ## History of JavaScript dialogs
 
@@ -52,14 +52,14 @@ The ability for a page to specify the `onbeforeunload` string was
 [removed in Chrome 51](https://www.chromestatus.com/feature/5349061406228480).
 (It was also removed by Safari starting with Safari 9.1 and in Firefox 4.)
 
-It is planned that `alert()/confirm()/prompt()` dialogs will not be app-modal,
-but rather [will be dismissed when their tab is switched from](https://crbug.com/629964).
-(Safari 9.1 already does this.)
+`alert()/confirm()/prompt()` dialogs are being changed. Rather than being app-modal,
+they [will be dismissed when their tab is switched from](https://crbug.com/629964).
+(Safari 9.1 already does this.) As of April 2017, this is slowly being rolled out.
 
-We are investigating the possibility of
-[gating `alert()/confirm()/prompt()/onbeforeunload` dialogs on site engagement](https://groups.google.com/a/chromium.org/d/msg/blink-dev/waPXPhKqbJ0/wYVJlFKkBgAJ),
-so if the user isn’t engaging with the page, the page’s dialogs will not be
-shown. Details have yet to be ironed out.
+The current plan for `beforeunload` dialogs is to require a user gesture on the page
+to allow them to show. (This would not change the dispatching of the `beforeunload`
+event.) This aligns Chromium with Firefox, which made this change with
+[Firefox 44](https://bugzilla.mozilla.org/show_bug.cgi?id=636905).
 
 Because of these changes, if your site uses dialogs, it is highly recommended
 that you move to using the earlier-mentioned alternatives so that this will not
