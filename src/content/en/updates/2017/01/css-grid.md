@@ -13,7 +13,9 @@ description: CSS Grid is a new layout system for the web.
 
 {% include "web/_shared/contributors/surma.html" %}
 
-> *TL;DR:* If you are familiar with Flexbox, Grid should feel familiar.
+### TL;DR {: .hide-from-toc }
+
+If you are familiar with Flexbox, Grid should feel familiar.
 [Rachel Andrew](https://twitter.com/Rachelandrew) maintains a great
 [website dedicated to CSS Grid](http://gridbyexample.com/) to help you get
 started. Grid is now available in Google Chrome.

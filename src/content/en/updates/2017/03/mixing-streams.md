@@ -4,7 +4,8 @@ description: Today, when using Media Source Extensions (MSE) in Chrome, it's not
 
 {# wf_updated_on: 2017-03-20 #}
 {# wf_published_on: 2017-03-20 #}
-{# wf_tags: chrome58 #}
+{# wf_tags: chrome58,media #}
+{# wf_featured_image: /web/updates/images/generic/animations.png #}
 {# wf_featured_snippet: Today, when using Media Source Extensions (MSE) in Chrome, it's not possible to switch between encrypted and clear streams. Starting in Chrome 58, all this changes. #}
 
 # We'll Cross the (Media) Streams, Ray {: .page-title }

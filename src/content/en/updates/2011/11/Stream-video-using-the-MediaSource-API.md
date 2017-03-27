@@ -5,7 +5,7 @@ book_path: /web/updates/_book.yaml
 {# wf_published_on: 2011-11-14 #}
 {# wf_tags: news,mediasource,media #}
 
-# "Stream" video using the MediaSource API {: .page-title }
+# 'Stream' video using the MediaSource API {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 

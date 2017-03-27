@@ -754,8 +754,15 @@ do so, use `canMakePayment()`.
       request.show();
     }
 
-Note: This is only optional. Users can still add a new payment method in the
-Payment Request UI in general.
+Warning: In order to protect user privacy, calling <code>canMakePayment()</code>
+too often within a short time range causes [a "Quota exceeded"
+error](https://w3c.github.io/browser-payment-api/#canmakepayment-method).
+
+At the time of writing, the quota error will go away in Chrome after 30 minutes,
+but this heuristic may change over time.
+
+Note: Using <code>canMakePayment()</code> is optional. Without it, users can
+still add a new payment method in the Payment Request UI.
 
 ## Putting them all together {: #putting-them-together}
 
