@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut tellus sit amet elit ultricies malesuada. Vestibulum consequat et ex ut mollis. Aliquam et malesuada ante. Phasellus ac tincidunt elit, at cursus mi. Aenean orci nulla, dictum non dapibus sed, ultricies sit amet purus. Sed quis turpis velit. Phasellus mollis ultrices iaculis.
 
 {# wf_published_on: 2017-04-03 #}
-{# wf_updated_on: 2017-03-14 #}
+{# wf_updated_on: 2017-03-27 #}
 
 # [WIP] Mobile Web Video Playback {: .page-title }
 
@@ -114,13 +114,11 @@ button state to "pause" and hide the video controls. When the video pauses, we
 simply change button state to "play" and show the video controls.
 
     video.addEventListener('play', function() {
-      playPauseButton.classList.toggle('paused', true);
-      hideMyVideoControls();
+      playPauseButton.classList.add('paused');
     });
 
     video.addEventListener('pause', function() {
-      playPauseButton.classList.toggle('paused', false);
-      showMyVideoControls();
+      playPauseButton.classList.remove('paused');
     });
 
 When time indicated by video `currentTime` attribute changed via the
@@ -128,17 +126,17 @@ When time indicated by video `currentTime` attribute changed via the
 
     video.addEventListener('timeupdate', function() {
       videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
-      videoProgressBar.style.width = `${video.currentTime * 100 / video.duration}%`;
       videoProgressBar.style.transform = `scaleX(${video.currentTime / video.duration})`;
     }
 
-When the video ends, we simply change button state to "play" and show video
-controls for now. Note that we could also choose to load automatically another
-video if the user has enabled some kind of "AutoPlay" feature.
+When the video ends, we simply change button state to "play", set video
+`currentTime` back to 0 and show video controls for now. Note that we could
+also choose to load automatically another video if the user has enabled some
+kind of "AutoPlay" feature.
 
     video.addEventListener('ended', function() {
-      playPauseButton.classList.toggle('paused', false);
-      showMyVideoControls();
+      playPauseButton.classList.remove('paused');
+      video.currentTime = 0;
     });
 
 ### Seek backward and forward
@@ -173,15 +171,16 @@ can easily skip some content.
     });
 
 As before, rather than adjusting video styling in the `click` event listeners
-of these buttons, we'll use the fired `seeking` and `seeked` video events for
-that.
+of these buttons, we'll use the fired `seeking` and `seeked` video events to
+adjust video brightness. My custom `seeking` CSS class is as simple as `filter:
+brightness(0);`.
 
     video.addEventListener('seeking', function() {
-      video.classList.toggle('seeking', true);
+      video.classList.add('seeking');
     });
 
     video.addEventListener('seeked', function() {
-      video.classList.toggle('seeking', false);
+      video.classList.remove('seeking');
     });
 
 Here's below what we have created so far. In the next section, we'll implement
@@ -305,10 +304,6 @@ How doest this work? As soon as we detect the screen orientation changes, let's
 request fullscreen if the browser window is in landscape mode (that is, its
 width is greater than its height). If not, let's exit fullscreen. That's all.
 
-Note: This may silently fail in browsers that don't [allow requesting
-fullscreen from the orientation change
-event](https://github.com/whatwg/fullscreen/commit/e5e96a9).
-
     if ('orientation' in screen) {
       screen.orientation.addEventListener('change', function() {
         // Let's request fullscreen if user switches device in landscape mode.
@@ -319,6 +314,10 @@ event](https://github.com/whatwg/fullscreen/commit/e5e96a9).
         }
       });
     }
+
+Note: This may silently fail in browsers that don't [allow requesting
+fullscreen from the orientation change
+event](https://github.com/whatwg/fullscreen/commit/e5e96a9).
 
 <video controls muted playsinline>
   <source src="/web/fundamentals/getting-started/primers/videos/perfect-fullscreen.webm"
@@ -441,10 +440,8 @@ from notifications or media keys. To see this in action, check out the final
 
 With the [Page Visibility API], we can determine the current visibility of a
 page and be notified of visibility changes. Code below pauses video when page
-is hidden. This happens when you switch tabs or screen lock is active for
+is hidden. This happens when screen lock is active or when you switch tabs for
 instance.
-
-Note: Chrome for Android already pauses videos when page is hidden.
 
     document.addEventListener('visibilitychange', function() {
       // Pause video when page is hidden.
@@ -452,6 +449,8 @@ Note: Chrome for Android already pauses videos when page is hidden.
         video.pause();
       }
     });
+
+Note: Chrome for Android already pauses videos when page is hidden.
 
 ### Show/hide mute button on video visibility change
 
@@ -461,7 +460,8 @@ browser's viewport.
 
 Let's show/hide a mute button based on the video visibility in the page. If
 video is playing but not currently visible, a mini mute button will be shown in
-the bottom right corner of the page to give user control over video sound.
+the bottom right corner of the page to give user control over video sound. The
+`volumechange` video event is used to update the mute button styling.
 
     <button id="muteButton"></button>
 
@@ -481,6 +481,10 @@ the bottom right corner of the page to give user control over video sound.
     muteButton.addEventListener('click', function() {
       // Mute/unmute video on button click.
       video.muted = !video.muted;
+    });
+
+    video.addEventListener('volumechange', function() {
+      muteButton.classList.toggle('active', video.muted);
     });
 
 <video controls muted playsinline>
