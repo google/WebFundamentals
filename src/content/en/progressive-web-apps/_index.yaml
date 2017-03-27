@@ -25,7 +25,7 @@ landing_page:
         </p>
         <ul>
           <li>
-            <b>Reliable</b> - Load instantly and never show the dinosaur,
+            <b>Reliable</b> - Load instantly and never show the downasaur,
             even in uncertain network conditions.
           </li>
           <li>
@@ -92,10 +92,9 @@ landing_page:
         </p>
         <p>
           The Web App Manifest allows you to control how your app appears and
-          how it's launched. You can specify icons for the home screen and
-          the splash screen shown while the app loads, which page to load when
-          the app launches, screen orientation, even whether or not to show the
-          browser chrome.
+          how it's launched. You can specify home screen icons, the page to load
+          when the app is launched, screen orientation, and even whether or not
+          to show the browser chrome.
         </p>
       image_path: images/pwa-engaging.png
       image_left: True
