@@ -14,11 +14,11 @@ Before getting into the API, let's look at push from a highlevel, start to finis
 step through individual topics or API's later on, you'll have an idea of how and why it's
 important.
 
-The three key steps when implementing push are:
+The three key steps to implementing push are:
 
 1. Adding the client side logic to subscribe a user to push (i.e. the JavaScript and UI in your
 web app that registers a user to push messages).
-1. The API call from your back-end / application that triggers a push message  to a users device.
+1. The API call from your back-end / application that triggers a push message to a user's device.
 1. The service worker JavaScript file that will receive a "push event" when the push arrives on
 the device. It's in this JavaScript that you'll be able to show a notification.
 
@@ -32,7 +32,7 @@ Subscribing a user requires two things. First, getting **permission** from the u
 them push messages. Second, getting a `PushSubscription` from the browser.
 
 A `PushSubscription` contains all the information we need to send a push message to that user.
-You can "kind of" think of this as a ID for that user's device.
+You can "kind of" think of this as an ID for that user's device.
 
 This is all done in JavaScript with the [Push
 API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API).
@@ -97,9 +97,8 @@ We'll cover what the **keys** value is for later on.
 
 ### What does the API look like?
 
-I mentioned that every web push service expects the same API call. That API is the [**Web Push
-Protocol**](https://tools.ietf.org/html/draft-ietf-webpush-protocol).
-
+I mentioned that every web push service expects the same API call. That API is the
+[**Web Push Protocol**](https://tools.ietf.org/html/draft-ietf-webpush-protocol).
 It's an IETF standard that defines how you make an API call to a push service.
 
 The API call requires certain headers to be set and the data to be a stream of bytes. We'll
@@ -107,7 +106,7 @@ look at libraries that can perform this API call for us as well as how to do it 
 
 ### What can the API do?
 
-The API provides a way to send a message to a user, with / without data, and provide
+The API provides a way to send a message to a user, with / without data, and provides
 instructions of *how* to send the message.
 
 The data you send with a push message must be encrypted. The reason for this is that it
@@ -116,7 +115,7 @@ push message. This is important given that it's the browser who decides which pu
 use, which could open the door to browsers using a push service that isn't safe or secure.
 
 When you trigger a push message, the push service will receive the API call and queue the
-message. This message will remain queued until the users device comes online and the push
+message. This message will remain queued until the user's device comes online and the push
 service can deliver the messages. The instructions you can give to the push service define how
 the push message is queued.
 
@@ -133,13 +132,13 @@ users battery life by only delivering high priority messages.
 ![When your server wishes to send a push message, it makes a web push protocol request to a
 push service.](./images/svgs/server-to-push-service.svg)
 
-## Step 3: Push Event on the Users Device
+## Step 3: Push Event on the User's Device
 
-Once we've sent a push message, the push service will keep your message on it's server until
-one of following events occur:
+Once we've sent a push message, the push service will keep your message on its server until
+one of following events occurs:
 
-1. The device comes online and the push service can deliver the message.
-1. The message expires. If this occurs the push service removes the message from it's queue and
+1. The device comes online and the push service delivers the message.
+1. The message expires. If this occurs the push service removes the message from its queue and
 it'll never be delivered.
 
 When the push service does deliver a message, the browser will receive the message, decrypt any
@@ -154,7 +153,7 @@ of a service worker script).
 It's inside the service worker's 'push' event that you can perform any background tasks. You
 can make analytics calls, cache pages offline and show notifications.
 
-![When a push message is sent from a push service to a users device, your service worker
+![When a push message is sent from a push service to a user's device, your service worker
 receives a push event.](./images/svgs/push-service-to-sw-event.svg)
 
 That's the whole flow for push messaging. Lets go through each step in more detail.
