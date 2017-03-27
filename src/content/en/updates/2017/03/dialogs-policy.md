@@ -54,9 +54,11 @@ The ability for a page to specify the `onbeforeunload` string was
 
 `alert()/confirm()/prompt()` dialogs are being changed. Rather than being app-modal,
 they [will be dismissed when their tab is switched from](https://crbug.com/629964).
-(Safari 9.1 already does this.) As of April 2017, this is slowly being rolled out.
+(Safari 9.1 already does this.) This is fully enabled on the canary and dev channels
+and partially enabled on the beta and stable channels, and will be enabled more in the
+future.
 
-The current plan for `beforeunload` dialogs is to require a user gesture on the page
+The current plan for `beforeunload` dialogs is to require a user gesture
 to allow them to show. (This would not change the dispatching of the `beforeunload`
 event.) This aligns Chromium with Firefox, which made this change with
 [Firefox 44](https://bugzilla.mozilla.org/show_bug.cgi?id=636905).
