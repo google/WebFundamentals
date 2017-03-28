@@ -6,6 +6,8 @@ toc:
     - title: Encrypted Media Extensions
       path: /web/fundamentals/media/eme
     - title: Media Source Extensions
-      path: /web/fundamentals/media/mse
-    - title: Seamless Playback
-      path: /web/fundamentals/media/seamless-playback
+      section:
+      - title: Basics
+        path: /web/fundamentals/media/mse/basics
+      - title: Seamless Playback
+        path: /web/fundamentals/media/mse/seamless-playback
