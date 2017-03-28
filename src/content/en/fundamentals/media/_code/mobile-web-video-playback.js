@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
 /* Utils */
 
 function secondsToTimeCode(seconds) {
-  console.log(seconds);
   const h = Math.floor(seconds / 3600);
   const m = Math.floor((seconds % 3600) / 60);
   const s = Math.floor(seconds % 60);
@@ -43,7 +42,6 @@ video.addEventListener('loadedmetadata', function() {
   videoDuration.textContent = secondsToTimeCode(video.duration);
   videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
   videoProgressBar.style.transform = `scaleX(${video.currentTime / video.duration})`;
-  muteButton.classList.toggle('active', video.muted);
 });
 
 playPauseButton.addEventListener('click', function(event) {
@@ -202,6 +200,7 @@ document.addEventListener('visibilitychange', function() {
   }
 });
 
+
 if ('IntersectionObserver' in window) {
   // Show/hide mute button based on video visibility in the page.
   function onIntersection(entries) {
@@ -222,3 +221,128 @@ muteButton.addEventListener('click', function() {
 video.addEventListener('volumechange', function() {
   muteButton.classList.toggle('active', video.muted);
 });
+
+
+let playlist = getAwesomePlaylist();
+let index = 3;
+
+previousTrackButton.addEventListener('click', playPreviousVideo);
+nextTrackButton.addEventListener('click', playNextVideo);
+
+updatePlaylistButtons();
+
+function playPreviousVideo() {
+  index = (index - 1 + playlist.length) % playlist.length;
+  playVideoFromPlaylist();
+}
+
+function playNextVideo() {
+  index = (index + 1) % playlist.length;
+  playVideoFromPlaylist();
+}
+
+function playVideoFromPlaylist() {
+  video.src = playlist[index].src;
+  video.play()
+  .then(_ => {
+    setMediaSession();
+    updatePlaylistButtons();
+  });
+}
+
+function setMediaSession() {
+  if (!('mediaSession' in navigator)) {
+    return;
+  }
+  let track = playlist[index];
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: track.title,
+    artist: track.artist,
+    artwork: track.artwork
+  });
+  navigator.mediaSession.setActionHandler('previoustrack', playPreviousVideo);
+  navigator.mediaSession.setActionHandler('nexttrack', playNextVideo);
+  navigator.mediaSession.setActionHandler('seekbackward', seekBackward);
+  navigator.mediaSession.setActionHandler('seekforward', seekForward);
+}
+
+function updatePlaylistButtons() {
+  let nextIndex = (index + 1) % playlist.length;
+  let previousIndex = (index - 1 + playlist.length) % playlist.length;
+
+  nextTrackButton.textContent = /"(.*)"/.exec(playlist[nextIndex].title)[1];
+  previousTrackButton.textContent = /"(.*)"/.exec(playlist[previousIndex].title)[1];
+}
+
+video.addEventListener('play', function() {
+  // Calling this one to set up media session just for the sake of separating
+  // background playback.
+  setMediaSession();
+}, { once: true });
+
+video.addEventListener('loadedmetadata', function() {
+  let newTitle = playlist[index].title.replace(/"/g, '');
+  if (newTitle !== videoTitle.textContent) {
+    videoTitle.textContent = newTitle;
+  }
+  let newArtist = playlist[index].artist;
+  if (newArtist !== videoArtist.textContent) {
+    videoArtist.textContent = newArtist;
+  }
+});
+
+/* Utils */
+
+function getAwesomePlaylist() {
+  const BASE_URL = 'https://storage.googleapis.com/media-session/';
+
+  return [{
+      src: BASE_URL + 'sintel/trailer.mp4',
+      title: '"Sintel" Trailer, Durian Open Movie Project',
+      artist: 'Blender Foundation',
+      artwork: [
+        { src: BASE_URL + 'sintel/artwork-96.png',  sizes: '96x96',   type: 'image/png' },
+        { src: BASE_URL + 'sintel/artwork-128.png', sizes: '128x128', type: 'image/png' },
+        { src: BASE_URL + 'sintel/artwork-192.png', sizes: '192x192', type: 'image/png' },
+        { src: BASE_URL + 'sintel/artwork-256.png', sizes: '256x256', type: 'image/png' },
+        { src: BASE_URL + 'sintel/artwork-384.png', sizes: '384x384', type: 'image/png' },
+        { src: BASE_URL + 'sintel/artwork-512.png', sizes: '512x512', type: 'image/png' },
+      ]
+    }, {
+      src: BASE_URL + 'big-buck-bunny/trailer.mov',
+      title: '"Big Buck Bunny" Trailer, Peach Open Movie Project',
+      artist: 'Blender Foundation',
+      artwork: [
+        { src: BASE_URL + 'big-buck-bunny/artwork-96.png',  sizes: '96x96',   type: 'image/png' },
+        { src: BASE_URL + 'big-buck-bunny/artwork-128.png', sizes: '128x128', type: 'image/png' },
+        { src: BASE_URL + 'big-buck-bunny/artwork-192.png', sizes: '192x192', type: 'image/png' },
+        { src: BASE_URL + 'big-buck-bunny/artwork-256.png', sizes: '256x256', type: 'image/png' },
+        { src: BASE_URL + 'big-buck-bunny/artwork-384.png', sizes: '384x384', type: 'image/png' },
+        { src: BASE_URL + 'big-buck-bunny/artwork-512.png', sizes: '512x512', type: 'image/png' },
+      ]
+    }, {
+      src: BASE_URL + 'elephants-dream/teaser.mp4',
+      title: '"Elephants Dream" Teaser, Orange Open Movie Project',
+      artist: 'Blender Foundation',
+      artwork: [
+        { src: BASE_URL + 'elephants-dream/artwork-96.png',  sizes: '96x96',   type: 'image/png' },
+        { src: BASE_URL + 'elephants-dream/artwork-128.png', sizes: '128x128', type: 'image/png' },
+        { src: BASE_URL + 'elephants-dream/artwork-192.png', sizes: '192x192', type: 'image/png' },
+        { src: BASE_URL + 'elephants-dream/artwork-256.png', sizes: '256x256', type: 'image/png' },
+        { src: BASE_URL + 'elephants-dream/artwork-384.png', sizes: '384x384', type: 'image/png' },
+        { src: BASE_URL + 'elephants-dream/artwork-512.png', sizes: '512x512', type: 'image/png' },
+      ]
+    }, {
+      src: BASE_URL + 'caminandes/short.mp4',
+      title: '"Caminandes 2: Gran Dillama" - Blender Animated Short',
+      artist: 'Blender Foundation',
+      artwork: [
+        { src: BASE_URL + 'caminandes/artwork-96.png',  sizes: '96x96',   type: 'image/png' },
+        { src: BASE_URL + 'caminandes/artwork-128.png', sizes: '128x128', type: 'image/png' },
+        { src: BASE_URL + 'caminandes/artwork-192.png', sizes: '192x192', type: 'image/png' },
+        { src: BASE_URL + 'caminandes/artwork-256.png', sizes: '256x256', type: 'image/png' },
+        { src: BASE_URL + 'caminandes/artwork-384.png', sizes: '384x384', type: 'image/png' },
+        { src: BASE_URL + 'caminandes/artwork-512.png', sizes: '512x512', type: 'image/png' },
+      ]
+    }];
+}

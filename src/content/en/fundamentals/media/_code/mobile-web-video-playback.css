@@ -11,7 +11,7 @@ p {
     padding: 12px;
 }
 @media (orientation: landscape) {
-    p {
+    p, .playlistContainer {
         max-width: 952px;
     }
 }
@@ -19,9 +19,10 @@ a {
     margin-top: 12px;
     display: inline-block;
     color: cornflowerblue;
+    text-decoration: none;
 }
 b {
-    font-size: 20px;
+    font-size: 21px;
     color: #333;
 }
 .visible button {
@@ -161,6 +162,7 @@ button {
     right: 12px !important;
 }
 .spacer {
+    clear: both;
     color: #333;
     height: 100vh;
 }
@@ -182,4 +184,32 @@ button {
 }
 #muteButton.active {
     background-image: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_volume_up_white_24px.svg);
+}
+.playlistContainer {
+    margin: 0 auto;
+}
+.playlistContainer button {
+    padding: 8px 4px;
+    padding-bottom: 8px;
+    outline: none;
+    pointer-events: auto;
+    opacity: 1;
+    background-color: #fff;
+    border: 0;
+    font-weight: bold;
+    font-size: 16px;
+    background-repeat: no-repeat;
+}
+#previousTrackButton {
+    background-image: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_navigate_before_black_24px.svg);
+    background-position: 6px 50%;
+    padding-left: 30px;
+    text-align: left;
+}
+#nextTrackButton {
+    background-image: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_navigate_next_black_24px.svg);
+    background-position: calc(100% - 6px) 50%;
+    padding-right: 30px;
+    text-align: right;
+    float: right;
 }
