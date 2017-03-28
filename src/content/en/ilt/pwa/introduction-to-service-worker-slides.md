@@ -6,12 +6,11 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Introduction to Service Worker {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+Service workers are at the core of PWA techniques for resource-caching and push
+notifications. This video covers what a Service Worker is, what it can do, and
+the Service Worker lifecycle in the browser.
 
-{% setvar videoId "videoId" %}
+{% setvar videoId "jVfXiv03y5c" %}
 {% setvar slidesId "1bFVDRa71JK0ilr6lS6y9Twqp9gy8jzV1O8FFbG4A3qk" %}
 
 {% include web/ilt/pwa/_slides.html %}

@@ -6,12 +6,14 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Why Build Progressive Web Apps {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+The hardest problem with software is distribution. App developers often
+spend more on distribution than they earn back. This problem is solved by
+the web platform, however web apps have historically been less capable
+than native apps. With the advent of PWA’s, web apps have become just as
+capable as native, supporting features such as push notifications and
+Add to Homescreen, without giving up the reach of the web.
 
-{% setvar videoId "videoId" %}
+{% setvar videoId "17kGWJOuL-A" %}
 {% setvar slidesId "18IOdAivMSRDsqEnwvJL_eaEWhqBgFUjFWEamoWZ5djc" %}
 
 {% include web/ilt/pwa/_slides.html %}

@@ -6,10 +6,9 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Introduction to Push Notifications {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+With service workers, push notifications are now available on the web. This
+video explains the Notifications API and the Push API, and how they are used to
+implement push notifications in Progressive Web Apps.
 
 {% setvar videoId "videoId" %}
 {% setvar slidesId "1vd6cFL0Vg3-ciDq2xpN0HxN_UowyKjJsTrCOdulkExM" %}

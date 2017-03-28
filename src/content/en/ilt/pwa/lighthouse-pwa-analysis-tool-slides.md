@@ -6,13 +6,11 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Lighthouse PWA Analysis Tool {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+Lighthouse is an open-source analysis tool that provides insights and feedback
+for Progressive Web Apps. This video provides a brief explanation of how to use
+lighthouse both as a Chrome extension and from the command line.
 
-{% setvar videoId "videoId" %}
+{% setvar videoId "UVhJtr4_gK8" %}
 {% setvar slidesId "15qTZjhk6cfr-qnH5dSBNJ9SjDmYTMelyfEq7UJVk0Zc" %}
 
 {% include web/ilt/pwa/_slides.html %}
-

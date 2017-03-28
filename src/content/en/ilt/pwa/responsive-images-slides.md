@@ -6,12 +6,11 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Responsive Images {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+There are two major issues to consider when working with images on the web:
+performance and responsiveness. This video describes a set of techniques to make
+your images load as quickly as possible and work well in any form factor.
 
-{% setvar videoId "videoId" %}
+{% setvar videoId "ojZRjhcR3yw" %}
 {% setvar slidesId "1rXdSHcN7i11AApafDfqb_uCKNPuyt89WuDFI07Bejqc" %}
 
 {% include web/ilt/pwa/_slides.html %}

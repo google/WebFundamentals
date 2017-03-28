@@ -6,12 +6,11 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Live Data in the Service Worker {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+Most modern web apps rely on a combination of static and dynamic resources. This
+video describes how to use the Cache API and IndexedDB together in your app to
+store multiple types of data.
 
-{% setvar videoId "videoId" %}
+{% setvar videoId "FY1r7Y5rf2E" %}
 {% setvar slidesId "1wk9XH8yV3NT8fsEp5KpWktfKRl5myYWnhkqbHkPtBx4" %}
 
 {% include web/ilt/pwa/_slides.html %}

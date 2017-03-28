@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T18:50:32Z #}
+{# wf_updated_on: 2017-03-24T21:40:17Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -23,13 +23,13 @@ book_path: /web/ilt/pwa/_book.yaml
 
 * Integrate `sw-precache` in your app to generate a production-ready service worker
 * Integrate `sw-toolbox` in your app to create custom handlers for specific requests
-* Have completed  [Lab: Gulp setup](lab-gulp-setup)
-* Have completed  [Lab: sw-precache and sw-toolbox](lab-sw-precache-and-sw-toolbox)
 
 #### What you should know
 
 * Basic JavaScript and HTML
 * Familiarity with the concept and basic syntax of ES2015  [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/)
+* Have completed  [Lab: Gulp setup](lab-gulp-setup)
+* Have completed  [Lab: sw-precache and sw-toolbox](lab-sw-precache-and-sw-toolbox)
 
 #### What you will need
 
@@ -60,13 +60,19 @@ Note: If you have completed the E-Commerce App labs up to this point, your app i
 
 
 
-If you did not complete ecommerce labs 1 and 2, copy the contents of the __lab4-sw-precache__ folder and overwrite the contents of the __project__ directory. Then run `npm install` in the command line at the __project__ directory.
+If you did not complete the previous ecommerce labs, copy the contents of the __lab4-sw-precache__ folder and overwrite the contents of the __project__ directory. Then run `npm install` in the command line at the __project__ directory.
 
-At the project directory, run `gulp serve` so the files in the __dist__ folder are up-to-date. The app should open in your browser.
+At the project directory, run `gulp serve` to build the application in __dist__. The app should open in your browser. You must rebuild the application each time you want to test changes to your code.
 
 
 
 Note: The e-commerce app is based on Google's  [Web Starter Kit](https://github.com/google/web-starter-kit/), which is an "opinionated boilerplate" designed as a starting point for new projects. It allows us to take advantage of several preconfigured tools that facilitate development, and are optimized both for speed and multiple devices. You can learn more about Web Starter Kit  [here](/web/tools/starter-kit/).
+
+
+
+
+
+Note: Solution code for this lab can be found in the __solution__ folder.
 
 
 

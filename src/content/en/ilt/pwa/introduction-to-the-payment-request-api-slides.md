@@ -6,10 +6,10 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Introduction to the Payment Request API {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+Payments on mobile web are notorious for their poor user experience. This video
+describes the current state of mobile payments and explains how the new
+PaymentRequest API works to provide a standardized alternative to checkout
+forms.
 
 {% setvar videoId "videoId" %}
 {% setvar slidesId "16_g5RhUf8xoxPhsiQkTCkpFVXBkk-hSMqsZ0CKvcNqQ" %}

@@ -6,12 +6,12 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Your Audience, Your Content {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+How do you start thinking about building an app or a website? This video
+explores some of the factors you need to consider before building your
+app, such a as target audience, platforms, internet connectivity, data
+cost, and the usage context.
 
-{% setvar videoId "videoId" %}
+{% setvar videoId "Ule0U0I8rO0" %}
 {% setvar slidesId "154nnHaw5kgj9fwMu8PQA6nr0f6nZmzwwr0Oq-0j6GfY" %}
 
 {% include web/ilt/pwa/_slides.html %}

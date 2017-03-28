@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T17:45:33Z #}
+{# wf_updated_on: 2017-03-27T14:45:51Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -53,11 +53,17 @@ If you have completed the E-Commerce App labs up to this point, your app is alre
 
 If you did not complete the previous labs, copy the contents of the __lab3-payments__ folder and overwrite the contents of the __project__ directory. Then run `npm install` in the command line at the __project__ directory.
 
-At the project directory, run `gulp serve` so the files in the __dist__ folder are up-to-date. The app should open in your browser.
+At the project directory, run `gulp serve` to build the application in __dist__. The app should open in your browser. You must rebuild the application each time you want to test changes to your code.
 
 
 
 Note: The e-commerce app is based on Google's  [Web Starter Kit](https://github.com/google/web-starter-kit/), which is an "opinionated boilerplate" designed as a starting point for new projects. It allows us to take advantage of several preconfigured tools that facilitate development, and are optimized both for speed and multiple devices. You can learn more about Web Starter Kit  [here](/web/tools/starter-kit/).
+
+
+
+
+
+Note: Solution code for this lab can be found in the __solution__ folder.
 
 
 
@@ -69,7 +75,7 @@ Note: The e-commerce app is based on Google's  [Web Starter Kit](https://github.
 
 
 
-Replace TODO PAY-2 in __scripts/modules/payment-api.js__ with the following code to create a new PaymentRequest object:
+Replace TODO PAY-2 in __app/scripts/modules/payment-api.js__ with the following code to create a new `PaymentRequest` object:
 
 #### payment-api.js
 
@@ -81,7 +87,7 @@ Save the file.
 
 #### Explanation
 
-We create a PaymentRequest using the PaymentRequest constructor. The constructor takes three parameters. The first is a required set of data about supported payment methods. The second parameter is required information about the transaction. The third argument is an optional parameter for things like shipping, etc.
+We create a `PaymentRequest` using the `PaymentRequest` constructor. The constructor takes three parameters. The first is a required set of data about supported payment methods. The second parameter is required information about the transaction. The third argument is an optional parameter for things like shipping.
 
 <div id="3"></div>
 
@@ -91,7 +97,7 @@ We create a PaymentRequest using the PaymentRequest constructor. The constructor
 
 
 
-Replace TODO PAY-3 in __scripts/modules/payment-api.js__ with the following list of accepted payment methods:
+Replace TODO PAY-3 in __app/scripts/modules/payment-api.js__ with the following list of accepted payment methods:
 
 #### payment-api.js
 
@@ -103,7 +109,7 @@ Save the file.
 
 #### Explanation
 
-The first parameter of the PaymentRequest constructor takes a list of supported payment methods and, if relevant, additional information about the payment method. See  [Payment Request API Architecture](https://w3c.github.io/browser-payment-api/specs/architecture.html) for more details.
+The first parameter of the `PaymentRequest` constructor takes a list of supported payment methods and, if relevant, additional information about the payment method. See  [Payment Request API Architecture](https://w3c.github.io/browser-payment-api/specs/architecture.html) for more details.
 
 <div id="4"></div>
 
@@ -115,7 +121,7 @@ The first parameter of the PaymentRequest constructor takes a list of supported 
 
 ### 4.1 Define the details object
 
-Replace TODO PAY-4.1 in __scripts/modules/payment-api.js__ with the following code:
+Replace TODO PAY-4.1 in __app/scripts/modules/payment-api.js__ with the following code:
 
 #### payment-api.js
 
@@ -139,7 +145,7 @@ The `details` parameter contains information about the transaction. There are tw
 
 ### 4.2 Define the display items
 
-Replace TODO PAY-4.2 in __scripts/modules/payment-api.js__ with the following code:
+Replace TODO PAY-4.2 in __app/scripts/modules/payment-api.js__ with the following code:
 
 #### payment-api.js
 
@@ -161,7 +167,7 @@ This creates a list of display items for each item in the cart. We give each ite
 
 ### 4.3 Define the shipping options
 
-Replace TODO PAY-4.3 in __scripts/modules/payment-api.js__ with the following code:
+Replace TODO PAY-4.3 in __app/scripts/modules/payment-api.js__ with the following code:
 
 #### payment-api.js
 
@@ -195,7 +201,7 @@ This builds the shipping options that are displayed to the user. For each option
 
 
 
-Replace TODO PAY-5 in __scripts/modules/payment-api.js__ with the following payment options:
+Replace TODO PAY-5 in __app/scripts/modules/payment-api.js__ with the following payment options:
 
 #### payment-api.js
 
@@ -219,23 +225,11 @@ With the `requestShipping` parameter set, "Shipping" will be added to the UI, an
 
 
 
-Replace TODO PAY-6 in __scripts/modules/payment-api.js__ with the following code:
+Replace TODO PAY-6 in __app/scripts/modules/payment-api.js__ with the following code:
 
 #### payment-api.js
 
 ```
-return request.show()
-```
-
-Uncomment the rest of the code in the `checkout` function. The whole function should look like this:
-
-#### payment-api.js
-
-```
-checkout(cart) {
-  let request = this.buildPaymentRequest(cart);
-  let response;
-  // Show UI then continue with user payment info
   return request.show()
     .then(r => {
       response = r;
@@ -255,7 +249,6 @@ checkout(cart) {
     .catch(e => {
       if (response) response.complete(`fail: ${e}`);
     });
-}
 ```
 
 Save the file.
@@ -280,9 +273,9 @@ Run the following in the command line to clean out the old files in the __dist__
 
 The gulp command automatically opens the e-commerce app in the browser. When the page opens, unregister the service worker and refresh the page.
 
-The PaymentsRequest API is not yet supported in Chrome on Desktop, so you'll need an Android device to test the code. Follow the instructions in the  [Access Local Servers](/web/tools/chrome-devtools/remote-debugging/local-server) article to set up port forwarding on your Android device. This lets you host the e-commerce app on your phone.
+The PaymentRequest API is not yet supported in Chrome on Desktop, so you'll need an Android device to test the code. Follow the instructions in the  [Access Local Servers](/web/tools/chrome-devtools/remote-debugging/local-server) article to set up port forwarding on your Android device. This lets you host the e-commerce app on your phone.
 
-Once you have the app running on your phone, add some items to your cart and go through the checkout process. The PaymentRequest UI displays when you click __Checkout__.
+Once you have the app running on your phone, add some items to your cart and go through the checkout process. The `PaymentRequest` UI displays when you click __Checkout__.
 
 
 

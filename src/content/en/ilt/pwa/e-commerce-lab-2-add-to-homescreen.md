@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T17:45:20Z #}
+{# wf_updated_on: 2017-03-24T23:38:39Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -47,17 +47,23 @@ If you have a text editor that lets you open a project, then open the __project_
 
 
 
-If you have completed the e-commerce E-Commerce Lab 1: Create a Service Worker, your app is already set up and you can skip to step 2.
+If you have completed the previous e-commerce E-Commerce lab, your app is already set up and you can skip to step 2.
 
 
 
 If you did not complete lab 1, copy the contents of the __lab2-add-to-homescreen__ folder and overwrite the contents of the __project__ directory. Then run `npm install` in the command line at the __project__ directory.
 
-At the project directory, run `gulp serve` so the files in the __dist__ folder are up-to-date. The app should open in your browser.
+At the project directory, run `gulp serve` to build the application in __dist__. The app should open in your browser. You must rebuild the application each time you want to test changes to your code.
 
 
 
 Note: The e-commerce app is based on Google's  [Web Starter Kit](https://github.com/google/web-starter-kit/), which is an "opinionated boilerplate" designed as a starting point for new projects. It allows us to take advantage of several preconfigured tools that facilitate development, and are optimized both for speed and multiple devices. You can learn more about Web Starter Kit  [here](/web/tools/starter-kit/).
+
+
+
+
+
+Note: Solution code for this lab can be found in the __solution__ folder.
 
 
 

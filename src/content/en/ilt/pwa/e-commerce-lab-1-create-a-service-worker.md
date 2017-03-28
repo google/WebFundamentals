@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T17:49:59Z #}
+{# wf_updated_on: 2017-03-24T21:14:53Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -85,7 +85,7 @@ Note: The e-commerce app is based on Google's  [Web Starter Kit](https://github.
 
 
 
-Note: Solution code for this lab can be found in the __lab2-add-to-homescreen__ folder.
+Note: Solution code for this lab can be found in the __solution__ folder.
 
 
 

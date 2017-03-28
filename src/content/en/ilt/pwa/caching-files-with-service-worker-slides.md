@@ -6,13 +6,11 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Caching Files with Service Worker {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+Caching provides a mechanism for storing request/response object pairs in the
+browser. This video covers the basics of the Cache API and outlines a few common
+patterns for caching resources.
 
-{% setvar videoId "dQw4w9WgXcQ" %}
+{% setvar videoId "7jsg1Mb7PB4" %}
 {% setvar slidesId "1yKsDW9wu5xbx2pXDKlSBTg7h1i48CoQd2A8QvHw-lag" %}
 
 {% include web/ilt/pwa/_slides.html %}
-

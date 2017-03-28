@@ -6,12 +6,12 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Responsive Design {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+Users interact with the web using an increasingly diverse range of devices.
+These devices all have different viewport sizes, pixel widths and densities,
+scroll and zoom capabilities, etc. This video describes responsive-design
+techniques that help you create web apps that work well on any device.
 
-{% setvar videoId "videoId" %}
+{% setvar videoId "WKFmv9AnuYk" %}
 {% setvar slidesId "1uG20FaNBMQGNjMZGN1SelJ05HVBm5u6fRSCj5ldFftg" %}
 
 {% include web/ilt/pwa/_slides.html %}

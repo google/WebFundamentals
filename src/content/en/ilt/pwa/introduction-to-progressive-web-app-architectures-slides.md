@@ -6,12 +6,13 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Introduction to Progressive Web App Architectures {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+What makes a Progressive Web App? This video explains the architecture of a
+PWAs, and many of the major features and best practices. Topics covered include
+caching for performance and offline functionality, app shell architecture, add
+to homescreen, push notifications, tools for building service workers, mobile
+web payments, and credentials management.
 
-{% setvar videoId "videoId" %}
+{% setvar videoId "LaS_5jUeh_0" %}
 {% setvar slidesId "1Xu8FDXCPi7SGOArRgLKjrXWArvAUB4ESdKw9ecWqw0s" %}
 
 {% include web/ilt/pwa/_slides.html %}

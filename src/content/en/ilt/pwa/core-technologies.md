@@ -6,12 +6,11 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Core Technologies {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+Most API’s in the PWA space are built on JavaScript Promises and the Fetch API.
+This video provides an explanation of these technologies, as well as a brief
+introduction to ES2015.
 
-{% setvar videoId "videoId" %}
+{% setvar videoId "63YUj-7qxl0" %}
 {% setvar slidesId "1CxS9SD8DEm5qsonsg_M41A6lmZrdLwrBXuayQBGoK3g" %}
 
 {% include web/ilt/pwa/_slides.html %}

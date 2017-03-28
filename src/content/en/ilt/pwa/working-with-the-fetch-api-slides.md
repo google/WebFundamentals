@@ -6,13 +6,12 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Working with the Fetch API {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+Fetch is a modern replacement for XMLHttpRequest that lays the foundation for
+Progressive Web Apps. This video covers the basics of using Fetch to request
+resources and read responses. It explains how to use GET, POST, and HEAD
+requests and describes the theory behind Cross Origin Resource Sharing (CORS).
 
-{% setvar videoId "videoId" %}
+{% setvar videoId "9Qtvjd0UbAs" %}
 {% setvar slidesId "1Rr_7rP3_XaUsr3m0CKXqWSzW3G4PeFWgp_-INoV7Xfc" %}
 
 {% include web/ilt/pwa/_slides.html %}
-

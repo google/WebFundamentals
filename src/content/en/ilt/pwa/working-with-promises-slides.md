@@ -6,12 +6,12 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Working with Promises {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+Promises make asynchronous programming much easier than the traditional event-
+listener or callback approaches. This video explains promises, promise-chaining,
+and complex error-handling. It shows you how to use promise.all and describes
+the pitfalls of promise.race.
 
-{% setvar videoId "videoId" %}
+{% setvar videoId "2D1fQgWH-mI" %}
 {% setvar slidesId "1zoC41pP9aMR02pc7F8rz0GlaNMs7yzWmIqKQYn5D18A" %}
 
 {% include web/ilt/pwa/_slides.html %}

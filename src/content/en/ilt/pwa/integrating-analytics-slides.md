@@ -6,10 +6,10 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Integrating Analytics {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+Google Analytics is a valuable tool for analysing user interactions with your
+app. This video explains the basics of what Google Analytics is, what it can do,
+and how developers can integrate it into their Progressive Web Apps. Examples
+using offline analytics, service workers, and push notifications are shown.
 
 {% setvar videoId "dQw4w9WgXcQ" %}
 {% setvar slidesId "1wx9oneZOL5cyriYIuDOQchbji4UVxRjdoplzvncEztA" %}
