@@ -143,9 +143,9 @@ Here's a video of it in action, where the service worker is given a deliberate
 
 [Here's the demo
 itself](https://jakearchibald.github.io/isserviceworkerready/demos/nav-preload/).
-To get the benefits of navigation preload, you'll need [Chrome 57
+To get the benefits of navigation preload, you'll need [Chrome 58
 Canary](https://www.google.com/chrome/browser/canary.html) with
-`chrome://flags/#enable-service-worker-navigation-preload` enabled.
+`chrome://flags/#enable-service-worker-navigation-preload` enabled (it also works in Chrome 57, but you need to launch Chrome from the command line with `--enable-features=ServiceWorkerNavigationPreload`).
 
 ## Activating navigation preload
 
