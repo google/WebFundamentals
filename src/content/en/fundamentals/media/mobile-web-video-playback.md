@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut tellus sit amet elit ultricies malesuada. Vestibulum consequat et ex ut mollis. Aliquam et malesuada ante. Phasellus ac tincidunt elit, at cursus mi. Aenean orci nulla, dictum non dapibus sed, ultricies sit amet purus. Sed quis turpis velit. Phasellus mollis ultrices iaculis.
+description: TODO
 
 {# wf_published_on: 2017-04-03 #}
-{# wf_updated_on: 2017-03-27 #}
+{# wf_updated_on: 2017-03-28 #}
 
-# [WIP] Mobile Web Video Playback {: .page-title }
+# Mobile Web Video Playback {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
@@ -14,10 +14,12 @@ depends on user engagement and the importance you give to the media on a web
 page. I think we all agree that a web page where video is THE reason of user's
 visit will have to feature an immersive and re-engaging user experience.
 
-The goal here is to show you how to enhance in progressive way your media
+The goal here is to show you how to enhance in a progressive way your media
 experience and make it more immersive thanks to a plethora of Web APIs. That's
 why we're going to build a simple mobile player experience with custom
 controls, fullscreen, and background playback.
+You can try the [sample]{: .external} now and find [the code]{: .external} in
+our GitHub repository.
 
 
 ## Custom controls [90%]
@@ -35,7 +37,7 @@ As you can see, the HTML layout we're going to use for our media player is
 pretty simple: a `<div>` root element contains a `<video>` media element and a
 `<div>` child element dedicated to video controls.
 
-Video controls will cover a play/pause button, a fullscreen button, seek
+Video controls will cover later a play/pause button, a fullscreen button, seek
 backward and forward buttons, and some elements for current time, duration and
 time tracking.
 
@@ -194,8 +196,8 @@ the fullscreen button.
 ## Fullscreen [90%]
 
 Here we are going to take advantage of several Web APIs to create a perfect
-and seamless fullscreen experience. To see it in action, check out
-the final [fullscreen sample]{: .external }.
+and seamless fullscreen experience. To see it in action, check out the
+[sample]{: .external }.
 
 Obviously, you don't have to use all of them. Just pick the ones that make
 sense to you and combine them to create your custom flow.
@@ -416,7 +418,7 @@ function lockScreenInLandscape() {
     }
 
 As you can see, this is the seamless fullscreen experience we were looking for.
-To see this in action, check out the [fullscreen sample]{: .external }.
+To see this in action, check out the [sample]{: .external }.
 
 <video controls muted playsinline>
   <source src="/web/fundamentals/media/videos/perfect-fullscreen.webm"
@@ -433,8 +435,8 @@ custom buttons to the user for instance.
 With the Media Session API, you can also customize media notifications
 by providing metadata for the currently playing video. It also allows you
 to handle media related events such as seeking or track changing which may come
-from notifications or media keys. To see this in action, check out the final
-[background playback sample]{: .external }.
+from notifications or media keys. To see this in action, check out the
+[sample]{: .external }.
 
 ### Pause video on page visibity change
 
@@ -640,13 +642,13 @@ malesuada ante. Phasellus ac tincidunt elit, at cursus mi. Aenean orci nulla,
 dictum non dapibus sed, ultricies sit amet purus. Sed quis turpis velit.
 Phasellus mollis ultrices iaculis.
 
+[sample]: https://googlesamples.github.io/web-fundamentals/fundamentals/media/mobile-web-video-playback.html
+[the code]: https://github.com/googlesamples/web-fundamentals/tree/gh-pages/fundamentals/media/mobile-web-video-playback.html
 [tiny shim]: https://github.com/beaufortfrancois/sandbox/blob/gh-pages/media/tiny-fullscreen-shim.js
 [handle "Play" and "Pause" media events]: /web/updates/2017/02/media-session#play_pause
 [Fullscreen API]: https://fullscreen.spec.whatwg.org/
 [Screen Orientation API]: https://w3c.github.io/screen-orientation/
 [media queries]: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
 [Device Orientation API]: https://w3c.github.io/deviceorientation/spec-source-orientation.html
-[fullscreen sample]: #TODO
-[background playback sample]: #TODO
 [Page Visibility API]: https://www.w3.org/TR/page-visibility/
 [Intersection Observer API]: /web/updates/2016/04/intersectionobserver
