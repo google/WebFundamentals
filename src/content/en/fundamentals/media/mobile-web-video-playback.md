@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: TODO
+description: Create the best mobile media experience on the Web by following these best practises.
 
 {# wf_published_on: 2017-04-03 #}
 {# wf_updated_on: 2017-03-29 #}
@@ -13,6 +13,10 @@ How do you create the best mobile media experience on the Web? Easy! It all
 depends on user engagement and the importance you give to the media on a web
 page. I think we all agree that a web page where video is THE reason of user's
 visit will have to feature an immersive and re-engaging user experience.
+
+<figure>
+  <img src="/web/fundamentals/media/images/mobile-web-video-playback-hero.png">
+</figure>
 
 The goal here is to show you how to enhance in a progressive way your media
 experience and make it more immersive thanks to a plethora of Web APIs. That's
@@ -414,18 +418,18 @@ To see this in action, check out the [sample]{: .external }.
           type="video/webm; codecs=mp4">
 </video>
 
-## Background playback [80%]
+## Background playback
 
 When you detect a web page or a video in the web page is not visible anymore,
 you may want to update your analytics to reflect this. This could also affect
 the current playback as in picking a different track, pause it, or even show
 custom buttons to the user for instance.
 
-With the Media Session API, you can also customize media notifications
-by providing metadata for the currently playing video. It also allows you
-to handle media related events such as seeking or track changing which may come
-from notifications or media keys. To see this in action, check out the
-[sample]{: .external }.
+With the [Media Session API]{: .external}, you can also customize media
+notifications by providing metadata for the currently playing video. It also
+allows you to handle media related events such as seeking or track changing
+which may come from notifications or media keys. To see this in action, check
+out the [sample]{: .external }.
 
 ### Pause video on page visibity change
 
@@ -480,7 +484,9 @@ the bottom right corner of the page to give user control over video sound. The
 
 <video controls controlsList="nodownload" muted playsinline>
   <source src="/web/fundamentals/media/videos/video-visibility.webm"
-          type="video/webm; codecs=vp8">
+          type="video/webm">
+  <source src="/web/fundamentals/media/videos/video-visibility.mp4"
+          type="video/mp4">
 </video>
 
 ### Customize Media Notifications
@@ -490,28 +496,9 @@ notification sitting in the notification tray. On Android, Chrome does its best
 to show appropriate information by using the document's title and the largest
 icon image it can find.
 
-<div class="clearfix"></div>
-<div class="attempt-left">
-  <figure>
-    <img src="/web/updates/images/2017/02/without-media-session.png"
-         alt="Without media session">
-    <figcaption>Without media session</figcaption>
-  </figure>
-</div>
-<div class="attempt-right">
-  <figure>
-    <img src="/web/updates/images/2017/02/with-media-session.png"
-         alt="With media session">
-    <figcaption>With media session</figcaption>
-  </figure>
-</div>
-<div class="clearfix"></div>
-
 Let's see how to customize this media notification by setting some media
 session metadata such as the title, artist, album name, and artwork with the
-Media Session API.
-
-TODO
+[Media Session API]{: .external }.
 
 <pre class="prettyprint">
 playPauseButton.addEventListener('click', function() {
@@ -601,35 +588,12 @@ the only place where media metadata and controls are visible. The media
 notification is synced automagically to any paired wearable device. And it also
 shows up on lock screens.
 
-<div class="clearfix"></div>
-<div class="attempt-left">
-  <figure>
-    <img src="/web/updates/images/2017/02/lock-screen.png" alt="Lock Screen">
-    <figcaption>
-      Lock Screen -
-      <a href="https://wikipedia.org/wiki/Rick_Astley#/media/File:Rick_Astley_Tivoli_Gardens.jpg">
-        Photo
-      </a>
-      by Michael Alø-Nielsen /
-      <a href="https://creativecommons.org/licenses/by/2.0/">
-        CC BY 2.0
-      </a>
-    </figcaption>
-  </figure>
-</div>
-<div class="attempt-right">
-  <figure>
-    <img src="/web/updates/images/2017/02/wear.png" alt="Wear Notification">
-    <figcaption style="text-align: center">Wear Notification</figcaption>
-  </figure>
-</div>
-<div class="clearfix"></div>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut tellus sit
-amet elit ultricies malesuada. Vestibulum consequat et ex ut mollis. Aliquam et
-malesuada ante. Phasellus ac tincidunt elit, at cursus mi. Aenean orci nulla,
-dictum non dapibus sed, ultricies sit amet purus. Sed quis turpis velit.
-Phasellus mollis ultrices iaculis.
+<video controls controlsList="nodownload" muted playsinline>
+  <source src="/web/fundamentals/media/videos/media-session.webm"
+          type="video/webm">
+  <source src="/web/fundamentals/media/videos/media-session.mp4"
+          type="video/mp4">
+</video>
 
 [sample]: https://googlesamples.github.io/web-fundamentals/fundamentals/media/mobile-web-video-playback.html
 [the code]: https://github.com/googlesamples/web-fundamentals/tree/gh-pages/fundamentals/media/mobile-web-video-playback.html
@@ -641,3 +605,4 @@ Phasellus mollis ultrices iaculis.
 [Device Orientation API]: https://w3c.github.io/deviceorientation/spec-source-orientation.html
 [Page Visibility API]: https://www.w3.org/TR/page-visibility/
 [Intersection Observer API]: /web/updates/2016/04/intersectionobserver
+[Media Session API]: /web/updates/2017/02/media-session
