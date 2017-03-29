@@ -7,7 +7,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_featured_snippet: Santa Tracker is a fun and educational experience for everyone—a holiday
    tradition here at Google. In 2016, we upgraded the Santa Tracker site to support offline via the
    Service Worker API. #}
-{# wf_tags: pwa,polymer,casestudy #}
+{# wf_tags: progressive-web-apps,polymer,serviceworker,casestudy #}
 
 
 # Santa Tracker as a PWA {: .page-title }
@@ -111,20 +111,18 @@ Santa Tracker leverages Polymer's ability to upgrade custom elements at runtime,
 load time.
 Consider the following snippet:
 
-```html
-<lazy-pages id="lazypages" selected-item="&#123;{selectedScene}}" ... >
-  <dorf-scene id="village" route="village" icon="1f384" permanent
-      mode$="[[mode]]"
-      path$="scenes/dorf/dorf-scene_[[language]].html"
-      class="santa-scene" allow-page-scrolling></dorf-scene>
+    <lazy-pages id="lazypages" selected-item="&#123;{selectedScene}}" ... >
+      <dorf-scene id="village" route="village" icon="1f384" permanent
+          mode$="[[mode]]"
+          path$="scenes/dorf/dorf-scene_[[language]].html"
+          class="santa-scene" allow-page-scrolling></dorf-scene>
 
-  <boatload-scene route="boatload" icon="26f5"
-      path$="scenes/boatload/boatload-scene_[[language]].html"
-      loading-bg-color="#8fd7f7"
-      loading-src="scenes/boatload/img/loading.svg"
-      logo="scenes/boatload/img/logo.svg"
-      class="santa-scene"></boatload-scene>
-```
+      <boatload-scene route="boatload" icon="26f5"
+          path$="scenes/boatload/boatload-scene_[[language]].html"
+          loading-bg-color="#8fd7f7"
+          loading-src="scenes/boatload/img/loading.svg"
+          logo="scenes/boatload/img/logo.svg"
+          class="santa-scene"></boatload-scene>
 
 Santa Tracker takes the following steps to load a scene, e.g., `boatload-scene`:
 
