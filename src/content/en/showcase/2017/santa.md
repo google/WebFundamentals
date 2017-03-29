@@ -105,7 +105,8 @@ While that happens, users see a friendly preloader that shows progress.
 This approach means that we don't have to load unnecessary assets for scenes the user doesn't see
 (which is a lot of data).
 It also means that we need to keep an internal 'cache manifest' of all the assets required for
-every scene—this is a JSON file storing a mapping from filename to an MD5 hash of its contents.
+every scene. The cache manifest is a JSON file storing a mapping from filename to an MD5 hash
+of its contents.
 
 ### Load what you use
 
