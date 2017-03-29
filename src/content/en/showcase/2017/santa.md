@@ -269,7 +269,7 @@ In 2016, around 10% of eligible loads were from the home screen icon.
 
 We were able to rapidly convert Santa Tracker into an offline PWA—enabling a reliable, engaging
 experience—thanks to our existing scene design, made easy through our existing use of Polymer and
-Web Components.
+web components.
 It also leverages our build system to perform efficient upgrades, invalidating changed assets only.
 
 While Santa is largely a custom-built solution, many of its principles can be found in the Polymer
