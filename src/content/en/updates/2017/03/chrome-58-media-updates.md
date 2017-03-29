@@ -86,12 +86,24 @@ restrictions.
 </pre>
 
 <pre class="prettyprint lang-html">
-&lt;!-- Audio will autoplay as /foo is in the scope. -->
-&lt;audio autoplay src="/foo/file.mp4">&lt;/audio>
-
-&lt;!-- Audio fails to autoplay as /bar is NOT in the scope. -->
-&lt;audio autoplay src="/bar/file.mp4">&lt;/audio>
+&lt;html>
+  &lt;link rel="canonical" href="https://example.com/foo">
+  &lt;audio autoplay src="https://cdn.com/file.mp4">&lt;/audio>
+&lt;/html>
 </pre>
+<div class="success">
+  Audio will autoplay as <code>/foo</code> is in the scope.
+</div>
+
+<pre class="prettyprint lang-html">
+&lt;html>
+  &lt;link rel="canonical" href="https://example.com/bar">
+  &lt;audio autoplay src="https://cdn.com/file.mp4">&lt;/audio>
+&lt;/html>
+</pre>
+<div class="warning">
+  Audio fails to autoplay as <code>/bar</code> is NOT in the scope.
+</div>
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/d/topic/blink-dev/DW7_yxL_HjE/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5715456904134656) &#124;
