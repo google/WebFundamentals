@@ -11,7 +11,7 @@ book_path: /web/fundamentals/_book.yaml
 
 
 
-One of the pain points when working with web push is that trigger a push message is extremely
+One of the pain points when working with web push is that triggering a push message is extremely
 "fiddly". To trigger a push message an application needs to make a POST request to a push
 service following the [web push
 protocol](https://tools.ietf.org/html/draft-ietf-webpush-protocol). To use push across all
@@ -26,11 +26,11 @@ the issue. This is improving with time and wider browser support but it's far fr
 this reason, I strongly recommend using a library to handle the encryption, formatting and
 triggering of your push message.
 
-If you really want to learn about what the libraries do and look at each closer, we'll cover it
-in the next section. For now, we are going to look at how to manage subscriptions and use an
-existing web-push library to make the push requests.
+If you really want to learn about what the libraries, we'll cover it
+in the next section. For now, we are going to look at managing subscriptions and using an
+existing web push library to make the push requests.
 
-In this section we'll be using the [ web-push for node
+In this section we'll be using the [web-push node
 library](https://github.com/web-push-libs/web-push). Other languages will have differences, but
 they won't be too dissimilar. We are looking at Node since it's JavaScript and should be the
 most accessible for readers.
@@ -48,7 +48,7 @@ message.
 ## Saving Subscriptions
 
 Saving and querying `PushSubscriptions` from a database will vary depending on
-your server side language and database choice but it might be useful to see
+your server side language and database choice, but it might be useful to see
 an example of how it could be done.
 
 In the demo web page the `PushSubscription` is sent to our backend by making a simple POST request:
@@ -75,12 +75,12 @@ In the demo web page the `PushSubscription` is sent to our backend by making a s
       });
     }
 
-The [Express](http://expressjs.com/) server in our demo has a matching request listener for
+The [Express](http://expressjs.com/) server in our demo has a matching request listener for the
 `/api/save-subscription/` endpoint:
 
     app.post('/api/save-subscription/', function (req, res) {
 
-In this route we validate the subscription, just to make sure the request is ok and not full of
+In this route we validate the subscription just to make sure the request is OK and not full of
 garbage:
 
     const isValidSaveRequest = (req, res) => {
@@ -124,8 +124,8 @@ JSON response:
 
 This demo uses [nedb](https://github.com/louischatriot/nedb) to store the subscriptions, it's a
 simple file based database, but you could use any database you chose. We are only using this as
-it requires zero set-up. For production you'd want to use something more reliable (I tend to
-stick with good old MySQL).
+it requires zero set-up. For production you'd want to use something more reliable. (I tend to
+stick with good old MySQL.)
 
     function saveSubscriptionToDatabase(subscription) {
       return new Promise(function(resolve, reject) {
@@ -143,7 +143,7 @@ stick with good old MySQL).
 ## Sending Push Messages
 
 When it comes to sending a push message we ultimately need some event to trigger the process of
-sending a message to users. A common approach would be creating an admin page that let's you
+sending a message to users. A common approach is creating an admin page that let's you
 configure and trigger the push message. But you could create a program to run locally or any
 other approach that allows accessing the list of `PushSubscriptions` and running the code to
 trigger the push message.
@@ -155,7 +155,7 @@ I'm going to go through each step involved in getting the demo working, these wi
 steps to everyone follow along, including anyone who is new to node.
 
 When we discussed subscribing a user we covered adding an `applicationServerKey` to the
-`subscribe()` options. It's on the back end that we'll need the private key.
+`subscribe()` options. It's on the back end that we'll need this private key.
 
 
 
@@ -177,9 +177,9 @@ like so:
 
     const webpush = require('web-push');
 
-Now we can start to use the `web-push` module. First we need to tell the web-push module about
-our application server keys (remember they are also known as VAPID keys because that's the name
-of the spec).
+Now we can start to use the `web-push` module. First we need to tell the `web-push` module about
+our application server keys. (Remember they are also known as VAPID keys because that's the name
+of the spec.)
 
     const vapidKeys = {
       publicKey:
@@ -196,8 +196,8 @@ of the spec).
 We also include a "mailto:" string as well. This string needs to be either a URL or a mailto
 email address. This piece of information will actually be sent to web push service as part of
 the request to trigger a push. The reason this is done is so that if a web push service needs
-to get in touch, they have some information that will enable them to (i.e. a URL, hopefully
-with some contact information or an email address).
+to get in touch with the sender, they have some information that will enable them to (i.e. a
+URL, hopefully with some contact information or an email address).
 
 With this, the `web-push` module is ready to use, the next step is to trigger a push message.
 
@@ -206,7 +206,7 @@ The demo uses the pretend admin panel to trigger push messages.
 ![Screenshot of the Admin Page.](./images/demo-admin-page.png)
 
 Clicking the "Trigger Push Message" button will make a POST request to `/api/trigger-push-msg/`
-which is the signal for our backend to start send push messages, so we create the route in
+which is the signal for our backend to send push messages, so we create the route in
 express for this endpoint:
 
     app.post('/api/trigger-push-msg/', function (req, res) {
@@ -244,15 +244,15 @@ provided subscription.
 
 The call to `webpush.sendNotification()` will return a promise. If the message was sent
 successfully the promise will resolves and there is nothing we need to do. If the promise
-rejects, we need to handle the error, which may involve remove the subscription from our data
+rejects, we need to handle the error, which may involve removing the subscription from our data
 (i.e. the subscription is invalid) or perhaps the push service just could not fulfill our
 request and we need to try again later.
 
 To determine the type of error from a push service it's best to look at the status code. Error
 messages vary between push services and some are more helpful than others.
 
-In this example it checks for status code '404' and '410', which are the HTTP status codes for
-'Not Found' and 'Gone'. If we receive this status code, it means the subscription has expired
+In this example it checks for status codes '404' and '410', which are the HTTP status codes for
+'Not Found' and 'Gone'. If we receive one of these, it means the subscription has expired
 or is no longer valid, in these scenarios we need remove the subscriptions from our database.
 
 We'll cover some of the other status codes in the next section when we look at the web push
@@ -281,7 +281,7 @@ After looping through the subscriptions, we need to return a JSON response.
 
 We've gone over the major implementation steps.
 
-1. Create an API to send subscriptions from our web page to our back-end so it can save them in
+1. Create an API to send subscriptions from our web page to our backend so it can save them in
 a database.
 1. Created an API to trigger sending push messages (in this case an API called from the pretend
 admin panel).
