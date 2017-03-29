@@ -18,6 +18,10 @@ book_path: /web/showcase/_book.yaml
   View the site
 </a>
 
+### TL;DR {: .hide-from-toc }
+
+**Santa Tracker was rapidly upgraded to an offline Progressive Web App for the 2016 holiday season, thanks in part to our existing scene design.**
+
 ## Results
 
 * Santa is a Progressive Web App (PWA) supporting add to home screen (ATHS) and offline
