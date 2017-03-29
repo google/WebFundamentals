@@ -26,11 +26,11 @@ language.
 
 In this episode:
 
-* Language has influenced how we design
+* Language's influence how we design
 * Tom Formaro's thesis on argumentation on the web
 * Potential debate: "web apps vs native web"
 * PWA Directory
-* How the web can retain its own soul
+* How the web can retain its soul
 
 <audio src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E03-Adopting-the-native-language-of-the-web.mp3" controls preload="none">
 
