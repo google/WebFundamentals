@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: TODO
 
 {# wf_published_on: 2017-04-03 #}
-{# wf_updated_on: 2017-03-28 #}
+{# wf_updated_on: 2017-03-29 #}
 
 # Mobile Web Video Playback {: .page-title }
 
@@ -22,7 +22,7 @@ You can try the [sample]{: .external} now and find [the code]{: .external} in
 our GitHub repository.
 
 
-## Custom controls [90%]
+## Custom controls
 
 <div class="attempt-right">
   <figure>
@@ -74,7 +74,7 @@ suited in our case.
     });
 
 <figure>
-  <img src="/web/fundamentals/media/images/video-metadata.png">
+  <img src="/web/fundamentals/media/images/video-metadata-only.png">
   <figcaption>
     <b>Figure 2.</b> Media Player showing video metadata
   </figcaption>
@@ -188,12 +188,14 @@ brightness(0);`.
 Here's below what we have created so far. In the next section, we'll implement
 the fullscreen button.
 
-<video autoplay loop muted playsinline>
-  <source src="/web/fundamentals/media/videos/custom-controls.webm"
-          type="video/webm; codecs=vp8">
+<video controls controlsList="nodownload" muted playsinline>
+  <source src="/web/fundamentals/media/videos/video-play-pause-seek.webm"
+          type="video/webm">
+  <source src="/web/fundamentals/media/videos/video-play-pause-seek.mp4"
+          type="video/mp4">
 </video>
 
-## Fullscreen [90%]
+## Fullscreen
 
 Here we are going to take advantage of several Web APIs to create a perfect
 and seamless fullscreen experience. To see it in action, check out the
@@ -202,9 +204,11 @@ and seamless fullscreen experience. To see it in action, check out the
 Obviously, you don't have to use all of them. Just pick the ones that make
 sense to you and combine them to create your custom flow.
 
-<video controls muted playsinline>
+<video controls controlsList="nodownload" muted playsinline>
   <source src="/web/fundamentals/media/videos/perfect-fullscreen.webm"
-          type="video/webm; codecs=vp8">
+          type="video/webm">
+  <source src="/web/fundamentals/media/videos/perfect-fullscreen.mp4"
+          type="video/mp4">
 </video>
 
 ### Prevent automatic fullscreen
@@ -224,27 +228,6 @@ enter fullscreen mode when playback begins.
 
 Caution: Set `playsinline` only if you provide your own media controls or show
 native controls with `<video controls>`.
-
-<div class="clearfix"></div>
-<div class="attempt-left">
-  <figure>
-    <img src="/web/fundamentals/media/images/without-playsinline.gif"
-         alt="Playback without playsinline on iPhone">
-    <figcaption>
-      Playback <a href="#TODO" class="external" >without <code>playsinline</code></a>
-    </figcaption>
-  </figure>
-</div>
-<div class="attempt-right">
-  <figure>
-    <img src="/web/fundamentals/media/images/without-playsinline.gif"
-         alt="Playback with playsinline on iPhone">
-    <figcaption>
-      Playback <a href="#TODO" class="external" >with <code>playsinline</code></a>
-    </figcaption>
-  </figure>
-</div>
-<div class="clearfix"></div>
 
 ### Toggle fullscreen on button click
 
@@ -295,6 +278,13 @@ will take care of prefixes as the API is not unprefixed yet at that time.
       fullscreenButton.classList.toggle('active', document.fullscreenElement);
     });
 
+<video controls controlsList="nodownload" muted playsinline>
+  <source src="/web/fundamentals/media/videos/toggle-fullscreen-on-button-click.webm"
+          type="video/webm">
+  <source src="/web/fundamentals/media/videos/toggle-fullscreen-on-button-click.mp4"
+          type="video/mp4">
+</video>
+
 ### Toggle fullscreen on screen orientation change
 
 As user rotates device in landscape mode, let be smart about this and
@@ -320,11 +310,6 @@ width is greater than its height). If not, let's exit fullscreen. That's all.
 Note: This may silently fail in browsers that don't [allow requesting
 fullscreen from the orientation change
 event](https://github.com/whatwg/fullscreen/commit/e5e96a9).
-
-<video controls muted playsinline>
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.webm"
-          type="video/webm; codecs=vp8">
-</video>
 
 ### Lock screen in landscape on button click
 
@@ -361,9 +346,11 @@ fullscreenButton.addEventListener('click', function(event) {
       }
     }
 
-<video controls muted playsinline>
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.webm"
-          type="video/webm; codecs=vp8">
+<video controls controlsList="nodownload" muted playsinline>
+  <source src="/web/fundamentals/media/videos/lock-screen-in-landscape-on-button-click.webm"
+          type="video/webm">
+  <source src="/web/fundamentals/media/videos/lock-screen-in-landscape-on-button-click.mp4"
+          type="video/mp4">
 </video>
 
 ### Unlock screen on device orientation change
@@ -420,9 +407,11 @@ function lockScreenInLandscape() {
 As you can see, this is the seamless fullscreen experience we were looking for.
 To see this in action, check out the [sample]{: .external }.
 
-<video controls muted playsinline>
+<video controls controlsList="nodownload" muted playsinline>
   <source src="/web/fundamentals/media/videos/perfect-fullscreen.webm"
           type="video/webm; codecs=vp8">
+  <source src="/web/fundamentals/media/videos/perfect-fullscreen.mp4"
+          type="video/webm; codecs=mp4">
 </video>
 
 ## Background playback [80%]
@@ -489,7 +478,7 @@ the bottom right corner of the page to give user control over video sound. The
       muteButton.classList.toggle('active', video.muted);
     });
 
-<video controls muted playsinline>
+<video controls controlsList="nodownload" muted playsinline>
   <source src="/web/fundamentals/media/videos/video-visibility.webm"
           type="video/webm; codecs=vp8">
 </video>
