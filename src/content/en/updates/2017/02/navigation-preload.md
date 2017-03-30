@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Navigation preload lets you overcome service worker startup time by making requests in parallel.
 
-{# wf_updated_on: 2017-02-15 #}
+{# wf_updated_on: 2017-03-30 #}
 {# wf_published_on: 2017-02-15 #}
 {# wf_tags: chrome57,serviceworker,performance #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
