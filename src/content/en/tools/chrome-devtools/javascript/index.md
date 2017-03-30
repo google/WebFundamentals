@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with debugging JavaScript using Chrome DevTools in this interactive tutorial.
 
-{# wf_updated_on: 2017-01-13 #}
+{# wf_updated_on: 2017-03-30 #}
 {# wf_published_on: 2017-01-04 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
