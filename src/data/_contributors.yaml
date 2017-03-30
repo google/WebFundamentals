@@ -761,6 +761,23 @@ nurinamu:
   description:
     en: Wonjae loves WebRTC and HHK
 
+plegner:
+  name:
+    given: Philipp
+    family: Legner
+  homepage: https://mathigon.org
+  twitter: philipplegner
+  github: plegner
+  role:
+    - engineer
+  description:
+    en: Software Engineer at Gogole
+  org:
+    name: Google
+    unit: Software Engineer
+  country: GB
+  email: plegner@google.com
+
 petelepage:
   name:
     given: Pete
@@ -1304,20 +1321,3 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
-
-plegner:
-  name:
-    given: Philipp
-    family: Legner
-  homepage: https://mathigon.org
-  twitter: philipplegner
-  github: plegner
-  role:
-    - engineer
-  description:
-    en: Software Engineer at Gogole
-  org:
-    name: Google
-    unit: Software Engineer
-  country: GB
-  email: plegner@google.com
