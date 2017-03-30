@@ -25,14 +25,12 @@ notification away).
 
 This event is normally used for analytics to track user engagement with notifications.
 
-``` javascript
-self.addEventListener('notificationclose', function(event) {
-  const dismissedNotification = event.notification;
+    self.addEventListener('notificationclose', function(event) {
+      const dismissedNotification = event.notification;
 
-  const promiseChain = notificationCloseAnalytics();
-  event.waitUntil(promiseChain);
-});
-```
+      const promiseChain = notificationCloseAnalytics();
+      event.waitUntil(promiseChain);
+    });
 
 ## Adding Data to a Notification
 
@@ -44,30 +42,26 @@ the `notificationclick` event.
 The easiest way to do this is to add data to a notification in the options for
 `showNotification()` like this:
 
-``` javascript
-    const options = {
-      body: 'This notification has data attached to it that is printed ' +
-        'to the console when it\'s clicked.',
-      tag: 'data-notification',
-      data: {
-        time: new Date(Date.now()).toString(),
-        message: 'Hello, World!'
-      }
-    };
-    registration.showNotification('Notification with Data', options);
-```
+        const options = {
+          body: 'This notification has data attached to it that is printed ' +
+            'to the console when it\'s clicked.',
+          tag: 'data-notification',
+          data: {
+            time: new Date(Date.now()).toString(),
+            message: 'Hello, World!'
+          }
+        };
+        registration.showNotification('Notification with Data', options);
 
 Inside a click handler the data can be accessed with `event.notification.data`.
 
-``` javascript
-  const notificationData = event.notification.data;
-  console.log('');
-  console.log('The data notification had the following parameters:');
-  Object.keys(notificationData).forEach((key) => {
-    console.log(`  ${key}: ${notificationData[key]}`);
-  });
-  console.log('');
-```
+      const notificationData = event.notification.data;
+      console.log('');
+      console.log('The data notification had the following parameters:');
+      Object.keys(notificationData).forEach((key) => {
+        console.log(`  ${key}: ${notificationData[key]}`);
+      });
+      console.log('');
 
 ## Open a Window
 
@@ -78,11 +72,9 @@ API.
 
 In our `notificationclick` event we'd run some kind like this:
 
-``` javascript
-  const examplePage = '/demos/notification-examples/example-page.html';
-  const promiseChain = clients.openWindow(examplePage);
-  event.waitUntil(promiseChain);
-```
+      const examplePage = '/demos/notification-examples/example-page.html';
+      const promiseChain = clients.openWindow(examplePage);
+      event.waitUntil(promiseChain);
 
 In the next section we'll look at how to check if the page we want to direct the user to is
 already open or not. This way we can focus on the open tab rather than constantly opening new
@@ -101,33 +93,31 @@ Taking the previous example where we opened
 '/demos/notification-examples/example-page.html', we'll alter it to see if it's already open or
 not.
 
-``` javascript
-  const urlToOpen = new URL(examplePage, self.location.origin).href;
+      const urlToOpen = new URL(examplePage, self.location.origin).href;
 
-  const promiseChain = clients.matchAll({
-    type: 'window',
-    includeUncontrolled: true
-  })
-  .then((windowClients) => {
-    let matchingClient = null;
+      const promiseChain = clients.matchAll({
+        type: 'window',
+        includeUncontrolled: true
+      })
+      .then((windowClients) => {
+        let matchingClient = null;
 
-    for (let i = 0; i < windowClients.length; i++) {
-      const windowClient = windowClients[i];
-      if (windowClient.url === urlToOpen) {
-        matchingClient = windowClient;
-        break;
-      }
-    }
+        for (let i = 0; i < windowClients.length; i++) {
+          const windowClient = windowClients[i];
+          if (windowClient.url === urlToOpen) {
+            matchingClient = windowClient;
+            break;
+          }
+        }
 
-    if (matchingClient) {
-      return matchingClient.focus();
-    } else {
-      return clients.openWindow(urlToOpen);
-    }
-  });
+        if (matchingClient) {
+          return matchingClient.focus();
+        } else {
+          return clients.openWindow(urlToOpen);
+        }
+      });
 
-  event.waitUntil(promiseChain);
-```
+      event.waitUntil(promiseChain);
 
 Let's step through the code.
 
@@ -138,19 +128,15 @@ Origin>/').
 
 We make the URL absolute so we can match it against the window URL's later on.
 
-``` javascript
-  const urlToOpen = new URL(examplePage, self.location.origin).href;
-```
+      const urlToOpen = new URL(examplePage, self.location.origin).href;
 
 Then we get a list of the "WindowClients", which are the list of currently open tabs / windows
 (remember these are tabs for your origin only).
 
-``` javascript
-  const promiseChain = clients.matchAll({
-    type: 'window',
-    includeUncontrolled: true
-  })
-```
+      const promiseChain = clients.matchAll({
+        type: 'window',
+        includeUncontrolled: true
+      })
 
 The options passed into `matchAll` just inform the browser that we only want
 to search for "window type" clients (i.e. just look for tabs and windows. Exclude web workers).
@@ -168,25 +154,23 @@ client, which will bring that window to the users attention. Focusing is done wi
 
 If we can't find a matching client, we open a new window, same as the previous section.
 
-``` javascript
-  .then((windowClients) => {
-    let matchingClient = null;
+      .then((windowClients) => {
+        let matchingClient = null;
 
-    for (let i = 0; i < windowClients.length; i++) {
-      const windowClient = windowClients[i];
-      if (windowClient.url === urlToOpen) {
-        matchingClient = windowClient;
-        break;
-      }
-    }
+        for (let i = 0; i < windowClients.length; i++) {
+          const windowClient = windowClients[i];
+          if (windowClient.url === urlToOpen) {
+            matchingClient = windowClient;
+            break;
+          }
+        }
 
-    if (matchingClient) {
-      return matchingClient.focus();
-    } else {
-      return clients.openWindow(urlToOpen);
-    }
-  });
-```
+        if (matchingClient) {
+          return matchingClient.focus();
+        } else {
+          return clients.openWindow(urlToOpen);
+        }
+      });
 
 **Note:** We are returning the promise for `matchingClient.focus()` and
 `clients.openWindow()` so that the promises are accounted for in our promise
@@ -214,62 +198,58 @@ First thing we'll want to do is find any open notifications for a user with a sp
 username. We'll get `registration.getNotifications()` and loop over them and check the
 `notification.data` for a specific username:
 
-``` javascript
-    const promiseChain = registration.getNotifications()
-    .then(notifications => {
-      let currentNotification;
+        const promiseChain = registration.getNotifications()
+        .then(notifications => {
+          let currentNotification;
 
-      for(let i = 0; i < notifications.length; i++) {
-        if (notifications[i].data &&
-          notifications[i].data.userName === userName) {
-          currentNotification = notifications[i];
-        }
-      }
+          for(let i = 0; i < notifications.length; i++) {
+            if (notifications[i].data &&
+              notifications[i].data.userName === userName) {
+              currentNotification = notifications[i];
+            }
+          }
 
-      return currentNotification;
-    })
-```
+          return currentNotification;
+        })
 
 The next step is to replace this notification with a new notification.
 
 In this fake message app, we'll track the number of new messages by adding a count to our new
 notifications data and increment it with each new notification.
 
-``` javascript
-    .then((currentNotification) => {
-      let notificationTitle;
-      const options = {
-        icon: userIcon,
-      }
+        .then((currentNotification) => {
+          let notificationTitle;
+          const options = {
+            icon: userIcon,
+          }
 
-      if (currentNotification) {
-        // We have an open notification, let's do something with it.
-        const messageCount = currentNotification.data.newMessageCount + 1;
+          if (currentNotification) {
+            // We have an open notification, let's do something with it.
+            const messageCount = currentNotification.data.newMessageCount + 1;
 
-        options.body = `You have ${messageCount} new messages from ${userName}.`;
-        options.data = {
-          userName: userName,
-          newMessageCount: messageCount
-        };
-        notificationTitle = `New Messages from ${userName}`;
+            options.body = `You have ${messageCount} new messages from ${userName}.`;
+            options.data = {
+              userName: userName,
+              newMessageCount: messageCount
+            };
+            notificationTitle = `New Messages from ${userName}`;
 
-        // Remember to close the old notification.
-        currentNotification.close();
-      } else {
-        options.body = `"${userMessage}"`;
-        options.data = {
-          userName: userName,
-          newMessageCount: 1
-        };
-        notificationTitle = `New Message from ${userName}`;
-      }
+            // Remember to close the old notification.
+            currentNotification.close();
+          } else {
+            options.body = `"${userMessage}"`;
+            options.data = {
+              userName: userName,
+              newMessageCount: 1
+            };
+            notificationTitle = `New Message from ${userName}`;
+          }
 
-      return registration.showNotification(
-        notificationTitle,
-        options
-      );
-    });
-```
+          return registration.showNotification(
+            notificationTitle,
+            options
+          );
+        });
 
 If there was a notification currently display we increment the message count and set the
 notification title and body message accordingly. If there
@@ -298,48 +278,44 @@ examining the window clients and looking for a focused window.
 
 The code to getting all the windows and looking for a focused window looks like this:
 
-``` javascript
-function isClientFocused() {
-  return clients.matchAll({
-    type: 'window',
-    includeUncontrolled: true
-  })
-  .then((windowClients) => {
-    let clientIsFocused = false;
+    function isClientFocused() {
+      return clients.matchAll({
+        type: 'window',
+        includeUncontrolled: true
+      })
+      .then((windowClients) => {
+        let clientIsFocused = false;
 
-    for (let i = 0; i < windowClients.length; i++) {
-      const windowClient = windowClients[i];
-      if (windowClient.focused) {
-        clientIsFocused = true;
-        break;
-      }
+        for (let i = 0; i < windowClients.length; i++) {
+          const windowClient = windowClients[i];
+          if (windowClient.focused) {
+            clientIsFocused = true;
+            break;
+          }
+        }
+
+        return clientIsFocused;
+      });
     }
-
-    return clientIsFocused;
-  });
-}
-```
 
 We use [clients.matchAll()](https://developer.mozilla.org/en-US/docs/Web/API/Clients/matchAll)
 to get all of our window clients and then we loop over them checking the `focused` parameter.
 
 Inside our push event we'd use this function to decide if we need to show a notification or not:
 
-``` javascript
-  const promiseChain = isClientFocused()
-  .then((clientIsFocused) => {
-    if (clientIsFocused) {
-      console.log('Don\'t need to show a notification.');
-      return;
+      const promiseChain = isClientFocused()
+      .then((clientIsFocused) => {
+        if (clientIsFocused) {
+          console.log('Don\'t need to show a notification.');
+          return;
 
-    }
+        }
 
-    // Client isn't focused, we need to show a notification.
-    return self.registration.showNotification('Had to show a notification.');
-  });
+        // Client isn't focused, we need to show a notification.
+        return self.registration.showNotification('Had to show a notification.');
+      });
 
-  event.waitUntil(promiseChain);
-```
+      event.waitUntil(promiseChain);
 
 ## Message Page from a Push Event
 
@@ -354,34 +330,30 @@ scenarios when a subtle notification in the page is better / friendlier for the 
 Let's say we've received and push and checked that our web app is currently focused, we can
 "post a message" to each open page, like so:
 
-``` javascript
-  const promiseChain = isClientFocused()
-  .then((clientIsFocused) => {
-    if (clientIsFocused) {
-      windowClients.forEach((windowClient) => {
-        windowClient.postMessage({
-          message: 'Received a push message.',
-          time: new Date().toString()
-        });
+      const promiseChain = isClientFocused()
+      .then((clientIsFocused) => {
+        if (clientIsFocused) {
+          windowClients.forEach((windowClient) => {
+            windowClient.postMessage({
+              message: 'Received a push message.',
+              time: new Date().toString()
+            });
+          });
+        } else {
+          return self.registration.showNotification('No focused windows', {
+            body: 'Had to show a notification instead of messaging each page.'
+          });
+        }
       });
-    } else {
-      return self.registration.showNotification('No focused windows', {
-        body: 'Had to show a notification instead of messaging each page.'
-      });
-    }
-  });
 
-  event.waitUntil(promiseChain);
-```
+      event.waitUntil(promiseChain);
 
 In each of pages, we listen for these messages by adding a message event
 listener:
 
-``` javascript
-    navigator.serviceWorker.addEventListener('message', function(event) {
-      console.log('Received a message from service worker: ', event.data);
-    });
-```
+        navigator.serviceWorker.addEventListener('message', function(event) {
+          console.log('Received a message from service worker: ', event.data);
+        });
 
 In this message listener you could do anything you want, show a toast, a
 notification bubble or completely ignore the message.

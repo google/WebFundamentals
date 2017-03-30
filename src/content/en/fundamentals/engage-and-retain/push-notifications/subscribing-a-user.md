@@ -13,27 +13,26 @@ book_path: /web/fundamentals/_book.yaml
 The first step is to get permission from the user to send them push messages and then we can
 get our hands on a `PushSubscription`.
 
-The JavaScript API to do this is reasonably straight forward, so let's step through the logic flow.
+The JavaScript API to do this is reasonably straight forward, so let's step
+through the logic flow.
 
 ## Feature Detection
 
 First we need check if the current browser actually supports push messaging. We can check if
 push is supported with two simple checks.
 
-1. Check the *serviceWorker* API on the *navigator*.
-1. Check *PushManager* on  the *window*.
+1. Check for *serviceWorker* on *navigator*.
+1. Check for *PushManager* on *window*.
 
-``` javascript
-  if (!('serviceWorker' in navigator)) {
-    // Service Worker isn't supported on this browser, disable or hide UI.
-    return;
-  }
+    if (!('serviceWorker' in navigator)) {
+      // Service Worker isn't supported on this browser, disable or hide UI.
+      return;
+    }
 
-  if (!('PushManager' in window)) {
-    // Push isn't supported on this browser, disable or hide UI.
-    return;
-  }
-```
+    if (!('PushManager' in window)) {
+      // Push isn't supported on this browser, disable or hide UI.
+      return;
+    }
 
 While browser support is growing quickly for both service worker and
 push messaging support, it's always a good idea to feature detect for both and
@@ -41,7 +40,7 @@ push messaging support, it's always a good idea to feature detect for both and
 
 ## Register a Service Worker
 
-With the feature detect we know that both service workers and Push is supported. The next step
+With the feature detect we know that both service workers and Push are supported. The next step
 is to "register" our service worker.
 
 When we register a service worker, we are telling the browser where our service worker file is.
@@ -52,20 +51,18 @@ environment.
 To register a service worker, call `navigator.serviceWorker.register()`, passing in the path to
 our file. Like so:
 
-``` javascript
-function registerServiceWorker() {
-  return navigator.serviceWorker.register('service-worker.js')
-  .then(function(registration) {
-    console.log('Service worker successfully registered.');
-    return registration;
-  })
-  .catch(function(err) {
-    console.error('Unable to register service worker.', err);
-  });
-}
-```
+    function registerServiceWorker() {
+      return navigator.serviceWorker.register('service-worker.js')
+      .then(function(registration) {
+        console.log('Service worker successfully registered.');
+        return registration;
+      })
+      .catch(function(err) {
+        console.error('Unable to register service worker.', err);
+      });
+    }
 
-This code above tells the browser that we have a service worker file and where its located. In
+This code above tells the browser that we have a service worker file and where it's located. In
 this case, the service worker file is at `/service-worker.js`. Behind the scenes the browser
 will take the following steps after calling `register()`:
 
@@ -84,7 +81,7 @@ API](https://developer.mozilla.org/en-US/docs/Web/API/PushManager).
 
 ## Requesting Permission
 
-We've registered our service worker and ready to subscribe the user, the next step is to get
+We've registered our service worker and are ready to subscribe the user, the next step is to get
 permission from the user to send them push messages.
 
 The API for getting permission is relatively simple, the downside is that
@@ -93,31 +90,29 @@ Promise](https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPe
 problem with this, is that we can't tell what version of the API is implemented by the current
 browser, so you have to implement both and handle both.
 
-``` javascript
-function askPermission() {
-  return new Promise(function(resolve, reject) {
-    const permissionResult = Notification.requestPermission(function(result) {
-      resolve(result);
-    });
+    function askPermission() {
+      return new Promise(function(resolve, reject) {
+        const permissionResult = Notification.requestPermission(function(result) {
+          resolve(result);
+        });
 
-    if (permissionResult) {
-      permissionResult.then(resolve, reject);
+        if (permissionResult) {
+          permissionResult.then(resolve, reject);
+        }
+      })
+      .then(function(permissionResult) {
+        if (permissionResult !== 'granted') {
+          throw new Error('We weren\'t granted permission.');
+        }
+      });
     }
-  })
-  .then(function(permissionResult) {
-    if (permissionResult !== 'granted') {
-      throw new Error('We weren\'t granted permission.');
-    }
-  });
-}
-```
 
 In the above code, the important snippet of code is the call to
 `Notification.requestPermission()`. This method will display a prompt to the user:
 
 ![Permission Prompt on Desktop and Mobile Chrome.](./images/permission-prompt.png)
 
-Once the permission has been accepted / allowed, closed (i.e. clicking the cross on the pop-up)
+Once the permission has been accepted / allowed, closed (i.e. clicking the cross on the pop-up),
 or blocked, we'll be given the result as a string: 'granted', 'default' or 'denied'.
 
 In the sample code above, the promise returned by `askPermission()` resolves if the permission
@@ -125,7 +120,7 @@ is granted, otherwise we throw an error making the promise reject.
 
 One edge case that you need to handle is if the user clicks the 'Block' button. If this
 happens, your web app will not be able to ask the user for permission again. They'll have to
-manually "unblock" your app by changing the permission state of your web app, which is buried
+manually "unblock" your app by changing its permission state, which is buried
 in a settings panel. Think carefully about how and when you ask the user for permission,
 because if they click block, it's not an easy way to reverse that decision.
 
@@ -139,25 +134,23 @@ We'll look at how some popular sites ask for permission later on.
 Once we have our service worker registered and we've got permission, we can subscribe a user by
 calling `registration.pushManager.subscribe()`.
 
-``` javascript
-function subscribeUserToPush() {
-  return getSWRegistration()
-  .then(function(registration) {
-    const subscribeOptions = {
-      userVisibleOnly: true,
-      applicationServerKey: urlBase64ToUint8Array(
-        'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U'
-      )
-    };
+    function subscribeUserToPush() {
+      return getSWRegistration()
+      .then(function(registration) {
+        const subscribeOptions = {
+          userVisibleOnly: true,
+          applicationServerKey: urlBase64ToUint8Array(
+            'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U'
+          )
+        };
 
-    return registration.pushManager.subscribe(subscribeOptions);
-  })
-  .then(function(pushSubscription) {
-    console.log('Received PushSubscription: ', JSON.stringify(pushSubscription));
-    return pushSubscription;
-  });
-}
-```
+        return registration.pushManager.subscribe(subscribeOptions);
+      })
+      .then(function(pushSubscription) {
+        console.log('Received PushSubscription: ', JSON.stringify(pushSubscription));
+        return pushSubscription;
+      });
+    }
 
 When calling the `subscribe()` method, we pass in an *options* object, which consists of both
 required and optional parameters.
@@ -187,33 +180,33 @@ user-visible messages. You can indicate this by calling
 [https://goo.gl/yqv4Q4](https://goo.gl/yqv4Q4) for more details.
 
 It's currently looking like blanket silent push will never be implemented in Chrome. Instead,
-spec authors are exploring the notion of a budget API which will be allow web apps a certain
+spec authors are exploring the notion of a budget API which will allow web apps a certain
 number of silent push messages based on the usage of a web app.
 
 
 
 ### applicationServerKey Option
 
-We briefly mentioned the notion "application server keys" in the previous section. "Application
+We briefly mentioned "application server keys" in the previous section. "Application
 server keys" are used by a push service to identify the application subscribing a user and
-ensuring that the same application is messaging that user.
+ensure that the same application is messaging that user.
 
 Application server keys are a public and private key pair that are unique to your application.
 The private key should be kept a secret to your application and the public key can be shared
 freely.
 
-The `applicationServerKey` option passed into the `subscribe()` call is the applications public
+The `applicationServerKey` option passed into the `subscribe()` call is the application's public
 key. The browser passes this onto a push service when subscribing the user, meaning the push
-service can tie your applications public key to the users `PushSubscription`.
+service can tie your application's public key to the user's `PushSubscription`.
 
 The diagram below illustrates these steps.
 
-1. You web app is loaded in a browser and you call `subscribe()` passing in your public
+1. Your web app is loaded in a browser and you call `subscribe()`, passing in your public
 application server key.
 1. The browser then makes a network request to a push service who will generate an endpoint,
 associate this endpoint with the applications public key and return the endpoint to the
 browser.
-1. The browser will add this endpoint to the `PushSubscription` which is returned via the
+1. The browser will add this endpoint to the `PushSubscription`, which is returned via the
 `subscribe()` promise.
 
 ![Illustration of the public application server key is used in subscribe
@@ -232,7 +225,7 @@ messages to an application's users.
 message.](./images/svgs/application-server-key-send.svg)
 
 Technically, the `applicationServerKey` is optional. However, the easiest
-implementation on Chrome requires it and other browsers may require it in
+implementation on Chrome requires it, and other browsers may require it in
 the future. It's optional on Firefox.
 
 The specification that defines *what* the application server key should be is
@@ -242,16 +235,16 @@ Whenever you read something referring to *"application server keys"* or
 
 #### How to Create Application Server Keys
 
-You can create a public and private set of application server keys by visiting this web site
+You can create a public and private set of application server keys by visiting
 [web-push-codelab.appspot.com](https://web-push-codelab.appspot.com/) or you can use the
-[web-push](https://github.com/web-push-libs/web-push#command-line) to generate keys by doing
-the following:
+[web-push command line](https://github.com/web-push-libs/web-push#command-line)
+to generate keys by doing the following:
 
     $ npm install -g web-push
     $ web-push generate-vapid-keys
 
 You only need to create these keys once for your application, just make sure you keep the
-private key private....yeah I just said that.
+private key private. (Yeah, I just said that.)
 
 ## Permisions and subscribe()
 
@@ -263,43 +256,39 @@ that we used earlier.
 
 ## What is a PushSubscription?
 
-We call `subscribe()`, pass in some options, in return we get a promise that resolves to a
+We call `subscribe()`, pass in some options, and in return we get a promise that resolves to a
 `PushSubscription` resulting in some code like so:
 
-``` javascript
-function subscribeUserToPush() {
-  return getSWRegistration()
-  .then(function(registration) {
-    const subscribeOptions = {
-      userVisibleOnly: true,
-      applicationServerKey: urlBase64ToUint8Array(
-        'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U'
-      )
-    };
+    function subscribeUserToPush() {
+      return getSWRegistration()
+      .then(function(registration) {
+        const subscribeOptions = {
+          userVisibleOnly: true,
+          applicationServerKey: urlBase64ToUint8Array(
+            'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U'
+          )
+        };
 
-    return registration.pushManager.subscribe(subscribeOptions);
-  })
-  .then(function(pushSubscription) {
-    console.log('Received PushSubscription: ', JSON.stringify(pushSubscription));
-    return pushSubscription;
-  });
-}
-```
+        return registration.pushManager.subscribe(subscribeOptions);
+      })
+      .then(function(pushSubscription) {
+        console.log('Received PushSubscription: ', JSON.stringify(pushSubscription));
+        return pushSubscription;
+      });
+    }
 
 The `PushSubscription` object contains all the required information needed to send a push
 messages to that user. If you print out the contents using `JSON.stringify()`, you'll see the
 following:
 
-```json
-{
-  "endpoint": "https://some.pushservice.com/something-unique",
-  "keys": {
-    "p256dh":
-"BIPUL12DLfytvTajnryr2PRdAgXS3HGKiLqndGcJGabyhHheJYlNGCeXl1dn18gSJ1WAkAPIxr4gK0_dQds4yiI=",
-    "auth":"FPssNDTKnInHVndSTdbKFw=="
-  }
-}
-```
+    {
+      "endpoint": "https://some.pushservice.com/something-unique",
+      "keys": {
+        "p256dh":
+    "BIPUL12DLfytvTajnryr2PRdAgXS3HGKiLqndGcJGabyhHheJYlNGCeXl1dn18gSJ1WAkAPIxr4gK0_dQds4yiI=",
+        "auth":"FPssNDTKnInHVndSTdbKFw=="
+      }
+    }
 
 The `endpoint` is the push services URL. To trigger a push message, make a POST request
 to this URL.
@@ -314,71 +303,65 @@ do that but a tiny tip is to use `JSON.strinigify()` to get all the necessary da
 subscription object.  Alternatively you can piece together the same
 result manually like so:
 
-```javascript
-const subscriptionObject = {
-  endpoint: pushSubscription.endpoint,
-  keys: {
-    p256dh: pushSubscription.getKeys('p256dh'),
-    auth: pushSubscription.getKeys('auth')
-  }
-};
+    const subscriptionObject = {
+      endpoint: pushSubscription.endpoint,
+      keys: {
+        p256dh: pushSubscription.getKeys('p256dh'),
+        auth: pushSubscription.getKeys('auth')
+      }
+    };
 
-// The above is the same output as:
+    // The above is the same output as:
 
-const subscriptionObjectToo = JSON.stringify(pushSubscription);
-```
+    const subscriptionObjectToo = JSON.stringify(pushSubscription);
 
 Sending the subscription is done in the web page like so:
 
-``` javascript
-function sendSubscriptionToBackEnd(subscription) {
-  return fetch('/api/save-subscription/', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(subscription)
-  })
-  .then(function(response) {
-    if (!response.ok) {
-      throw new Error('Bad status code from server.');
-    }
+    function sendSubscriptionToBackEnd(subscription) {
+      return fetch('/api/save-subscription/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(subscription)
+      })
+      .then(function(response) {
+        if (!response.ok) {
+          throw new Error('Bad status code from server.');
+        }
 
-    return response.json();
-  })
-  .then(function(responseData) {
-    if (!(responseData.data && responseData.data.success)) {
-      throw new Error('Bad response from server.');
+        return response.json();
+      })
+      .then(function(responseData) {
+        if (!(responseData.data && responseData.data.success)) {
+          throw new Error('Bad response from server.');
+        }
+      });
     }
-  });
-}
-```
 
 The node server receives this request and saves the data to a database for use later on.
 
-``` javascript
-app.post('/api/save-subscription/', function (req, res) {
-  if (!isValidSaveRequest(req, res)) {
-    return;
-  }
-
-  return saveSubscriptionToDatabase(req.body)
-  .then(function(subscriptionId) {
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({ data: { success: true } }));
-  })
-  .catch(function(err) {
-    res.status(500);
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({
-      error: {
-        id: 'unable-to-save-subscription',
-        message: 'The subscription was received but we were unable to save it to our database.'
+    app.post('/api/save-subscription/', function (req, res) {
+      if (!isValidSaveRequest(req, res)) {
+        return;
       }
-    }));
-  });
-});
-```
+
+      return saveSubscriptionToDatabase(req.body)
+      .then(function(subscriptionId) {
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({ data: { success: true } }));
+      })
+      .catch(function(err) {
+        res.status(500);
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({
+          error: {
+            id: 'unable-to-save-subscription',
+            message: 'The subscription was received but we were unable to save it to our database.'
+          }
+        }));
+      });
+    });
 
 With the `PushSubscription` details on our server we are good to send our user
 a message whenever we want.

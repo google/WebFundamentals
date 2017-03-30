@@ -26,37 +26,33 @@ target="\_blank">Notification Demos</a>
 
 The API for showing a notification is simply:
 
-```
-<ServiceWorkerRegistration>.showNotification(<title>, <options>);
-```
+    <ServiceWorkerRegistration>.showNotification(<title>, <options>);
 
 Where the title is a string and options can be any of the following:
 
-```
-{
-  "//": "Visual Options",
-  "body": "<String>",
-  "icon": "<URL String>",
-  "image": "<URL String>",
-  "badge": "<URL String>",
-  "vibrate": "<Array of Integers>",
-  "sound": "<URL String>",
-  "dir": "<String of 'auto' | 'ltr' | 'rtl'>",
+    {
+      "//": "Visual Options",
+      "body": "<String>",
+      "icon": "<URL String>",
+      "image": "<URL String>",
+      "badge": "<URL String>",
+      "vibrate": "<Array of Integers>",
+      "sound": "<URL String>",
+      "dir": "<String of 'auto' | 'ltr' | 'rtl'>",
 
-  "//": "Behavioural Options",
-  "tag": "<String>",
-  "data": "<Anything>",
-  "requireInteraction": "<boolean>",
-  "renotify": "<Boolean>",
-  "silent": "<Boolean>",
+      "//": "Behavioural Options",
+      "tag": "<String>",
+      "data": "<Anything>",
+      "requireInteraction": "<boolean>",
+      "renotify": "<Boolean>",
+      "silent": "<Boolean>",
 
-  "//": "Both Visual & Behavioural Options",
-  "actions": "<Array of Strings>",
+      "//": "Both Visual & Behavioural Options",
+      "actions": "<Array of Strings>",
 
-  "//": "Doesn't seem to affect any visual aspect of the notification.",
-  "timestamp": "<Long>"
-}
-```
+      "//": "Doesn't seem to affect any visual aspect of the notification.",
+      "timestamp": "<Long>"
+    }
 
 First let's look at the visual options. For desktop and mobile, here are how the different
 options are used.
@@ -71,13 +67,11 @@ on the notification.
 
 If we ran the following code:
 
-``` javascript
-    const title = 'Simple Title';
-    const options = {
-      body: 'Simple piece of body text.\nSecond line of body text :)'
-    };
-    registration.showNotification(title, options);
-```
+        const title = 'Simple Title';
+        const options = {
+          body: 'Simple piece of body text.\nSecond line of body text :)'
+        };
+        registration.showNotification(title, options);
 
 We'd get this notification on Chrome:
 
@@ -114,13 +108,11 @@ The `icon` option is essentially a small image you can show next to the title an
 
 In your code you just need to provide a URL to the image you'd like to load.
 
-``` javascript
-    const title = 'Icon Notification';
-    const options = {
-      icon: '/images/demos/icon-512x512.png'
-    };
-    registration.showNotification(title, options);
-```
+        const title = 'Icon Notification';
+        const options = {
+          icon: '/images/demos/icon-512x512.png'
+        };
+        registration.showNotification(title, options);
 
 On Chrome we get this notification on Linux:
 
@@ -147,13 +139,11 @@ case you intend to use a third party image over HTTP.
 The `badge` is a small monochrome icon that is used to portray a little more information to the
 user about where the notification is from.
 
-``` javascript
-    const title = 'Badge Notification';
-    const options = {
-      badge: '/images/demos/badge-128x128.png'
-    };
-    registration.showNotification(title, options);
-```
+        const title = 'Badge Notification';
+        const options = {
+          badge: '/images/demos/badge-128x128.png'
+        };
+        registration.showNotification(title, options);
 
 At the time of writing the badge is only used on Chrome for Android.
 
@@ -176,13 +166,11 @@ Meaning an image of >= 72px should be good (assuming a max device pixel ratio of
 The `image` option can be used to display a larger image to the user. This is particularly
 useful to display a preview image to the user.
 
-``` javascript
-    const title = 'Image Notification';
-    const options = {
-      image: '/images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
-    };
-    registration.showNotification(title, options);
-```
+        const title = 'Image Notification';
+        const options = {
+          image: '/images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
+        };
+        registration.showNotification(title, options);
 
 On desktop the notification will look like this:
 
@@ -209,44 +197,42 @@ Using this guideline, an image of width >= 1350px would be a good bet.
 
 You can defined `actions` to display buttons with a notification.
 
-``` javascript
-    const title = 'Actions Notification';
-    const options = {
-      actions: [
-        {
-          action: 'coffee-action',
-          title: 'Coffee',
-          icon: '/images/demos/action-1-128x128.png'
-        },
-        {
-          action: 'doughnut-action',
-          title: 'Doughnut',
-          icon: '/images/demos/action-2-128x128.png'
-        },
-        {
-          action: 'gramophone-action',
-          title: 'gramophone',
-          icon: '/images/demos/action-3-128x128.png'
-        },
-        {
-          action: 'atom-action',
-          title: 'Atom',
-          icon: '/images/demos/action-4-128x128.png'
+        const title = 'Actions Notification';
+        const options = {
+          actions: [
+            {
+              action: 'coffee-action',
+              title: 'Coffee',
+              icon: '/images/demos/action-1-128x128.png'
+            },
+            {
+              action: 'doughnut-action',
+              title: 'Doughnut',
+              icon: '/images/demos/action-2-128x128.png'
+            },
+            {
+              action: 'gramophone-action',
+              title: 'gramophone',
+              icon: '/images/demos/action-3-128x128.png'
+            },
+            {
+              action: 'atom-action',
+              title: 'Atom',
+              icon: '/images/demos/action-4-128x128.png'
+            }
+          ]
+        };
+
+        const maxVisibleActions = Notification.maxActions;
+        if (maxVisibleActions < 4) {
+          options.body = `This notification will only display ` +
+            `${maxVisibleActions} actions.`;
+        } else {
+          options.body = `This notification can display up to ` +
+            `${maxVisibleActions} actions.`;
         }
-      ]
-    };
 
-    const maxVisibleActions = Notification.maxActions;
-    if (maxVisibleActions < 4) {
-      options.body = `This notification will only display ` +
-        `${maxVisibleActions} actions.`;
-    } else {
-      options.body = `This notification can display up to ` +
-        `${maxVisibleActions} actions.`;
-    }
-
-    registration.showNotification(title, options);
-```
+        registration.showNotification(title, options);
 
 At the time of writing only Chrome and Opera for Android support actions.
 
@@ -301,24 +287,22 @@ to layout options like actions, but I saw no difference.
 Probably best to define if you can, otherwise the browser should do the right thing according
 to the text supplied.
 
-``` javascript
-    const title = 'المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل
-لتكتشف حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن
-بفضل هؤ.';
-    const options = {
-      body: 'المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل لتكتشف
-حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن بفضل هؤ.',
-      dir: 'rtl',
-      actions: [{
-        title: 'الصف 1 العمود 1',
-        action: 'action-1'
-      }, {
-        title: 'الصف 1 العمود 2',
-        action: 'action-2'
-      }]
-    };
-    registration.showNotification(title, options);
-```
+        const title = 'المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل
+    لتكتشف حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن
+    بفضل هؤ.';
+        const options = {
+          body: 'المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل لتكتشف
+    حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن بفضل هؤ.',
+          dir: 'rtl',
+          actions: [{
+            title: 'الصف 1 العمود 1',
+            action: 'action-1'
+          }, {
+            title: 'الصف 1 العمود 2',
+            action: 'action-2'
+          }]
+        };
+        registration.showNotification(title, options);
 
 The parameter should be set to either `auto`, `ltr` or `rtl`.
 
@@ -340,15 +324,13 @@ The format of the vibrate option should be an array of numbers that describe the
 milliseconds the device should vibrate followed by the number of milliseconds the device should
 *not* vibrate.
 
-``` javascript
-    const title = 'Vibrate Notification';
-    const options = {
-      // Star Wars shamelessly taken from the awesome Peter Beverloo
-      // https://tests.peter.sh/notification-generator/
-      vibrate: [500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500]
-    };
-    registration.showNotification(title, options);
-```
+        const title = 'Vibrate Notification';
+        const options = {
+          // Star Wars shamelessly taken from the awesome Peter Beverloo
+          // https://tests.peter.sh/notification-generator/
+          vibrate: [500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500]
+        };
+        registration.showNotification(title, options);
 
 This only affects devices that support vibration.
 
@@ -358,13 +340,11 @@ The sound parameter allows you to define a sounds to play when the notification 
 
 Sadly at the time of writing no browser has support for this option.
 
-``` javascript
-    const title = 'Sound Notification';
-    const options = {
-      sound: '/demos/notification-examples/audio/notification-sound.mp3'
-    };
-    registration.showNotification(title, options);
-```
+        const title = 'Sound Notification';
+        const options = {
+          sound: '/demos/notification-examples/audio/notification-sound.mp3'
+        };
+        registration.showNotification(title, options);
 
 ### Timestamp
 
@@ -374,14 +354,12 @@ the event the notification relates to occurred).
 The `timestamp` should be the number of milliseconds since 00:00:00 UTC on
 1 January 1970 (i.e. the unix epoch).
 
-``` javascript
-    const title = 'Timestamp Notification';
-    const options = {
-      body: 'Timestamp is set to "01 Jan 2000 00:00:00".',
-      timestamp: Date.parse('01 Jan 2000 00:00:00')
-    };
-    registration.showNotification(title, options);
-```
+        const title = 'Timestamp Notification';
+        const options = {
+          body: 'Timestamp is set to "01 Jan 2000 00:00:00".',
+          timestamp: Date.parse('01 Jan 2000 00:00:00')
+        };
+        registration.showNotification(title, options);
 
 ## UX Best Practices
 
@@ -417,13 +395,11 @@ Notification prototype.
 
 Let's say we wanted to know if a notification has support action buttons, we'd do the following:
 
-```javascript
-if ('actions' in Notification.prototype) {
-  // Action buttons are supported.
-} else {
-  // Action buttons are NOT supported.
-}
-```
+    if ('actions' in Notification.prototype) {
+      // Action buttons are supported.
+    } else {
+      // Action buttons are NOT supported.
+    }
 
 With this, we could change the notification we display to our users.
 
