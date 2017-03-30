@@ -20,7 +20,7 @@ toc:
       - title: Web Push Protocol
         path: /web/fundamentals/engage-and-retain/push-notifications/web-push-protocol
       - title: Handling Push Events
-        path: /web/fundamentals/engage-and-retain/push-notifications/push-events
+        path: /web/fundamentals/engage-and-retain/push-notifications/handling-messages
       - title: Displaying a Notification
         path: /web/fundamentals/engage-and-retain/push-notifications/display-a-notification
       - title: Notification Behavior

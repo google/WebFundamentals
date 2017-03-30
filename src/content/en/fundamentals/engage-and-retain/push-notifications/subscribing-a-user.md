@@ -129,8 +129,8 @@ manually "unblock" your app by changing the permission state of your web app, wh
 in a settings panel. Think carefully about how and when you ask the user for permission,
 because if they click block, it's not an easy way to reverse that decision.
 
-The good news is that most users are happy to give permission as long as it's asked in a way
-that they *know* why the permission is being asked.
+The good news is that most users are happy to give permission as long as
+they *know* why the permission is being asked.
 
 We'll look at how some popular sites ask for permission later on.
 
@@ -226,9 +226,9 @@ receives a request to send a push message, it can validate this signed **Authori
 by looking up the public key linked to the endpoint receiving the request. If the signature is
 valid the push service knows that it must have come from the application server with the
 **matching private key**. It's basically a security measure that prevents anyone else sending
-messages to an applications users.
+messages to an application's users.
 
-![Illustration of how the private application server key is used when sending a
+![How the private application server key is used when sending a
 message.](./images/svgs/application-server-key-send.svg)
 
 Technically, the `applicationServerKey` is optional. However, the easiest
@@ -239,8 +239,6 @@ The specification that defines *what* the application server key should be is
 the [VAPID spec](https://tools.ietf.org/html/draft-thomson-webpush-vapid).
 Whenever you read something referring to *"application server keys"* or
 *"VAPID keys"*, just remember that they are the same thing.
-
-Those are the only subscribe option.
 
 #### How to Create Application Server Keys
 
@@ -303,17 +301,18 @@ following:
 }
 ```
 
-The `endpoint` is the push services URL, you make a POST request to this URL to trigger a push
-message.
+The `endpoint` is the push services URL. To trigger a push message, make a POST request
+to this URL.
 
 The `keys` object contains the values used to encrypt message data sent with a push message
-(which we'll discuss later on in this book).
+(which we'll discuss later on in this section).
 
 ## Send a Subscription to Your Server
 
 Once you have a push subscription you'll want to send it to your server. It's up to you how you
 do that but a tiny tip is to use `JSON.strinigify()` to get all the necessary data out of the
-subscription object, otherwise you can piece together the same result manually:
+subscription object.  Alternatively you can piece together the same
+result manually like so:
 
 ```javascript
 const subscriptionObject = {
@@ -328,11 +327,6 @@ const subscriptionObject = {
 
 const subscriptionObjectToo = JSON.stringify(pushSubscription);
 ```
-
-In [the demo used throughout this
-book](https://github.com/gauntface/web-push-book/tree/master/src/demos/node-server), we make a
-POST request to send a subscription to our node server that stores the subscription in a
-database.
 
 Sending the subscription is done in the web page like so:
 
@@ -403,7 +397,9 @@ to retrieve the details that make up the *PushSubscription*.
 
 All push services will expect the same API.
 
-This common API is called the `Web Push Protocol` and describes the network request / API call
+This common API is called the
+[Web Push Protocol](https://tools.ietf.org/html/draft-ietf-webpush-protocol)
+and describes the network request
 your application will need to make to trigger a push message.
 
 > If I subscribe a user on their desktop, are they subscribed on their phone
