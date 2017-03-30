@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Navigation preload lets you overcome service worker startup time by making requests in parallel.
 
-{# wf_updated_on: 2017-02-15 #}
+{# wf_updated_on: 2017-03-30 #}
 {# wf_published_on: 2017-02-15 #}
 {# wf_tags: chrome57,serviceworker,performance #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -20,8 +20,8 @@ description: Navigation preload lets you overcome service worker startup time by
   allowing you to make the request in parallel with service worker boot-up.
 * You can distinguish preload requests from regular navigations using a header,
   and [serve different content](#header).
-* Navigation preload is in Chrome 57 Canary behind a flag, and the API may change in
-  response to developer feedback.
+* Navigation preload is in Chrome 57 Canary behind a flag, and the API may
+  change in response to developer feedback.
 * It'll remain behind a flag in Chrome 57 stable (likely to be released in
   March), but you can [apply for an origin trial](#origin-trial) to test it with
   real users.
@@ -143,9 +143,11 @@ Here's a video of it in action, where the service worker is given a deliberate
 
 [Here's the demo
 itself](https://jakearchibald.github.io/isserviceworkerready/demos/nav-preload/).
-To get the benefits of navigation preload, you'll need [Chrome 57
+To get the benefits of navigation preload, you'll need [Chrome 58
 Canary](https://www.google.com/chrome/browser/canary.html) with
-`chrome://flags/#enable-service-worker-navigation-preload` enabled.
+`chrome://flags/#enable-service-worker-navigation-preload` enabled. It also
+works in Chrome 57, but you need to launch Chrome from the command line with
+`--enable-features=ServiceWorkerNavigationPreload`.
 
 ## Activating navigation preload
 
