@@ -21,7 +21,8 @@ book_path: /web/showcase/_book.yaml
 
 ### TL;DR {: .hide-from-toc }
 
-**Santa Tracker was rapidly upgraded to an offline Progressive Web App for the 2016 holiday season, thanks in part to our existing scene design.**
+**Santa Tracker was rapidly upgraded to an offline Progressive Web App for the 2016 holiday season,
+thanks in part to our existing scene design.**
 
 ## Results
 
