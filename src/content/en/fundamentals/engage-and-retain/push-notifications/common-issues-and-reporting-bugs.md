@@ -50,7 +50,7 @@ Mozilla AutoPush Service have great errors messages.** If you get stuck and not
 sure what the problem is, be sure to test in Firefox and see if you get a
 more helpful error message.
 
-# Authorization Issues
+## Authorization Issues
 
 Authorization issues are one of the most common issues developers hit when
 starting out with WebPush. This is normally a problem with configuration of a
@@ -62,7 +62,7 @@ The easiest way to support push in both Firefox and Chrome is to supply an
 any discrepancy between your front end and servers keys will result in an
 authorization error.
 
-## On Chrome + FCM
+### On Chrome + FCM
 
 For Chrome, which uses FCM as a push service, you'll receive an
 `UnauthorizedRegistration` response from FCM for a range of different
@@ -86,7 +86,7 @@ The full error response looks like this:
 If you receive this error message in Chrome, consider testing in Firefox to see
 if it'll provide more insight to the problem.
 
-## On Firefox + Mozilla AutoPush
+### On Firefox + Mozilla AutoPush
 
 Firefox & Mozilla AutoPush provides a friendly set of error messages for
 `Authorization` issues.
@@ -147,7 +147,7 @@ AutoPush:
 }
 ```
 
-# HTTP Status Codes
+## HTTP Status Codes
 
 There are a range of issues that can result in a non-201 response code from a
 push service. Below is a list of HTTP status codes and what it means in relation
@@ -194,7 +194,7 @@ spec](https://tools.ietf.org/html/draft-ietf-webpush-protocol) to see if the
 status code is referenced along with a scenario of when that status code can
 be used.
 
-# Payload Encryption Issue
+## Payload Encryption Issue
 
 If you can successfully trigger a push message (i.e. send a message to a web
 push service and receive a 201 response code) but the push event never fires in
@@ -227,7 +227,7 @@ There are a few tools which may help debug encryption if this if your issue:
 * [Web Push: Data Encryption Test Page by
   Mozilla](https://mozilla-services.github.io/WebPushDataTestPage/)
 
-# Connection Issue
+## Connection Issue
 
 If you aren't receiving a push event in your service worker and you aren't
 seeing any decryption errors, then the browser may be failing to connect to
@@ -247,7 +247,7 @@ If it's **not** 'CONNECTED', you may need to delete your current profile and
 [create a new one](https://support.google.com/chrome/answer/2364824). If that
 still doesn't solve the issue, please raise a bug report as suggested below.
 
-# Raising Bug Reports
+## Raising Bug Reports
 
 If none of the above helps with your issue and there is no sign of what the
 problem could be, please raise an issue against the browser you are having an
