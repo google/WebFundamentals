@@ -41,9 +41,9 @@ As you can see, the HTML layout we're going to use for our media player is
 pretty simple: a `<div>` root element contains a `<video>` media element and a
 `<div>` child element dedicated to video controls.
 
-Video controls will cover later a play/pause button, a fullscreen button, seek
-backward and forward buttons, and some elements for current time, duration and
-time tracking.
+Video controls we will cover later, include: a play/pause button, a fullscreen
+button, seek backward and forward buttons, and some elements for current time,
+duration and time tracking.
 
 <div class="clearfix"></div>
 
@@ -241,12 +241,12 @@ native controls with `<video controls>`.
 Now that we prevent automatic fullscreen, we need to handle ourselves the
 fullscreen mode for the video with the [Fullscreen API]{: .external}. When user
 clicks the "fullscreen button", let's exit fullscreen mode with
-`document.exitFullscreen()` if fullscren mode is currently in use by the
-document. Otherwise, request fullscreen on the video container with the
-method `requestFullscreen()` if available or fallback to
-`webkitEnterFullscreen()` on the video element only on iOS.
+`document.exitFullscreen()` if fullscreen mode is currently in use by the
+document. Otherwise, request fullscreen on the video container with the method
+`requestFullscreen()` if available or fallback to `webkitEnterFullscreen()` on
+the video element only on iOS.
 
-Note: I'm going to use a [tiny shim] for the Fullscren API in code snippets below that
+Note: I'm going to use a [tiny shim] for the Fullscreen API in code snippets below that
 will take care of prefixes as the API is not unprefixed yet at that time.
 
 <pre class="prettyprint lang-html">
@@ -294,7 +294,7 @@ will take care of prefixes as the API is not unprefixed yet at that time.
 
 ### Toggle fullscreen on screen orientation change
 
-As user rotates device in landscape mode, let be smart about this and
+As user rotates device in landscape mode, let's be smart about this and
 automatically request fullscreen to create an immersive experience. For this,
 we'll need the [Screen Orientation API]{: .external} which is not yet supported
 everywhere.  Thus, this will be our first progressive enhancement.
@@ -428,13 +428,7 @@ you may want to update your analytics to reflect this. This could also affect
 the current playback as in picking a different track, pause it, or even show
 custom buttons to the user for instance.
 
-With the [Media Session API]{: .external}, you can also customize media
-notifications by providing metadata for the currently playing video. It also
-allows you to handle media related events such as seeking or track changing
-which may come from notifications or media keys. To see this in action, check
-out the [sample]{: .external }.
-
-### Pause video on page visibity change
+### Pause video on page visibility change
 
 With the [Page Visibility API], we can determine the current visibility of a
 page and be notified of visibility changes. Code below pauses video when page
@@ -493,6 +487,12 @@ the bottom right corner of the page to give user control over video sound. The
 </video>
 
 ### Customize Media Notifications
+
+With the [Media Session API]{: .external}, you can also customize media
+notifications by providing metadata for the currently playing video. It also
+allows you to handle media related events such as seeking or track changing
+which may come from notifications or media keys. To see this in action, check
+out the [sample]{: .external }.
 
 When your web app is playing audio or video, you can already see a media
 notification sitting in the notification tray. On Android, Chrome does its best
