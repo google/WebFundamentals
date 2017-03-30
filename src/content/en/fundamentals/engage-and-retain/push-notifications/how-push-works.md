@@ -54,7 +54,7 @@ subscription to a database and use it to send a push message to that user.
 
 When you want to send a push message to your users you need to make an API call to a push
 service. This API call would include what data to send, who to send the message to and any
-criteria about how to send the message.
+criteria about how to send the message.  Normally this API call is done from your server.
 
 Some questions you might be asking yourself:
 
@@ -66,12 +66,11 @@ Some questions you might be asking yourself:
 
 ### Who and What is the Push Service?
 
-A push service has the job of receiving requests and delivering push messages if the request is
-valid.
+A push service recieves a network request, validates it and delivers a push message to the appropriate browser. If the browser is offline, the message is queued until the the browser comes online.
 
 Each browser can use any push service they want, it's something developers have no control
 over. This isn't a problem because every push service expects the **same** API call. Meaning
-you don't have to care who the push service is, you just need to make sure that your API call
+you don't have to care who the push service is. You just need to make sure that your API call
 is valid.
 
 To get the appropriate URL to trigger a push message (i.e. the URL for the push service) you
@@ -95,7 +94,7 @@ The **endpoint** in this case is
 'random-push-service.com' and each endpoint is unique to a user, indicated with
 'some-kind-of-unique-id-1234'. As you start working with push you'll notice this pattern.
 
-We'll cover what the **keys** value is for later on.
+The **keys** in the subscription will be covered later on.
 
 ### What does the API look like?
 
