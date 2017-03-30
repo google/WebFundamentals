@@ -128,11 +128,14 @@ simply change button state to "play" and show the video controls.
     });
 
 When time indicated by video `currentTime` attribute changed via the
-`timeupdate` video event, we also update our custom controls.
+`timeupdate` video event, we also update our custom controls if they're
+visible.
 
     video.addEventListener('timeupdate', function() {
-      videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
-      videoProgressBar.style.transform = `scaleX(${video.currentTime / video.duration})`;
+      if (videoControls.classList.contains('visible')) {
+        videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
+        videoProgressBar.style.transform = `scaleX(${video.currentTime / video.duration})`;
+      }
     }
 
 When the video ends, we simply change button state to "play", set video

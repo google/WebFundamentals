@@ -2,6 +2,8 @@
 
 function showVideoControls() {
   videoControls.classList.add('visible');
+  videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
+  videoProgressBar.style.transform = `scaleX(${video.currentTime / video.duration})`;
 }
 
 function hideVideoControls() {
@@ -78,6 +80,9 @@ document.addEventListener('fullscreenchange', function() {
 
 video.addEventListener('timeupdate', function() {
   console.log('timeupdate');
+  if (!videoControls.classList.contains('visible')) {
+    return;
+  }
   videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
   videoProgressBar.style.transform = `scaleX(${video.currentTime / video.duration})`;
 });

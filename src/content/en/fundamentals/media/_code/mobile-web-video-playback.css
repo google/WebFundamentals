@@ -148,7 +148,6 @@ button {
     height: 4px;
     width: 100%;
     will-change: transform;
-    transition: transform .35s linear;
     transform-origin: 0 50%;
     transform: scaleX(0);
 }
