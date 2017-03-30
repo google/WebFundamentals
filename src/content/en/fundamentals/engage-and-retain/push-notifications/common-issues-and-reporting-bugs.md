@@ -16,7 +16,7 @@ do if you've found a bug in Chrome or Firefox.
 Before we dive into debugging push, you may be hitting issues with debugging
 service workers themselves, the file not updating, failing to register or
 generally just unusual behavior. There is an
-[awesome document on debugging service workers](https://developers.google.com/web/fundamentals/getting-started/codelabs/debugging-service-workers/)
+[awesome document on debugging service workers](/web/fundamentals/getting-started/codelabs/debugging-service-workers/)
 that I would strongly recommend checking out if you are new to
 service worker development.
 
