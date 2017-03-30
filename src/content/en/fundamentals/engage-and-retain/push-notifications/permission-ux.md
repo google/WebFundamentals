@@ -25,14 +25,12 @@ deciding what is best for your users and use case.
 
 ### Value Proposition
 
-Encouraging a user to subscribe to push messaging at a time where the benefit
-is obvious given the current context is a fantastic way to get users to grant
-permission.
+Ask users to subscribe to push at a time when the benefit is obvious.
 
 For example, a user has just bought an item on an online store and finished the
-checkout flow, the site can then offer updates on the delivery status.
+checkout flow. The site can then offer updates on the delivery status.
 
-There are a range of situations where this pattern / approach works:
+There are a range of situations where this approach works:
 - A particular item is out of stock, would you like to be notified when it's next available?
 - This breaking news story will be regularly updated, would you like to be notified as the
 story develops?
@@ -41,16 +39,15 @@ story develops?
 These are all points where the user has invested in your service and there
 is a clear value proposition for them to enable push notifications.
 
-[Owen Campbell-Moore](https://twitter.com/owencm) created a mock site for an airline that
-demonstrates this approach.
+[Owen Campbell-Moore](https://twitter.com/owencm) created a mock of a hypothetical airline
+website to demonstrate this approach.
 
 After the user has booked a flight it asks if the user would like notifications of flight
 delays.
 
 ![Owen Campbell-Moore's example of good UX for push.](./images/ux-examples/owen/owen-good-example.png){: .device-image .center-image }
 
-Note that this isn't the browser UI as well, this is a custom UI in the web site asking the
-user, allowing the site full control over the messaging to the user.
+Note that this is a custom UI from the website.
 
 Another nice touch to Owen's demo is that if the user clicks to enable
 notifications, the site adds a semi-transparent overlay on the entire page when
@@ -64,24 +61,32 @@ permission as soon as a user lands on the airline's site.
 
 ![Owen Campbell-Moore's example of bad UX for push.](./images/ux-examples/owen/owen-bad-ux.png){: .device-image .center-image }
 
-No context as to what the notifications are for, if the user wanted to get a
-task done (i.e. check a flight or book a flight), this permission prompt gets in
-the way of that and secondly it's not a good look having a pop-up over the site.
+This approach provides no context as to why notifications are needed or
+useful to the user. The user is also blocked from achieving their original
+task (i.e. book a flight) by this permission prompt.
 
 ### Double Permission
 
-You may feel that your site has a clear need for push messaging and as a result
-want to ask the user for permission as soon as possible. An example of this
-sites that fit into this category are messaging sites or email clients. You
-receiving a message or email, show a notification.
+You may feel that your site has a clear use case for push messaging and as
+a result want to ask the user for permission as soon as possible.
 
-In these cases, it's worth considering the double permission UX.
+For example instant messaging and email clients. Showing a message for a
+new message or email is an established user experience across a range of
+platforms.
 
-With this approach you display a custom permission prompt in your web app which
-asks the user to enable notifications. By doing this the user can say enable or
-disable without risk of being permanently blocked. If the user selects enable on
-the custom UI, display the actual permission prompt, otherwise hide your custom
-pop-up and ask some other time.
+For these category of apps, it's worth considering the double permission
+pattern.
+
+First show a fake permission prompt that your website controls, consisting
+of buttons to allow or ignore the permission request. If the user clicks
+allows, request permission, triggering the real browser permission prompt.
+
+With this approach you display a custom permission prompt in your web app
+which asks the user to enable notifications. By doing this the user can
+chose enable or disable without your website running the risk of being
+permanently blocked. If the user selects enable on the custom UI, display
+the actual permission prompt, otherwise hide your custom pop-up and ask
+some other time.
 
 A good example of this is [Slack](https://slack.com/). They show a prompt at
 the top of their page once you've signed in asking if you'd like to enable notifications.
@@ -100,8 +105,8 @@ the user is left to explore the site.
 
 ![When you first load the page, no prompt, just calm on Google IO.](./images/ux-examples/google-io/google-io-first-load.png){: .device-image .center-image }
 
-After a few visits of clicking the menu item on the right, a settings panel appears,
-allowing the user to set up and manage notifications.
+After a few visits, clicking the menu item on the right reveals a settings
+panel allowing the user to set up and manage notifications.
 
 ![Settings panel on Google IO's web app for push messaging.](./images/ux-examples/google-io/google-io-settings-panel.png){: .device-image .center-image }
 
@@ -109,11 +114,9 @@ Clicking on the checkbox displays the permission prompt. No hidden surprises.
 
 ![Google IO's web app displaying the permission prompt.](./images/ux-examples/google-io/google-io-permission-prompt.png){: .device-image .center-image }
 
-After the permission has been granted the checkbox is checked and the user is
-good to go. The great thing about this UX is that the location to sign up for
-notifications is the same as location for disabling them.
-
-
+After the permission has been granted the checkbox is checked and the user
+is good to go. The great thing about this UI is that users can enable and
+disable notifications from one location on the website.
 
 ### Passive Approach
 
@@ -121,10 +124,10 @@ One of the easiest ways to offer push to a user is to have a button
 or toggle switch that enables / disables push messages in a location
 on the page that is consistent throughout a site.
 
-This doesn't drive users to enable push notifications, but consistency and allowing users to
-opt in and out easily without constant nudging gives users a way to engage with a site /
-service / brand if and when they want to. For sites like blogs that might have some regular
-viewers as well as high bounce rates, this is a solid option as it targets regular viewers
+This doesn't drive users to enable push notifications, but offers a
+reliable and easy way for users to opt in and out of engaging with your
+website. For sites like blogs that might have some regular viewers as well
+as high bounce rates, this is a solid option as it targets regular viewers
 without annoying drive-by visitors.
 
 On my personal site I have a toggle switch for push messaging in the footer.
@@ -133,12 +136,11 @@ On my personal site I have a toggle switch for push messaging in the footer.
 footer.](./images/ux-examples/gauntface/gauntface-intro.png)
 
 It's fairly out of the way, but for regular visitors it should get enough
-attention from readers wanting to get updates. People landing on my site to get
-some information and leave are completely unaffected, I doubt they even notice
-the the toggle switch.
+attention from readers wanting to get updates. One-time visitors are
+completely unaffected.
 
-If you grant permission the state of the toggle switch changes and remains in the same location
-through the pages.
+If the user subscribes to push messaging, the state of the toggle switch
+changes and maintains state throughout the site.
 
 ![Example of Gauntface.com with notifications
 enabled.](./images/ux-examples/gauntface/gauntface-enabled.png)
