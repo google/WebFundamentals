@@ -7,6 +7,8 @@ When you profile a page on your desktop or laptop, keep in mind that your
 experience is different than that of a typical mobile user. Mobile users
 have much less CPU power, and usually much worse internet connections.
 
+### Open DevTools
+
 1. Open Google Chrome in [Incognito Mode][incognito]. Incognito Mode
    ensures that Chrome runs in a clean state. For example, if you have a
    lot of extensions installed, those extensions might create a lot of noise
@@ -19,6 +21,9 @@ have much less CPU power, and usually much worse internet connections.
 1. Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) or
    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows, Linux) to
    open DevTools.
+
+### Simulate mobile network and CPU conditions
+
 1. In DevTools, click the **Network** tab.
 1. Enable the **Disable Cache** checkbox. This forces DevTools to always
    go to the network to fetch resources, similar to how a first-time user
