@@ -25,7 +25,7 @@ network.
 
 [net]: /web/tools/chrome-devtools/network-performance/
 
-<<_shared/set-up.md>>
+{% include "web/tools/chrome-devtools/evaluate-performance/_shared/set-up.md" %}
 
 ## Measure load performance {: #measure }
 
