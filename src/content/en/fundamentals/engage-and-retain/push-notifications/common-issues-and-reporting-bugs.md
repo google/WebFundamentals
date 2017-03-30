@@ -9,14 +9,14 @@ description: There are right ways of using notifications, and ways of using them
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
-When you hit an issue with web push, it can be difficult to debug the issue or find help. This doc outlines some of the common issues and what you should
+When you hit an issue with web push, it can be difficult to debug the issue or
+find help. This doc outlines some of the common issues and what you should
 do if you've found a bug in Chrome or Firefox.
 
 Before we dive into debugging push, you may be hitting issues with debugging
 service workers themselves, the file not updating, failing to register or
-generally just unusual behavior. There is an [awesome document on
-debugging service
-workers](https://developers.google.com/web/fundamentals/getting-started/codelabs/debugging-service-workers/)
+generally just unusual behavior. There is an
+[awesome document on debugging service workers](https://developers.google.com/web/fundamentals/getting-started/codelabs/debugging-service-workers/)
 that I would strongly recommend checking out if you are new to
 service worker development.
 
@@ -25,8 +25,9 @@ each with their own set of common issues / problems.
 
 1. **Sending a Message:** Make sure that sending messages is successful.
    You should be getting a 201 HTTP code. If you aren't :
-    1. **Check for Authorization Errors:** If you receive an authorization error message see the [Authorization Issues
-       section](#authorization_issues).
+    1. **Check for Authorization Errors:** If you receive an authorization
+       error message see the
+       [Authorization Issues section](#authorization_issues).
     1. **Other API Errors:** If you receive a non-201 status code response,
        see the [HTTP Status Codes section](#http_status_codes) for
        guidance on the cause of the issue.
@@ -35,7 +36,8 @@ each with their own set of common issues / problems.
     1. **Check for Encryption Issues:** See the [Payload Encryption
        Issue Section](#payload_encryption_issue).
     1. **Check for Connection Issues:** If the problem is on Chrome, it
-       may be a connection, see [Connection Issues section](#connection_issue) fore more info.
+       may be a connection, see [Connection Issues section](#connection_issue)
+       for more info.
 
 If you aren't able to send and receive a push message and the relevant sections
 in this doc aren't helping debug / fix the problem then you may have found a
@@ -57,7 +59,8 @@ Keys](https://tools.ietf.org/html/draft-ietf-webpush-vapid-02).
 
 The easiest way to support push in both Firefox and Chrome is to supply an
 `applicationServerKey` in the `subscribe()` call. The down side is that
-any discrepancy between your front end and servers keys will result in an authorization error.
+any discrepancy between your front end and servers keys will result in an
+authorization error.
 
 ## On Chrome + FCM
 
@@ -89,7 +92,8 @@ Firefox & Mozilla AutoPush provides a friendly set of error messages for
 `Authorization` issues.
 
 You'll also receive an `Unauthorized` error response from
-Mozilla AutoPush if the `Authorization` header is not included in your push request.
+Mozilla AutoPush if the `Authorization` header is not included in your push
+request.
 
 ```
 {  
@@ -156,23 +160,31 @@ to web push.
 </tr>
 <tr>
 <td>429</td>
-<td>Too many requests. Your application server has reached a rate limit with a push service. The push service should include a 'Retry-After' header to indicate how long before another request can be made.</td>
+<td>Too many requests. Your application server has reached a rate limit with a
+push service. The push service should include a 'Retry-After' header to
+indicate how long before another request can be made.</td>
 </tr>
 <tr>
 <td>400</td>
-<td>Invalid request. This generally means one of your headers is invalid or poorly formatted.</td>
+<td>Invalid request. This generally means one of your headers is invalid or
+poorly formatted.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found. This occurs when the subscription has expired. In this case you should delete the PushSubscription from your back end and wait for an opportunity to resubscribe the user.</td>
+<td>Not Found. This occurs when the subscription has expired. In this case you
+should delete the PushSubscription from your back end and wait for an
+opportunity to resubscribe the user.</td>
 </tr>
 <tr>
 <td>410</td>
-<td>Gone. The subscription is no longer valid and should be removed from your back end. This can be reproduced by calling \`unsubscribe()\` on a PushSubscription.</td>
+<td>Gone. The subscription is no longer valid and should be removed from your
+back end. This can be reproduced by calling \`unsubscribe()\` on a
+PushSubscription.</td>
 </tr>
 <tr>
 <td>413</td>
-<td>Payload size too large. The minimum size payload a push service must support is 4096 bytes (or 4kb), anything larger can result in this error.</td>
+<td>Payload size too large. The minimum size payload a push service must
+support is 4096 bytes (or 4kb), anything larger can result in this error.</td>
 </tr>
 </table>
 
