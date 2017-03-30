@@ -30,20 +30,18 @@ If you really want to learn about what the libraries, we'll cover it
 in the next section. For now, we are going to look at managing subscriptions and using an
 existing web push library to make the push requests.
 
-In this section we'll be using the [web-push node
+In this section we'll be using the [web-push Node
 library](https://github.com/web-push-libs/web-push). Other languages will have differences, but
 they won't be too dissimilar. We are looking at Node since it's JavaScript and should be the
 most accessible for readers.
 
-Note: If you want a library for a different language, checkout the [web-push-libs org
+Note: If you want a library for a different language, checkout the [web-push-libs organization
 on Github](https://github.com/web-push-libs/).
 
 We'll go through the following steps:
 
-1. Look at an example of how to send a subscription to our backend
-and how that can be saved.
-1. What it looks like to retrieve the saved subscriptions and trigger a push
-message.
+1. Send a subscription to our backend and save it.
+1. Retrieve saved subscriptions and trigger a push message.
 
 ## Saving Subscriptions
 
@@ -152,14 +150,14 @@ Our demo has an "admin like" page that lets you trigger a push. Since it's just 
 public page.
 
 I'm going to go through each step involved in getting the demo working, these will be baby
-steps to everyone follow along, including anyone who is new to node.
+steps to everyone follow along, including anyone who is new to Node.
 
 When we discussed subscribing a user we covered adding an `applicationServerKey` to the
 `subscribe()` options. It's on the back end that we'll need this private key.
 
 
 
-In the demo these values are added to our node app like so (boring code I know, but just want
+In the demo these values are added to our Node app like so (boring code I know, but just want
 you to know there is no magic):
 
     const vapidKeys = {
@@ -168,11 +166,11 @@ you to know there is no magic):
       privateKey: 'UUxI4O8-FbRouAevSmBQ6o18hgE4nSG3qwvJTfKc-ls'
     };
 
-Next we need to install the `web-push` module for our node server:
+Next we need to install the `web-push` module for our Node server:
 
     npm install web-push --save
 
-Then in our node script we require in the `web-push` module
+Then in our Node script we require in the `web-push` module
 like so:
 
     const webpush = require('web-push');
@@ -196,8 +194,7 @@ of the spec.)
 We also include a "mailto:" string as well. This string needs to be either a URL or a mailto
 email address. This piece of information will actually be sent to web push service as part of
 the request to trigger a push. The reason this is done is so that if a web push service needs
-to get in touch with the sender, they have some information that will enable them to (i.e. a
-URL, hopefully with some contact information or an email address).
+to get in touch with the sender, they have some information that will enable them to.
 
 With this, the `web-push` module is ready to use, the next step is to trigger a push message.
 
@@ -242,18 +239,18 @@ provided subscription.
       });
     };
 
-The call to `webpush.sendNotification()` will return a promise. If the message was sent
-successfully the promise will resolves and there is nothing we need to do. If the promise
-rejects, we need to handle the error, which may involve removing the subscription from our data
-(i.e. the subscription is invalid) or perhaps the push service just could not fulfill our
-request and we need to try again later.
+The call to `webpush.sendNotification()` will return a promise. If the
+message was sent successfully the promise will resolve and there is
+nothing we need to do. If the promise rejects, you need to examine the
+error as it'll inform you as to whether the PushSubscription is still
+valid or not.
 
 To determine the type of error from a push service it's best to look at the status code. Error
 messages vary between push services and some are more helpful than others.
 
 In this example it checks for status codes '404' and '410', which are the HTTP status codes for
 'Not Found' and 'Gone'. If we receive one of these, it means the subscription has expired
-or is no longer valid, in these scenarios we need remove the subscriptions from our database.
+or is no longer valid. In these scenarios we need remove the subscriptions from our database.
 
 We'll cover some of the other status codes in the next section when we look at the web push
 protocol in more detail.
@@ -281,15 +278,15 @@ After looping through the subscriptions, we need to return a JSON response.
 
 We've gone over the major implementation steps.
 
-1. Create an API to send subscriptions from our web page to our backend so it can save them in
-a database.
-1. Created an API to trigger sending push messages (in this case an API called from the pretend
-admin panel).
-1. Looked at an example of how to get all the subscriptions from our backend
-and send a message to each one with one of the [web-push
+1. Create an API to send subscriptions from our web page to our back-end
+so it can save them to a database.
+1. Create an API to trigger the sending of push messages (in this case an
+  API called from the pretend admin panel).
+1. Retrieve all the subscriptions from our backend
+and send a message to each subscription with one of the [web-push
 libraries](https://github.com/web-push-libs/).
 
-Regardless of your backend (Node, PHP, Python, ....) the steps for implementing push are going
+Regardless of your backend (Node, PHP, Python, ...) the steps for implementing push are going
 to be the same.
 
-Next up, what exactly are these Web Push libraries doing for us?
+Next up, what exactly are these web-push libraries doing for us?
