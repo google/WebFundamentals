@@ -29,26 +29,26 @@ each piece since it's handy to know what these libraries are doing under the hoo
 ## Application Server Keys
 
 When we subscribe a user, we pass in an `applicationServerKey`. This key is
-passed to the push service and used to check the application that subscribed
-the user is also the same application that is trigger push messages.
+passed to the push service and used to check that the application that subscribed
+the user is also the application that is triggering push messages.
 
 When we trigger a push message, there are a set of headers that we send that
-allows the push service to authenticate the application (This is defined
-by the [VAPID spec](https://tools.ietf.org/html/draft-thomson-webpush-vapid)).
+allow the push service to authenticate the application. (This is defined
+by the [VAPID spec](https://tools.ietf.org/html/draft-thomson-webpush-vapid).)
 
 What does all this actually mean and what exactly happens? Well these are the steps taken for
 application server authentication:
 
 1. The application signs some information with it's **private application key**.
 1. This signed information is sent to the push service as a header in the POST request.
-1. The push service uses the stored public key is received from `subscribe()` to check that the
+1. The push service uses the stored public key it received from `subscribe()` to check that the
 signed information is signed by the private key relating to the public key. *Remember*: The
 public key is the `applicationServerKey` passed into the subscribe call.
 1. If the signed information is valid the push service sends the push
 message to the user.
 
-An example of this flow of information is below (Not the legend in the bottom left to indicate
-public and private keys):
+An example of this flow of information is below. (Note the legend in the bottom left to indicate
+public and private keys.)
 
 ![Illustration of how the private application server key is used when sending a
 message.](./images/svgs/application-server-key-send.svg)
@@ -66,18 +66,18 @@ There are a host of libraries on [https://jwt.io/](https://jwt.io/) that can
 do the signing for you and I'd recommend you do that where you can, but let's
 look at how we create a signed JWT.
 
-### Web Push and Signed JWT
+### Web Push and Signed JWTs
 
-A signed JWT is just a string, but it can be thought of as three strings joined
+A signed JWT is just a string, though it can be thought of as three strings joined
 by dots.
 
 ![A illustration of the strings in a JSON Web
 Token](./images/svgs/authorization-jwt-diagram-header.svg)
 
 The first and second strings (The JWT info and JWT data) are pieces of JSON
-that have been base 64 encoded, meaning it's publicly readable.
+that have been base 64 encoded, meaning they're publicly readable.
 
-The first string is information about the JWT itself, indicating what algorithm
+The first string is information about the JWT itself, indicating which algorithm
 was used to create the signature.
 
 The JWT info for web push must be be JSON containing the following information, encoded as a
@@ -109,13 +109,17 @@ The `exp` value is the expiration of the JWT, this prevent snoopers from being
 able to re-use a JWT if they intercept it. The expiration is a timestamp in
 seconds and must be no longer 24 hours.
 
-In the Node.js library the expiration is set to
-`Math.floor(Date.now() / 1000) + (12 * 60 * 60)`. It's 12 hours rather than 24 hours to avoid
+In Node.js the expiration is set using:
+
+    Math.floor(Date.now() / 1000) + (12 * 60 * 60)
+
+It's 12 hours rather than 24 hours to avoid
 any issues with time differences between the sending application and the push service.
 
-Finally, the `sub` value needs to be either a URL or a `mailto` email address. This is so that
-if a push service needed to reach out to sender, it can find contact info from the JWT. (This
-is why the web-push library needed an email address).
+Finally, the `sub` value needs to be either a URL or a `mailto` email address.
+This is so that if a push service needed to reach out to sender, it can find
+contact information from the JWT. (This is why the web-push library needed an
+email address).
 
 Just like the JWT Info, the JWT Data is encoded as a URL safe base64
 string.
@@ -180,7 +184,7 @@ sent in the `Crypto-Key` header as a URL safe base64 encoded string with
     
 ## The Payload Encryption
 
-Next let's look at how we can send a payload with a push message so that our when our web app
+Next let's look at how we can send a payload with a push message so that when our web app
 receives a push message, it can access the data it receives.
 
 A common question that arises from any who's used other push services is why does the web push
@@ -190,7 +194,7 @@ Part of the beauty of web push is that because all push services use the same AP
 protocol), developers don't have to care who the push service is. We can make a request in the
 right format and expect a push message to be sent. The downside of this is that developers
 could conceivably send messages to a push service that isn't trustworthy. By encrypting the
-payload, push service can't read the data thats sent, only the browser can decrypt the
+payload, push services can't read the data thats sent, only the browser can decrypt the
 information. This protects the users data.
 
 The encryption of the payload is defined in the [Message Encryption
