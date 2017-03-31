@@ -38,5 +38,5 @@ In this episode:
 <a href="http://feeds.feedburner.com/DesignerVsDeveloper">
   Subscribe to Designer Vs Developer Podcast
 </a> 
-<!-- 
-Watch <a href="https://www.youtube.com/watch?v=8T94qu8IWWk">the video recording</a>. -->
+
+Watch <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ">the video recording</a>.
