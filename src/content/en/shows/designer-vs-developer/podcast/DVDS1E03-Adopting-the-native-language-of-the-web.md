@@ -16,11 +16,10 @@ Welcome to Designer Vs Developer, a show that tries to solve the challenges
 faced in the industry by opening a conversation between the two, providing
 take aways, solutions to workflows, tools & discussions on everyday struggles.
 
-
 This week Mustafa speaks to Ade Oshineye, a Developer Advocate on the Google
-Developer Relations Team, about language influencing us to adopt the
-UX practices of the native app world when the web should create its own native
-language.
+Developer Relations Team, about how the incorrect us of design language has
+influenced us to adopt the UX practices of the native app world when the web
+should aspire to create a native language of its own.
 
 <img src="/web/shows/designer-vs-developer/podcast/images/dvd-s01-e03-cover.jpg" class="attempt-right">
 
