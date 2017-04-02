@@ -17,7 +17,7 @@ faced in the industry by opening a conversation between the two, providing
 take aways, solutions to workflows, tools & discussions on everyday struggles.
 
 This week Mustafa speaks to Ade Oshineye, a Developer Advocate on the Google
-Developer Relations Team, about how the incorrect us of design language has
+Developer Relations Team, about how the incorrect use of design language has
 influenced us to adopt the UX practices of the native app world when the web
 should aspire to create a native language of its own.
 
