@@ -31,7 +31,7 @@ listener you'd write in JavaScript:
 
 The weirdest bit of this code to most developers who are new to service workers is the `self`
 variable. `self` is commonly used in Web Workers, which a service worker is. `self` refers to
-the global scope, kind of like `window` in a web page, but for a Web Worker / Service Worker,
+the global scope, kind of like `window` in a web page. But for a web workers and service workers,
 self refers to the the worker itself.
 
 In the example above `self.addEventListener()` can be thought of as adding an event listener to
@@ -113,18 +113,19 @@ analytics could look like this:
       event.waitUntil(promiseChain);
     });
 
-Here we are calling a function that returns a promise `pushReceivedTracking()`, which we can
-pretend will make a network request to our analytics provider.
-We are also making a network request, getting the response and showing a
-notification using the responses data for the title and message of the notification.
+Here we are calling a function that returns a promise `pushReceivedTracking()`,
+which, for the sake of the example, we can pretend will make a network request
+to our analytics provider. We are also making a network request, getting the
+response and showing a notification using the responses data for the title and
+message of the notification.
 
 We can ensure the service worker is kept alive while both of these tasks are done by combining
 these promises with `Promise.all()`. The resulting promise is passed into `event.waitUntil()`
-meaning the browser will wait until both promises have finished before checking a notification
+meaning the browser will wait until both promises have finished before checking that a notification
 has been displayed and terminating the service worker.
 
-Note: If you ever find your promise chains confusing or a little messy
-I find that breaking things into functions help to reduce complication.
+Note: If you ever find your promise chains confusing or a little messy,
+I find that breaking things into functions helps to reduce complication.
 I'd also recommend
 [this blog post by Philip Walton on untangling promise
 chains](https://philipwalton.com/articles/untangling-deeply-nested-promise-chains/).
@@ -141,7 +142,7 @@ Chrome will only show the "This site has been updated in the background." notifi
 push message is received and the push event in the service worker **does not** show a
 notification after the promise passed to `event.waitUntil()` has finished.
 
-The main reason developers get caught out by this is that their code will
+The main reason developers get caught by this is that their code will
 often call `self.registration.showNotification()` but they **aren't** doing
 anything with the promise it returns. This intermittently results in the default notification
 being displayed. For example, we could remove the return for
@@ -175,5 +176,5 @@ You can see how it's an easy thing to miss.
 
 Just remember - if you see that notification, check your promise chains and `event.waitUntil()`.
 
-In the next section we're going to look at what we can do in terms of styling notifications /
+In the next section we're going to look at what we can do to style notifications and
 what content we can display.
