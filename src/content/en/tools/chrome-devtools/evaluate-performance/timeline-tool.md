@@ -214,3 +214,5 @@ You can save and open recordings by right-clicking inside the
 **Overview** or **Flame Chart** panes and selecting the relevant option.
 
 ![save and open recordings](imgs/save-open.png)
+
+You can also share saved recordings using [timeline-viewer](https://chromedevtools.github.io/timeline-viewer/).

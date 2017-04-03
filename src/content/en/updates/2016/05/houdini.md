@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Houdini is a collection of APIs that expose the CSS engine’s internals to developers
 
-{# wf_updated_on: 2016-08-01 #}
+{# wf_updated_on: 2017-03-23 #}
 {# wf_published_on: 2016-05-19 #}
 {# wf_tags: houdini,css #}
 {# wf_featured_image: /web/updates/images/2016/05/houdini/compworklet_small.png #}
@@ -11,7 +11,7 @@ description: Houdini is a collection of APIs that expose the CSS engine’s inte
 
 {% include "web/_shared/contributors/surma.html" %}
 
-Dogfood: I have updated each section of this article with the
+Note: I have updated each section of this article with the
 current state of the respective spec.
 
 Have you ever thought about the amount of work CSS does? You change a single
@@ -156,7 +156,7 @@ just like `box-shadow`.
         };
       }
     };
-    
+
 
 Here is a video of a ripple [implementation][Paint Worklet source] that uses
 the Paint Worklet API ([Demo][Paint Worklet demo]).
@@ -169,10 +169,10 @@ the Paint Worklet API ([Demo][Paint Worklet demo]).
 
 ### Compositor worklet
 
-Dogfood: Chrome is working on compositor worker, which is a Chrome-proprietary
-API on top of which compositor worklet (and other things) will be implemented.
-Compositor worker is due to land soon™ and will allow us to provide you with
-a polyfill that has very similar performance benefits to a native implementation.
+Note: The API described here is obsolete. Compositor worklet has
+been redesigned and is now proposed as “Animation Worklet”. More details on the
+current iteration of the API can be found
+[here](https://dassur.ma/things/animworklet/).
 
 Even though the compositor worklet spec has been moved to the WICG and will
 be iterated on, it’s the one the specs that excites me the most. As you might know, some
@@ -222,13 +222,13 @@ implementation for parallax scrolling using the compositor worklet.
         t.m42 = -0.1 * self.scroller.scrollTop;
         self.parallax.transform = t;
       }
-    
+
       onmessage(e) {
         self.scroller = e.data[0];
         self.parallax = e.data[1];
       };
     });
-    
+
 
 My colleague Robert Flack has written a [polyfill][CompWorklet polyfill] for the
 compositor worklet so you can give it a try – obviously with a much
@@ -237,7 +237,7 @@ higher performance impact.
 ### Layout worklet
 ([spec][Layout Worklet spec])
 
-Dogfood: First real spec draft has been been proposed. Implementation
+Note: First real spec draft has been been proposed. Implementation
 is a good while away.
 
 Again, the specification for this is practically empty, but the concept is
@@ -273,7 +273,7 @@ performance gain.
                 childFragment.x = x;
                 childFragment.y = y;
             }
-    
+
             return {
                 minContent: 0,
                 maxContent: 0,
@@ -285,12 +285,12 @@ performance gain.
             };
         }
     });
-    
+
 
 ### Typed CSSOM
 ([spec][Typed CSSOM spec])
 
-Dogfood: An “almost complete” implementation has landed in Chrome Canary
+Note: An “almost complete” implementation has landed in Chrome Canary
 behind the “Experimental Web Platform features” flag.
 
 Typed CSSOM (CSS Object Model or Cascading Style Sheets Object Model) addresses a
@@ -299,7 +299,7 @@ Let me illustrate with a line of JavaScript:
 
 
     $('#someDiv').style.height = getRandomInt() + 'px';
-    
+
 
 We are doing math, converting a number to a string to append a unit just to have
 the browser parse that string and convert it back to a number for the CSS engine.
@@ -331,12 +331,12 @@ at runtime.
       [new SimpleLength(200, 'px'), w1.add(w2)])
     $('#div4')).styleMap.get('margin-left')
       // => {em: 5, percent: 50}
-    
 
-### Properties and values 
+
+### Properties and values
 ([spec][Properties and Values spec])
 
-Dogfood: Spec is pretty stable. No accesible implementation as of yet.
+Note: Spec is pretty stable. No accesible implementation as of yet.
 
 Do you know [CSS Custom Properties] (or their unofficial alias “CSS Variables”)?
 This is them but with types! So far, variables could only have string values and
@@ -355,7 +355,7 @@ and animations, which is also being considered.
         initialValue: "1"
       });
     });
-    
+
 
 ### Font metrics
 
