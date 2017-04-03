@@ -81,7 +81,7 @@ On Firefox on Linux it would look like this:
 
 ![Notification with Title and Body Text on Firefox on Linux.](./images/notification-screenshots/desktop/firefox-title-body.png){: .center-image }
 
-I was curious about what would happen if I added lots of text and this was the result.
+I was curious about what would happen if I added lots of text and this was the result:
 
 ![Notification with Long Title and Body Text on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-long-title-body.png){: .center-image }
 
@@ -92,7 +92,7 @@ causing the notification to expand.
 
 ![Notification with Long Title and Body Text on Firefox on Linux while hovering over the notification with the mouse cursor.](./images/notification-screenshots/desktop/firefox-long-title-body-expanded.png){: .center-image }
 
-The reason I've included these examples is two fold. There will be differences between
+The reason I've included these examples is twofold. There will be differences between
 browsers, just looking at text, Firefox and Chrome look and act differently. Secondly there are
 differences across platforms. Chrome has a custom UI for all platforms whereas Firefox uses the
 system notifications on my Linux machine. The same notifications on Windows with Firefox look
@@ -131,8 +131,8 @@ image](http://stackoverflow.com/questions/7220738/honeycomb-notifications-how-to
 If we assume the highest pixel ratio for a device will be 3, an icon size of >= 192px is a safe
 bet.
 
-Note: Some browsers may require the image be served over HTTPS. Just calling it out in
-case you intend to use a third party image over HTTP.
+Note: Some browsers may require the image be served over HTTPS. Be aware of this
+if you intend to use a third-party image.
 
 ### Badge
 
@@ -176,7 +176,7 @@ On desktop the notification will look like this:
 
 ![Notification with Image on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-image.png){: .center-image }
 
-On Android the cropping and ratio is different.
+On Android the cropping and ratio are different.
 
 ![Notification with Image on Chrome for Android.](./images/notification-screenshots/mobile/chrome-image.png){: .center-image }
 
@@ -188,7 +188,7 @@ best approach is to serve an image with this ratio and allow Android to crop the
 being said, the `image` option is still new and this behavior may change.
 
 On Android, the only [guideline
-width](https://code.google.com/p/android/issues/detail?id=36744) I could find was a width of
+width](https://code.google.com/p/android/issues/detail?id=36744) I could find is a width of
 450dp.
 
 Using this guideline, an image of width >= 1350px would be a good bet.
@@ -253,7 +253,7 @@ On Android Marshmallow the icons are colored to match the system color scheme:
 ![Notification with Actions on Chrome for Android.](./images/notification-screenshots/mobile/chrome-actions-m.png){: .center-image }
 
 Chrome will hopefully change it's behavior on desktop to match android (i.e. apply the
-appropriate color scheme to make the icons match the system look and feel). In the mean you can
+appropriate color scheme to make the icons match the system look and feel). In the meantime you can
 match Chrome's text color by making your icons have a color of "#333333"..
 
 On Android Nougat the action icons aren't shown at all.
@@ -267,7 +267,7 @@ The best practice we can draw from these differences:
 
 - Stick to a consistent color scheme for your icons so at least all your icons are consistently
 displayed to the user.
-- Make sure they work in monochrome as some platforms may display them in such a way.
+- Make sure they work in monochrome as some platforms may display them that way.
 - Test the size and see what works for you. 128px x 128px works well on Android for me but was
 poor quality on desktop.
 - Expect your action icons not to be displayed at all.
@@ -281,7 +281,7 @@ The "dir" parameter allows you to define which direction the text should be disp
 right-to-left or left-to-right.
 
 In testing it seemed that the direction was largely determined by the text rather than this
-parameter. Reading through the spec it calls out this can be used to suggest to the browser how
+parameter. According to the spec this is intended to suggest to the browser how
 to layout options like actions, but I saw no difference.
 
 Probably best to define if you can, otherwise the browser should do the right thing according
@@ -336,9 +336,9 @@ This only affects devices that support vibration.
 
 ### Sound
 
-The sound parameter allows you to define a sounds to play when the notification is received.
+The sound parameter allows you to define a sound to play when the notification is received.
 
-Sadly at the time of writing no browser has support for this option.
+Sadly, at the time of writing no browser has support for this option.
 
         const title = 'Sound Notification';
         const options = {
@@ -351,7 +351,7 @@ Sadly at the time of writing no browser has support for this option.
 Timestamp allows you to tell the platform the time the notification was intended for (i.e. when
 the event the notification relates to occurred).
 
-The `timestamp` should be the number of milliseconds since 00:00:00 UTC on
+The `timestamp` should be the number of milliseconds since 00:00:00 UTC, which is
 1 January 1970 (i.e. the unix epoch).
 
         const title = 'Timestamp Notification';
@@ -363,22 +363,22 @@ The `timestamp` should be the number of milliseconds since 00:00:00 UTC on
 
 ## UX Best Practices
 
-The biggest UX fail I've seen with notifications is a lack of specificity in the information
+The biggest UX failure I've seen with notifications is a lack of specificity in the information
 displayed by a notification.
 
 You should consider why you sent the push message in the first place and make sure all of the
 notification options are used to help users understand why they are reading that notification.
 
-To be honest, it's easy to see examples and think "I'll never make that mistake" but it's
+To be honest, it's easy to see examples and think "I'll never make that mistake". But it's
 easier to fall into that trap than you might think.
 
 Some common pitfalls to avoid:
 
-1. Don't put your website in the title or the body. Browsers include your domain in the
+* Don't put your website in the title or the body. Browsers include your domain in the
 notification so **don't duplicate it**.
 
 
-1. Use all information you have available to you. If you send a push message because someone
+* Use all information you have available to you. If you send a push message because someone
 sent a message to a user, rather than using a title of 'New Message' and body of 'Click here to
 read it.' use a title of 'John just sent a new message' and set the body of the notification to
 part of the message.
@@ -390,10 +390,10 @@ part of the message.
 At the time of writing there is a pretty big disparity between Chrome and Firefox in terms of
 feature support for notifications.
 
-Luckily, you can feature detect support for notification features by looking at the
+Luckily, you can detect support for notification features by looking at the
 Notification prototype.
 
-Let's say we wanted to know if a notification has support action buttons, we'd do the following:
+Let's say we wanted to know if a notification supports action buttons, we'd do the following:
 
     if ('actions' in Notification.prototype) {
       // Action buttons are supported.
