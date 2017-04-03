@@ -6,7 +6,6 @@ description: 阻断式的 JavaScript 弹窗经常（并且不幸地）被用来�
 {# wf_published_on: 2017-03-24 #}
 {# wf_tags: policy,dialog,javascript #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) used to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs. #}
 {# wf_featured_snippet: 阻断式的 JavaScript 弹窗经常（并且不幸地）被用来伤害用户。鉴于此，Chromium 团队强烈建议你别再使用了。 #}
 
 # Chromium 的弹窗机制 {: .page-title }
