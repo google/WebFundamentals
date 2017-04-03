@@ -29,26 +29,26 @@ each piece since it's handy to know what these libraries are doing under the hoo
 ## Application Server Keys
 
 When we subscribe a user, we pass in an `applicationServerKey`. This key is
-passed to the push service and used to check the application that subscribed
-the user is also the same application that is trigger push messages.
+passed to the push service and used to check that the application that subscribed
+the user is also the application that is triggering push messages.
 
 When we trigger a push message, there are a set of headers that we send that
-allows the push service to authenticate the application (This is defined
-by the [VAPID spec](https://tools.ietf.org/html/draft-thomson-webpush-vapid)).
+allow the push service to authenticate the application. (This is defined
+by the [VAPID spec](https://tools.ietf.org/html/draft-thomson-webpush-vapid).)
 
 What does all this actually mean and what exactly happens? Well these are the steps taken for
 application server authentication:
 
 1. The application signs some information with it's **private application key**.
 1. This signed information is sent to the push service as a header in the POST request.
-1. The push service uses the stored public key is received from `subscribe()` to check that the
+1. The push service uses the stored public key it received from `subscribe()` to check that the
 signed information is signed by the private key relating to the public key. *Remember*: The
 public key is the `applicationServerKey` passed into the subscribe call.
 1. If the signed information is valid the push service sends the push
 message to the user.
 
-An example of this flow of information is below (Not the legend in the bottom left to indicate
-public and private keys):
+An example of this flow of information is below. (Note the legend in the bottom left to indicate
+public and private keys.)
 
 ![Illustration of how the private application server key is used when sending a
 message.](./images/svgs/application-server-key-send.svg)
@@ -66,18 +66,18 @@ There are a host of libraries on [https://jwt.io/](https://jwt.io/) that can
 do the signing for you and I'd recommend you do that where you can, but let's
 look at how we create a signed JWT.
 
-### Web Push and Signed JWT
+### Web Push and Signed JWTs
 
-A signed JWT is just a string, but it can be thought of as three strings joined
+A signed JWT is just a string, though it can be thought of as three strings joined
 by dots.
 
 ![A illustration of the strings in a JSON Web
 Token](./images/svgs/authorization-jwt-diagram-header.svg)
 
 The first and second strings (The JWT info and JWT data) are pieces of JSON
-that have been base 64 encoded, meaning it's publicly readable.
+that have been base 64 encoded, meaning they're publicly readable.
 
-The first string is information about the JWT itself, indicating what algorithm
+The first string is information about the JWT itself, indicating which algorithm
 was used to create the signature.
 
 The JWT info for web push must be be JSON containing the following information, encoded as a
@@ -109,13 +109,17 @@ The `exp` value is the expiration of the JWT, this prevent snoopers from being
 able to re-use a JWT if they intercept it. The expiration is a timestamp in
 seconds and must be no longer 24 hours.
 
-In the Node.js library the expiration is set to
-`Math.floor(Date.now() / 1000) + (12 * 60 * 60)`. It's 12 hours rather than 24 hours to avoid
+In Node.js the expiration is set using:
+
+    Math.floor(Date.now() / 1000) + (12 * 60 * 60)
+
+It's 12 hours rather than 24 hours to avoid
 any issues with time differences between the sending application and the push service.
 
-Finally, the `sub` value needs to be either a URL or a `mailto` email address. This is so that
-if a push service needed to reach out to sender, it can find contact info from the JWT. (This
-is why the web-push library needed an email address).
+Finally, the `sub` value needs to be either a URL or a `mailto` email address.
+This is so that if a push service needed to reach out to sender, it can find
+contact information from the JWT. (This is why the web-push library needed an
+email address).
 
 Just like the JWT Info, the JWT Data is encoded as a URL safe base64
 string.
@@ -180,7 +184,7 @@ sent in the `Crypto-Key` header as a URL safe base64 encoded string with
     
 ## The Payload Encryption
 
-Next let's look at how we can send a payload with a push message so that our when our web app
+Next let's look at how we can send a payload with a push message so that when our web app
 receives a push message, it can access the data it receives.
 
 A common question that arises from any who's used other push services is why does the web push
@@ -190,7 +194,7 @@ Part of the beauty of web push is that because all push services use the same AP
 protocol), developers don't have to care who the push service is. We can make a request in the
 right format and expect a push message to be sent. The downside of this is that developers
 could conceivably send messages to a push service that isn't trustworthy. By encrypting the
-payload, push service can't read the data thats sent, only the browser can decrypt the
+payload, push services can't read the data thats sent, only the browser can decrypt the
 information. This protects the users data.
 
 The encryption of the payload is defined in the [Message Encryption
@@ -286,8 +290,8 @@ input and how that's encrypted.
 When we want to send a push message to a user with a payload, there are three inputs we need:
 
 1. The payload itself.
-1. The `auth` secret from the PushSubscription.
-1. The `p256dh` key from the PushSubscription.
+1. The `auth` secret from the `PushSubscription`.
+1. The `p256dh` key from the `PushSubscription`.
 
 We've seen the `auth` and `p256dh` values being retreieved from a `PushSubscription` but for a
 quick reminder, given a subscription we'd need these values:
@@ -301,7 +305,7 @@ quick reminder, given a subscription we'd need these values:
 The `auth` value should be treated as a secret and not shared outside of your application.
 
 The `p256dh` key is a public key, this is sometimes referred to as the client public key. Here
-we'll refer to p256dh as the subscription public key. The subscription public key is generated
+we'll refer to `p256dh` as the subscription public key. The subscription public key is generated
 by the browser. The browser will keep the private key secret and use it for decrypting the
 payload.
 
@@ -326,7 +330,7 @@ which we'd do in Node like so:
     const localPublicKey = localKeysCurve.getPublicKey();
     const localPrivateKey = localKeysCurve.getPrivateKey();
     
-We'll refer these keys as "local keys". They are used *just* for encryption and have
+We'll refer to these keys as "local keys". They are used *just* for encryption and have
 **nothing** to do with application server keys.
 
 With the payload, auth secret and subscription public key as inputs and with a newly generated
@@ -345,7 +349,7 @@ This is used in the next step to calculate the Pseudo Random Key (PRK).
 ### Pseudo Random Key
 
 The Pseudo Random Key (PRK) is the combination of the push subscription's auth
-secret, the shared secret we just created.
+secret, and the shared secret we just created.
 
     const authEncBuff = new Buffer('Content-Encoding: auth\0', 'utf8');
     const prk = hkdf(subscription.keys.auth, sharedSecret, authEncBuff, 32);
@@ -354,7 +358,7 @@ What is up with the create this `Content-Encoding: auth` buffer?
 
 This piece of information is included in the final output of the HKDF and I imagine is largely
 there to help browsers identify that the decryption was successful / what the decrypted
-information is. *Note* the `\0` is just to add a byte with value of 0 to end of the Buffer.
+information is. (Note that the `\0` is just to add a byte with value of 0 to end of the Buffer.)
 
 So our Pseudo Random Key is simply running the auth, shared secret and a piece of encoding info
 through HKDF (i.e. making it cryptographically stronger).
@@ -423,7 +427,7 @@ This gives us our nonce and content encryption key.
 
 Now that we have our content encryption key, we can encrypt the payload.
 
-We create an AES128 Cipher using the content encryption key
+We create an AES128 cipher using the content encryption key
 as the key and the nonce is as an initialization vector.
 
 In Node this is done like so:
@@ -435,7 +439,7 @@ Before we encrypt our payload, we need to define how much padding we wish to
 add to the front of the payload. The reason you'd want to add padding is that
 it further hides what the content of the payload *could* be.
 
-The padding needs to be at least 2 bytes and these first two bytes should indicate the length
+The padding needs to be at least two bytes and these first two bytes should indicate the length
 of the padding. If you do add padding, create enough bytes of data to add the two bytes used to
 include the padding length.
 
@@ -453,11 +457,11 @@ We then run our padding and payload through this cipher.
     // https://nodejs.org/api/crypto.html#crypto_cipher_getauthtag
     const encryptedPayload = Buffer.concat([result, cipher.getAuthTag()]);
     
-We now have our encrypted payload - Yay.
+We now have our encrypted payload. Yay!
 
 The remaining piece of work is to determine how this payload is sent to the push service.
 
-### Encrypted Payload Headers & Body
+### Encrypted Payload Headers and Body
 
 To send this encrypted payload to the Push Service we need to define a few
 different headers in our POST request.
@@ -509,14 +513,14 @@ We've covered the headers used for JWT / Application Server Keys (i.e. how to id
 application with the push service) and we've covered the headers used to send an encrypted
 payload.
 
-There are some additional headers that can be used by Push Services to alter the behavior of
-the send messages. Some of these headers are required, while others are optional.
+There are additional headers that Push Services use to alter the behavior of
+sent messages. Some of these headers are required, while others are optional.
 
 ### TTL Header
 
-This is a **required header**.
+**Required**
 
-TTL (or time to live) should be an integer for the number of seconds you
+TTL (or time to live) is an integer specifying the number of seconds you
 want your push message to live on the push service before it's delivered. If
 the TTL is expired, the message will be removed from the Push Service queue
 and it won't be delivered.
@@ -524,7 +528,7 @@ and it won't be delivered.
     TTL: <Time to live in seconds>
 
 If you set a TTL of zero, the push service will attempt to deliver the message
-immediately **but** if the device can't be reached, your message will be
+immediately, **but** if the device can't be reached, your message will be
 immediately dropped from the push service queue.
 
 Technically a push service can reduce the TTL of a push message if it wants. You can tell if
@@ -532,7 +536,7 @@ this has happened by examining the TTL header in the response from a push servic
 
 ##### Topic
 
-This is an **optional header**.
+**Optional**
 
 Topics are strings that can be used to replace any pending notifications with
 new notifications if they have matching topic names.
@@ -543,13 +547,13 @@ when their device is eventually turned back on.
 
 ##### Urgency
 
-This is an **optional header**.
+**Optional**
 
-This can be used to indicate to the push service how important a message is to the user. This
-could be used by the push service to help conserve the battery life of a users device by only
+Urgency indicates to the push service how important a message is to the user. This
+could be used by the push service to help conserve the battery life of a user's device by only
 waking up for important messages when battery is low.
 
-The header value should a string value of "very-low" | "low" | "normal" | "high". The default
+The header value is defined as shown below. The default
 value is "normal".
 
     Urgency: <very-low | low | normal | high>
@@ -567,7 +571,7 @@ So what do we do with the response to this POST request?
 ### Response from Push Service
 
 Once you've made a request to a Push Service, you need to check the status code
-of the response as that'll inform you as to whether the request was successful
+of the response as that'll tell you whether the request was successful
 or not.
 
 <table>
@@ -594,14 +598,14 @@ or not.
   <tr>
     <td>404</td>
     <td>Not Found. This is an indication that the subscription is expired
-    and can't be used. In this case you should delete the PushSubscription
+    and can't be used. In this case you should delete the `PushSubscription`
     and wait for the client to resubscribe the user.</td>
   </tr>
   <tr>
     <td>410</td>
     <td>Gone. The subscription is no longer valid and should be removed
     from back end. This can be reproduced by calling `unsubscribe()` on a
-    PushSubscription.</td>
+    `PushSubscription`.</td>
   </tr>
   <tr>
     <td>413</td>
