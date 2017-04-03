@@ -126,9 +126,7 @@ ignores anything else.
 
 The *only* time you should care about this back story is if and when you want to support older
 versions of Chrome, Samsung Internet browser and / or Opera for Android, all of whom use the
-older GCM trick / proprietary API's / hacks. If you want to support these browsers you'll need
-to implement this older GCM API which is [documented in the non-standrards / legacy section of
-this book here](/chapter-06/01-non-standards-browsers/).
+older GCM trick / proprietary API's / hacks **but this is strongly discouraged**.
 
 ## Firebase has a JavaScript SDK. What and Why?
 
