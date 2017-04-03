@@ -27,8 +27,6 @@ toc:
         path: /web/fundamentals/engage-and-retain/push-notifications/notification-behaviour
       - title: Common Notification Patterns
         path: /web/fundamentals/engage-and-retain/push-notifications/common-notification-patterns
-      - title: Supporting Non-Standards Browsers
-        path: /web/fundamentals/engage-and-retain/push-notifications/non-standards-browsers
       - title: FAQ
         path: /web/fundamentals/engage-and-retain/push-notifications/faq
       - title: "Video: Web Push Notifications (I/O 2016)"
