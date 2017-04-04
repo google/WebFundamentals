@@ -11,18 +11,18 @@ book_path: /web/fundamentals/_book.yaml
 
 
 So far we've looked at the options that alter the visual appearance of a notification. There
-are options that alter the behaviour of notifications.
+are also options that alter the behaviour of notifications.
 
 Be default, calling `showNotification()` with just visual options will have
 the following behaviours:
 
 1. Clicking on the notification does nothing.
-1. Each new notification is shown one after the other. The browser will not  collapse the
-notifications in anyway.
-1. The platform may play a sound or vibration the users devices (depending on the platform).
+1. Each new notification is shown one after the other. The browser will not collapse the
+notifications in any way.
+1. The platform may play a sound or vibrate the user's devices (depending on the platform).
 1. On some platforms the notification will disappear after a short
-period of time while others will show the notification unless the user interacts with it (i.e.
-compare Android and Desktop with your notifications).
+period of time while others will show the notification unless the user interacts with it.
+(For example, compare your notifications on Android and Desktop.)
 
 In this section we are going to look at how we can alter these default behaviours using options
 alone. These are relatively easy to implement and take advantage of.
@@ -47,9 +47,9 @@ will be called when ever a notification is clicked.
       event.waitUntil(promiseChain);
     });
 
-As you can see in this example, the notification was clicked can be accessed via the
+As you can see in this example, the notification that was clicked can be accessed via the
 `event.notification parameter`. From this we can via the properties on the notification, in
-this case we call it's `close()` method and then we are free to perform any task we wish in the
+this case we call its `close()` method and then we are free to perform any task we wish in the
 background like a normal event.
 
 Note: You still need to make use of event.waitUntil() to keep the service worker running
@@ -139,7 +139,7 @@ With this we would detect notification clicks or action clicks like so:
 
 ### Tag
 
-The *tag* option is a essentially a String ID that "groups" notifications together, providing
+The *tag* option is essentially a string ID that "groups" notifications together, providing
 an easy way to determine how multiple notifications are displayed to the user. This is easiest
 to explain with an example.
 
@@ -180,7 +180,7 @@ will close the first notification and replace it with our new notification.
             };
             registration.showNotification(title, options);
 
-Now we have 2 notifications even though `showNotification()` was 3 times.
+Now we have two notifications even though `showNotification()` was called three times.
 
 ![Two notifications where the first notification is replaced by a third notification.](./images/notification-screenshots/desktop/chrome-third-tag.png){: .center-image }
 
