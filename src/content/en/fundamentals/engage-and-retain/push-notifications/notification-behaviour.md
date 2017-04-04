@@ -184,7 +184,7 @@ Now we have two notifications even though `showNotification()` was called three 
 
 ![Two notifications where the first notification is replaced by a third notification.](./images/notification-screenshots/desktop/chrome-third-tag.png){: .center-image }
 
-The `tag` option is simply a way of group messages like this so that any old notifications that
+The `tag` option is simply a way of grouping messages so that any old notifications that
 are currently displayed will be closed if they have the same tag as a new notification.
 
 A subtlety to using `tag` is that the browser will replace any old notification without any
@@ -213,14 +213,14 @@ case you could use `tag` with `renotify` set to true.
 error:
 
     TypeError: Failed to execute 'showNotification' on 'ServiceWorkerRegistration':
-Notifications which set the renotify flag must specify a non-empty tag
+    Notifications which set the renotify flag must specify a non-empty tag
 
 ### Silent
 
 This option allows you to show a new notification but prevents the default
-behavior of vibration, sound and turning on the devices display.
+behavior of vibration, sound and turning on the device's display.
 
-This is ideal if your notifications that don't require immediate attention
+This is ideal if your notifications don't require immediate attention
 from the user.
 
         const title = 'Silent Notification';
@@ -233,11 +233,11 @@ from the user.
 
 ### Requires Interaction
 
-Chrome on desktop will show notifications for a set time period before hiding it. Chrome on
+Chrome on desktop will show notifications for a set time period before hiding them. Chrome on
 Android doesn't have this behaviour, notifications are displayed until the user interacts with
-it.
+them.
 
-To force a notification to stay visible until the user has interacted with it you can define
+To force a notification to stay visible until the user interacts with it add
 the `requireInteraction` option. This will show the notification permanently until the user
 dismisses / clicks your notification.
 
@@ -249,7 +249,7 @@ dismisses / clicks your notification.
         registration.showNotification(title, options);
 
 Please use this option with consideration. Showing a notification and forcing the user to stop
-what they are doing to dismiss you notification can be frustrating.
+what they are doing to dismiss your notification can be frustrating.
 
 In the next section we are going to look at some of the common patterns used on the web for
-managing notifications and performing actions liking open pages when a notification is clicked.
+managing notifications and performing actions such as opening pages when a notification is clicked.
