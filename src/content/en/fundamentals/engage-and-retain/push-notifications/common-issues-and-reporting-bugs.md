@@ -23,24 +23,24 @@ service worker development.
 There are two distinct stages to check off when developing and testing web push,
 each with their own set of common issues / problems.
 
-1. **Sending a Message:** Make sure that sending messages is successful.
+- **Sending a Message:** Make sure that sending messages is successful.
    You should be getting a 201 HTTP code. If you aren't :
-    1. **Check for Authorization Errors:** If you receive an authorization
+    - **Check for Authorization Errors:** If you receive an authorization
        error message see the
        [Authorization Issues section](#authorization_issues).
-    1. **Other API Errors:** If you receive a non-201 status code response,
+    - **Other API Errors:** If you receive a non-201 status code response,
        see the [HTTP Status Codes section](#http_status_codes) for
        guidance on the cause of the issue.
-1. **Receiving a Message**: If you're able to send a message successfully,
+- **Receiving a Message**: If you're able to send a message successfully,
    but the message is not received on the browser:
-    1. **Check for Encryption Issues:** See the [Payload Encryption
+    - **Check for Encryption Issues:** See the [Payload Encryption
        Issue Section](#payload_encryption_issue).
-    1. **Check for Connection Issues:** If the problem is on Chrome, it
-       may be a connection, see [Connection Issues section](#connection_issue)
+    - **Check for Connection Issues:** If the problem is on Chrome, it
+       may be a connection. See [Connection Issues section](#connection_issue)
        for more info.
 
 If you aren't able to send and receive a push message and the relevant sections
-in this doc aren't helping debug / fix the problem then you may have found a
+in this doc aren't helping debug the problem then you may have found a
 bug. In this case, refer to the [Raising Bug Reports](#raising_bug_reports)
 section to file a good bug report with all the necessary information to expedite
 the bug fixing process.
@@ -53,9 +53,9 @@ more helpful error message.
 ## Authorization Issues
 
 Authorization issues are one of the most common issues developers hit when
-starting out with WebPush. This is normally a problem with configuration of a
-sites [Application Server Keys / VAPID
-Keys](https://tools.ietf.org/html/draft-ietf-webpush-vapid-02).
+starting out with web push. This is normally a problem with configuration of a
+sites [Application Server Keys (a.k.a VAPID keys)
+](https://tools.ietf.org/html/draft-ietf-webpush-vapid-02).
 
 The easiest way to support push in both Firefox and Chrome is to supply an
 `applicationServerKey` in the `subscribe()` call. The down side is that
@@ -66,14 +66,14 @@ authorization error.
 
 For Chrome, which uses FCM as a push service, you'll receive an
 `UnauthorizedRegistration` response from FCM for a range of different
-errors, all involving the application server keys / VAPID keys.
+errors, all involving the application server keys.
 
 You'll receive an `UnauthorizedRegistration` error in any of the following
 situations:
 
 * If you fail to define an `Authorization` header in the request to FCM.
-* Your application key used to subscribe the user doesn't match the key to sign
-  the Authorization header.
+* Your application key used to subscribe the user doesn't match the key used
+  to sign the Authorization header.
 * The expiration is invalid in your JWT, i.e. the expiration exceeds 24 hours or
   the JWT has expired.
 * The JWT is malformed or has invalid values.
@@ -86,9 +86,9 @@ The full error response looks like this:
 If you receive this error message in Chrome, consider testing in Firefox to see
 if it'll provide more insight to the problem.
 
-### On Firefox + Mozilla AutoPush
+### Firefox and Mozilla AutoPush
 
-Firefox & Mozilla AutoPush provides a friendly set of error messages for
+Firefox and Mozilla AutoPush provides a friendly set of error messages for
 `Authorization` issues.
 
 You'll also receive an `Unauthorized` error response from
@@ -178,13 +178,13 @@ opportunity to resubscribe the user.</td>
 <tr>
 <td>410</td>
 <td>Gone. The subscription is no longer valid and should be removed from your
-back end. This can be reproduced by calling \`unsubscribe()\` on a
+back end. This can be reproduced by calling `unsubscribe()` on a
 PushSubscription.</td>
 </tr>
 <tr>
 <td>413</td>
 <td>Payload size too large. The minimum size payload a push service must
-support is 4096 bytes (or 4kb), anything larger can result in this error.</td>
+support is 4096 bytes (or 4kb). Anything larger can result in this error.</td>
 </tr>
 </table>
 
@@ -204,17 +204,17 @@ decrypt the message it received.
 If this is the case, you should see an error message in Firefox's DevTools
 console like so:
 
-![Firefox DevTools with Decryption Message](./images/ff-devtools-decryption-msg.png)
+![Firefox DevTools with decryption message](./images/ff-devtools-decryption-msg.png)
 
 To check if this is the issue in Chrome, do the following:
 
 1. Go to chrome://gcm-internals and click the "Start Recording" button.
 
-![Chrome GCM Internals Record](./images/gcm-internals-start-recording.png)
+![Chrome GCM internals record](./images/gcm-internals-start-recording.png)
 
 1. Trigger a push message, and look under the "Message Decryption Failure Log".
 
-![GCM Internals Decryption Log](./images/gcm-internals-decryption-log.png)
+![GCM internals decryption log](./images/gcm-internals-decryption-log.png)
 
 If there was an issue with the decryption of the payload, you'll see an error
 similar to the one displayed above. Notice the `AES-GCM decryption failed`
@@ -236,12 +236,12 @@ a push service.
 In Chrome you can check whether the browser is receiving messages by examining
 the 'Receive Message Log' in `chrome://gcm-internals`.
 
-![GCM Internals Receive Message Log](./images/gcm-internals-receive-log.png)
+![GCM internals receive message log](./images/gcm-internals-receive-log.png)
 
 If you aren't seeing the message arrive in a timely fashion then make sure that
 the connection status of your browser is `CONNECTED`:
 
-![GCM Internals connectino state](./images/gcm-internals-connection-state.png)
+![GCM internals connection state](./images/gcm-internals-connection-state.png)
 
 If it's **not** 'CONNECTED', you may need to delete your current profile and
 [create a new one](https://support.google.com/chrome/answer/2364824). If that
