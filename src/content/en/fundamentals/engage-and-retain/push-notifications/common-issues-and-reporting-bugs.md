@@ -17,7 +17,7 @@ Before we dive into debugging push, you may be hitting issues with debugging
 service workers themselves, the file not updating, failing to register or
 generally just unusual behavior. There is an
 [awesome document on debugging service workers](/web/fundamentals/getting-started/codelabs/debugging-service-workers/)
-that I would strongly recommend checking out if you are new to
+that I strongly recommend checking out if you are new to
 service worker development.
 
 There are two distinct stages to check off when developing and testing web push,
@@ -41,14 +41,15 @@ each with their own set of common issues / problems.
 
 If you aren't able to send and receive a push message and the relevant sections
 in this doc aren't helping debug the problem then you may have found a
-bug. In this case, refer to the [Raising Bug Reports](#raising_bug_reports)
+bug in the push mechanism itself. In this case, refer to the
+[Raising Bug Reports](#raising_bug_reports)
 section to file a good bug report with all the necessary information to expedite
 the bug fixing process.
 
 One thing I'd like to call out before we start is that **Firefox and the
-Mozilla AutoPush Service have great errors messages.** If you get stuck and not
-sure what the problem is, be sure to test in Firefox and see if you get a
-more helpful error message.
+Mozilla AutoPush Service have great errors messages.** If you get stuck and
+are not sure what the problem is, then test in Firefox and see if you
+get a more helpful error message.
 
 ## Authorization Issues
 
@@ -59,7 +60,7 @@ sites [Application Server Keys (a.k.a VAPID keys)
 
 The easiest way to support push in both Firefox and Chrome is to supply an
 `applicationServerKey` in the `subscribe()` call. The down side is that
-any discrepancy between your front end and servers keys will result in an
+any discrepancy between your front end and server's keys will result in an
 authorization error.
 
 ### On Chrome + FCM
@@ -105,8 +106,8 @@ request.
 }
 ```
 
-If the expiration used in your JWT has expired, you'll also receive an
-`Unauthorized` error with a message that highlights that the token has
+If the expiration in your JWT has expired, you'll also receive an
+`Unauthorized` error with a message that explains that the token has
 expired.
 
 ```
@@ -150,7 +151,7 @@ AutoPush:
 ## HTTP Status Codes
 
 There are a range of issues that can result in a non-201 response code from a
-push service. Below is a list of HTTP status codes and what it means in relation
+push service. Below is a list of HTTP status codes and what they mean in relation
 to web push.
 
 <table>
@@ -161,17 +162,17 @@ to web push.
 <tr>
 <td>429</td>
 <td>Too many requests. Your application server has reached a rate limit with a
-push service. The push service should include a 'Retry-After' header to
+push service. The response from the service should include a 'Retry-After' header to
 indicate how long before another request can be made.</td>
 </tr>
 <tr>
 <td>400</td>
-<td>Invalid request. This generally means one of your headers is invalid or
+<td>Invalid request. One of your headers is invalid or
 poorly formatted.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found. This occurs when the subscription has expired. In this case you
+<td>Not Found. The subscription has expired. In this case you
 should delete the PushSubscription from your back end and wait for an
 opportunity to resubscribe the user.</td>
 </tr>
@@ -179,7 +180,7 @@ opportunity to resubscribe the user.</td>
 <td>410</td>
 <td>Gone. The subscription is no longer valid and should be removed from your
 back end. This can be reproduced by calling `unsubscribe()` on a
-PushSubscription.</td>
+`PushSubscription`.</td>
 </tr>
 <tr>
 <td>413</td>
@@ -198,7 +199,7 @@ be used.
 
 If you can successfully trigger a push message (i.e. send a message to a web
 push service and receive a 201 response code) but the push event never fires in
-your service worker, this is normally an indication that the browser failed to
+your service worker, this normally indicates that the browser failed to
 decrypt the message it received.
 
 If this is the case, you should see an error message in Firefox's DevTools
@@ -217,8 +218,8 @@ To check if this is the issue in Chrome, do the following:
 ![GCM internals decryption log](./images/gcm-internals-decryption-log.png)
 
 If there was an issue with the decryption of the payload, you'll see an error
-similar to the one displayed above. Notice the `AES-GCM decryption failed`
-message in the details column.
+similar to the one displayed above. (Notice the `AES-GCM decryption failed`
+message in the details column.)
 
 There are a few tools which may help debug encryption if this if your issue:
 
@@ -234,7 +235,7 @@ seeing any decryption errors, then the browser may be failing to connect to
 a push service.
 
 In Chrome you can check whether the browser is receiving messages by examining
-the 'Receive Message Log' in `chrome://gcm-internals`.
+the 'Receive Message Log' (sic) in `chrome://gcm-internals`.
 
 ![GCM internals receive message log](./images/gcm-internals-receive-log.png)
 
@@ -258,7 +259,7 @@ For Chrome, you'd raise the issue here:
 For Firefox, you should raise the issue on:
 [https://bugzilla.mozilla.org/](https://bugzilla.mozilla.org/)
 
-To provide a good bug report you should try and provide the following details:
+To provide a good bug report you should provide the following details:
 
 * Browsers you've tested in (i.e. Chrome version 50, Chrome version 51, Firefox
   version 50, Firefox version 51).
