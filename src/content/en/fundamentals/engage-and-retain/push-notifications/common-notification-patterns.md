@@ -17,10 +17,10 @@ This will involve using a few different API's that are available in the service 
 
 ## Notification Close Event
 
-In the last section saw how we can listen for `notificationclick` events.
+In the last section we saw how we can listen for `notificationclick` events.
 
 There is also a `notificationclose` event that is called if the user dismisses one of your
-notifications (i.e. rather than click the notification, the user clicks the cross or swipes the
+notifications (i.e. rather than clicking the notification, the user clicks the cross or swipes the
 notification away).
 
 This event is normally used for analytics to track user engagement with notifications.
@@ -36,7 +36,7 @@ This event is normally used for analytics to track user engagement with notifica
 
 When a push message is received it's common to have data that isn't useful the user has clicked
 the notification. For example, the URL that should be opened if the user clicks on a
-notification. The data can be passed in with the push event but it's not going to be used until
+notification. The data can be passed in with the push event but is not used until
 the `notificationclick` event.
 
 The easiest way to do this is to add data to a notification in the options for
@@ -65,7 +65,7 @@ Inside a click handler the data can be accessed with `event.notification.data`.
 
 ## Open a Window
 
-One of the most common actions performance when a user clicks on a notification is to open a
+One of the most common responses to a notification is to open a
 window / tab to a specific URL. We can do this with the
 [clients.openWindow()](https://developer.mozilla.org/en-US/docs/Web/API/Clients/openWindow)
 API.
@@ -77,7 +77,7 @@ In our `notificationclick` event we'd run some kind like this:
       event.waitUntil(promiseChain);
 
 In the next section we'll look at how to check if the page we want to direct the user to is
-already open or not. This way we can focus on the open tab rather than constantly opening new
+already open or not. This way we can focus the open tab rather than opening new
 tabs.
 
 ## Focus an Existing Window
@@ -86,12 +86,11 @@ When it's possible, we should focus a window rather than open a new window every
 clicks a notification.
 
 Before we look at how to achieve this, it's worth highlighting that this is **only possible for
-pages on your origin**. This is because we can only see what pages are open that belong to our
+pages on your origin**. This is because we can only see open pages that belong to our
 site, this prevents developers from being able to see all the sites their users are viewing.
 
-Taking the previous example where we opened
-'/demos/notification-examples/example-page.html', we'll alter it to see if it's already open or
-not.
+Taking the previous example, we'll alter the code to see if '/demos/notification-examples
+/example-page.html' is already open.
 
       const urlToOpen = new URL(examplePage, self.location.origin).href;
 
@@ -126,33 +125,33 @@ Posnick](https://twitter.com/jeffposnick). Calling `new URL()` with the `locatio
 return an absolute URL if the string passed in is relative (i.e. '/' will become 'http://<Site
 Origin>/').
 
-We make the URL absolute so we can match it against the window URL's later on.
+We make the URL absolute so we can match it against window URL's later on.
 
       const urlToOpen = new URL(examplePage, self.location.origin).href;
 
-Then we get a list of the "WindowClients", which are the list of currently open tabs / windows
-(remember these are tabs for your origin only).
+Then we get a list of the `WindowClient` objects, which are the list of
+currently open tabs and windows. (Remember these are tabs for your origin only.)
 
       const promiseChain = clients.matchAll({
         type: 'window',
         includeUncontrolled: true
       })
 
-The options passed into `matchAll` just inform the browser that we only want
-to search for "window type" clients (i.e. just look for tabs and windows. Exclude web workers).
-`includeUncontrolled` is to search to tabs that aren't controlled by the service worker this
-code is running in. Generally, you'll always want this to be true when using the API for
-looking for windows to focus.
+The options passed into `matchAll()` just inform the browser that we only want
+to search for "window type" clients (i.e. just look for tabs and windows, and exclude web workers).
+`includeUncontrolled` is to search  tabs that aren't controlled by the service worker this
+code is running in. Generally, you'll always want `includeUncontrolled` to be true when calling
+`matchAll()`.
 
 We capture the returned promise as `promiseChain` so that we can pass it into
 `event.waitUntil()` later on, keeping our service worker alive.
 
 When the `matchAll()` promise resolves, we iterate through the returned window clients and
-compare the clients URL to the URL we want to open. If we find a match, we need to focus that
+compare their URLs to the URL we want to open. If we find a match, we focus that
 client, which will bring that window to the users attention. Focusing is done with the
 `matchingClient.focus()` call.
 
-If we can't find a matching client, we open a new window, same as the previous section.
+If we can't find a matching client, we open a new window, same as in the previous section.
 
       .then((windowClients) => {
         let matchingClient = null;
@@ -183,7 +182,7 @@ existing notification with the same tag is replaced.
 
 You can however get more sophisticated with the collapsing of notifications using the
 Notifications API. Consider a chat app, where the developer might want a new notification to
-show a message similar to "You have 2 messages from Matt" rather than just showing the latest
+show a message similar to "You have two messages from Matt" rather than just showing the latest
 message.
 
 You can do this, or manipulate current notifications in other ways, using the
@@ -194,7 +193,7 @@ Let's look at how we could use this API to implement the chat example.
 
 In our chat app, let's assume each notification has as some data which includes a username.
 
-First thing we'll want to do is find any open notifications for a user with a specific
+The first thing we'll want to do is find any open notifications for a user with a specific
 username. We'll get `registration.getNotifications()` and loop over them and check the
 `notification.data` for a specific username:
 
@@ -251,11 +250,11 @@ notifications data and increment it with each new notification.
           );
         });
 
-If there was a notification currently display we increment the message count and set the
+If there is a notification currently display we increment the message count and set the
 notification title and body message accordingly. If there
 were no notifications, we create a new notification with a `newMessageCount` of 1.
 
-The end result is that the first message would look like this:
+The result is that the first message would look like this:
 
 ![First notification without merging.](./images/notification-screenshots/desktop/merge-notification-first.png){: .center-image }
 
@@ -273,7 +272,7 @@ I've been stating that you **must** show a notification when you receive a push 
 true *most* of the time. The one scenario where you don't have to show a notification is when
 the user has your site open and focused.
 
-Inside you're push event you can check whether you need to show a notification or not by
+Inside your push event you can check whether you need to show a notification or not by
 examining the window clients and looking for a focused window.
 
 The code to getting all the windows and looking for a focused window looks like this:
@@ -298,10 +297,10 @@ The code to getting all the windows and looking for a focused window looks like 
       });
     }
 
-We use [clients.matchAll()](https://developer.mozilla.org/en-US/docs/Web/API/Clients/matchAll)
+We use [`clients.matchAll()`](https://developer.mozilla.org/en-US/docs/Web/API/Clients/matchAll)
 to get all of our window clients and then we loop over them checking the `focused` parameter.
 
-Inside our push event we'd use this function to decide if we need to show a notification or not:
+Inside our push event we'd use this function to decide if we need to show a notification:
 
       const promiseChain = isClientFocused()
       .then((clientIsFocused) => {
@@ -319,15 +318,15 @@ Inside our push event we'd use this function to decide if we need to show a noti
 
 ## Message Page from a Push Event
 
-We've seen that you can skip showing a notification is the user is currently on your site. But
-what if you still wanted to let the user know that an event has occurred, but a notification is
+We've seen that you can skip showing a notification if the user is currently on your site. But
+what if you still want to let the user know that an event has occurred, but a notification is
 too heavy handed?
 
 One approach is to send a message from the service worker to the page, this way the web page
 can show a notification or update to the user informing them of the event. This is useful for
-scenarios when a subtle notification in the page is better / friendlier for the user.
+situations when a subtle notification in the page is better / friendlier for the user.
 
-Let's say we've received and push and checked that our web app is currently focused, we can
+Let's say we've received a push and checked that our web app is currently focused, we can
 "post a message" to each open page, like so:
 
       const promiseChain = isClientFocused()
@@ -348,7 +347,7 @@ Let's say we've received and push and checked that our web app is currently focu
 
       event.waitUntil(promiseChain);
 
-In each of pages, we listen for these messages by adding a message event
+In each of the pages, we listen for messages by adding a message event
 listener:
 
         navigator.serviceWorker.addEventListener('message', function(event) {
@@ -358,17 +357,17 @@ listener:
 In this message listener you could do anything you want, show a toast, a
 notification bubble or completely ignore the message.
 
-It's also worht nothing that if you don't define a message listener in your web page, the
+It's also worth nothing that if you don't define a message listener in your web page, the
 messages from the service worker will not do anything.
 
 ## Cache a Page and Open Window
 
-One scenario that is out of the scope of this book but worth just calling it is that you can
+One scenario that is out of the scope of this book but worth discussing is that you can
 improve the overall UX of your web app by caching web pages you expect users to visit after
 clicking on your notification.
 
-This requires having your service worker set-up to handle `fetch` events, but if you do
-implement it, make sure you take advantage of it in you `push` event by caching the page and
+This requires having your service worker set-up to handle `fetch` events, but if you
+implement `fetch`, make sure you take advantage of it in your `push` event by caching the page and
 assets you'll need before showing your notification.
 
 For more information check out this [introduction to service workers

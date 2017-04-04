@@ -11,7 +11,7 @@ book_path: /web/fundamentals/_book.yaml
 
 
 By this point covered subscribing a user for push sending them a message. The next step is to
-receive this push message on the users device and display a notification (as well as any other
+receive this push message on the user's device and display a notification (as well as any other
 work we might want to do).
 
 ## The Push Event
