@@ -81,7 +81,6 @@ let remarkLintOptions = {
   wfImagesHtml: false,
 
   /* from remark */
-  codeBlockStyle: 'indented',
   firstHeadingLevel: 1,
   headingStyle: 'atx',
   maximumHeadingLength: false,
@@ -138,7 +137,7 @@ function logMessage(level, filename, position, message, extra) {
   if (GLOBAL.WF.options.verbose && extra) {
     console.log(extra);
   }
-  filesWithIssues[filename] = true; 
+  filesWithIssues[filename] = true;
 }
 
 /**
@@ -210,7 +209,7 @@ function throwIfFailed() {
 
 /**
  * Gets the line number of the current string up to the index point
- * 
+ *
  * @param {string} content The content of the string to check
  * @param {Number} idx Where in the string to stop
  * @return {Number} The line number the index ends on
@@ -223,7 +222,7 @@ function getLineNumber(content, idx) {
 
 /**
  * Reads a file from the file system.
- * 
+ *
  * @param {string} filename The file to read.
  * @return {string} The contents of the file, or NULL if it failed to read.
  */
@@ -302,7 +301,7 @@ function getFiles() {
         GLOBAL.WF.options.lang.forEach(function(lang) {
           gutil.log(' ', 'Searching for files in', chalk.cyan(`${opts.srcBase}/${lang}`));
           globs.push(`${lang}/**/*`);
-        }); 
+        });
       }
       resolve(glob.find(globs, opts));
     });
@@ -318,7 +317,7 @@ function getFiles() {
     .then(function(results) {
       let files = [];
       results.split('\n').forEach(function(filename) {
-        if (RE_SRC_BASE.test(filename) || 
+        if (RE_SRC_BASE.test(filename) ||
             RE_DATA_BASE.test(filename) ||
             filename === 'app.yaml') {
               files.push(filename);
@@ -436,7 +435,7 @@ function testMarkdown(filename, contents, options) {
           msg = 'WF Tag `wf_published_on` invalid format (YYYY-MM-DD)';
           msg += `, found: ${matched[1]}`;
           logError(filename, position, msg);
-        }      
+        }
       }
     }
 
@@ -515,7 +514,7 @@ function testMarkdown(filename, contents, options) {
     matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDES, contents);
     matched.forEach(function(include) {
       let inclFile = include[1];
-      if (inclFile === 'comment-widget.html' || 
+      if (inclFile === 'comment-widget.html' ||
           inclFile.indexOf('web/_shared/contributors/') === 0 ||
           inclFile.indexOf('web/_shared/latest_show.html') === 0) {
         return;
@@ -790,7 +789,7 @@ function testFile(filename, opts) {
     let msg;
     let testPromise;
     let filenameObj = path.parse(filename.toLowerCase());
-    
+
     // Check if the file is an extension we skip
     if (EXTENSIONS_TO_SKIP.indexOf(filenameObj.ext) >= 0) {
       if (GLOBAL.WF.options.verbose) {
@@ -843,7 +842,7 @@ function testFile(filename, opts) {
     } else if (filenameObj.ext === '.txt') {
       // Text files are allowed and don't need to be tested.
       resolve(true);
-      return; 
+      return;
     } else {
       let msg = 'No tests found for file type, was not tested.';
       logWarning(filename, null, msg);
@@ -891,7 +890,7 @@ gulp.task('test', function() {
     opts.lastUpdateMaxDays = false;
   }
   return getFiles()
-  .then(function(files) { 
+  .then(function(files) {
     return Promise.all(files.map(function(filename) {
       return testFile(filename, opts);
     }));
