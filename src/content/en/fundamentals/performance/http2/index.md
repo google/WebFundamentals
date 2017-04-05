@@ -80,7 +80,7 @@ source code for the experimental implementation of the new SPDY protocol:
 > [*(Chromium Blog)*](https://blog.chromium.org/2009/11/2x-faster-web.html)
 
 Fast-forward to 2012 and the new experimental protocol was supported in Chrome,
-Firefox, and Opera, and a rapidly growing number of sites, both large (for exampole,
+Firefox, and Opera, and a rapidly growing number of sites, both large (for example,
 Google, Twitter, Facebook) and small, were deploying SPDY within their
 infrastructure. In effect, SPDY was on track to become a de facto standard
 through growing industry adoption.
@@ -94,7 +94,7 @@ protocol.
 
 Over the next few years SPDY and HTTP/2 continued to coevolve in parallel,
 with SPDY acting as an experimental branch that was used to test new features
-and proposals for the HTTP/2 standard, What looks good on paper may not work in
+and proposals for the HTTP/2 standard. What looks good on paper may not work in
 practice, and vice versa, and SPDY offered a route to test and evaluate each
 proposal before its inclusion in the HTTP/2 standard. In the end, this process
 spanned three years and resulted in a over a dozen intermediate drafts:

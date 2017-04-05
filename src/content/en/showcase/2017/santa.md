@@ -4,7 +4,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2017-03-26T18:00:00.000Z #}
 {# wf_updated_on: 2017-03-26T18:00:00.000Z #}
 {# wf_featured_image: /web/showcase/2017/images/santa/featured.png #}
-{# wf_featured_snippet: Santa Tracker is a fun and educational experience for everyone—a holiday
+{# wf_featured_snippet: Santa Tracker is a fun and educational experience for everyone-a holiday
    tradition here at Google. In 2016, we upgraded the Santa Tracker site to support offline via the
    Service Worker API. #}
 {# wf_tags: progressive-web-apps,polymer,serviceworker,casestudy #}
@@ -13,6 +13,7 @@ book_path: /web/showcase/_book.yaml
 # Santa Tracker as a PWA {: .page-title }
 
 {% include "web/_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/plegner.html" %}
 
 <a class="button button-primary" href="https://santatracker.google.com/">
   View the site
@@ -20,7 +21,8 @@ book_path: /web/showcase/_book.yaml
 
 ### TL;DR {: .hide-from-toc }
 
-**Santa Tracker was rapidly upgraded to an offline Progressive Web App for the 2016 holiday season, thanks in part to our existing scene design.**
+**Santa Tracker was rapidly upgraded to an offline Progressive Web App for the 2016 holiday season,
+thanks in part to our existing scene design.**
 
 ## Results
 
