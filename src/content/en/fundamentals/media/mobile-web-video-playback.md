@@ -115,7 +115,10 @@ Note: I call `event.stopPropagation()` to prevent parent handlers (e.g. video
 controls) from being notified of the click event.
 
 Rather than adjusting our video controls in the `click` event listener, we use
-the `play` and `pause` video events. When video starts playing, we change the
+the `play` and `pause` video events. Making our controls events based helps
+with flexibility (as we'll see later with the Media Session API) and will allow
+us to keep our controls in sync if the browser intervenes in the playback.
+When video starts playing, we change the
 button state to "pause" and hide the video controls. When the video pauses, we
 simply change button state to "play" and show the video controls.
 
@@ -167,7 +170,7 @@ can easily skip some content.
 &lt;/div>
 </pre>
 
-    let skipTime = 10; // Time to skip in seconds
+    var skipTime = 10; // Time to skip in seconds
 
     seekForwardButton.addEventListener('click', function(event) {
       event.stopPropagation();
@@ -224,7 +227,8 @@ On iOS, `video` elements automagically enter fullscreen mode when media
 playback begins. As we're trying to tailor and control as much as possible our
 media experience across mobile browsers, I recommend you set the `playsinline`
 attribute of the `video` element to force it to play inline on iPhone and not
-enter fullscreen mode when playback begins.
+enter fullscreen mode when playback begins. Note that this has no side effects
+on other browsers.
 
 <pre class="prettyprint lang-html">
 &lt;div id="videoContainer"&gt;
@@ -247,7 +251,8 @@ document. Otherwise, request fullscreen on the video container with the method
 the video element only on iOS.
 
 Note: I'm going to use a [tiny shim] for the Fullscreen API in code snippets below that
-will take care of prefixes as the API is not unprefixed yet at that time.
+will take care of prefixes as the API is not unprefixed yet at that time. You
+may want to use [screenfull.js] wrapper as well.
 
 <pre class="prettyprint lang-html">
 &lt;div id="videoContainer">
@@ -435,6 +440,10 @@ page and be notified of visibility changes. Code below pauses video when page
 is hidden. This happens when screen lock is active or when you switch tabs for
 instance.
 
+As most mobile browsers now offer controls outside of the browser that allow
+resuming a paused video, I recommend you set this behaviour only if user is
+allowed to play in the background.
+
     document.addEventListener('visibilitychange', function() {
       // Pause video when page is hidden.
       if (document.hidden) {
@@ -442,7 +451,7 @@ instance.
       }
     });
 
-Note: Chrome for Android already pauses videos when page is hidden.
+Note: Chrome for Android already pauses videos when page is hidden.  
 
 ### Show/hide mute button on video visibility change
 
@@ -600,7 +609,8 @@ shows up on lock screens.
 
 [sample]: https://googlesamples.github.io/web-fundamentals/fundamentals/media/mobile-web-video-playback.html
 [the code]: https://github.com/googlesamples/web-fundamentals/tree/gh-pages/fundamentals/media/mobile-web-video-playback.html
-[tiny shim]: https://github.com/beaufortfrancois/sandbox/blob/gh-pages/media/tiny-fullscreen-shim.js
+[tiny shim]: https://github.com/googlesamples/web-fundamentals/tree/gh-pages/fundamentals/media/tiny-fullscreen-shim.js
+[screenfull.js]: https://github.com/sindresorhus/screenfull.js
 [handle "Play" and "Pause" media events]: /web/updates/2017/02/media-session#play_pause
 [Fullscreen API]: https://fullscreen.spec.whatwg.org/
 [Screen Orientation API]: https://w3c.github.io/screen-orientation/

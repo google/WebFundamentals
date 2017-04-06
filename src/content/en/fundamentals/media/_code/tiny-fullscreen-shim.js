@@ -9,12 +9,12 @@ if (!('fullscreenElement' in document)) {
   });
 }
 
-for(let prefixedFullscreenChangeEvent of ['webkitfullscreenchange']) {
+for (var prefixedFullscreenChangeEvent of ['webkitfullscreenchange']) {
   document.addEventListener(prefixedFullscreenChangeEvent, function(event) {
     event.stopPropagation();
     event.stopImmediatePropagation();
 
-    let fullscreenChange = document.createEvent('Event');
+    var fullscreenChange = document.createEvent('Event');
     fullscreenChange.initEvent('fullscreenchange', true /*bubbles */, false /* cancelable */);
     event.target.dispatchEvent(fullscreenChange);
   });
