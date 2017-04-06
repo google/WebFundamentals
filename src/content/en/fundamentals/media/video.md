@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn about the simplest ways to add video to your site and ensure users get the best possible experience on any device.
 
-{# wf_updated_on: 2017-03-23 #}
+{# wf_updated_on: 2017-04-07 #}
 {# wf_published_on: 2014-04-15 #}
 
 # Video {: .page-title }

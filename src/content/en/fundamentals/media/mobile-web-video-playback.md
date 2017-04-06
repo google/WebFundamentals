@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Create the best mobile media experience on the Web by following these best practises.
 
-{# wf_published_on: 2017-04-03 #}
-{# wf_updated_on: 2017-03-29 #}
+{# wf_published_on: 2017-04-07 #}
+{# wf_updated_on: 2017-04-07 #}
 
 # Mobile Web Video Playback {: .page-title }
 
