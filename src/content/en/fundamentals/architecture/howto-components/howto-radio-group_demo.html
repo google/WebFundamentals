@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<p>
+  <a href="?nojs">Load without JavaScript</a>
+  <a href="?">Load with JavaScript</a>
+</p>
+
+<!doctype html>
+<style>
+  howto-radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+  
+  howto-radio-button {
+    display: inline-block;
+    position: relative;
+    cursor: default;
+  }
+  
+  howto-radio-button:focus {
+    outline: 0;
+  }
+  
+  howto-radio-button:focus::before {
+    box-shadow: 0 0 1px 2px #5B9DD9;
+  }
+
+  howto-radio-button::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    position: absolute;
+    left: -18px;
+    top: 3px;
+    border-radius: 50%;
+  }
+
+  howto-radio-button[aria-checked="true"]::before {
+    background: red;
+  }
+</style>
+
+<howto-radio-group>
+  <howto-radio-button>Water</howto-radio-button>
+  <howto-radio-button>Soda</howto-radio-button>
+  <howto-radio-button>Coffee</howto-radio-button>
+</howto-radio-group>
+
+
+<script>
+  (function() {
+    // Loads a script asynchronously and returns a promise that resolves when
+    // when the script has loaded.
+    function loadScript(src) {
+      return new Promise(resolve => {
+        const s = document.createElement('script');
+        s.onload = resolve;
+        s.src = src;
+        document.head.appendChild(s);
+      });
+    }
+
+    // Sends a message to the parent window with the current size of document.
+    // If this page is embedded in an iframe, the parent page has the choice
+    // to adapt the size of the iframe to accommodate the contents.
+    function sendSize() {
+      window.parent.postMessage(document.documentElement.getBoundingClientRect().height, '*');
+    }
+
+    // The parents window can query the iframe’s document size at any time by
+    // sending any message.
+    window.addEventListener('message', sendSize);
+
+    // If there’s a `nojs` in the URL’s query string, don’t load the elements,
+    // somewhat emulating disabled JavaScript.
+    if (!document.location.search.includes('nojs')) {
+      const whenScriptsLoaded = [
+        'scripts/custom-elements.min.js',
+        'howto-radio-group.js',
+      ].reduce((chain, src) =>
+        chain.then(_ => loadScript(src)),
+        Promise.resolve()
+      );
+      whenScriptsLoaded
+        .then(_ => customElements.whenDefined('howto-radio-group'))
+        .then(_ => sendSize());
+    }
+
+    // Hook up ResizeObserver for dynamic size adjustments
+    loadScript('scripts/resizeobserver.min.js')
+      .then(_ => {
+        const ResizeObserver =
+          self.ResizeObserver || self.ResizeObserverPolyfill;
+        const ro = new ResizeObserver(_ => sendSize());
+        // One of them’s gotta be the right one, right?
+        ro.observe(document.documentElement);
+        ro.observe(document.body);
+        ro.observe(document.scrollingElement);
+      });
+
+    // Send size after loading is done
+    requestAnimationFrame(_ => sendSize());
+  })();
+</script>
+</html>

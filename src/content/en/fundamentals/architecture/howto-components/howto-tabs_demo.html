@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<p>
+  <a href="?nojs">Load without JavaScript</a>
+  <a href="?">Load with JavaScript</a>
+</p>
+
+<!doctype html>
+<style>
+  howto-tabs {
+    /**
+     * The element uses flex box to line up the tabs in the first line
+     * and wraps if necessary.
+     */
+    display: flex;
+    flex-wrap: wrap;
+  }
+  howto-tabs-tab {
+    border: 1px solid black;
+    padding: 20px;
+  }
+  howto-tabs-panel {
+    /**
+     * Each panel has a base size of 100%, forcing it to be in its
+     * own row.
+     */
+    flex-basis: 100%;
+    padding: 20px;
+    background-color: lightgray;
+  }
+  howto-tabs-panel[aria-hidden="true"] {
+    display: none;
+  }
+  howto-tabs-tab[aria-selected="true"] {
+    background-color: bisque;
+  }
+
+  /**
+   * If JavaScript does not run, the element will stay `:unresolved`.
+   * In that case this style adds spacing between tabs and previous panel.
+   */
+  howto-tabs:unresolved howto-tabs-tab:unresolved {
+    margin-top: 10px;
+  }
+</style>
+
+<howto-tabs>
+  <howto-tabs-tab role="heading">Tab 1</howto-tabs-tab>
+  <howto-tabs-panel role="region">Content 1</howto-tabs-panel>
+  <howto-tabs-tab role="heading">Tab 2</howto-tabs-tab>
+  <howto-tabs-panel role="region">Content 2</howto-tabs-panel>
+  <howto-tabs-tab role="heading">Tab 3</howto-tabs-tab>
+  <howto-tabs-panel role="region">Content 3</howto-tabs-panel>
+</howto-tabs>
+
+
+<script>
+  (function() {
+    // Loads a script asynchronously and returns a promise that resolves when
+    // when the script has loaded.
+    function loadScript(src) {
+      return new Promise(resolve => {
+        const s = document.createElement('script');
+        s.onload = resolve;
+        s.src = src;
+        document.head.appendChild(s);
+      });
+    }
+
+    // Sends a message to the parent window with the current size of document.
+    // If this page is embedded in an iframe, the parent page has the choice
+    // to adapt the size of the iframe to accommodate the contents.
+    function sendSize() {
+      window.parent.postMessage(document.documentElement.getBoundingClientRect().height, '*');
+    }
+
+    // The parents window can query the iframe’s document size at any time by
+    // sending any message.
+    window.addEventListener('message', sendSize);
+
+    // If there’s a `nojs` in the URL’s query string, don’t load the elements,
+    // somewhat emulating disabled JavaScript.
+    if (!document.location.search.includes('nojs')) {
+      const whenScriptsLoaded = [
+        'scripts/custom-elements.min.js',
+        'howto-tabs.js',
+      ].reduce((chain, src) =>
+        chain.then(_ => loadScript(src)),
+        Promise.resolve()
+      );
+      whenScriptsLoaded
+        .then(_ => customElements.whenDefined('howto-tabs'))
+        .then(_ => sendSize());
+    }
+
+    // Hook up ResizeObserver for dynamic size adjustments
+    loadScript('scripts/resizeobserver.min.js')
+      .then(_ => {
+        const ResizeObserver =
+          self.ResizeObserver || self.ResizeObserverPolyfill;
+        const ro = new ResizeObserver(_ => sendSize());
+        // One of them’s gotta be the right one, right?
+        ro.observe(document.documentElement);
+        ro.observe(document.body);
+        ro.observe(document.scrollingElement);
+      });
+
+    // Send size after loading is done
+    requestAnimationFrame(_ => sendSize());
+  })();
+</script>
+</html>
