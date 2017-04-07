@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Media Source Extensions (MSE) is a JavaScript API that lets you build streams for playback from segments of audio or video.
 
 {# wf_published_on: 2017-02-08 #}
-{# wf_updated_on: 2017-03-09 #}
+{# wf_updated_on: 2017-04-07 #}
 
 # Media Source Extensions {: .page-title }
 
@@ -21,7 +21,7 @@ needed if you want to embed videos in your site that does such things as:
 +  Control of performance and download size
 
 <figure id="basic-mse" class="attempt-right">
-  <img src="imgs/basic-mse-flow.png"
+  <img src="images/basic-mse-flow.png"
     alt="Basic MSE data flow">
   <figcaption><b>Figure 1</b>: Basic MSE data flow</figcaption>
 </figure>
@@ -113,7 +113,7 @@ what I'll add in the next step. In the example above, this comment says, 'Is the
 MediaSource instance ready?', which matches the title of the next section.
 
 <figure id="src-as-blob">
-  <img src="imgs/media-url.png"
+  <img src="images/media-url.png"
     alt="A source attribute as a blob">
   <figcaption><b>Figure 1</b>: A source attribute as a blob</figcaption>
 </figure>
