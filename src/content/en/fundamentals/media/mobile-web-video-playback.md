@@ -302,7 +302,8 @@ may want to use [screenfull.js] wrapper as well.
 As user rotates device in landscape mode, let's be smart about this and
 automatically request fullscreen to create an immersive experience. For this,
 we'll need the [Screen Orientation API]{: .external} which is not yet supported
-everywhere.  Thus, this will be our first progressive enhancement.
+everywhere and still prefixed in some browsers at that time. Thus, this will be
+our first progressive enhancement.
 
 How doest this work? As soon as we detect the screen orientation changes, let's
 request fullscreen if the browser window is in landscape mode (that is, its
