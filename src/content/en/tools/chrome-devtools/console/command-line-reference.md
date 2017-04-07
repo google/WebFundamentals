@@ -290,7 +290,8 @@ their associated event mappings:
 	<tbody>
 		<tr>
 			<td>mouse</td>
-			<td>"mousedown", "mouseup", "click", "dblclick", "mousemove", "mouseover", "mouseout", "mousewheel"</td>
+			<td>"mousedown", "mouseup", "click", "dblclick", "mousemove",
+                            "mouseover", "mouseout", "mousewheel"</td>
 		</tr>
 		<tr>
 			<td>key</td>
@@ -302,7 +303,8 @@ their associated event mappings:
 		</tr>
 		<tr>
 			<td>control</td>
-			<td>"resize", "scroll", "zoom", "focus", "blur", "select", "change", "submit", "reset"</td>
+			<td>"resize", "scroll", "zoom", "focus", "blur", "select", "change",
+                            "submit", "reset"</td>
 		</tr>
 	</tbody>
 </table>
