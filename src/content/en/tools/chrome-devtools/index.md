@@ -60,7 +60,8 @@ Log diagnostic information during development or interact with the JavaScript on
 ### Sources panel
 
 <img src="images/panels/sources.png" alt="Sources Panel" class="attempt-right">
-Debug your JavaScript using breakpoints or connect your local files via Workspaces to use DevTools as a code editor.
+Debug your JavaScript using breakpoints or connect your local files via Workspaces to use
+DevTools as a code editor.
 
 * [Get Started With Debugging JavaScript](/web/tools/chrome-devtools/javascript)
 * [Pause Your Code With Breakpoints](/web/tools/chrome-devtools/javascript/breakpoints)
@@ -87,7 +88,9 @@ Optimize page load performance and debug request issues.
 Note: In Chrome 58 the Timeline panel was renamed to the Performance panel.
 
 <img src="images/panels/performance.png" alt="Timeline Panel" class="attempt-right">
-Improve the runtime performance of your page by recording and exploring the various events that happen during the lifecycle of a site.
+
+Improve the runtime performance of your page by recording and exploring the various events
+that happen during the lifecycle of a site.
 
 * [How to look at performance](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 * [Analyze runtime performance](/web/tools/chrome-devtools/rendering-tools/)
@@ -112,7 +115,9 @@ Profile memory usage and track down leaks.
 Note: In Chrome 52 the Resources panel was renamed to the Application panel.
 
 <img src="images/panels/application.png" alt="Application Panel" class="attempt-right">
-Inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and session storage, cookies, Application Cache, images, fonts, and stylesheets.
+
+Inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and
+session storage, cookies, Application Cache, images, fonts, and stylesheets.
 
 * [Debug Progressive Web Apps](/web/tools/chrome-devtools/progressive-web-apps)
 * [Inspect and Manage Storage, Databases, and Caches](/web/tools/chrome-devtools/manage-data/local-storage)
