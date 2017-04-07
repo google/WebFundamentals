@@ -60,7 +60,7 @@ For example:
 {% includecode content_path="web/fundamentals/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html)
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external }
 
 When the browser parses the `<source>` tags, it uses the optional `type`
 attribute to help decide which file to download and play. If the browser
@@ -126,7 +126,7 @@ Using your browser developer tools, check for `Accept-Ranges: bytes` in the
 response headers:
 
 <img class="center" alt="Chrome DevTools screenshot: Accept-Ranges: bytes"
-src="img/Accept-Ranges-Chrome-Dev-Tools.png">
+src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Include a poster image
 
@@ -151,7 +151,7 @@ image&ndash;we've made the poster image grayscale to prove it's not the video:
 <div class="attempt-left">
   <figure>
     <img alt="Android Chrome screenshot, portrait: no poster"
-    src="img/Chrome-Android-video-no-poster.png">
+    src="images/Chrome-Android-video-no-poster.png">
     <figcaption>
       Android Chrome screenshot, portrait: no poster
      </figcaption>
@@ -160,7 +160,7 @@ image&ndash;we've made the poster image grayscale to prove it's not the video:
 <div class="attempt-right">
   <figure>
     <img alt="Android Chrome screenshot, portrait: with poster"
-    src="img/Chrome-Android-video-poster.png">
+    src="images/Chrome-Android-video-poster.png">
     <figcaption>
       Android Chrome screenshot, portrait: with poster
      </figcaption>
@@ -298,7 +298,7 @@ the controls.
 <div class="attempt-left">
   <figure>
     <img alt="Android Chrome screenshot, portrait: unstyled video element overflows
-    viewport" src="img/Chrome-Android-portrait-video-unstyled.png">
+    viewport" src="images/Chrome-Android-portrait-video-unstyled.png">
     <figcaption>
       Android Chrome screenshot, portrait: unstyled video element overflows viewport
     </figcaption>
@@ -307,7 +307,7 @@ the controls.
 <div class="attempt-right">
   <figure>
     <img alt="Android Chrome screenshot, landscape: unstyled video element overflows
-    viewport" src="img/Chrome-Android-landscape-video-unstyled.png">
+    viewport" src="images/Chrome-Android-landscape-video-unstyled.png">
     <figcaption>
       Android Chrome screenshot, landscape: unstyled video element overflows viewport
     </figcaption>
@@ -341,7 +341,7 @@ from the original video. Squashed or stretched looks bad.
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html)
@@ -368,14 +368,14 @@ orientation:
 <div class="attempt-left">
   <figure>
     <img  alt="Screenshot of video playing in Safari on iPhone, portrait"
-    src="img/iPhone-video-playing-portrait.png">
+    src="images/iPhone-video-playing-portrait.png">
     <figcaption>Screenshot of video playing in Safari on iPhone, portrait</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
     <img alt="Screenshot of video playing in Safari on iPhone, landscape"
-    src="img/iPhone-video-playing-landscape.png">
+    src="images/iPhone-video-playing-landscape.png">
     <figcaption>Screenshot of video playing in Safari on iPhone, landscape</figcaption>
   </figure>
 </div>
@@ -387,7 +387,7 @@ For example, without any customization a video playing on an iPad in landscape
 orientation looks like this:
 
 <img alt="Screenshot of video playing in Safari on iPad Retina, landscape"
-src="img/iPad-Retina-landscape-video-playing.png">
+src="images/iPad-Retina-landscape-video-playing.png">
 
 Setting the video `width: 100%` or `max-width: 100%` with CSS can resolve
 many device orientation layout problems. You may also want to consider
@@ -396,7 +396,7 @@ fullscreen alternatives.
 ## Inline or fullscreen display
 
 <img class="attempt-right" alt="Screenshot of video element on iPhone, portrait"
-src="img/iPhone-video-with-poster.png">
+src="images/iPhone-video-with-poster.png">
 
 Different platforms display video differently. Safari on an iPhone displays a
 video element inline on a web page, but plays video back in fullscreen mode:
@@ -404,7 +404,7 @@ video element inline on a web page, but plays video back in fullscreen mode:
 <div style="clear:both;"></div>
 
 <img class="attempt-right" alt="Screenshot of video playing in Chrome on Android,
-portrait" src="img/Chrome-Android-video-playing-portrait-3x5.png">
+portrait" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 On Android, users can request request fullscreen mode by clicking the
 fullscreen icon. But the default is to play video inline:
@@ -412,7 +412,7 @@ fullscreen icon. But the default is to play video inline:
 <div style="clear:both;"></div>
 
 <img class="attempt-right" alt="Screenshot of video playing in Safari on iPad
-Retina, landscape" src="img/iPad-Retina-landscape-video-playing.png">
+Retina, landscape" src="images/iPad-Retina-landscape-video-playing.png">
 
 Safari on an iPad plays video inline:
 
@@ -478,7 +478,7 @@ to users. Provide at least a base experience for all users.
 ### Include captions to improve accessibility
 
 <img class="attempt-right" alt="Screenshot showing captions displayed using the
-track element in Chrome on Android" src="img/Chrome-Android-track-landscape-5x3.jpg">
+track element in Chrome on Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 To make media more accessible on mobile, include captions or descriptions
 using the track element.
