@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in authoring, debugging, and profiling development tools.
 
-{# wf_updated_on: 2016-07-26 #}
+{# wf_updated_on: 2017-04-07 #}
 {# wf_published_on: 2016-03-28 #}
 
 # Chrome DevTools {: .page-title }
@@ -15,12 +15,12 @@ provides the latest Chrome features.
 
 [canary]: https://www.google.com/intl/en/chrome/browser/canary.html
 
-## Opening the Chrome DevTools {: #open }
+## Open DevTools {: #open }
 
-* Select **More Tools** > **Developer Tools** from the Chrome Menu.
-* Right-click on a page element and select Inspect
-* Use the [keyboard shortcuts](/web/tools/chrome-devtools/inspect-styles/shortcuts)
-<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows) or <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>I</kbd> (Mac)
+* Select **More Tools** > **Developer Tools** from Chrome's Main Menu.
+* Right-click a page element and select **Inspect**.
+* Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) or
+  <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows, Linux).
 
 ## Discover DevTools
 
