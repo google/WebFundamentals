@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: TODO
+description: A reference of convenience functions available in the Chrome DevTools Console.
 
 {# wf_updated_on: 2015-08-02 #}
 {# wf_published_on: 2015-04-13 #}
