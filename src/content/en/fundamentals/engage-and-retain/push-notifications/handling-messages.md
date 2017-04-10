@@ -32,7 +32,7 @@ listener you'd write in JavaScript:
 The weirdest bit of this code to most developers who are new to service workers is the `self`
 variable. `self` is commonly used in Web Workers, which a service worker is. `self` refers to
 the global scope, kind of like `window` in a web page. But for a web workers and service workers,
-self refers to the the worker itself.
+`self` refers to the the worker itself.
 
 In the example above `self.addEventListener()` can be thought of as adding an event listener to
 the service worker itself.
@@ -125,7 +125,7 @@ meaning the browser will wait until both promises have finished before checking 
 has been displayed and terminating the service worker.
 
 Note: If you ever find your promise chains confusing or a little messy,
-I find that breaking things into functions helps to reduce complication.
+I find that breaking things into functions helps to reduce complexity.
 I'd also recommend
 [this blog post by Philip Walton on untangling promise
 chains](https://philipwalton.com/articles/untangling-deeply-nested-promise-chains/).

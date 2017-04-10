@@ -16,11 +16,11 @@ are also options that alter the behaviour of notifications.
 Be default, calling `showNotification()` with just visual options will have
 the following behaviours:
 
-1. Clicking on the notification does nothing.
-1. Each new notification is shown one after the other. The browser will not collapse the
+- Clicking on the notification does nothing.
+- Each new notification is shown one after the other. The browser will not collapse the
 notifications in any way.
-1. The platform may play a sound or vibrate the user's devices (depending on the platform).
-1. On some platforms the notification will disappear after a short
+- The platform may play a sound or vibrate the user's devices (depending on the platform).
+- On some platforms the notification will disappear after a short
 period of time while others will show the notification unless the user interacts with it.
 (For example, compare your notifications on Android and Desktop.)
 
@@ -30,7 +30,7 @@ alone. These are relatively easy to implement and take advantage of.
 ### Notification Click Event
 
 When a user clicks on a notification the default behaviour is for nothing
-to happen, it doesn't even close / remove the notification.
+to happen. It doesn't even close or remove the notification.
 
 The common practice for a notification click is for it to close and perform some other logic
 (i.e. open a window or make some API call to the application).
@@ -47,10 +47,10 @@ will be called when ever a notification is clicked.
       event.waitUntil(promiseChain);
     });
 
-As you can see in this example, the notification that was clicked can be accessed via the
-`event.notification parameter`. From this we can via the properties on the notification, in
-this case we call its `close()` method and then we are free to perform any task we wish in the
-background like a normal event.
+As you can see in this example, the notification that was clicked can be
+accessed via the `event.notification` parameter. From this we can access
+the notifications properties and methods. In this case we call its
+`close()` method and perform additional work.
 
 Note: You still need to make use of event.waitUntil() to keep the service worker running
 while your code is busy.
@@ -100,10 +100,10 @@ In the previous section you saw how to define actions when calling
 
         registration.showNotification(title, options);
 
-If / when the user clicks an action button, check the `event.action` value in the
-`noticationclick` event to tell if / which action button was clicked.
+If the user clicks an action button, check the `event.action` value in
+the `noticationclick` event to tell which action button was clicked.
 
-`event.action` will contain the `action` value set in the options. In the example about the
+`event.action` will contain the `action` value set in the options. In the example above the
 `event.action` values would be one of the following: 'coffee-action', 'doughnut-action',
 'gramophone-action' or 'atom-action'.
 
@@ -187,8 +187,8 @@ Now we have two notifications even though `showNotification()` was called three 
 The `tag` option is simply a way of grouping messages so that any old notifications that
 are currently displayed will be closed if they have the same tag as a new notification.
 
-A subtlety to using `tag` is that the browser will replace any old notification without any
-sound and vibration that would normally be played for a new notification.
+A subtlety to using `tag` is that when it replaces a notification, it
+will do so *without* a sound and vibration.
 
 This is where the `renotify` option comes in.
 
@@ -197,10 +197,9 @@ This is where the `renotify` option comes in.
 This largely applies to mobile devices at the time of writing. Setting this option makes new
 notifications vibrate and play a system sound.
 
-There are scenarios where you might want a replacing notification to notify
-the user rather than silently update. Chat applications are a good example where you would want
-one notification but would want to inform the user a new message has been received. In this
-case you could use `tag` with `renotify` set to true.
+There are scenarios where you might want a replacing notification to
+notify the user rather than silently update. Chat applications are a good
+example. In this case you should set `tag` and `renotify` to true.
 
             const title = 'Notification 2 of 2';
             const options = {
@@ -234,12 +233,12 @@ from the user.
 ### Requires Interaction
 
 Chrome on desktop will show notifications for a set time period before hiding them. Chrome on
-Android doesn't have this behaviour, notifications are displayed until the user interacts with
-them.
+Android doesn't have this behaviour. Notifications are displayed until
+the user interacts with them.
 
-To force a notification to stay visible until the user interacts with it add
-the `requireInteraction` option. This will show the notification permanently until the user
-dismisses / clicks your notification.
+To force a notification to stay visible until the user interacts with it
+add the `requireInteraction` option. This will show the notification
+until the user dismisses or clicks your notification.
 
         const title = 'Require Interaction Notification';
         const options = {

@@ -10,10 +10,10 @@ book_path: /web/fundamentals/_book.yaml
 
 
 
-## Why Doesn't Push Work when the Browser is Closed?
+## Why doesn't push work when the browser is closed?
 
 This question crops up quite a bit, largely because there are a few scenarios that make it
-difficult to reason with / understand.
+difficult to reason with and understand.
 
 Let's start with Android. The Android OS is designed to listen for push messages and upon
 receiving one, wake up the appropriate Android app to handle the push message,
@@ -45,18 +45,18 @@ The only time a push won't be received is if the browser is completely closed, i
 at all (no marking). The same applies for Windows, although it's a little trickier to determine
 whether or not Chrome is running in the background.
 
-## How Do I Make My Homescreen Web App Open Fullscreen from a Push?
+## How do I make my home screen web app open fullscreen from a push?
 
 On Chrome for Android, a web app can be added to the home screen and when the web app is opened
-from the homescreen, it can launch in fullscreen mode without the URL bar, as shown below.
+from the home screen, it can launch in fullscreen mode without the URL bar, as shown below.
 
-![Homescreen Icon to Fullscreen](./images/faq/gauntface-homescreen-to-fullscreen.png){: .center-image }
+![Home screen Icon to Fullscreen](./images/faq/gauntface-homescreen-to-fullscreen.png){: .center-image }
 
 To keep this experience consistent, developers want their clicked notifications to open their
 web app in fullscreen as well.
 
-Chrome "sort of" implemented this, although you may find it unreliable / hard to
-reason with. The relevant implementation detail is as follows:
+Chrome "sort of" implemented this, although you may find it unreliable
+and difficult to reason with. The relevant implementation details are:
 
 > Sites which have been added to homescreen on Android should be
 > allowed to open in standalone mode in response to push notifications. As
@@ -75,10 +75,10 @@ This issue will be worked on further.
 Feel free to [raise an issue](https://github.com/gauntface/web-push-book/issues) if you have
 anything to add to this discussion.
 
-## Why is this Any Better than Web Sockets?
+## Why is this any better than web sockets?
 
-The reason web push is preferable is that a service worker can be brought to
-life when the browser window is closed. A web socket will only live as long as the browser and
+A service worker can be brought to life when the browser window is
+closed. A web socket will only live as long as the browser and
 web page is kept open.
 
 ## What is the deal with GCM, FCM, Web Push and Chrome?
@@ -93,10 +93,10 @@ to power the sending of push messages from the server to the browser.
 This **was not web push**. There are a few reasons this early set-up of Chrome and GCM wasn't
 "real" web push.
 
-1. GCM requires developers to set up an account on the Google Developers Console.
-1. Chrome + GCM needed a special sender ID to be shared by a web app to be able to set up
+- GCM requires developers to set up an account on the Google Developers Console.
+- Chrome and GCM needed a special sender ID to be shared by a web app to be able to set up
 messaging correctly.
-1. GCM's servers accepted a custom API request that wasn't a web standard.
+- GCM's servers accepted a custom API request that wasn't a web standard.
 
 ##### July 2016
 In July a new feature in web push landed - Application Server Keys (or VAPID, as
@@ -104,9 +104,9 @@ the spec is known). When Chrome added support for this new API, it used Firebase
 Cloud Messaging (also known as FCM) instead of GCM as a messaging service. This
 is important for a few reasons:
 
-1. Chrome + Application Sever Keys **do not** need any kind of project to be set up with Google
-or Firebase, it'll just work.
-1. FCM supports the *web push protocol*, which is the API that all web push services will
+- Chrome and Application Sever Keys **do not** need any kind of project to be set up with Google
+or Firebase. It'll just work.
+- FCM supports the *web push protocol*, which is the API that all web push services will
 support. This means that regardless of what push service a browser uses, you just make the same
 kind of request and it'll send the message.
 
@@ -122,10 +122,7 @@ request. If you think in these terms, you can ignore which browser and which pus
 using and get to work.
 
 This book has been written to focus on the standards approach of web push and
-purposefully ignores anything else. The *only* time you should care about this
-back story is if and when you want to support older versions of Chrome, Samsung
-Internet browser and / or Opera for Android, all of which use the older GCM trick
-/ proprietary API's / hacks **but this is strongly discouraged**.
+purposefully ignores anything else.
 
 ## Firebase has a JavaScript SDK. What and Why?
 
@@ -135,16 +132,16 @@ JavaScript, you may be wondering how it differs from web push.
 The messaging SDK (known as Firebase Cloud Messaging JS SDK) does a few tricks behind the
 scenes to make it easier to implement web push.
 
-1. Instead of worrying about PushSubscriptions and the various fields, you only need to worry
-about an FCM Token (a string).
-1. Using the tokens for each user, you can use the proprietary FCM API to trigger push
-messages. This API doesn't require encrypting payloads, you can send plain payload in a POST
-request body.
-1. FCM's proprietary API supports custom features, for example [FCM
-Topics](https://firebase.google.com/docs/cloud-messaging/android/topic-messaging). (It works
-on the web too, though that's poorly documented).
-1. Finally FCM supports Android, iOS and web, so for some teams it is easier to work with in
-existing projects.
+- Instead of worrying about a `PushSubscription` and its various fields,
+you only need to worry about an FCM Token (a string).
+- Using the tokens for each user, you can use the proprietary FCM API to
+trigger push messages. This API doesn't require encrypting payloads. You
+can send a plain test payload in a POST request body.
+- FCM's proprietary API supports custom features, for example
+[FCM Topics](https://firebase.google.com/docs/cloud-messaging/android/topic-messaging)
+(It works on the web too, though it's poorly documented).
+- Finally FCM supports Android, iOS and web, so for some teams it is
+easier to work with in existing projects.
 
 This uses web push behind the scenes, but its goal is to abstract it away.
 

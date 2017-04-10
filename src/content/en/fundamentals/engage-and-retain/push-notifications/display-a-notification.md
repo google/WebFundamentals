@@ -13,8 +13,9 @@ book_path: /web/fundamentals/_book.yaml
 I've split up notification options into two sections, one that deals with the visual aspects
 (this section) and one section that explains the behavioural aspects of notifications.
 
-The reason for this is that every developer will need to be worried about the visual aspects
-but the behavioural aspects will depend on your specific to your use case.
+The reason for this is that every developer will need to be worried about
+the visual aspects but the behavioural aspects you'll use will depend how
+you use push notifications.
 
 All of the source code for these demo's is taken from a demo page I put together. If you want
 to test them out for yourself then click the button below.
@@ -50,12 +51,11 @@ Where the title is a string and options can be any of the following:
       "//": "Both Visual & Behavioural Options",
       "actions": "<Array of Strings>",
 
-      "//": "Doesn't seem to affect any visual aspect of the notification.",
+      "//": "Information Option. No visual affect.",
       "timestamp": "<Long>"
     }
 
-First let's look at the visual options. For desktop and mobile, here are how the different
-options are used.
+First let's look at the visual options.
 
 ![Dissection of the UI of a Notification](./images/notification-ui.png){: .center-image }
 
@@ -75,32 +75,32 @@ If we ran the following code:
 
 We'd get this notification on Chrome:
 
-![Notification with Title and Body Text on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-title-body.png){: .center-image }
+![Notification with title and body text on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-title-body.png){: .center-image }
 
 On Firefox on Linux it would look like this:
 
-![Notification with Title and Body Text on Firefox on Linux.](./images/notification-screenshots/desktop/firefox-title-body.png){: .center-image }
+![Notification with title and body text on Firefox on Linux.](./images/notification-screenshots/desktop/firefox-title-body.png){: .center-image }
 
 I was curious about what would happen if I added lots of text and this was the result:
 
-![Notification with Long Title and Body Text on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-long-title-body.png){: .center-image }
+![Notification with long title and body text on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-long-title-body.png){: .center-image }
 
 Interestingly, Firefox on Linux collapses the body text until you hover the notification,
 causing the notification to expand.
 
-![Notification with Long Title and Body Text on Firefox on Linux.](./images/notification-screenshots/desktop/firefox-long-title-body.png){: .center-image }
+![Notification with long title and body text on Firefox on Linux.](./images/notification-screenshots/desktop/firefox-long-title-body.png){: .center-image }
 
-![Notification with Long Title and Body Text on Firefox on Linux while hovering over the notification with the mouse cursor.](./images/notification-screenshots/desktop/firefox-long-title-body-expanded.png){: .center-image }
+![Notification with long title and body text on Firefox on Linux while hovering over the notification with the mouse cursor.](./images/notification-screenshots/desktop/firefox-long-title-body-expanded.png){: .center-image }
 
 The reason I've included these examples is twofold. There will be differences between
-browsers, just looking at text, Firefox and Chrome look and act differently. Secondly there are
+browsers. Just looking at text, Firefox and Chrome look and act differently. Secondly there are
 differences across platforms. Chrome has a custom UI for all platforms whereas Firefox uses the
 system notifications on my Linux machine. The same notifications on Windows with Firefox look
 like this:
 
-![Notification with Title and Body Text on Firefox on Windows.](./images/notification-screenshots/desktop/firefox-title-body-windows.png){: .center-image }
+![Notification with title and body text on Firefox on Windows.](./images/notification-screenshots/desktop/firefox-title-body-windows.png){: .center-image }
 
-![Notification with Long Title and Body Text on Firefox on Windows.](./images/notification-screenshots/desktop/firefox-long-title-body-windows.png){: .center-image }
+![Notification with long title and body text on Firefox on Windows.](./images/notification-screenshots/desktop/firefox-long-title-body-windows.png){: .center-image }
 
 ### Icon
 
@@ -116,11 +116,11 @@ In your code you just need to provide a URL to the image you'd like to load.
 
 On Chrome we get this notification on Linux:
 
-![Notification with Icon on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-icon.png){: .center-image }
+![Notification with icon on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-icon.png){: .center-image }
 
 and on Firefox:
 
-![Notification with Icon on Firefox on Linux.](./images/notification-screenshots/desktop/firefox-icon.png){: .center-image }
+![Notification with icon on Firefox on Linux.](./images/notification-screenshots/desktop/firefox-icon.png){: .center-image }
 
 Sadly there aren't any solid guidelines for what size image to use for an icon.
 
@@ -128,8 +128,8 @@ Sadly there aren't any solid guidelines for what size image to use for an icon.
 image](http://stackoverflow.com/questions/7220738/honeycomb-notifications-how-to-set-largeicon-to-the-right-size)
 (which is 64px multiples by the device pixel ratio).
 
-If we assume the highest pixel ratio for a device will be 3, an icon size of >= 192px is a safe
-bet.
+If we assume the highest pixel ratio for a device will be 3, an icon size
+of 192px or more is a safe bet.
 
 Note: Some browsers may require the image be served over HTTPS. Be aware of this
 if you intend to use a third-party image.
@@ -147,11 +147,11 @@ user about where the notification is from.
 
 At the time of writing the badge is only used on Chrome for Android.
 
-![Notification with Badge on Chrome for Android.](./images/notification-screenshots/mobile/chrome-badge.png){: .center-image }
+![Notification with badge on Chrome for Android.](./images/notification-screenshots/mobile/chrome-badge.png){: .center-image }
 
 On other browsers (or Chrome without the badge), you'll see an icon of the browser.
 
-![Notification with Badge on Firefox for Android.](./images/notification-screenshots/mobile/firefox-badge.png){: .center-image }
+![Notification with badge on Firefox for Android.](./images/notification-screenshots/mobile/firefox-badge.png){: .center-image }
 
 As with the `icon` option, there are no real guidelines on what size to use.
 
@@ -159,7 +159,8 @@ Digging through [Android
 guidelines](https://developer.android.com/guide/practices/ui_guidelines/icon_design_status_bar.html)
 the recommended size is 24px multiplied by the device pixel ratio.
 
-Meaning an image of >= 72px should be good (assuming a max device pixel ratio of 3).
+Meaning an image of 72px or more should be good (assuming a max device
+pixel ratio of 3).
 
 ### Image
 
@@ -174,11 +175,11 @@ useful to display a preview image to the user.
 
 On desktop the notification will look like this:
 
-![Notification with Image on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-image.png){: .center-image }
+![Notification with image on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-image.png){: .center-image }
 
 On Android the cropping and ratio are different.
 
-![Notification with Image on Chrome for Android.](./images/notification-screenshots/mobile/chrome-image.png){: .center-image }
+![Notification with image on Chrome for Android.](./images/notification-screenshots/mobile/chrome-image.png){: .center-image }
 
 Given the differences in ratio between desktop and mobile it's extremely hard to suggest
 guidelines.
@@ -191,7 +192,8 @@ On Android, the only [guideline
 width](https://code.google.com/p/android/issues/detail?id=36744) I could find is a width of
 450dp.
 
-Using this guideline, an image of width >= 1350px would be a good bet.
+Using this guideline, an image of width 1350px or more would be a good
+bet.
 
 ### Actions
 
@@ -236,7 +238,7 @@ You can defined `actions` to display buttons with a notification.
 
 At the time of writing only Chrome and Opera for Android support actions.
 
-![Notification with Actions on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-actions.png){: .center-image }
+![Notification with actions on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-actions.png){: .center-image }
 
 For each action you can define a title, an "action" (which is essentially an ID) and an icon.
 The title and icon is what you can see in the notification. The ID is used when detecting that
@@ -250,7 +252,7 @@ On desktop the action button icons display their colors (See the pink doughtnut 
 
 On Android Marshmallow the icons are colored to match the system color scheme:
 
-![Notification with Actions on Chrome for Android.](./images/notification-screenshots/mobile/chrome-actions-m.png){: .center-image }
+![Notification with actions on Chrome for Android.](./images/notification-screenshots/mobile/chrome-actions-m.png){: .center-image }
 
 Chrome will hopefully change it's behavior on desktop to match android (i.e. apply the
 appropriate color scheme to make the icons match the system look and feel). In the meantime you can
@@ -287,32 +289,15 @@ to layout options like actions, but I saw no difference.
 Probably best to define if you can, otherwise the browser should do the right thing according
 to the text supplied.
 
-        const title = 'المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل
-    لتكتشف حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن
-    بفضل هؤ.';
-        const options = {
-          body: 'المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل لتكتشف
-    حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن بفضل هؤ.',
-          dir: 'rtl',
-          actions: [{
-            title: 'الصف 1 العمود 1',
-            action: 'action-1'
-          }, {
-            title: 'الصف 1 العمود 2',
-            action: 'action-2'
-          }]
-        };
-        registration.showNotification(title, options);
-
 The parameter should be set to either `auto`, `ltr` or `rtl`.
 
 A right-to-left language used on Chrome on Linux looks like this:
 
-![Notification with Right-to-Left Language on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-rtl.png){: .center-image }
+![Notification with right-to-left language on Chrome on Linux.](./images/notification-screenshots/desktop/chrome-rtl.png){: .center-image }
 
 On Firefox (while hovering over it) you'll get this:
 
-![Notification with Right-to-Left Language on Firefox on Linux.](./images/notification-screenshots/desktop/firefox-rtl-expanded.png){: .center-image }
+![Notification with right-to-left language on Firefox on Linux.](./images/notification-screenshots/desktop/firefox-rtl-expanded.png){: .center-image }
 
 ### Vibrate
 
@@ -338,7 +323,7 @@ This only affects devices that support vibration.
 
 The sound parameter allows you to define a sound to play when the notification is received.
 
-Sadly, at the time of writing no browser has support for this option.
+At the time of writing no browser has support for this option.
 
         const title = 'Sound Notification';
         const options = {
@@ -348,8 +333,8 @@ Sadly, at the time of writing no browser has support for this option.
 
 ### Timestamp
 
-Timestamp allows you to tell the platform the time the notification was intended for (i.e. when
-the event the notification relates to occurred).
+Timestamp allows you to tell the platform the time when an event occurred
+that resulted in the push notification being sent.
 
 The `timestamp` should be the number of milliseconds since 00:00:00 UTC, which is
 1 January 1970 (i.e. the unix epoch).
