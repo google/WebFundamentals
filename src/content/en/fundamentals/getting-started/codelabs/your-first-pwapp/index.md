@@ -625,7 +625,7 @@ Check out the `else` clause in `app.getForecast()` to understand why the app is 
 
 The next step is to modify the app and service worker logic to be able to cache weather data, and return the most recent data from the cache when the app is offline.
 
-__Tip:__ To start fresh and clear all saved data (`localStoarge`, `indexedDB` data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
+__Tip:__ To start fresh and clear all saved data (`localStorage`, `indexedDB` data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
 
 [TRY IT](https://weather-pwa-sample.firebaseapp.com/step-06/)
 
