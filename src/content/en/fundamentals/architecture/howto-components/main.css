@@ -76,7 +76,9 @@ ul.literate li.blockcomment {
 ul.literate li.blockcomment:first-of-type {
   border-top: none;
 }
-
+ul.literate li.empty {
+  display: none;
+}
 ul.literate > li > .literate-text,
 ul.literate > li > .literate-code {
   padding: 1em;
@@ -119,15 +121,11 @@ ul.literate > li:last-of-type > .literate-text {
   ul.literate > li:last-of-type > .literate-text {
     padding-bottom: 0;
   }
-  ul.literate > li:first-of-type > code,
-  ul.literate > li:first-of-type > .literate-text {
-    padding-top: 0em;
-  }
   ul.literate .literate-text.empty {
     display: none;
   }
   ul.literate .literate-text.empty + code {
-    padding-top: 0;
+    padding-top: 1em;
   }
   ul.literate li.blockcomment {
     border-top: 1px solid transparent;
