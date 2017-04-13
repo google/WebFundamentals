@@ -40,7 +40,7 @@ gulp.task('build:showcase', function() {
   var startPath = path.join(GLOBAL.WF.src.content, 'showcase');
   var patterns = ['**/*.md', '!tags/*', '!**/index.md'];
   var files = wfHelper.getFileList(startPath, patterns);
-  files.sort(wfHelper.publishedComparator);
+  files.sort(wfHelper.updatedComparator);
   wfTemplateHelper.generateIndex(files, options);
   wfTemplateHelper.generateFeeds(files, options);
   options.outputPath = path.join(baseOutputPath, 'tags');
@@ -72,6 +72,25 @@ gulp.task('build:http203Podcast', function() {
     section: 'shows',
     outputPath: baseOutputPath,
     baseUrl: 'https://developers.google.com/web/shows/http203/podcast/'
+  };
+  var files = wfHelper.getFileList(baseOutputPath, ['*.md', '!index.md']);
+  files.sort(wfHelper.updatedComparator);
+  wfTemplateHelper.generateListPage(files, options);
+  wfTemplateHelper.generatePodcastFeed(files, options);
+});
+
+gulp.task('build:DVDPodcast', function() {
+  var src = 'shows/designer-vs-developer/podcast/';
+  var baseOutputPath = path.join(GLOBAL.WF.src.content, src);
+  var options = {
+    title: 'Designer Vs Developer',
+    subtitle: 'A show that tries to solve the challenges faced in industry by having an open conversation between the two.',
+    author: {name: 'Mustafa Kurtuldu', email: 'mustafa.kurtuldu@gmail.com'},
+    summary: 'A show that tries to solve the challenges faced in industry by having an open conversation between the two.',
+    image: 'https://developers.google.com/web/shows/designer-vs-developer/podcast/images/dvd-series-cover.jpg',
+    section: 'shows',
+    outputPath: baseOutputPath,
+    baseUrl: 'https://developers.google.com/web/shows/designer-vs-developer/podcast/'
   };
   var files = wfHelper.getFileList(baseOutputPath, ['*.md', '!index.md']);
   files.sort(wfHelper.updatedComparator);
@@ -120,14 +139,12 @@ gulp.task('build:updates', function() {
     options.title = year;
     wfTemplateHelper.generateTOCbyMonth(filesByYear[year], options);
   });
+  options = {
+    outputPath: GLOBAL.WF.src.content,
+    articlesToShow: 2
+  }
+  wfTemplateHelper.generateLatestWidget(files, options);
 });
-
-gulp.task('build:codelabs', function() {
-  var startPath = path.join(GLOBAL.WF.src.content, 'fundamentals/getting-started/codelabs');
-  wfCodeLabHelper.migrate(startPath);
-});
-
-gulp.task('build:sitelevel', function() {});
 
 gulp.task('build', function(cb) {
   runSequence(
@@ -137,8 +154,9 @@ gulp.task('build', function(cb) {
       'build:showcase',
       'build:shows',
       'build:http203Podcast',
+      'build:DVDPodcast',
       'build:tools',
       'build:updates'
     ],
-    'build:sitelevel', cb);
+    cb);
 });

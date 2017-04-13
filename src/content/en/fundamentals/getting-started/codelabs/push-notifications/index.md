@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab you'll how to add push notifications to your web app.
 
-{# wf_updated_on: 2017-01-31T18:54:09Z #}
+{# wf_auto_generated #}
+{# wf_updated_on: 2017-03-06T17:23:24Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -44,7 +45,7 @@ Push messaging provides a simple and effective way to re-engage with your users 
 
 You can get the sample code for this code by either downloading the zip here:
 
-[Link](https://github.com/googlechrome/push-notifications/archive/master.zip)
+[Download source code](https://github.com/googlechrome/push-notifications/archive/master.zip)
 
 or by cloning this git repo:
 
@@ -56,7 +57,7 @@ If you downloaded the source as a zip, unpacking it should give you a root folde
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
+[Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
 
@@ -82,15 +83,15 @@ Then stop and restart the server by sliding the toggle labeled "Web Server: STAR
 
 Now visit your site in your web browser (by clicking on the highlighted Web Server URL) and you should see a page that looks like this:
 
-![49b343a07e2c92d.png](img/49b343a07e2c92d.png)
+![4525ec369fc2ae47.png](img/4525ec369fc2ae47.png)
 
-### Always update the service worker
+### Always update the s__ervice worker__
 
 During development it's helpful to ensure your service worker is always up to date and has the latest changes.
 
 To set this up in Chrome, open DevTools (Right Click > Inspect) and go to the __Application__ panel, click the __Service Workers__ tab and check the __Update on Reload__ checkbox. When this checkbox enabled the service worker is forcibly updated every time the page reloads.
 
-![d670cb813f3a7575.png](img/d670cb813f3a7575.png)
+![6b698d7c7bbf1bc0.png](img/6b698d7c7bbf1bc0.png)
 
 
 ## Register a Service Worker
@@ -133,7 +134,7 @@ Check your changes by opening the URL __127.0.0.1:8887__ in the browser.
 
 Open Chrome DevTools to check the console for `Service Worker is registered`, like so:
 
-![d712c8726928ca4.png](img/d712c8726928ca4.png)
+![de3ceca91043d278.png](img/de3ceca91043d278.png)
 
 ### Get Application Server Keys
 
@@ -215,7 +216,7 @@ navigator.serviceWorker.register('sw.js')
 
 Open up your web app and you should see the ‘Enable Push Messaging' button is now enabled (you can click it) and you should see ‘User is NOT subscribed.' in the console.
 
-![b9787463acb7e3fb.png](img/b9787463acb7e3fb.png)
+![15f6375617c11974.png](img/15f6375617c11974.png)
 
 When we progress through the rest of the code lab you should see the button text change when the user subscribed / un-subscribed.
 
@@ -354,11 +355,11 @@ function updateSubscriptionOnServer(subscription) {
 
 If you go back to your web app and try clicking the button you should see a permission prompt like this:
 
-![5b8a7e9905f2237b.png](img/5b8a7e9905f2237b.png)
+![227cea0abe03a5b4.png](img/227cea0abe03a5b4.png)
 
 If you grant the permission you should see the console print "User is subscribed.", the button's text will change to ‘Disable Push Messaging'  and you'll be able to view the subscription as JSON at the bottom of the page.
 
-![55a8185dcec3a71a.png](img/55a8185dcec3a71a.png)
+![8fe2b1b110f87b34.png](img/8fe2b1b110f87b34.png)
 
 
 ## Handle Permission Denied
@@ -395,11 +396,11 @@ We know that if the permission is `denied`, then the user can't be subscribed an
 
 Since we've already granted permission for our web app from the previous step we need to click the __i__ in a circle in the URL bar and change the notifications permission to  *Use global default (Ask)* .
 
-![c69f7428408c5bbc.png](img/c69f7428408c5bbc.png)
+![8775071d7fd66432.png](img/8775071d7fd66432.png)
 
 After you've changed this setting, refresh the page and click the  *Enable Push Messaging*  button and this time select  *Block*  on the permission dialog. The button text will now be  *Push Messaging Blocked*  and be disabled.
 
-![e36f921fa7598419.png](img/e36f921fa7598419.png)
+![2b5314607196f4e1.png](img/2b5314607196f4e1.png)
 
 With this change we can now subscribe the user and we're taking care of the possible permission scenarios.
 
@@ -468,7 +469,7 @@ With our push event in the service worker we can test what happens when a messag
 
 In your web app, subscribe to push messaging, making sure you have  *User IS subscribed*  in your console, then go to the  *Application*  panel in DevTools and under the  *Service Workers*  tab click on the  *Push*  link under your service worker.
 
-![c0fab1022906d01f.png](img/c0fab1022906d01f.png)
+![2b089bdf10a8a945.png](img/2b089bdf10a8a945.png)
 
 Once you've clicked it you should see a notification like this:
 
@@ -530,19 +531,19 @@ Normally the process for this would be sending a subscription from a web page to
 
 This is out of scope for this codelab, but you can use the companion site ( [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) for this code lab to trigger an actual push message. Copy and paste the subscription at the bottom of your page:
 
-![cb84e05044ad029f.png](img/cb84e05044ad029f.png)
+![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
 Then paste this into the companion site in the  *Subscription to Send To*  text area:
 
-![e320ddd1b66682e6.png](img/e320ddd1b66682e6.png)
+![a12fbfdc08233592.png](img/a12fbfdc08233592.png)
 
 Then under  *Text to Send*  you can add any string you want to send with the push message and finally click the  *Send Push Message*  button.
 
-![3c5c0d5d1c3deda4.png](img/3c5c0d5d1c3deda4.png)
+![2973c2b818ca9324.png](img/2973c2b818ca9324.png)
 
 You should then receive a push message and the text you included will be printed to the console.
 
-![fdedaa6d10e2f43e.png](img/fdedaa6d10e2f43e.png)
+![75b1fedbfb7e0b99.png](img/75b1fedbfb7e0b99.png)
 
 This should give you a chance to test out sending and receiving data and manipulate notifications as a result.
 
@@ -633,7 +634,7 @@ Calling `unsubscribe()` returns a promise as it can take some time to complete, 
 
 You should be able to press the  *Enable Push Messaging*  /  *Disable Push Messaging*   in your web app and the logs will show the user being subscribed and unsubscribed.
 
-![e9c3b85838d190cb.png](img/e9c3b85838d190cb.png)
+![33dd89c437c17c97.png](img/33dd89c437c17c97.png)
 
 
 ## Finished

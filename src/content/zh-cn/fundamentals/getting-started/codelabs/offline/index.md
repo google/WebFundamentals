@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Service workers 是运行在后台的脚本，它为 web 应用开启了一扇们，可以使用到通常只有原生应用才有的离线功能。学习如何将 service worker 集成入现有的应用中，使其能够离线工作。
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2000-01-01 #}
 
@@ -152,7 +153,7 @@ Horner](https://airhorner.com)。它是 Web Audio API 来播放并操作汽笛�
 
 为了安全，一个 service worker 只能控制与它相同目录或者相同目录下子目录中的页面。这意味着如果你将 service worker 放在 scripts 目录下，它只会作用于 `/scripts` 目录，以及 scripts 中的子目录（比如：`/scripts/test/`)。你的应用应该不会只存在于那么。
 
-## 按装应用资源
+## 安装应用资源
 
 
 

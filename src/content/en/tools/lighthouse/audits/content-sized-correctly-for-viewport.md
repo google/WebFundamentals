@@ -30,3 +30,6 @@ You can ignore this audit if:
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 The audit passes if `window.innerWidth === window.outerWidth`.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/content-sized-correctly-for-viewport.html" %}

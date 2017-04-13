@@ -1,65 +1,66 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Manipuladores de entrada são uma possível causa de problemas em seus aplicativos, pois eles podem bloquear a conclusão de frames e causar trabalho extra (e desnecessário) com layout.
+description: Os gerenciadores de entrada são uma possível causa de problemas de desempenho nos aplicativos, pois podem bloquear a conclusão de quadros e provocar atividades adicionais e desnecessárias de layout.
 
+{# wf_updated_on: 2015-10-06 #}
+{# wf_published_on: 2015-03-20 #}
 
-{# wf_updated_on: 2015-03-19 #}
-{# wf_published_on: 2000-01-01 #}
-
-# Atrase seus manipuladores de entrada {: .page-title }
+# Rejeição de ruído (debouncing) nos gerenciadores de entrada {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-
-Manipuladores de entrada são uma possível causa de problemas em seus aplicativos, pois eles podem bloquear a conclusão de frames e causar trabalho extra (e desnecessário) com layout.
+Os gerenciadores de entrada são uma possível causa de problemas de desempenho
+nos aplicativos, pois podem bloquear a conclusão de quadros e gerar mais atividades de layout do que
+o necessário.
 
 ### TL;DR {: .hide-from-toc }
-- Evite manipuladores de entrada de longa execução; eles podem bloquear a rolagem.
-- Não faça mudanças de estilo nos manipuladores de entrada.
-- Atrase seus manipuladores; armazene valores de evento e lide com as mudanças de estilo no próximo retorno de chamada requestAnimationFrame.
 
+* Evite gerenciadores de entrada com execução longa: eles podem bloquear a rolagem.
+* Não faça mudanças de estilo nos gerenciadores de entrada.
+* Rejeite ruído nos gerenciadores: armazene valores de evento e trate as mudanças de estilo no próximo retorno de chamada de requestAnimationFrame.
 
-## Evite manipuladores de entrada de longa execução
+## Evite gerenciadores de entrada com execução longa
 
-No caso mais rápido possível, quando um usuário interage com a página, o thread compositor da página pode pegar a entrada de toque do usuário e simplesmente mover o conteúdo. Isso não exige trabalho do thread principal, onde o JavaScript, layout, estilos e pintura são realizados.
+No caso mais rápido possível, quando um usuário interage com a página, o thread compositor da página pode pegar a entrada de toque do usuário e simplesmente mover o conteúdo. Isso não exige trabalho do encadeamento principal, onde são executados JavaScript, layout, estilos e coloração.
 
-<img src="images/debounce-your-input-handlers/compositor-scroll.jpg" class="center" alt="Rolagem leve; somente compositor.">
+<img src="images/debounce-your-input-handlers/compositor-scroll.jpg" alt="Rolagem leve; somente compositor.">
 
-No entanto, se você anexar um manipulador de entrada como o `touchstart`, `touchmove` ou `touchend`, o thread do compositor deve aguardar que esse manipulador termine de executar porque você pode escolher chamar `preventDefault()` e evitar que a rolagem do toque aconteça. Mesmo se você não chamar `preventDefault()`, o compositor deve aguardar e, como a rolagem do usuário é bloqueada, pode resultar em oscilação e frames ausentes.
+No entanto, se você anexar um gerenciador de entrada como `touchstart`, `touchmove` ou `touchend`, o thread do compositor deve aguardar o término da execução do gerenciador, pois você pode optar por chamar `preventDefault()` e evitar que a rolagem do toque ocorra. Mesmo se você não chamar `preventDefault()`, o compositor deve aguardar e, como a rolagem do usuário é bloqueada, pode resultar em oscilação e quadros ausentes.
 
-<img src="images/debounce-your-input-handlers/ontouchmove.jpg" class="center" alt="Rolagem pesada; o compositor está bloqueado no JavaScript.">
+<img src="images/debounce-your-input-handlers/ontouchmove.jpg" alt="Rolagem pesada; o compositor está bloqueado no JavaScript.">
 
-Resumidamente, certifique-se de que qualquer manipulador de entrada executado funcione rapidamente e permita que o compositor desempenhe sua função.
+Resumindo, verifique se todos os gerenciadores de entrada usados são executados rapidamente e permitem que o compositor faça seu trabalho.
 
-## Evite mudanças de estilo nos manipuladores de entrada
+## Evite mudanças de estilo nos gerenciadores de entrada
 
-Manipuladores de entrada, como aqueles para rolagem e toque, são programados para executar logo antes de qualquer retorno de chamada `requestAnimationFrame`.
+Os gerenciadores de entrada, como os usados na rolagem e no toque, são agendados para executar logo antes de qualquer retorno de chamada do `requestAnimationFrame`.
 
-Se você realizar uma mudança visual dentro de um desses manipuladores, no início do `requestAnimationFrame`, haverá mudanças de estilo pendentes. Se ler as propriedades visuais no início do retorno de chamada requestAnimationFrame, conforme “[Evite layouts grandes, complexos e extravagantes](avoid-large-complex-layouts-and-layout-thrashing)” sugere, você acionará um layout sincronizado forçado!
+Se você fizer uma mudança visual dentro de um desses gerenciadores, haverá mudanças de estilo pendentes no início do `requestAnimationFrame`. Se você ler _nesse momento_ as propriedades visuais no início do retorno de chamada do requestAnimationFrame, como sugerido em "[Evite layouts grandes e complexos e a troca frequente de layouts](avoid-large-complex-layouts-and-layout-thrashing)", acionará um layout síncrono forçado!
 
-<img src="images/debounce-your-input-handlers/frame-with-input.jpg" class="center" alt="Rolagem pesada; o compositor está bloqueado no JavaScript.">
+<img src="images/debounce-your-input-handlers/frame-with-input.jpg" alt="Rolagem pesada; o compositor está bloqueado no JavaScript.">
 
-## Atrase seus manipuladores de rolagem
+## Retarde os gerenciadores de rolagem
 
-A solução para ambos os problemas acima é a mesma: atrase as mudanças visuais para o próximo retorno de chamada `requestAnimationFrame`:
+A solução para ambos os problemas acima é a mesma: retarde sempre as alterações visuais para o próximo retorno de chamada do `requestAnimationFrame`:
 
 
     function onScroll (evt) {
-    
+
       // Store the scroll value for laterz.
       lastScrollY = window.scrollY;
-    
+
       // Prevent multiple rAF callbacks.
       if (scheduledAnimationFrame)
         return;
-    
+
       scheduledAnimationFrame = true;
       requestAnimationFrame(readAndUpdatePage);
     }
-    
+
     window.addEventListener('scroll', onScroll);
-    
-
-Esta ação tem a vantagem extra de manter seus manipuladores de entrada leves, o que é ótimo porque agora não bloqueará elementos como a rolagem ou o toque em um código computacional caro!
 
 
+Esse retardo oferece o benefício adicional de manter os gerenciadores de entrada leves, o que é muito bom porque ações como rolagem ou toque não são mais bloqueadas em código com alto custo computacional!
+
+
+{# wf_devsite_translation #}

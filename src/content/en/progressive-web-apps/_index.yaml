@@ -53,7 +53,7 @@ landing_page:
           state.
         </p>
         <p>
-          A service worker is like a client-side proxy, written in JavaScript
+          A service worker, written in JavaScript, is like a client-side proxy
           and puts you in control of the cache and how to respond to resource
           requests. By pre-caching key resources you can eliminate the
           dependence on the network, ensuring an instant and reliable
@@ -71,8 +71,8 @@ landing_page:
     - heading: Fast
       description: >
         53% of users will abandon a site if it takes longer than 3 seconds to
-        load! And once loaded, they expect them to be fast, no janky scrolling
-        or slow to respond interfaces.
+        load! And once loaded, users expect them to be fast—no janky scrolling
+        or slow-to-respond interfaces.
       image_path: images/pwa-fast.png
       buttons:
       - label: Learn More
@@ -84,7 +84,7 @@ landing_page:
     - heading: Engaging
       description: >
         <p>
-          Progressive Web Apps are installable and live on the users
+          Progressive Web Apps are installable and live on the user's
           <b>home screen</b>, without the need for an app store. They
           offer an <b>immersive full screen</b> experience with help from a
           web app manifest file and can even re-engage users with web
@@ -92,10 +92,9 @@ landing_page:
         </p>
         <p>
           The Web App Manifest allows you to control how your app appears and
-          how it's launched. You can specify icons for the home screen and
-          splash screen which is shown while the app is loading. Which page
-          is loaded when the app is launched, screen orientation, even
-          whether to show the browser chrome or not.
+          how it's launched. You can specify home screen icons, the page to load
+          when the app is launched, screen orientation, and even whether or not
+          to show the browser chrome.
         </p>
       image_path: images/pwa-engaging.png
       image_left: True
@@ -123,7 +122,7 @@ landing_page:
               <a href="/web/fundamentals/engage-and-retain/app-install-banners/">
               Worthy of being on the home screen</a><br>
               When the Progressive Web App criteria are met, Chrome prompts
-              users to add the Progressive Web Apps to their home screen.
+              users to add the Progressive Web App to their home screen.
             </li>
             <li>
               <a href="/web/showcase/2016/konga">
@@ -146,7 +145,7 @@ landing_page:
               <a href="/web/showcase/2016/aliexpress">Improved conversions</a><br>
               The ability to deliver an amazing user experience helped AliExpress
               improve conversions for new users across all browsers by 104%
-              and an 82% increase for iOS conversions.
+              and on iOS by 82%.
             </li>
           </ul>
 
@@ -155,10 +154,10 @@ landing_page:
     items:
     - heading: Lighthouse
       description: >
-          Lighthouse is an open-source, automated tool for improving the
-          quality of your Progressive Web Apps, and eliminates much of the
-          manual testing that was previously required. You can even integrate
-          Lighthouse into continuous integration systems to catch regressions.
+          Lighthouse, an open-source, automated tool for improving the
+          quality of your Progressive Web Apps, eliminates much of the
+          manual testing that was previously required. You can even use
+          Lighthouse in continuous integration systems to catch regressions.
       image_path: images/pwa-lighthouse.png
 
       buttons:
@@ -181,7 +180,7 @@ landing_page:
             <li>
               <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb">
                 Progressive Web App Dev Summit Videos
-              </a><br>Videos and behind the scenes insight from the first ever PWA summit.
+              </a><br>Videos and behind-the-scenes insight from the first-ever PWA summit.
             </li>
             <li>
               <a href="/web/fundamentals/security/encrypt-in-transit/why-https">
@@ -221,7 +220,7 @@ landing_page:
   - classname: devsite-landing-row-cta
     items:
     - heading: Start developing today
-      description: Write your first Progressive Web App with our step by step code lab.
+      description: Write your first Progressive Web App with our step-by-step code lab.
       buttons:
       - label: Get started
         path: https://g.co/codelabs/pwa

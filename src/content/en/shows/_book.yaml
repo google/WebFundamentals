@@ -16,6 +16,7 @@ upper_tabs:
         - title: New in Chrome
           path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m
           status: external
+        - include: /web/shows/designer-vs-developer/_toc.yaml
         - include: /web/shows/ttt/_toc.yaml
         - title: A11ycasts with Rob Dodson
           path: https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g

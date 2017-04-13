@@ -35,8 +35,8 @@ best to ahear to these guideslines.
 ## Heading 2 {: #heading-what-what }
 
 Caution: If you plan to link to specific headings
-[`<a href="#heading-what-what">`](#heading-what-what) within your document, it
-is **strongly** recommended you define them yourself with the 
+[`&lt;a href="#heading-what-what"&gt;`](#heading-what-what) within your document,
+it is **strongly** recommended you define them yourself with the 
 `{: #anchor-name }` syntax. This ensures that when documents are localized,
 the anchor will still work, but also ensures that any difference between 
 Markdown processors are a non-issue.
@@ -299,10 +299,10 @@ Dogfood: This type of callout is for notes that apply temporarily during interna
 <p><span class="compare-worse">Not recommended</span> — indent with tabs</p>
 <pre class="prettyprint">(bad sample code)</pre>
 
-<p><span class="compare-better">Recommended</span> — indend with spaces</p>
+<p><span class="compare-better">Recommended</span> — indent with spaces</p>
 <pre class="prettyprint">(good sample code)</pre>
 
-<p><span class="compare-no">Not allowed</span> — indend with spaces</p>
+<p><span class="compare-no">Not allowed</span> — indent with spaces</p>
 <pre class="prettyprint">(very bad sample code)</pre>
 
 ## Lists

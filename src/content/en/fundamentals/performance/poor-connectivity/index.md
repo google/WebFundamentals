@@ -23,9 +23,15 @@ When building or updating a site, you must ensure adequate performance in a vari
 
 #### Browser tools
 
-The [Chrome DevTools](/web/tools/chrome-devtools/network-performance/network-conditions) enable you to test your site with a variety of upload/download speeds and [round-trip times](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/), using presets or custom settings from the Chrome DevTools Network panel:
+[Chrome DevTools](/web/tools/chrome-devtools) lets you test your site with a
+variety of upload/download speeds and [round-trip times][rtt], using presets
+or custom settings from the Network panel. See [Get Started with Analyize
+Network Performance](/web/tools/chrome-devtools/network-performance) to
+learn the basics.
 
 ![Chrome DevTools throttling](images/chrome-devtools-throttling.png)
+
+[rtt]: https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/
 
 #### System tools
 

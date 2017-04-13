@@ -43,6 +43,8 @@ and will be rolling out to Chrome 57 beta over the next few weeks.
 
 **You can test your site by following these steps:**
 
+Warning: These instructions are for web developers only. You should not enable "Unknown sources" unless you're testing your own site.
+
 1. Install the latest [Chrome
    Dev](https://play.google.com/store/apps/details?id=com.chrome.dev) or [Chrome
    Beta](https://play.google.com/store/apps/details?id=com.chrome.beta) from the
@@ -185,8 +187,7 @@ Some examples:
 |  /manifest.json | ./tech-today/index.html | undefined | / | /tech-today/index.html | valid - broad scope |
 |  /manifest.json | /tech-today/index.html | tech-today | /tech-today/ | /tech-today/index.html | valid - tight scope |
 
-Note: The `scope` attribute is still being specified and implemented in Chrome
-
+Note: The `scope` attribute is still being specified and implemented in Chrome.
 
 ## Managing permissions
 

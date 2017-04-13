@@ -36,3 +36,6 @@ implement and test "Add to Homescreen" support in your app.
 Audit passes if the manifest contains either `short_name` or `name` property.
 The manifest that Lighthouse fetches is separate from the one that Chrome is
 using on the page, which can possibly cause inaccurate results.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/manifest-contains-short_name.html" %}

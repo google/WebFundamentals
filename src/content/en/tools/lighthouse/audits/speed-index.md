@@ -33,3 +33,6 @@ The target score is computed by a cumulative distribution function of a
 log-normal distribution. Check out the comments in the
 [source](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/speed-index-metric.js)
 of the audit if you need to know more.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/speed-index.html" %}

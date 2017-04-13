@@ -17,8 +17,9 @@ var RE_TAGS = /^{#\s?wf_tags:\s?(.*?)\s?#}\s?\n/m;
 var RE_SNIPPET = /^{#\s?wf_featured_snippet:\s?(.*?)\s?#}\s?\n/m;
 
 var RE_TITLE = /^# (.*) {: \.page-title\s?}/m;
+var RE_TITLE_CLASS = /{:\s?\.page-title\s?}/gm;
 
-var RE_AUTHOR_LIST = /^{%\s?include "web\/_shared\/contributors\/.*?\.html"\s?%}\s?\n/gm;
+var RE_AUTHOR_LIST = /^{%\s?include "web\/_shared\/contributors\/(.*?)\.html"\s?%}\s?\n/gm;
 var RE_AUTHOR_KEY = /\/contributors\/(.*)\.html"/;
 
 var RE_PODCAST = /^{#\s?wf_podcast_audio: (.*?) #}\s?\n/m;
@@ -26,10 +27,13 @@ var RE_PODCAST_DURATION = /^{#\s?wf_podcast_duration: (.*?)\s?#}\s?\n/m;
 var RE_PODCAST_SUBTITLE = /^{#\s?wf_podcast_subtitle: (.*?)\s?#}\s?\n/m;
 var RE_PODCAST_SIZE = /^{#\s?wf_podcast_fileSize: (.*?)\s?#}\s?\n/m;
 
+var RE_INCLUDE_MD = /^<<(.*?)>>/gm;
 var RE_INCLUDE_FILE = /["|'](.*)["|']/;
-var RE_INCLUDES = /^{%\s?include .*\s?%}/gm;
+var RE_INCLUDES = /^{%\s?include ["|'](.*)["|']\s?%}/gm;
 
 var RE_MD_INCLUDE = /^{#\s?wf_md_include\s?#}/m;
+var RE_AUTO_GENERATED = /^{#\s?wf_auto_generated\s?#}/m;
+var RE_DEVSITE_TRANSLATION = /^{# wf_devsite_translation #}/m;
 
 
 function getMatch(regEx, content, defaultResponse) {
@@ -40,13 +44,24 @@ function getMatch(regEx, content, defaultResponse) {
   return defaultResponse;
 }
 
+function getMatches(regEx, content) {
+  let results = [];
+  let myArray;
+  while((myArray = regEx.exec(content)) !== null) {
+    results.push(myArray);
+  }
+  return results;
+}
+
 exports.getMatch = getMatch;
+exports.getMatches = getMatches;
 exports.RE_BOOK_PATH = RE_BOOK_PATH;
 exports.RE_PROJECT_PATH = RE_PROJECT_PATH;
 exports.RE_UPDATED_ON = RE_UPDATED;
 exports.RE_PUBLISHED_ON = RE_PUBLISHED;
 exports.RE_DESCRIPTION = RE_DESCRIPTION;
 exports.RE_TITLE = RE_TITLE;
+exports.RE_TITLE_CLASS = RE_TITLE_CLASS;
 exports.RE_TAGS = RE_TAGS;
 exports.RE_IMAGE = RE_IMAGE;
 exports.RE_SNIPPET = RE_SNIPPET;
@@ -58,5 +73,7 @@ exports.RE_PODCAST_SUBTITLE = RE_PODCAST_SUBTITLE;
 exports.RE_PODCAST_SIZE = RE_PODCAST_SIZE;
 exports.RE_MD_INCLUDE = RE_MD_INCLUDE;
 exports.RE_INCLUDES = RE_INCLUDES;
+exports.RE_INCLUDE_MD = RE_INCLUDE_MD;
 exports.RE_INCLUDE_FILE = RE_INCLUDE_FILE;
-
+exports.RE_AUTO_GENERATED = RE_AUTO_GENERATED;
+exports.RE_DEVSITE_TRANSLATION = RE_DEVSITE_TRANSLATION;

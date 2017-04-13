@@ -23,7 +23,7 @@ book_path: /web/updates/_book.yaml
 <figure><a href="http://eligrey.com/demos/FileSaver.js/"><img style="border:1px solid #ccc;max-width: 100%;" src="/web/updates/images/2011/08/saving-generated-files/filesaverss.png">
 <figcaption>View FileSaver.js demo</figcaption></a></figure>
 
-<h2>How to construct files for saving</h2>
+## How to construct files for saving
 
 <p>First off, you want to instantiate a <a href="https://developer.mozilla.org/en/DOM/BlobBuilder"><code>BlobBuilder</code></a>. The <code>BlobBuilder</code> API isn't supported in all current browsers, so I made <a href="https://github.com/eligrey/BlobBuilder.js">BlobBuilder.js</a> which implements it. The following example illustrates how to save an XHTML document with <code>saveAs()</code>.</p>
 

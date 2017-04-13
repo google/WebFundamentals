@@ -34,3 +34,6 @@ Lighthouse reports every instance of `document.write()` that it encounters.
 Note that Chrome's intervention against `document.write()` only applies to
 render-blocking, dynamically-injected scripts. Other uses of `document.write()`
 may be acceptable.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/document-write.html" %}

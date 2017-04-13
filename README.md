@@ -1,7 +1,8 @@
 # Web Fundamentals on DevSite 
 
-Welcome to the new Web**Fundamentals**! <master> [![Build Status](https://ci.cloudware.io/api/badges/google/WebFundamentals/status.svg)](https://ci.cloudware.io/google/WebFundamentals)
-An effort to showcase best practices and tools for modern Web Development. 
+[![Build Status](https://travis-ci.org/google/WebFundamentals.svg?branch=master)](https://travis-ci.org/google/WebFundamentals)
+
+Welcome to the new Web**Fundamentals**! An effort to showcase best practices and tools for modern Web Development. 
 
 
 ### What's changed?

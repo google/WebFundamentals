@@ -1,30 +1,29 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Aprenda a lograr que sus animaciones sean suaves pero interesantes.
+description: Aprende a suavizar tus animaciones y lograr que sean interesantes.
 
-{# wf_updated_on: 2014-10-20 #}
+{# wf_updated_on: 2016-08-23 #}
 {# wf_published_on: 2014-08-08 #}
 
-# Principios básicos de la aceleración {: .page-title }
+# Aspectos básicos de la aceleración {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-
-Nada de lo que se encuentra en la naturaleza se mueve de forma lineal desde un punto hacia otro. En la realidad, los objetos tienden a acelerar o desacelerar a medida que se mueven. Nuestros cerebros están configurados para esperar este tipo de movimiento, por lo que, al realizar animaciones, debe utilizar esto a su favor. Si los movimientos son naturales, los usuarios se sentirán más cómodos con sus aplicaciones, lo que, a su vez, derivará en una mejor experiencia general.
+Nada de lo que se encuentra en la naturaleza se mueve de forma lineal de un punto a otro. En la realidad, los objetos tienden a acelerar o desacelerar a medida que se mueven. Nuestros cerebros están configurados para esperar este tipo de movimiento. Por ello, al realizar animaciones debes sacar provecho a esto. Si los movimientos son naturales, los usuarios se sentirán más cómodos con tus apps, lo que a su vez derivará en una mejor experiencia general.
 
 ### TL;DR {: .hide-from-toc }
-- Gracias a la aceleración, sus animaciones se ven más naturales.
-- Seleccione animaciones de salida lenta para los elementos de las IU.
-- Evite las animaciones de entradas lentas o de entradas y salidas lentas, a menos que sean breves, ya que generalmente les parecen muy lentas a los usuarios finales.
+* Gracias a la aceleración, tus animaciones se ven más naturales.
+* Selecciona animaciones de salida lenta para los elementos de las IU.
+* Evita las animaciones de entrada lenta o de entrada y salida lentas, a menos que puedas hacer que sean breves, ya que generalmente resultan muy lentas para los usuarios finales.
 
 
-En la animación clásica, el término para el movimiento que comienza lentamente y luego se acelera se denomina “aceleración”, y el movimiento que comienza rápidamente y luego se desacelera se conoce como “desaceleración”, pero los términos más usados en la web son “entrada lenta” y “salida lenta”, respectivamente. A veces, las dos se combinan, lo que se denomina “entrada y salida lentas”. Por consiguiente, la aceleración es el proceso de hacer que la animación sea menos intensa o pronunciada.
+En la animación clásica, para el movimiento que comienza lentamente y luego se acelera se usa el término “aceleración”, y para el movimiento que comienza rápidamente y luego se desacelera, “desaceleración”. Los términos más usados en la web para estos conceptos son “entrada lenta” y “salida lenta”, respectivamente. A veces, ambos se combinan y se a esto se lo denomina “entrada y salida lentas”. Por consiguiente, la aceleración es el proceso de hacer que la animación sea menos intensa o pronunciada.
 
 ## Palabras clave de la aceleración
 
-Tanto las transiciones como las animaciones de las CSS (Hoja de estilos en cascada) le permiten [elegir el tipo de aceleración que desea utilizar en sus animaciones](choosing-the-right-easing). Puede utilizar las palabras clave que afectan la aceleración (o, según se denomina comúnmente, la sincronización) de la animación en cuestión. También puede [realizar una personalización completa mediante la aceleración](custom-easing), lo que le permite expresar más libremente la personalidad de su aplicación.
+Tanto las transiciones como las animaciones de las CSS te permiten [elegir el tipo de aceleración que deseas usar en tus animaciones](choosing-the-right-easing). Puedes usar palabras clave que afecten la aceleración (o `timing`, como también suele llamarse) de la animación en cuestión. También puedes [personalizar por completo la aceleración](custom-easing), lo cual le permite expresar más libremente la personalidad de tu app.
 
-A continuación, presentamos algunas de las palabras clave que puede utilizar en las CSS:
+A continuación, presentamos algunas de las palabras claves que puedes usar en las CSS:
 
 * `linear`
 * `ease-in`
@@ -33,19 +32,27 @@ A continuación, presentamos algunas de las palabras clave que puede utilizar en
 
 Fuente: [Transiciones de CSS, W3C](http://www.w3.org/TR/css3-transitions/#transition-timing-function-property)
 
-También puede utilizar la palabra clave `steps`, la cual le permite crear transiciones con pasos discretos, pero las que se mencionan arriba son las palabras clave más útiles para crear animaciones que sean naturales, y seguramente eso es lo que desea.
+También puedes usar la palabra clave `steps`, la cual te permitirá crear transiciones con pasos discretos, pero las palabras clave que se mencionan anteriormente son las más útiles para crear animaciones que resulten naturales.
 
 ## Animaciones lineales
 
+<div class="attempt-right">
+  <figure>
+    <img src="images/linear.png" alt="Curva de animación de aceleración lineal." />
+  </figure>
+</div>
+
 Las animaciones sin ningún tipo de aceleración se conocen como **lineales**. Los gráficos de las transiciones lineales se ven de la siguiente manera:
 
-<img src="images/linear.png" style="max-width: 300px" alt="Linear ease animation curve." />
+A medida que pasa el tiempo, el valor aumenta en cantidades iguales. Con el movimiento lineal, las animaciones tienden a verse robóticas y poco naturales, y esto es algo que resulta chocante para los usuarios. En términos generales, debes evitar el movimiento lineal.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html">Ver una animación lineal</a>
+Independientemente de que programes tus animaciones mediante CSS o JavaScript, descubrirás que siempre existe una opción alternativa al movimiento lineal. 
 
-A medida que pasa el tiempo, el valor aumenta en cantidades iguales. Con el movimiento lineal, las animaciones se ven robóticas y poco naturales, y esto es algo irritante para los usuarios. En términos generales, debe evitar el movimiento lineal.
+[Ver una animación lineal](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html){: target="_blank" .external }
 
-Independientemente de si codifica sus animaciones mediante CSS o JavaScript, descubrirá que siempre existe una opción para no utilizar el movimiento lineal. Para lograr el efecto que se mostró antes con las CSS, el código debería ser similar al siguiente:
+<div style="clear:both;"></div>
+
+Para lograr el efecto que se mostró antes con las CSS, el código deberá tener el siguiente aspecto:
 
 
     transition: transform 500ms linear;
@@ -54,52 +61,75 @@ Independientemente de si codifica sus animaciones mediante CSS o JavaScript, des
 
 ## Animaciones de salida lenta
 
+<div class="attempt-right">
+  <figure>
+    <img src="images/ease-out.png" alt="Curva de animación de salida lenta." />
+  </figure>
+</div>
+
 En las salidas lentas, la animación comienza más rápido que en las animaciones lineales y también presenta desaceleración al final.
 
-<img src="images/ease-out.png" style="max-width: 300px" alt="Ease-out animation curve." />
+Por lo general, la salida lenta es la mejor opción para las interfaces de usuario, ya que el inicio rápido proporciona a las animaciones una sensación de receptividad y, a la vez, permite una desaceleración natural al final.
 
-Existen muchas maneras diferentes de lograr un efecto de salida lenta, pero la más simple es usar la palabra clave `ease-out` en las CSS:
+[Ver una animación de salida lenta](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html){: target="_blank" .external }
+
+<div style="clear:both;"></div>
+
+Existen muchas maneras diferentes de lograr un efecto de salida lenta, pero la más simple es usar la palabra clave `ease-out` en la CSS:
 
 
     transition: transform 500ms ease-out;
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html">Ver una animación de salida lenta</a>
 
-Por lo general, la salida lenta es la mejor opción para el trabajo de las interfaces de usuario, ya que el inicio rápido les proporciona a las animaciones un aire de receptividad y, a su vez, sigue permitiendo el uso de un poco de desaceleración natural al final.
+## Animaciones de entrada lenta
 
-##Animaciones de entrada lenta
+<div class="attempt-right">
+  <figure>
+    <img src="images/ease-in.png" alt="Curva de animación de entrada lenta." />
+  </figure>
+</div>
 
-Las animaciones de entrada lenta comienzan lentamente y finalizan rápidamente, lo contrario de la salida lenta.
+Las animaciones de entrada lenta comienzan lentamente y finalizan rápidamente, que es lo contrario de las de salida lenta.
 
-<img src="images/ease-in.png" style="max-width: 300px" alt="Ease-in animation curve." />
+Este tipo de animaciones son como una roca pesada que cae, con un comienzo lento, un impacto rápido contra el suelo y un choque asordinado.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html">Ver una animación de entrada lenta</a>
+Sin embargo, desde el punto de vista de la interacción, las entradas lentas pueden resultar inusuales debido a su final abrupto. Los objetos que se mueven en el mundo real tienden a desacelerar en lugar de simplemente detenerse de repente. Las entradas lentas también tienen el efecto perjudicial de verse demasiado lentas al comienzo, lo cual tiene un impacto negativo en la forma de percibir la receptividad de tu sitio o tu app.
 
-Este tipo de animaciones son como una roca pesada que se cae, ya que baja lentamente y golpea contra el suelo rápidamente, con un ruido estrepitoso.
+[Ver una animación de entrada lenta](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html){: target="_blank" .external }
 
-Para utilizar una animación de entrada lenta, al igual que sucede con las animaciones lineales y de salida lenta, puede aplicar las palabras clave correspondientes:
+<div style="clear:both;"></div>
+
+Para usar una animación de entrada lenta, como en el caso de las animaciones lineales y de salida lenta, puedes aplicar las palabras claves correspondientes:
 
 
     transition: transform 500ms ease-in;
     
 
-Sin embargo, desde el punto de vista de la interacción, las entradas lentas son poco comunes debido a su final abrupto. Los objetos que se mueven en el mundo real tienden a desacelerar en lugar de, simplemente, detenerse totalmente. Las entradas lentas también poseen el efecto perjudicial de desacelerar demasiado la animación como para continuar, lo que tendrá un impacto negativo en la percepción de la receptividad de su sitio o su aplicación.
+## Animaciones de entrada y salida lentas
 
-##Animaciones de entrada y salida lenta
+<div class="attempt-right">
+  <figure>
+    <img src="images/ease-in-out.png" alt="Curva de animación de entrada y salida lentas." />
+  </figure>
+</div>
 
-El hecho de incluir tanto entradas como salidas lentas es similar a un auto que acelera y desacelera y, si se las usa juiciosamente, puede proporcionar un efecto más dramático que si solo se utilizaran salidas lentas.
+La inclusión de entradas y salidas lentas se asemeja a un auto que acelera y desacelera, y si se usan juiciosamente pueden proporcionar un efecto más dramático que el uso exclusivo de salidas lentas.
 
-<img src="images/ease-in-out.png" style="max-width: 300px" alt="Ease-in-out animation curve." />
+Evita que la duración de la animación sea demasiado prolongada, debido a la lentitud del inicio de la animación con una entrada lenta. Lo adecuado es normalmente algo entre 300 y 500 ms, pero el número exacto depende en gran medida del aspecto de tu proyecto. Dicho esto, debido al inicio lento, una sección intermedia rápida y un final lento, la animación tendrá un contraste mayor, lo cual podría ser bastante atractivo para los usuarios.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html">Ver una animación de entrada y salida lentas</a>
+[Ver una animación de entrada y salida lentas](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html){: target="_blank" .external }
 
-Aquí se debe tener precaución para que la duración de la animación no sea demasiado prolongada, con el fin de evitar la lentitud del inicio con entrada lenta de la animación. Comúnmente, las animaciones que se encuentran entre los 300 y los 500 ms serán correctas, pero el número exacto dependerá, en gran medida, de las características del proyecto. Dicho esto, si realiza un inicio lento, una sección intermedia rápida y un final lento, logrará un mayor contraste en la animación, lo que podría resultar bastante satisfactorio para los usuarios.
+<div style="clear:both;"></div>
 
-Para lograr una animación de entrada y salida lentas, puede utilizar la palabra clave `ease-in-out` de las CSS:
+
+Para lograr una animación de entrada y salida lentas, puedes usar la palabra clave `ease-in-out` de CSS:
 
 
     transition: transform 500ms ease-in-out;
     
 
 
+
+
+{# wf_devsite_translation #}

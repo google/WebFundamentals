@@ -29,22 +29,9 @@ possibilities for you to re-engage with your users.
 
 ## Latest updates for Web Developers {: .hide-from-toc }
 
-<div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="YEbtvKPvTYE"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
+{% include "web/_shared/latest_show.html" %}
 
-<div class="feed hfeed" data-limit="2">
-  <a href="https://google-developers.appspot.com/web/updates/rss.xml"></a>
-  <article class="hentry">
-    <a class="link"><header></header></a>
-    <article class="entry-content" data-truncate="50w"></article>
-    <div>
-      <a class="link"><time class="updated published"></time></a>
-    </div>
-  </article>
-</div>
+{% include "web/_shared/latest_articles.html" %}
 
 <div class="clearfix"></div>
 

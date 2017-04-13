@@ -2,6 +2,11 @@
 
 (function() {
 
+  function getCookieValue(name, defaultValue) {
+      var value = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+      return value ? value.pop() : defaultValue;
+  }
+
   function initNavToggles() {
     var elems = document
       .querySelectorAll('.devsite-section-nav .devsite-nav-item-section-expandable');
@@ -14,19 +19,8 @@
   }
 
   function initLangSelector() {
-    var currentLang = 'en';
+    var currentLang = getCookieValue('hl');
     var langSelector = document.querySelector('#langSelector');
-    var queryParams = window.location.search;
-    if (queryParams.length > 0) {
-      queryParams = queryParams.substring(1).split('&');
-      for (var i = 0; i < queryParams.length; i++) {
-        var qp = queryParams[i];
-        if (qp.indexOf('hl=') === 0) {
-          currentLang = qp.replace('hl=', '');
-          break;
-        }
-      }
-    }
     var langOptions = langSelector.querySelectorAll('option');
     langOptions.forEach(function(opt) {
       if (opt.value === currentLang) {
@@ -113,7 +107,7 @@
     var placeholderText = 'The RSS Feed Widget is <b>NOT</b> supported in the ';
     placeholderText += 'local development environment. Sorry. ';
     placeholderText += 'Lorem ipsum dolor sit amet, perfecto volutpat prodesset duo ei. Per ne albucius consulatu. Graece repudiandae ut vis. Quot omnis vix ad, prodesset consetetur persequeris ea mel. Nostrum urbanitas usu eu, qui id graeci facilisi.';
-    var feedElements = document.querySelectorAll('div.feed.hfeed');
+    var feedElements = document.querySelectorAll('div.feed.hfeed:not(.rendered)');
     feedElements.forEach(function(elem) {
       elem.querySelector('article.hentry').style.display = 'block';
       elem.querySelector('header').textContent = placeholderTitle;

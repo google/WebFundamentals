@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll learn how to debug a service worker using the new DevTools Application panel. You'll also learn how to simulate a Push notification to verify your subscription is properly setup.
 
+{# wf_auto_generated #}
 {# wf_updated_on: 2016-10-19T18:28:32Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -57,7 +58,7 @@ This codelab is focused on debugging Service Workers and assumes some prior know
 
 You can download all of the code for this codelab, by clicking the following button:
 
-[Link](https://github.com/googlecodelabs/debugging-service-workers/archive/master.zip)
+[Download source code](https://github.com/googlecodelabs/debugging-service-workers/archive/master.zip)
 
 Unpack the downloaded zip file. This will unpack a root folder (`debugging-service-workers-master`), which contains one folder for each step of this codelab, along with all of the resources you will need.
 
@@ -67,11 +68,16 @@ The `step-NN` folders contain the desired end state of each step of this codelab
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
 
 After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
+
+<aside markdown="1" class="key-point">
+<p>More help:  <a href="https://support.google.com/chrome_webstore/answer/3060053?hl=en">Add and open Chrome apps</a></p>
+</aside>
+
 
 In the ensuing window, click on the Web Server icon: 
 
@@ -96,6 +102,11 @@ Now visit your work site in your web browser (by clicking on the highlighted Web
 ![693305d127d9fe80.png](img/693305d127d9fe80.png)
 
 Obviously, this app is not yet doing anything interesting. We'll add functionality so we can verify it works offline in subsequent steps. 
+
+<aside markdown="1" class="key-point">
+<p>From this point forward, all testing/verification should be performed using this web server setup. You'll usually be able to get away with simply refreshing your test browser tab.</p>
+</aside>
+
 
 
 ## Introducing the Application tab
@@ -178,6 +189,12 @@ Note the ID of the first Service Worker. It should match the original Service Wo
 
 The second status indicator shows the new Service Worker we just edited. Right now it's in a waiting state.
 
+<aside markdown="1" class="key-point">
+<p><strong>Try it!</strong></p>
+<p>If a user has multiple tabs open for the same page, it will continue using the old Service Worker until those tabs are closed. Try opening a few more tabs and visiting this same page and notice how the Application panel still shows the old Service Worker as active</p>
+</aside>
+
+
 An easy way to force the new Service Worker to activate is with the __skipWaiting__ button.
 
 ![7a60e9ceb2db0ad2.png](img/7a60e9ceb2db0ad2.png)
@@ -187,6 +204,12 @@ An easy way to force the new Service Worker to activate is with the __skipWaitin
 Note that the console now logs the message from the `activate` event handler
 
 `Finally active. Ready to start serving content!`
+
+<aside markdown="1" class="key-point">
+<p><strong>Skip waiting</strong></p>
+<p>Having to click the <code>skipWaiting</code> button all the time can get a little annoying. If you'd like your Service Worker to force itself to become active you can include the line <code>self.skipWaiting()</code> in the <code>install</code> event handler. You can learn more about the <code>skipWaiting</code> method in  <a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#service-worker-global-scope-skipwaiting">the Service Workers spec</a>.</p>
+</aside>
+
 
 
 ## Exploring the cache
@@ -263,6 +286,11 @@ If you go back and click on `my-site-cache-v1` you'll now see that all the store
 
 ![317d24238f05e69c.png](img/317d24238f05e69c.png)
 
+<aside markdown="1" class="key-point">
+<p><strong>TIP:</strong> You can also use a new Incognito window for testing and debugging Service Workers. When the Incognito window is closed, Chrome will remove any cached data or installed Service Worker, ensuring that you always start from a clean state.</p>
+</aside>
+
+
 __What's with the gear?__
 
 Because the Service Worker is able to make its own network requests, it can be useful to identify network traffic which originated from the worker itself.
@@ -275,6 +303,11 @@ In the Network panel, you should see an initial set of request for files like `m
 ![2ba393cf3d41e087.png](img/2ba393cf3d41e087.png)
 
 The gear icon signifies that these requests came from the Service Worker itself. Specifically, these are the requests being made by the Service Worker's `install` handler to populate the offline cache.
+
+<aside markdown="1" class="key-point">
+<p><strong>Learn More</strong>: For a deeper understanding of the Network panel identifies Service Worker traffic take a look at  <a href="http://stackoverflow.com/a/33655173/385997">this StackOverflow discussion</a>.</p>
+</aside>
+
 
 
 ## Simulating different network conditions
@@ -360,6 +393,11 @@ Now our response times jump down to a blazing fast few milliseconds per resource
 
 ![f0f6d3b0a1b1f18d.png](img/f0f6d3b0a1b1f18d.png)
 
+<aside markdown="1" class="warning">
+<p>Before proceeding make sure you set the <strong>Network Throttle</strong> back to <code>No throttling</code></p>
+</aside>
+
+
 
 ## Remember, it's just JavaScript
 
@@ -398,6 +436,11 @@ self.addEventListener('install', function(event) {
 The application will pause execution and switch panels over to __Sources__ where the `debugger` statement is now highlighted in `service-worker.js`.
 
 ![d960b322c020d6cc.png](img/d960b322c020d6cc.png)
+
+<aside markdown="1" class="key-point">
+<p><strong>Learn More</strong>: A full explanation of the <strong>Sources</strong> panel is outside the scope of this codelab but you can  <a href="/web/tools/chrome-devtools/debug/?hl=en">learn more about the debugging capabilities of the DevTools</a> on the Google Developers site.</p>
+</aside>
+
 
 There are a ton of useful tools available in this view. One such tool is the __Scope__ inspector, which let's us see the current state of objects in the current function's scope.
 
@@ -450,6 +493,11 @@ Push notifications are an important part of creating an engaging experience. Bec
 You may have noticed a button in the center of the application asking for the user to __Subscribe for Push Notifications__. This button is already wired up to request the Push notification permission from the user when clicked.
 
 ![3e7f08f9d8c1fc5c.png](img/3e7f08f9d8c1fc5c.png)
+
+<aside markdown="1" class="warning">
+<p>The code used to set up this Push subscription is just for demo purposes and should not be used in production. For a thorough guide on setting up Push notifications  <a href="/web/updates/2015/03/push-notifications-on-the-open-web?hl=en">see this post</a> on the Google Developers site.</p>
+</aside>
+
 
 The only remaining step is to add support for the `push` event to `service-worker.js`.
 

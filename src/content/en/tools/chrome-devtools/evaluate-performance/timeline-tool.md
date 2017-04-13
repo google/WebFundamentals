@@ -109,7 +109,7 @@ is most relevant to you, and automatically zooms to that portion.
   [Chrome user profile][new chrome profile] to ensure that your environment
   has no extensions.
 
-[nc]: /web/tools/chrome-devtools/profile/network-performance/network-conditions#network-conditions
+[nc]: /web/tools/chrome-devtools/network-performance/reference#network-conditions
 [incognito]: https://support.google.com/chrome/answer/95464
 [new chrome profile]: https://support.google.com/chrome/answer/142059
 
@@ -214,3 +214,5 @@ You can save and open recordings by right-clicking inside the
 **Overview** or **Flame Chart** panes and selecting the relevant option.
 
 ![save and open recordings](imgs/save-open.png)
+
+You can also share saved recordings using [timeline-viewer](https://chromedevtools.github.io/timeline-viewer/).

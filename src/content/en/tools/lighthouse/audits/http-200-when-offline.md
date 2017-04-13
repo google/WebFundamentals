@@ -38,3 +38,6 @@ determine which caching strategy fits your app best. This covers step 2 above.
 
 Lighthouse emulates an offline connection using the Chrome Debugging Protocol,
 and then attempts to retrieve the page using `XMLHttpRequest`.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/http-200-when-offline.html" %}

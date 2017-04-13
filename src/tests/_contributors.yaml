@@ -1,0 +1,77 @@
+# A collection of all the people who have kindly contributed content for us.
+
+##
+## Please add new contributors in alphabetical order by family name.
+##
+
+# EXAMPLE
+# givenfamily:  # REQUIRED - place a 512x512 px JPG image file with same name in /images/contributors
+#   name:
+#     given: First # Required
+#     family: Last # Required
+#   homepage: https://developers.google.com/web/ # Optional
+#   google: "123456789012345678901"              # Optional - id (must be quoted) or +Name
+#   twitter: petele                              # Recommended - handle only (no @)
+#   github: petele                               # Recommended - handle only
+#   lanyrd: petele                               # Optional - handle only
+#   description:
+#     en: "This is my by-line, isn't it cool? I think so!" # Recommended
+#   org:
+#     name: Company           # Optional (not shown)
+#     unit: Team              # Optional (not shown)
+#   country: US               # Optional - ISO Country Code (not shown)
+#   email: test@example.com   # Optional (not shown)
+
+paullewis:
+  name:
+    given: Paul
+    family: Lewis
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  homepage: 'https://aerotwist.com/'
+  google: 1234567890
+  twitter: aerotwist
+  description:
+    en: Paul is a Design and Perf Advocate
+
+paulkinlan:
+  name:
+    given: Paul
+    family: Kinlan
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+    - engineer
+  homepage: 'https://paul.kinlan.me'
+  google: +PaulKinlan
+  twitter: paul_kinlan
+  email: paulkinlan@google.com
+  description:
+    en: Paul is a Developer Advocate
+
+petelepage:
+  name:
+    given: Pete
+    family: LePage
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+    - engineer
+  homepage: 'http://petelepage.com'
+  google: +PeteLePage
+  twitter: petele
+  github: petele
+  email: petele@google.com
+  lanyrd: petele
+  description:
+    en: Pete is a Developer Advocate

@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: A step by step guide to the basics of UX design.
+description: A step-by-step guide to the basics of UX design.
 
 {# wf_updated_on: 2016-10-01 #}
 {# wf_published_on: 2016-10-01 #}
@@ -284,7 +284,7 @@ again present the ideas to your team and vote like before.
 With your design in hand, it's time to storyboard it's engagement with the user.
 By this point you should have already thought about the different steps a user
 takes. It's quite common to incorporate one of your colleagues' designs into the
-flow as well. You want to have a clear step by step process with some points
+flow as well. You want to have a clear step-by-step process with some points
 where the user might diverge. Refer back to the project map to validate your
 design against the goal.
 

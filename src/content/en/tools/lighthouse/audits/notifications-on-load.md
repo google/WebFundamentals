@@ -36,3 +36,6 @@ code contains calls to `notification.requestPermission()`, and notification
 permission was not already granted, then notification permission was requested.
 
 [help]: https://support.google.com/chrome/answer/6148059
+
+
+{% include "web/tools/lighthouse/audits/_feedback/notifications-on-load.html" %}

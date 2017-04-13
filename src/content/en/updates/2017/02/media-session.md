@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Customize web media notifications and respond to media related events with the new Media Session API.
 
-{# wf_updated_on: 2017-02-06 #}
+{# wf_updated_on: 2017-03-01 #}
 {# wf_published_on: 2017-02-06 #}
 {# wf_tags: news,chrome57,media,notifications,play #}
 {# wf_featured_image: /web/updates/images/2017/02/tldr.png #}
@@ -16,15 +16,19 @@ With the brand new [Media Session API], you can now **customize media
 notifications** by providing metadata for the media your web app is
 playing. It also allows you to **handle media related events** such as seeking
 or track changing which may come from notifications or media keys. Excited? Try
-out the official [Media Session sample].
+out the official [Media Session samples].
 
 The Media Session API is supported in Chrome 57 (beta in February 2017, stable
 in March 2017).
 
 <figure>
-  <img src="/web/updates/images/2017/02/tldr.png"
-    alt="Media Session TL;DR;"/>
-  <figcaption><a href="https://en.wikipedia.org/wiki/Rick_Astley#/media/File:Rick_Astley_Tivoli_Gardens.jpg">Photo</a> by Michael Alø-Nielsen / <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
+  <img src="/web/updates/images/2017/02/tldr.png" alt="Media Session TL;DR;"/>
+  <figcaption>
+    <a href="https://wikipedia.org/wiki/Rick_Astley#/media/File:Rick_Astley_Tivoli_Gardens.jpg">
+      Photo
+    </a> by Michael Alø-Nielsen /
+    <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </figcaption>
 </figure>
 
 ## Gimme what I want
@@ -249,9 +253,9 @@ behaviour doesn't work out, you can still handle "Play" and "Pause" media events
 
 Note: The browser may consider that the web app is not playing media when files
 are seeking or loading. You can override this behaviour by setting
-`navigator.mediaSession.playbackState` to `"playing"` or `"paused"`. This
-comes in handy when you want to make sure your web app UI stays in sync with
-the media notification controls.
+[`navigator.mediaSession.playbackState`](https://wicg.github.io/mediasession/#example-set-playbackState)
+to `"playing"` or `"paused"`. This comes in handy when you want to make sure
+your web app UI stays in sync with the media notification controls.
 
 ## Notifications everywhere
 
@@ -264,13 +268,22 @@ shows up on lock screens.
 <div class="attempt-left">
   <figure>
     <img src="/web/updates/images/2017/02/lock-screen.png" alt="Lock Screen">
-    <figcaption>Lock Screen - <a href="https://en.wikipedia.org/wiki/Rick_Astley#/media/File:Rick_Astley_Tivoli_Gardens.jpg">Photo</a> by Michael Alø-Nielsen / <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
+    <figcaption>
+      Lock Screen - 
+      <a href="https://wikipedia.org/wiki/Rick_Astley#/media/File:Rick_Astley_Tivoli_Gardens.jpg">
+        Photo
+      </a>
+      by Michael Alø-Nielsen / 
+      <a href="https://creativecommons.org/licenses/by/2.0/">
+        CC BY 2.0
+      </a>
+    </figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
     <img src="/web/updates/images/2017/02/wear.png" alt="Wear Notification">
-    <figcaption>Wear Notification</figcaption>
+    <figcaption style="text-align: center">Wear Notification</figcaption>
   </figure>
 </div>
 <div class="clearfix"></div>
@@ -307,7 +320,7 @@ browser can't fetch them. Here's how you could implement this:
 
     const FALLBACK_ARTWORK_URL = 'fallbackArtwork.png';
     
-    self.addEventListener('install', event => {
+    addEventListener('install', event => {
       self.skipWaiting();
       event.waitUntil(initArtworkCache());
     });
@@ -317,7 +330,7 @@ browser can't fetch them. Here's how you could implement this:
       .then(cache => cache.add(FALLBACK_ARTWORK_URL));
     }
     
-    self.addEventListener('fetch', event => {
+    addEventListener('fetch', event => {
       if (/artwork-[0-9]+\.png$/.test(event.request.url)) {
         event.respondWith(handleFetchArtwork(event.request));
       }
@@ -404,6 +417,7 @@ doing so is pretty easy with the [Cache API].
 
 - Chrome for Android requests "full" audio focus to show media notifications
   only when the media file duration is [at least 5 seconds].
+- Notification artwork support blob URLs and data URLs.
 - If no artwork is defined and there is an icon image at a desirable size, media
   notifications will use it.
 - Notification artwork size in Chrome for Android is `512x512`. For
@@ -423,19 +437,35 @@ status can be found on [Chrome Platform Status].
 
 ## Samples & demos
 
-Check out our official Chrome [Media Session sample] featuring [Jan Morgenstern's work].
+Check out our official Chrome [Media Session samples] featuring [Blender Foundation]
+and [Jan Morgenstern's work].
 
 <video autoplay loop muted style="max-width: 100%"
     poster="https://storage.googleapis.com/media-session/screenrecord.png">
-  <source src="https://storage.googleapis.com/media-session/screenrecord.webm" type="video/webm; codecs=vp8">
-  <source src="https://storage.googleapis.com/media-session/screenrecord.mp4" type="video/mp4; codecs=h264">
+  <source src="https://storage.googleapis.com/media-session/screenrecord.webm"
+          type="video/webm; codecs=vp8">
+  <source src="https://storage.googleapis.com/media-session/screenrecord.mp4"
+          type="video/mp4; codecs=h264">
 </video>
 
 ## Resources
 
-- Media Session Spec: [https://wicg.github.io/mediasession](https://wicg.github.io/mediasession)
-- Spec Issues: [https://github.com/WICG/mediasession/issues](https://github.com/WICG/mediasession/issues)
-- Chrome Bugs: [https://crbug.com/?q=component:Internals>Media>Session](https://crbug.com/?q=component:Internals>Media>Session)
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="kLlPYtQeQQ8"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+Media Session Spec:
+[wicg.github.io/mediasession](https://wicg.github.io/mediasession)
+
+Spec Issues:
+[github.com/WICG/mediasession/issues](https://github.com/WICG/mediasession/issues)
+
+Chrome Bugs:
+[crbug.com](https://crbug.com/?q=component:Internals>Media>Session)
+
+<div class="clearfix"></div>
 
 {% include "comment-widget.html" %}
 
@@ -448,8 +478,9 @@ Check out our official Chrome [Media Session sample] featuring [Jan Morgenstern'
 [the very first page load]: /web/fundamentals/instant-and-offline/service-worker/lifecycle#clientsclaim
 [at least 5 seconds]: https://chromium.googlesource.com/chromium/src/+/5d8eab739eb23c4fd27ba6a18b0e1afc15182321/media/base/media_content_type.cc#10 
 [Cache API]: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
-[Media Session sample]: https://googlechrome.github.io/samples/media-session
+[Media Session samples]: https://googlechrome.github.io/samples/media-session/
 [Web Audio API]: /web/updates/2012/02/HTML5-audio-and-the-Web-Audio-API-are-BFFs
 [Chrome Platform Status]: https://www.chromestatus.com/feature/5639924124483584
 [Web AudioFocus API]: https://wicg.github.io/audio-focus/explainer.html
+[Blender Foundation]: http://www.blender.org/
 [Jan Morgenstern's work]: http://www.wavemage.com/category/music/

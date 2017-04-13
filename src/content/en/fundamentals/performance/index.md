@@ -7,7 +7,7 @@ description: Improving performance starts with minimizing, or at least, optimizi
 
 # Performance {: .page-title }
 
-Improving performance is a process that starts with minimizing, or at lease, optimizing the data that users download. Understanding how a browser renders those resources is a prerequisite for improving code efficiency. After improving it, you need a way to test it. 
+Improving performance is a process that starts with minimizing, or at least, optimizing the data that users download. Understanding how a browser renders those resources is a prerequisite for improving code efficiency. After improving it, you need a way to test it. 
 
 ## Optimizing Content Efficiency
 
@@ -73,7 +73,7 @@ This codelab will help you learn to identify and fix web app performance bottlen
 
 * [How to Look at Performance](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 * [Runtime Performance](/web/tools/chrome-devtools/rendering-tools/)
-* [Page Load Performance](/web/tools/chrome-devtools/network-performance/resource-loading)
+* [Get Started with Analyzing Network Performance](/web/tools/chrome-devtools/network-performance)
 
 
 ### Udacity Courses

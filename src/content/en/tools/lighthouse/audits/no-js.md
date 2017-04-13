@@ -57,3 +57,6 @@ JavaScript](/web/tools/chrome-devtools/settings#disable-js) feature.
 Lighthouse disables JavaScript on the page and then inspects the page's HTML. If
 the HTML is empty then the audit fails. If the HTML is not empty then the audit
 passes.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/no-js.html" %}

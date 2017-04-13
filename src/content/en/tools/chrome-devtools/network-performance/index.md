@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started analyzing network performance.
 
-{# wf_updated_on: 2017-01-17 #}
+{# wf_updated_on: 2017-03-30 #}
 {# wf_published_on: 2017-01-17 #}
 
 <style>
@@ -21,9 +21,6 @@ figcaption {
 
 Learn how to use the Chrome DevTools Network panel to understand why a page
 loads slowly in this step-by-step, interactive tutorial.
-
-Note: This tutorial is based on Chrome 57, which is currently
-[Canary](https://www.google.com/chrome/browser/canary.html).
 
 ## Step 1: Set up DevTools {: #set-up }
 

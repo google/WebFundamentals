@@ -6,14 +6,16 @@ description: CSS Grid is a new layout system for the web.
 {# wf_published_on: 2017-01-27 #}
 {# wf_updated_on: 2017-01-27 #}
 {# wf_featured_image: /web/updates/images/2017/01/css-grid/grid.png #}
-{# wf_tags: css,layout,grid #}
+{# wf_tags: css,layout,grids #}
 {# wf_featured_snippet: CSS Grid Layout makes creating two dimensional grid based layouts easy. It's been in development for over 5 years, but is now available in Chrome and coming to other browsers soon. Let's take a peek at what's new and how you can use it on your sites! #}
 
 # CSS Grid – Table layout is back. Be there and be square. {: .page-title }
 
 {% include "web/_shared/contributors/surma.html" %}
 
-> *TL;DR:* If you are familiar with Flexbox, Grid should feel familiar.
+### TL;DR {: .hide-from-toc }
+
+If you are familiar with Flexbox, Grid should feel familiar.
 [Rachel Andrew](https://twitter.com/Rachelandrew) maintains a great
 [website dedicated to CSS Grid](http://gridbyexample.com/) to help you get
 started. Grid is now available in Google Chrome.

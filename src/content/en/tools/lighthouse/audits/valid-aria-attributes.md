@@ -40,3 +40,6 @@ This audit is powered by the aXe Accessibility Engine. See [ARIA attributes
 must conform to valid names][axe] for more information.
 
 [axe]: https://dequeuniversity.com/rules/axe/1.1/aria-valid-attr
+
+
+{% include "web/tools/lighthouse/audits/_feedback/valid-aria-attributes.html" %}

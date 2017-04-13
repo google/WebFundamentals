@@ -17,9 +17,9 @@ The DevTools [Timeline panel](https://developer.chrome.com/devtools/docs/timelin
 
 We’ve added the following features:
 
-* integrated [JavaScript profiler](#js-profiler). (Flame chart included!)
-* [frame viewer](#frame-viewer) to help you visualize composited layers.
-* [paint profiler](#paint-profiler) for detailed drill-downs into the browser’s painting activity.
+* integrated [JavaScript profiler](#integrated_javascript_profiler). (Flame chart included!)
+* [frame viewer](#frame_viewer) to help you visualize composited layers.
+* [paint profiler](#paint_profiler) for detailed drill-downs into the browser’s painting activity.
 
 Note that using the __Paint__ capture options described in this article do incur some performance overhead, so flip them on only when you want 'em.
 

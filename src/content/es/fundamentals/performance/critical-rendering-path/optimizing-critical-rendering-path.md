@@ -1,37 +1,41 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Para acelerar todo lo posible la primera renderización, debemos optimizar tres variables: minimizar el número de recursos importantes, el número de bytes importantes y la longitud de la ruta importante.
+description: Conoce los factores clave para la optimización de la ruta de representación crítica.
 
-{# wf_updated_on: 2014-04-27 #}
+{# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Optimizar la ruta de renderización importante {: .page-title }
+# Optimización de la ruta de representación crítica {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
+  Para proporcionar la mayor rapidez posible en la primera representación, debemos 
+  minimizar tres variables:
+
+  <ul>
+    <li>La cantidad de recursos críticos</li>
+    <li>La longitud de la ruta crítica</li>
+    <li>La cantidad de bytes críticos</li>
+  </ul>
+
+Un recurso crítico es un recurso que podría bloquear la representación inicial de la página. Mientras menos recursos haya de este tipo, menor trabajo deberá realizar el navegador, la CPU y otros recursos.
+
+Asimismo, la extensión de la ruta crítica depende del gráfico de dependencias entre los recursos críticos y el tamaño en bytes: algunas descargas de recursos solo pueden iniciarse una vez que termina de procesarse el recurso anterior, y cuanto más grande sea el recurso, más recorridos se requerirán para descargarlo.
+
+Por último, cuantos menos bytes críticos deba descargar el navegador, más rápido se podrá procesar el contenido y exhibirlo en la pantalla. Para reducir la cantidad de bytes, podemos disminuir la cantidad de recursos (eliminarlos o hacer que no sean críticos), y asegurarnos de minimizar el tamaño de la transferencia mediante la compresión y la optimización de cada recurso.
+
+**La secuencia general de pasos para optimizar la ruta de acceso de representación crítica es la siguiente:**
+
+1. Analizar y caracterizar tu ruta crítica: cantidad de recursos, bytes y extensión.
+1. Minimizar la cantidad de recursos críticos: eliminarlos, diferir su descarga, marcarlos como asincrónicos, etc.
+1. Optimizar la cantidad de bytes críticos para reducir el tiempo de descarga (cantidad de recorridos).
+1. Optimizar el orden en el que se cargan los recursos críticos restantes: descarga todos los recursos críticos lo más rápido posible para reducir la longitud de la ruta crítica.
+
+<a href="page-speed-rules-and-recommendations" class="gc-analytics-event"
+    data-category="CRP" data-label="Next / PageSpeed">
+  <button>A continuación: Reglas y recomendaciones de PageSpeed</button>
+</a>
 
 
-Para acelerar todo lo posible la primera renderización, debemos optimizar tres variables:
-
-* **Minimizar el número de recursos importantes**
-* **Minimizar el número de bytes importantes**
-* **Minimizar la longitud de la ruta importante**
-
-Un recurso importante es aquel que puede bloquear la renderización inicial de la página. Cuanto menos recursos haya en la página, menos trabajará el navegador para obtener el contenido en la pantalla y menos serán los requisitos de CPU y de los demás recursos.
-
-Del mismo modo, cuanto menos bytes importantes deba descargar el navegador, más rápido procesará este el contenido y lo mostrará en la pantalla. Para reducir la cantidad de bytes, podemos disminuir el número de recursos (eliminarlos o asignarles un papel que no sea importante) y, además, asegurarnos de minimizar el tamaño de la transferencia comprimiendo y optimizando cada recurso.
-
-Por último, la longitud de ruta de renderización importante es una función del gráfico de dependencia entre todos los recursos importantes que requiere la página y su tamaño de bytes: algunas descargas de recursos solo pueden iniciarse cuando se haya procesado el recurso anterior. Cuanto mayor sea el tamaño del recurso, más procesos necesitaremos para descargarlo.
-
-Es decir, el número de recursos, su tamaño de bytes y la longitud de la ruta importante se relacionan entre sí, pero no son exactamente lo mismo. Por ejemplo, es posible que no puedas reducir el número de recursos importantes o de acortar la ruta importante, pero la reducción del número de bytes importantes sigue siendo una optimización importante, y viceversa.
-
-**La secuencia general de pasos para optimizar la ruta importante es la siguiente:**
-
-1. Analiza y caracteriza la ruta importante: el número de recursos, los bytes, la longitud.
-2. Minimiza el número de recursos importantes: elimínalos, retrasa su descarga, márcalos como asíncronos, etc.
-3. Optimiza el orden de carga de los recursos restantes: lo ideal es descargar todos los elementos importantes lo antes posible para acortar la ruta importante.
-4. Optimiza el número de bytes importantes para reducir el tiempo de descarga (cantidad de procesos).
-
-
-
+{# wf_devsite_translation #}

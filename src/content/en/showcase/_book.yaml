@@ -10,6 +10,7 @@ upper_tabs:
       other:
       - name: "Case Studies"
         contents:
+        - include: /web/showcase/2017/_toc.yaml
         - include: /web/showcase/2016/_toc.yaml
         - include: /web/showcase/2015/_toc.yaml
         - include: /web/showcase/tags/_toc.yaml

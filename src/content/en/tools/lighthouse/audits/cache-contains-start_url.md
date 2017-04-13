@@ -50,3 +50,6 @@ worker redirects to another resource in the cache. Conversely, the audit can
 produce a false positive result if your cache contains a resource that
 matches `start_url`, but your service worker redirects the request to
 a non-existent resource.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/cache-contains-start_url.html" %}

@@ -33,3 +33,6 @@ offline.
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 The audit passes if no AppCache manifest is detected.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/appcache.html" %}
