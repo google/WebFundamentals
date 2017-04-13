@@ -121,7 +121,7 @@ means you'll need to build with TLS in mind.
 Note: We care deeply about security, so you will notice that new Web capabilities require HTTPS. The WebUSB API is no different, and is yet another good reason to get HTTPS up and running on your site.
 
 During development you'll be able to interact with WebUSB through
-http://localhost by using tools like the [Chrome Dev
+`http://localhost` by using tools like the [Chrome Dev
 Editor](https://chrome.google.com/webstore/detail/pnoffddplpippgcfjdhbmhkofpnaalpg)
 or the handy `python -m SimpleHTTPServer`, but to deploy it on a site you'll
 need to have HTTPS set up on your server. I personally enjoy [GitHub
