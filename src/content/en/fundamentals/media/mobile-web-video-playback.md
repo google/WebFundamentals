@@ -465,7 +465,7 @@ video is playing but not currently visible, a mini mute button will be shown in
 the bottom right corner of the page to give user control over video sound. The
 `volumechange` video event is used to update the mute button styling.
 
-Note: If a page has a lot of videos on a page and is using the Intersection
+Note: If there are a lot of videos on a page, and it is using the Intersection
 Observer API to pause / mute offscreen video, you may want to reset video
 source with `video.src = null` instead since it will release significant
 resources in an infinite scroll case.
