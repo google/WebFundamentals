@@ -147,26 +147,26 @@ controlled by several different Service Workers.
 
 By Installing your Progressive Web App it now becomes part of the system. Added 
 sites show up on the home screen, app drawer and throughout the Android 
-System-UI as a user would expect. Permissions are handled differently, by 
+System-UI as a user would expect. Permissions are handled differently: by 
 default your app can only have the same permissions surface as Chrome would 
 normally have when installed - you can't ask for Camera access at install time 
 for example. This means that as developer you must request permission for 
-sensitive API's such as Camera and Microphone access, notifications etc at 
-runtime as you would for any normal web site and the Chrome runtime will prompt 
-you for access.
+sensitive APIs such as Camera and Microphone access, notifications etc. at 
+runtime as you would for any normal web site and, the Chrome runtime will prompt 
+the user for access.
 
-Android normally gives instant access notifications, Installed Progressive Web 
-Apps do not have this permission granted by default and your user must 
-explicitly opt-in to receiving notifications
+Android normally grants notifications permissions by default. Installed Progressive
+Web  Apps do not have this permission granted by default and your user must 
+explicitly opt into receiving notifications.
 
 ## Storage and app state
 
-When the user adds your Progressive Web App to their system Chrome will use the 
+When the user adds your Progressive Web App to their system, Chrome will use the 
 same profile and will not segregate the data. This means your service worker 
 will already be installed, your cookies still active any client-side storage 
 will be still stored the next time that the user opens the App.
 
-This can cause some issues because if the user clears the Chrome profile, then 
+This can cause some issues because if the user clears the Chrome profile: 
 your data in your app will also be cleared. To ensure that your user data is 
 held more permanently, please use the [Persistent 
 Storage API](/web/updates/2016/06/persistent-storage).
@@ -180,20 +180,20 @@ questions you might have.
 - - -
 
 ## FAQs 
-### What are the requirements for a site to use improved add to Home screen?
+### What are the requirements for a site to use the improved add to Home screen?
 
 The requirements are designed to be the same as the [technical requirements for
-the add to home screen
+the add to Home screen
 banner](/web/fundamentals/engage-and-retain/app-install-banners/).
 
 We recommend using [Lighthouse](/web/tools/lighthouse/) to audit your PWA.
 
-Note though that there is no engagement threshold for improved add to home 
+Note though that there is no engagement threshold for improved add to Home 
 screen from the menu.
 
 ### Does this change the triggering of the add to Home screen banner?
 
-Improved add to home screen does not itself change the triggering or behavior of 
+Improved add to Home screen does not itself change the triggering or behavior of 
 the banner. Nevertheless, Chrome has recently lowered the site-engagement 
 threshold for the banner to trigger and is constantly experimenting with 
 improvements to this system. (See [the 
@@ -202,18 +202,18 @@ Summit.)
 
 ### What happens to users who have already added a site to their Home screen?
 
-Users will continue to get the existing add to home screen experience, though if 
+Users will continue to get the existing add to Home screen experience, though if 
 they add it again manually via the menu button, the new icon will use improved 
-add to home screen.
+add to Home screen.
 
 ### What will happen to the current add to Home screen experience?
 
-Improved add to home screen will replace add to home screen for PWAs. There is 
-no change to the existing functionality of add to home screen for non-PWAs. 
+Improved add to Home screen will replace add to Home screen for PWAs. There is 
+no change to the existing functionality of add to Home screen for non-PWAs. 
 
 ### What happens if the user has already installed the native app for the site?
 
-Like add to home screen today, users will be able to add a site independent of 
+Like add to Home screen today, users will be able to add a site independent of 
 any native apps. If you expect users to potentially install both, we recommend 
 differentiating the icon or name of your site from your native app.
 
@@ -236,7 +236,7 @@ Summit.)
 
 No.
 
-### Will I be able to register to open files of a specific type (i.e, PDF)?
+### Will I be able to register to open files of a specific type (e.g. PDF)?
 
 No, but we are exploring that independently with the [Web Share Target
 API](https://discourse.wicg.io/t/web-share-target-api-for-websites-to-receive-shared-content/1854).
@@ -262,7 +262,7 @@ the page.
 
 ### When will the "Unknown sources" restriction be removed?
 
-It is being removed right now in a staged manner.  We anticipate that when 
+It is being removed right now in a staged manner. We anticipate that when 
 this hits the stable channel of Chrome this will not be needed at all.
 
 ### Can we upload the APKs that are created to the Play Store?
