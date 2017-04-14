@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-07T02:13:20Z #}
+{# wf_updated_on: 2017-04-14T15:34:02Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -625,7 +625,7 @@ Check out the `else` clause in `app.getForecast()` to understand why the app is 
 
 The next step is to modify the app and service worker logic to be able to cache weather data, and return the most recent data from the cache when the app is offline.
 
-__Tip:__ To start fresh and clear all saved data (`localStoarge`, `indexedDB` data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
+__Tip:__ To start fresh and clear all saved data (`localStorage`, `indexedDB` data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
 
 [TRY IT](https://weather-pwa-sample.firebaseapp.com/step-06/)
 
