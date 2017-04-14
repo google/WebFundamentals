@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-24T21:14:53Z #}
+{# wf_updated_on: 2017-04-06T22:11:11Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -71,9 +71,9 @@ In a command window at the __project__ folder, run the following command to inst
 
 Then run the following:
 
-    gulp serve
+    npm run serve
 
-This runs the "serve" task in __gulpfile.babel.js__ which copies the project files to the appropriate folder, starts a server, and opens the app in the browser. The app is a mock furniture website, "Modern Furniture Store". Several furniture items should display on the front page. 
+This runs the default task in __gulpfile.babel.js__ which copies the project files to the appropriate folder and starts a server. Open your browser and navigate to localhost:8080. The app is a mock furniture website, "Modern Furniture Store". Several furniture items should display on the front page. 
 
 When the app opens, confirm that a service worker is not registered at local host by  [checking developer tools](tools-for-pwa-developers#accesssw). If there is a service worker at localhost,  [unregister it](tools-for-pwa-developers#unregister) so it doesn't interfere with the lab.
 
@@ -145,7 +145,7 @@ Save the file.
 
 
 
-To complete TODO SW-4 in __app/service-worker.js__, write the code to respond to fetch requests with the "cache, falling back to network" strategy. First, look for the response in the cache and if it exists, respond with the matching file. If the file does not exist, request the file from the network and cache a clone of the response. Save the file when you have completed this step.
+To complete TODO SW-4 in __app/service-worker.js__, write the code to respond to fetch requests with the " [cache, falling back to network](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network)" strategy. First, look for the response in the cache and if it exists, respond with the matching file. If the file does not exist, request the file from the network and cache a clone of the response. Save the file when you have completed this step.
 
 
 
@@ -161,7 +161,7 @@ Note: Solution code can be found in the __lab2-add-to-homescreen__ folder.
 
 
 
-To complete TODO SW-5 in __app/service-worker.js__, write the code to delete unused caches in the `activate` event handler. You should create a "whitelist" of caches currently in use that should not be deleted (such as the `e-commerce-v1` cache). Use `caches.keys()` to get a list of the cache names. Then, inside `Promise.all`, map the array containing the cache names to a function that deletes each cache not in the whitelist. Save the file when you have completed this step.
+To complete TODO SW-5 in __app/service-worker.js__, write the code to delete unused caches in the  [`activate` event handler](/web/fundamentals/instant-and-offline/offline-cookbook/#on-activate). You should create a "whitelist" of caches currently in use that should not be deleted (such as the `e-commerce-v1` cache). Use `caches.keys()` to get a list of the cache names. Then, inside `Promise.all`, map the array containing the cache names to a function that deletes each cache not in the whitelist. Save the file when you have completed this step.
 
 
 
@@ -181,9 +181,9 @@ To test the app, close any open instances of the app in your browser and stop th
 
 Run the following in the command line to clean out the old files in the __dist__ folder, rebuild it, and serve the app:
 
-    gulp serve
+    npm run serve
 
-When the app opens in the browser,  [inspect the cache](tools-for-pwa-developers#storage) to make sure that the specified files are cached when the service worker is installed.  [Take the app offline](tools-for-pwa-developers#offline) and refresh the page. The app should load normally!
+Open the browser and navigate to localhost:8080.  [Inspect the cache](tools-for-pwa-developers#storage) to make sure that the specified files are cached when the service worker is installed.  [Take the app offline](tools-for-pwa-developers#offline) and refresh the page. The app should load normally!
 
 <div id="congrats"></div>
 

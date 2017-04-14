@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-24T23:38:39Z #}
+{# wf_updated_on: 2017-04-06T22:13:07Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -53,7 +53,7 @@ If you have completed the previous e-commerce E-Commerce lab, your app is alread
 
 If you did not complete lab 1, copy the contents of the __lab2-add-to-homescreen__ folder and overwrite the contents of the __project__ directory. Then run `npm install` in the command line at the __project__ directory.
 
-At the project directory, run `gulp serve` to build the application in __dist__. The app should open in your browser. You must rebuild the application each time you want to test changes to your code.
+At the project directory, run `npm run serve` to build the application in __dist__. You must rebuild the application each time you want to test changes to your code. Open your browser and navigate to localhost:8080.
 
 
 
@@ -177,9 +177,9 @@ To test the app, close any open instances of the app running in your browser and
 
 Run the following in the command line to clean out the old files in the __dist__ folder, rebuild it, and serve the app:
 
-    gulp serve
+    npm run serve
 
-The gulp command automatically opens the e-commerce app in the browser. When the page opens, unregister the service worker and refresh the page.
+Open your browser to localhost:8080. Unregister the service worker and refresh the page.
 
 If you have Chrome installed, you can test the Add to homescreen functionality from the browser.  [Open DevTools](tools-for-pwa-developers#opendevtools) and inspect the manifest by going to __Application__. Then click __Manifest__ in the navigation bar. Click __Add to homescreen__. You should see an "add this site to your shelf" message below the URL bar. This is the desktop equivalent of mobile's add to homescreen feature. If you can successfully trigger this prompt on desktop, then you can be assured that mobile users can add your app to their devices. Click __Add__ to install the app on your device. 
 

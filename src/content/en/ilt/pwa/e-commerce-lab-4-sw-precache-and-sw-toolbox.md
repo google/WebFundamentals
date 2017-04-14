@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-24T21:40:17Z #}
+{# wf_updated_on: 2017-04-06T23:42:38Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -62,7 +62,7 @@ Note: If you have completed the E-Commerce App labs up to this point, your app i
 
 If you did not complete the previous ecommerce labs, copy the contents of the __lab4-sw-precache__ folder and overwrite the contents of the __project__ directory. Then run `npm install` in the command line at the __project__ directory.
 
-At the project directory, run `gulp serve` to build the application in __dist__. The app should open in your browser. You must rebuild the application each time you want to test changes to your code.
+At the project directory, run `npm run serve` to build the application in __dist__. You must rebuild the application each time you want to test changes to your code. Open your browser and navigate to localhost:8080.
 
 
 
@@ -213,7 +213,13 @@ Save the file.
 
 #### Explanation
 
-The "default" task is a dependency of the "serve" task. Adding "generate-service-worker" to the "default" task means the "generate-service-worker" task also executes when we run `gulp serve.`
+The "default" task is a dependency of the "serve" task. Adding "generate-service-worker" to the "default" task means the "generate-service-worker" task also executes when we run `npm run serve`.
+
+
+
+`npm run` goes into your package.json file and pulls out the scripts object. The first argument passed to `npm run` refers to a property in the scripts object - it will execute the property's value as a command in the operating system's default shell. In our case the `serve` property runs `gulp` and `node server.js`.
+
+
 
 `runSequence` executes a list of tasks in the order they appear in the list. We add "generate-service-worker" near the end of the list so that the html, scripts, images, and styles tasks are all complete before we generate the service worker. 
 
@@ -235,9 +241,9 @@ To test the app, close any open instances of the app in your browser and stop th
 
 Run the following in the command line to clean out the old files in the __dist__ folder, rebuild it, and serve the app:
 
-    gulp serve
+    npm run serve
 
-When the app opens in the browser,  [update the service worker](tools-for-pwa-developers#update).  [Inspect the cache](tools-for-pwa-developers#storage). In the cache, you should see all the application files matching the glob patterns in the `staticFileGlobs` have been cached.
+Open the browser to localhost:8080 and  [update the service worker](tools-for-pwa-developers#update).  [Inspect the cache](tools-for-pwa-developers#storage). In the cache, you should see all the application files matching the glob patterns in the `staticFileGlobs` have been cached.
 
 <div id="congrats"></div>
 

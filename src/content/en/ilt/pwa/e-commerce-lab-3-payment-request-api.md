@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-27T14:45:51Z #}
+{# wf_updated_on: 2017-04-06T22:05:41Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
-# E-Commerce Lab 3: PaymentRequest API {: .page-title }
+# E-Commerce Lab 3: Payment Request API {: .page-title }
 
 
 
@@ -21,7 +21,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 #### What you will do
 
-* Integrate the PaymentRequest API in the e-commerce app
+* Integrate the Payment Request API in the e-commerce app
 
 #### What you should know
 
@@ -32,7 +32,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 * Computer with terminal/shell access
 * Connection to the internet
-* Chrome
+* Chrome for Android
 * A text editor
 
 <div id="1"></div>
@@ -43,7 +43,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
-If you have a text editor that lets you open a project, then open the __project__ folder in the __ecommerce-demo__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __project__ folder is where you will build the app.
+If you have a text editor that lets you open a project, then open the __project__ folder in the __pwa-ecommerce-demo__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __project__ folder is where you will build the app.
 
 
 
@@ -53,7 +53,7 @@ If you have completed the E-Commerce App labs up to this point, your app is alre
 
 If you did not complete the previous labs, copy the contents of the __lab3-payments__ folder and overwrite the contents of the __project__ directory. Then run `npm install` in the command line at the __project__ directory.
 
-At the project directory, run `gulp serve` to build the application in __dist__. The app should open in your browser. You must rebuild the application each time you want to test changes to your code.
+At the project directory, run `npm run serve` to build the application in __dist__. You must rebuild the application each time you want to test changes to your code. Open your browser and navigate to localhost:8080.
 
 
 
@@ -70,7 +70,7 @@ Note: Solution code for this lab can be found in the __solution__ folder.
 <div id="2"></div>
 
 
-## 2. Create a PaymentRequest
+## 2. Create a Payment Request
 
 
 
@@ -102,7 +102,7 @@ Replace TODO PAY-3 in __app/scripts/modules/payment-api.js__ with the following 
 #### payment-api.js
 
 ```
-'visa', 'mastercard', 'amex', 'discover', 'maestro', 'diners', 'jcb', 'unionpay', 'bitcoin'
+'visa', 'mastercard', 'amex', 'jcb', 'diners', 'discover', 'mir', 'unionpay'
 ```
 
 Save the file.
@@ -152,7 +152,7 @@ Replace TODO PAY-4.2 in __app/scripts/modules/payment-api.js__ with the followin
 ```
 let displayItems = cart.cart.map(item => {
   return {
-    label: `${item.quantity}x ${item.title}`,
+    label: `${item.sku}: ${item.quantity}x $${item.price}`,
     amount: {currency: 'USD', value: String(item.total)},
     selected: false
   };
@@ -174,13 +174,15 @@ Replace TODO PAY-4.3 in __app/scripts/modules/payment-api.js__ with the followin
 ```
 let displayedShippingOptions = [];
 if (shippingOptions.length > 0) {
-  let selectedOption = shippingOptions[shippingOptionId];
+  let selectedOption = shippingOptions.find(option => {
+    return option.id === shippingOptionId;
+  });
   displayedShippingOptions = shippingOptions.map(option => {
     return {
       id: option.id,
       label: option.label,
       amount: {currency: 'USD', value: String(option.price)},
-      selected: option === selectedOption
+      selected: option.id === shippingOptionId
     };
   });
   if (selectedOption) total += selectedOption.price;
@@ -208,7 +210,8 @@ Replace TODO PAY-5 in __app/scripts/modules/payment-api.js__ with the following 
 ```
 requestShipping: true,
 requestPayerEmail: true,
-requestPayerPhone: true
+requestPayerPhone: true,
+requestPayerName: true
 ```
 
 Save the file.
@@ -220,7 +223,7 @@ With the `requestShipping` parameter set, "Shipping" will be added to the UI, an
 <div id="6"></div>
 
 
-## 6. Display the PaymentRequest
+## 6. Display the Payment Request
 
 
 
@@ -233,13 +236,7 @@ Replace TODO PAY-6 in __app/scripts/modules/payment-api.js__ with the following 
   return request.show()
     .then(r => {
       response = r;
-      // Extract just the details we want to send to the server
-      var data = this.copy(response, 'methodName', 'details', 'payerEmail',
-        'payerPhone', 'shippingOption');
-      data.address = this.copy(response.shippingAddress, 'country', 'region',
-        'city', 'dependentLocality', 'addressLine', 'postalCode',
-        'sortingCode', 'languageCode', 'organization', 'recipient', 'careOf',
-        'phone');
+      var data = r.toJSON();
       return data;
     })
     .then(sendToServer)
@@ -247,7 +244,8 @@ Replace TODO PAY-6 in __app/scripts/modules/payment-api.js__ with the following 
       response.complete('success');
     })
     .catch(e => {
-      if (response) response.complete(`fail: ${e}`);
+      response.complete('fail');
+      console.error(e);
     });
 ```
 
@@ -269,23 +267,21 @@ To test the app, close any open instances of the app running in your browser and
 
 Run the following in the command line to clean out the old files in the __dist__ folder, rebuild it, and serve the app:
 
-    gulp serve
+```
+npm run serve
+```
 
-The gulp command automatically opens the e-commerce app in the browser. When the page opens, unregister the service worker and refresh the page.
+Open the browser to localhost:8080. Unregister the service worker and refresh the page.
 
-The PaymentRequest API is not yet supported in Chrome on Desktop, so you'll need an Android device to test the code. Follow the instructions in the  [Access Local Servers](/web/tools/chrome-devtools/remote-debugging/local-server) article to set up port forwarding on your Android device. This lets you host the e-commerce app on your phone.
+The Payment Request API is not yet supported in Chrome on Desktop, so you'll need an Android device to test the code. Follow the instructions in the  [Access Local Servers](/web/tools/chrome-devtools/remote-debugging/local-server) article to set up port forwarding on your Android device. This lets you host the e-commerce app on your phone.
 
 Once you have the app running on your phone, add some items to your cart and go through the checkout process. The `PaymentRequest` UI displays when you click __Checkout__.
 
-
-
-If you have the __Experimental Web Platform features__ flag enabled in Chrome, the checkout process won't work because the API has not yet been implemented in Chrome for desktop.
-
+The payment information won't go anywhere, but you might be hesitant to use a real credit card number. Use "4242 4242 4242 4242" as a fake one. Other information can be anything.
 
 
 
-
-The service worker is caching resources as you use the app, so be sure to unregister the service worker and run `gulp serve` if you want to test new changes.
+The service worker is caching resources as you use the app, so be sure to unregister the service worker and run `npm run serve` if you want to test new changes.
 
 
 

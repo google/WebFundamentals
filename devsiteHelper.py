@@ -211,6 +211,20 @@ def renderDevSiteContent(content, lang='en'):
   for include in includes:
     content = content.replace(include, getInclude(include, lang))
 
+  # Replace any videoIds used in src/content/ilt/pwa
+  videos = re.findall(r'{% setvar videoId .+%}(?m)', content)
+  for video in videos:
+    videoId = re.search(r'{% setvar videoId "(.*?)"', video).group(1)
+    content = content.replace(r'{{ videoId }}', videoId)
+    content = content.replace(video, '')
+
+  # Replace any slidesIds used in src/content/ilt/pwa
+  slides = re.findall(r'{% setvar slidesId .+%}(?m)', content)
+  for slide in slides:
+    slidesId = re.search(r'{% setvar slidesId "(.*?)"', slide).group(1)
+    content = content.replace(r'{{ slidesId }}', slidesId)
+    content = content.replace(slide, '')
+
   # Replaces frameboxes with the iframe it needs
   frameboxes = re.findall(r'{%[ ]?framebox.+?%}.*?{%[ ]?endframebox[ ]?%}(?ms)', content)
   for framebox in frameboxes:

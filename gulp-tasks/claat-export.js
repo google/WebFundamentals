@@ -4,7 +4,6 @@ const gulp = require('gulp');
 const path = require('path');
 const glob = require('globule');
 const wfHelper = require('./wfHelper');
-const runSequence = require('run-sequence');
 const wfCodeLabHelper = require('./wfCodeLabHelper');
 
 /**
@@ -51,7 +50,7 @@ function exportAndUpdate(srcPath, destBase, flatten, bookPath) {
         destFile = destFile.replace('/index.md', '.md');
       }
       let destImgPath = path.join(destDir, 'img');
-      wfCodeLabHelper.updateCodeLab(srcFile, destFile, bookPath)
+      wfCodeLabHelper.updateCodeLab(srcFile, destFile, bookPath);
       return wfHelper.promisedRSync(srcImgPath, destImgPath);
     }));
   });

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-09T20:47:53Z #}
+{# wf_updated_on: 2017-03-30T21:06:51Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -556,7 +556,7 @@ The `sw-toolbox` library and `sw-precache` module go hand-in-hand and are built 
 
 #### The `sw-toolbox` Library
 
-`sw-toolbox` is loaded by your service worker at run time and provides pre-written tools for  applying common caching strategies to different URL patterns. Specifically, it provides common caching patterns and an expressive approach to using those strategies for runtime requests. ( [Caching Strategies Supported by `sw-toolbox`](#bestcaching) describes this in more.)
+`sw-toolbox` is loaded by your service worker at run time and provides pre-written tools for  applying common caching strategies to different URL patterns. Specifically, it provides common caching patterns and an expressive approach to using those strategies for runtime requests. ( [Caching Strategies Supported by `sw-toolbox`](#bestcaching) describes this in more detail.)
 
 ##### Setting Up `sw-toolbox` for Common Caching Strategies 
 

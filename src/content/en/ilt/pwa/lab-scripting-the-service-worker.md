@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:17:52Z #}
+{# wf_updated_on: 2017-04-10T05:16:46Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -312,7 +312,7 @@ The default scope is the path to the service worker file, and extends to all low
 
 ### 5.2 Move the service worker 
 
-Move the service worker into the __app/below__ directory and update the service worker URL in the registration code. <a href="tools-for-pwa-developers#unregister">Unregister the service worker</a> and refresh the page. 
+Move __service-worker.js__ into the __app/below__ directory and update the service worker URL in the registration code. <a href="tools-for-pwa-developers#unregister">Unregister the service worker</a> and refresh the page. 
 
 The console shows that the scope of the service worker is now __localhost:8080/service-worker-lab/app/below/__. 
 

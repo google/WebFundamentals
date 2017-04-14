@@ -1,10 +1,16 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
-{# wf_updated_on: 2017-02-27 #}
-{# wf_published_on: 2017-02-27 #}
+{# wf_updated_on: 2017-04-14 #}
+{# wf_published_on: 2017-04-14 #}
 
 # Progressive Web Apps - ILT {: .page-title }
+
+<div class="video-wrapper ilt-video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="17kGWJOuL-A"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 The way we access the internet has changed. With the growth of smartphones
 and mobile devices, we are seeing millions of people from around the world
