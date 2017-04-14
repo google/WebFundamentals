@@ -5,7 +5,7 @@ description: What's new in Chrome 58 for developers? IndexedDB 2.0, display full
 {# wf_published_on: 2017-04-19 #}
 {# wf_updated_on: 2017-04-19 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
-{# wf_tags: chrome58,new-in-chrome,iframe,sandbox,indexeddb,pwa,fullscreen #}
+{# wf_tags: chrome58,new-in-chrome,iframe,sandbox,indexeddb,progressive-web-apps,fullscreen #}
 {# wf_featured_snippet: With Chrome 58, Progressive Web Apps are more immersive with display: fullscreen. IndexedDB 2.0 is now supported and sandboxed iFrames get more options. Pete LePage has all the details and how you can use these new developer features in Chrome 58! #}
 
 # New in Chrome 58 {: .page-title }
