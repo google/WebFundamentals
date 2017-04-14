@@ -115,7 +115,8 @@ landing_page:
 
   - heading: Latest updates for Web Developers
     items:
-    - description: >
+    - classname: devsite-landing-row-50
+      description: >
         <div class="feed hfeed" data-limit="2">
           <a href="https://google-developers.appspot.com/web/updates/rss.xml"></a>
           <article class="hentry">
@@ -126,7 +127,7 @@ landing_page:
             </div>
           </article>
         </div>
-    - youtube_id: 3tb-1MWg44Y
+      youtube_id: 3tb-1MWg44Y
 
   - heading: Follow best practices
     classname: devsite-landing-row-no-image-background
