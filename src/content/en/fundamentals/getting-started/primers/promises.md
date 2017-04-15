@@ -876,7 +876,7 @@ sequence to add them to the document:
 
       // Map our array of chapter urls to
       // an array of chapter json promises.
-      // This makes sure they all download parallel.
+      // This makes sure they all download in parallel.
       return story.chapterUrls.map(getJSON)
         .reduce(function(sequence, chapterPromise) {
           // Use reduce to chain the promises together,
@@ -995,7 +995,7 @@ it into:
 
         // Map our array of chapter urls to
         // an array of chapter json promises.
-        // This makes sure they all download parallel.
+        // This makes sure they all download in parallel.
         let chapterPromises = story.chapterUrls.map(getJSON);
 
         for (let chapterPromise of chapterPromises) {

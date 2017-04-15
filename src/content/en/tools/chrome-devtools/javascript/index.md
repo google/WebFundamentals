@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with debugging JavaScript using Chrome DevTools in this interactive tutorial.
 
-{# wf_updated_on: 2017-01-13 #}
+{# wf_updated_on: 2017-03-30 #}
 {# wf_published_on: 2017-01-04 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -19,9 +19,6 @@ for debugging all types of JavaScript bugs.
 If you're using `console.log()` to find and fix bugs in your code, consider
 using the workflow outlined in this tutorial instead. It's often much faster
 and more effective.
-
-Note: This tutorial is based on Chrome 57, which is currently
-[Canary](https://www.google.com/chrome/browser/canary.html).
 
 ## Step 1: Reproduce the bug {: #step-1 }
 

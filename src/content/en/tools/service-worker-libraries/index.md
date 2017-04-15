@@ -55,7 +55,7 @@ module for generating a service worker that
 precaches resources. The module can be used in JavaScript-based build scripts,
 like those written with [`gulp`](https://gulpjs.com/), and it also provides a
 [command-line interface](https://github.com/GoogleChrome/sw-precache/#command-line-interface). You can use the module
-directly, or if you'd prefer, use of the [wrappers](https://github.com/GoogleChrome/sw-precache/#wrappers-and-starter-kits)
+directly, or if you'd prefer, use one of the [wrappers](https://github.com/GoogleChrome/sw-precache/#wrappers-and-starter-kits)
 around `sw-precache` for specific build environments, like
 [`webpack`](https://webpack.github.io/).
 
