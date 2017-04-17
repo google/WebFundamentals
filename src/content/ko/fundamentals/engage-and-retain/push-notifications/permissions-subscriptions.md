@@ -23,7 +23,7 @@ description: 알림 권한 요청 시와 사용자의 알림 구독 시에는 �
 페이지가 로드될 때 항상 기존 권한을 확인하세요. 이미 권한이
  부여되어 있다면 즉시 알림을
 전송할 수 있습니다. 두 가지 방법 중 하나로 이 정보를 사용하여 권한 설정 상태를
-설정합니다. 아래의 예시를 참조하세요. 명확한 설명을 위해, 아직 우리는 아무 것도 요청하지
+설정합니다. 아래의 예시를 참조하세요. 명확한 설명을 위해, 아직 우리는 아무것도 요청하지
 않습니다.
 
 참고: 명확한 설명을 위해, 이 예시에서는 반드시 수행해야 하는 여러 가지 기능 검사를
@@ -106,7 +106,7 @@ if ('showNotification' in ServiceWorkerRegistration.prototype) {
 
 다음은 Chrome에서의 결과입니다.
 
-![권한을 묻는 Chrome 프롬프트.](images/news-permissions.png){:width="296px"}
+![권한을 묻는 Chrome 프롬프트.](images/news-permissions.png){:width='296px'}
 
 ### applicationServerKey란 무엇인가요? {: #applicationserverkey }
 
@@ -114,8 +114,8 @@ if ('showNotification' in ServiceWorkerRegistration.prototype) {
 다음 섹션에서 다룰 것입니다. 지금은
 `applicationServerKey`에 대해 한 가지만 알아두면 됩니다.
 `subscribe()` 호출에 키를 전달할 때는 키가
-[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-(8비트 무서명 정수 배열)인지 확인하세요.
+[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)(8비트 무서명 정수 배열)인지
+확인하세요.
 
 ## 특정 액션으로부터 트리거{: #trigger-from-action }
 
@@ -166,7 +166,7 @@ if ('showNotification' in ServiceWorkerRegistration.prototype) {
 ## 구독을 서버로 전달{: #passing-subscription }
 
 사용자로부터 알림 전송 권한을 얻고 관련 컨트롤의 상태를 설정한 후에는
-구독 정보(사양에서 "푸시 리소스"로 불림)를 푸시 서버로
+구독 정보(사양에서 '푸시 리소스'로 불림)를 푸시 서버로
 보내야 합니다. 이 때, 구독 데이터가 포함된
 적절한 요청 객체가 만들어지고, 이 객체가 서버로
 전달됩니다.

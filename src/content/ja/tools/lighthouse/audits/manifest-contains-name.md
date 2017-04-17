@@ -25,7 +25,7 @@ description: Ligjthouse の監査項目「マニフェストでアプリ名を�
       ...
     }
 
-Chrome における [最大文字数](https://developer.chrome.com/apps/manifest/name)は 45 文字です。
+Chrome における[最大文字数](https://developer.chrome.com/apps/manifest/name)は 45 文字です。
 
 
 アプリに "Add to Homescreen"

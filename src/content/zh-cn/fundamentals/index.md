@@ -51,13 +51,13 @@ Push API 和 Notification API 为重新吸引用户带来一系列全新的可�
 ## 增强网站的方式（也可称作有效的技巧）{: .hide-from-toc }
 
 <div class="attempt-left">
-  <h3 class="hide-from-toc">打造渐进式网络应用</h3>
+  <h3 class="hide-from-toc">打造 Progressive Web App</h3>
   <img src="/web/fundamentals/images/ic_important_devices_black_48dp.png" class="devsite-landing-row-item-image">
   <p>
-    什么是渐进式网络应用，以及您需要了解哪些基础知识才能着手开发一个这样的应用呢？
-在这个分步式指南中，您将打造自己的渐进式网络应用，并学习开发渐进式网络应用所需的基础知识。
+    什么是 Progressive Web App，以及您需要了解哪些基础知识才能着手开发一个这样的应用呢？
+在这个分步式指南中，您将打造自己的 Progressive Web App，并学习开发 Progressive Web App 所需的基础知识。
 <br>
-  <a href="/web/fundamentals/getting-started/codelabs/your-first-pwapp/">使用入门 </a>
+    <a href="/web/fundamentals/getting-started/codelabs/your-first-pwapp/">使用入门 </a>
   </p>
 </div>
 <div class="attempt-right">
@@ -83,8 +83,7 @@ Push API 和 Notification API 为重新吸引用户带来一系列全新的可�
   <h3 class="hide-from-toc">迁移到 HTTPS</h3>
   <img src="/web/fundamentals/images/ic_https_black_48dp.png" class="devsite-landing-row-item-image">
   <p>
-    HTTPS 允许用户以安全方式连接到您的网站或应用。设置 HTTPS 可保护您的网站的完整性和用户的安全。
-    <br>
+    HTTPS 允许用户以安全方式连接到您的网站或应用。设置 HTTPS 可保护您的网站的完整性和用户的安全。<br>
     <a href="/web/fundamentals/security/encrypt-in-transit/why-https">了解详情</a>
   </p>
 </div>

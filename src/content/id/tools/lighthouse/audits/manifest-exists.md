@@ -10,7 +10,7 @@ description: Dokumentasi referensi untuk "Manifest Exists" audit Lighthouse.
 ## Mengapa audit itu penting {: #why }
 
 Manifes Aplikasi Web adalah teknologi web yang memungkinkan Anda untuk menambahkan aplikasi web
-ke homescreen pengguna. Fitur ini sering disebut sebagai "Add to
+ke layar beranda pengguna. Fitur ini sering disebut sebagai "Add to
 Homescreen (A2HS)".
 
 ## Cara untuk lulus audit {: #how }

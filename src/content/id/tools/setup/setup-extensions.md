@@ -5,7 +5,7 @@ description: Dalam komponen internalnya, setiap browser desktop sudah dilengkapi
 {# wf_updated_on: 2015-04-13 #}
 {# wf_published_on: 2015-04-13 #}
 
-# Mempersiapkan Ekstensi Browser {: .page-title }
+# Menyiapkan Ekstensi Browser {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}

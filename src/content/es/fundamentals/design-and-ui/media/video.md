@@ -39,12 +39,12 @@ Agrega el elemento `video` para cargar, descodificar y reproducir videos en tu s
 <video controls>
   <source src="video/chrome.webm" type="video/webm">
   <source src="video/chrome.mp4" type="video/mp4">
-  <p>Este navegador no es compatible con el elemento de video.</p>
+  <p>This browser does not support the video element.</p>
 </video>
 
 
     <video src="chrome.webm" type="video/webm">
-        <p>Your browser does not support the video element.</p>
+        <p>Tu navegador no es compatible con el elemento de video.</p>
     </video>
     
 
@@ -100,7 +100,7 @@ Media Fragments para agregar una hora de inicio y de finalización al elemento d
 <video controls>
   <source src="video/chrome.webm#t=5,10" type="video/webm">
   <source src="video/chrome.mp4#t=5,10" type="video/mp4">
-  <p>Este navegador no es compatible con el elemento de video.</p>
+  <p>This browser does not support the video element.</p>
 </video>
 
 Para agregar un fragmento de medios, simplemente debes agregar `#t=[start_time][,end_time]` a la
@@ -431,7 +431,7 @@ elementos se muestran en el modo de pantalla completa.
 <video autoplay muted loop class="attempt-right">
   <source src="video/fullscreen.webm" type="video/webm">
   <source src="video/fullscreen.mp4" type="video/mp4">
-  <p>Este navegador no es compatible con el elemento de video.</p>
+  <p>This browser does not support the video element.</p>
 </video>
 
 En dispositivos que sean compatibles con la API Fullscreen, considera usar imágenes en miniatura

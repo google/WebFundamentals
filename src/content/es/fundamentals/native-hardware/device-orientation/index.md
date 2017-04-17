@@ -146,7 +146,7 @@ aumenta a medida que la parte superior del dispositivo se apunta hacia la superf
 
 La rotación alrededor del eje y. El valor de `gamma` es de 0&deg; cuando los bordes izquierdos y
 derechos del dispositivo se encuentran a la misma distancia de la superficie de la Tierra.  El valor
-aumenta a medida que la parte derecha del dispositivo se apunta hacia la superficie de la tierra.
+aumenta a medida que la parte derecha del dispositivo se apunta hacia la superficie de la Tierra.
 
 <div style="clear:both;"></div>
 

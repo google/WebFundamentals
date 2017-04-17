@@ -32,7 +32,7 @@ Bila ragu, jangan sampai membuat orang mabuk darat lantaran kinerja pengalaman y
 Untuk membuat materi WebVR Anda perlu memanfaatkan beberapa API baru, serta teknologi yang ada seperti [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial) dan [Web Audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API), serta mempertimbangkan beragam tipe masukan dan headset.
 
 <div class="attempt-left">
-  <h3>Mulai dengan WebVR</h3>
+  <h3>Memulai dengan WebVR</h3>
   <a href="./getting-started-with-webvr/">
     <img src="img/getting-started-with-webvr.jpg" alt="Mulai dengan WebVR" />
   </a>

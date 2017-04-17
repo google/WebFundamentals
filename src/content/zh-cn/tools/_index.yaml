@@ -41,7 +41,7 @@ landing_page:
     classname: devsite-landing-row-no-image-background wf-small-logos
     items:
     - description: >
-        Polymer Project 通过挖掘网络平台的全部潜能，帮助您提供卓越的用户体验。Polymer 是 Web Components（一种强大的新平台功能，用于扩展 HTML 和将应用组件化）的重要组成部分，利用它，您可以构建迅速加载、即时响应且可随时随地工作的尖端渐进式网络应用。
+        Polymer Project 通过挖掘网络平台的全部潜能，帮助您提供卓越的用户体验。Polymer 是 Web Components（一种强大的新平台功能，用于扩展 HTML 和将应用组件化）的重要组成部分，利用它，您可以构建迅速加载、即时响应且可随时随地工作的尖端 Progressive Web App。
       image_path: images/polymer-lockup-2016.png
       buttons:
       - label: 了解详情

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 이 코드랩에서는 무척 느린 네트워크에서도 빠르게 로드되고 홈 화면에 아이콘이 있고 최상위의 전체 화면 환경으로 로드되는 Progressive Web App을 빌드합니다.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2017-01-05T16:32:36Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -18,7 +17,7 @@ description: 이 코드랩에서는 무척 느린 네트워크에서도 빠르�
 
 
 
-[Progressive Web Apps](/web/progressive-web-apps)은 웹의 장점과 앱의 장점을 결합한 환경입니다. 이것은 사용자가브라우저 탭을 맨 처음 방문할 때부터 유용하며, 설치가 필요 없습니다. 시간의 흐름에 따라 사용자가 앱과의 관계를 점진적으로 쌓아갈수록 성능이 더욱 강력해질 것입니다. 이 웹 앱은 느린 네트워크에서도 빠르게 로드되고, 관련된 푸시 알림을 전송하며, 홈 화면에 아이콘이 있고, 최상위의 전체 화면 환경으로 로드됩니다.
+[Progressive Web App](/web/progressive-web-apps)은 웹의 장점과 앱의 장점을 결합한 환경입니다. 이것은 사용자가브라우저 탭을 맨 처음 방문할 때부터 유용하며, 설치가 필요 없습니다. 시간의 흐름에 따라 사용자가 앱과의 관계를 점진적으로 쌓아갈수록 성능이 더욱 강력해질 것입니다. 이 웹 앱은 느린 네트워크에서도 빠르게 로드되고, 관련된 푸시 알림을 전송하며, 홈 화면에 아이콘이 있고, 최상위의 전체 화면 환경으로 로드됩니다.
 
 ### Progressive Web App이란?
 
@@ -30,7 +29,7 @@ Progressive Web App의 특징은 다음과 같습니다.
 * __앱과 유사__ - 앱 셸 모드에서 작성되기 때문에 앱 스타일의 상호작용 및 탐색 기능을 사용자에게 제공합니다.
 * __최신 상태__ - 서비스 워커 업데이트 프로세스 덕분에 항상 최신 상태로 유지됩니다.
 * __안전__ - HTTPS를 통해 제공되므로 스누핑이 차단되며, 콘텐츠가 변조되지 않도록 보장합니다.
-* __검색 가능__ - W3C 매니페스트 및 서비스 워커 등록 범위 덕분에 "애플리케이션"으로 식별되므로, 검색 엔진에서 검색이 가능합니다.
+* __검색 가능__ - W3C 매니페스트 및 서비스 워커 등록 범위 덕분에 '애플리케이션'으로 식별되므로, 검색 엔진에서 검색이 가능합니다.
 * __재참여 가능__ - 푸시 알림과 같은 기능을 통해 쉽게 재참여가 가능합니다.
 * __설치 가능__ - 앱 스토어에서 씨름할 필요 없이 사용자가 자신에게 가장 유용한 앱을 홈 화면에 유지할 수 있습니다.
 * __링크 연결 가능__ - URL을 통해 손쉽게 공유할 수 있으며 복잡한 설치 작업이 불필요합니다.
@@ -53,7 +52,7 @@ App 기법을 사용하여 날씨 웹 앱을 빌드해 보겠습니다. Progress
 
 ### 배울 내용
 
-* "앱 셸" 방식을 사용하여 앱을 디자인하고 구성하는 방법
+* '앱 셸' 방식을 사용하여 앱을 디자인하고 구성하는 방법
 * 앱이 오프라인으로 작동하도록 만드는 방법
 * 나중에 오프라인 사용을 위해 데이터를 저장하는 방법
 
@@ -77,7 +76,7 @@ App 기법을 사용하여 날씨 웹 앱을 빌드해 보겠습니다. Progress
 
 다음 버튼을 클릭하면 이 코드랩을 위한 모든 코드를 다운로드할 수 있습니다.
 
-[Link](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
+[링크](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 
 다운로드한 zip 파일을 푸세요. 그러면 루트 폴더(`your-first-pwapp-master`)가 풀릴 것이고, 그 안에 이 코드랩의 각 단계마다 필요한 폴더 하나씩과 그 과정에서 필요한 모든 리소스가 들어 있습니다.
 
@@ -87,7 +86,7 @@ App 기법을 사용하여 날씨 웹 앱을 빌드해 보겠습니다. Progress
 
 자체 웹 서버를 사용해도 되지만 이 코드랩은 Chrome Web Server에서 잘 돌아가도록 고안되어 있습니다. 이 앱을 아직 설치하지 않으셨다면 Chrome 웹 스토어에서 설치할 수 있습니다.
 
-[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[링크](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 Web Server for Chrome 앱을 설치한 후 북마크바에서 Apps 단축키를 클릭하세요. 
 
@@ -103,11 +102,11 @@ Web Server for Chrome 앱을 설치한 후 북마크바에서 Apps 단축키를 
 
 __choose folder__ 버튼을 클릭하고 `work` 폴더를 선택하세요. 그러면 웹 서버 대화상자에 강조표시된 URL을 통해(__Web Server URL(s)__ 섹션) 진행 중인 작업을 제공할 수 있습니다.
 
-아래 그림과 같이, Options 아래에서 "Automatically show index.html" 옆에 있는 확인란을 선택하세요.
+아래 그림과 같이, Options 아래에서 'Automatically show index.html' 옆에 있는 확인란을 선택하세요.
 
 ![39b4e0371e9703e6.png](img/39b4e0371e9703e6.png)
 
-그런 다음, "Web Server: STARTED"라는 레이블로 표시된 전환 버튼을 왼쪽으로 밀었다가 다시 오른쪽으로 밀어 서버를 중지했다가 다시 시작하세요.
+그런 다음, 'Web Server: STARTED'라는 레이블로 표시된 전환 버튼을 왼쪽으로 밀었다가 다시 오른쪽으로 밀어 서버를 중지했다가 다시 시작하세요.
 
 ![daefd30e8a290df5.png](img/daefd30e8a290df5.png)
 
@@ -127,7 +126,7 @@ __choose folder__ 버튼을 클릭하고 `work` 폴더를 선택하세요. 그�
 
 앱의 셸은 Progressive Web App의 사용자 인터페이스를 구동하는 데 필요한 최소한의 HTML, CSS 및 자바스크립트이며, 안정적인 성능을 보장해주는 여러 구성 요소 중 하나입니다. 첫 로드가 극히 빠르고 즉시 캐시되어야 합니다. '캐시된다'는 것은 셸 파일이 네트워크를 통해 한 번 로드되고 나면 로컬 기기에 저장된다는 의미입니다. 그리고 이후에 사용자가 앱을 열 때마다 로컬 기기의 캐시에서 셸 파일이 로드되므로 시작 시간이 매우 빨라집니다. 
 
-앱 셸 아키텍처는 핵심 애플리케이션 인프라 및 UI와 데이터를 구분합니다.  모든 인프라 및 UI는 서비스워커를 사용하여 로컬로 캐시되므로, 이후의 로드에서 Progressive Web App은 모든 것을 로드하는 대신 필요한 데이터만을 검색해야 합니다.
+앱 셸 아키텍처는 핵심 애플리케이션 인프라 및 UI와 데이터를 구분합니다. 모든 UI 및 인프라는 서비스워커를 사용하여 로컬로 캐시되므로, 이후의 로드에서 Progressive Web App은 모든 것을 로드하는 대신 필요한 데이터만 검색하면 됩니다.
 
 ![156b5e3cc8373d55.png](img/156b5e3cc8373d55.png)
 
@@ -135,7 +134,7 @@ __choose folder__ 버튼을 클릭하고 `work` 폴더를 선택하세요. 그�
 
 ### 앱 셸 아키텍처를 사용하는 이유
 
-앱 셸 아키텍처를 사용하면 속도에 집중할 수 있으며 기본 앱과 유사한 속성을 Progressive Web App에 제공할 수 있습니다: 앱 스토어가 필요없는 즉시 로드 및 정기 업데이트.
+앱 셸 아키텍처를 사용하면 속도에 집중할 수 있으며 기본 앱과 유사한 속성을 Progressive Web App에 제공할 수 있습니다. 즉, 앱 스토어 필요 없이 즉시 로드와 정기 업데이트가 가능합니다.
 
 ### 앱 셸 디자인 
 
@@ -250,7 +249,7 @@ __choose folder__ 버튼을 클릭하고 `work` 폴더를 선택하세요. 그�
 
 ![166c3b4982e4a0ad.png](img/166c3b4982e4a0ad.png)
 
-[Link](https://weather-pwa-sample.firebaseapp.com/step-04/)
+[링크](https://weather-pwa-sample.firebaseapp.com/step-04/)
 
 시도해보고 예상한 대로 작동하는 것을 확인했으므로, 모조 데이터를 포함한 `app.updateForecastCard`에 대한 호출을 다시 삭제할 수 있습니다. 모든 것이 예상대로 작동했는지 확인하기 위해 필요했을 뿐이기 때문입니다.
 
@@ -334,7 +333,7 @@ Progressive Web App은 빠르게 시작되어야 하며 즉시 사용할 수 있
 
 ### 선택한 도시 저장
 
-마지막으로, "add city" 버튼 핸들러를 수정하여 선택한 도시를 로컬 저장소에 저장해야 합니다.
+마지막으로, 'add city' 버튼 핸들러를 수정하여 선택한 도시를 로컬 저장소에 저장해야 합니다.
 
 다음 코드와 일치하도록 `butAddCity` 클릭 핸들러를 업데이트하세요.
 
@@ -363,7 +362,7 @@ document.getElementById('butAddCity').addEventListener('click', function() {
 * (오른쪽 위에서 + 아이콘을 클릭하여) 새 도시를 추가하고 두 개의 카드가 표시되는지 확인합니다.
 * 브라우저를 새로 고치고, 두 예보가 앱에 로드되고 최신 정보가 표시되는지 확인합니다.
 
-[Link](https://weather-pwa-sample.firebaseapp.com/step-05/)
+[링크](https://weather-pwa-sample.firebaseapp.com/step-05/)
 
 
 ## 서비스 워커를 사용하여 앱 셸을 사전 캐시
@@ -373,7 +372,7 @@ document.getElementById('butAddCity').addEventListener('click', function() {
 
 Progressive Web App은 빠르고 설치가 가능해야 합니다. 즉, 온라인과 오프라인으로 작동하고 간헐적인 연결이나 느린 연결에서 작동해야 합니다. 이를 실현하기 위해 우리는 서비스 워커를 사용하여 앱 셸을 캐시하므로, 신속하고 안정적으로 항상 앱 셸을 사용할 수 있습니다.
 
-서비스 워커에 익숙하지 않다면, [서비스 워커 소개](/web/fundamentals/primers/service-worker/)를 읽고 서비스 워커의 기능과 수명 주기 및 제한사항에 대해 기본적인 내용들을 이해할 수 있습니다. 이 코드랩을 완료한 후 서비스 워커로 작업하는 방법을 더 깊이 알고 싶으면 [서비스 워커 디버깅 코드랩](http://goo.gl/jhXCBy)을 확인해 보세요.
+서비스 워커에 익숙하지 않다면, [서비스 워커 소개](/web/fundamentals/primers/service-worker/)를 읽고 서비스 워커의 기능과 수명 주기 및 제한사항에 대해 기본적인 내용들을 이해할 수 있습니다. 이 코드랩을 완료한 후 서비스 워커로 작업하는 방법을 더 깊이 알고 싶으면 [서비스 워커 디버깅 코드랩](https://goo.gl/jhXCBy)을 확인해 보세요.
 
 서비스 워커를 통해 제공되는 기능은 점진적 기능 개선으로 간주되어야 하며, 브라우저에 의해 지원되는 경우에만 기능이 추가되어야 합니다. 예를 들어, 서비스 워커를 가지고 앱 셸과 앱 데이터를 캐싱할 수 있으므로, 네트워크가 없는 경우에도 사용이 가능합니다. 서비스 워커가 지원되지 않는 경우 오프라인 코드가 호출되지 않으며, 기본적인 경험이 사용자에게 제공됩니다. 기능 검색을 사용하여 점진적 기능 개선을 제공할 경우, 오버헤드가 거의 없으며 또한 이 기능을 지원하지 않는 구형 브라우저를 방해하지 않습니다.
 
@@ -443,7 +442,7 @@ self.addEventListener('activate', function(e) {
 
 서비스 워커가 시작될 때 `activate` 이벤트가 발생합니다.
 
-DevTools Console을 열고 페이지를 새로 고치고, Application 패널에서 Service Worker 창으로 전환한 다음, 활성화된 서비스 워커에서 inspect를 클릭합니다. 콘솔에 기록된 `[ServiceWorker] Activate` 메시지를 볼 수 있으리라 기대했겠지만 그런 일은 발생하지 않았습니다. Service Worker 창을 확인해보면 새로운 서비스 워커(활성화된 이벤트 리스너를 포함한 서비스 워커)가 "waiting" 상태에 있는 것으로 나타납니다.
+DevTools Console을 열고 페이지를 새로 고치고, Application 패널에서 Service Worker 창으로 전환한 다음, 활성화된 서비스 워커에서 inspect를 클릭합니다. 콘솔에 기록된 `[ServiceWorker] Activate` 메시지를 볼 수 있으리라 기대했겠지만 그런 일은 발생하지 않았습니다. Service Worker 창을 확인해보면 새로운 서비스 워커(활성화된 이벤트 리스너를 포함한 서비스 워커)가 'waiting' 상태에 있는 것으로 나타납니다.
 
 ![1f454b6807700695.png](img/1f454b6807700695.png)
 
@@ -555,7 +554,7 @@ self.addEventListener('fetch', function(e) {
 
 __팁:__ 새롭게 시작하기 위해 저장된 데이터를 전부 지우고(localStoarge, indexedDB 데이터, 캐시된 파일 삭제) 모든 서비스 워커를 삭제하려면 'Application' 탭에서 'Clear storage' 창을 사용하세요.
 
-[Link](https://weather-pwa-sample.firebaseapp.com/step-06/)
+[링크](https://weather-pwa-sample.firebaseapp.com/step-06/)
 
 ### 돌발 상황에 유의
 
@@ -583,7 +582,7 @@ __팁:__ 새롭게 시작하기 위해 저장된 데이터를 전부 지우고(l
 
 ### 라이브 서비스 워커 테스트를 위한 팁
 
-서비스 워커를 디버깅하는 작업은 까다로울 수 있으며, 캐싱이 관련될 경우 이 캐시가 예상대로 업데이트되지 않으면 더 악몽이 될 수도 있습니다. 여러분은 일반적인 서비스 워커 수명 주기와 코드의 버그 사이에서 좌절감을 느낄 수도 있습니다. 그러나 좌절하지 마세요. 여러분의 삶을 편안하게 도와줄몇 가지 도구가 있습니다.
+서비스 워커를 디버깅하는 작업은 까다로울 수 있으며, 캐싱이 관련될 경우 이 캐시가 예상대로 업데이트되지 않으면 더 악몽이 될 수도 있습니다. 여러분은 일반적인 서비스 워커 수명 주기와 코드의 버그 사이에서 좌절감을 느낄 수도 있습니다. 그러나 좌절하지 마세요. 여러분의 삶을 편안하게 도와줄 몇 가지 도구가 있습니다.
 
 #### 새롭게 시작
 
@@ -612,7 +611,7 @@ __팁:__ 새롭게 시작하기 위해 저장된 데이터를 전부 지우고(l
 
 ### 네트워크 요청을 가로채고 응답을 캐시
 
-나중에 쉽게 액세스하기 위해, weather API에 대한 요청을 가로채고 그 응답을 캐시에 저장하도록 서비스 워커를 수정해야 합니다. 캐시 우선 네트워크 차선 전략에서 우리는 네트워크 응답이 '단일 정보 소스'가 되기를 기대하며, 항상 우리에게 가장 최신 정보를 제공하기를 기대합니다. 설령 그렇지 않더라도 이미 우리는 캐시에 저장된 최신 데이터를 검색했기 때문에 실패하더라도 문제는 없습니다.
+나중에 쉽게 액세스하기 위해, Weather API에 대한 요청을 가로채고 그 응답을 캐시에 저장하도록 서비스 워커를 수정해야 합니다. 캐시 우선 네트워크 차선 전략에서 우리는 네트워크 응답이 '단일 정보 소스'가 되기를 기대하며, 항상 우리에게 가장 최신 정보를 제공하기를 기대합니다. 설령 그렇지 않더라도 이미 우리는 캐시에 저장된 최신 데이터를 검색했기 때문에 실패하더라도 문제는 없습니다.
 
 애플리케이션 데이터를 앱 셸에서 구분할 수 있도록, 서비스 워커에서 `dataCacheName`을 추가해 보겠습니다. 앱 셸이 업데이트되고 오래된 캐시가 제거되면, 데이터는 변경되지 않고 그대로 유지되며, 초고속 로드를 위한 준비가 됩니다. 명심할 점은, 향후에 데이터 형식이 변경되면 여러분이 이를 처리하고 앱 셸과 콘텐츠의 동기화를 유지해야 합니다.
 
@@ -665,7 +664,7 @@ self.addEventListener('fetch', function(e) {
 });
 ```
 
-이 코드는 요청을 가로채고 URL이 weather API의 주소로 시작되는지 확인합니다. 시작될 경우에는 우리는 [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)를 사용하여 요청을 수행합니다. 응답이 반환되면 코드에서 캐시를 열고, 이 응답을 복제하여 캐시에 저장하고, 마지막으로 응답을 원래 요청자에게 반환합니다.
+이 코드는 요청을 가로채고 URL이 Weather API의 주소로 시작되는지 확인합니다. 시작될 경우에는 우리는 [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)를 사용하여 요청을 수행합니다. 응답이 반환되면 코드에서 캐시를 열고, 이 응답을 복제하여 캐시에 저장하고, 마지막으로 응답을 원래 요청자에게 반환합니다.
 
 아직은 우리의 앱이 오프라인으로 작동하지 않습니다. 앱 셸에 대한 캐싱과 검색을 구현했지만, 데이터를 캐시하더라도 앱이 아직은 캐시를 검사하여 날씨 데이터가 있는지 확인하지 못합니다. 
 
@@ -710,7 +709,7 @@ self.addEventListener('fetch', function(e) {
     }
 ```
 
-우리의 날씨 앱은 이제 데이터에 대해 두 개의 비동기 요청을 생성합니다. 하나는 `cache`로부터의 요청이고 하나는 XHR을 통한 요청입니다. 캐시에 데이터가 있는 경우 이 데이터가 매우 빠르게(수십 밀리초) 반환되어 렌더링되며 아직도 XHR이 대기 중인 경우에만 카드를 업데이트합니다. 그리고 XHR이 응답하면, weather API로부터 직접 가져온 최신 데이터로 카드가 업데이트됩니다.
+우리의 날씨 앱은 이제 데이터에 대해 두 개의 비동기 요청을 생성합니다. 하나는 `cache`로부터의 요청이고 하나는 XHR을 통한 요청입니다. 캐시에 데이터가 있는 경우 이 데이터가 매우 빠르게(수십 밀리초) 반환되어 렌더링되며 아직도 XHR이 대기 중인 경우에만 카드를 업데이트합니다. 그리고 XHR이 응답하면, Weather API로부터 직접 가져온 최신 데이터로 카드가 업데이트됩니다.
 
 예보 카드를 업데이트하기 위한 호출로 캐시 요청과 XHR 요청이 둘 다 어떻게 끝나는지 살펴보세요. 앱은 자신이 최신 데이터를 표시 중인지 어떻게 아는 것일까요? 이는 `app.updateForecastCard`의 다음 코드에서 처리됩니다.
 
@@ -736,7 +735,7 @@ self.addEventListener('fetch', function(e) {
 
 ![cf095c2153306fa7.png](img/cf095c2153306fa7.png)
 
-[Link](https://weather-pwa-sample.firebaseapp.com/step-07/)
+[링크](https://weather-pwa-sample.firebaseapp.com/step-07/)
 
 
 ## 기본 통합 지원
@@ -761,7 +760,7 @@ self.addEventListener('fetch', function(e) {
 * 웹 앱이 사용자의 Android 홈 화면에 널리 존재할 수 있습니다.
 * Android에서 URL 표시줄이 없는 전체 화면 모드로 웹 앱을 시작할 수 있습니다.
 * 최적의 보기를 위해, 웹 앱에서 화면 방향을 제어할 수 있습니다.
-* 웹 앱에서 사이트의 "스플래시 화면" 시작 환경과 테마 색상을 정의할 수 있습니다.
+* 웹 앱에서 사이트의 '스플래시 화면' 시작 환경과 테마 색상을 정의할 수 있습니다.
 * 홈 화면 또는 URL 표시줄에서의 시작 여부를 웹 앱이 추적할 수 있습니다.
 
 `work` 폴더에 `manifest.json`이라는 이름의 파일을 만들고 다음 콘텐츠를 복사해 붙여넣으세요.
@@ -800,7 +799,7 @@ self.addEventListener('fetch', function(e) {
 
 이 매니페스트는 다양한 화면 크기에 맞춰 고안된 일련의 아이콘을 지원합니다. 이 글을 작성하는 시점 기준으로, 웹 앱 매니페스트를 지원하는 브라우저는 Chrome과 Opera Mobile뿐인데, 192px보다 작은 것은 사용하지 않습니다.
 
-앱 실행 방식을 손쉽게 추적하는 한 방법은 `start_url` 매개변수에 쿼리 문자열을 추가한 다음 분석 도구 세트를 사용하여 쿼리 문자열을 추적하는 것입니다. 이 방법을 사용할 경우 App Shell에서 캐시되는 파일의 목록을 업데이트하여 쿼리 문자열을 포함한 파일이 캐시되도록 해야 합니다.
+앱 실행 방식을 손쉽게 추적하는 한 방법은 `start_url` 매개변수에 쿼리 문자열을 추가한 다음 분석 도구 세트를 사용하여 쿼리 문자열을 추적하는 것입니다. 이 방법을 사용할 경우 앱 셸에서 캐시되는 파일의 목록을 업데이트하여 쿼리 문자열을 포함한 파일이 캐시되도록 해야 합니다.
 
 #### 브라우저에게 매니페스트 파일 정보 알려주기
 
@@ -821,7 +820,7 @@ self.addEventListener('fetch', function(e) {
 
 [앱 설치 배너 사용](/web/fundamentals/engage-and-retain/simplified-app-installs/)
 
-### iOS의 Safari에서 Add to Homescreen 요소
+### iOS의 Safari용 Add to Homescreen 요소
 
 `index.html`에서 `<head>` 요소의 맨 아래에 다음을 추가합니다.
 
@@ -870,7 +869,7 @@ Android 기기에서 Chrome을 사용하여 홈 화면에 앱을 추가하고 �
 
 Safari와 Internet Explorer에서는 앱을 홈 화면에 수동으로 추가할 수도 있습니다.
 
-[Link](https://weather-pwa-sample.firebaseapp.com/step-08/)
+[링크](https://weather-pwa-sample.firebaseapp.com/step-08/)
 
 
 ## 보안 호스트에 배포하고 축하를 받으세요!
@@ -895,7 +894,7 @@ Firebase를 처음 사용하는 경우, 먼저 계정을 만들고 몇몇 도구
 1. [https://firebase.google.com/console/](https://firebase.google.com/console/)에서 Firebase 계정을 만듭니다.
 2. npm을 통해(`npm install -g firebase-tools`) Firebase 도구를 설치합니다.
 
-계정을 만들고 로그인했으면, 이제 배포 준비가 되었습니다!
+계정을 만들고 로그인했으면, 이제 배포 준비가 된 것입니다!
 
 1. [https://firebase.google.com/console/](https://firebase.google.com/console/)에서 새 앱을 만듭니다.
 2. 최근 Firebase 도구에 로그인한 적이 없으면 인증 정보를 업데이트합니다. `firebase login`
@@ -909,7 +908,7 @@ Firebase를 처음 사용하는 경우, 먼저 계정을 만들고 몇몇 도구
 
 * 앱을 홈 화면에 추가한 다음, 네트워크 연결을 끊고, 앱이 예상대로 오프라인으로 작동하는지 확인합니다.
 
-[Link](https://weather-pwa-sample.firebaseapp.com/final/)
+[링크](https://weather-pwa-sample.firebaseapp.com/final/)
 
 
 

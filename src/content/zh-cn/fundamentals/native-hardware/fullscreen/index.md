@@ -35,6 +35,7 @@ description:进入全屏模式。
 
 
 * `element.requestFullscreen()`（目前在 Chrome、Firefox 和 IE 中添加前缀）：以全屏模式显示元素。
+
 * `document.exitFullscreen()`（目前在 Chrome、Firefox 和 IE 中添加前缀。
   Firefox 改用 `cancelFullScreen()`）：取消全屏模式。
 * `document.fullscreenElement`（目前在 Chrome、Firefox 和 IE 中添加前缀）：如有任何元素处于全屏模式，返回 true。
@@ -435,7 +436,7 @@ iOS 没有硬件返回按钮或刷新手势。因此，必须确保用户能在�
 这意味着您无法让构建的全屏网站跨越多个页面，这是因为：
 
 
-* 利用 `window.location ="http://example.com"` 以编程方式更改网址会摆脱全屏模式。
+* 利用 ‘window.location =  "http://example.com"` 以编程方式更改网址会摆脱全屏模式。
 * 用户点击页面内的外部链接时将会退出全屏模式。
 * 通过 `navigator.pushState` API 更改网址也会摆脱全屏体验。
 
@@ -474,8 +475,10 @@ iOS 没有硬件返回按钮或刷新手势。因此，必须确保用户能在�
 
 
 * 谨慎小心。利用横幅或页脚告知用户他们可以安装应用。
+
 * 如果他们关闭了提示，不要再次显示。
 * 用户首次访问时，除非他们对您的服务感到满意，否则可能并不想安装应用。可以考虑在用户与网站的交互产生了积极印象后再提示他们安装。
+
 * 如果用户经常访问网站却没有安装应用，那么他们未来也不太可能安装应用。不要不断地滥发信息骚扰用户。
 
 ##  结论

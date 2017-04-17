@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:在此代码实验室中，您将学习如何使用新版 DevTools Application 面板调试服务工作线程。您还将学习如何模拟推送通知以验证您的订阅是否正确设置。
 
-{# wf_auto_generated #}
 {# wf_updated_on:2016-10-19T18:28:32Z #}
 {# wf_published_on:2016-01-01 #}
 
@@ -26,7 +25,7 @@ description:在此代码实验室中，您将学习如何使用新版 DevTools A
 
 ![6ffdd0864a80600.png](img/6ffdd0864a80600.png)
 
-在此代码实验室中，您将使用一个非常简单的渐进式网络应用，并学习在您遇到问题时可以在自己的应用中使用的技术。
+在此代码实验室中，您将使用一个非常简单的 Progressive Web App，并学习在您遇到问题时可以在自己的应用中使用的技术。
 
 因为此代码实验室的重点是指导您使用工具，所以您可以在各个点和试验上随时停止。使用代码、刷新页面、打开新标签等。学习调试工具的最好方法只是打破传统并亲自动手安装它们。
 
@@ -46,7 +45,7 @@ description:在此代码实验室中，您将学习如何使用新版 DevTools A
 * 文本编辑器
 * HTML、CSS 和 JavaScript 的基础知识
 
-此代码实验室的重点是调试服务工作线程以及有关使用服务工作线程的一些先备知识。某些概念只是一掠而过，有些则向您提供代码块（例如样式或不相关的 JavaScript）以直接复制和粘贴后使用。如果您对服务工作线程不熟悉，请务必[通读 API 入门指南](/web/fundamentals/primers/service-worker/?hl=en)，然后再继续。
+此代码实验室的重点是调试服务工作线程以及有关使用服务工作线程的一些先备知识。某些概念只是一掠而过，有些则向您提供代码块（例如样式或不相关的 JavaScript）以直接复制和粘贴后使用。如果您对服务工作线程不熟悉，请务必[通读 API 入门指南](/web/fundamentals/primers/service-worker/)，然后再继续。
 
 
 ## 设置
@@ -66,9 +65,9 @@ description:在此代码实验室中，您将学习如何使用新版 DevTools A
 
 ### 安装并验证网络服务器
 
-尽管您可以使用自己的网络服务器，但此代码实验室的设计只有与 Chrome Web Server 结合使用时才能正常运行。如果您尚未安装此应用，可以从 Chrome Web Store 安装。
+尽管您可以使用自己的网络服务器，但此代码实验室的设计只有与 Chrome Web Server 结合使用时才能正常运行。如果您尚未安装此应用，可以从 Chrome 网上应用店安装。
 
-[链接](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[链接](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 安装 Web Server for Chrome 后，点击书签栏上的 Apps 快捷方式： 
 
@@ -481,7 +480,7 @@ self.addEventListener('push', function(event) {
 
 ![a8a8fa8d35b0667a.png](img/a8a8fa8d35b0667a.png)
 
-* 最后，点击 __Update__ and __Unregister__ 旁边的 __Push__ 按钮
+* 最后，点击 __Update__ 和 __Unregister__ 旁边的 __Push__ 按钮
 
 ![eacd4c5859f5f3ff.png](img/eacd4c5859f5f3ff.png)
 

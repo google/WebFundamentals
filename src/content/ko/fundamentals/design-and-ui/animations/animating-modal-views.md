@@ -22,7 +22,7 @@ description: 앱에서 모달 뷰에 애니메이션을 적용하는 방법을 �
 
 ### TL;DR {: .hide-from-toc }
 * 모달 뷰는 드물게 사용해야 하며, 불필요한 방해는 사용자를 성가시게 만들 수 있습니다.
-* 애니메이션에 배율을 추가하면 멋진 "낙하" 효과가 발생합니다.
+* 애니메이션에 배율을 추가하면 멋진 '낙하' 효과가 발생합니다.
 * 사용자가 모달 뷰를 해제할 때 재빨리 모달 뷰를 제거합니다. 하지만 사용자가 놀라지 않도록 약간 더 느리게 모달 뷰를 화면으로 가져옵니다.
 
 <div class="clearfix"></div>
@@ -44,7 +44,7 @@ description: 앱에서 모달 뷰에 애니메이션을 적용하는 방법을 �
     }
     
 
-초기 `opacity`가 0이므로 뷰에서 숨겨지지만, 클릭과 터치가 통과하도록 `pointer-events`를 `none`으로 설정해야 합니다. 그렇지 않으면 모든 상호작용이 차단되고 전체 페이지가 응답하지 않습니다. 마지막으로, `opacity` 및 `transform`에 애니메이션을 적용하기 때문에 `will-change`에 의한 변경으로 표시되어야 합니다([will-change 속성 사용] (animations-and-performance#using-the-will-change-property) 참조).
+초기 `opacity`가 0이므로 뷰에서 숨겨지지만, 클릭과 터치가 통과하도록 `pointer-events`를 `none`으로 설정해야 합니다. 그렇지 않으면 모든 상호작용이 차단되고 전체 페이지가 응답하지 않습니다. 마지막으로, `opacity` 및 `transform`에 애니메이션을 적용하기 때문에 `will-change`에 의한 변경으로 표시되어야 합니다([will-change 속성 사용](animations-and-performance#using-the-will-change-property) 참조).
 
 뷰가 표시되면 상호작용을 허용해야 하며 `opacity`가 1이어야 합니다.
 
@@ -55,7 +55,7 @@ description: 앱에서 모달 뷰에 애니메이션을 적용하는 방법을 �
     }
     
 
-이제 모달 뷰가 필요할 때마다 자바스크립트를 사용하여 "visible" 클래스를 전환할 수 있습니다.
+이제 모달 뷰가 필요할 때마다 자바스크립트를 사용하여 'visible' 클래스를 전환할 수 있습니다.
 
 
     modal.classList.add('visible');

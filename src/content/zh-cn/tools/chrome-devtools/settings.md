@@ -29,7 +29,7 @@ DevTools 的**主菜单**是一个下拉菜单，可用于配置 DevTools 外观
 
 ![主菜单](images/main-menu.png)
 
-## 打开 Settings {: #settings}
+## 打开 Settings {: #settings }
 
 要打开 DevTools 的 Settings，请在 DevTools 处于焦点时按 <kbd>F1</kbd>，或者[打开主菜单](#main-menu)，然后选择 **Settings**。
 

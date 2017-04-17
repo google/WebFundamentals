@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 이 코드랩에서는 새로운 DevTools Application 패널을 사용하여 서비스 워커를 디버그하는 방법을 배울 수 있습니다. 푸시 알림을 시뮬레이션하여 구독이 올바로 설정되어 있는지 확인하는 방법도 살펴보겠습니다.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2016-10-19T18:28:32Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -46,7 +45,7 @@ description: 이 코드랩에서는 새로운 DevTools Application 패널을 사
 * 텍스트 편집기
 * HTML, CSS 및 자바스크립트에 대한 기본 지식
 
-이 코드랩은 서비스 워커 디버깅에 초점을 맞추고 있으므로 서비스 워커를 사용한 작업에 어느 정도 사전 지식이 있다는 전제하에 진행하겠습니다. 일부 개념은 대충 지나가거나(예: 스타일 또는 관련성이 없는 자바스크립트) 간단히 복사하여 붙여넣을 수 있도록 코드 블록이 제공됩니다. 서비스 워커를 처음 사용하는 개발자라면 꼭 [API 입문서를 읽어본 후](/web/fundamentals/primers/service-worker/?hl=en) 진행하세요.
+이 코드랩은 서비스 워커 디버깅에 초점을 맞추고 있으므로 서비스 워커를 사용한 작업에 어느 정도 사전 지식이 있다는 전제하에 진행하겠습니다. 일부 개념은 대충 지나가거나(예: 스타일 또는 관련성이 없는 자바스크립트) 간단히 복사하여 붙여넣을 수 있도록 코드 블록이 제공됩니다. 서비스 워커를 처음 사용하는 개발자라면 꼭 [API 입문서를 검토](/web/fundamentals/primers/service-worker/)한 후 진행하세요.
 
 
 ## 준비 작업
@@ -58,7 +57,7 @@ description: 이 코드랩에서는 새로운 DevTools Application 패널을 사
 
 다음 버튼을 클릭하면 이 코드랩을 위한 코드를 전부 다운로드할 수 있습니다.
 
-[Link](https://github.com/googlecodelabs/debugging-service-workers/archive/master.zip)
+[링크](https://github.com/googlecodelabs/debugging-service-workers/archive/master.zip)
 
 다운로드한 zip 파일을 푸세요. 그러면 루트 폴더(`debugging-service-workers-master`)가 풀릴 것이고, 그 안에 이 코드랩의 각 단계마다 필요한 폴더 하나씩과 그 과정에서 필요한 모든 리소스가 들어 있습니다.
 
@@ -68,7 +67,7 @@ description: 이 코드랩에서는 새로운 DevTools Application 패널을 사
 
 자체 웹 서버를 사용해도 되지만 이 코드랩은 Chrome Web Server에서 잘 돌아가도록 고안되어 있습니다. 이 앱을 아직 설치하지 않으셨다면 Chrome 웹 스토어에서 설치할 수 있습니다.
 
-[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[링크](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 Web Server for Chrome 앱을 설치한 후 북마크바에서 Apps 단축키를 클릭하세요. 
 
@@ -84,11 +83,11 @@ Web Server for Chrome 앱을 설치한 후 북마크바에서 Apps 단축키를 
 
 __choose folder__ 버튼을 클릭하고 `work` 폴더를 선택하세요. 그러면 웹 서버 대화상자에 강조표시된 URL을 통해(__Web Server URL(s)__ 섹션) 진행 중인 작업을 제공할 수 있습니다.
 
-아래 그림과 같이, Options 아래에서 "Automatically show index.html" 옆에 있는 확인란을 선택하세요.
+아래 그림과 같이, Options 아래에서 'Automatically show index.html' 옆에 있는 확인란을 선택하세요.
 
 ![8937a38abc57e3.png](img/8937a38abc57e3.png)
 
-그런 다음, "Web Server: STARTED"라는 레이블로 표시된 전환 버튼을 왼쪽으로 밀었다가 다시 오른쪽으로 밀어 서버를 중지했다가 다시 시작하세요.
+그런 다음, 'Web Server: STARTED'라는 레이블로 표시된 전환 버튼을 왼쪽으로 밀었다가 다시 오른쪽으로 밀어 서버를 중지했다가 다시 시작하세요.
 
 ![daefd30e8a290df5.png](img/daefd30e8a290df5.png)
 
@@ -207,7 +206,7 @@ Application 탭에는 이제 두 개의 상태 표시기가 있으며, 두 서�
 
 이런 유용한 방법으로 강제로 페이지가 최신 서비스 워커를 사용하도록 강제할 수 있으므로, 서비스 워커를 변경하고 싶을 때마다 __skipWaiting__ 옵션을 클릭할 필요가 없습니다.
 
-* 그 다음, 다음과 같은 형태가 되도록 `service-worker.js`에서 코드를 업데이트하세요.
+* 그 다음, 다음과 같은 형태가 되도록 `service-worker.js`에서 코드를 업데이트합니다.
 
 ```
 var CACHE_NAME = 'my-site-cache-v1';
@@ -335,7 +334,7 @@ __Network__ 패널에는 이제 오프라인 상태임을 나타내는 노란색
 
 ![739dc5811e4aa937.png](img/739dc5811e4aa937.png)
 
-__Bypass for network__ 옵션을 선택하면 네트워크 요청을 해야 할 때 서비스 워커를 건너뛰라고 브라우저에 알려주게 됩니다. 즉, Cache Storage에서 아무 것도 올 수 없게 될 것이고 이는 마치 아무런 서비스 워커도 설치하지 않은 것처럼 될 것이라는 의미입니다.
+__Bypass for network__ 옵션을 선택하면 네트워크 요청을 해야 할 때 서비스 워커를 건너뛰라고 브라우저에 알려주게 됩니다. 즉, Cache Storage에서 아무것도 올 수 없게 될 것이고 이는 마치 아무런 서비스 워커도 설치하지 않은 것처럼 될 것이라는 의미입니다.
 
 * 그 다음, __Network__ 패널로 전환합니다.
 * __Network Throttle__ 드롭다운을 사용하여 네트워크 속도를 `Regular 2G`로 설정합니다.

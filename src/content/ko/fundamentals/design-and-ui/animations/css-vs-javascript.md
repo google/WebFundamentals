@@ -15,13 +15,13 @@ description: CSS 또는 자바스크립트로 애니메이션을 만들 수 있�
 ### TL;DR {: .hide-from-toc }
 * UI 요소 상태 전환과 같은 간단한 '원샷(one-shot)' 전환에 CSS 애니메이션을 사용합니다.
 * 바운스, 중지, 일시 중지, 되감기 또는 감속과 같은 고급 효과를 원할 경우에 자바스크립트 애니메이션을 사용합니다.
-* 자바스크립트로 애니메이션을 만드는 경우, 자신에게 익숙한 웹 애니메이션 API 또는 최신 프레임워크를 사용합니다.
+* 자바스크립트로 애니메이션을 만드는 경우, 자신에게 익숙한 Web Animations API 또는 최신 프레임워크를 사용합니다.
 
 
 대부분의 기본 애니메이션은 CSS 또는 자바스크립트로 만들 수 있지만 투자하는 노력과 시간은 다릅니다([CSS와 자바스크립트의 성능 비교](animations-and-performance#css-vs-javascript-performance) 참조). 각각 장단점이 있지만 다음과 같은 규칙이 적용됩니다.
 
 * **UI 요소에 대해 작고 자체적으로 포함된 상태가 있는 경우 CSS를 사용합니다.** CSS 전환 및 애니메이션은 측면에 탐색 메뉴를 나타내거나 도움말을 표시하는 데 적합합니다. 자바스크립트를 사용하여 상태를 제어할 수 있지만 애니메이션 자체는 CSS에 있게 됩니다.
-* **애니메이션을 세밀하게 제어해야 하는 경우 자바스크립트를 사용합니다.** 웹 애니메이션 API는 표준 기반의 접근방식이며, 현재 Chrome 및 Opera에서 사용할 수 있습니다. 이 접근방식은 실제 객체를 제공하며, 복잡한 객체 지향 애플리케이션에 이상적입니다. 자바스크립트는 중지, 일시 중지, 감속 또는 되감기해야 하는 경우에도 유용합니다.
+* **애니메이션을 세밀하게 제어해야 하는 경우 자바스크립트를 사용합니다.** Web Animations API는 표준 기반의 접근방식이며, 현재 Chrome 및 Opera에서 사용할 수 있습니다. 이 접근방식은 실제 객체를 제공하며, 복잡한 객체 지향 애플리케이션에 이상적입니다. 자바스크립트는 중지, 일시 중지, 감속 또는 되감기해야 하는 경우에도 유용합니다.
 * **전체 장면을 손으로 조정하려는 경우에는 `requestAnimationFrame`을 직접 사용합니다.** 이것은 고급 자바스크립트 접근방식이지만, 게임을 빌드하거나 HTML 캔버스에 그리는 경우에 유용할 수 있습니다.
 
 <div class="video-wrapper">
@@ -54,7 +54,7 @@ CSS로 애니메이션을 만드는 것이 화면에서 움직임을 표현하�
       transform: translate(100px, 100px);
     }
     
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
 
 전환 기간 이외에도, 애니메이션에 느낌을 적용하는 *easing* 옵션이 있습니다. Easing에 대한 자세한 내용은 [Easing의 기본 사항](the-basics-of-easing) 가이드를 참조하세요.
 
@@ -86,8 +86,8 @@ CSS 전환과 더불어 CSS 애니메이션도 사용할 수 있어야 합니다
 
     /**
      * This is a simplified version without
-     * vendor prefixes. 필요한
-     * With them included (which you will need), things get far
+     * vendor prefixes. With them included
+     * (which you will need), things get far
      * more verbose!
      */
     .box {
@@ -134,9 +134,9 @@ CSS 애니메이션으로 애니메이션 자체를 대상 요소와 독립적�
 
 CSS 애니메이션은 여전히 대부분의 업체에서 프리픽스되고 있으며, `-webkit-`는 Safari, Safari Mobile 및 Android에서 사용되고 있습니다. Chrome, Opera, Internet Explorer 및 Firefox는 모두 프리픽스가 없이 출시됩니다. 필요한 CSS의 프리픽스 버전을 만드는 데 도움이 되는 많은 도구들이 있으며, 이를 통해 소스 파일에서 프리픽스되지 않은 버전을 작성할 수 있습니다.
 
-## 자바스크립트 및 웹 애니메이션 API로 애니메이션 만들기
+## 자바스크립트 및 Web Animations API로 애니메이션 만들기
 
-자바스크립트로 애니메이션을 만드는 것은 CSS 전환 또는 애니메이션을 작성하는 것보다 휠씬 복잡하지만, 일반적으로 개발자에게 더욱 강력한 성능을 제공합니다. [웹 애니메이션 API](https://w3c.github.io/web-animations/)를 사용하여 특정 CSS 속성에 애니메이션을 적용하거나 합성 가능한 효과 객체를 빌드할 수 있습니다.
+자바스크립트로 애니메이션을 만드는 것은 CSS 전환 또는 애니메이션을 작성하는 것보다 휠씬 복잡하지만, 일반적으로 개발자에게 더욱 강력한 성능을 제공합니다. [Web Animations API](https://w3c.github.io/web-animations/)를 사용하여 특정 CSS 속성에 애니메이션을 적용하거나 합성 가능한 효과 객체를 빌드할 수 있습니다.
 
 자바스크립트 애니메이션이 *필수적*인 이유는, 코드의 일부분으로 인라인 작성되기 때문입니다. 또한 다른 객체 내에 캡슐화할 수도 있습니다. 아래는 이전에 설명한 CSS 전환을 재생성하도록 코드를 작성해야 하는 자바스크립트입니다.
 
@@ -155,7 +155,7 @@ CSS 애니메이션은 여전히 대부분의 업체에서 프리픽스되고 �
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-wa.html){: target="_blank" .external }
 
-웹 애니메이션 API는 W3C의 새로운 표준입니다. 이 API는 Chrome 및 Opera에서 기본적으로 지원되며, [Firefox용으로 한창 개발 중](https://birtles.github.io/areweanimatedyet/){: .external }입니다. 다른 최신 브라우저의 경우 [폴리필을 사용할 수 있습니다](https://github.com/web-animations/web-animations-js).
+Web Animations API는 W3C의 새로운 표준입니다. 이 API는 Chrome 및 Opera에서 기본적으로 지원되며, [Firefox용으로 한창 개발 중](https://birtles.github.io/areweanimatedyet/){: .external }입니다. 다른 최신 브라우저의 경우 [폴리필을 사용할 수 있습니다](https://github.com/web-animations/web-animations-js).
 
 자바스크립트 애니메이션에서는 모든 단계에서 요소 스타일을 완벽하게 제어할 수 있습니다. 즉, 애니메이션을 감속, 일시 중지, 중지 또는 되감기할 수 있으며 요소를 보면서 조작할 수 있습니다. 이는 특히 복잡한 객체 지향 애플리케이션을 빌드하는 경우에 유용한데, 그 이유는 동작을 적절히 캡슐화할 수 있기 때문입니다.
 

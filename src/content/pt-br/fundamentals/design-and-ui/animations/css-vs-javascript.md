@@ -20,8 +20,8 @@ Há duas formas principais de criar animações na Web: com CSS e com JavaScript
 
 A maioria das animações básicas pode ser criada com CSS ou JavaScript, mas o esforço e o tempo necessários será diferente (consulte também [Desempenho do CSS vs JavaScript](animations-and-performance#css-vs-javascript-performance)). Cada linguagem tem seus prós e contras, mas as regras gerais são:
 
-* **Use CSS quando tiver estados menores e autocontidos para elementos de IU.**Transições e animações CSS são ideais para exibir um menu de navegação da lateral ou mostrar uma descrição. Você pode acabar usando o JavaScript para controlar os estados, mas as animações estarão no CSS.
-* **Use JavaScript quando precisar de controle significativo sobre as animações.**A Web Animations API é a abordagem baseada em padrões, disponível hoje no Chrome e no Opera. Isso oferece objetos verdadeiros, ideais para aplicativos complexos orientados por objetos. O JavaScript também é útil quando precisar parar, pausar, desacelerar ou inverter.
+* **Use CSS quando tiver estados menores e autocontidos para elementos de IU.** Transições e animações CSS são ideais para exibir um menu de navegação da lateral ou mostrar uma descrição. Você pode acabar usando o JavaScript para controlar os estados, mas as animações estarão no CSS.
+* **Use JavaScript quando precisar de controle significativo sobre as animações.** A Web Animations API é a abordagem baseada em padrões, disponível hoje no Chrome e no Opera. Isso oferece objetos verdadeiros, ideais para aplicativos complexos orientados por objetos. O JavaScript também é útil quando precisar parar, pausar, desacelerar ou inverter.
 * **Use `requestAnimationFrame` diretamente quando quiser orquestrar uma cena interna manualmente.** Essa é uma abordagem JavaScript avançada, mas ela pode ser útil se você estiver criando um jogo ou desenhando em um canvas HTML.
 
 <div class="video-wrapper">
@@ -128,7 +128,7 @@ Por exemplo, você pode animar a caixa da mesma forma que anima transições, ma
     }
     
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html){: target="_blank" .external }
 
 Com animações CSS, você define a própria animação independentemente do elemento alvo e usa a propriedade animation-name para selecionar a animação necessária.
 
@@ -153,7 +153,7 @@ Animações JavaScript são *imperativas*, pois são programadas em linha como p
 
 Por padrão, animações da Web só modificam a apresentação de um elemento. Se quiser que seu objeto permaneça no local para onde ele foi motivo, modifique seus estilos subjacentes quando a animação for concluída, como é apresentado no nosso exemplo.
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-wa.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-wa.html){: target="_blank" .external }
 
 A Web Animations API é um novo padrão do W3C. Ela tem suporte nativo no Chrome e no Opera e está [sendo desenvolvida para Firefox](https://birtles.github.io/areweanimatedyet/){: .external }. Para outros navegadores modernos, [há um polyfill disponível](https://github.com/web-animations/web-animations-js).
 

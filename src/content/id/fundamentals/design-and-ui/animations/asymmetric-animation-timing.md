@@ -18,7 +18,7 @@ Pengaturan waktu animasi asimetris meningkatkan pengalaman pengguna dengan memun
 
 Seperti kebanyakan "aturan" animasi, Anda harus bereksperimen untuk mencari tahu apa yang paling cocok bagi aplikasi Anda, namun ketika berurusan dengan pengalaman pengguna, pengguna itu terkenal tidak sabar. Aturan mudahnya adalah **selalu menanggapi interaksi pengguna dengan cepat**. Jadi karena, sebagian besar aksi pengguna adalah asimetris, maka animasi juga begitu.
 
-Misalnya, ketika pengguna mengetuk untuk menampilkan navigasi bilah sisi, Anda harus menampilkannya ke layar secepat mungkin, dengan durasi sekitar 100 md. Namun ketika pengguna menutup menu, Anda bisa menganimasikan tampilan keluar dengan sedikit lebih lambat, misalnya dengan durasi sekitar 300 md
+Misalnya, ketika pengguna mengetuk untuk menampilkan navigasi bilah sisi, Anda harus menampilkannya ke layar secepat mungkin, dengan durasi sekitar 100 md. Namun ketika pengguna menutup menu, Anda bisa menganimasikan tampilan keluar dengan sedikit lebih lambat, misalnya dengan durasi sekitar 300 md.
 
 Sebaliknya, ketika Anda menyajikan tampilan modal, ini biasanya untuk menampilkan pesan kesalahan atau beberapa pesan penting lainnya. Dalam keadaan seperti ini, Anda menyajikan tampilan dengan sedikit lebih lambat, sekitar 300 md, namun saat ditutup, yang dipicu oleh pengguna, harus terjadi sangat cepat.
 

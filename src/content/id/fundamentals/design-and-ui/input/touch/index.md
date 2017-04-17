@@ -419,7 +419,7 @@ nama kejadian.
 Untuk informasi selengkapnya, periksa [pembaruan artikel dari
 Microsoft](https://msdn.microsoft.com/en-us/library/dn304886(v=vs.85).aspx).
 
-##Referensi 
+## Referensi
 
 ### Kelas pseudo untuk status sentuh
 

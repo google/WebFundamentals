@@ -521,7 +521,7 @@ Untuk daftar lengkap atribut elemen video beserta definisinya, lihat
     <tr>
       <td data-th="Attribute"><code>preload</code></td>
       <td data-th="Availability">Semua browser seluler mengesampingkan pramuat.</td>
-      <td data-th="Description">Petunjuk bagi browser bahwa pramuat metadata (atau beberapa video) sebelum pemutaran memberikan kita keuntungan. Pilihannya adalah none, metadata, atau auto (lihat bagian <a href="#preload">Preload</a> untuk lebih lengkapnya). </td>
+      <td data-th="Description">Petunjuk bagi browser bahwa pramuat metadata (atau beberapa video) sebelum pemutaran memberikan kita keuntungan. Pilihannya adalah none, metadata, atau auto (lihat bagian <a href="#preload">Pramuat</a> untuk lebih lengkapnya). </td>
     </tr>
     <tr>
       <td data-th="Attribute"><code>autoplay</code></td>

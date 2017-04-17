@@ -33,7 +33,7 @@ optimización de tu sitio web para los motores de búsqueda.
 Existen varias maneras de enviar contenido a diferentes dispositivos. A continuación mencionamos los tres
 métodos más comunes:
 
-**Diseño web adaptable:**envía el mismo HTML de una URL y utiliza consultas de medios
+**Diseño web adaptable:** envía el mismo HTML de una URL y utiliza consultas de medios
 CSS para determinar cómo se entrega el contenido del lado del cliente.
 Por ejemplo, Escritorio y Móviles: http://www.example.com/
 
@@ -63,7 +63,7 @@ Beneficios de un sitio web adaptable:
   
 Aprende a compilar sitios web con diseño web adaptable en [Aspectos básicos del diseño web adaptable](/web/fundamentals/design-and-ui/responsive/).
 
-### Usa `link[rel=canonical]` y `link[rel=alternate]` al enviar URL separadas.
+### Usa `link[rel=canonical]` y `link[rel=alternate]` al enviar URL separadas
 
 Enviar contenidos similares en una versión de escritorio y una versión móvil en diferentes
 URL puede crear confusión para los usuarios y también para los motores de búsqueda, ya que no es

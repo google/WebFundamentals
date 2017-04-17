@@ -163,7 +163,7 @@ Siklus hidup menampilkan berapa lama waktu yang dihabiskan dalam kategori beriku
 
 * Queuing
 * Stalled
-* Jika berlaku: pencarian DNS, koneksi awal, handshake SSL
+* Jika berlaku: DNS lookup, initial connection, SSL handshake
 * Request sent
 * Waiting (Time to first byte (TTFB))
 * Content Download

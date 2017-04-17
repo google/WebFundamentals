@@ -54,7 +54,7 @@ X 軸と Y 軸の両方に対して、要素を 100 ピクセルずつ動かす 
       transform: translate(100px, 100px);
     }
     
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
 
 遷移の継続時間のほかに、「イージング」のオプションもあります。基本的に、アニメーションの印象はイージングによって決まります。イージングについての詳細は、[イージングの基本](the-basics-of-easing)のガイドを参照してください。
 

@@ -37,7 +37,7 @@ código modelo.
 
 ¿Existen entonces variaciones de `navigator.serviceWorker.register`? ¿Existen prácticas
 recomendadas que haya que seguir? No debería sorprender (dado que el artículo no termina
-aquí) que la respuesta es ¡“sí”!
+aquí) que la respuesta es "¡sí!"
 
 ## La primera visita del usuario
 

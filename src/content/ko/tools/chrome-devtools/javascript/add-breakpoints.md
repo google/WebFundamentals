@@ -32,7 +32,7 @@ description: 중단점을 사용하여 자바스크립트 코드를 일시 중�
 
 ## 특정 코드 줄에 중단점 설정하기 {:#line-number}
 
-조사하려는 문을 알고있는 경우 특정 코드 줄에 중단점을 설정하면
+조사하려는 문을 알고 있는 경우 특정 코드 줄에 중단점을 설정하면
 유용합니다. 예를 들어,
 로그인 워크플로가 예기치 않게 작동하고 코드에서 로그인을 처리하는
 함수가 하나뿐인 경우, 버그가
@@ -56,7 +56,7 @@ description: 중단점을 사용하여 자바스크립트 코드를 일시 중�
 을 눌러 읽을 수 있도록 만듭니다. 
 
 소스 코드의 왼쪽을 따라 줄 번호를 볼 수 있습니다. 이 영역은
-**줄 번호 여백(line number gutter)** 이라고 합니다. 줄 번호 여백 내부를 클릭하여
+**줄 번호 여백(line number gutter)**이라고 합니다. 줄 번호 여백 내부를 클릭하여
 해당 코드 줄에 중단점을 추가합니다.
 
 ![줄 번호 중단점][lnb]
@@ -80,9 +80,9 @@ description: 중단점을 사용하여 자바스크립트 코드를 일시 중�
 아직 중단점이 없는 줄 번호를 마우스 오른쪽 버튼으로 클릭하고
 **Add conditional breakpoint**를 눌러 조건부 중단점을 만듭니다.
 코드 줄에 이미 추가한 중단점을 조건부로 만들려면
-마우스 오른쪽 버튼을 클릭하고**Edit breakpoint**를 누릅니다.
+마우스 오른쪽 버튼을 클릭하고 **Edit breakpoint**를 누릅니다.
 
-텍스트 필드에 조건을 입력하고 <kbd>Enter</kbd>를 누릅니다.
+텍스트 필드에 조건을 입력하고 <kbd>Enter</kbd> 키를 누릅니다.
 
 ![조건 추가][ac]
 
@@ -180,7 +180,7 @@ increment.addEventListener('click', function() {
 스크립트에서 강조 표시합니다.
 
 1. **스크립트 실행 재개** ![스크립트 실행 재개
-버튼][resume]{:.devtools-inline}을 두 번 눌러
+버튼][resume]{:.devtools-inline}를 두 번 눌러
 스크립트 실행을 재개합니다. 두 번 누르는 이유는 카운트 텍스트가 삭제될 때
 중단점이 한번 트리거되고 이 텍스트가 새 카운트로 업데이트될 때 중단점이
 다시 트리거되기 때문입니다.
@@ -221,7 +221,7 @@ Breakpoints**가 오버플로 메뉴 ![오버플로
 다음은 각 유형의 DOM
 변경 중단점이 트리거되는 정확한 시기와 방법에 대한 상세 정보입니다.
 
-* **Subtree modifications**. 현재 선택한
+* **Subtree modifications**: 현재 선택한
   노드의 자식이 제거 또는 추가되거나 자식의 콘텐츠가 변경될 때 트리거됩니다. 자식 노드의
   속성이 변경되거나 현재 선택한 노드가 변경될 때
   트리거되지 않습니다.
@@ -248,9 +248,9 @@ Breakpoints** 창을 사용하세요.
 [xbp]: imgs/xhr-breakpoints-pane.png
 
 더하기 기호 버튼을 클릭하여 새 중단점 패턴을 추가합니다. 텍스트 필드에
-문자열을 입력하고<kbd>Enter</kbd>를 눌러 저장합니다.
+문자열을 입력하고 <kbd>Enter</kbd> 키를 눌러 저장합니다.
 
-**팁**: 더하기 기호를 클릭한 다음 <kbd>Enter</kbd>를 즉시 눌러
+**팁**: 더하기 기호를 클릭한 다음 <kbd>Enter</kbd> 키를 즉시 눌러
 XHR이 전송되기 전에 중단점을 트리거합니다.
 
 ## 이벤트 발생 시 중단 {:#events}
@@ -303,8 +303,7 @@ XHR이 전송되기 전에 중단점을 트리거합니다.
 <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>(Windows, Linux)를 눌러서
 DevTools를 엽니다.
 1. **Sources** 탭을 클릭합니다.
-1. **Pause on exceptions**![
-예외에서 일시 중지][pause on exception]{:.devtools-inline}를 클릭합니다.
+1. **Pause on exceptions** ![pause on exception][pause on exception]{:.devtools-inline}를 클릭합니다.
 1. **Print Random Number**를 다시 클릭하여 중단점을 트리거합니다.
    DevTools가
 `nodes.number.textContent = Math.random();`이 포함된 코드 줄에서 일시 중지해야 합니다. 이제 모든 내용을 배웠으므로
@@ -312,20 +311,16 @@ DevTools를 엽니다.
 이 버그를 해결하는 방법을 설명합니다.
 1. 현재 DevTools가 일시 중지된 코드 줄에서 `nodes` 위로 마우스를 가져가서
 객체가 제대로 참조되었는지 확인합니다. 세 가지 속성(`button`, `num` 및 `__proto__`)이 포함된 것을 확인할 수 있습니다.
-
    잘못된 점은 없는 듯합니다. 여기는 버그가 있는 곳이 아닙니다.
 1. `number` 위로 마우스를 가져갑니다. `undefined`로 평가되고 있는 것을 확인할 수 있습니다.
-   여기가 버그의 원입니다. 속성 이름이
-`number`가 아니라 `num`이어야 합니다.
+   여기가 버그의 원입니다. 속성 이름이 `number`가 아니라 `num`이어야 합니다.
 1. DevTools에서 `nodes.number.textContent`를 `nodes.num.textContent`로 변경합니다.
-1. <kbd>Command</kbd>+<kbd>S</kbd>(Mac) 또는
-<kbd>Control</kbd>+<kbd>S</kbd>(Windows, Linux)를 눌러서 변경 사항을 저장합니다.
+1. <kbd>Command</kbd>+<kbd>S</kbd>(Mac) 또는 <kbd>Control</kbd>+<kbd>S</kbd>(Windows, Linux)를 눌러서 변경 사항을 저장합니다.
    DevTools가 저장 후 바로 스크립트 실행을 계속합니다.
-1. **Print Random Number**를 다시 눌러서 버그가 해결되었는지
-확인합니다. 이제 버튼을 클릭한 후에 DevTools가 멈추지 않습니다.
+1. **Print Random Number**를 다시 눌러서 버그가 해결되었는지 확인합니다. 이제 버튼을 클릭한 후에 DevTools가 멈추지 않습니다.
 즉, 스크립트에 예외가 발생하지 않는다는 뜻입니다.
 
-[예외 시 일시 중지]: /web/tools/chrome-devtools/images/pause-on-exception.png
+[pause on exception]: /web/tools/chrome-devtools/images/pause-on-exception.png
 
 
 {# wf_devsite_translation #}

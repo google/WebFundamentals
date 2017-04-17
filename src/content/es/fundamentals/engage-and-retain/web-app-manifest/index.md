@@ -163,7 +163,8 @@ pantalla de presentación a la página principal.
 ### Configura un color de tema
 
 Especifica un color de tema por medio de la propiedad `theme_color`. Esta propiedad
-fija el color de la barra de herramientas. Para llevar esto a cabo sugerimos duplicar un color existente, específicamente el `theme-color` `<meta>`.
+fija el color de la barra de herramientas. Para llevar esto a cabo sugerimos duplicar un color existente,
+ específicamente el `theme-color` `<meta>`.
 
 
 ## Configura el estilo para iniciar

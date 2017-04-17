@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Codelab ini akan membantu Anda belajar mengidentifikasi dan memperbaiki bottleneck kinerja aplikasi web.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2016-10-20T18:16:09Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -22,7 +21,7 @@ description: Codelab ini akan membantu Anda belajar mengidentifikasi dan memperb
 Codelab ini adalah versi teks dari sebagian materi yang dibahas dalam kursus Udacity mengenai kinerja web/aplikasi ( [ud860](https://www.udacity.com/course/viewer#!/c-ud860/l-4138328558/m-4157078575)). Alih-alih transkripsi dari kursus video, codelab ini dimaksudkan agar menjadi solusi praktis dan efisien terhadap identifikasi dan koreksi jank, dengan menggunakan proyek final sesi praktik asli kursus.
 
 
-## Ikhtisar
+## Ringkasan
 
 
 
@@ -465,7 +464,7 @@ Seperti yang telah kita ketahui sebelumnya dalam codelab ini, kadang-kadang perb
 
 Hal pertama yang harus diperhatikan dalam kelas `.story-details` adalah bahwa kita menyetel properti `left` ke 100%; sebesar apa pun lebar layar, ini mendorong seluruh elemen cerita ke kanan, sepenuhnya keluar dari laman yang terlihat, sehingga benar-benar menyembunyikannya. 
 
-Berikutnya, di kelas `.story-details.visible` dan `.story-details.hidden`, kita mempersiapkan `transform` pada semua kelas untuk memaksa posisi X (horizontal) ke -100vw ( *tampilan lebar yang terlihat* ) dan 0. Di aplikasi, kelas-kelas ini akan memindahkan materi cerita ke dalam tampilan atau mengembalikan ke posisi luar-layar aslinya.
+Berikutnya, di kelas `.story-details.visible` dan `.story-details.hidden`, kita menyiapkan `transform` pada semua kelas untuk memaksa posisi X (horizontal) ke -100vw ( *tampilan lebar yang terlihat* ) dan 0. Di aplikasi, kelas-kelas ini akan memindahkan materi cerita ke dalam tampilan atau mengembalikan ke posisi luar-layar aslinya.
 
 Kemudian, untuk memastikan bahwa penampilan cerita terlihat seperti animasi dan tidak sekedar cuplikan kasar, kita membuat `transition` pada `transform` untuk memberinya waktu 0,3 d (33 md). Hal ini akan memastikan efek visual pergeseran masuk/keluar yang halus.
 

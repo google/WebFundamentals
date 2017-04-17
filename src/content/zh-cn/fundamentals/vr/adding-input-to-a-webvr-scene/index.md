@@ -54,7 +54,7 @@ description:探索如何使用 Ray Input 内容库向 WebVR 场景添加输入�
       this._onDeselected(this._box);
     });
 
-Let’s take a look inside both the `_getInput` and `_addInputEventListeners` functions.
+让我们看一下 `_getInput` 和 `_addInputEventListeners` 函数内的情况。
 
     _getInput () {
       this._rayInput = new RayInput.default(
@@ -82,7 +82,7 @@ Let’s take a look inside both the `_getInput` and `_addInputEventListeners` fu
       this._rayInput.on('rayup', this._onDeselected);
     }
 
-As you interact with the scene, whether by mouse, touch, or other controllers, these events will fire. In the scene we can make our box’s opacity change based on whether the user is pointing at it.
+在与场景交互时（无论通过鼠标、触摸或其他控制器），这些事件都将触发。我们可以根据用户是否指向盒子来让盒子的不透明度发生变化。
 
     _onSelected (optMesh) {
       if (!optMesh) {
@@ -126,7 +126,7 @@ As you interact with the scene, whether by mouse, touch, or other controllers, t
       console.error(`Unable to init VR: ${e}`);
     });
 
-通常，您可能期望使用 HTML 元素向用户显示这些信息，但 HMD 正在显示 WebGL 上下文（且没有任何其他内容），因此，我们必须在此处绘制消息。Three.js 具有一个 [Sprite primitive](https://threejs.org/docs/#Reference/Objects/Sprite)，其始终面向摄像头（通常称为“布告板”），我们可以在上面绘制图像。
+通常，您可能期望使用 HTML 元素向用户显示这些信息，但 HMD 正在显示 WebGL 上下文（且没有任何其他内容），因此，我们必须在此处绘制消息。Three.js 具有一个 [Sprite 原语](https://threejs.org/docs/#Reference/Objects/Sprite)，其始终面向摄像头（通常称为“布告板”），我们可以在上面绘制图像。
 
 ![向用户显示一条“Press Button”消息](./img/press-a-button.jpg)
 

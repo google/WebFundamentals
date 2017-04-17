@@ -67,7 +67,7 @@ Un objeto con opciones típicas tiene el siguiente aspecto:
       ]
     }
     
-<img src="images/cc-good.png" alt="Example Notification" class="attempt-right">
+<img src="images/cc-good.png" alt="Notificación de ejemplo" class="attempt-right">
 
 Este código genera una notificación como la que se muestra en la imagen. En general,
 proporciona las mismas capacidades que una app nativa. Antes de adentrarnos en

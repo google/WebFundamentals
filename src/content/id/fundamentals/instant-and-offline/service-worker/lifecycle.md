@@ -22,7 +22,7 @@ hal yang perlu Anda ketahui.
 Maksud dari daur hidup adalah untuk:
 
 * Memungkinkan offline-terlebih dahulu.
-* Biarkan service worker baru mempersiapkan diri sendiri tanpa mengganggu apa yang
+* Biarkan service worker baru menyiapkan diri sendiri tanpa mengganggu apa yang
   ada.
 * Memastikan laman dalam-cakupan dikontrol oleh service worker yang sama (atau tanpa
   service worker) seluruhnya.
@@ -581,14 +581,14 @@ kuda, bukan kucing:
 
 Catatan: Saya tidak memiliki opini yang kuat soal kuda.
 
-[Periksalah demo
+[Lihat demo
 di atas](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
 .external}. Anda seharusnya tetap melihat gambar kucing. Inilah sebabnya...
 
 ### Memasang
 
 Perhatikan, saya telah mengubah nama cache dari `static-v1` menjadi `static-v2`. Ini
-berarti saya bisa mempersiapkan cache baru tanpa menimpa apa yang ada di cache saat ini,
+berarti saya bisa menyiapkan cache baru tanpa menimpa apa yang ada di cache saat ini,
 yang masih digunakan oleh service worker lama.
 
 Pola ini akan membuat cache versi spesifik, semacam aset yang akan dibundel

@@ -16,7 +16,7 @@ landing_page:
   - classname: devsite-landing-row-50
     items:
     - description: >
-        <h4>Los próximos mil millones de usuarios usarán dispositivos móviles en casi todos los casos.</h4>
+        <h4>Los próximos mil millones de usuarios usarán dispositivos móviles en casi todos los casos</h4>
         <p>
           Esto presenta desafíos únicos para desarrolladores web que deben abandonar el primer enfoque limitado para dispositivos móviles a favor de una estrategia móvil integral.
         </p>

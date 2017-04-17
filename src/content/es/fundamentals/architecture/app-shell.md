@@ -9,7 +9,7 @@ description: La arquitectura de shell de la app mantiene tu IU local y carga con
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 
-Una arquitectura de **shell de app** (o shell de app) es una forma de crear una
+Una arquitectura de **shell de aplicación** (o shell de app) es una forma de crear una
 Progressive Web App que se carga al instante y de manera confiable en la pantalla de tu usuario,
 en forma similar a lo que ves en las apps nativas.
 
@@ -160,7 +160,7 @@ archivo index completo. Observemos lo que contiene.
 
     <body>
       <header class="header">
-        <h1 class="header__title">App Shell</h1>
+        <h1 class="header__title">Shell de app</h1>
       </header>
       
       <nav class="nav">

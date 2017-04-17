@@ -124,7 +124,7 @@ Dengan demikian, mari kita lihat apakah kita bisa mundur selangkah dan mengident
 
 ## Pola kinerja
 
-Laman paling sederhana mungkin hanya terdiri dari markup HTML: tanpa CSS, tanpa JavaScript, atau tipe sumber daya lainnya. Untuk me-render laman ini, browser harus memulai permintaan, tunggu dokumen HTML tiba, lakukan parse, bangun DOM dan terakhir render pada layar.
+Laman paling sederhana mungkin hanya terdiri dari markup HTML: tanpa CSS, tanpa JavaScript, atau tipe sumber daya lainnya. Untuk merender laman ini, browser harus memulai permintaan, tunggu dokumen HTML tiba, lakukan parse, bangun DOM dan terakhir render pada layar.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}

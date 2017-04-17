@@ -354,7 +354,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
 
 ##  设定样式  {: #styling}
 
-有多种方式可设定网络组件的样式。使用 shadow DOM 的组件可通过主页来设定样式，定义其自己的样式或提供钩子（以 [CSS 自定义属性][css_props] 的形式）让用户替换默认值。
+有多种方式可设定网络组件的样式。使用 shadow DOM 的组件可通过主页来设定样式，定义其自己的样式或提供钩子（以 [CSS 自定义属性][css_props]的形式）让用户替换默认值。
 
 
 
@@ -629,7 +629,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
     <fancy-tabs background>...</fancy-tabs>
     
 
-在其 Shadow DOM 内部：
+在其 shadow DOM 内部：
 
 
     :host([background]) {
@@ -701,7 +701,7 @@ shadow DOM 的另一情况称为“闭合”模式。创建闭合影子树后，
           ...
         });
 
-3. **Closed mode makes your component less flexible for end users**.在构建网络组件时，您有时可能会忘记添加某项功能、某个配置选项以及用户所需的用例。一个很常见的例子是忘记为内部节点添加足够的样式钩子。在闭合模式下，用户无法替换默认值并调整样式。
+3. **闭合模式使组件对最终用户的灵活性大为降低**。在构建网络组件时，您有时可能会忘记添加某项功能、某个配置选项以及用户所需的用例。一个很常见的例子是忘记为内部节点添加足够的样式钩子。在闭合模式下，用户无法替换默认值并调整样式。
 如果能访问组件的内容，这将超级有用。最终，如果用户得不到他们想要的，他们就会舍弃您的组件，寻找其他组件或创建自己的组件:(
 
 
@@ -1066,7 +1066,6 @@ if (supportsShadowDOM()) {
 Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySelectorAll()`:
 
 
-
     const allCustomElements = Array.from(document.querySelectorAll('html /deep/ *')).filter(el => {
       const isAttr = el.getAttribute('is');
       return el.localName.includes('-') || isAttr && isAttr.includes('-');
@@ -1076,7 +1075,7 @@ Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySe
 For now, `/deep/` [continues to work in `querySelectorAll()` calls](https://bugs.chromium.org/p/chromium/issues/detail?id=633007).
 {% endcomment %}
 
-###  使用<模板>创建元素{: #fromtemplate}
+###  使用 <template> 创建元素{: #fromtemplate}
 
 我们不是使用 `.innerHTML` 来填充影子根，而是使用一个声明性 `<template>`。
 模板是用于声明网络组件结构的理想占位符。

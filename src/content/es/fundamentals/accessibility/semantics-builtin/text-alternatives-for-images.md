@@ -25,7 +25,7 @@ Observa esta imagen.
     </article>
 
 <article>
-  <h2>El estudio muestra que 9 de 10 gatos juzgan en silencio a sus dueños mientras estos duermen</h2>
+  <h2>Study shows 9 out of 10 cats quietly judging their owners as they sleep</h2>
   <img src="imgs/160204193356-01-cat-500.jpg">
 </article>
 

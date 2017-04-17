@@ -29,7 +29,7 @@ O JavaScript é uma linguagem dinâmica executada em um navegador que permite al
 
 [Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/script.html){: target="_blank" .external }
 
-* O JavaScript permite acessar o DOM e obter a referência ao nó de span oculto. O nó pode não estar visível na árvore de renderização, mas está presente no DOM. Quando obtemos a referência, podemos alterar seu texto (usando .textContent) e até modificar a propriedade calculada de estilo de exibição de "none" para "inline". Agora nossa página exibe "**Olá alunos interativos!**".
+* O JavaScript permite acessar o DOM e obter a referência ao nó de span oculto. O nó pode não estar visível na árvore de renderização, mas está presente no DOM. Quando obtemos a referência, podemos alterar seu texto (usando .textContent) e até modificar a propriedade calculada de estilo de exibição de "none" para "inline". Agora nossa página exibe "**Hello interactive students!**".
 
 * O JavaScript também permite criar, aplicar estilos e anexar e remover novos elementos no DOM. Tecnicamente, a nossa página inteira poderia ser apenas um grande arquivo de JavaScript que cria e aplica estilos aos elementos, um por um. Embora isso funcione, na prática, usar HTML e CSS é muito mais fácil. Na segunda parte da nossa função JavaScript, criamos um novo elemento div, definimos seu conteúdo de texto, aplicamos um estilo e o anexamos ao corpo.
 

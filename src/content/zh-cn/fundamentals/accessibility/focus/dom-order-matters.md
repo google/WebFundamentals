@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 默认 DOM 顺序的重要性
+description:默认 DOM 顺序的重要性
 
 
 {# wf_updated_on: 2016-10-04 #}

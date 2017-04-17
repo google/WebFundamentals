@@ -245,7 +245,7 @@ Nota: Ten en cuenta que los niveles de calidad para los diferentes formatos de i
 ## Selección del formato de imagen correcto
 
 ### TL;DR {: .hide-from-toc }
-- Comienza por seleccionar el formato universal correcto: GIF, PNG, JPEG
+- Comienza por seleccionar el formato universal correcto: GIF, PNG, JPEG.
 - Experimenta y selecciona la mejor configuración para cada formato: calidad, tamaño de la paleta, etc.
 - Considera agregar recursos WebP y JPEG XR para clientes modernos.
 

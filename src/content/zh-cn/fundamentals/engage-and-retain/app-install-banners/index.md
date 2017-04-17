@@ -74,7 +74,7 @@ Lighthouse 会对此页面运行一套审核，然后以报告形式显示结果
 
 ![Lighthouse 的应用安装审核](images/lighthouse-a2hs.png)
 
-请参阅[使用 Lighthouse 审核网络应用](/web/tools/lighthouse/)，开始使用 Lighthouse。
+请参阅[使用 Lighthouse 审查网络应用](/web/tools/lighthouse/)，开始使用 Lighthouse。
 
 
 ## 应用安装横幅事件
@@ -154,10 +154,7 @@ Chrome 可管理触发提示的时间，但对于部分网站而言，这可能�
           else {
             console.log('User added to home screen');
           }
-          // We no longer need the prompt.
-
-          
-          Clear it up.
+          // We no longer need the prompt.  Clear it up.
           deferredPrompt = null;
         });
       }

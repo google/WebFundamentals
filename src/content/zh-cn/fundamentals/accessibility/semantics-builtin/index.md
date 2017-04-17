@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 语义和辅助技术简介
+description:语义和辅助技术简介
 
 
 {# wf_updated_on:2016-10-04 #}
@@ -149,7 +149,6 @@ description: 语义和辅助技术简介
 正如渲染引擎会使用原生代码来构建视觉界面，屏幕阅读器则会使用 DOM 节点中的元数据来构建一个无障碍版本，其结构与下图所示类似：
 
 ![一个使用 DOM 来创建无障碍节点的屏幕阅读器](imgs/nativecodetoacc.png)
-
 
 
 {# wf_devsite_translation #}

@@ -40,7 +40,7 @@ Dengan kata lain: gunakan bahasa sederhana, kata-kata pendek dan struktur kalima
 
 ## Miliaran pengguna berikutnya
 
-Pendekatan pared-down untuk penulisan sangat penting bagi pembaca di perangkat seluler, serta sangat penting ketika membuat materi untuk ponsel murah dengan tampilan yang terlihat kecil yang memerlukan lebih banyak tindakan gulir dan mungkin memiliki kualitas layar yang lebih rendah dan kurang responsif.
+Pendekatan pared-down untuk penulisan sangat penting bagi pembaca di perangkat seluler, serta sangat penting ketika membuat materi untuk ponsel murah dengan tampilan yang terlihat yang kecil dan memerlukan lebih banyak tindakan gulir dan mungkin memiliki kualitas layar yang lebih rendah dan kurang responsif.
 
 Sebagian besar miliaran pengguna berikutnya akan online menggunakan perangkat murah. Mereka tidak ingin menghabiskan kuota data dengan menavigasi materi yang bertele-tele, dan mungkin tidak membacanya dalam bahasa utama mereka. Pangkas teks Anda: gunakan kalimat pendek, tanda baca minimal, paragraf lima baris atau kurang, dan judul satu baris. Pertimbangkan teks responsif (misalnya, menggunakan kepala berita pendek untuk tampilan yang terlihat yang lebih kecil) tapi [waspadalah terhadap kerugiannya](https://www.smashingmagazine.com/2012/02/ever-justification-for-responsive-text/).
 
@@ -57,7 +57,7 @@ Intinya:
 
 Dari segi ukuran byte, laman web menjadi [besar dan semakin besar](http://httparchive.org/trends.php#bytesTotal&reqTotal).
 
-[Teknik desain responsif](/web/fundamentals/design-and-ui/responsive/) memungkinkan untuk menyajikan materi berbeda dalam tampilan yang terlihat lebih kecil, tapi akan lebih bijak jika memulai dengan merampingkan teks, gambar dan materi lainnya.
+[Teknik desain responsif](/web/fundamentals/design-and-ui/responsive/) memungkinkan untuk menyajikan materi berbeda dalam tampilan yang terlihat yang lebih kecil, tapi akan lebih bijak jika memulai dengan merampingkan teks, gambar dan materi lainnya.
 
 > Pengguna web sering kali berorientasi tindakan, cenderung aktif memburu jawaban atas pertanyaan mereka saat ini, daripada diam mempelajari buku yang bagus.
 >
@@ -83,7 +83,7 @@ Hal yang sama berlaku untuk materi: bantu pengguna mendapatkan apa yang mereka i
 
 Jangan sekadar menyembunyikan materi dari pengguna seluler. Arahkan ke [paritas materi](http://bradfrost.com/blog/mobile/content-parity/), karena Anda tidak akan bisa menebak apa fitur seluler yang diinginkan pengguna. Jika Anda memiliki sumber daya, buat versi alternatif dari materi yang sama untuk ukuran tampilan yang terlihat berbeda — bahkan jika hanya bagi elemen laman dengan prioritas tinggi.
 
-Perhatikan pengelolaan konten dan alur kerja: sistem lawas menghasilkan materi lawas?
+Perhatikan pengelolaan materi dan alur kerja: sistem lawas menghasilkan materi lawas?
 
 ### Menyederhanakan teks
 
@@ -110,7 +110,7 @@ Gambar bisa indah, menyenangkan dan informatif — namun gambar juga menggunakan
   </figure>
 </div>
 
-Gambar juga mengonsumsi daya. Setelah layar, radio adalah fitur terbesar kedua yang paling menguras baterai. Semakin banyak permintaan gambar, semakin sering penggunaan radio, maka baterai akan semakin boros. Bahkan untuk me-render gambar saja membutuhkan daya – dan ini sesuai dengan ukuran dan jumlahnya. Lihat laporan Stanford [Apa yang Menghabiskan Baterai Saya?](http://cdn.oreillystatic.com/en/assets/1/event/79/Who%20Killed%20My%20Battery_%20Analyzing%20Mobile%20Browser%20Energy%20Consumption%20Presentation.pdf)
+Gambar juga mengonsumsi daya. Setelah layar, radio adalah fitur terbesar kedua yang paling menguras baterai. Semakin banyak permintaan gambar, semakin sering penggunaan radio, maka baterai akan semakin boros. Bahkan untuk merender gambar saja membutuhkan daya – dan ini sesuai dengan ukuran dan jumlahnya. Lihat laporan Stanford [Apa yang Menghabiskan Baterai Saya?](http://cdn.oreillystatic.com/en/assets/1/event/79/Who%20Killed%20My%20Battery_%20Analyzing%20Mobile%20Browser%20Energy%20Consumption%20Presentation.pdf)
 
 Jika bisa, singkirkan gambarnya!
 
@@ -119,7 +119,7 @@ Berikut adalah beberapa sarannya:
 * Pertimbangkan desain yang tidak menggunakan gambar sama sekali, atau menggunakan gambar secukupnya. [Teks-saja bisa menjadi indah](https://onepagelove.com/tag/text-only)! Tanyakan pada diri sendiri, "Apa yang ingin dicapai pengunjung ke situs saya? Apakah gambar membantu proses tersebut? "
 * Di masa lalu, merupakan hal yang biasa untuk menyimpan judul dan teks lain dalam bentuk grafis. Pendekatan tersebut tidak merespons dengan baik untuk perubahan ukuran tampilan yang terlihat, serta menambah latensi dan ukuran laman. Menggunakan teks dalam bentuk grafis juga berarti teks tidak bisa ditemukan oleh mesin telusur, dan tidak dapat diakses oleh alat pembaca layar dan teknologi pendukung lainnya. Gunakan teks "sungguhan" apabila memungkinkan - Web Fonts dan CSS dapat memberikan tipografi yang indah.
 * Daripada gambar, gunakanlah CSS untuk gradien, bayangan, sudut lengkung, dan [tekstur latar belakang](http://lea.verou.me/css3patterns/){: .external }, fitur [didukung oleh semua browser modern](http://caniuse.com/#search=shadows). Namun harap diingat, bahwa CSS mungkin lebih baik dari gambar, tapi tetap ada [penalti render dan pemrosesan](http://www.smashingmagazine.com/2013/04/03/build-fast-loading-mobile-website/), yang signifikan terutama di perangkat seluler.
-* Gambar latar jarang sekali bekerja dengan baik di perangkat seluler. Anda bisa [menggunakan kueri media](http://udacity.github.io/responsive-images/examples/2-06/backgroundImageConditional/) untuk menghindari gambar latar pada tampilan yang terlihat kecil.
+* Gambar latar jarang sekali bekerja dengan baik di perangkat seluler. Anda bisa [menggunakan kueri media](http://udacity.github.io/responsive-images/examples/2-06/backgroundImageConditional/) untuk menghindari gambar latar pada tampilan yang terlihat yang kecil.
 * Hindari gambar layar pembuka.
 * [Gunakan CSS untuk animasi UI](/web/fundamentals/design-and-ui/animations/).
 * Kenali glyph Anda; gunakan [ikon dan simbol Unicode](https://en.wikipedia.org/wiki/List_of_Unicode_characters) bukan gambar, dengan Web Fonts bila perlu.
@@ -141,7 +141,7 @@ Untuk informasi selengkapnya, silakan lihat [Optimalisasi Gambar](/web/fundament
 
 "Perancang hebat tidak hanya "mengoptimalkan untuk perangkat seluler" — mereka berpikir tanggap untuk membangun situs yang bekerja di berbagai perangkat. Struktur teks dan materi laman lainnya sangat penting untuk keberhasilan lintas-perangkat.
 
-Banyak dari semiliar pengguna berikutnya yang datang online menggunakan perangkat murah dengan tampilan yang terlihat kecil. Membaca dengan resolusi rendah di layar 3,5" atau 4" bukanlah pekerjaan yang mudah.
+Banyak dari semiliar pengguna berikutnya yang datang online menggunakan perangkat murah dengan tampilan yang terlihat yang kecil. Membaca dengan resolusi rendah di layar 3,5" atau 4" bukanlah pekerjaan yang mudah.
 
 Berikut adalah foto dari keduanya:
 
@@ -149,7 +149,7 @@ Berikut adalah foto dari keduanya:
 
 Pada layar yang lebih besar, teks berukuran kecil tapi terbaca.
 
-Pada layar yang lebih kecil, browser me-render layout dengan benar, namun teks tidak terbaca, bahkan ketika diperbesar. Layar terlihat buram dan memiliki 'color cast' — warna putih tidak terlihat putih — sehingga materi kurang terbaca.
+Pada layar yang lebih kecil, browser merender layout dengan benar, namun teks tidak terbaca, bahkan ketika diperbesar. Layar terlihat buram dan memiliki 'color cast' — warna putih tidak terlihat putih — sehingga materi kurang terbaca.
 
 ### Mendesain materi untuk perangkat seluler
 
@@ -169,7 +169,7 @@ Ketika membangun untuk berbagai tampilan yang terlihat, pertimbangkan materi ser
 
 Berhasil: Apa pun yang Anda lakukan — **uji**!
 
-* Periksa keterbacaan pada tampilan yang terlihat lebih kecil menggunakan Chrome DevTools dan [alat emulasi](/web/fundamentals/performance/poor-connectivity/) lainnya.
+* Periksa keterbacaan pada tampilan yang terlihat yang lebih kecil menggunakan Chrome DevTools dan [alat emulasi](/web/fundamentals/performance/poor-connectivity/) lainnya.
 * [Uji materi di bawah kondisi bandwidth rendah dan latensi tinggi](/web/fundamentals/performance/poor-connectivity/); cobalah materi dalam berbagai skenario konektivitas.
 * Cobalah baca dan berinteraksi dengan materi Anda pada ponsel murah.
 * Ajak teman dan kolega untuk mencoba aplikasi atau situs Anda.

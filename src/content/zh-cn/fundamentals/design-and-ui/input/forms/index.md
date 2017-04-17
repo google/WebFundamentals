@@ -98,7 +98,7 @@ description:在移动设备上填写表单很困难。输入操作最少的表�
 
 ### HTML5 输入类型
 
-HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏览器，屏幕键盘应显示什么类型的键盘布局。用户无需切换键盘，就能更轻松地输入所需信息，并且只看到该输入类型的相应按键。
+HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏览器，屏幕键盘应显示什么类型的键盘布局。用户无需切换键盘，就能更轻松地输入所需信息，并且只看到该输入类型的相应按键
 
 <table class="responsive">
   <thead>
@@ -118,7 +118,8 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
       <td data-th="Input type">
         <code>tel</code><br>用于输入电话号码。它<b>不</b>
         执行特定的验证语法，因此，如果要确保特定的格式，可以使用模式属性。
-      </td>
+</td>
+
       <td data-th="Typical keyboard">
         <img src="imgs/tel-android.png" srcset="imgs/tel-android.png 1x, imgs/tel-android-2x.png 2x">
       </td>
@@ -126,8 +127,9 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
     <tr>
       <td data-th="Input type">
         <code>email</code><br>用于输入电子邮件地址，并提示键盘上应默认显示 @。
-        如果需要用户提供多个电子邮件地址，则可以添加 multiple 属性。
-      </td>
+如果需要用户提供多个电子邮件地址，则可以添加 multiple 属性。
+</td>
+
       <td data-th="Typical keyboard">
         <img src="imgs/email-android.png" srcset="imgs/email-android.png 1x, imgs/email-android-2x.png 2x">
       </td>
@@ -135,7 +137,8 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
     <tr>
       <td data-th="Input type">
         <code>search</code><br>一个文本输入字段，其样式与平台的搜索字段一致。
-      </td>
+</td>
+
       <td data-th="Typical keyboard">
         <img src="imgs/plain-ios.png" srcset="imgs/plain-ios.png 1x, imgs/plain-ios-2x.png 2x" class="keybimg">
       </td>
@@ -143,7 +146,8 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
     <tr>
       <td data-th="Input type">
         <code>number</code><br>用于数字输入，可以是任意合理的整数或浮点值。
-      </td>
+</td>
+
       <td data-th="Typical keyboard">
         <img src="imgs/number-android.png" srcset="imgs/number-android.png 1x, imgs/number-android-2x.png 2x" class="keybimg">
       </td>
@@ -151,8 +155,9 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
     <tr>
       <td data-th="Input type">
         <code>range</code><br>用于数字输入，但与 number 输入类型不同，其值没那么重要。
-        它以滑块控件的形式显示给用户。
-      </td>
+它以滑块控件的形式显示给用户。
+</td>
+
       <td data-th="Typical keyboard">
         <img src="imgs/range-ios.png">
       </td>
@@ -160,7 +165,8 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
     <tr>
       <td data-th="Input type">
         <code>datetime-local</code><br>用于输入日期和时间值，提供的时区为本地时区。
-      </td>
+</td>
+
       <td data-th="Typical keyboard">
         <img src="imgs/datetime-local-ios.png" srcset="imgs/datetime-local-ios.png 1x, imgs/datetime-local-ios-2x.png 2x">
       </td>
@@ -168,7 +174,8 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
     <tr>
       <td data-th="Input type">
         <code>date</code><br>用于只输入日期，不提供时区。
-      </td>
+</td>
+
       <td data-th="Typical keyboard">
         <img src="imgs/date-android.png" srcset="imgs/date-android.png 1x, imgs/date-android-2x.png 2x">
       </td>
@@ -176,7 +183,8 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
     <tr>
       <td data-th="Input type">
         <code>time</code><br>用于只输入时间，不提供时区。
-      </td>
+</td>
+
       <td data-th="Typical keyboard">
         <img src="imgs/time-ios.png" srcset="imgs/time-ios.png 1x, imgs/time-ios-2x.png 2x">
       </td>
@@ -184,7 +192,8 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
     <tr>
       <td data-th="Input type">
         <code>week</code><br>用于只输入星期，不提供时区。
-      </td>
+</td>
+
       <td data-th="Typical keyboard">
         <img src="imgs/week-android.png" srcset="imgs/week-android.png 1x, imgs/week-android-2x.png 2x">
       </td>
@@ -192,7 +201,8 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
     <tr>
       <td data-th="Input type">
         <code>month</code><br>用于只输入月份，不提供时区。
-      </td>
+</td>
+
       <td data-th="Typical keyboard">
         <img src="imgs/month-ios.png" srcset="imgs/month-ios.png 1x, imgs/month-ios-2x.png 2x">
       </td>
@@ -200,7 +210,7 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
     <tr>
       <td data-th="Input type">
         <code>color</code><br>用于选取颜色。
-      </td>
+</td>
       <td data-th="Typical keyboard">
         <img src="imgs/color-android.png" srcset="imgs/color-android.png 1x, imgs/color-android-2x.png 2x">
       </td>

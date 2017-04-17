@@ -10,7 +10,6 @@ description: JavaScript は多くの場合、視覚変化をトリガーしま�
 {% include "web/_shared/contributors/paullewis.html" %}
 
 JavaScript は多くの場合、視覚変化をトリガーします。視覚変化はスタイル操作を通じて直接行われることもあれば、データの検索やソートのように、計算が最終的に視覚変化につながることもあります。
-
 タイミングの悪い JavaScript や長時間実行される JavaScript はパフォーマンス低下の原因になることが多いため、可能な限り JavaScript の影響を最小限に抑える必要があります。
 
 

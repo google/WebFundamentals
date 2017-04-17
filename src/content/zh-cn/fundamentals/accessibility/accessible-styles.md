@@ -100,7 +100,7 @@ description:使用合适的样式化提升可访问性
     background: pink;
   }
 </style>
-<fake-button tabindex="0">点我!</fake-button>
+<fake-button tabindex="0">Click Me!</fake-button>
 {% endframebox %}
 
 这有点让人觉得讨厌，开发者因此经常使用 JavaScript 编写自定义控件来帮助区分鼠标焦点和键盘焦点。

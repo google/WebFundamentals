@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Pada perangkat dengan kemampuan telepon, permudah pengguna untuk langsung terhubung dengan Anda hanya dengan menekan nomor telepon, lebih dikenal sebagai klik untuk telepon.
+description: Pada perangkat dengan kemampuan telepon, permudah pengguna untuk langsung terhubung dengan Anda hanya dengan menekan nomor telepon, lebih dikenal sebagai klik untuk menelepon.
 
 {# wf_updated_on: 2016-08-22 #}
 {# wf_published_on: 2014-06-17 #}
@@ -10,7 +10,7 @@ description: Pada perangkat dengan kemampuan telepon, permudah pengguna untuk la
 {% include "web/_shared/contributors/petelepage.html" %}
 
 Pada perangkat dengan kemampuan ponsel, permudah pengguna untuk langsung terhubung
-dengan Anda hanya dengan menekan nomor telepon, lebih dikenal sebagai klik untuk telepon.
+dengan Anda hanya dengan menekan nomor telepon, lebih dikenal sebagai klik untuk menelepon.
 
 ### TL;DR {: .hide-from-toc }
 
@@ -18,14 +18,14 @@ dengan Anda hanya dengan menekan nomor telepon, lebih dikenal sebagai klik untuk
 * Selalu menggunakan format panggilan internasional.
 
 
-## Menautkan nomor telepon bagi klik untuk telepon
+## Menautkan nomor telepon bagi klik untuk menelepon
 
 Meskipun banyak browser seluler modern secara otomatis mendeteksi nomor ponsel 
 dan mengubahnya menjadi tautan, lebih bagus lagi jika hal ini dilakukan langsung dalam kode Anda.
 Dengan pemberian tag setiap nomor telepon secara manual, Anda bisa memastikan nomor telepon selalu
-aktif bagi klik untuk telepon dan gaya penampilannya sesuai dengan situs Anda.
+aktif bagi klik untuk menelepon dan gaya penampilannya sesuai dengan situs Anda.
 
-Untuk menandai nomor telepon sebagai tautan, gunakan skema `tel:`.  Sintaksnya adalah 
+Untuk menandai nomor ponsel sebagai tautan, gunakan skema `tel:`.  Sintaksnya adalah 
 sederhana:
 
 
@@ -67,19 +67,19 @@ kilometer, panggilan mereka akan terhubung.
 ## Menonaktifkan deteksi otomatis bila diperlukan
 
 Browser seluler modern secara otomatis mendeteksi nomor ponsel dan mengaktifkan
-klik untuk telepon. Mobile Safari secara otomatis mengonversi nomor telepon ke tautan
+klik untuk menelepon. Mobile Safari secara otomatis mengonversi nomor ponsel ke tautan
 dengan gaya hyperlink yang terkait. Chrome untuk Android secara otomatis
 mendeteksi nomor ponsel dan memungkinkan pengguna melakukan klik untuk menelepon, tetapi tidak menempatkannya
 dalam hyperlink atau menerapkan gaya khusus.
 
-Untuk mencegah Mobile Safari secara otomatis mendeteksi nomor telepon, tambahkan
+Untuk mencegah Mobile Safari secara otomatis mendeteksi nomor ponsel, tambahkan
 tag meta berikut ke bagian atas laman:
 
 
     <meta name="format-detection" content="telephone=no">
 
 
-## Fitur klik untuk telepon lainnya
+## Fitur klik untuk menelepon lainnya
 
 Selain skema `tel:`, beberapa browser modern juga mendukung skema `sms:`
 dan `mms:`, meskipun dukungan ini tidak konsisten, dan beberapa

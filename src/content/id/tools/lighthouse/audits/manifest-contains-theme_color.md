@@ -11,7 +11,7 @@ description: Dokumentasi referensi untuk "Manifes Berisi theme_color" audit Ligh
 
 Ketika pengguna mengakses aplikasi Anda pada Chrome untuk Android, properti `theme_color` dari
 Manifes Aplikasi Web menentukan warna bilah alamat. Ini akan
-berlaku, apakah pengguna menambahkan aplikasi ke homescreen, atau tidak.
+berlaku, apakah pengguna menambahkan aplikasi ke layar beranda, atau tidak.
 
 ## Cara untuk lulus audit {: #how }
 

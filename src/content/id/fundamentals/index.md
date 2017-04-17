@@ -86,7 +86,7 @@ kemungkinan baru bagi Anda untuk melibatkan kembali pengguna.
   <h3 class="hide-from-toc">Beralih ke HTTPS</h3>
   <img src="/web/fundamentals/images/ic_https_black_48dp.png" class="devsite-landing-row-item-image">
   <p>
-    Dengan HTTPS, pengguna dapat terhubung ke situs web atau aplikasi Anda dengan aman. Persiapkan
+    Dengan HTTPS, pengguna dapat terhubung ke situs web atau aplikasi Anda dengan aman. Siapkan
     HTTPS untuk melindungi integritas situs Anda, dan keamanan pengguna
     Anda.<br>
     <a href="/web/fundamentals/security/encrypt-in-transit/why-https">Ketahui selengkapnya</a>
