@@ -39,12 +39,12 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 <video controls>
   <source src="video/chrome.webm" type="video/webm">
   <source src="video/chrome.mp4" type="video/mp4">
-  <p>此浏览器不支持视频元素。</p>
+  <p>This browser does not support the video element.</p>
 </video>
 
 
     <video src="chrome.webm" type="video/webm">
-        <p>Your browser does not support the video element.</p>
+        <p>您的浏览器不支持 video 元素。</p>
     </video>
     
 
@@ -75,7 +75,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 
 * 开发者可以根据自己的喜好排列格式顺序。
 * 本地客户端转换的延迟时间缩短；只需发出一个请求即可获取内容。
-* 与使用包含用户代理检测的服务器端支持数据库相比，允许浏览器选择格式更简单、更快捷并且更可靠。
+* 与使用包含 User Agent 检测的服务器端支持数据库相比，允许浏览器选择格式更简单、更快捷并且更可靠。
 * 指定每个文件的来源类型可提升网络性能；浏览器无需下载部分视频以“嗅探”其格式，就可以选择视频来源。
 
 
@@ -454,7 +454,7 @@ Dogfood：`requestFullScreen()` 可能添加了供应商前缀，并且可能需
 
 <div style="clear:both;"></div>
 
-### 添加跟踪元素
+### 添加 track 元素
 
 您可以轻松为视频添加字幕，只需添加一个 track 元素作为 video 元素的子项即可：
 

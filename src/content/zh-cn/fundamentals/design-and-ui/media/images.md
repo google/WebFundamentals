@@ -5,7 +5,7 @@ description:一图胜千言，图像也是每个页面不可或缺的组成部�
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2014-04-29 #}
 
-# Images {: .page-title }
+# 图像 {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
@@ -277,7 +277,7 @@ J. Crew 网站提供了一个很好的可点按、可展开图像的例子。一
 
 #### 压缩的图像
 
-[压缩的图像技术](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview)可以给所有设备提供一个高度压缩的 2x 图销售量，无论设备的实际能力如何。根据图像的类型和压缩级别，图像质量可能看似没有变化，但文件大小却明显减小。
+[压缩的图像技术](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview)可以给所有设备提供一个高度压缩的 2x 图像，无论设备的实际能力如何。根据图像的类型和压缩级别，图像质量可能看似没有变化，但文件大小却明显减小。
 
 
 
@@ -607,7 +607,7 @@ SVG 的优势比光栅图像多很多：
 
 
 请务必在对图标的需求与额外增加的 HTTP 请求及文件大小之间取得平衡。
-例如，如果只需要少量图标，或许使用图像或图像精灵会更合适。
+例如，如果只需要少量图标，或许使用图像或 image sprites 会更合适。
 
 
 
@@ -624,7 +624,7 @@ SVG 的优势比光栅图像多很多：
 ### TL;DR {: .hide-from-toc }
 - 不要只是随意地选择图像格式，要了解不同的可用格式，并使用最适合的格式。
 - 在您的工作流程中引入图像优化与压缩工具，减小文件大小。
-- 将常用图像放入图像精灵中，减少 http 请求数量。
+- 将常用图像放入 image sprites 中，减少 http 请求数量。
 - 考虑在图像滚动进入视图后才加载图像，以缩短页面初始加载时间，减小初始页面重量。
 
 
@@ -671,7 +671,7 @@ SVG 的优势比光栅图像多很多：
 
 ### 使用 image sprites
 
-<img src="img/sprite-sheet.png" class="attempt-right" alt="示例中使用的图像精灵表">
+<img src="img/sprite-sheet.png" class="attempt-right" alt="示例中使用的 image sprites 表">
 
 CSS 精灵是一项技术，可将许多图像合并到一个“精灵表”图像中。
 然后，通过指定元素背景图像（精灵表）以及指定用于显示正确部分的位移，可以使用各个图像。

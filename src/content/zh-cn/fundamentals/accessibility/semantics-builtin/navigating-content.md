@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 语义在网页导航中的作用
+description:语义在网页导航中的作用
 
 
 {# wf_updated_on:2016-10-04 #}

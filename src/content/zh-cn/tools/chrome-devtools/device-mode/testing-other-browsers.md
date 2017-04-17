@@ -35,7 +35,7 @@ Firefox 拥有一个[自适应设计视图](https://developer.mozilla.org/en-US/
 
 要模拟 Windows Phones，请使用 Microsoft Edge 的[内置模拟](https://dev.modern.ie/platform/documentation/f12-devtools-guide/emulation/)。
 
-由于 Edge 不具备旧版兼容性，请使用 [IE 11 的模拟](https://msdn.microsoft.com/en-us/library/dn255001(v=vs.85).aspx) 模拟您的页面在较旧版本 Internet Explorer 中的外观。
+由于 Edge 不具备旧版兼容性，请使用 [IE 11 的模拟](https://msdn.microsoft.com/en-us/library/dn255001(v=vs.85).aspx)模拟您的页面在较旧版本 Internet Explorer 中的外观。
 
 ## 设备模拟器
 

@@ -366,7 +366,7 @@ Microsoft Edge 现在[表示公开支持](https://developer.microsoft.com/en-us/
     })
 
 
-这一行为是有意为之，可以说比 XHR 更复杂的以下默认行为更好：如果网址具有相同来源，则默认发送凭据，否则忽略。获取的行为更接近于其他 CORS 请求，如 ，它将决不会发送 Cookie，除非您使用  选择加入。
+这一行为是有意为之，可以说比 XHR 更复杂的以下默认行为更好：如果网址具有相同来源，则默认发送凭据，否则忽略。获取的行为更接近于其他 CORS 请求，如 `<img crossorigin>`，它将决不会发送 Cookie，除非您使用 `<img crossorigin="use-credentials">` 选择加入。
 
 
 

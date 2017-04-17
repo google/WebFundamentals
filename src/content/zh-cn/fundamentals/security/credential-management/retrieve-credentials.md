@@ -46,7 +46,7 @@ book_path: /web/fundamentals/_book.yaml
         <code>Boolean</code><br>
         设置为  <code>true</code> 以检索 <code>PasswordCredentials</code>。
         默认设置为  <code>false</code>。
-    </td>
+</td>
     </tr>
     <tr>
       <td>
@@ -55,9 +55,10 @@ book_path: /web/fundamentals/_book.yaml
       <td>
         <code>Object</code><br>
         接受  <code>provider</code> 或  <code>protocol</code> 作为键的对象，它有一个参数数组。
-        Object <code>provider</code>
+Object <code>provider</code>
         接受一个可识别提供程序的字符串数组。目前，没有浏览器实现  <code>protocol</code>。
-      </td>
+</td>
+
     </tr>
     <tr>
       <td>
@@ -66,7 +67,7 @@ book_path: /web/fundamentals/_book.yaml
       <td>
         <code>Boolean</code><br>
         设置为  <code>true</code> 以避免显示帐户选择器 UI。
-      </td>
+</td>
     </tr>
   </tbody>
 </table>

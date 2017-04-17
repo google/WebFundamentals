@@ -37,11 +37,11 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
 
 
 
-**独立移动版本网站**：根据用户代理将用户重定向至不同的网址。
+**独立移动版本网站**：根据 User Agent 将用户重定向至不同的网址。
 例如，桌面版本网址：http://www.example.com/ 移动版本网址：http://m.example.com/
 
 
-**动态提供**：根据用户代理从一个网址提供不同的 HTML。
+**动态提供**：根据 User Agent 从一个网址提供不同的 HTML。
 例如，桌面和移动版本网址：http://www.example.com/
 
 尽管许多网站采用了其他方法，但最佳方法是使用**自适应网页设计**。
@@ -107,15 +107,15 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
 但它也有几个缺点：
 
 
-* 用户浏览器与服务器之间可能存在中间代理。除非代理知晓内容随用户代理而变化，否则其提供的结果可能出乎意料。
-* 根据用户代理更改内容存在被视为“[掩蔽](https://support.google.com/webmasters/answer/66355)”的风险，这是违反 Google 网站站长指南的行为。
+* 用户浏览器与服务器之间可能存在中间代理。除非代理知晓内容随 User Agent 而变化，否则其提供的结果可能出乎意料。
+* 根据 User Agent 更改内容存在被视为“[掩蔽](https://support.google.com/webmasters/answer/66355)”的风险，这是违反 Google 网站站长指南的行为。
 
 
 
-通过让搜索引擎知晓内容随用户代理而变化，它们就能针对发送查询的用户代理对搜索结果进行优化。
+通过让搜索引擎知晓内容随 User Agent 而变化，它们就能针对发送查询的 User Agent 对搜索结果进行优化。
 
 
-要指示网址根据用户代理提供不同的 HTML，请在 HTTP 标头中提供一个 `Vary: User-Agent`。
+要指示网址根据 User Agent 提供不同的 HTML，请在 HTTP 标头中提供一个 `Vary: User-Agent`。
 这样一来，搜索索引便可对桌面和移动版本进行区别对待，中间代理也可以妥善缓存这些内容。
 
 
@@ -146,6 +146,7 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
 不过，在某些情况下，尽管您希望人们访问您的网站，却不想让他们找到这些文档。
 例如，博客的管理员页面只有特定人员才有权访问。
 让人们通过搜索引擎找到这些页面没什么好处。
+
 
 此部分还说明如何禁止某些页面出现在搜索结果中。
 
@@ -190,8 +191,8 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
     Disallow: /nogooglebot/
     
 
-您可以通过指示用户代理名称来指定每个自动程序（用户代理）的行为。
-在上例中，您禁止名为 `Googlebot` 的用户代理抓取 `/nogooglebot/` 以及该目录下的所有内容。
+您可以通过指示 User Agent 名称来指定每个自动程序 (User Agent) 的行为。
+在上例中，您禁止名为 `Googlebot` 的 User Agent 抓取 `/nogooglebot/` 以及该目录下的所有内容。
   
 
 可通过各搜索引擎自动程序的帮助页面了解更多相关信息：
@@ -229,7 +230,7 @@ Yandex 也提供了[类似的工具](https://webmaster.yandex.com/tools/robotstx
     <meta name="robots" content="noindex" />
     
 
-您可以通过将 `name` 属性的值更改为特定用户代理名称来缩小范围。例如，`name="googlebot"`（不区分大小写）表示您不希望 Googlebot 索引该网页。  
+您可以通过将 `name` 属性的值更改为特定 User Agent 名称来缩小范围。例如，`name="googlebot"`（不区分大小写）表示您不希望 Googlebot 索引该网页。  
 
 
     <!DOCTYPE html>
@@ -254,7 +255,7 @@ robots 元标记的其他选项包括：
     Content-Type: text/html; charset=UTF-8
     
 
-如果您想把范围缩小到特定用户代理，请在 `noindex` 前插入用户代理名称。  
+如果您想把范围缩小到特定 User Agent，请在 `noindex` 前插入 User Agent 名称。  
 
 
     HTTP/1.1 200 OK
@@ -338,7 +339,7 @@ robots 元标记的其他选项包括：
 * [Bing](http://www.bing.com/webmaster/help/bing-content-removal-tool-cb6c294d)
 * [Yandex](https://help.yandex.com/webmaster/yandex-indexing/removing-from-index.xml)
 
-### 附录：抓取工具用户代理列表
+### 附录：抓取工具 User Agent 列表
 
 * [Google](https://support.google.com/webmasters/answer/1061943)
 * [Bing](http://www.bing.com/webmaster/help/which-crawlers-does-bing-use-8c184ec0)

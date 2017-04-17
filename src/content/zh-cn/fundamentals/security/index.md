@@ -22,7 +22,7 @@ description:安全性是一个重要话题，详细了解 HTTPS，为什么说 H
 
 <img src="/web/images/content-https-2x.jpg" class="attempt-right">
 
-[安全的 HTTP，也称为 HTTPS](encrypt-in-transit/why-https)，是最关键的安全功能之一，许多现代 API 和[渐进式网络应用](/web/progressive-web-apps/)都需要使用它。人们对 HTTPS 有一个普遍的错误认识，认为只有处理敏感通信的网站才需要 HTTPS。隐私和安全性并不是使用 HTTPS 保护用户的充分理由，服务工作线程、Payment Request API 等许多新的浏览器功能也需要 HTTPS。
+[安全的 HTTP，也称为 HTTPS](encrypt-in-transit/why-https)，是最关键的安全功能之一，许多现代 API 和 [Progressive Web App](/web/progressive-web-apps/) 都需要使用它。人们对 HTTPS 有一个普遍的错误认识，认为只有处理敏感通信的网站才需要 HTTPS。隐私和安全性并不是使用 HTTPS 保护用户的充分理由，服务工作线程、Payment Request API 等许多新的浏览器功能也需要 HTTPS。
 
 [在服务器上启用 HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https)
 
