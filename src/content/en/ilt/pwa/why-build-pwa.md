@@ -16,4 +16,4 @@ Add to Homescreen, without giving up the reach of the web.
 {% setvar videoId "1QILz1lAzWY" %}
 {% setvar slidesId "18IOdAivMSRDsqEnwvJL_eaEWhqBgFUjFWEamoWZ5djc" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

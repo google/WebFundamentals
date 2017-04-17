@@ -14,4 +14,4 @@ techniques that help you create web apps that work well on any device.
 {% setvar videoId "T-hVjfc7E-c" %}
 {% setvar slidesId "1uG20FaNBMQGNjMZGN1SelJ05HVBm5u6fRSCj5ldFftg" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

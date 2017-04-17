@@ -13,4 +13,4 @@ IndexedDB and demonstrates how to use it to store data in the browser.
 {% setvar videoId "vCumk1sXHcY" %}
 {% setvar slidesId "1SIawAWNYN33lkiuTIpmK6biwZLolsd74bRLTwADKpRs" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

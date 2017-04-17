@@ -14,4 +14,4 @@ cost, and the usage context.
 {% setvar videoId "Ule0U0I8rO0" %}
 {% setvar slidesId "154nnHaw5kgj9fwMu8PQA6nr0f6nZmzwwr0Oq-0j6GfY" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

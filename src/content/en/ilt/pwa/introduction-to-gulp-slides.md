@@ -14,4 +14,4 @@ ipsum quis ex sagittis posuere a vel felis.
 {% setvar videoId "8YM5NayJNNQ" %}
 {% setvar slidesId "1GgHeG2iUemP3Qz3n8fLT1j2v8T-tADSJqsC07MzgAa4" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

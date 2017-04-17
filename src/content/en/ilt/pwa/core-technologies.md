@@ -13,4 +13,4 @@ introduction to ES2015.
 {% setvar videoId "63YUj-7qxl0" %}
 {% setvar slidesId "1CxS9SD8DEm5qsonsg_M41A6lmZrdLwrBXuayQBGoK3g" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

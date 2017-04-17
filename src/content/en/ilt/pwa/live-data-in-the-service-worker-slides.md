@@ -13,4 +13,4 @@ store multiple types of data.
 {% setvar videoId "FY1r7Y5rf2E" %}
 {% setvar slidesId "1wk9XH8yV3NT8fsEp5KpWktfKRl5myYWnhkqbHkPtBx4" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

@@ -14,4 +14,4 @@ using offline analytics, service workers, and push notifications are shown.
 {% setvar videoId "Dv-OBW8kgG0" %}
 {% setvar slidesId "1wx9oneZOL5cyriYIuDOQchbji4UVxRjdoplzvncEztA" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

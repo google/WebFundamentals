@@ -13,4 +13,4 @@ your images load as quickly as possible and work well in any form factor.
 {% setvar videoId "ojZRjhcR3yw" %}
 {% setvar slidesId "1rXdSHcN7i11AApafDfqb_uCKNPuyt89WuDFI07Bejqc" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

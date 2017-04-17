@@ -12,4 +12,4 @@ tools from Google that generate production-ready service worker files for you.
 {% setvar videoId "PhiLvTzceL0" %}
 {% setvar slidesId "1bdXNNc6Ua43SXtwREfZjIQ4Tiv3piPE3ViWJmc2uNKY" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

@@ -13,4 +13,4 @@ implement push notifications in Progressive Web Apps.
 {% setvar videoId "ggUY0Q4f5ok" %}
 {% setvar slidesId "1vd6cFL0Vg3-ciDq2xpN0HxN_UowyKjJsTrCOdulkExM" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

@@ -13,4 +13,4 @@ patterns for caching resources.
 {% setvar videoId "7jsg1Mb7PB4" %}
 {% setvar slidesId "1yKsDW9wu5xbx2pXDKlSBTg7h1i48CoQd2A8QvHw-lag" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

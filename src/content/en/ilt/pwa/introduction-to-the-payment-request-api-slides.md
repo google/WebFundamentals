@@ -14,4 +14,4 @@ forms.
 {% setvar videoId "e-pc0SyzIHw" %}
 {% setvar slidesId "16_g5RhUf8xoxPhsiQkTCkpFVXBkk-hSMqsZ0CKvcNqQ" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

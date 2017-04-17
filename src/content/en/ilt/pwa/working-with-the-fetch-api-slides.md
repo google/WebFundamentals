@@ -14,4 +14,4 @@ requests and describes the theory behind Cross Origin Resource Sharing (CORS).
 {% setvar videoId "9Qtvjd0UbAs" %}
 {% setvar slidesId "1Rr_7rP3_XaUsr3m0CKXqWSzW3G4PeFWgp_-INoV7Xfc" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}
