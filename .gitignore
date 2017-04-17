@@ -35,4 +35,6 @@ src/content/*/rss.xml
 src/content/*/atom.xml
 src/data/codelabs/*/img/*
 src/data/codelabs/*/*.md
+src/data/ilt-pwa/*/img/*
+src/data/ilt-pwa/*/*.md
 
