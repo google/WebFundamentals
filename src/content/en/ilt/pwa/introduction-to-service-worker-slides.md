@@ -13,4 +13,4 @@ the Service Worker lifecycle in the browser.
 {% setvar videoId "jVfXiv03y5c" %}
 {% setvar slidesId "1bFVDRa71JK0ilr6lS6y9Twqp9gy8jzV1O8FFbG4A3qk" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

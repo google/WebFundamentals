@@ -14,4 +14,4 @@ the pitfalls of promise.race.
 {% setvar videoId "2D1fQgWH-mI" %}
 {% setvar slidesId "1zoC41pP9aMR02pc7F8rz0GlaNMs7yzWmIqKQYn5D18A" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

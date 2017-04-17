@@ -13,4 +13,4 @@ API to make a simple app work offline.
 {% setvar videoId "zw35jKRSIlo" %}
 {% setvar slidesId "1ECzY93trT-cJdj8xIxqUYpCcBi5NQOm8q-WQJW1k8zI" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

@@ -13,4 +13,4 @@ building your app, with an emphasis on accessibility.
 {% setvar videoId "nEjTbZXYY48" %}
 {% setvar slidesId "1sFCDjsELeqpaFTzrCdZC0DMK-27NA_ard4mBxFhid0s" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

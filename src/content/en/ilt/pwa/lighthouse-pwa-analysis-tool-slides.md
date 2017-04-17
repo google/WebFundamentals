@@ -13,4 +13,4 @@ lighthouse both as a Chrome extension and from the command line.
 {% setvar videoId "UVhJtr4_gK8" %}
 {% setvar slidesId "15qTZjhk6cfr-qnH5dSBNJ9SjDmYTMelyfEq7UJVk0Zc" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}

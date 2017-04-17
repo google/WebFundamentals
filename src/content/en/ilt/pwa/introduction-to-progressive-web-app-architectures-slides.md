@@ -15,4 +15,4 @@ web payments, and credentials management.
 {% setvar videoId "LaS_5jUeh_0" %}
 {% setvar slidesId "1Xu8FDXCPi7SGOArRgLKjrXWArvAUB4ESdKw9ecWqw0s" %}
 
-{% include web/ilt/pwa/_slides.html %}
+{% include "web/ilt/pwa/_slides.html" %}
