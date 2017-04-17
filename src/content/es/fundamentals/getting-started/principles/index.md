@@ -275,7 +275,7 @@ usuarios hacer una llamada telefónica presionando un vínculo. En la mayoría d
 usuario recibe una confirmación antes de que se marque el número, o aparece un menú
 que le pregunta al usuario cómo se debería manejar el número.
 
-### Haz que sea sencillo finalizar en otro dispositivo.
+### Haz que sea sencillo finalizar en otro dispositivo
 
 <div class="attempt-right">
   <figure id="fig1">

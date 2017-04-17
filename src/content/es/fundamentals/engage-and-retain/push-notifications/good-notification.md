@@ -80,7 +80,7 @@ de la red no tiene importancia.
 ### Usa la vibración con criterio {: #vibrate-judiciously }
 
 El uso de la vibración puede parecer una propuesta particular. De hecho, está estrechamente
-relacionada y existen muchas clases problemas.
+relacionada y existen muchas clases de problemas.
 
 En primer lugar, la vibración parece ser el elemento ideal para que los usuarios se enteren de las notificaciones
 nuevas. Pero no todos los usuarios la activan y algunos dispositivos
@@ -119,7 +119,7 @@ Tal vez no sea apropiado en todos los casos, pero si la información es suficien
 como para que se proporcione en un espacio pequeño, no hagas que los usuarios abran tu sitio web para leerlo
 . Por ejemplo, si deseas notificar a un usuario sobre la confirmación de otro usuario,
 no muestres un mensaje que diga “Notificación nueva”. Muestra uno que diga
-“Pete dijo "no".
+'Pete dijo "no"'.
 
 <div class="attempt-left">
   <figure>

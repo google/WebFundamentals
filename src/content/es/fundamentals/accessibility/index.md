@@ -191,7 +191,7 @@ como yo, pueden usar un lector de pantalla, braille o una combinación de ambos.
 </figure>
 
 No es muy común no tener nada de visión, pero, de todas formas,
-es posible que conozcas o hayas conocido a al menos un persona que no pueda ver
+es posible que conozcas o hayas conocido a al menos una persona que no pueda ver
 nada. Sin embargo, hay muchos más de los llamados usuarios
 de baja visión.
 

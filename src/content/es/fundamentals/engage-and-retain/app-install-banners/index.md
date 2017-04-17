@@ -174,7 +174,7 @@ Como alternativa, puedes cancelar la solicitud evitando el valor predeterminado.
       return false;
     });
     
-## Native app install banners
+## Banners de instalación de apps web
 
 <div class="attempt-right">
   <figure>
@@ -203,7 +203,7 @@ service worker. Tu sitio debe:
 ### Requisitos del manifiesto
 
 Para integrarse a cualquier manifiesto, agrega un conjunto de `related_applications` con las
-plataformas de`play` (para Google Play) y la Id. de la app.
+plataformas de `play` (para Google Play) y la Id. de la app.
 
 
     "related_applications": [

@@ -409,7 +409,7 @@ cookies. Si deseas credenciales, como alternativa llama a lo siguiente:
 
 Este comportamiento es intencional, y se podría decir que es mejor que el método predeterminada, más
 complejo, de XHR: enviar credenciales si la URL tiene el mismo origen y omitirlas si
-sucede lo contrario. El comportamiento de las extracciones se parece al de otras solicitudes CORS, como ﻿,que nunca envía cookies, a menos que accedas con ﻿.
+sucede lo contrario. El comportamiento de las extracciones se parece al de otras solicitudes CORS, como `<img crossorigin>`,que nunca envía cookies, a menos que accedas con `<img crossorigin="use-credentials">`.
 
 
 

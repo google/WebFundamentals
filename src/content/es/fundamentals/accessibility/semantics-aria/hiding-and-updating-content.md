@@ -54,13 +54,13 @@ a los que se refiere a través de un atributo `aria-labelledby` o `aria-describe
 
     <div class="deck">
       <div class="slide" aria-hidden="true">
-        Objetivos de ventas
+        Sales Targets
       </div>
       <div class="slide">
-        Ventas trimestrales
+        Quarterly Sales
       </div>
       <div class="slide" aria-hidden="true">
-        Artículos de acción
+        Action Items
       </div>
     </div>
 
@@ -94,13 +94,13 @@ usuario vidente, es lo suficientemente importante como para dirigir hacia este m
 usuario con tecnología asistencial a través de la configuración de su atributo `aria-live`. Compara este `div` común
 
 
-    <div class="status">Tu mensaje se envió.</div>
+    <div class="status">Your message has been sent.</div>
     
 
 con su opuesto "live".
 
 
-    <div class="status" aria-live="polite">Tu mensaje se envió.</div>
+    <div class="status" aria-live="polite">Your message has been sent.</div>
     
 
 `aria-live` tiene tres valores permisibles: `polite`, `assertive` y `off`.

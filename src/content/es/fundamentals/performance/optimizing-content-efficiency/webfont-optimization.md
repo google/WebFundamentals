@@ -177,7 +177,7 @@ Dado que los navegadores anteriores no son lo suficientemente inteligentes para 
 
 ### Selección y síntesis de fuentes
 
-Cada familia de fuentes está compuesta por múltiples variantes estilísticas (regular, negrita, cursiva) y múltiples pesos para cada estilo; y cada estilo, a la vez, puede contener diferentes formas de glifos,&mdash;como espaciado diferente, ajuste de tamaño diferente o una forma diferente. 
+Cada familia de fuentes está compuesta por múltiples variantes estilísticas (regular, negrita, cursiva) y múltiples pesos para cada estilo; y cada estilo, a la vez, puede contener diferentes formas de glifos, como espaciado diferente, ajuste de tamaño diferente o una forma diferente. 
 
 <img src="images/font-weights.png"  alt="Tamaños de las fuentes">
 
@@ -240,7 +240,7 @@ de estilo de la fuente en cursiva?
 
 En el ejemplo anterior se ilustra la diferencia entre los resultados de la fuente real frente a la fuente sintetizada para Open-Sans. Todas las variantes sintetizadas se generan a partir de una fuente individual con un espesor de 400. Como puedes ver, existe una diferencia notoria en los resultados. No se especifican los detalles sobre cómo generar las variantes negrita y oblicua. Por lo tanto, los resultados varían de un navegador a otro y también dependerán en gran medida de la fuente.
 
-Nota: Para obtener la mejor uniformidad y los mejores resultados visuales, no debes basarte en la síntesis de fuentes. En lugar de ello, minimiza la cantidad de variantes de las fuentes que usas y especifica sus ubicaciones para que el navegador pueda descargarlas cuando se usen en la página. Dicho esto, en algunos casos una variante sintetizada<a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>podría ser una opción viable</a>, pero debes actuar con precaución al usar variantes sitentizadas.
+Nota: Para obtener la mejor uniformidad y los mejores resultados visuales, no debes basarte en la síntesis de fuentes. En lugar de ello, minimiza la cantidad de variantes de las fuentes que usas y especifica sus ubicaciones para que el navegador pueda descargarlas cuando se usen en la página. Dicho esto, en algunos casos una variante sintetizada <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>podría ser una opción viable</a>, pero debes actuar con precaución al usar variantes sitentizadas.
 
 ## Optimización de la carga y la representación
 
@@ -263,7 +263,7 @@ La carga lenta de fuentes conlleva una consecuencia oculta importante que puede 
 1. El navegador comienza a analizar la respuesta HTML y construir el DOM.
 1. El navegador detecta CSS, JS y otros recursos, y envía solicitudes.
 1. El navegador construye el CSSOM una vez que recibe todo el contenido CSS, y lo combina con el árbol del DOM para construir el árbol de representación.
-    * Las solicitudes de fuentes se envían un vez que el árbol de representación indica las variantes de fuente que se necesitan para representar el texto especificado en la página
+    * Las solicitudes de fuentes se envían un vez que el árbol de representación indica las variantes de fuente que se necesitan para representar el texto especificado en la página.
 1. El navegador realiza un diseño y pinta contenido en la pantalla.
     * Si la fuente aún no está disponible, es posible que en el navegador no se representen los píxeles de texto.
     * Cuando la fuente está disponible, el navegador pinta los píxeles de texto.

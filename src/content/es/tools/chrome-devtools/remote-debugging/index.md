@@ -37,7 +37,7 @@ computadora con Windows, Mac o Linux. Con este instructivo, aprenderás a hacer 
 * Android 4.0, o versiones posteriores.
 * Chrome para Android instalado en tu dispositivo Android.
 
-[drivers]: https://developer.android.com/tools/extras/oem-usb.html
+[Controladores]: https://developer.android.com/tools/extras/oem-usb.html
 
 ## Paso 1: Detecta el dispositivo Android {: #discover }
 
@@ -63,7 +63,7 @@ computadora con Windows, Mac o Linux. Con este instructivo, aprenderás a hacer 
      ![Apertura del panel lateral de dispositivos remotos][open]
 
 [main]: /web/tools/chrome-devtools/images/three-dot.png
-[abrir]: /web/tools/chrome-devtools/remote-debugging/imgs/open-remote-devices.png
+[open]: /web/tools/chrome-devtools/remote-debugging/imgs/open-remote-devices.png
 
 1. En DevTools, haz clic en la pestaña **Settings** si se muestra otra pestaña.
 
@@ -81,7 +81,7 @@ computadora con Windows, Mac o Linux. Con este instructivo, aprenderás a hacer 
 
        ![Dispositivo desconocido, autorización pendiente][unknown]
 
-[desconocido]: /web/tools/chrome-devtools/remote-debugging/imgs/unknown-device.png
+[unknown]: /web/tools/chrome-devtools/remote-debugging/imgs/unknown-device.png
 
 1. Si tu dispositivo figura como **Unknown**, acepta la solicitud de permiso **Allow USB
    Debugging** en el dispositivo Android. **Unknown** se
@@ -108,7 +108,7 @@ reiniciarlo seleccionando **Settings** > **Developer Options** >
 
        ![Dispositivo remoto conectado][connected]
 
-[conectado]: /web/tools/chrome-devtools/remote-debugging/imgs/connected-remote-device.png
+[connected]: /web/tools/chrome-devtools/remote-debugging/imgs/connected-remote-device.png
 
 1. Junto a **New tab**, escribe la dirección URL y luego haz clic en **Open**. La página se abre
    en una pestaña nueva en el dispositivo Android.

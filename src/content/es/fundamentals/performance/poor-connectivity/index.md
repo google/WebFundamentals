@@ -5,7 +5,7 @@ description: Es importante comprender cómo es usar tu app o tu sitio cuando la 
 {# wf_updated_on: 2016-08-29 #}
 {# wf_published_on: 2016-05-09 #}
 
-# Comprensión de las implicaciones del ancho de banda bajo y de la latencia alta {: .page-title }
+# Comprensión de las implicaciones del ancho de banda bajo y de la latencia {: .page-title } alta
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
@@ -15,7 +15,7 @@ Es importante comprender cómo es usar tu app o tu sitio cuando la conectividad 
 
 <a href="http://adwords.blogspot.co.uk/2015/05/building-for-next-moment.html">Cada vez más</a> personas experimentan la Web desde dispositivos móviles. Incluso en el hogar, <a href="https://www.washingtonpost.com/news/the-switch/wp/2016/04/18/new-data-americans-are-abandoning-wired-home-internet/">muchas personas están abandonando la banda ancha fija y adoptando la red móvil</a>.
 
-En este contexto, es importante comprender cómo es el uso de tu app o tu sitio cuando la conectividad es deficiente o poco confiable. Existen diferentes herramientas de software que pueden ayudarte a [emular y simular](https://stackoverflow.com/questions/1584617/simulator-or-emulator-what-is-the-difference) condiciones de ancho de banda reducido y [latencia](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/) alta.
+En este contexto, es importante comprender cómo es el uso de tu app o tu sitio cuando la conectividad es deficiente o poco confiable. Existen diferentes herramientas de software que pueden ayudarte a [emular y simular](https://stackoverflow.com/questions/1584617/simulator-or-emulator-what-is-the-difference) condiciones de ancho de banda reducido y [latencia] alta(https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/).
 
 ### Emula restricciones de la red
 

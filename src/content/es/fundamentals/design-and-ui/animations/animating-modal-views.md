@@ -18,7 +18,7 @@ description: Aprende a animar vistas modales en tus apps.
   </figure>
 </div>
 
-Las vistas modales se usan para mensajes importantes. Por ello, tienes muy buenos motivos emplear para bloquear la interfaz del usuario. Úsalas con cuidado ya que, si se usan demasiado, pueden resultar molestas y arruinar la experiencia del usuario. Sin embargo, en algunos casos son las vistas adecuadas, y cobran vida cuando se les agrega algún tipo de animación.
+Las vistas modales se usan para mensajes importantes. Por ello, tienes muy buenos motivos para bloquear la interfaz del usuario. Úsalas con cuidado ya que, si se usan demasiado, pueden resultar molestas y arruinar la experiencia del usuario. Sin embargo, en algunos casos son las vistas adecuadas, y cobran vida cuando se les agrega algún tipo de animación.
 
 ### TL;DR {: .hide-from-toc }
 * Usa las vistas modales con moderación. Los usuarios se molestan si interrumpes su experiencia sin necesidad.
