@@ -39,7 +39,7 @@ AppCache의 주요 문제는 실제로 존재하는 [문제의 수](http://alist
 
 다음은 서비스 워커와 관련된 유의 사항입니다.
 
-* 서비스 워커는 [JavaScript Worker](//www.html5rocks.com/en/tutorials/workers/basics/){: .external }이므로
+* 서비스 워커는 [자바스크립트 Worker](//www.html5rocks.com/en/tutorials/workers/basics/){: .external }이므로
   DOM에 직접 액세스할 수 없습니다.  대신에 
   서비스 워커는 
   [postMessage](https://html.spec.whatwg.org/multipage/workers.html#dom-worker-postmessage) 
@@ -67,7 +67,7 @@ AppCache의 주요 문제는 실제로 존재하는 [문제의 수](http://alist
 모든 파일이 성공적으로 캐시되면 서비스 워커가
 설치됩니다. 파일 다운로드 및 캐시에 실패하면 설치 단계가
 실패하고 서비스 워커가 활성화되지 않습니다(즉, 설치되지 않음). 이런
-상황이 발생하더라도 걱정하지 마십시오. 다음에 다시 시도할 것입니다. 그러나 이는 설치가 이루어지면
+상황이 발생하더라도 걱정하지 마세요. 다음에 다시 시도할 것입니다. 그러나 이는 설치가 이루어지면
 정적 자산이  캐시됨을 의미합니다.
 
 설치가 완료되면 활성화 단계가 진행되고 이 단계에서 오래된 캐시를 관리할 수 있는데,
@@ -148,7 +148,7 @@ Jake Archibald의
 `register()` 메서드에서 한 가지 주의할 점은 서비스 워커
 파일의 위치입니다. 이 예에서는 서비스 워커 파일이 도메인의
 루트에 있습니다. 즉, 서비스 워커의 범위는 전체
-원천(origin)입니다. 다시 달하면, 서비스 워커는 이 도메인의 모든 항목에 대한
+원천(origin)입니다. 다시 말하면, 서비스 워커는 이 도메인의 모든 항목에 대한
 `fetch` 이벤트를 수신합니다. `/example/sw.js`에
 있는 서비스 워커 파일을 등록하면 서비스 워커는
 `/example/`로 시작하는 URL 페이지(예: `/example/page1/`, `/example/page2/`)에 대해서만 `fetch` 이벤트를 처리합니다.
@@ -388,9 +388,9 @@ Incognito 창에서 생성한 등록 및 캐시는 창이 닫히면 지워집니
 오류가 발생했거나 
 `event.waitUntil()`에 거부된 프라미스를 전달했기 때문에 설치하지 못했을 수 있습니다.
 
-이 문제를 해결하려면 `chrome://serviceworker-internals`로 이동하여 "Open
+이 문제를 해결하려면 `chrome://serviceworker-internals`로 이동하여 'Open
 DevTools window and pause JavaScript execution on service worker startup for
-debugging"을 선택하고 설치 이벤트의 시작 위치에 디버거 문을 추가합니다.
+debugging'을 선택하고 설치 이벤트의 시작 위치에 디버거 문을 추가합니다.
 이 옵션을 <a href="/web/tools/chrome-devtools/javascript/add-breakpoints#exceptions">확인할 수 없는 예외 시 일시 중지</a>와 함께
 사용하면 문제를 찾을 수 있습니다.
 
@@ -409,7 +409,7 @@ debugging"을 선택하고 설치 이벤트의 시작 위치에 디버거 문을
 
 이 동작은 의도적이고, URL 원천이 같은 경우 인증 정보를 전송하고
 그렇지 않은 경우 생략하는 XHR의 더 복잡한 기본값보다
-나을 수 있습니다. Fetch 동작은 ﻿를 사용하여 옵트인하지 않으면 쿠키를 전송하지 않는 ﻿과 같은 다른 CORS 요청과 훨씬 유사합니다.
+나을 수 있습니다. Fetch 동작은 `<img crossorigin="use-credentials">`를 사용하여 옵트인하지 않으면 쿠키를 전송하지 않는 `<img crossorigin>`과 같은 다른 CORS 요청과 훨씬 유사합니다.
 
 
 

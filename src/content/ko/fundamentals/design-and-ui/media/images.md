@@ -11,7 +11,7 @@ description: 하나의 그림은 1000단어의 가치가 있으며, 이미지는
 
 
 반응형 웹 디자인이란 기기 특성에 따라 레이아웃을 변경할 뿐만 아니라
-콘텐츠도 변경할 수 있음을 의미합니다.  예를 들어, 고해상도 (2x) 화면에서
+콘텐츠도 변경할 수 있음을 의미합니다.  예를 들어, 고해상도(2x) 화면에서
 고해상도 그래픽은 선명도를 보장합니다. 50% 너비의
 이미지는 브라우저가 너비 800px일 때는 올바로 작동할 수 있지만
 좁은 휴대폰에서는 너무 많은 공간을 차지합니다.
@@ -73,8 +73,8 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 픽셀 크기의 50%가 아님).
 
 CSS에서는 콘텐츠가 컨테이너를 오버플로하도록 허용하므로,
-이미지와 기타 콘텐츠가 오버플로되는 것을 막으려면 max-width: 100%를 사용할 필요가 있습니다.  예:
-
+이미지와 기타 콘텐츠가 오버플로되는 것을 막으려면 max-width: 100%를 사용할 필요가 있습니다.  예를 들면
+다음과 같습니다.
 
 
     img, embed, object, video {
@@ -272,8 +272,8 @@ Dogfood: `picture` 요소가 브라우저에 들어가기 시작했습니다. �
   </figcaption>
 </figure>
 
-고객은 자신이 구매하는 것을 보고싶어 합니다.  소매점 사이트에서 사용자들은 제품을 고해상도로 확대하여
-더 자세히 보고싶어 하지만, 그럴 수 없다면
+고객은 자신이 구매하는 것을 보고 싶어 합니다.  소매점 사이트에서 사용자들은 제품을 고해상도로 확대하여
+더 자세히 보고 싶어 하지만, 그럴 수 없다면
 [연구조사 참가자](/web/fundamentals/getting-started/principles/#make-product-images-expandable)들은 실망할 것입니다.
 
 누를 수 있는 확대 가능한 이미지의 좋은 예가 바로 J. Crew 사이트입니다.
@@ -299,14 +299,14 @@ Dogfood: `picture` 요소가 브라우저에 들어가기 시작했습니다. �
 #### 자바스크립트 이미지 대체
 
 자바스크립트 이미지 대체는 기기의 성능을 확인하고
-"올바른 작업을 수행합니다". `window.devicePixelRatio`를 통해 기기 픽셀 비율을
-결정하고, 화면 너비와 높이를 구할 수 있으며,심지어 `navigator.connection`을
+'올바른 작업을 수행합니다'. `window.devicePixelRatio`를 통해 기기 픽셀 비율을
+결정하고, 화면 너비와 높이를 구할 수 있으며, 심지어 `navigator.connection`을
 통해 일부 네트워크 연결 스니핑을 수행하거나 가짜 요청을 발급할 수도
 있습니다. 이 모든 정보를 수집한 경우 이제 로드할 이미지를
 결정할 수 있습니다.
 
 이 접근방식의 큰 단점 중 하나는 자바스크립트를 사용한다는 것입니다.
-즉,적어도 예견(look-ahead) 파서가 완료될 때까지는 이미지 로딩이 지연됩니다. 즉,
+즉, 적어도 예견(look-ahead) 파서가 완료될 때까지는 이미지 로딩이 지연됩니다. 즉,
 `pageload` 이벤트가 실행되기 전까지는 이미지 다운로드조차 시작되지
 않습니다. 또한, 대부분의 경우 브라우저가 1x 및 2x
 이미지를 둘 다 다운로드하므로, 페이지 크기가 늘어나게 됩니다.
@@ -461,8 +461,8 @@ CSS `background` 속성은 복잡한 이미지를
 
 아래 샘플의 예시에서는 화면이 작은 경우 `small.png`만
 다운로드되어 콘텐츠 `div`에 적용되는 반면, 화면이 큰 경우
-`background-image: url(body.png)`가 본문과 `background-image:
-url(large.png)` is applied to the content `div`에 적용됩니다.
+`background-image: url(body.png)`는 본문에 적용되고 'background-image:
+url(large.png)'는 'div'에 적용됩니다.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
@@ -492,7 +492,7 @@ CSS의 `image-set()` 함수는 동작 `background` 속성을 개선하여
 
 `image-set()` 지원은 아직 새로운 기능이며
 `-webkit` 공급업체 접두사가 있는 Chrome 및 Safari에서만 지원됩니다.  또한 `image-set()`이 지원되지 않는 경우
-대체 이미지를 포함할 때 주의하세요. 예:
+대체 이미지를 포함할 때 주의하세요. 예를 들면 다음과 같습니다.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
@@ -566,8 +566,8 @@ Chrome, Firefox 및 Opera는 모두 표준 `(min-resolution: 2dppx)`를
 (&#9733;), 컨트롤 사진(&#9654;), 음악 표기(&#9836;),
 그리스 문자(&#937;), 심지어는 체스 말(&#9822;)에 대한 기호가 포함될 수 있습니다.
 
-유니코드 문자 포함은 명명된 엔터티와 동일한 방식으로 수행됩니다:
-`&#XXXX`, 여기서 `XXXX`는 유니코드 문자 번호를 나타냅니다. 예:
+유니코드 문자 포함은 명명된 엔터티와 동일한 방식으로 수행됩니다(`&#XXXX`).
+여기서 `XXXX`는 유니코드 문자 번호를 나타냅니다. 예를 들면 다음과 같습니다.
 
 
     You're a super &#9733;
@@ -612,7 +612,7 @@ You're a super &#9733;
 
 * 이 글꼴은 무한 확장이 가능한 벡터 그래픽이지만, 앤티앨리어싱으로
 인해 예상보다 아이콘이 선명하지 않을 수 있습니다.
-* CSS에서 제한된 스타일 지정.
+* CSS를 사용한 스타일 지정이 제한됩니다.
 * 선 높이, 글자 간격 등에 따라 완벽한 픽셀 배치가
 어려울 수 있습니다.
 * 문맥적이 아니며, 스크린 리더 또는 기타 보조 기술과 함께
@@ -634,7 +634,7 @@ Awesome](https://fortawesome.github.io/Font-Awesome/),
 
 추가적인 HTTP 요청 및 파일 크기와 아이콘의 필요성 간에
 균형을 맞추세요. 예를 들어, 아이콘이 조금만 필요한 경우에는
-이미지 또는 이미지 스프라이트를 사용하는 것이 더 나을 수 있습니다.
+이미지 또는 image sprite를 사용하는 것이 더 나을 수 있습니다.
 
 
 ## 성능을 위해 이미지를 최적화
@@ -648,16 +648,16 @@ Awesome](https://fortawesome.github.io/Font-Awesome/),
 
 
 ### TL;DR {: .hide-from-toc }
-- 이미지 형식을 함부로 선택하지 마십시오. 어떤 형식이 사용 가능한지 이해하고 가장 적합한 형식을 사용하세요.
+- 이미지 형식을 함부로 선택하지 마세요. 어떤 형식이 사용 가능한지 이해하고 가장 적합한 형식을 사용하세요.
 - 파일 크기를 줄여주는 이미지 최적화 및 압축 도구를 워크플로에 포함하세요.
-- 자주 사용하는 이미지를 image sprites에 배치하면 http 요청 수를 줄일 수 있습니다.
+- 자주 사용하는 이미지를 image sprite에 배치하면 http 요청 수를 줄일 수 있습니다.
 - 초기 페이지 로드 시간을 개선하고 초기 페이지 크기를 줄이려면, 이미지가 뷰로 스크롤된 후에만 이미지를 로드하도록 하세요.
 
 
 ### 올바른 형식 선택
 
-두 가지 유형의 이미지를 고려할 수 있습니다: [벡터 이미지](https://en.wikipedia.org/wiki/Vector_graphics)
-및 [래스터 이미지](https://en.wikipedia.org/wiki/Raster_graphics).
+두 가지 유형의 이미지, 즉 [벡터 이미지](https://en.wikipedia.org/wiki/Vector_graphics)
+및 [래스터 이미지](https://en.wikipedia.org/wiki/Raster_graphics)를 고려할 수 있습니다.
 래스터 이미지의 경우에는 또한 올바른 압축 형식을 선택해야 합니다.
 예: `GIF`, `PNG`, `JPG`.
 
@@ -705,13 +705,13 @@ Adobe Illustrator 또는 Inkscape와 같은 프로그램으로 만들어져
 [OptiPNG](http://optipng.sourceforge.net/){: .external } 또는
 [PNGOUT](http://www.advsys.net/ken/util/pngout.htm)을 사용해 보세요.
 
-### image sprites 사용
+### image sprite 사용
 
-<img src="img/sprite-sheet.png" class="attempt-right" alt="예시에서 사용된 이미지 스프라이트 시트">
+<img src="img/sprite-sheet.png" class="attempt-right" alt="예시에서 사용된 image sprite 시트">
 
-CSS 스프라이트란 여러 이미지를 단일 "스프라이트 시트" 이미지에
+CSS sprite란 여러 이미지를 단일 'sprite 시트' 이미지에
 결합하는 기법입니다. 그런 다음, 정확한 부분을 표시하는 오프셋과 함께
-요소(스프라이트 시트)의 배경 이미지를 지정하여 개별 이미지들을
+요소(sprite 시트)의 배경 이미지를 지정하여 개별 이미지들을
 사용할 수 있습니다.
 
 <div style="clear:both;"></div>
@@ -722,7 +722,7 @@ CSS 스프라이트란 여러 이미지를 단일 "스프라이트 시트" 이�
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media//image-sprite.html){: target="_blank" .external }
 
-스프라이트는 여러 이미지를 가져오는 데 필요한 다운로드의 수를
+sprite는 여러 이미지를 가져오는 데 필요한 다운로드의 수를
 줄여주면서도 여전히 캐싱이 가능하다는 이점이 있습니다.
 
 ### 지연 로딩 고려

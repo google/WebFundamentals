@@ -28,7 +28,7 @@ description: 동영상을 사이트에 추가하고 모든 기기에서 사용�
 ### TL;DR {: .hide-from-toc }
 - `video` 요소를 사용하여 사이트에서 동영상을 로드하고, 디코딩하고, 재생합니다.
 - 다양한 모바일 플랫폼을 포괄하도록 여러 형식으로 동영상을 제작합니다.
-- 동영상의 크기를 올바로 지정하여 동영상이 컨테이너를 오버플로하지 않도록 하십시오.
+- 동영상의 크기를 올바로 지정하여 동영상이 컨테이너를 오버플로하지 않도록 하세요.
 - 접근성이 중요합니다. `track` 요소를 `video` 요소의 하위 항목으로 추가합니다.
 
 
@@ -172,7 +172,7 @@ Fragments API를 사용하여 시작 및 종료 시간을 동영상 요소에 �
 ### 어떤 형식이 지원되는지 확인 {: #check-formats }
 
 `canPlayType()`을 사용하여 어떤 동영상 형식이 지원되는지 알아봅니다. 이 메서드는
-`mime-type`와 선택 항목인 코덱으로 구성된 문자열 인수를 취하며,
+`mime-type`과 선택 항목인 코덱으로 구성된 문자열 인수를 취하며,
 다음 값 중 하나를 반환합니다.
 
 <table class="responsive">
@@ -405,12 +405,12 @@ iPad의 Safari에서는 동영상을 인라인으로 재생합니다.
 [널리 지원됩니다](http://caniuse.com/#feat=fullscreen). 이 API를 사용하여
 콘텐츠 또는 페이지의 전체 화면 표시를 제어합니다.
 
-동영상과 같은 요소를 전체 화면에 표시하려면:
+동영상과 같은 요소를 전체 화면에 표시하려면 다음과 같이 합니다.
 
     elem.requestFullScreen();
     
 
-전체 문서를 전체 화면에 표시하려면:
+전체 문서를 전체 화면에 표시하려면 다음과 같이 합니다.
 
     document.body.requestFullScreen();
     
@@ -439,7 +439,7 @@ Fullscreen API를 지원하는 기기에서는, 썸네일
 
 실제 동작을 보려면, [데모](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html){: target="_blank" .external }를 확인하세요.
 
-Dogfood: `requestFullScreen()`은 공급업체에서 프리픽스될 수도 있으며,브라우저 간의 완벽한 호환성을 위해 추가적인 코드가 필요할 수 있습니다.
+Dogfood: `requestFullScreen()`은 공급업체에서 프리픽스될 수도 있으며, 브라우저 간의 완벽한 호환성을 위해 추가적인 코드가 필요할 수 있습니다.
 
 <div style="clear:both;"></div>
 
@@ -475,7 +475,7 @@ Dogfood: `requestFullScreen()`은 공급업체에서 프리픽스될 수도 있�
 
 ## 트랙 파일에 캡션 정의
 
-트랙 파일은 WebVTT 형식의 시간 "신호"로 구성됩니다.
+트랙 파일은 WebVTT 형식의 시간 '신호'로 구성됩니다.
 
     WEBVTT
 
@@ -571,7 +571,7 @@ Dogfood: 데스크톱에서 트랙 요소는 Android용 Chrome, iOS Safari 그�
   <tbody>
     <tr>
       <td data-th="Value"><code>none</code></td>
-      <td data-th="Description">사용자가 동영상을 못볼 수도 있습니다. 아무 것도 사전 로드하지 않습니다.</td>
+      <td data-th="Description">사용자가 동영상을 못볼 수도 있습니다. 아무것도 사전 로드하지 않습니다.</td>
     </tr>
     <tr>
       <td data-th="Value"><code>metadata</code></td>
@@ -595,8 +595,8 @@ Android에서는 전혀 버퍼링이 없습니다. 즉, 데스크톱에는 발�
 
 [HTML5 Rocks 동영상 문서](//www.html5rocks.com/en/tutorials/video/basics/#toc-javascript)에
 동영상 재생을 제어하는 데 사용되는 자바스크립트 속성, 메서드 및 이벤트에 대해
-간략히 설명되어 있습니다. 우리는 해당 콘텐츠를 여기에 포함했고,
-모바일과 관련된 사항들을 업데이트로 제공합니다.
+간략히 설명되어 있습니다. 이 문서의 내용을 여기에 포함해 두었으며,
+관련이 있는 경우 이 문서의 내용을 모바일 관련 사항으로 업데이트했습니다.
 
 #### 속성
 
@@ -625,19 +625,19 @@ Android에서는 전혀 버퍼링이 없습니다. 즉, 데스크톱에는 발�
     </tr>
     <tr>
       <td data-th="Property"><code>buffered</code></td>
-      <td data-th="Description">동영상이 얼마나 버퍼링되어 재생 준비가 되었는지에 대한 정보</td>
+      <td data-th="Description">동영상이 얼마나 버퍼링되어 재생 준비가 되었는지에 대한 정보입니다.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>currentSrc</code></td>
-      <td data-th="Description">재생 중인 동영상의 주소</td>
+      <td data-th="Description">재생 중인 동영상의 주소입니다.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>videoWidth</code></td>
-      <td data-th="Description">픽셀 단위의 동영상 너비(이 너비는 동영상 요소 너비와는 다를 수 있습니다).</td>
+      <td data-th="Description">픽셀 단위의 동영상 너비입니다(이 너비는 동영상 요소 너비와는 다를 수 있음).</td>
     </tr>
     <tr>
       <td data-th="Property"><code>videoHeight</code></td>
-      <td data-th="Description">픽셀 단위의 동영상 높이(이 높이는 동영상 요소 높이와는 다를 수 있습니다).</td>
+      <td data-th="Description">픽셀 단위의 동영상 높이입니다(이 높이는 동영상 요소 높이와는 다를 수 있음).</td>
     </tr>
   </tbody>
 </table>

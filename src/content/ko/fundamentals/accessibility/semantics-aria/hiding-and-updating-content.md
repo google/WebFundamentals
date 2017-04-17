@@ -43,7 +43,7 @@ hidden` 또는 `display: none`의 CSS 스타일이 있거나 HTML5 `hidden` 속�
 있습니다.
 
 '스크린 리더 전용' 텍스트 생성에 대한 자세한 내용은 [텍스트 숨기기
-기법](http://webaim.org/techniques/css/invisiblecontent/#techniques)에{: .external }
+기법](http://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }에
 대한 WebAIM 문서를 참조하세요.
 
 마지막으로, ARIA는

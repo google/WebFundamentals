@@ -70,7 +70,7 @@ description: 사용자와 연결하고 계속 재방문하도록 하세요. 사�
 
 [Progressive Web App 기본 사항](https://udacity.com/ud811)<br>
 이 교육과정에서는 처음으로 Progressive Web
-App을 만드는 법을 배웁니다.&mdash;Progressive Web App이란 네이티브 애플리케이션에서 제공하는 여러 가지 기능을
+App을 만드는 법을 배웁니다. 참고로, Progressive Web App이란 네이티브 애플리케이션에서 제공하는 여러 가지 기능을
 사용할 수 있는 웹 앱입니다. 서비스 워커를 사용하여 오프라인에서 작동하는
 웹 앱을 만드는 경험을 더 많이 쌓을 수 있습니다. 마지막으로
 웹 앱 매니페스트 파일로 사용자 홈 화면에 앱을 설치할 수 있습니다.

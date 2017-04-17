@@ -59,7 +59,7 @@ Linting - 이를 위한 플러그인이 있습니다. 커밋되지 않은 변경
 플러그인을 검색할 수도 있습니다.)
 
 다음 [인기 Sublime Text
- 플러그인 목록](https://packagecontrol.io/browse)을 둘러보십시오. 다음은 개발 속도를 높이는 데 도움이 되기 때문에 
+ 플러그인 목록](https://packagecontrol.io/browse)을 둘러보세요. 다음은 개발 속도를 높이는 데 도움이 되기 때문에 
 여러분에게 설치하도록 권장하고 싶은 플러그인입니다.
 
 ### Autoprefixer

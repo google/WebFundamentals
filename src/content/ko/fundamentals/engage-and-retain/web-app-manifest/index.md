@@ -32,7 +32,7 @@ description: 웹 앱 매니페스트는 사용자가 네이티브 앱을 볼 것
 웹 앱 매니페스트 파일을 자세히 알아보기 전에, 기본적인
 매니페스트 파일을 생성하고 이 파일에 웹 페이지를 링크해 보겠습니다.
 
-원할 때마다 매니페스트를 호출할 수 있습니다. 대부분은 `manifest.json`을 사용합니다. 예:
+원할 때마다 매니페스트를 호출할 수 있습니다. 대부분은 `manifest.json`을 사용합니다. 예를 들면 다음과 같습니다.
 
 
     {
@@ -61,8 +61,8 @@ description: 웹 앱 매니페스트는 사용자가 네이티브 앱을 볼 것
 
 다음 항목을 반드시 포함하세요. 
 
-* 사용자 홈 화면의 텍스트로 사용할 `short_name`  
-* 웹 앱 설치 배너에 사용할 `name`  
+* `short_name` - 사용자 홈 화면의 텍스트로 사용  
+* `name` - 웹 앱 설치 배너에 사용  
   
 
 ## 브라우저에게 매니페스트 정보 알려주기
@@ -115,7 +115,7 @@ description: 웹 앱 매니페스트는 사용자가 네이티브 앱을 볼 것
       }],
     
 
-참고: 아이콘을 홈 화면에 저장할 때, Chrome은 먼저 디스플레이의 밀도와 일치하고 크기가 48dp 화면 밀도인 아이콘을 찾습니다. 하나도 발견되지 않을 경우에는, 기기 특성과 가장 일치하는 아이콘을 찾습니다. 어떤 이유로 아이콘을 특정 픽셀 밀도로 표시하려는 경우, 숫자를 취하는  <code>density</code> 멤버(선택 항목)를 사용할 수 있습니다. 밀도를 선언하지 않으면 기본적으로 1.0으로 설정됩니다. 이는 “화면 밀도가 1.0 이상인 경우 이 아이콘을 사용"한다는 의미이며, 이 밀도는 일반적으로 여러분이 원하는 것입니다.
+참고: 아이콘을 홈 화면에 저장할 때, Chrome은 먼저 디스플레이의 밀도와 일치하고 크기가 48dp 화면 밀도인 아이콘을 찾습니다. 하나도 발견되지 않을 경우에는, 기기 특성과 가장 일치하는 아이콘을 찾습니다. 어떤 이유로 아이콘을 특정 픽셀 밀도로 표시하려는 경우, 숫자를 취하는  <code>density</code> 멤버(선택 항목)를 사용할 수 있습니다. 밀도를 선언하지 않으면 기본적으로 1.0으로 설정됩니다. 이는 '화면 밀도가 1.0 이상인 경우 이 아이콘을 사용'한다는 의미이며, 이 밀도는 일반적으로 여러분이 원하는 것입니다.
 
 ## 스플래시 화면 추가
 
@@ -249,8 +249,8 @@ Chrome DevTools의 **Application** 창에서 **Manifest** 탭을 사용하세요
 매니페스트](/web/tools/chrome-devtools/progressive-web-apps#manifest)를
 참조하세요. 또한
 여기서 Add to Homescreen 이벤트를 시뮬레이션할 수 있습니다. 이 주제에 대한 자세한 내용은 [앱 설치 배너
-테스트](/web/fundamentals/engage-and-retain/app-install-banners/#testing-the-app-install-banner)
-를 참조하세요.
+테스트](/web/fundamentals/engage-and-retain/app-install-banners/#testing-the-app-install-banner)를
+참조하세요.
 
 웹 앱 매니페스트를 자동으로 검증하고 싶다면
 [Lighthouse](/web/tools/lighthouse/)를 살펴보세요. Lighthouse는
@@ -272,8 +272,8 @@ URL을 입력하면 Lighthouse가 해당 페이지에 대해 감사 스위트를
 * 웹 앱 매니페스트를 사용 중인 경우, 아마
 [앱 설치 배너](/web/fundamentals/engage-and-retain/app-install-banners/)도 함께 설치할 것입니다. 
 
-* 웹 앱 매니페스트에 대한 [전체 참조](https://developer.mozilla.org/en-US/docs/Web/Manifest)
-는 Mozilla 개발자 네트워크에서 구할 수 있습니다.
+* 웹 앱 매니페스트에 대한 [전체 참조](https://developer.mozilla.org/en-US/docs/Web/Manifest)는
+Mozilla 개발자 네트워크에서 구할 수 있습니다.
 
 * 웹 앱 매니페스트를
 작성했던 엔지니어로부터 기능 설명을 원하면, [실제 W3C 사양](http://www.w3.org/TR/appmanifest/){: .external }을 읽어보세요.
