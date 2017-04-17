@@ -178,7 +178,7 @@ bot telusur merayapi situs. (Tidak semua perayap perlu mematuhi
 Tempatkan `robots.txt` pada direktori akar host situs web Anda. Misalnya,
 jika host situs Anda adalah `http://pages.example.com/`, maka file `robots.txt` harus
 ditempatkan di `http://pages.example.com/robots.txt`. Jika domain tersebut memiliki
-skema, subdomain, atau porta lain yang berbeda, maka dianggap
+skema, subdomain, atau port lain yang berbeda, maka dianggap
 host berbeda dan harus memiliki `robots.txt` untuk setiap
 direktori akarnya.
 

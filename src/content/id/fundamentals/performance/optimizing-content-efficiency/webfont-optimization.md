@@ -11,7 +11,7 @@ description: Tipografi adalah hal mendasar bagi terciptanya desain, branding, ke
 
 Tipografi adalah hal mendasar bagi terciptanya desain, branding, keterbacaan, dan aksesibilitas yang baik. Webfont memungkinkan semua hal di atas dan juga yang lainnya: teks dapat dipilih, ditelusuri, di-zoom, dan ramah untuk DPI yang tinggi, menyediakan rendering teks yang konsisten dan tajam apa pun ukuran dan resolusinya. Webfont sangat penting bagi desain yang baik, UX, dan kinerja.
 
-Optimalisasi webfont merupakan bagian penting dari strategi kinerja keseluruhan. Setiap font merupakan sumber daya tambahan, dan sebagian font mungkin memblokir rendering teks, namun karena laman menggunakan webfont tidak berarti bahwa laman harus me-render lebih lambat. Sebaliknya, font yang dioptimalkan, dipadukan dengan strategi yang cermat mengenai cara webfont dimuat dan diterapkan pada laman akan dapat membantu mengurangi ukuran laman total, dan memperbaiki waktu rendering laman.
+Optimalisasi webfont merupakan bagian penting dari strategi kinerja keseluruhan. Setiap font merupakan sumber daya tambahan, dan sebagian font mungkin memblokir rendering teks, namun karena laman menggunakan webfont tidak berarti bahwa laman harus merender lebih lambat. Sebaliknya, font yang dioptimalkan, dipadukan dengan strategi yang cermat mengenai cara webfont dimuat dan diterapkan pada laman akan dapat membantu mengurangi ukuran laman total, dan memperbaiki waktu rendering laman.
 
 
 ## Anatomi webfont
@@ -235,7 +235,7 @@ gaya-font ke miring?
 
 
 > Penulis juga harus menyadari bahwa pendekatan yang disintesis mungkin tidak cocok untuk skrip seperti Cyrillic, yang mana format miring sangat berbeda bentuknya. Selalu lebih baik untuk menggunakan font miring daripada mengandalkan versi sintetik.
-> ><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">gaya-fony CSS3</a>
+> ><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">gaya-font CSS3</a>
 
 
 Contoh di atas menggambarkan perbedaan di antara hasil font aktual vs. disintesiskan untuk Open-Sans. Semua varian yang disintesiskan dihasilkan dari font 400-bobot. Seperti yang Anda bisa lihat, ada perbedaan yang mencolok dalam hasilnya. Detail mengenai cara menghasilkan varian tebal dan miring tidak ditetapkan. Oleh karena itu, hasilnya bervariasi dari browser ke browser, dan sangat bergantung pada font.
@@ -255,7 +255,7 @@ Mengingat deklarasi ini, browser menghitung subset yang diperlukan dan varian se
 
 ### Webfonts dan jalur rendering penting
 
-Pemuatan yang lambat dari font membawa implikasi tersembunyi penting yang mungkin menunda rendering: browser harus [mengonstruksikan pohon render](/web/fundamentals/performance/critical-rendering-path/render-tree-construction), yang bergantung pada pohon DOM dan CSSOM, sebelum mengetahui sumber daya font mana yang diperlukan untuk merender teks. Akibatnya, permintaan font tertunda setelah sumber daya penting lain, dan browser dapat diblokir dari me-render teks sampai sumber daya diambil.
+Pemuatan yang lambat dari font membawa implikasi tersembunyi penting yang mungkin menunda rendering: browser harus [mengonstruksikan pohon render](/web/fundamentals/performance/critical-rendering-path/render-tree-construction), yang bergantung pada pohon DOM dan CSSOM, sebelum mengetahui sumber daya font mana yang diperlukan untuk merender teks. Akibatnya, permintaan font tertunda setelah sumber daya penting lain, dan browser dapat diblokir dari merender teks sampai sumber daya diambil.
 
 <img src="images/font-crp.png"  alt="Jalur rendering penting font">
 

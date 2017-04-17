@@ -151,7 +151,7 @@ layar semakin lebar, posisi off-screen akan dihapus dari elemen dan
 mereka ditampilkan dalam tampilan yang terlihat.
 
 Perhatikan dalam contoh ini, Safari untuk iOS 6 dan Browser Android tidak mendukung fitur
-`flex-flow: row nowrap` dari `flexbox`, jadi kami terpaksa melakukan fallback ke 
+`flex-flow: row nowrap` dari `flexbox`, jadi kami terpaksa melakukan fallback ke
 pemosisian absolut.
 
 Situs yang menggunakan pola ini antara lain:

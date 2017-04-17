@@ -19,7 +19,7 @@ Bagian pertama dalam menghitung gaya adalah membuat satu set pemilih kecocokan, 
 Bagian kedua dari proses ini melibatkan pengambilan semua aturan gaya dari pemilih kecocokan dan mengetahui gaya akhir mana yang dimiliki elemen. Di Blink (mesin rendering Chrome dan Opera) proses-proses ini adalah, setidaknya saat ini, secara kasar sama biayanya:
 
 > Secara kasar, 50% waktu yang digunakan untuk menghitung ulang gaya terkomputasi untuk elemen digunakan untuk mencocokkan pemilih, dan sebagian lagi digunakan untuk membentuk RenderStyle (representasi gaya terkomputasi) dari aturan yang cocok.
-> Rune Lillesveen, Opera / [Invalidasi Gaya di Blink](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/view)
+> Rune Lillesveen, Opera / [Style Invalidation in Blink](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/view)
 
 ### TL;DR {: .hide-from-toc }
 
@@ -106,7 +106,7 @@ Jika Anda tidak suka BEM, ada cara lain untuk pendekatan CSS Anda, namun pertimb
 
 ## Sumber Daya
 
-* [Invalidasi gaya di Blink](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit)
+* [Style invalidation in Blink](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit)
 * [BEM (Block, Element, Modifier)](https://bem.info/){: .external }
 
 

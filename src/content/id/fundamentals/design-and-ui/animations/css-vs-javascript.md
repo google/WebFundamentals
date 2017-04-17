@@ -54,7 +54,7 @@ Di bawah ini adalah beberapa CSS yang memindahkan elemen 100 px pada sumbu X dan
       transform: translate(100px, 100px);
     }
     
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
 
 Selain durasi transisi, ada beberapa pilihan untuk *easing*, yaitu bagaimana animasi terasa. Untuk informasi selengkapnya tentang easing, lihat panduan [Dasar-Dasar Easing](the-basics-of-easing).
 

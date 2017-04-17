@@ -22,13 +22,14 @@ Serangan [Cross-Site Scripting (XSS)](//en.wikipedia.org/wiki/Cross-site_scripti
 misalnya, melangkahi kebijakan sumber yang sama dengan menyusupkan
 pengiriman kode berbahaya bersama materi yang direncanakan pada situs. Ini merupakan masalah
 sangat besar, karena browser mempercayai semua kode yang ditunjukkan pada laman sebagai
-bagian sah dari asal keamanan laman itu. [XSS Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet){: .external} adalah lintas-bagian yang sudah lama namun representatif dari metode yang dapat digunakan penyerang untuk merusak kepercayaan ini dengan menyuntikkan kode berbahaya. Jika penyerang berhasil menyuntikkan _suatu_ kode,
+bagian sah dari asal keamanan laman itu. [XSS
+Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet){: .external} adalah lintas-bagian yang sudah lama namun representatif dari metode yang dapat digunakan penyerang untuk merusak kepercayaan ini dengan menyuntikkan kode berbahaya. Jika penyerang berhasil menyuntikkan _suatu_ kode,
 habislah sudah: data sesi pengguna akan dirusak dan
 informasi yang seharusnya dirahasiakan dikuasai oleh orang jahat. Kami
 jelas ingin mencegah hal itu terjadi.
 
 Ringkasan ini menyoroti pertahanan yang bisa secara signifikan mengurangi risiko dan
-dampak serangan XSS di browser modern: Kebijakan Keamanan Materi (CSP).
+dampak serangan XSS di browser modern: Content Security Policy (CSP).
 
 ### TL;DR {: .hide-from-toc }
 * Gunakan daftar putih untuk memberi tahu klien apa yang boleh dan apa yang tidak.
@@ -113,7 +114,7 @@ kebijakan keamanan materi dilanggar. Direktif ini tidak bisa digunakan di tag `<
 * **`style-src`** adalah pasangan untuk `script-src` stylesheet.
 * **`upgrade-insecure-requests`** memerintahkan agen-pengguna untuk menulis ulang skema URL,
 dengan mengubah HTTP ke HTTPS. Direktif ini untuk situs web dengan banyak
-    URL lama yang perlu ditulis ulang.
+URL   lama yang perlu ditulis ulang.
 
 Secara default, direktif ini terbuka lebar. Jika Anda belum menyetel kebijakan tertentu untuk
 direktif, misalnya `font-src`, maka direktif itu secara default
@@ -414,7 +415,7 @@ header HTTP, kunci ini _tidak_ salah eja), sumber daya yang melanggar
 kebijakan laman (`blocked-uri`), direktif tertentu yang dilanggarnya
 (`violated-directive`), dan kebijakan lengkap laman tersebut (`original-policy`).
 
-### Hanya-Lapor
+### Report-Only
 
 Jika Anda baru saja mulai dengan CSP, ada baiknya mengevaluasi status aplikasi
 Anda saat ini sebelum menerapkan kebijakan ketat pada pengguna.

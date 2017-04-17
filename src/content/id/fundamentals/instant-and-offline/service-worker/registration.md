@@ -152,7 +152,7 @@ dengan yang akan didapat pengguna baru, dan masalah potensial mudah terabaikan.
 Inilah contoh yang mengilustrasikan perbedaan yang bisa dihasilkan oleh
 pengaturan waktu pendaftaran. Kedua tangkapan layar diambil saat mengunjungi sebuah [aplikasi
 contoh](https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo) dalam mode
-Penyamaran dengan menggunakan pengereman jaringan untuk menyimulasikan koneksi yang lambat.
+Penyamaran dengan menggunakan throttling jaringan untuk menyimulasikan koneksi yang lambat.
 
 ![Lalu lintas jaringan pada pendaftaran dini.](../images/early-registration.png
 "Network traffic with early registration.")

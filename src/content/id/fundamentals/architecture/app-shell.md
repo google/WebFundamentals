@@ -150,17 +150,17 @@ file indeks lengkap. Mari kita lihat apa materinya.
     <html>
     <head>
       <meta charset="utf-8">
-      <title>App Shell</title>
+      <title>Shell Aplikasi</title>
       <link rel="manifest" href="/manifest.json">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>App Shell</title>
+      <title>Shell Aplikasi</title>
       <link rel="stylesheet" type="text/css" href="styles/inline.css">
     </head>
 
     <body>
       <header class="header">
-        <h1 class="header__title">App Shell</h1>
+        <h1 class="header__title">Shell Aplikasi</h1>
       </header>
       
       <nav class="nav">

@@ -277,7 +277,7 @@ bisa melihat tampilan-dekat resolusi tinggi dari produk agar bisa melihatnya sec
 detail, dan [partisipan penelitian](/web/fundamentals/getting-started/principles/#make-product-images-expandable) merasa frustrasi jika mereka tidak dapat melakukannya.
 
 Sebuah contoh bagus dari gambar yang bisa diketuk dan diperbesar disediakan oleh situs J. Crew.
-Sebuah hamparan yang menghilang menunjukkan bahwa gambar bisa diketuk, yang memunculkan gambar
+Sebuah overlay yang menghilang menunjukkan bahwa gambar bisa diketuk, yang memunculkan gambar
 yang diperbesar dengan detail halus terlihat.
 
 <div style="clear:both;"></div>
@@ -322,7 +322,7 @@ Ada dua cara yang berbeda secara mendasar untuk membuat dan menyimpan gambar&mda
 
 ##### SVG
 
-SVG memungkinkan untuk memasukkan grafis vektor responsif dalam laman web. Keuntungan dari format file vektor dibandingkan format file bitmap adalah bahwa browser bisa me-render gambar vektor dalam ukuran apa saja. Format vektor menggambarkan geometri gambar&mdash;bagaimana itu dibuat dari garis, kurva, warna dan sebagainya. Format bitmap, di sisi lain, hanya memiliki informasi tentang titik-titik individu warna, sehingga browser harus menebak cara mengisi kekosongan saat penskalaan.
+SVG memungkinkan untuk memasukkan grafis vektor responsif dalam laman web. Keuntungan dari format file vektor dibandingkan format file bitmap adalah bahwa browser bisa merender gambar vektor dalam ukuran apa saja. Format vektor menggambarkan geometri gambar&mdash;bagaimana itu dibuat dari garis, kurva, warna dan sebagainya. Format bitmap, di sisi lain, hanya memiliki informasi tentang titik-titik individu warna, sehingga browser harus menebak cara mengisi kekosongan saat penskalaan.
 
 Di bawah ini adalah dua versi dari gambar yang sama: gambar PNG di sebelah kiri dan SVG di sebelah kanan. SVG terlihat bagus pada berbagai ukuran, sedangkan PNG di sebelahnya mulai terlihat buram pada ukuran layar yang lebih besar.
 
@@ -410,7 +410,7 @@ Awal kode untuk logo HTML5 di atas terlihat seperti ini:
 
 (Versi lengkap lebih dari 5000 karakter panjangnya!)
 
-Alat seret dan lepas seperti [jpillora.com/base64-encoder](https://jpillora.com/base64-encoder) tersedia untuk mengonversi file biner seperti gambar ke Data URI. Sama seperti SVG, Data URI [didukung dengan baik](http://caniuse.com/datauri) pada browser seluler dan desktop.
+Alat (bantu) seret dan lepas seperti [jpillora.com/base64-encoder](https://jpillora.com/base64-encoder) tersedia untuk mengonversi file biner seperti gambar ke Data URI. Sama seperti SVG, Data URI [didukung dengan baik](http://caniuse.com/datauri) pada browser seluler dan desktop.
 
 ##### Penyisipan di CSS
 
@@ -470,7 +470,7 @@ url(large.png)` is applied to the content `div`.
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/conditional-mq.html){: target="_blank" .external }
 
-### Gunakan set-gambar untuk memberikan gambar resolusi tinggi
+### Gunakan image-set untuk memberikan gambar resolusi tinggi
 
 Fungsi `image-set()` dalam CSS meningkatkan perilaku properti `background`,
 sehingga memudahkan saat memberikan beberapa file gambar untuk karakteristik

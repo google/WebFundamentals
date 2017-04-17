@@ -151,7 +151,7 @@ sumber daya yang efektif, sehingga penggunaan koneksi TCP yang mendasarinya menj
 dan lain sebagainya.
 
 Pembatasan ini tidak fatal, namun sebagai aplikasi web yang terus tumbuh
-dalam cakupan, kompleksitas, dan kepentingannya di kehidupan kami sehari-hari, pembatasan ini mengakibatkan 
+dalam cakupan, kompleksitas, dan kepentingannya di kehidupan kami sehari-hari, pembatasan ini mengakibatkan
 beban yang berkembang baik pada developer maupun pengguna web, yang merupakan celah
 yang tepat bagi HTTP/2 untuk didesain dan diatasi:
 
@@ -305,7 +305,7 @@ aliran menunjukkan bahwa, jika memungkinkan, aliran induk harus dialokasikan
 sumber daya di depan dependensi. Dengan kata lain, "Harap proses dan kirimkan
 respons D sebelum respons C".
 
-Aliran yang berbagi induk yang sama (dengan kata lain, aliran sibling) harua dialokasikan
+Aliran yang berbagi induk yang sama (dengan kata lain, aliran sibling) harus dialokasikan
 sumber daya sesuai dengan bobotnya. Misalnya, jika aliran A memiliki bobot
 12 dan satu sibling B memiliki bobot 4, maka untuk menentukan proporsi
 sumber daya, setiap aliran ini harus menerima:
@@ -407,7 +407,7 @@ alur level-koneksi dan alirannya sendiri:
 * Kontrol alur sifatnya berarah. Setiap penerima dapat memilih untuk menyetel ukuran jendela
  yang diinginkan untuk setiap aliran dan seluruh koneksi.
 * Kontrol alur berbasis kredit. Setiap penerima mengiklankan koneksi inisialnya
-  dan jendela kontrol alur aliran (dalam byte), yang dikurangi kapan saja
+  dan jendela kontrol alur aliran (dalam byte), yang dikurangi kapan saja 
   pengirim memancarkan bingkai `DATA` dan ditingkatkan melalui bingkai `WINDOW_UPDATE` yang dikirimkan
   oleh penerima.
 * Kontrol alur tidak dapat dinonaktifkan. Saat koneksi HTTP/2 ditetapkan, 
@@ -416,7 +416,7 @@ alur level-koneksi dan alirannya sendiri:
   ke 65.535 byte namun penerima dapat menyetel ukuran jendela maksimum yang besar 
   (`2^31-1` byte) dan mempertahankannya dengan mengirimkan bingkai `WINDOW_UPDATE` kapan saja 
   data diterima.
-* Kontrol alur sifatnya hop-by-hop, bukan end-to-end. Yaitu, perantara dapat menggunakannya
+* Kontrol alur sifatnya hop-by-hop, bukan end-to-end. Yaitu, perantara dapat menggunakannya 
  untuk mengontrol penggunaan dan sumber daya dan mengimplementasikan mekanisme alokasi sumber daya berdasarkan
   kriteria dan heuristiknya sendiri.
 
@@ -514,7 +514,7 @@ terkadang lebih beberapa kilobyte jika cookie HTTP sedang digunakan. (Lihat
 dan merespons metadata header menggunakan format kompresi HPACK yang menggunakan dua
 teknik yang sederhana namun kuat:
 
-1. Bidang-bidang header yang diansmisikan boleh dienkodekan melalui kode Huffman
+1. Bidang-bidang header yang diansmisikan boleh dienkodekan melalui kode Huffman 
    statis, yang mengurangi ukuran transfer individunya.
 2. Klien dan server harus menjaga dan memperbarui daftar
    yang diindeks dari bidang header yang tampak sebelumnya (dengan kata lain, teknik ini menetapkan konteks

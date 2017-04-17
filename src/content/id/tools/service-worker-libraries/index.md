@@ -48,10 +48,10 @@ Anda sendiri dari nol, Anda harus menyingkirkan beberapa tantangan:
 Anda bisa mengatasi semua kekurangan ini dengan menggunakan pustaka service worker kami.
 
 
-## Precache Service Worker 
+## Melakukan precache Service Worker 
 
-[Precache Service Worker](https://github.com/GoogleChrome/sw-precache/) (`sw-precache`) adalah
-modul untuk menghasilkan [service worker yang melakukan
+[Melakukan precache Service Worker](https://github.com/GoogleChrome/sw-precache/) (`sw-precache`) adalah
+modul untuk menghasilkan service worker yang melakukan
 precache sumber daya. Modul ini bisa digunakan dalam skrip pembangunan yang berbasis JavaScript,
 seperti skrip yang ditulis dengan [`gulp`](https://gulpjs.com/), modul ini juga menyediakan
 [antarmuka baris perintah](https://github.com/GoogleChrome/sw-precache/#command-line-interface). Anda bisa menggunakan modul
@@ -60,13 +60,13 @@ di sekeliling `sw-precache` untuk lingkungan pembangunan tertentu, seperti
 [`webpack`](https://webpack.github.io/).
 
 Modul ini bisa [digunakan bersama](https://github.com/GoogleChrome/sw-precache/blob/master/sw-precache-and-sw-toolbox.md) pustaka [`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox),
-yang berfungsi dengan baik bila mengikuti [model konten dinamis + App Shell](/web/fundamentals/architecture/app-shell).
+yang berfungsi dengan baik bila mengikuti [model konten dinamis + Shell Aplikasi](/web/fundamentals/architecture/app-shell).
 
 Dokumentasi lengkap ada dalam [read me](https://github.com/GoogleChrome/sw-precache/blob/master/README.md),
 dan [panduan memulai](https://github.com/GoogleChrome/sw-precache/blob/master/GettingStarted.md) 
 menyediakan titik awal yang lebih cepat.
 
-[Get sw-precache](https://github.com/GoogleChrome/sw-precache/){: .button .button-primary }
+[Dapatkan sw-precache](https://github.com/GoogleChrome/sw-precache/){: .button .button-primary }
 
 ### Fitur
 
@@ -91,14 +91,14 @@ untuk menggunakan semua strategi itu bagi permintaan waktu proses.
 
 | Fitur | Rangkuman |
 |---------|---------|
-| Runtime Caching | Cache sumber daya yang besar atau jarang digunakan, seperti gambar, pada waktu proses, saat pertama kali digunakan. |
-| Offline Fallbacks | Muat gambar baru, respons API, atau konten dinamis lainnya dari jaringan saat online, namun mengembalikan ke placeholder yang di-cache saat offline. |
-| Goodbye Lie-Fi | Lawan [lie-fi](https://www.youtube.com/watch?v=oRcxExzWlc0) dengan secara otomatis melakukan fallback ke respons yang sudah di-cache bila jaringan terlalu lambat. |
-| Battle Cache Bloat | Gambar dari bulan lalu tidak perlu di-cache selamanya. Penetapan kedaluwarsa cache yang paling jarang digunakan dan menurut usia membantu membebaskan ruang.|
+| Pembuatan Cache Waktu Proses | Cache sumber daya yang besar atau jarang digunakan, seperti gambar, pada waktu proses, saat pertama kali digunakan. |
+| Fallback Offline | Muat gambar baru, respons API, atau konten dinamis lainnya dari jaringan saat online, namun mengembalikan ke placeholder yang di-cache saat offline. |
+| Selamat Tinggal Lie-Fi Lie-Fi | Lawan [lie-fi](https://www.youtube.com/watch?v=oRcxExzWlc0) dengan secara otomatis melakukan fallback ke respons yang sudah di-cache bila jaringan terlalu lambat. |
+| Hindari Penggelembungan Cache | Gambar dari bulan lalu tidak perlu di-cache selamanya. Penetapan kedaluwarsa cache yang paling jarang digunakan dan menurut usia membantu membebaskan ruang.|
 
-## Offline Google Analytics
+## Google Analytics Offline
 
-[Offline Google Analytics](https://github.com/GoogleChrome/sw-helpers/tree/master/packages/sw-offline-google-analytics) 
+[Google Analytics Offline](https://github.com/GoogleChrome/sw-helpers/tree/master/packages/sw-offline-google-analytics) 
 menampung sementara dan mencoba lagi permintaan analitik agar tidak hilang
 bila koneksi jaringan terputus. Alat (bantu) ini mudah dipasang ke sistem pembangunan Anda menggunakan npm dan
 mudah diimpor ke dalam skrip service worker. Konfigurasilah menggunakan
@@ -110,10 +110,10 @@ panggilan fungsi berparameter.
 
 | Fitur | Rangkuman |
 |---------|---------|
-| Offline Google Analytics | Membuat penanganan pengambilan yang memastikan Google Analytics JavaScript tersedia offline. |
-| Temporarily Caches Data | Menampung permintaan analitik yang dibuat bila perangkat sedang offline dan mencobanya lagi di saat berikutnya service worker dimulai. |
-| Custom Replay Values | Pasangan kunci/nilai yang akan ditambahkan ke balasan permintaan Google Analytics. Misalnya, Anda dapat menyetel dimensi khusus untuk menunjukkan bahwa permintaan telah dibalas. |
-| Modified Hit Parameters | Memungkinkan Anda memodifikasi parameter hit lewat program, misalnya untuk melacak waktu tempuh antara saat hit dicoba dan saat dibalas. |
+| Google Analytics Offline | Membuat penanganan pengambilan yang memastikan Google Analytics JavaScript tersedia offline. |
+| Meng-cache Data untuk Sementara | Menampung permintaan analitik yang dibuat bila perangkat sedang offline dan mencobanya lagi di saat berikutnya service worker dimulai. |
+| Nilai Balasan Khusus | Pasangan kunci/nilai yang akan ditambahkan ke balasan permintaan Google Analytics. Misalnya, Anda dapat menyetel dimensi khusus untuk menunjukkan bahwa permintaan telah dibalas. |
+| Parameter Hit yang Dimodifikasi | Memungkinkan Anda memodifikasi parameter hit lewat program, misalnya untuk melacak waktu tempuh antara saat hit dicoba dan saat dibalas. |
 
 ## Ketahui Selengkapnya
 
@@ -167,7 +167,7 @@ aplikasi web Anda langsung bekerja offline. Video ini menjelaskan
   </iframe>
 </div>
 
-Dalam episode Totally Tooling Mini-Tips ini, Matt dan Addy merunut
+Dalam episode Totally Tooling Mini-Tips ini, Matt dan Addy menyusuri
 `sw-toolbox`.
 
 <div style="clear:both;"></div>

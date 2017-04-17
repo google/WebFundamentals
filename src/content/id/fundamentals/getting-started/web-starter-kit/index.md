@@ -63,13 +63,13 @@ salah satu laman.
 
 <div style="clear:both;"></div>
 
-#### Pembuatan Prefiks Otomatis
+#### Pembuatan Awalan Otomatis
 
-Ketika menargetkan berbagai macam browser, Anda harus menggunakan prefiks vendor untuk
+Ketika menargetkan berbagai macam browser, Anda harus menggunakan awalan vendor untuk
 memastikan Anda bisa menggunakan fitur-fitur di semua browser tersebut. Web Starter Kit mengotomatiskan semua
-pembuatan prefiks.
+pembuatan awalan.
 
-CSS contoh kami (di bawah) tidak menyertakan vendor prefiks:
+CSS contoh kami (di bawah) tidak menyertakan awalan vendor:
 
     .app-bar-container {
       display: flex;
@@ -84,7 +84,7 @@ CSS contoh kami (di bawah) tidak menyertakan vendor prefiks:
     }
 
 Proses pembangunan menjalankan CSS melalui autoprefixer yang menghasilkan
-output akhir di bawah ini:
+keluaran akhir di bawah ini:
 
     .app-bar-container {
       display: -webkit-flex;
@@ -113,7 +113,7 @@ setiap kali Anda membuat perubahan ke file JavaScript.
 #### Mengompilasi Sass Anda
 
 Ketika Anda menjalankan perintah layani, setiap perubahan yang dibuat ke file
-Sass dalam proyek Anda akan dikompilasi ke dalam CSS dan di-prefiks, setelah itu, laman
+Sass dalam proyek Anda akan dikompilasi ke dalam CSS dan diberi awalan, setelah itu, laman
 Anda akan dimuat ulang dengan Live Reload.
 
 Bagi mereka yang baru dengan Sass, proyek ini menjelaskan dirinya sebagai "bahasa ekstensi
@@ -171,7 +171,7 @@ versi akhir akan menggantikan skrip ini dengan tag skrip:
 #### Mengoptimalkan aset gambar
 
 Untuk file JPEG dan PNG, meta data dalam gambar akan dikeluarkan; itu tidak diperlukan
-untuk me-render gambar. Meta data memuat informasi seperti kamera yang digunakan
+untuk merender gambar. Meta data memuat informasi seperti kamera yang digunakan
 untuk mengambil foto.
 
 Untuk SVG, itu akan menghapus setiap atribut atau spasi yang tidak diperlukan dan
@@ -194,7 +194,7 @@ memulai server, dan membuka browser untuk Anda. Ini **tidak memiliki Live Reload
 Browser Sync**, namun cara ini dapat diandalkan untuk menguji situs Anda sebelum menerapkannya.
 
 
-## Mempersiapkan Web Starter Kit
+## Menyiapkan Web Starter Kit
 
 
 Web Starter Kit bergantung pada NodeJS, NPM, dan Sass untuk bekerja. Setelah ini terpasang, Anda akan memiliki semua yang dibutuhkan untuk mulai menggunakan Web Starter Kit dalam proyek Anda.

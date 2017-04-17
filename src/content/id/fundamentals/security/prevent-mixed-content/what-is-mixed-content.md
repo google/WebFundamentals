@@ -53,7 +53,7 @@ _Apakah ada orang yang mengutak-atik materi yang saya kirim atau terima?_
 HTTPS memungkinkan browser mendeteksi apakah penyerang telah mengubah data yang 
 diterima browser. Saat mentransfer uang menggunakan situs web bank Anda, ini akan mencegah 
 penyerang mengubah nomor rekening tujuan saat permintaan Anda sedang 
-transit. 
+dikirim. 
 
 ### Kerahasiaan
 
@@ -161,7 +161,7 @@ Bila menampilkan contoh laman ini melalui **HTTPS**&mdash;[**https**://googlesam
 
 Galeri gambar sering kali mengandalkan tag `<img>` atribut `src` untuk menampilkan gambar kecil 
 di laman, tag jangkar (`<a>`) atribut `href` 
-kemudian digunakan untuk memuat gambar berukuran penuh untuk hamparan galeri. Biasanya, tag 
+kemudian digunakan untuk memuat gambar berukuran penuh untuk overlay galeri. Biasanya, tag 
 `<a>` tidak menyebabkan materi campuran, namun dalam hal ini, kode jQuery 
 menggantikan perilaku tautan default&mdash;untuk mengarahkan ke laman baru&mdash;dan sebagai ganti 
 memuat gambar **HTTP** pada laman ini. 
@@ -211,7 +211,7 @@ Berikut ini adalah contoh materi campuran pasif:
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/passive-mixed-content.html){: target="_blank" .external }
 
-Sebagian besar browser tetap me-render tipe materi campuran ini pada pengguna, akan tetapi 
+Sebagian besar browser tetap merender tipe materi campuran ini pada pengguna, akan tetapi 
 juga menampilkan peringatan karena ini menimbulkan risiko keamanan dan privasi pada situs 
 dan pengguna Anda. 
 

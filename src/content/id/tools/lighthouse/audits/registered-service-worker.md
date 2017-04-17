@@ -23,7 +23,7 @@ alasan Anda menggunakan service worker adalah untuk mengimplementasikan salah sa
 web app yang disebutkan di atas. Mengimplementasikan fitur tersebut membutuhkan lebih banyak
 pekerjaan.
 
-Untuk bantuan selengkapnya tentang caching file untuk penggunaan offline, lihat bagian "Cara lulus
+Untuk bantuan selengkapnya tentang caching file untuk penggunaan offline, lihat bagian "Cara untuk lulus
 audit" dari dokumen Lighthouse berikut: [URL merespons dengan 200 saat
 offline](http-200-when-offline#how).
 

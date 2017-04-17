@@ -172,7 +172,7 @@ Semua browser modern mendukung dan secara otomatis menegosiasikan kompresi GZIP 
 Tabel di atas menampilkan penghematan yang dihasilkan oleh kompresi GZIP untuk beberapa pustaka JavaScript terpopuler dan kerangka kerja CSS. Penghematan berkisar antara 60 sampai 88%, dan kombinasi file yang dikecilkan (diidentifikasi sebagai ".min" dalam nama filenya), plus GZIP, menawarkan penghematan lebih besar.
 
 1. **Terapkan terlebih dahulu optimalisasi spesifik materi: minifier CSS, JS, dan HTML.**
-1. **Terapkan GZIP untuk mengompresi output bidang mini.**
+1. **Terapkan GZIP untuk mengompresi keluaran bidang mini.**
 
 Mengaktifkan GZIP adalah salah satu optimalisasi paling sederhana dengan payoff tertinggi untuk diimplementasikan, sayangnya, banyak orang yang tidak mengimplementasikannya. Kebanyakan server web akan mengompresi materi untuk Anda, dan Anda hanya perlu memverifikasi apakah server telah dikonfigurasi dengan benar untuk mengompresi semua tipe materi yang memanfaatkan kompresi GZIP.
 

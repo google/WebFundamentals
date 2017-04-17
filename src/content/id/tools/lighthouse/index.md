@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Pelajari cara mempersiapkan Lighthouse untuk mengaudit aplikasi web Anda.
+description: Pelajari cara menyiapkan Lighthouse untuk mengaudit aplikasi web Anda.
 
 {# wf_updated_on: 2016-09-27 #}
 {# wf_published_on: 2016-09-27 #}

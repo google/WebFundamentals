@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Formulir sulit diisi pada perangkat seluler. Formulir terbaik adalah formulir dengan input paling sedikit.
+description: Formulir sulit diisi pada perangkat seluler. Formulir terbaik adalah formulir dengan masukan paling sedikit.
 
 {# wf_updated_on: 2014-10-21 #}
 {# wf_published_on: 2014-04-30 #}
@@ -16,7 +16,7 @@ description: Formulir sulit diisi pada perangkat seluler. Formulir terbaik adala
   </iframe>
 </div>
 
-Formulir sulit diisi pada perangkat seluler. Formulir terbaik adalah formulir dengan input paling sedikit. Formulir yang baik menyediakan tipe input semantik. Kunci harus berubah sesuai jenis input pengguna; pengguna memilih tanggal di kalender. Selalu beri tahu pengguna. Alat validasi harus memberi tahu pengguna apa yang harus mereka lakukan sebelum mengirimkan formulir.
+Formulir sulit diisi pada perangkat seluler. Formulir terbaik adalah formulir dengan masukan paling sedikit. Formulir yang baik menyediakan tipe masukan semantik. Kunci harus berubah sesuai jenis masukan pengguna; pengguna memilih tanggal di kalender. Selalu beri tahu pengguna. Alat validasi harus memberi tahu pengguna apa yang harus mereka lakukan sebelum mengirimkan formulir.
 
 
 ## Mendesain formulir efisien
@@ -87,7 +87,7 @@ tanggal mulai dan selesai.
 
 ## Pilih tipe masukan yang terbaik
 
-Rampingkan masukan informasi dengan menggunakan tipe input yang tepat. Pengguna mengapresiasi
+Rampingkan entri informasi dengan menggunakan tipe masukan yang tepat. Pengguna mengapresiasi
 situs web yang secara otomatis menampikan papan nomor untuk memasukkan nomor ponsel, atau
 secara otomatis memajukan bidang ketika mereka memasukkannya. Cari kesempatan untuk
 menghilangkan ketukan sia-sia dalam formulir Anda.
@@ -98,13 +98,13 @@ menghilangkan ketukan sia-sia dalam formulir Anda.
 - Berikan saran ketika pengguna mengetik dengan elemen <code>datalist</code>.
 
 
-### Tipe input HTML5
+### Tipe masukan HTML5
 
-HTML5 memperkenalkan sejumlah tipe input baru. Tipe input baru ini memberikan petunjuk
+HTML5 memperkenalkan sejumlah tipe masukan baru. Tipe masukan baru ini memberikan petunjuk
 ke browser tentang tipe layout keyboard yang ditampilkan pada keyboard
 di layar.  Pengguna lebih mudah saat memasukkan informasi yang diperlukan tanpa
 harus mengubah keyboard mereka dan cukup melihat tombol yang sesuai untuk jenis
-input tersebut.
+masukan tersebut.
 
 <table class="responsive">
   <thead>
@@ -144,7 +144,7 @@ input tersebut.
     </tr>
     <tr>
       <td data-th="Input type">
-        <code>search</code><br>Sebuah bidang input teks yang didesain secara
+        <code>search</code><br>Sebuah bidang masukan teks yang didesain secara
         konsisten dengan platform bidang penelusuran.
       </td>
       <td data-th="Typical keyboard">
@@ -153,7 +153,7 @@ input tersebut.
     </tr>
     <tr>
       <td data-th="Input type">
-        <code>number</code><br>Untuk input numerik, bisa berupa nilai float atau integer
+        <code>number</code><br>Untuk masukan numerik, bisa berupa nilai float atau integer
         rasional.
       </td>
       <td data-th="Typical keyboard">
@@ -163,7 +163,7 @@ input tersebut.
     <tr>
       <td data-th="Input type">
         <code>range</code><br>Untuk memasukkan nomor, tapi tidak seperti tipe
-        input nomor, nilainya tidak begitu penting. Ini ditampilkan ke pengguna sebagai
+        masukan nomor, nilainya tidak begitu penting. Ini ditampilkan ke pengguna sebagai
         kontrol slider.
       </td>
       <td data-th="Typical keyboard">
@@ -229,9 +229,9 @@ input tersebut.
 Perhatian: Harap ingat untuk selalu menjaga pelokalan ketika memilih tipe masukan,
 beberapa lokal menggunakan titik (.) sebagai pemisah bukan koma (,)
 
-### Menawarkan saran saat input dengan datalist
+### Menawarkan saran saat masukan dengan datalist
 
-Elemen `datalist` bukanlah tipe input, namun daftar nilai input yang disarankan
+Elemen `datalist` bukanlah tipe masukan, namun daftar nilai masukan yang disarankan
 untuk dikaitkan dengan bidang formulir. Ini memungkinkan browser menyarankan opsi
 pelengkapan otomatis ketika pengguna mengetik. Tidak seperti elemen select ketika pengguna harus memindai daftar
 yang panjang untuk menemukan nilai yang mereka cari, dan membatasi mereka hanya ke daftar
@@ -247,7 +247,7 @@ Catatan: Nilai <code>datalist</code> disediakan sebagai saran, dan pengguna tida
 
 ## Memasukkan label dan nama dengan benar
 
-Formulir sulit diisi pada perangkat seluler. Formulir terbaik adalah formulir dengan input paling sedikit. Formulir yang baik menyediakan tipe input semantik. Kunci harus berubah sesuai jenis input pengguna; pengguna memilih tanggal di kalender. Selalu beri tahu pengguna. Alat validasi harus memberi tahu pengguna apa yang harus mereka lakukan sebelum mengirimkan formulir.
+Formulir sulit diisi pada perangkat seluler. Formulir terbaik adalah formulir dengan masukan paling sedikit. Formulir yang baik menyediakan tipe masukan semantik. Kunci harus berubah sesuai jenis masukan pengguna; pengguna memilih tanggal di kalender. Selalu beri tahu pengguna. Alat validasi harus memberi tahu pengguna apa yang harus mereka lakukan sebelum mengirimkan formulir.
 
 
 ### TL;DR {: .hide-from-toc }
@@ -260,9 +260,9 @@ Formulir sulit diisi pada perangkat seluler. Formulir terbaik adalah formulir de
 
 Elemen `label` memberikan petunjuk kepada pengguna, memberi tahu mereka informasi
 yang dibutuhkan dalam elemen formulir.  Setiap `label` terkait pada sebuah
-elemen input dengan menempatkannya di dalam elemen `label`, atau dengan menggunakan atribut "`for`".
+elemen masukan dengan menempatkannya di dalam elemen `label`, atau dengan menggunakan atribut "`for`".
   Menerapkan label ke elemen formulir juga membantu meningkatkan ukuran target
-sentuh: pengguna bisa menyentuh label maupun input untuk menempatkan
+sentuh: pengguna bisa menyentuh label maupun masukan untuk menempatkan
 fokus pada elemen input.
 
 <pre class="prettyprint">
@@ -273,17 +273,17 @@ fokus pada elemen input.
 
 ### Ukuran dan penempatan label
 
-Label dan input harus cukup besar agar mudah ditekan.  Di tampilan potret
+Label dan masukan harus cukup besar agar mudah ditekan.  Di tampilan potret
 yang terlihat, label bidang harus diletakkan di atas elemen input, dan di sampingnya jika di mode
-lanskap.  Pastikan bidang label dan kotak input bersesuaian terlihat pada
+lanskap.  Pastikan bidang label dan kotak masukan bersesuaian terlihat pada
 saat yang bersamaan.  Berhati-hatilah dengan penangan gulir khusus yang mungkin menggulir elemen
-input ke atas laman menyembunyikan label, atau label yang ditempatkan di bawah elemen
-input mungkin tertutupi oleh keyboard virtual.
+masukan ke atas laman menyembunyikan label, atau label yang ditempatkan di bawah elemen
+masukan mungkin tertutupi oleh keyboard virtual.
 
 ### Gunakan Placeholder
 
 Atribut placeholder memberikan petunjuk kepada pengguna tentang apa yang diharapkan pada
-input, biasanya dengan menampilkan nilai sebagai teks bercahaya sampai pengguna
+masukan, biasanya dengan menampilkan nilai sebagai teks bercahaya sampai pengguna
 mulai mengetik di elemen tersebut.
 
 <input type="text" placeholder="MM-YYYY">
@@ -298,7 +298,7 @@ Perhatian: Placeholder segera menghilang ketika pengguna mulai mengetik di sebua
 
 Pengguna menyukai ketika situs web mempercepat prosesnya dengan secara otomatis mengisi bidang
 yang umum seperti nama, alamat email dan bidang lainnya yang sering digunakan, ditambah hal ini
-membantu mengurangi potensi kesalahan input -- terutama pada keyboard virtual dan
+membantu mengurangi potensi kesalahan masukan -- terutama pada keyboard virtual dan
 perangkat kecil.
 
 Browser menggunakan banyak heuristik untuk menentukan bidang mana yang bisa mereka
@@ -322,7 +322,7 @@ nama, alamat email dan nomor ponsel pengguna, Anda harus menggunakan:
 
 
 
-### Input yang disarankan nilai atribut `name` dan `autocomplete`
+### Masukan yang disarankan nilai atribut `name` dan `autocomplete`
 
 Nilai atribut `autocomplete` adalah bagian dari [WHATWG HTML Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill). Atribut `autocomplete` yang paling umum dipakai ditunjukkan di bawah ini.
 
@@ -374,12 +374,12 @@ Atribut `autocomplete` bisa disertai dengan nama bagian, seperti **`shipping `**
       </td>
       <td data-th="autocomplete attribute">
         <ul>
-          <li>Untuk satu input alamat:
+          <li>Untuk satu masukan alamat:
             <ul>
               <li><code>street-address</code></li>
             </ul>
           </li>
-          <li>Untuk dua input alamat:
+          <li>Untuk dua masukan alamat:
             <ul>
               <li><code>address-line1</code></li>
               <li><code>address-line2</code></li>
@@ -463,12 +463,12 @@ Catatan: Gunakan hanya <code>street-address</code> atau <code>address-line1</cod
 Pada beberapa formulir, misalnya laman beranda Google dengan satu-satunya hal yang Anda ingin
 pengguna lakukan adalah mengisi bidang tertentu, Anda bisa menambahkan atribut `autofocus`
 .  Bila disetel, browser desktop segera memindahkan fokus ke bidang
-input, sehingga memudahkan pengguna untuk dengan cepat mulai menggunakan formulir.  Browser
+masukan, sehingga memudahkan pengguna untuk dengan cepat mulai menggunakan formulir.  Browser
 seluler mengabaikan atribut `autofocus`, untuk mencegah keyboard muncul
 secara acak.
 
 Hati-hati menggunakan atribut autofocus karena akan mencuri fokus keyboard
-dan berpotensi mencegah karakter backspace dari digunakan untuk
+dan berpotensi mencegah karakter backspace digunakan untuk
 navigasi.
 
 
@@ -487,7 +487,7 @@ Validasi data real-time tidak hanya membantu menjaga data Anda tetap bersih, nam
 - Tampilkan kesalahan validasi secara real time, dan jika pengguna mencoba untuk mengirimkan formulir yang tidak valid, tunjukkan semua bidang yang harus mereka perbaiki.
 
 
-### Gunakan atribut ini untuk memvalidasi input
+### Gunakan atribut ini untuk memvalidasi masukan
 
 #### Atribut `pattern`
 
@@ -556,9 +556,9 @@ cukup menambahkan atribut yang dibutuhkan:
 
 #### Atribut `min`, `max` dan `step`
 
-Untuk jenis input numerik seperti nomor atau jarak serta input tanggal/waktu, Anda
+Untuk jenis masukan numerik seperti nomor atau jarak serta masukan tanggal/waktu, Anda
 bisa menentukan nilai minimum dan maksimum, serta berapa seharusnya nilai mereka setiap terjadi
-kenaikan/penurunan ketika diselaraskan dengan slider atau spinner.  Misalnya, input
+kenaikan/penurunan ketika diselaraskan dengan slider atau spinner.  Misalnya, masukan
 ukuran sepatu akan menyetel ukuran minimal 1 dan ukuran maksimal 13, dengan kenaikan bertahap
 0,5
 
@@ -568,7 +568,7 @@ ukuran sepatu akan menyetel ukuran minimal 1 dan ukuran maksimal 13, dengan kena
 
 #### Atribut `maxlength`
 
-Atribut `maxlength` bisa digunakan untuk menentukan panjang maksimal input atau
+Atribut `maxlength` bisa digunakan untuk menentukan panjang maksimal masukan atau
 kotak teks dan akan bermanfaat ketika Anda ingin membatasi panjang informasi yang bisa diberikan
 pengguna. Misalnya, jika Anda ingin membatasi nama file sampai 12 karakter,
 Anda bisa menggunakan atribut berikut.
@@ -579,7 +579,7 @@ Anda bisa menggunakan atribut berikut.
 
 #### Atribut `minlength`
 
-Atribut `minlength` bisa digunakan untuk menentukan panjang minimal input atau
+Atribut `minlength` bisa digunakan untuk menentukan panjang minimal masukan atau
 kotak teks dan akan bermanfaat ketika Anda ingin menetapkan panjang minimal yang harus diberikan
 pengguna. Misalnya, jika Anda ingin menetapkan bahwa nama file memerlukan setidaknya
 8 karakter, Anda bisa menggunakan atribut berikut.
@@ -591,8 +591,8 @@ pengguna. Misalnya, jika Anda ingin menetapkan bahwa nama file memerlukan setida
 #### Atribut `novalidate`
 
 Pada beberapa kejadian, Anda mungkin mau mengizinkan pengguna untuk mengirimkan formulir bahkan jika itu
-berisi input yang tidak valid. Untuk melakukan ini, tambahkan atribut `novalidate` ke elemen
-formulir, atau bidang input individual. Dalam kejadian ini, semua kelas-semu dan
+berisi masukan yang tidak valid. Untuk melakukan ini, tambahkan atribut `novalidate` ke elemen
+formulir, atau bidang masukan individual. Dalam kejadian ini, semua kelas-semu dan
 JavaScript API tetap akan memperbolehkan Anda untuk memeriksa apakah formulir divalidasi.
 
 
@@ -626,7 +626,7 @@ alasan sehingga sebuah elemen tidak valid:
     </tr>
     <tr>
       <td data-th="API"><code>validationMessage</code></td>
-      <td data-th="Description">Mengembalikan string dengan alasan input gagal dalam tes validasi.</td>
+      <td data-th="Description">Mengembalikan string dengan alasan masukan gagal dalam tes validasi.</td>
     </tr>
     <tr>
       <td data-th="API"><code>checkValidity()</code></td>
@@ -650,7 +650,7 @@ alasan sehingga sebuah elemen tidak valid:
 Jika suatu bidang gagal divalidasi, gunakan `setCustomValidity()` untuk menandai bidang tersebut sebagai tidak valid
 dan menjelaskan mengapa bidang tidak divalidasi.  Misalnya, formulir pendaftaran mungkin
 meminta pengguna untuk mengonfirmasi alamat email mereka dengan memasukkannya dua kali.  Gunakan kejadian
-blur pada input kedua untuk memvalidasi dua input tersebut dan menyetel respons
+blur pada masukan kedua untuk memvalidasi dua masukan tersebut dan menyetel respons
 yang tepat.  Misalnya:
 
 <pre class="prettyprint">
@@ -676,7 +676,7 @@ pada elemen formulir untuk menentukan apakah formulir tersebut valid.  Misalnya:
 Akan lebih baik lagi jika memberikan indikasi visual pada masing-masing bidang yang menunjukkan apakah
 pengguna telah menyelesaikan formulir dengan benar sebelum mereka mengirimkannya.
 HTML5 juga memperkenalkan beberapa kelas-semu baru yang bisa digunakan untuk memberikan gaya
-input berdasarkan nilai atau atribut mereka.
+masukan berdasarkan nilai atau atribut mereka.
 
 <table class="responsive">
   <thead>
@@ -687,27 +687,27 @@ input berdasarkan nilai atau atribut mereka.
   <tbody>
     <tr>
       <td data-th="Pseudo-class"><code>:valid</code></td>
-      <td data-th="Use">Secara eksplisit menetapkan gaya bagi input untuk digunakan saat nilai memenuhi semua persyaratan validasi.</td>
+      <td data-th="Use">Secara eksplisit menetapkan gaya bagi masukan untuk digunakan saat nilai memenuhi semua persyaratan validasi.</td>
     </tr>
     <tr>
       <td data-th="Pseudo-class"><code>:invalid</code></td>
-      <td data-th="Use">Secara eksplisit menetapkan gaya bagi input untuk digunakan saat nilai tidak memenuhi semua persyaratan validasi.</td>
+      <td data-th="Use">Secara eksplisit menetapkan gaya bagi masukan untuk digunakan saat nilai tidak memenuhi semua persyaratan validasi.</td>
     </tr>
     <tr>
       <td data-th="Pseudo-class"><code>:required</code></td>
-      <td data-th="Use">Secara eksplisit menetapkan gaya untuk elemen input yang memiliki set atribut yang diperlukan.</td>
+      <td data-th="Use">Secara eksplisit menetapkan gaya untuk elemen masukan yang memiliki set atribut yang diperlukan.</td>
     </tr>
     <tr>
       <td data-th="Pseudo-class"><code>:optional</code></td>
-      <td data-th="Use">Secara eksplisit menetapkan gaya untuk elemen input yang tidak memiliki set atribut yang diperlukan.</td>
+      <td data-th="Use">Secara eksplisit menetapkan gaya untuk elemen masukan yang tidak memiliki set atribut yang diperlukan.</td>
     </tr>
     <tr>
       <td data-th="Pseudo-class"><code>:in-range</code></td>
-      <td data-th="Use">Secara eksplisit menyetel gaya untuk elemen input nomor dengan nilai dalam jangkauan.</td>
+      <td data-th="Use">Secara eksplisit menyetel gaya untuk elemen masukan nomor dengan nilai dalam jangkauan.</td>
     </tr>
     <tr>
       <td data-th="Pseudo-class"><code>:out-of-range</code></td>
-      <td data-th="Use">Secara eksplisit menyetel gaya untuk elemen input nomor dengan nilai di luar jangkauan.</td>
+      <td data-th="Use">Secara eksplisit menyetel gaya untuk elemen masukan nomor dengan nilai di luar jangkauan.</td>
     </tr>
   </tbody>
 </table>
