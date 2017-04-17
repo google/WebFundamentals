@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Progressive Web Apps are becoming more integrated with your device. Learn how.
 
-{# wf_updated_on: 2017-02-02 #}
+{# wf_updated_on: 2017-04-17 #}
 {# wf_published_on: 2017-02-02 #}
 {# wf_tags: addtohomescreen,progressive-web-apps,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -43,7 +43,8 @@ and will be rolling out to Chrome 57 beta over the next few weeks.
 
 **You can test your site by following these steps:**
 
-Warning: These instructions are for web developers only. You should not enable "Unknown sources" unless you're testing your own site.
+Warning: These instructions are for web developers only. You should not enable
+"Unknown sources" unless you're testing your own site.
 
 1. Install the latest [Chrome
    Dev](https://play.google.com/store/apps/details?id=com.chrome.dev) or [Chrome
