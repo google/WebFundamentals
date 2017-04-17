@@ -1,0 +1,145 @@
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+
+{# wf_updated_on: 2016-11-08 #}
+{# wf_published_on: 2016-11-08 #}
+
+# Save Credentials from Forms {: .page-title }
+
+{% include "web/_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+
+Forms that let users sign-up, sign-in, or change passwords are great chances
+for you to store user’s credential information. 
+
+<div class="attempt-right">
+  <figure>
+    <video src="animations/credential-management-smaller.mov" style="max-height: 400px;" autoplay muted loop controls></video>
+    <figcaption>Save Credentials from sign-in forms</figcaption>
+  </figure>
+</div>
+
+To store user credentials from forms:
+
+1. Check form includes `autocomplete` attributes.
+2. Interrupt a form submission.
+3. Authenticate through AJAX.
+4. Store the credential.
+5. Update the UI or proceed to the personalized page.
+
+## Include autocomplete in form
+
+Before moving forward,
+check if your form includes `autocomplete` attributes.
+This helps the Credential Management API find the `id` and `password`
+from the form and construct a credential object.
+
+This also helps browsers not supporting the Credential Management API
+to understand its semantics.
+Adding autocomplete is a MUST.
+Learn more about the topic from
+[an article](https://cloudfour.com/thinks/autofill-what-web-devs-should-know-but-dont/) by
+[Jason Grigsby](https://medium.com/@grigs).
+
+    <form id="signup" method="post">
+     <input name="email" type="text" autocomplete="username email">
+     <input name="display-name" type="text" autocomplete="name"> 
+     <input name="password" type="password" autocomplete="new-password">
+     <input type="submit" value="Sign Up!">
+    </form>
+
+## Interrupt form submission
+
+Interrupt the form submission event when user presses the submit button,
+and prevent the default behavior.
+
+    var f = document.querySelector('#signup');
+    f.addEventListener('submit', e => {
+     e.preventDefault();
+
+By preventing a page transition,
+you can retain the credential information while verifying its authenticity.
+
+## Send a request via AJAX
+
+Send a request via AJAX and respond with profile information,
+for example, in JSON format.
+
+The following is pseudo AJAX
+(replace with a [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) call):
+
+    sendRequest(e.target)
+     .then(profile => {
+
+On the server side, create an endpoint (or simply alter an existing endpoint)
+that responds with HTTP code 200 or 401, etc so that it’s clear to the browser
+if the sign-up/sign-in/change password is successful or not.
+
+## Store the credential
+
+To store a credential,
+instantiate a
+[`PasswordCredential`](/web/fundamentals/security/credential-management/reference/passwordcredential)
+with the form element as an argument.
+Then call [navigator.credentials.store()](/web/fundamentals/security/credential-management/reference/navigator-credential-store).
+If the API is not available,
+you can simply forward the profile information to the next step.
+
+    if (navigator.credentials) {
+       var c = new PasswordCredential(e.target);
+       return navigator.credentials.store(c);
+     } else {
+       return Promise.resolve(profile);
+     }
+Once the request succeeds, store the credential information.
+(Don't store it if it failed as it simply confuses the user when they come back.)
+
+Before doing so, check if the API is available.
+You should always keep progressive enhancement in mind.
+
+When the Chrome browser obtains credential information,
+a notification pops up asking to store a credential
+(or federation provider).
+
+<figure>
+  <img src="imgs/store-credential.png">
+  <figcaption>Notification for auto signed-in user</figcaption>
+</figure>
+
+<div class="clearfix"></div>
+
+## Update the UI
+
+If everything went well, update the UI using the profile information,
+or proceed to the personalized page.
+
+     }).then(profile => {
+       if (profile) {
+         updateUI(profile);
+       }
+     }).catch(error => {
+       showError('Sign-in Failed');
+     });
+    });
+
+## Full code example
+
+    var f = document.querySelector('#signup');
+    f.addEventListener('submit', e => {
+     e.preventDefault();
+     sendRequest(e.target)
+     .then(profile => {
+       if (navigator.credentials) {
+         var c = new PasswordCredential(e.target);
+         return navigator.credentials.store(c);
+       } else {
+         return Promise.resolve(profile);
+       }
+     }).then(profile => {
+       if (profile) {
+         updateUI(profile);
+       }
+     }).catch(error => {
+       showError('Sign-in Failed');
+     });
+    });
