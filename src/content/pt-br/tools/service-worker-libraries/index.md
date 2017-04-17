@@ -66,7 +66,7 @@ A documentação completa está no arquivo [leiame](https://github.com/GoogleChr
 O [guia de primeiros passos](https://github.com/GoogleChrome/sw-precache/blob/master/GettingStarted.md) 
 oferece um ponto de partida mais rápido.
 
-[Obtenha sw-precache](https://github.com/GoogleChrome/sw-precache/){: .button .button-primary }
+[Obter sw-precache](https://github.com/GoogleChrome/sw-precache/){: .button .button-primary }
 
 ### Recursos
 
@@ -85,7 +85,7 @@ ele oferece padrões comuns de armazenamento em cache e uma
 [abordagem expressiva](https://googlechrome.github.io/sw-toolbox/docs/master/tutorial-api#expressive-approach)
 do uso dessas estratégias para solicitações em tempo de execução. 
 
-[Obtenha sw-toolbox](https://github.com/GoogleChrome/sw-toolbox/){: .button .button-primary }
+[Obter sw-toolbox](https://github.com/GoogleChrome/sw-toolbox/){: .button .button-primary }
 
 ### Recursos
 
@@ -104,7 +104,7 @@ de rede. Essa ferramenta pode ser instalada facilmente no sistema de compilaçã
 usando npm e importada com facilidade para o script do service worker. Configure-a usando uma
 chamada de função parametrizada.
 
-[Obtenha sw-offline-google-analytics](https://github.com/GoogleChrome/sw-helpers/tree/master/packages/sw-offline-google-analytics){: .button .button-primary }
+[Obter sw-offline-google-analytics](https://github.com/GoogleChrome/sw-helpers/tree/master/packages/sw-offline-google-analytics){: .button .button-primary }
 
 ### Recursos
 

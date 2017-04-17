@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Neste codelab você aprenderá como adicionar notificações push ao seu app da Web.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2016-11-21T15:42:20Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -77,7 +76,7 @@ Em Options, marque a caixa ao lado de "Automatically show index.html", como most
 
 ![39b4e0371e9703e6.png](img/39b4e0371e9703e6.png)
 
-Em seguida, interrompa e reinicie o servidor, deslizando o botão de alternância marcado como "Web Server: INICIADO" para a esquerda e de volta para a direita.
+Em seguida, interrompa e reinicie o servidor, deslizando o botão de alternância marcado como "Web Server: STARTED" para a esquerda e de volta para a direita.
 
 ![daefd30e8a290df5.png](img/daefd30e8a290df5.png)
 
@@ -214,7 +213,7 @@ navigator.serviceWorker.register('sw.js')
 
 #### Experimente
 
-Abra seu app da Web, você deve ver que o botão 'Enable Push Messaging' agora está ativado (é possível clicar nele) e deve ver 'Usuário NÃO inscrito.' no console. 
+Abra seu app da Web, você deve ver que o botão 'Enable Push Messaging' agora está ativado (é possível clicar nele) e deve ver ‘User NOT subscribed.' no console. 
 
 ![b9787463acb7e3fb.png](img/b9787463acb7e3fb.png)
 
@@ -394,11 +393,11 @@ Sabemos que, se a permissão for `denied`, o usuário não pode ser inscrito e n
 
 #### Experimente
 
-Como já concedemos permissão para nosso app da Web na etapa anterior, precisamos clicar no __i__ em um círculo na barra de URL e alterar a permissão de notificações para *Usar padrão global (Solicitar)*.
+Como já concedemos permissão para nosso app da Web na etapa anterior, precisamos clicar no __i__ em um círculo na barra de URL e alterar a permissão de notificações para *Use global default (Ask)*.
 
 ![c69f7428408c5bbc.png](img/c69f7428408c5bbc.png)
 
-Após alterar essa configuração, atualize a página e clique no botão *Enable Push Messaging* e, desta vez, selecione *Bloquear* na caixa de diálogo de permissão. O texto do botão agora será *Push Messaging Blocked* e estará desativado.
+Após alterar essa configuração, atualize a página e clique no botão *Enable Push Messaging* e, desta vez, selecione *Block* na caixa de diálogo de permissão. O texto do botão agora será *Push Messaging Blocked* e estará desativado.
 
 ![e36f921fa7598419.png](img/e36f921fa7598419.png)
 
@@ -467,7 +466,7 @@ Agora que já analisamos o evento push, vamos testar um evento push.
 
 Com nosso evento push no service worker, podemos testar o que acontece quando uma mensagem é recebida desencadeando um evento push falso com o uso de DevTools.
 
-Em seu app da Web, inscreva-se para mensagens push, certificando-se de que você tem *O usuário ESTÁ inscrito* em seu console; em seguida, vá para o painel *Aplicativo* em DevTools e, na guia *Service Workers*, clique no link *Push* sob seu service worker.
+Em seu app da Web, inscreva-se para mensagens push, certificando-se de que você tenha *User IS subscribed* em seu console; em seguida, vá para o painel *Application* do DevTools e, na guia *Service Workers*, clique no link *Push* sob seu service worker.
 
 ![c0fab1022906d01f.png](img/c0fab1022906d01f.png)
 
@@ -507,7 +506,7 @@ Neste codelab, primeiro fechamos a notificação que foi clicada com:
 event.notification.close();
 ```
 
-Em seguida, abrimos uma nova janela/guia carregando o url 'https://developers.google.com/web/', fique à vontade para alterá-lo :)
+Em seguida, abrimos uma nova janela/guia carregando o url [developers.google.com/web/](/web/), fique à vontade para alterá-lo :)
 
 ```
 clients.openWindow('https://developers.google.com/web/')
@@ -533,11 +532,11 @@ Isso está fora do escopo deste codelab, mas você pode usar o site associado ([
 
 ![cb84e05044ad029f.png](img/cb84e05044ad029f.png)
 
-Em seguida, cole-a na área de texto *Inscrição para Enviar para* do site do associado:
+Em seguida, cole-a na área de texto *Subscription to Send To* do site do associado:
 
 ![e320ddd1b66682e6.png](img/e320ddd1b66682e6.png)
 
-Em seguida, sob *Texto a Enviar* você pode adicionar qualquer string que deseja enviar com a mensagem push e, finalmente, clicar no botão *Send Push Message*.
+Em seguida, sob *Text to Send* você pode adicionar qualquer string que deseja enviar com a mensagem push e, finalmente, clicar no botão *Send Push Message*.
 
 ![3c5c0d5d1c3deda4.png](img/3c5c0d5d1c3deda4.png)
 
@@ -648,7 +647,7 @@ Este codelab mostrou como começar a usar a adição push ao seu app da Web. Se 
 
 Se procura implantar push em seu site, você pode estar interessado em adicionar suporte para navegadores compatíveis mais antigos/não-padrão que utilizam GCM, [saiba mais aqui](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/).
 
-### Leitura Adicional
+### Leitura adicional
 
 *  [Notificação push na Web](/web/fundamentals/engage-and-retain/push-notifications/) documentação sobre __Fundamentos__ da Web
 *  [Bibliotecas push na Web](https://github.com/web-push-libs/) - Bibliotecas Push na Web, incluindo Node.js, PHP, Java e Python.

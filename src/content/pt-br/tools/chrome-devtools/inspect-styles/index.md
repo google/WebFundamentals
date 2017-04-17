@@ -23,7 +23,7 @@ o painel Elements do Chrome DevTools.
 - Visualize todas as mudanças feitas na sua página localmente no painel Sources.
 
 
-## Edite um nó do DOM em tempo real
+## Editar um nó do DOM em tempo real
 
 Para editar um nó do DOM em tempo real, basta clicar duas vezes em um 
 [elemento selecionado](#inspect-an-element) e fazer alterações:
