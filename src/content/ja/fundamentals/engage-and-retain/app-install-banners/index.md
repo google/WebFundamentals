@@ -39,9 +39,7 @@ Chrome は、アプリが次の条件を満たすと、自動的にバナーを�
     - 144x144 の png アイコン（アイコンの宣言には MIME タイプ `image/png` の指定が必要）
     - 読み込み先の `start_url`
 * サイトに [Service Worker](/web/fundamentals/getting-started/primers/service-workers) が登録されている。
-
 * [HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https) 経由で配信されている（Service Worker を使用するための要件）。
-
 * 2 回以上のアクセスがあり、そのアクセスに 5 分以上の間隔がある。
 
 注: ウェブアプリのインストール バナーは、最先端のテクノロジーなので、アプリのインストール バナーを表示するための条件は、今後変更される可能性があります。ウェブアプリ インストール バナーの最新の条件については、[What, Exactly, Makes Something a Progressive Web App?](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/) をご覧ください。

@@ -91,7 +91,7 @@ URL をフェッチしてレスポンスをテキストとしてログ記録す�
 
 `foo()` を呼び出すと、`Error('bar')` で棄却される Promise が返されます。
 
-## 例:レスポンスのストリーミング
+## 例: レスポンスのストリーミング
 
 非同期関数は、より複雑な例の場合にその利点を実感できます。チャンクのログ出力時にレスポンスをストリーミングし、最終的なサイズを返したいとします。
 
@@ -221,7 +221,7 @@ Promise では次のとおりです。
 一方、上記は両方の待機が同時に発生するため、完了までにかかる時間は 500 ミリ秒です。実用的な例を見てみましょう。
 
 
-### 例:フェッチを順番に出力
+### 例: フェッチを順番に出力
 
 一連の URL をフェッチして、これらをできるだけ早く正しい順序で出力するとします。
 
@@ -293,18 +293,12 @@ Promise では次のとおりです。
 
 
 
-[Babel](https://babeljs.io/){: .external} がこれに該当します。[Babel REPL を使用した例はこちらをご覧ください](https://goo.gl/0Cg1Sq){: .external}。
-
-- トランスパイルされたコードがどの程度類似しているかに注意してください。この変換は [Babel の es2017 preset](http://babeljs.io/docs/plugins/preset-es2017/){: .external} の一部です。
+[Babel](https://babeljs.io/){: .external} がこれに該当します。[Babel REPL を使用した例はこちらをご覧ください](https://goo.gl/0Cg1Sq){: .external}。トランスパイルされたコードがどの程度類似しているかに注意してください。この変換は [Babel の es2017 preset](http://babeljs.io/docs/plugins/preset-es2017/){: .external} の一部です。
 
 
 注: Babel REPL とは声に出して読むと面白い言葉です。試してみてください。
 
-お勧めするのはトランスパイルする方法です。対象ブラウザで非同期関数がサポートされるようになったら無効にするだけで済むからです。ただし、本当はトランスパイラを使用したくない場合は、[Babel の polyfill](https://gist.github.com/jakearchibald/edbc78f73f7df4f7f3182b3c7e522d25){: .external} を取得してこれを自分自身で使用できます。
-
-
-
-次の例を見てください。
+お勧めするのはトランスパイルする方法です。対象ブラウザで非同期関数がサポートされるようになったら無効にするだけで済むからです。ただし、本当はトランスパイラを使用したくない場合は、[Babel の polyfill](https://gist.github.com/jakearchibald/edbc78f73f7df4f7f3182b3c7e522d25){: .external} を取得してこれを自分自身で使用できます。次の例を見てください。
 
     async function slowEcho(val) {
       await wait(1000);
@@ -338,9 +332,7 @@ Promise では次のとおりです。
 コードを使用するだけでなく、関数が常に Promise を返すようにします。
 
 
-[2014 年](https://jakearchibald.com/2014/es7-async-functions/){: .external}、非同期関数には本当にわくわくしました。この関数が実際にブラウザで使用できるようになるとは、
-
-本当に素晴らしいことです。
+[2014 年](https://jakearchibald.com/2014/es7-async-functions/){: .external}、非同期関数には本当にわくわくしました。この関数が実際にブラウザで使用できるようになるとは、本当に素晴らしいことです。
 
 
 {# wf_devsite_translation #}

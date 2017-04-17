@@ -11,9 +11,7 @@ book_path: /web/fundamentals/_book.yaml
 
 ##  コードラボ{: #codelabs }
 
-コードラボでは、手順を説明したチュートリアル、ハンズオン形式のコーディング操作が用意されています。ほとんどのコードラボでは、小規模なアプリを構築するプロセスや、既存のアプリに新しい機能を追加するプロセスを手順ごとに説明します。
-
-コードラボの詳細については、[codelabs.developers.google.com](https://codelabs.developers.google.com/?cat=Web) をご覧ください。
+コードラボでは、手順を説明したチュートリアル、ハンズオン形式のコーディング操作が用意されています。ほとんどのコードラボでは、小規模なアプリを構築するプロセスや、既存のアプリに新しい機能を追加するプロセスを手順ごとに説明します。コードラボの詳細については、[codelabs.developers.google.com](https://codelabs.developers.google.com/?cat=Web) をご覧ください。
 
 
 <div class="attempt-left">
@@ -104,7 +102,7 @@ Service Worker は基盤となるものです。
 
 <div class="attempt-left">
   <a href="primers/shadowdom">
-    Shadow DOM v1:再利用可能なウェブ コンポーネント
+    Shadow DOM v1: 再利用可能なウェブ コンポーネント
   </a>
   <p>
     Shadow DOM はカプセル化された DOM サブツリーで、レンダリングされますが表示されません。
@@ -114,7 +112,7 @@ Service Worker は基盤となるものです。
 </div>
 <div class="attempt-right">
   <a href="primers/customelements">
-    カスタム要素 v1:再利用可能なウェブ コンポーネント
+    カスタム要素 v1: 再利用可能なウェブ コンポーネント
   </a>
   <p>
     新しい HTML タグを作成したり、既存の HTML タグを拡張したり、他のデベロッパーが作成したコンポーネントを拡張したりすることができます。
@@ -126,7 +124,7 @@ Service Worker は基盤となるものです。
 
 <div class="attempt-left">
   <a href="primers/payment-request/">
-    Payment Request API:統合ガイド
+    Payment Request API: 統合ガイド
   </a>
   <p>
     支払いフローの標準化は、ユーザーのプロセスを簡略化し、モバイルの非常に低い支払コンバージョン率を向上させます。

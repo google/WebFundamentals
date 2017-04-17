@@ -75,9 +75,7 @@ description: 動画をサイトに追加して、どのデバイスでも最高�
 
 * デベロッパーが優先度順に形式をリストアップできます。
 * ネイティブ クライアント側で切り替えることで、コンテンツを取得する際にリクエストが 1 つだけ生成されるため、待ち時間が短縮されます。
-
 * ユーザー エージェントの検出機能を備えたサーバー側のデータベースを使用するよりも、ブラウザ側で形式を選択する方が簡単で時間がかからず、信頼性も高くなる場合があります。
-
 * 各ファイルのソースタイプを指定すると、ネットワークのパフォーマンスが向上します。これは、ブラウザ側で動画の一部をダウンロードして形式を調べなくても、動画ソースを選択できるようになるためです。
 
 
@@ -135,10 +133,7 @@ Fragments API を使用して video 要素に開始時間と終了時間を追�
     </video>
     
 
-ポスターは、動画の `src` が破損していたり、提供されたすべての動画形式に非対応の場合の代替手段にもなります。
-ポスター画像の唯一のデメリットは、追加のファイル リクエストによって帯域幅を消費し、レンダリングが必要になることです。
-
-詳しくは、[画像の最適化](/web/fundamentals/performance/optimizing-content-efficiency/image-optimization) をご覧ください。
+ポスターは、動画の `src` が破損していたり、提供されたすべての動画形式に非対応の場合の代替手段にもなります。ポスター画像の唯一のデメリットは、追加のファイル リクエストによって帯域幅を消費し、レンダリングが必要になることです。詳しくは、[画像の最適化](/web/fundamentals/performance/optimizing-content-efficiency/image-optimization) をご覧ください。
 
 以下は、ポスター画像がある場合とない場合の比較です。動画ではないことを示すために、グレースケールのポスター画像を作成しました。
 
@@ -245,7 +240,6 @@ Chrome で実行する場合の `canPlayType()` の引数と戻り値の例は�
 
 * デスクトップ ツール: [FFmpeg](//ffmpeg.org/)
 * GUI アプリケーション: [Miro](http://www.mirovideoconverter.com/)、[HandBrake](//handbrake.fr/)、[VLC](//www.videolan.org/)
-
 * オンライン エンコーディング / トランスコーディング サービス: [Zencoder](//en.wikipedia.org/wiki/Zencoder)、[Amazon Elastic Encoder](//aws.amazon.com/elastictranscoder)
 
 
@@ -487,7 +481,7 @@ track 要素の `src` 属性では、トラック ファイルの場所を指定
 
     ...
 
-試験運用:track 要素は、Firefox を除き、Chrome for Android、iOS Safari、および現在デスクトップで使用されているすべてのブラウザでサポートされています（[caniuse.com/track](http://caniuse.com/track) をご覧ください）。polyfill も使用できます。また、[Captionator](http://captionatorjs.com/){: .external } を利用することを推奨します。
+試験運用: track 要素は、Firefox を除き、Chrome for Android、iOS Safari、および現在デスクトップで使用されているすべてのブラウザでサポートされています（[caniuse.com/track](http://caniuse.com/track) をご覧ください）。polyfill も使用できます。また、[Captionator](http://captionatorjs.com/){: .external } を利用することを推奨します。
 
 
 
@@ -550,10 +544,9 @@ video 要素のすべての属性と定義の一覧については、[video 要�
 
 * データ使用のコストは高くなる場合があります。
 * 自動でダウンロードや再生を開始すると、帯域幅や CPU が予想以上に占有され、ページのレンダリングが遅くなるおそれがあります。
-
 * ユーザーが動画や音声の再生を煩わしく感じる可能性もあります。
 
-[WebSettings API](//developer.android.com/reference/android/webkit/WebSettings.html#setMediaPlaybackRequiresUserGesture(boolean)）を使用すると、Android WebView で自動再生動作を設定できます。デフォルトでは true に設定されていますが、WebView アプリで無効に設定できます。
+[WebSettings API](//developer.android.com/reference/android/webkit/WebSettings.html#setMediaPlaybackRequiresUserGesture(boolean)) を使用すると、Android WebView で自動再生動作を設定できます。デフォルトでは true に設定されていますが、WebView アプリで無効に設定できます。
 
 
 
@@ -584,11 +577,7 @@ video 要素のすべての属性と定義の一覧については、[video 要�
   </tbody>
 </table>
 
-`preload` 属性の効果は、プラットフォームごとに異なります。たとえば Chrome の場合、デスクトップでは動画の 25 秒間分をバッファ処理しますが、iOS や Android ではまったくバッファ処理を行いません。
-
-つまり、モバイル端末では再生開始まで時間がかかる場合がありますが、デスクトップではすぐに再生されるということです。
-
-詳細は、[Steve Souders のテストページ](//stevesouders.com/tests/mediaevents.php)をご覧ください。
+`preload` 属性の効果は、プラットフォームごとに異なります。たとえば Chrome の場合、デスクトップでは動画の 25 秒間分をバッファ処理しますが、iOS や Android ではまったくバッファ処理を行いません。つまり、モバイル端末では再生開始まで時間がかかる場合がありますが、デスクトップではすぐに再生されるということです。詳細は、[Steve Souders のテストページ](//stevesouders.com/tests/mediaevents.php)をご覧ください。
 
 
 ### JavaScript

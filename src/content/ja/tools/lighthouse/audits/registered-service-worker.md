@@ -32,7 +32,6 @@ Service Worker
 
 
 * [ウェブアプリでプッシュ通知を有効にする](https://codelabs.developers.google.com/codelabs/push-notifications)
-
 * [ユーザーのホーム画面にウェブアプリを追加する](https://codelabs.developers.google.com/codelabs/add-to-home-screen)
 
 

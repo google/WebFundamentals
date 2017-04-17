@@ -12,11 +12,7 @@ description: Payment Request API は、ウェブでの迅速で簡単な支払�
 {% include "web/_shared/contributors/zkoch.html" %}
 
 試験運用: `PaymentRequest` はまだ開発段階です。十分に安定しており、実装できる状態になっていると考えられますが、今後もまだ変更される可能性があります。
-このページは、この API の最新ステータス（[M56 での変更点](https://docs.google.com/document/d/1I8ha1ySrPWhx80EB4CVPmThkD4ILFM017AfOA5gEFg4/edit#)）を反映するために引き続き更新されます。あわせて Google では、API の変更に伴う後方互換性の問題を軽減するために、サイトに埋め込み可能な [shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) を提供しています。
-
-
-
-shim は、Chrome の 2 つのメジャー バージョン間の API の差異を埋めるためのものです。
+このページは、この API の最新ステータス（[M56 での変更点](https://docs.google.com/document/d/1I8ha1ySrPWhx80EB4CVPmThkD4ILFM017AfOA5gEFg4/edit#)）を反映するために引き続き更新されます。あわせて Google では、API の変更に伴う後方互換性の問題を軽減するために、サイトに埋め込み可能な [shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) を提供しています。shim は、Chrome の 2 つのメジャー バージョン間の API の差異を埋めるためのものです。
 
 
 
