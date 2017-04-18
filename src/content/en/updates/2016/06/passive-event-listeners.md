@@ -11,15 +11,21 @@ description: New to Chrome 51, passive event listeners provide a major potential
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-
-
-New to Chrome 51, passive event listeners are an emerging web standard that provide a major potential boost to scroll performance. Check out the video below for a side-by-side demo of the improvements in action:
+New to Chrome 51, passive event listeners are an emerging web standard that provide a major potential boost to scroll performance, especially on mobile. Check out the video below for a side-by-side demo of the improvements in action:
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="65VMej8n23A"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
+
+<aside class="note">
+  <p><strong>Note:</strong> <span>The basic `scroll` event cannot be canceled, so it does not need
+  to be set passive. However, you should still [prevent expensive work][mdn-scroll] from being
+  completed in the handler.</span></p>
+</aside>
+
+[mdn-scroll]: https://developer.mozilla.org/en-US/docs/Web/Events/scroll#Example
 
 ## How it works
 
