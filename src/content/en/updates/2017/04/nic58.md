@@ -6,7 +6,7 @@ description: What's new in Chrome 58 for developers? IndexedDB 2.0, display full
 {# wf_updated_on: 2017-04-19 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome58,new-in-chrome,iframe,sandbox,indexeddb,progressive-web-apps,fullscreen #}
-{# wf_featured_snippet: With Chrome 58, Progressive Web Apps are more immersive with display: fullscreen. IndexedDB 2.0 is now supported and sandboxed iFrames get more options. Pete LePage has all the details and how you can use these new developer features in Chrome 58! #}
+{# wf_featured_snippet: With Chrome 58, Progressive Web Apps are more immersive with display: fullscreen. IndexedDB 2.0 is now supported and sandboxed iFrames get more options. Pete LePage has all the details and how you can use these new developer features in Chrome 58. #}
 
 # New in Chrome 58 {: .page-title }
 
@@ -31,7 +31,7 @@ description: What's new in Chrome 58 for developers? IndexedDB 2.0, display full
 
 <div class="clearfix"></div>
 
-I’m Pete LePage, let’s dive in and see what’s new for developers in Chrome 58! 
+I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 58! 
 
 <div class="clearfix"></div>
 
@@ -54,7 +54,7 @@ And bulk recovery of entire datasets no longer needs a cursor with the
 
 ## Full screen Progressive Web Apps {: #fullscreen }
 
-When Progressive Web Apps are launched from the Android Home screen, they
+When Progressive Web Apps are launched from the Android home screen, they
 launch in a standalone app-like mode that hides the omnibox. This helps
 create an engaging user experience, and frees up screen space for content. 
 
@@ -90,7 +90,7 @@ ability to navigate the top-level page, while still blocking auto-redirects.
 
 And of course, there’s plenty more.
 
-* Say goodbye to the `clearfix` hack - instead of manually resetting
+* Say goodbye to the `clearfix` hack. Instead of manually resetting
   multiple layout properties like float and clear, you can now add a new
   block-formatting context using `display: flow-root`. 
 * `PointerEvents.getCoalescedEvents()` allows you to access all input events
@@ -102,8 +102,8 @@ And of course, there’s plenty more.
 
 These are just a few of the changes in Chrome 58 for developers.  
 
-If you enjoyed this video, check out the
-[Designer vs Developer](https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ),
+If you enjoyed this video, check out
+[Designer vs. Developer](https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ),
 a new video series that tries to solve the challenges faced when designers
 and developers work together. 
 
