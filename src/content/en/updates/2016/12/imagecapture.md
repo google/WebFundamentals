@@ -35,7 +35,7 @@ This method uses the highest available photographic camera resolution.
 [a snapshot of live video](https://www.w3.org/TR/image-capture/#dom-imagecapture-grabframe),
 which could (for example) be drawn on a canvas and then post-processed to
 selectively change color values. Note that the `ImageBitmap` will only have the
-resolution of the video source — which will be lower than the camera's
+resolution of the video source — which will be lower than the camera's
 still-image capabilities.
 * `getPhotoCapabilities()` returns a `PhotoCapabilities` object that provides
 access to available camera options and their current values.
@@ -60,7 +60,7 @@ You can try out this code from the DevTools console.
 Note: To choose between different cameras, such as the front and back camera on
 a phone, get a list of available devices via the
 `MediaDevices.enumerateDevices()` method, then set `deviceId` in `getUserMedia()`
-constraints as per the demo [here](https://webrtc.github.io/samples/src/content/devices/input-output/).
+constraints as per the demo [here](https://webrtc.github.io/samples/src/content/devices/input-output/).
 
 You can use `takePhoto()` to get a still image and then set it as the `src` of
 an `<img>`:
