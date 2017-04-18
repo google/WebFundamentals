@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "HTML Has a Viewport Meta Tag" Lighthouse audit.
+description: Reference documentation for the "Has A <meta name="viewport"> Tag With width Or initial-scale" Lighthouse audit.
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-10-04 #}
 
-# HTML Has a Viewport Meta Tag {: .page-title }
+# Has A <meta name="viewport"> Tag With width Or initial-scale {: .page-title }
 
 ## Why the audit is important {: #why }
 

@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Element ARIA Attributes Have Valid Values" Lighthouse audit.
+description: Reference documentation for the "Element aria-* Attributes Have Valid Values" Lighthouse audit.
 
-{# wf_updated_on: 2017-01-18 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2017-01-18 #}
 
-# Element ARIA Attributes Have Valid Values  {: .page-title }
+# Element aria-* Attributes Have Valid Values  {: .page-title }
 
 ## Why the audit is important {: #why }
 

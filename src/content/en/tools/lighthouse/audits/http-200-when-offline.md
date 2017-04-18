@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "URL responds with a 200 when offline" Lighthouse audit.
+description: Reference documentation for the "Responds With A 200 When Offline" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-15 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-09-15 #}
 
-# URL Responds With a 200 When Offline {: .page-title }
+# Responds With A 200 When Offline {: .page-title }
 
 ## Why the audit is important {: #why }
 
