@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in authoring, debugging, and profiling development tools.
 
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-03-28 #}
 
 # Chrome DevTools {: .page-title }
@@ -89,12 +89,15 @@ Note: In Chrome 58 the Timeline panel was renamed to the Performance panel.
 
 <img src="images/panels/performance.png" alt="Timeline Panel" class="attempt-right">
 
-Improve the runtime performance of your page by recording and exploring the various events
-that happen during the lifecycle of a site.
+Improve the runtime performance of your page by recording and exploring the
+various events that happen during the lifecycle of a site.
 
+* [Get Started With Analyzing Runtime Performance][runtimegs]
 * [How to look at performance](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 * [Analyze runtime performance](/web/tools/chrome-devtools/rendering-tools/)
 * [Diagnose Forced Synchronous Layouts](/web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts)
+
+[runtimegs]: /web/tools/chrome-devtools/evaluate-performance/
 
 <div style="clear:both;"></div>
 
