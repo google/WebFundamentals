@@ -63,10 +63,13 @@ Each line of code is color-coded:
 
 * Solid green means that line of code executed.
 * Solid red means it did not execute.
-* Red and green means that only some code on that line executed. For example,
-  a ternary expression like `var b = (a > 0) ? a : 0` is colored like this.
+* A line of code that is both red and green, such as line 3 in **Figure 2**,
+  means that only some code on that line executed. For example, a ternary
+  expression like `var b = (a > 0) ? a : 0` is colored both red and green.
 
-To open the tab:
+Note: The color-coding is likely to change in future Chrome releases.
+
+To open the **Coverage** tab:
 
 1. Open the [Command Menu][CM].
 1. Start typing `Coverage` and select **Show Coverage**.
