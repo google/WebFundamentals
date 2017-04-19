@@ -49,7 +49,7 @@ toc:
         path: /web/tools/lighthouse/audits/alt-attribute
       - title: First Meaningful Paint
         path: /web/tools/lighthouse/audits/first-meaningful-paint
-      - title: Has A &lt;meta name="viewport"&gt; Tag With width Or initial-scale
+      - title: Has A Viewport Meta Tag With width Or initial-scale
         path: /web/tools/lighthouse/audits/has-viewport-meta-tag
       - title: Manifest Contains Icons at Least 192px
         path:  /web/tools/lighthouse/audits/manifest-contains-192px-icon

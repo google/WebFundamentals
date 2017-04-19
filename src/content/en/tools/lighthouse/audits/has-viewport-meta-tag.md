@@ -5,7 +5,7 @@ description: Reference documentation for the "Has A &lt;meta name="viewport"&gt;
 {# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-10-04 #}
 
-# Has A &lt;meta name="viewport"&gt; Tag With width Or initial-scale {: .page-title }
+# Has A Viewport Meta Tag With width Or initial-scale {: .page-title }
 
 ## Why the audit is important {: #why }
 
