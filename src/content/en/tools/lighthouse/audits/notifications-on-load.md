@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids Requesting The Notification Permission On Page Load" Lighthouse audit.
 
-{# wf_updated_on: 2016-12-05 #}
+{# wf_updated_on: 2017-04-19 #}
 {# wf_published_on: 2016-12-05 #}
 
 # Avoids Requesting The Notification Permission On Page Load  {: .page-title }
