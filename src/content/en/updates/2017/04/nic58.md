@@ -29,6 +29,9 @@ description: What's new in Chrome 58 for developers? IndexedDB 2.0, display full
   `iframes` new powers
 * And there’s plenty [more](#more)!
 
+Note: Want the full list of changes? Check out the
+[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/57.0.2987.98..58.0.3029.81?pretty=fuller&n=10000)
+
 <div class="clearfix"></div>
 
 I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 58! 
