@@ -75,8 +75,8 @@ for returning users.
 To offer a true app-like experience, Voot.com also implemented
 [add to home screen](/web/fundamentals/engage-and-retain/app-install-banners/),
 allowing users to launch the page from their home screen like a native app. This
-combined with a streamlined login process allows users to quickly and easily re-
-engage with the site and watch their favorite shows.
+combined with a streamlined login process allows users to quickly and easily
+re-engage with the site and watch their favorite shows.
 
 Voot launched its new UI first on mobile web, ahead of desktop web and native
 app. Within days of launch, the improvements translated to a 19% reduction in
@@ -86,9 +86,11 @@ user session time and a 15% increase in average daily video views per user.
 These user engagement metrics show Voot.com performing similarly to the native
 app, without requiring the user to install anything.
 
-"We have moved the needle very significantly when it comes to user experience on
-"the Mobile Web by adopting PWA says Rajneel Kumar, SVP - Head of Product and
-"Technology for OTT and Digital Ventures at Viacom18. All the time and effort
-"we've spent on technology and UI changes as well as optimizations seem to be
-"showing very positive results. We are going to continue to refine this further
-"and we are confident that we will continue to see significant consumer lift.
+“We have moved the needle very significantly when it comes to user experience
+on the Mobile Web by adopting PWA” says Rajneel Kumar, SVP - Head of Product
+and Technology for OTT and Digital Ventures at Viacom18. “All the time and
+effort we’ve spent on technology and UI changes as well as optimizations seem
+to be showing very positive results. We are going to continue to refine this
+further and we are confident that we will continue to see significant consumer
+lift.”
+
