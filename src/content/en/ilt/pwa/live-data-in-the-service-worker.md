@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T17:17:11Z #}
+{# wf_updated_on: 2017-04-19T22:45:41Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -33,7 +33,7 @@ A general guideline for data storage is that URL addressable resources should be
 
 ### Why IndexedDB and the Cache interface?
 
-There are a  [variety of reasons](https://medium.com/dev-channel/offline-storage-for-progressive-web-apps-70d52695513c#.lm82vlyt8) to use IndexedDB and the Cache interface. Both are asynchronous and accessible in service workers, web workers, and the window interface. IndexedDB is  [widely supported](http://caniuse.com/#feat=indexeddb), and the Cache interface  [is supported](https://jakearchibald.github.io/isserviceworkerready/) in Chrome, Firefox, and Opera.
+There are a  [variety of reasons](https://medium.com/dev-channel/offline-storage-for-progressive-web-apps-70d52695513c#.lm82vlyt8) to use IndexedDB and the Cache interface. Both are asynchronous and accessible in service workers, web workers, and the window interface. IndexedDB is  [widely supported](http://caniuse.com/#feat=indexeddb), and the Cache interface  [is supported](https://jakearchibald.github.io/isserviceworkerready/) in Chrome, Firefox, Opera, and Samsung Internet.
 
 In this text we use Jake Archibald's  [IndexedDB Promised](https://github.com/jakearchibald/indexeddb-promised) library, which enables promise syntax for IndexedDB. There are also  [other IndexedDB libraries](https://medium.com/dev-channel/offline-storage-for-progressive-web-apps-70d52695513c#.lm82vlyt8) that can be used to abstract some of the less convenient aspects of the API. 
 
@@ -59,7 +59,7 @@ Different browsers allow different amounts of offline storage. This table summar
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-<p>Chrome and Opera</p>
+<p>Chrome, Opera, and Samsung Internet</p>
 </td><td colspan="1" rowspan="1">
 <p>Up to a  <a href="https://www.html5rocks.com/en/tutorials/offline/quota-research/">quota</a>. Check usage with the  <a href="https://www.w3.org/TR/quota-api/">Quota API</a></p>
 </td><td colspan="1" rowspan="1">
