@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:11:26Z #}
+{# wf_updated_on: 2017-04-19T19:34:03Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -40,7 +40,7 @@ See  [Can I Use](http://caniuse.com/#feat=promises) for an up-to-date list of br
 
 
 
-Asynchronous APIs are common in JavaScript⸺to access the network or disk, to communicate with web workers and service workers, and even when using a timer. Most of these APIs use callback functions or events to communicate when a request is ready or has failed. While these techniques worked well in the days of simple web pages, they don't scale well to complete web applications.
+Asynchronous APIs are common in JavaScript to access the network or disk, to communicate with web workers and service workers, and even when using a timer. Most of these APIs use callback functions or events to communicate when a request is ready or has failed. While these techniques worked well in the days of simple web pages, they don't scale well to complete web applications.
 
 ### The old way: using events
 
