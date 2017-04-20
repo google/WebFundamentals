@@ -9,8 +9,8 @@ description: Dokumentasi referensi untuk "Manifes Berisi short_name" audit Light
 
 ## Mengapa audit itu penting {: #why }
 
-Setelah pengguna menambahkan aplikasi ke homescreen, `short_name` adalah teks yang
-ditampilkan pada homescreen di sebelah ikon aplikasi Anda. Biasanya, itu digunakan bila
+Setelah pengguna menambahkan aplikasi ke layar beranda, `short_name` adalah teks yang
+ditampilkan pada layar beranda di sebelah ikon aplikasi Anda. Biasanya, itu digunakan bila
 tidak ada cukup ruang untuk menampilkan nama lengkap aplikasi Anda.
 
 ## Cara untuk lulus audit {: #how }

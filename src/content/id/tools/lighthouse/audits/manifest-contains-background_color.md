@@ -9,7 +9,7 @@ description: Dokumentasi referensi untuk "Manifes Berisi background_color" audit
 
 ## Mengapa audit itu penting {: #why }
 
-Ketika aplikasi web memuat dari homescreen pengguna, browser menggunakan properti
+Ketika aplikasi web memuat dari layar beranda pengguna, browser menggunakan properti
 `background_color` untuk menggambar warna latar belakang browser selagi
 aplikasi dimuat. Hal ini menciptakan transisi yang mulus antara peluncuran aplikasi dan
 pemuatan materi aplikasi.

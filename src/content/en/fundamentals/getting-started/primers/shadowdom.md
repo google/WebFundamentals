@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components
 
-{# wf_updated_on: 2016-10-13 #}
+{# wf_updated_on: 2017-04-17 #}
 {# wf_published_on: 2016-08-01 #}
 
 # Shadow DOM v1: Self-Contained Web Components {: .page-title }
@@ -246,11 +246,11 @@ The markup a user of your component writes. This DOM lives outside the
 component's shadow DOM. It is the element's actual children.
 
 
-    <button is="better-button">
+    <better-button>
       <!-- the image and span are better-button's light DOM -->
       <img src="gear.svg" slot="icon">
       <span>Settings</span>
-    </button>
+    </better-button>
     
 
 **Shadow DOM**
@@ -276,16 +276,18 @@ DOM, rendering the final product. The flattened tree is what you ultimately see
 in the DevTools and what's rendered on the page.
 
 
-    <button is="better-button">
+    <better-button>
       #shadow-root
         <style>...</style>
         <slot name="icon">
           <img src="gear.svg" slot="icon">
         </slot>
-        <slot>
-          <span>Settings</span>
-        </slot>
-    </button>
+        <span id="wrapper">
+          <slot>
+            <span>Settings</span>
+          </slot>
+        </span>
+    </better-button>
     
 
 ### The &lt;slot&gt; element {: #slots}
@@ -314,7 +316,7 @@ content, the slot renders its fallback content.
     <!-- Default slot. If there's more than one default slot, the first is used. -->
     <slot></slot>
     
-    <slot>Fancy button</slot> <!-- default slot with fallback content -->
+    <slot>fallback content</slot> <!-- default slot with fallback content -->
     
     <slot> <!-- default slot entire DOM tree as fallback -->
       <h2>Title</h2>
@@ -786,17 +788,17 @@ As an example, let's say your shadow DOM looks like this:
 <table>
   <thead><th>Usage</th><th>Call</th><th>Result</th></tr></thead>
   <tr>
-    <td>&lt;button is="better-button"&gt;My button&lt;/button&gt;</td>
+    <td>&lt;my-component&gt;component text&lt;/my-component&gt;</td>
     <td><code>slot.assignedNodes();</code></td>
     <td><code>[text]</code></td>
   </tr>
   <tr>
-    <td>&lt;button is="better-button">&lt;/button&gt;</td>
+    <td>&lt;my-component>&lt;/my-component&gt;</td>
     <td><code>slot.assignedNodes();</code></td>
     <td><code>[]</code></td>
   </tr>
   <tr>
-    <td>&lt;button is="better-button"&gt;&lt;/button&gt;</td>
+    <td>&lt;my-component&gt;&lt;/my-componentS&gt;</td>
     <td><code>slot.assignedNodes({flatten: true});</code></td>
     <td><code>[&lt;b&gt;fallback content&lt;/b&gt;]</code></td>
   </tr>

@@ -32,7 +32,7 @@ No futuro, quando a WebVR se consolidar, podemos até ver novos tipos de intera�
 
 Partindo da cena anterior, vamos [adicionar gerenciadores de interação com o Ray Input](https://googlechrome.github.io/samples/web-vr/basic-input/). Se quiser dar uma olhada no código final, acesse o [repositório de exemplos do Google Chrome](https://github.com/GoogleChrome/samples/tree/gh-pages/web-vr/basic-input/).
 
-## Adicione a biblioteca Ray Input à página
+## Adicionar a biblioteca Ray Input à página
 
 Para simplificar, podemos adicionar o Ray Input diretamente com a tag "script":
 
@@ -41,7 +41,7 @@ Para simplificar, podemos adicionar o Ray Input diretamente com a tag "script":
 
 Se estiver usando o Ray Input como parte de um sistema de compilação maior, é possível importá-lo por esse sistema também. O [LEIA-ME do Ray Input tem mais informações](https://github.com/borismus/ray-input/blob/master/README.md), vale a pena dar uma olhada.
 
-## Obtenha acesso às interações
+## Obter acesso às interações
 
 Depois de obter acesso a todas as exibições de RV, podemos solicitar acesso a todas as interações disponíveis. A partir daí, podemos adicionar ouvintes de evento e atualizar a cena para configurar como padrão a não seleção do estado da nossa caixa.
 
@@ -169,7 +169,7 @@ Por fim, na função `_render`, podemos acompanhar as interações e usá-la par
       …
     }
 
-## Adicione a malha de indicação à cena
+## Adicionar a malha de indicação à cena
 
 Assim como permitir interações, é provável que queiramos exibir alguma coisa ao usuário que mostre para onde ele está apontando. O Ray Input fornece uma malha poligonal que você pode adicionar à cena com essa única finalidade.
 

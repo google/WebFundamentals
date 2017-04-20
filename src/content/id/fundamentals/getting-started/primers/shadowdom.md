@@ -765,8 +765,8 @@ Kejadian `slotchange` akan terpicu bila simpul terdistribusi slot berubah. Misal
       console.log('light dom children changed!');
     });
     
-Note: `slotchange` does not fire when an instance of the component is
-first initialized.
+Catatan: `slotchange` tidak akan terpicu bila instance komponen
+telah diinisialisasi lebih dahulu.
 
 Untuk memantau tipe perubahan lain pada light DOM, Anda bisa menyetel
 [`MutationObserver`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)

@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Site Does Not Use Application Cache" Lighthouse audit.
+description: Reference documentation for the "Avoids Application Cache" Lighthouse audit.
 
-{# wf_updated_on: 2017-01-04 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2017-01-04 #}
 
-# Site Does Not Use Application Cache  {: .page-title }
+# Avoids Application Cache  {: .page-title }
 
 ## Why the audit is important {: #why }
 
@@ -33,3 +33,6 @@ offline.
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 The audit passes if no AppCache manifest is detected.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/appcache.html" %}

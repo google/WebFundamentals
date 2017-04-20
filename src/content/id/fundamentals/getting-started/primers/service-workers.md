@@ -119,7 +119,7 @@ jadi periksalah dokumentasi server Anda dan pastikan memeriksa
 [Mozilla SSL Configuration Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/) 
 untuk praktik terbaik.
 
-## Daftarkan service worker
+## Mendaftarkan service worker
 
 Untuk memasang service worker, Anda perlu mengawali prosesnya dengan
 **mendaftarkannya** di laman Anda. Ini akan memberi tahu browser di mana
@@ -374,7 +374,7 @@ daftar putih cache tersebut.
       );
     });
 
-## Tantangan dan harapan
+## Tantangan dan gotcha
 
 Hal ini benar-benar baru. Inilah kumpulan masalah yang 
 mengganggu. Semoga bagian ini bisa dihapus secepatnya, namun untuk sekarang 
@@ -409,7 +409,7 @@ cookie. Jika menginginkan kredensial, sebagai gantinya panggil:
 
 Perilaku ini disengaja, dan dirasa lebih baik daripada default XHR
 yang lebih kompleks pada pengiriman kredensial jika URL sama asalnya, namun jika tidak akan
-menghilangkannya. Perilaku fetch lebih mirip permintaan CORS lain, misalnya ﻿, yang tidak pernah mengirimkan cookie kecuali jika Anda menyertakannya dengan ﻿.
+menghilangkannya. Perilaku fetch lebih mirip permintaan CORS lain, misalnya `<img crossorigin>`, yang tidak pernah mengirimkan cookie kecuali jika Anda menyertakannya dengan `<img crossorigin="use-credentials">`.
 
 
 

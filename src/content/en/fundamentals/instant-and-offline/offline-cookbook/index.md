@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-08-26 #}
+{# wf_updated_on: 2017-03-21 #}
 {# wf_published_on: 2014-12-09 #}
 
 # The Offline Cookbook {: .page-title }
@@ -307,8 +307,6 @@ This code updates caches before showing a notification:
 ### On background-sync {: #on-background-sync }
 
 <img src="images/cm-on-bg-sync.png">
-
-Dogfood: Background sync hasn't yet landed in Chrome stable.
 
 [Background sync](/web/updates/2015/12/background-sync)
 is another feature built on top of

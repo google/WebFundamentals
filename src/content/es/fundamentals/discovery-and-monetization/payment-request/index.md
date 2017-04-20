@@ -13,7 +13,7 @@ description: La Payment Request API es para pagos rápidos y fáciles en la web.
 
 Prueba interna: `PaymentRequest` está aún en desarrollo. Mientras creemos que es lo suficientemente estable
 para implementarse, puede seguir cambiando. Mantendremos esta página actualizada para que
-siempre muestre el estado actual de la API([cambios M56](https://docs.google.com/document/d/1I8ha1ySrPWhx80EB4CVPmThkD4ILFM017AfOA5gEFg4/edit#)).
+siempre muestre el estado actual de la API ([cambios M56](https://docs.google.com/document/d/1I8ha1ySrPWhx80EB4CVPmThkD4ILFM017AfOA5gEFg4/edit#)).
 Mientras tanto, te protegemos de los cambios de la API que puedan ser
 incompatibles con versiones anteriores, ofrecemos [una corrección de compatibilidad](https://storage.googleapis.com/prshim/v1/payment-shim.js)
 que se puede integrar a tu sitio. La corrección de compatibilidad oculta cualquier diferencia de la API
@@ -39,7 +39,7 @@ La Payment Request API es un sistema que tiene que *eliminar los formularios de 
 * Permitir que el navegador actúe como intermediario entre comerciantes, usuarios y métodos de pago.
 * Estandarizar el flujo de comunicación de pago tanto como sea posible.
 * Admitir a la perfección diferentes métodos de pago seguros.
-* Funcionar en cualquier navegador, dispositivo, móvil de plataforma o de otra manera
+* Funcionar en cualquier navegador, dispositivo, móvil de plataforma o de otra manera.
 
 La Payment Request API es un estándar abierto compatible con varios navegadores que reemplaza los flujos tradicionales de finalización de compra al permitir a los comerciantes solicitar y aceptar cualquier método de pago en una sola llamada a la API. La Payment Request API permite que la página web intercambie información con el usuario-agente mientras este último proporciona entradas, antes de aprobar o rechazar una solicitud de pago.
 
@@ -216,7 +216,7 @@ Una vez que un usuario aprueba una solicitud de pago, la promesa del método [`s
 </tr>
 <tr>
   <td><code>methodName</code></td>
-  <td>Cadena que indica el método de pago seleccionado (p. ej., visa).</td>
+  <td>Cadena que indica el método de pago seleccionado (p. ej., visa)</td>
 </tr>
 <tr>
   <td><code>details</code></td>

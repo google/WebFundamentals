@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/javascript/add-breakpoints
+  to: /web/tools/chrome-devtools/javascript/breakpoints
+
 - from: /web/tools/chrome-devtools/settings
   to: /web/tools/chrome-devtools/ui
 

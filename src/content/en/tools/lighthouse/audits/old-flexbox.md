@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Site Does Not Use The Old CSS Flexbox" Lighthouse audit.
+description: Reference documentation for the "Avoids Old CSS Flexbox" Lighthouse audit.
 
-{# wf_updated_on: 2016-12-05 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-12-05 #}
 
-# Site Does Not Use The Old CSS Flexbox  {: .page-title }
+# Avoids Old CSS Flexbox  {: .page-title }
 
 ## Why the audit is important {: #why }
 
@@ -34,3 +34,6 @@ old properties map to the new ones.
 Lighthouse collects all of the stylesheets used on the page and checks if any of
 them uses `display: box`. Lighthouse does not check if the stylesheets use any
 other deprecated properties.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/old-flexbox.html" %}

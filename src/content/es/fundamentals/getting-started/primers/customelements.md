@@ -481,7 +481,7 @@ Pero esto no significa que debes definir y registrar un elemento personalizado e
 
 **Los elementos personalizados pueden usarse _antes_ de registrar su definición**.
 
-La mejora progresiva es una característica de los elementos personalizados. En otras palabras, puedes declarar un grupo de elementos `<app-drawer>` en la página y no invocar a`customElements.define('app-drawer', ...)` hasta mucho más adelante. Esto se debe a que el navegador da a los posibles elementos personalizados un tratamiento diferente al de las [etiquetas desconocidas](#unknown). El proceso de llamar a `define()` y transmitirle un elemento existente con una definición de clase se denomina “actualizaciones de elementos”.
+La mejora progresiva es una característica de los elementos personalizados. En otras palabras, puedes declarar un grupo de elementos `<app-drawer>` en la página y no invocar a `customElements.define('app-drawer', ...)` hasta mucho más adelante. Esto se debe a que el navegador da a los posibles elementos personalizados un tratamiento diferente al de las [etiquetas desconocidas](#unknown). El proceso de llamar a `define()` y transmitirle un elemento existente con una definición de clase se denomina “actualizaciones de elementos”.
 
 Para saber cuándo se define el nombre de una etiqueta, puedes usar `window.customElements.whenDefined()`;
 proporciona una promesa que se resuelve al definirse el elemento.
@@ -534,7 +534,7 @@ Los elementos personalizados pueden administrar su propio contenido usando las A
 Declaring this tag will produce:
 
     <x-foo-with-markup>
-     <b>¡Soy un x-foo con lenguaje de marcado!</b>
+     <b>I'm an x-foo-with-markup!</b>
     </x-foo-with-markup>
 
 {% framebox height="70px" %}
@@ -632,7 +632,7 @@ Ejemplo de uso:
 
 <div class="demoarea">
   <x-foo-shadowdom>
-    <p><b>Texto</b> personalizado del usuario</p>
+    <p><b>User's</b> custom text</p>
   </x-foo-shadowdom>
 </div>
 
@@ -921,7 +921,7 @@ reutilizables. Cuando se combinan con las demás primitivas de la nueva platafor
 - Se integra por completo con DevTools del navegador.
 - Permite aprovechar las características de accesibilidad existentes.
 
-[especificación]: https://html.spec.whatwg.org/multipage/scripting.html#custom-elements
+[spec]: https://html.spec.whatwg.org/multipage/scripting.html#custom-elements
 [sd_spec]: http://w3c.github.io/webcomponents/spec/shadow/
 
 

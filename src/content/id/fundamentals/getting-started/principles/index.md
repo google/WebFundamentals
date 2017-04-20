@@ -255,7 +255,7 @@ menyebabkan pendaftaran yang lebih sedikit.
 </div>
 
 Partisipan penelitian menganggap checkout tamu "nyaman", "sederhana", "mudah",
-dan "cepat". Pengguna kesal oleh situs yang memaksa mereka mendaftar sebuah
+dan "cepat". Pengguna kesal oleh situs yang memaksa mereka mendaftarkan sebuah
 akun saat melakukan pembelian, terutama ketika manfaat dari akun
 tidak jelas.
 
@@ -338,7 +338,7 @@ memeriksa aplikasi kalender hanya untuk menjadwalkan suatu tanggal.
   </figure>
 </div>
 
-Label meng-input dengan benar dan memvalidasi input secara real-time.
+Labeli input dengan benar dan validasi input secara real-time.
 
 <div style="clear:both;"></div>
 
@@ -445,7 +445,7 @@ Pengguna harus selalu mengerti alasan Anda meminta
 penelitian yang mencoba untuk memesan hotel di kota lain menjadi bingung ketika sebuah
 situs perjalanan mendeteksi lokasi mereka dan menawarkan hotel di kota mereka yang
 sekarang ini. Biarkan bidang lokasi kosong secara default, dan izinkan pengguna untuk
-mengisinya melalui panggil-untuk-aksi yang jelas seperti "Temukan di Sekitar Saya".
+mengisinya melalui panggil-untuk-aksi yang jelas seperti "Find Near Me".
 
 <div class="attempt-left">
   <figure id="fig1">

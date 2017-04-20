@@ -92,11 +92,14 @@ gulp.task('clean', function() {
     'src/content/*/shows/index.md',
     'src/content/*/shows/**/feed.xml',
     'src/content/*/shows/http203/podcast/index.md',
+    'src/content/*/shows/designer-vs-developer/podcast/index.md',
     'src/content/*/updates/_index.yaml',
     'src/content/*/updates/*/index.md',
     'src/content/*/updates/tags/*',
     'src/data/codelabs/*/*.md',
     'src/data/codelabs/*/img/**',
+    'src/data/ilt-pwa/*/*.md',
+    'src/data/ilt-pwa/*/img/**',
     '!src/content/*/**/_generated.md'
   ];
   var opts = {dryRun: false, dot: true};

@@ -29,7 +29,7 @@ a tu sitio se redireccione a HTTPS.
 
 Lighthouse cambia la dirección URL de la página a `http`, la carga y espera que se produzca el
 evento del depurador de Chrome que indica que la página es segura. Si
-Lighthouse no recibe el evento en 10 segundos la auditoría falla.
+Lighthouse no recibe el evento en 10 segundos, la auditoría falla.
 
 
 {# wf_devsite_translation #}

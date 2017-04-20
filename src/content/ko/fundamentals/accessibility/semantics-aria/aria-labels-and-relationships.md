@@ -72,7 +72,7 @@ aria-label은 `label` 요소처럼 다른 네이티브 레이블링 메커니즘
 
 ARIA 사양에는 [8가지 관계
 속성](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_relationships){: .external }이 나와 있습니다.
-그 중 6가지인 `aria-activedescendant`, `aria-controls`, `aria-describedby`,
+그중 6가지인 `aria-activedescendant`, `aria-controls`, `aria-describedby`,
 `aria-labelledby`, `aria-owns`는 하나 또는 그 이상의 요소를 참조하여
 페이지에 있는 요소들 사이에 새로운 링크를 생성합니다. 각각의 경우에 있어
 그 링크의 의미와 사용자에게 표시되는 방식이 차이점입니다.

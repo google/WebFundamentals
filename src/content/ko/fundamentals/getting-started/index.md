@@ -104,7 +104,7 @@ Kit는 개발 프로세스를 진행하는 데 도움이 되는 다양한
 
 <div class="attempt-left">
   <a href="primers/shadowdom">
-    Shadow DOM v1: 재사용 가능 웹 구성 요소
+    Shadow DOM v1: 자체 포함 웹 구성 요소
   </a>
   <p>
     Shadow DOM은 렌더링되지만 표시되지는 않도록 캡슐화된 DOM 하위 트리입니다.

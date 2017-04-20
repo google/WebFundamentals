@@ -419,7 +419,7 @@ el nombre de los eventos.
 Para obtener más información, consulta este [artículo sobre actualizaciones de
 Microsoft](https://msdn.microsoft.com/en-us/library/dn304886(v=vs.85).aspx).
 
-## Referencia 
+## Referencia
 
 ### Seudoclases para estados de acciones táctiles
 

@@ -11,7 +11,7 @@ description:自适应网页设计模式正在快速发展，但只有少数几�
 
 自适应网页设计模式正在快速发展，但只有少数几种成熟的模式可以跨桌面设备和移动设备流畅运行。
 
-自适应网页所用的大部分布局可以归类为五种模式之一：mostly fluid、column drop、layout shifter、tiny tweaks 和 off canvas。在某些情况下，页面可能使用组合模式，例如 column drop 和 off canvas。这些模式最初由 [Luke Wroblewski](http://www.lukew.com/ff/entry.asp?1514)确定，为任何自适应页面提供了可靠的起点。
+自适应网页所用的大部分布局可以归类为五种模式之一：mostly fluid、column drop、layout shifter、tiny tweaks 和 off canvas。在某些情况下，页面可能使用组合模式，例如 column drop 和 off canvas。这些模式最初由 [Luke Wroblewski](http://www.lukew.com/ff/entry.asp?1514) 确定，为任何自适应页面提供了可靠的起点。
 
 
 

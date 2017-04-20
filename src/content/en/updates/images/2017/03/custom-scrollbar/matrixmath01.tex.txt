@@ -1,0 +1,20 @@
+\begin{array}{c}
+\text{Perspective matrix} \cdot \text{Scroll matrix}
+\cdot \text{Element transform matrix}\\
+= \\
+\left( \begin{array}{ccc}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & -1/p & 1 \\
+\end{array}\right)
+\cdot
+\left( \begin{array}{ccc}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & -n \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{array}\right)
+\cdot
+\text{Element transform matrix}
+\end{array}

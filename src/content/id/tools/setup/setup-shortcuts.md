@@ -5,7 +5,7 @@ description: Menyiapkan pintasan untuk tugas baris perintah yang sering Anda pak
 {# wf_updated_on: 2015-04-13 #}
 {# wf_published_on: 2014-09-24 #}
 
-# Mempersiapkan Pintasan Baris Perintah {: .page-title }
+# Menyiapkan Pintasan Baris Perintah {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}

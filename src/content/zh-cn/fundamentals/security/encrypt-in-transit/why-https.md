@@ -16,7 +16,7 @@ description:您应始终使用 HTTPS 保护您的所有网站，即使这些网�
 </div>
 
 您应始终使用 HTTPS 保护您的所有网站，即使这些网站并不处理敏感的通信。
-除了为网站和用户的个人信息提供关键的安全性和数据完整性外，许多新的浏览器功能，特别是[渐进式网络应用](/web/progressive-web-apps/)所需的那些功能也要求使用 HTTPS。
+除了为网站和用户的个人信息提供关键的安全性和数据完整性外，许多新的浏览器功能，特别是 [Progressive Web App](/web/progressive-web-apps/) 所需的那些功能也要求使用 HTTPS。
 
 
 
@@ -55,7 +55,7 @@ HTTPS 可防止入侵者能够被动地侦听您的网站和您的用户之间�
 
 ## HTTPS 是网络的未来发展方向
 
-强大的全新网络平台功能，如拍照或使用 `getUserMedia()` 录制音频，或通过服务工作线程启用离线应用体验，或构建渐进式网络应用，在执行前均需要用户的明确许可。还将更新许多较旧的 API，以要求执行权限，如 [geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation){: .external} API。HTTPS 是这些新功能和更新的 API 的权限工作流的一个关键组件。
+强大的全新网络平台功能，如拍照或使用 `getUserMedia()` 录制音频，或通过服务工作线程启用离线应用体验，或构建 Progressive Web App，在执行前均需要用户的明确许可。还将更新许多较旧的 API，以要求执行权限，如 [geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation){: .external} API。HTTPS 是这些新功能和更新的 API 的权限工作流的一个关键组件。
 
 
 

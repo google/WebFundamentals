@@ -190,7 +190,7 @@ em um evento no **Flame Chart**.
 
 ![barra de ferramentas de busca](imgs/find-toolbar.png)
 
-## Aumente o zoom em uma seção da Timeline {:#zoom}
+## Aumentar o zoom em uma seção da Timeline {:#zoom}
 
 Você pode aumentar o zoom em uma seção de uma gravação para facilitar a análise. Você usa
 o painel **Overview** para aproximar a vista em uma seção da gravação. Depois de aumentar o zoom,

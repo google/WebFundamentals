@@ -1,11 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Dalam codelab ini, Anda akan membangun sebuah Aplikasi Web Progresif (Progressive Web App), yang bisa dimuat dengan cepat, meskipun pada jaringan yang terputus-putus, memiliki ikon di halaman utama, dan termuat sebagai aplikasi layar penuh.
-translators:
-  - abdsomad
+description: Di codelab ini, Anda membangun Progressive Web App, yang dimuat dengan cepat, bahkan pada jaringan yang tidak stabil, memiliki ikon di layar beranda, dan dimuat dengan pengalaman tingkat atas selayar penuh.
 
-{# wf_auto_generated #}
-{# wf_updated_on: 2016-10-10T14:59:33Z #}
+{# wf_updated_on: 2017-01-05T16:32:36Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -15,230 +12,171 @@ translators:
 
 
 
-## Pengenalan
+## Pengantar
 
 
 
 
-[Progressive Web Apps](/web/progressive-web-apps) memberikan pengalaman terbaik
-dari penggabungan teknologi web dan aplikasi. Teknologi ini memungkinkan
-pengguna untuk bisa segera menggunakan aplikasi, seketika sejak saat kunjungan
-pertama, tanpa perlu melakukan instalasi apa pun. Seiring dengan semakin
-seringnya pengguna menggunakan aplikasi, kemampuan aplikasi akan menjadi
-semakin efektif. Aplikasi termuat dengan cepat, bahkan pada jaringan yang 
-terputus-putus, juga bisa mengirimkan *push notification* yang relevan, 
-memiliki ikon pada layar utama dan memuat halaman layar penuh dengan level 
-kenyamanan tertinggi.
+[Progressive Web App](/web/progressive-web-apps) adalah pengalaman yang menggabungkan yang terbaik dari web dan yang terbaik dari aplikasi. Pengalaman ini bermanfaat untuk pengguna dari kunjungan pertamanya di tab browser, tanpa harus melakukan pemasangan. Pengguna secara progresif akan membangun hubungan dengan aplikasi, yang semakin lama semakin kuat. Aplikasi dimuat cepat, bahkan pada jaringan yang tidak stabil, mengirimkan pemberitahuan push yang relevan, memiliki ikon pada layar beranda, dan dimuat dengan pengalaman tingkat atas selayar penuh.
 
-### Apakah Progressive Web App itu?
+### Apa itu Progressive Web App?
 
-Progressive Web App memiliki sifat:
+Progressive Web App adalah:
 
-* __Progressive__ - Berfungsi dengan baik untuk berbagai macam ragam pengguna,
-terlepas dari pilihan browser karena aplikasi ini dibangun dengan perbaikan
-secara bertahap sebagai prinsip utamanya.
-* __Responsive__ - Cocok dengan berbagai macam perangkat: desktop, seluler,
-tablet, atau apa pun berikutnya.
-* __Connectivity independent__ - Disempurnakan dengan *service worker* agar
-berfungsi secara offline pada jaringan berkualitas rendah.
-* __App-like__ - Serasa benar-benar seperti aplikasi bagi pengguna dengan
-interaksi app-style berkat penerapan model app shell.
-* __Fresh__ - Selalu up-to-date, berkat proses pembaruan yang disediakan oleh
-*service worker*.
-* __Safe__ - Dilayani melalui HTTPS untuk mencegah pengintaian dan memastikan
-konten tidak dirusak oleh peretas.
-* __Discoverable__ - Bisa diidentifikasi sebagai "aplikasi" berkat manifest
-W3C dan pendaftaran service worker memungkinkan mesin pencari untuk menemukan
-aplikasi ini.
-* __Re-engageable__ - Membuat pelanggan kembali berinteraksi melalui fitur
-*push notification*.
-* __Installable__ - Memungkinkan pengguna untuk "menyimpan" aplikasi yang
-mereka anggap paling berguna di layar utama mereka tanpa harus melalui
-kerumitan instalasi dari app store.
-* __Linkable__ - Mudah berbagi melalui URL dan tidak memerlukan instalasi 
-yang rumit.
+* __Progresif__ - Bekerja untuk setiap pengguna, apa pun pilihan browser mereka karena dibangun dengan peningkatan progresif sebagai konsep intinya.
+* __Responsif__ - Cocok dengan setiap faktor bentuk: perangkat desktop, seluler, tablet, atau apa saja yang muncul berikutnya.
+* __Konektivitas independen__ - Disempurnakan dengan service worker agar bisa bekerja offline atau pada jaringan berkualitas-rendah.
+* __Seperti-Aplikasi__ - Terasa seperti sebuah aplikasi untuk pengguna dengan interaksi dan navigasi bergaya-aplikasi karena mereka dibangun di atas model shell aplikasi.
+* __Segar__ - Selalu terkini berkat proses pembaruan service worker.
+* __Aman__ - Disediakan melalui HTTPS untuk mencegah snooping dan memastikan materi belum dirusak.
+* __Dapat ditemukan__ - Dapat diidentifikasi sebagai "aplikasi" berkat manifes W3C dan cakupan registrasi service worker, yang memungkinkan mesin telusur untuk menemukannya.
+* __Bisa dilibatkan-kembali__ - Kemudahan untuk dilibatkan-kembali dengan fitur seperti pemberitahuan push.
+* __Dapat dipasang__ - Memungkinkan pengguna untuk "menyimpan" aplikasi yang mereka anggap paling berguna di layar beranda tanpa kerumitan toko aplikasi.
+* __Bisa ditautkan__ - Dapat dengan mudah dibagikan melalui URL, tidak memerlukan pemasangan yang rumit.
 
-Codelab ini akan memandu Anda untuk membuat sendiri Progressive Web App, 
-termasuk memberikan pertimbangan desain, serta detail implementasinya untuk 
-memastikan bahwa aplikasi Anda memenuhi prinsip-prinsip utama dari
-Progressive Web App.
+Codelab ini akan memandu Anda untuk membuat Progressive Web App, termasuk pertimbangan desain, serta detail implementasi untuk memastikan bahwa aplikasi Anda memenuhi prinsip kunci dari Progressive Web App.
 
 ### Apa yang akan kita bangun?
 
+Dalam codelab ini, Anda akan membangun aplikasi web Weather menggunakan teknik Progressive Web
+App. Mari kita mengingat sifat dari Progressive Web App:
+
+* **Progresif** - kita akan menggunakan peningkatan progresif ke seluruh proses.
+* **Responsif** - kita akan memastikan itu cocok dengan setiap faktor bentuk.
+* **Konektivitas** independen - kita akan meng-cache shell aplikasi dengan service worker.
+* **Seperti-Aplikasi** - kita akan menggunakan interaksi bergaya-aplikasi untuk menambahkan kota dan segarkan data.
+* **Segar** - kita akan meng-cache data terbaru dengan service worker.
+* **Aman** - kita akan menerapkan aplikasi ke host yang mendukung HTTPS.
+* **Dapat ditemukan dan dipasang** - kita akan menyertakan manifes sehingga memudahkan mesin telusur menemukan aplikasi kita.
+* **Bisa ditautkan** - ini adalah web!
+
 ### Apa yang akan Anda pelajari
 
-* Bagaimana merancang dan membangun sebuah aplikasi dengan menggunakan metode
-"app shell"
-* Cara membuat aplikasi Anda berjalan offline
-* Bagaimana cara menyimpan data untuk penggunaan offline pada penggunaan berikutnya
+* Bagaimana merancang dan membangun sebuah aplikasi menggunakan metode "shell aplikasi"
+* Cara membuat aplikasi Anda bekerja offline
+* Cara menyimpan data untuk penggunaan offline nantinya
 
-### Apa saja yang diperlukan?
+### Apa yang Anda butuhkan
 
-* Chrome 52 atau lebih tinggi
-*  [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb), atau web server pilihan Anda sendiri
-* Contoh kode
+* Chrome 52 atau di atasnya
+*  [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb), atau server web pilihan Anda
+* Kode contoh
 * Editor teks
 * Pengetahuan dasar tentang HTML, CSS, JavaScript, dan Chrome DevTools
 
-Codelab ini fokus pada Progressive Web Apps. Konsep dan blok kode yang tidak
-relevan akan diabaikan dan disediakan untuk Anda agar bisa disalin dan tempel
-(copy-paste) dengan mudah.
+Codelab ini berfokus pada Progressive Web App. Konsep dan blok kode yang tidak-relevan akan dipoles dan disediakan sehingga Anda cukup salin dan tempel.
 
 
-## Mulai Setup
+## Persiapan
 
 
 
 
-### Unduh Kode
+### Mengunduh Kode
 
-Klik tombol di bawah ini untuk mengunduh semua kode yang diperlukan untuk 
-memulai codelab ini:
+Klik tombol berikut untuk mengunduh semua kode bagi codelab:
 
-[](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
+[Tautan](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 
-Ekstrak file zip yang diunduh ke folder (`your-first-pwapp-master`), yang 
-berisi satu folder untuk setiap tahap di codelab ini, bersama dengan semua
-resource lain yang akan Anda perlukan.
+Mengekstrak file zip yang diunduh. Ini akan mengekstrak folder root (`your-first-pwapp-master`), yang berisi satu folder untuk setiap langkah codelab, bersama dengan semua sumber daya yang Anda butuhkan.
 
-Folder `step-NN` berisi kondisi akhir yang diharapkan dari setiap tahap 
-codelab ini. File-file ini berada di sana sebagai referensi. Kita akan 
-melakukan semua pekerjaan koding di direktori `work`.
+Folder `step-NN` berisi status akhir yang diinginkan dari setiap langkah codelab ini. Folder tersebut digunakan sebagai referensi. Kita akan melakukan semua pekerjaan pengkodean di direktori yang disebut `work`.
 
-### Install dan pastikan web server bekerja
+### Memasang dan memverifikasi server web
 
-Meski pun Anda bebas untuk menggunakan web server Anda sendiri, codelab ini 
-didesain menggunakan Chrome Web Server. Jika Anda belum menginstall aplikasi 
-tersebut, Anda bisa menginstallnya dari Chrome Web Store. 
+Meskipun Anda bebas menggunakan server web sendiri, codelab ini dirancang untuk bekerja dengan baik bersama Server Web Chrome. Jika Anda belum memasang aplikasi tersebut, Anda bisa memasangnya dari Toko Web Chrome.
 
-[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Tautan](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-Setelah menginstall Web Server di Chrome, klik shortcut Apps di kotak bookmark: 
+Setelah memasang aplikasi Web Server for Chrome, klik pada pintasan Apps di bilah bookmark: 
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
-Di layar berikutnya, klik di icon Web Server: 
+Pada jendela berikutnya, klik ikon Web Server: 
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
-Anda akan melihat dialog berikut, yang memungkinkan Anda untuk 
-mengkonfigurasikan web server lokal Anda:
+Berikutnya, Anda akan melihat dialog ini, yang memungkinkan Anda mengonfigurasi server web lokal:
 
 ![433870360ad308d4.png](img/433870360ad308d4.png)
 
-Klik tombol __choose folder__, dan pilih folder `work`. Langkah ini
-membuat pekerjaan in-progress Anda akan dilayani dari URL yang disorot
-di dialog web server (di bagian __Web Server URL(s)__).
+Klik tombol __choose folder__, dan pilih folder `work`. Ini memungkinkan Anda untuk menyajikan pekerjaan yang sedang berlangsung melalui URL yang disorot dalam dialog server web (di bagian __Web Server URL(s)__).
 
-Di bawah Options, klik checkbox "Automatically show index.html", seperti di 
-bawah ini:
+Di bawah Options, centang kotak di sebelah "Automatically show index.html", seperti yang ditampilkan di bawah ini:
 
 ![39b4e0371e9703e6.png](img/39b4e0371e9703e6.png)
 
-Kemudian hentikan dan jalankan ulang server dengan cara menggeser toggle yang
-berlabel: "Web Server: STARTED" ke kiri, kemudian geser kembali ke kanan.
+Kemudian berhenti dan restart server dengan menggeser toggle yang berlabel "Web Server: STARTED" ke kiri dan kemudian kembali ke kanan.
 
 ![daefd30e8a290df5.png](img/daefd30e8a290df5.png)
 
-Sekarang, kunjungi situs kerja Anda di browser (dengan cara klik pada 
-URL Web Server yang tersorot) dan Anda akan melihat sebuah halaman yang 
-terlihat seperti di bawah ini: 
+Sekarang kunjungi situs pekerjaan dalam browser web Anda (dengan mengeklik Web Server URL yang disorot) dan Anda akan melihat laman yang terlihat seperti ini:
 
 ![aa64e93e8151b642.png](img/aa64e93e8151b642.png)
 
-Sejauh ini, aplikasi ini masih belum melakukan sesuatu yang menarik, aplikasi 
-kita hanya berisi kerangka minimal dengan spinner yang kita gunakan untuk 
-memverifikasi bahwa web server sudah bisa digunakan. Kita akan menambahkan 
-beberapa fungsi dan fitur UI pada langkah-langkah berikutnya.
+Jelas, aplikasi ini belum melakukan sesuatu yang menarik - sejauh ini, hanya kerangka minimal dengan spinner yang kami gunakan untuk memverifikasi fungsionalitas server web Anda. Kami akan menambahkan fungsionalitas dan fitur UI dalam langkah-langkah berikutnya. 
 
 
-## Merancang App Shell Anda
+## Arsitektur Shell Aplikasi Anda
 
 
 
 
-### Apa itu app shell?
+### Apa yang dimaksud dengan shell aplikasi?
 
-App Shell, adalah kombinasi HTML, CSS, dan JavaScript paling minimum yang 
-diperlukan untuk menampilkan antarmuka pengguna sebuah Progressive Web App 
-dan merupakan salah satu komponen yang menjamin kinerja yang bisa diandalkan. 
-Pemuatan pertama harus sangat cepat, dan harus segera di-cache-kan. 
-"Cached" berarti bahwa file shell dimuat sekali saja melalui jaringan dan 
-kemudian disimpan di perangkat secara lokal.
-Berikutnya, setiap kali pengguna membuka aplikasi, file shell dimuat dari 
-cache, sehingga menghasilkan pemuatan konten yang super cepat.
-Ini berarti bahwa app shell tidak perlu dimuat setiap kali, bahkan hanya perlu 
-mendapatkan konten yang diperlukan saja.
+Shell aplikasi adalah HTML, CSS, dan JavaScript minimum yang diperlukan untuk menenagai antarmuka pengguna progressive web app dan merupakan salah satu komponen yang memastikan kinerja yang baik dan bisa diandalkan. Pemuatan pertama harus sangat cepat dan langsung di-cache. "Di-cache" berarti bahwa file shell dimuat setelah melalui jaringan dan kemudian disimpan ke perangkat lokal. Setiap kali pengguna membuka aplikasi, file shell dimuat dari cache perangkat lokal, yang menghasilkan waktu startup super cepat. 
 
-Arsitektur App Shell memisahkan infrastruktur aplikasi inti dan antar muka dari 
-data. Semua antar muka dan infrastruktur di-cache-kan secara lokal menggunakan 
-service worker sehingga pada pemuatan berikutnya, Progressive Web App hanya 
-perlu mengambil data yang diperlukan saja, tanpa harus memuat ulang semuanya.
+Arsitektur shell aplikasi memisahkan infrastruktur aplikasi inti dan UI dari data. Semua UI dan infrastruktur di-cache secara lokal menggunakan service worker sehingga pada pemuatan berikutnya, Progressive Web App hanya perlu mengambil data yang dibutuhkan, alih-alih memuat semuanya.
 
 ![156b5e3cc8373d55.png](img/156b5e3cc8373d55.png)
 
-Dengan kata lain, app shell mirip dengan buntalan kode yang akan Anda 
-publikasikan ke app store pada saat mempublikasikan aplikasi native. 
-App shell adalah komponen inti yang diperlukan agar aplikasi Anda bisa hidup,
-meskipun belum berisi data.
+Dengan kata lain, shell aplikasi serupa dengan bundel kode yang akan Anda publikasikan ke toko aplikasi ketika membuat aplikasi asli. Ini adalah komponen inti yang diperlukan untuk membangun aplikasi Anda dari dasar, namun kemungkinan tidak berisi data.
 
-### Mengapa menggunakan arsitektur app shell?
+### Mengapa menggunakan arsitektur Shell Aplikasi?
 
-Menggunakan arsitektur app shell memungkinkan Anda memusatkan perhatian pada 
-kecepatan, memberikan Progressive Web App fitur yang serupa dengan aplikasi 
-native, yaitu: pemuatan instan dan update berkala, tanpa perlu proses publikasi 
-ke app store.
+Menggunakan arsitektur shell aplikasi memungkinkan Anda untuk fokus pada kecepatan, memberikan Progressive Web App properti yang mirip dengan aplikasi asli: pemuatan langsung dan pembaruan rutin, semua tanpa membutuhkan sebuah toko aplikasi.
 
-### Mendesain App Shell 
+### Mendesain Shell Aplikasi 
 
-Langkah pertamanya adalah: membagi-bagi desain sampai ke komponen inti. 
+Langkah pertama adalah memecahkan desain hingga ke dalam komponen inti.
 
-Tanya diri Anda:
+Tanyakan pada diri Anda:
 
-* Apa yang harus tampil di layar secepatnya? 
-* Apa saja komponen antar muka lain yang menjadi kunci jalannya aplikasi? 
-* Apa saja sumber daya dukungan yang dibutuhkan untuk app shell? Contoh: 
-gambar, JavaScript, CSS, dll.
+* Apa yang harus segera ditampilkan di layar?
+* Apa komponen UI lain yang merupakan kunci untuk aplikasi?
+* Apa sumber daya pendukung yang dibutuhkan oleh shell aplikasi? Misalnya gambar, JavaScript, gaya, dll.
 
-Kita akan membuat Aplikasi Cuaca sebagai aplikasi Progressive Web App pertama kita. 
-Komponen utamanya terdiri dari:
+Kita akan membuat aplikasi Weather sebagai Progressive Web App yang pertama. Komponen utamanya terdiri dari:
 
-Ketika merancang sebuah aplikasi yang lebih kompleks, konten yang tidak 
-diperlukan untuk pemuatan awal bisa dimuat belakangan dan disimpan di cache 
-terlebih dahulu untuk penggunaan berikutnya. Sebagai contoh, kita bisa menunda 
-pemuatan dialog Tambah Kota sampai kita selesai menampilkan halaman awal, 
-kemudian mencari waktu yang tepat saat aplikasi sedang tidak memproses tampilan 
-(saat CPU menganggur) untuk memuat sisa resource yang akan ditampilakan nanti.
+* Header dengan judul, dan tombol add/refresh
+* Kontainer untuk kartu prakiraan cuaca
+* Template kartu prakiraan
+* Kotak dialog untuk menambahkan kota baru
+* Indikator pemuatan
+
+Ketika mendesain aplikasi yang lebih kompleks, materi yang tidak diperlukan untuk pemuatan awal dapat diminta belakangan dan kemudian di-cache untuk penggunaan mendatang. Misalnya, kita bisa menunda pemuatan kotak dialog New City sampai kita selesai merender pengalaman pertama menjalankan dan tersedia beberapa siklus yang diam.
 
 
-## Implementasikan App Shell Anda 
+## Mengimplementasikan Shell Aplikasi Anda
 
 
 
 
+Ada beberapa cara untuk memulai proyek, dan kami biasanya merekomendasikan untuk menggunakan Web Starter Kit. Namun, dalam kasus ini, agar proyek kita tetap sesederhana mungkin dan berkonsentrasi pada Progressive Web App, kami telah menyediakan semua sumber daya yang Anda butuhkan.
 
-Ada beberapa cara untuk memulai proyek, dan kami menganjurkan untuk menggunakan 
-Web Starter Kit. Namun, untuk saat ini, proyek ini dibuat sesederhana mungkin 
-sehingga Anda bisa berkonsentrasi pada pembuatan Progressive Web Apps.
-Oleh karena itu, kami menyediakan semua sumber daya yang Anda butuhkan untuk 
-memulai.
+### Membuat HTML untuk Shell Aplikasi
 
-### Buat HTML untuk App Shell
+Sekarang kita akan menambahkan komponen inti yang kita bahas dalam [Arsitektur Shell Aplikasi](/web/fundamentals/getting-started/your-first-progressive-web-app/step-01).
 
-Sekarang, kita akan menambahkan komponen inti yang kita diskusikan di 
-[Merancang App Shell](/web/fundamentals/getting-started/your-first-progressive-web-app/step-01).
+Ingat, komponen utama terdiri dari:
 
-Ingat, komponen pentingnya terdiri dari:
+* Header dengan judul, dan tombol add/refresh
+* Kontainer untuk kartu prakiraan cuaca
+* Template kartu prakiraan
+* Dialog untuk menambahkan kota baru
+* Indikator pemuatan
 
-* Header dengan judul, dan tombol tambah/pembaruan
-* Kontainer untuk kartu Prakiraan
-* Sebuah template kartu Prakiraan
-* Sebuah dialog untuk menambahkan kota baru
-* Sebuah indikator pemuatan
-
-File `index.html` yang berada di folder `work` Anda harus tampak seperti 
-berikut (ini adalah sebagian dari konten sebenarnya, jangan salin kode ini ke 
-dalam file Anda):
+File `index.html` yang sudah ada dalam direktori `work` harus terlihat seperti ini (ini adalah bagian dari materi sebenarnya, jangan menyalin kode ini ke dalam file Anda):
 
 ```
 <!DOCTYPE html>
@@ -278,106 +216,70 @@ dalam file Anda):
 </html>
 ```
 
-Perhatikan bahwa loader terlihat secara default. Hal ini bertujuan untuk 
-memastikan bahwa pengguna melihat loader segera pada saat halaman ini dimuat, 
-sehingga memberi mereka indikasi yang jelas bahwa konten tersebut sedang 
-dimuat.
+Perhatikan bahwa loader terlihat secara default. Ini memastikan bahwa pengguna melihat pemuat begitu laman dimuat, memberi mereka tanda yang jelas bahwa materi sedang memuat.
 
-Untuk menghemat waktu, kami telah membuat stylesheet untuk Anda gunakan.
+Untuk menghemat waktu, kami juga sudah membuat stylesheet yang bisa Anda gunakan.
 
-### Perhatikan kode JavaScript penting berikut
+### Memeriksa kunci kode aplikasi JavaScript
 
-Sekarang, karena kita memiliki sebagian besar antar muka yang sudah siap, 
-saatnya untuk memulai mengaitkan kode agar semuanya tersambung. 
-Seperti bagian dari app shell lainnya, perhatikan apa saja kode yang diperlukan 
-untuk tampilan utama dan apa saja kode yang bisa ditunda untuk dibuka pada 
-saatnya nanti.
+Sekarang kita memiliki sebagian besar UI yang siap, tiba saatnya menghubungkan kode untuk membuatnya berfungsi. Seperti seluruh shell aplikasi, kenali kodeapa yang diperlukan sebagai bagian dari pengalaman kunci dan apa yang bisa dimuat belakangan.
 
-Direktori kerja Anda telah berisi kode aplikasi (`scripts/app.js`), di dalamnya Anda akan menemukan:
+Direktori pekerjaan Anda juga sudah memuat kode aplikasi (`scripts/app.js`), di dalamnya Anda akan menemukan:
 
-* Sebuah objek `app` yang berisi beberapa informasi utama yang diperlukan aplikasi.
-* Event listener untuk semua tombol di header (`add/refresh`) dan pada dialog 
-Tambah Kota (`add/cancel`).
-* Sebuah method untuk menambah atau memperbarui kartu Prakiraan Cuaca 
-(`app.updateForecastCard`).
-* Sebuah method untuk mendapatkan data Perkiraan Cuaca terbaru dari 
-Firebase Public Weather API (`app.getForecast`).
-* Sebuah method untuk meng-iterasi kartu dan memanggil `app.getForecast` untuk 
-mendapatkan data Prakiraan Cuaca (`app.updateForecasts`).
-* Beberapa data palsu (`fakeForecast`) yang dapat digunakan untuk mempercepat 
-pengujian tampilan.
+* Objek `app` yang berisi beberapa informasi kunci yang diperlukan untuk aplikasi.
+* Event listener untuk semua tombol di header (`add/refresh`) dan pada dialog tambahkan kota (`add/cancel`).
+* Metode untuk menambah atau memperbarui kartu prakiraan (`app.updateForecastCard`).
+* Metode untuk mendapatkan data prakiraan cuaca terbaru dari Firebase Public Weather API (`app.getForecast`).
+* Metode untuk melakukan iterasi kartu sekarang dan memanggil `app.getForecast` untuk mendapatkan data prakiraan terbaru (`app.updateForecasts`).
+* Beberapa data palsu (`initialWeatherForecast`) bisa Anda gunakan untuk dengan cepat menguji bagaimana segala sesuatu di-render.
 
-### Pengujian
+### Lakukan pengujian
 
-Sekarang, karena Anda telah menambahkan HTML inti, style dan JavaScript, 
-saatnya untuk menguji aplikasi ini.
+Karena sekarang Anda telah mendapat HTML, gaya dan JavaScript inti, saatnya untuk menguji aplikasi.
 
-Untuk melihat bagaimana data cuaca palsu dirender, hilangkan tanda komentar 
-pada baris berikut di bagian bawah file `index.html` Anda:
+Untuk melihat bagaimana data cuaca palsu dirender, hilangkan tanda komentar pada baris berikut di bagian bawah file `index.html` Anda:
 
     <!--<script src="scripts/app.js" async></script>-->
 
-Berikutnya, hilangkan tanda komentar pada baris berikut di bagian bawah file `app.js`:
+Berikutnya, hilangkan tanda komentar pada baris berikut di bagian bawah file `app.js` Anda:
 
     // app.updateForecastCard(initialWeatherForecast);
 
-Muat ulang aplikasi Anda. Hasilnya harus tampil dengan baik (meskipun dengan 
-data palsu, seperti yang Anda perhatikan pada data tanggalnya) kartu prakiraan
-cuaca dengan spinner dinonaktifkan, seperti berikut:
+Muat ulang aplikasi Anda. Hasilnya akan menjadi kartu prakiraan yang terformat dengan baik (meskipun palsu, Anda bisa tahu dari tanggalnya) dengan spinner dinonaktifkan, seperti ini:
 
 ![166c3b4982e4a0ad.png](img/166c3b4982e4a0ad.png)
 
-[](https://weather-pwa-sample.firebaseapp.com/step-04/)
+[Tautan](https://weather-pwa-sample.firebaseapp.com/step-04/)
 
-Setelah Anda mencoba dan memverifikasi bahwa aplikasi bisa bekerja seperti yang
-diharapkan, Anda bisa menghapus panggilan ke `app.updateForecastCard`. 
-Kita hanya perlu memastikan bahwa semuanya bekerja seperti yang diharapkan.
+Setelah Anda mencobanya dan memverifikasi bahwa itu bekerja sesuai harapan, Anda bisa membuang panggilan ke `app.updateForecastCard` dengan data palsu lagi. Kita hanya memerlukannya untuk memastikan bahwa semuanya bekerja sesuai harapan.
 
 
 ## Memulai dengan pemuatan pertama yang cepat
 
 
 
-Progressive Web Apps harus dimuat dengan cepat dan dapat digunakan seketika. 
-Pada saat ini, Aplikasi Cuaca telah bisa dimuat dengan cepat, akan tapi masih 
-belum bisa digunakan, karena belum ada data. Kita bisa membuat permintaan AJAX 
-untuk mendapatkan data, tapi hal ini akan mengakibatkan permintaan tambahan 
-yang menjadikan pemuatan awal menjadi lebih lama. Oleh karena itu, berikan data 
-sebenarnya pada pemuatan berikutnya.
 
-### Suntikkan data Perkiraan Cuaca
+Progressive Web App harus mulai dengan cepat dan bisa langsung dipakai. Dengan kondisi saat ini, Aplikasi Weather kita dimulai dengan cepat, tapi tidak dapat digunakan. Tidak ada data. Kita bisa membuat permintaan AJAX untuk mendapatkan data tersebut, tapi itu akan mengakibatkan permintaan tambahan dan membuat muat awal lebih lama. Sebaiknya, berikan data real di pemuatan pertama.
 
-Untuk Code Lab berikut, kita akan menyuntikkan data ramalan cuaca secara 
-statis, namun dalam aplikasi aslinya, data Prakiraan Cuaca terbaru akan 
-disuntikkan oleh server berdasarkan geolokasi alamat IP pengguna.
+### Memasukkan data prakiraan cuaca
 
-Kode sudah berisi data yang akan kita suntikkan. Yaitu `initialWeatherForecast` 
-yang kita gunakan pada langkah sebelumnya.
+Untuk code lab ini, kami menyimulasikan server memasukkan prakiraan cuaca langsung ke dalam JavaScript, namun dalam aplikasi produksi, data prakiraan cuaca terbaru akan dimasukkan oleh server berdasarkan geo-lokasi alamat IP pengguna.
 
-### Membuat perbedaan saat aplikasi pertama kali dijalankan
+Kode sudah berisi data yang akan kita masukkan. Ini adalah `initialWeatherForecast` yang kita gunakan pada langkah sebelumnya.
 
-Namun, bagaimana kita bisa mengetahui kapan waktu yang tepat untuk menampilkan 
-informasi ini, yang bisa saja tidak relevan pada pemuatan berikutnya ketika 
-aplikasi cuaca ditarik dari cache? Ketika pengguna memuat aplikasi pada 
-kunjungan berikutnya, mereka mungkin telah berpindah kota, sehingga kita perlu 
-memuat nama-nama kota tersebut, tidak selalu kota pertama yang sekarang 
-mereka lihat.
+### Membedakan pertama kali dijalankan
 
-Preferensi pengguna seperti daftar kota yang sering disinggahi pengguna harus 
-disimpan secara lokal menggunakan IndexedDB atau mekanisme penyimpanan lokal 
-lainnya. Untuk menyederhanakan contoh ini semaksimal mungkin, kami menggunakan 
-`localStorage` yang tidak ideal untuk aplikasi sebenarnya, karena pada saat 
-penulisan data menerapkan mekanisme penyimpanan synchronous, menghalangi proses 
-lain, sehingga bisa berpotensi sangat lambat pada beberapa perangkat.
+Namun, bagaimana kita tahu kapan menampilkan informasi ini, yang mungkin tidak relevan pada pemuatan mendatang ketika aplikasi cuaca ditarik dari cache? Ketika pengguna memuat aplikasi pada kunjungan berikutnya, mereka mungkin telah berpindah kota, jadi kita harus memuat informasi untuk kota tersebut, tidak selalu kota pertama yang pernah mereka singgahi.
 
-Pertama, mari kita menambahkan kode untuk menyimpan preferensi pengguna dalam 
-`app.js`. Temukan komentar TODO di bawah ini di kode Anda.
+Preferensi pengguna, seperti daftar kota langganan pengguna, harus disimpan secara lokal menggunakan IndexedDB atau mekanisme penyimpanan cepat lainnya. Untuk menyederhanakan code lab ini semaksimal mungkin, kami menggunakan [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), yang tidak ideal untuk aplikasi produksi karena ini adalah mekanisme penyimpanan sinkron yang memblokir sehingga berpotensi sangat lambat pada beberapa perangkat.
+
+Pertama, mari kita tambahkan kode yang diperlukan untuk menyimpan preferensi pengguna. Temukan komentar TODO berikut dalam kode Anda.
 
 ```
   // TODO add saveSelectedCities function here
 ```
 
-Dan tambahkan kode berikut di bawah komentar: 
+Dan tambahkan kode berikut di bawah komentar.
 
 ```
   // Save list of cities to localStorage.
@@ -387,15 +289,13 @@ Dan tambahkan kode berikut di bawah komentar:
   };
 ```
 
-Selanjutnya, mari kita menambahkan kode untuk memeriksa apakah pengguna 
-berlangganan ke suatu kota dan menampilkannya, atau gunakan data yang 
-disuntikkan. Temukan komentar TODO berikut:
+Berikutnya, mari kita tambahkan kode startup untuk memeriksa apakah pengguna memiliki kota yang disimpan dan merender kota tersebut, atau menggunakan data yang dimasukkan. Temukan komentar berikut:
 
 ```
   // TODO add startup code here
 ```
 
-Dan tambahkan kode berikut di bawah komentar: 
+Dan tambahkan kode berikut di bawah komentar ini.
 
 ```
 /************************************************************************
@@ -429,18 +329,13 @@ Dan tambahkan kode berikut di bawah komentar:
   }
 ```
 
-Kode startup memeriksa apakah ada kota yang disimpan dalam penyimpanan lokal. 
-Jika ada, maka kode akan mem-parsing data penyimpanan lokal dan kemudian 
-menampilkan kartu prakiraan cuaca terhadap semua kota yang disimpan. 
-Selain itu, kode startup hanya menggunakan perkiraan data palsu dan 
-menyimpannya sebagai kota default.
+Kode startup memeriksa bila ada kota yang disimpan dalam penyimpanan lokal. Jika ada, itu akan mem-parse data penyimpanan lokal dan kemudian menampilkan kartu prakiraan untuk masing-masing kota yang disimpan. Jika tidak, kode startup akan menggunakan data prakiraan palsu dan menyimpannya sebagai kota default.
 
-### Simpan kota-kota yang dipilih
+### Menyimpan kota yang dipilih
 
-Akhirnya, Anda perlu mengubah handler tombol "add city" untuk menyimpan kota 
-yang dipilih ke dalam penyimpanan lokal.
+Yang terakhir, Anda harus mengubah penangan tombol "add city" untuk menyimpan kota yang dipilih ke penyimpanan lokal.
 
-Update kode handler klik `butAddCity` agar sama dengan kode di bawah ini:
+Perbarui penangan klik `butAddCity` Anda sehingga sesuai dengan kode berikut:
 
 ```
 document.getElementById('butAddCity').addEventListener('click', function() {
@@ -459,64 +354,38 @@ document.getElementById('butAddCity').addEventListener('click', function() {
   });
 ```
 
-Penambahan barunya adalah inisialisasi `app.selectedCities` bila belum ada, 
-dan pemanggilan ke `app.selectedCities.push()` dan `app.saveSelectedCities()`.
+Tambahan yang baru adalah inisialisasi `app.selectedCities` jika tidak terdapat hal tersebut, serta panggilan ke `app.selectedCities.push()` dan `app.saveSelectedCities()`.
 
-### Pengujian
+### Lakukan pengujian
 
-* Saat pertama kali dijalankan, aplikasi Anda harus segera menampilkan 
-Prakiraan Cuaca dari `InitialWeatherForecast`. 
-* Tambahkan satu kota baru dan pastikan bahwa aplikasi menampilkan dua kartu.
-* Refresh browser dan periksa bahwa aplikasi tetap menampilkan informasi 
-terbaru dari dua kota yang dipilih.
+* Ketika pertama kali dijalankan, aplikasi Anda harus langsung menunjukkan pengguna prakiraan dari `initialWeatherForecast`.
+* Tambahkan kota baru (dengan mengeklik ikon + di sudut kanan atas) dan verifikasi bahwa dua kartu ditampilkan.
+* Segarkan browser dan verifikasi bahwa aplikasi memuat prakiraan dan menampilkan informasi terbaru.
 
-[](https://weather-pwa-sample.firebaseapp.com/step-05/)
+[Tautan](https://weather-pwa-sample.firebaseapp.com/step-05/)
 
 
-## Gunakan service worker untuk melakukan pre-cache terhadap App Shell
+## Menggunakan service worker untuk melakukan precache Shell Aplikasi
 
 
 
 
-Progresif Web Apps harus cepat, dan bisa diinstall, bekerja pada saat online, 
-offline, koneksi terputus-putus, dan juga pada saat mendapatkan koneksi yang 
-sangat lambat. Untuk mencapainya, kita perlu menerapkan mekanisme cache 
-terhadap app shell kita menggunakan service worker sehingga semua sumber daya 
-yang diperlukan selalu tersedia dengan cepat dan bisa diandalkan.
+Progressive Web App harus cepat, dan dapat dipasang, yang berarti bahwa mereka tetap berfungsi saat online, offline, dan pada koneksi yang lambat serta tidak stabil. Untuk mencapai ini, kita harus meng-cache shell aplikasi menggunakan service worker, sehingga selalu tersedia dengan cepat dan bisa diandalkan.
 
-Jika Anda belum terbiasa dengan service worker, Anda bisa memperoleh dasar 
-pemahaman dengan membaca 
-[Pengenalan Service Worker](/web/fundamentals/primers/service-worker/) tentang 
-apa yang bisa mereka lakukan, siklus hidup, dan lainnya. Setelah Anda 
-menyelesaikan codelab ini, pastikan untuk mempelajari codelab 
-[Mendebug Service Worker](http://goo.gl/jhXCBy) untuk mendapatkan pemahaman 
-lebih dalam tentang bagaimana bekerja dengan service worker. 
+Jika Anda belum familier dengan service worker, Anda bisa mendapatkan pemahaman dasar dengan membaca [Pengantar Service Workers](/web/fundamentals/primers/service-worker/) tentang apa yang bisa mereka lakukan, bagaimana daur hidupnya dan lainnya. Setelah menyelesaikan code lab ini, pastikan untuk memeriksa [Men-debug Service Worker code lab](https://goo.gl/jhXCBy) untuk menilik secara lebih dalam tentang cara bekerja dengan service worker.
 
-Fitur yang disediakan melalui service workder bisa dianggap sebagai 
-penyempurnaan secara progresif, dan hanya ditambahkan saat didukung oleh 
-browser. Misalnya, dengan service worker Anda bisa menyimpan app shell dan 
-data untuk aplikasi Anda, sehingga file-file tersebut tersedia bahkan pada 
-saat jaringan terputus-putus. Ketika service worker tidak didukung, kode 
-offline tidak dipanggil, dan pengguna mendapatkan pengalaman seperti biasa. 
-Penggunaan fitur pendeteksi untuk memberikan penyempurnaan secara progresif 
-memiliki sedikit overhead dan dijamin tidak akan mengakibatkan kerusakan di 
-browser lama yang tidak mendukung fitur itu.
+Fitur yang disediakan melalui service worker harus dianggap sebagai peningkatan progresif, dan hanya ditambahkan jika didukung oleh browser. Misalnya, dengan service worker Anda bisa meng-cache shell aplikasi dan data untuk aplikasi, sehingga mereka tersedia bahkan ketika tidak ada jaringan. Ketika service worker tidak didukung, kode offline tidak dipanggil, dan pengguna mendapatkan pengalaman dasar. Menggunakan deteksi fitur untuk memberikan peningkatan progresif membutuhkan overhead dan tidak akan masuk dalam browser lama yang tidak mendukung fitur tersebut.
 
-### Daftarkan service worker jika memungkinkan
+### Mendaftarkan service worker jika tersedia
 
-Langkah pertama untuk membuat aplikasi offline bekerja adalah dengan 
-mendaftarkan service worker, script yang memungkinkan sebuah fungsi bekerja 
-di belakang layar tanpa pengguna membuka halaman web.
+Langkah pertama agar aplikasi bisa bekerja secara offline adalah dengan mendaftarkan service worker, skrip yang memungkinkan fungsionalitas latar belakang tanpa membutuhkan laman web terbuka atau interaksi pengguna.
 
-Implementasinya memerlukan dua langkah sederhana:
+Ini membutuhkan dua langkah sederhana:
 
-1. Buat sebuah file JavaScript yang akan menjadi service worker
-2. Kita minta pada browser untuk mendaftarkan file JavaScript sebagai 
-service worker.
+1. Perintahkan browser untuk mendaftarkan file JavaScript sebagai service worker.
+2. Buat file JavaScript yang memuat service worker.
 
-Pertama, kita perlu memeriksa apakah browser mendukung service worker, 
-dan jika didukung, daftarkan service worker. Tambahkan kode berikut ke `app.js` 
-(setelah komentar `// TODO add service worker code here`):
+Pertama, kita harus memeriksa apakah browser mendukung service worker, dan jika mendukung, daftarkan service worker. Tambahkan kode berikut ke `app.js` (setelah komentar `// TODO add service worker code here`):
 
 ```
   if ('serviceWorker' in navigator) {
@@ -526,19 +395,11 @@ dan jika didukung, daftarkan service worker. Tambahkan kode berikut ke `app.js`
   }
 ```
 
-### Memasukkan aset-aset situs ke dalam cache
+### Meng-cache aset situs
 
-Ketika service worker telah terdaftar, sebuah event `install` akan terpicu 
-saat pertama kalinya pengguna mengunjungi halaman. Dalam event ini, kita akan 
-meng-cache-kan semua aset yang dibutuhkan oleh aplikasi.
+Bila service worker telah terdaftar, kejadian pasang dipicu saat pengguna pertama kali mengunjungi laman. Dalam penangan kejadian ini, kita akan meng-cache semua aset yang dibutuhkan untuk aplikasi.
 
-Ketika service worker diaktifkan, dia harus membuka objek dalam 
-[caches](https://developer.mozilla.org/en-US/docs/Web/API/Cache) dan mengisinya 
-dengan aset yang diperlukan untuk memuat App Shell. 
-Buat file bernama `service-worker.js` di folder root aplikasi Anda 
-(direktori `your-first-pwapp-master/work`). File ini harus hidup di root 
-aplikasi karena ruang lingkup service worker didefinisikan oleh direktori di 
-mana file berada. Tambahkan kode ini ke file `service-worker.js` baru Anda:
+Ketika diaktifkan, service worker akan membuka objek [cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache) dan mengisinya dengan aset yang diperlukan untuk memuat Shell Aplikasi. Buatlah file bernama `service-worker.js` di folder root aplikasi Anda (yang seharusnya direktori `your-first-pwapp-master/work`). File harus tinggal di root aplikasi karena cakupan untuk service worker didefinisikan oleh direktori tempat file berada. Tambahkan kode berikut ke file `service-worker.js` yang baru:
 
 ```
 var cacheName = 'weatherPWA-step-6-1';
@@ -555,39 +416,23 @@ self.addEventListener('install', function(e) {
 });
 ```
 
-Pertama, kita perlu membuka cache dengan `cache.open()` dan memberi cache kita 
-sebuah nama. Memberikan nama cache memungkinkan kita untuk membuat beberapa 
-versi cache, atau memisahkan data dari App Shell sehingga kita dapat dengan 
-mudah memperbarui satu file dengan tidak mempengaruhi file lainnya. 
+Pertama, kita harus membuka cache dengan `caches.open()` dan memberikan nama cache. Memberikan nama cache memungkinkan kita untuk memberikan file nama versi, atau data terpisah dari shell aplikasi sehingga kita bisa dengan mudah memperbarui suatu item tanpa memengaruhi yang lainnya.
 
-Setelah cache terbuka, kita kemudian dapat memanggil `cache.addAll()`, dengan 
-mengambil daftar URL, kemudian mengambil mereka dari server dan menambahkannya
-ke dalam cache. Perlu diperhatikan bahwa fungsi `cache.addAll()` ini atomik, 
-jika salah satu file gagal, keseluruhan langkah untuk memasukkan ke dalam cache 
-akan gagal!
+Setelah cache terbuka, kita kemudian bisa memanggil `cache.addAll()`, yang membawa daftar URL, kemudian mengambilnya dari server dan menambahkan respons ke cache. Sayangnya, `cache.addAll()` bersifat atomis, jika salah satu file gagal, seluruh langkah cache akan gagal!
 
-Baiklah, mari kita mulai belajar menggunakan DevTools untuk memahami dan 
-mendebug service worker. Sebelum memuat ulang halaman Anda, buka DevTools, 
-buka panel  __Service Worker__ di panel __Application__. Seharusnya 
-terlihat seperti ini.
+Baiklah, mari kita mulai mengakrabkan diri dengan bagaimana Anda bisa menggunakan DevTools untuk memahami dan men-debug service worker. Sebelum memuat ulang laman Anda, buka DevTools, masuk ke panel __Service Worker __pada panel __Application __. Terlihat seperti ini.
 
 ![ed4633f91ec1389f.png](img/ed4633f91ec1389f.png)
 
-Bila Anda melihat halaman kosong seperti ini, itu berarti bahwa halaman yang 
-sedang terbuka belum memiliki service worker yang terdaftar.
+Ketika Anda melihat laman kosong seperti ini, berarti laman yang sedang terbuka tidak memiliki service worker yang terdaftar.
 
-Sekarang, muat ulang halaman Anda. Panel Service Worker sekarang harus tampil 
-seperti di bawah ini.
+Sekarang, muat ulang laman Anda. Panel Service Worker sekarang terlihat seperti ini.
 
 ![bf15c2f18d7f945c.png](img/bf15c2f18d7f945c.png)
 
-Ketika Anda melihat informasi seperti ini, itu berarti halaman telah memiliki 
-service worker yang sudah berjalan.
+Ketika Anda melihat informasi seperti ini, berarti laman memiliki service worker aktif.
 
-OK, sekarang kita akan mengambil jalan singkat memutar dan menunjukkan beberapa 
-kejutan yang mungkin Anda hadapi ketika mengembangkan service worker. Untuk 
-menunjukkan, mari kita menambahkan event listener `activate` di bawah event 
-listener `install` di file `serve-worker.js` Anda.
+Oke, sekarang kita akan melakukan penjelajahan singkat dan menunjukkan kejutan yang mungkin Anda hadapi ketika mengembangkan service worker. Untuk menunjukkannya, mari kita tambahkan event listener `activate` di bawah event listener `install` dalam file `service-worker.js` Anda. 
 
 ```
 self.addEventListener('activate', function(e) {
@@ -595,39 +440,23 @@ self.addEventListener('activate', function(e) {
 });
 ```
 
-Event `activate` dipicu pada saat service worker dimulai. 
+Kejadian `activate` diaktifkan saat service worker dijalankan.
 
-Bukalah konsol DevTools dan muat ulang halaman tersebut, kemudian beralih ke 
-panel Service Worker di panel Application dan klik inspect pada service worker 
-yang diaktifkan. Anda berharap untuk melihat pesan `[ServiceWorker] Activate` 
-dituliskan ke konsol, tapi itu tidak terjadi. Periksa panel Service Worker Anda 
-dan Anda dapat melihat bahwa service workder baru (yang telah berisi event 
-listener activate) tampak berada dalam keadaan "waiting".
+Buka DevTools Console dan muat ulang laman, pindah ke panel Service Worker di panel Application dan klik inspect pada service worker yang diaktifkan. Anda mengira pesan `[ServiceWorker] Activate` dicatat ke konsol, namun itu tidak terjadi. Periksa panel Service Worker dan Anda bisa melihat bahwa service worker yang baru (termasuk event listener aktif) tampaknya berada dalam status "menunggu".
 
 ![1f454b6807700695.png](img/1f454b6807700695.png)
 
-Pada dasarnya, service worker yang lama masih terus mengontrol halaman selama 
-ada tab yang terbuka di halaman. Jadi, Anda *bisa* menutup dan membuka kembali 
-halaman atau tekan tombol __skipWaiting__, namun solusi jangka panjangnya 
-adalah cukup dengan mengaktifkan checkbox __Update on Reload__ pada panel 
-Service Worker dari DevTools. Ketika checkbox ini diaktifkan, service worker 
-dipaksa untuk diperbarui setiap kali halaman dimuat ulang.
+Pada dasarnya, service worker lama terus mengontrol laman selama ada tab yang terbuka pada laman. Jadi, Anda *bisa* menutup dan membuka kembali laman atau menekan tombol __skipWaiting __, namun solusi jangka panjangnya adalah dengan mengaktifkan kotak centang __Update on Reload __pada panel Service Worker DevTools. Ketika kotak centang ini diaktifkan, service worker dengan paksa diperbarui setiap kali laman dimuat ulang.
 
-Aktifkan checkbox __update on reload__ sekarang dan muat ulang halaman tersebut 
-untuk mengkonfirmasi bahwa service worker baru diaktifkan.
+Aktifkan kotak centang __update on reload __ sekarang dan muat ulang laman tersebut untuk memastikan bahwa service worker baru telah diaktifkan.
 
-__Catatan:__ Anda mungkin melihat kesalahan dalam panel Service Worker dari 
-panel Application mirip dengan yang di bawah, kesalahan ini bisa diabaikan 
-secara __aman__. 
+__Catatan:__ Anda mungkin melihat pesan kesalahan dalam panel Service Worker dari panel Application mirip dengan yang terlihat di bawah, tetap __aman__ mengabaikan pesan kesalahan ini.
 
 ![b1728ef310c444f5.png](img/b1728ef310c444f5.png)
 
-Itulah semua yang bisa dijelaskan mengenai pemeriksaan dan men-debug service 
-worker di DevTools. Kami akan menunjukkan beberapa trik lagi nanti. Mari kita 
-kembali ke membangun aplikasi Anda.
+Itu semua untuk saat ini mengenai memeriksa dan men-debug service worker di DevTools. Kami akan menunjukkan kepada Anda beberapa trik lagi nanti. Mari kita kembali membangun aplikasi Anda.
 
-Mari kita perluas event listener `activate` untuk memuat beberapa logika untuk 
-memperbarui cache. Perbarui kode Anda agar sama dengan kode di bawah ini.
+Mari kita meluaskan event listener `activate` agar menyertakan beberapa logika untuk memperbarui cache. Perbarui kode Anda agar cocok dengan kode di bawah ini.
 
 ```
 self.addEventListener('activate', function(e) {
@@ -646,17 +475,11 @@ self.addEventListener('activate', function(e) {
 });
 ```
 
-Kode ini memastikan bahwa service worker Anda memperbarui cache setiap kali 
-ada file app shell yang berubah. Agar bisa bekerja, Anda perlu menaikkan 
-versi variable `cacheName` di bagian atas file service worker Anda.
+Kode ini memastikan bahwa service worker Anda memperbarui cache-nya setiap kali file shell aplikasi berubah. Agar bisa berfungsi, Anda harus menaikkan variabel `cacheName` di atas file service worker Anda.
 
-Statement terakhir memperbaiki corner-case yang dapat Anda baca di bagian 
-kotak informasi (opsional) di bawah.
+Pernyataan terakhir memperbaiki kasus abnormal yang bisa Anda baca di informasi (opsional) kotak di bawah ini.
 
-Akhirnya, mari kita perbarui daftar file yang dibutuhkan untuk app shell. Di 
-dalam array, kita perlu menyertakan semua file yang dibutuhkan aplikasi Anda, 
-termasuk gambar, JavaScript, stylesheet, dll. Dekat bagian atas file 
-`service-worker.js` Anda, gantikan `var filesToCache = [];` dengan kode di bawah ini:
+Yang terakhir, perbarui daftar file yang dibutuhkan untuk shell aplikasi. Dalam array, kita harus menyertakan semua file yang dibutuhkan aplikasi kita, termasuk gambar, JavaScript, stylesheet, dll. Dekat bagian atas file `service-worker.js` Anda, ganti `var filesToCache = [];` dengan kode di bawah ini:
 
 ```
 var filesToCache = [
@@ -680,18 +503,13 @@ var filesToCache = [
 ];
 ```
 
-Aplikasi kita belum bisa bekerja secara offline. Kita telah meng-cache-kan 
-komponen-komponen app shell, tapi kita masih perlu memuat mereka dari cache 
-lokal.
+Aplikasi kita belum sepenuhnya bekerja offline. Kita sudah meng-cache komponen shell aplikasi, namun kita masih harus memuatnya dari cache lokal.
 
-### Menyajikan app shell dari cache
+### Menyediakan shell aplikasi dari cache
 
-Service worker memberikan kemampuan untuk menyadap request yang dibuat oleh 
-Progressive Web App kita dan menangani mereka di dalam kode service worker. 
-Kita bisa menentukan bagaimana menangani request ini dan mungkin sekali 
-melayani response dari cache kita sendiri.
+Service worker memberikan kemampuan untuk mencegat permintaan yang dilakukan dari Progressive Web App dan menanganinya dalam service worker. Ini berarti kita bisa menentukan bagaimana kita menangani suatu permintaan dan mungkin sekali menyediakan respons cache kita sendiri.
 
-Sebagai contoh:
+Misalnya:
 
 ```
 self.addEventListener('fetch', function(event) {
@@ -699,8 +517,7 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 
-Sekarang, mari kita layani app shell dari cache. Tambahkan kode berikut ke 
-file `service-worker.js`:
+Sekarang mari kita sediakan shell aplikasi dari cache. Tambahkan kode berikut ke bagian bawah file `service-worker.js` Anda:
 
 ```
 self.addEventListener('fetch', function(e) {
@@ -713,184 +530,104 @@ self.addEventListener('fetch', function(e) {
 });
 ```
 
-Setelah mempelajari langkah-langkah di atas, kita mengetahui bahwa 
-`caches.match()` akan mengevaluasi request web dan memicu event 
-[fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), 
-dan memeriksa untuk melihat apakah file yang diminta tersedia dalam cache. 
-Kemudian merespon dengan versi dalam cache, atau menggunakan `fetch` untuk 
-mendapatkan salinannya dari jaringan. `response` dikirimkan kembali ke halaman 
-web dengan `e.respondWith()`.
+Bergerak dari dalam ke luar, `caches.match()` mengevaluasi permintaan web yang memicu kejadian [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), dan memeriksa apakah itu tersedia dalam cache. Ini kemudian merespons dengan versi cache, atau menggunakan `fetch` untuk mendapatkan salinan dari jaringan. `response` dikembalikan ke laman web dengan `e.respondWith()`.
 
-### Pengujian
+### Lakukan pengujian
 
-Aplikasi Anda sekarang bisa offline! Mari kita coba.
+Aplikasi Anda sekarang bisa-offline! Mari kita mencobanya.
 
-Muat ulang halaman Anda dan kemudian buka panel __Cache Storage__ pada panel 
-__Application__ dari DevTools. Expand bagian ini dan Anda akan melihat nama 
-dari app shell cache Anda tercantum di sisi kiri. Bila Anda klik pada 
-app shell cache Anda, Anda dapat melihat semua resource yang saat ini telah 
-dimasukkan ke dalam cache.
+Muat ulang laman Anda lalu buka panel __Cache Storage__ pada panel __Application__ dari DevTools. Luaskan bagian itu dan Anda akan melihat nama cache shell aplikasi Anda tercantum di sisi sebelah kiri. Bila Anda mengeklik pada cache shell aplikasi, Anda bisa melihat semua sumber daya yang saat ini telah di-cache.
 
 ![ab9c361527825fac.png](img/ab9c361527825fac.png)
 
-Sekarang, mari kita uji mode offline aplikasi kita. Kembali ke panel 
-__Service Worker__ di  DevTools dan aktifkan checkbox __Offline__. 
-Setelah mencentangnya, Anda akan melihat ikon peringatan kecil berwarna kuning 
-di sebelah tab panel __Network__. Hal ini menunjukkan bahwa Anda sedang 
-offline.
+Sekarang, mari kita menguji mode offline. Kembali ke panel __Service Worker__ dari DevTools dan aktifkan kotak centang __Offline__. Setelah mengaktifkannya, Anda akan melihat ikon peringatan kecil berwarna kuning di sebelah tab panel __Network__. Ini menunjukkan bahwa Anda offline.
 
 ![7656372ff6c6a0f7.png](img/7656372ff6c6a0f7.png)
 
-Muat ulang halaman Anda dan ... Berhasil! agaknya, paling tidak. Perhatikan 
-bagaimana dia memuat data inisial (palsu) cuaca.
+Muat ulang laman Anda dan... itu bekerja! Paling tidak, sedikit bekerja. Perhatikan bagaimana itu memuat data cuaca (palsu) awal.
 
 ![8a959b48e233bc93.png](img/8a959b48e233bc93.png)
 
-Periksa cabang `else` di `app.getForecast()` untuk memahami mengapa aplikasi 
-ini mampu memuat data palsu.
+Periksa klausul `else` di `app.getForecast()` untuk memahami mengapa aplikasi ini mampu memuat data palsu.
 
-Langkah berikutnya adalah memodifikasi aplikasi dan logika service worker 
-untuk dapat meng-cache-kan data cuaca, dan mengembalikan data terbaru dari 
-cache ketika aplikasi offline.
+Langkah berikutnya adalah memodifikasi logika aplikasi dan service worker agar bisa meng-cache data cuaca, dan mengembalikan data terbaru dari cache ketika aplikasi offline.
 
-__Tip:__ Untuk memulai dengan data yang bersih dengan menghapus semua data 
-yang tersimpan (localStorage, IndexedDB, file-file yang ada di cache) dan 
-menghapus service worker yang ada, gunakan panel Clear storage di tab 
-Application.
+__Tip:__ Untuk memulai baru dan menghapus semua data yang tersimpan (localStoarge, data indexedDB, file cache) dan membuang service worker, gunakan panel Clear storage di tab Application.
 
-[](https://weather-pwa-sample.firebaseapp.com/step-06/)
+[Tautan](https://weather-pwa-sample.firebaseapp.com/step-06/)
 
-### Waspadalah terhadap ujung kasus
+### Waspadalah terhadap kasus ekstrem
 
-Seperti disebutkan sebelumnya, kode ini __tidak boleh digunakan dalam aplikasi 
-produksi__ karena banyaknya kasus yang belum tertangani.
+Seperti yang disebutkan sebelumnya, kode ini __tidak boleh digunakan dalam produksi__ karena banyaknya kasus ekstrem yang tidak tertangani.
 
-#### Cache tergantung pada pemutakhiran kunci cache setiap kali ada perubahan
+#### Cache mengandalkan pembaruan kunci cache untuk setiap perubahan
 
-Sebagai contoh, metode cache ini menuntut Anda untuk memperbarui kunci cache 
-setiap kali ada konten yang berubah, jika tidak, cache tidak akan kadaluarsa, 
-dan konten lama yang akan disajikan. Jadi pastikan untuk mengubah kunci cache 
-setiap kali ada perubahan selama Anda mengerjakan proyek Anda!
+Misalnya metode caching ini mengharuskan Anda untuk memperbarui kunci cache setiap kali materi berubah, jika tidak, cache tidak akan diperbarui, dan materi lama yang akan ditampilkan. Jadi pastikan untuk mengubah kunci cache bersama setiap perubahan saat Anda bekerja pada proyek Anda!
 
-#### Menuntut semuanya di-download ulang setiap kali ada perubahan
+#### Mengharuskan semuanya diunduh ulang setiap terjadi perubahan
 
-Kelemahan lainnya adalah bahwa seluruh cache secara keseluruhan menjadi tidak 
-valid dan perlu didownload ulang setiap kali ada perubahan file. Itu berarti 
-memperbaiki satu kesalahan sederhana (ejaan satu karakter) akan membatalkan 
-validitas cache dan membuat semua resource diunduh ulang. Sangat tidak efisien.
+Kekurangan lainnya adalah bahwa seluruh cache dibuat tidak valid dan harus diunduh ulang setiap kali terjadi perubahan file. Ini berarti memperbaiki kesalahan ejaan karakter tunggal sederhana akan membuat cache tidak valid dan mengharuskan semuanya diunduh ulang. Tidak efisien.
 
-#### Cache browser dapat mencegah cache service worker dari pemutakhiran
+#### Cache browser bisa menghalangi cache service worker melakukan pembaruan
 
-Ada peringatan penting lainnya di sini. Request HTTPS haruslah dilakukan pada 
-saat install handler masuk ke jaringan dan tidak mengembalikan response dari 
-cache browser. Jika tidak, browser dapat mengembalikan cache versi sebelumnya, 
-sehingga mengakibatkan cache service worker tidak pernah benar-benar terupdate!
+Ada peringatan penting lain di sini. Sangat penting bahwa permintaan HTTPS yang dibuat saat penangan pemasangan langsung menuju jaringan dan tidak mengembalikan respons dari cache browser. Jika tidak, browser bisa mengembalikan versi cache yang lama, sehingga cache service worker tidak pernah diperbarui!
 
-#### Waspadalah terhadap strategi cache-first dalam produksi
+#### Waspadalah terhadap strategi cache-terlebih-dahulu dalam produksi
 
-aplikasi kita menggunakan strategi cache-first, yang mengembalikan salinan dari 
-setiap konten cache tanpa melakukan permintaan melalui jaringan. Meskipun 
-strategi cache-first ini mudah diimplementasikan, dia dapat menyebabkan 
-kesulitan di kemudian hari. Pada saat salinan dari halaman awal dan script 
-service worker di-cache-kan, sangatlah sulit untuk mengubah konfigurasi 
-service worker (karena konfigurasi tersebut tergantung pada tempat dia 
-didefinisikan), dan Anda bisa menemukan diri Anda men-deploy situs yang sangat 
-sulit untuk diperbarui!
+Aplikasi kita menggunakan strategi cache-terlebih-dahulu, yang mengakibatkan salinan dari setiap materi yang di-cache dikembalikan tanpa memperhatikan jaringan. Meskipun strategi cache-terlebih-dahulu mudah diimplementasikan, ini dapat menyebabkan masalah di masa mendatang. Setelah salinan dari laman host dan pendaftaran service worker di-cache, mengubah konfigurasi service worker bisa sangat sulit dilakukan (karena konfigurasi tergantung tempat itu didefinisikan), dan Anda bisa mendapati diri Anda menerapkan situs yang sangat sulit untuk diperbarui!
 
-#### Bagaimana cara menghindari kasus ini?
+#### Bagaimana cara menghindari kasus ekstrem ini?
 
-Jadi bagaimana kita menghindari kasus ini? Gunakan library seperti 
-[sw-precache](https://github.com/GoogleChrome/sw-precache), yang bisa 
-menyediakan kontrol terhadap file-file yang akan habis masa berlakunya, 
-memastikan agar request langsung masuk ke jaringan dan melakukan semua 
-pekerjaan ini untuk Anda.
+Jadi bagaimana kita menghindari kasus ekstrem ini? Gunakan pustaka seperti [sw-precache](https://github.com/GoogleChrome/sw-precache), yang memberikan kontrol presisi mengenai apa yang akan berakhir, memastikan permintaan langsung menuju jaringan dan melakukan semua kerja keras untuk Anda.
 
-### Kiat untuk menguji service worker secara langsung
+### Tip untuk menguji service worker aktif
 
-Men-debug service worker bisa menjadi sebuah tantangan tersendiri, apalagi 
-bila melibatkan cache, bisa menjadi mimpi buruk bila ternyata cache tidak 
-diperbarui seperti yang Anda harapkan. Jangan menyerah. Terdapat beberapa 
-alat yang bisa digunakan untuk membuat hidup Anda jadi lebih mudah.
+Melakukan debug service worker bisa menjadi sebuah tantangan, dan ketika melibatkan caching, sesuatu bisa menjadi lebih buruk lagi jika cache tidak diperbarui saat Anda mengharapkannya. Anda bisa cepat frustrasi saat mengurusi daur hidup service worker khusus dan bug dalam kode Anda. Tapi jangan. Ada beberapa alat yang bisa Anda gunakan untuk memudahkan Anda.
 
-#### Mulai dengan Bersih
+#### Mulai Baru
 
-Dalam beberapa kasus, Anda mungkin menemukan diri Anda memuat data cache atau hal-hal yang tidak diperbarui seperti yang Anda harapkan. Untuk menghapus semua data yang tersimpan (localStoarge, data yang IndexedDB, file di dalam cache) dan menghapus service worker, gunakan panel Clear storage di tab Application.
+Dalam beberapa kasus, Anda mungkin mengalami kejadian memuat data cache atau hal tersebut tidak diperbarui seperti yang Anda harapkan. Untuk menghapus semua data yang tersimpan (localStoarge, data indexedDB, file cache) dan membuang service worker, gunakan panel Clear storage di tab Application.
 
-Beberapa tip lainnya:
+Beberapa tip lain:
 
-* Pada saat service worker di-unregister, dia mungkin akan tetap terdaftar 
-sampai semua window browser yang menjalankannya ditutup.
-* Jika aplikasi ini terbuka di beberapa window, service worker yang baru belum 
-akan diterapkan sampai semua window di-reload dan di-update dengan 
-service worker terbaru.
-* Melakukan unregister terhadap service worker tidak akan menghapus cache, 
-sehingga ada kemungkinan Anda masih akan mendapatkan data yang lama jika nama 
-cache belum diubah.
-* Jika service worker versi sebelumnya sudah pernah ada dan ada service worker 
-baru yang didaftarkan, service worker yang baru belum akan mengambil kendali 
-hingga halaman dimuat ulang (di-reload), kecuali jika Anda mengambil 
-[kontrol langsung](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/immediate-control). 
+* Setelah tidak terdaftar, service worker akan tetap tercantum sampai jendela browser yang memuatnya ditutup.
+* Jika beberapa jendela dalam aplikasi Anda terbuka, service worker baru tidak akan berpengaruh hingga mereka semua dimuat ulang dan diperbarui ke service worker terbaru.
+* Menghapus pendaftaran service worker tidak akan mengosongkan cache, sehingga ada kemungkinan Anda akan mendapatkan data lama jika nama cache tidak diubah.
+* Jika service worker sudah ada dan service worker baru didaftarkan, service worker baru tidak akan mengambil kendali hingga laman dimuat ulang, kecuali jika Anda melakukan [kontrol langsung](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/immediate-control).
+
+
+## Menggunakan service worker untuk meng-cache data prakiraan
 
 
 
-## Gunakan Service Worker untuk Meng-Cache-kan Data Aplikasi
 
+Memilih [strategi caching](https://jakearchibald.com/2014/offline-cookbook/) yang tepat untuk data adalah hal yang sangat penting dan bergantung pada tipe data yang diberikan aplikasi Anda. Misalnya, data sensitif-waktu seperti cuaca atau harga saham harus selalu terbaru, sedangkan gambar avatar untuk materi artikel bisa diperbarui lebih jarang.
 
-Memilih [strategi caching](https://jakearchibald.com/2014/offline-cookbook/) 
-yang tepat untuk data Anda sangat penting dan tergantung pada jenis data 
-aplikasi Anda sajikan. Misalnya, data yang sensitif-waktu seperti cuaca atau 
-harga saham harus selalu ditampilkan yang terbaru, realtime, sedangkan gambar 
-avatar atau konten artikel dapat diperbarui lebih jarang. 
+Strategi [cache-dulu-lalu-jaringan](https://jakearchibald.com/2014/offline-cookbook/#cache-network-race) sangat ideal untuk aplikasi kita. Ini menampilkan data di layar secepat mungkin, kemudian memperbaruinya setelah jaringan mengembalikan data terbaru. Dibandingkan strategi jaringan-dulu-lalu-cache, pengguna tidak harus menunggu sampai [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) habis waktunya untuk mendapatkan data cache.
 
-Strategi [cache-first-then-network](https://jakearchibald.com/2014/offline-cookbook/#cache-network-race) 
-cocok untuk aplikasi kita. Dengan strategi ini, kita bisa mendapat data di 
-layar secepat mungkin, kemudian memperbaruinya setelah jaringan mengembalikan
-data terbaru. Dibandingkan dengan network-first-then-cache, pengguna tidak 
-harus menunggu sampai 
-[fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) time-out 
-untuk mendapatkan data dari cache. 
+Cache-dulu-lalu-jaringan berarti kita harus memulai dua permintaan asinkron, satu ke cache dan satu ke jaringan. Permintaan jaringan dengan aplikasi tidak perlu banyak berubah, namun kita harus memodifikasi service worker untuk meng-cache respons sebelum mengembalikannya.
 
-Dengan strategi cache-first-then-network, kita perlu melemparkan dua request 
-secara asynchronous, satu ke cache dan satu ke jaringan. Request ke jaringan 
-tidak perlu banyak berubah, tapi kita perlu memodifikasi service worker untuk 
-menyimpan response ke cache sebelum mengembalikannya ke browser.
+Dalam keadaan normal, data cache akan dikembalikan secara langsung dan menyediakan aplikasi dengan data terbaru yang bisa digunakan. Kemudian, ketika permintaan jaringan kembali, aplikasi akan diperbarui menggunakan data terbaru dari jaringan.
 
-Dalam kondisi normal, data dari cache yang akan dikembalikan, hampir seketika 
-menyediakan aplikasi dengan data terbaru yang bisa digunakan. Kemudian, ketika
-request ke jaringan mendapatkan response, aplikasi akan diperbarui menggunakan 
-data terbaru dari jaringan.
+### Mencegat permintaan jaringan dan meng-cache respons
 
-### Menangkap network request dan memasukkan response-nya ke dalam cache 
+Kita harus memodifikasi service worker untuk mencegat permintaan ke weather API dan menyimpan responsnya dalam cache, sehingga kita bisa dengan mudah mengaksesnya di lain waktu. Dalam strategi cache-lalu-jaringan, kita mengharapkan respons jaringan sebagai 'sumber kebenaran', selalu menyediakan kita dengan informasi terbaru. Jika tidak bisa, tidak apa-apa karena kita sudah mengambil data cache terbaru dalam aplikasi kita.
 
-Kita perlu memodifikasi service worker untuk menangkap request ke API cuaca 
-dan menyimpan response ke dalam cache, sehingga kita dapat mengaksesnya nanti. 
-Di strategi cache-first-then-network, kami mengharapkan network response 
-menjadi 'sumber kebenaran', yang selalu menyediakan informasi terbaru. Jika
-tidak bisa, tidak apa-apa bila gagal karena kita sudah mendapatkan data cache 
-terbaru di aplikasi kita.
+Dalam service worker, tambahkan `dataCacheName` sehingga kita bisa memisahkan data aplikasi dari shell aplikasi. Ketika shell aplikasi diperbarui dan cache lama dibersihkan, data kita akan tetap tak tersentuh, sehingga siap untuk pemuatan super cepat. Perlu diingat, jika format data Anda berubah nantinya, Anda perlu cara untuk menanganinya dan memastikan shell aplikasi dan materi tetap tersinkronisasi.
 
-Pada kode service worker kita, mari tambahkan `dataCacheName` sehingga kita 
-bisa memisahkan data aplikasi kita dari app shell. Ketika app shell diperbarui 
-dan cache yang lebih tua dihapus, data kita tetap tak tersentuh, dan siap untuk 
-pemuatan super cepat pada pemuatan berikutnya. 
-Perlu diingat, jika di kemudian hari format data Anda berubah, Anda perlu cara 
-untuk mengatasinya dan menjamin app shell dan konten tetap berada pada keadaan 
-tersinkronisasi.
-
-Tambahkan baris berikut ke atas file `service-worker.js` Anda:  
+Tambahkan baris berikut ke bagian atas file `service-worker.js` Anda:
 
 ```
 var dataCacheName = 'weatherData-v1';
 ```
-Selanjutnya, perbarui event handler `activate` agar tidak menghapus data cache 
-ketika membersihkan app shell cache.
+
+Berikutnya, perbarui penangan kejadian `activate` sehingga tidak menghapus cache data ketika membersihkan cache shell aplikasi.
 
 ```
 if (key !== cacheName && key !== dataCacheName) {
 ```
 
-terakhir, update event handler `fetch` untuk menangani permintaan ke API data 
-secara terpisah dari permintaan lainnya.
+Yang terakhir, perbarui penangan kejadian `fetch` untuk menangani permintaan ke data API secara terpisah dari permintaan lainnya.
 
 ```
 self.addEventListener('fetch', function(e) {
@@ -927,43 +664,29 @@ self.addEventListener('fetch', function(e) {
 });
 ```
 
-Kode ini melakukan penyadapan request dan memeriksa apakah URL dimulai dengan 
-alamat dari API cuaca. Jika betul, kita akan menggunakan 
-[fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) untuk 
-membuat request. Setelah respon dikembalikan, kode kita membuka cache, 
-meng-kloning response, menyimpannya ke dalam cache dan akhirnya mengembalikan 
-response terhadap request aslinya. 
+Kode ini mencegat permintaan dan memeriksa apakah URL dimulai dengan alamat weather API. Jika benar, kita akan menggunakan [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) untuk membuat permintaan. Setelah respons dikembalikan, kode kita akan membuka cache, membuat duplikat respons, menyimpannya dalam cache, dan akhirnya mengembalikan respons ke pemohon asli.
 
-Aplikasi kita belum akan bekerja secara offline. Kita telah menerapkan 
-mekanisme caching dan pengambilan untuk app shell, tapi meskipun kita telah 
-memasukkan data ke dalam cache, aplikasi belum memeriksa cache untuk melihat 
-apakah ia memiliki data cuaca.
+Aplikasi kita belum dapat bekerja secara offline. Kita telah mengimplementasikan caching dan pengambilan untuk shell aplikasi, namun meskipun kami melakukan cache data, aplikasi belum memeriksa cache untuk melihat apakah ia memiliki data cuaca. 
 
-### Membuat request
+### Membuat permintaan
 
-Seperti disebutkan sebelumnya, aplikasi kita perlu memulai dua request secara 
-asynchronous, satu ke cache dan satu ke jaringan. Aplikasi ini menggunakan 
-objek `caches` yang tersedia di `window` untuk mengakses cache dan mengambil 
-data terbaru. Ini adalah contoh yang sangat baik dari peningkatan progresif 
-karena objek `caches` mungkin tersedia tidak di semua browser, dan jika tidak 
-tersedia, request ke jaringan harus tetap bekerja.
+Seperti telah disebutkan sebelumnya, aplikasi harus memulai dua permintaan asinkron, satu untuk cache dan satu untuk jaringan. Aplikasi menggunakan objek `caches` yang tersedia di `window` untuk mengakses cache dan mengambil data terbaru. Ini adalah contoh yang sangat baik dari penyempurnaan progresif karena objek `caches` mungkin tidak tersedia di semua browser, dan jika memang begitu, permintaan jaringan seharusnya tetap bekerja.
 
-Untuk melakukan hal ini, kita perlu:
+Untuk melakukan ini, kita harus:
 
-1. Memeriksa apakah objek `caches` tersedia di objek global `window`.
-2. Request data dari cache.
-* Jika request ke server masih belum mendapatkan balasan, perbarui aplikasi 
-dengan data dari cache.
+1. Memeriksa apakah objek `caches` tersedia di objek `window` global.
+2. Meminta data dari cache. 
 
-3. Request data dari server.
-* Simpan data untuk akses cepat nanti.
-* Update aplikasi dengan data baru dari server.
+* Jika permintaan server masih belum selesai, perbarui aplikasi dengan data cache.
+
+3. Meminta data dari server.
+
+* Menyimpan data untuk akses cepat nantinya.
+* Memperbarui aplikasi dengan data baru dari server.
 
 #### Mendapatkan data dari cache
 
-Selanjutnya, kita perlu memeriksa apakah objek `caches` ada dan meminta data 
-terbaru darinya. Temukan komentar `TODO add cache logic here` di 
-`app.getForecast()`, dan kemudian tambahkan kode berikut di bawah komentar ini.
+Berikutnya, kita harus memeriksa apakah objek `caches` ada dan meminta data terbaru dari situ. Temukan komentar `TODO add cache logic here` di `app.getForecast()`, dan kemudian tambahkan kode berikut di bawah komentar.
 
 ```
     if ('caches' in window) {
@@ -986,17 +709,9 @@ terbaru darinya. Temukan komentar `TODO add cache logic here` di
     }
 ```
 
-Aplikasi cuaca kita sekarang membuat dua request secara asynchronous, satu 
-dari cache dan satu melalui XHR. Jika ada data dalam cache, data tersebut 
-akan dikembalikan dan di-render dengan sangat cepat (puluhan mikrodetik) 
-dan memperbarui kartu jika XHR masih belum mengembalikan data. Kemudian, 
-ketika XHR memberikan response, kartu akan diperbarui dengan data paling baru 
-langsung dari API cuaca kita.  
+Aplikasi cuaca kita sekarang membuat dua permintaan data asinkron, satu dari `cache` dan satu melalui XHR. Jika terdapat data dalam cache, itu akan dikembalikan dan dirender dengan sangat cepat (puluhan milidetik) dan memperbarui kartu hanya jika XHR belum diselesaikan. Kemudian, ketika XHR merespons, kartu akan diperbarui dengan data terbaru langsung dari weather API.
 
-Perhatikan bagaimana permintaan cache dan permintaan XHR kedua berakhir dengan 
-panggilan untuk memperbarui kartu prakiraan cuaca. Bagaimana aplikasi tahu 
-apakah dia menampilkan data terbaru? Ini ditangani dalam kode berikut dari 
-`app.updateForecastCard`:
+Perhatikan bagaimana permintaan cache dan permintaan XHR berakhir dengan panggilan untuk memperbarui kartu prakiraan. Bagaimana aplikasi tahu bahwa itu menampilkan data terbaru? Ini ditangani dalam kode berikut dari `app.updateForecastCard`:
 
 ```
     var cardLastUpdatedElem = card.querySelector('.card-last-updated');
@@ -1009,69 +724,46 @@ apakah dia menampilkan data terbaru? Ini ditangani dalam kode berikut dari
       }
     }
 ```
-Setiap kali kartu diperbarui, aplikasi menyimpan timestamp dari data pada 
-atribut tersembunyi pada kartu. Aplikasi ini hanya menjamin jika cap yang 
-sudah ada pada kartu lebih baru daripada data yang dilewatkan ke fungsi.
 
-### Pengujian
+Setiap kali kartu diperbarui, aplikasi menyimpan stempel waktu dari data pada atribut tersembunyi dalam kartu. Aplikasi ini hanya terlepas jika stempel waktu yang ada pada kartu lebih baru daripada data yang diteruskan ke fungsi.
 
-Aplikasi sekarang sudah benar-benar bisa berfungsi secara offline. Simpan 
-beberapa kota dan tekan tombol refresh pada aplikasi untuk mendapatkan data 
-cuaca terbaru, dan kemudian pergi offline dan kembali halaman tersebut.
+### Lakukan pengujian
 
-Coba buka panel __Cache Storage__ pada panel __Application__ dari DevTools. 
-Perluas bagian ini dan Anda akan melihat nama app shell Anda dan cache data 
-yang tercantum di sisi kiri. Dengan membuka data, cache harus berisai data 
-yang disimpan untuk setiap kota.
+Aplikasi seharusnya sudah berfungsi offline sepenuhnya sekarang. Simpan beberapa kota dan tekan tombol refresh pada aplikasi untuk mendapatkan data cuaca baru, kemudian masuk ke mode offline dan muat ulang halaman tersebut. 
+
+Kemudian buka panel __Cache Storage__ pada panel __Application__ dari DevTools. Luaskan bagian itu dan Anda akan melihat nama shell aplikasi dan cache data tercantum di sisi sebelah kiri. Membuka data cache akan membuat data tersimpan untuk setiap kota.
 
 ![cf095c2153306fa7.png](img/cf095c2153306fa7.png)
 
-[](https://weather-pwa-sample.firebaseapp.com/step-07/)
+[Tautan](https://weather-pwa-sample.firebaseapp.com/step-07/)
 
 
-## Dukungan Integrasi Native
+## Dukungan integrasi asli
 
 
 
 
-Tak seorang pun suka ketika harus mengetikkan URL yang panjang di keyboard 
-ponsel. Dengan fitur Add to Home Screen, pengguna bisa menambahkan link 
-shortcut ke perangkat mereka seperti mereka akan menginstal aplikasi native 
-dari App Store, tetapi dengan lebih sedikit kesulitan.
+Tak ada yang suka mengetikkan URL yang panjang di keyboard seluler jika memang tidak terpaksa. Dengan fitur Add to Home Screen, pengguna bisa memilih untuk menambahkan tautan pintasan ke perangkat seperti ketika mereka memasang aplikasi asli dari toko, namun dengan lebih mulus.
 
-### Web App Install Banner dan Add to Homescreen untuk Chrome di Android
+### Spanduk Pemasangan Aplikasi Web dan Add to Home Screen untuk Chrome pada Android
 
-Web app install banner memberi Anda kemampuan untuk membuat pengguna Anda
-menambahkan aplikasi web Anda ke layar utama mereka dengan cepat dan
-mulus, sehingga mudah untuk memulai dan kembali ke aplikasi Anda. Menambahkan 
-app install banner sangat mudah, dan Chrome menangani sebagian
-dari beban pekerjaan untuk kemudahan Anda. Kita hanya perlu menyertakan file 
-web app manifest dengan menyertakan beberapa rincian aplikasi.
+Spanduk pemasangan aplikasi web memberikan Anda kemampuan agar pengguna bisa dengan cepat dan mulus menambahkan aplikasi web ke layar beranda mereka, sehingga mudah dijalankan dan kembali ke aplikasi Anda. Sangat mudah menambahkan spanduk pemasangan aplikasi, karena sebagian besar tugas tersebut sudah ditangani Chrome. Kita hanya perlu memasukkan file manifes aplikasi web dengan detail tentang aplikasi tersebut.
 
-Chrome kemudian menggunakan beberapa kriteria, termasuk penggunaan 
-service worker, status SSL dan heuristik frekuensi kunjungan untuk menentukan 
-kapan browser akan menampilkan banner Add to Home Screen. Sebagai
-tambahan lain, pengguna bisa menambahkannya secara manual melalui menu 
-"Add to Home Screen" dari Chrome.
+Chrome kemudian menggunakan sejumlah kriteria seperti penggunaan service worker, status SSL dan heuristik frekuensi kunjungan untuk menentukan kapan spanduk akan ditampilkan. Selain itu, pengguna secara manual bisa menambahkannya melalui tombol menu "Add to Home Screen" di Chrome.
 
-#### Deklarasikan sebuah app manifest dengan file `manifest.json`
+#### Mendeklarasikan manifes aplikasi dengan file `manifest.json`
 
-Web app manifest adalah file JSON sederhana yang memberi Anda, pengembang web,
-kemampuan untuk mengontrol bagaimana aplikasi Anda muncul kepada pengguna di 
-area yang mereka harapkan (misalnya layar awal ponsel), mengarahkan
-kepada apa yang bisa dijalankan pengguna dan yang lebih penting lagi, bagaimana 
-mereka menjalankannya.
+Manifes aplikasi web adalah file JSON sederhana yang memberikan Anda, developer, kemampuan untuk mengontrol bagaimana aplikasi terlihat oleh pengguna di daerah yang mereka harap akan melihat aplikasi (misalnya, layar beranda seluler), mengarahkan apa yang bisa diluncurkan pengguna, dan yang lebih penting lagi adalah bagaimana mereka bisa meluncurkannya.
 
-Menggunakan web app manifest, aplikasi web Anda bisa:
+Dengan menggunakan manifes aplikasi web, aplikasi web Anda bisa:
 
-* Memiliki tampilan yang berselera tinggi di layar utama Android
-* Bisa dijalankankan dalam mode layar penuh pada Android tanpa tampilan URL
-* Mengatur orientasi layar untuk tampilan yang lebih optimal
-* Menentukan "splash screen" dan warna tema untuk situs
-* Melacak apakah Anda menjalankan aplikasi dari layar utama atau dari alamat URL
+* Memiliki kehadiran yang kaya di layar beranda Android pengguna
+* Diluncurkan dalam mode layar penuh pada Android tanpa bilah URL
+* Mengontrol orientasi layar untuk tampilan optimal
+* Menetapkan "layar pembuka" pengalaman peluncuran dan warna tema untuk situs
+* Melacak apakah diluncurkan dari layar beranda atau bilah URL
 
-Buatlah sebuah file denga nama `manifest.json` di folder `work` Anda dan 
-salin/tempel (copy/paste) konten di bawah ini:
+Membuat file bernama `manifest.json` di folder `work` Anda dan salin/tempel materi berikut:
 
 ```
 {
@@ -1105,49 +797,32 @@ salin/tempel (copy/paste) konten di bawah ini:
 }
 ```
 
-Manifest mendukung berbagai ikon, yang disiapkan untuk ukuran layar yang 
-berbeda. Pada saat penulisan ini, Chrome dan Opera Mobile, satu-satunya 
-browser yang mendukung web app manifest, jangan gunakan ukuran yang lebih 
-kecil dari 192px.
+Manifes mendukung berbagai ikon, ditujukan untuk ukuran layar yang berbeda. Pada saat penulisan ini, Chrome dan Opera Mobile, adalah satu-satunya browser yang mendukung manifes aplikasi web, tidak akan menggunakan apa pun yang lebih kecil dari 192 px.
 
-Cara yang mudah untuk melacak bagaimana aplikasi ini dijalankan adalah 
-dengan menambahkan query string ke parameter `start_url` dan kemudian 
-menggunakan serangkaian analisis untuk melacak query string.
-Jika Anda menggunakan metode ini, jangan lupa untuk memperbarui daftar file 
-cache oleh App Shell untuk memastikan bahwa file dengan query string juga 
-di-cache-kan.
+Cara termudah untuk melacak bagaimana aplikasi diluncurkan adalah menambahkan string kueri ke parameter `start_url` dan kemudian menggunakan suite analytics untuk melacak string kueri. Jika Anda menggunakan metode ini, ingat untuk memperbarui daftar file yang di-cache dengan Shell Aplikasi untuk memastikan bahwa file dengan string kueri telah di-cache.
 
+#### Memberi tahu browser tentang file manifes Anda
 
-#### Beritahu browser tentang file manifest Anda
-
-Sekarang, tambahkan baris berikut ke bagian bawah dari element `<head>` di 
-file `index.html`: 
+Sekarang tambahkan baris berikut ke bagian bawah elemen `<head>` dalam file `index.html` Anda: 
 
 ```
 <link rel="manifest" href="/manifest.json">
 ```
 
-#### Cara Terbaik (Best Practice)
+#### Praktik Terbaik
 
-* Tempatkan link manifest pada semua halaman situs Anda, sehingga akan direview 
-oleh Chrome pada saat pengguna melakukan kunjungan yang pertama, tidak peduli di 
-halaman mana mereka berkunjung.
-* `short_name` lebih disukai di Chrome dan akan digunakan jika ada mengalahkan 
-field `name`.
-* Tentukan kumpulan icon untuk layar dengan kepadatan yang berbeda-beda. Chrome 
-akan mencoba untuk menggunakan ikon paling dekat dengan 48dp, misalnya, 96px 
-pada perangkat 2x atau 144px untuk perangkat 3x.
-* Jangan lupa untuk menyertakan ikon dengan ukuran yang masuk akal untuk 
-splash screen dan jangan lupa untuk mengatur `background_color`.
+* Tempatkan tautan manifes pada semua laman situs Anda, sehingga akan diambil oleh Chrome ketika pengguna melakukan kunjungan pertama, tidak peduli laman apa pun yang mereka kunjungi.
+* `short_name` lebih disukai pada Chrome dan akan digunakan jika ada di atas bidang nama.
+* Menetapkan set ikon untuk layar dengan kepadatan yang berbeda. Chrome akan mencoba menggunakan ikon yang paling mendekati 48 dp, misalnya, 96 px pada perangkat 2x atau 144 px untuk perangkat 3x.
+* Ingatlah untuk memuat ikon dengan ukuran yang masuk akal untuk layar pembuka dan jangan lupa menyetel `background_color`.
 
-Bacaan lebih lanjut:
+Bacaan Lebih Lanjut:
 
-[Penggunaan app install banner](/web/fundamentals/engage-and-retain/simplified-app-installs/)
+[Menggunakan spanduk pemasangan aplikasi](/web/fundamentals/engage-and-retain/simplified-app-installs/)
 
-### Menambahkan elemen Add to Homescreen untuk Safari di iOS
+### Elemen Add to Homescreen untuk Safari pada iOS
 
-Dalam file `index.html` Anda, tambahkan konten berikut di bagian bawah dari 
-elemen `<head>`:
+Dalam `index.html` Anda, tambahkan baris berikut ke bagian bawah elemen `<head>`:
 
 ```
   <!-- Add to home screen for Safari on iOS -->
@@ -1157,125 +832,91 @@ elemen `<head>`:
   <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
 ```
 
-### Tile Icon untuk Windows
+### Ikon Petak untuk Windows
 
-Di file `index.html`, tambahkan konten berikut di bagian bawah dari 
-elemen `<head>`:
+Dalam `index.html` Anda, tambahkan baris berikut ke bagian bawah elemen `<head>`:
 
 ```
   <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
   <meta name="msapplication-TileColor" content="#2F3BA2">
 ```
 
-### Pengujian
+### Lakukan pengujian
 
-Pada bagian ini kita akan menunjukkan beberapa cara untuk menguji web app 
-manifest Anda.
+Pada bagian ini kami akan menunjukkan beberapa cara untuk menguji manifes aplikasi web Anda.
 
-Cara pertama adalah dengan menggunakan DevTools. Buka panel __Manifest__ pada 
-panel __Application__. Jika Anda telah menambahkan informasi manifest dengan 
-benar, Anda akan dapat melihatnya diparsing dan ditampilkan dalam format yang 
-ramah-manusia di panel ini.
+Cara pertama adalah dengan DevTools. Buka panel __Manifest __pada panel __Application __. Jika Anda menambahkan informasi manifes dengan benar, Anda akan melihatnya di-parse dan ditampilkan dalam format yang mudah dipahami di panel ini.
 
-Anda juga dapat menguji fitur add to homescreen dari panel ini. Klik pada 
-tombol __Add to homescreen__. Anda akan melihat pesan "add this site to your 
-shelf" di bawah bar URL Anda, seperti pada gambar di bawah.
+Anda juga bisa menguji fitur add to homescreen dari panel ini. Klik tombol __Add to homescreen __. Anda akan melihat pesan "add this site to your shelf" di bawah bilah URL, seperti pada tangkapan layar di bawah ini.
 
 ![cbfdd0302b611ab0.png](img/cbfdd0302b611ab0.png)
 
-Ini adalah contoh tampilan desktop untuk fitur add to homescreen di mobile. 
-Jika Anda berhasil memicu prompt ini pada desktop, maka Anda bisa yakin bahwa 
-pengguna ponsel dapat menambahkan aplikasi ke perangkat mereka.
+Ini adalah fitur desktop yang serupa dengan add to homescreen pada seluler. Jika berhasil memicu peringatan ini pada desktop, maka Anda bisa memastikan bahwa pengguna seluler menambahkan aplikasi ke perangkat mereka.
 
-Cara kedua untuk mengujinya adalah melalui Web Server for Chrome. Dengan 
-pendekatan ini, Anda mengekspos server pengembangan lokal Anda (di desktop 
-atau laptop) ke komputer lain, dan kemudian Anda hanya mengakses aplikasi web 
-progresif dari perangkat mobile yang sebenarnya.
+Cara kedua adalah dengan mengujinya melalui Web Server for Chrome. Dengan pendekatan ini, Anda mengekspos server development lokal (pada desktop atau laptop) ke komputer lain, dan kemudian hanya mengakses progressive web app dari perangkat seluler yang sesungguhnya.
 
 Pada dialog konfigurasi Web Server for Chrome, pilih opsi `Accessible on local network`:
 
 ![81347b12f83e4291.png](img/81347b12f83e4291.png)
 
-Alihkan Web Server ke `STOPPED` dan kembali ke `STARTED`. Anda akan melihat 
-URL baru yang dapat digunakan untuk mengakses aplikasi Anda dari jarak jauh.
+Alihkan Web Server ke `STOPPED` dan kembali ke `STARTED`. Anda akan melihat URL baru yang bisa digunakan untuk mengakses aplikasi dari jarak jauh.
 
-Sekarang, akses situs Anda dari perangkat mobile, menggunakan URL baru.
+Sekarang, akses situs Anda dari perangkat seluler, menggunakan URL yang baru.
 
-Anda akan melihat kesalahan service worker di konsol saat pengujian dengan 
-cara ini karena service worker tidak dilayani melalui HTTPS.
+Anda akan melihat kesalahan service worker di konsol saat menguji dengan cara ini karena service worker tidak disajikan melalui HTTPS.
 
-Menggunakan Chrome dari perangkat Android, coba tambahkan aplikasi ke layar 
-utama dan verifikasi bahwa layar peluncuran muncul dengan benar dan ikon yang 
-tepat digunakan.
+Menggunakan Chrome dari perangkat Android, coba tambahkan aplikasi ke layar beranda dan verifikasi bahwa layar peluncuran muncul dengan benar dan menggunakan ikon yang tepat.
 
-Pada Safari dan Internet Explorer, Anda juga dapat secara manual menambahkan 
-aplikasi ke layar utama Anda.
+Pada Safari dan Internet Explorer, Anda juga bisa secara manual menambahkan aplikasi ke layar beranda.
 
-[](https://weather-pwa-sample.firebaseapp.com/step-08/)
+[Tautan](https://weather-pwa-sample.firebaseapp.com/step-08/)
 
 
-## Deploy ke hosting yang aman dan rayakan
+## Menerapkan dalam host yang aman dan rayakan
 
 
 
-Langkah terakhir adalah men-deploy aplikasi cuaca ke server yang mendukung 
-HTTPS. Jika Anda belum memilikinya, pendekatan yang paling mudah (dan gratis) 
-adalah dengan menggunakan hosting konten statis dari Firebase. Ini super mudah 
-untuk digunakan, melayani konten melalui HTTPS dan didukung oleh CDN global.
 
+Langkah terakhir adalah menerapkan aplikasi cuaca dalam server yang mendukung HTTPS. Jika Anda belum memilikinya, pendekatan yang sangat mudah (dan gratis) adalah menggunakan hosting materi statis dari Firebase. Sangat mudah digunakan, menyajikanmateri melalui HTTPS dan didukung oleh CDN global.
 
-### Kredit extra : minify dan inline CSS
+### Kredit tambahan: mengecilkan dan menyisipkan CSS
 
-Ada satu hal lagi yang harus Anda pertimbangkan, mengecilkan style kunci dan 
-membuat mereka inline langsung ke `index.html`. 
-[Page Speed ​​Insights](https://developers.google.com/speed) menganjurkan agar 
-melayani konten yang terlipat di atas dalam 15k byte pertama dari permintaan. 
+Ada satu hal lagi yang harus Anda pertimbangkan, mengecilkan penataan gaya kunci dan menyisipkannya langsung ke dalam `index.html`. [Page Speed Insights](/speed) merekomendasikan penyajian materi paro atas di permintaan 15.000 byte yang pertama.
 
-Lihatlah seberapa kecil permintaan awal yang bisa Anda dapatkan dengan 
-mengubahnya menjadi inline. 
+Lihat seberapa kecil Anda bisa mendapatkan permintaan awal dengan segala sesuatu disisipkan.
 
-Bacaan lebih lanjut:  [PageSpeed Insight Rules](/speed/docs/insights/rules)
+Bacaan Lebih Lanjut: [PageSpeed Insight Rules](/speed/docs/insights/rules)
 
-### Deploy ke Firebase
+### Menerapkan ke Firebase
 
-Jika Anda baru ke Firebase, Anda harus masuk menggunakan akun Google Anda dan 
-menginstal beberapa alat sebelumnya.
+Jika Anda baru dalam dunia Firebase, Anda harus membuat akun dan memasang beberapa alat terlebih dahulu.
 
-1. Masuk ke Firebase dengan akun Google Anda di 
-[https://www.firebase.com/signup/](https://www.firebase.com/signup/)
-2. Install tools Firebase melalui npm: `npm install -g firebase-tools`
+1. Buat akun Firebase di [https://firebase.google.com/console/](https://firebase.google.com/console/)
+2. Pasang alat Firebase melalui npm: `npm install -g firebase-tools`
 
-Setelah akun Anda dibuat dan Anda masuk, Anda siap untuk melakukan 
-deploy!
+Setelah akun dibuat dan Anda telah masuk, Anda siap untuk menerapkan!
 
-1. Buat applikasi baru di  
-[https://www.firebase.com/account/](https://www.firebase.com/account/)
-2. Jika Anda belum masuk ke tools Firebase, perbarui credential Anda: 
-`firebase login`
-3. Inisialisasi aplikasi Anda, dan berikan direktori (mungkin `work`) tempat 
-aplikasi lengkap Anda hidup: `firebase init`
-4. Terakhir, deploy app ke Firebase: `firebase deploy`
-5. Rayakan. Anda berhasil! Aplikasi Anda akan di-deploy ke domain: 
-`https://YOUR-FIREBASE-APP.firebaseapp.com`
+1. Buat aplikasi baru di [https://firebase.google.com/console/](https://firebase.google.com/console/)
+2. Jika Anda belum masuk ke alat Firebase, perbarui kredensial Anda: `firebase login`
+3. Inisialisasi aplikasi Anda, serta berikan direktori (kemungkinan besar `work`) tempat aplikasi berada setelah selesai: `firebase init`
+4. Yang terakhir, terapkan aplikasi ke Firebase: `firebase deploy`
+5. Rayakan. Selesai! Aplikasi Anda akan diterapkan ke domain: `https://YOUR-FIREBASE-APP.firebaseapp.com`
 
-Bacaan lebih lanjut:  
-[Panduan Firebase Hosting](https://www.firebase.com/docs/hosting/guide/)
+Bacaan lebih lanjut: [Panduan Hosting Firebase](https://www.firebase.com/docs/hosting/guide/)
 
-### Pengujian
+### Lakukan pengujian
 
-* Cobalah untuk menambahkan aplikasi ke layar utama Anda kemudian putus 
-jaringan dan check apakah aplikasi bisa bekerja secara offline seperti yang diharapkan.
+* Coba tambahkan aplikasi ke layar beranda Anda, kemudian putuskan jaringan dan lakukan verifikasi apakah aplikasi bekerja secara offline seperti yang diharapkan.
 
-[](https://weather-pwa-sample.firebaseapp.com/final/)
+[Tautan](https://weather-pwa-sample.firebaseapp.com/final/)
 
 
 
 
 
-## Menemukan masalah, atau memiliki umpan balik? {: .hide-from-toc }
-Bantu kami melakukan laboratorium kode kita lebih baik dengan mengirimkan
-[issue](https://github.com/googlecodelabs/your-first-pwapp/issues) hari ini. 
-Dan terima kasih!
+## Menemukan masalah, atau memiliki masukan? {: .hide-from-toc }
+Bantu kami menjadikan code lab lebih baik dengan mengirimkan 
+[masalah](https://github.com/googlecodelabs/your-first-pwapp/issues) hari ini. Dan terima kasih!
 
-Translated By: 
-{% include "web/_shared/contributors/abdshomad.html" %}
+
+{# wf_devsite_translation #}

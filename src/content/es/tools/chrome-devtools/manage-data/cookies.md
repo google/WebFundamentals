@@ -10,7 +10,7 @@ description: Inspeccionar y borrar cookies desde el panel de la App.
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
 Inspecciona y borrar cookies desde el panel de la
-<strong>App</strong> .
+<strong>App</strong>.
 
 ![panel de cookies](imgs/cookies.png)
 
@@ -44,7 +44,7 @@ Se proporcionan los siguientes campos para cada cookie:
 <table class="responsive">
   <thead>
     <tr>
-      <th colspan="2">Descripción del &amp; campo Cookie</th>
+      <th colspan="2">Campo de la cookie y descripción</th>
     </tr>
   </thead>
   <tbody>

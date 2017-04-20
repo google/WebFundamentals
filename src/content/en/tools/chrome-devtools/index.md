@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Option 1
+description: Get started with Google Chrome's built-in authoring, debugging, and profiling development tools.
 
-{# wf_updated_on: 2016-07-26 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-03-28 #}
 
 # Chrome DevTools {: .page-title }
@@ -15,12 +15,12 @@ provides the latest Chrome features.
 
 [canary]: https://www.google.com/intl/en/chrome/browser/canary.html
 
-## Opening the Chrome DevTools {: #open }
+## Open DevTools {: #open }
 
-* Select **More Tools** > **Developer Tools** from the Chrome Menu.
-* Right-click on a page element and select Inspect
-* Use the [keyboard shortcuts](/web/tools/chrome-devtools/inspect-styles/shortcuts)
-<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows) or <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>I</kbd> (Mac)
+* Select **More Tools** > **Developer Tools** from Chrome's Main Menu.
+* Right-click a page element and select **Inspect**.
+* Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) or
+  <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows, Linux).
 
 ## Discover DevTools
 
@@ -60,13 +60,14 @@ Log diagnostic information during development or interact with the JavaScript on
 ### Sources panel
 
 <img src="images/panels/sources.png" alt="Sources Panel" class="attempt-right">
-Debug your JavaScript using breakpoints or connect your local files via Workspaces to use DevTools as a code editor.
+Debug your JavaScript using breakpoints or connect your local files via Workspaces to use
+DevTools as a code editor.
 
 * [Get Started With Debugging JavaScript](/web/tools/chrome-devtools/javascript)
 * [Pause Your Code With Breakpoints](/web/tools/chrome-devtools/javascript/breakpoints)
 * [Set Up Persistence with DevTools Workspaces](/web/tools/setup/setup-workflow)
 * [Run Snippets Of Code From Any Page](/web/tools/chrome-devtools/snippets)
-* [JavaScript Debugging Reference](/web/tools/chrome-devtools/reference)
+* [JavaScript Debugging Reference](/web/tools/chrome-devtools/javascript/reference)
 
 <div style="clear:both;"></div>
 
@@ -87,11 +88,16 @@ Optimize page load performance and debug request issues.
 Note: In Chrome 58 the Timeline panel was renamed to the Performance panel.
 
 <img src="images/panels/performance.png" alt="Timeline Panel" class="attempt-right">
-Improve the runtime performance of your page by recording and exploring the various events that happen during the lifecycle of a site.
 
+Improve the runtime performance of your page by recording and exploring the
+various events that happen during the lifecycle of a site.
+
+* [Get Started With Analyzing Runtime Performance][runtimegs]
 * [How to look at performance](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 * [Analyze runtime performance](/web/tools/chrome-devtools/rendering-tools/)
 * [Diagnose Forced Synchronous Layouts](/web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts)
+
+[runtimegs]: /web/tools/chrome-devtools/evaluate-performance/
 
 <div style="clear:both;"></div>
 
@@ -112,7 +118,9 @@ Profile memory usage and track down leaks.
 Note: In Chrome 52 the Resources panel was renamed to the Application panel.
 
 <img src="images/panels/application.png" alt="Application Panel" class="attempt-right">
-Inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and session storage, cookies, Application Cache, images, fonts, and stylesheets.
+
+Inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and
+session storage, cookies, Application Cache, images, fonts, and stylesheets.
 
 * [Debug Progressive Web Apps](/web/tools/chrome-devtools/progressive-web-apps)
 * [Inspect and Manage Storage, Databases, and Caches](/web/tools/chrome-devtools/manage-data/local-storage)

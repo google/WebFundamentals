@@ -44,7 +44,7 @@ description:了解如何为应用中的模态视图设置动画。
     }
     
 
-其初始 `opacity` 为 0，因此在视图中被隐藏，而且还需要将 `pointer-events` 设置为 `none`，使点击和触摸事件能够穿过。若不设置，它将阻止所有交互，使整个页面无响应。最后，由于它将对其 `opacity` 和 `transform` 设置动画，因此需要使用 `will-change` 将这些属性标记为“即将更改”（另请参考 [使用 will-change 属性](animations-and-performance#using-the-will-change-property)）。
+其初始 `opacity` 为 0，因此在视图中被隐藏，而且还需要将 `pointer-events` 设置为 `none`，使点击和触摸事件能够穿过。若不设置，它将阻止所有交互，使整个页面无响应。最后，由于它将对其 `opacity` 和 `transform` 设置动画，因此需要使用 `will-change` 将这些属性标记为“即将更改”（另请参考[使用 will-change 属性](animations-and-performance#using-the-will-change-property)）。
 
 当视图可见时，需要接受交互并且将 `opacity` 设置为 1：
 
@@ -61,7 +61,7 @@ description:了解如何为应用中的模态视图设置动画。
     modal.classList.add('visible')；
     
 
-此时，模态视图出现时没有任何动画，因此您现在可以在以下位置加入动画（另请参考 [自定义缓动](custom-easing)）：
+此时，模态视图出现时没有任何动画，因此您现在可以在以下位置加入动画（另请参考[自定义缓动](custom-easing)）：
 
 
 

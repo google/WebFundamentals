@@ -73,7 +73,7 @@ Windows 8 的新主屏幕体验可支持 4 种不同固定网站布局，因此�
 ### Internet Explorer 中的磁贴
 
 Microsoft 的“固定网站”及其旋转的“动态磁贴”远远超越了其他实现方法，不在本指南的介绍范围内。
-您可以在 MSDN 的[如何创建动态磁贴](//msdn.microsoft.com/en-us/library/ie/dn455115(v=vs.85).aspx) 中了解更多信息。
+您可以在 MSDN 的[如何创建动态磁贴](//msdn.microsoft.com/en-us/library/ie/dn455115(v=vs.85).aspx)中了解更多信息。
 
 
 

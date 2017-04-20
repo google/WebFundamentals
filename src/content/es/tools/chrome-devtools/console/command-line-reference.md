@@ -24,7 +24,7 @@ se evalúa una expresión simple (`2 + 2`).
 A continuación, se evalúa la propiedad `$_`,
 que contiene el mismo valor:
 
-![$_ es la última expresión evaluada](images/recently-evaluated-expression-1.png).
+![$_ es la última expresión evaluada](images/recently-evaluated-expression-1.png)
 
 En el siguiente ejemplo,
 la expresión evaluada contiene inicialmente una matriz de nombres.
@@ -32,7 +32,7 @@ Cuando se evalúa `$_.length` para encontrar la extensión de la matriz,
 el valor almacenado en `$_` cambia
 para convertirse en la última expresión evaluada, 4:
 
-![$_ cambia cuando se evalúan comandos nuevos](images/recently-evaluated-expression-2.png).
+![$_ cambia cuando se evalúan comandos nuevos](images/recently-evaluated-expression-2.png)
 
 ## $0 - $4
 
@@ -92,7 +92,7 @@ se muestra el valor de la propiedad `src` de cada elemento:
 			console.log(images[each].src);
 		}
 
-![Ejemplo en el que se usa $$() para seleccionar todas las imágenes del documento y mostrar sus fuentes](images/all-selector.png).
+![Ejemplo en el que se usa $$() para seleccionar todas las imágenes del documento y mostrar sus fuentes](images/all-selector.png)
 
 Nota: Presiona <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> en la consola para iniciar una línea nueva sin ejecutar la secuencia de comandos.
 
@@ -106,14 +106,14 @@ a continuación se muestran todos los elementos `<p>` de la página:
 
 		$x("//p")
 
-![Ejemplo en el que se usa un selector XPath](images/xpath-p-example.png).
+![Ejemplo en el que se usa un selector XPath](images/xpath-p-example.png)
 
 En el siguiente ejemplo, se muestran todos los elementos `<p>` que 
 contienen elementos `<a>`:
 
 		$x("//p[a]")
 
-![Ejemplo en el que se usa un selector XPath más complicado](images/xpath-p-a-example.png).
+![Ejemplo en el que se usa un selector XPath más complicado](images/xpath-p-a-example.png)
 
 ## clear()
 
@@ -303,7 +303,7 @@ A continuación, se muestran resultados de ejemplo tras ingresar caracteres en e
 
 ![Controlar eventos claves](images/monitor-key.png)
 
-## profile([name]) and profileEnd([name])
+## profile([name]) y profileEnd([name])
 
 `profile()` inicia una sesión de perfilamiento de CPU en JavaScript
 con un nombre opcional.

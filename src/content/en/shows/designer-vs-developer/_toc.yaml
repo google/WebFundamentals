@@ -1,0 +1,14 @@
+toc:
+  - title: Designer Vs Developer
+    section:
+    - title: 'Podcast'
+      section:
+      - title: 'Creating a collaborative environment'
+        path: /web/shows/designer-vs-developer/podcast/DVDS1E01-creating-a-collaborative-environment
+      - title: 'Balancing creativity with user testing'
+        path: /web/shows/designer-vs-developer/podcast/DVDS1E02-balancing-creativity-with-user-testing
+      - title: 'Adopting the native language of the web'
+        path: /web/shows/designer-vs-developer/podcast/DVDS1E03-Adopting-the-native-language-of-the-web
+    - title: Video
+      path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ
+      status: external

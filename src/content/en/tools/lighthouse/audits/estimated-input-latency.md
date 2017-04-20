@@ -58,3 +58,6 @@ that does not leave enough time for your app to complete the response.
 There is a 90% probabililty a user would encounter input latency of the
 amount that Lighthouse reports, or less. 10% of users can expect additional
 latency.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/estimated-input-latency.html" %}

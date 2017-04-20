@@ -5,17 +5,13 @@ description: ウェブ デベロッパーは、カスタム要素を使用して
 {# wf_updated_on: 2016-09-26 #}
 {# wf_published_on: 2016-06-28 #}
 
-# カスタム要素 v1:再利用可能なウェブ コンポーネント {: .page-title }
+# カスタム要素 v1: 再利用可能なウェブ コンポーネント {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
 ### TL;DR {: #tldr .hide-from-toc }
 
-ウェブ デベロッパーは、[カスタム要素][spec]を使用して、**新しい HTML タグを作成したり**、既存の HTML タグを拡張したり、他のデベロッパーが作成したコンポーネントを拡張したりすることができます。API は[ウェブ コンポーネント](http://webcomponents.org/){: .external }の基盤となるものです。
-
-API により、単に Vanilla JS、HTML、CSS を使用して再利用可能なコンポーネントを作成するためのウェブ標準ベースの方法が提供されます。
-
-その結果、アプリでは、コードが減り、モジュール型のコードが使用され、コードの再利用が増えます。
+ウェブ デベロッパーは、[カスタム要素][spec]を使用して、**新しい HTML タグを作成したり**、既存の HTML タグを拡張したり、他のデベロッパーが作成したコンポーネントを拡張したりすることができます。API は[ウェブ コンポーネント](http://webcomponents.org/){: .external }の基盤となるものです。API により、単に Vanilla JS、HTML、CSS を使用して再利用可能なコンポーネントを作成するためのウェブ標準ベースの方法が提供されます。その結果、アプリでは、コードが減り、モジュール型のコードが使用され、コードの再利用が増えます。
 
 ## はじめに {: #intro}
 
@@ -302,9 +298,7 @@ JavaScript でインスタンスを作成できます。
   </tbody>
 </table>
 
-ブラウザは、`observedAttributes` 配列でホワイトリストとして登録されているすべての属性に対して `attributeChangedCallback()` を呼び出します（[属性の変更の監視](#attrchanges)を参照）。実際のところこれはパフォーマンスの最適化です。
-
-ユーザーが `style` や `class` などの一般的な属性を変更した場合、大量のコールバックが返されることは望ましくありません。
+ブラウザは、`observedAttributes` 配列でホワイトリストとして登録されているすべての属性に対して `attributeChangedCallback()` を呼び出します（[属性の変更の監視](#attrchanges)を参照）。実際のところこれはパフォーマンスの最適化です。ユーザーが `style` や `class` などの一般的な属性を変更した場合、大量のコールバックが返されることは望ましくありません。
 
 
 **応答コールバックは同期的に行われます**。誰かが要素で `el.setAttribute(...)` を呼び出すと、ブラウザはすぐに `attributeChangedCallback()` を呼び出します。
@@ -690,7 +684,7 @@ if (supportsCustomElementsV1) {
 1. HTML で新しい要素を定義します。`<x-foo-from-template>`
 2. 要素の Shadow DOM が `<template>` から作成されます。
 3. Shadow DOM のおかげで、要素の DOM は要素に対してローカルになります。
-4. Shadow DOM のおかげで、要素の内部 CSS の適用対象が要素になります。
+4.Shadow DOM のおかげで、要素の内部 CSS の適用対象が要素になります。
 
 {% framebox height="100px" %}
 <style>
@@ -858,11 +852,7 @@ HTML は厳密ではなく、柔軟に使用することができます。たと
 
 ## 経緯とブラウザ対応 {: #historysupport}
 
-ここ数年ウェブ コンポーネントを使用していれば、Chrome 36+ では `customElements.define()` ではなく `document.registerElement()` を使用するカスタム要素 API のバージョンが実装されていたことをご存じでしょう。
-
-これは現在、標準の非推奨バージョンと見なされ、v0 と呼ばれます。現在注目されているのは `customElements.define()` で、ブラウザ ベンダーはこれを実装し始めています。
-
-これはカスタム要素 v1 と呼ばれます。
+ここ数年ウェブ コンポーネントを使用していれば、Chrome 36+ では `customElements.define()` ではなく `document.registerElement()` を使用するカスタム要素 API のバージョンが実装されていたことをご存じでしょう。これは現在、標準の非推奨バージョンと見なされ、v0 と呼ばれます。現在注目されているのは `customElements.define()` で、ブラウザ ベンダーはこれを実装し始めています。これはカスタム要素 v1 と呼ばれます。
 
 古い v0 の仕様に興味がある場合は、[html5rocks の記事](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/){: .external }をご覧ください。
 

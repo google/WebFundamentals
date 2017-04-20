@@ -16,7 +16,7 @@ Jadi mudah menyimpan dan memperbarui kredensial pengguna dengan
 ## Simpan kredensial pengguna
 
 Setelah pengguna berhasil mendaftar, masuk, atau mengubah sandi, simpan
-atau memperbarui kredensial pengguna.
+atau perbarui kredensial pengguna.
 
 ### Simpan detail nama pengguna dan sandi
 
@@ -59,7 +59,8 @@ sebuah notifikasi akan muncul menanyakan untuk menyimpan kredensial
 Poin Utama: Gunakan formulir yang dianotasi dengan baik untuk membuat objek `PasswordCredential`
 baru dengan mudah dan menyimpannya bersama `navigator.credentials.store()`.
 
-Selain membuat `PasswordCredential` secara manual, Anda bisa sekadar meneruskan elemen
+Selain membuat `PasswordCredential` secara manual, Anda bisa
+sekadar meneruskan elemen
 `form` [yang dianotasi dengan baik](https://html.spec.whatwg.org/multipage/forms.html#autofill) ke `PasswordCredential`.
 
 Misalnya:

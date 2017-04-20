@@ -1,0 +1,7 @@
+\begin{array}{rlc}
+\frac{\text{thumb.style.height}}{\text{scrollerHeight}} &=&
+\frac{\text{scrollerHeight}}{\text{scroller.scrollHeight}}\\
+& \Leftrightarrow & \\
+\text{thumb.style.height} & =& \text{scrollerHeight} \cdot
+\frac{\text{scrollerHeight}}{\text{scroller.scrollHeight}}\\
+\end{array}

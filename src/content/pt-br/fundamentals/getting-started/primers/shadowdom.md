@@ -740,7 +740,7 @@ totalmente o propósito original do modo fechado.
           ...
         });
 
-3. **Closed mode makes your component less flexible for end users**. Na criação
+3. **O modo fechado torna seu componente menos flexível para os usuários finais**. Na criação
 de componentes da Web, chegará o momento em que você esquecerá de
 adicionar um recurso. Uma opção de configuração. Um caso de uso desejado pelo usuário. Um exemplo comum 
 é esquecer de incluir ganchos de estilo adequados para nós internos.
@@ -1045,9 +1045,9 @@ os estilos herdáveis ao seu valor inicial quando cruzam o limite do Shadow DOM.
   </style>
 
   <div id="initialdemo">
-    <p>Estou fora do elemento (grande/branco)</p>
-    <my-element>O conteúdo de Light DOM também é afetado.</my-element>
-    <p>Estou fora do elemento (grande/branco)</p>
+    <p>I'm outside the element (big/white)</p>
+    <my-element>Light DOM content is also affected.</my-element>
+    <p>I'm outside the element (big/white)</p>
   </div>
 </div>
 
@@ -1215,7 +1215,7 @@ componentes verdadeiramente encapsulados, sem truques nem recursos antiquados co
 Não me entenda mal. O Shadow DOM é certamente muito complexo. Mas vale muito a pena
 aprender a usá-lo. Invista algum tempo nele. Aprenda e faça perguntas!
 
-#### Leituras adicionais
+#### Leitura adicional
 
 - [Diferenças entre o Shadow DOM v1 e o v0][differences]
 - ["Introdução Slot-Based Shadow DOM API"](https://webkit.org/blog/4096/introducing-shadow-dom-api/)

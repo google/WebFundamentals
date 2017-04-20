@@ -1,0 +1,50 @@
+\begin{array}{c}
+\underbrace{\left( \begin{array}{ccc}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & -1/p & 1 \\
+\end{array}\right)}_{\text{Perspective matrix}}
+\cdot
+\underbrace{\left( \begin{array}{ccc}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & -n \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{array}\right)}_{\text{Scroll matrix}}
+\cdot
+\underbrace{\left( \begin{array}{ccc}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & -1 \\
+\end{array}\right)}_{\text{Element transform matrix}}
+\cdot
+\left( \begin{array}{ccc}
+x \\
+y\\
+z \\
+1 \\
+\end{array}\right) \\
+=
+\left( \begin{array}{ccc}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & n \\
+0 & 0 & 1 & 0 \\
+0 & 0 & -1/p & -1 \\
+\end{array}\right)
+\cdot
+\left( \begin{array}{ccc}
+x \\
+y \\
+z \\
+1 \\
+\end{array}\right) \\
+=
+\left( \begin{array}{ccc}
+x \\
+y + n\\
+z \\
+-\frac{z}p - 1 \\
+\end{array}\right) \\
+\end{array}

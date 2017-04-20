@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Este codelab te ayudará a aprender a identificar y solucionar los cuellos de botella de rendimiento de la app web.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2016-10-20T18:16:09Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -432,7 +431,7 @@ Prácticamente al final de la función, se configura la propiedad `left` y esto 
 
 La función `animate` se encuentra dentro de la función `showStory` y la función similar, `hideStory`, que actualizan las mismas propiedades y ocasionan un problema de diseño sincrónico forzado.
 
-Como observamos antes en este laboratorio de código, algunas veces, la mejor manera de corregir un código es eliminarlo. Sí, las funciones `showStory` y`hideStory` hacen su trabajo, pero son muy complejas para lo que debería ser un efecto simple. Por lo tanto, las haremos a un lado por ahora y veremos si podemos solucionar el problema con la CSS. Considera este código CSS.
+Como observamos antes en este laboratorio de código, algunas veces, la mejor manera de corregir un código es eliminarlo. Sí, las funciones `showStory` y `hideStory` hacen su trabajo, pero son muy complejas para lo que debería ser un efecto simple. Por lo tanto, las haremos a un lado por ahora y veremos si podemos solucionar el problema con la CSS. Considera este código CSS.
 
 ```
 .story-details {
@@ -497,7 +496,7 @@ El rendimiento de la app será mucho mejor; todos los fotogramas ahora se encont
 Con esto finalizará nuestro trabajo de mejora del rendimiento.
 
 
-## Felicitaciones.
+## ¡Felicitaciones!
 
 
 

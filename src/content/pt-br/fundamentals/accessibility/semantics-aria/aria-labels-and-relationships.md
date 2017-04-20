@@ -42,7 +42,7 @@ o rótulo de um elemento.
 
 Isso é muito parecido com usar um elemento `label`, com algumas diferenças fundamentais.
 
- 1. `aria-labelledby` Pode ser usado em qualquer elemento, não apenas em elementos rotuláveis.
+ 1. `aria-labelledby` pode ser usado em qualquer elemento, não apenas em elementos rotuláveis.
  1. Enquanto um elemento `label` refere-se àquilo que ele rotula, a relação é
 revertida caso a `aria-labelledby` &mdash; coisa  a ser rotulada
 refira-se àquilo que ela rotula.

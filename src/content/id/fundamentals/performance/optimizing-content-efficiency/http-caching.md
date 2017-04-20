@@ -57,7 +57,7 @@ Catatan: Header Cache-Control didefinisikan sebagai bagian dari spesifikasi HTTP
 
 “no-cache” menunjukkan bahwa respons yang dikembalikan tidak bisa digunakan untuk memenuhi permintaan berikutnya ke URL yang sama tanpa terlebih dahulu memeriksa server apakah respons telah berubah. Hasilnya, jika ada token validasi yang sesuai (ETag), no-cache akan mengakibatkan bolak-balik untuk memvalidasi respons yang di-cache, namun bisa meniadakan pengunduhan jika sumber daya belum berubah.
 
-Sebaliknya, "no-store" jauh lebih sederhana. "No-store" hanya melarang browser dan semua cache perantara menyimpan setiap versi respons yang dikembalikan&mdash;misalnya, yang berisi data pribadi atau data perbankan privat. Setiap kali pengguna meminta aset ini, permintaan dikirim ke server, dan respons lengkap akan diunduh.
+Sebaliknya, "no-store" jauh lebih sederhana. "no-store" hanya melarang browser dan semua cache perantara menyimpan setiap versi respons yang dikembalikan&mdash;misalnya, yang berisi data pribadi atau data perbankan privat. Setiap kali pengguna meminta aset ini, permintaan dikirim ke server, dan respons lengkap akan diunduh.
 
 ### "public" vs. "private"
 

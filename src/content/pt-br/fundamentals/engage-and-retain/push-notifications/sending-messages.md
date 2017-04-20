@@ -113,7 +113,7 @@ Antes de continuarmos, vamos rever o que temos e a origem do que temos.
   de autenticação gerado pelo cliente. Daqui em diante, vamos parar de falar sobre
   o objeto de inscrição e só nos referir a **ponto de extremidade**, **chave
   pública** e **segredo de autenticação**.
-* **chave privada** — a chave privada VAPID correspondente à chave pública VAPID.
+* **Chave privada** — a chave privada VAPID correspondente à chave pública VAPID.
   Essa é uma chave privada do servidor do seu aplicativo.
 
 Vamos dividir a análise da criação da mensagem em três partes. Primeiro, criaremos alguns

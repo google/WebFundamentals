@@ -57,7 +57,7 @@ Nota: El encabezado Cache-Control se definió como parte de la especificación H
 
 “no-cache” indica que la respuesta obtenida no se puede usar para satisfacer una solicitud posterior a la misma URL sin antes consultar con el servidor si la respuesta se ha modificado. En consecuencia, si hay un token de validación (ETag) adecuado presente, “no-cache” genera un recorrido para validar la respuesta almacenada en caché, pero puede eliminar la descarga si el recurso no ha cambiado.
 
-Por el contrario, "no-store" es mucho más simple, ya que no permite al navegador, ni a ninguno de los cachés intermedios, almacenar ninguna versión de la respuesta que se muestra;&mdash;por ejemplo, una que contenga datos personales o bancarios. Cada vez que el usuario solicita este recurso, se envía una solicitud al servidor y se descarga una respuesta completa.
+Por el contrario, "no-store" es mucho más simple, ya que no permite al navegador, ni a ninguno de los cachés intermedios, almacenar ninguna versión de la respuesta que se muestra; por ejemplo, una que contenga datos personales o bancarios. Cada vez que el usuario solicita este recurso, se envía una solicitud al servidor y se descarga una respuesta completa.
 
 ### "public" frente a "private"
 
@@ -78,7 +78,7 @@ Usa el árbol de decisión anterior a fin de determinar la política óptima de 
 <table class="responsive">
 <thead>
   <tr>
-    <th colspan="2">Directivas de Cache-Control &amp; Explicación</th>
+    <th colspan="2">Directivas de Cache-Control y explicación</th>
   </tr>
 </thead>
 <tr>
@@ -111,9 +111,9 @@ Todas las solicitudes HTTP que realiza el navegador primero se direccionan al ca
 
 **No obstante, ¿qué ocurre si deseamos actualizar o invalidar una respuesta almacenada en caché?** Por ejemplo, supongamos que pediste a tus visitantes almacenar en caché una hoja de estilo CSS durante hasta 24 horas (max-age=86400), pero tu diseñador acaba de agregar una actualización que deseas poner a disposición de todos los usuarios ¿Cómo indicas a todos los visitantes, a través de lo que ahora es una copia “caduca” almacenada en caché de tu CSS, que actualicen sus cachés? No puedes, al menos si no cambias la URL del recurso.
 
-Una vez que el navegador almacene la respuesta en caché, se usará la versión almacenada hasta que ya no esté actualizada, según lo determine el tiempo máximo o de caducidad, o hasta que se elimine de la caché por algún otro motivo;&mdash;p. ej., al limpiar el usuario la caché de su navegador. Como consecuencia, diferentes usuarios podrían terminar usando diferentes versiones del archivo durante la construcción de la página; los usuarios que acaban de obtener el recurso usan la versión nueva y los que almacenaron en caché una copia anterior (pero aún válida) usan una versión anterior de la respuesta.
+Una vez que el navegador almacene la respuesta en caché, se usará la versión almacenada hasta que ya no esté actualizada, según lo determine el tiempo máximo o de caducidad, o hasta que se elimine de la caché por algún otro motivo; p. ej., al limpiar el usuario la caché de su navegador. Como consecuencia, diferentes usuarios podrían terminar usando diferentes versiones del archivo durante la construcción de la página; los usuarios que acaban de obtener el recurso usan la versión nueva y los que almacenaron en caché una copia anterior (pero aún válida) usan una versión anterior de la respuesta.
 
-**¿Cómo obtienes lo mejor de ambos mundos (almacenamiento en caché en el cliente y actualizaciones rápidas)?** Es simple. Puedes cambiar la URL del recurso y hacer que el usuario deba descargar la nueva respuesta cada vez que cambie su contenido. Generalmente, esto se logra incorporando una huella digital del archivo, o un número de versión, en su nombre de archivo;&mdash;por ejemplo, style.**x234dff**.css.
+**¿Cómo obtienes lo mejor de ambos mundos (almacenamiento en caché en el cliente y actualizaciones rápidas)?** Es simple. Puedes cambiar la URL del recurso y hacer que el usuario deba descargar la nueva respuesta cada vez que cambie su contenido. Generalmente, esto se logra incorporando una huella digital del archivo, o un número de versión, en su nombre de archivo; por ejemplo, style.**x234dff**.css.
 
 <img src="images/http-cache-hierarchy.png"  alt="Jerarquía del caché">
 

@@ -52,7 +52,7 @@ menos flexibles.
 <table class="responsive">
   <thead>
     <tr>
-      <th colspan="2">Plataformas admitidas &amp; Nombre de la herramienta</th>
+      <th colspan="2">Plataformas admitidas y nombre de la herramienta</th>
     </tr>
   </thead>
   <tbody>
@@ -174,7 +174,7 @@ Para optimizar imágenes, puedes usar estos módulos.
 <table class="responsive">
   <thead>
     <tr>
-      <th colspan="2">Gulp &amp; Grunt</th>
+      <th colspan="2">Gulp y Grunt</th>
     </tr>
   </thead>
   <tbody>

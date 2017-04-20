@@ -31,7 +31,7 @@ Para diseñar formularios eficaces, evita las acciones repetidas, solicita solo 
 - Proporciona un calendario visual para que los usuarios no deban abandonar tu sitio y consultar la app de calendario en sus smartphones.
 
 
-### Minimiza las acciones y los campos repetidos.
+### Minimiza las acciones y los campos repetidos
 
 <figure class="attempt-right">
   <img src="imgs/forms-multipart-good.png" srcset="imgs/forms-multipart-good.png 1x, imgs/forms-multipart-good-2x.png 2x" alt="Muestra el progreso en los formularios que tienen varias partes">
@@ -52,7 +52,7 @@ usuario.
 
 <div style="clear:both;"></div>
 
-### Muestra a los usuarios el punto en el que se encuentran.
+### Muestra a los usuarios el punto en el que se encuentran
 
 <figure class="attempt-right">
   <img src="imgs/forms-multipart-good.png" srcset="imgs/forms-multipart-good.png 1x, imgs/forms-multipart-good-2x.png 2x" alt="Muestra el progreso en los formularios que tienen varias partes">

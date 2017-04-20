@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Has a registered service worker" Lighthouse audit.
+description: Reference documentation for the "Registers A Service Worker" Lighthouse audit.
 
-{# wf_updated_on: 2016-07-25 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-07-25 #}
 
-# Has a Registered Service Worker {: .page-title }
+# Registers A Service Worker {: .page-title }
 
 ## Why the audit is important {: #why }
 
@@ -39,3 +39,6 @@ the features in your own app:
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Checks if the Chrome Debugger returns a service worker version.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/registered-service-worker.html" %}

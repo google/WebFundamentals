@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Dalam codelab ini, Anda akan mempelajari cara men-debug service worker menggunakan panel Aplikasi DevTools yang baru. Anda juga akan mempelajari cara menyimulasikan pemberitahuan Push untuk memastikan bahwa langganan Anda disetel dengan benar.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2016-10-19T18:28:32Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -46,7 +45,7 @@ Karena code lab ini berfokus pada pembelajaran terhadap alat, jangan ragu untuk 
 * Editor teks
 * Pengetahuan dasar tentang HTML, CSS dan JavaScript
 
-Codelab ini berfokus pada debugging Service Worker dan mengasumsikan beberapa pengetahuan dasar tentang bekerja dengan Service Worker. Beberapa konsep yang dipoles atau diblokir kodenya (misalnya gaya atau JavaScript yang tidak-relevan) disediakan bagi Anda cukup dengan salin dan tempel. Jika Anda baru dalam dunia Service Worker pastikan untuk [membaca API Primer](/web/fundamentals/primers/service-worker/?hl=en) sebelum melanjutkan.
+Codelab ini berfokus pada debugging Service Worker dan mengasumsikan beberapa pengetahuan dasar tentang bekerja dengan Service Worker. Beberapa konsep yang dipoles atau diblokir kodenya (misalnya gaya atau JavaScript yang tidak-relevan) disediakan bagi Anda cukup dengan salin dan tempel. Jika Anda baru dalam dunia Service Worker pastikan untuk [membaca API Primer](/web/fundamentals/primers/service-worker/) sebelum melanjutkan.
 
 
 ## Persiapan
@@ -68,7 +67,7 @@ Folder `step-NN` berisi status akhir yang diinginkan dari setiap langkah codelab
 
 Meskipun Anda bebas menggunakan server web sendiri, codelab ini dirancang untuk bekerja dengan baik bersama Server Web Chrome. Jika Anda belum memasang aplikasi tersebut, Anda bisa memasangnya dari Toko Web Chrome.
 
-[Tautan](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Tautan](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 Setelah memasang aplikasi Web Server for Chrome, klik pada pintasan Apps di bilah bookmark: 
 
@@ -128,7 +127,7 @@ Di masa lalu, pemeriksaan Service Worker mengharuskan pembongkaran internal Chro
 
 Tampilan __Service Workers__ memberikan informasi tentang Service Worker yang aktif dalam posisinya saat ini. Di sepanjang baris atas ada serangkaian kotak centang.
 
-* __Offline__ - Akan menyimulasikan saat terputus dari jaringan. Hal ini berguna untuk dengan cepat memverifikasi bahwa penangan fetch Service Worker Anda bekerja dengan benar.
+* __Offline __- Akan menyimulasikan saat terputus dari jaringan. Hal ini berguna untuk dengan cepat memverifikasi bahwa penangan fetch Service Worker Anda bekerja dengan benar.
 * __Update on reload__ - Akan memaksa Service Worker saat ini agar diganti oleh Service Worker baru (jika developer telah membuat pembaruan untuk `service-worker.js`). Biasanya browser akan menunggu sampai pengguna menutup semua tab yang berisi situs ini sebelum memperbarui ke Service Worker yang baru.
 * __Bypass for network__ - Akan memaksa browser untuk mengabaikan Service Worker aktif dan mengambil sumber daya dari jaringan. Hal ini sangat berguna dalam situasi saat Anda ingin bekerja pada CSS atau JavaScript dan tidak perlu mengkhawatirkan tentang Service Worker yang secara tidak sengaja melakukan caching dan mengembalikan file lama.
 * __Show all__ - Akan menampilkan daftar semua Service Worker aktif tidak peduli posisinya.

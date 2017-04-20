@@ -23,10 +23,7 @@ description: ここまでは、適切に通知する方法について説明し�
 
 ##  あらためて、Service Worker とは
 
-Service Worker についてあらためて説明します。メッセージの処理には、Service Worker 専用のコードが必要です。
-背景情報を知りたい方は、[概要](/web/fundamentals/getting-started/primers/service-workers)をもう一度ご確認ください。
-
-DevTools を使用した [Service Worker のデバッグ](/web/tools/chrome-devtools/debug/progressive-web-apps/#service-workers)について、便利な手順も記載しています。
+Service Worker についてあらためて説明します。メッセージの処理には、Service Worker 専用のコードが必要です。背景情報を知りたい方は、[概要](/web/fundamentals/getting-started/primers/service-workers)をもう一度ご確認ください。DevTools を使用した [Service Worker のデバッグ](/web/tools/chrome-devtools/debug/progressive-web-apps/#service-workers)について、便利な手順も記載しています。
 
 
 
@@ -86,10 +83,7 @@ DevTools を使用した [Service Worker のデバッグ](/web/tools/chrome-devt
 たとえば、すでにアプリが開いており、プッシュ通知のコンテンツがすでにユーザーに表示されている場合が考えられます。
 
 
-幸い、Service Worker にはアプリが開いているかどうかをチェックする方法があります。Service Worker は、[`clients`](https://developer.mozilla.org/en-US/docs/Web/API/Clients) というインターフェースをサポートしています。これにより、すべてのアクティブ クライアントのリストを現在の Service Worker で制御できます。
-
-
-クライアントがアクティブかどうかを確認するには、`clients.length` を呼び出します。
+幸い、Service Worker にはアプリが開いているかどうかをチェックする方法があります。Service Worker は、[`clients`](https://developer.mozilla.org/en-US/docs/Web/API/Clients) というインターフェースをサポートしています。これにより、すべてのアクティブ クライアントのリストを現在の Service Worker で制御できます。クライアントがアクティブかどうかを確認するには、`clients.length` を呼び出します。
 このプロパティが `0` を返したら、通知を表示します。
 それ以外の場合は、他の処理を実行します。
 
@@ -228,9 +222,7 @@ self.addEventListener('push', event => {
 
 
 
-別の例で、この処理を確認してみましょう。前のセクションで説明したメッセージのデータを既に受信または取得していると仮定します。
-
-そのデータの処理方法を見てみましょう。
+別の例で、この処理を確認してみましょう。前のセクションで説明したメッセージのデータを既に受信または取得していると仮定します。そのデータの処理方法を見てみましょう。
 
 まずは、基本的な push イベント ハンドラを使用します。`waitUntil()` メソッドで、通知データを解決する Promise が返されます。
 
@@ -295,9 +287,7 @@ self.addEventListener('push', function(event) {
 </pre>
 
 新しい通知の残りのプロパティを設定する際に、2 つのアクション ボタンを通知に追加します。
-1 つはアプリを開きます。もう 1 つは、何もアクションを実行せずに通知を閉じます。
-
-どちらのアクションも push イベントでは処理されません。詳しくは次のセクションで説明します。
+1 つはアプリを開きます。もう 1 つは、何もアクションを実行せずに通知を閉じます。どちらのアクションも push イベントでは処理されません。詳しくは次のセクションで説明します。
 最後に、通知を表示します（26 行目）。
 
 <pre class="prettyprint">
@@ -391,9 +381,7 @@ self.addEventListener('notificationclick', function(event) {
 </pre>
 
 ユーザーが [Confirm] をクリックした場合は、アプリを開かずにそのままサーバーに送信します（3～13 行目）。
-サーバーに確認を送信した後すぐに、`notificationclick` イベントから return している点に注目してください。
-
-このようにすれば、アプリが開かれることはありません。
+サーバーに確認を送信した後すぐに、`notificationclick` イベントから return している点に注目してください。このようにすれば、アプリが開かれることはありません。
 
 <pre class="prettyprint">
 self.addEventListener('notificationclick', function(event) {

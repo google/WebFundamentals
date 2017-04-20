@@ -31,7 +31,7 @@ O modelo para armazenamento de unidades de dados determina como eles são organi
 Isso afeta a facilidade de uso, o custo e o desempenho das solicitações de armazenamento e
 recuperação. 
 
-* **Estruturados:** dados armazenados em tabelas com campos predefinidos, como é típico
+* **Estruturados: **dados armazenados em tabelas com campos predefinidos, como é típico
 em sistemas de gerenciamento de bancos de dados baseados em SQL. Ideal para consultas flexíveis e dinâmicas
 em que o escopo completo dos tipos de consultas pode não ser conhecido
 inicialmente. Um exemplo conhecido de um armazenamento de dados estruturado é o IndexedDB
@@ -54,7 +54,7 @@ sistemas de arquivos e serviços de armazenamento na nuvem.
 Os métodos de armazenamento de apps da Web podem ser analisados de acordo com o escopo
 da persistência dos dados.
 
-* **Persistência de sessão:** os dados dessa categoria são retidos apenas enquanto
+* **Persistência de sessão: **os dados dessa categoria são retidos apenas enquanto
 uma única sessão da Web ou guia de navegador permanecer ativa. Um exemplo de um mecanismo
 de armazenamento com persistência de sessão é a Session Storage API.
 
@@ -109,7 +109,7 @@ de navegadores</th>
   <tbody>
     <tr>
       <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem">Sistemas de arquivos</a></td>
-      <td>Stream de bytes</td>
+      <td>stream de bytes</td>
       <td>dispositivo</td>
       <td><a href="http://caniuse.com/#feat=filesystem">52%</a></td>
       <td>Não</td>

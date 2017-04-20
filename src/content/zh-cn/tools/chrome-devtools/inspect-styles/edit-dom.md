@@ -257,7 +257,7 @@ code for screenshot
 <html>
 <body onload="console.log('onload');">
   <div onfocus="console.log('focus');">
-    <button id="button" onclick="console.log('onclick');">click me</button>
+    <button id="button" onclick="console.log('onclick');">点我</button>
   </div>
 </body>
 </html>
@@ -285,7 +285,7 @@ code for screenshot
 <html>
 <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
 <body>
-  <button id="button">click me, please</button>
+  <button id="button">请点我</button>
   <script>
     $('#button').click(function() {
       $('#button').text('hehe, that tickled, thanks');

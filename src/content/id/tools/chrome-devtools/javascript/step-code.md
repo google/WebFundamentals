@@ -107,7 +107,7 @@ lebih redup daripada properti `confirm` pada tangkapan layar di bawah ini.
 Properti lebih gelap yang bisa dienumerasi. Properti lebih terang dan diredupkan,
 tidak bisa dienumerasi. Lihat thread Stack Overflow berikut untuk informasi selengkapnya:
 [Apa arti warna dalam panel
-Scope Chrome Developer Tools?] (Apa arti warna dalam panel Scope Chrome Developer Tools?)
+Scope Chrome Developer Tools?](Apa arti warna dalam panel Scope Chrome Developer Tools?)
 
 ## Tumpukan panggilan
 

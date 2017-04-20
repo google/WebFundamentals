@@ -53,7 +53,7 @@ WebVR 可以在 Chrome 56+ 中使用（通过启用一个运行时标志）。�
 
 2. **可能没有可用的 VR 设备。** 我们的目标应该是打造适用于非 VR 设置的体验，并将 VR 的可用性视为渐进式增强。
 
-3. **可能有多个可用的 VR 设备。** 同样，某人完全可能有多个可用的 VR 设备，如果可以的话，我们应允许这种情况，从而让用户可以选择最适合的设备。
+3. **可能有多个可用的 VR 设备。**同样，某人完全可能有多个可用的 VR 设备，如果可以的话，我们应允许这种情况，从而让用户可以选择最适合的设备。
 
 ## 安装 WebVR Emulation Chrome DevTools 扩展程序
 
@@ -71,7 +71,7 @@ WebVR 可以在 Chrome 56+ 中使用（通过启用一个运行时标志）。�
       source: this._renderer.domElement
     }]);
 
-`requestPresent` 接受一个 [Web VR 规范](https://w3c.github.io/webvr/#vrlayer) 称之为“VRLayers”的数组，其本质上是针对 VR 设备的 Canvas 元素的包装器。在上面的代码段中，我们将选取 Canvas 元素 — `WebGLRenderer.domElement`（由 Three.js 提供），并将其作为一个 VRLayer 的源属性进行传递。反过来，`requestPresent` 将为您提供一个 [Promise](/web/fundamentals/getting-started/primers/promises)，其在请求成功时进行解析，否则将被拒绝。
+`requestPresent` 接受一个 [Web VR 规范](https://w3c.github.io/webvr/#vrlayer)称之为“VRLayers”的数组，其本质上是针对 VR 设备的 Canvas 元素的包装器。在上面的代码段中，我们将选取 Canvas 元素 — `WebGLRenderer.domElement`（由 Three.js 提供），并将其作为一个 VRLayer 的源属性进行传递。反过来，`requestPresent` 将为您提供一个 [Promise](/web/fundamentals/getting-started/primers/promises)，其在请求成功时进行解析，否则将被拒绝。
 
 ## 绘制 VR 场景
 

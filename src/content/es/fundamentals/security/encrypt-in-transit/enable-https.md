@@ -160,7 +160,7 @@ que es fundamental para los hosting virtuales HTTPS basados en nombres.
 En el futuro, y esperamos que sea un futuro cercano, los clientes que no ofrezcan compatibilidad con SNI serán reemplazados
 por software moderno. Controla la cadena usuario-agente en tus registros de solicitudes para saber
 el momento en que se produjo la migración de suficientes usuarios propios a un software moderno. (Puedes
-decidir cuál es tu límite; tal vez el &lt; 5% o el &lt; 1%).
+decidir cuál es tu límite; tal vez &lt; 5% o &lt; 1%).
 
 Si el servicio HTTPS aún no está disponible en tus servidores, habilítalo ahora mismo
 (sin redireccionar HTTP a HTTPS. Consulta la información a continuación). Configura tu servidor web para usar

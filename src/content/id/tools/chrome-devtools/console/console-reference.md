@@ -109,7 +109,7 @@ metode.
 
 ## console.group(object[, object, ...])
 
-Memulai grup log baru dengan judul opsional. Semua output konsol yang
+Memulai grup log baru dengan judul opsional. Semua keluaran konsol yang
 terjadi setelah `console.group()` dan sebelum `console.groupEnd()` secara visual
 akan dikelompokkan bersama. 
 

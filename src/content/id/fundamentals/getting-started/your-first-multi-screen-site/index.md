@@ -15,7 +15,7 @@ Perhatian: Artikel ini sudah lama tidak diperbarui dan mungkin tidak sesuai lagi
 
 Menciptakan pengalaman multi-perangkat tidaklah sesulit yang dibayangkan.
 Dalam panduan ini, kita akan membangun laman landas produk untuk 
-[Kursus Pengembangan Web Seluler CS256](https://www.udacity.com/course/cs256)
+[Kursus Development Web Seluler CS256](https://www.udacity.com/course/cs256)
 yang berfungsi baik di berbagai tipe perangkat.
 
 Membangun untuk beberapa perangkat dengan kemampuan yang berbeda, ukuran layar yang
@@ -51,7 +51,7 @@ Kita telah mengidentifikasi yang dibutuhkan:
 
 #### TL;DR {: .hide-from-toc }
 - Mengetahui materi yang Anda butuhkan.
-- Membuat sketsa Arsitektur Informasi (AI) untuk viewport sempit dan lebar.
+- Membuat sketsa Arsitektur Informasi (AI) untuk tampilan sempit dan lebar yang terlihat.
 - Membuat tampilan kerangka laman dengan materi namun tanpa penataan gaya.
 
 Kami juga datang dengan konsep garis besar arsitektur informasi dan layout untuk
@@ -498,7 +498,7 @@ tampilan yang terlihat dan sebaiknya ditampilkan berdampingan dengan daftar berb
 
 <img src="images/imageswide.png" class="attempt-right">
 
-Gambar di antarmuka bidang sempit tampilan yang terlihat (kebanyakan perangkat seluler) diatur menjadi
+Gambar di antarmuka tampilan sempit yang terlihat (kebanyakan perangkat seluler) diatur menjadi
 sepenuh lebar layar dan ditumpuk secara vertikal.  Ini tidak diskalakan dengan
 benar pada bidang lebar tampilan yang terlihat.
 

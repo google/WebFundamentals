@@ -26,7 +26,7 @@ description: 응답 시간 및 오프라인 지원 개선을 위해 데이터를
 사용자 환경이 크게 향상될 수 있습니다. 이 글에서는
 PWA용 오프라인 데이터 저장소에 대한 몇 가지 아이디어를 요약하여 설명합니다.
 *의미 있는* 경험을 오프라인으로 제공하는 데 필요한
-JSON 페이로드, 이미지 및 일반 정적 데이터에 대해 생각해 보십시오.
+JSON 페이로드, 이미지 및 일반 정적 데이터에 대해 생각해 보세요.
 
 <div class="clearfix"></div>
 
@@ -171,13 +171,13 @@ API](https://www.chromestatus.com/features/5630353511284736)를 사용하면
 
 웹 저장소 공간이 부족하면 UA는 사용 가능한 공간을 확보하기 위해 저장소를 비웁니다. 이 경우
 오프라인 응답성을 저해할 수 있으므로 최근에 업데이트된
-[저장소](https://storage.spec.whatwg.org/) 사양은 "Persistent" 및
+[저장소](https://storage.spec.whatwg.org/) 사양은 'Persistent' 및
 'Best effort'(기본값) 전략을 정의합니다. “Best effort”는
 사용자를 방해하지 않고 저장소를 비울 수 있음을 의미하지만
 장기간 및/또는 중요한 데이터에 대한 영구성이 떨어집니다. 현재 IndexedDB와 Cache API는
 모두 “Best effort” 범주에 해당합니다.
 
-"Persistent" 저장소는 저장소 공간이 부족할 때 자동으로 비워지지 않습니다. 사용자가
+'Persistent' 저장소는 저장소 공간이 부족할 때 자동으로 비워지지 않습니다. 사용자가
 (브라우저 설정을 통해) 해당 저장소를 수동으로 비워야 합니다. Chrome은
 Origin Trial을 통해 [Persistent
 Storage](/web/updates/2016/06/persistent-storage)에
@@ -204,7 +204,7 @@ IndexedDB](https://github.com/inexorabletash/indexeddb-promises): 프라미스 �
 필요 없는 기본 IndexedDB 관찰을 지원합니다.
 
 * [Async Cookies API](https://github.com/bsittler/async-cookies-api): 문서
-및 워커에 대한 비동기 자바스크립트 쿠키 API입니다.
+및 워커에 대한 비동기 JavaScript Cookies API입니다.
 
 * [Quota Management API](https://www.w3.org/TR/quota-api/): 앱/원본이
 사용하는 할당량을 확인합니다.
@@ -241,7 +241,7 @@ API](https://github.com/WICG/async-cookies-api)는
 오프라인 저장소는 마법 같은 것이 아니며 기본 API에 대한
 이해는 현재 사용할 수 있는 기능을 최대한 활용하는 데 도움이 됩니다.
 이러한 API를 직접 사용하든
-추상화 라이브러리를 사용하든 그 방법을 숙지하십시오.
+추상화 라이브러리를 사용하든 그 방법을 숙지하세요.
 
 이 가이드가 PWA를 빛나게 만드는 오프라인 경험을 만드는 데
 일조하기를 바랍니다! ✨
@@ -266,10 +266,10 @@ Workers?](https://nolanlawson.github.io/html5workertest/)
 
 ###유용한 리소스
 
-* [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) (동적/런타임 요청에
+* [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox)(동적/런타임 요청에
 대한 오프라인 캐싱)
 
-* [sw-precache](https://github.com/GoogleChrome/sw-precache) (정적 자산/애플리케이션 셸에
+* [sw-precache](https://github.com/GoogleChrome/sw-precache)(정적 자산/애플리케이션 셸에
 대한 오프라인 사전 캐싱)
 
 * Webpack 사용자는 위의 항목 또는
@@ -277,21 +277,21 @@ Workers?](https://nolanlawson.github.io/html5workertest/)
 
 ### 검토할 가치가 있는 IndexedDB 라이브러리
 
-* [localForage](https://github.com/localForage/localForage)(~8KB, 프라미스, 훌륭한
+* [localForage](https://github.com/localForage/localForage)(약 8KB, 프라미스, 훌륭한
 레거시 브라우저 지원)
 
-* [Dexie](http://dexie.org/) (~16KB, 프라미스, 복잡한 쿼리, 보조
+* [Dexie](http://dexie.org/)(약 16KB, 프라미스, 복잡한 쿼리, 보조
 색인)
 
-* [PouchDB](https://pouchdb.com/) (~45KB ([사용자설정
+* [PouchDB](https://pouchdb.com/)(약 45KB ([사용자설정
 빌드](https://pouchdb.com/2016/06/06/introducing-pouchdb-custom-builds.html) 지원),
 동기화)
 
-* [Lovefield](https://github.com/google/lovefield) (관계형)
+* [Lovefield](https://github.com/google/lovefield)(관계형)
 
-* [LokiJS](http://lokijs.org/#/) (인메모리)
+* [LokiJS](http://lokijs.org/#/)(인메모리)
 
-* [ydn-db](https://github.com/yathit/ydn-db) (dexie와 유사, WebSQL 사용)
+* [ydn-db](https://github.com/yathit/ydn-db)(dexie와 유사, WebSQL 사용)
 
 **웹 저장소 공간에 대한 정보는 Nolan Lawson, Joshua Bell(Open Web Storage 및
 [BlinkOn talk](https://docs.google.com/presentation/d/11CJnf77N45qPFAhASwnfRNeEMJfR-E_x05v1Z6Rh5HA/edit) 관련 글에서 많은 영감을

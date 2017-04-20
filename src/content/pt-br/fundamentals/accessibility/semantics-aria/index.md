@@ -72,7 +72,7 @@ tarefa de desenvolvimento.
 
 É importante compreender que não há necessidade de redefinir a
 semântica padrão. Independentemente de seu uso, um elemento HTML padrão `<input type="checkbox">`
-não precisa de um atributo ARIA adicional`role="checkbox"` para ser
+não precisa de um atributo ARIA adicional `role="checkbox"` para ser
  anunciado corretamente.
 
 Também é importante notar que certos elementos HTML têm restrições sobre quais

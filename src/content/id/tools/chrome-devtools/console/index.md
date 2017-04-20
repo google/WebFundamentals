@@ -109,7 +109,7 @@ Biasanya konteks disetel ke `top` (bingkai atas laman).
 Bingkai dan ekstensi lain beroperasi di konteksnya masing-masing. Untuk menggarap konteks
 lain ini, Anda perlu memilihnya dari menu tarik-turun. Misalnya,
 jika ingin melihat keluaran log elemen `<iframe>` dan mengubah
-variabel yang berada di konteks itu, Anda perlu memilihnya dari 
+variabel yang berada di konteks itu, Anda perlu memilihnya dari
 menu tarik-turun Pemilih Konteks Eksekusi.
 
 Secara default Console berada dalam konteks `top`, kecuali jika Anda mengakses DevTools dengan

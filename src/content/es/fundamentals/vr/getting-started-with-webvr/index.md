@@ -53,7 +53,7 @@ Este código contiene algunos aspectos para analizar.
 
 2. **Puede que no exista ningún dispositivo de RV disponible.** Deberíamos tener como objetivo crear experiencias que funcionen correctamente con una configuración fuera de la RV, y tratar la disponibilidad de la RV como una mejora progresiva.
 
-3. **Puede que existan varios dispositivos de RV disponibles.** De la misma manera, es absolutamente posible que alguien tenga varios dispositivos de RV disponibles. Deberíamos permitir eso, si fuese posible, permitiéndoles que elijan el más adecuado.
+3. **Puede que existan varios dispositivos de RV disponibles. **De la misma manera, es absolutamente posible que alguien tenga varios dispositivos de RV disponibles. Deberíamos permitir eso, si fuese posible, permitiéndoles que elijan el más adecuado.
 
 ## Instala una extensión de emulación de WebVR para Chrome DevTools
 
@@ -114,7 +114,7 @@ La información del fotograma contiene muchos datos interesantes, así que veám
 
 Si no tienes experiencia trabajando con 3D, las matrices de proyección y de vista-modelo pueden parecer abrumadoras. Aunque tienen una explicación matemática detrás de sus funciones, no necesitamos conocer exactamente cómo trabajan, sino qué es lo que hacen.
 
-* **Matrices de proyección** Se usan para crear una impresión de perspectiva dentro de una escena. Normalmente hacen esto distorsionando la escala de los objetos en la escena mientras más se alejan del ojo.
+* **Matrices de proyección.** Se usan para crear una impresión de perspectiva dentro de una escena. Normalmente hacen esto distorsionando la escala de los objetos en la escena mientras más se alejan del ojo.
 
 * **Matrices de modelo-vista.** Se usan para posicionar un objeto en el espacio 3D. Debido a la forma en la que trabajan las matrices, puedes crear los gráficos de la escena y desde allí continuar por el gráfico, multiplicando la matriz de cada nodo, hasta llegar a la última matriz de modelo-vista para el objeto en cuestión.
 

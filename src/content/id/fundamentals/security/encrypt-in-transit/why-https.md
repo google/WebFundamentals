@@ -69,7 +69,7 @@ dengan `getUserMedia()`, memungkinkan pengalaman aplikasi offline dengan service
 atau pembangunan progressive web app, memerlukan izin eksplisit dari pengguna
 sebelum eksekusi. Banyak API lama juga sedang diperbarui agar meminta izin
 eksekusi, misalnya
-[geolokasi](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation){: .external}
+[geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation){: .external}
 API. HTTPS adalah komponen kunci bagi alur kerja izin untuk fitur
 baru dan API yang diperbarui.
 
