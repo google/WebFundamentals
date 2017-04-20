@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Site is on HTTPS" Lighthouse audit.
+description: Reference documentation for the "Uses HTTPS" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-19 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-09-19 #}
 
-# Site is on HTTPS  {: .page-title }
+# Uses HTTPS  {: .page-title }
 
 ## Why the audit is important {: #why }
 
