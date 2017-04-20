@@ -28,6 +28,8 @@ by 15%.
 
 ## About voot.com
 
+<img src="/web/showcase/2017/images/voot/screen.jpg" class="attempt-right">
+
 Voot is one of India's top video-on-demand products, available as both a native
 app and a mobile web app. It offers close to 35,000 hours of premium content
 online, including exclusive shows from networks such as Colors and MTV, as well
