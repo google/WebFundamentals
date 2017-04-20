@@ -44,7 +44,7 @@ Most mobile Voot users access the Internet via metered 2G and 3G networks. Data
 transfer is expensive, and while users become highly committed to a video once
 it starts playing, slow load times lead to users giving up before the experience
 can even start. To address that challenge and increase mobile web usage, Voot
-looked to optimize their site with Progressive Web App features.
+looked to enhance their site with Progressive Web App features.
 
 ## Solution
 
@@ -52,10 +52,10 @@ To improve the overall user experience, Voot.com turned their site into a
 Progressive Web App, using features such as Add to Homescreen and a service
 worker.
 
-While 4G services have recently launched, there are still more users in India
-that reach the Internet via 2G and 3G networks, with slow and sometimes
+While 4G services have recently launched, most users in India
+reach the Internet via 2G and 3G networks, with slow and sometimes
 expensive data transfer rates. To reduce the data being transferred, Voot.com
-optimized their images specifically for mobile. To minimize image data size, the
+optimized their images specifically for mobile, and the
 site now dynamically serves either JPEG or WebP images depending upon browser
 capabilities.
 
