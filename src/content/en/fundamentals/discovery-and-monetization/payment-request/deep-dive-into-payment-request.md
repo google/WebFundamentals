@@ -50,7 +50,7 @@ href="https://storage.googleapis.com/prshim/v1/payment-shim.js">a shim</a> that
 can be embedded on your site. The shim will paper over any API differences for
 two major Chrome versions.
 
-# Feature Detect
+## Feature Detect
 
 Before we start covering how to use PaymentRequest, we should feature detect to
 ensure it's available and fallback to a traditional checkout page in browsers
@@ -67,7 +67,7 @@ if(window.PaymentRequest) {
 
 Note: PaymentRequest is only available on sites served over HTTPS.
 
-# PaymentRequest Constructor
+## PaymentRequest Constructor
 
 Once you are ready to collect payment details from the user, you'll need to
 construct a new PaymentRequest object.
@@ -124,7 +124,7 @@ request.show()
 Let's start by looking at the arguments we can pass into the `PaymentRequest`
 constructor, starting with the supported payment methods.
 
-## Defining Supported Payment Methods
+### Defining Supported Payment Methods
 
 The PaymentRequest API is designed to support credit and debit card payments
 as well as third party payment methods (such as Android Pay).
@@ -239,7 +239,7 @@ const creditCardPaymentMethod = {
 };
 ```
 
-### Payment Method: Multiple Payment Methods
+#### Payment Method: Multiple Payment Methods
 
 In the above example for basic cards, we created an object
 `creditCardPaymentMethod` and we passed that into an array before giving it to the
@@ -320,7 +320,7 @@ const androidPayPaymentMethod = {
 We won't go into details of how to add Android Pay in this article, [we have a
 section dedicated to that here](/web/fundamentals/discovery-and-monetization/payment-request/android-pay).
 
-### Edge Cases
+#### Edge Cases
 
 There are some edge cases to be aware of when defining your supported payment
 methods.
@@ -345,13 +345,13 @@ supports it, the browser can (and Chrome does, at the time of writing) skip the
 Payment Request UI altogether after the `show()` method is called. Users will be
 taken straight to the Android Pay app to complete the payment.
 
-## Defining Payment Details
+### Defining Payment Details
 
 The second argument we need to pass to the `PaymentRequest` constructor is the
 payment details object. This object contains the total for the order and an
 optional array of display items (i.e. a high level breakdown of the total).
 
-### Transaction Details: Total
+#### Transaction Details: Total
 
 The contents of the `total` parameter should contain a `label` parameter and an
 `amount` parameter consisting of a `currency` and `value`. A basic example would be:
@@ -414,7 +414,7 @@ This produces the following order summary:
   </figure>
 </div>
 
-### Transaction Details: Display Items
+#### Transaction Details: Display Items
 
 Display items can used to provide a high level breakdown of the total. This
 would typically include subtotal, tax, deductions, and shipping cost.
@@ -482,7 +482,7 @@ to the total. This is because we've set the total to have a value of zero.
 <strong>It is the responsibility of your web app to calculate the correct total.</strong>
 </div>
 
-### Transaction Details: Display Items - Pending
+#### Transaction Details: Display Items - Pending
 
 If you have values that aren't final because they require additional
 information, you can use the `pending` parameter.
@@ -522,7 +522,7 @@ Which will be given a slightly different text color in Chrome as a result:
   </figure>
 </div>
 
-### Edge Cases
+#### Edge Cases
 
 There are some minor edge cases with the `paymentDetails` argument where you can
 stress the UI and incorrectly define the object resulting in an error.
@@ -622,9 +622,7 @@ You can use right-to-left languages for the labels and they will be displayed
 accordingly. The rest of the browser's text will be determined by the user's
 browser / system settings.
 
-
-
-## Defining Options (Optional*)
+### Defining Options (Optional*)
 
 The third argument to the PaymentRequest constructor is the optional `options`
 object.
@@ -672,7 +670,7 @@ pre-populated.
 The options object is also used to configure shipping, but we'll look at
 shipping in much more detail later on as it touches many parts of the API.
 
-### Edge Cases
+#### Edge Cases
 
 The only edge case to note here is that if you define any of the parameters
 (`requestPayerName`, `requestPayerPhone` or `requestPayerEmail`) with a non-boolean
@@ -681,7 +679,7 @@ value it will use the usual Javascript [truthy](https://developer.mozilla.org/en
 undefined, 0 will be treated as false and 'string value', {}, [] will be treated
 as true).
 
-# Responding to PaymentRequest.show()
+## Responding to PaymentRequest.show()
 
 After calling `show()` the `PaymentRequest` UI will be displayed to the user. Users
 will either close the UI or fill in the required fields and select 'Pay', at
@@ -709,7 +707,7 @@ Once the user has filled in the `PaymentRequest` UI, your web app will receive a
 It's this `paymentResponse` object that contains the user's payment information that you'll
 submit to your payment processor.
 
-## Accessing Details from the PaymentResponse
+### Accessing Details from the PaymentResponse
 
 The `PaymentResponse` object contains the following parameters:
 
@@ -752,7 +750,7 @@ Once you have these details from the `PaymentResponse`, you need to process the
 payment and "complete" the transaction by calling the `paymentResponse.complete()`
 method.
 
-## Completing the Transaction
+### Completing the Transaction
 
 After the promise from `show()` has resolved, the PaymentRequest UI will display a
 loading UI to the user. You can either leave this spinner visible while you
@@ -834,7 +832,7 @@ an error dialog to the user if you call with `complete('fail')` .
   </figure>
 </div>
 
-## Edge Cases
+### Edge Cases
 
 **Completing with a Diff String**  
 One possible gotcha with the `complete()`` method is that if you pass in a string
@@ -851,7 +849,7 @@ If you fail to call complete() in a timely manner, it will time out and the UI
 will be closed. The browser will show a message to the user highlighting there
 was an issue.
 
-# Shipping in Payment Request API
+## Shipping in Payment Request API
 
 When you are selling physical goods you'll need to collect shipping information
 from your users.
@@ -860,7 +858,7 @@ In this section we'll look at how you can request shipping information from the
 user, define the type of shipping, and react to changes to the shipping address
 and shipping option from the user.  
 
-## Request Shipping Details
+### Request Shipping Details
 
 To start off with, you'll need to request shipping information from the user,
 which is achieved by setting `requestShipping` to `true` in the `options` object.
@@ -885,7 +883,7 @@ This will ask the user for their shipping address:
 By default the PaymentRequest API will set a shippingType to 'shipping'. This is
 why the title on the highlighted row above is "Shipping".
 
-### Changing the Shipping Type
+#### Changing the Shipping Type
 
 There are situations where the term "Shipping" isn't appropriate given the
 current context, even though an address is required from the user. For example,
@@ -934,7 +932,7 @@ The flow is:
 We'll start by looking at the `shppingAddressChange` event which is dispatched as the
 user selects a new address.
 
-## Handling Shipping Address Changes
+### Handling Shipping Address Changes
 
 If you've requested shipping information from the user, a `shippingAddressChange`
 event will be dispatched whenever the user changes the shipping address. This
@@ -966,7 +964,7 @@ calling `show()`. When this event is triggered, the common pattern will be to
 check the user's selected address and then provide the available shipping
 options.
 
-### Retrieving the shippingAddress
+#### Retrieving the shippingAddress
 
 When a `shippingAddressChang`e event has been dispatched, the selected address
 will be added to the current `PaymentRequest` instance under the `shippingAddress`
@@ -1068,7 +1066,7 @@ This should be everything you need to get the user's selected shipping address
 but it does raise the question, how do you tell the `PaymentRequest` API what the
 available shipping options are?
 
-### Defining the Available Shipping Options
+#### Defining the Available Shipping Options
 
 The event object you'll receive in the `shippingaddresschange` event is a
 `PaymentRequestUpdateEvent` which has a method `updateWith()`. You must call this
@@ -1117,7 +1115,7 @@ This happens because the API expects at least one shipping option to be
 available for the user to select. Before we look at how to actually define the
 shipping options, it's worth covering how you can customize the error message.
 
-#### Customizing the Shipping Options Error
+##### Customizing the Shipping Options Error
 
 If you can't ship to a user's selected address, you should provide a meaningful
 message to them. Adding an `error` parameter to the
@@ -1153,7 +1151,7 @@ Which will display to the user as:
   </figure>
 </div>
 
-#### Defining Shipping Options
+##### Defining Shipping Options
 
 Where there are available shipping options, you can define the available options
 by setting the `shippingOptions` to an array of objects containing an `id`, `label`,
@@ -1265,7 +1263,7 @@ While the network request is being made, the user will see a spinner:
   </figure>
 </div>
 
-### Edge Cases
+#### Edge Cases
 
 **Never Calling updateWith() or Long Promise**  
 If you fail to call `event.updateWith()` or pass it a promise that fails to
@@ -1311,7 +1309,7 @@ DOMException: required member currency is undefined.
 DOMException: required member value is undefined.
 ```
 
-## Handling Shipping Options Changes
+### Handling Shipping Options Changes
 
 Just as you can listen for changes to the shipping address, you can listen for
 changes to the selected shipping option. The tasks to perform here are to mark
@@ -1391,7 +1389,7 @@ until it resolves.
   </figure>
 </div>
 
-### Edge Cases
+#### Edge Cases
 
 All of the edge cases from the `shippingaddresschange` event apply to
 `shippingoptionschange` event. There are a few additional edge cases to be
@@ -1409,7 +1407,7 @@ and have to select a shipping method again.
 If you set the selected parameter to `true` on *multiple shipping options*, the last
 entry will be selected.
 
-## Variants to Above Flow
+### Variants to Above Flow
 
 In the above flow, we took the user through the following steps:
 
@@ -1422,7 +1420,7 @@ In the above flow, we took the user through the following steps:
 You can shorten this flow for the user by specifying data at
 different stages. In this section we'll see what we can change.
 
-### Defining Shipping Options Up Front
+#### Defining Shipping Options Up Front
 
 In the `PaymentRequest` constructor, we can define `shippingOptions` as part of the
 initial `paymentDetails` object (i.e. we don't have to wait until a
@@ -1503,7 +1501,7 @@ extremely confident</strong> that the selected option won't need to change
 based on the user's address (e.g. you offer worldwide free shipping).
 </div>
 
-### Select a Shipping Option in shippingaddresschange
+#### Select a Shipping Option in shippingaddresschange
 
 In the `shippingaddresschange` event we saw that whichever shipping options we
 passed to `event.updateWith()` would be made available to the user.  
@@ -1554,7 +1552,7 @@ paymentRequest.addEventListener('shippingaddresschange', (event) => {
 });
 ```
 
-# Abort a Transaction
+## Abort a Transaction
 
 The `abort()` method can be used when the shopping session has timed out or an item in the
 cart sells out during the transaction and you need to close the PaymentRequest UI.
@@ -1591,7 +1589,7 @@ the `PaymentRequest` UI or completes the transaction before you call `abort()`,
 although it can fail to abort when the developer is in the middle of entering
 details.
 
-# The Payment Request UI
+## The Payment Request UI
 
 One aspect of the UI hasn't been discussed. How is the top section of the
 Payment Request UI is constructed?
@@ -1621,7 +1619,7 @@ page (i.e., `<title>Payment Request Demo</title>`).
 
 The URL that is displayed is the current origin.
 
-# Check Payment Method Availability
+## Check Payment Method Availability
 
 Before calling `paymentRequest.show()` you might want to know if the user already
 has an available payment method set-up (i.e. will the payment request UI have a
@@ -1656,7 +1654,7 @@ canMakePaymentPromise.then((result) => {
 });
 ```
 
-### Edge Cases
+#### Edge Cases
 
 Querying `canMakePayment()` too often will result in a quota error:
 
@@ -1665,7 +1663,7 @@ Querying `canMakePayment()` too often will result in a quota error:
 At the time of writing, Chrome will reset the quota after 30 minutes or when
 it's restarted.
 
-# PaymentRequest Shim
+## PaymentRequest Shim
 
 To mitigate pains of catching up with this living standard API, we strongly
 recommend you add this shim to the <head> of your page. This shim will be
