@@ -2,10 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Manifest Contains theme_color" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-21 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-09-21 #}
 
-# Manifest Contains Theme Color  {: .page-title }
+# Manifest Contains theme_color  {: .page-title }
 
 ## Why the audit is important {: #why }
 

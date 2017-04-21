@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T18:03:09Z #}
+{# wf_updated_on: 2017-04-19T23:33:31Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -37,7 +37,7 @@ Note: Although not a hard requirement, for general development it can be useful 
 
 Install  [Node](https://nodejs.org/en/) and run a local Node server (you may need administrator privileges to do this).
 
-We recommend installing the latest long term support (LTS) version of  [Node](https://nodejs.org/en/) (currently v6.9.2, which includes npm 3.10.9) rather than the most current version with the latest features.
+We recommend installing the latest long term support (LTS) version of  [Node](https://nodejs.org/en/) (labelled as "LTS, Recommended for Most Users") rather than the most current version with the latest features.
 
 ### Using NVM
 
