@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:10:26Z #}
+{# wf_updated_on: 2017-04-19T22:23:28Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -45,7 +45,7 @@ Service workers can also use  [IndexedDB](https://developer.mozilla.org/en-US/do
 
 Note: The service worker's approach was driven by the problems the community had with Application Cache (AppCache), where a purely declarative approach to caching proved to be too inflexible. Unlike AppCache, service workers don't provide defaults making all behavior explicit. If a behavior is not written into your service worker, then the behavior does not happen. By explicitly coding behaviors in a service worker, the task of writing and debugging code is made easier.
 
-For an example of working with AppCache and the challenges developers face, see Jake Archibald's <a href="http://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a> article.
+For an example of working with AppCache and the challenges developers face, see Jake Archibald's <a href="http://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a> article. However, using AppCache is highly discouraged because it is in the process of being removed from the Web platform. Use service workers instead.
 
 
 

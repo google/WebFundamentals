@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: TODO
+description: Learn how to evaluate runtime performance in Chrome DevTools.
 
-{# wf_updated_on: 2017-04-06 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2017-04-06 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}

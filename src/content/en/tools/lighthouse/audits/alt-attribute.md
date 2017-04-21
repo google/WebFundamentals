@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Every Image Element Has An Alt Attribute" Lighthouse audit.
+description: Reference documentation for the "Every Image Element Has An alt Attribute" Lighthouse audit.
 
-{# wf_updated_on: 2017-01-23 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2017-01-23 #}
 
-# Every Image Element Has An Alt Attribute  {: .page-title }
+# Every Image Element Has An alt Attribute  {: .page-title }
 
 ## Why the audit is important {: #why }
 

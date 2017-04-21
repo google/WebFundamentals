@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Page Does Not Automatically Request Notification Permissions On Page Load" Lighthouse audit.
+description: Reference documentation for the "Avoids Requesting The Notification Permission On Page Load" Lighthouse audit.
 
-{# wf_updated_on: 2016-12-05 #}
+{# wf_updated_on: 2017-04-19 #}
 {# wf_published_on: 2016-12-05 #}
 
-# Page Does Not Automatically Request Notification Permissions On Page Load  {: .page-title }
+# Avoids Requesting The Notification Permission On Page Load  {: .page-title }
 
 ## Why the audit is important {: #why }
 
