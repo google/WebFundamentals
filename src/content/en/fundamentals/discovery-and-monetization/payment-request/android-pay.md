@@ -74,7 +74,7 @@ figure {
 
 ### Required knowledge
 
-* Because Android Pay in Chrome uses the PaymentRequest API, it is essential to familiarize yourself with the [integration guide](.) before continuing.
+* Because Android Pay in Chrome uses the PaymentRequest API, it is essential to familiarize yourself with the [Payment Request API](/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request) before continuing.
 * Even if you are not an Android developer, it will be useful to acquaint yourself with the [Android Pay in-app APIs](/android-pay/android/tutorial). Because the responses returned by Android Pay are the same on Android and Chrome, the information on response handling is useful.
 * Review the Android Pay detailed [content policies](https://support.google.com/payments/merchant/answer/75724?payments_to_biz=&rd=1) to make sure your specific goods or services are supported.
 
