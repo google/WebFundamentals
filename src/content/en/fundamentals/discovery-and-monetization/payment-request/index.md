@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Request API is for fast, easy payments on the web.
 
 {# wf_published_on: 2016-07-25 #}
-{# wf_updated_on: 2016-12-06 #}
+{# wf_updated_on: 2017-04-21 #}
 
 # Introducing the Payment Request API {: .page-title }
 
