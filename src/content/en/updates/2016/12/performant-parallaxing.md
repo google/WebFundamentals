@@ -12,6 +12,7 @@ description: With a little mathematical wriggling, it's possible to have paralla
 # Performant Parallaxing {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/flackr.html" %}
 
 Love it or hate it, parallaxing is here to stay. When used judiciously it can add depth and subtlety to a web app. The problem, however, is that implementing parallaxing in a performant way can be challenging. In this article we’ll discuss a solution that is both performant and, just as importantly, works cross-browser.
 
