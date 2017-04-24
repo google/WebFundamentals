@@ -161,10 +161,7 @@ at the time of getting the credential object:
 
 If a user requires mediation, or has multiple accounts,
 use the account chooser to let the user sign-in,
-skipping the ordinary sign-in form.
-
-The account chooser typically gets invoked when the user taps the "Sign-In" button.
-The user can select an account to sign-in, for example:
+skipping the ordinary sign-in form, for example:
 
 <div>
   <figure>
@@ -174,17 +171,17 @@ The user can select an account to sign-in, for example:
 
 The steps to sign in via account chooser are the same as
 [auto sign-in](#auto_sign-in),
-with an additional first step to show an account chooser:
+with an additional call to show the account chooser
+as part of getting credential information:
 
-1. Show an account chooser.
-2. [Get credential information](#get_credential_information).
-3. [Authenticate the user](#authenticate_user).
-4. [Update UI or proceed to a personalized page](#update_ui).
+1. Get credential information and show account chooser.
+2. [Authenticate the user](#authenticate_user).
+3. [Update UI or proceed to a personalized page](#update_ui).
 
-### Show account chooser
+### Get credential information and show account chooser
 
 Show an account chooser in response to a defined user action,
-for example, user taps on "Sign-In" button.
+for example, when the user taps the "Sign-In" button.
 Call [`navigator.credentials.get()`](/web/fundamentals/security/credential-management/reference#navigatorcredentialget),
 and add `unmediated: false`, to show the account chooser:
 
@@ -303,8 +300,7 @@ For example, if the provider is Google, use the
       login_hint: id || ''
     });
 
-Google Sign-In results in an ID token as a proof of authentication,
-which gets sent to the server to create a session.
+Google Sign-In results in an ID token as a proof of authentication.
 
 In general, federated logins are built on top of standard protocols such as
 [OpenID Connect](http://openid.net/connect/) or
@@ -360,9 +356,6 @@ Call
      navigator.credentials.requireUserMediation();
     }
 
-This will ensure the auto sign-in won’t happen until next time the user enables auto sign-in. Users can do so by tapping on an account in an account chooser which is described in next section.
-
-Then, if [`navigator.credentials.get()`](/web/fundamentals/security/credential-management/reference#navigatorcredentialsget) is called with `unmediated: true`, it will return undefined and the user will not be signed in. This is only remembered for the current browser instance for this origin.
-
+This will ensure the auto sign-in won’t happen until next time the user enables auto sign-in.
 To resume auto sign-in, a user can choose to intentionally sign-in, by choosing the account they wish to sign in with, from the account chooser. Then, the user is always signed back in, until they explictly sign out.
 
