@@ -47,10 +47,9 @@ Lighthouse optimizes each image it finds on the page, and then compares
 the version used on the page against its own optimized version. The audit
 fails when one of the following conditions is met:
 
-* A JPEG image could be at least 10KB smaller if it was canvas-encoded. See
-  [HTMLCanvasElement.toDataURL()][canvas] to learn more about
-  canvas-encoding.
-* An image could be at least 100KB smaller if it was encoded in WebP.
+* A JPEG image could be at least 10KB smaller if its quality is set to 80
+  and its metadata is removed.
+* An image could be at least 100KB smaller if it is encoded in WebP.
 * The savings of encoding all images in WebP is greater than 1MB.
 
-[canvas]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
+{% include "web/tools/lighthouse/audits/_feedback/unoptimized-images.html" %}
