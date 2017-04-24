@@ -102,6 +102,7 @@ toc:
         path: /web/tools/chrome-devtools/rendering-tools/js-execution
       - title: Diagnose Forced Synchronous Layouts
         path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
+        status: deprecated
     - title: Measure Network Performance
       section:
       - title: Get Started
