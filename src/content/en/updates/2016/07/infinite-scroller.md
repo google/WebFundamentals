@@ -10,8 +10,7 @@ description: Infinite scrollers are a common UI pattern. Here we explore how to 
 # Complexities of an Infinite Scroller {: .page-title }
 
 {% include "web/_shared/contributors/surma.html" %}
-
-
+{% include "web/_shared/contributors/flackr.html" %}
 
 TL;DR: Re-use your DOM elements and remove the ones that are far away from the viewport. Use placeholders to account for delayed data. Here’s a [demo][Infscroller Demo] and the [code][Infscroller Code] for the infinite scroller.
 
@@ -150,7 +149,7 @@ Whenever we scroll, we will check if the viewport has come sufficiently close to
     }
 
     60%, 100% {
-      transform: translateY(0px);  
+      transform: translateY(0px);
     }
   }
 </style>
