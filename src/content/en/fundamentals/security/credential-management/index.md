@@ -32,7 +32,7 @@ and take a look at the
 ### Sign in user
 
 To sign in the user, retrieve the credentials from the browser's password
-manager and use them to log the user in.
+manager and use them to log in the user.
 
 For example:
 
@@ -42,7 +42,7 @@ For example:
 3. Update the UI to indicate the user has been signed in.
 
 Learn more in
-[Sign In User](/web/fundamentals/security/credential-management/retrieve-credentials#auto-sign-in).
+[Sign In Users](/web/fundamentals/security/credential-management/retrieve-credentials#auto-sign-in).
 
 ### Save or update user credentials
 
@@ -54,7 +54,7 @@ Sign-In, Facebook, GitHub, etc:
 2. Save the credential object using [`navigator.credentials.store()`](/web/fundamentals/security/credential-management/reference#navigatorcredentialsstorecred).
 
 Learn more in
-[Sign In User](/web/fundamentals/security/credential-management/retrieve-credentials#federated-login).
+[Sign In Users](/web/fundamentals/security/credential-management/retrieve-credentials#federated-login).
 
 If the user signed in with a username and password:
 

@@ -9,8 +9,8 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
-To sign users in, retrieve the credentials from the browser's password
-manager and use those to automatically log users in.
+To sign in users, retrieve the credentials from the browser's password
+manager and use those to automatically log in users.
 For users with multiple accounts,
 let them select the account with just one tap using the account chooser.
 
@@ -18,14 +18,6 @@ let them select the account with just one tap using the account chooser.
 
 Auto sign-in can happen anywhere on your website;
 not only the top page but other leaf pages too.
-
-<!--Todo: replace with new animation
-<div class="attempt-right">
-  <figure>
-    <video src="animations/auto-signin.mov" style="max-height: 400px;" autoplay muted loop controls></video>
-    <figcaption>User Sign-in Flow</figcaption>
-  </figure>
-</div>-->
 
 To enable auto sign-in:
 
@@ -174,14 +166,6 @@ skipping the ordinary sign-in form.
 The account chooser typically gets invoked when the user taps the "Sign-In" button.
 The user can select an account to sign-in, for example:
 
-<!--Todo: replace this is new animation.
-<div class="attempt-right">
-  <figure>
-    <video src="animations/account-chooser.mov" style="max-height: 400px;" autoplay muted loop controls></video>
-    <figcaption>User Sign-in Flow with Account Chooser</figcaption>
-  </figure>
-</div>-->
-
 <div>
   <figure>
     <img src="imgs/account-chooser.png" alt="Google account chooser showing multiple accounts.">
@@ -284,8 +268,7 @@ You should fallback to a sign-in form for any of these reasons:
 
 ## Federated Login
 
-Federated login lets users sign in with existing third-party identities,
-with one tap and without having to remember additional login details for your website.
+Federated login lets users sign in with one tap and without having to remember additional login details for your website.
 
 To implement federated login:
 
@@ -337,7 +320,7 @@ Popular examples include:
 
 ### Store identity information
 
-Once authentication is done, you can store the identity information. The information you’ll store here is the id from the identity provider and a provider string that represents the identity provider (`name` and `iconURL` are optional).
+Once authentication is done, you can store the identity information. The information you’ll store here is the `id` from the identity provider and a provider string that represents the identity provider (`name` and `iconURL` are optional).
 
 To store federated account details, instantiate a new 
 [`FederatedCredential`](/web/fundamentals/security/credential-management/reference#federatedcredential), object with the user's identifier and the provider's identifier.

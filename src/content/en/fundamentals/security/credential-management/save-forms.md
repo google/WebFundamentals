@@ -9,18 +9,17 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
-Keep your registration and sign-in forms as simple as possible.
-
-Save credentials from sign-in forms
-so users won't have to sign in again when they return,
-provided it is safe to do so.
-
 <div class="attempt-right">
   <figure>
     <video src="animations/credential-management-smaller.mov" style="max-height: 400px;" autoplay muted loop controls></video>
     <figcaption>Save Credentials from sign-in forms</figcaption>
   </figure>
 </div>
+
+Keep your registration and sign-in forms as simple as possible.
+
+Save credentials from sign-in forms
+so users won't have to sign in again when they return.
 
 To store user credentials from forms:
 
