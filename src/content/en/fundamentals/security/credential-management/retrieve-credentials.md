@@ -284,26 +284,8 @@ You should fallback to a sign-in form for any of these reasons:
 
 ## Federated Login
 
-Federated login lets users sign in with one tap,
-without having to remember an additional password for your website.
-In general, federated logins are built on top of standard protocols such as
-[OpenID Connect](http://openid.net/connect/) or
-[OAuth](https://oauth.net/2/).
-
-<!--Todo: replace this with new animation.
-<div class="attempt-right">
-  <figure>
-    <video src="animations/federated-login.mov" style="max-height: 400px;" autoplay muted loop controls></video>
-    <figcaption>Federated Login Flow</figcaption>
-  </figure>
-</div>-->
-
-Popular examples include:
-
-* [Google Sign-In](/identity/sign-in/web/)
-* [Facebook Login](https://developers.facebook.com/docs/facebook-login)
-* [Twitter Sign-int](https://dev.twitter.com/web/sign-in/implementing)
-* [GitHub OAuth](https://developer.github.com/v3/oauth/)
+Federated login lets users sign in with existing third-party identities,
+with one tap and without having to remember additional login details for your website.
 
 To implement federated login:
 
@@ -341,6 +323,18 @@ For example, if the provider is Google, use the
 Google Sign-In results in an ID token as a proof of authentication,
 which gets sent to the server to create a session.
 
+In general, federated logins are built on top of standard protocols such as
+[OpenID Connect](http://openid.net/connect/) or
+[OAuth](https://oauth.net/2/).
+To learn how to authenticate with federated accounts,
+refer to respective federated identity providers' docs.
+Popular examples include:
+
+* [Google Sign-In](/identity/sign-in/web/)
+* [Facebook Login](https://developers.facebook.com/docs/facebook-login)
+* [Twitter Sign-int](https://dev.twitter.com/web/sign-in/implementing)
+* [GitHub OAuth](https://developer.github.com/v3/oauth/)
+
 ### Store identity information
 
 Once authentication is done, you can store the identity information. The information you’ll store here is the id from the identity provider and a provider string that represents the identity provider (`name` and `iconURL` are optional).
@@ -372,14 +366,6 @@ Sign out your users when the sign-out button is tapped.
 First terminate the session,
 then turn off auto sign-in for future visits.
 (How you terminate your sessions is totally up to you.)
-
-<!--Todo: replace this with new animation.
-<div class="attempt-right">
-  <figure>
-    <video src="animations/credential-management-smaller.mov" style="max-height: 400px;" autoplay muted loop controls></video>
-    <figcaption>Federated Login Flow</figcaption>
-  </figure>
-</div>-->
 
 ### Turn off auto sign-in for future visits
 

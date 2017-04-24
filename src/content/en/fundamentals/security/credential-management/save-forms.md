@@ -9,8 +9,11 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
-Forms that let users sign-up, sign-in, or change passwords are great chances
-for you to store user’s credential information. 
+Keep your registration and sign-in forms as simple as possible.
+
+Save credentials from sign-in forms
+so users won't have to sign in again when they return,
+provided it is safe to do so.
 
 <div class="attempt-right">
   <figure>
@@ -36,9 +39,8 @@ from the form and construct a credential object.
 
 This also helps browsers not supporting the Credential Management API
 to understand its semantics.
-Adding autocomplete is a MUST.
-Learn more about the topic from
-[an article](https://cloudfour.com/thinks/autofill-what-web-devs-should-know-but-dont/) by
+Learn more about autofill in
+[this article](https://cloudfour.com/thinks/autofill-what-web-devs-should-know-but-dont/) by
 [Jason Grigsby](https://medium.com/@grigs).
 
     <form id="signup" method="post">
@@ -65,15 +67,24 @@ you can retain the credential information while verifying its authenticity.
 Send a request via AJAX and respond with profile information,
 for example, in JSON format.
 
-The following is pseudo AJAX
-(replace with a [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) call):
-
-    sendRequest(e.target)
-     .then(profile => {
-
 On the server side, create an endpoint (or simply alter an existing endpoint)
 that responds with HTTP code 200 or 401, etc so that it’s clear to the browser
 if the sign-up/sign-in/change password is successful or not.
+
+For example: 
+
+      // Try sign-in with AJAX
+      fetch(/'signin', {
+        method: 'POST',
+        body: new FormData(e.target),
+        credentials: 'include'
+      }).then(res => {
+        if (res.status == 200) {
+          return Promise.resolve();
+        } else {
+          return Promise.reject('Sign in failed');
+        }
+      }).then(profile => {
 
 ## Store the credential
 
@@ -123,23 +134,43 @@ or proceed to the personalized page.
     });
 
 ## Full code example
-
+    
+    // Get form's DOM object
     var f = document.querySelector('#signup');
     f.addEventListener('submit', e => {
-     e.preventDefault();
-     sendRequest(e.target)
-     .then(profile => {
-       if (navigator.credentials) {
-         var c = new PasswordCredential(e.target);
-         return navigator.credentials.store(c);
-       } else {
-         return Promise.resolve(profile);
-       }
-     }).then(profile => {
-       if (profile) {
-         updateUI(profile);
-       }
-     }).catch(error => {
-       showError('Sign-in Failed');
-     });
+
+      // Stop submitting form by itself
+      e.preventDefault();
+
+      // Try sign-in with AJAX
+      fetch(/'signin', {
+        method: 'POST',
+        body: new FormData(e.target),
+        credentials: 'include'
+      }).then(res => {
+        if (res.status == 200) {
+          return Promise.resolve();
+        } else {
+          return Promise.reject('Sign in failed');
+        }
+      }).then(profile => {
+
+        // Instantiate `PasswordCredential` with the form
+        if (navigator.credentials) {
+          var c = new PasswordCredential(e.target);
+          return navigator.credentials.store(c);
+        } else {
+          return Promise.resolve(profile);
+        }
+      }).then(profile => {
+
+        // Successful sign in
+        if (profile) {
+          updateUI(profile);
+        }
+      }).catch(error => {
+
+        // Sign in failed
+        showError('Sign-in Failed');
+      });
     });

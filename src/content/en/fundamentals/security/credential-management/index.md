@@ -13,21 +13,11 @@ The [Credential Management API](https://www.w3.org/TR/credential-management/)
 is a standards-based browser API that provides a programmatic interface
 between the site and the browser for seamless sign-in across devices.
 
-<!--Todo: replace this image with something much better.
-<div class="attepmt-right">
-  <figure>
-    <video src="animations/credential-management-smaller.mov" style="max-height: 400px;" autoplay muted loop controls></video>
-    <figcaption>User Sign-in Flow</figcaption>
-  </figure>
-</div>-->
-
 The Credential Management API:
 
-* **Removes friction from sign-in flows** - Users can automatically sign back into a 
-  site, even if their session has expired.
-* **Allows one tap sign in with account chooser** - Users can choose an account in a native account chooser, for example Google account chooser, eliminating the sign-in form.
-* **Stores credentials** - Your application can easily store account details, either federated account details, username & password, or a combination of both.
-* **Secures credentials** - When users sign out or disable automatic sign-in, they won't be automatically signed in.
+* **Removes friction from sign-in flows** - Users can be automatically signed back into a site even after their session expired.
+* **Allows one tap sign in with account chooser** - Users can choose an account in a native account chooser.
+* **Stores credentials** - Your application can store either a username & password combination or even federated account details. These credentials can be synced across devices by the browser.
 
 Key Point: Using the Credential Management API requires the page be served
 from a secure origin.
@@ -41,14 +31,14 @@ and take a look at the
 
 ### Sign in user
 
-To sign the user in, retrieve the credentials from the browser's password
-manager and use those to log the user in.
+To sign in the user, retrieve the credentials from the browser's password
+manager and use them to log the user in.
 
 For example:
 
 1. When a user lands on your site and they are not signed in, 
    call [`navigator.credential.get()`](/web/fundamentals/security/credential-management/reference#navigatorcredentialsget).
-2. Use the retrieved credentials to sign the user in.
+2. Use the retrieved credentials to sign in the user.
 3. Update the UI to indicate the user has been signed in.
 
 Learn more in
@@ -59,8 +49,7 @@ Learn more in
 If the user signed in with a federated identity provider such as Google
 Sign-In, Facebook, GitHub, etc:
 
-1. After the user successfully signs in, creates an account or changes a
-   password, create the [`FederatedCredential`](/web/fundamentals/security/credential-management/reference#federatedcredential) with the user's email address as
+1. After the user successfully signs in or creates an account, create the [`FederatedCredential`](/web/fundamentals/security/credential-management/reference#federatedcredential) with the user's email address as
    the ID and specify the identity provider with `.provider`.
 2. Save the credential object using [`navigator.credentials.store()`](/web/fundamentals/security/credential-management/reference#navigatorcredentialsstorecred).
 
@@ -69,8 +58,7 @@ Learn more in
 
 If the user signed in with a username and password:
 
-1. After the user successfully signs in, creates an account or changes a
-   password, create the [`PasswordCredential`](/web/fundamentals/security/credential-management/reference#passwordcredential) with the user ID and
+1. After the user successfully signs in or creates an account, create the [`PasswordCredential`](/web/fundamentals/security/credential-management/reference#passwordcredential) with the user ID and
    the password.
 2. Save the credential object using [`navigator.credentials.store()`](/web/fundamentals/security/credential-management/reference#navigatorcredentialsstorecred).
 
