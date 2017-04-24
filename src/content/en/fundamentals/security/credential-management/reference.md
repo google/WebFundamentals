@@ -184,7 +184,7 @@ which resolves once the object is persisted, for example:
         }
       }).then(profile => {
 
-        // Instantiate `PasswordCredential` with the form
+        // Instantiate PasswordCredential with the form
         if (navigator.credentials) {
           var c = new PasswordCredential(e.target);
           return navigator.credentials.store(c);

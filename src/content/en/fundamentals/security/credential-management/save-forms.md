@@ -154,7 +154,7 @@ or proceed to the personalized page.
         }
       }).then(profile => {
 
-        // Instantiate `PasswordCredential` with the form
+        // Instantiate PasswordCredential with the form
         if (navigator.credentials) {
           var c = new PasswordCredential(e.target);
           return navigator.credentials.store(c);
