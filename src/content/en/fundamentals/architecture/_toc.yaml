@@ -9,6 +9,8 @@ toc:
       path: /web/fundamentals/architecture/howto-components/howto-components
     - title: "&lt;howto-radio-group&gt;"
       path: /web/fundamentals/architecture/howto-components/howto-radio-group
+    - title: "&lt;howto-checkbox&gt;"
+      path: /web/fundamentals/architecture/howto-components/howto-checkbox
     - title: "&lt;howto-tabs&gt;"
       path: /web/fundamentals/architecture/howto-components/howto-tabs
     - title: "&lt;howto-tooltip&gt;"

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
-book_path: /web/updates/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-4-12#}
+{# wf_updated_on: 2017-4-24#}
 {# wf_published_on: 2017-04-06 #}
 
 # HowTo: Components – howto-radio-group {: .page-title }
@@ -35,7 +35,7 @@ boolean ARIA attributes take a literal string value of either <code>&quot;true&q
 
 
 ## Demo {: #demo }
-<iframe src="howto-radio-group_demo.html" class="demo" aria-label="live demo" role="region"></iframe>
+<iframe src="https://googlechrome.github.io/howto-components/howto-radio-group_demo.html" class="demo" aria-label="live demo" role="region"></iframe>
 
 ## Example usage {: #usage }
 <ul class="literate demo" id="howto-radio-group_demo">
