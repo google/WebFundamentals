@@ -328,3 +328,5 @@ the native behavior of <code>&lt;input type=checkbox&gt;</code>.</p>
 </li>
 
 </ul>
+
+<script src="iframesizer.js"></script>

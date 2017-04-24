@@ -583,3 +583,5 @@ is specified.</p>
 </li>
 
 </ul>
+
+<script src="iframesizer.js"></script>

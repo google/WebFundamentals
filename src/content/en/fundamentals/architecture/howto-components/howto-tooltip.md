@@ -231,3 +231,5 @@ window<span class="token punctuation">.</span>customElements<span class="token p
 </li>
 
 </ul>
+
+<script src="iframesizer.js"></script>

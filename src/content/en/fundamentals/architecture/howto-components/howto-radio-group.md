@@ -484,3 +484,5 @@ checked button.</p>
 </li>
 
 </ul>
+
+<script src="iframesizer.js"></script>
