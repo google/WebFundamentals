@@ -17,7 +17,8 @@ description: There are two types of app install banners: web app install banners
 </div>
 
 There are two types of app install banners: **web** app install banners and
-[**native**](native-app-install) app install banners. They let users quickly and seamlessly add your web or native app to their home screens without leaving the browser.
+[**native**](#native_app_install_banners) app install banners. They let users quickly and seamlessly
+add your web or native app to their home screens without leaving the browser.
 
 Adding app install banners is easy; Chrome handles most of the heavy 
 lifting for you. You need to include a web app manifest file in your site
@@ -192,10 +193,10 @@ The criteria is similar to the Web App install banner except for the need of
 a service worker. Your site must:
 
 * Have a [web app manifest](../web-app-manifest/) file with:
-  - a `short_name`
-  - a `name` (used in the banner prompt)
-  - a 144x144 png icon, your icon declaration's should include a mime type of `image/png`
-  - a `related_applications` object with information about the app
+    - a `short_name`
+    - a `name` (used in the banner prompt)
+    - a 144x144 png icon, your icon declaration's should include a mime type of `image/png`
+    - a `related_applications` object with information about the app
 * Be served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https)
 * Be visited by the user twice, over two separate days during the course
   of two weeks.
