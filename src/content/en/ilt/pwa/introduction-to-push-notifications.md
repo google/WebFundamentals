@@ -725,7 +725,7 @@ The `Authorization` header is a signed  [JSON Web Token (JWT)](https://jwt.io/) 
 
 A JWT is a way of sharing a JSON object with a second party in such a way that the sending party can sign it and the receiving party can verify the signature is from the expected sender. The structure of a JWT is three encrypted strings, joined with a single dot between them.
 
-`&lt;JWTHeader&gt;.&lt;Payload&gt;.&lt;Signature&gt;`
+`<JWTHeader>.<Payload>.<Signature>`
 
 ##### JWT header
 
