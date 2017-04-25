@@ -18,6 +18,15 @@ Platform. This article describes the deprecations and removals in Chrome 57,
 which is in beta as of early February. This list is subject to change at any
 time.
 
+## Deprecate ServiceWorkerMessageEvent in favor of using MessageEvent
+
+
+
+
+[Intent to Remove]() &#124;
+[Chromestatus Tracker]() &#124;
+[Chromium Bug]()
+
 ## Deprecate support for embedded credentials in subresource requests
 
 Hard-coding credentials into subresource requests is problematic from a
@@ -50,7 +59,7 @@ that this should be fixed. Removal is anticipated in Chrome 59.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5739144722513920) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688586)
 
-## Deprecate and remove legacy caller for HTMLEmbedElement and HTMLObjectElement
+## Deprecate legacy caller for HTMLEmbedElement and HTMLObjectElement
 
 That an interface has a legacy caller means that an instance can be called as a
 function. Currently, `HTMLEmbedElement` and `HTMLObjectElement` support this
@@ -130,7 +139,7 @@ is removed.
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=568184)
 
 
-## Remove RTCRtcpMuxPolicy of "negotiate"
+## Deprecate RTCRtcpMuxPolicy of "negotiate"
 
 The `rtcpMuxPolicy` is used by Chrome to specify its preferred policy regarding
 use of RTP/RTCP multiplexing. In Chrome 57, we changed the default
@@ -140,7 +149,7 @@ use of RTP/RTCP multiplexing. In Chrome 57, we changed the default
 * Removing "negotiate" will make the API surface simpler, since an 
   "RtpSender"/"RtpReceiver" will then only ever have a single transport.
 
-In Chrome 57, "negotiate" is removed. We believe this is a non-breaking change
+In Chrome 57, "negotiate" is deprecated. We believe this is a non-breaking change
 since the user will get a deprecation message and `RTCPeerConnection` can still
 be created.
 
