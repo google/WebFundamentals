@@ -13,4 +13,4 @@ description: Reference documentation for the "AUDIT_NAME" Lighthouse audit.
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
-{% include "web/tools/lighthouse/audits/_feedback/FILENAME.html" %}
+{% include "web/tools/lighthouse/audits/_feedback/_template.html" %}
