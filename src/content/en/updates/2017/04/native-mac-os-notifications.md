@@ -1,24 +1,24 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: As of Chrome version 59, notifications will be displayed native notifications on MacOS.
+description: As of Chrome version 59, notifications will be displayed native notifications on Mac OS X.
 
 {# wf_updated_on: 2017-04-26 #}
 {# wf_published_on: 2017-04-26 #}
-{# wf_tags: chrome59,notifications,push #}
+{# wf_tags: chrome59,notifications #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
-{# wf_featured_snippet: As of Chrome version 59, notifications will be displayed native notifications on MacOS. #}
+{# wf_featured_snippet: As of Chrome version 59, notifications will be displayed native notifications on Mac OS X. #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Moving to the the Native Notification System on MacOS {: .page-title }
+# Moving to the the Native Notification System on Mac OS X {: .page-title }
 
 Starting in Chrome 59, notifications sent via the [Notifications
 API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API) or the
 [chrome.notifications extensions
 API](https://developer.chrome.com/extensions/notifications) will be shown
-directly by the MacOS native notification system instead of Chrome's own system.
+directly by the Mac OS X native notification system instead of Chrome's own system.
 
-This change makes Chrome on MacOS feel much better integrated into the platform
+This change makes Chrome on Mac OS X feel much better integrated into the platform
 and fixes a number of long standing bugs, such as Chrome not respecting the
 system Do Not Disturb setting.
 
@@ -33,7 +33,7 @@ notifications will be displayed in OS X's notification center.
 <figure>
   <img src="/web/updates/images/2017/04/macos-notifications/image00.png">
   <figcaption>
-    Google Chrome Notifications will be displayed in the MacOS notification center.
+    Google Chrome Notifications will be displayed in the Mac OS X notification center.
   </figcaption>
 </figure>
 
@@ -47,7 +47,8 @@ instead of a solid color to be aesthetically pleasing.
 <figure>
   <img src="/web/updates/images/2017/04/macos-notifications/image01.png">
   <figcaption>
-    Before and after of notification icons displayed by Chrome vs displayed by MacOS.
+    Before and after of notification icons displayed by Chrome vs displayed by
+    Mac OS X.
   </figcaption>
 </figure>
 
@@ -61,14 +62,15 @@ button to see the available actions.
 <figure>
   <img src="/web/updates/images/2017/04/macos-notifications/image02.png">
   <figcaption>
-    Before and after of notification action buttons with icons displayed by Chrome vs displayed by MacOS.
+    Before and after of notification action buttons with icons displayed by
+    Chrome vs displayed by Mac OS X.
   </figcaption>
 </figure>
 
 ### Chrome Logo
 
 The Chrome logo will always be displayed and cannot be replaced or altered. This
-is a requirement for third party applications on MacOS.
+is a requirement for third party applications on Mac OS X.
 
 ### Images
 
@@ -79,7 +81,7 @@ parameter (See example below).
 <figure>
   <img src="/web/updates/images/2017/04/macos-notifications/image03.png">
   <figcaption>
-    Before and after of notification image displayed by Chrome vs displayed by MacOS.
+    Before and after of notification image displayed by Chrome vs displayed by Mac OS X.
   </figcaption>
 </figure>
 
@@ -93,7 +95,7 @@ if ('image' in Notification.prototype) {
 }
 ```
 
-# Chrome Extension Changes
+## Chrome Extension Changes
 
 Chrome extensions have the concept of [notification
 templates](https://developer.chrome.com/apps/notifications#type-TemplateType)
@@ -131,7 +133,7 @@ to indicate the progress instead of a progress bar.
 </figure>
 
 The other difference in API / notification UI is the appIconMarkUrl which will
-no longer be used on MacOS version 59 and above.
+no longer be used on Mac OS X version 59 and above.
 
 <figure>
   <img src="/web/updates/images/2017/04/macos-notifications/image07.png">
@@ -139,3 +141,5 @@ no longer be used on MacOS version 59 and above.
     Before and after of example of the appIconMarkUrl in the chrome.notification API.
   </figcaption>
 </figure>
+
+{% include "comment-widget.html" %}
