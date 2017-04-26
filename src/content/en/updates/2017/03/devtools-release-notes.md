@@ -105,6 +105,8 @@ You can now insert custom server statistics into the Timing tab. See
   </figcaption>
 </figure>
 
+Thanks to [sroussey](https://twitter.com/sroussey) for the contribution!
+
 ## Changes
 
 ### The Timeline panel is now the Performance panel {: #performance-panel }
