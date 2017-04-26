@@ -71,7 +71,7 @@ fairly regularly, your notifications will open in the normal browser UI.
 
 This issue will be worked on further.
 
-**Note:** This is just the behavior of Chrome, other browsers may do different things as well.
+**Note:** This is just the behavior of Chrome, though other browsers may do different things as well.
 Feel free to [raise an issue](https://github.com/gauntface/web-push-book/issues) if you have
 anything to add to this discussion.
 
