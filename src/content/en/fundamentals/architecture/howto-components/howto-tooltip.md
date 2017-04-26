@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-4-24#}
+{# wf_updated_on: 2017-04-26#}
 {# wf_published_on: 2017-04-06 #}
 
 # HowTo: Components – howto-tooltip {: .page-title }
