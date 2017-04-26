@@ -48,6 +48,13 @@ const RE_SRC_BASE = /src\/content\//;
 const RE_DATA_BASE = /src\/data\//;
 const COMMON_TAGS_FILE = 'src/data/commonTags.json';
 const CONTRIBUTORS_FILE = 'src/data/_contributors.yaml';
+const VALID_REGIONS = [
+  'africa', 'asia', 'europe', 'middle-east', 'north-america', 'south-america'
+];
+const VALID_VERTICALS = [
+  'education', 'entertainment', 'media', 'real-estate', 'retail',
+  'transportation', 'travel'
+];
 
 let remarkLintOptions = {
   external: [
@@ -468,6 +475,28 @@ function testMarkdown(filename, contents, options) {
           logWarning(filename, position, msg);
         }
       });
+    }
+
+    // Check for valid regions
+    matched = wfRegEx.RE_REGION.exec(contents);
+    if (matched) {
+      let region = matched[1];
+      if (VALID_REGIONS.indexOf(region) === -1) {
+        position = {line: getLineNumber(contents, matched.index)};
+        msg = 'Invalid `wf_region` (' + region + ') provided.';
+        logError(filename, position, msg);
+      }
+    }
+
+    // Check for valid verticals
+    matched = wfRegEx.RE_VERTICAL.exec(contents);
+    if (matched) {
+      let vertical = matched[1];
+      if (VALID_VERTICALS.indexOf(vertical) === -1) {
+        position = {line: getLineNumber(contents, matched.index)};
+        msg = 'Invalid `wf_vertical` (' + vertical + ') provided.';
+        logError(filename, position, msg);
+      }
     }
 
     // Check for a single level 1 heading with page title

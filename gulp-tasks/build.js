@@ -7,7 +7,6 @@ var wfHelper = require('./wfHelper');
 var wfContributors = require('./wfContributors');
 var wfTemplateHelper = require('./wfTemplateHelper');
 var wfYouTubeShows = require('./wfYouTubeShows');
-var wfCodeLabHelper = require('./wfCodeLabHelper');
 
 gulp.task('build:contributors', function() {
   wfContributors.build();
@@ -32,28 +31,54 @@ gulp.task('build:showcase', function() {
   var section = 'showcase';
   var baseOutputPath = path.join(GLOBAL.WF.src.content, section);
   var options = {
-    title: 'Web Showcase - Google Developers',
-    description: 'Learn how other developers have been awesome.',
+    description: 'Learn why and how other developers have used the web to create amazing web experiences for their users.',
     section: section,
     outputPath: baseOutputPath
   };
   var startPath = path.join(GLOBAL.WF.src.content, 'showcase');
   var patterns = ['**/*.md', '!tags/*', '!**/index.md'];
   var files = wfHelper.getFileList(startPath, patterns);
-  files.sort(wfHelper.updatedComparator);
+
+  // Generate landing page with featured case studies
+  files.sort(wfHelper.featuredComparator);
+  options.template = path.join(GLOBAL.WF.src.templates, 'showcase/index.yaml');
   wfTemplateHelper.generateIndex(files, options);
-  wfTemplateHelper.generateFeeds(files, options);
+
+  // Sort case studies by last updated for the rest of the pages
+  files.sort(wfHelper.updatedComparator);
+
+  // Generate the listing by region
+  options.title = 'Show Cases by Region';
+  options.template = path.join(GLOBAL.WF.src.templates, 'showcase/region.md');
+  options.outputPath = path.join(baseOutputPath, 'region');
+  wfTemplateHelper.generateListPage(files, options);
+
+  // Generate the listing by vertical
+  options.title = 'Show Cases by Vertical';
+  options.template = path.join(GLOBAL.WF.src.templates, 'showcase/vertical.md');
+  options.outputPath = path.join(baseOutputPath, 'vertical');
+  wfTemplateHelper.generateListPage(files, options);
+
+  // Generate the listings by tags
+  options.title = 'Show Cases by Tag';
   options.outputPath = path.join(baseOutputPath, 'tags');
   wfTemplateHelper.generateTagPages(files, options);
+
+  // Generate the listings by Year
+  options.template = null;
   var filesByYear = wfHelper.splitByYear(files);
   Object.keys(filesByYear).forEach(function(year) {
     options.year = year;
     options.outputPath = path.join(baseOutputPath, year);
-    options.title = 'Showcase (' + year + ')';
+    options.title = 'Show Cases (' + year + ')';
     wfTemplateHelper.generateListPage(filesByYear[year], options);
     options.title = year;
     wfTemplateHelper.generateTOCbyMonth(filesByYear[year], options);
   });
+
+  // Generate the RSS & ATOM feeds
+  options.outputPath = baseOutputPath;
+  wfTemplateHelper.generateFeeds(files, options);
 });
 
 gulp.task('build:shows', function(cb) {

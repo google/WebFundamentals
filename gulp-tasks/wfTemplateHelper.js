@@ -130,12 +130,15 @@ function _generateListPage(files, options) {
     section: options.section,
     articles: files
   };
-  var tmpl = path.join(GLOBAL.WF.src.templates, 'article-list.md');
+  var template = path.join(GLOBAL.WF.src.templates, 'article-list.md');
+  if (options.template) {
+    template = options.template;
+  }
   var outputFile = options.outputFile;
   if (!outputFile) {
     outputFile = path.join(options.outputPath, 'index.md');
   }
-  renderTemplate(tmpl, context, outputFile);
+  renderTemplate(template, context, outputFile);
 }
 
 function generateListPage(files, options) {
@@ -164,7 +167,13 @@ function generateIndex(files, options) {
     articles: files
   };
   var template = path.join(GLOBAL.WF.src.templates, 'index.yaml');
+  if (options.template) {
+    template = options.template;
+  }
   var outputFile = path.join(options.outputPath, '_index.yaml');
+  if (options.outputFile) {
+    outputFile = options.outputFile;
+  }
   renderTemplate(template, context, outputFile);
 }
 

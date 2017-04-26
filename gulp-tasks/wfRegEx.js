@@ -9,6 +9,10 @@ var RE_BOOK_PATH = /^book_path: (.*)\n/m;
 var RE_PROJECT_PATH = /^project_path: (.*)\n/m;
 var RE_DESCRIPTION = /^description:\s?(.*)\n/m;
 
+var RE_REGION = /^{#\s?wf_region:\s?(.*?)\s?#}\s?\n/m;
+var RE_VERTICAL = /^{#\s?wf_vertical:\s?(.*?)\s?#}\s?\n/m;
+var RE_FEATURED_DATE = /^{#\s?wf_featured_date:\s?(.*?)\s?#}\s?\n/m;
+
 var RE_UPDATED = /^{#\s?wf_updated_on:\s?(.*?)\s?#}\s?\n/m;
 var RE_PUBLISHED = /^{#\s?wf_published_on:\s?(.*?)\s?#}\s?\n/m;
 
@@ -60,6 +64,9 @@ exports.RE_PROJECT_PATH = RE_PROJECT_PATH;
 exports.RE_UPDATED_ON = RE_UPDATED;
 exports.RE_PUBLISHED_ON = RE_PUBLISHED;
 exports.RE_DESCRIPTION = RE_DESCRIPTION;
+exports.RE_REGION = RE_REGION;
+exports.RE_VERTICAL = RE_VERTICAL;
+exports.RE_FEATURED_DATE = RE_FEATURED_DATE;
 exports.RE_TITLE = RE_TITLE;
 exports.RE_TITLE_CLASS = RE_TITLE_CLASS;
 exports.RE_TAGS = RE_TAGS;
