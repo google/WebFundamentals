@@ -5,7 +5,7 @@ upper_tabs:
   - include: /web/_upper_tabs-Tools.yaml
   - include: /web/_upper_tabs-Updates.yaml
   - include: /web/_upper_tabs-Showcase.yaml
-  - name: ILT
+  - name: Progressive Web Apps Training
     path: /web/ilt/
     lower_tabs:
       other:
