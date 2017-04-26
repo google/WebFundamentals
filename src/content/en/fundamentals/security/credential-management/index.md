@@ -15,9 +15,9 @@ between the site and the browser for seamless sign-in across devices.
 
 The Credential Management API:
 
-* **Removes friction from sign-in flows** - Users can be automatically signed back into a site even after their session expired.
+* **Removes friction from sign-in flows** - Users can be automatically signed back into a site even after their session expires.
 * **Allows one tap sign in with account chooser** - Users can choose an account in a native account chooser.
-* **Stores credentials** - Your application can store either a username & password combination or even federated account details. These credentials can be synced across devices by the browser.
+* **Stores credentials** - Your application can store either a username and password combination or even federated account details. These credentials can be synced across devices by the browser.
 
 Key Point: Using the Credential Management API requires the page be served
 from a secure origin.
@@ -47,7 +47,7 @@ Learn more in
 ### Save or update user credentials
 
 If the user signed in with a federated identity provider such as Google
-Sign-In, Facebook, GitHub, etc:
+Sign-In, Facebook, GitHub:
 
 1. After the user successfully signs in or creates an account, create the [`FederatedCredential`](/web/fundamentals/security/credential-management/reference#federatedcredential) with the user's email address as
    the ID and specify the identity provider with `.provider`.

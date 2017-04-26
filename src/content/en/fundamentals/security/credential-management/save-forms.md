@@ -23,13 +23,13 @@ so users won't have to sign in again when they return.
 
 To store user credentials from forms:
 
-1. Check form includes `autocomplete` attributes.
-2. Interrupt a form submission.
-3. Authenticate through AJAX.
+1. Include `autocomplete` in the form.
+2. Interrupt the form submission event.
+3. Authenticate by sending a request via AJAX.
 4. Store the credential.
 5. Update the UI or proceed to the personalized page.
 
-## Include autocomplete in form
+## Include `autocomplete` in the form
 
 Before moving forward,
 check if your form includes `autocomplete` attributes.
@@ -49,9 +49,9 @@ Learn more about autofill in
      <input type="submit" value="Sign Up!">
     </form>
 
-## Interrupt form submission
+## Interrupt the form submission event
 
-Interrupt the form submission event when user presses the submit button,
+Interrupt the form submission event when the user presses the submit button,
 and prevent the default behavior.
 
     var f = document.querySelector('#signup');
@@ -61,14 +61,14 @@ and prevent the default behavior.
 By preventing a page transition,
 you can retain the credential information while verifying its authenticity.
 
-## Send a request via AJAX
+## Authenticate by sending a request via AJAX
 
-Send a request via AJAX and respond with profile information,
+To authenticate the user, send a request via AJAX and respond with profile information,
 for example, in JSON format.
 
 On the server side, create an endpoint (or simply alter an existing endpoint)
-that responds with HTTP code 200 or 401, etc so that it’s clear to the browser
-if the sign-up/sign-in/change password is successful or not.
+that responds with HTTP code 200 or 401, so that it’s clear to the browser
+whether the sign-up/sign-in/change password is successful or not.
 
 For example: 
 
@@ -87,11 +87,11 @@ For example:
 
 ## Store the credential
 
-To store a credential,
-instantiate a
+To store a credential, first check if the API is available,
+then instantiate a
 [`PasswordCredential`](/web/fundamentals/security/credential-management/reference/passwordcredential)
 with the form element as an argument.
-Then call [navigator.credentials.store()](/web/fundamentals/security/credential-management/reference/navigator-credential-store).
+Call [`navigator.credentials.store()`](/web/fundamentals/security/credential-management/reference/navigator-credential-store).
 If the API is not available,
 you can simply forward the profile information to the next step.
 
@@ -102,10 +102,8 @@ you can simply forward the profile information to the next step.
        return Promise.resolve(profile);
      }
 Once the request succeeds, store the credential information.
-(Don't store it if it failed as it simply confuses the user when they come back.)
-
-Before doing so, check if the API is available.
-You should always keep progressive enhancement in mind.
+(Don't store the credentials information if the request failed
+as doing so confuses returning users.)
 
 When the Chrome browser obtains credential information,
 a notification pops up asking to store a credential
@@ -113,7 +111,7 @@ a notification pops up asking to store a credential
 
 <figure>
   <img src="imgs/store-credential.png">
-  <figcaption>Notification for auto signed-in user</figcaption>
+  <figcaption>Notification for an auto signed-in user</figcaption>
 </figure>
 
 <div class="clearfix"></div>
