@@ -5,7 +5,7 @@ description: Reference documentation for the "Has a "theme-color" meta tag" Ligh
 {# wf_updated_on: 2017-04-24 #}
 {# wf_published_on: 2017-04-24 #}
 
-# Has a &lt;meta name="theme-color"&gt; tag  {: .page-title }
+# Has A Theme Color Meta Tag  {: .page-title }
 
 ## Why the audit is important {: #why }
 
