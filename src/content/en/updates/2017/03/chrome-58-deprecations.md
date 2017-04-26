@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 58 to help you plan.
 
-{# wf_updated_on: 2017-03-23 #}
+{# wf_updated_on: 2017-04-26 #}
 {# wf_published_on: 2017-03-17 #}
 {# wf_tags: deprecations,removals,chrome58 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -146,3 +146,7 @@ the prefixed version is being removed from Chrome.
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/rdGvTDPU7mM/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5718005866561536) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688943)
+
+<<../../_deprecation-policy.md>>
+
+{% include "comment-widget.html" %}
