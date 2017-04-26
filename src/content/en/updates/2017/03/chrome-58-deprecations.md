@@ -173,27 +173,3 @@ the prefixed version is being removed from Chrome.
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/rdGvTDPU7mM/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5718005866561536) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688943)
-
-##
-
-
-
-[Intent to Remove]() &#124;
-[Chromestatus Tracker]() &#124;
-[Chromium Bug]()
-
-##
-
-
-
-[Intent to Remove]() &#124;
-[Chromestatus Tracker]() &#124;
-[Chromium Bug]()
-
-##
-
-
-
-[Intent to Remove]() &#124;
-[Chromestatus Tracker]() &#124;
-[Chromium Bug]()

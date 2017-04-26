@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 57 to help you plan.
 
-{# wf_updated_on: 2017-03-10 #}
+{# wf_updated_on: 2017-04-26 #}
 {# wf_published_on: 2017-02-01 #}
 {# wf_tags: deprecations,removals,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -18,14 +18,17 @@ Platform. This article describes the deprecations and removals in Chrome 57,
 which is in beta as of early February. This list is subject to change at any
 time.
 
-## Deprecate ServiceWorkerMessageEvent in favor of using MessageEvent
+## Remove ServiceWorkerMessageEvent in favor of using MessageEvent
+
+The HTML spec extended `MessageEvent` to allow `ServiceWorker` as a type for
+the `source` attribute.  `client.postMessage()` and creation of custom message
+events are changed to use `MessageEvent` instead of `ServiceWorkerMessageEvent`.
+`ServiceWorkerMessageEvent` is removed.
 
 
-
-
-[Intent to Remove]() &#124;
-[Chromestatus Tracker]() &#124;
-[Chromium Bug]()
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Xp9hmKyuOrI/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5014379292524544) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=659074)
 
 ## Deprecate support for embedded credentials in subresource requests
 
