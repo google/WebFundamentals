@@ -20,7 +20,8 @@ Animation, and Idle phases of your page.
 [RAIL]: /web/fundamentals/performance/rail
 
 Caution: This tutorial is based on Chrome 59. If you use another version of
-Chrome, the UI and features of DevTools may be different.
+Chrome, the UI and features of DevTools may be different. Check `chrome://help`
+to see what version of Chrome you're running.
 
 ## Get started {: #get-started }
 
