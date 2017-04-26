@@ -8,6 +8,22 @@ full_width: true
 
 # {{ title }} {: .page-title }
 
+<style>
+  .kd-tabbed-vert article h3 {
+    margin-bottom: 0;
+  }
+  .kd-tabbed-vert article h3 + p {
+    margin-top: 0;
+  }
+  .kd-tabbed-vert article img {
+    max-width: 128px;
+    max-height: 128px;
+    float: left;
+    margin: 0 40px 40px 0;
+    max-width: calc((100% - 40px) / 2);
+  }
+</style>
+
 <section class="kd-tabbed-vert" id="vertTab">
   <article>
     <header id="africa">Africa</header>
@@ -15,10 +31,17 @@ full_width: true
 {{#each articles}}
 {{#eq region 'africa'}}
 <h3><a href="{{url}}">{{ title }}</a></h3>
-<p>{{{description}}}</p>
+<p>
+  <a href="{{url}}">
+    <img src="{{#if imageSquare}}{{imageSquare}}{{else}}/web/showcase/images/logo_google_best_practices_96dp.svg{{/if}}">
+  </a>
+  {{{description}}}
+</p>
 <p>
   {{datePublishedPretty}} 
-  {{#if tags}} | {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
+  {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
+</p>
+<div class="clearfix"></div>
 {{/eq}}
 {{/each}}
 
@@ -29,10 +52,17 @@ full_width: true
 {{#each articles}}
 {{#eq region 'asia'}}
 <h3><a href="{{url}}">{{ title }}</a></h3>
-<p>{{{description}}}</p>
+<p>
+  <a href="{{url}}">
+    <img src="{{#if imageSquare}}{{imageSquare}}{{else}}/web/showcase/images/logo_google_best_practices_96dp.svg{{/if}}">
+  </a>
+  {{{description}}}
+</p>
 <p>
   {{datePublishedPretty}} 
-  {{#if tags}} | {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
+  {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
+</p>
+<div class="clearfix"></div>
 {{/eq}}
 {{/each}}
 
@@ -43,10 +73,17 @@ full_width: true
 {{#each articles}}
 {{#eq region 'europe'}}
 <h3><a href="{{url}}">{{ title }}</a></h3>
-<p>{{{description}}}</p>
+<p>
+  <a href="{{url}}">
+    <img src="{{#if imageSquare}}{{imageSquare}}{{else}}/web/showcase/images/logo_google_best_practices_96dp.svg{{/if}}">
+  </a>
+  {{{description}}}
+</p>
 <p>
   {{datePublishedPretty}} 
-  {{#if tags}} | {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
+  {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
+</p>
+<div class="clearfix"></div>
 {{/eq}}
 {{/each}}
 
@@ -57,10 +94,17 @@ full_width: true
 {{#each articles}}
 {{#eq region 'middle-east'}}
 <h3><a href="{{url}}">{{ title }}</a></h3>
-<p>{{{description}}}</p>
+<p>
+  <a href="{{url}}">
+    <img src="{{#if imageSquare}}{{imageSquare}}{{else}}/web/showcase/images/logo_google_best_practices_96dp.svg{{/if}}">
+  </a>
+  {{{description}}}
+</p>
 <p>
   {{datePublishedPretty}} 
-  {{#if tags}} | {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
+  {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
+</p>
+<div class="clearfix"></div>
 {{/eq}}
 {{/each}}
 
@@ -71,10 +115,17 @@ full_width: true
 {{#each articles}}
 {{#eq region 'north-america'}}
 <h3><a href="{{url}}">{{ title }}</a></h3>
-<p>{{{description}}}</p>
+<p>
+  <a href="{{url}}">
+    <img src="{{#if imageSquare}}{{imageSquare}}{{else}}/web/showcase/images/logo_google_best_practices_96dp.svg{{/if}}">
+  </a>
+  {{{description}}}
+</p>
 <p>
   {{datePublishedPretty}} 
-  {{#if tags}} | {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
+  {{#if tags}} <br>{{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
+</p>
+<div class="clearfix"></div>
 {{/eq}}
 {{/each}}
 
@@ -85,10 +136,17 @@ full_width: true
 {{#each articles}}
 {{#eq region 'south-america'}}
 <h3><a href="{{url}}">{{ title }}</a></h3>
-<p>{{{description}}}</p>
+<p>
+  <a href="{{url}}">
+    <img src="{{#if imageSquare}}{{imageSquare}}{{else}}/web/showcase/images/logo_google_best_practices_96dp.svg{{/if}}">
+  </a>
+  {{{description}}}
+</p>
 <p>
   {{datePublishedPretty}} 
-  {{#if tags}} | {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
+  {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
+</p>
+<div class="clearfix"></div>
 {{/eq}}
 {{/each}}
 

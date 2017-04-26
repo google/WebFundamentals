@@ -464,6 +464,24 @@ function testMarkdown(filename, contents, options) {
       }
     }
 
+    // Validate featured square image path
+    matched = wfRegEx.RE_IMAGE_SQUARE.exec(contents);
+    if (matched) {
+      let imgPath = matched[1];
+      if (imgPath.indexOf('/web') === 0) {
+        imgPath = imgPath.replace('/web', '');
+      }
+      imgPath = './src/content/en' + imgPath;
+      try {
+        fs.accessSync(imgPath, fs.R_OK);
+      } catch (ex) {
+        position = {line: getLineNumber(contents, matched.index)};
+        msg = 'WF Tag `wf_featured_image_square` found, but couldn\'t find ';
+        msg += `image - ${matched[1]}`;
+        logError(filename, position, msg);
+      }
+    }
+
     // Check for uncommon tags
     matched = wfRegEx.RE_TAGS.exec(contents);
     if (matched && options.commonTags) {

@@ -162,6 +162,7 @@ function readMetadataForFile(file) {
     title: wfRegEx.getMatch(wfRegEx.RE_TITLE, content),
     description: description,
     image: wfRegEx.getMatch(wfRegEx.RE_IMAGE, content),
+    imageSquare: wfRegEx.getMatch(wfRegEx.RE_IMAGE_SQUARE, content),
     datePublished: published.format(DATE_FORMAT_STANDARDIZED),
     datePublishedPretty: published.format(DATE_FORMAT_PRETTY),
     yearPublished: published.format('YYYY'),

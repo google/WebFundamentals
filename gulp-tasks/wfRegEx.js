@@ -17,6 +17,7 @@ var RE_UPDATED = /^{#\s?wf_updated_on:\s?(.*?)\s?#}\s?\n/m;
 var RE_PUBLISHED = /^{#\s?wf_published_on:\s?(.*?)\s?#}\s?\n/m;
 
 var RE_IMAGE = /^{#\s?wf_featured_image:\s?(.*?)\s?#}\s?\n/m;
+var RE_IMAGE_SQUARE = /^{#\s?wf_featured_image_square:\s?(.*?)\s?#}\s?\n/m;
 var RE_TAGS = /^{#\s?wf_tags:\s?(.*?)\s?#}\s?\n/m;
 var RE_SNIPPET = /^{#\s?wf_featured_snippet:\s?(.*?)\s?#}\s?\n/m;
 
@@ -71,6 +72,7 @@ exports.RE_TITLE = RE_TITLE;
 exports.RE_TITLE_CLASS = RE_TITLE_CLASS;
 exports.RE_TAGS = RE_TAGS;
 exports.RE_IMAGE = RE_IMAGE;
+exports.RE_IMAGE_SQUARE = RE_IMAGE_SQUARE;
 exports.RE_SNIPPET = RE_SNIPPET;
 exports.RE_AUTHOR_LIST = RE_AUTHOR_LIST;
 exports.RE_AUTHOR_KEY = RE_AUTHOR_KEY;
