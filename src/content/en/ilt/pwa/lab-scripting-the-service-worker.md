@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-10T05:16:46Z #}
+{# wf_updated_on: 2017-04-26T16:30:17Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -55,7 +55,7 @@ Open your browser and navigate to __localhost:8080/service-worker-lab/app__.
 
 
 
-Note: If you have installed a service worker on localhost before, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service workers and <a href="tools-for-pwa-developers#clearcache">clear all service worker caches</a> for localhost so that they do not interfere with the lab.
 
 
 
@@ -145,6 +145,7 @@ Replace TODO 3.1 with the following code:
 ```
 self.addEventListener('install', function(event) {
   console.log('Service worker installing...');
+  // TODO 3.4: Skip waiting
 });
 
 self.addEventListener('activate', function(event) {
@@ -184,7 +185,7 @@ Note: Simply refreshing the page is not sufficient to transfer control to a new 
 
 
 
-Note: You can also manually activate a new service worker using some browsers' <a href="tools-for-pwa-developers#accesssw">developer tools</a> and programatically with <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting"><code>skipWaiting()</code></a>. 
+Note: You can also manually activate a new service worker using some browsers' <a href="tools-for-pwa-developers#accesssw">developer tools</a> and programmatically with <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting"><code>skipWaiting()</code></a>, which we discuss in section 3.4. 
 
 
 
@@ -200,7 +201,13 @@ After initial installation and activation, re-registering an existing worker doe
 
 ### 3.3 Update the service worker
 
-Change the service worker by replacing TODO 3.3 with an arbitrary comment. 
+Replace TODO 3.3 in __service-worker.js __with the following comment:
+
+#### service-worker.js
+
+```
+// I'm a new service worker
+```
 
 Save the file and refresh the page. Notice that the new service worker installs but does not activate. 
 
@@ -216,7 +223,25 @@ Note: If you are getting unexpected results, make sure your <a href="tools-for-p
 
 #### Explanation
 
-The browser detects a byte difference between the new and existing service worker file, so the new service worker is installed. Since only one service worker can be active at a time (for a given scope), even though the new service worker is installed, it isn't activated until the existing service worker is no longer in use. By closing all pages under the old service worker's control, we are able to activate the new service worker.
+The browser detects a byte difference between the new and existing service worker file (because of the added comment), so the new service worker is installed. Since only one service worker can be active at a time (for a given scope), even though the new service worker is installed, it isn't activated until the existing service worker is no longer in use. By closing all pages under the old service worker's control, we are able to activate the new service worker.
+
+### 3.4 Skipping the waiting phase
+
+It is possible for a new service worker to activate immediately, even if an existing service worker is present, by skipping the waiting phase. 
+
+Replace TODO 3.4 in <strong>service-worker.js</strong> with the following code:
+
+#### service-worker.js
+
+```
+self.skipWaiting();
+```
+
+Save the file and refresh the page. Notice that the new service worker installs and activates immediately, even though a previous service worker was in control. 
+
+#### Explanation
+
+The `skipWaiting()` method allows a service worker to activate as soon as it finishes installation. The install event listener is a common place to put the `skipWaiting()` call, but it can be called anywhere during or before the waiting phase. See  [this documentation](/web/fundamentals/instant-and-offline/service-worker/lifecycle#skip_the_waiting_phase) for more on when and how to use `skipWaiting()`. For the rest of the lab, we can now test new service worker code without manually unregistering the service worker.
 
 #### For more information
 
@@ -242,7 +267,7 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 
-Manually <a href="tools-for-pwa-developers#unregister">unregister the service worker</a> and refresh the page to install and activate the updated service worker. 
+Save the script and refresh the page to install and activate the updated service worker. 
 
 Check the console and observe that no fetch events were logged. Refresh the page and check the console again. You should see fetch events this time for the page and its assets (like CSS).
 

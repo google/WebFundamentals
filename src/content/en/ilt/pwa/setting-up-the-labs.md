@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-19T23:33:31Z #}
+{# wf_updated_on: 2017-04-25T18:26:15Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -21,7 +21,8 @@ Use these instructions to install the lab repository on your computer prior to s
 ### Prerequisites
 
 * These labs are intended to be used on systems running Windows 7 and later, macOS, and Linux. 
-* Multiple browsers - although individual labs may require a specific level of support for progressive web apps, we recommend trying out the labs on multiple browsers (where feasible) so that you get a sense of how different users might experience the app. 
+* Multiple browsers - although individual labs may require a specific level of support for progressive web apps, we recommend trying out the labs on multiple browsers (where feasible) so that you get a sense of how different users might experience the app.
+* A programming editor - for example,  [Atom](https://atom.io/),  [Sublime Text](https://www.sublimetext.com/), or  [Notepad++](https://notepad-plus-plus.org/) (for Windows only).
 
 
 
@@ -97,7 +98,7 @@ Some projects in the download contain folders that correspond to checkpoints in 
 
 
 
-Note: If you do not use Git, then download the repo from <a class="btn" role="button" href="https://github.com/google-developer-training/pwa-training-labs/archive/master.zip">GitHub</a>.
+Note: If you do not use Git, then you can <a href="https://github.com/google-developer-training/pwa-training-labs/archive/master.zip>download the repo as a zip file</a>. Note that if you download the repository with this method, it will be named __pwa-training-labs-master__ instead of __pwa-training-labs__. Rename the folder to __pwa-training-labs__ so that the name is consistent with the lab instructions.
 
 
 
