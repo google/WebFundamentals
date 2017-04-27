@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: As of Chrome version 59, notifications will be displayed native notifications on Mac OS X.
+description: As of Chrome 59, notifications will be displayed native notifications on Mac OS X.
 
 {# wf_updated_on: 2017-04-26 #}
 {# wf_published_on: 2017-04-26 #}
 {# wf_tags: chrome59,notifications #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
-{# wf_featured_snippet: As of Chrome version 59, notifications will be displayed native notifications on Mac OS X. #}
+{# wf_featured_snippet: As of Chrome 59, notifications will be displayed native notifications on Mac OS X. #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -25,20 +25,20 @@ system Do Not Disturb setting.
 Below we'll look at the differences this change introduces to the existing
 API's.
 
-## Notification Center
+## Notification center
 
-One of the benefits (and feature requests from users) of this change is that
-notifications will be displayed in OS X's notification center.
+One of the benefits of this change is that notifications will be displayed in
+OS X's notification center.
 
 <figure>
   <img src="/web/updates/images/2017/04/macos-notifications/image00.png">
   <figcaption>
-    Google Chrome Notifications will be displayed in the Mac OS X notification center.
+    Google Chrome Notifications will be displayed in the Mac OS X notification center
   </figcaption>
 </figure>
 
 ## Differences
-### Icon Size and Positioning
+### Icon size and positioning
 
 The appearance of icons will change. They'll be smaller in size and padding is
 applied. You may want to consider switching to a transparent background icon
@@ -47,15 +47,15 @@ instead of a solid color to be aesthetically pleasing.
 <figure>
   <img src="/web/updates/images/2017/04/macos-notifications/image01.png">
   <figcaption>
-    Before and after of notification icons displayed by Chrome vs displayed by
-    Mac OS X.
+    Before and after for Chrome on Mac notification icons displayed by Chrome vs displayed by
+    Mac OS X
   </figcaption>
 </figure>
 
-### Action Icons
+### Action icons
 
 Before this change action buttons and icons would be displayed in the
-notification. With the native notifications the action button icons will not be
+notification. With native notifications the action button icons will not be
 used and the user will need to hover over the notification and select the "More"
 button to see the available actions.
 
@@ -63,11 +63,11 @@ button to see the available actions.
   <img src="/web/updates/images/2017/04/macos-notifications/image02.png">
   <figcaption>
     Before and after of notification action buttons with icons displayed by
-    Chrome vs displayed by Mac OS X.
+    Chrome vs displayed by Mac OS X
   </figcaption>
 </figure>
 
-### Chrome Logo
+### Chrome logo
 
 The Chrome logo will always be displayed and cannot be replaced or altered. This
 is a requirement for third party applications on Mac OS X.
@@ -81,7 +81,7 @@ parameter (See example below).
 <figure>
   <img src="/web/updates/images/2017/04/macos-notifications/image03.png">
   <figcaption>
-    Before and after of notification image displayed by Chrome vs displayed by Mac OS X.
+    Before and after of notification image for Chrome on Mac OS X
   </figcaption>
 </figure>
 
@@ -95,7 +95,7 @@ if ('image' in Notification.prototype) {
 }
 ```
 
-## Chrome Extension Changes
+## Chrome extension changes
 
 Chrome extensions have the concept of [notification
 templates](https://developer.chrome.com/apps/notifications#type-TemplateType)
@@ -107,7 +107,7 @@ that images are supplemental and not required to be useful to your users.
 <figure>
   <img src="/web/updates/images/2017/04/macos-notifications/image04.png">
   <figcaption>
-    Before and after of example of the image template in the chrome.notification API.
+    Before and after for image templates in the chrome.notification API
   </figcaption>
 </figure>
 
@@ -118,7 +118,7 @@ text to summarize the set of changes.
 <figure>
   <img src="/web/updates/images/2017/04/macos-notifications/image05.png">
   <figcaption>
-    Before and after of example of the list template in the chrome.notification API.
+    Before and after for list templates in the chrome.notification API
   </figcaption>
 </figure>
 
@@ -128,17 +128,17 @@ to indicate the progress instead of a progress bar.
 <figure>
   <img src="/web/updates/images/2017/04/macos-notifications/image06.png">
   <figcaption>
-    Before and after of example of the progress template in the chrome.notification API.
+    Before and after for progress templates in the chrome.notification API
   </figcaption>
 </figure>
 
-The other difference in API / notification UI is the appIconMarkUrl which will
-no longer be used on Mac OS X version 59 and above.
+The last difference in notification UI is that the `appIconMarkUrl` will
+no longer be used on Mac OS X.
 
 <figure>
   <img src="/web/updates/images/2017/04/macos-notifications/image07.png">
   <figcaption>
-    Before and after of example of the appIconMarkUrl in the chrome.notification API.
+    Before and after for appIconMarkUrl in the chrome.notification API
   </figcaption>
 </figure>
 
