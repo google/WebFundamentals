@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:10:42Z #}
+{# wf_updated_on: 2017-04-26T00:19:21Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -48,10 +48,10 @@ A route intercepts requests that match the specified URL pattern and HTTP reques
 Let's look at an example:
 
 ```
-toolbox.router.get('/my-app/index.html', global.toolbox.networkFirst);
+toolbox.router.get('/my-app/index.html', global.toolbox.networkFirst, {networkTimeoutSeconds: 5});
 ```
 
-This intercepts all `GET` requests for __/my-app/index.html__ and handles the request according to the built-in "network first" strategy. In this approach the request is first sent to the network, and if that succeeds the request/response pair is added to the cache. If it fails, it tries to get the response from the cache.
+This intercepts all `GET` requests for __/my-app/index.html__ and handles the request according to the built-in "network first" strategy. In this approach the request is first sent to the network, and if that succeeds the request/response pair is added to the cache. If it fails, it tries to get the response from the cache. We have set the `networkTimeoutSeconds` option to `5` so that the app fetches the response from the cache if the network doesn't respond within 5 seconds.
 
 To define "wildcards" (URL patterns for matching more than one file), or if you need to match a cross-origin request, sw-toolbox has two options: Express style routing and regular expression routing.
 

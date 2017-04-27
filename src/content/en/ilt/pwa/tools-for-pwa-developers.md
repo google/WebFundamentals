@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-28T21:53:29Z #}
+{# wf_updated_on: 2017-04-26T20:31:53Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -384,6 +384,8 @@ Click the Information icon in the URL bar. Use the __Receive Notifications__ dro
 
 ![View the Service Worker Cache in Chrome](img/b46b92cc3c6d3d3a.png)
 
+<div id="firefoxcache"></div>
+
 #### Firefox
 
 [Open the __Toolbox__](#firefoxdevtools) and click the Settings icon to open __Settings__. Under __Default Firefox Developer Tools__, check __Storage__.
@@ -402,9 +404,15 @@ See the MDN article on the  [Storage Inspector](https://developer.mozilla.org/en
 
 #### Chrome
 
-[Go to __Cache Storage__](#chromecache) in __DevTools__. In the navigation pane, expand __Cache Storage,__, right-click the cache name and then select __Delete__.
+[Go to __Cache Storage__](#chromecache) in __DevTools__. In the __Application__ panel, expand __Cache Storage__. Right-click the cache name and then select __Delete__.
 
 ![Clear the Service Worker Cache in Chrome](img/dd0b5fd1762c05c0.png)
+
+#### Firefox
+
+[Go to __Cache Storage__](#firefoxcache) in __DevTools__. In the __Storage__ panel, expand __Cache Storage__ and the appropriate domain. Right-click the cache name and then select __Delete All__.
+
+![Clear the Service Worker Cache in Firefox](img/3a9195c823964572.png)
 
 <div id="indexeddb"></div>
 
@@ -461,6 +469,23 @@ Where `database_name` is the name of the database to delete.
 [Open the __Toolbox__](#firefoxdevtools) and click the Settings icon to open the __Settings__. Under __Advanced settings__, select __Disable HTTP Cache__.
 
 ![Disable HTTP Cache in Firefox](img/df759390516a0bae.png)
+
+<div id="mobile"></div>
+
+
+## Simulate mobile devices
+
+
+
+
+Each browser has it's own version of device simulation and testing. See the documentation for each:
+
+*  [Chrome](/web/tools/chrome-devtools/device-mode/)
+*  [Firefox](https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_Mode#Device_selection)
+*  [Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/emulation)
+*  [Safari](https://support.apple.com/kb/PH26266?locale=en_US&viewlocale=en_US)
+
+These tools give you a close approximation as to how your site will look on a mobile device, but to get the full picture you should always test your site on real devices. Here is documentation for debugging Android devices on  [Chrome](/web/tools/chrome-devtools/remote-debugging/) and  [Firefox](https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging).
 
 <div id="resources"></div>
 

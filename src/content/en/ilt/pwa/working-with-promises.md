@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-19T19:34:03Z #}
+{# wf_updated_on: 2017-04-25T20:22:25Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -183,7 +183,7 @@ promise.then(function(result) {
 })
 ```
 
-There's nothing special about `catch()`, it's equivalent to `then(undefined, func)`, but it's more readable. Note that the two code examples above do not behave the same way. The latter example is equivalent to:
+There's nothing special about `catch()`, it's equivalent to `then(undefined, func)`, but it's more readable. __Note that the two code examples above do not behave the same way__. The latter example is equivalent to:
 
 ```
 promise.then(function(response) {
@@ -387,7 +387,7 @@ Promise.race([promise1, promise2])
 });
 ```
 
-This example appears to race the cache against the network, using the fastest returned resource. However, both the  [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage) and  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) can resolve with "bad" responses ( [fetch](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) resolves even for 404s, and  [caches.match](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match) resolves with falsey values if a resource is not available). In this example, if a resource is not available in the cache (which typically responds faster than the network), `Promise.race` resolves with the falsey value from the cache, and ignores the network request (which may resolve). 
+This example appears to race the cache against the network, using the fastest returned resource. However, both the  [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage) and  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) can resolve with "bad" responses ( [fetch](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) resolves even for 404s, and  [caches.match](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match) resolves with falsey values if a resource is not available). In this example, if a resource is not available in the cache (which typically responds faster than the network), `Promise.race` resolves with the falsey value from the cache, and ignores the network request (which may resolve). See the  [Cache & network race](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-and-network-race) section in the  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) for an example of a race function that works as expected.
 
 <div id="further"></div>
 
