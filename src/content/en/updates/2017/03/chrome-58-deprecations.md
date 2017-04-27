@@ -118,11 +118,11 @@ In 2013, Chrome 31 deployed
 [new TLS cipher suites](https://security.googleblog.com/2014/04/speeding-up-and-strengthening-https.html) 
 based on Prof. Dan Bernstein's ChaCha20 and Poly1305 algorithms. These was
 later standardized, with small tweaks, at the IETF as
-[RFC 7539](https://www.google.com/url?q=https%3A%2F%2Ftools.ietf.org%2Fhtml%2Frfc7539&sa=D&sntz=1&usg=AFQjCNH3kI-CgRoun-8HOnsdBsUTGm0AdA)
-and [RFC 7905](https://www.google.com/url?q=https%3A%2F%2Ftools.ietf.org%2Fhtml%2Frfc7905&sa=D&sntz=1&usg=AFQjCNGLsLFtwQj-4fan9TollGG6zVKt8Q).
+[RFC 7539](https://tools.ietf.org/html/rfc7539)
+and [RFC 7905](https://tools.ietf.org/html/rfc7905).
 We shipped the standardized variant early in 2016 with
 [Chrome 49](https://www.chromestatus.com/features/5355238106071040).
-We are no removing the pre-standard variants.
+We are now removing the pre-standard variants.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/8YAc7tQW4RQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5633556340539392) &#124;
