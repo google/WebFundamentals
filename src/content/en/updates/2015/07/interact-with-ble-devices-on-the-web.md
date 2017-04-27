@@ -41,11 +41,12 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 
 A subset of the Web Bluetooth API is available in Chrome 56 for Chrome OS,
 Chrome for Android M, and Mac. This means you should be able to
-[request](#request-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
+[request](#request_bluetooth_devices) and [connect to](#connect_to_a_bluetooth_device)
 nearby Bluetooth devices,
-[read](#read-a-bluetooth-characteristic)/[write](#write-to-a-bluetooth-characteristic)
-Bluetooth characteristics, [receive GATT Notifications](#receive-gatt-notifications), and know when a [Bluetooth device gets
-disconnected](#get-disconnected-from-a-bluetooth-device).
+[read](#read_a_bluetooth_characteristic)/[write](#write_to_a_bluetooth_characteristic)
+Bluetooth characteristics, [receive GATT Notifications](#receive_gatt_notifications),
+know when a [Bluetooth device gets disconnected](#get_disconnected_from_a_bluetooth_device), and even [read and write
+to Bluetooth descriptors](#read_and_write_to_bluetooth_descriptors).
 
 On Linux, you still have to go to
 `chrome://flags/#enable-experimental-web-platform-features`, enable the
@@ -361,14 +362,58 @@ invalidated when a device disconnects. This means your code should always
 retrieve (through `getPrimaryService(s)`, `getCharacteristic(s)`, etc.) these
 attributes after reconnecting.
 
+### Read and write to Bluetooth Descriptors
+
+Bluetooth GATT descriptors are defined attributes that describe a
+characteristic value. You can access them, read and write to in a similar way
+to Bluetooth GATT characteristics.
+
+Let's see for instance how to read the user description of the measurement
+interval of the device's health thermometer.
+
+In the example below, `health_thermometer` is the [Health
+Thermometer Service](https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.service.health_thermometer.xml), `measurement_interval` the [Measurement Interval Characteristic](https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.measurement_interval.xml), and `gatt.characteristic_user_description` the [Characteristic User Description Descriptor](https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.descriptor.gatt.characteristic_user_description.xml).
+
+<pre class="prettyprint">
+navigator.bluetooth.requestDevice({ filters: [{ services: ['health_thermometer'] }] })
+.then(device => device.gatt.connect())
+.then(server => server.getPrimaryService('health_thermometer'))
+.then(service => service.getCharacteristic('measurement_interval'))
+<strong>.then(characteristic => characteristic.getDescriptor('gatt.characteristic_user_description'))
+.then(descriptor => descriptor.readValue())
+.then(value => {
+  let decoder = new TextDecoder('utf-8');
+  console.log('User Description: ' + decoder.decode(value));
+})</strong>
+.catch(error => { console.log(error); });
+</pre>
+
+Now that we've read the user description of the measurement interval of the
+device's health thermometer, let's see how to update it and write a custom
+value.
+
+<pre class="prettyprint">
+navigator.bluetooth.requestDevice({ filters: [{ services: ['health_thermometer'] }] })
+.then(device => device.gatt.connect())
+.then(server => server.getPrimaryService('health_thermometer'))
+.then(service => service.getCharacteristic('measurement_interval'))
+.then(characteristic => characteristic.getDescriptor('gatt.characteristic_user_description'))
+<strong>.then(descriptor => {
+  let encoder = new TextEncoder('utf-8');
+  let userDescription = encoder.encode('Defines the time between measurements.');
+  return descriptor.writeValue(userDescription);
+})</strong>
+.catch(error => { console.log(error); });
+</pre>
+
 ## Samples, Demos and Codelabs
 
 All [Web Bluetooth samples](https://googlechrome.github.io/samples/web-bluetooth/index.html) below
-have been tested with the Web Bluetooth flag enabled. To enjoy these samples to
-their fullest, I recommend you install the
+have been successfully tested. To enjoy these samples to their fullest, I
+recommend you install the
 [BLE Peripheral Simulator Android App](https://play.google.com/store/apps/details?id=io.github.webbluetoothcg.bletestperipheral)
-which simulates a BLE Peripheral with a Battery Service or a Heart Rate
-Service.
+which simulates a BLE Peripheral with a Battery Service, a Heart Rate
+Service, or a Health Thermometer Service.
 
 ### Beginner
 
@@ -379,6 +424,7 @@ Service.
 - [Notifications](https://googlechrome.github.io/samples/web-bluetooth/notifications.html) - start and stop characteristic notifications from a BLE Device.
 - [Device Disconnect](https://googlechrome.github.io/samples/web-bluetooth/device-disconnect.html) - disconnect and get notified from a disconnection of a BLE Device after connecting to it.
 - [Get Characteristics](https://googlechrome.github.io/samples/web-bluetooth/get-characteristics.html) - get all characteristics of an advertised service from a BLE Device.
+- [Get Descriptors](https://googlechrome.github.io/samples/web-bluetooth/get-descriptors.html) - get all characteristics' descriptors of an advertised service from a BLE Device.
 
 ### Combining multiple operations
 
@@ -388,6 +434,8 @@ Service.
 - [Discover Services & Characteristics](https://googlechrome.github.io/samples/web-bluetooth/discover-services-and-characteristics.html) - discover all accessible primary services and their characteristics from a BLE Device.
 - [Automatic Reconnect](https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html) - reconnect to a disconnected BLE device using an exponential backoff algorithm.
 - [Read Characteristic Value Changed](https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html) - read battery level and be notified of changes from a BLE Device.
+- [Read Descriptors](https://googlechrome.github.io/samples/web-bluetooth/read-descriptors.html) - read all characteristic's descriptors of a service from a BLE Device.
+- [Write Descriptor](https://googlechrome.github.io/samples/web-bluetooth/write-descriptor.html) - write to the descriptor "Characteristic User Description" on a BLE Device.
 
 Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/demos) and [official Web Bluetooth Codelabs](https://github.com/googlecodelabs?query=bluetooth) as well.
 
