@@ -487,11 +487,10 @@ I would also recommend you check out the official ["How to file Web Bluetooth bu
 ## What's next
 
 Check the [browser and platform implementation
-status](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md)
+status](https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md)
 first to know which parts of the Web Bluetooth API are currently being implemented.
 
-Though it's still incomplete, here's a sneak peek of what to expect in the
-coming months:
+Though it's still incomplete, here's a sneak peek of what to expect in the near future:
 
 - [Scanning for nearby BLE advertisements](https://github.com/WebBluetoothCG/web-bluetooth/pull/239)
   will happen with `navigator.bluetooth.requestLEScan()`.
@@ -504,7 +503,7 @@ coming months:
   removed from a Bluetooth GATT Service.
 
 At the time of writing, Chrome OS, Android M, Linux, and Mac are [the most advanced
-platforms](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md).
+platforms](https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md).
 Windows 8.1+ and iOS will be supported as much as feasible by the platforms.
 
 ## Resources
