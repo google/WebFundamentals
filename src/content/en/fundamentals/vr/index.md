@@ -19,7 +19,7 @@ Today the WebVR API is available in:
 
 * Chrome Beta (M56+), via an [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
 * Firefox Nightly.
-* Samsung Internet Browser for Gear VR. (Please note: this currently supports an older version of the WebVR specification.)
+* Samsung Internet for Android and for Gear VR.
 
 For browsers that don’t support WebVR, or perhaps have older versions of the APIs, you can fall back to the [WebVR Polyfill](https://github.com/googlevr/webvr-polyfill). Bear in mind, however, that VR is *extremely performance-sensitive* and polyfills typically have a relatively large performance cost, so it may be worth considering whether or not you wish to use the polyfill for a user who doesn’t have native support for WebVR.
 
