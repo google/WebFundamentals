@@ -17,8 +17,6 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 58,
 which is in beta as of March 16. This list is subject to change at any time.
 
-
-
 ## Remove case-insensitive matching for usemap attribute
 
 The `usemap` attribute was formerly defined as caseless. Unfortunately
@@ -74,27 +72,55 @@ Starting with Chrome 58, a mouse on Android M or later will:
 
 ## Remove EME from unsecure contexts 
 
+Some usages of
+[Encrypted Media Extensions (EME)](https://www.w3.org/TR/encrypted-media/)
+expose digital rights management (DRM) implementations that are not open source,
+involve access to persistent unique identifiers, and/or run unsandboxed or with
+privileged access. The risks are increased when exposed via insecure HTTP,
+because the persistent unique IDs could be stolen by anyone on the network. In
+addition, for implementations that require explicit permissions, permission for
+an insecure HTTP site can be exploited.
 
+Because of these issues, support for non-secure contexts was removed from the
+EME spec before it became a Proposed Recommendation and it is not expected to be
+in the final Recommendation. This functionality was deprecated in Chrome 44 and
+is now being removed.
 
-[Intent to Remove]() &#124;
+This may break a small number of media sites that do not use HTTPS. As these
+sites transition to HTTPS, the risk becomes lower.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/tXmKPlXsnCQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5724389932793856) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=672605)
 
 ## Deprecate insecure usage of notifications
 
+Notifications are a powerful feature as they allow websites to invoke a system
+UI to transmit either private information itself or a signal that private
+information has been changed. Attackers may sniff or steal any information sent
+through a notification over an insecure connection. Web push requires a secure
+origin, so this change will align non-push notifications with push
+notifications. This change is part of our broader effort to
+[remove powerful features from unsecure origins](https://bugs.chromium.org/p/chromium/issues/detail?id=520765).
+Removal is expected in Chrome 61.
 
-
-[Intent to Remove]() &#124;
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/IVgkxkRNtMo/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5759967025954816) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=679821)
 
-
-
 ## Remove pre-standard ChaCha20-Poly1305 ciphers
 
+In 2013, Chrome 31 deployed
+[new TLS cipher suites](https://security.googleblog.com/2014/04/speeding-up-and-strengthening-https.html) 
+based on Prof. Dan Bernstein's ChaCha20 and Poly1305 algorithms. These was
+later standardized, with small tweaks, at the IETF as
+[RFC 7539](https://www.google.com/url?q=https%3A%2F%2Ftools.ietf.org%2Fhtml%2Frfc7539&sa=D&sntz=1&usg=AFQjCNH3kI-CgRoun-8HOnsdBsUTGm0AdA)
+and [RFC 7905](https://www.google.com/url?q=https%3A%2F%2Ftools.ietf.org%2Fhtml%2Frfc7905&sa=D&sntz=1&usg=AFQjCNGLsLFtwQj-4fan9TollGG6zVKt8Q).
+We shipped the standardized variant early in 2016 with
+[Chrome 49](https://www.chromestatus.com/features/5355238106071040).
+We are no removing the pre-standard variants.
 
-
-[Intent to Remove]() &#124;
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/8YAc7tQW4RQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5633556340539392) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=682816)
 
@@ -173,3 +199,7 @@ the prefixed version is being removed from Chrome.
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/rdGvTDPU7mM/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5718005866561536) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688943)
+
+<<../../_deprecation-policy.md>>
+
+{% include "comment-widget.html" %}
