@@ -545,7 +545,7 @@ function testMarkdown(filename, contents, options) {
         fs.accessSync(inclPath, fs.R_OK);
       } catch (ex) {
         position = {line: getLineNumber(contents, match.index)};
-        msg = `Markdown include ${match[0]} found, but could not find `;
+        msg = `Markdown include ${match[0]} found, but couldn't find `;
         msg += `actual file: ${inclPath}`;
         logError(filename, position, msg);
       }
