@@ -70,28 +70,32 @@ Starting with Chrome 58, a mouse on Android M or later will:
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=468806)
 
 
-## Remove EME from unsecure contexts 
+## Remove EME from non-secure contexts
 
 Some usages of
-[Encrypted Media Extensions (EME)](https://www.w3.org/TR/encrypted-media/)
-expose digital rights management (DRM) implementations that are not open source,
+[Encrypted Media Extenions (EME)](https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
+expose digital rights management implementations that are not open source,
 involve access to persistent unique identifiers, and/or run unsandboxed or with
-privileged access. The risks are increased when exposed via insecure HTTP,
-because the persistent unique IDs could be stolen by anyone on the network. In
-addition, for implementations that require explicit permissions, permission for
-an insecure HTTP site can be exploited.
+privileged access. Security risks are increased for sites exposed via non-secure
+HTTP because they can be attacked by anyone on the channel. Additionally, when
+user consent is required, acceptance persisted for a non-secure HTTP site can be
+exploited by such an attacker.
 
-Because of these issues, support for non-secure contexts was removed from the
-EME spec before it became a Proposed Recommendation and it is not expected to be
-in the final Recommendation. This functionality was deprecated in Chrome 44 and
-is now being removed.
 
-This may break a small number of media sites that do not use HTTPS. As these
-sites transition to HTTPS, the risk becomes lower.
+Support for non-secure contexts was removed from the
+[EME version 1 spec](https://w3c.github.io/encrypted-media/)
+and is not supported in the
+[proposed recommendation](https://www.w3.org/TR/encrypted-media/) nor
+anticipated in the subsequent final. will not be in the upcoming proposed
+recommendation or subsequent final recommendation. The API has been showing a
+deprecation message on non-secure origins since Chrome 44 (May 2015). In Chrome
+58, it is now removed. This change is part of our broader effort to
+[remove powerful features from unsecure origins](https://bugs.chromium.org/p/chromium/issues/detail?id=520765).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/tXmKPlXsnCQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5724389932793856) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=672605)
+
 
 ## Deprecate insecure usage of notifications
 
