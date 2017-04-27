@@ -49,6 +49,8 @@ toc:
         path: /web/tools/lighthouse/audits/alt-attribute
       - title: First Meaningful Paint
         path: /web/tools/lighthouse/audits/first-meaningful-paint
+      - title: Has A Theme-Color Meta Tag
+        path: /web/tools/lighthouse/audits/theme-color
       - title: Has A Viewport Meta Tag With width Or initial-scale
         path: /web/tools/lighthouse/audits/has-viewport-meta-tag
       - title: Manifest Contains Icons at Least 192px
@@ -85,6 +87,8 @@ toc:
         path: /web/tools/lighthouse/audits/http-200-when-offline
       - title: Time to Interactive
         path: /web/tools/lighthouse/audits/time-to-interactive
+      - title: Unoptimized Images
+        path: /web/tools/lighthouse/audits/unoptimized-images
       - title: User Timing Marks and Measures
         path: /web/tools/lighthouse/audits/user-timing
       - title: Uses HTTP/2 For Its Own Resources

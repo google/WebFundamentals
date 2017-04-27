@@ -178,7 +178,7 @@ def buildLeftNav(bookYaml, lang='en'):
     if 'path' in item:
       result += '<li class="devsite-nav-item">\n'
       result += '<a href="' + item['path'] + '" class="devsite-nav-title">\n'
-      result += '<span>' + item['title'] + '</span>\n'
+      result += '<span>' + cgi.escape(item['title']) + '</span>\n'
       result += '</a>\n'
       result += '</li>\n'
     elif 'section' in item:
@@ -187,7 +187,7 @@ def buildLeftNav(bookYaml, lang='en'):
       result += '<span class="devsite-nav-title devsite-nav-title-no-path" '
       result += 'track-type="leftNav" track-name="expandNavSectionNoLink" '
       result += 'track-metadata-position="0">\n'
-      result += '<span>' + item['title'] + '</span>\n'
+      result += '<span>' + cgi.escape(item['title']) + '</span>\n'
       result += '</span>'
       result += '<a '
       result += 'class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" '
