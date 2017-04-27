@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT.
 
-{# wf_updated_on: 2017-02-06 #}
+{# wf_updated_on: 2017-04-27 #}
 {# wf_published_on: 2015-07-21 #}
 {# wf_tags: news,iot,webbluetooth,physicalweb,origintrials #}
 {# wf_featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png #}
@@ -426,14 +426,15 @@ Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/de
 
 ## Dev Tips
 
-A Bluetooth Console is available in Chrome OS developer shell. Press [ Ctrl ] [
-Alt ] [ T ] to open a browser tab terminal and use the `bt_console` command to
-start poking around your bluetooth settings. The `help` command will give you a
-list of all available commands.
+A "Bluetooth Internals" page is available in the browser at
+`chrome://bluetooth-internals` so that you can inspect everything about
+nearby Bluetooth devices: status, services, characteristics, and descriptors.
 
-<img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-developer-console.png" alt="Bluetooth Developer Console screenshot"/>
+<figure>
+  <img src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-internals.png" alt="Bluetooth Internals">
+</figure>
 
-I would recommend you check out the official [Bluetooth debug page](https://sites.google.com/a/chromium.org/dev/developers/how-tos/file-web-bluetooth-bugs) as debugging Bluetooth can be hard sometimes.
+I would also recommend you check out the official ["How to file Web Bluetooth bugs"](https://sites.google.com/a/chromium.org/dev/developers/how-tos/file-web-bluetooth-bugs) page as debugging Bluetooth can be hard sometimes.
 
 ## What's next
 
