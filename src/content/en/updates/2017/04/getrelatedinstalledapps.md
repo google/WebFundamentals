@@ -4,7 +4,7 @@ description: Is your native app already installed? getRelatedInstalledApps is yo
 
 {# wf_published_on: 2017-04-28 #}
 {# wf_updated_on: 2017-04-28 #}
-{# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
+{# wf_featured_image: /web/updates/images/generic/info.png #}
 {# wf_tags: progressive-web-apps #}
 {# wf_featured_snippet: Is your native app already installed? getRelatedInstalledApps is your friend. #}
 
@@ -134,7 +134,7 @@ In your strings.xml set the "site" property value to be
         \"relation\": [\"delegate_permission/common.handle_all_urls\"],
         \"target\": {
           \"namespace\": \"web\",
-          \"site\": \"**http://localhost:8000**\"
+          \"site\": \"http://localhost:8000\"
         }
       }]
     </string>
@@ -221,3 +221,5 @@ File a bug [right
 here](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink&blocking=587623&cc=mgiuca%40chromium.org,owencm%40chromium.org).
 The correct people will be notified (I've sneakily put this in, so I am sure
 they will be grateful).
+
+{% include "comment-widget.html" %}
