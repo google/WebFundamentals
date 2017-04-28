@@ -21,14 +21,14 @@ figure {
 ### TL;DR {: #tldr .hide-from-toc}
 
 [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
-is a way to run the Chromium browser in a headless environment. Essentially, running Chrome without Chrome!
+is a way to run the Chromium browser in a headless environment. Essentially, running Chrome without Chrome! It brings **all modern web platform features** provided
+by Chromium and the Blink rendering engine.
 
 Why is that useful?
 
 A headless browser is great tool for automated testing and server environments where you
 don't need a visible UI shell. For example, you may want to run some tests against
-a real web page, create a PDF of it, or just inspect how the browser will actually
-render a URL.
+a real web page, create a PDF of it, or just inspect how the browser renders an URL.
 
 Headless mode is available on Mac and Linux in Chrome 59. Windows support
 is coming soon!
@@ -107,7 +107,7 @@ platforms. Just look at that hard coded the path to Chrome :(
 
 #### Using Lighthouse's ChromeLauncher {: #nodechromelauncher }
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is a marvelous
+[Lighthouse](/web/tools/lighthouse/) is a marvelous
 tool for testing the quality of your web apps. One thing people don't realize
 is that it ships with some really nice helper modules for working with Chrome.
 One of those modules is `ChromeLauncher`. `ChromeLauncher` will find where
@@ -186,7 +186,7 @@ launchChrome().then(launcher => {
 
 Results in something like: `HeadlessChrome/60.0.3082.0`
 
-**Example** - check if the site has a [web app manifest](https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/)
+**Example** - check if the site has a [web app manifest](/web/fundamentals/engage-and-retain/web-app-manifest/)
 
 ```javascript
 const chrome = require('chrome-remote-interface');
