@@ -7,13 +7,13 @@ toc:
     section:
     - title: "Intro"
       path: /web/fundamentals/architecture/howto-components/howto-components
-    - title: "&lt;howto-radio-group&gt;"
+    - title: "<howto-radio-group>"
       path: /web/fundamentals/architecture/howto-components/howto-radio-group
-    - title: "&lt;howto-checkbox&gt;"
+    - title: "<howto-checkbox>"
       path: /web/fundamentals/architecture/howto-components/howto-checkbox
-    - title: "&lt;howto-tabs&gt;"
+    - title: "<howto-tabs>"
       path: /web/fundamentals/architecture/howto-components/howto-tabs
-    - title: "&lt;howto-tooltip&gt;"
+    - title: "<howto-tooltip>"
       path: /web/fundamentals/architecture/howto-components/howto-tooltip
 
 
