@@ -5,10 +5,10 @@ description: Getting started with Headless Chrome
 {# wf_updated_on: 2017-04-27 #}
 {# wf_published_on: 2017-04-27 #}
 {# wf_tags: chrome59,headless,testing #}
-{# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: Learn about Headless Chrome, shipping in Chrome 59. #}
+{# wf_featured_image: /web/updates/images/generic/headless-chrome.png #}
+{# wf_featured_snippet: Headless Chrome (shipping in Chrome 59) is a way to run the Chrome browser in a headless environment. It brings all modern web platform features provided by Chromium and the Blink rendering engine to the command line. #}
 
-# Getting started with Headless Chrome {: .page-title }
+# Getting Started with Headless Chrome {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
@@ -21,18 +21,17 @@ figure {
 ### TL;DR {: #tldr .hide-from-toc}
 
 [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
-is a way to run the Chromium browser in a headless environment. Essentially, running Chrome without chrome! It brings **all modern web platform features** provided
+is a way to run the Chrome browser in a headless environment. Essentially, running Chrome without chrome! It brings **all modern web platform features** provided
 by Chromium and the Blink rendering engine to the command line.
 
 Why is that useful?
 
-A headless browser is great tool for automated testing and server environments where you
+A headless browser is a great tool for automated testing and server environments where you
 don't need a visible UI shell. For example, you may want to run some tests against
 a real web page, create a PDF of it, or just inspect how the browser renders an URL.
 
-Headless mode is available on Mac and Linux in Chrome 59. Windows support
+Note: Headless mode is available on Mac and Linux in Chrome 59. Windows support
 is coming soon!
-{: .note }
 
 ## Starting Headless (CLI) {: #cli }
 
@@ -45,9 +44,8 @@ from the command line. If you've got Chrome 59+ installed, start Chrome with the
       --remote-debugging-port=9222 \
       https://www.chromestatus.com   # URL to open. Defaults to about:blank.
 
-**Note**: Right now, you'll also want to include the `--disable-gpu` flag.
+Note: Right now, you'll also want to include the `--disable-gpu` flag.
 That will eventually go away.
-{: .note }
 
 `chrome` should point to your installation of Chrome. The exact location will
 vary from platform to platform. Since I'm on Mac, I created convenient aliases
@@ -63,9 +61,8 @@ In some cases, you may not need to [programmatically script](#node) Headless Chr
 There are some [useful command line flags](https://cs.chromium.org/chromium/src/headless/app/headless_shell_switches.cc)
 to perform common tasks.
 
-**Note**: You may also need to include the `--disable-gpu` flag for now when
-running these commands
-{: .note }
+Note: You may also need to include the `--disable-gpu` flag for now when
+running these commands.
 
 ### Printing the DOM {: dom }
 
@@ -81,7 +78,7 @@ The `--print-to-pdf` flag creates a PDF of the page:
 
 ### Taking screenshots {: #screenshots }
 
-To capture the screenshot of a page, use the `--screenshot` flag:
+To capture a screenshot of a page, use the `--screenshot` flag:
 
     chrome --headless --screenshot https://www.chromestatus.com/
 
@@ -94,15 +91,15 @@ To capture the screenshot of a page, use the `--screenshot` flag:
 Running with `--screenshot` will produce a file named `screenshot.png` in the
 current working directory. If you're looking for full page screenshots, things
 are a tad more involved. There's a great blog
-post from David Schnurr that has you covered. Check out "[Using headless Chrome as an automated screenshot tool
-](https://medium.com/@dschnr/using-headless-chrome-as-an-automated-screenshot-tool-4b07dffba79a)".
+post from David Schnurr that has you covered. Check out [Using headless Chrome as an automated screenshot tool
+](https://medium.com/@dschnr/using-headless-chrome-as-an-automated-screenshot-tool-4b07dffba79a).
 
 
 ## Debugging Chrome without a browser UI? {: #frontend }
 
 When you run Chrome with `--remote-debugging-port=9222`, it starts an instance
 with the [DevTools Protocol][dtprotocol] enabled. The
-protocol is what we use to communicate with Chrome and drive the headless
+protocol is used to communicate with Chrome and drive the headless
 browser instance. It's also what tools like Sublime, VS Code, and Node use for
 remote debugging an application. #synergy
 
@@ -134,6 +131,7 @@ One way is to use `child_process`:
 const exec = require('child_process').exec;
 
 function launchHeadlessChrome(url, callback) {
+  // Assuming MacOSx.
   const CHROME = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome';
   exec(`${CHROME} --headless --remote-debugging-port=9222 ${url}`, callback);
 }
@@ -144,7 +142,7 @@ launchHeadlessChrome('https://www.chromestatus.com', (err, stdout, stderr) => {
 ```
 
 But things get tricky if you want a portable solution that works across multiple
-platforms. Just look at that hard coded the path to Chrome :(
+platforms. Just look at that hard-coded path to Chrome :(
 
 #### Using Lighthouse's ChromeLauncher {: #nodechromelauncher }
 
@@ -156,9 +154,8 @@ Chrome is installed, set up a debug instance, launch the browser, and kill it
 when your program is done. Best part is that it works cross-platform thanks to
 Node!
 
-The Lighthouse team is exploring a standalone package for `ChromeLauncher` with
+Note: The Lighthouse team is exploring a standalone package for `ChromeLauncher` with
 an improved API. Let us know if you have [feedback](https://github.com/GoogleChrome/lighthouse/issues/2092).
-{: .note }
 
 By default, **`ChromeLauncher` will try to launch Chrome Canary** (if it's
 installed), but you can change that to manually select which Chrome to use. To
@@ -207,13 +204,12 @@ To control the browser, we need the DevTools protocol!
 
 [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface)
 is a great Node package that provides high-level APIs on top of the
-[DevTools Protocol][dtprotocol]. You can use it orchestrate Headless
+[DevTools Protocol][dtprotocol]. You can use it to orchestrate Headless
 Chrome, navigate to pages, and fetch information about those pages.
 
-The DevTools protocol can do a ton of interesting stuff, but it can be a bit
+Warning: The DevTools protocol can do a ton of interesting stuff, but it can be a bit
 daunting at first. I recommend spending a bit of time browsing the [DevTools Protocol API Viewer][dtviewer], first. Then, move on to the `chrome-remote-interface` API docs to
 see how it wraps the raw protocol.
-{: .warning }
 
 Let's install the library:
 
