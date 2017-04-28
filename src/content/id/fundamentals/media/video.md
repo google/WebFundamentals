@@ -121,7 +121,7 @@ Perhatian: Hampir semua platform kecuali iOS mendukung Media Fragments API. Past
 Dengan menggunakan alat developer browser Anda, periksa `Accept-Ranges: bytes` di
 header respons:
 
-<img class="center" alt="Tangkapan layar Chrome DevTools: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Tangkapan layar Chrome DevTools: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Memasukkan gambar poster
 
@@ -144,7 +144,7 @@ Berikut adalah perbandingan berdampingan dari video tanpa gambar poster dan deng
 
 <div class="attempt-left">
   <figure>
-    <img alt="Tangkapan layar Android Chrome, potret: tanpa poster" src="img/Chrome-Android-video-no-poster.png">
+    <img alt="Tangkapan layar Android Chrome, potret: tanpa poster" src="images/Chrome-Android-video-no-poster.png">
     <figcaption>
       Tangkapan layar Android Chrome, potret: tanpa poster
      </figcaption>
@@ -152,7 +152,7 @@ Berikut adalah perbandingan berdampingan dari video tanpa gambar poster dan deng
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Tangkapan layar Android Chrome, potret: dengan poster" src="img/Chrome-Android-video-poster.png">
+    <img alt="Tangkapan layar Android Chrome, potret: dengan poster" src="images/Chrome-Android-video-poster.png">
     <figcaption>
       Tangkapan layar Android Chrome, potret: dengan poster
      </figcaption>
@@ -288,7 +288,7 @@ kontrol.
 
 <div class="attempt-left">
   <figure>
-    <img alt="Tangkapan layar Android Chrome, potret: elemen video tanpa gaya meluap dari tampilan yang terlihat" src="img/Chrome-Android-portrait-video-unstyled.png">
+    <img alt="Tangkapan layar Android Chrome, potret: elemen video tanpa gaya meluap dari tampilan yang terlihat" src="images/Chrome-Android-portrait-video-unstyled.png">
     <figcaption>
       Tangkapan layar Android Chrome, potret: elemen video tanpa gaya meluap dari tampilan yang terlihat
     </figcaption>
@@ -296,7 +296,7 @@ kontrol.
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Tangkapan layar Android Chrome, lanskap: elemen video tanpa gaya meluap dari tampilan yang terlihat" src="img/Chrome-Android-landscape-video-unstyled.png">
+    <img alt="Tangkapan layar Android Chrome, lanskap: elemen video tanpa gaya meluap dari tampilan yang terlihat" src="images/Chrome-Android-landscape-video-unstyled.png">
     <figcaption>
       Tangkapan layar Android Chrome, lanskap: elemen video tanpa gaya meluap dari tampilan yang terlihat
     </figcaption>
@@ -353,13 +353,13 @@ potret dan lanskap:
 
 <div class="attempt-left">
   <figure>
-    <img  alt="Tangkapan layar dari video yang dimainkan di Safari pada iPhone, potret" src="img/iPhone-video-playing-portrait.png">
+    <img  alt="Tangkapan layar dari video yang dimainkan di Safari pada iPhone, potret" src="images/iPhone-video-playing-portrait.png">
     <figcaption>Tangkapan layar dari video yang dimainkan di Safari pada iPhone, potret</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Tangkapan layar dari video yang dimainkan di Safari pada iPhone, lanskap" src="img/iPhone-video-playing-landscape.png">
+    <img alt="Tangkapan layar dari video yang dimainkan di Safari pada iPhone, lanskap" src="images/iPhone-video-playing-landscape.png">
     <figcaption>Tangkapan layar dari video yang dimainkan di Safari pada iPhone, lanskap</figcaption>
   </figure>
 </div>
@@ -371,7 +371,7 @@ Misalnya, tanpa penyesuaian apa pun, video yang dimainkan di iPad dalam orientas
 lanskap terlihat seperti ini:
 
 <img alt="Tangkapan layar video yang dimainkan di Safari pada iPad Retina, lanskap"
-src="img/iPad-Retina-landscape-video-playing.png">
+src="images/iPad-Retina-landscape-video-playing.png">
 
 Mengatur `width: 100%` atau `max-width: 100%` video dengan CSS bisa mengatasi
 banyak masalah layout orientasi perangkat. Anda juga mungkin ingin mempertimbangkan
@@ -379,21 +379,21 @@ alternatif layar penuh.
 
 ## Inline atau tampilan layar penuh
 
-<img class="attempt-right" alt="Tangkapan layar elemen video pada iPhone, potret" src="img/iPhone-video-with-poster.png">
+<img class="attempt-right" alt="Tangkapan layar elemen video pada iPhone, potret" src="images/iPhone-video-with-poster.png">
 
 Platform yang berbeda menampilkan video dengan berbeda. Safari pada iPhone menampilkan
 elemen video inline pada laman web, namun memutar video dalam mode layar penuh:
 
 <div style="clear:both;"></div>
 
-<img class="attempt-right" alt="Tangkapan layar video yang dimainkan di Chrome pada Android, potret" src="img/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="attempt-right" alt="Tangkapan layar video yang dimainkan di Chrome pada Android, potret" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 Pada Android, pengguna bisa meminta mode layar penuh dengan mengeklik
 ikon fullscreen. Namun setelan default adalah memutar video inline:
 
 <div style="clear:both;"></div>
 
-<img class="attempt-right" alt="Tangkapan layar video yang dimainkan di Safari pada iPad Retina, lanskap" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="attempt-right" alt="Tangkapan layar video yang dimainkan di Safari pada iPad Retina, lanskap" src="images/iPad-Retina-landscape-video-playing.png">
 
 Safari pada iPad memutar video inline:
 
@@ -453,7 +453,7 @@ Aksesibilitas bukan sebuah fitur. Pengguna yang tidak bisa mendengar atau meliha
 
 ### Memasukkan teks video untuk meningkatkan aksesibilitas
 
-<img class="attempt-right" alt="Tangkapan layar menunjukkan teks yang ditampilkan menggunakan elemen track di Chrome pada Android" src="img/Chrome-Android-track-landscape-5x3.jpg">
+<img class="attempt-right" alt="Tangkapan layar menunjukkan teks yang ditampilkan menggunakan elemen track di Chrome pada Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 Untuk membuat media lebih mudah diakses di seluler, sertakan teks dan keterangan
 menggunakan elemen track.

@@ -103,7 +103,7 @@ Note: - Die Media Fragments-API wird auf den meisten Plattformen mit Ausnahme vo
 
 Suchen Sie mithilfe der Entwicklertools für Ihren Browser in den Antwortheadern nach `Accept-Ranges: bytes`:
 
-<img class="center" alt="Screenshot der Chrome-Entwicklertools: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Screenshot der Chrome-Entwicklertools: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Posterbild hinzufügen
 
@@ -121,8 +121,8 @@ Hier sehen Sie eine Gegenüberstellung von Videos mit und ohne Posterbild. Wir h
 
 
 
-<img class="attempt-left" alt="Android Chrome-Screenshot, Hochformat: ohne Poster" src="img/Chrome-Android-video-no-poster.png">
-<img class="attempt-right" alt="Android Chrome-Screenshot, Hochformat: mit Poster" src="img/Chrome-Android-video-poster.png">
+<img class="attempt-left" alt="Android Chrome-Screenshot, Hochformat: ohne Poster" src="images/Chrome-Android-video-no-poster.png">
+<img class="attempt-right" alt="Android Chrome-Screenshot, Hochformat: mit Poster" src="images/Chrome-Android-video-poster.png">
 
 <div class="clearfix"></div>
 
@@ -249,8 +249,8 @@ Wenn Videoelemente für den Darstellungsbereich zu groß sind, sprengen sie mög
 die Steuerelemente nutzen.
 
 
-<img class="attempt-left" alt="Screenshot von Chrome für Android, Hochformat: Größe des Videoelements ohne CSS übersteigt Darstellungsbereich" src="img/Chrome-Android-portrait-video-unstyled.png">
-<img class="attempt-right" alt="Screenshot von Chrome für Android, Querformat: Größe des Videoelements ohne CSS übersteigt Darstellungsbereich" src="img/Chrome-Android-landscape-video-unstyled.png">
+<img class="attempt-left" alt="Screenshot von Chrome für Android, Hochformat: Größe des Videoelements ohne CSS übersteigt Darstellungsbereich" src="images/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Screenshot von Chrome für Android, Querformat: Größe des Videoelements ohne CSS übersteigt Darstellungsbereich" src="images/Chrome-Android-landscape-video-unstyled.png">
 
 <div class="clearfix"></div>
 
@@ -296,8 +296,8 @@ Bei Desktopmonitoren oder Laptops ist die Geräteausrichtung kein Thema. Anders 
 Safari auf dem iPhone schaltet gut zwischen Hoch- und Querformat um:
 
 
-<img class="attempt-left" alt="Screenshot einer Videowiedergabe in Safari auf dem iPhone, Hochformat" src="img/iPhone-video-playing-portrait.png">
-<img class="attempt-right" alt="Screenshot einer Videowiedergabe in Safari auf dem iPhone, Querformat" src="img/iPhone-video-playing-landscape.png">
+<img class="attempt-left" alt="Screenshot einer Videowiedergabe in Safari auf dem iPhone, Hochformat" src="images/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="Screenshot einer Videowiedergabe in Safari auf dem iPhone, Querformat" src="images/iPhone-video-playing-landscape.png">
 
 <div class="clearfix"></div>
 
@@ -305,7 +305,7 @@ Safari auf dem iPhone schaltet gut zwischen Hoch- und Querformat um:
 Auf einem iPad und in Chrome unter Android kann die Geräteausrichtung hingegen problematisch sein.
 Zum Beispiel sieht eine Videowiedergabe ohne jegliche Anpassung auf einem iPad im Querformat so aus:
 
-<img class="center" alt="Screenshot einer Videowiedergabe in Safari auf einem iPad mit Retina-Display, Querformat" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Screenshot einer Videowiedergabe in Safari auf einem iPad mit Retina-Display, Querformat" src="images/iPad-Retina-landscape-video-playing.png">
 
 Durch Verwendung von `width: 100%` oder `max-width: 100%` in CSS lassen sich viele Layoutprobleme in Verbindung mit der Geräteausrichtung lösen. Darüber hinaus sollten Sie eventuell auch Vollbildalternativen in Betracht ziehen.
 
@@ -313,15 +313,15 @@ Durch Verwendung von `width: 100%` oder `max-width: 100%` in CSS lassen sich vie
 
 Videos werden je nach Plattform unterschiedlich dargestellt. In Safari auf einem iPhone wird ein Videoelement inline auf einer Webseite angezeigt, die Wiedergabe erfolgt jedoch im Vollbildmodus:
 
-<img class="center" alt="Screenshot eines Videoelements auf dem iPhone, Hochformat" src="img/iPhone-video-with-poster.png">
+<img class="center" alt="Screenshot eines Videoelements auf dem iPhone, Hochformat" src="images/iPhone-video-with-poster.png">
 
 Unter Android können Nutzer den Vollbildmodus durch Klicken auf das entsprechende Symbol auswählen. Die Inline-Anzeige ist jedoch bei der Videowiedergabe Standard:
 
-<img class="center" alt="Screenshot einer Videowiedergabe in Chrome unter Android, Hochformat" src="img/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Screenshot einer Videowiedergabe in Chrome unter Android, Hochformat" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 In Safari auf einem iPad erfolgt die Videowiedergabe inline:
 
-<img class="center" alt="Screenshot einer Videowiedergabe in Safari auf einem iPad mit Retina-Display, Querformat" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Screenshot einer Videowiedergabe in Safari auf einem iPad mit Retina-Display, Querformat" src="images/iPad-Retina-landscape-video-playing.png">
 
 ### Vollbildansicht von Inhalten steuern
 
@@ -381,7 +381,7 @@ Note: Das Track-Element wird in Chrome für Android, iOS Safari sowie allen aktu
 
 Bei Verwendung des Track-Elements sehen die Untertitel wie folgt aus:
 
- <img class="center" alt="Screenshot mit Untertiteln, die unter Verwendung des Track-Elements in Chrome für Android angezeigt werden" src="img/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="Screenshot mit Untertiteln, die unter Verwendung des Track-Elements in Chrome für Android angezeigt werden" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 ### Track-Element hinzufügen
 
