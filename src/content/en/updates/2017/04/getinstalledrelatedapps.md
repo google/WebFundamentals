@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Is your native app already installed? getRelatedInstalledApps is your friend.
+description: Is your native app already installed? getInstalledRelatedApps is your friend.
 
 {# wf_published_on: 2017-04-28 #}
 {# wf_updated_on: 2017-04-28 #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 {# wf_tags: progressive-web-apps,chrome59 #}
-{# wf_featured_snippet: Is your native app already installed? getRelatedInstalledApps is your friend. #}
+{# wf_featured_snippet: Is your native app already installed? getInstalledRelatedApps is your friend. #}
 
 # Detect if your Native app is installed from your web site {: .page-title }
 
@@ -24,7 +24,8 @@ to know if your user has your app installed on their current device. If the user
 has the app installed there might be no reason to prompt for notifications from
 the web as well.
 
-In Chrome 59 we are introducing a new API called `getInstalledRelatedApps()`.
+In Chrome 59 we are introducing a new API called `
+edRelatedApps()`.
 This new API lets you determine if your native app is installed on a device.
 
 This is an incredibly powerful API because it gives you access to information
