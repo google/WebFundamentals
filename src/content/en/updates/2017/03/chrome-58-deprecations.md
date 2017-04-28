@@ -112,6 +112,43 @@ Removal is expected in Chrome 61.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5759967025954816) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=679821)
 
+## Remove deprecated names for motion path properties
+
+Motion path CSS properties allow authors to animate any graphical object along
+an author-specified path. In compliance with the spec, several properties were
+[implemented in Chrome 45](https://www.chromestatus.com/feature/6190642178818048).
+The names of these properties were changed in the spec in mid 2016. Chrome
+implemented the
+[new names in Chrome 55 and Chrome 56](https://www.chromestatus.com/feature/6390764217040896).
+Console deprecation warnings were also implemented. 
+
+In Chrome 58, the old property names are being removed. The affected properties
+and their new names are shown below.
+
+| Removed Property | Current Name |
+|------------------|--------------|
+| motion-path | offset-path |
+| motion-offset | offset-distance |
+| motion-rotation | offset-rotate |
+| motion | offset |
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/o1C5NzGf9Q0/discussion) 
+
+## Remove legacy caller for HTMLEmbedElement and HTMLObjectElement
+
+That an interface has a legacy caller means that an instance can be called as a
+function. Currently, `HTMLEmbedElement` and `HTMLObjectElement` support this
+functionality. In Chrome 57 this ability was deprecated. Starting in Chrome 58,
+calling throws an exception.
+
+This change brings Chrome in line with recent spec changes. The legacy behavior
+is not supported in Edge or Safari, and it is being
+[removed from Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=909656).
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/AiDZ7ru9mGg/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5715026367217664) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663662)
+
 ## Remove pre-standard ChaCha20-Poly1305 ciphers
 
 In 2013, Chrome 31 deployed
@@ -121,7 +158,7 @@ later standardized, with small tweaks, at the IETF as
 [RFC 7539](https://tools.ietf.org/html/rfc7539)
 and [RFC 7905](https://tools.ietf.org/html/rfc7905).
 We shipped the standardized variant early in 2016 with
-[Chrome 49](https://www.chromestatus.com/features/5355238106071040).
+[Chrome 49](https://www.chromestatus.com/feature/5355238106071040).
 We are now removing the pre-standard variants.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/8YAc7tQW4RQ/discussion) &#124;

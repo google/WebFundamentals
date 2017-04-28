@@ -107,7 +107,7 @@ Chrome 58.
 Two methods and an event handler, `webkitClearResourceTimings()`,
 `webkitSetResourceTimingBufferSize()`, and `onwebkitresourcetimingbufferfull`
 are obsolete and vendor-specific. The 
-[standard versions of these APIs](https://www.chromestatus.com/features/5710624386449408)
+[standard versions of these APIs](https://www.chromestatus.com/feature/5710624386449408)
 have been supported in since Chrome 46, and the prefixed functions were
 deprecated in that version as well. These features were originally
 implemented in WebKit, but Safari has not enabled them. Firefox, IE 10+, and

@@ -23,129 +23,106 @@ The Service Worker spec has always had the (non-normative) note that "any type
 of synchronous requests must not be initiated inside of a service worker", to
 avoid blocking the service worker (as blocking the service worker would block
 all network requests from controlled pages). However synchronous APIs such as
-`FileReaderSync` were still available in service workers. Starting in Chrome 57,
-`FileReaderSync` is deprecated. Removal is anticipated in Chrome 59.
+`FileReaderSync` were still available in service workers. `FileReaderSync` was
+deprecated in Chrome 57. It is removed in Chrome 59.
 
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cjWtqRD6iw8/discussion) &#124;
+[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cjWtqRD6iw8/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5739144722513920) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688586)
 
 
-## Remove cross-origin top navigation without a user gesture
+## Deprecate non-standard DeviceOrientation Event initialization functions
 
-Content in an &lt;iframe&gt; can generally navigate the top level browsing context
-unless explicitly forbidden by the sandbox attribute (sometimes called
-'framebusting'). Framebusting was originally used by content that wanted to
-prevent being placed in an &lt;iframe&gt;. Not only are there more specific tools to
-accomplish this (see below), but this specific framebusting technique is being
-used by malicious content to forcibly navigate users to a different URL.
+For some time now there's been a general trend in browser APIs away from
+initialization functions and toward object constructors. The most recent version
+of the [DeviceOrientation Event Specification](https://w3c.github.io/deviceorientation/spec-source-orientation.html)
+follows this trend by requiring constructors for both
+[`DeviceOrientationEvent`](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/DeviceOrientationEvent)
+and [`DeviceMotionEvent`](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/DeviceMotionEvent).
 
-Starting in Chrome 57, cross-origin framebusting requires a user gesture unless
-the frame and the top-level content are from the same origin. Sites that want to
-prevent their content from appearing in an &lt;iframe&gt; should use the
-[CSP frame-ancestors directive](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
-or [X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options).
+Since Chrome is
+[enabling these constructors by default](https://www.chromestatus.com/features/4659236399218688)
+in Chrome 59 the legacy initialization fuctions, `initDeviceMotionEvent()` and
+`initDeviceOrientationEvent()` are also removed. Edge has deprecated the
+initialization functions and Firefox has already shipped the constructors.
 
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Xi8-y4ySjA4/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5851021045661696) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=640057)
+[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/XlnBk6qzkuw/discussion) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=697598)
 
+## Remove features from WebVR that are not in the revised spec
 
-## Remove webkit-prefixed IndexedDB global aliases
+The current implementation of WebVR, originally implemented in Chrome 52,
+contained several methods and properties that will not be in the final spec.
+Deprecation messages were added for these features for the
+[Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/explainer.md)
+that started in Chrome 56 and are now being removed. These features include:
 
-IndexedDB was originally implemented with prefixed aliases and constructors
-around the time of Chrome 11. The non-prefixed versions were shipped in Chrome
-24 and the prefixed versions deprecated in Chrome 38. In Chrome 57, the prefixed
-constructors are removed. The effected interfaces include:
+- `VRDisplay.getPose()`
+- `VRDisplay.resetPose()`
+- `VRDisplay.isConnected`
+- `VRDisplayCapabilities.hasOrientation`
+- `VREyeParameters.fieldOfView`
 
-* `webkitIndexedDB` (main entry point) 
-* `webkitIDBKeyRange` (non-callable global constructor, but has useful static methods)
-* `webkitIDBCursor`
-* `webkitIDBDatabase`
-* `webkitIDBFactory`
-* `webkitIDBIndex`
-* `webkitIDBObjectStore`
-* `webkitIDBRequest`
-* `webkitIDBTransaction` (non-callable global constructors)
+[Intent to Experiment](https://groups.google.com/a/chromium.org/d/topic/blink-dev/zGAzqfi0e00/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/4532810371039232) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=706561&desc=2) &#124;
+[Origin Trial Results so Far](https://groups.google.com/a/chromium.org/d/topic/blink-dev/c41q3tyCBJE/discussion)
 
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/L-EY3r4HnMc/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5775330191081472) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=665243)
+## Remove "on-demand" value for hover/any-hover media queries
 
+The “on-demand” value for hover/any-hover media queries was removed from the
+spec about a year ago. Consequently, these media queries are removed in Chrome
+59.
 
-
-
-
-
-## Remove EME from non-secure contexts
-
-Some usages of
-[Encrypted Media Extenions (EME)](https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
-expose digital rights management implementations that are not open source,
-involve access to persistent unique identifiers, and/or run unsandboxed or with
-privileged access. Security risks are increased for sites exposed via non-secure
-HTTP because they can be attacked by anyone on the channel. Additionally, when
-user consent is required, acceptance persisted for a non-secure HTTP site can be
-exploited by such an attacker.
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/-sTmxMpl6iI/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/4719452646014976) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=654861)
 
 
-Support for non-secure contexts was removed from the
-[EME version 1 spec](https://w3c.github.io/encrypted-media/)
-and is not supported in the
-[proposed recommendation](https://www.w3.org/TR/encrypted-media/) nor
-anticipated in the subsequent final. will not be in the upcoming proposed
-recommendation or subsequent final recommendation. The API has been showing a
-deprecation message on non-secure origins since Chrome 44 (May 2015). In Chrome
-58, it is now removed. This change is part of our broader effort to
-[remove powerful features from unsecure origins](https://bugs.chromium.org/p/chromium/issues/detail?id=520765).
+## Remove remote and readonly members of MediaStreamTrack
 
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/tXmKPlXsnCQ/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5724389932793856) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=672605)
+In Chrome 48 the `MediaStreamTrack.remote` and `MediaStreamTrack.readonly`
+attributes were added in support of the
+[Media Capture and Streams API](https://w3c.github.io/mediacapture-main/)
+with the goal of allowing JavaScript to know whether a WebRTC MediaStreamTrack
+is from a remote source or a local one.
 
+Since that time, these attributes have been [removed from the spec]. As of
+Chrome 59, they are no longer supported.
 
-## Remove legacy caller for HTMLEmbedElement and HTMLObjectElement
-
-That an interface has a legacy caller means that an instance can be called as a
-function. Currently, `HTMLEmbedElement` and `HTMLObjectElement` support this
-functionality. In Chrome 57 this ability was deprecated. Starting in Chrome 58,
-calling throws an exception.
-
-This change brings Chrome in line with recent spec changes. The legacy behavior
-is not supported in Edge or Safari, and it is being
-[removed from Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=909656).
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/AiDZ7ru9mGg/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5715026367217664) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663662)
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=598704)
 
 
-## Remove deprecated names for motion path properties
+## Remove support for ProgressEvent
 
-Motion path CSS properties allow authors to animate any graphical object along
-an author-specified path. In compliance with the spec, several properties were
-[implemented in Chrome 45](https://www.chromestatus.com/feature/6190642178818048).
-The names of these properties were changed in the spec in mid 2016. Chrome
-implemented the
-[new names in Chrome 55 and Chrome 56](https://www.chromestatus.com/feature/6390764217040896).
-Console deprecation warnings were also implemented. 
+Earlier versions of the DOM spec required implementation of
+`document.createEvent("ProgressEvent")`. However usage was always low and
+support has already been removed from
+[Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=843489) and
+[Webkit](https://bugs.webkit.org/show_bug.cgi?id=71340). The event itself was
+[removed from the spec](https://github.com/whatwg/dom/pull/421/files) in March
+of this year.
 
-In Chrome 58, the old property names are being removed. The affected properties
-and their new names are shown below.
+To conform with the platform and most recent spec, `ProgressEvent` is now removed from Chrome.
 
-| Removed Property | Current Name |
-|------------------|--------------|
-| motion-path | offset-path |
-| motion-offset | offset-distance |
-| motion-rotation | offset-rotate |
-| motion | offset |
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/o1C5NzGf9Q0/discussion) 
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=703559)
 
 
+## Remove SVGTests.required Features
 
+In the first version of the SVG spec, an application could call
+`DOMImplementation.hasFeature` to verify that a particuilar SVG interface is
+supported. Many SVG elements contained a `requiredFeatures` attribute that
+returned the same information.
 
+In SVG2 `DOMImplementation.hasFeature` property always returns true.
+Consequently `requiredFeatures` no longer does anything useful. Because it was
+[removed from the spec](https://github.com/w3c/svgwg/commit/9a30d01f6410dc516c5f874d71e957230a3448cd)
+it was deprecated in Chrome 54 and has now been removed.
 
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/qiFyionxCYg/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5720709590417408) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=635420)
 
 
 
