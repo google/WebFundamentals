@@ -69,8 +69,15 @@ To capture the screenshot of a page, use the `--screenshot` flag:
     # Nexus 5x
     chrome --headless --screenshot --window-size=412,732 https://www.chromestatus.com/
 
-Running these will produce a file named `screenshot.png` in the the current
-working directory.
+**Note**: You may also need to include the `--disable-gpu` flag for now.
+{: .note }
+
+Running with `--screenshot` will produce a file named `screenshot.png` in the
+current working directory. If you're looking for full page screenshots, things
+are a tad more involved. There's a great blog
+post from David Schnurr that has you covered. Check out "[Using headless Chrome as an automated screenshot tool
+](https://medium.com/@dschnr/using-headless-chrome-as-an-automated-screenshot-tool-4b07dffba79a)".
+
 
 ## Debugging Chrome without a browser UI? {: #frontend }
 
@@ -129,6 +136,10 @@ One of those modules is `ChromeLauncher`. `ChromeLauncher` will find where
 Chrome is installed, set up a debug instance, launch the browser, and kill it
 when your program is done. Best part is that it works cross-platform thanks to
 Node!
+
+The Lighthouse team is exploring a standalone package for `ChromeLauncher` with
+an improved API. Let us know if you have [feedback](https://github.com/GoogleChrome/lighthouse/issues/2092).
+{: .note }
 
 By default, **`ChromeLauncher` will try to launch Chrome Canary** (if it's
 installed), but you can change that to manually select which Chrome to use. To
