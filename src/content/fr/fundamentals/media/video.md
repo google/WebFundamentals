@@ -100,7 +100,7 @@ Note: - L'API Media Fragments est compatible avec la plupart des plates-formes, 
 
 À l'aide des outils pour les développeurs de votre navigateur, vérifiez la présence de la `chaîne Accept-Ranges: bytes` dans les en-têtes de réponse:
 
-<img class="center" alt="Capture d'écran des outils pour les développeurs De Chrome : Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Capture d'écran des outils pour les développeurs De Chrome : Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ##Inclure une affiche
 
@@ -116,8 +116,8 @@ Une affiche constitue également une solution de repli, si l'attribut `src` de l
 
 Voici la comparaison de deux vidéos, avec et sans affiche. L'affiche est représentée en échelle de gris, pour montrer qu'il ne s'agit pas de la vidéo :
 
-<img class="attempt-left" alt="Capture d'écran Android Chrome, format portrait : sans affiche" src="img/Chrome-Android-video-no-poster.png">
-<img class="attempt-right" alt="Capture d'écran Android Chrome, format portrait : avec affiche" src="img/Chrome-Android-video-poster.png">
+<img class="attempt-left" alt="Capture d'écran Android Chrome, format portrait : sans affiche" src="images/Chrome-Android-video-no-poster.png">
+<img class="attempt-right" alt="Capture d'écran Android Chrome, format portrait : avec affiche" src="images/Chrome-Android-video-poster.png">
 
 <div class="clearfix"></div>
 
@@ -238,8 +238,8 @@ Pour vérifier la taille encodée d'une vidéo, utilisez les propriétés d'él�
 Lorsque l'élément vidéo est trop grand pour la fenêtre d'affichage, il risque de déborder et d'empêcher l'internaute de voir le contenu ou
 d'utiliser les commandes.
 
-<img class="attempt-left" alt="Capture d'écran Android Chrome, en mode portrait : l'élément vidéo n'a pas été mis en forme et déborde de la fenêtre d'affichage" src="img/Chrome-Android-portrait-video-unstyled.png">
-<img class="attempt-right" alt="Capture d'écran Android Chrome, en mode paysage : l'élément vidéo n'a pas été mis en forme et déborde de la fenêtre d'affichage" src="img/Chrome-Android-landscape-video-unstyled.png">
+<img class="attempt-left" alt="Capture d'écran Android Chrome, en mode portrait : l'élément vidéo n'a pas été mis en forme et déborde de la fenêtre d'affichage" src="images/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Capture d'écran Android Chrome, en mode paysage : l'élément vidéo n'a pas été mis en forme et déborde de la fenêtre d'affichage" src="images/Chrome-Android-landscape-video-unstyled.png">
 
 <div class="clearfix"></div>
 
@@ -286,15 +286,15 @@ L'orientation de l'appareil ne pose pas de problème en ce qui concerne les ordi
 Safari, sur l'iPhone, passe parfaitement bien du mode portrait au mode paysage :
 
 
-<img class="attempt-left" alt="Capture d'écran de lecture d'une vidéo dans Safari sur iPhone, en mode portrait" src="img/iPhone-video-playing-portrait.png">
-<img class="attempt-right" alt="Capture d'écran de lecture d'une vidéo dans Safari sur iPhone, en mode paysage" src="img/iPhone-video-playing-landscape.png">
+<img class="attempt-left" alt="Capture d'écran de lecture d'une vidéo dans Safari sur iPhone, en mode portrait" src="images/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="Capture d'écran de lecture d'une vidéo dans Safari sur iPhone, en mode paysage" src="images/iPhone-video-playing-landscape.png">
 <div class="clearfix"></div>
 
 
 L'orientation de l'appareil peut néanmoins être problématique sur un iPad et sur Chrome pour Android.
 Par exemple, en l'absence de personnalisation, une vidéo lue sur un iPad en mode paysage a l'apparence suivante :
 
-<img class="center" alt="Capture d'écran d'une vidéo lue dans Safari sur un iPad Retina, en mode paysage" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Capture d'écran d'une vidéo lue dans Safari sur un iPad Retina, en mode paysage" src="images/iPad-Retina-landscape-video-playing.png">
 
 L'utilisation des paramètres de largeur "width: 100%" ou "max-width: 100%" avec CSS permet de résoudre de nombreux problèmes de présentation liés à l'orientation de l'appareil. Vous pouvez également recourir aux solutions d'affichage en mode plein écran.
 
@@ -302,15 +302,15 @@ L'utilisation des paramètres de largeur "width: 100%" ou "max-width: 100%" avec
 
 L'affichage des vidéos varie d'une plate-forme à l'autre. Dans Safari pour iPhone, l'affichage de l'élément vidéo est intégré à la page Web, mais la vidéo est lue en mode plein écran :
 
-<img class="center" alt="Capture d'écran d'un élément vidéo sur iPhone, en mode portrait" src="img/iPhone-video-with-poster.png">
+<img class="center" alt="Capture d'écran d'un élément vidéo sur iPhone, en mode portrait" src="images/iPhone-video-with-poster.png">
 
 Sur Android, l'internaute peut passer en mode plein écran en cliquant sur l'icône Plein écran. Mais par défaut, la lecture est intégrée à la page :
 
-<img class="center" alt="Capture d'écran de lecture d'une vidéo dans Chrome sur Android, en mode portrait" src="img/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Capture d'écran de lecture d'une vidéo dans Chrome sur Android, en mode portrait" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 La lecture de vidéos dans Safari pour iPad s'effectue sur la page Web :
 
-<img class="center" alt="Capture d'écran d'une vidéo lue dans Safari sur un iPad Retina, en mode paysage" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Capture d'écran d'une vidéo lue dans Safari sur un iPad Retina, en mode paysage" src="images/iPad-Retina-landscape-video-playing.png">
 
 ### Contrôler l'affichage en mode plein écran du contenu
 
@@ -370,7 +370,7 @@ Note: L'élément de suivi est compatible avec Chrome pour Android, Safari pour 
 
 Lorsque vous utilisez l'élément de suivi, les sous-titres ont l'apparence suivante :
 
- <img class="center" alt="Capture d'écran montrant les sous-titres affichés à l'aide de l'élément de suivi dans Chrome sur Android" src="img/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="Capture d'écran montrant les sous-titres affichés à l'aide de l'élément de suivi dans Chrome sur Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 ##Ajouter un élément de suivi
 

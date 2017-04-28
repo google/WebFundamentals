@@ -119,7 +119,7 @@ Fragments API を使用して video 要素に開始時間と終了時間を追�
 ブラウザ デベロッパー ツールを使用して、レスポンス ヘッダーの `Accept-Ranges: bytes` を確認します。
 
 
-<img class="center" alt="Chrome DevTools のスクリーンショット: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Chrome DevTools のスクリーンショット: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ###  ポスター画像を含める
 
@@ -139,7 +139,7 @@ Fragments API を使用して video 要素に開始時間と終了時間を追�
 
 <div class="attempt-left">
   <figure>
-    <img alt="Android Chrome のスクリーンショット、縦向き、ポスターなし" src="img/Chrome-Android-video-no-poster.png">
+    <img alt="Android Chrome のスクリーンショット、縦向き、ポスターなし" src="images/Chrome-Android-video-no-poster.png">
     <figcaption>
       Android Chrome のスクリーンショット、縦向き、ポスターなし
      </figcaption>
@@ -147,7 +147,7 @@ Fragments API を使用して video 要素に開始時間と終了時間を追�
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Android Chrome のスクリーンショット、縦向き、ポスターあり" src="img/Chrome-Android-video-poster.png">
+    <img alt="Android Chrome のスクリーンショット、縦向き、ポスターあり" src="images/Chrome-Android-video-poster.png">
     <figcaption>
       Android Chrome のスクリーンショット、縦向き、ポスターあり
      </figcaption>
@@ -282,7 +282,7 @@ JavaScript では、動画の `currentSrc` プロパティを使用して、使�
 
 <div class="attempt-left">
   <figure>
-    <img alt="Android Chrome のスクリーンショット、縦向き: スタイルが設定されておらずビューポートからはみ出している動画要素" src="img/Chrome-Android-portrait-video-unstyled.png">
+    <img alt="Android Chrome のスクリーンショット、縦向き: スタイルが設定されておらずビューポートからはみ出している動画要素" src="images/Chrome-Android-portrait-video-unstyled.png">
     <figcaption>
       Android Chrome のスクリーンショット、縦向き: スタイルが設定されておらずビューポートからはみ出している動画要素
     </figcaption>
@@ -290,7 +290,7 @@ JavaScript では、動画の `currentSrc` プロパティを使用して、使�
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Android Chrome のスクリーンショット、横向き: スタイルが設定されておらずビューポートからはみ出している動画要素" src="img/Chrome-Android-landscape-video-unstyled.png">
+    <img alt="Android Chrome のスクリーンショット、横向き: スタイルが設定されておらずビューポートからはみ出している動画要素" src="images/Chrome-Android-landscape-video-unstyled.png">
     <figcaption>
       Android Chrome のスクリーンショット、横向き: スタイルが設定されておらずビューポートからはみ出している動画要素
     </figcaption>
@@ -347,13 +347,13 @@ iPhone の Safari は、縦向きと横向きでの切り替えが非常にス�
 
 <div class="attempt-left">
   <figure>
-    <img  alt="iPhone の Safari で再生している動画のスクリーンショット（縦向き）" src="img/iPhone-video-playing-portrait.png">
+    <img  alt="iPhone の Safari で再生している動画のスクリーンショット（縦向き）" src="images/iPhone-video-playing-portrait.png">
     <figcaption>iPhone の Safari で再生している動画のスクリーンショット（縦向き）</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="iPhone の Safari で再生している動画のスクリーンショット（横向き）" src="img/iPhone-video-playing-landscape.png">
+    <img alt="iPhone の Safari で再生している動画のスクリーンショット（横向き）" src="images/iPhone-video-playing-landscape.png">
     <figcaption>iPhone の Safari で再生している動画のスクリーンショット（横向き）</figcaption>
   </figure>
 </div>
@@ -365,7 +365,7 @@ iPad や Android の Chrome では、デバイスの向きが問題になるこ�
 
 
 <img alt="iPad Retina の Safari で再生している動画のスクリーンショット、横向き"
-src="img/iPad-Retina-landscape-video-playing.png">
+src="images/iPad-Retina-landscape-video-playing.png">
 
 CSS で動画を `width: 100%` または `max-width: 100%` と設定すると、デバイスの向きによるレイアウトの問題の多くは解決できます。
 また、フルスクリーンの代替手段も検討した方がよい場合があります。
@@ -373,21 +373,21 @@ CSS で動画を `width: 100%` または `max-width: 100%` と設定すると、
 
 ##  インラインまたはフルスクリーン表示
 
-<img class="attempt-right" alt="iPhone の video 要素のスクリーンショット、縦向き" src="img/iPhone-video-with-poster.png">
+<img class="attempt-right" alt="iPhone の video 要素のスクリーンショット、縦向き" src="images/iPhone-video-with-poster.png">
 
 動画の表示はプラットフォームによって異なります。iPhone の Safari では、video 要素をウェブページ内で表示しますが、再生するときはフルスクリーン モードになります。
 
 
 <div style="clear:both;"></div>
 
-<img class="attempt-right" alt="Android の Chrome で再生している動画のスクリーンショット、縦向き" src="img/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="attempt-right" alt="Android の Chrome で再生している動画のスクリーンショット、縦向き" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 Android では、フルスクリーン アイコンをクリックすることでフルスクリーン モードをリクエストできますが、
 デフォルトではインラインで動画を再生します。
 
 <div style="clear:both;"></div>
 
-<img class="attempt-right" alt="iPad Retina の Safari で再生している動画のスクリーンショット、横向き" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="attempt-right" alt="iPad Retina の Safari で再生している動画のスクリーンショット、横向き" src="images/iPad-Retina-landscape-video-playing.png">
 
 iPad の Safari では動画をインラインで再生します。
 
@@ -447,7 +447,7 @@ Fullscreen API をサポートしているデバイスでは、動画のプレ�
 
 ###  字幕を追加して利用しやすくする
 
-<img class="attempt-right" alt="Android の Chrome で track 要素を使用して表示された字幕を示すスクリーンショット" src="img/Chrome-Android-track-landscape-5x3.jpg">
+<img class="attempt-right" alt="Android の Chrome で track 要素を使用して表示された字幕を示すスクリーンショット" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 モバイル端末でメディアを利用しやすくするには、track 要素を使用して字幕または説明を表示します。
 

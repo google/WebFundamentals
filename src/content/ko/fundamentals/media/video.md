@@ -121,7 +121,7 @@ Fragments API를 사용하여 시작 및 종료 시간을 동영상 요소에 �
 브라우저 개발자 도구를 사용하여, 응답 헤더에서 `Accept-Ranges: bytes`를
 확인합니다.
 
-<img class="center" alt="Chrome DevTools 스크린샷: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Chrome DevTools 스크린샷: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### 포스터 이미지 포함
 
@@ -144,7 +144,7 @@ Fragments API를 사용하여 시작 및 종료 시간을 동영상 요소에 �
 
 <div class="attempt-left">
   <figure>
-    <img alt="Android Chrome 스크린샷, 세로 모드: 포스터 없음" src="img/Chrome-Android-video-no-poster.png">
+    <img alt="Android Chrome 스크린샷, 세로 모드: 포스터 없음" src="images/Chrome-Android-video-no-poster.png">
     <figcaption>
       Android Chrome 스크린샷, 세로 모드: 포스터 없음
 </figcaption>
@@ -152,7 +152,7 @@ Fragments API를 사용하여 시작 및 종료 시간을 동영상 요소에 �
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Android Chrome 스크린샷, 세로 모드: 포스터 있음" src="img/Chrome-Android-video-poster.png">
+    <img alt="Android Chrome 스크린샷, 세로 모드: 포스터 있음" src="images/Chrome-Android-video-poster.png">
     <figcaption>
       Android Chrome 스크린샷, 세로 모드: 포스터 있음
 </figcaption>
@@ -288,7 +288,7 @@ Fragments API를 사용하여 시작 및 종료 시간을 동영상 요소에 �
 
 <div class="attempt-left">
   <figure>
-    <img alt="Android Chrome 스크린샷, 세로 모드: 스타일이 지정되지 않은 동영상 요소가 뷰포트를 오버플로" src="img/Chrome-Android-portrait-video-unstyled.png">
+    <img alt="Android Chrome 스크린샷, 세로 모드: 스타일이 지정되지 않은 동영상 요소가 뷰포트를 오버플로" src="images/Chrome-Android-portrait-video-unstyled.png">
     <figcaption>
       Android Chrome 스크린샷, 세로 모드: 스타일이 지정되지 않은 동영상 요소가 뷰포트를 오버플로
     </figcaption>
@@ -296,7 +296,7 @@ Fragments API를 사용하여 시작 및 종료 시간을 동영상 요소에 �
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Android Chrome 스크린샷, 가로 모드: 스타일이 지정되지 않은 동영상 요소가 뷰포트를 오버플로" src="img/Chrome-Android-landscape-video-unstyled.png">
+    <img alt="Android Chrome 스크린샷, 가로 모드: 스타일이 지정되지 않은 동영상 요소가 뷰포트를 오버플로" src="images/Chrome-Android-landscape-video-unstyled.png">
     <figcaption>
       Android Chrome 스크린샷, 가로 모드: 스타일이 지정되지 않은 동영상 요소가 뷰포트를 오버플로
     </figcaption>
@@ -353,13 +353,13 @@ iPhone의 Safari에서는 세로 모드 방향과 가로 모드 방향이
 
 <div class="attempt-left">
   <figure>
-    <img  alt="iPhone의 Safari에서 재생되는 동영상의 스크린샷, 세로 모드" src="img/iPhone-video-playing-portrait.png">
+    <img  alt="iPhone의 Safari에서 재생되는 동영상의 스크린샷, 세로 모드" src="images/iPhone-video-playing-portrait.png">
     <figcaption>iPhone의 Safari에서 재생되는 동영상의 스크린샷, 세로 모드</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="iPhone의 Safari에서 재생되는 동영상의 스크린샷, 가로 모드" src="img/iPhone-video-playing-landscape.png">
+    <img alt="iPhone의 Safari에서 재생되는 동영상의 스크린샷, 가로 모드" src="images/iPhone-video-playing-landscape.png">
     <figcaption>iPhone의 Safari에서 재생되는 동영상의 스크린샷, 가로 모드</figcaption>
   </figure>
 </div>
@@ -371,7 +371,7 @@ Android의 iPad 및 Chrome에서는 기기 방향이 문제가 될 수 있습니
 가로 모드 방향으로 재생되는 동영상은 다음과 같습니다.
 
 <img alt="iPad Retina의 Safari에서 재생되는 동영상의 스크린샷, 가로 모드"
-src="img/iPad-Retina-landscape-video-playing.png">
+src="images/iPad-Retina-landscape-video-playing.png">
 
 CSS에서 동영상을 `width: 100%` 또는 `max-width: 100%`로 설정하면
 상당수의 기기 방향 레이아웃 문제를 해결할 수 있습니다. 또한
@@ -379,21 +379,21 @@ CSS에서 동영상을 `width: 100%` 또는 `max-width: 100%`로 설정하면
 
 ## 인라인 또는 전체 화면 표시
 
-<img class="attempt-right" alt="iPhone에서 동영상 요소의 스크린샷, 세로 모드" src="img/iPhone-video-with-poster.png">
+<img class="attempt-right" alt="iPhone에서 동영상 요소의 스크린샷, 세로 모드" src="images/iPhone-video-with-poster.png">
 
 플랫폼이 다르면 동영상도 다르게 표시됩니다. iPhone의 Safari에서는
 동영상 요소를 인라인으로 웹페이지에 표시하지만, 동영상 재생은 전체 화면 모드에서 수행합니다.
 
 <div style="clear:both;"></div>
 
-<img class="attempt-right" alt="Android의 Chrome에서 재생되는 동영상의 스크린샷, 세로 모드" src="img/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="attempt-right" alt="Android의 Chrome에서 재생되는 동영상의 스크린샷, 세로 모드" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 Android에서 사용자는 전체 화면 아이콘을 클릭하여 전체 화면 모드를
 요청할 수 있습니다. 그러나 기본값은 동영상을 인라인으로 재생하는 것입니다.
 
 <div style="clear:both;"></div>
 
-<img class="attempt-right" alt="iPad Retina의 Safari에서 재생되는 동영상의 스크린샷, 가로 모드" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="attempt-right" alt="iPad Retina의 Safari에서 재생되는 동영상의 스크린샷, 가로 모드" src="images/iPad-Retina-landscape-video-playing.png">
 
 iPad의 Safari에서는 동영상을 인라인으로 재생합니다.
 
@@ -453,7 +453,7 @@ Dogfood: `requestFullScreen()`은 공급업체에서 프리픽스될 수도 있�
 
 ### 접근성 향상을 위해 캡션 포함
 
-<img class="attempt-right" alt="Android상의 Chrome에서 트랙 요소를 사용하여 표시된 캡션을 보여주는 스크린샷" src="img/Chrome-Android-track-landscape-5x3.jpg">
+<img class="attempt-right" alt="Android상의 Chrome에서 트랙 요소를 사용하여 표시된 캡션을 보여주는 스크린샷" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 모바일에서 미디어의 접근성을 향상시키려면, 트랙 요소를 사용하여
 자막 또는 설명을 포함하세요.

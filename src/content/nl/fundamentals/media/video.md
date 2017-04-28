@@ -99,7 +99,7 @@ Note: - De Media Fragments API wordt door de meeste platforms ondersteund, maar 
 
 Controleer met uw browser-developertools `Accept-Ranges: bytes` in de reactieheaders:
 
-<img class="center" alt="Screenshot Chrome Dev Tools: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Screenshot Chrome Dev Tools: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Een posterafbeelding toevoegen
 
@@ -115,8 +115,8 @@ Een poster kan ook een noodoplossing zijn als de video `src` defect is of als ge
 
 Hier volgt een vergelijking van video`s zonder en met een posterafbeelding &ndash; we geven de posterafbeelding in grijstinten weer om aan te geven dat het hier niet om de video gaat:
 
-<img class="center" alt="Screenshot Android Chrome, staand: zonder poster" src="img/Chrome-Android-video-no-poster.png" class="attempt-left">
-<img class="center" alt="Screenshot Android Chrome, staand: met poster" src="img/Chrome-Android-video-poster.png" class="attempt-right">
+<img class="center" alt="Screenshot Android Chrome, staand: zonder poster" src="images/Chrome-Android-video-no-poster.png" class="attempt-left">
+<img class="center" alt="Screenshot Android Chrome, staand: met poster" src="images/Chrome-Android-video-poster.png" class="attempt-right">
 <div class="clearfix"></div>
 
 
@@ -238,8 +238,8 @@ Als een video-element te groot is voor de viewport, kan de videocontainer te vol
 niet meer gebruiken.
 
 
-<img class="attempt-left" alt="Android Chrome-screenshot, staand: viewport raakt te vol door unstyled video-element" src="img/Chrome-Android-portrait-video-unstyled.png">
-<img class="attempt-right" alt="Android Chrome-screenshot, liggend: viewport raakt te vol door unstyled video-element" src="img/Chrome-Android-landscape-video-unstyled.png">
+<img class="attempt-left" alt="Android Chrome-screenshot, staand: viewport raakt te vol door unstyled video-element" src="images/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Android Chrome-screenshot, liggend: viewport raakt te vol door unstyled video-element" src="images/Chrome-Android-landscape-video-unstyled.png">
 <div class="clearfix"></div>
 
 
@@ -285,8 +285,8 @@ Apparaatoriëntatie is niet van toepassing voor desktopmonitors of laptops, maar
 
 Safari op iPhone kan uitstekend schakelen tussen de staande en liggende oriëntatie:
 
-<img class="attempt-left" alt="Screenshot van video die wordt afgespeeld in Safari op de iPhone, in staande modus" src="img/iPhone-video-playing-portrait.png">
-<img class="attempt-right" alt="" src="img/iPhone-video-playing-landscape.png">Screenshot van video die wordt afgespeeld in Safari op de iPad Retina, in liggende modus
+<img class="attempt-left" alt="Screenshot van video die wordt afgespeeld in Safari op de iPhone, in staande modus" src="images/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="" src="images/iPhone-video-playing-landscape.png">Screenshot van video die wordt afgespeeld in Safari op de iPad Retina, in liggende modus
 <div class="clearfix"></div>
 
 
@@ -294,7 +294,7 @@ De apparaatoriëntatie op een iPad en bij Chrome op Android kan lastig zijn.
 Zonder aanpassingen ziet bijvoorbeeld een video die op een iPad in liggende modus wordt afgespeeld er zo uit:
 
 <img class="center" alt="Screenshot van video die wordt afgespeeld in Safari op de iPad Retina, in liggende modus"
-src="img/iPad-Retina-landscape-video-playing.png">
+src="images/iPad-Retina-landscape-video-playing.png">
 
 Door in CSS `width: 100%` of `max-width: 100%` voor een video in te stellen, kunnen veel lay-outproblemen met apparaatoriëntatie worden opgelost. U kunt ook beeldvullende alternatieven overwegen.
 
@@ -302,15 +302,15 @@ Door in CSS `width: 100%` of `max-width: 100%` voor een video in te stellen, kun
 
 Video wordt op elk platform anders weergegeven. Safari op de iPhone geeft een video-element inline weer op een webpagina, maar speelt video af in beeldvullende modus:
 
-<img class="center" alt="Screenshot of video-element op de iPhone, staande modus" src="img/iPhone-video-with-poster.png">
+<img class="center" alt="Screenshot of video-element op de iPhone, staande modus" src="images/iPhone-video-with-poster.png">
 
 Op Android kunnen gebruikers de beeldvullende modus opvragen door op het pictogram beeldvullend te klikken. Maar normaal gesproken wordt de video inline afgespeeld:
 
-<img class="center" alt="Screenshot van video die in Chrome op Android wordt afgespeeld, in staande modus" src="img/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Screenshot van video die in Chrome op Android wordt afgespeeld, in staande modus" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 Bij Safari op een iPad wordt video inline afgespeeld:
 
-<img class="center" alt="Screenshot van video die wordt afgespeeld in Safari op de iPad Retina, in liggende modus" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Screenshot van video die wordt afgespeeld in Safari op de iPad Retina, in liggende modus" src="images/iPad-Retina-landscape-video-playing.png">
 
 ### Beeldvullende weergave van inhoud instellen
 
@@ -369,7 +369,7 @@ Note: Het track-element wordt ondersteund door Chrome voor Android, iOS Safari e
 
 Als u het track-element gebruikt, worden ondertitels als volgt weergegeven:
 
- <img class="center" alt="Screenshot toont ondertitels die worden weergegeven via het track-element in Chrome op Android" src="img/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="Screenshot toont ondertitels die worden weergegeven via het track-element in Chrome op Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 ### Track-element toevoegen
 
