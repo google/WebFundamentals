@@ -5,7 +5,7 @@ description: Is your native app already installed? getRelatedInstalledApps is yo
 {# wf_published_on: 2017-04-28 #}
 {# wf_updated_on: 2017-04-28 #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
-{# wf_tags: progressive-web-apps #}
+{# wf_tags: progressive-web-apps,chrome59 #}
 {# wf_featured_snippet: Is your native app already installed? getRelatedInstalledApps is your friend. #}
 
 # Detect if your Native app is installed from your web site {: .page-title }
