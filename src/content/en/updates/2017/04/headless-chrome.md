@@ -60,8 +60,12 @@ for each version of Chrome that I have installed:
 ## Command line features {: features }
 
 In some cases, you may not need to [programmatically script](#node) Headless Chrome.
-There are some [useful commandline flags](https://cs.chromium.org/chromium/src/headless/app/headless_shell_switches.cc)
+There are some [useful command line flags](https://cs.chromium.org/chromium/src/headless/app/headless_shell_switches.cc)
 to perform common tasks.
+
+**Note**: You may also need to include the `--disable-gpu` flag for now when
+running these commands
+{: .note }
 
 ### Printing the DOM {: dom }
 
@@ -86,9 +90,6 @@ To capture the screenshot of a page, use the `--screenshot` flag:
 
     # Nexus 5x
     chrome --headless --screenshot --window-size=412,732 https://www.chromestatus.com/
-
-**Note**: You may also need to include the `--disable-gpu` flag for now.
-{: .note }
 
 Running with `--screenshot` will produce a file named `screenshot.png` in the
 current working directory. If you're looking for full page screenshots, things
