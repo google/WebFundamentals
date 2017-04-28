@@ -120,6 +120,20 @@ beaufortfrancois:
   description:
     en: Dives into Chromium source code
 
+lucaberton:
+  name:
+    given: Luca
+    family: Berton
+  org:
+    name: Independent
+    unit: DevOps
+  country: IT
+  role:
+    - translator
+  homepage: 'http://mrevolution.eu'
+  github: lucab85
+  email: mr.evolution85@gmail.com
+
 ericbidelman:
   name:
     given: Eric
@@ -1329,16 +1343,3 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
-
-lucab85:
-  name:
-    given: Luca
-    family: Berton
-  org:
-    name: Independent
-    unit: DevOps
-  country: IT
-  role:
-    - translator
-  homepage: 'http://mrevolution.eu'
-  email: mr.evolution85@gmail.com
