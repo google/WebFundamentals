@@ -57,7 +57,25 @@ for each version of Chrome that I have installed:
     alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
     alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
 
-## Taking screenshots {: #screenshots }
+## Command line features {: features }
+
+In some cases, you may not need to [programmatically script](#node) Headless Chrome.
+There are some [useful commandline flags](https://cs.chromium.org/chromium/src/headless/app/headless_shell_switches.cc)
+to perform common tasks.
+
+### Printing the DOM {: dom }
+
+The `--dump-dom` flag prints `document.body.innerHTML` to stdout:
+
+    chrome --headless --dump-dom https://www.chromestatus.com/
+
+### Create a PDF {: dom }
+
+The `--print-to-pdf` flag creates a PDF of the page:
+
+    chrome --headless --print-to-pdf https://www.chromestatus.com/
+
+### Taking screenshots {: #screenshots }
 
 To capture the screenshot of a page, use the `--screenshot` flag:
 
