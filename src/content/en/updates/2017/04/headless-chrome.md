@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Diving into Headless Chrome
+description: Getting started with Headless Chrome
 
 {# wf_updated_on: 2017-04-27 #}
 {# wf_published_on: 2017-04-27 #}
@@ -8,7 +8,7 @@ description: Diving into Headless Chrome
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: Learn about Headless Chrome, shipping in Chrome 59. #}
 
-# Diving into Headless Chrome {: .page-title }
+# Getting started with Headless Chrome {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
