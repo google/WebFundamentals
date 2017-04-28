@@ -362,17 +362,17 @@ invalidated when a device disconnects. This means your code should always
 retrieve (through `getPrimaryService(s)`, `getCharacteristic(s)`, etc.) these
 attributes after reconnecting.
 
-### Read and write to Bluetooth Descriptors
+### Read and write to Bluetooth descriptors
 
-Bluetooth GATT descriptors are defined attributes that describe a
-characteristic value. You can access them, read and write to in a similar way
-to Bluetooth GATT characteristics.
+Bluetooth GATT descriptors are attributes that describe a characteristic value.
+You can read and write them to in a similar way to Bluetooth GATT
+characteristics.
 
 Let's see for instance how to read the user description of the measurement
 interval of the device's health thermometer.
 
 In the example below, `health_thermometer` is the [Health
-Thermometer Service](https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.service.health_thermometer.xml), `measurement_interval` the [Measurement Interval Characteristic](https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.measurement_interval.xml), and `gatt.characteristic_user_description` the [Characteristic User Description Descriptor](https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.descriptor.gatt.characteristic_user_description.xml).
+Thermometer service](https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.service.health_thermometer.xml), `measurement_interval` the [Measurement Interval characteristic](https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.measurement_interval.xml), and `gatt.characteristic_user_description` the [Characteristic User Description descriptor](https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.descriptor.gatt.characteristic_user_description.xml).
 
 <pre class="prettyprint">
 navigator.bluetooth.requestDevice({ filters: [{ services: ['health_thermometer'] }] })
@@ -412,7 +412,7 @@ All [Web Bluetooth samples](https://googlechrome.github.io/samples/web-bluetooth
 have been successfully tested. To enjoy these samples to their fullest, I
 recommend you install the
 [BLE Peripheral Simulator Android App](https://play.google.com/store/apps/details?id=io.github.webbluetoothcg.bletestperipheral)
-which simulates a BLE Peripheral with a Battery Service, a Heart Rate
+which simulates a BLE peripheral with a Battery Service, a Heart Rate
 Service, or a Health Thermometer Service.
 
 ### Beginner
@@ -474,7 +474,7 @@ Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/de
 
 ## Dev Tips
 
-A "Bluetooth Internals" page is available in the browser at
+A "Bluetooth Internals" page is available in Chrome at
 `chrome://bluetooth-internals` so that you can inspect everything about
 nearby Bluetooth devices: status, services, characteristics, and descriptors.
 
