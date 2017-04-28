@@ -292,7 +292,8 @@ Tools
 
 **How do I create a Docker container that runs Headless Chrome?**
 
-My [lighthouse-ci](https://github.com/ebidel/lighthouse-ci) project has an [example Dockerfile](https://github.com/ebidel/lighthouse-ci/blob/master/builder/Dockerfile])
+Check out [lighthouse-ci](https://github.com/ebidel/lighthouse-ci). It has an
+[example Dockerfile](https://github.com/ebidel/lighthouse-ci/blob/master/builder/Dockerfile)
 that uses Ubuntu as a base image, and installs + runs Lighthouse in an App Engine
 Flexible container.
 
@@ -303,7 +304,7 @@ can be used for automated testing in a headless environment. The main difference
 between the two is that Phantom uses an older version of WebKit as its rendering
 engine while Headless Chrome uses the latest version of Blink.
 
-At the moment, Phantom also provides a higher level API than the [DevTools debugging protocol][[dtprotocol]].
+At the moment, Phantom also provides a higher level API than the [DevTools debugging protocol][dtprotocol].
 
 **Where do I report bugs?**
 
