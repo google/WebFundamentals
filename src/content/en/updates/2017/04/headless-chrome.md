@@ -57,6 +57,21 @@ for each version of Chrome that I have installed:
     alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
     alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
 
+## Taking screenshots {: #screenshots }
+
+To capture the screenshot of a page, use the `--screenshot` flag:
+
+    chrome --headless --screenshot https://www.chromestatus.com/
+
+    # Size of a standard letterhead.
+    chrome --headless --screenshot --window-size=1280,1696 https://www.chromestatus.com/
+
+    # Nexus 5x
+    chrome --headless --screenshot --window-size=412,732 https://www.chromestatus.com/
+
+Running these will produce a file named `screenshot.png` in the the current
+working directory.
+
 ## Debugging Chrome without a browser UI? {: #frontend }
 
 When you run Chrome with `--remote-debugging-port=9222`, it starts an instance
