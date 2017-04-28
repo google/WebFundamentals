@@ -21,8 +21,8 @@ figure {
 ### TL;DR {: #tldr .hide-from-toc}
 
 [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
-is a way to run the Chromium browser in a headless environment. Essentially, running Chrome without Chrome! It brings **all modern web platform features** provided
-by Chromium and the Blink rendering engine.
+is a way to run the Chromium browser in a headless environment. Essentially, running Chrome without chrome! It brings **all modern web platform features** provided
+by Chromium and the Blink rendering engine to the command line.
 
 Why is that useful?
 
@@ -42,7 +42,7 @@ from the command line. If you've got Chrome 59+ installed, start Chrome with the
     chrome \
       --headless \                   # Runs Chrome in headless mode.
       --disable-gpu \                # Temporarily needed for now.
-      --remote-debugging-port=9222 \ # Temporarily needed for now.
+      --remote-debugging-port=9222 \
       https://www.chromestatus.com   # URL to open. Defaults to about:blank.
 
 **Note**: Right now, you'll also want to include the `--disable-gpu` flag.
@@ -60,7 +60,7 @@ for each version of Chrome that I have installed:
 ## Debugging Chrome without a browser UI? {: #frontend }
 
 When you run Chrome with `--remote-debugging-port=9222`, it starts an instance
-with the [DevTools debugging protocol][dtprotocol] enabled. The
+with the [DevTools Protocol][dtprotocol] enabled. The
 protocol is what we use to communicate with Chrome and drive the headless
 browser instance. It's also what tools like Sublime, VS Code, and Node use for
 remote debugging an application. #synergy
@@ -152,7 +152,7 @@ launchChrome(true).then(launcher => {
 });
 ```
 
-Running this script doesn't do much, but you should see a instance of
+Running this script doesn't do much, but you should see an instance of
 Chrome fire up in the task manager that loaded `about:blank`. Remember, there
 won't be any browser UI. We're headless.
 
@@ -162,7 +162,7 @@ To control the browser, we need the DevTools protocol!
 
 [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface)
 is a great Node package that provides high-level APIs on top of the
-[DevTools debugging protocol][dtprotocol]. You can use it orchestrate Headless
+[DevTools Protocol][dtprotocol]. You can use it orchestrate Headless
 Chrome, navigate to pages, and fetch information about those pages.
 
 The DevTools protocol can do a ton of interesting stuff, but it can be a bit
@@ -280,13 +280,17 @@ Here are some useful resources to get you started:
 
 Docs
 
-* [DevTools debugging protocol][dtprotocol] - documentation on how to use the protocol
+* [DevTools Protocol][dtprotocol] - documentation on how to use the protocol
 * [DevTools Protocol Viewer][dtviewer] - API reference docs
 
 Tools
 
 * [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface) - node module that wraps the DevTools protocol
 * [Lighthouse](https://github.com/GoogleChrome/lighthouse) - automated tool for testing the quality of web apps
+
+Demos
+
+* "[The Headless Web](https://paul.kinlan.me/the-headless-web/)"  - Paul Kinlan's great blog post on using Headless with api.ai.
 
 ## FAQ
 
@@ -304,19 +308,17 @@ can be used for automated testing in a headless environment. The main difference
 between the two is that Phantom uses an older version of WebKit as its rendering
 engine while Headless Chrome uses the latest version of Blink.
 
-At the moment, Phantom also provides a higher level API than the [DevTools debugging protocol][dtprotocol].
+At the moment, Phantom also provides a higher level API than the [DevTools Protocol][dtprotocol].
 
 **Where do I report bugs?**
 
-For bugs against Headless Chrome, file them on [crbug.com](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink&blocking=705916&cc=skyostil%40chromium.org).
+For bugs against Headless Chrome, file them on [crbug.com](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink&blocking=705916&cc=skyostil%40chromium.org&Proj=Headless).
 
 For bugs in the DevTools protocol, file them at [github.com/ChromeDevTools/devtools-protocol](https://github.com/ChromeDevTools/devtools-protocol/issues/new).
-
 
 <br>
 
 {% include "comment-widget.html" %}
-
 
 [dtprotocol]: https://developer.chrome.com/devtools/docs/debugger-protocol
 [dtviewer]: https://chromedevtools.github.io/debugger-protocol-viewer/
