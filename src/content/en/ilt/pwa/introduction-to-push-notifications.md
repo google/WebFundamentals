@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:09:23Z #}
+{# wf_updated_on: 2017-04-25T20:59:14Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -505,7 +505,7 @@ For Chrome to route FCM messages to the correct service worker, it needs to know
 
 
 
-Note: The <code>gcm_sender_id</code> is required for Chrome prior to version 52, Opera Android, and the Samsung Browser.
+Note: The <code>gcm_sender_id</code> is required for Chrome prior to version 52, Opera Android, and Samsung Browser.
 
 
 
@@ -725,7 +725,7 @@ The `Authorization` header is a signed  [JSON Web Token (JWT)](https://jwt.io/) 
 
 A JWT is a way of sharing a JSON object with a second party in such a way that the sending party can sign it and the receiving party can verify the signature is from the expected sender. The structure of a JWT is three encrypted strings, joined with a single dot between them.
 
-`<JWTHeader>.<Payload>.<Signature>`
+`<JWTHeader>.<Payload>.<Signature> `
 
 ##### JWT header
 

@@ -121,7 +121,7 @@ Advertencia: La API de Media Fragments es compatible con la mayoría de las plat
 Al usar las herramientas para programadores del de navegador, comprueba que se incluya `Accept-Ranges: bytes` en los
 encabezados de respuesta:
 
-<img class="center" alt="Captura de pantalla de Chrome DevTools: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Captura de pantalla de Chrome DevTools: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Incluye una imagen de póster
 
@@ -144,7 +144,7 @@ A continuación, ofrecemos una comparación de videos sin una imagen de póster 
 
 <div class="attempt-left">
   <figure>
-    <img alt="Captura de pantalla de Chrome para Android, orientación vertical: sin póster" src="img/Chrome-Android-video-no-poster.png">
+    <img alt="Captura de pantalla de Chrome para Android, orientación vertical: sin póster" src="images/Chrome-Android-video-no-poster.png">
     <figcaption>
       Captura de pantalla de Chrome para Android, orientación vertical: sin póster
      </figcaption>
@@ -152,7 +152,7 @@ A continuación, ofrecemos una comparación de videos sin una imagen de póster 
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Captura de pantalla de Chrome para Android, orientación vertical: con póster" src="img/Chrome-Android-video-poster.png">
+    <img alt="Captura de pantalla de Chrome para Android, orientación vertical: con póster" src="images/Chrome-Android-video-poster.png">
     <figcaption>
       Captura de pantalla de Chrome para Android, orientación vertical: con póster
      </figcaption>
@@ -288,7 +288,7 @@ los controles.
 
 <div class="attempt-left">
   <figure>
-    <img alt="Captura de pantalla de Chrome para Android, orientación vertical: elemento de video sin estilo sobrepasa el tamaño de la ventana de visualización" src="img/Chrome-Android-portrait-video-unstyled.png">
+    <img alt="Captura de pantalla de Chrome para Android, orientación vertical: elemento de video sin estilo sobrepasa el tamaño de la ventana de visualización" src="images/Chrome-Android-portrait-video-unstyled.png">
     <figcaption>
       Captura de pantalla de Chrome para Android, orientación vertical: elemento de video sin estilo sobrepasa el tamaño de la ventana de visualización
     </figcaption>
@@ -296,7 +296,7 @@ los controles.
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Captura de pantalla de Chrome para Android, horizontal: elemento de video sin estilo sobrepasa el tamaño de la ventana de visualización" src="img/Chrome-Android-landscape-video-unstyled.png">
+    <img alt="Captura de pantalla de Chrome para Android, horizontal: elemento de video sin estilo sobrepasa el tamaño de la ventana de visualización" src="images/Chrome-Android-landscape-video-unstyled.png">
     <figcaption>
       Captura de pantalla de Chrome para Android, horizontal: elemento de video sin estilo sobrepasa el tamaño de la ventana de visualización
     </figcaption>
@@ -353,13 +353,13 @@ Safari en iPhone hace un buen trabajo al cambiar entre orientación vertical y h
 
 <div class="attempt-left">
   <figure>
-    <img  alt="Captura de pantalla de video en Safari para iPhone, orientación vertical" src="img/iPhone-video-playing-portrait.png">
+    <img  alt="Captura de pantalla de video en Safari para iPhone, orientación vertical" src="images/iPhone-video-playing-portrait.png">
     <figcaption>Captura de pantalla de video en Safari para iPhone, orientación vertical</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Captura de pantalla del video en Safari para iPhone, orientación horizontal" src="img/iPhone-video-playing-landscape.png">
+    <img alt="Captura de pantalla del video en Safari para iPhone, orientación horizontal" src="images/iPhone-video-playing-landscape.png">
     <figcaption>Captura de pantalla del video en Safari para iPhone, orientación horizontal</figcaption>
   </figure>
 </div>
@@ -371,7 +371,7 @@ Por ejemplo, sin personalización, un video que se reproduce en un iPad con
 orientación horizontal se ve de la siguiente manera:
 
 <img alt="Captura de pantalla de video en Safari en la pantalla Retina de iPad, orientación horizontal"
-src="img/iPad-Retina-landscape-video-playing.png">
+src="images/iPad-Retina-landscape-video-playing.png">
 
 Configurar el video `width: 100%` o `max-width: 100%` con CSS puede resolver
 muchos problemas de diseño de orientación de dispositivos. Tal vez también te convenga considerar
@@ -379,21 +379,21 @@ alternativas de pantalla completa.
 
 ## Pantalla completa o integrada
 
-<img class="attempt-right" alt="Captura de pantalla del elemento de video en iPhone, orientación vertical" src="img/iPhone-video-with-poster.png">
+<img class="attempt-right" alt="Captura de pantalla del elemento de video en iPhone, orientación vertical" src="images/iPhone-video-with-poster.png">
 
 El video se visualiza de manera diferente en las distintas plataformas. En Safari, para iPhone, se muestra un
 elemento de video integrado en una página web, pero se reproduce un video en el modo de pantalla completa:
 
 <div style="clear:both;"></div>
 
-<img class="attempt-right" alt="Captura de pantalla de video en Chrome para Android, orientación vertical" src="img/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="attempt-right" alt="Captura de pantalla de video en Chrome para Android, orientación vertical" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 En Android, los usuarios pueden solicitar un modo de pantalla completa haciendo clic sobre el
 ícono de pantalla completa. Sin embargo, el método predeterminado consiste en reproducir un video integrado:
 
 <div style="clear:both;"></div>
 
-<img class="attempt-right" alt="Captura de pantalla de video en Safari en la pantalla Retina de iPad, orientación horizontal" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="attempt-right" alt="Captura de pantalla de video en Safari en la pantalla Retina de iPad, orientación horizontal" src="images/iPad-Retina-landscape-video-playing.png">
 
 Safari, en un iPad, reproduce un video integrado:
 
@@ -453,7 +453,7 @@ La accesibilidad no es una función. Los usuarios que no puedan oír ni ver, no 
 
 ### Incluye subtítulos para mejorar la accesibilidad
 
-<img class="attempt-right" alt="Captura de pantalla de los subtítulos mostrados con el elemento de seguimiento en Chrome para Android" src="img/Chrome-Android-track-landscape-5x3.jpg">
+<img class="attempt-right" alt="Captura de pantalla de los subtítulos mostrados con el elemento de seguimiento en Chrome para Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 Para hacer que los medios sean más accesibles en dispositivos móviles, incluye subtítulos o descripciones
 con el elemento de seguimiento.

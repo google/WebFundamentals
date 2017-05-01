@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:18:25Z #}
+{# wf_updated_on: 2017-04-26T00:11:25Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -59,7 +59,7 @@ Open your browser and navigate to __localhost:8080/sw-precache-lab/app__.
 
 
 
-Note: If you have installed a service worker on localhost before, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service workers and <a href="tools-for-pwa-developers#clearcache">clear all service worker caches</a> for localhost so that they do not interfere with the lab.
 
 
 
@@ -140,6 +140,8 @@ Here we install the `sw-precache` and `sw-toolbox` packages. We also install the
 
 
 
+Sw-precache allows you generate service workers that precache static assets.
+
 ### 4.1 Include the necessary plugins in the gulpfile
 
 In <strong>gulpfile.js</strong> replace TODO 4.1 with the following code:
@@ -211,7 +213,7 @@ The call to `swPrecache.write()` does the following:
 
 
 
-The `sw-toolbox` library lets you create service worker routes to cache different elements of your application. 
+The `sw-toolbox` library lets you add service worker routes to enable run-time caching in your application. 
 
 Replace TODO 5 in <strong>js/toolbox-script.js</strong> with the following code:
 
