@@ -44,7 +44,7 @@ three core components that make this work.
    will resolve the list of apps.
 
 These three steps are in place to ensure that only you can query your apps and
-that you have reliably demonstrated ownership of the site and app and are now
+that you have reliably demonstrated ownership of the site and app, which are now
 described in more detail.
 
 ### Define the relationship to your native app in your Web App Manifest
@@ -65,8 +65,9 @@ unique identifier for your app on that platform.
       ...
     }
 
-**Note:** Only Chrome supports this, so the platform must be set to "play". You
-also need your "id" to be the exact package name for your Android App.
+**Note:** Only Chrome on Android supports this, so the platform must be set to
+"play". You also need your "id" to be the exact package name for your Android
+App.
 
 ### Create the relationship to your site in your AndroidManifest.xml
 
@@ -106,8 +107,9 @@ And then adding the following to your strings.xml resource, replacing the
 Once you have the required metadata deployed on your app and on your site, you
 should be able to call navigator.getInstalledRelatedApps(). This returns a
 promise that resolves to the list of apps that are installed on the user's
-device that meet the above criteria and have been proved to be owned by the app
-developer.
+device that meet the above criteria (i.e., have been proved to be owned 
+by the app developer).
+
 
     navigator.getInstalledRelatedApps().then(relatedApps => {
       for (let app of relatedApps) {
@@ -127,7 +129,7 @@ developer.
 
 #### Testing on localhost
 
-In your strings.xml set the "site" property value to be
+In your `strings.xml` set the "site" property value to be
 `http://localhost:[yourportnumber]` like the following.
 
     <string name="asset_statements">
@@ -147,25 +149,19 @@ to manage this is through your product flavours (Release, Debug etc) which
 allows you to specify different resource files based on the build target,
 meaning that your Release target will only ever contain your live domain.
 
-## Advanced usage
+## Usecases
 
 There are many different ways that you can use this API. Here are some quick
 examples of possible uses and common pieces of functionality that you will find
 useful.
-
-### Detecting if your PWA is installed from a native app
-
-It is not easy, but if you know the package id of your Web APK then it is
-possible to use the context.getPackageManager().getApplicationInfo() API to
-determine if it is installed.
 
 ### Cancel the progressive web app installation if the native app is installed?
 
 You can intercept the
 "[beforeinstallprompt](/web/fundamentals/engage-and-retain/app-install-banners/"
 event. The general flow is to call preventDefault() on the event so the banner
-doesn't show at all, check to see if there are no apps installed and then
-finally call prompt() to show the banner.
+doesn't show right away, check to see if there are no apps installed and if so
+call `prompt()` to show the banner.
 
     window.addEventListener("beforeinstallprompt", e => {
       if (navigator.getInstalledRelatedApps) {
@@ -198,8 +194,8 @@ feature.
       }
     });
 
-Alternatively, if the user has already been to your site and enabled has Web
-Push enabled you unregister the push subscription during the onload event.
+Alternatively, if the user has already been to your site and has Web Push
+enabled you can unregister the push subscription during the onload event.
 
     window.addEventListener("load", e => {
       if (navigator.getInstalledRelatedApps) {
@@ -216,11 +212,29 @@ Push enabled you unregister the push subscription during the onload event.
 This API is not available directly to the service worker so it is not possible
 to de-duplicate notifications as they arrive at your service worker.
 
+### Detecting if your PWA is installed from a native app
+
+If the user has installed your Progressive Web App through the old Add to 
+Homescreen method (i.e, in anything prior to Chrome 58) then it is not 
+possible to detect if your app is installed. Chrome added your site to 
+the Homescreen as a bookmark, and this data was not exposed to the system.
+
+If the user has installed the web app using the new Web APK functionality,
+it is possible to determine if your web app is installed. If you know your
+package id of your Web APK then you can use the 
+`context.getPackageManager().getApplicationInfo()` API to determine if it
+is installed. Please note that this is experiemental.
+
 ### Not Working?
 
-File a bug [right
-here](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink&blocking=587623&cc=mgiuca%40chromium.org,owencm%40chromium.org).
+File a bug [right here against the Chrome 
+implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink&blocking=587623&cc=mgiuca%40chromium.org,owencm%40chromium.org).
 The correct people will be notified (I've sneakily put this in, so I am sure
 they will be grateful).
+
+We are keen to keep getting [feedback on the
+spec](https://github.com/WICG/get-installed-related-apps/) and if you have any
+issues or suggestions, [file an issue against the 
+spec](https://github.com/WICG/get-installed-related-apps/issues)
 
 {% include "comment-widget.html" %}
