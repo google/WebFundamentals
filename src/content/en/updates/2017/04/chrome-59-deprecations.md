@@ -23,7 +23,7 @@ The current implementation of WebVR, originally implemented in Chrome 52,
 contained several methods and properties that will not be in the final spec.
 Deprecation messages were added for these features for the
 [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/explainer.md)
-that started in Chrome 56 and are now being removed. These features include:
+that started in Chrome 56. These features and are now being removed. They include:
 
 - `VRDisplay.getPose()`
 - `VRDisplay.resetPose()`
@@ -35,6 +35,37 @@ that started in Chrome 56 and are now being removed. These features include:
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4532810371039232) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=706561&desc=2) &#124;
 [Origin Trial Results so Far](https://groups.google.com/a/chromium.org/d/topic/blink-dev/c41q3tyCBJE/discussion)
+
+## Remove FileReaderSync from service workers
+
+The Service Worker spec has always had the (non-normative) note that "any type
+of synchronous requests must not be initiated inside of a service worker", to
+avoid blocking the service worker (as blocking the service worker would block
+all network requests from controlled pages). However synchronous APIs such as
+`FileReaderSync` were still available in service workers. `FileReaderSync` was
+deprecated in Chrome 57. It is removed in Chrome 59.
+
+[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cjWtqRD6iw8/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5739144722513920) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688586)
+
+## Remove non-standard DeviceOrientation Event initialization functions
+
+For some time now there's been a general trend in browser APIs away from
+initialization functions and toward object constructors. The most recent version
+of the [DeviceOrientation Event Specification](https://w3c.github.io/deviceorientation/spec-source-orientation.html)
+follows this trend by requiring constructors for both
+[`DeviceOrientationEvent`](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/DeviceOrientationEvent)
+and [`DeviceMotionEvent`](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/DeviceMotionEvent).
+
+Since Chrome is
+[enabling these constructors by default](https://www.chromestatus.com/features/4659236399218688)
+in Chrome 59 the legacy initialization fuctions, `initDeviceMotionEvent()` and
+`initDeviceOrientationEvent()` are also removed. Edge has deprecated the
+initialization functions and Firefox has already shipped the constructors.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/XlnBk6qzkuw/discussion) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=697598)
 
 ## Remove "on-demand" value for hover/any-hover media queries
 
@@ -50,12 +81,12 @@ spec about a year ago. Consequently, these media queries are removed in Chrome
 ## Remove remote and readonly members of MediaStreamTrack
 
 In Chrome 48 the `MediaStreamTrack.remote` and `MediaStreamTrack.readonly`
-attributes were added in support of the
+properties were added in support of the
 [Media Capture and Streams API](https://w3c.github.io/mediacapture-main/)
 with the goal of allowing JavaScript to know whether a WebRTC `MediaStreamTrack`
 is from a remote source or a local one.
 
-Since that time, these attributes have been removed from the spec. As of
+Since that time, these properties have been removed from the spec. As of
 Chrome 59, they are no longer supported.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=598704)
@@ -96,37 +127,7 @@ it was deprecated in Chrome 54 and has now been removed.
 
 
 
-## Deprecate FileReaderSync from service workers
 
-The Service Worker spec has always had the (non-normative) note that "any type
-of synchronous requests must not be initiated inside of a service worker", to
-avoid blocking the service worker (as blocking the service worker would block
-all network requests from controlled pages). However synchronous APIs such as
-`FileReaderSync` were still available in service workers. `FileReaderSync` was
-deprecated in Chrome 57. It is removed in Chrome 59.
-
-[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cjWtqRD6iw8/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5739144722513920) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688586)
-
-
-## Deprecate non-standard DeviceOrientation Event initialization functions
-
-For some time now there's been a general trend in browser APIs away from
-initialization functions and toward object constructors. The most recent version
-of the [DeviceOrientation Event Specification](https://w3c.github.io/deviceorientation/spec-source-orientation.html)
-follows this trend by requiring constructors for both
-[`DeviceOrientationEvent`](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/DeviceOrientationEvent)
-and [`DeviceMotionEvent`](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/DeviceMotionEvent).
-
-Since Chrome is
-[enabling these constructors by default](https://www.chromestatus.com/features/4659236399218688)
-in Chrome 59 the legacy initialization fuctions, `initDeviceMotionEvent()` and
-`initDeviceOrientationEvent()` are also removed. Edge has deprecated the
-initialization functions and Firefox has already shipped the constructors.
-
-[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/XlnBk6qzkuw/discussion) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=697598)
 
 
 <<../../_deprecation-policy.md>>

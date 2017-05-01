@@ -164,7 +164,7 @@ may set the `EnableCommonNameFallbackForLocalAnchors` Enterprise policy.
 
 ## VTTRegion-related bits of TextTrack
 
-The interface elements regions, `addRegion()` and `removeRegion()`, have been
+The interface elements `regions`, `addRegion()` and `removeRegion()`, have been
 removed from the WebVTT spec and are removed in Chrome 58 to comply with
 the [latest spec](https://w3c.github.io/webvtt/). We expect little impact from
 this removal since the feature was never enabled by default (meaning it was

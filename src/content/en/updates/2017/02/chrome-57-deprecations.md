@@ -99,10 +99,10 @@ following interfaces are affected:
 ## WebAudio: Remove prefixed AudioContext and OfflineAudioContext
 
 Chrome has supported `WebAudio` since mid 2011, including `AudioContext`.
-`OfflineAudioContext` was added the following year. Given how long the
-standard interfaces and Googles long-term goal of removing prefixed features,
-the prefixed versions of these interfaces have been deprecated since late
-2014 and are now being removed.
+`OfflineAudioContext` was added the following year. Given how long the standard
+interfaces have been supported and Google's long-term goal of removing prefixed
+features, the prefixed versions of these interfaces have been deprecated since
+late 2014 and are now being removed.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/of6S04dUf54/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4571020824412160) &#124;
@@ -159,7 +159,7 @@ that this should be fixed. Removal is anticipated in Chrome 59.
 That an interface has a legacy caller means that an instance can be called as a
 function. Currently, `HTMLEmbedElement` and `HTMLObjectElement` support this
 functionality. In Chrome 57 this ability is deprecated. After removal, which is
-expected in Chrome 58, calling will throw and exception.
+expected in Chrome 58, calling will throw an exception.
 
 This change brings Chrome in line with recent spec changes. The legacy behavior
 is not supported in Edge or Safari, and it is being
