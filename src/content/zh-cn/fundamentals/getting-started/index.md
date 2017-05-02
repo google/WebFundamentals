@@ -49,7 +49,7 @@ book_path: /web/fundamentals/_book.yaml
 
 </div>
 <div class="attempt-right">
-  <a href="codelabs/debugging-service-workers/">
+  <a href="codelabs/push-notifications/">
     添加推送通知
   </a>
   <p>
