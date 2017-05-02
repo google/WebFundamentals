@@ -21,7 +21,8 @@ Developer Relations Team, about whether we are born with a natural ability to
 design & develop or whether life opportunities and our environment that we
 grew up in dictates our successes.
 
-<img src="/web/shows/designer-vs-developer/podcast/images/dvd-s01-e04-cover.jpg" class="attempt-right">
+<img 
+src="/web/shows/designer-vs-developer/podcast/images/dvd-s01-e04-cover.jpg" class="attempt-right">
 
 In this episode:
 
@@ -30,7 +31,8 @@ In this episode:
 * Paul's media app - Shaka Player
 * What is it like as a developer to have a design eye?
 
-<audio src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E04-Are-designers-and-developers-born-or-made.mp3" controls preload="none">
+<audio 
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E04-Are-designers-and-developers-born-or-made.mp3" controls preload="none">
 
 <a href="http://feeds.feedburner.com/DesignerVsDeveloper">
   Subscribe to Designer Vs Developer Podcast

@@ -31,7 +31,9 @@ In this episode:
 * Jake's service workers
 * Designers lack of version control
 
-<audio src="https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3" controls preload="none">
+<audio 
+src="https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3" 
+controls preload="none">
 
 
 <a href="http://feeds.feedburner.com/DesignerVsDeveloper">

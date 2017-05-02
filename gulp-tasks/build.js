@@ -87,7 +87,7 @@ gulp.task('build:DVDPodcast', function() {
     subtitle: 'A show that tries to solve the challenges faced in industry by having an open conversation between the two.',
     author: {name: 'Mustafa Kurtuldu', email: 'mustafa.kurtuldu@gmail.com'},
     summary: 'A show that tries to solve the challenges faced in industry by having an open conversation between the two.',
-    image: 'https://developers.google.com/web/shows/designer-vs-developer/podcast/images/dvd-series-cover.jpg',
+    image: 'https://developers.google.com/web/shows/designer-vs-developer/podcast/images/dvd-series-cover-large.jpg',
     section: 'shows',
     outputPath: baseOutputPath,
     baseUrl: 'https://developers.google.com/web/shows/designer-vs-developer/podcast/'
