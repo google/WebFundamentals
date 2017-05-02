@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to evaluate runtime performance in Chrome DevTools.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-04-26 #}
 {# wf_published_on: 2017-04-06 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -20,7 +20,8 @@ Animation, and Idle phases of your page.
 [RAIL]: /web/fundamentals/performance/rail
 
 Caution: This tutorial is based on Chrome 59. If you use another version of
-Chrome, the UI and features of DevTools may be different.
+Chrome, the UI and features of DevTools may be different. Check `chrome://help`
+to see what version of Chrome you're running.
 
 ## Get started {: #get-started }
 
@@ -391,8 +392,9 @@ the browser translates HTML, CSS, and JS into pixels on a screen. The best
 place to start is the [Rendering Performance Overview][RP]. [The Anatomy Of A
 Frame][Anatomy] dives into even more detail.
 
-Last, there are many ways to improve runtime performance. This tutorial focused on one particular animation bottleneck to give you a focused tour through the
-Performance panel, but it's only one of many bottlenecks you may
+Last, there are many ways to improve runtime performance. This tutorial
+focused on one particular animation bottleneck to give you a focused tour
+through the Performance panel, but it's only one of many bottlenecks you may
 encounter. The rest of the Rendering Performance series has a lot of good
 tips for improving various aspects of runtime performance, such as:
 

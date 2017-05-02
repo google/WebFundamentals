@@ -102,7 +102,7 @@ Note: - Interfejs API Media Fragments działa na większości platform z wyjątk
 
 Użyj narzędzi dla programistów w przeglądarce, by znaleźć ciąg `Accept-Ranges: bytes` w nagłówkach odpowiedzi:
 
-<img class="center" alt="Zrzut ekranu z Narzędziami Chrome dla programistów &ndash; `Accept-Ranges: bytes`" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Zrzut ekranu z Narzędziami Chrome dla programistów &ndash; `Accept-Ranges: bytes`" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Dołączanie obrazu plakatu
 
@@ -118,8 +118,8 @@ Plakat może też być obrazem zastępczym, gdy atrybut `src` elementu video jes
 
 Tak wygląda porównanie filmu z obrazem plakatu i bez niego (plakat jest w odcieniach szarości na dowód, że nie jest to film):
 
-<img class="attempt-left" alt="Zrzut ekranu Chrome na Androida, orientacja pionowa &ndash; bez plakatu" src="img/Chrome-Android-video-no-poster.png">
-<img class="attempt-right" alt="Zrzut ekranu Chrome na Androida, orientacja pionowa &ndash; z plakatem" src="img/Chrome-Android-video-poster.png">
+<img class="attempt-left" alt="Zrzut ekranu Chrome na Androida, orientacja pionowa &ndash; bez plakatu" src="images/Chrome-Android-video-no-poster.png">
+<img class="attempt-right" alt="Zrzut ekranu Chrome na Androida, orientacja pionowa &ndash; z plakatem" src="images/Chrome-Android-video-poster.png">
 <div class="clearfix"></div>
 
 
@@ -240,8 +240,8 @@ Aby sprawdzić rozmiar, w którym film został zakodowany, użyj właściwości 
 Gdy elementy video nie mieszczą się w widocznym obszarze, mogą wyjść poza swój kontener, uniemożliwiając użytkownikowi obejrzenie filmu i skorzystanie
 z elementów sterujących.
 
-<img class="attempt-left" alt="Zrzut ekranu z Chrome na Androida, orientacja pionowa: pozbawiony stylu element video wychodzi poza widoczny obszar" src="img/Chrome-Android-portrait-video-unstyled.png">
-<img class="attempt-right" alt="Zrzut ekranu z Chrome na Androida, orientacja pozioma: pozbawiony stylu element video wychodzi poza widoczny obszar" src="img/Chrome-Android-landscape-video-unstyled.png">
+<img class="attempt-left" alt="Zrzut ekranu z Chrome na Androida, orientacja pionowa: pozbawiony stylu element video wychodzi poza widoczny obszar" src="images/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Zrzut ekranu z Chrome na Androida, orientacja pozioma: pozbawiony stylu element video wychodzi poza widoczny obszar" src="images/Chrome-Android-landscape-video-unstyled.png">
 <div class="clearfix"></div>
 
 
@@ -287,8 +287,8 @@ Orientacja urządzenia nie jest problemem na monitorach komputerowych ani laptop
 
 Safari na iPhonie dobrze sobie radzi z przełączaniem się między orientacją pionową i poziomą:
 
-<img class="attempt-left" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPhonie, orientacja pionowa" src="img/iPhone-video-playing-portrait.png">
-<img class="attempt-right" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPhonie, orientacja pozioma" src="img/iPhone-video-playing-landscape.png">
+<img class="attempt-left" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPhonie, orientacja pionowa" src="images/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPhonie, orientacja pozioma" src="images/iPhone-video-playing-landscape.png">
 <div class="clearfix"></div>
 
 
@@ -296,7 +296,7 @@ Na iPadzie oraz w Chrome na Androida orientacja urządzenia może stanowić prob
 Na przykład niedostosowany film odtwarzany na iPadzie w orientacji poziomej wygląda tak:
 
 <img class="center" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPadzie Retina, orientacja pozioma"
-src="img/iPad-Retina-landscape-video-playing.png">
+src="images/iPad-Retina-landscape-video-playing.png">
 
 Aby rozwiązać wiele problemów z układem związanych z orientacją urządzenia, przypisz elementowi video styl CSS z ustawieniem `width: 100%` lub `max-width: 100%`. Możesz też zastanowić się nad wykorzystaniem pełnego ekranu.
 
@@ -304,15 +304,15 @@ Aby rozwiązać wiele problemów z układem związanych z orientacją urządzeni
 
 Na poszczególnych platformach filmy są odtwarzane w różny sposób. Safari na iPhonie wyświetla element video w treści strony internetowej, ale film odtwarza w trybie pełnoekranowym:
 
-<img class="center" alt="Zrzut ekranu z elementem video na iPhonie, orientacja pionowa" src="img/iPhone-video-with-poster.png">
+<img class="center" alt="Zrzut ekranu z elementem video na iPhonie, orientacja pionowa" src="images/iPhone-video-with-poster.png">
 
 W Androidzie użytkownicy mogą włączyć tryb pełnoekranowy, klikając jego ikonę. Domyślnie film jest odtwarzany w treści strony:
 
-<img class="center" alt="Zrzut ekranu z filmem odtwarzanym w Chrome na Androida, orientacja pionowa" src="img/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Zrzut ekranu z filmem odtwarzanym w Chrome na Androida, orientacja pionowa" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 Safari na iPadzie odtwarza film w treści strony:
 
-<img class="center" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPadzie Retina, orientacja pozioma" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPadzie Retina, orientacja pozioma" src="images/iPad-Retina-landscape-video-playing.png">
 
 ### Sterowanie wyświetlaniem treści na pełnym ekranie
 
@@ -372,7 +372,7 @@ Note: Element track działa w Chrome na Androida, Safari na iOS i wszystkich wsp
 
 Tak wyglądają napisy z elementu track:
 
-<img class="center" alt="Zrzut ekranu z napisami z elementu track w Chrome na Androida" src="img/Chrome-Android-track-landscape-5x3.jpg">
+<img class="center" alt="Zrzut ekranu z napisami z elementu track w Chrome na Androida" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 ### Dodawanie elementu track
 

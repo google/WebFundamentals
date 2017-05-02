@@ -49,6 +49,8 @@ toc:
         path: /web/tools/lighthouse/audits/alt-attribute
       - title: First Meaningful Paint
         path: /web/tools/lighthouse/audits/first-meaningful-paint
+      - title: Has A Theme-Color Meta Tag
+        path: /web/tools/lighthouse/audits/theme-color
       - title: Has A Viewport Meta Tag With width Or initial-scale
         path: /web/tools/lighthouse/audits/has-viewport-meta-tag
       - title: Manifest Contains Icons at Least 192px
@@ -73,6 +75,8 @@ toc:
         path: /web/tools/lighthouse/audits/tabindex
       - title: Opens External Anchors Using rel="noopener"
         path: /web/tools/lighthouse/audits/noopener
+      - title: Oversized Images
+        path: /web/tools/lighthouse/audits/oversized-images
       - title: Perceptual Speed Index
         path: /web/tools/lighthouse/audits/speed-index
       - title: Redirects HTTP Traffic To HTTPS

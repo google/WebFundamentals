@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-28T19:35:28Z #}
+{# wf_updated_on: 2017-04-26T00:11:15Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -50,7 +50,7 @@ Open your browser and navigate to __localhost:8080/responsive-images-lab/app__.
 
 
 
-Note: If you have installed a service worker on localhost before, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service workers and <a href="tools-for-pwa-developers#clearcache">clear all service worker caches</a> for localhost so that they do not interfere with the lab.
 
 
 
@@ -133,6 +133,12 @@ srcset="images/sfo-1600_large.jpg 1600w, images/sfo-1000_large.jpg 1000w, images
 ```
 
 Save the code and refresh the page in the browser. Refresh the page at various window sizes and [check the network requests](tools-for-pwa-developers#viewnetwork) to see which version of the image is fetched at each size. On a 1x display, the browser fetches __sfo-500_small.jpg__ when the window is narrower than 500px, __sfo-800_medium.jpg__ when it is narrower than 800px, and so forth.
+
+
+
+Note: If a larger version of an image is available in the browser (HTTP) cache, some browsers might load that image even if it is not the one specified by <code>srcset</code> (because if the browser already has a higher resolution image stored locally, why not use it?). To disable this for the lab, make sure your <a href="tools-for-pwa-developers#disablehttpcache">HTTP cache is disabled</a> in developer tools.
+
+
 
 
 

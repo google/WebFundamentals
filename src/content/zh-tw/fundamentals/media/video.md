@@ -102,7 +102,7 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 
 請使用瀏覽器開發人員工具檢查回應標題中的 `Accept-Ranges: bytes`：
 
-<img class="center" alt="Chrome 開發人員工具螢幕截圖：Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Chrome 開發人員工具螢幕截圖：Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### 納入海報圖片
 
@@ -120,7 +120,7 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 
 <div class="attempt-left">
   <figure>
-    <img alt="Android Chrome screenshot, portrait: no poster" src="img/Chrome-Android-video-no-poster.png">
+    <img alt="Android Chrome screenshot, portrait: no poster" src="images/Chrome-Android-video-no-poster.png">
     <figcaption>
       Android Chrome screenshot, portrait: no poster
      </figcaption>
@@ -128,7 +128,7 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Android Chrome screenshot, portrait: with poster" src="img/Chrome-Android-video-poster.png">
+    <img alt="Android Chrome screenshot, portrait: with poster" src="images/Chrome-Android-video-poster.png">
     <figcaption>
       Android Chrome screenshot, portrait: with poster
      </figcaption>
@@ -259,7 +259,7 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 
 <div class="attempt-left">
   <figure>
-    <img alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="img/Chrome-Android-portrait-video-unstyled.png">
+    <img alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png">
     <figcaption>
       Android Chrome screenshot, portrait: unstyled video element overflows viewport
     </figcaption>
@@ -267,7 +267,7 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="img/Chrome-Android-landscape-video-unstyled.png">
+    <img alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png">
     <figcaption>
       Android Chrome screenshot, landscape: unstyled video element overflows viewport
     </figcaption>
@@ -319,13 +319,13 @@ iPhone 版 Safari 可以在橫向和縱向之間自由轉換：
 
 <div class="attempt-left">
   <figure>
-    <img  alt="Screenshot of video playing in Safari on iPhone, portrait" src="img/iPhone-video-playing-portrait.png">
+    <img  alt="Screenshot of video playing in Safari on iPhone, portrait" src="images/iPhone-video-playing-portrait.png">
     <figcaption>Screenshot of video playing in Safari on iPhone, portrait</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Screenshot of video playing in Safari on iPhone, landscape" src="img/iPhone-video-playing-landscape.png">
+    <img alt="Screenshot of video playing in Safari on iPhone, landscape" src="images/iPhone-video-playing-landscape.png">
     <figcaption>Screenshot of video playing in Safari on iPhone, landscape</figcaption>
   </figure>
 </div>
@@ -336,7 +336,7 @@ iPad 和 Android 版 Chrome 中的裝置方向問題十分棘手。
 舉例來說，如果沒有特別設定，在 iPad 上橫向播放的影片看起來是這樣的：
 
 <img class="center" alt="iPad Retina 版 Safari 的影片播放螢幕截圖 (橫向)"
-src="img/iPad-Retina-landscape-video-playing.png">
+src="images/iPad-Retina-landscape-video-playing.png">
 
 只要使用 CSS 為影片設定 `width: 100%` 或 `max-width: 100%`，即可解決許多因裝置方向造成的版面配置問題。您還可以考慮將全螢幕模式當作替代方案。
 
@@ -344,15 +344,15 @@ src="img/iPad-Retina-landscape-video-playing.png">
 
 不同的平台展示影片的方式也不相同。iPhone 版 Safari 會在網頁中內嵌影片元素，但會以全螢幕模式播放影片：
 
-<img class="center" alt="iPhone 中的影片元素螢幕截圖 (縱向)" src="img/iPhone-video-with-poster.png">
+<img class="center" alt="iPhone 中的影片元素螢幕截圖 (縱向)" src="images/iPhone-video-with-poster.png">
 
 在 Android 裝置中，使用者可以點擊全螢幕圖示來請求全螢幕模式。但是在預設情況下，瀏覽器會以內嵌模式播放影片：
 
-<img class="center" alt="在 Android 版 Chrome 中播放影片的螢幕截圖 (縱向)" src="img/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="在 Android 版 Chrome 中播放影片的螢幕截圖 (縱向)" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 iPad 版 Safari 以內嵌模式播放影片：
 
-<img class="center" alt="iPad Retina 版 Safari 的影片播放螢幕截圖 (橫向)" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="iPad Retina 版 Safari 的影片播放螢幕截圖 (橫向)" src="images/iPad-Retina-landscape-video-playing.png">
 
 ### 控制內容的全螢幕模式
 
@@ -412,7 +412,7 @@ Note: Android 版 Chrome、iOS Safari 和目前所有的電腦瀏覽器 (Firefox
 
 使用 track 元素後，字幕看起來像這樣：
 
- <img class="center" alt="展示使用 track 元素在 Android 版 Chrome 中顯示字幕的螢幕截圖" src="img/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="展示使用 track 元素在 Android 版 Chrome 中顯示字幕的螢幕截圖" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 ### 新增 track 元素
 

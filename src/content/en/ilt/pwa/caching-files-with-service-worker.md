@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:08:52Z #}
+{# wf_updated_on: 2017-04-25T15:50:01Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -23,7 +23,7 @@ Codelab:  [Caching Files with Service Worker](lab-caching-files-with-service-wor
 
 The Service Worker API comes with a  [Cache interface](https://developer.mozilla.org/en-US/docs/Web/API/Cache), that lets you create stores of responses keyed by request. While this interface was intended for service workers it is actually exposed on the window, and can be accessed from anywhere in your scripts. The entry point is `caches`.
 
-You are responsible for implementing how your script (service worker) handles updates to the cache. All updates to items in the cache must be explicitly requested; items will not expire and must be deleted.
+You are responsible for implementing how your script (service worker) handles updates to the cache. All updates to items in the cache must be explicitly requested; items will not expire and must be deleted. 
 
 <div id="whentostore"></div>
 
@@ -256,6 +256,8 @@ self.addEventListener('fetch', function(event) {
 This caches the network responses as they are fetched.
 
 Sometimes you can replace the current data when new data arrives (for example, game leaderboard), but be careful not to hide or replace something the user may be interacting with. For example, if you load a page of blog posts from the cache and then add new posts to the top of the page as they are fetched from the network, you might consider adjusting the scroll position so the user is uninterrupted. This can be a good solution if your app layout is fairly linear. 
+
+<div id="generic-fallback"></div>
 
 #### Generic fallback
 

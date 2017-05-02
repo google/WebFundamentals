@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:09:38Z #}
+{# wf_updated_on: 2017-04-25T18:13:02Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -26,7 +26,14 @@ A  [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Wor
 Because workers run separately from the main thread, service workers are independent of the application they are associated with. This has several consequences:
 
 * Because the service worker is not blocking (it's designed to be fully asynchronous) synchronous XHR and `localStorage` cannot be used in a service worker.
-* The service worker can receive push messages from a server when the app is not active. This lets your app show push notifications to the user, even when the browser is not open.
+* The service worker can receive push messages from a server when the app is not active. This lets your app show push notifications to the user, even when it is not open in the browser.
+
+
+
+Note: Whether notifications are received when the browser itself is not running depends on how the browser is integrated with the OS. For instance on desktop OS's, Chrome and Firefox only receive notifications when the browser is running. However, Android is designed to wake up any browser when a push message is received and will always receive push messages regardless of browser state. See the  [FAQ](https://web-push-book.gauntface.com/chapter-07/01-faq/#why-doesnt-push-work-when-the-browser-is-closed) in Matt Gaunt's  [Web Push Book](https://web-push-book.gauntface.com/) for more information.
+
+
+
 * The service worker can't access the DOM directly. To communicate with the page, the service worker uses the  [`postMessage()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) method to send data and a "message" event listener to receive data.
 
 Things to note about a service worker:
@@ -88,34 +95,29 @@ A service worker goes through three steps in its lifecycle:
 
 ### Registration and scope
 
-To __install__ a service worker, you need to __register__ it in your main JavaScript code. Registration tells the browser where your service worker is located, and to start installing it in the background. For example, you could include a `<script>` element in your site's __index.html__ file with the following code:
+To __install__ a service worker, you need to __register__ it in your main JavaScript code. Registration tells the browser where your service worker is located, and to start installing it in the background. Let's look at an example:
 
-#### index.html
+#### main.js
 
 ```
-// Check for browser support of serviceWorker
-if (!('serviceWorker' in navigator)) {
-  console.log('Service worker not supported');
-  return;
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+  .then(function(registration) {
+    console.log('Registration successful, scope is:', registration.scope);
+  })
+  .catch(function(error) {
+    console.log('Service worker registration failed, error:', error);
+  });
 }
-navigator.serviceWorker.register('/service-worker.js')
-.then(function(registration) {
-  // Successful registration
-  console.log('Registration successful, scope is:', registration.scope);
-})
-.catch(function(error) {
-  // Failed registration, service worker won't be installed
-  console.log('Service worker registration failed, error:', error);
-});
 ```
 
 This code starts by checking for browser support by examining `navigator.serviceWorker`. The service worker is then registered with `navigator.serviceWorker.register`, which returns a promise that resolves when the service worker has been successfully registered. The `scope` of the service worker is then logged with `registration.scope`. 
 
 The `scope` of the service worker determines which files the service worker controls, in other words, from which path the service worker will intercept requests. The default scope is the location of the service worker file, and extends to all directories below. So if __service-worker.js__ is located in the root directory, the service worker will control requests from all files at this domain.
 
-You can also set an arbitrary scope by passing in an additional parameter when registering. The code below shows an example.
+You can also set an arbitrary scope by passing in an additional parameter when registering. For example:
 
-#### index.html
+#### main.js
 
 ```
 navigator.serviceWorker.register('/service-worker.js', {
@@ -125,13 +127,13 @@ navigator.serviceWorker.register('/service-worker.js', {
 
 In this case we are setting the scope of the service worker to `/app/`, which means the service worker will control requests from pages like `/app/`, `/app/lower/` and `/app/lower/lower`, but not from pages like `/app` or `/`, which are higher. 
 
-If the service worker is already installed, `navigator.serviceWorker.register` just returns the registration object of the currently active service worker.
+If the service worker is already installed, `navigator.serviceWorker.register` returns the registration object of the currently active service worker.
 
 ### Installation
 
 Once the the browser registers a service worker, __installation__ can be attempted. This occurs if the service worker is considered to be new by the browser, either because the site currently doesn't have a registered service worker, or because there is a byte difference between the new service worker and the previously installed one. 
 
-A service worker installation triggers an `install` event in the installing service worker. We can include an `install` event listener in the service worker to perform some task when the service worker installs (such as  [caching the application shell](/web/fundamentals/instant-and-offline/offline-cookbook/#on-install-as-dependency)). An example of an installation event listener looks like this: 
+A service worker installation triggers an `install` event in the installing service worker. We can include an `install` event listener in the service worker to perform some task when the service worker installs. For instance, during the install, service workers can precache parts of a web app so that it loads instantly the next time a user opens it (see  [caching the application shell](/web/fundamentals/instant-and-offline/offline-cookbook/#on-install-as-dependency)). So, after that first load, you're going to benefit from instant repeat loads and your time to interactivity is going to be even better in those cases. An example of an installation event listener looks like this: 
 
 #### service-worker.js
 
@@ -154,7 +156,7 @@ Note: Simply refreshing the page is not sufficient to transfer control to a new 
 
 
 
-When the new service worker activates, an `activate` event is triggered in the activating service worker. This event listener is a good place to event to clean up outdated caches.
+When the new service worker activates, an `activate` event is triggered in the activating service worker. This event listener is a good place to clean up outdated caches (see the  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/#on-activate) for an example).
 
 #### service-worker.js
 
@@ -164,9 +166,7 @@ self.addEventListener('activate', function(event) {
 });
 ```
 
-Once activated, the service worker controls all pages that load within its scope, and starts listening for events from those pages. 
-
-However the pages in your app that are open are not under the service worker's scope since the service worker was not loaded when the pages opened. To put currently open pages under service worker control you must reload the page or pages (or use  [`Clients.claim()`](https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim)). Until then, requests from this page will bypass the service worker and operate like they normally would. This ensures consistency in your site; if a page loads without the service worker, so do its subresources.
+Once activated, the service worker controls all pages that load within its scope, and starts listening for events from those pages. However, pages in your app that were loaded before the service worker activation will not be under service worker control. The new service worker will only take over when you close and reopen your app, or if the service worker calls  [`clients.claim()`](https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim). Until then, requests from this page will not be intercepted by the new service worker. This is intentional as a way to ensure consistency in your site.
 
 <div id="events"></div>
 

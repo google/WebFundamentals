@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:14:30Z #}
+{# wf_updated_on: 2017-04-26T00:09:28Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -50,6 +50,12 @@ This lab shows you how you can automate tasks with  [gulp](https://github.com/gu
 
 
 If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs).
+
+
+
+Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service workers and <a href="tools-for-pwa-developers#clearcache">clear all service worker caches</a> for localhost so that they do not interfere with the lab.
+
+
 
 If you have a text editor that lets you open a project, open the __gulp-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
 
