@@ -350,7 +350,7 @@ flag in future versions of Chrome. See [https://crbug.com/546953#c152](https://b
 
 **So I still need Xvfb?**
 
-Nope. Headless Chrome doesn't use a window so a display server like Xvfb is
+No. Headless Chrome doesn't use a window so a display server like Xvfb is
 no longer needed. You can happily run your automated tests without it.
 
 What is Xvfb? Xvfb is an in-memory display server for Unix-like systems that enables you
@@ -366,7 +366,7 @@ Flexible container.
 
 **Can I use this with Selenium / WebDriver / ChromeDriver**?
 
-Right now, Selenium opens a full instance of Chrome. In other words, it's
+Right now, Selenium opens a full instance of Chrome. In other words, it's an
 automated solution but not completely headless. However, Selenium could use
 `--headless` in the future.
 
@@ -375,7 +375,7 @@ yourself.
 
 Note: you may encounter bugs using [ChromeDriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver).
 At the time of writing, the latest release (2.29) only supports Chrome 58.
-Headless Chrome requires Chrome 59+.
+Headless Chrome requires Chrome 59 or later.
 
 **How is this related to PhantomJS?**
 
