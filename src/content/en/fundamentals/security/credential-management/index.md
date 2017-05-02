@@ -23,7 +23,7 @@ removes friction from your sign-in flows.
 
 The Credential Management API:
 
-* **Makes sign-in flow simple** - Users can automatically signed back into a 
+* **Makes sign-in flow simple** - Users can be automatically signed back into a 
   site, even if their session has expired.
 * **Allows one tap sign in with account chooser** - A native account chooser is shown
   eliminating the sign in form.
