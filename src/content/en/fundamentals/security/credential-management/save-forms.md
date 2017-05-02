@@ -89,9 +89,9 @@ For example:
 
 To store a credential, first check if the API is available,
 then instantiate a
-[`PasswordCredential`](/web/fundamentals/security/credential-management/reference/passwordcredential)
+[`PasswordCredential`](https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential)
 with the form element as an argument.
-Call [`navigator.credentials.store()`](/web/fundamentals/security/credential-management/reference/navigator-credential-store).
+Call [`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store).
 If the API is not available,
 you can simply forward the profile information to the next step.
 

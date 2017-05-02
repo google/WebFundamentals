@@ -28,7 +28,7 @@ To enable auto sign-in:
 ### Get credential information
 
 To get credential information,
-invoke [`navigator.credential.get()`](/web/fundamentals/security/credential-management/reference#navigatorcredentialget).
+invoke [`navigator.credential.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get).
 Specify the type of credentials to request
 by giving it a `password` or  `federated`.
 
@@ -182,7 +182,7 @@ as part of getting credential information:
 
 Show an account chooser in response to a defined user action,
 for example, when the user taps the "Sign-In" button.
-Call [`navigator.credentials.get()`](/web/fundamentals/security/credential-management/reference#navigatorcredentialget),
+Call [`navigator.credentials.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get),
 and add `unmediated: false`, to show the account chooser:
 
     var signin = document.querySelector('#signin');
@@ -319,9 +319,9 @@ Popular examples include:
 Once authentication is done, you can store the identity information. The information you’ll store here is the `id` from the identity provider and a provider string that represents the identity provider (`name` and `iconURL` are optional).
 
 To store federated account details, instantiate a new 
-[`FederatedCredential`](/web/fundamentals/security/credential-management/reference#federatedcredential), object with the user's identifier and the provider's identifier.
+[`FederatedCredential`](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential), object with the user's identifier and the provider's identifier.
 Then invoke
-[`navigator.credentials.store()`](/web/fundamentals/security/credential-management/reference#navigatorcredentialstorecred) to store the identity information.
+[`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store) to store the identity information.
 
 For example:
 

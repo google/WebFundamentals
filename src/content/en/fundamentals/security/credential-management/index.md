@@ -15,7 +15,7 @@ between the site and the browser for seamless sign-in across devices.
 
 The Credential Management API:
 
-* **Removes friction from sign-in flows** - Users can be automatically signed back into a site even after their session expires.
+* **Removes friction from sign-in flows** - Users can be automatically signed back into a site even if their session has expired or they saved credentials on another device.
 * **Allows one tap sign in with account chooser** - Users can choose an account in a native account chooser.
 * **Stores credentials** - Your application can store either a username and password combination or even federated account details. These credentials can be synced across devices by the browser.
 
@@ -37,7 +37,7 @@ manager and use them to log in the user.
 For example:
 
 1. When a user lands on your site and they are not signed in, 
-   call [`navigator.credential.get()`](/web/fundamentals/security/credential-management/reference#navigatorcredentialsget).
+   call [`navigator.credential.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get).
 2. Use the retrieved credentials to sign in the user.
 3. Update the UI to indicate the user has been signed in.
 
@@ -49,18 +49,18 @@ Learn more in
 If the user signed in with a federated identity provider such as Google
 Sign-In, Facebook, GitHub:
 
-1. After the user successfully signs in or creates an account, create the [`FederatedCredential`](/web/fundamentals/security/credential-management/reference#federatedcredential) with the user's email address as
-   the ID and specify the identity provider with `.provider`.
-2. Save the credential object using [`navigator.credentials.store()`](/web/fundamentals/security/credential-management/reference#navigatorcredentialsstorecred).
+1. After the user successfully signs in or creates an account, create the [`FederatedCredential`](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential) with the user's email address as
+   the ID and specify the identity provider with `FederatedCredentials.provider`.
+2. Save the credential object using [`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store).
 
 Learn more in
 [Sign In Users](/web/fundamentals/security/credential-management/retrieve-credentials#federated-login).
 
 If the user signed in with a username and password:
 
-1. After the user successfully signs in or creates an account, create the [`PasswordCredential`](/web/fundamentals/security/credential-management/reference#passwordcredential) with the user ID and
+1. After the user successfully signs in or creates an account, create the [`PasswordCredential`](https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential) with the user ID and
    the password.
-2. Save the credential object using [`navigator.credentials.store()`](/web/fundamentals/security/credential-management/reference#navigatorcredentialsstorecred).
+2. Save the credential object using [`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store).
 
 Learn more in
 [Save Credentials from Forms](/web/fundamentals/security/credential-management/save-forms).
