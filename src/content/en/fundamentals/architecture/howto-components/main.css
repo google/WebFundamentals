@@ -44,7 +44,7 @@ ul.literate > li > .literate-code {
 ul.literate > li > .literate-text {
   flex-shrink: 0;
   padding-right: 2em;
-  width: 400px;
+  width: 300px;
 }
 ul.literate > li > .literate-code {
   border-left-width: 1px;
@@ -68,7 +68,7 @@ ul.literate > li:last-of-type > .literate-text {
   padding-bottom: 2em;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   ul.literate li {
     flex-direction: column;
   }
@@ -106,4 +106,9 @@ code.literate-code.example {
   display: block;
   margin: 20px 0;
   padding: 20px;
+}
+pre.prettyprint {
+  width: 100%;
+  margin: 0;
+  line-height: initial;
 }

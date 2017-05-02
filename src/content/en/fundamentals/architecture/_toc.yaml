@@ -5,15 +5,17 @@ toc:
     path: /web/fundamentals/architecture/app-shell
   - title: "HowTo: Components"
     section:
-    - title: "Intro"
+    - title: "Overview"
       path: /web/fundamentals/architecture/howto-components/howto-components
-    - title: "<howto-radio-group>"
-      path: /web/fundamentals/architecture/howto-components/howto-radio-group
     - title: "<howto-checkbox>"
       path: /web/fundamentals/architecture/howto-components/howto-checkbox
+    - title: "<howto-radio-group>"
+      path: /web/fundamentals/architecture/howto-components/howto-radio-group
     - title: "<howto-tabs>"
       path: /web/fundamentals/architecture/howto-components/howto-tabs
     - title: "<howto-tooltip>"
       path: /web/fundamentals/architecture/howto-components/howto-tooltip
+    - title: "<howto-tree>"
+      path: /web/fundamentals/architecture/howto-components/howto-tree
 
 
