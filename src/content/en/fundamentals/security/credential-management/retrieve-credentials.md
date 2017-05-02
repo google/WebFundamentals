@@ -278,7 +278,8 @@ To implement federated login:
 ### Authenticate user with third-party identity
 
 When a user taps on a federated login button,
-run the specific identity provider authentication flow with the `FederatedCredential`.
+run the specific identity provider authentication flow with the 
+[`FederatedCredential`](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential).
 
 For example, if the provider is Google, use the
 [Google Sign-In JavaScript library](/identity/sign-in/web/):
