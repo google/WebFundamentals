@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2017-04-27 #}
-{# wf_published_on: 2017-05-01 #}
+{# wf_updated_on: 2017-05-01 #}
+{# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
 {# wf_featured_image: /web/updates/images/generic/headless-chrome.png #}
@@ -22,7 +22,7 @@ figure {
 ### TL;DR {: #tldr .hide-from-toc}
 
 [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
-is a way to run the Chrome browser in a headless environment. Essentially, running
+is shipping in Chrome 59. It's a way to run the Chrome browser in a headless environment. Essentially, running
 Chrome without chrome! It brings **all modern web platform features** provided
 by Chromium and the Blink rendering engine to the command line.
 
@@ -32,13 +32,14 @@ A headless browser is a great tool for automated testing and server environments
 don't need a visible UI shell. For example, you may want to run some tests against
 a real web page, create a PDF of it, or just inspect how the browser renders an URL.
 
-Note: Headless mode is available on Mac and Linux in **Chrome 59**.
-[Windows support](https://bugs.chromium.org/p/chromium/issues/detail?id=686608) is coming soon!
+Caution: Headless mode is available on Mac and Linux in **Chrome 59**.
+[Windows support](https://bugs.chromium.org/p/chromium/issues/detail?id=686608) is coming soon! To
+check what version of Chrome you have, open `chrome://version`.
 
 ## Starting Headless (CLI) {: #cli }
 
 The easiest way to get started with headless mode is to open the Chrome binary
-from the command line. If you've got **Chrome 59+** installed, start Chrome with the `--headless` flag:
+from the command line. If you've got Chrome 59+ installed, start Chrome with the `--headless` flag:
 
     chrome \
       --headless \                   # Runs Chrome in headless mode.
@@ -54,20 +55,19 @@ vary from platform to platform. Since I'm on Mac, I created convenient aliases
 for each version of Chrome that I have installed.
 
 If you're on the stable channel of Chrome and cannot get the Beta, I recommend
-using `chrome-canary` until Chrome 59 hits stable:
+using `chrome-canary`:
 
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
     alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
     alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
+
+Download Chrome Canary [here]([download Canary](https://www.google.com/chrome/browser/canary.html)).
 
 ## Command line features {: features }
 
 In some cases, you may not need to [programmatically script](#node) Headless Chrome.
 There are some [useful command line flags](https://cs.chromium.org/chromium/src/headless/app/headless_shell_switches.cc)
 to perform common tasks.
-
-Note: You may also need to include the `--disable-gpu` flag for now when
-running these commands.
 
 ### Printing the DOM {: dom }
 
