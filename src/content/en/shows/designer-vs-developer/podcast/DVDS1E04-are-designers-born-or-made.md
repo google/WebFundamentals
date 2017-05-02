@@ -2,13 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: This week we speak to Paul Lewis design nature vs nurture.
 
-{# wf_updated_on: 2017-04-24 #}
+{# wf_updated_on: 2017-05-02 #}
 {# wf_published_on: 2017-04-24 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E04-Are-designers-and-developers-born-or-made.mp3 #}
 {# wf_podcast_duration: 00:21:32 #}
 {# wf_podcast_fileSize: 20686825 #}
 {# wf_podcast_subtitle: This week we speak to Paul Lewis design nature vs nurture. #}
-{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s01-e04-cover.jpg #}
+{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s01-e04-cover-large.jpg #}
 
 # Are designers born or made? {: .page-title }
 

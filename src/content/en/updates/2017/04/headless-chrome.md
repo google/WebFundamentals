@@ -4,6 +4,7 @@ description: Getting started with Headless Chrome
 
 {# wf_updated_on: 2017-04-27 #}
 {# wf_published_on: 2017-05-01 #}
+
 {# wf_tags: chrome59,headless,testing #}
 {# wf_featured_image: /web/updates/images/generic/headless-chrome.png #}
 {# wf_featured_snippet: Headless Chrome (shipping in Chrome 59) is a way to run the Chrome browser in a headless environment. It brings all modern web platform features provided by Chromium and the Blink rendering engine to the command line. #}
@@ -211,7 +212,7 @@ To control the browser, we need the DevTools protocol!
 ### Retrieving information about the page {: #useprotocol }
 
 [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface)
-is a great Node package that provides high-level APIs on top of the
+is a great Node package that provides usable APIs for the
 [DevTools Protocol][dtprotocol]. You can use it to orchestrate Headless
 Chrome, navigate to pages, and fetch information about those pages.
 

@@ -2,13 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: This week we speak to Ade Oshineye about native web vs apps.
 
-{# wf_updated_on: 2017-04-10 #}
+{# wf_updated_on: 2017-05-02 #}
 {# wf_published_on: 2017-04-10 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E03-Adopting-the-native-language-of-the-web.mp3 #}
 {# wf_podcast_duration: 00:11:36 #}
 {# wf_podcast_fileSize: 11135975 #}
 {# wf_podcast_subtitle: This week we speak to Ade Oshineye about native web vs apps. #}
-{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s01-e03-cover.jpg #}
+{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s01-e03-cover-large.jpg #}
 
 # Adopting the native language of the web {: .page-title }
 

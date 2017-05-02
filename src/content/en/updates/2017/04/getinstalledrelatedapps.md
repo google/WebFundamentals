@@ -24,9 +24,16 @@ to know if your user has your app installed on their current device. If the user
 has the app installed there might be no reason to prompt for notifications from
 the web as well.
 
-In Chrome 59 we are introducing a new API called `
-edRelatedApps()`.
+In Chrome 59 we are introducing a new API called `getInstalledRelatedApps()`.
 This new API lets you determine if your native app is installed on a device.
+
+Note: This API is behind an [Origin 
+Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/explainer.md), 
+this means that we are in an experiemental mode and are actively looking for 
+feedback. You have to [opt your 
+site](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md) 
+into this trial because it is not available broadly on the web. You can now 
+[sign up for the trial](https://docs.google.com/a/google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform).
 
 This is an incredibly powerful API because it gives you access to information
 that you can't infer from the web. This means that there must be a provable
@@ -35,16 +42,16 @@ three core components that make this work.
 
 1. There is a reference to your native app from your Web App Manifest via the
    related_applications property. This is your site saying that it is related
-   to the native app
+   to the native app.
 1. There is a native app installed with the same package name as the one
    referenced in your Web App Manifest. The app must have a reference from your
-   AndroidManifest.xml via the asset_statements element. This asserts that your
-   native app has a relationship with your site
-1. If the above two criteria are met then a call to getInstalledRelatedApps()
+   `AndroidManifest.xml` via the asset_statements element. This asserts that
+   your native app has a relationship with your site.
+1. If the above two criteria are met then a call to `getInstalledRelatedApps()`
    will resolve the list of apps.
 
 These three steps are in place to ensure that only you can query your apps and
-that you have reliably demonstrated ownership of the site and app, which are now
+that you have reliably demonstrated ownership of the site and app. They are now
 described in more detail.
 
 ### Define the relationship to your native app in your Web App Manifest
@@ -65,7 +72,7 @@ unique identifier for your app on that platform.
       ...
     }
 
-**Note:** Only Chrome on Android supports this, so the platform must be set to
+Note: Only Chrome on Android supports this, so the platform must be set to
 "play". You also need your "id" to be the exact package name for your Android
 App.
 
@@ -89,7 +96,7 @@ Creating the link back to your site is possible by adding the following to your
       </application>
     </manifest>
 
-And then adding the following to your strings.xml resource, replacing the
+And then adding the following to your `strings.xml` resource, replacing the
 `<site-domain>` with the domain of your site:
 
     <string name="asset_statements">
@@ -105,10 +112,10 @@ And then adding the following to your strings.xml resource, replacing the
 ### Test for presence of the app
 
 Once you have the required metadata deployed on your app and on your site, you
-should be able to call navigator.getInstalledRelatedApps(). This returns a
+should be able to call `navigator.getInstalledRelatedApps()`. This returns a
 promise that resolves to the list of apps that are installed on the user's
-device that meet the above criteria (i.e., have been proved to be owned 
-by the app developer).
+device that meet the above criteria (i.e., have been proved to be owned by the
+app developer).
 
 
     navigator.getInstalledRelatedApps().then(relatedApps => {
@@ -145,21 +152,21 @@ In your `strings.xml` set the "site" property value to be
 Ensure that your Web App Manifest has the correct package name for your locally
 installed App. When you deploy your Android App, make sure that you update the
 site property value to be the correct URL for your site. The most efficient way
-to manage this is through your product flavours (Release, Debug etc) which
+to manage this is through your product flavours (Release, Debug, etc) which
 allows you to specify different resource files based on the build target,
 meaning that your Release target will only ever contain your live domain.
 
-## Usecases
+## Use cases
 
 There are many different ways that you can use this API. Here are some quick
 examples of possible uses and common pieces of functionality that you will find
 useful.
 
-### Cancel the progressive web app installation if the native app is installed?
+### Cancel the progressive web app installation if the native app is installed
 
 You can intercept the
-"[beforeinstallprompt](/web/fundamentals/engage-and-retain/app-install-banners/"
-event. The general flow is to call preventDefault() on the event so the banner
+[`beforeinstallprompt`](/web/fundamentals/engage-and-retain/app-install-banners/)
+event. The general flow is to call `preventDefault()` on the event so the banner
 doesn't show right away, check to see if there are no apps installed and if so
 call `prompt()` to show the banner.
 
@@ -167,7 +174,7 @@ call `prompt()` to show the banner.
       if (navigator.getInstalledRelatedApps) {
         e.preventDefault();  // Stop automated install prompt.
         navigator.getInstalledRelatedApps().then(relatedApps => {
-	        if (relatedApps.length == 0) {
+          if (relatedApps.length == 0) {
             e.prompt();
           }
         });
@@ -181,7 +188,7 @@ from both your Native Application and your Web App. There are a couple of
 options available to you.
 
 If the user has your application installed and they don't have notifications
-enabled already on your site, you can use the getInstalledRelatedApps() method
+enabled already on your site, you can use the `getInstalledRelatedApps()` method
 to selectively disable the UI that the user would normally use to enable the
 feature.
 
@@ -189,7 +196,7 @@ feature.
       if (navigator.getInstalledRelatedApps) {
         navigator.getInstalledRelatedApps()
         .then(apps => {
-          if(apps.length > 0) { /\* Hide the UI \*/ }
+          if(apps.length > 0) { /* Hide the UI */ }
         });
       }
     });
@@ -212,16 +219,16 @@ enabled you can unregister the push subscription during the onload event.
 This API is not available directly to the service worker so it is not possible
 to de-duplicate notifications as they arrive at your service worker.
 
-### Detecting if your PWA is installed from a native app
+### Detect if your PWA is installed from a native app
 
-If the user has installed your Progressive Web App through the old Add to 
-Homescreen method (i.e, in anything prior to Chrome 58) then it is not 
-possible to detect if your app is installed. Chrome added your site to 
+If the user has installed your Progressive Web App through the old Add to
+Homescreen method (i.e, in anything prior to Chrome 58) then it is not
+possible to detect if your app is installed. Chrome added your site to
 the Homescreen as a bookmark, and this data was not exposed to the system.
 
 If the user has installed the web app using the new Web APK functionality,
-it is possible to determine if your web app is installed. If you know your
-package id of your Web APK then you can use the 
+it is possible to determine if your web app is installed. If you know the
+package name of your Web APK then you can use the
 `context.getPackageManager().getApplicationInfo()` API to determine if it
 is installed. Please note that this is experiemental.
 
