@@ -27,6 +27,14 @@ the web as well.
 In Chrome 59 we are introducing a new API called `getInstalledRelatedApps()`.
 This new API lets you determine if your native app is installed on a device.
 
+Note: This API is behind an [Origin 
+Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/explainer.md), 
+this means that we are in an experiemental mode and are actively looking for 
+feedback. You have to [opt your 
+site](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md) 
+into this trial because it is not available broadly on the web. You will be 
+able to sign up for the trial in the coming days.
+
 This is an incredibly powerful API because it gives you access to information
 that you can't infer from the web. This means that there must be a provable
 bi-directional relationship between your site and your native app. There are
@@ -64,7 +72,7 @@ unique identifier for your app on that platform.
       ...
     }
 
-**Note:** Only Chrome on Android supports this, so the platform must be set to
+Note: Only Chrome on Android supports this, so the platform must be set to
 "play". You also need your "id" to be the exact package name for your Android
 App.
 
