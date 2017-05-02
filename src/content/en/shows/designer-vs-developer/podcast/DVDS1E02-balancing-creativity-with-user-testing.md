@@ -8,7 +8,7 @@ description: This week we speak to Ewa Gasperowicz about UX and creativity.
 {# wf_podcast_duration: 00:09:21 #}
 {# wf_podcast_fileSize: 8981734 #}
 {# wf_podcast_subtitle: This week we speak to Ewa Gasperowicz about UX and creativity. #}
-{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s01-e02-cover.jpg #}
+{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s01-e02-cover-large.jpg #}
 
 # Balancing creativity with user testing {: .page-title }
 

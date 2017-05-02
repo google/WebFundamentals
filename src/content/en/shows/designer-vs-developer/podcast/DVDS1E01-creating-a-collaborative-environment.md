@@ -8,7 +8,7 @@ description: This week we speak to Jake Archibald about communication.
 {# wf_podcast_duration: 00:13:28 #}
 {# wf_podcast_fileSize: 12609607 #}
 {# wf_podcast_subtitle: This week we speak to Jake Archibald about communication. #}
-{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-series-cover.jpg #}
+{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-series-cover-large.jpg #}
 
 # Creating a collaborative environment {: .page-title }
 

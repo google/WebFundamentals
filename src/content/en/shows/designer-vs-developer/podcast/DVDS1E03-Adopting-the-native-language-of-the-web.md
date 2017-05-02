@@ -8,7 +8,7 @@ description: This week we speak to Ade Oshineye about native web vs apps.
 {# wf_podcast_duration: 00:11:36 #}
 {# wf_podcast_fileSize: 11135975 #}
 {# wf_podcast_subtitle: This week we speak to Ade Oshineye about native web vs apps. #}
-{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s01-e03-cover.jpg #}
+{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s01-e03-cover-large.jpg #}
 
 # Adopting the native language of the web {: .page-title }
 
