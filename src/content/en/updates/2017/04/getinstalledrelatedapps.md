@@ -32,8 +32,8 @@ Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/explainer.md),
 this means that we are in an experiemental mode and are actively looking for 
 feedback. You have to [opt your 
 site](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md) 
-into this trial because it is not available broadly on the web. You will be 
-able to sign up for the trial in the coming days.
+into this trial because it is not available broadly on the web. You can now 
+[sign up for the trial](https://docs.google.com/a/google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform).
 
 This is an incredibly powerful API because it gives you access to information
 that you can't infer from the web. This means that there must be a provable
