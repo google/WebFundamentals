@@ -203,7 +203,7 @@ To control the browser, we need the DevTools protocol!
 ### Retrieving information about the page {: #useprotocol }
 
 [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface)
-is a great Node package that provides usable APIs for the the
+is a great Node package that provides usable APIs for the
 [DevTools Protocol][dtprotocol]. You can use it to orchestrate Headless
 Chrome, navigate to pages, and fetch information about those pages.
 
