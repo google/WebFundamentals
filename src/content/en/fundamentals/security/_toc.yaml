@@ -27,5 +27,3 @@ toc:
         path: /web/fundamentals/security/credential-management/retrieve-credentials
       - title: Save Credentials from Forms
         path: /web/fundamentals/security/credential-management/save-forms
-      - title: API Reference
-        path: /web/fundamentals/security/credential-management/reference        
