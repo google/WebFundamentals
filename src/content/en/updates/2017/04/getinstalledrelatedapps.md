@@ -43,7 +43,7 @@ three core components that make this work.
    will resolve the list of apps.
 
 These three steps are in place to ensure that only you can query your apps and
-that you have reliably demonstrated ownership of the site and app, which are now
+that you have reliably demonstrated ownership of the site and app. They are now
 described in more detail.
 
 ### Define the relationship to your native app in your Web App Manifest
@@ -148,13 +148,13 @@ to manage this is through your product flavours (Release, Debug, etc) which
 allows you to specify different resource files based on the build target,
 meaning that your Release target will only ever contain your live domain.
 
-## Usecases
+## Use cases
 
 There are many different ways that you can use this API. Here are some quick
 examples of possible uses and common pieces of functionality that you will find
 useful.
 
-### Cancel the progressive web app installation if the native app is installed?
+### Cancel the progressive web app installation if the native app is installed
 
 You can intercept the
 [`beforeinstallprompt`](/web/fundamentals/engage-and-retain/app-install-banners/)
@@ -211,7 +211,7 @@ enabled you can unregister the push subscription during the onload event.
 This API is not available directly to the service worker so it is not possible
 to de-duplicate notifications as they arrive at your service worker.
 
-### Detecting if your PWA is installed from a native app
+### Detect if your PWA is installed from a native app
 
 If the user has installed your Progressive Web App through the old Add to
 Homescreen method (i.e, in anything prior to Chrome 58) then it is not
