@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2017-04-27 #}
+{# wf_updated_on: 2017-05-01 #}
 {# wf_published_on: 2017-05-01 #}
 {# wf_tags: chrome59,headless,testing #}
 {# wf_featured_image: /web/updates/images/generic/headless-chrome.png #}
