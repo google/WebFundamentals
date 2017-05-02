@@ -54,7 +54,7 @@ Trova più codelabs
   </p>
 </div>
 <div class="attempt-right">
-  <a href="codelabs/debugging-service-workers/">
+  <a href="codelabs/push-notifications/">
 	Aggiunta notifiche push
   </a>
   <p>
@@ -69,7 +69,7 @@ Trova più codelabs
 Questo codelab ti aiuterà ad imparare ad identificare e correggere i 
 colli di bottiglia di prestazioni di un'applicazione web.
 
-[Il primo sito multi-dispositivo](your-first-multi-screen-site/)
+[Il tuo primo sito multi-dispositivo](your-first-multi-screen-site/)
 Il web è accessibile su una vasta gamma di dispositivi, dal piccolo 
 schermo dei telefoni ai grandi schermi televisivi. Ogni dispositivo 
 presenta i propri vantaggi e vincoli. Come sviluppatore web, ti aspetti 

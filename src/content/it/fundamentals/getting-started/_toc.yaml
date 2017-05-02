@@ -1,0 +1,33 @@
+toc:
+  - title: Per Iniziare
+    section:
+    - title: Benvenuto
+      path: /web/fundamentals/getting-started/
+    - title: Codelabs
+      section:
+      - title: La tua prima Web App Progressiva
+        path: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
+      - title: Debugging Service Workers
+        path: /web/fundamentals/getting-started/codelabs/debugging-service-workers/
+      - title: La tua prima Web App Offline
+        path: /web/fundamentals/getting-started/codelabs/offline/
+      - title: La tua prima Noficia Push Web
+        path: /web/fundamentals/getting-started/codelabs/push-notifications/
+      - title: Trova e correggi problemi di prestazioni in Web App
+        path: /web/fundamentals/getting-started/codelabs/web-perf/
+      - title: Avvia il tuo sito con il Web Starter Kit
+        path: /web/fundamentals/getting-started/web-starter-kit/
+      - title: Il tuo primo sito multi-dispositivo
+        path: /web/fundamentals/getting-started/your-first-multi-screen-site/
+    - title: Cosa rende un Sito Buono?
+      path: /web/fundamentals/getting-started/principles/
+    - title: "Service Workers: una introduzione"
+      path: /web/fundamentals/getting-started/primers/service-workers
+    - title: "JavaScript Promises: una introduzione"
+      path: /web/fundamentals/getting-started/primers/promises
+    - title: JavaScript Async Functions
+      path: /web/fundamentals/getting-started/primers/async-functions
+    - title: "Shadow DOM v1: Self-Contained Web Components"
+      path: /web/fundamentals/getting-started/primers/shadowdom
+    - title: "Custom Elements v1: Reusable Web Components"
+      path: /web/fundamentals/getting-started/primers/customelements
