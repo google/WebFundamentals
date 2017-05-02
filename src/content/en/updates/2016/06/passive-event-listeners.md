@@ -19,11 +19,9 @@ New to Chrome 51, passive event listeners are an emerging web standard that prov
   </iframe>
 </div>
 
-<aside class="note">
-  <p><strong>Note:</strong> <span>The basic `scroll` event cannot be canceled, so it does not need
+Note: The basic `scroll` event cannot be canceled, so it does not need
   to be set passive. However, you should still [prevent expensive work][mdn-scroll] from being
-  completed in the handler.</span></p>
-</aside>
+  completed in the handler.
 
 [mdn-scroll]: https://developer.mozilla.org/en-US/docs/Web/Events/scroll#Example
 
