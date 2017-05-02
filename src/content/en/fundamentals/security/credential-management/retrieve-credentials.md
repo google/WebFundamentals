@@ -18,6 +18,8 @@ let them select the account with just one tap using the account chooser.
 
 Auto sign-in can happen anywhere on your website;
 not only the top page but other leaf pages too.
+This is useful when users reach various pages in your website,
+via a search engine.
 
 To enable auto sign-in:
 
@@ -103,15 +105,6 @@ update the UI or forward the user to the personalized page:
 
 ### Don’t forget to show authentication error message
 
-One important tip: if you succeed in obtaining a credential object 
-but fail to authenticate the user, you should show an error message:
-
-        }).catch(error => {
-          showError('Sign-in Failed');
-        });
-      }
-    }
-
 To avoid user confusion,
 users should see a blue toast saying “Signing in”
 at the time of getting the credential object:
@@ -121,6 +114,15 @@ at the time of getting the credential object:
     <img src="imgs/auto-sign-in.png" alt="Blue toast showing user is signing in.">
   </figure>
 </div>
+
+One important tip: if you succeed in obtaining a credential object 
+but fail to authenticate the user, you should show an error message:
+
+        }).catch(error => {
+          showError('Sign-in Failed');
+        });
+      }
+    }
 
 ### Full code example
 
@@ -279,25 +281,40 @@ When a user taps on a federated login button,
 run the specific identity provider authentication flow with the `FederatedCredential`.
 
 For example, if the provider is Google, use the
-[Google Sign-In JavaScript library](https://developers.google.com/identity/sign-in/web/):
+[Google Sign-In JavaScript library](/identity/sign-in/web/):
 
-    // Instantiate an auth object
-    var auth2 = gapi.auth2.getAuthInstance();
-
-    // Is this user already signed in?
-    if (auth2.isSignedIn.get()) {
-      var googleUser = auth2.currentUser.get();
-
-      // Same user as in the credential object?
-      if (googleUser.getBasicProfile().getEmail() === id) {
-        // Continue with the signed-in user.
-        return Promise.resolve(googleUser);
+    
+    navigator.credentials.get({
+      password: true,
+      unmediated: false,
+      federated: {
+        providers: [
+          'https://account.google.com'
+        ]
       }
-    }
+    }).then(function(cred) {
+      if (cred) {
 
-    // Otherwise, run a new authentication flow.
-    return auth2.signIn({
-      login_hint: id || ''
+        // Instantiate an auth object
+        var auth2 = gapi.auth2.getAuthInstance();
+
+        // Is this user already signed in?
+        if (auth2.isSignedIn.get()) {
+          var googleUser = auth2.currentUser.get();
+
+          // Same user as in the credential object?
+          if (googleUser.getBasicProfile().getEmail() === cred.id) {
+            // Continue with the signed-in user.
+            return Promise.resolve(googleUser);
+          }
+        }
+
+        // Otherwise, run a new authentication flow.
+        return auth2.signIn({
+          login_hint: id || ''
+        });
+
+      }
     });
 
 Google Sign-In results in an ID token as a proof of authentication.
@@ -311,12 +328,17 @@ Popular examples include:
 
 * [Google Sign-In](/identity/sign-in/web/)
 * [Facebook Login](https://developers.facebook.com/docs/facebook-login)
-* [Twitter Sign-int](https://dev.twitter.com/web/sign-in/implementing)
+* [Twitter Sign-in](https://dev.twitter.com/web/sign-in/implementing)
 * [GitHub OAuth](https://developer.github.com/v3/oauth/)
 
 ### Store identity information
 
-Once authentication is done, you can store the identity information. The information you’ll store here is the `id` from the identity provider and a provider string that represents the identity provider (`name` and `iconURL` are optional).
+Once authentication is done, you can store the identity information.
+The information you’ll store here is the `id` from the identity provider
+and a provider string that represents the identity provider
+(`name` and `iconURL` are optional).
+Learn more about this information in the
+[Credential Management specification](https://w3c.github.io/webappsec-credential-management/#credential).
 
 To store federated account details, instantiate a new 
 [`FederatedCredential`](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential), object with the user's identifier and the provider's identifier.
