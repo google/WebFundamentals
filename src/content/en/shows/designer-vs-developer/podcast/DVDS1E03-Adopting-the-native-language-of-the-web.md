@@ -21,7 +21,9 @@ Developer Relations Team, about how the incorrect use of design language has
 influenced us to adopt the UX practices of the native app world and how the web
 should seek to create a native language of its own.
 
-<img src="/web/shows/designer-vs-developer/podcast/images/dvd-s01-e03-cover.jpg" class="attempt-right">
+<img 
+src="/web/shows/designer-vs-developer/podcast/images/dvd-s01-e03-cover.jpg" 
+class="attempt-right">
 
 In this episode:
 
@@ -31,11 +33,13 @@ In this episode:
 * PWA directory.
 * How the web can retain its soul.
 
-<audio src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E03-Adopting-the-native-language-of-the-web.mp3" controls preload="none">
+<audio 
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E03-Adopting-the-native-language-of-the-web.mp3" controls preload="none">
 
 
 <a href="http://feeds.feedburner.com/DesignerVsDeveloper">
   Subscribe to Designer Vs Developer Podcast
 </a> 
 
-Watch <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ">the video recording</a>.
+Watch <a 
+href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ">the video recording</a>.

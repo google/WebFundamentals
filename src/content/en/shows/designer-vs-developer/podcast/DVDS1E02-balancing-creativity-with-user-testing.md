@@ -21,7 +21,9 @@ Developer Relations Team, about whether the UX movement has over regulated the
 creative process and how we can bring back that sparkle into a project by
 making sandwiches.
 
-<img src="/web/shows/designer-vs-developer/podcast/images/dvd-s01-e02-cover.jpg" class="attempt-right">
+<img 
+src="/web/shows/designer-vs-developer/podcast/images/dvd-s01-e02-cover.jpg" 
+class="attempt-right">
 
 In this episode:
 
@@ -32,7 +34,9 @@ In this episode:
 * Santa Tracker
 * How we can use sandwiches as a source of inspiration
 
-<audio src="https://storage.googleapis.com/designer-vs-developer-podcast/DVD-S01-E02-balancing-creativity-with-user-testing.mp3" controls preload="none">
+<audio 
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVD-S01-E02-balancing-creativity-with-user-testing.mp3" 
+controls preload="none">
 
 
 <a href="http://feeds.feedburner.com/DesignerVsDeveloper">
