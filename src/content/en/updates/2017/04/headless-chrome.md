@@ -217,7 +217,7 @@ is a great Node package that provides usable APIs for the
 Chrome, navigate to pages, and fetch information about those pages.
 
 Warning: The DevTools protocol can do a ton of interesting stuff, but it can be a bit
-daunting at first. I recommend spending a bit of time browsing the [DevTools Protocol API Viewer][dtviewer], first. Then, move on to the `chrome-remote-interface` API docs to
+daunting at first. I recommend spending a bit of time browsing the [DevTools Protocol Viewer][dtviewer], first. Then, move on to the `chrome-remote-interface` API docs to
 see how it wraps the raw protocol.
 
 Let's install the library:
@@ -256,7 +256,7 @@ launchChrome().then(launcher => {
 
   chrome(protocol => {
     // Extract the parts of the DevTools protocol we need for the task.
-    // See API docs: https://chromedevtools.github.io/debugger-protocol-viewer/
+    // See API docs: https://chromedevtools.github.io/devtools-protocol/
     const {Page} = protocol;
 
     // First, enable the Page domain we're going to use.
@@ -297,7 +297,7 @@ launchChrome().then(launcher => {
 
   chrome(protocol => {
     // Extract the parts of the DevTools protocol we need for the task.
-    // See API docs: https://chromedevtools.github.io/debugger-protocol-viewer/
+    // See API docs: https://chromedevtools.github.io/devtools-protocol/
     const {Page, Runtime} = protocol;
 
     // First, need to enable the domains we're going to use.
@@ -398,4 +398,4 @@ For bugs in the DevTools protocol, file them at [github.com/ChromeDevTools/devto
 {% include "comment-widget.html" %}
 
 [dtprotocol]: https://developer.chrome.com/devtools/docs/debugger-protocol
-[dtviewer]: https://chromedevtools.github.io/debugger-protocol-viewer/
+[dtviewer]:https://chromedevtools.github.io/devtools-protocol/
