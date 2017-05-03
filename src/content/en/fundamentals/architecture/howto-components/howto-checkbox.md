@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-05-02#}
+{# wf_updated_on: 2017-05-03#}
 {# wf_published_on: 2017-04-06 #}
 
 # HowTo: Components – howto-checkbox {: .page-title }
@@ -31,25 +31,25 @@ choices -- checked and unchecked.
 <style>
   howto-checkbox {
     display: inline-block;
-    background: url('./images/unchecked-checkbox.svg') no-repeat;
+    background: url('/web/fundamentals/architecture/howto-components/./images/unchecked-checkbox.svg') no-repeat;
     background-size: contain;
     width: 24px;
     height: 24px;
     vertical-align: middle;
   }
-  
+
   howto-checkbox[aria-checked="true"] {
-    background: url('./images/checked-checkbox.svg') no-repeat;
+    background: url('/web/fundamentals/architecture/howto-components/./images/checked-checkbox.svg') no-repeat;
     background-size: contain;
   }
 
   howto-checkbox[aria-disabled="true"] {
-    background: url('./images/unchecked-checkbox-disabled.svg') no-repeat;
+    background: url('/web/fundamentals/architecture/howto-components/./images/unchecked-checkbox-disabled.svg') no-repeat;
     background-size: contain;
   }
 
   howto-checkbox[aria-checked="true"][aria-disabled="true"] {
-    background: url('./images/checked-checkbox-disabled.svg') no-repeat;
+    background: url('/web/fundamentals/architecture/howto-components/./images/checked-checkbox-disabled.svg') no-repeat;
     background-size: contain;
   }
 
@@ -282,7 +282,7 @@ choices -- checked and unchecked.
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>height: 24px;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>vertical-align: middle;
 <span class="indent">&nbsp;&nbsp;</span>}
-<span class="indent">&nbsp;&nbsp;</span>
+
 <span class="indent">&nbsp;&nbsp;</span>howto-checkbox[aria-checked="true"] {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>background: url('./images/checked-checkbox.svg') no-repeat;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>background-size: contain;
