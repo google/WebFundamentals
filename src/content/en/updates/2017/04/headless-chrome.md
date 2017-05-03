@@ -103,7 +103,7 @@ post from David Schnurr that has you covered. Check out [Using headless Chrome a
 ## Debugging Chrome without a browser UI? {: #frontend }
 
 When you run Chrome with `--remote-debugging-port=9222`, it starts an instance
-with the [DevTools Protocol][dtprotocol] enabled. The
+with the [DevTools Protocol][dtviewer] enabled. The
 protocol is used to communicate with Chrome and drive the headless
 browser instance. It's also what tools like Sublime, VS Code, and Node use for
 remote debugging an application. #synergy
@@ -213,7 +213,7 @@ To control the browser, we need the DevTools protocol!
 
 [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface)
 is a great Node package that provides usable APIs for the
-[DevTools Protocol][dtprotocol]. You can use it to orchestrate Headless
+[DevTools Protocol][dtviewer]. You can use it to orchestrate Headless
 Chrome, navigate to pages, and fetch information about those pages.
 
 Warning: The DevTools protocol can do a ton of interesting stuff, but it can be a bit
@@ -330,7 +330,6 @@ Here are some useful resources to get you started:
 
 Docs
 
-* [DevTools Protocol][dtprotocol] - documentation on how to use the protocol
 * [DevTools Protocol Viewer][dtviewer] - API reference docs
 
 Tools
@@ -385,7 +384,7 @@ can be used for automated testing in a headless environment. The main difference
 between the two is that Phantom uses an older version of WebKit as its rendering
 engine while Headless Chrome uses the latest version of Blink.
 
-At the moment, Phantom also provides a higher level API than the [DevTools Protocol][dtprotocol].
+At the moment, Phantom also provides a higher level API than the [DevTools Protocol][dtviewer].
 
 **Where do I report bugs?**
 
@@ -397,5 +396,4 @@ For bugs in the DevTools protocol, file them at [github.com/ChromeDevTools/devto
 
 {% include "comment-widget.html" %}
 
-[dtprotocol]: https://developer.chrome.com/devtools/docs/debugger-protocol
-[dtviewer]:https://chromedevtools.github.io/devtools-protocol/
+[dtviewer]: https://chromedevtools.github.io/devtools-protocol/
