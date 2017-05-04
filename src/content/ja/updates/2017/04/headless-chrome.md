@@ -4,6 +4,9 @@ description: ヘッドレス Chrome とはなにか、そしてその使い方�
 
 {# wf_updated_on: 2017-04-27 #}
 {# wf_published_on: 2017-04-27 #}
+{# wf_tags: chrome59,headless,testing #}
+{# wf_featured_image: /web/updates/images/generic/headless-chrome.png #}
+{# wf_featured_snippet: Chrome 59 から搭載されたヘッドレス Chrome は Chrome をヘッドレス環境で実行するものです。ヘッドレス Chrome によって、Chromium とそのエンジン Blink が提供するモダンなウェブプラットフォームの機能すべてがコマンドラインにもたらされます。 #}
 
 # ヘッドレス Chrome ことはじめ {: .page-title }
 
