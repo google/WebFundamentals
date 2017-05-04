@@ -61,7 +61,7 @@ using `chrome-canary`:
     alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
     alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
 
-Download Chrome Canary [here]([download Canary](https://www.google.com/chrome/browser/canary.html)).
+Download Chrome Canary [here](https://www.google.com/chrome/browser/canary.html).
 
 ## Command line features {: features }
 
@@ -265,7 +265,7 @@ launchChrome().then(launcher => {
 
       // Wait for window.onload before doing stuff.
       Page.loadEventFired(() => {
-        onPageLoad(Page)).then(() => {
+        onPageLoad(Page).then(() => {
           protocol.close();
           launcher.kill(); // Kill Chrome.
         });
