@@ -240,37 +240,19 @@ The following patterns are known styles for building PWAs, listed in recommended
 
 1. Application shell (SSR both shell + content for entry page) + use JavaScript to fetch content for any further routes and do a "take over"
 
+ Note: In the future, consider a server-side render of UI with Streams for body content model (even better). See <a href="https://jakearchibald.com/2016/streams-ftw/">https://jakearchibald.com/2016/streams-ftw/</a> to learn more.</li>
 
-
-__Notes:__
-
-<ul>
-
-<li>In the future, consider a server-side render of UI with Streams for body content model (even better). See <a href="https://jakearchibald.com/2016/streams-ftw/">https://jakearchibald.com/2016/streams-ftw/</a> to learn more.</li>
-
-<li>If you are building a PWA using Polymer leveraging this pattern, then it might be worth exploring SSR of content in the Light DOM</li>
-
-</ul>
-
-
+ Note: If you are building a PWA using Polymer leveraging this pattern, then it might be worth exploring SSR of content in the Light DOM
 
 2. Application shell (SSR) + use JavaScript to fetch content once the app shell is loaded
 
-    SSR is optional. Your shell is likely to be highly static, but SSR provides slightly better performance in some cases.
+ SSR is optional. Your shell is likely to be highly static, but SSR provides slightly better performance in some cases.
 
-
-
-Note: If you are already considering  [Accelerated Mobile Pages (AMP)](https://www.ampproject.org/), you may be interested in an app shell (SSR) "viewer" + use AMP for leaf nodes (content). 
-
-
+ Note: If you are already considering  [Accelerated Mobile Pages (AMP)](https://www.ampproject.org/), you may be interested in an app shell (SSR) "viewer" + use AMP for leaf nodes (content). 
 
 3. Server-side rendering full page (full page caching)
 
-
-
-Note: For browsers that do not support service workers, we gracefully degrade to still server-side rendering content (for example, iOS). 
-
-
+ Note: For browsers that do not support service workers, we gracefully degrade to still server-side rendering content (for example, iOS). 
 
 4. Client-side rendering full page (full page caching, potential for JSON payload bootstrapping via server)
 
