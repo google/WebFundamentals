@@ -54,13 +54,17 @@ could say:
 “sent when the network is restored.”
 
 <figure class="attempt-left">
-  <img src="images/emojoy-toast-message.png" alt="Emojoy, the emoji messaging app informing the user when a change in state occurs.">
+  <img 
+  src="images/emojoy-toast-message.png" 
+  alt="Emojoy, the emoji messaging app informing the user when a change in state occurs.">
   <figcaption>
     Clearly inform the user when a change in state occurs as soon as possible.
   </figcaption>
 </figure>
 <figure class="attempt-right">
-  <img src="images/io-toast-message.png" alt="The I/O 2016 app informing the user when a change in state occurs.">
+  <img 
+  src="images/io-toast-message.png" 
+  alt="The I/O 2016 app informing the user when a change in state occurs.">
   <figcaption>
     The Google I/O app used a material design "toast" to let the user know when it was offline.
   </figcaption>
@@ -75,17 +79,33 @@ will depend largely on your application. For apps that require update
 information displayed as a priority such as a stock market app, auto-updating
 and notifying the user as soon as possible is crucial.
 
-It is recommended that you let the user user know that your web app has been updated "in the background" by using a visual cue such as a material design toast element. This involves detecting both the initial registration of your service worker and that there's been an update to the service worker-managed content. You can see a code example of this <a href="https://github.com/GoogleChrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L29">function at work here</a>.
+It is recommended that you let the user user know that your web app 
+has been updated "in the background" by using a visual cue such as a 
+material design toast element. This involves detecting both the 
+initial registration of your service worker and that there's been an 
+update to the service worker-managed content. You can see a code 
+example of this 
+<a 
+href="https://github.com/GoogleChrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L29">function at work here</a>.
 
-Once example of this would be <a href="https://www.chromestatus.com/features" >www.chromestatus.com</a>which posts a note to the user when the app has been updated.
+Once example of this would be 
+<a href="https://www.chromestatus.com/features">
+  www.chromestatus.com</a>which posts a note to the user when the app has been updated.
 
 
 <figure >
-  <img class="attempt-right" src="images/weather-app.png" alt="An example of a weather app.">
-  <img class="attempt-left" src="images/chrome-status-app-updated.png" alt="Chrome Status uses a toast">
+  <img class="attempt-right" 
+  src="images/weather-app.png" 
+  alt="An example of a weather app.">
+  <img class="attempt-left" 
+  src="images/chrome-status-app-updated.png" 
+  alt="Chrome Status uses a toast">
 
   <figcaption class="clearfix" style="clear:both;">
-    Some apps, like the weather app, need to auto update as old data is not of use to the user. Where Chrome Status lets the user know when content has been updated via a material design toast element.
+
+  Some apps, like the weather app, need to auto update as old data 
+  is not of use to the user. Where Chrome Status lets the user know 
+  when content has been updated via a material design toast element.
   </figcaption>
 </figure>
 
@@ -95,8 +115,12 @@ You may also show the last time the app was updated at all times in a prominent
 space. This would also be useful for a currency convertor app, for example.
 
 <figure>
-  <img class="attempt-left" src="images/material-money-rates-out-of-date.png" alt="Material money app that is out-of-date">
-  <img class="attempt-right" src="images/material-money-rates-updated.png" alt="Material money has been updated">
+  <img class="attempt-left" 
+  src="images/material-money-rates-out-of-date.png" 
+  alt="Material money app that is out-of-date">
+  <img class="attempt-right" 
+  src="images/material-money-rates-updated.png" 
+  alt="Material money has been updated">
   <figcaption class="clearfix" style="clear:both;">
     Material Money shows the latest currency where possible and notifies the
     user when the app hasn’t been updated.
@@ -110,8 +134,12 @@ refresh the page and they would lose where they were reading last.
 
 
 <figure>
-  <img class="attempt-left" src="images/tailpiece-normal.png" alt="Example news app, Tailpiece in its normal state">
-  <img class="attempt-right" src="images/tailpiece-tap-to-update.png" alt="Example news app, Tailpiece when its ready to be updated">
+  <img class="attempt-left" 
+  src="images/tailpiece-normal.png" 
+  alt="Example news app, Tailpiece in its normal state">
+  <img class="attempt-right" 
+  src="images/tailpiece-tap-to-update.png" 
+  alt="Example news app, Tailpiece when its ready to be updated">
   <figcaption class="clearfix" style="clear:both;">
     Tailpiece, an online newspaper will auto download the latest news but
     allow the users to refresh manually so they do not lose their place in the article.
@@ -157,8 +185,13 @@ user's behaviour so if the sports section is what they typically view, perhaps
 make this the priority data that is downloaded.
 
 <figure>
-  <img class="attempt-left" src="images/tailpiece-offline.png" alt="Tailpiece informs the user that they are offline with various design widgets">
-  <img class="attempt-right" src="images/tailpiece-offline-sidebar.png" alt="Tailpiece has a navigational draw that shows what sections are ready for offline use.">
+  <img 
+  class="attempt-left" 
+  src="images/tailpiece-offline.png" 
+  alt="Tailpiece informs the user that they are offline with various design widgets">
+  <img class="attempt-right" 
+  src="images/tailpiece-offline-sidebar.png" 
+  alt="Tailpiece has a navigational draw that shows what sections are ready for offline use.">
   <figcaption class="clearfix">
     If the device is offline Tailpiece will notify the user with a status
     message letting them know that they can still use the app.
@@ -292,7 +325,9 @@ ways: for example with color, labels and UI components.
 
 <div class="attempt-left">
   <figure>
-    <img src="images/accessibility_color7_do.png" alt="Good example that uses color and text to show an error.">
+    <img 
+    src="images/accessibility_color7_do.png" 
+    alt="Good example that uses color and text to show an error.">
     <figcaption class="success">
       <b>DO</b>: Use a mixture of design elements to convey meaning
      </figcaption>
