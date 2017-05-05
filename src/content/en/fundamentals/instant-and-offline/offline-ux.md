@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A guide to designing web experiences for slow networks and offline.
 
-{# wf_updated_on: 2016-11-10 #}
+{# wf_updated_on: 2016-05-05 #}
 {# wf_published_on: 2016-11-10 #}
 
 # Offline UX Considerations {: .page-title }
@@ -70,17 +70,24 @@ could say:
 
 ### Network connection improves or is restored
 
-<figure class="attempt-right">
-  <img src="images/weather-app.png" alt="An example of a weather app.">
-  <figcaption>
-    Some apps, like this weather app, need to auto update as old data is not of use to the user.
-  </figcaption>
-</figure>
-
 How you deal with informing the user once their network connection has improved
 will depend largely on your application. For apps that require update
 information displayed as a priority such as a stock market app, auto-updating
 and notifying the user as soon as possible is crucial.
+
+It is recommended that you let the user user know that your web app has been updated "in the background" by using a visual cue such as a material design toast element. This involves detecting both the initial registration of your service worker and that there's been an update to the service worker-managed content. You can see a code example of this <a href="https://github.com/GoogleChrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L29">function at work here</a>.
+
+Once example of this would be <a href="https://www.chromestatus.com/features" >www.chromestatus.com</a>which posts a note to the user when the app has been updated.
+
+
+<figure >
+  <img class="attempt-right" src="images/weather-app.png" alt="An example of a weather app.">
+  <img class="attempt-left" src="images/chrome-status-app-updated.png" alt="Chrome Status uses a toast">
+
+  <figcaption class="clearfix" style="clear:both;">
+    Some apps, like the weather app, need to auto update as old data is not of use to the user. Where Chrome Status lets the user know when content has been updated via a material design toast element.
+  </figcaption>
+</figure>
 
 <div class="clearfix"></div>
 
@@ -90,7 +97,7 @@ space. This would also be useful for a currency convertor app, for example.
 <figure>
   <img class="attempt-left" src="images/material-money-rates-out-of-date.png" alt="Material money app that is out-of-date">
   <img class="attempt-right" src="images/material-money-rates-updated.png" alt="Material money has been updated">
-  <figcaption class="clearfix">
+  <figcaption class="clearfix" style="clear:both;">
     Material Money shows the latest currency where possible and notifies the
     user when the app hasn’t been updated.
   </figcaption>
@@ -105,7 +112,7 @@ refresh the page and they would lose where they were reading last.
 <figure>
   <img class="attempt-left" src="images/tailpiece-normal.png" alt="Example news app, Tailpiece in its normal state">
   <img class="attempt-right" src="images/tailpiece-tap-to-update.png" alt="Example news app, Tailpiece when its ready to be updated">
-  <figcaption class="clearfix">
+  <figcaption class="clearfix" style="clear:both;">
     Tailpiece, an online newspaper will auto download the latest news but
     allow the users to refresh manually so they do not lose their place in the article.
   </figcaption>
@@ -175,7 +182,7 @@ use action based language that your audience can relate to.
 <figure>
   <img class="attempt-left" src="images/io-offline-ready.png" alt="I/O app offline">
   <img class="attempt-right" src="images/chome-offline.png" alt="Chrome Status site is offline">
-  <figcaption class="clearfix">
+  <figcaption class="clearfix" style="clear:both;">
     Both the Google I/O 2016 app and Chrome Status site notify the user when
     the app is ready for offline use.
   </figcaption>
