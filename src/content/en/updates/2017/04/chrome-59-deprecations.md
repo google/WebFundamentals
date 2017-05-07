@@ -78,21 +78,20 @@ spec about a year ago. Consequently, these media queries are removed in Chrome
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=654861)
 
 
-## Remove remote and readonly members of MediaStreamTrack
+## Remove MediaStreamTrack.remote
 
-In Chrome 48 the `MediaStreamTrack.remote` and `MediaStreamTrack.readonly`
-properties were added in support of the
+In Chrome 48 the `MediaStreamTrack.remote` property was added in support of the
 [Media Capture and Streams API](https://w3c.github.io/mediacapture-main/)
 with the goal of allowing JavaScript to know whether a WebRTC `MediaStreamTrack`
 is from a remote source or a local one.
 
-Since that time, these properties have been removed from the spec. As of
-Chrome 59, they are no longer supported.
+Since that time, this property has been removed from the spec. As of
+Chrome 59, it is no longer supported.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=598704)
 
 
-## Remove support for ProgressEvent
+## Remove support creating ProgressEvent with document.createEvent()
 
 Earlier versions of the DOM spec required implementation of
 `document.createEvent("ProgressEvent")`. However usage was always low and
