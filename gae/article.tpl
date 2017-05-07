@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ lang }}">
-  <head>
+  <head dir="auto">
     <meta charset="utf-8" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
     <link rel="stylesheet" href="/wf-local/styles/devsite-google-blue.css">
@@ -95,8 +95,8 @@
             {% endautoescape %}
           </nav>
           <nav class="devsite-page-nav devsite-nav">
-            <ul class="devsite-page-nav-list">
-              <li class="devsite-nav-item devsite-nav-item-heading">
+            <ul class="devsite-page-nav-list" dir="auto">
+              <li class="devsite-nav-item devsite-nav-item-heading" dir="auto">
                 <a href="#top_of_page" class="devsite-nav-title">
                   <span>Contents</span>
                 </a>
@@ -123,7 +123,7 @@
                   <span class="devsite-rating-stats"></span>
                 </div>
               </div>
-              <div class="devsite-article-body clearfix">
+              <div class="devsite-article-body clearfix" dir="auto">
                 {% autoescape off %}{{ content }}{% endautoescape %}
               </div>
               <div class="devsite-content-footer nocontent">

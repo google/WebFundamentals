@@ -115,7 +115,15 @@ def getPage(requestPath, lang):
         toc = re.sub(r'<li>', '<li class="devsite-nav-item">', toc)
 
       # Replaces <pre> tags with prettyprint enabled tags
-      content = re.sub(r'^<pre>(?m)', r'<pre class="prettyprint">', content)
+      # and sets dir attibute to auto to look fine in RTL languages
+      content = re.sub(r'^<pre>(?m)', r'<pre class="prettyprint" dir="auto">', content)
+      content = re.sub(r'^<pre class="prettyprint">(?m)',
+                       r'<pre class="prettyprint" dir="auto">', content)
+      
+      # Surrounds code tags with bdi tags to look properly in RTL languages
+      # without it, function() will appear like ()function in Arabic text!
+      content = re.sub(r'<code>(?m)', r'<bdi><code>', content)
+      content = re.sub(r'</code>(?m)', r'</code></bdi>', content)
 
       # Get the page title from the markup.
       titleRO = re.search(r'<h1 class="page-title".*?>(.*?)<\/h1>', content)
