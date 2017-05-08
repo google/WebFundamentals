@@ -5,7 +5,7 @@ description: This week we speak to Sérgio Gomes about responsibilities in desig
 {# wf_updated_on: 2017-05-08 #}
 {# wf_published_on: 2017-05-08 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E05-who-is-responsible-for-design.mp3 #}
-{# wf_podcast_duration: 00:06:22 #}
+{# wf_podcast_duration: 00:06:21 #}
 {# wf_podcast_fileSize: 6128221 #}
 {# wf_podcast_subtitle: This week we speak to Sérgio Gomes about responsibilities in design. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s01-e05-cover-large.jpg #}
