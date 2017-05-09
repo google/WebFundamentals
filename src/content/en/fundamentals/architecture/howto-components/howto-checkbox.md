@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-05-03#}
+{# wf_updated_on: 2017-05-09#}
 {# wf_published_on: 2017-04-06 #}
 
 # HowTo: Components – howto-checkbox {: .page-title }
@@ -17,6 +17,8 @@ A `HowToCheckbox` represents a boolean option in a form. The most common type
 of checkbox is a dual-type which allows the user to toggle between two
 choices -- checked and unchecked.
 
+See: https://www.w3.org/TR/wai-aria-practices-1.1/#checkbox
+
 
 ## Demo {: #demo }
 {% framebox height="auto" width="100%" class="demo" suppress_site_styles="true" %}
@@ -27,6 +29,18 @@ choices -- checked and unchecked.
   <a href="?">Load with JavaScript</a>
 </p>
 
+<!--
+Copyright 2017 Google Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 <!doctype html>
 <style>
   howto-checkbox {
@@ -73,7 +87,22 @@ choices -- checked and unchecked.
   devsite.framebox.AutoSizeClient.initAutoSize(true);
   if (!document.location.search.includes('nojs')) {
     (function() {
-      (function() {
+      /**
+ * Copyright 2017 Google Inc. All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+(function() {
   /**
    * Define key codes to help with handling keyboard events.
    */
@@ -272,7 +301,8 @@ choices -- checked and unchecked.
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code ">&lt;!doctype html&gt;
+<pre><code class="literate-code ">
+&lt;!doctype html&gt;
 &lt;style&gt;
 <span class="indent">&nbsp;&nbsp;</span>howto-checkbox {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>display: inline-block;
@@ -318,10 +348,15 @@ choices -- checked and unchecked.
 ## Code {: #code }
 <ul class="literate code" id="howto-checkbox_impl">
   
-<li class="linecomment ">
+<li class="blockcomment ">
 <div class="literate-text empty"></div>
 <pre><code class="literate-code ">(function() {
-<span class="indent">&nbsp;&nbsp;</span></code></pre>
+</code></pre>
+</li>
+
+<li class="linecomment ">
+<div class="literate-text empty"></div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
 <li class="blockcomment ">

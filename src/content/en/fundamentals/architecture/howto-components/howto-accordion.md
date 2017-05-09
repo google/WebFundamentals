@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-05-02#}
+{# wf_updated_on: 2017-05-09#}
 {# wf_published_on: 2017-04-06 #}
 
 # HowTo: Components – howto-accordion {: .page-title }
@@ -21,7 +21,7 @@ By either clicking or by using the arrow keys the user changes the
 selection of the active heading. With enter or space the active headings
 can be toggled between expanded and collapsed state.
 
-The headings and the panels have the classes `expanded` or `collapsed`
+The headings and the panels have the attributes `expanded` or `collapsed`
 assigned to them depending on their state.
 
 All panels should be styled to be visible if JavaScript is disabled.
@@ -38,6 +38,18 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
   <a href="?">Load with JavaScript</a>
 </p>
 
+<!--
+Copyright 2017 Google Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 <!doctype html>
 <style>
   howto-accordion {
@@ -86,7 +98,23 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
   devsite.framebox.AutoSizeClient.initAutoSize(true);
   if (!document.location.search.includes('nojs')) {
     (function() {
-      (function() {
+      /**
+ * Copyright 2017 Google Inc. All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+(function() {
   /**
    * Define key codes to help with handling keyboard events.
    */
@@ -112,19 +140,19 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
 
     /**
      * `connectedCallback` hooks up the even listeners and considers the
-     * `expand`  attribute on the headers to adjust their styling accordingly.
+     * `expanded` attribute on the headers to adjust their styling accordingly.
      */
     connectedCallback() {
       // `<howto-accordion-headers>` emit a custom event when the heading is
-      // instructed to expand. The custom event is a nice abstraction because
-      // expansion can be triggered by clicks, keyboard input and attribute
-      // and property changes alike.
+      // instructed to expand.
       this.addEventListener('change', this._onChange);
-      // The element also implements roving tab index to switch focus between
+      // The element also implements [roving tabindex] to switch focus between
       // the headers. Therefore key presses are intercepted.
+      //
+      // [roving tabindex]: https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets#Technique_1_oving_tabindex
       this.addEventListener('keydown', this._onKeyDown);
 
-      // TODO: Set up MutationObserver to listen for `expand` attribute on the
+      // TODO: Set up MutationObserver to listen for `expanded` attribute on the
       // headings.
 
       // Wait for `<howto-accordion-heading>` and `<howto-accordion-panel`
@@ -142,22 +170,17 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
         headings.forEach(heading => {
           // All buttons inside the `HowtoAccordionHeadings` are made
           // unfocusable here. Only the first heading will be made focusable
-          // afterwards. This is necessary to implement roving tab index.
-          heading._shadowButton.setAttribute('tabindex', -1);
+          // afterwards. This is necessary to implement roving tabindex.
+          heading.setAttribute('tabindex', -1);
           const panel = this._panelForHeading(heading);
 
           // Make headings and panels reference each other
           // with the `aria-labelledby` and `aria-controls` attributes.
           heading.setAttribute('aria-controls', panel.id);
           panel.setAttribute('aria-labelledby', heading.id);
-
-          // Assign the appropriate roles to panels. Headings are custom
-          // elements and set their role in their own `connectedCallback`.
-          if (!panel.hasAttribute('role'))
-            panel.setAttribute('role', 'region');
         });
         // Make the first heading focusable.
-        headings[0]._shadowButton.setAttribute('tabindex', 0);
+        headings[0].setAttribute('tabindex', 0);
 
         // Set all the panels to the collapsed state to have a well-defined
         // initial state.
@@ -168,7 +191,7 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
         headings
           .forEach(heading => {
             const panel = this._panelForHeading(heading);
-            if(!heading.expanded) {
+            if (!heading.expanded) {
               this._collapseHeading(heading);
               this._collapsePanel(panel);
             } else {
@@ -214,7 +237,7 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
       if (this.classList.contains('animating'))
         return;
       const panel = this._panelForHeading(heading);
-      if(expand) {
+      if (expand) {
         this._expandPanel(panel);
         this._animateIn(panel);
       } else {
@@ -266,9 +289,9 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
       event.preventDefault();
       // Make the currently focused heading unfocusable, then make the new
       // heading focusable and give focus to it.
-      currentHeading._shadowButton.setAttribute('tabindex', -1);
-      newHeading._shadowButton.setAttribute('tabindex', 0);
-      newHeading._shadowButton.focus();
+      currentHeading.setAttribute('tabindex', -1);
+      newHeading.setAttribute('tabindex', 0);
+      newHeading.focus();
     }
 
     /**
@@ -296,7 +319,7 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
      */
     _panelForHeading(heading) {
       const next = heading.nextElementSibling;
-      if(next.tagName.toLowerCase() !== 'howto-accordion-panel') {
+      if (next.tagName.toLowerCase() !== 'howto-accordion-panel') {
         console.error('Sibling element to a heading need to be a panel.');
         return;
       }
@@ -349,25 +372,29 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
     }
 
     /**
-     * `_expandPanel` puts the given panel in the expanded state, without any
-     * animation.
+     * `_expandPanel` puts the given panel in the expanded state.
      */
     _expandPanel(panel) {
       panel.expanded = true;
     }
 
     /**
-     * `_expandHeading` puts the given heading in the expanded state, without
-     * any animation.
+     * `_collapsePanel` puts the given panel in the collapsed state.
+     */
+    _collapsePanel(panel) {
+      panel.expanded = false;
+    }
+
+    /**
+     * `_expandHeading` puts the given heading in the expanded state.
      */
     _expandHeading(heading) {
       heading.expanded = true;
     }
 
-    _collapsePanel(panel) {
-      panel.expanded = false;
-    }
-
+    /**
+     * `_collapseHeading` puts the given heading in the collapsed state.
+     */
     _collapseHeading(heading) {
       heading.expanded = false;
     }
@@ -399,7 +426,7 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
       // If start and end are the same there is nothing to do. The reason for
       // explicitly handling this case is that this method waits for an
       // `transitionend` event which won’t fire if there is no animation.
-      if(startOffset === endOffset) return Promise.resolve();
+      if (startOffset === endOffset) return Promise.resolve();
       // Set the `animating` class on the `<howto-accordion>` element. This
       // discards all further `change` events until the animation is done.
       this.classList.add('animating');
@@ -486,7 +513,10 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
   const shadowDOMTemplate = document.createElement('template');
   shadowDOMTemplate.innerHTML = `
     <style>
-      :host > button {
+      :host {
+        contain: content;
+      }
+      button {
         display: block;
         background-color: initial;
         border: initial;
@@ -504,8 +534,14 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
    *  problematic. This element dispatches a `howto-accordion-change` event when
    * it is supposed to expand.
    *
+   * The WAI ARIA Best Practices also recommend setting `aria-level` depending
+   * on what level the headings are. It is hard to determine the level of a
+   * heading algorithmically and is not strictly necessary to have an accessible
+   * accordion. To keep the code more accessible, this element does not set
+   * `aria-level` but leaves that to the developer.
+   *
    * Clicking the button or pressing space or enter while the button has focus
-   * will expand the heading. Changing the `expand` attribute or property will
+   * will expand the heading. Changing the `expanded` attribute or property will
    * also cause the heading to expand.
    */
   class HowtoAccordionHeading extends HTMLElement {
@@ -522,8 +558,15 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
       // handler is hooked up to other elements.
       this._onClick = this._onClick.bind(this);
 
+      // Create an open ShadowDOM mode and delegate focus. That means that the
+      // the host element can’t get focus, but elements in the  shadow root can.
+      // Note that the `:focus` selector will match on _both_ the host element
+      // as well as the focused element in the ShadowDOM.
+      this.attachShadow({
+        mode: 'open',
+        delegatesFocus: true,
+      });
       // Import the ShadowDOM template.
-      this.attachShadow({mode: 'open'});
       this.shadowRoot.appendChild(
         document.importNode(shadowDOMTemplate.content, true)
       );
@@ -534,12 +577,12 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
      * `connectedCallback()` sets up the role, event handler and initial state.
      */
     connectedCallback() {
-      if(!this.hasAttribute('role'))
+      if (!this.hasAttribute('role'))
         this.setAttribute('role', 'heading');
-      if(!this.id)
+      if (!this.id)
         this.id = `howto-accordion-heading-generated-${headingIdCounter++}`;
-
       this._shadowButton.addEventListener('click', this._onClick);
+      this._shadowButton.setAttribute('aria-expanded', 'false');
     }
 
     /**
@@ -566,14 +609,14 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
 
     /**
      * Properties and their corresponding attributes should mirror one another.
-     * To this effect, the property setter for selected handles truthy/falsy
+     * To this effect, the property setter for `expanded` handles truthy/falsy
      * values and reflects those to the state of the attribute. It’s important
      * to note that there are no side effects taking place in the property
-     * setter. For example, the setter does not set aria-expanded. Instead,
-     * that work happens in the attributeChangedCallback. As a general rule,
+     * setter. For example, the setter does not set `aria-expanded`. Instead,
+     * that work happens in the `attributeChangedCallback`. As a general rule,
      * make property setters very dumb, and if setting a property or attribute
      * should cause a side effect (like setting a corresponding ARIA attribute)
-     * do that work in the attributeChangedCallback. This will avoid having to
+     * do that work in the `attributeChangedCallback`. This will avoid having to
      * manage complex attribute/property reentrancy scenarios.
      */
     set expanded(value) {
@@ -581,7 +624,7 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
       // it’s converted to a proper boolean value using JavaScript’s truthiness
       // & falsiness principles.
       value = Boolean(value);
-      if(value)
+      if (value)
         this.setAttribute('expanded', '');
       else
         this.removeAttribute('expanded');
@@ -612,20 +655,13 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
   let panelIdCounter = 0;
 
   /**
-   * `HowtoAccordionHeading` is the element for the headings in the accordion.
-   * Accordion to the WAI ARIA Best Practices, each heading needs to wrap a
-   * `<button>`. This element dispatches a `howto-accordion-change` event when
-   * it is supposed to expand.
-   *
-   * Clicking the button or pressing space or enter while the button has focus
-   * will expand the heading. Changing the `expand` attribute or property will
-   * also cause the heading to expand.≤
+   * `HowtoAccordionPanel` is the element for the expandable and collapsible
+   * content. Accordion to the WAI ARIA Best Practices, each panel should be
+   * set the `aria-hidden` attribute to `true` if it is collapsed. This element
+   * relies on CSS styles to apply `display: none` to hide it from the
+   * accessibility tree instead.
    */
   class HowtoAccordionPanel extends HTMLElement {
-    static get observedAttributes() {
-      return ['expanded'];
-    }
-
     constructor() {
       super();
     }
@@ -634,9 +670,9 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
      * `connectedCallback()` sets up the role and the ID of the element.
      */
     connectedCallback() {
-      if(!this.hasAttribute('role'))
+      if (!this.hasAttribute('role'))
         this.setAttribute('role', 'region');
-      if(!this.id)
+      if (!this.id)
         this.id = `howto-accordion-panel-generated-${panelIdCounter++}`;
     }
 
@@ -650,10 +686,6 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
         this.setAttribute('expanded', '');
       else
         this.removeAttribute('expanded');
-    }
-
-    attributeChangedCallback(name) {
-      this.setAttribute('aria-hidden', !this.expanded);
     }
   }
   window.customElements
@@ -690,7 +722,8 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code ">&lt;!doctype html&gt;
+<pre><code class="literate-code ">
+&lt;!doctype html&gt;
 &lt;style&gt;
 <span class="indent">&nbsp;&nbsp;</span>howto-accordion {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>display: flex;
@@ -750,10 +783,15 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
 ## Code {: #code }
 <ul class="literate code" id="howto-accordion_impl">
   
-<li class="linecomment ">
+<li class="blockcomment ">
 <div class="literate-text empty"></div>
 <pre><code class="literate-code ">(function() {
-<span class="indent">&nbsp;&nbsp;</span></code></pre>
+</code></pre>
+</li>
+
+<li class="linecomment ">
+<div class="literate-text empty"></div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
 <li class="blockcomment ">
@@ -796,7 +834,7 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
 
 <li class="blockcomment ">
 <div class="literate-text "><p><code>connectedCallback</code> hooks up the even listeners and considers the
-<code>expand</code>  attribute on the headers to adjust their styling accordingly.</p>
+<code>expanded</code> attribute on the headers to adjust their styling accordingly.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>connectedCallback() {
 </code></pre>
@@ -809,16 +847,14 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
 
 <li class="linecomment ">
 <div class="literate-text "><p> <code>&lt;howto-accordion-headers&gt;</code> emit a custom event when the heading is
- instructed to expand. The custom event is a nice abstraction because
- expansion can be triggered by clicks, keyboard input and attribute
- and property changes alike.</p>
+ instructed to expand.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.addEventListener('change', this._onChange);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> The element also implements roving tab index to switch focus between
+<div class="literate-text "><p> The element also implements <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets#Technique_1_oving_tabindex">roving tabindex</a> to switch focus between
  the headers. Therefore key presses are intercepted.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.addEventListener('keydown', this._onKeyDown);
@@ -827,7 +863,7 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> TODO: Set up MutationObserver to listen for <code>expand</code> attribute on the
+<div class="literate-text "><p> TODO: Set up MutationObserver to listen for <code>expanded</code> attribute on the
  headings.
  Wait for <code>&lt;howto-accordion-heading&gt;</code> and <code>&lt;howto-accordion-panel</code>
  to have booted before proceeding.</p>
@@ -859,9 +895,9 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
 <li class="linecomment ">
 <div class="literate-text "><p> All buttons inside the <code>HowtoAccordionHeadings</code> are made
  unfocusable here. Only the first heading will be made focusable
- afterwards. This is necessary to implement roving tab index.</p>
+ afterwards. This is necessary to implement roving tabindex.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>heading._shadowButton.setAttribute('tabindex', -1);
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>heading.setAttribute('tabindex', -1);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const panel = this._panelForHeading(heading);
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
@@ -873,16 +909,6 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>heading.setAttribute('aria-controls', panel.id);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>panel.setAttribute('aria-labelledby', heading.id);
-
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
-</li>
-
-<li class="linecomment ">
-<div class="literate-text "><p> Assign the appropriate roles to panels. Headings are custom
- elements and set their role in their own <code>connectedCallback</code>.</p>
-</div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!panel.hasAttribute('role'))
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>panel.setAttribute('role', 'region');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>});
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
@@ -890,7 +916,7 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
 <li class="linecomment ">
 <div class="literate-text "><p> Make the first heading focusable.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>headings[0]._shadowButton.setAttribute('tabindex', 0);
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>headings[0].setAttribute('tabindex', 0);
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
@@ -905,7 +931,7 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>headings
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>.forEach(heading =&gt; {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const panel = this._panelForHeading(heading);
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if(!heading.expanded) {
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!heading.expanded) {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._collapseHeading(heading);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._collapsePanel(panel);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>} else {
@@ -988,7 +1014,7 @@ there is no other animation running.</p>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (this.classList.contains('animating'))
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const panel = this._panelForHeading(heading);
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if(expand) {
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (expand) {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._expandPanel(panel);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._animateIn(panel);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>} else {
@@ -1078,9 +1104,9 @@ there is no other animation running.</p>
 <div class="literate-text "><p> Make the currently focused heading unfocusable, then make the new
  heading focusable and give focus to it.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>currentHeading._shadowButton.setAttribute('tabindex', -1);
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>newHeading._shadowButton.setAttribute('tabindex', 0);
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>newHeading._shadowButton.focus();
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>currentHeading.setAttribute('tabindex', -1);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>newHeading.setAttribute('tabindex', 0);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>newHeading.focus();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
@@ -1131,7 +1157,7 @@ cheap to read while this method queries the DOM on every call.</p>
 <li class="linecomment ">
 <div class="literate-text empty"></div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const next = heading.nextElementSibling;
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if(next.tagName.toLowerCase() !== 'howto-accordion-panel') {
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (next.tagName.toLowerCase() !== 'howto-accordion-panel') {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>console.error('Sibling element to a heading need to be a panel.');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
@@ -1229,8 +1255,7 @@ one, wrapping around when reaching the last heading.</p>
 </li>
 
 <li class="blockcomment ">
-<div class="literate-text "><p><code>_expandPanel</code> puts the given panel in the expanded state, without any
-animation.</p>
+<div class="literate-text "><p><code>_expandPanel</code> puts the given panel in the expanded state.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_expandPanel(panel) {
 </code></pre>
@@ -1245,8 +1270,22 @@ animation.</p>
 </li>
 
 <li class="blockcomment ">
-<div class="literate-text "><p><code>_expandHeading</code> puts the given heading in the expanded state, without
-any animation.</p>
+<div class="literate-text "><p><code>_collapsePanel</code> puts the given panel in the collapsed state.</p>
+</div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_collapsePanel(panel) {
+</code></pre>
+</li>
+
+<li class="linecomment ">
+<div class="literate-text empty"></div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>panel.expanded = false;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
+
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+</li>
+
+<li class="blockcomment ">
+<div class="literate-text "><p><code>_expandHeading</code> puts the given heading in the expanded state.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_expandHeading(heading) {
 </code></pre>
@@ -1257,12 +1296,19 @@ any animation.</p>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>heading.expanded = true;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_collapsePanel(panel) {
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>panel.expanded = false;
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+</li>
 
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_collapseHeading(heading) {
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>heading.expanded = false;
+<li class="blockcomment ">
+<div class="literate-text "><p><code>_collapseHeading</code> puts the given heading in the collapsed state.</p>
+</div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_collapseHeading(heading) {
+</code></pre>
+</li>
+
+<li class="linecomment ">
+<div class="literate-text empty"></div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>heading.expanded = false;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
@@ -1321,7 +1367,7 @@ afterwards.</p>
  explicitly handling this case is that this method waits for an
  <code>transitionend</code> event which won’t fire if there is no animation.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if(startOffset === endOffset) return Promise.resolve();
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (startOffset === endOffset) return Promise.resolve();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
@@ -1476,7 +1522,10 @@ afterwards.</p>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>const shadowDOMTemplate = document.createElement('template');
 <span class="indent">&nbsp;&nbsp;</span>shadowDOMTemplate.innerHTML = `
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>&lt;style&gt;
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>:host &gt; button {
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>:host {
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>contain: content;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>button {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>display: block;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>background-color: initial;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>border: initial;
@@ -1496,8 +1545,13 @@ Accordion to the WAI ARIA Best Practices, each heading needs to wrap a
 convenient to use and doesn’t make server-side rendering or styling more
 problematic. This element dispatches a <code>howto-accordion-change</code> event when
 it is supposed to expand.</p>
+<p>The WAI ARIA Best Practices also recommend setting <code>aria-level</code> depending
+on what level the headings are. It is hard to determine the level of a
+heading algorithmically and is not strictly necessary to have an accessible
+accordion. To keep the code more accessible, this element does not set
+<code>aria-level</code> but leaves that to the developer.</p>
 <p>Clicking the button or pressing space or enter while the button has focus
-will expand the heading. Changing the <code>expand</code> attribute or property will
+will expand the heading. Changing the <code>expanded</code> attribute or property will
 also cause the heading to expand.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>class HowtoAccordionHeading extends HTMLElement {
@@ -1533,10 +1587,22 @@ also cause the heading to expand.</p>
 </li>
 
 <li class="linecomment ">
+<div class="literate-text "><p> Create an open ShadowDOM mode and delegate focus. That means that the
+ the host element can’t get focus, but elements in the  shadow root can.
+ Note that the <code>:focus</code> selector will match on <em>both</em> the host element
+ as well as the focused element in the ShadowDOM.</p>
+</div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.attachShadow({
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>mode: 'open',
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>delegatesFocus: true,
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>});
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+</li>
+
+<li class="linecomment ">
 <div class="literate-text "><p> Import the ShadowDOM template.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.attachShadow({mode: 'open'});
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.shadowRoot.appendChild(
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.shadowRoot.appendChild(
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>document.importNode(shadowDOMTemplate.content, true)
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._shadowButton = this.shadowRoot.querySelector('button');
@@ -1554,12 +1620,12 @@ also cause the heading to expand.</p>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if(!this.hasAttribute('role'))
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.hasAttribute('role'))
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('role', 'heading');
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if(!this.id)
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.id)
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.id = `howto-accordion-heading-generated-${headingIdCounter++}`;
-
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._shadowButton.addEventListener('click', this._onClick);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._shadowButton.setAttribute('aria-expanded', 'false');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
@@ -1610,14 +1676,14 @@ also cause the heading to expand.</p>
 
 <li class="blockcomment ">
 <div class="literate-text "><p>Properties and their corresponding attributes should mirror one another.
-To this effect, the property setter for selected handles truthy/falsy
+To this effect, the property setter for <code>expanded</code> handles truthy/falsy
 values and reflects those to the state of the attribute. It’s important
 to note that there are no side effects taking place in the property
-setter. For example, the setter does not set aria-expanded. Instead,
-that work happens in the attributeChangedCallback. As a general rule,
+setter. For example, the setter does not set <code>aria-expanded</code>. Instead,
+that work happens in the <code>attributeChangedCallback</code>. As a general rule,
 make property setters very dumb, and if setting a property or attribute
 should cause a side effect (like setting a corresponding ARIA attribute)
-do that work in the attributeChangedCallback. This will avoid having to
+do that work in the <code>attributeChangedCallback</code>. This will avoid having to
 manage complex attribute/property reentrancy scenarios.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>set expanded(value) {
@@ -1635,7 +1701,7 @@ manage complex attribute/property reentrancy scenarios.</p>
  &amp; falsiness principles.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>value = Boolean(value);
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if(value)
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (value)
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('expanded', '');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>else
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.removeAttribute('expanded');
@@ -1687,13 +1753,11 @@ and the collapsed state.</p>
 </li>
 
 <li class="blockcomment ">
-<div class="literate-text "><p><code>HowtoAccordionHeading</code> is the element for the headings in the accordion.
-Accordion to the WAI ARIA Best Practices, each heading needs to wrap a
-<code>&lt;button&gt;</code>. This element dispatches a <code>howto-accordion-change</code> event when
-it is supposed to expand.</p>
-<p>Clicking the button or pressing space or enter while the button has focus
-will expand the heading. Changing the <code>expand</code> attribute or property will
-also cause the heading to expand.≤</p>
+<div class="literate-text "><p><code>HowtoAccordionPanel</code> is the element for the expandable and collapsible
+content. Accordion to the WAI ARIA Best Practices, each panel should be
+set the <code>aria-hidden</code> attribute to <code>true</code> if it is collapsed. This element
+relies on CSS styles to apply <code>display: none</code> to hide it from the
+accessibility tree instead.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>class HowtoAccordionPanel extends HTMLElement {
 </code></pre>
@@ -1701,11 +1765,7 @@ also cause the heading to expand.≤</p>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>static get observedAttributes() {
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return ['expanded'];
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
-
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>constructor() {
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>constructor() {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>super();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
@@ -1721,9 +1781,9 @@ also cause the heading to expand.≤</p>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if(!this.hasAttribute('role'))
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.hasAttribute('role'))
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('role', 'region');
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if(!this.id)
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.id)
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.id = `howto-accordion-panel-generated-${panelIdCounter++}`;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
@@ -1737,10 +1797,6 @@ also cause the heading to expand.≤</p>
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('expanded', '');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>else
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.removeAttribute('expanded');
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
-
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>attributeChangedCallback(name) {
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('aria-hidden', !this.expanded);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 <span class="indent">&nbsp;&nbsp;</span>}
 <span class="indent">&nbsp;&nbsp;</span>window.customElements

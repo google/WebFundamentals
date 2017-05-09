@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-05-03#}
+{# wf_updated_on: 2017-05-09#}
 {# wf_published_on: 2017-04-06 #}
 
 # HowTo: Components – howto-radio-group {: .page-title }
@@ -34,6 +34,8 @@ of its `HowtoRadioButton` children. Only one child may be set to
 boolean ARIA attributes take a literal string value of either `"true"` or
 `"false"`.
 
+See: https://www.w3.org/TR/wai-aria-practices-1.1/#radiobutton
+
 
 ## Demo {: #demo }
 {% framebox height="auto" width="100%" class="demo" suppress_site_styles="true" %}
@@ -44,6 +46,18 @@ boolean ARIA attributes take a literal string value of either `"true"` or
   <a href="?">Load with JavaScript</a>
 </p>
 
+<!--
+Copyright 2017 Google Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 <!doctype html>
 <style>
   howto-radio-group {
@@ -52,17 +66,17 @@ boolean ARIA attributes take a literal string value of either `"true"` or
     align-items: flex-start;
     padding-left: 10px;
   }
-  
+
   howto-radio-button {
     display: inline-block;
     position: relative;
     cursor: default;
   }
-  
+
   howto-radio-button:focus {
     outline: 0;
   }
-  
+
   howto-radio-button:focus::before {
     box-shadow: 0 0 1px 2px #5B9DD9;
   }
@@ -97,7 +111,22 @@ boolean ARIA attributes take a literal string value of either `"true"` or
   devsite.framebox.AutoSizeClient.initAutoSize(true);
   if (!document.location.search.includes('nojs')) {
     (function() {
-      (function() {
+      /**
+ * Copyright 2017 Google Inc. All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+(function() {
   /**
    * Define keycodes to help with handling keyboard events.
    */
@@ -355,7 +384,7 @@ boolean ARIA attributes take a literal string value of either `"true"` or
      */
     _focusNode(node) {
       node.focus();
-    };
+    }
 
     /**
      * If the user clicks inside of the `HowtoRadioGroup`, verify that the
@@ -388,7 +417,8 @@ boolean ARIA attributes take a literal string value of either `"true"` or
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code ">&lt;!doctype html&gt;
+<pre><code class="literate-code ">
+&lt;!doctype html&gt;
 &lt;style&gt;
 <span class="indent">&nbsp;&nbsp;</span>howto-radio-group {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>display: flex;
@@ -396,17 +426,17 @@ boolean ARIA attributes take a literal string value of either `"true"` or
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>align-items: flex-start;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>padding-left: 10px;
 <span class="indent">&nbsp;&nbsp;</span>}
-<span class="indent">&nbsp;&nbsp;</span>
+
 <span class="indent">&nbsp;&nbsp;</span>howto-radio-button {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>display: inline-block;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>position: relative;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>cursor: default;
 <span class="indent">&nbsp;&nbsp;</span>}
-<span class="indent">&nbsp;&nbsp;</span>
+
 <span class="indent">&nbsp;&nbsp;</span>howto-radio-button:focus {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>outline: 0;
 <span class="indent">&nbsp;&nbsp;</span>}
-<span class="indent">&nbsp;&nbsp;</span>
+
 <span class="indent">&nbsp;&nbsp;</span>howto-radio-button:focus::before {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>box-shadow: 0 0 1px 2px #5B9DD9;
 <span class="indent">&nbsp;&nbsp;</span>}
@@ -441,10 +471,15 @@ boolean ARIA attributes take a literal string value of either `"true"` or
 ## Code {: #code }
 <ul class="literate code" id="howto-radio-group_impl">
   
-<li class="linecomment ">
+<li class="blockcomment ">
 <div class="literate-text empty"></div>
 <pre><code class="literate-code ">(function() {
-<span class="indent">&nbsp;&nbsp;</span></code></pre>
+</code></pre>
+</li>
+
+<li class="linecomment ">
+<div class="literate-text empty"></div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
 <li class="blockcomment ">
@@ -853,7 +888,7 @@ and make it focusable by setting <code>tabindex=0</code>.</p>
 <li class="linecomment ">
 <div class="literate-text empty"></div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>node.focus();
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>};
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>

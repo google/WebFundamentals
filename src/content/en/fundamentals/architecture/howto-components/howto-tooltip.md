@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-05-03#}
+{# wf_updated_on: 2017-05-09#}
 {# wf_published_on: 2017-04-06 #}
 
 # HowTo: Components – howto-tooltip {: .page-title }
@@ -22,7 +22,6 @@ the tooltip element with aria-describedby.
 See: https://www.w3.org/TR/wai-aria-practices-1.1/#tooltip
 
 
-
 ## Demo {: #demo }
 {% framebox height="auto" width="100%" class="demo" suppress_site_styles="true" %}
 <!doctype html>
@@ -32,6 +31,18 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#tooltip
   <a href="?">Load with JavaScript</a>
 </p>
 
+<!--
+Copyright 2017 Google Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 <!doctype html>
 
 <style>
@@ -83,7 +94,23 @@ See: https://www.w3.org/TR/wai-aria-practices-1.1/#tooltip
   devsite.framebox.AutoSizeClient.initAutoSize(true);
   if (!document.location.search.includes('nojs')) {
     (function() {
-      class HowtoTooltip extends HTMLElement {
+      /**
+ * Copyright 2017 Google Inc. All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+class HowtoTooltip extends HTMLElement {
   /**
   * The constructor does work that needs to be executed _exactly_ once.
   */
@@ -170,7 +197,8 @@ window.customElements.define('howto-tooltip', HowtoTooltip);
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code ">&lt;!doctype html&gt;
+<pre><code class="literate-code ">
+&lt;!doctype html&gt;
 
 &lt;style&gt;
 <span class="indent">&nbsp;&nbsp;</span></code></pre>
@@ -257,10 +285,15 @@ it can try to optimize that
 ## Code {: #code }
 <ul class="literate code" id="howto-tooltip_impl">
   
-<li class="linecomment ">
+<li class="blockcomment ">
 <div class="literate-text empty"></div>
 <pre><code class="literate-code ">class HowtoTooltip extends HTMLElement {
-<span class="indent">&nbsp;&nbsp;</span></code></pre>
+</code></pre>
+</li>
+
+<li class="linecomment ">
+<div class="literate-text empty"></div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
 <li class="blockcomment ">

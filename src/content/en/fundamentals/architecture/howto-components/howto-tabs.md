@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-05-03#}
+{# wf_updated_on: 2017-05-09#}
 {# wf_published_on: 2017-04-06 #}
 
 # HowTo: Components – howto-tabs {: .page-title }
@@ -22,7 +22,9 @@ By either clicking or by using the arrow keys the user changes the
 selection of the active tab.
 
 If JavaScript is disabled, all panels are shown interleaved with the
-respective tabs. The tabs now function as headings
+respective tabs. The tabs now function as headings.
+
+See: https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel
 
 
 ## Demo {: #demo }
@@ -34,6 +36,18 @@ respective tabs. The tabs now function as headings
   <a href="?">Load with JavaScript</a>
 </p>
 
+<!--
+Copyright 2017 Google Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 <!doctype html>
 <style>
   howto-tabs {
@@ -57,10 +71,10 @@ respective tabs. The tabs now function as headings
     padding: 20px;
     background-color: lightgray;
   }
-  howto-tabs-panel[aria-hidden="true"] {
+  howto-tabs-panel[hidden] {
     display: none;
   }
-  howto-tabs-tab[aria-selected="true"] {
+  howto-tabs-tab[selected] {
     background-color: bisque;
   }
 
@@ -74,12 +88,12 @@ respective tabs. The tabs now function as headings
 </style>
 
 <howto-tabs>
-  <howto-tabs-tab role="heading">Tab 1</howto-tabs-tab>
-  <howto-tabs-panel role="region">Content 1</howto-tabs-panel>
-  <howto-tabs-tab role="heading">Tab 2</howto-tabs-tab>
-  <howto-tabs-panel role="region">Content 2</howto-tabs-panel>
-  <howto-tabs-tab role="heading">Tab 3</howto-tabs-tab>
-  <howto-tabs-panel role="region">Content 3</howto-tabs-panel>
+  <howto-tabs-tab role="heading" slot="tab">Tab 1</howto-tabs-tab>
+  <howto-tabs-panel role="region" slot="panel">Content 1</howto-tabs-panel>
+  <howto-tabs-tab role="heading" slot="tab">Tab 2</howto-tabs-tab>
+  <howto-tabs-panel role="region" slot="panel">Content 2</howto-tabs-panel>
+  <howto-tabs-tab role="heading" slot="tab">Tab 3</howto-tabs-tab>
+  <howto-tabs-panel role="region" slot="panel">Content 3</howto-tabs-panel>
 </howto-tabs>
 
 
@@ -89,7 +103,22 @@ respective tabs. The tabs now function as headings
   devsite.framebox.AutoSizeClient.initAutoSize(true);
   if (!document.location.search.includes('nojs')) {
     (function() {
-      (function() {
+      /**
+ * Copyright 2017 Google Inc. All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+(function() {
   /**
    * Define key codes to help with handling keyboard events.
    */
@@ -102,6 +131,15 @@ respective tabs. The tabs now function as headings
     END: 35,
   };
 
+  // To avoid invoking the parser with `.innerHTML` for every new instance, a
+  // template for the contents of the ShadowDOM is  is shared by all
+  // `<howto-tabs>` instances.
+  const shadowDOMTemplate = document.createElement('template');
+  shadowDOMTemplate.innerHTML = `
+    <slot name="tab"></slot>
+    <slot name="panel"></slot>
+  `;
+
   /**
    * `HowtoTabs` is a container element for tabs and panels.
    *
@@ -112,6 +150,24 @@ respective tabs. The tabs now function as headings
   class HowtoTabs extends HTMLElement {
     constructor() {
       super();
+
+      // Event handlers that are not attached to this element need to be bound
+      // if they need access to `this`.
+      this._onSlotChange = this._onSlotChange.bind(this);
+
+      // For progressive enhancement, the markup should alternate between tabs
+      // and panels. Elements that reorder their children tend to not work well
+      // with frameworks. Instead ShadowDOM is used to reorder the elements by
+      // using slots.
+      this.attachShadow({mode: 'open'});
+      // Import the shared template to create the slots for tabs and panels.
+      this.shadowRoot.appendChild(
+        document.importNode(shadowDOMTemplate.content, true)
+      );
+      this._tabSlot = this.shadowRoot.querySelector('slot[name=tab]');
+      this._panelSlot = this.shadowRoot.querySelector('slot[name=panel]');
+      this._tabSlot.addEventListener('slotchange', this._onSlotChange);
+      this._panelSlot.addEventListener('slotchange', this._onSlotChange);
     }
 
     /**
@@ -124,56 +180,63 @@ respective tabs. The tabs now function as headings
       this.addEventListener('keydown', this._onKeyDown);
       this.addEventListener('click', this._onClick);
 
-      this.setAttribute('role', 'tablist');
+      if (!this.hasAttribute('role'))
+        this.setAttribute('role', 'tablist');
 
-      // Before the elements starts booting, it waits for
-      // the both `<howto-tab>` and `<howto-tabpanel>` to load.
+      // Currently, `slotchange` does not fire when an element is upgraded. For
+      // this reason, the element always processes the slots after the inner
+      // elements have been defined. If the current behavior of the `slotchange`
+      // event is change (as proposed in
+      // [this issue](https://github.com/whatwg/dom/issues/447)), the code below
+      // can be removed.
       Promise.all([
         customElements.whenDefined('howto-tabs-tab'),
         customElements.whenDefined('howto-tabs-panel'),
-      ]).then(_ => {
-        // Acquire all tabs and panels inside the element
-        const tabs = this._allTabs();
-        const panels = this._allPanels();
-        // If there are no tabs, there is no way to switch between panels.
-        // Abort.
-        if (tabs.length === 0) return;
+      ])
+        .then(_ => this._updateAttributes());
+    }
 
-        // Give each panel a `aria-labelledby` attribute that refers to the tab
-        // that controls it.
-        tabs.forEach(tab => {
-          const panel = tab.nextElementSibling;
-          if(panel.tagName !== 'HOWTO-TABS-PANEL') {
-            console.error(`Tab #${tab.id} is not a` +
-              `sibling of a <howto-tabs-panel>`);
-            return;
-          }
+    /**
+     * `_onSlotChange` is called whenever an element is added or removed from
+     * one of the ShadowDOM slots.
+     */
+    _onSlotChange() {
+      this._updateAttributes();
+    }
 
-          tab.setAttribute('aria-controls', panel.id);
-          panel.setAttribute('aria-labelledby', tab.id);
-        });
+    /**
+     * `_updateAttributes` links up tabs with their adjacent panels using
+     * `aria-controls` and `aria-labelledby`. Additionally, the method makes
+     * sure only one tab is active.
+     *
+     * If this function becomes a bottle neck, it can be easily optimized by
+     * only handling the new elements instead of iterating over all of the
+     * element’s children.
+     */
+    _updateAttributes() {
+      const tabs = this._allTabs();
+      // Give each panel a `aria-labelledby` attribute that refers to the tab
+      // that controls it.
+      tabs.forEach(tab => {
+        const panel = tab.nextElementSibling;
+        if (panel.tagName.toLowerCase() !== 'howto-tabs-panel') {
+          console.error(`Tab #${tab.id} is not a` +
+            `sibling of a <howto-tabs-panel>`);
+          return;
+        }
 
-        // For progressive enhancement, the markup should alternate between tabs
-        // and panels. If JavaScript is disabled, all panels are
-        // visible with their respective tab right above them.
-        // If JavaScript is enabled, the element groups all children by type.
-        // First all the tabs, then all the panels.
-        // Calling `appendChild` on an already inserted element _moves_ the
-        // element to the last position.
-        tabs.forEach(tab => this.appendChild(tab));
-        panels.forEach(panel => this.appendChild(panel));
-
-
-        // The element checks if any of the tabs have been marked as selected.
-        // If not, the first tab is now selected.
-        const selectedTab =
-          tabs.find(tab =>
-            tab.getAttribute('aria-selected') === 'true') || tabs[0];
-
-        // Next, we switch to the selected tab. `selectTab` takes care of
-        // marking all other tabs as deselected and hiding all other panels.
-        this._selectTab(selectedTab);
+        tab.setAttribute('aria-controls', panel.id);
+        panel.setAttribute('aria-labelledby', tab.id);
       });
+
+      // The element checks if any of the tabs have been marked as selected.
+      // If not, the first tab is now selected.
+      const selectedTab =
+        tabs.find(tab => tab.selected) || tabs[0];
+
+      // Next, we switch to the selected tab. `selectTab` takes care of
+      // marking all other tabs as deselected and hiding all other panels.
+      this._selectTab(selectedTab);
     }
 
     /**
@@ -188,6 +251,7 @@ respective tabs. The tabs now function as headings
     _allPanels() {
       return Array.from(this.querySelectorAll('howto-tabs-panel'));
     }
+
     /**
      * `_allTabs` returns all the tabs in the tab panel.
      */
@@ -213,8 +277,7 @@ respective tabs. The tabs now function as headings
       // selected element and subtracts one to get the index of the previous
       // element.
       let newIdx =
-        tabs.findIndex(tab =>
-          tab.getAttribute('aria-selected') === 'true') - 1;
+        tabs.findIndex(tab => tab.selected) - 1;
       // Add `tabs.length` to make sure the index is a positive number
       // and get the modulus to wrap around if necessary.
       return tabs[(newIdx + tabs.length) % tabs.length];
@@ -242,9 +305,7 @@ respective tabs. The tabs now function as headings
      */
     _nextTab() {
       const tabs = this._allTabs();
-      let newIdx =
-        tabs.findIndex(tab =>
-          tab.getAttribute('aria-selected') === 'true') + 1;
+      let newIdx = tabs.findIndex(tab => tab.selected) + 1;
       return tabs[newIdx % tabs.length];
     }
 
@@ -255,14 +316,8 @@ respective tabs. The tabs now function as headings
       const tabs = this._allTabs();
       const panels = this._allPanels();
 
-      tabs.forEach(tab => {
-        tab.tabIndex = -1;
-        tab.setAttribute('aria-selected', 'false');
-      });
-
-      panels.forEach(panel => {
-        panel.setAttribute('aria-hidden', 'true');
-      });
+      tabs.forEach(tab => tab.selected = false);
+      panels.forEach(panel => panel.hidden = true);
     }
 
     /**
@@ -286,11 +341,8 @@ respective tabs. The tabs now function as headings
       const newPanel = this._panelForTab(newTab);
       // If that panel doesn’t exist, abort.
       if (!newPanel) throw new Error(`No panel with id ${newPanelId}`);
-
-      // Unhide the panel and mark the tab as active.
-      newPanel.setAttribute('aria-hidden', 'false');
-      newTab.setAttribute('aria-selected', 'true');
-      newTab.tabIndex = 0;
+      newTab.selected = true;
+      newPanel.hidden = false;
       newTab.focus();
     }
 
@@ -351,9 +403,9 @@ respective tabs. The tabs now function as headings
   }
   window.customElements.define('howto-tabs', HowtoTabs);
 
-  // `dashTabCounter` counts the number of `<howto-tab>` instances created. The
+  // `howtoTabCounter` counts the number of `<howto-tab>` instances created. The
   // number is used to generated new, unique IDs.
-  let dashTabCounter = 0;
+  let howtoTabCounter = 0;
   /**
    * `HowtoTabsTab` is a tab for a `<howto-tabs>` tab panel. `<howto-tabs-tab>`
    * should always be used with `role=heading` in the markup so that the
@@ -366,6 +418,10 @@ respective tabs. The tabs now function as headings
    * is specified.
    */
   class HowtoTabsTab extends HTMLElement {
+    static get observedAttributes() {
+      return ['selected'];
+    }
+
     constructor() {
       super();
     }
@@ -375,12 +431,46 @@ respective tabs. The tabs now function as headings
       // changes its role to `tab`.
       this.setAttribute('role', 'tab');
       if (!this.id)
-        this.id = `howto-tabs-tab-generated-${dashTabCounter++}`;
+        this.id = `howto-tabs-tab-generated-${howtoTabCounter++}`;
+
+      // Set a well-defined initial state.
+      this.setAttribute('aria-selected', 'false');
+      this.setAttribute('tabindex', -1);
+    }
+
+    /**
+     * Properties and their corresponding attributes should mirror one another.
+     * To this effect, the property setter for `selected` handles truthy/falsy
+     * values and reflects those to the state of the attribute. It’s important
+     * to note that there are no side effects taking place in the property
+     * setter. For example, the setter does not set `aria-selected`. Instead,
+     * that work happens in the `attributeChangedCallback`. As a general rule,
+     * make property setters very dumb, and if setting a property or attribute
+     * should cause a side effect (like setting a corresponding ARIA attribute)
+     * do that work in the `attributeChangedCallback`. This will avoid having to
+     * manage complex attribute/property reentrancy scenarios.
+     */
+    attributeChangedCallback() {
+      const value = this.hasAttribute('selected');
+      this.setAttribute('aria-selected', value);
+      this.setAttribute('tabindex', value ? 0 : -1);
+    }
+
+    set selected(value) {
+      value = Boolean(value);
+      if (value)
+        this.setAttribute('selected', '');
+      else
+        this.removeAttribute('selected');
+    }
+
+    get selected() {
+      return this.hasAttribute('selected');
     }
   }
   window.customElements.define('howto-tabs-tab', HowtoTabsTab);
 
-  let dashPanelCounter = 0;
+  let howtoPanelCounter = 0;
   /**
    * `HowtoTabsPanel` is a panel for a `<howto-tabs>` tab panel.
    */
@@ -392,7 +482,7 @@ respective tabs. The tabs now function as headings
     connectedCallback() {
       this.setAttribute('role', 'tabpanel');
       if (!this.id)
-        this.id = `howto-tabs-panel-generated-${dashPanelCounter++}`;
+        this.id = `howto-tabs-panel-generated-${howtoPanelCounter++}`;
     }
   }
   window.customElements.define('howto-tabs-panel', HowtoTabsPanel);
@@ -412,7 +502,8 @@ respective tabs. The tabs now function as headings
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code ">&lt;!doctype html&gt;
+<pre><code class="literate-code ">
+&lt;!doctype html&gt;
 &lt;style&gt;
 <span class="indent">&nbsp;&nbsp;</span>howto-tabs {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
@@ -443,10 +534,10 @@ own row.</p>
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>padding: 20px;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>background-color: lightgray;
 <span class="indent">&nbsp;&nbsp;</span>}
-<span class="indent">&nbsp;&nbsp;</span>howto-tabs-panel[aria-hidden="true"] {
+<span class="indent">&nbsp;&nbsp;</span>howto-tabs-panel[hidden] {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>display: none;
 <span class="indent">&nbsp;&nbsp;</span>}
-<span class="indent">&nbsp;&nbsp;</span>howto-tabs-tab[aria-selected="true"] {
+<span class="indent">&nbsp;&nbsp;</span>howto-tabs-tab[selected] {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>background-color: bisque;
 <span class="indent">&nbsp;&nbsp;</span>}
 
@@ -464,12 +555,12 @@ In that case this style adds spacing between tabs and previous panel.</p>
 &lt;/style&gt;
 
 &lt;howto-tabs&gt;
-<span class="indent">&nbsp;&nbsp;</span>&lt;howto-tabs-tab role="heading"&gt;Tab 1&lt;/howto-tabs-tab&gt;
-<span class="indent">&nbsp;&nbsp;</span>&lt;howto-tabs-panel role="region"&gt;Content 1&lt;/howto-tabs-panel&gt;
-<span class="indent">&nbsp;&nbsp;</span>&lt;howto-tabs-tab role="heading"&gt;Tab 2&lt;/howto-tabs-tab&gt;
-<span class="indent">&nbsp;&nbsp;</span>&lt;howto-tabs-panel role="region"&gt;Content 2&lt;/howto-tabs-panel&gt;
-<span class="indent">&nbsp;&nbsp;</span>&lt;howto-tabs-tab role="heading"&gt;Tab 3&lt;/howto-tabs-tab&gt;
-<span class="indent">&nbsp;&nbsp;</span>&lt;howto-tabs-panel role="region"&gt;Content 3&lt;/howto-tabs-panel&gt;
+<span class="indent">&nbsp;&nbsp;</span>&lt;howto-tabs-tab role="heading" slot="tab"&gt;Tab 1&lt;/howto-tabs-tab&gt;
+<span class="indent">&nbsp;&nbsp;</span>&lt;howto-tabs-panel role="region" slot="panel"&gt;Content 1&lt;/howto-tabs-panel&gt;
+<span class="indent">&nbsp;&nbsp;</span>&lt;howto-tabs-tab role="heading" slot="tab"&gt;Tab 2&lt;/howto-tabs-tab&gt;
+<span class="indent">&nbsp;&nbsp;</span>&lt;howto-tabs-panel role="region" slot="panel"&gt;Content 2&lt;/howto-tabs-panel&gt;
+<span class="indent">&nbsp;&nbsp;</span>&lt;howto-tabs-tab role="heading" slot="tab"&gt;Tab 3&lt;/howto-tabs-tab&gt;
+<span class="indent">&nbsp;&nbsp;</span>&lt;howto-tabs-panel role="region" slot="panel"&gt;Content 3&lt;/howto-tabs-panel&gt;
 &lt;/howto-tabs&gt;
 </code></pre>
 </li>
@@ -479,10 +570,15 @@ In that case this style adds spacing between tabs and previous panel.</p>
 ## Code {: #code }
 <ul class="literate code" id="howto-tabs_impl">
   
-<li class="linecomment ">
+<li class="blockcomment ">
 <div class="literate-text empty"></div>
 <pre><code class="literate-code ">(function() {
-<span class="indent">&nbsp;&nbsp;</span></code></pre>
+</code></pre>
+</li>
+
+<li class="linecomment ">
+<div class="literate-text empty"></div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
 <li class="blockcomment ">
@@ -505,6 +601,20 @@ In that case this style adds spacing between tabs and previous panel.</p>
 <span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
+<li class="linecomment ">
+<div class="literate-text "><p> To avoid invoking the parser with <code>.innerHTML</code> for every new instance, a
+ template for the contents of the ShadowDOM is  is shared by all
+ <code>&lt;howto-tabs&gt;</code> instances.</p>
+</div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>const shadowDOMTemplate = document.createElement('template');
+<span class="indent">&nbsp;&nbsp;</span>shadowDOMTemplate.innerHTML = `
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>&lt;slot name="tab"&gt;&lt;/slot&gt;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>&lt;slot name="panel"&gt;&lt;/slot&gt;
+<span class="indent">&nbsp;&nbsp;</span>`;
+
+<span class="indent">&nbsp;&nbsp;</span></code></pre>
+</li>
+
 <li class="blockcomment ">
 <div class="literate-text "><p><code>HowtoTabs</code> is a container element for tabs and panels.</p>
 <p>All children of <code>&lt;howto-tabs&gt;</code> should be either <code>&lt;howto-tab&gt;</code> or
@@ -519,6 +629,39 @@ cached and therefore, changes during runtime work.</p>
 <div class="literate-text empty"></div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>constructor() {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>super();
+
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+</li>
+
+<li class="linecomment ">
+<div class="literate-text "><p> Event handlers that are not attached to this element need to be bound
+ if they need access to <code>this</code>.</p>
+</div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._onSlotChange = this._onSlotChange.bind(this);
+
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+</li>
+
+<li class="linecomment ">
+<div class="literate-text "><p> For progressive enhancement, the markup should alternate between tabs
+ and panels. Elements that reorder their children tend to not work well
+ with frameworks. Instead ShadowDOM is used to reorder the elements by
+ using slots.</p>
+</div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.attachShadow({mode: 'open'});
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+</li>
+
+<li class="linecomment ">
+<div class="literate-text "><p> Import the shared template to create the slots for tabs and panels.</p>
+</div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.shadowRoot.appendChild(
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>document.importNode(shadowDOMTemplate.content, true)
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._tabSlot = this.shadowRoot.querySelector('slot[name=tab]');
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._panelSlot = this.shadowRoot.querySelector('slot[name=panel]');
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._tabSlot.addEventListener('slotchange', this._onSlotChange);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._panelSlot.addEventListener('slotchange', this._onSlotChange);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
@@ -544,91 +687,98 @@ exactly one tab is active.</p>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.addEventListener('keydown', this._onKeyDown);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.addEventListener('click', this._onClick);
 
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('role', 'tablist');
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.hasAttribute('role'))
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('role', 'tablist');
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> Before the elements starts booting, it waits for
- the both <code>&lt;howto-tab&gt;</code> and <code>&lt;howto-tabpanel&gt;</code> to load.</p>
+<div class="literate-text "><p> Currently, <code>slotchange</code> does not fire when an element is upgraded. For
+ this reason, the element always processes the slots after the inner
+ elements have been defined. If the current behavior of the <code>slotchange</code>
+ event is change (as proposed in
+ <a href="https://github.com/whatwg/dom/issues/447">this issue</a>), the code below
+ can be removed.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>Promise.all([
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>customElements.whenDefined('howto-tabs-tab'),
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>customElements.whenDefined('howto-tabs-panel'),
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>]).then(_ =&gt; {
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>])
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>.then(_ =&gt; this._updateAttributes());
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
+
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+</li>
+
+<li class="blockcomment ">
+<div class="literate-text "><p><code>_onSlotChange</code> is called whenever an element is added or removed from
+one of the ShadowDOM slots.</p>
+</div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_onSlotChange() {
+</code></pre>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> Acquire all tabs and panels inside the element</p>
+<div class="literate-text empty"></div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._updateAttributes();
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
+
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+</li>
+
+<li class="blockcomment ">
+<div class="literate-text "><p><code>_updateAttributes</code> links up tabs with their adjacent panels using
+<code>aria-controls</code> and <code>aria-labelledby</code>. Additionally, the method makes
+sure only one tab is active.</p>
+<p>If this function becomes a bottle neck, it can be easily optimized by
+only handling the new elements instead of iterating over all of the
+element’s children.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const panels = this._allPanels();
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_updateAttributes() {
+</code></pre>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> If there are no tabs, there is no way to switch between panels.
- Abort.</p>
-</div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (tabs.length === 0) return;
-
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+<div class="literate-text empty"></div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p> Give each panel a <code>aria-labelledby</code> attribute that refers to the tab
  that controls it.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.forEach(tab =&gt; {
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const panel = tab.nextElementSibling;
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if(panel.tagName !== 'HOWTO-TABS-PANEL') {
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>console.error(`Tab #${tab.id} is not a` +
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>`sibling of a &lt;howto-tabs-panel&gt;`);
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.forEach(tab =&gt; {
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const panel = tab.nextElementSibling;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (panel.tagName.toLowerCase() !== 'howto-tabs-panel') {
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>console.error(`Tab #${tab.id} is not a` +
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>`sibling of a &lt;howto-tabs-panel&gt;`);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tab.setAttribute('aria-controls', panel.id);
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>panel.setAttribute('aria-labelledby', tab.id);
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>});
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tab.setAttribute('aria-controls', panel.id);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>panel.setAttribute('aria-labelledby', tab.id);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>});
 
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
-</li>
-
-<li class="linecomment ">
-<div class="literate-text "><p> For progressive enhancement, the markup should alternate between tabs
- and panels. If JavaScript is disabled, all panels are
- visible with their respective tab right above them.
- If JavaScript is enabled, the element groups all children by type.
- First all the tabs, then all the panels.
- Calling <code>appendChild</code> on an already inserted element <em>moves</em> the
- element to the last position.</p>
-</div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.forEach(tab =&gt; this.appendChild(tab));
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>panels.forEach(panel =&gt; this.appendChild(panel));
-
-
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p> The element checks if any of the tabs have been marked as selected.
  If not, the first tab is now selected.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const selectedTab =
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.find(tab =&gt;
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tab.getAttribute('aria-selected') === 'true') || tabs[0];
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const selectedTab =
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.find(tab =&gt; tab.selected) || tabs[0];
 
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p> Next, we switch to the selected tab. <code>selectTab</code> takes care of
  marking all other tabs as deselected and hiding all other panels.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._selectTab(selectedTab);
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>});
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._selectTab(selectedTab);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
@@ -650,6 +800,7 @@ cheap to read.</p>
 <div class="literate-text empty"></div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return Array.from(this.querySelectorAll('howto-tabs-panel'));
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
+
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
@@ -704,8 +855,7 @@ wrapping around when reaching the first one.</p>
  element.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>let newIdx =
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.findIndex(tab =&gt;
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tab.getAttribute('aria-selected') === 'true') - 1;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.findIndex(tab =&gt; tab.selected) - 1;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
@@ -762,9 +912,7 @@ wrapping around when reaching the last tab.</p>
 <li class="linecomment ">
 <div class="literate-text empty"></div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>let newIdx =
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.findIndex(tab =&gt;
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tab.getAttribute('aria-selected') === 'true') + 1;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>let newIdx = tabs.findIndex(tab =&gt; tab.selected) + 1;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return tabs[newIdx % tabs.length];
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
@@ -783,14 +931,8 @@ wrapping around when reaching the last tab.</p>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const panels = this._allPanels();
 
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.forEach(tab =&gt; {
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tab.tabIndex = -1;
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tab.setAttribute('aria-selected', 'false');
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>});
-
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>panels.forEach(panel =&gt; {
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>panel.setAttribute('aria-hidden', 'true');
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>});
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.forEach(tab =&gt; tab.selected = false);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>panels.forEach(panel =&gt; panel.hidden = true);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
@@ -845,16 +987,8 @@ Additionally, it unhides the panel corresponding to the given tab.</p>
 <div class="literate-text "><p> If that panel doesn’t exist, abort.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!newPanel) throw new Error(`No panel with id ${newPanelId}`);
-
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
-</li>
-
-<li class="linecomment ">
-<div class="literate-text "><p> Unhide the panel and mark the tab as active.</p>
-</div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>newPanel.setAttribute('aria-hidden', 'false');
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>newTab.setAttribute('aria-selected', 'true');
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>newTab.tabIndex = 0;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>newTab.selected = true;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>newPanel.hidden = false;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>newTab.focus();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
@@ -975,10 +1109,10 @@ Additionally, it unhides the panel corresponding to the given tab.</p>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> <code>dashTabCounter</code> counts the number of <code>&lt;howto-tab&gt;</code> instances created. The
+<div class="literate-text "><p> <code>howtoTabCounter</code> counts the number of <code>&lt;howto-tab&gt;</code> instances created. The
  number is used to generated new, unique IDs.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>let dashTabCounter = 0;
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>let howtoTabCounter = 0;
 <span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
@@ -997,7 +1131,11 @@ is specified.</p>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>constructor() {
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>static get observedAttributes() {
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return ['selected'];
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
+
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>constructor() {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>super();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
@@ -1011,12 +1149,59 @@ is specified.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('role', 'tab');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.id)
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.id = `howto-tabs-tab-generated-${dashTabCounter++}`;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.id = `howto-tabs-tab-generated-${howtoTabCounter++}`;
+
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+</li>
+
+<li class="linecomment ">
+<div class="literate-text "><p> Set a well-defined initial state.</p>
+</div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('aria-selected', 'false');
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('tabindex', -1);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
+
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span></code></pre>
+</li>
+
+<li class="blockcomment ">
+<div class="literate-text "><p>Properties and their corresponding attributes should mirror one another.
+To this effect, the property setter for <code>selected</code> handles truthy/falsy
+values and reflects those to the state of the attribute. It’s important
+to note that there are no side effects taking place in the property
+setter. For example, the setter does not set <code>aria-selected</code>. Instead,
+that work happens in the <code>attributeChangedCallback</code>. As a general rule,
+make property setters very dumb, and if setting a property or attribute
+should cause a side effect (like setting a corresponding ARIA attribute)
+do that work in the <code>attributeChangedCallback</code>. This will avoid having to
+manage complex attribute/property reentrancy scenarios.</p>
+</div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>attributeChangedCallback() {
+</code></pre>
+</li>
+
+<li class="linecomment ">
+<div class="literate-text empty"></div>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const value = this.hasAttribute('selected');
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('aria-selected', value);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('tabindex', value ? 0 : -1);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
+
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>set selected(value) {
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>value = Boolean(value);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (value)
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('selected', '');
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>else
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.removeAttribute('selected');
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
+
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>get selected() {
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return this.hasAttribute('selected');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 <span class="indent">&nbsp;&nbsp;</span>}
 <span class="indent">&nbsp;&nbsp;</span>window.customElements.define('howto-tabs-tab', HowtoTabsTab);
 
-<span class="indent">&nbsp;&nbsp;</span>let dashPanelCounter = 0;
+<span class="indent">&nbsp;&nbsp;</span>let howtoPanelCounter = 0;
 <span class="indent">&nbsp;&nbsp;</span></code></pre>
 </li>
 
@@ -1036,7 +1221,7 @@ is specified.</p>
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>connectedCallback() {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('role', 'tabpanel');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.id)
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.id = `howto-tabs-panel-generated-${dashPanelCounter++}`;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.id = `howto-tabs-panel-generated-${howtoPanelCounter++}`;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 <span class="indent">&nbsp;&nbsp;</span>}
 <span class="indent">&nbsp;&nbsp;</span>window.customElements.define('howto-tabs-panel', HowtoTabsPanel);
