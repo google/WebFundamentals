@@ -356,6 +356,15 @@ samdutton:
   description:
     en: Sam is a Developer Advocate
 
+flackr:
+  name:
+    given: Robert
+    family: Flack
+  country: AN
+  role:
+    - author
+  email: flackr@google.com
+
 jonathangarbee:
   name:
     given: Jonathan

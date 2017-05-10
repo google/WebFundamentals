@@ -6,10 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Introduction to Gulp {: .page-title }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit nec
-mi tempor sagittis. Praesent fringilla sapien eget nisi luctus facilisis. Ut
-eros nisi, accumsan at justo rhoncus, tincidunt ultricies elit. Etiam eu
-ipsum quis ex sagittis posuere a vel felis.
+Modern web development requires many repetitive tasks. These slides discuss  [gulp](http://gulpjs.com/), a build tool for automating these tasks.
 
 {% setvar videoId "8YM5NayJNNQ" %}
 {% setvar slidesId "1GgHeG2iUemP3Qz3n8fLT1j2v8T-tADSJqsC07MzgAa4" %}

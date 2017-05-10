@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:14:25Z #}
+{# wf_updated_on: 2017-04-26T00:11:04Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -64,9 +64,9 @@ Open your browser and navigate to __localhost:8080/fetch-api-lab/app__.
 
 
 
-Note: If you have installed a service worker on localhost before, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service workers and <a href="tools-for-pwa-developers#clearcache">clear all service worker caches</a> for localhost so that they do not interfere with the lab.
 
- 
+
 
 If you have a text editor that lets you open a project, open the __fetch-api-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
 

@@ -85,7 +85,7 @@ Now visit your site in your web browser (by clicking on the highlighted Web Serv
 
 ![4525ec369fc2ae47.png](img/4525ec369fc2ae47.png)
 
-### Always update the s__ervice worker__
+### Always update the __service worker__
 
 During development it's helpful to ensure your service worker is always up to date and has the latest changes.
 
@@ -109,7 +109,7 @@ Add the following code to `scripts/main.js`:
 
 ```
 if ('serviceWorker' in navigator && 'PushManager' in window) {
-  console.log('Service Worker and Push is supported');
+  console.log('Service Worker and Push are supported');
 
   navigator.serviceWorker.register('sw.js')
   .then(function(swReg) {

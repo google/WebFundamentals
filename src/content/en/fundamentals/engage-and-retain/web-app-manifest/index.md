@@ -14,9 +14,9 @@ The [web app manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest) is
 
 Web app manifests provide the ability to save a site bookmark to a device's home screen. When a site is launched this way: 
 
-* It has a unique icon and name so that users can distinguish it from other other sites.
+* It has a unique icon and name so that users can distinguish it from other sites.
 * It displays something to the user while resources are downloaded or restored from cache.
-* It provides default display characterstics to the browser to avoid too abrupt a transition when site resources become available. 
+* It provides default display characterstics to the browser to avoid too abrupt transition when site resources become available. 
 
 It does all this through the simple mechanism of metadata in a text file. That's the web app manifest.
 
@@ -279,7 +279,7 @@ to the web app manifest is available on the Mozilla Developer Network.
 manifests, you can read the [actual W3C specification](http://www.w3.org/TR/appmanifest/){: .external }.
 
 Note: If you update your `manifest.json` file in the future, those changes won't
-be automatically picked up by the user unless the re-add your app to their
+be automatically picked up by the users unless they re-add your app to their
 home screen.
 
 
