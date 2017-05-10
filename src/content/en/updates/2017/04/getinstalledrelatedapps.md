@@ -45,7 +45,7 @@ three core components that make this work.
    to the native app.
 1. There is a native app installed with the same package name as the one
    referenced in your Web App Manifest. The app must have a reference from your
-   `AndroidManifest.xml` via the asset_statements element. This asserts that
+   `AndroidManifest.xml` via the `asset_statements` element. This asserts that
    your native app has a relationship with your site.
 1. If the above two criteria are met then a call to `getInstalledRelatedApps()`
    will resolve the list of apps.
@@ -152,7 +152,7 @@ In your `strings.xml` set the "site" property value to be
 Ensure that your Web App Manifest has the correct package name for your locally
 installed App. When you deploy your Android App, make sure that you update the
 site property value to be the correct URL for your site. The most efficient way
-to manage this is through your product flavours (Release, Debug, etc) which
+to manage this is through your product flavours (Release, Debug, etc.) which
 allows you to specify different resource files based on the build target,
 meaning that your Release target will only ever contain your live domain.
 
