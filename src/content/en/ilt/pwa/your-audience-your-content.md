@@ -8,7 +8,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 How do you start thinking about building an app or a website? This video
 explores some of the factors you need to consider before building your
-app, such a as target audience, platforms, internet connectivity, data
+app, such as a target audience, platforms, internet connectivity, data
 cost, and the usage context.
 
 {% setvar videoId "Ule0U0I8rO0" %}
