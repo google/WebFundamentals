@@ -2,6 +2,9 @@
 
 redirects:
 
+- from: /web/updates/2017/04/devtools-release-notes
+  to: /web/tools/chrome-devtools/coming-soon
+
 - from: /web/updates/2011/06/HTML5-Libraries---Late-June
   to: /web/updates/2011/06/HTML5-Libraries-Late-June
 
