@@ -167,7 +167,7 @@ best channels.
 <div>
 
 <a class="button button-primary gc-analytics-event cdt-but"
-   href="https://groups.google.com/forum/#!topic/google-chrome-developer-tools"
+   href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools"
    data-category="DevTools" data-label="Home / Mailing List">Mailing List</a>
 
 <a class="button button-primary gc-analytics-event cdt-but"

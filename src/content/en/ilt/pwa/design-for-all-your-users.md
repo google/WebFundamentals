@@ -7,7 +7,7 @@ book_path: /web/ilt/pwa/_book.yaml
 # Design for All Your Users {: .page-title }
 
 When we say design we mean something more than just graphic or visual design.
-“Design” in the context of PWA’s means taking a mobile-first approach when
+“Design” in the context of PWAs means taking a mobile-first approach when
 building your app, with an emphasis on accessibility. 
 
 {% setvar videoId "nEjTbZXYY48" %}

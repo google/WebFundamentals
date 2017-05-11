@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: This week we speak to Ewa Gasperowicz about UX and creativity.
 
-{# wf_updated_on: 2017-05-02 #}
+{# wf_updated_on: 2017-05-08 #}
 {# wf_published_on: 2017-03-24 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVD-S01-E02-balancing-creativity-with-user-testing.mp3 #}
 {# wf_podcast_duration: 00:09:21 #}
@@ -39,8 +39,11 @@ src="https://storage.googleapis.com/designer-vs-developer-podcast/DVD-S01-E02-ba
 controls preload="none">
 
 
-<a href="http://feeds.feedburner.com/DesignerVsDeveloper">
-  Subscribe to Designer Vs Developer Podcast
-</a> 
+Subscribe to Designer Vs Developer Podcast via
+<a href="http://feeds.feedburner.com/DesignerVsDeveloper">Feedburner</a>, 
+<a href="https://itunes.apple.com/gb/podcast/designer-vs-developer/id1232586843?mt=2">iTunes</a> Or 
+<a 
+href="https://play.google.com/music/m/Ivkbr5tikljngkr5nuzlogjwf7a?t%3DDesigner_Vs_Developer%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16">
+Google Music</a>
 
 Watch <a href="https://www.youtube.com/watch?v=OJJDwpyzlS4">the video recording</a>.
