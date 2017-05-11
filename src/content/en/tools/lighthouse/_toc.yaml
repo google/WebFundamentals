@@ -25,6 +25,8 @@ toc:
         path: /web/tools/lighthouse/audits/web-sql
       - title: Background and Foreground Colors Have Sufficient Contrast Ratio
         path: /web/tools/lighthouse/audits/contrast-ratio
+      - title: Buttons Have An Accessible Name
+        path: /web/tools/lighthouse/audits/button-name
       - title: Cache Contains start_url From Manifest
         path: /web/tools/lighthouse/audits/cache-contains-start_url
       - title: Contains Some Content When Its Scripts Are Not Available
