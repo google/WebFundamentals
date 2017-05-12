@@ -232,7 +232,7 @@ def renderDevSiteContent(content, lang='en'):
     fbOpenTag = fbContent.group(1)
     fbHeight = re.search(r'height="(.*?)"', fbContent.group(1))
     fbContent = fbContent.group(2)
-    fbMemcacheKey = '/framebox/' + hashlib.md5(fbContent).hexdigest()
+    fbMemcacheKey = '/framebox/' + hashlib.md5(fbContent.encode('utf-8')).hexdigest()
     replaceWith = '<iframe class="framebox inherit-locale" '
     replaceWith += 'style="width: 100%;'
     if fbHeight:
