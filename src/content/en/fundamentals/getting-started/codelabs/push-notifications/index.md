@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab you'll how to add push notifications to your web app.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-06T17:23:24Z #}
+{# wf_updated_on: 2017-05-12T18:37:11Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -85,7 +85,7 @@ Now visit your site in your web browser (by clicking on the highlighted Web Serv
 
 ![4525ec369fc2ae47.png](img/4525ec369fc2ae47.png)
 
-### Always update the __service worker__
+### Always update the service worker
 
 During development it's helpful to ensure your service worker is always up to date and has the latest changes.
 
@@ -109,7 +109,7 @@ Add the following code to `scripts/main.js`:
 
 ```
 if ('serviceWorker' in navigator && 'PushManager' in window) {
-  console.log('Service Worker and Push are supported');
+  console.log('Service Worker and Push is supported');
 
   navigator.serviceWorker.register('sw.js')
   .then(function(swReg) {

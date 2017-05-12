@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-25T20:19:20Z #}
+{# wf_updated_on: 2017-05-08T21:26:45Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -157,7 +157,7 @@ function fetchJSON(pathToResource) {
 fetchJSON('examples/example.json');
 ```
 
-(This is  [promise chaining](working-with-promises).)
+(This is  [promise chaining](working-with-promises#chaining).)
 
  To summarize what's happening:
 
@@ -179,7 +179,7 @@ Step 4. Finally, the JSON data from the original request to __examples/example.j
 
 *  [Response interface](https://developer.mozilla.org/en-US/docs/Web/API/Response)
 *  [Response.json()](https://developer.mozilla.org/en-US/docs/Web/API/Body/json)
-*  [Promise chaining](https://docs.google.com/document/d/1H3GaE6JQhydNaPzII9hgGZL-uL73VvgQ02FYijeK0js/edit#)
+*  [Promise chaining](working-with-promises#chaining)
 
 ### Example: fetching images
 
