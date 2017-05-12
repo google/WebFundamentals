@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-25T18:13:02Z #}
+{# wf_updated_on: 2017-04-27T16:17:56Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -28,7 +28,7 @@ Because workers run separately from the main thread, service workers are indepen
 * Because the service worker is not blocking (it's designed to be fully asynchronous) synchronous XHR and `localStorage` cannot be used in a service worker.
 * The service worker can receive push messages from a server when the app is not active. This lets your app show push notifications to the user, even when it is not open in the browser.
 
-
+ 
 
 Note: Whether notifications are received when the browser itself is not running depends on how the browser is integrated with the OS. For instance on desktop OS's, Chrome and Firefox only receive notifications when the browser is running. However, Android is designed to wake up any browser when a push message is received and will always receive push messages regardless of browser state. See the  [FAQ](https://web-push-book.gauntface.com/chapter-07/01-faq/#why-doesnt-push-work-when-the-browser-is-closed) in Matt Gaunt's  [Web Push Book](https://web-push-book.gauntface.com/) for more information.
 

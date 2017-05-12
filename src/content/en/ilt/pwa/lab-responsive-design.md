@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-27T00:14:14Z #}
+{# wf_updated_on: 2017-04-27T16:11:56Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -134,7 +134,7 @@ Save the file. Disable device mode in the browser and refresh the page. Try shri
 
 #### Explanation
 
-To make sure that the text is readable we use a media query when the browser's width becomes 48rem (768 pixels at browser's default font size or 48 times the default font size in the user's browser). When the media query is triggered we change the layout from three columns to one column by changing the `width` of each of the three `div`s to fill the page. 
+To make sure that the text is readable we use a media query when the browser's width becomes 48rem (768 pixels at browser's default font size or 48 times the default font size in the user's browser). See  [When to use Em vs Rem](https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984) for a good explanation of why rem is a good choice for relative units. When the media query is triggered we change the layout from three columns to one column by changing the `width` of each of the three `div`s to fill the page. 
 
 <div id="5"></div>
 
@@ -144,7 +144,7 @@ To make sure that the text is readable we use a media query when the browser's w
 
 
 
-The  [Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/) (Flexbox) is a very useful and easy-to-use tool for making your content responsive. Flexbox lets us accomplish the same result as in the previous steps, but it takes care of any spacing calculations for us and provides a bunch of ready-to-use CSS properties for structuring content. 
+The  [Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/) (Flexbox) is a useful and easy-to-use tool for making your content responsive.  [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) lets us accomplish the same result as in the previous steps, but it takes care of any spacing calculations for us and provides a bunch of ready-to-use CSS properties for structuring content. 
 
 ### 5.1 Comment out existing rules in CSS
 
@@ -215,7 +215,7 @@ Save the code and refresh __index.html__ in your browser. Now if you shrink the 
 
 #### Explanation
 
-When the media query is triggered we change the layout from three-column to one-column by setting the  [`flex-flow`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-5) property to `column`. This accomplishes the same result as the media query we added in step 5. Again, flexbox takes care of width calculations and provides a simple way of organizing our content.
+When the media query is triggered we change the layout from three-column to one-column by setting the  [`flex-flow`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-5) property to `column`. This accomplishes the same result as the media query we added in step 5.  [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) provides tons of other properties like `flex-flow` that let you easily structure, re-order, and justify your content so that it responds well in any context.
 
 <div id="6"></div>
 
@@ -313,7 +313,7 @@ Save the code and refresh __index.html__ in the browser. The page should look th
 *  [Migrating to Flexbox](https://www.sitepoint.com/migrating-flexbox-cutting-mustard/) - Cutting the Mustard
 *  [Modernizr Documentation](https://modernizr.com/docs)
 
-<div id="8"></div>
+<div id="congrats"></div>
 
 
 ## Congratulations!

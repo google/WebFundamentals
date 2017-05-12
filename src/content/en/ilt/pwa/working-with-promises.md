@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-25T20:22:25Z #}
+{# wf_updated_on: 2017-05-08T21:25:56Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -194,6 +194,8 @@ promise.then(function(response) {
 ```
 
 The difference is subtle, but extremely useful. Promise rejections skip forward to the next `then()` with a rejection callback (or `catch()`, since they're equivalent). With `then(func1, func2)`, `func1` or `func2` will be called, never both. But with `then(func1).catch(func2)`, both will be called if `func1` rejects, as they're separate steps in the chain. 
+
+<div id="chaining"></div>
 
 ### Promise chains: then and catch
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-26T20:31:53Z #}
+{# wf_updated_on: 2017-05-10T16:08:14Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -25,7 +25,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 To access __Developer Tools__ ("[DevTools](/web/tools/chrome-devtools/)") in Chrome, open a web page or web app in Google Chrome. Click the __Chrome menu__ <img src="img/dc66ff026f4af280.png" style="width:20px;height:20px;" alt="Chrome Menu Icon">  icon, and then select __More Tools__ > __Developer Tools__.  
 
-You can also use the keyboard shortcut <code>Control+Shift+I</code> on Windows and Linux, or <code>⌘+alt+I</code> on Mac (see the  [Keyboard and UI Shortcuts Reference](/web/tools/chrome-devtools/inspect-styles/shortcuts)). Alternatively, right-click anywhere on the page and select Inspect.
+You can also use the keyboard shortcut <kbd>Control+Shift+I</kbd> on Windows and Linux, or <kbd>⌘+alt+I</kbd> on Mac (see the  [Keyboard and UI Shortcuts Reference](/web/tools/chrome-devtools/inspect-styles/shortcuts)). Alternatively, right-click anywhere on the page and select Inspect.
 
 On a Mac, you can also select __View__ > __Developer__ > __Developer Tools__ in the Chrome menu bar at the top of the screen.
 
@@ -37,7 +37,7 @@ The __DevTools__ window opens in your Chrome browser.
 
 To open Developer Tools in Firefox, open a web page or web app in Firefox. Click the Menu icon <img src="img/7fe46717c086da27.png" style="width:20px;height:20px;" alt="Firefox Menu Icon">  in the browser toolbar, and then click __Developer__ > __Toggle Tools__.  
 
-You can also use the keyboard shortcut `Control+Shift+I` on Windows and Linux, or `⌘ + alt` + I on Mac (see the  [Keyboard Shortcuts Reference](https://developer.mozilla.org/en-US/docs/Tools/Keyboard_shortcuts)). 
+You can also use the keyboard shortcut <kbd>Control+Shift+I</kbd> on Windows and Linux, or <kbd>⌘ + alt + I</kbd> on Mac (see the  [Keyboard Shortcuts Reference](https://developer.mozilla.org/en-US/docs/Tools/Keyboard_shortcuts)). 
 
 On Mac, you can also select __View __> __Web Developer __> __Toggle Tools__ in the Firefox menu bar at the top of the screen.
 
@@ -47,7 +47,7 @@ The __Toolbox__ window opens in your Firefox browser.
 
 ### Opera
 
-To launch __Opera Dragonfly__, open a web page or web app in Opera. Use the keyboard shortcut `Ctrl + Shift + I` on Windows and Linux, or `⌘ + alt` + I on Mac. Alternatively, you can target a specific element by right-clicking in the page and selecting "Inspect Element".
+To launch __Opera Dragonfly__, open a web page or web app in Opera. Use the keyboard shortcut <kbd>Ctrl + Shift + I</kbd> on Windows and Linux, or <kbd>⌘ + alt + I</kbd> on Mac. Alternatively, you can target a specific element by right-clicking in the page and selecting "Inspect Element".
 
 On a Mac, you can also select __View > Show Developer Menu__ in the Opera menu bar at the top of the screen. Then select __Developer > Developer Tools__.
 
@@ -57,7 +57,7 @@ The __Dragonfly__ window opens in your Opera browser.
 
 ### Internet Explorer
 
-To open Developer Tools in Internet Explorer, open a web page or web app in Internet Explorer. Press `F12` or click __Developer Tools__ from the __Tools__ menu.
+To open Developer Tools in Internet Explorer, open a web page or web app in Internet Explorer. Press <kbd>F12</kbd> or click __Developer Tools__ from the __Tools__ menu.
 
 <div id="safaridevtools"></div>
 
@@ -65,7 +65,7 @@ To open Developer Tools in Internet Explorer, open a web page or web app in Inte
 
 To start using __Web Inspector__ in Safari, open a web page or web app in Safari. In the menu bar,  select __Safari__ > __Preferences__. Go to the __Advanced__ pane and enable the "Show Develop menu in menu bar" setting. In the menu bar, select __Develop__ > __Show Web Inspector__.
 
-You can also use the keyboard shortcut `⌘ +` ⌥ + I.
+You can also use the keyboard shortcut <kbd>⌘ + ⌥ + I</kbd>.
 
 The __Web Inspector__ window opens in your Safari browser.
 
@@ -83,7 +83,7 @@ The __Web Inspector__ window opens in your Safari browser.
 
 To open the dedicated __Console__ panel, either:
 
-* Press `Ctrl + Shift + J` (Windows / Linux) or `⌘ +` ⌥ + J (Mac).
+* Press <kbd>Ctrl + Shift + J</kbd> (Windows / Linux) or <kbd>⌘ + ⌥ + J</kbd> (Mac).
 *  [Open __DevTools__](#chromedevtools) and select the __Console__ panel. 
 
 ![Console in Chrome](img/37a8715708d445b7.png)
@@ -96,7 +96,7 @@ See  [Using the Console](/web/tools/chrome-devtools/console/) for more informati
 
 To open the Web Console, either:
 
-* Press `Ctrl + Shift + K` (Windows/Linux) or `⌘ +` ⌥ + K (Mac).
+* Press <kbd>Ctrl + Shift + K</kbd> (Windows/Linux) or <kbd>⌘ + ⌥ + K</kbd> (Mac).
 * From the Firefox menu (or Tools menu if you display the menu bar or are on Mac OS X), select __Developer > Web Console. __
 *  [Open the __Toolbox__](#firefoxdevtools) and select the __Console__ panel.
 
@@ -121,7 +121,7 @@ See  [Opening the Web Console](https://developer.mozilla.org/en-US/docs/Tools/We
 To open the __Console__, either:
 
 *  [Enable the Developer menu](#safaridevtools). From the menu bar, select __Develop__ > __Show Error Console__.
-* Press `⌘ + ⌥ + C`
+* Press <kbd>⌘ + ⌥ + C</kbd>
 *  [Open the Web Inspector](#safaridevtools) and select the __Console__ panel.
 
 ![Console in Safari](img/5569b9d73d1c879.png)
@@ -295,7 +295,7 @@ Then click the Developer icon <img src="img/71072a17a8634436.png" style="width:2
 
 There are several ways to force-update the service worker in Chrome:
 
-1. Refresh your app in the browser so the new service worker is recognized. Then hold `Shift` and click the Reload icon <img src="img/879b00a99b4bcb97.png" style="width:20px;height:20px;" alt="Chrome Reload Icon"> . 
+1. Refresh your app in the browser so the new service worker is recognized. Then hold <kbd>Shift</kbd> and click the Reload icon <img src="img/879b00a99b4bcb97.png" style="width:20px;height:20px;" alt="Chrome Reload Icon"> . 
 2.  [Open the Service Workers pane](#chromesw) in __DevTools__. Click __Update__. When the new service worker installs, click __skipWaiting__.
 
 ![Skip Waiting in Chrome](img/77b5eaa130252f7e.png)

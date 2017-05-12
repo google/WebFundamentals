@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-26T00:23:54Z #}
+{# wf_updated_on: 2017-04-27T16:24:23Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -123,13 +123,13 @@ This code starts by defining a cache name and a list of URLs to be cached (the s
 
 
 
-Note: The <code>.</code> represents the current directory (for example, </strong>app/</strong>). If the user navigates to <strong>app/</strong>, it generally shows <strong>app/index.html</strong>. However, <strong>app/</strong> and <strong>app/index.html</strong> are separate URLs, so a 404 can still occur if the user navigates to <strong>app/</strong> and only <strong>app/index.html</strong> is available. We cache <code>.</code> as well as <code>index.html</code> to avoid this potential error.  
+Note: The `.` represents the current directory (for example, __app/__). If the user navigates to __app/__, the browser generally shows __app/index.html__. However, __app/__ and __app/index.html__ are separate URLs, so a 404 can still occur if the user navigates to __app/__ and only __app/index.html__ is available. We cache `.` as well as `index.html` to avoid this potential error.  
 
 
 
 
 
-Note: The <code>event.waitUntil</code> code can be particularly confusing. This operation simply tells the browser not to preemptively terminate the service worker before the asynchronous operations inside of it have completed.
+Note: The `event.waitUntil` can be particularly confusing. This operation simply tells the browser not to preemptively terminate the service worker before the asynchronous operations inside of it have completed.
 
 
 
