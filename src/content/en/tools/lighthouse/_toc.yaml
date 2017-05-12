@@ -5,6 +5,8 @@ toc:
       path: /web/tools/lighthouse/
     - title: Audit References
       section:
+      - title: Address Bar Matches Brand Colors
+        path: /web/tools/lighthouse/audits/address-bar
       - title: Avoids Application Cache
         path: /web/tools/lighthouse/audits/appcache
       - title: Avoids console.time()
@@ -51,8 +53,6 @@ toc:
         path: /web/tools/lighthouse/audits/alt-attribute
       - title: First Meaningful Paint
         path: /web/tools/lighthouse/audits/first-meaningful-paint
-      - title: Has A Theme-Color Meta Tag
-        path: /web/tools/lighthouse/audits/theme-color
       - title: Has A Viewport Meta Tag With width Or initial-scale
         path: /web/tools/lighthouse/audits/has-viewport-meta-tag
       - title: Manifest Contains Icons at Least 192px
@@ -65,8 +65,6 @@ toc:
         path: /web/tools/lighthouse/audits/manifest-contains-short_name
       - title: Manifest Contains Start URL
         path: /web/tools/lighthouse/audits/manifest-contains-start_url
-      - title: Manifest Contains theme_color
-        path: /web/tools/lighthouse/audits/manifest-contains-theme_color
       - title: Manifest Exists
         path: /web/tools/lighthouse/audits/manifest-exists
       - title: Manifest's display Property Is Set
