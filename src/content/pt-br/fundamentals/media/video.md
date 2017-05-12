@@ -121,7 +121,7 @@ Atenção: A maioria das plataformas oferece suporte à Media Fragments API, exc
 Usando as ferramentas de desenvolvedor do navegador, verifique se `Accept-Ranges: bytes` está presente
 nos cabeçalhos de resposta:
 
-<img class="center" alt="Captura de tela do Chrome DevTools: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Captura de tela do Chrome DevTools: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Inclua uma imagem de pôster
 
@@ -144,7 +144,7 @@ Veja uma comparação lado a lado de vídeos com e sem uma imagem de pôster &nd
 
 <div class="attempt-left">
   <figure>
-    <img alt="Captura de tela do Android Chrome, retrato: sem pôster" src="img/Chrome-Android-video-no-poster.png">
+    <img alt="Captura de tela do Android Chrome, retrato: sem pôster" src="images/Chrome-Android-video-no-poster.png">
     <figcaption>
       Captura de tela do Android Chrome, retrato: sem pôster
      </figcaption>
@@ -152,7 +152,7 @@ Veja uma comparação lado a lado de vídeos com e sem uma imagem de pôster &nd
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Captura de tela do Android Chrome, retrato: com pôster" src="img/Chrome-Android-video-poster.png">
+    <img alt="Captura de tela do Android Chrome, retrato: com pôster" src="images/Chrome-Android-video-poster.png">
     <figcaption>
       Captura de tela do Android Chrome, retrato: com pôster
      </figcaption>
@@ -288,7 +288,7 @@ os controles.
 
 <div class="attempt-left">
   <figure>
-    <img alt="Captura de tela do Android Chrome, retrato: elemento video sem estilo ultrapassa a janela de visualização" src="img/Chrome-Android-portrait-video-unstyled.png">
+    <img alt="Captura de tela do Android Chrome, retrato: elemento video sem estilo ultrapassa a janela de visualização" src="images/Chrome-Android-portrait-video-unstyled.png">
     <figcaption>
       Captura de tela do Android Chrome, retrato: elemento video sem estilo ultrapassa a janela de visualização
     </figcaption>
@@ -296,7 +296,7 @@ os controles.
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Captura de tela do Android Chrome, paisagem: elemento video sem estilo ultrapassa a janela de visualização" src="img/Chrome-Android-landscape-video-unstyled.png">
+    <img alt="Captura de tela do Android Chrome, paisagem: elemento video sem estilo ultrapassa a janela de visualização" src="images/Chrome-Android-landscape-video-unstyled.png">
     <figcaption>
       Captura de tela do Android Chrome, paisagem: elemento video sem estilo ultrapassa a janela de visualização
     </figcaption>
@@ -353,13 +353,13 @@ de forma adequada:
 
 <div class="attempt-left">
   <figure>
-    <img  alt="Captura de tela de um vídeo reproduzido no Safari do iPhone, retrato" src="img/iPhone-video-playing-portrait.png">
+    <img  alt="Captura de tela de um vídeo reproduzido no Safari do iPhone, retrato" src="images/iPhone-video-playing-portrait.png">
     <figcaption>Captura de tela de um vídeo reproduzido no Safari do iPhone, retrato</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Captura de tela de um vídeo reproduzido no Safari do iPhone, paisagem" src="img/iPhone-video-playing-landscape.png">
+    <img alt="Captura de tela de um vídeo reproduzido no Safari do iPhone, paisagem" src="images/iPhone-video-playing-landscape.png">
     <figcaption>Captura de tela de um vídeo reproduzido no Safari do iPhone, paisagem</figcaption>
   </figure>
 </div>
@@ -371,7 +371,7 @@ Por exemplo, sem qualquer personalização, um vídeo reproduzido em um iPad na 
 paisagem tem a seguinte aparência:
 
 <img alt="Captura de tela de um vídeo reproduzido no Safari no iPad Retina, paisagem"
-src="img/iPad-Retina-landscape-video-playing.png">
+src="images/iPad-Retina-landscape-video-playing.png">
 
 Definir `width: 100%` ou `max-width: 100%` para o vídeo com CSS pode solucionar
 muitos problemas de layout relacionados à orientação do dispositivo. Considere também
@@ -379,21 +379,21 @@ alternativas para o modo de tela inteira.
 
 ## Exibição em linha ou em tela inteira
 
-<img class="attempt-right" alt="Captura de tela de um elemento video no iPhone, retrato" src="img/iPhone-video-with-poster.png">
+<img class="attempt-right" alt="Captura de tela de um elemento video no iPhone, retrato" src="images/iPhone-video-with-poster.png">
 
 Diferentes plataformas exibem vídeos de forma diferente. O Safari em um iPhone exibe um elemento
 video em linha em uma página da Web, mas reproduz o vídeo no modo de tela inteira:
 
 <div style="clear:both;"></div>
 
-<img class="attempt-right" alt="Captura de tela de um vídeo reproduzido no Chrome do Android, retrato" src="img/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="attempt-right" alt="Captura de tela de um vídeo reproduzido no Chrome do Android, retrato" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 No Android, os usuários podem solicitar o modo de tela inteira clicando no
 ícone do recurso. No entanto, o padrão é reproduzir o vídeo em linha:
 
 <div style="clear:both;"></div>
 
-<img class="attempt-right" alt="Captura de tela de um vídeo reproduzido no Safari no iPad Retina, paisagem" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="attempt-right" alt="Captura de tela de um vídeo reproduzido no Safari no iPad Retina, paisagem" src="images/iPad-Retina-landscape-video-playing.png">
 
 O Safari do iPad reproduz vídeos em linha:
 
@@ -453,7 +453,7 @@ A acessibilidade não é um recurso. Usuários que não conseguem ouvir nem enxe
 
 ### Inclua legendas para melhorar a acessibilidade
 
-<img class="attempt-right" alt="Captura de tela mostrando legendas exibidas usando o elemento track no Chrome no Android" src="img/Chrome-Android-track-landscape-5x3.jpg">
+<img class="attempt-right" alt="Captura de tela mostrando legendas exibidas usando o elemento track no Chrome no Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 Para que mídias sejam mais acessíveis em dispositivos móveis, inclua legendas ou descrições
 usando o elemento track.

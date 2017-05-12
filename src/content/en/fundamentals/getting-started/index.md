@@ -49,7 +49,7 @@ or adding a new feature to an existing application.  Find more codelabs on
   </p>
 </div>
 <div class="attempt-right">
-  <a href="codelabs/debugging-service-workers/">
+  <a href="codelabs/push-notifications/">
     Adding Push Notifications
   </a>
   <p>

@@ -49,7 +49,7 @@ atau menambahkan fitur baru ke aplikasi yang ada.  Temukan codelab selengkapnya 
  </p>
 </div>
 <div class="attempt-right">
-  <a href="codelabs/debugging-service-workers/">
+  <a href="codelabs/push-notifications/">
     Menambahkan Pemberitahuan Push
  </a>
   <p>

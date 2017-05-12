@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-10T10:22:33Z #}
+{# wf_updated_on: 2017-04-26T00:12:34Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -68,7 +68,7 @@ Open your browser and navigate __localhost:8080/push-notification-lab/app/__.
 
 
 
-Note: If you have installed a service worker on localhost before, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service workers and <a href="tools-for-pwa-developers#clearcache">clear all service worker caches</a> for localhost so that they do not interfere with the lab.
 
 
 

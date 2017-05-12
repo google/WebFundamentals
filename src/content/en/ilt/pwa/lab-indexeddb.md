@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:15:02Z #}
+{# wf_updated_on: 2017-04-26T00:11:32Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -56,7 +56,7 @@ Open your browser and navigate to __localhost:8080/indexed-db-lab/app__.
 
 
 
-Note: If you have installed a service worker on localhost before, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service workers and <a href="tools-for-pwa-developers#clearcache">clear all service worker caches</a> for localhost so that they do not interfere with the lab.
 
 
 
@@ -112,7 +112,7 @@ var dbPromise = idb.open('couches-n-things', 1);
 
 In the browser, [open IndexedDB](tools-for-pwa-developers#indexeddb) in the developer tools and confirm that your database exists.
 
-Open the QUnit test page, __app/test/test.html__, in another browser tab. This page contains several tests for testing our app at each stage of the codelab. Passed tests are blue and failed tests are red. Your app should pass the first test that checks whether the "couches-n-things" database exists in the browser.
+Open the QUnit test page, __app/test/test.html__, in another browser tab. This page contains several tests for testing our app at each stage of the codelab. Passed tests are blue and failed tests are red. Your app should pass the first test that checks whether the `couches-n-things` database exists in the browser.
 
 
 
@@ -165,9 +165,9 @@ var dbPromise = idb.open('couches-n-things', 2, function(upgradeDb) {
 });
 ```
 
-Save the code and reload the page in the browser. Go to __DevTools__ > __Application__ and expand the "couches-n-things" database in __IndexedDB__. You should see the empty "products" object store.
+Save the code and reload the page in the browser. [Open IndexedDB](tools-for-pwa-developers#indexeddb) in your browser's developer tools and expand the `couches-n-things` database. You should see the empty `products` object store.
 
-Open the QUnit test page. Your app should now pass the second test that checks whether the "products" object store exists.
+Open the QUnit test page. Your app should now pass the second test that checks whether the `products` object store exists.
 
 #### Explanation
 
@@ -268,9 +268,9 @@ dbPromise.then(function(db) {
 });
 ```
 
-Save the file and reload the page in the browser. Click __Add Products__ and refresh the page. Confirm that the objects display in the "products" object store under "couches-n-things" in __DevTools__.
+Save the file and reload the page in the browser. Click __Add Products__ and refresh the page. Confirm that the objects display in the `products` object store under `couches-n-things` in the developer tools.
 
-Reload the test page. The app should now pass the third test that checks whether the objects have been added to the "products" object store. 
+Reload the test page. The app should now pass the third test that checks whether the objects have been added to the `products` object store. 
 
 #### Explanation
 
@@ -355,22 +355,22 @@ Note: We did not include break statements in the switch block so that all of the
 
 
 
-Save the file and reload the page in the browser. Confirm that the "name" index displays in the "products" object store in __DevTools__.
+Save the file and reload the page in the browser. Confirm that the `name` index displays in the `products` object store in the developer tools.
 
-Open the test page. The app should now pass the fourth test that checks whether the "name" index exists.
+Open the test page. The app should now pass the fourth test that checks whether the `name` index exists.
 
 #### Explanation
 
-In the example, we create an index on the "name" property, allowing us to search and retrieve objects from the store by their name. The optional `unique` option ensures that no two items added to the "products" object store use the same name.
+In the example, we create an index on the `name` property, allowing us to search and retrieve objects from the store by their name. The optional `unique` option ensures that no two items added to the `products` object store use the same name.
 
 #### For more information
 
 *  [`IDBIndex` - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex)
 *  [`createIndex` method - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex)
 
-### 4.2 Create "price" and "description" indexes
+### 4.2 Create `price` and `description` indexes
 
-To complete TODO 4.2 in <strong>main.js</strong>, write a case 3 to add "price" and "description" indexes to the object store. Do not include the optional <code>{unique: true}</code> argument since these values do not need to be unique.
+To complete TODO 4.2 in <strong>main.js</strong>, write a case 3 to add  and `description` indexes to the object store. Do not include the optional <code>{unique: true}</code> argument since these values do not need to be unique.
 
 
 
@@ -384,9 +384,9 @@ Note: Remember to close the test page. The database version can't be changed whi
 
 
 
-Save the code and refresh the page in the browser. Confirm that the "price" and "description" indexes display in the "products" object store in __DevTools__.
+Save the code and refresh the page in the browser. Confirm that the `price` and `description` indexes display in the `products` object store in the developer tools.
 
-Open the test page. The app should now pass tests five and six. These check whether the "price" and "description" indexes have been added to the store.
+Open the test page. The app should now pass tests five and six. These check whether the `price` and `description` indexes have been added to the store.
 
 ### 4.3 Use the get method
 
@@ -483,7 +483,7 @@ Save the code and refresh the page in the browser. Enter a description (must mat
 
 #### Explanation
 
-After getting the price values from the page, we determine which method to call on `IDBKeyRange` to limit the cursor. We open the cursor on the "price" index and pass the cursor object to the `showRange` function in `.then`. This function adds the current object to the html string, moves on to the next object with `cursor.continue()`, and calls itself, passing in the cursor object. `showRange` loops through each object in the object store until it reaches the end of the range. Then the cursor object is `undefined` and `if (!cursor) {return;}` breaks the loop.
+After getting the price values from the page, we determine which method to call on `IDBKeyRange` to limit the cursor. We open the cursor on the `price` index and pass the cursor object to the `showRange` function in `.then`. This function adds the current object to the html string, moves on to the next object with `cursor.continue()`, and calls itself, passing in the cursor object. `showRange` loops through each object in the object store until it reaches the end of the range. Then the cursor object is `undefined` and `if (!cursor) {return;}` breaks the loop.
 
 #### For more information
 
@@ -503,13 +503,13 @@ The solution code can be found in the __04-4-get-data__ directory.
 
 
 
-In this section we create an "orders" object store to contain a user's orders. We take a sample order and check if the quantity of each item in the "products" object store is enough to fulfill the order. If we have enough in stock, we process the orders, subtracting the amount ordered from the quantity of each corresponding item in the "products" object store.
+In this section we create an `orders` object store to contain a user's orders. We take a sample order and check if the quantity of each item in the `products` object store is enough to fulfill the order. If we have enough in stock, we process the orders, subtracting the amount ordered from the quantity of each corresponding item in the `products` object store.
 
 ### 5.1 Create an orders object store
 
 Create an object store to hold pending orders.
 
-To complete TODO 5.1 in <strong>main.js</strong>, write a case 4 that adds an "orders" object store to the database. Make the <code>keyPath</code> the "id" property. This is very similar to creating the "products" object store in <code>case 1</code>.
+To complete TODO 5.1 in <strong>main.js</strong>, write a case 4 that adds an `orders` object store to the database. Make the <code>keyPath</code> the `id` property. This is very similar to creating the `products` object store in <code>case 1</code>.
 
 
 
@@ -523,13 +523,13 @@ Note: Remember to close the test page. The database version can't be changed whi
 
 
 
-Save the code and refresh the page in the browser. Confirm that the object store displays in __DevTools__.
+Save the code and refresh the page in the browser. Confirm that the object store displays in the developer tools.
 
-Open the test page. Your app should pass the eighth test which tests if the "orders" object store exists.
+Open the test page. Your app should pass the eighth test which tests if the `orders` object store exists.
 
 ### 5.2 Add sample orders
 
-To complete TODO 5.2 in <strong>main.js</strong>, add the following items to the "orders" object store.
+To complete TODO 5.2 in <strong>main.js</strong>, add the following items to the `orders` object store.
 
 
 
@@ -571,19 +571,19 @@ var items = [
 ];
 ```
 
-Save the code and refresh the page in the browser. Click __Add Orders__ and refresh the page again. Confirm that the objects show up in the "orders" store in __DevTools__.
+Save the code and refresh the page in the browser. Click __Add Orders__ and refresh the page again. Confirm that the objects show up in the `orders` store in the developer tools.
 
-Refresh the test page. Your app should now pass the ninth test which checks if the sample orders were added to the "orders" object store.
+Refresh the test page. Your app should now pass the ninth test which checks if the sample orders were added to the `orders` object store.
 
 ### 5.3 Display orders
 
-To complete TODO 5.3 in <strong>main.js</strong>, write the code to display all of the objects in the "orders" object store on the page. This is very similar to the <code>getByPrice</code> function except you don't need to define a range for the cursor. The code to insert the <code>s</code> variable into the HTML is already written.
+To complete TODO 5.3 in <strong>main.js</strong>, write the code to display all of the objects in the `orders` object store on the page. This is very similar to the <code>getByPrice</code> function except you don't need to define a range for the cursor. The code to insert the <code>s</code> variable into the HTML is already written.
 
 Save the code and refresh the page in the browser. Click __Show Orders__ to display the orders on the page.
 
 ### 5.4 Get all orders
 
-To complete TODO 5.4 in the <code>getOrders</code> function in <strong>main.js</strong>, write the code to get all objects from the "orders" object store. You must use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll">getAll() method</a> on the object store. This returns an array containing all the objects in the store, which is then passed to the <code>processOrders</code> function in <code>.then</code>.
+To complete TODO 5.4 in the <code>getOrders</code> function in <strong>main.js</strong>, write the code to get all objects from the `orders` object store. You must use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll">getAll() method</a> on the object store. This returns an array containing all the objects in the store, which is then passed to the <code>processOrders</code> function in <code>.then</code>.
 
 
 
@@ -591,7 +591,7 @@ __Hint:__ Return the call to <code>dbPromise</code> otherwise the orders array w
 
 
 
-Refresh the test page. Your app should now pass the tenth test, which checks if the `getOrders` function gets objects from the "orders" object store.
+Refresh the test page. Your app should now pass the tenth test, which checks if the `getOrders` function gets objects from the `orders` object store.
 
 ### 5.5 Process the orders
 
@@ -617,7 +617,7 @@ return dbPromise.then(function(db) {
 
 #### Explanation
 
-This code gets each object from the "products" object store with an id matching the corresponding order, and passes it and the order to the `decrementQuantity` function.
+This code gets each object from the `products` object store with an id matching the corresponding order, and passes it and the order to the `decrementQuantity` function.
 
 #### For more information
 
@@ -626,7 +626,7 @@ This code gets each object from the "products" object store with an id matching 
 
 ### 5.6 Decrement quantity
 
-Now we need to check if there are enough items left in the "products" object store to fulfill the order.
+Now we need to check if there are enough items left in the `products` object store to fulfill the order.
 
 Replace TODO 5.6 in <strong>main.js</strong> with the following code:
 
@@ -651,24 +651,24 @@ Refresh the test page. Your app should now pass the eleventh test, which checks 
 
 #### Explanation
 
-Here we are subtracting the quantity ordered from the quantity left in the "products" store. If this value is less than zero, we reject the promise. This causes `Promise.all` in the `processOrders` function to fail so that the whole order is not processed. If the quantity remaining is not less than zero, then we update the quantity and return the object.
+Here we are subtracting the quantity ordered from the quantity left in the `products` store. If this value is less than zero, we reject the promise. This causes `Promise.all` in the `processOrders` function to fail so that the whole order is not processed. If the quantity remaining is not less than zero, then we update the quantity and return the object.
 
 #### For more information
 
 *  [new `Promise` - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
-### 5.7 Update the "products" object store
+### 5.7 Update the `products` object store
 
-Finally, we must update the "products" object store with the new quantities of each item.
+Finally, we must update the `products` object store with the new quantities of each item.
 
-Replace TODO 5.7 in <strong>main.js</strong> with the code to update the items in the "products" objects store with their new quantities. We already updated the values in the <code>decrementQuantity</code> function and passed the array of updated objects into the <code>updateProductsStore</code> function. All that's left to do is use <a id="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put">ObjectStore.put</a> to update each item in the store. A few hints:
+Replace TODO 5.7 in <strong>main.js</strong> with the code to update the items in the `products` objects store with their new quantities. We already updated the values in the <code>decrementQuantity</code> function and passed the array of updated objects into the <code>updateProductsStore</code> function. All that's left to do is use <a id="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put">ObjectStore.put</a> to update each item in the store. A few hints:
 
 * Remember to make the transaction mode <code>'readwrite'</code>
 * Remember to return <code>transaction.complete</code> (<code>tx.complete</code>) after putting the items into the store
 
 Save the code and refresh the page in the browser. Check the quantity property of the cabinet, armchair, and couch items in the products object store. Click __Fulfill__ in the page, refresh, and check the quantities again. They should be reduced by the amount of each product that was ordered.
 
-Refresh the test page. Your app should now pass the last test, which checks whether the `updateProductsStore` function updates the items in the "product" object store with their reduced quantities.
+Refresh the test page. Your app should now pass the last test, which checks whether the `updateProductsStore` function updates the items in the `products` object store with their reduced quantities.
 
 #### Solution code
 

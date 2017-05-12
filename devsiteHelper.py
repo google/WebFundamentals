@@ -178,7 +178,7 @@ def buildLeftNav(bookYaml, lang='en'):
     if 'path' in item:
       result += '<li class="devsite-nav-item">\n'
       result += '<a href="' + item['path'] + '" class="devsite-nav-title">\n'
-      result += '<span>' + item['title'] + '</span>\n'
+      result += '<span>' + cgi.escape(item['title']) + '</span>\n'
       result += '</a>\n'
       result += '</li>\n'
     elif 'section' in item:
@@ -187,7 +187,7 @@ def buildLeftNav(bookYaml, lang='en'):
       result += '<span class="devsite-nav-title devsite-nav-title-no-path" '
       result += 'track-type="leftNav" track-name="expandNavSectionNoLink" '
       result += 'track-metadata-position="0">\n'
-      result += '<span>' + item['title'] + '</span>\n'
+      result += '<span>' + cgi.escape(item['title']) + '</span>\n'
       result += '</span>'
       result += '<a '
       result += 'class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" '
@@ -232,7 +232,7 @@ def renderDevSiteContent(content, lang='en'):
     fbOpenTag = fbContent.group(1)
     fbHeight = re.search(r'height="(.*?)"', fbContent.group(1))
     fbContent = fbContent.group(2)
-    fbMemcacheKey = '/framebox/' + hashlib.md5(fbContent).hexdigest()
+    fbMemcacheKey = '/framebox/' + hashlib.md5(fbContent.encode('utf-8')).hexdigest()
     replaceWith = '<iframe class="framebox inherit-locale" '
     replaceWith += 'style="width: 100%;'
     if fbHeight:
@@ -266,6 +266,7 @@ def getInclude(includeTag, lang='en'):
   fileName = fileName.replace('"', '')
   fileName = fileName.replace('\'', '')
   fileName = fileName.strip()
+  result = None
   if fileName == 'comment-widget.html':
     result = '<style>'
     result += '#gplus-comment-container { border: 1px solid #c5c5c5; }'
@@ -374,7 +375,7 @@ def getAnnouncementBanner(lang='en'):
 
 
 def getFooterPromo(lang='en'):
-  """Gets the promo footer. 
+  """Gets the promo footer.
 
   Args:
       lang: The language to pick from.
@@ -407,7 +408,7 @@ def getFooterPromo(lang='en'):
 
 
 def getFooterLinkBox(lang='en'):
-  """Gets the promo boxes. 
+  """Gets the promo boxes.
 
   Args:
       lang: The language to pick from.

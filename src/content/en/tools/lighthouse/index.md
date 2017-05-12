@@ -49,8 +49,8 @@ figure {
 
 Lighthouse is an [open-source](https://github.com/GoogleChrome/lighthouse),
 automated tool for improving the quality of web pages. You can run it against
-any page on the web. It has audits for performance, accessibility, progressive
-web apps, and more.
+any web page, public or requiring authentication. It has audits for performance,
+accessibility, progressive web apps, and more.
 
 You can run Lighthouse as a Chrome Extension, from the command line, or as a
 Node module. You give Lighthouse a URL to audit, it runs a series of audits
@@ -81,9 +81,9 @@ well as how to fix it.
 ## Get started {: #get-started }
 
 There are two primary ways to run Lighthouse: as a Chrome Extension, or as a
-command line tool. The Chrome Extension provides a more user-friendly
-interface for reading reports. The command line tool enables you to integrate
-Lighthouse into continuous integration systems.
+command line tool. The Chrome Extension lets you audit logged-in pages and
+provides a more user-friendly interface for reading reports. The command line
+tool enables you to integrate Lighthouse into continuous integration systems.
 
 ### Install and run the Chrome Extension {: #extension }
 
