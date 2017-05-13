@@ -155,3 +155,6 @@ redirects:
 
 - from: /web/tools/chrome-devtools/javascript/console/...
   to: /web/tools/chrome-devtools/console/...
+
+- from: /web/tools/service-worker-libraries/
+  to: /web/tools/workbox/
