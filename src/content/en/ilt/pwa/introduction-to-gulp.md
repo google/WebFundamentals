@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:09:07Z #}
+{# wf_updated_on: 2017-05-03T01:38:34Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -79,7 +79,7 @@ Before installing gulp plugins, your application needs to be initialized. Do thi
 
     npm init
 
-This command begins the generation of a __package.json__ file, prompting you with questions about your application (these can all be left blank). The file looks like this (your values may be different):
+This command begins the generation of a __package.json__ file, prompting you with questions about your application. For simplicity these can all be left blank (either by skipping the prompts with the return key or by using `npm init -y` instead of the above command), but in production you could store  [application metadata](https://nodesource.com/blog/the-basics-of-package-json-in-node-js-and-npm/) here. The file looks like this (your values may be different):
 
 #### package.json
 

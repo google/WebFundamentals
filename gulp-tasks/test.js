@@ -772,6 +772,33 @@ function testContributors(filename, contents) {
   });
 }
 
+/**
+ * Tests and validates a _redirects.yaml file.
+ *   Note: The returned promise always resolves, it will never reject.
+ *
+ * @param {string} filename The name of the file to be tested.
+ * @return {Object} An object with all of the contributors.
+ */
+function testRedirects(filename, contents) {
+  return new Promise(function(resolve, reject) {
+    let msg;
+    let parsed = parseYAML(filename, contents);
+    let filepath = path.dirname(filename).split('/').splice(3).join('/');
+    filepath = path.join('/', 'web', filepath)
+    if (parsed.redirects && parsed.redirects.length > 0) {
+      parsed.redirects.forEach( item => {
+        let redirectpath = path.dirname(item.from);
+        if (!redirectpath.startsWith(filepath)) {
+          msg = `Must only redirect from paths below "${filepath}"`;
+          logError(filename, null, msg);
+        }
+      });
+    };
+    resolve();
+  });
+}
+
+
 /******************************************************************************
  * Primary File Test
  *****************************************************************************/
@@ -827,6 +854,8 @@ function testFile(filename, opts) {
       testPromise = testYAML(filename, contents);
     } else if (filenameObj.base === '_contributors.yaml') {
       testPromise = testContributors(filename, contents);
+    } else if (filenameObj.base === '_redirects.yaml') {
+      testPromise = testRedirects(filename, contents);
     } else if (filenameObj.base === 'commontags.json') {
       testPromise = testCommonTags(filename, contents);
     } else if (MD_FILES.indexOf(filenameObj.ext) >= 0) {

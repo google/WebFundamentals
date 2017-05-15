@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:10:42Z #}
+{# wf_updated_on: 2017-05-03T17:04:05Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -48,10 +48,10 @@ A route intercepts requests that match the specified URL pattern and HTTP reques
 Let's look at an example:
 
 ```
-toolbox.router.get('/my-app/index.html', global.toolbox.networkFirst);
+toolbox.router.get('/my-app/index.html', global.toolbox.networkFirst, {networkTimeoutSeconds: 5});
 ```
 
-This intercepts all `GET` requests for __/my-app/index.html__ and handles the request according to the built-in "network first" strategy. In this approach the request is first sent to the network, and if that succeeds the request/response pair is added to the cache. If it fails, it tries to get the response from the cache.
+This intercepts all `GET` requests for __/my-app/index.html__ and handles the request according to the built-in "network first" strategy. In this approach the request is first sent to the network, and if that succeeds the request/response pair is added to the cache. If it fails, it tries to get the response from the cache. We have set the `networkTimeoutSeconds` option to `5` so that the app fetches the response from the cache if the network doesn't respond within 5 seconds.
 
 To define "wildcards" (URL patterns for matching more than one file), or if you need to match a cross-origin request, sw-toolbox has two options: Express style routing and regular expression routing.
 
@@ -266,11 +266,6 @@ Example 5 presents our default route. If the request did not match any prior rou
 
 
 `sw-precache` is a module for generating a service worker that precaches resources. It integrates with your build process. `sw-precache` gives you fine control over the behavior of the generated service worker. At the time of creation we can specify files to precache, scripts to import, and many other options that determine how the service worker behaves (see the  [sw-precache Github page](https://github.com/GoogleChrome/sw-precache) for more information).
-
-For this tutorial we'll break the process into the following steps:
-
-* Integrating `sw-precache` into a gulp build system
-* Creating routes with <code>sw-toolbox</code>
 
 ### Integrating sw-precache into a gulp build system
 

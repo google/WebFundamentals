@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:10:01Z #}
+{# wf_updated_on: 2017-04-24T18:23:09Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -78,7 +78,7 @@ Note: You need the --harmony <a href="http://stackoverflow.com/questions/1335196
 
 To install Lighthouse's Node module from the command line, use the following command:
 
-    npm install -g GoogleChrome/lighthouse
+    npm install -g lighthouse
 
 This installs the tool globally. You can then run Lighthouse from the command line (where  [https://airhorner.com/](https://airhorner.com/) is your app):
 

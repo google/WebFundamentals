@@ -119,7 +119,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 使用浏览器开发者工具检查响应标头中的 `Accept-Ranges: bytes`：
 
 
-<img class="center" alt="Chrome DevTools 屏幕截图：Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Chrome DevTools 屏幕截图：Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### 包括海报图像
 
@@ -140,7 +140,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 
 <div class="attempt-left">
   <figure>
-    <img alt="Android 版 Chrome 屏幕截图（纵向）：不含海报" src="img/Chrome-Android-video-no-poster.png">
+    <img alt="Android 版 Chrome 屏幕截图（纵向）：不含海报" src="images/Chrome-Android-video-no-poster.png">
     <figcaption>
       Android 版 Chrome 屏幕截图（纵向）：不含海报
      </figcaption>
@@ -148,7 +148,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Android 版 Chrome 屏幕截图（纵向）：含海报" src="img/Chrome-Android-video-poster.png">
+    <img alt="Android 版 Chrome 屏幕截图（纵向）：含海报" src="images/Chrome-Android-video-poster.png">
     <figcaption>
       Android 版 Chrome 屏幕截图（纵向）：含海报
      </figcaption>
@@ -282,7 +282,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 
 <div class="attempt-left">
   <figure>
-    <img alt="Android 版 Chrome 屏幕截图（纵向）：未设置样式的 video 元素溢出了视口    " src="img/Chrome-Android-portrait-video-unstyled.png">
+    <img alt="Android 版 Chrome 屏幕截图（纵向）：未设置样式的 video 元素溢出了视口    " src="images/Chrome-Android-portrait-video-unstyled.png">
     <figcaption>
       Android 版 Chrome 屏幕截图（纵向）：未设置样式的 video 元素溢出了视口
     </figcaption>
@@ -290,7 +290,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Android 版 Chrome 屏幕截图（横向）：未设置样式的 video 元素溢出了视口" src="img/Chrome-Android-landscape-video-unstyled.png">
+    <img alt="Android 版 Chrome 屏幕截图（横向）：未设置样式的 video 元素溢出了视口" src="images/Chrome-Android-landscape-video-unstyled.png">
     <figcaption>
       Android 版 Chrome 屏幕截图（横向）：未设置样式的 video 元素溢出了视口
     </figcaption>
@@ -347,13 +347,13 @@ iPhone 版 Safari 可以在横向和纵向之间自由转换：
 
 <div class="attempt-left">
   <figure>
-    <img  alt="iPhone 版 Safari 中播放的视频的屏幕截图（纵向）" src="img/iPhone-video-playing-portrait.png">
+    <img  alt="iPhone 版 Safari 中播放的视频的屏幕截图（纵向）" src="images/iPhone-video-playing-portrait.png">
     <figcaption>iPhone 版 Safari 中播放的视频的屏幕截图（纵向）</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="iPhone 版 Safari 中播放的视频的屏幕截图（横向）" src="img/iPhone-video-playing-landscape.png">
+    <img alt="iPhone 版 Safari 中播放的视频的屏幕截图（横向）" src="images/iPhone-video-playing-landscape.png">
     <figcaption>iPhone 版 Safari 中播放的视频的屏幕截图（横向）</figcaption>
   </figure>
 </div>
@@ -365,7 +365,7 @@ iPad 和 Android 版 Chrome 中的设备方向问题十分棘手。例如，在�
 
 
 <img alt="配 Retina 屏的 iPad 版 Safari 中播放的视频的屏幕截图（横向）"
-src="img/iPad-Retina-landscape-video-playing.png">
+src="images/iPad-Retina-landscape-video-playing.png">
 
 使用 CSS 设置视频 `width: 100%` 或 `max-width: 100%` 可解决许多设备方向布局方面的问题。
 您还可以考虑全屏模式替代方案。
@@ -373,21 +373,21 @@ src="img/iPad-Retina-landscape-video-playing.png">
 
 ## 内联或全屏显示
 
-<img class="attempt-right" alt="iPhone 上 video 元素的屏幕截图（纵向）" src="img/iPhone-video-with-poster.png">
+<img class="attempt-right" alt="iPhone 上 video 元素的屏幕截图（纵向）" src="images/iPhone-video-with-poster.png">
 
 不同的平台显示视频的方式也不相同。iPhone 版 Safari 会在网页中内联显示 video 元素，但会以全屏模式播放视频：
 
 
 <div style="clear:both;"></div>
 
-<img class="attempt-right" alt="Android 版 Chrome 中视频播放的屏幕截图（纵向）" src="img/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="attempt-right" alt="Android 版 Chrome 中视频播放的屏幕截图（纵向）" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 在 Android 设备上，用户可以通过点击全屏图标来请求全屏模式。
 但默认情况下，浏览器以内联模式播放视频：
 
 <div style="clear:both;"></div>
 
-<img class="attempt-right" alt="配 Retina 屏的 iPad 版 Safari 中播放的视频的屏幕截图（横向）" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="attempt-right" alt="配 Retina 屏的 iPad 版 Safari 中播放的视频的屏幕截图（横向）" src="images/iPad-Retina-landscape-video-playing.png">
 
 iPad 版 Safari 以内联模式播放视频：
 
@@ -447,7 +447,7 @@ Dogfood：`requestFullScreen()` 可能添加了供应商前缀，并且可能需
 
 ### 添加字幕以改善无障碍服务
 
-<img class="attempt-right" alt="展示在 Android 版 Chrome 中使用 track 元素后字幕显示情况的屏幕截图" src="img/Chrome-Android-track-landscape-5x3.jpg">
+<img class="attempt-right" alt="展示在 Android 版 Chrome 中使用 track 元素后字幕显示情况的屏幕截图" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 要使媒体在移动设备上更易访问，请使用 track 元素添加字幕或说明。
 

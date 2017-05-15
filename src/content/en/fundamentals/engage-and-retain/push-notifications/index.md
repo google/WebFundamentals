@@ -17,7 +17,7 @@ the web, push notifications are always high on the list.
 
 Web push notifications allow users to opt-in to timely updates from sites
 they love and allow you to effectively re-engage them with customized,
-relevant content. 
+relevant content.
 
 The Push API and Notification API open a whole new set of possibilities for
 you to re-engage with your users.
@@ -49,7 +49,7 @@ promised code. So, here it is. With a service worker registration you call
 
 
     serviceWorkerRegistration.showNotification(title, options);
-    
+
 
 The `title` argument appears as a heading in the notification. The `options`
 argument is an object literal that sets the other properties of a notification.
@@ -66,7 +66,7 @@ A typical options object looks something like this:
         { "action": "no", "title": "No", "icon": "images/no.png" }
       ]
     }
-    
+
 <img src="images/cc-good.png" alt="Example Notification" class="attempt-right">
 
 This code produces a notification like the one in the image. It generally
@@ -78,7 +78,12 @@ subscriptions, sending messages, and responding to them.
 
 ## How can I try it?
 
-There are several ways you can play with the features before you completely understand how they work, or have to implement them. First, check out [our own sample](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications). Also available are Peter Beverloo's [Notification Generator](https://tests.peter.sh/notification-generator/) and Chris Mills' [push-api-demo](https://github.com/chrisdavidmills/push-api-demo).
+There are several ways you can play with the features before you completely
+understand how they work, or have to implement them. First, check out
+[our own sample](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications).
+Also available are Peter Beverloo's
+[Notification Generator](https://tests.peter.sh/notification-generator/)
+and Chris Mills' [push-api-demo](https://github.com/chrisdavidmills/push-api-demo).
 
 Note: Unless you're using localhost, the Push API requires HTTPS.
 

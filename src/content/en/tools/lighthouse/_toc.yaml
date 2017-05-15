@@ -25,6 +25,8 @@ toc:
         path: /web/tools/lighthouse/audits/web-sql
       - title: Background and Foreground Colors Have Sufficient Contrast Ratio
         path: /web/tools/lighthouse/audits/contrast-ratio
+      - title: Buttons Have An Accessible Name
+        path: /web/tools/lighthouse/audits/button-name
       - title: Cache Contains start_url From Manifest
         path: /web/tools/lighthouse/audits/cache-contains-start_url
       - title: Contains Some Content When Its Scripts Are Not Available
@@ -49,6 +51,8 @@ toc:
         path: /web/tools/lighthouse/audits/alt-attribute
       - title: First Meaningful Paint
         path: /web/tools/lighthouse/audits/first-meaningful-paint
+      - title: Has A Theme-Color Meta Tag
+        path: /web/tools/lighthouse/audits/theme-color
       - title: Has A Viewport Meta Tag With width Or initial-scale
         path: /web/tools/lighthouse/audits/has-viewport-meta-tag
       - title: Manifest Contains Icons at Least 192px
@@ -73,6 +77,8 @@ toc:
         path: /web/tools/lighthouse/audits/tabindex
       - title: Opens External Anchors Using rel="noopener"
         path: /web/tools/lighthouse/audits/noopener
+      - title: Oversized Images
+        path: /web/tools/lighthouse/audits/oversized-images
       - title: Perceptual Speed Index
         path: /web/tools/lighthouse/audits/speed-index
       - title: Redirects HTTP Traffic To HTTPS
@@ -85,6 +91,8 @@ toc:
         path: /web/tools/lighthouse/audits/http-200-when-offline
       - title: Time to Interactive
         path: /web/tools/lighthouse/audits/time-to-interactive
+      - title: Unoptimized Images
+        path: /web/tools/lighthouse/audits/unoptimized-images
       - title: User Timing Marks and Measures
         path: /web/tools/lighthouse/audits/user-timing
       - title: Uses HTTP/2 For Its Own Resources

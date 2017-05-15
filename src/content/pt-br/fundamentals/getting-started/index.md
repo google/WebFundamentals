@@ -49,7 +49,7 @@ como uma experiência de tela inteira de alto nível.
   </p>
 </div>
 <div class="attempt-right">
-  <a href="codelabs/debugging-service-workers/">
+  <a href="codelabs/push-notifications/">
     Adicionar Notificações Push
   </a>
   <p>

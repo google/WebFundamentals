@@ -38,7 +38,7 @@ footer:
     contents:
     - label: Progressive Web Apps
       path: /web/progressive-web-apps/
-    - label: Instructor Lead Training
+    - label: Instructor Led Training
       path: /web/ilt/
     - label: Building for Billions
       path: /web/billions/

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:16:38Z #}
+{# wf_updated_on: 2017-04-26T00:10:21Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -53,7 +53,7 @@ Open your browser and navigate to __localhost:8080/offline-quickstart-lab/app__.
 
 
 
-Note: If you have already installed a service worker on localhost, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service workers and <a href="tools-for-pwa-developers#clearcache">clear all service worker caches</a> for localhost so that they do not interfere with the lab.
 
 
 

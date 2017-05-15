@@ -15,7 +15,7 @@ toc:
         path: /web/fundamentals/security/encrypt-in-transit/enable-https
     - title: Preventing Mixed Content
       section:
-      - title: What is Mixed Content?
+      - title: What Is Mixed Content?
         path: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
       - title: Preventing Mixed Content
         path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
@@ -23,7 +23,7 @@ toc:
       section:
       - title: Overview
         path: /web/fundamentals/security/credential-management/
-      - title: Retrieve Credentials
+      - title: Sign in Users
         path: /web/fundamentals/security/credential-management/retrieve-credentials
-      - title: Store Credentials
-        path: /web/fundamentals/security/credential-management/store-credentials        
+      - title: Save Credentials from Forms
+        path: /web/fundamentals/security/credential-management/save-forms

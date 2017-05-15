@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:12:58Z #}
+{# wf_updated_on: 2017-05-05T01:40:36Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -52,7 +52,7 @@ Open your browser and navigate to __localhost:8080/lighthouse-lab/app__.
 
 
 
-Note: If you have already installed a service worker on localhost, <a href="tools-for-pwa-developers#unregister">unregister it</a> so that it doesn't interfere with the lab. 
+Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service workers and <a href="tools-for-pwa-developers#clearcache">clear all service worker caches</a> for localhost so that they do not interfere with the lab.
 
 
 
@@ -331,7 +331,7 @@ You can see that we are still missing the HTTPS requirements, since we are using
 
 If you want to run Lighthouse from the command line (for example, to integrate it with a build process) it is available as a Node module that you can install from the terminal. 
 
-If you haven't already,  [download Node](https://nodejs.org/en/) and select the version that best suits your environment and operating system. (Remember that you need Node v5+ or Node v4 with the `--harmony`  [flag](http://stackoverflow.com/questions/13351965/what-does-node-harmony-do).)
+If you haven't already,  [download Node](https://nodejs.org/en/) and select the Long Term Support (LTS) version that best suits your environment and operating system (Lighthouse requires Node v6 or greater).
 
 Install Lighthouse's Node module from the command line:
 

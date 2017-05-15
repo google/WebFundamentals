@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-02-27T17:17:53Z #}
+{# wf_updated_on: 2017-04-27T18:47:38Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -11,11 +11,13 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
-The PaymentRequest API improves mobile web checkout (shopping cart) and accepts credit cards electronically (and eventually a number of other payment services and solutions in the wild) using a payment request API. The PaymentRequest API allows merchants to easily collect payment information with minimal integration. The API assumes that browsers facilitate the payment flow between merchants and mobile device users.
+The Payment Request API improves mobile web checkout (shopping cart) and accepts credit cards electronically (and eventually a number of other payment services and solutions in the wild). 
+
+The Payment Request API allows merchants to easily collect payment information with minimal integration. 
 
 
 
-Note: The <a href="https://github.com/w3c/browser-payment-api">PaymentRequest API</a> is very new and still subject to developmental changes. Google tracks updates on <a class="https://developers.google.com/web/fundamentals/primers/payment-request/">this page</a>. Please keep checking back. Also on this page is <a class="https://storage.googleapis.com/prshim/v1/payment-shim.js">a shim</a> that you can embed on your site to paper over API differences for two major Chrome versions.
+Note: The <a href="https://github.com/w3c/browser-payment-api">Payment Request API</a> is very new and still subject to developmental changes, especially while it is under development in the  [W3C Web Payments Working Group](https://www.w3.org/TR/payment-request/). Google tracks updates on <a class="https://developers.google.com/web/fundamentals/primers/payment-request/">this page</a>. Please keep checking back. Also on this page is <a class="https://storage.googleapis.com/prshim/v1/payment-shim.js">a shim</a> that you can embed on your site to paper over API differences for two major Chrome versions.
 
 
 
@@ -43,7 +45,7 @@ Any system that improves or solves one or more of those problems is a welcome ch
 
 
 
-Starting with Chrome 53 for Android, the Payment Request API is a new open-web approach:
+The Payment Request API's open-web approach is designed:
 
 * For developers to minimize the need to fill out checkout forms and improve user's payment experience from the ground up. This API follows the recommendations in the  [W3C Payment Request API specification](https://www.w3.org/TR/payment-request/) published by the  [Web Payments Working Group](https://www.w3.org/Payments/WG/). 
 * For users to check out, make a payment, or fill in forms with minimal use of the mobile device keyboard. 
@@ -67,7 +69,7 @@ It vastly improves user workflow during the purchase process, providing a more c
 * Allow the browser act as intermediary among merchants, users, and payment methods
 * Standardize the payment communication flow as much as possible
 * Seamlessly support different secure payment methods
-* Eventually work on any browser, device, or platform, including mobile devices and otherwise (initial support is available only for Android Chrome but other third-party solutions will be supported in the future)
+* Eventually work on any browser, device, or platform, including mobile devices and otherwise (as of this writing the Payment Request API is available on Chrome for Android (v53), Samsung Internet (v5.0), and partially supported on Edge (v15), but other third-party solutions will be supported in the future)
 
 Best of all, the browser acts as an intermediary, storing all the information necessary for a fast checkout so users can just confirm and pay with a single tap or click.
 
@@ -76,7 +78,12 @@ Best of all, the browser acts as an intermediary, storing all the information ne
 Payment Request demos are available at these URLs:
 
 * Demo:  [https://emerald-eon.appspot.com/](https://emerald-eon.appspot.com/)
+* Polymer Shop demo:  [https://polykart-credential-payment.appspot.com/](https://polykart-credential-payment.appspot.com/)
 * Simple demos and sample code:  [https://googlechrome.github.io/samples/paymentrequest/](https://googlechrome.github.io/samples/paymentrequest/)
+* Deep dive documentation:  [https://developers.google.com/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request](/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request)
+* Samsung Internet demos: 
+*  [https://samsunginter.net/examples/payment-request-demo-simple/](https://samsunginter.net/examples/payment-request-demo-simple/)
+*  [https://samsunginter.net/examples/payment-request-demo-options/](https://samsunginter.net/examples/payment-request-demo-options/)
 
 <div id="howitworks"></div>
 

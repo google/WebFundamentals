@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-03-03T21:11:43Z #}
+{# wf_updated_on: 2017-05-08T21:26:45Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -157,13 +157,19 @@ function fetchJSON(pathToResource) {
 fetchJSON('examples/example.json');
 ```
 
-(This is  [promise chaining](working-with-promises).)
+(This is  [promise chaining](working-with-promises#chaining).)
 
  To summarize what's happening:
 
 Step 1. Fetch is called on a resource, __examples/example.json__. Fetch returns a promise that will resolve to a response object. When the promise resolves, the response object is passed to `validateResponse`.
 
 Step 2. `validateResponse` checks if the response is valid (is it a 200-299?). If it isn't, an error is thrown, skipping the rest of the `then` blocks and triggering the `catch` block. This is particularly important. Without this check bad responses are passed down the chain and could break later code that may rely on receiving a valid response. If the response is valid, it is passed to `readResponseAsJSON`.
+
+
+
+Note: You can also handle any network status code using the `status` property of the `response` object. This lets you respond with custom pages for different errors or handle other responses that are not `ok` (i.e., not 200-299), but still usable (e.g., status codes in the 300 range). See  [Caching files with the service worker](caching-files-with-service-worker#generic-fallback) for an example of a custom response to a 404.
+
+
 
 Step 3. `readResponseAsJSON` reads the body of the response using the  [Response.json()](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) method. This method returns a promise that resolves to JSON. Once this promise resolves, the JSON data is passed to `logResult`. (Can you think of what would happen if the promise from `response.json()` rejects?)
 
@@ -173,7 +179,7 @@ Step 4. Finally, the JSON data from the original request to __examples/example.j
 
 *  [Response interface](https://developer.mozilla.org/en-US/docs/Web/API/Response)
 *  [Response.json()](https://developer.mozilla.org/en-US/docs/Web/API/Body/json)
-*  [Promise chaining](https://docs.google.com/document/d/1H3GaE6JQhydNaPzII9hgGZL-uL73VvgQ02FYijeK0js/edit#)
+*  [Promise chaining](working-with-promises#chaining)
 
 ### Example: fetching images
 
@@ -416,7 +422,7 @@ There have been attempts to work around the same-origin policy (such as  [JSONP]
 
 If the server you are requesting from doesn't support CORS, you should get an error in the console indicating that the cross-origin request is blocked due to the CORS `Access-Control-Allow-Origin` header being missing. 
 
-You can use  [`no-cors`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) mode to request opaque resources. Opaque responses can't be accessed with JavaScript but the response can still be served or cached by a service worker. Using `no-cors` mode with fetch is relatively simple. To update the above example with `no-cors`, we pass in the `init` object with `mode` set to `no-cors`:
+You can use  [`no-cors`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) mode to request opaque resources.  [Opaque responses](https://fetch.spec.whatwg.org/#concept-filtered-response-opaque) can't be accessed with JavaScript but the response can still be served or cached by a service worker. Using `no-cors` mode with fetch is relatively simple. To update the above example with `no-cors`, we pass in the `init` object with `mode` set to `no-cors`:
 
 #### main.js
 

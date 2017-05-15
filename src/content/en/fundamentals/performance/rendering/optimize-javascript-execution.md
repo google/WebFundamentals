@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript often triggers visual changes. Sometimes that's directly through style manipulations, and sometimes it's calculations that result in visual changes, like searching or sorting data. Badly-timed or long-running JavaScript is a common cause of performance issues. You should look to minimize its impact where you can.
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-04-20 #}
 {# wf_published_on: 2015-03-20 #}
 
 # Optimize JavaScript Execution {: .page-title }
@@ -101,21 +101,30 @@ There are UX and UI consequences to this approach, and you will need to ensure t
 
 ## Know your JavaScript’s “frame tax”
 
-When assessing a framework, library, or your own code, it’s important to assess how much it costs to run the JavaScript code on a frame-by-frame basis. This is especially important when doing performance-critical animation work like transitioning or scrolling.
+When assessing a framework, library, or your own code, it’s important to assess
+how much it costs to run the JavaScript code on a frame-by-frame basis. This is
+especially important when doing performance-critical animation work like
+transitioning or scrolling.
 
-The best way to measure your JavaScript’s cost and performance profile is to use Chrome DevTools. Typically you will get low detail records that look like this:
+The Performance panel of Chrome DevTools is the best way to measure your
+JavaScript's cost. Typically you get low-level records like this:
 
-<img src="images/optimize-javascript-execution/low-js-detail.jpg" alt="Chrome DevTools' Timeline providing low JS execution detail.">
+<img src="images/optimize-javascript-execution/low-js-detail.png"
+     alt="A performance recording in Chrome DevTools">
 
-If you discover that you have long-running JavaScript, you can enable the JavaScript profiler at the top of the DevTools user interface:
+The **Main** section provides a flame chart of JavaScript calls so you
+can analyze exactly which functions were called and how long each took.
 
-<img src="images/optimize-javascript-execution/js-profiler-toggle.jpg" alt="Enabling the JS profiler in DevTools.">
+Armed with this information you can assess the performance impact of the
+JavaScript on your application, and begin to find and fix any hotspots where
+functions are taking too long to execute. As mentioned earlier you should seek
+to either remove long-running JavaScript, or, if that’s not possible, move it
+to a Web Worker freeing up the main thread to continue on with other tasks.
 
-There is an overhead to profiling JavaScript in this way, so be sure to only enable it when you want more insight into JavaScript runtime characteristics. With the checkbox enabled you can now perform the same actions and you’ll get significantly more information on which functions were called in your JavaScript:
+See [Get Started With Analyzing Runtime Performance][GS] to learn how to use
+the Performance panel.
 
-<img src="images/optimize-javascript-execution/high-js-detail.jpg" alt="Chrome DevTools' Timeline providing high JS execution detail.">
-
-Armed with this information you can assess the performance impact of the JavaScript on your application, and begin to find and fix any hotspots where functions are taking too long to execute. As mentioned earlier you should seek to either remove long-running JavaScript, or, if that’s not possible, move it to a Web Worker freeing up the main thread to continue on with other tasks.
+[GS]: /web/tools/chrome-devtools/evaluate-performance/
 
 ## Avoid micro-optimizing your JavaScript
 

@@ -102,7 +102,7 @@ Note: - Gran parte delle piattaforme supporta l''API Media Fragments, a eccezion
 
 Usando gli strumenti di sviluppo del tuo browser, controlla la presenza di `Accept-Ranges: bytes` nelle intestazioni della risposta:
 
-<img class="center" alt="Schermata degli strumenti di sviluppo di Chrome: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Schermata degli strumenti di sviluppo di Chrome: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Inserimento di un'immagine poster
 
@@ -118,8 +118,8 @@ Inoltre, è possibile utilizzare un poster come elemento sostitutivo in caso di 
 
 Segue un confronto diretto dei video con e senza immagine poster, visualizzata in bianco e nero per dimostrarne la diversa natura rispetto al video:
 
-<img class="attempt-left" alt="Schermata di Chrome per Android, verticale: senza poster" src="img/Chrome-Android-video-no-poster.png">
-<img class="attempt-right" alt="Schermata di Chrome per Android, verticale: con poster" src="img/Chrome-Android-video-poster.png">
+<img class="attempt-left" alt="Schermata di Chrome per Android, verticale: senza poster" src="images/Chrome-Android-video-no-poster.png">
+<img class="attempt-right" alt="Schermata di Chrome per Android, verticale: con poster" src="images/Chrome-Android-video-poster.png">
 <div class="clearfix"></div>
 
 
@@ -238,8 +238,8 @@ Per verificare le dimensioni codificate di un video, utilizza le proprietà dell
 Quando gli elementi video sono troppo grandi per il riquadro di visualizzazione, possono eccedere dai rispettivi contenitori, impedendo la visualizzazione e 
 l'utilizzo dei controlli da parte degli utenti.
 
-<img class="attempt-left" alt="Screenshot verticale di Android Chrome: l'elemento video senza stile supera il riquadro di visualizzazione" src="img/Chrome-Android-portrait-video-unstyled.png">
-<img class="attempt-right" alt="Screenshot orizzontale di Android Chrome: l'elemento video senza stile supera il riquadro di visualizzazione" src="img/Chrome-Android-landscape-video-unstyled.png">
+<img class="attempt-left" alt="Screenshot verticale di Android Chrome: l'elemento video senza stile supera il riquadro di visualizzazione" src="images/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Screenshot orizzontale di Android Chrome: l'elemento video senza stile supera il riquadro di visualizzazione" src="images/Chrome-Android-landscape-video-unstyled.png">
 <div class="clearfix"></div>
 
 
@@ -285,8 +285,8 @@ L'orientamento del dispositivo non è un problema per i PC desktop o portatili, 
 
 Safari per iPhone commuta in maniera eccellente l'orientamento verticale e orizzontale:
 
-<img class="attempt-left" alt="Schermata di un video riprodotto da Safari per iPhone, in verticale" src="img/iPhone-video-playing-portrait.png">
-<img class="attempt-right" alt="Schermata di un video riprodotto da Safari per iPhone, in orizzontale" src="img/iPhone-video-playing-landscape.png">
+<img class="attempt-left" alt="Schermata di un video riprodotto da Safari per iPhone, in verticale" src="images/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="Schermata di un video riprodotto da Safari per iPhone, in orizzontale" src="images/iPhone-video-playing-landscape.png">
 <div class="clearfix"></div>
 
 
@@ -294,7 +294,7 @@ L'orientamento del dispositivo su iPad e Chrome per Android può diventare un pr
 Ad esempio, la riproduzione di un video su un iPad con orientamento orizzontale senza alcuna personalizzazione produce quanto segue:
 
 <img class="center" alt="Schermata di un video riprodotto con Safari per iPad Retina, in orizzontale"
-src="img/iPad-Retina-landscape-video-playing.png">
+src="images/iPad-Retina-landscape-video-playing.png">
 
 Impostando `width: 100%` o `max-witdh: 100%` sul video usando i CSS è possibile risolvere diversi problemi della disposizione dell'orientamento del dispositivo. È possibile anche prendere in considerazione alternative a schermo intero.
 
@@ -302,15 +302,15 @@ Impostando `width: 100%` o `max-witdh: 100%` sul video usando i CSS è possibile
 
 Le diverse piattaforme visualizzano i video in modo diverso. Safari per iPhone visualizza un elemento video inline in una pagina web, ma il video viene riprodotto in modalità a schermo intero:
 
-<img class="center" alt="Schermata di elementi video su iPhone, in verticale" src="img/iPhone-video-with-poster.png">
+<img class="center" alt="Schermata di elementi video su iPhone, in verticale" src="images/iPhone-video-with-poster.png">
 
 Su Android, è possibile attivare la modalità a schermo intero facendo clic sulla relativa icona. Tuttavia, l'impostazione predefinita prevede la riproduzione inline del video:
 
-<img class="center" alt="Schermata di un video riprodotto con Safari per iPhone, in verticale" src="img/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Schermata di un video riprodotto con Safari per iPhone, in verticale" src="images/Chrome-Android-video-playing-portrait-3x5.png">
 
 Safari per iPad prevede la riproduzione inline del video:
 
-<img class="center" alt="Schermata di un video riprodotto con Safari per iPad Retina, in orizzontale" src="img/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Schermata di un video riprodotto con Safari per iPad Retina, in orizzontale" src="images/iPad-Retina-landscape-video-playing.png">
 
 ### Controllo della visualizzazione a schermo intero dei contenuti
 
@@ -370,7 +370,7 @@ Note: Chrome per Android, Safari per iOS e tutti i browser per PC desktop a ecce
 
 L'elemento di tracciamento visualizza le didascalie nel modo seguente:
 
- <img class="center" alt="Schermata con didascalie visualizzate con l'elemento di tracciamento in Chrome per Android" src="img/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="Schermata con didascalie visualizzate con l'elemento di tracciamento in Chrome per Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 ### Aggiungere l'elemento di tracciamento
 
