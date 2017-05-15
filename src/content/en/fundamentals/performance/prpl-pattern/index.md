@@ -6,246 +6,152 @@ book_path: /web/fundamentals/_book.yaml
 
 # The PRPL Pattern {: .page-title }
 
-{% include "web/_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/graynorton.html" %}
+{% include "web/_shared/contributors/dgash.html" %}
 
-Dogfood: PRPL is a new pattern we feel has great potential. At this stage, 
-we welcome experimentation with it while we iterate on the ideas in the 
-pattern and collect more data on where it offers the greatest benefits.
+## What's the problem?
 
-The mobile web is too slow. Over the years the web has evolved from a
-document-centric platform to a first-class application platform. Thanks to
-advancements in the platform itself (such as
-[Service Workers](/web/fundamentals/getting-started/primers/service-workers)) and in the tools
-and techniques we use to build apps, users can do virtually anything on the web
-they can do in a native app.
+In a nutshell: mobile web apps take too long to load.
 
-At the same time, the bulk of our computing has moved from powerful desktop
-machines with fast, reliable network connections to relatively underpowered
-mobile devices with connections that are often slow, flaky or both. This is
-especially true in parts of the world where the next billion users are coming
-online.
+Even as the web has evolved into a robust and capable application platform,
+application use has mostly moved from powerful desktop machines
+with fast, reliable network connections
+to underpowered mobile devices with slow, unreliable connections.
 
-Unfortunately, the patterns we devised for building and deploying powerful,
-feature-rich web apps in the desktop era generally yield apps that take far too
-long to load on mobile devices – so long that many users simply give up.
+Development practices we adopted during the desktop era tend
+to produce apps that are slow to load and use on mobile devices.
+Poor app performance is frustrating for users and bad for business,
+since user frustration leads to abandonment, lower engagement and reduced revenue.
 
-This presents an opportunity to craft new patterns that take advantage of modern
-web platform features to granularly deliver mobile web experiences more quickly.
-PRPL is one such pattern.
+Web apps that load and run faster on mobile devices benefit everyone.
+Achieving this goal can be hard, though;
+it requires adopting new design and deployment strategies.
 
-## The PRPL pattern
+## Too much, too soon...
 
-PRPL is a pattern for structuring and serving Progressive Web Apps (PWAs), with
-an emphasis on the performance of app delivery and launch. It stands for:
+Why do mobile web apps load so slowly? A typical app...
 
-*  **Push** critical resources for the initial URL route.
-*  **Render** initial route.
-*  **Pre-cache** remaining routes.
-*  **Lazy-load** and create remaining routes on demand.
+* **Weighs too much. **
+On mobile devices with low-bandwidth networks and slow CPUs, every byte counts.
+You can’t afford to send any extraneous resources – especially code – to the browser.
+* **Loads and runs code too soon. **
+It’s common for an app to deliver all of its code up front, in one big bundle -
+but on mobile, there’s no time to load, parse or run code that isn’t needed immediately.
 
-Beyond targeting the fundamental goals and standards of PWAs, PRPL strives to
-optimize for:
+![JavaScript-heavy applications](/web/fundamentals/performance/prpl-pattern/images/js-heavy-applications.png)
 
-* Minimum time-to-interactive
-    * Especially on first use (regardless of entry point)
-    * Especially on real-world mobile devices
-* Maximum caching efficiency, especially over time as updates are released
-* Simplicity of development and deployment
+Since it's pretty obvious that smaller equals faster,
+job one is to make our apps lighter overall,
+carefully assessing the value and the cost of everything
+we include — both application code and dependencies.
 
-PRPL is inspired by a suite of modern web platform features, but it’s possible
-to apply the pattern without hitting every letter in the acronym or using every
-feature.
+We also need to deliver web apps more efficiently.
+When we deliver all of our code in an all-in-one bundle,
+this bundle must be received and parsed on the client in its entirety
+before the user can do anything with the app.
+While this may be acceptable on desktop devices,
+it can easily make our apps unusable on mobile devices.
 
-In fact, PRPL is more about a mindset and a long-term vision for improving the
-performance of the mobile web than it is about specific technologies or
-techniques. The ideas behind PRPL are not new, but the approach was framed and
-named by the Polymer team and unveiled at [Google I/O
-2016](https://www.youtube.com/watch?v=J4i0xJnQUzU).
+![JavaScript parse times on different devices](/web/fundamentals/performance/prpl-pattern/images/js-parse-times.png)
 
-Polymer's [Shop](https://shop.polymer-project.org) e-commerce demo is a
-first-class example of an application using PRPL to granularly serve resources.
-It achieves interactivity for each route incredibly quickly on real-world mobile
-devices:
+As the chart above illustrates,
+low-end devices parse and run JavaScript much more slowly than high-end devices.
+Code that takes tens to hundreds of milliseconds
+to parse on a laptop or a premium phone can easily take multiple seconds
+to parse on a mid-to-low-end phone.
+(And bear in mind that the chart above ignores network transfer times,
+which may also be many times slower.)
 
-![The Polymer Shop demo is interactive in 1.75s](images/app-build-prpl-shop.png)
+We can improve the user experience
+by initially delivering and processing only those resources necessary
+for the landing route.
+Once the app is interactive,
+we can proactively deliver additional resources to ensure
+that the app is instantly responsive to subsequent requests.
 
-For most real-world projects, it’s frankly too early to realize the PRPL vision
-in its purest, most complete form – but it’s definitely not too early to adopt
-the mindset, or to start chasing the vision from various angles. There are many
-practical steps that app developers, tool developers and browser vendors can
-take in pursuit of PRPL today.
+## Enter PRPL
 
-## App structure
+PRPL is a pattern for structuring and serving Progressive Web Apps (PWAs) with an emphasis on improved app delivery and launch performance. The letters describe a set of ordered steps for fast, reliable, efficient loading:
 
-PRPL can work well if you have a single-page app (SPA) with the following
-structure:
+* **Push** all resources required for the initial route – and only those resources
+– to ensure that they are available as early as possible.
+* **Render** the initial route and make it interactive
+before loading any additional resources.
+* **Pre-cache** resources for additional routes
+that the user is likely to visit, maximizing responsiveness
+to subsequent requests and resilience under poor network conditions.
+* **Lazy-load** routes on demand as the user requests them.
+Resources for key routes should load instantly from the cache,
+whereas less commonly used resources can be fetched from the network upon request.
 
--   The main _entrypoint_ of the application which is served from every valid
-    route. This file should be very small, since it will be served from
-    different URLs and therefore be cached multiple times. All resource URLs
-    in the entrypoint need to be absolute, since it may be served from
-    non-top-level URLs.
+Like all PWAs, apps built using PRPL strive to be reliable, fast and engaging.
+Beyond these basic goals, PRPL aims to:
 
--   The _shell_ or app-shell, which includes the top-level app logic, router,
-    and so on.
+* **Improve an app's time to interactivity (TTI).**
+It does this by ensuring that no extraneous resources are sent
+to the browser before the first view renders and becomes interactive.
+* **Increase an app’s caching efficiency, especially over time.**
+It does this by sending resources to the browser at high granularity.
+When resources are unbundled or bundled less aggressively,
+each change to your code invalidates less of your cache.
+* **Reduce the complexity of development and deployment.**
+It does this by relying on the app’s implicit dependency graph
+to map each entry point to the precise set of resources required,
+reducing or eliminating the need for manual management of bundling and delivery.
 
--   Lazily loaded _fragments_ of the app. A fragment can represent the code for
-    a particular view, or other code that can be loaded lazily (for example,
-    parts of the main app not required for first paint, like menus that aren't
-    displayed until a user interacts with the app). The shell is responsible for
-    dynamically importing the fragments as needed.
+PRPL is a conceptual pattern that might be implemented in various ways.
+It doesn’t prescribe any particular technologies,
+though certain of its steps are most effectively accomplished
+using specific modern web features,
+like HTTP/2 Server Push or Preload for the first “P”,
+and Service Worker for the second.
 
-The server and service worker together work to precache the resources for the
-inactive routes.
+The ideas behind PRPL are not new,
+but the approach was framed and named by the Polymer team at Google
+and unveiled in an
+[introductory session at Google I/O 2016](https://www.youtube.com/watch?v=J4i0xJnQUzU).
 
-When the user switches routes, the app lazy-loads any required resources that
-haven't been cached yet, and creates the required views. Repeat visits to routes
-should be immediately interactive. Service Worker helps a lot here.
+## Adopting PRPL
 
-The diagram below shows the components of a simple app that might be structured
-using [Web Components](http://webcomponents.org/):
+Virtually any PWA can benefit from adopting PRPL,
+and the underlying principles can be applied to almost any app.
+With that said,
+there are certain characteristics
+that make an app an especially good candidate for PRPL.
 
-![diagram of an app that has two views, which have both individual and shared
-dependencies](images/app-build-components.png)
+**PRPL is most straightforwardly applied to apps built using a modern module system**
+like ES Modules or HTML Imports,
+so that the entire dependency graph can be discovered and analyzed by tools.
+Tool-generated manifests describing the dependency graph make it easy
+to orchestrate the efficient loading of granular resources using features
+like HTTP/2 Server Push and Preload links;
+this is what enables PRPL’s first “P”, the precise and timely delivery of just what is needed to fulfill the user’s initial request.
 
-Note: although HTML Imports are Polymer's preferred bundling strategy, you can
-use code-splitting and route-based chunking to achieve a similar setup with
-modern JavaScript module bundlers.
+Auto-generated resource manifests also make it easy for a Service Worker
+to proactively populate an app’s client-side cache,
+satisfying the requirements of the second “P”.
+When bundling is required,
+tools can also use the dependency graph to apply smart bundling strategies,
+generating route-specific bundles and optimal shared bundles
+rather than monolithic all-in-one bundles.
 
-In this diagram, the solid lines represent _static dependencies_: external
-resources identified in the files using `<link>` and `<script>` tags. Dotted
-lines represent _dynamic_ or _demand-loaded dependencies_: files loaded as
-needed by the shell.
+**PRPL is most useful for apps with significant client-side logic and interactivity,**
+given its focus on an app’s modular code and associated resources.
+Although many of the same principles might be applied to loading and caching content,
+PRPL itself does not currently prescribe any particular approach to managing content,
+and content-heavy apps without a lot of client-side functionality will tend
+to benefit less from more efficient delivery of code and static resources.
 
-The build process builds a graph of all of these dependencies, and the server
-uses this information to serve the files efficiently. It also builds a set of
-vulcanized bundles, for browsers that don't support HTTP/2.
+The easiest way to adopt PRPL is to use tools, libraries and application templates
+built to support PRPL “out of the box.”
+Currently these include offerings from Polymer and Preact,
+and we expect that others will follow.
 
-### App entrypoint
-
-The entrypoint must import and instantiate the shell, as well as conditionally
-load any required polyfills.
-
-The main considerations for the entrypoint are:
-
--   Has minimal static dependencies, in other words, not much beyond the app-shell itself.
--   Conditionally loads required polyfills.
--   Uses absolute paths for all dependencies.
-
-### App shell
-
-The shell is responsible for routing and usually includes the main navigation UI
-for the app.
-
-The app should lazy-load fragments as they're required. For example, when the
-user changes to a new route, it imports the fragment(s) associated with that
-route. This may initiate a new request to the server, or simply load the
-resource from the cache.
-
-The shell (including its static dependencies) should contain everything needed
-for first paint.
-
-## Build output
-
-Although it isn't a hard requirement for using PRPL, your build process could
-produce two builds:
-
--   An unbundled build designed for server/browser combinations that support
-    HTTP/2 to deliver the resources the browser needs for a fast first paint 
-    while optimizing caching. The delivery of these resources can be triggered
-    efficiently using [`<link rel="preload">`][Resource hints] or [HTTP/2 Push].
-
--   A bundled build designed to minimize the number of round-trips required to
-    get the application running on server/browser combinations that don't support
-    server push.
-
-Your server logic should deliver the appropriate build for each browser.
-
-### Bundled build
-
-For browsers that don't handle HTTP/2, the build process could produce a set
-of different bundles: one bundle for the shell, and one bundle for each
-fragment. The diagram below shows how a simple app would be bundled, again using
-Web Components:
-
-![diagram of the same app as before, where there are three bundled
-dependencies](images/app-build-bundles.png)
-
-Any dependency shared by two or more fragments is bundled with the shell and
-its static dependencies.
-
-Each fragment and its _unshared_ static dependencies are bundled into a single
-bundle. The server should return the appropriate version of the fragment
-(bundled or unbundled), depending on the browser. This means that the shell code
-can lazy-load `detail-view.html` _without having to know whether it is bundled
-or unbundled_. It relies on the server and browser to load the dependencies in
-the most efficient way.
-
-
-## Background: HTTP/2 and HTTP/2 server push
-
-[HTTP/2] allows _multiplexed_ downloads over a single
-connection, so that multiple small files can be downloaded more efficiently.
-
-[HTTP/2 server push][HTTP/2 Push] allows the server
-to preemptively send resources to the browser.
-
-For an example of how HTTP/2 server push speeds up downloads, consider how the
-browser retrieves an HTML file with a linked stylesheet.
-
-In HTTP/1:
-
-*   The browser requests the HTML file.
-*   The server returns the HTML file and the browser starts parsing it.
-*   The browser encounters the `<link rel="stylesheet">` tag, and starts a new
-    request for the stylesheet.
-*   The browser receives the stylesheet.
-
-With HTTP/2 push:
-
-*   The browser requests the HTML file.
-*   The server returns the HTML file, and pushes the stylesheet at the same
-    time.
-*   The browser starts parsing the HTML. By the time it encounters the `<link
-    rel="stylesheet">`, the stylesheet is already in the cache.
-
-In the simplest case, HTTP/2 server push eliminates a single HTTP
-request-response.
-
-With HTTP/1, developers bundle resources to reduce the number of HTTP
-requests required to render a page. However, bundling can reduce the efficiency
-of the browser's cache. if resources for each page are combined into a single
-bundle, each page gets its own bundle, and the browser can't identify shared
-resources.
-
-The combination of HTTP/2 and HTTP/2 server push provides the _benefits_ of
-bundling (reduced latency) without actual bundling. Keeping resources separate
-means they can be cached efficiently and be shared between pages.
-
-HTTP/2 Push needs to be utilized with care, as it forces data to the browser,
-even if the file is already in the browser’s local cache or bandwidth is
-already saturated. If done wrong, performance can suffer. 
-[`<link rel="preload">`][Resource hints] might be a good alternative to allow 
-the browser to make smart decisions about the prioritization of these requests.  
-
-## Conclusion
-
-Loading the code for routes more granularly and allowing browsers to schedule
-work better has the potential to greatly aid reaching interactivity in
-our applications sooner. We need **better architectures that enable
-interactivity quickly** and the PRPL pattern is an interesting example of how
-to accomplish this goal on real mobile devices.
-
-It’s all about headroom and giving yourself enough once you’re done loading your
-abstractions. If tapping on a link is delayed by seconds of script that prevents
-input events from dispatching, that’s a strong indication there is work to be
-done on performance. This is a common problem with applications built using
-larger JavaScript libraries today, where UI is rendered that looks like it
-should work but does not.
-
-PRPL can help deliver the minimal functional code needed to make the route your
-users land on interactive, addressing this challenge.
-
-[HTTP/2]: /web/fundamentals/performance/http2/
-[Resource hints]: https://developers.google.com/web/updates/2016/03/link-rel-preload
-[HTTP/2 Push]: /web/fundamentals/performance/http2/#server-push
+However, it’s by no means necessary to adopt an end-to-end solution;
+if you’re able and willing to blaze your own trail,
+you’ll find that widely used tools like Webpack have support
+(via built-in features and plugins) for various pieces of the PRPL puzzle.
+Service Worker libraries like sw-precache and sw-toolbox are also indispensable
+in implementing PRPL and are increasingly integrated with popular tools.
+Finally, there are a number of in-depth reviews of successful PRPL deployments
+that offer valuable insights and advice.

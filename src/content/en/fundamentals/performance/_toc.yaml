@@ -60,4 +60,8 @@ toc:
     - title: Introduction to HTTP/2
       path: /web/fundamentals/performance/http2/
     - title: The PRPL Pattern
-      path: /web/fundamentals/performance/prpl-pattern/
+      section:
+      - title: Overview
+        path: /web/fundamentals/performance/prpl-pattern/
+      - title: Get Started
+        path: /web/fundamentals/performance/prpl-pattern/get_started
