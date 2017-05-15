@@ -17,39 +17,37 @@ easy to take advantage of powerful service worker features, eliminate boilerplat
 Workbox is a collection of loosely-coupled libraries and tools, that focus on
 different service worker features and use-cases. The two core tools that Workbox provides are:
 
-**workbox-sw&mdash;**A service worker library to make managing fetch requests
+**workbox-sw&mdash;**A service worker library that makes fetch requests
 and caching as easy as possible.
 
-**workbox-cli&mdash;**A command-line tool to generate a service worker and a
-file manifest, that makes use of the workbox-sw module to become a fully-functioning service worker.
+**workbox-cli&mdash;**A command-line tool that generates a service worker and a
+file manifest, which then makes use of the `workbox-sw` module to become a fully-functioning service worker.
 
 These two high-level tools are built up from a number of lower-level modules
 that can be used independently or mixed-and-matched:
 
-**workbox-build&mdash;**A module that gan be used to generate a file manifest or
+**workbox-build&mdash;**Generates a file manifest or
 service worker, that can then be used with `workbox-sw`. The `workbox-build`
 module makes it easy to generate a service working using Gulp, Webpack, or any
-other build tool you might use. This is the core of the Workbox CLI.
+other build tool you might use.
 
-**workbox-runtime-caching&mdash;**A service worker helper library that
-implements various runtime caching strategies.
+**workbox-runtime-caching&mdash;**Implements various runtime caching strategies.
 
-**workbox-cache-expiration&mdash;**A service worker helper library that expires
+**workbox-cache-expiration&mdash;**Expires
 cached responses based on age or a maximum number of entries.
 
 Workbox also includes modules for other common service worker use-cases:
 
-**workbox-google-analytics&mdash;**A service worker helper library to retry
+**workbox-google-analytics&mdash;**Stores and retries
 offline Google Analytics requests when a connection is available.
 
-**workbox-background-sync&mdash;**A generic helper library that queues failed
+**workbox-background-sync&mdash;**Queues failed
 requests and uses the Background Sync API to replay those requests when the user
 comes back online.
 
-Workbox is the next generation of our service worker libraries and tools,
-previously called `sw-toolbox` and `sw-precache`. If you were familiar with
-those tools, Workbox will be very familiar as well. Workbox is the result of
-redesigning these tools to be more modular, flexible, and extensible.
+Workbox is a rethink our previous service worker libraries and tools,
+`sw-toolbox` and `sw-precache`, and is designed to be more modular, 
+flexible, and extensible.
 
 [Get Workbox](https://workboxjs.org/){: .button .button-primary }
 
@@ -112,7 +110,7 @@ Don't want to use yet another CLI? Workbox is also compatible with many
 different build tools. The
 [`workbox-build`](https://github.com/GoogleChrome/workbox/tree/master/packages/workbox-build)
 module is a portable Node module that can generate a file manifest or service
-worker to work with `workbox-sw`. The `workbox-build` module can be used with
+worker to work with `workbox-sw`. Use the `workbox-build` module with
 Gulp, NPM scripts, or many other Node-based build tools.
 
 Workbox also includes a
@@ -160,7 +158,7 @@ to, for example, track the elapsed time between when a hit is attempted and when
 ## Background Sync
 
 [Workbox Background Sync](https://github.com/GoogleChrome/workbox/tree/master/packages/workbox-background-sync)
-will queue failed requests and use the
+queues failed requests and uses the
 [Background Sync API](/web/updates/2015/12/background-sync) to replay those
 requests when the user comes back online.
 
@@ -170,8 +168,8 @@ requests when the user comes back online.
 |---------|---------|
 | Background Queuing | Manages a queue for replaying requests that have failed.
 |
-| Granular Queue Control | Specify how long a request should live in the queue
+| Granular Queue Control | Specifies how long a request should live in the queue
 before it is abandoned, and what to do when it succeeds. |
 | Broadcast Channel Management | Supports updating the queued request's status
-over a Broadcast Channel, so that you do things like provide the user with a
+over a Broadcast Channel, so that you can do things like provide the user with a
 notification if the request succeeds. |

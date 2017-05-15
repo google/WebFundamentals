@@ -42,8 +42,8 @@ landing_page:
     - heading: Workbox
       description: >
         Workbox is a set of tools and libraries to help you simplify your
-        Progressive Web App development experience and take advantage of the
-        many powerful features of Service Worker. It helps you free your app
+        Progressive Web App development and take advantage of the
+        many powerful features of service worker. It helps you free your app
         from the network, without having to write any boilerplate service worker
         code!
       buttons:
