@@ -6,7 +6,9 @@ book_path: /web/showcase/_book.yaml
 {# wf_featured_image: /web/showcase/2017/images/voot/voot.png #}
 {# wf_featured_snippet: Voot.com launches their media Progressive Web App in India. Within days of implementation, session time per user increased by 39% and daily views per user by 15%. #}
 {# wf_tags: media,casestudy #}
-
+{# wf_region: asia #}
+{# wf_vertical: media #}
+{# wf_featured_date: 2017-04-20 #}
 
 # Progressive Web App at Voot {: .page-title }
 

@@ -48,6 +48,13 @@ const RE_SRC_BASE = /src\/content\//;
 const RE_DATA_BASE = /src\/data\//;
 const COMMON_TAGS_FILE = 'src/data/commonTags.json';
 const CONTRIBUTORS_FILE = 'src/data/_contributors.yaml';
+const VALID_REGIONS = [
+  'africa', 'asia', 'europe', 'middle-east', 'north-america', 'south-america'
+];
+const VALID_VERTICALS = [
+  'education', 'entertainment', 'media', 'real-estate', 'retail',
+  'transportation', 'travel'
+];
 
 let remarkLintOptions = {
   external: [
@@ -457,6 +464,24 @@ function testMarkdown(filename, contents, options) {
       }
     }
 
+    // Validate featured square image path
+    matched = wfRegEx.RE_IMAGE_SQUARE.exec(contents);
+    if (matched) {
+      let imgPath = matched[1];
+      if (imgPath.indexOf('/web') === 0) {
+        imgPath = imgPath.replace('/web', '');
+      }
+      imgPath = './src/content/en' + imgPath;
+      try {
+        fs.accessSync(imgPath, fs.R_OK);
+      } catch (ex) {
+        position = {line: getLineNumber(contents, matched.index)};
+        msg = 'WF Tag `wf_featured_image_square` found, but couldn\'t find ';
+        msg += `image - ${matched[1]}`;
+        logError(filename, position, msg);
+      }
+    }
+
     // Check for uncommon tags
     matched = wfRegEx.RE_TAGS.exec(contents);
     if (matched && options.commonTags) {
@@ -468,6 +493,28 @@ function testMarkdown(filename, contents, options) {
           logWarning(filename, position, msg);
         }
       });
+    }
+
+    // Check for valid regions
+    matched = wfRegEx.RE_REGION.exec(contents);
+    if (matched) {
+      let region = matched[1];
+      if (VALID_REGIONS.indexOf(region) === -1) {
+        position = {line: getLineNumber(contents, matched.index)};
+        msg = 'Invalid `wf_region` (' + region + ') provided.';
+        logError(filename, position, msg);
+      }
+    }
+
+    // Check for valid verticals
+    matched = wfRegEx.RE_VERTICAL.exec(contents);
+    if (matched) {
+      let vertical = matched[1];
+      if (VALID_VERTICALS.indexOf(vertical) === -1) {
+        position = {line: getLineNumber(contents, matched.index)};
+        msg = 'Invalid `wf_vertical` (' + vertical + ') provided.';
+        logError(filename, position, msg);
+      }
     }
 
     // Check for a single level 1 heading with page title
