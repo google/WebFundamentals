@@ -356,6 +356,15 @@ samdutton:
   description:
     en: Sam is a Developer Advocate
 
+flackr:
+  name:
+    given: Robert
+    family: Flack
+  country: AN
+  role:
+    - author
+  email: flackr@google.com
+
 jonathangarbee:
   name:
     given: Jonathan
@@ -760,6 +769,23 @@ nurinamu:
   email: nurinamu@gmail.com
   description:
     en: Wonjae loves WebRTC and HHK
+
+plegner:
+  name:
+    given: Philipp
+    family: Legner
+  homepage: https://mathigon.org
+  twitter: philipplegner
+  github: plegner
+  role:
+    - engineer
+  description:
+    en: Software Engineer at Gogole
+  org:
+    name: Google
+    unit: Software Engineer
+  country: GB
+  email: plegner@google.com
 
 petelepage:
   name:
@@ -1193,8 +1219,7 @@ samthorogood:
   role:
     - author
     - engineer
-  homepage: 'http://whistlr.info/'
-  google: +SamThorogood
+  homepage: 'https://whistlr.info/'
   twitter: samthor
   email: thorogood@google.com
   description:

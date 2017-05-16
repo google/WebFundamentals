@@ -95,7 +95,7 @@ Por exemplo, este "botão" não é um botão.
         cursor: pointer;
     }
 </style>
-<div class="fancy-btn">Me dê tacos</div>
+<div class="fancy-btn">Give me tacos</div>
 {% endframebox %}
 
 Ele pode ser construído em HTML de diversas maneiras; uma maneira é mostrado abaixo.
@@ -146,14 +146,14 @@ de mouse ou tela sensível ao toque. Para associar um rótulo a um elemento,
 <div class="clearfix"></div>
 
     <label>
-      <input type="checkbox">Receive promotional offers?</input>
+      <input type="checkbox">Receber ofertas promocionais?</input>
     </label>
 
 
 {% framebox height="60px" %}
 <div style="margin: 10px;">
     <label style="font-size: 16px; color: #212121;">
-        <input type="checkbox">Receive promotional offers?</input>
+        <input type="checkbox">Receber ofertas promocionais?</input>
     </label>
 </div>
 {% endframebox %}

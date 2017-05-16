@@ -2,13 +2,17 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Follow along with this interactive guide to learn how to use  DevTools to diagnose forced synchronous layouts.
 
-{# wf_updated_on: 2016-03-31 #}
+{# wf_updated_on: 2017-04-24 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Diagnose Forced Synchronous Layouts {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
+
+Warning: This page is deprecated. See [Get Started With Analyzing Runtime
+Performance](/web/tools/chrome-devtools/evaluate-performance) for an
+up-to-date tutorial on forced synchronous layouts.
 
 Learn how to use DevTools to diagnose forced synchronous 
 layouts.

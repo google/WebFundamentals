@@ -11,7 +11,7 @@ description: Documentação de referência para a auditoria do Lighthouse "Site 
 
 O cache de aplicativos, também conhecido como AppCache, está [obsoleto][deprecated].
 
-[obsoleto]: https://html.spec.whatwg.org/multipage/browsers.html#offline
+[deprecated]: https://html.spec.whatwg.org/multipage/browsers.html#offline
 
 ## Como ser aprovado na auditoria {: #how }
 

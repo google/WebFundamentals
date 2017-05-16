@@ -29,10 +29,7 @@ Service Worker の詳細を読んだことがある場合は、次のような�
       navigator.serviceWorker.register('/service-worker.js');
     }
 
-これに `console.log()` 文や、前回の Service Worker 登録のアップデートを検出する[コード](https://github.com/GoogleChrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L20)が含まれる場合があり、これらはページを更新するようユーザーに知らせる手段として使用されます。
-
-
-ただし、標準のいくつかのコード行が少し異なるだけです。
+これに `console.log()` 文や、前回の Service Worker 登録のアップデートを検出する[コード](https://github.com/GoogleChrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L20)が含まれる場合があり、これらはページを更新するようユーザーに知らせる手段として使用されます。ただし、標準のいくつかのコード行が少し異なるだけです。
 
 
 では、`navigator.serviceWorker.register` に微妙な違いはあるでしょうか。従うべきベスト プラクティスはあるでしょうか。
@@ -45,24 +42,14 @@ Service Worker の詳細を読んだことがある場合は、次のような�
 
 
 
-デベロッパーの優先順位は、ブラウザがインタラクティブなページの表示に最小限必要なクリティカル リソースを迅速に取得できるようにすることです。
-
-レスポンスの取得を遅らせるものは、迅速なインタラクティブ エクスペリエンスの敵です。
+デベロッパーの優先順位は、ブラウザがインタラクティブなページの表示に最小限必要なクリティカル リソースを迅速に取得できるようにすることです。レスポンスの取得を遅らせるものは、迅速なインタラクティブ エクスペリエンスの敵です。
 
 
-ここで、JavaScript またはページでレンダリングする必要がある画像をダウンロードするプロセスで、ブラウザがバックグラウンド スレッドまたはプロセス（簡略化のためにスレッドを想定します）の開始を決定するとします。
-
-あなたは強力なパソコンではなく、世界の大部分で主要端末と見なされている能力の低いスマートフォンを使用しています。
-
-このスレッドを開始すると、ブラウザがインタラクティブなウェブページのレンダリングに費やす可能性がある CPU 時間やメモリの競合が発生します。
+ここで、JavaScript またはページでレンダリングする必要がある画像をダウンロードするプロセスで、ブラウザがバックグラウンド スレッドまたはプロセス（簡略化のためにスレッドを想定します）の開始を決定するとします。あなたは強力なパソコンではなく、世界の大部分で主要端末と見なされている能力の低いスマートフォンを使用しています。このスレッドを開始すると、ブラウザがインタラクティブなウェブページのレンダリングに費やす可能性がある CPU 時間やメモリの競合が発生します。
 
 
 
-アイドル状態のバックグラウンド スレッドが大きな変化をもたらす可能性はあまりありません。ただし、スレッドがアイドル状態ではなく、ネットワークからリソースのダウンロードを開始する場合はどうでしょう。
-
-CPU やメモリの競合に関する懸念よりも、多くのモバイル端末が利用できる帯域幅の制限に関する懸念を優先すべきです。
-
-帯域幅は貴重であるため、同時にセカンダリ リソースをダウンロードすることでクリティカル リソースを浪費しないでください。
+アイドル状態のバックグラウンド スレッドが大きな変化をもたらす可能性はあまりありません。ただし、スレッドがアイドル状態ではなく、ネットワークからリソースのダウンロードを開始する場合はどうでしょう。CPU やメモリの競合に関する懸念よりも、多くのモバイル端末が利用できる帯域幅の制限に関する懸念を優先すべきです。帯域幅は貴重であるため、同時にセカンダリ リソースをダウンロードすることでクリティカル リソースを浪費しないでください。
 
 
 新しい Service Worker スレッドを開始してリソースのダウンロードとキャッシュをバックグラウンドで実行すると、ユーザーがはじめてサイトにアクセスしたときの迅速なインタラクティブ エクスペリエンスを提供するという目標に逆行することになります。
@@ -72,11 +59,7 @@ CPU やメモリの競合に関する懸念よりも、多くのモバイル端�
 
 ##  ボイラプレートの改善
 
-解決策として、`navigator.serviceWorker.register()` を呼び出すタイミングを選択することで Service Worker の起動を制御します。
-単純な経験則では、次のように <code>[load イベント](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)</code>が
-
-
-  <code>window</code> で発生するまで登録を遅らせます。
+解決策として、`navigator.serviceWorker.register()` を呼び出すタイミングを選択することで Service Worker の起動を制御します。単純な経験則では、次のように <code>[load イベント](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)</code> が <code>window</code> で発生するまで登録を遅らせます。
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
@@ -84,14 +67,8 @@ CPU やメモリの競合に関する懸念よりも、多くのモバイル端�
       });
     }
 
-ただし、Service Worker 登録を開始する適切な時間は、ウェブアプリが読み込みの直後に実行する内容にもよります。
-たとえば、[Google I/O
-2016 ウェブアプリ](https://events.google.com/io2016/)は、メイン画面に遷移する前に短いアニメーションを表示します。
-チームは、(/web/showcase/2016/iowa2016) では、アニメーションの表示中に Service Worker 登録を開始すると、ローエンドのモバイル端末でアニメーションの品質が低下する場合があることがわかりました。
-
-
-ユーザーに不快感を与えるのではなく、ブラウザが数秒間アイドル状態になる可能性が高い場合に、アニメーションが終わるまで Service Worker 登録を[遅らせました](https://github.com/GoogleChrome/ioweb2016/blob/8cfa27261f9d07fe8a5bb7d228bd3f35dfc9a91e/app/scripts/helper/elements.js#L42)
-。
+ただし、Service Worker 登録を開始する適切な時間は、ウェブアプリが読み込みの直後に実行する内容にもよります。たとえば、[Google I/O
+2016 ウェブアプリ](https://events.google.com/io2016/)は、メイン画面に遷移する前に短いアニメーションを表示します。チームは、(/web/showcase/2016/iowa2016) では、アニメーションの表示中に Service Worker 登録を開始すると、ローエンドのモバイル端末でアニメーションの品質が低下する場合があることがわかりました。ユーザーに不快感を与えるのではなく、ブラウザが数秒間アイドル状態になる可能性が高い場合に、アニメーションが終わるまで Service Worker 登録を[遅らせました](https://github.com/GoogleChrome/ioweb2016/blob/8cfa27261f9d07fe8a5bb7d228bd3f35dfc9a91e/app/scripts/helper/elements.js#L42)。
 
 
 
@@ -105,47 +82,23 @@ CPU やメモリの競合に関する懸念よりも、多くのモバイル端�
 
 
 
-Service Worker は登録されると、`install` および `activate` [ライフサイクル イベント](/web/fundamentals/instant-and-offline/service-worker/lifecycle)を通過します。アクティベートされると、Service Worker はウェブアプリへのその後のアクセスの `fetch` イベントを処理できるようになります。
+Service Worker は登録されると、`install` および `activate` [ライフサイクル イベント](/web/fundamentals/instant-and-offline/service-worker/lifecycle)を通過します。アクティベートされると、Service Worker はウェブアプリへのその後のアクセスの `fetch` イベントを処理できるようになります。Service Worker は、そのスコープ内のページに対するリクエストが行われる前に起動しますが、これは、それについて考慮する場合に意味をなします。既存の Service Worker がページへのアクセスの前に実行されていない場合は、ナビゲーション リクエストの `fetch` イベントを処理できません。
 
 
 
-Service Worker は、そのスコープ内のページに対するリクエストが行われる前に起動しますが、これは、それについて考慮する場合に意味をなします。
-
-既存の Service Worker がページへのアクセスの前に実行されていない場合は、ナビゲーション リクエストの `fetch` イベントを処理できません。
-
-
-
-アクティブな Service Worker がある場合は、`navigator.serviceWorker.register()` をいつ呼び出しても、実際には呼び出すかどうかも問題にはなりません。Service Worker スクリプトの URL を変更しない限り、`navigator.serviceWorker.register()` は 2 回目以降のアクセス中は効果的に[何もしません](https://en.wikipedia.org/wiki/NOP)。
-
-
-
-呼び出されるタイミングは影響しません。
+アクティブな Service Worker がある場合は、`navigator.serviceWorker.register()` をいつ呼び出しても、実際には呼び出すかどうかも問題にはなりません。Service Worker スクリプトの URL を変更しない限り、`navigator.serviceWorker.register()` は 2 回目以降のアクセス中は効果的に[何もしません](https://en.wikipedia.org/wiki/NOP)。呼び出されるタイミングは影響しません。
 
 
 ##  早く登録する理由
 
-Service Worker をできるだけ早く登録することに意味はあるでしょうか。
-思い浮かぶシナリオは、Service Worker で <code>[clients.claim()](https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim)</code> を使用して
-
-初回アクセス時のページを制御し、その  <code>fetch</code> ハンドラの内部で[ランタイム キャッシュ](/web/fundamentals/instant-and-offline/offline-cookbook/#on-network-response)を積極的に実行する場合です。
-
-
-この場合は、Service Worker をできるだけ早くアクティブにして、後で取得する可能性があるリソースをランタイム キャッシュに移入するとメリットがあります。
-
-ウェブアプリがこのカテゴリに属する場合は、一歩離れて、Service Worker の  <code>install</code> ハンドラがメインページのリクエストと帯域幅を取り合うリソースを要求していないことを確認することをお勧めします。
+Service Worker をできるだけ早く登録することに意味はあるでしょうか。思い浮かぶシナリオは、Service Worker で <code>[clients.claim()](https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim)</code> を使用して初回アクセス時のページを制御し、その  <code>fetch</code> ハンドラの内部で[ランタイム キャッシュ](/web/fundamentals/instant-and-offline/offline-cookbook/#on-network-response)を積極的に実行する場合です。この場合は、Service Worker をできるだけ早くアクティブにして、後で取得する可能性があるリソースをランタイム キャッシュに移入するとメリットがあります。ウェブアプリがこのカテゴリに属する場合は、一歩離れて、Service Worker の  <code>install</code> ハンドラがメインページのリクエストと帯域幅を取り合うリソースを要求していないことを確認することをお勧めします。
 
 
 
 
 ##  テスト
 
-最初のアクセスをシミュレートするのに適した方法は、ウェブアプリを [Chrome のシークレット ウィンドウ](https://support.google.com/chromebook/answer/95464?co=GENIE.Platform%3DDesktop)で開き、[Chrome の DevTools](/web/tools/chrome-devtools/) でネットワーク トラフィックを確認することです。
-
-
-
-ウェブ デベロッパーは、ウェブアプリのローカル インスタンスを 1 日に何十回も再読み込みします。
-
-ただし、既に Service Worker が存在し、キャッシュが十分に入力されている場合にサイトに再アクセスすると、新しいユーザーと同じエクスペリエンスが得られず、発生するおそれのある問題を簡単に無視してしまいます。
+最初のアクセスをシミュレートするのに適した方法は、ウェブアプリを [Chrome のシークレット ウィンドウ](https://support.google.com/chromebook/answer/95464?co=GENIE.Platform%3DDesktop)で開き、[Chrome の DevTools](/web/tools/chrome-devtools/) でネットワーク トラフィックを確認することです。ウェブ デベロッパーは、ウェブアプリのローカル インスタンスを 1 日に何十回も再読み込みします。ただし、既に Service Worker が存在し、キャッシュが十分に入力されている場合にサイトに再アクセスすると、新しいユーザーと同じエクスペリエンスが得られず、発生するおそれのある問題を簡単に無視してしまいます。
 
 
 
@@ -169,9 +122,7 @@ Service Worker をできるだけ早く登録することに意味はあるで�
 
 
 上のスクリーンショットでは、ページの読み込みが終わるまで Service Worker 登録が遅延されています。
-帯域幅の競合を回避して、すべてのリソースがネットワークから取得されるまでプリキャッシュ リクエストが始まらないことがわかります。
-
-さらに、プリキャッシュするアイテムの一部（[Size] 列で `(from disk cache)` のアイテム）は既にブラウザの HTTP キャッシュにあるため、ネットワークに再アクセスしなくても Service Worker のキャッシュに移入できます。
+帯域幅の競合を回避して、すべてのリソースがネットワークから取得されるまでプリキャッシュ リクエストが始まらないことがわかります。さらに、プリキャッシュするアイテムの一部（[Size] 列で `(from disk cache)` のアイテム）は既にブラウザの HTTP キャッシュにあるため、ネットワークに再アクセスしなくても Service Worker のキャッシュに移入できます。
 
 
 
@@ -185,10 +136,7 @@ Chrome の[リモート デバッグ機能](/web/tools/chrome-devtools/remote-de
 
 ## まとめ
 
-まとめると、ユーザーの最初のアクセス エクスペリエンスを最適にすることが最優先事項です。
-最初のアクセス時のページ読み込みが終わるまで Service Worker 登録を遅らせることで、これを実現できます。
-再アクセス時にも、Service Worker のすべてのメリットを享受できます。
-
+まとめると、ユーザーの最初のアクセス エクスペリエンスを最適にすることが最優先事項です。最初のアクセス時のページ読み込みが終わるまで Service Worker 登録を遅らせることで、これを実現できます。再アクセス時にも、Service Worker のすべてのメリットを享受できます。
 
 Service Worker の初回登録を最初のページの読み込みが終わるまで遅らせる最も簡単な方法は、次のコードを使用することです。
 

@@ -145,8 +145,8 @@ Catatan: Jika Anda tidak sengaja menghapus simpul, tekan <kbd class='kbd'>Ctrl</
 
 Menu **more actions** memungkinkan Anda berinteraksi dengan simpul DOM dengan berbagai
 cara. Untuk menampilkan menu, klik kanan simpul atau pilih simpul
-, lalu tekan tombol **more actions** (![tombol 
-more actions]((imgs/more-actions-button.png){:.inline})). Tombol ini hanya 
+, lalu tekan tombol **more actions**  (![tombol 
+more action](imgs/more-actions-button.png){:.inline}). Tombol ini hanya 
 ditampilkan pada elemen yang saat ini dipilih.
 
 ![menu more actions](imgs/more-actions-menu.png)
@@ -273,7 +273,7 @@ code for screenshot
 <html>
 <body onload="console.log('onload');">
   <div onfocus="console.log('focus');">
-    <button id="button" onclick="console.log('onclick');">click me, please</button>
+    <button id="button" onclick="console.log('onclick');">click me</button>
   </div>
 </body>
 </html>
@@ -301,7 +301,7 @@ code for screenshot
 <html>
 <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
 <body>
-  <button id="button">click me</button>
+  <button id="button">click me, please</button>
   <script>
     $('#button').click(function() {
       $('#button').text('hehe, that tickled, thanks');
@@ -331,7 +331,7 @@ mungkin akan diselesaikan di suatu bagian di kode kerangka kerja atau pustaka.
 
 
 
-[periksa]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
+[inspect]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
 
 
 {# wf_devsite_translation #}

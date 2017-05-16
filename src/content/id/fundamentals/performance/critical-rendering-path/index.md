@@ -26,7 +26,7 @@ itulah **jalur rendering penting**.
 <img src="images/progressive-rendering.png"  alt="rendering laman progresif">
 
 Dengan mengoptimalkan jalur rendering penting, kita bisa mempercepat
-waktu hingga pertama kali me-render laman kita secara signifikan. Lebih jauh, pemahaman
+waktu hingga pertama kali merender laman kita secara signifikan. Lebih jauh, pemahaman
 jalur rendering penting juga menjadi pondasi untuk membangun aplikasi interaktif
 yang berkinerja baik. Proses pembaruan interaktif sama, hanya saja dilakukan dalam loop kontinu dan idealnya 60 bingkai per detik! Namun terlebih dahulu, ringkasan mengenai cara browser menampilkan halaman sederhana.
 

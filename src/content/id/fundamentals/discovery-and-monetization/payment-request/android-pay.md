@@ -87,7 +87,7 @@ figure {
 * Pastikan bahwa [gerbang / prosesor pembayaran Anda mendukung token Android Pay](/android-pay/#processors).
 * Dapatkan sepasang tombol yang digunakan untuk mengenkripsi respons dari Android Pay jika Anda menggunakan [pendekatan token jaringan](#integration-using-network-token).
     * Google menyarankan agar Anda bekerja sama dengan prosesor pembayaran Anda guna memperoleh kunci publik. Kunci ini menyederhanakan proses karena prosesor Anda akan mampu menangani dekripsi Android Pay Payload. Cari informasi selengkapnya pada dokumentasi prosesor pembayaran.
-    * Jiak Anda ingin menangani enkripsi sendiri, lihat [Kriptografi Token Pembayaran](/android-pay/integration/payment-token-cryptography) untuk menghasilkan kunci Enkripsi Terintegrasi Kurva Eliptik dienkode base64.
+    * Jika Anda ingin menangani enkripsi sendiri, lihat [Kriptografi Token Pembayaran](/android-pay/integration/payment-token-cryptography) untuk menghasilkan kunci Enkripsi Terintegrasi Kurva Eliptik dienkode base64.
 
 ## Mengintegrasikan Android Pay ke dalam Payment Request
 dengan Android Pay untuk Payment Request API, Anda akan meminta salah satu dari dua jenis token pembayaran: gerbang atau jaringan. Jika Anda menggunakan Braintree, Stripe, atau Vantiv sebagai gerbang pembayaran Anda, maka Anda dapat meminta token gerbang dari Android Pay. Atau, Anda dapat meminta bundel token jaringan yang dienkripsi. Anda mungkin dapat menangani token jaringan sendiri atau bekerja dengan prosesor Anda untuk menangani mendekripsi bundel token.
@@ -99,7 +99,7 @@ Android Pay API akan mengembalikan gerbang token. Ini adalah alur yang disaranka
 
 <a href="images/gateway_token.png" target="_blank"><img src="images/gateway_token.png"></a>
 
-### Dengan pendekatan Token Jaringan,
+### Pendekatan Token Jaringan
 Android Pay API akan mengembalikan bundel token jaringan yang dienkripsi. Anda mungkin harus mendekripsi token sendiri atau memanfaatkan API prosesor Anda untuk menangani dekripsi dan membebankan token.
 
 <a href="images/network_token.png" target="_blank"><img src="images/network_token.png"></a>

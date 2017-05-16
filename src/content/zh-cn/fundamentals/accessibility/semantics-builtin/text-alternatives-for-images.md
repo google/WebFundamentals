@@ -25,7 +25,7 @@ description: 利用 alt 属性提供图像的替代文本
     </article>
 
 <article>
-  <h2>研究表明，9/10 的猫会在其主人睡眠时悄悄审判他们</h2>
+  <h2>Study shows 9 out of 10 cats quietly judging their owners as they sleep</h2>
   <img src="imgs/160204193356-01-cat-500.jpg">
 </article>
 
@@ -37,7 +37,7 @@ description: 利用 alt 属性提供图像的替代文本
 可以利用 `alt` 属性为这幅图像提供有用的替代文本，例如“一只目光汹汹凝视远方的猫”。
 
 
-    <img src="/160204193356-01-cat-500.jpg" alt="A cat staring menacingly off into space">
+    <img src="/160204193356-01-cat-500.jpg" alt="一只目光汹汹凝视远方的猫">
 
 然后屏幕阅读器就可以叙述对图像的简洁说明（可在黑色旁白栏中看到），用户可以选择是否继续阅读下一篇文章。
 
@@ -58,7 +58,7 @@ description: 利用 alt 属性提供图像的替代文本
 以上图所示网页报头中的链接徽标图像为例。我们可以将这幅图像相当准确地描述成“The Funion 徽标”。
 
 
-    <img class="logo" src="logo.jpg" alt="The Funion logo">
+    <img class="logo" src="logo.jpg" alt="The Funion 徽标">
 
 可能很容易为它指定一个“首页”或“主页”这样更简单的替代文本，但这样做对弱视和正常视力的用户都不够周到。
 

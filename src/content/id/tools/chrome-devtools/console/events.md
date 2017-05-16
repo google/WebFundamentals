@@ -59,7 +59,7 @@ kode berikut menampilkan daftar semua event listener yang terdaftar pada objek d
 
     getEventListeners(document);
 
-![Output penggunaan getEventListeners()](images/events-call-geteventlisteners.png)
+![Keluaran penggunaan getEventListeners()](images/events-call-geteventlisteners.png)
 
 Jika terdaftar lebih dari satu listener pada objek yang ditetapkan,
 larik akan berisi satu anggota untuk setiap listener.

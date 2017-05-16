@@ -49,7 +49,7 @@ Lighthouse 可标识三种类型的阻塞资源。
 * 没有 `disabled` 属性。如果具有此属性，则浏览器不会下载样式表。
 * 没有与用户的设备匹配的 `media` 属性。
 
-`<link rel="import">` 标记，其具有以下特征：：
+`<link rel="import">` 标记，其具有以下特征：
 
 * 没有 `async` 属性。
 

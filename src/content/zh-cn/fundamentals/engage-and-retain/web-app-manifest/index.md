@@ -20,7 +20,7 @@ description:网络应用清单是一个 JSON 文件，您可以利用它控制�
 
 它通过一个文本文件中的元数据这一简单机制完成所有这些工作。那就是网络应用清单。
 
-注：尽管您可以在任何网站上使用网络应用清单，它们却是[渐进式网络应用](/web/progressive-web-apps/)的必备要素。
+注：尽管您可以在任何网站上使用网络应用清单，它们却是 [Progressive Web App](/web/progressive-web-apps/) 的必备要素。
 
 ### TL;DR {: .hide-from-toc }
 - 创建清单并将其链接到您的页面，这是非常简单的过程。

@@ -12,21 +12,15 @@ description: レスポンシブ ウェブデザイン パターンは急速に�
 レスポンシブ ウェブ デザイン パターンは急速に進化していますが、デスクトップでもモバイル端末間でもうまく動作する確立されたパターンは限られています。
 
 レスポンシブ ウェブページで使用されるレイアウトはたいてい、mostly fluid、column drop、layout shifter、tiny tweaks、off canvas という 5 つのパターンのいずれかに分類できます。ページ内でこれらのパターンを組み合わせて使用する場合もあります。たとえば、column drop と off canvas の組み合わせです。
-
-
 これらのパターンは本来 [Luke
-Wroblewski](http://www.lukew.com/ff/entry.asp?1514)によって認識され、
+Wroblewski](http://www.lukew.com/ff/entry.asp?1514) によって認識され、
 レスポンシブ ページの起点を提供します。
 
 ###  パターン
 
 以下の各サンプルでは、シンプルさとわかりやすさを重視し、[`flexbox`](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes) を使用して、実際のマークアップで作成しています。基本的に 3 つのコンテンツの
-`div` はプライマリ コンテナの `div` に含まれています。
-
- 各サンプルは、まず最小のビューから描画され、必要に応じてブレークポイントが追加されます。
-最新のブラウザ向けに [flexbox レウアウトは適切に
-サポートされていますが](http://caniuse.com/#search=flexbox)最適なサポートのためには
-ベンダーのプレフィックスがまだ必要です。
+`div` はプライマリ コンテナの `div` に含まれています。各サンプルは、まず最小のビューから描画され、必要に応じてブレークポイントが追加されます。
+最新のブラウザ向けに [flexbox レウアウトは適切にサポートされていますが](http://caniuse.com/#search=flexbox)最適なサポートのためにはベンダーのプレフィックスがまだ必要です。
 
 ##  Mostly Fluid
 
@@ -69,9 +63,7 @@ Column drop は幅いっぱいに表示するマルチカラム レイアウト�
 <img src="imgs/column-drop.svg">
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/column-drop.html" class="button button-primary">お試しください</a>
 
-主に fluid サンプルでは、コンテンツは最小ビューで垂直にスタックされますが、画面が 600px 以上になった場合、プライマリおよびセカンダリ コンテンツの `div` は、画面の幅いっぱいに表示されます。
-
-`div` の順番は CSS の order プロパティで設定されます。
+主に fluid サンプルでは、コンテンツは最小ビューで垂直にスタックされますが、画面が 600px 以上になった場合、プライマリおよびセカンダリ コンテンツの `div` は、画面の幅いっぱいに表示されます。`div` の順番は CSS の order プロパティで設定されます。
 800px で、すべてのコンテンツの `div` が表示され、全画面幅が使用されます。
 
 
@@ -105,7 +97,6 @@ Layout shifter パターンは最もレスポンシブなパターンで、さ�
 
  * [Food Sense](http://foodsense.is/){: .external }
  * [Seminal Responsive Design Example](http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html)
-
  * [Andersson-Wise Architects](http://www.anderssonwise.com/){: .external }
 
 <pre class="prettyprint">

@@ -43,7 +43,7 @@ worker usando o evento de push. Sua estrutura básica é a seguinte:
     });
 
 
-Dentro de `waitUntil()`, chamaremos`showNotification()` no objeto de registro
+Dentro de `waitUntil()`, chamaremos `showNotification()` no objeto de registro
 de um service worker.
 
 
@@ -224,7 +224,7 @@ como uma preparação para as próximas etapas.
 2. Você chama `self.registration.getNotifications()` para ver se há
    notificações que vale a pena combinar. Isso normalmente se faz verificando a tag
    da notificação.
-3. Para finalizar, você mostra a nova notificação chamando`self.registration.showNotification()`,
+3. Para finalizar, você mostra a nova notificação chamando `self.registration.showNotification()`,
    não esquecendo de definir o parâmetro "renotify" como "true" nas opções (veja um
    exemplo abaixo).
 

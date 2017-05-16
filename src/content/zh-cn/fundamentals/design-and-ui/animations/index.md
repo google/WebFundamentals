@@ -32,7 +32,7 @@ description:更好地了解动画及其在现代应用和网站中的用途。
 
 某些属性做出改变所花费的开销比其他属性要多，因此更可能使动画卡顿。例如，与改变元素的文本颜色相比，改变元素的 `box-shadow` 需要开销大很多的绘图操作。同样，改变元素的 `width` 可能比改变其 `transform` 要多一些开销。
 
-您可以在[动画和性能](animations-and-performance)指南中阅读有关动画性能考虑事项的更多内容，但是如果想要 TL;DR（太长；未读），则坚持使用转换和透明度改变，以及使用 `will-change`。如果想确切知道给指定的属性设置动画会触发什么效果，请参阅 [CSS 触发器](http://csstriggers.com)。
+您可以在[动画与性能](animations-and-performance)指南中阅读有关动画性能考虑事项的更多内容，但是如果想要 TL;DR（太长；未读），则坚持使用转换和透明度改变，以及使用 `will-change`。如果想确切知道给指定的属性设置动画会触发什么效果，请参阅 [CSS 触发器](http://csstriggers.com)。
 
 
 {# wf_devsite_translation #}

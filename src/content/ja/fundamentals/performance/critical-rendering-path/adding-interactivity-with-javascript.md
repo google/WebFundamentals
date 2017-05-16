@@ -96,7 +96,7 @@ script タグに async キーワードを追加すると、スクリプトの準
 
 <a href="measure-crp" class="gc-analytics-event" data-category="CRP"
     data-label="Next / Measuring CRP">
-  <button>次のトピック:クリティカル レンダリング パスの測定</button>
+  <button>次のトピック: クリティカル レンダリング パスの測定</button>
 </a>
 
 

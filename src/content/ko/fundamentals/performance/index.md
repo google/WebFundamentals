@@ -54,7 +54,7 @@ HTML, CSS 및 자바스크립트를 수신하고 처리하여 렌더링된 픽�
 <img src="images/prpl.png" class="attempt-right">
 
 PRPL(Push, Render, Pre-cache, Lazy-load)은
- PWA(Progressive Web Apps)를 구성하고 제공하기 위한 패턴이며,
+ PWA(Progressive Web App)를 구성하고 제공하기 위한 패턴이며,
  앱 전달 및 출시의 성능에 중점을 둡니다.
 
 [자세히 알아보기](prpl-pattern/)

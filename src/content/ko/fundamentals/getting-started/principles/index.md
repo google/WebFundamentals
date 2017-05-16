@@ -45,7 +45,7 @@ Google과 AnswerLab에서는 이 질문에 대답하기 위해 [연구 조사](h
   <figure id="fig1">
     <img src="images/hpnav-cta-bad.png">
     <figcaption class="warning">
-      <b>금지</b>: "자세히 알아보기”와 같은 애매한 콜투액션으로 귀중한 상단부 공간을 낭비하지 마세요.
+      <b>금지</b>: '자세히 알아보기'와 같은 애매한 콜투액션으로 귀중한 상단부 공간을 낭비하지 마세요.
      </figcaption>
   </figure>
 </div>
@@ -91,7 +91,7 @@ Google과 AnswerLab에서는 이 질문에 대답하기 위해 [연구 조사](h
 설치하도록 요청하는 전체 페이지 광고)는 사용자를 귀찮게 하며 작업 수행을
 어렵게 합니다. 사용자를 귀찮게 만들 뿐만 아니라, 앱 설치 삽입광고를 사용하는
 사이트는
-[Google Mobile-Friendly Test](https://search.google.com/search-console/mobile-friendly)를
+[Google 모바일 친화성 테스트](https://search.google.com/search-console/mobile-friendly)를
 통과하지 못하며, 이는 사이트의 검색 순위에 부정적인 영향을 미칩니다.
 
 <div class="attempt-left">
@@ -127,7 +127,7 @@ Google과 AnswerLab에서는 이 질문에 대답하기 위해 [연구 조사](h
   <figure id="fig1">
     <img src="images/ss-search-good.jpg">
     <figcaption class="success">
-      <b>권장</b>: 검색이 보이도록 만드세요
+      <b>권장</b>: 검색이 보이도록 만드세요.
      </figcaption>
   </figure>
 </div>
@@ -135,7 +135,7 @@ Google과 AnswerLab에서는 이 질문에 대답하기 위해 [연구 조사](h
   <figure id="fig1">
     <img src="images/ss-search-bad.jpg">
     <figcaption class="warning">
-      <b>금지</b>: 검색을 오버플로 메뉴에 숨기지 마세요
+      <b>금지</b>: 검색을 오버플로 메뉴에 숨기지 마세요.
      </figcaption>
   </figure>
 </div>
@@ -153,7 +153,7 @@ Google과 AnswerLab에서는 이 질문에 대답하기 위해 [연구 조사](h
   <figure id="fig1">
     <img src="images/ss-relevant-good.png">
     <figcaption class="success">
-      <b>권장</b>: 어린이 용품만을 반환하는 Macy.
+      <b>권장</b>: Macy's에서 어린이 용품만 반환합니다.
      </figcaption>
   </figure>
 </div>
@@ -171,8 +171,8 @@ Google과 AnswerLab에서는 이 질문에 대답하기 위해 [연구 조사](h
 
 ### 결과를 좁히기 위해 필터를 구현하세요
 
-연구 참가자들은 자신이 원하는 것을 찾기 위해 [필터](/custom-search/docs/structured_search)
-를 사용하며, 효과적인 필터가 없는 사이트는
+연구 참가자들은 자신이 원하는 것을 찾기 위해 [필터](/custom-search/docs/structured_search)를
+사용하며, 효과적인 필터가 없는 사이트는
 포기합니다. 검색 결과 위에 필터를 배치하고, 특정 필터가 적용될 때
 얼마나 많은 결과가 반환될지를 표시하여 사용자를 도와주세요.
 
@@ -267,10 +267,10 @@ Google과 AnswerLab에서는 이 질문에 대답하기 위해 [연구 조사](h
 [기본 설정을 미리
 채우세요](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly). 신규 사용자에게는 친근한 타사 결제 서비스를 제공하세요.
 
-### 복잡한 작업에는 '클릭하여 통화' 버튼을 사용하세요
+### 복잡한 작업에는 클릭투콜 버튼을 사용하세요
 
 호출 기능이 있는 기기에서
-[클릭하여 통화 링크](/web/fundamentals/native-hardware/click-to-call/)를 사용하면,
+[클릭투콜 링크](/web/fundamentals/native-hardware/click-to-call/)를 사용하면,
 사용자가 이 링크를 누르기만 하면 전화를 걸 수 있습니다. 대부분의 휴대기기에서는,
 번호를 누르기 전에 사용자에게 확인 메시지가 표시되거나 번호 처리 방식을 물어보는 메뉴가
 사용자에게 표시됩니다.
@@ -370,7 +370,7 @@ Google과 AnswerLab에서는 이 질문에 대답하기 위해 [연구 조사](h
 사용하세요. 특정
 [뷰포트 너비](/web/fundamentals/design-and-ui/responsive/#set-the-viewport)로만
 잘 표시되는 콘텐츠는 만들지 마세요.
-사용자에게 가로 스크롤을 강제하는 사이트는 [Google Mobile-Friendly Test](https://search.google.com/search-console/mobile-friendly)를
+사용자에게 가로 스크롤을 강제하는 사이트는 [Google 모바일 친화성 테스트](https://search.google.com/search-console/mobile-friendly)를
 통과하지 못하며, 이는 사이트의 검색
 순위에 부정적인 영향을 미칩니다.
 
@@ -417,7 +417,7 @@ Google과 AnswerLab에서는 이 질문에 대답하기 위해 [연구 조사](h
   <figure id="fig1">
     <img src="images/sw-single-browser-good.png">
     <figcaption class="success">
-      <b>권장</b>: 현장에서 쿠폰을 제공하여 사용자가 사이트에 머물도록 하는 Macy.
+      <b>권장</b>: Macy's는 현장에서 쿠폰을 제공하여 사용자가 사이트에 머물도록 합니다.
      </figcaption>
   </figure>
 </div>

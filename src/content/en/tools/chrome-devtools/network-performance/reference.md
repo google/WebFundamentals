@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2016-12-22 #}
+{# wf_updated_on: 2017-04-26 #}
 {# wf_published_on: 2015-04-13 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -24,8 +24,9 @@ figcaption {
 Discover new ways to analyze how your page loads in this comprehensive
 reference of Chrome DevTools network analysis features.
 
-Note: This reference is based on Chrome 58, which is currently
-[Canary](https://www.google.com/chrome/browser/canary.html).
+Note: This reference is based on Chrome 58. If you use another version
+of Chrome, the UI and features of DevTools may be different. Check
+`chrome://help` to see what version of Chrome you're running.
 
 ## Record network requests {: #record }
 

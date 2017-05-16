@@ -204,9 +204,9 @@ In the short snippet of code above we only added the starting event listener
 for mouse events. The reason for this is that mouse events will only trigger
 when the cursor is hovering *over* the element the event listener is added to.
 
-TouchEvents will track a gesture after it's started regardless of where the
-touch occurs and PointerEvents will track events regardless of where the touch
-occurs we call `setPointerCapture` on a DOM element.
+`TouchEvents` will track a gesture after it's started regardless of where the
+touch occurs and `PointerEvents` will track events regardless of where the touch
+occurs after we call `setPointerCapture` on a DOM element.
 
 For mouse move and end events we add the event listeners *in* the
 gesture start method and add the listeners to the document, meaning it can

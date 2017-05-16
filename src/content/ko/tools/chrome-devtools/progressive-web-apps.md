@@ -66,20 +66,20 @@ description: Application 패널을 사용하여 웹 앱 매니페스트, 서비�
 **App Manifest** 창의 **Add to homescreen** 버튼을 사용하여
 필요할 때마다 Add to Homescreen을 시뮬레이션할 수 있습니다.
 
-dd to Homescreen을 적절하게 지원하는[Google I/O 2016 Progressive Web
+dd to Homescreen을 적절하게 지원하는 [Google I/O 2016 Progressive Web
 app](https://events.google.com/io2016/){: .external }을
 사용하여 이 기능을 테스트할 수 있습니다. 앱이 열린 상태에서 **Add to Homescreen**을 클릭하면
-"add this site to your shelf" 배너가 표시됩니다. 이는
-휴대기기용 "add to homescreen" 배너와 같은 데스크톱용 배너입니다.
+'add this site to your shelf' 배너가 표시됩니다. 이는
+휴대기기용 'add to homescreen' 배너와 같은 데스크톱용 배너입니다.
 
 ![데스크톱 선반에 추가][shelf]
 
 **팁**: Add to Homescreen
- 이벤트를 시뮬레이션하는 동안 **Console** 창을 열어두십시오. Console이 매니페스트에 문제가 있으면 알려주고 Add to Homescreen 수명 주기에
+ 이벤트를 시뮬레이션하는 동안 **Console** 창을 열어두세요. Console이 매니페스트에 문제가 있으면 알려주고 Add to Homescreen 수명 주기에
 대한 기타 정보를 기록합니다.
 
 **Add to Homescreen** 기능은 아직 휴대기기의 워크플로를
-시뮬레이션할 수 없습니다. 위 스크린샷에서 DevTools가 Device Mode인 경우에도 "add to shelf" 프롬프트가 트리거된 방식을 확인하십시오.
+시뮬레이션할 수 없습니다. 위 스크린샷에서 DevTools가 Device Mode인 경우에도 'add to shelf' 프롬프트가 트리거된 방식을 확인하세요.
  그러나 데스크톱 선반에
 앱을 추가할 수 있는 경우 모바일에도
 가능합니다.
@@ -87,7 +87,7 @@ app](https://events.google.com/io2016/){: .external }을
 진정한 모바일 경험을 테스트하려면
 실제 휴대기기를 [원격 디버깅][remote
 debugging]을 통해 DevTools에 연결한 다음 DevTools의 **Add to Homescreen** 버튼을
-클릭하여 연결된 휴대기기에서 "add to homescreen" 프롬프트를 트리거할 수 있습니다.
+클릭하여 연결된 휴대기기에서 'add to homescreen' 프롬프트를 트리거할 수 있습니다.
 
 [shelf]: images/io.png
 [remote debugging]: /web/tools/chrome-devtools/debug/remote-debugging/remote-debugging

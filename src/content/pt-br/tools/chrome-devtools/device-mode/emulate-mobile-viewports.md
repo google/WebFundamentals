@@ -242,7 +242,7 @@ comportamentos relacionados à rede:
   1. **Disk Cache**: Desativar Disk Cache impede que as páginas e seus ativos sejam
  armazenados em cache pelo navegador enquanto o DevTools está aberto.
   2. **Network Throttling**: Leia mais sobre [Limitação de rede aqui](/web/tools/chrome-devtools/network-performance/network-conditions).
-  3. **User-agent**: Permite definir a modificação de uma string UA (User Agent)
+  3. **User Agent**: Permite definir a modificação de uma string UA (User Agent)
      específica.
 
 **Dica**: Você também pode abrir a gaveta **Network conditions** no 

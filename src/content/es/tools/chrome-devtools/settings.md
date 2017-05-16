@@ -27,7 +27,7 @@ DevTools, acceder a herramientas adicionales y abrir el menú Settings, entre ot
 Para abrir el menú principal, haz clic en el botón **Main Menu** en la parte superior derecha
 de la ventana de DevTools.
 
-![main menu](images/main-menu.png)
+![menú principal](images/main-menu.png)
 
 ## Abre las configuraciones {:#settings}
 
@@ -40,7 +40,7 @@ Presiona <kbd>Cmd</kbd> + <kbd>Mayúscula</kbd> + <kbd>P</kbd> (Mac) o
 <kbd>Ctrl</kbd>+<kbd>Mayúscula</kbd>+<kbd>P</kbd> (Windows y Linux) para abrir el menú
 Command.
 
-![Menú Command](images/command-menu.png)
+![menú Command](images/command-menu.png)
 
 ## Cambia el orden de las pestañas de los paneles {:#panel-tabs}
 
@@ -76,7 +76,7 @@ Para usar el tema oscuro de DevTools, [abre Settings de DevTools](#settings),
 ve a la página **Preferences**, busca la sección **Appearance** y, a continuación,
 selecciona **Dark** en el menú desplegable **Theme**.
 
-![Tema oscuro](images/dark-theme.png)
+![tema oscuro](images/dark-theme.png)
 
 ## Abre y cierra pestañas de panel lateral {:#drawer-tabs}
 

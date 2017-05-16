@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Element ARIA Attributes Are Allowed For This Role" Lighthouse audit.
+description: Reference documentation for the "Element aria-* Attributes Are Allowed For This Role" Lighthouse audit.
 
-{# wf_updated_on: 2017-01-13 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2017-01-13 #}
 
-# Element ARIA Attributes Are Allowed For This Role  {: .page-title }
+# Element aria-* Attributes Are Allowed For This Role  {: .page-title }
 
 ## Why the audit is important {: #why }
 

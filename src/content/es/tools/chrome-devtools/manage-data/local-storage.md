@@ -38,7 +38,7 @@ inspeccionar, modificar y borrar estos KVP desde el subpanel **Local Storage**.
   **refresh** (![botón refresh][refresh]{:.inline}) para ver los cambios.
 
 [ls]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-[ls-pane]: /web/tools/chrome-devtools/manage-data/imgs/local-storage.png
+[subpanel ls]: /web/tools/chrome-devtools/manage-data/imgs/local-storage.png
 [refresh]: /web/tools/chrome-devtools/manage-data/imgs/refresh.png
 [delete]: /web/tools/chrome-devtools/manage-data/imgs/delete.png
 
@@ -174,7 +174,7 @@ data**. La acción borra todos los datos del origen indicado en la etiqueta
 
 ![clear storage][clear]
 
-[clear]: /web/tools/chrome-devtools/manage-data/imgs/clear-storage.png
+[borrar]: /web/tools/chrome-devtools/manage-data/imgs/clear-storage.png
 
 
 {# wf_devsite_translation #}

@@ -268,7 +268,7 @@ nós:
 * Usemos uma única conexão para entregar diversas solicitações e respostas em paralelo.
 * Removamos soluções paliativas desnecessárias do HTTP/1.x (ver
   [Otimização do HTTP/1.x](https://hpbn.co/optimizing-application-delivery/#optimizing-for-http1x),
-  como arquivos concatenados, sprites de imagem e fragmentação de domínio.
+  como arquivos concatenados, image sprites e fragmentação de domínio.
 * Forneçamos tempos de carregamento de página mais curtos por meio da eliminação de latência desnecessária e melhoria
   da utilização da capacidade de rede disponível.
 * *E muito mais...*

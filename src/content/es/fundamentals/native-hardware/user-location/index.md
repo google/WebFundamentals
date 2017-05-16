@@ -298,7 +298,7 @@ error, para que puedas notificar al usuario en el callback:
     };
 
 
-### Reducción de la necesidad de iniciar el hardware de ubicación geográfica
+### Reduce de la necesidad de iniciar el hardware de ubicación geográfica
 
 Para muchos casos de uso, no necesitas la ubicación más actualizada del usuario;
 solo necesitas una ubicación aproximada.
@@ -361,7 +361,7 @@ A menos que establezcas un tiempo de espera, es posible que nunca obtengas respu
     };
 
 
-### Dale preferencia a las ubicaciones comunes en lugar de las ubicaciones específicas.
+### Dale preferencia a las ubicaciones comunes en lugar de las ubicaciones específicas
 
 Si deseas encontrar la tienda más cercana a la ubicación de un usuario, es poco probable que necesites
 una precisión de 1 metro. La API está diseñada para proporcionar una ubicación 

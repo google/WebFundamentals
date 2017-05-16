@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: "프라미스(promise)는 지연된 비동기 계산을 단순화합니다. 프라미스는 아직 완료되지 않은 작업을 나타냅니다."
+description: '프라미스(promise)는 지연된 비동기 계산을 단순화합니다. 프라미스는 아직 완료되지 않은 작업을 나타냅니다.'
 
 {# wf_published_on: 2013-12-16 #}
 {# wf_updated_on: 2014-01-29 #}
@@ -10,7 +10,7 @@ description: "프라미스(promise)는 지연된 비동기 계산을 단순화�
 {% include "web/_shared/contributors/jakearchibald.html" %}
 
 웹 개발 역사에서 매우 중요한 순간을
-준비하십시오.
+준비하세요.
 
 <em>[드럼롤이 울리기 시작합니다.]</em>
 
@@ -20,9 +20,9 @@ description: "프라미스(promise)는 지연된 비동기 계산을 단순화�
 
 이때 다음 범주 중 하나가 됩니다.
 
-* 사람들이 당신 주변에서 환호하고 있지만 당신은 그 호들갑이 무엇을 의미하는지 모릅니다. 아마도 당신은 "프라미스"가 무엇인지도 모릅니다. 어깨를 으쓱하지만 반짝이는 종이가 어깨를 짓누릅니다. 그런 경우 걱정하지 마십시오. 이런 것에 관심을 가져야 하는 이유를 이해하는 데 저도 오랜 시간이 걸렸습니다. 당신은 아마도 [처음](#whats-all-the-fuss-about)부터 시작하길 원할 것입니다.
+* 사람들이 당신 주변에서 환호하고 있지만 당신은 그 호들갑이 무엇을 의미하는지 모릅니다. 아마도 당신은 '프라미스'가 무엇인지도 모릅니다. 어깨를 으쓱하지만 반짝이는 종이가 어깨를 짓누릅니다. 그런 경우 걱정하지 마세요. 이런 것에 관심을 가져야 하는 이유를 이해하는 데 저도 오랜 시간이 걸렸습니다. 당신은 아마도 [처음](#whats-all-the-fuss-about)부터 시작하길 원할 것입니다.
 * 당신은 기뻐하며 주먹을 들어올립니다! 적절한 시간일까요? 당신은 이러한 프라미스를 사용했지만 모든 구현 관련 API가 약간 달라 성가십니다. 정식 자바스크립트 버전에 대한 API는 무엇입니까? 당신은 아마도 [용어](#promise-terminology)부터 시작하길 원할 것입니다.
-* 당신은 해당 정보에 대해 이미 알고 있고 새로운 것인 양 흥분한 사람들을 비웃습니다. 잠시 우쭐함을 느낀 후에 곧장 [API 참조](#promise-api-reference)를 보십시오.
+* 당신은 해당 정보에 대해 이미 알고 있고 새로운 것인 양 흥분한 사람들을 비웃습니다. 잠시 우쭐함을 느낀 후에 곧장 [API 참조](#promise-api-reference)를 보세요.
 
 ## 무슨 호들갑입니까? {: #whats-all-the-fuss-about }
 
@@ -45,7 +45,7 @@ description: "프라미스(promise)는 지연된 비동기 계산을 단순화�
 
 이는 재채기와 전혀 다릅니다. 이미지를 가져오고 두 리스너를 추가하면 자바스크립트가 해당 리스너 중 하나를 호출할 때까지 실행을 중지할 수 있습니다.
 
-불행히도 위의 예에서 이벤트 수신을 시작하기 전에 이벤트가 발생했을 가능성이 있으므로 이미지의 "complete" 속성을 사용하여 이를 해결해야 합니다.
+불행히도 위의 예에서 이벤트 수신을 시작하기 전에 이벤트가 발생했을 가능성이 있으므로 이미지의 'complete' 속성을 사용하여 이를 해결해야 합니다.
 
     var img1 = document.querySelector('.img-1');
 
@@ -84,7 +84,7 @@ description: "프라미스(promise)는 지연된 비동기 계산을 단순화�
       // one or more failed
     });
 
-이는 프라미스가 수행하는 작업이지만 더 나은 성과를 보입니다. HTML 이미지 요소에 프라미스를 반환하는 "ready" 메서드가 있는 경우 다음을 수행할 수 있습니다.
+이는 프라미스가 수행하는 작업이지만 더 나은 성과를 보입니다. HTML 이미지 요소에 프라미스를 반환하는 'ready' 메서드가 있는 경우 다음을 수행할 수 있습니다.
 
     img1.ready().then(function() {
       // loaded
@@ -110,7 +110,7 @@ description: "프라미스(promise)는 지연된 비동기 계산을 단순화�
 
 ## 프라미스 용어 {: #promise-terminology }
 
-내가 작성한 이 글의 초안을 교정본 [Domenic Denicola](https://twitter.com/domenic)는 용어와 관련하여 "F"점을 매겼습니다. 그는 나를 붙잡아 [States and Fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md)를 100번 베껴 쓰게 했으며 나의 부모에게 걱정 편지를 보냈습니다. 그럼에도 불구하고 나는 여전히 많은 용어가 혼동됩니다. 여하튼 기본적인 용어는 다음과 같습니다.
+내가 작성한 이 글의 초안을 교정본 [Domenic Denicola](https://twitter.com/domenic)는 용어와 관련하여 'F'점을 매겼습니다. 그는 나를 붙잡아 [States and Fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md)를 100번 베껴 쓰게 했으며 나의 부모에게 걱정 편지를 보냈습니다. 그럼에도 불구하고 나는 여전히 많은 용어가 혼동됩니다. 여하튼 기본적인 용어는 다음과 같습니다.
 
 프라미스는 처리, 거부, 보류 또는 해결될 수 있습니다.
 
@@ -163,7 +163,7 @@ description: "프라미스(promise)는 지연된 비동기 계산을 단순화�
 
 `then()`은 성공 사례에 대한 콜백과 실패 사례에 대한 콜백 등 두 인수를 취합니다. 둘 다 선택 사항이므로 성공 사례에 대한 콜백과 실패 사례에 대한 콜백 중 하나만 추가할 수 있습니다.
 
-자바스크립트 프라미스는 DOM에서 "Futures"로 시작하고 "Promises"로 이름을 바꾸고 마지막으로 자바스크립트로 이동합니다. DOM이 아닌 자바스크립트의 프라미스는 비 브라우저 JS 컨텍스트(예: Node.js)에서 사용 가능하므로 바람직합니다(핵심 API에서 프라미스 사용 여부는 별개의 문제).
+자바스크립트 프라미스는 DOM에서 'Futures'로 시작하고 'Promises'로 이름을 바꾸고 마지막으로 자바스크립트로 이동합니다. DOM이 아닌 자바스크립트의 프라미스는 비 브라우저 JS 컨텍스트(예: Node.js)에서 사용 가능하므로 바람직합니다(핵심 API에서 프라미스 사용 여부는 별개의 문제).
 
 프라미스는 자바스크립트 기능이지만 DOM은 프라미스를 사용하는 것을 두려워하지 않습니다. 실제로 비동기 성공/실패 메서드를 사용하는 모든 새 DOM API는 프라미스를 사용합니다. 이는 [Quota Management](https://dvcs.w3.org/hg/quota/raw-file/tip/Overview.html#idl-def-StorageQuota), [Font Load Events](http://dev.w3.org/csswg/css-font-loading/#font-face-set-ready), [ServiceWorker](https://github.com/slightlyoff/ServiceWorker/blob/cf459d473ae09f6994e8539113d277cbd2bce939/service_worker.ts#L17), [Web MIDI](https://webaudio.github.io/web-midi-api/#widl-Navigator-requestMIDIAccess-Promise-MIDIOptions-options), [Streams](https://github.com/whatwg/streams#basereadablestream) 등에서 이미 발생하고 있습니다.
 
@@ -174,7 +174,7 @@ description: "프라미스(promise)는 지연된 비동기 계산을 단순화�
 
 Chrome 32, Opera 19, Firefox 29, Safari 8 및 Microsoft Edge에서 프라미스를 기본적으로 사용합니다.
 
-완전한 프라미스 구현이 없는 브라우저를 사양을 준수하게 하거나 프라미스를 다른 브라우저 및 Node.js에 추가하려면 [폴리필](https://github.com/jakearchibald/ES6-Promises#readme)(2k gzip)을 확인하십시오.
+완전한 프라미스 구현이 없는 브라우저를 사양을 준수하게 하거나 프라미스를 다른 브라우저 및 Node.js에 추가하려면 [폴리필](https://github.com/jakearchibald/ES6-Promises#readme)(2k gzip)을 확인하세요.
 
 
 ## 다른 라이브러리와의 호환성
@@ -277,7 +277,7 @@ Chrome 32, Opera 19, Firefox 29, Safari 8 및 Microsoft Edge에서 프라미스�
     })
 
 
-[작동하는 것을 보려면 여기를 클릭하고](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/story.json){: target="_blank" .external }, 결과를 보려면 DevTools 콘솔을 확인하십시오. 이제 `XMLHttpRequest`를 수동으로 입력하지 않고 HTTP 요청을 수행할 수 있습니다. 이 방식은 `XMLHttpRequest`의 격앙된 듯한 카멜식 대소문자 표기를 봐야 하는 횟수가 적을수록 좋기 때문에 바람직합니다.
+[작동하는 것을 보려면 여기를 클릭하고](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/story.json){: target="_blank" .external }, 결과를 보려면 DevTools 콘솔을 확인하세요. 이제 `XMLHttpRequest`를 수동으로 입력하지 않고 HTTP 요청을 수행할 수 있습니다. 이 방식은 `XMLHttpRequest`의 격앙된 듯한 카멜식 대소문자 표기를 봐야 하는 횟수가 적을수록 좋기 때문에 바람직합니다.
 
 
 ## 연결
@@ -325,7 +325,7 @@ Chrome 32, Opera 19, Firefox 29, Safari 8 및 Microsoft Edge에서 프라미스�
     })
 
 
-[여기서 작동하는 것을 볼 수 있고](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/story.json){: target="_blank" .external }, 결과를 보려면 DevTools 콘솔을 확인하십시오. 실제로 `getJSON()` 함수를 쉽게 만들 수 있습니다.
+[여기서 작동하는 것을 볼 수 있고](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/story.json){: target="_blank" .external }, 결과를 보려면 DevTools 콘솔을 확인하세요. 실제로 `getJSON()` 함수를 쉽게 만들 수 있습니다.
 
 
     function getJSON(url) {
@@ -339,7 +339,7 @@ Chrome 32, Opera 19, Firefox 29, Safari 8 및 Microsoft Edge에서 프라미스�
 
 또한 여러 `then`을 연결하여 비동기 작업을 순서대로 실행할 수 있습니다.
 
-`then()` 콜백에서 어떤 것을 반환하는 것은 마술과 약간 비슷합니다. 값을 반환하면 해당 값을 사용하여 그 다음 `then()`이 호출됩니다. 그러나 프라미스와 유사한 것을 반환하는 경우에는 그 다음 `then()`은 계속 대기하고 프라미스가 해결(성공/실패)되는 경우에만 호출됩니다. 예:
+`then()` 콜백에서 어떤 것을 반환하는 것은 마술과 약간 비슷합니다. 값을 반환하면 해당 값을 사용하여 그 다음 `then()`이 호출됩니다. 그러나 프라미스와 유사한 것을 반환하는 경우에는 그 다음 `then()`은 계속 대기하고 프라미스가 해결(성공/실패)되는 경우에만 호출됩니다. 예를 들면 다음과 같습니다.
 
     getJSON('story.json').then(function(story) {
       return getJSON(story.chapterUrls[0]);
@@ -426,7 +426,7 @@ Chrome 32, Opera 19, Firefox 29, Safari 8 및 Microsoft Edge에서 프라미스�
 
 
 
-위의 흐름은 일반 자바스크립트 try/catch와 매우 유사하며, "try"를 사용하여 발생하는 오류는 즉시 `catch()` 블록으로 이동합니다. 다음은 이를 흐름도로 만든 것입니다.
+위의 흐름은 일반 자바스크립트 try/catch와 매우 유사하며, 'try'를 사용하여 발생하는 오류는 즉시 `catch()` 블록으로 이동합니다. 다음은 이를 흐름도로 만든 것입니다.
 
 
 <div style="position: relative; padding-top: 93%;">
@@ -487,7 +487,7 @@ Chrome 32, Opera 19, Firefox 29, Safari 8 및 Microsoft Edge에서 프라미스�
 
 
 
-`story.chapterUrls[0]` 가져오기가 실패하면(예: http 500 또는 사용자가 오프라인임) 그 후의 모든 성공 콜백(응답을 JSON으로 파싱하려고 시도하는 `getJSON()`의 성공 콜백 포함)을 건너뛰며 페이지에 chapter1.html 을 추가하는 콜백도 건너뜁니다. 대신 catch 콜백으로 이동합니다. 그 결과, 이전 동작 중 어느 하나가 실패하는 경우 "Failed to show chapter"가 페이지에 추가됩니다.
+`story.chapterUrls[0]` 가져오기가 실패하면(예: http 500 또는 사용자가 오프라인임) 그 후의 모든 성공 콜백(응답을 JSON으로 파싱하려고 시도하는 `getJSON()`의 성공 콜백 포함)을 건너뛰며 페이지에 chapter1.html 을 추가하는 콜백도 건너뜁니다. 대신 catch 콜백으로 이동합니다. 그 결과, 이전 동작 중 어느 하나가 실패하는 경우 'Failed to show chapter'가 페이지에 추가됩니다.
 
 자바스크립트 try/catch처럼 해당 오류는 포착되고 후속 코드는 계속 실행되므로 회전자는 바라던 대로 항상 숨겨집니다. 상기 버전이 다음의 비차단 비동기 버전이 됩니다.
 
@@ -520,7 +520,7 @@ Chrome 32, Opera 19, Firefox 29, Safari 8 및 Microsoft Edge에서 프라미스�
 ## 병렬 처리 및 시퀀싱 - 둘을 최대한 이용하기
 
 
-비동기는 쉽지 않다고 생각합니다. 착수하려고 노력하고 있다면 동기 코드인 듯한 코드를 작성해 보십시오. 이 경우에
+비동기는 쉽지 않다고 생각합니다. 착수하려고 노력하고 있다면 동기 코드인 듯한 코드를 작성해 보세요. 이 경우에는 다음과 같이 합니다.
 
     try {
       var story = getJSONSync('story.json');
@@ -595,12 +595,12 @@ Chrome 32, Opera 19, Firefox 29, Safari 8 및 Microsoft Edge에서 프라미스�
     })
 
 
-여기서는 처음으로 소개한 `Promise.resolve()`는 주어진 값이 무엇이든지 상관없이 분석하는 프라미스를 만듭니다. `Promise` 인스턴스에 이를 전달하면 이를 반환합니다(**참고:** 이는 일부 구현이 아직 준수하지 않는 사양에 대한 변경임). 프라미스와 유사(`then()` 메서드가 있음)한 것을 전달하면 동일한 방식으로 처리/거부하는 진짜 `Promise`가 생성됩니다. `Promise.resolve('Hello')`와 같은 다른 값을 전달하면 해당 값을 사용하여 처리하는 프라미스가 생성됩니다. 위와 같이 어떤 값도 제공하지 않고 호출하면 "undefined"를 사용하여 처리합니다.
+여기서는 처음으로 소개한 `Promise.resolve()`는 주어진 값이 무엇이든지 상관없이 분석하는 프라미스를 만듭니다. `Promise` 인스턴스에 이를 전달하면 이를 반환합니다(**참고:** 이는 일부 구현이 아직 준수하지 않는 사양에 대한 변경임). 프라미스와 유사(`then()` 메서드가 있음)한 것을 전달하면 동일한 방식으로 처리/거부하는 진짜 `Promise`가 생성됩니다. `Promise.resolve('Hello')`와 같은 다른 값을 전달하면 해당 값을 사용하여 처리하는 프라미스가 생성됩니다. 위와 같이 어떤 값도 제공하지 않고 호출하면 'undefined'를 사용하여 처리합니다.
 
 
 제공된 값(또는 undefined)을 사용하여 거부하는 프라미스를 만드는 `Promise.reject(val)`도 있습니다.
 
-[`array.reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)을 사용하여 위의 코드를 정리할 수 있습니다.
+[`array.reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)를 사용하여 위의 코드를 정리할 수 있습니다.
 
 
 
@@ -616,7 +616,7 @@ Chrome 32, Opera 19, Firefox 29, Safari 8 및 Microsoft Edge에서 프라미스�
 
 
 
-이 예시는 이전 예시와 동일한 작업을 하지만 개별 "sequence" 변수가 필요하지 않습니다. 배열의 각 항목에 대해 reduce 콜백을 호출합니다. "sequence"는 처음에는 `Promise.resolve()`이지만 나머지 호출에서는 이전 호출에서 반환된 것입니다. `array.reduce`는 배열을 단일 값(이 예시에서는 프라미스)으로 축소하는 데 매우 유용합니다.
+이 예시는 이전 예시와 동일한 작업을 하지만 개별 'sequence' 변수가 필요하지 않습니다. 배열의 각 항목에 대해 reduce 콜백을 호출합니다. 'sequence'는 처음에는 `Promise.resolve()`이지만 나머지 호출에서는 이전 호출에서 반환된 것입니다. `array.reduce`는 배열을 단일 값(이 예시에서는 프라미스)으로 축소하는 데 매우 유용합니다.
 
 이를 모두 합쳐 봅시다.
 
@@ -749,7 +749,7 @@ Chrome 32, Opera 19, Firefox 29, Safari 8 및 Microsoft Edge에서 프라미스�
 
 여기서는 새로운 ES6 기능 전체에 대해 설명하지만 오늘 몰라도 코드에 프라미스를 사용할 수 있습니다. 곧 개봉할 블록버스터 영화의 예고편과 유사하다고 보면 됩니다.
 
-ES6도 [생성기](http://wiki.ecmascript.org/doku.php?id=harmony:generators)를 제공하는데 이는 "return"처럼 특정 지점에서 끝내는 기능을 허용하지만 나중에 동일한 지점과 상태에서 재개(resume)할 수 있습니다. 예를 들면 다음과 같습니다.
+ES6도 [생성기](http://wiki.ecmascript.org/doku.php?id=harmony:generators)를 제공하는데 이는 'return'처럼 특정 지점에서 끝내는 기능을 허용하지만 나중에 동일한 지점과 상태에서 재개(resume)할 수 있습니다. 예를 들면 다음과 같습니다.
 
 
 
@@ -847,7 +847,7 @@ ES6도 [생성기](http://wiki.ecmascript.org/doku.php?id=harmony:generators)를
 </tr>
 <tr>
   <td><code>Promise.resolve(promise);</code></td>
-  <td>프라미스를 반환합니다( <code>promise.constructor == Promise</code>인 경우에만)</td>.
+  <td>프라미스를 반환합니다( <code>promise.constructor == Promise</code>인 경우에만).</td>
 </tr>
 <tr>
   <td><code>Promise.resolve(thenable);</code></td>
@@ -912,8 +912,8 @@ ES6도 [생성기](http://wiki.ecmascript.org/doku.php?id=harmony:generators)를
 <tr>
   <td><code>promise.then(onFulfilled, onRejected)</code></td>
   <td>
-    <code>onFulfilled</code>는 "프라미스"가 분석되는 경우 호출됩니다. 
-    <code>onRejected</code>는 "프라미스"가 거부되는 경우 호출됩니다. 둘 다
+    <code>onFulfilled</code>는 '프라미스'가 분석되는 경우 호출됩니다. 
+    <code>onRejected</code>는 '프라미스'가 거부되는 경우 호출됩니다. 둘 다
     선택 사항입니다. 둘 중 하나 또는 모두가 
    생략되면 체인에서 그 다음  <code>onFulfilled</code>/<code>onRejected</code>가 호출됩니다.
     두 콜백은 단일 매개변수, 처리 값 또는 
@@ -925,7 +925,7 @@ ES6도 [생성기](http://wiki.ecmascript.org/doku.php?id=harmony:generators)를
 </tr>
 <tr>
   <td><code>promise.catch(onRejected)</code></td>
-  <td> <code>promise.then(undefined, onRejected)</code></td>의 보완
+  <td> <code>promise.then(undefined, onRejected)</code>의 보완</td>
 </tr>
 </table>
 

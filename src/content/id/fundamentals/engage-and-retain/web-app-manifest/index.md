@@ -239,7 +239,7 @@ dari layar beranda setiap laman di domain, itu akan secara otomatis mendapatkan 
 
 ## Uji manifes Anda {: #test }
 
-Jika Anda ingin secara manual memverifikasi apakah manifes aplikasi web telah dipersiapkan dengan benar,
+Jika Anda ingin secara manual memverifikasi apakah manifes aplikasi web telah disiapkan dengan benar,
 gunakan tab **Manifest** di panel **Application** pada Chrome DevTools.
 
 ![Tab Manifest pada Chrome DevTools](images/devtools-manifest.png)
@@ -270,7 +270,7 @@ Artikel ini memberikan pengenalan singkat untuk manifes aplikasi web, namun
 ada banyak hal lain untuk dipelajari.
 
 * Jika menggunakan manifes aplikasi web, Anda mungkin juga ingin
-mempersiapkan [spanduk pemasangan aplikasi](/web/fundamentals/engage-and-retain/app-install-banners/). 
+menyiapkan [spanduk pemasangan aplikasi](/web/fundamentals/engage-and-retain/app-install-banners/). 
 
 * [Referensi lengkap](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 bagi manifes aplikasi web tersedia di Mozilla Developer Network.

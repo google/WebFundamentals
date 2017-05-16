@@ -312,7 +312,7 @@ página.
     }
 
 
-<span class="compare-better">Recommended</span>&mdash;responsive width
+<span class="compare-better">Recomendado</span>: ancho adaptable
 
     div.fullWidth {
       width: 100%;

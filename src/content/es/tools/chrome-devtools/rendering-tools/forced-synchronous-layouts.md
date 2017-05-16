@@ -43,7 +43,7 @@ cuando se ejecuta la página.
 Cuando termines la grabación, verás algo como lo siguiente
 en el panel Timeline. 
 
-[Grabación de Timeline de una demostración con bloqueos](imgs/demo-recording.png)
+![Grabación de Timeline de una demostración con bloqueos](imgs/demo-recording.png)
 
 ## Identificar el problema
 
@@ -111,8 +111,8 @@ en la página.
 Ahora que has identificado el problema, puedes intentar solucionarlo
 en DevTools.
 
-[layout]: /web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime#layout
-[zoom]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#zoom
+[Diseño]: /web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime#layout
+[Zoom]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#zoom
 
 ## Aplicar una solución con DevTools
 

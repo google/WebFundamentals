@@ -18,7 +18,7 @@ description: 각 페이지에 코드를 몇 줄 추가하여 소셜 미디어를
 ### TL;DR {: .hide-from-toc }
 - schema.org 마이크로데이터를 사용하여 Google+에 대한 페이지 제목, 설명 및 이미지를 제공합니다.
 - OGP(Open Graph Protocol)를 사용하여 Facebook에 대한 페이지 제목, 설명 및 이미지를 제공합니다.
-- Twitter Cards를 사용하여 Twitter에 대한 페이지 제목, 설명, 이미지 및 Twitter ID를 제공합니다.
+- Twitter Card를 사용하여 Twitter에 대한 페이지 제목, 설명, 이미지 및 Twitter ID를 제공합니다.
 
 각 페이지에 코드를 몇 줄 추가하여 소셜 미디어를 통해 공유할 때의
 사이트 모습에 변화를 줄 수 있습니다. 그러면 이런 방법을 사용할 수 없을 때에 비해
@@ -174,9 +174,9 @@ Open Graph Protocol 공식 사이트에서 확인할 수 있습니다.
 
 * [디버거](https://developers.facebook.com/tools/debug/){: .external }
 
-## Twitter Cards를 사용하여 Twitter에서 리치 스니펫 제공
-[Twitter Cards](https://dev.twitter.com/docs/cards)는 
-[Twitter에 사용할 수 있는 Open Graph Protocol](https://twitter.com/){: .external }에 대한 확장 프로그램입니다. Twitter Cards를
+## Twitter Card를 사용하여 Twitter에서 리치 스니펫 제공
+[Twitter Card](https://dev.twitter.com/docs/cards)는 
+[Twitter에 사용할 수 있는 Open Graph Protocol](https://twitter.com/){: .external }에 대한 확장 프로그램입니다. Twitter Card를
 사용하면 자신의 웹페이지로 연결되는 링크를 포함한 트윗에 이미지와 동영상 같은 미디어 첨부파일을 추가할 수
 있습니다. 알맞은 메타데이터를 추가하면 페이지로 연결되는 링크를 포함한 트윗에 자신이 추가한
 다양하고 풍부한 디테일을 포함하는 카드가 추가됩니다.
@@ -200,7 +200,7 @@ Twitter 사이트의 값에 Twitter ID를 할당하면 Twitter가 공유 게시�
 <img src="imgs/twitter-card.png" srcset="imgs/twitter-card.png 1x, imgs/twitter-card-2x.png 2x" />
 
 ### 자세히 알아보기
-Twitter Cards에 대해 자세히 알아보려면 아래 사이트를 방문해 보세요.
+Twitter Card에 대해 자세히 알아보려면 아래 사이트를 방문해 보세요.
 
 * [Twitter 개발자 사이트](https://dev.twitter.com/docs/cards)
 
@@ -211,7 +211,7 @@ Twitter Cards에 대해 자세히 알아보려면 아래 사이트를 방문해 
 
 ## 모범 사례
 세 가지 옵션이 모두 주어진 상태에서, 최선의 방법은 그 모두를 웹페이지에
-포함시키는 것입니다. 예:
+포함시키는 것입니다. 예를 들면 다음과 같습니다.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}

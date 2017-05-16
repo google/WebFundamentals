@@ -35,7 +35,7 @@ Lighthouse recolecta el código JavaScript que se ejecutó al cargar la página.
 código contiene llamadas a `notification.requestPermission()` y todavía no se otorgó el
 permiso de notificación, esto significa que se solicitó permiso de notificación.
 
-[ayuda]: https://support.google.com/chrome/answer/6148059
+[help]: https://support.google.com/chrome/answer/6148059
 
 
 {# wf_devsite_translation #}

@@ -156,7 +156,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 다음은 이 패턴을 사용하는 사이트의 예입니다.
 
- * [HTML5Rocks Articles](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
+ * [HTML5Rocks 문서](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
  * [Google Nexus](https://www.google.com/nexus/){: .external }
  * [Facebook의 모바일 사이트](https://m.facebook.com/){: .external }
 

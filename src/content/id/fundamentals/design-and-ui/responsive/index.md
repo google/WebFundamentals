@@ -312,7 +312,7 @@ laman.
     }
 
 
-<span class="compare-better">Recommended</span>&mdash;responsive width
+<span class="compare-better">Disarankan</span>&mdash;lebar responsif
 
     div.fullWidth {
       width: 100%;
@@ -484,7 +484,7 @@ bisa pergi ke luar atau tidak.
 
 ## Menampilkan breakpoint kueri media di Chrome DevTools {: #devtools }
 
-Setelah Anda mempersiapkan breakpoint kueri media, Anda pasti ingin melihat bagaimana
+Setelah Anda menyiapkan breakpoint kueri media, Anda pasti ingin melihat bagaimana
 situs akan terlihat. Anda *bisa* mengubah ukuran jendela browser untuk memicu
 breakpoint, namun ada cara yang lebih baik: Chrome DevTools. Dua
 tangkapan layar di bawah menunjukkan penggunaan DevTools untuk menampilkan bagaimana laman terlihat di bawah
@@ -498,7 +498,7 @@ Untuk menampilkan laman Anda di bawah breakpoint yang berbeda:
 Mode](/web/tools/chrome-devtools/device-mode/#toggle).
 
 Gunakan
-[viewport controls](/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports#viewport-controls)
+[kontrol tampilan](/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports#viewport-controls)
 untuk memilih **Responsive**, yang menempatkan DevTools ke mode responsif.
 
 Terakhir, buka menu Device Mode dan pilih

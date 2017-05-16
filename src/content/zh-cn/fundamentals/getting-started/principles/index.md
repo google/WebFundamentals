@@ -347,7 +347,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 
 ### 对您的整个网站进行移动优化
 
-使用可随用户设备的尺寸和能力而变化的[响应式布局](/web/fundamentals/design-and-ui/responsive/)。
+使用可随用户设备的尺寸和能力而变化的[自适应布局](/web/fundamentals/design-and-ui/responsive/)。
 研究参与者发现混合使用桌面和移动优化页面的网站甚至比单纯使用桌面页面的网站还要难以使用。
 
 

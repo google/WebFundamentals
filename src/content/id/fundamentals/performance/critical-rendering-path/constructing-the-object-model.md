@@ -32,7 +32,7 @@ Mari kita mulai dengan kasus yang sesederhana mungkin: laman HTML biasa dengan b
 <img src="images/full-process.png" alt="Proses konstruksi DOM">
 
 1. **Konversi:** Browser membaca byte mentah dari HTML dari disk atau jaringan dan menerjemahkannya menjadi karakter individual berdasarkan enkode yang ditetapkan file (mis. UTF-8).
-1. **Pentokenan:** Browser mengonversi string karakter ke dalam token khas&mdash;yang ditetapkan oleh [standar W3C HTML5](http://www.w3.org/TR/html5/){: .external }; misalnya, "&lt;html&gt;", "&lt;isi&gt;"&mdash;dan string lainnya di dalam kurung siku. Setiap token memiliki arti spesial dan seperangkat aturan.
+1. **Pentokenan:** Browser mengonversi string karakter ke dalam token khas&mdash;yang ditetapkan oleh [standar W3C HTML5](http://www.w3.org/TR/html5/){: .external }; misalnya, "&lt;html&gt;", "&lt;body&gt;"&mdash;dan string lainnya di dalam kurung siku. Setiap token memiliki arti spesial dan seperangkat aturan.
 1. **Lexing:** Token yang dipancarkan dikonversikan ke dalam "objek" yang mendefinisikan properti dan aturannya.
 1. **Konstruksi DOM:** Terakhir, karena markup HTML mendefinisikan tag berbeda di antara tag (sebagian tag berada di dalam tag), objek yang dibuat ditautkan dalam struktur data pohon yang juga merekam hubungan induk-anak yang didefinisikan dalam markup asli: objek _HTML_ adalah induk dari objek _body_, _body_ adalah induk dari _paragraph_, dan seterusnya.
 

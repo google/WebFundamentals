@@ -87,7 +87,7 @@ def getPage(requestPath, lang):
           'markdown.extensions.toc', # Generate the TOC for the right side
           'markdown.extensions.tables', # Support for Markdown Tables
           'markdown.extensions.def_list', # Support for definition lists
-          'markdown.extensions.extra' # Enabled markdown extras
+          'markdown.extensions.extra' # Support for markdown='1' in tags
         ]
         md = markdown.Markdown(extensions=ext)
         content = md.convert(content)

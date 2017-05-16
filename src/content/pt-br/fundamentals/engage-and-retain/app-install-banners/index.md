@@ -174,7 +174,7 @@ Como alternativa, você pode cancelar a solicitação ao impedir a ação padrã
       return false;
     });
     
-## Native app install banners
+## Banner de instalação de aplicativo nativo
 
 <div class="attempt-right">
   <figure>

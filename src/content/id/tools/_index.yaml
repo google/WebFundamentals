@@ -24,17 +24,17 @@ landing_page:
         classname: button button-primary 
   - heading: Pustaka
     items:
-    - heading: Service Worker Libraries
+    - heading: Pustaka Service Worker
       description: >
-        Service Worker Libraries kami disediakan untuk membantu menyederhanakan pengalaman development Anda, yang membebaskan aplikasi dari jaringan, tanpa harus menulis kode boilerplate service worker!
+        Pustaka Service Worker kami disediakan untuk membantu menyederhanakan pengalaman development Anda, yang membebaskan aplikasi dari jaringan, tanpa harus menulis kode boilerplate service worker!
       buttons:
-      - label: Pelajari selengkapnya
+      - label: Ketahui selengkapnya
         path: service-worker-libraries
     - heading: Material Design Lite
       description: >
         Material Design Lite memungkinkan Anda menambahkan tampilan dan nuansa Desain Material ke situs web Anda. Ini tidak bergantung pada kerangka kerja JavaScript dan bertujuan untuk mengoptimalkan penggunaan lintas-perangkat, turun dengan anggun di browser lama, dan menawarkan pengalaman yang langsung dapat diakses.
       buttons:
-      - label: Pelajari selengkapnya
+      - label: Ketahui selengkapnya
         path: https://getmdl.io/
 
   - heading: Kerangka kerja
@@ -44,13 +44,13 @@ landing_page:
         Polymer Project membantu Anda memberikan pengalaman pengguna yang luar biasa dengan membuka potensi penuh dari platform web. Polymer membuat sebagian besar Komponen Web, fitur platform baru yang kuat untuk memperluas HTML dan menambah komponen aplikasi Anda, yang memungkinkan Anda untuk membangun Progressive Web App termutakhir yang memuat dengan cepat, langsung merespons dan bekerja dari mana saja.
       image_path: images/polymer-lockup-2016.png
       buttons:
-      - label: Pelajari selengkapnya
+      - label: Ketahui selengkapnya
         path: https://www.polymer-project.org/
     - description: >
         Angular adalah sebuah platform development untuk membangun aplikasi di web, seluler, dan desktop. Dengan template deklaratif serta sederhana, komponen yang dapat digunakan kembali, dan dukungan untuk semua proses pengalaman development, Angular mempermudah untuk menulis, menguji, dan meluncurkan aplikasi berkinerja tinggi pada skala apa pun.
       image_path: images/angular.png
       buttons:
-      - label: Pelajari selengkapnya
+      - label: Ketahui selengkapnya
         path: https://angularjs.org/
 
   - heading: Alat Lainnya
@@ -62,7 +62,7 @@ landing_page:
       description: >
         Lighthouse adalah alat (bantu) sumber terbuka otomatis untuk meningkatkan kualitas aplikasi web Anda. Jalankan sebagai Ekstensi Chrome atau dari baris perintah.
       buttons:
-      - label: Pelajari selengkapnya
+      - label: Ketahui selengkapnya
         path: /web/tools/lighthouse/
     - heading: Modul PageSpeed
       description: >
@@ -70,7 +70,7 @@ landing_page:
       icon:
         path: images/pagespeed.svg
       buttons:
-      - label: Pelajari selengkapnya
+      - label: Ketahui selengkapnya
         path: https://developers.google.com/speed/pagespeed/module/
 
 

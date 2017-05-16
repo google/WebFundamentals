@@ -217,7 +217,7 @@ style.css リソースは印刷にのみ使用されるため、ブラウザで�
 
 <a href="optimizing-critical-rendering-path" class="gc-analytics-event"
     data-category="CRP" data-label="Next / Optimizing CRP">
-  <button>次のトピック:クリティカル レンダリング パスの最適化</button>
+  <button>次のトピック: クリティカル レンダリング パスの最適化</button>
 </a>
 
 

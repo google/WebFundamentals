@@ -25,7 +25,7 @@ Lihat [Pengantar HTTP/2][intro] untuk ringkasan teknis yang mendalam.
 Pada **URL**, Lighthouse mencantumkan setiap sumber daya yang tidak disajikan melalui HTTP/2.
 Untuk lulus audit ini, sediakan setiap sumber daya itu melalui HTTP/2.
 
-Untuk mempelajari cara mengaktifkan HTTP/2 di server Anda, lihat [Mempersiapkan HTTP/2][setup].
+Untuk mempelajari cara mengaktifkan HTTP/2 di server Anda, lihat [Menyiapkan HTTP/2][setup].
 
 [setup]: https://dassur.ma/things/h2setup/
 

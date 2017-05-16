@@ -77,7 +77,7 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 
 下面是您在源代码中找到的内容：
  
-<img src="http://googlesamples.github.io/web-fundamentals/.../puppy.jpg"> 
+    <img src="http://googlesamples.github.io/web-fundamentals/.../puppy.jpg"> 
 
 #### 第 1 步
 
@@ -170,11 +170,11 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 
 [**内容安全政策**](/web/fundamentals/security/csp/) (CSP) 是一个多用途浏览器功能，您可以用它管理大批量的混合内容。CSP 报告机制可用于跟踪网站上的混合内容；强制政策可通过升级或阻止混合内容保护用户。
 
- 
 
-您可以通过在服务器发送的响应中添加 `Content-Security-Policy` 或 `Content-Security-Policy-Report-Only` 标头为页面启用这些功能。此外，在页面的 `<head>` 部分中，可以使用一个 `<meta>` 标记设置 `Content-Security-Policy`（**而非** `Content-Security-Policy-Report-Only`）。
 
-请参阅下文中的示例。除了用于混合内容外，CSP 还有许多其他用途。可在以下资源中找到有关其他 CSP 指令的信息：
+您可以通过在服务器发送的响应中添加 `Content-Security-Policy` 或 `Content-Security-Policy-Report-Only` 标头为页面启用这些功能。此外，在页面的 `<head>` 部分中，可以使用一个 `<meta>` 标记设置 `Content-Security-Policy`（**而非** `Content-Security-Policy-Report-Only`）。请参阅下文中的示例。
+
+除了用于混合内容外，CSP 还有许多其他用途。可在以下资源中找到有关其他 CSP 指令的信息：
 
 * [Mozilla 的 CSP 简介](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy){: .external}
 * [HTML5 Rock 的 CSP 简介](//www.html5rocks.com/en/tutorials/security/content-security-policy/){: .external}

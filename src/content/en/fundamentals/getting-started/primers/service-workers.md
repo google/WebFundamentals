@@ -20,7 +20,7 @@ A service worker is a script that your browser runs in the background,
 separate from a web page, opening the door to features that don't need a web
 page or user interaction. Today, they already include features like 
 [push notifications](/web/updates/2015/03/push-notifications-on-the-open-web) 
-and [background sync](/web/updates/2015/12/background-sync). In the future 
+and [background sync](/web/updates/2015/12/background-sync). In the future, 
 service workers will support other things like periodic sync or geofencing. 
 The core feature discussed in this tutorial is the ability to intercept and 
 handle network requests, including programmatically managing a cache of 
@@ -69,7 +69,7 @@ will fail and the service worker won't activate (i.e. won't be installed). If
 that happens, don't worry, it'll try again next time. But that means if it does
 install, you know you've got those static assets in the cache.
 
-When we're installed, the activation step will follow and this is a great
+When installed, the activation step will follow and this is a great
 opportunity for handling any management of old caches, which we'll cover during
 the service worker update section.
 
@@ -90,7 +90,7 @@ first installation.
 
 ### Browser support
 
-Browser options are growing. Service workers are supported by Firefox and
+Browser options are growing. Service workers are supported by Chrome, Firefox and
 Opera. Microsoft Edge is now 
 [showing public support](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/). 
 Even Safari has dropped [hints of future development](https://trac.webkit.org/wiki/FiveYearPlanFall2015). 
@@ -129,7 +129,7 @@ service worker JavaScript file lives.
         navigator.serviceWorker.register('/sw.js').then(function(registration) {
           // Registration was successful
           console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }).catch(function(err) {
+        }, function(err) {
           // registration failed :(
           console.log('ServiceWorker registration failed: ', err);
         });
@@ -152,12 +152,12 @@ everything on this domain. If we register the service worker file at
 `/example/sw.js`, then the service worker would only see `fetch` events for pages
 whose URL starts with `/example/` (i.e. `/example/page1/`, `/example/page2/`).
 
-Now you can check that a service worker is enabled by going to `chrome://inspect
-/#service-workers` and looking for your site.
+Now you can check that a service worker is enabled by going to
+`chrome://inspect/#service-workers` and looking for your site.
 
 ![Inspect service workers](imgs/sw-chrome-inspect.png)
 
-When service worker was first being implemented you could also view your service
+When service worker was first being implemented, you could also view your service
 worker details through `chrome://serviceworker-internals`. This may still be
 useful, if for nothing more than learning about the life cycle of service
 workers, but don't be surprised if it gets replaced completely by
@@ -213,7 +213,7 @@ Here you can see we call `caches.open()` with our desired cache name, after whic
 we call `cache.addAll()` and pass in our array of files. This is a chain of
 promises (`caches.open()` and `cache.addAll()`). The `event.waitUntil()` method
 takes a promise and uses it to know how long installation takes, and whether it
-succeeded.
+succeeded or not.
 
 If all the files are successfully cached, then the service worker will be
 installed. If **any** of the files fail to download, then the install step will
@@ -308,12 +308,11 @@ What we are doing is this:
 
 1. Add a callback to `.then()` on the `fetch` request.
 2. Once we get a response, we perform the following checks:
-
-   1. Ensure the response is valid.
-   2. Check the status is `200` on the response.
-   3. Make sure the response type is **basic**, which indicates that it's a 
-      request from our origin. This means that requests to third party assets 
-      aren't cached as well.
+    1. Ensure the response is valid.
+    2. Check the status is `200` on the response.
+    3. Make sure the response type is **basic**, which indicates that it's a 
+       request from our origin. This means that requests to third party assets 
+       aren't cached as well.
 3. If we pass the checks, we [clone](https://fetch.spec.whatwg.org/#dom-response-clone) 
    the response. The reason for this is that because the response is a 
    [Stream](https://streams.spec.whatwg.org/){: .external }, the body can only be consumed 

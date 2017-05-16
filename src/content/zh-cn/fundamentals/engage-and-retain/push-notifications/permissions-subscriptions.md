@@ -24,6 +24,7 @@ description:请求通知权限和为用户订阅通知只需与向用户显示�
 
 注：为清晰起见，本示例不包括您应该始终执行的若干功能检查。
 您可以在我们的<a href='https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications'>
+
 GitHub Samples 存储区</a>中查看完整的原始代码。
 
 

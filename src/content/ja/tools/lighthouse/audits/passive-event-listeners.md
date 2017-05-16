@@ -34,7 +34,6 @@ Passive Event Listener に対応したブラウザでは、フラグを設定す
     document.addEventListener('touchstart', onTouchStart, {passive: true});
 
 ただし、Passive Event Listener に対応していないブラウザの場合は、3 つ目のパラメータはイベントを伝搬または捕捉するかを示すブール値になります。
-
 上記の構文を使用すると、意図しない結果が生じる場合があります。
 
 Passive Event Listener を適切に実装する方法については、[Feature Detection][polyfill] でポリフィルをご確認ください。

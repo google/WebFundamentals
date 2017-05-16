@@ -14,7 +14,7 @@ Critical Rendering Path (CRP). CRP memungkinkan browser memuat laman secepat
 mungkin dengan memprioritaskan sumber daya mana yang akan dimuat serta
 urutan pemuatannya.
 
-Periksa dokumen [Jalur Rendering
+Lihat dokumen [Jalur Rendering
 Penting](/web/fundamentals/performance/critical-rendering-path/) untuk mengetahui
 selengkapnya.
 

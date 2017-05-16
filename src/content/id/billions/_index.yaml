@@ -18,7 +18,7 @@ landing_page:
     - description: >
         <h4>Satu miliar pengguna berikutnya hampir semua akan menggunakan perangkat seluler</h4>
         <p>
-          Hal tersebut merupakan tantangan yang unik bagi pengembang web karena harus mengabaikan pendekatan pengutamaan perangkat seluler yang terbatas dan mendahulukan strategi perangkat seluler yang menyeluruh.
+          Hal tersebut merupakan tantangan yang unik bagi deveoper web karena harus mengabaikan pendekatan pengutamaan perangkat seluler yang terbatas dan mendahulukan strategi perangkat seluler yang menyeluruh.
         </p>
         <p>
           Anda bisa mengatasi tantangan ini dengan menekankan pada beberapa bidang utama yang tercantum di bawah ini.
@@ -128,7 +128,7 @@ landing_page:
         classname: wf-small-link
     - heading: "Transaksi &amp; monetisasi: cakupan global"
       description: >
-        Sistem pembayaran tidak dapat diakses oleh banyak orang di web. Banyak pengguna di dunia tidak memiliki rekening bank dan tidak memakai kartu kredit — termasuk 8% rumah tangga di AS. Banyak sistem pembayaran tidak berfungsi dengan baik dalam tampilan yang terlihat kecil atau dengan konektivitas yang tidak stabil.
+        Sistem pembayaran tidak dapat diakses oleh banyak orang di web. Banyak pengguna di dunia tidak memiliki rekening bank dan tidak memakai kartu kredit — termasuk 8% rumah tangga di AS. Banyak sistem pembayaran tidak berfungsi dengan baik dalam tampilan yang terlihat yang kecil atau dengan konektivitas yang tidak stabil.
       image_path: images/monetization.png
       buttons:
       - label: Sederhanakan transaksi

@@ -237,9 +237,8 @@ NPM 将随 NodeJS 一起自动安装。
 注：如果您看到许可或访问权限错误，例如  <code>EPERM</code> 或  <code>EACCESS</code>，不要使用  <code>sudo</code> 作为解决方法。请参考 <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>此页</a>了解更可靠的解决方法。
 
 <!--
-本指南的下一部分介绍了如何使用 Gulp，但如果您想看看大体外观，可通过输入 `gulp serve` 来尝试运行本地服务器。
+The next section of this guide covers how to use Gulp, but if you want to see how things look, try running the local server by typing `gulp serve`.
 -->
-
 <img src="images/wsk-on-pixel-n5.png">
 
 

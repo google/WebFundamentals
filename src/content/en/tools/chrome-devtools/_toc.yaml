@@ -88,20 +88,21 @@ toc:
         path: /web/tools/chrome-devtools/console/events
       - title: Command Line Reference
         path: /web/tools/chrome-devtools/console/command-line-reference
-    - title: How to Look at Performance
+    - title: Analyze Runtime Performance
       section:
+      - title: Get Started
+        path: /web/tools/chrome-devtools/evaluate-performance/
+      - title: Overview
+        path: /web/tools/chrome-devtools/rendering-tools/
       - title: How to Use the Timeline Tool
         path: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
       - title: Timeline Event Reference
         path: /web/tools/chrome-devtools/evaluate-performance/performance-reference
-    - title: Analyze Runtime Performance
-      section:
-      - title: Overview
-        path: /web/tools/chrome-devtools/rendering-tools/
       - title: Speed Up JavaScript Execution
         path: /web/tools/chrome-devtools/rendering-tools/js-execution
       - title: Diagnose Forced Synchronous Layouts
         path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
+        status: deprecated
     - title: Measure Network Performance
       section:
       - title: Get Started

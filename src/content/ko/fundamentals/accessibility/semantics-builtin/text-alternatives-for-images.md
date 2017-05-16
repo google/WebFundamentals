@@ -25,7 +25,7 @@ description: alt 속성을 이용한 이미지 대체 텍스트 제공
     </article>
 
 <article>
-  <h2>고양이 10마리 중 9마리는 주인이 잠잘 때 조용히 주인을 평가한다는 연구 결과</h2>
+  <h2>Study shows 9 out of 10 cats quietly judging their owners as they sleep</h2>
   <img src="imgs/160204193356-01-cat-500.jpg">
 </article>
 
@@ -35,7 +35,7 @@ description: alt 속성을 이용한 이미지 대체 텍스트 제공
 도움이 안 됩니다.
 
 이럴 때 `alt` 속성을 사용하여 이미지에 대해 유용한
-대체 텍스트를 제공할 수 있습니다. 예컨대, "매서운 눈초리로 허공을 응시하는 고양이"와 같은 텍스트 말이죠.
+대체 텍스트를 제공할 수 있습니다. 예컨대, '매서운 눈초리로 허공을 응시하는 고양이'와 같은 텍스트 말이죠.
 
     <img src="/160204193356-01-cat-500.jpg" alt="매서운 눈초리로 허공을 응시하는 고양이">
 

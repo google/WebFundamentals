@@ -16,7 +16,7 @@ description:了解如何增加网站读者和收入。
 
 <img src="/web/images/md-icons/money-square.png" class="attempt-right">
 
-Payment Request API 是一种开放式的跨浏览器标准，可以取代传统的结账流程，让商家能够在单个 API 调用中请求和接受任何付款。PaymentRequest API 允许网页在用户提供输入时与用户代理交换信息，然后核准或拒绝支付请求。
+Payment Request API 是一种开放式的跨浏览器标准，可以取代传统的结账流程，让商家能够在单个 API 调用中请求和接受任何付款。PaymentRequest API 允许网页在用户提供输入时与 User Agent 交换信息，然后核准或拒绝支付请求。
 
 
 

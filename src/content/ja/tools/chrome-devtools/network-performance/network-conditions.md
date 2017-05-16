@@ -29,7 +29,7 @@ Network conditioning は、[Network] パネルから有効にします。ドロ�
 
 ![ネットワーク スロットルの選択](imgs/throttle-selection.png)
 
-**使い方**:[Network conditions](#network-conditions) ドロワーからネットワーク スロットルを設定することもできます。
+**使い方**: [Network conditions](#network-conditions) ドロワーからネットワーク スロットルを設定することもできます。
 
 
 スロットルを有効にすると、パネルのインジケーターに警告アイコンが表示されます。このアイコンにより、他のパネルを表示しているときもスロットルが有効になっていることが分かります。

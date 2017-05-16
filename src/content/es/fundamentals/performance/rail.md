@@ -32,7 +32,7 @@ Comprende cómo perciben los usuarios las demoras de rendimiento:
 
 <table class="responsive">
   <thead>
-      <th colspan="2">Demora &amp; reacción del usuario</th>
+      <th colspan="2">Demora y reacción del usuario</th>
   </thead>
   <tbody>
     <tr>

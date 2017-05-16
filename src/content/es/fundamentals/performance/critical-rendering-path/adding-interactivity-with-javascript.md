@@ -58,7 +58,7 @@ Cuando hablamos de "optimizar la ruta de acceso de representación crítica", en
 
 ## Bloquear el analizador en comparación con JavaScript asincrónico
 
-De forma predeterminada, la ejecución de JavaScript "bloquea el analizador"”: cuando el navegador encuentra una secuencia de comandos en el documento, debe pausar la construcción del DOM, delegar el control al tiempo de ejecución de JavaScript y permitir que la secuencia de comandos se ejecute antes de continuar con la construcción del DOM. Ya vimos esto en acción en un ejemplo anterior con una secuencia de comandos integrada. De hecho, las secuencias de comandos integradas siempre bloquean el analizador, a menos que tomes precauciones especiales y escribas código adicional para diferir su ejecución.
+De forma predeterminada, la ejecución de JavaScript "bloquea el analizador": cuando el navegador encuentra una secuencia de comandos en el documento, debe pausar la construcción del DOM, delegar el control al tiempo de ejecución de JavaScript y permitir que la secuencia de comandos se ejecute antes de continuar con la construcción del DOM. Ya vimos esto en acción en un ejemplo anterior con una secuencia de comandos integrada. De hecho, las secuencias de comandos integradas siempre bloquean el analizador, a menos que tomes precauciones especiales y escribas código adicional para diferir su ejecución.
 
 ¿Qué ocurre con las secuencias de comandos que se incluyen mediante una etiqueta script? Volvamos a nuestro ejemplo anterior y extraigamos el código en un archivo independiente:
 

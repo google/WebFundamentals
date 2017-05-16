@@ -53,7 +53,7 @@ Ada beberapa hal yang perlu diperhatikan di kode ini.
 
 2. **Mungkin tidak ada perangkat VR yang tersedia.** Kita harus berupaya untuk membuat pengalaman yang benar-benar cocok untuk setelan non-VR, dan memperlakukan ketersediaan VR sebagai Peningkatan Progresif.
 
-3. **Mungkin ada beberapa perangkat VR yang tersedia.** Hal serupa, sangat dimungkinkan bahwa seseorang akan memiliki beberapa perangkat VR yang tersedia, dan kita harus mengizinkannya jika memang memungkinkan, untuk memilih yang paling tepat.
+3. **Mungkin ada beberapa perangkat VR yang tersedia. **Hal serupa, sangat dimungkinkan bahwa seseorang akan memiliki beberapa perangkat VR yang tersedia, dan kita harus mengizinkannya jika memang memungkinkan, untuk memilih yang paling tepat.
 
 ## Memasang WebVR Emulation Chrome DevTools Extension
 
@@ -191,7 +191,7 @@ Jika Anda menjalankan segala hal seperti ini, Anda akan melihat bahwa tampilan t
     // the WebGL context.
     this._vr.display.submitFrame();
 
-Dengan kode itu, kita benar-benar *memang*selesai sekarang. Jika Anda menginginkan versi final, jangan lupa Anda bisa melihat [repo Google Chrome sample](https://github.com/GoogleChrome/samples/tree/gh-pages/web-vr/hello-world).
+Dengan kode itu, kita benar-benar *memang* selesai sekarang. Jika Anda menginginkan versi final, jangan lupa Anda bisa melihat [repo Google Chrome sample](https://github.com/GoogleChrome/samples/tree/gh-pages/web-vr/hello-world).
 
 ## Menutup pemikiran dan sumber daya
 

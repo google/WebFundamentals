@@ -36,15 +36,11 @@ description: ブレークポイントを使用して、JavaScript コードを�
 たとえば、ログイン ワークフローが期待どおりに動作せず、ログインを処理する関数がコードに 1 つだけ存在する場合は、その関数にバグがあると考えてよいでしょう。
 
 
-このシナリオでは、ブレークポイントをその関数の最初の行に追加します。
-
-
-ブレークポイントをコード行に設定すると、ブレークポイントを削除するか、無効にするか、または条件付きにするまで、コードは必ずその行で一時停止します。
+このシナリオでは、ブレークポイントをその関数の最初の行に追加します。ブレークポイントをコード行に設定すると、ブレークポイントを削除するか、無効にするか、または条件付きにするまで、コードは必ずその行で一時停止します。
 
 
 
 特定のコード行にブレークポイントを設定するには、まず [**Sources**] パネルを開き、左側の [**File Navigator**] ペインからスクリプトを選択します。
-
 [**File Navigator**] が表示されない場合は、[**Toggle file navigator**] ボタン（![[hide / show file navigator] ボタン][fn]{:.devtools-inline}）をクリックします。
 
 
@@ -62,7 +58,6 @@ description: ブレークポイントを使用して、JavaScript コードを�
 ![行番号ブレークポイント][lnb]
 
 式が複数の行にまたがっているときに、式の途中に行のブレークポイントを配置した場合は、DevTools によりブレークポイントが次に式に設定されます。
-
 たとえば、以下のスクリーンショットの 4 行目にブレークポイントを設定しようとすると、DevTools によって 6 行目にブレークポイントが設定されます。
 
 
@@ -78,7 +73,6 @@ description: ブレークポイントを使用して、JavaScript コードを�
 
 
 まだブレークポイントが設定されていない行番号を右クリックし、[**Add conditional breakpoint**] をクリックして条件付きブレークポイントを作成します。
-
 ブレークポイントを既にコード行に追加していて、そのブレークポイントを条件付きにする場合は、右クリックして [**Edit breakpoint**] をクリックします。
 
 
@@ -147,7 +141,7 @@ DOM 変更ブレークポイントを設定する方法を学習するための�
 
 
 {% framebox height="auto" %}
-<p><b>DOM Change Breakpoints Demo</b></p>
+<p><b>DOM 変更ブレークポイントのデモ</b></p>
 <button>Increment</button>
 <p>Count: <span>0</span></p>
 <script>
@@ -170,6 +164,7 @@ increment.addEventListener('click', function() {
 
 1. ハイライト表示されたノードを右クリックして、[**Break on**] > [**Subtree Modifications**] を選択します。
 ノードの左側の青いアイコン ![DOM ブレークポイント アイコン][icon]{:.devtools-inline} は、そのノードに DOM ブレークポイントが設定されていることを示します。
+
 青い背景に青いアイコンが表示されているため、ノードがハイライト表示されているときは、アイコンが見づらくなります。
 
 
@@ -179,6 +174,7 @@ increment.addEventListener('click', function() {
 
 
 1. [**Resume script execution**] ![[resume script execution] ボタン][resume]{:.devtools-inline} を 2 回押して、スクリプトの実行を再開します。
+
 カウント テキストが削除されるときにブレークポイントが一度トリガーされ、新しいカウントでそのテキストがアップデートされるときに再度ブレークポイントがトリガーされるため、このボタンを 2 回押す必要があります。
 
 
@@ -293,28 +289,17 @@ XHR の URL が特定の文字列に一致した場合に中断するには、[*
 </script>
 {% endframebox %}
 
-1. [**Print Random Number**] をクリックします。ボタンの下の [**Random Number**] ラベルに乱数が出力されるはずですが、何も表示されません。
-
-   このバグを、これから修正します。
+1. [**Print Random Number**] をクリックします。ボタンの下の [**Random Number**] ラベルに乱数が出力されるはずですが、何も表示されません。このバグを、これから修正します。
 1. <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> キー（Mac）または <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> キー（Windows、Linux）を押して、DevTools を開きます。
 1. [**Sources**] タブをクリックします。
 1. [**Pause on exceptions**] ![Pause on exceptions][pause on exception]{:.devtools-inline} をクリックします。
-1. [**Print Random Number**] を再度押し、ブレークポイントをトリガーします。
-
-   DevTools は、`nodes.number.textContent = Math.random();` を含むコード行で一時停止します。
+1. [**Print Random Number**] を再度押し、ブレークポイントをトリガーします。DevTools は、`nodes.number.textContent = Math.random();` を含むコード行で一時停止します。
 以上が、例外のブレークポイントを使うための説明になります。
 以降では、この特定のバグを修正する方法について説明します。
-1. DevTools が現在一時停止しているコード行で、`nodes` にカーソルを合わせ、オブジェクトが適切に参照されていることを確認します。
-このオブジェクトには、`button`、`num`、および `__proto__` の 3 つのプロパティが含まれています。
-
-   これらのオブジェクトには問題がなく、バグの原因ではありません。
-1. `number` にカーソルを合わせます。このプロパティが `undefined` と評価されているはずです。
-   これがバグの原因です。このプロパティの名前は、`number` ではなく、`num` にする必要があります。
+1. DevTools が現在一時停止しているコード行で、`nodes` にカーソルを合わせ、オブジェクトが適切に参照されていることを確認します。このオブジェクトには、`button`、`num`、および `__proto__` の 3 つのプロパティが含まれています。これらのオブジェクトには問題がなく、バグの原因ではありません。
+1. `number` にカーソルを合わせます。このプロパティが `undefined` と評価されているはずです。これがバグの原因です。このプロパティの名前は、`number` ではなく、`num` にする必要があります。
 1. DevTools で、`nodes.number.textContent` を `nodes.num.textContent` に変更します。
-1. <kbd>Command</kbd>+<kbd>S</kbd> キー（Mac）または <kbd>Control</kbd>+<kbd>S</kbd> キー（Windows、Linux）を押して、変更を保存します。
-
-
-   保存すると、DevTools によって自動でスクリプトの実行が再開されます。
+1. <kbd>Command</kbd>+<kbd>S</kbd> キー（Mac）または <kbd>Control</kbd>+<kbd>S</kbd> キー（Windows、Linux）を押して、変更を保存します。保存すると、DevTools によって自動でスクリプトの実行が再開されます。
 1. [**Print Random Number**] を再度押して、バグが修正されたことを確認します。
 ボタンをクリックした後、DevTools は一時停止しなくなります。つまり、スクリプトが例外をスローしなくなります。
 
