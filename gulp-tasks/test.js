@@ -598,6 +598,15 @@ function testMarkdown(filename, contents, options) {
       }
     });
 
+    // Error on single line comments
+    matched = wfRegEx.getMatches(wfRegEx.RE_SINGLE_LINE_COMMENT, contents);
+    matched.forEach(function(match) {
+      position = {line: getLineNumber(contents, match.index)};
+      msg = 'Multi-line comment syntax used on single line comment.';
+      msg += ' Use single line syntax: `{# this is my comment #}`';
+      logError(filename, position, msg);
+    });
+
     // Warn on unescaped template tags
     matched = wfRegEx.getMatches(/\{\{/g, contents);
     matched.forEach(function(match) {

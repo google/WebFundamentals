@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference on all the ways to record and analyze performance in Chrome DevTools.
 
-{# wf_updated_on: 2017-05-08 #}
+{# wf_updated_on: 2017-05-17 #}
 {# wf_published_on: 2017-05-08 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -379,7 +379,7 @@ See [The Call Tree tab](#call-tree) for an example of root activities.
 
 #### The Call Tree tab {: #call-tree }
 
-{% comment %}source: https://goo.gl/lv3p8O{% endcomment %}
+{# source: https://goo.gl/lv3p8O #}
 
 Use the **Call Tree** tab to view which [root activities](#root-activities)
 cause the most work.
