@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Background and Foreground Colors Have Sufficient Contrast Ratio" Lighthouse audit.
 
-{# wf_updated_on: 2017-05-12 #}
+{# wf_updated_on: 2017-05-16 #}
 {# wf_published_on: 2017-01-20 #}
 
 # Background and Foreground Colors Have Sufficient Contrast Ratio  {: .page-title }
@@ -22,13 +22,13 @@ To find and fix each of element that does not have a sufficient contrast ratio:
 1. Click the **aXe** tab.
 
 1. Click **Analyze**. aXe generates a report highlighting any accessibility
-issues.
+   issues.
 
 1. In the **Results** column, click on the field that says "Elements must have
-sufficient color contrast."
+   sufficient color contrast."
 
 1. Click the **Inspect** button to locate the element in the DevTools. Click the
-next button to see more failing elements.
+   next button to see more failing elements.
 
      <figure>
        <img src="images/axe-ratio.jpg"
