@@ -204,7 +204,7 @@ There are multiple ways to get started with any project, and we generally recomm
 
 ### Create the HTML for the App Shell
 
-Now we'll add the core components we discussed in  [Architect the App Shell](/web/fundamentals/getting-started/your-first-progressive-web-app/step-01).
+Now we'll add the core components we discussed in  [Architect the App Shell](/web/fundamentals/getting-started/codelabs/your-first-pwapp#architect_your_app_shell).
 
 Remember, the key components will consist of:
 
@@ -609,7 +609,7 @@ Stepping from inside, out, `caches.match()` evaluates the web request that trigg
 
 Your app is now offline-capable! Let's try it out.
 
-Reload your page and then go to the __Cache Storage__ pane on the __Application__ panel of DevTools. Expand the section and you should see the name of your app shell cache listed on the left-hand side. When you click on your app shell cache you can see all of the resources that it has currently cached.
+Reload your page and then go to the __Cache Storage__ pane on the __Application__ panel of DevTools. Right click __Cache Storage__, pick __Refresh Caches__, expand the section and you should see the name of your app shell cache listed on the left-hand side. When you click on your app shell cache you can see all of the resources that it has currently cached.
 
 ![ab9c361527825fac.png](img/ab9c361527825fac.png)
 
