@@ -90,14 +90,10 @@ future loads blazingly fast.
 
 | Feature | Summary |
 |---------|---------|
-| Runtime Caching | Cache large or infrequently used resources, like images, at
-runtime, when they're first used. |
-| Offline Fallbacks | Load fresh images, API responses, or other dynamic content
-from the network while online, but fall back to a cached placeholder while offline. |
-| Goodbye Lie-Fi | Fight [lie-fi](https://www.youtube.com/watch?v=oRcxExzWlc0)
-by automatically falling back to a cached response when the network is too slow. |
-| Battle Cache Bloat | That image from last month doesn't need to be cached
-forever. Least-recently used and age-based cache expiration helps free up space.|
+| Runtime Caching | Cache large or infrequently used resources, like images, at runtime, when they're first used. |
+| Offline Fallbacks | Load fresh images, API responses, or other dynamic content from the network while online, but fall back to a cached placeholder while offline. |
+| Goodbye Lie-Fi | Fight [lie-fi](https://www.youtube.com/watch?v=oRcxExzWlc0) by automatically falling back to a cached response when the network is too slow. |
+| Battle Cache Bloat | That image from last month doesn't need to be cached forever. Least-recently used and age-based cache expiration helps free up space.|
 
 ## Generating a Service Worker
 
@@ -122,14 +118,10 @@ Webpack for generating a service worker.
 
 | Feature | Summary |
 |---------|---------|
-| Precache Your App Shell | Your web app's shell—its core HTML, JavaScript, and
-CSS—can be precached when a user visits your page. |
+| Precache Your App Shell | Your web app's shell—its core HTML, JavaScript, and CSS—can be precached when a user visits your page. |
 | Build-time Integration | Drop it into your existing build process. |
-| Stay Fresh | Changes in your build update the service worker script. Users get
-updates, but you don't have to manually version your content or caches. |
-| No Network, No Problem | Your static resources are served
-[cache-first](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network)
-, quickly, whether or not there's a network available. |
+| Stay Fresh | Changes in your build update the service worker script. Users get updates, but you don't have to manually version your content or caches. |
+| No Network, No Problem | Your static resources are served [cache-first](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network), quickly, whether or not there's a network available. |
 
 
 ## Offline Google Analytics
@@ -144,16 +136,10 @@ parameterized function call.
 
 | Feature | Summary |
 |---------|---------|
-| Offline Google Analytics | Creates fetch handlers that ensure the Google
-Analytics JavaScript is available offline. |
-| Temporarily Caches Data | Holds analytics requests that are made when the
-device is offline and retries them the next time the service worker starts up. |
-| Custom Replay Values | Key/value pairs to be added to replayed Google
-Analytics requests. For example, you might set a custom dimension to indicate
-that a request was replayed. |
-| Modified Hit Parameters | Lets you programmatically modify a hit's parameters
-to, for example, track the elapsed time between when a hit is attempted and when
- it is replayed. |
+| Offline Google Analytics | Creates fetch handlers that ensure the Google Analytics JavaScript is available offline. |
+| Temporarily Caches Data | Holds analytics requests that are made when the device is offline and retries them the next time the service worker starts up. |
+| Custom Replay Values | Key/value pairs to be added to replayed Google Analytics requests. For example, you might set a custom dimension to indicate that a request was replayed. |
+| Modified Hit Parameters | Lets you programmatically modify a hit's parameters to, for example, track the elapsed time between when a hit is attempted and when it is replayed. |
 
 ## Background Sync
 
@@ -166,10 +152,6 @@ requests when the user comes back online.
 
 | Feature | Summary |
 |---------|---------|
-| Background Queuing | Manages a queue for replaying requests that have failed.
-|
-| Granular Queue Control | Specifies how long a request should live in the queue
-before it is abandoned, and what to do when it succeeds. |
-| Broadcast Channel Management | Supports updating the queued request's status
-over a Broadcast Channel, so that you can do things like provide the user with a
-notification if the request succeeds. |
+| Background Queuing | Manages a queue for replaying requests that have failed. |
+| Granular Queue Control | Specifies how long a request should live in the queue before it is abandoned, and what to do when it succeeds. |
+| Broadcast Channel Management | Supports updating the queued request's status over a Broadcast Channel, so that you can do things like provide the user with a notification if the request succeeds. |
