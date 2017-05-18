@@ -166,6 +166,9 @@ function generateIndex(files, options) {
     section: options.section,
     articles: files
   };
+  if (options.title) {
+    context.title = options.title;
+  }
   var template = path.join(GLOBAL.WF.src.templates, 'index.yaml');
   if (options.template) {
     template = options.template;

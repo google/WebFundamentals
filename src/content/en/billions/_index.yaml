@@ -2,6 +2,7 @@
 
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
+title: Building for Billions
 landing_page:
   custom_css_path: /web/styles/wf-root.css
 
