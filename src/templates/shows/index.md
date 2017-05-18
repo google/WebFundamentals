@@ -5,7 +5,7 @@ book_path: /web/shows/_book.yaml
 {# wf_updated_on: 2015-02-23 #}
 {# wf_published_on: 2015-02-23 #}
 
-# Shows {: .page-title }
+# Shows for Web Developers {: .page-title }
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="rvvpW5kmpvE"

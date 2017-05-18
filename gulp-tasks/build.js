@@ -16,7 +16,7 @@ gulp.task('build:fundamentals', function() {
   var section = 'fundamentals';
   var baseOutputPath = path.join(GLOBAL.WF.src.content, section);
   var options = {
-    title: 'Web Fundamentals - Google Developers',
+    title: 'Web Fundamentals',
     description: 'The latest changes to https://developers.google.com/web/fundamentals',
     section: section,
     outputPath: baseOutputPath
@@ -31,6 +31,7 @@ gulp.task('build:showcase', function() {
   var section = 'showcase';
   var baseOutputPath = path.join(GLOBAL.WF.src.content, section);
   var options = {
+    title: 'Case Studies',
     description: 'Learn why and how other developers have used the web to create amazing web experiences for their users.',
     section: section,
     outputPath: baseOutputPath
@@ -127,7 +128,7 @@ gulp.task('build:tools', function() {
   var section = 'tools';
   var baseOutputPath = path.join(GLOBAL.WF.src.content, section);
   var options = {
-    title: 'Web Tools - Google Developers',
+    title: 'Tools',
     description: 'The latest changes to https://developers.google.com/web/tools',
     section: section,
     outputPath: baseOutputPath
@@ -142,7 +143,7 @@ gulp.task('build:updates', function() {
   var section = 'updates';
   var baseOutputPath = path.join(GLOBAL.WF.src.content, section);
   var options = {
-    title: 'Web Updates - Google Developers',
+    title: 'Updates',
     description: 'The latest and freshest updates from the Web teams at Google. Chrome, Tooling and more.',
     section: section,
     outputPath: baseOutputPath
