@@ -133,12 +133,12 @@ want to spawn Chrome _from_ your application.
 One way is to use `child_process`:
 
 ```javascript
-const exec = require('child_process').exec;
+const execFile = require('child_process').execFile;
 
 function launchHeadlessChrome(url, callback) {
   // Assuming MacOSx.
   const CHROME = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome';
-  exec(`${CHROME} --headless --disable-gpu --remote-debugging-port=9222 ${url}`, callback);
+  execFile(CHROME, ['--headless', '--disable-gpu', '--remote-debugging-port=9222', url], callback);
 }
 
 launchHeadlessChrome('https://www.chromestatus.com', (err, stdout, stderr) => {
