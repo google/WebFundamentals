@@ -11,6 +11,10 @@ description: Learn how to set up Lighthouse to audit your web apps.
       class="lighthouse-logo attempt-right" alt="Lighthouse Logo">
 
 <style>
+.yt-container {
+  display: flex;
+  justify-content: center;
+}
 figure {
   text-align: center;
 }
@@ -84,6 +88,11 @@ There are two primary ways to run Lighthouse: as a Chrome Extension, or as a
 command line tool. The Chrome Extension lets you audit logged-in pages and
 provides a more user-friendly interface for reading reports. The command line
 tool enables you to integrate Lighthouse into continuous integration systems.
+
+<div class="yt-container">
+  <iframe width="480" height="390" src="https://www.youtube.com/embed/NoRYn6gOtVo"
+          frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Install and run the Chrome Extension {: #extension }
 
