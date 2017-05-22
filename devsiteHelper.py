@@ -234,7 +234,7 @@ def renderDevSiteContent(content, lang='en'):
     fbClass = re.search(r'class="(.*?)"', fbContent.group(1))
     fbContent = fbContent.group(2)
     fbMemcacheKey = '/framebox/' + hashlib.md5(fbContent.encode('utf-8')).hexdigest()
-    replaceWith = '<iframe class="framebox inherit-locale ' + fbClass.group(1) + '" '
+    replaceWith = '<iframe class="framebox inherit-locale'
     if fbClass:
      replaceWith += ' ' + fbClass.group(1)
     replaceWith += + '" '
