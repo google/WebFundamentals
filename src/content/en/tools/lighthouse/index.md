@@ -85,6 +85,13 @@ command line tool. The Chrome Extension lets you audit logged-in pages and
 provides a more user-friendly interface for reading reports. The command line
 tool enables you to integrate Lighthouse into continuous integration systems.
 
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="NoRYn6gOtVo"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+
 ### Install and run the Chrome Extension {: #extension }
 
 To install the extension:
