@@ -258,6 +258,22 @@ supports the following values:
   </tr>
 </table>
 
+In addition, Chrome 56 includes support for the non-standard `pinch-zoom` value
+(which is specified in the
+[Web Compatibility Standard](https://compat.spec.whatwg.org/#touch-action)).
+
+<table>
+  <tr>
+   <td><code>pinch-zoom</code>
+   <td>
+    The browser is only allowed to perform multi-finger panning and zooming actions.
+   </td>
+  <//tr>
+</table>
+
+Note: where sensible, `touch-action` values can be combined. For instance,
+in the case of a horizontal carousel, you could use `touch-action: pan-y pinch-zoom`
+in order to allow the browser to handle vertical scrolling and pinch-zoom.
 
 ## Pointer capture
 
