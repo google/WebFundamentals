@@ -11,6 +11,6 @@ IndexedDB is the solution. This video describes the various components of
 IndexedDB and demonstrates how to use it to store data in the browser.
 
 {% setvar videoId "vCumk1sXHcY" %}
-{% setvar slidesId "1SIawAWNYN33lkiuTIpmK6biwZLolsd74bRLTwADKpRs" %}
+{% setvar slidesId "1UeyAWlUys8aNCqhAFNt_jO7bgrRFZdYDQw7N9KNKewg" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
