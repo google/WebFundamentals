@@ -12,6 +12,6 @@ and how developers can integrate it into their Progressive Web Apps. Examples
 using offline analytics, service workers, and push notifications are shown.
 
 {% setvar videoId "Dv-OBW8kgG0" %}
-{% setvar slidesId "1wx9oneZOL5cyriYIuDOQchbji4UVxRjdoplzvncEztA" %}
+{% setvar slidesId "1xtom0kTc7UPmnLHgQXpCV-iB6EHpq7RGljDfZ5TkDWg" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
