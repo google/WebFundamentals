@@ -12,6 +12,6 @@ resources and read responses. It explains how to use GET, POST, and HEAD
 requests and describes the theory behind Cross Origin Resource Sharing (CORS).
 
 {% setvar videoId "9Qtvjd0UbAs" %}
-{% setvar slidesId "1Rr_7rP3_XaUsr3m0CKXqWSzW3G4PeFWgp_-INoV7Xfc" %}
+{% setvar slidesId "1LQMn7l8WEu3j6xw83EcVnL7-nkrkldVOC1amOlk3tNU" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
