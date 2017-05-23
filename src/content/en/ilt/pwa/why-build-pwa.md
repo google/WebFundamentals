@@ -14,6 +14,6 @@ capable as native, supporting features such as push notifications and
 Add to Homescreen, without giving up the reach of the web.
 
 {% setvar videoId "1QILz1lAzWY" %}
-{% setvar slidesId "18IOdAivMSRDsqEnwvJL_eaEWhqBgFUjFWEamoWZ5djc" %}
+{% setvar slidesId "1A1jwkxtznv0KBKShC70co6h9dn6LVBWDKQ_62_6xuE4" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
