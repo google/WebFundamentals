@@ -10,6 +10,6 @@ Service worker code can be quite complex. This video describes two open-source
 tools from Google that generate production-ready service worker files for you.
 
 {% setvar videoId "PhiLvTzceL0" %}
-{% setvar slidesId "1bdXNNc6Ua43SXtwREfZjIQ4Tiv3piPE3ViWJmc2uNKY" %}
+{% setvar slidesId "1eLKiOq6EaKZLx1sG4ej1MnTvXIIlG1g03aB1FRHDgj8" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
