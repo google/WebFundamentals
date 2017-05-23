@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: How can writing code be like making a burger? Turns out, by the power of weird segues, it can!
 
-{# wf_updated_on: 2015-09-20 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2015-09-20 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-1.mp3 #}
 {# wf_podcast_duration: 00:30:13 #}
@@ -14,7 +14,7 @@ description: How can writing code be like making a burger? Turns out, by the pow
 
 How can writing code be like making a burger? Turns out, by the power of weird segues, it can!
 
-<img src="/web/shows/http203/podcast/images/http203-episode-1-art.jpg" class="attempt-right">
+<img id="artwork" src="/web/shows/http203/podcast/images/http203-episode-1-art.jpg" class="attempt-right">
 
 In this episode:
 
@@ -25,9 +25,7 @@ In this episode:
 * Camels
 * Intl
 
-<a href="http://feeds.feedburner.com/Http203Podcast">
-  <span class="material-icons">rss_feed</span>
-  Subscribe
-</a>
 
-<audio src="https://storage.googleapis.com/http-203-podcast/episode-1.mp3" controls preload="none">
+{% include "web/_shared/http-203-podcast.html" %}
+
+<audio id="podcast" src="https://storage.googleapis.com/http-203-podcast/episode-1.mp3" controls preload="none">

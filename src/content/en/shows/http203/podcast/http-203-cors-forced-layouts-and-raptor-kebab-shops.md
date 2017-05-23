@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Why does nobody seem to include CORS headers on their files? And can Paul answer Jake's dreaded CORS pre-flight quiz?
 
-{# wf_updated_on: 2015-10-06 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2015-10-06 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-2.mp3 #}
 {# wf_podcast_duration: 00:30:37 #}
@@ -14,7 +14,7 @@ description: Why does nobody seem to include CORS headers on their files? And ca
 
 Paul and Jake talk about CORS, Layout, and which of them has the evolutionary advantage.
 
-<img src="/web/shows/http203/podcast/images/http203-episode-2-art.jpg" class="attempt-right">
+<img id="artwork" src="/web/shows/http203/podcast/images/http203-episode-2-art.jpg" class="attempt-right">
 
 In this episode:
 
@@ -26,12 +26,10 @@ In this episode:
 * Balding and Common Misconceptions
 * Movie Voices
 
-<a href="http://feeds.feedburner.com/Http203Podcast">
-  <span class="material-icons">rss_feed</span>
-  Subscribe
-</a>
 
-<audio src="https://storage.googleapis.com/http-203-podcast/episode-2.mp3" controls preload="none">
+{% include "web/_shared/http-203-podcast.html" %}
+
+<audio id="podcast" src="https://storage.googleapis.com/http-203-podcast/episode-2.mp3" controls preload="none">
 
 
 

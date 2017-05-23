@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: "Jake's discovered display: contents, while Paul is concerned about people microbenchmarking ES2015 features."
 
-{# wf_updated_on: 2016-02-24 #}
+{# wf_updated_on: 2017-03-03 #}
 {# wf_published_on: 2016-02-24 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-4.mp3 #}
 {# wf_podcast_duration: 00:52:25 #}
@@ -14,7 +14,7 @@ description: "Jake's discovered display: contents, while Paul is concerned about
 
 Paul and Jake talk about how to Promisify Node, the sins of CSS, and how hard it can be to find a door handle.
 
-<img src="/web/shows/http203/podcast/images/http203-episode-4-art.jpg" class="attempt-right">
+<img id="artwork" src="/web/shows/http203/podcast/images/http203-episode-4-art.jpg" class="attempt-right">
 
 In this episode:
 
@@ -24,9 +24,7 @@ In this episode:
 * [Cancellable Promises](https://github.com/tc39/proposal-cancelable-promises/)
 * [CSS Mistakes](https://wiki.csswg.org/ideas/mistakes)
 
-<a href="http://feeds.feedburner.com/Http203Podcast">
-  <span class="material-icons">rss_feed</span>
-  Subscribe
-</a>
 
-<audio src="https://storage.googleapis.com/http-203-podcast/episode-4.mp3" controls preload="none">
+{% include "web/_shared/http-203-podcast.html" %}
+
+<audio id="podcast" src="https://storage.googleapis.com/http-203-podcast/episode-4.mp3" controls preload="none">
