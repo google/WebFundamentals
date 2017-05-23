@@ -11,6 +11,6 @@ even when offline. This video explains how to use the service worker and Cache
 API to make a simple app work offline.
 
 {% setvar videoId "zw35jKRSIlo" %}
-{% setvar slidesId "1ECzY93trT-cJdj8xIxqUYpCcBi5NQOm8q-WQJW1k8zI" %}
+{% setvar slidesId "15UJFYSpb6gS3Z7CgVWoc-PMSR8DI5OJLIsPIa7EPGHQ" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
