@@ -49,7 +49,7 @@ b {
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.25);
 }
-#playPauseButton.paused {
+#playPauseButton.playing {
     background-image: url('https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_pause_circle_outline_white_48px.svg');
 }
 #toggleFullscreenButton {
