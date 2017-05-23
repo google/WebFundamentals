@@ -163,7 +163,7 @@ def getLeftNav(requestPath, pathToBook, lang='en'):
 
 def buildLeftNav(bookYaml, lang='en'):
   # Recursively reads the book.yaml file and generates the navigation tree
-  result = ''
+  result = unicode()
   for item in bookYaml:
     if 'include' in item:
       include = readFile(item['include'], lang)
