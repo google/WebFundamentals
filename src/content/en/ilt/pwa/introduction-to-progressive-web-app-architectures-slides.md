@@ -13,6 +13,6 @@ to homescreen, push notifications, tools for building service workers, mobile
 web payments, and credentials management.
 
 {% setvar videoId "LaS_5jUeh_0" %}
-{% setvar slidesId "1Xu8FDXCPi7SGOArRgLKjrXWArvAUB4ESdKw9ecWqw0s" %}
+{% setvar slidesId "1fqUTuxmcTyyZBb5EVGc0bh4HA_v8NmaLyDJxY8arviI" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
