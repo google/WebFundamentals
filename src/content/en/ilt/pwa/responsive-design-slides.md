@@ -12,6 +12,6 @@ scroll and zoom capabilities, etc. This video describes responsive-design
 techniques that help you create web apps that work well on any device.
 
 {% setvar videoId "T-hVjfc7E-c" %}
-{% setvar slidesId "1uG20FaNBMQGNjMZGN1SelJ05HVBm5u6fRSCj5ldFftg" %}
+{% setvar slidesId "1fI4JGZKNnhpAv8vQA2sZD7KyhvPc4CpeUa5jo40Sa4c" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
