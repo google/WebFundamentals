@@ -11,6 +11,6 @@ This video provides an explanation of these technologies, as well as a brief
 introduction to ES2015.
 
 {% setvar videoId "63YUj-7qxl0" %}
-{% setvar slidesId "1CxS9SD8DEm5qsonsg_M41A6lmZrdLwrBXuayQBGoK3g" %}
+{% setvar slidesId "1YTjlAkJndNUVsIutxwVqWwujXHsA8U3E0nTSr2A-xcc" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
