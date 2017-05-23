@@ -11,6 +11,6 @@ video describes how to use the Cache API and IndexedDB together in your app to
 store multiple types of data.
 
 {% setvar videoId "FY1r7Y5rf2E" %}
-{% setvar slidesId "1wk9XH8yV3NT8fsEp5KpWktfKRl5myYWnhkqbHkPtBx4" %}
+{% setvar slidesId "1ElTtJrcrqXkuPgYuxa7rwGap8fIpQPqZWQYDjRloEqk" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
