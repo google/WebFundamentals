@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-04-21 #}
+{# wf_updated_on: 2017-05-24 #}
 
 # Deep Dive into the Payment Request API {: .page-title }
 
@@ -79,11 +79,13 @@ const supportedPaymentMethods = [
   }  
 ];  
 const paymentDetails = {  
-  label: 'Total',  
-  amount:{  
-    currency: 'USD',  
-    value: 0  
-  }  
+  total: {
+    label: 'Total',  
+    amount:{  
+      currency: 'USD',  
+      value: 0  
+    }  
+  }
 };  
 // Options isn't required.  
 const options = {};
