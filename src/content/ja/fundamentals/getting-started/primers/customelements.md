@@ -684,7 +684,7 @@ if (supportsCustomElementsV1) {
 1. HTML で新しい要素を定義します。`<x-foo-from-template>`
 2. 要素の Shadow DOM が `<template>` から作成されます。
 3. Shadow DOM のおかげで、要素の DOM は要素に対してローカルになります。
-4.Shadow DOM のおかげで、要素の内部 CSS の適用対象が要素になります。
+4. Shadow DOM のおかげで、要素の内部 CSS の適用対象が要素になります。
 
 {% framebox height="100px" %}
 <style>

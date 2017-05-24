@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
-{# wf_updated_on: 2017-04-14 #}
+{# wf_updated_on: 2017-05-16 #}
 {# wf_published_on: 2017-04-14 #}
 
 # Working with the Fetch API {: .page-title }

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll learn how to debug a service worker using the new DevTools Application panel. You'll also learn how to simulate a Push notification to verify your subscription is properly setup.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2016-10-19T18:28:32Z #}
+{# wf_updated_on: 2017-05-17T00:43:21Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -62,7 +62,7 @@ You can download all of the code for this codelab, by clicking the following but
 
 Unpack the downloaded zip file. This will unpack a root folder (`debugging-service-workers-master`), which contains one folder for each step of this codelab, along with all of the resources you will need.
 
-The `step-NN` folders contain the desired end state of each step of this codelab. They are there for reference. We'll be doing all our coding work in a directory called `work`.
+The `step-NN` folders contain the desired end state of each step of this codelab. They are there for reference. We'll be doing all our coding work in the directory called `work`.
 
 ### Install and verify web server
 
@@ -118,7 +118,7 @@ Obviously, this app is not yet doing anything interesting. We'll add functionali
 
 Building a Progressive Web Apps requires tying together a number of different core technologies, including Service Workers and Web App Manifests, as well as useful enabling technologies, like the Cache Storage API, IndexedDB, and Push Notifications. To make it easy for developers to get a coordinated view of each of these technologies the Chrome DevTools has incorporated inspectors for each in the new Application panel.
 
-* Open the Chrome DevTools and click on the tab that says __Application__.
+* Open the Chrome DevTools and click on the tab that says __Application__
 
 ![b380532368b4f56c.png](img/b380532368b4f56c.png)
 
@@ -144,6 +144,11 @@ The __Service Workers__ view provides information about Service Workers which ar
 * __Show all__ - Will show a list of all active Service Workers regardless of the origin.
 
 Below that you will see information relating to the current active Service Worker (if there is one). One of the most useful fields is the __Status__ field, which shows the current state of the Service Worker. Since this is the first time starting the app, the current Service Worker has successfully installed and been activated, so it displays a green circle to indicate everything's good.
+
+<aside markdown="1" class="key-point">
+<p>If you had installed a service worker on this localhost port previously, you will see an orange circle as well, indicating that the new service worker is waiting to activate. If this is the case, click <strong>skipWaiting</strong>.</p>
+</aside>
+
 
 Note the ID number next to the green status indicator. That's the ID for the currently active Service Worker. Remember it or write it down as we'll use it for a comparison in just a moment.
 
@@ -191,7 +196,7 @@ The second status indicator shows the new Service Worker we just edited. Right n
 
 <aside markdown="1" class="key-point">
 <p><strong>Try it!</strong></p>
-<p>If a user has multiple tabs open for the same page, it will continue using the old Service Worker until those tabs are closed. Try opening a few more tabs and visiting this same page and notice how the Application panel still shows the old Service Worker as active</p>
+<p>If a user has multiple tabs open for the same page, it will continue using the old Service Worker until those tabs are closed. Try opening a few more tabs and visiting this same page and notice how the Application panel still shows the old Service Worker as active.</p>
 </aside>
 
 
@@ -201,7 +206,7 @@ An easy way to force the new Service Worker to activate is with the __skipWaitin
 
 * Click the skipWaiting button and then switch to the Console
 
-Note that the console now logs the message from the `activate` event handler
+Note that the console now logs the message from the `activate` event handler:
 
 `Finally active. Ready to start serving content!`
 
@@ -257,13 +262,13 @@ self.addEventListener('activate', function(event) {
 
 * Refresh the page
 
-In the Application panel you might notice an Error shows up. This seems scary but clicking the __details__ button reveals that it's just the __Application__ panel telling you that your old Service Worker was forcibly updated. Since that was the intention, this is totally O.K., but it can serve as a useful warning so you don't forget to turn the checkbox off when you're done editing the `service-worker.js` file.
+In the Application panel you might notice a warning shows up. This seems scary but it's just telling you that your old Service Worker was forcibly updated. Since that was the intention, this is totally O.K., but it can serve as a useful warning so you don't forget to turn the checkbox off when you're done editing the `service-worker.js` file.
 
-![a039ca69d2179199.png](img/a039ca69d2179199.png)
+![c6363ac5b51e06b1.png](img/c6363ac5b51e06b1.png)
 
 ### Inspecting Cache Storage
 
-Notice that the __Cache Storage__ menu item in the __Application__ panel now has a caret indicating it can be expanded.
+Notice that the __Cache Storage__ menu item in the __Application__ panel now has a caret indicating it can be expanded. If you don't see it, right click on __Cache Storage__ and choose __Refresh Caches__ (this doesn't actually do anything to the caches, it just updates the DevTools UI).
 
 * Click to expand the  __Cache Storage__ menu, then click on `my-site-cache-v1`
 
@@ -278,13 +283,13 @@ Here you can see all of the files cached by the Service Worker. If you need to r
 As you may have noticed, along with __Cache Storage__, there are a number of other menu items related to stored resources, including: Local Storage, Session Storage, IndexedDB, Web SQL, Cookies, and Application Cache ("AppCache"). Having granular control of each of these resources all in one panel is extremely useful! But if you were in a scenario where you wanted to delete all of the stored resources it would be pretty tedious to have to visit each menu item and delete their contents. Instead, you can use the __Clear storage__ option to clean the slate in one fell swoop (note that this will also unregister any Service Workers).
 
 * Select the __Clear storage__ menu option
-* Click the __Clear site data__ button to delete all stored resources
+* Click the __Clear selected__ button to delete all stored resources
 
-![59838a73a2ea2aaa.png](img/59838a73a2ea2aaa.png)
+![744eb12fec050d31.png](img/744eb12fec050d31.png)
 
-If you go back and click on `my-site-cache-v1` you'll now see that all the stored files have been deleted.
+If you go back to __Cache Storage__ you'll now see that all the stored files have been deleted.
 
-![317d24238f05e69c.png](img/317d24238f05e69c.png)
+![3d8552f02b82f4d5.png](img/3d8552f02b82f4d5.png)
 
 <aside markdown="1" class="key-point">
 <p><strong>TIP:</strong> You can also use a new Incognito window for testing and debugging Service Workers. When the Incognito window is closed, Chrome will remove any cached data or installed Service Worker, ensuring that you always start from a clean state.</p>
@@ -315,7 +320,7 @@ The gear icon signifies that these requests came from the Service Worker itself.
 
 
 
-One of the killer feature of Service Workers is their ability to serve cached content to users even when they're offline. To verify everything works as planned, let's test out some of the network throttling tools that Chrome provides.
+One of the killer features of Service Workers is their ability to serve cached content to users even when they're offline. To verify everything works as planned, let's test out some of the network throttling tools that Chrome provides.
 
 ### Serving requests while offline
 
@@ -346,7 +351,7 @@ self.addEventListener('fetch', function(event) {
 
 Your __Application__ panel should look like this now:
 
-![873b58278064b627.png](img/873b58278064b627.png)
+![54d7f786f2a8838e.png](img/54d7f786f2a8838e.png)
 
 Notice the __Network__ panel now has a yellow warning sign to indicate that you're offline (and to remind you that you'll want to uncheck that checkbox if you want to continue developing with the network).
 
@@ -358,7 +363,7 @@ You'll notice that there are failed requests (like for a new Service Worker or `
 
 ### Testing slow or flakey networks
 
-Because we user our mobile devices in a plethora of different contexts, we're constantly moving between various states of connectivity. Not only that but there are many parts of the world where 3G and 2G speeds are the norm. To verify our app works well for these consumers we should test that it is performant even on a slower connection.
+Because we use our mobile devices in a plethora of different contexts, we're constantly moving between various states of connectivity. There are also many parts of the world where 3G and 2G speeds are the norm. To verify that our app works well for these consumers, we should test that it is performant even on a slower connection.
 
 To start, let's simulate how the application works on a slow network when the Service Worker is not in play.
 
@@ -429,13 +434,11 @@ self.addEventListener('install', function(event) {
 });
 ```
 
-* From the __Application__ panel, refresh the page
-* Click on __skipWaiting__ to activate the new Serivce Worker
-* Refresh the page again to allow the `fetch` handler to run
+* Refresh the page
 
 The application will pause execution and switch panels over to __Sources__ where the `debugger` statement is now highlighted in `service-worker.js`.
 
-![d960b322c020d6cc.png](img/d960b322c020d6cc.png)
+![2f20258491acfaa8.png](img/2f20258491acfaa8.png)
 
 <aside markdown="1" class="key-point">
 <p><strong>Learn More</strong>: A full explanation of the <strong>Sources</strong> panel is outside the scope of this codelab but you can  <a href="/web/tools/chrome-devtools/debug/?hl=en">learn more about the debugging capabilities of the DevTools</a> on the Google Developers site.</p>
@@ -444,21 +447,30 @@ The application will pause execution and switch panels over to __Sources__ where
 
 There are a ton of useful tools available in this view. One such tool is the __Scope__ inspector, which let's us see the current state of objects in the current function's scope.
 
-* Click on the `event: ExtendableEvent` dropdown
+* Click on the `event: InstallEvent` dropdown
 
-![5116146f838a566.png](img/5116146f838a566.png)
+![3fa715abce820cea.png](img/3fa715abce820cea.png)
 
 From here you can learn all sorts of useful information about the current in-scope objects. For instance, looking at the `type` field you can verify that the current event object is for the `install` event.
 
+* when you've finished exploring the __Scope__ inspector, press the Resume button
+
+![97cd70fb204fa26b.png](img/97cd70fb204fa26b.png)
+
+This allows the script to resume executing after the break. Finally, let's complete the activation of the new service worker.
+
+* Return to the __Service Workers__ section of the __Application__ panel
+* Click on __skipWaiting__ to activate the new Service Worker
+
 ### Using breakpoints instead
 
-If you're already inspecting your code in the __Sources__ panel, you may find it easier to set a breakpoint, versus adding `debugger` statements to your actual files. A breakpoint serves a similar purpose (it freezes execution and let's you inspect the app) but it can be set from within DevTools itself.
+If you're already inspecting your code in the __Sources__ panel, you may find it easier to set a breakpoint, versus adding `debugger` statements to your actual files. A breakpoint serves a similar purpose (it freezes execution and lets you inspect the app) but it can be set from within DevTools itself.
 
 To set a breakpoint you need to click the line number where you'd like the application to halt execution.
 
-* From the __Sources__ panel, scroll down to line 25 of `service-worker.js` and click on the line number
+* From the __Sources__ panel, scroll down to line 39 of `service-worker.js` and click on the line number
 
-![da7b5f76723ca525.png](img/da7b5f76723ca525.png)
+![dabccb06c7231b3e.png](img/dabccb06c7231b3e.png)
 
 This will set a breakpoint at the beginning of the `fetch` handler so you can inspect its event object.
 
@@ -476,9 +488,11 @@ You can see that this `FetchEvent` was requesting the resource at `http://127.0.
 
 * Press the __Resume__ button to allow script execution to continue
 
-![ce7b5e8df4e8bc07.png](img/ce7b5e8df4e8bc07.png)
+![66b08c42b47a9987.png](img/66b08c42b47a9987.png)
 
-After a moment, execution will pause on the same breakpoint. Check the `event.request.url` property and note it now displays `http://127.0.0.1:8887/styles/main.css`. You can continue in this way to watch it request `smiley.svg`, `main.js`, and finally the `manifest.json`.
+After a moment, execution will pause on the same breakpoint. Check the `event.request.url` property and note it now displays `http://127.0.0.1:8887/styles/main.css`. You can continue in this way to watch it request `smiley.svg`,  `main.js`, and finally the `manifest.json`.
+
+When you are finished exploring, remove any breakpoints and comment out the `debugger` call so that they don't interfere with the rest of the lab.
 
 
 ## Testing Push notifications
@@ -495,7 +509,7 @@ You may have noticed a button in the center of the application asking for the us
 ![3e7f08f9d8c1fc5c.png](img/3e7f08f9d8c1fc5c.png)
 
 <aside markdown="1" class="warning">
-<p>The code used to set up this Push subscription is just for demo purposes and should not be used in production. For a thorough guide on setting up Push notifications  <a href="/web/updates/2015/03/push-notifications-on-the-open-web?hl=en">see this post</a> on the Google Developers site.</p>
+<p>The code used to set up this Push subscription is just for demo purposes and should not be used in production. For a thorough guide on setting up Push notifications  <a href="/web/fundamentals/engage-and-retain/push-notifications/">see this post</a> on the Google Developers site.</p>
 </aside>
 
 
@@ -523,12 +537,12 @@ With the handler in place it's easy to simulate a Push event.
 
 * Open the __Application__ panel
 * Refresh the page, when you see the new Service Worker enter the `waiting` phase, click on the __skipWaiting__ button
-* Click on the __Subscribe to Push Notifications__ button
+* Click on the __Subscribe to Push Notifications__ button in the app
 * Accept the permission prompt
 
 ![a8a8fa8d35b0667a.png](img/a8a8fa8d35b0667a.png)
 
-* Finally, click the __Push__ button, next to __Update__ and __Unregister__
+* Finally, click the __Push__ button, next to __Update__ and __Unregister__ back in the __Application__ tab
 
 ![eacd4c5859f5f3ff.png](img/eacd4c5859f5f3ff.png)
 

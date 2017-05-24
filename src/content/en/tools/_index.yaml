@@ -2,6 +2,7 @@
 
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
+title: Tools
 
 landing_page:
   custom_css_path: /web/styles/wf-root.css
@@ -39,14 +40,16 @@ landing_page:
 
   - heading: Libraries
     items:
-    - heading: Service Worker Libraries
+    - heading: Workbox
       description: >
-        Our Service Worker Libraries are provided to help simplify your
-        development experience, that free your app from the network, without
-        having to write any boilerplate service worker code!
+        Workbox is a set of tools and libraries to help you simplify your
+        Progressive Web App development and take advantage of the
+        many powerful features of service worker. It helps you free your app
+        from the network, without having to write any boilerplate service worker
+        code!
       buttons:
       - label: Learn more
-        path: service-worker-libraries
+        path: workbox
     - heading: Material Design Lite
       description: >
         Material Design Lite lets you add a Material Design look and feel to
@@ -94,6 +97,3 @@ landing_page:
       buttons:
       - label: Learn more
         path: https://developers.google.com/speed/pagespeed/module/
-
-
-

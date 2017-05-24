@@ -11,8 +11,8 @@ upper_tabs:
         - include: /web/tools/setup/_toc.yaml
         - include: /web/tools/chrome-devtools/_toc.yaml
         - include: /web/tools/lighthouse/_toc.yaml
-        - title: Service Worker Libraries
-          path: /web/tools/service-worker-libraries/
+        - title: Workbox
+          path: /web/tools/workbox/
         - title: Web Starter Kit
           path: /web/tools/starter-kit/
         - title: Polymer Starter Kit
