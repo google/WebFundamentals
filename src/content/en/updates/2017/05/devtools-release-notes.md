@@ -17,6 +17,15 @@ description: New features and changes coming to DevTools in Chrome 60.
 Welcome! Here's what's new in DevTools in Chrome 60. You can check what
 version of Chrome you're running at `chrome://version`.
 
+Google I/0 '17 is a wrap. Check out Paul Irish's "DevTools: State of the
+Union" talk below to learn more about what the team has been working on.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="PjjlwAvV8Jg"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 ## New features {: #features }
 
 ### New Audits panel, powered by Lighthouse {: #lighthouse }
@@ -106,10 +115,16 @@ entities that caused the activities.
   </figcaption>
 </figure>
 
-### A new keyboard shortcut for Continue to Here {: #continue }
+### A new gesture for Continue to Here {: #continue }
+
+Say you're paused on line 25 of a script, and you want to jump to line 50. In
+the past, you could set a breakpoint on line 50, or right-click the line and
+select **Continue to here**. But now, there's a faster gesture for handling
+this workflow.
 
 When stepping through code, hold <kbd>Command</kbd> (Mac) or <kbd>Control</kbd>
-(Windows, Linux) and then click to continue to that line of code.
+(Windows, Linux) and then click to continue to that line of code. DevTools
+highlights the jumpable destinations in blue.
 
 <figure>
   <img src="/web/updates/images/2017/05/continue.gif"
@@ -118,6 +133,25 @@ When stepping through code, hold <kbd>Command</kbd> (Mac) or <kbd>Control</kbd>
     <b>Figure 5</b>. Continue To Here
   </figcaption>
 </figure>
+
+### Step into async {: #step-into-async }
+
+A big theme for the DevTools team in the near future is to make debugging
+asynchronous code predictable, and to provide you a complete history of
+asynchronous execution.
+
+The [new gesture for Continue to Here](#continue) also works with asynchronous
+code. When you hold <kbd>Command</kbd> (Mac) or <kbd>Control</kbd> (Windows,
+Linux), DevTools highlights jumpable asynchronous destinations in green.
+
+Check out the demo below from the DevTools talk at I/O for an example.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="PjjlwAvV8Jg"
+          data-autohide="1" data-showinfo="0" frameborder="0" 
+          data-start="1060" allowfullscreen>
+  </iframe>
+</div>
 
 ## Changes {: #changes }
 
@@ -161,7 +195,7 @@ available contexts.
   </figcaption>
 </figure>
 
-### Real-time updates in the Coverage tab
+### Real-time updates in the Coverage tab {: #coverage }
 
 When recording code coverage in Chrome 59, the **Coverage** tab would just
 display **Recording**, with no visibility into what code was being used.
@@ -217,7 +251,7 @@ capture async stack traces` command in the [Command Menu][CM].
 [Settings]: /web/tools/chrome-devtools/ui#settings
 [CM]: /web/tools/chrome-devtools/ui#command-menu
 
-## Feedback
+## Feedback {: #feedback }
 
 The best place to discuss any of the features or changes you see here is
 the [google-chrome-developer-tools@googlegroups.com mailing list][ML].
