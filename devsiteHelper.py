@@ -237,7 +237,7 @@ def renderDevSiteContent(content, lang='en'):
     replaceWith = '<iframe class="framebox inherit-locale'
     if fbClass:
      replaceWith += ' ' + fbClass.group(1)
-    replaceWith += + '" '
+    replaceWith += '" '
     replaceWith += 'style="width: 100%;'
     if fbHeight:
       replaceWith += 'height:' + fbHeight.group(1) + ';'
