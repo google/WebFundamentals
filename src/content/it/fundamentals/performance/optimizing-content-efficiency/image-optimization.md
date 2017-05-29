@@ -2,18 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Le immagini costituiscono la maggior parte dei byte scaricati su una pagina Web e occupano spesso una parte significativa di spazio visivo. Di conseguenza, ottimizzare le immagini consente spesso di risparmiare byte e migliorare le prestazioni del sito Web: meno byte deve scaricare il browser, meno traffico si crea sulla larghezza di banda del client, più rapidamente il browser è in grado di scaricare e renderizzare contenuti utili sul monitor.
 
-{# wf_updated_on: 2014-05-09 #}
+{# wf_updated_on: 2017-05-29 #}
 {# wf_published_on: 2014-05-06 #}
 
 # Ottimizzazione delle immagini {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-
-
-Le immagini costituiscono la maggior parte dei byte scaricati su una pagina Web e occupano spesso una parte significativa di spazio visivo. Di conseguenza, ottimizzare le immagini consente spesso di risparmiare byte e migliorare le prestazioni del sito Web: meno byte deve scaricare il browser, meno traffico si crea sulla larghezza di banda del client, più rapidamente il browser è in grado di scaricare e renderizzare contenuti utili sul monitor.
-
-
+Le immagini costituiscono la maggior parte dei byte scaricati da una pagina Web e occupano spesso una parte significativa di spazio visivo. Di conseguenza, ottimizzare le immagini consente spesso di risparmiare byte e migliorare le prestazioni del sito Web: meno byte deve scaricare il browser, meno traffico si crea sulla larghezza di banda del client, più rapidamente il browser è in grado di scaricare e renderizzare contenuti utili sullo schermo.
 
 L'ottimizzazione delle immagini è al contempo un'arte e una scienza: è un'arte, perché non esiste una risposta definitiva su quale sia il miglior modo di comprimere una determinata immagine, ma è anche una scienza, perché tecniche e algoritmi in grado di ridurre significativamente le dimensioni di un'immagine sono davvero numerosi. Per trovare le impostazioni ottimali per un'immagine è necessaria un'analisi attenta di diversi fattori: proprietà del formato, contenuto dei dati codificati, dimensioni in pixel e altro ancora.
 
@@ -30,12 +26,12 @@ La prima domanda che dovresti porti riguarda la capacità di un'immagine di otte
 Dovrai poi valutare se vi sia una tecnologia alternativa in grado di raggiungere i risultati desiderati, ma in maniera più efficace:
 
 * **Effetti CSS** (gradienti, ombreggiature, ecc... ) e animazioni CSS possono essere utilizzati per produrre risorse indipendenti dalla risoluzione, che appaiano sempre nitide a qualsiasi risoluzione e livello di ingrandimento, spesso a una frazione dei byte necessari per un file immagine.
-I * **font web** consentono di utilizzare caratteri splendidi mantenendo al contempo la possibilità di selezionare, cercare e ridimensionare il testo, con un miglioramento significativo nella fruibilità.
+I * **font web** consentono di utilizzare caratteri splendidi mantenendo al contempo la possibilità di selezionare, cercare e ridimensionare il testo, con un miglioramento significativo dell'usabilutà.
 
-Ogni volta che ti trovi a codificare del testo in immagine, fermati e rifletti. Una tipografia qualitativamente alta è fondamentale per un design, un branding e una leggibilità idonei, ma il text-in-images rende l'esperienza dell'utente un'esperienza negativa: il testo non è selezionabile, non ricercabile, non ingrandibile, non accessibile e non idoneo a dispositivi high-DPI. L'utilizzo di font web richiede un [insieme di ottimizzazioni proprio](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/){: .external }, ma risolve tutte le problematiche suddette e rappresenta sempre una scelta migliore per la visualizzazione del testo.
+Ogni volta che ti trovi a codificare del testo in immagine, fermati e rifletti. Una tipografia di alta qualità è fondamentale per un buon design, un branding e una leggibilità idonei, ma il text-in-images rende l'esperienza dell'utente un'esperienza negativa: il testo non è selezionabile, non ricercabile, non ingrandibile, non accessibile e non idoneo a dispositivi high-DPI. L'utilizzo di font web richiede un [insieme di ottimizzazioni proprio](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/), ma risolve tutte le problematiche suddette e rappresenta sempre una scelta migliore per la visualizzare del testo.
 
 
-## Immagini vettoriali vs. immagini raster
+## Immagini Vettoriali vs. Raster
 
 ### TL;DR {: .hide-from-toc }
 - Le immagini vettoriali sono ideali per le forme geometriche
@@ -43,24 +39,29 @@ Ogni volta che ti trovi a codificare del testo in immagine, fermati e rifletti. 
 - Le immagini raster sono consigliabili per visualizzazioni complesse e dettagliate, contenenti numerose forme irregolari
 
 
-Una volta stabilito che il formato ottimale per ottenere l'effetto desiderato è un'immagine, la successiva scelta critica riguarda la selezione del formato idoneo:
+Una volta stabilito che un'immagine è il formato ottimale per ottenere l'effetto desiderato, la successiva scelta critica riguarda la selezione del formato idoneo:
 
-<figure class="attempt-left">
+<div class="attempt-left">
+  <figure>
   <img src="images/vector-zoom.png" alt="Immagine vettoriale ingrandita">
   <figcaption>Vettoriale</figcaption>
-</figure>
-<figure class="attempt-right">
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
   <img src="images/raster-zoom.png" alt="Immagine raster ingrandita">
   <figcaption>Raster</figcaption>
-</figure>
-<div class="clearfix"></div>
+  </figure>
+</div>
 
-* La [grafica vettoriale](http://en.wikipedia.org/wiki/Vector_graphics){: .external } utilizza linee, punti e poligoni per creare un'immagine.
-* La [grafica raster](http://en.wikipedia.org/wiki/Raster_graphics){: .external } crea un'immagine codificando i singoli valori di ogni pixel entro una griglia rettangolare.
+<div style="clear:both;"></div>
+
+* La [grafica vettoriale](http://en.wikipedia.org/wiki/Vector_graphics) utilizza linee, punti e poligoni per creare un'immagine.
+* La [grafica raster](http://en.wikipedia.org/wiki/Raster_graphics) crea un'immagine codificando i singoli valori di ogni pixel entro una griglia rettangolare.
 
 Ciascun formato presenta vantaggi e svantaggi. I formati vettoriali sono ideali per immagini composte da forme geometriche semplici (ad es. loghi, testi, icone e così via), e garantiscono risultati nitidi con qualsiasi risoluzione e impostazione di zoom; ciò li rende ideali per i monitor ad alta risoluzione e le risorse che devono essere visualizzate con dimensioni variabili.
 
-Tuttavia, i formati vettoriali risultano insufficienti per immagini complesse (ad es. una foto): il livello di markup SVG necessario a descrivere tutte le forme può rivelarsi eccessivamente alto e il risultato rischia di non apparire sempre 'fotorealistico'. In tal caso, è consigliabile utilizzare un formato raster, come GIF, PNG, JPEG o uno dei formati più recenti, come JPEG-XR e WebP.
+Tuttavia, i formati vettoriali risultano insufficienti per immagini complesse (ad es. una foto): il livello di markup SVG necessario a descrivere tutte le forme può rivelarsi eccessivamente elevato e il risultato rischia di non apparire sempre 'fotorealistico'. In tal caso, è consigliabile utilizzare un formato raster, come GIF, PNG, JPEG o uno dei formati più recenti, come JPEG-XR e WebP.
 
 Le immagini raster non dispongono della medesima, comoda indipendenza da risoluzione e zoom; eseguendo lo scaling di un'immagine raster, si otterrà una grafica sfocata e frastagliata. Di conseguenza, potrebbe essere necessario salvarne più versioni con risoluzioni diverse per offrire agli utenti un'esperienza ottimale.
 
@@ -68,16 +69,16 @@ Le immagini raster non dispongono della medesima, comoda indipendenza da risoluz
 ## Implicazioni dei monitor ad alta risoluzione
 
 ### TL;DR {: .hide-from-toc }
-- Le risoluzioni più alte del monitor contengono più device pixel per CSS pixel
+- I monitor ad alta risoluzione contengono più device pixel  dei pixel CSS
 - Le immagini ad alta risoluzione richiedono un numero significativamente più alto di pixel e byte
 - Le tecniche di ottimizzazione delle immagini sono le stesse, indipendentemente dalla risoluzione
 
 
-Quando si parla di pixel immagine, dobbiamo fare una distinzione tra diversi tipi di pixel: CSS pixel e device pixel. Un solo CSS pixel può contenere più device pixel; ad esempio, un solo CSS pixel può corrispondere a un unico device pixel o a più device pixel. Qual è la differenza? Più device pixel ci sono, maggiore è il dettaglio dei contenuti visualizzati sul monitor.
+Quando si parla di pixel immagine, dobbiamo fare una distinzione tra diversi tipi di pixel: CSS pixel e device pixel. Un solo CSS pixel può contenere più device pixel; ad esempio, un solo CSS pixel può corrispondere a un unico device pixel o a più device pixel. Qual è la differenza? Più device pixel ci sono, maggiore sarà il dettaglio dei contenuti visualizzati sul monitor.
 
-<img src="images/css-vs-device-pixels.png" class="center" alt="CSS vs device pixel">
+<img src="images/css-vs-device-pixels.png"  alt="CSS vs device pixels">
 
-I monitor High DPI (HiDPI) offrono risultati straordinari, ma ad un ovvio compromesso: le nostre immagini richiederanno maggiori dettagli per poter trarre vantaggio dal maggior numero di pixel. La buona notizia è che le immagini vettoriali sono ideali per tale obiettivo, poiché se ne può eseguire il rendering con qualsiasi risoluzione, con risultati sempre nitidi; certo, potremmo dover sostenere costi maggiori di elaborazione per affinare i dettagli, ma la risorsa sottostante è la medesima ed è indipendente dalla risoluzione.
+I monitor High DPI (HiDPI) offrono risultati splendidi, ma ad un ovvio compromesso: le nostre immagini richiederanno maggiori dettagli per poter trarre vantaggio dal maggior numero di pixel. La buona notizia è che le immagini vettoriali sono ideali per tale obiettivo, poiché se ne può eseguire il rendering a qualsiasi risoluzione, con risultati sempre nitidi; certo, potremmo dover sostenere costi maggiori di elaborazione per affinare i dettagli, ma la risorsa sottostante è la medesima ed è indipendente dalla risoluzione.
 
 Dall'altro lato, le immagini raster presentano una sfida molto più ampia, poiché codifica i dati immagine sulla base del singolo pixel. Di conseguenza, maggiore è il numero di pixel, maggiori sono le dimensioni file di un'immagine raster. Prendiamo ad esempio la differenza tra una foto visualizzata a 100x100 (CSS) pixel:
 
@@ -108,16 +109,15 @@ Dall'altro lato, le immagini raster presentano una sfida molto più ampia, poich
 </tbody>
 </table>
 
-Raddoppiando la risoluzione del monitor, il numero totale di pixel aumenta con esponente quattro: il doppio del numero di pixel orizzontali moltiplicato per il doppio del numero di pixel verticali. Di conseguenza, un monitor '2x' non solo raddoppia, ma quadruplica il numero di pixel necessari!
+Raddoppiando la risoluzione del monitor, il numero totale di pixel aumenta del fattore quattro: il doppio del numero di pixel orizzontali moltiplicato per il doppio del numero di pixel verticali. Di conseguenza, un monitor '2x' non solo raddoppia, ma quadruplica il numero di pixel necessari!
 
-Che cosa significa dunque in pratica? I monitor ad alta risoluzione ci consentono di visualizzare immagini splendide, in grado di valorizzare al massimo un prodotto. Tuttavia, essi richiedono anche delle immagini ad alta risoluzione: scegli immagini vettoriali laddove possibile, poiché sono indipendenti dalla risoluzione e offrono sempre risultati nitidi. Nel caso in cui sia invece necessaria un'immagine raster, utilizza e ottimizza più varianti di ogni immagine - continua a leggere per maggiori dettagli.
-
+Che cosa significa dunque in pratica? I monitor ad alta risoluzione ci consentono di visualizzare immagini splendide, in grado di valorizzare al massimo un prodotto. Tuttavia, essi richiedono anche delle immagini ad alta risoluzione: scegli immagini vettoriali laddove possibile, poiché sono indipendenti dalla risoluzione e offrono sempre risultati nitidi. Nel caso in cui sia invece necessaria un'immagine raster, utilizza e ottimizza più varianti di imagewith con l'aiuto di [`srcset` and `picture`](/web/fundamentals/design-and-ui/media/images#images-in-markup).
 
 ## Ottimizzazione di immagini vettoriali
 
 ### TL;DR {: .hide-from-toc }
 - SVG è un formato immagine basato su XML
-- È consigliabile minimizzare i file SVG per ridurne le dimensioni
+- È consigliabile minificare i file SVG per ridurne le dimensioni
 - È consigliabile comprimere i file SVG con GZIP
 
 
@@ -149,7 +149,7 @@ Nel caso illustrato, svgo riduce le dimensioni del file SVG generato con Illustr
 - I compressori di immagini si avvalgono di diverse tecniche per ridurre il numero di bit necessari per pixel, riducendo quindi le dimensioni del file immagine
 
 
-Un'immagine raster consiste semplicemente in una griglia bidimensionale di singoli 'pixel'; ad es., un'immagine di 100x100 pixel è una sequenza di 10.000 pixel. Ogni pixel contiene a sua volta i valori '[RGBA](http://en.wikipedia.org/wiki/RGBA_color_space){: .external }': (R) canale rosso (red channel), (G) canale verde (green channel), (B) canale blu (blue channel e (A) canale alfa (della trasparenza - alpha channel).
+Un'immagine raster consiste semplicemente in una griglia bidimensionale di singoli 'pixel'; ad es., un'immagine di 100x100 pixel è una sequenza di 10.000 pixel. Ogni pixel contiene a sua volta i valori "[RGBA](http://en.wikipedia.org/wiki/RGBA_color_space)": (R) canale rosso (red channel), (G) canale verde (green channel), (B) canale blu (blue channel e (A) canale alfa (della trasparenza - alpha channel).
 
 Internamente, il browser attribuisce 256 valori (colori) a ogni canale, che si traducono in 8 bit per canale (2 ^ 8 = 256) e 4 byte per pixel (4 canali x 8 bit = 32 bit = 4 byte). Di conseguenza, conoscendo le dimensioni della griglia, possiamo facilmente calcolare le dimensioni del file.
 
@@ -197,21 +197,21 @@ Note: Oltre a ciò, indipendentemente dal formato immagine utilizzato per il tra
 </tbody>
 </table>
 
-39 KB per un'immagine di 100x100 pixel possono non sembrare molti, ma le dimensioni del file aumentano rapidamente per immagini più grandi, rendendo tali risorse sia lente che costose da scaricare. Per fortuna, quello che abbiamo descritto finora è il formato immagine 'non compresso'. Che cosa possiamo fare per ridurre le dimensioni del file immagine?
+39 KB per un'immagine di 100x100 pixel possono non sembrare molti, ma le dimensioni del file aumentano rapidamente per immagini più grandi, rendendo tali risorse sia lente che costose da scaricare. Per fortuna, quello che abbiamo descritto finora è il formato immagine "non compresso". Che cosa possiamo fare per ridurre le dimensioni del file immagine?
 
-Una strategia semplice consiste nel ridurre la profondità di bit (bit depth) dell'immagine da 8 bit per canale a una palette di colori inferiore: 8 bit per canale significa 256 valori per canale, per un totale di 16.777.216 (2563) colori. Che cosa succederebbe se riducessimo la palette a 256 colori? Avremmo bisogno di soli 8 bit totali per i canali RGB, risparmiando immediatamente due byte per pixel, ovvero con un risparmio di compressione del 50% rispetto ai 4 byte per pixel originali!
+Una strategia semplice consiste nel ridurre la profondità di bit ("bit depth") dell'immagine da 8 bit per canale a una palette di colori inferiore: 8 bit per canale significa 256 valori per canale, per un totale di 16.777.216 (2563) colori. Che cosa succederebbe se riducessimo la palette a 256 colori? Avremmo bisogno di soli 8 bit totali per i canali RGB, risparmiando immediatamente due byte per pixel, ovvero con un risparmio di compressione del 50% rispetto ai 4 byte per pixel originali!
 
-<img src="images/artifacts.png" class="center" alt="Artefatti di compressione">
+<img src="images/artifacts.png" alt="Artefatti di compressione">
 
 Note: Da sinistra a destra (PNG): 32-bit (16M di colori), 7-bit (128 colori), 5-bit (32 colori). Immagini complesse con transizioni di colore graduali (gradienti, cielo, ecc... ) richiedono palette di colori più ampie per evitare artefatti visivi come l'effetto pixel del cielo nella visualizzazione a 5 bit. Al contrario, se l'immagine utilizza soltanto alcuni colori, una palette ampia spreca soltanto bit preziosi!
 
-Una volta ottimizzati i dati memorizzati nei singoli pixel, possiamo farci ancora più furbi e osservare anche i pixel vicini: scopriremo così che molte immagini, in particolare le foto, hanno molti pixel vicini con colori simili, ad esempio per il cielo, per trame ripetitive, e così via. Utilizzando queste informazioni a nostro vantaggio, il compressore può applicare una '[codifica delta](http://en.wikipedia.org/wiki/Delta_encoding){: .external }', grazie alla quale, invece di immagazzinare i singoli valori per ogni pixel, possiamo immagazzinare la differenza tra pixel vicini: se i pixel adiacenti sono uguali, delta sarà 'zero', e dovremo immagazzinare un solo bit! Ma perché fermarsi qui?
+Una volta ottimizzati i dati memorizzati nei singoli pixel, possiamo farci ancora più furbi e osservare anche i pixel vicini: scopriremo così che molte immagini, in particolare le foto, hanno molti pixel vicini con colori simili, ad esempio per il cielo, per trame ripetitive, e così via. Utilizzando queste informazioni a nostro vantaggio, il compressore può applicare una "[codifica delta](http://en.wikipedia.org/wiki/Delta_encoding)", grazie alla quale, invece di immagazzinare i singoli valori per ogni pixel, possiamo immagazzinare la differenza tra pixel vicini: se i pixel adiacenti sono uguali, delta sarà 'zero', e dovremo immagazzinare un solo bit! Ma perché fermarsi qui?
 
 L'occhio umano ha diversi livelli di sensibilità a colori diversi: possiamo ottimizzare i nostri colori tenendo conto di ciò e riducendo o aumentando la relativa palette.
 I pixel 'adiacenti' formano una griglia bidimensionale, il che significa che ogni pixel ha più vicini: questo ci consente di migliorare ulteriormente la codifica delta.
 Invece di guardare soltanto ai vicini diretti di ogni pixel, possiamo considerare interi blocchi di pixel vicini e codificare blocchi diversi con impostazioni diverse. E così via...
 
-Come vedi, l'ottimizzazione delle immagini si fa rapidamente complessa (o divertente, a seconda della tua prospettiva) e rappresenta un'area attiva di ricerca accademica e commerciale. Le immagini occupano molti byte e si può ottenere molto sviluppando tecniche di compressione migliori! Se sei curioso di saperne di più, visita la [pagina Wikipedia](http://en.wikipedia.org/wiki/Image_compression){: .external } o consulta il [WebP compression techniques whitepaper](/speed/webp/docs/compression) per un esempio pratico.
+Come vedi, l'ottimizzazione delle immagini si fa rapidamente complessa (o divertente, a seconda della tua prospettiva) e rappresenta un'area attiva di ricerca accademica e commerciale. Le immagini occupano molti byte e si può ottenere molto sviluppando tecniche di compressione migliori! Se sei curioso di saperne di più, visita la [pagina Wikipedia](http://en.wikipedia.org/wiki/Image_compression) o consulta il [WebP compression techniques whitepaper](/speed/webp/docs/compression) per un esempio pratico.
 
 In conclusione, ci troviamo di nuovo davanti ad argomenti molto interessanti ma prettamente accademici: in che modo tutto ciò può aiutarci ad ottimizzare le immagini sulle nostre pagine? Non siamo certamente in grado di poter inventare nuove tecniche di compressione, ma è importante capire le dimensioni del problema: pixel RGBA, profondità di bit e diverse tecniche di ottimizzazione. Tali concetti sono tutti fondamentali da comprendere e tenere a mente prima di discutere dei diversi formati di immagni raster.
 
@@ -219,24 +219,24 @@ In conclusione, ci troviamo di nuovo davanti ad argomenti molto interessanti ma 
 ## Compressione delle immagini lossless vs lossy
 
 ### TL;DR {: .hide-from-toc }
-- In base al funzionamento della nostra vista, le immagini sono perfette per la compressione lossy'
+- In base al funzionamento della nostra vista, le immagini sono perfette per la compressione lossy
 - L'ottimizzazione delle immagini è una funzione di compressione lossy e lossless
 - Le differenze tra i diversi formati immagine sono dovute alle diverse modalità e tipologie di algoritmi lossy e lossless utilizzati per l'ottimizzazione
-- Non esiste un formato o un ''quality setting'' migliore in assoluto per tutte le immagini: ogni combinazione tra compressore e immagini produce un risultato unico'
+- Non esiste un formato o un "quality setting" migliore in assoluto per tutte le immagini: ogni combinazione tra compressore e immagini produce un risultato unico
 
 
-Per alcuni tipi di dati, quali il codice sorgente di una pagina o un file eseguibile, è fondamentale che un compressore non alteri né perda alcuna informazione originale: un singolo bit di dati mancante o sbagliato può modificare completamente il contenuto del file o, ancora peggio, corromperlo irrimediabilmente. Per alcuni altri tipi di dati, quali immagini, audio e video, può essere assolutamente sufficiente fornire una rappresentazione 'approssimativa' dei dati originali.
+Per alcuni tipi di dati, quali il codice sorgente di una pagina o un file eseguibile, è fondamentale che un compressore non alteri né perda alcuna informazione originale: un singolo bit di dati mancante o sbagliato può modificare completamente il contenuto del file o, ancora peggio, corromperlo irrimediabilmente. Per alcuni altri tipi di dati, quali immagini, audio e video, può essere assolutamente sufficiente fornire una rappresentazione "approssimativa" dei dati originali.
 
 Di fatto, per la modalità di funzionamento della vista, spesso possiamo cavarcela eliminando alcune informazioni su ogni pixel per poter ridurre le dimensioni file di un'immagine; ad es., i nostri occhi hanno una sensibilità diversa ai diversi colori, per cui possiamo utilizzare meno bit per codificarne alcuni. Di conseguenza, una tipica pipeline di ottimizzazione delle immagini è composta da due fasi:
 
-1. L'immagine viene elaborata con un filtro '[lossy](http://en.wikipedia.org/wiki/Lossy_compression){: .external }' che elimina alcuni dati dei pixel
-1. L'immagine viene elaborata con un filtro '[lossless](http://en.wikipedia.org/wiki/Lossless_compression){: .external }' che comprime i dati dei pixel
+1. L'immagine viene elaborata con un filtro "[lossy](http://en.wikipedia.org/wiki/Lossy_compression)" che elimina alcuni dati dei pixel
+1. L'immagine viene elaborata con un filtro "[lossless](http://en.wikipedia.org/wiki/Lossless_compression)" che comprime i dati dei pixel
 
 **La prima fase è facoltativa, e l'algoritmo esatto dipende dal particolare formato immagine, ma è importante capire che qualsiasi immagine può essere sottoposta a compressione lossy per ridurne le dimensioni.** Di fatto, la differenza tra i diversi formati immagine, quali GIF, PNG, JPEG e altri, risiede nella combinazione degli algoritmi specifici che utilizzano (o omettono) nell'applicazione delle fasi lossy e lossless.
 
 Dunque, qual è la configurazione 'ottimale' dell'ottimizzazione lossy e lossless? La risposta dipende dal contenuto dell'immagine e dai tuoi stessi criteri, quale il rapporto tra dimensioni del file e artefatti introdotti dalla compressione lossy: in alcuni casi, è possibile che tu preferisca saltare l'ottimizzazione lossy per comunicare ogni dettaglio in modo fedele, mentre in altri potrai applicare un'ottimizzazione lossy incisiva per ridurre le dimensioni del file immagine. Dipende tutto dal tuo giudizio e dal contesto; non esiste una regola universale.
 
-<img src="images/save-for-web.png" class="center" alt="Salvataggio per il web">
+<img src="images/save-for-web.png" class="attempt-right" alt="Salvataggio per il web">
 
 Per dare un esempio pratico, quando si utilizza un formato lossy come il JPEG, il compressore di norma offre un'impostazione 'qualità' personalizzabile (ad es. lo slider Qualità offerto dalla funzione 'Save for Web' in Adobe Photoshop), che di norma è un numero compreso tra 1 e 100 che controlla il funzionamento interno dell'insieme specifico di algoritmi lossy e lossless. Per un risultato migliore, prova a testare diverse impostazioni di qualità sulle tue immagini, e non temere di diminuirla: i risultati visivi sono spesso ottimi e le dimensioni del file possono ridursi notevolmente.
 
