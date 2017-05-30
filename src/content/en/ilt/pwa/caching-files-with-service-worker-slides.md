@@ -11,6 +11,6 @@ browser. This video covers the basics of the Cache API and outlines a few common
 patterns for caching resources.
 
 {% setvar videoId "7jsg1Mb7PB4" %}
-{% setvar slidesId "1yKsDW9wu5xbx2pXDKlSBTg7h1i48CoQd2A8QvHw-lag" %}
+{% setvar slidesId "1J6LubbHsG5EcMZCX1RI5xm3xDYrsUZdPV3hnOHTd16Y" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
