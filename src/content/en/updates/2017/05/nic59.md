@@ -28,7 +28,7 @@ description: What's new in Chrome 59 for developers? Headless Chrome, Native Not
   [image capture API](#imagecapture), and there’s plenty more!
  
 Note: Want the full list of changes? Check out the
-[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/58.0.3029.81..59.0.3029.81?pretty=fuller&n=10000)
+[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/58.0.3029.81..59.0.3071.80?pretty=fuller&n=10000)
 
 <div class="clearfix"></div>
 
@@ -96,7 +96,11 @@ sample code you can use to get started right away.
 
 ## And more! {: #more }
 
-These are just a few of the changes in Chrome 58 for developers.  
+* The [`MediaError.message`](https://googlechrome.github.io/samples/media/error-message.html)
+  string provides, if available, any additional error message detail to help
+  web developers debugging media player errors.
+
+These are just a few of the changes in Chrome 59 for developers.  
 
 If you enjoyed this video, check out
 [Designer vs. Developer](https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ),
