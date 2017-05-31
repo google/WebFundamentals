@@ -15,7 +15,7 @@ description: What's new in Chrome 59 for developers? Headless Chrome, Native Not
 <div class="clearfix"></div>
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="y5-hH8DnqMk"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="zNoc4zEkWPo"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -88,7 +88,7 @@ take the photo, switch back to the browser and upload the photo.
  
 With the new Image Capture API in Chrome 59, you have to access the full
 resolution capabilities of any available camera. The API provides control of
-features such as zoom, focus, contrast, ISO and even white balance.
+features such as zoom, brightness, contrast, ISO and even white balance.
  
 Check [Sam’s post](/web/updates/2016/12/imagecapture) for full details and
 sample code you can use to get started right away.
