@@ -11,6 +11,6 @@ video explains the Notifications API and the Push API, and how they are used to
 implement push notifications in Progressive Web Apps.
 
 {% setvar videoId "ggUY0Q4f5ok" %}
-{% setvar slidesId "1vd6cFL0Vg3-ciDq2xpN0HxN_UowyKjJsTrCOdulkExM" %}
+{% setvar slidesId "11hkMcMKFIZkQMmzCDlmKSnRluTwYWo9pxf0Zi6YVD_o" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
