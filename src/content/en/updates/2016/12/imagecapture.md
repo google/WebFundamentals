@@ -115,7 +115,7 @@ this category, for example:
 
 Note: `MediaStreamTrack.getCapabilities()` and `.getSettings()` are synchronous
 but the capabilities are only available when the camera starts actually
-streaming, so make sure there is a delay between them method and
+streaming, so make sure there is a delay between calling these methods and
 `getUserMedia()`, see [crbug.com/711524](https://crbug.com/711524).
 
 "Non-Live" camera capabilities and settings are manipulated via the
