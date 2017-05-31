@@ -11,6 +11,6 @@ notifications. This video covers what a Service Worker is, what it can do, and
 the Service Worker lifecycle in the browser.
 
 {% setvar videoId "jVfXiv03y5c" %}
-{% setvar slidesId "1bFVDRa71JK0ilr6lS6y9Twqp9gy8jzV1O8FFbG4A3qk" %}
+{% setvar slidesId "1Sbl9RWwWetEhmYkFJ8835-Sr5hvIY6gWRhFd1DYUlfM" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
