@@ -10,10 +10,11 @@ description: Image Capture is an API to control camera settings and take photos.
 
 # Take Photos and Control Camera Settings {: .page-title }
 
+{% include "web/_shared/contributors/mcasas.html" %}
 {% include "web/_shared/contributors/samdutton.html" %}
 
 Image Capture is an API to capture still images and configure camera hardware
-settings.  This API is available in Chrome 59 on Android and desktop.
+settings. This API is available in Chrome 59 on Android and desktop.
 
 The API enables control over camera features such as zoom, brightness,
 contrast, ISO and white balance. Best of all, Image Capture allows you to access
@@ -45,8 +46,9 @@ You can try out this code from the DevTools console.
 
 Note: To choose between different cameras, such as the front and back camera on
 a phone, get a list of available devices via the
-`MediaDevices.enumerateDevices()` method, then set `deviceId` in `getUserMedia()`
-constraints as per the demo [here](https://webrtc.github.io/samples/src/content/devices/input-output/).
+`navigator.mediaDevices.enumerateDevices()` method, then set `deviceId` in
+`getUserMedia()` constraints as per the demo
+[here](https://webrtc.github.io/samples/src/content/devices/input-output/).
 
 ## Capture
 
@@ -86,7 +88,7 @@ still-image capabilities.  For example:
 
 There are a number of ways to manipulate the capture settings, depending on
 whether the changes would be reflected in the `MediaStreamTrack` or can only be
-seen after `takePhoto()`.  For example, a change in `zoom` level is immediately
+seen after `takePhoto()`. For example, a change in `zoom` level is immediately
 propagated to the `MediaStreamTrack` whereas the red eye reduction, when set, is
 only applied when the photo is being taken.
 
@@ -97,34 +99,39 @@ dictionary with the concrete supported capabilities and the ranges or allowed
 values, e.g. supported zoom range or allowed white balance modes.
 Correspondingly, `MediaStreamTrack.getSettings()` returns a
 [`MediaTrackSettings`](https://w3c.github.io/mediacapture-image/#mediatracksettings-section)
-with the concrete current settings.  Zoom, brightness, and torch mode belong to
+with the concrete current settings. Zoom, brightness, and torch mode belong to
 this category, for example:
 
     var zoomSlider = document.querySelector('input[type=range]');
     // ...
-    const capabilities = mediaStreamTrack.getCapabilities()
-    const settings = mediaStreamTrack.getSettings()
+    const capabilities = mediaStreamTrack.getCapabilities();
+    const settings = mediaStreamTrack.getSettings();
     if (capabilities.zoom) {
       zoomSlider.min = capabilities.zoom.min;
       zoomSlider.max = capabilities.zoom.max;
       zoomSlider.step = capabilities.zoom.step;
-      zoomSlider.value = videoTrack.getSettings().zoom;
+      zoomSlider.value = settings.zoom;
     }
+
+Note: `MediaStreamTrack.getCapabilities()` and `.getSettings()` are synchronous
+but the capabilities are only available when the camera starts actually
+streaming, so make sure there is a delay between them method and
+`getUserMedia()`, see [crbug.com/711524](https://crbug.com/711524).
 
 "Non-Live" camera capabilities and settings are manipulated via the
 `ImageCapture` object: `ImageCapture.getPhotoCapabilities()` returns a
 [`PhotoCapabilities`](https://w3c.github.io/mediacapture-image/##photocapabilities-section)
-object that provides access to non live available camera options.  The photo
+object that provides access to non live available camera options. The photo
 resolution, red eye reduction and flash mode (except torch) belong this section,
 for example:
 
     var widthSlider = document.querySelector('input[type=range]');
     // ...
     imageCapture.getPhotoCapabilities()
-      .then(function(caps) {
-        widthSlider.min = theCapabilities.imageWidth.min;
-        widthSlider.max = theCapabilities.imageWidth.max;
-        widthSlider.value = theCapabilities.imageWidth.current;
+      .then(function(photoCapabilities) {
+        widthSlider.min = photoCapabilities.imageWidth.min;
+        widthSlider.max = photoCapabilities.imageWidth.max;
+        widthSlider.step = photoCapabilities.imageWidth.step;
       })
       .catch(error => console.error('getPhotoCapabilities() error:', error));
 
@@ -147,7 +154,7 @@ dictionary, for example:
 
     var widthSlider = document.querySelector('input[type=range]');
     imageCapture.takePhoto({ imageWidth : widthSlider.value })
-      .blob => {
+      .then(blob => {
         img.src = URL.createObjectURL(blob);
       })
       .catch(error => console.error('Uh, oh, takePhoto() error:', error));
