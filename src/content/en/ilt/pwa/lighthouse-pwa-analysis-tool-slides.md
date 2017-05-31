@@ -11,6 +11,6 @@ for Progressive Web Apps. This video provides a brief explanation of how to use
 lighthouse both as a Chrome extension and from the command line.
 
 {% setvar videoId "UVhJtr4_gK8" %}
-{% setvar slidesId "15qTZjhk6cfr-qnH5dSBNJ9SjDmYTMelyfEq7UJVk0Zc" %}
+{% setvar slidesId "19CtAtEmdpF3yM2C7cqJo8pZnpFr1w3jr5XNfhljzrmk" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
