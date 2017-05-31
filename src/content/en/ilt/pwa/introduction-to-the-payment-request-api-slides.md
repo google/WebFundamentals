@@ -12,6 +12,6 @@ PaymentRequest API works to provide a standardized alternative to checkout
 forms.
 
 {% setvar videoId "e-pc0SyzIHw" %}
-{% setvar slidesId "16_g5RhUf8xoxPhsiQkTCkpFVXBkk-hSMqsZ0CKvcNqQ" %}
+{% setvar slidesId "1_YPcwqjLk9-sFuvBuzEOWetaj60S_2HxCM5-erlYIVM" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
