@@ -11,6 +11,6 @@ performance and responsiveness. This video describes a set of techniques to make
 your images load as quickly as possible and work well in any form factor.
 
 {% setvar videoId "ojZRjhcR3yw" %}
-{% setvar slidesId "1rXdSHcN7i11AApafDfqb_uCKNPuyt89WuDFI07Bejqc" %}
+{% setvar slidesId "1meuVesCbraA0vQsFT_W45p5xw4dGTAGPkkktwh5iUII" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
