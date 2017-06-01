@@ -63,6 +63,7 @@ For example:
     imageCapture.takePhoto()
       .then(blob => {
         img.src = URL.createObjectURL(blob);
+        img.onload = () => { URL.revokeObjectURL(this.src); }
       })
       .catch(error => console.error('takePhoto() error:', error));
 
@@ -156,6 +157,7 @@ dictionary, for example:
     imageCapture.takePhoto({ imageWidth : widthSlider.value })
       .then(blob => {
         img.src = URL.createObjectURL(blob);
+        img.onload = () => { URL.revokeObjectURL(this.src); }
       })
       .catch(error => console.error('Uh, oh, takePhoto() error:', error));
 
