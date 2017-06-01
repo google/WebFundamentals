@@ -14,10 +14,16 @@ description: New features and changes coming to DevTools in Chrome 59.
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Welcome to another installment of the DevTools release notes. Here's what's
-new for Chrome 59.
+Welcome to another installment of the DevTools release notes. Watch the video
+below or read on to see what's new in Chrome DevTools in Chrome 59!
 
 Note: You can check which version of Chrome you're running at `chrome://help`.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="4mx1m7UbBR0"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Highlights {: #highlights }
 
