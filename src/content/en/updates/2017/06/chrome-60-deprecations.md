@@ -34,6 +34,29 @@ Although this change was implemented for Chrome 60, it is has since been merged 
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=720283)
 
+## CSS
+
+### Make shadow-piercing descendant combinator behave like descendent combinator
+
+The shadow-piercing descendant combinator (`>>>`), part of CSS Scopting Module
+Level 1, was intended to match the children of a particular ancestor element
+even when they appeared inside of a shadow tree. This had some limitations.
+First, [per the spec](https://drafts.csswg.org/css-scoping/#deep-combinator), it
+could only be used in JavaScript calls such as `querySelector()` and did not
+work in stylesheets. More importantly, browser vendors were unable to make it
+work beyond one level of the Shadow DOM.
+
+Consequently, the descendant combinator has been removed from relevant specs
+including Shadow DOM v1. Rather than break web pages by removing this selector
+from Chromium, we've chosen instead to alias the shadow-piercing descendent
+combinator to the descendant combinator. The original behavior was
+[deprecated in Chrome 45](https://www.chromestatus.com/features/6750456638341120).
+The new behavior is implemented in Chrome 60.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/HX5Y8Ykr5Ns) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/4964279606312960) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=489954)
+
 ## JavaSCript
 
 ### Move getContextAttributes() behind a flag
