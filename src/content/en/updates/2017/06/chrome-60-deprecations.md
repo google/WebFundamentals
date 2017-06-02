@@ -26,6 +26,14 @@ The [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/ZD3NWqkk-bo/discussion) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=641526)
 
+### Temporarily remove navigator.setBeacon()
+
+The `navigator.setBeacon()` function has been available [since Chrome 39](https://www.chromestatus.com/feature/5517433905348608). As originally implemented, the function's `data` argument could contain any arbitrary blob whose type is not CORS-safelisted. We believe this is a potential security thread, though no on has yet tried to exploit it. Because we do NOT have a reasonable immediate fix for it, the `sendBeacon()` function has been disabled until further notice. 
+
+Although this change was implemented for Chrome 60, it is has since been merged back to Chrome 59.
+
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=720283)
+
 ## JavaSCript
 
 ### Move getContextAttributes() behind a flag
@@ -33,7 +41,6 @@ The [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto
 The `getContextAttributes()` function has been supported on [`CanvasRenderingContext2D`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) since 2013. However the feature was not part of any standard and has not become part of one since that time. It should have been implemented behind the `--enable-experimental-canvas-features` command line flag, but was mistakenly not. In Chrome 60 this oversight has been corrected. It's believed that this change is safe, since there's no data showing that anyone is using the method.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=696005)
-
 
 
 ### Remove WEBKIT_KEYFRAMES_RULE and WEBKIT_KEYFRAME_RULE
