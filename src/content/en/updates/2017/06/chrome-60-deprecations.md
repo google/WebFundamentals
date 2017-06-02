@@ -26,6 +26,23 @@ The [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/ZD3NWqkk-bo/discussion) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=641526)
 
+
+### Remove content-initiated top frame navigations to data URLs
+
+Because of their unfamilliarity to non-technical browser users, we're
+increasingly seeing the `data:` scheme being used in spoofing and phishing
+attacks. To prevent this, we're blocking web pages from loading using `data:`
+from the top frame. This applies to `&lt;a&gt;` tags, `window.open`,
+`window.location` and similar mechanisms. The `data:` scheme will still work for
+resources loaded below by a page.
+
+This feature was deprecated in Chrome 58 and is now removed.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/GbVcuwg_QjM/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5669602927312896) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=684011&desc=2)
+
+
 ### Temporarily remove navigator.setBeacon()
 
 The `navigator.setBeacon()` function has been available [since Chrome 39](https://www.chromestatus.com/feature/5517433905348608). As originally implemented, the function's `data` argument could contain any arbitrary blob whose type is not CORS-safelisted. We believe this is a potential security thread, though no on has yet tried to exploit it. Because we do NOT have a reasonable immediate fix for it, the `sendBeacon()` function has been disabled until further notice. 

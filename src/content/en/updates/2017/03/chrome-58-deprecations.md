@@ -53,6 +53,21 @@ applied. The old behavior was deprecated in Chrome 57, and is now removed.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5760965337415680) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=659464)
 
+## Remove content-initiated top frame navigations to data URLs
+
+Because of their unfamilliarity to non-technical browser users, we're
+increasingly seeing the `data:` scheme being used in spoofing and phishing
+attacks. To prevent this, we're blocking web pages from loading using `data:`
+from the top frame. This applies to `&lt;a&gt;` tags, `window.open`,
+`window.location` and similar mechanisms. The `data:` scheme will still work for
+resources loaded below by a page.
+
+This feature will be removed in Chrome 60.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/GbVcuwg_QjM/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5669602927312896) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=684011&desc=2)
+
 ## Remove deprecated names for motion path properties
 
 Motion path CSS properties allow authors to animate any graphical object along
