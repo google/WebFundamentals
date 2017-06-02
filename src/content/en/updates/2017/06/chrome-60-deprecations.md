@@ -21,7 +21,11 @@ which is in beta as of June 8. This list is subject to change at any time.
 
 ### crypto.subtle now requires a secure origin
 
-The [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) which has been supported since Chrome 37 has always worked on non-secure origins. Because of Chrome's long-standing policy of [prefering secure origins for powerful features](https://sites.google.com/a/chromium.org/dev/Home/chromium-security/prefer-secure-origins-for-powerful-new-features?pli=1), `crypto.subtle` is no only visible on secure origins.
+The [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) 
+which has been supported since Chrome 37 has always worked on non-secure
+origins. Because of Chrome's long-standing policy of
+[prefering secure origins for powerful features](https://sites.google.com/a/chromium.org/dev/Home/chromium-security/prefer-secure-origins-for-powerful-new-features?pli=1),
+`crypto.subtle` is no only visible on secure origins.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/ZD3NWqkk-bo/discussion) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=641526)
@@ -45,9 +49,16 @@ This feature was deprecated in Chrome 58 and is now removed.
 
 ### Temporarily remove navigator.setBeacon()
 
-The `navigator.setBeacon()` function has been available [since Chrome 39](https://www.chromestatus.com/feature/5517433905348608). As originally implemented, the function's `data` argument could contain any arbitrary blob whose type is not CORS-safelisted. We believe this is a potential security thread, though no on has yet tried to exploit it. Because we do NOT have a reasonable immediate fix for it, the `sendBeacon()` function has been disabled until further notice. 
+The `navigator.setBeacon()` function has been available
+[since Chrome 39](https://www.chromestatus.com/feature/5517433905348608). 
+As originally implemented, the function's `data` argument could contain any
+arbitrary blob whose type is not CORS-safelisted. We believe this is a potential
+security thread, though no on has yet tried to exploit it. Because we do NOT
+have a reasonable immediate fix for it, the `sendBeacon()` function has been
+disabled until further notice.
 
-Although this change was implemented for Chrome 60, it is has since been merged back to Chrome 59.
+Although this change was implemented for Chrome 60, it is has since been merged
+back to Chrome 59.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=720283)
 
@@ -70,7 +81,7 @@ combinator to the descendant combinator. The original behavior was
 [deprecated in Chrome 45](https://www.chromestatus.com/features/6750456638341120).
 The new behavior is implemented in Chrome 60.
 
-[Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/HX5Y8Ykr5Ns) &#124;
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/HX5Y8Ykr5Ns/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4964279606312960) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=489954)
 
@@ -78,7 +89,13 @@ The new behavior is implemented in Chrome 60.
 
 ### Move getContextAttributes() behind a flag
 
-The `getContextAttributes()` function has been supported on [`CanvasRenderingContext2D`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) since 2013. However the feature was not part of any standard and has not become part of one since that time. It should have been implemented behind the `--enable-experimental-canvas-features` command line flag, but was mistakenly not. In Chrome 60 this oversight has been corrected. It's believed that this change is safe, since there's no data showing that anyone is using the method.
+The `getContextAttributes()` function has been supported on
+[`CanvasRenderingContext2D`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
+since 2013. However the feature was not part of any standard and has not become
+part of one since that time. It should have been implemented behind the
+`--enable-experimental-canvas-features` command line flag, but was mistakenly
+not. In Chrome 60 this oversight has been corrected. It's believed that this
+change is safe, since there's no data showing that anyone is using the method.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=696005)
 
@@ -89,35 +106,20 @@ The `Headers.prototype.getAll()` function is being removed per the latest
 version of the [Fetch specification](https://fetch.spec.whatwg.org/).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/x3YXciXQWM0/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/features/5656023951998976) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5656023951998976) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=645492)
 
 
 ### Remove WEBKIT_KEYFRAMES_RULE and WEBKIT_KEYFRAME_RULE
 
-The non-standard `WEBKIT_KEYFRAMES_RULE` and `WEBKIT_KEYFRAME_RULE` constants are removed from [CSS Rule](https://developer.mozilla.org/en-US/docs/Web/API/CSSRule). Developers should use `KEYFRAMES_RULE` and `KEYFRAME_RULE` instead.
+The non-standard `WEBKIT_KEYFRAMES_RULE` and `WEBKIT_KEYFRAME_RULE` constants
+are removed from
+[CSS Rule](https://developer.mozilla.org/en-US/docs/Web/API/CSSRule).
+Developers should use `KEYFRAMES_RULE` and `KEYFRAME_RULE` instead.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/mW1njtgDPHA) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5747368108490752) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=689681)
-
-
-
-###
-
-[Intent to Remove]() &#124;
-[Chromestatus Tracker]() &#124;
-[Chromium Bug]()
-
-
-
-###
-
-[Intent to Remove]() &#124;
-[Chromestatus Tracker]() &#124;
-[Chromium Bug]()
-
-
 
 <<../../_deprecation-policy.md>>
 
