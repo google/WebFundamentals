@@ -83,6 +83,16 @@ The `getContextAttributes()` function has been supported on [`CanvasRenderingCon
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=696005)
 
 
+### Remove Headers.prototype.getAll()
+
+The `Headers.prototype.getAll()` function is being removed per the latest
+version of the [Fetch specification](https://fetch.spec.whatwg.org/).
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/x3YXciXQWM0/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/features/5656023951998976) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=645492)
+
+
 ### Remove WEBKIT_KEYFRAMES_RULE and WEBKIT_KEYFRAME_RULE
 
 The non-standard `WEBKIT_KEYFRAMES_RULE` and `WEBKIT_KEYFRAME_RULE` constants are removed from [CSS Rule](https://developer.mozilla.org/en-US/docs/Web/API/CSSRule). Developers should use `KEYFRAMES_RULE` and `KEYFRAME_RULE` instead.
