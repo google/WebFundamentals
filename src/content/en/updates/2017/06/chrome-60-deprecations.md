@@ -17,9 +17,18 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 60,
 which is in beta as of June 8. This list is subject to change at any time.
 
+## Security
 
+### crypto.subtle now requires a secure origin
 
-## Move getContextAttributes() behind a flag
+The [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) which has been supported since Chrome 37 has always worked on non-secure origins. Because of Chrome's long-standing policy of [prefering secure origins for powerful features](https://sites.google.com/a/chromium.org/dev/Home/chromium-security/prefer-secure-origins-for-powerful-new-features?pli=1), `crypto.subtle` is no only visible on secure origins.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/ZD3NWqkk-bo/discussion) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=641526)
+
+## JavaSCript
+
+### Move getContextAttributes() behind a flag
 
 The `getContextAttributes()` function has been supported on [`CanvasRenderingContext2D`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) since 2013. However the feature was not part of any standard and has not become part of one since that time. It should have been implemented behind the `--enable-experimental-canvas-features` command line flag, but was mistakenly not. In Chrome 60 this oversight has been corrected. It's believed that this change is safe, since there's no data showing that anyone is using the method.
 
@@ -27,7 +36,7 @@ The `getContextAttributes()` function has been supported on [`CanvasRenderingCon
 
 
 
-## Remove WEBKIT_KEYFRAMES_RULE and WEBKIT_KEYFRAME_RULE
+### Remove WEBKIT_KEYFRAMES_RULE and WEBKIT_KEYFRAME_RULE
 
 The non-standard `WEBKIT_KEYFRAMES_RULE` and `WEBKIT_KEYFRAME_RULE` constants are removed from [CSS Rule](https://developer.mozilla.org/en-US/docs/Web/API/CSSRule). Developers should use `KEYFRAMES_RULE` and `KEYFRAME_RULE` instead.
 
@@ -37,7 +46,7 @@ The non-standard `WEBKIT_KEYFRAMES_RULE` and `WEBKIT_KEYFRAME_RULE` constants ar
 
 
 
-##
+###
 
 [Intent to Remove]() &#124;
 [Chromestatus Tracker]() &#124;
@@ -45,7 +54,7 @@ The non-standard `WEBKIT_KEYFRAMES_RULE` and `WEBKIT_KEYFRAME_RULE` constants ar
 
 
 
-##
+###
 
 [Intent to Remove]() &#124;
 [Chromestatus Tracker]() &#124;
