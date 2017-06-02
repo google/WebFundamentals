@@ -133,7 +133,7 @@ feedback to reassure them that everything is going to work as expected.
 To understand when a page delivers this feedback to its users, we've defined
 several new metrics:
 
-### First paint and fist contentful paint
+### First paint and first contentful paint
 
 The [Paint Timing](https://github.com/WICG/paint-timing) API defines two
 metrics: *first paint* (FP) and *first contentful paint* (FCP). These metrics
