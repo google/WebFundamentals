@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2015-09-08 #}
+{# wf_updated_on: 2017-06-02 #}
 {# wf_published_on: 2015-09-08 #}
 
 # Benvenuto {: .page-title }
@@ -21,7 +21,7 @@ Trova più codelabs
 
 <div class="attempt-left">
   <a href="codelabs/your-first-pwapp/">
-    La tua prima applicazione Web Progressiva
+    La tua prima Applicazione Web Progressiva
   </a>
   <p>
     In questo codelab, costruirai una Web App Progressiva, che si 
@@ -46,7 +46,7 @@ Trova più codelabs
 
 <div class="attempt-left">
   <a href="codelabs/offline/">
-	La tua prima applicazione Web offline
+	La tua prima Applicazione Web offline
   </a>
   <p>
 	Scopri come integrare un service worker in un'applicazione esistente
@@ -169,5 +169,3 @@ tutto ciò che ti serve sapere per iniziare rapidamente e facilmente.
 </div>
 
 <div style="clear:both"></div>
-
-<<../../_common-links.md>>
