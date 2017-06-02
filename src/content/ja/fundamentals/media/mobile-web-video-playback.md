@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: モバイル Web における動画再生フロントエンドのベストプラクティスを紹介します
 
 {# wf_published_on: 2017-04-07 #}
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2017-06-01 #}
 
 # モバイル Web における動画再生 {: .page-title }
 

@@ -911,6 +911,21 @@ josephmedley:
   description:
     en: Technical Writer
 
+kuu:
+  name:
+    given: Kuu
+    family: Miyazaki
+  org:
+    name: Independent
+    unit: Developer
+  country: Japan
+  role:
+    - translator
+  twitter: miyazaqui
+  email: miyazaqui@gmail.com
+  description:
+    en: "Kuu is interested in media technology on the Web"
+
 jacquerie:
   name:
     given: Jacopo
@@ -1346,18 +1361,3 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
-
-kuu:
-  name:
-    given: Kuu
-    family: Miyazaki
-  org:
-    name: Independent
-    unit: Developer
-  country: Japan
-  role:
-    - translator
-  twitter: miyazaqui
-  email: miyazaqui@gmail.com
-  description:
-    en: "Kuu is interested in media technology on the Web"
