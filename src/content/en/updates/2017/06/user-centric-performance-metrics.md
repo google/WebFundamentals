@@ -133,7 +133,7 @@ feedback to reassure them that everything is going to work as expected.
 To understand when a page delivers this feedback to its users, we've defined
 several new metrics:
 
-### First paint and fist contentful paint
+### First paint and first contentful paint
 
 The [Paint Timing](https://github.com/WICG/paint-timing) API defines two
 metrics: *first paint* (FP) and *first contentful paint* (FCP). These metrics
@@ -492,10 +492,10 @@ Once you've started collecting performance metrics for real users, you need to
 put that data into action. Real-user performance data is useful for a few
 primary reasons:
 
-* Validating that your app performs as expected. Identifying places where poor
-* performance is negatively affecting conversions (whatever that means for your
-* app). Finding opportunities to improve the user experience and delight your
-* users.
+* Validating that your app performs as expected.
+* Identifying places where poor performance is negatively affecting conversions
+(whatever that means for your app).
+* Finding opportunities to improve the user experience and delight your users.
 
 One thing definitely worth comparing is how your app performs on mobile devices
 vs desktop. The following chart shows the distribution of TTI across desktop
