@@ -192,6 +192,22 @@ owencm:
   twitter: owencm
   email: owencm@google.com
 
+mcasas:
+  name:
+    given: Miguel
+    family: Casas-Sanchez
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - engineer
+  twitter: yellowdoge
+  github: yellowdoge
+  email: mcasas@chromium.org
+  description:
+    en: Miguel is an engineer in the Chrome team
+
 michaelchang:
   name:
     given: Michael
