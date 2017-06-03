@@ -12,6 +12,6 @@ app, such as a target audience, platforms, internet connectivity, data
 cost, and the usage context.
 
 {% setvar videoId "Ule0U0I8rO0" %}
-{% setvar slidesId "154nnHaw5kgj9fwMu8PQA6nr0f6nZmzwwr0Oq-0j6GfY" %}
+{% setvar slidesId "1-UjSS-kRZgE0q77zPBkgjg2-huXF2GobzhSqwI0AdU8" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
