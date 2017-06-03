@@ -11,7 +11,7 @@ description: 幅広いユーザーや端末を対象にする場合、レイア�
 
 ##  ユーザーはウェブをどう読むのか
 
-[米国政府の記述ガイド](http://www.usability.gov/how-to-and-tools/methods/writing-for-the-web.html) には、ウェブの記述に関する要件がまとめられています。
+[米国政府の記述ガイド](http://www.usability.gov/how-to-and-tools/methods/writing-for-the-web.html)には、ウェブの記述に関する要件がまとめられています。
 
 > ウェブ向けの記述では、ユーザーが必要なものを見つける、見つけたものを理解する、ニーズを満たすために使用することができるように、わかりやすい言葉を使用します。
 >
@@ -23,13 +23,13 @@ description: 幅広いユーザーや端末を対象にする場合、レイア�
 
 目下のテーマに焦点を当て、その内容を最初に説明します。幅広いデバイスとビューポートで動作するように記述するには、最初に要点を述べるようにします。一般に、[先頭から 4 段落、70 単語程度](http://www.bbc.co.uk/academy/journalism/article/art20130702112133610)にまとめるのが理想的です。
 
-ユーザーがあなたのサイトに何を求めているのかをよく検討してください。また、何かを探そうとしているのか考えてみてください。サイトにアクセスしたユーザーが情報を求めている場合、その目標を達成しやすいテキストになっているか全体を確認しましょう。[能動態](https://learnenglish.britishcouncil.org/en/english-grammar/verbs/active-and-passive-voice) で書き、行動や解決策を提案します。
+ユーザーがあなたのサイトに何を求めているのかをよく検討してください。また、何かを探そうとしているのか考えてみてください。サイトにアクセスしたユーザーが情報を求めている場合、その目標を達成しやすいテキストになっているか全体を確認しましょう。[能動態](https://learnenglish.britishcouncil.org/en/english-grammar/verbs/active-and-passive-voice)で書き、行動や解決策を提案します。
 
 閲覧者が求めている情報のみを公開します。
 
-[英国政府の研究](https://www.gov.uk/guidance/content-design/writing-for-gov-uk) でも、以下の内容が示されています。
+[英国政府の研究](https://www.gov.uk/guidance/content-design/writing-for-gov-uk)でも、以下の内容が示されています。
 
-> 80% の人々は明確な英語で書かれた文章を好みます。そしてこの傾向は、話題が複雑であるほど強くなります（例： 97% が「その他」の中で「とりわけ」ラテン語を好む）。
+> 80% の人々は明確な英語で書かれた文章を好みます。そしてこの傾向は、話題が複雑であるほど強くなります（例： 97% がラテン語の「inter alia（とりわけ）」よりも「among other things（とりわけ）」を好む）。
 >
 > 教養のある、専門知識の豊富な人ほど、
 > わかりやすい英語をより好みます。
@@ -110,7 +110,7 @@ HTML の複雑さを軽減するとページが軽くなり、ローカライズ
   </figure>
 </div>
 
-画像は電池も消費します。画面に続いて、無線は電池を消耗する 2 番目の要因です。画像のリクエストが増加すると無線の使用量が増え、電池切れを引き起こします。画像のレンダリングだけでも電池を消費します。これは画像のサイズと数に比例します。Stanford のレポート、[Who Killed My Battery?](http://cdn.oreillystatic.com/en/assets/1/event/79/Who%20Killed%20My%20Battery_%20Analyzing%20Mobile%20Browser%20Energy%20Consumption%20Presentation.pdf)をご覧ください。
+画像は電池も消費します。画面に続いて、無線は電池を消耗する 2 番目の要因です。画像のリクエストが増加すると無線の使用量が増え、電池切れを引き起こします。画像のレンダリングだけでも電池を消費します。これは画像のサイズと数に比例します。Stanford のレポート、[Who Killed My Battery?](http://cdn.oreillystatic.com/en/assets/1/event/79/Who%20Killed%20My%20Battery_%20Analyzing%20Mobile%20Browser%20Energy%20Consumption%20Presentation.pdf) をご覧ください。
 
 イメージはなるべく使用しないでください。
 

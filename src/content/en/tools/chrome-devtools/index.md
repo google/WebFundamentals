@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in authoring, debugging, and profiling development tools.
 
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-03-28 #}
 
 # Chrome DevTools {: .page-title }
@@ -89,12 +89,15 @@ Note: In Chrome 58 the Timeline panel was renamed to the Performance panel.
 
 <img src="images/panels/performance.png" alt="Timeline Panel" class="attempt-right">
 
-Improve the runtime performance of your page by recording and exploring the various events
-that happen during the lifecycle of a site.
+Improve the runtime performance of your page by recording and exploring the
+various events that happen during the lifecycle of a site.
 
+* [Get Started With Analyzing Runtime Performance][runtimegs]
 * [How to look at performance](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 * [Analyze runtime performance](/web/tools/chrome-devtools/rendering-tools/)
 * [Diagnose Forced Synchronous Layouts](/web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts)
+
+[runtimegs]: /web/tools/chrome-devtools/evaluate-performance/
 
 <div style="clear:both;"></div>
 
@@ -137,27 +140,53 @@ Debug mixed content issues, certificate problems, and more.
 
 ## Get Involved
 
-Ask questions or give feedback about DevTools (or these docs) in any of the
-channels below.
+<style>
+  .cdt-but {
+    display: inline-block;
+  }
+</style>
 
-<a class="button button-white gc-analytics-event"
+The best place to file bug reports and feature requests for Chrome DevTools
+is Crbug, which is the master tracker for the DevTools engineering team.
+
+<a class="button button-primary gc-analytics-event" href="https://crbug.com"
+   data-category="DevTools" data-label="Home / Crbug">Crbug</a>
+
+For quick bug reports or feature requests, send a tweet to @ChromeDevTools.
+Ultimately, somebody converts your tweet to an issue on Crbug, so you can
+file the Crbug issue yourself if you want to ensure that it gets addressed
+by the DevTools engineering team.
+
+<a class="button button-primary gc-analytics-event"
    data-category="DevTools" data-label="Home / Twitter"
    href="https://twitter.com/ChromeDevTools">Twitter</a>
 
-<a class="button button-white gc-analytics-event"
-   href="https://groups.google.com/forum/#!topic/google-chrome-developer-tools"
+For help with using DevTools, Stack Overflow or the mailing list are the
+best channels.
+
+<div>
+
+<a class="button button-primary gc-analytics-event cdt-but"
+   href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools"
    data-category="DevTools" data-label="Home / Mailing List">Mailing List</a>
 
-<a class="button button-white gc-analytics-event"
-   href="https://stackoverflow.com/questions/tagged/google-chrome-devtools"
+<a class="button button-primary gc-analytics-event cdt-but"
+   href="https://stackoverflow.com/questions/ask?tags=google-chrome-devtools"
    data-category="DevTools" data-label="Home / Stack Overflow">
   Stack Overflow
 </a>
 
-<a class="button button-white gc-analytics-event"
+</div>
+
+To file bugs or feature requests on the DevTools docs, open a GitHub issue
+on the Web Fundamentals repository.
+
+<a class="button button-primary gc-analytics-event"
+   href="https://github.com/google/webfundamentals/issues/new"
+   data-category="DevTools" data-label="Home / GitHub">Docs Issues</a>
+
+DevTools also has a Slack channel, but it doesn't get much activity.
+
+<a class="button button-primary gc-analytics-event"
    href="https://chromiumdev.slack.com/messages/devtools/"
    data-category="DevTools" data-label="Home / Slack">Slack</a>
-
-<a class="button button-white gc-analytics-event"
-   href="https://github.com/google/webfundamentals/issues/new"
-   data-category="DevTools" data-label="Home / GitHub">GitHub</a>

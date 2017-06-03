@@ -119,15 +119,13 @@ description:自定义元素允许网络开发者定义新的 HTML 标记、扩�
 它还[以 HTML 属性来反映属性](#reflectattr)。
 
 自定义元素有一个超赞功能，即：类定义中的**`this` 引用 DOM 元素自身**，亦即类的实例。
-在本例中，`this` 是指 `<app-drawer>`。此 (😉) 说明了元素如何向自身添加 `click` 侦听器！您不限于事件侦听器。完整的 DOM API 在元素代码内提供。使用 `this` 来访问元素属性、检验子项 (`this.children`) 和查询节点 (`this.querySelectorAll('.items')`) 等。
+在本例中，`this` 是指 `<app-drawer>`。这 (😉) 就是元素向自身添加 `click` 侦听器的方式！您不限于事件侦听器。完整的 DOM API 在元素代码内提供。使用 `this` 来访问元素属性、检验子项 (`this.children`) 和查询节点 (`this.querySelectorAll('.items')`) 等。
 
 **有关创建自定义元素的规则**
 
 1. 自定义元素的名称**必须包含短横线 (-)**。因此，`<x-tags>`、`<my-element>` 和 `<my-awesome-app>` 等均为有效名称，而 `<tabs>` 和 `<foo_bar>` 则为无效名称。这一要求使得 HTML 解析器能够区分自定义元素和常规元素。它还可确保向 HTML 添加新标记时的向前兼容性。
-2. 您不能多次注册同一标记。
-否则，将产生 `DOMException`。让浏览器了解新标记后，它就这样定了下来。您不能撤回。
-3. 自定义元素不能自我封闭，因为 HTML 仅允许[少数元素](https://html.spec.whatwg.org/multipage/syntax.html#void-elements)自我封闭。
-必须编写封闭标记 (<code>&lt;app-drawer&gt;&lt;/app-drawer&gt;</code>)。
+2. 您不能多次注册同一标记。否则，将产生 `DOMException`。让浏览器了解新标记后，它就这样定了下来。您不能撤回。
+3. 自定义元素不能自我封闭，因为 HTML 仅允许[少数元素](https://html.spec.whatwg.org/multipage/syntax.html#void-elements)自我封闭。必须编写封闭标记 (<code>&lt;app-drawer&gt;&lt;/app-drawer&gt;</code>)。
 
 ## 扩展元素{: #extend}
 
@@ -168,7 +166,7 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
 
 **自定义内置元素**是用于扩展某个浏览器内置 HTML 标记的自定义元素。
 扩展现有元素的主要好处是能获得其所有功能（DOM 属性、方法、无障碍功能）。
-编写[渐进式网络应用](/web/progressive-web-apps/)的最佳方法**是逐渐增补现有 HTML 元素**。
+编写 [Progressive Web App](/web/progressive-web-apps/) 的最佳方法**是逐渐增补现有 HTML 元素**。
 
 要扩展元素，您需要创建继承自正确 DOM 接口的类定义。
 例如，扩展 `<button>` 的自定义元素需要从 `HTMLButtonElement` 而不是 `HTMLElement` 继承。
@@ -300,7 +298,7 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
   </tbody>
 </table>
 
-浏览器对在 `attributeChangedCallback()` 数组中添加到白名单的任何属性调用 `observedAttributes`（请参阅[观察对属性的更改](#attrchanges)）。实际上，这是一项性能优化。当用户更改一个通用属性（如 `style` 或 `class`）时，您不希望出现大量的回调。
+浏览器对在 `attributeChangedCallback()` 数组中添加到白名单的任何属性调用 `observedAttributes`（请参阅[保留对属性的更改](#attrchanges)）。实际上，这是一项性能优化。当用户更改一个通用属性（如 `style` 或 `class`）时，您不希望出现大量的回调。
 
 
 **响应回调是同步的**。如果有人对您的元素调用 `el.setAttribute(...)`，浏览器将立即调用 `attributeChangedCallback()`。

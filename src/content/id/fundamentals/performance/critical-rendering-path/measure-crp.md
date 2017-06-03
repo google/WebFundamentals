@@ -19,7 +19,8 @@ menjelaskan berbagai pendekatan untuk mengukur kinerja CRP.
   dari halaman tertentu yang dimuat di browser Anda, sehingga Anda dapat menguji dengan cepat,
   mengulangi, dan meningkatkan kinerjanya.
 * Pendekatan Navigation Timing API menangkap metrik [Real User
-  Monitoring (RUM)](https://en.wikipedia.org/wiki/Real_user_monitoring). Seperti yang tersirat pada namanya, metrik ini ditangkap dari interaksi pengguna
+  Monitoring (RUM)](https://en.wikipedia.org/wiki/Real_user_monitoring)
+. Seperti yang tersirat pada namanya, metrik ini ditangkap dari interaksi pengguna
   sesungguhnya dengan situs Anda dan menyediakan pandangan akurat ke dalam
    kinerja CRP dunia-nyata, sebagaimana dialami oleh pengguna Anda di seluruh aneka ragam
    perangkat dan kondisi jaringan.
@@ -62,7 +63,7 @@ Jadi, apa arti stempel waktu ini?
 * `domLoading`: ini adalah stempel waktu pembuka dari seluruh proses, 
  browser akan mulai mem-parse byte pertama yang diterima dari dokumen
  HTML.
-* `domInteractive`: menandai titik saat browser telah selesai mem-parse semua 
+* `domInteractive`: menandai titik saat browser telah selesai mem-parse semua
  HTML dan konstruksi DOM telah tuntas.
 * `domContentLoaded`: menandai titik ketika kedua DOM siap dan tidak ada stylesheet yang menghambat eksekusi JavaScript - yang berarti bahwa kita sekarang (mungkin) bisa mengonstruksikan pohon render.
     * Banyak kerangka kerja JavaScript menunggu peristiwa ini sebelum mereka mulai mengeksekusi logikanya sendiri. Karena alasan inilah browser merekam stempel waktu `EventStart` dan `EventEnd` untuk memungkinkan kita melacak berapa lama eksekusi ini dilakukan.

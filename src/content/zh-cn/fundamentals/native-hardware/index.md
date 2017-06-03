@@ -26,7 +26,7 @@ description:授予网站对地理定位、设备方向、一键通话等本机�
 <div class="attempt-right">
   <h2>设备方向与运动</h2>
   <a href="device-orientation/">
-    <img src="images/device-orientation.png>
+    <img src="images/device-orientation.png">
   </a>
   <p>
     使用移动设备的加速度计、陀螺仪和罗盘。在游戏中，控制人物的方向或动作。与地理定位配合使用时，可以进行更准确的转弯提示导航，或提供有关具体位置的信息。<br>
@@ -40,7 +40,7 @@ description:授予网站对地理定位、设备方向、一键通话等本机�
   <h2>一键通话</h2>
   <a href="click-to-call/">
     <img src="images/click-to-call.png">
-   </a>
+  </a>
   <p>
 	   让用户直接通过点按电话号码与您联系。<br>
     <a href="click-to-call/">使用入门 </a>

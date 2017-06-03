@@ -68,8 +68,9 @@ Ações inovadoras e avançadas da web, como tirar fotos ou gravar
 áudio com `getUserMedia()`, permitir experiências off-line como a dos aplicativos com os service
 workers ou criar aplicativos progressivos, exigem permissão explícita do usuário
 antes de serem executadas. Muitas APIs antigas também estão sendo atualizadas para
-exigir permissão para serem executadas, como a [geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation){: .external} API
-. O HTTPS é um componente essencial dos fluxos de trabalho de permissão, tanto para
+exigir permissão para serem executadas, como a
+[geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation){: .external}
+API. O HTTPS é um componente essencial dos fluxos de trabalho de permissão, tanto para
 esses novos recursos quanto para as APIs atualizadas.
 
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Neste codelab, você aprenderá como depurar um service worker usando o novo painel DevTools Application. Você também aprenderá como simular uma notificação push para verificar se sua inscrição está configurada corretamente.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2016-10-19T18:28:32Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -46,7 +45,7 @@ Como este codelab é focado em ensinar ferramentas, fique à vontade para interr
 * Um editor de texto
 * Conhecimentos básicos sobre HTML, CSS e JavaScript
 
-Este codelab se concentra na depuração de Service Workers e assume alguns conhecimentos prévio de trabalho com Service Workers. Alguns conceitos são apenas pincelados ou blocos de código (como estilos ou JavaScript não relevante) são fornecidos para que você os copie e cole. Se você é novo em Service Workers, certifique-se de [ler o API Primer](/web/fundamentals/primers/service-worker/?hl=en) antes de continuar.
+Este codelab se concentra na depuração de Service Workers e assume alguns conhecimentos prévio de trabalho com Service Workers. Alguns conceitos são apenas pincelados ou blocos de código (como estilos ou JavaScript não relevante) são fornecidos para que você os copie e cole. Se você é novo em Service Workers, certifique-se de [ler o API Primer](/web/fundamentals/primers/service-worker/) antes de continuar.
 
 
 ## Configuração
@@ -68,7 +67,7 @@ As pastas `step-NN` contêm o estado final desejado de cada etapa deste codelab.
 
 Embora você seja livre para usar seu próprio servidor de Web, este codelab é projetado para funcionar bem com o Chrome Web Server. Se ainda não tem esse aplicativo instalado, você pode instalá-lo pela Chrome Web Store.
 
-[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 Após instalar o aplicativo Web Server for Chrome, clique no atalho Apps na barra de favoritos: 
 
@@ -88,7 +87,7 @@ Em Options, marque a caixa ao lado de "Automatically show index.html", como most
 
 ![8937a38abc57e3.png](img/8937a38abc57e3.png)
 
-Em seguida, interrompa e reinicie o servidor, deslizando o botão de alternância marcado como "Web Server: INICIADO" para a esquerda e de volta para a direita.
+Em seguida, interrompa e reinicie o servidor, deslizando o botão de alternância marcado como "Web Server: STARTED" para a esquerda e de volta para a direita.
 
 ![daefd30e8a290df5.png](img/daefd30e8a290df5.png)
 
@@ -99,7 +98,7 @@ Agora, acesse seu site de trabalho no navegador da Web (clicando no URL Web Serv
 Obviamente, este aplicativo ainda não está fazendo nada interessante. Adicionaremos funcionalidade e recursos de IU em etapas posteriores. 
 
 
-## Introdução à guia Aplicativo
+## Introdução à guia Application
 
 
 
@@ -128,7 +127,7 @@ No passado, inspecionar um Service Worker exigia bisbilhotar o Chrome internamen
 
 A visualização __Service Workers__ fornece informações sobre Service Workers que estão ativos na origem atual. Ao longo da linha superior, há uma série de caixas de seleção.
 
-* __Offline__ - Simula ser desconectado da rede. Isso pode ser útil para verificar rapidamente que os gerenciadores de busca do seu Service Worker estão funcionando corretamente.
+* __Offline__- Simula ser desconectado da rede. Isso pode ser útil para verificar rapidamente que os gerenciadores de busca do seu Service Worker estão funcionando corretamente.
 * __Update on reload__ - Força o Service Worker atual a ser substituído por um novo Service Worker (se o desenvolvedor tiver feito alterações em seu `service-worker.js`). Normalmente, o navegador esperar até que um usuário feche todas as guias que contêm o site atual antes de atualizar para um novo Service Worker.
 * __Bypass for network__ - Força o navegador a ignorar qualquer Service Worker ativo e buscar recursos da rede. Isso é extremamente útil para situações em que você deseja trabalhar em CSS ou JavaScript e não precisa se preocupar que Service Worker armazene em cache acidentalmente e retorne arquivos antigos.
 * __Show all__ - Mostra uma lista de todos os Service Workers ativos, independentemente da origem.

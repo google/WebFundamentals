@@ -49,7 +49,7 @@ o de agregado de una nueva función a una app existente.  Encuentra más codelab
   </p>
 </div>
 <div class="attempt-right">
-  <a href="codelabs/debugging-service-workers/">
+  <a href="codelabs/push-notifications/">
     Agregado de notificaciones push
   </a>
   <p>

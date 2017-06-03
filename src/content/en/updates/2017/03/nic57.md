@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 57 for developers? Grid based layouts, Media Session API and more.
 
 {# wf_published_on: 2017-03-08 #}
-{# wf_updated_on: 2017-03-08 #}
+{# wf_updated_on: 2017-04-19 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome57,new-in-chrome,css,progressive-web-apps,media,grids #}
 {# wf_featured_snippet: With Chrome 57, you can now use <code>display: grid</code> for grid based layouts, use the <b>media session API</b> to customize the lock screen and notifications with information about the media being played, and more. Pete LePage has all the details and how you can use these new developer features in Chrome 57! #}
@@ -15,7 +15,7 @@ description: What's new in Chrome 57 for developers? Grid based layouts, Media S
 <div class="clearfix"></div>
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="57Scec2XPd0"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>

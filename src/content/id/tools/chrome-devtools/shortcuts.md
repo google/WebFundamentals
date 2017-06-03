@@ -420,7 +420,7 @@ Pintasan yang tersedia di bilah sisi Styles:
   </tbody>
 </table>
 
-### Timeline.
+### Timeline
 
 <table>
   <thead>

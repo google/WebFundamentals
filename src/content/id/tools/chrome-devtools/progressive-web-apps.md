@@ -31,9 +31,9 @@ panel Application lainnya](#other).
 
 ## Manifes aplikasi web {:#manifest}
 
-Jika Anda menginginkan agar pengguna bisa menambahkan aplikasi ke homescreen seluler mereka,
+Jika Anda menginginkan agar pengguna bisa menambahkan aplikasi ke layar beranda seluler mereka,
 Anda membutuhkan manifes aplikasi web. Manifes mendefinisikan bagaimana aplikasi ditampilkan di
-homescreen, mengarahkan pengguna saat meluncurkan aplikasi dari homescreen, dan seperti
+layar beranda, mengarahkan pengguna saat meluncurkan aplikasi dari layar beranda, dan seperti
 apa aplikasi terlihat saat peluncuran.
 
 Panduan Terkait:
@@ -43,7 +43,7 @@ Panduan Terkait:
 * [Menggunakan Spanduk
   Pemasangan Aplikasi](/web/fundamentals/engage-and-retain/app-install-banners)
 
-Setelah Anda mempersiapkan manifes, Anda bisa menggunakan panel **Manifest** dari panel
+Setelah Anda menyiapkan manifes, Anda bisa menggunakan panel **Manifest** dari panel
 **Application** untuk memeriksanya.
 
 ![panel manifest][manifest]
@@ -56,7 +56,7 @@ Setelah Anda mempersiapkan manifes, Anda bisa menggunakan panel **Manifest** dar
   sumber manifes dalam tampilan yang lebih ramah pengguna.
 * Bagian **Icons** menampilkan semua ikon yang telah Anda tetapkan.
 
-[manifes]: images/manifest.png
+[manifest]: images/manifest.png
 
 ### Menyimulasikan kejadian Add to Homescreen {:#add-to-homescreen}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 이 코드랩에서는 웹 앱에 푸시 알림을 추가하는 방법을 배워봅니다.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2016-11-21T15:42:20Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -45,7 +44,7 @@ description: 이 코드랩에서는 웹 앱에 푸시 알림을 추가하는 방
 
 다음 링크에서 zip 파일을 다운로드하여 이 코드에 대한 샘플 코드를 얻을 수 있습니다.
 
-[Link](https://github.com/googlechrome/push-notifications/archive/master.zip)
+[링크](https://github.com/googlechrome/push-notifications/archive/master.zip)
 
 또는 다음 git 저장소를 복제해도 됩니다.
 
@@ -57,7 +56,7 @@ description: 이 코드랩에서는 웹 앱에 푸시 알림을 추가하는 방
 
 자체 웹 서버를 사용해도 되지만 이 코드랩은 Chrome Web Server에서 잘 돌아가도록 고안되어 있습니다. 이 앱을 아직 설치하지 않으셨다면 Chrome 웹 스토어에서 설치할 수 있습니다.
 
-[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
+[링크](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 Web Server for Chrome 앱을 설치한 후 북마크바에서 Apps 단축키를 클릭하세요. 
 
@@ -73,11 +72,11 @@ Web Server for Chrome 앱을 설치한 후 북마크바에서 Apps 단축키를 
 
 __choose folder__ 버튼을 클릭하고 앱 폴더를 선택하세요. 그러면 웹 서버 대화상자에 강조표시된 URL을 통해(__Web Server URL(s)__ 섹션) 진행 중인 작업을 제공할 수 있습니다.
 
-아래 그림과 같이, Options 아래에서 "Automatically show index.html" 옆에 있는 확인란을 선택하세요.
+아래 그림과 같이, Options 아래에서 'Automatically show index.html' 옆에 있는 확인란을 선택하세요.
 
 ![39b4e0371e9703e6.png](img/39b4e0371e9703e6.png)
 
-그런 다음, "Web Server: STARTED"라는 레이블로 표시된 전환 버튼을 왼쪽으로 밀었다가 다시 오른쪽으로 밀어 서버를 중지했다가 다시 시작하세요.
+그런 다음, 'Web Server: STARTED'라는 레이블로 표시된 전환 버튼을 왼쪽으로 밀었다가 다시 오른쪽으로 밀어 서버를 중지했다가 다시 시작하세요.
 
 ![daefd30e8a290df5.png](img/daefd30e8a290df5.png)
 
@@ -507,7 +506,7 @@ self.addEventListener('notificationclick', function(event) {
 event.notification.close();
 ```
 
-그런 다음, ‘https://developers.google.com/web/' URL을 로드하는 새 창/탭을 엽니다. 이 URL은 마음대로 바꿔도 됩니다.
+그런 다음, [developers.google.com](/web/) URL을 로드하는 새 창/탭을 엽니다. 이 URL은 마음대로 바꿔도 됩니다.
 
 ```
 clients.openWindow('https://developers.google.com/web/')

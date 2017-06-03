@@ -409,7 +409,7 @@ cookies. Em vez disso, se você quiser credenciais, chame:
 
 Esse comportamento é intencional e é provavelmente melhor que o padrão mais complexo do
 XHR, que é enviar credenciais se o URL for da mesma origem e, caso contrário,
-omiti-las. O comportamento da recuperação é mais parecido com outras solicitações CORS, como ﻿, que nunca enviam cookies, a menos que você aceite usando ﻿.
+omiti-las. O comportamento da recuperação é mais parecido com outras solicitações CORS, como `<img crossorigin>`, que nunca enviam cookies, a menos que você aceite usando `<img crossorigin="use-credentials">`.
 
 
 

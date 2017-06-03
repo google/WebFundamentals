@@ -11,8 +11,8 @@ description: Los patrones de diseño web adaptables evolucionan rápidamente, pe
 
 Los patrones de diseño web adaptables evolucionan rápidamente, pero existen varios patrones establecidos que funcionan bien en los diferentes equipos de escritorio y dispositivos móviles.
 
-La mayoría de los diseños que se usan en las páginas web receptivas se pueden categorizar dentro de cinco clases de patrones
-: mostly fluid, column drop, layout shifter, tiny tweaks y off canvas.
+La mayoría de los diseños que se usan en las páginas web receptivas se pueden categorizar dentro de cinco clases de
+patrones: mostly fluid, column drop, layout shifter, tiny tweaks y off canvas.
 En algunos casos, en una página se puede usar una combinación de patrones; por ejemplo, column drop
 y off canvas.  Estos patrones, originalmente identificados por [Luke
 Wroblewski](http://www.lukew.com/ff/entry.asp?1514), son un punto de partida sólido

@@ -16,7 +16,7 @@ Ahora que ya analizamos las diferentes opciones disponibles para acelerar las an
 * Asegúrate de usar la duración de la animación. Las salidas y las entradas lentas deben durar entre 200 y 500 ms, mientras que los rebotes y las aceleraciones elásticas deben tener una duración más prolongada de entre 800 y 1200 ms.
 
 
-<img src="images/quintic-ease-out-markers.png" alt="A Quintic ease-out animation curve" style="max-width: 300px" class="attempt-right"/>
+<img src="images/quintic-ease-out-markers.png" alt="La curva de una animación de salida lenta Quintic" style="max-width: 300px" class="attempt-right"/>
 
 En términos generales, una **salida lenta** será la opción correcta y, sin dudas, un buen parámetro predeterminado. Se inicia rápidamente, lo cual proporciona a tus animaciones una sensación de receptividad (un aspecto bienvenido), aunque con una agradable reducción de la velocidad al final.
 

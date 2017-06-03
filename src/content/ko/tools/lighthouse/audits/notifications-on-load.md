@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "페이지 로드 시 알림 권한을 자동 요청하지 않는 페이지" Lighthouse 감사의 참조 문서입니다.
+description: '페이지 로드 시 알림 권한을 자동 요청하지 않는 페이지' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-12-05 #}
 {# wf_published_on: 2016-12-05 #}
@@ -29,7 +29,7 @@ Lighthouse는 **URLs**에서 코드가 알림 전송 권한을 요청하는 줄�
 Lighthouse 감사 전에 알림 권한이 페이지에 이미 부여되어 있거나
 거부되었을 경우 Lighthouse는
 페이지 로드 시 알림 권한을 요청하는지 판단할 수 없습니다. 권한을 재설정하고
-Lighthouse를 다시 실행하세요. 자세한 내용은[웹사이트 권한 변경][help]을 참조하세요.
+Lighthouse를 다시 실행하세요. 자세한 내용은 [웹사이트 권한 변경][help]을 참조하세요.
 
 Lighthouse는 페이지 로드 시 실행된 자바스크립트를 수집합니다. 
 코드에 `notification.requestPermission()` 호출이 포함되어 있고

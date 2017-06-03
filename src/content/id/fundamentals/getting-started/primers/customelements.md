@@ -274,7 +274,7 @@ waktu menarik dari keberadaannya. Ini disebut **reaksi elemen khusus**.
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Nama</th>
       <th>Dipanggil bila</th>
     </tr>
   </thead>
@@ -579,7 +579,7 @@ ini merupakan API andal untuk dikombinasikan bersama elemen khusus. Dengan sendi
 alat komposisi. Bila digunakan bersama elemen khusus, akan terjadi sesuatu yang ajaib.
 
 
-Shadow DOM menyediakan cara bagi elemen untuk memiliki, me-render, dan menata gaya suatu bagian DOM
+Shadow DOM menyediakan cara bagi elemen untuk memiliki, merender, dan menata gaya suatu bagian DOM
 yang terpisah dari bagian laman lainnya. Anda bahkan bisa menyembunyikan
 keseluruhan aplikasi dalam satu tag:
 

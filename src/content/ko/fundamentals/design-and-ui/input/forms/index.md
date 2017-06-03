@@ -116,15 +116,15 @@ HTML5에서 다양한 새 입력 유형이 도입되었습니다. 이러한 새 
     <tr>
       <td data-th="Input type">
         <code>url</code><br> URL 입력용입니다. 유효한 URI 스키마로 시작해야 합니다(예:
- <code>http://</code>, <code>ftp://</code> 또는 <code>mailto:</code>
-</td>).
+ <code>http://</code>, <code>ftp://</code> 또는 <code>mailto:</code>).
+</td>
       <td data-th="Typical keyboard">
         <img src="imgs/url-ios.png" srcset="imgs/url-ios.png 1x, imgs/url-ios-2x.png 2x">
       </td>
     </tr>
     <tr>
       <td data-th="Input type">
-        <code>tel</code><br>전화 번호 입력용. 유효성 검사를 위해
+        <code>tel</code><br>전화 번호 입력용입니다. 유효성 검사를 위해
 특정 구문을 적용하지 <b>않습니다</b>.
 따라서 특정 형식을 보장하려면 패턴을 사용하면 됩니다.
 </td>
@@ -302,10 +302,10 @@ HTML5에서 다양한 새 입력 유형이 도입되었습니다. 이러한 새 
 
 
 브라우저는 다양한 추론을 사용하여
-  [사용자가 이전에 지정한 데이터를 기반으로](https://support.google.com/chrome/answer/142893)
- [자동으로 채울](https://support.google.com/chrome/answer/142893) 수 있는
- 필드를 결정합니다. 각 입력 요소에 `name` 속성과 `autocomplete` 속성을 모두 제공하는 방식으로 브라우저에 힌트를
- 제공할 수 있습니다.
+[사용자가 이전에 지정한 데이터를 기반으로](https://support.google.com/chrome/answer/142893)
+[자동으로 채울](https://support.google.com/chrome/answer/142893) 수 있는
+필드를 결정합니다. 각 입력 요소에 `name` 속성과 `autocomplete` 속성을 모두 제공하는 방식으로 브라우저에 힌트를
+제공할 수 있습니다.
 
 참고: Chrome에서는 자동완성을 활성화하기 위해 `input` 요소를 `<form>` 태그에
 래핑해야 합니다. 이 요소가 `form` 태그에 래핑되지 않은 경우 Chrome이
@@ -446,8 +446,8 @@ HTML5에서 다양한 새 입력 유형이 도입되었습니다. 이러한 새 
       </td>
       <td data-th="autocomplete attribute">
         <ul>
-          <li><code>current-password</code> (로그인 양식용)</li>
-          <li><code>new-password</code> (가입 및 비밀번호 변경 양식용)</li>
+          <li><code>current-password</code>(로그인 양식용)</li>
+          <li><code>new-password</code>(가입 및 비밀번호 변경 양식용)</li>
         </ul>
       </td>
     </tr>
@@ -491,8 +491,8 @@ autofocus 속성은 키보드 포커스를 가로채서 잠재적으로 백스�
 
 #### `pattern` 속성
 
-`pattern` 속성은 입력 필드의 유효성을 검사하는 데 사용되는 [정규식](https://en.wikipedia.org/wiki/Regular_expression)
-을 지정합니다. 예를 들어, 미국 우편 번호(5자리 숫자,
+`pattern` 속성은 입력 필드의 유효성을 검사하는 데 사용되는 [정규식](https://en.wikipedia.org/wiki/Regular_expression)을
+지정합니다. 예를 들어, 미국 우편 번호(5자리 숫자,
 뒤에 추가로 대시와 4자리 숫자가 나오는 경우도 있음)의 유효성을 검사하려면
 다음과 같이 `pattern`을 설정합니다.
 
@@ -597,7 +597,7 @@ autofocus 속성은 키보드 포커스를 가로채서 잠재적으로 백스�
 
 
     <form role="form" novalidate>
-      <label for="inpEmail">이메일 주소</label>
+      <label for="inpEmail">Email address</label>
       <input type="email" ...>
     </form>
     

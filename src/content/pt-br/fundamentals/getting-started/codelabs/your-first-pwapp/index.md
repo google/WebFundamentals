@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Neste codelab, você vai criar um Progressive Web App, que é carregado com rapidez, mesmo em redes instáveis, tem um ícone na tela inicial e é carregado como uma experiência de tela inteira de alto nível.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2017-01-05T16:32:36Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -87,7 +86,7 @@ As pastas `step-NN` contêm o estado final desejado de cada etapa deste codelab.
 
 Embora você seja livre para usar seu próprio servidor de Web, este codelab é projetado para funcionar bem com o Chrome Web Server. Se ainda não tem esse aplicativo instalado, você pode instalá-lo pela Chrome Web Store.
 
-[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 Após instalar o aplicativo Web Server for Chrome, clique no atalho Apps na barra de favoritos: 
 
@@ -107,7 +106,7 @@ Em Options, marque a caixa ao lado de "Automatically show index.html", como most
 
 ![39b4e0371e9703e6.png](img/39b4e0371e9703e6.png)
 
-Em seguida, interrompa e reinicie o servidor, deslizando o botão de alternância marcado como "Web Server: INICIADO" para a esquerda e de volta para a direita.
+Em seguida, interrompa e reinicie o servidor, deslizando o botão de alternância marcado como "Web Server: STARTED" para a esquerda e de volta para a direita.
 
 ![daefd30e8a290df5.png](img/daefd30e8a290df5.png)
 
@@ -303,7 +302,7 @@ E adicione o código a seguir abaixo desse comentário:
    *
    * Code required to start the app
    *
-   * NOTE: To simplify this codelab, we've used localStorage.
+   * OBSERVAÇÃO: To simplify this codelab, we've used localStorage.
    *   localStorage is a synchronous API and has serious performance
    *   implications. It should not be used in production applications!
    *   Instead, check out IDB (https://www.npmjs.com/package/idb) or
@@ -373,7 +372,7 @@ As novas adições são a inicialização de `app.selectedCities` se ele não ex
 
 Progressive Web Apps precisam ser rápidos e instaláveis, o que significa que eles devem funcionar on-line, off-line ou em condições intermitentes e lentas. Para conseguir isso, precisamos armazenar em cache nosso shell de aplicativo usando service worker para que ele seja sempre disponibilizado de forma rápida e confiável. 
 
-Se não tiver experiência com service workers, você pode obter uma noção básica lendo [Introdução aos service workers](/web/fundamentals/primers/service-worker/) sobre o que eles podem fazer, como seu ciclo de vida funciona e muito mais. Após concluir este codelab, certifique-se de verificar o [codelab Depurar Service Workers](http://goo.gl/jhXCBy) para ter uma visão mais detalhada de como trabalhar com service workers.
+Se não tiver experiência com service workers, você pode obter uma noção básica lendo [Introdução aos service workers](/web/fundamentals/primers/service-worker/) sobre o que eles podem fazer, como seu ciclo de vida funciona e muito mais. Após concluir este codelab, certifique-se de verificar o [codelab Depurar Service Workers](https://goo.gl/jhXCBy) para ter uma visão mais detalhada de como trabalhar com service workers.
 
 Recursos fornecidos por service workers devem ser considerados aprimoramentos progressivos e adicionados apenas se o navegador for compatível. Por exemplo, com service workers, você pode armazenar em cache o shell de aplicativo e os dados do seu aplicativo para que eles estejam disponíveis mesmo quando a rede não estiver. Quando service workers não forem compatíveis, o código off-line não será chamado e o usuário terá uma experiência básica. O uso da detecção de recursos para fornecer aprimoramentos progressivos incorre em poucos custos adicionais e não falhará em navegadores mais antigos incompatíveis com o recurso.
 
@@ -817,7 +816,7 @@ Agora, adicione a linha a seguir na parte inferior do elemento `<head>` no seu a
 * Defina conjuntos de ícones para telas de diferentes densidades. O Chrome tentará usar o ícone mais próximo a 48 dp, por exemplo, 96 pixels em um dispositivo de 2x ou 144 pixels em um dispositivo de 3x.
 * Lembre-se de incluir um ícone com um tamanho adequado para uma tela de apresentação e não se esqueça de definir o elemento `background_color`.
 
-Leitura Adicional:
+Leitura adicional:
 
 [Como usar banners de instalação de aplicativo](/web/fundamentals/engage-and-retain/simplified-app-installs/)
 

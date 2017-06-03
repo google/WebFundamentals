@@ -84,7 +84,7 @@ selalu memperbaiki pengalaman pengguna bagi siapa saja. Mari kita amati sebuah c
 
 ![formulir dengan aksesibilitas buruk](imgs/pooraccess.jpg)
 
-Formulis ini memiliki sejumlah masalah aksesibilitas.
+Formulir ini memiliki sejumlah masalah aksesibilitas.
 
  - Kontras teks rendah, sehingga sulit dibaca oleh pengguna yang memiliki penglihatan lemah.
  - Adanya label di sebelah kiri dan bidang-bidang di sebelah kanan menyulitkan banyak orang

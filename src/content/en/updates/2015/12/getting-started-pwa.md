@@ -137,7 +137,7 @@ src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-3-@1x.jpg" alt=
 
 A comprehensive set of [service worker samples](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker) are available over on Google Chrome samples. Jake Archibald's [offline cookbook](https://jakearchibald.com/2014/offline-cookbook/) is a must-read and I highly recommend trying out Paul Kinlan's [your first offline web app](/web/fundamentals/getting-started/codelabs/offline/) walkthrough if new to service worker.
 
-Our team also maintain a number of service worker helper utilities and build tools that we find useful for reducing the overhead in getting service worker setup. They're listed over on [Service Worker Libraries](/web/tools/service-worker-libraries/). The two main ones are:
+Our team also maintains a number of service worker helper utilities and build tools that we find useful for reducing the overhead in getting service worker setup. They're listed over on [Service Worker Libraries](/web/tools/service-worker-libraries/). The two main ones are:
 
 * [sw-precache](https://github.com/GoogleChrome/sw-precache/): a build-time tool that generates a service worker script useful for precaching your web app shell
 * [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox): a library providing runtime caching for infrequently used resources

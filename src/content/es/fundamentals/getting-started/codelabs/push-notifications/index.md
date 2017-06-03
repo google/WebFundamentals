@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: En este codelab, aprenderás a agregar notificaciones push a tu app web.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2016-11-21T15:42:20Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -31,7 +30,7 @@ Los mensajes push brindan una forma simple y efectiva de volver a interactuar co
 
 * Chrome 52 o superior
 *  [Servidor web para Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb) o el servidor web de tu elección
-* Un editor de texto.
+* Un editor de texto
 * Conocimiento básico de HTML, CSS, JavaScript y Chrome DevTools
 * El código de muestra, consulta Obtener configuración
 
@@ -507,7 +506,7 @@ En este code lab, primero cerramos la notificación a la que se le hizo clic con
 event.notification.close();
 ```
 
-Luego, abrimos una ventana/pestaña nueva cargando la url ‘https://developers.google.com/web/' , puedes cambiar esto :)
+Luego, abrimos una ventana/pestaña nueva cargando la url developers.google.com/web/ , puedes cambiar esto :)
 
 ```
 clients.openWindow('https://developers.google.com/web/')

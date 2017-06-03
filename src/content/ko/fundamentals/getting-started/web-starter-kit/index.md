@@ -20,7 +20,7 @@ description: 새 프로젝트는 시작하는 것이 가장 어려울 수 있습
 
 ## 개발 단계
 
-개발 중에는, 주기적으로 사용되는 세 가지 명령이 있습니다: `gulp serve`, `gulp` 및 `gulp serve:dist`. 개발 과정에서 각 명령이 어떻게 사용되는지 살펴보겠습니다.
+개발 중에는, 주기적으로 사용되는 세 가지 명령, 즉 `gulp serve`, `gulp` 및 `gulp serve:dist`가 있습니다. 개발 과정에서 각 명령이 어떻게 사용되는지 살펴보겠습니다.
 
 
 ### 로컬 서버 시작
@@ -116,8 +116,8 @@ serve 명령을 실행하는 동안 프로젝트의 Sass 파일 변경 내용은
 CSS로 컴파일되고 접두사가 지정된 후에 실시간 새로고침을 통해
 페이지가 다시 로드됩니다.
 
-Sass에 새로 추가된 사항이 있는 프로젝트는 "CSS 확장
-언어"라고 합니다. 근본적으로 CSS 확장 언어는 몇 가지 기능이 추가된 CSS입니다. 예를 들어,
+Sass에 새로 추가된 사항이 있는 프로젝트는 'CSS 확장
+언어'라고 합니다. 근본적으로 CSS 확장 언어는 몇 가지 기능이 추가된 CSS입니다. 예를 들어,
 CSS 확장 언어는 재사용 가능한 모듈 형식으로 CSS를 구성하는 데 도움이 되는
 변수 및 함수를 추가로 지원합니다.
 
@@ -162,7 +162,7 @@ Autoprefixer가 모든 CSS에서 실행됩니다.
     <!-- endbuild -->
 
 빌드 블록은 특별한 형식이 지정된 주석일 뿐입니다.
-빌드 블록 사이의 모든 javascript 파일은 main.min.js라는 하나의
+빌드 블록 사이의 모든 자바스크립트 파일은 main.min.js라는 하나의
 파일로 병합(연결)되고 간소화되며 최종 빌드는 script
 태그로 이러한 스크립트를 대체합니다.
 
@@ -203,9 +203,9 @@ Web Starter Kit는 NodeJS, NPM 및 Sass를 사용하여 작동됩니다. 이들�
 ### 일회성 종속 항목 설치
 
 Web Starter Kit를 사용하여 사이트를 빌드하려면, 컴퓨터에 두 가지
-도구 세트(NodeJS, NPM 및 Sass)를 NodeJS 및 NPM, 그리고 Sass.
+도구 세트(NodeJS와 NPM, 그리고 Sass)를 설치해야 합니다.
 
-#### NodeJS 및 NPM
+#### NodeJS와 NPM
 
 Web Starter Kit의 빌드 도구에서는 Node와 NPM이 필요합니다. Node는 작업 실행 프로그램인 Gulp를 실행하는 데
 사용됩니다. NPM은 Gulp에서 특정 작업을 수행하는 데 필요한 모듈을 다운로드하는 데
@@ -236,7 +236,7 @@ install 스크립트를 실행합니다.
 갖추었습니다.
 
 
-참고:  <code>EPERM</code> 또는  <code>EACCESS</code>와 같은 권한 또는 액세스 오류가 보이는 경우, 해결 방법으로  <code>sudo</code>를 사용하지 마십시오. <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>이 페이지</a>에서 더욱 강력한 해결 방법을 확인할 수 있습니다.
+참고:  <code>EPERM</code> 또는  <code>EACCESS</code>와 같은 권한 또는 액세스 오류가 보이는 경우, 해결 방법으로  <code>sudo</code>를 사용하지 마세요. <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>이 페이지</a>에서 더욱 강력한 해결 방법을 확인할 수 있습니다.
 
 <!--
 The next section of this guide covers how to use Gulp, but if you want to see

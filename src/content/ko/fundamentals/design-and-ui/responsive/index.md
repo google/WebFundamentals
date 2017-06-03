@@ -14,7 +14,7 @@ description: 상당수의 웹은 다중 기기 환경에 최적화되어 있지 
 휴대기기는 대개 화면 크기가 제한되며, 콘텐츠가 화면에 배치되는 
 방식에 따라 다른 접근방식이 필요합니다.
 
-휴대폰, "패블릿",
+휴대폰, '패블릿',
 태블릿, 데스크톱, 게임 콘솔, TV, 웨어러블 등 다양한 화면 크기가 존재합니다.  화면 크기는 항상
 변하기 마련이므로, 현재나 미래에 모든 화면 크기에 맞게 사이트를 만드는
 것이 중요합니다.
@@ -24,8 +24,8 @@ description: 상당수의 웹은 다중 기기 환경에 최적화되어 있지 
   <source src="videos/resize.mp4" type="video/mp4">
 </video>
 
-[Ethan Marcotte in A List
-Apart](http://alistapart.com/article/responsive-web-design/)에 의해
+[A List
+Apart에서 Ethan Marcotte](http://alistapart.com/article/responsive-web-design/)에 의해
 처음 정의된 반응형 웹 디자인은 사용자와 그들이 사용하는 기기의 요구사항에 맞게 반응합니다.  레이아웃은 기기의 크기와 기능에
 따라 변합니다.  예를 들어, 휴대폰에서는 콘텐츠가
 단일 열 뷰로 표시될 수 있지만, 태블릿에서는 동일한 콘텐츠가
@@ -55,7 +55,7 @@ Apart](http://alistapart.com/article/responsive-web-design/)에 의해
     
 
 
-meta viewport 값 `width=device-width`을 사용하면 기기 독립적 픽셀에서
+meta viewport 값 `width=device-width`를 사용하면 기기 독립적 픽셀에서
 화면 너비에 맞게 페이지를 맞춥니다. 이렇게 하면 렌더링되는 화면이 작은
 휴대폰이든 큰 데스크톱 모니터에든 상관없이, 다양한
 화면 크기에 맞게 페이지의 콘텐츠를 재배치할 수 있습니다.
@@ -106,7 +106,7 @@ meta viewport 값 `width=device-width`을 사용하면 기기 독립적 픽셀�
 데스크톱 및 휴대기기에서 사용자는 가로가 아닌 세로로 웹사이트를 스크롤하는 데 익숙하며, 전체 페이지를 확인하기 위해 가로 스크롤이나 축소를 강제로 수행해야 한다면 사용자 환경이 나빠질 것입니다.
 
 ### TL;DR {: .hide-from-toc }
-- 너비가 고정된 큰 요소를 사용하지 마십시오.
+- 너비가 고정된 큰 요소를 사용하지 마세요.
 - 잘 렌더링되기 위해서는 콘텐츠가 특정 뷰포트 너비에 종속되어서는 안 됩니다.
 - 큰 화면과 작은 화면에 다른 스타일을 적용하려면 CSS 미디어 쿼리를 사용합니다.
 
@@ -172,7 +172,7 @@ CSS 픽셀에서 화면 크기와 너비는 기기마다 크게 다르므로(예
 
 `media` 속성을 스타일시트 링크에 사용할 뿐만 아니라, CSS 파일에서
 삽입 가능한 미디어 쿼리를 적용하기 위한 두 가지 다른 방법이
-있습니다: `@media` 및 `@import`.  성능상의 이유로, 처음 두 메서드 중 하나가 `@import` 구문에 비해
+있습니다. 즉, `@media` 및 `@import`입니다.  성능상의 이유로, 처음 두 메서드 중 하나가 `@import` 구문에 비해
 권장됩니다([CSS 가져오기 피하기](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations)
 참조).
 
@@ -312,7 +312,7 @@ iPhone, 342px 너비의 Blackberry Z10
     }
 
 
-<span class="compare-better">Recommended</span>&mdash;responsive width
+<span class="compare-better">권장됨</span>&mdash;반응형 너비
 
     div.fullWidth {
       width: 100%;
@@ -321,14 +321,14 @@ iPhone, 342px 너비의 Blackberry Z10
 
 ## 중단점을 선택하는 방법 
 
-기기 클래스를 기준으로 중단점을 정의하지 마십시오. 오늘날 사용 중인 특정 기기,
+기기 클래스를 기준으로 중단점을 정의하지 마세요. 오늘날 사용 중인 특정 기기,
 제품, 브랜드 이름 또는 운영체제에 따라 중단점을 정의하게 되면
 유지 관리가 끔찍해질 수 있습니다. 그 대신, 콘텐츠가 직접 레이아웃을 컨테이너에 맞게
 조정하는 방식을 결정해야 합니다.
 
 
 ### TL;DR {: .hide-from-toc }
-- 콘텐츠에 따라 중단점을 만들고 절대로 특정 기기, 제품 또는 브랜드에 따라 만들지 마십시오.
+- 콘텐츠에 따라 중단점을 만들고 절대로 특정 기기, 제품 또는 브랜드에 따라 만들지 마세요.
 - 최소형 휴대기기용으로 먼저 디자인한 다음, 점진적으로 더 큰 화면으로 환경을 향상시켜 나갑니다.
 - 텍스트 줄을 최대 약 70 ~ 80자로 유지합니다.
 

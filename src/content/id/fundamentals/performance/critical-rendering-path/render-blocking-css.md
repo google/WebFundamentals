@@ -14,7 +14,7 @@ artinya browser tidak akan merender materi yang telah diproses hingga CSSOM
 dibuat. Pastikan CSS Anda tetap rapi, kirim secepatnya
 dan gunakan tipe dan kueri media untuk membuka blokir rendering.
 
-Dalam [konstruksi pohon render](render-tree-construction) kita melihat bahwa jalur rendering penting membutuhkan baik DOM maupun CSSOM untuk membuat pohon render. Ini menimbulkan implikasi kinerja penting: **baik HTML maupun CSS merupakan sumber daya pemblokiran render.** Untuk HTML, sudah kentara karena tanpa DOM kita tidak memiliki apa pun untuk di-render, namun persyaratan CSS mungkin tidak begitu kentara. Apa yang terjadi jika kita mencoba me-render laman biasa tanpa pemblokir rendering pada CSS?
+Dalam [konstruksi pohon render](render-tree-construction) kita melihat bahwa jalur rendering penting membutuhkan baik DOM maupun CSSOM untuk membuat pohon render. Ini menimbulkan implikasi kinerja penting: **baik HTML maupun CSS merupakan sumber daya pemblokiran render.** Untuk HTML, sudah kentara karena tanpa DOM kita tidak memiliki apa pun untuk di-render, namun persyaratan CSS mungkin tidak begitu kentara. Apa yang terjadi jika kita mencoba merender laman biasa tanpa pemblokir rendering pada CSS?
 
 ### TL;DR {: .hide-from-toc }
 - Secara default, CSS diperlakukan sebagai sumber daya pemblokiran render.

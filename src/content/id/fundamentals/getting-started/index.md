@@ -22,7 +22,7 @@ atau menambahkan fitur baru ke aplikasi yang ada.  Temukan codelab selengkapnya 
  </a>
   <p>
     Di codelab ini, Anda membangun Progressive Web App, yang dimuat dengan cepat,
- di jaringan yang tidak stabil sekalipun, memiliki ikon di homescreen, dan dimuat dengan pengalaman
+ di jaringan yang tidak stabil sekalipun, memiliki ikon di layar beranda, dan dimuat dengan pengalaman
  selayar penuh tingkat atas.
  </p>
 </div>
@@ -49,7 +49,7 @@ atau menambahkan fitur baru ke aplikasi yang ada.  Temukan codelab selengkapnya 
  </p>
 </div>
 <div class="attempt-right">
-  <a href="codelabs/debugging-service-workers/">
+  <a href="codelabs/push-notifications/">
     Menambahkan Pemberitahuan Push
  </a>
   <p>

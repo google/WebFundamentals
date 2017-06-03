@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: En este codelab, aprenderá a depurar un service worker usando el panel de la nueva app DevTools. También aprenderás a simular una notificación push para verificar que tu suscripción esté bien configurada.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2016-10-19T18:28:32Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -42,11 +41,11 @@ Debido a que este code lab está enfocado en enseñarte a usar las herramientas,
 
 * Chrome 52 o superior
 * Instala [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb) o usa tu servidor web de tu elección.
-* El ejemplo de código.
-* Un editor de texto.
+* El ejemplo de código
+* Un editor de texto
 * Conocimiento básico de HTML, CSS y JavaScript
 
-Este codelab se enfoca en depurar Service Workers y asume un conocimiento previo de trabajo con Service Workers. Algunos conceptos se pasan por alto o se brindan bloques de códigos (por ejemplo, estilos o JavaScript no relevante) para que simplemente copies y pegues. Si eres nuevo con los Service Workers, asegúrate de  [leer el Manual de API](/web/fundamentals/primers/service-worker/?hl=en) antes de continuar.
+Este codelab se enfoca en depurar Service Workers y asume un conocimiento previo de trabajo con Service Workers. Algunos conceptos se pasan por alto o se brindan bloques de códigos (por ejemplo, estilos o JavaScript no relevante) para que simplemente copies y pegues. Si eres nuevo con los Service Workers, asegúrate de  [leer el Manual de API](/web/fundamentals/primers/service-worker/) antes de continuar.
 
 
 ## Preparación
@@ -68,7 +67,7 @@ Las carpetas `step-NN` contienen el estado final deseado de cada paso de este co
 
 A pesar de que puedes usar tu propio servidor web, este codelab está diseñado para funcionar bien con Web Server de Chrome. Si aún no tienes la app instalada, puedes instalarla desde Chrome Web Store.
 
-[Vínculo](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Vínculo](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 Después de instalar la app Web Server for Chrome, haz clic en el atajo Apps de la barra de marcadores: 
 

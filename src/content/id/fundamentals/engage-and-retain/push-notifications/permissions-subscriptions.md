@@ -28,8 +28,8 @@ apa-apa.
 
 Catatan: Demi kejelasan, contoh ini mengecualikan sejumlah pemeriksaan fitur
 yang harus selalu Anda lakukan. Anda bisa melihat kode asli secara keseluruhan
-di <a href='https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications'>kami
-Repo contoh GitHub</a>.
+di <a href='https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications'>
+repo contoh GitHub kami</a>.
 
 
     function initialiseState() {

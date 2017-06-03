@@ -4,7 +4,6 @@ const gulp = require('gulp');
 const path = require('path');
 const glob = require('globule');
 const wfHelper = require('./wfHelper');
-const runSequence = require('run-sequence');
 const wfCodeLabHelper = require('./wfCodeLabHelper');
 
 /**
@@ -51,7 +50,7 @@ function exportAndUpdate(srcPath, destBase, flatten, bookPath) {
         destFile = destFile.replace('/index.md', '.md');
       }
       let destImgPath = path.join(destDir, 'img');
-      wfCodeLabHelper.updateCodeLab(srcFile, destFile, bookPath)
+      wfCodeLabHelper.updateCodeLab(srcFile, destFile, bookPath);
       return wfHelper.promisedRSync(srcImgPath, destImgPath);
     }));
   });
@@ -62,4 +61,11 @@ gulp.task('claat:codelabs', function() {
   let destPath = path.join(GLOBAL.WF.src.content, 'fundamentals/getting-started/codelabs');
   let bookPath = '/web/fundamentals/_book.yaml';
   return exportAndUpdate(srcPath, destPath, false, bookPath);
+});
+
+gulp.task('claat:ilt-pwa', function() {
+  let srcPath = 'src/data/ilt-pwa';
+  let destPath = path.join(GLOBAL.WF.src.content, 'ilt/pwa');
+  let bookPath = '/web/ilt/pwa/_book.yaml';
+  return exportAndUpdate(srcPath, destPath, true, bookPath);
 });

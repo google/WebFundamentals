@@ -35,7 +35,7 @@ pengelompokan ini yang harus diperhatikan:
 * Cookie dari domain yang berbeda bisa muncul di kelompok bingkai yang sama.
 * Cookie yang sama mungkin muncul dalam sejumlah grup bingkai.
 
-[cookie]: /web/tools/chrome-devtools/manage-data/imgs/cookies.png
+[cookies]: /web/tools/chrome-devtools/manage-data/imgs/cookies.png
 
 ## Bidang-bidang {:#fields}
 
@@ -95,7 +95,7 @@ Ada beberapa cara untuk menghapus cookie:
  dari "..."** (**"..."** adalah nama domain) untuk menghapus semua cookie
  dari domain tersebut.
 
-[hapus]: imgs/delete.png
+[delete]: imgs/delete.png
 [cos]: imgs/clear-object-store.png
 
 

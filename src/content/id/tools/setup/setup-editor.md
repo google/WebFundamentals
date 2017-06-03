@@ -5,7 +5,7 @@ description: Editor kode Anda adalah alat development utama; Anda akan memakainy
 {# wf_updated_on: 2015-04-13 #}
 {# wf_published_on: 2014-05-28 #}
 
-# Mempersiapkan Editor Anda {: .page-title }
+# Menyiapkan Editor Anda {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}
@@ -58,16 +58,16 @@ Pengelola paket memudahkan menemukan, memasang, dan memperbarui plugin:
 3. Masukkan nama plugin yang Anda cari (atau jelajahi semua
    plugin).
 
-Coba periksa [daftar plugin Sublime Text
+Lihat [daftar plugin Sublime Text
 yang populer](https://packagecontrol.io/browse). Berikut ini plugin yang kami sukai dan
 sarankan agar Anda memasangnya karena membantu mempercepat proses development:
 
 ### Autoprefixer
 
-Jika Anda menginginkan cara yang cepat untuk menambahkan prefiks vendor ke CSS Anda, Anda bisa melakukannya dengan
+Jika Anda menginginkan cara yang cepat untuk menambahkan awalan vendor ke CSS Anda, Anda bisa melakukannya dengan
 plugin yang berguna ini.
 
-Tulis CSS, abaikan prefiks vendor dan bila Anda ingin menambahkannya, tekan
+Tulis CSS, abaikan awalan vendor dan bila Anda ingin menambahkannya, tekan
 `ctrl+shift+p` dan ketikkan `Autoprefix CSS`.
 
 [Kami membahas bagaimana Anda bisa mengotomatiskan ini di proses

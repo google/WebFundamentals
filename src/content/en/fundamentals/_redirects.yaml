@@ -593,3 +593,12 @@ redirects:
 
 - from: /web/fundamentals/getting-started/primers/media-source-extensions
   to: /web/fundamentals/media/mse
+
+- from: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+  to: /web/fundamentals/engage-and-retain/push-notifications/display-a-notification
+
+- from: /web/fundamentals/engage-and-retain/push-notifications/permissions-subscriptions
+  to: /web/fundamentals/engage-and-retain/push-notifications/permission-ux
+
+- from: /web/fundamentals/engage-and-retain/push-notifications/sending-messages
+  to: /web/fundamentals/engage-and-retain/push-notifications/sending-messages-with-web-push-libraries

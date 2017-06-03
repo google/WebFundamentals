@@ -122,7 +122,7 @@ self.addEventListener('push', event => {
 });
 </pre>
 
-## Mempersiapkan materi pesan {: #preparing-messages }
+## Menyiapkan materi pesan {: #preparing-messages }
 
 Seperti yang kami katakan sebelumnya, server Anda mengirimkan dua jenis pesan:
 

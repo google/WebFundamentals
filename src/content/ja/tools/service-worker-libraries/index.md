@@ -31,17 +31,13 @@ Google の [Service Worker](/web/fundamentals/getting-started/primers/service-wo
 ##  Service Worker Libraries を使用する理由
 
 Service Worker をウェブアプリに追加して、ネットワークの不確実性を排除し、Service Worker を活用した高速かつオフライン ファーストのサービスを提供するメリットについてはご理解されていると思います。
-
 しかし、独自の Service Worker を一から記述する場合は、次のような条件を満たす必要があります。
 
 
 * URL を容易かつ確実に事前キャッシュする。 
 * キャッシュ バージョンの文字列をインクリメントして、事前キャッシュされたリソースを確実にアップデートする。
-
 * キャッシュの有効期限を設定して、キャッシュ サイズまたはエントリ期間を明確にする。
-
 * [lie-fi](http://www.urbandictionary.com/define.php?term=lie-fi) ネットワーク タイムアウトやボイラプレート コードなどの一般的なパターンを構成する。
-
 * オフライン使用時に Google アナリティクス データを取得およびレポートする。
 
 
@@ -51,9 +47,7 @@ Google の Service Worker Libraries を使用すると、これらのすべて�
 ##  Service Worker Precache 
 
 [Service Worker Precache](https://github.com/GoogleChrome/sw-precache/)（`sw-precache`）は、リソースを事前キャッシュする Service Worker を生成するためのモジュールです。
-
 このモジュールは、[`gulp`](https://gulpjs.com/) で記述されたスクリプトなど、JavaScript ベースのビルド スクリプトで使用でき、[コマンドライン インターフェース](https://github.com/GoogleChrome/sw-precache/#command-line-interface)も提供されています。
-
 このモジュールを直接使用するか、もしくは必要に応じて [`webpack`](https://webpack.github.io/) など、特定のビルド環境向けの `sw-precache` の[ラッパー](https://github.com/GoogleChrome/sw-precache/#wrappers-and-starter-kits)を使用することが可能です。
 
 
@@ -99,7 +93,6 @@ Google の Service Worker Libraries を使用すると、これらのすべて�
 ##  Offline Google Analytics
 
 [Offline Google Analytics](https://github.com/GoogleChrome/sw-helpers/tree/master/packages/sw-offline-google-analytics) では、アナリティクス リクエストを一時的に保持して再試行することにより、ネットワークの切断時にリクエストが失われないようにします。
-
 このツールは、npm を使用してビルドシステムに簡単にインストールしたり、Service Worker スクリプトに簡単にインポートしたりできます。
 このツールは、パラメータ化された関数呼び出しを使用して設定します。
 

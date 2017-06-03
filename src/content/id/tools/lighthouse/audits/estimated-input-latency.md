@@ -21,7 +21,7 @@ untuk penjelasan mengenai audit ini menguji dengan target skor 50 md (bukannya
 ## Cara untuk lulus audit {: #how }
 
 Agar aplikasi Anda merespons masukan pengguna lebih cepat, Anda perlu mengoptimalkan cara
-menjalankan kode Anda di browser. Periksalah serangkaian teknik yang dijelaskan secara singkat
+menjalankan kode Anda di browser. Lihat serangkaian teknik yang dijelaskan secara singkat
 dalam dokumen [Kinerja Rendering](/web/fundamentals/performance/rendering/).
  Tip ini beragam, mulai dari pemindahan beban komputasi ke web worker untuk
 membebaskan thread utama, hingga pemaktoran ulang pemilih CSS Anda untuk melakukan

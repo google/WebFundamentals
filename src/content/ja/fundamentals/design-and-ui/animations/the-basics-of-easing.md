@@ -30,7 +30,7 @@ CSS 遷移とアニメーションではどちらも、[アニメーションに
 * `ease-out`
 * `ease-in-out`
 
-Source: [CSS Transitions, W3C](http://www.w3.org/TR/css3-transitions/#transition-timing-function-property)
+出典: [CSS 遷移、W3C](http://www.w3.org/TR/css3-transitions/#transition-timing-function-property)
 
 `steps` キーワードを使用すると、離散的なステップから成る遷移を構成できますが、自然に感じるアニメーションを作成する上で最も有用なキーワードは上に挙げたものです。
 

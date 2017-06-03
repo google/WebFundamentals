@@ -5,7 +5,7 @@ description:了解如何在本地存储数据以缩短响应时间和改进离�
 {# wf_updated_on:2016-09-29 #}
 {# wf_published_on:2016-09-29 #}
 
-# 渐进式网络应用的离线存储 {: .page-title }
+# Progressive Web App 的离线存储 {: .page-title }
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 {% include "web/_shared/contributors/mco.html" %}
@@ -14,12 +14,12 @@ description:了解如何在本地存储数据以缩短响应时间和改进离�
   <img src="images/pwa-in-devtools.jpg" alt="DevTools 中的 PWA">
   <figcaption>
     <a href="https://pokedex.org" class="external">Pokedex</a>
-    渐进式网络应用针对应用状态和 Pokemon 数据集使用 IndexedDB，而对于网址可寻址的资源则使用 Cache API。
+    Progressive Web App 针对应用状态和 Pokemon 数据集使用 IndexedDB，而对于网址可寻址的资源则使用 Cache API。
 </figcaption>
 
 </figure>
 
-在路上时互联网连接会变得不稳定或无法上网，这是离线支持和可靠的性能成为[渐进式网络应用](/web/progressive-web-apps/)中的常用功能的原因。即使在完美的无线环境中，明智地使用缓存和其他存储技术也可显著改善用户体验。在此博文中，我们将围绕 PWA  的离线数据存储总结一些想法—思考提供*有效的*离线体验所需的 JSON 负载、图像和常规静态数据。
+在路上时互联网连接会变得不稳定或无法上网，这是离线支持和可靠的性能成为 [Progressive Web App](/web/progressive-web-apps/) 中的常用功能的原因。即使在完美的无线环境中，明智地使用缓存和其他存储技术也可显著改善用户体验。在此博文中，我们将围绕 PWA  的离线数据存储总结一些想法—思考提供*有效的*离线体验所需的 JSON 负载、图像和常规静态数据。
 
 
 
@@ -150,7 +150,7 @@ Chrome 一直在来源试用版中试验对[持久化存储](/web/updates/2016/0
 如果您对离线存储感兴趣，则要注意下面取得的成就。
 
 
-* [Durable Storage](https://storage.spec.whatwg.org/)：防止存储受用户代理的清除政策影响。
+* [Durable Storage](https://storage.spec.whatwg.org/)：防止存储受 User Agent 的清除政策影响。
 
 
 * [Indexed Database API 2.0](https://w3c.github.io/IndexedDB/)：高级键/值数据管理。

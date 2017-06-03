@@ -20,7 +20,7 @@ Gunakan breakpoint untuk menghentikan sementara kode JavaScript Anda
 serta selidiki nilai-nilai variabel dan tumpukan panggilan pada suatu saat
 tertentu.
 
-Setelah Anda menyetel breakpoint, pelajari cara merunut kode
+Setelah Anda menyetel breakpoint, pelajari cara menyusuri kode
 dan menyelidiki variabel serta tumpukan panggilan dalam [Cara merunut kode
 Anda](step-code).
 
@@ -52,7 +52,8 @@ navigator**
 
 **Tip**: Jika Anda sedang menangani kode yang dikecilkan, tekan tombol **pretty print**
 (![tombol pretty print][pp]{:.devtools-inline})
-untuk membuatnya dapat dibaca. 
+untuk
+membuatnya dapat dibaca. 
 
 Sepanjang sisi kiri kode sumber, Anda bisa melihat nomor baris. Region ini
 disebut **gutter nomor baris**. Klik dalam gutter nomor baris untuk

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: En este codelab, crearás una Progressive Web App, que se carga rápidamente, incluso con redes débiles, tiene un ícono en la pantalla principal y se carga como experiencia de pantalla completa y de primer nivel.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2017-01-05T16:32:36Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -26,8 +25,7 @@ Una Progressive Web App es:
 
 * __Progresiva__: funciona para todos los usuarios, sin importar la elección de navegador, porque está construida con mejora progresiva como principio central.
 * __Adaptable__: se adapta a cualquier factor de formulario, sea escritorio, móvil, tablet o lo que venga en el futuro.
-* __Independiente de la conectividad__: mejorada con 
-* s para trabajar sin conexión o con redes de mala calidad.
+* __Independiente de la conectividad__: mejorada con service workers para trabajar sin conexión o con redes de mala calidad.
 * __Estilo app__: al usuario le parece una app con interacciones y navegación estilo app, porque está construida con modelo de shell de app.
 * __Fresca__: siempre actualizada gracias al proceso de actualización de service worker.
 * __Segura__: emitida vía HTTPS para evitar intromisiones y para garantizar que el contenido no se haya manipulado.
@@ -88,7 +86,7 @@ Las carpetas `step-NN` contienen el estado final deseado de cada paso de este co
 
 A pesar de que puedes usar tu propio servidor web, este codelab está diseñado para funcionar bien con Web Server de Chrome. Si aún no tienes la app instalada, puedes instalarla desde Chrome Web Store.
 
-[Vínculo](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Vínculo](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 Después de instalar la app Web Server for Chrome, haz clic en el atajo Apps de la barra de marcadores: 
 
@@ -232,8 +230,8 @@ El directorio de trabajo también ya incluye el código de la app (`scripts/app.
 * los receptores de códigos para todos los botones del encabezado (`add/refresh`) y del diálogo para agregar la ciudad (`add/cancel`);
 * un método para agregar o actualizar tarjetas de pronóstico (`app.updateForecastCard`);
 * un método para obtener los últimos datos de pronóstico de estado del tiempo de la API de estado del tiempo pública de Firebase (`app.getForecast`);
-* un método para iterar las tarjetas actuales y llamar a `app.getForecast` para obtener los últimos datos de pronóstico climático (`app.updateForecasts`).
-* Algunos datos falsos (`initialWeatherForecast`) que puedes usar para probar rápidamente la representación.
+* un método para iterar las tarjetas actuales y llamar a `app.getForecast` para obtener los últimos datos de pronóstico climático (`app.updateForecasts`);
+* algunos datos falsos (`initialWeatherForecast`) que puedes usar para probar rápidamente la representación.
 
 ### Probar
 
@@ -256,7 +254,7 @@ Vuelve a cargar tu app. El resultado debería ser una tarjeta de pronóstico cli
 Una vez que la hayas probado y hayas verificado que funciona como esperabas, puedes quitar la llamada a `app.updateForecastCard` con los datos falsos nuevamente. Solo la necesitas para asegurarte de que todo funcione como esperabas.
 
 
-## Comienza con una primera carga rápida.
+## Comienza con una primera carga rápida
 
 
 
@@ -374,7 +372,7 @@ Los nuevos agregados son la inicialización de `app.selectedCities` si no existe
 
 Las Progressive Web Apps tienen que ser rápidas y posibles de instalar, lo que significa que funcionan en línea, sin conexión y en conexiones lentas e intermitentes. Para lograr esto, tenemos que almacenar en caché el shell de nuestra app usando service worker, para que siempre esté disponible rápidamente y en forma confiable.
 
-Si no conoces los service workers, puedes adquirir conocimientos básicos leyendo  [Introducción a Service Workers](/web/fundamentals/primers/service-worker/) sobre qué hacen, cómo funciona su ciclo de vida y más. Una vez que hayas completado este code lab, asegúrate de revisar el [code lab Depuración de Service Workers](http://goo.gl/jhXCBy) para conocer más cómo trabajar con service workers.
+Si no conoces los service workers, puedes adquirir conocimientos básicos leyendo  [Introducción a Service Workers](/web/fundamentals/primers/service-worker/) sobre qué hacen, cómo funciona su ciclo de vida y más. Una vez que hayas completado este code lab, asegúrate de revisar el [code lab Depuración de Service Workers](https://goo.gl/jhXCBy) para conocer más cómo trabajar con service workers.
 
 Las funciones que se proporcionan mediante los procesos de trabajo deben considerarse como una mejora progresiva, y solo deben agregarse si son compatibles con el navegador. Por ejemplo, con los procesos de trabajo puedes almacenar en caché el shell de la app y datos para tu app, de modo que estén disponibles aun cuando no suceda lo mismo con la red. Cuando no se admitan procesos de trabajo, no se llamará al código sin conexión y el usuario obtendrá una experiencia básica. El uso de la detección de funciones para proporcionar una mejora progresiva tiene poca sobrecarga y no fallará en navegadores más antiguos que no admitan esa función.
 
@@ -387,7 +385,7 @@ Esto requiere dos pasos sencillos:
 1. Dile al navegador que registre el archivo de JavaScript como service worker.
 2. Crea un archivo de JavaScript que contenga el service worker.
 
-Primero, tenemos que revisar si el navegador es compatible con service workers y, si lo es, registrar el service worker. Agrega el siguiente código a `app.js` (después del comentario`// TODO add service worker code here`):
+Primero, tenemos que revisar si el navegador es compatible con service workers y, si lo es, registrar el service worker. Agrega el siguiente código a `app.js` (después del comentario `// TODO add service worker code here`):
 
 ```
   if ('serviceWorker' in navigator) {
@@ -747,7 +745,7 @@ Luego ve al subpanel __Cache Storage__ del panel __Application__ de DevTools. Am
 
 A nadie le agrada tener que escribir URLs largas en un teclado móvil si no tiene necesidad de hacerlo. Con la función de la pantalla principal Add To, tus usuarios pueden escoger agregar un vínculo de atajo a su dispositivo de la misma manera en que instalarían una app nativa de una tienda, pero con mucha menos fricción.
 
-### Banners de instalación de aplicaciones web y Add to Homescreen para Chrome en Android.
+### Banners de instalación de aplicaciones web y Add to Homescreen para Chrome en Android
 
 Los banners de instalación de apps web te dan la posibilidad de permitir que tus usuarios agreguen de manera rápida y fluida tu app web a sus pantallas de inicio. Esto hace más simple abrir y regresar a tu app. Agregar banners de instalación de apps es sencillo y Chrome se encarga de la mayor parte del trabajo pesado. Solo tenemos que incluir un archivo de manifiesto de app web con detalles de la app.
 
@@ -847,7 +845,7 @@ En tu `index.html`, agrega lo siguiente al final del elemento `<head>`:
 
 En esta sección, te mostraremos alguna formas de probar el manifiesto de tu app web.
 
-La primera forma es con DevTools. Abre el subpanel __Manifest__ del panel __Application__. Si has agregado correctamente la información del manifiesto, podrás verla analizada y presentada en un formato legible en este subpanel.
+La primera forma es con DevTools. Abre el subpanel __Manifest__del panel __Application__. Si has agregado correctamente la información del manifiesto, podrás verla analizada y presentada en un formato legible en este subpanel.
 
 También puedes probar la función para agregar a la pantalla principal desde este subpanel. Haz clic en el botón __Add to homescreen__. Deberías ver el mensaje "add this site to your shelf" debajo de tu barra de URL, como en la siguiente captura de pantalla.
 

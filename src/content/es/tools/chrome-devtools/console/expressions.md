@@ -46,7 +46,7 @@ Usa las siguientes combinaciones de teclas para seleccionar elementos:
 <table class="responsive">
   <thead>
     <tr>
-      <th colspan="2">Descripción &amp; de la combinación de teclas</th>
+      <th colspan="2">Combinación de teclas y descripción</th>
     </tr>
   </thead>
   <tbody>

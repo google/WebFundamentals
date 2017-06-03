@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: "Penangan input berpotensi menyebabkan masalah kinerja di aplikasi Anda, karena bisa memblokir penyelesaian bingkai, dan bisa menyebabkan pekerjaan layout tambahan dan tidak perlu.
+description: "Penangan masukan berpotensi menyebabkan masalah kinerja di aplikasi Anda, karena bisa memblokir penyelesaian bingkai, dan bisa menyebabkan pekerjaan layout tambahan dan tidak perlu.
 
 {# wf_updated_on: 2015-10-06 #}
 {# wf_published_on: 2015-03-20 #}
@@ -19,9 +19,9 @@ yang tidak perlu.
 * Jangan lakukan perubahan gaya di penangan masukan.
 * Lakukan debounce pada penangan Anda; simpan nilai kejadian dan tangani perubahan gaya di callback requestAnimationFrame berikutnya.
 
-## Hindari penangan input yang berjalan lama
+## Hindari penangan masukan yang berjalan lama
 
-Dalam kemungkinan kasus tercepat, bila pengguna berinteraksi dengan laman, thread compositor laman bisa mengambil input sentuhan pengguna dan cuma memindahkan materi. Hal ini tidak mengharuskan thread utama melakukan pekerjaan apa pun, sedangkan JavaScript, layout, gaya, atau paint dilakukan.
+Dalam kemungkinan kasus tercepat, bila pengguna berinteraksi dengan laman, thread compositor laman bisa mengambil masukan sentuhan pengguna dan cuma memindahkan materi. Hal ini tidak mengharuskan thread utama melakukan pekerjaan apa pun, sedangkan JavaScript, layout, gaya, atau paint dilakukan.
 
 <img src="images/debounce-your-input-handlers/compositor-scroll.jpg" alt="Pengguliran ringan; hanya compositor.">
 
@@ -29,11 +29,11 @@ Walau demikian, jika Anda menyertakan penangan input, seperti `touchstart`, `tou
 
 <img src="images/debounce-your-input-handlers/ontouchmove.jpg" alt="Pengguliran berat; compositor diblokir di JavaScript.">
 
-Singkat kata, Anda harus memastikan penangan input apa pun yang Anda jalankan harus mengeksekusi dengan cepat dan memungkinkan compositor melakukan tugasnya.
+Singkat kata, Anda harus memastikan penangan masukan apa pun yang Anda jalankan harus mengeksekusi dengan cepat dan memungkinkan compositor melakukan tugasnya.
 
-## Hindari perubahan gaya di penangan input
+## Hindari perubahan gaya di penangan masukan
 
-Penangan input, seperti yang digunakan untuk gulir dan sentuh, dijadwalkan berjalan tepat sebelum callback `requestAnimationFrame`.
+Penangan masukan, seperti yang digunakan untuk gulir dan sentuh, dijadwalkan berjalan tepat sebelum callback `requestAnimationFrame`.
 
 Jika Anda membuat perubahan visual di dalam salah satu penangan itu, maka pada awal `requestAnimationFrame`, akan ada penundaan perubahan gaya. Jika Anda _kemudian_ membaca properti visual di awal callback requestAnimationFrame, sebagaimana saran di “[Hindari layout besar dan kompleks serta layout thrashing](avoid-large-complex-layouts-and-layout-thrashing)”, Anda akan memicu layout sinkron paksa!
 
@@ -60,7 +60,7 @@ Solusi untuk kedua masalah di atas adalah sama: Anda harus selalu men-debounce p
     window.addEventListener('scroll', onScroll);
 
 
-Melakukan hal ini juga memiliki manfaat tambahan karena membuat penangan input Anda tetap ringan, dan itu bagus karena Anda kini tidak memblokir hal-hal seperti guliran atau sentuhan pada kode yang secara komputasi mahal!
+Melakukan hal ini juga memiliki manfaat tambahan karena membuat penangan masukan Anda tetap ringan, dan itu bagus karena Anda kini tidak memblokir hal-hal seperti guliran atau sentuhan pada kode yang secara komputasi mahal!
 
 
 {# wf_devsite_translation #}

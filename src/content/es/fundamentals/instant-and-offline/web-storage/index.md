@@ -31,7 +31,7 @@ El modelo para almacenar unidades de datos determina cómo se organizan los dato
 lo cual afecta a la facilidad de uso, al costo, y al rendimiento de las solicitudes de almacenamiento y
 recuperación de datos. 
 
-* **Estructurado:** Los datos almacenados en tablas con campos predefinidos, como es común
+* **Estructurado: **Los datos almacenados en tablas con campos predefinidos, como es común
 en sistemas de administración de base de datos basadas en SQL,
 permiten realizar consultas flexibles
 y dinámicas cuando el rango completo de los tipos de consulta puede ser desconocido a priori. Un ejemplo destacado de un almacenamiento de datos estructurado es IndexedDB en el
@@ -54,7 +54,7 @@ sistemas de archivo y los servicios de almacenamiento en la nube.
 Los métodos de almacenamiento de las apps web se pueden analizar de acuerdo con el ámbito de datos
 persistentes.
 
-* **Persistencia de sesión:** Los datos de esta categoría se conservan siempre y cuando
+* **Persistencia de sesión: **Los datos de esta categoría se conservan siempre y cuando
 haya una sesión web o pestaña del navegador activa. Un ejemplo de un mecanismo
 de almacenamiento con persistencia de sesión es la Session Storage API.
 
@@ -205,7 +205,7 @@ significa que DevTools no la admite o no es aplicable.
 Si usas varias API de almacenamiento, consulta la funcionalidad Clear Storage de
 DevTools. Te permite borrar varios almacenamientos con solo
 un clic. Para obtener más información, consulta [Borrar service workers, almacenamientos, bases de datos y
-cachés.](/web/tools/chrome-devtools/manage-data/local-storage#clear-storage).
+cachés](/web/tools/chrome-devtools/manage-data/local-storage#clear-storage).
 
 
 ## Pasos siguientes

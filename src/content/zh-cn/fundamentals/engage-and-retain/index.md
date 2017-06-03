@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description:与您的用户进行联系，并吸引他们重新访问您的网站。使用一切资源改进您的网站。竭尽全力开发渐进式网络应用。
+description: 与您的用户进行联系，并吸引他们重新访问您的网站。使用一切资源改进您的网站。竭尽全力开发 Progressive Web App。
 
 {# wf_updated_on:2016-09-09 #}
 {# wf_published_on:2015-09-08 #}
@@ -8,7 +8,7 @@ description:与您的用户进行联系，并吸引他们重新访问您的网�
 # 吸引并留住用户 {: .page-title }
 
 与您的用户进行联系，并吸引他们重新访问您的网站。使用一切资源改进您的网站。
-**竭尽全力**开发[渐进式网络应用](/web/progressive-web-apps/)。
+**竭尽全力**开发 [Progressive Web App](/web/progressive-web-apps/)。
 
 
 其中许多功能的基础都是[网络应用清单](web-app-manifest/)，如果您的网站没有此清单，不妨创建一个。
@@ -16,7 +16,7 @@ description:与您的用户进行联系，并吸引他们重新访问您的网�
    
 
 * 控制应用在用户希望看到它们的地方（例如，移动设备主屏幕）显示的方式。
-* 指定用户可以启动的对象。
+* 指定用户可以启动的对象。  
 * 定义应用启动时的外观。  
 
 <div class="attempt-left">
@@ -64,7 +64,7 @@ description:与您的用户进行联系，并吸引他们重新访问您的网�
 ### Udacity 课程
 
 [Progressive Web App 基础知识](https://udacity.com/ud811)<br>
-在本课程中，您将着手开发自己的第一款渐进式网络应用 - 一种充分利用了本机应用所喜欢的多种功能的网络应用。您还会获得使用服务工作线程创建可以离线工作的网络应用的更多经验。
+在本课程中，您将着手开发自己的第一款 Progressive Web App - 一种充分利用了本机应用所喜欢的多种功能的网络应用。您还会获得使用服务工作线程创建可以离线工作的网络应用的更多经验。
 最后，您将通过配置网络应用清单文件，让自己的应用可以安装到用户的主屏幕上。
 
 

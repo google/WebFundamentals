@@ -23,7 +23,7 @@ En su forma más básica, todo lo que necesitas es una matriz con un grupo de ob
     console.table([[1,2,3], [2,3,4]]);
     
   
-:
+Esto mostrará lo siguiente:
 
 ![Visualización de la tabla de la consola](images/table-arrays.png)
 

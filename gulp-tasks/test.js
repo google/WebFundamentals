@@ -48,6 +48,13 @@ const RE_SRC_BASE = /src\/content\//;
 const RE_DATA_BASE = /src\/data\//;
 const COMMON_TAGS_FILE = 'src/data/commonTags.json';
 const CONTRIBUTORS_FILE = 'src/data/_contributors.yaml';
+const VALID_REGIONS = [
+  'africa', 'asia', 'europe', 'middle-east', 'north-america', 'south-america'
+];
+const VALID_VERTICALS = [
+  'education', 'entertainment', 'media', 'real-estate', 'retail',
+  'transportation', 'travel'
+];
 
 let remarkLintOptions = {
   external: [
@@ -457,6 +464,24 @@ function testMarkdown(filename, contents, options) {
       }
     }
 
+    // Validate featured square image path
+    matched = wfRegEx.RE_IMAGE_SQUARE.exec(contents);
+    if (matched) {
+      let imgPath = matched[1];
+      if (imgPath.indexOf('/web') === 0) {
+        imgPath = imgPath.replace('/web', '');
+      }
+      imgPath = './src/content/en' + imgPath;
+      try {
+        fs.accessSync(imgPath, fs.R_OK);
+      } catch (ex) {
+        position = {line: getLineNumber(contents, matched.index)};
+        msg = 'WF Tag `wf_featured_image_square` found, but couldn\'t find ';
+        msg += `image - ${matched[1]}`;
+        logError(filename, position, msg);
+      }
+    }
+
     // Check for uncommon tags
     matched = wfRegEx.RE_TAGS.exec(contents);
     if (matched && options.commonTags) {
@@ -468,6 +493,28 @@ function testMarkdown(filename, contents, options) {
           logWarning(filename, position, msg);
         }
       });
+    }
+
+    // Check for valid regions
+    matched = wfRegEx.RE_REGION.exec(contents);
+    if (matched) {
+      let region = matched[1];
+      if (VALID_REGIONS.indexOf(region) === -1) {
+        position = {line: getLineNumber(contents, matched.index)};
+        msg = 'Invalid `wf_region` (' + region + ') provided.';
+        logError(filename, position, msg);
+      }
+    }
+
+    // Check for valid verticals
+    matched = wfRegEx.RE_VERTICAL.exec(contents);
+    if (matched) {
+      let vertical = matched[1];
+      if (VALID_VERTICALS.indexOf(vertical) === -1) {
+        position = {line: getLineNumber(contents, matched.index)};
+        msg = 'Invalid `wf_vertical` (' + vertical + ') provided.';
+        logError(filename, position, msg);
+      }
     }
 
     // Check for a single level 1 heading with page title
@@ -549,6 +596,15 @@ function testMarkdown(filename, contents, options) {
         msg += `actual file: ${inclPath}`;
         logError(filename, position, msg);
       }
+    });
+
+    // Error on single line comments
+    matched = wfRegEx.getMatches(wfRegEx.RE_SINGLE_LINE_COMMENT, contents);
+    matched.forEach(function(match) {
+      position = {line: getLineNumber(contents, match.index)};
+      msg = 'Multi-line comment syntax used on single line comment.';
+      msg += ' Use single line syntax: `{# this is my comment #}`';
+      logError(filename, position, msg);
     });
 
     // Warn on unescaped template tags
@@ -727,7 +783,8 @@ function testHTML(filename, contents, options) {
  *   Note: The returned promise always resolves, it will never reject.
  *
  * @param {string} filename The name of the file to be tested.
- * @return {Array} An array of common tags.
+ * @param {string} contents The unparsed contents of the tags file. 
+ * @return {Promise} A promise with the result of the test.
  */
 function testCommonTags(filename, contents) {
   return new Promise(function(resolve, reject) {
@@ -747,7 +804,8 @@ function testCommonTags(filename, contents) {
  *   Note: The returned promise always resolves, it will never reject.
  *
  * @param {string} filename The name of the file to be tested.
- * @return {Object} An object with all of the contributors.
+ * @param {string} contents The unparsed contents of the contributors file. 
+ * @return {Promise} A promise with the result of the test.
  */
 function testContributors(filename, contents) {
   return new Promise(function(resolve, reject) {
@@ -771,6 +829,32 @@ function testContributors(filename, contents) {
     resolve();
   });
 }
+
+/**
+ * Tests and validates a _redirects.yaml file.
+ *   Note: The returned promise always resolves, it will never reject.
+ *
+ * @param {string} filename The name of the file to be tested.
+ * @param {string} contents The unparsed contents of the redirects file. 
+ * @return {Promise} A promise with the result of the test.
+ */
+function testRedirects(filename, contents) {
+  return new Promise(function(resolve, reject) {
+    let parsed = parseYAML(filename, contents);
+    let filepath = path.dirname(filename).split('/').splice(3).join('/');
+    filepath = path.join('/', 'web', filepath, '/');
+    if (parsed.redirects && parsed.redirects.length > 0) {
+      parsed.redirects.forEach((item) => {
+        if (!item.from.startsWith(filepath)) {
+          let msg = `Must only redirect from paths below "${filepath}"`;
+          logError(filename, null, msg);
+        }
+      });
+    };
+    resolve();
+  });
+}
+
 
 /******************************************************************************
  * Primary File Test
@@ -827,6 +911,8 @@ function testFile(filename, opts) {
       testPromise = testYAML(filename, contents);
     } else if (filenameObj.base === '_contributors.yaml') {
       testPromise = testContributors(filename, contents);
+    } else if (filenameObj.base === '_redirects.yaml') {
+      testPromise = testRedirects(filename, contents);
     } else if (filenameObj.base === 'commontags.json') {
       testPromise = testCommonTags(filename, contents);
     } else if (MD_FILES.indexOf(filenameObj.ext) >= 0) {

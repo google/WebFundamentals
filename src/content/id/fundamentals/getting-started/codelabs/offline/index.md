@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Pelajari cara mengintegrasikan service worker ke aplikasi yang ada untuk membuat aplikasi itu bekerja offline.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2016-11-09T18:31:19Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -13,7 +12,7 @@ description: Pelajari cara mengintegrasikan service worker ke aplikasi yang ada 
 
 
 
-## Ikhtisar
+## Ringkasan
 
 
 
@@ -94,7 +93,7 @@ Alasan ini berfungsi offline adalah dasar dari codelab ini: dukungan offline den
 
 Anda sekarang akan membuang semua dukungan offline dari aplikasi dan Anda akan mempelajari cara menggunakan service worker untuk menambahkan dukungan offline kembali ke dalam aplikasi
 
-Periksa versi "rusak" dari aplikasi yang tidak mengimplementasikan service worker.
+Lihat versi "rusak" dari aplikasi yang tidak mengimplementasikan service worker.
 
     $ git checkout code-lab
 
@@ -259,7 +258,7 @@ Anda sekarang memiliki dukungan offline. Muat ulang laman Anda saat masih online
 
 #### Ketahui Selengkapnya
 
-*  [Pengantar service worker](/web/fundamentals/primers/service-worker/?hl=en)
+*  [Pengantar service worker](/web/fundamentals/primers/service-worker/)
 
 
 

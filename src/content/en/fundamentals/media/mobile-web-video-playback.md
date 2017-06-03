@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Create the best mobile media experience on the Web by following these best practises.
 
 {# wf_published_on: 2017-04-07 #}
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2017-05-23 #}
 
 # Mobile Web Video Playback {: .page-title }
 
@@ -123,11 +123,11 @@ button state to "pause" and hide the video controls. When the video pauses, we
 simply change button state to "play" and show the video controls.
 
     video.addEventListener('play', function() {
-      playPauseButton.classList.add('paused');
+      playPauseButton.classList.add('playing');
     });
 
     video.addEventListener('pause', function() {
-      playPauseButton.classList.remove('paused');
+      playPauseButton.classList.remove('playing');
     });
 
 When time indicated by video `currentTime` attribute changed via the
@@ -147,7 +147,7 @@ also choose to load automatically another video if the user has enabled some
 kind of "AutoPlay" feature.
 
     video.addEventListener('ended', function() {
-      playPauseButton.classList.remove('paused');
+      playPauseButton.classList.remove('playing');
       video.currentTime = 0;
     });
 
