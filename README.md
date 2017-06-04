@@ -1,26 +1,26 @@
-# Web Fundamentals on DevSite 
+# Web Fundamentals on DevSite
 
 [![Build Status](https://travis-ci.org/google/WebFundamentals.svg?branch=master)](https://travis-ci.org/google/WebFundamentals)
 
-Welcome to the new Web**Fundamentals**! An effort to showcase best practices and tools for modern Web Development. 
+Welcome to the new Web**Fundamentals**! An effort to showcase best practices and tools for modern Web Development.
 
 
 ### What's changed?
 
 * We're now using the [DevSite](https://developers.google.com/) infrastructure
   * New [style guide](https://petele-scratch.appspot.com/web/resources/style-guide)
-  * New [widgets](https://petele-scratch.appspot.com/web/resources/widgets) allow inline JavaScript, common links, related guide and more 
+  * New [widgets](https://petele-scratch.appspot.com/web/resources/widgets) allow inline JavaScript, common links, related guide and more
 * Jekyll has been eliminated, instead pages are rendered at request time
 * Front-matter has been eliminated from the markdown, but files now require a [simple set of tags](https://petele-scratch.appspot.com/web/resources/writing-an-article#yaml-front-matter)
 
 ### What stays the same?
 
-* GitHub is still our source of truth for content, 
-* We want your contributions, either PR's, issues, whatever!
-* The latest will be staged at https://web-central.appspot.com/web/
+* GitHub is still our source of truth for content,
+* We want your contributions, either PRs, issues, whatever!
+* The latest is staged at https://web-central.appspot.com/web/
 
 ## Cloning the repo
-If you have a high bandwidth connection, I recommend starting with a fresh clone
+If you have a high-bandwidth connection, I recommend starting with a fresh clone
 of the repo.
 
 ```
@@ -29,7 +29,7 @@ git clone https://github.com/google/WebFundamentals.git
 
 ## Getting set up
 The new DevSite infrastructure simplifies the dependencies a lot. Ensure
-you have a recent version of [Node](https://nodejs.org/en/) and the 
+you have a recent version of [Node](https://nodejs.org/en/) and the
 [AppEngine SDK for Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
 already installed.
 
