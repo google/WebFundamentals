@@ -57,8 +57,8 @@ applied. The old behavior was deprecated in Chrome 57, and is now removed.
 
 Because of their unfamilliarity to non-technical browser users, we're
 increasingly seeing the `data:` scheme being used in spoofing and phishing
-attacks. To prevent this, we're blocking web pages from loading using `data:`
-from the top frame. This applies to `&lt;a&gt;` tags, `window.open`,
+attacks. To prevent this, we're blocking web pages from loading `data:` URLs
+in the top frame. This applies to `&lt;a&gt;` tags, `window.open`,
 `window.location` and similar mechanisms. The `data:` scheme will still work for
 resources loaded below by a page.
 
