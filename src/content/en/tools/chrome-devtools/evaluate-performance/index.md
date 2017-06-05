@@ -23,6 +23,50 @@ Caution: This tutorial is based on Chrome 59. If you use another version of
 Chrome, the UI and features of DevTools may be different. Check `chrome://help`
 to see what version of Chrome you're running.
 
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var response1 = "That's OK! This tutorial covers how the Performance panel works in depth. You " +
+    "should have no problem following along.";
+var response2 = "The Performance panel is pretty complicated. You may still learn some new stuff!";
+var feedback = {
+  "category": "DevTools",
+  "question": "Let's get started! How much do you use the Performance panel?",
+  "choices": [
+    {
+      "button": {
+        "text": "Never used it"
+      },
+      "response": response1,
+      "analytics": {
+        "label": "Runtime Tutorial / Experience / None",
+        "value": 0 // optional, defaults to 1 if omitted
+      }
+    },
+    {
+      "button": {
+        "text": "Sometimes"
+      },
+      "response": response1,
+      "analytics": {
+        "label": "Runtime Tutorial / Experience / Some",
+        "value": 0.5
+      }
+    },
+    {
+      "button": {
+        "text": "All the time"
+      },
+      "response": response2,
+      "analytics": {
+        "label": "Runtime Tutorial / Experience / A Lot"
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
+
 ## Get started {: #get-started }
 
 In this tutorial, you open DevTools on a live page and use the Performance
