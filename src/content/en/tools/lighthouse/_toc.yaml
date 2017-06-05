@@ -73,6 +73,8 @@ toc:
         path: /web/tools/lighthouse/audits/manifest-short_name-is-not-truncated
       - title: No Element Has A tabindex Attribute Greater Than 0
         path: /web/tools/lighthouse/audits/tabindex
+      - title: Offscreen Images
+        path: /web/tools/lighthouse/audits/offscreen-images
       - title: Opens External Anchors Using rel="noopener"
         path: /web/tools/lighthouse/audits/noopener
       - title: Oversized Images

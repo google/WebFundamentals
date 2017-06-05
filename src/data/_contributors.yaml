@@ -192,6 +192,22 @@ owencm:
   twitter: owencm
   email: owencm@google.com
 
+mcasas:
+  name:
+    given: Miguel
+    family: Casas-Sanchez
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - engineer
+  twitter: yellowdoge
+  github: yellowdoge
+  email: mcasas@chromium.org
+  description:
+    en: Miguel is an engineer in the Chrome team
+
 michaelchang:
   name:
     given: Michael
@@ -840,6 +856,25 @@ henrylim:
   description:
     en: 'Co-Organizer @ GDG Kuala Lumpur'
 
+wayouliu:  
+  name:
+    given: Wayou
+    family: Liu
+  homepage: https://wayou.github.io/
+  google: +WayouLiu
+  twitter: liuwayong
+  github: wayou
+  lanyrd:
+  description:
+    en: "Wayou is a developer and loves the web"
+  org:
+    name:
+    unit:
+  country:
+  role:
+    - translator
+  email: liuwayong@gmail.com
+
 heathermahan:
   name:
     given: Heather
@@ -910,6 +945,21 @@ josephmedley:
   email: jmedley@google.com
   description:
     en: Technical Writer
+
+kuu:
+  name:
+    given: Kuu
+    family: Miyazaki
+  org:
+    name: Independent
+    unit: Developer
+  country: Japan
+  role:
+    - translator
+  twitter: miyazaqui
+  email: miyazaqui@gmail.com
+  description:
+    en: "Kuu is interested in media technology on the Web"
 
 jacquerie:
   name:

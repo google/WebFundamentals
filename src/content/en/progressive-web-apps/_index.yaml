@@ -46,7 +46,8 @@ landing_page:
       # image_path: images/pwa-intro.png
 
 
-  - classname: devsite-landing-row-50 devsite-landing-row-no-image-background devsite-landing-row-grey devsite-landing-row-colored
+  - classname: devsite-landing-row-50 devsite-landing-row-no-image-background
+    background: grey
     items:
     - heading: Reliable
       description: >
@@ -82,7 +83,8 @@ landing_page:
         path: /web/fundamentals/performance/
         classname: button button-white
 
-  - classname: devsite-landing-row-50 devsite-landing-row-no-image-background devsite-landing-row-grey devsite-landing-row-colored
+  - classname: devsite-landing-row-50 devsite-landing-row-no-image-background
+    background: grey
     items:
     - heading: Engaging
       description: >
@@ -153,7 +155,8 @@ landing_page:
           </ul>
 
 
-  - classname: devsite-landing-row-67 devsite-landing-row-no-image-background devsite-landing-row-grey devsite-landing-row-colored
+  - classname: devsite-landing-row-50 devsite-landing-row-no-image-background
+    background: grey
     items:
     - heading: Lighthouse
       description: >
