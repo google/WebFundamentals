@@ -100,11 +100,11 @@ they occur may or may not correspond to when the user thinks the app is loaded.
 So to ensure we don't make this mistake going forward, we have to answer these
 questions:
 
-1. What metrics most accurately measure performance as perceived by a human? 2.
-How do we measure these metrics on our actual users? 3. How do we interpret our
-measurements to determine whether an app is "fast"? 4. Once we understand our
-app's real-user performance, what do we do to prevent regressions and hopefully
-improve performance in the future?
+1. What metrics most accurately measure performance as perceived by a human?
+2. How do we measure these metrics on our actual users?
+3. How do we interpret our measurements to determine whether an app is "fast"?
+4. Once we understand our app's real-user performance, what do we do to prevent
+   regressions and hopefully improve performance in the future?
 
 ## User-centric performance metrics
 
@@ -149,11 +149,11 @@ or even a `<canvas>` element.
 
 ### First meaningful paint and hero element timing
 
-*First meaningful paint (FMP) is the metric that answers the question: "is it
-*useful?". While the concept of "useful" is very hard to spec in a way that
-*applies generically to all web pages (and thus no spec exists, yet), it's quite
-*easy for web developers themselves to know what parts of their pages are going
-*to be most useful to their users.
+First meaningful paint (FMP) is the metric that answers the question: "is it
+useful?". While the concept of "useful" is very hard to spec in a way that
+applies generically to all web pages (and thus no spec exists, yet), it's quite
+easy for web developers themselves to know what parts of their pages are going
+to be most useful to their users.
 
 <figure>
   <img src="/web/updates/images/2017/06/perf-metrics-hero-elements.png"
@@ -200,8 +200,9 @@ is both visually rendered and capable of reliably responding to user input. An
 application could be unable to respond to user input for a couple of reasons:
 
 * The JavaScript needed to make the components on the page work hasn't yet
-* loaded. There are long tasks blocking the main thread (as described in the
-* last section).
+  loaded.
+* There are long tasks blocking the main thread (as described in the last
+  section).
 
 The TTI metric identifies the point at which the page's initial JavaScript is
 loaded and the main thread is idle (free of long tasks).
@@ -494,7 +495,7 @@ primary reasons:
 
 * Validating that your app performs as expected.
 * Identifying places where poor performance is negatively affecting conversions
-(whatever that means for your app).
+  (whatever that means for your app).
 * Finding opportunities to improve the user experience and delight your users.
 
 One thing definitely worth comparing is how your app performs on mobile devices
@@ -600,27 +601,35 @@ unloaded or goes into the background) and it sends the value of
 `performance.now()` at that point.
 
 ```
+<script>
 window.__trackAbandons = () => {
   // Remove the listener so it only runs once.
   document.removeEventListener('visibilitychange', window.__trackAbandons);
   const ANALYTICS_URL = 'https://www.google-analytics.com/collect';
   const GA_COOKIE = document.cookie.replace(
     /(?:(?:^|.*;)\s*_ga\s*\=\s*(?:\w+\.\d\.)([^;]*).*$)|^.*$/, '$1');
-  const TRACKING_ID = 'UA-21292978-3';
+  const TRACKING_ID = 'UA-XXXXX-Y';
   const CLIENT_ID =  GA_COOKIE || (Math.random() * Math.pow(2, 52));
 
   // Send the data to Google Analytics via the Measurement Protocol.
   navigator.sendBeacon && navigator.sendBeacon(ANALYTICS_URL, [
     'v=1', 't=event', 'ec=Load', 'ea=abandon', 'ni=1',
+    'dl=' + location.href,
+    'dt=' + document.title,
     'tid=' + TRACKING_ID,
     'cid=' + CLIENT_ID,
     'ev=' + Math.round(performance.now()),
   ].join('&'));
 };
 document.addEventListener('visibilitychange', window.__trackAbandons);
+</script>
 ```
 
-Of course, you'll want to make sure you remove this listener once the page
+You can use this code by copying it into `<head>` of your document and replacing
+the `UA-XXXXX-Y` placeholder with your
+[tracking ID](https://support.google.com/analytics/answer/1008080).
+
+You'll also want to make sure you remove this listener once the page
 becomes interactive or you'll be reporting abandonment for loads where you were
 also reporting TTI.
 
