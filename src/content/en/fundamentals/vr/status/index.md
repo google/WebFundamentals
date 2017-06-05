@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Get the latest info on WebVR's status, as well as things to keep in mind when building WebVR experiences.
 
-{# wf_updated_on: 2017-05-23 #}
+{# wf_updated_on: 2017-06-05 #}
 {# wf_published_on: 2016-12-12 #}
 
 # WebVR Status and Considerations {: .page-title }
