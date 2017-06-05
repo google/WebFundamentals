@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Object rest & spread properties
+description: This update discusses object rest and spread properties, a new JavaScript feature.
 
 {# wf_updated_on: 2017-06-05 #}
 {# wf_published_on: 2017-06-05 #}
@@ -8,9 +8,14 @@ description: Object rest & spread properties
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Object rest & spread properties {: .page-title }
+# Object rest and spread properties {: .page-title }
 
 {% include "web/_shared/contributors/mathiasbynens.html" %}
+
+Before discussing _object rest and spread properties_, let’s take a trip down
+memory lane and remind ourselves of a very similar feature…
+
+## ES2015 array rest and spread elements
 
 Good ol’ ECMAScript 2015 introduced _rest elements_ for array destructuring
 assignment and _spread elements_ for array literals.
@@ -29,8 +34,11 @@ assignment and _spread elements_ for array literals.
 These ES2015 features have been supported since Chrome 46 and Chrome 47,
 respectively.
 
-[A stage 3 proposal](https://github.com/tc39/proposal-object-rest-spread)
-enables rest and spread properties for object literals, too.
+## ES.next: object rest and spread properties 🆕
+
+So what’s new, then? Well, [a stage 3
+proposal](https://github.com/tc39/proposal-object-rest-spread) enables rest and
+spread properties for object literals, too.
 
     // Rest properties for object destructuring assignment:
     const person = {
@@ -76,7 +84,7 @@ However, there are [some subtle
 differences](http://2ality.com/2016/10/rest-spread-properties.html#spread-defines-properties-objectassign-sets-them)
 in how spreading handles setters.
 
-Object rest & spread properties are supported by default in V8 v6.0.75+ and
+Object rest and spread properties are supported by default in V8 v6.0.75+ and
 Chrome 60+. Consider [transpiling your
 code](https://babeljs.io/docs/plugins/transform-object-rest-spread/) until this
 feature is more widely supported across engines.
