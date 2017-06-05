@@ -68,7 +68,7 @@ e informações sobre novos conteúdos. Você também vai aprender os conceitos 
 
 ### Cursos da Udacity
 
-[Fundamentos do Progressive Web App](https://udacity.com/ud811)<br>
+[Fundamentos do Progressive Web App](https://www.udacity.com/course/intro-to-progressive-web-apps--ud811)<br>
 Nesse curso, você vai aprender o básico para começar a trabalhar no seu primeiro Progressive Web
 App &mdash; um aplicativo web que aproveita os diversos recursos que os aplicativos
 nativos têm. Você ainda aprenderá mais sobre a criação de um aplicativo

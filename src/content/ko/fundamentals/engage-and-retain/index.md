@@ -68,7 +68,7 @@ description: 사용자와 연결하고 계속 재방문하도록 하세요. 사�
 
 ### Udacity 교육과정
 
-[Progressive Web App 기본 사항](https://udacity.com/ud811)<br>
+[Progressive Web App 기본 사항](https://www.udacity.com/course/intro-to-progressive-web-apps--ud811)<br>
 이 교육과정에서는 처음으로 Progressive Web
 App을 만드는 법을 배웁니다. 참고로, Progressive Web App이란 네이티브 애플리케이션에서 제공하는 여러 가지 기능을
 사용할 수 있는 웹 앱입니다. 서비스 워커를 사용하여 오프라인에서 작동하는

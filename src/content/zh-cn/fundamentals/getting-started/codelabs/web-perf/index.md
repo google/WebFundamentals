@@ -18,7 +18,7 @@ description:此代码实验室将帮助您学习如何识别和解决网络应�
 
 
 
-此代码实验室是关于应用/网页性能的一个 Udacity 课程 ( [ud860](https://www.udacity.com/course/viewer#!/c-ud860/l-4138328558/m-4157078575)) 的部分内容的文本版本。此代码实验室并非是视频课程的脚本，它倾向于使用课程的原始实际最终项目处理卡顿识别和校正问题。
+此代码实验室是关于应用/网页性能的一个 Udacity 课程 ( [ud860](https://www.udacity.com/course/browser-rendering-optimization--ud860)) 的部分内容的文本版本。此代码实验室并非是视频课程的脚本，它倾向于使用课程的原始实际最终项目处理卡顿识别和校正问题。
 
 
 ## 概览

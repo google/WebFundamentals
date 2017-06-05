@@ -11,7 +11,7 @@ description: Web'e, küçük ekranli telefonlardan genis ekranli televizyonlara 
 
 
 
-Çoklu cihaz deneyimleri olusturmak sanildigi kadar zor degildir. Bu kilavuzu izleyerek <a href='https://www.udacity.com/course/cs256'>CS256 Mobil Web Gelistirme kursumuz</a> için farkli cihaz türlerinin tümünde iyi sekilde çalisan bir örnek ürün açilis sayfasi olusturacagiz.
+Çoklu cihaz deneyimleri olusturmak sanildigi kadar zor degildir. Bu kilavuzu izleyerek <a href='https://www.udacity.com/course/mobile-web-development--cs256'>CS256 Mobil Web Gelistirme kursumuz</a> için farkli cihaz türlerinin tümünde iyi sekilde çalisan bir örnek ürün açilis sayfasi olusturacagiz.
 
 <img src="images/finaloutput-2x.jpg" alt="son projeyi gösteren birçok cihaz">
 

@@ -7,7 +7,7 @@ description: Se puede acceder a la web desde una gran variedad de dispositivos, 
 
 # Tu primer sitio multidispositivo {: .page-title }
 
-Advertencia: Este artículo no se ha actualizado durante un largo tiempo y puede ser que no refleje la realidad. En cambio, consulta el curso gratuito [Diseño web adaptable](https://udacity.com/ud893) en Udacity.
+Advertencia: Este artículo no se ha actualizado durante un largo tiempo y puede ser que no refleje la realidad. En cambio, consulta el curso gratuito [Diseño web adaptable](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) en Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
@@ -15,7 +15,7 @@ Advertencia: Este artículo no se ha actualizado durante un largo tiempo y puede
 
 La creación de experiencias multidispositivos no es tan difícil como podría parecer.
 En esta guía, crearemos una página de destino de producto para el 
-[Curso de desarrollo web móvil CS256](https://www.udacity.com/course/cs256)
+[Curso de desarrollo web móvil CS256](https://www.udacity.com/course/mobile-web-development--cs256)
 que funcione bien en distintos tipos de dispositivos.
 
 Compilar para múltiples dispositivos con diferentes características, tamaños de pantalla

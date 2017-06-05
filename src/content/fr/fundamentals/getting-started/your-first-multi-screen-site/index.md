@@ -11,7 +11,7 @@ description: Le Web est accessible à un très large éventail d'appareils, depu
 
 
 
-Concevoir du contenu adapté à plusieurs appareils est plus simple qu'il n'y paraît. Ce guide vous explique comment créer une page de destination de produit pour notre <a href='https://www.udacity.com/course/cs256'>Cours CS256 : Développement de contenu Web pour mobile</a> qui fonctionne parfaitement sur différents types d'appareil.
+Concevoir du contenu adapté à plusieurs appareils est plus simple qu'il n'y paraît. Ce guide vous explique comment créer une page de destination de produit pour notre <a href='https://www.udacity.com/course/mobile-web-development--cs256'>Cours CS256 : Développement de contenu Web pour mobile</a> qui fonctionne parfaitement sur différents types d'appareil.
 
 <img src="images/finaloutput-2x.jpg" alt="Affichage du projet fini sur plusieurs appareils">
 

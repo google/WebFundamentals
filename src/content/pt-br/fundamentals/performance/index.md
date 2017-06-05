@@ -78,15 +78,15 @@ Esse codelab ensinará você a identificar e eliminar afunilamento de desempenho
 
 ### Cursos do Udacity
 
-[Otimização da renderização do navegador](https://udacity.com/ud860)<br>
+[Otimização da renderização do navegador](https://www.udacity.com/course/browser-rendering-optimization--ud860)<br>
 O guru do desempenho do Google, Paul Lewis, está aqui para ajudar você a eliminar instabilidade e criar
 aplicativos web que conseguem manter o desempenho de 60 quadros por segundo.
 
-[Caminho crítico de renderização](https://udacity.com/ud884)<br>
+[Caminho crítico de renderização](https://www.udacity.com/course/website-performance-optimization--ud884)<br>
 Saiba mais sobre o Caminho crítico de renderização ou conheça as etapas por que os navegadores precisam passar
 para converter HTML, CSS e JavaScript nos sites reais.
 
-[HTTP/1 para HTTP/2](https://udacity.com/ud897)<br>
+[HTTP/1 para HTTP/2](https://www.udacity.com/course/client-server-communication--ud897)<br>
 Surma começa com os conceitos básicos do HTTP/1 e segue para o HTTP/2, fala sobre como
 carregar ativos com eficiência e também aborda aspectos de segurança desses protocolos. 
 <div style="clear:both;"></div>

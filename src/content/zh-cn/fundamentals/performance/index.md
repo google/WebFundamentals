@@ -82,15 +82,15 @@ PRPL（推送、渲染、预先缓存和延迟加载）是一种用于结构化�
 
 ### Udacity 课程
 
-[浏览器渲染优化](https://udacity.com/ud860)<br>
+[浏览器渲染优化](https://www.udacity.com/course/browser-rendering-optimization--ud860)<br>
 Google 性能大师 Paul Lewis 将帮助您消除卡顿并创建可以保持每秒 60 帧性能的网络应用。
 
 
-[关键渲染路径](https://udacity.com/ud884)<br>
+[关键渲染路径](https://www.udacity.com/course/website-performance-optimization--ud884)<br>
 了解关键渲染路径，或者浏览器为将 HTML、CSS 和 JavaScript 转换成生动、逼真的网站而必须采取的步骤。
 
 
-[HTTP/1 至 HTTP/2](https://udacity.com/ud897)<br>
+[HTTP/1 至 HTTP/2](https://www.udacity.com/course/client-server-communication--ud897)<br>
 Surma 将从 HTTP/1 的基础知识开始，一直讲解到 HTTP/2 和如何有效加载资产，他还会介绍这些协议的安全方面。
 <div style="clear:both;"></div>
 
