@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: An aweful lot of media work requires changing characteristics of media files. In this section, I intend to provide an easy onramp into that world.
+description: Much media work requires changing characteristics of media files. In this section, I intend to provide an easy onramp into that world.
 
 {# wf_updated_on: 2017-06-05 #}
 {# wf_published_on: 2017-06-05 #}
@@ -9,7 +9,7 @@ description: An aweful lot of media work requires changing characteristics of me
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
-An aweful lot of media work requires changing characteristics of media files.
+Much media work requires changing characteristics of media files.
 This article covers many things including but not limited to encrypting,
 changing the codec, setting a bit rit, and many others. Finding a
 straightforward way to get started can be bewildering and intimidating. In this
@@ -33,7 +33,7 @@ bitrate, codecs, etc.. Since this is just about the easiest thing to do in both
 Shaka Packager and ffmpeg, let's use this to get comfortable with these
 packages.
  
-When we peak into a media file, we're going to see many file characteristics.
+When we peek into a media file, we're going to see many file characteristics.
 For this article, I'm only focusing on characteristics in the cheat sheet.
  
 Let's start with streams. Media files can can almost be thought of as multiple
@@ -45,15 +45,18 @@ are many instances where audio and video streams are dealt with separately.
  
 The other characteristics I need for this article are listed below.
  
-_Bitrate_ is the number of bits used to encode one second of a stream. 
+_Bitrate_ is the number of bits used to encode one second of a stream. The more
+bits used to encode a second of stream, the higher the fidelity.
  
-_Resolution_ is the amount of information in a single frame of video. It's
-given a number of stacked horizontal lines. For example a resolution of 1080p
-means that 1080 lines make up a single frame of video. Technically the width can
-vary. For the sake of simplicity, I'm going to assume a width that gives me an
-[aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_(image)) of 16:9,
-which is the ratio of movie screens and modern television sets. This works out
-to the dimensions 1920 by 1080. By the way this is the resolution defined as
+_Resolution_ is the amount of information in a single frame of video given as
+the number of logical pixels in each dimensiopn. For example, a resolution of
+1920 by 1080 works out to 1080 stacked horizontal lines, each of which is one
+logical pixel high and 1920 logical pixels wide. This resolution is frequently
+abbreviate 1080p because technically the width can vary. The numbers I've given
+produce an
+[aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_(image))
+of 16:9, which is the ratio of movie screens and modern television sets. By the
+way this is the resolution defined as
 [full HD](https://www.google.com/search?q=what+is+hd+resolution&oq=what+is+hd+resolution&aqs=chrome.0.0l6.3183j0j8&sourceid=chrome&ie=UTF-8#q=full+hd+resolution).
 
 When you look at the file characteristics using Shaka Packager and ffmpeg,
@@ -100,15 +103,7 @@ characteristics. (I've lined up equivalent parts.)
 
     packager input=glocken.mp4                                              --dump_stream_info
 
-I've shown the output below. Look for the characteristics discussed in the last
-section and notice a few things. The height and width are correct for full HD,
-but only the audio stream is in the correct codec. Notice also that streams are
-identified with numbers. These are useful for operations that manipulate the
-audio and video separately.
- 
-Notice that it doesn't show the bitrate. Despite what's missing, It's easier to
-read, which is why I use it whenever I can. When I need information that Shaka
-Packager can't get, such as the bitrate, I use ffmpeg.
+I've shown the output below. 
  
     [0416/140029:INFO:demuxer.cc(88)] Demuxer::Run() on file 'glocken.mp4'.
     [0416/140029:INFO:demuxer.cc(158)] Initialize Demuxer for file 'glocken.mp4'.
@@ -140,12 +135,20 @@ Packager can't get, such as the bitrate, I use ffmpeg.
      
     Packaging completed successfully.
 
+Look for the characteristics discussed in the last section and notice a few
+things. The height and width are correct for full HD, but only the audio stream
+is in the correct codec. Notice also that streams are identified with numbers.
+These are useful for operations that manipulate the audio and video separately.
+ 
+Notice that it doesn't show the bitrate. Despite what's missing, It's easier to
+read, which is why I use it whenever I can. When I need information that Shaka
+Packager can't get, such as the bitrate, I use ffmpeg.
 
 ## ffmpeg
 
 [ffmpeg](https://ffmpeg.org/download.html) is also a free application for
 [recording, converting, and streaming media files. I wouldn't say its
-[capabilities are better or worse than Shaka Player's, but they are different.
+[capabilities are better or worse than Shaka Packager's, but they are different.
 
 The basic pattern for an ffmpeg command looks like this.
 
@@ -178,3 +181,8 @@ care about, I'll see an error message.
         Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
         Metadata:
           handler_name    : SoundHandler
+
+So that's a few bits about media manipulation software in a nutshell. Now jump
+next door to the
+[cheat sheet](cheatsheet). Check back every few weeks as we continue to add new
+content about media for the web.

@@ -22,11 +22,11 @@ are possible in both applications.
  
 In many cases, commands may be combined in a single command line operation, and
 in actual use would be. For example, there's nothing preventing you from setting
-an output file's bit rate in the same operation as a file conversion. For this
+an output file's bitrate in the same operation as a file conversion. For this
 cheat sheet, I will show these operations (among others) as separate commands
 for the sake of clarity.
  
-Please let me know of useful addition or corrections. Pull requests are welcome.
+Please let me know of useful additions or corrections. [Pull requests are welcome](https://github.com/google/WebFundamentals).
 
 ## Display characteristics
 
