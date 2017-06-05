@@ -38,6 +38,38 @@ This is technically an incorrect usage of ffmpeg. As such it prints an error
 message to the screen. It does however list information not available from the
 Shaka Packager command.
 
+## Demux (split audio and video)
+
+My preference would be to show file type conversion before diving into demuxing.
+It appears that Shaka Packager cannot do conversion without also demuxing.
+
+**mp4/Shaka Packager**
+ 
+    packager input=myvideo.mp4,stream=video,output=myvideo_video.mp4
+    packager input=myvideo.mp4,stream=audio,output=myvideo_audio.m4a
+ 
+With Shaka Packager you can combine these.
+ 
+    packager \
+      input=myvideo.mp4,stream=video,output=myvideo_video.mp4 \
+      input=myvideo.mp4,stream=audio,output=myvideo_audio.m4a
+      
+**webm/Shaka Packager**
+
+    packager \
+      input=myvideo.webm,stream=video,output=myvideo_video.webm \
+      input=myvideo.webm,stream=audio,output=myvideo_audio.webm
+ 
+**mp4/ffmpeg**
+ 
+    ffmpeg -i myvideo.mp4 -vcodec copy -an myvideo_video.mp4
+    ffmpeg -i myvideo.mp4 -acodec copy -vn myvideo_audio.m4a
+    
+**webm/ffmpeg**
+ 
+    ffmpeg -i myvideo.webm -vcodec copy -an myvideo_video.webm
+    ffmpeg -i myvideo.webm -acodec copy -vn myvideo_audio.webm
+
 ## Change characteristics
 
 ### Bit rate
@@ -52,9 +84,6 @@ For Shaka Packager:
     packager \
       input=myvideo.mp4,stream=audio,output=myvideo_audio.mp4 \
       input=myvideo.mp4,stream=video,output=myvideo_video.mp4,bandwidth=8000000## Demux (split audio and video)
-
-My preference would be to show file type conversion before diving into demuxing.
-It appears that Shaka Packager cannot do conversion without also demuxing.
 
 **mp4/Shaka Packager**
  
@@ -95,7 +124,7 @@ files from that format.
 **mov to webm**
 
 When converting a file to webm, ffmpeg doesn't provide the correct aspect
-ration. Fix this with a filter (`-vf setsar=1:1`).
+ratio. Fix this with a filter (`-vf setsar=1:1`).
  
     ffmpeg -i myvideo.mov -vf setsar=1:1 myvideo.webm
 
@@ -108,9 +137,7 @@ ration. Fix this with a filter (`-vf setsar=1:1`).
 To ensure that audio and video synchronize during playback insert keyframes.
  
     ffmpeg -i myvideo.mp4 -keyint_min 150 -g 150 -f webm -vf setsar=1:1 out.webm
- 
-    packager \
-      ??
+
 
 ### Codec
 
@@ -133,41 +160,13 @@ You might have an older file whose codec you want to update.
     ffmpeg -i myvideo.webm -v:c copy -v:a libvorbis myvideo.webm
     ffmpeg -i myvideo.webm -v:c copy -v:a libopus myvideo.webm
 
-## Demux (split audio and video)
-
-My preference would be to show file type conversion before diving into demuxing.
-It appears that Shaka Packager cannot do conversion without also demuxing.
-
-**mp4/Shaka Packager**
- 
-    packager input=myvideo.mp4,stream=video,output=myvideo_video.mp4
-    packager input=myvideo.mp4,stream=audio,output=myvideo_audio.m4a
- 
-With Shaka Packager you can combine these.
- 
-    packager \
-      input=myvideo.mp4,stream=video,output=myvideo_video.mp4 \
-      input=myvideo.mp4,stream=audio,output=myvideo_audio.m4a
-      
-**webm/Shaka Packager**
-
-    packager \
-      input=myvideo.webm,stream=video,output=myvideo_video.webm \
-      input=myvideo.webm,stream=audio,output=myvideo_audio.webm
- 
-**mp4/ffmpeg**
- 
-    ffmpeg -i myvideo.mp4 -vcodec copy -an myvideo_video.mp4
-    ffmpeg -i myvideo.mp4 -acodec copy -vn myvideo_audio.m4a
-    
-**webm/ffmpeg**
- 
-    ffmpeg -i myvideo.webm -vcodec copy -an myvideo_video.webm
-    ffmpeg -i myvideo.webm -acodec copy -vn myvideo_audio.webm
-
 ## Package
 
 ### DASH/MPD
+
+Dynamica Adaptive Streaming over HTTP is a
+[web-standards-based](https://developer.mozilla.org/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video)
+method of presenting video-on-demand for the web.
 
     packager \
       input=myvideo.mp4,stream=audio,output=myvideo_audio.mp4 \
@@ -175,6 +174,10 @@ With Shaka Packager you can combine these.
       --mpd_output myvideo_vod.mpd
 
 ### HLS
+
+HTTP Live Streaming (HLS) is
+[Apple's standard](https://developer.apple.com/streaming/)
+for live streaming and video on demand for the web.
 
     ffmpeg -i myvideo.mp4 -c:a copy -b:v 8M -c:v copy -f hls -hls_time 10 \
            -hls_list_size 0 myvideo.m3u8
@@ -209,7 +212,7 @@ whitespace from the key. For the `-key_id` flag repeat the key value.
       input=myvideo.mp4,stream=audio,output=glocka.m4a \
       input=myvideo.mp4,stream=video,output=glockv.mp4 \
       --enable_fixed_key_encryption --enable_fixed_key_decryption \
-      -key 7bbef28644876a545a40caaaad9b3200 -key_id 7bbef28644876a545a40caaaad9b3200 \
+      -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE \
 
 ### Create a key information file
 
@@ -248,8 +251,8 @@ random hex digits.
       --enable_widevine_encryption \
       --key_server_url "https://license.uat.widevine.com/cenc/getcontentkey/widevine_test" \
       --content_id "fd385d9f9a14bb09" --signer "widevine_test" \
-      --aes_signing_key "1ae8ccd0e7985cc0b6203a55855a1034afc252980e970ca90e5202689f947ab9" \
-      --aes_signing_iv "d58ce954203b7c9a9a9d467f59839249"
+      --aes_signing_key "INSERT_KEY_HERE" \
+      --aes_signing_iv "INSERT_KEY_HERE"
 
 ## All Together Now
 
