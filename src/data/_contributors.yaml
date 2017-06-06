@@ -177,6 +177,24 @@ yatesbuckley:
   google: +YatesBuckley
   email: yates@unit9.com
 
+mathiasbynens:
+  name:
+    given: Mathias
+    family: Bynens
+  org:
+    name: Google
+    unit: V8
+  country: DE
+  role:
+    - author
+  homepage: https://mathiasbynens.be/
+  google: +mathiasbynens
+  twitter: mathias
+  email: mths@google.com
+  lanyrd: mathias
+  description:
+    en: developer advocate on the V8 team
+
 owencm:
   name:
     given: Owen
@@ -856,7 +874,7 @@ henrylim:
   description:
     en: 'Co-Organizer @ GDG Kuala Lumpur'
 
-wayouliu:  
+wayouliu:
   name:
     given: Wayou
     family: Liu
