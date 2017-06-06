@@ -13,7 +13,7 @@ description: This update discusses object rest and spread properties, a new Java
 {% include "web/_shared/contributors/mathiasbynens.html" %}
 
 Before discussing _object rest and spread properties_, let’s take a trip down
-memory lane and remind ourselves of a very similar feature…
+memory lane and remind ourselves of a very similar feature.
 
 ## ES2015 array rest and spread elements
 
@@ -80,9 +80,15 @@ in many situations:
     // Either results in:
     // { logWarnings: false, logErrors: true }
 
-However, there are [some subtle
-differences](http://2ality.com/2016/10/rest-spread-properties.html#spread-defines-properties-objectassign-sets-them)
-in how spreading handles setters.
+However, there are some subtle differences in how spreading handles setters:
+
+1. `Object.assign()` triggers setters; spread doesn’t.
+2. You can stop `Object.assign()` from creating own properties via inherited
+read-only properties, but not the spread operator.
+
+[Axel Rauschmayer’s
+write-up](http://2ality.com/2016/10/rest-spread-properties.html#spread-defines-properties-objectassign-sets-them)
+explains these gotchas in more detail.
 
 Object rest and spread properties are supported by default in V8 v6.0.75+ and
 Chrome 60+. Consider [transpiling your
