@@ -117,8 +117,8 @@ are removed from
 [CSS Rule](https://developer.mozilla.org/en-US/docs/Web/API/CSSRule).
 Developers should use `KEYFRAMES_RULE` and `KEYFRAME_RULE` instead.
 
-[Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/mW1njtgDPHA) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5747368108490752) &#124;
+[Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/mW1njtgDPHA) 
+ &#124; [Chromestatus Tracker](https://www.chromestatus.com/feature/5747368108490752) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=689681)
 
 <<../../_deprecation-policy.md>>
