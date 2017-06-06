@@ -47,15 +47,15 @@ This feature was deprecated in Chrome 58 and is now removed.
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=684011&desc=2)
 
 
-### Temporarily remove navigator.setBeacon()
+### Temporarily disable navigator.sendBeacon() for some blobs
 
-The `navigator.setBeacon()` function has been available
+The `navigator.sendBeacon()` function has been available
 [since Chrome 39](https://www.chromestatus.com/feature/5517433905348608). 
 As originally implemented, the function's `data` argument could contain any
 arbitrary blob whose type is not CORS-safelisted. We believe this is a potential
-security thread, though no on has yet tried to exploit it. Because we do NOT
-have a reasonable immediate fix for it, the `sendBeacon()` function has been
-disabled until further notice.
+security threat, though no one has yet tried to exploit it. Because we do NOT
+have a reasonable immediate fix for it, temporarily, `sendBeacon()` will no
+longer be invokable on blobs whose type is NOT CORS-safelisted.
 
 Although this change was implemented for Chrome 60, it is has since been merged
 back to Chrome 59.
