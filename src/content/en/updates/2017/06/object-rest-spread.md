@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This update discusses object rest and spread properties, a new JavaScript feature.
 
-{# wf_updated_on: 2017-06-05 #}
-{# wf_published_on: 2017-06-05 #}
+{# wf_updated_on: 2017-06-06 #}
+{# wf_published_on: 2017-06-06 #}
 {# wf_tags: javascript #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
