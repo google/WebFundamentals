@@ -109,6 +109,19 @@ version of the [Fetch specification](https://fetch.spec.whatwg.org/).
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5656023951998976) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=645492)
 
+### Remove indexedDB.webkitGetDatabaseNames()
+
+We added this feature when Indexed DB was relatively new in Chrome and prefixing was all the rage. The API asynchronously returns a list of existing database names in an origin, which seemed sensible enough.
+
+The design is flawed, in that the results may be obsolete as soon as they are returned, so it can really only be used for logging, not serious application logic. The [github issue](https://github.com/w3c/IndexedDB/issues/31) tracks/links to previous discussion on alternatives, which would require a different approach. While there's been on-and-off interest by developers, given the lack of cross-browser progress here the problem has been worked around by library authors.
+
+Developers needing this functionality need to develop their own solution. Libraries like [Dexie.js](http://dexie.org/) for example use a global table which is itself another database to track the names of databases.
+
+This feature was deprecated in Chrome 58 and is now removed.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/A6m1Pt9-BAo/discussion)
+&#124; [Chromestatus Tracker](https://www.chromestatus.com/feature/5725741740195840) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=696010)
 
 ### Remove WEBKIT_KEYFRAMES_RULE and WEBKIT_KEYFRAME_RULE
 
