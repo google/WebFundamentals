@@ -127,7 +127,7 @@ way to perform navigation requests in parallel:
 
 Navigation preload is a new experimental feature that lets you say, "Hey, when
 the user makes a GET navigation request, start the network request while
-the service worker is booting up.
+the service worker is booting up".
 
 The startup delay is still there, but it doesn't block the network request, so
 the user gets content sooner.
