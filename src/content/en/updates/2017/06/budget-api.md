@@ -23,7 +23,7 @@ The [Budget
 ](https://wicg.github.io/budget-api/)[API](https://wicg.github.io/budget-api/),
 is a new API designed to allow developers to perform background work without
 notifying the user, such as silent push or performing a background fetch. In
-Chrome version 60 and above you'll be able to start using this API and the
+Chrome 60 and above you'll be able to start using this API and the
 Chrome team is eager to get feedback from developers.
 
 To allow developers to consume a user's resources in the background, the web
@@ -40,10 +40,10 @@ of remaining budget and understand the cost of background operations
 
 ## Reserving Budget
 
-In Chrome version 60 and above, the `navigator.budget.reserve()` method will be available
+In Chrome 60 and above, the `navigator.budget.reserve()` method will be available
 without any flags.
 
-The `reserve` method allows you to request budget for a specific operation and
+The `reserve()` method allows you to request budget for a specific operation and
 it'll return a boolean to indicate if the budget could be reserved or not. If
 the budget was reserved, there is no need to notify the user of your background
 work.
@@ -70,7 +70,7 @@ self.addEventListener('push', event => {
 
 At the time of writing, 'silent-push' is the only operation type that is
 available, but you can find a [full list of operation types in the spec
-here](https://wicg.github.io/budget-api/#enumdef-operationtype).
+](https://wicg.github.io/budget-api/#enumdef-operationtype).
 
 At the time of writing there is no way to reset your budget once it's used, the
 only way to get more budget is to use a new profile. Sadly you can't use
@@ -89,10 +89,10 @@ this use case but they are still being worked on in Chrome and are currently
 only available behind flags and / or an [Origin
 Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
 
-## Budget API +  Origin Trials
+## Budget API and Origin Trials
 
 There are two methods, `getBudget()` and `getCost()`, that can be used by a web app
-to plan out the usage of their budget.
+to plan the usage of their budget.
 
 At the time of writing, both of these methods are behind an [origin
 trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)
@@ -104,11 +104,11 @@ Let's look how to use these API's.
 
 ### Get Your Budget
 
-You can find out your available budget with the `getBudget()` method. This returns
+You can find your available budget with the `getBudget()` method. This returns
 an array of BudgetStates which will indicate your budget at various points in
 time.
 
-To list out the budget entries we can run:
+To list the budget entries we can run:
 
 ```javascript
 navigator.budget.getBudget()
