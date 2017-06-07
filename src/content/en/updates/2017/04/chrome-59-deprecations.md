@@ -17,17 +17,18 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 59,
 which is in beta as of April 27. This list is subject to change at any time.
 
-## Temporarily remove navigator.setBeacon()
+### Temporarily disable navigator.sendBeacon() for some blobs
 
-The `navigator.setBeacon()` function has been available
-[since Chrome 39](https://www.chromestatus.com/feature/5517433905348608).
+The `navigator.sendBeacon()` function has been available
+[since Chrome 39](https://www.chromestatus.com/feature/5517433905348608). 
 As originally implemented, the function's `data` argument could contain any
 arbitrary blob whose type is not CORS-safelisted. We believe this is a potential
-security thread, though no on has yet tried to exploit it. Because we do NOT
-have a reasonable immediate fix for it, the `sendBeacon()` function has been
-disabled until further notice.
+security threat, though no one has yet tried to exploit it. Because we do NOT
+have a reasonable immediate fix for it, temporarily, `sendBeacon()` will no
+longer be invokable on blobs whose type is NOT CORS-safelisted.
 
-Although this change was implemented for Chrome 60, it is has since been merged back to Chrome 59.
+Although this change was implemented for Chrome 60, it is has since been merged
+back to Chrome 59.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=720283)
 
