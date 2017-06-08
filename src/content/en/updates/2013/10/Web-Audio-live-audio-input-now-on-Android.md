@@ -17,7 +17,7 @@ Well, I'm happy to announce that the Beta version of Chrome for Android (v31.0.1
 
 When I saw the support get checked in, I flipped back through some of the audio input demos I've done in the past to find a good demo to show it off.  I quickly found that my Audio Recorder demo functioned well on mobile, but it wasn't really designed for a good user experience on mobile devices.
 
-So, I quickly used the skills I'm teaching in the upcoming [Mobile Web Development course](https://www.udacity.com/course/cs256) to whip it into shape - viewport, media queries, and flexbox to the rescue!  Be sure to preregister for the course if you're interested in taking your web development skills to the mobile world, too!
+So, I quickly used the skills I'm teaching in the upcoming [Mobile Web Development course](https://www.udacity.com/course/mobile-web-development--cs256) to whip it into shape - viewport, media queries, and flexbox to the rescue!  Be sure to preregister for the course if you're interested in taking your web development skills to the mobile world, too!
 
 
 {% include "comment-widget.html" %}

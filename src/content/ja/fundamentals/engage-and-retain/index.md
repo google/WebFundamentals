@@ -67,7 +67,7 @@ Progressive Web App の主要原則に従うための実装についても詳し
 
 ###  Udacity コース
 
-[Progressive Web App の基本](https://udacity.com/ud811)<br>
+[Progressive Web App の基本](https://www.udacity.com/course/intro-to-progressive-web-apps--ud811)<br>
 このコースでは、皆さんにとって初となる Progressive Web App の作成に取りかかります。プログレッシブ ウェブアプリとは、ネイティブ アプリケーションに備わっている多くの機能を活用できるウェブアプリです。Service Worker を使用して、オフラインで動作するウェブアプリの作成についても、学びます。
 最後に、ウェブアプリのマニフェスト ファイルを使用して、ユーザーのホーム画面にアプリをインストールできるようにします。
 

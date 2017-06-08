@@ -11,7 +11,7 @@ description: 無論是小螢幕手機或是大螢幕電視，使用者都能透�
 
 
 
-其實，打造適用於多種裝置的網站並不困難。 我們將會依照這份指南，為 <a href='https://www.udacity.com/course/cs256'>CS256 行動網站開發課程</a>打造適用於所有不同裝置類型的產品到達網頁示例。
+其實，打造適用於多種裝置的網站並不困難。 我們將會依照這份指南，為 <a href='https://www.udacity.com/course/mobile-web-development--cs256'>CS256 行動網站開發課程</a>打造適用於所有不同裝置類型的產品到達網頁示例。
 
 <img src="images/finaloutput-2x.jpg" alt="多種裝置顯示專案完成後的樣貌">
 

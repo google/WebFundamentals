@@ -7,11 +7,11 @@ description: האינטרנט נגיש במגוון עצום של מכשירים
 
 # האתר הראשון שלך שמותאם למגוון מכשירים {: .page-title }
 
-Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://udacity.com/ud893){: .external } course on Udacity.
+Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893){: .external } course on Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-בניית חוויה ״רב מכשירית״ היא לא קשה כמו שזה נשמע. על ידי מעבר על מדריך זה, נוכל לבנות דף נחיתה למוצר <a href='https://www.udacity.com/course/cs256'>CS256 קורס לפיתוח לאתרים ניידים</a><br>שיעבוד היטב על פני מגוון רחב של מכשירים
+בניית חוויה ״רב מכשירית״ היא לא קשה כמו שזה נשמע. על ידי מעבר על מדריך זה, נוכל לבנות דף נחיתה למוצר <a href='https://www.udacity.com/course/mobile-web-development--cs256'>CS256 קורס לפיתוח לאתרים ניידים</a><br>שיעבוד היטב על פני מגוון רחב של מכשירים
 
 <img src="images/finaloutput-2x.jpg" alt="many devices showing the final project">
 
