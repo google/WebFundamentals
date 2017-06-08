@@ -5,7 +5,7 @@ description: Much media work requires changing characteristics of media files. I
 {# wf_updated_on: 2017-06-05 #}
 {# wf_published_on: 2017-06-05 #}
 
-# The Applications {: .page-title }
+# Application Primers {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
