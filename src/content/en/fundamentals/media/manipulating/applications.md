@@ -71,10 +71,19 @@ multiple codecs for the same stream type. A complete list of available codecs
 would be a whole website itself. Listed below are the currently preferred codecs
 for mp4 and webm files.
 
-|  |mp4/m4a|webm|
-| --- | --- | --- |
-|**video**|H264 (mp4) |VP9|
-|**audio**|aac (m4a) |vorbis,opus|
+### Video
+
+| Extension | Codec |
+| --- | ----- |
+| mp4 | H264  |
+| webm| VP9   |
+
+## Audio
+
+| Extension | Codec |
+| --- | ----- |
+| mp4 | aac   |
+| webm| vorbis, opus |
 
 ## Shaka Packager
 
