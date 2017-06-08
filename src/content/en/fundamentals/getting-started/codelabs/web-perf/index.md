@@ -19,7 +19,7 @@ description: This codelab will help you learn to identify and fix web app perfor
 
 
 
-This codelab is a text-based version of part of the content covered in a Udacity course on app/web performance ( [ud860](https://www.udacity.com/course/browser-rendering-optimization--ud860)). Rather than a transcription of the video course, this codelab is meant to be a lean, to-the-point treatment of jank identification and correction, using the course's original hands-on final project.
+This codelab is a text-based version of part of the content covered in a Udacity course on app/web performance ( [ud860](https://www.udacity.com/course/viewer#!/c-ud860/l-4138328558/m-4157078575)). Rather than a transcription of the video course, this codelab is meant to be a lean, to-the-point treatment of jank identification and correction, using the course's original hands-on final project.
 
 
 ## Overview
