@@ -83,34 +83,7 @@ For Shaka Packager:
  
     packager \
       input=myvideo.mp4,stream=audio,output=myvideo_audio.mp4 \
-      input=myvideo.mp4,stream=video,output=myvideo_video.mp4,bandwidth=8000000## Demux (split audio and video)
-
-**mp4/Shaka Packager**
- 
-    packager input=myvideo.mp4,stream=video,output=myvideo_video.mp4
-    packager input=myvideo.mp4,stream=audio,output=myvideo_audio.m4a
- 
-With Shaka Packager you can combine these.
- 
-    packager \
-      input=myvideo.mp4,stream=video,output=myvideo_video.mp4 \
-      input=myvideo.mp4,stream=audio,output=myvideo_audio.m4a
-      
-**webm/Shaka Packager**
-
-    packager \
-      input=myvideo.webm,stream=video,output=myvideo_video.webm \
-      input=myvideo.webm,stream=audio,output=myvideo_audio.webm
- 
-**mp4/ffmpeg**
- 
-    ffmpeg -i myvideo.mp4 -vcodec copy -an myvideo_video.mp4
-    ffmpeg -i myvideo.mp4 -acodec copy -vn myvideo_audio.m4a
-    
-**webm/ffmpeg**
- 
-    ffmpeg -i myvideo.webm -vcodec copy -an myvideo_video.webm
-    ffmpeg -i myvideo.webm -acodec copy -vn myvideo_audio.webm
+      input=myvideo.mp4,stream=video,output=myvideo_video.mp4,bandwidth=8000000
 
 ### File type
 
