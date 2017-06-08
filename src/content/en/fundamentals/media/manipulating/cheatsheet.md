@@ -114,8 +114,22 @@ To ensure that audio and video synchronize during playback insert keyframes.
 
 ### Codec
 
-You might have an older file whose codec you want to update. The following
-examples change codecs, but do not demux.
+You might have an older file whose codec you want to update. The examples below change codecs, but do not demux. The tables sumarize the libraries used to perform the codec conversions.
+
+***Video***
+
+| Extension | Codec | Library |
+| --- | ----- | --- |
+| mp4 | H264  | libx264 |
+| webm| VP9   | libvpx-vp9 |
+
+***Audio***
+
+| Extension | Codec | Library |
+| --- | ----- | --- |
+| mp4 | aac   | aac |
+| webm| vorbis | libvorbis |
+|     | opus | libopus |
 
 ***mp4/H.264***
  

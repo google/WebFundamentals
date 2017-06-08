@@ -78,7 +78,7 @@ for mp4 and webm files.
 | mp4 | H264  |
 | webm| VP9   |
 
-## Audio
+### Audio
 
 | Extension | Codec |
 | --- | ----- |
