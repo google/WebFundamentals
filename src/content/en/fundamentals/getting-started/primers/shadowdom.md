@@ -786,11 +786,11 @@ As an example, let's say your shadow DOM looks like this:
     <slot><b>fallback content</b></slot>
 
 <table>
-  <thead><th>Usage</th><th>Call</th><th>Result</th></tr></thead>
+  <thead><th>Usage</th><th>Call</th><th>Result</th></thead>
   <tr>
     <td>&lt;my-component&gt;component text&lt;/my-component&gt;</td>
     <td><code>slot.assignedNodes();</code></td>
-    <td><code>[text]</code></td>
+    <td><code>[component text]</code></td>
   </tr>
   <tr>
     <td>&lt;my-component>&lt;/my-component&gt;</td>
@@ -798,7 +798,7 @@ As an example, let's say your shadow DOM looks like this:
     <td><code>[]</code></td>
   </tr>
   <tr>
-    <td>&lt;my-component&gt;&lt;/my-componentS&gt;</td>
+    <td>&lt;my-component&gt;&lt;/my-component&gt;</td>
     <td><code>slot.assignedNodes({flatten: true});</code></td>
     <td><code>[&lt;b&gt;fallback content&lt;/b&gt;]</code></td>
   </tr>
