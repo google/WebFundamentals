@@ -86,7 +86,7 @@ The new behavior is implemented in Chrome 60.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4964279606312960) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=489954)
 
-## JavaSCript
+## JavaScript
 
 ### Move getContextAttributes() behind a flag
 
