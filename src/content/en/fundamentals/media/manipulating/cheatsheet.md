@@ -230,8 +230,8 @@ This command will accept a key with either 16 or 32 characters.
 
 ## Widevine Encryption
 
-Everything in this command except the name of your files and the `--content-id`
-flag should be copied exactly from the example. The `--content-id` is 16 or 32
+Everything in this command except the name of your files and the `--content_id`
+flag should be copied exactly from the example. The `--content_id` is 16 or 32
 random hex digits. Use the keys provided here instead of your own. (This is how
 Widevine works.)
  
