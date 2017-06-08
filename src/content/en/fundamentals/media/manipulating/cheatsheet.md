@@ -115,7 +115,9 @@ To ensure that audio and video synchronize during playback insert keyframes.
 
 ### Codec
 
-You might have an older file whose codec you want to update. The examples below change codecs, but do not demux. The tables sumarize the libraries used to perform the codec conversions.
+You might have an older file whose codec you want to update. The examples below
+change codecs, but do not demux. The tables sumarize the libraries used to
+perform the codec conversions.
 
 ***Video***
 
