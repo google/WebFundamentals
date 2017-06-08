@@ -4,7 +4,7 @@ description: The Budget API allows developers to perform background actions with
 
 {# wf_updated_on: 2017-06-07 #}
 {# wf_published_on: 2017-06-07 #}
-{# wf_tags: javascript,push,budget,api,origintrials #}
+{# wf_tags: javascript,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 
 # Introduction to the Budget API {: .page-title }
@@ -29,11 +29,11 @@ Chrome team is eager to get feedback from developers.
 To allow developers to consume a user's resources in the background, the web
 platform is introducing the concept of a budget using the new Budget API. Each
 site has a set amount of resource that they can consume for background actions,
-such as a silent push, will depleats the budget. When the budget is spent,
-background actions can no longer be performed without user visibility or
-consent. The user agent will be responsible for determining budget assigned to a
-web app based on it's heuristics, for example budget allowance could be linked
-to user engagement.
+such as a silent push, where each operation will depleat the budget. When the
+budget is spent, background actions can no longer be performed without user
+visibility or consent. The user agent will be responsible for determining budget
+assigned to a web app based on it's heuristics, for example budget allowance
+could be linked to user engagement. Each browser can decide it's own heuristic.
 
 **TL;DR **The budget API allows to you to reserve budget, use budget, get a list
 of remaining budget and understand the cost of background operations
@@ -44,13 +44,13 @@ In Chrome 60 and above, the `navigator.budget.reserve()` method will be availabl
 without any flags.
 
 The `reserve()` method allows you to request budget for a specific operation and
-it'll return a boolean to indicate if the budget could be reserved or not. If
+it'll return a boolean to indicate if the budget can be reserved. If
 the budget was reserved, there is no need to notify the user of your background
 work.
 
 In the example of push notifications, you can attempt to reserve budget for a
-"silent-push" operation and if `reserve()` resolves with true, the operation is allowed,
-otherwise it'll return false and you'll need to show a notification
+"silent-push" operation and if `reserve()` resolves with true, the operation is allowed.
+Otherwise it'll return false and you'll need to show a notification
 
 ```javascript
 self.addEventListener('push', event => {
@@ -68,16 +68,15 @@ self.addEventListener('push', event => {
 });
 ```
 
-At the time of writing, 'silent-push' is the only operation type that is
+In Chrome 60, 'silent-push' is the only operation type that is
 available, but you can find a [full list of operation types in the spec
-](https://wicg.github.io/budget-api/#enumdef-operationtype).
-
-At the time of writing there is no way to reset your budget once it's used, the
+](https://wicg.github.io/budget-api/#enumdef-operationtype). There is also no
+way to reset your budget once it's used, the
 only way to get more budget is to use a new profile. Sadly you can't use
 incognito for this either as the Budget API will return a budget of zero in
 Incognito (although there is a [bug that results in an
-error](https://bugs.chromium.org/p/chromium/issues/detail?id=730079) at the time
-of writing).
+error](https://bugs.chromium.org/p/chromium/issues/detail?id=730079) during
+my testing).
 
 You should only call `reserve()` when you intend to perform the operation you are
 reserving. If you called reserve in the above example but still showed a
@@ -94,7 +93,7 @@ Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)
 There are two methods, `getBudget()` and `getCost()`, that can be used by a web app
 to plan the usage of their budget.
 
-At the time of writing, both of these methods are behind an [origin
+In Chrome 60, both of these methods are behind an [origin
 trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)
 but you can use them locally by enabling the Experimental Web Platform features
 flag (Open chrome://flags/\#enable-experimental-web-platform-features in
@@ -102,7 +101,7 @@ Chrome).
 
 Let's look how to use these API's.
 
-### Get Your Budget
+### Get your Budget
 
 You can find your available budget with the `getBudget()` method. This returns
 an array of BudgetStates which will indicate your budget at various points in
@@ -175,15 +174,16 @@ than the indicated cost. The specific details from the spec are as
 > example because it's not on battery power.
 
 Note: If you pass in an operation type that the browser does not support or is
-invalid, the promise will reject with a TypeError.
+invalid, the promise will reject with a `TypeError`.
 
 That's the current API in Chrome and as the web continues to support new API's
 that require the ability to perform background work, like [background
 fetch](https://wicg.github.io/background-fetch/), the Budget API can be used to
-manage the number background operations.
+manage the number of operations you can perform without notifying the user.
 
-As you use the API please provide feedback through the Origin Trial or
-[crbug.com](https://crbug.com/).
+As you use the API please provide feedback through the [Origin
+Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)
+or [crbug.com](https://crbug.com/).
 
 
 {% include "comment-widget.html" %}
