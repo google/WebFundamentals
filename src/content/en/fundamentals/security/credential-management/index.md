@@ -9,6 +9,12 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
+<aside>
+  <strong>Coming soon:</strong>
+  <a href="/web/updates/2017/06/credential-management-updates.md">Updates to Credential Management API</a>
+  are landing in Chrome 60. The sample code and documentation will be updated soon.
+</aside>
+
 The [Credential Management API](https://www.w3.org/TR/credential-management/)
 is a standards-based browser API that provides a programmatic interface
 between the site and the browser for seamless sign-in across devices.
