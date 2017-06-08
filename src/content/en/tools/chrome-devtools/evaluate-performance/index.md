@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to evaluate runtime performance in Chrome DevTools.
 
-{# wf_updated_on: 2017-04-26 #}
+{# wf_updated_on: 2017-06-08 #}
 {# wf_published_on: 2017-04-06 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -38,8 +38,7 @@ var feedback = {
       },
       "response": response1,
       "analytics": {
-        "label": "Runtime Tutorial / Experience / None",
-        "value": 0 // optional, defaults to 1 if omitted
+        "label": "Runtime Tutorial / Experience / None"
       }
     },
     {
@@ -48,8 +47,7 @@ var feedback = {
       },
       "response": response1,
       "analytics": {
-        "label": "Runtime Tutorial / Experience / Some",
-        "value": 0.5
+        "label": "Runtime Tutorial / Experience / Some"
       }
     },
     {
