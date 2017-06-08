@@ -11,7 +11,7 @@ description: Much media work requires changing characteristics of media files. I
 
 Much media work requires changing characteristics of media files.
 This article covers many things including but not limited to encrypting,
-changing the codec, setting a bit rit, and many others. Finding a
+changing the codec, setting a bitrate, and many others. Finding a
 straightforward way to get started can be bewildering and intimidating. In this
 section, I intend to provide an easy onramp into that world.
 
@@ -63,17 +63,18 @@ When you look at the file characteristics using Shaka Packager and ffmpeg,
 you'll notice that the word 'resolution' doesn't appear. What the two
 applications output are just the dimensions, the numbers themselves.
  
-_Codec_ is a compression format for video or audio data. This is not the same
-as a file format. Think of the file format as the container and the codec as a
-way of arranging what's in the container. Different codecs are used for audio
-and video streams. Many file formats support multiple codecs for the same stream
-type. A complete list of available codecs would be a whole website itself.
-Listed below are the currently preferred codecs for mp4 and webm files.
+_Codec_, which is short for coder-decoder, is a compression format for video or
+audio data. This is not the same as a file format. Think of the file format as
+the container and the codec as a way of arranging what's in the container.
+Different codecs are used for audio and video streams. Many file formats support
+multiple codecs for the same stream type. A complete list of available codecs
+would be a whole website itself. Listed below are the currently preferred codecs
+for mp4 and webm files.
 
-|  |mp4|webm|
+|  |mp4/m4a|webm|
 | --- | --- | --- |
-|**video**|H264|VP9|
-|**audio**|aac|vorbis,opus|
+|**video**|H264 (mp4) |VP9|
+|**audio**|aac (m4a) |vorbis,opus|
 
 ## Shaka Packager
 

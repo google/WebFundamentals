@@ -72,7 +72,7 @@ With Shaka Packager you can combine these.
 
 ## Change characteristics
 
-### Bit rate
+### Bitrate
 
 For ffmpeg, I can do this while I'm converting to mp4 or webm.
  
@@ -82,7 +82,7 @@ For ffmpeg, I can do this while I'm converting to mp4 or webm.
 For Shaka Packager:
  
     packager \
-      input=myvideo.mp4,stream=audio,output=myvideo_audio.mp4 \
+      input=myvideo.mp4,stream=audio,output=myvideo_audio.m4a \
       input=myvideo.mp4,stream=video,output=myvideo_video.mp4,bandwidth=8000000
 
 ### File type
@@ -114,7 +114,8 @@ To ensure that audio and video synchronize during playback insert keyframes.
 
 ### Codec
 
-You might have an older file whose codec you want to update.
+You might have an older file whose codec you want to update. The following
+examples change codecs, but do not demux.
 
 ***mp4/H.264***
  
@@ -122,7 +123,7 @@ You might have an older file whose codec you want to update.
 
 ***Audio for an mp4***
 
-    ffmpeg -i myvideo.mp4 -c:v copy -c:a aac myvideo.m4a
+    ffmpeg -i myvideo.mp4 -c:v copy -c:a aac myvideo.mp4
 
 ***webm/VP9***
 
