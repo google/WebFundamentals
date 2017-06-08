@@ -38,8 +38,7 @@ var feedback = {
       },
       "response": response1,
       "analytics": {
-        "label": "Runtime Tutorial / Experience / None",
-        "value": 0 // optional, defaults to 1 if omitted
+        "label": "Runtime Tutorial / Experience / None"
       }
     },
     {
@@ -48,8 +47,7 @@ var feedback = {
       },
       "response": response1,
       "analytics": {
-        "label": "Runtime Tutorial / Experience / Some",
-        "value": 0.5
+        "label": "Runtime Tutorial / Experience / Some"
       }
     },
     {
