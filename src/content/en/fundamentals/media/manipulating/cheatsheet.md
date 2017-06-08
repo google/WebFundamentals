@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A summary of commands used to convert a raw mov file to an encrypted full HD file for web playback.
 
-{# wf_updated_on: 2017-06-05 #}
-{# wf_published_on: 2017-06-05 #}
+{# wf_updated_on: 2017-06-09 #}
+{# wf_published_on: 2017-06-09 #}
 
 # Media Manipulation Cheat Sheet  {: .page-title }
 
@@ -26,7 +26,8 @@ an output file's bitrate in the same operation as a file conversion. For this
 cheat sheet, I will show these operations (among others) as separate commands
 for the sake of clarity.
  
-Please let me know of useful additions or corrections. [Pull requests are welcome](https://github.com/google/WebFundamentals).
+Please let me know of useful additions or corrections.
+[Pull requests are welcome](https://github.com/google/WebFundamentals/tree/master/src/content/en/fundamentals/media/manipulating/cheatsheet).
 
 ## Display characteristics
 
@@ -43,7 +44,7 @@ information not available from the Shaka Packager command.
 Most of you wouldn't care about this, but Shaka Packager requires demuxing in
 order to convert.
 
-**mp4/Shaka Packager**
+***mp4/Shaka Packager***
  
     packager input=myvideo.mp4,stream=video,output=myvideo_video.mp4
     packager input=myvideo.mp4,stream=audio,output=myvideo_audio.m4a
@@ -54,18 +55,18 @@ With Shaka Packager you can combine these.
       input=myvideo.mp4,stream=video,output=myvideo_video.mp4 \
       input=myvideo.mp4,stream=audio,output=myvideo_audio.m4a
       
-**webm/Shaka Packager**
+***webm/Shaka Packager***
 
     packager \
       input=myvideo.webm,stream=video,output=myvideo_video.webm \
       input=myvideo.webm,stream=audio,output=myvideo_audio.webm
  
-**mp4/ffmpeg**
+***mp4/ffmpeg***
  
     ffmpeg -i myvideo.mp4 -vcodec copy -an myvideo_video.mp4
     ffmpeg -i myvideo.mp4 -acodec copy -vn myvideo_audio.m4a
     
-**webm/ffmpeg**
+***webm/ffmpeg***
  
     ffmpeg -i myvideo.webm -vcodec copy -an myvideo_video.webm
     ffmpeg -i myvideo.webm -acodec copy -vn myvideo_audio.webm
@@ -90,11 +91,11 @@ For Shaka Packager:
 Shaka Packager cannot process mov files and hence cannot be used to convert
 files from that format.  
 
-**mov to mp4**
+***mov to mp4***
  
     ffmpeg -i myvideo.mov myvideo.mp4
 
-**mov to webm**
+***mov to webm***
 
 When converting a file to webm, ffmpeg doesn't provide the correct aspect
 ratio. Fix this with a filter (`-vf setsar=1:1`).
@@ -180,16 +181,14 @@ openssl. The following will create a key made of 16 hex values.
     openssl rand 16 > media.key
     
 This command creates a file with white space and new line characters, which are
-not allowed by Shaka Packager. You can pipe the output to some other commands
-before dumping it to a file.
-
-    openssl rand 16 | tr '\n' ' ' | sed 's/ //g' > media.key
+not allowed by Shaka Packager. You'll need to open the key file and manually
+remove all whitespace including the final carriage return.
 
 ### Encrypt
 
-For the `-key` flag can be the key created earlier and stored in the media.key
-file. However, when entering it on the command line, be sure to remove the
-whitespace from the key. For the `-key_id` flag repeat the key value.
+For the `-key` flag use the key created earlier and stored in the media.key
+file. However, when entering it on the command line, be sure you've removed its
+whitespace. For the `-key_id` flag repeat the key value.
 
 > **Note:** Technically, the key ID is supposed to be either the first 8 OR the
 > first 16 hex digits of the key. Since packager requires the key to be 16
@@ -231,7 +230,8 @@ This command will accept a key with either 16 or 32 characters.
 
 Everything in this command except the name of your files and the `--content-id`
 flag should be copied exactly from the example. The `--content-id` is 16 or 32
-random hex digits.
+random hex digits. Use the keys provided here instead of your own. (This is how
+Widevine works.)
  
     packager \
       input=glocken.mp4,stream=video,output=enc_glocken.mp4 \
@@ -239,8 +239,8 @@ random hex digits.
       --enable_widevine_encryption \
       --key_server_url "https://license.uat.widevine.com/cenc/getcontentkey/widevine_test" \
       --content_id "fd385d9f9a14bb09" --signer "widevine_test" \
-      --aes_signing_key "INSERT_KEY_HERE" \
-      --aes_signing_iv "INSERT_KEY_HERE"
+      --aes_signing_key "1ae8ccd0e7985cc0b6203a55855a1034afc252980e970ca90e5202689f947ab9" \
+      --aes_signing_iv "d58ce954203b7c9a9a9d467f59839249"
 
 ## All Together Now
 
@@ -265,7 +265,8 @@ Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need t
     openssl rand 16 > media.key
     ```
 
-4. Demux the audio and video, encrypt the new files, and output an mpd file.
+3. Demux the audio and video, encrypt the new files, and output a media
+   presentation description (MPD) file.
 
     The `-key` and `-key_id` flags are copied from the `media.key` file.
 
@@ -273,7 +274,7 @@ Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need t
     ```  input=myvideo.webm,stream=video,output=myvideo_video.webm \```<br/>
     ```  input=myvideo.webm,stream=audio,output=myvideo_audio.webm \```<br/>
     ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
-    ```  -key 7bbef28644876a545a40caaaad9b3200 -key_id 7bbef28644876a545a40caaaad9b3200 \```<br/>
+    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE \```<br/>
     ```  --mpd_output myvideo_vod.mpd```
 
 ### DASH/mp4 with Shaka Packager
@@ -301,7 +302,7 @@ Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need t
     ```
 
 3. Demux the audio and video, encrypt the new files, and output a media
-   presentation description (MPD).
+   presentation description (MPD) file.
 
     The `-key` and `-key_id` flags are copied from the `media.key` file.
 
@@ -309,13 +310,18 @@ Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need t
     ```  input=mymovie.mp4,stream=audio,output=myaudio.m4a \```<br/>
     ```  input=mymovie.mp4,stream=video,output=myvideo.mp4 \```<br/>
     ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
-    ```  -key 7bbef28644876a545a40caaaad9b3200 -key_id 7bbef28644876a545a40caaaad9b3200 \```<br/>
+    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE \```<br/>
     ```  --mpd_output myvideo_vod.mpd```
     
 ### Widevine
 
 The two previous examples used Clear Key encryption. For widevine the final two
-steps are replaced with this.
+steps are replaced with this. 
+
+Everything in this command except the name of your files and the `--content-id`
+flag should be copied exactly from the example. The `--content-id` is 16 or 32
+random hex digits. Use the keys provided here instead of your own.  (This is how
+Widevine works.)
 
     packager \
       input=mymovie.mp4,stream=audio,output=myaudio.m4a \
@@ -332,7 +338,7 @@ HLS only supports mp4, so first you'll need to convert to the MP4 container and
 supported codecs. Not all steps are possible with Shaka Packager, so I'll use
 ffmpeg when I need to.
 
-1. Convert the file type, video codec and bitrate.
+1. Convert the file type, video codec, and bitrate.
 
     The default pixel format, yuv420p is used because one isn't supplied in the
     command line. The app will give you an error message that it is deprecated.
@@ -362,4 +368,4 @@ ffmpeg when I need to.
     ```  --hls_master_playlist_output="master_playlist.m3u8" \```<br/>
     ```  --hls_base_url="http://localhost:1000/" \```<br/>
     ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
-    ```  -key 7bbef28644876a545a40caaaad9b3200 -key_id 7bbef28644876a545a40caaaad9b3200 \```<br/>
+    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE \```<br/>

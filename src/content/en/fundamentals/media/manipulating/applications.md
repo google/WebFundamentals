@@ -2,18 +2,17 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Much media work requires changing characteristics of media files. In this section, I intend to provide an easy onramp into that world.
 
-{# wf_updated_on: 2017-06-05 #}
-{# wf_published_on: 2017-06-05 #}
+{# wf_updated_on: 2017-06-09 #}
+{# wf_published_on: 2017-06-09 #}
 
 # Application Primers {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
 Much media work requires changing characteristics of media files, such as
-bitrate or resolution. This article covers many things including but not limited
-to encrypting, changing the codec, setting a bitrate, and many others. Finding a
-straightforward way to get started can be bewildering and intimidating. In this
-section, I intend to provide an easy onramp into that world.
+bitrate or resolution. Finding a straightforward way to get started can be
+bewildering and intimidating. In this section, I intend to provide an easy
+onramp into that world.
 
 You'll find two articles in this section. On this page, I provide some basic
 instruction in using two common media command-line utilities:
@@ -29,7 +28,7 @@ those applications. Corrections and additions to that part are welcome.
 ## Media file characteristics
 
 One thing you'll do often is look at the characteristics of a video: resolution,
-bitrate, codecs, etc.. Since this is just about the easiest thing to do in both
+bitrate, codecs, and so on. Since this is just about the easiest thing to do in both
 Shaka Packager and ffmpeg, let's use this to get comfortable with these
 packages.
  
@@ -47,9 +46,9 @@ There are several characteristics that apply to each stream.
  
 _Bitrate_ is the maximum number of bits used to encode one second of a stream.
 The more bits used to encode a second of stream, the higher the potential
-ßdetail and fidelity.
+detail and fidelity.
  
-_Resolution_ is the amount of information in a single frame of video given as
+_Resolution_ is the amount of information in a single frame of video, given as
 the number of logical pixels in each dimension. For example, a resolution of
 1920 by 1080 works out to 1080 stacked horizontal lines, each of which is one
 logical pixel high and 1920 logical pixels wide. This resolution is frequently
@@ -64,7 +63,7 @@ When you look at the file characteristics using Shaka Packager and ffmpeg,
 you'll notice that the word 'resolution' doesn't appear. What the two
 applications output are just the dimensions, the numbers themselves.
  
-_Codec_, which is short for coder-decoder, is a compression format for video or
+_Codec_, which is short for _coder-decoder_, is a compression format for video or
 audio data. This is not the same as a file format. Think of the file format as
 the container and the codec as a way of arranging what's in the container.
 Different codecs are used for audio and video streams. Many file formats support
@@ -90,12 +89,13 @@ for mp4 and webm files.
 
 [Shaka Packager](https://github.com/google/shaka-packager) is a free media
 packaging SDK for creating DASH/HLS packager applications with common encryption
-support, Widevine DRM support, live, and video-on-demand. Despite what it says
-on the packaging, this utility for more than C++ developers. It can be used as
-both a library for building media software and as a command-line utility for
-preparing media files for playback. It's the later capacity that interestests me
-here. In fact, for web media creators, it's the only way to do some tasks
-without spending money on expensive commercial applications.
+support, Widevine DRM support, live video, and video-on-demand. Despite what it
+says on the packaging, this utility is for more than C++ developers. It can be
+used as both a library for building media software and as a command-line utility
+for preparing media files for playback. It's the later capacity that
+interestests me here. In fact, for web media creators, Shaka Packager is the
+only way to do some tasks without spending money on expensive commercial
+applications.
 
 Here's the basic pattern for a Shaka Packager command line.
 
@@ -103,7 +103,7 @@ Here's the basic pattern for a Shaka Packager command line.
 
 This isn't quite what you get if you type `packager -help`. This is how I think
 of it, and this reflects the examples in the
-[Shaka PackagerREADME](https://github.com/google/shaka-packager).
+[Shaka Packager README](https://github.com/google/shaka-packager).
 Note the multiple _stream_descriptors_. This is useful for manipulating the
 video and audio streams of the same file simultaneously.
 
@@ -159,10 +159,10 @@ Packager can't get, such as the bitrate, I use ffmpeg.
 ## ffmpeg
 
 [ffmpeg](https://ffmpeg.org/download.html) is also a free application for
-recording, converting, and streaming media files. I wouldn't say its
-capabilities are better or worse than Shaka Packager's, but they are different.
+recording, converting, and streaming media files. I won't say its
+capabilities are better or worse than Shaka Packager's. They're just different.
 
-The basic pattern for an ffmpeg command looks like this.
+The basic pattern for an ffmpeg command looks like this:
 
     ffmpeg [GeneralOptions] [InputFileOptions] -i input [OutputFileOptions] output
 
@@ -178,7 +178,7 @@ I'll again compare the basic pattern to the example for displaying file characte
 
  
 This is technically an incorrect usage of ffmpeg. In addition to the output I
-care about, I'll see an error message.
+care about, I'll see an error message, as shown in the example below.
  
     Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'glocken.mp4':
       Metadata:
