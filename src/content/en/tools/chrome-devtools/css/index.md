@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to use Chrome DevTools to view and change a page's CSS.
 
-{# wf_updated_on: 2017-06-01 #}
-{# wf_published_on: 2017-06-01 #}
+{# wf_updated_on: 2017-06-08 #}
+{# wf_published_on: 2017-06-08 #}
 
 # Get Started With Viewing And Changing CSS {: .page-title }
 
@@ -124,7 +124,7 @@ var feedback = {
   <img src="imgs/inspect.png"
        alt="The inspected element is highlighted in the DOM Tree"/>
   <figcaption>
-    <b>Figure X</b>. The inspected element is highlighted blue in the
+    <b>Figure 1</b>. The inspected element is highlighted blue in the
     <b>DOM Tree</b>
   </figcaption>
 </figure>
@@ -134,7 +134,7 @@ var feedback = {
        alt="CSS classes being applied to the inspected element are highlighted
             in the Styles tab"/>
   <figcaption>
-    <b>Figure X</b>. CSS classes being applied to the selected element,
+    <b>Figure 2</b>. CSS classes being applied to the selected element,
     such as <code>aloha</code>, are displayed in the <b>Styles</b> tab
   </figcaption>
 </figure>
@@ -188,7 +188,7 @@ before doing this one.
   <img src="imgs/declaration.png"
        alt="Adding a CSS declaration to the element via the Styles tab"/>
   <figcaption>
-    <b>Figure X</b>. The <code>background-color:honeydew</code> declaration
+    <b>Figure 3</b>. The <code>background-color:honeydew</code> declaration
     has been applied to the element via the <code>element.style</code> section
     of the <b>Styles</b> tab
   </figcaption>
@@ -276,12 +276,12 @@ before doing this one.
   <img src="imgs/apply-class.png"
        alt="Applying the color_me class to the element"/>
   <figcaption>
-    <b>Figure X</b>. The <code>color_me</code> class has been applied to the
+    <b>Figure 4</b>. The <code>color_me</code> class has been applied to the
     element via the <b>.cls</b> section of the <b>Styles</b> tab
   </figcaption>
 </figure>
 
-## Add a pseudostate to a class
+## Add a pseudostate to a class {: #pseudostates }
 
 Use the **Styles** tab to permanently apply a CSS pseudostate to an
 element. DevTools supports `:active`, `:focus`, `:hover`, and `:visited`.
@@ -314,7 +314,7 @@ before doing this one.
   <img src="imgs/set-hover.png"
        alt="Toggling the hover pseudostate on an element"/>
   <figcaption>
-    <b>Figure X</b>. Toggling the <code>:hover</code> pseudostate on an element
+    <b>Figure 5</b>. Toggling the <code>:hover</code> pseudostate on an element
   </figcaption>
 </figure>
 
@@ -373,7 +373,7 @@ before doing this one.
   <img src="imgs/show-padding.png"
        alt="Hovering over the element's padding"/>
   <figcaption>
-    <b>Figure X</b>. Hovering over the element's padding
+    <b>Figure 6</b>. Hovering over the element's padding
   </figcaption>
 </figure>
 
@@ -381,6 +381,6 @@ before doing this one.
   <img src="imgs/change-margin.png"
        alt="Changing the element's left-margin"/>
   <figcaption>
-    <b>Figure X</b>. Changing the element's left-margin
+    <b>Figure 7</b>. Changing the element's left-margin
   </figcaption>
 </figure>
