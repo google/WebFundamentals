@@ -34,14 +34,14 @@ Please let me know of useful additions or corrections. [Pull requests are welcom
 
     ffmpeg -i myvideo.mp4
 
-This is technically an incorrect usage of ffmpeg. As such it prints an error
-message to the screen. It does however list information not available from the
-Shaka Packager command.
+Technically, ffmpeg always requires an output file format. Calling ffmpeg this
+way will give you an error message explaining that; however, it lists
+information not available from the Shaka Packager command.
 
 ## Demux (split audio and video)
 
-My preference would be to show file type conversion before diving into demuxing.
-It appears that Shaka Packager cannot do conversion without also demuxing.
+Most of you wouldn't care about this, but Shaka Packager requires demuxing in
+order to convert.
 
 **mp4/Shaka Packager**
  
@@ -152,7 +152,7 @@ You might have an older file whose codec you want to update. The examples below 
 
 ### DASH/MPD
 
-Dynamica Adaptive Streaming over HTTP is a
+Dynamic Adaptive Streaming over HTTP is a
 [web-standards-based](https://developer.mozilla.org/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video)
 method of presenting video-on-demand for the web.
 
@@ -174,8 +174,8 @@ for live streaming and video on demand for the web.
 
 ### Create a key
 
-The same method for creating a key may be used with both DASH and HLS. The
-following will create a key made of 16 hex values.
+You can use the same method to create a key for both DASH and HLS. Do this using
+openssl. The following will create a key made of 16 hex values.
  
     openssl rand 16 > media.key
     
@@ -246,7 +246,7 @@ random hex digits.
 
 ### DASH/webm with Shaka Packager
 
-Not all steps are possible with Shaka Packager.
+Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need to.
 
 1. Convert the file type and codec.
 
@@ -278,7 +278,7 @@ Not all steps are possible with Shaka Packager.
 
 ### DASH/mp4 with Shaka Packager
 
-Not all steps are possible with Shaka Packager.
+Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need to.
 
 1. Convert the file type, video codec and bitrate.
 
@@ -328,7 +328,9 @@ steps are replaced with this.
 
 ### HLS/mp4
 
-HLS only supports mp4.
+HLS only supports mp4, so first you'll need to convert to the MP4 container and
+supported codecs. Not all steps are possible with Shaka Packager, so I'll use
+ffmpeg when I need to.
 
 1. Convert the file type, video codec and bitrate.
 

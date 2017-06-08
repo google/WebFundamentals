@@ -9,9 +9,9 @@ description: Much media work requires changing characteristics of media files. I
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
-Much media work requires changing characteristics of media files.
-This article covers many things including but not limited to encrypting,
-changing the codec, setting a bitrate, and many others. Finding a
+Much media work requires changing characteristics of media files, such as
+bitrate or resolution. This article covers many things including but not limited
+to encrypting, changing the codec, setting a bitrate, and many others. Finding a
 straightforward way to get started can be bewildering and intimidating. In this
 section, I intend to provide an easy onramp into that world.
 
@@ -43,13 +43,14 @@ two, an audio stream and a video stream. (The other two stream types are
 captions and data, both of which are beyond the scope of this article). There
 are many instances where audio and video streams are dealt with separately.
  
-The other characteristics I need for this article are listed below.
+There are several characteristics that apply to each stream.
  
-_Bitrate_ is the number of bits used to encode one second of a stream. The more
-bits used to encode a second of stream, the higher the fidelity.
+_Bitrate_ is the maximum number of bits used to encode one second of a stream.
+The more bits used to encode a second of stream, the higher the potential
+ßdetail and fidelity.
  
 _Resolution_ is the amount of information in a single frame of video given as
-the number of logical pixels in each dimensiopn. For example, a resolution of
+the number of logical pixels in each dimension. For example, a resolution of
 1920 by 1080 works out to 1080 stacked horizontal lines, each of which is one
 logical pixel high and 1920 logical pixels wide. This resolution is frequently
 abbreviate 1080p because technically the width can vary. The numbers I've given
@@ -90,7 +91,7 @@ for mp4 and webm files.
 [Shaka Packager](https://github.com/google/shaka-packager) is a free media
 packaging SDK for creating DASH/HLS packager applications with common encryption
 support, Widevine DRM support, live, and video-on-demand. Despite what it says
-on the packaging, this utility for more than C++ developers. In can be used as
+on the packaging, this utility for more than C++ developers. It can be used as
 both a library for building media software and as a command-line utility for
 preparing media files for playback. It's the later capacity that interestests me
 here. In fact, for web media creators, it's the only way to do some tasks
@@ -146,9 +147,10 @@ I've shown the output below.
     Packaging completed successfully.
 
 Look for the characteristics discussed in the last section and notice a few
-things. The height and width are correct for full HD, but only the audio stream
-is in the correct codec. Notice also that streams are identified with numbers.
-These are useful for operations that manipulate the audio and video separately.
+things. The height and width are correct for full HD, and the audio and video
+codecs are the preffered codecs for their container types, AAC for audio and
+H264 for video. Notice also that streams are identified with numbers. These are
+useful for operations that manipulate the audio and video separately.
  
 Notice that it doesn't show the bitrate. Despite what's missing, It's easier to
 read, which is why I use it whenever I can. When I need information that Shaka
@@ -157,8 +159,8 @@ Packager can't get, such as the bitrate, I use ffmpeg.
 ## ffmpeg
 
 [ffmpeg](https://ffmpeg.org/download.html) is also a free application for
-[recording, converting, and streaming media files. I wouldn't say its
-[capabilities are better or worse than Shaka Packager's, but they are different.
+recording, converting, and streaming media files. I wouldn't say its
+capabilities are better or worse than Shaka Packager's, but they are different.
 
 The basic pattern for an ffmpeg command looks like this.
 
@@ -191,6 +193,7 @@ care about, I'll see an error message.
         Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
         Metadata:
           handler_name    : SoundHandler
+    At least one output file must be specified
 
 So that's a few bits about media manipulation software in a nutshell. Now jump
 next door to the
