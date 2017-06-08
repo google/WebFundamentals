@@ -24,7 +24,7 @@ The `navigator.sendBeacon()` function has been available
 As originally implemented, the function's `data` argument could contain any
 arbitrary blob whose type is not CORS-safelisted. We believe this is a potential
 security threat, though no one has yet tried to exploit it. Because we do NOT
-have a reasonable immediate fix for it, temporarily, `sendBeacon()` will no
+have a reasonable immediate fix for it, temporarily, `sendBeacon()` can no
 longer be invokable on blobs whose type is NOT CORS-safelisted.
 
 Although this change was implemented for Chrome 60, it is has since been merged

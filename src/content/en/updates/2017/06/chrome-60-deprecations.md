@@ -38,7 +38,7 @@ increasingly seeing the `data:` scheme being used in spoofing and phishing
 attacks. To prevent this, we're blocking web pages from loading `data:` URLs
 in the top frame. This applies to `&lt;a&gt;` tags, `window.open`,
 `window.location` and similar mechanisms. The `data:` scheme will still work for
-resources loaded below by a page.
+resources loaded by a page.
 
 This feature was deprecated in Chrome 58 and is now removed.
 
@@ -54,7 +54,7 @@ The `navigator.sendBeacon()` function has been available
 As originally implemented, the function's `data` argument could contain any
 arbitrary blob whose type is not CORS-safelisted. We believe this is a potential
 security threat, though no one has yet tried to exploit it. Because we do NOT
-have a reasonable immediate fix for it, temporarily, `sendBeacon()` will no
+have a reasonable immediate fix for it, temporarily, `sendBeacon()` can no
 longer be invokable on blobs whose type is NOT CORS-safelisted.
 
 Although this change was implemented for Chrome 60, it is has since been merged
@@ -66,8 +66,9 @@ back to Chrome 59.
 
 ### Make shadow-piercing descendant combinator behave like descendent combinator
 
-The shadow-piercing descendant combinator (`>>>`), part of CSS Scopting Module
-Level 1, was intended to match the children of a particular ancestor element
+The shadow-piercing descendant combinator (`>>>`), part of
+[CSS Scoping Module Level 1](https://drafts.csswg.org/css-scoping/)
+, was intended to match the children of a particular ancestor element
 even when they appeared inside of a shadow tree. This had some limitations.
 First, [per the spec](https://drafts.csswg.org/css-scoping/#deep-combinator), it
 could only be used in JavaScript calls such as `querySelector()` and did not
@@ -111,11 +112,21 @@ version of the [Fetch specification](https://fetch.spec.whatwg.org/).
 
 ### Remove indexedDB.webkitGetDatabaseNames()
 
-We added this feature when Indexed DB was relatively new in Chrome and prefixing was all the rage. The API asynchronously returns a list of existing database names in an origin, which seemed sensible enough.
+We added this feature when Indexed DB was relatively new in Chrome and prefixing
+was all the rage. The API asynchronously returns a list of existing database
+names in an origin, which seemed sensible enough.
 
-The design is flawed, in that the results may be obsolete as soon as they are returned, so it can really only be used for logging, not serious application logic. The [github issue](https://github.com/w3c/IndexedDB/issues/31) tracks/links to previous discussion on alternatives, which would require a different approach. While there's been on-and-off interest by developers, given the lack of cross-browser progress here the problem has been worked around by library authors.
+Unfortunately, the design is flawed, in that the results may be obsolete as soon
+as they are returned, so it can really only be used for logging, not serious
+application logic. The
+[github issue](https://github.com/w3c/IndexedDB/issues/31) tracks/links to
+previous discussion on alternatives, which would require a different approach.
+While there's been on-and-off interest by developers, given the lack of cross-
+browser progress the problem has been worked around by library authors.
 
-Developers needing this functionality need to develop their own solution. Libraries like [Dexie.js](http://dexie.org/) for example use a global table which is itself another database to track the names of databases.
+Developers needing this functionality need to develop their own solution.
+Libraries like [Dexie.js](http://dexie.org/) for example use a global table
+ßwhich is itself another database to track the names of databases.
 
 This feature was deprecated in Chrome 58 and is now removed.
 

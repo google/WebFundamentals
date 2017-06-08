@@ -233,15 +233,25 @@ Removal is expected in Chrome 61.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5759967025954816) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=679821)
 
-### Deprecate indexedDB.webkitGetDatabaseNames()
+## Remove indexedDB.webkitGetDatabaseNames()
 
-We added this feature when Indexed DB was relatively new in Chrome and prefixing was all the rage. The API asynchronously returns a list of existing database names in an origin, which seemed sensible enough.
+We added this feature when Indexed DB was relatively new in Chrome and prefixing
+was all the rage. The API asynchronously returns a list of existing database
+names in an origin, which seemed sensible enough.
 
-The design is flawed, in that the results may be obsolete as soon as they are returned, so it can really only be used for logging, not serious application logic. The [github issue](https://github.com/w3c/IndexedDB/issues/31) tracks/links to previous discussion on alternatives, which would require a different approach. While there's been on-and-off interest by developers, given the lack of cross-browser progress here the problem has been worked around by library authors.
+Unfortunately, the design is flawed, in that the results may be obsolete as soon
+as they are returned, so it can really only be used for logging, not serious
+application logic. The
+[github issue](https://github.com/w3c/IndexedDB/issues/31) tracks/links to
+previous discussion on alternatives, which would require a different approach.
+While there's been on-and-off interest by developers, given the lack of cross-
+browser progress the problem has been worked around by library authors.
 
-Developers needing this functionality need to develop their own solution. Libraries like [Dexie.js](http://dexie.org/) for example use a global table which is itself another database to track the names of databases.
+Developers needing this functionality need to develop their own solution.
+Libraries like [Dexie.js](http://dexie.org/) for example use a global table
+ßwhich is itself another database to track the names of databases.
 
-This feature will be removed in Chrome 60.
+This feature is removed in Chrome 60.
 
 [Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/2fUr-3wFPKI/discussion)
 &#124; [Chromestatus Tracker](https://www.chromestatus.com/feature/5725741740195840) &#124;
