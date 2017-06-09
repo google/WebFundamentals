@@ -13,3 +13,9 @@ toc:
         path: /web/fundamentals/media/mse/basics
       - title: Seamless Playback
         path: /web/fundamentals/media/mse/seamless-playback
+    - title: Manipulating Files
+      section:
+      - title: Application Primers
+        path: /web/fundamentals/media/manipulating/applications
+      - title: Cheat Sheet
+        path: /web/fundamentals/media/manipulating/cheatsheet
