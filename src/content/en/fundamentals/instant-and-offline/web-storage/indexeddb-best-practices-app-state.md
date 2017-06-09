@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Learn best practices for syncing application state between IndexedDB an popular state management libraries
+description: Learn best practices for syncing application state between IndexedDB an popular state management libraries.
 
 {# wf_updated_on: 2017-06-08 #}
 {# wf_published_on: 2017-06-08 #}
@@ -49,10 +49,10 @@ US/docs/Web/API/IndexedDB_API#Browser_compatibility). There's also the
 possibility that a user is on a device that's almost out of disk space, and the
 browser will restrict you from storing anything at all.
 
-Because of this it's critically important that you always implement proper error
-handling in your IndexedDB code. This also means it's generally a good idea to
-keep application state in memory (in addition to storing it), so the UI doesn't
-break when running in private browsing mode or when storage space isn't
+Because of this, it's critically important that you always implement proper
+error handling in your IndexedDB code. This also means it's generally a good
+idea to keep application state in memory (in addition to storing it), so the UI
+doesn't break when running in private browsing mode or when storage space isn't
 available (even if some of the other app features that require storage won't
 work).
 
@@ -98,7 +98,7 @@ all possible upgrade paths and cases.
 ## Keeping your app performant
 
 One of the key features of IndexedDB is its asynchronous API, but don't let that
-fool you into think you don't need to worry about performance when using it.
+fool you into thinking you don't need to worry about performance when using it.
 There are a number of cases where improper usage can still block the main
 thread, which can lead to jank and unresponsiveness.
 
