@@ -43,7 +43,7 @@ for the code to be pulled back in to the repository.
 We want to make sure that you get the credit for the articles that you
 translate.
 
-Add your details to `/src/content/_contributors.yaml` and add `- translator` to
+Add your details to `/src/data/_contributors.yaml` and add `- translator` to
 the `role` attriute.  We use this information to populate our
 [contributors page](/web/resources/contributors) and also to attach your name
 to each article.  For example:
