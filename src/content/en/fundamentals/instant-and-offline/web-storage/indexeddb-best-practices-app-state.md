@@ -4,6 +4,7 @@ description: Learn best practices for syncing application state between IndexedD
 
 {# wf_updated_on: 2017-06-08 #}
 {# wf_published_on: 2017-06-08 #}
+{# wf_tags: javascript,indexeddb #}
 
 # IndexedDB Best Practices for Persisting Application State {: .page-title }
 
