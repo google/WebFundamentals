@@ -115,7 +115,7 @@ US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) of that object, and
 the structured cloning process happens on the main thread. The larger the
 object, the longer the blocking time will be.
 
-This presents some challenges when planning out how to persist application state
+This presents some challenges when planning how to persist application state
 to IndexedDB, as most of the popular state management libraries (like
 [Redux](http://redux.js.org/)) work by managing your entire state tree as
 a single JavaScript object.
@@ -130,10 +130,10 @@ some cases it will even cause the browser tab to crash or become unresponsive.
 Instead of storing the entire state tree in a single record, you should break it
 up into individual records and only update the records that actually change.
 
-As with most best-practices, this is not an all-or-nothing rule. In cases where
+As with most best practices, this is not an all-or-nothing rule. In cases where
 it's not feasible to break up a state object and just write the minimal
 change-set, breaking up the data into sub-trees and only writing those is still
-preferable than always writing the entire state tree. Little improvements are
+preferable to always writing the entire state tree. Little improvements are
 better than no improvements at all.
 
 Lastly, you should always be [measuring the performance
