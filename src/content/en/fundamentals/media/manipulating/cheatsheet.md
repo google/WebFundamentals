@@ -39,7 +39,7 @@ Technically, ffmpeg always requires an output file format. Calling ffmpeg this
 way will give you an error message explaining that; however, it lists
 information not available from the Shaka Packager command.
 
-## Demux (split audio and video)
+## Demux (split) audio and video
 
 Most of you wouldn't care about this, but Shaka Packager requires demuxing in
 order to convert.
