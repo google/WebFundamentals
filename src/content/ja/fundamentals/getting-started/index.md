@@ -47,7 +47,7 @@ book_path: /web/fundamentals/_book.yaml
 
 </div>
 <div class="attempt-right">
-  <a href="codelabs/debugging-service-workers/">
+  <a href="codelabs/push-notifications/">
     プッシュ通知の追加
   </a>
   <p>

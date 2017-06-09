@@ -78,15 +78,15 @@ Este codelab te ayudará a aprender a identificar y solucionar los cuellos de bo
 
 ### Cursos de Udacity
 
-[Optimización de representación del navegador](https://udacity.com/ud860)<br>
+[Optimización de representación del navegador](https://www.udacity.com/course/browser-rendering-optimization--ud860)<br>
 El gurú del rendimiento de Google, Paul Lewis, está aquí para ayudarte a destruir los bloqueos y crear
 apps web que mantengan un rendimiento de 60 marcos por segundo.
 
-[Ruta crítica de representación](https://udacity.com/ud884)<br>
+[Ruta crítica de representación](https://www.udacity.com/course/website-performance-optimization--ud884)<br>
 Obtén más información sobre la Ruta crítica de representación o sobre los pasos que los navegadores deben dar
 para convertir HTML, CSS y JavaScript en sitios web vivos.
 
-[HTTP/1 a HTTP/2](https://udacity.com/ud897)<br>
+[HTTP/1 a HTTP/2](https://www.udacity.com/course/client-server-communication--ud897)<br>
 Surma comienza con los conceptos básicos de HTTP/1 y va hasta HTTP/2, cómo
 cargar recursos en forma eficiente y también cubre aspectos de seguridad de estos protocolos. 
 <div style="clear:both;"></div>

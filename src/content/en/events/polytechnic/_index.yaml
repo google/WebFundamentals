@@ -1,8 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 landing_page:
-  custom_css_path: /web/events/events.css
-
   header:
     description: Learn Polymer at your local event, or start one yourself!
 
@@ -52,7 +50,8 @@ landing_page:
       - heading: Plan
         icon:
           icon_name: assignment
-          is_white: True
+          foreground: white
+          background: theme
         description:
             <a href="https://drive.google.com/open?id=1z8KZpITiHBNZvjwf7M4ZrBsuIO6-7WPkSnQfm4J0vyU">Event Guide</a>
             &mdash; Understand how to plan your event.<br />
@@ -61,21 +60,24 @@ landing_page:
       - heading: Tech Talk
         icon:
           icon_name: lightbulb_outline
-          is_white: True
+          foreground: white
+          background: theme
         description: >
           <a href="https://drive.google.com/drive/u/1/folders/0B3bHK5D2_zxEeGFQcHRtczRld1k">Speaker Deck</a> &mdash; Start with the basics!<br />
           <a href="#">Training Video (coming soon)</a> &mdash; Learn from the team.
       - heading: Curriculum
         icon:
           icon_name: school
-          is_white: True
+          foreground: white
+          background: theme
         description: >
           <a href="https://codelabs.developers.google.com/polytechnic">Code Labs</a> &mdash; Get Hacking!
     - items:
       - heading: Graphic Assets
         icon:
           icon_name: collections
-          is_white: True
+          foreground: white
+          background: theme
         description: >
           <a href="https://drive.google.com/open?id=0B55wxScz_BJtdlJqSlRXc2hDSDg">Polymer Logo</a> &mdash; Look official!<br />
           <a href="https://drive.google.com/open?id=0B55wxScz_BJtVm40Q1ptYnpJbFk">Polytechnic Sticker</a> &mdash; Decorate your laptops.<br />
@@ -83,82 +85,118 @@ landing_page:
       - heading: Polymer Experts
         icon:
           icon_name: supervisor_account
-          is_white: True
+          foreground: white
+          background: theme
         description: >
           <a href="#">Q&A Hangout (coming soon)</a> &mdash; Get answers to common questions.
       - heading: Communities
         icon:
           icon_name: question_answer
-          is_white: True
+          foreground: white
+          background: theme
         description: >
           <a href="https://polymer-slack.herokuapp.com/">Polymer Slack</a> &mdash; Discuss in realtime.<br />
           <a href="https://plus.google.com/communities/115626364525706131031">Polymer G+</a> &mdash; Coordinate with other organizers<br />
           <a href="https://groups.google.com/forum/#!forum/polymer-dev">Mailing List</a> &mdash; Get answers in your inbox.
 
 
-  - classname: devsite-landing-row-fullbleed faq dark-background
+  - background: blue-grey
     heading: Frequently Asked Questions
-    items:
-    - custom_html: >
-        <p class="faq-question">
-          What is a Polymer Polytechnic?
-        </p>
-        <p class="faq-answer">
-          Polymer Polytechnic is an event series of in-person, community-run events to help developers learn Polymer. These events are run by local Google Developer Groups or other developer meetups all over the world. Each event is a little different, but generally, Polymer Polytechnic can include a tech talk, series of code labs, and time for personal hacking.
-        </p>
-        <p class="faq-question">
-          Why is your team organizing this?
-        </p>
-        <p class="faq-answer">
-          The Polymer team wants to help developers all over the world try this future facing technology. They also want to hear developer feedback as they continue to develop the product.
-        </p>
-        <p class="faq-question">
-          What hashtag do I use to talk about my Polymer Polytechnic on social media?
-        </p>
-        <p class="faq-answer">
-          Great questions! Please use #itshackademic and be sure to follow and mention @polymer.
-        </p>
-        <p class="faq-question">
-          I'd like to organize a Polytechnic. Do we have to do events in the fall?
-        </p>
-        <p class="faq-answer">
+    columns:
+    - items:
+      - heading: What is a Polymer Polytechnic?
+        description: >
+          Polymer Polytechnic is an event series of in-person, community-run
+          events to help developers learn Polymer. These events are run by
+          local Google Developer Groups or other developer meetups all over
+          the world. Each event is a little different, but generally, Polymer
+          Polytechnic can include a tech talk, series of code labs, and time
+          for personal hacking.
+        icon:
+          icon_name: question_answer
+
+      - heading: Why is your team organizing this?
+        description: >
+          The Polymer team wants to help developers all over the world try
+          this future facing technology. They also want to hear developer
+          feedback as they continue to develop the product.
+        icon:
+          icon_name: question_answer
+
+      - heading: >
+          What hashtag do I use to talk about my Polymer Polytechnic on
+          social media?
+        description: >
+          Great questions! Please use #itshackademic and be sure to follow
+          and mention @polymer.
+        icon:
+          icon_name: question_answer
+
+      - heading: >
+          I'd like to organize a Polytechnic. Do we have to do events in
+          the fall?
+        description: >
           Nope! You can run a Polymer Polytechnic event any time!
-        </p>
-        <p class="faq-question">
-          I'd like to organize my own Polytechinc event, are there specific things we
-          should be talking about?
-        </p>
-        <p class="faq-answer">
-          Polymer is very targeted at building mobile web apps, and client side apps in general. The design goal should be to compose your apps out of well encapsulated elements, like building blocks. Polymer is also a wonderful tool for creating mashups and componentizing APIs and services.
-        </p>
-        <p class="faq-question">
-          I'm excited to start learning Polymer now and don't want to wait on a Polytechnic. What should I do?
-        </p>
-        <p class="faq-answer">
-          Check out the content that’s already available on <a href="https://www.polymer-project.org/">polymer-project.org</a> and <a href="http://webcomponents.org/">webcomponents.org</a>. You can also find other Polymer devs on the <a href="https://groups.google.com/forum/#!forum/polymer-dev">polymer-dev mailing list</a> and <a href="https://plus.google.com/communities/115626364525706131031">community run G+ group</a>. The team also regularly answers questions on <a href="https://polymer-slack.herokuapp.com/">our Slack channel</a> and <a href="https://stackoverflow.com/tags/polymer">StackOverflow</a>.
-        </p>
-        <p class="faq-question">
+        icon:
+          icon_name: question_answer
+
+      - heading: >
+          I'd like to organize my own Polytechnic event, are there specific
+          things we should be talking about?
+        description: >
+          Polymer is very targeted at building mobile web apps, and client
+          side apps in general. The design goal should be to compose your
+          apps out of well encapsulated elements, like building blocks.
+          Polymer is also a wonderful tool for creating mashups and
+          componentizing APIs and services.
+        icon:
+          icon_name: question_answer
+
+    - items:
+      - heading: >
+          I'm excited to start learning Polymer now and don't want to wait on
+          a Polytechnic. What should I do?
+        description: >
+          Check out the content that’s already available on
+          <a href="https://www.polymer-project.org/">polymer-project.org</a>
+          and <a href="http://webcomponents.org/">webcomponents.org</a>. You
+          can also find other Polymer devs on the
+          <a href="https://groups.google.com/forum/#!forum/polymer-dev">polymer-dev mailing list</a>
+          and <a href="https://plus.google.com/communities/115626364525706131031">community run G+ group</a>.
+          The team also regularly answers questions on
+          <a href="https://polymer-slack.herokuapp.com/">our Slack channel</a>
+          and <a href="https://stackoverflow.com/tags/polymer">StackOverflow</a>.
+        icon:
+          icon_name: question_answer
+
+      - heading: >
           I'd like to organize my own Polytechnic event. How do I get swag?
-        </p>
-        <p class="faq-answer">
-          We've made all swag designs available so you can print them yourself.
-          If you are a GDG in need of support to get swag printed you should contact your regional lead.
-        </p>
-        <p class="faq-question">
-          Are the Polytechnic events official Google events?
-        </p>
-        <p class="faq-answer">
-          Polytechnic events listed on this site are not official Google events. The Polytechnic events are produced by local developer communities, Google Developer Groups, meetups, or other organizations.
-        </p>
-        <p class="faq-question">
-          Should a Polytechnic have a Code of Conduct?
-        </p>
-        <p class="faq-answer">
-          Yes! It's important to make everyone feel safe and welcome at your event. We have provided a <a href="https://itshackademic.com/code-of-conduct.html">sample Code of Conduct</a> which you may use and adapt for your own event.
-        </p>
-        <p class="faq-question">
-          Are the Polytechnic events vetted by Google?
-        </p>
-        <p class="faq-answer">
+        description: >
+          We've made all swag designs available so you can print them
+          yourself. If you are a GDG in need of support to get swag printed
+          you should contact your regional lead.
+        icon:
+          icon_name: question_answer
+
+      - heading: Are the Polytechnic events official Google events?
+        description: >
+          Polytechnic events listed on this site are not official Google
+          events. The Polytechnic events are produced by local developer
+          communities, Google Developer Groups, meetups, or other
+          organizations.
+        icon:
+          icon_name: question_answer
+
+      - heading: Should a Polytechnic have a Code of Conduct?
+        description: >
+          Yes! It's important to make everyone feel safe and welcome at your
+          event. We have provided a <a href="https://itshackademic.com/code-of-conduct.html">sample Code of Conduct</a>
+          which you may use and adapt for your own event.
+        icon:
+          icon_name: question_answer
+
+      - heading: Are the Polytechnic events vetted by Google?
+        description: >
           The Polytechnic events listed on this site are not vetted by Google.
-        </p>
+        icon:
+          icon_name: question_answer

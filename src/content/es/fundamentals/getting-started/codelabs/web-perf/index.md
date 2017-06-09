@@ -18,7 +18,7 @@ description: Este codelab te ayudará a aprender a identificar y solucionar los 
 
 
 
-Este codelab es una versión basada en texto de parte del contenido cubierto en un curso de Udacity sobre rendimiento de app/Web ([ud860](https://www.udacity.com/course/viewer#!/c-ud860/l-4138328558/m-4157078575)). En lugar de una transcripción del curso en video, este codelab sirve como un eficiente tratamiento específico de identificación y corrección de jank, usado el proyecto final práctico original del curso.
+Este codelab es una versión basada en texto de parte del contenido cubierto en un curso de Udacity sobre rendimiento de app/Web ([ud860](https://www.udacity.com/course/browser-rendering-optimization--ud860)). En lugar de una transcripción del curso en video, este codelab sirve como un eficiente tratamiento específico de identificación y corrección de jank, usado el proyecto final práctico original del curso.
 
 
 ## Información general

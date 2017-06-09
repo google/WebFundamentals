@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
+title: Events
 landing_page:
-  custom_css_path: /web/events/events.css
   header:
     description: Attend A Developer Event And Get Hacking
 

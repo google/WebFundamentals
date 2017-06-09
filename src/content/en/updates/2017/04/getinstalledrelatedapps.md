@@ -27,6 +27,14 @@ the web as well.
 In Chrome 59 we are introducing a new API called `getInstalledRelatedApps()`.
 This new API lets you determine if your native app is installed on a device.
 
+Note: This API is behind an [Origin 
+Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/explainer.md), 
+this means that we are in an experiemental mode and are actively looking for 
+feedback. You have to [opt your 
+site](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md) 
+into this trial because it is not available broadly on the web. You can now 
+[sign up for the trial](https://goo.gl/xxjW3L).
+
 This is an incredibly powerful API because it gives you access to information
 that you can't infer from the web. This means that there must be a provable
 bi-directional relationship between your site and your native app. There are
@@ -37,7 +45,7 @@ three core components that make this work.
    to the native app.
 1. There is a native app installed with the same package name as the one
    referenced in your Web App Manifest. The app must have a reference from your
-   `AndroidManifest.xml` via the asset_statements element. This asserts that
+   `AndroidManifest.xml` via the `asset_statements` element. This asserts that
    your native app has a relationship with your site.
 1. If the above two criteria are met then a call to `getInstalledRelatedApps()`
    will resolve the list of apps.
@@ -64,7 +72,7 @@ unique identifier for your app on that platform.
       ...
     }
 
-**Note:** Only Chrome on Android supports this, so the platform must be set to
+Note: Only Chrome on Android supports this, so the platform must be set to
 "play". You also need your "id" to be the exact package name for your Android
 App.
 
@@ -144,7 +152,7 @@ In your `strings.xml` set the "site" property value to be
 Ensure that your Web App Manifest has the correct package name for your locally
 installed App. When you deploy your Android App, make sure that you update the
 site property value to be the correct URL for your site. The most efficient way
-to manage this is through your product flavours (Release, Debug, etc) which
+to manage this is through your product flavours (Release, Debug, etc.) which
 allows you to specify different resource files based on the build target,
 meaning that your Release target will only ever contain your live domain.
 

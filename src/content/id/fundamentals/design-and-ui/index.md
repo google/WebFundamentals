@@ -95,11 +95,11 @@ Ini tidaklah sesulit membangun situs yang responsif sepenuhnya seperti yang Anda
 
 ### Kursus udacity
 
-[Dasar-Dasar Desain Web yang Responsif ](https://udacity.com/ud893)<br>
+[Dasar-Dasar Desain Web yang Responsif ](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)<br>
 Dalam kursus ini, Anda akan mempelajari dasar-dasar desain web responsif.
 Anda akan membuat laman web responsif Anda sendiri yang bekerja dengan baik pada setiap perangkat&mdash;ponsel, tablet, desktop, atau apa pun.
 
-[Gambar Responsif](https://udacity.com/ud882)<br>
+[Gambar Responsif](https://www.udacity.com/course/responsive-images--ud882)<br>
 Dalam kursus ini, Anda akan mempelajari cara bekerja dengan gambar di web modern, sehingga
 gambar Anda tampak mengagumkan dan dimuat dengan cepat pada perangkat apa pun.
 

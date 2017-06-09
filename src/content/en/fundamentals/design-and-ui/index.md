@@ -95,11 +95,11 @@ It's not as hard to build fully responsive sites as you think, and to show you, 
 
 ### Udacity courses
 
-[Responsive Web Design Fundamentals](https://udacity.com/ud893)<br>
+[Responsive Web Design Fundamentals](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)<br>
 In this course, you'll learn the fundamentals of responsive web design.
 You'll create your own responsive web page that works well on any device&mdash;phone, tablet, desktop, or anything in between.
 
-[Responsive Images](https://udacity.com/ud882)<br>
+[Responsive Images](https://www.udacity.com/course/responsive-images--ud882)<br>
 In this course, you'll learn how to work with images on the modern web, so
 that your images look great and load quickly on any device.
 

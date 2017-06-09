@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Navigation preload lets you overcome service worker startup time by making requests in parallel.
 
-{# wf_updated_on: 2017-03-30 #}
+{# wf_updated_on: 2017-06-07 #}
 {# wf_published_on: 2017-02-15 #}
 {# wf_tags: chrome57,serviceworker,performance #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -127,7 +127,7 @@ way to perform navigation requests in parallel:
 
 Navigation preload is a new experimental feature that lets you say, "Hey, when
 the user makes a GET navigation request, start the network request while
-the service worker is booting up.
+the service worker is booting up".
 
 The startup delay is still there, but it doesn't block the network request, so
 the user gets content sooner.

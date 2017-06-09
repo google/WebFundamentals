@@ -7,7 +7,7 @@ description: 작은 화면의 휴대폰에서 큰 화면의 TV에 이르기까�
 
 # 여러분의 첫 다중 기기 사이트 {: .page-title }
 
-주의: 이 문서는 한동안 업데이트되지 않았으므로 현실을 반영하지 못할 수도 있습니다. 그 대신, Udacity에서 무료 [반응형 웹 디자인](https://udacity.com/ud893) 과정을 확인해 보세요.
+주의: 이 문서는 한동안 업데이트되지 않았으므로 현실을 반영하지 못할 수도 있습니다. 그 대신, Udacity에서 무료 [반응형 웹 디자인](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) 과정을 확인해 보세요.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
@@ -15,7 +15,7 @@ description: 작은 화면의 휴대폰에서 큰 화면의 TV에 이르기까�
 
 다중 기기 환경을 구축하는 것은 보기보다 그렇게 어려운 것이 아닙니다.
 이 가이드에서 우리는 
-[CS256 모바일 웹개발 과정](https://www.udacity.com/course/cs256)을
+[CS256 모바일 웹개발 과정](https://www.udacity.com/course/mobile-web-development--cs256)을
 위해, 다양한 기기 유형에서 잘 작동하는 제품 랜딩 페이지를 빌드할 것입니다.
 
 매우 다양한 화면 크기와 다양한 기능을 갖춘 다중 기기에 맞는

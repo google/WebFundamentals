@@ -6,6 +6,8 @@ book_path: /web/showcase/_book.yaml
 {# wf_featured_image: /web/showcase/2016/images/ali-express-smart-lock/card.png #}
 {# wf_featured_snippet: Most Indian users reach the Internet via 2G and 3G networks, so a fast user experience is essential. To decrease load times, Housing.com added Service Workers and streamlined their site to help consumers quickly find what they’re looking for. Users can continue browsing properties and reviewing previous searches, all while offline. #}
 {# wf_tags: smart-lock,casestudy #}
+{# wf_region: asia #}
+{# wf_vertical: retail #}
 
 # Smart Lock for AliExpress {: .page-title }
 

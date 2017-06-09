@@ -18,7 +18,7 @@ description: Codelab ini akan membantu Anda belajar mengidentifikasi dan memperb
 
 
 
-Codelab ini adalah versi teks dari sebagian materi yang dibahas dalam kursus Udacity mengenai kinerja web/aplikasi ( [ud860](https://www.udacity.com/course/viewer#!/c-ud860/l-4138328558/m-4157078575)). Alih-alih transkripsi dari kursus video, codelab ini dimaksudkan agar menjadi solusi praktis dan efisien terhadap identifikasi dan koreksi jank, dengan menggunakan proyek final sesi praktik asli kursus.
+Codelab ini adalah versi teks dari sebagian materi yang dibahas dalam kursus Udacity mengenai kinerja web/aplikasi ( [ud860](https://www.udacity.com/course/browser-rendering-optimization--ud860)). Alih-alih transkripsi dari kursus video, codelab ini dimaksudkan agar menjadi solusi praktis dan efisien terhadap identifikasi dan koreksi jank, dengan menggunakan proyek final sesi praktik asli kursus.
 
 
 ## Ringkasan

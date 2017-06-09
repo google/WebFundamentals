@@ -78,15 +78,15 @@ PRPL（レンダリング、事前キャッシュ、遅延読み込み）は、P
 
 ###  Udacity コース
 
-[ブラウザのレンダリングの最適化](https://udacity.com/ud860)<br>
+[ブラウザのレンダリングの最適化](https://www.udacity.com/course/browser-rendering-optimization--ud860)<br>
 Google のパフォーマンスの専門家である Paul Lewis が、不自然な動作を削除し、1 秒 60 フレームのパフォーマンスを維持するウェブアプリの作成をサポートします。
 
 
-[クリティカル レンダリング パス](https://udacity.com/ud884)<br>
+[クリティカル レンダリング パス](https://www.udacity.com/course/website-performance-optimization--ud884)<br>
 クリティカル レンダリング パス、つまり、ブラウザが HTML、CSS、JavaScript を生き生きとしたウェブサイトに変換するために必要なステップについて学びます。
 
 
-[HTTP/1 から HTTP/2](https://udacity.com/ud897)<br>
+[HTTP/1 から HTTP/2](https://www.udacity.com/course/client-server-communication--ud897)<br>
 Surma は HTTP/1 の基本から HTTP/2 に至るまで、アセットを効率良く読み込む方法を説明し、これらのプロトコルのセキュリティについても説明します。
 <div style="clear:both;"></div>
 

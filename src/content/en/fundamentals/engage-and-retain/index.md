@@ -68,7 +68,7 @@ information about new content. You'll also learn the basics of Service Workers.
 
 ### Udacity courses
 
-[Progressive Web App Fundamentals](https://udacity.com/ud811)<br>
+[Progressive Web App Fundamentals](https://www.udacity.com/course/intro-to-progressive-web-apps--ud811)<br>
 In this course you’ll get started working on your very first Progressive Web
 App&mdash;a web app that takes advantage of many features that native
 applications enjoy. You’ll also get more experience in creating a web

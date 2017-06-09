@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-25T18:26:15Z #}
+{# wf_updated_on: 2017-05-05T00:51:33Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -38,11 +38,11 @@ Note: Although not a hard requirement, for general development it can be useful 
 
 Install  [Node](https://nodejs.org/en/) and run a local Node server (you may need administrator privileges to do this).
 
-We recommend installing the latest long term support (LTS) version of  [Node](https://nodejs.org/en/) (labelled as "LTS, Recommended for Most Users") rather than the most current version with the latest features.
+We recommend installing the latest __long term support (LTS)__ version of  [Node](https://nodejs.org/en/) (labelled as "LTS, Recommended for Most Users") rather than the most current version with the latest features (the current version may be unstable). 
 
 ### Using NVM
 
-If you have an existing version of Node installed that you would like to keep, you can install a Node version manager (for  [macOS and Linux platforms](https://github.com/creationix/nvm) and  [Windows](https://github.com/coreybutler/nvm-windows)). This tool (nvm) lets you install multiple versions of Node, and easily switch between them. If you have issues with a specific version of Node, you can <a href="https://github.com/creationix/nvm#usage">switch to another version</a> with a single command.
+If you have an existing version of Node installed that you would like to keep, you can install a Node version manager (for  [macOS and Linux platforms](https://github.com/creationix/nvm) and  [Windows](https://github.com/coreybutler/nvm-windows)). This tool (NVM) lets you install multiple versions of Node, and easily switch between them. If you have issues with a specific version of Node, you can <a href="https://github.com/creationix/nvm#usage">switch to another version</a> with a single command.
 
 Install Node by running one of the following commands from the command line:
 
@@ -60,7 +60,7 @@ For the Windows version you can specify whether to install the 32-bit or 64-bit 
 
 ### Without NVM
 
-If you did not install `nvm`, download and install Node from the  [Node.js](https://nodejs.org/en/) website.
+If you did not install NVM, download and install Node from the  [Node.js](https://nodejs.org/en/) website.
 
 This also installs Node's package manager,  [`npm`](https://www.npmjs.com/). 
 

@@ -17,6 +17,8 @@ toc:
       section:
       - title: Overview
         path: /web/tools/chrome-devtools/inspect-styles/
+      - title: Get Started with Viewing and Changing CSS
+        path: /web/tools/chrome-devtools/css/
       - title: Edit Styles
         path: /web/tools/chrome-devtools/inspect-styles/edit-styles
       - title: Inspect Animations
@@ -94,12 +96,15 @@ toc:
         path: /web/tools/chrome-devtools/evaluate-performance/
       - title: Overview
         path: /web/tools/chrome-devtools/rendering-tools/
-      - title: How to Use the Timeline Tool
-        path: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
+      - title: Performance Analysis Reference
+        path: /web/tools/chrome-devtools/evaluate-performance/reference
       - title: Timeline Event Reference
         path: /web/tools/chrome-devtools/evaluate-performance/performance-reference
       - title: Speed Up JavaScript Execution
         path: /web/tools/chrome-devtools/rendering-tools/js-execution
+      - title: How to Use the Timeline Tool
+        path: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
+        status: deprecated
       - title: Diagnose Forced Synchronous Layouts
         path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
         status: deprecated

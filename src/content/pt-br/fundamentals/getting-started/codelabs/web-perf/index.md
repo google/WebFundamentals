@@ -19,7 +19,7 @@ description: Esse codelab ensinará você a identificar e eliminar afunilamento 
 
 
 
-Este codelab é uma versão em texto de parte do conteúdo discutido em um curso da Udacity sobre desempenho de aplicativos/Web ([ud860](https://www.udacity.com/course/viewer#!/c-ud860/l-4138328558/m-4157078575)). Em vez de simplesmente transcrever o curso em vídeo, o propósito deste codelab é tratar de forma enxuta e concisa a identificação e a correção das instabilidades, usando o projeto final prático original do curso.
+Este codelab é uma versão em texto de parte do conteúdo discutido em um curso da Udacity sobre desempenho de aplicativos/Web ([ud860](https://www.udacity.com/course/browser-rendering-optimization--ud860)). Em vez de simplesmente transcrever o curso em vídeo, o propósito deste codelab é tratar de forma enxuta e concisa a identificação e a correção das instabilidades, usando o projeto final prático original do curso.
 
 
 Visão geral do ## 

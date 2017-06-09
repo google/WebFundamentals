@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2017-04-27 #}
+{# wf_updated_on: 2017-05-01 #}
 {# wf_published_on: 2017-04-27 #}
+
 {# wf_tags: chrome59,headless,testing #}
 {# wf_featured_image: /web/updates/images/generic/headless-chrome.png #}
 {# wf_featured_snippet: Headless Chrome (shipping in Chrome 59) is a way to run the Chrome browser in a headless environment. It brings all modern web platform features provided by Chromium and the Blink rendering engine to the command line. #}
@@ -21,7 +22,8 @@ figure {
 ### TL;DR {: #tldr .hide-from-toc}
 
 [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
-is a way to run the Chrome browser in a headless environment. Essentially, running Chrome without chrome! It brings **all modern web platform features** provided
+is shipping in Chrome 59. It's a way to run the Chrome browser in a headless environment. Essentially, running
+Chrome without chrome! It brings **all modern web platform features** provided
 by Chromium and the Blink rendering engine to the command line.
 
 Why is that useful?
@@ -30,8 +32,9 @@ A headless browser is a great tool for automated testing and server environments
 don't need a visible UI shell. For example, you may want to run some tests against
 a real web page, create a PDF of it, or just inspect how the browser renders an URL.
 
-Note: Headless mode is available on Mac and Linux in Chrome 59. Windows support
-is coming soon!
+Caution: Headless mode is available on Mac and Linux in **Chrome 59**.
+[Windows support](https://bugs.chromium.org/p/chromium/issues/detail?id=686608) is coming soon! To
+check what version of Chrome you have, open `chrome://version`.
 
 ## Starting Headless (CLI) {: #cli }
 
@@ -49,11 +52,16 @@ That will eventually go away.
 
 `chrome` should point to your installation of Chrome. The exact location will
 vary from platform to platform. Since I'm on Mac, I created convenient aliases
-for each version of Chrome that I have installed:
+for each version of Chrome that I have installed.
+
+If you're on the stable channel of Chrome and cannot get the Beta, I recommend
+using `chrome-canary`:
 
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
     alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
     alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
+
+Download Chrome Canary [here](https://www.google.com/chrome/browser/canary.html).
 
 ## Command line features {: features }
 
@@ -61,32 +69,29 @@ In some cases, you may not need to [programmatically script](#node) Headless Chr
 There are some [useful command line flags](https://cs.chromium.org/chromium/src/headless/app/headless_shell_switches.cc)
 to perform common tasks.
 
-Note: You may also need to include the `--disable-gpu` flag for now when
-running these commands.
-
 ### Printing the DOM {: dom }
 
 The `--dump-dom` flag prints `document.body.innerHTML` to stdout:
 
-    chrome --headless --dump-dom https://www.chromestatus.com/
+    chrome --headless --disable-gpu --dump-dom https://www.chromestatus.com/
 
 ### Create a PDF {: dom }
 
 The `--print-to-pdf` flag creates a PDF of the page:
 
-    chrome --headless --print-to-pdf https://www.chromestatus.com/
+    chrome --headless --disable-gpu --print-to-pdf https://www.chromestatus.com/
 
 ### Taking screenshots {: #screenshots }
 
 To capture a screenshot of a page, use the `--screenshot` flag:
 
-    chrome --headless --screenshot https://www.chromestatus.com/
+    chrome --headless --disable-gpu --screenshot https://www.chromestatus.com/
 
     # Size of a standard letterhead.
-    chrome --headless --screenshot --window-size=1280,1696 https://www.chromestatus.com/
+    chrome --headless --disable-gpu --screenshot --window-size=1280,1696 https://www.chromestatus.com/
 
     # Nexus 5x
-    chrome --headless --screenshot --window-size=412,732 https://www.chromestatus.com/
+    chrome --headless --disable-gpu --screenshot --window-size=412,732 https://www.chromestatus.com/
 
 Running with `--screenshot` will produce a file named `screenshot.png` in the
 current working directory. If you're looking for full page screenshots, things
@@ -98,7 +103,7 @@ post from David Schnurr that has you covered. Check out [Using headless Chrome a
 ## Debugging Chrome without a browser UI? {: #frontend }
 
 When you run Chrome with `--remote-debugging-port=9222`, it starts an instance
-with the [DevTools Protocol][dtprotocol] enabled. The
+with the [DevTools Protocol][dtviewer] enabled. The
 protocol is used to communicate with Chrome and drive the headless
 browser instance. It's also what tools like Sublime, VS Code, and Node use for
 remote debugging an application. #synergy
@@ -128,12 +133,12 @@ want to spawn Chrome _from_ your application.
 One way is to use `child_process`:
 
 ```javascript
-const exec = require('child_process').exec;
+const execFile = require('child_process').execFile;
 
 function launchHeadlessChrome(url, callback) {
   // Assuming MacOSx.
   const CHROME = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome';
-  exec(`${CHROME} --headless --remote-debugging-port=9222 ${url}`, callback);
+  execFile(CHROME, ['--headless', '--disable-gpu', '--remote-debugging-port=9222', url], callback);
 }
 
 launchHeadlessChrome('https://www.chromestatus.com', (err, stdout, stderr) => {
@@ -178,7 +183,11 @@ function launchChrome(headless = true) {
   const launcher = new ChromeLauncher({
     port: 9222,
     autoSelectChrome: true, // False to manually select which Chrome install.
-    additionalFlags: [headless ? '--headless' : '']
+    additionalFlags: [
+      '--window-size=412,732',
+      '--disable-gpu',
+      headless ? '--headless' : ''
+    ]
   });
 
   return launcher.run().then(() => launcher)
@@ -203,12 +212,12 @@ To control the browser, we need the DevTools protocol!
 ### Retrieving information about the page {: #useprotocol }
 
 [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface)
-is a great Node package that provides high-level APIs on top of the
-[DevTools Protocol][dtprotocol]. You can use it to orchestrate Headless
+is a great Node package that provides usable APIs for the
+[DevTools Protocol][dtviewer]. You can use it to orchestrate Headless
 Chrome, navigate to pages, and fetch information about those pages.
 
 Warning: The DevTools protocol can do a ton of interesting stuff, but it can be a bit
-daunting at first. I recommend spending a bit of time browsing the [DevTools Protocol API Viewer][dtviewer], first. Then, move on to the `chrome-remote-interface` API docs to
+daunting at first. I recommend spending a bit of time browsing the [DevTools Protocol Viewer][dtviewer], first. Then, move on to the `chrome-remote-interface` API docs to
 see how it wraps the raw protocol.
 
 Let's install the library:
@@ -247,7 +256,7 @@ launchChrome().then(launcher => {
 
   chrome(protocol => {
     // Extract the parts of the DevTools protocol we need for the task.
-    // See API docs: https://chromedevtools.github.io/debugger-protocol-viewer/
+    // See API docs: https://chromedevtools.github.io/devtools-protocol/
     const {Page} = protocol;
 
     // First, enable the Page domain we're going to use.
@@ -256,7 +265,7 @@ launchChrome().then(launcher => {
 
       // Wait for window.onload before doing stuff.
       Page.loadEventFired(() => {
-        onPageLoad(Page)).then(() => {
+        onPageLoad(Page).then(() => {
           protocol.close();
           launcher.kill(); // Kill Chrome.
         });
@@ -288,7 +297,7 @@ launchChrome().then(launcher => {
 
   chrome(protocol => {
     // Extract the parts of the DevTools protocol we need for the task.
-    // See API docs: https://chromedevtools.github.io/debugger-protocol-viewer/
+    // See API docs: https://chromedevtools.github.io/devtools-protocol/
     const {Page, Runtime} = protocol;
 
     // First, need to enable the domains we're going to use.
@@ -321,7 +330,6 @@ Here are some useful resources to get you started:
 
 Docs
 
-* [DevTools Protocol][dtprotocol] - documentation on how to use the protocol
 * [DevTools Protocol Viewer][dtviewer] - API reference docs
 
 Tools
@@ -335,12 +343,39 @@ Demos
 
 ## FAQ
 
+**Do I need the `--disable-gpu` flag?**
+
+Yes, for now.  The `--disable-gpu` flag is a temporary requirement to work around a few bugs. You won't need this
+flag in future versions of Chrome. See [https://crbug.com/546953#c152](https://bugs.chromium.org/p/chromium/issues/detail?id=546953#c152) and [https://crbug.com/695212](https://bugs.chromium.org/p/chromium/issues/detail?id=695212) for more information.
+
+**So I still need Xvfb?**
+
+No. Headless Chrome doesn't use a window so a display server like Xvfb is
+no longer needed. You can happily run your automated tests without it.
+
+What is Xvfb? Xvfb is an in-memory display server for Unix-like systems that enables you
+to run graphical applications (like Chrome) without an attached physical display.
+Many people use Xvfb to run earlier versions of Chrome to do "headless" testing.
+
 **How do I create a Docker container that runs Headless Chrome?**
 
 Check out [lighthouse-ci](https://github.com/ebidel/lighthouse-ci). It has an
 [example Dockerfile](https://github.com/ebidel/lighthouse-ci/blob/master/builder/Dockerfile)
 that uses Ubuntu as a base image, and installs + runs Lighthouse in an App Engine
 Flexible container.
+
+**Can I use this with Selenium / WebDriver / ChromeDriver**?
+
+Right now, Selenium opens a full instance of Chrome. In other words, it's an
+automated solution but not completely headless. However, Selenium could use
+`--headless` in the future.
+
+If you want to bleed on the edge, I recommend [Running Selenium with Headless Chrome](https://intoli.com/blog/running-selenium-with-headless-chrome/) to set things up
+yourself.
+
+Note: you may encounter bugs using [ChromeDriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver).
+At the time of writing, the latest release (2.29) only supports Chrome 58.
+Headless Chrome requires Chrome 59 or later.
 
 **How is this related to PhantomJS?**
 
@@ -349,7 +384,7 @@ can be used for automated testing in a headless environment. The main difference
 between the two is that Phantom uses an older version of WebKit as its rendering
 engine while Headless Chrome uses the latest version of Blink.
 
-At the moment, Phantom also provides a higher level API than the [DevTools Protocol][dtprotocol].
+At the moment, Phantom also provides a higher level API than the [DevTools Protocol][dtviewer].
 
 **Where do I report bugs?**
 
@@ -361,5 +396,4 @@ For bugs in the DevTools protocol, file them at [github.com/ChromeDevTools/devto
 
 {% include "comment-widget.html" %}
 
-[dtprotocol]: https://developer.chrome.com/devtools/docs/debugger-protocol
-[dtviewer]: https://chromedevtools.github.io/debugger-protocol-viewer/
+[dtviewer]: https://chromedevtools.github.io/devtools-protocol/

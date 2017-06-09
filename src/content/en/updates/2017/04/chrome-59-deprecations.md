@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the deprecations and removals in Chrome 58 to help you plan.
+description: A round up of the deprecations and removals in Chrome 59 to help you plan.
 
-{# wf_updated_on: 2017-05-01 #}
+{# wf_updated_on: 2017-06-08 #}
 {# wf_published_on: 2017-05-01 #}
 {# wf_tags: deprecations,removals,chrome59 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: A round up of the deprecations and removals in Chrome 58 to help you plan. #}
+{# wf_featured_snippet: A round up of the deprecations and removals in Chrome 59 to help you plan. #}
 
 # Deprecations and Removals in Chrome 59 {: .page-title }
 
@@ -16,6 +16,21 @@ In nearly every version of Chrome, we see a significant number of updates and
 improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 59,
 which is in beta as of April 27. This list is subject to change at any time.
+
+### Temporarily disable navigator.sendBeacon() for some blobs
+
+The `navigator.sendBeacon()` function has been available
+[since Chrome 39](https://www.chromestatus.com/feature/5517433905348608). 
+As originally implemented, the function's `data` argument could contain any
+arbitrary blob whose type is not CORS-safelisted. We believe this is a potential
+security threat, though no one has yet tried to exploit it. Because we do NOT
+have a reasonable immediate fix for it, temporarily, `sendBeacon()` can no
+longer be invokable on blobs whose type is NOT CORS-safelisted.
+
+Although this change was implemented for Chrome 60, it is has since been merged
+back to Chrome 59.
+
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=720283)
 
 ## Remove features from WebVR that are not in the revised spec
 
@@ -78,21 +93,20 @@ spec about a year ago. Consequently, these media queries are removed in Chrome
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=654861)
 
 
-## Remove remote and readonly members of MediaStreamTrack
+## Remove MediaStreamTrack.remote
 
-In Chrome 48 the `MediaStreamTrack.remote` and `MediaStreamTrack.readonly`
-properties were added in support of the
+In Chrome 48 the `MediaStreamTrack.remote` property was added in support of the
 [Media Capture and Streams API](https://w3c.github.io/mediacapture-main/)
 with the goal of allowing JavaScript to know whether a WebRTC `MediaStreamTrack`
 is from a remote source or a local one.
 
-Since that time, these properties have been removed from the spec. As of
-Chrome 59, they are no longer supported.
+Since that time, this property has been removed from the spec. As of
+Chrome 59, it is no longer supported.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=598704)
 
 
-## Remove support for ProgressEvent
+## Remove support creating ProgressEvent with document.createEvent()
 
 Earlier versions of the DOM spec required implementation of
 `document.createEvent("ProgressEvent")`. However usage was always low and

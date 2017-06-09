@@ -6,6 +6,8 @@ book_path: /web/showcase/_book.yaml
 {# wf_featured_image: /web/showcase/2016/images/housing/card.png #}
 {# wf_featured_snippet: Most Indian users reach the Internet via 2G and 3G networks, so a fast user experience is essential. To decrease load times, Housing.com added Service Workers and streamlined their site to help consumers quickly find what they’re looking for. Users can continue browsing properties and reviewing previous searches, all while offline. #}
 {# wf_tags: progressive-web-apps,offline,serviceworker,casestudy #}
+{# wf_region: asia #}
+{# wf_vertical: real-estate #}
 
 # Housing.com increases conversions and lowers bounce rate by 40% with new PWA {: .page-title }
 
@@ -83,7 +85,7 @@ Learn how to use the app shell model, service workers and more to build a Progre
 
 ### Udacity courses
 
-[Intro to Progressive Web Apps](https://udacity.com/ud811)<br>
+[Intro to Progressive Web Apps](https://www.udacity.com/course/intro-to-progressive-web-apps--ud811)<br>
 In this course you’ll get started working on your very first Progressive
 Web App - a web app that can take advantage of many of the features native
 applications have enjoyed. You’ll also get more experience in creating a
