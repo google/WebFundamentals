@@ -90,8 +90,9 @@ function generateFeeds(files, options) {
     context.baseUrl += options.section + '/';
     context.analyticsQS = context.analyticsQS.replace('root_feed', options.section + '_feed');
   }
-  context.rssPubDate = moment(lastUpdated).format('DD MMM YYYY HH:mm:ss [GMT]');
-  context.atomPubDate = moment(lastUpdated).format('YYYY-MM-DDTHH:mm:ss[Z]');
+  const now = moment.utc(Date.now());
+  context.rssPubDate = now.format('DD MMM YYYY HH:mm:ss [GMT]');
+  context.atomPubDate = now.format('YYYY-MM-DDTHH:mm:ss[Z]');
 
   var template = path.join(GLOBAL.WF.src.templates, 'atom.xml');
   var outputFile = path.join(options.outputPath, 'atom.xml');
