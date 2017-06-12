@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Latest Updates to the Credential Management API
 
-{# wf_updated_on: 2017-06-07 #}
-{# wf_published_on: 2017-06-07 #}
+{# wf_updated_on: 2017-06-12 #}
+{# wf_published_on: 2017-06-12 #}
 {# wf_tags: performance #}
 {# wf_featured_snippet: Latest updates coming to the Credential Management API in Chrome 60. Also includes an update landed in Chrome 57. #}
 
@@ -28,18 +28,16 @@ Chrome 57 introduced this important change to the
 ### Credentials can be shared from a different subdomain 
 
 Chrome can now retrieve a credential stored in a different subdomain using the
-[Credential Management API](/web/fundamentals/security/credential-management).  
-
+[Credential Management API](/web/fundamentals/security/credential-management).
 For example, if a password is stored in `login.example.com`,
 a script on `www.example.com` can show it as one of account items in account chooser dialog.
-When a user taps on the dialog, the password gets passed.
 
-Explicitly store the password using `navigator.credentials.store()`.
+You must explicitly store the password using `navigator.credentials.store()`,
+so that when a user chooses a credential by tapping on the dialog,
+the password gets passed and copied to the current origin.
+
 Once it's stored, the password is available as a credential
 in the exact same origin `www.example.com` onward.
-
-**You must explicitly store the credential to the origin.**
-Users choosing the credentials won’t copy them to the current origin.
 
 In the following screenshot, credential information stored under `login.aliexpress.com`
 is visible to `m.aliexpress.com` and available for the user to choose from:
@@ -49,7 +47,7 @@ is visible to `m.aliexpress.com` and available for the user to choose from:
        alt="Account chooser showing selected subdomain login details"/>
 </figure>
 
-<aside>
+<aside class="note">
   <strong>Coming soon:</strong>
   Sharing credentials between totally different domains is in development.
 </aside>
@@ -95,80 +93,56 @@ in a returned credential object so you have access to it as plain text.
 You can use existing methods to deliver credential information to your server:
 
     navigator.credentials.get({
-
       password: true,
-
       federated: {
-
         provider: [ 'https://accounts.google.com' ]
-
       },
-
       mediation: 'silent'
-
     }).then(c => {
-
       if (c) {
-
         let form = new FormData();
-
         form.append('email', c.id);
-
         form.append('password', c.password);
-
         form.append('csrf_token', csrf_token);
-
         return fetch('/signin', {
-
           method: 'POST',
-
           credentials: 'include',
-
           body: form
-
         });
-
       } else {
-
+        
         // Fallback to sign-in form
-
       }
-
     }).then(res => {
-
       if (res.status === 200) {
-
         return res.json();
-
       } else {
-
         throw 'Auth failed';
-
       }
-
     }).then(profile => {
-
       console.log('Auth succeeded', profile);
-
     });
 
 ### Custom fetch will be deprecated soon
 
-Now that passwords return in the `PasswordCredential` object,
-the custom `fetch()` function will stop functioning starting Chrome 62.
-All developers **MUST** make relevant changes to not use a custom `fetch()`.
+<aside class="warning">
+  <strong>Warning:</strong>
+  Now that passwords are no longer returned in the <code>PasswordCredential</code> object,
+  the custom <code>fetch()</code> function will stop working in Chrome 62.
+  Developers <stromg>must</stromg> update their code.
+</aside>
 
 To determine if you are using a custom `fetch()` function,
 check if it uses a `PasswordCredential` object or a `FederatedCredential` object
-as a value of credentials property and remove it, for example:
+as a value of `credentials` property, for example:
 
     fetch('/signin', {
-
       method: 'POST',
-
-      **credentials: c**
-
+      credentials: c
     })
+
+Using a regular `fetch()` function as shown in the previous code example,
+or using an `XMLHttpRequest` is recommended.
 
 ### `navigator.credentials.get()` now accepts an enum mediation
 
@@ -177,50 +151,26 @@ Until Chrome 60,
 with a boolean flag. For example:
 
     navigator.credentials.get({
-
       password: true,
-
       federated: {
-
         provider: [ 'https://accounts.google.com' ]
-
       },
-
       unmediated: true
-
     }).then(c => {
 
       // Sign-in
-
     });
 
-This positive flag instructs the browser to skip a user mediation.
+Setting `unmediated: true` prevents the browser from passing a credential
+without showing the account chooser and skips user mediation.
+
+The flag is now extended as mediation.
 The user mediation could happen when:
 
 * A user needs to choose an account to sign-in with.
 
 * A user wants to explicitly sign-in
 after `navigator.credentials.requireUseMediation()` call.
-
-The flag is now extended as mediation, for example:
-
-    navigator.credentials.get({
-
-      password: true,
-
-      federated: {
-
-        provider: [ 'https://accounts.google.com' ]
-
-      },
-
-      mediation: 'silent'
-
-    }).then(c => {
-
-      // Sign-in
-
-    });
 
 Choose one of the following options for the `mediation` value:
 
@@ -251,26 +201,35 @@ Choose one of the following options for the `mediation` value:
   </tr>
 </table>
 
+In this example,
+the credential is passed without showing an account choosen,
+the equivalent of the previous flag, `unmediated: true`:
+
+    navigator.credentials.get({
+      password: true,
+      federated: {
+        provider: [ 'https://accounts.google.com' ]
+      },
+      mediation: 'silent'
+    }).then(c => {
+
+      // Sign-in
+    });
+
 ### `requireUserMediation()` renamed to `preventSilentAccess()`
 
-To align nicely with the new mediation property offered in the `get()` call ,
+To align nicely with the new `mediation` property offered in the `get()` call,
 the `navigator.credentials.requireUserMediation()` method has been renamed to
-`navigator.credentials.preventSilentAccess()`. 
+`navigator.credentials.preventSilentAccess()`.
 
-See the previous table
-to understand how calling this function affects `navigator.credentials.get()`.
-
-The renamed method prevents passing a credential
-without a user mediation (showing an account chooser).
+The renamed method prevents passing a credential without showing the account chooser
+(sometimes called without user mediation).
 This is useful when a user signs out of a website or unregisters
 from one and doesn't want to get signed back in automatically at the next visit.
 
     signoutUser();
-
     if (navigator.credentials) {
-
       navigator.credentials.preventSilentAccess();
-
     }
 
 ### Create credential objects asynchronously with new method `navigator.credentials.create()`
@@ -288,18 +247,14 @@ Read on for a comparison between both the sync and async approaches.
 ##### Async approach (new)
 
     let c = await navigator.credentials.create({
-
       password: form
     });
 
 or:
 
     let c = await navigator.credentials.create({
-
       id: id,
-
       password: password
-
     });
 
 #### Creating a `FederatedCredential` object
@@ -307,27 +262,19 @@ or:
 ##### Sync approach
 
     let c = new FederatedCredential({
-
       id:       'agektmr',
-
       name:     'Eiji Kitamura',
-
       provider: 'https://accounts.google.com',
-
       iconURL:  'https://*****'
-
     });
 
 ##### Async approach (new)
 
     let c = await navigator.credentials.create({
-
       id:       'agektmr',
-
       name:     'Eiji Kitamura',
-
       provider: 'https://accounts.google.com',
-
       iconURL:  'https://*****'
-
     });
+
+{% include "comment-widget.html" %}
