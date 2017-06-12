@@ -5,11 +5,9 @@ description: TBD.
 {# wf_updated_on: 2017-06-16 #}
 {# wf_published_on: 2017-06-16 #}
 
-# Basic File Manipulation {: .page-title }
+# Media File Manipulation {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
-
-# Media File Manipulation
 
 Now that I've introduced you to applications that can be used for media file
 manipulation, I'm going to take a raw video file off a camera and transform it
@@ -223,7 +221,12 @@ other is for video.
 ### Resolution
 
 _Resolution_ is the amount of information in a single frame of video, given as
-the number of logical pixels in each dimension. [Youtube recommends](https://support.google.com/youtube/answer/6375112?hl=en) the following resolutions for video uploads, all in the 16:9 aspect ratio. There's nothing specific to Youtube about this list, which makes it a good guide for video on the web in general.
+
+the number of logical pixels in each dimension. [Youtube
+recommends](https://support.google.com/youtube/answer/6375112) the following
+resolutions for video uploads, all in the 16:9 aspect ratio. There's nothing
+specific to Youtube about this list, which makes it a good guide for video on
+the web in general.
 
 | Abbreviation | Dimensions |
 | ------------ | ---------- |
@@ -235,7 +238,8 @@ the number of logical pixels in each dimension. [Youtube recommends](https://sup
 | 360p | 640x360 |
 | 240p | 426x240 |
 
-Which one do I use? Again, the short answer is all of them. Fortunately, this is one of the simplest transformations you'll make with ffmpeg.
+Which one do I use? Again, the short answer is all of them. Fortunately, this is
+one of the simplest transformations you'll make with ffmpeg.
 
     ffmpeg -i myvideo.webm -s 1920x1080 myvideo_1980x1020.webm
 
@@ -316,4 +320,8 @@ Widevine works.)
 
 ## Conclusion
 
-This does not cover everything you could do to a media file before posting it to the web, not by a longshot. To be fair, this subject is one deserving of a website that is itself as large as [developers.google.com/web/](/web/). I'm hoping this introduction will give you enough to help you find your own aswers to questions. 
+This does not cover everything you could do to a media file before posting it to
+the web, not by a longshot. To be fair, this subject is one deserving of a
+website that is itself as large as [developers.google.com/web/](/web/). I'm
+hoping this introduction will give you enough to help you find your own aswers
+to questions.
