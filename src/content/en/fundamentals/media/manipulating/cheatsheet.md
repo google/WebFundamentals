@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A summary of commands used to convert a raw mov file to an encrypted full HD file for web playback.
 
-{# wf_updated_on: 2017-06-09 #}
+{# wf_updated_on: 2017-06-12 #}
 {# wf_published_on: 2017-06-09 #}
 
 # Media Manipulation Cheat Sheet  {: .page-title }
@@ -77,14 +77,14 @@ With Shaka Packager you can combine these.
 
 For ffmpeg, I can do this while I'm converting to mp4 or webm.
  
-    ffmpeg -i myvideo.mov -b:v 8M myvideo.mp4
-    ffmpeg -i myvideo.mov -vf setsar=1:1 -b:v 8M myvideo.webm
+    ffmpeg -i myvideo.mov -b:v 350K myvideo.mp4
+    ffmpeg -i myvideo.mov -vf setsar=1:1 -b:v 350K myvideo.webm
  
 For Shaka Packager:
  
     packager \
       input=myvideo.mp4,stream=audio,output=myvideo_audio.m4a \
-      input=myvideo.mp4,stream=video,output=myvideo_video.mp4,bandwidth=8000000
+      input=myvideo.mp4,stream=video,output=myvideo_video.mp4,bandwidth=350000
 
 ### File type
 
@@ -102,7 +102,7 @@ ratio. Fix this with a filter (`-vf setsar=1:1`).
  
     ffmpeg -i myvideo.mov -vf setsar=1:1 myvideo.webm
 
-### File size
+### Resolution
 
     ffmpeg -i myvideo.webm -s 1920x1080 myvideo_1980x1020.webm
 
@@ -116,23 +116,7 @@ To ensure that audio and video synchronize during playback insert keyframes.
 ### Codec
 
 You might have an older file whose codec you want to update. The examples below
-change codecs, but do not demux. The tables sumarize the libraries used to
-perform the codec conversions.
-
-***Video***
-
-| Extension | Codec | Library |
-| --- | ----- | --- |
-| mp4 | H264  | libx264 |
-| webm| VP9   | libvpx-vp9 |
-
-***Audio***
-
-| Extension | Codec | Library |
-| --- | ----- | --- |
-| mp4 | aac   | aac |
-| webm| vorbis | libvorbis |
-|     | opus | libopus |
+change codecs, but do not demux. 
 
 ***mp4/H.264***
  
@@ -150,6 +134,25 @@ perform the codec conversions.
 
     ffmpeg -i myvideo.webm -v:c copy -v:a libvorbis myvideo.webm
     ffmpeg -i myvideo.webm -v:c copy -v:a libopus myvideo.webm
+
+The tables sumarize the libraries used in ffmpeg to perform the codec
+conversions for webm and mp4 files. These are the formats used for DASH and HLS
+respectively.
+
+***Video***
+
+| Extension | Codec | Library |
+| --- | ----- | --- |
+| mp4 | H264  | libx264 |
+| webm| VP9   | libvpx-vp9 |
+
+***Audio***
+
+| Extension | Codec | Library |
+| --- | ----- | --- |
+| mp4 | aac   | aac |
+| webm| vorbis | libvorbis |
+|     | opus | libopus |
 
 ## Package
 
@@ -180,7 +183,7 @@ for live streaming and video on demand for the web.
 You can use the same method to create a key for both DASH and HLS. Do this using
 openssl. The following will create a key made of 16 hex values.
  
-    openssl rand 16 > media.key
+    openssl rand -out media.key 16
     
 This command creates a file with white space and new line characters, which are
 not allowed by Shaka Packager. You'll need to open the key file and manually
@@ -191,11 +194,6 @@ remove all whitespace including the final carriage return.
 For the `-key` flag use the key created earlier and stored in the media.key
 file. However, when entering it on the command line, be sure you've removed its
 whitespace. For the `-key_id` flag repeat the key value.
-
-> **Note:** Technically, the key ID is supposed to be either the first 8 OR the
-> first 16 hex digits of the key. Since packager requires the key to be 16
-> digits and does not allow a 32 digit key, both flags use the same value.
-
  
     packager \
       input=myvideo.mp4,stream=audio,output=glocka.m4a \
@@ -230,17 +228,12 @@ This command will accept a key with either 16 or 32 characters.
 
 ## Widevine Encryption
 
-Everything in this command except the name of your files and the `--content_id`
-flag should be copied exactly from the example. The `--content_id` is 16 or 32
-random hex digits. Use the keys provided here instead of your own. (This is how
-Widevine works.)
- 
     packager \
-      input=glocken.mp4,stream=video,output=enc_glocken.mp4 \
-      input=myvide.mp4,stream=audio,output=enc_myaudio.m4a \
+      input=glocken.mp4,stream=video,output=enc_video.mp4 \
+      input=glocken.mp4,stream=audio,output=enc_audio.m4a \
       --enable_widevine_encryption \
       --key_server_url "https://license.uat.widevine.com/cenc/getcontentkey/widevine_test" \
-      --content_id "fd385d9f9a14bb09" --signer "widevine_test" \
+      --content_id "16_Rand_Hex_Chrs" --signer "widevine_test" \
       --aes_signing_key "1ae8ccd0e7985cc0b6203a55855a1034afc252980e970ca90e5202689f947ab9" \
       --aes_signing_iv "d58ce954203b7c9a9a9d467f59839249"
 
@@ -264,7 +257,7 @@ Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need t
     including the final carriage return.
 
     ```
-    openssl rand 16 > media.key
+    openssl rand -out media.key 16
     ```
 
 3. Demux the audio and video, encrypt the new files, and output a media
@@ -300,7 +293,7 @@ Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need t
     including the final carriage return.
 
     ```
-    openssl rand 16 > media.key
+    openssl rand -out media.key 16
     ```
 
 3. Demux the audio and video, encrypt the new files, and output a media
@@ -357,7 +350,7 @@ ffmpeg when I need to.
     including the final carriage return.
 
     ```
-    openssl rand 16 > media.key
+    openssl rand -out media.key 16
     ```
 
 3. Create a key information file
