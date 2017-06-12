@@ -23,7 +23,7 @@ description:动画必须表现良好，否则将对用户体验产生负面影�
 
 应尽可能避免给触发布局或绘制的属性设置动画。对于大部分现代浏览器，这意味着将动画限制为 `opacity` 或 `transform`，两种都可经浏览器高度优化；动画是由 JavaScript 还是由 CSS 处理并不重要。
 
-有关单个 CSS 属性触发的动作的完整列表，请参考 [CSS 触发器](http://csstriggers.com)。您可以找到有关[在 HTML5 Rocks 上创建高性能动画] (http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)的完整指南。
+有关单个 CSS 属性触发的动作的完整列表，请参考 [CSS 触发器](http://csstriggers.com)。您可以找到有关[在 HTML5 Rocks 上创建高性能动画](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)的完整指南。
 
 ### 使用 will-change 属性
 

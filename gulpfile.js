@@ -98,6 +98,8 @@ gulp.task('clean', function() {
     'src/content/*/updates/tags/*',
     'src/data/codelabs/*/*.md',
     'src/data/codelabs/*/img/**',
+    'src/data/ilt-pwa/*/*.md',
+    'src/data/ilt-pwa/*/img/**',
     '!src/content/*/**/_generated.md'
   ];
   var opts = {dryRun: false, dot: true};

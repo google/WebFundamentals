@@ -55,14 +55,14 @@ DOM 순서를 따른다는 점을 알 수 있을 것입니다.
 언급합니다.
 
  - [1.3.1](http://webaim.org/standards/wcag/checklist#sc1.3.1){: .external }에서는
-   "의미 체계 마크업을 사용해 제목을 지정한다"고 언급
+   '의미 체계 마크업을 사용해 제목을 지정한다'고 언급
  - [2.4.1](http://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }에서는
    제목 구조를 콘텐츠 블록 우회 기법으로
    언급
  - [2.4.6](http://webaim.org/standards/wcag/checklist#sc2.4.6){: .external }에서는
    유용한 제목 작성을 위한 세부 사항 설명
  - [2.4.10](http://webaim.org/standards/wcag/checklist#sc2.4.10){: .external }에서는
-   "상황에 맞춰 적절히 제목을 사용해 콘텐츠의 개별 섹션을 지정"한다고
+   '상황에 맞춰 적절히 제목을 사용해 콘텐츠의 개별 섹션을 지정'한다고
    설명
 
 화면에 모든 제목을 표시해야 하는 건 아닙니다.

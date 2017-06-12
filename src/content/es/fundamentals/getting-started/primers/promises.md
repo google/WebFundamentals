@@ -889,15 +889,15 @@ Nota: No me convence la utilidad de `Promise.race`, preferiría tener un opuesto
 
     <p>
       <code>resolve(obj)</code><br>
-      Your promise is fulfilled with <code>obj</code>
+      Tu promesa se cumple con <code>obj</code>
     </p>
 
     <p>
       <code>reject(obj)</code><br>
-      Your promise is rejected with <code>obj</code>. For consistency and 
-      debugging (e.g., stack traces), obj should be an <code>instanceof Error</code>.
-      Any errors thrown in the constructor callback will be implicitly passed
-      to <code>reject()</code>.
+      Tu promesa se rechaza con <code>obj</code>. Para lograr consistencia y
+ depuración (p. ej., seguimiento de pila), obj debería ser un <code>instanceof Error</code>.
+      Todos los errores que aparezcan en el callback del constructor se pasarán implícitamente
+ a  <code>reject()</code>.
     </p>
   </td>
 </tr>

@@ -92,7 +92,7 @@ Berjalannya JavaScript yang berkepanjangan memblokir browser dari mengonstruksik
 
 ## Mengoptimalkan Penggunaan CSS
 
-CSS diperlukan untuk mengonstruksikan pohon render dan JavaScript akan sering kali memblokir CSS selama konstruksi awal laman. Pastikan bahwa CSS yang tidak penting harus ditandai sebagai tidak penting (mis. cetak dan permintaan media lainnya), dan bahwa jumlah CSS penting serta waktu penyerahannya sekecil mungkin.
+CSS diperlukan untuk mengonstruksikan pohon render dan JavaScript akan sering kali memblokir CSS selama konstruksi awal laman. Pastikan bahwa CSS yang tidak penting harus ditandai sebagai tidak penting (mis. cetak dan kueri media lainnya), dan bahwa jumlah CSS penting serta waktu penyerahannya sekecil mungkin.
 
 ### Menempatkan CSS di bagian awal dokumen
 

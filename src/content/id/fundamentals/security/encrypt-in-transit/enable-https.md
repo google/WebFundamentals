@@ -139,7 +139,7 @@ misalnya `/etc/ssl` (Linux dan Unix) atau di mana saja yang diperlukan oleh IIS 
 
 Mengaktifkan HTTPS di server merupakan langkah sangat penting dalam memberikan keamanan bagi laman web Anda.
 
-* Gunakan alat (bantu) Server Configuration dari Mozilla untuk mempersiapkan server bagi dukungan HTTPS.
+* Gunakan alat (bantu) Server Configuration dari Mozilla untuk menyiapkan server bagi dukungan HTTPS.
 * Ujilah situs secara teratur dengan SSL Server Test yang praktis dari Qualys dan pastikan setidaknya Anda mendapat nilai A atau A+.
 
 Di poin ini, keputusan operasi yang sangat penting harus diambil. Pilih salah satu dari berikut ini:

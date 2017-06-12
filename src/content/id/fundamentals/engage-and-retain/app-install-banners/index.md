@@ -48,7 +48,7 @@ Catatan: Spanduk Pemasangan Aplikasi Web adalah teknologi yang sedang berkembang
 
 ### Menguji spanduk pemasangan aplikasi {: #test }
 
-Setelah mempersiapkan manifes aplikasi web, Anda perlu memvalidasi
+Setelah menyiapkan manifes aplikasi web, Anda perlu memvalidasi
 apakah manifes telah didefinisikan dengan benar. Anda telah memperoleh dua pendekatan yang diinginkan. Yang satu
 adalah manual, dan satu lagi adalah otomatis.
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 서비스 워커를 기존 애플리케이션에 통합하여 애플리케이션이 오프라인에서 작동하도록 하는 방법을 배워보세요.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2016-11-09T18:31:19Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -81,7 +80,7 @@ DevTools를 열고 __Application__ 패널로 이동한 후 __Offline __확인란
 
 확인란을 클릭하면 __Network __ 패널 탭 옆에 경고 아이콘(느낌표가 있는 노란색 삼각형)이 표시됩니다. 이는 오프라인 상태임을 나타내는 기호입니다. 
 
-오프라인 상태임을 검증하기 위해 [https://google.com](https://google.com)으로 이동해 보세요. 그러면 Chrome에서 "there is no Internet connection" 오류 메시지가 표시될 것입니다. 
+오프라인 상태임을 검증하기 위해 [https://google.com](https://google.com)으로 이동해 보세요. 그러면 Chrome에서 'there is no Internet connection' 오류 메시지가 표시될 것입니다. 
 
 자, 다시 앱으로 돌아갑시다. 오프라인 상태이긴 하지만 페이지 새로고침은 계속 완벽히 이루어져야 합니다. 경적도 계속 사용할 수 있어야 합니다.
 
@@ -104,7 +103,7 @@ DevTools의 __Application __패널로 뒤로 이동하여 __Offline __확인란�
 
 이제, DevTools에서 __Application __패널의 __Offline __확인란을 선택해 다시 오프라인 모드를 시뮬레이션합니다.   __Heads up!__ 서비스 워커에 대해 잘 모를 경우에는 예상하지 못했던 동작이 나타날 것입니다.
 
-어떤 결과를 예상하세요? 오프라인 상태이고 이 앱 버전에는 서비스 워커가 없기 때문에, Chrome에서 흔히 볼 수 있는 "there is no Internet connection" 오류 메시지가 나타날 것으로 예상하실 겁니다.
+어떤 결과를 예상하세요? 오프라인 상태이고 이 앱 버전에는 서비스 워커가 없기 때문에, Chrome에서 흔히 볼 수 있는 'there is no Internet connection' 오류 메시지가 나타날 것으로 예상하실 겁니다.
 
 하지만 실제로는 완벽한 기능을 발휘하는 오프라인 앱을 볼 수 있습니다!
 
@@ -116,7 +115,7 @@ DevTools의 __Application __패널로 뒤로 이동하여 __Offline __확인란�
 
 ![837b46360756810a.png](img/837b46360756810a.png)
 
-사이트를 새로 고치기 전에 계속 DevTools를 사용하여 오프라인 모드를 시뮬레이션하는 중인지 확인하세요. 페이지를 새로 고치면 예상한 대로 "there is no Internet connection" 오류 메시지가 나타날 것입니다.
+사이트를 새로 고치기 전에 계속 DevTools를 사용하여 오프라인 모드를 시뮬레이션하는 중인지 확인하세요. 페이지를 새로 고치면 예상한 대로 'there is no Internet connection' 오류 메시지가 나타날 것입니다.
 
 ![da11a350ed38ad2e.png](img/da11a350ed38ad2e.png)
 
@@ -128,7 +127,7 @@ DevTools의 __Application __패널로 뒤로 이동하여 __Offline __확인란�
 이제는 반대로 오프라인 지원을 앱에 추가할 차례입니다. 이 작업은 다음 두 단계로 구성됩니다.
 
 1. 서비스 워커가 되는 자바스크립트 파일을 만듭니다.
-2. 이 자바스크립트 파일을 "서비스 워커"로 등록한다고 브라우저에게 알립니다.
+2. 이 자바스크립트 파일을 '서비스 워커'로 등록한다고 브라우저에게 알립니다.
 
 먼저, `sw.js`라는 빈 파일을 만들어 `/app` 폴더에 넣습니다. 
 
@@ -229,7 +228,7 @@ __Status __에는 활성화 대기 중인 새로운 서비스 워커가 있습�
 
 ![53c23650b131143a.png](img/53c23650b131143a.png)
 
-이제는 그 모든 요청으로 무엇을 할지 결정할 필요가 있습니다. 기본적으로, 아무 것도 하지 않는다면 요청이 네트워크로 전달되고 그에 대한 응답이 웹페이지로 반환됩니다.
+이제는 그 모든 요청으로 무엇을 할지 결정할 필요가 있습니다. 기본적으로, 아무것도 하지 않는다면 요청이 네트워크로 전달되고 그에 대한 응답이 웹페이지로 반환됩니다.
 
 애플리케이션이 오프라인으로 작동하도록 만들기 위해 캐시에서 요청을 가져와야 합니다(가져올 수 있는 경우).
 
@@ -259,7 +258,7 @@ __Status __에는 활성화 대기 중인 새로운 서비스 워커가 있습�
 
 #### 자세히 알아보기
 
-*  [서비스 워커 소개](/web/fundamentals/primers/service-worker/?hl=en)
+*  [서비스 워커 소개](/web/fundamentals/primers/service-worker/)
 
 
 

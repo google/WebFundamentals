@@ -14,33 +14,33 @@ DevTools의 모양을 변경하고 숨겨진 기능에
 
 
 ### TL;DR {: .hide-from-toc }
-- Main 및 Settings 메뉴를 엽니다.
+- 기본 메뉴 및 Settings 메뉴를 엽니다.
 - DevTools의 모양을 사용자설정합니다.
 - 숨겨진 기능에 액세스합니다.
 
 
-## Main Menu 열기 {:#main-menu}
+## 기본 메뉴 열기 {:#main-menu}
 
-DevTools의 **Main Menu**는 DevTools의 모양 구성,
+DevTools의 **기본 메뉴**는 DevTools의 모양 구성,
 추가 도구 액세스, Settings 열기 등을 위한 드롭다운 메뉴입니다.
 
-Main Menu를 열려면 DevTools 창의 오른쪽 위에 있는
-**Main Menu** 버튼을 클릭합니다.
+기본 메뉴를 열려면 DevTools 창의 오른쪽 위에 있는
+**기본 메뉴** 버튼을 클릭합니다.
 
-![main menu](images/main-menu.png)
+![기본 메뉴](images/main-menu.png)
 
 ## Settings 열기 {:#settings}
 
-DevTools Settings를 열려면 DevTools에 포커스를 둔 상태에서 <kbd>F1</kbd>을
-누르거나 [Main Menu를 연](#main-menu) 다음 **Settings**를 선택합니다.
+DevTools Settings를 열려면 DevTools에 포커스를 둔 상태에서 <kbd>F1</kbd> 키를
+누르거나 [기본 메뉴를 연](#main-menu) 다음 **Settings**를 선택합니다.
 
-## Command Menu 열기 {:#command-menu}
+## 명령 메뉴 열기 {:#command-menu}
 
-Command Menu를 열려면 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) 또는
-<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux)를
+명령 메뉴를 열려면 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>(Mac) 또는
+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>(Windows, Linux)를
 누릅니다.
 
-![command menu](images/command-menu.png)
+![명령 메뉴](images/command-menu.png)
 
 ## 패널 탭 순서 재정렬 {:#panel-tabs}
 
@@ -60,7 +60,7 @@ DevTools 세션 동안 유지됩니다.
 페이지 하단의 DevTools를 페이지 오른쪽에 도킹하거나 
 새 창에서 열 수 있습니다. 
 
-DevTools의 배치를 변경하려면, 우선 [Main Menu를 열고](#main-menu) 
+DevTools의 배치를 변경하려면, 우선 [기본 메뉴를 열고](#main-menu) 
 **별도 창으로 도킹 해제**
 (![도킹 해제 버튼](images/undock.png){:.inline})
  버튼, **하단에 도킹**
@@ -80,7 +80,7 @@ DevTools의 배치를 변경하려면, 우선 [Main Menu를 열고](#main-menu)
 
 ## 창 열기 및 닫기 탭 {:#drawer-tabs}
 
-<kbd>Esc</kbd>를 누르면 DevTools **창**을 열고 닫을 수 있습니다. 아래
+<kbd>Esc</kbd> 키를 누르면 DevTools **창**을 열고 닫을 수 있습니다. 아래
 스크린샷은 **Console** 창이 아래쪽에 열려 있는 상태인 **Elements** 패널의
 예를 보여줍니다.
 
@@ -115,8 +115,8 @@ Experiments를 사용 설정하려면 `chrome://flags/#enable-devtools-experimen
 ## 인쇄 미디어 에뮬레이트 {:#emulate-print-media}
 
 페이지를 인쇄 미리보기 모드로 보려면 [DevTools 
-메인 메뉴를 열고](#main-menu) **More Tools** > **Rendering Settings**를 선택한 다음 
-드롭다운 메뉴를 **print**로 설정한 상태로 **emulate media** 확인란을 선택합니다.
+기본 메뉴를 열고](#main-menu) **More Tools** > **Rendering Settings**를 선택한 다음 
+드롭다운 메뉴를 **print**로 설정한 상태로 **Emulate media** 확인란을 선택합니다.
 
 ![인쇄 미리보기 모드 사용 설정](images/emulate-print-media.png)
 

@@ -104,12 +104,12 @@ Firefox에서 `<button>` 요소를 사용 중인 경우 그라데이션을 적�
 ### user-select 비활성화
 
 UI를 만들 때 사용자가 요소와 상호작용하기를
- 원하거나, 텍스트를 길게 눌러 선택하거나 마우스를 UI 위로 드래그하는 기본 동작을
- 억제해야 하는 경우가 있습니다.
+원하거나, 텍스트를 길게 눌러 선택하거나 마우스를 UI 위로 드래그하는 기본 동작을
+억제해야 하는 경우가 있습니다.
 
 이를 위해 `user-select` CSS 속성을 사용할 수 있지만 주의할 점은,
- 사용자가 요소의 텍스트를 선택하기를 *원하는데*
- 콘텐츠에서 이 작업을 수행할 경우 사용자의 **엄청난** 분노를 유발할 수 있습니다.
+사용자가 요소의 텍스트를 선택하기를 *원하는데*
+콘텐츠에서 이 작업을 수행할 경우 사용자의 **엄청난** 분노를 유발할 수 있습니다.
 따라서 주의해서 사용하고 가급적 사용하지 마세요.
 
     user-select: none;
@@ -123,8 +123,8 @@ UI를 만들 때 사용자가 요소와 상호작용하기를
 1. 프레임 속도를 높게 유지하는 방법.
 
 이 문서에서는 모든 브라우저를 지원하는 데 필요한
- API에 대해 살펴보고 또한 이들 이벤트를 효율적으로 사용하는
- 방법에 대해 살펴보겠습니다.
+API에 대해 살펴보고 또한 이들 이벤트를 효율적으로 사용하는
+방법에 대해 살펴보겠습니다.
 
 여러분의 제스처가 어떤 동작을 수행하는지에 따라,
  사용자가 한번에 하나의 요소와 상호작용을 수행하거나 아니면 동시에
@@ -141,8 +141,8 @@ UI를 만들 때 사용자가 요소와 상호작용하기를
 ![문서 터치에 대한 예시 GIF](images/touch-document-level.gif){: .attempt-right }
 
 첫 번째 예시는 사용자가 하나의 요소와 상호작용하도록 허용합니다. 이 경우
- 동작이 요소에서 처음 시작되었다면, 모든 터치 이벤트를 이 요소에
- 지정할 수 있습니다. 예를 들어, 스와이프 가능 요소에서
+동작이 요소에서 처음 시작되었다면, 모든 터치 이벤트를 이 요소에
+지정할 수 있습니다. 예를 들어, 스와이프 가능 요소에서
  손가락을 떼더라도 여전히 이 요소를 제어할 수 있습니다.
 
 이 기능은 뛰어난 유연성을 사용자에게 제공하지만
@@ -153,8 +153,8 @@ UI를 만들 때 사용자가 요소와 상호작용하기를
 ![요소 터치에 대한 예시 GIF](images/touch-element-level.gif){: .attempt-right }
 
 그러나 사용자가 멀티터치를 사용하여 동시에
- 여러 요소와 상호작용할 것으로 예상된다면, 터치 동작을 특정 요소로
- 제한해야 합니다.
+여러 요소와 상호작용할 것으로 예상된다면, 터치 동작을 특정 요소로
+제한해야 합니다.
 
 이 기능은 사용자에게 더 많은 유연성을 제공하지만,
  UI 조작을 위한 로직이 복잡하며 사용자 오류에 대한 복원성이 떨어집니다.
@@ -169,8 +169,8 @@ UI를 만들 때 사용자가 요소와 상호작용하기를
 다른 브라우저에서는 `TouchEvents` 및 `MouseEvents`가 올바른 방법입니다.
 
 `PointerEvents`는 여러 유형의 입력(예: 마우스, 터치, 펜 이벤트)을
- 하나의 콜백 세트에 병합해주는
- 멋진 기능입니다. 수신할 이벤트는 `pointerdown`, `pointermove`,
+하나의 콜백 세트에 병합해주는
+멋진 기능입니다. 수신할 이벤트는 `pointerdown`, `pointermove`,
 `pointerup` 및 `pointercancel`입니다.
 
 다른 브라우저에서 이에 상응하는 이벤트는`touchstart`, `touchmove`,
@@ -179,7 +179,7 @@ UI를 만들 때 사용자가 요소와 상호작용하기를
 `mousemove` 및 `mouseup`을 구현해야 합니다.
 
 어떤 이벤트를 사용할지 궁금하면 
-[터치, 마우스 및 포인터 이벤트](#touch-mouse-and-pointer-events))의 표를 확인하세요.
+[터치, 마우스 및 포인터 이벤트](#touch-mouse-and-pointer-events) 표를 확인하세요.
 
 이들 이벤트를 사용하려면 DOM
 요소에서 `addEventListener()` 메서드를 호출해야 하며 이벤트 이름, 콜백 함수 및 부울 값이 필요합니다.
@@ -205,12 +205,12 @@ UI를 만들 때 사용자가 요소와 상호작용하기를
  마우스 이벤트가 트리거되기 때문입니다.
 
 TouchEvents는 터치가 발생한 위치에 상관없이 동작이 시작된 후
- 동작을 추적하며, PointerEvents는 터치가 발생한 위치에 상관없이
- 이벤트를 추적합니다. 우리는 DOM 요소에서 `setPointerCapture`를 호출합니다.
+동작을 추적하며, PointerEvents는 터치가 발생한 위치에 상관없이
+이벤트를 추적합니다. 우리는 DOM 요소에서 `setPointerCapture`를 호출합니다.
 
 마우스 이동 및 종료 이벤트의 경우, 동작 시작 메서드 *안에* 
- 이벤트 리스너를 추가하고 이 리스너를 문서에 추가합니다.
- 즉, 동작이 완료될 때까지 커서를 추적할 수 있습니다.
+이벤트 리스너를 추가하고 이 리스너를 문서에 추가합니다.
+즉, 동작이 완료될 때까지 커서를 추적할 수 있습니다.
 
 구현 단계는 다음과 같습니다.
 
@@ -235,8 +235,8 @@ TouchEvents는 터치가 발생한 위치에 상관없이 동작이 시작된 �
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 우리가 추가하는 종료 콜백은 `handleGestureEnd()`이며,
- 이 콜백은 이동 및 종료 이벤트 리스너를 문서로부터 제거하고,
- 동작이 완료되면 포인터 캡처를 해제합니다.
+이 콜백은 이동 및 종료 이벤트 리스너를 문서로부터 제거하고,
+동작이 완료되면 포인터 캡처를 해제합니다.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
@@ -294,8 +294,8 @@ DOM 요소에 있는지는 상관없음).
 #### requestAnimationFrame 사용
 
 이벤트 콜백은 메인 스레드에서 발생하므로
- 우리는 이벤트 콜백에서 코드를 최대한 적게 사용하려고 합니다.
- 그래야만 프레임 속도를 높게 유지하고 버벅거림 현상을 없앨 수 있습니다.
+우리는 이벤트 콜백에서 코드를 최대한 적게 사용하려고 합니다.
+그래야만 프레임 속도를 높게 유지하고 버벅거림 현상을 없앨 수 있습니다.
 
 `requestAnimationFrame()`을 사용하면 브라우저가 프레임을
  그리기 직전에 UI를 업데이트할 수 있는 기회가 있으며,
@@ -308,7 +308,7 @@ DOM 요소에 있는지는 상관없음).
 시작 및 이동 이벤트로부터 `x` 및 `y` 좌표를 저장하고
  이동 이벤트 콜백 내에서 애니메이션 프레임을 요청합니다.
 
-우리의 데모에서는 초기 터치 위치를 `handleGestureStart()`에 저장합니다(`initialTouchPos` 검색):
+우리의 데모에서는 초기 터치 위치를 `handleGestureStart()`에 저장합니다(`initialTouchPos` 검색).
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
@@ -324,17 +324,17 @@ DOM 요소에 있는지는 상관없음).
 
 `onAnimFrame` 값은 호출 시 UI를 이동하도록 변경하는
  함수입니다. 이 함수를 `requestAnimationFrame()`에 전달하면,
- 페이지를 업데이트하기 직전에(즉, 페이지의 변경사항을 그리기 직전에)
- 이 함수를 호출하도록 브라우저에 알립니다.
+페이지를 업데이트하기 직전에(즉, 페이지의 변경사항을 그리기 직전에)
+이 함수를 호출하도록 브라우저에 알립니다.
 
 `handleGestureMove()` 콜백에서 먼저 `rafPending`이 false인지
- 확인합니다. 이는 마지막 이동 이벤트 이후에 `onAnimFrame()`이 `requestAnimationFrame()`에 의해
- 호출되었음을 나타냅니다. 즉, 실행을 기다리는 `requestAnimationFrame()`은
+확인합니다. 이는 마지막 이동 이벤트 이후에 `onAnimFrame()`이 `requestAnimationFrame()`에 의해
+호출되었음을 나타냅니다. 즉, 실행을 기다리는 `requestAnimationFrame()`은
 어느 시점에서든 하나밖에 없습니다.
 
 `onAnimFrame()` 콜백이 실행될 때, `rafPending`을 `false`로 업데이트하기에 앞서
- 이동하려는 모든 요소에 대해 변환을 설정합니다. 이렇게 하면 그 다음 터치 이벤트가
- 새 애니메이션 프레임을 요청할 수 있습니다.
+이동하려는 모든 요소에 대해 변환을 설정합니다. 이렇게 하면 그 다음 터치 이벤트가
+새 애니메이션 프레임을 요청할 수 있습니다.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="on-anim-frame" adjust_indentation="auto" %}
@@ -344,8 +344,8 @@ DOM 요소에 있는지는 상관없음).
 
 CSS 속성 `touch-action`을 사용하여 요소의 기본 터치 동작을
  제어할 수 있습니다. 이 예시에서는 사용자 터치 시에
- 브라우저가 아무 것도 수행하지 못하도록 `touch-action: none`을 사용합니다.
- 이렇게 하면 모든 터치 이벤트를 가로챌 수 있습니다.
+브라우저가 아무것도 수행하지 못하도록 `touch-action: none`을 사용합니다.
+이렇게 하면 모든 터치 이벤트를 가로챌 수 있습니다.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="touch-action-example" adjust_indentation="auto" %}
@@ -406,8 +406,8 @@ IE10을 지원하려면 공급업체 접두사가 붙은 `PointerEvents` 버전�
 `window.PointerEvent`를 찾지만 IE10에서는
 `window.navigator.msPointerEnabled`를 찾아야 합니다.
 
-공급업체 접두사가 붙은 이벤트 이름: 'MSPointerDown', 'MSPointerUp' and
-'MSPointerMove'.
+공급업체 접두사가 붙은 이벤트 이름은 'MSPointerDown', 'MSPointerUp' 및
+'MSPointerMove'입니다.
 
 아래 예시에서는 지원 여부를 확인하고 이벤트 이름을
  전환하는 방법을 보여줍니다.
@@ -466,8 +466,8 @@ IE10을 지원하려면 공급업체 접두사가 붙은 `PointerEvents` 버전�
 </table>
 
 
-터치 이벤트에 대한 자세한 내용은 여기를 참조하세요:
-[w3 터치 이벤트](http://www.w3.org/TR/touch-events/).
+터치 이벤트에 대한 자세한 내용은
+[w3 터치 이벤트](http://www.w3.org/TR/touch-events/)를 참조하세요.
 
 ### 터치, 마우스 및 포인터 이벤트
 
@@ -592,8 +592,8 @@ IE10을 지원하려면 공급업체 접두사가 붙은 `PointerEvents` 버전�
 ### iOS에서 활성 상태 지원 활성화
 
 불행히도, iOS의 Safari에서는 `touchstart` 이벤트 리스너를
- *문서 본문*이나 각 요소에 추가하는 데 필요한 *활성* 상태를
- 기본적으로 적용하지 않습니다.
+*문서 본문*이나 각 요소에 추가하는 데 필요한 *활성* 상태를
+기본적으로 적용하지 않습니다.
 
 iOS 기기에서만 실행되도록 하기 위해서는 이 작업을 사용자 에이전트 테스트 후에 수행해야 합니다.
 

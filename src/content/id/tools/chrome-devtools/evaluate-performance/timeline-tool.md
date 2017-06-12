@@ -146,7 +146,7 @@ kanan untuk menyimulasikan animasi perekaman.
 ## Profil JavaScript {:#profile-js}
 
 Aktifkan kotak centang **JS Profile** sebelum Anda merekam untuk menangkap 
-tumpukan JavaScript dalam rekaman timeline Anda. Ketika JS profiler
+tumpukan JavaScript dalam rekaman timeline Anda. Ketika JS profiler 
 diaktifkan, bagan api akan menunjukkan semua fungsi JavaScript yang dipanggil. 
 
 ![bagan api dengan JS profile diaktifkan](imgs/js-profile.png)

@@ -76,7 +76,7 @@ DevTools 콘솔에서는 페이지에 있는 항목 상태를
 `inspect()` 함수는 DOM 요소 또는 자바스크립트 참조를
 매개변수로 사용합니다.
 DOM 요소를 제공하면
-DevTools이 Elements 패널로 이동하여 해당 요소를 표시합니다.
+DevTools가 Elements 패널로 이동하여 해당 요소를 표시합니다.
 자바스크립트 참조를 제공하면
 Profile 패널로 이동합니다.
 

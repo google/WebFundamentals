@@ -222,9 +222,7 @@ Mobile Safari では、追加のパラメータ [`webkitCompassHeading`](https:/
 
 ###  端末モーション イベントの扱い
 
-端末のモーション イベントは一定間隔で発生し、その時点での端末の回転（&deg;/sec）および加速度（m/sec<sup>2</sup>）のデータを返します。
-
-一部の端末では、重力の影響を除外するためのハードウェアを備えていません。
+端末のモーション イベントは一定間隔で発生し、その時点での端末の回転（&deg;/sec）および加速度（m/sec<sup>2</sup>）のデータを返します。一部の端末では、重力の影響を除外するためのハードウェアを備えていません。
 
 
 このイベントは、[`accelerationIncludingGravity`](#device-coordinate-frame)、[`acceleration`](#device-coordinate-frame)（重力の影響を排除）、[`rotationRate`](#rotation-data)、および `interval` の 4 つのプロパティを返します。
@@ -312,7 +310,7 @@ Mobile Safari では、追加のパラメータ [`webkitCompassHeading`](https:/
   </tbody>
 </table>
 
-###  サンプル:オブジェクトの最大加速度の計算
+###  サンプル: オブジェクトの最大加速度の計算
 
 端末モーション イベントの 1 つの用途として、オブジェクトの最大加速度を計算することができます。
 たとえば、人がジャンプする際の最大加速度を求めることも可能です。

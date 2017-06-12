@@ -9,9 +9,9 @@ description: Dokumentasi referensi untuk "Manifes short_name tidak akan terpoton
 
 ## Mengapa audit itu penting {: #why }
 
-Ketika pengguna menambahkan aplikasi web Anda ke homescreen, properti `short_name` ditampilkan
+Ketika pengguna menambahkan aplikasi web Anda ke layar beranda, properti `short_name` ditampilkan
 sebagai label di sebelah ikon aplikasi. Bila `short_name` lebih panjang
-dari 12 karakter, itu akan terpotong di homescreen.
+dari 12 karakter, itu akan terpotong di layar beranda.
 
 Perhatikan bahwa, jika tidak terdapat `short_name`, Chrome bisa kembali ke properti
 `name` jika itu cukup singkat.

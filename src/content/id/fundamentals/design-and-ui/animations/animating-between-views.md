@@ -125,9 +125,9 @@ Akhirnya, kita tambahkan deklarasi CSS untuk kelas-kelas tersebut.
       transform: translateX(0);
     }
     
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html){: target="_blank" .external }
 
-Anda bisa me-luaskan ini untuk menutupi beberapa tampilan, namun konsep dasarnya harus tetap sama; setiap tampilan tak-terlihat harus di luar layar dan ditampilkan ketika diperlukan, dan tampilan aktif pada layar harus dialihkan keluar.
+Anda bisa meluaskan ini untuk menutupi beberapa tampilan, namun konsep dasarnya harus tetap sama; setiap tampilan tak-terlihat harus di luar layar dan ditampilkan ketika diperlukan, dan tampilan aktif pada layar harus dialihkan keluar.
 
 Perhatian: Membuat hierarki semacam ini dalam lintas-browser bisa sangat menantang. Misalnya, iOS membutuhkan properti CSS tambahan, <code>-webkit-overflow-scrolling: touch</code>, untuk "mengaktifkan kembali" fling scrolling, tetapi Anda tidak bisa mengontrol sumbunya, seperti yang bisa dilakukan dengan properti overflow standar. Pastikan untuk menguji implementasinya pada berbagai perangkat!
 

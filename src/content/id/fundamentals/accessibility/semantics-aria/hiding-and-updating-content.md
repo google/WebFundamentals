@@ -22,6 +22,8 @@ DOM tidak diekspos ke API aksesibilitas.
 Pertama, apa saja yang secara eksplisit disembunyikan dari DOM juga tidak akan disertakan
 di pohon aksesibilitas. Sehingga apa saja yang memiliki gaya CSS dengan atribut `visibility:hidden` atau `display: none` atau menggunakan `hidden` HTML5 juga akan disembunyikan dari pengguna teknologi pendukung.
 
+
+
 Akan tetapi, elemen yang secara visual tidak dirender namun tidak secara eksplisit disembunyikan
 akan tetap disertakan dalam pohon aksesibilitas. Salah satu teknik umum adalah menyertakan
 "teks khusus pembaca layar" dalam elemen yang diposisikan di luar layar secara mutlak.

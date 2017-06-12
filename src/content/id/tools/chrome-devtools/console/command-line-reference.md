@@ -197,7 +197,7 @@ yang terdaftar pada objek dokumen:
 
 		getEventListeners(document);
 
-![Output penggunaan getEventListeners()](images/get-event-listeners.png)
+![Keluaran penggunaan getEventListeners()](images/get-event-listeners.png)
 
 Jika lebih dari satu listener didaftarkan pada objek yang ditetapkan,
 maka larik akan berisi anggota untuk setiap listener.
@@ -295,11 +295,11 @@ pemetaan kejadiannya:
 
 Misalnya,
 yang berikut ini menggunakan tipe kejadian "key" dari semua kejadian key yang bersangkutan
-pada bidang teks input yang saat ini dipilih dalam panel Elements.
+pada bidang teks masukan yang saat ini dipilih dalam panel Elements.
 
 		monitorEvents($0, "key");
 
-Di bawah ini adalah contoh output setelah mengetikkan sebuah karakter dalam bidang teks:
+Di bawah ini adalah contoh keluaran setelah mengetikkan sebuah karakter dalam bidang teks:
 
 ![Memantau kejadian key](images/monitor-key.png)
 
@@ -377,7 +377,7 @@ Anda juga bisa secara selektif menghentikan pemantauan kejadian tertentu pada se
 Misalnya,
 kode berikut ini memulai pemantauan semua kejadian mouse
 pada elemen yang dipilih saat ini,
-kemudian menghentikan pemantauan kejadian "mousemove" (barangkali untuk mengurangi noise di output konsol):
+kemudian menghentikan pemantauan kejadian "mousemove" (barangkali untuk mengurangi noise di keluaran konsol):
 
 		monitorEvents($0, "mouse");
 		unmonitorEvents($0, "mousemove");

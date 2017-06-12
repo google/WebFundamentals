@@ -222,7 +222,7 @@ dengan model Safari iOS.
 
     <meta name="mobile-web-app-capable" content="yes">
 
-> Anda bisa mempersiapkan aplikasi web agar menambahkan ikon pintasan aplikasi ke
+> Anda bisa menyiapkan aplikasi web agar menambahkan ikon pintasan aplikasi ke
 > layar beranda perangkat, dan agar aplikasi diluncurkan dalam "mode aplikasi" layar penuh dengan menggunakan
 > item menu "Add to Home screen" di Chrome untuk Android.
 >  <a href="https://developers.chrome.com/multidevice/android/installtohomescreen">Google Chrome</a>

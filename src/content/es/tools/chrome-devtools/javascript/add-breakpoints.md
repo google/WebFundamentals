@@ -47,8 +47,8 @@ Para establecer un punto de interrupción en una línea de código específica, 
 , y luego selecciona la secuencia de comandos del panel **File Navigator** que se encuentra a la
 izquierda. Si no puedes ver el panel **File Navigator**, presiona el botón para **activar o desactivar File
 Navigator** 
-(![botón para mostrar u ocultar File Navigator][fn]{:.devtools-inline})
-.
+(![botón para mostrar u ocultar File Navigator][fn]{:.devtools-inline}).
+
 
 **Sugerencia**: Si trabajas con código reducido, presiona el botón **Pretty-Print**
  
@@ -161,31 +161,31 @@ increment.addEventListener('click', function() {
 </script>
 {% endframebox %}
 
-Para **agregar el punto de interrupción de cambio de DOM**:
+Para**agregar el punto de interrupción de cambio de DOM**:
 
 1. Haz clic con el botón secundario en **Count** y selecciona **Inspect**. DevTools destaca
-el nodo azul. Debe ser un nodo `<p>` . Puedes verificar que estás en el
+el nodo azul. Debe ser un nodo `<p>`. Puedes verificar que estás en el
    nodo correcto al hacer doble clic en él, lo cual expande el nodo de manera tal que puedes
    ver su contenido.
 
 1. Haz clic con el botón secundario en el nodo destacado y selecciona  **Break on** >
    **Subtree Modifications**. El ícono azul ![ícono del punto de interrupción DOM
-][ícono]{:.devtools-inline} que se encuentra a la izquierda del nodo indica que se estableció un punto de interrupción DOM
+][icon]{:.devtools-inline} que se encuentra a la izquierda del nodo indica que se estableció un punto de interrupción DOM
     en el nodo. Es un poco difícil ver el ícono mientras
-el nodo está destacado, ya que es un ícono azul contra un fondo azul
-.
+el nodo está destacado, ya que es un ícono azul contra un fondo azul.
+
 
 1. De regreso a la demostración, haz clic en **Increment**. DevTools interrumpe la página, va a
 **Sources** y destaca la línea de código en la secuencia de comandos que está 
 causando el cambio.
 
 1. Presiona **Resume script execution** ![botón para reanudar la ejecución de la secuencia de
-   comandos][reanudar]{:.devtools-inline} dos veces para reanudar
+   comandos][resume]{:.devtools-inline} dos veces para reanudar
    la ejecución de la secuencia de comandos. Debes presionarlo dos veces porque el punto de interrupción
  se ejecuta una vez que el texto del conteo se borra, y luego una vez más cuando el
  texto se actualiza con el nuevo conteo.
 
-[reanudar]: /web/tools/chrome-devtools/images/resume-script-execution.png
+[resume]: /web/tools/chrome-devtools/images/resume-script-execution.png
 
 Para interrumpir cuando cambia un atributo del nodo seleccionado, o cuando se borra el 
 nodo seleccionado, simplemente selecciona **Attributes modifications** o
@@ -198,7 +198,7 @@ Para **desactivar temporalmente el punto de interrupción**:
 1. En DevTools, regresa a **Elements**.
 1. Haz clic en **DOM Breakpoints**. Si tu ventana de DevTools es pequeña, es posible que **DOM
  Breakpoints** esté oculto detrás del menú ampliado ![menú
- ampliado][ampliado]{:.devtools-inline}. Debes ver una casilla de verificación con el texto `p`
+ ampliado][overflow]{:.devtools-inline}. Debes ver una casilla de verificación con el texto `p`
  junto a ella, y **Subtree Modified** debajo de `p`.
 1. Inhabilita la casilla de verificación junto a **Subtree Modified**.
 1. Intenta hacer clic en **Increment** otra vez. El contador se incrementa y DevTools ya no
@@ -213,13 +213,13 @@ Para **borrar el punto de interrupción**:
 1. Haz clic con el botón secundario en el punto de interrupción que quieres borrar y selecciona
  **Remove breakpoint**.
 
-[ícono]: imgs/dom-breakpoint-icon.png
-[ampliado]: imgs/overflow.png
+[icon]: imgs/dom-breakpoint-icon.png
+[overflow]: imgs/overflow.png
 
 ### Más información sobre los tipos de puntos de interrupción de cambios de DOM
 
-Aquí podrás encontrar información detallada sobre cómo y cuando exactamente se ejecuta cada tipo de punto de interrupción de cambio de DOM
-:
+Aquí podrás encontrar información detallada sobre cómo y cuando exactamente se ejecuta cada tipo de punto de interrupción de cambio de DOM:
+
 
 * **Subtree modifications**: se ejecuta cuando se borra o se agrega un campo secundario del nodo
  actualmente seleccionado o se modifican los contenidos de dicho campo. No
@@ -302,9 +302,9 @@ para aprender a corregir el error mediante un punto de interrupción de excepci�
 1. Presiona <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) o
    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows, Linux) para
    abrir DevTools.
-1. Haz clic en la pestaña **Sources** .
+1. Haz clic en la pestaña **Sources**.
 1. Haz clic en **Pause on exceptions** ![Pausar en
-   excepciones][pausar en excepción]{:.devtools-inline}.
+   excepciones][pause on exception]{:.devtools-inline}.
 1. Haz clic en **Print Random Number** otra vez para activar el punto de interrupción.
    DevTools debe pausarse en la línea de código que contiene
    `nodes.number.textContent = Math.random();`. Ahora conoces todo lo que
@@ -325,7 +325,7 @@ para aprender a corregir el error mediante un punto de interrupción de excepci�
    el error. DevTools no debe pausarse más luego de hacer clic en el botón, lo que
    significa que la secuencia de comandos ya no produce ninguna excepción.
 
-[pausar en excepción]: /web/tools/chrome-devtools/images/pause-on-exception.png
+[pause on exception]: /web/tools/chrome-devtools/images/pause-on-exception.png
 
 
 {# wf_devsite_translation #}

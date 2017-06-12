@@ -221,7 +221,7 @@ If there was an issue with the decryption of the payload, you'll see an error
 similar to the one displayed above. (Notice the `AES-GCM decryption failed`
 message in the details column.)
 
-There are a few tools which may help debug encryption if this if your issue:
+There are a few tools which may help debug encryption if this is your issue:
 
 * [Push Encryption Verifier tool by Peter
   Beverloo](https://tests.peter.sh/push-encryption-verifier/).

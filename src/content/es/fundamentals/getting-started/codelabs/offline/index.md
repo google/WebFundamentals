@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Obtén más información sobre cómo integrar un service worker en una app existente para hacer que la app funcione sin conexión.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2016-11-09T18:31:19Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -235,12 +234,12 @@ Para que tu app funcione sin conexión, tienes que tomar la solicitud de la cach
 
 Actualiza tu receptor de eventos de extracción para que coincidan con el siguiente código.
 
-El método`event.respondWith()` le dice al navegador que evalúe el resultado del evento en el futuro. `caches.match(event.request)` toma la solicitud web actual que activó el evento de extracción y busca en la caché un recurso que coincida. La coincidencia se realiza observando la string de la URL. El método `match` muestra una promesa que se resuelve incluso si no se encuentra el archivo en la caché. Esto significa que tienes opción de qué hacer. En tu sencillo caso, cuando no se encuentra el archivo, solo debes `fetch` el archivo en la red y devolverlo al navegador.
+El método `event.respondWith()` le dice al navegador que evalúe el resultado del evento en el futuro. `caches.match(event.request)` toma la solicitud web actual que activó el evento de extracción y busca en la caché un recurso que coincida. La coincidencia se realiza observando la string de la URL. El método `match` muestra una promesa que se resuelve incluso si no se encuentra el archivo en la caché. Esto significa que tienes opción de qué hacer. En tu sencillo caso, cuando no se encuentra el archivo, solo debes `fetch` el archivo en la red y devolverlo al navegador.
 
 Este es el caso más simple, existen muchos otros panoramas de almacenamiento en caché. Por ejemplo, podrías almacenar gradualmente en caché todas las respuestas a las solicitudes que anteriormente no se almacenaron en caché, de modo que en el futuro se muestren todas desde este. 
 
 
-## Felicitaciones.
+## ¡Felicitaciones!
 
 
 
@@ -259,7 +258,7 @@ Ahora tienes soporte sin conexión. Vuelve a cargar tu página mientras estés e
 
 #### Más información
 
-*  [Introducción al service worker](/web/fundamentals/primers/service-worker/?hl=en)
+*  [Introducción al service worker](/web/fundamentals/primers/service-worker/)
 
 
 

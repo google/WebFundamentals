@@ -95,11 +95,11 @@ description: 웹 디자인과 UI는 몇몇 넓은 영역을 포괄합니다. 과
 
 ### Udacity 교육과정
 
-[반응형 웹 디자인 기본 사항](https://udacity.com/ud893)<br>
+[반응형 웹 디자인 기본 사항](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)<br>
 이 과정에서는 반응형 웹 디자인의 기본 사항을 배웁니다.
 과정을 마치면 전화, 태블릿, 데스크톱 또는 이와 유사한 어떤 기기에서든 올바로 작동하는 반응형 웹페이지를 스스로 만들 수 있을 것입니다.
 
-[반응형 이미지](https://udacity.com/ud882)<br>
+[반응형 이미지](https://www.udacity.com/course/responsive-images--ud882)<br>
 이 과정에서는 웹페이지에서 이미지 작업을 하는 방법을 배웁니다.
 이미지를 돋보이게 하고 기기에 빠르게 로드하는 방법을 터득할 수 있을 것입니다.
 

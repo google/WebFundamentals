@@ -2,6 +2,7 @@
 # ATTENTION - This file is auto-generated, changes must be made to the template!
 project_path: /web/_project.yaml
 book_path: /web/{{section}}/_book.yaml
+{{#if title}}title: {{title}}{{/if}}
 landing_page:
 
   header:

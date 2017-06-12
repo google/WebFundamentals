@@ -254,8 +254,8 @@ Para grabar una línea de tiempo de asignación, abre DevTools, ve al panel **Pr
 activa el botón de selección **Record Allocation Timeline**, presiona el botón **Start**,
 realiza la acción que sospechas que genera la fuga de memoria y
 luego presiona el botón **stop recording** 
-(![botón stop recording][sr]{:.inline})
-. 
+(![botón stop recording][sr]{:.inline}).
+ 
 
 A medida que realices la grabación, observa si aparecen barras azules en la línea del tiempo
 de asignación, como se muestra en la siguiente captura de pantalla. 

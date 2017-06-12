@@ -50,7 +50,7 @@ figure {
 <div class="figures">
   <figure>
     <img src="images/how_it_works_1.png">
-    <figcaption>1. "Checkout"을 누릅니다.</figcaption>
+    <figcaption>1. 'Checkout'을 누릅니다.</figcaption>
   </figure>
   <figure>
     <img src="images/how_it_works_2.png">
@@ -58,7 +58,7 @@ figure {
   </figure>
   <figure>
     <img src="images/how_it_works_3.png">
-    <figcaption>3. 결제 방법 등을 선택하고 "Pay"를 누릅니다.</figcaption>
+    <figcaption>3. 결제 방법 등을 선택하고 'Pay'를 누릅니다.</figcaption>
   </figure>
   <figure>
     <img src="images/how_it_works_4.png">
@@ -144,7 +144,7 @@ Android Pay API가 암호화된 네트워크 토큰 번들을 반환하도록 �
 * `data`: 아직 표준화되지 않은 Android Pay 관련 값입니다.
     * `merchantId`: [Android Pay에 등록](https://androidpay.developers.google.com/signup)하여 얻은 Android Pay Merchant ID입니다.
     * `environment:'TEST'`: Android Pay로 테스트 중인 경우 이 매개변수를 추가하세요. 이때 생성되는 게이트웨이 토큰은 무효 토큰입니다.
-    * `allowedCardNetworks`: 유효한 Android Pay 응답을 구성하는 일련의 신용카드 네트워크를 제공합니다. "AMEX", "DISCOVER", "MASTERCARD", "VISA"를 허용합니다.
+    * `allowedCardNetworks`: 유효한 Android Pay 응답을 구성하는 일련의 신용카드 네트워크를 제공합니다. 'AMEX', 'DISCOVER', 'MASTERCARD', 'VISA'를 허용합니다.
     * `paymentMethodTokenizationParameters`:
         * `tokenizationType`: 'GATEWAY_TOKEN': 게이트웨이 토큰 접근방식을 따르고 있음을 나타냅니다.
         * `parameters`: 결제 게이트웨이 관련 매개변수입니다. 관련 결제 게이트웨이 문서를 참조하세요.

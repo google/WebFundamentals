@@ -65,7 +65,7 @@ compartir para los usuarios, ya que suministrar el título, una descripción y u
 atractiva. De esta manera, no tienen que perder tiempo valioso (o caracteres valiosos)
 describiendo el enlace.
 
-## Usa schema.org + microdatos para ofrecer fragmentos enriquecidos en Google+.
+## Usa schema.org + microdatos para ofrecer fragmentos enriquecidos en Google+
 
 Los rastreadores usan diversos métodos para analizar una página y comprender su contenido. Al usar
 [microdatos](http://www.w3.org/TR/microdata/){: .external }, y vocabulario
@@ -81,17 +81,17 @@ A continuación, te mostramos un ejemplo:
 Mientras la mayoría de los metadatos están incorporados en la sección de encabezado de una página web, los microdatos
 viven donde existe el contexto.
 
-### Agrega `itemscope` para definir el alcance de los microdatos.
+### Agrega `itemscope` para definir el alcance de los microdatos
 Al agregar `itemscope`, puedes especificar la etiqueta como un bloque de contenidos sobre un
 elemento en particular.
 
-### Agrega `itemtype` para definir el tipo de tu sitio web.
+### Agrega `itemtype` para definir el tipo de tu sitio web
 Puedes especificar el tipo de elemento utilizando el atributo `itemtype` con el
 `itemscope`. El valor de un `itemtype` se puede determinar según el tipo
 de contenido de tu página web. Debes poder encontrar uno que sea relevante
 en [esta página](https://schema.org/docs/full.html).
 
-### Agregar `itemprop` para describir cada elemento utilizando vocabulario schema.org.
+### Agregar `itemprop` para describir cada elemento utilizando vocabulario schema.org
 `itemprop` define las propiedades para `itemtype` en el alcance. Para suministrar
 metadatos a sitios sociales, los valores `itemprop` típicos son `name`, `description`,
  y por último `image`.
@@ -111,7 +111,7 @@ Para validar fragmentos enriquecidos en Google+, puedes usar las siguientes herr
 
 <img src="imgs/webmaster-tools.png" srcset="imgs/webmaster-tools.png 1x, imgs/webmaster-tools-2x.png 2x" />
 
-## Usa Open Graph Protocol (OGP) para suministrar fragmentos enriquecidos en Facebook.
+## Usa Open Graph Protocol (OGP) para suministrar fragmentos enriquecidos en Facebook
 
 [Open Graph Protocol (OGP)](http://ogp.me/){: .external } suministra a Facebook los
 metadatos necesarios para permitir que las páginas web tengan la misma funcionalidad que otros
@@ -124,7 +124,7 @@ objetos de Facebook.
 Cuando se incluyen en la sección de encabezado de tu página, estos metadatos proveen información enriquecida de
 fragmentos cuando se comparte la página.
 
-### Usa etiquetas `meta` `og:` con espacio de nombres para describir los metadatos.
+### Usa etiquetas `meta` `og:` con espacio de nombres para describir los metadatos
 Una etiqueta `meta` incluye un atributo de `property` y un atributo `content`.
 Las propiedades y los contenidos pueden tomar los siguientes valores:
 
@@ -169,7 +169,7 @@ Open Graph Protocol.
 
 * [ogp.me](http://ogp.me/){: .external }
 
-### Valida los fragmentos enriquecidos.
+### Valida los fragmentos enriquecidos
 Para validar tu marcado en Facebook, puedes usar las siguientes herramientas:
 
 * [Depurador](https://developers.facebook.com/tools/debug/){: .external }

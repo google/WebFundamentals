@@ -46,7 +46,7 @@ Guias relacionados:
 Quando seu manifesto estiver configurado, você pode usar o painel **Manifest** do painel
 **Application** para inspecioná-lo.
 
-![painel manifest][manifest]
+![manifest pane][manifest]
 
 * Para ver o código do manifesto, clique no link abaixo do rótulo **App Manifest**
   (`https://airhorner.com/manifest.json` na imagem acima).
@@ -56,7 +56,7 @@ Quando seu manifesto estiver configurado, você pode usar o painel **Manifest** 
   código do manifesto em uma vista mais simplista.
 * A seção **Icons** exibe todos os ícones especificados.
 
-[manifesto]: images/manifest.png
+[manifest]: images/manifest.png
 
 ### Simule eventos de adição à tela inicial {:#add-to-homescreen}
 
@@ -89,8 +89,8 @@ conectar um dispositivo móvel real ao DevTools por [depuração remota][remote
 debugging] e, em seguida, clicar no botão **Add to Homescreen** (no DevTools)
 para acionar a mensagem "adicionar à tela inicial" no dispositivo móvel conectado.
 
-[prateleira]: images/io.png
-[depuração remota]: /web/tools/chrome-devtools/debug/remote-debugging/remote-debugging
+[shelf]: images/io.png
+[remote debugging]: /web/tools/chrome-devtools/debug/remote-debugging/remote-debugging
 
 ## Service workers {:#service-workers}
 
@@ -155,8 +155,8 @@ exibido.
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[convite]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
-[erros]: images/sw-error.png
+[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[errors]: images/sw-error.png
 
 ## Caches do service worker {:#caches}
 

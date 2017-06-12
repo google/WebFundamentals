@@ -95,11 +95,11 @@ Criar um site totalmente responsivo não é tão difícil quanto você imagina e
 
 ### Cursos da Udacity
 
-[Fundamentos de um Web design responsivo](https://udacity.com/ud893)<br>
+[Fundamentos de um Web design responsivo](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)<br>
 Neste curso, você aprenderá os fundamentos do Web design responsivo.
 Você criará sua própria página da Web responsiva que funcionará bem em qualquer dispositivo &mdash; celulares, tablets, computadores ou qualquer outro aparelho.
 
-[Imagens responsivas](https://udacity.com/ud882)<br>
+[Imagens responsivas](https://www.udacity.com/course/responsive-images--ud882)<br>
 Neste curso, você aprenderá a trabalhar com imagens na Web moderna, de forma que
 suas imagens fiquem bonitas e sejam carregadas rapidamente em qualquer dispositivo.
 

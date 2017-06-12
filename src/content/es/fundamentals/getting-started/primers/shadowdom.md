@@ -293,7 +293,7 @@ en las DevTools y lo que se representa en la página.
 Shadow DOM compone distintos DOM trees usando el elemento `<slot>`.
 **Los slots son marcadores de posición dentro de tu componente, que los usuarios _pueden_ rellenar con su
 propio lenguaje de marcado**. Al definir uno o más slots, invitas al lenguaje de marcado externo a representar
-en el shadow DOM de tu componente. Esencialmente, estás diciendo _»Representa el lenguaje de marcado
+en el shadow DOM de tu componente. Esencialmente, estás diciendo _«Representa el lenguaje de marcado
 del usuario aquí»_.
 
 Nota: Los slots son una forma de crear una "API declarativa" para un componente web. Se
@@ -1045,9 +1045,9 @@ los estilos heredable a su valor inicial cuando cruzan el límite de shadow.
   </style>
 
   <div id="initialdemo">
-    <p>Estoy afuera del elemento (grande/blanco)</p>
-    <my-element>El contenido del light DOM también se ve afectado.</my-element>
-    <p>Estoy afuera del elemento (grande/blanco)</p>
+    <p>I'm outside the element (big/white)</p>
+    <my-element>Light DOM content is also affected.</my-element>
+    <p>I'm outside the element (big/white)</p>
   </div>
 </div>
 
@@ -1253,7 +1253,7 @@ Consulta la sección sobre [shadow root cerradas](#closed).
 [ce_article]: (/web/fundamentals/getting-started/primers/customelements)
 [sd_spec]: http://w3c.github.io/webcomponents/spec/shadow/
 [sd_spec_whatwg]: https://dom.spec.whatwg.org/#shadow-trees
-[diferencias]: http://hayato.io/2016/shadowdomv1/
+[differences]: http://hayato.io/2016/shadowdomv1/
 [css_props]: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
 
 

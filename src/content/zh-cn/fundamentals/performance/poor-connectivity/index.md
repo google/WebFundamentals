@@ -23,7 +23,7 @@ description:很重要的一点是，您需要了解应用或网站在连接不�
 
 ####  浏览器工具
 
-[Chrome DevTools](/web/tools/chrome-devtools/network-performance/network-conditions) 让您能使用 Chrome DevTools Network 面板的预设或自定义设置，以多种上传/下载速度和 [往返时间](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/)测试网站：
+[Chrome DevTools](/web/tools/chrome-devtools/network-performance/network-conditions) 让您能使用 Chrome DevTools Network 面板的预设或自定义设置，以多种上传/下载速度和[往返时间](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/)测试网站：
 
 ![Chrome DevTools 节流](images/chrome-devtools-throttling.png)
 

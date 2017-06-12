@@ -32,7 +32,7 @@ description: 不要なリソースのダウンロードの回避に続く、ペ�
     # Below is a secret message, which consists of a set of headers in
     # key-value format followed by a newline and the encrypted message.
 
-08/25/16
+    08/25/16
     AAAZZBBBBEEEMMM EEETTTAAA
 
 1. メッセージには任意の注釈が含まれていることがあり、接頭辞「#」で示されています。注釈はメッセージの意味やその他の振る舞いに一切影響しません。

@@ -219,7 +219,7 @@ API를 사용하여 마이크에 직접 액세스할 수 있습니다. `getUserM
 제공하려면 마이크 액세스 권한을
 요청해야 합니다.
 
-일부 브라우저에서 Permission API을 사용해서 이 문제를 해결할 수 있습니다. `navigator.permission` API를 사용하면
+일부 브라우저에서 Permission API를 사용해서 이 문제를 해결할 수 있습니다. `navigator.permission` API를 사용하면
 메시지를 다시 표시하지 않고도
 특정 API에 액세스하는 기능의 상태를 쿼리할 수 있습니다.
 

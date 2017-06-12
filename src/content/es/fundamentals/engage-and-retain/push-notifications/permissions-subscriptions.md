@@ -22,7 +22,8 @@ mensajes de notificaciones push y se los mostrará al usuario.
 
 Siempre verifica que exista un permiso cuando se cargue la página. Si ya se otorgó el
 permiso, puedes comenzar a enviar notificaciones
-de inmediato. De cualquier manera, usa esta información para fijar la configuración del estado de permiso. A continuación, se muestra un ejemplo de esto. Para ser claros, aún no hemos realizado
+de inmediato. De cualquier manera, usa esta información para fijar la configuración del estado de permiso.
+ A continuación, se muestra un ejemplo de esto. Para ser claros, aún no hemos realizado
 solicitudes.
 
 Nota: Para ser claros, este ejemplo excluye un número de comprobaciones de funciones

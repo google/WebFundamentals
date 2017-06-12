@@ -1,399 +1,438 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Progressive Web Apps 是结合了 web 和 原生应用中最好功能的一种体验。在这个指南的引导下，你将会建立你自己的 Progressive Web Apps。你也会学到建立 Progressive Web App 的基础，包括 app shell 模式, 如何使用 service worker 来缓存 App Shell 和你应用中的关键数据等等。
+description:在此代码实验室中，您将构建一个 Progressive Web App，该应用即使在不可靠网络上也能快速加载、拥有桌面图标，并且可采用顶层全屏体验的方式加载。
 
-{# wf_auto_generated #}
-{# wf_updated_on: 2016-09-08 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_updated_on:2017-01-05T16:32:36Z #}
+{# wf_published_on:2016-01-01 #}
 
-# 你的首个 Progressive Web App {: .page-title }
+
+# 您的第一个 Progressive Web App {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-[Progressive Web Apps](/web/progressive-web-apps) 是结合了 web 和 原生应用中最好功能的一种体验。对于首次访问的用户它是非常有利的, 用户可以直接在浏览器中进行访问，不需要安装应用。随着时间的推移当用户渐渐地和应用建立了联系，它将变得越来越强大。它能够快速地加载，即使在比较糟糕的网络环境下，能够推送相关消息, 也可以像原生应用那样添加至主屏，能够有全屏浏览的体验。
-
-### 什么是 Progressive Web App?
-
-Progressive Web Apps 是:
-
-* __渐进增强__ - 能够让每一位用户使用，无论用户使用什么浏览器，因为它是始终以渐进增强为原则。
-* __响应式用户界面__ - 适应任何环境：桌面电脑，智能手机，笔记本电脑，或者其他设备。
-* __不依赖网络连接__ - 通过 service workers 可以在离线或者网速极差的环境下工作。
-* __类原生应用__ - 有像原生应用般的交互和导航给用户原生应用般的体验，因为它是建立在 app shell model 上的。
-* __持续更新__ - 受益于 service worker 的更新进程，应用能够始终保持更新。
-* __安全__ - 通过 HTTPS 来提供服务来防止网络窥探，保证内容不被篡改。
-* __可发现__ - 得益于 W3C manifests 元数据和 service worker 的登记，让搜索引擎能够找到 web 应用。
-* __再次访问__ - 通过消息推送等特性让用户再次访问变得容易。
-* __可安装__ - 允许用户保留对他们有用的应用在主屏幕上，不需要通过应用商店。
-* __可连接性__ - 通过 URL 可以轻松分享应用，不用复杂的安装即可运行。
-
-这引导指南将会引导你完成你自己的 Progressive Web App，包括设计时需要考虑的因素，也包括实现细节，以确保你的应用程序符合 Progressive Web App 的关键原则。
-
-### 我们将要做什么？
-
-### 你将会学到
-
-* 如何使用 "app shell" 的方法来设计和构建应用程序。
-* 如何让你的应用程序能够离线工作。
-* 如何存储数据以在离线时使用。
 
 
-### 你需要
+## 简介
 
-* Chrome 52 或以上
-* [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb) 或其他的网络服务器。
+
+
+
+[Progressive Web App](/web/progressive-web-apps) 带来的体验将网络之长与应用之长相结合。用户在浏览器标签中第一次访问时就能体会到它们的好处，因为不需要进行任何安装。在用户随着时间的推移增进与应用的关系后，其功能会变得越来越强大。它即使在不可靠网络上也能快速加载、能够发送相关推送通知、具有桌面图标，并且可采用顶层全屏体验的方式加载。
+
+### 什么是 Progressive Web App？
+
+Progressive Web App 具备以下特点：
+
+* __渐进式__ - 适用于选用任何浏览器的所有用户，因为它是以渐进式增强作为核心宗旨来开发的。
+* __自适应__ - 适合任何机型：桌面设备、移动设备、平板电脑或任何未来设备。
+* __连接无关性__ - 能够借助于服务工作线程在离线或低质量网络状况下工作。
+* __类似应用__ - 由于是在 App Shell 模型基础上开发，因此具有应用风格的交互和导航，给用户以应用般的熟悉感。
+* __持续更新__ - 在服务工作线程更新进程的作用下时刻保持最新状态。
+* __安全__ - 通过 HTTPS 提供，以防止窥探和确保内容不被篡改。
+* __可发现__ - W3C 清单和服务工作线程注册作用域能够让搜索引擎找到它们，从而将其识别为“应用”。
+* __可再互动__ - 通过推送通知之类的功能简化了再互动。
+* __可安装__ - 用户可免去使用应用商店的麻烦，直接将对其最有用的应用“保留”在主屏幕上。
+* __可链接__ - 可通过网址轻松分享，无需复杂的安装。
+
+此代码实验室将引导您逐步创建自己的 Progressive Web App，包括设计考虑事项，以及旨在确保您的应用符合 Progressive Web App 关键原则的实现细节。
+
+### 我们将要开发什么应用？
+
+在此代码实验室中，您将会利用 Progressive Web App 技术来开发一款天气网络应用。
+我们来看看 Progressive Web App 的属性：
+
+* **渐进式** - 我们将自始至终使用渐进式增强。
+* **自适应** - 我们将确保它适合任何机型。
+* **连接**无关性 - 我们将通过服务工作线程缓存 App Shell。
+* **类似应用** - 我们将采用应用风格的交互来添加城市和刷新数据。
+* **持续更新** - 我们将通过服务工作线程缓存最新数据。
+* **安全** - 我们将把应用部署到支持 HTTPS 的主机。
+* **可发现和可安装** - 我们将提供一个清单，以便搜索引擎找到我们的应用。
+* **可链接** - 它就是网络！
+
+### 您将学习的内容
+
+* 如何利用“App Shell”方法设计和构建应用
+* 如何让您的应用能够离线工作
+* 如何存储供稍后离线使用的数据
+
+### 您需具备的条件
+
+* Chrome 52 或更高版本
+*  [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)，或者使用您自己选择的网络服务器
 * 示例代码
-* 代码编辑器
-* HTML，CSS 和 JavaScript 的基本知识
+* 文本编辑器
+* 对 HTML、CSS、JavaScript 和 Chrome DevTools 的基本了解
 
-这份引导指南的重点是 Progressive Web Apps。其中有些概念的只是简单的解释
-而有些则是只提供示例代码（例如 CSS 和其他不相关的 Javascipt ），你只需复制和粘贴即可。
+此代码实验室重点介绍 Progressive Web App。这里不详细介绍无关的概念和代码块，也不提供这些内容供您简单复制和粘贴。
+
 
 ## 设置
 
-### 下载示例代码
 
-你可以[下载本 progressive web app 引导指南需要的所有代码](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)。
 
-将下载好的zip文件进行解压缩。这将会解压缩一个名为(`your-first-pwapp-master`)的根文件夹。这文件夹包含了这指南你所需要的资源。
 
-名为 `step-NN` 的文件夹则包含了这指南每个步骤的完整的代码。你可以把他当成参考。
+### 下载代码
 
-### 安装及校验网络服务器
+点击以下按钮可下载此代码实验室的全部代码：
 
-你可以选择其他的网络服务器，但在这个指南我们将会使用Web Server for Chrome。如果你还没有安装，你可以到 Chrome 网上应用店下载。
+[链接](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 
-[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
+解压下载的 zip 文件。这将解压根文件夹 (`your-first-pwapp-master`)，其中包含此代码实验室的每个步骤的对应文件夹，以及您需要的所有资源。
 
-安装完毕后，从书签栏中选择Apps的捷径:
+`step-NN` 文件夹包含此代码实验室的每个步骤所需的结束状态。这些文件夹供您参考。我们将在一个名为 `work` 的目录中完成所有的编码工作。
+
+### 安装并验证网络服务器
+
+尽管您可以使用自己的网络服务器，但此代码实验室的设计只有与 Chrome Web Server 结合使用时才能正常运行。如果您尚未安装此应用，可以从 Chrome 网上应用店安装。
+
+[链接](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
+
+安装 Web Server for Chrome 后，点击书签栏上的 Apps 快捷方式： 
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
-接下来点击Web Server的图标
+在随后出现的窗口中，点击 Web Server 图标： 
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
-你将会看到以下的窗口，这让你配置你的本地网络服务器:
+接下来您将看到此对话框，您可以在其中配置本地网络服务器：
 
 ![433870360ad308d4.png](img/433870360ad308d4.png)
 
-点击 __choose folder__ 的按钮，然后选择名为 `work` 的文件夹。这会把目录和文件都以HTTP的方式展示出来。URL地址可以在窗口里的 __Web Server URL(s)__ 找到。
+点击 __choose folder__ 按钮，然后选择 `work` 文件夹。这样您就可以通过网络服务器对话框（在 __Web Server URL(s)__ 部分）中突出显示的网址为正在进行的工作提供支持。
 
-在选项中，选择"Automatically show index.html" 的选择框:
+在 Options 下，选中“Automatically show index.html”旁边的框，如下所示：
 
 ![39b4e0371e9703e6.png](img/39b4e0371e9703e6.png)
 
-然后在 "Web Server: STARTED" 的按钮拉去左边，在拉去右边，以将本地网络服务器关闭并重启。
+然后将标记为“Web Server:STARTED”的切换按钮向左滑动，然后向右滑动，停止并重启服务器。
 
 ![daefd30e8a290df5.png](img/daefd30e8a290df5.png)
 
-现在你可以使用游览器来访问那个文件夹(点击窗口内的Web Server URL下的链接即可)。你将会看到以下的画面:
+现在，在您的网络浏览器中访问您的工作网站（通过点击突出显示的 Web Server URL），然后您会看到如下页面：
 
 ![aa64e93e8151b642.png](img/aa64e93e8151b642.png)
 
-很明显的，这个应用程序并没有什么功能。现在只有一个加载图标在那里转动，这只是来确保你的网络服务器能正常操作。在接下来的步骤，我们将会添加更多东西。
+显然，此应用还没有做任何有趣的事情 - 目前，它只是一个最小的主干，我们使用其中的微调框验证网络服务器的功能。我们会在接下来的步骤中添加功能和 UI 功能。 
 
-## 基于应用外壳的架构
 
-### 什么是应用外壳(App Shell)
+## 构建 App Shell
 
-App Shell是应用的用户界面所需的最基本的 HTML、CSS 和 JavaScript，也是一个用来确保应用有好多性能的组件。它的首次加载将会非常快，加载后立刻被缓存下来。这意味着应用的外壳不需要每次使用时都被下载，而是只加载需要的数据。
 
-应用外壳的结构分为应用的核心基础组件和承载数据的 UI。所有的 UI 和基础组件都使用一个 service worker 缓存在本地，因此在后续的加载中 Progressive Web App 仅需要加载需要的数据，而不是加载所有的内容。
+
+
+### 什么是 App Shell？
+
+App Shell 是驱动 Progressive Web App 用户界面所需的最小的 HTML、CSS 和 JavaScript，是确保获得可靠而又出色性能的组件之一。它的第一次加载速度非常快，并且能够立即缓存。“缓存”意味着 Shell 文件一旦通过网络完成加载，就会保存到本地设备中。以后每当用户打开应用时，就会自动从本地设备的缓存中打开 Shell 文件，这样应用就能超快启动。 
+
+App Shell 架构将核心应用基础架构和 UI 与数据分离。所有 UI 和基础架构都利用服务工作线程缓存在本地，这样在后续加载时，Progressive Web App 只需检索必要的数据，而不必加载所有内容。
 
 ![156b5e3cc8373d55.png](img/156b5e3cc8373d55.png)
 
-换句话说，应用的壳相当于那些发布到应用商店的原生应用中打包的代码。它是让你的应用能够运行的核心组件，只是没有包含数据。
+换个说法，App Shell 就类似于您在开发本机应用时需要向应用商店发布的一组代码。它是让您的应用成功起步所需的核心组件，但可能并不包含数据。
 
-### 为什么使用基于应用外壳的结构?
+### 为何采用 App Shell 架构？
 
-使用基于应用外壳的结构允许你专注于速度，给你的 Progressive Web App 和原生应用相似的属性：快速的加载和灵活的更新，所有这些都不需要用到应用商店。
+采用 App Shell 架构可令您专注于提高速度，从而赋予您的 Progressive Web App 类似于本机应用的特性：即时加载和定期更新，并且根本无需借助应用商店。
 
-### 设计应用外壳
+### 设计 App Shell 
 
-第一步是设计核心组件
+第一步是将设计细分成其核心组件。
 
 问问自己：
 
-* 需要立刻显示什么在屏幕上？
-* 我们的应用需要那些关键的 UI 组件？
-* 应用外壳需要那些资源？比如图片，JavaScript，样式表等等。
+* 哪些内容需要立即呈现在屏幕上？
+* 还有哪些其他 UI 组件对我们的应用很重要？
+* App Shell 需要哪些支持资源？例如图像、JavaScript、样式等。
 
-我们将要创建一个天气应用作为我们的第一个 Progressive Web App 。它的核心组件包括：
+我们将创建一个天气应用，将其作为我们的第一个 Progressive Web App。其关键组件将包括：
 
-在设计一个更加复杂的应用时，内容不需要在首次全部加载，可以在之后按需加载，然后缓存下来供下次使用。比如，我们能够延迟加载添加城市的对话框，直到完成对首屏的渲染且有一些空闲的时间。
+* 标头，其中包含标题和添加/刷新按钮
+* 预报卡片容器
+* 预报卡片模板
+* 用于添加新城市的对话框
+* 加载指示器
 
-## 实现应用外壳
-
-
-任何项目都可以有多种起步方式，通常我们推荐使用 Web Starter Kit。但是，这里为了保持我们的项目
-足够简单并专注于 Progressive Web Apps，我们提供了你所需的全部资源。
-
-
-
-### 为应用外壳编写 HTML 代码
-
-为了保证我们的起步代码尽可能清晰，我们将会开始于一个新的 `index.html` 文件并添加在
-[构建应用外壳](/web/fundamentals/getting-started/codelabs/your-first-pwapp/#architect_your_app_shell)中谈论过的核心组件的代码
-
-请记住，核心组件包括：
-
-* 包含标题的头部，以及头部的 添加/刷新 按钮
-* 放置天气预报卡片的容器
-* 天气预报卡片的模板
-* 一个用来添加城市的对话框
-* 一个加载指示器
-
-<div class="clearfix"></div>
-
-    <!DOCTYPE html>
-    <html>
-
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Weather PWA</title>
-        <link rel="stylesheet" type="text/css" href="styles/inline.css">
-    </head>
-
-    <body>
-        <header class="header">
-            <h1 class="header__title">Weather PWA</h1>
-            <button id="butRefresh" class="headerButton"></button>
-            <button id="butAdd" class="headerButton"></button>
-        </header>
-        <main class="main">
-            <div class="card cardTemplate weather-forecast" hidden>
-                . . .
-            </div>
-        </main>
-        <div class="dialog-container">
-            . . .
-        </div>
-        <div class="loader">
-            <svg viewBox="0 0 32 32" width="32" height="32">
-                <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
-            </svg>
-        </div>
-        <!-- Insert link to app.js here -->
-    </body>
-
-    </html>
+设计更复杂的应用时，首次加载所不需要的内容可稍后请求，然后缓存起来以供日后使用。例如，我们可以将“New City”对话框的加载推迟到完成了首次加载体验并且有一些空闲周期之时。
 
 
-需要注意的是，在默认情况下加载指示器是显示出来的。这是为了保证
-用户能在页面加载后立刻看到加载器，给用户一个清晰的指示，表明页面正在加载。
+## 实现 App Shell
 
-为了节省你的时间，我们已经已创建了 stylesheet。
 
-### 添加关键的 JavaScript 启动代码
 
-现在我们的 UI 已经准备好了，是时候来添加一些代码让它工作起来了。像搭建应用外壳的时候那样，注意
-考虑哪些代码是为了保持用户体验必须提供的，哪些可以延后加载。
 
-在启动代码中，我们将包括(你可以在(`scripts/app.js`)的文件夹中找到)：
+启动任何项目都有多种方法，我们一般建议使用 Web Starter Kit。但在此情况下，为使我们的项目尽可能简单并侧重于 Progressive Web App，我们为您提供了所需的全部资源。
 
-* 一个 `app` 对象包含一些和应用效果的关键信息。
-* 为头部的按钮（`add`/`refresh`）和添加城市的对话框中的按钮（`add`/`cancel`）添加事件监听
-函数。
-* 一个添加或者更新天气预报卡片的方法（`app.updateForecastCard`）。
-* 一个从 Firebase 公开的天气 API 上获取数据的方法(`app.getForecast`)。
-* 一个迭代当前所有卡片并调用 `app.getForecast` 获取最新天气预报数据的方法 (`app.updateForecasts`).
-* 一些假数据 (`fakeForecast`) 让你能够快速地测试渲染效果。
+### 为 App Shell 创建 HTML
+
+现在，我们将添加在[构建 App Shell](/web/fundamentals/getting-started/your-first-progressive-web-app/step-01)中讨论过的核心组件。
+
+切记，关键组件将包括：
+
+* 标头，其中包含标题和添加/刷新按钮
+* 预报卡片容器
+* 预报卡片模板
+* 用于添加新城市的对话框
+* 加载指示器
+
+`work` 目录中已有的 `index.html` 文件类似于以下内容（这是实际内容的子集，请不要将此代码复制到您的文件中）：
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather PWA</title>
+  <link rel="stylesheet" type="text/css" href="styles/inline.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">Weather PWA</h1>
+    <button id="butRefresh" class="headerButton"></button>
+    <button id="butAdd" class="headerButton"></button>
+  </header>
+
+  <main class="main">
+    <div class="card cardTemplate weather-forecast" hidden>
+    . . .
+    </div>
+  </main>
+
+  <div class="dialog-container">
+  . . .
+  </div>
+
+  <div class="loader">
+    <svg viewBox="0 0 32 32" width="32" height="32">
+      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+    </svg>
+  </div>
+
+  <!-- Insert link to app.js here -->
+</body>
+</html>
+```
+
+请注意，默认情况下，加载器可见。这可以确保用户在网页加载时立即看到加载器，从而让他们清楚地知道，内容正在加载。
+
+为节省时间，我们已经创建了样式表供您使用。
+
+### 连接关键 JavaScript 应用代码
+
+既然 UI 已大部分准备就绪，现在可以着手连接代码，让一切运转起来。与 App Shell 的其余部分一样，对于哪些代码需要成为关键体验的组成部分，以及哪些代码可以延后加载，要有清醒的认识。
+
+您的工作目录同时已包含应用代码 (`scripts/app.js`)，您将在其中找到以下内容：
+
+* 一个 `app` 对象，其中包含应用所需的一些关键信息。
+* 标头中所有按钮 (`add/refresh`) 和“Add City”对话框中所有按钮 (`add/cancel`) 的事件侦听器。
+* 一个用于添加或更新预报卡片的方法 (`app.updateForecastCard`)。
+* 一个用于从 Firebase Public Weather API 获取最新天气预报数据的方法 (`app.getForecast`)。
+* 一个用于遍历现有卡片并调用 `app.getForecast` 以获取最新预报数据的方法 (`app.updateForecasts`)。
+* 可供您用来快速测试渲染效果的一些虚假数据 (`initialWeatherForecast`)。
 
 ### 测试
 
-现在，你已经添加了核心的 HTML、CSS 和 JavaScript，是时候测试一下应用了。这个时候它能做的可能还不多，但要确保在控制台没有报错信息。
+既然您已添加了核心 HTML、样式和 JavaScript，是时候试用一下应用了。
 
-为了看看假的天气信息的渲染效果，从 `index.html`中取消注释以下的代码:
+为了了解虚假天气数据是如何渲染的，请取消对您的 `index.html` 文件底部的以下行的注释：
 
     <!--<script src="scripts/app.js" async></script>-->
 
-接下来，从 `app.js`中取消注释以下的代码:
+接下来，取消对您的 `app.js` 文件底部的以下行的注释：
 
     // app.updateForecastCard(initialWeatherForecast);
 
-刷新你的应用程序，你将会看到一个比较整齐漂亮的天气预报的卡片:
+重新加载您的应用。结果会是格式完美（尽管虚假，您可以按日期分辨）预报卡片，其中已禁用微调框，如下所示：
 
 ![166c3b4982e4a0ad.png](img/166c3b4982e4a0ad.png)
 
-[](https://weather-pwa-sample.firebaseapp.com/step-04/)
+[链接](https://weather-pwa-sample.firebaseapp.com/step-04/)
 
-尝试并确保他能正常运作之后，将 `app.updateForecastCard` 清除。
+对其进行测试并验证它可以如期工作后，您就可以重新使用虚假数据移除对 `app.updateForecastCard` 的调用了。我们只有在确保所有事情都能如期工作时才需要它。
 
-## 从快速的首次加载开始
 
-Progressive Web Apps 应该能够快速启动并且立即可用。目前，我们的天气应用能够快速启动，但是还不能使用，因为还没有数据。我们能够发起一个 AJAX 请求来获取数据，但是额外的请求会让初次加载时间变长。取而代之的方法是，在初次加载时提供真实的数据。
+## 从快速首次加载开始
 
-### 插入天气预报信息
 
-在本实例中，我们将会静态地插入天气预报信息，但是在一个投入生产环境的应用中，最新的天气预报数据会由服务器根据用户的 IP 位置信息插入。
 
-这代码已经包括了所需的资料，那就是我们在前个步骤所用的 `initialWeatherForecast`。
+
+Progressive Web App 应启动迅速，并且立即就能使用。在目前状态下，我们的天气应用虽启动迅速，却无法使用，因为没有任何数据。我们可以发出 AJAX 请求来获取该数据，但那会额外增加一个请求，使首次加载时间变得更长。可以改为在首次加载时提供真实数据。
+
+### 注入天气预报数据
+
+在此代码实验室中，我们将模拟服务器将天气预报直接注入 JavaScript 中，但在生产应用中，最新天气预报数据将由服务器根据用户的 IP 地址地理定位进行注入。
+
+代码已经包含我们即将注入的数据。这就是我们之前的步骤中使用的 `initialWeatherForecast`。
 
 ### 区分首次运行
 
-但我们如何知道什么时候该展示这些信息，那些数据需要存入缓存供下次使用？当用户下次使用的时候，他们所在城市可能已经发生了变动，所以我们需要加载目前所在城市的信息，而不是之前的城市。
+但我们如何知道何时显示这些信息，因为未来加载时天气应用将从缓存中获取，届时这些信息可能不再相关？如果用户在后续访问时加载应用，他们可能已改换城市，因此我们需要加载的是这些城市的信息，而不一定是他们查询过的第一个城市。
 
-用户首选项（比如用户订阅的城市列表），这类数据应该使用 IndexedDB 或者其他快速的存储方式存放在本地。
-为了尽可能简化，这里我们使用 [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) 进行存储，在生产环境下这并不是理想的选择，因为它是阻塞型同步的存储机制，在某些设备上可能很缓慢。
+用户首选项（比如用户订阅的城市列表）应利用 IndexedDB 或其他快速存储机制存储在本地。为尽可能简化此代码实验室，我们使用了 [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)，但它并非生产应用的理想选择，因为它是一种封闭的同步存储机制，在某些设备上可能会运行得非常缓慢。
 
-首先，让我们添加用来存储用户首选项的代码。从代码中寻找以下的TODO注解：
+首先，让我们添加必要的代码来保存用户首选项。请在您的代码中找到以下 TODO 注释。
 
+```
+  // TODO add saveSelectedCities function here
+```
 
-    // TODO add saveSelectedCities function here
+并在注释下方添加以下代码。
 
+```
+  // Save list of cities to localStorage.
+  app.saveSelectedCities = function() {
+    var selectedCities = JSON.stringify(app.selectedCities);
+    localStorage.selectedCities = selectedCities;
+  };
+```
 
-然后将以下的代码粘贴在TODO注解的下一行。
+接下来，让我们添加启动代码，以检查用户是否保存了任何城市并渲染这些城市，或使用注入的数据。找到以下注释：
 
+```
+  // TODO add startup code here
+```
 
-    //  将城市裂变存入 localStorage.
-    app.saveSelectedCities = function() {
-        var selectedCities = JSON.stringify(app.selectedCities);
-        localStorage.selectedCities = selectedCities;
-    };
+并在注释下方添加以下代码：
 
+```
+/************************************************************************
+   *
+   * Code required to start the app
+   *
+   * NOTE:To simplify this codelab, we've used localStorage.
+   *   localStorage is a synchronous API and has serious performance
+   *   implications.It should not be used in production applications!
+   *   Instead, check out IDB (https://www.npmjs.com/package/idb) or
+   *   SimpleDB (https://gist.github.com/inexorabletash/c8069c042b734519680c)
+   ************************************************************************/
 
+  app.selectedCities = localStorage.selectedCities;
+  if (app.selectedCities) {
+    app.selectedCities = JSON.parse(app.selectedCities);
+    app.selectedCities.forEach(function(city) {
+      app.getForecast(city.key, city.label);
+    });
+  } else {
+    /* The user is using the app for the first time, or the user has not
+     * saved any cities, so show the user some fake data.A real app in this
+     * scenario could guess the user's location via IP lookup and then inject
+     * that data into the page.
+     */
+    app.updateForecastCard(initialWeatherForecast);
+    app.selectedCities = [
+      {key: initialWeatherForecast.key, label: initialWeatherForecast.label}
+    ];
+    app.saveSelectedCities();
+  }
+```
 
-接下来，添加一些启动代码来检查用户是否已经订阅了某些城市，并渲染它们，或者使用插入的天气数据来渲染。从代码中寻找以下的TODO注解：
+启动代码会检查本地存储中是否存储了任何城市。如果存储了城市，它就会解析本地存储数据，然后为保存的每个城市显示预报卡片。如果没有存储城市，启动代码会使用虚假的预报数据，并将其保存为默认城市。
 
+### 保存所选城市
 
-    // TODO add startup code here
+最后，您需要修改“Add City”按钮处理程序，以便将所选的城市添加到本地存储。
 
+更新您的 `butAddCity` 点击处理程序，以便匹配以下代码：
 
-然后将以下的代码粘贴在TODO注解的下一行。
-
-
-    /****************************************************************************   
-     *
-     * 用来启动应用的代码
-     *
-     * 注意: 为了简化入门指南, 我们使用了 localStorage。
-     *   localStorage 是一个同步的 API，有严重的性能问题。它不应该被用于生产环节的应用中！
-     *   应该考虑使用, IDB (https://www.npmjs.com/package/idb) 或者
-     *   SimpleDB (https://gist.github.com/inexorabletash/c8069c042b734519680c)
-     *
-     ****************************************************************************/
-
-    app.selectedCities = localStorage.selectedCities;
-    if (app.selectedCities) {
-      app.selectedCities = JSON.parse(app.selectedCities);
-      app.selectedCities.forEach(function(city) {
-        app.getForecast(city.key, city.label);
-      });
-    } else {
-      app.updateForecastCard(initialWeatherForecast);
-      app.selectedCities = [
-        {key: initialWeatherForecast.key, label: initialWeatherForecast.label}
-      ];
-      app.saveSelectedCities();
+```
+document.getElementById('butAddCity').addEventListener('click', function() {
+    // Add the newly selected city
+    var select = document.getElementById('selectCityToAdd');
+    var selected = select.options[select.selectedIndex];
+    var key = selected.value;
+    var label = selected.textContent;
+    if (!app.selectedCities) {
+      app.selectedCities = [];
     }
+    app.getForecast(key, label);
+    app.selectedCities.push({key: key, label: label});
+    app.saveSelectedCities();
+    app.toggleAddDialog(false);
+  });
+```
 
-
-### 储存已被选择的城市
-
-现在，你需要修改"add city"按钮的功能。这将会把已被选择的城市储存进local storage。
-
-更新`butAddCity`中的代码:
-
-
-    document.getElementById('butAddCity').addEventListener('click', function() {
-        // Add the newly selected city
-        var select = document.getElementById('selectCityToAdd');
-        var selected = select.options[select.selectedIndex];
-        var key = selected.value;
-        var label = selected.textContent;
-        if (!app.selectedCities) {
-          app.selectedCities = [];
-        }
-        app.getForecast(key, label);
-        app.selectedCities.push({key: key, label: label});
-        app.saveSelectedCities();
-        app.toggleAddDialog(false);
-      });
-
+新添加的内容是 `app.selectedCities` 的初始化（如果他不存在），以及对 `app.selectedCities.push()` 和 `app.saveSelectedCities()` 的调用。
 
 ### 测试
 
-* 在首次允许时，你的应用应该立刻向用户展示 `initialWeatherForecast` 中的天气数据。
-* 添加一个新城市确保会展示两个卡片。
-* 刷新浏览器并验证应用是否加载了天气预报并展示了最新的信息。
+* 首次运行时，您的应用应该会立即向用户显示来自 `initialWeatherForecast` 的预报。
+* 添加新城市（点击右上角的 + 图标）并验证是否显示两个卡片。
+* 刷新浏览器并验证应用是否加载了两个预报并显示了最新信息。
 
-[](https://weather-pwa-sample.firebaseapp.com/step-05/)
-
-## 使用 Service Workers 来预缓存应用外壳
-
-Progressive Web Apps 是快速且可安装的，这意味着它能在在线、离线、断断续续或者缓慢的网络环境下使用。为了实现这个目标，我们需要使用一个 service worker 来缓存应用外壳，以保证它能始终迅速可用且可靠。
-
-如果你对 service workers 不熟悉，你可以通过阅读 [介绍 Service
-Workers](/web/fundamentals/getting-started/primers/service-workers) 来了解关于它能做什么，它的生命周期是如何工作的等等知识。
-
-service workers 提供的是一种应该被理解为渐进增强的特性，这些特性仅仅作用于支持service workers 的浏览器。比如，使用 service workers 你可以缓存应用外壳和你的应用所需的数据，所以这些数据在离线的环境下依然可以获得。如果浏览器不支持 service workers ，支持离线的
-代码没有工作，用户也能得到一个基本的用户体验。使用特性检测来渐渐增强有一些小的开销，它不会在老旧的不支持 service workers 的浏览器中产生破坏性影响。
-
-### 注册 service worker
-
-为了让应用离线工作，要做的第一件事是注册一个 service worker，一段允许在后台运行的脚本，不需要
-用户打开 web 页面，也不需要其他交互。
-
-这只需要简单两步：
-
-1. 创建一个 JavaScript 文件作为 service worker
-1. 告诉浏览器注册这个 JavaScript 文件为 service worker
-
-第一步，在你的应用根目录下创建一个空文件叫做 `service-worker.js` 。这个 `service-worker.js`
- 文件必须放在跟目录，因为 service workers 的作用范围是根据其在目录结构中的位置决定的。
-
-接下来，我们需要检查浏览器是否支持 service workers，如果支持，就注册 service worker，将下面代码添加至 `app.js`中。
-
-    
-    if('serviceWorker' in navigator) {  
-        navigator.serviceWorker  
-            .register('/service-worker.js')  
-            .then(function() { console.log('Service Worker Registered'); });  
-    }
+[链接](https://weather-pwa-sample.firebaseapp.com/step-05/)
 
 
-### 缓存站点的资源
-
-当 service worker 被注册以后，当用户首次访问页面的时候一个 `install` 事件会被触发。在这个事件的回调函数中，我们能够缓存所有的应用需要再次用到的资源。
-
-当 service worker 被激活后，它应该打开缓存对象并将应用外壳需要的资源存储进去。将下面这些代码加入你的 `service-worker.js` (你可以在`your-first-pwapp-master/work`中找到) ：
+## 利用服务工作线程预缓存 App Shell
 
 
-    var cacheName = 'weatherPWA-step-6-1';
-    var filesToCache = [];
-
-    self.addEventListener('install', function(e) {
-      console.log('[ServiceWorker] Install');
-      e.waitUntil(
-        caches.open(cacheName).then(function(cache) {
-          console.log('[ServiceWorker] Caching app shell');
-          return cache.addAll(filesToCache);
-        })
-      );
-    });
 
 
-首先，我们需要提供一个缓存的名字并利用 `caches.open()`打开 cache 对象。提供的缓存名允许我们给
-缓存的文件添加版本，或者将数据分开，以至于我们能够轻松地升级数据而不影响其他的缓存。
+Progressive Web App 必须快速并且可安装，这意味着它们能够在在线、离线以及间歇性、慢速连接下工作。要实现此目标，我们需要利用服务工作线程缓存我们的 App Shell，让其始终都能快速而又可靠地投入使用。
 
-一旦缓存被打开，我们可以调用 `cache.addAll()` 并传入一个 url 列表，然后加载这些资源并将响应添加至缓存。不幸的是 `cache.addAll()` 是原子操作，如果某个文件缓存失败了，那么整个缓存就会失败！
+如果您不熟悉服务工作线程，可以通过阅读有关其作用、生命周期等内容的[服务工作线程简介](/web/fundamentals/primers/service-worker/)来获取基本的了解。完成此代码实验室后，请务必查看[调试服务工作线程代码实验室](https://goo.gl/jhXCBy)，了解有关如何使用服务工作线程的详细信息。
 
-好的。让我们开始熟悉如何使用DevTools并学习如何使用DevTools来调试service workers。在刷新你的网页前，开启DevTools，从　__Application__　的面板中打开 __Service Worker__ 的窗格。它应该是这样的：
+应将通过服务工作线程提供的功能视为渐进式增强功能，仅在得到浏览器支持时添加。例如，您可以通过为您的应用缓存 App Shell 和数据，使其即便在网络不可用时仍然可用。不支持服务工作线程时，不会调用离线代码，用户只能获得基础体验。利用功能检测来提供渐进式增强功能的开销很小，在不支持该功能的旧浏览器上它也不会中断运行。
+
+### 在服务工作线程可用时注册它
+
+使应用离线工作的第一步是注册一个服务工作线程，即一个无需打开网页或用户交互便可实现后台功能的脚本。
+
+注册需要执行两个简单的步骤：
+
+1. 让浏览器将 JavaScript 文件注册为服务工作线程。
+2. 创建包含此服务工作线程的 JavaScript 文件。
+
+首先，我们需要检查浏览器是否支持服务工作线程，如果支持，则注册服务工作线程。将以下代码添加到 `app.js`（在 `// TODO add service worker code here` 注释之后）：
+
+```
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('./service-worker.js')
+             .then(function() { console.log('Service Worker Registered'); });
+  }
+```
+
+### 缓存网站资产
+
+注册服务工作线程后，用户首次访问页面时将会触发安装事件。在此事件处理程序内，我们将缓存应用所需的全部资产。
+
+触发服务工作线程时，它应打开 [caches](https://developer.mozilla.org/en-US/docs/Web/API/Cache) 对象并为其填充加载 App Shell 所需的资产。在应用的根文件夹（应为 `your-first-pwapp-master/work` 目录）中创建名为 `service-worker.js` 的文件。这个文件之所以必须位于应用的根文件夹内，是因为服务工作线程的作用域由该文件所在的目录定义。将此代码添加到新建的 `service-worker.js` 文件中：
+
+```
+var cacheName = 'weatherPWA-step-6-1';
+var filesToCache = [];
+
+self.addEventListener('install', function(e) {
+  console.log('[ServiceWorker] Install');
+  e.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      console.log('[ServiceWorker] Caching app shell');
+      return cache.addAll(filesToCache);
+    })
+  );
+});
+```
+
+首先，我们需要通过 `caches.open()` 打开缓存并提供一个缓存名称。提供缓存名称可让我们对文件进行版本控制，或将数据与 App Shell 分开，以便我们能轻松地更新某个数据，而不会影响其他数据。
+
+缓存打开后，我们便可调用 `cache.addAll()`，这个带有网址列表参数的方法随即从服务器获取文件，并将响应添加到缓存内。遗憾的是，`cache.addAll()` 具有原子性，如果任何一个文件失败，整个缓存步骤也将失败！
+
+好的，让我们开始了解如何使用 DevTools 了解和调试服务工作线程。重新加载页面之前，打开 DevTools，转至 __Application __面板的 __Service Worker __窗格。它看上去应该像下面这样。
 
 ![ed4633f91ec1389f.png](img/ed4633f91ec1389f.png)
 
-当你看到这样的空白页，这意味着当前打开的页面没有已经被注册的Service Worker。
+如果您看到类似于这样的空白页面，就表示当前打开的页面没有注册服务工作线程。
 
-现在，重新加载页面。Service Worker的窗格应该是这样的:
+现在，重新加载页面。Service Worker 窗格现在应该像下面这样。
 
 ![bf15c2f18d7f945c.png](img/bf15c2f18d7f945c.png)
 
-当你看到这样的信息，这意味着页面有个Service Worker正在运行。
+如果您看到类似的信息，就表示页面正在运行服务工作线程。
 
-现在让我们来示范你在使用Service Worker时可能会遇到的问题。为了演示, 我们将把`service-worker.js`里的`install` 的事件监听器的下面添加在`activate` 的事件监听器。
+现在，我们简要插入一点其他内容，说明您在开发服务工作线程时可能会遇到的 Gotcha。为了说明这一问题，让我们在 `service-worker.js` 文件中的 `install` 侦听器下面添加 `activate` 事件侦听器。 
 
 ```
 self.addEventListener('activate', function(e) {
@@ -401,244 +440,255 @@ self.addEventListener('activate', function(e) {
 });
 ```
 
-当 service worker 开始启动时，这将会发射`activate`事件。
+`activate` 事件会在服务工作线程启动时触发。
 
-打开DevTools并刷新网页，切换到应用程序面板的Service Worker窗格，在已被激活的Service Worker中单击inspect。理论上，控制台将会出现`[ServiceWorker] Activate`的信息，但这并没有发生。现在回去Service Worker窗格，你会发现到新的Service Worker是在“等待”状态。
+打开 DevTools Console，重新加载页面，切换到 Application 面板中的 Service Worker 窗格，然后点击激活的服务工作线程上的 Inspect。您预期会看到 `[ServiceWorker] Activate` 消息记录到控制台，但并没有发生。请查看 Service Worker 窗格，您会看到新的服务工作线程（包含激活事件侦听器）处于“等待”状态。
 
 ![1f454b6807700695.png](img/1f454b6807700695.png)
 
-简单来说，旧的Service Worker将会继续控制该网页直到标签被关闭。因此，你可以关闭再重新打开该网页或者点击 __skipWaiting__ 的按钮，但一个长期的解决方案是在DevTools中的Service Worker窗格启用 __Update on Reload__ 。当那个复选框被选择后，当每次页面重新加载，Service Worker将会强制更新
+从根本上说，只要页面有打开的标签，以前的服务工作线程就会继续控制页面。因此，您 *可以* 关闭然后重新打开页面，或者按 __skipWaiting __按钮，但是更长期的解决方案只需启用 DevTools 的 Service Worker 窗格上的 __Update on Reload __复选框。如果启用此复选框，服务工作线程会在每次页面重新加载时强制更新。
 
-启用 __update on reload__ 复选框并重新加载页面以确认新的Service Worker被激活。
+现在启用 __update on reload __复选框，并重新加载页面，以确认新的服务工作线程被激活。
 
-__Note:__ 您可能会在应用程序面板里的Service Worker窗格中看到类似于下面的错误信息，但你可以放心的忽略那个错误信息。
+__注：__ 您可能会在 Application 面板的 Service Worker 窗格中发到一个错误（类似于以下内容），__完全可以__忽略此错误。
 
 ![b1728ef310c444f5.png](img/b1728ef310c444f5.png)
 
-Ok, 现在让我们来完成`activate` 的事件处理函数的代码以更新缓存。
+有关在 DevTools 中检查和调试服务工作线程的内容结束。我们稍后将向您展示更多技巧。让我们继续开发您的应用。
 
+我们来展开 `activate` 事件侦听器，添加以下逻辑来更新缓存。更新您的代码以匹配以下代码。
 
-    self.addEventListener('activate', function(e) {  
-      console.log('[ServiceWorker] Activate');  
-      e.waitUntil(  
-        caches.keys().then(function(keyList) {  
-          return Promise.all(keyList.map(function(key) {  
-            console.log('[ServiceWorker] Removing old cache', key);  
-            if (key !== cacheName) {  
-              return caches.delete(key);  
-            }  
-          }));  
-        })  
-      );  
-    });
+```
+self.addEventListener('activate', function(e) {
+  console.log('[ServiceWorker] Activate');
+  e.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
+  return self.clients.claim();
+});
+```
 
+此代码可以确保您的服务工作线程在任何 App Shell 文件更改时更新其缓存。为了使其工作，您需要在服务工作线程文件的顶部增加 `cacheName` 变量。
 
-确保在每次修改了 service worker 后修改 `cacheName`，这能确保你永远能够从缓存中获得到最新版本的文件。过一段时间清理一下缓存删除掉没用的数据也是很重要的。
+最后一句修复了您可能会在以下（可选）信息框中读取的极端情况。
 
-最后，让我们更新一下 app shell 需要的缓存的文件列表。在这个数组中，我们需要包括所有我们的应用需要的文件，其中包括图片、JavaScript以及样式表等等。
+最后，让我们更新 App Shell 所需的文件列表。在数组中，我们需要加入应用所需的全部文件，包括图像、JavaScript、样式表等。在接近 `service-worker.js` 文件顶部的地方，使用以下代码替换 `var filesToCache = [];`：
 
+```
+var filesToCache = [
+  '/',
+  '/index.html',
+  '/scripts/app.js',
+  '/styles/inline.css',
+  '/images/clear.png',
+  '/images/cloudy-scattered-showers.png',
+  '/images/cloudy.png',
+  '/images/fog.png',
+  '/images/ic_add_white_24px.svg',
+  '/images/ic_refresh_white_24px.svg',
+  '/images/partly-cloudy.png',
+  '/images/rain.png',
+  '/images/scattered-showers.png',
+  '/images/sleet.png',
+  '/images/snow.png',
+  '/images/thunderstorm.png',
+  '/images/wind.png'
+];
+```
 
-    var filesToCache = [  
-      '/',  
-      '/index.html',  
-      '/scripts/app.js',  
-      '/styles/inline.css',  
-      '/images/clear.png',  
-      '/images/cloudy-scattered-showers.png',  
-      '/images/cloudy.png',  
-      '/images/fog.png',  
-      '/images/ic_add_white_24px.svg',  
-      '/images/ic_refresh_white_24px.svg',  
-      '/images/partly-cloudy.png',  
-      '/images/rain.png',  
-      '/images/scattered-showers.png',  
-      '/images/sleet.png',  
-      '/images/snow.png',  
-      '/images/thunderstorm.png',  
-      '/images/wind.png'  
-    ];
+我们的应用现在还不能离线运行。我们虽已缓存了 App Shell 组件，但仍需从本地缓存加载它们。
 
+### 从缓存提供 App Shell
 
-我么的应用目前还不能离线工作。我们缓存了 app shell 的组件，但是我们仍然需要从本地缓存中加载它们。
+服务工作线程提供了拦截 Progressive Web App 发出的请求并在服务工作线程内对它们进行处理的能力。这意味着我们可以决定想要如何处理请求，并可提供我们自己的已缓存响应。
 
-### 从缓存中加载 app sheel
+例如：
 
-Service workers 可以截获 Progressive Web App 发起的请求并从缓存中返回响应。这意味着我们能够
-决定如何来处理这些请求，以及决定哪些网络响应能够成为我们的缓存。
+```
+self.addEventListener('fetch', function(event) {
+  // Do something interesting with the fetch here
+});
+```
 
-比如：
+现在让我们从缓存提供 App Shell。将以下代码添加到 `service-worker.js` 文件的底部：
 
-    self.addEventListener('fetch', function(event) {  
-      // Do something interesting with the fetch here  
-    });
+```
+self.addEventListener('fetch', function(e) {
+  console.log('[ServiceWorker] Fetch', e.request.url);
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
+    })
+  );
+});
+```
 
-
-让我们来从缓存中加载 app shell。将下面代码加入 `service-worker.js` 中：
-
-
-    self.addEventListener('fetch', function(e) {  
-      console.log('[ServiceWorker] Fetch', e.request.url);  
-      e.respondWith(  
-        caches.match(e.request).then(function(response) {  
-          return response || fetch(e.request);  
-        })  
-      );  
-    });
-
-
-从内至外，`caches.match()` 从网络请求触发的 `fetch` 事件中得到请求内容，并判断请求的资源是
-否存在于缓存中。然后以缓存中的内容作为响应，或者使用 [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) 函数来加载资源（如果缓存中没有该资源）。
-`response` 最后通过 `e.respondWith()` 返回给 web 页面。
-
+`caches.match()` 会由内而外对触发[抓取](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)事件的网络请求进行评估，并检查以确认它是否位于缓存内。它随即使用已缓存版本作出响应，或者利用 `fetch` 从网络获取一个副本。`response` 通过 `e.respondWith()` 传回至网页。
 
 ### 测试
-你的应用程序现在可以在离线下使用了！　让我们来试试吧！
 
-先刷新那个网页, 然后去DevTools里的 __Cache Storage__ 窗格中的 __Application__ 面板上。展开该部分，你应该会在左边看到您的app shell缓存的名称。当你点击你的appshell缓存，你将会看到所有已经被缓存的资源。
+您的应用现在可以离线运行了！我们来试一试。
+
+重新加载页面，然后转至 DevTools 的 __Application__ 面板的 __Cache Storage__ 窗格。展开这个部分，您会看到左侧列出的 App Shell 缓存的名称。当您点击 App Shell 缓存后，可以看到它当前缓存的所有资源。
 
 ![ab9c361527825fac.png](img/ab9c361527825fac.png)
 
-现在，让我们测试离线模式。回去DevTools中的 __Service Worker__ 窗格，启用 __Offline__ 的复选框。启用之后，你将会在 __Network__ 窗格的旁边看到一个黄色的警告图标。这表示您处于离线状态。
+现在，我们测试一下离线模式。返回到 DevTools 的 __Service Worker__ 窗格，然后启用 __Offline__ 复选框。启用后，您应看到 __Network__ 面板标签旁边显示很小的黄色警告图标。这表示您处于离线状态。
 
 ![7656372ff6c6a0f7.png](img/7656372ff6c6a0f7.png)
 
-刷新网页,然后你会发现你的网页仍然可以正常操作！
+重新加载页面... 这样就可以了！至少差不多了。请注意它加载初始（虚假）天气数据的方式。
 
 ![8a959b48e233bc93.png](img/8a959b48e233bc93.png)
 
-下一步骤是修改该应用程序和service worker的逻辑，让气象数据能够被缓存，并能在应用程序处于离线状态，将最新的缓存数据显示出来。
+请查看 `app.getForecast()` 中的 `else` 语句，了解应用能够加载虚假数据的原因。
 
-__Tip:__ 如果你要清除所有保存的数据（localStoarge，IndexedDB的数据，缓存文件），并删除任何的service worker，你可以在DevTools中的__Application__ 面板里的Clear storage清除。
+下一步就是修改应用和服务工作线程逻辑，以便能够缓存天气数据，并在应用处于离线状态时从缓存中返回最新数据。
 
-[](https://weather-pwa-sample.firebaseapp.com/step-06/)
+__提示：__ 要开始刷新和清除已保存的所有数据（localStoarge、indexedDB 数据、缓存文件）以及移除任何服务工作线程，请使用 Application 标签中的 Clear storage 窗格。
 
-### 当心边缘问题
+[链接](https://weather-pwa-sample.firebaseapp.com/step-06/)
 
-之前提到过，这段代码 **一定不要用在生产环境下** ，因为有很多没有处理的边界情况。
+### 注意边缘情况
 
+如前所述，由于存在许多未处理的边缘情况，这些代码__不得在生产环境中使用__。
 
-#### 缓存依赖于每次修改内容后更新缓存名称
+#### 缓存取决于为每次更改更新缓存键
 
-比如缓存方法需要你在每次改变内容后更新缓存的名字。否则，缓存不会被更新，旧的内容会一直被缓存返回。
-所以，请确保每次修改你的项目后更新缓存名称。
+例如，此缓存方法要求您在每一次内容发生更改时更新缓存键，否则将不会更新缓存，而将提供旧内容。因此，在处理项目时，请务必在每次发生内容更改时更改缓存键！
 
-#### 每次修改后所有资源都需要被重新下载
+#### 要求在每次发生更改时重新下载所有内容
 
-另一个缺点是当一个文件被修改后，整个缓存都需要被重新下载。这意味着即使你修改了一个简单的拼写错误
-也会让整个缓存重新下载。这不太高效。
+另一个缺点是，每次文件发生更改时整个缓存都会失效，需要重新下载。这意味着，修正一个简单的单字符拼写错误都会使缓存失效，需要重新下载所有内容。根本没有任何效率可言。
 
-#### 浏览器的缓存可能阻碍  service worker 的缓存的更新
+#### 浏览器缓存可能阻止服务工作线程缓存更新
 
-另外一个重要的警告。首次安装时请求的资源是直接经由 HTTPS 的，这个时候浏览器不会返回缓存的资源，
-除此之外，浏览器可能返回旧的缓存资源，这导致 service worker 的缓存不会得到 更新。
+这里还有一个重要注意事项。安装处理程序期间发出的 HTTPS 请求必须直接发送至网络，并且不从浏览器的缓存返回响应，这一点至关重要。否则，浏览器可能返回已缓存的旧版本，导致服务工作线程缓存实际上从未得到更新！
 
-#### 在生产环境中当下 cache-first 策略
+#### 注意缓存优先策略在生产环境中的使用
 
-我们的应用使用了优先缓存的策略，这导致所有后续请求都会从缓存中返回而不询问网络。优先缓存的策略是
-很容易实现的，但也会为未来带来诸多挑战。一旦主页和注册的 service worker 被缓存下来，将会很难
-去修改 service worker 的配置（因为配置依赖于它的位置），你会发现你部署的站点很难被升级。
+我们的应用使用缓存优先策略，这会导致在返回任何已缓存内容的副本时都不会查询网络。尽管缓存优先策略易于实现，却可能在日后带来挑战。一旦缓存了主机页面和服务工作线程注册的副本，更改服务工作线程的配置可能变得极为困难（因为配置取决于其定义位置），并且您可能发现，自己部署的网站极难更新！
 
-#### 我该如何避免这些边缘问题
+#### 如何避免这些边缘情况？
 
-我们该如何避免这些边缘问题呢？ 使用一个库，比如
-[sw-precache](https://github.com/GoogleChrome/sw-precache), 它对资源何时过期提供了
-精细的控制，能够确保请求直接经由网络，并且帮你处理了所有棘手的问题。
+那么我们如何避免这些边缘情况呢？使用 [sw-precache](https://github.com/GoogleChrome/sw-precache) 之类的内容库，它能对过期内容实施精细控制，确保请求直接发送至网络，以及为您处理所有困难工作。
 
-#### 实时测试 service workers 提示
+### 实时服务工作线程测试提示
 
-调试 service workers 是一件有调整性的事情，当涉及到缓存后，当你期望缓存更新，但实际上它并没有的时候，事情更是变得像一场恶梦。在 service worker 典型的生命周期和你的代码之间，你很快就会受挫。但幸运的是，这里有一些工具可以让你的生活更加简单。
+调试服务工作线程可能是一项挑战，并且在涉及缓存的情况下，如果缓存未在您预期的时间进行更新，就可能变成一场更可怕的恶梦。典型服务工作线程生命周期和代码错误的双重夹击可能很快令您感到失望。但请不要失望。您可以利用一些工具来改善自己的处境。
 
-其他的提示：
+#### 开始刷新
 
-* 一旦 service worker 被注销（unregistered）。它会继续作用直到浏览器关闭。
-* 如果你的应用打开了多个窗口，新的 service worker 不会工作，直到所有的窗口都进行了刷新，使用了
-新的 service worker。
-* 注销一个 service worker 不会清空缓存，所以如果缓存名没有修改，你可能继续获得到旧的数据。
-* 如果一个 service worker 已经存在，而且另外一个新的 service worker 已经注册了，这个新的
-service worker 不会接管控制权，知道该页面重新刷新后，除非你使用[立刻控制](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/immediate-control)的方式。
+在某些情况下，您可能会发现自己正在下载已缓存的数据或者内容没有如期更新。要清除已保存的所有数据（localStoarge、indexedDB 数据、缓存文件）以及移除任何服务工作线程，请使用 Application 标签中的 Clear storage 窗格。
 
-## 使用 Service Workers 来缓存应用数据
+一些其他提示：
+
+* 服务工作线程取消注册后，它可能仍存在于列表内，直至包含它的浏览器窗口关闭为止。
+* 如果您的应用有多个窗口处于打开状态，则新服务工作线程在这些窗口都已重新加载并更新到最新服务工作线程后才会生效。
+* 将服务工作线程取消注册并不会清除缓存，因此如果缓存名称尚未发生变化，您获得的可能仍然是旧数据。
+* 如果在已有服务工作线程的情况下注册了新的服务工作线程，新的服务工作线程在页面重新加载后才会取得控制权，除非您取得[直接控制](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/immediate-control)。
 
 
-选择一个正确的缓存策略是很重要的，并且这取决于你应用中使用的数据的类型。比如像天气信息、股票信息等对实时性要求较高的数据，应该时常被刷新，但是用户的头像或者文字内容应该以较低的频率进行更新。
+## 使用服务工作线程缓存预报数据
 
 
 
-**先使用缓存后使用请求结果** 的策略对于我们的应用是非常理想的选择。应用从缓存中获取数据，并立刻显示在屏幕上，然后在网络请求返回后再更新页面。如果使用 **先请求网络后缓存** 的策略，用户可能不会等到数据从网络上加载回来便离开了应用。
 
-**先使用缓存后使用请求结果** 意味着我们需要发起两个异步的请求，一个从请求缓存，另一个请求网络。我们应用中的网络请求不需要进行修改，但我们需要修改一下 service worker 的代码来缓存网络请求的响应并返回响应内容。
+为您的数据选择正确的[缓存策略](https://jakearchibald.com/2014/offline-cookbook/)至关重要，这取决于您的应用所提供数据的类型。例如，天气或股票价格之类的高时效性数据应尽可能频繁地更新，而头像图像或文章内容的更新则不必那么频繁。
 
-通常情况下，应该立刻返回缓存的数据，提供应用能够使用的最新信息。然后当网络请求返回后应用应该使用最新加载的数据来更新。
+[缓存优先于网络](https://jakearchibald.com/2014/offline-cookbook/#cache-network-race) 策略是适合我们的应用的理想策略。它会尽快将数据显示在屏幕上，然后在网络返回最新数据时更新数据。与网络优先于缓存相比，用户不必等到[抓取](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)超时，就能获得缓存的数据。
 
-### 截获网络请求并缓存响应结果
+缓存优先于网络意味着我们需要发起两个异步请求，一个发向缓存，一个发向网络。我们通过应用发出的网络请求不需要做多大的改动，但我们需要修改服务工作线程，以先缓存响应，然后再将其返回。
 
-我么需要修改 service worker 来截获对天气 API 的请求，然后缓存请求的结果，以便于以后使用。**先使用缓存后使用请求结果** 的策略中，我们希望请求的响应是真实的数据源，并始终提供给我们最新的数据。如果它不能做到，那也没什么，因为我们已经从缓存中给应用提供了最新的数据。
+在正常情况下，将返回缓存的数据，这几乎立即能够为应用提供其可以使用的最新数据。然后，在网络请求返回时，将使用来自网络的最新数据更新应用。
 
-在 service worker 中，我们添加一个 `dataCacheName` 变量，以至于我们能够将应用数据和应用外壳资源分开。当应用外壳更新了，应用外壳的缓存就没用了，但是应用的数据不会受影响，并时刻保持能用。记住，如果将来你的数据格式改变了，你需要一种能够让应用外壳和应用数据能后保持同步的方法。
+### 拦截网络请求并缓存响应
 
-将下面代码添加至你的 `service-worker.js` 中：
+我们需要修改服务工作线程，以拦截发给 weather API 的请求，并将其响应存储在缓存内，这样我们就能在稍后方便地访问它们。采用缓存优先于网络策略时，我们期望网络响应成为“可信来源”，始终能够为我们提供最新信息。如果它无法做到，失败了也无关紧要，因为我们已经检索了应用内最新的缓存数据。
 
-    var dataCacheName = 'weatherData-v1';
+让我们在服务工作线程中添加一个 `dataCacheName`，以便将应用数据与 App Shell 分离。更新 App Shell 并清除较旧缓存时，我们的数据将保持不变，可随时用于实现超快速加载。切记，如果未来您的数据格式发生变化，您需要相应的处理手段，并且需要确保 App Shell 和内容保持同步。
 
-接下来，我么需要更新`activate`事件的回调函数，以它清理应用程序的外壳(app shell)缓存，并不会删除数据缓存。
+向您的 `service-worker.js` 文件顶部添加下面一行：
 
-    if (key !== cacheName && key !== dataCacheName) {
+```
+var dataCacheName = 'weatherData-v1';
+```
 
-最后，我么需要修改 `fetch` 事件的回调函数，添加一些代码来将请求数据 API 的请求和其他请求区分开来。
+接下来，更新 `activate` 事件处理程序，使其不会在清除 App Shell 缓存时删除数据缓存。
 
-    self.addEventListener('fetch', function(e) {  
-      console.log('[ServiceWorker] Fetch', e.request.url);  
-      var dataUrl = 'https://publicdata-weather.firebaseio.com/';  
-      if (e.request.url.indexOf(dataUrl) === 0) {  
-        // Put data handler code here  
-      } else {  
-        e.respondWith(  
-          caches.match(e.request).then(function(response) {  
-            return response || fetch(e.request);  
-          })  
-        );  
-      }  
-    });
+```
+if (key !== cacheName && key !== dataCacheName) {
+```
 
+最后，更新 `fetch` 事件处理程序，将发给 data API 的请求与其他请求分开处理。
 
-这段代码对请求进行拦截，判断请求的 URL 的开头是否为该天气 API，如果是，我们使用 `fetch` 来发起请求。一旦有响应返回，我们的代码就打开缓存并将响应存入缓存，然后将响应返回给原请求。
-
-接下来，使用下面代码替换 `// Put data handler code here`
-
-    e.respondWith(  
-      fetch(e.request)  
-        .then(function(response) {  
-          return caches.open(dataCacheName).then(function(cache) {  
-            cache.put(e.request.url, response.clone());  
-            console.log('[ServiceWorker] Fetched&Cached Data');  
-            return response;  
-          });  
-        })  
+```
+self.addEventListener('fetch', function(e) {
+  console.log('[Service Worker] Fetch', e.request.url);
+  var dataUrl = 'https://query.yahooapis.com/v1/public/yql';
+  if (e.request.url.indexOf(dataUrl) > -1) {
+    /*
+     * When the request URL contains dataUrl, the app is asking for fresh
+     * weather data. In this case, the service worker always goes to the
+     * network and then caches the response. This is called the "Cache then
+     * network" strategy:
+     * https://jakearchibald.com/2014/offline-cookbook/#cache-then-network
+     */
+    e.respondWith(
+      caches.open(dataCacheName).then(function(cache) {
+        return fetch(e.request).then(function(response){
+          cache.put(e.request.url, response.clone());
+          return response;
+        });
+      })
     );
+  } else {
+    /*
+     * The app is asking for app shell files. In this scenario the app uses the
+     * "Cache, falling back to the network" offline strategy:
+     * https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network
+     */
+    e.respondWith(
+      caches.match(e.request).then(function(response) {
+        return response || fetch(e.request);
+      })
+    );
+  }
+});
+```
 
+以上代码会拦截请求，并检查网址是否以 weather API 的地址开头。如果是，我们将使用[抓取](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)发出请求。返回请求后，我们的代码会打开缓存，克隆响应，将其存储在缓存内，最后将响应返回给原始请求者。
 
-我们的应用目前还不能离线工作。我们已经实现了从缓存中返回应用外壳，但即使我们缓存了数据，依旧需要依赖网络。
+我们的应用尚不能完全离线工作。我们已经实现了 App Shell 的缓存和检索，但尽管我们缓存了数据，应用也没有查看缓存来看看其中是否有任何天气数据。 
 
-### 发起请求
+### 发出请求
 
-之前提到过，应用需要发起两个异步请求，一个从请求缓存，另一个请求网络。应用需要使用 `window` 上的 `caches` 对象，并从中取到最新的数据。这是一个关于渐进增强 _极佳_ 的例子，因为 `caches` 对象可能并不是在任何浏览器上都存在的，且就算它不存在，网络请求依旧能够工作，只是没有使用缓存而已。
+如前文所述，应用需要发起两个异步请求，一个发向缓存，一个发向网络。应用利用 `window` 中提供的 `caches` 对象来访问缓存和检索最新数据。这是“渐进式增强”的一个典范，因为可能并非所有浏览器都提供 `caches` 对象，即使没有该对象，网络请求仍应正常工作。
 
-为了实现该功能，我们需要：
+为此，我们需要做的是：
 
-1. 检查 `cahces` 对象是否存在在全局 `window` 对象上。
-2. 向缓存发起请求
+1. 检查全局 `window` 对象中是否提供了 `caches` 对象。
+2. 从缓存请求数据。 
 
-* 如果向服务器发起的请求还没有返回结果，使用缓存中返回的数据更新应用。
+* 如果服务器请求仍未完成，则用缓存的数据更新应用。
 
-3. 向服务器发起请求
+3. 从服务器请求数据。
 
-* 保存响应结果便于在之后使用
-* 使用从服务器上返回的最新数据更新应用
+* 保存数据以便稍后快速访问。
+* 使用来自服务器的最新数据更新应用。
 
-#### 从缓存中获取资料
+#### 从缓存获取数据
 
-接下来，我们需要检查 `caches` 对象是否存在，若存在，就向它请求最新的数据。将下面这段代码添加至 `app.getForecast()` 方法中。
+接下来，我们需要检查并确保 `caches` 对象存在，并从该对象请求最新数据。找到 `app.getForecast()` 中的 `TODO add cache logic here` 注释，然后在注释下方添加以下代码。
 
+```
     if ('caches' in window) {
       /*
        * Check if the service worker has already cached this city's weather
@@ -657,12 +707,13 @@ service worker 不会接管控制权，知道该页面重新刷新后，除非�
         }
       });
     }
+```
 
-我们的天气应用现在发起了两个异步请求，一个从缓存中，另一个经由 XHR。如果有数据存在于缓存中，它将会很快地（几十毫秒）被返回并更新显示天气的卡片，通常这个时候 XHR 的请求还没有返回来。之后当 XHR 的请求响应了以后，显示天气的卡片将会使用直接从天气 API 中请求的最新数据来更新。
+我们的天气应用现在会发出两个异步数据请求，一个从 `cache`  发出，一个通过 XHR 发出。如果缓存中没有数据，将会返回响应并以极快的速度（几十微秒）渲染，并在 XHR 仍未完成时更新卡片。然后，在 XHR 响应时，将直接使用 weather API 的最新数据更新卡片。
 
-如果因为某些原因，XHR 的响应快于 cache 的响应，`hasRequestPending` 标志位会阻止缓存中数据覆盖从网路上请求的数据。
+请注意缓存请求和 XHR 请求都以更新预报卡片的调用结束。应用如何知道它是否显示了最新数据？`app.updateForecastCard` 中的以下代码会处理这个问题：
 
-
+```
     var cardLastUpdatedElem = card.querySelector('.card-last-updated');
     var cardLastUpdated = cardLastUpdatedElem.textContent;
     if (cardLastUpdated) {
@@ -672,167 +723,203 @@ service worker 不会接管控制权，知道该页面重新刷新后，除非�
         return;
       }
     }
+```
 
-### 亲自尝试
+每次更新卡片时，应用都会在卡片上隐藏的属性中存储数据的时间戳。仅当卡片上已经存在的时间戳晚于传递给函数的数据时，应用才会释放。
 
-现在应用应该能够离线工作了。尝试关闭里本地启动的服务器，并切断网络，然后刷新页面。
+### 测试
 
+现在应用应能完全离线运行了。保存两个城市，按应用上的 refresh 按钮获取最新的天气数据，然后转为离线状态并重新加载页面。 
 
-然后去DevTools的 __Application__ 面板上的 __Cache Storage__ 窗格。
-展开该部分，你应该会在左边看到您的app shell缓存的名称。当你点击你的appshell缓存，你将会看到所有已经被缓存的资源。
+转至 DevTools 的 __Application__ 面板的 __Cache Storage__ 窗格。展开这个部分，您会看到左侧列出的 App Shell 和数据缓存的名称。如果每个城市存储有数据，即可打开数据缓存。
 
 ![cf095c2153306fa7.png](img/cf095c2153306fa7.png)
 
-[](https://weather-pwa-sample.firebaseapp.com/step-07/)
+[链接](https://weather-pwa-sample.firebaseapp.com/step-07/)
+
+
+## 支持本机集成
 
 
 
-## 支持集成入原生应用
+
+没人愿意多此一举地在移动设备键盘上输入长长的网址。通过 Add To Home Screen 功能，您的用户可以像从应用商店安装本机应用那样，选择为其设备添加一个快捷链接，并且过程要顺畅得多。
+
+### 适用于 Android 版 Chrome 的网络应用安装横幅和 Add To Home Screen
+
+网络应用安装横幅让您的用户可以快速无缝地将您的网络应用添加到他们的主屏幕，简化了启动和返回应用的操作。添加应用安装横幅很轻松，Chrome 为您处理大部分的繁重工作。我们只需加入一个包含应用详细信息的网络应用清单文件。
+
+然后，Chrome 使用一组条件（包括使用服务工作线程、SSL 状态）和访问频率启发式算法来确定何时显示横幅。此外，用户还可通过 Chrome 中的“Add to Home Screen”菜单按钮手动添加它。
+
+#### 通过 `manifest.json` 文件声明应用清单
+
+网络应用清单是一个简单的 JSON 文件，使您（开发者）能够控制在用户可能看到应用的区域（例如手机主屏幕）中如何向用户显示应用，指示用户可以启动哪些功能，更重要的是说明启动方法。
+
+利用网络应用清单，您的网络应用可以：
+
+* 在用户的 Android 主屏幕进行丰富的呈现
+* 在没有网址栏的 Android 设备上以全屏模式启动
+* 控制屏幕方向以获得最佳查看效果
+* 定义网站的“启动画面”启动体验和主题颜色
+* 追踪您是从主屏幕还是从网址栏启动
+
+在您的 `work` 文件夹中创建名称为 `manifest.json` 的文件，并复制/粘贴以下内容：
+
+```
+{
+  "name": "Weather",
+  "short_name": "Weather",
+  "icons": [{
+    "src": "images/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "images/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": "images/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }, {
+      "src": "images/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "images/icons/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#3E4EB8",
+  "theme_color": "#2F3BA2"
+}
+```
+
+此清单支持一组适用于各种屏幕尺寸的图标。在编写此内容时，Chrome 和 Opera Mobile（支持网络应用清单的两个浏览器）不会使用像素小于 192px 的任何内容。
+
+跟踪应用如何启动的一个简单方式就是向 `start_url` 参数添加查询字符串，然后使用 Analytics Suite 跟踪查询字符串。如果您使用此方法，请记得更新 App Shell 缓存的文件列表，以确保缓存了带有查询字符串的文件。
+
+#### 将清单文件的相关信息告知浏览器
+
+现在将以下行添加到 `index.html` 文件中的 `<head>` 元素底部： 
+
+```
+<link rel="manifest" href="/manifest.json">
+```
+
+#### 最佳做法
+
+* 在您网站的所有网页上放置该清单链接，这样一来，无论用户首次访问时登陆哪个网页，Chrome 都会立即检索到它。
+* 在 Chrome 上首选使用 `short_name`，如果存在，则优先于 name 字段使用。
+* 为不同密度的屏幕定义图标集。Chrome 会尝试使用最接近 48dp 的图标，例如它会在 2 倍像素的设备上使用 96px，在 3 倍像素的设备上使用 144px。
+* 请记得提供尺寸对启动画面而言合理的图标，并且别忘了设置 `background_color`。
+
+深入阅读：
+
+[使用应用安装横幅](/web/fundamentals/engage-and-retain/simplified-app-installs/)
+
+### 适用于 iOS 版 Safari 的 Add to Home Screen 元素
+
+在您的 `index.html` 中，向 `<head>` 元素底部添加以下代码：
+
+```
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Weather PWA">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+```
+
+### 适用于 Windows 平台的平铺图标
+
+在您的 `index.html` 中，向 `<head>` 元素底部添加以下代码：
+
+```
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+```
+
+### 测试
+
+在此部分中，我们将向您介绍测试网络应用清单的两种方式。
+
+第一种方式是 DevTools。打开 __Application __面板上的 __Manifest __窗格。如果您已正确添加清单信息，将会看到系统已将其解析并以人性化的形式显示在此窗格中。
+
+您还可以从此窗格中测试添加到主屏幕功能。点击 __Add to homescreen __按钮。您会在网址栏下方看到“add this site to your shelf”消息，如以下屏幕所示。
+
+![cbfdd0302b611ab0.png](img/cbfdd0302b611ab0.png)
+
+移动应用的添加到主屏幕功能与桌面应用一样。如果您能在桌面应用中成功触发此提示，就肯定会知道移动用户可以将您的应用添加到他们的设备中。
+
+第二种测试方式通过 Web Server for Chrome 实现。通过这种方法，您向其他计算机提供了自己的本地开发服务器（在台式机或笔记本电脑上），然后您只能从真实的移动设备中访问自己的 Progressive Web App。
+
+在 Web Server for Chrome 配置对话框中，选择 `Accessible on local network` 选项：
+
+![81347b12f83e4291.png](img/81347b12f83e4291.png)
+
+将网络服务器切换到 `STOPPED`，然后重新切换到 `STARTED`。您将会看到新的网址，可用于远程访问您的应用。
+
+现在，使用新网址从移动设备访问您的网站。
+
+如果使用这种测试方式，您会在控制台中看到服务工作线程错误，这是因为未通过 HTTPS 提供服务工作线程。
+
+在移动 Android 设备上使用 Chrome，尝试将应用添加到主屏幕并验证启动屏幕能否正确显示以及使用的图标是否正确。
+
+在 Safari 和 Internet Explorer 中，您还可以手动将应用添加到主屏幕。
+
+[链接](https://weather-pwa-sample.firebaseapp.com/step-08/)
 
 
-没有人喜欢在手机的键盘上输入一长串的 URL，有了添加至主屏幕的功能，你的用户可以选择添加一个图标在他们的屏幕上，就像从应用商店安装一个原生应用那样。而且这儿添加一个图标是更加容易的。
-
-
-### Web 应用安装横幅和添加至主屏
-
-
-web 应用安装横幅给你能够让用户快速地将 web 应用添加至他们的主屏的能力，让他们能够很容易地再次进入你的应用。添加应用安装横幅是很简单的，Chrome 处理了几乎所有事情，我么只需要简单地包含一个应用程序清单（manifest）来说明你的应用的一些细节。
-
-Chrome 使用了一系列标准包括对 service worker 的使用，加密连接状态以及用户的访问频率决定了什么时候展示这个横幅。除此之外，用户可以手动地通过 Chrome 中 “添加至主屏” 这个菜单按钮来添加。
-
-
-#### 使用 `manifest.json` 文件来声明一个应用程序清单
-
-web 应用程序清单是一个简单的 JSON 文件，它给你了控制你的应用如何出现在用户期待出现的地方（比如用户手机主屏幕），这直接影响到用户能启动什么，以及更重要的，用户如何启动它。
-
-使用 web 应用程序清单，你的应用可以：
-
-* 能够真实存在于用户主屏幕上
-* 在 Android 上能够全屏启动，不显示地址栏
-* 控制屏幕方向已获得最佳效果
-* 定义启动画面，为你的站点定义主题
-* 追踪你的应用是从主屏幕还是 URL 启动的
-
-<div class="clearfix"></div>
-
-    {
-      "name": "Weather",
-      "short_name": "Weather",
-      "icons": [{
-        "src": "images/icons/icon-128x128.png",
-          "sizes": "128x128",
-          "type": "image/png"
-        }, {
-          "src": "images/icons/icon-144x144.png",
-          "sizes": "144x144",
-          "type": "image/png"
-        }, {
-          "src": "images/icons/icon-152x152.png",
-          "sizes": "152x152",
-          "type": "image/png"
-        }, {
-          "src": "images/icons/icon-192x192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }, {
-          "src": "images/icons/icon-256x256.png",
-          "sizes": "256x256",
-          "type": "image/png"
-        }],
-      "start_url": "/index.html",
-      "display": "standalone",
-      "background_color": "#3E4EB8",
-      "theme_color": "#2F3BA2"
-    }
-
-追踪你的应用是从哪儿启动的最简单方式是在 `start_url` 参数后面添加一个查询字符串，然后使用工具来分析查询字段。如果你使用这个方法，记得要更新应用外壳缓存的文件，确保含有查询字段的文件被缓存。
-
-#### 告诉浏览器你的程序清单文件
-
-将这段代码添加至你的 `index.html` 的 `<head>` 部分：
-
-    <link rel="manifest" href="/manifest.json">
-
-#### 最佳实践
-
-* 将程序清单的链接添加至你站点的所有页面上，这样在用户第一次访问的时候它能够被 Chrome 正确检索到，且不管用户从哪个页面访问的。
-* 如果同时提供了 `name` 和 `short_name`，`short_name` 是 Chrome 的首选。
-* 为不同分辨率的屏幕提供不同的 icon。Chrome 会尝试使用最接近 48dp 的图标，比如在 2x 屏上使用 96px 的，在 3x屏上使用 144px 的。
-* 记得要包含一个适合在启动画面上显示的图标，另外别忘了设置 `background_color`。
-
-扩展阅读：[使用应用安装横幅](/web/fundamentals/engage-and-retain/simplified-app-installs/)
-
-
-### iOS Safari 的添加至主屏幕元素
-
-在 `index.html` 中，将下面代码添加至 `<head>` 中：
-
-    <!-- Add to home screen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Weather PWA">
-    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
-
-### Windows 上的贴片图标
-
-在 `index.html` 中，将下面代码添加至 `<head>` 中：
-
-    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-    <meta name="msapplication-TileColor" content="#2F3BA2">
-
-### 亲自尝试
-
-* 尝试将应用在你的 Android Chrome 上添加至首屏，并确认启动画面上使用了正确的图标。
-* 检查一下 Safari 和 Internet Explorer 确认图标正确地出现了。
-
-[](https://weather-pwa-sample.firebaseapp.com/step-08/)
-
-
-## 部署在安全的主机上
+## 部署到一个安全主机，然后大功告成
 
 
 
-最后一步是将我们的天气应用部署在一个支撑 HTTPs 的服务器上。如果你目前还没有一个这样的主机，那么最简单（且免费）的方法绝对是使用我们的静态资源部署服务 Firebase。它非常容易使用，通过 HTTPs 来提供服务且在全球 CDN 中。
+
+最后一步是将我们的天气应用部署到一个支持 HTTPS 的服务器。如果您还没有此类服务器，可以采用一个绝对容易（并且免费）的方法，那就是使用 Firebase 托管的静态内容。它使用起来极其简便，通过 HTTPS 提供内容，并由全球 CDN 提供支持。
+
+### 额外好处：缩小和内联 CSS
+
+还有一点是您应该考虑的，那就是缩小关键样式并将它们直接内联到 `index.html` 中。[PageSpeed Insights](/speed) 建议在请求的前 15k 字节中提供首屏内容。
+
+看一看在将所有内容内联的情况下可以将首次请求缩小多少。
+
+深入阅读：[PageSpeed Insights 规则](/speed/docs/insights/rules)
+
+### 部署至 Firebase
+
+如果您从未接触过 Firebase，需要先创建您的帐户并安装一些工具。
+
+1. 在  [https://firebase.google.com/console/](https://firebase.google.com/console/) 上创建一个 Firebase 帐户 
+2. 通过 npm 安装 Firebase：`npm install -g firebase-tools`
+
+创建帐户并登录后，便可随时进行部署！
+
+1. 在  [https://firebase.google.com/console/](https://firebase.google.com/console/)  上创建一个新应用 
+2. 如果您近期未登录 Firebase 工具，请更新您的凭据：`firebase login` 
+3. 初始化您的应用，并提供您完成的应用所在的目录（很可能是 `work`）：
+`firebase init` 
+4. 最后，将应用部署到 Firebase：
+`firebase deploy` 
+5. 大功告成。
+操作完成！您的应用将部署到以下网域：`https://YOUR-FIREBASE-APP.firebaseapp.com`
+
+深入阅读：[Firebase 托管指南](https://www.firebase.com/docs/hosting/guide/)
+
+### 测试
+
+* 尝试将应用添加到您的主屏幕，然后断开网络并验证应用能够按照预期离线工作。
+
+[链接](https://weather-pwa-sample.firebaseapp.com/final/)
 
 
-### 可优化的地方：压缩并内联 CSS 样式
-
-还有一些你需要考虑的事情，压缩关键的 CSS 样式并将其内联在 `index.html` 中。[Page Speed Insights](/speed) 建议以上内容要在 15k 以内。
-
-看看当所有内容都内联后，首次加载资源有多大。
-
-**扩展阅读:** [PageSpeed Insight Rules](/speed/docs/insights/rules)
-
-### 部署到 Firebase
-
-如果你首次使用 Firebase，那么你需要使用你的 Google 账号登录 Firebase 并安装一些工具。
-
-1. 使用你的 Google 账号登录 Firebase [https://firebase.google.com/](https://firebase.google.com/){: .external }
-2. 通过 npm 安装 Firebase 工具 :<br/>
-   `npm install -g firebase-tools`
-
-你的账号被创建且已经登录后，你就可以开始部署了！
-
-1. 创建一个新的应用，在这儿：[https://console.firebase.google.com/](https://console.firebase.google.com/){: .external }
-2. 如果你最近没有登录过 Firebase 工具，请更新你的证书:<br/>
-   `firebase login`
-3. 初始化你的应用，并提供你完成了应用的目录位置：<br/>
-   `firebase init`
-4. 最后，将应用部署至 Firebase:<br/>
-   `firebase deploy`
-5. 祝贺你。你完成了，你的应用将会部署在：<br/>
-   `https://YOUR-FIREBASE-APP.firebaseapp.com`
-
-**扩展阅读:** [Firebase Hosting
-Guide](https://firebase.google.com/docs/hosting/){: .external }
-
-### 亲自尝试
-
-* 试着将应用添加至你的主屏幕，然后断开网络连接，看看它是否能在离线的情况下很好的工作。
-
-[](https://weather-pwa-sample.firebaseapp.com/final/)
 
 
-Translated By:
-{% include "web/_shared/contributors/henrylim.html" %}
-{% include "web/_shared/contributors/wangyu.html" %}
+
+## 发现问题，或者有反馈？{: .hide-from-toc }
+立即提交[问题](https://github.com/googlecodelabs/your-first-pwapp/issues)，帮助我们让代码实验室更加强大。
+谢谢！
+
+
+{# wf_devsite_translation #}

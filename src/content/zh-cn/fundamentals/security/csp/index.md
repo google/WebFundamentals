@@ -79,7 +79,7 @@ CSP 定义 `Content-Security-Policy` HTTP 标头，其允许您创建信任的�
 * **`plugin-types`** 用于限制页面可以调用的插件种类。
 * **`report-uri`** 用于指定在违反内容安全政策时浏览器向其发送报告的网址。此指令不能用于 `<meta>` 标记。
 * **`style-src`** 是 `script-src` 版的样式表。
-* **`upgrade-insecure-requests`** 指示用户代理将 HTTP 更改为 HTTPS，重写网址架构。
+* **`upgrade-insecure-requests`** 指示 User Agent 将 HTTP 更改为 HTTPS，重写网址架构。
 该指令适用于具有大量旧网址（需要重写）的网站。
 
 
@@ -234,7 +234,7 @@ CSP Level 2 可为内联脚本提供向后兼容性，即允许您使用一个�
 
 
     <script nonce=EDNnf03nceIOfn39fn3e9h3sdfa>
-      ///Some inline code I cant remove yet, but need to asap.
+      //Some inline code I cant remove yet, but need to asap.
     </script>
 
 
@@ -295,7 +295,7 @@ Function()</code>、 <code>setTimeout([string], ...)</code> 和 <code>setInterva
     }, 10);
 
 
-*   在运行时避免使用内联模板：为在运行时加快模板生成的速度，     许多模板库大量使用 `new
+*   在运行时避免使用内联模板：为在运行时加快模板生成的速度，许多模板库大量使用 `new
     Function()`。这是一个高效的动态编程应用，但在评估恶意文本时存在风险。某些框架可立即支持 CSP，在缺少 `eval` 时回退到可靠的解析器。[AngularJS 的 ng-csp 指令](https://docs.angularjs.org/api/ng/directive/ngCsp){: .external} 就是一个很好的例子。
 
 
@@ -357,7 +357,7 @@ CSP 能够阻止不受信任的资源客户端，这对于您的用户来说是�
 ## 真实用例 
 
 CSP 1 在 Chrome、Safari 和 Firefox 中非常实用，但在 IE 10 中仅得到非常有限的支持。
-您可以 <a href="http://caniuse.com/#feat=contentsecuritypolicy">
+您可以<a href="http://caniuse.com/#feat=contentsecuritypolicy">
 在 canisue.com 上查看具体信息</a>。CSP Level 2 在 Chrome 40 及更高版本中可用。
 Twitter 和 Facebook 等大量网站已部署此标头（<a href="https://blog.twitter.com/2011/improving-browser-security-with-csp">Twitter 的案例研究</a>值得一读），并为您开始在自己的网站上进行部署制定了相应标准。
 
@@ -418,7 +418,7 @@ https://platform.twitter.com` 搞定，只要您将 Twitter 提供的 JavaScript
 ## 展望未来
 
 
-内容安全政策级别 2 是一个 <a href="http://www.w3.org/TR/CSP2/">
+内容安全政策级别 2 是一个<a href="http://www.w3.org/TR/CSP2/">
 候选建议</a>。W3C 的 Web 应用安全工作组已开始着手此规范的下次更新，[内容安全政策级别 3](https://www.w3.org/TR/CSP3/){: .external }。
 
  

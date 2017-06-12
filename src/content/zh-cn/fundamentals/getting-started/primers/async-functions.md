@@ -301,6 +301,9 @@ Chrome 55 中默认情况下启用异步函数，坦率地讲，它们的作用�
 注：Babel REPL 说起来很有趣。试试就知道。
 
 我建议采用转译方法，因为目标浏览器支持异步函数后，直接将其关闭即可，但如果*实在*不想使用转译器，可以亲自试用一下 [Babel 的 polyfill](https://gist.github.com/jakearchibald/edbc78f73f7df4f7f3182b3c7e522d25){: .external}。
+
+
+
 原本的异步函数代码：
 
     async function slowEcho(val) {
@@ -335,7 +338,9 @@ Chrome 55 中默认情况下启用异步函数，坦率地讲，它们的作用�
 它们不但能让代码更加整洁美观，还能确保该函数*始终*都能返回 Promise。
 
 
-我真正热衷于使用异步函数的历史可以[追溯到 2014 年](https://jakearchibald.com/2014/es7-async-functions/){: .external}，看到它们登陆浏览器即将成真，真是棒极了。啊呜！
+我真正热衷于使用异步函数的历史可以[追溯到 2014 年](https://jakearchibald.com/2014/es7-async-functions/){: .external}，看到它们登陆浏览器即将成真，真是棒极了。
+
+啊呜！
 
 
 {# wf_devsite_translation #}

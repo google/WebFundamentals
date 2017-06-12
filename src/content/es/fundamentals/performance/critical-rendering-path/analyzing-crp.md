@@ -179,7 +179,7 @@ Agregamos `app.js`, que es un recurso JavaScript externo en la página y, como y
 
 Dicho esto, si en la práctica observamos la "cascada de red" de esta página, notarás que las solicitudes de CSS y JavaScript se iniciarán aproximadamente al mismo tiempo: el navegador obtiene el HTML, detecta ambos recursos e inicia ambas solicitudes. Como consecuencia, las características de ruta de acceso crítica de la página anterior son las siguientes:
 
-* **3** recursos críticos
+* **3** recursos críticos;
 * **2** o más recorridos para la longitud mínima de la ruta de acceso crítica;
 * **11** KB de bytes críticos
 
@@ -198,7 +198,7 @@ Después de conversar con nuestros programadores de sitios, nos dimos cuenta de 
 Una secuencia de comandos asincrónica posee muchas ventajas:
 
 * La secuencia de comandos ya no bloquea el analizador y no forma parte de la ruta de acceso de representación crítica.
-* Debido a que no hay otras secuencias de comandos críticas, el CSS tampoco necesita bloquear el evento `domContentLoaded` .
+* Debido a que no hay otras secuencias de comandos críticas, el CSS tampoco necesita bloquear el evento `domContentLoaded`.
 * Cuanto antes se active el evento `domContentLoaded` , antes podrá comenzar a ejecutarse otra lógica de la app.
 
 Como consecuencia, nuestra página optimizada volvió a tener dos recursos críticos (HTML y CSS) con una extensión mínima de ruta de acceso de representación crítica, de dos recorridos, y un total de 9 KB de bytes críticos.

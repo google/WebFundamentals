@@ -146,7 +146,7 @@ description: 使用 tabindex 修改 DOM 顺序
 
 
     <radio-group>
-      //  Assuming the user pressed the down arrow, we'll focus the next available child
+      // Assuming the user pressed the down arrow, we'll focus the next available child
       <radio-button tabindex="-1">Water</radio-button>
       <radio-button tabindex="0">Coffee</radio-button> // call .focus() on this element
       <radio-button tabindex="-1">Tea</radio-button>

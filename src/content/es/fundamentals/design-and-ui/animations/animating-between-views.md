@@ -5,7 +5,7 @@ description: Aprende a animar la transición entre dos vistas en tus apps.
 {# wf_updated_on: 2016-08-23 #}
 {# wf_published_on: 2014-08-08 #}
 
-# Animaciones envertre vistas {: .page-title }
+# Animaciones entre vistas {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
@@ -125,7 +125,7 @@ Finalmente, agregamos las declaraciones de CSS para esas clases.
       transform: translateX(0);
     }
     
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html){: target="_blank" .external }
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html){: target="_blank" .external }
 
 Puedes expandir esto para que abarque varias vistas y el concepto básico seguirá siendo el mismo; cada vista no visible debe estar fuera de la pantalla y aparecer cuando sea necesario, y la pantalla que se muestra actualmente debe dejar de visualizarse.
 

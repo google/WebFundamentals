@@ -69,7 +69,7 @@ description:确定服务工作线程注册时间的最佳做法。
     }
 
 但是启动服务工作线程注册的适当时间还取决于您的网络应用在加载后将做什么。
-例如，[Google I/O 2016 网络应用](https://events.google.com/io2016/) 在过渡到主屏幕前先显示一个简短的动画。我们的团队[发现](/web/showcase/2016/iowa2016)，在显示动画期间启动服务工作线程注册会导致低端移动设备出现卡顿。当浏览器很有可能出现几秒的空闲状态时，我们可以[延迟](https://github.com/GoogleChrome/ioweb2016/blob/8cfa27261f9d07fe8a5bb7d228bd3f35dfc9a91e/app/scripts/helper/elements.js#L42)服务工作线程注册直到动画显示完毕，而不是为用户提供糟糕的体验。
+例如，[Google I/O 2016 网络应用](https://events.google.com/io2016/)在过渡到主屏幕前先显示一个简短的动画。我们的团队[发现](/web/showcase/2016/iowa2016)，在显示动画期间启动服务工作线程注册会导致低端移动设备出现卡顿。当浏览器很有可能出现几秒的空闲状态时，我们可以[延迟](https://github.com/GoogleChrome/ioweb2016/blob/8cfa27261f9d07fe8a5bb7d228bd3f35dfc9a91e/app/scripts/helper/elements.js#L42)服务工作线程注册直到动画显示完毕，而不是为用户提供糟糕的体验。
 
 
 
@@ -131,7 +131,7 @@ description:确定服务工作线程注册时间的最佳做法。
 
 
 如果您在真实的移动网络上从真实的低端设备运行这种测试，那就更好了。
-您可以利用 Chrome 的[远程调试功能](/web/tools/chrome-devtools/remote-debugging/) 将一部 Android 手机通过 USB 连接到台式机，并确保您运行的测试切实反映了许多用户的真实体验。
+您可以利用 Chrome 的[远程调试功能](/web/tools/chrome-devtools/remote-debugging/)将一部 Android 手机通过 USB 连接到台式机，并确保您运行的测试切实反映了许多用户的真实体验。
 
 
 

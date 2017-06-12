@@ -38,7 +38,7 @@ melakukannya?
 
 <img src="images/cm-on-install-dep.png">
 
-ServiceWorker memberi Anda kejadian `install`. Anda bisa menggunakannya untuk mempersiapkan
+ServiceWorker memberi Anda kejadian `install`. Anda bisa menggunakannya untuk menyiapkan
 berbagai hal yang harus sudah siap sebelum Anda menangani kejadian lainnya. Walaupun ini
 terjadi, ServiceWorker Anda versi sebelumnya tetal berjalan &
 menyajikan laman, jadi hal-hal yang Anda lakukan di sini tidak boleh mengganggunya.

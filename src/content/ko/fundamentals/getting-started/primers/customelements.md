@@ -11,7 +11,7 @@ description: 사용자설정 요소를 사용하면 웹 개발자가 새로운 H
 
 ### TL;DR {: #tldr .hide-from-toc }
 
-[Custom Elements][spec]를 사용하면 웹 개발자가 **새로운 HTML 태그**를 생성하거나,
+[사용자설정 요소][spec]를 사용하면 웹 개발자가 **새로운 HTML 태그**를 생성하거나,
 기존 HTML 태그를 보강하거나, 다른 개발자가 작성한 구성 요소를 확장할 수 있습니다.
 이 API는 [웹 구성 요소](http://webcomponents.org/){: .external }의 기반입니다. 이 API는
 단순하게 vanilla JS/HTML/CSS를 사용하여 재사용 가능한 구성 요소를 생성할 수 있는 웹 표준 기반 방법을
@@ -19,7 +19,7 @@ description: 사용자설정 요소를 사용하면 웹 개발자가 새로운 H
 
 ## 소개 {: #intro}
 
-참고: 이 문서에서는 새로운 <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">Custom Elements v1 사양</a>에 대해 설명합니다. 사용자설정 요소를 사용하고 있었다면 <a href="https://www.chromestatus.com/features/4642138092470272">Chrome 33에서 제공되는 v0 버전</a>에 익숙할 것입니다. 개념은 동일하지만, v1 사양에는 API와 관련하여 중요한 차이가 있습니다. 자세한 내용을 보려면 문서를 계속해서 읽어 새로운 기능을 확인하거나 <a href="#historysupport">기록 및 브라우저 지원</a>에 대한 섹션을 확인하세요.
+참고: 이 문서에서는 새로운 <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">사용자설정 요소 v1 사양</a>에 대해 설명합니다. 사용자설정 요소를 사용하고 있었다면 <a href="https://www.chromestatus.com/features/4642138092470272">Chrome 33에서 제공되는 v0 버전</a>에 익숙할 것입니다. 개념은 동일하지만, v1 사양에는 API와 관련하여 중요한 차이가 있습니다. 자세한 내용을 보려면 문서를 계속해서 읽어 새로운 기능을 확인하거나 <a href="#historysupport">기록 및 브라우저 지원</a>에 대한 섹션을 확인하세요.
 
 브라우저는 웹 애플리케이션을 구조화하는 데 탁월한 도구를 제공합니다.
 이를 HTML이라고 합니다.  이에 대해 들어봤을 것입니다. 이는 선언 및 이식이 가능하며, 완벽히 지원되고, 사용이 쉽습니다. HTML은 나름 훌륭하지만, 해당 어휘와 확장성은 한정되어 있습니다. [HTML Living Standard](https://html.spec.whatwg.org/multipage/){: .external }에는 아직까지는 작성한 마크업을 JS 동작에 자동으로 연결할 수 있는 방법이 없습니다.
@@ -61,7 +61,7 @@ description: 사용자설정 요소를 사용하면 웹 개발자가 새로운 H
 이 클래스에 추가하는 모든 속성/메서드가 요소의 DOM 인터페이스에 포함되게 됩니다.
 기본적으로, 이 클래스를 사용하여 태그에 대한 **공용 JavaScript API**를 생성해야 합니다.
 
-**예시** - `<app-drawer>`의 DOM 인터페이스 정의:
+**예** - `<app-drawer>`의 DOM 인터페이스 정의:
 
 
     class AppDrawer extends HTMLElement {
@@ -119,11 +119,11 @@ description: 사용자설정 요소를 사용하면 웹 개발자가 새로운 H
     customElements.define('app-drawer', AppDrawer);
     
 
-이 예시에서는 `open` 속성, `disabled` 속성
+이 예에서는 `open` 속성, `disabled` 속성
 및 `toggleDrawer()` 메서드가 있는 창을 생성합니다. 이는 또한 [속성을 HTML 특성으로 나타냅니다](#reflectattr).
 
 사용자설정 요소의 특징은 **클래스 정의 내 `this`가
-DOM 요소 자체(예: 클래스의 인스턴스)를 나타낸다**는 것입니다. 이 예시에서는 `this`가 `<app-drawer>`를 나타냅니다. 이것(😉)이 바로 요소가 `click` 리스너를 자기 자신에 추가할 수 있는 방법입니다. 이벤트 리스너로만 국한되지 않습니다. 전체 DOM API를 요소 코드 내에서 사용할 수 있습니다. 요소의 속성에 액세스하고, 해당 하위 항목(`this.children`)을 검사하고, 노드를 쿼리하는(`this.querySelectorAll('.items')`) 등의 작업을 수행하려면 `this`를 사용하세요.
+DOM 요소 자체(예: 클래스의 인스턴스)를 나타낸다**는 것입니다. 이 예에서는 `this`가 `<app-drawer>`를 나타냅니다. 이것(😉)이 바로 요소가 `click` 리스너를 자기 자신에 추가할 수 있는 방법입니다. 이벤트 리스너로만 국한되지 않습니다. 전체 DOM API를 요소 코드 내에서 사용할 수 있습니다. 요소의 속성에 액세스하고, 해당 하위 항목(`this.children`)을 검사하고, 노드를 쿼리하는(`this.querySelectorAll('.items')`) 등의 작업을 수행하려면 `this`를 사용하세요.
 
 **사용자설정 요소 생성 관련 규칙**
 
@@ -140,7 +140,7 @@ Custom Elements API는 새로운 HTML 요소를 생성하는 데 유용하지만
 
 다른 사용자설정 요소 확장은 해당 클래스 정의를 확장함으로써 수행할 수 있습니다.
 
-**예시** - `<app-drawer>`를 확장하는 `<fancy-app-drawer>` 생성:
+**예** - `<app-drawer>`를 확장하는 `<fancy-app-drawer>` 생성:
 
 
     class FancyDrawer extends AppDrawer {
@@ -281,7 +281,7 @@ Custom Elements API는 새로운 HTML 요소를 생성하는 데 유용하지만
   <tbody>
     <tr>
       <td><code>constructor</code></td>
-      <td>요소의 인스턴스가 생성되거나 <a href="#upgrades">업그레이드</a>된 경우. 초기화 단계, 이벤트 리스너 설정 또는 <a href="#shadowdom">shadow DOM 생성</a>에 유용합니다.  <code>constructor</code>에서 할 수 있는 작업에 대한 제한 사항은 <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance">사양</a>을 참조하세요.</td>
+      <td>요소의 인스턴스가 생성되거나 <a href="#upgrades">업그레이드</a>된 경우. 초기화 단계, 이벤트 리스너 설정 또는 <a href="#shadowdom">Shadow DOM 생성</a>에 유용합니다.  <code>constructor</code>에서 할 수 있는 작업에 대한 제한 사항은 <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance">사양</a>을 참조하세요.</td>
     </tr>
     <tr>
       <td><code>connectedCallback</code></td>
@@ -334,7 +334,7 @@ Custom Elements API는 새로운 HTML 요소를 생성하는 데 유용하지만
 
 합당한 경우 반응을 정의합니다. 요소가 충분히 복잡하고 `connectedCallback()`에서 IndexedDB에 대한 연결을 열 경우 `disconnectedCallback()`에서 필요한 정리 작업을 수행해야 합니다. 하지만, 주의를 기울여야 합니다. 모든 경우에 DOM에서 요소를 제거하는 것은 좋지 않습니다. 예를 들어, 사용자가 탭을 닫는 경우에는 `disconnectedCallback()`이 절대로 호출되지 않습니다.
 
-**예시:** 사용자설정 요소를 다른 문서로 이동 및 해당 `adoptedCallback()` 관찰:
+**예:** 사용자설정 요소를 다른 문서로 이동 및 해당 `adoptedCallback()` 관찰:
 
 
     function createWindow(srcdoc) {
@@ -520,7 +520,7 @@ HTML 속성은 사용자가 초기 상태를 선언할 수 있는 간편한 방�
 
 ## 요소로 정의되는 콘텐츠 {: #addingmarkup}
 
-사용자설정 요소는 요소 코드 안에 DOM API를 사용하여 자체 콘텐츠를 관리할 수 있습니다. [대응](#reactions)이 이에 유용합니다.
+사용자설정 요소는 요소 코드 안에 DOM API를 사용하여 자체 콘텐츠를 관리할 수 있습니다. [반응](#reactions)이 이에 유용합니다.
 
 **예** - 일부 기본 HTML을 사용하여 요소 생성:
 
@@ -531,7 +531,7 @@ HTML 속성은 사용자가 초기 상태를 선언할 수 있는 간편한 방�
       ...
     });
     
-Declaring this tag will produce:
+이 태그를 선언하면 다음이 생성됩니다.
 
     <x-foo-with-markup>
      <b>I'm an x-foo-with-markup!</b>
@@ -570,16 +570,16 @@ if (supportsCustomElementsV1) {
 </script>
 {% endframebox %}
 
-참고: 요소의 하위 항목을 새 콘텐츠로 덮어쓰는 것은 예상되지 않는 동작이므로 일반적으로 그리 좋은 방법이 아닙니다. 사용자는 자신의 마크업을 버려야 한다는 것에 놀랄 것입니다. 요소로 정의되는 콘텐츠를 추가하는 더 좋은 방법은 shadow DOM을 사용하는 것입니다. 이에 대해서는 다음에 설명하겠습니다.
+참고: 요소의 하위 항목을 새 콘텐츠로 덮어쓰는 것은 예상되지 않는 동작이므로 일반적으로 그리 좋은 방법이 아닙니다. 사용자는 자신의 마크업을 버려야 한다는 것에 놀랄 것입니다. 요소로 정의되는 콘텐츠를 추가하는 더 좋은 방법은 Shadow DOM을 사용하는 것입니다. 이에 대해서는 다음에 설명하겠습니다.
 
-### shadow DOM을 사용하는 요소 생성 {: #shadowdom}
+### Shadow DOM을 사용하는 요소 생성 {: #shadowdom}
 
 참고: 이 문서에서는 [Shadow DOM][sd_spec]의 기능에 대해 다루지 않지만,
-이는 사용자설정 요소와 함께 사용할 수 있는 강력한 API입니다. shadow DOM은 그 자체만으로
+이는 사용자설정 요소와 함께 사용할 수 있는 강력한 API입니다. Shadow DOM은 그 자체만으로
 컴퍼지션 도구입니다. 사용자설정 요소와 함께 사용하면 마법같은 일이 벌어집니다.
 
 
-shadow DOM은 요소가 페이지의 나머지 요소와 별개인
+Shadow DOM은 요소가 페이지의 나머지 요소와 별개인
 DOM 집합을 소유하고, 렌더링하고, 이에 대한 스타일을 지정할 수 있는 방법을 제공합니다. 단일 태그 안에서
 전체 앱을 숨겨버릴 수도 있습니다.
 
@@ -588,7 +588,7 @@ DOM 집합을 소유하고, 렌더링하고, 이에 대한 스타일을 지정�
     <chat-app></chat-app>
     
 
-사용자설정 요소에서 shadow DOM을 사용하려면 `constructor` 안에서 `this.attachShadow`를 호출하세요.
+사용자설정 요소에서 Shadow DOM을 사용하려면 `constructor` 안에서 `this.attachShadow`를 호출하세요.
 
     customElements.define('x-foo-shadowdom', class extends HTMLElement {
       constructor() {
@@ -662,13 +662,13 @@ if (supportsCustomElementsV1) {
 
 이러한 개념에 익숙치 않은 경우 [`<template>` 요소](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element)를 사용하면 파싱된 후 페이지 로드 시 비활성화 상태였다가 나중에 런타임에 활성화될 수 있는 DOM 프래그먼트를 선언할 수 있습니다. 웹 구성 요소 모음에 또 다른 원시 API가 있습니다. **템플릿은 사용자설정 요소의 구조를 선언하는 데 사용할 수 있는 이상적인 자리표시자입니다**.
 
-**예시:** `<template>`를 통해 생성된 shadow DOM 콘텐츠를 포함하는 요소 등록:
+**예:** `<template>`를 통해 생성된 Shadow DOM 콘텐츠를 포함하는 요소 등록:
 
     <template id="x-foo-from-template">
       <style>
         p { color: orange; }
       </style>
-      <p>I'm in shadow DOM. My markup was stamped from a &lt;template&gt;.</p>
+      <p>I'm in Shadow DOM. My markup was stamped from a &lt;template&gt;.</p>
     </template>
     
     <script>
@@ -688,9 +688,9 @@ if (supportsCustomElementsV1) {
 이 몇 줄의 코드는 강력한 효과를 제공합니다. 핵심 사항에 대해 살펴보도록 하겠습니다.
 
 1. HTML에 새로운 요소 `<x-foo-from-template>`를 정의합니다.
-2. 이 요소의 shadow DOM이 `<template>`에서 생성됩니다.
-3. shadow DOM 덕분에 이 요소의 DOM은 이 요소에 로컬입니다.
-4. shadow DOM 덕분에 이 요소의 내부 CSS의 범위는 이 요소로 지정됩니다.
+2. 이 요소의 Shadow DOM이 `<template>`에서 생성됩니다.
+3. Shadow DOM 덕분에 이 요소의 DOM은 이 요소에 로컬입니다.
+4. Shadow DOM 덕분에 이 요소의 내부 CSS의 범위는 이 요소로 지정됩니다.
 
 {% framebox height="100px" %}
 <style>
@@ -711,7 +711,7 @@ if (supportsCustomElementsV1) {
 
 <template id="x-foo-from-template">
   <style>:host p { color: orange; }</style>
-  <p>I'm in shadow DOM. My markup was stamped from a &lt;template&gt;.</p>
+  <p>I'm in Shadow DOM. My markup was stamped from a &lt;template&gt;.</p>
 </template>
 
 <script>
@@ -736,7 +736,7 @@ if (supportsCustomElementsV1) {
 
 ## 사용자설정 요소 스타일 지정 {: #styling}
 
-개발자 요소가 shadow DOM을 사용하여 자체 스타일을 정의하더라도 사용자가
+개발자 요소가 Shadow DOM을 사용하여 자체 스타일을 정의하더라도 사용자가
 자신의 페이지에서 이러한 사용자설정 요소의 스타일을 지정할 수 있습니다. 이를 '사용자 정의 스타일'이라고 합니다.
 
 
@@ -772,8 +772,8 @@ if (supportsCustomElementsV1) {
     
 
 여러분은 요소의 스타일이
-shadow DOM 내에 정의된 경우 CSS 특정성이 어떤 식으로 실현되는지 자문할 수 있습니다. 특정성 측면에서는 사용자 스타일이 더 뛰어납니다.
-사용자 스타일은 항상 요소에서 정의되는 스타일보다 우선합니다. [shadow DOM을 사용하는 요소 생성](#shadowdom) 관련 섹션을 참조하세요.
+Shadow DOM 내에 정의된 경우 CSS 특정성이 어떤 식으로 실현되는지 자문할 수 있습니다. 특정성 측면에서는 사용자 스타일이 더 뛰어납니다.
+사용자 스타일은 항상 요소에서 정의되는 스타일보다 우선합니다. [Shadow DOM을 사용하는 요소 생성](#shadowdom) 관련 섹션을 참조하세요.
 
 ### 등록되지 않은 요소의 스타일 사전 지정 {: #prestyle}
 
@@ -862,13 +862,13 @@ HTML은 사용하기가 까다롭지 않고 유연합니다. 예를 들어, 페�
 Chrome 36+에서 `customElements.define()` 대신 `document.registerElement()`를
 사용하는 Custom Elements API 버전을 구현했음을 알 수 있을 것입니다. 이 버전은 현재 v0라고 하는 더 이상 사용되지 않는 표준
 버전으로 간주됩니다. `customElements.define()`은 브라우저
-공급업체가 이제 막 구현하기 시작한 따끈따끈한 최신 기능입니다. 이를 Custom Elements v1이라고 합니다.
+공급업체가 이제 막 구현하기 시작한 따끈따끈한 최신 기능입니다. 이를 사용자설정 요소 v1이라고 합니다.
 
 구식 v0 사양에 관심이 있는 경우 [html5rocks 문서](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/){: .external }를 확인하세요.
 
 ### 브라우저 지원
 
-Chrome 54([상태](https://www.chromestatus.com/features/4696261944934400))에는 Custom Elements v1이 있습니다. Safari는 [프로토타입 제작을 시작](https://bugs.webkit.org/show_bug.cgi?id=150225)했으며 WebKit nightly에서 API를 테스트할 수 있습니다. Edge는 [프로토타입 제작을 시작](https://twitter.com/AaronGustafson/status/717028669948977153)했습니다. Mozilla는 구현 관련 [해결되지 않은 버그](https://bugzilla.mozilla.org/show_bug.cgi?id=889230) 문제가 있습니다.
+Chrome 54([상태](https://www.chromestatus.com/features/4696261944934400))에는 사용자설정 요소 v1이 있습니다. Safari는 [프로토타입 제작을 시작](https://bugs.webkit.org/show_bug.cgi?id=150225)했으며 WebKit nightly에서 API를 테스트할 수 있습니다. Edge는 [프로토타입 제작을 시작](https://twitter.com/AaronGustafson/status/717028669948977153)했습니다. Mozilla는 구현 관련 [해결되지 않은 버그](https://bugzilla.mozilla.org/show_bug.cgi?id=889230) 문제가 있습니다.
 
 사용자설정 요소를 검색하려면 `window.customElements`가 있는지 확인합니다.
 
@@ -912,12 +912,12 @@ Chrome 54([상태](https://www.chromestatus.com/features/4696261944934400))에�
 ## 결론
 
 사용자설정 요소는 브라우저에서 새로운 HTML 태그를 정의하고 재사용 가능한
-구성 요소를 생성하는 데 사용할 수 있는 새로운 도구입니다. 사용자설정 요소를 다른 신규 플랫폼 원시 기능(예: shadow DOM) 및 `<template>`과 함께 사용하면 다음과 같이 웹 구성 요소의 장대한 그림을 볼 수 있습니다.
+구성 요소를 생성하는 데 사용할 수 있는 새로운 도구입니다. 사용자설정 요소를 다른 신규 플랫폼 원시 기능(예: Shadow DOM) 및 `<template>`과 함께 사용하면 다음과 같이 웹 구성 요소의 장대한 그림을 볼 수 있습니다.
 
 - 재사용 가능한 구성 요소를 생성하고 확장하기 위한 다중 브라우저 지원(웹 표준)
-- 시작하는 데 라이브러리나 프레임워크가 필요하지 않음 Vanilla JS/HTML FTW!
+- 시작하는 데 라이브러리나 프레임워크가 필요하지 않음. Vanilla JS/HTML FTW!
 - 익숙한 프로그래밍 모델 제공. 이를 테면 DOM/CSS/HTML
-- 다른 신규 플랫폼 기능(shadow DOM, `<template>`, CSS 사용자설정 속성 등)과 호환
+- 다른 신규 플랫폼 기능(Shadow DOM, `<template>`, CSS 사용자설정 속성 등)과 호환
 - 브라우저의 DevTools와 완벽하게 통합됨
 - 기존 접근성 기능 활용
 

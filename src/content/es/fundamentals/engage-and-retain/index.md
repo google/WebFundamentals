@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Conéctate con tus usuarios y procura que regresen. Usa cualquiera para mejorar tu sitio. Usa todas si estás trabajando en una app web progresiva.
+description: Conéctate con tus usuarios y procura que regresen. Usa cualquiera para mejorar tu sitio. Usa todas si estás trabajando en una progressive web app.
 
 {# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
@@ -68,7 +68,7 @@ información sobre contenido nuevo. También conocerás aspectos básicos sobre 
 
 ### Cursos de Udacity
 
-[Aspectos fundamentales de Progressive Web App](https://udacity.com/ud811)<br>
+[Aspectos fundamentales de Progressive Web App](https://www.udacity.com/course/intro-to-progressive-web-apps--ud811)<br>
 En este curso, comenzarás a trabajar en tu primera Progressive Web
 App: una app web que aprovecha las diversas funciones de las apps
 nativas. Obtendrás más experiencia en la creación de una aplicación

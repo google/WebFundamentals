@@ -126,7 +126,7 @@ Parameter `details` berisi informasi tentang transaksi. Ada dua komponen utama: 
 
 Perlu diperhatikan bahwa Payment Request API tidak melakukan aritmetika. Yaitu, ia tidak dan tidak bisa memastikan bahwa komponen tampilan menjumlah dengan benar total jumlah yang harus dibayar. Penghitungan ini adalah tanggung jawab developer. Jadi Anda harus selalu memastikan bahwa jumlah item daftar sama dengan jumlah total. Juga, `PaymentRequest` tidak mendukung pengembalian uang, sehingga jumlahnya harus selalu positif (namun item daftar individual bisa berupa negatif, misalnya diskon).
 
-Browser akan me-render label seperti yang Anda definisikan dan secara otomatis me-render format mata uang yang benar berdasarkan lokal pengguna. Perhatikan, label harus di-render dalam bahasa yang sama dengan materi Anda.
+Browser akan merender label seperti yang Anda definisikan dan secara otomatis merender format mata uang yang benar berdasarkan lokal pengguna. Perhatikan, label harus di-render dalam bahasa yang sama dengan materi Anda.
 
 <div style="clear:both;"></div>
 
@@ -415,7 +415,7 @@ Dengan persetujuan pengguna untuk permintaan pembayaran, promise metode [`show()
 
 
 ## Menambahkan opsi pengiriman {: #shipping-options}
-Jika layanan Anda memungkinkan pengguna untuk memilih opsi pengiriman seperti "gratis", "standar", atau "kilat", Anda juga bisa melakukannya melalui UI Payment Request. Untuk menawarkan pilihan tersebut, tambahkan properti [`shippingOptions`](https://www.w3.org/TR/payment-request/#paymentshippingoption-dictionary) dan opsinya ke objek `details`. Dengan menyetel satu pilihan ke `selected: true`, UI akan me-rendernya sebagai telah terpilih (berarti jumlah total Anda harus merefleksikan harga untuk opsi pengiriman itu).
+Jika layanan Anda memungkinkan pengguna untuk memilih opsi pengiriman seperti "gratis", "standar", atau "kilat", Anda juga bisa melakukannya melalui UI Payment Request. Untuk menawarkan pilihan tersebut, tambahkan properti [`shippingOptions`](https://www.w3.org/TR/payment-request/#paymentshippingoption-dictionary) dan opsinya ke objek `details`. Dengan menyetel satu pilihan ke `selected: true`, UI akan merendernya sebagai telah terpilih (berarti jumlah total Anda harus merefleksikan harga untuk opsi pengiriman itu).
 
 
     var details = {

@@ -44,7 +44,7 @@ conncetivity.
 ### If you could have any API to improve your app, what would it be?
 
 **Web Intents** but everyone knows that.  Actually, Web Intents wouldn't have
-been useful for this app.  One areathat I would love to see expanded is
+been useful for this app.  One area that I would love to see expanded is
 Payments, I could quite easily see that having a quick way to buy new sounds
 etc would be quite nice.
 

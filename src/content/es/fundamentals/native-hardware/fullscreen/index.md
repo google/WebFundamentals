@@ -28,7 +28,7 @@ Hay varios modos de que un usuario o desarrollador pueda obtener pantalla comple
 * Instala la app en la página principal.
 * Simulación: esconder automáticamente la barra de direcciones.
 
-### Solicítale al navegador el modo de pantalla completa en respuesta al gesto de un usuario.
+### Solicítale al navegador el modo de pantalla completa en respuesta al gesto de un usuario
 
 <a href="http://caniuse.com/#feat=fullscreen">No todas las plataformas son iguales</a>.
 Safari de iOS no tiene una API con el modo de pantalla completa, pero Chrome en Android,
@@ -153,7 +153,7 @@ los controles que quieres que vea el usuario.
       <div>
         <button>Play</button>
         <button>Stop</button>
-        <button id="goFS">Go Fullscreen</button>
+        <button id="goFS">Go fullscreen</button>
       </div>
     </div>
     <script>
@@ -483,7 +483,7 @@ No interceptes el primer evento táctil y llama a `requestFullscreen()`.
 Si quieres iniciar la pantalla completa de las apps, piensa en el uso de las experiencias de instalación
 para cada plataforma.
 
-### No le envíes correo no deseado al usuario para que instale tu app en una pantalla de inicio.
+### No le envíes correo no deseado al usuario para que instale tu app en una pantalla de inicio
 
 Si planeas ofrecer una experiencia de pantalla completa a través de los mecanismos de la app instalada
 se considerado con el usuario.

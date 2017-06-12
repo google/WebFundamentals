@@ -220,7 +220,7 @@ Payment Request API가 산술 연산을 수행하지 않는다는 점도 유의�
 </tr>
 <tr>
   <td><code>details</code></td>
-  <td> <code>methodName</code></td>의 정보를 포함하는 사전
+  <td> <code>methodName</code> 의 정보를 포함하는 사전</td>
 </tr>
 <tr>
   <td><code>shippingAddress</code></td>

@@ -57,19 +57,19 @@ playPauseButton.addEventListener('click', function(event) {
 
 video.addEventListener('play', function() {
   console.log('play');
-  playPauseButton.classList.add('paused');
+  playPauseButton.classList.add('playing');
   hideVideoControls();
 });
 
 video.addEventListener('pause', function() {
   console.log('pause');
-  playPauseButton.classList.remove('paused');
+  playPauseButton.classList.remove('playing');
   showVideoControls();
 });
 
 video.addEventListener('ended', function() {
   console.log('ended');
-  playPauseButton.classList.remove('paused');
+  playPauseButton.classList.remove('playing');
   video.currentTime = 0;
   showVideoControls();
 });

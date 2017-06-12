@@ -59,7 +59,7 @@ Chrome ブラウザで認証情報を取得すると、認証情報（または�
 重要なポイント: 適切なアノテーションが付けられたフォームを使用すると、簡単に新しい `PasswordCredential` オブジェクトを作成し、`navigator.credentials.store()` で保存できます。
 
 
-`PasswordCredential` を手動で作成するほか、[適切なアノテーションが付けられた] (https://html.spec.whatwg.org/multipage/forms.html#autofill) `form` 要素を `PasswordCredential` に渡すことができます。
+`PasswordCredential` を手動で作成するほか、[適切なアノテーションが付けられた](https://html.spec.whatwg.org/multipage/forms.html#autofill) `form` 要素を `PasswordCredential` に渡すことができます。
 
 
 
@@ -93,7 +93,6 @@ Chrome ブラウザで認証情報を取得すると、認証情報（または�
 
 
 フェデレーション アカウントの詳細を保存するには、ユーザーの ID とプロバイダの ID を使って [`FederatedCredential`](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential) オブジェクトのインスタンスを作成します。
-
 その後、`navigator.credentials.store()` を呼び出して認証情報を保存します。
 
 
@@ -125,9 +124,6 @@ Chrome ブラウザで認証情報を取得すると、認証情報（または�
       <td>
         <code>string</code><br>
         ID プロバイダ固有の認証フローを呼び出すためのユーザー ID。通常は OAuth の  <code>login_hint</code> の値です。</td>
-
-
-
     </tr>
     <tr>
       <td>
@@ -137,9 +133,6 @@ Chrome ブラウザで認証情報を取得すると、認証情報（または�
         <code>string</code><br>
         プロバイダでログインに使用するオリジンの ASCII 直列化。
         たとえば、Facebook は  <code>https://www.facebook.com</code>、Google は  <code>https://accounts.google.com</code> で表されます。</td>
-
-
-
     </tr>
     <tr>
       <td>
@@ -148,7 +141,6 @@ Chrome ブラウザで認証情報を取得すると、認証情報（または�
       <td>
         <code>string</code>（任意）<br>
         ID プロバイダから取得されます。</td>
-
     </tr>
     <tr>
       <td>
@@ -157,7 +149,6 @@ Chrome ブラウザで認証情報を取得すると、認証情報（または�
       <td>
         <code>string</code>（任意）<br>
         ID プロバイダから取得されます。</td>
-
     </tr>
   </tbody>
 </table>

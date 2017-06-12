@@ -24,7 +24,7 @@ description: 웹사이트에 위치정보, 기기 방향, 클릭투콜 등의 �
 </div>
 
 <div class="attempt-right">
-  <h2>기기 방향 &amp; 모션</h2>
+  <h2>기기 방향 및 모션</h2>
   <a href="device-orientation/">
     <img src="images/device-orientation.png">
   </a>

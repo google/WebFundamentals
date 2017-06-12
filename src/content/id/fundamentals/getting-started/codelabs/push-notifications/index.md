@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Dalam codelab ini, Anda akan mempelajari cara menambahkan pemberitahuan push ke aplikasi web.
 
-{# wf_auto_generated #}
 {# wf_updated_on: 2016-11-21T15:42:20Z #}
 {# wf_published_on: 2016-01-01 #}
 
@@ -13,7 +12,7 @@ description: Dalam codelab ini, Anda akan mempelajari cara menambahkan pemberita
 
 
 
-## Ikhtisar
+## Ringkasan
 
 
 
@@ -507,7 +506,7 @@ Dalam code lab ini, pertama-tama kita akan menutup notifikasi yang diklik dengan
 event.notification.close();
 ```
 
-Kemudian kita membuka jendela / tab baru yang memuat url ‘https://developers.google.com/web/', silakan mengubah ini :)
+Kemudian kita membuka jendela / tab baru yang memuat url [developers.google.com](/web/), silakan mengubah ini :)
 
 ```
 clients.openWindow('https://developers.google.com/web/')

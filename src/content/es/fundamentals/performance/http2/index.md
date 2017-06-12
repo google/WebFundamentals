@@ -217,7 +217,7 @@ con la terminología de HTTP/2:
 
 La relación de estos términos puede resumirse de la siguiente manera:
 
-* toda la comunicación se efectúa mediante una única conexión de TCP que puede llevar cualquier cantidad de 
+* Toda la comunicación se efectúa mediante una única conexión de TCP que puede llevar cualquier cantidad de 
   transmisiones bidireccionales.
 * Cada transmisión cuenta con un identificador único e información prioritaria opcional que se usa para llevar
   mensajes bidireccionales.

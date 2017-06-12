@@ -118,7 +118,7 @@ Berikut tampilan dengan promise:
     }
 
 Lihat saya, Jake "wielder of promises" Archibald. Lihat bagaimana saya memanggil
-`processResult` dalam dirinya sendiri untuk mempersiapkan loop asinkron? Menulis hal itu membuat
+`processResult` dalam dirinya sendiri untuk menyiapkan loop asinkron? Menulis hal itu membuat
 saya merasa *sangat cerdas*. Tapi seperti kebanyakan kode "cerdas", Anda harus menatapnya dalam
 waktu sangat lama untuk mencari tahu apa yang dilakukannya, seperti salah satu gambar mata-ajaib dari
 tahun 90-an.
@@ -275,8 +275,8 @@ melakukan pengambilan secara paralel. Untungnya ada jalan tengah yang ideal:
       }
     }
 
-Dalam contoh ini, URL diambil dan dibaca secara paralel, namun "cerdas"
-`reduce` bit diganti dengan for-loop standar, membosankan, dan bisa dibaca.
+Dalam contoh ini, URL diambil dan dibaca secara paralel, namun 
+`reduce` bit yang "cerdas" diganti dengan for-loop standar, membosankan, dan bisa dibaca.
 
 ## Dukungan browser & solusi
 

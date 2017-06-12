@@ -25,7 +25,7 @@ Ini juga membatasi throughput pengunduhan dan pengunggahan maksimum.
 Manipulasi latensi memaksa penundaan minimum pada round-trip time (RTT) koneksi.
 
 Penyesuaian kondisi jaringan diaktifkan melalui panel Network.
-Pilih koneksi dari menu tarik-turun untuk menerapkan pembatasan jaringan dan manipulasi latensi.
+Pilih koneksi dari menu tarik-turun untuk menerapkan throttling jaringan dan manipulasi latensi.
 
 ![Pilih Network Throttle](imgs/throttle-selection.png)
 

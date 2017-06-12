@@ -13,7 +13,7 @@ La especificación de 2009 para Flexbox es obsoleta y es 2,3 veces más lenta
 que la última especificación. Consulta [El diseño de Flexbox no es lento][slow] para obtener más
 información.
 
-[lento]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
+[slow]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
 
 ## Cómo aprobar la auditoría {: #how }
 
@@ -27,7 +27,7 @@ como `box-flex`, es obsoleta y se la debe reemplazar. Consulta
 [Asignación de propiedades en la sintaxis de la especificación de Flexbox 2009/2011 de CSS][map] para conocer con exactitud cómo
 se asignan las propiedades anteriores a las nuevas.
 
-[asignar]: https://wiki.csswg.org/spec/flexbox-2009-2011-spec-property-mapping
+[map]: https://wiki.csswg.org/spec/flexbox-2009-2011-spec-property-mapping
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 

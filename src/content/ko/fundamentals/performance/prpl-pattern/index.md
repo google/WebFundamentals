@@ -35,7 +35,7 @@ Dogfood: PRPL은 엄청난 잠재력을 지닌 새로운 패턴입니다. 이 �
 
 ## PRPL 패턴
 
-PRPL은 PWA(Progressive Web Apps)를 구성하고 제공하기 위한 패턴이며
+PRPL은 PWA(Progressive Web App)를 구성하고 제공하기 위한 패턴이며
  앱 전달 및 출시의 성능에 중점을 둡니다. PRPL은 다음의 약자입니다.
 
 *  **Push**: 초기 URL 경로에서 중요한 리소스를 푸시합니다.
@@ -80,7 +80,7 @@ Polymer [Shop](https://shop.polymer-project.org) 전자상거래 데모는
 다음과 같은 구조의 단일 페이지 앱(SPA)이 있는 경우
  PRPL이 효과가 있을 것입니다.
 
--   모든 유효 경로로부터 애플리케이션의 주요 _진입점_이 제공되는
+-   모든 유효 경로로부터 애플리케이션의 주요 _진입점_ 이 제공되는
  경우. 이 파일은 다른 URL로부터 제공되며 여러 번 캐시되므로
  매우 작아야 합니다. 최상위가 아닌 URL로부터
  제공될 수도 있으므로, 진입점의 모든 리소스 URL은 절대 URL이
@@ -114,7 +114,7 @@ Polymer [Shop](https://shop.polymer-project.org) 전자상거래 데모는
 
 이 다이어그램에서 실선은 _정적 종속성_을 나타내며 외부 리소스는
  파일에서 `<link>` 및 `<script>` 태그를 사용하여 식별됩니다. 점선은
- _동적_ 또는 _필요 시 로드되는 종속성_을 나타내며 셸에 필요할 때마다
+ _동적_ 또는 _필요 시 로드되는 종속성_ 을 나타내며 셸에 필요할 때마다
  파일이 로드됩니다.
 
 빌드 프로세스는 이 모든 종속성의 그래프를 빌드하며
@@ -152,7 +152,7 @@ Polymer [Shop](https://shop.polymer-project.org) 전자상거래 데모는
 
 -   번들되지 않은 빌드는 서버/브라우저 조합을 위해 고안되었으며,
  캐싱을 최적화하면서도 신속한 첫 페인트를 위해
- 브라우저에 필요한 리소스를 전달하도록 HTTP/2를 지원합니다. [`<link rel="preload">`][리소스 힌트] 또는 [HTTP/2 푸시]를 사용하여
+ 브라우저에 필요한 리소스를 전달하도록 HTTP/2를 지원합니다. [`<link rel="preload">`][Resource hints] 또는 [HTTP/2 Push]를 사용하여
  이러한 리소스 전달을 효율적으로 트리거할 수 있습니다.
 
 -   번들된 빌드는 서버 푸시를 지원하지 않는 서버/브라우저 조합에서
@@ -225,7 +225,7 @@ HTTP/2와 HTTP/2 서버 푸시의 조합은 실제 번들링이 없이도
 HTTP/2 푸시는 브라우저의 로컬 캐시에 파일이 이미 있거나
  대역폭이 이미 포화 상태이더라도 강제로 데이터를 브라우저에 보내므로,
  사용 시 주의가 필요합니다. 잘못 수행할 경우 성능이 저하될 수 있습니다. 
-[`<link rel="preload">`][리소스 힌트]는 요청의 우선순위를
+[`<link rel="preload">`][Resource hints]는 요청의 우선순위를
  브라우저가 정확하게 결정하도록 도와줄 수 있습니다.  
 
 ## 결론
@@ -247,8 +247,8 @@ PRPL은 사용자가 상호작용할 수 있는 경로를 만드는 데 필요�
 코드를 제공하여 이러한 문제를 해결할 수 있도록 지원합니다.
 
 [HTTP/2]: /web/fundamentals/performance/http2/
-[리소스 힌트]: https://developers.google.com/web/updates/2016/03/link-rel-preload
-[HTTP/2 푸시]: /web/fundamentals/performance/http2/#server-push
+[Resource hints]: https://developers.google.com/web/updates/2016/03/link-rel-preload
+[HTTP/2 Push]: /web/fundamentals/performance/http2/#server-push
 
 
 {# wf_devsite_translation #}

@@ -34,8 +34,8 @@ description: 앱 설치 배너는 웹 앱 설치 배너와 네이티브 앱 설�
 표시합니다.
 
 * [웹 앱매니페스트](../web-app-manifest/) 파일에 다음이 포함됨:
-    - `short_name` (홈 화면에 사용)
-    - `name` (배너에 사용)
+    - `short_name`(홈 화면에 사용)
+    - `name`(배너에 사용)
     - 144x144 png 아이콘(아이콘 선언에 mime 유형의 `image/png`이 포함되어야 함)
     - `start_url` 로드
 * [서비스 워커](/web/fundamentals/getting-started/primers/service-workers)가
@@ -62,8 +62,8 @@ description: 앱 설치 배너는 웹 앱 설치 배너와 네이티브 앱 설�
 ![DevTools의 Add to homescreen 버튼](images/devtools-a2hs.png)
 
 자세한 도움말은 [Add to Homescreen
-이벤트 시뮬레이션](/web/tools/chrome-devtools/progressive-web-apps#add-to-homescreen)
-을 참조하세요.
+이벤트 시뮬레이션](/web/tools/chrome-devtools/progressive-web-apps#add-to-homescreen)을
+참조하세요.
 
 앱 설치 배너를 자동 테스트할 때는 Lighthouse를 사용합니다. Lighthouse는
 웹 앱 감사 도구입니다. Chrome 확장 프로그램이나
@@ -174,7 +174,7 @@ Chrome이 사용자에게 앱을 설치하라는 프롬프트를 표시하는 �
       return false;
     });
     
-## Native app install banners
+## 네이티브 앱 설치 배너
 
 <div class="attempt-right">
   <figure>
@@ -189,12 +189,12 @@ Chrome이 사용자에게 앱을 설치하라는 프롬프트를 표시하는 �
 ### 배너 표시 기준
 
 이 기준은 서비스 워커가 필요하다는 점을 제외하고는 웹 앱 설치 배너와
-유사합니다. 여러분의 사이트는
+유사합니다. 사이트는 다음을 충족해야 합니다.
 
 * [웹 앱 매니페스트](../web-app-manifest/) 파일에 다음이 포함되어야 합니다.
   - `short_name`
   - `name`(배너 프롬프트에 사용)
-  - 144x144 png 아이콘, 아이콘 선언에 MIME 유형의 `image/png`가 포함되어야 합니다.
+  - 144x144 png 아이콘. 아이콘 선언에 MIME 유형의 `image/png`가 포함되어야 합니다.
   - 앱 정보가 포함된 `related_applications` 객체
 * [HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https)를 통해 서비스되어야 합니다.
 * 2주 간의 교육과정 동안 사용자가 각각 다른 날짜에 두 번 방문해야 합니다.
@@ -216,7 +216,7 @@ Chrome이 사용자에게 앱을 설치하라는 프롬프트를 표시하는 �
 
 사용자에게 Android 애플리케이션 설치 기능만 제공하고
 웹 앱 설치 배너를 표시하지 않으려면
-`"prefer_related_applications": true`를 추가합니다. 예:
+`"prefer_related_applications": true`를 추가합니다. 예를 들면 다음과 같습니다.
 
 
     "prefer_related_applications": true,

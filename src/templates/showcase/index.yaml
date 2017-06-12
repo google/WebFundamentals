@@ -1,0 +1,64 @@
+# {# wf_auto_generated #}
+# ATTENTION - This file is auto-generated, changes must be made to the template!
+project_path: /web/_project.yaml
+book_path: /web/{{section}}/_book.yaml
+{{#if title}}title: {{title}}{{/if}}
+landing_page:
+
+  header:
+    description: >
+        {{description}}
+
+  rows:
+  - classname: devsite-landing-row-cards
+    items:
+    - heading: "{{articles.0.title}}"
+      description: >
+          {{{articles.0.description}}}
+      image_path: {{#if articles.0.image }}{{articles.0.image}}{{else}}/web/showcase/images/generic.png{{/if}}
+      path: {{articles.0.url}}
+      buttons:
+      - label: Read more
+        path: {{articles.0.url}}
+    - heading: "{{articles.1.title}}"
+      description: >
+          {{{articles.1.description}}}
+      image_path: {{#if articles.1.image }}{{articles.1.image}}{{else}}/web/showcase/images/generic.png{{/if}}
+      path: {{articles.1.url}}
+      buttons:
+      - label: Read more
+        path: {{articles.1.url}}
+
+
+  - classname: devsite-landing-row-cards
+    items:
+    - heading: "{{articles.2.title}}"
+      description: >
+          {{{articles.2.description}}}
+      image_path: {{#if articles.2.image }}{{articles.2.image}}{{else}}/web/showcase/images/generic.png{{/if}}
+      path: {{articles.2.url}}
+      buttons:
+      - label: Read more
+        path: {{articles.2.url}}
+    - heading: "{{articles.3.title}}"
+      description: >
+          {{{articles.3.description}}}
+      image_path: {{#if articles.3.image }}{{articles.3.image}}{{else}}/web/showcase/images/generic.png{{/if}}
+      path: {{articles.3.url}}
+      buttons:
+      - label: Read more
+        path: {{articles.3.url}}
+    - heading: "{{articles.4.title}}"
+      description: >
+          {{{articles.4.description}}}
+      image_path: {{#if articles.4.image }}{{articles.4.image}}{{else}}/web/showcase/images/generic.png{{/if}}
+      path: {{articles.4.url}}
+      buttons:
+      - label: Read more
+        path: {{articles.4.url}}
+
+  - classname: devsite-landing-row-100
+    description: >
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://developers.google.com/web/{{section}}/rss.xml">
+        <link rel="alternate" type="application/atom+xml" title="ATOM" href="https://developers.google.com/web/{{section}}/atom.xml">
+

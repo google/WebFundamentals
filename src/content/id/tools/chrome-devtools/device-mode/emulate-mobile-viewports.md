@@ -64,7 +64,7 @@ Gunakan **Mode Perangkat Tertentu** saat Anda mendekati akhir fase development a
 ### Menambahkan preset perangkat khusus
 
 Device Mode menawarkan berbagai jenis perangkat untuk emulasi. Anda bisa menambahkan 
-perangkat khusus jika Anda menemukan perangkat edge-case atau sangat khusus yang tidak tercakup. 
+perangkat khusus jika Anda menemukan kasus ekstrem atau perangkat sangat khusus yang tidak tercakup. 
 
 <div class="wf-devtools-flex">
   <div>
@@ -129,7 +129,7 @@ Saat mengemulasikan perangkat khusus, bilah alat Device Mode menampilkan kontrol
     <li>Rasio piksel perangkat</li>
     <li>Kueri Media</li>
     <li>Penggaris</li>
-    <li>Konfigurasi Jaringan (UA, Pembatasan Jaringan)</li>
+    <li>Konfigurasi Jaringan (UA, throttling jaringan)</li>
   </ul>
   </div>
   <div class="wf-devtools-flex-third">
@@ -234,14 +234,14 @@ definisinya di kode sumber.
 
 Alihkan opsi ini untuk menampilkan penggaris berbasis piksel di sebelah tampilan yang terlihat.
 
-### Konfigurasi jaringan (UA, pembatasan jaringan)
+### Konfigurasi jaringan (UA, throttling jaringan)
 
 Memilih opsi ini akan membuka panel di Panel Samping untuk mengubah
 perilaku yang terkait dengan jaringan:
 
   1. **Disk Cache**: Menonaktifkan Disk Cache menghentikan laman dan asetnya agar tidak
       di-cache oleh browser saat DevTools terbuka.
-  2. **Network Throttling**: Baca selengkapnya tentang [Network Throttling di sini](/web/tools/chrome-devtools/network-performance/network-conditions).
+  2. **Throttling Jaringan**: Baca selengkapnya tentang [Throttling Jaringan di sini](/web/tools/chrome-devtools/network-performance/network-conditions).
   3. **User Agent**: Untuk menyetel penggantian
       string UA (User Agent) tertentu.
 
