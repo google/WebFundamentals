@@ -57,20 +57,20 @@ is visible to `m.aliexpress.com` and available for the user to choose from:
 Chrome 60 introduces several important changes to the
 [Credential Management API](/web/fundamentals/security/credential-management):
 
-* `PasswordCredential` object now includes a password.
+* [`PasswordCredential` object now includes a password.](#password)
 
 *  As the custom `fetch()` function is no longer required to fetch the password,
-it will be deprecated soon.
+[it will be deprecated soon](#fetchdeprecation).
 
-* `navigator.credentials.get()` now accepts an enum `mediation`
+* [`navigator.credentials.get()` now accepts an enum `mediation`](#mediation)
 instead of boolean flag `unmediated`.
 
-* `requireUserMediation()` renamed to `preventSilentAccess()`.
+* [`requireUserMediation()` renamed to `preventSilentAccess()`](#preventsilentaccess).
 
-*  New method `navigator.credentials.create()`
+* [New method `navigator.credentials.create()`](#credentialscreate)
 asynchronously creates credential objects.
 
-### `PasswordCredential` object now includes password 
+### `PasswordCredential` object now includes password {: #password}
 
 The Credential Management API took a conservative approach to handling passwords.
 It concealed passwords from JavaScript, requiring developers
@@ -123,7 +123,7 @@ You can use existing methods to deliver credential information to your server:
       console.log('Auth succeeded', profile);
     });
 
-### Custom fetch will be deprecated soon
+### Custom fetch will be deprecated soon {: #fetchdeprecation}
 
 <aside class="warning">
   <strong>Warning:</strong>
@@ -144,7 +144,7 @@ as a value of `credentials` property, for example:
 Using a regular `fetch()` function as shown in the previous code example,
 or using an `XMLHttpRequest` is recommended.
 
-### `navigator.credentials.get()` now accepts an enum mediation
+### `navigator.credentials.get()` now accepts an enum mediation {: #mediation}
 
 Until Chrome 60,
 `navigator.credentials.get()` accepted an optional `unmediated` property
@@ -216,7 +216,7 @@ the equivalent of the previous flag, `unmediated: true`:
       // Sign-in
     });
 
-### `requireUserMediation()` renamed to `preventSilentAccess()`
+### `requireUserMediation()` renamed to `preventSilentAccess()` {: #preventsilentaccess}
 
 To align nicely with the new `mediation` property offered in the `get()` call,
 the `navigator.credentials.requireUserMediation()` method has been renamed to
@@ -232,7 +232,7 @@ from one and doesn't want to get signed back in automatically at the next visit.
       navigator.credentials.preventSilentAccess();
     }
 
-### Create credential objects asynchronously with new method `navigator.credentials.create()`
+### Create credential objects asynchronously with new method `navigator.credentials.create()` {: #credentialscreate}
 
 You now have the option to create credential objects asynchronously
 with the new method, `navigator.credentials.create()`.
