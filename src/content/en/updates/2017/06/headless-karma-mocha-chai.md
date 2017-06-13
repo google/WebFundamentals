@@ -160,7 +160,7 @@ script:
   - yarn test
 ```
 
-There's an [example repo](https://github.com/ebidel/headless-karma-travis) for reference.
+Note: check out the [example repo](https://github.com/ebidel/headless-karma-travis) for reference.
 
 <br>
 
