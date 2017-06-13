@@ -1,24 +1,64 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: "Testing on Headless Chrome with Karma/Mocha/Chai"
+description: "Automated testing with Headless Chrome"
 
 {# wf_updated_on: 2017-06-13 #}
 {# wf_published_on: 2017-06-13 #}
 
 {# wf_tags: headless,testing,karma,mocha,chai #}
 {# wf_featured_image: /web/updates/images/generic/headless-chrome.png #}
-{# wf_featured_snippet: How to setup Karma, Mocha, and Chai to run automated tests on Headless Chrome. #}
+{# wf_featured_snippet: How to setup Karma, Mocha+Chai, and Travis to run automated tests on Headless Chrome. #}
 
-# Testing on Headless Chrome with Karma/Mocha/Chai {: .page-title }
+# Automated testing with Headless Chrome {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
-Karma, Mocha, Chai, Headless Chrome, oh my!
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var response = 'Thanks for the feedback!';
+var feedback = {
+  "category": "Headless Chrome",
+  "question": "How much experience do you have with automated testing?",
+  "choices": [
+    {
+      "button": {
+        "text": "None"
+      },
+      "response": response,
+      "analytics": {
+        "label": "Automated Testing / Experience / None"
+      }
+    },
+    {
+      "button": {
+        "text": "Some"
+      },
+      "response": response,
+      "analytics": {
+        "label": "Automated Testing / Experience / Some"
+      }
+    },
+    {
+      "button": {
+        "text": "A Lot"
+      },
+      "response": response,
+      "analytics": {
+        "label": "Automated Testing / Experience / A Lot"
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
 
 If you want to run automated tests using Headless Chrome, look no further! This article will get you
-all setup using Karma as a runner and Mocha/Chai for authoring tests.
+all set up using Karma as a runner and Mocha+Chai for authoring tests.
 
 **What are these things?**
+
+Karma, Mocha, Chai, Headless Chrome, oh my!
 
 [Karma](https://karma-runner.github.io) is a testing harness that works with
 any of the the most popular testing frameworks ([Jasmine](https://jasmine.github.io/), [Mocha](https://mochajs.org/), [QUnit](https://qunitjs.com/)).
@@ -26,18 +66,23 @@ any of the the most popular testing frameworks ([Jasmine](https://jasmine.github
 [Chai](http://chaijs.com/) is an assertion library that works with Node and in the browser.
 We need the latter.
 
-[Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome) is a way to run the Chrome browser in a headless environment without the full browser UI. It's perfect for CI environment and automated testing.
+[Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome) is a way to run
+the Chrome browser in a headless environment without the full browser UI. One of
+the benefits of using Headless Chrome (as opposed to testing directly in Node)
+is that your JavaScript tests will be executed in the same environment as users
+of your site. Headless Chrome gives you a real browser context without the
+memory overhead of running a full version of Chrome.
 
 ## Setup
 
 ### Installation
 
-Install Karma, the relevant, plugins, and the test runners using **yarn**:
+Install Karma, the relevant, plugins, and the test runners using `yarn`:
 
     yarn add --dev karma karma-chrome-launcher karma-mocha karma-chai
     yarn add --dev mocha chai
 
-or use **npm**:
+or use `yarn`:
 
     npm i --save-dev karma karma-chrome-launcher karma-mocha karma-chai
     npm i --save-dev mocha chai
@@ -61,7 +106,7 @@ module.exports = function(config) {
     port: 9876,  // karma web server port
     colors: true,
     logLevel: config.LOG_INFO,
-    browsers: ['Chrome', 'ChromeHeadless'],
+    browsers: ['ChromeHeadless'],
     autoWatch: false,
     // singleRun: false, // Karma captures browsers, runs the tests and exits
     concurrency: Infinity
@@ -99,10 +144,10 @@ Add a `test` script in `package.json` that runs Karma with our settings.
 }
 ```
 
-When you run your tests (`yarn test`), you should Headless Chrome fire up and output
+When you run your tests (`yarn test`), Headless Chrome should fire up and output
 the results to the terminal:
 
-<img width="914" alt="Output from Karma" src="https://user-images.githubusercontent.com/238208/27096498-1fd639c6-5026-11e7-9fec-58bc897d1e10.png">
+<img alt="Output from Karma" src="/web/updates/images/2017/06/headless-karma.png">
 
 ## Creating your own Headless Chrome launcher
 
