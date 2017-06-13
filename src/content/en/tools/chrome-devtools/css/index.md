@@ -14,14 +14,14 @@ changing a page's CSS using Chrome DevTools.
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
-var feedback = "If there's any way we can make this tutorial more helpful for you, please " +
-    "<a href=\"https://github.com/google/webfundamentals/issues/new\">open a GitHub issue</a> " +
-    "or <a href=\"https://groups.google.com/forum/#!forum/google-chrome-developer-tools\">send " +
-    "us an email</a> or <a href=\"https://twitter.com/chromedevtools\">tweet us</a>.";
+var genericFeedback = 'If there\'s any way we can make this tutorial more helpful for you, please ' +
+    '<a href="https://github.com/google/webfundamentals/issues/new">open a GitHub issue</a> ' +
+    'or <a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">send ' +
+    'us an email</a> or <a href="https://twitter.com/chromedevtools">tweet us</a>.';
 var designerResponse = "Great! The tutorials should be easy to complete, even if you don't " +
-    "have much developer experience. " + feedback;
-var developerResponse = "Great, thanks for sharing. " + feedback;
-var otherResponse = feedback + " And let us know what type of role you identify with so that " +
+    "have much developer experience. " + genericFeedback;
+var developerResponse = "Great, thanks for sharing. " + genericFeedback;
+var otherResponse = genericFeedback + " And let us know what type of role you identify with so that " +
     "we can better tailor the doc to your needs.";
 var feedback = {
   "category": "DevTools",
