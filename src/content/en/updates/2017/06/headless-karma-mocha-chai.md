@@ -132,6 +132,36 @@ module.exports = function(config) {
   }
 };
 ```
+
+## Running it all on Travis CI
+
+Configuring Karma to run your tests in Headless Chrome is the hard part.
+Continuous integration in Travis is just a few lines away!
+
+To run your tests in Travis, use `dist: trusty` and install the Chrome stable addon:
+
+**.travis.yml**
+
+```yaml
+language: node_js
+node_js:
+  - "7"
+dist: trusty # needs Ubuntu Trusty
+sudo: false  # no need for virtualization.
+addons:
+  chrome: stable # have Travis install chrome stable.
+cache:
+  yarn: true
+  directories:
+    - node_modules
+install:
+  - yarn
+script:
+  - yarn test
+```
+
+There's an [example repo](https://github.com/ebidel/headless-karma-travis) for reference.
+
 <br>
 
 {% include "comment-widget.html" %}
