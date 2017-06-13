@@ -45,6 +45,8 @@ toc:
         path: /web/tools/lighthouse/audits/valid-aria-values
       - title: Elements With ARIA Roles Have The Required aria-* Attributes
         path: /web/tools/lighthouse/audits/required-aria-attributes
+      - title: Enable Text Compression
+        path: /web/tools/lighthouse/audits/text-compression
       - title: Estimated Input Latency
         path: /web/tools/lighthouse/audits/estimated-input-latency
       - title: Every Form Element Has A Label
