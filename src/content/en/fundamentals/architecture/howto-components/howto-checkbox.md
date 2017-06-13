@@ -210,22 +210,18 @@ limitations under the License.
     height: 24px;
     vertical-align: middle;
   }
-
   howto-checkbox[aria-checked="true"] {
     background: url('/web/fundamentals/architecture/howto-components/./images/checked-checkbox.svg') no-repeat;
     background-size: contain;
   }
-
   howto-checkbox[aria-disabled="true"] {
     background: url('/web/fundamentals/architecture/howto-components/./images/unchecked-checkbox-disabled.svg') no-repeat;
     background-size: contain;
   }
-
   howto-checkbox[aria-checked="true"][aria-disabled="true"] {
     background: url('/web/fundamentals/architecture/howto-components/./images/checked-checkbox-disabled.svg') no-repeat;
     background-size: contain;
   }
-
   #join-label {
     vertical-align: middle;
     display: inline-block;

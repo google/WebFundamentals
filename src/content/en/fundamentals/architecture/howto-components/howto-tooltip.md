@@ -71,7 +71,6 @@ limitations under the License.
     color: #fff;
     border-radius: 3px;
   }
-
 </style>
 
 <div class="text">
