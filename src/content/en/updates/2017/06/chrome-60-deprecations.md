@@ -36,7 +36,7 @@ origins. Because of Chrome's long-standing policy of
 Because of their unfamilliarity to non-technical browser users, we're
 increasingly seeing the `data:` scheme being used in spoofing and phishing
 attacks. To prevent this, we're blocking web pages from loading `data:` URLs
-in the top frame. This applies to `&lt;a&gt;` tags, `window.open`,
+in the top frame. This applies to `<a>` tags, `window.open`,
 `window.location` and similar mechanisms. The `data:` scheme will still work for
 resources loaded by a page.
 
