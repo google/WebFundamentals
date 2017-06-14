@@ -46,7 +46,7 @@ it's stable enough to implement, it may continue to change. We'll <a
 href="/web/updates/2017/01/payment-request-updates">keep this page updated</a>
 to always reflect the current status of the API. Meanwhile, to protect yourself
 from API changes that may be backwards incompatible, we're offering <a
-href="https://storage.googleapis.com/prshim/v1/payment-shim.js">a shim</a> that
+href="#paymentrequest_shim">a shim</a> that
 can be embedded on your site. The shim will paper over any API differences for
 two major Chrome versions.
 
