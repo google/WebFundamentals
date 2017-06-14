@@ -45,7 +45,7 @@ manager and use them to log in the user.
 For example:
 
 1. When a user lands on your site and they are not signed in, 
-   call [`navigator.credential.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get).
+   call [`navigator.credentials.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get).
 2. Use the retrieved credentials to sign in the user.
 3. Update the UI to indicate the user has been signed in.
 
