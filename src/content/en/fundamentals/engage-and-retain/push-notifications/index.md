@@ -83,7 +83,7 @@ understand how they work, or have to implement them. First, check out
 [our own sample](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications).
 Also available are Peter Beverloo's
 [Notification Generator](https://tests.peter.sh/notification-generator/)
-and Chris Mills' [push-api-demo](https://github.com/chrisdavidmills/push-api-demo).
+and Mozilla's [Push Payload Demo](https://serviceworke.rs/push-payload_demo.html).
 
 Note: Unless you're using localhost, the Push API requires HTTPS.
 
