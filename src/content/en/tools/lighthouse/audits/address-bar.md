@@ -54,4 +54,39 @@ The audit passes if Lighthouse finds a `theme-color` meta tag in the page's
 HTML and a `theme_color` property in the Web App Manifest. Lighthouse does
 not test whether the values are valid CSS color values.
 
-{% include "web/tools/lighthouse/audits/_feedback/_template.html" %}
+## Feedback {: #feedback }
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'Address Bar / Helpful';
+var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
+      label + ']';
+var feedback = {
+  "category": "Lighthouse",
+  "choices": [
+    {
+      "button": {
+        "text": "This Doc Was Helpful"
+      },
+      "response": "Thanks for the feedback.",
+      "analytics": {
+        "label": label
+      }
+    },
+    {
+      "button": {
+        "text": "This Doc Was Not Helpful"
+      },
+      "response": 'Sorry to hear that. Please <a href="' + url +
+          '" target="_blank">open a GitHub issue</a> and tell us how to ' +
+          'make it better.',
+      "analytics": {
+        "label": label,
+        "value": 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
