@@ -40,7 +40,8 @@ like to talk about a more comprehensive solution.
 
 ## Introducing the Payment Request API {: #introducing }
 
-The Payment Request API is a system that is meant to *eliminate checkout forms*.
+The Payment Request API is a [W3C standard](https://www.w3.org/TR/payment-request/)
+that is meant to *eliminate checkout forms*.
 It vastly improves user workflow during the purchase process, providing a more
 consistent user experience and enabling web merchants to easily leverage
 disparate payment methods. The Payment Request API is not a new payment method,
