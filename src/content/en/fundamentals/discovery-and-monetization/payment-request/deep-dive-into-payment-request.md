@@ -52,9 +52,12 @@ two major Chrome versions.
 
 ## Feature Detect
 
-Before we start covering how to use PaymentRequest, we should feature detect to
-ensure it's available and fallback to a traditional checkout page in browsers
-that don't support it. The feature detect is simply:
+PaymentRequest has been available since Chrome 53 for Android and has been
+enabled by default since Chrome 60 on desktop. Before we start covering how to
+use PaymentRequest, we should feature detect to ensure it's available and
+fallback to a traditional checkout page in browsers that don't support it.
+
+The feature detect is simply:
 
 ```
 if(window.PaymentRequest) {  
