@@ -5,7 +5,7 @@ book_path: /web/updates/_book.yaml
 {# wf_published_on: 2011-09-27 #}
 {# wf_tags: news,devtools #}
 
-# 7 minute videos: Javascript Console Protips & newish DOM APIs {: .page-title }
+# 7 minute videos: JavaScript Console Protips & newish DOM APIs {: .page-title }
 
 {% include "web/_shared/contributors/paulirish.html" %}
 
@@ -18,7 +18,7 @@ book_path: /web/updates/_book.yaml
   </iframe>
 </div>
 
-<p>Level up on the Javascript console in the Chrome DevTools. Look at XHR requests, learn console helper functions to monitor events or explore objects better. We dive into all sorts of goodies in the command lines API: <code>console.time</code>, <code>$0</code>, <code>inspect()</code>, <code>$$</code>, <code>monitorEvents()</code>, <code>keys()</code>, <code>values()</code>, and <code>copy()</code>.</p>
+<p>Level up on the JavaScript console in the Chrome DevTools. Look at XHR requests, learn console helper functions to monitor events or explore objects better. We dive into all sorts of goodies in the command lines API: <code>console.time</code>, <code>$0</code>, <code>inspect()</code>, <code>$$</code>, <code>monitorEvents()</code>, <code>keys()</code>, <code>values()</code>, and <code>copy()</code>.</p>
 
 <div style="clear:both;"></div>
 

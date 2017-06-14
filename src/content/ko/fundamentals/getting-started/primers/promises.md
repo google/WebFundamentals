@@ -825,7 +825,7 @@ ES6도 [생성기](http://wiki.ecmascript.org/doku.php?id=harmony:generators)를
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }
 
-이는 이전과 정확히 동일하게 작동하지만 훨씬 읽기 쉽습니다. 이는 `about:flags`로 이동하여 **Enable experimental Javascript features** 설정을 켜면 현재 Chrome 및 Opera([코드](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external } 참조)에서 작동하고 Microsoft Edge에서 작동합니다. 이는 곧 나올 버전에 기본적으로 활성화됩니다.
+이는 이전과 정확히 동일하게 작동하지만 훨씬 읽기 쉽습니다. 이는 `about:flags`로 이동하여 **Enable experimental JavaScript features** 설정을 켜면 현재 Chrome 및 Opera([코드](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external } 참조)에서 작동하고 Microsoft Edge에서 작동합니다. 이는 곧 나올 버전에 기본적으로 활성화됩니다.
 
 
 이는 수많은 새로운 ES6 항목(프라미스, 생성기, let, for-of)을 함께 제공합니다. 프라미스를 산출하면 spawn 도우미가 프라미스 해결을 기다리고 최종 값을 반환합니다. 프라미스가 거부되면 spawn이 yield 문 예외를 발생하게 하는데, 일반 자바스크립트 try/catch를 사용하여 해당 예외를 포착할 수 있습니다. 놀라울 정도로 간단한 비동기 코딩입니다.

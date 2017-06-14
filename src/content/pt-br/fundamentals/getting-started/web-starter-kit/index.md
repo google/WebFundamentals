@@ -134,7 +134,7 @@ As principais tarefas que a compilação de produção realiza são:
 Primeiro, a compilação do Sass será realizada no seu projeto. Depois da compilação do Sass
 , o Autoprefixador será executado em todo o CSS.
 
-#### Verificar problemas em seu Javascript
+#### Verificar problemas em seu JavaScript
 
 A segunda etapa de compilação executa o JSHint no seu JavaScript.
 
