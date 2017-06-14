@@ -20,7 +20,7 @@ The effort led to the formation of the W3C specification [Web Animations 1.0](ht
 
 The first step from the Blink team in getting Web Animations out into the world is replacing the existing Blink CSS Animations/Transitions C++ implementation with the Web Animations engine. Having reached that milestone now, we'd like as many developers as possible to check nothing's been broken and more importantly to keep an eye on the implementation effort and give us feedback on what's good/bad or might need changing.
 
-Next up will be implementation of an API that lets you create, modify, and interrogate animations from JavaScript. The API is designed to let animations run efficiently (by using declarative semantics so Javascript manages creating animations but hands off control to the browser) whilst still exposing full animation control to the JavaScript developer.
+Next up will be implementation of an API that lets you create, modify, and interrogate animations from JavaScript. The API is designed to let animations run efficiently (by using declarative semantics so JavaScript manages creating animations but hands off control to the browser) whilst still exposing full animation control to the JavaScript developer.
 
 We're looking for active feedback on the proposed API to make sure we haven't missed any features needed for powerful animation control. As with any new feature, the specification will continue to change, so now is the time to make your voice heard - ideally by subscribing to and contributing to the mailing list public-fx@w3.org (and put [Web Animations] in the subject line so it gets noticed).
 

@@ -674,7 +674,7 @@ shipping in much more detail later on as it touches many parts of the API.
 
 The only edge case to note here is that if you define any of the parameters
 (`requestPayerName`, `requestPayerPhone` or `requestPayerEmail`) with a non-boolean
-value it will use the usual Javascript [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) /
+value it will use the usual JavaScript [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) /
 [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) value (i.e., null,
 undefined, 0 will be treated as false and 'string value', {}, [] will be treated
 as true).

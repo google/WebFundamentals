@@ -134,7 +134,7 @@ incorporado de OS X, llamado VoiceOver. Mira [este
 video](https://www.youtube.com/watch?v=QW_dUs9D1oQ) de Victor usando VoiceOver.
 
 Ahora, te toca intentar usar un lector de pantalla. Esta es una página con *ChromeVox
-Lite*, un lector de pantalla mínimo pero que funciona, escrito en Javascript. La pantalla
+Lite*, un lector de pantalla mínimo pero que funciona, escrito en JavaScript. La pantalla
 se ve borrosa a propósito, para simular una experiencia de baja visión y obligar al usuario
 a completar la tarea con un lector de pantalla. Por supuesto, tendrás que usar el
 navegador Chrome para este ejercicio.

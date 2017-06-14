@@ -101,7 +101,7 @@ In the body of the page, we define a button, assign our click handler to
 the `onclick` event, and we’re ready to go.
 
 Now, if we load the page and open the Chrome DevTools
-panel to watch the Javascript console, every time we click the button a
+panel to watch the JavaScript console, every time we click the button a
 performance measurement is taken. *And because we’ve registered to observe
 such measurements, they are forwarded to our event handler, asynchronously
 without the need to poll the timeline*, which displays the measurements
