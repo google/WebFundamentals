@@ -82,7 +82,7 @@ Install Karma, the relevant, plugins, and the test runners using `yarn`:
     yarn add --dev karma karma-chrome-launcher karma-mocha karma-chai
     yarn add --dev mocha chai
 
-or use `yarn`:
+or use `npm`:
 
     npm i --save-dev karma karma-chrome-launcher karma-mocha karma-chai
     npm i --save-dev mocha chai
