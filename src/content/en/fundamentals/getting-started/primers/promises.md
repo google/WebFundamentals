@@ -1019,7 +1019,7 @@ This works exactly as before but is so much easier to read. This works in
 Chrome and Opera today (see
 [code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html)),
 and works in Microsoft Edge by going to `about:flags` and turning on
-the **Enable experimental Javascript features** setting. This will be
+the **Enable experimental JavaScript features** setting. This will be
 enabled by default in an upcoming version.
 
 

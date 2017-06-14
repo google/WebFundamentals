@@ -825,7 +825,7 @@ Observa el asterisco antes del nombre de la función. El asterisco indica que es
 
 [Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }
 
-Esto funciona exactamente como antes, pero es más fácil de leer. Esto funciona en Chrome y Opera hoy (consulta el [código](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }), y funciona en Microsoft Edge recurriendo a `about:flags` y activando la configuración **Enable experimental Javascript features**. Será una configuración predeterminada en próximas versiones.
+Esto funciona exactamente como antes, pero es más fácil de leer. Esto funciona en Chrome y Opera hoy (consulta el [código](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }), y funciona en Microsoft Edge recurriendo a `about:flags` y activando la configuración **Enable experimental JavaScript features**. Será una configuración predeterminada en próximas versiones.
 
 
 Se combinan varios elementos nuevos de ES6: promesas, generadores, let, for-of, etc. Cuando producimos una promesa, el asistente de spawn espera a que se resuelva y muestra el valor final. Si se rechaza la promesa, spawn provoca una excepción en nuestra instrucción yield. Podemos detectar esta excepción con try y catch de JavaScript convencional. ¡Codificación asincrónica increíblemente simple!

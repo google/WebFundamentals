@@ -47,7 +47,7 @@ Progressive Web Apps 是:
 * HTML，CSS 和 JavaScript 的基本知識
 
 這份引導指南的重點是 Progressive Web Apps。其中有些概念的只是簡單的解釋
-而有些則是只提供示例代碼（例如 CSS 和其他不相關的 Javascipt ），你只需復制和粘貼即可。
+而有些則是只提供示例代碼（例如 CSS 和其他不相關的 JavaScript ），你只需復制和粘貼即可。
 
 ## 設置
 
