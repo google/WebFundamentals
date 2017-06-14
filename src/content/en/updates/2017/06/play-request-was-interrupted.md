@@ -51,9 +51,9 @@ necessarily start immediately after `video.play()` is executed.
 
 Moreover since [Chrome 50], a `play()` call on an a `<video>` or `<audio>`
 element returns a [Promise], a function that returns a single result
-asynchronously. If playback succeeds, the Promise is fulfilled, and if playback
-fails, the Promise is rejected along with an error message explaining the
-failure.
+asynchronously. If playback succeeds, the Promise is fulfilled and the
+`playing` event is fired at the same time. If playback fails, the Promise is
+rejected along with an error message explaining the failure.
 
 Now here's what happening:
 
@@ -84,15 +84,17 @@ is playing.
 <video id="video" preload="none" src="https://example.com/file.mp4"></video>
 
 <script>
+  // Show loading animation.
   var playPromise = video.play();
 
   if (playPromise !== undefined) {
     playPromise.then(_ => {
       // Automatic playback started!
+      // Show playing UI.
     })
     .catch(error => {
       // Auto-play was prevented
-      // Show a UI element to let the user manually start playback
+      // Show paused UI.
     });
   }
 </script>
@@ -103,17 +105,19 @@ is playing.
 &lt;video id="video" preload="none" src="https://example.com/file.mp4">&lt;/video>
 &nbsp;
 &lt;script>
+  // Show loading animation.
   var playPromise = video.play();
 &nbsp;
   if (playPromise !== undefined) {
     playPromise.then(_ => {
       // Automatic playback started!
+      // Show playing UI.
       <strong>// We can now safely pause video...
       video.pause();</strong>
     })
     .catch(error => {
       // Auto-play was prevented
-      // Show a UI element to let the user manually start playback
+      // Show paused UI.
     });
   }
 &lt;/script>
