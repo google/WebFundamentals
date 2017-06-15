@@ -102,7 +102,7 @@ Web Starter Kit 将为您自动添加所有前缀。
       margin: 0 auto;
     }
 
-#### 检查 Javascript
+#### 检查 JavaScript
 
 JSHint 工具可扫描您的 JavaScript 代码，以检查 JavaScript 逻辑的潜在问题，并[实施编码最佳做法](//www.jshint.com/docs/){: .external }。
 

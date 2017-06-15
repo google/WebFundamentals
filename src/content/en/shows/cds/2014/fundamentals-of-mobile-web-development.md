@@ -73,8 +73,8 @@ In Web Starter Kit we have the following processes:
 <img src="{/web/shows/imgs/cds/2014/fundamentals-of-web-dev/image02.png" alt="Diagram of Web Starter Kits Build Process" width="624" height="470" style="max-width: 100%; height: auto;" />
 </p>
 
-We minify and concatenate CSS and Javascript so that the browser can fetch the
-file quickly, the Javascript is also run through JSHint to check for Javascript
+We minify and concatenate CSS and JavaScript so that the browser can fetch the
+file quickly, the JavaScript is also run through JSHint to check for JavaScript
 best practices and common coding mistakes. Images are minified with imagemin and
 you can get **huge** reductions in file size by using this. We also have a
 process to create the styleguides CSS.

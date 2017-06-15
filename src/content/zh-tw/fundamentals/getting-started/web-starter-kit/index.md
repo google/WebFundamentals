@@ -101,7 +101,7 @@ description: 有時候一個新專案最難的部分是入門。  Web Starter Ki
       margin: 0 auto;
     }
 
-#### 請檢查您的 JAVAscript
+#### 請檢查您的 JavaScript
 
 JSHint 是一套工具，它會掃描您的 JavaScript 程式碼，以檢查您 JavaScript 邏輯的可能問題，
 並 [強制程式碼編寫的最佳做法](//www.jshint.com/docs/){: .external }。
@@ -140,7 +140,7 @@ Autoprefixer 會快速瀏覽所有 CSS。
 #### 建置 HTML 頁面
 
 下一步會審查您的 HTML 檔案，尋找建置區塊，
-以串連及縮小 JavaScript。 在處理了 Javascript 之後，
+以串連及縮小 JavaScript。 在處理了 JavaScript 之後，
 建置程序會縮小 HTML 頁面。
 
 縮小藉由移除並非真正需要的註解或空白字元，
@@ -161,7 +161,7 @@ Autoprefixer 會快速瀏覽所有 CSS。
     <!-- endbuild -->
 
 建置區塊只是特別格式的註解。
-位於建置區塊之間的您所有 javascript 檔案會被合併 (串連)，
+位於建置區塊之間的您所有 JavaScript 檔案會被合併 (串連)，
 並縮小成名為 main.min.js 的檔案，而最終建置將以此指令碼標籤，取代這些指令碼：
 
 

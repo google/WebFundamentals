@@ -112,7 +112,7 @@ Tsaran](/web/fundamentals/accessibility/#understanding-users-diversity)
 
 
 次は、皆さんがスクリーン リーダーを試す番です。ここに、*ChromeVox
-Lite* のページがあります。Javascript で記述した、最小限の機能を持つスクリーン リーダーです。低視力の状態をシミュレートして、ユーザーがスクリーン リーダーを使用してタスクを完了できるように、画面はあえてぼやけています。当然ながら、この演習には Chrome ブラウザを使用する必要があります。
+Lite* のページがあります。JavaScript で記述した、最小限の機能を持つスクリーン リーダーです。低視力の状態をシミュレートして、ユーザーがスクリーン リーダーを使用してタスクを完了できるように、画面はあえてぼやけています。当然ながら、この演習には Chrome ブラウザを使用する必要があります。
 
 
 [ChromeVox Lite デモページ](http://udacity.github.io/ud891/lesson3-semantics-built-in/02-chromevox-lite/)

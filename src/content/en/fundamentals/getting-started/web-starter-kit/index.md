@@ -102,7 +102,7 @@ final output below:
       margin: 0 auto;
     }
 
-#### Check Your Javascript
+#### Check Your JavaScript
 
 JSHint is a tool which scans your JavaScript code to check for possible problems
 with your JavaScript logic and [enforces coding best practices](//www.jshint.com/docs/){: .external }.
