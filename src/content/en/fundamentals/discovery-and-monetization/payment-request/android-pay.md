@@ -150,7 +150,7 @@ your behalf and returns a chargeable gateway token.
 
     var supportedInstruments = [
       {
-        supportedMethods: ['basic-card']
+        supportedMethods: ['basic-card'],
         data: {
           supportedNetworks: ['amex', 'discover', 'mastercard', 'visa']
         }
@@ -233,7 +233,7 @@ refer to the specific gateway's documentation for more details.
 
       var supportedInstruments = [
         {
-          supportedMethods: ['basic-card']
+          supportedMethods: ['basic-card'],
           data: {
             supportedNetworks: ['amex', 'discover','mastercard','visa'],
             supportedTypes: ['credit']
@@ -380,7 +380,7 @@ in the PaymentRequest.
 
     var supportedInstruments = [
       {
-        supportedMethods: ['basic-card']
+        supportedMethods: ['basic-card'],
         data: {
           supportedNetworks: ['amex', 'discover','mastercard','visa'],
           supportedTypes: ['credit']
@@ -396,7 +396,7 @@ in the PaymentRequest.
             tokenizationType: 'NETWORK_TOKEN',
             parameters: {
               //public key to encrypt response from Android Pay
-              'publicKey': 'BC9u7amr4kFD8qsdxnEfWV7RPDR9v4gLLkx3jfyaGOvxBoEuLZKE0Tt5O/2jMMxJ9axHpAZD2Jhi4E74nqxr944='
+              publicKey: 'BC9u7amr4kFD8qsdxnEfWV7RPDR9v4gLLkx3jfyaGOvxBoEuLZKE0Tt5O/2jMMxJ9axHpAZD2Jhi4E74nqxr944='
             }
           }
         }
