@@ -96,6 +96,11 @@ The following keyboard shortcuts are available in all DevTools panels:
       <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">M</kbd></td>
     </tr>
     <tr>
+      <td data-th="Global Shortcuts">Open Command Menu</td>
+      <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">P</kbd></td>
+      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">P</kbd></td>
+    </tr>
+    <tr>
       <td data-th="Global Shortcuts">Toggle Console / close settings dialog when open</td>
       <td data-th="Windows"><kbd class="kbd">Esc</kbd></td>
       <td data-th="Mac"><kbd class="kbd">Esc</kbd></td>

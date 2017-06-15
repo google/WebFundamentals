@@ -51,9 +51,9 @@ necessarily start immediately after `video.play()` is executed.
 
 Moreover since [Chrome 50], a `play()` call on an a `<video>` or `<audio>`
 element returns a [Promise], a function that returns a single result
-asynchronously. If playback succeeds, the Promise is fulfilled, and if playback
-fails, the Promise is rejected along with an error message explaining the
-failure.
+asynchronously. If playback succeeds, the Promise is fulfilled and the
+`playing` event is fired at the same time. If playback fails, the Promise is
+rejected along with an error message explaining the failure.
 
 Now here's what happening:
 
@@ -64,14 +64,13 @@ Now here's what happening:
 Since we're not handling the video play Promise in our code, an error message
 appears in Chrome DevTools.
 
-Note: Calling `video.pause()` isn't the only way to interrupt a video "play()"
-request. You can reset entirely video playback state, including buffer with
+Note: Calling `video.pause()` isn't the only way to interrupt a video. You can
+entirely reset the video playback state, including the buffer, with
 `video.load()` and `video.src = ''`.
 
 ## How to fix it {: #fix }
 
-Now that we understand the root cause, let's see what we can do to fix this
-properly.
+Now that we understand the root cause, let's see what we can do to fix this.
 
 First, don't ever assume a media element (video or audio) will play. Look at
 the Promise returned by the `play` function to see if it was rejected. It is
@@ -84,15 +83,17 @@ is playing.
 <video id="video" preload="none" src="https://example.com/file.mp4"></video>
 
 <script>
+  // Show loading animation.
   var playPromise = video.play();
 
   if (playPromise !== undefined) {
     playPromise.then(_ => {
       // Automatic playback started!
+      // Show playing UI.
     })
     .catch(error => {
       // Auto-play was prevented
-      // Show a UI element to let the user manually start playback
+      // Show paused UI.
     });
   }
 </script>
@@ -103,26 +104,28 @@ is playing.
 &lt;video id="video" preload="none" src="https://example.com/file.mp4">&lt;/video>
 &nbsp;
 &lt;script>
+  // Show loading animation.
   var playPromise = video.play();
 &nbsp;
   if (playPromise !== undefined) {
     playPromise.then(_ => {
       // Automatic playback started!
+      // Show playing UI.
       <strong>// We can now safely pause video...
       video.pause();</strong>
     })
     .catch(error => {
       // Auto-play was prevented
-      // Show a UI element to let the user manually start playback
+      // Show paused UI.
     });
   }
 &lt;/script>
 </pre>
 
 That's great for this simple example but what if you use `video.play()` to be
-able to play a video later when user interacts with the website you may think?
+able to play a video later?
 
-I'll tell you a secret... you don't have to use `video.play()`, you can use
+I'll tell you a secret. You don't have to use `video.play()`, you can use
 `video.load()` and here's how:
 
 <span class="compare-better">Example: Fetch & Play</span>
@@ -157,7 +160,7 @@ I'll tell you a secret... you don't have to use `video.play()`, you can use
 ```
 
 Warning: Don't make your `onButtonClick` function asynchronous with the `async`
-keyword for instance. You'll lose the "user gesture token" required to allow
+keyword. You'll lose the "user gesture token" required to allow
 your video to play later.
 
 ## Play promise support {: #support }

@@ -825,7 +825,7 @@ Namun apa artinya bagi promise? Baiklah, kita Anda bisa menggunakan perilaku kem
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }
 
-Ini berfungsi persis seperti sebelumnya namun jauh lebih mudah dibaca. Ini berfungsi di Chrome dan Opera (lihat [kode](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }), dan di Microsoft Edge dengan masuk ke `about:flags` dan mengaktifkan setelan **Enable experimental Javascript features**. Ini akan diaktifkan secara default di versi mendatang.
+Ini berfungsi persis seperti sebelumnya namun jauh lebih mudah dibaca. Ini berfungsi di Chrome dan Opera (lihat [kode](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }), dan di Microsoft Edge dengan masuk ke `about:flags` dan mengaktifkan setelan **Enable experimental JavaScript features**. Ini akan diaktifkan secara default di versi mendatang.
 
 
 Ini akan melontarkan sekaligus banyak fitur baru ES6: promise, generator, let, for-of. Bila kita menyerahkan promise, spawn helper akan menunggu promise untuk ditangani dan mengembalikan nilai final. Jika promise ditolak, spawn akan menyebabkan pernyataan yield kita melontarkan pengecualian, yang bisa kita tangkap dengan try/catch JavaScript biasa. Pengkodean async yang sangat sederhana!

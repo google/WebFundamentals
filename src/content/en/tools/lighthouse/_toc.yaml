@@ -83,6 +83,8 @@ toc:
         path: /web/tools/lighthouse/audits/noopener
       - title: Oversized Images
         path: /web/tools/lighthouse/audits/oversized-images
+      - title: Page Load Is Fast Enough On 3G
+        path: /web/tools/lighthouse/audits/fast-3g
       - title: Perceptual Speed Index
         path: /web/tools/lighthouse/audits/speed-index
       - title: Redirects HTTP Traffic To HTTPS
