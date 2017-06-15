@@ -620,7 +620,7 @@ Another, more in-depth example from `<fancy-tabs>`:
     `;
     
 
-In this example, there are slots: a named slot for the tab titles, a
+In this example, there are two slots: a named slot for the tab titles, and a
 slot for the tab panel content. When the user selects a tab, we bold their selection
 and reveal its panel. That's done by selecting distributed nodes that have the
 `selected` attribute. The custom element's JS (not shown here) adds that
