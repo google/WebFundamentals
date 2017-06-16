@@ -1667,9 +1667,9 @@ it's restarted.
 
 ## PaymentRequest Shim
 
-To mitigate pains of catching up with this living standard API, we strongly
-recommend you add this shim to the <head> of your page. This shim will be
-updated as the API changes and will do its best to keep your code working for at
-least 2 major releases of Chrome.
+To mitigate the pains of catching up with this living standard API, we strongly
+recommend you add [this shim](https://github.com/GoogleChrome/payment-request-shim)
+to the `<head>` of your page. This shim will be updated as the API changes and will
+do its best to keep your code working for at least 2 major releases of Chrome.
 
-[For more details visit the Github Page](https://github.com/GoogleChrome/payment-request-shim)
+We also provide a [PaymentRequest wrapper for Apple Pay JS](https://github.com/GoogleChrome/appr-wrapper).
