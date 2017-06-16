@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What is really happening with "DOMException: The play() request was interrupted"?
 
-{# wf_updated_on: 2017-06-14 #}
+{# wf_updated_on: 2017-06-16 #}
 {# wf_published_on: 2017-06-14 #}
 {# wf_tags: media,devtools #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -21,7 +21,7 @@ JavaScript Console?
 or
 
 > _Uncaught (in promise) DOMException: The play() request was interrupted by a
-> load request._
+> new load request._
 
 You're in the right place then. Have no fear. I'll explain [what is causing
 this](#error) and [how to fix it](#fix).
