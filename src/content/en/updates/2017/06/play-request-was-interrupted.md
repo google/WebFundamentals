@@ -21,7 +21,7 @@ JavaScript Console?
 or
 
 > _Uncaught (in promise) DOMException: The play() request was interrupted by a
-> load request._
+> new load request._
 
 You're in the right place then. Have no fear. I'll explain [what is causing
 this](#error) and [how to fix it](#fix).
