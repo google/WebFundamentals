@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-05-23T21:38:16Z",
+  "updated": "2017-06-14T20:47:06Z",
   "id": "integrating-analytics",
   "duration": 0,
   "title": "Integrating Analytics",
@@ -12,6 +12,8 @@
   "theme": "",
   "status": null,
   "category": null,
-  "tags": [],
+  "tags": [
+    "3-day"
+  ],
   "url": "integrating-analytics"
 }

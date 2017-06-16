@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-04-25T20:47:10Z",
+  "updated": "2017-06-14T20:48:36Z",
   "id": "live-data-in-the-service-worker",
   "duration": 0,
   "title": "Live Data in the Service Worker",
@@ -12,6 +12,8 @@
   "theme": "",
   "status": null,
   "category": null,
-  "tags": [],
+  "tags": [
+    "3-day"
+  ],
   "url": "live-data-in-the-service-worker"
 }

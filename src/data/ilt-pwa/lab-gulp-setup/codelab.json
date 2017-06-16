@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-05-03T16:51:18Z",
+  "updated": "2017-06-13T00:08:05Z",
   "id": "lab-gulp-setup",
   "duration": 0,
   "title": "Lab: Gulp Setup",
@@ -12,6 +12,9 @@
   "theme": "",
   "status": null,
   "category": null,
-  "tags": [],
+  "tags": [
+    "2-day",
+    "3-day"
+  ],
   "url": "lab-gulp-setup"
 }
