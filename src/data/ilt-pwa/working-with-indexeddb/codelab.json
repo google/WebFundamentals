@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-04-25T20:24:00Z",
+  "updated": "2017-06-14T20:49:08Z",
   "id": "working-with-indexeddb",
   "duration": 0,
   "title": "Working with IndexedDB",
@@ -12,6 +12,8 @@
   "theme": "",
   "status": null,
   "category": null,
-  "tags": [],
+  "tags": [
+    "3-day"
+  ],
   "url": "working-with-indexeddb"
 }

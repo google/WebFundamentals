@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-05-19T20:40:29Z",
+  "updated": "2017-06-13T00:05:27Z",
   "id": "lab-integrating-web-push",
   "duration": 0,
   "title": "Lab: Integrating Web Push",
@@ -12,6 +12,8 @@
   "theme": "",
   "status": null,
   "category": null,
-  "tags": [],
+  "tags": [
+    "3-day"
+  ],
   "url": "lab-integrating-web-push"
 }
