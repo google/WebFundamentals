@@ -397,7 +397,7 @@ DOMContentLoaded as the start time, but it's often more accurate to use
 something like the moment your hero elements are visible or the point when you
 know all your event listeners have been added.
 
-Refer to the [TTI polyfill documentation](https://github.com/deepanjanroy/tti-
+Refer to the [TTI polyfill documentation](https://github.com/GoogleChrome/tti-
 polyfill) for complete installation and usage instructions.
 
 <aside>
