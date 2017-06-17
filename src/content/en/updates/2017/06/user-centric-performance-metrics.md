@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Leveraging the Performance Metrics that Most Affect User Experience.
 
-{# wf_updated_on: 2017-06-01 #}
+{# wf_updated_on: 2017-06-17 #}
 {# wf_published_on: 2017-06-01 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/2017/06/perf-metrics-histogram.png #}
