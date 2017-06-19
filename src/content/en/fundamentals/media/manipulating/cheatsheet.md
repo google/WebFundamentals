@@ -198,8 +198,8 @@ whitespace. For the `-key_id` flag repeat the key value.
     packager \
       input=myvideo.mp4,stream=audio,output=glocka.m4a \
       input=myvideo.mp4,stream=video,output=glockv.mp4 \
-      --enable_fixed_key_encryption --enable_fixed_key_decryption \
-      -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE \
+      --enable_fixed_key_encryption \
+      -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \
 
 ### Create a key information file
 
@@ -233,7 +233,7 @@ This command will accept a key with either 16 or 32 characters.
       input=glocken.mp4,stream=audio,output=enc_audio.m4a \
       --enable_widevine_encryption \
       --key_server_url "https://license.uat.widevine.com/cenc/getcontentkey/widevine_test" \
-      --content_id "16_Rand_Hex_Chrs" --signer "widevine_test" \
+      --content_id "Hec_converted_random_ID" --signer "widevine_test" \
       --aes_signing_key "1ae8ccd0e7985cc0b6203a55855a1034afc252980e970ca90e5202689f947ab9" \
       --aes_signing_iv "d58ce954203b7c9a9a9d467f59839249"
 
@@ -269,7 +269,7 @@ Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need t
     ```  input=myvideo.webm,stream=video,output=myvideo_video.webm \```<br/>
     ```  input=myvideo.webm,stream=audio,output=myvideo_audio.webm \```<br/>
     ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
-    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE \```<br/>
+    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \```<br/>
     ```  --mpd_output myvideo_vod.mpd```
 
 ### DASH/mp4 with Shaka Packager
@@ -305,7 +305,7 @@ Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need t
     ```  input=mymovie.mp4,stream=audio,output=myaudio.m4a \```<br/>
     ```  input=mymovie.mp4,stream=video,output=myvideo.mp4 \```<br/>
     ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
-    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE \```<br/>
+    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \```<br/>
     ```  --mpd_output myvideo_vod.mpd```
     
 ### Widevine
@@ -363,4 +363,4 @@ ffmpeg when I need to.
     ```  --hls_master_playlist_output="master_playlist.m3u8" \```<br/>
     ```  --hls_base_url="http://localhost:1000/" \```<br/>
     ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
-    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE \```<br/>
+    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \```<br/>
