@@ -31,7 +31,7 @@ To allow developers to consume a user's resources in the background, the web
 platform is introducing the concept of a budget using the new Budget API. Each
 site will be awarded an amount of resource based on user engagement that they 
 can consume for background actions,
-such as a silent push, where each operation will depleat the budget. When the
+such as a silent push, where each operation will deplete the budget. When the
 budget is spent, background actions can no longer be performed without user
 visibility. The user agent will be responsible for determining budget
 assigned to a web app based on it's heuristics, for example budget allowance
