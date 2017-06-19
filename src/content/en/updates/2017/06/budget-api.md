@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Budget API allows developers to perform background actions without notifying users, enabling use cases like silent push.
 
-{# wf_updated_on: 2017-06-07 #}
+{# wf_updated_on: 2017-06-19 #}
 {# wf_published_on: 2017-06-07 #}
 {# wf_tags: javascript,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
