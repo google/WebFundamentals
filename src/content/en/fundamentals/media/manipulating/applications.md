@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Much media work requires changing characteristics of media files. In this section, I intend to provide an easy onramp into that world.
 
-{# wf_updated_on: 2017-06-09 #}
+{# wf_updated_on: 2017-06-23 #}
 {# wf_published_on: 2017-06-09 #}
 
 # Application Primers {: .page-title }
@@ -35,12 +35,13 @@ packages.
 When we peek into a media file, we're going to see many file characteristics.
 For this article, I'm only focusing on characteristics in the cheat sheet.
  
-Let's start with streams. Media files can can almost be thought of as multiple
-files in one. The multiple "files" are called _streams_. A media file can have
-anywhere from one to four streams, but our examples will only contain at most
-two, an audio stream and a video stream. (The other two stream types are
-captions and data, both of which are beyond the scope of this article). There
-are many instances where audio and video streams are dealt with separately.
+Let's start with streams. Media files can almost be thought of as multiple files
+in one. The multiple "files" are called _streams_. A media file can have any
+number of streams, of more types than I will go into here. My examples will
+contain at most two, an audio stream and a video stream. (Among the other types
+you might encounter are captions and data, both of which are beyond the scope of
+this article). There are many instances where audio and video streams are dealt
+with separately.
  
 There are several characteristics that apply to each stream.
  

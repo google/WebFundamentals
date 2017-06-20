@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: TBD.
 
-{# wf_updated_on: 2017-06-16 #}
-{# wf_published_on: 2017-06-16 #}
+{# wf_updated_on: 2017-06-23 #}
+{# wf_published_on: 2017-06-23 #}
 
 # Media File Manipulation {: .page-title }
 
@@ -53,13 +53,16 @@ in Munich's MarienPlatz.
 Before I start manipulating media files, I want to talk a bit about how media
 files are put together. I think of them as being like an onion. The file that
 you see in your operating system shell is a _container_, identified by a file
-extension (mp4, webm, etc.). The container houses one or more _streams_ of up to
-four types, specifically audio, video, captions, and data. Although containers
-will typically contain only one stream of each type, some container types, webm
-for example, allow multiple streams of the same type. Within the audio and video
-streams, the actual data is compressed using a _codec_. As we'll see later, the
-distinction between a container and a codec is import as files with the same
-container can have their contents encoded with different codecs.
+extension (mp4, webm, etc.). The container houses one or more _streams_. Media
+files may contain many streams of varying types and even multiple streams of the
+same type. Most files you'll encounter will only contain a single audio and a
+single video stream. (Some may also contain captions and data, but I won't be
+covering those.)
+
+Within the audio and video streams, the actual data is compressed using a
+_codec_. As we'll see later, the distinction between a container and a codec is
+import as files with the same container can have their contents encoded with
+different codecs.
 
 (If these terms are new
 to you, I explain them in

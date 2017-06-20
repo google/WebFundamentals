@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A summary of commands used to convert a raw mov file to an encrypted full HD file for web playback.
 
-{# wf_updated_on: 2017-06-12 #}
+{# wf_updated_on: 2017-06-23 #}
 {# wf_published_on: 2017-06-09 #}
 
 # Media Manipulation Cheat Sheet  {: .page-title }
