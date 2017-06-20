@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Leveraging the Performance Metrics that Most Affect User Experience.
 
-{# wf_updated_on: 2017-06-01 #}
+{# wf_updated_on: 2017-06-17 #}
 {# wf_published_on: 2017-06-01 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/2017/06/perf-metrics-histogram.png #}
@@ -397,7 +397,7 @@ DOMContentLoaded as the start time, but it's often more accurate to use
 something like the moment your hero elements are visible or the point when you
 know all your event listeners have been added.
 
-Refer to the [TTI polyfill documentation](https://github.com/deepanjanroy/tti-
+Refer to the [TTI polyfill documentation](https://github.com/GoogleChrome/tti-
 polyfill) for complete installation and usage instructions.
 
 <aside>

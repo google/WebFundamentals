@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Enabling HTTPS on your servers is critical to securing your webpages. 
 
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2017-06-19 #}
 {# wf_published_on: 2014-01-16 #}
 
 # What is EME? {: .page-title }
@@ -76,7 +76,7 @@ Here's how the components of EME interact, corresponding to the
 
 > If multiple formats or codecs are available,
 > [MediaSource.isTypeSupported()](https://www.w3.org/TR/media-source/#dom-mediasource-istypesupported) or
-> [HTMLMediaElement.canPlayType()](https://dev.w3.org/html5/spec-preview/media-elements.html#dom-navigator-canplaytype
+> [HTMLMediaElement.canPlayType()](https://dev.w3.org/html5/spec-preview/media-elements.html#dom-navigator-canplaytype)
 > can both be used to select the right one.
 > However, the CDM may only support a subset of what the browser supports for
 > unencrypted content. It's best to negotiate a MediaKeys configuration before

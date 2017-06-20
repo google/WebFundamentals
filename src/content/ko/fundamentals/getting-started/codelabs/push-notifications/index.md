@@ -82,7 +82,7 @@ __choose folder__ 버튼을 클릭하고 앱 폴더를 선택하세요. 그러�
 
 이제는 웹브라우저에서 사이트를 방문하세요(강조표시된 Web Server URL을 클릭함). 그러면 다음과 같은 페이지가 나타날 것입니다.
 
-![49b343a07e2c92d.png](img/49b343a07e2c92d.png)
+![4525ec369fc2ae47.png](img/4525ec369fc2ae47.png)
 
 ### 서비스 워커는 항상 업데이트할 것
 
@@ -90,7 +90,7 @@ __choose folder__ 버튼을 클릭하고 앱 폴더를 선택하세요. 그러�
 
 Chrome에서 이를 설정하려면 DevTools(마우스 오른쪽 버튼 클릭 > Inspect)를 열고 __Application__ 패널로 이동하고 __Service Workers__ 탭을 클릭한 후 __Update on Reload__ 확인란을 선택하세요. 이 확인란을 선택하면 페이지를 새로 고칠 때마다 서비스 워커가 강제로 업데이트됩니다.
 
-![d670cb813f3a7575.png](img/d670cb813f3a7575.png)
+![6b698d7c7bbf1bc0.png](img/6b698d7c7bbf1bc0.png)
 
 
 ## 서비스 워커 등록
@@ -133,7 +133,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 
 다음과 같이 Chrome DevTools를 열어 `Service Worker is registered`용 콘솔을 확인하세요.
 
-![d712c8726928ca4.png](img/d712c8726928ca4.png)
+![de3ceca91043d278.png](img/de3ceca91043d278.png)
 
 ### 애플리케이션 서버 키 가져오기
 
@@ -215,7 +215,7 @@ navigator.serviceWorker.register('sw.js')
 
 웹 앱을 열면 ‘Enable Push Messaging' 버튼이 활성화되어 있을 것이며(즉, 클릭할 수 있음) 콘솔에 ‘User is NOT subscribed.'로 표시될 것입니다.
 
-![b9787463acb7e3fb.png](img/b9787463acb7e3fb.png)
+![15f6375617c11974.png](img/15f6375617c11974.png)
 
 코드랩의 나머지 부분으로 계속 진행하면서 사용자가 구독/구독 취소할 때 버튼 텍스트가 바뀌는 것을 볼 수 있을 것입니다.
 
@@ -354,11 +354,11 @@ function updateSubscriptionOnServer(subscription) {
 
 웹 앱으로 다시 돌아가 버튼을 클릭하면 다음과 같은 권한 프롬프트가 나타날 것입니다.
 
-![5b8a7e9905f2237b.png](img/5b8a7e9905f2237b.png)
+![227cea0abe03a5b4.png](img/227cea0abe03a5b4.png)
 
 권한을 허용하면 콘솔에서 `PushSubscription`과 함께 `User is subscribed:`를 출력하고 버튼의 텍스트가 ‘Disable Push Messaging'으로 바뀌는 것을 알 수 있고 페이지 하단에서 구독을 JSON으로 볼 수 있을 것입니다.
 
-![bfdc9f92e001934a.png](img/bfdc9f92e001934a.png)
+![8fe2b1b110f87b34.png](img/8fe2b1b110f87b34.png)
 
 
 ## 거부된 권한 처리
@@ -395,11 +395,11 @@ function updateBtn() {
 
 이전 단계에서 웹 앱에 대한 권한을 이미 허용했으므로 URL 표시줄의 원 안에 표시된 __i__를 클릭하고 알림 권한을 *Use global default (Ask)*로 변경해야 합니다.
 
-![c69f7428408c5bbc.png](img/c69f7428408c5bbc.png)
+![8775071d7fd66432.png](img/8775071d7fd66432.png)
 
 이 설정을 변경한 후 페이지를 새로 고치고 *Enable Push Messaging* 버튼을 클릭한 후, 이번에는 권한 대화상자에서 *Block*을 선택하세요. 그러면 버튼 텍스트가 *Push Messaging Blocked*로 표시되면서 비활성화됩니다.
 
-![e36f921fa7598419.png](img/e36f921fa7598419.png)
+![2b5314607196f4e1.png](img/2b5314607196f4e1.png)
 
 이렇게 변경하면 사용자 구독이 가능하고 가능한 권한 관련 시나리오를 처리할 수 있게 됩니다.
 
@@ -468,7 +468,7 @@ event.waitUntil(notificationPromise);
 
 웹 앱에서 푸시 메시지를 구독하여 콘솔에 *User IS subscribed*가 표시되는지 확인한 다음, DevTools의 *Application* 채널로 이동해 *Service Workers* 탭에서 자신의 서비스 워커 아래에 있는 *Push* 링크를 클릭하세요.
 
-![c0fab1022906d01f.png](img/c0fab1022906d01f.png)
+![2b089bdf10a8a945.png](img/2b089bdf10a8a945.png)
 
 클릭하면 다음과 같은 알림 메시지가 나타날 것입니다.
 
@@ -530,19 +530,19 @@ DevTools에서 푸시 메시지를 다시 트리거하고 알림을 클릭해보
 
 이 내용은 본 코드랩의 범위를 벗어나지만, 이 코드랩의 도우미 사이트([https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/))를 통해 실제 푸시 메시지를 트리거할 수 있습니다. 다음과 같이 구독 정보를 복사해 페이지 하단에 붙여넣으세요.
 
-![cb84e05044ad029f.png](img/cb84e05044ad029f.png)
+![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
 그런 다음, 아래와 같이 도우미 사이트의 *Subscription to Send To* 텍스트 영역에도 붙여넣으세요.
 
-![e320ddd1b66682e6.png](img/e320ddd1b66682e6.png)
+![a12fbfdc08233592.png](img/a12fbfdc08233592.png)
 
 그러면 *Text to Send* 아래에서 푸시 메시지로 보내고 싶은 문자열을 추가할 수 있고, 마지막으로 *Send Push Message* 버튼을 클릭하면 됩니다.
 
-![3c5c0d5d1c3deda4.png](img/3c5c0d5d1c3deda4.png)
+![2973c2b818ca9324.png](img/2973c2b818ca9324.png)
 
 그러면 푸시 메시지가 수신되고 자신이 포함한 텍스트가 콘솔에 출력될 것입니다.
 
-![fdedaa6d10e2f43e.png](img/fdedaa6d10e2f43e.png)
+![75b1fedbfb7e0b99.png](img/75b1fedbfb7e0b99.png)
 
 이런 식으로 데이터 송수신을 테스트하면서 알림을 원하는 형태로 조작할 수 있습니다.
 
@@ -633,7 +633,7 @@ swRegistration.pushManager.getSubscription()
 
 웹 앱에서 *Enable Push Messaging* / *Disable Push Messaging*을 누를 수 있어야 하며 로그에는 사용자의 구독 여부가 표시됩니다.
 
-![32acb7ec17ef75a8.png](img/32acb7ec17ef75a8.png)
+![33dd89c437c17c97.png](img/33dd89c437c17c97.png)
 
 
 ## 완성

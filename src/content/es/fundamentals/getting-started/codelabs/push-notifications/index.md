@@ -82,7 +82,7 @@ Luego, detén y reinicia el servidor deslizando el activador denominado "Web Ser
 
 Ahora visita tu sitio en tu propio navegador web (haciendo clic en la URL destacada de Web Server) o deberías ver una página como esta:
 
-![49b343a07e2c92d.png](img/49b343a07e2c92d.png)
+![4525ec369fc2ae47.png](img/4525ec369fc2ae47.png)
 
 ### Siempre actualiza el service worker
 
@@ -90,7 +90,7 @@ Durante el desarrollo, es útil para garantizar que tu service worker esté siem
 
 Para configurar esto en Chrome, abre DevTools (Clic derecho > Inspect) y dirígete al panel de __Application__, haz clic en la pestaña __Service Workers__ y marca la casilla de verificación __Update on Reload__. Cuando esta casilla de verificación está marcada, el service worker se actualiza forzosamente cada vez que se vuelve a cargar la página.
 
-![d670cb813f3a7575.png](img/d670cb813f3a7575.png)
+![6b698d7c7bbf1bc0.png](img/6b698d7c7bbf1bc0.png)
 
 
 ## Registra un Service Worker
@@ -133,7 +133,7 @@ Revisa tus cambios abriendo la URL __127.0.0.1:8887__ en el navegador.
 
 Abre Chrome DevTools para revisar la consola de `Service Worker is registered`, como aquí:
 
-![d712c8726928ca4.png](img/d712c8726928ca4.png)
+![de3ceca91043d278.png](img/de3ceca91043d278.png)
 
 ### Obtén claves del servidor de la app
 
@@ -215,7 +215,7 @@ navigator.serviceWorker.register('sw.js')
 
 Abre tu app web y deberías ver que el botón ‘Enable Push Messaging' está habilitado (puedes hacerle clic) y deberías ver ‘User is NOT subscribed.' en la consola.
 
-![b9787463acb7e3fb.png](img/b9787463acb7e3fb.png)
+![15f6375617c11974.png](img/15f6375617c11974.png)
 
 Cuando avanzamos por el resto del code lab, deberías ver que el texto del botón cambia cuando el usuario se suscribe/anula la suscripción.
 
@@ -354,11 +354,11 @@ function updateSubscriptionOnServer(subscription) {
 
 Si vuelves a tu app web e intentas hacer clic en el botón, deberías ver un aviso de permiso como este:
 
-![5b8a7e9905f2237b.png](img/5b8a7e9905f2237b.png)
+![227cea0abe03a5b4.png](img/227cea0abe03a5b4.png)
 
 Si otorgas el permiso, deberías ver la impresión de consola `User is subscribed:` con la `PushSubscription`, el texto del botón cambiará a ‘Disable Push Messaging' y podrás ver la suscripción como JSON en la parte inferior de la página.
 
-![bfdc9f92e001934a.png](img/bfdc9f92e001934a.png)
+![8fe2b1b110f87b34.png](img/8fe2b1b110f87b34.png)
 
 
 ## Manejo del acceso denegado
@@ -395,11 +395,11 @@ Sabemos que si el permiso está `denied`, no se puede suscribir al usuario y no 
 
 Como ya hemos otorgado permiso para nuestra app web en el paso anterior, tenemos que hacer clic en la __i__ que está en un círculo en la barra de URL y cambiar el permiso de notificaciones a *Use global default (Ask)* .
 
-![c69f7428408c5bbc.png](img/c69f7428408c5bbc.png)
+![8775071d7fd66432.png](img/8775071d7fd66432.png)
 
 Después de cambiar esta configuración, actualiza la página y haz clic en el botón *Enable Push Messaging* y, esta vez, selecciona *Block* en el diálogo de permiso. El texto del botón ahora será *Push Messaging Blocked* y estará inhabilitado.
 
-![e36f921fa7598419.png](img/e36f921fa7598419.png)
+![2b5314607196f4e1.png](img/2b5314607196f4e1.png)
 
 Con este cambio, ahora podemos suscribir al usuario y nos estamos ocupando de las posibles situaciones de permiso.
 
@@ -468,7 +468,7 @@ Con nuestro evento push en el service worker, podemos probar qué sucede cuando 
 
 En tu app web, suscríbete a los mensajes push, asegurándote de tener *User IS subscribed* en tu consola. Luego, dirígete al panel *Application* en DevTools bajo la pestaña *Service Workers* y haz clic en el vínculo *Push* bajo tu service worker.
 
-![c0fab1022906d01f.png](img/c0fab1022906d01f.png)
+![2b089bdf10a8a945.png](img/2b089bdf10a8a945.png)
 
 Cuando le haces clic debes ver una notificación como esta:
 
@@ -530,19 +530,19 @@ Normalmente, el proceso para esto sería enviar una suscripción de una página 
 
 Esto está fuera de alcance para este codelab, pero puedes usar el sitio complementario ([https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) para que este code lab dispare un mensaje push real. Copia y pega la suscripción en la parte inferior de la página:
 
-![cb84e05044ad029f.png](img/cb84e05044ad029f.png)
+![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
 Luego, pega esto en el sitio complementario, en el área de texto  *Subscription to Send To*  :
 
-![e320ddd1b66682e6.png](img/e320ddd1b66682e6.png)
+![a12fbfdc08233592.png](img/a12fbfdc08233592.png)
 
 Luego, bajo  *Text to Send*  puedes agregar cualquier cadena que desees enviar con el mensaje push y hacer clic en el botón  *Send Push Message*  .
 
-![3c5c0d5d1c3deda4.png](img/3c5c0d5d1c3deda4.png)
+![2973c2b818ca9324.png](img/2973c2b818ca9324.png)
 
 Luego, deberías recibir un mensaje push y el texto que incluiste se imprimirá en la consola.
 
-![fdedaa6d10e2f43e.png](img/fdedaa6d10e2f43e.png)
+![75b1fedbfb7e0b99.png](img/75b1fedbfb7e0b99.png)
 
 Deberías darte la oportunidad de probar el envío y recepción de datos, y de manipular notificaciones como resultado.
 
@@ -633,7 +633,7 @@ Llamar a `unsubscribe()` devuelve una promesa, ya que puede llevar un tiempo com
 
 Deberías poder presionar  *Enable Push Messaging*  /  *Disable Push Messaging*   en tu app web y los registros mostrarán que el usuario se suscribe y anula la suscripción.
 
-![32acb7ec17ef75a8.png](img/32acb7ec17ef75a8.png)
+![33dd89c437c17c97.png](img/33dd89c437c17c97.png)
 
 
 ## Finalizado

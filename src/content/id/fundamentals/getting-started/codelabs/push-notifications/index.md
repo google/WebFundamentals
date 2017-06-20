@@ -82,7 +82,7 @@ Kemudian berhenti dan restart server dengan menggeser toggle yang berlabel "Web 
 
 Sekarang kunjungi situs dalam browser web Anda (dengan mengeklik Web Server URL yang disorot) dan Anda akan melihat laman yang terlihat seperti ini:
 
-![49b343a07e2c92d.png](img/49b343a07e2c92d.png)
+![4525ec369fc2ae47.png](img/4525ec369fc2ae47.png)
 
 ### Selalu memperbarui service worker
 
@@ -90,7 +90,7 @@ Selama development, ada baiknya memastikan service worker Anda selalu up to date
 
 Untuk menyetel ini di Chrome, buka DevTools (Klik kanan> Inspect) dan masuk ke panel __Application__, klik tab __Service Workers__ kemudian klik kotak centang __Update on Reload__. Ketika kotak centang ini diaktifkan, service worker dengan paksa diperbarui setiap kali laman dimuat ulang.
 
-![d670cb813f3a7575.png](img/d670cb813f3a7575.png)
+![6b698d7c7bbf1bc0.png](img/6b698d7c7bbf1bc0.png)
 
 
 ## Mendaftarkan Service Worker
@@ -133,7 +133,7 @@ Memeriksa perubahan dengan membuka URL __127.0.0.1:8887__ dalam browser.
 
 Buka Chrome DevTools untuk memeriksa konsol bagi `Service Worker is registered`, seperti:
 
-![d712c8726928ca4.png](img/d712c8726928ca4.png)
+![de3ceca91043d278.png](img/de3ceca91043d278.png)
 
 ### Mendapatkan Kunci Server Aplikasi
 
@@ -215,7 +215,7 @@ navigator.serviceWorker.register('sw.js')
 
 Buka aplikasi web dan Anda akan melihat tombol ‘Enable Push Messaging' sekarang diaktifkan (Anda bisa mengeklik-nya) dan Anda akan melihat ‘User is NOT subscribed.' di konsol.
 
-![b9787463acb7e3fb.png](img/b9787463acb7e3fb.png)
+![15f6375617c11974.png](img/15f6375617c11974.png)
 
 Ketika kita melangkah maju melalui code lab selanjutnya, Anda akan melihat perubahan teks tombol ketika pengguna berlangganan / berhenti-berlangganan.
 
@@ -354,11 +354,11 @@ function updateSubscriptionOnServer(subscription) {
 
 Bila Anda kembali ke aplikasi web dan coba mengeklik tombol, Anda akan melihat konfirmasi izin seperti ini:
 
-![5b8a7e9905f2237b.png](img/5b8a7e9905f2237b.png)
+![227cea0abe03a5b4.png](img/227cea0abe03a5b4.png)
 
 Jika Anda memberikan izin, Anda akan melihat konsol mencetak `User is subscribed:` dengan `PushSubscription`, teks tombol akan berubah menjadi ‘Disable Push Messaging' dan Anda bisa melihat langganan sebagai JSON di bagian bawah halaman.
 
-![bfdc9f92e001934a.png](img/bfdc9f92e001934a.png)
+![8fe2b1b110f87b34.png](img/8fe2b1b110f87b34.png)
 
 
 ## Menangani Izin Ditolak
@@ -395,11 +395,11 @@ Kita tahu bahwa jika izin tersebut `denied`, maka pengguna tidak bisa berlanggan
 
 Karena kita sudah memberikan izin untuk aplikasi web dari langkah sebelumnya, kita harus mengeklik __i__ dalam lingkaran di bilah URL dan mengubah izin notifikasi ke *Use global default (Ask)* .
 
-![c69f7428408c5bbc.png](img/c69f7428408c5bbc.png)
+![8775071d7fd66432.png](img/8775071d7fd66432.png)
 
 Setelah Anda mengubah setelan ini, segarkan laman dan klik tombol *Enable Push Messaging* dan kali ini pilih *Block* pada dialog izin. Teks tombol sekarang akan bertuliskan *Push Messaging Blocked* dan dinonaktifkan.
 
-![e36f921fa7598419.png](img/e36f921fa7598419.png)
+![2b5314607196f4e1.png](img/2b5314607196f4e1.png)
 
 Dengan perubahan ini, sekarang kita bisa membuat pengguna berlangganan dan kita mengatasi skenario izin yang mungkin.
 
@@ -468,7 +468,7 @@ Dengan kejadian push kita di service worker, kita bisa menguji apa yang terjadi 
 
 Pada aplikasi web Anda, ikutlah berlangganan perpesanan push, pastikan Anda mendapat *User IS subscribed* di konsol Anda, lalu buka panel *Application* dalam DevTools dan di bawah tab *Service Workers* klik pada tautan *Push* di bawah service worker Anda.
 
-![c0fab1022906d01f.png](img/c0fab1022906d01f.png)
+![2b089bdf10a8a945.png](img/2b089bdf10a8a945.png)
 
 Setelah mengekliknya Anda akan mendapatkan notifikasi seperti ini:
 
@@ -530,19 +530,19 @@ Biasanya proses ini akan mengirimkan langganan dari laman web ke backend dan bac
 
 Ini di luar cakupan codelab ini, namun Anda bisa menggunakan situs pendamping ( [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) bagi code lab ini untuk memicu pesan push yang sebenarnya. Salin dan tempel langganan di bagian bawah laman Anda:
 
-![cb84e05044ad029f.png](img/cb84e05044ad029f.png)
+![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
 Kemudian tempel ini ke situs pendamping di area teks *Subscription to Send To*:
 
-![e320ddd1b66682e6.png](img/e320ddd1b66682e6.png)
+![a12fbfdc08233592.png](img/a12fbfdc08233592.png)
 
 Kemudian di bawah *Text to Send* Anda bisa menambahkan string yang ingin Anda kirim dengan pesan push dan terakhir klik tombol *Send Push Message*.
 
-![3c5c0d5d1c3deda4.png](img/3c5c0d5d1c3deda4.png)
+![2973c2b818ca9324.png](img/2973c2b818ca9324.png)
 
 Anda kemudian akan menerima pesan push dan teks yang Anda sertakan akan dicetak ke konsol.
 
-![fdedaa6d10e2f43e.png](img/fdedaa6d10e2f43e.png)
+![75b1fedbfb7e0b99.png](img/75b1fedbfb7e0b99.png)
 
 Ini akan memberikan Anda kesempatan untuk menguji proses mengirim dan menerima data serta memanipulasi notifikasi sebagai akibatnya.
 
@@ -633,7 +633,7 @@ Memanggil `unsubscribe()` akan mengembalikan promise, karena itu memerlukan bebe
 
 Anda seharusnya bisa menekan  *Enable Push Messaging*  /  *Disable Push Messaging*  di aplikasi web Anda dan log akan menunjukkan pengguna yang berlangganan dan berhenti berlangganan.
 
-![32acb7ec17ef75a8.png](img/32acb7ec17ef75a8.png)
+![33dd89c437c17c97.png](img/33dd89c437c17c97.png)
 
 
 ## Selesai

@@ -11,8 +11,8 @@
   {{#each articles}}
   <entry>
     <title>{{ title }}</title>
-    <published>{{ datePublished }}</published>
-    <updated>{{ dateUpdated }}</updated>
+    <published>{{ datePublished }}Z</published>
+    <updated>{{ dateUpdated }}Z</updated>
     <link rel="alternate" type="text/html" href="{{ ../host }}{{ url }}{{{ ../analyticsQS }}}" />
     <id>{{ ../host }}{{ url }}</id>
     <content type="html">
@@ -24,7 +24,7 @@
     </content>
     {{#each tags}}<category term="{{this}}" label="{{this}}"/> {{/each}}
     <author>
-      <name>{{ feedAuthor }}</name>
+      <name>{{#if feedAuthor }}{{ feedAuthor }}{{else}}Google Developers{{/if}}</name>
     </author>
   </entry>
   {{/each}}
