@@ -27,8 +27,8 @@ const runSequence = require('run-sequence');
  *****************************************************************************/
 
 const MAX_DESCRIPTION_LENGTH = 485;
-const MAX_FILE_SIZE_WARN = 500000;
-const MAX_FILE_SIZE_ERROR = 2500000;
+const MAX_FILE_SIZE_WARN = 500;   // Max file size (in kB) before warning
+const MAX_FILE_SIZE_ERROR = 2500; // Max file size (in kB) before error
 const MD_FILES = ['.md', '.mdown', '.markdown'];
 const EXTENSIONS_TO_SKIP = [
   '.css', '.vtt', '.xml',
@@ -891,15 +891,22 @@ function testFile(filename, opts) {
     // Check media files & verify they're not too big
     if (MEDIA_FILES.indexOf(filenameObj.ext) >= 0) {
       let fsOK = true;
-      const stats = fs.statSync(filename);
-      if (stats.size > MAX_FILE_SIZE_ERROR) {
-        msg = `Exceeds maximum files size (2.5M)`;
-        logError(filename, null, `${msg} - was ${stats.size}`);
+      try {
+        // Read the file size and check if it exceeds the known limits
+        const stats = fs.statSync(filename);
+        const fileSize = Math.round(parseInt(stats.size, 10) / 1024);
+        if (fileSize > MAX_FILE_SIZE_ERROR) {
+          fsOK = false;
+          msg = `Exceeds maximum files size (${MAX_FILE_SIZE_ERROR}K)`;
+          logError(filename, null, `${msg} - was ${fileSize}K`);
+        } else if (fileSize > MAX_FILE_SIZE_WARN) {
+          fsOK = false;
+          msg = `Try to keep files below (${MAX_FILE_SIZE_WARN}K)`;
+          logWarning(filename, null, `${msg} - was ${fileSize}K`);
+        }
+      } catch (ex) {
         fsOK = false;
-      } else if (stats.size > MAX_FILE_SIZE_WARN) {
-        msg = `Exceeds maximum suggested files size (500K)`;
-        logWarning(filename, null, `${msg} - was ${stats.size}`);
-        fsOK = false;
+        logWarning(filename, null, `Unable to read file stats: ${ex.message}`);
       }
       resolve(fsOK);
       return;
