@@ -164,26 +164,24 @@ platforms. Just look at that hard-coded path to Chrome :(
 #### Using ChromeLauncher {: #nodechromelauncher }
 
 [Lighthouse](/web/tools/lighthouse/) is a marvelous
-tool for testing the quality of your web apps. One thing people don't realize
-is that it ships with some really nice helper modules for working with Chrome.
-One of those modules is `ChromeLauncher`. `ChromeLauncher` will find where
+tool for testing the quality of your web apps. A robust module for launching
+Chrome was developed within Lighthouse and is now extracted for standalone use.
+The [`chrome-launcher` NPM module](https://www.npmjs.com/package/chrome-launcher)
+will find where
 Chrome is installed, set up a debug instance, launch the browser, and kill it
 when your program is done. Best part is that it works cross-platform thanks to
 Node!
 
-Note: The Lighthouse team is exploring a standalone package for `ChromeLauncher` with
-an improved API. Let us know if you have [feedback](https://github.com/GoogleChrome/lighthouse/issues/2092).
-
-By default, **`ChromeLauncher` will try to launch Chrome Canary** (if it's
+By default, **`chrome-launcher` will try to launch Chrome Canary** (if it's
 installed), but you can change that to manually select which Chrome to use. To
-use it, first install Lighthouse from npm:
+use it, first install from npm:
 
-    yarn add lighthouse
+    yarn add chrome-launcher
 
-**Example** - using `ChromeLauncher` to launch Headless
+**Example** - using `chrome-launcher` to launch Headless
 
 ```javascript
-const chromeLauncher = require('lighthouse/chrome-launcher/chrome-launcher');
+const chromeLauncher = require('chrome-launcher');
 
 /**
  * Launches a debugging instance of Chrome.
@@ -191,8 +189,8 @@ const chromeLauncher = require('lighthouse/chrome-launcher/chrome-launcher');
  *     False launches a full version of Chrome.
  * @return {Promise<ChromeLauncher>}
  */
-async function launchChrome(headless = true) {
-  return await chromeLauncher.launch({
+function launchChrome(headless=true) {
+  return chromeLauncher.launch({
     // port: 9222, // Uncomment to force a specific port of your choice.
     chromeFlags: [
       '--window-size=412,732',
@@ -202,8 +200,10 @@ async function launchChrome(headless = true) {
   });
 }
 
-launchChrome(true).then(chrome => {
+launchChrome().then(chrome => {
+  console.log(`Chrome debuggable on port: ${chrome.port}`);
   ...
+  // chrome.kill();
 });
 ```
 
@@ -327,7 +327,8 @@ Docs
 Tools
 
 * [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface) - node module that wraps the DevTools protocol
-* [Lighthouse](https://github.com/GoogleChrome/lighthouse) - automated tool for testing the quality of web apps
+* [Lighthouse](https://github.com/GoogleChrome/lighthouse) - automated tool for testing web app quality; makes heavy use of the protocol
+* [chrome-launcher](https://github.com/GoogleChrome/lighthouse/tree/master/chrome-launcher) - node module for launching Chrome, ready for automation
 
 Demos
 
