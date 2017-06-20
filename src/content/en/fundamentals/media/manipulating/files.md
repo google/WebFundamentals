@@ -26,7 +26,7 @@ will be media resources with the following characteristics:
 +  Audio and video streams are split into separate files
 +  Versions of the video file are in mp4 and webm format
 +  Versions of the audio file are in m4a and webm format
-+  A bitrate of 0.35 Megabits per seconde (Mbs)
++  A bitrate of 0.35 Megabits per second (Mbs)
 +  Resolution of 1920 by 1080
 +  Encrypted
 +  Viewable on all major browsers using appropriate technologies
@@ -76,7 +76,7 @@ manipulation by moving downward through these layers.
 Let's start by changing the file container. You'll recall that we're starting
 with a file that has an mov extension. I'm going to use ffmpeg to change the
 container type from mov to mp4 and webm. In actual practice, you would likely
-specify a codec at the same time. For this lesson, I'm letting ffmpeg use it's
+specify a codec at the same time. For this lesson, I'm letting ffmpeg use its
 defaults.
 
     ffmpeg -i glocken.mov glocken.mp4
@@ -103,9 +103,9 @@ file's size, webm compresses to 1% of the original file's size.
 When you package media resources, for HLS and DASH, you'll need to separate the
 video and audio streams. Splitting the audio and video streams of a file is
 often referred to as **demultiplexing** or **demuxing** for short. Professional
-content creators record audio and video to separate files to begin with. If
-resources come from a consumer-grade device, audio and video will be in the same
-file and you'll need to split them.
+content creators often record audio and video to separate files to begin with.
+If resources come from a consumer-grade device, audio and video will be in the
+same file and you'll need to split them.
 
 In the context of preparing media for the web, demuxing is basically a file
 copying operation where I copy one of the streams to a new file. Using Shaka
@@ -171,12 +171,12 @@ convert to them.
 
 ## File properties
 
-I've unpealed the onion. Yet if you compare what I've done to the list of stated
+I've unpeeled the onion. Yet if you compare what I've done to the list of stated
 goals you'll see that I'm not quite done. Anong the remaining items are bitrate
 and resolution. These properties correlate to the amount of data in a media
 file. It probably goes without saying, but I'm going to say it anyway, that you
-can always lower bitrate and resolution, but you can't increase them. (Well,
-technically you could, but the quality would be bad. Don't do it.)
+can always lower bitrate and resolution, but increasing them is a problem.
+Without special software an algorithms quality is going to take a hit.
 
 The first to changing bitrate and resultion is to [display the file
 characteristics](/web/fundamentals/media/manipulating/cheatsheet#display_characteristics)
@@ -227,8 +227,8 @@ _Resolution_ is the amount of information in a single frame of video, given as
 the number of logical pixels in each dimension. [Youtube
 recommends](https://support.google.com/youtube/answer/6375112) the following
 resolutions for video uploads, all in the 16:9 aspect ratio. There's nothing
-specific to Youtube about this list, which makes it a good guide for video on
-the web in general.
+specific to Youtube about this list. It's just a list of common 16:9 video
+resolutions.
 
 | Abbreviation | Dimensions |
 | ------------ | ---------- |
@@ -240,8 +240,10 @@ the web in general.
 | 360p | 640x360 |
 | 240p | 426x240 |
 
-Which one do I use? Again, the short answer is all of them. Fortunately, this is
-one of the simplest transformations you'll make with ffmpeg.
+Which one do I use? That depends on your application. For simple embedding you
+may chose a single resolution. If you're preparing files for DASH or HLS, you
+may chose one, several, or all. Fortunately, this is one of the simplest
+transformations you'll make with ffmpeg.
 
     ffmpeg -i myvideo.webm -s 1920x1080 myvideo_1980x1020.webm
 
@@ -304,7 +306,7 @@ manually. There's no reason you can't get fancy.
 Unless your company completes the Master License Agreement with
 [Widevine]([http://www.widevine.com/contact.html](http://www.widevine.com/contact.html))
 , this type of encryption can really only be used for testing. Since this is
-covered without much explanation on the Shaka Packager READMEhere it goes.
+covered without much explanation on the Shaka Packager README here it goes.
 
 Everything in this command except the name of your files and the `--content_id`
 flag should be copied exactly from the example. The `--content_id` is 16 or 32
@@ -323,7 +325,6 @@ Widevine works.)
 ## Conclusion
 
 This does not cover everything you could do to a media file before posting it to
-the web, not by a longshot. To be fair, this subject is one deserving of a
-website that is itself as large as [developers.google.com/web/](/web/). I'm
-hoping this introduction will give you enough to help you find your own aswers
-to questions.
+the web, not by a longshot. To be fair, this subject is one deserving of its own
+website. I'm hoping this introduction will give you enough to help you find your
+own aswers to questions.

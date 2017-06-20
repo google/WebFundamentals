@@ -233,7 +233,7 @@ This command will accept a key with either 16 or 32 characters.
       input=glocken.mp4,stream=audio,output=enc_audio.m4a \
       --enable_widevine_encryption \
       --key_server_url "https://license.uat.widevine.com/cenc/getcontentkey/widevine_test" \
-      --content_id "Hec_converted_random_ID" --signer "widevine_test" \
+      --content_id "Hex_converted_unique_ID" --signer "widevine_test" \
       --aes_signing_key "1ae8ccd0e7985cc0b6203a55855a1034afc252980e970ca90e5202689f947ab9" \
       --aes_signing_iv "d58ce954203b7c9a9a9d467f59839249"
 
