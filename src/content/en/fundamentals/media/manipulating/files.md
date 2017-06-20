@@ -205,14 +205,6 @@ Which value should I use for video on my web pages? The short answer is at least
 the top three. If you're serving video someplace like India, you'll want to
 include 2G as well. For demonstration purposes, I'm going to target 3G.
 
-In Shaka Packager you set the bitrate by adding the bandwidth option to the
-appropriate stream descriptor. The following, for example, sets the bitrate on
-the video stream, but not the audio stream.
-
-    packager \
-      input=myvideo.mp4,stream=audio,output=myvideo_audio.mp4 \
-      input=myvideo.mp4,stream=video,output=myvideo_video.mp4,bandwidth=350000
-
 In ffmpeg you set the bitrate with the (surprise!) bitrate (`-b`) flag.
 
     ffmpeg -i glocken.mov -b:v 350K -b:a 350K glocken.mp4

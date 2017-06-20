@@ -79,12 +79,6 @@ For ffmpeg, I can do this while I'm converting to mp4 or webm.
  
     ffmpeg -i myvideo.mov -b:v 350K myvideo.mp4
     ffmpeg -i myvideo.mov -vf setsar=1:1 -b:v 350K myvideo.webm
- 
-For Shaka Packager:
- 
-    packager \
-      input=myvideo.mp4,stream=audio,output=myvideo_audio.m4a \
-      input=myvideo.mp4,stream=video,output=myvideo_video.mp4,bandwidth=350000
 
 ### File type
 
