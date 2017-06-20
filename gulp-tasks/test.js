@@ -27,12 +27,16 @@ const runSequence = require('run-sequence');
  *****************************************************************************/
 
 const MAX_DESCRIPTION_LENGTH = 485;
+const MAX_FILE_SIZE_WARN = 500000;
+const MAX_FILE_SIZE_ERROR = 2500000;
 const MD_FILES = ['.md', '.mdown', '.markdown'];
 const EXTENSIONS_TO_SKIP = [
-  '.css',
+  '.css', '.vtt', '.xml',
+];
+const MEDIA_FILES = [
   '.gif', '.ico', '.jpg', '.png', '.psd', '.svg',
-  '.mov', '.mp3', '.mp4', '.webm', '.vtt',
-  '.pdf', '.xml'
+  '.mov', '.mp3', '.mp4', '.webm',
+  '.pdf',
 ];
 const VALID_DATE_FORMATS = [
   'YYYY-MM-DD',
@@ -881,6 +885,23 @@ function testFile(filename, opts) {
         gutil.log(chalk.gray('SKIP:'), chalk.cyan(filename), msg);
       }
       resolve(false);
+      return;
+    }
+
+    // Check media files & verify they're not too big
+    if (MEDIA_FILES.indexOf(filenameObj.ext) >= 0) {
+      let fsOK = true;
+      const stats = fs.statSync(filename);
+      if (stats.size > MAX_FILE_SIZE_ERROR) {
+        msg = `Exceeds maximum files size (2.5M)`;
+        logError(filename, null, `${msg} - was ${stats.size}`);
+        fsOK = false;
+      } else if (stats.size > MAX_FILE_SIZE_WARN) {
+        msg = `Exceeds maximum suggested files size (500K)`;
+        logWarning(filename, null, `${msg} - was ${stats.size}`);
+        fsOK = false;
+      }
+      resolve(fsOK);
       return;
     }
 
