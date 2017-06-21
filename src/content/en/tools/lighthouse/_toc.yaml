@@ -81,6 +81,8 @@ toc:
         path: /web/tools/lighthouse/audits/offscreen-images
       - title: Opens External Anchors Using rel="noopener"
         path: /web/tools/lighthouse/audits/noopener
+      - title: Optimize Images
+        path: /web/tools/lighthouse/audits/optimize-images
       - title: Oversized Images
         path: /web/tools/lighthouse/audits/oversized-images
       - title: Page Load Is Fast Enough On 3G
