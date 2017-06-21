@@ -991,7 +991,7 @@ function testFile(filename, opts) {
  *****************************************************************************/
 
 gulp.task('test', function() {
-  if (TRAVIS_EVENT_TYPE === 'push' && TRAVIS_BRANCH === 'master') {
+  if (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MASTER) {
     GLOBAL.WF.options.testAll = true;
   }
   let opts = {
