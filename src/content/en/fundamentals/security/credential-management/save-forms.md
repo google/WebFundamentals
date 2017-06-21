@@ -26,7 +26,7 @@ To store user credentials from forms:
 
 1. Include `autocomplete` in the form.
 2. Interrupt the form submission event.
-3. Authenticate by sending a request via AJAX.
+3. Authenticate by sending a request.
 4. Store the credential.
 5. Update the UI or proceed to the personalized page.
 
@@ -62,10 +62,9 @@ and prevent the default behavior.
 By preventing a page transition,
 you can retain the credential information while verifying its authenticity.
 
-## Authenticate by sending a request via AJAX
+## Authenticate by sending a request
 
-To authenticate the user, deliver credential information to your server
-via an AJAX request.
+To authenticate the user, deliver credential information to your server via `fetch()`.
 
 On the server side, create an endpoint (or simply alter an existing endpoint)
 that responds with HTTP code 200 or 401, so that it’s clear to the browser
