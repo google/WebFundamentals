@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Providing a smooth user experience is important for the web. Over the past few releases of Chrome we have driven down input latency across these devices.
 
-{# wf_updated_on: 2017-06-21 #}
-{# wf_published_on: 2017-06-21 #}
+{# wf_updated_on: 2017-06-22 #}
+{# wf_published_on: 2017-06-22 #}
 {# wf_tags: chrome58,chrome60,events,performance,ux #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
 {# wf_featured_snippet: Providing a smooth user experience is important for the web. Over the past few releases of Chrome we have driven down input latency across these devices. #}
