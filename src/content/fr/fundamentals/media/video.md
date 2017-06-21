@@ -40,8 +40,8 @@ Découvrez les méthodes les plus simples pour ajouter des vidéos à votre site
     - Ajoutez l'élément vidéo pour importer, décoder et lire des contenus vidéos sur votre site :
 
 <video controls>
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm" type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
   <p>Ce navigateur n'est pas compatible avec l'élément vidéo.</p>
 </video>
 
@@ -82,8 +82,8 @@ Vérifiez également les en-têtes de réponse dans les outils pour les dévelop
 Pour économiser la bande passante et pour que votre site soit plus adaptatif, utilisez l'API Media Fragments afin d'ajouter un intervalle de lecture à l'élément vidéo.
 
 <video controls>
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm#t=5,10" type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
      <p>Ce navigateur n'est pas compatible avec l'élément vidéo.</p>
 </video>
 

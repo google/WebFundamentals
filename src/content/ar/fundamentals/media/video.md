@@ -40,8 +40,8 @@ description: تعرف على أسهل طرق إضافة الفيديو إلى م
 أضف عنصر الفيديو لتحميل الفيديو على موقعك وفك ترميزه وتشغيله:
 
 <video controls>
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm" type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
   <p>هذا المتصفح ليس متوافقًا مع عنصر الفيديو.</p>
 </video>
 
@@ -82,8 +82,8 @@ description: تعرف على أسهل طرق إضافة الفيديو إلى م
 اهتم بتوفير معدل نقل البيانات وجعل الموقع يبدو أكثر سرعة في الاستجابة من خلال استخدام واجهة برمجة تطبيقات Media Fragments لإضافة وقت بدء ووقت انتهاء إلى عنصر الفيديو.
 
 <video controls>
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm#t=5,10" type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
   <p>هذا المتصفح ليس متوافقًا مع عنصر الفيديو.</p>
 </video>
 

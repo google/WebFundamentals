@@ -37,8 +37,8 @@ description: 동영상을 사이트에 추가하고 모든 기기에서 사용�
 `video` 요소를 사용하여 사이트에서 동영상을 로드하고, 디코딩하고, 재생합니다.
 
 <video controls>
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm" type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
   <p>이 브라우저에서는 동영상 요소를 지원하지 않습니다.</p>
 </video>
 
@@ -98,8 +98,8 @@ MPEG-4 동영상의 재생이 가능한지 확인합니다.
 Fragments API를 사용하여 시작 및 종료 시간을 동영상 요소에 추가해보세요.
 
 <video controls>
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm#t=5,10" type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
   <p>이 브라우저에서는 동영상 요소를 지원하지 않습니다.</p>
 </video>
 

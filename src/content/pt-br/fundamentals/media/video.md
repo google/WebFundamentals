@@ -37,8 +37,8 @@ possível para os usuários em qualquer dispositivo.
 Adicione o elemento `video` para carregar, decodificar e reproduzir vídeos no seu site:
 
 <video controls>
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm" type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
   <p>Este navegador não oferece suporte para o elemento video.</p>
 </video>
 
@@ -98,8 +98,8 @@ Economize largura de banda e deixe seu site mais responsivo: use a Media
 Fragments API para adicionar horários de início e de término ao elemento video.
 
 <video controls>
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm#t=5,10" type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
   <p>Este navegador não oferece suporte para o elemento video.</p>
 </video>
 

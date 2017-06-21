@@ -42,8 +42,8 @@ Hier erfahren Sie, wie Sie Videoinhalte ganz einfach zu Ihrer Website hinzufüge
 - Verwenden Sie das Videoelement zum Laden, Decodieren und Abspielen von Videos auf Ihrer Website:
 
 <video controls>
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm" type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
   <p>Dieser Browser unterstützt das Videoelement nicht.</p>
 </video>
 
@@ -84,8 +84,8 @@ Darüber hinaus sollten Sie die Antwortheader in den Entwicklertools für Ihren 
 Sparen Sie Bandbreite und machen Sie Ihre Website reaktionsschneller, indem Sie dem Videoelement mithilfe der Media Fragments-API eine Start- und Endzeit hinzufügen.
 
 <video controls>
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm#t=5,10" type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
   <p>Dieser Browser unterstützt das Videoelement nicht.</p>
 </video>
 

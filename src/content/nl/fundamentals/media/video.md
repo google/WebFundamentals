@@ -39,8 +39,8 @@ Bekijk informatie over hoe u video aan uw site toevoegt en ervoor zorgt dat gebr
 Voeg het video-element toe om video op uw site te laden, decoderen en af te spelen.
 
 <video controls>
-     <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm" type="video/webm">
-     <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4" type="video/mp4">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
      <p>Het video-element wordt niet ondersteund door deze browser.</p>
 </video>
 
@@ -81,8 +81,8 @@ Controleer ook de reactieheaders in uw browser-developertools om u ervan te [ver
 Spaar bandbreedte en zorg ervoor dat uw site sneller reageert: gebruik de Media Fragments API om een start- en eindtijd toe te voegen aan het video-element.
 
 <video controls>
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm#t=5,10" type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
      <p>Het video-element wordt niet ondersteund door deze browser.</p>
 </video>
 

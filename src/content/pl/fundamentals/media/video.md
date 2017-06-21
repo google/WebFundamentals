@@ -41,8 +41,8 @@ Przeczytaj, jak w prosty sposób umieścić film na stronie i upewnić się, że
 Dodaj element video, by wczytywać, dekodować i odtwarzać filmy w swojej witrynie:
 
 <video controls>
-     <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm" type="video/webm">
-     <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4" type="video/mp4">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
      <p>Ta przeglądarka nie obsługuje elementu video.</p>
 </video>
 
@@ -83,8 +83,8 @@ Przejrzyj w tych narzędziach także nagłówki odpowiedzi, by [upewnić się, �
 Możesz zmniejszyć obciążenie łącza i poprawić elastyczność strony &ndash; użyj interfejsu API Media Fragments, by dodać czas rozpoczęcia i zakończenia do elementu video.
 
 <video controls>
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm#t=5,10" type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
   <p>Ta przeglądarka nie obsługuje elementu video.</p>
 </video>
 
