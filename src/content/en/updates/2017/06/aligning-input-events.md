@@ -130,8 +130,9 @@ application if you use this API.
  
 Instead of receiving a single event you can access the array of historical
 events that caused the event.
-[Android](https://developer.android.com/reference/android/view/MotionEvent.html#getHistoricalX(int,%20int)),
-[iOS](https://developer.apple.com/reference/uikit/uievent/1613808-coalescedtouchesfortouch)
+[Android
+](https://developer.android.com/reference/android/view/MotionEvent.html#getHistoricalX(int,%20int))
+, [iOS](https://developer.apple.com/reference/uikit/uievent/1613808-coalescedtouchesfortouch)
 and [Windows](https://msdn.microsoft.com/en-us/library/windows/desktop/hh454886(v=vs.85).aspx)
 all have very similar APIs in their native SDKs and we are exposing a similar
 API to the web.
