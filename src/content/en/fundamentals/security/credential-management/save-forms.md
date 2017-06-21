@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-11-08 #}
+{# wf_updated_on: 2016-06-21 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Save Credentials from Forms {: .page-title }
@@ -11,7 +11,8 @@ book_path: /web/fundamentals/_book.yaml
 
 <div class="attempt-right">
   <figure>
-    <video src="animations/credential-management-smaller.mov" style="max-height: 400px;" autoplay muted loop controls></video>
+    <video src="animations/credential-management-smaller.mov"
+           style="max-height: 400px;" autoplay muted loop controls></video>
     <figcaption>Save Credentials from sign-in forms</figcaption>
   </figure>
 </div>
@@ -63,8 +64,8 @@ you can retain the credential information while verifying its authenticity.
 
 ## Authenticate by sending a request via AJAX
 
-To authenticate the user, send a request via AJAX and respond with profile information,
-for example, in JSON format.
+To authenticate the user, deliver credential information to your server
+via an AJAX request.
 
 On the server side, create an endpoint (or simply alter an existing endpoint)
 that responds with HTTP code 200 or 401, so that it’s clear to the browser
@@ -72,26 +73,23 @@ whether the sign-up/sign-in/change password is successful or not.
 
 For example: 
 
-      // Try sign-in with AJAX
-      fetch(/'signin', {
-        method: 'POST',
-        body: new FormData(e.target),
-        credentials: 'include'
-      }).then(res => {
-        if (res.status == 200) {
-          return Promise.resolve();
-        } else {
-          return Promise.reject('Sign in failed');
-        }
-      }).then(profile => {
+    let form = new FormData();
+    form.append('email', c.id);
+    form.append('password', c.password);
+
+    return fetch('/signin', {
+      method: 'POST',
+      credentials: 'include',
+      body: form
+    })
 
 ## Store the credential
 
 To store a credential, first check if the API is available,
 then instantiate a
 [`PasswordCredential`](https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential)
-with the form element as an argument.
-Call [`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store).
+with the form element as an argument. Call
+[`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store).
 If the API is not available,
 you can simply forward the profile information to the next step.
 
@@ -140,10 +138,14 @@ or proceed to the personalized page.
       e.preventDefault();
 
       // Try sign-in with AJAX
-      fetch(/'signin', {
+      let form = new FormData();
+      form.append('email', c.id);
+      form.append('password', c.password);
+
+      return fetch('/signin', {
         method: 'POST',
-        body: new FormData(e.target),
-        credentials: 'include'
+        credentials: 'include',
+        body: form
       }).then(res => {
         if (res.status == 200) {
           return Promise.resolve();

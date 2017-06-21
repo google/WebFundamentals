@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-11-08 #}
+{# wf_updated_on: 2017-06-21 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Sign in Users {: .page-title }
@@ -29,12 +29,12 @@ To enable auto sign-in:
 
 ### Get credential information
 
-To get credential information,
-invoke [`navigator.credential.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get).
+To get credential information, invoke
+[`navigator.credential.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get).
 Specify the type of credentials to request
 by giving it a `password` or  `federated`.
 
-Always use `unmediated: true` for auto sign-ins,
+Always use `mediation: 'silent'` for auto sign-ins,
 so you can easily dismiss the process if the user:
 
 * Has no credentials stored.
@@ -53,7 +53,7 @@ don’t forget to check if the user is already signed in:
              'https://accounts.google.com'
            ]
          },
-         unmediated: true
+         mediation: 'silent'
        })
        // ...
       }
@@ -135,7 +135,7 @@ but fail to authenticate the user, you should show an error message:
              'https://accounts.google.com'
            ]
          },
-         unmediated: true
+         mediation: 'silent'
        }).then(c => {
          if (c) {
            switch (c.type) {
@@ -183,9 +183,19 @@ as part of getting credential information:
 ### Get credential information and show account chooser
 
 Show an account chooser in response to a defined user action,
-for example, when the user taps the "Sign-In" button.
-Call [`navigator.credentials.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get),
-and add `unmediated: false`, to show the account chooser:
+for example, when the user taps the "Sign-In" button. Call
+[`navigator.credentials.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get),
+and add `mediation: 'optional'` or `mediation: 'required'` to show the account chooser.
+
+When mediation is required, the user is always shown an account chooser to sign in.
+When mediation is optional,
+the user is explicitly shown an account chooser to sign in after a
+[`navigator.credentials.preventSilentAccess()`](web/fundamentals/security/credential-management/retrieve-credentials#turn_off_auto_sign-in_for_future_visits)
+call.
+This is normally to ensure automatic sign-in doesn't happen
+after the user chooses to sign-out or unregister.
+
+In this example, mediation is optional:
 
     var signin = document.querySelector('#signin');
     signin.addEventListener('click', e => {
@@ -197,7 +207,7 @@ and add `unmediated: false`, to show the account chooser:
              'https://accounts.google.com'
            ]
          },
-         unmediated: false
+         mediation: 'optional'
        }).then(c => {
 
 Once the user selects an account,
@@ -239,7 +249,7 @@ You should fallback to a sign-in form for any of these reasons:
              'https://accounts.google.com'
            ]
          },
-         unmediated: false
+         mediation: 'optional'
        }).then(c => {
          if (c) {
            switch (c.type) {
@@ -267,7 +277,8 @@ You should fallback to a sign-in form for any of these reasons:
 
 ## Federated Login
 
-Federated login lets users sign in with one tap and without having to remember additional login details for your website.
+Federated login lets users sign in with one tap and
+without having to remember additional login details for your website.
 
 To implement federated login:
 
@@ -287,7 +298,7 @@ For example, if the provider is Google, use the
     
     navigator.credentials.get({
       password: true,
-      unmediated: false,
+      mediation: 'optional',
       federated: {
         providers: [
           'https://account.google.com'
@@ -342,9 +353,11 @@ Learn more about this information in the
 [Credential Management specification](https://w3c.github.io/webappsec-credential-management/#credential).
 
 To store federated account details, instantiate a new 
-[`FederatedCredential`](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential), object with the user's identifier and the provider's identifier.
+[`FederatedCredential`](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential),
+object with the user's identifier and the provider's identifier.
 Then invoke
-[`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store) to store the identity information.
+[`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store)
+to store the identity information.
 
 For example:
 
@@ -372,13 +385,15 @@ then turn off auto sign-in for future visits.
 ### Turn off auto sign-in for future visits
 
 Call
-[`navigator.credentials.requireUserMediation()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/requireUserMediation):
+`navigator.credentials.preventSilentAccess()`:
 
     signoutUser();
     if (navigator.credentials) {
-     navigator.credentials.requireUserMediation();
+     navigator.credentials.preventSilentAccess();
     }
 
 This will ensure the auto sign-in won’t happen until next time the user enables auto sign-in.
-To resume auto sign-in, a user can choose to intentionally sign-in, by choosing the account they wish to sign in with, from the account chooser. Then, the user is always signed back in, until they explictly sign out.
+To resume auto sign-in, a user can choose to intentionally sign-in,
+by choosing the account they wish to sign in with, from the account chooser.
+Then, the user is always signed back in, until they explictly sign out.
 
