@@ -95,6 +95,8 @@ toc:
         path: /web/tools/lighthouse/audits/blocking-resources
       - title: Responds With A 200 When Offline
         path: /web/tools/lighthouse/audits/http-200-when-offline
+      - title: Serve Images As WebP
+        path: /web/tools/lighthouse/audits/webp
       - title: Time to Interactive
         path: /web/tools/lighthouse/audits/time-to-interactive
       - title: Unoptimized Images
