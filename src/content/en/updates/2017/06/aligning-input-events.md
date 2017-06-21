@@ -8,13 +8,13 @@ description: Providing a smooth user experience is important for the web. Over t
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
 {# wf_featured_snippet: Providing a smooth user experience is important for the web. Over the past few releases of Chrome we have driven down input latency across these devices. #}
 
-# Aligning Input Events {: .page-title }
+# Aligned Input Events {: .page-title }
 
 {% include "web/_shared/contributors/dtapuska.html" %}
 
 ### TL;DR {: #tldr .hide-from-toc}
 
-+  Chrome 60 reduces jank by decreasing events, thereby improving the
++  Chrome 60 reduces jank by lowering event frequency, thereby improving the
    consistency of frame timing.
 +  The getCoalescedEvents() method, introduced in Chrome 58 provides the same
    wealth of event information you've had all along.
@@ -34,8 +34,8 @@ which aligns input on Android, we are bringing frame aligned input to the web
 on all platforms.
 
 But sometimes you need more events. So, in in
-[Chrome 58](https://www.chromestatus.com/feature/5853451217010688) we launched
-pointer events method called
+[Chrome 58](https://www.chromestatus.com/feature/5853451217010688) we implemented
+a method called
 [`getCoalescedEvents()`](https://w3c.github.io/pointerevents/extension.html), which
 lets your application retrieve the full path of the pointer even while it's
 receiving fewer events.
