@@ -147,7 +147,7 @@ event:
 This code can easily be changed to use the array of events:
 
     window.addEventListener("pointermove", function(event) {
-      Var events = ‘getCoalescedEvents' in event ? event.getCoalescedEvents() : [event];
+      Var events = 'getCoalescedEvents' in event ? event.getCoalescedEvents() : [event];
       for (let e of events) {
         drawPoint(e.pageX, e.pageY)
       }
