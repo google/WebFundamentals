@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2017-04-26 #}
+{# wf_updated_on: 2017-06-21 #}
 {# wf_published_on: 2015-04-13 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
