@@ -37,8 +37,8 @@ terbaik pada perangkat apa pun.
 Menambahkan elemen `video` untuk memuat, melakukan decode, dan memutar video di situs Anda:
 
 <video controls>
-  <source src="video/chrome.webm" type="video/webm">
-  <source src="video/chrome.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4" type="video/mp4">
   <p>Browser ini tidak mendukung elemen video.</p>
 </video>
 
@@ -98,8 +98,8 @@ Hemat bandwidth dan buat situs Anda terasa lebih responsif: gunakan Media
 Fragments API untuk menambahkan waktu mulai dan waktu berakhir ke elemen video.
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm">
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4#t=5,10" type="video/mp4">
   <p>Browser ini tidak mendukung elemen video.</p>
 </video>
 

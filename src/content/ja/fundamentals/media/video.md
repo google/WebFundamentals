@@ -37,8 +37,8 @@ description: 動画をサイトに追加して、どのデバイスでも最高�
 サイトで動画の読み込み、デコード、再生を行うために `video` 要素を追加します。
 
 <video controls>
-  <source src="video/chrome.webm" type="video/webm">
-  <source src="video/chrome.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4" type="video/mp4">
   <p>お使いのブラウザは video 要素をサポートしていません。</p>
 </video>
 
@@ -96,8 +96,8 @@ description: 動画をサイトに追加して、どのデバイスでも最高�
 Fragments API を使用して video 要素に開始時間と終了時間を追加します。
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm">
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4#t=5,10" type="video/mp4">
   <p>お使いのブラウザは video 要素をサポートしていません。</p>
 </video>
 

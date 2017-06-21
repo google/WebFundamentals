@@ -41,8 +41,8 @@ Scopri i modi più semplici per aggiungere video al tuo sito e offrire agli uten
 Aggiungi elementi video per caricare, decodificare e riprodurre i video sul tuo sito.
 
 <video controls>
-     <source src="video/chrome.webm" type="video/webm">
-     <source src="video/chrome.mp4" type="video/mp4">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm" type="video/webm">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4" type="video/mp4">
      <p>Il browser in uso non supporta l'elemento video.</p>
 </video>
 
@@ -83,8 +83,8 @@ Controlla anche le intestazioni della risposta usando gli strumenti di sviluppo 
 Risparmia larghezza di banda e ottimizza la reattività del sito usando l'API Media Fragments per l'aggiunta di un tempo di inizio e fine all'elemento video.
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm">
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/chrome.mp4#t=5,10" type="video/mp4">
      <p>Il browser in uso non supporta l'elemento video.</p>
 </video>
 
