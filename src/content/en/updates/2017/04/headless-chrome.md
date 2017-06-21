@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2017-06-08 #}
+{# wf_updated_on: 2017-06-21 #}
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
@@ -22,7 +22,8 @@ figure {
 ### TL;DR {: #tldr .hide-from-toc}
 
 [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
-is shipping in Chrome 59. It's a way to run the Chrome browser in a headless environment. Essentially, running
+is shipping in Chrome 59. It's a way to run the Chrome browser in a headless environment.
+Essentially, running
 Chrome without chrome! It brings **all modern web platform features** provided
 by Chromium and the Blink rendering engine to the command line.
 
@@ -97,7 +98,8 @@ To capture a screenshot of a page, use the `--screenshot` flag:
 Running with `--screenshot` will produce a file named `screenshot.png` in the
 current working directory. If you're looking for full page screenshots, things
 are a tad more involved. There's a great blog
-post from David Schnurr that has you covered. Check out [Using headless Chrome as an automated screenshot tool
+post from David Schnurr that has you covered. Check out
+[Using headless Chrome as an automated screenshot tool
 ](https://medium.com/@dschnr/using-headless-chrome-as-an-automated-screenshot-tool-4b07dffba79a).
 
 ### REPL mode (read-eval-print loop) {: #repl }
@@ -139,7 +141,8 @@ commands going across the wire, communicating with the browser.
 
 ### Launching Chrome {: #nodelaunch }
 
-In the previous section, we [started Chrome manually](#cli) using `--headless --remote-debugging-port=9222`. However, to fully automate tests, you'll probably
+In the previous section, we [started Chrome manually](#cli) using
+`--headless --remote-debugging-port=9222`. However, to fully automate tests, you'll probably
 want to spawn Chrome _from_ your application.
 
 One way is to use `child_process`:
@@ -221,8 +224,9 @@ is a great Node package that provides usable APIs for the
 Chrome, navigate to pages, and fetch information about those pages.
 
 Warning: The DevTools protocol can do a ton of interesting stuff, but it can be a bit
-daunting at first. I recommend spending a bit of time browsing the [DevTools Protocol Viewer][dtviewer], first. Then, move on to the `chrome-remote-interface` API docs to
-see how it wraps the raw protocol.
+daunting at first. I recommend spending a bit of time browsing the
+[DevTools Protocol Viewer][dtviewer], first. Then, move on to the
+`chrome-remote-interface` API docs to see how it wraps the raw protocol.
 
 Let's install the library:
 
@@ -326,20 +330,24 @@ Docs
 
 Tools
 
-* [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface) - node module that wraps the DevTools protocol
-* [Lighthouse](https://github.com/GoogleChrome/lighthouse) - automated tool for testing web app quality; makes heavy use of the protocol
-* [chrome-launcher](https://github.com/GoogleChrome/lighthouse/tree/master/chrome-launcher) - node module for launching Chrome, ready for automation
+* [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface) - node
+module that wraps the DevTools protocol
+* [Lighthouse](https://github.com/GoogleChrome/lighthouse) - automated tool for testing
+web app quality; makes heavy use of the protocol
+* [chrome-launcher](https://github.com/GoogleChrome/lighthouse/tree/master/chrome-launcher) -
+node module for launching Chrome, ready for automation
 
 Demos
 
-* "[The Headless Web](https://paul.kinlan.me/the-headless-web/)"  - Paul Kinlan's great blog post on using Headless with api.ai.
+* "[The Headless Web](https://paul.kinlan.me/the-headless-web/)"  - Paul Kinlan's great blog
+post on using Headless with api.ai.
 
 ## FAQ
 
 **Do I need the `--disable-gpu` flag?**
 
-Yes, for now.  The `--disable-gpu` flag is a temporary requirement to work around a few bugs. You won't need this
-flag in future versions of Chrome. See [https://crbug.com/546953#c152](https://bugs.chromium.org/p/chromium/issues/detail?id=546953#c152) and [https://crbug.com/695212](https://bugs.chromium.org/p/chromium/issues/detail?id=695212) for more information.
+Yes, for now.  The `--disable-gpu` flag is a temporary requirement to work around a few bugs.
+You won't need this flag in future versions of Chrome. See [https://crbug.com/546953#c152](https://bugs.chromium.org/p/chromium/issues/detail?id=546953#c152) and [https://crbug.com/695212](https://bugs.chromium.org/p/chromium/issues/detail?id=695212) for more information.
 
 **So I still need Xvfb?**
 
@@ -363,7 +371,8 @@ Right now, Selenium opens a full instance of Chrome. In other words, it's an
 automated solution but not completely headless. However, Selenium could use
 `--headless` in the future.
 
-If you want to bleed on the edge, I recommend [Running Selenium with Headless Chrome](https://intoli.com/blog/running-selenium-with-headless-chrome/) to set things up
+If you want to bleed on the edge, I recommend [Running Selenium with
+Headless Chrome](https://intoli.com/blog/running-selenium-with-headless-chrome/) to set things up
 yourself.
 
 Note: you may encounter bugs using [ChromeDriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver).
