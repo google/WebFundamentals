@@ -12,7 +12,7 @@ description: A summary of commands used to convert a raw mov file to an encrypte
 This document shows in order commands needed to get from a raw mov file to
 encrypted assets packaged for DASH or HLS. For the sake of having a goal to
 illustrate, I'm converting my source file to a bitrate of 8Mbs at a resolution
-of 1080p (1920 x 1980). Adjust these values as your needs dictate.
+of 1080p (1920 x 1080). Adjust these values as your needs dictate.
  
 Conversion is done with two applications:
 [Shaka Packager](https://github.com/google/shaka-packager) and
@@ -98,7 +98,7 @@ ratio. Fix this with a filter (`-vf setsar=1:1`).
 
 ### Resolution
 
-    ffmpeg -i myvideo.webm -s 1920x1080 myvideo_1980x1020.webm
+    ffmpeg -i myvideo.webm -s 1920x1080 myvideo_1920x1080.webm
 
 ### Synchronize audio and video
 

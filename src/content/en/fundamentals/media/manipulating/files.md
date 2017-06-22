@@ -5,7 +5,7 @@ description: TBD.
 {# wf_updated_on: 2017-06-23 #}
 {# wf_published_on: 2017-06-23 #}
 
-# Media File Manipulation {: .page-title }
+# From Raw Video to Web Ready {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
@@ -117,9 +117,12 @@ Packager I might, for example, pull out the video stream.
     packager input=myvideo.mp4,stream=video,output=myvideo_video.mp4
 
 Notice that the stream descriptor has an input, an output, and a stream type.
-You might remember from [Application Primers](applications) that Shaka Packager
-can take multiple stream descriptors. This means that Shaka Packager lets me
-split the audio and video in a single command.
+Despite the mp4 extension this output file wouldn't have any sound. To get an
+audio file, I'd rerun this command with `stream=audio` and output it to a
+different file name. But, you might remember from [Application
+Primers](applications) that Shaka Packager can take multiple stream descriptors.
+This means that Shaka Packager lets me split the audio and video in a single
+command.
 
     packager \
       input=myvideo.mp4,stream=video,output=myvideo_video.mp4 \
@@ -195,6 +198,9 @@ Unsuprisingly, bitrates for the web are low. The table below compares web
 bitrates with common home video formats. Values are given in megabits per second
 (Mbs).
 
+Note: The web numbers are approximations. This chart should not be a substitute for
+doing your own testing.
+
 | Format | Bitrate |
 | ------ | ------- |
 | Blue-ray | 20Mbs |
@@ -202,7 +208,7 @@ bitrates with common home video formats. Values are given in megabits per second
 | Desktop web video | 2 Mbs |
 | 4G mobile video | 0.7 Mbs |
 | 3G mobile video | 0.35 Mbs |
-| 2G mobile video | ?? |
+| 2G mobile video | Depends on network type.<ul><li>EDGE: 0.4 Mbs</li><li>GPRS: 0.04Mbs</li></ul> |
 
 Which value should I use for video on my web pages? The short answer is at least
 the top three. If you're serving video someplace like India, you'll want to
