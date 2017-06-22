@@ -51,8 +51,8 @@ the budget was reserved, there is no need to notify the user of your background
 work.
 
 In the example of push notifications, you can attempt to reserve budget for a
-"silent-push" operation and if `reserve()` resolves with true, the operation is allowed.
-Otherwise it'll return false and you'll need to show a notification
+"silent-push" operation and if `reserve()` resolves with true, the operation is 
+allowed. Otherwise it'll return false and you'll need to show a notification
 
 ```javascript
 self.addEventListener('push', event => {
@@ -108,8 +108,10 @@ Let's look how to use these APIs.
 
 ### Get your Budget
 
-You can find your available budget with the `getBudget()` method. Some browsers (like Chrome) will have budget 'decay' over time, so to give you full visibility this returns
-an array of `BudgetStates`, indicating what your budget will be at various times in the future.
+You can find your available budget with the `getBudget()` method. Some browsers 
+(like Chrome) will have budget 'decay' over time, so to give you full 
+visibility this returns an array of `BudgetStates`, indicating what your budget 
+will be at various times in the future.
 
 To list the budget entries we can run:
 
@@ -123,7 +125,8 @@ navigator.budget.getBudget()
 });
 ```
 
-The first entry will be your current budget and additional values will show what your budget will be at various points in the future.
+The first entry will be your current budget and additional values will show 
+what your budget will be at various points in the future.
 
 ```
 At 'Mon Jun 05 2017 12:47:20' you will have a budget of '3'.
