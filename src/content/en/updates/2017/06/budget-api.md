@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Budget API allows developers to perform background actions without notifying users, enabling use cases like silent push.
 
-{# wf_updated_on: 2017-06-19 #}
+{# wf_updated_on: 2017-06-22 #}
 {# wf_published_on: 2017-06-07 #}
 {# wf_tags: javascript,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
@@ -108,9 +108,8 @@ Let's look how to use these APIs.
 
 ### Get your Budget
 
-You can find your available budget with the `getBudget()` method. This returns
-an array of BudgetStates which will indicate your budget at various points in
-time.
+You can find your available budget with the `getBudget()` method. Some browsers (like Chrome) will have budget 'decay' over time, so to give you full visibility this returns
+an array of `BudgetStates`, indicating what your budget will be at various times in the future.
 
 To list the budget entries we can run:
 
@@ -124,8 +123,7 @@ navigator.budget.getBudget()
 });
 ```
 
-The first entry will be your current budget and additional values will be future
-changes to your budget.
+The first entry will be your current budget and additional values will show what your budget will be at various points in the future.
 
 ```
 At 'Mon Jun 05 2017 12:47:20' you will have a budget of '3'.
