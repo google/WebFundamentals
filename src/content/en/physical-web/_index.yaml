@@ -1,0 +1,45 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+project_path: /web/_project.yaml
+book_path: /web/physical-web/_book.yaml
+
+landing_page:
+
+  header:
+    description: >
+      Phasellus quis nunc leo. Donec lacus mauris, placerat sed turpis ac, eleifend
+      iaculis ipsum. Curabitur convallis felis vel lectus mattis, a accumsan magna
+      consectetur. Etiam eleifend eget nisi a faucibus. 
+
+  rows:
+
+  - heading: Heading Title 1
+    classname: devsite-landing-row-67 devsite-landing-row-no-image-background
+    items:
+    - description: >
+        Phasellus quis nunc leo. Donec lacus mauris, placerat sed turpis ac, eleifend
+        iaculis ipsum. Curabitur convallis felis vel lectus mattis, a accumsan magna
+        consectetur. Etiam eleifend eget nisi a faucibus.
+      image_path: /web/images/content-responsive-2x.jpg
+      buttons:
+      - label: Get Started
+        path: /web/physical-web/magic
+        classname: button button-primary
+
+  - heading: Libraries
+    items:
+    - heading: Another Heading
+      description: >
+        Phasellus quis nunc leo. Donec lacus mauris, placerat sed turpis ac, eleifend
+        iaculis ipsum. Curabitur convallis felis vel lectus mattis, a accumsan magna
+        consectetur. Etiam eleifend eget nisi a faucibus. 
+      buttons:
+      - label: Learn more
+        path: /web/physical-web/404
+    - heading: Material Design Lite
+      description: >
+        Phasellus quis nunc leo. Donec lacus mauris, placerat sed turpis ac, eleifend
+        iaculis ipsum. Curabitur convallis felis vel lectus mattis, a accumsan magna
+        consectetur. Etiam eleifend eget nisi a faucibus. 
+      buttons:
+      - label: Learn more
+        path: /web/physical-web/404-also
