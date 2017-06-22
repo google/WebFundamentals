@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Push notifications are one of the most valuable capabilities of native apps, and this capability is now available on the web. To get the most out of them, notifications need to be timely, precise, and relevant.
 
-{# wf_updated_on: 2016-06-30 #}
+{# wf_updated_on: 2017-06-14 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Web Push Notifications: Timely, Relevant, and Precise {: .page-title }
@@ -83,7 +83,7 @@ understand how they work, or have to implement them. First, check out
 [our own sample](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications).
 Also available are Peter Beverloo's
 [Notification Generator](https://tests.peter.sh/notification-generator/)
-and Chris Mills' [push-api-demo](https://github.com/chrisdavidmills/push-api-demo).
+and Mozilla's [Push Payload Demo](https://serviceworke.rs/push-payload_demo.html).
 
 Note: Unless you're using localhost, the Push API requires HTTPS.
 

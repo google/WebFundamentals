@@ -27,12 +27,14 @@ const runSequence = require('run-sequence');
  *****************************************************************************/
 
 const MAX_DESCRIPTION_LENGTH = 485;
+const MAX_FILE_SIZE_WARN = 500;   // Max file size (in kB) before warning
+const MAX_FILE_SIZE_ERROR = 2500; // Max file size (in kB) before error
 const MD_FILES = ['.md', '.mdown', '.markdown'];
-const EXTENSIONS_TO_SKIP = [
-  '.css',
+const EXTENSIONS_TO_SKIP = ['.css', '.vtt', '.xml'];
+const MEDIA_FILES = [
   '.gif', '.ico', '.jpg', '.png', '.psd', '.svg',
-  '.mov', '.mp3', '.mp4', '.webm', '.vtt',
-  '.pdf', '.xml'
+  '.mov', '.mp3', '.mp4', '.webm',
+  '.pdf',
 ];
 const VALID_DATE_FORMATS = [
   'YYYY-MM-DD',
@@ -55,6 +57,11 @@ const VALID_VERTICALS = [
   'education', 'entertainment', 'media', 'real-estate', 'retail',
   'transportation', 'travel'
 ];
+const IS_TRAVIS = process.env.TRAVIS === 'true';
+const IS_TRAVIS_PUSH = process.env.TRAVIS_EVENT_TYPE === 'push';
+const IS_TRAVIS_ON_MASTER = process.env.TRAVIS_BRANCH === 'master';
+const TRAVIS_BRANCH = process.env.TRAVIS_BRANCH;
+const TRAVIS_EVENT_TYPE = process.env.TRAVIS_EVENT_TYPE;
 
 let remarkLintOptions = {
   external: [
@@ -186,7 +193,7 @@ function printSummary() {
   gutil.log(' - with issues:', chalk.yellow(cFilesWithIssues));
   gutil.log('Errors  : ', chalk.red(allErrors.length));
   gutil.log('Warnings: ', chalk.yellow(allWarnings.length));
-  if (process.env.TRAVIS === 'true') {
+  if (IS_TRAVIS) {
     let result = {
       summary: {
         filesTested: filesTested,
@@ -315,7 +322,7 @@ function getFiles() {
   } else {
     gutil.log(' ', 'Searching for changed files');
     let cmd = 'git --no-pager diff --name-only ';
-    if (process.env.TRAVIS === 'true') {
+    if (IS_TRAVIS) {
       cmd += 'FETCH_HEAD $(git merge-base FETCH_HEAD master)';
     } else {
       cmd += '$(git merge-base master HEAD)';
@@ -884,6 +891,35 @@ function testFile(filename, opts) {
       return;
     }
 
+    // Check media files & verify they're not too big
+    if (MEDIA_FILES.indexOf(filenameObj.ext) >= 0) {
+      let fsOK = true;
+      try {
+        // Read the file size and check if it exceeds the known limits
+        const stats = fs.statSync(filename);
+        const fileSize = Math.round(parseInt(stats.size, 10) / 1024);
+        if (fileSize > MAX_FILE_SIZE_ERROR) {
+          fsOK = false;
+          msg = `Exceeds maximum files size (${MAX_FILE_SIZE_ERROR}K)`;
+          // For builds of master on Travis, warn only, do not error.
+          if (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MASTER) {
+            logWarning(filename, null, `${msg} - was ${fileSize}K`);
+          } else {
+            logError(filename, null, `${msg} - was ${fileSize}K`);
+          }
+        } else if (fileSize > MAX_FILE_SIZE_WARN) {
+          fsOK = false;
+          msg = `Try to keep files below (${MAX_FILE_SIZE_WARN}K)`;
+          logWarning(filename, null, `${msg} - was ${fileSize}K`);
+        }
+      } catch (ex) {
+        fsOK = false;
+        logWarning(filename, null, `Unable to read file stats: ${ex.message}`);
+      }
+      resolve(fsOK);
+      return;
+    }
+
     // Attempt to read the file contents
     let contents = readFile(filename);
     if (!contents) {
@@ -955,9 +991,7 @@ function testFile(filename, opts) {
  *****************************************************************************/
 
 gulp.task('test', function() {
-  const travisEventType = process.env.TRAVIS_EVENT_TYPE;
-  const travisBranch = process.env.TRAVIS_BRANCH;
-  if (travisEventType === 'push' && travisBranch === 'master') {
+  if (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MASTER) {
     GLOBAL.WF.options.testAll = true;
   }
   let opts = {

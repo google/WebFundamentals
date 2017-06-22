@@ -14,14 +14,14 @@ changing a page's CSS using Chrome DevTools.
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
-var feedback = "If there's any way we can make this tutorial more helpful for you, please " +
-    "<a href=\"https://github.com/google/webfundamentals/issues/new\">open a GitHub issue</a> " +
-    "or <a href=\"https://groups.google.com/forum/#!forum/google-chrome-developer-tools\">send " +
-    "us an email</a> or <a href=\"https://twitter.com/chromedevtools\">tweet us</a>.";
+var genericFeedback = 'If there\'s any way we can make this tutorial more helpful for you, please ' +
+    '<a href="https://github.com/google/webfundamentals/issues/new">open a GitHub issue</a> ' +
+    'or <a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">send ' +
+    'us an email</a> or <a href="https://twitter.com/chromedevtools">tweet us</a>.';
 var designerResponse = "Great! The tutorials should be easy to complete, even if you don't " +
-    "have much developer experience. " + feedback;
-var developerResponse = "Great, thanks for sharing. " + feedback;
-var otherResponse = feedback + " And let us know what type of role you identify with so that " +
+    "have much developer experience. " + genericFeedback;
+var developerResponse = "Great, thanks for sharing. " + genericFeedback;
+var otherResponse = genericFeedback + " And let us know what type of role you identify with so that " +
     "we can better tailor the doc to your needs.";
 var feedback = {
   "category": "DevTools",
@@ -85,18 +85,7 @@ var feedback = {
 
 1. Enter the value in the text box below.
 
-     {% framebox width="auto" height="auto" enable_widgets="true" %}
-     <form>
-       Value of <code>data-message</code>: <input type="text" size="10"/>
-     </form>
-     <aside class="success" style="display:none">Correct!</aside>
-     <script>
-     document.querySelector('input').addEventListener('keyup', (e) => {
-       document.querySelector('aside').style.display =
-           e.target.value === 'peekaboo!' ? 'block' : 'none';
-     });
-     </script>
-     {% endframebox %}
+     {% include "web/tools/chrome-devtools/css/_data-message.html" %}
 
 1. The **Styles** tab on the **Elements** panel lists the CSS rules being
    applied to whatever element is currently selected in the **DOM Tree**,
@@ -107,18 +96,7 @@ var feedback = {
 1. The `aloha` class is declaring a value for `padding`. Enter that value
    in the text box below.
 
-     {% framebox width="auto" height="auto" enable_widgets="true" %}
-     <form>
-       Value of <code>padding</code>: <input type="text" size="10"/>
-     </form>
-     <aside class="success" style="display:none">Correct!</aside>
-     <script>
-     document.querySelector('input').addEventListener('keyup', (e) => {
-       document.querySelector('aside').style.display =
-           e.target.value === '1em' ? 'block' : 'none';
-     });
-     </script>
-     {% endframebox %}
+     {% include "web/tools/chrome-devtools/css/_padding.html" %}
 
 <figure>
   <img src="imgs/inspect.png"
@@ -150,34 +128,7 @@ before doing this one.
 1. Right-click the `Add A Background Color To Me!` text below and select
    **Inspect**.
 
-     {% framebox width="auto" height="auto" enable_widgets="true" %}
-     <style>
-     p {
-       display: inline-block;
-       border: 1px dashed red;
-       padding: 1em;
-     }
-     </style>
-     <p>Add A Background Color To Me!</p>
-     <aside class="success" style="display:none">Success!</aside>
-     <script>
-     var observer = new MutationObserver((mutations) => {
-       mutations.forEach((mutation) => {
-         if (mutation.target.style.backgroundColor === 'honeydew') {
-           document.querySelector('aside').style.display = 'block';
-         }
-       });
-     });
-     var observerConfig = {
-       attributes: true,
-       childList: false,
-       characterData: false,
-       attributeOldValue: true
-     };
-     var targetNode = document.querySelector('p');
-     observer.observe(targetNode, observerConfig);
-     </script>
-     {% endframebox %}
+     {% include "web/tools/chrome-devtools/css/_background-color.html" %}
 
 1. Click `element.style` near the top of the **Styles** tab.
 1. Type `background-color` and press <kbd>Enter</kbd>.
@@ -204,64 +155,7 @@ before doing this one.
 
 1. Right-click the `Add A Class To Me!` element below and select **Inspect**.
 
-     {% framebox width="auto" height="auto" enable_widgets="true" %}
-     <style>
-     /* red orange yellow green blue indigo violet */
-     @keyframes rainbow {
-       0% {
-         background-color: violet;
-       }
-       14% {
-         background-color: red;
-       }
-       28% {
-         background-color: orange;
-       }
-       42% {
-         background-color: yellow;
-       }
-       56% {
-         background-color: green;
-       }
-       70% {
-         background-color: blue;
-       }
-       84% {
-         background-color: indigo;
-       }
-       100% {
-         background-color: violet;
-       }
-     }
-     .color_me {
-       animation: rainbow 10s linear infinite;
-     }
-     p {
-       display: inline-block;
-       border: 1px dashed red;
-       padding: 1em;
-     }
-     </style>
-     <p>Add A Class To Me!</p>
-     <aside class="success" style="display:none">Success!</aside>
-     <script>
-     var observer = new MutationObserver((mutations) => {
-       var p = document.querySelector('p');
-       mutations.forEach((mutation) => {
-         document.querySelector('aside').style.display =
-             p.classList.contains('color_me') ? 'block' : 'none';
-       });
-     });
-     var observerConfig = {
-       attributes: true,
-       childList: false,
-       characterData: false,
-       attributeOldValue: true
-     };
-     var targetNode = document.querySelector('p');
-     observer.observe(targetNode, observerConfig);
-     </script>
-     {% endframebox %}
+     {% include "web/tools/chrome-devtools/css/_class.html" %}
 
 1. Click **.cls**. DevTools reveals a text box where you can add classes
    to the selected element.
@@ -328,33 +222,7 @@ before doing this one.
 
 1. Right-click the `Change My Margin!` element below and select **Inspect**.
 
-     {% framebox width="auto" height="auto" enable_widgets="true" %}
-     <style>
-     p {
-       display: inline-block;
-       border: 1px dashed red;
-       padding: 1em;
-     }
-     </style>
-     <p>Change My Margin!</p>
-     <aside class="success" style="display:none">Success!</aside>
-     <script>
-     var observer = new MutationObserver((mutations) => {
-       mutations.forEach((mutation) => {
-         document.querySelector('aside').style.display = 
-           mutation.target.style.marginLeft === '100px' ? 'block' : 'none';
-       });
-     });
-     var observerConfig = {
-       attributes: true,
-       childList: false,
-       characterData: false,
-       attributeOldValue: true
-     };
-     var targetNode = document.querySelector('p');
-     observer.observe(targetNode, observerConfig);
-     </script>
-     {% endframebox %}
+     {% include "web/tools/chrome-devtools/css/_margin.html" %}
 
 1. In the **Box Model** diagram in the **Styles** tab, hover over
    **padding**. The element's margin is highlighted in the viewport.

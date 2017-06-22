@@ -31,6 +31,8 @@ toc:
         path: /web/tools/lighthouse/audits/button-name
       - title: Cache Contains start_url From Manifest
         path: /web/tools/lighthouse/audits/cache-contains-start_url
+      - title: Configured For A Custom Splash Screen
+        path: /web/tools/lighthouse/audits/custom-splash-screen
       - title: Contains Some Content When Its Scripts Are Not Available
         path: /web/tools/lighthouse/audits/no-js
       - title: Content Sized Correctly for Viewport
@@ -45,6 +47,8 @@ toc:
         path: /web/tools/lighthouse/audits/valid-aria-values
       - title: Elements With ARIA Roles Have The Required aria-* Attributes
         path: /web/tools/lighthouse/audits/required-aria-attributes
+      - title: Enable Text Compression
+        path: /web/tools/lighthouse/audits/text-compression
       - title: Estimated Input Latency
         path: /web/tools/lighthouse/audits/estimated-input-latency
       - title: Every Form Element Has A Label
@@ -77,8 +81,12 @@ toc:
         path: /web/tools/lighthouse/audits/offscreen-images
       - title: Opens External Anchors Using rel="noopener"
         path: /web/tools/lighthouse/audits/noopener
+      - title: Optimize Images
+        path: /web/tools/lighthouse/audits/optimize-images
       - title: Oversized Images
         path: /web/tools/lighthouse/audits/oversized-images
+      - title: Page Load Is Fast Enough On 3G
+        path: /web/tools/lighthouse/audits/fast-3g
       - title: Perceptual Speed Index
         path: /web/tools/lighthouse/audits/speed-index
       - title: Redirects HTTP Traffic To HTTPS
@@ -89,10 +97,14 @@ toc:
         path: /web/tools/lighthouse/audits/blocking-resources
       - title: Responds With A 200 When Offline
         path: /web/tools/lighthouse/audits/http-200-when-offline
+      - title: Serve Images As WebP
+        path: /web/tools/lighthouse/audits/webp
       - title: Time to Interactive
         path: /web/tools/lighthouse/audits/time-to-interactive
       - title: Unoptimized Images
         path: /web/tools/lighthouse/audits/unoptimized-images
+      - title: User Can Be Prompted To Install The Web App
+        path: /web/tools/lighthouse/audits/install-prompt
       - title: User Timing Marks and Measures
         path: /web/tools/lighthouse/audits/user-timing
       - title: Uses HTTP/2 For Its Own Resources

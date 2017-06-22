@@ -102,7 +102,7 @@ keluaran akhir di bawah ini:
       margin: 0 auto;
     }
 
-#### Memeriksa Javascript Anda
+#### Memeriksa JavaScript Anda
 
 JSHint adalah alat (bantu) yang memindai kode JavaScript Anda untuk memeriksa masalah
 dengan logika JavaScript yang mungkin muncul dan [memberlakukan praktik terbaik pengkodean](//www.jshint.com/docs/){: .external }.
