@@ -49,24 +49,24 @@ figure {
 
 <div class="figures">
   <figure>
-    <img src="images/how_it_works_1.png">
+    <img src="images/how_it_works_1.jpg">
     <figcaption>1. Press "Checkout".</figcaption>
   </figure>
   <figure>
-    <img src="images/how_it_works_2.png">
+    <img src="images/how_it_works_2.jpg">
     <figcaption>2. Payment Request UI pops up.</figcaption>
   </figure>
   <figure>
-    <img src="images/how_it_works_3.png">
+    <img src="images/how_it_works_3.jpg">
     <figcaption>3. Choose payment method, etc., and press "Pay".</figcaption>
   </figure>
   <figure>
-    <img src="images/how_it_works_4.png">
+    <img src="images/how_it_works_4.jpg">
     <figcaption>4. When the Android Pay app pops up, click to continue (the 
     user may be prompted to unlock phone / authenticate with fingerprint)</figcaption>
   </figure>
   <figure>
-    <img src="images/how_it_works_5.png">
+    <img src="images/how_it_works_5.jpg">
     <figcaption>5. Checkout is complete.</figcaption>
   </figure>
 </div>

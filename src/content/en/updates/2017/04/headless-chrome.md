@@ -125,7 +125,7 @@ in another browser to check that everything is working. You'll see a list of
 inspectable pages where you can click through and see what Headless is rendering:
 
 <figure>
-  <img src="/web/updates/images/2017/04/headless-chrome/remote-debugging-ui.png"
+  <img src="/web/updates/images/2017/04/headless-chrome/remote-debugging-ui.jpg"
        class="screenshot" alt="DevTools Remote ">
   <figcaption>DevTools remote debugging UI</figcaption>
 </figure>

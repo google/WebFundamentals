@@ -12,7 +12,7 @@ book_path: /web/showcase/_book.yaml
 
 *By Matt Bell, Cofounder, Matterport*
 
-<img src="/web/showcase/2017/images/matterport/VR_FourSeason_InGame01.jpg" class="attempt-right">
+<img src="/web/showcase/2017/images/matterport/VR_FourSeason_InGame.jpg" class="attempt-right">
 
 <a class="button button-primary" href="https://try.matterport.com/virtual-reality/webvr/">
   View the site

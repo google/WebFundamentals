@@ -176,9 +176,9 @@ description: モバイル Web における動画再生フロントエンドの�
 もちろん、ここで紹介するすべての機能を実装する必要はありません。ご自身のニーズに合わせて適宜取捨選択してください。
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.mp4"
           type="video/mp4">
 </video>
 
@@ -346,9 +346,9 @@ function lockScreenInLandscape() {
 これで、求めていたシームレスなフルスクリーンの視聴体験が実装できました。改めて[サンプル]{: .external }を実際に試してみてください。
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.webm"
           type="video/webm; codecs=vp8">
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.mp4"
           type="video/webm; codecs=mp4">
 </video>
 
@@ -404,9 +404,9 @@ function lockScreenInLandscape() {
     });
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/video-visibility.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-visibility.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/video-visibility.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-visibility.mp4"
           type="video/mp4">
 </video>
 
@@ -490,9 +490,9 @@ playPauseButton.addEventListener('click', function() {
 Media Session API の素晴らしいところは、通知トレイだけではなく、ロックされたスクリーン上にメタデータとコントロールを表示させたり、また、ウェアラブルデバイスと自動的に同期される点です。
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/media-session.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/media-session.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/media-session.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/media-session.mp4"
           type="video/mp4">
 </video>
 
