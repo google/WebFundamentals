@@ -429,8 +429,8 @@ iPad의 Safari에서는 동영상을 인라인으로 재생합니다.
 모드에서 표시되는 방식을 변경할 수 있습니다.
 
 <video autoplay muted loop class="attempt-right">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
   <p>이 브라우저에서는 동영상 요소를 지원하지 않습니다.</p>
 </video>
 

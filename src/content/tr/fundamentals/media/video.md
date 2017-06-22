@@ -387,8 +387,8 @@ Isterseniz ögenin su anda tam ekran modunda olup olmadigini kontrol edebilirsin
 Tam Ekran API'sini destekleyen cihazlarda, video için yer tutucu olarak küçük resimleri kullanabilirsiniz:
 
 <video autoplay loop class="center">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
      <p>Bu tarayici video ögesini desteklemiyor.</p>
 </video>
 

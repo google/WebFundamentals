@@ -423,8 +423,8 @@ iPad 版 Safari 以内联模式播放视频：
 
 
 <video autoplay muted loop class="attempt-right">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
   <p>此浏览器不支持视频元素。</p>
 </video>
 

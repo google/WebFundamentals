@@ -340,8 +340,8 @@ Safari для iPad воспроизводит видео как встроенн
 На устройствах, поддерживающих Fullscreen API, вы можете использовать значки для обозначения места под видео:
 
 <video autoplay loop class="center">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
   <p>Этот браузер не поддерживает элемент video.</p>
 </video>
 

@@ -360,9 +360,9 @@ fullscreenButton.addEventListener('click', function(event) {
     }
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/lock-screen-in-landscape-on-button-click.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/lock-screen-in-landscape-on-button-click.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/lock-screen-in-landscape-on-button-click.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/lock-screen-in-landscape-on-button-click.mp4"
           type="video/mp4">
 </video>
 

@@ -341,8 +341,8 @@ Inoltre, è possibile utilizzare la pseudo classe `:fullscreen` CSS per la modif
 Sui dispositivi che supportano l'API Fullscreen è possibile utilizzare immagini in miniatura come indicatori per i video:
 
 <video autoplay loop class="center">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
      <p>Il browser in uso non supporta l'elemento video.</p>
 </video>
 

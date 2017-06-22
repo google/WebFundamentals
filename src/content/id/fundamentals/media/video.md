@@ -429,8 +429,8 @@ Anda juga bisa menggunakan kelas-semu `:fullscreen` CSS untuk mengubah cara
 elemen ditampilkan dalam mode layar penuh.
 
 <video autoplay muted loop class="attempt-right">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
   <p>Browser ini tidak mendukung elemen video.</p>
 </video>
 

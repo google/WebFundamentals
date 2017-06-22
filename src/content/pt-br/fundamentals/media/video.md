@@ -429,8 +429,8 @@ Você também pode usar a pseudoclasse `:fullscreen` do CSS para alterar a manei
 os elementos são exibidos no modo de tela inteira.
 
 <video autoplay muted loop class="attempt-right">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
   <p>Este navegador não oferece suporte para o elemento video.</p>
 </video>
 

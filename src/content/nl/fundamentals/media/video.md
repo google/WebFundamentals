@@ -341,8 +341,8 @@ U kunt ook de CSS-pseudoklasse `:fullscreen` gebruiken om de manier te verandere
 Op apparaten die de Fullscreen API ondersteunen, kunt u miniatuurafbeeldingen gebruiken als placeholders voor video:
 
 <video autoplay loop class="center">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
      <p>Het video-element wordt niet ondersteund door deze browser.</p>
 </video>
 

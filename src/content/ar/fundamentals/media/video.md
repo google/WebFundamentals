@@ -345,8 +345,8 @@ src="images/iPad-Retina-landscape-video-playing.png">
 على الأجهزة التي تتوافق مع واجهة برمجة تطبيقات Fullscreen، فكر في استخدام الصور المصغَّرة بمثابة عناصر نائبة للفيديو:
 
 <video autoplay loop class="center">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
      <p>هذا المتصفح ليس متوافقًا مع عنصر الفيديو.</p>
 </video>
 
