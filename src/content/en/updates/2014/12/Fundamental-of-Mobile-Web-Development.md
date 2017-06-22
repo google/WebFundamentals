@@ -31,7 +31,8 @@ address these problems from the Chrome Developer Platform team.
 ## Learn.
 
 <p style="text-align: center;">
-<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image00.png" alt="Web Fundamentals on a HTML5Rocks" width="498" height="332" style="max-width: 100%; height: auto;" />
+  <img src="/web/updates/images/2014/12/wf.png" width="498" height="332"
+  alt="WebFundamentals on a HTML5Rocks" style="max-width:100%;height: auto;"/>
 </p>
 
 [Web Fundamentals](/web/fundamentals/) is a set of
