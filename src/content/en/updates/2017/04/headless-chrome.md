@@ -373,16 +373,12 @@ Flexible container.
 **Can I use this with Selenium / WebDriver / ChromeDriver**?
 
 Right now, Selenium opens a full instance of Chrome. In other words, it's an
-automated solution but not completely headless. However, Selenium could use
-`--headless` in the future.
-
-If you want to bleed on the edge, I recommend [Running Selenium with
-Headless Chrome](https://intoli.com/blog/running-selenium-with-headless-chrome/) to set things up
+automated solution but not completely headless. However, Selenium can be
+configured to run headless Chrome with a little work. I recommend [Running Selenium with Headless Chrome](https://intoli.com/blog/running-selenium-with-headless-chrome/) to set things up
 yourself.
 
-Note: you may encounter bugs using [ChromeDriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver).
-At the time of writing, the latest release (2.29) only supports Chrome 58.
-Headless Chrome requires Chrome 59 or later.
+[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 2.3.0
+supports Chrome 59+. While I have not tested it, it should also work with headless Chrome.
 
 **How is this related to PhantomJS?**
 
