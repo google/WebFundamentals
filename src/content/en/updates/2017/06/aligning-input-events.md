@@ -16,7 +16,7 @@ description: Providing a smooth user experience is important for the web. Over t
 
 +  Chrome 60 reduces jank by lowering event frequency, thereby improving the
    consistency of frame timing.
-+  The getCoalescedEvents() method, introduced in Chrome 58 provides the same
++  The `getCoalescedEvents()` method, introduced in Chrome 58 provides the same
    wealth of event information you've had all along.
 
 Providing a smooth user experience is important for the web. The time between
