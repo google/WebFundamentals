@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2017-06-21 #}
+{# wf_updated_on: 2017-06-22 #}
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
@@ -185,6 +185,11 @@ use it, first install from npm:
 
 ```javascript
 const chromeLauncher = require('chrome-launcher');
+
+// Optional: set logging level of launcher to see its output.
+// Install it using: yarn add lighthouse-logger
+// const log = require('lighthouse-logger');
+// log.setLevel('info');
 
 /**
  * Launches a debugging instance of Chrome.
