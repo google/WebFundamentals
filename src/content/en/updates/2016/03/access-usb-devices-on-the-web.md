@@ -5,7 +5,7 @@ description: The WebUSB API makes USB safer and easier to use by bringing it to 
 {# wf_updated_on: 2016-09-26 #}
 {# wf_published_on: 2016-03-30 #}
 {# wf_tags: news,webusb,iot,arduino,origintrials #}
-{# wf_featured_image: /web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-hero.jpg #}
+{# wf_featured_image: /web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-hero-sm.jpg #}
 
 # Access USB Devices on the Web {: .page-title }
 

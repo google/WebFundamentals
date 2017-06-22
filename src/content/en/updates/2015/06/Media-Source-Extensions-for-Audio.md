@@ -20,8 +20,8 @@ We'll get into the details of why below, but for now let's start with a demonstr
 
 <p style="text-align: center;">
   <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster-red.jpg">
-    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gap.webm" type="video/webm" />
-    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gap.mp4" type="video/mp4" />
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/gap.webm" type="video/webm" />
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/gap.mp4" type="video/mp4" />
   </video>
 </p>
 
@@ -31,8 +31,8 @@ Yuck! That's not a great experience; we can do better. With a little more work, 
 
 <p style="text-align: center;">
   <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster-green.jpg">
-    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gapless.webm" type="video/webm" />
-    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/gapless.mp4" type="video/mp4" />
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/gapless.webm" type="video/webm" />
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/gapless.mp4" type="video/mp4" />
   </video>
 </p>
 
@@ -165,8 +165,8 @@ With that, we've stitched all five segments seamlessly into one and have subsequ
 
 <p style="text-align: center;">
   <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
-    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/mp4gapless.webm" type="video/webm" />
-    <source src="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/mp4gapless.mp4" type="video/mp4" />
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/mp4gapless.webm" type="video/webm" />
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/mp4gapless.mp4" type="video/mp4" />
   </video>
 </p>
 

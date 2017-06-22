@@ -41,8 +41,8 @@ Sitenize video eklemenin ve kullanicilarin tüm cihazlarda mümkün olan en iyi 
 Sitenizde video yüklemek, kodunu çözmek ve oynatmak için video ögesini ekleyin.
 
 <video controls>
-     <source src="video/chrome.webm" type="video/webm">
-     <source src="video/chrome.mp4" type="video/mp4">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
      <p>Bu tarayici video ögesini desteklemiyor.</p>
 </video>
 
@@ -83,8 +83,8 @@ Ayrica, [sunucunuzun dogru MIME türünü bildirdiginden emin olmak](//developer
 Bant genisliginden tasarruf edin ve sitenizin daha duyarli hissettirmesini saglayin: Video ögesine bir baslangiç ve bitis zamani eklemek için Medya Parçalari API'sini kullanin.
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm">
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
      <p>Bu tarayici video ögesini desteklemiyor.</p>
 </video>
 
@@ -387,8 +387,8 @@ Isterseniz ögenin su anda tam ekran modunda olup olmadigini kontrol edebilirsin
 Tam Ekran API'sini destekleyen cihazlarda, video için yer tutucu olarak küçük resimleri kullanabilirsiniz:
 
 <video autoplay loop class="center">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
      <p>Bu tarayici video ögesini desteklemiyor.</p>
 </video>
 

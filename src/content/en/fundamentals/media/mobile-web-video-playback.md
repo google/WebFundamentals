@@ -215,9 +215,9 @@ Obviously, you don't have to use all of them. Just pick the ones that make
 sense to you and combine them to create your custom flow.
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.mp4"
           type="video/mp4">
 </video>
 
@@ -360,9 +360,9 @@ fullscreenButton.addEventListener('click', function(event) {
     }
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/lock-screen-in-landscape-on-button-click.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/lock-screen-in-landscape-on-button-click.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/lock-screen-in-landscape-on-button-click.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/lock-screen-in-landscape-on-button-click.mp4"
           type="video/mp4">
 </video>
 
@@ -421,9 +421,9 @@ As you can see, this is the seamless fullscreen experience we were looking for.
 To see this in action, check out the [sample]{: .external }.
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.webm"
           type="video/webm; codecs=vp8">
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.mp4"
           type="video/webm; codecs=mp4">
 </video>
 
@@ -495,9 +495,9 @@ resources in an infinite scroll case.
     });
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/video-visibility.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-visibility.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/video-visibility.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-visibility.mp4"
           type="video/mp4">
 </video>
 
@@ -607,9 +607,9 @@ notification is synced automagically to any paired wearable device. And it also
 shows up on lock screens.
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/media-session.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/media-session.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/media-session.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/media-session.mp4"
           type="video/mp4">
 </video>
 
