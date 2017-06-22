@@ -13,6 +13,10 @@ description: Reference documentation for the "AUDIT_NAME" Lighthouse audit.
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
+[Audit source][src]{:.external}
+
+[src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/AUDIT_NAME
+
 ## Feedback {: #feedback }
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}

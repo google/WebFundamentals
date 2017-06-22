@@ -5,7 +5,7 @@ description: Find out more about how creating content for WebVR is different fro
 {# wf_updated_on: 2017-06-05 #}
 {# wf_published_on: 2017-06-05 #}
 
-# Seeing the web from a VR perspective {: .page-title }
+# Seeing the Web from a VR Perspective {: .page-title }
 
 There are several things about creating WebVR content that are not like regular
 web development. This means that you need different techniques and a different
@@ -16,7 +16,7 @@ of this may be familiar to you. But even for seasoned HTML5 game pros, there are
 some WebVR specific things that you need to think about.
 
 ## Performance is everything
-If you create animations on the web, you should already want to have them be
+If you create animations on the web, you should already want them to be
 silky smooth at 60 frames per seconds. That said, if sometimes you don't quite
 make it because you are processing something in the background it isn't always a
 huge deal.
