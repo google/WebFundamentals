@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components
 
-{# wf_updated_on: 2017-04-17 #}
+{# wf_updated_on: 2017-06-15 #}
 {# wf_published_on: 2016-08-01 #}
 
 # Shadow DOM v1: Self-Contained Web Components {: .page-title }
@@ -327,12 +327,12 @@ content, the slot renders its fallback content.
 You can also create **named slots**. Named slots are specific holes in your
 shadow DOM that users reference by name.
 
-**Example** - the named slots in `<fancy-tabs>`'s shadow DOM:
+**Example** - the slots in `<fancy-tabs>`'s shadow DOM:
 
 
     #shadow-root
       <div id="tabs">
-        <slot id="tabsSlot" name="title"></slot>
+        <slot id="tabsSlot" name="title"></slot> <!-- named slot -->
       </div>
       <div id="panels">
         <slot id="panelsSlot"></slot>
@@ -620,8 +620,8 @@ Another, more in-depth example from `<fancy-tabs>`:
     `;
     
 
-In this example, there are two slots: a named slot for the tab titles, a named
-slot for the  tabs content. When the user selects a tab, we bold their selection
+In this example, there are two slots: a named slot for the tab titles, and a
+slot for the tab panel content. When the user selects a tab, we bold their selection
 and reveal its panel. That's done by selecting distributed nodes that have the
 `selected` attribute. The custom element's JS (not shown here) adds that
 attribute at the correct time.

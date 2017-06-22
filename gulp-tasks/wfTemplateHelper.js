@@ -66,7 +66,7 @@ function getFullFeedEntries(articles) {
         article.feedAuthor = authorName.trim();
       }
     }
-    var rssPubDate = moment(article.datePublished);
+    var rssPubDate = moment.utc(article.datePublished);
     article.rssPubDate = rssPubDate.format('DD MMM YYYY HH:mm:ss [GMT]');
   });
   return articles;
@@ -74,7 +74,7 @@ function getFullFeedEntries(articles) {
 
 function generateFeeds(files, options) {
   gutil.log(' ', 'Generating RSS and ATOM feeds...');
-  var lastUpdated = files[0].datePublished;
+  var lastUpdated = files[0].dateUpdated;
   var context = {
     title: options.title,
     description: options.description,
@@ -90,8 +90,9 @@ function generateFeeds(files, options) {
     context.baseUrl += options.section + '/';
     context.analyticsQS = context.analyticsQS.replace('root_feed', options.section + '_feed');
   }
-  context.rssPubDate = moment(lastUpdated).format('DD MMM YYYY HH:mm:ss [GMT]');
-  context.atomPubDate = moment(lastUpdated).format('YYYY-MM-DDTHH:mm:ss[Z]');
+  const now = moment.utc(lastUpdated);
+  context.rssPubDate = now.format('DD MMM YYYY HH:mm:ss [GMT]');
+  context.atomPubDate = now.format('YYYY-MM-DDTHH:mm:ss[Z]');
 
   var template = path.join(GLOBAL.WF.src.templates, 'atom.xml');
   var outputFile = path.join(options.outputPath, 'atom.xml');
@@ -118,7 +119,7 @@ function generatePodcastFeed(files, options) {
   if (options.baseUrl) {
     context.baseUrl = options.baseUrl;
   }
-  context.rssPubDate = moment(lastUpdated).format('DD MMM YYYY HH:mm:ss [GMT]');
+  context.rssPubDate = moment.utc(lastUpdated).format('DD MMM YYYY HH:mm:ss [GMT]');
   var template = path.join(GLOBAL.WF.src.templates, 'shows', 'podcast.xml');
   var outputFile = path.join(options.outputPath, 'feed.xml');
   renderTemplate(template, context, outputFile);

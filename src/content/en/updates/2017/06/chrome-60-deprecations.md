@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the deprecations and removals in Chrome 60 to help you plan.
+description: A round up of the deprecations and removals in Chrome 60 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-{# wf_updated_on: 2017-06-08 #}
+{# wf_updated_on: 2017-06-12 #}
 {# wf_published_on: 2017-06-08 #}
 {# wf_tags: deprecations,removals,chrome60 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: A round up of the deprecations and removals in Chrome 60 to help you plan. #}
+{# wf_featured_snippet: A round up of the deprecations and removals in Chrome 60 to help you plan. In this version, security improvements, further webkit deprecations, and more. #}
 
 # Deprecations and Removals in Chrome 60 {: .page-title }
 
@@ -36,7 +36,7 @@ origins. Because of Chrome's long-standing policy of
 Because of their unfamilliarity to non-technical browser users, we're
 increasingly seeing the `data:` scheme being used in spoofing and phishing
 attacks. To prevent this, we're blocking web pages from loading `data:` URLs
-in the top frame. This applies to `&lt;a&gt;` tags, `window.open`,
+in the top frame. This applies to `<a>` tags, `window.open`,
 `window.location` and similar mechanisms. The `data:` scheme will still work for
 resources loaded by a page.
 

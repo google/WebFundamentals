@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-06-01#}
+{# wf_updated_on: 2017-06-12#}
 {# wf_published_on: 2017-04-06 #}
 
 # HowTo: Components – howto-tooltip {: .page-title }
@@ -50,10 +50,6 @@ connectedCallback() {
 
 ## Demo {: #demo }
 {% framebox height="auto" width="100%" class="demo" suppress_site_styles="true" %}
-<!doctype html>
-<html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=false,minimum-scale=1.0">
-<meta encoding="utf8">
 <!--
 Copyright 2017 Google Inc. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -66,8 +62,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<!doctype html>
-
 <style>
   /* The tooltip is by default unstyled. */
   howto-tooltip {
@@ -77,7 +71,6 @@ limitations under the License.
     color: #fff;
     border-radius: 3px;
   }
-
 </style>
 
 <div class="text">
@@ -192,9 +185,7 @@ window.customElements.define('howto-tooltip', HowtoTooltip);
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code ">&lt;!doctype html&gt;
-
-&lt;style&gt;</code></pre>
+<pre><code class="literate-code ">&lt;style&gt;</code></pre>
 </li>
 
 <li class="blockcomment ">

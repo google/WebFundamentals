@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Async functions allow you to write promise-based code as if it were synchronous
 
 {# wf_published_on: 2016-10-20 #}
-{# wf_updated_on: 2016-10-20 #}
+{# wf_updated_on: 2017-06-19 #}
 
 # Async functions - making promises friendly {: .page-title }
 
@@ -280,12 +280,8 @@ In this example, the URLs are fetched and read in parallel, but the "smart"
 
 ## Browser support & workarounds
 
-At time of writing, async functions are enabled by default in Chrome 55, but
-they're being developed in all the main browsers:
-
-* Edge - [In build 14342+ behind a flag](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/asyncfunctions/)
-* Firefox - [active development](https://bugzilla.mozilla.org/show_bug.cgi?id=1185106)
-* Safari - [active development](https://bugs.webkit.org/show_bug.cgi?id=156147)
+At time of writing, async functions are enabled by default in Chrome, Edge,
+Firefox, and Safari.
 
 ### Workaround - Generators
 

@@ -102,7 +102,7 @@ siguiente resultado final:
       margin: 0 auto;
     }
 
-#### Revisa tu Javascript
+#### Revisa tu JavaScript
 
 JSHint es una herramienta que examina tu código de JavaScript para verificar si hay posibles problemas
 con tu lógica de JavaScript y [ejecuta las mejores prácticas de codificación](//www.jshint.com/docs/){: .external }.
@@ -162,7 +162,7 @@ y concatenamos. Analicemos un ejemplo de bloque de compilación:
     <!-- endbuild -->
 
 Un bloque de compilación es, simplemente, un comentario con un formato especial.
-Todos tus archivos de Javascript incluidos en el bloque de compilación se unirán
+Todos tus archivos de JavaScript incluidos en el bloque de compilación se unirán
 (concatenarán) y se minificarán en un archivo con el nombre main.min.js, y
 la compilación final reemplazará estas secuencias de comandos por la etiqueta de secuencia de comandos:
 

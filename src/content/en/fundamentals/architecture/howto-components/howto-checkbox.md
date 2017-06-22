@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-06-01#}
+{# wf_updated_on: 2017-06-12#}
 {# wf_published_on: 2017-04-06 #}
 
 # HowTo: Components – howto-checkbox {: .page-title }
@@ -189,10 +189,6 @@ attributeChangedCallback(name, oldValue, newValue) {
 
 ## Demo {: #demo }
 {% framebox height="auto" width="100%" class="demo" suppress_site_styles="true" %}
-<!doctype html>
-<html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=false,minimum-scale=1.0">
-<meta encoding="utf8">
 <!--
 Copyright 2017 Google Inc. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -205,7 +201,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<!doctype html>
 <style>
   howto-checkbox {
     display: inline-block;
@@ -215,22 +210,18 @@ limitations under the License.
     height: 24px;
     vertical-align: middle;
   }
-
   howto-checkbox[aria-checked="true"] {
     background: url('/web/fundamentals/architecture/howto-components/./images/checked-checkbox.svg') no-repeat;
     background-size: contain;
   }
-
   howto-checkbox[aria-disabled="true"] {
     background: url('/web/fundamentals/architecture/howto-components/./images/unchecked-checkbox-disabled.svg') no-repeat;
     background-size: contain;
   }
-
   howto-checkbox[aria-checked="true"][aria-disabled="true"] {
     background: url('/web/fundamentals/architecture/howto-components/./images/checked-checkbox-disabled.svg') no-repeat;
     background-size: contain;
   }
-
   #join-label {
     vertical-align: middle;
     display: inline-block;
@@ -436,8 +427,7 @@ limitations under the License.
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code ">&lt;!doctype html&gt;
-&lt;style&gt;
+<pre><code class="literate-code ">&lt;style&gt;
 <sPan class="indent">&nbsp;&nbsp;</span>howto-checkbox {
 <sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>display: inline-block;
 <sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>background: url('./images/unchecked-checkbox.svg') no-repeat;
