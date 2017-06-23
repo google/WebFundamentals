@@ -91,11 +91,11 @@ care about the entire experience, and we developers should too.
 
 A common theme in all of these performance misconceptions is they focus on
 things that have little or nothing to do with the user experience. Likewise,
-traditional performance metrics like [load](https://developer.mozilla.org/en-
-US/docs/Web/Events/load) time or
-[DOMContentLoaded](https://developer.mozilla.org/en-
-US/docs/Web/Events/DOMContentLoaded) time are extremely unreliable since when
-they occur may or may not correspond to when the user thinks the app is loaded.
+traditional performance metrics like
+[load](https://developer.mozilla.org/en-US/docs/Web/Events/load) time or
+[DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded)
+time are extremely unreliable since when they occur may or may not correspond
+to when the user thinks the app is loaded.
 
 So to ensure we don't make this mistake going forward, we have to answer these
 questions:
@@ -290,15 +290,14 @@ Luckily, with the addition of a few new browser APIs, measuring these metrics on
 real users is finally possible without a lot of hacks or workaround, which can
 often make performance worse.
 
-These new APIs are [PerformanceObserver](https://developer.mozilla.org/en-
-US/docs/Web/API/PerformanceObserver),
-[PerformanceEntry](https://developer.mozilla.org/en-
-US/docs/Web/API/PerformanceEntry), and
-[DOMHighResTimeStamp](https://developer.mozilla.org/en-
-US/docs/Web/API/DOMHighResTimeStamp). To see some code with these new APIs in
-action, the following code example creates a new `PerformanceObserver` instance
-and subscribes to be notified about paint entries (e.g. FP and FCP) as well as
-any long tasks that occur:
+These new APIs are
+[`PerformanceObserver`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver),
+[`PerformanceEntry`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry),
+and
+[`DOMHighResTimeStamp`](https://developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp).
+To see some code with these new APIs in action, the following code example
+creates a new `PerformanceObserver` instance and subscribes to be notified
+about paint entries (e.g. FP and FCP) as well as any long tasks that occur:
 
 ```
 const observer = new PerformanceObserver((list) => {
@@ -397,8 +396,9 @@ DOMContentLoaded as the start time, but it's often more accurate to use
 something like the moment your hero elements are visible or the point when you
 know all your event listeners have been added.
 
-Refer to the [TTI polyfill documentation](https://github.com/GoogleChrome/tti-
-polyfill) for complete installation and usage instructions.
+Refer to the [TTI polyfill
+documentation](https://github.com/GoogleChrome/tti-polyfill) for complete
+installation and usage instructions.
 
 <aside>
   <strong>Note:</strong> As with FMP, it's quite hard to spec a TTI metric
@@ -595,10 +595,9 @@ before sending data to Google Analytics. You can send it directly via the
 [Measurement Protocol](/analytics/devguides/collection/protocol/v1/).
 
 This code adds a listener to the
-[visibilitychange](https://developer.mozilla.org/en-
-US/docs/Web/Events/visibilitychange) event (which fires if the page is being
-unloaded or goes into the background) and it sends the value of
-`performance.now()` at that point.
+[`visibilitychange`](https://developer.mozilla.org/en-US/docs/Web/Events/visibilitychange)
+event (which fires if the page is being unloaded or goes into the background)
+and it sends the value of `performance.now()` at that point.
 
 ```
 <script>

@@ -232,7 +232,7 @@ codec type. Below you can replay the original demo DASH-ready fragmented MP4
 instead of MP3.
 
 <p style="text-align: center;">
-  <video controls poster="/web/fundamentals/media/videos/poster.jpg">
+  <video controls poster="/web/fundamentals/media/videos/poster-red.jpg">
     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/mp4gapless.webm" type="video/webm" />
     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/mp4gapless.mp4" type="video/mp4" />
   </video>

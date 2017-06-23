@@ -16,8 +16,9 @@ render the UI. For example, sometimes the app needs to authenticate the user
 client-side and then make several API requests before it has all the data it
 needs to display on the page.
 
-Storing the application state in [IndexedDB](https://developer.mozilla.org/en-
-US/docs/Web/API/IndexedDB_API) can be a great way to speed up the load time for
+Storing the application state in
+[IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+can be a great way to speed up the load time for
 repeat visits. The app can then sync up with any API services in the background
 and update the UI with new data lazily, employing a [stale-while-
 revalidate](https://www.mnot.net/blog/2007/12/12/stale) strategy.
@@ -45,10 +46,9 @@ many of the issues you must keep in mind when working with IndexedDB.
 Errors when writing to IndexedDB can happen for a variety of reasons, and in
 some cases these reasons are outside of your control as a developer. For
 example, some browsers currently don't allow [writing to IndexedDB when in
-private browsing mode](https://developer.mozilla.org/en-
-US/docs/Web/API/IndexedDB_API#Browser_compatibility). There's also the
-possibility that a user is on a device that's almost out of disk space, and the
-browser will restrict you from storing anything at all.
+private browsing mode](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API#Browser_compatibility).
+There's also the possibility that a user is on a device that's almost out
+of disk space, and the browser will restrict you from storing anything at all.
 
 Because of this, it's critically important that you always implement proper
 error handling in your IndexedDB code. This also means it's generally a good
@@ -88,10 +88,10 @@ themselves, it's also possible that the data they have in storage was written by
 an old version of your code, possibly a version with bugs in it.
 
 IndexedDB has built-in support for schema versions and upgrading via its
-[`IDBOpenDBRequest.onupgradeneeded()`](https://developer.mozilla.org/en-
-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded) method; however, you still
-need to write your upgrade code in such a way that it can handle the user coming
-from a previous version (including a version with a bug).
+[`IDBOpenDBRequest.onupgradeneeded()`](https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded)
+method; however, you still need to write your upgrade code in such a way that
+it can handle the user coming from a previous version (including a version
+with a bug).
 
 Unit tests can be very helpful here, as it's often not feasible to manually test
 all possible upgrade paths and cases.
@@ -110,10 +110,9 @@ While IndexedDB makes is possible to store large, nested objects as a single
 record (and doing so is admittedly quite convenient from a developer
 perspective), this practice should be avoided. The reason is because when
 IndexedDB stores an object, it must first create a [structured
-clone](https://developer.mozilla.org/en-
-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) of that object, and
-the structured cloning process happens on the main thread. The larger the
-object, the longer the blocking time will be.
+clone](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
+of that object, and the structured cloning process happens on the main
+thread. The larger the object, the longer the blocking time will be.
 
 This presents some challenges when planning how to persist application state
 to IndexedDB, as most of the popular state management libraries (like
@@ -140,10 +139,10 @@ Lastly, you should always be [measuring the performance
 impact](/web/updates/2017/06/user-centric-performance- metrics) of the code you
 write. While it's true that small writes to IndexedDB will perform better than
 large writes, this only matters if the writes to IndexedDB that your application
-is doing actually lead to [long tasks](/web/updates/2017/06/user-centric-
-performance-metrics#long_tasks) that block the main thread and degrade the user
-experience. It's important to measure so you understand what you're optimizing
-for.
+is doing actually lead to
+[long tasks](/web/updates/2017/06/user-centric-performance-metrics#long_tasks)
+that block the main thread and degrade the user experience. It's important to
+measure so you understand what you're optimizing for.
 
 ## Conclusions
 
