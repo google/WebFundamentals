@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Latest Updates to the Credential Management API
 
-{# wf_updated_on: 2017-06-22 #}
+{# wf_updated_on: 2017-06-23 #}
 {# wf_published_on: 2017-06-12 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
@@ -12,7 +12,7 @@ description: Latest Updates to the Credential Management API
 
 {% include "web/_shared/contributors/agektmr.html" %}
 
-Some of the updates described here are explained at the Google I/O session,
+Some of the updates described here are explained in the Google I/O session,
 **Secure and Seamless Sign-In: Keeping Users Engaged**:
 
 <div class="video-wrapper-full-width">
