@@ -6,7 +6,7 @@ description: We implemented code splitting and route based chunking just like We
 {# wf_published_on: 2017-06-22 #}
 {# wf_tags: supercharged #}
 {# wf_featured_image: /web/updates/images/supercharged/poster.jpg #}
-{# wf_featured_snippet: We implemented code splitting and route based chunking just like WebPack. #}
+{# wf_featured_snippet: “Code splitting” and “route-based chunking” are some of the new buzzwords in web development. But what do they mean and how can you implement them? #}
 
 
 # Supercharged Live Stream Blog: Code Splitting {: .page-title }
@@ -21,10 +21,17 @@ In our most recent Supercharged Live Stream we implemented code splitting and ro
 With HTTP/2 and native ES6 modules, these techniques will become essential to enabling efficient
 loading and caching of script resources.
 
-<iframe class="devsite-embedded-youtube-video"
-          data-video-id="4KVeNoN1aFM"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-</iframe>
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="4KVeNoN1aFM"
+            data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+### Miscellaneous tips & tricks in this episode
+
+- `asyncFunction().catch()` with `error.stack`: 9:55
+- Modules and `nomodule` attribute on `<script>` tags: 7:30
+- `promisify()` in Node 8: 17:20
 
 ### TL;DR: {: .hide-from-toc }
 
@@ -269,11 +276,6 @@ repository](https://github.com/GoogleChrome/ui-element-samples/tree/gh-pages/cod
 
 See you next time!
 
-### Miscellaneous tips & tricks in this episode
-
-- `asyncFunction().catch()` with `error.stack`: 9:55
-- Modules and `nomodule` attribute on `<script>` tags: 7:30
-- `promisify()` in Node 8: 17:20
 
 
 {% include "comment-widget.html" %}
