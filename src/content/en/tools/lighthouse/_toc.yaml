@@ -35,6 +35,8 @@ toc:
         path: /web/tools/lighthouse/audits/cache-contains-start_url
       - title: Configured For A Custom Splash Screen
         path: /web/tools/lighthouse/audits/custom-splash-screen
+      - title: Consistently Interactive
+        path: /web/tools/lighthouse/audits/consistently-interactive
       - title: Contains Some Content When Its Scripts Are Not Available
         path: /web/tools/lighthouse/audits/no-js
       - title: Content Sized Correctly for Viewport
@@ -57,6 +59,8 @@ toc:
         path: /web/tools/lighthouse/audits/form-labels
       - title: Every Image Has An alt Attribute
         path: /web/tools/lighthouse/audits/alt-attribute
+      - title: First Interactive
+        path: /web/tools/lighthouse/audits/first-interactive
       - title: First Meaningful Paint
         path: /web/tools/lighthouse/audits/first-meaningful-paint
       - title: Has A Viewport Meta Tag With width Or initial-scale
