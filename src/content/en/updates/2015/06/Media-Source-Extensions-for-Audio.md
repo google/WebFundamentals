@@ -164,7 +164,7 @@ Let's see what our shiny new code has accomplished by taking another look at the
 With that, we've stitched all five segments seamlessly into one and have subsequently reached the end of our demo. Before we go, you may have noticed that our `onAudioLoaded()` method has no consideration for containers or codecs. That means all of these techniques will work irrespective of the container or codec type. Below you can replay the original demo DASH-ready fragmented MP4 instead of MP3.
 
 <p style="text-align: center;">
-  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
+  <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster-red.jpg">
     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/mp4gapless.webm" type="video/webm" />
     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/mp4gapless.mp4" type="video/mp4" />
   </video>
