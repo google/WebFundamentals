@@ -11,14 +11,14 @@ description: The Budget API allows developers to perform background actions with
 
 The Push Messaging API enables us to send notifications to a user even when the
 browser is closed. Many developers want to be able to use this messaging to
-update and synchornise content without the browser being open, but the API has
+update and synchronize content without the browser being open, but the API has
 one important restriction: you must always display a notification for every
 single push message recieved.
 
 Being able to send a push message to synchronize data on a user's device or hide
-a notification you had previously shown can be
-extremely useful for users and developers, but allowing a web app to do work in
-the background without the user knowing is open to abuse.
+a notification you had previously shown can be extremely useful for users and
+developers, but allowing a web app to do work in the background without the user
+knowing is open to abuse.
 
 The [Budget
 ](https://wicg.github.io/budget-api/)[API](https://wicg.github.io/budget-api/),
@@ -37,7 +37,7 @@ visibility. The user agent will be responsible for determining budget
 assigned to a web app based on it's heuristics, for example budget allowance
 could be linked to user engagement. Each browser can decide it's own heuristic.
 
-**TL;DR **The budget API allows to you to reserve budget, use budget, get a list
+**TL;DR **The Budget API allows to you to reserve budget, use budget, get a list
 of remaining budget and understand the cost of background operations
 
 ## Reserving Budget
