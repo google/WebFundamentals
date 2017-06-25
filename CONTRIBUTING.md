@@ -32,7 +32,7 @@ the CLA.
 ## Writing Code ##
 
 If your contribution contains code, please make sure that it follows 
-[the style guide](https://google.github.io/styleguide/javascriptguide.xml).
+[the style guide](https://google.github.io/styleguide/jsguide.html).
 Otherwise, we will have to ask you to make changes, and that's no fun for anyone.
 
 ## Formatting HTML ##
