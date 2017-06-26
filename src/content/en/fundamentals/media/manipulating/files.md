@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: TBD.
 
-{# wf_updated_on: 2017-06-23 #}
-{# wf_published_on: 2017-06-23 #}
+{# wf_updated_on: 2017-06-28 #}
+{# wf_published_on: 2017-06-28 #}
 
 # From Raw Video to Web Ready {: .page-title }
 
@@ -103,7 +103,7 @@ file's size, webm compresses to 1% of the original file's size.
 
 ## Split the streams
 
-When you package media resources, for HLS and DASH, you'll need to separate the
+When you package media resources, for DASH, you'll need to separate the
 video and audio streams. Splitting the audio and video streams of a file is
 often referred to as **demultiplexing** or **demuxing** for short. Professional
 content creators often record audio and video to separate files to begin with.
