@@ -16,7 +16,8 @@ openssl aes-256-cbc -K $encrypted_7c1b14c4fe42_key -iv $encrypted_7c1b14c4fe42_i
 
 if [ ! -f $HOME/google-cloud-sdk/bin/gcloud ]; then
   # Download & install the Google Cloud SDK
-  curl https://sdk.cloud.google.com | bash
+  # curl https://sdk.cloud.google.com | bash
+  ls $HOME/google-cloud-sdk/bin/
 fi
 
 # Update any necessary components
