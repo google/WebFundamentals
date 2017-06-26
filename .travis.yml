@@ -11,10 +11,11 @@ env:
 cache:
   directories:
   - node_modules
-addons:
-  apt:
-    sources:
-    - google-cloud
+  - "$HOME/google-cloud-sdk/"
+before_install:
+  - if [ ! -d ${HOME}/google-cloud-sdk ]; then
+     curl https://sdk.cloud.google.com | bash;
+    fi
 install:
   - npm install
   - npm run clean
