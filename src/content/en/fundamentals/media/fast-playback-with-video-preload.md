@@ -5,7 +5,7 @@ description: Preload all video for faster playback.
 {# wf_published_on: 2017-06-21 #}
 {# wf_updated_on: 2017-06-21 #}
 
-# Video Preload = Faster Playback {: .page-title }
+# Fast Playback with Video Preload {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
@@ -63,19 +63,19 @@ There are some caveats though. As this is just a hint, browser may completely
 ignore the `preload` attribute. At the time of writing, here are some rules
 applied in Chrome:
 
-- When [Data Saver]{: .external} is enabled, Chrome forces `preload` value to
-  `none` if video URL starts with "http" or "https".
+- When [Data Saver] is enabled, Chrome forces `preload` value to `none` if
+  video URL starts with "http" or "https".
 - In Android 4.3, Chrome forces `preload` value to `none`.
 - On a cellular connection (2G, 3G, and 4G), Chrome forces `preload` value to
   `metadata`.
 
 ## Link preload
 
-As [covered] in other [articles]{: .external }, [link preload]{: .external} is
-a declarative fetch that allows you to force the browser to make a request for
-a resource without blocking the document's `onload` event. Resources loaded via
-`<link rel="preload">` are stored locally in the browser, and are effectively
-inert until they're explicitely referenced in the DOM, JavaScript, or CSS. 
+As [covered] in other [articles], [link preload] is a declarative fetch that
+allows you to force the browser to make a request for a resource without
+blocking the document's `onload` event. Resources loaded via `<link
+rel="preload">` are stored locally in the browser, and are effectively inert
+until they're explicitely referenced in the DOM, JavaScript, or CSS.
 
 Preload is different from prefetch in that it focuses on current navigation and
 fetches resources with priority based on their type (script, style, font,
@@ -88,11 +88,11 @@ sessions.
 
 ### Preload full video
 
-Here's how to use it to preload a full video  on your website so that
-when your JavaScript asks to fetch video content, it is read from disk cache as
-the resource may have already been cached by the browser. If preload request
-didn't finish yet, a regular network fetch will happen. I'd recommend using
-this only for audio songs or short video clips.
+Here's how to preload a full video  on your website so that when your
+JavaScript asks to fetch video content, it is read from disk cache as the
+resource may have already been cached by the browser. If preload request hasn't
+finished yet, a regular network fetch will happen. I'd recommend using this
+only for audio files or short video clips.
 
 ```
 <link rel="preload" as="video" href="https://cdn.com/file.mp4" crossorigin>
@@ -109,18 +109,18 @@ this only for audio songs or short video clips.
 </script>
 ```
 
-As the preloaded resource is going to be consumed by a video element in the
-example, the `as` preload link value is `video`. If it were an audio element,
-it would be `as="audio"`.
+Because the preloaded resource is going to be consumed by a video element in
+the example, the `as` preload link value is `video`. If it were an audio
+element, it would be `as="audio"`.
 
 If you are preloading links with CORS enabled resources you must also include
 the `crossorigin` attribute in order for the resource to be properly used.
 
 ### Preload first segment
 
-Here's another example below of how to preload the first segment of a video
-with `<link rel="preload">` and use it with Media Source Extensions. If you're
-not familiar with the MSE Javascript API, please read [MSE basics].
+The example below shows how to preload the first segment of a video with `<link
+rel="preload">` and use it with Media Source Extensions. If you're not familiar
+with the MSE Javascript API, please read [MSE basics].
 
 For the sake of simplicity, let's assume the entire video has been split into
 smaller files like "file_1.webm", "file_2.webm", "file_3.webm", etc. We'll use
@@ -175,10 +175,10 @@ function preloadSupported() {
 
 ## Manual Buffering
 
-Before we dive into the Cache API and Service Workers, let's see how to
+Before we dive into the Cache API and service workers, let's see how to
 manually buffer a video with MSE. The example below assumes that your web
-server supports HTTP range requests. Note that this would be pretty similar
-with segment files.
+server supports HTTP range requests. Note that this would be pretty similar to
+segment files.
 
 ```
 <video controls id="video"></video>
