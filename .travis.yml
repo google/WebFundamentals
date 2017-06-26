@@ -1,5 +1,5 @@
 language: node_js
-node_js: '4'
+node_js: '6'
 dist: trusty
 sudo: false
 git:
@@ -11,6 +11,7 @@ env:
 cache:
   directories:
   - node_modules
+  - $HOME/google-cloud-sdk/
 install:
   - npm install
   - npm run clean
