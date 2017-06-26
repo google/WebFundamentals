@@ -13,8 +13,8 @@ cache:
   - node_modules
 addons:
   apt:
-    packages:
-    - google-cloud-sdk
+    sources:
+    - google-cloud
 install:
   - npm install
   - npm run clean
