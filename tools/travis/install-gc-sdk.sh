@@ -19,8 +19,8 @@ ls $HOME/google-cloud-sdk/
 if [ ! -f /home/travis/google-cloud-sdk/bin/gcloud ]; then
   rm -rf /home/travis/google-cloud-sdk
   # Download & install the Google Cloud SDK
-  travis_wait curl https://sdk.cloud.google.com | bash;
-  ls $HOME/google-cloud-sdk/bin/
+  curl https://sdk.cloud.google.com | bash;
+  ls $HOME/google-cloud-sdk
 fi
 
 # Update any necessary components
