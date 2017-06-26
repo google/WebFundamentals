@@ -11,7 +11,7 @@ if [ -z "${GIT_TOKEN}" ]; then
   exit
 fi
 
-gcloud --version
+/home/travis/google-cloud-sdk/bin/gcloud --version
 
 # Decrypt the Service Account Key
 openssl aes-256-cbc -K $encrypted_7c1b14c4fe42_key -iv $encrypted_7c1b14c4fe42_iv -in gcloud-client-secret.json.enc -out gcloud-client-secret.json -d
