@@ -22,7 +22,7 @@ if [ ! -f "$HOME/google-cloud-sdk/bin/gcloud" ]; then
 fi
 
 # Update any necessary components
-$HOME/google-cloud-sdk/bin/gcloud components update app -q
+$HOME/google-cloud-sdk/bin/gcloud components update -q
 
 # Set the AppEngine App ID to $AE_APP_ID
 $HOME/google-cloud-sdk/bin/gcloud config set project $AE_APP_ID
