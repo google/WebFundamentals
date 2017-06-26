@@ -136,7 +136,7 @@ preferable to always writing the entire state tree. Little improvements are
 better than no improvements at all.
 
 Lastly, you should always be [measuring the performance
-impact](/web/updates/2017/06/user-centric-performance- metrics) of the code you
+impact](/web/updates/2017/06/user-centric-performance-metrics) of the code you
 write. While it's true that small writes to IndexedDB will perform better than
 large writes, this only matters if the writes to IndexedDB that your application
 is doing actually lead to

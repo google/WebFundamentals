@@ -199,9 +199,9 @@ Here's below what we have created so far. In the next section, we'll implement
 the fullscreen button.
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/video-play-pause-seek.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-play-pause-seek.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/video-play-pause-seek.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-play-pause-seek.mp4"
           type="video/mp4">
 </video>
 
@@ -291,9 +291,9 @@ may want to use [screenfull.js] wrapper as well.
     });
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/toggle-fullscreen-on-button-click.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/toggle-fullscreen-on-button-click.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/toggle-fullscreen-on-button-click.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/toggle-fullscreen-on-button-click.mp4"
           type="video/mp4">
 </video>
 

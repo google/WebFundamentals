@@ -685,10 +685,10 @@ and then hopefully have less input latency and fewer slow frames.
 
 In addition to splitting up code into separate files, you can also split up
 large chunks of synchronous code into smaller chunks that can execute
-asynchronously or be [deferred to the next idle point](/web/updates/2015/08
-/using-requestidlecallback). By executing this logic asynchronously in smaller
-chunks, you leave room on the main thread for the browser to respond to user
-input.
+asynchronously or be
+[deferred to the next idlepoint](/web/updates/2015/08/using-requestidlecallback).
+By executing this logic asynchronously in smaller chunks, you leave room on
+the main thread for the browser to respond to user input.
 
 Lastly, you should make sure you're testing your third party code and holding
 any slow running code accountable. Third party ads or tracking scripts that
