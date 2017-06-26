@@ -12,9 +12,6 @@ cache:
   directories:
   - node_modules
   - "$HOME/google-cloud-sdk/"
-before_install:
-  - ls /home/travis/google-cloud-sdk/
-  - if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; curl https://sdk.cloud.google.com | bash; fi
 install:
   - npm install
   - npm run clean
