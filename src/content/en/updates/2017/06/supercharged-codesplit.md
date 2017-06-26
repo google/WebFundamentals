@@ -127,7 +127,7 @@ const {code} = babel.transform(inputCode, {plugins: [plugin]});
 A plugin can provide a `visitor` object. The visitor contains a function for any node type that the
 plugin wants to handle. When a node of that type is encountered while traversing the AST the
 corresponding function in the `visitor` object will be invoked with that node as a parameter. In the
-example above, the `ImportDeclaration` method will be called for every `import` declaration in the
+example above, the `ImportDeclaration()` method will be called for every `import` declaration in the
 file. To get more of a feeling for node types and the AST, take a look at
 [astexplorer.net](https://astexplorer.net/).
 
@@ -264,8 +264,8 @@ async function rewrite(section, sharedBundle) {
 
 This was quite the ride, wasn’t it? Please remember that our goal for this episode was to _explain
 and demystify_ code splitting. The result works – but it’s specific to our demo site and will
-fail horribly in the generic case. For production, I’d recommend to rely on established tools like
-WebPack, RollUp et al.
+fail horribly in the generic case. For production, I’d recommend relying on established tools like
+WebPack, RollUp, etc..
 
 You can find our code in the [GitHub
 repository](https://github.com/GoogleChrome/ui-element-samples/tree/gh-pages/code-splitting).
