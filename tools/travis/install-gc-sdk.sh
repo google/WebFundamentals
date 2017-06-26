@@ -14,11 +14,13 @@ fi
 # Decrypt the Service Account Key
 openssl aes-256-cbc -K $encrypted_7c1b14c4fe42_key -iv $encrypted_7c1b14c4fe42_iv -in gcloud-client-secret.json.enc -out gcloud-client-secret.json -d
 
+ls $HOME/google-cloud-sdk/bin/
+
 if [ ! -f /home/travis/google-cloud-sdk/bin/gcloud ]; then
-  rm -rf /home/travis/google-cloud-sdk
+  # rm -rf /home/travis/google-cloud-sdk
   # Download & install the Google Cloud SDK
-  curl https://sdk.cloud.google.com | bash
-  ls $HOME/google-cloud-sdk/bin/
+  # curl https://sdk.cloud.google.com | bash
+  # ls $HOME/google-cloud-sdk/bin/
 fi
 
 # Update any necessary components

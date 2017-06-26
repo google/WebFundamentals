@@ -11,9 +11,11 @@ env:
 cache:
   directories:
   - node_modules
-  - $HOME/google-cloud-sdk/
+addons:
+  apt:
+    packages:
+    - google-cloud-sdk
 install:
-  - ./tools/travis/install-gc-sdk.sh
   - npm install
   - npm run clean
 script:
@@ -21,6 +23,7 @@ script:
   - npm run test
   - node ./tools/travis/addCommitComment.js
 after_success:
+  - ./tools/travis/install-gc-sdk.sh
   - ./tools/travis/deploy-master.sh
   - ./tools/travis/deploy-pr.sh
   - node ./tools/travis/removeStagedPRs.js
