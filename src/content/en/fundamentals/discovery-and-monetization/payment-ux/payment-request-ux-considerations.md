@@ -250,7 +250,7 @@ You can learn more about this <a href="https://developers.google.com/web/fundame
 </div>
 
 ## After payment / purchase has been processed.
-There may be occasions where the merchant requires non-standard information from the user such as delivery instructions or perhaps some feedback on the shopping experience. This can not be done directly within the Payments Request API, however it is possible to show a UI element such as a `textfield` if the payment has been successful.
+There may be occasions where the merchant give the user the opportunity to add non-standard information from the user such as delivery instructions or perhaps some feedback on the shopping experience. This can not be done directly within the Payments Request API, however it is possible to show a UI element such as a `textfield` if the payment has been successful.
 
 <div>
   <figure>
