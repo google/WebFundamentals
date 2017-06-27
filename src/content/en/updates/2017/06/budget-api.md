@@ -37,7 +37,7 @@ visibility. The user agent will be responsible for determining budget
 assigned to a web app based on it's heuristics, for example budget allowance
 could be linked to user engagement. Each browser can decide it's own heuristic.
 
-**TL;DR **The budget API allows to you to reserve budget, use budget, get a list
+**TL;DR **The Budget API allows to you to reserve budget, use budget, get a list
 of remaining budget and understand the cost of background operations
 
 ## Reserving Budget
