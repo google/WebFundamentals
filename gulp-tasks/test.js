@@ -502,6 +502,12 @@ function testMarkdown(filename, contents, options) {
       });
     }
 
+    // Check for valid components
+    matched = wfRegEx.RE_COMPONENTS.exec(contents);
+    if (matched && options.componentMap) {
+      
+    }
+
     // Check for valid regions
     matched = wfRegEx.RE_REGION.exec(contents);
     if (matched) {
