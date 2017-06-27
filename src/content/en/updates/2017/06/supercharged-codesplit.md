@@ -4,7 +4,7 @@ description: We implemented code splitting and route based chunking just like We
 
 {# wf_updated_on: 2017-06-22 #}
 {# wf_published_on: 2017-06-22 #}
-{# wf_tags: supercharged #}
+{# wf_tags: codesplitting,modules,supercharged #}
 {# wf_featured_image: /web/updates/images/supercharged/poster.jpg #}
 {# wf_featured_snippet: “Code splitting” and “route-based chunking” are some of the new buzzwords in web development. But what do they mean and how can you implement them? #}
 
