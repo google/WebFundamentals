@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn about all the ways you can pause your code in Chrome DevTools.
 
-{# wf_updated_on: 2017-02-03 #}
+{# wf_updated_on: 2017-06-22 #}
 {# wf_published_on: 2017-02-03 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -26,45 +26,50 @@ yourself time when debugging by knowing how and when to use the other types
 of breakpoints.
 
 <table>
-  <tr><th>Breakpoint Type</th><th>Use This When You...</th></tr>
+  <tr><th>Breakpoint Type</th><th>Use This When You Want To Pause...</th></tr>
   <tr>
     <td><a href="#loc">Line-of-code</a></td>
     <td>
-      Know the exact region of code to investigate.
+      On an exact region of code.
     </td>
   </tr>
   <tr>
     <td><a href="#conditional-loc">Conditional line-of-code</a></td>
     <td>
-      Know the exact region of code to investigate, but you want to pause
-      only when some other condition is true.
+      On an exact region of code, but only when some other condition is true.
     </td>
   </tr>
   <tr>
     <td><a href="#dom">DOM</a></td>
     <td>
-      Want to pause on the code that changes or removes a specific DOM
+      On the code that changes or removes a specific DOM
       node, or its children.
     </td>
   </tr>
   <tr>
     <td><a href="#xhr">XHR</a></td>
     <td>
-      Want to pause when an XHR URL contains a string pattern.
+      When an XHR URL contains a string pattern.
     </td>
   </tr>
   <tr>
     <td><a href="#event-listeners">Event listener</a></td>
     <td>
-      Want to investigate the code that runs after an event, such as
+      On the code that runs after an event, such as
       <code>click</code>, is fired.
     </td>
   </tr>
   <tr>
     <td><a href="#exceptions">Exception</a></td>
     <td>
-      Want to pause on the line of code that is throwing a caught or
+      On the line of code that is throwing a caught or
       uncaught exception.
+    </td>
+  </tr>
+  <tr>
+    <td><a href="#function">Function</a></td>
+    <td>
+      Whenever a specific function is called.
     </td>
   </tr>
 </table>
@@ -90,6 +95,17 @@ To set a line-of-code breakpoint in DevTools:
     <b>Figure 1</b>: A line-of-code breakpoint set on line <b>29</b>
   </figcaption>
 </figure>
+
+### Line-of-code breakpoints in your code {: #debugger }
+
+Call `debugger` from your code to pause on that line. This is equivalent to
+a [line-of-code breakpoint](#loc), except that the breakpoint is set in your
+code, not in the DevTools UI.
+
+    console.log('a');
+    console.log('b');
+    debugger;
+    console.log('c');
 
 ### Conditional line-of-code breakpoints {: #conditional-loc }
 
@@ -253,3 +269,44 @@ throwing a caught or uncaught exception.
   </figcaption>
 </figure>
 
+## Function breakpoints {: #function }
+
+Call `debug(functionName)`, where `functionName` is the function you want to
+debug, when you want to pause whenever a specific function is called. You can
+insert `debug()` into your code (like a `console.log()` statement) or call it
+from the DevTools Console. `debug()` is equivalent to setting a
+[line-of-code breakpoint](#loc) on the first line of the function.
+
+    function sum(a, b) {
+      let result = a + b; // DevTools pauses on this line.
+      return result;
+    }
+    debug(sum); // Pass the function object, not a string.
+    sum();
+
+
+### Make sure the target function is in scope {: #scope }
+
+DevTools throws a `ReferenceError` if the function you want to debug is not
+in scope.
+
+    (function () {
+      function hey() {
+        console.log('hey');
+      }
+      function yo() {
+        console.log('yo');
+      }
+      debug(yo); // This works.
+      yo();
+    })();
+    debug(hey); // This doesn't work. hey() is out of scope.
+
+Ensuring the target function is in scope can be tricky if you're
+calling `debug()` from the DevTools Console. Here's one strategy:
+
+1. Set a [line-of-code breakpoint](#loc) somewhere where the function is
+   scope.
+1. Trigger the breakpoint.
+1. Call `debug()` in the DevTools Console while the code is still paused
+   on your line-of-code breakpoint.

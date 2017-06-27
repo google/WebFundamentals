@@ -63,7 +63,7 @@ description: 与您的用户进行联系，并吸引他们重新访问您的网�
 
 ### Udacity 课程
 
-[Progressive Web App 基础知识](https://udacity.com/ud811)<br>
+[Progressive Web App 基础知识](https://www.udacity.com/course/intro-to-progressive-web-apps--ud811)<br>
 在本课程中，您将着手开发自己的第一款 Progressive Web App - 一种充分利用了本机应用所喜欢的多种功能的网络应用。您还会获得使用服务工作线程创建可以离线工作的网络应用的更多经验。
 最后，您将通过配置网络应用清单文件，让自己的应用可以安装到用户的主屏幕上。
 

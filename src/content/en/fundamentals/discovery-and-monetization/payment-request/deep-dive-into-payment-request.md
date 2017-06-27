@@ -20,23 +20,23 @@ description: How to implement and take full advantage of the Payment Request API
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-top.png" alt="Example of Payment Request API on desktop and mobile Chrome.">
+    <img src="./images/deep-dive/pr-top.png" alt="Ppayment request UI on desktop and mobile Chrome.">
     <figcaption>
-      Example of Payment Request API on desktop and mobile Chrome.
+      Payment request UI on desktop and mobile Chrome.
     </figcaption>
   </figure>
 </div>
 
-In this guide we'll explore the ins and outs of the PaymentRequest API, looking
-at how our input affects the PaymentRequest UI, how we can request information
+In this guide we'll explore the ins and outs of the Payment Request API, looking
+at how our input affects the payment request UI, how we can request information
 from the user (like name and phone number), and how the final payment and user
 information is passed to your site.
 
-If you are unsure of what the PaymentRequest API is or why it's useful, check
+If you are unsure of what the Payment Request API is or why it's useful, check
 out the [introduction
 article](/web/fundamentals/discovery-and-monetization/payment-request/).
 
-One thing to keep in the back of your mind when working with the PaymentRequest
+One thing to keep in the back of your mind when working with the Payment Request
 API is that the API manages the UI but performs no arithmetic; it will simply
 display whatever input you pass to it. Throughout the examples we'll discuss
 what this means for the developer and user.
@@ -46,26 +46,29 @@ it's stable enough to implement, it may continue to change. We'll <a
 href="/web/updates/2017/01/payment-request-updates">keep this page updated</a>
 to always reflect the current status of the API. Meanwhile, to protect yourself
 from API changes that may be backwards incompatible, we're offering <a
-href="https://storage.googleapis.com/prshim/v1/payment-shim.js">a shim</a> that
+href="#paymentrequest_shim">a shim</a> that
 can be embedded on your site. The shim will paper over any API differences for
 two major Chrome versions.
 
 ## Feature Detect
 
-Before we start covering how to use PaymentRequest, we should feature detect to
-ensure it's available and fallback to a traditional checkout page in browsers
-that don't support it. The feature detect is simply:
+Payment Request has been available since Chrome 53 for Android and has been
+enabled by default since Chrome 60 on desktop. Before we start covering how to
+use Payment Request, we should feature detect to ensure it's available and
+fallback to a traditional checkout page in browsers that don't support it.
+
+The feature detect is simply:
 
 ```
 if(window.PaymentRequest) {  
-  // Use PaymentRequest API  
+  // Use Payment Request API  
 } else {  
   // Fallback to traditional checkout  
   window.location.href = '/checkout/traditional';  
 }
 ```
 
-Note: PaymentRequest is only available on sites served over HTTPS.
+Note: Payment Request is only available on sites served over HTTPS.
 
 ## PaymentRequest Constructor
 
@@ -128,7 +131,7 @@ constructor, starting with the supported payment methods.
 
 ### Defining Supported Payment Methods
 
-The PaymentRequest API is designed to support credit and debit card payments
+The Payment Request API is designed to support credit and debit card payments
 as well as third party payment methods (such as Android Pay).
 
 You must supply an array of objects indicating your supported payment methods
@@ -171,9 +174,9 @@ an existing card will be selected for them.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-basic-card-only.png" alt="Example of basic-card support in Payment Request API.">
+    <img src="./images/deep-dive/pr-demo-basic-card-only.png" alt="Example of basic-card support in the Payment Request API.">
     <figcaption>
-      Example of basic-card support in Payment Request API.
+      Example of basic-card support in the Payment Request API.
     </figcaption>
   </figure>
 </div>
@@ -195,7 +198,7 @@ const creditCardPaymentMethod = {
 };
 ```
 
-The Payment Request UI will restrict the accepted cards and the user will be
+The payment request UI will restrict the accepted cards and the user will be
 prevented from selecting other cards:
 
 <div class="attempt-center">
@@ -312,9 +315,9 @@ const androidPayPaymentMethod = {
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-android-and-cards-short-blackout.png" alt="Android Pay Example in Payment Request API.">
+    <img src="./images/deep-dive/pr-demo-android-and-cards-short-blackout.png" alt="Android Pay example in the payment request UI.">
     <figcaption>
-      Android Pay Example in Payment Request API.
+      Android Pay example in payment request UI.
     </figcaption>
   </figure>
 </div>
@@ -328,7 +331,7 @@ There are some edge cases to be aware of when defining your supported payment
 methods.
 
 **Unsupported Payment Methods**  
-If you try to call `show()`` on a PaymentRequest object and there are no supported
+If you try to call `show()`` on a `PaymentRequest` object and there are no supported
 payment methods, the returned promise will reject immediately with the following
 error:
 
@@ -344,7 +347,7 @@ In the screenshot above you can see "Android Pay" as the pre-selected payment
 option. This has occurred because the example supports both Android Pay and basic
 cards. If you define Android Pay as your **only** payment method and the browser
 supports it, the browser can (and Chrome does, at the time of writing) skip the
-Payment Request UI altogether after the `show()` method is called. Users will be
+payment request UI altogether after the `show()` method is called. Users will be
 taken straight to the Android Pay app to complete the payment.
 
 ### Defining Payment Details
@@ -571,7 +574,7 @@ If you hit any of these errors, please check the format of the `total` and
 `displayItems`.
 
 **Negative Total (i.e., Refunds)**  
-The PaymentRequest API** does not support negative totals**; if you attempt to
+The Payment Request API** does not support negative totals**; if you attempt to
 show a total with a negative value you'll receive this error:
 
 `'PaymentRequest': Total amount value should be non-negative`
@@ -592,9 +595,9 @@ the currency code is shown. Compare the screenshots below for 'USD' and 'XBT'.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/usd-bitcoin-comparison.png" alt="Comparison of USD and XBT currencies on the Payment Request UI.">
+    <img src="./images/deep-dive/usd-bitcoin-comparison.png" alt="Comparison of USD and XBT currencies on the payment request UI.">
     <figcaption>
-      Comparison of USD and XBT currencies on the Payment Request UI.
+      Comparison of USD and XBT currencies on the payment request UI.
     </figcaption>
   </figure>
 </div>
@@ -626,7 +629,7 @@ browser / system settings.
 
 ### Defining Options (Optional*)
 
-The third argument to the PaymentRequest constructor is the optional `options`
+The third argument to the `PaymentRequest` constructor is the optional `options`
 object.
 
 This object should be used to define any additional information you require from
@@ -650,9 +653,9 @@ will result in an extra step in the UI.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-require-info-short.png" alt="Payment Request UI requesting additional information from the user.">
+    <img src="./images/deep-dive/pr-demo-require-info-short.png" alt="Payment request UI requesting additional information from the user.">
     <figcaption>
-      Payment Request UI requesting additional information from the user.
+      Payment request UI requesting additional information from the user.
     </figcaption>
   </figure>
 </div>
@@ -676,14 +679,14 @@ shipping in much more detail later on as it touches many parts of the API.
 
 The only edge case to note here is that if you define any of the parameters
 (`requestPayerName`, `requestPayerPhone` or `requestPayerEmail`) with a non-boolean
-value it will use the usual Javascript [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) /
+value it will use the usual JavaScript [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) /
 [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) value (i.e., null,
 undefined, 0 will be treated as false and 'string value', {}, [] will be treated
 as true).
 
 ## Responding to PaymentRequest.show()
 
-After calling `show()` the `PaymentRequest` UI will be displayed to the user. Users
+After calling `show()` the payment request UI will be displayed to the user. Users
 will either close the UI or fill in the required fields and select 'Pay', at
 which point your app will need to "complete" the transaction.
 
@@ -703,7 +706,7 @@ paymentRequest.show()
 });
 ```
 
-Once the user has filled in the `PaymentRequest` UI, your web app will receive a
+Once the user has filled in the payment request UI, your web app will receive a
 `PaymentResponse` object in the `show()` promise.
 
 It's this `paymentResponse` object that contains the user's payment information that you'll
@@ -754,7 +757,7 @@ method.
 
 ### Completing the Transaction
 
-After the promise from `show()` has resolved, the PaymentRequest UI will display a
+After the promise from `show()` has resolved, the payment request UI will display a
 loading UI to the user. You can either leave this spinner visible while you
 process the payment details or you can close the UI immediately and validate the
 payment details in your own UI.
@@ -768,13 +771,13 @@ payment details in your own UI.
   </figure>
 </div>
 
-If you wanted to close the `PaymentRequest` UI immediately, you would call the
+If you wanted to close the payment request UI immediately, you would call the
 `PaymentResponse.complete()` method.
 
 ```
 paymentRequest.show()  
 .then((paymentResponse) => {  
-  // Close the PaymentRequest UI.  
+  // Close the payment request UI.  
   return paymentResponse.complete()  
   .then(() => {  
     // TODO: Get the payment details from paymentResponse object.  
@@ -782,18 +785,18 @@ paymentRequest.show()
   });  
 })  
 .catch((err) => {  
-  console.error('PaymentRequest error: ', err);  
+  console.error('Payment Request API error: ', err);  
 });
 ```
 
-This will close the `PaymentRequest` UI and you can do whatever you want to
+This will close the payment request UI and you can do whatever you want to
 process the user's payment information. Calling the `complete()` method without
 any arguments like this, is equivalent to calling
 `paymentResponse.complete('unknown')`. You are telling the browser to
 not treat the payment as a success or failure and to show no UI or animations to
 suggest otherwise to the user.
 
-If you wanted to process the payment while the `PaymentRequest` UI is showing a
+If you wanted to process the payment while the payment request UI is showing a
 spinner you'd delay the call to `complete()`. Let's assume we have a method called
 `validatePaymentWithBackend()` that will check the details with our backend and
 return a promise resolving to a boolean (true if the payment was successful,
@@ -840,7 +843,7 @@ an error dialog to the user if you call with `complete('fail')` .
 One possible gotcha with the `complete()`` method is that if you pass in a string
 that is not defined by the spec (i.e., the string is not 'unknown', 'success,'
 or 'fail'), the promise returned by complete() will reject and the
-PaymentRequest UI **will not close** ([this behavior will hopefully change
+payment request UI **will not close** ([this behavior will hopefully change
 soon](https://www.google.com/url?q=http://crbug.com/712240&sa=D&ust=1492454346433000&usg=AFQjCNHUMRnlee4WgrbErEhA0VQOC_Sl-g)).
 The error in the rejected promise will be:
 
@@ -882,7 +885,7 @@ This will ask the user for their shipping address:
   </figure>
 </div>
 
-By default the PaymentRequest API will set a shippingType to 'shipping'. This is
+By default the Payment Request API will set a shippingType to 'shipping'. This is
 why the title on the highlighted row above is "Shipping".
 
 #### Changing the Shipping Type
@@ -1065,7 +1068,7 @@ This is the dependent locality or sublocality within a city. For example, used f
 </table>
 
 This should be everything you need to get the user's selected shipping address
-but it does raise the question, how do you tell the `PaymentRequest` API what the
+but it does raise the question, how do you tell the Payment Request API what the
 available shipping options are?
 
 #### Defining the Available Shipping Options
@@ -1318,7 +1321,7 @@ changes to the selected shipping option. The tasks to perform here are to mark
 the shipping option as `selected` if it's valid and update the total and
 display items.
 
-We add a listener for `shippingoptionchange` events to our PaymentRequest
+We add a listener for `shippingoptionchange` events to our `PaymentRequest`
 instance same as `shippingaddresschange`.
 
 ```
@@ -1402,7 +1405,7 @@ One footgun to be aware of is that if you fail to mark a shipping option
 as `selected`, you will end up in a scenario where the user will be stuck in a
 loop without any reason as to why they can't select an option. They can go
 through the flow to select a shipping option, the event is triggered and if
-nothing is marked as selected, they'll be taken back to the Payment Request UI
+nothing is marked as selected, they'll be taken back to the payment request UI
 and have to select a shipping method again.
 
 **Selecting Multiple Options**  
@@ -1557,7 +1560,7 @@ paymentRequest.addEventListener('shippingaddresschange', (event) => {
 ## Abort a Transaction
 
 The `abort()` method can be used when the shopping session has timed out or an item in the
-cart sells out during the transaction and you need to close the PaymentRequest UI.
+cart sells out during the transaction and you need to close the payment request UI.
 
 For a simple example:
 
@@ -1570,37 +1573,37 @@ paymentRequest.show()
 setTimeout(() => {  
   paymentRequest.abort()  
   .then(() => {  
-    // Successfully aborted Payment Request  
+    // Successfully aborted payment request  
     // TODO: Display message to user.  
   })  
   .catch((err) => {  
-    // Unable to abort Payment Request  
+    // Unable to abort payment request  
     console.log('abort() Error: ', err);  
   });  
 }, 4000);
 ```
 
-In the above example, if we leave the Payment Request visible, the `show()`
+In the above example, if we leave the payment request dialog visible, the `show()`
 promise will reject with the following error:
 
 `DOMException: The user aborted a request.`
 
 The promise returned by `abort()` allows you to detect whether the abort was
 successful or not. An example of where it might fail is if the user cancels
-the `PaymentRequest` UI or completes the transaction before you call `abort()`,
+the payment request UI or completes the transaction before you call `abort()`,
 although it can fail to abort when the developer is in the middle of entering
 details.
 
 ## The Payment Request UI
 
 One aspect of the UI hasn't been discussed. How is the top section of the
-Payment Request UI is constructed?
+payment request UI is constructed?
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/top-ui-short.png" alt="The generated piece of the Payment Request UI.">
+    <img src="./images/deep-dive/top-ui-short.png" alt="The generated piece of the payment request UI.">
     <figcaption>
-      The generated piece of the Payment Request UI.
+      The generated piece of the payment request UI.
     </figcaption>
   </figure>
 </div>
@@ -1628,7 +1631,7 @@ has an available payment method set-up (i.e. will the payment request UI have a
 preselected payment method or not).
 
 The `canMakePayment()` method tells you whether the user has a payment method that
-fulfils the current `PaymentRequests` supported payment methods.
+fulfils the current `PaymentRequest`'s supported payment methods.
 
 ```
 const paymentRequest = new PaymentRequest(  
@@ -1658,18 +1661,21 @@ canMakePaymentPromise.then((result) => {
 
 #### Edge Cases
 
-Querying `canMakePayment()` too often will result in a quota error:
+Querying `canMakePayment()` with different payment methods will 
+result in a quota error:
 
 `DOMException: Query quota exceeded`
+
+The reason this error is thrown is to block attempts to fingerprint the user.
 
 At the time of writing, Chrome will reset the quota after 30 minutes or when
 it's restarted.
 
 ## PaymentRequest Shim
 
-To mitigate pains of catching up with this living standard API, we strongly
-recommend you add this shim to the <head> of your page. This shim will be
-updated as the API changes and will do its best to keep your code working for at
-least 2 major releases of Chrome.
+To mitigate the pains of catching up with this living standard API, we strongly
+recommend you add [this shim](https://github.com/GoogleChrome/payment-request-shim)
+to the `<head>` of your page. This shim will be updated as the API changes and will
+do its best to keep your code working for at least 2 major releases of Chrome.
 
-[For more details visit the Github Page](https://github.com/GoogleChrome/payment-request-shim)
+We also provide a [PaymentRequest wrapper for Apple Pay JS](https://github.com/GoogleChrome/appr-wrapper).

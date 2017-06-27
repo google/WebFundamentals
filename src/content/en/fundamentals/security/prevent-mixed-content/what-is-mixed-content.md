@@ -89,7 +89,7 @@ resource.
 Although many browsers report mixed content warnings to the user, by the time 
 this happens, it is too late: the insecure requests have already been performed 
 and the security of the page is compromised. This scenario is, unfortunately, 
-quite common o n the web, which is why browsers can't just block all mixed 
+quite common on the web, which is why browsers can't just block all mixed 
 requests without restricting the functionality of many sites.
 
 <figure>

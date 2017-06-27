@@ -288,7 +288,7 @@ Learn how to setup source maps in [Setup CSS & JS Preprocessors](/web/tools/setu
 
 To view a page in print mode:
 
-1. Open the [Main Menu](ui#main-menu).
+1. Open the **Main Menu**.
 1. Select **More Tools** > **Rendering Settings**. The Rendering Settings
    tab opens at the bottom of your DevTools window.
 1. Set **Emulate media** to **Print**.

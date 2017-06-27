@@ -95,11 +95,11 @@ No es tan difícil como crees construir sitios con una completa capacidad de res
 
 ### Cursos de Udacity
 
-[Principios del diseño web adaptable](https://udacity.com/ud893)<br>
+[Principios del diseño web adaptable](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)<br>
 En este curso, aprenderás los principios del diseño web adaptable.
 Crearás tu propia página web adaptable que funcione bien en cualquier dispositivo: teléfonos, tablets, equipos de escritorio y cualquier otro dispositivo.
 
-[Imágenes adaptables](https://udacity.com/ud882)<br>
+[Imágenes adaptables](https://www.udacity.com/course/responsive-images--ud882)<br>
 En este curso, aprenderás a trabajar con imágenes en la web moderna para que
 tus imágenes luzcan perfectas y se carguen rápidamente en cualquier dispositivo.
 

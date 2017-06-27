@@ -7,14 +7,14 @@ description:人们使用从小屏手机到大屏电视的各类设备访问网�
 
 # 您的第一个多设备网站 {: .page-title }
 
-注意：本文已有一段时间未更新，可能无法体现真实性。请参阅 Udacity 上免费的[自适应网页设计](https://udacity.com/ud893)课程。
+注意：本文已有一段时间未更新，可能无法体现真实性。请参阅 Udacity 上免费的[自适应网页设计](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)课程。
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
 <img src="images/finaloutput-2x.jpg" alt="众多显示最终项目的设备" class="attempt-right">
 
 打造多设备体验并不像看起来那么困难。
-在本指南中，我们将为 [CS256 移动网络开发课程](https://www.udacity.com/course/cs256)建立一个能够在不同类型设备上正常运行的产品着陆页。
+在本指南中，我们将为 [CS256 移动网络开发课程](https://www.udacity.com/course/mobile-web-development--cs256)建立一个能够在不同类型设备上正常运行的产品着陆页。
 
 
 

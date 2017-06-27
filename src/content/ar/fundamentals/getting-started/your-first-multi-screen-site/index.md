@@ -7,11 +7,12 @@ description: أصبح بإمكان عدد هائل من الأجهزة الوص�
 
 # أول موقع ويب تنشئه لأجهزة متعددة {: .page-title }
 
-Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://udacity.com/ud893) course on Udacity.
+Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893
+) course on Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-لا يمثل تصميم تجارب تتوافق مع عدة أجهزة صعوبة كبيرة كما قد يبدو ذلك للوهلة الأولى. وباتباع الإرشادات الواردة في هذا الدليل سنحاول تصميم نموذج لصفحة مقصودة لمنتج ما ألا وهو <a href='https://www.udacity.com/course/cs256'>دورة `CS256: تصميم الويب للجوّال`</a> بحيث تعمل هذه الصفحة على مختلف أنواع الأجهزة.
+لا يمثل تصميم تجارب تتوافق مع عدة أجهزة صعوبة كبيرة كما قد يبدو ذلك للوهلة الأولى. وباتباع الإرشادات الواردة في هذا الدليل سنحاول تصميم نموذج لصفحة مقصودة لمنتج ما ألا وهو <a href='https://www.udacity.com/course/mobile-web-development--cs256'>دورة `CS256: تصميم الويب للجوّال`</a> بحيث تعمل هذه الصفحة على مختلف أنواع الأجهزة.
 
 <img src="images/finaloutput-2x.jpg" alt="العديد من الأجهزة التي تعرض المنتج النهائي">
 

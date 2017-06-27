@@ -7,7 +7,7 @@ description: Web bisa diakses dari berbagai perangkat, dari ponsel berlayar-keci
 
 # Situs Multi-Perangkat Anda yang Pertama {: .page-title }
 
-Perhatian: Artikel ini sudah lama tidak diperbarui dan mungkin tidak sesuai lagi dengan keadaan sebenarnya. Sebaiknya periksa kursus gratis [Desain Web Responsif](https://udacity.com/ud893) di Udacity.
+Perhatian: Artikel ini sudah lama tidak diperbarui dan mungkin tidak sesuai lagi dengan keadaan sebenarnya. Sebaiknya periksa kursus gratis [Desain Web Responsif](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) di Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
@@ -15,7 +15,7 @@ Perhatian: Artikel ini sudah lama tidak diperbarui dan mungkin tidak sesuai lagi
 
 Menciptakan pengalaman multi-perangkat tidaklah sesulit yang dibayangkan.
 Dalam panduan ini, kita akan membangun laman landas produk untuk 
-[Kursus Development Web Seluler CS256](https://www.udacity.com/course/cs256)
+[Kursus Development Web Seluler CS256](https://www.udacity.com/course/mobile-web-development--cs256)
 yang berfungsi baik di berbagai tipe perangkat.
 
 Membangun untuk beberapa perangkat dengan kemampuan yang berbeda, ukuran layar yang

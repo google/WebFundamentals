@@ -7,14 +7,14 @@ description: 小さな画面のスマートフォ小さな画面のスマート�
 
 # はじめてのマルチデバイス サイト {: .page-title }
 
-警告: この記事はしばらくアップデートされていないため、現実が反映されていない可能性があります。代わりに、Udacity の無料の [Responsive Web Design](https://udacity.com/ud893) コースをご覧ください。
+警告: この記事はしばらくアップデートされていないため、現実が反映されていない可能性があります。代わりに、Udacity の無料の [Responsive Web Design](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) コースをご覧ください。
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
 <img src="images/finaloutput-2x.jpg" alt="完成したプロジェクトを表示する多数の端末" class="attempt-right">
 
 マルチデバイス サイトの構築は、思っているほど大変ではありません。
-このガイドでは、[CS256 Mobile Web Development コース](https://www.udacity.com/course/cs256)
+このガイドでは、[CS256 Mobile Web Development コース](https://www.udacity.com/course/mobile-web-development--cs256)
 という商品のランディング ページを例に、さまざまな端末に対応したランディング ページを作成していきます。
 
 

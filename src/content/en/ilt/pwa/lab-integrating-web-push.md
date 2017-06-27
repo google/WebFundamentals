@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-26T00:12:34Z #}
+{# wf_updated_on: 2017-06-13T00:05:27Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -54,7 +54,7 @@ This lab shows you the basics of sending, receiving, and displaying push notific
 
 If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs).
 
-In the command window, change to the __app__ directory in the __push-notification-lab__ and run `npm install`:
+In the command window, change to the __app__ directory in the __push-notification-lab__ and run the following:
 
     npm install
 

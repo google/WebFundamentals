@@ -2,9 +2,10 @@
 <html lang="{{ lang }}">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
-    <link rel="stylesheet" href="/wf-local/styles/uhura-google-blue.css">
     <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+    <link rel="stylesheet" href="/wf-local/styles/devsite-google-blue.css">
     <link rel="canonical" href="https://developers.google.com/web/{{requestPath}}">
     <style>
       .wf-stage-warning {

@@ -85,7 +85,7 @@ Learn how to use the app shell model, service workers and more to build a Progre
 
 ### Udacity courses
 
-[Intro to Progressive Web Apps](https://udacity.com/ud811)<br>
+[Intro to Progressive Web Apps](https://www.udacity.com/course/intro-to-progressive-web-apps--ud811)<br>
 In this course you’ll get started working on your very first Progressive
 Web App - a web app that can take advantage of many of the features native
 applications have enjoyed. You’ll also get more experience in creating a

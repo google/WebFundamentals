@@ -91,11 +91,11 @@ description:网页设计和 UI 包括几个广泛的区域。它是什么样子�
 
 ### Udacity 课程
 
-[自适应网页设计基础知识](https://udacity.com/ud893)<br>
+[自适应网页设计基础知识](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)<br>
 在本课程中，您将学习自适应网页设计的基本知识。您将创建自己的自适应网页，在任何设备（手机、平板电脑、桌面设备或其他任何设备）上都能正常工作。
 
 
-[自适应图像](https://udacity.com/ud882)<br>
+[自适应图像](https://www.udacity.com/course/responsive-images--ud882)<br>
 在本课程中，您将学习如何在现代网站上处理图像，使图像看起来很棒，并且可以在任何设备上快速加载。
 
 

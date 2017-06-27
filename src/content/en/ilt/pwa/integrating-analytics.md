@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-25T20:55:29Z #}
+{# wf_updated_on: 2017-06-14T20:47:06Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -204,7 +204,7 @@ You can also see specific information like visitors' language, country, city, br
 
 ### Real time analytics
 
-It's also possible to view analytics information in real time. From the same __Reporting__ tab, select __Real-Time__ and __Overview__:
+It's also possible to view analytics information in real time. From the same __Reporting__ tab, select __Real-Time __and __Overview__:
 
 ![Real-time navigation](img/b2dba5f011013e99.png)
 
@@ -249,7 +249,7 @@ Note: Many of the <code>ga</code> commands are flexible and can use multiple sig
 
 
 
-Event data can be viewed in the __Reporting__ tab of the Google Analytics dashboard. Real-time events are found in the __Events__ subsection, as shown below:
+Event data can be viewed in the __Reporting__ tab of the Google Analytics dashboard. Real-time events are found in the __Events __subsection, as shown below:
 
 ![Real-time events](img/3107f35a9adc1fb3.png)
 

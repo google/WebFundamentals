@@ -9,7 +9,7 @@ description: Internet is toegankelijk op tal van apparaten, van telefoons met kl
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-Het bouwen van websites voor meerdere apparaten is niet zo moeilijk als het lijkt. Met behulp van deze gids bouwen we een voorbeeld van een landingspagina voor een product voor onze cursus <a href='https://www.udacity.com/course/cs256'>CS256 Mobile Web Development</a> die goed werkt op alle verschillende apparaten.
+Het bouwen van websites voor meerdere apparaten is niet zo moeilijk als het lijkt. Met behulp van deze gids bouwen we een voorbeeld van een landingspagina voor een product voor onze cursus <a href='https://www.udacity.com/course/mobile-web-development--cs256'>CS256 Mobile Web Development</a> die goed werkt op alle verschillende apparaten.
 
 <img src="images/finaloutput-2x.jpg" alt="verschillende apparaten die het eindproduct weergeven">
 

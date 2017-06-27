@@ -31,7 +31,8 @@ address these problems from the Chrome Developer Platform team.
 ## Learn.
 
 <p style="text-align: center;">
-<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image00.png" alt="Web Fundamentals on a HTML5Rocks" width="498" height="332" style="max-width: 100%; height: auto;" />
+  <img src="/web/updates/images/2014/12/wf.png" width="498" height="332"
+  alt="WebFundamentals on a HTML5Rocks" style="max-width:100%;height: auto;"/>
 </p>
 
 [Web Fundamentals](/web/fundamentals/) is a set of
@@ -52,7 +53,7 @@ Github](https://github.com/Google/WebFundamentals/issues/new?title=Feedback%20fo
 ## Build.
 
 <p style="text-align: center;">
-<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image01.png" alt="Web Starter Kit on a Range Devices" width="464" height="252" style="max-width: 100%; height: auto;" />
+<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image01.gif" alt="Web Starter Kit on a Range Devices" width="464" height="252" style="max-width: 100%; height: auto;" />
 </p>
 
 To help you kick off a new web project we created [Web Starter
@@ -77,8 +78,8 @@ In Web Starter Kit we have the following processes:
 <img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image02.png" alt="Diagram of Web Starter Kits Build Process" width="624" height="470" style="max-width: 100%; height: auto;" />
 </p>
 
-We minify and concatenate CSS and Javascript so that the browser can fetch the
-file quickly, the Javascript is also run through JSHint to check for Javascript
+We minify and concatenate CSS and JavaScript so that the browser can fetch the
+file quickly, the JavaScript is also run through JSHint to check for JavaScript
 best practices and common coding mistakes. Images are minified with imagemin and
 you can get **huge** reductions in file size by using this. We also have a
 process to create the styleguides CSS.
@@ -95,13 +96,13 @@ home screen](/web/fundamentals/design-and-ui/browser-customization/)
 and splash screens for Android, Windows Phone, iOS and Opera Coast.
 
 <p style="text-align: center;">
-<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image03.png" alt="Example of Web Starter Kit Add to home screen" width="313" height="274" style="max-width: 100%; height: auto;" />
+<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image03.gif" alt="Example of Web Starter Kit Add to home screen" width="313" height="274" style="max-width: 100%; height: auto;" />
 </p>
 
 ### Styleguide
 
 <p style="text-align: center;">
-<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image04.png" alt="Web Starter Kit Styleguide on Chromebook Pixel" width="624" height="416" style="max-width: 100%; height: auto;" />
+<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image04.gif" alt="Web Starter Kit Styleguide on Chromebook Pixel" width="624" height="416" style="max-width: 100%; height: auto;" />
 </p>
 
 The final piece of Web Starter Kit is it's Styleguide.
@@ -119,7 +120,7 @@ mock](http://youtu.be/z6dg_V22wV0?t=15m5s) of what this may look like at Chrome
 Dev Summit and you can see an example below.
 
 <p style="text-align: center;">
-<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image05.png" alt="Web Starter Kit's Material Design Styleguide Mock" width="624" height="416"  style="max-width: 100%; height: auto;" />
+<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image05.gif" alt="Web Starter Kit's Material Design Styleguide Mock" width="624" height="416"  style="max-width: 100%; height: auto;" />
 </p>
 
 ## Iterate.
@@ -159,7 +160,7 @@ Paint profiler no gives you more information on what exactly the browser is
 doing during that paint.
 
 <p style="text-align: center;">
-<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image08.png" alt="Screenshot of the Paint Profiler in Chrome DevTools" width="624" height="348" style="max-width: 100%; height: auto;" />
+<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image08.jpg" alt="Screenshot of the Paint Profiler in Chrome DevTools" width="624" height="348" style="max-width: 100%; height: auto;" />
 </p>
 
 ### Invalidation Tracking
@@ -189,7 +190,7 @@ you'll be able to explore which elements in the page had been promoted to a
 composite layer as well as why they've been promoted.
 
 <p style="text-align: center;">
-<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image11.png" alt="Screenshot of Frame Viewer in Chrome DevTools" width="624" height="537" style="max-width: 100%; height: auto;" />
+<img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image11.jpg" alt="Screenshot of Frame Viewer in Chrome DevTools" width="624" height="537" style="max-width: 100%; height: auto;" />
 </p>
 
 ## Learn. Build. Iterate.

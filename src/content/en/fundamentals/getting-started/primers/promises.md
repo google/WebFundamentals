@@ -929,7 +929,8 @@ This next bit involves a whole bunch of new ES6 features, but it's not something
 you need to understand to use promises in your code today. Treat it like a movie
 trailer for some upcoming blockbuster features.
 
-ES6 also gives us [generators](http://wiki.ecmascript.org/doku.php?id=harmony:generators),
+ES6 also gives us
+[generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators),
 which allow functions to exit at a particular point, like "return", but
 later resume from the same point and state, for example:
 
@@ -1019,7 +1020,7 @@ This works exactly as before but is so much easier to read. This works in
 Chrome and Opera today (see
 [code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html)),
 and works in Microsoft Edge by going to `about:flags` and turning on
-the **Enable experimental Javascript features** setting. This will be
+the **Enable experimental JavaScript features** setting. This will be
 enabled by default in an upcoming version.
 
 

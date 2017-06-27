@@ -15,8 +15,8 @@ book_path: /web/showcase/_book.yaml
 <img src="/web/showcase/2017/images/lancome/lancome-detail_2x.jpg" class="attempt-right">
 
 To drive both traffic and re-engagement, luxury cosmetics brand
-Lancôme launched a Progressive Web App (PWA) to deliver a fast, app-like
-experience on the mobile web.
+Lancôme launched a Progressive Web App (PWA) with Mobify to deliver a fast,
+app-like experience on the mobile web.
 
 * 17% increase in conversions
 * 53% increase in mobile sessions on iOS

@@ -237,7 +237,7 @@ def renderDevSiteContent(content, lang='en'):
     replaceWith = '<iframe class="framebox inherit-locale'
     if fbClass:
      replaceWith += ' ' + fbClass.group(1)
-    replaceWith += + '" '
+    replaceWith += '" '
     replaceWith += 'style="width: 100%;'
     if fbHeight:
       replaceWith += 'height:' + fbHeight.group(1) + ';'
@@ -403,7 +403,7 @@ def getFooterPromo(lang='en'):
         if 'icon_name' in promo:
           result +='<div class="devsite-footer-promo-icon material-icons">'
           result += promo['icon_name'] + '</div>'
-        result += promo['title']
+        result += promo['label']
         result += '</a><div class="devsite-footer-promo-description">'
         result += promo['description']
         result += '</div></li>\n'

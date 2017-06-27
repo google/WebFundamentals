@@ -94,7 +94,7 @@ gulp.task('build:http203Podcast', function() {
     subtitle: 'Where Paul and Jake occasionally talk web.',
     author: {name: 'Paul Lewis & Jake Archibald', email: 'jaffathecake@gmail.com'},
     summary: 'Paul and Jake talk about whatever\'s going on in the world of web development.',
-    image: 'https://developers.google.com/web/shows/http203/podcast/http203-podcast-art.jpg',
+    image: 'https://developers.google.com/web/shows/http203/podcast/http203-podcast.jpg',
     section: 'shows',
     outputPath: baseOutputPath,
     baseUrl: 'https://developers.google.com/web/shows/http203/podcast/'

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components
 
-{# wf_updated_on: 2017-04-17 #}
+{# wf_updated_on: 2017-06-15 #}
 {# wf_published_on: 2016-08-01 #}
 
 # Shadow DOM v1: Self-Contained Web Components {: .page-title }
@@ -327,12 +327,12 @@ content, the slot renders its fallback content.
 You can also create **named slots**. Named slots are specific holes in your
 shadow DOM that users reference by name.
 
-**Example** - the named slots in `<fancy-tabs>`'s shadow DOM:
+**Example** - the slots in `<fancy-tabs>`'s shadow DOM:
 
 
     #shadow-root
       <div id="tabs">
-        <slot id="tabsSlot" name="title"></slot>
+        <slot id="tabsSlot" name="title"></slot> <!-- named slot -->
       </div>
       <div id="panels">
         <slot id="panelsSlot"></slot>
@@ -620,8 +620,8 @@ Another, more in-depth example from `<fancy-tabs>`:
     `;
     
 
-In this example, there are two slots: a named slot for the tab titles, a named
-slot for the  tabs content. When the user selects a tab, we bold their selection
+In this example, there are two slots: a named slot for the tab titles, and a
+slot for the tab panel content. When the user selects a tab, we bold their selection
 and reveal its panel. That's done by selecting distributed nodes that have the
 `selected` attribute. The custom element's JS (not shown here) adds that
 attribute at the correct time.
@@ -786,11 +786,11 @@ As an example, let's say your shadow DOM looks like this:
     <slot><b>fallback content</b></slot>
 
 <table>
-  <thead><th>Usage</th><th>Call</th><th>Result</th></tr></thead>
+  <thead><th>Usage</th><th>Call</th><th>Result</th></thead>
   <tr>
     <td>&lt;my-component&gt;component text&lt;/my-component&gt;</td>
     <td><code>slot.assignedNodes();</code></td>
-    <td><code>[text]</code></td>
+    <td><code>[component text]</code></td>
   </tr>
   <tr>
     <td>&lt;my-component>&lt;/my-component&gt;</td>
@@ -798,7 +798,7 @@ As an example, let's say your shadow DOM looks like this:
     <td><code>[]</code></td>
   </tr>
   <tr>
-    <td>&lt;my-component&gt;&lt;/my-componentS&gt;</td>
+    <td>&lt;my-component&gt;&lt;/my-component&gt;</td>
     <td><code>slot.assignedNodes({flatten: true});</code></td>
     <td><code>[&lt;b&gt;fallback content&lt;/b&gt;]</code></td>
   </tr>

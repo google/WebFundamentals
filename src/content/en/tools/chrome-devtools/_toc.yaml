@@ -17,6 +17,8 @@ toc:
       section:
       - title: Overview
         path: /web/tools/chrome-devtools/inspect-styles/
+      - title: Get Started with Viewing and Changing CSS
+        path: /web/tools/chrome-devtools/css/
       - title: Edit Styles
         path: /web/tools/chrome-devtools/inspect-styles/edit-styles
       - title: Inspect Animations

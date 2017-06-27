@@ -46,7 +46,40 @@ to fix in this tutorial.
 Whoops. That result is wrong. The result should be `6`. This is the bug that
 you're going to fix.
 
-{% include "web/tools/chrome-devtools/javascript/_feedback/1.html" %}
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'JS / Get Started / (1) Reproduced The Bug';
+var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
+      label + ']';
+var feedback = {
+  "category": "DevTools",
+  "choices": [
+    {
+      "button": {
+        "text": "I reproduced the bug",
+        "primary": true
+      },
+      "response": "You're off to a good start!",
+      "analytics": {
+        "label": label
+      }
+    },
+    {
+      "button": {
+        "text": "I can't reproduce the bug"
+      },
+      "response": 'Sorry to hear that. Please <a href="' + url +
+          '" target="_blank">open an issue</a> and tell us what happened.',
+      "analytics": {
+        "label": label,
+        "value": 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
 
 ## Step 2: Pause the code with a breakpoint
 

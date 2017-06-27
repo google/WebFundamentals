@@ -7,12 +7,12 @@ description: Heute kann über eine extreme Vielfalt an Geräten auf das Web zuge
 
 # Ihre erste Website für verschiedene Geräte {: .page-title }
 
-Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://udacity.com/ud893) course on Udacity.
+Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) course on Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
 
-Erfahrungen für verschiedene Geräte zu kreieren ist nicht so schwer, wie es sich anhört. In diesem Leitfaden erstellen wir als Beispiel eine Produktzielseite für unseren <a href="https://www.udacity.com/course/cs256">Kurs CS256: Für das mobile Web entwickeln</a>, der auf sämtlichen Gerätetypen gut funktioniert.
+Erfahrungen für verschiedene Geräte zu kreieren ist nicht so schwer, wie es sich anhört. In diesem Leitfaden erstellen wir als Beispiel eine Produktzielseite für unseren <a href="https://www.udacity.com/course/mobile-web-development--cs256">Kurs CS256: Für das mobile Web entwickeln</a>, der auf sämtlichen Gerätetypen gut funktioniert.
 
 <img src="images/finaloutput-2x.jpg" alt="Viele Geräte, auf denen das fertige Projekt zu sehen ist">
 

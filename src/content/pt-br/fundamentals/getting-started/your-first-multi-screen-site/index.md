@@ -7,7 +7,7 @@ description: A Web pode ser acessada por diversos tipos de dispositivos, desde c
 
 # Seu Primeiro Site para Vários Dispositivos {: .page-title }
 
-Atenção: Este artigo não é atualizado há algum tempo e pode não refletir a realidade. Confira o curso gratuito de [Web design responsivo](https://udacity.com/ud893) no Udacity.
+Atenção: Este artigo não é atualizado há algum tempo e pode não refletir a realidade. Confira o curso gratuito de [Web design responsivo](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) no Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
@@ -15,7 +15,7 @@ Atenção: Este artigo não é atualizado há algum tempo e pode não refletir a
 
 Criar experiências para vários dispositivos não é tão difícil quando parece.
 Neste guia, criaremos uma página de destino de produto para o 
-[CS256: Curso de desenvolvimento para Web móvel](https://www.udacity.com/course/cs256)
+[CS256: Curso de desenvolvimento para Web móvel](https://www.udacity.com/course/mobile-web-development--cs256)
  que funciona bem em diferentes tipos de dispositivos.
 
 O desenvolvimento para vários dispositivos com diferentes recursos, tamanhos de tela

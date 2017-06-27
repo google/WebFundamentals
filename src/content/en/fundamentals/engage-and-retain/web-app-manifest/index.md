@@ -127,7 +127,7 @@ Note: When saving an icon to the home screen, Chrome first looks for icons that 
 When you launch your web app from the home screen a number of things happen behind the
 scenes:
 
-1. Chrome launchs.
+1. Chrome launches.
 2. The renderer that displays the page starts up.
 3. Your site loads from the network (or from cache if it has a service worker).
 
@@ -281,6 +281,3 @@ manifests, you can read the [actual W3C specification](http://www.w3.org/TR/appm
 Note: If you update your `manifest.json` file in the future, those changes won't
 be automatically picked up by the users unless they re-add your app to their
 home screen.
-
-
-

@@ -68,7 +68,7 @@ informasi tentang materi baru. Anda juga akan mempelajari dasar-dasar Service Wo
 
 ### Kursus Udacity
 
-[Dasar-dasar Progressive Web App](https://udacity.com/ud811)<br>
+[Dasar-dasar Progressive Web App](https://www.udacity.com/course/intro-to-progressive-web-apps--ud811)<br>
 Dalam kursus ini, Anda akan mulai mengerjakan Progressive Web
 App yang pertama&mdash;aplikasi web yang memanfaatkan banyak fitur yang digunakan oleh
 aplikasi asli. Anda juga akan memperoleh lebih banyak pengalaman dalam pembuatan aplikasi web

@@ -42,9 +42,9 @@ Hier erfahren Sie, wie Sie Videoinhalte ganz einfach zu Ihrer Website hinzufüge
 - Verwenden Sie das Videoelement zum Laden, Decodieren und Abspielen von Videos auf Ihrer Website:
 
 <video controls>
-     <source src="video/chrome.webm" type="video/webm">
-     <source src="video/chrome.mp4" type="video/mp4">
-     <p>Dieser Browser unterstützt das Videoelement nicht.</p>
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
+  <p>Dieser Browser unterstützt das Videoelement nicht.</p>
 </video>
 
 
@@ -84,9 +84,9 @@ Darüber hinaus sollten Sie die Antwortheader in den Entwicklertools für Ihren 
 Sparen Sie Bandbreite und machen Sie Ihre Website reaktionsschneller, indem Sie dem Videoelement mithilfe der Media Fragments-API eine Start- und Endzeit hinzufügen.
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm">
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
-     <p>Dieser Browser unterstützt das Videoelement nicht.</p>
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
+  <p>Dieser Browser unterstützt das Videoelement nicht.</p>
 </video>
 
 Zum Hinzufügen eines Medienfragments fügen Sie der Medien-URL einfach `#t=[start_time][,end_time]` hinzu. Wenn das Video zum Beispiel von Sekunde 5 - 10 abgespielt werden soll, geben Sie Folgendes an:
@@ -352,8 +352,8 @@ Die Art und Weise, wie Elemente im Vollbildmodus angezeigt werden, können Sie a
 Auf Geräten, die die Fullscreen-API unterstützen, sollten Sie die Verwendung von Miniaturansicht-Bildern als Platzhalter für Videos in Betracht ziehen:
 
 <video autoplay loop class="center">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
      <p>Dieser Browser unterstützt das Videoelement nicht.</p>
 </video>
 

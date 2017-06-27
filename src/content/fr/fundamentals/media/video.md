@@ -40,9 +40,9 @@ Découvrez les méthodes les plus simples pour ajouter des vidéos à votre site
     - Ajoutez l'élément vidéo pour importer, décoder et lire des contenus vidéos sur votre site :
 
 <video controls>
-     <source src="video/chrome.webm" type="video/webm">
-     <source src="video/chrome.mp4" type="video/mp4">
-     <p>Ce navigateur n'est pas compatible avec l'élément vidéo.</p>
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
+  <p>Ce navigateur n'est pas compatible avec l'élément vidéo.</p>
 </video>
 
 
@@ -82,8 +82,8 @@ Vérifiez également les en-têtes de réponse dans les outils pour les dévelop
 Pour économiser la bande passante et pour que votre site soit plus adaptatif, utilisez l'API Media Fragments afin d'ajouter un intervalle de lecture à l'élément vidéo.
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm">
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
      <p>Ce navigateur n'est pas compatible avec l'élément vidéo.</p>
 </video>
 
@@ -341,8 +341,8 @@ Vous pouvez enfin utiliser la pseudo-classe CSS ":fullscreen" pour modifier l'af
 Sur les appareils compatibles avec l'API Fullscreen, il peut être judicieux d'utiliser une vignette en tant qu'espace réservé pour le contenu vidéo :
 
 <video autoplay loop class="center">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
      <p>Ce navigateur n'est pas compatible avec l'élément vidéo.</p>
 </video>
 

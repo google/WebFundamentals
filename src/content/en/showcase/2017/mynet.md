@@ -110,8 +110,7 @@ per article pageview.
  
 ### Additional results {: .hide-from-toc }
 
-* 2X faster load times
-* 30% higher CTR and revenue
-* iOS
-* 15% increase in average pageviews per session
-* 23% lower bounce rates
+* 2X faster load times with AMP Ads
+* 30% higher CTR and revenue with AMP Ads
+* 15% increase in average pageviews per session on iOS
+* 23% lower bounce rates in iOS
