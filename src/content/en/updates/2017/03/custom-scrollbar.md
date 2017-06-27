@@ -2,14 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Custom transform matrices allow you to build frame-perfect custom scrollbars.
 
-{# wf_updated_on: 2017-03-23 #}
+{# wf_updated_on: 2017-06-27 #}
 {# wf_published_on: 2017-03-23 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/2017/03/custom-scrollbar/poster.jpg #}
 {# wf_featured_snippet: Custom transform matrices allow you to build frame-perfect custom scrollbars. #}
 
 
-# CSS deep-dive: matrix3d() for a frame-perfect custom scrollbar {: .page-title }
+# CSS Deep-Dive: matrix3d() For a Frame-Perfect Custom Scrollbar {: .page-title }
 
 {% include "web/_shared/contributors/surma.html" %}
 
