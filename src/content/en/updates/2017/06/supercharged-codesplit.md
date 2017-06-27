@@ -68,11 +68,13 @@ round trips before the code can finally be executed.
 
 #### Bundling
 
-Bundling, which is inlining all your modules into one single bundle will make sure the browser has
-all the code it needs after 1 round trip and can start running the code more quickly. This, however, forces
-the user to download a lot of code that is not needed, so bandwidth and time have been wasted.
-Additionally, every change to one of our original modules will result in a change in the bundle,
-invalidating any cached version of the bundle. Users will have to re-download the entire thing.
+Bundling, which is inlining all your modules into one single bundle will make
+sure the browser has all the code it needs after 1 round trip and can start
+running the code more quickly. This, however, forces the user to download a lot
+of code that is not needed, so bandwidth and time have been wasted.
+Additionally, every change to one of our original modules will result in a
+change in the bundle, invalidating any cached version of the bundle. Users will
+have to re-download the entire thing.
 
 #### Code splitting
 
