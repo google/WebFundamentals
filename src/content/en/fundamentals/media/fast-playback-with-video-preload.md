@@ -17,14 +17,29 @@ condimentum finibus, est neque mollis leo, at imperdiet justo elit dapibus
 nisl. Integer gravida dapibus turpis, vel scelerisque dolor scelerisque eget.
 Sed dolor lectus, tempor vulputate bibendum eget, accumsan lobortis ex.
 
+<video controls controlsList="nodownload" muted playsinline style="width: 100%">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-preload-hero.webm#t=0.7"
+          type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-preload-hero.mp4#t=1"
+          type="video/mp4">
+</video>
+
 Unless specified otherwise, this article also applies to the audio element.
 
 ## Video preload attribute
 
 If the video source is an unique file hosted on a web server, you may want to
 use the video `preload` attribute to provide a hint to the browser as to [how
-much information or content to preload]. In other words, [Media Source
-Extensions (MSE)] is not compatible with `preload`.
+much information or content to preload]. This means [Media Source Extensions
+(MSE)] is not compatible with `preload`.
+
+Resource fetching will start only when initial HTML document has been
+completely loaded and parsed (eg. `DOMContentLoaded` event) while the very
+different `Load` event will be fired when resource has actually been fetched.
+
+<figure class="TODO">
+  <img src="/web/fundamentals/media/images/video-preload/video-preload.svg">
+</figure>
 
 Setting `preload` value to `metadata` indicates that the user is not expected
 to need the video, but that fetching its metadata (dimensions, first frame,
@@ -83,7 +98,7 @@ video, audio, etc.). It should be used to warm up the browser cache for current
 sessions.
 
 <figure class="TODO">
-  <img src="/web/fundamentals/media/images/video-preload/link-preload.png">
+  <img src="/web/fundamentals/media/images/video-preload/link-preload.svg">
 </figure>
 
 ### Preload full video
@@ -140,11 +155,12 @@ rel="preload">` has been fired.
     video.src = URL.createObjectURL(mediaSource);
     mediaSource.addEventListener('sourceopen', sourceOpen);
   }
+
   function sourceOpen(event) {
     URL.revokeObjectURL(video.src);
     const mediaSource = event.target;
     const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp9"');
-  
+
     // If video is preloaded already, fetch will return immediately a response
     // from the browser cache (memory cache). Otherwise, it will perform a
     // regular network fetch.
@@ -177,22 +193,22 @@ function preloadSupported() {
 
 Before we dive into the Cache API and service workers, let's see how to
 manually buffer a video with MSE. The example below assumes that your web
-server supports HTTP range requests. Note that this would be pretty similar to
+server supports HTTP Range requests. Note that this would be pretty similar to
 segment files.
 
 ```
-<video controls id="video"></video>
+<video id="video" controls></video>
 
 <script>
   const mediaSource = new MediaSource();
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
-   
+
   function sourceOpen() {
     URL.revokeObjectURL(video.src);
     const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp9"');
-   
-    // Fetch the beginning of the video.
+
+    // Fetch beginning of the video by setting the Range HTTP request header.
     fetch('file.webm', { headers: { range: 'bytes=0-567139' } })
     .then(response => response.arrayBuffer())
     .then(data => {
@@ -200,21 +216,22 @@ segment files.
       sourceBuffer.addEventListener('updateend', updateEnd, { once: true });
     });
   }
-      
+
   function updateEnd() {
     // Video is now ready to play!
     var bufferedSeconds = video.buffered.end(0) - video.buffered.start(0);
     console.log(bufferedSeconds + ' seconds of video are ready to play!');
+
+    // Fetch the rest of the video when user starts playing video.
+    video.addEventListener('playing', fetchNextSegment, { once: true });
   }
 
-  // Fetch the rest of the video when user starts playing video.
-  video.addEventListener('play', fetchSecondSegment, { once: true });
- 
-  function fetchSecondSegment() {
+  function fetchNextSegment() {
     fetch('file.webm', { headers: { range: 'bytes=567140-1196488' } })
     .then(response => response.arrayBuffer())
     .then(data => {
-      mediaSource.sourceBuffers[0].appendBuffer(data);
+      const sourceBuffer = mediaSource.sourceBuffers[0];
+      sourceBuffer.appendBuffer(data);
     });
   }
 </script>
@@ -230,9 +247,10 @@ file from each but we should definitely not create 10 hidden video elements and
 
 The 2-parts example below shows you how to pre-cache multiple first segments of
 video using the powerful and easy-to-use Cache API. Note that something similar
-can be achieved with IndexedDB as well.
+can be achieved with IndexedDB as well. We're not using service workers yet as
+the Cache API is also accessible from the Window object.
 
-#### Part 1: Fetch and cache
+#### Fetch and cache
 
 ```
 const videoFileUrls = [
@@ -241,7 +259,7 @@ const videoFileUrls = [
   'dog_video_file_1.webm',
   'fox_video_file_1.webm',
 ];
- 
+
 // Let's create a video pre-cache and store all first segments of videos inside.
 caches.open('video-pre-cache')
 .then(cache => Promise.all(videoFileUrls.map(videoFileUrl => fetchAndCache(videoFileUrl, cache))));
@@ -258,7 +276,7 @@ function fetchAndCache(videoFileUrl, cache) {
     return fetch(videoFileUrl)
     .then(networkResponse => {
       // Add the response to the cache and return network response in parallel.
-      cache.put(videoFileUrl, networkResponse.clone());      
+      cache.put(videoFileUrl, networkResponse.clone());
       return networkResponse;
     });
   });
@@ -266,10 +284,10 @@ function fetchAndCache(videoFileUrl, cache) {
 ```
 
 Note that if were to use HTTP Range request, I'd have to recreate manually a
-`Response` object as the Cache API doesn't support range responses yet. Be
+`Response` object as the Cache API doesn't support Range responses yet. Be
 mindful that calling `networkResponse.arrayBuffer()` fetches the
 whole content of the response at once into renderer memory, hence why you may
-want to use small ranges. 
+want to use small ranges.
 
 For reference, here's the modified part of the code above to save HTTP Range
 requests to the video pre-cache.
@@ -281,12 +299,12 @@ requests to the video pre-cache.
     .then(data => {
       const response = new Response(data);
       // Add the response to the cache and return network response in parallel.
-      cache.put(videoFileUrl, response.clone());      
+      cache.put(videoFileUrl, response.clone());
       return response;
     });
 ```
 
-#### Part 2: Play video
+#### Play video
 
 When user clicks a play button, we'll fetch first segment of video available in
 the Cache API so that playback starts immediately if available. Otherwise,
@@ -301,7 +319,7 @@ function onPlayButtonClick(videoFileUrl) {
   video.load(); // Used to be able to play video later.
 
   caches.open('video-pre-cache')
-  .then(cache => fetchAndCache(videoFileUrl, cache))
+  .then(cache => fetchAndCache(videoFileUrl, cache)) // Defined above.
   .then(response => response.arrayBuffer())
   .then(data => {
     const mediaSource = new MediaSource();
@@ -319,7 +337,7 @@ function onPlayButtonClick(videoFileUrl) {
     function updateEnd() {
       video.play()
       .then(_ => {
-        // TODO: Fetch the next chunk of the video when video starts to play...
+        // TODO: Fetch the rest of the video when user starts playing video.
       });
     }
   });
@@ -330,62 +348,77 @@ Warning: For cross-origin resources, make sure your CORS headers are set
 properly as opaque responses retrieved with `fetch(videoFileUrl, { mode:
 'no-cors' })` are not allowed to feed any video or audio element.
 
-### Create your range responses with a Service Worker
+### Create Range responses with a Service Worker
 
-What if you fetched an entire video file and saved it in the Cache API. When
-browser asks for a Range request, you certainly don't want to bring the entire
-video into renderer memory.
+Now what if you fetched an entire video file and saved it in the Cache API. When
+browser sends a HTTP Range request, you certainly don't want to bring the entire
+video into renderer memory as the Cache API doesn't support Range responses yet.
 
-Let me show how to intercept these requests and return a customized range
-request from a Service Worker. Note that this snippet uses [Async functions]
-for readability.
+So let me show how to intercept these requests and return a customized Range
+response from a service worker.
 
 ```
 addEventListener('fetch', event => {
   event.respondWith(loadFromCacheOrFetch(event.request));
 });
- 
-async function loadFromCacheOrFetch(request) {
+
+function loadFromCacheOrFetch(request) {
   // Search through all available caches for this request.
   return caches.match(request)
   .then(response => {
- 
+
     // Fetch from network if it's not already in the cache.
     if (!response) {
       return fetch(request);
     }
- 
-    // Browser asks for a range request. Let's provide one reconstructed
+
+    // Browser sends a HTTP Range request. Let's provide one reconstructed
     // manually from the cache.
     if (request.headers.has('range')) {
-      const pos = Number(/^bytes\=(\d+)\-$/g.exec(request.headers.get('range'))[1]);
-      const options = {
-        status: 206,
-        statusText: 'Partial Content',
-        headers: response.headers
-      }
-      const data = await response.blob();
+      return response.blob()
+      .then(data => {
 
-      const slicedResponse = new Response(data.slice(pos), options);
-      slicedResponse.setHeaders('Content-Range': 'bytes ' + pos + '-' +
-          (data.size - 1) + '/' + data.size);
-      slicedResponse.setHeaders('X-From-Cache': 'true');
+        // Get start position from Range request header.
+        const pos = Number(/^bytes\=(\d+)\-$/g.exec(request.headers.get('range'))[1]);
+        const options = {
+          status: 206,
+          statusText: 'Partial Content',
+          headers: response.headers
+        }
+        const slicedResponse = new Response(data.slice(pos), options);
+        slicedResponse.setHeaders('Content-Range': 'bytes ' + pos + '-' +
+            (data.size - 1) + '/' + data.size);
+        slicedResponse.setHeaders('X-From-Cache': 'true');
 
-      return slicedResponse;
+        return slicedResponse;
+      });
     }
- 
+
     return response;
   }
 }
 ```
 
 It is important to note that I used `response.blob()` to recreate this sliced
-response as this simply gives me a handle to the file.
+response as this simply gives me a handle to the file while
+`response.arrayBuffer()` brings the entire file into renderer memory.
 
 My custom `X-From-Cache` HTTP header can be used to know whether this request
 came from the cache or from the network. It can be used by a player such as
-ShakaPlayer to ignore the response time as an indicator of network speed.
+[ShakaPlayer] to ignore the response time as an indicator of network speed.
 
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="f8EGZa32Mts"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+Have a look at the official [Sample Media App] and in particular its
+[ranged-response.js] file for a complete solution in how to handle Range
+requests.
+
+
+<div class="clearfix"></div>
 
 [how much information or content to preload]: /web/fundamentals/media/video#preload
 [video preload attribute]: /web/fundamentals/media/video#preload
@@ -396,4 +429,6 @@ ShakaPlayer to ignore the response time as an indicator of network speed.
 [link preload]: https://w3c.github.io/preload/
 [MSE Basics]: /web/fundamentals/media/mse/basics
 [Cache]: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
-
+[ShakaPlayer]: https://github.com/google/shaka-player/blob/master/docs/tutorials/service-worker.md
+[Sample Media App]: https://github.com/GoogleChrome/sample-media-pwa
+[ranged-response.js]: https://github.com/GoogleChrome/sample-media-pwa/blob/master/src/client/scripts/ranged-response.js
