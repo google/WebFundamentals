@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn about the simplest ways to add video to your site and ensure users get the best possible experience on any device.
 
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2017-06-28 #}
 {# wf_published_on: 2014-04-15 #}
 
 # Video {: .page-title }
@@ -498,7 +498,7 @@ element as a child of the video element:
 
 The track element `src` attribute gives the location of the track file.
 
-## Define captions in track file
+### Define captions in track file
 
 A track file consists of timed "cues" in WebVTT format:
 
@@ -512,14 +512,6 @@ A track file consists of timed "cues" in WebVTT format:
 
     ...
 
-Dogfood: The track element is supported on Chrome for Android, iOS Safari, and
-all current browsers on desktop except Firefox (see
-[caniuse.com/track](http://caniuse.com/track)).
-There are several polyfills available too. We recommend
-[Captionator](http://captionatorjs.com/).
-
-
-
 
 ## Quick Reference
 
@@ -532,45 +524,37 @@ For the complete list of video element attributes and their definitions, see
   <thead>
     <tr>
       <th>Attribute</th>
-      <th>Availability</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td data-th="Attribute"><code>src</code></td>
-      <td data-th="Availability">All browsers.</td>
       <td data-th="Description">Address (URL) of the video.</td>
     </tr>
     <tr>
       <td data-th="Attribute"><code>poster</code></td>
-      <td data-th="Availability">All browsers.</td>
       <td data-th="Description">Address (URL) of an image file that the browser
       can show as soon as the video element is displayed without downloading
       video content.</td>
     </tr>
     <tr>
       <td data-th="Attribute"><code>preload</code></td>
-      <td data-th="Availability">All mobile browsers ignore preload.</td>
       <td data-th="Description">Hints to the browser that preloading metadata
       (or some video) in advance of playback is worthwhile. Options are none, metadata,
       or auto (see <a href="#preload">Preload</a> section for details). </td>
     </tr>
     <tr>
       <td data-th="Attribute"><code>autoplay</code></td>
-      <td data-th="Availability">Not supported on iPhone or Android; supported on all
-      desktop browsers, iPad, Firefox, and Opera for Android.</td>
       <td data-th="Description">Start download and playback as soon as possible
       (see <a href="#autoplay">Autoplay</a> section for details).</td>
     </tr>
     <tr>
       <td data-th="Attribute"><code>loop</code></td>
-      <td data-th="Availability">All browsers.</td>
       <td data-th="Description">Loop the video.</td>
     </tr>
     <tr>
       <td data-th="Attribute"><code>controls</code></td>
-      <td data-th="Availability">All browsers.</td>
       <td data-th="Description">Show the default video controls (play, pause, etc.).</td>
     </tr>
   </tbody>
@@ -579,8 +563,8 @@ For the complete list of video element attributes and their definitions, see
 ### Autoplay {: #autoplay }
 
 On desktop, `autoplay` tells the browser to download and play the video
-immediately. On iOS, and Chrome for Android, `autoplay` doesn't work; users must
-tap the screen to play the video.
+immediately. On mobile, don't assume `autoplay` will always work. See [WebKit
+blog](https://webkit.org/blog/6784/new-video-policies-for-ios/) for instance.
 
 Even on platforms where autoplay is possible, you need to consider whether
 it's a good idea to enable it:
@@ -627,16 +611,15 @@ information or content to preload.
 The `preload` attribute has different effects on different platforms.
 For example, Chrome buffers 25 seconds of video on desktop but none on iOS or
 Android. This means that on mobile, there may be playback startup delays
-that don't happen on desktop. 
-See [Steve Souders' test page](//stevesouders.com/tests/mediaevents.php)
-for full details.
+that don't happen on desktop. See [Steve Souders'
+blog](https://www.stevesouders.com/blog/2013/04/12/html5-video-preload/) for
+full details.
 
 ### JavaScript
 
 [The HTML5 Rocks Video article](//www.html5rocks.com/en/tutorials/video/basics/#toc-javascript)
 does a great job of summarizing the JavaScript properties, methods, and events
-that can be used to control video playback. We've included that content here,
-updating it with mobile-specific concerns where relevant.
+that can be used to control video playback.
 
 #### Properties
 
@@ -685,10 +668,6 @@ updating it with mobile-specific concerns where relevant.
   </tbody>
 </table>
 
-Neither `playbackRate`
-([see demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html))
-nor `volume` are supported on mobile.
-
 #### Methods
 
 <table class="responsive">
@@ -719,8 +698,8 @@ nor `volume` are supported on mobile.
   </tbody>
 </table>
 
-On mobile (apart from Opera on Android) `play()` and `pause()` don't work
-unless called in response to user action such as clicking a button: see the
+On mobile `play()` and `pause()` don't work unless called in response to user
+action such as clicking a button: see the
 [demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html).
 (Likewise, you can't initiate playback for content such as embedded
 YouTube videos.)
@@ -749,7 +728,8 @@ page on the Mozilla Developer Network for a complete listing.
     </tr>
     <tr>
       <td data-th="Event"><code>error</code></td>
-      <td data-th="Description">Fired if an error occurs.</td>
+      <td data-th="Description">Fired if an error occurs (see
+<a href="https://googlechrome.github.io/samples/media/error-message.html">demo</a>).</td>
     </tr>
     <tr>
       <td data-th="Event"><code>playing</code></td>
