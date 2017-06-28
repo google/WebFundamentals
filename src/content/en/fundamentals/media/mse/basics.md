@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Media Source Extensions (MSE) is a JavaScript API that lets you build streams for playback from segments of audio or video.
 
 {# wf_published_on: 2017-02-08 #}
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2017-06-28 #}
 
 # Media Source Extensions {: .page-title }
 
@@ -90,6 +90,11 @@ Here, in no particular order, are a few things I won't cover.
 +  Playback controls. We get those for free by virtue of using the HTML5
    `<audio>` and `<video>` elements.
 +  Error handling for the sake of simplicity and clarity.
+
+Warning: Handling error events, API exceptions, and proactively checking
+`HTMLMediaElement readyState` and `MediaSource readyState` values before making
+calls on their APIs are mandatory in a production usage of the APIs as these
+values can change before associated events are delivered.
 
 ## Attach a MediaSource instance to a media element
 
