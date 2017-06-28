@@ -11,7 +11,7 @@ book_path: /web/showcase/_book.yaml
 
 # Alibaba {: .page-title }
 
-<img src="images/alibaba/featured.png" class="attempt-right">
+<img src="images/alibaba/featured.gif" class="attempt-right">
 
 ### TL;DR {: .hide-from-toc }
 

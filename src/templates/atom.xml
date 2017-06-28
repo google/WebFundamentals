@@ -11,8 +11,8 @@
   {{#each articles}}
   <entry>
     <title>{{ title }}</title>
-    <published>{{ datePublished }}Z</published>
-    <updated>{{ dateUpdated }}Z</updated>
+    <published>{{ datePublished }}</published>
+    <updated>{{ dateUpdated }}</updated>
     <link rel="alternate" type="text/html" href="{{ ../host }}{{ url }}{{{ ../analyticsQS }}}" />
     <id>{{ ../host }}{{ url }}</id>
     <content type="html">

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Request API is for fast, easy payments on the web.
 
 {# wf_published_on: 2016-07-25 #}
-{# wf_updated_on: 2017-04-21 #}
+{# wf_updated_on: 2017-06-16 #}
 
 # Introducing the Payment Request API {: .page-title }
 
@@ -40,24 +40,29 @@ like to talk about a more comprehensive solution.
 
 ## Introducing the Payment Request API {: #introducing }
 
-The Payment Request API is a system that is meant to *eliminate checkout forms*.
+The Payment Request API is a [W3C standard](https://www.w3.org/TR/payment-request/)
+candidate that is meant to *eliminate checkout forms*.
 It vastly improves user workflow during the purchase process, providing a more
 consistent user experience and enabling web merchants to easily leverage
-disparate payment methods. The Payment Request API is not a new payment method,
-nor does it integrate directly with payment processors; rather, it is a process
-layer whose goals are:
+different payment methods.
 
-* To let the browser act as intermediary among merchants, users, and payment
+The Payment Request API is designed to be vendor-agnostic, meaning it does not
+require use of a particular payment system. It's not a new payment method,
+nor does it integrate directly with payment processors; rather, it is a conduit
+from the user's payment and shipping information to merchants, with the following
+goals:
+
+* Let the browser act as intermediary among merchants, users, and payment
   methods
-* To standardize the payment communication flow as much as possible
-* To seamlessly support different secure payment methods
-* To work on any browser, device, or platform&mdash;mobile or otherwise
+* Standardize the payment communication flow as much as possible
+* Seamlessly support different secure payment methods
+* Work on any browser, device, or platform&mdash;mobile or otherwise
 
 The Payment Request API is an open and cross-browser standard that replaces
 traditional checkout flows by allowing merchants to request and accept any
-payment in a single API call. The Payment Request API allows the web page to
-exchange information with the user agent while the user is providing input,
-before approving or denying a payment request.
+payment in a single API call. The API allows the web page to exchange information
+with the user agent while the user is providing input, before approving or denying
+a payment request.
 
 Best of all, with the browser acting as an intermediary, all the information
 necessary for a fast checkout can be stored in the browser, so users can just

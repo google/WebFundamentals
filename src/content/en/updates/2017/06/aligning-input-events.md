@@ -2,10 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Providing a smooth user experience is important for the web. Over the past few releases of Chrome we have driven down input latency across these devices.
 
-{# wf_updated_on: 2017-06-22 #}
+{# wf_updated_on: 2017-06-27 #}
 {# wf_published_on: 2017-06-22 #}
 {# wf_tags: chrome58,chrome60,events,performance,ux #}
-{# wf_featured_image: /web/updates/images/generic/timeline.png #}
+{# wf_featured_image: /web/updates/images/2017/06/jank.png #}
 {# wf_featured_snippet: Providing a smooth user experience is important for the web. Over the past few releases of Chrome we have driven down input latency across these devices. #}
 
 # Aligned Input Events {: .page-title }
@@ -147,7 +147,7 @@ event:
 This code can easily be changed to use the array of events:
 
     window.addEventListener("pointermove", function(event) {
-      Var events = 'getCoalescedEvents' in event ? event.getCoalescedEvents() : [event];
+      var events = 'getCoalescedEvents' in event ? event.getCoalescedEvents() : [event];
       for (let e of events) {
         drawPoint(e.pageX, e.pageY)
       }

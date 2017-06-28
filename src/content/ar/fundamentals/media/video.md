@@ -40,9 +40,9 @@ description: تعرف على أسهل طرق إضافة الفيديو إلى م
 أضف عنصر الفيديو لتحميل الفيديو على موقعك وفك ترميزه وتشغيله:
 
 <video controls>
-     <source src="video/chrome.webm" type="video/webm">
-     <source src="video/chrome.mp4" type="video/mp4">
-     <p>هذا المتصفح ليس متوافقًا مع عنصر الفيديو.</p>
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
+  <p>هذا المتصفح ليس متوافقًا مع عنصر الفيديو.</p>
 </video>
 
 
@@ -82,9 +82,9 @@ description: تعرف على أسهل طرق إضافة الفيديو إلى م
 اهتم بتوفير معدل نقل البيانات وجعل الموقع يبدو أكثر سرعة في الاستجابة من خلال استخدام واجهة برمجة تطبيقات Media Fragments لإضافة وقت بدء ووقت انتهاء إلى عنصر الفيديو.
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm">
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
-     <p>هذا المتصفح ليس متوافقًا مع عنصر الفيديو.</p>
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
+  <p>هذا المتصفح ليس متوافقًا مع عنصر الفيديو.</p>
 </video>
 
 لإضافة قطاع وسائط، يمكنك إضافة `#t=[start_time][,end_time]` إلى عنوان URL للوسائط. على سبيل المثال، لتشغيل الفيديو من الثانية 5 إلى الثانية 10، يمكنك تحديد:
@@ -345,8 +345,8 @@ src="images/iPad-Retina-landscape-video-playing.png">
 على الأجهزة التي تتوافق مع واجهة برمجة تطبيقات Fullscreen، فكر في استخدام الصور المصغَّرة بمثابة عناصر نائبة للفيديو:
 
 <video autoplay loop class="center">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
      <p>هذا المتصفح ليس متوافقًا مع عنصر الفيديو.</p>
 </video>
 

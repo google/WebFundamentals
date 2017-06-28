@@ -16,7 +16,7 @@ const exec = require('child_process').exec;
 
 const STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md'];
 const DATE_FORMAT_PRETTY = 'dddd, MMMM Do YYYY';
-const DATE_FORMAT_STANDARDIZED = 'YYYY-MM-DDTHH:mm:ss';
+const DATE_FORMAT_STANDARDIZED = 'YYYY-MM-DDTHH:mm:ss[Z]';
 
 if (!String.prototype.endsWith) {
   Object.defineProperty(String.prototype, 'endsWith', {

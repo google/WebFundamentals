@@ -11,7 +11,7 @@ description: Beyond the Rack re-engages users on the mobile web, increasing reve
 
 # Beyond the Rack {: .page-title }
 
-<img src="images/beyond-the-rack/btr-1.png" class="attempt-right">
+<img src="images/beyond-the-rack/btr-1.jpg" class="attempt-right">
 
 ### TL;DR {: .hide-from-toc }
 

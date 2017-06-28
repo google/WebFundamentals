@@ -37,8 +37,8 @@ possível para os usuários em qualquer dispositivo.
 Adicione o elemento `video` para carregar, decodificar e reproduzir vídeos no seu site:
 
 <video controls>
-  <source src="video/chrome.webm" type="video/webm">
-  <source src="video/chrome.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
   <p>Este navegador não oferece suporte para o elemento video.</p>
 </video>
 
@@ -98,8 +98,8 @@ Economize largura de banda e deixe seu site mais responsivo: use a Media
 Fragments API para adicionar horários de início e de término ao elemento video.
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm">
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
   <p>Este navegador não oferece suporte para o elemento video.</p>
 </video>
 
@@ -429,8 +429,8 @@ Você também pode usar a pseudoclasse `:fullscreen` do CSS para alterar a manei
 os elementos são exibidos no modo de tela inteira.
 
 <video autoplay muted loop class="attempt-right">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
   <p>Este navegador não oferece suporte para o elemento video.</p>
 </video>
 

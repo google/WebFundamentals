@@ -37,8 +37,8 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 添加 `video` 元素，以便在网站上加载、解码以及播放视频：
 
 <video controls>
-  <source src="video/chrome.webm" type="video/webm">
-  <source src="video/chrome.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
   <p>This browser does not support the video element.</p>
 </video>
 
@@ -96,8 +96,8 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm">
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
   <p>此浏览器不支持视频元素。</p>
 </video>
 
@@ -423,8 +423,8 @@ iPad 版 Safari 以内联模式播放视频：
 
 
 <video autoplay muted loop class="attempt-right">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
   <p>此浏览器不支持视频元素。</p>
 </video>
 
