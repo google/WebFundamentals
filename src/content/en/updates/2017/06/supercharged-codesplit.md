@@ -105,7 +105,7 @@ step here is to parse the new JavaScript with a parser (Babel uses
 [babylon](https://github.com/babel/babylon)) that turns the code into a so-called “Abstrac Syntax
 Tree” (AST). Once the AST has been generated, a series of plugins analyze and mangle the AST.
 
-Note: I am not very experiences with Babel. The plugins I built work, but they are probably neither
+Note: I am not very experienced with Babel. The plugins I built work, but they are probably neither
 efficient nor idiomatically babel. For a more in-depth guide to authoring Babel plugins, I
 recommend the [Babel Handbook](https://github.com/thejameskyle/babel-handbook).
 
