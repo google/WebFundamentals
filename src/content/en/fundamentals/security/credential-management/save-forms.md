@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-06-21 #}
+{# wf_updated_on: 2016-06-28 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Save Credentials from Forms {: .page-title }
@@ -64,7 +64,7 @@ you can retain the credential information while verifying its authenticity.
 
 ## Authenticate by sending a request
 
-To authenticate the user, deliver credential information to your server via `fetch()`.
+To authenticate the user, deliver credential information to your server using AJAX.
 
 On the server side, create an endpoint (or simply alter an existing endpoint)
 that responds with HTTP code 200 or 401, so that it’s clear to the browser
@@ -87,10 +87,14 @@ For example:
 To store a credential, first check if the API is available,
 then instantiate a
 [`PasswordCredential`](https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential)
-with the form element as an argument. Call
+with the form element as an argument
+either synchronously or asynchronously.
+Call
 [`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store).
 If the API is not available,
 you can simply forward the profile information to the next step.
+
+Synchronous example:
 
     if (navigator.credentials) {
        var c = new PasswordCredential(e.target);
@@ -98,6 +102,16 @@ you can simply forward the profile information to the next step.
      } else {
        return Promise.resolve(profile);
      }
+
+Asynchronous example:
+
+    if (navigator.credentials) {
+       var c = navigator.credentials.create({password: e.target});
+       return navigator.credentials.store(c);
+     } else {
+       return Promise.resolve(profile);
+     }
+
 Once the request succeeds, store the credential information.
 (Don't store the credentials information if the request failed
 as doing so confuses returning users.)
@@ -143,8 +157,8 @@ or proceed to the personalized page.
 
       return fetch('/signin', {
         method: 'POST',
-        credentials: 'include',
-        body: form
+        body: new FormData(e.target),
+        credentials: 'include'
       }).then(res => {
         if (res.status == 200) {
           return Promise.resolve();

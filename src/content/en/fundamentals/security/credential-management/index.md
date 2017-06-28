@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-06-21 #}
+{# wf_updated_on: 2017-06-28 #}
 {# wf_published_on: 2016-11-08 #}
 
 # The Credential Management API {: .page-title }
@@ -28,6 +28,25 @@ and take a look at the
 [code](https://github.com/GoogleChrome/credential-management-sample).
 
 <div class="clearfix"></div>
+
+### Check Credential Management API browser support
+
+Before using the Credential Management API,
+first check the API is supported,
+and that the version of the API is compatible with your code.
+
+[Updates to the Credential Management API](/web/updates/2017/06/credential-management-updates)
+landed in Chrome 60.
+These updates contain backward incompatible changes.
+To check that your implementation isn't triggered in older versions of the API,
+see if `preventSilentAccess exists`:
+
+    if (navigator.credentials && navigator.credentials.preventSilentAccess) {
+      // The new Credential Management API is available
+    }
+
+For more information, see the
+[Chrome 60 migration guide](https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8).
 
 ### Sign in user
 

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-06-21 #}
+{# wf_updated_on: 2017-06-28 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Sign in Users {: .page-title }
@@ -187,15 +187,16 @@ for example, when the user taps the "Sign-In" button. Call
 [`navigator.credentials.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get),
 and add `mediation: 'optional'` or `mediation: 'required'` to show the account chooser.
 
-When mediation is required, the user is always shown an account chooser to sign in.
-When mediation is optional,
+When `mediation` is `required`, the user is always shown an account chooser to sign in.
+This option allows users with multiple accounts to easily switch between them.
+When `mediation` is `optional`,
 the user is explicitly shown an account chooser to sign in after a
 [`navigator.credentials.preventSilentAccess()`](web/fundamentals/security/credential-management/retrieve-credentials#turn_off_auto_sign-in_for_future_visits)
 call.
 This is normally to ensure automatic sign-in doesn't happen
 after the user chooses to sign-out or unregister.
 
-In this example, mediation is optional:
+Example showing `mediation: 'optional'`:
 
     var signin = document.querySelector('#signin');
     signin.addEventListener('click', e => {
@@ -359,15 +360,32 @@ Then invoke
 [`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store)
 to store the identity information.
 
-For example:
+After successful federation,
+instantiate a `FederatedCredential` synchronously, or asychronously:
 
-    // After a successful federation, instantiate a FederatedCredential
+Example of synchronous approach:
+
+    // Create credential object synchronously.
     var cred = new FederatedCredential({
       id:       id,                           // id in IdP
       provider: 'https://account.google.com', // A string representing IdP
       name:     name,                         // name in IdP
       iconURL:  iconUrl                       // Profile image url
     });
+
+Example of asynchronous approach:
+
+    // Create credential object asynchronously.
+    var cred = await navigator.credentials.create({
+      federated: {
+        id:       id,
+        provider: 'https://accounts.google.com',
+        name:     name,
+        iconURL:  iconUrl
+      }
+    });
+
+Then store the credential object:
 
     // Store it
     navigator.credentials.store(cred)
