@@ -1,5 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
+title: Progressive Web Apps
 landing_page:
   custom_css_path: /web/progressive-web-apps/styles/wf-pwa.css
 
@@ -25,25 +26,28 @@ landing_page:
         </p>
         <ul>
           <li>
-            <b>Reliable</b> - Load instantly and never show the downasaur,
-            even in uncertain network conditions.
+            <a href="#reliable"><b>Reliable</b></a> - Load instantly and never
+            show the downasaur, even in uncertain network conditions.
           </li>
           <li>
-            <b>Fast</b> - Respond quickly to user interactions with silky
-            smooth animations and no janky scrolling.
+            <a href="#fast"><b>Fast</b></a> - Respond quickly to user
+            interactions with silky smooth animations and no janky scrolling.
           </li>
           <li>
-            <b>Engaging</b> - Feel like a natural app on the device, with an
-            immersive user experience.
+            <a href="#engaging"><b>Engaging</b></a> - Feel like a natural app
+            on the device, with an immersive user experience.
           </li>
         </ul>
         <p>
           This new level of quality allows Progressive Web Apps to earn a
           place on the user's home screen.
         </p>
-      image_path: images/pwa-intro.png
+      youtube_id: m-sCdS0sQO8
+      # image_path: images/pwa-intro.png
 
-  - classname: devsite-landing-row-50 devsite-landing-row-no-image-background devsite-landing-row-grey devsite-landing-row-colored
+
+  - classname: devsite-landing-row-50 devsite-landing-row-no-image-background
+    background: grey
     items:
     - heading: Reliable
       description: >
@@ -79,7 +83,8 @@ landing_page:
         path: /web/fundamentals/performance/
         classname: button button-white
 
-  - classname: devsite-landing-row-50 devsite-landing-row-no-image-background devsite-landing-row-grey devsite-landing-row-colored
+  - classname: devsite-landing-row-50 devsite-landing-row-no-image-background
+    background: grey
     items:
     - heading: Engaging
       description: >
@@ -150,7 +155,8 @@ landing_page:
           </ul>
 
 
-  - classname: devsite-landing-row-67 devsite-landing-row-no-image-background devsite-landing-row-grey devsite-landing-row-colored
+  - classname: devsite-landing-row-50 devsite-landing-row-no-image-background
+    background: grey
     items:
     - heading: Lighthouse
       description: >

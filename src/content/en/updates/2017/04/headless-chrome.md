@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2017-05-01 #}
+{# wf_updated_on: 2017-06-22 #}
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
@@ -22,7 +22,8 @@ figure {
 ### TL;DR {: #tldr .hide-from-toc}
 
 [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
-is shipping in Chrome 59. It's a way to run the Chrome browser in a headless environment. Essentially, running
+is shipping in Chrome 59. It's a way to run the Chrome browser in a headless environment.
+Essentially, running
 Chrome without chrome! It brings **all modern web platform features** provided
 by Chromium and the Blink rendering engine to the command line.
 
@@ -33,8 +34,9 @@ don't need a visible UI shell. For example, you may want to run some tests again
 a real web page, create a PDF of it, or just inspect how the browser renders an URL.
 
 Caution: Headless mode is available on Mac and Linux in **Chrome 59**.
-[Windows support](https://bugs.chromium.org/p/chromium/issues/detail?id=686608) is coming soon! To
-check what version of Chrome you have, open `chrome://version`.
+[Windows support](https://bugs.chromium.org/p/chromium/issues/detail?id=686608)
+is coming in Chrome 60. To check what version of Chrome you have, open
+`chrome://version`.
 
 ## Starting Headless (CLI) {: #cli }
 
@@ -96,9 +98,21 @@ To capture a screenshot of a page, use the `--screenshot` flag:
 Running with `--screenshot` will produce a file named `screenshot.png` in the
 current working directory. If you're looking for full page screenshots, things
 are a tad more involved. There's a great blog
-post from David Schnurr that has you covered. Check out [Using headless Chrome as an automated screenshot tool
+post from David Schnurr that has you covered. Check out
+[Using headless Chrome as an automated screenshot tool
 ](https://medium.com/@dschnr/using-headless-chrome-as-an-automated-screenshot-tool-4b07dffba79a).
 
+### REPL mode (read-eval-print loop) {: #repl }
+
+The `--repl` flag runs Headless in a mode where you can evaluate JS expressions
+in the browser, right from the command line:
+
+    $ chrome --headless --disable-gpu --repl https://www.chromestatus.com/
+    [0608/112805.245285:INFO:headless_shell.cc(278)] Type a Javascript expression to evaluate or "quit" to exit.
+    >>> location.href
+    {"result":{"type":"string","value":"https://www.chromestatus.com/features"}}
+    >>> quit
+    $
 
 ## Debugging Chrome without a browser UI? {: #frontend }
 
@@ -113,7 +127,7 @@ in another browser to check that everything is working. You'll see a list of
 inspectable pages where you can click through and see what Headless is rendering:
 
 <figure>
-  <img src="/web/updates/images/2017/04/headless-chrome/remote-debugging-ui.png"
+  <img src="/web/updates/images/2017/04/headless-chrome/remote-debugging-ui.jpg"
        class="screenshot" alt="DevTools Remote ">
   <figcaption>DevTools remote debugging UI</figcaption>
 </figure>
@@ -127,18 +141,19 @@ commands going across the wire, communicating with the browser.
 
 ### Launching Chrome {: #nodelaunch }
 
-In the previous section, we [started Chrome manually](#cli) using `--headless --remote-debugging-port=9222`. However, to fully automate tests, you'll probably
+In the previous section, we [started Chrome manually](#cli) using
+`--headless --remote-debugging-port=9222`. However, to fully automate tests, you'll probably
 want to spawn Chrome _from_ your application.
 
 One way is to use `child_process`:
 
 ```javascript
-const exec = require('child_process').exec;
+const execFile = require('child_process').execFile;
 
 function launchHeadlessChrome(url, callback) {
   // Assuming MacOSx.
   const CHROME = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome';
-  exec(`${CHROME} --headless --disable-gpu --remote-debugging-port=9222 ${url}`, callback);
+  execFile(CHROME, ['--headless', '--disable-gpu', '--remote-debugging-port=9222', url], callback);
 }
 
 launchHeadlessChrome('https://www.chromestatus.com', (err, stdout, stderr) => {
@@ -149,57 +164,54 @@ launchHeadlessChrome('https://www.chromestatus.com', (err, stdout, stderr) => {
 But things get tricky if you want a portable solution that works across multiple
 platforms. Just look at that hard-coded path to Chrome :(
 
-#### Using Lighthouse's ChromeLauncher {: #nodechromelauncher }
+#### Using ChromeLauncher {: #nodechromelauncher }
 
 [Lighthouse](/web/tools/lighthouse/) is a marvelous
-tool for testing the quality of your web apps. One thing people don't realize
-is that it ships with some really nice helper modules for working with Chrome.
-One of those modules is `ChromeLauncher`. `ChromeLauncher` will find where
+tool for testing the quality of your web apps. A robust module for launching
+Chrome was developed within Lighthouse and is now extracted for standalone use.
+The [`chrome-launcher` NPM module](https://www.npmjs.com/package/chrome-launcher)
+will find where
 Chrome is installed, set up a debug instance, launch the browser, and kill it
 when your program is done. Best part is that it works cross-platform thanks to
 Node!
 
-Note: The Lighthouse team is exploring a standalone package for `ChromeLauncher` with
-an improved API. Let us know if you have [feedback](https://github.com/GoogleChrome/lighthouse/issues/2092).
-
-By default, **`ChromeLauncher` will try to launch Chrome Canary** (if it's
+By default, **`chrome-launcher` will try to launch Chrome Canary** (if it's
 installed), but you can change that to manually select which Chrome to use. To
-use it, first install Lighthouse from npm:
+use it, first install from npm:
 
-    yarn add lighthouse
+    yarn add chrome-launcher
 
-**Example** - using `ChromeLauncher` to launch Headless
+**Example** - using `chrome-launcher` to launch Headless
 
 ```javascript
-const {ChromeLauncher} = require('lighthouse/lighthouse-cli/chrome-launcher');
+const chromeLauncher = require('chrome-launcher');
+
+// Optional: set logging level of launcher to see its output.
+// Install it using: yarn add lighthouse-logger
+// const log = require('lighthouse-logger');
+// log.setLevel('info');
 
 /**
- * Launches a debugging instance of Chrome on port 9222.
- * @param {boolean=} headless True (default) to launch Chrome in headless mode.
- *     Set to false to launch Chrome normally.
+ * Launches a debugging instance of Chrome.
+ * @param {boolean=} headless True (default) launches Chrome in headless mode.
+ *     False launches a full version of Chrome.
  * @return {Promise<ChromeLauncher>}
  */
-function launchChrome(headless = true) {
-  const launcher = new ChromeLauncher({
-    port: 9222,
-    autoSelectChrome: true, // False to manually select which Chrome install.
-    additionalFlags: [
+function launchChrome(headless=true) {
+  return chromeLauncher.launch({
+    // port: 9222, // Uncomment to force a specific port of your choice.
+    chromeFlags: [
       '--window-size=412,732',
       '--disable-gpu',
       headless ? '--headless' : ''
     ]
   });
-
-  return launcher.run().then(() => launcher)
-    .catch(err => {
-      return launcher.kill().then(() => { // Kill Chrome if there's an error.
-        throw err;
-      }, console.error);
-    });
 }
 
-launchChrome(true).then(launcher => {
+launchChrome().then(chrome => {
+  console.log(`Chrome debuggable on port: ${chrome.port}`);
   ...
+  // chrome.kill();
 });
 ```
 
@@ -217,8 +229,9 @@ is a great Node package that provides usable APIs for the
 Chrome, navigate to pages, and fetch information about those pages.
 
 Warning: The DevTools protocol can do a ton of interesting stuff, but it can be a bit
-daunting at first. I recommend spending a bit of time browsing the [DevTools Protocol Viewer][dtviewer], first. Then, move on to the `chrome-remote-interface` API docs to
-see how it wraps the raw protocol.
+daunting at first. I recommend spending a bit of time browsing the
+[DevTools Protocol Viewer][dtviewer], first. Then, move on to the
+`chrome-remote-interface` API docs to see how it wraps the raw protocol.
 
 Let's install the library:
 
@@ -229,8 +242,13 @@ Let's install the library:
 **Example** - print the user agent
 
 ```javascript
-launchChrome().then(launcher => {
-  chrome.Version().then(version => console.log(version['User-Agent']));
+const CDP = require('chrome-remote-interface');
+
+...
+
+launchChrome().then(async chrome => {
+  const version = await CDP.Version({port: chrome.port});
+  console.log(version['User-Agent']));
 });
 ```
 
@@ -239,89 +257,72 @@ Results in something like: `HeadlessChrome/60.0.3082.0`
 **Example** - check if the site has a [web app manifest](/web/fundamentals/engage-and-retain/web-app-manifest/)
 
 ```javascript
-const chrome = require('chrome-remote-interface');
+const CDP = require('chrome-remote-interface');
 
-function onPageLoad(Page) {
-  return Page.getAppManifest().then(response => {
-    if (!response.url) {
-      console.log('Site has no app manifest');
-      return;
-    }
-    console.log('Manifest: ' + response.url);
-    console.log(response.data);
-  });
-}
+...
 
-launchChrome().then(launcher => {
+(async function() {
 
-  chrome(protocol => {
-    // Extract the parts of the DevTools protocol we need for the task.
-    // See API docs: https://chromedevtools.github.io/devtools-protocol/
-    const {Page} = protocol;
+const chrome = await launchChrome();
+const protocol = await CDP({port: chrome.port});
 
-    // First, enable the Page domain we're going to use.
-     Page.enable().then(() => {
-      Page.navigate({url: 'https://www.chromestatus.com/'});
+// Extract the DevTools protocol domains we need and enable them.
+// See API docs: https://chromedevtools.github.io/devtools-protocol/
+const {Page} = protocol;
+await Page.enable();
 
-      // Wait for window.onload before doing stuff.
-      Page.loadEventFired(() => {
-        onPageLoad(Page).then(() => {
-          protocol.close();
-          launcher.kill(); // Kill Chrome.
-        });
-      });
-    });
+Page.navigate({url: 'https://www.chromestatus.com/'});
 
-  }).on('error', err => {
-    throw Error('Cannot connect to Chrome:' + err);
-  });
+// Wait for window.onload before doing stuff.
+Page.loadEventFired(async () => {
+  const manifest = await Page.getAppManifest();
 
+  if (manifest.url) {
+    console.log('Manifest: ' + manifest.url);
+    console.log(manifest.data);
+  } else {
+    console.log('Site has no app manifest');
+  }
+
+  protocol.close();
+  chrome.kill(); // Kill Chrome.
 });
+
+})();
 ```
 
 **Example** - extract the `<title>` of the page using DOM APIs.
 
 ```javascript
-const chrome = require('chrome-remote-interface');
+const CDP = require('chrome-remote-interface');
 
-function onPageLoad(Runtime) {
+...
+
+(async function() {
+
+const chrome = await launchChrome();
+const protocol = await CDP({port: chrome.port});
+
+// Extract the DevTools protocol domains we need and enable them.
+// See API docs: https://chromedevtools.github.io/devtools-protocol/
+const {Page, Runtime} = protocol;
+await Promise.all([Page.enable(), Runtime.enable()]);
+
+Page.navigate({url: 'https://www.chromestatus.com/'});
+
+// Wait for window.onload before doing stuff.
+Page.loadEventFired(async () => {
   const js = "document.querySelector('title').textContent";
-
   // Evaluate the JS expression in the page.
-  return Runtime.evaluate({expression: js}).then(result => {
-    console.log('Title of page: ' + result.result.value);
-  });
-}
+  const result = await Runtime.evaluate({expression: js});
 
-launchChrome().then(launcher => {
+  console.log('Title of page: ' + result.result.value);
 
-  chrome(protocol => {
-    // Extract the parts of the DevTools protocol we need for the task.
-    // See API docs: https://chromedevtools.github.io/devtools-protocol/
-    const {Page, Runtime} = protocol;
-
-    // First, need to enable the domains we're going to use.
-    Promise.all([
-      Page.enable(),
-      Runtime.enable()
-    ]).then(() => {
-      Page.navigate({url: 'https://www.chromestatus.com/'});
-
-      // Wait for window.onload before doing stuff.
-      Page.loadEventFired(() => {
-        onPageLoad(Runtime).then(() => {
-          protocol.close();
-          launcher.kill(); // Kill Chrome.
-        });
-      });
-
-    });
-
-  }).on('error', err => {
-    throw Error('Cannot connect to Chrome:' + err);
-  });
-
+  protocol.close();
+  chrome.kill(); // Kill Chrome.
 });
+
+})();
 ```
 
 ## Further resources
@@ -334,19 +335,24 @@ Docs
 
 Tools
 
-* [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface) - node module that wraps the DevTools protocol
-* [Lighthouse](https://github.com/GoogleChrome/lighthouse) - automated tool for testing the quality of web apps
+* [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface) - node
+module that wraps the DevTools protocol
+* [Lighthouse](https://github.com/GoogleChrome/lighthouse) - automated tool for testing
+web app quality; makes heavy use of the protocol
+* [chrome-launcher](https://github.com/GoogleChrome/lighthouse/tree/master/chrome-launcher) -
+node module for launching Chrome, ready for automation
 
 Demos
 
-* "[The Headless Web](https://paul.kinlan.me/the-headless-web/)"  - Paul Kinlan's great blog post on using Headless with api.ai.
+* "[The Headless Web](https://paul.kinlan.me/the-headless-web/)"  - Paul Kinlan's great blog
+post on using Headless with api.ai.
 
 ## FAQ
 
 **Do I need the `--disable-gpu` flag?**
 
-Yes, for now.  The `--disable-gpu` flag is a temporary requirement to work around a few bugs. You won't need this
-flag in future versions of Chrome. See [https://crbug.com/546953#c152](https://bugs.chromium.org/p/chromium/issues/detail?id=546953#c152) and [https://crbug.com/695212](https://bugs.chromium.org/p/chromium/issues/detail?id=695212) for more information.
+Yes, for now.  The `--disable-gpu` flag is a temporary requirement to work around a few bugs.
+You won't need this flag in future versions of Chrome. See [https://crbug.com/546953#c152](https://bugs.chromium.org/p/chromium/issues/detail?id=546953#c152) and [https://crbug.com/695212](https://bugs.chromium.org/p/chromium/issues/detail?id=695212) for more information.
 
 **So I still need Xvfb?**
 
@@ -360,7 +366,7 @@ Many people use Xvfb to run earlier versions of Chrome to do "headless" testing.
 **How do I create a Docker container that runs Headless Chrome?**
 
 Check out [lighthouse-ci](https://github.com/ebidel/lighthouse-ci). It has an
-[example Dockerfile](https://github.com/ebidel/lighthouse-ci/blob/master/builder/Dockerfile)
+[example Dockerfile](https://github.com/ebidel/lighthouse-ci/blob/master/builder/Dockerfile.headless)
 that uses Ubuntu as a base image, and installs + runs Lighthouse in an App Engine
 Flexible container.
 
@@ -370,7 +376,8 @@ Right now, Selenium opens a full instance of Chrome. In other words, it's an
 automated solution but not completely headless. However, Selenium could use
 `--headless` in the future.
 
-If you want to bleed on the edge, I recommend [Running Selenium with Headless Chrome](https://intoli.com/blog/running-selenium-with-headless-chrome/) to set things up
+If you want to bleed on the edge, I recommend [Running Selenium with
+Headless Chrome](https://intoli.com/blog/running-selenium-with-headless-chrome/) to set things up
 yourself.
 
 Note: you may encounter bugs using [ChromeDriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver).

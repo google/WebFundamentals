@@ -41,8 +41,8 @@ Scopri i modi più semplici per aggiungere video al tuo sito e offrire agli uten
 Aggiungi elementi video per caricare, decodificare e riprodurre i video sul tuo sito.
 
 <video controls>
-     <source src="video/chrome.webm" type="video/webm">
-     <source src="video/chrome.mp4" type="video/mp4">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
      <p>Il browser in uso non supporta l'elemento video.</p>
 </video>
 
@@ -83,8 +83,8 @@ Controlla anche le intestazioni della risposta usando gli strumenti di sviluppo 
 Risparmia larghezza di banda e ottimizza la reattività del sito usando l'API Media Fragments per l'aggiunta di un tempo di inizio e fine all'elemento video.
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm">
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
      <p>Il browser in uso non supporta l'elemento video.</p>
 </video>
 
@@ -341,8 +341,8 @@ Inoltre, è possibile utilizzare la pseudo classe `:fullscreen` CSS per la modif
 Sui dispositivi che supportano l'API Fullscreen è possibile utilizzare immagini in miniatura come indicatori per i video:
 
 <video autoplay loop class="center">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
      <p>Il browser in uso non supporta l'elemento video.</p>
 </video>
 

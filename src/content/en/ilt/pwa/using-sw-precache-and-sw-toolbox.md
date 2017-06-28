@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-05-03T17:04:05Z #}
+{# wf_updated_on: 2017-06-14T20:49:00Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -21,7 +21,7 @@ Codelab:  [sw-precache and sw-toolbox](lab-sw-precache-and-sw-toolbox)
 
 
 
-In this text we'll cover `sw-precache` and `sw-toolbox`, two packages created by Google to automate the creation of service workers, and to make the creation of custom caching routes easier. We'll explore how to use `sw-precache` from the command line, how to build routes using `sw-toolbox,` and how to integrate both tools into a gulp-based workflow.
+In this text we'll cover `sw-precache` and `sw-toolbox`, two Node packages created by Google to automate the creation of service workers, and to make the creation of custom caching routes easier. We'll explore how to use `sw-precache` from the command line, how to build routes using `sw-toolbox,` and how to integrate both tools into a gulp-based workflow.
 
 <div id="routes"></div>
 
@@ -33,6 +33,12 @@ In this text we'll cover `sw-precache` and `sw-toolbox`, two packages created by
 
 `sw-toolbox` simplifies the process of intercepting network requests in the service worker and performing some caching strategy with the request/response.
 
+Before you can use `sw-toolbox`, you must first install the package in your project from the command line:
+
+```
+npm install sw-toolbox
+```
+
 To use `sw-toolbox` you define  *routes*  and include them in your service worker. Routes behave like `fetch` event listeners, but are a more convenient way of creating custom handlers for specific requests.
 
 Routes look like this:
@@ -42,6 +48,18 @@ toolbox.router.get(urlPattern, handler, options)
 ```
 
 A route intercepts requests that match the specified URL pattern and HTTP request method, and responds according to the rules defined in the request handler. The HTTP request method is called on `toolbox.router` (in the example above it's `get`) and can be any of the methods defined  [here](https://googlechrome.github.io/sw-toolbox/api.html#main). The `options` parameter lets us define a cache to use for that route, as well as a network timeout if the handler is the built-in `toolbox.networkFirst`. See the  [Tutorial: API](https://googlechrome.github.io/sw-toolbox/api.html#main) for more details.
+
+Routes can be added directly to an existing service worker, or written in a separate JavaScript file and imported into the service worker using the `importScripts` method. Before the routes can be used, the `sw-toolbox` Node script itself must also be imported into the service worker from the __node_modules__ folder. For example, you could include the following snippet at the bottom of your service worker to import both the `sw-toolbox` package and a JavaScript file containing your custom routes:
+
+importScripts("./node_modules/sw-toolbox/sw-toolbox.js","./js/toolbox-script.js");
+
+
+
+Note: Be sure to include the sw-toolbox package as the first argument in importScripts, so that your custom routes' dependencies exist in the service worker before being called.
+
+
+
+### Built-in Handlers
 
 `sw-toolbox` has five built-in handlers to cover the most common caching strategies (see the  [Tutorial: API](https://googlechrome.github.io/sw-toolbox/api.html#main) for the full list and the  [Caching strategies table](#strategies) below for a quick reference). For more information about caching strategies see the  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/).
 

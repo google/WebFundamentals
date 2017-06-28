@@ -1,6 +1,7 @@
 # ATTENTION - changes made to this file not in GitHub will be over written!
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
+title: Feedback
 landing_page:
   custom_css_path: styles/wf-feedback.css
 

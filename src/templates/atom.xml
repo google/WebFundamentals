@@ -24,7 +24,7 @@
     </content>
     {{#each tags}}<category term="{{this}}" label="{{this}}"/> {{/each}}
     <author>
-      <name>{{ feedAuthor }}</name>
+      <name>{{#if feedAuthor }}{{ feedAuthor }}{{else}}Google Developers{{/if}}</name>
     </author>
   </entry>
   {{/each}}

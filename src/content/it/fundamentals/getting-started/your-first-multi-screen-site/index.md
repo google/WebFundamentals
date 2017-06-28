@@ -7,11 +7,11 @@ description: È possibile accedere al Web con numerosi dispositivi che spaziano 
 
 # Il tuo primo sito per dispositivi multipli {: .page-title }
 
-Attenzione: Questo articolo non è aggiornato da tempo e potrebbe non corrispondere alla realtà. Piuttosto, dai un'occhiata al corso gratuito [Responsive Web Design](https://udacity.com/ud893){: .external } su Udacity.
+Attenzione: Questo articolo non è aggiornato da tempo e potrebbe non corrispondere alla realtà. Piuttosto, dai un'occhiata al corso gratuito [Responsive Web Design](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893){: .external } su Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-La creazione delle esperienze per dispositivi multipli non è un'operazione molto difficile. Seguendo questa guida creeremo la pagina di destinazione di un prodotto di esempio per il nostro<a href='https://www.udacity.com/course/cs256'>Corso di sviluppo Web per dispositivi mobili CS256</a> adattabile a tutti i tipi di dispositivo.
+La creazione delle esperienze per dispositivi multipli non è un'operazione molto difficile. Seguendo questa guida creeremo la pagina di destinazione di un prodotto di esempio per il nostro<a href='https://www.udacity.com/course/mobile-web-development--cs256'>Corso di sviluppo Web per dispositivi mobili CS256</a> adattabile a tutti i tipi di dispositivo.
 
 <img src="images/finaloutput-2x.jpg" alt="diversi dispositivi che visualizzano il progetto finale">
 

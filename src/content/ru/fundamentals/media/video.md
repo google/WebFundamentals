@@ -37,8 +37,8 @@ description: Узнайте, как легко и просто добавить 
 Добавьте элемент video для загрузки, декодирования и воспроизведения видео на вашем сайте:
 
 <video controls>
-     <source src="video/chrome.webm" type="video/webm">
-     <source src="video/chrome.mp4" type="video/mp4">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
      <p>Этот браузер не поддерживает элемент video.</p>
 </video>
 
@@ -79,8 +79,8 @@ description: Узнайте, как легко и просто добавить 
 Чтобы сохранить пропускную способность и сделать сайт более быстрым, используйте Media Fragments API для определения времени начала и окончания элемента video.
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm">
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
   <p>Этот браузер не поддерживает элемент video.</p>
 </video>
 
@@ -340,8 +340,8 @@ Safari для iPad воспроизводит видео как встроенн
 На устройствах, поддерживающих Fullscreen API, вы можете использовать значки для обозначения места под видео:
 
 <video autoplay loop class="center">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
   <p>Этот браузер не поддерживает элемент video.</p>
 </video>
 

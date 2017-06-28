@@ -6,7 +6,8 @@ book_path: /web/showcase/_book.yaml
 {# wf_featured_image: /web/showcase/2017/images/santa/featured.png #}
 {# wf_featured_snippet: Santa Tracker is a fun and educational experience for everyone-a holiday tradition here at Google. In 2016, we upgraded the Santa Tracker site to support offline via the Service Worker API. #}
 {# wf_tags: progressive-web-apps,polymer,serviceworker,casestudy #}
-
+{# wf_featured_date: 2017-04-18 #}
+{# wf_vertical: entertainment #}
 
 # Santa Tracker as a PWA {: .page-title }
 

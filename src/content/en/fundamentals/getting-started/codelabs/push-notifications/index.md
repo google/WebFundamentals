@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab you'll how to add push notifications to your web app.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-05-12T18:37:11Z #}
+{# wf_updated_on: 2017-05-16T20:50:03Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -89,7 +89,7 @@ Now visit your site in your web browser (by clicking on the highlighted Web Serv
 
 During development it's helpful to ensure your service worker is always up to date and has the latest changes.
 
-To set this up in Chrome, open DevTools (Right Click > Inspect) and go to the __Application__ panel, click the __Service Workers__ tab and check the __Update on Reload__ checkbox. When this checkbox enabled the service worker is forcibly updated every time the page reloads.
+To set this up in Chrome, open DevTools (Right Click > Inspect) and go to the __Application__ panel, click the __Service Workers__ tab and check the __Update on Reload__ checkbox. When this checkbox is enabled the service worker is forcibly updated every time the page reloads.
 
 ![6b698d7c7bbf1bc0.png](img/6b698d7c7bbf1bc0.png)
 
@@ -130,9 +130,9 @@ This code checks if service workers and push messaging is supported by the curre
 
 #### Try it out
 
-Check your changes by opening the URL __127.0.0.1:8887__ in the browser.
+Check your changes by refreshing the app in the browser.
 
-Open Chrome DevTools to check the console for `Service Worker is registered`, like so:
+Check the console in Chrome DevTools for `Service Worker is registered`, like so:
 
 ![de3ceca91043d278.png](img/de3ceca91043d278.png)
 
@@ -214,7 +214,7 @@ navigator.serviceWorker.register('sw.js')
 
 #### Try it out
 
-Open up your web app and you should see the ‘Enable Push Messaging' button is now enabled (you can click it) and you should see ‘User is NOT subscribed.' in the console.
+Refresh your web app and you should see the ‘Enable Push Messaging' button is now enabled (you can click it) and you should see ‘User is NOT subscribed.' in the console.
 
 ![15f6375617c11974.png](img/15f6375617c11974.png)
 
@@ -367,7 +367,7 @@ If you grant the permission you should see the console print "User is subscribed
 
 
 
-One thing that we haven't handled yet is what happens if the user blocks the permission request. This needs some unique consideration because if the user blocks the permission, our web app will not be able to re-show the permission prompt and will not be able to subscribe the user, so we need to at least disable a push button so the user knows it can't be used.
+One thing that we haven't handled yet is what happens if the user blocks the permission request. This needs some unique consideration because if the user blocks the permission, our web app will not be able to re-show the permission prompt and will not be able to subscribe the user, so we need to at least disable the push button so the user knows it can't be used.
 
 The obvious place for us to handle this scenario is in the `updateBtn()` function. All we need to do is check the `Notification.permission` value, like so:
 
@@ -440,7 +440,7 @@ self.addEventListener('push', ...... );
 
 Unless you've played with Web Workers before, `self` is probably new. `self` is referencing the service worker itself, so we are adding an event listener to our service worker.
 
-When a push message is received, our event listener will be fired, and we create a notification by calling `showNotification()` on our registration. `showNotification()` expects a `title` and we can given an `options` object. Here we are going to set a body message, icon and a badge  in the options (the badge is only used on Android at the time of writing).
+When a push message is received, our event listener will be fired, and we create a notification by calling `showNotification()` on our registration. `showNotification()` expects a `title` and we can give it an `options` object. Here we are going to set a body message, icon and a badge  in the options (the badge is only used on Android at the time of writing).
 
 ```
 const title = 'Push Codelab';
@@ -525,11 +525,11 @@ Try triggering a push message in DevTools again and click on the notification. Y
 
 
 
-We've seen that our web app is capable of showing a notification using DevTools and looked at how to close the notification of a click, the next step is to send an actual push message.
+We've seen that our web app is capable of showing a notification using DevTools and looked at how to close the notification of a click. The next step is to send an actual push message.
 
 Normally the process for this would be sending a subscription from a web page to a backend and the backend would then trigger a push message by making an API call to the endpoint in the subscription.
 
-This is out of scope for this codelab, but you can use the companion site ( [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) for this code lab to trigger an actual push message. Copy and paste the subscription at the bottom of your page:
+This is out of scope for this codelab, but you can use the companion site ( [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) for this codelab to trigger an actual push message. Copy and paste the subscription at the bottom of your page:
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
@@ -650,7 +650,7 @@ If you are looking to deploy push on your site, you may be interested in adding 
 
 ### Further Reading
 
-*  [Web Push Notification](/web/fundamentals/engage-and-retain/push-notifications/) documentation on Web__Fundamentals__
+*  [Web Push Notification](/web/fundamentals/engage-and-retain/push-notifications/) documentation on Web__Fundamentals__.
 *  [Web Push Libraries](https://github.com/web-push-libs/) - Web Push libraries including Node.js, PHP, Java and Python.
 
 #### Relevant blog posts

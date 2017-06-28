@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-24T18:23:09Z #}
+{# wf_updated_on: 2017-06-14T20:48:23Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -21,7 +21,7 @@ Codelab:  [Auditing with Lighthouse](lab-auditing-with-lighthouse)
 
 
 
-How do I tell if all of my Progressive Web App (PWA) features are in order?  [Lighthouse](https://github.com/GoogleChrome/lighthouse) is an open-source tool from Google that audits a web app for PWA features. It provides a set of metrics to help guide you in building a PWA with a full application-like experience for your users. 
+How do I tell if all of my Progressive Web App (PWA) features are in order?  [Lighthouse](/web/tools/lighthouse/) is an  [open-source](https://github.com/GoogleChrome/lighthouse) tool from Google that audits a web app for PWA features. It provides a set of metrics to help guide you in building a PWA with a full application-like experience for your users. 
 
 Lighthouse tests if your app:
 
@@ -30,7 +30,7 @@ Lighthouse tests if your app:
 * Is served from a secure origin
 * Uses certain accessibility best practices
 
-Lighthouse is available as a Chrome extension for Chrome 52 (and later) and a command line tool. 
+Lighthouse is available as a Chrome extension for Chrome 52 (and later) and a command line tool.
 
 <div id="extension"></div>
 
@@ -50,7 +50,7 @@ Run Lighthouse on your application by selecting the icon and choosing __Generate
 
 Lighthouse generates an HTML page with the results. An example page is shown below. 
 
-![Lighthouse report](img/76f48671607bf2b2.png)
+![Lighthouse report](img/73be590f426d2ad4.png)
 
 
 
@@ -72,7 +72,7 @@ You can download Node from  [nodejs.org](https://nodejs.org/en/) (select the ver
 
 
 
-Note: You need the --harmony <a href="http://stackoverflow.com/questions/13351965/what-does-node-harmony-do">flag</a> with Node v5+ or Node v4.
+Note: You need Node v6 or greater to run Lighthouse.
 
 
 

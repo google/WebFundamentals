@@ -825,7 +825,7 @@ ES6 还为我们提供了 [generator](http://wiki.ecmascript.org/doku.php?id=har
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }
 
-这跟之前的效用完全相同，但读起来容易多了。Chrome 和 Opera 当前支持该功能（查看[代码](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }），而且 Microsoft Edge 中也可使用该功能（需要在 `about:flags` 中打开 **Enable experimental Javascript features** 设置）。在即将发布的版本中，该功能默认启用。
+这跟之前的效用完全相同，但读起来容易多了。Chrome 和 Opera 当前支持该功能（查看[代码](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }），而且 Microsoft Edge 中也可使用该功能（需要在 `about:flags` 中打开 **Enable experimental JavaScript features** 设置）。在即将发布的版本中，该功能默认启用。
 
 
 它将纳入很多新的 ES6 元素：promise、generator、let、for-of。我们生成一个 promise 后，spawn 帮助程序将等待该 promise 来解析并返回一个终值。如果 promise 拒绝，spawn 会让 yield 语句抛出异常，我们可通过常规的 JavaScript try/catch 来捕获此异常。异步编码竟如此简单！

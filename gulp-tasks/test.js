@@ -27,12 +27,14 @@ const runSequence = require('run-sequence');
  *****************************************************************************/
 
 const MAX_DESCRIPTION_LENGTH = 485;
+const MAX_FILE_SIZE_WARN = 500;   // Max file size (in kB) before warning
+const MAX_FILE_SIZE_ERROR = 2500; // Max file size (in kB) before error
 const MD_FILES = ['.md', '.mdown', '.markdown'];
-const EXTENSIONS_TO_SKIP = [
-  '.css',
+const EXTENSIONS_TO_SKIP = ['.css', '.vtt', '.xml'];
+const MEDIA_FILES = [
   '.gif', '.ico', '.jpg', '.png', '.psd', '.svg',
-  '.mov', '.mp3', '.mp4', '.webm', '.vtt',
-  '.pdf', '.xml'
+  '.mov', '.mp3', '.mp4', '.webm',
+  '.pdf',
 ];
 const VALID_DATE_FORMATS = [
   'YYYY-MM-DD',
@@ -48,6 +50,18 @@ const RE_SRC_BASE = /src\/content\//;
 const RE_DATA_BASE = /src\/data\//;
 const COMMON_TAGS_FILE = 'src/data/commonTags.json';
 const CONTRIBUTORS_FILE = 'src/data/_contributors.yaml';
+const VALID_REGIONS = [
+  'africa', 'asia', 'europe', 'middle-east', 'north-america', 'south-america'
+];
+const VALID_VERTICALS = [
+  'education', 'entertainment', 'media', 'real-estate', 'retail',
+  'transportation', 'travel'
+];
+const IS_TRAVIS = process.env.TRAVIS === 'true';
+const IS_TRAVIS_PUSH = process.env.TRAVIS_EVENT_TYPE === 'push';
+const IS_TRAVIS_ON_MASTER = process.env.TRAVIS_BRANCH === 'master';
+const TRAVIS_BRANCH = process.env.TRAVIS_BRANCH;
+const TRAVIS_EVENT_TYPE = process.env.TRAVIS_EVENT_TYPE;
 
 let remarkLintOptions = {
   external: [
@@ -179,7 +193,7 @@ function printSummary() {
   gutil.log(' - with issues:', chalk.yellow(cFilesWithIssues));
   gutil.log('Errors  : ', chalk.red(allErrors.length));
   gutil.log('Warnings: ', chalk.yellow(allWarnings.length));
-  if (process.env.TRAVIS === 'true') {
+  if (IS_TRAVIS) {
     let result = {
       summary: {
         filesTested: filesTested,
@@ -308,7 +322,7 @@ function getFiles() {
   } else {
     gutil.log(' ', 'Searching for changed files');
     let cmd = 'git --no-pager diff --name-only ';
-    if (process.env.TRAVIS === 'true') {
+    if (IS_TRAVIS) {
       cmd += 'FETCH_HEAD $(git merge-base FETCH_HEAD master)';
     } else {
       cmd += '$(git merge-base master HEAD)';
@@ -457,6 +471,24 @@ function testMarkdown(filename, contents, options) {
       }
     }
 
+    // Validate featured square image path
+    matched = wfRegEx.RE_IMAGE_SQUARE.exec(contents);
+    if (matched) {
+      let imgPath = matched[1];
+      if (imgPath.indexOf('/web') === 0) {
+        imgPath = imgPath.replace('/web', '');
+      }
+      imgPath = './src/content/en' + imgPath;
+      try {
+        fs.accessSync(imgPath, fs.R_OK);
+      } catch (ex) {
+        position = {line: getLineNumber(contents, matched.index)};
+        msg = 'WF Tag `wf_featured_image_square` found, but couldn\'t find ';
+        msg += `image - ${matched[1]}`;
+        logError(filename, position, msg);
+      }
+    }
+
     // Check for uncommon tags
     matched = wfRegEx.RE_TAGS.exec(contents);
     if (matched && options.commonTags) {
@@ -468,6 +500,28 @@ function testMarkdown(filename, contents, options) {
           logWarning(filename, position, msg);
         }
       });
+    }
+
+    // Check for valid regions
+    matched = wfRegEx.RE_REGION.exec(contents);
+    if (matched) {
+      let region = matched[1];
+      if (VALID_REGIONS.indexOf(region) === -1) {
+        position = {line: getLineNumber(contents, matched.index)};
+        msg = 'Invalid `wf_region` (' + region + ') provided.';
+        logError(filename, position, msg);
+      }
+    }
+
+    // Check for valid verticals
+    matched = wfRegEx.RE_VERTICAL.exec(contents);
+    if (matched) {
+      let vertical = matched[1];
+      if (VALID_VERTICALS.indexOf(vertical) === -1) {
+        position = {line: getLineNumber(contents, matched.index)};
+        msg = 'Invalid `wf_vertical` (' + vertical + ') provided.';
+        logError(filename, position, msg);
+      }
     }
 
     // Check for a single level 1 heading with page title
@@ -549,6 +603,15 @@ function testMarkdown(filename, contents, options) {
         msg += `actual file: ${inclPath}`;
         logError(filename, position, msg);
       }
+    });
+
+    // Error on single line comments
+    matched = wfRegEx.getMatches(wfRegEx.RE_SINGLE_LINE_COMMENT, contents);
+    matched.forEach(function(match) {
+      position = {line: getLineNumber(contents, match.index)};
+      msg = 'Multi-line comment syntax used on single line comment.';
+      msg += ' Use single line syntax: `{# this is my comment #}`';
+      logError(filename, position, msg);
     });
 
     // Warn on unescaped template tags
@@ -727,7 +790,8 @@ function testHTML(filename, contents, options) {
  *   Note: The returned promise always resolves, it will never reject.
  *
  * @param {string} filename The name of the file to be tested.
- * @return {Array} An array of common tags.
+ * @param {string} contents The unparsed contents of the tags file. 
+ * @return {Promise} A promise with the result of the test.
  */
 function testCommonTags(filename, contents) {
   return new Promise(function(resolve, reject) {
@@ -747,7 +811,8 @@ function testCommonTags(filename, contents) {
  *   Note: The returned promise always resolves, it will never reject.
  *
  * @param {string} filename The name of the file to be tested.
- * @return {Object} An object with all of the contributors.
+ * @param {string} contents The unparsed contents of the contributors file. 
+ * @return {Promise} A promise with the result of the test.
  */
 function testContributors(filename, contents) {
   return new Promise(function(resolve, reject) {
@@ -777,19 +842,18 @@ function testContributors(filename, contents) {
  *   Note: The returned promise always resolves, it will never reject.
  *
  * @param {string} filename The name of the file to be tested.
- * @return {Object} An object with all of the contributors.
+ * @param {string} contents The unparsed contents of the redirects file. 
+ * @return {Promise} A promise with the result of the test.
  */
 function testRedirects(filename, contents) {
   return new Promise(function(resolve, reject) {
-    let msg;
     let parsed = parseYAML(filename, contents);
     let filepath = path.dirname(filename).split('/').splice(3).join('/');
-    filepath = path.join('/', 'web', filepath)
+    filepath = path.join('/', 'web', filepath, '/');
     if (parsed.redirects && parsed.redirects.length > 0) {
-      parsed.redirects.forEach( item => {
-        let redirectpath = path.dirname(item.from);
-        if (!redirectpath.startsWith(filepath)) {
-          msg = `Must only redirect from paths below "${filepath}"`;
+      parsed.redirects.forEach((item) => {
+        if (!item.from.startsWith(filepath)) {
+          let msg = `Must only redirect from paths below "${filepath}"`;
           logError(filename, null, msg);
         }
       });
@@ -824,6 +888,35 @@ function testFile(filename, opts) {
         gutil.log(chalk.gray('SKIP:'), chalk.cyan(filename), msg);
       }
       resolve(false);
+      return;
+    }
+
+    // Check media files & verify they're not too big
+    if (MEDIA_FILES.indexOf(filenameObj.ext) >= 0) {
+      let fsOK = true;
+      try {
+        // Read the file size and check if it exceeds the known limits
+        const stats = fs.statSync(filename);
+        const fileSize = Math.round(parseInt(stats.size, 10) / 1024);
+        if (fileSize > MAX_FILE_SIZE_ERROR) {
+          fsOK = false;
+          msg = `Exceeds maximum files size (${MAX_FILE_SIZE_ERROR}K)`;
+          // For builds of master on Travis, warn only, do not error.
+          if (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MASTER) {
+            logWarning(filename, null, `${msg} - was ${fileSize}K`);
+          } else {
+            logError(filename, null, `${msg} - was ${fileSize}K`);
+          }
+        } else if (fileSize > MAX_FILE_SIZE_WARN) {
+          fsOK = false;
+          msg = `Try to keep files below (${MAX_FILE_SIZE_WARN}K)`;
+          logWarning(filename, null, `${msg} - was ${fileSize}K`);
+        }
+      } catch (ex) {
+        fsOK = false;
+        logWarning(filename, null, `Unable to read file stats: ${ex.message}`);
+      }
+      resolve(fsOK);
       return;
     }
 
@@ -898,9 +991,7 @@ function testFile(filename, opts) {
  *****************************************************************************/
 
 gulp.task('test', function() {
-  const travisEventType = process.env.TRAVIS_EVENT_TYPE;
-  const travisBranch = process.env.TRAVIS_BRANCH;
-  if (travisEventType === 'push' && travisBranch === 'master') {
+  if (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MASTER) {
     GLOBAL.WF.options.testAll = true;
   }
   let opts = {

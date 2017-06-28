@@ -55,7 +55,7 @@ Usage in HTML:
 &lt;video controls <b>controlsList="nofullscreen nodownload noremote foobar"</b>>&lt;/video>
 </pre>
 
-Usage in Javascript:
+Usage in JavaScript:
 
     var video = document.querySelector('video');
     video.controls; // true

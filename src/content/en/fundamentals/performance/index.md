@@ -78,15 +78,15 @@ This codelab will help you learn to identify and fix web app performance bottlen
 
 ### Udacity Courses
 
-[Browser Rendering Optimization](https://udacity.com/ud860)<br>
+[Browser Rendering Optimization](https://www.udacity.com/course/browser-rendering-optimization--ud860)<br>
 Google performance guru Paul Lewis is here to help you destroy jank and create
 web apps that maintain 60 frames per second performance.
 
-[Critical Rendering Path](https://udacity.com/ud884)<br>
+[Critical Rendering Path](https://www.udacity.com/course/website-performance-optimization--ud884)<br>
 Learn about the Critical Rendering Path, or the set of steps browsers must take
 to convert HTML, CSS and JavaScript into living, breathing websites.
 
-[HTTP/1 to HTTP/2](https://udacity.com/ud897)<br>
+[HTTP/1 to HTTP/2](https://www.udacity.com/course/client-server-communication--ud897)<br>
 Surma starts with the basics of HTTP/1 and goes all the way to HTTP/2, how to
 load assets efficiently and also covers security aspects of these protocols. 
 <div style="clear:both;"></div>

@@ -59,11 +59,11 @@ description: このコードラボでは、プッシュ通知をウェブアプ�
 
 [リンク](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-Web Server for Chrome アプリをインストールしたら、ブックマーク バーの [Apps] ショートカットをクリックします。 
+Web Server for Chrome アプリをインストールしたら、ブックマーク バーの [Apps] ショートカットをクリックします。
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-次のウィンドウで、ウェブサーバー アイコンをクリックします。 
+次のウィンドウで、ウェブサーバー アイコンをクリックします。
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -83,7 +83,7 @@ Web Server for Chrome アプリをインストールしたら、ブックマー�
 
 ここで、ご利用のウェブブラウザで（ハイライト表示されたウェブサーバー URL をクリックして）サイトにアクセスすると、次のようなページが表示されます。
 
-![49b343a07e2c92d.png](img/49b343a07e2c92d.png)
+![4525ec369fc2ae47.png](img/4525ec369fc2ae47.png)
 
 ###  常に Service Worker をアップデートする
 
@@ -91,7 +91,7 @@ Web Server for Chrome アプリをインストールしたら、ブックマー�
 
 Chrome でこの設定を行うには、DevTools（右クリックして [Inspect]）を開いて [__Application__] パネルに移動し、[__Service Workers__] タブをクリックして [__Update on Reload__] チェックボックスをオンにします。このチェックボックスが有効になっている場合は、ページが再読み込みされるたびに Service Worker が強制的にアップデートされます。
 
-![d670cb813f3a7575.png](img/d670cb813f3a7575.png)
+![6b698d7c7bbf1bc0.png](img/6b698d7c7bbf1bc0.png)
 
 
 ##  Service Worker の登録
@@ -134,7 +134,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 
 Chrome DevTools を開き、コンソールに `Service Worker is registered` が表示されているか確認します。次のようになります。
 
-![d712c8726928ca4.png](img/d712c8726928ca4.png)
+![de3ceca91043d278.png](img/de3ceca91043d278.png)
 
 ###  アプリケーション サーバーキーの入手
 
@@ -216,7 +216,7 @@ navigator.serviceWorker.register('sw.js')
 
 ウェブアプリを開くと、[Enable Push Messaging] ボタンが有効（クリックできる）になっており、コンソールに「User is NOT subscribed」が表示されています。
 
-![b9787463acb7e3fb.png](img/b9787463acb7e3fb.png)
+![15f6375617c11974.png](img/15f6375617c11974.png)
 
 コードラボの残りの部分に進んでいくと、ユーザーが登録や登録解除を行った場合にボタンのテキストが変わるようになります。
 
@@ -355,11 +355,11 @@ function updateSubscriptionOnServer(subscription) {
 
 ウェブアプリに戻ってボタンをクリックすると、次のようなパーミッション プロンプトが表示されます。
 
-![5b8a7e9905f2237b.png](img/5b8a7e9905f2237b.png)
+![227cea0abe03a5b4.png](img/227cea0abe03a5b4.png)
 
 パーミッションを付与すると、コンソールに `User is subscribed:` と `PushSubscription` の出力が表示され、ボタンのテキストが [Disable Push Messaging] に変わり、ページの下部で JSON 形式の登録を確認できるようになります。
 
-![bfdc9f92e001934a.png](img/bfdc9f92e001934a.png)
+![8fe2b1b110f87b34.png](img/8fe2b1b110f87b34.png)
 
 
 ##  拒否されたパーミッションの処理
@@ -396,11 +396,11 @@ function updateBtn() {
 
 前のステップでウェブアプリのパーミッションを付与したので、URL バーにある円の「i」をクリックして通知パーミッションを [Use global default (Ask)] に変更する必要があります。
 
-![c69f7428408c5bbc.png](img/c69f7428408c5bbc.png)
+![8775071d7fd66432.png](img/8775071d7fd66432.png)
 
 この設定を変更したら、ページを更新して [Enable Push Messaging] ボタンをクリックし、パーミッション ダイアログで今回は [Block] を選択します。ボタンのテキストが [Push Messaging Blocked] に変わり、無効になります。
 
-![e36f921fa7598419.png](img/e36f921fa7598419.png)
+![2b5314607196f4e1.png](img/2b5314607196f4e1.png)
 
 この変更により、ユーザーを登録できるようになり、可能性のあるパーミッション シナリオに対処できます。
 
@@ -469,7 +469,7 @@ Service Worker でプッシュ イベントを使用して、メッセージを�
 
 ウェブアプリでプッシュ メッセージを登録し、コンソールに [User IS subscribed] が表示されることを確認してから DevTools の [Application] パネルに移動し、[Service Workers] タブの Service Worker の下の [Push] リンクをクリックします。
 
-![c0fab1022906d01f.png](img/c0fab1022906d01f.png)
+![2b089bdf10a8a945.png](img/2b089bdf10a8a945.png)
 
 クリックすると、次のような通知が表示されます。
 
@@ -531,19 +531,19 @@ DevTools を使用してウェブアプリで通知を表示できることを�
 
 これはこのコードラボの範囲外ですが、このコードラボのコンパニオン サイト（[https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)）を使用して実際のプッシュ メッセージをトリガーできます。ページの下部の登録をコピーして貼り付けます。
 
-![cb84e05044ad029f.png](img/cb84e05044ad029f.png)
+![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
 次にコンパニオン サイトの [Subscription to Send To] テキスト領域にこれを貼り付けます。
 
-![e320ddd1b66682e6.png](img/e320ddd1b66682e6.png)
+![a12fbfdc08233592.png](img/a12fbfdc08233592.png)
 
 次に [Text to Send] にプッシュ メッセージで送信する文字列を入力し、最後に [Send Push Message] ボタンをクリックします。
 
-![3c5c0d5d1c3deda4.png](img/3c5c0d5d1c3deda4.png)
+![2973c2b818ca9324.png](img/2973c2b818ca9324.png)
 
 そうするとプッシュ メッセージを受信し、入力したテキストがコンソールに出力されます。
 
-![fdedaa6d10e2f43e.png](img/fdedaa6d10e2f43e.png)
+![75b1fedbfb7e0b99.png](img/75b1fedbfb7e0b99.png)
 
 これにより、データの送受信をテストして、結果として通知を操作できます。
 
@@ -634,7 +634,7 @@ swRegistration.pushManager.getSubscription()
 
 ウェブアプリで [Enable Push Messaging] または [Disable Push Messaging] を押すことができ、ログにユーザーが登録されていることや登録が解除されていることが表示されます。
 
-![32acb7ec17ef75a8.png](img/32acb7ec17ef75a8.png)
+![33dd89c437c17c97.png](img/33dd89c437c17c97.png)
 
 
 ##  完了
@@ -644,7 +644,7 @@ swRegistration.pushManager.getSubscription()
 
 これでこのコードラボは完了です。
 
-このコードラボでは、プッシュをウェブアプリに追加して使用できるようにする方法を説明しました。ウェブ通知で実行できる内容の詳細については、[これらのドキュメントをご覧ください](/web/fundamentals/engage-and-retain/push-notifications/)。 
+このコードラボでは、プッシュをウェブアプリに追加して使用できるようにする方法を説明しました。ウェブ通知で実行できる内容の詳細については、[これらのドキュメントをご覧ください](/web/fundamentals/engage-and-retain/push-notifications/)。
 
 サイトにプッシュをデプロイする場合は、GCM を使用する古い標準に準拠していないブラウザのサポートを追加する必要がある場合があります。[詳細については、こちらをご覧ください](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/)。
 

@@ -102,7 +102,7 @@ Web Starter Kit は、すべてのプレフィックスを自動で付与しま�
       margin: 0 auto;
     }
 
-####  Javascript を確認する
+####  JavaScript を確認する
 
 JSHint は JavaScript のコードをスキャンして、JavaScript のロジックで発生し得る問題をチェックし、[コーディングのベスト プラクティスの適用](//www.jshint.com/docs/){: .external }を行うツールです。
 
@@ -134,7 +134,7 @@ Sass に馴染みがない方は、「CSS の拡張言語」だと考えてく�
 まず、ビルドでプロジェクト内の Sass がコンパイルされます。Sass がコンパイルされた後、すべての CSS にAutoprefixer が適用されます。
 
 
-####  Javascript の問題を確認する
+####  JavaScript の問題を確認する
 
 第 2 のビルド ステップは、JavaScript で JSHint を実行することです。
 

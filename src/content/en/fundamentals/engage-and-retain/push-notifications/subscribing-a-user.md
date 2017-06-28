@@ -299,7 +299,7 @@ The `keys` object contains the values used to encrypt message data sent with a p
 ## Send a Subscription to Your Server
 
 Once you have a push subscription you'll want to send it to your server. It's up to you how you
-do that but a tiny tip is to use `JSON.strinigify()` to get all the necessary data out of the
+do that but a tiny tip is to use `JSON.stringify()` to get all the necessary data out of the
 subscription object.  Alternatively you can piece together the same
 result manually like so:
 

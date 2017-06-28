@@ -1,23 +1,23 @@
 # ATTENTION - changes made to this file not in GitHub will be over written!
 footer:
 - promos:
-  - title: Chromium Blog
+  - label: Chromium Blog
     description: The latest news on the Chromium blog
     icon: https://www.gstatic.com/images/icons/material/product/2x/chrome_chromium_64dp.png
     path: https://blog.chromium.org
-  - title: GitHub
+  - label: GitHub
     description: Fork our API code samples and other open-source projects.
     path: https://github.com/googlechrome
     icon: /site-assets/logo-github.svg
-  - title: Twitter
+  - label: Twitter
     description: Connect with @ChromiumDev on Twitter
     icon: /site-assets/logo-twitter.svg
     path: https://twitter.com/chromiumdev
-  - title: Videos
+  - label: Videos
     description: Check out the Web Developer Relations team's videos
     icon: https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png
     path: /web/shows/
-  - title: Events
+  - label: Events
     description: Attend a developer event and get hacking
     icon_name: event
     path: /web/events/

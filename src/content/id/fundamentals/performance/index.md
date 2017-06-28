@@ -78,15 +78,15 @@ Codelab ini akan membantu Anda belajar mengidentifikasi dan memperbaiki bottlene
 
 ### Kursus Udacity
 
-[Optimalisasi Rendering Browser](https://udacity.com/ud860)<br>
+[Optimalisasi Rendering Browser](https://www.udacity.com/course/browser-rendering-optimization--ud860)<br>
 Guru kinerja Google, Paul Lewis ada di sini untuk membantu Anda memusnahkan jank dan menciptakan
 aplikasi web yang mempertahankan kinerja 60 bingkai per detik.
 
-[Jalur Rendering Penting](https://udacity.com/ud884)<br>
+[Jalur Rendering Penting](https://www.udacity.com/course/website-performance-optimization--ud884)<br>
 Pelajari tentang Jalur Rendering Penting, atau setel langkah-langkah yang harus diambil browser
 untuk mengonversi HTML, CSS, dan JavaScript ke dalam situs web yang hidup dan bernapas.
 
-[HTTP/1 hingga HTTP/2](https://udacity.com/ud897)<br>
+[HTTP/1 hingga HTTP/2](https://www.udacity.com/course/client-server-communication--ud897)<br>
 Surma dimulai dengan dasar-dasar HTTP/1 sampai ke HTTP/2, cara
 memuat aset secara efisien dan juga mencakup aspek-aspek keamanan protokol ini. 
 <div style="clear:both;"></div>

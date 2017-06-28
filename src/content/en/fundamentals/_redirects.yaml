@@ -186,6 +186,9 @@ redirects:
 - from: /web/fundamentals/getting-started/primers/
   to: /web/fundamentals/getting-started/
 
+- from: /web/fundamentals/getting-started/primers/media-source-extensions
+  to: /web/fundamentals/media/mse/basics
+
 - from: /web/fundamentals/getting-started/primers/payment-request/
   to: /web/fundamentals/discovery-and-monetization/payment-request/
 

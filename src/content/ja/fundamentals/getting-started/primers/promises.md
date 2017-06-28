@@ -825,7 +825,7 @@ ES6 では [Generator](http://wiki.ecmascript.org/doku.php?id=harmony:generators
 
 [サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }
 
-これは前のコードとまったく同じに機能しますが、はるかに読みやすくなりました。これは現在 Chrome と Opera で機能します（[コード](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }を参照）。また、Microsoft Edge でも `about:flags` にアクセスし、[**Enable experimental Javascript features**] 設定を有効にすることで機能するようになります。今後のバージョンでは、これは既定で有効になります。
+これは前のコードとまったく同じに機能しますが、はるかに読みやすくなりました。これは現在 Chrome と Opera で機能します（[コード](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }を参照）。また、Microsoft Edge でも `about:flags` にアクセスし、[**Enable experimental JavaScript features**] 設定を有効にすることで機能するようになります。今後のバージョンでは、これは既定で有効になります。
 
 
 このコードでは、Promise、Generator、let、for-of など、数多くの ES6 の新機能が使用されています。Promise を生成すると、spawn ヘルパーは Promise が解決されて最終値を返すまで待機します。Promise が棄却された場合、spawn により yield 文が例外をスローします。この例外は、通常の JavaScript の try と catch で取得できます。非同期コーディングが驚くほど単純になりました。

@@ -41,8 +41,8 @@ description: 瞭解如何以最簡便的方式為您的網站新增影片，並�
 新增 video 元素，以便在您的網站上載入、解碼以及播放影片：
 
 <video controls>
-     <source src="video/chrome.webm" type="video/webm">
-     <source src="video/chrome.mp4" type="video/mp4">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+     <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
      <p>這個瀏覽器不支援影片元素。</p>
 </video>
 
@@ -83,8 +83,8 @@ description: 瞭解如何以最簡便的方式為您的網站新增影片，並�
 節省頻寬並提高網站的回應靈敏度：使用 Media Fragments API 為 video 元素新增開始和結束時間。
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm">
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
   <p>這個瀏覽器不支援影片元素。</p>
 </video>
 
@@ -383,8 +383,8 @@ iPad 版 Safari 以內嵌模式播放影片：
 在支援 Fullscreen API 的裝置中，請考慮使用縮圖做為影片預留位置：
 
 <video autoplay loop class="center">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
      <p>這個瀏覽器不支援影片元素。</p>
 </video>
 

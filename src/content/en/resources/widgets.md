@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: Widgets you can use to simplify your writing and development
 
-{# wf_updated_on: 2017-03-21 #}
+{# wf_updated_on: 2017-05-21 #}
 {# wf_published_on: 2016-09-13 #}
 
 # Widgets {: .page-title }
@@ -26,7 +26,7 @@ standard reference link markdown syntax:
 Be sure to add links sorted alphabetically by id, check to ensure the link
 you're adding doesn't already exist yet.
 
-Next, include the [`_common-links.md`][common-links] file in your document. 
+Next, include the [`_common-links.md`][common-links] file in your document.
 
     <<../_common-links.md>>
 
@@ -105,6 +105,11 @@ $(document).ready(function() {
 </script>
 {% endhtmlescape %}&#123;% endframebox %}</pre>
 
+Supported parameters for framebox:
+
+* `height`: Sets the height of the framebox
+* `class`: Adds a class to the framebox’ `iframe`
+
 ## Including code from the local project (`includecode`)
 
 Use `includecode` with a `content_path` argument to refer to a path to
@@ -118,7 +123,7 @@ also checks for the file in the en locale before failing.
 &lt;/pre>
 </pre>
 
-Includes can be limited by using `region_tag="region"` and including a 
+Includes can be limited by using `region_tag="region"` and including a
 `[START region]` and `[END region]` within the code file.
 
 By default `includecode` returns the specified section of the source code,
@@ -173,9 +178,9 @@ environment, and will only be visible when the page is published on DevSite.
   </iframe>
 </div>
 
-Wrap all YouTube videos in `<div class="video-wrapper">` or 
+Wrap all YouTube videos in `<div class="video-wrapper">` or
 `<div class="video-wrapper-full-width">`. `class="video-wrapper"`
-automatically floats the video right on larger screens, keeping it at 50% of 
+automatically floats the video right on larger screens, keeping it at 50% of
 the column width but forcing the video into vertical layout on smaller screens,
 with the video at 100% of the column width. As the video's size changes, it
 automatically maintains a 16:9 ratio. `class="video-wrapper-full-width"` keeps

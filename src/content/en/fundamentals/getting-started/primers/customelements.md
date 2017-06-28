@@ -867,7 +867,7 @@ If you happen to be interested in the old v0 spec, check out the [html5rocks art
 
 ### Browser support
 
-Chrome 54 ([status](https://www.chromestatus.com/features/4696261944934400)) has Custom Elements v1. Safari has [begun prototyping](https://bugs.webkit.org/show_bug.cgi?id=150225) and you can test the API in WebKit nightly. Edge has [begun prototyping](https://twitter.com/AaronGustafson/status/717028669948977153). Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=889230) to implement.
+Chrome 54 ([status](https://www.chromestatus.com/features/4696261944934400)) and Safari 10.1 ([status](https://webkit.org/status/#feature-custom-elements)) have Custom Elements v1. Edge has [begun prototyping](https://twitter.com/AaronGustafson/status/717028669948977153). Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=889230) to implement.
 
 To feature detect custom elements, check for the existence of `window.customElements`:
 

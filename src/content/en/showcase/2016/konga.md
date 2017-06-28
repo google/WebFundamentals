@@ -6,6 +6,8 @@ book_path: /web/showcase/_book.yaml
 {# wf_featured_image: /web/showcase/2016/images/konga/featured.png #}
 {# wf_featured_snippet: "We estimate that with our new light, super-fast, UX-rich browsing capability, customers’ data consumption will fall dramatically which we believe will result in a corresponding increase in conversions."<br><b>Shola Adekoya</b>, Konga.com CEO. #}
 {# wf_tags: progressive-web-apps,serviceworker,casestudy #}
+{# wf_region: africa #}
+{# wf_vertical: retail #}
 
 # Konga {: .page-title }
 

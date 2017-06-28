@@ -11,7 +11,7 @@ description: Internet jest dostępny na szerokiej gamie urządzeń &ndash; od te
 
 
 
-Tworzenie interfejsów działających na różnych urządzeniach nie jest tak trudne, jak się wydaje. W tym przewodniku stworzymy przykładową stronę docelową o usłudze (<a href='https://www.udacity.com/course/cs256'>kursie CS256 Tworzenie witryn mobilnych</a>) działającą bez problemów na wszystkich rodzajach urządzeń.
+Tworzenie interfejsów działających na różnych urządzeniach nie jest tak trudne, jak się wydaje. W tym przewodniku stworzymy przykładową stronę docelową o usłudze (<a href='https://www.udacity.com/course/mobile-web-development--cs256'>kursie CS256 Tworzenie witryn mobilnych</a>) działającą bez problemów na wszystkich rodzajach urządzeń.
 
 <img src="images/finaloutput-2x.jpg" alt="różne urządzenia z ostateczną wersją projektu">
 

@@ -6,6 +6,8 @@ book_path: /web/showcase/_book.yaml
 {# wf_featured_image: /web/showcase/2016/images/guardian-smart-lock/card.png #}
 {# wf_featured_snippet: Since launching Smart Lock, the Guardian has seen a 44% increase in cross-platform signed-in users, compared to 10% the 35 weeks leading up to the launch #}
 {# wf_tags: smart-lock,casestudy #}
+{# wf_region: europe #}
+{# wf_vertical: media #}
 
 # Smart Lock for the Guardian {: .page-title }
 

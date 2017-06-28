@@ -78,15 +78,15 @@ PRPL(Push, Render, Pre-cache, Lazy-load)은
 
 ### Udacity 교육과정
 
-[브라우저 렌더링 최적화](https://udacity.com/ud860)<br>
+[브라우저 렌더링 최적화](https://www.udacity.com/course/browser-rendering-optimization--ud860)<br>
 Google 성능 전문가인 Paul Lewis가 여러분이 버벅거림 현상을 없애고
  초당 60 프레임 성능을 유지하는 웹 앱을 만들도록 도와드립니다.
 
-[주요 렌더링 경로](https://udacity.com/ud884)<br>
+[주요 렌더링 경로](https://www.udacity.com/course/website-performance-optimization--ud884)<br>
 HTML, CSS 및 자바스크립트를 살아있는 라이브 웹사이트로 전환하기 위해
  브라우저가 취해야 하는 단계와 주요 렌더링 경로에 대해 알아보세요.
 
-[HTTP/1 - HTTP/2](https://udacity.com/ud897)<br>
+[HTTP/1 - HTTP/2](https://www.udacity.com/course/client-server-communication--ud897)<br>
 Surma는 HTTP/1의 기초부터 시작하여 HTTP/2로 진행하며,
  자산을 효율적으로 로드하는 방법과 이 프로토콜의 보안 측면에 대해서도 다룹니다. 
 <div style="clear:both;"></div>

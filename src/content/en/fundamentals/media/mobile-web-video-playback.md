@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Create the best mobile media experience on the Web by following these best practises.
 
 {# wf_published_on: 2017-04-07 #}
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2017-05-23 #}
 
 # Mobile Web Video Playback {: .page-title }
 
@@ -123,11 +123,11 @@ button state to "pause" and hide the video controls. When the video pauses, we
 simply change button state to "play" and show the video controls.
 
     video.addEventListener('play', function() {
-      playPauseButton.classList.add('paused');
+      playPauseButton.classList.add('playing');
     });
 
     video.addEventListener('pause', function() {
-      playPauseButton.classList.remove('paused');
+      playPauseButton.classList.remove('playing');
     });
 
 When time indicated by video `currentTime` attribute changed via the
@@ -147,7 +147,7 @@ also choose to load automatically another video if the user has enabled some
 kind of "AutoPlay" feature.
 
     video.addEventListener('ended', function() {
-      playPauseButton.classList.remove('paused');
+      playPauseButton.classList.remove('playing');
       video.currentTime = 0;
     });
 
@@ -199,9 +199,9 @@ Here's below what we have created so far. In the next section, we'll implement
 the fullscreen button.
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/video-play-pause-seek.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-play-pause-seek.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/video-play-pause-seek.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-play-pause-seek.mp4"
           type="video/mp4">
 </video>
 
@@ -215,9 +215,9 @@ Obviously, you don't have to use all of them. Just pick the ones that make
 sense to you and combine them to create your custom flow.
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.mp4"
           type="video/mp4">
 </video>
 
@@ -291,9 +291,9 @@ may want to use [screenfull.js] wrapper as well.
     });
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/toggle-fullscreen-on-button-click.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/toggle-fullscreen-on-button-click.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/toggle-fullscreen-on-button-click.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/toggle-fullscreen-on-button-click.mp4"
           type="video/mp4">
 </video>
 
@@ -360,9 +360,9 @@ fullscreenButton.addEventListener('click', function(event) {
     }
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/lock-screen-in-landscape-on-button-click.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/lock-screen-in-landscape-on-button-click.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/lock-screen-in-landscape-on-button-click.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/lock-screen-in-landscape-on-button-click.mp4"
           type="video/mp4">
 </video>
 
@@ -421,9 +421,9 @@ As you can see, this is the seamless fullscreen experience we were looking for.
 To see this in action, check out the [sample]{: .external }.
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.webm"
           type="video/webm; codecs=vp8">
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.mp4"
           type="video/webm; codecs=mp4">
 </video>
 
@@ -495,9 +495,9 @@ resources in an infinite scroll case.
     });
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/video-visibility.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-visibility.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/video-visibility.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-visibility.mp4"
           type="video/mp4">
 </video>
 
@@ -607,9 +607,9 @@ notification is synced automagically to any paired wearable device. And it also
 shows up on lock screens.
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/media-session.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/media-session.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/media-session.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/media-session.mp4"
           type="video/mp4">
 </video>
 

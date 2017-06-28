@@ -6,6 +6,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_featured_image: /web/showcase/2016/images/weather-channel/card.png #}
 {# wf_featured_snippet: The Weather Company, an IBM Business, serves an average of 40 billion forecast requests every day, helping people plan their daily lives and make better decisions based on weather. #}
 {# wf_tags: progressive-web-apps,webpush,notifications,serviceworker,casestudy #}
+{# wf_vertical: media #}
 
 # The Weather Channel {: .page-title }
 

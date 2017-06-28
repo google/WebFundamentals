@@ -177,6 +177,24 @@ yatesbuckley:
   google: +YatesBuckley
   email: yates@unit9.com
 
+mathiasbynens:
+  name:
+    given: Mathias
+    family: Bynens
+  org:
+    name: Google
+    unit: V8
+  country: DE
+  role:
+    - author
+  homepage: https://mathiasbynens.be/
+  google: +mathiasbynens
+  twitter: mathias
+  email: mths@google.com
+  lanyrd: mathias
+  description:
+    en: developer advocate on the V8 team
+
 owencm:
   name:
     given: Owen
@@ -191,6 +209,22 @@ owencm:
   google: +OwenCampbellMoore
   twitter: owencm
   email: owencm@google.com
+
+mcasas:
+  name:
+    given: Miguel
+    family: Casas-Sanchez
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - engineer
+  twitter: yellowdoge
+  github: yellowdoge
+  email: mcasas@chromium.org
+  description:
+    en: Miguel is an engineer in the Chrome team
 
 michaelchang:
   name:
@@ -840,6 +874,25 @@ henrylim:
   description:
     en: 'Co-Organizer @ GDG Kuala Lumpur'
 
+wayouliu:
+  name:
+    given: Wayou
+    family: Liu
+  homepage: https://wayou.github.io/
+  google: +WayouLiu
+  twitter: liuwayong
+  github: wayou
+  lanyrd:
+  description:
+    en: "Wayou is a developer and loves the web"
+  org:
+    name:
+    unit:
+  country:
+  role:
+    - translator
+  email: liuwayong@gmail.com
+
 heathermahan:
   name:
     given: Heather
@@ -910,6 +963,21 @@ josephmedley:
   email: jmedley@google.com
   description:
     en: Technical Writer
+
+kuu:
+  name:
+    given: Kuu
+    family: Miyazaki
+  org:
+    name: Independent
+    unit: Developer
+  country: Japan
+  role:
+    - translator
+  twitter: miyazaqui
+  email: miyazaqui@gmail.com
+  description:
+    en: "Kuu is interested in media technology on the Web"
 
 jacquerie:
   name:
@@ -1251,6 +1319,23 @@ johyphenel:
   google: +Jo-elvanBergen
   twitter: johyphenel
   email: jo-el@google.com
+
+philipwalton:
+  name:
+    given: Philip
+    family: Walton
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  homepage: 'https://philipwalton.com'
+  twitter: philwalton
+  github: philipwalton
+  role:
+    - author
+  email: philip@philipwalton.com
+  description:
+    en: 'Engineer at Google working on the Web Platform'
 
 wangyu:
   name:

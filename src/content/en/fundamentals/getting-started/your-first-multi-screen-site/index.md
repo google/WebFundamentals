@@ -7,7 +7,7 @@ description: The web is accessible on a huge range of devices, from small-screen
 
 # Your First Multi-Device Site {: .page-title }
 
-Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://udacity.com/ud893) course on Udacity.
+Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) course on Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
@@ -15,7 +15,7 @@ Caution: This article has not been updated in a while and may not reflect realit
 
 Creating multi-device experiences is not as hard as it might seem. 
 In this guide, we will build a product landing page for the 
-[CS256 Mobile Web Development course](https://www.udacity.com/course/cs256)
+[CS256 Mobile Web Development course](https://www.udacity.com/course/mobile-web-development--cs256)
 that works well across different device types.
 
 Building for multiple devices with differing capabilities, vastly different

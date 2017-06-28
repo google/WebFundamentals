@@ -95,11 +95,11 @@ description: ウェブデザインと UI には複数の幅広い領域が含ま
 
 ###  Udacity コース
 
-[レスポンシブ ウェブデザインの基本](https://udacity.com/ud893)<br>
+[レスポンシブ ウェブデザインの基本](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)<br>
 このコースでは、レスポンシブ ウェブデザインの基本を説明します。スマートフォン、タブレット、パソコンなどの端末で適切に機能する独自のレスポンシブ ウェブページを作成します。
 
 
-[レスポンシブ画像](https://udacity.com/ud882)<br>
+[レスポンシブ画像](https://www.udacity.com/course/responsive-images--ud882)<br>
 このコースでは、あらゆる端末で画像を適切に表示してすばやく読み込めるように、最新のウェブで画像を操作する方法について説明します。
 
 

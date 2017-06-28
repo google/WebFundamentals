@@ -188,7 +188,9 @@ def generateYaml(lang, requestPath, rawYaml):
       section += '<h2 id="' + devsiteHelper.slugify(row['heading']) +'">'
       section += row['heading'] + '</h2>'
     if 'items' in row:
+      section += '<div class="devsite-landing-row-group">'
       section += parseIndexYamlItems(row['items'])
+      section += '</div>'
     if 'columns' in row:
       for column in row['columns']:
         section += '<div class="devsite-landing-row-column">'

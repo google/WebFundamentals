@@ -104,12 +104,12 @@ Chrome を `--remote-debugging-port=9222` フラグつきで実行すると、[D
 それを実現するひとつの方法が `child_process` です。
 
 ```javascript
-const exec = require('child_process').exec;
+const execFile = require('child_process').execFile;
 
 function launchHeadlessChrome(url, callback) {
   // macOS を想定
   const CHROME = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome';
-  exec(`${CHROME} --headless --disable-gpu --remote-debugging-port=9222 ${url}`, callback);
+  execFile(CHROME, ['--headless', '--disable-gpu', '--remote-debugging-port=9222', url], callback);
 }
 
 launchHeadlessChrome('https://www.chromestatus.com', (err, stdout, stderr) => {

@@ -2,18 +2,24 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: WebVR
 
-{# wf_updated_on: 2017-04-27 #}
+{# wf_updated_on: 2017-05-22 #}
 {# wf_published_on: 2016-12-12 #}
 
 # WebVR {: .page-title }
 
 Warning: WebVR is still experimental and subject to change.
 
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jT2mR9WzJ7Y"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 WebVR is a JavaScript API that makes use of any VR headset and a VR-capable
 device your users have — such as a [Daydream headset](https://vr.google.com/daydream/)
 and Pixel phone — to create fully immersive 3D experiences in your browser.
 
-<img src="img/getting-started-with-webvr.jpg" alt="Get started with WebVR" />
+<div class="clearfix"></div>
 
 ## Support and Availability
 

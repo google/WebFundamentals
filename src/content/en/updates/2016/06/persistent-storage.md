@@ -74,7 +74,7 @@ The permission is automatically denied in all other cases. The goal is to
 ensure that users can rely on their favorite web apps and not find they have 
 suddenly been cleared.
 
-You can also use the Javascript API to tell if persistence has been granted
+You can also use the JavaScript API to tell if persistence has been granted
 already:
 
 

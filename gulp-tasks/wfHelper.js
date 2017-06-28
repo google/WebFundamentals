@@ -14,7 +14,9 @@ const gutil = require('gulp-util');
 const wfRegEx = require('./wfRegEx');
 const exec = require('child_process').exec;
 
-var STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md'];
+const STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md'];
+const DATE_FORMAT_PRETTY = 'dddd, MMMM Do YYYY';
+const DATE_FORMAT_STANDARDIZED = 'YYYY-MM-DDTHH:mm:ss[Z]';
 
 if (!String.prototype.endsWith) {
   Object.defineProperty(String.prototype, 'endsWith', {
@@ -50,7 +52,6 @@ function promisedExec(cmd, cwd) {
       stdErr = stdErr.trim();
       if (err) {
         gutil.log(' ', cmdLog, chalk.red('FAILED'));
-        const output = (stdOut + '\n' + stdErr).trim();
         reject(err);
         return;
       }
@@ -93,7 +94,6 @@ function promisedRSync(src, dest) {
   });
 }
 
-
 function genericComparator(a, b) {
   if (a < b) {
     return 1;
@@ -123,6 +123,16 @@ function updatedComparator(a, b) {
   return genericComparator(aPublished, bPublished);
 }
 
+function featuredComparator(aObj, bObj) {
+  var a = moment(aObj.featuredDate).unix();
+  var b = moment(bObj.featuredDate).unix();
+  if (a === b) {
+    a = moment(aObj.dateUpdated).unix();
+    b = moment(bObj.dateUpdated).unix();
+  }
+  return genericComparator(a, b);
+}
+
 function getRegEx(regEx, content, defaultResponse) {
   console.log(chalk.red('WARN:'), chalk.cyan('wfHelper.getRegEx'), 'is deprecated');
   var result = content.match(regEx);
@@ -143,6 +153,7 @@ function readMetadataForFile(file) {
   }
   var published = moment(wfRegEx.getMatch(wfRegEx.RE_PUBLISHED_ON, content));
   var updated = moment(wfRegEx.getMatch(wfRegEx.RE_UPDATED_ON, content));
+  var featured = moment(wfRegEx.getMatch(wfRegEx.RE_FEATURED_DATE, content, '1900-01-01'));
   var url = file.replace('src/content/en/', '/web/');
   url = url.replace('.md', '');
   var result = {
@@ -150,21 +161,28 @@ function readMetadataForFile(file) {
     url: url,
     title: wfRegEx.getMatch(wfRegEx.RE_TITLE, content),
     description: description,
-    authors: [],
     image: wfRegEx.getMatch(wfRegEx.RE_IMAGE, content),
-    datePublished: published.format(),
-    datePublishedPretty: published.format('dddd, MMMM Do YYYY'),
+    imageSquare: wfRegEx.getMatch(wfRegEx.RE_IMAGE_SQUARE, content),
+    datePublished: published.format(DATE_FORMAT_STANDARDIZED),
+    datePublishedPretty: published.format(DATE_FORMAT_PRETTY),
     yearPublished: published.format('YYYY'),
-    dateUpdated: updated.format(),
-    dateUpdatedPretty: updated.format('dddd, MMMM Do YYYY'),
-    tags: []
+    dateUpdated: updated.format(DATE_FORMAT_STANDARDIZED),
+    dateUpdatedPretty: updated.format(DATE_FORMAT_PRETTY),
+    tags: [],
+    vertical: wfRegEx.getMatch(wfRegEx.RE_VERTICAL, content),
+    featuredDate: featured.format(DATE_FORMAT_STANDARDIZED)
   };
   var authorList = content.match(wfRegEx.RE_AUTHOR_LIST);
   if (authorList) {
+    result.authors = [];
     authorList.forEach(function(contributor) {
       var author = wfRegEx.getMatch(wfRegEx.RE_AUTHOR_KEY, contributor).trim();
       result.authors.push(author);
     });
+  }
+  var region = wfRegEx.getMatch(wfRegEx.RE_REGION, content);
+  if (region) {
+    result.region = region;
   }
   var tags = wfRegEx.getMatch(wfRegEx.RE_TAGS, content);
   if (tags) {
@@ -202,8 +220,6 @@ function getFileList(base, patterns) {
       results.push(metaData);
     }
   });
-  // var filename = path.join(base, '_files.json');
-  // fs.writeFileSync(filename, JSON.stringify(results, null, 2));
   return results;
 }
 
@@ -225,4 +241,5 @@ exports.getRegEx = getRegEx;
 exports.getFileList = getFileList;
 exports.publishedComparator = publishedComparator;
 exports.updatedComparator = updatedComparator;
+exports.featuredComparator = featuredComparator;
 exports.splitByYear = splitByYear;

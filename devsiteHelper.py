@@ -231,9 +231,13 @@ def renderDevSiteContent(content, lang='en'):
     fbContent = re.search(r'({%[ ]?framebox.+?%})(.*?){%[ ]?endframebox[ ]?%}(?ms)', framebox)
     fbOpenTag = fbContent.group(1)
     fbHeight = re.search(r'height="(.*?)"', fbContent.group(1))
+    fbClass = re.search(r'class="(.*?)"', fbContent.group(1))
     fbContent = fbContent.group(2)
     fbMemcacheKey = '/framebox/' + hashlib.md5(fbContent.encode('utf-8')).hexdigest()
-    replaceWith = '<iframe class="framebox inherit-locale" '
+    replaceWith = '<iframe class="framebox inherit-locale'
+    if fbClass:
+     replaceWith += ' ' + fbClass.group(1)
+    replaceWith += '" '
     replaceWith += 'style="width: 100%;'
     if fbHeight:
       replaceWith += 'height:' + fbHeight.group(1) + ';'
@@ -399,7 +403,7 @@ def getFooterPromo(lang='en'):
         if 'icon_name' in promo:
           result +='<div class="devsite-footer-promo-icon material-icons">'
           result += promo['icon_name'] + '</div>'
-        result += promo['title']
+        result += promo['label']
         result += '</a><div class="devsite-footer-promo-description">'
         result += promo['description']
         result += '</div></li>\n'
