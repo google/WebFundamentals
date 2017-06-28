@@ -51,7 +51,7 @@ forced to continue there.
   </figure>
 </div>
 
-## Example flow checkout flow
+## Basic checkout flow
 
 In this example a user navigates to a site, selects an item and goes
 through the payment request checkout flow. Once a user clicks buy, the
@@ -66,7 +66,7 @@ them in.
   <source src="videos/basic-intro.mp4" type="video/mp4; codecs=h264">
 </video>
 
-### Guest checkout 
+### Checkout guidance
 
 Don't block checkout by requiring signup. One of the core benefits of 
 having users already signed in is that you already have payment methods 
@@ -155,9 +155,9 @@ on brand recognition.
 
 
 <div class="clearfix"></div>
-# General UX advice 
+## General UX advice 
 
-## Eliminate user steps
+### Eliminate user steps
 
 Try to limit the amount of work it takes for a user to 
 make a purchase. A simple UI with clear text labels will 
@@ -184,7 +184,7 @@ thereby making your checkout a success.
   </figure>
 </div>
 
-## UI affordance 
+### UI affordance 
 Users in the real world often wrap up their mobile 
 devices with sleeves or bumpers. Think of ergonomics 
 and considerations - bumpers can prevent users from 
@@ -194,7 +194,7 @@ tapping buttons when they are not therefore presenting
 the illusion that the site and app is slower than 
 it actually is. 
 
-### Touch targets
+#### Touch targets
 Make sure the touch targets extend beyond the visual 
 bounds of an element. For example, a `24 x 24` pixel 
 icon should have a `48 x 48` pixel touch target. .
@@ -218,7 +218,7 @@ with motor disability skills.
   </figure>
 </div>
 
-## User feedback mechanisms
+### User feedback mechanisms
 As well as providing confirmation to users that a 
 purchase was successful, provide feedback to reassure 
 them of the status of their experience. One example of 
@@ -240,7 +240,7 @@ poster="images/basic-intro-poster.png">
 </video>
 <div class="clearfix"></div>
 
-## Performance 
+### Performance 
 In a different study conducted at Google, we found 
 70% of users dropped from a checkout due to the first 
 dialogs not rendering fast enough. Make sure you test 
@@ -249,7 +249,7 @@ checkout flow by using [lighthouse](/web/tools/lighthouse)
 and [DevTools](/web/tools/chrome-devtools/network-performance/) 
 network emulation. 
 
-## Language 
+### Language 
 Improved language in the call to action buttons help users 
 understand what actions were being taken in the flow. It is 
 important that they are consistent in the checkout flow. 
@@ -272,7 +272,7 @@ Make sure you use the labels that make the most sense.
 Depending on the context the label <em>“Pickup”</em> may be more 
 appropriate than the label <em>“Delivery”</em>.
 
-## Provide fall back options to the user
+### Provide fall back options to the user
 Don't block a purchase on Payment Request. If isn’t 
 supported by the browser, or fails, seamlessly 
 fallback to the default checkout rather than an 
@@ -295,7 +295,9 @@ item to their cart, and is directed to checkout.
 <div>
   <figure>
     <img src="images/user-flow-diagram.png" 
-    alt="This is an illustrative example of the above, different paths a user takes when checking out">
+    alt="This is an illustrative example 
+    of the above, different paths a user 
+    takes when checking out">
   <figcaption>
 	This is an illustrative example of the above, 
 	different paths a user takes when checking out
@@ -315,7 +317,7 @@ and gives the user a PDF.
   <source src="videos/basic-intro.mp4" type="video/mp4; codecs=h264">
 </video>
 
-
+### Buy now UI
 In this example every item has a “Buy now”. When a user taps or 
 clicks “Buy now” they begin the checkout process, first by 
 asking for specific delivery dates and a custom message. 
@@ -332,7 +334,7 @@ API which is followed by a confirmation page.
   </figure>
 </div>
 
-## Delivery 
+### Delivery 
 Although it is technically possible to auto-select the user's 
 default address it is best practice to allow the user to 
 select their prefered address themselves. This will allow 
@@ -370,11 +372,13 @@ will be delivered.
 <div class="clearfix"></div>
 
 
-## Adding additional information 
+### Adding additional information 
 There are many use cases where the merchant may require 
 the user to add additional information before or after 
 the transaction. Such as loyalty cards numbers or 
 discount coupons. 
+
+## Customizing the Payment Request API flow
 
 ### Before calling Payment request api
 The Payment Request API doesn’t deal with vouchers and 
@@ -410,7 +414,7 @@ the user clicks the “Buy Now” button, provide an additional
 step in the processes asking for acceptance of the TOS. 
 The next step is to launch the PR Payment Request flow.
 
-## Midway through the Payments Request 
+### Midway through the Payments Request 
 You can offer extra UI elements after the payment options 
 have been selected. So instead of showing the API's default 
 spinner, you can show your own, such as in the next example. 
@@ -436,7 +440,7 @@ You can learn more about this [technique here](/web/fundamentals/discovery-and-m
   </figure>
 </div>
 
-## After payment / purchase has been processed.
+### After payment / purchase has been processed.
 There may be occasions where the merchant give 
 the user the opportunity to add non-standard information 
 from the user such as delivery instructions or perhaps 
@@ -472,10 +476,12 @@ Code example:
 	});
 
 You can find code for <a 
-href="https://github.com/w3c/payment-request-info/wiki/CodeExamples#show-additional-user-interface-after-successful-payment">
+href=
+"https://github.com/w3c/payment-request-info/wiki/
+CodeExamples#show-additional-user-interface-after-successful-payment">
 more unique use cases here</a>.
 
-<h1>Existing users</h1>
+## Existing users 
 For existing customers you can still use the Payments 
 Request API, but you may need to adjust the experience 
 and present new UI to your existing signed-in customers. 
@@ -491,7 +497,7 @@ the new UX patterns with text labels and UI that express
 speed and efficiency. 
 
 
-<h1>Code demos and browser support</h1>
+## Code demos and browser support
 You can experiment with the various features and UX patterns 
 with this demo <a href="https://paymentrequest.show/demo/">
 paymentrequest.show/demo/</a>. Payments Request API is 
