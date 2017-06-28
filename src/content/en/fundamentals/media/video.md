@@ -563,8 +563,8 @@ For the complete list of video element attributes and their definitions, see
 ### Autoplay {: #autoplay }
 
 On desktop, `autoplay` tells the browser to download and play the video
-immediately. On mobile, don't assume `autoplay` will always work. See [WebKit
-blog](https://webkit.org/blog/6784/new-video-policies-for-ios/) for instance.
+immediately. On mobile, don't assume `autoplay` will always work. See the [WebKit
+blog](https://webkit.org/blog/6784/new-video-policies-for-ios/), for instance.
 
 Even on platforms where autoplay is possible, you need to consider whether
 it's a good idea to enable it:
