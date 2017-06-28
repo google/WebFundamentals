@@ -1,12 +1,12 @@
-project*path: /web/*project.yaml
-book*path: /web/updates/*book.yaml
+project_path: /web/_project.yaml
+book_path: /web/updates/_book.yaml
 description: Latest Updates to the Credential Management API
 
-{# wf*updated*on: 2017-06-22 #}
-{# wf*published*on: 2017-06-12 #}
-{# wf*tags: performance #}
-{# wf*featured*image: /web/updates/images/generic/security.png #}
-{# wf*featured_snippet: Chrome 60 で変更される Credential Management API について。Chrome 57 での変更点についても触れています。 #}
+{# wf_updated_on: 2017-06-22 #}
+{# wf_published_on: 2017-06-12 #}
+{# wf_tags: performance #}
+{# wf_featured_image: /web/updates/images/generic/security.png #}
+{# wf_featured_snippet: Chrome 60 で変更される Credential Management API について。Chrome 57 での変更点についても触れています。 #}
 
 # Credential Management API の仕様が変更されました {: .page-title }
 
