@@ -19,15 +19,16 @@ common responses ranged from the form being difficult to read,
 difficult to understand or was way too long.
 
 To solve these challenges the Payments Request API creates a simpler
-flow. The API will pre-populate payment details for the user allowing
-users to buy items with a 
-simple tap or click.
+flow. 
+The API will pre-populate payment details for the user allowing
+users to buy items with a simple tap or click.
 
 One way to think about the Payments Request API is that it is
 essentially a way for a browser to manage a user's payment methods,
 making it easier to make payments on the web.
 
-## The two view states In the Chrome UI, the Payments Request API has
+## The two view states 
+In the Chrome UI, the Payments Request API has
 two states: the <em>'receipt'</em> view and the edit view. The
 <em>'receipt'</em> view (shown at left, below) partially obscuring the
 merchant's site. This allows the user to take a quick glance at their
@@ -123,37 +124,36 @@ Another consideration is that devices come in many sizes, so
 space maybe at a premium, so keep the labels short and focused 
 on brand recognition. 
 
-<ol class="attempt-left">
-<li>The icon is taken from the favicon. Favicon is hi-res and 
-	recognizable for the store. For best practice, provide multiple 
-	icons at different sizes to allow the browser to pick the most 
-	appropriate size. You can <a 
-	href="../../discovery-and-monetization/payment-request/deep-dive-into-payment-request#the_payment_request_ui">
-	learn more here</a>. </li>
-
-<li>This is taken from the <code>&#60;title&#62;</code> tag. 
-	This is your strongest chance to provide a human-readable 
-	indication of what the user is buying and who they're 
-	buying from.</li>
-
-<li> This is the domain/URL.</li>
-
-<li>This text label can be modified via the Payments 
-	Request API.</li>
-
-<li>The price and currency is taken from the total.</li>
-
-<li>You can select a heading from a preset list: Shipping, 
-	Pickup OR Delivery.</li>
- </ol>
-
-
 <div class="attempt-right">
   <figure>
     <img src="images/what-can-be-changed.png" 
     alt="This is an example what parts of the Payment Request API can be changed.">
   </figure>
 </div>
+
+1. The icon is taken from the favicon. Favicon is hi-res and 
+	recognizable for the store. For best practice, provide multiple 
+	icons at different sizes to allow the browser to pick the most 
+	appropriate size. You can [learn more here](/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request). 
+
+
+2. This is taken from the <code>&#60;title&#62;</code> tag. 
+	This is your strongest chance to provide a human-readable 
+	indication of what the user is buying and who they're 
+	buying from.
+
+3. This is the domain/URL.
+
+4. This text label can be modified via the Payments 
+	Request API.
+
+5. The price and currency is taken from the total.
+
+6. You can select a heading from a preset list: Shipping, 
+	Pickup OR Delivery.
+
+
+
 <div class="clearfix"></div>
 # General UX advice 
 
@@ -245,10 +245,9 @@ In a different study conducted at Google, we found
 70% of users dropped from a checkout due to the first 
 dialogs not rendering fast enough. Make sure you test 
 for poor network conditions in order to improve your 
-checkout flow by using <a href="../../../../../../web/tools/lighthouse/">
-lighthouse</a> and 
-<a href="../../../../../../web/tools/chrome-devtools/network-performance/">
-	DevTools</a> network emulation. 
+checkout flow by using [lighthouse](/web/tools/lighthouse) 
+and [DevTools](/web/tools/chrome-devtools/network-performance/) 
+network emulation. 
 
 ## Language 
 Improved language in the call to action buttons help users 
@@ -304,8 +303,8 @@ item to their cart, and is directed to checkout.
   </figure>
 </div>
 
-# Example flows 
-## Guest checkout
+## Example flows 
+### Guest checkout
 In this example we allow the user to checkout, then 
 email them an ID code and receipt. Alternatively 
 you can offer a button that calls `window.print();` 
@@ -333,7 +332,7 @@ API which is followed by a confirmation page.
   </figure>
 </div>
 
-# Delivery 
+## Delivery 
 Although it is technically possible to auto-select the user's 
 default address it is best practice to allow the user to 
 select their prefered address themselves. This will allow 
@@ -351,7 +350,7 @@ once the user has triggered the actual pay action.
 Avoid creating a jarring experience at all costs as this 
 can cause a user to abandon the purchase altogether. 
 
-## Shipping options
+### Shipping options
 Give the user delivery options according to actual dates. 
 Contextual data such as the date will give the user 
 context and further reassurance of when their items 
@@ -371,13 +370,13 @@ will be delivered.
 <div class="clearfix"></div>
 
 
-# Adding additional information 
+## Adding additional information 
 There are many use cases where the merchant may require 
 the user to add additional information before or after 
 the transaction. Such as loyalty cards numbers or 
 discount coupons. 
 
-## Before calling Payment request api
+### Before calling Payment request api
 The Payment Request API doesn’t deal with vouchers and 
 loyalty codes directly. If a merchant requires these then 
 present them before the user clicks pay. If you have a 
@@ -428,8 +427,7 @@ the Payment Request API OR their own UI.
 * If all conditions are met the merchant serves up a 
 confirmation page. 
 
-You can learn more about this <a 
-href="https://developers.google.com/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request#completing_the_transaction">technique here</a>.
+You can learn more about this [technique here](/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request#completing_the_transaction)
 
 <div>
   <figure>
