@@ -8,6 +8,7 @@
 var RE_BOOK_PATH = /^book_path: (.*)\n/m;
 var RE_PROJECT_PATH = /^project_path: (.*)\n/m;
 var RE_DESCRIPTION = /^description:\s?(.*)\n/m;
+var RE_BLINK_COMPONENTS = /^  - (Blink>[\w>]+)/gm;
 
 var RE_REGION = /^{#\s?wf_region:\s?(.*?)\s?#}\s?\n/m;
 var RE_VERTICAL = /^{#\s?wf_vertical:\s?(.*?)\s?#}\s?\n/m;
@@ -67,6 +68,7 @@ exports.RE_PROJECT_PATH = RE_PROJECT_PATH;
 exports.RE_UPDATED_ON = RE_UPDATED;
 exports.RE_PUBLISHED_ON = RE_PUBLISHED;
 exports.RE_DESCRIPTION = RE_DESCRIPTION;
+exports.RE_BLINK_COMPONENTS = RE_BLINK_COMPONENTS;
 exports.RE_REGION = RE_REGION;
 exports.RE_VERTICAL = RE_VERTICAL;
 exports.RE_FEATURED_DATE = RE_FEATURED_DATE;

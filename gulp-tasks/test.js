@@ -50,6 +50,7 @@ const RE_SRC_BASE = /src\/content\//;
 const RE_DATA_BASE = /src\/data\//;
 const COMMON_TAGS_FILE = 'src/data/commonTags.json';
 const CONTRIBUTORS_FILE = 'src/data/_contributors.yaml';
+const BLINK_COMPONENTS_FILE = 'src/data/blinkComponents.json';
 const VALID_REGIONS = [
   'africa', 'asia', 'europe', 'middle-east', 'north-america', 'south-america'
 ];
@@ -502,11 +503,18 @@ function testMarkdown(filename, contents, options) {
       });
     }
 
-    // Check for valid components
-    matched = wfRegEx.RE_COMPONENTS.exec(contents);
-    if (matched && options.componentMap) {
-      
-    }
+    // Validate listed components
+    do {
+      matched = wfRegEx.RE_BLINK_COMPONENTS.exec(contents);
+      if (matched && options.blinkComponents) {
+        position = {line: getLineNumber(contents, matched.index)};
+        let component = matched[1].trim();
+        if (options.blinkComponents.indexOf(component) === -1) {
+          msg = `The component (\`${component}\`) is non-standard or misspelled.`;
+          logWarning(filename, position, msg);
+        }
+      }
+    } while (matched);
 
     // Check for valid regions
     matched = wfRegEx.RE_REGION.exec(contents);
@@ -1005,7 +1013,8 @@ gulp.task('test', function() {
     lastUpdateMaxDays: 7,
     warnOnJavaScript: true,
     commonTags: parseJSON(COMMON_TAGS_FILE, readFile(COMMON_TAGS_FILE)),
-    contributors: parseYAML(CONTRIBUTORS_FILE, readFile(CONTRIBUTORS_FILE))
+    contributors: parseYAML(CONTRIBUTORS_FILE, readFile(CONTRIBUTORS_FILE)),
+    blinkComponents: parseJSON(BLINK_COMPONENTS_FILE, readFile(BLINK_COMPONENTS_FILE))
   }
   if (GLOBAL.WF.options.testTests) {
     GLOBAL.WF.options.testPath = './src/tests';

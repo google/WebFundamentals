@@ -1,6 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Budget API allows developers to perform background actions without notifying users, enabling use cases like silent push.
+blink_components:
+  - Blink>PushAPI
+  - Blink>Formss
 
 {# wf_updated_on: 2017-06-22 #}
 {# wf_published_on: 2017-06-07 #}
