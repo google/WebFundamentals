@@ -106,11 +106,10 @@ sessions.
 Here's how to preload a full video  on your website so that when your
 JavaScript asks to fetch video content, it is read from disk cache as the
 resource may have already been cached by the browser. If preload request hasn't
-finished yet, a regular network fetch will happen. I'd recommend using this
-only for audio files or short video clips.
+finished yet, a regular network fetch will happen.
 
 ```
-<link rel="preload" as="video" href="https://cdn.com/file.mp4" crossorigin>
+<link rel="preload" as="video" href="https://cdn.com/small-file.mp4">
 
 <video id="video" controls></video>
 
@@ -124,12 +123,11 @@ only for audio files or short video clips.
 </script>
 ```
 
+Note: I'd recommend using this only for audio files or short video clips.
+
 Because the preloaded resource is going to be consumed by a video element in
 the example, the `as` preload link value is `video`. If it were an audio
 element, it would be `as="audio"`.
-
-If you are preloading links with CORS enabled resources you must also include
-the `crossorigin` attribute in order for the resource to be properly used.
 
 ### Preload first segment
 
@@ -143,14 +141,15 @@ MSE to feed the video element with those once the `onload` event from `<link
 rel="preload">` has been fired.
 
 ```
-<link rel="preload" as="video" href="https://cdn.com/file_1.webm" crossorigin onload="loadVideo()">
+<link rel="preload" as="video" href="https://cdn.com/file_1.webm"
+    onload="preloadFinished()" onerror="preloadFailed()">
 
 <video id="video" controls></video>
 
 <script>
   // This function is automatically executed when the first segment of video is
   // preloaded successfully. We may call it explicitely as well later on.
-  function loadVideo() {
+  function preloadFinished() {
     const mediaSource = new MediaSource();
     video.src = URL.createObjectURL(mediaSource);
     mediaSource.addEventListener('sourceopen', sourceOpen);
@@ -172,8 +171,17 @@ rel="preload">` has been fired.
       // TODO: Fetch file_2.webm when user starts playing video.
     });
   }
+
+  // This function is called if the first segment of video is not available.
+  function preloadFailed() {
+    // TODO: Show "Video is not available" message to user.
+  }
 </script>
 ```
+
+Warning: For cross-origin resources, make sure your CORS headers are set
+properly as opaque responses retrieved with `fetch(videoFileUrl, { mode:
+'no-cors' })` are not allowed to feed any video or audio element.
 
 ### Support
 
