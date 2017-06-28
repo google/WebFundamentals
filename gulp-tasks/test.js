@@ -498,23 +498,26 @@ function testMarkdown(filename, contents, options) {
         tag = tag.trim();
         if (options.commonTags.indexOf(tag) === -1) {
           msg = `Uncommon tag (\`${tag}\`) found.`;
-          logWarning(filename, position, msg);
+          logError(filename, position, msg);
         }
       });
     }
 
-    // Validate listed components
-    do {
-      matched = wfRegEx.RE_BLINK_COMPONENTS.exec(contents);
-      if (matched && options.blinkComponents) {
-        position = {line: getLineNumber(contents, matched.index)};
-        let component = matched[1].trim();
-        if (options.blinkComponents.indexOf(component) === -1) {
-          msg = `The component (\`${component}\`) is non-standard or misspelled.`;
-          logWarning(filename, position, msg);
+    // Check for valid Blink components
+    matched = wfRegEx.RE_BLINK_COMPONENTS.exec(contents);
+    if (matched && options.blinkComponents) {
+      position = {line: getLineNumber(contents, matched.index)};
+      matched[1].split(',').forEach(function(component) {
+        component = component.trim();
+        if (!(component in options.blinkComponents['component-to-team'])) {
+          msg = `The component (\`${component}\`) is non-standard or misspelled.`
+          logError(filename, position, msg);
         }
-      }
-    } while (matched);
+      })
+    } else {
+      msg = `No wf_blink_components field found in metadata. Add if appropriate.`;
+      logWarning(filename, '', msg);
+    }
 
     // Check for valid regions
     matched = wfRegEx.RE_REGION.exec(contents);
