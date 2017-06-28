@@ -30,7 +30,7 @@ loading and caching of script resources.
 
 - `asyncFunction().catch()` with `error.stack`: [9:55](https://youtu.be/4KVeNoN1aFM?t=9m55s)
 - Modules and `nomodule` attribute on `<script>` tags: [7:30](https://youtu.be/4KVeNoN1aFM?t=7m30s)
-- `promisify()` in Node 8: [17:20](https://youtu.be/4KVeNoN1aFM?t=17m20s)time stamp
+- `promisify()` in Node 8: [17:20](https://youtu.be/4KVeNoN1aFM?t=17m20s)
 
 
 ### TL;DR: {: .hide-from-toc }
