@@ -498,7 +498,7 @@ function testMarkdown(filename, contents, options) {
         tag = tag.trim();
         if (options.commonTags.indexOf(tag) === -1) {
           msg = `Uncommon tag (\`${tag}\`) found.`;
-          logError(filename, position, msg);
+          logWarning(filename, position, msg);
         }
       });
     }
