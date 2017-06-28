@@ -1,9 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: TBD.
+description: Let's take a raw video file off a camera and transform it into an encrypted resource that you can play back using a video library such as Google's Shaka Player on a mobile device.
 
-{# wf_updated_on: 2017-06-28 #}
-{# wf_published_on: 2017-06-28 #}
+{# wf_updated_on: 2017-06-30 #}
+{# wf_published_on: 2017-06-30 #}
 
 # From Raw Video to Web Ready {: .page-title }
 
@@ -61,7 +61,7 @@ covering those.)
 
 Within the audio and video streams, the actual data is compressed using a
 _codec_. As we'll see later, the distinction between a container and a codec is
-import as files with the same container can have their contents encoded with
+important as files with the same container can have their contents encoded with
 different codecs.
 
 (If these terms are new
@@ -84,6 +84,8 @@ defaults.
 
     ffmpeg -i glocken.mov glocken.mp4
 
+Note: To create this article, I used ffmpeg version 3.2.2-tessus.
+
 Creating a webm file is a bit more complicated. ffmpeg has no trouble converting
 a mov file to a webm file that will play in Chrome and Firefox. For whatever
 reason, the file created using ffmpeg's defaults doesn't quite conform to the
@@ -95,11 +97,11 @@ the webm spec.) Fortunately, I can fix this using a video filter. Do so with the
 
 Webm takes quite a bit longer to create than mp4. This isn't surprising when
 you look at the results. While mp4 compresses to about a quarter of the original
-file's size, webm compresses to 1% of the original file's size.
+file's size, webm is down in the single digits, though results may vary.
 
-    -rw-r--r--  1 jmedley  eng  12080306 May  9 14:34 glocken.mov
-    -rw-r--r--  1 jmedley  eng  10407497 May  9 14:52 glocken.mp4
-    -rw-r--r--  1 jmedley  eng    392263 May  9 14:49 glocken.webm
+    -rw-r--r--. 1 fr  12M Jun 27 11:48 glocken.mov
+    -rw-rw-r--. 1 fr 9.7M Jun 27 14:47 glocken.mp4
+    -rw-rw-r--. 1 fr 480K Jun 27 14:50 glocken.webm
 
 ## Split the streams
 
@@ -114,7 +116,7 @@ In the context of preparing media for the web, demuxing is basically a file
 copying operation where I copy one of the streams to a new file. Using Shaka
 Packager I might, for example, pull out the video stream.
 
-    packager input=myvideo.mp4,stream=video,output=myvideo_video.mp4
+    packager input=glocken.mp4,stream=video,output=glocken_video.mp4
 
 Notice that the stream descriptor has an input, an output, and a stream type.
 Despite the mp4 extension this output file wouldn't have any sound. To get an
@@ -125,8 +127,8 @@ This means that Shaka Packager lets me split the audio and video in a single
 command.
 
     packager \
-      input=myvideo.mp4,stream=video,output=myvideo_video.mp4 \
-      input=myvideo.mp4,stream=audio,output=myvideo_audio.m4a
+      input=glocken.mp4,stream=video,output=glocken_video.mp4 \
+      input=glocken.mp4,stream=audio,output=glocken_audio.m4a
 
 A full discussion of audio and video formats is beyond the scope of this
 article. One thing to note is that the audio stream of an mp4 file is the
@@ -137,8 +139,8 @@ Shaka Packager presents demuxing as though you're _extracting_ a stream into a
 new file. It's a little different in ffmpeg, which presents as though you're
 _stripping_ the stream you don't want. With ffmpeg, you need two operations.
 
-    ffmpeg -i myvideo.webm -vcodec copy -an myvideo_video.webm
-    ffmpeg -i myvideo.webm -acodec copy -vn myvideo_audio.webm
+    ffmpeg -i glocken.webm -vcodec copy -an glocken_video.webm
+    ffmpeg -i glocken.webm -acodec copy -vn glocken_audio.webm
 
 Just as with Shaka Packager, we have both an input and an output file. Another
 difference from Shaka Packager is that the streams are identified with flags
@@ -162,14 +164,14 @@ codec I need ffmpeg.
 
 In the last section I demuxed the audio and video like this:
 
-    ffmpeg -i myvideo.webm -vcodec copy -an myvideo_video.webm
-    ffmpeg -i myvideo.webm -acodec copy -vn myvideo_audio.webm
+    ffmpeg -i glocken.webm -vcodec copy -an glocken_video.webm
+    ffmpeg -i glocken.webm -acodec copy -vn glocken_audio.webm
 
 If I need to change the audio and video codec, I would replace the `copy` keyword
 with the name of a codec. For example, this command outputs an audio file
 encoded with the aac codec.
 
-    ffmpeg -i myvideo.mp4 -vn -c:a aac myvideo.m4a 
+    ffmpeg -i glocken.webm -vn -c:a vorbis glocken.m4a
 
 The [cheat sheet](/web/fundamentals/media/manipulating/cheatsheet#codec)
 contains a short list of codecs used for DASH and HLS, and commands needed to
@@ -178,7 +180,7 @@ convert to them.
 ## File properties
 
 I've unpeeled the onion. Yet if you compare what I've done to the list of stated
-goals you'll see that I'm not quite done. Anong the remaining items are bitrate
+goals you'll see that I'm not quite done. Among the remaining items are bitrate
 and resolution. These properties correlate to the amount of data in a media
 file. It probably goes without saying, but I'm going to say it anyway, that you
 can always lower bitrate and resolution, but increasing them is a problem.
@@ -194,7 +196,7 @@ desired result.
 _Bitrate_ is the maximum number of bits used to encode one second of a stream.
 The more bits used to encode a second of stream, the higher the fidelity.
 
-Unsuprisingly, bitrates for the web are low. The table below compares web
+Unsurprisingly, bitrates for the web are low. The table below compares web
 bitrates with common home video formats. Values are given in megabits per second
 (Mbs).
 
@@ -203,7 +205,7 @@ doing your own testing.
 
 | Format | Bitrate |
 | ------ | ------- |
-| Blue-ray | 20Mbs |
+| Blu-ray | 20Mbs |
 | DVD | 6 Mbs |
 | Desktop web video | 2 Mbs |
 | 4G mobile video | 0.7 Mbs |
@@ -218,13 +220,12 @@ In ffmpeg you set the bitrate with the (surprise!) bitrate (`-b`) flag.
 
     ffmpeg -i glocken.mov -b:v 350K -b:a 350K glocken.mp4
 
-Notice that there are two bitrate flags, -b:a and -b:v. One is for audio and the
+Notice that there are two bitrate flags, `-b:a` and `-b:v`. One is for audio and the
 other is for video.
 
 ### Resolution
 
 _Resolution_ is the amount of information in a single frame of video, given as
-
 the number of logical pixels in each dimension. [Youtube
 recommends](https://support.google.com/youtube/answer/6375112) the following
 resolutions for video uploads, all in the 16:9 aspect ratio. There's nothing
@@ -246,13 +247,13 @@ may chose a single resolution. If you're preparing files for DASH or HLS, you
 may chose one, several, or all. Fortunately, this is one of the simplest
 transformations you'll make with ffmpeg.
 
-    ffmpeg -i myvideo.webm -s 1920x1080 myvideo_1980x1020.webm
+    ffmpeg -i glocken.webm -s 1920x1080 glocken_1920x1080.webm
 
 ## Encryption
 
 If you plan to enforce copyright on your media, you'll want to encrypt them. I'm
 going to introduce two encryption methods. The first is
-[Widevide](https://www.widevine.com/wv_drm.html), a proprietary encryption
+[Widevine](https://www.widevine.com/wv_drm.html), a proprietary encryption
 method offered by Google. The second, also free, is the
 [Clear Key encryption system](https://www.w3.org/TR/encrypted-media/#clear-key)
 , which is supported by a W3C spec.
@@ -288,8 +289,8 @@ first 16 hex digits of the key. Since packager requires the key to be 16
 digits and does not allow a 32 digit key, both flags use the same value.
 
     packager \
-      input=myvideo.mp4,stream=audio,output=glocka.m4a \
-      input=myvideo.mp4,stream=video,output=glockv.mp4 \
+      input=glocken.mp4,stream=audio,output=glocken_audio_encrypted.m4a \
+      input=glocken.mp4,stream=video,output=glocken_video_encrypted.mp4 \
       --enable_fixed_key_encryption --enable_fixed_key_decryption \
       -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE
 
@@ -297,8 +298,8 @@ This example implies that I've typed or pasted the key into the command line
 manually. There's no reason you can't get fancy.
  
     packager \
-      input=myvideo.mp4,stream=audio,output=glocka.m4a \
-      input=myvideo.mp4,stream=video,output=glockv.mp4 \
+      input=glocken.mp4,stream=audio,output=glocken_audio_encrypted.m4a \
+      input=glocken.mp4,stream=video,output=glocken_video_encrypted.mp4 \
       --enable_fixed_key_encryption --enable_fixed_key_decryption \
       -key "$(< media.key)" -key_id "$(< media.key)"
 

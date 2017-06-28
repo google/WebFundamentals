@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A summary of commands used to convert a raw mov file to an encrypted full HD file for web playback.
 
-{# wf_updated_on: 2017-06-28 #}
+{# wf_updated_on: 2017-06-30 #}
 {# wf_published_on: 2017-06-09 #}
 
 # Media Manipulation Cheat Sheet  {: .page-title }
@@ -16,7 +16,7 @@ of 1080p (1920 x 1080). Adjust these values as your needs dictate.
  
 Conversion is done with two applications:
 [Shaka Packager](https://github.com/google/shaka-packager) and
-[ffmpeg](https://ffmpeg.org/download.html). Although
+[ffmpeg](https://ffmpeg.org/download.html), version 3.2.2-tessus. Although
 I've tried to show equivalent operations for all procedures, not all operations
 are possible in both applications.
  
