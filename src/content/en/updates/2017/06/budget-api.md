@@ -5,7 +5,7 @@ description: The Budget API allows developers to perform background actions with
 {# wf_updated_on: 2017-06-22 #}
 {# wf_published_on: 2017-06-07 #}
 {# wf_tags: javascript,origintrials #}
-{# wf_blink_components: Blink>PushAPI,Blink>Formss #}
+{# wf_blink_components: Blink>PushAPI #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 
 # Introduction to the Budget API {: .page-title }
