@@ -169,6 +169,9 @@ rel="preload">` has been fired.
       // Append the data into the new sourceBuffer.
       sourceBuffer.appendBuffer(data);
       // TODO: Fetch file_2.webm when user starts playing video.
+    })
+    .catch(error => {
+      // TODO: Show "Video is not available" message to user.
     });
   }
 
@@ -189,12 +192,31 @@ As it is not supported in every browser yet, you may want to detect its
 availability with the snippet below.
 
 ```
-function preloadSupported() {
-  const relList = document.createElement('link').relList;
-  if (!relList || !relList.supports)
-    return false;
-  return relList.supports('preload');
-}
+<link rel="preload" as="video" href="https://cdn.com/file_1.webm"
+    onload="preloadFinished()" onerror="preloadFailed()">
+
+<video id="video" controls></video>
+
+<script>
+  if (!preloadSupported()) {
+    // TODO: Fetch video from the network and load it.
+  }
+
+  function preloadFinished() {
+    // TODO: Load video.
+  }
+
+  function preloadFailed() {
+    // TODO: Show "Video is not available" message to user.
+  }
+
+  function preloadSupported() {
+    const relList = document.createElement('link').relList;
+    if (!relList || !relList.supports)
+      return false;
+    return relList.supports('preload');
+  }
+</script>
 ```
 
 ## Manual Buffering
