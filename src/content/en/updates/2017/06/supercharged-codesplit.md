@@ -28,9 +28,10 @@ loading and caching of script resources.
 
 ### Miscellaneous tips & tricks in this episode
 
-- `asyncFunction().catch()` with `error.stack`: 9:55
-- Modules and `nomodule` attribute on `<script>` tags: 7:30
-- `promisify()` in Node 8: 17:20
+- `asyncFunction().catch()` with `error.stack`: [9:55](https://youtu.be/4KVeNoN1aFM?t=9m55s)
+- Modules and `nomodule` attribute on `<script>` tags: [7:30](https://youtu.be/4KVeNoN1aFM?t=7m30s)
+- `promisify()` in Node 8: [17:20](https://youtu.be/4KVeNoN1aFM?t=17m20s)
+
 
 ### TL;DR: {: .hide-from-toc }
 
@@ -44,7 +45,7 @@ How to do code splitting via route-based chunking:
 
 ### Code splitting vs. route-based chunking
 
-> Time stamp: 1:50
+> Time stamp: [1:50](https://youtu.be/4KVeNoN1aFM?t=1m50s)
 
 Code splitting and route-based chunking are closely related and are often used interchangably. This
 has caused some confusion. Let’s try to clear this up:
@@ -87,7 +88,7 @@ save additional round trio times if needed.
 
 ### Step 1: Obtain a list of your entry points
 
-> Time stamp: 16:02
+> Time stamp: 16:02 [16:02](https://youtu.be/4KVeNoN1aFM?t=16m2s)
 
 This is only one of many approaches, but in the episode we parsed the website’s
 [`sitemap.xml`](https://github.com/GoogleChrome/ui-element-samples/blob/gh-pages/code-splitting/app/sitemap.xml)
@@ -96,7 +97,7 @@ used.
 
 ### Using babel to process JavaScript
 
-> Time stamp: 25:25 to 28:25
+> Time stamp: [25:25](https://youtu.be/4KVeNoN1aFM?t=25m25s) to [28:25](https://youtu.be/4KVeNoN1aFM?t=28m25s)
 
 Babel is commonly used for “transpiling”: consuming bleeding-edge JavaScript code and turning it
 into an older version of JavaScript so that more browsers are able to execute the code. The first
@@ -104,7 +105,7 @@ step here is to parse the new JavaScript with a parser (Babel uses
 [babylon](https://github.com/babel/babylon)) that turns the code into a so-called “Abstrac Syntax
 Tree” (AST). Once the AST has been generated, a series of plugins analyze and mangle the AST.
 
-Note: I am not very experiences with Babel. The plugins I built work, but they are probably neither
+Note: I am not very experienced with Babel. The plugins I built work, but they are probably neither
 efficient nor idiomatically babel. For a more in-depth guide to authoring Babel plugins, I
 recommend the [Babel Handbook](https://github.com/thejameskyle/babel-handbook).
 
@@ -135,7 +136,7 @@ file. To get more of a feeling for node types and the AST, take a look at
 
 ### Step 2: Extract the module dependencies
 
-> Time stamp: 28:25 to 34:57
+> Time stamp: [28:25](https://youtu.be/4KVeNoN1aFM?t=28m25s) to [34:57](https://youtu.be/4KVeNoN1aFM?t=34m57s)
 
 To build the dependency tree of a module, we will parse that module and create a list of all
 the modules it imports. We also need to parse those dependencies, as they in turn might have
@@ -170,7 +171,7 @@ async function buildDependencyTree(file) {
 
 ### Step 3: Find shared dependencies between all entry points
 
-> Time stamp: 34:57 to 38:30
+> Time stamp: [34:57](https://youtu.be/4KVeNoN1aFM?t=34m57s) to [38:30](https://youtu.be/4KVeNoN1aFM?t=38m30s)
 
 Since we have a set of dependency trees – a dependency forest if you will – we can find the shared
 dependencies by looking for nodes that appear in _every_ tree. We will flatten and deduplicate our
@@ -191,7 +192,7 @@ function findCommonDeps(depTrees) {
 
 ### Step 4: Bundle shared dependencies
 
-> Time stamp: 39:20 to 46:43
+> Time stamp: [39:20](https://youtu.be/4KVeNoN1aFM?t=39m20s) to [46:43](https://youtu.be/4KVeNoN1aFM?t=46m43s)
 
 To bundle our set of shared dependencies, we could just concatenate all the module files. Two
 problems arise when using that approach: The first problem is that the bundle will still contain
@@ -236,7 +237,7 @@ async function bundle(oldCode) {
 
 ### Step 5: Rewrite entry points
 
-> Time stamp: 46:43 to 46:43
+> Time stamp: [46:43](https://youtu.be/4KVeNoN1aFM?t=46m43s)
 
 For the last step we will write yet another Babel plugin. Its job is to remove all imports of
 modules that are in the shared bundle.
