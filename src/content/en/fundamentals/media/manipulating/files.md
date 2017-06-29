@@ -9,7 +9,7 @@ description: Let's take a raw video file off a camera and transform it into an e
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
-Now that I've introduced you to applications that can be used for media file
+Now that I've introduced you to applications that do media file
 manipulation, I'm going to take a raw video file off a camera and transform it
 into an encrypted resource that you can play back using a video library such as
 [Google's Shaka Player](https://shaka-player-demo.appspot.com/demo/). I'm
@@ -33,9 +33,9 @@ will be media resources with the following characteristics:
 
 By 'appropriate technologies' I mean **DASH** and **HLS**, which are the two
 primary means of providing video in HTML on the major browsers. What those terms
-mean and how to produce for them is getting a little ahead of things. Before you
-can even use those technologies, you need your media files in the correct
-format, which is the focus of this article.
+mean and how to use them is a whole topic itself. I won't be getting into those,
+but by the end of this article, you'll be able to create media files that are
+ready for use in DASH and HLS.
 
 One final note, selection of the file formats, bitrate and resolution are not
 arbitrary. I've selected these values for speedy playback on the mobile web.
@@ -106,9 +106,9 @@ file's size, webm is down in the single digits, though results may vary.
 ## Check your work
 
 This is a good place to remind you that you can verify the results of any task
-in this article using the same applications you did the work with. Remember
-that, as [described in the primers](applications), you'll need both since
-neither shows you everything.
+in this article using the same applications you're using to do the work.
+Remember that, as [described in the primers](applications), you'll need both
+ffmpeg and Shaka Packager since neither shows you everything.
 
     packager input=glocken.mp4 --dump_stream_info
 
@@ -116,7 +116,7 @@ neither shows you everything.
 
 ## Split the streams
 
-When you package media resources, for DASH, you'll need to separate the
+When you package media resources for DASH you'll need to separate the
 video and audio streams. Splitting the audio and video streams of a file is
 often referred to as **demultiplexing** or **demuxing** for short. Professional
 content creators often record audio and video to separate files to begin with.
@@ -142,9 +142,10 @@ command.
       input=glocken.mp4,stream=audio,output=glocken_audio.m4a
 
 A full discussion of audio and video formats is beyond the scope of this
-article. One thing to note is that the audio stream of an mp4 file is the
-[advanced audio coding]([https://en.wikipedia.org/wiki/Advanced_Audio_Coding)
-format for which m4a is a common file extension.
+article. Though, in the next section I'll cover what you need for DASH and HLS.
+One thing to note is that the audio stream of an mp4 file is the [advanced audio
+coding]([https://en.wikipedia.org/wiki/Advanced_Audio_Coding) format for which
+m4a is a common file extension.
 
 Shaka Packager presents demuxing as though you're _extracting_ a stream into a
 new file. It's a little different in ffmpeg, which presents as though you're
@@ -157,21 +158,23 @@ Just as with Shaka Packager, we have both an input and an output file. Another
 difference from Shaka Packager is that the streams are identified with flags
 that refer their codecs. The `-vcodec copy` and `-acodec copy` portions of the
 command tell ffmpeg to copy the streams I want while the `-an` and `-vn` flags
-strip the streams I don't want. The keyword copy means I'm moving the streams
+strip the streams I don't want. The keyword `copy` means I'm moving the streams
 without changing their codecs. 
 
-A list of the
+A list of
 [demuxing commands](/web/fundamentals/media/manipulating/cheatsheet#demux_split_audio_and_video)
 are provided on the cheat sheet.
 
 ## Change the codec
 
-Continuing downward, we arrive at the codec. As stated earlier, a codec is _not_
-the same thing as a container. Two files of the same container type could hold
-data compressed using completely different codecs. The webm format for example
-allows audio to be encoded using either [vorbis](https://en.wikipedia.org/wiki/Vorbis)
-or [opus](https://en.wikipedia.org/wiki/Opus_(audio_format)). To change the
-codec I need ffmpeg.
+Continuing downward, we arrive at the codec. _Codec_, which is short for _coder-
+decoder_, is a compression format for video or audio data.  As stated earlier, a
+codec is _not_ the same thing as a container. Two files of the same container
+type could hold data compressed using completely different codecs. The webm
+format for example allows audio to be encoded using either
+[vorbis](https://en.wikipedia.org/wiki/Vorbis) or
+[opus](https://en.wikipedia.org/wiki/Opus_(audio_format)). To change the codec I
+need ffmpeg.
 
 In the last section I demuxed the audio and video like this:
 
@@ -184,9 +187,25 @@ encoded with the aac codec.
 
     ffmpeg -i glocken.webm -vn -c:a vorbis glocken.m4a
 
-The [cheat sheet](/web/fundamentals/media/manipulating/cheatsheet#codec)
-contains a short list of codecs used for DASH and HLS, and commands needed to
-convert to them.
+The [cheat sheet](/web/fundamentals/media/manipulating/cheatsheet#codec) lists
+commands needed to convert codecs. The tables sumarize the libraries used in
+ffmpeg to perform the codec conversions for webm and mp4 files. These are the
+formats used for DASH and HLS respectively.
+
+***Video***
+
+| Extension | Codec | Library |
+| --- | ----- | --- |
+| mp4 | H264  | libx264 |
+| webm| VP9   | libvpx-vp9 |
+
+***Audio***
+
+| Extension | Codec | Library |
+| --- | ----- | --- |
+| mp4 | aac   | aac |
+| webm| vorbis | libvorbis |
+|     | opus | libopus |
 
 ## File properties
 
@@ -195,9 +214,9 @@ goals you'll see that I'm not quite done. Among the remaining items are bitrate
 and resolution. These properties correlate to the amount of data in a media
 file. It probably goes without saying, but I'm going to say it anyway, that you
 can always lower bitrate and resolution, but increasing them is a problem.
-Without special software an algorithms quality is going to take a hit.
+Without special software and algorithms, quality is going to take a hit.
 
-The first to changing bitrate and resultion is to [display the file
+The first step in changing bitrate and resultion is to [display the file
 characteristics](/web/fundamentals/media/manipulating/cheatsheet#display_characteristics)
 and verify that your source file has a higher bitrate or resultion than your
 desired result.
@@ -224,8 +243,9 @@ doing your own testing.
 | 2G mobile video | Depends on network type.<ul><li>EDGE: 0.4 Mbs</li><li>GPRS: 0.04Mbs</li></ul> |
 
 Which value should I use for video on my web pages? The short answer is at least
-the top three. If you're serving video someplace like India, you'll want to
-include 2G as well. For demonstration purposes, I'm going to target 3G.
+desktop, 4G, and 3G. If you're serving video in one of the markets referred to
+as "the next billion users", say India, for example, you'll want to include 2G
+as well. For demonstration purposes, I'm going to target 3G.
 
 In ffmpeg you set the bitrate with the (surprise!) bitrate (`-b`) flag.
 
@@ -260,6 +280,12 @@ transformations you'll make with ffmpeg.
 
     ffmpeg -i glocken.webm -s 1920x1080 glocken_1920x1080.webm
 
+It's worth reiterating that you should start from the highest resolution and
+bitrate file you have available. If you're one of the many who are now
+converting your sites from using Flash videos to HTML5 videos, you'll want to
+find your original camera or other high resolution sources and convert from that
+rather than from flv and f4v files.
+
 ## Encryption
 
 If you plan to enforce copyright on your media, you'll want to encrypt them. I'm
@@ -288,14 +314,14 @@ resources for both HLS and DASH.
 
     openssl rand -out media.key 16
 
-Some versions of OpenSSL seem to create a file with white space and new line
-characters. Make sure these are absent or removed from `media.key` before
+Note: Some versions of OpenSSL seem to create a file with white space and new
+line characters. Make sure these are absent or removed from `media.key` before
 proceeding.
 
 Use Shaka Packager to do the actual encryption. Use the content of the
 `media.key` file for both the `-key` and `-key-id` flags.
 
-Note: Technically, the key ID is supposed to be either the first 8 OR the
+Note: For Clear Key, the key ID is supposed to be either the first 8 OR the
 first 16 hex digits of the key. Since packager requires the key to be 16
 digits and does not allow a 32 digit key, both flags are the same length.
 

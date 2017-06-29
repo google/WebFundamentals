@@ -129,25 +129,6 @@ change codecs, but do not demux.
     ffmpeg -i myvideo.webm -v:c copy -v:a libvorbis myvideo.webm
     ffmpeg -i myvideo.webm -v:c copy -v:a libopus myvideo.webm
 
-The tables sumarize the libraries used in ffmpeg to perform the codec
-conversions for webm and mp4 files. These are the formats used for DASH and HLS
-respectively.
-
-***Video***
-
-| Extension | Codec | Library |
-| --- | ----- | --- |
-| mp4 | H264  | libx264 |
-| webm| VP9   | libvpx-vp9 |
-
-***Audio***
-
-| Extension | Codec | Library |
-| --- | ----- | --- |
-| mp4 | aac   | aac |
-| webm| vorbis | libvorbis |
-|     | opus | libopus |
-
 ## Package
 
 ### DASH/MPD
