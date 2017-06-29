@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-06-28 #}
+{# wf_updated_on: 2017-06-28 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Save Credentials from Forms {: .page-title }
@@ -106,7 +106,7 @@ Synchronous example:
 Asynchronous example:
 
     if (navigator.credentials) {
-       var c = navigator.credentials.create({password: e.target});
+       var c = await navigator.credentials.create({password: e.target});
        return navigator.credentials.store(c);
      } else {
        return Promise.resolve(profile);
@@ -157,8 +157,8 @@ or proceed to the personalized page.
 
       return fetch('/signin', {
         method: 'POST',
-        body: new FormData(e.target),
-        credentials: 'include'
+        credentials: 'include',
+        body: form
       }).then(res => {
         if (res.status == 200) {
           return Promise.resolve();
