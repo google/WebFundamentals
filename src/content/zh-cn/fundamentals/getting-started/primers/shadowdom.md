@@ -1075,7 +1075,7 @@ Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySe
 For now, `/deep/` [continues to work in `querySelectorAll()` calls](https://bugs.chromium.org/p/chromium/issues/detail?id=633007).
 {% endcomment %}
 
-###  使用 <template> 创建元素{: #fromtemplate}
+###  使用 &lt;template> 创建元素{: #fromtemplate}
 
 我们不是使用 `.innerHTML` 来填充影子根，而是使用一个声明性 `<template>`。
 模板是用于声明网络组件结构的理想占位符。
