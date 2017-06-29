@@ -31,13 +31,13 @@ will be media resources with the following characteristics:
 +  Encrypted
 +  Viewable on all major browsers using appropriate technologies
 
-By 'appropriate technologies' I mean **DASH** and **HLS**, which are the two
+By "appropriate technologies" I mean **DASH** and **HLS**, which are the two
 primary means of providing video in HTML on the major browsers. What those terms
 mean and how to use them is a whole topic itself. I won't be getting into those,
 but by the end of this article, you'll be able to create media files that are
 ready for use in DASH and HLS.
 
-One final note, selection of the file formats, bitrate and resolution are not
+One final note: selection of the file formats, bitrate and resolution are not
 arbitrary. I've selected these values for speedy playback on the mobile web.
 
 If you want to play along at home, you'll need a raw video file off a camera,
@@ -142,7 +142,7 @@ command.
       input=glocken.mp4,stream=audio,output=glocken_audio.m4a
 
 A full discussion of audio and video formats is beyond the scope of this
-article. Though, in the next section I'll cover what you need for DASH and HLS.
+article, though in the next section I'll cover what you need for DASH and HLS.
 One thing to note is that the audio stream of an mp4 file is the [advanced audio
 coding]([https://en.wikipedia.org/wiki/Advanced_Audio_Coding) format for which
 m4a is a common file extension.
@@ -163,7 +163,7 @@ without changing their codecs.
 
 A list of
 [demuxing commands](/web/fundamentals/media/manipulating/cheatsheet#demux_split_audio_and_video)
-are provided on the cheat sheet.
+is provided on the cheat sheet.
 
 ## Change the codec
 
@@ -305,7 +305,7 @@ content.
 
 In practice this is a simple way to encrypt and decrypt content for playback on
 the web. What's more, playback can be done with either DASH or HLS.  This
-section will show you how to encrypt using clear key.
+section will show you how to encrypt using Clear Key.
 
 The first thing you need to do is generate a key. You can use whatever method
 you want, but I'm going to use [OpenSSL](https://www.openssl.org/) to write
