@@ -88,10 +88,10 @@ Note: To create this article, I used ffmpeg version 3.2.2-tessus.
 
 Creating a webm file is a bit more complicated. ffmpeg has no trouble converting
 a mov file to a webm file that will play in Chrome and Firefox. For whatever
-reason, the file created using ffmpeg's defaults doesn't quite conform to the
-webm spec. (For the curious, it sets a `DisplayUnit` size that isn't defined by
-the webm spec.) Fortunately, I can fix this using a video filter. Do so with the
-`-vf` flag and the setsar filter.
+reason, the file created using ffmpeg's defaults (at least for the version I
+used) doesn't quite conform to the webm spec. (For the curious, it sets a
+`DisplayUnit` size that isn't defined by the webm spec.) Fortunately, I can fix
+this using a video filter. Do so with the `-vf` flag and the setsar filter.
 
     ffmpeg -i glocken.mov -vf setsar=1:1 glocken.webm
 
@@ -102,6 +102,17 @@ file's size, webm is down in the single digits, though results may vary.
     -rw-r--r--. 1 fr  12M Jun 27 11:48 glocken.mov
     -rw-rw-r--. 1 fr 9.7M Jun 27 14:47 glocken.mp4
     -rw-rw-r--. 1 fr 480K Jun 27 14:50 glocken.webm
+
+## Check your work
+
+This is a good place to remind you that you can verify the results of any task
+in this article using the same applications you did the work with. Remember
+that, as [described in the primers](applications), you'll need both since
+neither shows you everything.
+
+    packager input=glocken.mp4 --dump_stream_info
+
+    ffmpeg -i glocken.mp4
 
 ## Split the streams
 
@@ -286,22 +297,13 @@ Use Shaka Packager to do the actual encryption. Use the content of the
 
 Note: Technically, the key ID is supposed to be either the first 8 OR the
 first 16 hex digits of the key. Since packager requires the key to be 16
-digits and does not allow a 32 digit key, both flags use the same value.
+digits and does not allow a 32 digit key, both flags are the same length.
 
     packager \
       input=glocken.mp4,stream=audio,output=glocken_audio_encrypted.m4a \
       input=glocken.mp4,stream=video,output=glocken_video_encrypted.mp4 \
       --enable_fixed_key_encryption --enable_fixed_key_decryption \
       -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE
-
-This example implies that I've typed or pasted the key into the command line
-manually. There's no reason you can't get fancy.
- 
-    packager \
-      input=glocken.mp4,stream=audio,output=glocken_audio_encrypted.m4a \
-      input=glocken.mp4,stream=video,output=glocken_video_encrypted.mp4 \
-      --enable_fixed_key_encryption --enable_fixed_key_decryption \
-      -key "$(< media.key)" -key_id "$(< media.key)"
 
 ### Widevine Encryption
 
@@ -316,8 +318,8 @@ random hex digits. Use the keys provided here instead of your own. (This is how
 Widevine works.)
  
     packager \
-      input=glocken.mp4,stream=video,output=enc_video.mp4 \
-      input=glocken.mp4,stream=audio,output=enc_audio.m4a \
+      input=glocken.mp4,stream=audio,output=glocken_audio_encrypted.m4a \
+      input=glocken.mp4,stream=video,output=glocken_video_encrypted.mp4 \
       --enable_widevine_encryption \
       --key_server_url "https://license.uat.widevine.com/cenc/getcontentkey/widevine_test" \
       --content_id "16_Rand_Hex_Chrs" --signer "widevine_test" \
