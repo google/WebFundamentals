@@ -91,10 +91,19 @@ Here, in no particular order, are a few things I won't cover.
    `<audio>` and `<video>` elements.
 +  Error handling for the sake of simplicity and clarity.
 
-Warning: Handling error events, API exceptions, and proactively checking
-`HTMLMediaElement readyState` and `MediaSource readyState` values before making
-calls on their APIs are mandatory in a production usage of the APIs as these
-values can change before associated events are delivered.
+### Error handling
+
+Even though error handling is not covered in this article, here are some things
+I'd recommend in a production usage of these MSE related APIs:
+
+1. Before making calls on these APIs, handle any error events or API
+exceptions, and check `HTMLMediaElement readyState` and `MediaSource
+readyState`. These values can change before associated events are delivered.
+2. Make sure previous `appendBuffer()` calls are not pending by checking
+`sourceBuffer.updating` boolean value before appending new data.
+3. If `MediaSource readyState` value is `ended`, an `appendBuffer()` call will
+cause this value to transition to `open`. This means you should be prepared to
+handle multiple `sourceopen` events.
 
 ## Attach a MediaSource instance to a media element
 
