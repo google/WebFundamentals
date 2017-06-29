@@ -509,7 +509,7 @@ function testMarkdown(filename, contents, options) {
       position = {line: getLineNumber(contents, matched.index)};
       matched[1].split(',').forEach(function(component) {
         component = component.trim();
-        if (!(component in options.blinkComponents['component-to-team'])) {
+        if (options.blinkComponents.indexOf(component) === -1) {
           msg = `The component (\`${component}\`) is non-standard or misspelled.`
           logError(filename, position, msg);
         }
