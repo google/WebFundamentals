@@ -59,7 +59,7 @@ This section lists events that belong to the Scripting category and their proper
 |Animation Frame Fired| A scheduled animation frame fired, and its callback handler invoked.|
 |Cancel Animation Frame|  A scheduled animation frame was canceled.|
 |GC Event|  Garbage collection occurred.|
-|DOMContentLoaded|  The [DOMContentLoaded](https://docs.webplatform.org/wiki/dom/events/DOMContentLoaded) was fired by the browser. This event is fired when all of the page’s DOM content has been loaded and parsed.|
+|DOMContentLoaded|  The [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) was fired by the browser. This event is fired when all of the page’s DOM content has been loaded and parsed.|
 |Evaluate Script| A script was evaluated.|
 |Event| A JavaScript event ("mousedown", or "key", for example).|
 |Function Call| A top-level JavaScript function call was made (only appears when browser enters JavaScript engine).|

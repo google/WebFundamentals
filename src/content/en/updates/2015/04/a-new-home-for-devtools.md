@@ -14,7 +14,7 @@ description: We've moved into a shiny new home at developer.google.com/web have 
 
 When you're reading this, you're probably already close to our new home at [https://developers.google.com/web/](/web/), Google's new one-stop destination for everything web-related.
 
-Naturally, DevTools had to join the party so we've moved our main homepage – along with many of our tutorials – over to [http://developers.google.com/web/chrome-devtools](/web/chrome-devtools/). But don't let the new shiny fool yourself: We have plenty of content additions and more substantial changes for you.
+Naturally, DevTools had to join the party so we've moved our main homepage – along with many of our tutorials – over to [http://developers.google.com/web/chrome-devtools](/web/tools/chrome-devtools/). But don't let the new shiny fool yourself: We have plenty of content additions and more substantial changes for you.
 
 ## Goal-oriented tutorials
 

@@ -67,7 +67,7 @@ first-class example of an application using PRPL to granularly serve resources.
 It achieves interactivity for each route incredibly quickly on real-world mobile
 devices:
 
-![The Polymer Shop demo is interactive in 1.75s](images/app-build-prpl-shop.png)
+![The Polymer Shop demo is interactive in 1.75s](images/app-build-prpl-shop.jpg)
 
 For most real-world projects, it’s frankly too early to realize the PRPL vision
 in its purest, most complete form – but it’s definitely not too early to adopt

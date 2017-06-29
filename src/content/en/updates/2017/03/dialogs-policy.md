@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) used to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs.
 
-{# wf_updated_on: 2017-05-25 #}
+{# wf_updated_on: 2017-06-27 #}
 {# wf_published_on: 2017-03-24 #}
 {# wf_tags: policy,dialog,javascript #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -61,6 +61,10 @@ change took place across all channels at the beginning of May 2017.
 (This does not change the dispatching of the `beforeunload` event.) This aligns
 Chromium with Firefox, which made this change with [Firefox
 44](https://bugzilla.mozilla.org/show_bug.cgi?id=636905).
+
+Showing an `alert()/confirm()/prompt()` dialog while in fullscreen will cause
+fullscreen to be lost
+[starting in Chrome 61](https://www.chromestatus.com/feature/5669548871122944).
 
 Because of these changes, if your site uses dialogs, it is highly recommended
 that you move to using the earlier-mentioned alternatives so that this will not

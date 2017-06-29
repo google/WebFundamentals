@@ -1661,9 +1661,12 @@ canMakePaymentPromise.then((result) => {
 
 #### Edge Cases
 
-Querying `canMakePayment()` too often will result in a quota error:
+Querying `canMakePayment()` with different payment methods will 
+result in a quota error:
 
 `DOMException: Query quota exceeded`
+
+The reason this error is thrown is to block attempts to fingerprint the user.
 
 At the time of writing, Chrome will reset the quota after 30 minutes or when
 it's restarted.

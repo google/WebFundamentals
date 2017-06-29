@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Latest Updates to the Credential Management API
 
-{# wf_updated_on: 2017-06-12 #}
+{# wf_updated_on: 2017-06-27 #}
 {# wf_published_on: 2017-06-12 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
@@ -12,7 +12,7 @@ description: Latest Updates to the Credential Management API
 
 {% include "web/_shared/contributors/agektmr.html" %}
 
-Some of the updates described here are explained at the Google I/O session,
+Some of the updates described here are explained in the Google I/O session,
 **Secure and Seamless Sign-In: Keeping Users Engaged**:
 
 <div class="video-wrapper-full-width">
@@ -70,6 +70,26 @@ instead of boolean flag `unmediated`.
 
 * [New method `navigator.credentials.create()`](#credentialscreate)
 asynchronously creates credential objects.
+
+
+### Feature detection needs attention
+
+<aside class="warning">
+  <strong>Warning:</strong>
+Because updates to the Credential Management API landed on Chrome 60 contains
+backward incompatibile changes, it's important that your implementation won't be
+triggered on older versions. (If you intentionally want to do so, checkout <a href="https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8/edit">this
+migration guide doc.</a>
+</aside>
+
+To check if the new Credential Management API is available, check if
+`preventSilentAccess` exists.
+
+```js
+if (navigator.credentials && navigator.credentials.preventSilentAccess) {
+  // The new Credential Management API is available
+}
+```
 
 ### `PasswordCredential` object now includes password {: #password}
 
@@ -130,7 +150,7 @@ You can use existing methods to deliver credential information to your server:
   <strong>Warning:</strong>
   Now that passwords are no longer returned in the <code>PasswordCredential</code> object,
   the custom <code>fetch()</code> function will stop working in Chrome 62.
-  Developers <stromg>must</stromg> update their code.
+  Developers <strong>must</strong> update their code.
 </aside>
 
 To determine if you are using a custom `fetch()` function,
@@ -162,8 +182,8 @@ with a boolean flag. For example:
       // Sign-in
     });
 
-Setting `unmediated: true` prevents the browser from passing a credential
-without showing the account chooser and skips user mediation.
+Setting `unmediated: true` prevents the browser from showing the account chooser
+when passing a credential.
 
 The flag is now extended as mediation.
 The user mediation could happen when:
@@ -203,7 +223,7 @@ Choose one of the following options for the `mediation` value:
 </table>
 
 In this example,
-the credential is passed without showing an account choosen,
+the credential is passed without showing an account chooser,
 the equivalent of the previous flag, `unmediated: true`:
 
     navigator.credentials.get({
@@ -254,8 +274,10 @@ Read on for a comparison between both the sync and async approaches.
 or:
 
     let c = await navigator.credentials.create({
-      id: id,
-      password: password
+      password: {
+        id: id,
+        password: password
+      }
     });
 
 #### Creating a `FederatedCredential` object
@@ -272,10 +294,12 @@ or:
 ##### Async approach (new)
 
     let c = await navigator.credentials.create({
-      id:       'agektmr',
-      name:     'Eiji Kitamura',
-      provider: 'https://accounts.google.com',
-      iconURL:  'https://*****'
+      federated: {
+        id:       'agektmr',
+        name:     'Eiji Kitamura',
+        provider: 'https://accounts.google.com',
+        iconURL:  'https://*****'
+      }
     });
 
 ## Migration guide
