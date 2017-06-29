@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Much media work requires changing characteristics of media files. In this section, I intend to provide an easy onramp into that world.
 
-{# wf_updated_on: 2017-06-20 #}
+{# wf_updated_on: 2017-06-23 #}
 {# wf_published_on: 2017-06-09 #}
 
 # Application Primers {: .page-title }
