@@ -55,12 +55,19 @@ handlers:
   secure: always
 
 skip_files:
+- ^CONTRIBUTING\.md$
+- ^README\.md$
+- ^TRANSLATION\.md$
+- ^gcloud-client-secret\.json.*
+- ^gulpfile\.js$
+- ^package\.json$
 - ^gulp-tasks/.*
 - ^node_modules/.*
 - ^scratch/.*
-- ^tools/.*
 - ^src/data/.*
 - ^src/templates/.*
+- ^src/tests/.*
+- ^tools/.*
 - ^(.*/)?#.*#$
 - ^(.*/)?.*~$
 - ^(.*/)?.*\.DS_Store$

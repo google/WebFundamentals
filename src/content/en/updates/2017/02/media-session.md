@@ -267,7 +267,7 @@ shows up on lock screens.
 <div class="clearfix"></div>
 <div class="attempt-left">
   <figure>
-    <img src="/web/updates/images/2017/02/lock-screen.png" alt="Lock Screen">
+    <img src="/web/updates/images/2017/02/lock-screen.jpg" alt="Lock Screen">
     <figcaption>
       Lock Screen - 
       <a href="https://wikipedia.org/wiki/Rick_Astley#/media/File:Rick_Astley_Tivoli_Gardens.jpg">

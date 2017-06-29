@@ -929,7 +929,8 @@ This next bit involves a whole bunch of new ES6 features, but it's not something
 you need to understand to use promises in your code today. Treat it like a movie
 trailer for some upcoming blockbuster features.
 
-ES6 also gives us [generators](http://wiki.ecmascript.org/doku.php?id=harmony:generators),
+ES6 also gives us
+[generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators),
 which allow functions to exit at a particular point, like "return", but
 later resume from the same point and state, for example:
 

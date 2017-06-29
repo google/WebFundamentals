@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Budget API allows developers to perform background actions without notifying users, enabling use cases like silent push.
 
-{# wf_updated_on: 2017-06-19 #}
+{# wf_updated_on: 2017-06-22 #}
 {# wf_published_on: 2017-06-07 #}
 {# wf_tags: javascript,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
@@ -11,14 +11,14 @@ description: The Budget API allows developers to perform background actions with
 
 The Push Messaging API enables us to send notifications to a user even when the
 browser is closed. Many developers want to be able to use this messaging to
-update and synchornise content without the browser being open, but the API has
+update and synchronize content without the browser being open, but the API has
 one important restriction: you must always display a notification for every
 single push message recieved.
 
 Being able to send a push message to synchronize data on a user's device or hide
-a notification you had previously shown can be
-extremely useful for users and developers, but allowing a web app to do work in
-the background without the user knowing is open to abuse.
+a notification you had previously shown can be extremely useful for users and
+developers, but allowing a web app to do work in the background without the user
+knowing is open to abuse.
 
 The [Budget
 ](https://wicg.github.io/budget-api/)[API](https://wicg.github.io/budget-api/),
@@ -37,7 +37,7 @@ visibility. The user agent will be responsible for determining budget
 assigned to a web app based on it's heuristics, for example budget allowance
 could be linked to user engagement. Each browser can decide it's own heuristic.
 
-**TL;DR **The budget API allows to you to reserve budget, use budget, get a list
+**TL;DR **The Budget API allows to you to reserve budget, use budget, get a list
 of remaining budget and understand the cost of background operations
 
 ## Reserving Budget
@@ -51,8 +51,8 @@ the budget was reserved, there is no need to notify the user of your background
 work.
 
 In the example of push notifications, you can attempt to reserve budget for a
-"silent-push" operation and if `reserve()` resolves with true, the operation is allowed.
-Otherwise it'll return false and you'll need to show a notification
+"silent-push" operation and if `reserve()` resolves with true, the operation is 
+allowed. Otherwise it'll return false and you'll need to show a notification
 
 ```javascript
 self.addEventListener('push', event => {
@@ -108,9 +108,10 @@ Let's look how to use these APIs.
 
 ### Get your Budget
 
-You can find your available budget with the `getBudget()` method. This returns
-an array of BudgetStates which will indicate your budget at various points in
-time.
+You can find your available budget with the `getBudget()` method. Some browsers 
+(like Chrome) will have budget 'decay' over time, so to give you full 
+visibility this returns an array of `BudgetStates`, indicating what your budget 
+will be at various times in the future.
 
 To list the budget entries we can run:
 
@@ -124,8 +125,8 @@ navigator.budget.getBudget()
 });
 ```
 
-The first entry will be your current budget and additional values will be future
-changes to your budget.
+The first entry will be your current budget and additional values will show 
+what your budget will be at various points in the future.
 
 ```
 At 'Mon Jun 05 2017 12:47:20' you will have a budget of '3'.

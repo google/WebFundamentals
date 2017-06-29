@@ -38,8 +38,8 @@ the creation (encoding) of each MP3; you'll hear glitches at these points.
 
 <p style="text-align: center;">
   <video controls poster="/web/fundamentals/media/videos/poster-red.jpg">
-    <source src="/web/fundamentals/media/videos/gap.webm" type="video/webm" />
-    <source src="/web/fundamentals/media/videos/gap.mp4" type="video/mp4" />
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/gap.webm" type="video/webm" />
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/gap.mp4" type="video/mp4" />
   </video>
 </p>
 
@@ -52,8 +52,8 @@ been joined and the gaps removed. On Chrome 38+ this will playback seamlessly!
 
 <p style="text-align: center;">
   <video controls poster="/web/fundamentals/media/videos/poster-green.jpg">
-    <source src="/web/fundamentals/media/videos/gapless.webm" type="video/webm" />
-    <source src="/web/fundamentals/media/videos/gapless.mp4" type="video/mp4" />
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/gapless.webm" type="video/webm" />
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/gapless.mp4" type="video/mp4" />
   </video>
 </p>
 
@@ -232,9 +232,9 @@ codec type. Below you can replay the original demo DASH-ready fragmented MP4
 instead of MP3.
 
 <p style="text-align: center;">
-  <video controls poster="/web/fundamentals/media/videos/poster.jpg">
-    <source src="/web/fundamentals/media/videos/mp4gapless.webm" type="video/webm" />
-    <source src="/web/fundamentals/media/videos/mp4gapless.mp4" type="video/mp4" />
+  <video controls poster="/web/fundamentals/media/videos/poster-red.jpg">
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/mp4gapless.webm" type="video/webm" />
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/mp4gapless.mp4" type="video/mp4" />
   </video>
 </p>
 
