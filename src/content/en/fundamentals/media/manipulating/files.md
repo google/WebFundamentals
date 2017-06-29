@@ -43,7 +43,7 @@ arbitrary. I've selected these values for speedy playback on the mobile web.
 If you want to play along at home, you'll need a raw video file off a camera,
 preferably one that contains both audio and video. If you don't have one handy,
 then here's
-<a href="/web/fundamentals/media/videos/glocken.mov" download>ten seconds of an mov file</a>
+<a href="https://storage.googleapis.com/webfundamentals-assets/fundamentals/media/videos/glocken.mov">ten seconds of an mov file</a>
 that I took of the
 [Rathaus-Glockenspiel](https://en.wikipedia.org/wiki/Rathaus-Glockenspiel)
 in Munich's MarienPlatz. 
