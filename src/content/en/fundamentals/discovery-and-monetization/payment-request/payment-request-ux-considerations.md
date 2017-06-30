@@ -8,7 +8,9 @@ book_path: /web/fundamentals/_book.yaml
 # Payment Request UX considerations {: .page-title }
 {% include "web/_shared/contributors/mustafa.html" %}
 
-The [Payment Request API](/web/fundamentals/discovery-and-monetization/payment-request/) was fundamentally built for users, helping
+The 
+[Payment Request API](/web/fundamentals/discovery-and-monetization/payment-request/) 
+was fundamentally built for users, helping
 them get through burdensome checkout flows on mobile efficiently,
 while providing merchants with a higher conversion rate.
 
