@@ -510,3 +510,7 @@ Payments Request API is currently supported by;
 You can track the latest status for all other browsers here 
 on [caniuse.com](https://caniuse.com/#search=payments).
 
+## Stickersheet
+
+To create your own flows, you can download the Payments Request API sticker sheet from [our Github Repo](https://goo.gl/daxhRa). 
+
