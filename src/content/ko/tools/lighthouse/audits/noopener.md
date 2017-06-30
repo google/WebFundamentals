@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: 'rel="noopender"을 사용하여 외부 앵커를 여는 사이트' Lighthouse 감사의 참조 문서입니다.
+description: 'rel="noopener"을 사용하여 외부 앵커를 여는 사이트' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-11-30 #}
 {# wf_published_on: 2016-11-30 #}
 
-# rel="noopender"을 사용하여 외부 앵커를 여는 사이트  {: .page-title }
+# rel="noopener"을 사용하여 외부 앵커를 여는 사이트  {: .page-title }
 
 ## 감사가 중요한 이유 {: #why }
 

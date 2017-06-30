@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Documentação de referência para a auditoria do Lighthouse “Site abre âncoras externas usando rel="noopender"”.
+description: Documentação de referência para a auditoria do Lighthouse “Site abre âncoras externas usando rel="noopener"”.
 
 {# wf_updated_on: 2016-11-30 #}
 {# wf_published_on: 2016-11-30 #}
