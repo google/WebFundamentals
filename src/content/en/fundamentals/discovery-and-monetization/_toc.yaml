@@ -17,6 +17,10 @@ toc:
       - title: Deep Dive into the Payment Request API
         path: /web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request
       - title: Payment Request UX considerations 
+<<<<<<< HEAD
         path: /web/fundamentals/discovery-and-monetization/payment-request/payment-request-ux-considerations
+=======
+        path: /web/fundamentals/discovery-and-monetization/payment-ux/payment-request-ux-considerations
+>>>>>>> fe6d8051ee043f9665efdfdeca89706982e2a0a6
       - title: Integrating Android Pay into Payment Request
         path: /web/fundamentals/discovery-and-monetization/payment-request/android-pay

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids Old CSS Flexbox" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-06-28 #}
 {# wf_published_on: 2016-12-05 #}
 
 # Avoids Old CSS Flexbox  {: .page-title }
@@ -12,6 +12,11 @@ description: Reference documentation for the "Avoids Old CSS Flexbox" Lighthouse
 The old, 2009 specification for Flexbox is deprecated and is 2.3x slower
 than the latest specification. See [Flexbox Layout Isn't Slow][slow] to learn
 more.
+
+Caution: Consider ignoring this audit if a large portion of your users use
+UCBrowser. See [googlechrome/lighthouse#1710][uc].
+
+[uc]: https://github.com/GoogleChrome/lighthouse/issues/1710#issuecomment-294470505
 
 [slow]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
 
@@ -26,6 +31,18 @@ Flexbox properties. In short, every property that begins with `box`,
 such as `box-flex`, is deprecated and should be replaced. See
 [CSS Flexbox 2009/2011 Spec Syntax Property Mapping][map] to see exactly how the
 old properties map to the new ones.
+
+Lighthouse also flags vendor prefix values, such as `display: -ms-flexbox`.
+Lighthouse flags these so that you know that you're sending more bytes in
+your CSS than needed. If you're using Autoprefixer, you can prevent it
+from printing out vendor prefixes by adding the following rule to your
+`package.json` config:
+
+    "browserslist": [
+      "last 2 versions",
+      "not ie <= 10",
+      "not ie_mob <= 10"
+    ]
 
 [map]: https://wiki.csswg.org/spec/flexbox-2009-2011-spec-property-mapping
 
