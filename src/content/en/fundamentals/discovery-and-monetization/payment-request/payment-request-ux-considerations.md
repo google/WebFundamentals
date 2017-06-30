@@ -8,7 +8,7 @@ book_path: /web/fundamentals/_book.yaml
 # Payment Request UX considerations {: .page-title }
 {% include "web/_shared/contributors/mustafa.html" %}
 
-The Payment Request API was fundamentally built for users, helping
+The [Payment Request API](/web/fundamentals/discovery-and-monetization/payment-request/) was fundamentally built for users, helping
 them get through burdensome checkout flows on mobile efficiently,
 while providing merchants with a higher conversion rate.
 
@@ -76,6 +76,7 @@ phone number, you can simply request these details and avoid requiring
 users to sign in.
 
 ### Gracefully handle the UX flow 
+
 Chrome handles some aspects of the processing, cancellation, and 
 success but as a best practice, you
 should signal to the user what the status of their checkout is. For
@@ -115,7 +116,7 @@ by using steppers.
 Some of the UI is customisable with some exceptions such as the 
 colour of button and their respective text labels.
 
-NOTE: This example is for the Chrome browser. Other browsers 
+Note: This example is for the Chrome browser. Other browsers 
 may contain different UI elements as well, or even labels for 
 buttons such as ‘Pay’ and ‘Cancel’.
 
@@ -162,15 +163,15 @@ on brand recognition.
 Try to limit the amount of work it takes for a user to 
 make a purchase. A simple UI with clear text labels will 
 give the users a perceived increase in speed. For example 
-using a <em>“Buy Now”</em> button allows the user to make 
+using a <em>"Buy Now"</em> button allows the user to make 
 a simple one tap purchase without forcing them to create 
 an account or populate a shopping cart. The faster a user 
 can checkout, the more satisfied they become. This means 
 the chance of them completing the process greatly 
 increases and as does the chance of repeat business. 
-Allowing users to purchase an item with a <em>“Buy now”</em> 
-or <em>“Express Checkout”</em> button (versus <em>“Adding 
-to cart”</em>), will improve their perceived speed, 
+Allowing users to purchase an item with a <em>"Buy now"</em> 
+or <em>"Express Checkout"</em> button (versus <em>"Adding 
+to cart"</em>), will improve their perceived speed, 
 thereby making your checkout a success. 
 
 <div>
@@ -222,9 +223,9 @@ with motor disability skills.
 As well as providing confirmation to users that a 
 purchase was successful, provide feedback to reassure 
 them of the status of their experience. One example of 
-feedback is a <a 
-href="https://material.io/guidelines/components/snackbars-toasts.html">
-“Snackbar” UI</a>, that appears once an action is 
+feedback is a 
+["Snackbar" UI](https://material.io/guidelines/components/snackbars-toasts.html), 
+that appears once an action is 
 completed. The average reader can read and comprehend 
 between 200-400 words per minute. Depending on the 
 length of the string make sure you leave the UI on 
@@ -269,8 +270,8 @@ Make sure you use the labels that make the most sense.
     alt="This is an example of a label titled 'pickup'">
   </figure>
 </div>
-Depending on the context the label <em>“Pickup”</em> may be more 
-appropriate than the label <em>“Delivery”</em>.
+Depending on the context the label <em>"Pickup"</em> may be more 
+appropriate than the label <em>"Delivery"</em>.
 
 ### Provide fall back options to the user
 Don't block a purchase on Payment Request. If isn’t 
@@ -318,8 +319,8 @@ and gives the user a PDF.
 </video>
 
 ### Buy now UI
-In this example every item has a “Buy now”. When a user taps or 
-clicks “Buy now” they begin the checkout process, first by 
+In this example every item has a "Buy now". When a user taps or 
+clicks "Buy now" they begin the checkout process, first by 
 asking for specific delivery dates and a custom message. 
 The next step in the process launches the Payments Request 
 API which is followed by a confirmation page. 
@@ -328,7 +329,7 @@ API which is followed by a confirmation page.
     <img src="images/general-ux-buy-now.png" 
     alt="This is an example of 'buy now' buttons">
     <figcaption>
-    	Add <em>‘Buy now’</em> buttons where possible to 
+    	Add <em>"Buy now"</em> buttons where possible to 
     	create quick checkout experience
 	</figcaption>
   </figure>
@@ -384,7 +385,7 @@ discount coupons.
 The Payment Request API doesn’t deal with vouchers and 
 loyalty codes directly. If a merchant requires these then 
 present them before the user clicks pay. If you have a 
-<em>“Buy now”</em> button then give the user the ability 
+<em>"Buy now"</em> button then give the user the ability 
 to add 
 any codes or loyalty card schemes here. 
 
@@ -398,7 +399,7 @@ any codes or loyalty card schemes here.
     	complete the transaction. (The <a 
     	href="https://woocommerce.paymentrequest.show/">
     	demo website</a> works only with a fake credit 
-    	card number “4242 4242 4242 4242.”)
+    	card number "4242 4242 4242 4242.")
 	</figcaption>
   </figure>
 </div>
@@ -410,7 +411,7 @@ Request API flow begins. Ideally you would want to minimise
 the steps and actions taken by the user by keeping the TOS 
 next to the buy button or a link. However there are some 
 cases where this is not possible, so one solution is after 
-the user clicks the “Buy Now” button, provide an additional 
+the user clicks the "Buy Now" button, provide an additional 
 step in the processes asking for acceptance of the TOS. 
 The next step is to launch the PR Payment Request flow.
 
@@ -422,7 +423,7 @@ Then once you have processed the payment details, you can
 offer up any UI you choose. 
 
 So in this visual example: 
-* The user taps “Buy now” and the merchant calls 
+* The user taps "Buy now" and the merchant calls 
 the function show();
 
 * Then the merchant either processes the payment with 
@@ -475,18 +476,16 @@ Code example:
 	    // Handle error.
 	});
 
-You can find code for <a 
-href=
-"https://github.com/w3c/payment-request-info/wiki/
-CodeExamples#show-additional-user-interface-after-successful-payment">
-more unique use cases here</a>.
+You can find code for more unique use cases 
+[here](https://github.com/w3c/payment-request-info/wiki/
+CodeExamples#show-additional-user-interface-after-successful-payment).
 
 ## Existing users 
 For existing customers you can still use the Payments 
 Request API, but you may need to adjust the experience 
 and present new UI to your existing signed-in customers. 
 For example you may introduce the Payment Request API with 
-an “Express pay” button, a "Pay with new card" button 
+an "Express pay" button, a "Pay with new card" button 
 or a "Ship to new address" button. 
 
 The goal is to show that the user can quickly buy things on 
@@ -499,16 +498,13 @@ speed and efficiency.
 
 ## Code demos and browser support
 You can experiment with the various features and UX patterns 
-with this demo <a href="https://paymentrequest.show/demo/">
-paymentrequest.show/demo/</a>. Payments Request API is 
-currently supported by;
+with this [demo](https://paymentrequest.show/demo/). 
+Payments Request API is currently supported by;
 
 * Chrome 53 and above on Android 
-
 * Chrome 60 and above on Desktop
-
 * Edge 15 and above on Desktop
 
-You can track the latest status for all other 
-browsers here on <a href="https://caniuse.com/#search=payments">caniuse.com</a>.
+You can track the latest status for all other browsers here 
+on [caniuse.com](https://caniuse.com/#search=payments).
 
