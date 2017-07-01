@@ -1,17 +1,17 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Oversized Images" Lighthouse audit.
+description: Reference documentation for the "Properly Size Images" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-25 #}
+{# wf_updated_on: 2017-06-29 #}
 {# wf_published_on: 2017-04-25 #}
 
-# Oversized Images  {: .page-title }
+# Properly Size Images  {: .page-title }
 
 ## Why the audit is important {: #why }
 
 Ideally, your page should never serve images that are larger than the
-user's screen. Anything larger than that just results in wasted bytes and
-slows down page load time.
+version that's rendered on the user's screen. Anything larger than that
+just results in wasted bytes and slows down page load time.
 
 ## How to pass the audit {: #how }
 
@@ -56,4 +56,39 @@ against the size of the actual image. The rendered size also accounts
 for device pixel ratio. If the rendered size is at least 25KB smaller than
 the actual size, then the image fails the audit.
 
-{% include "web/tools/lighthouse/audits/_feedback/oversized-images.html" %}
+## Feedback {: #feedback }
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'Oversized Images / Helpful';
+var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
+      label + ']';
+var feedback = {
+  "category": "Lighthouse",
+  "choices": [
+    {
+      "button": {
+        "text": "This Doc Was Helpful"
+      },
+      "response": "Thanks for the feedback.",
+      "analytics": {
+        "label": label
+      }
+    },
+    {
+      "button": {
+        "text": "This Doc Was Not Helpful"
+      },
+      "response": 'Sorry to hear that. Please <a href="' + url +
+          '" target="_blank">open a GitHub issue</a> and tell us how to ' +
+          'make it better.',
+      "analytics": {
+        "label": label,
+        "value": 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}

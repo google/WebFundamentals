@@ -3,11 +3,12 @@ book_path: /web/fundamentals/_book.yaml
 description: Media Source Extensions (MSE) is a JavaScript API that lets you build streams for playback from segments of audio or video.
 
 {# wf_published_on: 2017-02-08 #}
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2017-06-28 #}
 
 # Media Source Extensions {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 [Media Source Extensions (MSE)](https://www.w3.org/TR/media-source/)
 is a JavaScript API that lets you build streams for playback from segments of
@@ -90,6 +91,27 @@ Here, in no particular order, are a few things I won't cover.
 +  Playback controls. We get those for free by virtue of using the HTML5
    `<audio>` and `<video>` elements.
 +  Error handling for the sake of simplicity and clarity.
+
+### For use in production environments
+
+Here are some things I'd recommend in a production usage of MSE related APIs:
+
+- Before making calls on these APIs, handle any error events or API
+  exceptions, and check `HTMLMediaElement.readyState` and
+  `MediaSource.readyState`. These values can change before associated events are
+  delivered.
+- Make sure previous `appendBuffer()` and `remove()` calls are not still in
+  progress by checking the `SourceBuffer.updating` boolean value before
+  updating the `SourceBuffer`'s `mode`, `timestampOffset`, `appendWindowStart`,
+  `appendWindowEnd`, or calling `appendBuffer()` or `remove()` on the
+  `SourceBuffer`.
+- If you have multiple `SourceBuffer`s added to your `MediaSource`, ensure none
+  of their `updating` values are true before calling
+  `MediaSource.endOfStream()` or updating the `MediaSource.duration`.
+- If `MediaSource.readyState` value is `ended`, calls like `appendBuffer()` and
+  `remove()`, or setting `SourceBuffer.mode` or `SourceBuffer.timestampOffset`
+  will cause this value to transition to `open`. This means you should be
+  prepared to handle multiple `sourceopen` events.
 
 ## Attach a MediaSource instance to a media element
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A summary of commands used to convert a raw mov file to an encrypted full HD file for web playback.
 
-{# wf_updated_on: 2017-06-22 #}
+{# wf_updated_on: 2017-06-30 #}
 {# wf_published_on: 2017-06-09 #}
 
 # Media Manipulation Cheat Sheet  {: .page-title }
@@ -16,7 +16,7 @@ of 1080p (1920 x 1080). Adjust these values as your needs dictate.
  
 Conversion is done with two applications:
 [Shaka Packager](https://github.com/google/shaka-packager) and
-[ffmpeg](https://ffmpeg.org/download.html). Although
+[ffmpeg](https://ffmpeg.org/download.html), version 3.2.2-tessus. Although
 I've tried to show equivalent operations for all procedures, not all operations
 are possible in both applications.
  
@@ -79,12 +79,6 @@ For ffmpeg, I can do this while I'm converting to mp4 or webm.
  
     ffmpeg -i myvideo.mov -b:v 350K myvideo.mp4
     ffmpeg -i myvideo.mov -vf setsar=1:1 -b:v 350K myvideo.webm
- 
-For Shaka Packager:
- 
-    packager \
-      input=myvideo.mp4,stream=audio,output=myvideo_audio.m4a \
-      input=myvideo.mp4,stream=video,output=myvideo_video.mp4,bandwidth=350000
 
 ### File type
 
@@ -135,25 +129,6 @@ change codecs, but do not demux.
     ffmpeg -i myvideo.webm -v:c copy -v:a libvorbis myvideo.webm
     ffmpeg -i myvideo.webm -v:c copy -v:a libopus myvideo.webm
 
-The tables sumarize the libraries used in ffmpeg to perform the codec
-conversions for webm and mp4 files. These are the formats used for DASH and HLS
-respectively.
-
-***Video***
-
-| Extension | Codec | Library |
-| --- | ----- | --- |
-| mp4 | H264  | libx264 |
-| webm| VP9   | libvpx-vp9 |
-
-***Audio***
-
-| Extension | Codec | Library |
-| --- | ----- | --- |
-| mp4 | aac   | aac |
-| webm| vorbis | libvorbis |
-|     | opus | libopus |
-
 ## Package
 
 ### DASH/MPD
@@ -198,8 +173,8 @@ whitespace. For the `-key_id` flag repeat the key value.
     packager \
       input=myvideo.mp4,stream=audio,output=glocka.m4a \
       input=myvideo.mp4,stream=video,output=glockv.mp4 \
-      --enable_fixed_key_encryption --enable_fixed_key_decryption \
-      -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE \
+      --enable_fixed_key_encryption \
+      -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \
 
 ### Create a key information file
 
@@ -233,7 +208,7 @@ This command will accept a key with either 16 or 32 characters.
       input=glocken.mp4,stream=audio,output=enc_audio.m4a \
       --enable_widevine_encryption \
       --key_server_url "https://license.uat.widevine.com/cenc/getcontentkey/widevine_test" \
-      --content_id "16_Rand_Hex_Chrs" --signer "widevine_test" \
+      --content_id "Hex_converted_unique_ID" --signer "widevine_test" \
       --aes_signing_key "1ae8ccd0e7985cc0b6203a55855a1034afc252980e970ca90e5202689f947ab9" \
       --aes_signing_iv "d58ce954203b7c9a9a9d467f59839249"
 
@@ -269,7 +244,7 @@ Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need t
     ```  input=myvideo.webm,stream=video,output=myvideo_video.webm \```<br/>
     ```  input=myvideo.webm,stream=audio,output=myvideo_audio.webm \```<br/>
     ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
-    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE \```<br/>
+    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \```<br/>
     ```  --mpd_output myvideo_vod.mpd```
 
 ### DASH/mp4 with Shaka Packager
@@ -305,7 +280,7 @@ Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need t
     ```  input=mymovie.mp4,stream=audio,output=myaudio.m4a \```<br/>
     ```  input=mymovie.mp4,stream=video,output=myvideo.mp4 \```<br/>
     ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
-    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE \```<br/>
+    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \```<br/>
     ```  --mpd_output myvideo_vod.mpd```
     
 ### Widevine
@@ -363,4 +338,4 @@ ffmpeg when I need to.
     ```  --hls_master_playlist_output="master_playlist.m3u8" \```<br/>
     ```  --hls_base_url="http://localhost:1000/" \```<br/>
     ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
-    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE \```<br/>
+    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \```<br/>

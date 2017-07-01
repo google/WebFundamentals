@@ -144,7 +144,7 @@ gulp.task('build:updates', function() {
   var baseOutputPath = path.join(GLOBAL.WF.src.content, section);
   var options = {
     title: 'Updates',
-    description: 'The latest and freshest updates from the Web teams at Google. Chrome, Tooling and more.',
+    description: 'The latest and freshest updates from the Web teams at Google. Chrome, V8, tooling, and more.',
     section: section,
     outputPath: baseOutputPath
   };
