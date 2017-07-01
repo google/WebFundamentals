@@ -3,7 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description: Content Security Policy can significantly reduce the risk and impact of cross-site scripting attacks in modern browsers.
 
 {# wf_published_on: 2012-06-15 #}
-{# wf_updated_on: 2016-02-19 #}
+{# wf_updated_on: 2017-07-01 #}
+{# wf_blink_components: Blink>SecurityFeature #}
 
 # Content Security Policy {: .page-title }
 
@@ -39,7 +40,7 @@ impact of XSS attacks in modern browsers: Content Security Policy (CSP).
 * Report policy violations to your server before enforcing them.
 
 
-## Source Whitelists 
+## Source Whitelists
 
 
 The issue exploited by XSS attacks is the browser's inability to distinguish
@@ -380,7 +381,7 @@ directive, but we strongly discourage this. Banning the ability to execute
 strings makes it much more difficult for an attacker to execute unauthorized
 code on your site.
 
-## Reporting 
+## Reporting
 
 
 CSP's ability to block untrusted resources client-side is a huge win for your
@@ -435,7 +436,7 @@ turn up; when you're satisfied with its effect, start enforcing the new policy.
 
 
 
-## Real World Usage 
+## Real World Usage
 
 CSP 1 is quite usable in Chrome, Safari, and Firefox, but has very limited
 support in IE 10. You can <a href="http://caniuse.com/#feat=contentsecuritypolicy">
@@ -479,8 +480,8 @@ You'll be all set with `script-src https://platform.twitter.com; child-src
 https://platform.twitter.com`, as long as you move the JavaScript snippet
 that Twitter provides out into an external JavaScript file.
 
-* Other platforms have similar requirements, and can be addressed similarly. 
-We suggest just setting a `default-src` of `'none'`, and watching your console to 
+* Other platforms have similar requirements, and can be addressed similarly.
+We suggest just setting a `default-src` of `'none'`, and watching your console to
 determine which resources you'll need to enable to make the widgets work.
 
 Including multiple widgets is straightforward: simply combine the policy
@@ -525,7 +526,7 @@ overwrites the default for that specific type of resource.
 Content Security Policy Level 2 is a <a href="http://www.w3.org/TR/CSP2/">
 Candidate Recommendation</a>. The W3C's Web Application Security Working Group
 has already begun work on the specification's next iteration,
-[Content Security Policy Level 3](https://www.w3.org/TR/CSP3/){: .external }. 
+[Content Security Policy Level 3](https://www.w3.org/TR/CSP3/){: .external }.
 
 
 If you're interested in the discussion around these upcoming features,

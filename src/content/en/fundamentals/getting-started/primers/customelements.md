@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
-{# wf_updated_on: 2017-04-17 #}
 {# wf_published_on: 2016-06-28 #}
+{# wf_updated_on: 2017-07-01 #}
+{# wf_blink_components: Blink>DOM #}
 
 # Custom Elements v1: Reusable Web Components {: .page-title }
 
@@ -41,16 +42,16 @@ to create and a JavaScript `class` that extends the base `HTMLElement`.
 
     class AppDrawer extends HTMLElement {...}
     window.customElements.define('app-drawer', AppDrawer);
-    
+
     // Or use an anonymous class if you don't want a named constructor in current scope.
     window.customElements.define('app-drawer', class extends HTMLElement {...});
-    
+
 
 Example usage:
 
 
     <app-drawer></app-drawer>
-    
+
 
 It's important to remember that using a custom element is no different than using a `<div>` or any other element. Instances can be declared on the page, created dynamically in JavaScript, event listeners can be attached, etc. Keep reading for more examples.
 
@@ -65,12 +66,12 @@ Essentially, use the class to create a **public JavaScript API** for your tag.
 
 
     class AppDrawer extends HTMLElement {
-    
+
       // A getter/setter for an open property.
       get open() {
         return this.hasAttribute('open');
       }
-    
+
       set open(val) {
         // Reflect the value of the open property as an HTML attribute.
         if (val) {
@@ -80,12 +81,12 @@ Essentially, use the class to create a **public JavaScript API** for your tag.
         }
         this.toggleDrawer();
       }
-    
+
       // A getter/setter for a disabled property.
       get disabled() {
         return this.hasAttribute('disabled');
       }
-    
+
       set disabled(val) {
         // Reflect the value of the disabled property as an HTML attribute.
         if (val) {
@@ -94,13 +95,13 @@ Essentially, use the class to create a **public JavaScript API** for your tag.
           this.removeAttribute('disabled');
         }
       }
-    
+
       // Can define constructor arguments if you wish.
       constructor() {
         // If you define a ctor, always call super() first!
         // This is specific to CE and required by the spec.
         super();
-    
+
         // Setup a click listener on <app-drawer> itself.
         this.addEventListener('click', e => {
           // Don't toggle the drawer if it's disabled.
@@ -110,14 +111,14 @@ Essentially, use the class to create a **public JavaScript API** for your tag.
           this.toggleDrawer();
         });
       }
-    
+
       toggleDrawer() {
         ...
       }
     }
-    
+
     customElements.define('app-drawer', AppDrawer);
-    
+
 
 In this example, we're creating a drawer that has an `open` property, `disabled` property,
 and a `toggleDrawer()` method. It also [reflects properties as HTML attributes](#reflectattr).
@@ -148,20 +149,20 @@ Extending another custom element is done by extending its class definition.
         super(); // always call super() first in the ctor. This also calls the extended class' ctor.
         ...
       }
-    
+
       toggleDrawer() {
         // Possibly different toggle implementation?
         // Use ES2015 if you need to call the parent method.
         // super.toggleDrawer()
       }
-    
+
       anotherMethod() {
         ...
       }
     }
-    
+
     customElements.define('fancy-app-drawer', FancyDrawer);
-    
+
 
 ### Extending native HTML elements {: #extendhtml}
 
@@ -189,7 +190,7 @@ element that extends `<img>` needs to extend `HTMLImageElement`.
         super(); // always call super() first in the ctor.
         this.addEventListener('click', e => this.drawRipple(e.offsetX, e.offsetY));
       }
-    
+
       // Material design ripple animation.
       drawRipple(x, y) {
         let div = document.createElement('div');
@@ -202,9 +203,9 @@ element that extends `<img>` needs to extend `HTMLImageElement`.
         div.addEventListener('transitionend', e => div.remove());
       }
     }
-    
+
     customElements.define('fancy-button', FancyButton, {extends: 'button'});
-    
+
 
 Notice that the call to `define()` changes slightly when extending a native element. The required third parameter tells the browser which tag you're extending. This is necessary because many HTML tags share the same DOM interface. `<section>`, `<address>`, and `<em>` (among others) all share `HTMLElement`; both `<q>` and `<blockquote>` share `HTMLQuoteElement`; etc.. Specifying `{extends: 'blockquote'}` lets the browser know you're creating a souped-up `<blockquote>` instead of a `<q>`. See [the HTML spec](https://html.spec.whatwg.org/multipage/indices.html#element-interfaces) for
 the full list of HTML's DOM interfaces.
@@ -217,7 +218,7 @@ They can declare it by adding the `is=""` attribute on the native tag:
 
     <!-- This <button> is a fancy button. -->
     <button is="fancy-button" disabled>Fancy button!</button>
-    
+
 
 create an instance in JavaScript:
 
@@ -227,7 +228,7 @@ create an instance in JavaScript:
     button.textContent = 'Fancy button!';
     button.disabled = true;
     document.body.appendChild(button);
-    
+
 
 or use the `new` operator:
 
@@ -235,7 +236,7 @@ or use the `new` operator:
     let button = new FancyButton();
     button.textContent = 'Fancy button!';
     button.disabled = true;
-    
+
 
 Here's another example that extends `<img>`.
 
@@ -248,14 +249,14 @@ Here's another example that extends `<img>`.
         super(width * 10, height * 10);
       }
     }, {extends: 'img'});
-    
+
 
 Users declare this component as:
 
 
     <!-- This <img> is a bigger img. -->
     <img is="bigger-img" width="15" height="20">
-    
+
 
 or create an instance in JavaScript:
 
@@ -329,7 +330,7 @@ the DOM (e.g. the user calls `el.remove()`).
         ...
       }
     }
-    
+
 
 Define reactions if/when it make senses. If your element is sufficiently complex and opens a connection to IndexedDB in `connectedCallback()`, do the necessary cleanup work in `disconnectedCallback()`. But be careful! You can't rely on your element being removed from the DOM in all circumstances. For example, `disconnectedCallback()` will never be called if the user closes the tab.
 
@@ -347,7 +348,7 @@ Define reactions if/when it make senses. If your element is sufficiently complex
       });
       return p;
     }
-    
+
     // 1. Create two iframes, w1 and w2.
     Promise.all([createWindow(), createWindow()])
       .then(([w1, w2]) => {
@@ -358,11 +359,11 @@ Define reactions if/when it make senses. If your element is sufficiently complex
           }
         });
         let a = w1.document.createElement('x-adopt');
-    
+
         // 3. Adopts the custom element into w2 and invokes its adoptedCallback().
         w2.document.body.appendChild(a);
       });
-    
+
 
 ## Properties and attributes
 
@@ -374,13 +375,13 @@ For example, when the values of `hidden` or `id` are changed in JS:
 
     div.id = 'my-id';
     div.hidden = true;
-    
+
 
 the values are applied to the live DOM as attributes:
 
 
     <div id="my-id" hidden>
-    
+
 
 This is called "[reflecting properties to attributes](https://html.spec.whatwg.org/multipage/infrastructure.html#reflecting-content-attributes-in-idl-attributes)". Almost every property in HTML does this. Why? Attributes are also useful for configuring an
 element declaratively and certain APIs like accessibility and CSS selectors rely on attributes to work.
@@ -397,7 +398,7 @@ and/or prevent user interaction when it's disabled:
       opacity: 0.5;
       pointer-events: none;
     }
-    
+
 
 When the `disabled` property is changed in JS, we want that attribute to be added
 to the DOM so the user's selector matches. The element can provide that behavior
@@ -405,11 +406,11 @@ by reflecting the value to an attribute of the same name:
 
 
     ...
-    
+
     get disabled() {
       return this.hasAttribute('disabled');
     }
-    
+
     set disabled(val) {
       // Reflect the value of `disabled` as an attribute.
       if (val) {
@@ -419,7 +420,7 @@ by reflecting the value to an attribute of the same name:
       }
       this.toggleDrawer();
     }
-    
+
 
 ### Observing changes to attributes {: #attrchanges}
 
@@ -427,7 +428,7 @@ HTML attributes are a convenient way for users to declare initial state:
 
 
     <app-drawer open disabled></app-drawer>
-    
+
 
 Elements can react to attribute changes by defining a `attributeChangedCallback`.
 The browser will call this method for every change to attributes listed in the `observedAttributes` array.
@@ -435,15 +436,15 @@ The browser will call this method for every change to attributes listed in the `
 
     class AppDrawer extends HTMLElement {
       ...
-    
+
       static get observedAttributes() {
         return ['disabled', 'open'];
       }
-    
+
       get disabled() {
         return this.hasAttribute('disabled');
       }
-    
+
       set disabled(val) {
         if (val) {
           this.setAttribute('disabled', '');
@@ -451,7 +452,7 @@ The browser will call this method for every change to attributes listed in the `
           this.removeAttribute('disabled');
         }
       }
-    
+
       // Only called for the disabled and open attributes due to observedAttributes
       attributeChangedCallback(name, oldValue, newValue) {
         // When the drawer is disabled, update keyboard/screen reader behavior.
@@ -465,7 +466,7 @@ The browser will call this method for every change to attributes listed in the `
         // TODO: also react to the open attribute changing.
       }
     }
-    
+
 
 In the example, we're setting additional attributes on the `<app-drawer>` when a
 `disabled` attribute is changed. Although we're not doing it here, you could also
@@ -489,7 +490,7 @@ It vends a Promise that resolves when the element becomes defined.
     customElements.whenDefined('app-drawer').then(() => {
       console.log('app-drawer defined');
     });
-    
+
 
 **Example** - delay work until a set of child elements are upgraded
 
@@ -499,21 +500,21 @@ It vends a Promise that resolves when the element becomes defined.
       <social-button type="fb"><a href="...">Facebook</a></social-button>
       <social-button type="plus"><a href="...">G+</a></social-button>
     </share-buttons>
-    
+
 
 
     // Fetch all the children of <share-buttons> that are not defined yet.
     let undefinedButtons = buttons.querySelectorAll(':not(:defined)');
-    
+
     let promises = [...undefinedButtons].map(socialButton => {
       return customElements.whenDefined(socialButton.localName);
     ));
-    
+
     // Wait for all the social-buttons to be upgraded.
     Promise.all(promises).then(() => {
       // All social-button children are ready.
     });
-    
+
 
 Note: I think of custom elements as being in a state of limbo before they're defined. The [spec](https://dom.spec.whatwg.org/#concept-element-custom-element-state) defines an element's state as "undefined", "uncustomized", or "custom". Built-in elements like `<div>` are always "defined".
 
@@ -529,7 +530,7 @@ Custom elements can manage their own content by using the DOM APIs inside elemen
       }
       ...
     });
-    
+
 Declaring this tag will produce:
 
     <x-foo-with-markup>
@@ -585,7 +586,7 @@ entire app within a single tag:
 
     <!-- chat-app's implementation details are hidden away in Shadow DOM. -->
     <chat-app></chat-app>
-    
+
 
 To use Shadow DOM in a custom element, call `this.attachShadow` inside your `constructor`:
 
@@ -609,7 +610,7 @@ Example usage:
     <x-foo-shadowdom>
       <p><b>User's</b> custom text</p>
     </x-foo-shadowdom>
-    
+
     <!-- renders as -->
     <x-foo-shadowdom>
       <b>I'm in shadow dom!</b>
@@ -669,7 +670,7 @@ For those unfamiliar, the [`<template>` element](https://html.spec.whatwg.org/mu
       </style>
       <p>I'm in Shadow DOM. My markup was stamped from a &lt;template&gt;.</p>
     </template>
-    
+
     <script>
       customElements.define('x-foo-from-template', class extends HTMLElement {
         constructor() {
@@ -682,7 +683,7 @@ For those unfamiliar, the [`<template>` element](https://html.spec.whatwg.org/mu
         ...
       });
     </script>
-    
+
 
 These few lines of code pack a punch. Let's understanding the key things going on:
 
@@ -762,13 +763,13 @@ style your custom element from their page. These are called "user-defined styles
         margin: 0 7px;
       }
     </style>
-    
+
     <app-drawer>
       <panel-item>Do</panel-item>
       <panel-item>Re</panel-item>
       <panel-item>Mi</panel-item>
     </app-drawer>
-    
+
 
 You might be asking yourself how CSS specificity works if the element has
 styles defined within Shadow DOM. In terms of specificity, user styles win.
@@ -791,7 +792,7 @@ when they become defined.
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }
-    
+
 
 After `<app-drawer>` becomes defined, the selector (`app-drawer:not(:defined)`)
 no longer matches.
@@ -808,10 +809,10 @@ an `HTMLElement` if they're created with a valid name (includes a "-"). You can 
 
     // "tabs" is not a valid custom element name
     document.createElement('tabs') instanceof HTMLUnknownElement === true
-    
+
     // "x-tabs" is a valid custom element name
     document.createElement('x-tabs') instanceof HTMLElement === true
-    
+
 
 ## API reference
 
@@ -827,7 +828,7 @@ Example
     customElements.define('my-app', class extends HTMLElement { ... });
     customElements.define(
       'fancy-button', class extends HTMLButtonElement { ... }, {extends: 'button'});
-    
+
 
 **`get(tagName)`**
 
@@ -839,7 +840,7 @@ Example
 
     let Drawer = customElements.get('app-drawer');
     let drawer = new Drawer();
-    
+
 
 **`whenDefined(tagName)`**
 
@@ -853,7 +854,7 @@ Example
     customElements.whenDefined('app-drawer').then(() => {
       console.log('ready!');
     });
-    
+
 
 ## History and browser support {: #historysupport}
 
@@ -873,11 +874,11 @@ To feature detect custom elements, check for the existence of `window.customElem
 
 
     const supportsCustomElementsV1 = 'customElements' in window;
-    
+
 
 #### Polyfill {: #polyfill}
 
-Until browser support is widely available, there's a [polyfill](https://github.com/webcomponents/custom-elements/blob/master/custom-elements.min.js) available. 
+Until browser support is widely available, there's a [polyfill](https://github.com/webcomponents/custom-elements/blob/master/custom-elements.min.js) available.
 
 **Note**: the `:defined` CSS pseudo-class cannot be polyfilled.
 
@@ -897,7 +898,7 @@ Usage:
        document.head.appendChild(script);
      });
     }
-    
+
     // Lazy load the polyfill if necessary.
     if (!supportsCustomElementsV1) {
       loadScript('/bower_components/custom-elements/custom-elements.min.js').then(e => {
@@ -906,7 +907,7 @@ Usage:
     } else {
       // Native support. Good to go.
     }
-    
+
 
 ## Conclusion
 

@@ -3,7 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description: Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features rely on.
 
 {# wf_published_on: 2014-12-01 #}
-{# wf_updated_on: 2017-02-22 #}
+{# wf_updated_on: 2017-07-01 #}
+{# wf_blink_components: Blink>ServiceWorker #}
 
 # Service Workers: an Introduction {: .page-title }
 
@@ -18,12 +19,12 @@ foundation that all these features rely on.
 
 A service worker is a script that your browser runs in the background,
 separate from a web page, opening the door to features that don't need a web
-page or user interaction. Today, they already include features like 
-[push notifications](/web/updates/2015/03/push-notifications-on-the-open-web) 
-and [background sync](/web/updates/2015/12/background-sync). In the future, 
-service workers will support other things like periodic sync or geofencing. 
-The core feature discussed in this tutorial is the ability to intercept and 
-handle network requests, including programmatically managing a cache of 
+page or user interaction. Today, they already include features like
+[push notifications](/web/updates/2015/03/push-notifications-on-the-open-web)
+and [background sync](/web/updates/2015/12/background-sync). In the future,
+service workers will support other things like periodic sync or geofencing.
+The core feature discussed in this tutorial is the ability to intercept and
+handle network requests, including programmatically managing a cache of
 responses.
 
 The reason this is such an exciting API is that it allows you to support offline
@@ -32,26 +33,26 @@ experience.
 
 Before service worker, there was one other API that gave users an offline
 experience on the web called
-[AppCache](//www.html5rocks.com/en/tutorials/appcache/beginner/){: .external }. 
+[AppCache](//www.html5rocks.com/en/tutorials/appcache/beginner/){: .external }.
 There are a number of issues with the AppCache API that service workers
 were designed to avoid.
 
 Things to note about a service worker:
 
 * It's a [JavaScript Worker](//www.html5rocks.com/en/tutorials/workers/basics/){: .external },
-  so it can't access the DOM directly. Instead, a service worker can 
-  communicate with the pages it controls by responding to messages sent via 
-  the [postMessage](https://html.spec.whatwg.org/multipage/workers.html#dom-worker-postmessage) 
+  so it can't access the DOM directly. Instead, a service worker can
+  communicate with the pages it controls by responding to messages sent via
+  the [postMessage](https://html.spec.whatwg.org/multipage/workers.html#dom-worker-postmessage)
   interface, and those pages can manipulate the DOM if needed.
-* Service worker is a programmable network proxy, allowing you to control how 
+* Service worker is a programmable network proxy, allowing you to control how
   network requests from your page are handled.
-* It's terminated when not in use, and restarted when it's next needed, 
-  so you cannot rely on global state within a service worker's `onfetch` and 
-  `onmessage` handlers. If there is information that you need to persist and 
-  reuse across restarts, service workers do have access to the 
+* It's terminated when not in use, and restarted when it's next needed,
+  so you cannot rely on global state within a service worker's `onfetch` and
+  `onmessage` handlers. If there is information that you need to persist and
+  reuse across restarts, service workers do have access to the
   [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API).
-* Service workers make extensive use of promises, so if you're new to promises, 
-  then you should stop reading this and check out 
+* Service workers make extensive use of promises, so if you're new to promises,
+  then you should stop reading this and check out
   [Promises, an introduction](/web/fundamentals/getting-started/primers/promises).
 
 ## The service worker life cycle
@@ -91,11 +92,11 @@ first installation.
 ### Browser support
 
 Browser options are growing. Service workers are supported by Chrome, Firefox and
-Opera. Microsoft Edge is now 
-[showing public support](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/). 
-Even Safari has dropped [hints of future development](https://trac.webkit.org/wiki/FiveYearPlanFall2015). 
-You can follow the progress of all the browsers at Jake Archibald's 
-[is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/){: .external } 
+Opera. Microsoft Edge is now
+[showing public support](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/).
+Even Safari has dropped [hints of future development](https://trac.webkit.org/wiki/FiveYearPlanFall2015).
+You can follow the progress of all the browsers at Jake Archibald's
+[is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/){: .external }
 site.
 
 ### You need HTTPS
@@ -112,10 +113,10 @@ receives hasn't been tampered with during its journey through the network.
 [Github Pages](https://pages.github.com/){: .external } are served over HTTPS, so they're a
 great place to host demos.
 
-If you want to add HTTPS to your server then you'll need to get a TLS 
-certificate and set it up for your server. This varies depending on your setup, 
-so check your server's documentation and be sure to check out 
-[Mozilla's SSL config generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/) 
+If you want to add HTTPS to your server then you'll need to get a TLS
+certificate and set it up for your server. This varies depending on your setup,
+so check your server's documentation and be sure to check out
+[Mozilla's SSL config generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
 for best practices.
 
 ## Register A service worker
@@ -228,7 +229,7 @@ avoid setting an `install` event listener altogether.
 
 ## Cache and return requests
 
-Now that you've installed a service worker, you probably want to 
+Now that you've installed a service worker, you probably want to
   return one of your cached responses, right?
 
 After a service worker is installed and the user navigates to a different page
@@ -310,32 +311,32 @@ What we are doing is this:
 2. Once we get a response, we perform the following checks:
     1. Ensure the response is valid.
     2. Check the status is `200` on the response.
-    3. Make sure the response type is **basic**, which indicates that it's a 
-       request from our origin. This means that requests to third party assets 
+    3. Make sure the response type is **basic**, which indicates that it's a
+       request from our origin. This means that requests to third party assets
        aren't cached as well.
-3. If we pass the checks, we [clone](https://fetch.spec.whatwg.org/#dom-response-clone) 
-   the response. The reason for this is that because the response is a 
-   [Stream](https://streams.spec.whatwg.org/){: .external }, the body can only be consumed 
-   once. Since we want to return the response for the browser to use, as well 
-   as pass it to the cache to use, we need to clone it so we can send one to 
+3. If we pass the checks, we [clone](https://fetch.spec.whatwg.org/#dom-response-clone)
+   the response. The reason for this is that because the response is a
+   [Stream](https://streams.spec.whatwg.org/){: .external }, the body can only be consumed
+   once. Since we want to return the response for the browser to use, as well
+   as pass it to the cache to use, we need to clone it so we can send one to
    the browser and one to the cache.
 
 ## Update a service worker {: #update-a-service-worker }
 
-There will be a point in time where your service worker will 
+There will be a point in time where your service worker will
 need updating. When that time comes, you'll need to follow these steps:
 
 1. Update your service worker JavaScript file. When the user navigates to
    your site, the browser tries to redownload the script file that defined the
-   service worker in the background. If there is even a byte's difference in 
-   the service worker file compared to what it currently has, it considers it 
+   service worker in the background. If there is even a byte's difference in
+   the service worker file compared to what it currently has, it considers it
    _new_.
 2. Your new service worker will be started and the `install` event will be fired.
-3. At this point the old service worker is still controlling the current pages 
+3. At this point the old service worker is still controlling the current pages
    so the new service worker will enter a `waiting` state.
-4. When the currently open pages of your site are closed, the old service 
+4. When the currently open pages of your site are closed, the old service
    worker will be killed and the new service worker will take control.
-5. Once your new service worker takes control, its `activate` event will be 
+5. Once your new service worker takes control, its `activate` event will be
    fired.
 
 One common task that will occur in the `activate` callback is cache management.
@@ -374,21 +375,21 @@ whitelist.
 
 ## Rough edges and gotchas
 
-This stuff is really new. Here's a collection of issues that 
-get in the way. Hopefully this section can be deleted soon, but for now 
+This stuff is really new. Here's a collection of issues that
+get in the way. Hopefully this section can be deleted soon, but for now
 these are worth being mindful of.
 
 
 ### If installation fails, we're not so good at telling you about it
 
-If a worker registers, but then doesn't appear in `chrome://inspect/#service-workers` 
+If a worker registers, but then doesn't appear in `chrome://inspect/#service-workers`
 or `chrome://serviceworker-internals`, it's likely failed to
 install due to an error being thrown, or a rejected promise being passed to
 `event.waitUntil()`.
 
 To work around this, go to `chrome://serviceworker-internals` and check "Open
 DevTools window and pause JavaScript execution on service worker startup for
-debugging", and put a debugger statement at the start of your install event. 
+debugging", and put a debugger statement at the start of your install event.
 This, along with
 [Pause on uncaught exceptions](/web/tools/chrome-devtools/javascript/breakpoints),
 should reveal the issue.
@@ -398,7 +399,7 @@ should reveal the issue.
 
 #### No credentials by default
 
-When you use `fetch`, by default, requests won't contain credentials such as 
+When you use `fetch`, by default, requests won't contain credentials such as
 cookies. If you want credentials, instead call:
 
     fetch(url, {
@@ -434,7 +435,7 @@ appropriate image asset at run time and make a network request.
 For service worker, if you wanted to cache an image during the install step, you
 have a few options:
 
-1. Install all the images that the  `<picture>` element and the `srcset` 
+1. Install all the images that the  `<picture>` element and the `srcset`
    attribute will request.
 2. Install a single low-res version of the image.
 3. Install a single high-res version of the image.
@@ -478,12 +479,12 @@ but you may be able to use a similar approach to srcset.
 
 ## Learn more
 
-There is a list of documentation on service worker being maintained at 
+There is a list of documentation on service worker being maintained at
 [https://jakearchibald.github.io/isserviceworkerready/resources](https://jakearchibald.github.io/isserviceworkerready/resources.html)
 that you may find useful.
 
 ## Get help
 
-If you get stuck then please post your questions on Stackoverflow and use the 
-'[service-worker](http://stackoverflow.com/questions/tagged/service-worker)' 
+If you get stuck then please post your questions on Stackoverflow and use the
+'[service-worker](http://stackoverflow.com/questions/tagged/service-worker)'
 tag so that we can keep a track of issues and try and help as much as possible.

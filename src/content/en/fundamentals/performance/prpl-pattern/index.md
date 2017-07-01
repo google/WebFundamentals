@@ -3,13 +3,14 @@ book_path: /web/fundamentals/_book.yaml
 
 {# wf_updated_on: 2016-09-28 #}
 {# wf_published_on: 2016-09-28 #}
+{# wf_blink_components: Blink>Network,Blink>Loader #}
 
 # The PRPL Pattern {: .page-title }
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 
-Dogfood: PRPL is a new pattern we feel has great potential. At this stage, 
-we welcome experimentation with it while we iterate on the ideas in the 
+Dogfood: PRPL is a new pattern we feel has great potential. At this stage,
+we welcome experimentation with it while we iterate on the ideas in the
 pattern and collect more data on where it offers the greatest benefits.
 
 The mobile web is too slow. Over the years the web has evolved from a
@@ -151,7 +152,7 @@ Although it isn't a hard requirement for using PRPL, your build process could
 produce two builds:
 
 -   An unbundled build designed for server/browser combinations that support
-    HTTP/2 to deliver the resources the browser needs for a fast first paint 
+    HTTP/2 to deliver the resources the browser needs for a fast first paint
     while optimizing caching. The delivery of these resources can be triggered
     efficiently using [`<link rel="preload">`][Resource hints] or [HTTP/2 Push].
 
@@ -224,9 +225,9 @@ means they can be cached efficiently and be shared between pages.
 
 HTTP/2 Push needs to be utilized with care, as it forces data to the browser,
 even if the file is already in the browser’s local cache or bandwidth is
-already saturated. If done wrong, performance can suffer. 
-[`<link rel="preload">`][Resource hints] might be a good alternative to allow 
-the browser to make smart decisions about the prioritization of these requests.  
+already saturated. If done wrong, performance can suffer.
+[`<link rel="preload">`][Resource hints] might be a good alternative to allow
+the browser to make smart decisions about the prioritization of these requests.
 
 ## Conclusion
 

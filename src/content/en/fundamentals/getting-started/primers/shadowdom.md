@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components
 
-{# wf_updated_on: 2017-06-15 #}
-{# wf_published_on: 2016-08-01 #}
+{# wf_published_on: 2016-07-01 #}
+{# wf_updated_on: 2017-07-01 #}
+{# wf_blink_components: Blink>DOM #}
 
 # Shadow DOM v1: Self-Contained Web Components {: .page-title }
 
@@ -13,7 +14,7 @@ description: Shadow DOM allows web developers to create compartmentalized DOM an
 
 Shadow DOM removes the brittleness of building web apps. The brittleness
 comes from the global nature of HTML, CSS, and JS. Over the years we've
-invented an exorbitant [number](http://getbem.com/introduction/) 
+invented an exorbitant [number](http://getbem.com/introduction/)
 [of](https://github.com/css-modules/css-modules)
 [tools](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
 to circumvent the issues. For example, when you use a new HTML id/class,
@@ -42,7 +43,7 @@ implementations already in Safari Tech Preview and Chrome Canary. Keep reading
 to see what's new or check out the section on <a href="#historysupport">
 History and browser support</a> for more info.
 
-Shadow DOM is one of the four Web Component standards: 
+Shadow DOM is one of the four Web Component standards:
 [HTML Templates](https://www.html5rocks.com/en/tutorials/webcomponents/template/),
 [Shadow DOM][sd_spec_whatwg],
 [Custom elements](/web/fundamentals/getting-started/primers/customelements) and
@@ -60,14 +61,14 @@ with self-contained HTML, CSS, and JavaScript.
 Shadow DOM is designed as a tool for building component-based apps. Therefore,
 it brings solutions for common problems in web development:
 
-- **Isolated DOM**: A component's DOM is self-contained (e.g. 
+- **Isolated DOM**: A component's DOM is self-contained (e.g.
   `document.querySelector()` won't return nodes in the component's shadow DOM).
-- **Scoped CSS**: CSS defined inside shadow DOM is scoped to it. Style rules 
+- **Scoped CSS**: CSS defined inside shadow DOM is scoped to it. Style rules
   don't leak out and page styles don't bleed in.
 - **Composition**: Design a declarative, markup-based API for your component.
-- **Simplifies CSS** - Scoped DOM means you can use simple CSS selectors, more 
+- **Simplifies CSS** - Scoped DOM means you can use simple CSS selectors, more
   generic id/class names, and not worry about naming conflicts.
-- **Productivity** - Think of apps in chunks of DOM rather than one large 
+- **Productivity** - Think of apps in chunks of DOM rather than one large
   (global) page.
 
 Note: Although you can use the shadow DOM API and its benefits outside of web
@@ -79,7 +80,7 @@ I'll be using the custom elements v1 API in all examples.
 
 Throughout this article, I'll be referring to a demo component (`<fancy-tabs>`)
 and referencing code snippets from it. If your browser supports the APIs, you
-should see a live demo of it just below. Otherwise, check out the 
+should see a live demo of it just below. Otherwise, check out the
 <a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">
 full source on Github</a>.
 
@@ -118,7 +119,7 @@ elements directly using JavaScript:
     h1.textContent = 'Hello world!';
     header.appendChild(h1);
     document.body.appendChild(header);
-    
+
 
 produces the following HTML markup:
 
@@ -128,9 +129,9 @@ produces the following HTML markup:
         <h1>Hello DOM</h1>
       </header>
     </body>
-    
 
-All that is well and good. Then 
+
+All that is well and good. Then
 [what the heck is _shadow DOM_](https://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/)?
 
 #### DOM...in the shadows {: #sddom}
@@ -154,10 +155,10 @@ create shadow DOM for an element, call `element.attachShadow()`:
     const header = document.createElement('header');
     const shadowRoot = header.attachShadow({mode: 'open'});
     shadowRoot.innerHTML = '<h1>Hello Shadow DOM</h1>'; // Could also use appendChild().
-    
+
     // header.shadowRoot === shadowRoot
     // shadowRoot.host === header
-    
+
 
 I'm using `.innerHTML` to fill the shadow root, but you could also use other DOM
 APIs. This is the web. We have choice.
@@ -166,7 +167,7 @@ The spec [defines a list of elements](http://w3c.github.io/webcomponents/spec/sh
 that can't host a shadow tree. There are several reasons an element might be
 on the list:
 
-- The browser already hosts its own internal shadow DOM for the element 
+- The browser already hosts its own internal shadow DOM for the element
   (`<textarea>`, `<input>`).
 - It doesn't make sense for the element to host a shadow DOM (`<img>`).
 
@@ -175,7 +176,7 @@ For example, this doesn't work:
 
     document.createElement('input').attachShadow({mode: 'open'});
     // Error. `<input>` cannot host shadow dom.
-    
+
 
 ### Creating shadow DOM for a custom element {: #elements}
 
@@ -251,7 +252,7 @@ component's shadow DOM. It is the element's actual children.
       <img src="gear.svg" slot="icon">
       <span>Settings</span>
     </better-button>
-    
+
 
 **Shadow DOM**
 
@@ -267,7 +268,7 @@ of your component.
       <span id="wrapper">
         <slot>Button</slot>
       </span>
-    
+
 
 **Flattened DOM tree**
 
@@ -288,7 +289,7 @@ in the DevTools and what's rendered on the page.
           </slot>
         </span>
     </better-button>
-    
+
 
 ### The &lt;slot&gt; element {: #slots}
 
@@ -315,14 +316,14 @@ content, the slot renders its fallback content.
 
     <!-- Default slot. If there's more than one default slot, the first is used. -->
     <slot></slot>
-    
+
     <slot>fallback content</slot> <!-- default slot with fallback content -->
-    
+
     <slot> <!-- default slot entire DOM tree as fallback -->
       <h2>Title</h2>
       <summary>Description text</summary>
     </slot>
-    
+
 
 You can also create **named slots**. Named slots are specific holes in your
 shadow DOM that users reference by name.
@@ -337,7 +338,7 @@ shadow DOM that users reference by name.
       <div id="panels">
         <slot id="panelsSlot"></slot>
       </div>
-    
+
 
 Component users declare `<fancy-tabs>` like so:
 
@@ -350,7 +351,7 @@ Component users declare `<fancy-tabs>` like so:
       <section>content panel 2</section>
       <section>content panel 3</section>
     </fancy-tabs>
-    
+
     <!-- Using <h2>'s and changing the ordering would also work! -->
     <fancy-tabs>
       <h2 slot="title">Title</h2>
@@ -360,7 +361,7 @@ Component users declare `<fancy-tabs>` like so:
       <h2 slot="title">Title 3</h2>
       <section>content panel 3</section>
     </fancy-tabs>
-    
+
 
 And if you're wondering, the flattened tree looks something like this:
 
@@ -382,7 +383,7 @@ And if you're wondering, the flattened tree looks something like this:
           </slot>
         </div>
     </fancy-tabs>
-    
+
 
 Notice our component is able to handle different configurations, but the
 flattened DOM tree remains the same. We can also switch from `<button>` to
@@ -428,7 +429,7 @@ inside Shadow DOM. They're also good for performance.
       <div id="panels">
         ...
       </div>
-    
+
 
 Stylesheets are also scoped to the shadow tree:
 
@@ -443,7 +444,7 @@ Stylesheets are also scoped to the shadow tree:
       <div id="panels">
         ...
       </div>
-    
+
 
 Ever wonder how the `<select>` element renders a multi-select widget (instead of
 a dropdown) when you add the `multiple` attribute:
@@ -469,7 +470,7 @@ selector.
       contain: content; /* CSS containment FTW. */
     }
     </style>
-    
+
 
 One gotcha with `:host` is that rules in the parent page have higher specificity
 than `:host` rules defined in the element. That is, outside styles win. This
@@ -504,7 +505,7 @@ on the host.
       color: pink; /* color internal #tabs node when host has class="pink". */
     }
     </style>
-    
+
 
 ### Styling based on context {: #contextstyling}
 
@@ -519,7 +520,7 @@ surroundings. For example, many people do theming by applying a class to
         ...
       </fancy-tabs>
     </body>
-    
+
 
 `:host-context(.darktheme)` would style `<fancy-tabs>` when it's a descendant
 of `.darktheme`:
@@ -529,7 +530,7 @@ of `.darktheme`:
       color: white;
       background: black;
     }
-    
+
 
 `:host-context()` can be useful for theming, but an even better approach is to
 [create style hooks using CSS custom properties](#stylehooks).
@@ -548,7 +549,7 @@ Let's say we've created a name badge component:
         Digital Jedi, <span class="company">Google</span>
       </span>
     </name-badge>
-    
+
 
 The component's shadow DOM can style the user's `<h2>` and `.title`:
 
@@ -570,7 +571,7 @@ The component's shadow DOM can style the user's `<h2>` and `.title`:
     */
     </style>
     <slot></slot>
-    
+
 
 If you remember from before, `<slot>`s do not move the user's light DOM. When
 nodes are distributed into a `<slot>`, the `<slot>` renders their DOM but the
@@ -618,7 +619,7 @@ Another, more in-depth example from `<fancy-tabs>`:
         <slot id="panelsSlot"></slot>
       </div>
     `;
-    
+
 
 In this example, there are two slots: a named slot for the tab titles, and a
 slot for the tab panel content. When the user selects a tab, we bold their selection
@@ -639,7 +640,7 @@ way is to use the tag name as a selector:
     fancy-tabs:hover {
       box-shadow: 0 3px 3px #ccc;
     }
-    
+
 
 **Outside styles always win over styles defined in shadow DOM**. For example,
 if the user writes the selector `fancy-tabs { width: 500px; }`, it will trump
@@ -666,7 +667,7 @@ using [CSS custom properties][css_props]. Conceptually, the idea is similar to
       }
     </style>
     <fancy-tabs background>...</fancy-tabs>
-    
+
 
 Inside its shadow DOM:
 
@@ -676,7 +677,7 @@ Inside its shadow DOM:
       border-radius: 10px;
       padding: 10px;
     }
-    
+
 
 In this case, the component will use `black` as the background value since the
 user provided it. Otherwise, it would default to `#9E9E9E`.
@@ -703,7 +704,7 @@ implements it using a closed-mode shadow root.
     const shadowRoot = div.attachShadow({mode: 'closed'}); // close shadow tree
     // div.shadowRoot === null
     // shadowRoot.host === div
-    
+
 
 Other APIs are also affected by closed-mode:
 
@@ -725,7 +726,7 @@ Here's my summary of why you should never create web components with
 
 2. Closed mode **prevents your custom element code from accessing its own
    shadow DOM**. That's complete fail. Instead, you'll have to stash a reference
-   for later if you want to use things like `querySelector()`. This completely 
+   for later if you want to use things like `querySelector()`. This completely
    defeats the original purpose of closed mode!
 
         customElements.define('x-element', class extends HTMLElement {
@@ -744,7 +745,7 @@ Here's my summary of why you should never create web components with
 
 3. **Closed mode makes your component less flexible for end users**. As you
    build web components, there will come a time when you forget to add a
-   feature. A configuration option. A use case the user wants. A common 
+   feature. A configuration option. A use case the user wants. A common
    example is forgetting to include adequate styling hooks for internal nodes.
    With closed mode, there's no way for users to override defaults and tweak
    styles. Being able to access the component's internals is super helpful.
@@ -766,7 +767,7 @@ example, if the user adds/removes children from the light DOM.
     slot.addEventListener('slotchange', e => {
       console.log('light dom children changed!');
     });
-    
+
 Note: `slotchange` does not fire when an instance of the component is
 first initialized.
 
@@ -843,7 +844,7 @@ bubble out of the shadow boundary unless the event is created using the
       const tabs = this.shadowRoot.querySelector('#tabs');
       tabs.dispatchEvent(new Event('tab-select', {bubbles: true, composed: true}));
     }
-    
+
 
 If `composed: false` (default), consumers won't be able to listen for the event
 outside of your shadow root.
@@ -856,7 +857,7 @@ outside of your shadow root.
         // won't fire if `tab-select` wasn't created with `composed: true`.
       });
     </script>
-    
+
 
 ### Handling focus {: #focus}
 
@@ -868,9 +869,9 @@ For example, let's say you click an `<input>` inside a shadow root:
     <x-focus>
       #shadow-root
         <input type="text" placeholder="Input inside shadow dom">
-    
 
-The `focus` event will look like it came from `<x-focus>`, not the `<input>`. 
+
+The `focus` event will look like it came from `<x-focus>`, not the `<input>`.
 Similarly, `document.activeElement` will be `<x-focus>`. If the shadow root
 was created with `mode:'open'` (see [closed mode](#closed)), you'll also be
 able access the internal node that gained focus:
@@ -889,7 +890,7 @@ find the `activeElement`:
       }
       return a;
     }
-    
+
 
 Another option for focus is the `delegatesFocus: true` option, which expands the
 focus behavior of element's within a shadow tree:
@@ -907,14 +908,14 @@ focus behavior of element's within a shadow tree:
         outline: 2px solid red;
       }
     </style>
-    
+
     <x-focus></x-focus>
-    
+
     <script>
     customElements.define('x-focus', class extends HTMLElement {
       constructor() {
         super(); // always call super() first in the ctor.
-    
+
         const root = this.attachShadow({mode: 'open', delegatesFocus: true});
         root.innerHTML = `
           <style>
@@ -929,7 +930,7 @@ focus behavior of element's within a shadow tree:
           </style>
           <div>Clickable Shadow DOM text</div>
           <input type="text" placeholder="Input inside shadow dom">`;
-    
+
         // Know the focused element inside shadow DOM:
         this.addEventListener('focus', function(e) {
           console.log('Active element (inside shadow dom):',
@@ -938,7 +939,7 @@ focus behavior of element's within a shadow tree:
       }
     });
     </script>
-    
+
 
 **Result**
 
@@ -968,7 +969,7 @@ If you were to set `delegatesFocus: false`, here's what you would see instead:
 <figure>
   <img src="imgs/delegateFocusNothing.png">
   <figcaption>
-    <code>delegatesFocus: false</code> and "Clickable Shadow DOM text" is 
+    <code>delegatesFocus: false</code> and "Clickable Shadow DOM text" is
     clicked (or other empty area within the element's shadow DOM is clicked).
   </figcaption>
 </figure>
@@ -992,7 +993,7 @@ win:
       contain: content; /* Boom. CSS containment FTW. */
     }
     </style>
-    
+
 
 ### Resetting inheritable styles {: #reset}
 
@@ -1011,13 +1012,13 @@ inheritable styles to their initial value when they cross the shadow boundary.
         color: white;
       }
     </style>
-    
+
     <div>
       <p>I'm outside the element (big/white)</p>
       <my-element>Light DOM content is also affected.</my-element>
       <p>I'm outside the element (big/white)</p>
     </div>
-    
+
     <script>
     const el = document.querySelector('my-element');
     el.attachShadow({mode: 'open'}).innerHTML = `
@@ -1087,13 +1088,13 @@ need to recursively traverse the shadow DOM of all elements used on the page.
 
 
     const allCustomElements = [];
-    
+
     function isCustomElement(el) {
       const isAttr = el.getAttribute('is');
       // Check for <super-button> and <button is="super-button">.
       return el.localName.includes('-') || isAttr && isAttr.includes('-');
     }
-    
+
     function findAllCustomElements(nodes) {
       for (let i = 0, el; el = nodes[i]; ++i) {
         if (isCustomElement(el)) {
@@ -1105,9 +1106,9 @@ need to recursively traverse the shadow DOM of all elements used on the page.
         }
       }
     }
-    
+
     findAllCustomElements(document.querySelectorAll('*'));
-    
+
 
 {% comment %}
 Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySelectorAll()`:
@@ -1117,7 +1118,7 @@ Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySe
       const isAttr = el.getAttribute('is');
       return el.localName.includes('-') || isAttr && isAttr.includes('-');
     });
-    
+
 
 For now, `/deep/` [continues to work in `querySelectorAll()` calls](https://bugs.chromium.org/p/chromium/issues/detail?id=633007).
 {% endcomment %}
@@ -1128,7 +1129,7 @@ Instead of populating a shadow root using `.innerHTML`, we can use a declarative
 `<template>`. Templates are an ideal placeholder for declaring the structure of
 a web component.
 
-See the example in 
+See the example in
 ["Custom elements: building reusable web components"](/web/fundamentals/getting-started/primers/customelements).
 
 ## History & browser support {: #historysupport}
@@ -1142,16 +1143,16 @@ older method continues to create a shadow root with v0 semantics, so existing v0
 code won't break.
 
 If you happen to be interested in the old v0 spec, check out the html5rocks
-articles: 
+articles:
 [1](https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/),
 [2](https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/),
 [3](https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/).
-There's also a great comparison of the 
+There's also a great comparison of the
 [differences between shadow DOM v0 and v1][differences].
 
 ### Browser support {: #support}
 
-Chrome 53 ([status](https://www.chromestatus.com/features/4667415417847808)), 
+Chrome 53 ([status](https://www.chromestatus.com/features/4667415417847808)),
 Opera 40, and Safari 10 are shipping shadow DOM v1. Edge is under consideration
 [with high priority](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/shadowdom/).
 Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=811542)
@@ -1161,14 +1162,14 @@ To feature detect shadow DOM, check for the existence of `attachShadow`:
 
 
     const supportsShadowDOMV1 = !!HTMLElement.prototype.attachShadow;
-    
 
-    
+
+
 #### Polyfill {: #polyfill}
 
 Until browser support is widely available, the
-[shadydom](https://github.com/webcomponents/shadydom) and 
-[shadycss](https://github.com/webcomponents/shadycss) polyfills give you v1 
+[shadydom](https://github.com/webcomponents/shadydom) and
+[shadycss](https://github.com/webcomponents/shadycss) polyfills give you v1
 feature. Shady DOM mimics the DOM scoping of Shadow DOM and shadycss polyfills
 CSS custom properties and the style scoping the native API provides.
 

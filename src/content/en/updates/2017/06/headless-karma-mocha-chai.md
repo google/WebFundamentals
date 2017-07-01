@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: "Automated testing with Headless Chrome"
 
-{# wf_updated_on: 2017-06-13 #}
+{# wf_updated_on: 2017-07-01 #}
 {# wf_published_on: 2017-06-13 #}
 
 {# wf_tags: headless,testing,karma,mocha,chai #}
+{# wf_blink_components: Internals>Headless #}
 {# wf_featured_image: /web/updates/images/generic/headless-chrome.png #}
 {# wf_featured_snippet: How to setup Karma, Mocha+Chai, and Travis to run automated tests on Headless Chrome. #}
 
