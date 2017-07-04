@@ -35,15 +35,15 @@ much information or content to preload]. This means [Media Source Extensions
 
 Resource fetching will start only when initial HTML document has been
 completely loaded and parsed (eg. `DOMContentLoaded` event) while the very
-different `Load` event will be fired when resource has actually been fetched.
+different `load` event will be fired when resource has actually been fetched.
 
 <figure class="TODO">
   <img src="/web/fundamentals/media/images/video-preload/video-preload.svg">
 </figure>
 
 Setting `preload` value to `metadata` indicates that the user is not expected
-to need the video, but that fetching its metadata (dimensions, first frame,
-track list, duration, and so on) is desirable.
+to need the video, but that fetching its metadata (dimensions, track list,
+duration, and so on) is desirable.
 
 ```
 <video id="video" preload="metadata" src="file.mp4" controls></video>
@@ -58,7 +58,7 @@ track list, duration, and so on) is desirable.
 </script>
 ```
 
-With `preload` value set to `auto`, we're saying that downloading the entire
+With `preload` value set to `auto`, we're saying th at downloading the entire
 video right away is considered desirable.
 
 ```
@@ -78,8 +78,7 @@ There are some caveats though. As this is just a hint, browser may completely
 ignore the `preload` attribute. At the time of writing, here are some rules
 applied in Chrome:
 
-- When [Data Saver] is enabled, Chrome forces `preload` value to `none` if
-  video URL starts with "http" or "https".
+- When [Data Saver] is enabled, Chrome forces `preload` value to `none`.
 - In Android 4.3, Chrome forces `preload` value to `none`.
 - On a cellular connection (2G, 3G, and 4G), Chrome forces `preload` value to
   `metadata`.
@@ -123,7 +122,7 @@ finished yet, a regular network fetch will happen.
 </script>
 ```
 
-Note: I'd recommend using this only for audio files or short video clips.
+Note: I would recommend using this only for audio files or short video clips.
 
 Because the preloaded resource is going to be consumed by a video element in
 the example, the `as` preload link value is `video`. If it were an audio
@@ -221,7 +220,7 @@ availability with the snippet below.
 
 ## Manual Buffering
 
-Before we dive into the Cache API and service workers, let's see how to
+Before we dive into the [Cache API] and service workers, let's see how to
 manually buffer a video with MSE. The example below assumes that your web
 server supports HTTP Range requests. Note that this would be pretty similar to
 segment files.
@@ -269,7 +268,7 @@ segment files.
 
 ### Battery awareness
 
-I'd suggest you take into account the battery level of user's device before
+I would suggest you take into account the battery level of user's device before
 thinking about preloading a video in order to preserve battery life when the
 power level is low.
 
@@ -299,9 +298,9 @@ if ('getBattery' in navigator) {
 
 Now, what if I want to speculatively pre-load some media content without
 knowing which piece of media user will eventually pick. If user is on a web
-page that contains 10 videos, we probably have enough memory to fetch 1 segment
-file from each but we should definitely not create 10 hidden video elements and
-10 `MediaSource` objects and start feeding that data.
+page that contains 10 videos, we probably have enough memory to fetch one
+segment file from each but we should definitely not create 10 hidden video
+elements and 10 `MediaSource` objects and start feeding that data.
 
 The 2-parts example below shows you how to pre-cache multiple first segments of
 video using the powerful and easy-to-use Cache API. Note that something similar
@@ -341,11 +340,11 @@ function fetchAndCache(videoFileUrl, cache) {
 }
 ```
 
-Note that if were to use HTTP Range request, I'd have to recreate manually a
-`Response` object as the Cache API doesn't support Range responses yet. Be
-mindful that calling `networkResponse.arrayBuffer()` fetches the
-whole content of the response at once into renderer memory, hence why you may
-want to use small ranges.
+Note that if were to use HTTP Range request, I would have to recreate manually
+a `Response` object as the Cache API doesn't support Range responses [yet]. Be
+mindful that calling `networkResponse.arrayBuffer()` fetches the whole content
+of the response at once into renderer memory, hence why you may want to use
+small ranges.
 
 For reference, here's the modified part of the code above to save HTTP Range
 requests to the video pre-cache.
@@ -490,3 +489,5 @@ requests.
 [ShakaPlayer]: https://github.com/google/shaka-player/blob/master/docs/tutorials/service-worker.md
 [Sample Media App]: https://github.com/GoogleChrome/sample-media-pwa
 [ranged-response.js]: https://github.com/GoogleChrome/sample-media-pwa/blob/master/src/client/scripts/ranged-response.js
+[Cache API]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
+[yet]: https://github.com/whatwg/fetch/issues/144
