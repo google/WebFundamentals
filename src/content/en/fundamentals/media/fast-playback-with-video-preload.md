@@ -267,6 +267,34 @@ segment files.
 </script>
 ```
 
+### Battery awareness
+
+I'd suggest you take into account the battery level of user's device before
+thinking about preloading a video in order to preserve battery life when the
+power level is low.
+
+Please disable preload or at least preload a lower resolution video when the
+device is running out of battery.
+
+
+```
+if ('getBattery' in navigator) {
+  navigator.getBattery()
+  .then(battery => {
+    // If battery is charging or battery level is high enough
+    if (battery.charging || battery.level > 0.15) {
+      // TODO: Preload the first segment of a video.
+    } else {
+      // TODO: Enable some kind of Power Saving mode.
+    }
+  });
+} else {
+  // Battery Status API is not supported.
+  // TODO: Preload the first segment of a video.
+}
+```
+
+
 ### Pre-cache multiple first segments
 
 Now, what if I want to speculatively pre-load some media content without
