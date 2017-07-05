@@ -325,7 +325,7 @@ Page.loadEventFired(async () => {
 })();
 ```
 
-## Using Selenium, WebDriver, and ChromeDriver {#drivers}
+## Using Selenium, WebDriver, and ChromeDriver {: #drivers }
 
 Right now, Selenium opens a full instance of Chrome. In other words, it's an
 automated solution but not completely headless. However, Selenium can be
