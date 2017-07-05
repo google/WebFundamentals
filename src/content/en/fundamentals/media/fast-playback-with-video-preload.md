@@ -264,7 +264,7 @@ availability with the snippet below.
 <video id="video" controls></video>
 
 <script>
-  if (!preloadSupported()) {
+  if (!preloadVideoSupported()) {
     // TODO: Fetch video from the network and load it.
   }
 
@@ -276,11 +276,10 @@ availability with the snippet below.
     // TODO: Show "Video is not available" message to user.
   }
 
-  function preloadSupported() {
-    const relList = document.createElement('link').relList;
-    if (!relList || !relList.supports)
-      return false;
-    return relList.supports('preload');
+  function preloadVideoSupported() {
+    const link = document.createElement('link');
+    link.as = 'video';
+    return (link.as === 'video');
   }
 </script>
 ```
