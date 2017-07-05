@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-06-28 #}
+{# wf_updated_on: 2017-07-05 #}
 {# wf_published_on: 2017-06-28 #}
 
 
@@ -385,14 +385,14 @@ discount coupons.
 
 ### Before calling Payment request api
 The Payment Request API doesn’t deal with vouchers and 
-loyalty codes directly. If a merchant requires these then 
-present them before the user clicks pay. If you have a 
-<em>"Buy now"</em> button then give the user the ability 
-to add any codes or loyalty card schemes before you launch 
-the Payment Request API. In pratcice this will mean that when
-a user first clicks "Buy now", they will be taken to a check
-out page where they can add a coupon or loyality card number 
-first. Below is an example of this.  
+loyalty codes directly, instead, give the user the 
+ability to add any codes or loyalty card schemes before 
+you launch the Payment Request API. In practice, this 
+will mean that when a user first clicks a <em>"Buy now"</em>, 
+they will be taken to a checkout page where they can 
+add a coupon or loyalty card number first. 
+Below is an example of this.
+
 
 <div>
   <figure>
