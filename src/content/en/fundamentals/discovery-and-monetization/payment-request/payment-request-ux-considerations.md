@@ -388,8 +388,11 @@ The Payment Request API doesn’t deal with vouchers and
 loyalty codes directly. If a merchant requires these then 
 present them before the user clicks pay. If you have a 
 <em>"Buy now"</em> button then give the user the ability 
-to add 
-any codes or loyalty card schemes here. 
+to add any codes or loyalty card schemes before you launch 
+the Payment Request API. In pratcice this will mean that when
+a user first clicks "Buy now", they will be taken to a check
+out page where they can add a coupon or loyality card number 
+first. Below is an example of this.  
 
 <div>
   <figure>
