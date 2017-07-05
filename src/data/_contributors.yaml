@@ -188,12 +188,12 @@ mathiasbynens:
   role:
     - author
   homepage: https://mathiasbynens.be/
-  google: +mathiasbynens
   twitter: mathias
+  github: mathiasbynens
   email: mths@google.com
   lanyrd: mathias
   description:
-    en: developer advocate on the V8 team
+    en: V8 developer advocate
 
 owencm:
   name:
