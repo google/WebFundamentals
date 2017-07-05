@@ -6,6 +6,7 @@ description: Getting started with Headless Chrome
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
+{# wf_blink_components: Internals>Headless #}
 {# wf_featured_image: /web/updates/images/generic/headless-chrome.png #}
 {# wf_featured_snippet: Headless Chrome (shipping in Chrome 59) is a way to run the Chrome browser in a headless environment. It brings all modern web platform features provided by Chromium and the Blink rendering engine to the command line. #}
 

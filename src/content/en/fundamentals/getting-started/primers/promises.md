@@ -4,6 +4,7 @@ description: "Promises simplify deferred and asynchronous computations. A promis
 
 {# wf_published_on: 2013-12-16 #}
 {# wf_updated_on: 2017-02-21 #}
+{# wf_blink_components: Blink>JavaScript #}
 
 # JavaScript Promises: an Introduction {: .page-title }
 
@@ -23,7 +24,7 @@ At this point you fall into one of these categories:
 * People are cheering around you, but you're not sure what all the fuss is
   about. Maybe you're not even sure what a "promise" is. You'd shrug, but the
   weight of glittery paper is weighing down on your shoulders. If so, don't
-  worry about it, it took me ages to work out why I should care about this 
+  worry about it, it took me ages to work out why I should care about this
   stuff. You probably want to begin at the [beginning](#whats-all-the-fuss-about).
 * You punch the air! About time right? You've used these Promise things before
   but it bothers you that all implementations have a slightly different API.
@@ -146,7 +147,7 @@ in reacting to the outcome.
 
 [Domenic Denicola](https://twitter.com/domenic) proof read the first draft
 of this article and graded me "F" for terminology. He put me in detention,
-forced me to copy out 
+forced me to copy out
 [States and Fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md)
 100 times, and wrote a worried letter to my parents. Despite that, I still
 get a lot of the terminology mixed up, but here are the basics:
@@ -244,7 +245,7 @@ There are already implementations of promises in browsers today.
 As of Chrome 32, Opera 19, Firefox 29, Safari 8 &amp; Microsoft Edge,
 promises are enabled by default.
 
-To bring browsers that lack a complete promises implementation up to spec 
+To bring browsers that lack a complete promises implementation up to spec
 compliance, or add promises to other browsers and Node.js, check out
 [the polyfill](https://github.com/jakearchibald/ES6-Promises#readme)
 (2k gzipped).
@@ -676,8 +677,8 @@ try writing the code as if it were synchronous. In this case:
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/sync-example.html)
 
 
-That works (see 
-[code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/sync-example.html))! 
+That works (see
+[code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/sync-example.html))!
 But it's sync and locks up the browser while things download. To make this
 work async we use `then()` to make things happen one after another.
 
@@ -799,7 +800,7 @@ Let's put it all together:
 
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-example.html)
 
-And there we have it (see 
+And there we have it (see
 [code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-example.html)),
 a fully async version of the sync version. But we can do better. At the moment
 our page is downloading like this:
@@ -900,7 +901,7 @@ sequence to add them to the document:
 
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-best-example.html)
 
-And there we go (see 
+And there we go (see
 [code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-best-example.html)),
 the best of both! It takes the same amount of time to deliver all the content,
 but the user gets the first bit of content sooner.
@@ -981,7 +982,7 @@ settle:
     }
 
 
-… which I pretty much 
+… which I pretty much
 [lifted verbatim fromQ](https://github.com/kriskowal/q/blob/db9220d714b16b96a05e9a037fa44ce581715e41/q.js#L500),
 but adapted for JavaScript promises. With this, we can take our final
 best-case chapter example, mix it with a load of new ES6 goodness, and turn
@@ -1039,7 +1040,7 @@ pretty much the same as above, but no need for a `spawn` method.
 ## Promise API reference {: #promise-api-reference }
 
 All methods work in Chrome, Opera, Firefox, Microsoft Edge, and Safari
-unless otherwise noted. The 
+unless otherwise noted. The
 [polyfill](https://github.com/jakearchibald/ES6-Promises#readme) provides
 the below for all browers.
 
@@ -1118,7 +1119,7 @@ opposite of `Promise.all` that only rejects if all items reject.
 
     <p>
       <code>reject(obj)</code><br>
-      Your promise is rejected with <code>obj</code>. For consistency and 
+      Your promise is rejected with <code>obj</code>. For consistency and
       debugging (e.g., stack traces), obj should be an <code>instanceof
       Error</code>.  Any errors thrown in the constructor callback will be
       implicitly passed to <code>reject()</code>.
@@ -1126,7 +1127,7 @@ opposite of `Promise.all` that only rejects if all items reject.
   </td>
 </tr>
 </table>
-    
+
 ### Instance Methods
 
 <table class="responsive methods">
@@ -1136,12 +1137,12 @@ opposite of `Promise.all` that only rejects if all items reject.
 <tr>
   <td><code>promise.then(onFulfilled, onRejected)</code></td>
   <td>
-    <code>onFulfilled</code> is called when/if "promise" resolves. 
+    <code>onFulfilled</code> is called when/if "promise" resolves.
     <code>onRejected</code> is called when/if "promise" rejects. Both are
-    optional, if either/both are omitted the next 
-    <code>onFulfilled</code>/<code>onRejected</code> in the chain is called. 
-    Both callbacks have a single parameter, the fulfillment value or 
-    rejection reason. <code>then()</code> returns a new promise equivalent to 
+    optional, if either/both are omitted the next
+    <code>onFulfilled</code>/<code>onRejected</code> in the chain is called.
+    Both callbacks have a single parameter, the fulfillment value or
+    rejection reason. <code>then()</code> returns a new promise equivalent to
     the value you return from <code>onFulfilled</code>/<code>onRejected</code>
     after being passed through <code>Promise.resolve</code>. If an error is
     thrown in the callback, the returned promise rejects with that error.
@@ -1159,6 +1160,6 @@ Many thanks to Anne van Kesteren, Domenic Denicola, Tom Ashworth, Remy Sharp,
 Addy Osmani, Arthur Evans, and Yutaka Hirano who proofread this and made
 corrections/recommendations.
 
-Also, thanks to [Mathias Bynens](https://mathiasbynens.be/) for 
+Also, thanks to [Mathias Bynens](https://mathiasbynens.be/) for
 [updating various parts](https://github.com/html5rocks/www.html5rocks.com/pull/921/files)
 of the article.

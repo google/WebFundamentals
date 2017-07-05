@@ -4,6 +4,7 @@ description: Discover how to use the Ray Input library to add input to your WebV
 
 {# wf_updated_on: 2016-12-12 #}
 {# wf_published_on: 2016-12-12 #}
+{# wf_blink_components: Blink>WebVR #}
 
 # Adding Input to a WebVR Scene {: .page-title }
 
