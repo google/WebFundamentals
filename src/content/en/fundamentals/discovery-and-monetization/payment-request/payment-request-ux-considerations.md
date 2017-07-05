@@ -504,7 +504,7 @@ with this [demo](https://paymentrequest.show/demo/).
 Payments Request API is currently supported by;
 
 * Chrome 53 and above on Android 
-* Chrome 60 and above on Desktop
+* Chrome 61 and above on Desktop & iOS
 * Edge 15 and above on Desktop
 
 You can track the latest status for all other browsers here 
