@@ -4,6 +4,7 @@ description: A deep-dive into the service worker lifecycle.
 
 {# wf_updated_on: 2016-09-29 #}
 {# wf_published_on: 2016-09-29 #}
+{# wf_blink_components: Blink>ServiceWorker #}
 
 # The Service Worker Lifecycle {: .page-title }
 
@@ -804,7 +805,7 @@ So, to enable as many patterns as we can, the whole update cycle is observable:
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       // This fires when the service worker controlling this page
       // changes, eg a new worker has as skipped waiting and become
-      // the new active worker. 
+      // the new active worker.
     });
 
 ## You survived!

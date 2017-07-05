@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-06-28 #}
+{# wf_updated_on: 2017-07-05 #}
 {# wf_published_on: 2017-06-28 #}
 
 
@@ -20,17 +20,17 @@ asked in the study as to why they abandoned the purchase, the most
 common responses ranged from the form being difficult to read,
 difficult to understand or was way too long.
 
-To solve these challenges the Payments Request API creates a simpler
+To solve these challenges the Payment Request API creates a simpler
 flow. 
 The API will pre-populate payment details for the user allowing
 users to buy items with a simple tap or click.
 
-One way to think about the Payments Request API is that it is
+One way to think about the Payment Request API is that it is
 essentially a way for a browser to manage a user's payment methods,
 making it easier to make payments on the web.
 
 ## The two view states 
-In the Chrome UI, the Payments Request API has
+In the Chrome UI, the Payment Request API has
 two states: the <em>'receipt'</em> view and the edit view. The
 <em>'receipt'</em> view (shown at left, below) partially obscuring the
 merchant's site. This allows the user to take a quick glance at their
@@ -279,7 +279,7 @@ appropriate than the label <em>"Delivery"</em>.
 Don't block a purchase on Payment Request. If isn’t 
 supported by the browser, or fails, seamlessly 
 fallback to the default checkout rather than an 
-error message when the Payments Request API is not available. 
+error message when the Payment Request API is not available. 
 
 It is a good idea to create a user flow of all 
 of the possible ways a user can get to the checkout forms. 
@@ -324,7 +324,7 @@ and gives the user a PDF.
 In this example every item has a "Buy now". When a user taps or 
 clicks "Buy now" they begin the checkout process, first by 
 asking for specific delivery dates and a custom message. 
-The next step in the process launches the Payments Request 
+The next step in the process launches the Payment Request 
 API which is followed by a confirmation page. 
 <div>
   <figure>
@@ -385,11 +385,14 @@ discount coupons.
 
 ### Before calling Payment request api
 The Payment Request API doesn’t deal with vouchers and 
-loyalty codes directly. If a merchant requires these then 
-present them before the user clicks pay. If you have a 
-<em>"Buy now"</em> button then give the user the ability 
-to add 
-any codes or loyalty card schemes here. 
+loyalty codes directly, instead, give the user the 
+ability to add any codes or loyalty card schemes before 
+you launch the Payment Request API. In practice, this 
+will mean that when a user first clicks a <em>"Buy now"</em>, 
+they will be taken to a checkout page where they can 
+add a coupon or loyalty card number first. 
+Below is an example of this.
+
 
 <div>
   <figure>
@@ -417,7 +420,7 @@ the user clicks the "Buy Now" button, provide an additional
 step in the processes asking for acceptance of the TOS. 
 The next step is to launch the PR Payment Request flow.
 
-### Midway through the Payments Request 
+### Midway through the Payment Request 
 You can offer extra UI elements after the payment options 
 have been selected. So instead of showing the API's default 
 spinner, you can show your own, such as in the next example. 
@@ -448,7 +451,7 @@ There may be occasions where the merchant give
 the user the opportunity to add non-standard information 
 from the user such as delivery instructions or perhaps 
 some feedback on the shopping experience. This can not be 
-done directly within the Payments Request API, however 
+done directly within the Payment Request API, however 
 it is possible to show a UI element such as a `textfield` 
 if the payment has been successful.
 
@@ -483,7 +486,7 @@ You can find code for more unique use cases
 CodeExamples#show-additional-user-interface-after-successful-payment).
 
 ## Existing users 
-For existing customers you can still use the Payments 
+For existing customers you can still use the Payment 
 Request API, but you may need to adjust the experience 
 and present new UI to your existing signed-in customers. 
 For example you may introduce the Payment Request API with 
@@ -501,10 +504,10 @@ speed and efficiency.
 ## Code demos and browser support
 You can experiment with the various features and UX patterns 
 with this [demo](https://paymentrequest.show/demo/). 
-Payments Request API is currently supported by;
+Payment Request API is currently supported by;
 
 * Chrome 53 and above on Android 
-* Chrome 60 and above on Desktop
+* Chrome 61 and above on Desktop & iOS
 * Edge 15 and above on Desktop
 
 You can track the latest status for all other browsers here 
@@ -512,5 +515,5 @@ on [caniuse.com](https://caniuse.com/#search=payments).
 
 ## Stickersheet
 
-To create your own flows, you can download the Payments Request API sticker sheet from [our Github Repo](https://goo.gl/daxhRa). 
+To create your own flows, you can download the Payment Request API sticker sheet from [our Github Repo](https://goo.gl/daxhRa). 
 

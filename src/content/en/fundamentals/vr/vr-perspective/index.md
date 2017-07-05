@@ -4,6 +4,7 @@ description: Find out more about how creating content for WebVR is different fro
 
 {# wf_updated_on: 2017-06-05 #}
 {# wf_published_on: 2017-06-05 #}
+{# wf_blink_components: Blink>WebVR #}
 
 # Seeing the Web from a VR Perspective {: .page-title }
 

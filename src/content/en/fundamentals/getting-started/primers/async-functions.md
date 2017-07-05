@@ -4,6 +4,7 @@ description: Async functions allow you to write promise-based code as if it were
 
 {# wf_published_on: 2016-10-20 #}
 {# wf_updated_on: 2017-06-19 #}
+{# wf_blink_components: Blink>JavaScript #}
 
 # Async functions - making promises friendly {: .page-title }
 
@@ -291,7 +292,7 @@ If you're targeting browsers that support generators (which includes
 
 [Babel](https://babeljs.io/){: .external} will do this for you,
 [here's an example via the Babel REPL](https://goo.gl/0Cg1Sq){: .external}
-- note how similar the transpiled code is. This transformation is part of 
+- note how similar the transpiled code is. This transformation is part of
 [Babel's es2017 preset](http://babeljs.io/docs/plugins/preset-es2017/){: .external}.
 
 Note: Babel REPL is fun to say. Try it.
