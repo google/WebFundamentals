@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
+{# wf_updated_on: 2017-04-17 #}
 {# wf_published_on: 2016-06-28 #}
-{# wf_updated_on: 2017-07-01 #}
 {# wf_blink_components: Blink>DOM #}
 
 # Custom Elements v1: Reusable Web Components {: .page-title }

@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Two of the hurdles developers face when migrating to HTTPS are concepts and terminology. This guide provides a brief overview of both.
 
+{# wf_updated_on: 2016-08-22 #}
 {# wf_published_on: 2015-03-27 #}
-{# wf_updated_on: 2017-07-01 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
 # Important Security Terminology {: .page-title }

@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components
 
-{# wf_published_on: 2016-07-01 #}
-{# wf_updated_on: 2017-07-01 #}
+{# wf_updated_on: 2017-06-15 #}
+{# wf_published_on: 2016-08-01 #}
 {# wf_blink_components: Blink>DOM #}
 
 # Shadow DOM v1: Self-Contained Web Components {: .page-title }

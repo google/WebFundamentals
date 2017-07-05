@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A deep-dive into the service worker lifecycle.
 
+{# wf_updated_on: 2016-09-29 #}
 {# wf_published_on: 2016-09-29 #}
-{# wf_updated_on: 2017-07-01 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # The Service Worker Lifecycle {: .page-title }

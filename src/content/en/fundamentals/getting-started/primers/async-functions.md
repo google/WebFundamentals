@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Async functions allow you to write promise-based code as if it were synchronous
 
 {# wf_published_on: 2016-10-20 #}
-{# wf_updated_on: 2017-07-01 #}
+{# wf_updated_on: 2017-06-19 #}
 {# wf_blink_components: Blink>JavaScript #}
 
 # Async functions - making promises friendly {: .page-title }

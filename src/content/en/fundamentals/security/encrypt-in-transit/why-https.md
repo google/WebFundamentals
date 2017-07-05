@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: You should always protect all of your websites with HTTPS, even if they don’t handle sensitive communications. HTTPS provides critical security and data integrity both for your websites and for the people that entrust your websites with their personal information.
 
+{# wf_updated_on: 2016-08-22 #}
 {# wf_published_on: 2015-11-23 #}
-{# wf_updated_on: 2017-07-01 #}
 {# wf_blink_components: Internals>Network>SSL #}
 
 # Why HTTPS Matters {: .page-title }

@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Security is a big topic, learn about HTTPS, why it's important and how you can deploy it to your servers.
 
+{# wf_updated_on: 2017-05-22 #}
 {# wf_published_on: 2015-09-08 #}
-{# wf_updated_on: 2017-07-01 #}
 {# wf_blink_components: Blink>SecurityFeature,Internals>Network>SSL #}
 
 # Security and Identity {: .page-title }
