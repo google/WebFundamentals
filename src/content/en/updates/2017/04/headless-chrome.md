@@ -325,6 +325,132 @@ Page.loadEventFired(async () => {
 })();
 ```
 
+## Using Selenium, WebDriver, and ChromeDriver {#drivers}
+
+Right now, Selenium opens a full instance of Chrome. In other words, it's an
+automated solution but not completely headless. However, Selenium can be
+configured to run headless Chrome with a little work. I recommend [Running Selenium with Headless Chrome](https://intoli.com/blog/running-selenium-with-headless-chrome/) if you want the
+full instructions on how to set things up yourself, but I've dropped in some
+examples below to get you started.
+
+#### Using ChromeDriver
+
+[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 2.3.0
+supports Chrome 59+ and works with headless Chrome. In some cases, you may need
+Chrome 60 to work around bugs. For example, there are known issues with taking
+screenshots in Chrome 59.
+
+Install:
+
+```
+yarn add selenium-webdriver chromedriver
+```
+
+Example:
+
+```javascript
+const fs = require('fs');
+const webdriver = require('selenium-webdriver');
+const chromedriver = require('chromedriver');
+
+// This should be the path to your Canary installation.
+// I'm assuming Mac for the example.
+const PATH_TO_CANARY = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary';
+
+const chromeCapabilities = webdriver.Capabilities.chrome();
+chromeCapabilities.set('chromeOptions', {
+  binary: PATH_TO_CANARY // Screenshots require Chrome 60. Force Canary.
+  'args': [
+    '--headless',
+  ]
+});
+
+const driver = new webdriver.Builder()
+  .forBrowser('chrome')
+  .withCapabilities(chromeCapabilities)
+  .build();
+
+// Navigate to google.com, enter a search.
+driver.get('https://www.google.com/');
+driver.findElement({name: 'q'}).sendKeys('webdriver');
+driver.findElement({name: 'btnG'}).click();
+driver.wait(webdriver.until.titleIs('webdriver - Google Search'), 1000);
+
+// Take screenshot of results page. Save to disk.
+driver.takeScreenshot().then(base64png => {
+  fs.writeFileSync('screenshot.png', new Buffer(base64png, 'base64'));
+});
+
+driver.quit();
+```
+
+#### Using WebDriverIO
+
+[WebDriverIO](http://webdriver.io/) is a higher level API on top of Selenium WebDriver.
+
+Install:
+
+```
+yarn add webdriverio chromedriver
+```
+
+Example: filter CSS features on chromestatus.com
+
+```javascript
+const webdriverio = require('webdriverio');
+const chromedriver = require('chromedriver');
+
+// This should be the path to your Canary installation.
+// I'm assuming Mac for the example.
+const PATH_TO_CANARY = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary';
+const PORT = 9515;
+
+chromedriver.start([
+  '--url-base=wd/hub',
+  `--port=${PORT}`,
+  '--verbose'
+]);
+
+(async () => {
+
+const opts = {
+  port: PORT,
+  desiredCapabilities: {
+    browserName: 'chrome',
+    chromeOptions: {
+      binary: PATH_TO_CANARY // Screenshots require Chrome 60. Force Canary.
+      args: ['--headless']
+    }
+  }
+};
+
+const browser = webdriverio.remote(opts).init();
+
+await browser.url('https://www.chromestatus.com/features');
+
+const title = await browser.getTitle();
+console.log(`Title: ${title}`);
+
+await browser.waitForText('.num-features', 3000);
+let numFeatures = await browser.getText('.num-features');
+console.log(`Chrome has ${numFeatures} total features`);
+
+await browser.setValue('input[type="search"]', 'CSS');
+console.log('Filtering features...');
+await browser.pause(1000);
+
+numFeatures = await browser.getText('.num-features');
+console.log(`Chrome has ${numFeatures} CSS features`);
+
+const buffer = await browser.saveScreenshot('screenshot.png');
+console.log('Saved screenshot...');
+
+chromedriver.stop();
+browser.end();
+
+})();
+```
+
 ## Further resources
 
 Here are some useful resources to get you started:
@@ -372,13 +498,7 @@ Flexible container.
 
 **Can I use this with Selenium / WebDriver / ChromeDriver**?
 
-Right now, Selenium opens a full instance of Chrome. In other words, it's an
-automated solution but not completely headless. However, Selenium can be
-configured to run headless Chrome with a little work. I recommend [Running Selenium with Headless Chrome](https://intoli.com/blog/running-selenium-with-headless-chrome/) to set things up
-yourself.
-
-[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 2.3.0
-supports Chrome 59+. While I have not tested it, it should also work with headless Chrome.
+Yep. See [Using Selenium, WebDrive, or ChromeDriver](#drivers).
 
 **How is this related to PhantomJS?**
 
