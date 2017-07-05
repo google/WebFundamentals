@@ -1,21 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Preload all video for faster playback.
+description: Preload video and audio for faster playback.
 
-{# wf_published_on: 2017-06-21 #}
-{# wf_updated_on: 2017-06-21 #}
+{# wf_published_on: 2017-07-05 #}
+{# wf_updated_on: 2017-07-05 #}
 
 # Fast Playback with Video Preload {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit
-nibh nec feugiat ornare. Nam tristique, magna non pharetra mollis, diam elit
-faucibus nibh, ut condimentum diam metus vel dolor. Integer facilisis magna at
-ex bibendum luctus. In eu tincidunt ipsum. Duis scelerisque, tortor quis
-condimentum finibus, est neque mollis leo, at imperdiet justo elit dapibus
-nisl. Integer gravida dapibus turpis, vel scelerisque dolor scelerisque eget.
-Sed dolor lectus, tempor vulputate bibendum eget, accumsan lobortis ex.
 
 <video controls controlsList="nodownload" muted playsinline style="width: 100%">
   <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-preload-hero.webm#t=0.7"
@@ -24,7 +16,82 @@ Sed dolor lectus, tempor vulputate bibendum eget, accumsan lobortis ex.
           type="video/mp4">
 </video>
 
-Unless specified otherwise, this article also applies to the audio element.
+Faster playback means more people watching your video. That's a known fact.
+I'll explore in this article different techniques you can use to accelerate
+your media playback by actively preloading resources depending on your use
+case.
+
+Note: Unless specified otherwise, this article also applies to the audio element.
+
+## TL;DR
+
+<table>
+  <tbody>
+    <tr>
+      <th></th>
+      <th>
+Pros
+      </th>
+      <th>
+Cons
+      </th>
+    </tr>
+    <tr>
+      <td rowspan=3 style="white-space: nowrap">
+<a href="#video_preload_attribute">Video preload attribute</a>
+      </td>
+      <td rowspan=3>
+Simple to use for an unique file hosted on a web server
+      </td>
+      <td>
+Browser may completely ignore the attribute
+      </td>
+    <tr>
+      <td>
+Resource fetching starts when HTML document has been completely loaded and
+parsed
+      </td>
+    </tr>
+    <tr>
+      <td>
+Doesn't work with MSE
+      </td>
+    </tr>
+    <tr>
+      <td rowspan=3 style="white-space: nowrap">
+<a href="#link_preload">Link preload</a>
+      </td>
+      <td>
+Forces the browser to make a request for a video resource without blocking
+the document's <code>onload</code> event
+      </td>
+      <td rowspan=3>
+Doesn't work with HTTP Range requests
+      </td>
+    <tr>
+      <td>
+Compatible with MSE and segment files
+      </td>
+    </tr>
+    <tr>
+      <td>
+Should be used only for audio files or short video clips when fetching full
+resource
+      </td>
+    </tr>
+    <tr>
+      <td>
+<a href="#manual_buffering">Manual buffering</a>
+      </td>
+      <td>
+Full control
+      </td>
+      <td>
+Complex error handling is website responsibility
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Video preload attribute
 
