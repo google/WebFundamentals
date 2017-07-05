@@ -23,7 +23,7 @@ case.
 
 Note: Unless specified otherwise, this article also applies to the audio element.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 <table>
   <tbody>
