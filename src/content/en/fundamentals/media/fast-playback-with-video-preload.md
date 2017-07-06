@@ -30,10 +30,10 @@ Note: Unless specified otherwise, this article also applies to the audio element
     <tr>
       <th></th>
       <th>
-Pros
+It's great...
       </th>
       <th>
-Cons
+But...
       </th>
     </tr>
     <tr>
@@ -54,26 +54,24 @@ parsed
     </tr>
     <tr>
       <td>
-Doesn't work with MSE
+MSE is not compatible
       </td>
     </tr>
     <tr>
-      <td rowspan=3 style="white-space: nowrap">
+      <td rowspan=2 style="white-space: nowrap">
 <a href="#link_preload">Link preload</a>
       </td>
       <td>
 Forces the browser to make a request for a video resource without blocking
 the document's <code>onload</code> event
       </td>
-      <td rowspan=3>
-Doesn't work with HTTP Range requests
+      <td>
+HTTP Range requests are not compatible
       </td>
     <tr>
       <td>
 Compatible with MSE and segment files
       </td>
-    </tr>
-    <tr>
       <td>
 Should be used only for audio files or short video clips when fetching full
 resource
