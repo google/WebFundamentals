@@ -16,7 +16,7 @@ progressive web app features:
 * Push notifications
 * Add to homescreen
 
-See [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) to learn more.
+See [Service Workers: an Introduction](/web/fundamentals/getting-started/primers/service-workers) to learn more.
 
 ## How to pass the audit {: #how }
 
