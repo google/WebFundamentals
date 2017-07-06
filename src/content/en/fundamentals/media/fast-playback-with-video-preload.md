@@ -125,8 +125,9 @@ duration, and so on) is desirable.
 </script>
 ```
 
-With `preload` value set to `auto`, we're saying th at downloading the entire
-video right away is considered desirable.
+Setting `preload` value to `auto` indicates that the browser should cache
+enough such that the playback to end would be possible without requiring a stop
+for further buffering.
 
 ```
 <video id="video" preload="auto" src="file.mp4" controls></video>
@@ -149,6 +150,15 @@ applied in Chrome:
 - In Android 4.3, Chrome forces `preload` value to `none`.
 - On a cellular connection (2G, 3G, and 4G), Chrome forces `preload` value to
   `metadata`.
+
+### Tips
+
+If your website contains plenty of video resources on the same domain, I would
+recommend you set the `preload` value to `metadata` or define the `poster`
+attribute and set `preload` value to `none`. That way, you would avoid hitting
+the maxmium number of HTTP connections per host (6 in Chrome at the time of
+writing) which can hang loading of resources. Note that this may also improve
+page speed if video aren't part of your core user experience.
 
 ## Link preload
 
@@ -289,7 +299,8 @@ availability with the snippet below.
 Before we dive into the [Cache API] and service workers, let's see how to
 manually buffer a video with MSE. The example below assumes that your web
 server supports HTTP Range requests. Note that this would be pretty similar to
-segment files.
+segment files. It exists some middleware libraries such as [Google's Shaka
+Player], [JW Player], and [Video.js] dedicated to this.
 
 ```
 <video id="video" controls></video>
@@ -557,3 +568,6 @@ requests.
 [ranged-response.js]: https://github.com/GoogleChrome/sample-media-pwa/blob/master/src/client/scripts/ranged-response.js
 [Cache API]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
 [yet]: https://github.com/whatwg/fetch/issues/144
+[Google's Shaka Player]: https://github.com/google/shaka-player
+[JW Player]: https://developer.jwplayer.com/
+[Video.js]: http://videojs.com/
