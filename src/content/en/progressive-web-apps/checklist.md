@@ -783,7 +783,7 @@ notifications is not a requirement for an exemplary progressive web app.
       <td><b>To Test</b></td>
       <td>
         Visit the site and find the push notifications opt in flow. Ensure 
-        that if you dismiss or decline to turn on push notifications that the 
+        that if you dismiss to turn on push notifications that the 
         site does not re-prompt in the same way within the same session.
       </td>
     </tr>
