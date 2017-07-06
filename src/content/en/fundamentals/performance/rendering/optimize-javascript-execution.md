@@ -48,7 +48,9 @@ Frameworks or samples may use `setTimeout` or `setInterval` to do visual changes
 
 <img src="images/optimize-javascript-execution/settimeout.jpg" alt="setTimeout causing the browser to miss a frame.">
 
-In fact, jQuery’s default `animate` behavior today is to use `setTimeout`! You can [patch it to use `requestAnimationFrame`](https://github.com/gnarf/jquery-requestAnimationFrame), which is strongly advised.
+In fact, jQuery used to use setTimeout for animate behavior. It was changed to use requestAnimationFrame in version 3.
+If you are using older version of jQeury, you can [patch it to use `requestAnimationFrame`](https://github.com/gnarf/jquery-requestAnimationFrame), which is strongly advised.
+
 
 ## Reduce complexity or use Web Workers
 
