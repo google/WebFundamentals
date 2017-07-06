@@ -13,6 +13,8 @@ The `role` attribute helps screen readers understand the purpose of an ARIA
 widget. A `role` may have a set of required, additional attributes that
 describe the state of the widget to the screen reader.
 
+See [Introduction to ARIA](/web/fundamentals/accessibility/semantics-aria/) for more information.
+
 ## How to pass the audit {: #how }
 
 <<_shared/query.md>>
