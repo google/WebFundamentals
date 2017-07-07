@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/progressive-web-apps/_book.yaml
 description: A checklist which breaks down all the things we think it takes to be a baseline progressive web app, and how to take it a step further with an exemplary progressive web app. 
 
-{# wf_updated_on: 2017-01-10 #}
+{# wf_updated_on: 2017-07-07 #}
 {# wf_published_on: 2016-11-07 #}
 
 # Progressive Web App Checklist {: .page-title }
@@ -783,8 +783,8 @@ notifications is not a requirement for an exemplary progressive web app.
       <td><b>To Test</b></td>
       <td>
         Visit the site and find the push notifications opt in flow. Ensure 
-        that if you dismiss to turn on push notifications that the 
-        site does not re-prompt in the same way within the same session.
+        that if you dismiss push notification, the site does not re-prompt 
+        in the same way within the same session.
       </td>
     </tr>
     <tr>
