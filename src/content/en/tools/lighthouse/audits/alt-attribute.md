@@ -16,6 +16,8 @@ synthesized speech or Braille. Screen readers can't convert images. So if your
 images include important information, that information is not accessible to
 visually-impaired users.
 
+See [Text Alternatives for Images](/web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images) for more information.
+
 ## How to pass the audit {: #how }
 
 <<_shared/query.md>>
