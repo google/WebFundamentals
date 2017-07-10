@@ -1,15 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: This update discusses upcoming features in JavaScript RegExps.
+description: An overview of the exciting new features coming to JavaScript regular expressions, including named captures, the dotAll flag, Unicode property escapes, and lookbehind assertions.
 
 {# wf_updated_on: 2017-07-10 #}
 {# wf_published_on: 2017-07-10 #}
 {# wf_tags: javascript,regex #}
 
 {# wf_featured_image: /web/updates/images/2017/07/v8.png #}
-{# wf_featured_snippet: An overview of the exciting new features coming to
-JavaScript regular expressions, including named captures, the dotAll flag,
-Unicode property escapes, and lookbehind assertions. #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -17,7 +14,6 @@ Unicode property escapes, and lookbehind assertions. #}
 # Upcoming Regular Expression Features {: .page-title }
 
 {% include "web/_shared/contributors/jgruber.html" %}
-{% include "web/_shared/contributors/mathiasbynens.html" %}
 {% include "web/_shared/contributors/yangguo.html" %}
 
 ES2015 introduced many new features to the JavaScript language, including
