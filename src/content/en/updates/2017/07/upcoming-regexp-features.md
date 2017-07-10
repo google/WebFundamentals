@@ -4,17 +4,17 @@ description: This update discusses upcoming features in JavaScript RegExps.
 
 {# wf_updated_on: 2017-07-10 #}
 {# wf_published_on: 2017-07-10 #}
-{# wf_tags: javascript,regex,regexp #}
+{# wf_tags: javascript,regex #}
 
 {# wf_featured_image: /web/updates/images/2017/07/v8.png #}
 {# wf_featured_snippet: An overview of the exciting new features coming to
-JavaScript RegExps, including named captures, the dotAll flag, Unicode property
-escapes, and lookbehind assertions. #}
+JavaScript regular expressions, including named captures, the dotAll flag,
+Unicode property escapes, and lookbehind assertions. #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
 
-# Upcoming RegExp Features {: .page-title }
+# Upcoming Regular Expression Features {: .page-title }
 
 {% include "web/_shared/contributors/jgruber.html" %}
 {% include "web/_shared/contributors/mathiasbynens.html" %}
@@ -24,8 +24,8 @@ ES2015 introduced many new features to the JavaScript language, including
 significant improvements to the regular expression syntax with the Unicode
 (`/u`) and sticky (`/y`) flags. But development has not stopped since then. In
 tight collaboration with other members at TC39 (the ECMAScript standards body),
-the V8 team has proposed and co-designed several new features to make RegExps
-even more powerful.
+the V8 team has proposed and co-designed several new features to make regular
+expressions even more powerful.
 
 These features are currently being proposed for inclusion in the JavaScript
 specification. Even though the proposals have not been fully accepted, they are
@@ -133,13 +133,13 @@ characters that could be considered numbers, for example the circled digit one:
 ①; or considered word characters, for example the Chinese character for snow:
 雪.
 
-Neither of these can be matched with `\d` or `\w`. Changing the meaning of these
-shorthands would break existing regular expression patterns.
+Neither of these can be matched with `\d` or `\w`. Changing the meaning of
+these shorthands would break existing regular expression patterns.
 
 Instead, new character classes are being
 [introduced](https://github.com/tc39/proposal-regexp-unicode-property-escapes).
-Note that they are only available for Unicode-aware RegExps denoted by the `/u`
-flag.
+Note that they are only available for Unicode-aware regular expressions denoted
+by the `/u` flag.
 
 ```js
 /\p{Number}/u.test('①');      // true
@@ -205,7 +205,8 @@ Wood](https://twitter.com/IgnoredAmbience), Gorkem Yakin, and Irregexp guru
 contributed to the language specification and V8’s implementation of these
 features.
 
-We hope you’re as excited about these new RegExp features as we are!
+We hope you’re as excited about these new regular expression features as we
+are!
 
 
 {% include "comment-widget.html" %}
