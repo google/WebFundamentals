@@ -4,7 +4,7 @@ description: This update discusses upcoming features in JavaScript RegExps.
 
 {# wf_updated_on: 2017-07-10 #}
 {# wf_published_on: 2017-07-10 #}
-{# wf_tags: javascript #}
+{# wf_tags: javascript,regex,regexp #}
 
 {# wf_featured_image: /web/updates/images/2017/07/v8.png #}
 {# wf_featured_snippet: An overview of the exciting new features coming to
@@ -20,34 +20,32 @@ escapes, and lookbehind assertions. #}
 {% include "web/_shared/contributors/mathiasbynens.html" %}
 {% include "web/_shared/contributors/yangguo.html" %}
 
-Regular expressions, or RegExps, are an important part of the JavaScript
-language. When used properly, they can greatly simplify string processing.
-
 ES2015 introduced many new features to the JavaScript language, including
-significant improvements to the regular expression syntax with the Unicode (`/u`)
-and sticky (`/y`) flags. But development has not stopped since then — in tight
-collaboration with other members at TC39 (the ECMAScript standards body), the
-V8 team has proposed and co-designed several new features to make RegExps even
-more powerful.
+significant improvements to the regular expression syntax with the Unicode
+(`/u`) and sticky (`/y`) flags. But development has not stopped since then. In
+tight collaboration with other members at TC39 (the ECMAScript standards body),
+the V8 team has proposed and co-designed several new features to make RegExps
+even more powerful.
 
 These features are currently being proposed for inclusion in the JavaScript
 specification. Even though the proposals have not been fully accepted, they are
 already at [Stage 3 in the TC39
 process](https://tc39.github.io/process-document/). We have implemented these
-features behind flags (see below) in order to be able to provide timely design
-and implementation feedback before the specification is finalized.
+features behind a flag (see below) in order to be able to provide timely design
+and implementation feedback to the respective proposal authors before the
+specification is finalized.
 
-In this blog post we want to give you a preview of this exciting future. If
-you'd like to follow along with the upcoming examples, enable experimental
-JavaScript features at `chrome://flags/#enable-javascript-harmony`.
+This blog post gives you a preview of this exciting future. If you'd like to
+follow along with the upcoming examples, enable experimental JavaScript
+features at `chrome://flags/#enable-javascript-harmony`.
 
 
 ## Named Captures
 
 Regular expressions can contain so-called captures (or groups), which can
 capture a portion of the matched text. So far, developers could only refer to
-these captures by their numeric index, which is determined by the position of
-the capture within the pattern.
+these captures by their index, which is determined by the position of the
+capture within the pattern.
 
 ```js
 const pattern = /(\d{4})-(\d{2})-(\d{2})/u;
