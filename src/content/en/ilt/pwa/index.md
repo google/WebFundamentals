@@ -47,8 +47,7 @@ listed at the start.
 ### Concepts
 
 Each codelab has an accompanying text that explains the concepts in the
-codelab in more detail. Links to corresponding texts are included at the
-top of each codelab.
+codelab in more detail.
 
 ### Other Resources
 
