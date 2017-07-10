@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This update discusses upcoming features in JavaScript RegExps.
 
-{# wf_updated_on: 2017-07-07 #}
-{# wf_published_on: 2017-07-07 #}
+{# wf_updated_on: 2017-07-10 #}
+{# wf_published_on: 2017-07-10 #}
 {# wf_tags: javascript #}
 
 {# wf_featured_image: /web/updates/images/2017/07/v8.png #}
