@@ -51,11 +51,11 @@ the capture within the pattern.
 
 ```js
 const pattern = /(\d{4})-(\d{2})-(\d{2})/u;
-const result = pattern.exec('2017-07-03');
-// result[0] === '2017-07-03'
+const result = pattern.exec('2017-07-10');
+// result[0] === '2017-07-10'
 // result[1] === '2017'
 // result[2] === '07'
-// result[3] === '03'
+// result[3] === '10'
 ```
 
 But regular expressions are already notoriously difficult to read, write, and
@@ -81,10 +81,10 @@ Java, .Net, and Ruby:
 
 ```js
 const pattern = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/u;
-const result = pattern.exec('2017-07-03');
+const result = pattern.exec('2017-07-10');
 // result.groups.year === '2017'
 // result.groups.month === '07'
-// result.groups.day === '03'
+// result.groups.day === '10'
 ```
 
 Named captures can also be referenced by named backreferences and through
