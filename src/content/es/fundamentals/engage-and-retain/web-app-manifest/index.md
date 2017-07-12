@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: El manifiesto de las apps web es un archivo JSON que te permite controlar cómo tu sitio o app web se muestra al usuario en áreas donde normalmente ven apps nativas (por ejemplo, la pantalla de inicio de un dispositivo), además de dirigir lo que el usuario puede iniciar y definir su apariencia al iniciarse.
 
-{# wf_updated_on: 2016-08-19 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-02-11 #}
 
 # El manifiesto de las apps web {: .page-title }
@@ -20,7 +20,7 @@ Los manifiestos de las apps web permiten guardar un marcador de sitio en la pant
 
 Hace todo esto a través del simple mecanismo de metadatos en un archivo de texto. Eso representa el manifiesto de aplicación web.
 
-Nota: Aunque los manifiestos de apps web pueden usarse en cualquier sitio, son necesarios para las [apps web progresivas](/web/progressive-web-apps/).
+Note: Aunque los manifiestos de apps web pueden usarse en cualquier sitio, son necesarios para las [apps web progresivas](/web/progressive-web-apps/).
 
 ### TL;DR {: .hide-from-toc }
 - Crear un manifiesto y vincularlo a tu página son procesos muy sencillos.
@@ -115,7 +115,7 @@ Puedes elegir lo que quieras; el valor que usamos tiene la ventaja de ser releva
       }],
     
 
-Nota: Cuando guardas un ícono en la pantalla de inicio, Chrome busca primero los íconos que concuerden con la densidad de la pantalla y que tengan el tamaño para una densidad de pantalla de 48 dp. Si no encuentra ninguno, busca el ícono que más cerca esté de concordar con las características del dispositivo. Si, por alguna razón, quieres que se encuentre específicamente un ícono en una densidad de píxeles en particular, puedes usar el miembro <code>density</code> opcional, que indica un número. Cuando no declaras la densidad, el valor predeterminado es 1.0. Esto significa: "usa este ícono para densidades de pantalla de 1.0 y superiores", que es lo que normalmente quieres.
+Note: Cuando guardas un ícono en la pantalla de inicio, Chrome busca primero los íconos que concuerden con la densidad de la pantalla y que tengan el tamaño para una densidad de pantalla de 48 dp. Si no encuentra ninguno, busca el ícono que más cerca esté de concordar con las características del dispositivo. Si, por alguna razón, quieres que se encuentre específicamente un ícono en una densidad de píxeles en particular, puedes usar el miembro <code>density</code> opcional, que indica un número. Cuando no declaras la densidad, el valor predeterminado es 1.0. Esto significa: "usa este ícono para densidades de pantalla de 1.0 y superiores", que es lo que normalmente quieres.
 
 ## Agrega una pantalla de presentación
 
@@ -278,7 +278,7 @@ sobre el manifiesto de apps web.
 * Si quieres descripciones destacadas de los ingenieros que crearon los manifiestos
 de apps web, puedes leer la [propia especificación del W3C](http://www.w3.org/TR/appmanifest/){: .external }.
 
-Nota: Si actualizas tu archivo `manifest.json` en el futuro, el usuario no
+Note: Si actualizas tu archivo `manifest.json` en el futuro, el usuario no
 verá automáticamente esos cambios, a menos que vuelva a agregar tu app a sus
 pantallas de inicio.
 

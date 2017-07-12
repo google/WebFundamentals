@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Considere o conteúdo, não só o layout e o design gráfico, ao criar para diversos usuários e dispositivos.
 
-{# wf_updated_on: 2016-05-10 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-05-10 #}
 
 # Conteúdo para vários dispositivos {: .page-title }
@@ -167,7 +167,7 @@ Ao criar conteúdo para diversas janelas de visualização, considere o conteúd
 
 ### Teste o conteúdo
 
-Sucesso: Tudo que fizer... **teste**!
+Success: Tudo que fizer... **teste**!
 
 * Verifique a legibilidade em janelas de visualização menores usando o Chrome DevTools e outras [ferramentas de emulação](/web/fundamentals/performance/poor-connectivity/).
 * [Teste seu conteúdo em condições de baixa largura de banda e alta latência](/web/fundamentals/performance/poor-connectivity/); experimente o conteúdo em diversos cenários de conectividade.

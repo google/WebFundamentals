@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-09-28 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-28 #}
 
 # El patrón PRPL {: .page-title }
@@ -108,7 +108,7 @@ usando [Componentes web](http://webcomponents.org/):
 ![un diagrama de una app que tiene dos vistas, que tienen dependencias
 individuales y compartidas](images/app-build-components.png)
 
-Nota: a pesar de que las importaciones de HTML son la estrategia de agrupación preferida de Polymer, puedes
+Note: a pesar de que las importaciones de HTML son la estrategia de agrupación preferida de Polymer, puedes
 usar división de código y fragmentación basada en ruta para lograr una configuración similar con
 modernos agrupadores de módulo de JavaScript
 

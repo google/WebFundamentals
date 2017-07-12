@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La mayoría de los navegadores podrán tener acceso al micrófono del usuario.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-08-23 #}
 
 # Grabación de audio del usuario {: .page-title }
@@ -210,7 +210,7 @@ solo pedir acceso al micrófono la primera vez que se necesita. Una vez que el u
 otorgado el acceso, no le volverán a preguntar, sin embargo, si lo rechazan, 
 no puedes obtener acceso otra vez para pedirle permiso al usuario.
 
-Advertencia: Pedir el acceso al micrófono cuando se carga la página genera que la mayoría de tus usuarios rechacen el acceso a la misma.
+Warning: Pedir el acceso al micrófono cuando se carga la página genera que la mayoría de tus usuarios rechacen el acceso a la misma.
 
 ### Usa la API de permisos para comprobar si ya tienes acceso
 

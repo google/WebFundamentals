@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Cada vez más dispositivos cuentan con pantallas táctiles, desde teléfonos hasta pantallas de escritorio. Cuando los usuarios tocan la pantalla, tu app debería responder de forma intuitiva y atractiva.
 
-{# wf_updated_on: 2014-01-06 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-01-01 #}
 
 # Haz que tu sitio sea táctil {: .page-title }
@@ -49,7 +49,7 @@ después de presionarlo.
 Piensa detenidamente qué estilos usarás y cómo los verán los usuarios después de
 que toquen sobre ellos.
 
-Nota: Los botones y las etiquetas de anclaje pueden tener distintos comportamientos
+Note: Los botones y las etiquetas de anclaje pueden tener distintos comportamientos
 en diferentes navegadores. Por lo tanto, ten en cuenta que **hover**
 permanecerá en algunos casos y **focus**, en otros.
 
@@ -98,7 +98,7 @@ degradado, que puede quitarse con la configuración `background-image: none`.
 
 [Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
 
-Advertencia: ¡Solo debes suprimir los estilos predeterminados que se mencionan anteriormente si cuentas con
+Warning: ¡Solo debes suprimir los estilos predeterminados que se mencionan anteriormente si cuentas con
 seudoclases para `:hover`, `:active` y `:focus`!
 
 ### Deshabilitar user-select
@@ -130,7 +130,7 @@ Según lo que desees que haga tu gesto, probablemente quieras
 que los usuarios interactúen con un elemento a la vez *o* quieras que puedan
 interactuar con varios elementos al mismo tiempo.
 
-Advertencia: No te olvides de que algunos usuarios querrán entrada de teclado, y los usuarios
+Warning: No te olvides de que algunos usuarios querrán entrada de teclado, y los usuarios
 que utilicen tecnología de asistencia en dispositivos con pantallas táctiles tal vez no puedan
 hacer los gestos porque los intercepta / consume la tecnología de
 asistencia.
@@ -195,7 +195,7 @@ El siguiente es un ejemplo de recepción para el comienzo de una interacción.
 
 [Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
 
-Nota: Debido al diseño de la API, PointerEvents solo necesita un único evento
+Note: Debido al diseño de la API, PointerEvents solo necesita un único evento
 `pointerdown` para controlar los eventos de mouse y táctiles.
 
 #### Controlar la interacción para un único elemento

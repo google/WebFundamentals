@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Google y AnswerLab se sometieron a un estudio que evaluó cómo los usuarios interactúan con un diverso conjunto de sitios móviles. El objetivo fue responder la pregunta "¿Qué hace que un sitio móvil sea bueno?"
 
 {# wf_published_on: 2014-08-08 #}
-{# wf_updated_on: 2015-09-17 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # ¿Qué hace que un sitio para dispositivo móvil sea bueno? {: .page-title }
 
@@ -26,7 +26,7 @@ categorías.
 
 ## Navegación por el sitio y página principal
 
-Éxito: Centra la página principal de tu dispositivo móvil en conectar a los usuarios con el contenido que están buscando.
+Success: Centra la página principal de tu dispositivo móvil en conectar a los usuarios con el contenido que están buscando.
 
 ### Mantén las llamadas en acción en el centro y frente
 
@@ -115,7 +115,7 @@ lo que puede afectar negativamente los rankings de búsqueda.
 
 ## Búsqueda en sitio
 
-Éxito: Ayuda a los usuarios móviles a encontrar lo que buscan si deben hacerlo rápido.
+Success: Ayuda a los usuarios móviles a encontrar lo que buscan si deben hacerlo rápido.
 
 ### Haz que la búsqueda en sitio sea visible
 
@@ -214,7 +214,7 @@ asegurarte de que los usuarios obtengan los resultados del segmento más relevan
 
 ## Comercio y conversión
 
-Éxito: Comprende los viajes de tu cliente y permíteles a los usuarios convertir bajo sus propias condiciones. 
+Success: Comprende los viajes de tu cliente y permíteles a los usuarios convertir bajo sus propias condiciones. 
 
 ### Permíteles a los usuarios explorar antes de que se comprometan
 
@@ -296,7 +296,7 @@ o permitiéndoles a los usuarios enviarse vínculos a sí mismos por correo elec
 
 ## Ingreso de formulario
 
-Éxito: Proporciona una experiencia de conversión fluida y sin fricción con formas útiles.
+Success: Proporciona una experiencia de conversión fluida y sin fricción con formas útiles.
 
 
 ### Optimiza el ingreso de información
@@ -353,7 +353,7 @@ o habilita a los usuarios para que copien su dirección de envío a su direcció
 
 ## Usabilidad y factor de formulario
 
-Éxito: Complace a tus usuarios de dispositivos móviles con pequeños aspectos que mejoren sus experiencias.
+Success: Complace a tus usuarios de dispositivos móviles con pequeños aspectos que mejoren sus experiencias.
 
 ### Optimiza todo tu sitio para apps móviles
 

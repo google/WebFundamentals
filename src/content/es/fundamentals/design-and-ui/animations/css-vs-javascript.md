@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Puedes realizar animaciones con CSS o JavaScript. ¿Cuál debes utilizar y por qué?
 
-{# wf_updated_on: 2016-08-25 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Animaciones de CSS frente a JavaScript {: .page-title }
@@ -79,7 +79,7 @@ El JavaScript necesario para escuchar el final de una transición se ve así:
 
 Además de usar las transiciones de CSS, también puedes usar las animaciones de CSS, que te permiten tener mucho más control sobre los marcos clave de animaciones individuales, las duraciones y las iteraciones.
 
-Nota: Si es la primera vez que realizas animaciones, “marco clave” es un término antiguo de las animaciones realizadas a mano. Los animadores creaban marcos específicos para una parte de la acción, que llevaban este nombre, en los que capturaban acciones como la parte más extrema de cierto movimiento, y luego dibujaban todos los marcos individuales entre los marcos clave. En la actualidad, tenemos un proceso similar para las animaciones de CSS, en el que le indicamos al navegador los valores de las propiedades de CSS que se deben tener en determinados puntos y, luego, el navegador completa los espacios vacíos.
+Note: Si es la primera vez que realizas animaciones, “marco clave” es un término antiguo de las animaciones realizadas a mano. Los animadores creaban marcos específicos para una parte de la acción, que llevaban este nombre, en los que capturaban acciones como la parte más extrema de cierto movimiento, y luego dibujaban todos los marcos individuales entre los marcos clave. En la actualidad, tenemos un proceso similar para las animaciones de CSS, en el que le indicamos al navegador los valores de las propiedades de CSS que se deben tener en determinados puntos y, luego, el navegador completa los espacios vacíos.
 
 Por ejemplo, puedes animar el cuadro del mismo modo que las transiciones, pero puedes hacer que se mueva sin la interacción del usuario, como clics, y con una cantidad infinita de repeticiones. También puedes cambiar varias propiedades al mismo tiempo:
 

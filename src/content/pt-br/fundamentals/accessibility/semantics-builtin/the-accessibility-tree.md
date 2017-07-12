@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Introdução à árvore de acessibilidade
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
 # A árvore de acessibilidade {: .page-title }
@@ -183,7 +183,7 @@ estado marcado, e tem o nome "Receber ofertas promocionais?".
 
 ![saída de texto em tela do VoiceOver, mostrando o rótulo falado de uma caixa de seleção](imgs/promo-offers.png)
 
-Sucesso: Você pode realmente usar o leitor de tela para encontrar rótulos associados
+Success: Você pode realmente usar o leitor de tela para encontrar rótulos associados
 indevidamente tabulando pela página e verificando as funções, estados e
 nomes falados.
 
