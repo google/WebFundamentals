@@ -240,8 +240,8 @@ performance optimizations provided by the HTTP/2 protocol.
 
 With HTTP/1.x, if the client wants to make multiple parallel requests to improve
 performance, then multiple TCP connections must be used (see
-[Using Multiple TCP Connections](https://hpbn.co/http1x/#using-multiple-tcp-connections)).
-This behavior is a direct consequence of the HTTP/1.x delivery model, which
+[Using Multiple TCP Connections](https://hpbn.co/http1x/#using-multiple-tcp-connections)
+). This behavior is a direct consequence of the HTTP/1.x delivery model, which
 ensures that only one response can be delivered at a time (response queuing) per
 connection. Worse, this also results in head-of-line blocking and inefficient
 use of the underlying TCP connection.
@@ -396,7 +396,7 @@ quickly the downstream delivers data to match the speed of upstream to control
 its resource usage; and so on.
 
 Do the above requirements remind you of TCP flow control? They should, as the
-problem is effectively identical (see 
+problem is effectively identical (see
 [Flow Control](https://hpbn.co/building-blocks-of-tcp/#flow-control)). However,
 because the HTTP/2 streams are multiplexed within a single TCP connection, TCP
 flow control is both not granular enough, and does not provide the necessary
@@ -408,8 +408,8 @@ control:
 * Flow control is directional. Each receiver may choose to set any window size
   that it desires for each stream and the entire connection.
 * Flow control is credit-based. Each receiver advertises its initial connection
-  and stream flow control window (in bytes), which is reduced whenever the 
-  sender emits a `DATA` frame and incremented via a `WINDOW_UPDATE` frame sent 
+  and stream flow control window (in bytes), which is reduced whenever the
+  sender emits a `DATA` frame and incremented via a `WINDOW_UPDATE` frame sent
   by the receiver.
 * Flow control cannot be disabled. When the HTTP/2 connection is established the
   client and server exchange `SETTINGS` frames, which set the flow control window
@@ -480,7 +480,7 @@ server’s intent to push the described resources to the client and need to be
 delivered ahead of the response data that requests the pushed resources. This
 delivery order is critical: the client needs to know which resources the server
 intends to push to avoid creating duplicate requests for these
-`PUSH_PROMISE`. The simplest strategy to satisfy this requirement is to send all
+resources. The simplest strategy to satisfy this requirement is to send all
 `PUSH_PROMISE` frames, which contain just the HTTP headers of the promised
 resource, ahead of the parent’s response (in other words, `DATA` frames).
 
@@ -509,9 +509,9 @@ content.
 Each HTTP transfer carries a set of headers that describe the transferred
 resource and its properties. In HTTP/1.x, this metadata is always sent as plain
 text and adds anywhere from 500–800 bytes of overhead per transfer, and
-sometimes kilobytes more if HTTP cookies are being used. (See 
-[Measuring and Controlling Protocol Overhead](https://hpbn.co/http1x/#measuring-and-controlling-protocol-overhead)).
-To reduce this overhead and improve performance, HTTP/2 compresses request
+sometimes kilobytes more if HTTP cookies are being used. (See
+[Measuring and Controlling Protocol Overhead](https://hpbn.co/http1x/#measuring-and-controlling-protocol-overhead)
+). To reduce this overhead and improve performance, HTTP/2 compresses request
 and response header metadata using the HPACK compression format that uses two
 simple but powerful techniques:
 
@@ -569,11 +569,11 @@ For full details of the HPACK compression algorithm, see
 
 ## Further reading:
 
-* [“HTTP/2”](https://hpbn.co/http2/){: .external } 
+* [“HTTP/2”](https://hpbn.co/http2/){: .external }
     – The full article by Ilya Grigorik
-* [“Setting up HTTP/2”](https://surma.link/things/h2setup/){: .external } 
+* [“Setting up HTTP/2”](https://surma.link/things/h2setup/){: .external }
     – How to set up HTTP/2 in different backends by Surma
 * [“HTTP/2 is here, let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19) 
     – Presentation by Ilya Grigorik from Velocity 2015
-* [“Rules of Thumb for HTTP/2 Push”](https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit) 
+* [“Rules of Thumb for HTTP/2 Push”](https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit)
     – An analysis by Tom Bergan, Simon Pelchat and Michael Buettner on when and how to use push.
