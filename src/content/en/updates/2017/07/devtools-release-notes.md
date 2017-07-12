@@ -14,7 +14,18 @@ description: New features and changes coming to DevTools in Chrome 61.
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Here are the new features and major changes coming to DevTools in Chrome 61.
+New features and major changes coming to DevTools in Chrome 61 include:
+
+* [Mobile device throttling simulation](#throttling). Set CPU and network
+  throttling simultaneously, to simulate mid-tier or low-end mobile devices.
+* [Storage usage](#storage). View how much storage an origin is using, broken
+  down by technology (IndexedDB, cache, local, session, etc.).
+* [Cache timestamps](#time-cached). View when a service worker cached a
+  response.
+* [Enable the FPS Meter from the Command Menu](#fps-meter).
+* [Change mousewheel and trackpad behavior in the Performance
+  panel](#mousewheel).
+* [Debug ES6 modules natively](#modules).
 
 Note: You can check what version of Chrome you're running at
 `chrome://version`. Chrome auto-updates to a new major version about every 6
@@ -23,7 +34,7 @@ weeks.
 ## Simulate low-end and mid-tier mobile devices in Device Mode {: #throttling }
 
 The Device Mode **Throttling** menu is now exposed by default, and it now lets
-you simulate a low-end or mid-tier mobile device with a couple clicks.
+you simulate a low-end or mid-tier mobile device with a couple of clicks.
 
 <figure>
   <img src="/web/updates/images/2017/07/throttling-menu.png"
@@ -143,7 +154,7 @@ var feedback = {
 
 ## View when a service worker cached responses {: #time-cached }
 
-The new **Time Cached** column in the **Cache Storage** tab shows you when
+The new **Time Cached** column in the **Cache Storage** tab shows you
 when a service worker cached responses.
 
 <figure>
@@ -315,9 +326,10 @@ var feedback = {
 ES6 Modules are shipping natively in Chrome 61. There's not much going on here
 with regards to DevTools, other than that debugging works as you'd expect it
 to. Try setting some breakpoints in and stepping through [Paul Irish's
-ES6-Module-implementation of TodoMVC][TodoMVC] to see for yourself.
+ES6-Module-implementation][ES6] of [TodoMVC][TodoMVC] to see for yourself.
 
-[TodoMVC]: https://paulirish.github.io/es-modules-todomvc/
+[ES6]: https://paulirish.github.io/es-modules-todomvc/
+[TodoMVC]: http://todomvc.com/
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
