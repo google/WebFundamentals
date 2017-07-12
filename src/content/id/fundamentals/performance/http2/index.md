@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2 (atau h2) adalah protokol biner yang membawa kontrol push, aliran multiplexing, dan bingkai ke web.
 
-{# wf_updated_on: 2016-09-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-29 #}
 
 # Pengantar HTTP/2 {: .page-title }
@@ -253,7 +253,7 @@ merakit kembali di ujung satunya.
 ![Multiplexing permintaan dan respons HTTP/2 di dalam koneksi bersama](images/multiplexing01.svg)
 
 Cuplikan menangkap beberapa aliran di flight dalam koneksi yang sama. 
-Klien mentransmisikan bingkai DATA (aliran 5) ke server, sementara server
+Klien mentransmisikan bingkai `DATA` (aliran 5) ke server, sementara server
 mentransmisikan urutan interleave bingkai ke klien untuk aliran 1
 dan 3. Hasilnya, ada tiga aliran paralel saat ini.
 
@@ -472,19 +472,19 @@ hasil yang sama, namun dengan manfaat kinerja tambahan. Sumber daya push dapat:
 * Diprioritaskan oleh server
 * Ditolak oleh klien
 
-### PUSH_PROMISE 101
+### `PUSH_PROMISE` 101
 
-Semua aliran server push dinisiasi melalui bingkai PUSH_PROMISE, yang memberi sinyal
+Semua aliran server push dinisiasi melalui bingkai `PUSH_PROMISE`, yang memberi sinyal
 tujuan server untuk mendorong sumber daya yang dijelaskan ke klien dan harus di
 kirimkan sebelum data respons yang meminta sumber daya didorong. Urutan
 pengiriman ini penting: klien perlu mengetahui sumber daya mana yang
 server maksudkan untuk didorong guna menghindari duplikasi permintaan untuk 
 sumber daya tersebut. Strategi paling sederhana untuk memenuhi persyaratan ini adalah mengirimkan semua
-bingkai PUSH_PROMISE, yang hanya berisi header HTTP sumber daya
-yang di-promise, sebelum respons induk (dengan kata lain, bingkai DATA).
+bingkai `PUSH_PROMISE`, yang hanya berisi header HTTP sumber daya
+yang di-promise, sebelum respons induk (dengan kata lain, bingkai `DATA`).
 
-Setelah klien menerima bingkai PUSH_PROMISE, klien memiliki opsi untuk menolak
-aliran (melalui bingkai RST_STREAM) jika dinginkan. (Ini dapat terjadi misalnya
+Setelah klien menerima bingkai `PUSH_PROMISE`, klien memiliki opsi untuk menolak
+aliran (melalui bingkai `RST_STREAM`) jika dinginkan. (Ini dapat terjadi misalnya
 karena sumber daya sudah ada di cache.) Ini adalah peningkatan penting pada
 HTTP/1.x. Sebaliknya, penggunaan penyisipan sumber daya, yang merupakan 
 "optimasi" populer untuk HTTP/1.x, setara dengan "forced push": klien tidak dapat
@@ -494,7 +494,7 @@ Dengan HTTP/2, klien tetap dalam kontrol penuh terhadap bagaimana server push di
 dapat membatasi jumlah aliran yang didorong secara konkuren; menyesuaikan jendela kontrol alur
 awal untuk seberapa banyak data didorong saat aliran pertama
 dibuka; atau menonaktifkan server push seluruhnya. Preferensi ini dikomunikasikan melalui
-bingkai SETELAN di awal koneksi HTTP/2 dan dapat diperbarui
+bingkai `SETTINGS` di awal koneksi HTTP/2 dan dapat diperbarui
 setiap saat.
 
 Setiap sumber daya yang didorong adalah aliran yang, tidak seperti sumber daya yang disisipkan, memungkinkannya untuk
@@ -539,8 +539,8 @@ sudah ada di tabel statis atau dinamis di setiap sisi.
 
 Catatan: Definisi bidang header permintaan dan respons di HTTP/2 tetap
 tidak berubah, dengan beberapa pengecualian kecil: semua nama bidang header ditulis dengan huruf kecil,
-dan garis permintaan kini terpisah menjadi individu bidang pseudo-header :method, :scheme, :authority,
-dan :path.
+dan garis permintaan kini terpisah menjadi individu bidang pseudo-header `:method`, `:scheme`, 
+`:authority`, dan `:path`.
 
 ### Keamanan dan kinerja HPACK
 
