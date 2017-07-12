@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Three.js에서 WebGL 장면을 가져와서 WebVR 기능을 추가하는 방법을 알아봅니다.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # WebVR 시작하기 {: .page-title }
@@ -10,7 +10,7 @@ description: Three.js에서 WebGL 장면을 가져와서 WebVR 기능을 추가�
 {% include "web/_shared/contributors/paullewis.html" %}
 {% include "web/_shared/contributors/mscales.html" %}
 
-경고: WebVR은 아직 실험 단계이며 변경될 수 있습니다.
+Warning: WebVR은 아직 실험 단계이며 변경될 수 있습니다.
 
 이 가이드에서는 WebVR API를 탐색하고 이를 사용하여 [Three.js](https://threejs.org/)로 빌드한 간단한 WebGL 장면을 개선합니다. 그러나 프로덕션 작업의 경우 [WebVR 상용구](https://github.com/borismus/webvr-boilerplate)와 같은 기존 솔루션으로 시작하기를 원할 수도 있습니다. Three.js에 대해 전혀 모르는 경우 [유용한 시작 가이드](https://aerotwist.com/tutorials/getting-started-with-three-js/)를 참조하세요. 진행하다가 막히는 부분이 있으면 관련 커뮤니티에 문의하세요.
 

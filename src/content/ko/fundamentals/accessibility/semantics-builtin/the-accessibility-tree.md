@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 접근성 트리 소개
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
 # 접근성 트리 {: .page-title }
@@ -183,7 +183,7 @@ promotional offers?'로 명명되어 있다고 알려줄 수 있습니다.
 
 ![체크박스에 대해 음성으로 알려주는 레이블을 보여 주는 VoiceOver의 화상 텍스트 출력](imgs/promo-offers.png)
 
-성공: 이제는 실제로 스크린 리더를 사용하여 페이지를 탭으로 이동하고 음성으로 안내되는 역할, 상태, 이름을 확인하면서 잘못 연결된 레이블을
+Success: 이제는 실제로 스크린 리더를 사용하여 페이지를 탭으로 이동하고 음성으로 안내되는 역할, 상태, 이름을 확인하면서 잘못 연결된 레이블을
 찾을 수
 있습니다.
 
