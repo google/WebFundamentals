@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Gunakan panel Styles di Chrome DevTools untuk memeriksa dan mengubah gaya CSS yang terkait dengan sebuah elemen.
 
-{# wf_updated_on: 2016-02-25 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Mengedit Gaya {: .page-title }
@@ -113,7 +113,7 @@ Klik ruang kosong di dalam aturan CSS yang bisa diedit untuk membuat deklarasi b
 Ketikkan atau tempel CSS ke dalam panel **Styles**. Properti dan nilainya 
 di-parse dan dimasukkan ke dalam bidang yang sesuai.
 
-Catatan: Untuk mengaktifkan atau menonaktifkan deklarasi gaya, centang atau hapus centang di kotak centang di sebelahnya.
+Note: Untuk mengaktifkan atau menonaktifkan deklarasi gaya, centang atau hapus centang di kotak centang di sebelahnya.
 
 ## Menambahkan aturan gaya
 

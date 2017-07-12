@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Mengukur kinerja jaringan aplikasi web Anda menggunakan panel Network Chrome DevTools.
 
-{# wf_updated_on: 2016-02-21 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Mengukur Waktu Pemuatan Sumber Daya {: .page-title }
@@ -334,7 +334,7 @@ untuk menyembunyikan atau menampilkan panel **Filters**.
 Gunakan tombol content type untuk menampilkan sumber daya tipe materi 
 yang dipilih saja. 
 
-Catatan: Tekan <kbd>Cmd</kbd> (Mac) atau <kbd>Ctrl</kbd> (Windows/Linux), lalu klik untuk mengaktifkan beberapa filter secara bersamaan.
+Note: Tekan <kbd>Cmd</kbd> (Mac) atau <kbd>Ctrl</kbd> (Windows/Linux), lalu klik untuk mengaktifkan beberapa filter secara bersamaan.
 
 ![beberapa filter tipe materi dipilih 
 secara bersamaan](imgs/multiple-content-type-filters.png)

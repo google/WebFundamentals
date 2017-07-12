@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-11-08 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Ambil Kredensial {: .page-title }
@@ -220,7 +220,7 @@ objek `FormData` yang dienkodekan sebagai `multipart/form-data`:
     testtest
     ------WebKitFormBoundaryOkstjzGAv8zab97W--
 
-Catatan: Anda tidak bisa menggunakan `XMLHttpRequest` untuk mem-POST-kan `PasswordCredential` 
+Note: Anda tidak bisa menggunakan `XMLHttpRequest` untuk mem-POST-kan `PasswordCredential` 
 ke server Anda.
 
 #### Parameter `PasswordCredential`

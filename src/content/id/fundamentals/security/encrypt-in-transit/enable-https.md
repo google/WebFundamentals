@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Mengaktifkan HTTPS di server Anda sangatlah penting untuk mengamankan laman web. 
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-27 #}
 
 # Mengaktifkan HTTPS di Server Anda {: .page-title }
@@ -130,7 +130,7 @@ subdomain; atau, Anda bisa membeli hanya satu atau beberapa sertifikat nama tung
 Anda memiliki lebih dari lima subdomain, misalnya, Anda mungkin akan merasa sertifikat karakter pengganti
 lebih praktis bila Anda akan mengaktifkan HTTPS di server.)
 
-Catatan: Ingatlah bahwa di sertifikat karakter pengganti, karakter pengganti hanya diterapkan pada satu label DNS. Sertifikat yang baik untuk \*.example.com akan cocok untuk foo.example.com dan bar.example.com, namun _tidak_ untuk foo.bar.example.com.
+Note: Ingatlah bahwa di sertifikat karakter pengganti, karakter pengganti hanya diterapkan pada satu label DNS. Sertifikat yang baik untuk \*.example.com akan cocok untuk foo.example.com dan bar.example.com, namun _tidak_ untuk foo.bar.example.com.
 
 Salin sertifikat ke semua server front-end Anda di tempat yang bisa diakses selain web
 misalnya `/etc/ssl` (Linux dan Unix) atau di mana saja yang diperlukan oleh IIS (Windows).
@@ -172,9 +172,9 @@ bisa membantu.
 Jika memiliki banyak hostname/subdomain, maka masing-masing perlu menggunakan
 sertifikat yang tepat.
 
-Peringatan: Jika Anda sudah menyelesaikan langkah-langkah ini, namun menggunakan HTTPS hanya untuk keperluan mengalihkan klien kembali ke HTTP, sekarang hentikanlah. Lihat bagian berikutnya untuk memastikan HTTPS dan HTTP bekerja dengan mulus.
+Caution: Jika Anda sudah menyelesaikan langkah-langkah ini, namun menggunakan HTTPS hanya untuk keperluan mengalihkan klien kembali ke HTTP, sekarang hentikanlah. Lihat bagian berikutnya untuk memastikan HTTPS dan HTTP bekerja dengan mulus.
 
-Catatan: Akhirnya permintaan HTTP harus dialihkan ke HTTPS dan gunakan HTTP Strict Transport Security (HSTS). Akan tetapi, ini bukan tahapan yang tepat untuk melakukannya dalam proses migrasi; lihat “Alihkan HTTP ke HTTPS” dan “Aktifkan Strict Transport Security dan Cookie Aman”.
+Note: Akhirnya permintaan HTTP harus dialihkan ke HTTPS dan gunakan HTTP Strict Transport Security (HSTS). Akan tetapi, ini bukan tahapan yang tepat untuk melakukannya dalam proses migrasi; lihat “Alihkan HTTP ke HTTPS” dan “Aktifkan Strict Transport Security dan Cookie Aman”.
 
 Sekarang, dan sepanjang masa pakai situs Anda, periksa konfigurasi HTTPS dengan
 [SSL Server Test yang praktis dari Qualys](https://www.ssllabs.com/ssltest/){: .external }. Situs Anda
@@ -193,7 +193,7 @@ Pastikan URL intrasitus dan URL eksternal bersifat agnostik terhadap protokol; y
 Masalah timbul bila Anda menyajikan laman lewat HTTPS yang menyertakan sumber daya HTTP,
 yang dikenal dengan [materi campuran](/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content). Browser memperingatkan pengguna bahwa kekuatan penuh HTTPS telah hilang. Sebenarnya, dalam hal materi campuran aktif (skrip, plug-in, CSS, iframe), sering kali browser cuma tidak mau memuat atau mengeksekusi materi sama sekali, yang mengakibatkan laman terputus.
 
-Catatan: Boleh saja menyertakan sumber daya HTTPS di laman HTTP.
+Note: Boleh saja menyertakan sumber daya HTTPS di laman HTTP.
 
 Selain itu, bila Anda menautkan ke laman lain di situs Anda, pengguna bisa mengalami
 penurunan versi dari HTTPS menjadi HTTP.
@@ -256,7 +256,7 @@ maupun HTTPS. Sering kali ini merupakan ide bagus, karena nanti Anda memiliki ko
 yang lebih baik atas penampilan, kinerja, dan keamanan situs Anda. Selain itu,
 Anda tidak harus mempercayai pihak ketiga, walaupun biasanya hal itu bagus.
 
-Catatan: Ingatlah bahwa Anda juga perlu mengubah URL intrasitus di stylesheet, JavaScript, aturan pengalihan, tag `<link>`, dan deklarasi CSP, tidak cuma di laman HTML.
+Note: Ingatlah bahwa Anda juga perlu mengubah URL intrasitus di stylesheet, JavaScript, aturan pengalihan, tag `<link>`, dan deklarasi CSP, tidak cuma di laman HTML.
 
 ## Mengalihkan HTTP ke HTTPS
 
@@ -279,13 +279,13 @@ saat mengikuti referensi `http://`. Ini akan mengalahkan serangan seperti
 akan menghindari biaya bolak-balik `301 redirect` yang kita aktifkan di 
 [Mengalihkan HTTP ke HTTPS](#redirect-http-to-https).
 
-Catatan: Klien yang telah mengenali situs Anda sebagai HSTS Host kemungkinan akan mengalami <a href="https://tools.ietf.org/html/rfc6797#section-12.1"><i>hard-fail</i> jika situs Anda memiliki kesalahan dalam konfigurasi TLS</a> (misalnya sertifikat telah berakhir). HSTS secara eksplisit didesain seperti ini untuk memastikan penyerang jaringan tidak bisa menipu klien agar mengakses situs tanpa HTTPS. Jangan aktifkan HSTS hingga Anda yakin bahwa operasi situs cukup tangguh untuk menghindari penerapan HTTPS dengan kesalahan validasi sertifikat.
+Note: Klien yang telah mengenali situs Anda sebagai HSTS Host kemungkinan akan mengalami <a href="https://tools.ietf.org/html/rfc6797#section-12.1"><i>hard-fail</i> jika situs Anda memiliki kesalahan dalam konfigurasi TLS</a> (misalnya sertifikat telah berakhir). HSTS secara eksplisit didesain seperti ini untuk memastikan penyerang jaringan tidak bisa menipu klien agar mengakses situs tanpa HTTPS. Jangan aktifkan HSTS hingga Anda yakin bahwa operasi situs cukup tangguh untuk menghindari penerapan HTTPS dengan kesalahan validasi sertifikat.
 
 Aktifkan HTTP Strict Transport Security (HSTS) dengan menyetel header `Strict-Transport-Security`. [Laman HSTS milik OWASP berisi tautan ke petunjuk](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security) untuk beragam perangkat lunak server.
 
 Sebagian besar server web menawarkan kemampuan menambahkan header khusus.
 
-Catatan: `max-age` diukur dalam detik. Anda bisa mulai dengan nilai yang rendah dan berangsur-angsur menambah `max-age` bila sudah nyaman mengoperasikan situs HTTPS-saja.
+Note: `max-age` diukur dalam detik. Anda bisa mulai dengan nilai yang rendah dan berangsur-angsur menambah `max-age` bila sudah nyaman mengoperasikan situs HTTPS-saja.
 
 Perlu juga dipastikan bahwa klien tidak pernah mengirim cookie (misalnya untuk
 autentikasi atau preferensi situs) melalui HTTP. Misalnya, jika cookie

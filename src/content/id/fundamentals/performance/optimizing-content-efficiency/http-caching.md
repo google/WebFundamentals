@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Meng-cache dan menggunakan kembali sumber daya yang sebelumnya diambil merupakan aspek penting dalam mengoptimalkan kinerja.
 
-{# wf_updated_on: 2016-08-30 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2013-12-31 #}
 
 # Meng-cache HTTP {: .page-title }
@@ -14,7 +14,7 @@ Mengambil sesuatu melalui jaringan sama-sama lambat dan mahal. Respons besar men
 
 Kabar baiknya adalah setiap browser dibekali implementasi cache HTTP. Yang perlu Anda lakukan adalah memastikan bahwa setiap respons server menyediakan direktif header HTTP yang benar untuk menginstruksikan browser mengenai kapan dan berapa lama browser bisa meng-cache respons.
 
-Catatan: Jika menggunakan WebView untuk mengambil dan menampilkan materi web di aplikasi, Anda mungkin harus menyediakan flag konfigurasi tambahan untuk memastikan cache HTTP diaktifkan, ukurannya disetel ke jumlah yang wajar agar sesuai dengan kasus penggunaan Anda, dan agar cache tetap ada. Periksa dokumentasi platform dan konfirmasikan setelan Anda.
+Note: Jika menggunakan WebView untuk mengambil dan menampilkan materi web di aplikasi, Anda mungkin harus menyediakan flag konfigurasi tambahan untuk memastikan cache HTTP diaktifkan, ukurannya disetel ke jumlah yang wajar agar sesuai dengan kasus penggunaan Anda, dan agar cache tetap ada. Periksa dokumentasi platform dan konfirmasikan setelan Anda.
 
 <img src="images/http-request.png"  alt="Permintaan HTTP">
 
@@ -38,7 +38,7 @@ Dalam contoh terdahulu, klien secara otomatis menyediakan token Etag di header p
 
 Sebagai developer web, bagaimana Anda memanfaatkan validasi ulang yang efisien ini? Browser melakukan semua pekerjaan mewakili kita. Browser secara otomatis mendeteksi apakah token validasi telah ditetapkan sebelumnya, menambahkan token validasi ke permintaan keluar, dan akan memperbarui stempel waktu cache jika perlu berdasarkan respons yang diterima dari server. **Satu-satunya yang perlu dilakukan adalah memastikan server menyediakan token Etag yang diperlukan. Periksa dokumentasi server untuk flag konfigurasi yang diperlukan.**
 
-Catatan: Tip: Proyek Boilerplate HTML5 berisi <a href='https://github.com/h5bp/server-configs'>file konfigurasi contoh</a> untuk semua server paling populer bersama komentar detail untuk setiap setelan dan flag konfigurasi. Temukan server favorit Anda dalam daftar, cari setelan yang sesuai, dan salin/pastikan server Anda telah dikonfigurasi dengan setelan yang disarankan.
+Note: Tip: Proyek Boilerplate HTML5 berisi <a href='https://github.com/h5bp/server-configs'>file konfigurasi contoh</a> untuk semua server paling populer bersama komentar detail untuk setiap setelan dan flag konfigurasi. Temukan server favorit Anda dalam daftar, cari setelan yang sesuai, dan salin/pastikan server Anda telah dikonfigurasi dengan setelan yang disarankan.
 
 ## Cache-Control
 
@@ -49,7 +49,7 @@ Catatan: Tip: Proyek Boilerplate HTML5 berisi <a href='https://github.com/h5bp/s
 
 Dari sudut pandang optimalisasi kinerja, permintaan terbaik adalah permintaan yang tidak perlu dikomunikasikan dengan server: salinan lokal dari respons memungkinkan Anda meniadakan semua latensi jaringan dan menghindari biaya data untuk transfer data. Untuk mencapainya, spesifikasi HTTP memungkinkan server mengembalikan [direktif Cache-Control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) yang mengontrol bagaimana, dan berapa lama browser dan cache perantara lainnya bisa meng-cache respons individual.
 
-Catatan: Header Cache-Control didefinisikan sebagai bagian dari spesifikasi HTTP/1.1 dan menggantikan header sebelumnya (misalnya, Expires) yang digunakan untuk mendefinisikan kebijakan meng-cache respons. Semua browser modern mendukung Cache-Control, jadi itulah yang Anda perlukan.
+Note: Header Cache-Control didefinisikan sebagai bagian dari spesifikasi HTTP/1.1 dan menggantikan header sebelumnya (misalnya, Expires) yang digunakan untuk mendefinisikan kebijakan meng-cache respons. Semua browser modern mendukung Cache-Control, jadi itulah yang Anda perlukan.
 
 <img src="images/http-cache-control-highlight.png"  alt="Contoh Cache-Control HTTP">
 

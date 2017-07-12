@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Manifes aplikasi web adalah file JSON yang memberikan Anda kemampuan untuk mengontrol bagaimana aplikasi web atau situs terlihat oleh pengguna di daerah yang mereka harap akan melihat aplikasi asli (misalnya, layar beranda perangkat), mengarahkan apa yang bisa diluncurkan pengguna, dan menentukan tampilannya pada saat peluncuran.
 
-{# wf_updated_on: 2016-08-19 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-02-11 #}
 
 # Manifes Aplikasi Web {: .page-title }
@@ -20,7 +20,7 @@ Manifes aplikasi web menyediakan kemampuan untuk menyimpan bookmark situs ke lay
 
 Semua ini dilakukan melalui mekanisme sederhana dari metadata dalam file teks. Itulah manifes aplikasi web.
 
-Catatan: Meskipun Anda bisa menggunakan manifes aplikasi web di situs mana pun, semua itu diperlukan untuk [aplikasi web progresif](/web/progressive-web-apps/).
+Note: Meskipun Anda bisa menggunakan manifes aplikasi web di situs mana pun, semua itu diperlukan untuk [aplikasi web progresif](/web/progressive-web-apps/).
 
 ### TL;DR {: .hide-from-toc }
 - Membuat manifes dan menautkannya ke laman adalah proses sederhana.
@@ -115,7 +115,7 @@ Ini bisa berupa apa saja yang Anda inginkan; nilai yang kami gunakan memiliki ke
       }],
     
 
-Catatan: Saat menyimpan sebuah ikon ke layar beranda, Chrome terlebih dahulu akan mencari ikon yang cocok dengan kepadatan tampilan dan mengubah ukurannya ke kepadatan layar 48 dp. Jika tidak ada yang ditemukan, Chrome akan menelusuri ikon yang paling cocok dengan karakteristik perangkat. Jika, karena alasan apa pun, Anda ingin spesifik dalam menargetkan ikon pada kepadatan piksel-tertentu, Anda bisa menggunakan anggota opsional <code>density</code>, yang mengambil sebuah angka. Bila Anda tidak mendeklarasikan kepadatan, nilai defaultnya adalah 1.0. Ini berarti "gunakan ikon ini untuk kepadatan layar 1.0 ke atas", itulah yang biasanya Anda inginkan.
+Note: Saat menyimpan sebuah ikon ke layar beranda, Chrome terlebih dahulu akan mencari ikon yang cocok dengan kepadatan tampilan dan mengubah ukurannya ke kepadatan layar 48 dp. Jika tidak ada yang ditemukan, Chrome akan menelusuri ikon yang paling cocok dengan karakteristik perangkat. Jika, karena alasan apa pun, Anda ingin spesifik dalam menargetkan ikon pada kepadatan piksel-tertentu, Anda bisa menggunakan anggota opsional <code>density</code>, yang mengambil sebuah angka. Bila Anda tidak mendeklarasikan kepadatan, nilai defaultnya adalah 1.0. Ini berarti "gunakan ikon ini untuk kepadatan layar 1.0 ke atas", itulah yang biasanya Anda inginkan.
 
 ## Tambahkan layar pembuka
 
@@ -278,7 +278,7 @@ bagi manifes aplikasi web tersedia di Mozilla Developer Network.
 * Jika ingin keterangan fitur dari teknisi yang menciptakan manifes aplikasi web,
 Anda bisa membaca [spesifikasi W3C sesungguhnya](http://www.w3.org/TR/appmanifest/){: .external }.
 
-Catatan: Jika Anda memperbarui file `manifest.json` di saat mendatang, perubahan itu tidak akan
+Note: Jika Anda memperbarui file `manifest.json` di saat mendatang, perubahan itu tidak akan
 diambil secara otomatis oleh pengguna kecuali jika aplikasi Anda ditambahkan kembali ke
 layar berandanya.
 

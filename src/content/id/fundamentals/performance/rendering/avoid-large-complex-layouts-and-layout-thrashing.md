@@ -4,7 +4,7 @@ description: Layout adalah tempat browser mengetahui informasi geometris untuk e
 
 # Hindari Layout Besar dan Kompleks serta Layout Thrashing {: .page-title }
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-20 #}
 
 {% include "web/_shared/contributors/paullewis.html" %}
@@ -56,7 +56,7 @@ Jika tidak mungkin menghindari layout maka kuncinya sekali lagi adalah menggunak
 
 Saat meneliti bingkai dalam contoh di atas, kita akan melihat bahwa lebih dari 20 md dihabiskan dalam layout, yang mana, bila kita memiliki 16 md untuk mengambil bingkai di layar di suatu animasi, hal itu terlalu tinggi. Anda juga bisa melihat bahwa DevTools akan memberi tahu ukuran pohon (1.618 elemen dalam kasus ini), dan banyaknya simpul yang memerlukan layout.
 
-Catatan: Ingin daftar lengkap properti CSS yang memicu layout, penggambaran, atau komposit? Lihat [Pemicu CSS](https://csstriggers.com).
+Note: Ingin daftar lengkap properti CSS yang memicu layout, penggambaran, atau komposit? Lihat [Pemicu CSS](https://csstriggers.com).
 
 ## Gunakan flexbox pada model layout yang lebih lama
 

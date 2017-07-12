@@ -120,6 +120,22 @@ beaufortfrancois:
   description:
     en: Dives into Chromium source code
 
+lucaberton:
+  name:
+    given: Luca
+    family: Berton
+  org:
+    name: Independent
+    unit: DevOps
+  country: IT
+  role:
+    - contributor
+  homepage: 'http://mrevolution.eu'
+  google: +LucaBerton
+  twitter: mrevolution85
+  github: lucab85
+  email: mr.evolution85@gmail.com
+
 ericbidelman:
   name:
     given: Eric

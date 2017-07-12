@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Anda telah melihat apa yang membuat notifikasi bagus. Sekarang mari kita lihat cara mengimplementasikannya.
 
-{# wf_updated_on: 2016-09-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Menangani Pesan {: .page-title }
@@ -444,7 +444,7 @@ self.addEventListener('notificationclick', function(event) {
 });
 </pre>
 
-Catatan: Untuk seterusnya, contoh kode semakin besar. Kita akan memotongnya untuk menghemat tempat. Namun, jangan khawatir. Kami akan menunjukkan semuanya di akhir.
+Note: Untuk seterusnya, contoh kode semakin besar. Kita akan memotongnya untuk menghemat tempat. Namun, jangan khawatir. Kami akan menunjukkan semuanya di akhir.
 
 Terlepas dari URL, kita akan memanggil `clients.matchAll()` untuk mendapatkan jendela klien yang bisa kita
 telusuri.
