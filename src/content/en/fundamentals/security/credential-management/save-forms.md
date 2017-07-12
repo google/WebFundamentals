@@ -72,14 +72,11 @@ whether the sign-up/sign-in/change password is successful or not.
 
 For example: 
 
-    let form = new FormData();
-    form.append('email', c.id);
-    form.append('password', c.password);
-
-    return fetch('/signin', {
+    // Try sign-in with AJAX
+    fetch(/'signin', {
       method: 'POST',
-      credentials: 'include',
-      body: form
+      body: new FormData(e.target),
+      credentials: 'include'
     })
 
 ## Store the credential
@@ -151,14 +148,10 @@ or proceed to the personalized page.
       e.preventDefault();
 
       // Try sign-in with AJAX
-      let form = new FormData();
-      form.append('email', c.id);
-      form.append('password', c.password);
-
-      return fetch('/signin', {
+      fetch(/'signin', {
         method: 'POST',
-        credentials: 'include',
-        body: form
+        body: new FormData(e.target),
+        credentials: 'include'
       }).then(res => {
         if (res.status == 200) {
           return Promise.resolve();
