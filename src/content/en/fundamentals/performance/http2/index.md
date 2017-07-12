@@ -4,6 +4,7 @@ description: HTTP/2 (or h2) is a binary protocol that brings push, multiplexing 
 
 {# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-29 #}
+{# wf_blink_components: Blink>Network,Internals>Network>HTTP2 #}
 
 # Introduction to HTTP/2 {: .page-title }
 
@@ -76,7 +77,7 @@ source code for the experimental implementation of the new SPDY protocol:
 > So far we have only tested SPDY in lab conditions. The initial results are
 > very encouraging: when we download the top 25 websites over simulated home
 > network connections, we see a significant improvement in performance—pages
-> loaded up to 55% faster. 
+> loaded up to 55% faster.
 > [*(Chromium Blog)*](https://blog.chromium.org/2009/11/2x-faster-web.html)
 
 Fast-forward to 2012 and the new experimental protocol was supported in Chrome,
@@ -217,11 +218,11 @@ familiarize ourselves with the HTTP/2 terminology:
 
 The relation of these terms can be summarized as follows:
 
-* All communication is performed over a single TCP connection that can carry any number of 
+* All communication is performed over a single TCP connection that can carry any number of
   bidirectional streams.
 * Each stream has a unique identifier and optional priority information that is used to carry
   bidirectional messages.
-* Each message is a logical HTTP message, such as a request, or response, which consists of 
+* Each message is a logical HTTP message, such as a request, or response, which consists of
   one or more frames.
 * The frame is the smallest unit of communication that carries a specific type of data—e.g.,
   HTTP headers, message payload, and so on. Frames from different streams may be interleaved
@@ -319,17 +320,17 @@ resources allocated to stream A. Let’s work through a few more hands-on exampl
 in the image above. From left to right:
 
 1. Neither stream A nor B specifies a parent dependency and are said to be dependent
-   on the implicit "root stream"; A has a weight of 12, and B has a weight of 4. 
-   Thus, based on proportional weights: stream B should receive one-third of the 
+   on the implicit "root stream"; A has a weight of 12, and B has a weight of 4.
+   Thus, based on proportional weights: stream B should receive one-third of the
    resources allocated to stream A.
 1. Stream D is dependent on the root stream; C is dependent on D. Thus, D should
    receive full allocation of resources ahead of C. The weights are inconsequential
    because C’s dependency communicates a stronger preference.
 1. Stream D should receive full allocation of resources ahead of C; C should receive
-   full allocation of resources ahead of A and B; stream B should receive one-third of 
+   full allocation of resources ahead of A and B; stream B should receive one-third of
    the resources allocated to stream A.
 1. Stream D should receive full allocation of resources ahead of E and C; E and C
-   should receive equal allocation ahead of A and B; A and B should receive proportional 
+   should receive equal allocation ahead of A and B; A and B should receive proportional
    allocation based on their weights.
 
 As the above examples illustrate, the combination of stream dependencies and
@@ -404,20 +405,20 @@ address this, HTTP/2 provides a set of simple building blocks that allow the
 client and server to implement their own stream- and connection-level flow
 control:
 
-* Flow control is directional. Each receiver may choose to set any window size 
+* Flow control is directional. Each receiver may choose to set any window size
   that it desires for each stream and the entire connection.
 * Flow control is credit-based. Each receiver advertises its initial connection
   and stream flow control window (in bytes), which is reduced whenever the 
   sender emits a `DATA` frame and incremented via a `WINDOW_UPDATE` frame sent 
   by the receiver.
-* Flow control cannot be disabled. When the HTTP/2 connection is established the 
-  client and server exchange `SETTINGS` frames, which set the flow control window 
-  sizes in both directions. The default value of the flow control window is set 
-  to 65,535 bytes, but the receiver can set a large maximum window size 
-  (`2^31-1` bytes) and maintain it by sending a `WINDOW_UPDATE` frame whenever any 
+* Flow control cannot be disabled. When the HTTP/2 connection is established the
+  client and server exchange `SETTINGS` frames, which set the flow control window
+  sizes in both directions. The default value of the flow control window is set
+  to 65,535 bytes, but the receiver can set a large maximum window size
+  (`2^31-1` bytes) and maintain it by sending a `WINDOW_UPDATE` frame whenever any
   data is received.
-* Flow control is hop-by-hop, not end-to-end. That is, an intermediary can use it 
-  to control resource use and implement resource allocation mechanisms based on 
+* Flow control is hop-by-hop, not end-to-end. That is, an intermediary can use it
+  to control resource use and implement resource allocation mechanisms based on
   own criteria and heuristics.
 
 HTTP/2 does not specify any particular algorithm for implementing flow control.
@@ -514,9 +515,9 @@ To reduce this overhead and improve performance, HTTP/2 compresses request
 and response header metadata using the HPACK compression format that uses two
 simple but powerful techniques:
 
-1. It allows the transmitted header fields to be encoded via a static Huffman 
+1. It allows the transmitted header fields to be encoded via a static Huffman
    code, which reduces their individual transfer size.
-1. It requires that both the client and server maintain and update an indexed 
+1. It requires that both the client and server maintain and update an indexed
    list of previously seen header fields (in other words, it establishes a shared
    compression context), which is then used as a reference to efficiently encode
    previously transmitted values.
