@@ -7,7 +7,7 @@ description: 小さな画面のスマートフォ小さな画面のスマート�
 
 # はじめてのマルチデバイス サイト {: .page-title }
 
-警告: この記事はしばらくアップデートされていないため、現実が反映されていない可能性があります。代わりに、Udacity の無料の [Responsive Web Design](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) コースをご覧ください。
+Warning: この記事はしばらくアップデートされていないため、現実が反映されていない可能性があります。代わりに、Udacity の無料の [Responsive Web Design](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) コースをご覧ください。
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 

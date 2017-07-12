@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 1 枚の写真は 1000 語にも匹敵する内容を伝えます。また、画像はすべてのページにおいて非常に重要な役割を果たします。一方で、ダウンロードされるデータ量のほとんどを画像が占めることも少なくありません。レスポンシブ ウェブデザインでは、レイアウトだけでなく画像もデバイス特性に応じて変えることができます。
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-04-29 #}
 
 # 画像 {: .page-title }
@@ -292,7 +292,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 [サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html){: target="_blank" .external }
 
-警告: メモリや必要なデコードの負荷が増加するため、圧縮技術の使用には注意が必要です。大きな画像を小さい画面に合わせてサイズ変更する処理はリソースを消費し、特にメモリと処理能力が限られているローエンド端末では負荷が大きくなります。
+Warning: メモリや必要なデコードの負荷が増加するため、圧縮技術の使用には注意が必要です。大きな画像を小さい画面に合わせてサイズ変更する処理はリソースを消費し、特にメモリと処理能力が限られているローエンド端末では負荷が大きくなります。
 
 ####  JavaScript で画像を置き換える
 
