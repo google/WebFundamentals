@@ -58,40 +58,8 @@ To audit a page:
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.';
 var label = 'WNDT60 / New Audits Panel / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
+{% include "web/updates/2017/05/_sentiment.js" %}
 </script>
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
@@ -129,7 +97,8 @@ and how to contribute to it, check out the Lighthouse talk from Google I/O
 ### Third-party badges {: #badges }
 
 Use third-party badges to get more insight into the entities that are
-making network requests on a page, logging to the Console, and executing JS.
+making network requests on a page, logging to the Console, and executing
+JavaScript.
 
 <figure>
   <img src="/web/updates/images/2017/05/network-badges.png"
@@ -169,40 +138,8 @@ Performance][GSRP] to learn how to analyze performance with DevTools.
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.';
 var label = 'WNDT60 / Third-Party Badges / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
+{% include "web/updates/2017/05/_sentiment.js" %}
 </script>
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
@@ -269,40 +206,8 @@ debugging in DevTools.
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.';
 var label = 'WNDT60 / Continue To Here / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
+{% include "web/updates/2017/05/_sentiment.js" %}
 </script>
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
@@ -331,40 +236,8 @@ the feature.
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.'; 
 var label = 'WNDT60 / Step Into Async / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
+{% include "web/updates/2017/05/_sentiment.js" %}
 </script>
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
@@ -395,40 +268,8 @@ Now, the Console provides more information about the contents of the object.
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.'; 
 var label = 'WNDT60 / New Object Previews UI / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
+{% include "web/updates/2017/05/_sentiment.js" %}
 </script>
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
@@ -453,40 +294,8 @@ available contexts.
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.'; 
 var label = 'WNDT60 / New Context Selection Menu UI / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
+{% include "web/updates/2017/05/_sentiment.js" %}
 </script>
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
@@ -517,40 +326,8 @@ Now, the **Coverage** tab shows you in real-time what code is being used.
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.'; 
 var label = 'WNDT60 / Real-Time Coverage Tab Updates / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
+{% include "web/updates/2017/05/_sentiment.js" %}
 </script>
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
@@ -577,40 +354,8 @@ is to match the true experience of each option.
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.';
 var label = 'WNDT60 / Simplified Network Throttling / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    { 
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    { 
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
+{% include "web/updates/2017/05/_sentiment.js" %}
 </script>
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
@@ -629,40 +374,8 @@ capture async stack traces` command in the [Command Menu][CM].
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.'; 
 var label = 'WNDT60 / Async Stacks On By Default / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
+{% include "web/updates/2017/05/_sentiment.js" %}
 </script>
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
