@@ -12,14 +12,14 @@ description: Create the best mobile media experience on the Web by following the
 
 How do you create the best mobile media experience on the Web? Easy! It all
 depends on user engagement and the importance you give to the media on a web
-page. I think we all agree that a web page where video is THE reason of user's
-visit will have to feature an immersive and re-engaging user experience.
+page. I think we all agree that if video is THE reason for a user's visit,
+the user's experience has to be immersive and re-engaging.
 
 <figure>
   <img src="/web/fundamentals/media/images/mobile-web-video-playback-hero.png">
 </figure>
 
-The goal here is to show you how to enhance in a progressive way your media
+In this article I show you how to enhance in a progressive way your media
 experience and make it more immersive thanks to a plethora of Web APIs. That's
 why we're going to build a simple mobile player experience with custom
 controls, fullscreen, and background playback.
