@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 다양한 범위의 사용자와 기기용으로 빌드할 경우, 레이아웃 및 그래픽 디자인뿐만 아니라 콘텐츠도 고려하세요.
 
-{# wf_updated_on: 2016-05-10 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-05-10 #}
 
 # 다중 기기 콘텐츠 {: .page-title }
@@ -167,7 +167,7 @@ HTML의 복잡도를 줄이면 페이지 크기도 줄어들고, 현지화 및 �
 
 ### 콘텐츠 테스트
 
-성공: 무엇을 하든 간에 **테스트하세요**!
+Success: 무엇을 하든 간에 **테스트하세요**!
 
 * Chrome DevTools 및 기타 [에뮬레이션 도구](/web/fundamentals/performance/poor-connectivity/)를 사용하여 작은 뷰포트에서 가독성을 확인하세요.
 * [저대역폭 및 긴 지연 시간 조건에서 콘텐츠를 테스트하세요](/web/fundamentals/performance/poor-connectivity/). 다양한 연결 시나리오에서 콘텐츠를 사용해 보세요.

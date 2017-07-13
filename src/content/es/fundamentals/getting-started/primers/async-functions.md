@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Las funciones asincrónicas te permiten escribir un código basado en promesas como si fuese sincrónico
 
 {# wf_published_on: 2016-10-20 #}
-{# wf_updated_on: 2016-10-20 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # Funciones asincrónicas - hacen promesas amigablemente {: .page-title }
 
@@ -30,7 +30,7 @@ Si usas la palabra clave `async` antes de una definición de función, luego pue
 de una forma que no bloquea hasta que la promesa se detenga. Si la promesa se completa,
 recibes de vuelta el valor. Si la promesa rechaza, se arroja el valor rechazado.
 
-Nota: Si no conoces bien las promesas, consulta [nuestra
+Note: Si no conoces bien las promesas, consulta [nuestra
 guía de promesas](/web/fundamentals/getting-started/primers/promises).
 
 ## Ejemplo: Registro de un fetch
@@ -63,7 +63,7 @@ Y aquí se ve lo mismo con el uso de funciones asincrónicas:
 Es la misma cantidad de líneas, pero desaparecen todos los callbacks. Esto hace que sea más
 sencillo leer, especialmente para quienes conocen menos las promesas.
 
-Nota: Todo lo que `await` se pasa por `Promise.resolve()`, de modo que puedes
+Note: Todo lo que `await` se pasa por `Promise.resolve()`, de modo que puedes
 `await` promesas no nativas con seguridad.
 
 ## Valores de retorno asincrónicos
@@ -96,7 +96,7 @@ lo que sea que arroje la función asincrónica. De modo que
 El beneficio de las funciones asincrónicas se incrementa en ejemplos más complejos. Supongamos que queremos
 transmitir una respuesta mientras quitamos del registro los fragmentos, y mostrar el tamaño final.
 
-Nota: La frase "quitamos del registro los fragmentos" me dio asco.
+Note: La frase "quitamos del registro los fragmentos" me dio asco.
 
 Así es con promesas:
 
@@ -148,7 +148,7 @@ reemplazado por un confiable y aburrido bucle while. Mucho mejor. En el futuro, 
 que
 [reemplazarían el bucle `while` con un bucle for-of](https://gist.github.com/jakearchibald/0b37865637daf884943cf88c2cba1376){: .external}, haciéndolo más prolijo todavía.
 
-Nota: Estoy casi enamorado de los flujos. Si no conoces bien los flujos,
+Note: Estoy casi enamorado de los flujos. Si no conoces bien los flujos,
 [consulta mi guía](https://jakearchibald.com/2016/streams-ftw/#streams-the-fetch-api){: .external}.
 
 ## Otra sintaxis de función asincrónica
@@ -164,7 +164,7 @@ con otra sintaxis de función:
       return response.json();
     });
 
-Nota: a `array.map(func)` no le interesa que le otorgué una función asincrónica, solo
+Note: a `array.map(func)` no le interesa que le otorgué una función asincrónica, solo
 la ve como una función que muestra una promesa. No esperará a que la primera
 función se complete para llamar a la segunda.
 
@@ -195,7 +195,7 @@ función se complete para llamar a la segunda.
     const storage = new Storage();
     storage.getAvatar('jaffathecake').then(…);
 
-Nota: Los constructores de clases y los captadores/configuradores no pueden ser asincrónicos.
+Note: Los constructores de clases y los captadores/configuradores no pueden ser asincrónicos.
 
 ## ¡Cuidado! Evita generar demasiadas secuencias
 
@@ -298,7 +298,7 @@ Si apuntas a un perfil de navegadores que soportan generadores (que incluye
 - fíjate cuán similar es el código transpilado. Esta transformación forma parte del 
 [valor preestablecido es2017 de Babel](http://babeljs.io/docs/plugins/preset-es2017/){: .external}.
 
-Nota: Es divertido decir Babel REPL. Inténtalo.
+Note: Es divertido decir Babel REPL. Inténtalo.
 
 Recomiendo el enfoque transpilado, porque puedes apagarlo una vez que tus
 navegadores objetivo soportan las funciones asincrónicas, pero, si *realmente* no quieres usar un

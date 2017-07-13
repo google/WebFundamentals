@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 대부분 브라우저는 사용자 마이크에 액세스할 수 있습니다.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-08-23 #}
 
 # 사용자에게서 오디오 녹음 {: .page-title }
@@ -210,7 +210,7 @@ API를 사용하여 마이크에 직접 액세스할 수 있습니다. `getUserM
 그러나 사용자가 액세스를 거부한다면 사용자에게 다시 액세스 권한을 요청할 수 없습니다.
 
 
-경고: 페이지 로드 시 마이크 액세스를 요청하면 대부분 사용자는 액세스를 거절합니다.
+Warning: 페이지 로드 시 마이크 액세스를 요청하면 대부분 사용자는 액세스를 거절합니다.
 
 ### Permission API를 사용하여 액세스 권한이 있는지 확인
 

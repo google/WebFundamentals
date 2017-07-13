@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Pengantar ARIA dan semantik HTML bukan-asli
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Pengantar ARIA {: .page-title }
@@ -55,7 +55,7 @@ pohon aksesibilitas dan pembaca layar akan melaporkannya dengan benar sebagai ko
     </li>
     
 
-Catatan: Kita akan membahas daftar atribut ARIA dan kapan menggunakannya [nanti](#what-can-aria-do).
+Note: Kita akan membahas daftar atribut ARIA dan kapan menggunakannya [nanti](#what-can-aria-do).
 
 ARIA bekerja dengan mengubah dan menambah pohon aksesibilitas DOM standar.
 

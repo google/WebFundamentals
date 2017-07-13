@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Las pantallas táctiles, los chips de GPS y los acelerómetros pueden ser difíciles de probar ya que la mayoría de las computadoras de escritorio no los tienen. Los emuladores de sensores de Chrome DevTools reducen la sobrecarga de la prueba al emular los sensores de dispositivos móviles comunes.
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Emulación de sensores: Ubicación geográfica y acelerómetro {: .page-title }
@@ -33,7 +33,7 @@ Los chips de GPS y los acelerómetros pueden ser difíciles de probar, ya que la
   </div>
 </div>
 
-Nota: Si tu app detecta sensores en carga mediante JavaScript (como Modernizr), asegúrate de volver a cargar la página luego de habilitar los emuladores del sensor.
+Note: Si tu app detecta sensores en carga mediante JavaScript (como Modernizr), asegúrate de volver a cargar la página luego de habilitar los emuladores del sensor.
 
 ## Anulación de datos de ubicación geográfica
 

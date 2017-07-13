@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Dapatkan status informasi terbaru mengenai WebVR, serta hal yang perlu diingat saat membangun pengalaman WebVR.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # Status dan Pertimbangan WebVR {: .page-title }
 
-Peringatan: WebVR masih eksperimental dan dapat berubah.
+Caution: WebVR masih eksperimental dan dapat berubah.
 
 ## Status Implementasi WebVR
 

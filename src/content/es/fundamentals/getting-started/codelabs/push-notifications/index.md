@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: En este codelab, aprenderás a agregar notificaciones push a tu app web.
 
-{# wf_updated_on: 2016-11-21T15:42:20Z #}
+{# wf_updated_on: 2017-07-12T15:42:20Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -149,7 +149,7 @@ Copia tu clave pública en `scripts/main.js`, reemplazando el valor `<Your Publi
 const applicationServerPublicKey = '<Your Public Key>';
 ```
 
-Nota: Nunca debes poner tu clave privada en tu app web.
+Note: Nunca debes poner tu clave privada en tu app web.
 
 
 ## Inicia el estado
@@ -474,7 +474,7 @@ Cuando le haces clic debes ver una notificación como esta:
 
 ![eee7f9133a97c1c4.png](img/eee7f9133a97c1c4.png)
 
-Nota: Si este paso no funciona, intenta anular el registro de tu service worker, a través del vínculo *Unregister*  del panel de la app DevTools, espera que se detenga el service worker y vuelve a cargar la página.
+Note: Si este paso no funciona, intenta anular el registro de tu service worker, a través del vínculo *Unregister*  del panel de la app DevTools, espera que se detenga el service worker y vuelve a cargar la página.
 
 
 ## Clic de notificación

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Peran semantik dalam navigasi laman
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Semantik dan Menyusuri Materi {: .page-title }
@@ -83,7 +83,7 @@ sengaja menempatkan sebagian heading di luar layar untuk membuatnya
 
     <h2 class="sr-only">This heading is offscreen.</h2>
 
-Catatan: Situs WebAIM mendiskusikan teknik ini panjang lebar dalam [artikel
+Note: Situs WebAIM mendiskusikan teknik ini panjang lebar dalam [artikel
 ini di materi di luar layar](http://webaim.org/techniques/css/invisiblecontent/).
 
 Bagi aplikasi yang kompleks, ini bisa menjadi cara yang bagus untuk mengakomodasi heading bila

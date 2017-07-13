@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: "Promise menyederhanakan komputasi yang ditangguhkan dan asinkron. Sebuah promise mewakili sebuah operasi yang belum selesai."
 
 {# wf_published_on: 2013-12-16 #}
-{# wf_updated_on: 2014-01-29 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # Promise JavaScript: Pengantar {: .page-title }
 
@@ -871,7 +871,7 @@ Semua metode berfungsi di Chrome, Opera, Firefox, Microsoft Edge, dan Safari kec
 </tr>
 </table>
 
-Catatan: Saya tidak percaya dengan kegunaan `Promise.race`; saya lebih suka kebalikan `Promise.all` yang hanya menolak jika semua item ditolak.
+Note: Saya tidak percaya dengan kegunaan `Promise.race`; saya lebih suka kebalikan `Promise.all` yang hanya menolak jika semua item ditolak.
 
 ### Konstruktor
 

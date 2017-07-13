@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Para solicitar permiso de notificación y registrar usuarios a fin de que reciban notificaciones, solo es necesario algo tan sutil como hacer que las vean.
 
-{# wf_updated_on: 2016-06-30 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Solicitar permiso y suscribir usuarios {: .page-title }
@@ -26,7 +26,7 @@ de inmediato. De cualquier manera, usa esta información para fijar la configura
  A continuación, se muestra un ejemplo de esto. Para ser claros, aún no hemos realizado
 solicitudes.
 
-Nota: Para ser claros, este ejemplo excluye un número de comprobaciones de funciones
+Note: Para ser claros, este ejemplo excluye un número de comprobaciones de funciones
 que debes realizar siempre. Puedes ver el código original completo en
 nuestro <a href='https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications'>
 repositorio de ejemplos de GitHub</a>.

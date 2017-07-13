@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Las notificaciones push son una de las funcionalidades más valiosas de las apps nativas y ahora se encuentran disponibles en la web. Para sacarles el máximo provecho, las notificaciones deben ser oportunas, precisas y relevantes.
 
-{# wf_updated_on: 2016-06-30 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Notificaciones push en la web: Oportunas, relevantes y precisas {: .page-title }
@@ -80,7 +80,7 @@ suscripciones, el envío de mensajes y sus respuestas.
 
 Existen varias formas en las que puedes jugar con las funciones antes de comprender por completo cómo funcionan o tener que implementarlas. Primero, consulta [nuestro propio ejemplo](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications). También se encuentran disponibles [Notification Generator](https://tests.peter.sh/notification-generator/) de Peter Beverloo y [push-api-demo](https://github.com/chrisdavidmills/push-api-demo) de Chris Mill.
 
-Nota: A menos que uses localhost, la Push API requiere HTTPS.
+Note: A menos que uses localhost, la Push API requiere HTTPS.
 
 <<../../../_common-links.md>>
 

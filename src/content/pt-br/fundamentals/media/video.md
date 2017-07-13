@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Conheça as maneiras mais simples de adicionar vídeos ao seu site e garanta a melhor experiência possível para os usuários em qualquer dispositivo.
 
-{# wf_updated_on: 2014-04-28 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-04-15 #}
 
 # Vídeo {: .page-title }
@@ -116,7 +116,7 @@ vídeo &ndash; como pontos de sinalização em um DVD &ndash; sem precisar codif
 enviar vários arquivos.
 
 
-Atenção: A maioria das plataformas oferece suporte à Media Fragments API, exceto o iOS. Certifique-se também de que seu servidor ofereça suporte a solicitações de Range. Por padrão, a maioria dos servidores aceita solicitações de Range, mas alguns serviços de hospedagem podem desativá-las.
+Warning: A maioria das plataformas oferece suporte à Media Fragments API, exceto o iOS. Certifique-se também de que seu servidor ofereça suporte a solicitações de Range. Por padrão, a maioria dos servidores aceita solicitações de Range, mas alguns serviços de hospedagem podem desativá-las.
 
 Usando as ferramentas de desenvolvedor do navegador, verifique se `Accept-Ranges: bytes` está presente
 nos cabeçalhos de resposta:
@@ -316,7 +316,7 @@ Para conteúdo de mídia em iframes (como vídeos do YouTube), experimente uma a
 responsiva (como a [proposta por John Surdakowski](http://avexdesigns.com/responsive-youtube-embed/)).
 
 
-Atenção: Não force dimensionamento de elementos que resulte em uma taxa de proporção diferente da do vídeo original. Elementos comprimidos ou esticados ficam feios.
+Warning: Não force dimensionamento de elementos que resulte em uma taxa de proporção diferente da do vídeo original. Elementos comprimidos ou esticados ficam feios.
 
 **CSS:**
 

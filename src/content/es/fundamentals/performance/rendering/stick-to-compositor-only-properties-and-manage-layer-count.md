@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Composición hace referencia al proceso en el que las partes pintadas de la página se unen para mostrarlas en la pantalla.
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-20 #}
 
 # Limítate solo a las propiedades del compositor y administra el recuento de capas {: .page-title }
@@ -32,7 +32,7 @@ Para lograrlo, debes limitarte a las propiedades de cambio que pueden controlars
 
 La advertencia respecto del uso de `transform`s y `opacity` es que el elemento en el cual cambiarás estas propiedades debe encontrarse en _su propia capa del compositor_. Para poder crear una capa, debes promover el elemento. Hablaremos de esto a continuación.
 
-Nota: Si te preocupa no poder limitar las animaciones a estas propiedades, consulta el [principio FLIP](https://aerotwist.com/blog/flip-your-animations), que puede ayudarte a reasignar las animaciones a los cambios de las propiedades transforms y opacity desde propiedades más costosas.
+Note: Si te preocupa no poder limitar las animaciones a estas propiedades, consulta el [principio FLIP](https://aerotwist.com/blog/flip-your-animations), que puede ayudarte a reasignar las animaciones a los cambios de las propiedades transforms y opacity desde propiedades más costosas.
 
 ## Promueve los elementos que desees animar
 
@@ -67,7 +67,7 @@ Puede resultar tentador, al saber que las capas suelen contribuir al rendimiento
 
 Esta es una forma indirecta de indicar que desearías promover cada elemento de la página. El problema es que cada capa que crees requerirá memoria y administración, y eso tiene consecuencias. De hecho, en los dispositivos con memoria limitada, el impacto en el rendimiento puede suponer un desequilibrio negativo contra cualquier beneficio que suponga la creación de una capa. Todas las texturas de las capas se deben cargar en la GPU, por lo que hay aún más restricciones con respecto al ancho de banda entre la CPU y la GPU, y a la memoria disponible para texturas en la GPU.
 
-Advertencia: No promuevas elementos innecesariamente.
+Warning: No promuevas elementos innecesariamente.
 
 ## Usa Chrome DevTools para comprender las capas de tu app
 

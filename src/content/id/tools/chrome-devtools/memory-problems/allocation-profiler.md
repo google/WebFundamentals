@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Gunakan alat allocation profiler (profiler alokasi) untuk menemukan objek yang sampahnya tidak dikumpulkan dengan benar, dan melanjutkan mempertahankan memori.
 
-{# wf_updated_on: 2015-07-08 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Cara Menggunakan Alat (Bantu) Allocation Profiler {: .page-title }
@@ -24,7 +24,7 @@ Alat (bantu) mengambil cuplikan heap secara periodik selama proses perekaman (hi
 
 ![Allocation profiler](imgs/object-tracker.png)
 
-Catatan: Nomor setelah @ adalah ID objek yang bertahan di beberapa cuplikan yang diambil. Ini memungkinkan perbandingan yang tepat antar status heap. Menampilkan alamat objek tidak masuk akal karena objek akan dipindahkan selama proses pengumpulan sampah.
+Note: Nomor setelah @ adalah ID objek yang bertahan di beberapa cuplikan yang diambil. Ini memungkinkan perbandingan yang tepat antar status heap. Menampilkan alamat objek tidak masuk akal karena objek akan dipindahkan selama proses pengumpulan sampah.
 
 ## Mengaktifkan allocation profiler
 

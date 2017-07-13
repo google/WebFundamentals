@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: "Las promesas simplifican cómputos diferidos y asincrónicos. Una promesa representa una operación que aún no se completó."
 
 {# wf_published_on: 2013-12-16 #}
-{# wf_updated_on: 2014-01-29 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # Promesas de JavaScript: introducción {: .page-title }
 
@@ -871,7 +871,7 @@ Todos los métodos funcionan en Chrome, Opera, Firefox, Microsoft Edge y Safari
 </tr>
 </table>
 
-Nota: No me convence la utilidad de `Promise.race`, preferiría tener un opuesto de `Promise.all` que solo rechace si todos los artículos rechazan.
+Note: No me convence la utilidad de `Promise.race`, preferiría tener un opuesto de `Promise.all` que solo rechace si todos los artículos rechazan.
 
 ### Constructor
 

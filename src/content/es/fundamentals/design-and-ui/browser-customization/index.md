@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Los navegadores modernos facilitan la personalización de ciertos componentes, como los íconos y el color de la barra de direcciones, e incluso la adición de elementos como mosaicos personalizados. Estos simples ajustes pueden aumentar la captación y lograr que los usuarios vuelvan a usar tu sitio.
 
 
-{# wf_updated_on: 2015-09-21 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-09-21 #}
 
 # Colores de navegador e íconos {: .page-title }
@@ -41,7 +41,7 @@ del dispositivo. Para prevenir el ajuste de escala automático, también puedes 
 tamaños adicionales especificando el atributo `sizes`.
 
 
-Nota: El tamaño de los íconos debe basarse en 48 px; por ejemplo, 48 px, 96 px, 144 px, y 192 px.
+Note: El tamaño de los íconos debe basarse en 48 px; por ejemplo, 48 px, 96 px, 144 px, y 192 px.
 
 ### Safari
 

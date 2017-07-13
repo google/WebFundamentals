@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Menggunakan penataan gaya yang tepat untuk meningkatkan aksesibilitas
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Gaya yang Dapat Diakses {: .page-title }
@@ -42,7 +42,7 @@ dengan desain laman Anda. Beberapa developer membuang gaya ini sama sekali denga
 menyetel `outline` elemen ke `0` atau `none`. Namun tanpa indikator fokus, bagaimana
 pengguna keyboard dapat mengetahui dengan item mana ia berinteraksi?
 
-Peringatan: Jangan menyetel outline ke 0 atau tidak ada tanpa memberikan alternatif fokus!
+Caution: Jangan menyetel outline ke 0 atau tidak ada tanpa memberikan alternatif fokus!
 
 Anda mungkin familier dengan penambahan kondisi mengambang ke kontrol dengan menggunakan *kelas semu* CSS
 `:hover`. Misalnya, Anda mungkin menggunakan `:hover` pada elemen tautan
@@ -195,7 +195,7 @@ dan memberi pengguna Anda akses yang lebih baik ke materi.
 
 ![tampilan ponsel dengan dan tanpa tag meta viewport](imgs/scrunched-up.jpg)
 
-Peringatan: Saat menggunakan tag meta viewport, pastikan Anda tidak menyetel
+Caution: Saat menggunakan tag meta viewport, pastikan Anda tidak menyetel
 maximum-scale=1 atau menyetel user-scaleable=no. Biarkan pengguna memperbesar jika mereka perlu!
 
  - Teknik lain yang perlu diingat adalah mendesain dengan grid responsif. Saat Anda
@@ -286,7 +286,7 @@ pria dan 1 dari 200 wanita memiliki beberapa bentuk "buta warna"; yang berarti s
 Saat kita mengandalkan warna untuk menyampaikan informasi, kita menekan angka tersebut ke
 level yang tidak dapat diterima.
 
-Catatan: Istilah "buta warna" sering kali digunakan untuk menjelaskan kondisi visual
+Note: Istilah "buta warna" sering kali digunakan untuk menjelaskan kondisi visual
 pada orang yang memiliki kesulitan dalam membedakan warna, namun sebenarnya hanya sedikit sekali orang
 yang benar-benar buta warna. Sebagian besar orang dengan defisiensi warna dapat melihat beberapa atau sebagian besar
 warna, namun memiliki kesulitan membedakan antara warna-warna tertentu seperti merah

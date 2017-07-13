@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Uma imagem vale 1.000 palavras e as imagens têm um papel essencial em todas as páginas. No entanto, elas frequentemente também representam a maior parte dos bytes baixados.  Com um Web design responsivo, não só seus layouts podem ser alterados com base nas características do dispositivo, mas as imagens também.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Imagens {: .page-title }
@@ -294,7 +294,7 @@ significativamente reduzido.
 
 [Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html){: target="_blank" .external }
 
-Atenção: Tenha cautela ao usar a técnica de compactação devido aos maiores custos de memória e decodificação que ela exige. O redimensionamento de grandes imagens para caber em telas menores é caro e pode ser particularmente difícil em dispositivos mais acessíveis cuja memória e o processamento são limitados.
+Warning: Tenha cautela ao usar a técnica de compactação devido aos maiores custos de memória e decodificação que ela exige. O redimensionamento de grandes imagens para caber em telas menores é caro e pode ser particularmente difícil em dispositivos mais acessíveis cuja memória e o processamento são limitados.
 
 #### Substituição de imagem JavaScript
 

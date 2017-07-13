@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-11-08 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Recuperar credenciales {: .page-title }
@@ -220,7 +220,7 @@ en un objeto `FormData` codificado como `multipart/form-data`:
     testtest
     ------WebKitFormBoundaryOkstjzGAv8zab97W--
 
-Nota: No puedes usar `XMLHttpRequest` para PUBLICAR el `PasswordCredential` 
+Note: No puedes usar `XMLHttpRequest` para PUBLICAR el `PasswordCredential` 
 en tu servidor.
 
 #### Parámetros de `PasswordCredential`

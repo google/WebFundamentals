@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Pemberitahuan push adalah salah satu kemampuan yang paling berharga dari aplikasi asli, dan kemampuan ini sekarang tersedia di web. Untuk mengoptimalkannya, notifikasi perlu tepat waktu, tepat, dan relevan.
 
-{# wf_updated_on: 2016-06-30 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Pemberitahuan Push Web: Tepat Waktu, Relevan, dan Tepat {: .page-title }
@@ -80,7 +80,7 @@ berlangganan, mengirim pesan dan meresponsnya.
 
 Ada sejumlah cara yang bisa Anda gunakan bersama fitur-fitur tersebut sebelum benar-benar memahami cara kerjanya, atau harus mengimplementasikannya. Pertama, lihat [contoh kami sendiri](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications). Juga tersedia [Notification Generator](https://tests.peter.sh/notification-generator/) dari Peter Beverloo dan [push-api-demo](https://github.com/chrisdavidmills/push-api-demo) dari Chris Mills.
 
-Catatan: Kecuali jika Anda menggunakan localhost, Push API memerlukan HTTPS.
+Note: Kecuali jika Anda menggunakan localhost, Push API memerlukan HTTPS.
 
 <<../../../_common-links.md>>
 

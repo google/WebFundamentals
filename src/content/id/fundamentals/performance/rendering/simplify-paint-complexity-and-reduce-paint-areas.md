@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Paint adalah proses pengisian piksel yang pada akhirnya akan dikomposisikan ke layar pengguna. Sering kali ini yang paling lama berjalan dari semua tugas di pipeline, dan harus dihindari jika memungkinkan.
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-20 #}
 
 # Menyederhanakan Kompleksitas Paint dan Mengurangi Area Paint {: .page-title }
@@ -105,7 +105,7 @@ Jika Anda telah mempromosikan elemen ke layer baru, gunakan DevTools untuk mengk
 
 Kadang-kadang walaupun mempromosikan elemen, pekerjaan paint tetap diperlukan. Tantangan besar dalam masalah paint adalah karena browser menyatukan dua area yang memerlukan penggambaran, dan itu bisa mengakibatkan seluruh layar digambar ulang. Jadi, misalnya, jika Anda telah menetapkan header di bagian atas laman, sesuatu sedang digambar di bagian bawah layar, seluruh layar akhirnya mungkin akan digambar ulang.
 
-Catatan: Pada elemen layar DPI Tinggi yang sudah ditetapkan, posisi secara otomatis dipromosikan ke layer kompositor-nya sendiri. Ini tidak jadi masalah pada perangkat DPI rendah karena promosi mengubah rendering teks dari subpiksel menjadi abu-abu, dan promosi layer perlu dilakukan secara manual.
+Note: Pada elemen layar DPI Tinggi yang sudah ditetapkan, posisi secara otomatis dipromosikan ke layer kompositor-nya sendiri. Ini tidak jadi masalah pada perangkat DPI rendah karena promosi mengubah rendering teks dari subpiksel menjadi abu-abu, dan promosi layer perlu dilakukan secara manual.
 
 Mengurangi area paint sering kali merupakan masalah orkestrasi animasi dan transisi Anda agar tidak banyak tumpang-tindih, atau menemukan cara untuk menghindari bagian laman tertentu.
 

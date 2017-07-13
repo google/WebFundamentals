@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM les permite a los programadores crear DOM y CSS compartimentados para componentes web
 
-{# wf_updated_on: 2016-10-13 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-08-01 #}
 
 # Shadow DOM v1: Componentes web independientes {: .page-title }
@@ -31,7 +31,7 @@ autocontenidos** en JavaScript clásico.
 
 ## Introducción {: #intro}
 
-Nota: **¿Ya conoces Shadow DOM?** Este artículo describe las especificaciones del nuevo
+Note: **¿Ya conoces Shadow DOM?** Este artículo describe las especificaciones del nuevo
 <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">
 Shadow DOM v1</a>. Si has usado Shadow DOM, es posible que estés
 familiarizado con la<a href="https://www.chromestatus.com/features/4507242028072960">
@@ -70,7 +70,7 @@ tiene soluciones para problemas comunes del desarrollo web:
 - **Productividad**: piensa en apps en fragmentos del DOM en lugar de una gran 
  página (global).
 
-Nota: A pesar de que puedes usar la API de shadow DOM y sus beneficios fuera de los componentes
+Note: A pesar de que puedes usar la API de shadow DOM y sus beneficios fuera de los componentes
 web, solo me concentraré en ejemplos sobre la base de elementos personalizados.
 Usaré la API v1 para elementos personalizados en todos los ejemplos.
 
@@ -209,7 +209,7 @@ elemento personalizado **crea su propio shadow DOM** cuando se crea una instanci
 . Esto se lleva a cabo en `constructor()`. En segundo lugar, como creamos
 una shadow root, las reglas de CSS dentro del `<style>` se encontrarán dentro del ámbito de `<fancy-tabs>`.
 
-Nota: Cuando intentes ejecutar este ejemplo, probablemente notes que no aparece
+Note: Cuando intentes ejecutar este ejemplo, probablemente notes que no aparece
 nada. El lenguaje de marcado del usuario parece desaparecer. Eso sucede porque el **shadow DOM
 del elemento aparece en lugar de sus secundarios**. Si quieres mostrar los
 secundarios, tienes que decirle al navegador dónde mostrarlos, colocando un
@@ -296,7 +296,7 @@ propio lenguaje de marcado**. Al definir uno o más slots, invitas al lenguaje d
 en el shadow DOM de tu componente. Esencialmente, estás diciendo _«Representa el lenguaje de marcado
 del usuario aquí»_.
 
-Nota: Los slots son una forma de crear una "API declarativa" para un componente web. Se
+Note: Los slots son una forma de crear una "API declarativa" para un componente web. Se
 mezclan en el DOM del usuario para ayudar a representar el componente general, **componiendo así
 distintos DOM trees juntos**.
 
@@ -679,7 +679,7 @@ Adentro de su shadow DOM:
 En este caso, el componente usará `black` como valor de fondo ya que el
 usuario lo brindó. De lo contrario, usaría el valor predeterminado `#9E9E9E`.
 
-Nota: Como autor del componente, eres responsable de informar a los programadores
+Note: Como autor del componente, eres responsable de informar a los programadores
 sobre las propiedades personalizadas de CSS que pueden usar. Considéralo parte de la interfaz pública
 de tu componente. ¡Asegúrate de documentar los enlaces de estilo!
 
@@ -709,7 +709,7 @@ Otras API también se ven afectadas por el modo cerrado:
 - `Event.composedPath()` para eventos asociados con elementos dentro del shadow
   DOM, muestra []
 
-Nota: Las shadow root cerradas no son muy útiles. Algunos programadores verán el modo
+Note: Las shadow root cerradas no son muy útiles. Algunos programadores verán el modo
 cerrado como una función de seguridad artificial. Pero seamos claro, **no** es una
 función de seguridad. El modo cerrado sencillamente evita que el JS externo explore el
 DOM interno de un elemento.

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Campuran terjadi bila HTML pertama dimuat melalui koneksi HTTPS aman, namun sumber daya lainnya dimuat melalui koneksi HTTPS tidak aman.
 
-{# wf_updated_on: 2016-08-24 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-09-25 #}
 
 # Apa yang Dimaksud Dengan Materi Campuran? {: .page-title }
@@ -278,7 +278,7 @@ Perilaku persis setiap browser terus berubah, sehingga kita tidak akan memasukka
 secara spesifik di sini. Jika Anda tertarik dengan cara perilaku browser spesifik, carilah 
 informasi yang dipublikasikan oleh vendornya secara langsung. 
 
-Catatan: Pengguna mengandalkan Anda untuk melindungi mereka saat mengunjungi situs web Anda. Masalah materi campuran perlu Anda diperbaiki untuk melindungi <b>semua</b> pengunjung, termasuk mereka yang menggunakan browser lama.
+Note: Pengguna mengandalkan Anda untuk melindungi mereka saat mengunjungi situs web Anda. Masalah materi campuran perlu Anda diperbaiki untuk melindungi <b>semua</b> pengunjung, termasuk mereka yang menggunakan browser lama.
 
 
 

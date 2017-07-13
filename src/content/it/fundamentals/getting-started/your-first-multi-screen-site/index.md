@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: È possibile accedere al Web con numerosi dispositivi che spaziano dai telefoni ai televisori e con dimensioni dello schermo molto diverse fra loro. Scopri come costruire un sito utilizzabile al meglio con numerosi dispositivi.
 
-{# wf_updated_on: 2014-01-05 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2013-12-31 #}
 
 # Il tuo primo sito per dispositivi multipli {: .page-title }
 
-Attenzione: Questo articolo non è aggiornato da tempo e potrebbe non corrispondere alla realtà. Piuttosto, dai un'occhiata al corso gratuito [Responsive Web Design](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893){: .external } su Udacity.
+Caution: Questo articolo non è aggiornato da tempo e potrebbe non corrispondere alla realtà. Piuttosto, dai un'occhiata al corso gratuito [Responsive Web Design](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893){: .external } su Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 

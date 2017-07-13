@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Hay dos tipos de banners de instalación de apps: los de apps web y los de apps nativas. Te dan la posibilidad de permitir que los usuarios agreguen de manera rápida y fluida tu app nativa o web a sus pantallas de inicio sin salir del navegador.
 
-{# wf_updated_on: 2016-02-11 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-12-16 #}
 
 # Banners de instalación de apps web {: .page-title }
@@ -26,7 +26,7 @@ con información detallada sobre tu app.
 Chrome luego usará un conjunto de criterios y heurística de frecuencia de visitas para 
       determinar el momento en que se mostrará el banner. Continúa leyendo para obtener más información.
 
-Nota: Add to Homescreen (a veces abreviado como A2HS) es otro nombre para los Banners de instalación de apps web. Los dos términos son equivalentes.
+Note: Add to Homescreen (a veces abreviado como A2HS) es otro nombre para los Banners de instalación de apps web. Los dos términos son equivalentes.
 
 ### ¿Cuáles son los criterios?
 
@@ -44,7 +44,7 @@ criterios:
   (un requisito para usar el service worker).
 * Recibir visitas al menos dos veces, con al menos cinco minutos de diferencia entre las visitas.
 
-Nota: Los Banners de instalación de apps web son una tecnología emergente. Los criterios para mostrar los banners de instalación de app pueden cambiar en el futuro. Consulta [¿Qué exactamente convierte a algo en una Progressive Web App?](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/) para ver una referencia canónica (que se actualizará con el tiempo) de los últimos criterios sobre banners de instalación de apps web.
+Note: Los Banners de instalación de apps web son una tecnología emergente. Los criterios para mostrar los banners de instalación de app pueden cambiar en el futuro. Consulta [¿Qué exactamente convierte a algo en una Progressive Web App?](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/) para ver una referencia canónica (que se actualizará con el tiempo) de los últimos criterios sobre banners de instalación de apps web.
 
 ### Prueba del banner de instalación de apps {: #test }
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Sebuah pendalaman mengenai daur hidup service worker.
 
-{# wf_updated_on: 2016-09-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-29 #}
 
 # Daur Hidup Service Worker {: .page-title }
@@ -262,7 +262,7 @@ contoh di atas](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe8
 .external}, Anda akan melihat anjing saat pertama memuat laman. Klik segarkan, dan
 Anda akan melihat gambar kucing tersebut.
 
-Catatan: Kucing adalah lebih baik daripada anjing. Keduanya cuma *adalah*.
+Note: Kucing adalah lebih baik daripada anjing. Keduanya cuma *adalah*.
 
 ### Cakupan dan kontrol
 
@@ -338,7 +338,7 @@ Jika Anda menggunakan service worker untuk memuat laman secara berbeda dengan la
 jaringan, `clients.claim()` nanti bisa menyulitkan, karena service worker Anda akan mengakhiri
 kontrol atas beberapa klien yang telah dimuat tanpa service worker.
 
-Catatan: Saya memandang banyak orang termasuk `clients.claim()` sebagai boilerplate, namun saya
+Note: Saya memandang banyak orang termasuk `clients.claim()` sebagai boilerplate, namun saya
 jarang melakukannya sendiri. Ini hanya benar-benar penting pada saat pemuatan pertama, dan karena
 ada penyempurnaan progresif, laman biasanya bekerja dengan baik tanpa service
 worker sekalipun.
@@ -579,7 +579,7 @@ kuda, bukan kucing:
       }
     });
 
-Catatan: Saya tidak memiliki opini yang kuat soal kuda.
+Note: Saya tidak memiliki opini yang kuat soal kuda.
 
 [Lihat demo
 di atas](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
