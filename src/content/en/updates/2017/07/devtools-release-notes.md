@@ -54,46 +54,6 @@ you simulate a low-end or mid-tier mobile device with a couple of clicks.
   </figcaption>
 </figure>
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.';
-var label = 'WNDT61 / Throttling Menu / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
-
 ## View storage usage {: #storage }
 
 The new **Usage** section in the **Clear Storage** tab of the **Application**
@@ -112,46 +72,6 @@ maximum quota for the entire device.
   </figcaption>
 </figure>
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.';
-var label = 'WNDT61 / Usage Section / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
-
 ## View when a service worker cached responses {: #time-cached }
 
 The new **Time Cached** column in the **Cache Storage** tab shows you
@@ -164,46 +84,6 @@ when a service worker cached responses.
     <b>Figure 4</b>. The <b>Time Cached</b> column
   </figcaption>
 </figure>
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.';
-var label = 'WNDT61 / Time Cached / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
 
 ## Enable the FPS Meter from the Command Menu {: #fps-meter }
 
@@ -220,46 +100,6 @@ You can now enable the [FPS Meter][FPS] from the [Command Menu][CM].
     Menu</b>
   </figcaption>
 </figure>
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.';
-var label = 'WNDT61 / FPS Meter / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
 
 ## Set mousewheel behavior to zoom or scroll with Performance recordings {: #mousewheel }
 
@@ -281,46 +121,6 @@ scrolls up or down.
   </figcaption>
 </figure>
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.';
-var label = 'WNDT61 / Mousewheel Behavior / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
-
 ## Debugging support for ES6 Modules {: #modules }
 
 ES6 Modules are shipping natively in Chrome 61. There's not much going on here
@@ -330,46 +130,6 @@ ES6-Module-implementation][ES6] of [TodoMVC][TodoMVC] to see for yourself.
 
 [ES6]: https://paulirish.github.io/es-modules-todomvc/
 [TodoMVC]: http://todomvc.com/
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var like = 'Great. You\'re welcome to tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> if you\'ve got any ideas on how to improve this.';
-var dislike = 'Sorry to hear that. Please tweet us at ' +
-    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
-    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
-    'list</a> and let us know what\'s wrong with it.';
-var label = 'WNDT61 / Module Debugging / Sentiment';
-var feedback = {
-  "category": "DevTools",
-  "question": 'What do you think of this change?',
-  "choices": [
-    {
-      "button": {
-        "text": "I Like It"
-      },
-      "response": like,
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "I Don't Like It"
-      },
-      "response": dislike,
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
 
 ## Feedback {: #feedback }
 
@@ -388,19 +148,3 @@ Chrome 62!
 * [What's New In DevTools (Chrome 60)](/web/updates/2017/05/devtools-release-notes)
 * [What's New In DevTools (Chrome 59)](/web/updates/2017/04/devtools-release-notes)
 * [What's New In DevTools (Chrome 58)](/web/updates/2017/03/devtools-release-notes)
-
-<!--
-<div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="PjjlwAvV8Jg"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
-
-<figure>
-  <img src="/web/updates/images/2017/05/lh-report.png"
-       alt="A Lighthouse report"/>
-  <figcaption>
-    <b>Figure X</b>. A Lighthouse report
-  </figcaption>
-</figure>
--->
