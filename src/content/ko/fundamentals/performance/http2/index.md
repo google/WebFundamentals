@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2(또는 h2)는 푸시, 다중화 스트림 및 프레임 제어를 웹에 구현하는 바이너리 프로토콜입니다.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-13 #}
 {# wf_published_on: 2016-09-29 #}
 
 # HTTP/2 소개 {: .page-title }
@@ -472,7 +472,7 @@ HTTP/2에 새로 추가된 또 다른 강력한 기능은 서버가
 * 서버에 의해 우선순위가 지정될 수 있습니다.
 * 클라이언트에 의해 거부될 수 있습니다.
 
-### `PUSH_PROMISE` 101
+### PUSH_PROMISE 101
 
 모든 서버 푸시 스트림은 `PUSH_PROMISE` 프레임을 통해 시작되며,
  이 프레임은 설명된 리소스를 클라이언트에 푸시하라는 신호를
@@ -572,7 +572,8 @@ HPACK 압축 알고리즘에 대한 자세한 내용은
     – Ilya Grigorik의 전체 문서
 * [“Setting up HTTP/2”](https://surma.link/things/h2setup/){: .external } 
     – Surma의 서로 다른 백엔드에서 HTTP/2를 설정하는 방법
-* [“HTTP/2 is here, let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19) 
+* [“HTTP/2 is here,
+  let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19)
     – Velocity 2015에서 Ilya Grigorik의 프레젠테이션
 * [“Rules of Thumb for HTTP/2 Push”](https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit) 
     – 푸시 사용 시기와 사용 방법에 대한 Tom Bergan, Simon Pelchat 및 Michael Buettner의 분석

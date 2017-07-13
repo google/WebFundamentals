@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2 (atau h2) adalah protokol biner yang membawa kontrol push, aliran multiplexing, dan bingkai ke web.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-13 #}
 {# wf_published_on: 2016-09-29 #}
 
 # Pengantar HTTP/2 {: .page-title }
@@ -472,7 +472,7 @@ hasil yang sama, namun dengan manfaat kinerja tambahan. Sumber daya push dapat:
 * Diprioritaskan oleh server
 * Ditolak oleh klien
 
-### `PUSH_PROMISE` 101
+### PUSH_PROMISE 101
 
 Semua aliran server push dinisiasi melalui bingkai `PUSH_PROMISE`, yang memberi sinyal
 tujuan server untuk mendorong sumber daya yang dijelaskan ke klien dan harus di
@@ -572,7 +572,8 @@ Untuk detail selengkapnya tentang algoritme kompresi HPACK, lihat
     – Artikel lengkap oleh Ilya Grigorik
 * [“Setting up HTTP/2”](https://surma.link/things/h2setup/){: .external } 
     – Bagaimana menyiapkan HTTP/2 di berbagai backends oleh Surma
-* [“HTTP/2 is here, let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19) 
+* [“HTTP/2 is here,
+  let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19)
     – Presentasi oleh Ilya Grigorik dari Velocity 2015
 * [“Rules of Thumb for HTTP/2 Push”](https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit) 
     – Analisis oleh Tom Bergan, Simon Pelchat, dan Michael Buettner tentang kapan dan bagaimana menggunakan push.

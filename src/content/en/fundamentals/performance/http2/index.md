@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2 (or h2) is a binary protocol that brings push, multiplexing streams and frame control to the web.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-13 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>Network,Internals>Network>HTTP2 #}
 
@@ -473,7 +473,7 @@ the same results, but with additional performance benefits. Push resources can b
 * Prioritized by the server
 * Declined by the client
 
-### `PUSH_PROMISE` 101
+### PUSH_PROMISE 101
 
 All server push streams are initiated via `PUSH_PROMISE` frames, which signal the
 server’s intent to push the described resources to the client and need to be
@@ -511,7 +511,7 @@ resource and its properties. In HTTP/1.x, this metadata is always sent as plain
 text and adds anywhere from 500–800 bytes of overhead per transfer, and
 sometimes kilobytes more if HTTP cookies are being used. (See
 [Measuring and Controlling Protocol Overhead](https://hpbn.co/http1x/#measuring-and-controlling-protocol-overhead)
-). To reduce this overhead and improve performance, HTTP/2 compresses request
+.) To reduce this overhead and improve performance, HTTP/2 compresses request
 and response header metadata using the HPACK compression format that uses two
 simple but powerful techniques:
 
@@ -573,7 +573,8 @@ For full details of the HPACK compression algorithm, see
     – The full article by Ilya Grigorik
 * [“Setting up HTTP/2”](https://surma.link/things/h2setup/){: .external }
     – How to set up HTTP/2 in different backends by Surma
-* [“HTTP/2 is here, let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19) 
+* [“HTTP/2 is here,
+let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19)
     – Presentation by Ilya Grigorik from Velocity 2015
 * [“Rules of Thumb for HTTP/2 Push”](https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit)
     – An analysis by Tom Bergan, Simon Pelchat and Michael Buettner on when and how to use push.

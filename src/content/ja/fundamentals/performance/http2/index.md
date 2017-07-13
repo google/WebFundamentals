@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2（h2）は、ウェブでのプッシュ、多重ストリーム、フレーム制御を実現するバイナリ プロトコルです。
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-13 #}
 {# wf_published_on: 2016-09-29 #}
 
 # HTTP/2 の概要 {: .page-title }
@@ -390,7 +390,7 @@ HTTP/2 を使用すると、同じ結果を達成できるうえに、さらに�
 * サーバーによって優先順位付けされる
 * クライアントによって拒否される
 
-###  `PUSH_PROMISE` 101
+### PUSH_PROMISE 101
 
 すべてのサーバー プッシュ ストリームは、`PUSH_PROMISE` フレームを使用して開始されます。これは、サーバーが、記述されているリソースをクライアントにプッシュする意図があるというシグナルで、プッシュされたリソースをリクエストするレスポンス データの前に配信する必要があります。
 この配信順序が重要です。クライアントは、サーバーがプッシュしようとしているリソースを把握し、リソースのリクエストが重複しないようにする必要があります。
@@ -477,7 +477,8 @@ HPACK 圧縮アルゴリズムの完全な詳細については、<https://tools
     – Ilya Grigorik による記事の全文
 * [“Setting up HTTP/2”](https://surma.link/things/h2setup/){: .external } 
     – Surma による異なるバックエンドで HTTP/2 をセットアップする方法
-* [“HTTP/2 is here, let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19) 
+* [“HTTP/2 is here,
+  let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19)
     – Velocity 2015、Ilya Grigorik によるプレゼンテーション
 * [“Rules of Thumb for HTTP/2 Push”](https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit) 
     – Tom Bergan、Simon Pelchat、Michael Buettner によるプッシュを使用するタイミングと方法に関する分析

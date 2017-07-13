@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2 (o h2) es un protocolo binario que ofrece transmisiones de multiplexación insertadas y control de tramas a la Web.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-13 #}
 {# wf_published_on: 2016-09-29 #}
 
 # Introducción a HTTP/2 {: .page-title }
@@ -472,7 +472,7 @@ los mismos resultados pero con beneficios de rendimiento adicionales. Los recurs
 * Priorizados por el servidor
 * Rechazados por el cliente
 
-### `PUSH_PROMISE` 101
+### PUSH_PROMISE 101
 
 Todas las transmisiones del servidor push se inician a través de tramas `PUSH_PROMISE`, que indican la
 intención del servidor de insertar los recursos descritos al cliente y necesitan ser
@@ -572,7 +572,8 @@ Para obtener información completa sobre el algoritmo de compresión HPACK, cons
     – El artículo completo de Ilya Grigorik
 * [“Setting up HTTP/2” (Configuración de HTTP/2)](https://surma.link/things/h2setup/){: .external } 
     – Cómo configurar HTTP/2 en backends diferentes de Surma
-* [“HTTP/2 is here, let’s optimize!” (HTTP/2 está aquí, ¡a optimizar!)](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19) 
+* [“HTTP/2 is here, let’s optimize!” (HTTP/2 está aquí, ¡a
+  optimizar!)](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19)
     – Presentación de Ilya Grigorik de Velocity 2015
 * [“Rules of Thumb for HTTP/2 Push” (Reglas generales para HTTP/2 Push)](https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit) 
     – Un análisis de Tom Bergan, Simon Pelchat y Michael Buettner sobre cuándo y cómo usar push.

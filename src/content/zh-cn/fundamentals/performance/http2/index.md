@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:HTTP/2（或 h2）是一种二进制协议，为网络带来了推送、数据流复用和帧控制等功能。
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-13 #}
 {# wf_published_on: 2016-09-29 #}
 
 # HTTP/2 简介 {: .page-title }
@@ -330,7 +330,7 @@ HTTP/2 新增的另一个强大的新功能是，服务器可以对一个客户�
 * 由服务器设定优先级
 * 被客户端拒绝
 
-### `PUSH_PROMISE` 101
+### PUSH_PROMISE 101
 
 所有服务器推送数据流都由 `PUSH_PROMISE` 帧发起，表明了服务器向客户端推送所述资源的意图，并且需要先于请求推送资源的响应数据传输。这种传输顺序非常重要：客户端需要了解服务器打算推送哪些资源，以免为这些资源创建重复请求。满足此要求的最简单策略是先于父响应（即，`DATA` 帧）发送所有 `PUSH_PROMISE` 帧，其中包含所承诺资源的 HTTP 标头。
 
@@ -406,7 +406,9 @@ HTTP/2 新增的另一个强大的新功能是，服务器可以对一个客户�
 
 * [“HTTP/2”](https://hpbn.co/http2/){: .external } - Ilya Grigorik 所著的完整文章
 * [“设置 HTTP/2”](https://surma.link/things/h2setup/){: .external } - 如何在不同的后端中设置 HTTP/2，作者：Surma
-* [“HTTP/2”已经粉墨登场，我们一起优化性能吧！”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19)- Ilya Grigorik 在 Velocity 2015 上所作的演示
+* [“HTTP/2”
+  已经粉墨登场，我们一起优化性能吧！”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19)
+  - Ilya Grigorik 在 Velocity 2015 上所作的演示
 * [“HTTP/2 推送的经验法则”](https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit)- Tom Bergan、Simon Pelchat 和 Michael Buettner 对何时以及如何使用推送的分析。
 
 
