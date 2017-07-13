@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 新しいプロジェクトで最も苦労するのは、立ち上げ時である場合が多くあります。Web Starter Kit では、開発プロセスの基盤となる便利なツールが幅広く提供されています。
 
-{# wf_updated_on:2014-10-20 #}
-{# wf_published_on:2014-07-16 #}
+{# wf_updated_on: 2017-07-12 #}
+{# wf_published_on: 2014-07-16 #}
 
 # Web Starter Kit でサイトを構築する {: .page-title }
 
-警告: この記事はしばらくアップデートされていないため、現実が反映されていない可能性があります。最新の詳細については、Web Starter Kit の[ドキュメント](https://github.com/google/web-starter-kit/)を確認してください。
+Warning: この記事はしばらくアップデートされていないため、現実が反映されていない可能性があります。最新の詳細については、Web Starter Kit の[ドキュメント](https://github.com/google/web-starter-kit/)を確認してください。
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 

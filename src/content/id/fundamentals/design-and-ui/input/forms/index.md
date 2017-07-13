@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Formulir sulit diisi pada perangkat seluler. Formulir terbaik adalah formulir dengan masukan paling sedikit.
 
-{# wf_updated_on: 2014-10-21 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-04-30 #}
 
 # Membuat Formulir yang Mengagumkan {: .page-title }
@@ -243,7 +243,7 @@ tersebut, elemen `datalist` memberikan petunjuk ketika pengguna mengetik.
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
-Catatan: Nilai <code>datalist</code> disediakan sebagai saran, dan pengguna tidak dibatasi pada saran yang diberikan.
+Note: Nilai <code>datalist</code> disediakan sebagai saran, dan pengguna tidak dibatasi pada saran yang diberikan.
 
 ## Memasukkan label dan nama dengan benar
 
@@ -307,7 +307,7 @@ Browser menggunakan banyak heuristik untuk menentukan bidang mana yang bisa mere
 dan Anda dapat memberikan petunjuk ke browser dengan menyediakan atribut `name` dan 
 atribut `autocomplete` pada setiap elemen masukan.
 
-Catatan: Chrome mengharuskan elemen `input` dibungkus dalam tag `<form>` untuk mengaktifkan
+Note: Chrome mengharuskan elemen `input` dibungkus dalam tag `<form>` untuk mengaktifkan
 auto-complete. Jika elemen tidak dibungkus dengan tag `form`, Chrome akan memberikan
 saran, namun **tidak** akan mengisi formulir.
 
@@ -455,7 +455,7 @@ Atribut `autocomplete` bisa disertai dengan nama bagian, seperti **`shipping `**
 </table>
 
 
-Catatan: Gunakan hanya <code>street-address</code> atau <code>address-line1</code> dan <code>address-line2</code>. <code>address-level1</code> dan <code>address-level2</code> hanya diperlukan jika mereka dibutuhkan untuk format alamat Anda.
+Note: Gunakan hanya <code>street-address</code> atau <code>address-line1</code> dan <code>address-line2</code>. <code>address-level1</code> dan <code>address-level2</code> hanya diperlukan jika mereka dibutuhkan untuk format alamat Anda.
 
 
 ### Atribut `autofocus`

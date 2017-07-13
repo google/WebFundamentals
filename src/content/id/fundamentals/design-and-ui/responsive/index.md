@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Banyak dari web tidak dioptimalkan untuk pengalaman multi-perangkat. Pelajari dasar-dasar agar situs Anda berjalan pada seluler, desktop atau perangkat berlayar lainnya.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Dasar-Dasar Desain Web Responsif {: .page-title }
@@ -88,7 +88,7 @@ CSS dan piksel yang tidak tergantung perangkat terlepas dari orientasi perangkat
 memungkinkan laman untuk memanfaatkan lebar lanskap penuh.
 
 
-Catatan: Untuk memastikan browser lama bisa dengan benar parse atribut, gunakan tanda koma untuk memisahkan atribut.
+Note: Untuk memastikan browser lama bisa dengan benar parse atribut, gunakan tanda koma untuk memisahkan atribut.
 
 ### Memastikan tampilan yang terlihat bisa diakses
 

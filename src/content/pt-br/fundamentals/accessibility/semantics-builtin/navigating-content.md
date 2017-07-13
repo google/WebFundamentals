@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: A função da semântica na navegação de páginas
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
 # A semântica e a navegação de conteúdo {: .page-title }
@@ -89,7 +89,7 @@ artigo sobre conteúdo fora da tela](http://webaim.org/techniques/css/invisiblec
 Para aplicativos completos, essa pode ser uma boa forma de acomodar cabeçalhos quando
 o design visual não exige ou tem espaço para um cabeçalho visível.
 
-Atenção: é importante ser comedido ao usar essa técnica. Lembre-se de que
+Warning: é importante ser comedido ao usar essa técnica. Lembre-se de que
 usuários de tecnologias assistivas também podem conseguir enxergar a tela, então
 exagerar ao tentar criar um conteúdo “apenas para leitores de tela” pode
 acabar prejudicando a experiência de alguns usuários. Isso também pode criar

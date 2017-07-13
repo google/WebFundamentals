@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: El contenido mixto ocurre cuando un HTML inicial se carga en una conexión HTTPS segura, pero otros recursos se cargan en una conexión HTTP insegura.
 
-{# wf_updated_on: 2016-08-24 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-09-25 #}
 
 # ¿Qué es el contenido mixto? {: .page-title }
@@ -278,7 +278,7 @@ No incluimos información específica sobre cada navegador, ya que el comportami
 constantemente. Si te interesa conocer el comportamiento de un navegador en particular, busca información 
 que el proveedor haya publicado directamente. 
 
-Nota: Los usuarios esperan que los protejas cuando visitan tu sitio web. Es importante que soluciones los problemas de contenido mixto para proteger a <b>todos</b> los visitantes, incluso aquellos que usen navegadores anteriores.
+Note: Los usuarios esperan que los protejas cuando visitan tu sitio web. Es importante que soluciones los problemas de contenido mixto para proteger a <b>todos</b> los visitantes, incluso aquellos que usen navegadores anteriores.
 
 
 

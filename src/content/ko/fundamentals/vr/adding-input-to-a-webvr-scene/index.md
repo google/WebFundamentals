@@ -2,14 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ray Input 라이브러리를 사용하여 WebVR 장면에 입력을 추가하는 방법을 알아봅니다.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # WebVR 장면에 입력 추가 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-경고: WebVR은 아직 실험 단계이며 변경될 수 있습니다.
+Warning: WebVR은 아직 실험 단계이며 변경될 수 있습니다.
 
 [WebVR 시작하기](../getting-started-with-webvr/) 섹션에서는 WebGL 장면을 가져와서 WebVR 기능을 추가하는 방법을 살펴봤습니다. 실행되는 동안 VR에서 장면을 둘러볼 수 있기 때문에 장면의 엔터티와 상호작용할 때 훨씬 재미있습니다.
 

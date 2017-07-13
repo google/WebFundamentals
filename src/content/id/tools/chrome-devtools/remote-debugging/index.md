@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Debug materi langsung dari jauh di perangkat Android dari komputer Windows, Mac atau Linux.
 
-{# wf_updated_on: 2016-12-09 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 <style>
@@ -89,7 +89,7 @@ Windows, Mac, atau Linux. Tutorial ini mengajarkan kepada Anda cara:
    dan teks **Connected** menunjukkan bahwa Anda siap men-
    debug dari jauh perangkat Android dari mesin development.
 
-Catatan: Jika mengalami masalah selama proses pencarian, Anda 
+Note: Jika mengalami masalah selama proses pencarian, Anda 
 bisa mengulanginya dengan memilih **Settings** > **Developer Options** >
 **Revoke USB Debugging Authorizations** di perangkat Android.
 

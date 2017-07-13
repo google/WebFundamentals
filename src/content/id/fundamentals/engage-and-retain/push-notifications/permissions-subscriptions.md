@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Meminta izin pengguna dan langganan untuk notifikasi harus semudah seperti menunjukkan notifikasi.
 
-{# wf_updated_on: 2016-06-30 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Permintaan Izin dan Langganan Pengguna {: .page-title }
@@ -26,7 +26,7 @@ notifikasi. Gunakan informasi ini untuk mengatur status setelan
 izin. Contohnya ditampilkan di bawah ini. Supaya jelas, kita belum meminta
 apa-apa.
 
-Catatan: Demi kejelasan, contoh ini mengecualikan sejumlah pemeriksaan fitur
+Note: Demi kejelasan, contoh ini mengecualikan sejumlah pemeriksaan fitur
 yang harus selalu Anda lakukan. Anda bisa melihat kode asli secara keseluruhan
 di <a href='https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications'>
 repo contoh GitHub kami</a>.

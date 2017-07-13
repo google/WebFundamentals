@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Has visto los aspectos que componen una buena notificación. Ahora veamos la manera de implementarlos.
 
-{# wf_updated_on: 2016-09-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Administrar mensajes {: .page-title }
@@ -444,7 +444,7 @@ self.addEventListener('notificationclick', function(event) {
 });
 </pre>
 
-Nota: A partir de aquí, los ejemplos de código se vuelven algo extensos. Vamos a truncarlos por razones de espacio. No te preocupes, Te mostraremos todo completo al final.
+Note: A partir de aquí, los ejemplos de código se vuelven algo extensos. Vamos a truncarlos por razones de espacio. No te preocupes, Te mostraremos todo completo al final.
 
 Independientemente de la URL, llamaremos a `clients.matchAll()` para obtener una ventana de cliente con la que se pueda
 navegar.

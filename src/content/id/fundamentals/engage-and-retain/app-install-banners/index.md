@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ada dua tipe spanduk pemasangan aplikasi: spanduk pemasangan aplikasi web dan spanduk pemasangan aplikasi asli. Keduanya memberi Anda kemampuan untuk memungkinkan pengguna dengan cepat dan mulus menambahkan aplikasi asli atau web Anda ke layar beranda tanpa meninggalkan browser.
 
-{# wf_updated_on: 2016-02-11 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-12-16 #}
 
 # Spanduk Pemasangan Aplikasi Web {: .page-title }
@@ -26,7 +26,7 @@ situs bersama detail tentang aplikasi.
 Chrome kemudian menggunakan serangkaian kriteria dan heuristik frekuensi kunjungan untuk
 menentukan waktu yang tepat menampilkan spanduk. Baca terus untuk detail selengkapnya.
 
-Catatan: Add to Homescreen (terkadang disingkat menjadi A2HS) adalah nama lain untuk Spanduk Pemasangan Aplikasi Web. Dua istilah itu setara.
+Note: Add to Homescreen (terkadang disingkat menjadi A2HS) adalah nama lain untuk Spanduk Pemasangan Aplikasi Web. Dua istilah itu setara.
 
 ### Apa kriterianya?
 
@@ -44,7 +44,7 @@ berikut:
   (persyaratan untuk menggunakan service worker).
 * Dikunjungi setidaknya dua kali, dengan jarak waktu setidaknya lima menit antar kunjungan.
 
-Catatan: Spanduk Pemasangan Aplikasi Web adalah teknologi yang sedang berkembang. Kriteria untuk menampilkan spanduk pemasangan aplikasi dapat berubah di masa mendatang. Lihat [Apa, Sebenarnya, yang Menjadikan Sesuatu sebagai Progressive Web App?](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/) untuk referensi kanonis (yang akan diperbarui dari waktu ke waktu) dan kriteria terbaru spanduk pemasangan aplikasi web.
+Note: Spanduk Pemasangan Aplikasi Web adalah teknologi yang sedang berkembang. Kriteria untuk menampilkan spanduk pemasangan aplikasi dapat berubah di masa mendatang. Lihat [Apa, Sebenarnya, yang Menjadikan Sesuatu sebagai Progressive Web App?](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/) untuk referensi kanonis (yang akan diperbarui dari waktu ke waktu) dan kriteria terbaru spanduk pemasangan aplikasi web.
 
 ### Menguji spanduk pemasangan aplikasi {: #test }
 

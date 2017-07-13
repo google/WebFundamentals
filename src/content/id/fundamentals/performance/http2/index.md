@@ -10,7 +10,7 @@ description: HTTP/2 (atau h2) adalah protokol biner yang membawa kontrol push, a
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 {% include "web/_shared/contributors/surma.html" %}
 
-Catatan: Materi berikut ini merupakan kutipan dari [High Performance Browser
+Note: Materi berikut ini merupakan kutipan dari [High Performance Browser
 Networking](http://shop.oreilly.com/product/0636920028048.do) (O'Reilly, Ilya
 Grigorik). Untuk versi lengkap dan materi terkaitnya, lihat
 [hpbn.co](https://hpbn.co/){: .external }.
@@ -63,7 +63,7 @@ Terutama, tujuan proyek yang dijelaskan disetel sebagai berikut:
 * Kembangkan protokol baru ini dalam kemitraan dengan komunitas open-source.
 * Kumpulkan data kinerja nyata untuk mem(batalkan)validasi protokol eksperimental.
 
-Catatan: Untuk mencapai peningkatan PLT 50%, SPDY bertujuan untuk menggunakan dengan lebih efisien
+Note: Untuk mencapai peningkatan PLT 50%, SPDY bertujuan untuk menggunakan dengan lebih efisien
 koneksi TCP yang mendasari dengan memperkenalkan layer pembingkaian biner baru untuk
 memampukan permintaan dan multiplexing respons, penentuan prioritas, dan kompresi
 header; lihat
@@ -340,7 +340,7 @@ juga memungkinkan klien untuk memperbarui preferensi ini setiap saat, yang menga
 optimasi selanjutnya di browser. Dengan kata lain, kita dapat mengubah dependensi
 dan mengalokasikan kembali bobot sehubungan dengan interaksi pengguna dan sinyal lainnya.
 
-Catatan: Alirkan dependensi dan bobot menyampaikan preferensi transport, bukan
+Note: Alirkan dependensi dan bobot menyampaikan preferensi transport, bukan
 persyaratan, dan dengan demikian tidak menjamin pemrosesan tertentu atau
 urutan transmisi. Klien tidak dapat memaksa server untuk memroses
 aliran dalam urutan tertentu menggunakan penentuan prioritas aliran. Sementara ini mungkin tampak
@@ -376,7 +376,7 @@ biaya operasional dan meningkatkan utilitas serta kemampuan jaringan. Hasilnya,
 perpindahan ke HTTP/2 tidak hanya mengurangi latensi jaringan, tetapi juga membantu
 meningkatkan throughput dan mengurangi biaya operasional.
 
-Catatan: Berkurangnya jumlah koneksi merupakan fitur sangat penting untuk
+Note: Berkurangnya jumlah koneksi merupakan fitur sangat penting untuk
 meningkatkan penyebaran penerapan HTTPS: fitur ini diterjemahkan menjadi
 TLS handshake yang sedikit berat, penggunaan kembali sesi yang lebih baik, dan pengurangan secara keseluruhan dalam
 sumber daya klien dan server yang diperlukan.
@@ -446,7 +446,7 @@ permintaan secara eksplisit.
 ![Server mengawali aliran baru (promise) untuk sumber daya push
 ](images/push01.svg)
 
-Catatan: HTTP/2 menjauh dari semantik respons-permintaan yang ketat dan memungkinkan
+Note: HTTP/2 menjauh dari semantik respons-permintaan yang ketat dan memungkinkan
 satu dengan banyak dan alur kerja push yang diawali dengan server yang membuka dunia
 baru kemungkinan interaksi baik di dalam maupun di luar browser. Ini
 mengaktifkan fitur yang akan memiliki konsekuensi jangka panjang penting untuk cara
@@ -537,7 +537,7 @@ ukuran setiap permintaan dikurangi dengan menggunakan pengkodean Huffman statis 
 yang belum tampak sebelumnya, dan pengganti indeks untuk nilai yang
 sudah ada di tabel statis atau dinamis di setiap sisi.
 
-Catatan: Definisi bidang header permintaan dan respons di HTTP/2 tetap
+Note: Definisi bidang header permintaan dan respons di HTTP/2 tetap
 tidak berubah, dengan beberapa pengecualian kecil: semua nama bidang header ditulis dengan huruf kecil,
 dan garis permintaan kini terpisah menjadi individu bidang pseudo-header `:method`, `:scheme`, 
 `:authority`, dan `:path`.

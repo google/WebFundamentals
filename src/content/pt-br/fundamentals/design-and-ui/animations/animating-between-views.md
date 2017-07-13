@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Saiba como criar uma animação entre duas visualizações em seus aplicativos.
 
-{# wf_updated_on: 2016-08-23 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Animar entre visualizações {: .page-title }
@@ -18,7 +18,7 @@ Com frequência, os usuários deverão passar por diferentes visualizações no 
 
 A aparência e o comportamento dessas transições de visualização dependem dos tipos de visualizações com os quais você trabalha. Por exemplo, animar uma sobreposição modal sobre uma visualização deve ser uma experiência diferente do que uma transição entre uma visualização de lista e uma de detalhes.
 
-Sucesso: Procure manter 60 fps para todas as suas animações. Dessa forma, seus usuários não verão animações oscilantes que interfiram com suas experiências. Certifique-se de que qualquer elemento de animação tenha `will-change` definido para tudo que você planeje alterar bem antes de começar a animação. Para alternâncias de visualização, você provavelmente usará `will-change: transform`.
+Success: Procure manter 60 fps para todas as suas animações. Dessa forma, seus usuários não verão animações oscilantes que interfiram com suas experiências. Certifique-se de que qualquer elemento de animação tenha `will-change` definido para tudo que você planeje alterar bem antes de começar a animação. Para alternâncias de visualização, você provavelmente usará `will-change: transform`.
 
 ## Use alternâncias para mover-se entre visualizações
 
@@ -129,7 +129,7 @@ Por fim, adicionamos as declarações CSS para essas classes.
 
 Você pode expandir para cobrir várias visualizações e o conceito básico deverá permanecer o mesmo; cada visualização não visível deve estar fora da tela e trazida conforme necessário e a visualização atualmente na tela deve ser removida.
 
-Atenção: Criar este tipo de hierarquia entre vários navegadores pode ser um desafio. Por exemplo, o iOS exige uma propriedade CSS adicional,  <code>-webkit-overflow-scrolling: touch</code> para “reativar” a rolagem corrente, mas você não pode controlar o eixo como faz com a propriedade overflow padrão. Teste sua implementação em vários dispositivos!
+Warning: Criar este tipo de hierarquia entre vários navegadores pode ser um desafio. Por exemplo, o iOS exige uma propriedade CSS adicional,  <code>-webkit-overflow-scrolling: touch</code> para “reativar” a rolagem corrente, mas você não pode controlar o eixo como faz com a propriedade overflow padrão. Teste sua implementação em vários dispositivos!
 
 Além da transição entre visualizações, essa técnica também pode ser aplicada a outros elementos de deslizamento, como os elementos de navegação da barra lateral. A única diferença real é que você não precisará mover as outras visualizações.
 

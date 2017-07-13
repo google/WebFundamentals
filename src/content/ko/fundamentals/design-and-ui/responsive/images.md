@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 하나의 그림은 1000단어의 가치가 있으며, 이미지는 모든 페이지에서 중요한 역할을 합니다. 그러나 이미지는 다운로드되는 바이트의 대부분을 차지하기도 합니다.  반응형 웹 디자인은 기기 특성에 따라 레이아웃을 변경할 뿐만 아니라 이미지도 변경할 수 있습니다.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-04-29 #}
 
 # 이미지 {: .page-title }
@@ -294,7 +294,7 @@ Dogfood: `picture` 요소가 브라우저에 들어가기 시작했습니다. �
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html){: target="_blank" .external }
 
-주의: 압축 기법 사용 시 메모리가 늘어나고 디코딩 비용이 필요하므로 주의하세요. 작은 화면에 맞게 큰 이미지의 크기를 조정하는 것은 비용이 만이 들고, 메모리와 처리 성능이 모두 제한된 저사양 기기에서는 특히 손해가 클 수 있습니다.
+Caution: 압축 기법 사용 시 메모리가 늘어나고 디코딩 비용이 필요하므로 주의하세요. 작은 화면에 맞게 큰 이미지의 크기를 조정하는 것은 비용이 만이 들고, 메모리와 처리 성능이 모두 제한된 저사양 기기에서는 특히 손해가 클 수 있습니다.
 
 #### 자바스크립트 이미지 대체
 

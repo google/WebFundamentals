@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Sebagian besar browser bisa mengakses kamera pengguna.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-08-23 #}
 
 # Mengambil Gambar dari Pengguna {: .page-title }
@@ -67,7 +67,7 @@ Browser modern dapat mengakses langsung kamera, sehingga kita dapat menciptakan
 pengalaman yang terintegrasi penuh dengan laman web, agar pengguna tidak perlu
 meninggalkan browser.
 
-Peringatan: Akses langsung ke kamera adalah kemampuan yang dahsyat. Anda harus mendapat izin 
+Caution: Akses langsung ke kamera adalah kemampuan yang dahsyat. Anda harus mendapat izin 
 dari pengguna dan situs Anda harus menggunakan protokol yang aman (HTTPS).
 
 ### Memperoleh akses ke kamera
@@ -199,7 +199,7 @@ memberi akses, mereka tidak akan diminta lagi. Namun, jika pengguna menolak akse
 Anda tidak bisa mendapat akses lagi, kecuali jika mereka mengubah setelan izin kamera 
 secara manual.
 
-Peringatan: Meminta akses ke kamera saat laman dimuat akan mengakibatkan sebagian besar 
+Caution: Meminta akses ke kamera saat laman dimuat akan mengakibatkan sebagian besar 
 pengguna menolak permintaan akses.
 
 ## Kompatibilitas

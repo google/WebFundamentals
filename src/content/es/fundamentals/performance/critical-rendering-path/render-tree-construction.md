@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: PENDIENTE
 
-{# wf_updated_on: 2015-08-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Construcción, diseño y pintura del árbol de representación {: .page-title }
@@ -42,7 +42,7 @@ Para construir el árbol de representación, el navegador realiza algo parecido 
 1. Para cada nodo visible, encuentra las adecuadas reglas de CSSOM y aplícalas.
 1. Emite nodos visibles con contenido y sus estilos computarizados.
 
-Nota: Como nota al margen, observa que `visibility: hidden` es diferente de `display: none`. El primero provoca que el elemento sea invisible, pero el elemento sigue ocupando espacio en el diseño (es decir, se representa como un cuadro vacío). El segundo (`display: none`) quita completamente el elemento del árbol de representación; el elemento es invisible y no forma parte del diseño.
+Note: Como nota al margen, observa que `visibility: hidden` es diferente de `display: none`. El primero provoca que el elemento sea invisible, pero el elemento sigue ocupando espacio en el diseño (es decir, se representa como un cuadro vacío). El segundo (`display: none`) quita completamente el elemento del árbol de representación; el elemento es invisible y no forma parte del diseño.
 
 La salida final es una representación con el contenido y la información de estilo de todo el contenido visible en pantalla.  **Una vez preparado el árbol de representación, podemos continuar con la etapa de “diseño”.**
 

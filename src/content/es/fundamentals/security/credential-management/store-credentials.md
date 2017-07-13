@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-11-08 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Almacenar credenciales {: .page-title }
@@ -20,7 +20,7 @@ o se actualiza la credencial del usuario.
 
 ### Almacenar los detalles del nombre de usuario y de la contraseña
 
-Punto clave: Crea un objeto nuevo `PasswordCredential` y guárdalo con 
+Key Point: Crea un objeto nuevo `PasswordCredential` y guárdalo con 
 `navigator.credentials.store()`.
 
 Una vez que el usuario inicia sesión y tú verificas sus credenciales, crea
@@ -56,7 +56,7 @@ aparece una notificación que te pide almacenar una credencial
 
 ### Almacenar un nombre de usuario y contraseña desde un formulario
 
-Punto clave: Usa un formulario anotado correctamente para crear fácilmente un objeto nuevo `PasswordCredential`
+Key Point: Usa un formulario anotado correctamente para crear fácilmente un objeto nuevo `PasswordCredential`
 y guárdalo con `navigator.credentials.store()`.
 
 Además de crear manualmente la `PasswordCredential`, puedes simplemente
@@ -88,7 +88,7 @@ Se agregará automáticamente cualquier campo del formulario adicional
 
 ## Almacenar una credencial para una cuenta federada
 
-Punto clave: Crea un objeto nuevo `FederatedCredential` y guárdalo con 
+Key Point: Crea un objeto nuevo `FederatedCredential` y guárdalo con 
 `navigator.credentials.store()`.
 
 

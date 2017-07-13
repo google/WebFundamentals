@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Preencher formulários em celulares não é fácil. Os melhores formulários são aqueles com menos entradas.
 
-{# wf_updated_on: 2014-10-21 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-04-30 #}
 
 # Crie formulários incríveis {: .page-title }
@@ -226,7 +226,7 @@ entrada.
   </tbody>
 </table>
 
-Atenção: Lembre-se de ter a localização em mente ao escolher o tipo de entrada,
+Warning: Lembre-se de ter a localização em mente ao escolher o tipo de entrada,
 pois algumas localidades usam um ponto (.) como separador em vez de uma vírgula (,)
 
 ### Ofereça sugestões durante a entrada com o datalist
@@ -292,7 +292,7 @@ comece a digitar no elemento.
     <input type="text" placeholder="MM-YYYY" ...>
 
 
-Atenção: Os marcadores desaparecem assim que o usuário começa a digitar em um elemento, portanto, não são uma substituição para rótulos.  Eles devem ser usados como um guia para ajudar a orientar o usuário no formato e conteúdo exigidos.
+Warning: Os marcadores desaparecem assim que o usuário começa a digitar em um elemento, portanto, não são uma substituição para rótulos.  Eles devem ser usados como um guia para ajudar a orientar o usuário no formato e conteúdo exigidos.
 
 ### Use metadados para ativar o preenchimento automático
 
@@ -603,7 +603,7 @@ JavaScript APIs ainda permitirão que você verifique se o formulário é válid
     
 
 
-Sucesso: Mesmo com validação de entrada do lado do cliente, é importante validar dados no servidor para garantir consistência e segurança em seus dados.
+Success: Mesmo com validação de entrada do lado do cliente, é importante validar dados no servidor para garantir consistência e segurança em seus dados.
 
 ### Use JavaScript para validações em tempo real mais complexas
 
@@ -728,7 +728,7 @@ JavaScript para mostrar o estilo inválido apenas quando o usuário já tiver vi
 [Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
 
-Sucesso: Mostre ao usuário todos os problemas no formulário de uma vez em vez de um a um.
+Success: Mostre ao usuário todos os problemas no formulário de uma vez em vez de um a um.
 
 
 

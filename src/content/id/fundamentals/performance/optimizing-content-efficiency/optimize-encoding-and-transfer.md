@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Selain menghilangkan unduhan sumber daya yang tidak perlu, cara terbaik yang bisa kita lakukan untuk meningkatkan kecepatan pemuatan laman adalah meminimalkan ukuran unduhan keseluruhan dengan mengoptimalkan dan mengompresi sumber daya yang tersisa.
 
-{# wf_updated_on: 2016-08-26 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Mengoptimalkan Enkode dan Ukuran Transfer Aset Berbasis Teks {: .page-title }
@@ -88,7 +88,7 @@ Setelah menerapkan langkah-langkah di atas, laman berkurang dari 406 menjadi 150
 
 Mundur satu langkah ke belakang, contoh di atas mengilustrasikan poin penting: kompresor serbaguna&mdash;katakanlah, yang didesain untuk mengompresi teks arbitrer&mdash;mungkin bisa melakukan tugas kompresi dengan cukup baik untuk laman di atas, namun tidak tahu cara membuang komentar, menciutkan aturan CSS, atau lusinan optimalisasi khusus materi lainnya. Inilah sebabnya pra-pemrosesan/minifikasi/optimalisasi sesuai konteks bisa menjadi alat (bantu) yang andal.
 
-Catatan: Untuk kasus ini, versi development yang tidak dikompresi dari pustaka JQuery sekarang mendekati ~300 KB. Pustaka yang sama, namun dikecilkan (komentarnya dibuang, dll.) kira-kira 3x lebih kecil: ~100 KB.
+Note: Untuk kasus ini, versi development yang tidak dikompresi dari pustaka JQuery sekarang mendekati ~300 KB. Pustaka yang sama, namun dikecilkan (komentarnya dibuang, dll.) kira-kira 3x lebih kecil: ~100 KB.
 
 Demikian pula, teknik yang dijelaskan di atas bisa diperpanjang melampaui aset berbasis teks saja. Gambar, video, dan tipe materi lainnya semuanya mengandung bentuk metadata dan ragam payloud masing-masing. Misalnya, kapan saja Anda mengambil gambar dengan kamera, foto itu juga biasanya menyematkan banyak informasi tambahan: setelan kamera, lokasi, dan seterusnya. Bergantung pada aplikasi Anda, data ini mungkin sangat penting (misalnya, situs berbagi foto), atau sama sekali tidak berguna, dan Anda harus mempertimbangkan apakah perlu membuangnya. Dalam praktiknya, metadata ini bisa menambah hingga puluhan kilobyte untuk setiap gambar.
 
@@ -185,7 +185,7 @@ Proyek Boilerplate HTML5 berisi [file konfigurasi contoh](https://github.com/h5b
 
 Cara cepat dan mudah untuk melihat tindakan GZIP adalah membuka Chrome DevTools dan memeriksa kolom “Size / Content” dalam panel Network. “Size” mengindikasikan ukuran transfer aset, dan "Content" adalah ukuran aset yang tidak dikompresi. Untuk aset HTML dalam contoh terdahulu, GZIP menghemat 98,8 KB selama transfer.
 
-Catatan: Kadang-kadang, GZIP menambah ukuran aset. Biasanya ini terjadi bila aset sangat kecil dan overhead kamus GZIP lebih tinggi daripada penghematan kompresinya, atau bila sumber daya sudah dikompresi dengan baik. Untuk menghindari masalah ini, sebagian server memungkinkan Anda menetapkan ambang batas ukuran file minimum.
+Note: Kadang-kadang, GZIP menambah ukuran aset. Biasanya ini terjadi bila aset sangat kecil dan overhead kamus GZIP lebih tinggi daripada penghematan kompresinya, atau bila sumber daya sudah dikompresi dengan baik. Untuk menghindari masalah ini, sebagian server memungkinkan Anda menetapkan ambang batas ukuran file minimum.
 
 Terakhir, walaupun sebagian besar server secara otomatis mengompresi aset saat menyajikannya kepada pengguna, beberapa CDN memerlukan penanganan ekstra dan upaya manual untuk memastikan bahwa aset GZIP disajikan. Auditlah situs Anda, dan pastikan bahwa aset memang [dikompresi](http://www.whatsmyip.org/http-compression-test/).
 

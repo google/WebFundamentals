@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Almacenar en caché y reutilizar recursos obtenidos previamente es un aspecto crítico de la optimización para lograr un buen rendimiento.
 
-{# wf_updated_on: 2016-08-30 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2013-12-31 #}
 
 # Almacenamiento en caché de HTTP {: .page-title }
@@ -14,7 +14,7 @@ El proceso de obtención a través de la red es lento y costoso: las respuestas 
 
 Buenas noticias, en todos los navegadores se incluye una implementación de un caché HTTP. Lo único que debes hacer es asegurarte de que cada respuesta del servidor proporcione las directivas de encabezado HTTP correctas para indicar al navegador cuándo y durante cuánto tiempo puede almacenar la respuesta en caché.
 
-Nota: Si usas una WebView para obtener y mostrar contenido web en tu app, es posible que necesites proporcionar marcadores de configuración adicionales para garantizar que la caché HTTP esté habilitado, que su tamaño se fije en un número razonable para tu caso de uso y que la caché se mantenga. Lee la documentación de la plataforma y confirma tu configuración.
+Note: Si usas una WebView para obtener y mostrar contenido web en tu app, es posible que necesites proporcionar marcadores de configuración adicionales para garantizar que la caché HTTP esté habilitado, que su tamaño se fije en un número razonable para tu caso de uso y que la caché se mantenga. Lee la documentación de la plataforma y confirma tu configuración.
 
 <img src="images/http-request.png"  alt="Solicitud HTTP">
 
@@ -38,7 +38,7 @@ En el ejemplo anterior, el cliente proporciona automáticamente el token ETag en
 
 Como desarrollador web, ¿cómo aprovechas una revalidación eficaz? El navegador hace todo el trabajo por nosotros. El navegador detecta de manera automática si se especificó un token de validación previamente, lo anexará a la solicitud en curso y actualizará las marcas de tiempo de la caché según sea necesario en función de la respuesta recibida desde el servidor. **Lo único que queda por hacer es asegurarse de que el servidor proporcione los tokens ETag necesarios: consulta la documentación de tu servidor para obtener los marcadores de configuración necesarios.**
 
-Nota: Sugerencia: El proyecto HTML5 Boilerplate contiene <a href='https://github.com/h5bp/server-configs'>ejemplos de archivos de configuración</a> para los servidores más populares con comentarios detallados para cada marcador de configuración y cada ajuste: encuentra tu servidor favorito en la lista, busca los ajustes correspondientes, copia tu servidor y confirma que esté configurado con los ajustes recomendados.
+Note: Sugerencia: El proyecto HTML5 Boilerplate contiene <a href='https://github.com/h5bp/server-configs'>ejemplos de archivos de configuración</a> para los servidores más populares con comentarios detallados para cada marcador de configuración y cada ajuste: encuentra tu servidor favorito en la lista, busca los ajustes correspondientes, copia tu servidor y confirma que esté configurado con los ajustes recomendados.
 
 ## Cache-Control
 
@@ -49,7 +49,7 @@ Nota: Sugerencia: El proyecto HTML5 Boilerplate contiene <a href='https://github
 
 Desde el punto de vista de la optimización del rendimiento, la mejor solicitud es aquella que no necesita comunicarse con el servidor: una copia local de la respuesta te permite eliminar toda la latencia de la red y evitar cargos por datos para la transferencia de datos. Para lograr esto, la especificación HTTP permite que el servidor muestre [directivas Cache-Control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) que controlan la manera en que el navegador y otros cachés intermedios pueden almacenar la respuesta individual en la caché y el tiempo durante el cual pueden hacerlo.
 
-Nota: El encabezado Cache-Control se definió como parte de la especificación HTTP/1.1 y reemplaza encabezados anteriores (por ejemplo, Expires) empleados para definir políticas de almacenamiento de respuestas en caché. Todos los navegadores modernos son compatibles con Cache-Control, así que es todo lo que necesitas.
+Note: El encabezado Cache-Control se definió como parte de la especificación HTTP/1.1 y reemplaza encabezados anteriores (por ejemplo, Expires) empleados para definir políticas de almacenamiento de respuestas en caché. Todos los navegadores modernos son compatibles con Cache-Control, así que es todo lo que necesitas.
 
 <img src="images/http-cache-control-highlight.png"  alt="Ejemplo de Cache-Control HTTP">
 

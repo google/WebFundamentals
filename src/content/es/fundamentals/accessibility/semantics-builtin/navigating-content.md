@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: El rol de semantics en la navegación de página
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Semantics y navegación por el contenido {: .page-title }
@@ -83,13 +83,13 @@ accesibles *solo* para lectores de pantalla y otras tecnologías asistenciales.
 
     <h2 class="sr-only">This heading is offscreen.</h2>
 
-Nota: El sitio de WebAIM discute esta técnica en profundidad en [este
+Note: El sitio de WebAIM discute esta técnica en profundidad en [este
 artículo sobre contenido fuera de la pantalla](http://webaim.org/techniques/css/invisiblecontent/).
 
 Para apps complejas, esta puede ser una buena forma de acomodar los encabezados cuando
 el diseño visual no requiere o no tiene espacio para un encabezado visible.
 
-Advertencia: Es importante no sobrepasarse con esta técnica. Recuerda que es posible que
+Warning: Es importante no sobrepasarse con esta técnica. Recuerda que es posible que
 los usuarios de tecnología asistencial también puedan ver la pantalla por sí mismo, así que
 ir demasiado lejos con la creación de contenido "solo para lector de pantalla" puede
 en definitiva degradar la experiencia de usuario para algunos usuarios. También te puede generar un

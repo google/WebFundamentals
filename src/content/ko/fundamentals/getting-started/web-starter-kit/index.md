@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 새 프로젝트는 시작하는 것이 가장 어려울 수 있습니다. Web StarterKit는 개발 프로세스를 진행하는 데 도움이 되는 다양한 도구를 제공합니다.
 
-{# wf_updated_on: 2014-10-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-07-16 #}
 
 # Web Starter Kit를 사용하여 사이트 시작 {: .page-title }
 
-주의: 이 문서는 한동안 업데이트되지 않았으므로 현실을 반영하지 못할 수도 있습니다. 최신 세부정보는 Web Starter Kit [문서](https://github.com/google/web-starter-kit/)를 확인해 보세요.
+Caution: 이 문서는 한동안 업데이트되지 않았으므로 현실을 반영하지 못할 수도 있습니다. 최신 세부정보는 Web Starter Kit [문서](https://github.com/google/web-starter-kit/)를 확인해 보세요.
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 

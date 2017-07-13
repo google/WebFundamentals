@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Fungsi async memungkinkan Anda untuk menulis kode berbasis-promise seakan-akan itu sinkron
 
 {# wf_published_on: 2016-10-20 #}
-{# wf_updated_on: 2016-10-20 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # Fungsi async - membuat promise lebih bersahabat {: .page-title }
 
@@ -30,7 +30,7 @@ Jika Anda menggunakan kata kunci `async` sebelum definisi fungsi, maka Anda bisa
 dengan cara yang tak-memblokir sampai promise selesai. Jika promise itu terpenuhi, Anda
 mendapatkan kembali nilai tersebut. Jika promise ditolak, nilai yang ditolak akan dibuang.
 
-Catatan: Jika Anda belum familier dengan promise, lihat [panduan promise
+Note: Jika Anda belum familier dengan promise, lihat [panduan promise
 kami](/web/fundamentals/getting-started/primers/promises).
 
 ## Contoh: Pembuatan Log pengambilan
@@ -63,7 +63,7 @@ Dan berikut adalah fungsi yang sama dengan menggunakan async:
 Mempunyai jumlah baris yang sama, namun semua callback menghilang. Cara ini membuat membaca
 jauh lebih mudah, terutama bagi mereka yang belum familier dengan promise.
 
-Catatan: Semua yang Anda `await` diteruskan melalui `Promise.resolve()`, sehingga Anda bisa
+Note: Semua yang Anda `await` diteruskan melalui `Promise.resolve()`, sehingga Anda bisa
 dengan aman `await` promise non-asli.
 
 ## Async mengembalikan nilai
@@ -96,7 +96,7 @@ fungsi async apa pun yang dikeluarkan. Jadi dengan:
 Keuntungan fungsi async semakin bertambah pada contoh yang lebih kompleks. Misalnya kita ingin
 streaming respons sembari keluar dari potongan, dan mengembalikan ukuran akhir.
 
-Catatan: Ungkapan "keluar dari potongan" membuat mulut saya sakit.
+Note: Ungkapan "keluar dari potongan" membuat mulut saya sakit.
 
 Berikut tampilan dengan promise:
 
@@ -148,7 +148,7 @@ diganti dengan while-loop yang terpercaya dan membosankan. Jauh lebih baik. Di m
 yang akan
 [menggantikan loop `while` dengan loop for-of](https://gist.github.com/jakearchibald/0b37865637daf884943cf88c2cba1376){: .external}, membuatnya lebih rapi.
 
-Catatan: Saya mencintai streaming. Jika Anda belum familier dengan streaming,
+Note: Saya mencintai streaming. Jika Anda belum familier dengan streaming,
 [lihat panduan saya](https://jakearchibald.com/2016/streams-ftw/#streams-the-fetch-api){: .external}.
 
 ## Sintaks fungsi async lainnya
@@ -164,7 +164,7 @@ dengan sintaks fungsi lainnya:
       return response.json();
     });
 
-Catatan: `array.map(func)` tidak peduli bahwa saya memberikannya fungsi async, fungsi itu hanya
+Note: `array.map(func)` tidak peduli bahwa saya memberikannya fungsi async, fungsi itu hanya
 melihatnya sebagai fungsi yang mengembalikan promise. Fungsi ini tidak akan menunggu fungsi
 pertama untuk diselesaikan sebelum memanggil yang kedua.
 
@@ -195,7 +195,7 @@ pertama untuk diselesaikan sebelum memanggil yang kedua.
     const storage = new Storage();
     storage.getAvatar('jaffathecake').then(…);
 
-Catatan: Konstruktor dan getter/setelan kelas tidak bisa asinkron.
+Note: Konstruktor dan getter/setelan kelas tidak bisa asinkron.
 
 ## Hati-hati! Hindari terlalu sekuensial
 
@@ -298,7 +298,7 @@ Jika Anda menargetkan browser yang mendukung generator (yang mencakup
 - perhatikan bagaimana miripnya kode yang ditranspilasi. Transformasi ini merupakan bagian dari 
 [preset es2017 Babel](http://babeljs.io/docs/plugins/preset-es2017/){: .external}.
 
-Catatan: Babel REPL menyenangkan untuk digunakan. Cobalah.
+Note: Babel REPL menyenangkan untuk digunakan. Cobalah.
 
 Saya menyarankan pendekatan transpiling, karena Anda bisa mematikannya setelah
 browser target mendukung fungsi async, namun jika Anda *benar-benar* tidak ingin menggunakan

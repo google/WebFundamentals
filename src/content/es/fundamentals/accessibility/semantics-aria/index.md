@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Introducción a ARIA y semantics de HTML no nativos
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Introducción a ARIA {: .page-title }
@@ -56,7 +56,7 @@ para especificar que está marcada de manera predeterminada. Este artículo de l
     </li>
     
 
-Nota: Hablaremos de la lista de atributos de ARIA y de cuándo usarlos [después](#what-can-aria-do).
+Note: Hablaremos de la lista de atributos de ARIA y de cuándo usarlos [después](#what-can-aria-do).
 
 ARIA funciona cambiando y mejorando el árbol de accesibilidad del DOM estándar.
 

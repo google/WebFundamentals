@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Dalam codelab ini, Anda akan mempelajari cara menambahkan pemberitahuan push ke aplikasi web.
 
-{# wf_updated_on: 2016-11-21T15:42:20Z #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -149,7 +149,7 @@ Menyalin kunci publik Anda ke `scripts/main.js` menggantikan nilai `<Your Public
 const applicationServerPublicKey = '<Your Public Key>';
 ```
 
-Catatan: Anda sebaiknya tidak menaruh kunci privat di aplikasi web!
+Note: Anda sebaiknya tidak menaruh kunci privat di aplikasi web!
 
 
 ## Menginisialisasi Status
@@ -474,7 +474,7 @@ Setelah mengekliknya Anda akan mendapatkan notifikasi seperti ini:
 
 ![eee7f9133a97c1c4.png](img/eee7f9133a97c1c4.png)
 
-Catatan: Jika langkah ini tidak berhasil, cobalah membatalkan pendaftaran service worker Anda, melalui tautan *Unregister* dalam panel Aplikasi DevTools, tunggu service worker dihentikan, kemudian muat ulang laman.
+Note: Jika langkah ini tidak berhasil, cobalah membatalkan pendaftaran service worker Anda, melalui tautan *Unregister* dalam panel Aplikasi DevTools, tunggu service worker dihentikan, kemudian muat ulang laman.
 
 
 ## Klik notifikasi

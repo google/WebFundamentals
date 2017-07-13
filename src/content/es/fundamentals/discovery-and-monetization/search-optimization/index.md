@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Los sitios web no solo reciben visitas de humanos, sino también de rastreadores web de motores de búsqueda. Obtén información sobre cómo mejorar la precisión de las búsquedas y la clasificación de tu sitio web.
 
-{# wf_updated_on: 2015-10-05 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-08-30 #}
 
 # Optimización de las búsquedas {: .page-title }
@@ -167,7 +167,7 @@ Antes de aprender a controlas los resultados de búsqueda, debes comprender cóm
 
 **Indexar** es el proceso por el cual un motor de búsqueda almacena la URL de un sitio web y cualquier información asociada en su base de datos, para que esté lista para enviarse como resultado de búsqueda. 
 
-Nota: Muchas personas confunden rastrear con indexar. Prohibir el rastreo no significa que la página no se mostrará en los resultados de búsqueda. Por ejemplo, si un sitio web externo contiene un enlace a una de tus páginas web, esta todavía puede indexarse, aunque el rastreo esté bloqueado. En este caso, al resultado de la búsqueda le falta una descripción detallada.
+Note: Muchas personas confunden rastrear con indexar. Prohibir el rastreo no significa que la página no se mostrará en los resultados de búsqueda. Por ejemplo, si un sitio web externo contiene un enlace a una de tus páginas web, esta todavía puede indexarse, aunque el rastreo esté bloqueado. En este caso, al resultado de la búsqueda le falta una descripción detallada.
 
 ### Controla el rastreo con robots.txt
 
@@ -212,7 +212,7 @@ Obtén más información sobre los bots de cada motor de búsqueda en sus págin
 * [Yandex](https://help.yandex.com/webmaster/controlling-robot/robots-txt.xml)
 
 
-Nota: solo se requiere `robots.txt` **si** quieres controlar el modo en que se rastrea tu sitio. No devolver el código de respuesta de retorno 500 para la url: `/robots.txt` Lo anterior termina todos los rastreos subsiguientes del host entero, lo que provoca que los detalles de los resultados de búsqueda estén vacíos.
+Note: solo se requiere `robots.txt` **si** quieres controlar el modo en que se rastrea tu sitio. No devolver el código de respuesta de retorno 500 para la url: `/robots.txt` Lo anterior termina todos los rastreos subsiguientes del host entero, lo que provoca que los detalles de los resultados de búsqueda estén vacíos.
 
 #### Comprobar robots.txt
 
@@ -278,7 +278,7 @@ Para obtener más información sobre X-Robots-Tag:
 * [Google](/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/how-can-i-remove-a-url-or-page-from-the-bing-index-37c07477)
 
-Nota: Si inhabilitas los rastreadores a través de `robots.txt`, los bots de búsqueda igualmente pueden indexar esas páginas sin saber que no quieres que se indexen. Esto puede ocurrir porque:<ul><li>los bots de búsqueda pueden encontrar tus páginas web siguiendo enlaces de otros sitios web.</li><li>Los motores de búsqueda que no pueden rastrear no pueden detectar <code>noindex</code>.</li></ul>
+Note: Si inhabilitas los rastreadores a través de `robots.txt`, los bots de búsqueda igualmente pueden indexar esas páginas sin saber que no quieres que se indexen. Esto puede ocurrir porque:<ul><li>los bots de búsqueda pueden encontrar tus páginas web siguiendo enlaces de otros sitios web.</li><li>Los motores de búsqueda que no pueden rastrear no pueden detectar <code>noindex</code>.</li></ul>
 
 No esperes que `robots.txt` controle las indexaciones de búsqueda.
 
@@ -306,7 +306,7 @@ En este caso, no quieres que los motores de búsqueda indexen esas páginas.
 * Usa `noindex` metaetiquetas para páginas HTML.
 * Usa `X-Robots-Tag: noindex` para recursos no HTML (imágenes, pdf, etc).
 
-Nota: ¿Te preguntas si debes prohibir el rastreo de archivos JavaScript y de Hojas de estilo? <a href='http://googlewebmastercentral.blogspot.com/2014/05/understanding-web-pages-better.html' target='_blank'>Google hace su mejor esfuerzo por entenderlas</a> de manera de poder encontrar contenidos disponibles a través de tecnologías modernas como AJAX. Definitivamente debes permitir que los rastreadores rastren JavaScript.
+Note: ¿Te preguntas si debes prohibir el rastreo de archivos JavaScript y de Hojas de estilo? <a href='http://googlewebmastercentral.blogspot.com/2014/05/understanding-web-pages-better.html' target='_blank'>Google hace su mejor esfuerzo por entenderlas</a> de manera de poder encontrar contenidos disponibles a través de tecnologías modernas como AJAX. Definitivamente debes permitir que los rastreadores rastren JavaScript.
 
 #### Acceso restringido de personas autorizadas
 

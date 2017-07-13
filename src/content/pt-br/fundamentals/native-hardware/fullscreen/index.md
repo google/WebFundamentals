@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Trabalhando com tela cheia.
 
-{# wf_updated_on: 2016-10-01 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-01 #}
 
 # Como criar experiências em tela cheia {: .page-title }
@@ -332,7 +332,7 @@ Você pode "simular uma tela cheia" escondendo a barra de endereço automaticame
 
     window.scrollTo(0,1);
 
-Atenção: digo isso como amigo. Isso existe. É bem maneiro, mas é
+Warning: digo isso como amigo. Isso existe. É bem maneiro, mas é
         enganar. Não use. &mdash; Paul
 
 Esse é um método bem simples: a página carrega e a barra do navegador é instruída a

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript suele activar cambios visuales. Algunas veces, lo hace directamente mediante manipulaciones de estilo y, otras veces, mediante cálculos que generarán cambios visuales, como la búsqueda o clasificación de algunos datos. El JavaScript sincronizado incorrectamente o de larga ejecución puede ser una causa común de los problemas de rendimiento, y debes intentar minimizar su impacto siempre que sea posible.
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-20 #}
 
 # Reduce el alcance y la complejidad de los cálculos de estilo {: .page-title }
@@ -59,11 +59,11 @@ Otra consideración de rendimiento, que normalmente representa _el factor más i
 
 En términos generales, la peor situación en términos de exigencia al calcular el estilo computado de los elementos es la cantidad de elementos multiplicados por el conteo del selector, ya que cada elemento se debe revisar al menos una vez con cada estilo para ver si hay coincidencia.
 
-Nota: Anteriormente, si se modificaba una clase en, por ejemplo, el elemento del cuerpo, se debían recalcular los estilos computarizados de todos los elementos secundarios de la página. Afortunadamente, esto ya no sucede porque, en su lugar, algunos navegadores incorporan un pequeño conjunto de reglas exclusivas para cada elemento. Si estas se modifican, se calculan nuevamente los estilos del elemento. Eso significa que puede o no ser necesario recalcular un elemento según el lugar que ocupa en el árbol y de lo que se cambió específicamente.
+Note: Anteriormente, si se modificaba una clase en, por ejemplo, el elemento del cuerpo, se debían recalcular los estilos computarizados de todos los elementos secundarios de la página. Afortunadamente, esto ya no sucede porque, en su lugar, algunos navegadores incorporan un pequeño conjunto de reglas exclusivas para cada elemento. Si estas se modifican, se calculan nuevamente los estilos del elemento. Eso significa que puede o no ser necesario recalcular un elemento según el lugar que ocupa en el árbol y de lo que se cambió específicamente.
 
 A menudo, los cálculos de estilo se pueden dirigir directamente a unos pocos elementos en lugar de invalidar la página completa. En los navegadores modernos, esto ya no es un problema importante porque no necesariamente deben verificar todos los elementos que podrían resultar afectados por un cambio. Por otro lado, los navegadores anteriores no siempre están tan optimizados para estas tareas. Cuando puedas, debes **reducir la cantidad de elementos invalidados**.
 
-Nota: Si se encuentra en Web Components, es importante notar que los cálculos de estilo aquí son diferentes, ya que, de manera predeterminada, los estilos no atraviesan el límite del Shadow DOM, y su ámbito se define en relación con los componentes individuales en lugar de hacerlo con respecto al árbol en general. Sin embargo, en general, se sigue aplicando el mismo concepto: los árboles más pequeños con reglas más simples se procesan más eficientemente que los árboles grandes o las reglas complejas.
+Note: Si se encuentra en Web Components, es importante notar que los cálculos de estilo aquí son diferentes, ya que, de manera predeterminada, los estilos no atraviesan el límite del Shadow DOM, y su ámbito se define en relación con los componentes individuales en lugar de hacerlo con respecto al árbol en general. Sin embargo, en general, se sigue aplicando el mismo concepto: los árboles más pequeños con reglas más simples se procesan más eficientemente que los árboles grandes o las reglas complejas.
 
 ## Medición del costo de recalcular el estilo
 
