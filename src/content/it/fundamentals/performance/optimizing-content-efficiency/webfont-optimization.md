@@ -44,7 +44,7 @@ vettoriali di ogni glifo e il numero di glifi di un determinato font.
 Ad esempio, OpenSans, uno dei font web più popolari, contiene 897 
 glifi, che includono caratteri latini, greci e cirillici.
 
-<img src="images/glyphs.png" alt="Tabella dei glifi font">
+![Tabella dei glifi font](images/glyphs.png)
 
 Nella scelta di un font, è importante considerare i set di caratteri 
 supportati. Per localizzare i contenuti di una pagina in più lingue, 
@@ -321,7 +321,7 @@ Ogni famiglia di font è composta da diverse varianti stilistiche
 ciascuno dei quali può contenere glifi di forme molto diverse, ad 
 esempio con spaziature, dimensioni o forme diverse. 
 
-<img src="images/font-weights.png" alt="Spessore del font">
+![Spessore del font](images/font-weights.png)
 
 Ad esempio, il diagramma precedente illustra una famiglia di font che 
 offre tre diversi spessori per il grassetto: 400 (normale), 700 
@@ -386,7 +386,7 @@ sostituisce con quello più simile.
 precedente, non dichiariamo alcuna variante corsiva), il browser 
 sintetizzerà la propria variante. 
 
-<img src="images/font-synthesis.png" alt="Font synthesis">
+![Font synthesis](images/font-synthesis.png)
 
 > Gli autori devono sempre tenere a mente che tale approccio può non 
 essere idoneo per alcuni caratteri, ad es. il cirillico, in cui il 
@@ -406,10 +406,9 @@ Note: Per una maggiore coerenza nei risultati visivi, non affidarti
 alla font-synthesis. Minimizza invece il numero di varianti del font 
 utilizzate e specificane il percorso, in modo che il browser possa 
 scaricarle quando sono utilizzate nella pagina. Detto ciò, in alcuni 
-casi una variante synthesized 
-<a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>
-può rappresentare un'opzione valida</a>
- se utilizzala con cautela.
+casi una variante synthesized [può rappresentare un'opzione
+valida](https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/)
+se utilizzala con cautela.
 
 
 ## Ottimizzazione di caricamento e rendering
@@ -449,7 +448,7 @@ richieste di font sono ritardate dopo altre risorse critiche, e il
 browser può bloccare il rendering del testo fino al recupero della 
 risorsa.
 
-<img src="images/font-crp.png" alt="Percorso di rendering critico dei font">
+![Percorso di rendering critico dei font](images/font-crp.png)
 
 1. Il browser richiede il documento HTML
 1. Il browser inizia a scansionare la risposta HTML e a costruire il DOM
