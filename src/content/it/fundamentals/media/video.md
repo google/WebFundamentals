@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Informazioni su come aggiungere in modo semplice video al tuo sito e assicurare la migliore esperienza agli utenti, su qualsiasi dispositivo.
 
-{# wf_updated_on: 2017-05-05 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2014-04-15 #}
 
 # Video {: .page-title }
@@ -28,15 +28,18 @@ utenti su qualsiasi dispositivo.
 ## Aggiungere un video 
 
 ### TL;DR {: .hide-from-toc }
-- Utilizza elementi `video` per caricare, decodificare e riprodurre i video del tuo sito.
+- Utilizza elementi `video` per caricare, decodificare e riprodurre i video del
+  tuo sito.
 - Crea video in diversi formati per una vasta gamma di piattaforme mobili.
 - Dimensiona i video al meglio evitando l'overflow dei relativi contenitori.
-- L'accessibilità è importante: aggiungi elementi `track` figli dell'elemento `video`.
+- L'accessibilità è importante: aggiungi elementi `track` figli dell'elemento
+  `video`.
 
 
 ### Aggiunta di elementi video
 
-Aggiungi l'elemento `video` per caricare, decodificare e riprodurre i video sul tuo sito.
+Aggiungi l'elemento `video` per caricare, decodificare e riprodurre i video sul
+tuo sito.
 
 <video controls>
      <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
@@ -96,14 +99,20 @@ larghezza di banda e latenza sono un bene premium mentre la pazienza
 degli utenti è limitata. Il mancato inserimento di un attributo di tipo 
 riduce il rendimento in presenza di origini multiple con tipi non supportati.
 
-Usando gli strumenti di sviluppo del browser del dispositivo mobile, confronta l'attività di rete <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">con gli attributi di tipo </a> e <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html">senza attributi di tipo</a>.
-Controlla anche le intestazioni della risposta usando gli strumenti di sviluppo del tuo browser per [verificare che il server restituisca il corretto tipo MIME] (//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types). In caso contrario, i controlli del tipo dell'origine video non funzioneranno.
+Usando gli strumenti di sviluppo del browser del dispositivo mobile, confronta
+l'attività di rete [con gli attributi di
+tipo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html)
+ e [senza attributi di
+tipo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html).
+Controlla anche le intestazioni della risposta usando gli strumenti di sviluppo
+del tuo browser per [verificare che il server restituisca il corretto tipo
+MIME](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types).
+In caso contrario, i controlli del tipo dell'origine video non funzioneranno.
 
 ### Specifica tempi di inizio e fine
 
-Risparmia larghezza di banda ed ottimizza la reattività del sito usando 
-API Media Fragments aggiungendo i tempi di inizio e fine all'elemento 
-video.
+Risparmia larghezza di banda ed ottimizza la reattività del sito usando API
+Media Fragments aggiungendo i tempi di inizio e fine all'elemento video.
 
 <video controls>
   <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
@@ -112,36 +121,35 @@ video.
 </video>
 
 Per aggiungere un 'media fragment', è sufficiente inserire 
-`#t=[start_time][,end_time]` all'URL del contenuto multimediale. Ad 
-esempio, per riprodurre un video dal secondo 5 fino al 10 specificare:
+`#t=[start_time][,end_time]` all'URL del contenuto multimediale. Ad esempio, per
+riprodurre un video dal secondo 5 fino al 10 specificare:
 
 
     <source src="video/chrome.webm#t=5,10" type="video/webm">
     
 
-Inoltre, è possibile utilizzare API Media Fragments per creare diverse 
-visualizzazioni dello stesso video&ndash;come i cue point di un 
-DVD&ndash;senza codificare e distribuire diversi file.
+Inoltre, è possibile utilizzare API Media Fragments per creare diverse
+visualizzazioni dello stesso video&ndash;come i cue point di un DVD&ndash;senza
+codificare e distribuire diversi file.
 
 
-Caution: Molte piattaforme tranne iOS supportano API Media Fragments.
-Assicurati che il tuo server supporti le Range Requests. Per 
-impostazione predefinita la maggiore parte parte dei server
-Le range request vengono attivate per impostazione predefinita su gran 
-parte dei server, ma molti servizi di hosting potrebbero averli 
-disattivati.
+Caution: Molte piattaforme tranne iOS supportano API Media Fragments. Assicurati
+che il tuo server supporti le Range Requests. Per impostazione predefinita la
+maggiore parte parte dei server le range request vengono attivate per
+impostazione predefinita su gran parte dei server, ma molti servizi di hosting
+potrebbero averli disattivati.
 
-Usando gli strumenti di sviluppo del tuo browser, controlla la presenza 
-di `Accept-Ranges: bytes` nelle intestazioni della risposta:
+Usando gli strumenti di sviluppo del tuo browser, controlla la presenza di
+`Accept-Ranges: bytes` nelle intestazioni della risposta:
 
-<img class="center" alt="Schermata degli strumenti di sviluppo di Chrome: Accept-Ranges: bytes"
-src="images/Accept-Ranges-Chrome-Dev-Tools.png">
+![Schermata degli strumenti di sviluppo di Chrome: Accept-Ranges:
+bytes](images/Accept-Ranges-Chrome-Dev-Tools.png)
 
 ### Inserimento di un'immagine poster
 
-Aggiungi un attributo poster all'elemento `video` così i tuoi utenti 
-avreanno un'indicazione dei contenuti non appena si caricherà l'elemento, 
-senza scaricare il video o avviarne la riproduzione.
+Aggiungi un attributo poster all'elemento `video` così i tuoi utenti avreanno
+un'indicazione dei contenuti non appena si caricherà l'elemento, senza scaricare
+il video o avviarne la riproduzione.
 
 
     <video poster="poster.jpg" ...>
@@ -154,7 +162,8 @@ danneggiato oppure nessuno dei formati video forniti via supportato.
 L'unico svantaggio legato all'utilizzo delle immagini poster è che si 
 tratta di un'ulteriore richiesta di file, che consuma larghezza di banda 
 e richiede un rendering.
-Per ulteriori informazioni consulta [Ottimizzazione delle immagini](/web/fundamentals/performance/optimizing-content-efficiency/image-optimization).
+Per ulteriori informazioni consulta [Ottimizzazione delle
+immagini](/web/fundamentals/performance/optimizing-content-efficiency/image-optimization).
 
 Segue un confronto fianco a fianco dei video con e senza immagine 
 poster&ndash;abbiamo realizzato l'immagine poster in  bianco e nero per 
@@ -236,7 +245,8 @@ argomenti e valori restituiti tramite l'utilizzo di Chrome:
       <td data-th="Response">(stringa vuota)</td>
     </tr>
     <tr>
-      <td data-th="Type"><code>video/xyz; codecs="avc1.42E01E, mp4a.40.2"</code></td>
+      <td data-th="Type"><code>video/xyz; codecs="avc1.42E01E, mp4a.40.2"
+      </code></td>
       <td data-th="Response">(stringa vuota)</td>
     </tr>
     <tr>
@@ -244,7 +254,8 @@ argomenti e valori restituiti tramite l'utilizzo di Chrome:
       <td data-th="Response">(stringa vuota)</td>
     </tr>
     <tr>
-      <td data-th="Type"><code>video/mp4; codecs="avc1.42E01E, mp4a.40.2"</code></td>
+      <td data-th="Type"><code>video/mp4; codecs="avc1.42E01E, mp4a.40.2"
+      </code></td>
       <td data-th="Response"><code>probably</code></td>
     </tr>
     <tr>
@@ -261,8 +272,8 @@ argomenti e valori restituiti tramite l'utilizzo di Chrome:
 
 ### Crea video in più formati
 
-Esistono diversi strumenti che consentono di salvare lo stesso video in 
-formati diversi:
+Esistono diversi strumenti che consentono di salvare lo stesso video in formati
+diversi:
 
 * Strumenti desktop: [FFmpeg](//ffmpeg.org/)
 * Applicazioni GUI: [Miro](//www.mirovideoconverter.com/), 
@@ -344,17 +355,19 @@ librerie ed i plugin di JavaScript, come [FitVids](//fitvidsjs.com/),
 consentono di rispettare le dimensioni e le proporzioni corrette, anche 
 nel caso dei video Flash di YouTube e di altre fonti.
 
-Utilizza [CSS media queries](/web/fundamentals/design-and-ui/responsive/#css-media-queries) 
-per specificare la dimensione degli elementi in base alle dimensioni del 
-viewport; `max-width: 100%` è ideale.
+Utilizza [CSS media
+queries](/web/fundamentals/design-and-ui/responsive/#css-media-queries) per
+specificare la dimensione degli elementi in base alle dimensioni del viewport;
+`max-width: 100%` è ideale.
 
-Per contenuti multimediali in iframes (come i video di YouTube), opta 
-per un approccio responsive (come quello [proposto da John Surdakowski](http://avexdesigns.com/responsive-youtube-embed/)).
+Per contenuti multimediali in iframes (come i video di YouTube), opta per un
+approccio responsive (come quello [proposto da John
+Surdakowski](http://avexdesigns.com/responsive-youtube-embed/)).
 
 
-Caution: Non forzare il ridimensionamento dell'elemento, poiché 
-potresti alterarne le proporzioni rispetto al video originale. Un video 
-appiattito o allungato è sgradevole.
+Caution: Non forzare il ridimensionamento dell'elemento, poiché potresti
+alterarne le proporzioni rispetto al video originale. Un video appiattito o
+allungato è sgradevole.
 
 **CSS:**
 
@@ -396,16 +409,18 @@ e orizzontale:
 
 <div class="attempt-left">
   <figure>
-    <img  alt="Schermata di un video riprodotto da Safari per iPhone, in verticale"
-    src="images/iPhone-video-playing-portrait.png">
-    <figcaption>Schermata di un video riprodotto da Safari per iPhone, in verticale</figcaption>
+    <img  alt="Schermata di un video riprodotto da Safari per iPhone, in
+    verticale" src="images/iPhone-video-playing-portrait.png">
+    <figcaption>Schermata di un video riprodotto da Safari per iPhone, in
+    verticale</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img alt="Schermata di un video riprodotto da Safari per iPhone, in orizzontale"
-    src="images/iPhone-video-playing-landscape.png">
-    <figcaption>Schermata di un video riprodotto da Safari per iPhone, in orizzontale</figcaption>
+    <img alt="Schermata di un video riprodotto da Safari per iPhone, in
+    orizzontale" src="images/iPhone-video-playing-landscape.png">
+    <figcaption>Schermata di un video riprodotto da Safari per iPhone, in
+    orizzontale</figcaption>
   </figure>
 </div>
 
@@ -416,8 +431,8 @@ diventare un problema.
 Ad esempio, senza alcuna personalizzazione la riproduzione di un video 
 su un iPad con orientamento orizzontale  produce quanto segue:
 
-<img alt="Schermata di un video riprodotto con Safari per iPad Retina, in orizzontale"
-src="images/iPad-Retina-landscape-video-playing.png">
+<img alt="Schermata di un video riprodotto con Safari per iPad Retina, in
+orizzontale" src="images/iPad-Retina-landscape-video-playing.png">
 
 Impostando `width: 100%` o `max-witdh: 100%` sul video usando i CSS è 
 possibile risolvere diversi problemi della disposizione dell'orientamento 
@@ -426,20 +441,26 @@ a schermo intero.
 
 ### Visualizzazione inline o a schermo intero
 
-<img class="attempt-right" alt="Schermata di un elemento video su iPhone, in verticale"
-src="images/iPhone-video-with-poster.png">
+<img class="attempt-right" alt="Schermata di un elemento video su iPhone, in
+verticale" src="images/iPhone-video-with-poster.png">
 
-Le diverse piattaforme visualizzano i video in modo diverso. Safari per iPhone visualizza un elemento video inline in una pagina web, ma il video viene riprodotto in modalità a schermo intero:
-
-<div style="clear:both;"></div>
-
-<img class="attempt-right" alt="Schermata di un video riprodotto in Chrome su Android, in verticale" src="images/Chrome-Android-video-playing-portrait-3x5.png">
-
-Su Android, è possibile attivare la modalità a schermo intero facendo clic sulla relativa icona. Tuttavia, l'impostazione predefinita prevede la riproduzione inline del video:
+Le diverse piattaforme visualizzano i video in modo diverso. Safari per iPhone
+visualizza un elemento video inline in una pagina web, ma il video viene
+riprodotto in modalità a schermo intero:
 
 <div style="clear:both;"></div>
 
-<img class="attempt-right" alt="Schermata di un video riprodotto in Safari su iPad Retina, in verticale" src="images/iPad-Retina-landscape-video-playing.png">
+<img class="attempt-right" alt="Schermata di un video riprodotto in Chrome su
+Android, in verticale" src="images/Chrome-Android-video-playing-portrait-3x5.png">
+
+Su Android, è possibile attivare la modalità a schermo intero facendo clic sulla
+relativa icona. Tuttavia, l'impostazione predefinita prevede la riproduzione
+inline del video:
+
+<div style="clear:both;"></div>
+
+<img class="attempt-right" alt="Schermata di un video riprodotto in Safari su
+iPad Retina, in verticale" src="images/iPad-Retina-landscape-video-playing.png">
 
 Safari per iPad prevede la riproduzione inline del video:
 
@@ -484,7 +505,8 @@ modificare la modalità di visualizzazione a schermo intero degli elementi.
 
 Per visionare l'esecuzione dell'operazione, consulta <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html">demo</a>.
 
-Per visionarlo in azione, consulta la [demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html).
+Per visionarlo in azione, consulta la
+[demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html).
 
 Dogfood: `requestFullScreen()` può richiedere un prefisso a seconda del 
 fornitore e può richiedere del codice extra per garantire una piena 
@@ -672,10 +694,12 @@ dettagli, si veda la [pagina di prova di Steve Souders](//stevesouders.com/tests
 
 ### JavaScript
 
-[L'articolo su HTML5 Rocks Video](//www.html5rocks.com/en/tutorials/video/basics/#toc-javascript) è un ottimo riepilogo sulle proprietà, sui metodi e sugli eventi di JavaScript 
-che è possibile utilizzare per controllare la riproduzione di video. Gli 
-stessi contenuti sono riportati di seguito e aggiornati nei casi in cui 
-si riferiscano ai dispositivi mobili.
+[L'articolo su HTML5 Rocks
+Video](//www.html5rocks.com/en/tutorials/video/basics/#toc-javascript) è un
+ottimo riepilogo sulle proprietà, sui metodi e sugli eventi di JavaScript che è
+possibile utilizzare per controllare la riproduzione di video. Gli stessi
+contenuti sono riportati di seguito e aggiornati nei casi in cui si riferiscano
+ai dispositivi mobili.
 
 #### Proprietà
 
@@ -762,14 +786,19 @@ I dispositivi mobili non supportano `playbackRate` né `volume` ([vedi  demo](ht
   </tbody>
 </table>
 
-Sui dispositivi mobili (eccetto Opera su Android), i metodi play() e pause() non funzionano a meno che
-siano attivati dall'utente, ad esempio facendo clic su un pulsante; vedi <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html">demo</a>. (allo stesso modo, non è possibile avviare la riproduzione di contenuti come i video incorporati di YouTube).
+Sui dispositivi mobili (eccetto Opera su Android), i metodi `play()` e 
+`pause()` non funzionano a meno che non siano attivati dall'utente, ad 
+esempio facendo clic su un pulsante; si vde la
+[demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html).
+(Allo stesso modo, non è possibile avviare la riproduzione di contenuti 
+come i video incorporati di YouTube).
 
 #### Eventi
 
 Esiste un unico sottoinsieme di eventi multimediali che può essere 
-attivato. Per un elenco completo, fai riferimento alla pagina [Media events](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) di 
-Mozilla Developer Network.
+attivato. Per un elenco completo, fai riferimento alla pagina [Media
+events](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) di Mozilla
+Developer Network.
 
 <table class="responsive">
   <thead>

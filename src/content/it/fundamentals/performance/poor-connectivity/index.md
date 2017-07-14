@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: È importante capire come si comporta l'applicazione o il sito come quando la connettività è scarsa o inaffidabile, e costruirlo di conseguenza. Una gamma di strumenti può aiutarti.
 
-{# wf_updated_on: 2017-07-06 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2016-05-09 #}
 
 # Comprendere la Bassa Larghezza di Banda e la Latenza Elevata {: .page-title }

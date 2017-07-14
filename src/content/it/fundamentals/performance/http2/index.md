@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2 (o h2) è un protocollo binario che porta gli stream push, multiplex con controllo dei frame sul web.
 
-{# wf_updated_on: 2017-06-09 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2016-09-29 #}
 
 # Introduzione a HTTP/2 {: .page-title }
@@ -555,7 +555,7 @@ vantaggi in termini di prestazioni. Le risorse push possono essere:
 * Priorizzate dal server
 * Rifiutate dal cliente
 
-### Introduzione alle `PUSH_PROMISE`
+### Introduzione alle PUSH_PROMISE
 
 Tutti gli stream server push vengono avviati tramite i frame 
 `PUSH_PROMISE` che indicano l'intenzione del server eseguire push delle 

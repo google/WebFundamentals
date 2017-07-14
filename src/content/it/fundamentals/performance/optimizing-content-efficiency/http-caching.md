@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Memorizzare in cache e riutilizzare risorse precedentemente scaricate costituisce un aspetto fondamentale nell'ottimizzazione delle prestazioni.
 
-{# wf_updated_on: 2017-06-07 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2013-12-31 #}
 
 # Caching HTTP {: .page-title }
