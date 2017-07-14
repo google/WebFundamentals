@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ein großer Teil des Webs ist nicht für Erfahrungen auf verschiedenen Geräten optimiert. Erlernen Sie die Grundlagen, mit denen Ihre Website auf Mobilgeräten, Desktopcomputern und jeglichen anderen Geräten mit einem Bildschirm funktioniert.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Responsives Webdesign: Grundlagen {: .page-title }
@@ -35,8 +35,8 @@ Für verschiedene Geräte optimierte Seiten müssen ein Darstellungsbereich-Meta
 
 ### TL;DR {: .hide-from-toc }
 - Verwenden Sie das Darstellungsbereich-Meta-Tag zur Steuerung der Breite und Skalierung des Darstellungsbereichs im Browser.
-- Verwenden Sie <code>width=device-width</code> zur Abstimmung auf die Breite des Bildschirms in geräteunabhängigen Pixeln.
-- Verwenden Sie <code>initial-scale=1</code>, um eine 1:1-Beziehung zwischen CSS-Pixeln und geräteunabhängigen Pixeln zu gewährleisten.
+- Verwenden Sie `width=device-width` zur Abstimmung auf die Breite des Bildschirms in geräteunabhängigen Pixeln.
+- Verwenden Sie `initial-scale=1`, um eine 1:1-Beziehung zwischen CSS-Pixeln und geräteunabhängigen Pixeln zu gewährleisten.
 - Stellen Sie sicher, dass Ihre Seite zugänglich ist, indem Sie die Nutzerskalierung beibehalten.
 
 
@@ -113,7 +113,7 @@ Medienabfragen sind einfache Filter, die auf CSS-Stile angewendet werden können
 
 ### TL;DR {: .hide-from-toc }
 - Medienabfragen können dazu verwendet werden, Stile auf Grundlage von Gerätecharakteristiken anzuwenden.
-- Verwenden Sie <code>min-width</code> statt <code>min-device-width</code>, um möglichst viele Breiten abzudecken.
+- Verwenden Sie `min-width` statt `min-device-width`, um möglichst viele Breiten abzudecken.
 - Verwenden Sie relative Größen für Elemente, damit das Layout harmonisch bleibt.
 
 
