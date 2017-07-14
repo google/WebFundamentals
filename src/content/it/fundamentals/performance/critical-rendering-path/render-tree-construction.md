@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Le strutture CSSOM e DOM vengono unite in una struttura di rendering, che viene poi utilizzata per calcolare il layout di ciascun elemento visibile e che serve da input al processo di disegno che esegue il rendering dei pixel sullo schermo. Ottimizzare ciascuno di questi passaggi è cruciale per ottenere una performance di rendering ottimale.
 
-{# wf_updated_on: 2014-09-17 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Costruzione della struttura di rendering, layout e disegno {: .page-title }
@@ -34,7 +34,7 @@ Per costruire la struttura di rendering, il browser più o meno esegue quanto se
 1. Per ciascun nodo visibile, trova le regole CSSOM corrispondenti e le applica.
 2. Produce nodi visibili con contenuto e i relativi computed style.
 
-Note: Come breve commento, nota che <code>visibility: hidden</code> è diverso da <code>display: none</code>. Il primo rende l'elemento invisibile, ma l'elemento occupa comunque spazio nel layout (ad es. ne viene eseguito il rendering come scatola vuota), mentre l'ultimo <code>display: none</code> rimuove completamente l'elemento dalla struttura di rendering così che questo sia invisibile e non parte del layout.
+Note: Come breve commento, nota che `visibility: hidden` è diverso da `display: none`. Il primo rende l'elemento invisibile, ma l'elemento occupa comunque spazio nel layout (ad es. ne viene eseguito il rendering come scatola vuota), mentre l'ultimo `display: none` rimuove completamente l'elemento dalla struttura di rendering così che questo sia invisibile e non parte del layout.
 
 L'output finale è un rendering che contiene sia il contenuto che le informazioni di stile di tutto il contenuto visibile sullo schermo. Siamo vicini.  **Una volta posizionata la struttura di rendering, possiamo procedere alla fase `layout`.**
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Un'immagine vale più di mille parole e ricopre un ruolo chiave per tutte le pagine. Tuttavia, le immagini richiedono il download di numerosi dati. Il Web design reattivo consente di modificare disposizione e immagini in base alle caratteristiche del dispositivo.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Immagini {: .page-title }
@@ -40,14 +40,14 @@ In altre circostanze potrebbe essere necessario modificare drasticamente l'immag
 
 
 
-Il potente elemento<code>img</code> consente di scaricare, decodificare e renderizzare i contenuti, mentre i browser odierni supportano numerosi formati di immagine. La procedura di inserimento delle immagini compatibili con diversi dispositivi è simile a quella usata con i computer desktop e richiede minime regolazioni per offrire un'esperienza ottimale.
+Il potente elemento `img` consente di scaricare, decodificare e renderizzare i contenuti, mentre i browser odierni supportano numerosi formati di immagine. La procedura di inserimento delle immagini compatibili con diversi dispositivi è simile a quella usata con i computer desktop e richiede minime regolazioni per offrire un'esperienza ottimale.
 
 
 
 ### TL;DR {: .hide-from-toc }
 - Utilizza le dimensioni relative delle immagini per evitare l'overflow involontario del contenitore.
-- Utilizza l'elemento <code>picture</code> per specificare immagini diverse in base alle caratteristiche del dispositivo (operazione detta 'direzione artistica').
-- Utilizza <code>srcset</code> e il descrittore <code>x</code> nell'elemento <code>img</code> per indicare al browser l'immagine da utilizzare in presenza di diverse densità.
+- Utilizza l'elemento `picture` per specificare immagini diverse in base alle caratteristiche del dispositivo (operazione detta 'direzione artistica').
+- Utilizza `srcset` e il descrittore `x` nell'elemento `img` per indicare al browser l'immagine da utilizzare in presenza di diverse densità.
 
 
 
@@ -73,7 +73,7 @@ Inserisci descrizioni dettagliate con l'attributo `alt` degli elementi `img` per
   </iframe>
 </div>
 
-L'attributo <code>srcset</code> ottimizza l'azione dell'elemento <code>img</code> semplificando la fornitura di diversi file di immagine in base alle caratteristiche dei dispositivi. In maniera analoga alla funzione nativa CSS <code>image-set</code> <a href='#use_image-set_to_provide_high_res_images'> </a>, <code>srcset</code> indica al browser l'immagine ottimale in base alle caratteristiche del dispositivo, ad esempio un'immagine 2x su un display 2x e un'immagine 1x su dispositivi 2x con limiti di larghezza di banda.
+L'attributo `srcset` ottimizza l'azione dell'elemento `img` semplificando la fornitura di diversi file di immagine in base alle caratteristiche dei dispositivi. In maniera analoga alla funzione nativa CSS `image-set` <a href='#use_image-set_to_provide_high_res_images'> </a>, `srcset` indica al browser l'immagine ottimale in base alle caratteristiche del dispositivo, ad esempio un'immagine 2x su un display 2x e un'immagine 1x su dispositivi 2x con limiti di larghezza di banda.
 
 <div class="clearfix"></div>
 
@@ -88,12 +88,12 @@ Anche se le condizioni possono includere diverse caratteristiche, dalla densità
 
 ### Direzione artistica nelle immagini reattive con `picture`
 
-La modifica delle immagini in base alle caratteristiche del dispositivo, detta anche direzione artistica, avviene mediante l'elemento `picture`. L'elemento <code>picture</code> definisce una soluzione dichiarativa per la fornitura di diverse versioni di un'immagine in base a caratteristiche come dimensioni e risoluzione del dispositivo, orientamento e via dicendo.
+La modifica delle immagini in base alle caratteristiche del dispositivo, detta anche direzione artistica, avviene mediante l'elemento `picture`. L'elemento `picture` definisce una soluzione dichiarativa per la fornitura di diverse versioni di un'immagine in base a caratteristiche come dimensioni e risoluzione del dispositivo, orientamento e via dicendo.
 
 <img class="center" src="img/art-direction.png" alt="Esempio di direzione artistica"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-Note: L'elemento <code>picture</code> inizia a essere supportato dai browser. Anche se non è disponibile in tutti i browser, è consigliabile utilizzarlo grazie alla retroattività e alla possibilità di utilizzare una <a href='http://picturefill.responsiveimages.org/'>polilinea Picturefill</a>. Consulta il sito <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a> per maggiori informazioni.
+Note: L'elemento `picture` inizia a essere supportato dai browser. Anche se non è disponibile in tutti i browser, è consigliabile utilizzarlo grazie alla retroattività e alla possibilità di utilizzare una <a href='http://picturefill.responsiveimages.org/'>polilinea Picturefill</a>. Consulta il sito <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a> per maggiori informazioni.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -101,7 +101,7 @@ Note: L'elemento <code>picture</code> inizia a essere supportato dai browser. An
   </iframe>
 </div>
 
-Utilizzare l'elemento <code>picture</code> quando esiste un'origine dell'immagine a densità multiple o quando una grafica reattiva impone l'utilizzo di un'immagine diversa su alcuni tipi di schermi. Così come avviene per l'elemento <code>video</code>, è possibile inserire diversi elementi <code>source</code> per specificare diversi file d'immagine in base alle media query o al formato dell'immagine.
+Utilizzare l'elemento `picture` quando esiste un'origine dell'immagine a densità multiple o quando una grafica reattiva impone l'utilizzo di un'immagine diversa su alcuni tipi di schermi. Così come avviene per l'elemento `video`, è possibile inserire diversi elementi `source` per specificare diversi file d'immagine in base alle media query o al formato dell'immagine.
 
 <div class="clearfix"></div>
 
@@ -229,7 +229,7 @@ La proprietà 'background' CSS è un potente strumento per l'aggiunta di immagin
 
 ### TL;DR {: .hide-from-toc }
 - Utilizza immagini adatte alle caratteristiche del display, prendendo in considerazione dimensioni dello schermo, risoluzione del dispositivo e disposizione della pagina.
-- Modifica la proprietà <code>background-image</code> dei CSS per i display ad alta risoluzione utilizzando le media query con <code>min-resolution</code> e <code>-webkit-min-device-pixel-ratio</code>.
+- Modifica la proprietà `background-image` dei CSS per i display ad alta risoluzione utilizzando le media query con `min-resolution` e `-webkit-min-device-pixel-ratio`.
 - Utilizza `scrset` per fornire immagini ad alta risoluzione oltre all'immagine 1x nel markup.
 - Valuta i costi in termini di rendimento dovuti all'utilizzo di tecniche di sostituzione delle immagini via JavaScript o di immagini compresse ad alta risoluzione per i dispositivi a risoluzioni inferiori.
 
@@ -447,7 +447,7 @@ Se possibile, usa il testo e non incorporarlo nelle immagini. Ad esempio, evita 
 
 ### Utilizzo di CSS per la sostituzione delle immagini
 
-I browser moderni utilizzano le funzionalità CSS per la creazione di stili che un tempo richiedevano l'utilizzo delle immagini. Ad esempio, è possibile creare gradienti complessi con la proprietà <code>background</code>, ombre con <code>box-shadow</code> e angoli smussati con <code>border-radius</code>.
+I browser moderni utilizzano le funzionalità CSS per la creazione di stili che un tempo richiedevano l'utilizzo delle immagini. Ad esempio, è possibile creare gradienti complessi con la proprietà `background`, ombre con `box-shadow` e angoli smussati con `border-radius`.
 
 <p id="noImage">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit 
