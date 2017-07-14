@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Animations must perform well, otherwise they will negatively impact the user experience.
 
-{# wf_updated_on: 2016-08-23 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Animations and Performance {: .page-title }
@@ -16,7 +16,7 @@ Maintain 60fps whenever you are animating, because any less results in stutters 
 * Take care that your animations don’t cause performance issues; ensure that you know the impact of animating a given CSS property.
 * Animating properties that change the geometry of the page (layout) or cause painting are particularly expensive.
 * Where you can, stick to changing transforms and opacity.
-* Use <code>will-change</code> to ensure that the browser knows what you plan to animate.
+* Use `will-change` to ensure that the browser knows what you plan to animate.
 
 
 Animating properties is not free, and some properties are cheaper to animate than others. For example, animating the `width` and `height` of an element changes its geometry and may cause other elements on the page to move or change size. This process is called *layout* (or *reflow* in Gecko-based browsers like Firefox), and can be expensive if your page has a lot of elements. Whenever layout is triggered, the page or part of it will normally need to be painted, which is typically even more expensive than the layout operation itself.

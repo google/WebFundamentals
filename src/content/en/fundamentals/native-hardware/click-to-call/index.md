@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: On devices with phone capabilities, make it easy for users to directly connect with you by simply tapping a phone number, more commonly known as click to call.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2014-06-17 #}
 
 # Click to Call {: .page-title }
@@ -14,7 +14,7 @@ with you by simply tapping a phone number, more commonly known as click to call.
 
 ### TL;DR {: .hide-from-toc }
 
-* Wrap all phone numbers in hyperlinks with the <code>tel:</code> schema.
+* Wrap all phone numbers in hyperlinks with the `tel:` schema.
 * Always use the international dialing format.
 
 

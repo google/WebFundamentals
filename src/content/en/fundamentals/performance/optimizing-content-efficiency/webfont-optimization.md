@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Typography is fundamental to good design, branding, readability, and accessibility. Webfonts enable all of the above and more: the text is selectable, searchable, zoomable, and high-DPI friendly, providing consistent and sharp text rendering regardless of the screen size and resolution.
 
-{# wf_updated_on: 2016-08-31 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2014-09-19 #}
 
 # Web Font Optimization {: .page-title }
@@ -58,7 +58,7 @@ Note: Consider using <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli compre
 ## Defining font family with @font-face
 
 ### TL;DR {: .hide-from-toc }
-* Use the <code>format()</code> hint to specify multiple font formats.
+* Use the `format()` hint to specify multiple font formats.
 * Subset large Unicode fonts to improve performance. Use Unicode-range subsetting and provide a manual subsetting fallback for older browsers.
 * Reduce the number of stylistic font variants to improve the page- and text-rendering performance.
 

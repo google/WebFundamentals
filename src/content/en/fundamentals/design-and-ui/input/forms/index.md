@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs.
 
-{# wf_updated_on: 2014-10-21 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2014-04-30 #}
 
 # Create Amazing Forms {: .page-title }
@@ -95,7 +95,7 @@ eliminate wasted taps in your forms.
 
 ### TL;DR {: .hide-from-toc }
 - Choose the most appropriate input type for your data to simplify input.
-- Offer suggestions as the user types with the <code>datalist</code> element.
+- Offer suggestions as the user types with the `datalist` element.
 
 
 ### HTML5 input types
@@ -243,7 +243,7 @@ lists, `datalist` element provides hints as the user types.
 
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
-Note: The <code>datalist</code> values are provided as suggestions, and users are not restricted to the suggestions provided.
+Note: The `datalist` values are provided as suggestions, and users are not restricted to the suggestions provided.
 
 ## Label and name inputs properly
 
@@ -251,9 +251,9 @@ Forms are hard to fill out on mobile. The best forms are the ones with the fewes
 
 
 ### TL;DR {: .hide-from-toc }
-- Always use <code>label</code>s on form inputs, and ensure they're visible when the field is in focus.
-- Use <code>placeholder</code>s to provide guidance about what you expect.
-- To help the browser auto-complete the form, use established <code>name</code>'s for elements and include the <code>autocomplete</code> attribute.
+- Always use `label`s on form inputs, and ensure they're visible when the field is in focus.
+- Use `placeholder`s to provide guidance about what you expect.
+- To help the browser auto-complete the form, use established `name`'s for elements and include the `autocomplete` attribute.
 
 
 ### The importance of labels
@@ -455,7 +455,7 @@ The `autocomplete` attributes can be accompanied with a section name, such as **
 </table>
 
 
-Note: Use either only <code>street-address</code> or both <code>address-line1</code> and <code>address-line2</code>. <code>address-level1</code> and <code>address-level2</code> are only necessary if they're required for your address format.
+Note: Use either only `street-address` or both `address-line1` and `address-line2`. `address-level1` and `address-level2` are only necessary if they're required for your address format.
 
 
 ### The `autofocus` attribute
@@ -482,7 +482,7 @@ Real-time data validation doesn't just help to keep your data clean, but it also
 
 
 ### TL;DR {: .hide-from-toc }
-- Leverage the browser's built-in validation attributes like <code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code>, etc.
+- Leverage the browser's built-in validation attributes like `pattern`, `required`, `min`, `max`, etc.
 - Use JavaScript and the Constraints Validation API for more complex validation requirements.
 - Show validation errors in real time, and if the user tries to submit an invalid form, show all fields they need to fix.
 

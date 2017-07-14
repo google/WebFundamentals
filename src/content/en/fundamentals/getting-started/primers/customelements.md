@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
-{# wf_updated_on: 2017-04-17 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2016-06-28 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -166,7 +166,7 @@ Extending another custom element is done by extending its class definition.
 
 ### Extending native HTML elements {: #extendhtml}
 
-Note: At time of writing, no browser has implemented customized built-in elements. Chrome plans to implement them ([status](https://www.chromestatus.com/feature/4670146924773376)) but other browsers have expressed distaste for implementing the <code>is=""</code> syntax. This is unfortunate for accessibility and progressive enhancement. If you think extending native HTML elements is useful, voice your thoughts <a href='https://github.com/w3c/webcomponents/issues/509'>on Github</a>.
+Note: At time of writing, no browser has implemented customized built-in elements. Chrome plans to implement them ([status](https://www.chromestatus.com/feature/4670146924773376)) but other browsers have expressed distaste for implementing the `is=""` syntax. This is unfortunate for accessibility and progressive enhancement. If you think extending native HTML elements is useful, voice your thoughts <a href='https://github.com/w3c/webcomponents/issues/509'>on Github</a>.
 
 Let's say you wanted to create a fancier `<button>`. Instead of replicating the behavior and
 functionality of `<button>`, a better option is to progressively enhance the existing element using custom elements.

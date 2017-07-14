@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Websites are visited not only by humans, but also by search engine web crawlers. Learn how to improve search accuracy and ranking for your website.
 
-{# wf_updated_on: 2015-10-05 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2014-08-30 #}
 
 # Search Optimization {: .page-title }
@@ -14,9 +14,9 @@ Websites are visited not only by humans, but also by search engine web crawlers.
 ### TL;DR {: .hide-from-toc }
 - Determine the URL structure of your web page.
 - Responsive design is most recommended.
-- Use <code>rel='canonical'</code> + <code>rel='alternate'</code> for separate desktop/mobile sites.
-- Use <code>Vary HTTP</code> header for a single URL dynamically serving separate desktop/mobile HTMLs.
-- Use <code>noindex</code> for pages you want to limit access to those who know the URL.
+- Use `rel='canonical'` + `rel='alternate'` for separate desktop/mobile sites.
+- Use `Vary HTTP` header for a single URL dynamically serving separate desktop/mobile HTMLs.
+- Use `noindex` for pages you want to limit access to those who know the URL.
 - Use relevant authentication mechanism for pages you want to keep private.
 
 ## Give search engines your site structure
@@ -278,7 +278,7 @@ To learn more about X-Robots-Tag:
 * [Google](/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/how-can-i-remove-a-url-or-page-from-the-bing-index-37c07477)
 
-Note: If you disallow crawls using `robots.txt`,  search bots still may index those pages without knowing that you don't want those pages to be indexed. This can happen because:<ul><li>Search bots may find your web pages by following links from other websites.</li><li>Search engines that can't crawl can't detect <code>noindex</code>.</li></ul>
+Note: If you disallow crawls using `robots.txt`,  search bots still may index those pages without knowing that you don't want those pages to be indexed. This can happen because:<ul><li>Search bots may find your web pages by following links from other websites.</li><li>Search engines that can't crawl can't detect `noindex`.</li></ul>
 
 Don't expect `robots.txt` to control search indexes.
 

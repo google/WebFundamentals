@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
-{# wf_updated_on: 2016-08-19 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2016-02-11 #}
 
 # The Web App Manifest {: .page-title }
@@ -115,7 +115,7 @@ This can be anything you want; the value we're using has the advantage of being 
       }],
     
 
-Note: When saving an icon to the home screen, Chrome first looks for icons that match the density of the display and are sized to 48dp screen density. If none are found, it searches for the icon that most closely matches the device characteristics. If, for whatever reason, you want be specific about targeting an icon at a particular pixel density, you can use the optional <code>density</code> member, which takes a number. When you don’t declare density, it defaults to 1.0. This means: “use this icon for screen densities 1.0 and up”, which is normally what you want.
+Note: When saving an icon to the home screen, Chrome first looks for icons that match the density of the display and are sized to 48dp screen density. If none are found, it searches for the icon that most closely matches the device characteristics. If, for whatever reason, you want be specific about targeting an icon at a particular pixel density, you can use the optional `density` member, which takes a number. When you don’t declare density, it defaults to 1.0. This means: “use this icon for screen densities 1.0 and up”, which is normally what you want.
 
 ## Add a splash screen
 
