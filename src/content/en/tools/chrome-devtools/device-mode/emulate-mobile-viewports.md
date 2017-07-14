@@ -252,19 +252,19 @@ change the following network behaviors:
 Device Mode has some limitations.
 
 * **Device hardware**
-  * GPU and CPU behavior are not emulated.
+    * GPU and CPU behavior are not emulated.
 * **Browser UI**
-  * System displays, such as the address bar, are not emulated.
-  * Native displays, such as `<select>` elements, are not emulated as a modal list.
-  * Some enhancements, such as number inputs opening a keypad, might vary from actual device behavior.
+    * System displays, such as the address bar, are not emulated.
+    * Native displays, such as `<select>` elements, are not emulated as a modal list.
+    * Some enhancements, such as number inputs opening a keypad, might vary from actual device behavior.
 * **Browser functionality**
-  * WebGL operates in the emulator, but is not supported on iOS 7 devices.
-  * MathML is not supported in Chrome, but is supported on iOS 7 devices.
-  * The [iOS 5 orientation zoom bug](https://github.com/scottjehl/device-bugs/issues/2) is not emulated.
-  * The line-height CSS property operates in the emulator, but is not supported in Opera Mini.
-  * CSS rule limits, such as those in [Internet Explorer](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx), are not emulated.
+    * WebGL operates in the emulator, but is not supported on iOS 7 devices.
+    * MathML is not supported in Chrome, but is supported on iOS 7 devices.
+    * The [iOS 5 orientation zoom bug](https://github.com/scottjehl/device-bugs/issues/2) is not emulated.
+    * The line-height CSS property operates in the emulator, but is not supported in Opera Mini.
+    * CSS rule limits, such as those in [Internet Explorer](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx), are not emulated.
 * **AppCache**
-  * The emulator does not override the <abbr title="User Agent">UA</abbr> for AppCache [manifest files](https://code.google.com/p/chromium/issues/detail?id=334120) or [view source requests](https://code.google.com/p/chromium/issues/detail?id=119767).
+    * The emulator does not override the <abbr title="User Agent">UA</abbr> for AppCache [manifest files](https://code.google.com/p/chromium/issues/detail?id=334120) or [view source requests](https://code.google.com/p/chromium/issues/detail?id=119767).
 
 Despite these limitations, the Device Mode is robust enough for most tasks. 
 When you need to test on a real device, you can use 
