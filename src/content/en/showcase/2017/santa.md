@@ -282,4 +282,4 @@ While Santa is largely a custom-built solution, many of its principles can be fo
 Project's [App Toolbox](https://www.polymer-project.org/1.0/toolbox/).
 We suggest you check it out if you're building a new PWA from scratch—or, if you're looking for a
 framework-agnostic approach, try the
-[Service Worker Helpers Library](https://github.com/GoogleChrome/sw-helpers).
+[Workbox Library](https://github.com/GoogleChrome/workbox).
