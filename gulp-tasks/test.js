@@ -516,7 +516,7 @@ function testMarkdown(filename, contents, options) {
         }
       })
     } else {
-      msg = `No wf_blink_components field found in metadata. Add if appropriate.`;
+      msg = 'No `wf_blink_components` field found in metadata. Add if appropriate.';
       logWarning(filename, '', msg);
     }
 
