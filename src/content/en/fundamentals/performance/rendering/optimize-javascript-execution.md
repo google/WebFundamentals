@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript often triggers visual changes. Sometimes that's directly through style manipulations, and sometimes it's calculations that result in visual changes, like searching or sorting data. Badly-timed or long-running JavaScript is a common cause of performance issues. You should look to minimize its impact where you can.
 
-{# wf_updated_on: 2017-07-07 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2015-03-20 #}
+{# wf_blink_components: Blink>JavaScript #}
 
 # Optimize JavaScript Execution {: .page-title }
 
@@ -25,7 +26,7 @@ Note: If you really want to see JIT in action you should check out
 It shows the intermediate state of JavaScript code when Chrome’s JavaScript engine, V8, is 
 optimizing it.
 
-With that said, there are some things you can definitely do to help your apps execute 
+With all that said, however, there are some things you can definitely do to help your apps execute 
 JavaScript well.
 
 ### TL;DR {: .hide-from-toc }
@@ -39,7 +40,7 @@ JavaScript well.
 
 When visual changes are happening on screen you want to do your work at the right time for the 
 browser, which is right at the start of the frame. The only way to guarantee that your JavaScript 
-will run at the start of a frame is to use `requestAnimationFrame()`.
+will run at the start of a frame is to use `requestAnimationFrame`.
 
 
     /**
@@ -53,16 +54,16 @@ will run at the start of a frame is to use `requestAnimationFrame()`.
     requestAnimationFrame(updateScreen);
 
 
-Frameworks or samples may use `setTimeout()` or `setInterval()` to do visual changes like animations, 
+Frameworks or samples may use `setTimeout` or `setInterval` to do visual changes like animations, 
 but the problem with this is that the callback will run at _some point_ in the frame, possibly right
  at the end, and that can often have the effect of causing us to miss a frame, resulting in jank.
 
 <img src="images/optimize-javascript-execution/settimeout.jpg" alt="setTimeout causing the browser to miss a frame.">
 
-In fact, jQuery used to use `setTimeout()` for its `animate` behavior. It was changed to use 
-`requestAnimationFrame()` in version 3.
+In fact, jQuery used to use `setTimeout` for its `animate` behavior. It was changed to use 
+`requestAnimationFrame` in version 3.
 If you are using older version of jQeury, you can 
-[patch it to use `requestAnimationFrame()`](https://github.com/gnarf/jquery-requestAnimationFrame), 
+[patch it to use `requestAnimationFrame`](https://github.com/gnarf/jquery-requestAnimationFrame), 
 which is strongly advised.
 
 
@@ -79,7 +80,7 @@ region of **3-4ms**. Any longer than that and you risk taking up too much time. 
 
 In many cases you can move pure computational work to 
 [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/basic_usage), 
-if, for example, the it doesn’t require DOM access. Data manipulation or traversal, 
+if, for example, it doesn’t require DOM access. Data manipulation or traversal, 
 like sorting or searching, are often good fits for this model, as are loading and model generation.
 
 
@@ -97,7 +98,7 @@ like sorting or searching, are often good fits for this model, as are loading an
 
 Not all work can fit this model: Web Workers do not have DOM access. Where your work must be on the 
 main thread, consider a batching approach, where you segment the larger task into micro-tasks, each 
-taking no longer than a few milliseconds, and run inside of `requestAnimationFrame()` handlers across 
+taking no longer than a few milliseconds, and run inside of `requestAnimationFrame` handlers across 
 each frame.
 
 
