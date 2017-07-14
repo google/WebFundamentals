@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Media Source Extensions (MSE) is a JavaScript API that lets you build streams for playback from segments of audio or video.
 
 {# wf_published_on: 2017-02-08 #}
-{# wf_updated_on: 2017-06-28 #}
+{# wf_updated_on: 2017-07-14 #}
 
 # Media Source Extensions {: .page-title }
 
