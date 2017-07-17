@@ -17,7 +17,7 @@ description: Preload video and audio for faster playback.
 </video>
 
 Faster playback means more people watching your video. That's a known fact.
-I'll explore in this article different techniques you can use to accelerate
+In this article I'll explore different techniques you can use to accelerate
 your media playback by actively preloading resources depending on your use
 case.
 
@@ -41,7 +41,7 @@ But...
 <a href="#video_preload_attribute">Video preload attribute</a>
       </td>
       <td rowspan=3>
-Simple to use for an unique file hosted on a web server
+Simple to use for a unique file hosted on a web server
       </td>
       <td>
 Browser may completely ignore the attribute
@@ -54,7 +54,8 @@ parsed
     </tr>
     <tr>
       <td>
-MSE is not compatible
+MSE ignores preload attribute on media element because app is responsible for
+providing media to MSE
       </td>
     </tr>
     <tr>
@@ -85,7 +86,7 @@ resource
 Full control
       </td>
       <td>
-Complex error handling is website responsibility
+Complex error handling is website's responsibility
       </td>
     </tr>
   </tbody>
@@ -93,16 +94,17 @@ Complex error handling is website responsibility
 
 ## Video preload attribute
 
-If the video source is an unique file hosted on a web server, you may want to
+If the video source is a unique file hosted on a web server, you may want to
 use the video `preload` attribute to provide a hint to the browser as to [how
 much information or content to preload]. This means [Media Source Extensions
 (MSE)] is not compatible with `preload`.
 
 Resource fetching will start only when initial HTML document has been
 completely loaded and parsed (eg. `DOMContentLoaded` event) while the very
-different `load` event will be fired when resource has actually been fetched.
+different `window.onload` event will be fired when resource has actually been
+fetched.
 
-<figure class="TODO">
+<figure>
   <img src="/web/fundamentals/media/images/video-preload/video-preload.svg">
 </figure>
 
@@ -114,7 +116,7 @@ duration, and so on) is desirable.
 <video id="video" preload="metadata" src="file.mp4" controls></video>
 
 <script>
-  video.addEventListener('progress', function() {
+  video.addEventListener('loadedmetadata', function() {
     if (video.buffered.length === 0) return;
 
     var bufferedSeconds = video.buffered.end(0) - video.buffered.start(0);
@@ -123,15 +125,15 @@ duration, and so on) is desirable.
 </script>
 ```
 
-Setting `preload` value to `auto` indicates that the browser should cache
-enough such that the playback to end would be possible without requiring a stop
-for further buffering.
+Setting `preload` value to `auto` indicates that the browser may cache enough
+such that the playback to end would be possible without requiring a stop for
+further buffering.
 
 ```
 <video id="video" preload="auto" src="file.mp4" controls></video>
 
 <script>
-  video.addEventListener('progress', function() {
+  video.addEventListener('loadedmetadata', function() {
     if (video.buffered.length === 0) return;
 
     var bufferedSeconds = video.buffered.end(0) - video.buffered.start(0);
@@ -154,24 +156,24 @@ applied in Chrome:
 If your website contains plenty of video resources on the same domain, I would
 recommend you set the `preload` value to `metadata` or define the `poster`
 attribute and set `preload` value to `none`. That way, you would avoid hitting
-the maxmium number of HTTP connections per host (6 in Chrome at the time of
-writing) which can hang loading of resources. Note that this may also improve
-page speed if video aren't part of your core user experience.
+the maximum number of HTTP connections per host (6 according to the HTTP 1.1
+spec) which can hang loading of resources. Note that this may also improve page
+speed if videos aren't part of your core user experience.
 
 ## Link preload
 
 As [covered] in other [articles], [link preload] is a declarative fetch that
 allows you to force the browser to make a request for a resource without
-blocking the document's `onload` event. Resources loaded via `<link
-rel="preload">` are stored locally in the browser, and are effectively inert
-until they're explicitely referenced in the DOM, JavaScript, or CSS.
+blocking the `window.onload` event. Resources loaded via `<link rel="preload">`
+are stored locally in the browser, and are effectively inert until they're
+explicitly referenced in the DOM, JavaScript, or CSS.
 
 Preload is different from prefetch in that it focuses on current navigation and
 fetches resources with priority based on their type (script, style, font,
 video, audio, etc.). It should be used to warm up the browser cache for current
 sessions.
 
-<figure class="TODO">
+<figure>
   <img src="/web/fundamentals/media/images/video-preload/link-preload.svg">
 </figure>
 
@@ -190,14 +192,14 @@ finished yet, a regular network fetch will happen.
 <script>
   // Later on, after some condition has been met, set video source to the
   // preloaded video URL.
-  video.src = 'https://cdn.com/file.mp4';
+  video.src = 'https://cdn.com/small-file.mp4';
   video.play().then(_ => {
     // If preloaded video URL was already cached, playback started immediately.
   });
 </script>
 ```
 
-Note: I would recommend using this only for audio files or short video clips.
+Note: I would recommend using this only for audio files or short video clips (< 5MB).
 
 Because the preloaded resource is going to be consumed by a video element in
 the example, the `as` preload link value is `video`. If it were an audio
@@ -222,7 +224,7 @@ rel="preload">` has been fired.
 
 <script>
   // This function is automatically executed when the first segment of video is
-  // preloaded successfully. We may call it explicitely as well later on.
+  // preloaded successfully. We may call it explicitly as well later on.
   function preloadFinished() {
     const mediaSource = new MediaSource();
     video.src = URL.createObjectURL(mediaSource);
@@ -257,12 +259,12 @@ rel="preload">` has been fired.
 ```
 
 Warning: For cross-origin resources, make sure your CORS headers are set
-properly as opaque responses retrieved with `fetch(videoFileUrl, { mode:
+properly because opaque responses retrieved with `fetch(videoFileUrl, { mode:
 'no-cors' })` are not allowed to feed any video or audio element.
 
 ### Support
 
-As it is not supported in every browser yet, you may want to detect its
+Link preload is not supported in every browser yet. You may want to detect its
 availability with the snippet below.
 
 ```
@@ -296,9 +298,9 @@ availability with the snippet below.
 
 Before we dive into the [Cache API] and service workers, let's see how to
 manually buffer a video with MSE. The example below assumes that your web
-server supports HTTP Range requests. Note that this would be pretty similar to
-segment files. It exists some middleware libraries such as [Google's Shaka
-Player], [JW Player], and [Video.js] dedicated to this.
+server supports HTTP Range requests but this would be pretty similar with
+segment files. Note that some middleware libraries such as [Google's Shaka
+Player], [JW Player], and [Video.js] are dedicated to handle this for you.
 
 ```
 <video id="video" controls></video>
@@ -306,7 +308,7 @@ Player], [JW Player], and [Video.js] dedicated to this.
 <script>
   const mediaSource = new MediaSource();
   video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener('sourceopen', sourceOpen);
+  mediaSource.addEventListener('sourceopen', sourceOpen, { once: true });
 
   function sourceOpen() {
     URL.revokeObjectURL(video.src);
@@ -327,10 +329,10 @@ Player], [JW Player], and [Video.js] dedicated to this.
     console.log(bufferedSeconds + ' seconds of video are ready to play!');
 
     // Fetch the rest of the video when user starts playing video.
-    video.addEventListener('playing', fetchNextSegment, { once: true });
+    video.addEventListener('playing', fetchRemainder, { once: true });
   }
 
-  function fetchNextSegment() {
+  function fetchRemainder() {
     fetch('file.webm', { headers: { range: 'bytes=567140-1196488' } })
     .then(response => response.arrayBuffer())
     .then(data => {
@@ -372,7 +374,7 @@ if ('getBattery' in navigator) {
 ### Pre-cache multiple first segments
 
 Now, what if I want to speculatively pre-load some media content without
-knowing which piece of media user will eventually pick. If user is on a web
+knowing which piece of media the user will eventually pick. If user is on a web
 page that contains 10 videos, we probably have enough memory to fetch one
 segment file from each but we should definitely not create 10 hidden video
 elements and 10 `MediaSource` objects and start feeding that data.
@@ -393,7 +395,7 @@ const videoFileUrls = [
 ];
 
 // Let's create a video pre-cache and store all first segments of videos inside.
-caches.open('video-pre-cache')
+window.caches.open('video-pre-cache')
 .then(cache => Promise.all(videoFileUrls.map(videoFileUrl => fetchAndCache(videoFileUrl, cache))));
 
 function fetchAndCache(videoFileUrl, cache) {
@@ -450,25 +452,21 @@ element.
 function onPlayButtonClick(videoFileUrl) {
   video.load(); // Used to be able to play video later.
 
-  caches.open('video-pre-cache')
+  window.caches.open('video-pre-cache')
   .then(cache => fetchAndCache(videoFileUrl, cache)) // Defined above.
   .then(response => response.arrayBuffer())
   .then(data => {
     const mediaSource = new MediaSource();
     video.src = URL.createObjectURL(mediaSource);
-    mediaSource.addEventListener('sourceopen', sourceOpen);
+    mediaSource.addEventListener('sourceopen', sourceOpen, { once: true });
 
     function sourceOpen() {
       URL.revokeObjectURL(video.src);
 
       const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp9"');
       sourceBuffer.appendBuffer(data);
-      sourceBuffer.addEventListener('updateend', updateEnd, { once: true });
-    }
 
-    function updateEnd() {
-      video.play()
-      .then(_ => {
+      video.play().then(_ => {
         // TODO: Fetch the rest of the video when user starts playing video.
       });
     }
@@ -482,9 +480,10 @@ properly as opaque responses retrieved with `fetch(videoFileUrl, { mode:
 
 ### Create Range responses with a Service Worker
 
-Now what if you fetched an entire video file and saved it in the Cache API. When
-browser sends a HTTP Range request, you certainly don't want to bring the entire
-video into renderer memory as the Cache API doesn't support Range responses yet.
+Now what if you have fetched an entire video file and saved it previously in
+the Cache API. When browser sends a HTTP Range request, you certainly don't
+want to bring the entire video into renderer memory as the Cache API doesn't
+support Range responses yet.
 
 So let me show how to intercept these requests and return a customized Range
 response from a service worker.
@@ -502,6 +501,8 @@ function loadFromCacheOrFetch(request) {
     // Fetch from network if it's not already in the cache.
     if (!response) {
       return fetch(request);
+      // Note that we may want to add the response to the cache and return
+      // network response in parallel as well.
     }
 
     // Browser sends a HTTP Range request. Let's provide one reconstructed
@@ -546,7 +547,7 @@ came from the cache or from the network. It can be used by a player such as
 </div>
 
 Have a look at the official [Sample Media App] and in particular its
-[ranged-response.js] file for a complete solution in how to handle Range
+[ranged-response.js] file for a complete solution for how to handle Range
 requests.
 
 
