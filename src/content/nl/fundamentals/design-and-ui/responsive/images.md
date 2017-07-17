@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Een foto is evenveel waard als 1000 woorden. Afbeeldingen vormen dan ook een integraal onderdeel van elke pagina. Maar het downloaden ervan kost veel bytes.  Met responsive webdesign kunnen niet alleen onze lay-outs veranderen op basis van apparaatkenmerken, maar ook afbeeldingen.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Afbeeldingen {: .page-title }
@@ -31,14 +31,14 @@ Soms moeten afbeeldingen misschien wat drastischer worden gewijzigd: de proporti
 ## Afbeeldingen in opmaak
 
 
-Het element <code>img</code> is een krachtig element. U kunt er inhoud mee downloaden, decoderen en weergeven. Door moderne browsers worden veel verschillende afbeeldingsindelingen ondersteund. Het toevoegen van afbeeldingen voor mobiele apparaten gebeurt in principe op dezelfde manier als voor desktopcomputers. Er zijn slechts een paar kleine aanpassingen nodig om een goede ervaring voor mobiele gebruikers te kunnen realiseren.
+Het element `img` is een krachtig element. U kunt er inhoud mee downloaden, decoderen en weergeven. Door moderne browsers worden veel verschillende afbeeldingsindelingen ondersteund. Het toevoegen van afbeeldingen voor mobiele apparaten gebeurt in principe op dezelfde manier als voor desktopcomputers. Er zijn slechts een paar kleine aanpassingen nodig om een goede ervaring voor mobiele gebruikers te kunnen realiseren.
 
 
 
 ### TL;DR {: .hide-from-toc }
 - Gebruik relatieve grootten voor afbeeldingen zodat deze niet per abuis tot buiten de randen van de container overlopen.
-- Gebruik het element <code>picture</code> als u afhankelijk van de kenmerken van een apparaat andere afbeeldingen wilt opgeven (dit wordt ook wel art direction genoemd).
-- Gebruik <code>srcset</code> en de descriptor <code>x</code> in het element <code>img</code> om de browser te helpen de beste afbeelding te kiezen wanneer er uit verschillende dichtheden moet worden gekozen.
+- Gebruik het element `picture` als u afhankelijk van de kenmerken van een apparaat andere afbeeldingen wilt opgeven (dit wordt ook wel art direction genoemd).
+- Gebruik `srcset` en de descriptor `x` in het element `img` om de browser te helpen de beste afbeelding te kiezen wanneer er uit verschillende dichtheden moet worden gekozen.
 
 
 
@@ -65,7 +65,7 @@ Zorg voor zinvolle beschrijvingen via het kenmerk `alt` in `img`-elementen. Zo m
 </div>
 
 
-Het kenmerk <code>srcset</code> verbetert het gedrag van het element <code>img</code>, waardoor het eenvoudiger wordt om meerdere afbeeldingsbestanden te leveren voor verschillende apparaatkenmerken. Net zoals de bij CSS behorende <code>image-set</code> <a href="#use_image-set_to_provide_high_res_images">CSS-functie</a>, stelt <code>srcset</code> de browser in staat de beste afbeelding te kiezen afhankelijk van de kenmerken van het apparaat, bijvoorbeeld een 2x afbeelding gebruiken op een 2x-scherm en in de toekomst wellicht een 1x afbeelding op een 2x-apparaat in een netwerk met beperkte bandbreedte.
+Het kenmerk `srcset` verbetert het gedrag van het element `img`, waardoor het eenvoudiger wordt om meerdere afbeeldingsbestanden te leveren voor verschillende apparaatkenmerken. Net zoals de bij CSS behorende `image-set</code> <a href="#use_image-set_to_provide_high_res_images">CSS-functie</a>, stelt `srcset` de browser in staat de beste afbeelding te kiezen afhankelijk van de kenmerken van het apparaat, bijvoorbeeld een 2x afbeelding gebruiken op een 2x-scherm en in de toekomst wellicht een 1x afbeelding op een 2x-apparaat in een netwerk met beperkte bandbreedte.
 
 <div class="clearfix"></div>
 
@@ -79,12 +79,12 @@ De voorwaarden kunnen allerlei zaken omvatten, van pixeldichtheid tot breedte en
 
 ### Art direction in responsieve afbeeldingen met `picture`
 
-Het wijzigen van afbeeldingen op basis van apparaatkenmerken, ook wel `art direction` genoemd, kan worden gedaan met behulp van het element picture. Met het element <code>picture</code> wordt een declaratieve oplossing gedefinieerd voor het verkrijgen van meerdere versies van een afbeelding op basis van verschillende kenmerken, zoals het apparaatformaat, de apparaatresolutie, oriëntatie, enzovoort.
+Het wijzigen van afbeeldingen op basis van apparaatkenmerken, ook wel `art direction` genoemd, kan worden gedaan met behulp van het element picture. Met het element `picture` wordt een declaratieve oplossing gedefinieerd voor het verkrijgen van meerdere versies van een afbeelding op basis van verschillende kenmerken, zoals het apparaatformaat, de apparaatresolutie, oriëntatie, enzovoort.
 
 <img class="center" src="img/art-direction.png" alt="Voorbeeld art direction"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-Note: Het element <code>picture</code> wordt langzaamaan steeds meer toegepast in browsers. Hoewel het nog niet in iedere browser beschikbaar is, bevelen we het gebruik hiervan aan vanwege de sterke terugwaartse compatibiliteit en het mogelijke gebruik van de <a href='http://picturefill.responsiveimages.org/'>Picturefill polyfill</a>. Zie voor meer informatie de site <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
+Note: Het element `picture` wordt langzaamaan steeds meer toegepast in browsers. Hoewel het nog niet in iedere browser beschikbaar is, bevelen we het gebruik hiervan aan vanwege de sterke terugwaartse compatibiliteit en het mogelijke gebruik van de <a href='http://picturefill.responsiveimages.org/'>Picturefill polyfill</a>. Zie voor meer informatie de site <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -92,7 +92,7 @@ Note: Het element <code>picture</code> wordt langzaamaan steeds meer toegepast i
   </iframe>
 </div>
 
-Het element <code>picture</code> wordt gebruikt als een afbeeldingsbron in meerdere dichtheden voorkomt, of wanneer door een responsief design een iets afwijkende afbeelding op sommige typen scherm wordt afgedwongen. Net zoals bij het element <code>video</code> kunnen meerdere <code>source</code> -elementen worden opgenomen, waardoor het mogelijk is verschillende afbeeldingsbestanden op te geven, afhankelijk van de mediaquery`s of de afbeeldingsgrootte.
+Het element `picture` wordt gebruikt als een afbeeldingsbron in meerdere dichtheden voorkomt, of wanneer door een responsief design een iets afwijkende afbeelding op sommige typen scherm wordt afgedwongen. Net zoals bij het element `video` kunnen meerdere `source` -elementen worden opgenomen, waardoor het mogelijk is verschillende afbeeldingsbestanden op te geven, afhankelijk van de mediaquery`s of de afbeeldingsgrootte.
 
 <div class="clearfix"></div>
 
@@ -214,7 +214,7 @@ De CSS-eigenschap `background` is een krachtige tool waarmee u complexe afbeeldi
 
 ### TL;DR {: .hide-from-toc }
 - Gebruik de beste afbeelding voor de kenmerken van de display, houd rekening met het formaat van het scherm, de resolutie van het apparaat en de paginalay-out.
-- Wijzig de eigenschap <code>background-image</code> in CSS voor high-DPI-beeldschermen via mediaquery`s met <code>min-resolution</code> en <code>-webkit-min-device-pixel-ratio</code>.
+- Wijzig de eigenschap `background-image` in CSS voor high-DPI-beeldschermen via mediaquery`s met `min-resolution` en `-webkit-min-device-pixel-ratio`.
 - Gebruik srcset voor afbeeldingen met hoge resolutie naast de 1x afbeelding in opmaak.
 - Houd rekening met de prestatiekosten wanneer u JavaScript-technieken gebruikt voor vervanging van afbeeldingen of wanneer u zwaar gecomprimeerde afbeeldingen met hoge resolutie op apparaten met een lagere resolutie plaatst.
 
@@ -413,7 +413,7 @@ Tekst moet zoveel mogelijk tekst zijn en niet zijn ingesloten in afbeeldingen, b
 
 ### CSS gebruiken in plaats van afbeeldingen
 
-Moderne browsers kunnen gebruikmaken van CSS-functies voor het maken van stijlen waarvoor vroeger afbeeldingen vereist waren. Zo kunnen complexe kleurovergangen worden gemaakt met de eigenschap <code>background</code>, schaduwen met <code>box-shadow</code> en afgeronde hoeken kunnen worden toegevoegd met de eigenschap <code>border-radius</code>.
+Moderne browsers kunnen gebruikmaken van CSS-functies voor het maken van stijlen waarvoor vroeger afbeeldingen vereist waren. Zo kunnen complexe kleurovergangen worden gemaakt met de eigenschap `background`, schaduwen met `box-shadow` en afgeronde hoeken kunnen worden toegevoegd met de eigenschap `border-radius`.
 
 <p id="noImage">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit 

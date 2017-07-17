@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Veel websites zijn niet geoptimaliseerd voor ervaringen op meerdere apparaten. Ontdek de basisbeginselen zodat uw website werkt op mobiele apparaten, desktops of iets anders met een scherm.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Basisbeginselen voor responsive webdesign {: .page-title }
@@ -38,8 +38,8 @@ Pagina's die voor verschillende apparaten zijn geoptimaliseerd moeten een meta-v
 
 ### TL;DR {: .hide-from-toc }
 - Gebruik metatags voor de viewport om de breedte en schaling van de browserviewport te bepalen.
-- Neem <code>width=device-width</code> op om de breedte van het scherm af te stemmen in apparaatonafhankelijke pixels.
-- Neem <code>initial-scale=1</code> op om een 1:1-verhouding te verkrijgen tussen CSS-pixels en apparaatonafhankelijke pixels.
+- Neem `width=device-width` op om de breedte van het scherm af te stemmen in apparaatonafhankelijke pixels.
+- Neem `initial-scale=1` op om een 1:1-verhouding te verkrijgen tussen CSS-pixels en apparaatonafhankelijke pixels.
 - Zorg ervoor dat uw pagina toegankelijk is door schaling voor gebruikers niet uit te schakelen.
 
 
@@ -104,7 +104,7 @@ Mediaquery's zijn eenvoudige filters die op CSS-stijlen kunnen worden toegepast.
 
 ### TL;DR {: .hide-from-toc }
 - Met mediaquery's kunt u stijlen toepassen op basis van apparaatkenmerken.
-- Gebruik <code>min-width</code> in plaats van <code>min-device-width</code> voor het meest brede resultaat.
+- Gebruik `min-width` in plaats van `min-device-width` voor het meest brede resultaat.
 - Gebruik relatieve grootten voor elementen om te voorkomen dat de lay-out wordt onderbroken.
 
 
