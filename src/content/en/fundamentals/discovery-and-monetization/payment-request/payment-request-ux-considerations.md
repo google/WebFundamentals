@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 
 {# wf_updated_on: 2017-07-05 #}
 {# wf_published_on: 2017-06-28 #}
-
+{# wf_blink_components: Blink>Payments #}
 
 # Payment Request UX considerations {: .page-title }
 {% include "web/_shared/contributors/mustafa.html" %}
