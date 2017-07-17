@@ -190,7 +190,7 @@ encoded with the aac codec.
 The [cheat sheet](/web/fundamentals/media/manipulating/cheatsheet#codec) lists
 commands needed to convert codecs. The tables sumarize the libraries used in
 ffmpeg to perform the codec conversions for webm and mp4 files. These are the
-formats used for DASH and HLS respectively.
+formats recommended for DASH and HLS respectively.
 
 ***Video***
 
