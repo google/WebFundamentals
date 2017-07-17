@@ -4,6 +4,7 @@ description: Chrome DevTools' Device Mode lets you mimic how your development  s
 
 {# wf_updated_on: 2016-03-07 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Test Responsive and Device-specific Viewports {: .page-title }
 
@@ -11,7 +12,9 @@ description: Chrome DevTools' Device Mode lets you mimic how your development  s
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-The updated Device Mode (since Chrome 49) is an integral part of the now-mobile-first DevTools and extends the main DevTools bar. Learn how to use its controls to simulate a wide range of devices or go fully responsive.
+The updated Device Mode (since Chrome 49) is an integral part of the now-mobile-first DevTools and 
+extends the main DevTools bar. Learn how to use its controls to simulate a wide range of devices or 
+go fully responsive.
 
 
 ### TL;DR {: .hide-from-toc }
@@ -24,30 +27,36 @@ The updated Device Mode (since Chrome 49) is an integral part of the now-mobile-
 
 ![device mode enabled](imgs/device-mode.png)
 
-The Viewport Controls allow you to test your site against a variety of devices, as well as fully responsively. It comes in two modes:
+The Viewport Controls allow you to test your site against a variety of devices, as well as fully 
+responsively. It comes in two modes:
 
   1. **Responsive**. Makes the Viewport freely resizable via big handles on either side. 
   2. **Specific Device**. Locks the Viewport to the exact viewport size of a specific device and emulates certain device characteristics.
 
 ## Responsive mode
 
-We recommend using the **Responsive Mode** as your default work mode. Use it during active development of your site and app and resize the viewport often to create a freely responsive design that adapts to even unknown and future device types.
+We recommend using the **Responsive Mode** as your default work mode. Use it during active 
+development of your site and app and resize the viewport often to create a freely responsive design 
+that adapts to even unknown and future device types.
 
 To get the most out of the Responsive Mode, turn on the [Media Queries Bar](#media-queries).
 
 ### Customize the viewport size
 
-Either drag the big resize handles on the viewport or click into the values in the menu bar for finer grained control.
+Either drag the big resize handles on the viewport or click into the values in the menu bar for 
+finer grained control.
 
 ## Device-specific mode
 
-Use the **Device-specific Mode** when you're nearing the end of active development and want to perfect how your site looks like on specific mobiles (e.g. a certain iPhone or Nexus).
+Use the **Device-specific Mode** when you're nearing the end of active development and want to 
+perfect how your site looks like on specific mobiles (e.g. a certain iPhone or Nexus).
 
 ### Built-in device presets
 
 <div class="wf-devtools-flex">
   <div>
-  <p>We've included the currently most popular devices in the device dropdown. After selecting a device, each preset automatically configures emulation of certain device characteristics:</p>
+  <p>We've included the currently most popular devices in the device dropdown. After selecting 
+    a device, each preset automatically configures emulation of certain device characteristics:</p>
   <ul>
     <li>Sets the correct "User Agent" (UA) string.</li>
     <li>Sets the device resolution and DPI (device pixel ratio).</li>
@@ -88,11 +97,14 @@ custom device if you find an edge-case or niche device that isn't covered.
 
 ![toggle orientation](imgs/change-orientation.png)
 
-When emulating a specific device, the Device Mode toolbar shows an additional control that primarily serves as a way to toggle the orientation between landscape and portrait.
+When emulating a specific device, the Device Mode toolbar shows an additional control that primarily
+ serves as a way to toggle the orientation between landscape and portrait.
 
 <div class="wf-devtools-flex">
   <div>
-    <p>On selected devices, the control does more than just orientation toggling. For supported devices like the Nexus 5X, you'll get a dropdown that allows you to emulate certain device states, like:</p>
+    <p>On selected devices, the control does more than just orientation toggling. For supported 
+      devices like the Nexus 5X, you'll get a dropdown that allows you to emulate certain device 
+      states, like:</p>
     <ul>
       <li>Default browser UI</li>
       <li>With Chrome navigation bar</li>
@@ -108,10 +120,18 @@ When emulating a specific device, the Device Mode toolbar shows an additional co
 
 <div class="wf-devtools-flex">
   <div>
-  <p>Sometimes you'll want to test a device that has a resolution larger than the actual available space in your browser window. In these cases, the <strong>Zoom to Fit</strong> option comes in handy:</p>
+  <p>Sometimes you'll want to test a device that has a resolution larger than the actual available 
+    space in your browser window. In these cases, the <strong>Zoom to Fit</strong> option comes in 
+    handy:</p>
   <ol>
-    <li><strong>Fit to Window</strong> will automatically set the zoom level to the maximum available space.</li>
-    <li><strong>Explicit percentages</strong> are useful if you want to test DPI on images, for instance.</li>
+    <li>
+      <strong>Fit to Window</strong> will automatically set the zoom level to the maximum available 
+      space.
+    </li>
+    <li>
+      <strong>Explicit percentages</strong> are useful if you want to test DPI on images, 
+      for instance.
+    </li>
   </ol>
   </div>
   <div class="wf-devtools-flex-third">
@@ -123,7 +143,8 @@ When emulating a specific device, the Device Mode toolbar shows an additional co
 
 <div class="wf-devtools-flex">
   <div>
-  <p>Optional controls can be changed or enabled by clicking on the three little dots on the right side of the device toolbar. Current options include</p>
+  <p>Optional controls can be changed or enabled by clicking on the three little dots on the right 
+    side of the device toolbar. Current options include</p>
   <ul>
     <li>User agent type (Emulates UA and touch events)</li>
     <li>Device pixel ratio</li>
@@ -252,19 +273,20 @@ change the following network behaviors:
 Device Mode has some limitations.
 
 * **Device hardware**
-  * GPU and CPU behavior are not emulated.
+    * GPU and CPU behavior are not emulated.
 * **Browser UI**
-  * System displays, such as the address bar, are not emulated.
-  * Native displays, such as `<select>` elements, are not emulated as a modal list.
-  * Some enhancements, such as number inputs opening a keypad, might vary from actual device behavior.
+    * System displays, such as the address bar, are not emulated.
+    * Native displays, such as `<select>` elements, are not emulated as a modal list.
+    * Some enhancements, such as number inputs opening a keypad, might vary from actual device 
+    behavior.
 * **Browser functionality**
-  * WebGL operates in the emulator, but is not supported on iOS 7 devices.
-  * MathML is not supported in Chrome, but is supported on iOS 7 devices.
-  * The [iOS 5 orientation zoom bug](https://github.com/scottjehl/device-bugs/issues/2) is not emulated.
-  * The line-height CSS property operates in the emulator, but is not supported in Opera Mini.
-  * CSS rule limits, such as those in [Internet Explorer](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx), are not emulated.
+    * WebGL operates in the emulator, but is not supported on iOS 7 devices.
+    * MathML is not supported in Chrome, but is supported on iOS 7 devices.
+    * The [iOS 5 orientation zoom bug](https://github.com/scottjehl/device-bugs/issues/2) is not emulated.
+    * The line-height CSS property operates in the emulator, but is not supported in Opera Mini.
+    * CSS rule limits, such as those in [Internet Explorer](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx), are not emulated.
 * **AppCache**
-  * The emulator does not override the <abbr title="User Agent">UA</abbr> for AppCache [manifest files](https://code.google.com/p/chromium/issues/detail?id=334120) or [view source requests](https://code.google.com/p/chromium/issues/detail?id=119767).
+    * The emulator does not override the <abbr title="User Agent">UA</abbr> for AppCache [manifest files](https://code.google.com/p/chromium/issues/detail?id=334120) or [view source requests](https://code.google.com/p/chromium/issues/detail?id=119767).
 
 Despite these limitations, the Device Mode is robust enough for most tasks. 
 When you need to test on a real device, you can use 
