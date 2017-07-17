@@ -337,7 +337,7 @@ Even when an attacker can't inject script directly, they might be able to trick
 your application into converting otherwise inert text into executable JavaScript
 and executing it on their behalf. `eval()`, `new
 Function()`, `setTimeout([string], ...)`, and
-<code>setInterval([string], ...)` are all vectors through which injected
+`setInterval([string], ...)` are all vectors through which injected
 text might end up executing something unexpectedly malicious. CSP's default
 response to this risk is to completely block all of these vectors.
 

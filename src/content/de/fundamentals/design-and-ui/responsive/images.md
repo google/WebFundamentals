@@ -65,7 +65,7 @@ Achten Sie darauf, dem `alt`-Attribut des `img`-Elements aussagekräftige Beschr
   </iframe>
 </div>
 
-Das `srcset`-Attribut erweitert das `img`-Element, indem es dafür sorgt, dass auf einfache Weise mehrere Bilddateien für verschiedene Gerätecharakteristiken bereitgestellt werden können. Ähnlich wie die native <a href="#use_image-set_to_provide_high_res_images">CSS-Funktion</a> `image-set` erlaubt `srcset` Browsern, abhängig von den Charakteristiken des jeweiligen Geräts das beste Bild auszuwählen, zum Beispiel ein 2x-Bild für ein 2x-Display, und in Zukunft möglicherweise auch ein 1x-Bild für ein 2x-Gerät, wenn nur eine geringe Bandbreite zur Verfügung steht.
+Das `srcset`-Attribut erweitert das `img`-Element, indem es dafür sorgt, dass auf einfache Weise mehrere Bilddateien für verschiedene Gerätecharakteristiken bereitgestellt werden können. Ähnlich wie die native [CSS-Funktion](#use-image-set-to-provide-high-res-images) `image-set` erlaubt `srcset` Browsern, abhängig von den Charakteristiken des jeweiligen Geräts das beste Bild auszuwählen, zum Beispiel ein 2x-Bild für ein 2x-Display, und in Zukunft möglicherweise auch ein 1x-Bild für ein 2x-Gerät, wenn nur eine geringe Bandbreite zur Verfügung steht.
 
 <div class="clearfix"></div>
 

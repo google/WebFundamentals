@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Learn how to integrate a service worker into an existing application to make the application work offline.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2016-11-09T18:31:19Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -212,7 +212,7 @@ The next step is to program our service worker to return the intercept the reque
 <li>Where is the polyfill?</li>
 <li><a href="https://github.com/coonsta/cache-polyfill">https://github.com/coonsta/cache-polyfill</a> </li>
 <li>Why do I need to polyfill?</li>
-<li>Currently Chrome and other browsers don't yet fully support the `addAll` method (<strong>note:</strong> Chrome 46 will be compliant).</li>
+<li>Currently Chrome and other browsers don't yet fully support the <code>addAll</code> method (<strong>note:</strong> Chrome 46 will be compliant).</li>
 <li>Why do you have ?homescreen=1</li>
 <li>
 <p>URLs with query string parameters are treated as individual URLs and need to be cached separately.</p>

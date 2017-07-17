@@ -73,7 +73,7 @@ Inserisci descrizioni dettagliate con l'attributo `alt` degli elementi `img` per
   </iframe>
 </div>
 
-L'attributo `srcset` ottimizza l'azione dell'elemento `img` semplificando la fornitura di diversi file di immagine in base alle caratteristiche dei dispositivi. In maniera analoga alla funzione nativa CSS `image-set` <a href='#use_image-set_to_provide_high_res_images'> </a>, `srcset` indica al browser l'immagine ottimale in base alle caratteristiche del dispositivo, ad esempio un'immagine 2x su un display 2x e un'immagine 1x su dispositivi 2x con limiti di larghezza di banda.
+L'attributo `srcset` ottimizza l'azione dell'elemento `img` semplificando la fornitura di diversi file di immagine in base alle caratteristiche dei dispositivi. In maniera analoga alla funzione nativa la [funzione CSS](#use-image-set-to-provide-high-res-images) `image-set`, `srcset` indica al browser l'immagine ottimale in base alle caratteristiche del dispositivo, ad esempio un'immagine 2x su un display 2x e un'immagine 1x su dispositivi 2x con limiti di larghezza di banda.
 
 <div class="clearfix"></div>
 
