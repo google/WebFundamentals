@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A Command Line API do Chrome DevTools oferece diversas maneiras de observar e inspecionar detectores de evento
 
-{# wf_updated_on: 2015-08-02 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Monitorar eventos {: .page-title }
@@ -13,9 +13,9 @@ A Command Line API do Chrome DevTools oferece diversas maneiras de observar e in
 
 
 ### TL;DR {: .hide-from-toc }
-- Detecte eventos de um determinado tipo usando  <code>monitorEvents()</code>.
-- Use  <code>unmonitorEvents()</code> para interromper a detecção.
-- Conheça os detectores de um elemento de DOM usando  <code>getEventListeners()</code>.
+- Detecte eventos de um determinado tipo usando `monitorEvents()`.
+- Use `unmonitorEvents()` para interromper a detecção.
+- Conheça os detectores de um elemento de DOM usando `getEventListeners()`.
 - Use o painel Event Listeners Inspector para obter informações sobre detectores de evento.
 
 

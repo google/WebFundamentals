@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Às vezes, a parte mais difícil de um novo projeto é começar. O Web StarterKit oferece uma base sólida com uma ampla variedade de ferramentas para ajudar você durante o processo de desenvolvimento.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-07-16 #}
 
 # Inicie seu site com o Web Starter Kit {: .page-title }
@@ -236,7 +236,7 @@ Pronto! Agora você tem tudo de que precisa para usar as ferramentas Gulp no Web
 Kit.
 
 
-Observação: Se você receber erros de permissão ou acesso como  <code>EPERM</code> ou <code>EACCESS</code>, não use  <code>sudo</code> como solução. Consulte <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>esta página</a> para obter uma solução mais adequada.
+Observação: Se você receber erros de permissão ou acesso como `EPERM` ou `EACCESS`, não use  `sudo` como solução. Consulte <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>esta página</a> para obter uma solução mais adequada.
 
 <!--
 The next section of this guide covers how to use Gulp, but if you want to see

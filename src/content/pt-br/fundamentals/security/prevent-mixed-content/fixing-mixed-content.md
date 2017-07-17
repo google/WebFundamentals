@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Encontrar e consertar conteúdo misto é uma tarefa importante, mas pode ser demorado. Este guia aborda algumas ferramentas que foram disponibilizadas para ajudar no processo.
 
 {# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 
 # Como evitar conteúdo misto {: .page-title }
 
@@ -193,7 +193,7 @@ A CSP é útil em muitos casos externos ao uso de conteúdo misto. Você pode en
 
 Observação: Os navegadores impõem <b>todas</b> as políticas de segurança de conteúdo que recebem.
 Os diversos valores do cabeçalho CSP recebidos pelo navegador no cabeçalho de resposta ou em elementos
-<code>&lt;meta&gt;</code> são combinados e impostos juntos, como uma única política.
+`<meta>` são combinados e impostos juntos, como uma única política.
 As políticas de denúncia são combinadas da mesma forma. A interseção das políticas forma a
 combinação, ou seja, cada política após a primeira só pode restringir
 mais o conteúdo permitido, não ampliá-lo.

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2015-08-02 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Referência da API Command Line {: .page-title }
@@ -74,7 +74,7 @@ O exemplo a seguir retorna uma referência ao elemento atualmente selecionado e 
 
 ![Exemplo de $('img').src](images/selector-img-src.png)
 
-Observação: Se você estiver usando uma biblioteca como a jQuery que use  <code>$</code>, essa funcionalidade será substituída e  <code>$</code> corresponderá à implementação dessa biblioteca.
+Observação: Se você estiver usando uma biblioteca como a jQuery que use `$`, essa funcionalidade será substituída e `$` corresponderá à implementação dessa biblioteca.
 
 ## $$(selector)
 

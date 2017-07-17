@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A Payment Request API oferece pagamentos rápidos e fáceis na web.
 
-{# wf_published_on: 2016-07-25 #}
-{# wf_updated_on: 2016-12-06 #}
+{# wf_published_on: 2017-07-17 #}
+{# wf_updated_on: 2017-07-17 #}
 
 # Guia de integração da Payment Request API {: .page-title }
 
@@ -324,7 +324,7 @@ Uma alternativa é usar "Delivery" ou "Pickup" em vez de "Shipping" na IU especi
 
 <div style="clear:both;"></div>
 
-Observação: <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> precisa ser <code>undefined</code> ou uma matriz vazia após inicialização para receber o evento <code>shippingaddresschange</code>. Caso contrário, o evento não será acionado.
+Observação: <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> precisa ser `undefined` ou uma matriz vazia após inicialização para receber o evento `shippingaddresschange`. Caso contrário, o evento não será acionado.
 
 
     var options = {
@@ -350,7 +350,7 @@ Para rejeitar um endereço por motivos como uma região não permitida, passe um
 
 <div style="clear:both;"></div>
 
-Observação: Resolver o evento <code>shippingaddresschange</code> e deixar <code>details.shippingOptions</code> como uma matriz vazia também significa rejeitar o endereço (ou seja, não é possível enviar para esse local). Verifique sempre se as opções de envio estão atualizadas e correspondem ao endereço fornecido pelo usuário.
+Observação: Resolver o evento `shippingaddresschange` e deixar `details.shippingOptions` como uma matriz vazia também significa rejeitar o endereço (ou seja, não é possível enviar para esse local). Verifique sempre se as opções de envio estão atualizadas e correspondem ao endereço fornecido pelo usuário.
 
 
     request.addEventListener('shippingaddresschange', e => {
@@ -447,7 +447,7 @@ Se o seu serviço permitir que os usuários selecionem opções de envio como "g
     var request = new PaymentRequest(methodData, details, options);
 
 
-Observação: Como observado anteriormente, <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> precisa estar <code>undefined</code> ou ser uma matriz vazia na inicialização para receber eventos <code>shippingaddresschange</code>. Defina esse valor na inicialização apenas quando as opções de envio não serão alteradas com base no endereço (como no envio global gratuito).
+Observação: Como observado anteriormente, <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> precisa estar `undefined` ou ser uma matriz vazia na inicialização para receber eventos `shippingaddresschange`. Defina esse valor na inicialização apenas quando as opções de envio não serão alteradas com base no endereço (como no envio global gratuito).
 
 A alteração das opções de envio pode ter preços diferentes. Para adicionar a taxa de envio e alterar o preço total, você pode adicionar um ouvinte de eventos ao evento `shippingoptionchange`, que é acionado quando o usuário seleciona uma opção de envio, permitindo a execução de um exame programático dos dados da opção. Você também pode alterar a taxa de envio dependendo do endereço de envio.
 

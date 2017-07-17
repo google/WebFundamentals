@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Uma imagem vale 1.000 palavras e as imagens têm um papel essencial em todas as páginas. No entanto, elas frequentemente também representam a maior parte dos bytes baixados.  Com um Web design responsivo, não só seus layouts podem ser alterados com base nas características do dispositivo, mas as imagens também.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Imagens {: .page-title }
@@ -145,10 +145,10 @@ Dogfood: O elemento `picture` está começando a ser usado em navegadores. Apesa
   </iframe>
 </div>
 
-Use elemento  <code>picture</code> quando uma fonte de imagem
+Use elemento  `picture` quando uma fonte de imagem
 existir em várias densidades ou quando um design responsivo exigir
 uma imagem um pouco diferente em alguns tipos de telas.  Semelhante ao elemento
-<code>video</code>, vários elementos  <code>source</code> podem
+`video`, vários elementos  `source` podem
 ser incluídos, possibilitando a especificação de diferentes arquivos de imagem
 dependendo das consultas de mídia ou do formato da imagem.
 
@@ -395,7 +395,7 @@ O SVG tem um [bom suporte](http://caniuse.com/svg-html5) em navegadores de compu
 
 ##### URI de dados
 
-URIs de dados oferecem uma maneira de incluir um arquivo em linha, como uma imagem, ao definir o src de um elemento  <code>img</code> como uma string com codificação Base64 usando o seguinte formato:
+URIs de dados oferecem uma maneira de incluir um arquivo em linha, como uma imagem, ao definir o src de um elemento  `img` como uma string com codificação Base64 usando o seguinte formato:
 
 
     <img src="data:image/svg+xml;base64,[data]">
@@ -425,7 +425,7 @@ O código de inclusão em linha para imagens pode ser longo &mdash; especialment
 
 A desvantagem:
 
-* Em dispositivos móveis, URIs de dados podem ter uma exibição [significativamente mais lenta](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/) do que imagens de um  <code>src</code> externo.
+* Em dispositivos móveis, URIs de dados podem ter uma exibição [significativamente mais lenta](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/) do que imagens de um  `src` externo.
 * URIs de dados podem aumentar consideravelmente o tamanho de uma solicitação de HTTP.
 * Eles adicionam complexidade à sua marcação e ao seu fluxo de trabalho.
 * O formato de URI de dados é muito maior do que o binário (até 30%) e, portanto, não reduz o tamanho total do download.

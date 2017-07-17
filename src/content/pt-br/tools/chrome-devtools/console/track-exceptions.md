@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: O Chrome DevTools fornece ferramentas para ajudar a corrigir páginas da Web acionando exceções e erros de depuração no JavaScript.
 
-{# wf_updated_on: 2015-05-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Gestão de erros e exceções {: .page-title }
@@ -18,9 +18,9 @@ No Console, você pode controlar exceções e rastrear o caminho de execução q
 
 ### TL;DR {: .hide-from-toc }
 - Ative Pause on Exceptions para depurar o código quando a exceção for acionada.
-- Ative a pilha de chamadas JavaScript atual usando  <code>console.trace</code>.
-- Insira declarações no seu código e acione exceções usando  <code>console.assert()</code>.
-- Registre erros que acontecem no navegador usando  <code>window.onerror</code>.
+- Ative a pilha de chamadas JavaScript atual usando `console.trace`.
+- Insira declarações no seu código e acione exceções usando `console.assert()`.
+- Registre erros que acontecem no navegador usando `window.onerror`.
 
 
 ## Controlar exceções

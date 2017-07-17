@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: A Política de segurança de conteúdo pode reduzir bastante o risco e o impacto de ataques de XSS em navegadores modernos.
 
 {# wf_published_on: 2012-06-15 #}
-{# wf_updated_on: 2016-02-19 #}
+{# wf_updated_on: 2017-07-17 #}
 
 # Política de segurança de conteúdo {: .page-title }
 
@@ -225,7 +225,7 @@ forma direta, sem ambiguidade, de instruir o navegador a tratar conjuntos espec�
 recursos como aceitáveis e rejeitar o resto. Contudo, listas de permissão baseadas em origem não
 resolvem a maior ameaça que os ataques de XSS representam: injeção de script embutido.
 Se um invasor pode injetar uma tag "script" que contenha carga útil maliciosa
-diretamente (<code>&lt;script&gt;sendMyDataToEvilDotCom();&lt;/script&gt;</code>),
+diretamente (`<script>sendMyDataToEvilDotCom();</script>`),
 o navegador não tem mecanismos para distingui-la de uma tag
 "script" embutida legítima. A CSP resolve esse problema banindo totalmente o script embutido:
 é a única forma de garantir.
@@ -334,9 +334,9 @@ sha256 correto para cada um dos scripts embutidos.
 
 Mesmo quando um invasor não consegue injetar script diretamente, ele pode conseguir fazer
 o aplicativo converter outro texto fixo em JavaScript executável
-e executá-lo por conta própria.  <code>eval()</code>, <code>new
-Function()</code>, <code>setTimeout([string], ...)</code>, e
-<code>setInterval([string]...)</code> são vetores pelos quais o texto
+e executá-lo por conta própria.  `eval()`, `new
+Function()`, `setTimeout([string], ...)`, e
+`setInterval([string]...)` são vetores pelos quais o texto
 injetado pode acabar executando algo malicioso inesperadamente. A resposta padrão
 da CSP a esse risco é o bloqueio total desses vetores.
 
@@ -387,8 +387,8 @@ A capacidade da CSP de bloquear fontes não confiáveis no cliente é um benefí
 usuários, mas seria muito útil enviar algum tipo de notificação
 de volta ao servidor para que você possa identificar e aparar erros que possam permitir
 injeção de código malicioso. Para tanto, você pode instruir o
-navegador a <code>POST</code> relatórios de violação formatados em JSON a um local
-especificado na diretiva <code>report-uri</code>.
+navegador a `POST` relatórios de violação formatados em JSON a um local
+especificado na diretiva `report-uri`.
 
 
     Content-Security-Policy: default-src 'self'; ...; report-uri /my_amazing_csp_report_parser;
