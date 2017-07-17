@@ -337,7 +337,7 @@ examples below to get you started.
 #### Using ChromeDriver
 
 [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 2.3.0
-supports Chrome 59+ and works with headless Chrome. In some cases, you may need
+supports Chrome 59 and later and works with headless Chrome. In some cases, you may need
 Chrome 60 to work around bugs. For example, there are known issues with taking
 screenshots in Chrome 59.
 
@@ -499,7 +499,7 @@ Flexible container.
 
 **Can I use this with Selenium / WebDriver / ChromeDriver**?
 
-Yep. See [Using Selenium, WebDrive, or ChromeDriver](#drivers).
+Yes. See [Using Selenium, WebDrive, or ChromeDriver](#drivers).
 
 **How is this related to PhantomJS?**
 
