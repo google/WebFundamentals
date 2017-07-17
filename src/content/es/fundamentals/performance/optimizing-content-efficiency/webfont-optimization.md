@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La tipografía es fundamental para lograr un buen nivel de diseño, desarrollo de la marca, legibilidad y accesibilidad. Las fuentes web permiten todo lo anterior y más: el texto admite selección, búsqueda, ampliación y reducción, y admite valores elevados de ppp, lo que permite la representación de texto consistente y bien definido, independientemente del tamaño de la pantalla y la resolución.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-09-19 #}
 
 # Optimización de fuentes web {: .page-title }
@@ -58,7 +58,7 @@ Note: Considera usar <a href='http://en.wikipedia.org/wiki/Zopfli'>compresión Z
 ## Definición de la familia de fuentes con @font-face
 
 ### TL;DR {: .hide-from-toc }
-* Usa la indicación <code>format()</code> para especificar varios formatos de fuente.
+* Usa la indicación `format()` para especificar varios formatos de fuente.
 * Dispón en subconjuntos las fuentes Unicode grandes para mejorar el rendimiento. Usa subconjuntos de Unicode y proporciona una reserva de subconjunto manual para navegadores anteriores.
 * Reduce la cantidad de variantes de fuente estilísticas para mejorar el rendimiento de representación de la página y del texto.
 

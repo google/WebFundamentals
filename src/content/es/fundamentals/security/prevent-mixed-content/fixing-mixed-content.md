@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Buscar y solucionar problemas de contenido mixto es una tarea importante, pero puede tomar mucho tiempo. En esta guía, se analizan algunas herramientas disponibles para facilitar el proceso.
 
 {# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 
 # Prevención del contenido mixto {: .page-title }
 
@@ -193,7 +193,7 @@ La CSP es útil para muchas cosas fuera de sus usos de contenido mixto. La infor
 
 Note: Los navegadores implementan <b>todas</b> las políticas de seguridad de contenido.
 Los diferentes valores del encabezado de CSP que el navegador recibe en el encabezado de respuesta o en los elementos
-<code>&lt;meta&gt;</code> se combinan e implementan como una única política.
+`<meta>` se combinan e implementan como una única política.
 Asimismo, se combinan las políticas de informes. Para combinar las políticas, se toman las
 intersecciones de ellas; es decir, después de la primera, cada política solo
 puede restringir más el contenido permitido, no puede ampliarlo.

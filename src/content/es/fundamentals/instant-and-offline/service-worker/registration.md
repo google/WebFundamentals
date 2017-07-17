@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Prácticas recomendadas para saber cuándo registrar un service worker.
 
-{# wf_updated_on: 2016-11-28 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2016-11-28 #}
 
 # Registro de los service workers {: .page-title }
@@ -74,9 +74,9 @@ a tu sitio.
 
 La solución es controlar el inicio del service worker. Para eso, se debe elegir cuándo llamar a
 `navigator.serviceWorker.register()`. Una regla simple es demorar
-el registro hasta después de que se ejecute el <code>[load
-event](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)</code>
-en <code>window</code>:
+el registro hasta después de que se ejecute el `[load
+event](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)`
+en `window`:
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
@@ -130,11 +130,11 @@ registrar el service worker apenas sea posible? Uno que se me viene a la mente e
 para controlar la página durante la primera visita y el service worker
 realiza un [almacenamiento en cache
 en tiempo de ejecución](/web/fundamentals/instant-and-offline/offline-cookbook/#on-network-response)
-de forma agresiva dentro de su controlador de  <code>fetch</code>. En este caso, hay
+de forma agresiva dentro de su controlador de `fetch`. En este caso, hay
 una ventaja de activar el service worker lo antes posible: para
 llenar su caché en tiempo de ejecución con recursos que podrían ser útiles más adelante. Si
 tu app web hace uso de este mecanismo, vale la pena tomarse un tiempo para
-asegurarse de que el controlador de <code>install</code> del service worker no solicite
+asegurarse de que el controlador de `install` del service worker no solicite
 recursos que compitan por ancho de banda con las solicitudes de la página principal.
 
 ## Realizar pruebas

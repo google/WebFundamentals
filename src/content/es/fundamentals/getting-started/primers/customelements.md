@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Los elementos personalizados permiten a los programadores web definir nuevas etiquetas HTML, extender las existentes y crear componentes web reutilizables.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2016-06-28 #}
 
 # Custom Elements v1: Componentes web reutilizables {: .page-title }
@@ -129,7 +129,7 @@ propio elemento DOM**; es decir, la instancia de la clase. En nuestro ejemplo, `
 
 1. El nombre de un elemento personalizado **debe contener un guión (-)**. Por lo tanto, `<x-tags>`, `<my-element>` y `<my-awesome-app>` son todos nombres válidos, mientras que `<tabs>` y `<foo_bar>` no lo son. Este requisito está pensado para que el analizador HTML pueda diferenciar los elementos personalizados de los comunes. También garantiza la compatibilidad a futuro cuando se agreguen nuevas etiquetas al HTML.
 2. Puedes registrar la misma etiqueta más de una vez. Si intentas hacerlo, se generará una `DOMException`. Una vez que notifiques al navegador sobre la nueva etiqueta, el trabajo estará hecho. No habrá vuelta atrás.
-3. Los elementos personalizados no se pueden cerrar automáticamente, ya que HTML solo permite a [unos pocos elementos](https://html.spec.whatwg.org/multipage/syntax.html#void-elements) cerrarse por sí solos. Escribe siempre una etiqueta de cierre (<code>&lt;app-drawer&gt;&lt;/app-drawer&gt;</code>).
+3. Los elementos personalizados no se pueden cerrar automáticamente, ya que HTML solo permite a [unos pocos elementos](https://html.spec.whatwg.org/multipage/syntax.html#void-elements) cerrarse por sí solos. Escribe siempre una etiqueta de cierre (`<app-drawer></app-drawer>`).
 
 ## Extensión de elementos {: #extend}
 
@@ -264,7 +264,7 @@ También pueden crear una instancia en JavaScript:
     console.assert(image.height === 200);
     
 
-Note: Algunos navegadores exhiben un rechazo manifiesto por la implementación de la sintaxis  <code>is=""</code>. Esto representa una desventaja para la accesibilidad y la mejora progresiva. Si crees que extender elementos HTML nativos es útil, danos tu opinión <a href='https://github.com/w3c/webcomponents/issues/509'>en Github</a>.
+Note: Algunos navegadores exhiben un rechazo manifiesto por la implementación de la sintaxis `is=""`. Esto representa una desventaja para la accesibilidad y la mejora progresiva. Si crees que extender elementos HTML nativos es útil, danos tu opinión <a href='https://github.com/w3c/webcomponents/issues/509'>en Github</a>.
 
 ## Reacciones de los elementos personalizados {: #reactions}
 

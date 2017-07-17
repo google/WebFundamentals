@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Los sitios web no solo reciben visitas de humanos, sino también de rastreadores web de motores de búsqueda. Obtén información sobre cómo mejorar la precisión de las búsquedas y la clasificación de tu sitio web.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-08-30 #}
 
 # Optimización de las búsquedas {: .page-title }
@@ -14,9 +14,9 @@ Los sitios web no solo reciben visitas de humanos, sino también de rastreadores
 ### TL;DR {: .hide-from-toc }
 - Determina la estructura de la URL de tu página web.
 - Se recomienda especialmente usar un diseño adaptable.
-- Usa <code>rel='canonical'</code> + <code>rel='alternate'</code> para separar sitios de escritorio y móviles.
-- Usa el encabezado <code>Vary HTTP</code> para que una misma URL muestre dinámicamente HTML para escritorio o móviles en forma separada.
-- Usa <code>noindex</code> para páginas en las que quieres limitar el acceso a las personas que conozcan la URL.
+- Usa `rel='canonical'` + `rel='alternate'` para separar sitios de escritorio y móviles.
+- Usa el encabezado `Vary HTTP` para que una misma URL muestre dinámicamente HTML para escritorio o móviles en forma separada.
+- Usa `noindex` para páginas en las que quieres limitar el acceso a las personas que conozcan la URL.
 - Usa un mecanismo de autenticación aplicable para páginas que quieres mantener en privado.
 
 ## Proporciona la estructura de tu sitio a los motores de búsqueda
@@ -278,7 +278,7 @@ Para obtener más información sobre X-Robots-Tag:
 * [Google](/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/how-can-i-remove-a-url-or-page-from-the-bing-index-37c07477)
 
-Note: Si inhabilitas los rastreadores a través de `robots.txt`, los bots de búsqueda igualmente pueden indexar esas páginas sin saber que no quieres que se indexen. Esto puede ocurrir porque:<ul><li>los bots de búsqueda pueden encontrar tus páginas web siguiendo enlaces de otros sitios web.</li><li>Los motores de búsqueda que no pueden rastrear no pueden detectar <code>noindex</code>.</li></ul>
+Note: Si inhabilitas los rastreadores a través de `robots.txt`, los bots de búsqueda igualmente pueden indexar esas páginas sin saber que no quieres que se indexen. Esto puede ocurrir porque:<ul><li>los bots de búsqueda pueden encontrar tus páginas web siguiendo enlaces de otros sitios web.</li><li>Los motores de búsqueda que no pueden rastrear no pueden detectar `noindex`.</li></ul>
 
 No esperes que `robots.txt` controle las indexaciones de búsqueda.
 

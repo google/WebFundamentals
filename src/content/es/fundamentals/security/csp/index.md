@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: La Política de seguridad de contenido puede reducir considerablemente el riesgo e impacto de ataques por secuencias de comandos en sitios cruzados en los navegadores modernos.
 
 {# wf_published_on: 2012-06-15 #}
-{# wf_updated_on: 2016-02-19 #}
+{# wf_updated_on: 2017-07-17 #}
 
 # Política de seguridad de contenido {: .page-title }
 
@@ -225,7 +225,7 @@ forma no ambigua de indicar al navegador que considere
 aceptables a grupos específicos de recursos y que rechace al resto. Sin embargo, una lista blanca basada en el origen no
 resuelve la mayor amenaza que suponen los ataques por XSS: la inserción de secuencias de comandos integradas.
 Si un atacante puede insertar una etiqueta de secuencia de comandos que contenga directamente alguna carga
-maliciosa (<code>&lt;script&gt;sendMyDataToEvilDotCom();&lt;/script&gt;</code>),
+maliciosa (`<script>sendMyDataToEvilDotCom()</script>`),
 el navegador no cuenta con un mecanismo para distinguirla de una etiqueta de secuencia de comandos integrada
 legítima. La CSP resuelve este problema al rechazar completamente las secuencias de comandos integradas:
 es la única manera de asegurarse.
@@ -334,9 +334,9 @@ correcto para cada una de tus secuencias de comandos integradas.
 
 Incluso si los atacantes no pudieran insertar una secuencia de comandos directamente, podrían engañar a
 tu app para que convierta texto que normalmente sería inerte en JavaScript ejecutable
-y que lo ejecutara por ellos. <code>eval()</code>, <code>new
-Function()</code>, <code>setTimeout([string], ...)</code>, y
-<code>setInterval([string], ...)</code> son vectores a través de los cuales un texto
+y que lo ejecutara por ellos. `eval()`, `new
+Function()`, `setTimeout([string], ...)`, y
+`setInterval([string], ...)` son vectores a través de los cuales un texto
 insertado podría llegar a ejecutar algo inesperadamente malicioso. La respuesta
 predeterminada de la CSP a este riesgo es el bloqueo completamente todos estos vectores.
 
@@ -387,8 +387,8 @@ La capacidad de la CSP para bloquear recursos del lado del cliente que no sean d
 usuarios, pero sería bastante útil contar con algún tipo de notificación
 que se envíe de vuelta al servidor para que puedas identificar y arreglar cualquier error que permita
 insertar código malicioso en primer lugar. Para esto, puedes ordenar al
-navegador que envíe mediante <code>POST</code> informes de incumplimiento con formato JSON a una ubicación
-especificada en una directiva  <code>report-uri</code>.
+navegador que envíe mediante `POST` informes de incumplimiento con formato JSON a una ubicación
+especificada en una directiva `report-uri`.
 
 
     Content-Security-Policy: default-src 'self'; ...; report-uri /my_amazing_csp_report_parser;

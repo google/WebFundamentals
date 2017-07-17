@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Es complicado completar formularios desde el celular. Los mejores formularios son aquellos que poseen menos entradas.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-04-30 #}
 
 # Crea formularios asombrosos {: .page-title }
@@ -95,7 +95,7 @@ eliminar las pulsaciones innecesarias de tus formularios.
 
 ### TL;DR {: .hide-from-toc }
 - Elije el tipo de entrada más apropiado para tus datos a fin de simplificar la entrada.
-- Ofrece sugerencias a medida que el usuario escriba con el elemento <code>datalist</code>.
+- Ofrece sugerencias a medida que el usuario escriba con el elemento `datalist`.
 
 
 ### Tipos de entrada HTML5
@@ -243,7 +243,7 @@ estas, el elemento `datalist` proporciona sugerencias a medida que el usuario es
 
 [Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
-Note: Los valores de  <code>datalist</code> se proporcionan como sugerencias, y los usuarios no se ven limitados a las sugerencias ofrecidas.
+Note: Los valores de `datalist` se proporcionan como sugerencias, y los usuarios no se ven limitados a las sugerencias ofrecidas.
 
 ## Etiqueta y nombra las entradas correctamente
 
@@ -251,9 +251,9 @@ Es complicado completar formularios desde el celular. Los mejores formularios so
 
 
 ### TL;DR {: .hide-from-toc }
-- Usa siempre las  <code>label</code> en las entradas de los formularios y asegúrate de que sean visibles cuando el campo esté en foco.
-- Usa los  <code>placeholder</code> para proporcionar orientación sobre lo que esperas.
-- Con el fin de ayudar a que el navegador complete el formulario automáticamente, usa los atributos  <code>name</code> establecidos para los elementos e incluye el atributo  <code>autocomplete</code>.
+- Usa siempre las `label` en las entradas de los formularios y asegúrate de que sean visibles cuando el campo esté en foco.
+- Usa los `placeholder` para proporcionar orientación sobre lo que esperas.
+- Con el fin de ayudar a que el navegador complete el formulario automáticamente, usa los atributos `name` establecidos para los elementos e incluye el atributo `autocomplete`.
 
 
 ### La importancia de las etiquetas
@@ -455,7 +455,7 @@ Los atributos `autocomplete` pueden ir acompañados por el nombre de una secció
 </table>
 
 
-Note: Usa únicamente  <code>street-address</code> o bien  <code>address-line1</code> y  <code>address-line2</code>.  <code>address-level1</code> y  <code>address-level2</code> son solo necesarios si se deben usar en el formato de tu dirección.
+Note: Usa únicamente `street-address` o bien `address-line1` y `address-line2`. `address-level1` y `address-level2` son solo necesarios si se deben usar en el formato de tu dirección.
 
 
 ### El atributo `autofocus`
@@ -482,7 +482,7 @@ La validación de datos en tiempo real no solo te permite mantener tus datos lim
 
 
 ### TL;DR {: .hide-from-toc }
-- Aprovecha los atributos de validación incorporados del navegador, como <code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code>, etc.
+- Aprovecha los atributos de validación incorporados del navegador, como `pattern`, `required`, `min`, `max`, etc.
 - Usa JavaScript y la Constraints Validation API para los requisitos de validación más complejos.
 - Muestra los errores de validación en tiempo real y, si el usuario intenta enviar un formulario no válido, indícale todos los campos que debe corregir.
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Aprovecha la API de la consola para medir tiempos de ejecución y contar ejecuciones de instrucciones.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Medir y contar ejecuciones {: .page-title }
@@ -15,8 +15,8 @@ Aprovecha la API de la consola para medir tiempos de ejecución y contar ejecuci
 
 
 ### TL;DR {: .hide-from-toc }
-- Usa <code>console.time()</code> y <code>console.timeEnd()</code> para realizar el seguimiento del tiempo transcurrido entre los puntos de ejecución.
-- Usa <code>console.count()</code> para realizar el recuento de las veces en que la misma cadena se pasa a una función.
+- Usa `console.time()` y `console.timeEnd()` para realizar el seguimiento del tiempo transcurrido entre los puntos de ejecución.
+- Usa `console.count()` para realizar el recuento de las veces en que la misma cadena se pasa a una función.
 
 
 ## Medir los tiempos de ejecución
