@@ -4,6 +4,7 @@ description: Media Source Extensions (MSE) is a JavaScript API that lets you bui
 
 {# wf_published_on: 2017-02-08 #}
 {# wf_updated_on: 2017-07-14 #}
+{# wf_blink_components: Internals>Media #}
 
 # Media Source Extensions {: .page-title }
 
