@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Web'in çogunlugu bu çoklu cihaz deneyimleri için optimize edilmemistir. Sitenizin mobil cihazlarda, masaüstü bilgisayarlarda veya ekrani olan herhangi bir seyde çalismasini saglamak için gereken temel bilgileri edinin.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Duyarli Web Tasarimi Temel Bilgileri {: .page-title }
