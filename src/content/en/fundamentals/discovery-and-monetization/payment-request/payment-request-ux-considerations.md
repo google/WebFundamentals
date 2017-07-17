@@ -385,10 +385,10 @@ discount coupons.
 
 ### Before calling Payment request api
 The Payment Request API doesn’t deal with vouchers and 
-loyalty codes directly, instead, give the user the 
+loyalty codes directly. Instead, give the user the 
 ability to add any codes or loyalty card schemes before 
 you launch the Payment Request API. In practice, this 
-will mean that when a user first clicks a <em>"Buy now"</em>, 
+will mean that when a user first clicks <em>"Buy now"</em>, 
 they will be taken to a checkout page where they can 
 add a coupon or loyalty card number first. 
 Below is an example of this.
