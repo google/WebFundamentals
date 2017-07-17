@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Formulir sulit diisi pada perangkat seluler. Formulir terbaik adalah formulir dengan masukan paling sedikit.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-04-30 #}
 
 # Membuat Formulir yang Mengagumkan {: .page-title }
@@ -95,7 +95,7 @@ menghilangkan ketukan sia-sia dalam formulir Anda.
 
 ### TL;DR {: .hide-from-toc }
 - Pilih tipe masukan yang paling tepat bagi data Anda untuk menyederhanakan masukan.
-- Berikan saran ketika pengguna mengetik dengan elemen <code>datalist</code>.
+- Berikan saran ketika pengguna mengetik dengan elemen `datalist`.
 
 
 ### Tipe masukan HTML5
@@ -243,7 +243,7 @@ tersebut, elemen `datalist` memberikan petunjuk ketika pengguna mengetik.
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
-Note: Nilai <code>datalist</code> disediakan sebagai saran, dan pengguna tidak dibatasi pada saran yang diberikan.
+Note: Nilai `datalist` disediakan sebagai saran, dan pengguna tidak dibatasi pada saran yang diberikan.
 
 ## Memasukkan label dan nama dengan benar
 
@@ -251,9 +251,9 @@ Formulir sulit diisi pada perangkat seluler. Formulir terbaik adalah formulir de
 
 
 ### TL;DR {: .hide-from-toc }
-- Selalu gunakan <code>label</code> pada masukan formulir, dan pastikan itu terlihat ketika bidang sedang dalam fokus.
-- Gunakan <code>placeholder</code> untuk memberikan panduan mengenai apa yang Anda harapkan.
-- Untuk membantu browser mengisi-otomatis formulir, gunakan <code>name</code> yang ditetapkan untuk elemen dan menyertakan atribut <code>autocomplete</code>.
+- Selalu gunakan `label` pada masukan formulir, dan pastikan itu terlihat ketika bidang sedang dalam fokus.
+- Gunakan `placeholder` untuk memberikan panduan mengenai apa yang Anda harapkan.
+- Untuk membantu browser mengisi-otomatis formulir, gunakan `name` yang ditetapkan untuk elemen dan menyertakan atribut `autocomplete`.
 
 
 ### Pentingnya label
@@ -455,7 +455,7 @@ Atribut `autocomplete` bisa disertai dengan nama bagian, seperti **`shipping `**
 </table>
 
 
-Note: Gunakan hanya <code>street-address</code> atau <code>address-line1</code> dan <code>address-line2</code>. <code>address-level1</code> dan <code>address-level2</code> hanya diperlukan jika mereka dibutuhkan untuk format alamat Anda.
+Note: Gunakan hanya `street-address` atau `address-line1` dan `address-line2`. `address-level1` dan `address-level2` hanya diperlukan jika mereka dibutuhkan untuk format alamat Anda.
 
 
 ### Atribut `autofocus`
@@ -482,7 +482,7 @@ Validasi data real-time tidak hanya membantu menjaga data Anda tetap bersih, nam
 
 
 ### TL;DR {: .hide-from-toc }
-- Manfaatkan atribut validasi bawaan browser seperti <code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code>, dll.
+- Manfaatkan atribut validasi bawaan browser seperti `pattern`, `required`, `min`, `max`, dll.
 - Gunakan JavaScript dan Constraints Validation API untuk persyaratan validasi yang lebih kompleks.
 - Tampilkan kesalahan validasi secara real time, dan jika pengguna mencoba untuk mengirimkan formulir yang tidak valid, tunjukkan semua bidang yang harus mereka perbaiki.
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Tipografi adalah hal mendasar bagi terciptanya desain, branding, keterbacaan, dan aksesibilitas yang baik. Webfont memungkinkan semua hal di atas dan juga yang lainnya: teks dapat dipilih, ditelusuri, di-zoom, dan ramah untuk DPI yang tinggi, menyediakan rendering teks yang konsisten dan tajam apa pun ukuran dan resolusinya.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-09-19 #}
 
 # Optimasi Font Web {: .page-title }
@@ -41,7 +41,7 @@ Jadi, apa arti semua ini bagi kita? Tidak ada satu format tunggal yang berfungsi
 * Menyajikan varian TTF ke browser Android lawas (di bawah 4.4).
 * Menyajikan varian EOT ke browser IE lawas (di bawah IE9).
 
-Note: Secara teknis, ada format kontainer lain, <a href='http://caniuse.com/svg-fonts'>kontainer font SVG</a>, namun IE dan Firefox tidak pernah mendukungnya, dan kini tidak digunakan lagi di Chrome. Dengan demikian, penggunaannya terbatas dan itu sengaja dihilangkan dalam panduan ini.
+Note: Secara teknis, ada format kontainer lain, [kontainer font SVG](http://caniuse.com/svg-fonts), namun IE dan Firefox tidak pernah mendukungnya, dan kini tidak digunakan lagi di Chrome. Dengan demikian, penggunaannya terbatas dan itu sengaja dihilangkan dalam panduan ini.
 
 ### Mengurangi ukuran font dengan kompresi
 
@@ -58,7 +58,7 @@ Note: Pertimbangkan menggunakan <a href='http://en.wikipedia.org/wiki/Zopfli'>ko
 ## Mendefinisikan jenis font dengan @font-face
 
 ### TL;DR {: .hide-from-toc }
-* Gunakan petunjuk <code>format()</code> untuk menetapkan format font.
+* Gunakan petunjuk `format()` untuk menetapkan format font.
 * Subset font Unicode besar untuk meningkatkan kinerja. Gunakan subset rentang unicode dan berikan fallback subset manual untuk browser yang lebih lawas.
 * Kurangi jumlah varian font gaya untuk meningkatkan kinerja rendering laman dan teks.
 

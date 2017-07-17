@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Elemen khusus memungkinkan developer web mendefinisikan tag HTML baru, memperluas yang sudah ada, dan membuat komponen web pakai-ulang.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2016-06-28 #}
 
 # Elemen Khusus v1: Komponen Web Pakai-Ulang {: .page-title }
@@ -129,7 +129,7 @@ elemen DOM itu sendiri** yakni instance kelas. Dalam contoh kita, `this` merujuk
 
 1. Nama elemen khusus **harus berisi tanda hubung (-)**. Jadi `<x-tags>`, `<my-element>`, dan `<my-awesome-app>` semuanya adalah nama yang valid, sedangkan `<tabs>` dan `<foo_bar>` tidak valid. Persyaratan ini agar HTML parser bisa membedakan elemen khusus dari elemen biasa. Ini juga memastikan kompatibilitas ke depan bila tag baru ditambahkan ke HTML.
 2. Anda tidak bisa mendaftarkan tag yang sama lebih dari satu kali. Mencobanya akan melontarkan `DOMException`. Setelah Anda memberi tahu browser tentang tag baru, selesailah urusan. Tidak ada jalan kembali.
-3. Elemen khusus tidak bisa menutup-sendiri karena HTML hanya mengizinkan [beberapa elemen](https://html.spec.whatwg.org/multipage/syntax.html#void-elements) yang bisa menutup-sendiri. Tulislah selalu tag penutup (<code>&lt;app-drawer&gt;&lt;/app-drawer&gt;</code>).
+3. Elemen khusus tidak bisa menutup-sendiri karena HTML hanya mengizinkan [beberapa elemen](https://html.spec.whatwg.org/multipage/syntax.html#void-elements) yang bisa menutup-sendiri. Tulislah selalu tag penutup (`<app-drawer></app-drawer>`).
 
 ## Memperluas elemen {: #extend}
 
@@ -264,7 +264,7 @@ atau membuat instance di JavaScript:
     console.assert(image.height === 200);
     
 
-Note: Sebagian browser menyatakan keengganan untuk mengimplementasikan sintaks <code>is=""</code>. Hal ini tidak menguntungkan untuk aksesibilitas dan penyempurnaan progresif. Jika menurut Anda memperluas elemen HTML native berguna, sampaikan pendapat Anda <a href='https://github.com/w3c/webcomponents/issues/509'>di Github</a>.
+Note: Sebagian browser menyatakan keengganan untuk mengimplementasikan sintaks `is=""`. Hal ini tidak menguntungkan untuk aksesibilitas dan penyempurnaan progresif. Jika menurut Anda memperluas elemen HTML native berguna, sampaikan pendapat Anda <a href='https://github.com/w3c/webcomponents/issues/509'>di Github</a>.
 
 ## Reaksi elemen khusus {: #reactions}
 

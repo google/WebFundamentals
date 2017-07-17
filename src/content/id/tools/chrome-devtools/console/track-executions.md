@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Manfaatkan Console API untuk mengukur waktu eksekusi dan menghitung eksekusi pernyataan.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Mengukur dan menghitung eksekusi {: .page-title }
@@ -15,8 +15,8 @@ Manfaatkan Console API untuk mengukur waktu eksekusi dan menghitung eksekusi per
 
 
 ### TL;DR {: .hide-from-toc }
-- Gunakan <code>console.time()</code> dan <code>console.timeEnd()</code> untuk melacak waktu yang dihabiskan antar titik eksekusi kode.
-- Gunakan <code>console.count()</code> untuk menghitung berapa kali string yang sama diteruskan ke sebuah fungsi.
+- Gunakan `console.time()` dan `console.timeEnd()` untuk melacak waktu yang dihabiskan antar titik eksekusi kode.
+- Gunakan `console.count()` untuk menghitung berapa kali string yang sama diteruskan ke sebuah fungsi.
 
 
 ## Mengukur waktu eksekusi

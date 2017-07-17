@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Menemukan dan memperbaiki materi campuran adalah tugas penting, namun bisa makan waktu. Panduan ini mendiskusikan beberapa alat yang tersedia untuk membantu prosesnya.
 
 {# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 
 # Mencegah Materi Campuran {: .page-title }
 
@@ -193,7 +193,7 @@ CSP berguna untuk banyak hal di luar penggunaan materi campurannya. Informasi te
 
 Note: Beberapa browser memberlakukan <b>semua</b> kebijakan keamanan materi yang mereka terima.
 Beberapa nilai header CSP sekaligus yang diterima oleh browser di header respons atau elemen
-<code>&lt;meta&gt;</code> dikombinasikan dan diberlakukan sebagai satu kebijakan;
+`<meta>` dikombinasikan dan diberlakukan sebagai satu kebijakan;
 sehingga melaporkan kebijakan juga dikombinasikan. Kebijakan dikombinasikan dengan mengambil
 perpotongan kebijakan; yakni, setiap kebijakan setelah yang pertama hanya bisa
 membatasi lebih jauh materi yang diizinkan, bukan memperluasnya.

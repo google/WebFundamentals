@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Sebuah gambar bernilai 1000 kata, dan gambar adalah bagian tidak terpisahkan dari setiap laman. Namun mereka juga yang bertanggung jawab untuk sebagian besar byte yang diunduh.  Dengan desain web responsif, tidak hanya layout yang bisa berubah berdasarkan karakteristik perangkat, namun gambar juga.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Gambar {: .page-title }
@@ -145,10 +145,10 @@ Dogfood: Elemen `picture` mulai mendarat di browser. Meskipun belum tersedia di 
   </iframe>
 </div>
 
-Gunakan elemen <code>picture</code> ketika sumber gambar
+Gunakan elemen `picture` ketika sumber gambar
 terdapat di beberapa kepadatan, atau ketika desain responsif menentukan
 gambar yang agak berbeda pada beberapa jenis layar.  Serupa dengan elemen
-<code>video</code>, beberapa elemen <code>source</code> bisa
+`video`, beberapa elemen `source` bisa
 dimasukkan, sehingga memungkinkan untuk menentukan file gambar yang berbeda
 bergantung pada kueri media atau format gambar.
 
@@ -395,7 +395,7 @@ SVG memiliki [dukungan yang luar biasa](http://caniuse.com/svg-html5) pada selul
 
 ##### Data URI
 
-Data URI menyediakan cara untuk menyertakan file, seperti gambar, inline dengan menetapkan src dari elemen <code>img</code> sebagai string mengenkode Base64 menggunakan format berikut:
+Data URI menyediakan cara untuk menyertakan file, seperti gambar, inline dengan menetapkan src dari elemen `img` sebagai string mengenkode Base64 menggunakan format berikut:
 
 
     <img src="data:image/svg+xml;base64,[data]">
@@ -425,7 +425,7 @@ Kode inline untuk gambar bisa bertele-tele&mdash;terutama URI Data&mdash;jadi me
 
 Sisi negatifnya:
 
-* Pada perangkat seluler, Data URI bisa [secara signifikan lebih lambat](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/) untuk ditampilkan pada perangkat seluler daripada gambar dari <code>src</code> eksternal.
+* Pada perangkat seluler, Data URI bisa [secara signifikan lebih lambat](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/) untuk ditampilkan pada perangkat seluler daripada gambar dari `src` eksternal.
 * Data URI bisa cukup banyak meningkatkan ukuran permintaan HTML.
 * Mereka menambahkan kompleksitas pada markup dan alur kerja Anda.
 * Format Data URI jauh lebih besar dari biner (hingga 30%) dan oleh karena itu tidak mengurangi jumlah ukuran unduhan.

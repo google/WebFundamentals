@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Praktik terbaik untuk pengaturan waktu pendaftaran service worker Anda.
 
-{# wf_updated_on: 2016-11-28 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2016-11-28 #}
 
 # Pendaftaran Service Worker {: .page-title }
@@ -76,7 +76,7 @@ Solusinya adalah mengontrol mulainya service worker dengan memilih kapan memangg
 `navigator.serviceWorker.register()`. Aturan main sederhana adalah menunda
 pendaftaran hingga setelah <code>[load
 event](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)</code>
-dipicu pada <code>window</code>, sehingga:
+dipicu pada `window`, sehingga:
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
@@ -130,11 +130,11 @@ menjadi hal yang masuk akal? Skenario yang terlintas di benak adalah bila servic
 untuk mengontrol laman selama kunjungan pertama, dan service worker
 secara agresif melakukan [caching
 waktu proses](/web/fundamentals/instant-and-offline/offline-cookbook/#on-network-response)
-di dalam penangan <code>fetch</code> -nya. Dalam situasi itu, ada
+di dalam penangan `fetch` -nya. Dalam situasi itu, ada
 untungnya membuat service worker aktif secepat mungkin, untuk mencoba
 mengisi cache waktu prosesnya dengan sumber daya mungkin nanti akan masuk. Jika
 aplikasi web Anda termasuk dalam kategori ini, ada baiknya mengambil langkah mundur untuk memastikan
-penangan <code>install</code> service worker Anda tidak meminta
+penangan `install` service worker Anda tidak meminta
 sumber daya yang berebut bandwidth dengan permintaan laman utama.
 
 ## Menguji berbagai hal
