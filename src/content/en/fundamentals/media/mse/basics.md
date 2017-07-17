@@ -106,7 +106,7 @@ Here are some things I'd recommend in a production usage of MSE related APIs:
   updating the `SourceBuffer`'s `mode`, `timestampOffset`, `appendWindowStart`,
   `appendWindowEnd`, or calling `appendBuffer()` or `remove()` on the
   `SourceBuffer`.
-- If you have multiple `SourceBuffer` instancess added to your `MediaSource`,
+- If you have multiple `SourceBuffer` instances added to your `MediaSource`,
   ensure none of their `updating` values are true before calling
   `MediaSource.endOfStream()` or updating the `MediaSource.duration`.
 - If `MediaSource.readyState` value is `ended`, calls like `appendBuffer()` and
@@ -330,7 +330,7 @@ function sourceOpen(e) {
 ## The final version
 
 Here's the complete code example. I hope you have learned something about Media
-Source Extenstions.
+Source Extensions.
 
     var vidElement = document.querySelector('video');
     
