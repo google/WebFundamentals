@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Drzewo renderowania powstaje z połączenia drzew CSSOM i DOM. Wykorzystuje się je do wyznaczania rozmieszczenia każdego widocznego elementu na stronie, na jego podstawie procedura malowania renderuje piksele na ekranie. Aby osiągnąć najwyższą wydajność renderowania, ważne jest wykonanie optymalizacji każdego z powyższych etapów.
 
 
-{# wf_updated_on: 2014-09-17 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Tworzenie drzewa renderowania, układ strony i malowanie {: .page-title }
@@ -35,7 +35,7 @@ Aby utworzyć drzewo renderowania, przeglądarka wykonuje z grubsza następując
 1. Znalezienie dla każdego widocznego węzła pasujących reguł modelu CSSOM i ich zastosowanie.
 2. Wygenerowanie widocznych węzłów z treścią, przy uwzględnieniu wyznaczonych dla nich stylów.
 
-Note: Na marginesie: pamiętaj, że atrybut <code>visibility: hidden</code> różni się od atrybutu <code>display: none</code>. Pierwszy z nich powoduje, że element jest niewidoczny, ale nadal zajmuje miejsce w układzie strony (tzn. jest renderowany jako puste pole), a drugi <code>display: none</code> powoduje całkowite usunięcie elementu z drzewa renderowania, przez co element staje się niewidoczny i przestaje należeć do układu strony.
+Note: Na marginesie: pamiętaj, że atrybut `visibility: hidden` różni się od atrybutu `display: none`. Pierwszy z nich powoduje, że element jest niewidoczny, ale nadal zajmuje miejsce w układzie strony (tzn. jest renderowany jako puste pole), a drugi `display: none` powoduje całkowite usunięcie elementu z drzewa renderowania, przez co element staje się niewidoczny i przestaje należeć do układu strony.
 
 Końcowym efektem jest obraz zrenderowany na ekranie z odwzorowaniem zarówno całej widocznej treści, jak i jej stylów &ndash; zbliżamy się do celu.  **Po przygotowaniu drzewa renderowania możemy przejść do etapu wyznaczania `układu strony`.**
 

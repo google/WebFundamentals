@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Większość stron internetowych nie jest zoptymalizowana do działania na różnych rodzajach urządzeń. Poznaj podstawy, dzięki którym Twoja witryna będzie działać na komputerach, urządzeniach mobilnych i wszystkich innych, które mają ekran.
 
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Podstawy elastycznego projektowania witryn {: .page-title }
@@ -47,8 +47,8 @@ Strony zoptymalizowane pod kątem działania na rozmaitych urządzeniach muszą 
 
 ### TL;DR {: .hide-from-toc }
 - Użyj metatagu viewport, by sterować szerokością i skalowaniem widocznego obszaru w przeglądarkach.
-- Dołącz tag <code>width=device-width</code>, by dopasować stronę do szerokości ekranu w pikselach niezależnych od urządzenia.
-- Dołącz tag <code>initial-scale=1</code>, by utworzyć relację 1:1 między pikselami CSS a pikselami niezależnymi od urządzenia.
+- Dołącz tag `width=device-width`, by dopasować stronę do szerokości ekranu w pikselach niezależnych od urządzenia.
+- Dołącz tag `initial-scale=1`, by utworzyć relację 1:1 między pikselami CSS a pikselami niezależnymi od urządzenia.
 - Nie wyłączaj skalowania strony przez użytkownika, by nie ograniczać jej dostępności.
 
 
@@ -113,7 +113,7 @@ Zapytania o media to proste filtry, które można zastosować do stylów CSS. U�
 
 ### TL;DR {: .hide-from-toc }
 - Zapytań o media możesz używać, by stosować style na podstawie cech urządzenia.
-- Użyj <code>min-width</code> zamiast <code>min-device-width</code>, by interfejs był jak najszerszy.
+- Użyj `min-width` zamiast `min-device-width`, by interfejs był jak najszerszy.
 - Użyj względnych rozmiarów elementów, by uniknąć zniekształcenia układu.
 
 
