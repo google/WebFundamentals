@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 電話機能を備えた端末では、電話番号をタップするだけで、ユーザーが簡単にあなたに発信できるようになります。これは一般的に Click to Call 機能と呼ばれます。
 
-{# wf_updated_on:2016-08-22 #}
-{# wf_published_on:2014-06-17 #}
+{# wf_updated_on: 2017-07-17 #}
+{# wf_published_on: 2014-06-17 #}
 
 #  Click to Call {: .page-title }
 
@@ -14,7 +14,7 @@ description: 電話機能を備えた端末では、電話番号をタップす�
 
 ### TL;DR {: .hide-from-toc }
 
-*  <code>tel:</code> スキームを使用して、すべての電話番号にハイパーリンクを設定します。
+*  `tel:` スキームを使用して、すべての電話番号にハイパーリンクを設定します。
 * 必ず国際電話番号の形式を使用します。
 
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools コマンドライン API を使用すると、さまざまな方法でイベント リスナーを観察したり調査したりできます。
 
-{# wf_updated_on: 2015-08-02 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 #  イベントの監視 {: .page-title }
@@ -13,9 +13,9 @@ Chrome DevTools コマンドライン API を使用すると、さまざまな�
 
 
 ### TL;DR {: .hide-from-toc }
-- 特定のタイプのイベントは、 <code>monitorEvents()</code> を使用してリッスンします。
-- リッスンを停止するには  <code>unmonitorEvents()</code> を使用します。
-- DOM 要素のリスナーは  <code>getEventListeners()</code> を使用して取得します。
+- 特定のタイプのイベントは、 `monitorEvents()` を使用してリッスンします。
+- リッスンを停止するには  `unmonitorEvents()` を使用します。
+- DOM 要素のリスナーは  `getEventListeners()` を使用して取得します。
 - イベント リスナーに関する情報を取得するには、[Event Listeners Inspector] パネルを使用します。
 
 

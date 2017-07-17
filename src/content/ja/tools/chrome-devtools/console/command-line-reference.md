@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2015-08-02 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 #  コマンドライン API リファレンス {: .page-title }
@@ -74,7 +74,7 @@ description: TODO
 
 ![$('img').src の例](images/selector-img-src.png)
 
-注:  <code>$</code> を使用する jQuery などのライブラリを使用する場合、この機能は上書きされ、 <code>$</code> はそのライブラリの実装に対応します。
+注:  `$` を使用する jQuery などのライブラリを使用する場合、この機能は上書きされ、 `$` はそのライブラリの実装に対応します。
 
 ## $$(selector)
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: ウェブ デベロッパーは、カスタム要素を使用して、新しい HTML タグを定義したり、既存のタグを拡張したり、再利用可能なウェブ コンポーネントを作成したりすることができます。
 
-{# wf_updated_on: 2016-09-26 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2016-06-28 #}
 
 # カスタム要素 v1: 再利用可能なウェブ コンポーネント {: .page-title }
@@ -125,7 +125,7 @@ HTML で問題を解決できない場合は、問題を解決できるカスタ
 
 1. カスタム要素の名前には**ダッシュ（-）を含める必要があります**。つまり、`<x-tags>`、`<my-element>`、`<my-awesome-app>` はすべて有効な名前ですが、`<tabs>` と `<foo_bar>` は無効です。この要件によって、HTML パーサーは、通常の要素とカスタム要素を区別することができます。またこれによって、新しいタグが HTML に追加されたときの前方互換性が保証されます。
 2. 同じタグを複数回登録することはできません。登録しようとすると、`DOMException` がスローされます。ブラウザに新しいタグを通知したら、それで終了です。取り消すことはできません。
-3. HTML で自己終了が許可されるのは[数個の要素](https://html.spec.whatwg.org/multipage/syntax.html#void-elements)だけなので、カスタム要素を自己終了にすることはできません。必ず終了タグを記述してください（<code>&lt;app-drawer&gt;&lt;/app-drawer&gt;</code>）。
+3. HTML で自己終了が許可されるのは[数個の要素](https://html.spec.whatwg.org/multipage/syntax.html#void-elements)だけなので、カスタム要素を自己終了にすることはできません。必ず終了タグを記述してください（`<app-drawer></app-drawer>`）。
 
 ## 要素の拡張 {: #extend}
 
@@ -260,7 +260,7 @@ JavaScript でインスタンスを作成できます。
     console.assert(image.height === 200);
     
 
-注: 一部のブラウザは  <code>is=""</code> 構文の実装に反対しています。これは、ユーザー補助機能や進歩的な機能拡張にとって残念なことです。ネイティブ HTML 要素を拡張することが有用であるとお考えの場合は、<a href='https://github.com/w3c/webcomponents/issues/509'>Github</a> にあなたの意見を投稿してください。
+注: 一部のブラウザは  `is=""` 構文の実装に反対しています。これは、ユーザー補助機能や進歩的な機能拡張にとって残念なことです。ネイティブ HTML 要素を拡張することが有用であるとお考えの場合は、[Github](https://github.com/w3c/webcomponents/issues/509) にあなたの意見を投稿してください。
 
 ## カスタム要素応答 {: #reactions}
 

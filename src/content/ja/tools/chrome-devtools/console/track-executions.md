@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: コンソール API を使用すると、実行時間を測定したり、文の実行回数をカウントしたりすることができます。
 
-{# wf_updated_on:2015-05-11 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on:2015-04-13 #}
 
 #  実行の測定とカウント {: .page-title }
@@ -15,8 +15,8 @@ description: コンソール API を使用すると、実行時間を測定し�
 
 
 ### TL;DR {: .hide-from-toc }
-- コードの実行ポイント間の経過時間を追跡するには、 <code>console.time()</code> と <code>console.timeEnd()</code> を使用します。
-- 同じ文字列が関数に渡された回数をカウントするには、 <code>console.count()</code> を使用します。
+- コードの実行ポイント間の経過時間を追跡するには、 `console.time()` と `console.timeEnd()` を使用します。
+- 同じ文字列が関数に渡された回数をカウントするには、 `console.count()` を使用します。
 
 
 ##  実行時間の測定

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Latest Updates to the Credential Management API
 
-{# wf_updated_on: 2017-06-22 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2017-06-12 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
@@ -126,7 +126,7 @@ navigator.credentials.get({
 
 <aside class="warning">
   <strong>Warning:</strong>
-  パスワードが <code>PasswordCredential</code> オブジェクトに隠されることがなくなったため、カスタマイズされた <code>fetch()</code> 関数は不要となり、Chrome 62 で利用できなくなります。利用者の方はコードを<stromg>更新しなければなりません</stromg>。</aside>
+  パスワードが `PasswordCredential` オブジェクトに隠されることがなくなったため、カスタマイズされた `fetch()` 関数は不要となり、Chrome 62 で利用できなくなります。利用者の方はコードを<stromg>更新しなければなりません</stromg>。</aside>
 
 
 カスタマイズされた `fetch()` 関数を使っているかを検証するには、`PasswordCredential` オブジェクト、もしくは `FederatedCredential` オブジェクトを `credentials` プロパティの値として使っているかをご確認ください。例えば：

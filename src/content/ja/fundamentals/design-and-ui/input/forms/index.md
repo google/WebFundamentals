@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: モバイルでのフォーム入力は大変な作業です。最高のフォームとは、入力内容を最小限にしたフォームです。
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-04-30 #}
 
 # 最適なフォームの作成 {: .page-title }
@@ -95,7 +95,7 @@ description: モバイルでのフォーム入力は大変な作業です。最�
 
 ### TL;DR {: .hide-from-toc }
 - データを簡単に入力できるよう、最適な入力タイプを選択します。
--  <code>datalist</code> 要素を使用して、ユーザーの入力時に候補を表示します。
+-  `datalist` 要素を使用して、ユーザーの入力時に候補を表示します。
 
 
 ###  HTML5 入力タイプ
@@ -243,7 +243,7 @@ Warning: 入力タイプを選択する際は、ローカライズについて�
 
 [サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
-注:  <code>datalist</code> の値は候補として表示されますが、ユーザーは提示された内容以外も入力できます。
+注:  `datalist` の値は候補として表示されますが、ユーザーは提示された内容以外も入力できます。
 
 ##  入力項目に適切なラベルと名前を付ける
 
@@ -251,9 +251,9 @@ Warning: 入力タイプを選択する際は、ローカライズについて�
 
 
 ### TL;DR {: .hide-from-toc }
-- フォームの入力項目には必ず  <code>label</code> を使用して、フォーカスが当たってる項目が見えるようにします。
--  <code>placeholder</code> を使用して、期待する入力する内容を例示します。
-- ブラウザでフォームを自動補完するために、要素に既定の  <code>name</code> を使用し、 <code>autocomplete</code> 属性を含めます。
+- フォームの入力項目には必ず  `label` を使用して、フォーカスが当たってる項目が見えるようにします。
+-  `placeholder` を使用して、期待する入力する内容を例示します。
+- ブラウザでフォームを自動補完するために、要素に既定の  `name` を使用し、 `autocomplete` 属性を含めます。
 
 
 ###  ラベルの重要性
@@ -450,7 +450,7 @@ Warning: プレースホルダは、ユーザーが要素に入力を始める�
 </table>
 
 
-注:  <code>street-address</code> のみ、または  <code>address-line1</code> と  <code>address-line2</code> の両方を使用します。 <code>address-level1</code> と  <code>address-level2</code> は、住所形式に必要な場合にのみ使用します。
+注:  `street-address` のみ、または  `address-line1` と  `address-line2` の両方を使用します。 `address-level1` と  `address-level2` は、住所形式に必要な場合にのみ使用します。
 
 
 ###  `autofocus` 属性
@@ -474,7 +474,7 @@ Google のホームページなどのフォームで、ユーザーが特定の�
 
 
 ### TL;DR {: .hide-from-toc }
--  <code>pattern</code>、 <code>required</code>、 <code>min</code>、 <code>max</code> などのブラウザに組み込まれた検証属性を活用します。
+-  `pattern`、 `required`、 `min`、 `max` などのブラウザに組み込まれた検証属性を活用します。
 - より複雑な検証要件には、JavaScript と Constraints Validation API を使用します。
 - リアルタイムで検証エラーを表示し、ユーザーが無効なフォームを送信しようとした際は、修正が必要な項目をすべて表示します。
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: ページ上のアイテムの状態は、DevTools コンソールから調べます。
 
-{# wf_updated_on:2015-05-11 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on:2015-04-13 #}
 
 #  式の評価 {: .page-title }
@@ -20,7 +20,7 @@ DevTools コンソールでは、ページ内のアイテムの状態をその�
 ### TL;DR {: .hide-from-toc }
 - 式は、入力するだけで評価できます。
 - 要素はショートカットを使用して選択します。
-- DOM 要素と JavaScript ヒープ オブジェクトを調査するには  <code>inspect()</code> を使用します。
+- DOM 要素と JavaScript ヒープ オブジェクトを調査するには  `inspect()` を使用します。
 - 最近選択した要素とオブジェクトにアクセスするには、$0～4 を使用します。
 
 
