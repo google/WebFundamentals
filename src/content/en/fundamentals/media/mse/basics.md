@@ -106,13 +106,17 @@ Here are some things I'd recommend in a production usage of MSE related APIs:
   updating the `SourceBuffer`'s `mode`, `timestampOffset`, `appendWindowStart`,
   `appendWindowEnd`, or calling `appendBuffer()` or `remove()` on the
   `SourceBuffer`.
-- If you have multiple `SourceBuffer` instances added to your `MediaSource`,
-  ensure none of their `updating` values are true before calling
-  `MediaSource.endOfStream()` or updating the `MediaSource.duration`.
+- For all `SourceBuffer` instances added to your `MediaSource`, ensure none of
+  their `updating` values are true before calling `MediaSource.endOfStream()`
+  or updating the `MediaSource.duration`.
 - If `MediaSource.readyState` value is `ended`, calls like `appendBuffer()` and
   `remove()`, or setting `SourceBuffer.mode` or `SourceBuffer.timestampOffset`
   will cause this value to transition to `open`. This means you should be
   prepared to handle multiple `sourceopen` events.
+- When handling `HTMLMediaElement error` events, the contents of
+  [`MediaError.message`](https://googlechrome.github.io/samples/media/error-message.html)
+  can be useful to determine the root cause of the failure, especially for
+  errors that are hard to reproduce in test environments.
 
 ## Attach a MediaSource instance to a media element
 
