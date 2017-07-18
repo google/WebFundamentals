@@ -91,7 +91,7 @@ Grandes intersticiais de instalação de aplicativo (como promoções de página
 inteira que ocultam o conteúdo e incentivam o usuário a instalar um aplicativo)
  irritam os usuários e dificultam a realização de tarefas. Além disso, sites que usam intersticiais de instalação de aplicativos são 
 reprovados no
-[Google Mobile-Friendly Test](https://search.google.com/search-console/mobile-friendly),
+[Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly),
 o que pode afetar negativamente seus rankings de pesquisa.
 
 <div class="attempt-left">
@@ -371,7 +371,7 @@ Evite elementos grandes com largura fixa. Use
 exibido corretamente em uma
 [largura de janela de visualização](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) específica.
 Sites que forçam os usuários a navegar horizontalmente são reprovados no
-[Google Mobile-Friendly Test](https://search.google.com/search-console/mobile-friendly),
+[Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly),
 o que pode afetar negativamente suas classificações de pesquisa.
 
 ### Permita que imagens de produtos possam ser ampliadas

@@ -91,7 +91,7 @@ Los grandes insterticiales de instalación de app (p. ej., promociones que ocupa
 y llevan a los usuarios a instalar una app) les molestan a los usuarios y dificultan
 realizar tareas. Aparte de los usuarios molestos, los sitios que usan intersticiales de instalación de app
 no pasan la
-[Prueba de compatibilidad con dispositivos móviles de Google](https://search.google.com/search-console/mobile-friendly),
+[Prueba de compatibilidad con dispositivos móviles de Google](https://search.google.com/test/mobile-friendly),
 lo que puede afectar negativamente los rankings de búsqueda.
 
 <div class="attempt-left">
@@ -371,7 +371,7 @@ para aplicar distintos estilos para distintas pantallas. No crees contenido que
 solo se vea bien en un
 [ancho de ventana de visualización](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) en particular.
 Los sitios que obligan a los usuarios a desplazarse en forma horizontal no aprueban la
-[Prueba de compatibilidad con dispositivos móviles de Google](https://search.google.com/search-console/mobile-friendly),
+[Prueba de compatibilidad con dispositivos móviles de Google](https://search.google.com/test/mobile-friendly),
 lo cual puede impactar en forma negativa en sus rankings de búsqueda.
 
 ### Haz que las imágenes de producto sean expandibles

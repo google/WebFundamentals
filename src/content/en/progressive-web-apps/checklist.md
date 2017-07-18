@@ -65,7 +65,7 @@ on the this list and may prove helpful in easily testing sites.
             although manually checking can also be helpful.
           </li>
           <li>
-            Check the <a href="//search.google.com/search-console/mobile-friendly">
+            Check the <a href="//search.google.com/test/mobile-friendly">
             Mobile Friendly Test</a>
           </li>
         </ul>
