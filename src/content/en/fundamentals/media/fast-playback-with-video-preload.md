@@ -2,19 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Preload video and audio for faster playback.
 
-{# wf_published_on: 2017-07-05 #}
-{# wf_updated_on: 2017-07-05 #}
+{# wf_published_on: 2017-07-18 #}
+{# wf_updated_on: 2017-07-18 #}
 
 # Fast Playback with Video Preload {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
-
-<video controls controlsList="nodownload" muted playsinline style="width: 100%">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-preload-hero.webm#t=0.7"
-          type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-preload-hero.mp4#t=1"
-          type="video/mp4">
-</video>
 
 Faster playback means more people watching your video. That's a known fact.
 In this article I'll explore different techniques you can use to accelerate
@@ -22,6 +15,19 @@ your media playback by actively preloading resources depending on your use
 case.
 
 Note: Unless specified otherwise, this article also applies to the audio element.
+
+<figure>
+  <video controls controlsList="nodownload" muted playsinline style="width: 100%">
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-preload-hero.webm#t=1.1"
+            type="video/webm">
+    <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-preload-hero.mp4#t=1.1"
+            type="video/mp4">
+  </video>
+  <figcaption>
+    <p>Credits: copyright Blender Foundation | <a href="http://www.blender.org">www.blender.org </a>.</p>
+  </figcaption>
+</figure>
+
 
 ### TL;DR {: .hide-from-toc }
 
