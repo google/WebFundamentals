@@ -91,7 +91,7 @@ Success: 모바일 홈 페이지에서 사용자와 원하는 콘텐츠를 연�
 설치하도록 요청하는 전체 페이지 광고)는 사용자를 귀찮게 하며 작업 수행을
 어렵게 합니다. 사용자를 귀찮게 만들 뿐만 아니라, 앱 설치 삽입광고를 사용하는
 사이트는
-[Google 모바일 친화성 테스트](https://search.google.com/search-console/mobile-friendly)를
+[Google 모바일 친화성 테스트](https://search.google.com/test/mobile-friendly)를
 통과하지 못하며, 이는 사이트의 검색 순위에 부정적인 영향을 미칩니다.
 
 <div class="attempt-left">
@@ -370,7 +370,7 @@ Success: 경험을 향상시켜주는 사소한 것으로 모바일 사용자를
 사용하세요. 특정
 [뷰포트 너비](/web/fundamentals/design-and-ui/responsive/#set-the-viewport)로만
 잘 표시되는 콘텐츠는 만들지 마세요.
-사용자에게 가로 스크롤을 강제하는 사이트는 [Google 모바일 친화성 테스트](https://search.google.com/search-console/mobile-friendly)를
+사용자에게 가로 스크롤을 강제하는 사이트는 [Google 모바일 친화성 테스트](https://search.google.com/test/mobile-friendly)를
 통과하지 못하며, 이는 사이트의 검색
 순위에 부정적인 영향을 미칩니다.
 

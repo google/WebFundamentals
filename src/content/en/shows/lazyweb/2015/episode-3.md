@@ -56,7 +56,7 @@ Check to see if your site is mobile friendly. A recent article on the Google Web
 
 [http://googlewebmastercentral.blogspot.com/2014/11/helping-users-find-mobile-friendly-pages.html](http://googlewebmastercentral.blogspot.com/2014/11/helping-users-find-mobile-friendly-pages.html)
 
-[https://search.google.com/search-console/mobile-friendly](https://search.google.com/search-console/mobile-friendly)
+[https://search.google.com/test/mobile-friendly](https://search.google.com/test/mobile-friendly)
 
 ### GITTING UP TO SPEED
 

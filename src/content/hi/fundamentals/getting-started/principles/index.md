@@ -367,7 +367,7 @@ to apply different stylings for different screens. Don’t create content that
 only displays well at a particular
 [viewport width](/web/fundamentals/design-and-ui/responsive/#set-the-viewport).
 Sites that force users to horizontally scroll fail the
-[Google Mobile-Friendly Test](https://search.google.com/search-console/mobile-friendly){: .external },
+[Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly){: .external },
 which may negatively impact their search rankings.
 
 ### Make product images expandable
