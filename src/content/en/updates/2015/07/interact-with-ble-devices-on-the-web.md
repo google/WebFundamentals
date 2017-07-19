@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT.
 
-{# wf_updated_on: 2017-04-27 #}
+{# wf_updated_on: 2017-07-19 #}
 {# wf_published_on: 2015-07-21 #}
 {# wf_tags: news,iot,webbluetooth,physicalweb,origintrials #}
 {# wf_featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png #}
@@ -508,6 +508,7 @@ Windows 8.1+ and iOS will be supported as much as feasible by the platforms.
 
 ## Resources
 
+- Stack Overflow: [https://stackoverflow.com/questions/tagged/web-bluetooth](https://stackoverflow.com/questions/tagged/web-bluetooth)
 - Web Bluetooth Community: [https://plus.google.com/communities/108953318610326025178](https://plus.google.com/communities/108953318610326025178)
 - Chrome Feature Status: [https://www.chromestatus.com/feature/5264933985976320](https://www.chromestatus.com/feature/5264933985976320)
 - Implementation Bugs: [https://crbug.com/?q=component:Blink>Bluetooth](https://crbug.com/?q=component:Blink>Bluetooth)
