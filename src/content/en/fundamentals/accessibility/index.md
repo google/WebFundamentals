@@ -113,8 +113,7 @@ fixing the accessibility issue you improve the experience for everyone.
 Throughout this guide we'll refer to the [Web Content Accessibility Guidelines
 (WCAG) 2.0](https://www.w3.org/TR/WCAG20/){: .external }, a set of guidelines
 and best practices put together by accessibility experts to address what
-"accessibility" means in a methodical way. Several countries actually mandate
-the use of these guidelines in their web accessibility legal requirements.
+"accessibility" means in a methodical way.
 
 WCAG is organized around four principles often called by the acronym *POUR*:
 
