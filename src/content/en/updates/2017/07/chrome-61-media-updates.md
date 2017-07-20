@@ -54,6 +54,10 @@ snippet that shows you what Chrome is roughly doing behind the scenes.
       }
     });
 
+You may want to reduce the quality of the video stream when video track is
+disabled. It would be as simple as using the [Page Visibility API] as shown
+above to detect when page is hidden.
+
 And here are some restrictions:
 
 - This optimization only applies to videos with a [keyframe] distance < 5s.
@@ -68,6 +72,9 @@ When a video is playing in the viewport, rotating the device to landscape
 orientation will now fullscreen the video. Rotating the device to portrait puts
 the video back to windowed mode as you would expect.
 
+Note that you can implement manually this behaviour yourself (see [Mobile Web Video
+Playback] article).
+
 <figure>
   <img src="/web/updates/images/2017/07/auto-fullscreen-rotate.png"
        alt="Automatic video fullscreen when device is rotating">
@@ -75,7 +82,7 @@ the video back to windowed mode as you would expect.
 
 This magic behaviour only happens when:
 
-- device is an Android phone
+- device is an Android phone (not a tablet)
 - user's screen orientation is set to "Auto-rotate"
 - video size is at least 200x200px
 - video use native controls
@@ -83,10 +90,13 @@ This magic behaviour only happens when:
 - at least 75% of the video is visible (on-screen)
 - orientation rotates by 90 degrees (not 180 degrees)
 - there is no fullscreen element yet
+- screen is not locked using the Screen Orientation API
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=713233)
 
 {% include "comment-widget.html" %}
 
 [Media Source Extensions (MSE)]: /web/fundamentals/media/mse/seamless-playback
+[Page Visibility API]: https://www.w3.org/TR/page-visibility/
 [keyframe]: https://en.wikipedia.org/wiki/Key_frame#Video_compression
+[Mobile Web Video Playback]: /web/fundamentals/media/mobile-web-video-playback#fullscreen
