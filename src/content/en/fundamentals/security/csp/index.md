@@ -24,10 +24,12 @@ attacks, for example, bypass the same origin policy by tricking a site into
 delivering malicious code along with the intended content. This is a huge
 problem, as browsers trust all of the code that shows up on a page as being
 legitimately part of that page's security origin. The
-[XSS Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet) is an old but representative cross-section of the methods an attacker might use to violate this trust by injecting malicious code. If an attacker successfully injects _any_ code at
-all, it's pretty much game over: user session data is compromised and
-information that should be kept secret is exfiltrated to The Bad Guys. We'd
-obviously like to prevent that if possible.
+[XSS Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
+is an old but representative cross-section of the methods an attacker might use
+to violate this trust by injecting malicious code. If an attacker successfully
+injects _any_ code at all, it's pretty much game over: user session data is
+compromised and information that should be kept secret is exfiltrated to The Bad
+Guys. We'd obviously like to prevent that if possible.
 
 This overview highlights a defense that can significantly reduce the risk and
 impact of XSS attacks in modern browsers: Content Security Policy (CSP).
@@ -284,7 +286,8 @@ code if you do the work to move code into external resources.
 
 Inline style is treated in the same way: both the `style` attribute and `style`
 tags should be consolidated into external stylesheets to protect against a
-variety of [surprisingly clever](http://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html)
+variety of [surprisingly
+clever](http://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html)
 data exfiltration methods that CSS enables.
 
 If you must have inline script and style, you can enable it
@@ -378,7 +381,8 @@ would be better written as:
     nifty application of dynamic programming, but comes at the risk of
     evaluating malicious text. Some frameworks support CSP out of the box,
     falling back to a robust parser in the absence of `eval`.
-    [AngularJS's ng-csp directive](https://docs.angularjs.org/api/ng/directive/ngCsp) is a good example of this.
+    [AngularJS's ng-csp directive](https://docs.angularjs.org/api/ng/directive/ngCsp)
+    is a good example of this.
 
 However, a better choice would be a templating language that offers
 precompilation ([Handlebars does](http://handlebarsjs.com/precompilation.html),
