@@ -1,0 +1,92 @@
+project_path: /web/_project.yaml
+book_path: /web/updates/_book.yaml
+description: A round up of the media updates in Chrome 61.
+
+{# wf_updated_on: 2017-07-17 #}
+{# wf_published_on: 2017-07-17 #}
+{# wf_tags: news,chrome61,media #}
+{# wf_featured_image: /web/updates/images/generic/animations.png #}
+{# wf_featured_snippet: Background video track optimization and automatic video fullscreen when device is rotating features are there! #}
+
+# Media Updates in Chrome 61 {: .page-title }
+
+{% include "web/_shared/contributors/beaufortfrancois.html" %}
+
+- Chrome now [disables video tracks when a MSE video is played in the
+  background](#background-video-track-optimization) to optimize performance. 
+- A video will [automatically go fullscreen when device is
+  rotating](#auto-fullscreen-rotate).
+
+## Background video track optimization (MSE only) {: #background-video-track-optimization}
+
+To improve battery life, Chrome now disables video tracks when the video is
+played in the background if this one uses [Media Source Extensions (MSE)].
+
+You can inspect these changes by going to the `chrome://media-internals` page,
+and filter for the "info" property. When the tab containing a playing video
+becomes inactive, you'll see a message like `Selected video track: []`
+indicating that the video track has been disabled. When tab becomes active
+again, video track is re-enabled automatically.
+
+<figure>
+  <img src="/web/updates/images/2017/07/media-internals.png"
+       alt="Log panel in the chrome://media-internals page">
+  <figcaption>
+    <b>Figure 1.</b>
+    Log panel in the <i>chrome://media-internals</i> page
+  </figcaption>
+</figure>
+
+For those who want to understand what is happening, here's some JavaScript code
+snippet that shows you what Chrome is roughly doing behind the scenes.
+
+    var video = document.querySelector('video');
+    var selectedVideoTrackIndex;
+
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        // Disable video track when page is hidden.
+        selectedVideoTrackIndex = video.videoTracks.selectedIndex;
+        video.videoTracks[selectedVideoTrackIndex].selected = false;
+      } else {
+        // Re-enable video track when page is not hidden anymore.
+        video.videoTracks[selectedVideoTrackIndex].selected = true;
+      }
+    });
+
+And here are some restrictions:
+
+- This optimization only applies to videos with a [keyframe] distance < 5s.
+- If the video doesn't contain any audio tracks, the video will be
+  automatically paused when played in the background.
+
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663999)
+
+## Automatic video fullscreen when device is rotating {: #auto-fullscreen-rotate }
+
+When a video is playing in the viewport, rotating the device to landscape
+orientation will now fullscreen the video. Rotating the device to portrait puts
+the video back to windowed mode as you would expect.
+
+<figure>
+  <img src="/web/updates/images/2017/07/auto-fullscreen-rotate.png"
+       alt="Automatic video fullscreen when device is rotating">
+</figure>
+
+This magic behaviour only happens when:
+
+- device is an Android phone
+- user's screen orientation is set to "Auto-rotate"
+- video size is at least 200x200px
+- video use native controls
+- video is currently playing
+- at least 75% of the video is visible (on-screen)
+- orientation rotates by 90 degrees (not 180 degrees)
+- there is no fullscreen element yet
+
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=713233)
+
+{% include "comment-widget.html" %}
+
+[Media Source Extensions (MSE)]: /web/fundamentals/media/mse/seamless-playback
+[keyframe]: https://en.wikipedia.org/wiki/Key_frame#Video_compression
