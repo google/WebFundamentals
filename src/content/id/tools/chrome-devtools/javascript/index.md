@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Mulailah men-debug JavaScript dengan menggunakan Chrome DevTools dalam tutorial interaktif ini.
 
-{# wf_updated_on: 2017-01-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2017-01-04 #}
 
 <style>
@@ -107,7 +107,7 @@ semua kejadian `click`. Bila *ada* simpul yang diklik, dan simpul itu memiliki p
 DevTools secara otomatis akan berhenti sementara pada baris pertama penangan
 `click` simpul itu.
 
-Catatan: Ini cuma salah satu dari sekian banyak tipe breakpoint yang ditawarkan DevTools.
+Note: Ini cuma salah satu dari sekian banyak tipe breakpoint yang ditawarkan DevTools.
 Breakpoint yang harus Anda gunakan bergantung pada masalah yang sedang Anda debug.
 
 [resume]: /web/tools/chrome-devtools/images/resume-script-execution.png

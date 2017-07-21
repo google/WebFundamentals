@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: This is the page description placed in the head.
 
-{# wf_updated_on: 2017-03-21 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-13 #}
 
 # Writing an Update or Case Study {: .page-title }
@@ -66,7 +66,7 @@ be an absolute page on DevSite.
 
 Images should be 2x1, ideally 1000px by 500px.
 
-**Looing for a generic image?** Check out the [generic images](https://github.com/google/WebFundamentals/tree/master/src/content/en/updates/images/generic) folder.
+**Looking for a generic image?** Check out the [generic images](https://github.com/google/WebFundamentals/tree/master/src/content/en/updates/images/generic) folder.
 
 ### Featured Snippet
 

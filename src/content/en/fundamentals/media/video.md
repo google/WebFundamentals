@@ -4,6 +4,7 @@ description: Learn about the simplest ways to add video to your site and ensure 
 
 {# wf_updated_on: 2017-06-28 #}
 {# wf_published_on: 2014-04-15 #}
+{# wf_blink_components: Blink>Media #}
 
 # Video {: .page-title }
 
@@ -23,7 +24,7 @@ Read on to find the simplest way to add video to your site and ensure users get
 the best possible experience on any device.
 
 
-## Add a video 
+## Add a video
 
 ### TL;DR {: .hide-from-toc }
 - Use the `video` element to load, decode, and play video on your site.
@@ -46,7 +47,7 @@ Add the `video` element to load, decode, and play video in your site:
     <video src="chrome.webm" type="video/webm">
         <p>Your browser does not support the video element.</p>
     </video>
-    
+
 
 ### Specify multiple file formats
 
@@ -90,7 +91,7 @@ Using your mobile browser developer tools, compare network activity
 [with type attributes](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html)
 and [without type attributes](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html).
 
-Also check the response headers in your browser developer tools to 
+Also check the response headers in your browser developer tools to
 [ensure your server reports the right MIME type](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types);
 otherwise video source type checks won't work.
 
@@ -111,7 +112,7 @@ specify:
 
 
     <source src="video/chrome.webm#t=5,10" type="video/webm">
-    
+
 
 You can also use the Media Fragments API to deliver multiple views on the same
 video&ndash;like cue points in a DVD&ndash;without having to encode and
@@ -138,7 +139,7 @@ video or start playback.
     <video poster="poster.jpg" ...>
       ...
     </video>
-    
+
 
 A poster can also be a fallback if the video `src` is broken or if none of the
 video formats supplied are supported. The only downside to poster images is
@@ -170,7 +171,7 @@ image&ndash;we've made the poster image grayscale to prove it's not the video:
 <div style="clear:both;"></div>
 
 
-## Provide alternatives for legacy platforms 
+## Provide alternatives for legacy platforms
 
 Not all video formats are supported on all platforms. Check which formats
 are supported on the major platforms and make sure your video works in each
@@ -266,7 +267,7 @@ In JavaScript, use the video's `currentSrc` property to return the source used.
 
 
 
-## Size videos correctly 
+## Size videos correctly
 
 When it comes to keeping your users happy, file size is important.
 
@@ -427,22 +428,22 @@ fullscreening of content, or the page.
 To full screen an element, like a video:
 
     elem.requestFullScreen();
-    
+
 
 To full screen the entire document:
 
     document.body.requestFullScreen();
-    
+
 
 You can also listen for fullscreen state changes:
 
     video.addEventListener("fullscreenchange", handler);
-    
+
 
 Or, check to see if the element is currently in fullscreen mode:
 
     console.log("In full screen mode: ", video.displayingFullscreen);
-    
+
 
 You can also use the CSS `:fullscreen` pseudo-class to change the way
 elements are displayed in fullscreen mode.
@@ -517,7 +518,7 @@ A track file consists of timed "cues" in WebVTT format:
 
 ### Video element attributes
 
-For the complete list of video element attributes and their definitions, see 
+For the complete list of video element attributes and their definitions, see
 [the video element spec](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 
 <table>
@@ -747,7 +748,7 @@ page on the Mozilla Developer Network for a complete listing.
     </tr>
     <tr>
       <td data-th="Event"><code>loadedmetadata</code></td>
-      <td data-th="Description">Fired when browser finishes loading metadata for video: 
+      <td data-th="Description">Fired when browser finishes loading metadata for video:
       duration, dimensions, and text tracks.</td>
     </tr>
   </tbody>

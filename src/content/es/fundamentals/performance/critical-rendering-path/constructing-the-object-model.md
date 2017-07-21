@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Obtén información acerca de cómo el navegador construye los árboles del DOM y el CSSOM.
 
-{# wf_updated_on: 2014-09-11 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Construcción del modelo de objetos {: .page-title }
@@ -44,7 +44,7 @@ Cada vez que el navegador procesa el lenguaje de marcado HTML, realiza todos los
 
 <img src="images/dom-timeline.png"  alt="Seguimiento de la construcción del DOM en DevTools">
 
-Nota: Supondremos que conoces algo de Chrome DevTools; es decir, que sabes capturar una cascada de red o registrar una línea de tiempo. Si necesitas un actualizador rápido, lee la <a href='/web/tools/chrome-devtools/'>documentación de Chrome DevTools</a>; si recién comienzas a usar DevTools, te recomendamos realizar el curso <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> (descubre DevTools) de Codeschool.
+Note: Supondremos que conoces algo de Chrome DevTools; es decir, que sabes capturar una cascada de red o registrar una línea de tiempo. Si necesitas un actualizador rápido, lee la <a href='/web/tools/chrome-devtools/'>documentación de Chrome DevTools</a>; si recién comienzas a usar DevTools, te recomendamos realizar el curso <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> (descubre DevTools) de Codeschool.
 
 Si abres Chrome DevTools y registras una línea de tiempo mientras se carga la página, puedes ver el tiempo necesario para este paso. En el ejemplo anterior, la conversión de un fragmento de HTML en un árbol del DOM tardó ~5 ms. Respecto de una página más grande, este proceso puede durar mucho más. Cuando creas animaciones fluidas, puede convertirse fácilmente en un cuello de botella si el navegador debe procesar grandes cantidades de HTML.
 

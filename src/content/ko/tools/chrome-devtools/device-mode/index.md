@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome의 Device Mode에서 가상 기기를 사용하여 모바일 우선 웹사이트를 빌드할 수 있습니다.
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Device Mode로 휴대기기 시뮬레이션 {: .page-title }
@@ -11,7 +11,7 @@ description: Chrome의 Device Mode에서 가상 기기를 사용하여 모바일
 
 Chrome DevTools의 Device Mode를 사용하면 모바일 우선의 완벽한 응답형 웹사이트를 빌드할 수 있습니다. 이 모드를 사용하여 다양한 기기와 기능을 시뮬레이션하는 방법을 알아보세요.
 
-경고: Device Mode는 휴대기기에서 보이는 사이트를 매우 근사하게 보여주지만
+Warning: Device Mode는 휴대기기에서 보이는 사이트를 매우 근사하게 보여주지만
 전체 그림을 보려면
 실제 기기에서 테스트해야 합니다. 예를 들어 DevTools는 휴대기기의
 성능 특성을 에뮬레이트할 수 없습니다.

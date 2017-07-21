@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Usa el panel Styles en Chrome DevTools para inspeccionar y modificar los estilos de CSS asociados a un elemento.
 
-{# wf_updated_on: 2016-02-25 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Editar estilos {: .page-title }
@@ -112,7 +112,7 @@ Haz clic en un espacio vacío dentro de una regla de CSS editable para crear una
 Escríbela o pega la CSS en el subpanel **Styles**. Las propiedades y sus 
 valores se analizan e ingresan en los campos correctos.
 
-Nota: para habilitar o inhabilitar una declaración de estilo, selecciona o desmarca la casilla de verificación al lado de ella.
+Note: para habilitar o inhabilitar una declaración de estilo, selecciona o desmarca la casilla de verificación al lado de ella.
 
 ## Agregar una regla de estilo
 

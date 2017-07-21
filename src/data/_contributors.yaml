@@ -120,6 +120,22 @@ beaufortfrancois:
   description:
     en: Dives into Chromium source code
 
+lucaberton:
+  name:
+    given: Luca
+    family: Berton
+  org:
+    name: Independent
+    unit: DevOps
+  country: IT
+  role:
+    - contributor
+  homepage: 'http://mrevolution.eu'
+  google: +LucaBerton
+  twitter: mrevolution85
+  github: lucab85
+  email: mr.evolution85@gmail.com
+
 ericbidelman:
   name:
     given: Eric
@@ -188,12 +204,12 @@ mathiasbynens:
   role:
     - author
   homepage: https://mathiasbynens.be/
-  google: +mathiasbynens
   twitter: mathias
+  github: mathiasbynens
   email: mths@google.com
   lanyrd: mathias
   description:
-    en: developer advocate on the V8 team
+    en: V8 developer advocate
 
 owencm:
   name:
@@ -546,6 +562,38 @@ ilyagrigorik:
   twitter: igrigorik
   description:
     en: Ilya is a Developer Advocate and Web Perf Guru
+
+jgruber:
+  name:
+    given: Jakob
+    family: Gruber
+  org:
+    name: Google
+    unit: V8
+  country: DE
+  role:
+    - author
+  twitter: schuay
+  github: schuay
+  email: jgruber@google.com
+  description:
+    en: Jakob is an engineer working on V8
+
+yangguo:
+  name:
+    given: Yang
+    family: Guo
+  org:
+    name: Google
+    unit: V8
+  country: DE
+  role:
+    - author
+  twitter: hashseed
+  github: hashseed
+  email: yangguo@google.com
+  description:
+    en: Yang is an engineer working on V8
 
 umarhansa:
   name:

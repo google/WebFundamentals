@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Ada dua server yang terlibat dalam pengiriman pesan: server Anda dan server perpesanan pihak ketiga. Anda bisa melacak siapa yang mengirim pesan. Server pihak ketiga menangani perutean.
 
 
-{# wf_updated_on: 2016-06-30 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Mengirim Pesan {: .page-title }
@@ -98,7 +98,7 @@ service worker. Isinya adalah sebagai berikut:
   perlu digunakan developer saat mengenkripsi pesan yang ingin dikirimkan ke
   layanan push itu.
 
-Catatan: Di banyak spesifikasi yang relevan, byte disebut oktet. Istilah ini digunakan karena sistem lama dan sistem komunikasi dengan panjang byte yang tidak selalu 8 bit.
+Note: Di banyak spesifikasi yang relevan, byte disebut oktet. Istilah ini digunakan karena sistem lama dan sistem komunikasi dengan panjang byte yang tidak selalu 8 bit.
 
 ## Membuat pesan {: #creating-the-message }
 
@@ -181,7 +181,7 @@ pada Meminta izin dan memasukkan pengguna dalam kepelangganan. Bagian kedua
 (`p256ecdsa=applicationServerKey`) adalah kunci publik yang dibuat oleh server aplikasi Anda.
 Keduanya harus berbasis enkode URL base64. Perhatikan koma yang memisahkan dua bagian Crypto-Key.
 
-Catatan: Bug di Chrome 52 mensyaratkan titik koma digunakan untuk memisahkan bagian Cyrpto-Key, sebagai ganti koma.
+Note: Bug di Chrome 52 mensyaratkan titik koma digunakan untuk memisahkan bagian Cyrpto-Key, sebagai ganti koma.
 
 ### Header Authorization {: #authorization-header }
 

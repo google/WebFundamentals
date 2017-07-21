@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: La Payment Request API es para pagos rápidos y fáciles en la web.
 
 {# wf_published_on: 2016-07-25 #}
-{# wf_updated_on: 2016-12-06 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # Payment Request API: una guía de integración {: .page-title }
 
@@ -324,7 +324,7 @@ Como alternativa, puedes usar "entrega" o "recolección" en lugar de "envío" en
 
 <div style="clear:both;"></div>
 
-Nota: <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> tiene que ser <code>undefined</code> o un conjunto vacío tras la inicialización para recibir el evento <code>shippingaddresschange</code>. De lo contrario, el evento no se ejecutará.
+Note: <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> tiene que ser <code>undefined</code> o un conjunto vacío tras la inicialización para recibir el evento <code>shippingaddresschange</code>. De lo contrario, el evento no se ejecutará.
 
 
     var options = {
@@ -350,7 +350,7 @@ Para rechazar una dirección por encontrarse, por ejemplo, en una zona no admiti
 
 <div style="clear:both;"></div>
 
-Nota: Resolver el evento <code>shippingaddresschange</code> y dejar <code>details.shippingOptions</code> como un conjunto vacío también significa el rechazo de una dirección (en otras palabras no puedes realizar envíos a esa ubicación). Asegúrate siempre de que las opciones de envío estén actualizadas y coincidan con la dirección proporcionada por el usuario.
+Note: Resolver el evento <code>shippingaddresschange</code> y dejar <code>details.shippingOptions</code> como un conjunto vacío también significa el rechazo de una dirección (en otras palabras no puedes realizar envíos a esa ubicación). Asegúrate siempre de que las opciones de envío estén actualizadas y coincidan con la dirección proporcionada por el usuario.
 
 
     request.addEventListener('shippingaddresschange', e => {
@@ -447,7 +447,7 @@ Si tu servicio permite a los usuarios seleccionar opciones de envío, como “fr
     var request = new PaymentRequest(methodData, details, options);
 
 
-Nota: Como indicamos antes, <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> debe ser <code>undefined</code> o una matriz vacía luego de la inicialización para recibir el evento <code>shippingaddresschange</code>. Establece este valor en la inicialización solo cuando las opciones de envío no cambien en función de la dirección (como el envío internacional gratuito).
+Note: Como indicamos antes, <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> debe ser <code>undefined</code> o una matriz vacía luego de la inicialización para recibir el evento <code>shippingaddresschange</code>. Establece este valor en la inicialización solo cuando las opciones de envío no cambien en función de la dirección (como el envío internacional gratuito).
 
 La modificación de las opciones de envío puede implicar precios diferentes. Para agregar el costo de envío y modificar el precio total, puedes agregar un receptor de eventos para el evento `shippingoptionchange`, que activa la selección de una opción por parte del usuario, de modo que puedas ejecutar un examen programático de los datos de la opción. También puedes cambiar el costo de envío según la dirección de envío.
 
@@ -562,7 +562,7 @@ Como la Payment Request API es una función emergente, muchos navegadores no la 
       // Continue with existing form based solution
     }
 
-Nota: Es mejor tener un vínculo normal con el proceso regular de finalización de pago. Luego usa JavaScript para evitar la navegación si PaymentRequest es compatible.
+Note: Es mejor tener un vínculo normal con el proceso regular de finalización de pago. Luego usa JavaScript para evitar la navegación si PaymentRequest es compatible.
 
 ## Todo junto {: #putting-them-together}
 

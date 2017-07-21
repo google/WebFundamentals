@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: El editor de código es tu principal herramienta de programación; se usa para escribir y guardar líneas de código. Escribe código más eficaz y de manera más rápida aprendiendo las combinaciones de teclas de tu editor e instalando complementos claves.
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-05-28 #}
 
 # Configura tu editor {: .page-title }
@@ -27,7 +27,7 @@ de paquetes que facilita la instalación de complementos y la adición de funcio
 
 Actualmente, se ofrecen dos opciones de descarga para Sublime Text: la [versión 2](http://www.sublimetext.com/2) o la [versión 3](http://www.sublimetext.com/3). La versión 3 es bastante estable y te brindará acceso a los paquetes que no están disponibles en Sublime Text 2; no obstante, la versión 2 puede ser más confiable.
 
-Nota: La <a href='http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/'>entrada del blog</a> de Rob Dodson sobre cómo familiarizarse con Sublime y apreciarlo es una gran referencia para aprovechar tu editor al máximo. Los conceptos son relevantes para cualquier editor de texto, no solo Sublime.
+Note: La <a href='http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/'>entrada del blog</a> de Rob Dodson sobre cómo familiarizarse con Sublime y apreciarlo es una gran referencia para aprovechar tu editor al máximo. Los conceptos son relevantes para cualquier editor de texto, no solo Sublime.
 
 ## ¿Por qué usar un administrador de paquetes?
 
@@ -106,7 +106,7 @@ Agrega un marcador al medianil cuando se realice un cambio en el archivo.
 
 ### Gutter Color
 
-Nota: Solo está disponible en Sublime Text 3.
+Note: Solo está disponible en Sublime Text 3.
 
 Gutter Color exhibe una muestra pequeña del color junto a tu CSS.
 

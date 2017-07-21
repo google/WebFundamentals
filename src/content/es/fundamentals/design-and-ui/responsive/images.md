@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Una imagen vale más que mil palabras y las imágenes son parte integral de las páginas. Sin embargo, a menudo también cuentan para la mayoría de los bytes descargados.  Con el diseño web adaptable, no solo nuestros diseños pueden cambiar según las características del dispositivo: también lo pueden hacer las imágenes.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Imágenes {: .page-title }
@@ -294,7 +294,7 @@ de manera considerable.
 
 [Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html){: target="_blank" .external }
 
-Advertencia: Ten precaución con la técnica de compresión, ya que requiere más memoria y capacidad de decodificación. Cambiar el tamaño de imágenes grandes en pantallas más pequeñas consume muchos recursos y puede resultar especialmente tedioso en dispositivos de gama baja, donde la memoria y la capacidad de procesamiento son limitadas.
+Warning: Ten precaución con la técnica de compresión, ya que requiere más memoria y capacidad de decodificación. Cambiar el tamaño de imágenes grandes en pantallas más pequeñas consume muchos recursos y puede resultar especialmente tedioso en dispositivos de gama baja, donde la memoria y la capacidad de procesamiento son limitadas.
 
 #### Reemplazo de imágenes de JavaScript
 

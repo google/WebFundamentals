@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Anda bisa menganimasikan dengan CSS atau JavaScript. Mana yang harus Anda gunakan, dan mengapa?
 
-{# wf_updated_on: 2016-08-25 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Animasi CSS Versus JavaScript {: .page-title }
@@ -79,7 +79,7 @@ JavaScript yang diperlukan untuk mendengarkan akhir transisi terlihat seperti in
 
 Selain menggunakan transisi CSS, Anda juga bisa menggunakan animasi CSS, yang memberikan Anda kontrol lebih banyak terhadap keyframe, durasi dan iterasi animasi individu.
 
-Catatan: Jika Anda baru dalam dunia animasi, keyframe adalah istilah lama dari animasi yang digambar tangan. Animator akan membuat bingkai khusus untuk bagian dari tindakan, disebut bingkai kunci, yang akan merekam beberapa hal seperti bagian paling ekstrem dari beberapa gerakan, dan kemudian mereka akan menggambar semua bingkai secara tersendiri di antara keyframe. Kita menjalankan proses yang sama saat ini dengan animasi CSS, kita menginstruksikan browser tentang nilai yang harus dimiliki properti CSS pada titik tertentu, dan keyframe mengisi celahnya.
+Note: Jika Anda baru dalam dunia animasi, keyframe adalah istilah lama dari animasi yang digambar tangan. Animator akan membuat bingkai khusus untuk bagian dari tindakan, disebut bingkai kunci, yang akan merekam beberapa hal seperti bagian paling ekstrem dari beberapa gerakan, dan kemudian mereka akan menggambar semua bingkai secara tersendiri di antara keyframe. Kita menjalankan proses yang sama saat ini dengan animasi CSS, kita menginstruksikan browser tentang nilai yang harus dimiliki properti CSS pada titik tertentu, dan keyframe mengisi celahnya.
 
 Misalnya, Anda bisa menganimasikan kotak dengan cara yang sama seperti transisi, namun menganimasikannya tanpa interaksi pengguna seperti klik, dan dengan pengulangan tak terbatas. Anda juga bisa mengubah beberapa properti sekaligus:
 

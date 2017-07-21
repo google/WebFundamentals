@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Los usuarios notan si los sitios y las apps no se ejecutan correctamente, por eso es fundamental optimizar el rendimiento de la representación.
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-20 #}
 
 # Rendimiento de la representación {: .page-title }
@@ -95,7 +95,7 @@ navegador la omite y continúa con la composición.
 Esta versión final es la más económica y la ideal para los puntos de presión alta
 del ciclo de vida de la app, como las animaciones o el desplazamiento.
 
-Nota: Si deseas saber cuál de las tres versiones anteriores que cambia cualquier propiedad determinada de las CSS se desencadenará, visita [Desencadenadores de CSS](https://csstriggers.com). Y si deseas aprender rápidamente a realizar animaciones de alto rendimiento, lee la sección sobre [cómo cambiar las propiedades exclusivas del compositor](stick-to-compositor-only-properties-and-manage-layer-count).
+Note: Si deseas saber cuál de las tres versiones anteriores que cambia cualquier propiedad determinada de las CSS se desencadenará, visita [Desencadenadores de CSS](https://csstriggers.com). Y si deseas aprender rápidamente a realizar animaciones de alto rendimiento, lee la sección sobre [cómo cambiar las propiedades exclusivas del compositor](stick-to-compositor-only-properties-and-manage-layer-count).
 
 El rendimiento es el arte de evitar trabajo y de realizar el trabajo lo más
 eficientemente posible. En muchos casos, se trata de trabajar junto con el navegador y no

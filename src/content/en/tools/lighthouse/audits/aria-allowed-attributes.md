@@ -12,6 +12,8 @@ description: Reference documentation for the "Element aria-* Attributes Are Allo
 Invalid role-attribute combinations can disable the accessibility of your
 page.
 
+See [Introduction to ARIA](/web/fundamentals/accessibility/semantics-aria/) for more information.
+
 ## How to pass the audit {: #how }
 
 <<_shared/query.md>>

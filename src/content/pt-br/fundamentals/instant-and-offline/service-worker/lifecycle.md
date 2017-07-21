@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Uma análise detalhada do ciclo de vida dos service workers.
 
-{# wf_updated_on: 2016-09-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-29 #}
 
 # O ciclo de vida do Service Worker {: .page-title }
@@ -35,7 +35,7 @@ armazenamento, pode facilmente terminar com duas abas tendo opiniões diferentes
 sobre como gerenciar o armazenamento compartilhado. Isso pode gerar erros, ou
 pior: perda de dados.
 
-Atenção: os usuários odeiam perda de dados. Eles ficam extremamente desapontados.
+Warning: os usuários odeiam perda de dados. Eles ficam extremamente desapontados.
 
 ## O primeiro service worker
 
@@ -641,13 +641,13 @@ Na demonstração acima, mantenho uma lista de caches que espero que estejam lá
 evento `activate`, me livro de todo o resto, o que remove o antigo
 cache `static-v1`.
 
-Atenção: você pode não estar atualizando a versão antiga. Pode ser um service worker de muitas versões atrás.
+Warning: você pode não estar atualizando a versão antiga. Pode ser um service worker de muitas versões atrás.
 
 Se você passar uma promessa `event.waitUntil()`, ele carregará em buffer os eventos funcionais
 (`fetch`, `push`, `sync` etc) até a promessa ser processada. Então, quando o evento `fetch`
 dispara, a ativação está completa.
 
-Atenção: a API de armazenamento em cache é o "armazenamento de origem" (como localStorage e
+Warning: a API de armazenamento em cache é o "armazenamento de origem" (como localStorage e
 IndexedDB). Se você tem muitos sites na mesma origem (por exemplo,
 `yourname.github.io/myapp`) tome cuidado para não excluir o cache dos outros
 sites. Para evitar isso, dê ao cache um nome com prefixo único relacionado ao site atual,
@@ -683,7 +683,7 @@ worker. Por exemplo, usar `skipWaiting()` após uma interação do usuário.
 Como com `clients.claim()`, é uma corrida, então você só verá a vaca se o novo service
 worker buscar, instalar e ativar antes de a página tentar carregar a imagem.
 
-Atenção: `skipWaiting()` significa que o seu novo service worker provavelmente controla
+Warning: `skipWaiting()` significa que o seu novo service worker provavelmente controla
 páginas que foram carregadas com uma versão antiga. Isso quer dizer que algumas buscas
 da sua página serão gerenciadas pelo service worker antigo, mas o novo service
 worker gerenciará as buscas seguintes. Se isso pode dar problema, não

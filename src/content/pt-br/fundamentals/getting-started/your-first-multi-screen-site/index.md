@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A Web pode ser acessada por diversos tipos de dispositivos, desde celulares com pequenas telas até televisores com grandes telas. Cada dispositivo inclui seus próprios benefícios e limitações. Como um desenvolvedor Web, você deve oferecer suporte a todos os tipos de dispositivos.
 
-{# wf_updated_on: 2015-10-05 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2013-12-31 #}
 
 # Seu Primeiro Site para Vários Dispositivos {: .page-title }
 
-Atenção: Este artigo não é atualizado há algum tempo e pode não refletir a realidade. Confira o curso gratuito de [Web design responsivo](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) no Udacity.
+Warning: Este artigo não é atualizado há algum tempo e pode não refletir a realidade. Confira o curso gratuito de [Web design responsivo](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) no Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
@@ -575,7 +575,7 @@ Isso proporciona uma interrupção clara e consistente.
 
 ## Conclusão
 
-Sucesso: Ao ler isto, você terá criado sua
+Success: Ao ler isto, você terá criado sua
 primeira página de destino de produto simples que funciona em diversos tipos de dispositivos,
 formatos e tamanhos de tela.
 

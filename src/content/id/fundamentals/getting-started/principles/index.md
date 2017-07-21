@@ -91,7 +91,7 @@ Pengantara pemasangan aplikasi besar (mis. promosi selayar-penuh yang menyembuny
 dan meminta pengguna untuk memasang aplikasi) menjengkelkan pengguna dan mempersulit saat
 melakukan tugas. Selain menjengkelkan pengguna, situs yang menggunakan pengantara pemasangan aplikasi
 tidak akan lolos
-[Uji Ramah Google Seluler](https://search.google.com/search-console/mobile-friendly),
+[Uji Ramah Google Seluler](https://search.google.com/test/mobile-friendly),
 yang bisa berdampak negatif terhadap peringkat penelusuran mereka.
 
 <div class="attempt-left">
@@ -371,7 +371,7 @@ untuk menerapkan penataan gaya yang berbeda untuk layar berbeda. Jangan membuat 
 hanya terlihat baik pada
 [lebar tampilan yang terlihat](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) tertentu.
 Situs yang memaksa pengguna untuk gulir secara horizontal tidak akan lolos
-[Uji Ramah-Google Seluler](https://search.google.com/search-console/mobile-friendly),
+[Uji Ramah-Google Seluler](https://search.google.com/test/mobile-friendly),
 yang bisa berdampak negatif terhadap peringkat penelusuran.
 
 ### Membuat gambar produk yang bisa diperbesar

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: サーバーでの HTTPS の有効化は、ウェブページのセキュリティを保護するために不可欠です。 
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-27 #}
 
 # サーバーでの HTTPS の有効化 {: .page-title }
@@ -326,7 +326,7 @@ Chris Palmer は、[Chrome Dev Summit 2014 で HTTPS と HTTP/2 のパフォー�
 
 検索エンジンは HTTPS に移行しているため、HTTPS に移行すると、今より多くのリファラー ヘッダーを目にすることになるでしょう。
 
-警告: [HTTP RFC](https://tools.ietf.org/html/rfc2616#section-15.1.3) によると、参照ページがセキュアなプロトコルで転送される場合、クライアントは、（非セキュアな）HTTP リクエストにリファラー ヘッダー項目を含めることは**できません**。
+Warning: [HTTP RFC](https://tools.ietf.org/html/rfc2616#section-15.1.3) によると、参照ページがセキュアなプロトコルで転送される場合、クライアントは、（非セキュアな）HTTP リクエストにリファラー ヘッダー項目を含めることは**できません**。
 
 ###  広告収入
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Layar sentuh tersedia pada semakin banyak perangkat, dari ponsel hingga layar desktop. Aplikasi Anda harus merespons setiap sentuhan secara intuitif dan indah.
 
-{# wf_updated_on: 2014-01-06 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-01-01 #}
 
 # Menambahkan Sentuhan Ke Situs Anda {: .page-title }
@@ -49,7 +49,7 @@ setelah diketuk.
 Pertimbangkan dengan hati-hati gaya yang Anda setel dan bagaimana mereka akan terlihat oleh pengguna setelah
 menyelesaikan sentuhan mereka.
 
-Catatan: Tag anchor dan tombol mungkin memiliki perilaku berbeda
+Note: Tag anchor dan tombol mungkin memiliki perilaku berbeda
 di browser yang berbeda, jadi asumsikan dalam beberapa kasus **hover**
 akan aktif dan di kejadian lainnya **focus** yang akan aktif.
 
@@ -195,7 +195,7 @@ Berikut adalah contoh dari mendengarkan untuk memulai interaksi.
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
 
-Catatan: Karena desain dari API, PointerEvents hanya memerlukan kejadian
+Note: Karena desain dari API, PointerEvents hanya memerlukan kejadian
 `pointerdown` tunggal untuk menangani kejadian mouse dan sentuh.
 
 #### Menangani interaksi elemen-tunggal

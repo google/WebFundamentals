@@ -84,7 +84,7 @@ Google と AnswerLab は、この疑問の答えを出すために[調査](https
 
 ###  一番目立つ場所に広告を表示しない
 
-アプリのインストールを促す大きなインタースティシャル（例: コンテンツを覆い隠すようにページの全面に表示される、アプリのインストールを促す広告）はユーザーにとって邪魔になり、タスクの実行を妨げます。アプリのインストールのインタースティシャルを使用しているサイトは、ユーザーに不快感を与えるだけでなく、[Google のモバイル フレンドリー テスト](https://search.google.com/search-console/mobile-friendly)で不合格になり、検索ランキングが下がる可能性があります。
+アプリのインストールを促す大きなインタースティシャル（例: コンテンツを覆い隠すようにページの全面に表示される、アプリのインストールを促す広告）はユーザーにとって邪魔になり、タスクの実行を妨げます。アプリのインストールのインタースティシャルを使用しているサイトは、ユーザーに不快感を与えるだけでなく、[Google のモバイル フレンドリー テスト](https://search.google.com/test/mobile-friendly)で不合格になり、検索ランキングが下がる可能性があります。
 
 
 
@@ -354,7 +354,7 @@ Google と AnswerLab は、この疑問の答えを出すために[調査](https
 ###  ピンチ操作を不要にする
 
 ユーザーは垂直方向のスクロールには慣れていますが、水平方向のスクロールには慣れていません。
-幅を固定した大きな要素は使用しないでください。[CSS メディアクエリ](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)を使用して、さまざまな画面ごとに異なるスタイルを適用します。特定の[ビューポートの幅](/web/fundamentals/design-and-ui/responsive/#set-the-viewport)のみで適切に表示されるようなコンテンツは、作成しないでください。ユーザーに水平方向のスクロールを強制するサイトは [Google モバイル フレンドリー テスト](https://search.google.com/search-console/mobile-friendly)で不合格となり、検索ランキングが下がる可能性があります。
+幅を固定した大きな要素は使用しないでください。[CSS メディアクエリ](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)を使用して、さまざまな画面ごとに異なるスタイルを適用します。特定の[ビューポートの幅](/web/fundamentals/design-and-ui/responsive/#set-the-viewport)のみで適切に表示されるようなコンテンツは、作成しないでください。ユーザーに水平方向のスクロールを強制するサイトは [Google モバイル フレンドリー テスト](https://search.google.com/test/mobile-friendly)で不合格となり、検索ランキングが下がる可能性があります。
 
 
 

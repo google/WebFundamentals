@@ -1,21 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-06-12 #}
+{# wf_updated_on: 2017-07-13 #}
 {# wf_published_on: 2016-11-08 #}
 
 # The Credential Management API {: .page-title }
 
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
-
-<aside class="note">
-  <strong>Coming soon:</strong>
-  <a href="/web/updates/2017/06/credential-management-updates">
-  Updates to Credential Management API</a>
-  are landing in Chrome 60.
-  The sample code and documentation will be updated soon.
-</aside>
 
 The [Credential Management API](https://www.w3.org/TR/credential-management/)
 is a standards-based browser API that provides a programmatic interface
@@ -36,6 +28,25 @@ and take a look at the
 [code](https://github.com/GoogleChrome/credential-management-sample).
 
 <div class="clearfix"></div>
+
+### Check Credential Management API browser support
+
+Before using the Credential Management API,
+first check the API is supported,
+and that the version of the API is compatible with your code.
+
+[Updates to the Credential Management API](/web/updates/2017/06/credential-management-updates)
+landed in Chrome 60.
+These updates contain backward incompatible changes.
+To check that your implementation isn't triggered in older versions of the API,
+see if `preventSilentAccess exists`:
+
+    if (navigator.credentials && navigator.credentials.preventSilentAccess) {
+      // The new Credential Management API is available
+    }
+
+For more information, see the
+[Chrome 60 migration guide](https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8).
 
 ### Sign in user
 
@@ -75,7 +86,7 @@ Learn more in
 
 ### Sign out
 
-When the user signs out, call [`navigator.credentials.requireUserMediation()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/requireUserMediation)
+When the user signs out, call [`navigator.credentials.preventSilentAccess()`](/web/fundamentals/security/credential-management/retrieve-credentials#turn_off_auto_sign-in_for_future_visits)
 to prevent the user from being automatically signed back in.
 
 Disabling auto-sign-in also enables users to switch between accounts easily,

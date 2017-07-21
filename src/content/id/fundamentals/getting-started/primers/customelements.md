@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Elemen khusus memungkinkan developer web mendefinisikan tag HTML baru, memperluas yang sudah ada, dan membuat komponen web pakai-ulang.
 
-{# wf_updated_on: 2016-09-26 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-06-28 #}
 
 # Elemen Khusus v1: Komponen Web Pakai-Ulang {: .page-title }
@@ -19,7 +19,7 @@ JS/HTML/CSS biasa. Hasilnya irit kode, kode modular, dan lebih bisa digunakan ke
 
 ## Pengantar {: #intro}
 
-Catatan: Artikel ini menjelaskan <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">spesifikasi Custom Elements v1</a> baru. Jika Anda menggunakan elemen khusus, kemungkinan Anda sudah familier dengan <a href="https://www.chromestatus.com/features/4642138092470272">versi v0 yang disertakan di Chrome 33</a>. Konsepnya sama, namun spesifikasi v1 memiliki perbedaan API penting. Bacalah terus untuk mengetahui apa saja yang baru atau lihat bagian ini di <a href="#historysupport">Riwayat dan dukungan browser</a> untuk informasi selengkapnya.
+Note: Artikel ini menjelaskan <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">spesifikasi Custom Elements v1</a> baru. Jika Anda menggunakan elemen khusus, kemungkinan Anda sudah familier dengan <a href="https://www.chromestatus.com/features/4642138092470272">versi v0 yang disertakan di Chrome 33</a>. Konsepnya sama, namun spesifikasi v1 memiliki perbedaan API penting. Bacalah terus untuk mengetahui apa saja yang baru atau lihat bagian ini di <a href="#historysupport">Riwayat dan dukungan browser</a> untuk informasi selengkapnya.
 
 Browser memberi kita alat bagus untuk menstrukturkan aplikasi web.
 Namanya HTML.  Anda mungkin pernah mendengarnya! Deklaratif, portabel, didukung dengan baik, dan mudah digunakan. Mungkin sehebat HTML, kosakata dan ekstensibilitasnya terbatas. [Standar hidup HTML](https://html.spec.whatwg.org/multipage/){: .external } tidak memiliki cara untuk mengaitkan secara otomatis perilaku JS dengan markup Anda... hingga sekarang.
@@ -207,7 +207,7 @@ elemen yang memperluas `<img>` perlu memperluas `HTMLImageElement`.
 Perhatikan, panggilan ke `define()` sedikit berubah saat memperluas elemen asli. Parameter ketiga yang diperlukan memberi tahu browser mengenai tag yang akan Anda perluas. Ini diperlukan karena banyak tag HTML yang berbagi antarmuka DOM yang sama. `<section>`, `<address>`, dan `<em>` (di antaranya) sama-sama menggunakan `HTMLElement`; baik `<q>` maupun `<blockquote>` sama-sama menggunakan `HTMLQuoteElement`; dll.. Penetapan `{extends: 'blockquote'}` akan memungkinkan browser mengetahui bahwa Anda sedang membuat `<blockquote>` yang disempurnakan sebagai ganti `<q>`. Lihat [spesifikasi HTML](https://html.spec.whatwg.org/multipage/indices.html#element-interfaces) untuk mengetahui
 daftar lengkap antarmuka DOM HTML.
 
-Catatan: Memperluas `HTMLButtonElement` akan memberikan tombol keren kita dengan semua properti/metode DOM dari `<button>`. Itu akan mencocokkan banyak hal yang tidak perlu kita implementasikan sendiri: properti `disabled`, metode `click()`, listener `keydown`, dan manajemen `tabindex`. Sebagai gantinya, kita bisa memfokuskan penyempurnaan `<button>` secara progresif dengan fungsionalitas khusus, yang disebut metode `drawRipple()`. Semakin sedikit kode, semakin bisa digunakan kembali!
+Note: Memperluas `HTMLButtonElement` akan memberikan tombol keren kita dengan semua properti/metode DOM dari `<button>`. Itu akan mencocokkan banyak hal yang tidak perlu kita implementasikan sendiri: properti `disabled`, metode `click()`, listener `keydown`, dan manajemen `tabindex`. Sebagai gantinya, kita bisa memfokuskan penyempurnaan `<button>` secara progresif dengan fungsionalitas khusus, yang disebut metode `drawRipple()`. Semakin sedikit kode, semakin bisa digunakan kembali!
 
 Konsumen elemen bawaan yang disesuaikan bisa menggunakannya dalam beberapa cara.
 Mereka bisa mendeklarasikannya dengan menambahkan atribut `is=""` pada tag bawaan:
@@ -264,7 +264,7 @@ atau membuat instance di JavaScript:
     console.assert(image.height === 200);
     
 
-Catatan: Sebagian browser menyatakan keengganan untuk mengimplementasikan sintaks <code>is=""</code>. Hal ini tidak menguntungkan untuk aksesibilitas dan penyempurnaan progresif. Jika menurut Anda memperluas elemen HTML native berguna, sampaikan pendapat Anda <a href='https://github.com/w3c/webcomponents/issues/509'>di Github</a>.
+Note: Sebagian browser menyatakan keengganan untuk mengimplementasikan sintaks <code>is=""</code>. Hal ini tidak menguntungkan untuk aksesibilitas dan penyempurnaan progresif. Jika menurut Anda memperluas elemen HTML native berguna, sampaikan pendapat Anda <a href='https://github.com/w3c/webcomponents/issues/509'>di Github</a>.
 
 ## Reaksi elemen khusus {: #reactions}
 
@@ -516,7 +516,7 @@ Ini akan menjajakan sebuah Promise yang akan ditetapkan bila elemen menjadi defi
     });
     
 
-Catatan: Saya menganggap elemen khusus sebagai elemen yang menggantung sebelum nasibnya didefinisikan. [spec](https://dom.spec.whatwg.org/#concept-element-custom-element-state) mendefinisikan status elemen sebagai "undefined", "uncustomized", atau "custom". Elemen bawaan seperti `<div>` selalu "defined".
+Note: Saya menganggap elemen khusus sebagai elemen yang menggantung sebelum nasibnya didefinisikan. [spec](https://dom.spec.whatwg.org/#concept-element-custom-element-state) mendefinisikan status elemen sebagai "undefined", "uncustomized", atau "custom". Elemen bawaan seperti `<div>` selalu "defined".
 
 ## Materi yang didefinisikan elemen {: #addingmarkup}
 
@@ -570,11 +570,11 @@ if (supportsCustomElementsV1) {
 </script>
 {% endframebox %}
 
-Catatan: Mengganti anak elemen dengan materi baru umumnya bukan ide yang baik karena hal itu tidak diharapkan. Pengguna akan kaget melihat markup mereka dibuang. Cara yang lebih baik untuk menambahkan materi yang didefinisikan elemen adalah menggunakan shadow DOM, yang akan kita bicarakan berikutnya.
+Note: Mengganti anak elemen dengan materi baru umumnya bukan ide yang baik karena hal itu tidak diharapkan. Pengguna akan kaget melihat markup mereka dibuang. Cara yang lebih baik untuk menambahkan materi yang didefinisikan elemen adalah menggunakan shadow DOM, yang akan kita bicarakan berikutnya.
 
 ### Membuat elemen yang menggunakan Shadow DOM {: #shadowdom}
 
-Catatan: Saya tidak akan membahas berbagai fitur [Shadow DOM][sd_spec] dalam artikel ini, namun
+Note: Saya tidak akan membahas berbagai fitur [Shadow DOM][sd_spec] dalam artikel ini, namun
 ini merupakan API andal untuk dikombinasikan bersama elemen khusus. Dengan sendirinya, Shadow DOM adalah
 alat komposisi. Bila digunakan bersama elemen khusus, akan terjadi sesuatu yang ajaib.
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Situs web tidak hanya dikunjungi oleh manusia, juga oleh perayap web mesin telusur. Pelajari cara meningkatkan akurasi penelusuran dan peringkat situs web Anda.
 
-{# wf_updated_on: 2015-10-05 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-08-30 #}
 
 # Optimalisasi Penelusuran {: .page-title }
@@ -167,7 +167,7 @@ Sebelum mempelajari cara mengontrol hasil penelusuran, Anda perlu memahami cara 
 
 **Mengindeks** adalah bila mesin telusur menyimpan URL situs web dan semua informasi terkait dalam database-nya agar siap disajikan sebagai hasil penelusuran. 
 
-Catatan: Banyak orang yang tidak bisa membedakan antara merayapi dengan mengindeks. Melarang perayapan bukan berarti laman tidak akan ditampilkan dalam hasil penelusuran. Misalnya, jika situs web pihak ketiga memiliki tautan ke salah satu laman web Anda, laman itu tetap bisa diindeks walaupun telah diblokir dari perayapan. Dalam hal ini, hasil penelusuran tidak memiliki keterangan mendetail.
+Note: Banyak orang yang tidak bisa membedakan antara merayapi dengan mengindeks. Melarang perayapan bukan berarti laman tidak akan ditampilkan dalam hasil penelusuran. Misalnya, jika situs web pihak ketiga memiliki tautan ke salah satu laman web Anda, laman itu tetap bisa diindeks walaupun telah diblokir dari perayapan. Dalam hal ini, hasil penelusuran tidak memiliki keterangan mendetail.
 
 ### Kontrol perayapan dengan robots.txt
 
@@ -212,7 +212,7 @@ Ketahui selengkapnya tentang setiap bot mesin telusur di laman bantuannya:
 * [Yandex](https://help.yandex.com/webmaster/controlling-robot/robots-txt.xml)
 
 
-Catatan: `robots.txt` hanya diperlukan **jika** Anda ingin mengontrol cara situs dirayapi. Jangan kembalikan kode respons 500 untuk URL: `/robots.txt`. Ini menghentikan semua perayapan selanjutnya untuk keseluruhan host sehingga mengakibatkan detail hasil penelusuran kosong.
+Note: `robots.txt` hanya diperlukan **jika** Anda ingin mengontrol cara situs dirayapi. Jangan kembalikan kode respons 500 untuk URL: `/robots.txt`. Ini menghentikan semua perayapan selanjutnya untuk keseluruhan host sehingga mengakibatkan detail hasil penelusuran kosong.
 
 #### Uji robots.txt
 
@@ -278,7 +278,7 @@ Untuk mengetahui selengkapnya tentang X-Robots-Tag:
 * [Google](/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/how-can-i-remove-a-url-or-page-from-the-bing-index-37c07477)
 
-Catatan: Jika Anda melarang perayapan menggunakan `robots.txt`, bot telusur mungkin tetap mengindeks laman itu tanpa mengetahui bahwa Anda tidak ingin laman itu diindeks. Hal ini bisa terjadi karena:<ul><li>Bot telusur mungkin menemukan laman web Anda dengan mengikuti tautan dari situs web lain.</li><li>Mesin telusur yang tidak bisa merayapi tidak bisa mendeteksi <code>noindex</code>.</li></ul>
+Note: Jika Anda melarang perayapan menggunakan `robots.txt`, bot telusur mungkin tetap mengindeks laman itu tanpa mengetahui bahwa Anda tidak ingin laman itu diindeks. Hal ini bisa terjadi karena:<ul><li>Bot telusur mungkin menemukan laman web Anda dengan mengikuti tautan dari situs web lain.</li><li>Mesin telusur yang tidak bisa merayapi tidak bisa mendeteksi <code>noindex</code>.</li></ul>
 
 Jangan mengharapkan `robots.txt` untuk mengontrol indeks penelusuran.
 
@@ -306,7 +306,7 @@ Dalam hal ini, Anda tidak ingin mesin telusur mengindeks laman-laman itu.
 * Gunakan tag meta `noindex` untuk laman HTML.
 * Gunakan `X-Robots-Tag: noindex` untuk sumber daya bukan HTML (gambar, pdf, dll).
 
-Catatan: Bertanya-tanya apakah Anda harus melarang perayapan file JavaScript dan Stylesheet? <a href='http://googlewebmastercentral.blogspot.com/2014/05/understanding-web-pages-better.html' target='_blank'>Google berusaha sebaik mungkin untuk memahaminya</a> sehingga ia bisa menemukan materi yang tersedia melalui teknologi modern seperti AJAX. Anda tentunya harus memperbolehkan perayap untuk merayapi JavaScript.
+Note: Bertanya-tanya apakah Anda harus melarang perayapan file JavaScript dan Stylesheet? <a href='http://googlewebmastercentral.blogspot.com/2014/05/understanding-web-pages-better.html' target='_blank'>Google berusaha sebaik mungkin untuk memahaminya</a> sehingga ia bisa menemukan materi yang tersedia melalui teknologi modern seperti AJAX. Anda tentunya harus memperbolehkan perayap untuk merayapi JavaScript.
 
 #### Akses terbatas dari orang yang diizinkan
 

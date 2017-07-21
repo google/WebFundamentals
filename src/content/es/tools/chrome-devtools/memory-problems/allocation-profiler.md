@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Usa la herramienta de generación de perfiles de asignación para buscar objetos que la recolección de elementos no usados no procese correctamente, y que sigan reteniendo memoria.
 
-{# wf_updated_on: 2015-07-08 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Cómo usar la herramienta de generación de perfiles de asignación {: .page-title }
@@ -24,7 +24,7 @@ La herramienta toma periódicamente capturas de pantalla de montón de toda la g
 
 ![Generador de perfiles de asignación](imgs/object-tracker.png)
 
-Nota: El número después del @ es un ID de objeto que se conserva entre las distintas capturas de pantalla tomadas. Esto permite una comparación precisa entre los estados de montón. Mostrar la dirección de un objeto no tiene sentido, ya que estos se mueven durante la recolección de elementos no usados.
+Note: El número después del @ es un ID de objeto que se conserva entre las distintas capturas de pantalla tomadas. Esto permite una comparación precisa entre los estados de montón. Mostrar la dirección de un objeto no tiene sentido, ya que estos se mueven durante la recolección de elementos no usados.
 
 ## Habilita el generador de perfiles de asignación
 

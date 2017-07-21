@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La mayoría de la web no está optimizada para esas experiencias multidispositivo. Aprende los aspectos básicos para que tu sitio funcione en dispositivos móviles, escritorios o cualquier cosa con una pantalla.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Aspectos básicos del diseño web adaptable {: .page-title }
@@ -88,7 +88,7 @@ y los píxeles independientes del dispositivo independientemente de la orientaci
 permite que la página aproveche todo el ancho del modo horizontal.
 
 
-Nota: Para asegurarse de que los navegadores anteriores pueden analizar de manera apropiada los atributos, usa una coma para separar los atributos.
+Note: Para asegurarse de que los navegadores anteriores pueden analizar de manera apropiada los atributos, usa una coma para separar los atributos.
 
 ### Garantiza una ventana de visualización accesible
 

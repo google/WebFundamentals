@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-09-28 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-28 #}
 
 # O padrão PRPL {: .page-title }
@@ -108,7 +108,7 @@ usando [Web Components](http://webcomponents.org/):
 ![diagrama de um aplicativo que tem duas vistas, com ambas tendo dependências individuais
 e compartilhadas](images/app-build-components.png)
 
-Nota: embora o HTML Imports seja a estratégia de agrupamento preferida do Polymer, você pode
+Note: embora o HTML Imports seja a estratégia de agrupamento preferida do Polymer, você pode
 usar agrupamento baseado em rotas e divisão de código para ter uma configuração parecida com a que se consegue com
 agrupadores de módulo JavaScript modernos
 

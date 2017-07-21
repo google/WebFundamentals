@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Obtén la última información sobre el estado de WebVR y sobre qué tener en cuenta a la hora de crear experiencias con WebVR.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # Estado y consideraciones de WebVR {: .page-title }
 
-Advertencia: WebVR todavía es experimental y se encuentra sujeta a modificaciones.
+Warning: WebVR todavía es experimental y se encuentra sujeta a modificaciones.
 
 ## Estado de implementación de WebVR
 

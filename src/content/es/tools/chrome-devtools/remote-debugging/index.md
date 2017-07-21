@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Depura contenido activo en un dispositivo Android de manera remota desde una computadora con Windows, Mac o Linux.
 
-{# wf_updated_on: 2016-12-09 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 <style>
@@ -89,7 +89,7 @@ computadora con Windows, Mac o Linux. Con este instructivo, aprenderás a hacer 
    y el texto **Connected** indican que estás listo para depurar
    de manera remota tu dispositivo Android desde el equipo de desarrollo.
 
-Nota: Si tienes algún problema durante el proceso de detección, puedes 
+Note: Si tienes algún problema durante el proceso de detección, puedes 
 reiniciarlo seleccionando **Settings** > **Developer Options** >
 **Revoke USB Debugging Authorizations** en el dispositivo Android.
 

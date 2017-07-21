@@ -320,7 +320,7 @@ This task uses two plugins in the same task.
 
 ### Default tasks
 
-Usually, developers want to run multiple tasks each time an application is updated rather than running each task individually. Default tasks are helpful for this, executing anytime the `grunt` command is run from the command line. 
+Usually, developers want to run multiple tasks each time an application is updated rather than running each task individually. Default tasks are helpful for this, executing anytime the `gulp` command is run from the command line. 
 
 Let's add the following code to __gulpfile.js__ to set `task1` and `task2` as default tasks:
 

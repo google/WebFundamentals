@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Es complicado completar formularios desde el celular. Los mejores formularios son aquellos que poseen menos entradas.
 
-{# wf_updated_on: 2014-10-21 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-04-30 #}
 
 # Crea formularios asombrosos {: .page-title }
@@ -226,7 +226,7 @@ entrada.
   </tbody>
 </table>
 
-Advertencia: Recuerda tener en cuenta la localización al momento de elegir un tipo de entrada,
+Warning: Recuerda tener en cuenta la localización al momento de elegir un tipo de entrada,
 ya que algunas configuraciones regionales usan un punto (.) como separador en vez de una coma (,)
 
 ### Usa datalist para ofrecer sugerencias durante la entrada
@@ -243,7 +243,7 @@ estas, el elemento `datalist` proporciona sugerencias a medida que el usuario es
 
 [Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
-Nota: Los valores de  <code>datalist</code> se proporcionan como sugerencias, y los usuarios no se ven limitados a las sugerencias ofrecidas.
+Note: Los valores de  <code>datalist</code> se proporcionan como sugerencias, y los usuarios no se ven limitados a las sugerencias ofrecidas.
 
 ## Etiqueta y nombra las entradas correctamente
 
@@ -292,7 +292,7 @@ comienza a escribir en el elemento.
     <input type="text" placeholder="MM-YYYY" ...>
 
 
-Advertencia: Los marcadores de posición desaparecen tan pronto como el usuario comienza a escribir en un elemento. Por ello, no reemplazan a las etiquetas.  Se deben utilizar como ayuda para guiar a los usuarios sobre el formato y el contenido requeridos.
+Warning: Los marcadores de posición desaparecen tan pronto como el usuario comienza a escribir en un elemento. Por ello, no reemplazan a las etiquetas.  Se deben utilizar como ayuda para guiar a los usuarios sobre el formato y el contenido requeridos.
 
 ### Uso de metadatos para habilitar la función de autocompletar
 
@@ -307,7 +307,7 @@ En los navegadores se usa mucho la heurística para determinar los campos que se
 y puedes proporcionar sugerencias al navegador brindando los atributos `name`
 y `autocomplete` en cada elemento de entrada.
 
-Nota: Chrome necesita que los elementos `input` se encuentren dentro de una etiqueta `<form>` para habilitar
+Note: Chrome necesita que los elementos `input` se encuentren dentro de una etiqueta `<form>` para habilitar
 la opción de completar automáticamente. Si no se encuentran dentro de la etiqueta `form`, Chrome ofrecerá
 sugerencias, pero **no** completará el formulario.
 
@@ -455,7 +455,7 @@ Los atributos `autocomplete` pueden ir acompañados por el nombre de una secció
 </table>
 
 
-Nota: Usa únicamente  <code>street-address</code> o bien  <code>address-line1</code> y  <code>address-line2</code>.  <code>address-level1</code> y  <code>address-level2</code> son solo necesarios si se deben usar en el formato de tu dirección.
+Note: Usa únicamente  <code>street-address</code> o bien  <code>address-line1</code> y  <code>address-line2</code>.  <code>address-level1</code> y  <code>address-level2</code> son solo necesarios si se deben usar en el formato de tu dirección.
 
 
 ### El atributo `autofocus`
@@ -603,7 +603,7 @@ las JavaScript API también podrás verificar si el formulario se valida.
     
 
 
-Éxito: Aun con la validación de entrada del lado del cliente, siempre es importante validar los datos en el servidor para garantizar la uniformidad y la seguridad de tus datos.
+Success: Aun con la validación de entrada del lado del cliente, siempre es importante validar los datos en el servidor para garantizar la uniformidad y la seguridad de tus datos.
 
 ### Uso de JavaScript para validación más compleja en tiempo real
 
@@ -728,7 +728,7 @@ JavaScript para mostrar solo los estilos no válidos cuando el usuario haya visi
 [Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
 
-Éxito: Debes mostrar al usuario todos los problemas con el formulario de una sola vez, en lugar de mostrárselos uno por uno.
+Success: Debes mostrar al usuario todos los problemas con el formulario de una sola vez, en lugar de mostrárselos uno por uno.
 
 
 

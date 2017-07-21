@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Komposisi adalah proses penempatan bagian yang digambar pada laman untuk ditampilkan di layar.
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-20 #}
 
 # Berpeganglah pada Properti Compositor-Saja dan Kelola Jumlah Layer {: .page-title }
@@ -32,7 +32,7 @@ Untuk menghasilkan hal ini, Anda perlu berpegang pada perubahan properti yang bi
 
 Yang harus diwaspadai dalam menggunakan `transform` dan `opacity` adalah bahwa elemen tempat Anda mengubah properti ini harus berada pada _layer compositor-nya sendiri_. Untuk membuat layer, Anda harus mempromosikan elemen, yang akan kita bahas berikutnya.
 
-Catatan: Jika khawatir tidak dapat membatasi animasi pada properti itu saja, lihatlah [Prinsip FLIP](https://aerotwist.com/blog/flip-your-animations), yang dapat membantu Anda memetakan ulang animasi ke berbagai perubahan dalam transform dan opacity dari properti yang lebih mahal.
+Note: Jika khawatir tidak dapat membatasi animasi pada properti itu saja, lihatlah [Prinsip FLIP](https://aerotwist.com/blog/flip-your-animations), yang dapat membantu Anda memetakan ulang animasi ke berbagai perubahan dalam transform dan opacity dari properti yang lebih mahal.
 
 ## Promosikan elemen yang rencananya akan Anda animasikan
 
@@ -67,7 +67,7 @@ Hal ini mungkin menarik, maka, dengan mengetahui bahwa layer sering kali membant
 
 Yang merupakan jalan memutar untuk mengatakan bahwa Anda ingin mempromosikan setiap elemen tunggal di laman. Masalahnya adalah setiap layer yang Anda buat memerlukan memori dan pengelolaan, dan itu tidak gratis. Sebenarnya, di perangkat yang memiliki memori terbatas, dampak pada kinerja bisa jauh mengalahkan manfaat pembuatan layer. Setiap tekstur layer perlu diunggah ke GPU, sehingga ada batasan lebih jauh dalam konteks bandwidth antara CPU dan GPU, dan memori yang tersedia untuk tekstur di GPU.
 
-Peringatan: Jangan promosikan elemen yang tidak perlu.
+Caution: Jangan promosikan elemen yang tidak perlu.
 
 ## Gunakan Chrome DevTools untuk memahami layer di aplikasi Anda
 

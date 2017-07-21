@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Telas sensíveis a toque estão disponíveis em cada vez mais dispositivos, de celulares a telas de computadores. Seu aplicativo deve responder ao toque de forma intuitiva e atraente.
 
-{# wf_updated_on: 2014-01-06 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-01-01 #}
 
 # Adicionar recurso de toque ao seu site {: .page-title }
@@ -98,7 +98,7 @@ aplicado, e pode ser removido ao definir `background-image: none`.
 
 [Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
 
-Atenção: suprima os estilos padrão mencionados acima somente se você tiver pseudo
+Warning: suprima os estilos padrão mencionados acima somente se você tiver pseudo
 classes para `:hover`, `:active` e `:focus`!
 
 ### Desativar user-select
@@ -130,7 +130,7 @@ Dependendo do que você deseja fazer com os gestos, é provável que você queir
 o usuário interaja com um elemento por vez *ou* que ele possa
 interagir com vários elementos simultaneamente.
 
-Atenção: não se esqueça de que alguns usuários preferem usar o teclado e que usuários
+Warning: não se esqueça de que alguns usuários preferem usar o teclado e que usuários
 que usem tecnologias auxiliares em um dispositivo com tela sensível a toque podem não conseguir
 realizar certos gestos por eles serem interceptados/consumidos pela tecnologia
 assistiva.

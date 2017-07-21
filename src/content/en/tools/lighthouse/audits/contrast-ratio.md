@@ -11,6 +11,8 @@ description: Reference documentation for the "Background and Foreground Colors H
 
 Low-contrast text is difficult or impossible for many users to read.
 
+See [Accessible Styles](/web/fundamentals/accessibility/accessible-styles) for more information.
+
 ## How to pass the audit {: #how }
 
 To find and fix each of element that does not have a sufficient contrast ratio:

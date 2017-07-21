@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Un análisis exhaustivo sobre el ciclo de vida del service worker
 
-{# wf_updated_on: 2016-09-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-29 #}
 
 # El ciclo de vida del service worker {: .page-title }
@@ -35,7 +35,7 @@ con el concepto de almacenamiento, puedes fácilmente tener dos pestañas con op
 acerca de cómo se debería administrar el almacenamiento compartido. Esto puede ocasionar errores o,
 peor aún, pérdida de datos.
 
-Advertencia: los usuarios detestan las pérdidas de datos. Les genera una profunda tristeza.
+Warning: los usuarios detestan las pérdidas de datos. Les genera una profunda tristeza.
 
 ## El primer service worker
 
@@ -262,7 +262,7 @@ anterior](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/
 .external}, verás un perro la primera vez que cargues la página. Si actualizas la página,
 verás el gato.
 
-Nota: los gatos son mejores que los perros. Simplemente *son*.
+Note: los gatos son mejores que los perros. Simplemente *son*.
 
 ### Ámbito y control
 
@@ -338,7 +338,7 @@ Si usas tu service worker para cargar páginas de manera diferente con respecto 
 la red, `clients.claim()` puede ser problemático, ya que el service worker
 termina controlando algunos clientes que se cargaron sin él.
 
-Nota: veo que muchas personas incluyen `clients.claim()` como algo estándar, pero
+Note: veo que muchas personas incluyen `clients.claim()` como algo estándar, pero
 pocas veces lo hago. Solo importante realmente en la primera carga y, debido a las
 mejoras progresivas, la página por lo general funciona correctamente sin utilizar
 un service worker.
@@ -579,7 +579,7 @@ un caballo en lugar de la de un gato:
       }
     });
 
-Nota: no tengo opiniones sólidas sobre los caballos.
+Note: no tengo opiniones sólidas sobre los caballos.
 
 [Prueba una versión demo de lo
 anterior](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
@@ -641,13 +641,13 @@ En la versión demo anterior, mantengo una lista de cachés que deseo estén all
 el evento `activate`, elimino el resto, lo cual permite quitar la caché
 `static-v1` antiguo.
 
-Advertencia: es posible que no estés realizando una actualización desde la versión anterior. Puede tratarse de una versión mucho más antigua del service worker.
+Warning: es posible que no estés realizando una actualización desde la versión anterior. Puede tratarse de una versión mucho más antigua del service worker.
 
 Si pasas una promesa a `event.waitUntil()`, se almacenarán en búfer los eventos funcionales
 (`fetch`, `push`, `sync`, etc.) hasta que se resuelva la promesa. Por lo tanto, cuando se activa el evento `fetch`
 , significa que la activación finalizó completamente.
 
-Advertencia: la API de almacenamiento en caché es "origin storage" (como localStorage y
+Warning: la API de almacenamiento en caché es "origin storage" (como localStorage y
 IndexedDB). Si ejecutas muchos sitios en el mismo origen (por ejemplo,
 `yourname.github.io/myapp`), ten cuidado de no borrar los cachés de los demás
 sitios. Para evitar esto, agrégales a los nombres de caché un prefijo exclusivo del sitio actual,
@@ -683,7 +683,7 @@ servicio. En este caso, debes llamar a `skipWaiting()` luego de la interacción 
 Como sucede con `clients.claim()`, se trata de una carrera, por lo que solo verás la vaca si el nuevo service worker
 realiza la obtención, se instala y se activa antes de que la página intente cargar la imagen.
 
-Precaución: `skipWaiting()` indica que es posible que tu nuevo service worker controle
+Caution: `skipWaiting()` indica que es posible que tu nuevo service worker controle
 páginas que se cargaron con una versión anterior. Esto significa que algunos de los fetch
 de tu página serán administrados por tu service worker anterior; no obstante, tu nuevo
 service worker administrará los fetch subsiguientes. No

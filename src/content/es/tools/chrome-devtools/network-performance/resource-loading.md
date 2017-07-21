@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Mide el rendimiento de la red de tu app web por medio del panel de red Chrome DevTools.
 
-{# wf_updated_on: 2016-02-21 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Medir los tiempos de carga de los recursos {: .page-title }
@@ -334,7 +334,7 @@ para ocultar o mostrar el subpanel **Filters**.
 Usa los botones de tipo de contenido para mostrar solamente los recursos del tipo de contenido 
 seleccionado. 
 
-Nota: Mantén presionado <kbd>Cmd</kbd> Mac) o <kbd>Ctrl</kbd> (Windows/Linux) y luego haz clic para habilitar múltiples filtros simultáneamente.
+Note: Mantén presionado <kbd>Cmd</kbd> Mac) o <kbd>Ctrl</kbd> (Windows/Linux) y luego haz clic para habilitar múltiples filtros simultáneamente.
 
 ![múltiples filtros de tipo de contenido seleccionados 
 simultáneamente](imgs/multiple-content-type-filters.png)

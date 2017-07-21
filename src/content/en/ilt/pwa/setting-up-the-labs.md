@@ -98,7 +98,7 @@ Some projects in the download contain folders that correspond to checkpoints in 
 
 
 
-Note: If you do not use Git, then you can <a href="https://github.com/google-developer-training/pwa-training-labs/archive/master.zip>download the repo as a zip file</a>. Note that if you download the repository with this method, it will be named __pwa-training-labs-master__ instead of __pwa-training-labs__. Rename the folder to __pwa-training-labs__ so that the name is consistent with the lab instructions.
+Note: If you do not use Git, then you can [download the repo as a zip file](https://github.com/google-developer-training/pwa-training-labs/archive/master.zip). Note that if you download the repository with this method, it will be named __pwa-training-labs-master__ instead of __pwa-training-labs__. Rename the folder to __pwa-training-labs__ so that the name is consistent with the lab instructions.
 
 
 
