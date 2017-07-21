@@ -4,7 +4,7 @@ description: Mariko explains creative coding.
 
 {# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2017-07-25 #}
-{# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E06-are-design-tools-fit-for-purpose.mp3 #}
+{# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E01-becoming-a-creative-coder.mp3 #}
 {# wf_podcast_duration: 00:10:34 #}
 {# wf_podcast_fileSize: 10161380 #}
 {# wf_podcast_subtitle: Mariko explains creative coding. #}
@@ -35,7 +35,8 @@ In this episode:
 * Tools like [P5JS](https://p5js.org/).
 
 <audio 
-src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E06-are-design-tools-fit-for-purpose.mp3" controls preload="none">
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E01-becoming-a-creative-coder.mp3" 
+controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
 <a href="https://goo.gl/USHXv8">Feedburner</a>, 
