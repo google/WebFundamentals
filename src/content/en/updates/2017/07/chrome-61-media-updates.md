@@ -2,25 +2,24 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the media updates in Chrome 61.
 
-{# wf_updated_on: 2017-07-17 #}
-{# wf_published_on: 2017-07-17 #}
+{# wf_updated_on: 2017-07-21 #}
+{# wf_published_on: 2017-07-21 #}
 {# wf_tags: news,chrome61,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
-{# wf_featured_snippet: Background video track optimization and automatic video fullscreen when device is rotating features are there! #}
+{# wf_featured_snippet: Background video track optimizations and automatic video fullscreen when device is rotated are here! #}
 
 # Media Updates in Chrome 61 {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 - Chrome now [disables video tracks when a MSE video is played in the
-  background](#background-video-track-optimization) to optimize performance. 
-- A video will [automatically go fullscreen when device is
-  rotating](#auto-fullscreen-rotate).
+  background](#background-video-track-optimizations) to optimize performance.
+- Video will [go fullscreen when device is rotated](#auto-fullscreen-rotate).
 
-## Background video track optimization (MSE only) {: #background-video-track-optimization}
+## Background video track optimizations (MSE only) {: #background-video-track-optimizations}
 
 To improve battery life, Chrome now disables video tracks when the video is
-played in the background if this one uses [Media Source Extensions (MSE)].
+played in the background if the video uses [Media Source Extensions (MSE)].
 
 You can inspect these changes by going to the `chrome://media-internals` page,
 and filter for the "info" property. When the tab containing a playing video
@@ -66,7 +65,7 @@ And here are some restrictions:
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663999)
 
-## Automatic video fullscreen when device is rotating {: #auto-fullscreen-rotate }
+## Automatic video fullscreen when device is rotated {: #auto-fullscreen-rotate }
 
 When a video is playing in the viewport, rotating the device to landscape
 orientation will now fullscreen the video. Rotating the device to portrait puts
@@ -77,7 +76,7 @@ Playback] article).
 
 <figure>
   <img src="/web/updates/images/2017/07/auto-fullscreen-rotate.png"
-       alt="Automatic video fullscreen when device is rotating">
+       alt="Automatic video fullscreen when device is rotated">
 </figure>
 
 This magic behaviour only happens when:
