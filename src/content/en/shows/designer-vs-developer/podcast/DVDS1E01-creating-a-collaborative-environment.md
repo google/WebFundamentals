@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: This week we speak to Jake Archibald about communication.
 
-{# wf_updated_on: 2017-05-08 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2017-03-07 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3 #}
 {# wf_podcast_duration: 00:13:28 #}
@@ -35,12 +35,10 @@ In this episode:
 src="https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3" 
 controls preload="none">
 
-
 Subscribe to Designer Vs Developer Podcast via
-<a href="http://feeds.feedburner.com/DesignerVsDeveloper">Feedburner</a>, 
-<a href="https://itunes.apple.com/gb/podcast/designer-vs-developer/id1232586843?mt=2">iTunes</a> Or 
-<a 
-href="https://play.google.com/music/m/Ivkbr5tikljngkr5nuzlogjwf7a?t%3DDesigner_Vs_Developer%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16">
+<a href="https://goo.gl/USHXv8">Feedburner</a>, 
+<a href="https://goo.gl/1E9U0G">iTunes</a> Or 
+<a href="https://goo.gl/qCBlST">
 Google Music</a>
 
 Watch <a href="https://www.youtube.com/watch?v=8T94qu8IWWk">the video recording</a>.
