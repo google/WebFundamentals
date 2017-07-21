@@ -3,6 +3,8 @@ toc:
     section:
     - title: 'Podcast'
       section:
+      - title: 'Becoming a creative coder'
+        path: /web/shows/designer-vs-developer/podcast/DVDS2E01-becoming-a-creative-coder    
       - title: 'Creating a collaborative environment'
         path: /web/shows/designer-vs-developer/podcast/DVDS1E01-creating-a-collaborative-environment
       - title: 'Balancing creativity with user testing'
