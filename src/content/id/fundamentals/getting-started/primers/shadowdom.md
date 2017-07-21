@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM memungkinkan developer web membuat DOM dan CSS yang terkategori untuk komponen web
 
-{# wf_updated_on: 2016-10-13 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-08-01 #}
 
 # Shadow DOM v1: Komponen Web Mandiri {: .page-title }
@@ -31,7 +31,7 @@ mandiri** dalam JavaScript biasa.
 
 ## Pengantar {: #intro}
 
-Catatan: **Sudah mengerti Shadow DOM?** Artikel ini menjelaskan spesifikasi
+Note: **Sudah mengerti Shadow DOM?** Artikel ini menjelaskan spesifikasi
 <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">
 Shadow DOM v1</a> yang baru. Jika Anda menggunakan Shadow DOM, kemungkinan Anda sudah
 familier dengan <a href="https://www.chromestatus.com/features/4507242028072960">
@@ -70,7 +70,7 @@ ini memberikan solusi untuk masalah umum dalam development web:
 - **Produktivitas** - Pertimbangkan aplikasi dalam beberapa potongan DOM bukannya satu laman 
   (global) yang besar.
 
-Catatan: Walaupun Anda bisa menggunakan shadow DOM API dan kegunaannya di luar komponen
+Note: Walaupun Anda bisa menggunakan shadow DOM API dan kegunaannya di luar komponen
 web, saya hanya akan memfokuskan pada contoh-contoh yang dibangun pada elemen khusus.
 Saya akan menggunakan elemen khusus v1 API dalam semua contoh.
 
@@ -209,7 +209,7 @@ elemen khusus **membuat shadow DOM sendiri** bila instance `<fancy-tabs>`
 dibuat. Itu dilakukan dalam `constructor()`. Kedua, karena kita sedang membuat
 shadow root, aturan CSS di dalam `<style>` akan bercakupan `<fancy-tabs>`.
 
-Catatan: Bila Anda mencoba menjalankan contoh ini, mungkin Anda akan melihat bahwa tidak ada yang
+Note: Bila Anda mencoba menjalankan contoh ini, mungkin Anda akan melihat bahwa tidak ada yang
 dirender. Markup pengguna seakan menghilang! Itu karena **shadow DOM
 elemen dirender menggantikan anaknya**. Jika Anda ingin menampilkan
 anaknya, Anda perlu memberi tahu browser tempat merendernya dengan memasukkan
@@ -296,7 +296,7 @@ markup mereka sendiri**. Dengan mendefinisikan satu atau beberapa slot, Anda men
 dalam shadow DOM komponen Anda. Pada dasarnya, Anda mengatakan _"Render markup
 pengguna di sini"_.
 
-Catatan: Slot adalah cara membuat "API deklaratif" untuk komponen web. Slot
+Note: Slot adalah cara membuat "API deklaratif" untuk komponen web. Slot
 menggabung DOM pengguna untuk membantu merender komponen keseluruhan, sehingga, **menggabung
 berbagai DOM tree**.
 
@@ -679,7 +679,7 @@ Di dalam shadow DOM:
 Dalam hal ini, komponen akan menggunakan `black` sebagai nilai latar belakang karena
 pengguna telah menyediakannya. Jika tidak maka menggunakan `#9E9E9E` default.
 
-Catatan: Sebagai penulis komponen, Anda bertanggung jawab memberi tahu developer
+Note: Sebagai penulis komponen, Anda bertanggung jawab memberi tahu developer
 tentang properti khusus CSS yang bisa mereka gunakan. Anggaplah ini bagian dari antarmuka publik
 komponen Anda. Pastikan untuk mendokumentasikan sangkutan penataan gaya!
 
@@ -709,7 +709,7 @@ API lainnya juga dipengaruhi oleh mode tertutup:
 - `Event.composedPath()` untuk kejadian yang berkaitan dengan elemen di dalam shadow
   DOM, akan mengembalikan []
 
-Catatan: Akar bayangan tertutup tidak begitu berguna. Sebagian developer akan menganggap mode
+Note: Akar bayangan tertutup tidak begitu berguna. Sebagian developer akan menganggap mode
 tertutup sebagai fitur keamanan semu. Namun mari kita perjelas, ini **bukan** fitur
 keamanan. Mode tertutup cuma mencegah JS luar masuk ke dalam
 DOM internal elemen.
@@ -765,7 +765,7 @@ Kejadian `slotchange` akan terpicu bila simpul terdistribusi slot berubah. Misal
       console.log('light dom children changed!');
     });
     
-Catatan: `slotchange` tidak akan terpicu bila instance komponen
+Note: `slotchange` tidak akan terpicu bila instance komponen
 telah diinisialisasi lebih dahulu.
 
 Untuk memantau tipe perubahan lain pada light DOM, Anda bisa menyetel

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Introducción al árbol de accesibilidad
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
 # El árbol de accesibilidad {: .page-title }
@@ -183,7 +183,7 @@ promotional offers?".
 
 ![salida de texto en pantalla de VoiceOver que muestra la etiqueta en oralidad de una casilla de verificación](imgs/promo-offers.png)
 
-Éxito: Puedes usar el lector de pantalla para encontrar etiquetas
+Success: Puedes usar el lector de pantalla para encontrar etiquetas
 asociadas en forma incorrecta tocando la pantalla y verificando los roles, estados y
 nombres en la oralidad.
 

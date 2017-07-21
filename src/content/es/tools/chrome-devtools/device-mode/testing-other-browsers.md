@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Tu trabajo no termina al asegurarte de que el sitio funciona perfectamente en Chrome y Android. Aunque Device Mode puede simular otros dispositivos diferentes, como iPhone, te recomendamos ver otras soluciones de navegadores para emulación.
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Emular y probar otros navegadores {: .page-title }
@@ -97,7 +97,7 @@ App Store](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12).
 
 Cuando finalices, obtén más información sobre cómo trabajar con el simulador en la [documentación de Apple](https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html).
 
-Nota: Para evitar que tengas que abrir Xcode cada vez que quieras usar el simulador de iOS, ábrelo, haz clic en el ícono del simulador de iOS en tu conector y selecciona `Keep in Dock`. Ahora tan solo haz clic en este ícono cuando lo necesites.
+Note: Para evitar que tengas que abrir Xcode cada vez que quieras usar el simulador de iOS, ábrelo, haz clic en el ícono del simulador de iOS en tu conector y selecciona `Keep in Dock`. Ahora tan solo haz clic en este ícono cuando lo necesites.
 
 ### Modern.IE
 

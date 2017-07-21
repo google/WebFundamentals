@@ -60,7 +60,7 @@ App. Mari kita mengingat sifat dari Progressive Web App:
 
 * Chrome 52 atau di atasnya
 *  [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb), atau server web pilihan Anda
-* Kode contoh
+* [Kode contoh](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 * Editor teks
 * Pengetahuan dasar tentang HTML, CSS, JavaScript, dan Chrome DevTools
 

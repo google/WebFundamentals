@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La mayoría de los navegadores podrán tener acceso a la cámara del usuario.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-08-23 #}
 
 # Capturar una imagen desde el usuario {: .page-title }
@@ -67,7 +67,7 @@ Los navegadores modernos pueden obtener acceso directo a las cámaras, lo cual n
 experiencias que estén totalmente integradas con la página web, de modo que el usuario nunca tenga que
 abandonar el navegador.
 
-Advertencia: El acceso directo a la cámara es una poderosa función que solicita el consentimiento del 
+Warning: El acceso directo a la cámara es una poderosa función que solicita el consentimiento del 
 usuario y tu sitio tiene que estar en un origen seguro (HTTPS).
 
 ### Adquirir acceso a la cámara
@@ -199,7 +199,7 @@ otorgado el acceso, no le volverán a preguntar. Sin embargo, si el usuario rech
 no puedes obtener acceso otra vez, a menos que cambien de modo manual las configuraciones de permiso 
 de la cámara.
 
-Advertencia: Pedir el acceso a la cámara cuando se carga la página genera que la mayoría de 
+Warning: Pedir el acceso a la cámara cuando se carga la página genera que la mayoría de 
 tus usuarios rechacen el acceso a la misma.
 
 ## Compatibilidad

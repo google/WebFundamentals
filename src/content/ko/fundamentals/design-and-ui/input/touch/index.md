@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 전화기에서 데스크톱 화면에 이르기까지 점점 더 많은 기기에서 터치스크린을 사용할 수 있습니다. 앱은 직관적이고 멋진 방식으로 터치스크린의 터치에 반응해야 합니다.
 
-{# wf_updated_on: 2014-01-06 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-01-01 #}
 
 # 사이트에 터치 추가 {: .page-title }
@@ -98,7 +98,7 @@ Firefox에서 `<button>` 요소를 사용 중인 경우 그라데이션을 적�
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
 
-주의: `:hover`, `:active` 및 `:focus`에 대한 의사 클래스가 있는 경우에는
+Caution: `:hover`, `:active` 및 `:focus`에 대한 의사 클래스가 있는 경우에는
  위에 언급된 기본 스타일만을 억제할 수 있습니다!
 
 ### user-select 비활성화
@@ -130,7 +130,7 @@ API에 대해 살펴보고 또한 이들 이벤트를 효율적으로 사용하�
  사용자가 한번에 하나의 요소와 상호작용을 수행하거나 아니면 동시에
  여러 요소와 상호작용을 수행할 수 있습니다.
 
-주의: 일부 사용자는 키보드 입력을 원하는데, 터치스크린 기기에서
+Caution: 일부 사용자는 키보드 입력을 원하는데, 터치스크린 기기에서
  보조 기술을 실행 중인 사용자가 동작을 수행하지 못할 수도 있습니다.
  왜냐하면 이 보조 기술이 동작을 가로채거나 사용하기
  때문입니다.

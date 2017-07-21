@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Kebanyakan browser dan perangkat memiliki akses ke lokasi geografis pengguna. Pelajari cara menggunakan lokasi pengguna di situs dan aplikasi Anda.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-01-01 #}
 
 # Lokasi Pengguna {: .page-title }
@@ -17,7 +17,7 @@ menciptakan banyak kasus penggunaan yang menarik, misalnya mengintegrasikan deng
 
 Anda perlu mengetahui banyak hal saat menggunakan Geolocation API. Panduan ini membimbing Anda melalui beberapa kasus penggunaan umum dan solusi.
 
-Catatan: Sejak Chrome 50, [Geolocation API hanya bekerja pada konteks aman (HTTPS)](/web/updates/2016/04/geolocation-on-secure-contexts-only). Jika situs Anda ditampung pada asal yang tidak aman (misalnya `HTTP`), maka semua permintaan lokasi pengguna **tidak lagi** berfungsi.
+Note: Sejak Chrome 50, [Geolocation API hanya bekerja pada konteks aman (HTTPS)](/web/updates/2016/04/geolocation-on-secure-contexts-only). Jika situs Anda ditampung pada asal yang tidak aman (misalnya `HTTP`), maka semua permintaan lokasi pengguna **tidak lagi** berfungsi.
 
 ### TL;DR {: .hide-from-toc }
 

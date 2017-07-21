@@ -4,6 +4,7 @@ description: Get the latest info on WebVR's status, as well as things to keep in
 
 {# wf_updated_on: 2017-06-05 #}
 {# wf_published_on: 2016-12-12 #}
+{# wf_blink_components: Blink>WebVR #}
 
 # WebVR Status and Considerations {: .page-title }
 

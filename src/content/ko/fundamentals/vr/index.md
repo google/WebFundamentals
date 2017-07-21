@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: WebVR
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # WebVR {: .page-title }
 
-경고: WebVR은 아직 실험 단계이며 변경될 수 있습니다.
+Warning: WebVR은 아직 실험 단계이며 변경될 수 있습니다.
 
 WebVR은 사용자가 보유한 VR 헤드셋과 VR 지원 기기(예: [Daydream 헤드셋](https://vr.google.com/daydream/) 및 픽셀폰)를 사용하여 브라우저에서 완전 몰입형 3D 경험을 제공하는 JavaScript API입니다.
 

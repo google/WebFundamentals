@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ketahui cara browser mengonstruksikan pohon DOM dan CSSOM.
 
-{# wf_updated_on: 2014-09-11 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Mengonstruksikan Model Objek {: .page-title }
@@ -44,7 +44,7 @@ Setiap kali browser memroses markup HTML, browser harus melewati semua langkah d
 
 <img src="images/dom-timeline.png"  alt="Melacak konstruksi DOM dalam DevTools">
 
-Catatan: Kami menganggap sudah memiliki pengetahuan dasar Chrome DevTools - artinya Anda sudah tahu cara merekam jenjang jaringan, atau merekam timeline. Jika Anda butuh penyegaran cepat, lihat <a href='/web/tools/chrome-devtools/'>dokumentasi Chrome DevTools</a>, atau jika Anda baru mengenal DevTools, sebaiknya mengambil kursus <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> dari Codeschool.
+Note: Kami menganggap sudah memiliki pengetahuan dasar Chrome DevTools - artinya Anda sudah tahu cara merekam jenjang jaringan, atau merekam timeline. Jika Anda butuh penyegaran cepat, lihat <a href='/web/tools/chrome-devtools/'>dokumentasi Chrome DevTools</a>, atau jika Anda baru mengenal DevTools, sebaiknya mengambil kursus <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> dari Codeschool.
 
 Jika Anda membuka Chrome DevTools dan merekam timeline saat laman dimuat, Anda bisa melihat waktu sebenarnya yang dihabiskan untuk melakukan langkah ini&mdash;dalam contoh di atas, butuh waktu sekitar 5 md untuk mengonversikan HTML dalam jumlah besar ke dalam pohon DOM. Untuk laman yang lebih besar, proses ini mungkin menghabiskan waktu lebih lama. Saat pembuatan animasi yang lancar, hal ini bisa menjadi bottleneck apabila browser harus memroses banyak HTML.
 

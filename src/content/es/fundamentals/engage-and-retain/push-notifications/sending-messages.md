@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Hay dos servidores involucrados en el envío de un mensaje: tu servidor y un servidor de mensajería de terceros. Tú llevas registro de los destinatarios de tus mensajes. El servidor de terceros controla las rutas.
 
 
-{# wf_updated_on: 2016-06-30 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Enviar mensajes {: .page-title }
@@ -98,7 +98,7 @@ de trabajo. Contiene lo siguiente:
   desarrolladores tienen que usar cuando se encriptan mensajes que quieren enviar a ese
   servicio push.
 
-Nota: En muchos de los bytes de especificaciones relevantes se llaman octetos. El término se usa debido a lo heredado y a los sistemas de comunicación en que los bytes no siempre tienen 8 bits.
+Note: En muchos de los bytes de especificaciones relevantes se llaman octetos. El término se usa debido a lo heredado y a los sistemas de comunicación en que los bytes no siempre tienen 8 bits.
 
 ## Crear el mensaje {: #creating-the-message }
 
@@ -181,7 +181,7 @@ en Solicitar permiso y suscribir usuarios. La segunda parte
 (`p256ecdsa=applicationServerKey`) es la clave pública creada por el servidor de tu app.
 Ambas se deben codificar como dirección url base64. Observa la coma que separa las dos partes de la Crypto-Key.
 
-Nota: Un error en Chrome 52 requiere que se use un punto y coma para separar las partes de la Crypto-Key, en lugar de una coma.
+Note: Un error en Chrome 52 requiere que se use un punto y coma para separar las partes de la Crypto-Key, en lugar de una coma.
 
 ### Encabezado de Authorization {: #authorization-header }
 

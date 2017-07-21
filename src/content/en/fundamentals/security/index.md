@@ -4,6 +4,7 @@ description: Security is a big topic, learn about HTTPS, why it's important and 
 
 {# wf_updated_on: 2017-05-22 #}
 {# wf_published_on: 2015-09-08 #}
+{# wf_blink_components: Blink>SecurityFeature,Internals>Network>SSL #}
 
 # Security and Identity {: .page-title }
 
@@ -13,7 +14,7 @@ description: Security is a big topic, learn about HTTPS, why it's important and 
   </iframe>
 </div>
 
-Security is a big topic, here are a few things to get you started. 
+Security is a big topic, here are a few things to get you started.
 
 <div class="clearfix"></div>
 

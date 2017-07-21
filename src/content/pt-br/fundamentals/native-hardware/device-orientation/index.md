@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Os eventos de orientação e movimentação do dispositivo fornecem acesso ao acelerômetro, ao giroscópio e à bússola integrados aos dispositivos móveis.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-06-17 #}
 
 # Orientação e movimentação do dispositivo {: .page-title }
@@ -17,7 +17,7 @@ para controlar a direção ou a ação de um personagem. Quando usados com geolo
 ajudar a criar uma navegação de curva a curva mais precisa ou fornecer informações sobre um
 local específico.
 
-Atenção: nem todos os navegadores usam o mesmo sistema de coordenadas e, por isso, podem fornecer valores diferentes em situações idênticas. Esse problema melhorou com o tempo, mas não deixe de testar a sua situação.
+Warning: nem todos os navegadores usam o mesmo sistema de coordenadas e, por isso, podem fornecer valores diferentes em situações idênticas. Esse problema melhorou com o tempo, mas não deixe de testar a sua situação.
 
 ## Resumo
 

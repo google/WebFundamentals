@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript a menudo activa cambios visuales. Algunas veces, lo hace directamente mediante manipulaciones de estilo y, otras veces, mediante cálculos que generan cambios visuales, como la búsqueda o clasificación de datos. El JavaScript sincronizado incorrectamente o de larga ejecución puede ser una causa común de los problemas de rendimiento. Debes intentar minimizar su impacto siempre que sea posible.
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-20 #}
 
 # Optimización de la ejecución de JavaScript {: .page-title }
@@ -17,7 +17,7 @@ y debes intentar minimizar su impacto siempre que sea posible.
 
 La generación de perfiles de rendimiento de JavaScript puede considerarse como una obra de arte, ya que el código JavaScript que escribes no se parece en nada al código que en realidad se ejecuta. En los navegadores modernos, se usan los compiladores JIT y toda clase de optimizaciones y trucos posibles para realizar pruebas y brindarte la ejecución más rápida posible, y esto modifica en gran medida la dinámica del código.
 
-Nota: Si realmente deseas ver cómo funciona JIT en acción, debes consultar <a href='http://mrale.ph/irhydra/2/'>IRHydra<sup>2</sup> de Vyacheslav Egorov</a>. Allí se muestra el estado intermedio del código de JavaScript cuando el motor JavaScript de Chrome, V8, lo está optimizando.
+Note: Si realmente deseas ver cómo funciona JIT en acción, debes consultar <a href='http://mrale.ph/irhydra/2/'>IRHydra<sup>2</sup> de Vyacheslav Egorov</a>. Allí se muestra el estado intermedio del código de JavaScript cuando el motor JavaScript de Chrome, V8, lo está optimizando.
 
 No obstante, hay algunas medidas que definitivamente puedes tomar para que JavaScript se ejecute correctamente en tus apps.
 

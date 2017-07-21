@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Browser modern memudahkan kita dalam menyesuaikan komponen tertentu, seperti ikon, warna bilah alamat, dan bahkan menambahkan sesuatu seperti petak khusus. Ubahan ini bisa meningkatkan keterlibatan dan membuat pengguna kembali ke situs Anda.
 
 
-{# wf_updated_on: 2015-09-21 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-09-21 #}
 
 # Ikon & Warna Browser {: .page-title }
@@ -41,7 +41,7 @@ perangkat. Untuk mencegah penskalaan otomatis, Anda juga bisa memberikan ukuran
 tambahan dengan menetapkan atribut `sizes`.
 
 
-Catatan: Ukuran ikon harus berbasis 48 px, misalnya 48 px, 96 px, 144 px dan 192 px
+Note: Ukuran ikon harus berbasis 48 px, misalnya 48 px, 96 px, 144 px dan 192 px
 
 ### Safari
 

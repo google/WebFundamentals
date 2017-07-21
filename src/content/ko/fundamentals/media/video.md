@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 동영상을 사이트에 추가하고 모든 기기에서 사용자에게 최고의 경험을 제공하는 가장 간단한 방법을 알아봅니다.
 
-{# wf_updated_on: 2014-04-28 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-04-15 #}
 
 # 동영상 {: .page-title }
@@ -116,7 +116,7 @@ Fragments API를 사용하여 시작 및 종료 시간을 동영상 요소에 �
 있습니다(DVD의 신호 지점과 유사).
 
 
-주의: iOS를 제외한 대부분의 플랫폼은 Media Fragments API를 지원합니다. 또한, 서버가 Range Requests를 지원하는지 확인하세요. 기본적으로, 대부분의 서버는 Range Requests를 지원하지만, 일부 호스팅 서비스는 이 기능이 꺼져 있을 수도 있습니다.
+Caution: iOS를 제외한 대부분의 플랫폼은 Media Fragments API를 지원합니다. 또한, 서버가 Range Requests를 지원하는지 확인하세요. 기본적으로, 대부분의 서버는 Range Requests를 지원하지만, 일부 호스팅 서비스는 이 기능이 꺼져 있을 수도 있습니다.
 
 브라우저 개발자 도구를 사용하여, 응답 헤더에서 `Accept-Ranges: bytes`를
 확인합니다.
@@ -316,7 +316,7 @@ iframe에 있는 미디어 콘텐츠의 경우(예: YouTube 동영상),
 반응형 접근방식을 시도해 보세요([John Surdakowski의 제안](http://avexdesigns.com/responsive-youtube-embed/)과 유사).
 
 
-주의: 원래 동영상과 가로세로 비율이 달라지므로, 요소의 크기를 강제로 조정하지 마세요. 찌그러지거나 늘어난 모양은 보기 좋지 않습니다.
+Caution: 원래 동영상과 가로세로 비율이 달라지므로, 요소의 크기를 강제로 조정하지 마세요. 찌그러지거나 늘어난 모양은 보기 좋지 않습니다.
 
 **CSS:**
 

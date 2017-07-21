@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Os sites não são acessados só por humanos, mas também pelos rastreadores web dos mecanismos de pesquisa. Saiba como melhorar a precisão e a classificação do seu site nas buscas.
 
-{# wf_updated_on: 2015-10-05 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-08-30 #}
 
 # Otimização para buscas {: .page-title }
@@ -212,7 +212,7 @@ Veja mais detalhes dos robôs de cada mecanismo de pesquisa na página de ajuda 
 * [Yandex](https://help.yandex.com/webmaster/controlling-robot/robots-txt.xml)
 
 
-Nota: `robots.txt` só é necessário **se** você quiser controlar a forma de rastreamento do seu site. Não retorne o código de resposta 500 para o url: `/robots.txt`. Isso encerra todos os rastreamentos futuros para todo o host, gerando detalhes vazios nos resultados da pesquisa.
+Note: `robots.txt` só é necessário **se** você quiser controlar a forma de rastreamento do seu site. Não retorne o código de resposta 500 para o url: `/robots.txt`. Isso encerra todos os rastreamentos futuros para todo o host, gerando detalhes vazios nos resultados da pesquisa.
 
 #### Teste o robots.txt
 

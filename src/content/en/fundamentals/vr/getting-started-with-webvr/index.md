@@ -4,6 +4,7 @@ description: Learn how to take a WebGL scene in Three.js and add WebVR capabilit
 
 {# wf_updated_on: 2016-12-12 #}
 {# wf_published_on: 2016-12-12 #}
+{# wf_blink_components: Blink>WebVR #}
 
 # Getting Started with WebVR {: .page-title }
 

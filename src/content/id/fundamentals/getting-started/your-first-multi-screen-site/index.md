@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Web bisa diakses dari berbagai perangkat, dari ponsel berlayar-kecil hingga televisi berlayar-besar. Setiap perangkat memiliki keunggulan dan kekurangan masing-masing. Sebagai developer web, Anda diharapkan untuk mendukung semua perangkat.
 
-{# wf_updated_on: 2015-10-05 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2013-12-31 #}
 
 # Situs Multi-Perangkat Anda yang Pertama {: .page-title }
@@ -91,7 +91,7 @@ Struktur dasar dari situs sudah selesai. Kita tahu bagian yang kita butuhkan, ma
 yang akan ditampilkan di bagian tersebut, dan di mana menempatkannya dalam arsitektur informasi
 secara keseluruhan. Sekarang kita bisa mulai membangun situs.
 
-Catatan: Kita akan menambahkan penataan gaya di lain waktu
+Note: Kita akan menambahkan penataan gaya di lain waktu
 
 ### Membuat judul dan formulir
 
@@ -379,7 +379,7 @@ Kita bisa melakukannya dengan menggunakan teknologi yang disebut [Kueri Media](/
 Ada lebih banyak ruang pada layar yang lebih besar sehingga ada lebih banyak fleksibilitas tentang bagaimana
 materi ditampilkan.
 
-Catatan: Anda tidak harus memindahkan semua elemen sekaligus, Anda bisa membuat penyesuaian lebih kecil jika diperlukan.
+Note: Anda tidak harus memindahkan semua elemen sekaligus, Anda bisa membuat penyesuaian lebih kecil jika diperlukan.
 
 Dalam konteks laman produk, sepertinya kita
 harus:

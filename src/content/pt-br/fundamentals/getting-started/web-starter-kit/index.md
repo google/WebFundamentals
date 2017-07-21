@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Às vezes, a parte mais difícil de um novo projeto é começar. O Web StarterKit oferece uma base sólida com uma ampla variedade de ferramentas para ajudar você durante o processo de desenvolvimento.
 
-{# wf_updated_on: 2014-10-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-07-16 #}
 
 # Inicie seu site com o Web Starter Kit {: .page-title }
 
-Atenção: Este artigo não é atualizado há algum tempo e pode não refletir a realidade. Certifique-se de verificar o Web Starter Kit [documentação](https://github.com/google/web-starter-kit/) para os últimos detalhes.
+Warning: Este artigo não é atualizado há algum tempo e pode não refletir a realidade. Certifique-se de verificar o Web Starter Kit [documentação](https://github.com/google/web-starter-kit/) para os últimos detalhes.
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 

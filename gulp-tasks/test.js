@@ -322,7 +322,8 @@ function getFiles() {
     });
   } else {
     gutil.log(' ', 'Searching for changed files');
-    let cmd = 'git --no-pager diff --name-only ';
+    // --diff-filter set to ignore deleted files as this will cause error on `testFile()`
+    let cmd = 'git --no-pager diff --name-only --diff-filter=ACMRTUXB ';
     if (IS_TRAVIS) {
       cmd += 'FETCH_HEAD $(git merge-base FETCH_HEAD master)';
     } else {
@@ -515,7 +516,7 @@ function testMarkdown(filename, contents, options) {
         }
       })
     } else {
-      msg = `No wf_blink_components field found in metadata. Add if appropriate.`;
+      msg = 'No `wf_blink_components` field found in metadata. Add if appropriate.';
       logWarning(filename, '', msg);
     }
 

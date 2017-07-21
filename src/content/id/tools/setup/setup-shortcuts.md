@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Menyiapkan pintasan untuk tugas baris perintah yang sering Anda pakai. Jika Anda sering mengetik hal yang sama di baris perintah berulang kali, ini akan membantu meringankannya.
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-09-24 #}
 
 # Menyiapkan Pintasan Baris Perintah {: .page-title }
@@ -34,7 +34,7 @@ yang umum di file bashrc Anda. Pada Mac atau Linux:
 3. Kapan saja Anda sedang berada di direktori yang berisi repo git, Anda bisa menjalankan perintah
    `master` yang akan menjalankan checkout cabang master untuk Anda.
 
-Catatan: Lihat petunjuk untuk [menyiapkan alias
+Note: Lihat petunjuk untuk [menyiapkan alias
 Windows](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx).
 
 ## Pintasan yang kami sarankan

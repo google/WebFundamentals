@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Google e AnswerLab realizaram um estudo examinando como os usuários interagem com um conjunto diverso de sites móveis. O objetivo era responder à seguinte pergunta: 'o que torna um site móvel bom?'
 
 {# wf_published_on: 2014-08-08 #}
-{# wf_updated_on: 2015-09-17 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # O Que Torna um Site Móvel Bom? {: .page-title }
 
@@ -26,7 +26,7 @@ categorias.
 
 ## Navegação na página inicial e no site
 
-Sucesso: Direcione o foco da sua página inicial para dispositivos móveis a conectar os usuários com o conteúdo que buscam.
+Success: Direcione o foco da sua página inicial para dispositivos móveis a conectar os usuários com o conteúdo que buscam.
 
 ### Mantenha as chamadas para ação em destaque
 
@@ -91,7 +91,7 @@ Grandes intersticiais de instalação de aplicativo (como promoções de página
 inteira que ocultam o conteúdo e incentivam o usuário a instalar um aplicativo)
  irritam os usuários e dificultam a realização de tarefas. Além disso, sites que usam intersticiais de instalação de aplicativos são 
 reprovados no
-[Google Mobile-Friendly Test](https://search.google.com/search-console/mobile-friendly),
+[Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly),
 o que pode afetar negativamente seus rankings de pesquisa.
 
 <div class="attempt-left">
@@ -115,7 +115,7 @@ o que pode afetar negativamente seus rankings de pesquisa.
 
 ## Pesquisa no site
 
-Sucesso: Ajude os usuários de dispositivos móveis a encontrar o que procuram rapidamente.
+Success: Ajude os usuários de dispositivos móveis a encontrar o que procuram rapidamente.
 
 ### Deixe o recurso de pesquisa no site visível
 
@@ -214,7 +214,7 @@ de consulta de pesquisa para garantir que os resultados apresentados sejam do se
 
 ## Comércio e conversão
 
-Sucesso: Entenda as jornadas dos seus clientes e deixe que os usuários realizem conversões como quiserem.  
+Success: Entenda as jornadas dos seus clientes e deixe que os usuários realizem conversões como quiserem.  
 
 ### Deixe que os usuários explorem antes de se comprometer
 
@@ -296,7 +296,7 @@ ou enviem e-mails a si mesmos diretamente pelo site.
 
 ## Entrada de formulário
 
-Sucesso: Forneça uma experiência de conversão tranquila e sem qualquer problema com formulários utilizáveis.
+Success: Forneça uma experiência de conversão tranquila e sem qualquer problema com formulários utilizáveis.
 
 
 ### Otimize a entrada de informações
@@ -353,7 +353,7 @@ de entrega e cobrança, tente usar
 
 ## Usabilidade e formato
 
-Sucesso: Alegre seus usuários de dispositivos móveis com pequenas mudanças que aprimorem a experiência.
+Success: Alegre seus usuários de dispositivos móveis com pequenas mudanças que aprimorem a experiência.
 
 ### Otimize todo o seu site para dispositivos móveis
 
@@ -371,7 +371,7 @@ Evite elementos grandes com largura fixa. Use
 exibido corretamente em uma
 [largura de janela de visualização](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) específica.
 Sites que forçam os usuários a navegar horizontalmente são reprovados no
-[Google Mobile-Friendly Test](https://search.google.com/search-console/mobile-friendly),
+[Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly),
 o que pode afetar negativamente suas classificações de pesquisa.
 
 ### Permita que imagens de produtos possam ser ampliadas

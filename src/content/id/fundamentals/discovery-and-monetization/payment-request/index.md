@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Request API adalah untuk pembayaran yang cepat dan mudah di web.
 
 {# wf_published_on: 2016-07-25 #}
-{# wf_updated_on: 2016-12-06 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # Payment Request API: Panduan Integrasi {: .page-title }
 
@@ -324,7 +324,7 @@ Atau Anda bisa menggunakan "Delivery" atau "Pickup" sebagai ganti "Delivery" di 
 
 <div style="clear:both;"></div>
 
-Catatan: <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> harus berupa <code>undefined</code> atau larik kosong saat inisialisasi untuk menerima kejadian <code>shippingaddresschange</code>. Jika tidak maka kejadian tidak akan terpicu.
+Note: <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> harus berupa <code>undefined</code> atau larik kosong saat inisialisasi untuk menerima kejadian <code>shippingaddresschange</code>. Jika tidak maka kejadian tidak akan terpicu.
 
 
     var options = {
@@ -350,7 +350,7 @@ Untuk menolak alamat karena alasan seperti region yang tidak didukung, teruskan 
 
 <div style="clear:both;"></div>
 
-Catatan: Memproses kejadian <code>shippingaddresschange</code> dan membiarkan <code>details.shippingOptions</code> sebagai larik kosong juga berarti mengatasi penolakan (dengan kata lain Anda tidak bisa mengirim ke lokasi itu). Selalu pastikan opsi pengiriman Anda diperbarui dan cocok dengan alamat apa saja yang diberikan pengguna.
+Note: Memproses kejadian <code>shippingaddresschange</code> dan membiarkan <code>details.shippingOptions</code> sebagai larik kosong juga berarti mengatasi penolakan (dengan kata lain Anda tidak bisa mengirim ke lokasi itu). Selalu pastikan opsi pengiriman Anda diperbarui dan cocok dengan alamat apa saja yang diberikan pengguna.
 
 
     request.addEventListener('shippingaddresschange', e => {
@@ -447,7 +447,7 @@ Jika layanan Anda memungkinkan pengguna untuk memilih opsi pengiriman seperti "g
     var request = new PaymentRequest(methodData, details, options);
 
 
-Catatan: Sebagaimana disebutkan sebelumnya, <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> harus berupa <code>undefined</code> atau larik kosong saat inisialisasi agar dapat menerima kejadian <code>shippingaddresschange</code>. Atur nilai ini saat inisialisasi hanya bila opsi pengiriman tidak akan berubah berdasarkan alamat (misalnya pengiriman gratis internasional).
+Note: Sebagaimana disebutkan sebelumnya, <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> harus berupa <code>undefined</code> atau larik kosong saat inisialisasi agar dapat menerima kejadian <code>shippingaddresschange</code>. Atur nilai ini saat inisialisasi hanya bila opsi pengiriman tidak akan berubah berdasarkan alamat (misalnya pengiriman gratis internasional).
 
 Mengubah opsi pengiriman mungkin akan menghasilkan harga yang berbeda. Untuk menambahkan ongkos kirim dan mengubah total harga, Anda dapat menambahkan event listener untuk kejadian `shippingoptionchange`, yang akan terpicu saat pengguna memilih opsi pengiriman, sehingga Anda bisa menjalankan pemeriksaan terprogram terhadap data opsi. Anda juga dapat mengubah ongkos kirim sesuai alamat pengiriman.
 
@@ -562,7 +562,7 @@ Karena Payment Request API adalah fitur yang berkembang, banyak browser yang bel
       // Continue with existing form based solution
     }
 
-Catatan: Sebaiknya sediakan tautan normal untuk proses pemeriksaan biasa. Kemudian gunakan JavaScript untuk mencegah navigasi jika PaymentRequest didukung.
+Note: Sebaiknya sediakan tautan normal untuk proses pemeriksaan biasa. Kemudian gunakan JavaScript untuk mencegah navigasi jika PaymentRequest didukung.
 
 ## Menyatukan semuanya {: #putting-them-together}
 

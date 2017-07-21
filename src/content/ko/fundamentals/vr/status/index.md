@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: WebVR 경험을 빌드할 때 유의해야 할 사항뿐만 아니라 WebVR 상태에 대한 최신 정보를 제공합니다.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # WebVR 상태 및 고려 사항 {: .page-title }
 
-경고: WebVR은 아직 실험 단계이며 변경될 수 있습니다.
+Warning: WebVR은 아직 실험 단계이며 변경될 수 있습니다.
 
 ## WebVR 구현 상태
 

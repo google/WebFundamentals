@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A arquitetura de shell dos aplicativos mantém sua IU local e carrega conteúdo dinamicamente, sem sacrificar o potencial da web de oferecer links e de descobrir e encontrar. 
 
-{# wf_updated_on: 2016-09-26 #} 
+{# wf_updated_on: 2017-07-12 #} 
 {# wf_published_on: 2016-09-27 #}
 
 # O modelo de shell dos aplicativos {: .page-title }
@@ -271,7 +271,7 @@ Para saber mais sobre armazenamento de ativos estáticos em cache, acesse o code
 [Como adicionar um service worker com
 o sw-precache](https://codelabs.developers.google.com/codelabs/sw-precache/index.html?index=..%2F..%2Findex#0).
 
-Nota: o sw-precache é útil para armazenamento off-line de recursos estáticos em cache. Para
+Note: o sw-precache é útil para armazenamento off-line de recursos estáticos em cache. Para
 recursos de tempo de execução/dinâmicos, recomendamos usar nossa biblioteca de cortesia:
 [sw-toolbox](https://github.com/googlechrome/sw-toolbox).
 

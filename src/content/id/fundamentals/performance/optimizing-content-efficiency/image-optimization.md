@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
 
-{# wf_updated_on: 2014-05-09 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-05-06 #}
 
 # Optimalisasi Gambar {: .page-title }
@@ -157,7 +157,7 @@ Secara internal, browser mengalokasikan 256 nilai (corak) untuk setiap saluran, 
 * 10.000 piksel x 4 byte = 40.000 byte
 * 40.000 byte / 1024 = 39 KB
 
-Catatan: Sebagai cadangan, format gambar apa pun yang digunakan untuk mentransfer data dari server ke klien, bila gambar dienkode oleh browser, setiap piksel selalu menempati memori sebesar 4 byte. Ini bisa menjadi batasan penting untuk gambar besar dan perangkat yang tidak memiliki banyak ketersediaan memori - misalnya, perangkat seluler kelas bawah.
+Note: Sebagai cadangan, format gambar apa pun yang digunakan untuk mentransfer data dari server ke klien, bila gambar dienkode oleh browser, setiap piksel selalu menempati memori sebesar 4 byte. Ini bisa menjadi batasan penting untuk gambar besar dan perangkat yang tidak memiliki banyak ketersediaan memori - misalnya, perangkat seluler kelas bawah.
 
 <table>
 <thead>
@@ -202,7 +202,7 @@ Satu strategi sederhana adalah mengurangi "kedalaman bit" dari gambar dari 8 bit
 
 <img src="images/artifacts.png"  alt="Artefak kompresi">
 
-Catatan: Kiri ke kanan (PNG): 32-bit (16 juta warna), 7-bit (128 warna), 5-bit (32 warna). Gambar kompleks dengan transisi gradasi warna (gradasi, langit, dll.) membutuhkan palet warna lebih besar untuk menghindari artefak visual seperti langit yang pecah dalam aset 5 bit. Di sisi lain, jika gambar hanya menggunakan sedikit warna, maka palet besar hanya akan membuang-buang bit yang berharga!
+Note: Kiri ke kanan (PNG): 32-bit (16 juta warna), 7-bit (128 warna), 5-bit (32 warna). Gambar kompleks dengan transisi gradasi warna (gradasi, langit, dll.) membutuhkan palet warna lebih besar untuk menghindari artefak visual seperti langit yang pecah dalam aset 5 bit. Di sisi lain, jika gambar hanya menggunakan sedikit warna, maka palet besar hanya akan membuang-buang bit yang berharga!
 
 Berikutnya, setelah mengoptimalkan data yang tersimpan dalam setiap piksel, kita bisa menjadi lebih cerdas dan juga melihat piksel terdekat: ternyata, banyak gambar, dan terutama foto, yang memiliki banyak piksel terdekat dengan warna serupa - misalnya langit, tekstur berulang, dan seterusnya. Dengan memanfaatkan informasi ini, kompresor dapat menerapkan "[enkode delta](https://en.wikipedia.org/wiki/Delta_encoding)" yang daripada menyimpan masing-masing nilai untuk setiap piksel, kita bisa menyimpan selisih antara piksel di sekitarnya: jika piksel yang terdekat sama, maka deltanya adalah "nol" dan kita hanya perlu menyimpan satu bit! Namun kita tidak perlu berhenti di situ...
 
@@ -239,7 +239,7 @@ Jadi apa konfigurasi optimalisasi lossy dan lossless yang "optimal"? Jawabannya 
 
 Sebagai contoh langsung, saat menggunakan format lossy seperti JPEG, kompresor biasanya akan mengekspos setelan "kualitas" yang dapat disesuaikan (misalnya, slider kualitas yang disediakan oleh fungsionalitas "Save for Web" di Adobe Photoshop), yang biasanya berupa angka antara 1 dan 100 yang mengontrol cara kerja bagian dalam dari kumpulan algoritme lossy dan lossless tertentu. Untuk hasil yang terbaik, lakukan eksperimen pada beberapa setelan kualitas untuk gambar Anda, dan jangan takut untuk menurunkan kualitas - hasil visualnya sering kali sangat bagus dan penghematan ukuran filenya bisa cukup besar.
 
-Catatan: Perhatikan, tingkat kualitas untuk berbagai format gambar tidak dapat dibandingkan secara langsung karena perbedaan algoritme yang digunakan untuk mengenkode gambar: kualitas 90 JPEG akan memberikan hasil yang jauh berbeda dari kualitas 90 WebP. Sebenarnya, bahkan tingkat kualitas untuk format gambar sama mungkin menghasilkan keluaran berbeda yang kentara berdasarkan implementasi kompresor!
+Note: Perhatikan, tingkat kualitas untuk berbagai format gambar tidak dapat dibandingkan secara langsung karena perbedaan algoritme yang digunakan untuk mengenkode gambar: kualitas 90 JPEG akan memberikan hasil yang jauh berbeda dari kualitas 90 WebP. Sebenarnya, bahkan tingkat kualitas untuk format gambar sama mungkin menghasilkan keluaran berbeda yang kentara berdasarkan implementasi kompresor!
 
 
 ## Memilih format gambar yang tepat
@@ -369,7 +369,7 @@ Optimalisasi gambar pada akhirnya terdari dua kriteria: mengoptimalkan jumlah by
 
 Hasilnya, salah satu teknik optimalisasi gambar paling sederhana dan efektif adalah memastikan bahwa kita tidak memberikan piksel tambahan lagi selain dari yang diperlukan untuk menampilkan aset pada ukuran yang diinginkan dalam browser. Terdengar sederhana bukan? Sayangnya, kebanyakan laman gagal dalam ujian ini untuk mayoritas aset gambarnya: biasanya, laman menerjunkan aset yang lebih besar dan mengandalkan browser untuk mengubah skalanya - yang juga akan menghabiskan lebih banyak sumber daya CPU - dan menampilkannya pada resolusi lebih rendah.
 
-Catatan: Mengarahkan kursor ke atas elemen gambar dalam Chrome DevTools akan memunculkan ukuran "alami" dan "tampilan" dari aset gambar. Dalam contoh di atas, gambar 300x260 piksel diunduh namun kemudian skalanya diturunkan (245x212) di klien saat ditampilkan.
+Note: Mengarahkan kursor ke atas elemen gambar dalam Chrome DevTools akan memunculkan ukuran "alami" dan "tampilan" dari aset gambar. Dalam contoh di atas, gambar 300x260 piksel diunduh namun kemudian skalanya diturunkan (245x212) di klien saat ditampilkan.
 
 Overhead penyampaian piksel yang tak perlu - hanya untuk browser mengubah skala gambar untuk Anda, berarti hilangnya kesempatan besar untuk mengurangi dan mengoptimalkan jumlah byte yang diperlukan untuk merender laman. Selanjutnya, perhatikan bahwa mengubah ukuran tidak hanya memfungsikan pengurangan jumlah piksel gambar, namun juga tentang ukuran alaminya.
 
