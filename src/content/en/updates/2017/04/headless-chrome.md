@@ -330,14 +330,16 @@ Page.loadEventFired(async () => {
 
 Right now, Selenium opens a full instance of Chrome. In other words, it's an
 automated solution but not completely headless. However, Selenium can be
-configured to run headless Chrome with a little work. I recommend [Running Selenium with Headless Chrome](https://intoli.com/blog/running-selenium-with-headless-chrome/) if you want the
+configured to run headless Chrome with a little work. I recommend
+[Running Selenium with Headless Chrome](https://intoli.com/blog/running-selenium-with-headless-chrome/)
+if you want the
 full instructions on how to set things up yourself, but I've dropped in some
 examples below to get you started.
 
 #### Using ChromeDriver
 
 [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 2.3.0
-supports Chrome 59+ and works with headless Chrome. In some cases, you may need
+supports Chrome 59 and later and works with headless Chrome. In some cases, you may need
 Chrome 60 to work around bugs. For example, there are known issues with taking
 screenshots in Chrome 59.
 
@@ -499,7 +501,7 @@ Flexible container.
 
 **Can I use this with Selenium / WebDriver / ChromeDriver**?
 
-Yep. See [Using Selenium, WebDrive, or ChromeDriver](#drivers).
+Yes. See [Using Selenium, WebDrive, or ChromeDriver](#drivers).
 
 **How is this related to PhantomJS?**
 
