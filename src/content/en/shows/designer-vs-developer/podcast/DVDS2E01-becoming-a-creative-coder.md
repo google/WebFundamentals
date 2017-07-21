@@ -5,8 +5,8 @@ description: Mariko explains creative coding.
 {# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2017-07-25 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E01-becoming-a-creative-coder.mp3 #}
-{# wf_podcast_duration: 00:10:34 #}
-{# wf_podcast_fileSize: 10161380 #}
+{# wf_podcast_duration: 00:11:20 #}
+{# wf_podcast_fileSize: 16343189 #}
 {# wf_podcast_subtitle: Mariko explains creative coding. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s02-e01-cover-large.jpg #}
 
