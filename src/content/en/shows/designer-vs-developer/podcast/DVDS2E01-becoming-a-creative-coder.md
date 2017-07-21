@@ -17,8 +17,8 @@ challenges faced in the industry by opening a conversation between
 the two, providing take aways, solutions to workflows, tools & 
 discussions on everyday struggles. 
 
-This week Mustafa speaks to Mariko Kosaka, a Developer 
-Advocate on the Google Developer Relations Team, about 
+This week Mustafa speaks to Mariko Kosaka, a Developer Advocate 
+on the Google Developers Relations Team, about 
 the art she creates with code and how developers can 
 embrace the notion of making something that isn’t 
 necessarily useful but allows still has value.
