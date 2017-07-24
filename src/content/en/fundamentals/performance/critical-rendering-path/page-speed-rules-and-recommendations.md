@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: This guide examines PageSpeed Insights rules in context: what to pay attention to when optimizing the critical rendering path, and why.
 
-{# wf_updated_on: 2015-10-05 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2014-03-31 #}
 
 # PageSpeed Rules and Recommendations {: .page-title }

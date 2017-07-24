@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn to identify and resolve critical rendering path performance bottlenecks.
 
-{# wf_updated_on: 2014-04-27 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Analyzing Critical Rendering Path Performance {: .page-title }

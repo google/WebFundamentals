@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to review your site for accessibility issues.
 
 
-{# wf_updated_on: 2017-03-12 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2017-03-12 #}
 
 # How To Do an Accessibility Review {: .page-title }

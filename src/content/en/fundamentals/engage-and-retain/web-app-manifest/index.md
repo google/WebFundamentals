@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
-{# wf_updated_on: 2016-08-19 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-02-11 #}
 
 # The Web App Manifest {: .page-title }

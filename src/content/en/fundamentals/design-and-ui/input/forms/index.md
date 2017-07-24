@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs.
 
-{# wf_updated_on: 2014-10-21 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2014-04-30 #}
 
 # Create Amazing Forms {: .page-title }

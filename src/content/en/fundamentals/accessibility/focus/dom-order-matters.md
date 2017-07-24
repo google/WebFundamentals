@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: The importance of the default DOM order
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-10-04 #}
 
 # DOM Order Matters {: .page-title }

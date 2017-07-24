@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Going fullscreen.
 
-{# wf_updated_on: 2016-10-01 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-10-01 #}
 
 # Making Fullscreen Experiences {: .page-title }
