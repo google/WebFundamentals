@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Diagnose and Log to Console {: .page-title }
@@ -184,7 +184,7 @@ The code:
     
 
 The output of the previous code sample:
-![Example subsitution output](images/console-write-log-multiple.png)
+![Example substitution output](images/console-write-log-multiple.png)
 
 ### Styling console output with CSS
 

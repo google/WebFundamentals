@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: By executing code one line or one function at a time, you can observe changes in the data and in the page to understand exactly what is happening.
 
-{# wf_updated_on: 2015-09-01 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2015-04-13 #}
 
 # How to step through your code {: .page-title }
@@ -138,7 +138,7 @@ paused at the current breakpoint.
 
 ### Enable the async call stack
 
-Enable the async call stack feature to gain more visibiliy into the execution
+Enable the async call stack feature to gain more visibility into the execution
 of your asynchronous function calls.
 
 1. Open the **Sources** panel of DevTools.
@@ -317,10 +317,10 @@ Modifying the first number on the app's UI triggers both of the breakpoints.
 ![Main and worker script breakpoints triggered](imgs/breakpoints-triggered.png)
 
 In the Threads pane the blue arrow indicates which thread is currently
-selected. For example, in the screenshot above the **Main** thread is selcted.
+selected. For example, in the screenshot above the **Main** thread is selected.
 
 All of the
-DevTools controls for stepping through code (resume or pause script exection,
+DevTools controls for stepping through code (resume or pause script execution,
 step over next function call, step into next function call, etc.) pertain
 to that thread. In other words, if you pressed the **Resume script execution**
 button while your DevTools looked like the screenshot above, the Main
