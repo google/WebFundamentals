@@ -98,7 +98,7 @@ and should [use Chrome DevTools’ Timeline to measure your per-frame costs](/we
 ## Embrace Progressive Enhancement
 
 <img src="img/touch-input.png" class="attempt-right"
-  alt="Use Progressive Enhancement to maximise reach" />
+  alt="Use Progressive Enhancement to maximize reach" />
 
 What are you to do if your users don’t have a Head Mounted Display (‘HMD’) or
 VR-capable device? The best answer is to use Progressive Enhancement.

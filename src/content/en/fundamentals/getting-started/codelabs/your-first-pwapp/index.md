@@ -659,7 +659,7 @@ Debugging service workers can be a challenge, and when it involves caching, thin
 
 #### Start Fresh
 
-In some cases, you may find yourself loading cached data or that things aren't updated as you expect. To clear all saved data (localStoarge, indexedDB data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
+In some cases, you may find yourself loading cached data or that things aren't updated as you expect. To clear all saved data (localStorage, IndexedDB data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
 
 Some other tips:
 

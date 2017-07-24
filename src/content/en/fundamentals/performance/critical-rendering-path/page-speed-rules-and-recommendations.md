@@ -22,7 +22,7 @@ JavaScript resources are parser blocking by default unless marked as `async` or 
 
 ### Prefer asynchronous JavaScript resources
 
-Asynchronus resources unblock the document parser and allow the browser to avoid blocking on CSSOM prior to executing the script. Often, if the script can use the `async` attribute, it also means it is not essential for the first render. Consider loading scripts asynchronously after the initial render.
+Asynchronous resources unblock the document parser and allow the browser to avoid blocking on CSSOM prior to executing the script. Often, if the script can use the `async` attribute, it also means it is not essential for the first render. Consider loading scripts asynchronously after the initial render.
 
 ### Avoid synchronous server calls
 
@@ -78,7 +78,7 @@ The `fetch()` method can also handle POST requests.
         "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
       },  
       body: 'foo=bar&lorem=ipsum'  
-    }).then(function() { // Aditional code });
+    }).then(function() { // Additional code });
     </script>
     
 

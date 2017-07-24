@@ -1123,7 +1123,7 @@ Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySe
 For now, `/deep/` [continues to work in `querySelectorAll()` calls](https://bugs.chromium.org/p/chromium/issues/detail?id=633007).
 {% endcomment %}
 
-### Creating elements from a &lt;template> {: #fromtemplate}
+### Creating elements from a &lt;template&gt; {: #fromtemplate}
 
 Instead of populating a shadow root using `.innerHTML`, we can use a declarative
 `<template>`. Templates are an ideal placeholder for declaring the structure of

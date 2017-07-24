@@ -33,7 +33,7 @@ This overview highlights a defense that can significantly reduce the risk and
 impact of XSS attacks in modern browsers: Content Security Policy (CSP).
 
 ### TL;DR {: .hide-from-toc }
-* Use whitelists to tell the client what's alowed and what isn't.
+* Use whitelists to tell the client what's allowed and what isn't.
 * Learn what directives are available.
 * Learn the keywords they take.
 * Inline code and `eval()` are considered harmful.

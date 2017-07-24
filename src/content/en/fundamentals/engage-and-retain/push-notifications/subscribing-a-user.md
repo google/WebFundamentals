@@ -246,7 +246,7 @@ to generate keys by doing the following:
 You only need to create these keys once for your application, just make sure you keep the
 private key private. (Yeah, I just said that.)
 
-## Permisions and subscribe()
+## Permissions and subscribe()
 
 There is one side effect of calling `subscribe()`. If your web app doesn't have permissions for
 showing notifications at the time of calling `subscribe()`, the browser will request the

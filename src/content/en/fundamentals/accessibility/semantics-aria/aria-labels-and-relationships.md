@@ -113,7 +113,7 @@ there is some extra explanatory text that a user might need, whether it applies
 only to users of assistive technology or all users.
 
 A common example is a password input field that is accompanied by some
-descriptive text explaining the mimimum password requirements. Unlike a label,
+descriptive text explaining the minimum password requirements. Unlike a label,
 this description may or may not ever be presented to the user; they may have a
 choice of whether to access it, or it may come after all the other information,
 or it may be pre-empted by something else. For example, if the user is entering

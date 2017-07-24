@@ -153,7 +153,7 @@ const applicationServerPublicKey = '<Your Public Key>';
 Note: You should never put your private key in your web app!
 
 
-## Initialise State
+## Initialize State
 
 
 

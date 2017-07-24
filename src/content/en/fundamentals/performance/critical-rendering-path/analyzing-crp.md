@@ -49,7 +49,7 @@ Notice that our "awesome photo" did not block the `domContentLoaded` event. Turn
 That said, the `load` event (also known as `onload`), is blocked on the image: DevTools reports the `onload` event at 335ms. Recall that the `onload` event marks the point at which **all resources** that the page requires have been downloaded and processed; at this point, the loading spinner can stop spinning in the browser (the red vertical line in the waterfall).
 
 
-## Adding javaScript and CSS into the mix
+## Adding JavaScript and CSS into the mix
 
 Our "Hello World experience" page seems simple but a lot goes on under the hood. In practice we'll need more than just the HTML: chances are, we'll have a CSS stylesheet and one or more scripts to add some interactivity to our page. Let's add both to the mix and see what happens:
 

@@ -63,7 +63,7 @@ directly into the web page, and on desktop can't access the user's webcam.
 
 ## Access the camera interactively
 
-Modern browsers can get direct acccess to cameras, allowing us to build
+Modern browsers can get direct access to cameras, allowing us to build
 experiences that are fully integrated with the web page, so the user need never
 leave the browser.
 

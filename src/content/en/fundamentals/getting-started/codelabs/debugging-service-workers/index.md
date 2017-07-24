@@ -361,7 +361,7 @@ With your `fetch` handler in place, and your app set to __Offline__, now is the 
 
 You'll notice that there are failed requests (like for a new Service Worker or `manifest.json`). That's totally fine and expected.
 
-### Testing slow or flakey networks
+### Testing slow or flaky networks
 
 Because we use our mobile devices in a plethora of different contexts, we're constantly moving between various states of connectivity. There are also many parts of the world where 3G and 2G speeds are the norm. To verify that our app works well for these consumers, we should test that it is performant even on a slower connection.
 

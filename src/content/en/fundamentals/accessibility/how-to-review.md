@@ -74,7 +74,7 @@ for examples.
 - Beware of completely trapping focus at any point. Watch out for autocomplete
 widgets, where keyboard focus may get stuck. Focus can be temporarily trapped in
 specific situations, such as displaying a modal, when you don't want the user
-interacting with the rest of the page - but you should aim to provde a
+interacting with the rest of the page - but you should aim to provide a
 keyboard-accessible method of escaping the modal as well. See the guide on
 [Modals and Keyboard
 Traps](/web/fundamentals/accessibility/focus/using-tabindex#modals_and_keyboard_traps)

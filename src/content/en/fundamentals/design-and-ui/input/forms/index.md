@@ -559,7 +559,7 @@ simply add the required attribute:
 For numeric input types like number or range as well as date/time inputs, you
 can specify the minimum and maximum values, as well as how much they should each
 increment/decrement when adjusted by the slider or spinners.  For example, a
-shoe size input would set a minumum size of 1 and a maximum size 13, with a step
+shoe size input would set a minimum size of 1 and a maximum size 13, with a step
 of 0.5
 
 

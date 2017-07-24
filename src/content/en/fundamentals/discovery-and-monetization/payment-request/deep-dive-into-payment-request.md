@@ -20,7 +20,7 @@ description: How to implement and take full advantage of the Payment Request API
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-top.png" alt="Ppayment request UI on desktop and mobile Chrome.">
+    <img src="./images/deep-dive/pr-top.png" alt="Payment request UI on desktop and mobile Chrome.">
     <figcaption>
       Payment request UI on desktop and mobile Chrome.
     </figcaption>

@@ -148,7 +148,7 @@ The easiest way to save the data from the microphone is to use the
 `MediaRecorder` API.
 
 The `MediaRecorder` API will take the stream created by `getUserMedia` and then
-progressively save the data that is on the stream in to you prefered
+progressively save the data that is on the stream in to you preferred
 destination.
 
 <pre class="prettyprint">

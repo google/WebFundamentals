@@ -216,9 +216,9 @@ file. It probably goes without saying, but I'm going to say it anyway, that you
 can always lower bitrate and resolution, but increasing them is a problem.
 Without special software and algorithms, quality is going to take a hit.
 
-The first step in changing bitrate and resultion is to [display the file
+The first step in changing bitrate and resolution is to [display the file
 characteristics](/web/fundamentals/media/manipulating/cheatsheet#display_characteristics)
-and verify that your source file has a higher bitrate or resultion than your
+and verify that your source file has a higher bitrate or resolution than your
 desired result.
 
 ### Bitrate
@@ -357,4 +357,4 @@ Widevine works.)
 This does not cover everything you could do to a media file before posting it to
 the web, not by a longshot. To be fair, this subject is one deserving of its own
 website. I'm hoping this introduction will give you enough to help you find your
-own aswers to questions.
+own answers to questions.

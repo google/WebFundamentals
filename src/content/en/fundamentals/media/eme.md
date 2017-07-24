@@ -454,7 +454,7 @@ The BBC has begun [providing test streams using DASH](http://bbc.co.uk/rd/blog/2
 > start requesting segments from that representation. Content is encoded in such
 > a way to make this switching easy for the client to do. In addition to a
 > number of media segments, a representation generally also has an
-> Initialisation Segment. This can be thought of as a header, containing
+> Initialization Segment. This can be thought of as a header, containing
 > information about the encoding, frame sizes, etc. A client needs to obtain
 > this for a given representation before consuming media segments from that
 > representation.

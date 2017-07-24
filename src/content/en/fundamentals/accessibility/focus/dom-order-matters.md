@@ -39,7 +39,7 @@ example, if you use a CSS property like `float` to move one button to the right,
 the buttons appear in a different order on screen. But, because their order in
 the DOM remains the same, so does their tab order. When the user tabs through
 the page, the buttons gain focus in a non-intuitive order. Try clicking on the
-code block below to move the focus navgation start point, then press `Tab` to
+code block below to move the focus navigation start point, then press `Tab` to
 move focus through the buttons.
 
     <button style="float: right">I Should</button>

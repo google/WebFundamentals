@@ -124,7 +124,7 @@ For example:
       </td>
       <td>
         <code>string</code><br>
-        User identifer when invoking the identity provider specific
+        User identifier when invoking the identity provider specific
         authentication flow, typically as a value for <code>login_hint</code>
         in OAuth.
       </td>

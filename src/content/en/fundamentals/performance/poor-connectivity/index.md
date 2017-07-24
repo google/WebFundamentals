@@ -25,7 +25,7 @@ When building or updating a site, you must ensure adequate performance in a vari
 
 [Chrome DevTools](/web/tools/chrome-devtools) lets you test your site with a
 variety of upload/download speeds and [round-trip times][rtt], using presets
-or custom settings from the Network panel. See [Get Started with Analyize
+or custom settings from the Network panel. See [Get Started with Analyze
 Network Performance](/web/tools/chrome-devtools/network-performance) to
 learn the basics.
 

@@ -91,7 +91,7 @@ You can specify the type of item by using the `itemtype` attribute along with th
 of content on your web page. You should be able to find one that is relevant
 in [this page](https://schema.org/docs/full.html).
 
-### Add `itemprop` to describe each item using schema.org vocaburary
+### Add `itemprop` to describe each item using schema.org vocabulary
 `itemprop` defines properties for `itemtype` in the scope. For providing
 metadata to social sites, typical `itemprop` values are `name`, `description`,
 and `image`.

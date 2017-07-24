@@ -18,7 +18,7 @@ You'll find two articles in this section. On this page, I provide some basic
 instruction in using two common media command-line utilities:
 [Shaka Packager](https://github.com/google/shaka-packager) and
 [ffmpeg](https://ffmpeg.org/download.html). Why cover two applications? While
-both are powerful and useful by themselves, neither does everthing needed to
+both are powerful and useful by themselves, neither does everything needed to
 prepare media for the web.  
 
 The next page is a [cheat sheet](cheatsheet) showing common operations with
@@ -100,7 +100,7 @@ applications.
 
 Here's the basic pattern for a Shaka Packager command line.
 
-    packager stream_descriptor[ stream_descriptor-2[ stream_desdriptor-n]] [flags]
+    packager stream_descriptor[ stream_descriptor-2[ stream_descriptor-n]] [flags]
 
 This isn't quite what you get if you type `packager -help`. This is how I think
 of it, and this reflects the examples in the
@@ -111,7 +111,7 @@ video and audio streams of the same file simultaneously.
 Compare this basic pattern with something simple like displaying file
 characteristics. (I've lined up equivalent parts.)
 
-    packager stream_descriptor[ stream_descriptor-2[ stream_desdriptor-n]] [flags]
+    packager stream_descriptor[ stream_descriptor-2[ stream_descriptor-n]] [flags]
 
     packager input=glocken.mp4                                              --dump_stream_info
 
@@ -149,7 +149,7 @@ I've shown the output below.
 
 Look for the characteristics discussed in the last section and notice a few
 things. The height and width are correct for full HD, and the audio and video
-codecs are the preffered codecs for their container types, AAC for audio and
+codecs are the preferred codecs for their container types, AAC for audio and
 H264 for video. Notice also that streams are identified with numbers. These are
 useful for operations that manipulate the audio and video separately.
  

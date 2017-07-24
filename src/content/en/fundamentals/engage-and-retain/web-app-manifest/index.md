@@ -120,7 +120,7 @@ Note: When saving an icon to the home screen, Chrome first looks for icons that 
 ## Add a splash screen
 
 <figure class="attempt-right">
-  <img src="images/background-color.gif" alt="backgroud color">
+  <img src="images/background-color.gif" alt="background color">
   <figcaption>Background color for launch screen</figcaption>
 </figure>
 
@@ -211,7 +211,7 @@ selectively. Users prefer selecting the orientation.
 ## Provide a site-wide theme color
 
 <figure class="attempt-right">
-  <img src="images/theme-color.png" alt="backgroud color">
+  <img src="images/theme-color.png" alt="background color">
   <figcaption>Theme color</figcaption>
 </figure>
 
@@ -233,7 +233,7 @@ from the home screen every page in the domain will automatically get the theme c
     
 
 <figure>
-  <img src="images/manifest-display-options.png" alt="backgroud color">
+  <img src="images/manifest-display-options.png" alt="background color">
   <figcaption>Sitewide theme color</figcaption>
 </figure>
 
