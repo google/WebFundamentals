@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: O manifesto de um aplicativo web é um arquivo JSON que permite controlar como o aplicativo web ou site é exibido para o usuário em áreas que normalmente se espera ver aplicativos nativos (por exemplo, a tela inicial de um dispositivo), como definir o que o usuário pode inicializar e o visual durante a inicialização.
 
-{# wf_updated_on: 2016-08-19 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2016-02-11 #}
 
 # O manifesto do aplicativo web {: .page-title }
@@ -115,7 +115,7 @@ Isso pode funcionar como você quiser. O valor que estamos usando tem a vantagem
       }],
     
 
-Observação: ao salvar um ícone na tela inicial, o Chrome primeiro procura ícones que correspondam à densidade da tela e que sejam dimensionados de acordo com a densidade de 48 dp. Se não encontrar nenhum, ele procura o ícone que mais se aproxima das características do dispositivo. Se, por qualquer motivo, você quiser escolher um ícone específico para uma determinada densidade de pixels, pode usar o membro <code>density</code> opcional, que assume um número. Se você não declara a densidade, assume-se o padrão 1,0. Isso significa: "use esse ícone para densidades de tela de 1,0 ou mais", o que, em geral, é o que se deseja.
+Observação: ao salvar um ícone na tela inicial, o Chrome primeiro procura ícones que correspondam à densidade da tela e que sejam dimensionados de acordo com a densidade de 48 dp. Se não encontrar nenhum, ele procura o ícone que mais se aproxima das características do dispositivo. Se, por qualquer motivo, você quiser escolher um ícone específico para uma determinada densidade de pixels, pode usar o membro `density` opcional, que assume um número. Se você não declara a densidade, assume-se o padrão 1,0. Isso significa: "use esse ícone para densidades de tela de 1,0 ou mais", o que, em geral, é o que se deseja.
 
 ## Adicione uma tela de apresentação
 

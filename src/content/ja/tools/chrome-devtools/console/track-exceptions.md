@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools には、例外をスローしているウェブページの修正や JavaScript のエラーのデバッグに役立つツールが用意されています。
 
-{# wf_updated_on:2015-05-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on:2015-04-13 #}
 
 #  例外とエラーの処理 {: .page-title }
@@ -18,9 +18,9 @@ Chrome DevTools には、例外をスローしているウェブページの修�
 
 ### TL;DR {: .hide-from-toc }
 - 例外が発生したときにコード コンテキストをデバッグするには、[Pause on exceptions] を有効にします。
-- 現在の JavaScript コールスタックを出力するには、 <code>console.trace</code> を使用します。
-- コードにアサーションを追加して例外をスローするには、 <code>console.assert()</code> を使用します。
-- ブラウザで発生しているエラーをログに記録するには、 <code>window.onerror</code> を使用します。
+- 現在の JavaScript コールスタックを出力するには、 `console.trace` を使用します。
+- コードにアサーションを追加して例外をスローするには、 `console.assert()` を使用します。
+- ブラウザで発生しているエラーをログに記録するには、 `window.onerror` を使用します。
 
 
 ## 例外の追跡

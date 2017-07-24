@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Pengguna mengharapkan laman berjalan mulus dan interaktif. Setiap tahap di pipeline piksel menyatakan peluang timbulnya jank. Pelajari tentang alat dan strategi untuk mengidentifikasi dan memperbaiki masalah umum yang memperlambat kinerja waktu proses.
 
-{# wf_updated_on: 2016-03-15 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Analisis Kinerja Waktu Proses {: .page-title }
@@ -64,12 +64,12 @@ Tabel berikut menjelaskan beberapa masalah JavaScript yang umum dan kemungkinan 
     <tr>
       <td data-th="Problem">JavaScript yang waktu eksekusinya buruk akan memengaruhi respons, animasi, dan pemuatan.</td>
       <td data-th="Example">Pengguna langsung menggulir setelah laman dimuat, setTimeout / setInterval.</td>
-      <td data-th="Solution"><a href="/web/fundamentals/performance/rendering/optimize-javascript-execution">Optimalkan eksekusi JavaScript</a>: gunakan <code>requestAnimationFrame</code>, sebarkan manipulasi DOM ke berbagai bingkai, gunakan Web Worker.</td>
+      <td data-th="Solution"><a href="/web/fundamentals/performance/rendering/optimize-javascript-execution">Optimalkan eksekusi JavaScript</a>: gunakan `requestAnimationFrame`, sebarkan manipulasi DOM ke berbagai bingkai, gunakan Web Worker.</td>
     </tr>
     <tr>
       <td data-th="Problem">JavaScript yang berjalan lama memengaruhi respons.</td>
       <td data-th="Example">Kejadian <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">DOMContentLoaded</a> berhenti karena mendapat pekerjaan berat dari JS.</td>
-      <td data-th="Solution">Pindahkan pekerjaan komputasi murni ke <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Worker</a>. Jika Anda memerlukan akses DOM, gunakan <code>requestAnimationFrame</code> (lihat juga <a href="/web/fundamentals/performance/rendering/optimize-javascript-execution">Optimalkan Eksekusi JavaScript</a>).</td>
+      <td data-th="Solution">Pindahkan pekerjaan komputasi murni ke <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Worker</a>. Jika Anda memerlukan akses DOM, gunakan `requestAnimationFrame` +(lihat juga <a href="/web/fundamentals/performance/rendering/optimize-javascript-execution">Optimalkan Eksekusi JavaScript</a>).</td>
     </tr>
     <tr>
       <td data-th="Problem">Skrip tidak berharga yang memengaruhi respons atau animasi.</td>

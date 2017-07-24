@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Aprende a animar la transición entre dos vistas en tus apps.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Animaciones entre vistas {: .page-title }
@@ -129,7 +129,7 @@ Finalmente, agregamos las declaraciones de CSS para esas clases.
 
 Puedes expandir esto para que abarque varias vistas y el concepto básico seguirá siendo el mismo; cada vista no visible debe estar fuera de la pantalla y aparecer cuando sea necesario, y la pantalla que se muestra actualmente debe dejar de visualizarse.
 
-Warning: Establecer este tipo de jerarquía entre navegadores puede ser todo un desafío. Por ejemplo, en iOS se requiere una propiedad adicional de CSS: <code>-webkit-overflow-scrolling: touch</code>, para ‘volver a habilitar’ el desplazamiento, pero esto no permite tener control sobre el eje en el que se aplica, tal como se puede hacer con la propiedad estándar de desbordamiento. ¡Asegúrate de probar la implementación en diferentes dispositivos!
+Warning: Establecer este tipo de jerarquía entre navegadores puede ser todo un desafío. Por ejemplo, en iOS se requiere una propiedad adicional de CSS: `-webkit-overflow-scrolling: touch`, para ‘volver a habilitar’ el desplazamiento, pero esto no permite tener control sobre el eje en el que se aplica, tal como se puede hacer con la propiedad estándar de desbordamiento. ¡Asegúrate de probar la implementación en diferentes dispositivos!
 
 Además de usarse para transiciones entre vistas, esta técnica también se puede aplicar a otros elementos de deslizamiento, como los elementos de navegación de la barra lateral. La única diferencia real es que no será necesario desplazar las otras vistas.
 

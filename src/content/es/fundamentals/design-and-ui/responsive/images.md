@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Una imagen vale más que mil palabras y las imágenes son parte integral de las páginas. Sin embargo, a menudo también cuentan para la mayoría de los bytes descargados.  Con el diseño web adaptable, no solo nuestros diseños pueden cambiar según las características del dispositivo: también lo pueden hacer las imágenes.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Imágenes {: .page-title }
@@ -145,10 +145,10 @@ Prueba interna: El elemento `picture` está llegando a los navegadores. Aunque t
   </iframe>
 </div>
 
-Usa el elemento <code>picture</code> cuando el origen de una imagen
+Usa el elemento `picture` cuando el origen de una imagen
 exista en varias densidades o cuando un diseño adaptable indique que se
 debe usar una imagen un tanto diferente en ciertos tipos de pantallas.  Similar al elemento
-<code>video</code>, se pueden incluir varios elementos <code>source</code>. De
+`video`, se pueden incluir varios elementos `source`. De
 esta forma, es posible especificar distintos archivos de imagen
 a partir de consultas de medios o formatos de imagen.
 
@@ -395,7 +395,7 @@ El archivo SVG ofrece [gran compatibilidad](http://caniuse.com/svg-html5) en dis
 
 ##### URI de datos
 
-Los URI de datos proporcionan una manera de incluir un archivo, como una imagen, en línea configurando el scr de un elemento <code>img</code> como una cadena codificada Base64 con el siguiente formato:
+Los URI de datos proporcionan una manera de incluir un archivo, como una imagen, en línea configurando el scr de un elemento `img` como una cadena codificada Base64 con el siguiente formato:
 
 
     <img src="data:image/svg+xml;base64,[data]">
@@ -425,7 +425,7 @@ Si el código para incluir imágenes por referencia puede ser verboso, sobre tod
 
 La desventaja:
 
-* En dispositivos móviles, los URI de datos pueden tardar un tiempo [considerablemente mayor](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/) en aparecer en dispositivos móviles cuando se comparan con imágenes de un <code>src</code> externo.
+* En dispositivos móviles, los URI de datos pueden tardar un tiempo [considerablemente mayor](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/) en aparecer en dispositivos móviles cuando se comparan con imágenes de un `src` externo.
 * Los URI de datos pueden aumentar considerablemente el tamaño de una solicitud HTML.
 * Agregan complejidad a tu lenguaje de marcado y a tu flujo de trabajo.
 * El formato de los URI de datos es considerablemente más grande que el ejecutable (hasta un 30%). Por lo tanto, no reduce el tamaño total de descarga.

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Content Security Policy atau Kebijakan Keamanan Materi bisa secara signifikan mengurangi risiko dan dampak serangan skrip lintas-situs di browser modern.
 
 {# wf_published_on: 2012-06-15 #}
-{# wf_updated_on: 2016-02-19 #}
+{# wf_updated_on: 2017-07-17 #}
 
 # Content Security Policy {: .page-title }
 
@@ -225,7 +225,7 @@ cara yang tidak meragukan dalam memerintahkan browser untuk memperlakukan serang
 sebagai dapat diterima dan untuk menolak selebihnya. Akan tetapi, daftar putih yang berdasarkan sumber
 akan mengatasi ancaman terbesar yang ditimbulkan oleh serangan XSS: injeksi skrip inline.
 Jika penyerang menyuntikkan tag skrip secara langsung yang berisi
-payload (<code>&lt;script&gt;sendMyDataToEvilDotCom();&lt;/script&gt;</code>) yang berbahaya,
+payload (`<script>sendMyDataToEvilDotCom()</script>`) yang berbahaya,
 browser tidak memiliki mekanisme untuk membedakannya dari
 tag skrip inline yang sah. CSP mengatasi masalah ini dengan mencekal skrip inline sepenuhnyai:
 satu-satunya cara yang meyakinkan.
@@ -334,9 +334,9 @@ untuk setiap skrip inline Anda.
 
 Bahkan bila penyerang tidak bisa menyuntikkan skrip secara langsung, mereka mungkin bisa menipu
 aplikasi Anda untuk mengonversi teks biasa menjadi JavaScript yang dapat dieksekusi
-dan mengeksekusinya atas nama mereka. <code>eval()</code>, <code>new
-Function()</code>, <code>setTimeout([string], ...)</code>, dan
-<code>setInterval([string], ...)</code> semuanya adalah vektor yang digunakan untuk menyuntikkan
+dan mengeksekusinya atas nama mereka. `eval()`, `new
+Function()`, `setTimeout([string], ...)`, dan
+`setInterval([string], ...)` semuanya adalah vektor yang digunakan untuk menyuntikkan
 teks yang pada akhirnya akan mengeksekusi sesuatu yang membahayakan tanpa terduga. Respons default CSP
 terhadap risiko ini adalah memblokir sepenuhnya semua vektor tersebut.
 
@@ -387,8 +387,8 @@ Kemampuan CSP memblokir sisi-klien sumber daya yang tak dipercaya merupakan keme
 pengguna Anda, namun akan sangat membantu bila memiliki semacam notifikasi
 yang dikirimkan kembali ke server sehingga Anda bisa mengidentifikasi dan mengalahkan semua bug yang memungkinkan
 penyuntikan berbahaya lebih cepat. Untuk mencapai tujuan, Anda bisa memerintahkan
-browser untuk mem- <code>POST</code>-kan laporan pelanggaran berformat JSON ke lokasi
-yang ditetapkan dalam direktif <code>report-uri</code>.
+browser untuk mem- `POST`-kan laporan pelanggaran berformat JSON ke lokasi
+yang ditetapkan dalam direktif `report-uri`.
 
 
     Content-Security-Policy: default-src 'self'; ...; report-uri /my_amazing_csp_report_parser;

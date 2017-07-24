@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: プログレッシブ ウェブアプリはウェブとアプリの両方の利点を兼ね備えたアプリです。このステップバイステップガイドでは、あなた自身のプログレッシブ ウェブアプリを構築し、そしてプログレッシブウェブアプリの開発で必要とされる基礎を学ぶことになります。それは、App Shellモデルや、App ShellやあなたのアプリケーションのキーデータなどをキャッシュするためのService Workerの使い方を含みます。
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2016-04-06 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2016-02-04 #}
 
 # はじめてのプログレッシブ ウェブアプリ {: .page-title }
@@ -342,7 +342,7 @@ JavaScript コードを追加してください。
 ブロッキングな同期の仕組みが使われており、端末によっては著しくスピードが低下する
 可能性があるためです。
 
-Note: 補習: <code>localstorage</code> の実装を <a href='https://www.npmjs.com/package/idb'>idb</a> に置き替えてみましょう。
+Note: 補習: `localstorage` の実装を <a href='https://www.npmjs.com/package/idb'>idb</a> に置き替えてみましょう。
 
 まず、`app.js`  内の即時呼び出しの関数式の最後に、ユーザー設定の保存に必要な
 コードを追加します。
@@ -424,7 +424,7 @@ App Shell とアプリのデータをキャッシュすることができます�
 オーバーヘッドはわずかで、機能をサポートしていない古いブラウザが使用されている場合、
 問題が起こることはありません。
 
-Note: Service Worker の機能は  HTTPS  経由でアクセスしたページでのみ使用できます（テストを円滑に進められるように、<code>https://localhost</code> またはこれに相当する URL でも動作するようになっています）。この制約が課せられる理由については、Chromium チームの投稿記事 <a href='http://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features'>Prefer Secure Origins For Powerful New Features</a>（強力な新機能に対する「セキュア オリジン」の採用傾向について）をご覧ください。
+Note: Service Worker の機能は  HTTPS  経由でアクセスしたページでのみ使用できます（テストを円滑に進められるように、`https://localhost` またはこれに相当する URL でも動作するようになっています）。この制約が課せられる理由については、Chromium チームの投稿記事 <a href='http://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features'>Prefer Secure Origins For Powerful New Features</a>（強力な新機能に対する「セキュア オリジン」の採用傾向について）をご覧ください。
 
 ### Service Worker が利用可能な場合に登録する
 
@@ -537,7 +537,7 @@ Service Worker に変更を加えるときには必ず `cacheName` を変更し�
     ];
     
 
-Note: ファイル名はパス全体を含めるようにしてください。たとえばアプリは <code>index.html</code> から配信されますが、リクエストには「<code>/</code>」も含まれています（サーバーはルートフォルダがリクエストされたときに <code>index.html</code> を送信します）。<code>fetch</code> メソッドでこの処理を行うこともできますが、大文字と小文字の組み合わせに注意が必要となり、かえって複雑になる可能性があります。
+Note: ファイル名はパス全体を含めるようにしてください。たとえばアプリは `index.html` から配信されますが、リクエストには「 `/`」も含まれています（サーバーはルートフォルダがリクエストされたときに `index.html` を送信します）。`fetch` メソッドでこの処理を行うこともできますが、大文字と小文字の組み合わせに注意が必要となり、かえって複雑になる可能性があります。
 
 まだアプリはオフラインで動作しません。App Shell の構成要素のキャッシュは
 できましたが、ローカル キャッシュからの読み込みを行う必要があります。
@@ -577,7 +577,7 @@ Service Worker を使うと、プログレッシブ ウェブアプリから送�
 ネットワークからコピーを取得します。そして、`e.respondWith()` を使用して
 ウェブページに `response` を返します。
 
-Note: <code>[ServiceWorker]</code> がコンソールにログ出力されない場合は、<code>cacheName</code> を変更していることを確認してページを再度読み込んでください。これで解決できない場合は、「運用中の Service Worker のテストを行う際のヒント」の項をご覧ください。
+Note: `[ServiceWorker]` がコンソールにログ出力されない場合は、`cacheName` を変更していることを確認してページを再度読み込んでください。これで解決できない場合は、「運用中の Service Worker のテストを行う際のヒント」の項をご覧ください。
 
 ### 特殊なケースに関する注意
 

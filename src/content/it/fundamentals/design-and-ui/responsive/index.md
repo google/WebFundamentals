@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Gran parte del Web non è ottimizzata per l'utilizzo di dispositivi multipli. Apprendi i concetti fondamentali e ottimizza il sito per dispositivi mobili, PC desktop o su qualsiasi altro dispositivo dotato di schermo.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Nozioni di base sul Responsive Web Design {: .page-title }
@@ -38,8 +38,8 @@ Le pagine ottimizzate per dispositivi multipli devono contenere un elemento meta
 
 ### TL;DR {: .hide-from-toc }
 - Utilizza i meta viewport tag per controllare larghezza e scala dei viewport dei browser.
-- Inserisci <code>width=device-width</code> per ottenere una corrispondenza con la larghezza dello schermo in pixel indipendenti dal dispositivo.
-- Inserisci <code>initial-scale=1</code> per stabilire una relazione 1:1 fra i pixel del CSS e quelli indipendenti dal dispositivo.
+- Inserisci `width=device-width` per ottenere una corrispondenza con la larghezza dello schermo in pixel indipendenti dal dispositivo.
+- Inserisci `initial-scale=1` per stabilire una relazione 1:1 fra i pixel del CSS e quelli indipendenti dal dispositivo.
 - Controlla l'accessibilità della pagina senza disabilitare l'opzione di scalabilità dell'utente.
 
 
@@ -104,7 +104,7 @@ Le media query sono filtri intuitivi applicabili agli stili CSS che aiutano a mo
 
 ### TL;DR {: .hide-from-toc }
 - Puoi usare le media query per applicare gli stili in base alle caratteristiche del dispositivo.
-- Utilizza <code>min-width</code> al posto di <code>min-device-width</code> per ottenere un'esperienza adatta al maggior numero di dispositivi possibile.
+- Utilizza `min-width` al posto di `min-device-width` per ottenere un'esperienza adatta al maggior numero di dispositivi possibile.
 - Usa dimensioni relative degli elementi per evitare interruzioni della disposizione.
 
 

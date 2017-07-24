@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Explora el estado de cualquier elemento en tu página desde la consola de DevTools.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Evaluar expresiones {: .page-title }
@@ -20,7 +20,7 @@ de tus conocimientos de JavaScript y varias funciones compatibles con él.
 ### TL;DR {: .hide-from-toc }
 - Evalúa una expresión con solo escribirla.
 - Selecciona elementos mediante una de las combinaciones de teclas.
-- Inspecciona elementos del DOM y objetos de montón de JavaScript usando <code>inspect()</code>.
+- Inspecciona elementos del DOM y objetos de montón de JavaScript usando `inspect()`.
 - Accede a los elementos y objetos seleccionados recientemente usando $0 - 4.
 
 

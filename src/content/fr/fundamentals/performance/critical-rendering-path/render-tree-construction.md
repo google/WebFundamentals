@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Les arborescences des modèles CSSOM et DOM sont combinées pour former une arborescence d'affichage, qui est ensuite utilisée pour calculer la mise en page de chaque élément visible et fait office de données d'entrée pour le processus de peinture qui affiche les pixels à l'écran. L'optimisation de chacune de ces étapes est essentielle pour obtenir des performances d'affichage optimales.
 
-{# wf_updated_on: 2014-09-17 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Construction, mise en page et peinture de l'arborescence d'affichage {: .page-title }
@@ -34,7 +34,7 @@ Pour construire l'arborescence d'affichage, le navigateur procède à peu près 
 1. Pour chaque nœud visible, trouvez les règles CSSOM et appliquez-les.
 2. Émettez les nœuds visibles avec leur contenu et leurs styles calculés.
 
-Note: Notez que la propriété <code>visibility: hidden</code> est différente de la propriété <code>display: none</code>. La première rend l'élément invisible, mais celui-ci occupe toujours de l'espace dans la mise en page, c'est-à-dire qu'il est affiché sous la forme d'une case vide. La seconde <code>display: none</code> supprime totalement l'élément de l'arborescence d'affichage, afin que celui-ci soit invisible et ne fasse pas partie de la mise en page.
+Note: Notez que la propriété `visibility: hidden` est différente de la propriété `display: none`. La première rend l'élément invisible, mais celui-ci occupe toujours de l'espace dans la mise en page, c'est-à-dire qu'il est affiché sous la forme d'une case vide. La seconde `display: none` supprime totalement l'élément de l'arborescence d'affichage, afin que celui-ci soit invisible et ne fasse pas partie de la mise en page.
 
 La sortie finale est un affichage qui contient à la fois les informations sur le contenu et sur le style de tout le contenu visible à l'écran. Nous avons presque terminé ! **Une fois l'arborescence d'affichage en place, nous pouvons passer à l'étape de 'mise en page'.**
 

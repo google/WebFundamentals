@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La majeure partie du Web n'est pas optimisée pour un affichage sur plusieurs appareils. Découvrez les principes fondamentaux pour rendre votre site compatible avec un appareil mobile, un ordinateur de bureau ou, plus généralement, tout dispositif équipé d'un écran.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Principes de base de la conception de sites Web adaptatifs {: .page-title }
@@ -48,8 +48,8 @@ Dans le cas des pages optimisées pour un large éventail d'appareils, l'en-têt
 
 ### TL;DR {: .hide-from-toc }
 - Utilisez la balise Meta `viewport` pour contrôler la largeur et le dimensionnement de la fenêtre d'affichage du navigateur.
-- Insérez le code <code>width=device-width</code> pour établir une correspondance avec la largeur de l'écran en pixels indépendants de l'appareil.
-- Insérez le code <code>initial-scale=1</code> pour établir une relation de type 1:1 entre les pixels CSS et les pixels indépendants de l'appareil.
+- Insérez le code `width=device-width` pour établir une correspondance avec la largeur de l'écran en pixels indépendants de l'appareil.
+- Insérez le code `initial-scale=1` pour établir une relation de type 1:1 entre les pixels CSS et les pixels indépendants de l'appareil.
 - Assurez-vous que l'accès à votre page est possible sans désactiver le redimensionnement utilisateur.
 
 
@@ -114,7 +114,7 @@ Les requêtes média sont de simples filtres qui peuvent être appliqués à des
 
 ### TL;DR {: .hide-from-toc }
 - Vous pouvez utiliser des requêtes média pour appliquer des styles en fonction des caractéristiques de l'appareil.
-- Préférez <code>min-width</code> à <code>min-device-width</code> pour garantir la compatibilité la plus large possible.
+- Préférez `min-width` à `min-device-width` pour garantir la compatibilité la plus large possible.
 - Attribuez des tailles relatives aux éléments pour éviter de fractionner la disposition.
 
 

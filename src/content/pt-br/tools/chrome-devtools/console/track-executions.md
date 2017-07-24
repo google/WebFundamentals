@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Aproveite a Console API para medir tempos de execução e contar execuções de declaração.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Medir e contar execuções {: .page-title }
@@ -15,8 +15,8 @@ Aproveite a Console API para medir tempos de execução e contar execuções de 
 
 
 ### TL;DR {: .hide-from-toc }
-- Use  <code>console.time()</code> e <code>console.timeEnd()</code> para controlar o tempo decorrido entre pontos de execução do código.
-- Use  <code>console.count()</code> para contar quantas vezes a mesma string foi passada a uma função.
+- Use `console.time()` e `console.timeEnd()` para controlar o tempo decorrido entre pontos de execução do código.
+- Use `console.count()` para contar quantas vezes a mesma string foi passada a uma função.
 
 
 ## Medir tempos de execução

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 新しいプロジェクトで最も苦労するのは、立ち上げ時である場合が多くあります。Web Starter Kit では、開発プロセスの基盤となる便利なツールが幅広く提供されています。
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-07-16 #}
 
 # Web Starter Kit でサイトを構築する {: .page-title }
@@ -234,7 +234,7 @@ NPM は NodeJS と一緒に自動的にインストールされます。
 
 
 
-注:  <code>EPERM</code>、 <code>EACCESS</code> などのパーミッション エラーやアクセス エラーが発生した場合に、回避策として  <code>sudo</code> は使用しないでください。このページ <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>に問い合わせて、</a> より堅牢な解決策を入手してください。
+注:  `EPERM`、 `EACCESS` などのパーミッション エラーやアクセス エラーが発生した場合に、回避策として  `sudo` は使用しないでください。このページ <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>に問い合わせて、</a> より堅牢な解決策を入手してください。
 
 <!--
 The next section of this guide covers how to use Gulp, but if you want to see

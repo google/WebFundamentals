@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Situs web tidak hanya dikunjungi oleh manusia, juga oleh perayap web mesin telusur. Pelajari cara meningkatkan akurasi penelusuran dan peringkat situs web Anda.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-08-30 #}
 
 # Optimalisasi Penelusuran {: .page-title }
@@ -14,9 +14,9 @@ Situs web tidak hanya dikunjungi oleh manusia, juga oleh perayap web mesin telus
 ### TL;DR {: .hide-from-toc }
 - Tentukan struktur URL laman web Anda.
 - Desain responsif adalah yang paling disarankan.
-- Gunakan <code>rel='canonical'</code> + <code>rel='alternate'</code> untuk masing-masing situs desktop/seluler.
-- Gunakan header <code>Vary HTTP</code> untuk URL tunggal yang secara dinamis menyajikan HTML desktop/seluler terpisah.
-- Gunakan <code>noindex</code> untuk laman yang ingin Anda batasi aksesnya hanya untuk orang yang mengetahui URL tersebut.
+- Gunakan `rel='canonical'` ++ `rel='alternate'` untuk masing-masing situs desktop/seluler.
+- Gunakan header `Vary HTTP` untuk URL tunggal yang secara dinamis menyajikan HTML desktop/seluler terpisah.
+- Gunakan `noindex` untuk laman yang ingin Anda batasi aksesnya hanya untuk orang yang mengetahui URL tersebut.
 - Gunakan mekanisme autentikasi yang relevan untuk laman yang Anda inginkan tetap privat.
 
 ## Berikan struktur situs Anda pada mesin telusur
@@ -278,7 +278,7 @@ Untuk mengetahui selengkapnya tentang X-Robots-Tag:
 * [Google](/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/how-can-i-remove-a-url-or-page-from-the-bing-index-37c07477)
 
-Note: Jika Anda melarang perayapan menggunakan `robots.txt`, bot telusur mungkin tetap mengindeks laman itu tanpa mengetahui bahwa Anda tidak ingin laman itu diindeks. Hal ini bisa terjadi karena:<ul><li>Bot telusur mungkin menemukan laman web Anda dengan mengikuti tautan dari situs web lain.</li><li>Mesin telusur yang tidak bisa merayapi tidak bisa mendeteksi <code>noindex</code>.</li></ul>
+Note: Jika Anda melarang perayapan menggunakan `robots.txt`, bot telusur mungkin tetap mengindeks laman itu tanpa mengetahui bahwa Anda tidak ingin laman itu diindeks. Hal ini bisa terjadi karena:<ul><li>Bot telusur mungkin menemukan laman web Anda dengan mengikuti tautan dari situs web lain.</li><li>Mesin telusur yang tidak bisa merayapi tidak bisa mendeteksi `noindex`.</li></ul>
 
 Jangan mengharapkan `robots.txt` untuk mengontrol indeks penelusuran.
 

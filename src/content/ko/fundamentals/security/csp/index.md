@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 콘텐츠 보안 정책은 최신 브라우저에서 교차 사이트 스크립팅 공격의 위험과 영향을 현저히 줄일 수 있습니다.
 
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2012-06-15 #}
-{# wf_updated_on: 2016-02-19 #}
 
 # 콘텐츠 보안 정책 {: .page-title }
 
@@ -225,7 +225,7 @@ CSP는 브라우저에 특정 리소스 세트를 허용 가능한 것으로 처
 출처의 허용 목록 작성을 기반으로 한다는 점이 분명해야 합니다. 하지만 출처 기반 허용 목록 작성으로는
 XSS 공격으로 발생하는 최대의 위협인 인라인 스크립트 주입 문제를 해결하지 못합니다.
 공격자가 악성
-페이로드(<code>&lt;script&gt;sendMyDataToEvilDotCom();&lt;/script&gt;</code>)를
+페이로드(`<script>sendMyDataToEvilDotCom();</script>`)를
 직접 포함하고 있는 스크립트 태그를 주입할 수 있는 경우
 브라우저는 이런 태그를 정당한 스크립트 태그와 구분할 메커니즘이 없습니다. CSP는 인라인 스크립트를 완전히 금지하여 이 문제를 해결하는데,
 이것이 유일하게 확실한 방법입니다.
@@ -334,9 +334,9 @@ sha256 해시가 있는 오류 메시지가 포함됩니다.
 
 공격자는 스크립트를 직접 주입할 수 없을 때조차도
 애플리케이션을 속여 비활성 상태의 텍스트를 실행 가능한 자바스크립트로 변환하고
-공격자 대신 실행하도록 할지도 모릅니다. <code>eval()</code>, <code>new
-Function()</code>, <code>setTimeout([string], ...)</code> 및
-<code>setInterval([string], ...)</code>은 전부 벡터로서, 이들을 통해 주입된 텍스트가 의도와는 달리 악성 코드로 실행되는 결과를 낳을 수
+공격자 대신 실행하도록 할지도 모릅니다. `eval()`, `new
+Function()`, `setTimeout([string], ...)` 및
+`setInterval([string], ...)` 은 전부 벡터로서, 이들을 통해 주입된 텍스트가 의도와는 달리 악성 코드로 실행되는 결과를 낳을 수
 있습니다. 이 위험에 대한 CSP의 기본
 응답은 이런 벡터를 전부 완전히 차단하는 것입니다.
 
@@ -387,8 +387,8 @@ CSP를 통해 클라이언트 쪽에서 신뢰할 수 없는 리소스를 차단
 사용자 입장에서는 막대한 능력이겠지만, 악성 코드 주입을
 허용하는 버그를 먼저 식별하여 박멸할 수 있도록
 서버로 알림 메시지를 다시 보내도록 하는 것이 상당히 도움이 될 것입니다. 이를 위해,
- <code>report-uri</code> 지시문에 지정된 위치에
-JSON 형식의 위반 보고서를  <code>POST</code>하도록 브라우저에 지시할 수 있습니다.
+ `report-uri` 지시문에 지정된 위치에
+JSON 형식의 위반 보고서를  `POST` 하도록 브라우저에 지시할 수 있습니다.
 
 
     Content-Security-Policy: default-src 'self'; ...; report-uri /my_amazing_csp_report_parser;

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Command Line API de Chrome DevTools ofrece varias formas de observar e inspeccionar a los receptores de eventos
 
-{# wf_updated_on: 2015-08-02 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Controlar eventos {: .page-title }
@@ -13,9 +13,9 @@ Command Line API de Chrome DevTools ofrece varias formas de observar e inspeccio
 
 
 ### TL;DR {: .hide-from-toc }
-- Escucha a los eventos de un tipo determinado mediante <code>monitorEvents()</code>.
-- Usa <code>unmonitorEvents()</code> para dejar de escuchar.
-- Obtén receptores de un elemento del DOM mediante <code>getEventListeners()</code>.
+- Escucha a los eventos de un tipo determinado mediante `monitorEvents()`.
+- Usa `unmonitorEvents()` para dejar de escuchar.
+- Obtén receptores de un elemento del DOM mediante `getEventListeners()`.
 - Usa el panel Event Listeners Inspector para obtener información acerca de receptores de eventos.
 
 

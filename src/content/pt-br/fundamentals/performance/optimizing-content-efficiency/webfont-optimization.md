@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A tipografia é fundamental para proporcionar design, uso de marca, legibilidade e acessibilidade de boa qualidade. Além de oferecer tudo isso, as fontes da Web permitem selecionar, pesquisar, alterar o zoom e facilitar o uso de alto DPI em textos, proporcionando uma renderização de texto consistente e nítida, independentemente do tamanho e da resolução da tela.
 
-{# wf_updated_on: 2016-08-31 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-09-19 #}
 
 # Otimização de fontes da web {: .page-title }
@@ -58,7 +58,7 @@ Observação: Considere o uso da <a href='http://en.wikipedia.org/wiki/Zopfli'>c
 ## Definir família de fontes com o @font-face
 
 ### TL;DR {: .hide-from-toc }
-* Use a dica <code>format()</code> para especificar vários formatos de fonte.
+* Use a dica `format()` para especificar vários formatos de fonte.
 * Para fontes Unicode grandes, crie subconjuntos para melhorar o desempenho. Use a criação de subconjuntos com Unicode-range e forneça um fallback de criação manual de subconjuntos para navegadores mais antigos.
 * Reduza o número de variantes de estilos de fontes para melhorar o desempenho da página e a renderização de texto.
 

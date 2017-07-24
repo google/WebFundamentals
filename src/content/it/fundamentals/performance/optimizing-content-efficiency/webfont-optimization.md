@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La tipografia è fondamentale per un design, un branding, una leggibilità e accessibilità idonei. I font web consentono di ottenere tutto ciò, e non solo: il testo è selezionabile, ricercabile, ingrandibile e ampiamente DPI friendly, offrendo un rendering coerente e conciso, indipendentemente dalle dimensioni e dalla risoluzione del monitor. I font web sono fondamentali per ottenere design, UX e prestazioni ottimali.
 
-{# wf_updated_on: 2014-09-29 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2014-09-19 #}
 
 # Ottimizzazione dei font web {: .page-title }
@@ -60,7 +60,7 @@ Note: Valuta l'utilizzo della <a href='http://en.wikipedia.org/wiki/Zopfli'>comp
 ## Definire una famiglia di font con @font-face
 
 ### TL;DR {: .hide-from-toc }
-- Utilizza il <code>format()</code> hint per specificare più formati font
+- Utilizza il `format()` hint per specificare più formati font
 - Raggruppa i font unicode più ampi in subset per migliorare le prestazioni: utilizza subset unicode-range e consenti in alternativa un subsetting manuale per versioni precedenti dei browser
 - Riduci il numero di varianti dei font di stile per migliorare le prestazioni della pagina e il rendering del testo
 

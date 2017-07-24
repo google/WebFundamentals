@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Mempelajari status item di laman dari konsol DevTools.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Mengevaluasi Ekspresi {: .page-title }
@@ -20,7 +20,7 @@ pengetahuan tentang JavaScript dan sejumlah fitur yang didukungnya.
 ### TL;DR {: .hide-from-toc }
 - Mengevaluasi suatu ekspresi cukup dengan mengetikkannya.
 - Memilih elemen menggunakan pintasan.
-- Memeriksa elemen DOM dan objek heap JavaScript menggunakan <code>inspect()</code>.
+- Memeriksa elemen DOM dan objek heap JavaScript menggunakan `inspect()`.
 - Mengakses elemen dan objek yang baru saja dipilih dengan menggunakan $0 - 4.
 
 

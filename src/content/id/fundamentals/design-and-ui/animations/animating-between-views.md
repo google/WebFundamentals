@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Pelajari cara menganimasikan antar dua tampilan dalam aplikasi Anda.
 
-{# wf_updated_on: 2016-08-23 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Menganimasikan Antar Tampilan {: .page-title }
@@ -129,7 +129,7 @@ Akhirnya, kita tambahkan deklarasi CSS untuk kelas-kelas tersebut.
 
 Anda bisa meluaskan ini untuk menutupi beberapa tampilan, namun konsep dasarnya harus tetap sama; setiap tampilan tak-terlihat harus di luar layar dan ditampilkan ketika diperlukan, dan tampilan aktif pada layar harus dialihkan keluar.
 
-Perhatian: Membuat hierarki semacam ini dalam lintas-browser bisa sangat menantang. Misalnya, iOS membutuhkan properti CSS tambahan, <code>-webkit-overflow-scrolling: touch</code>, untuk "mengaktifkan kembali" fling scrolling, tetapi Anda tidak bisa mengontrol sumbunya, seperti yang bisa dilakukan dengan properti overflow standar. Pastikan untuk menguji implementasinya pada berbagai perangkat!
+Perhatian: Membuat hierarki semacam ini dalam lintas-browser bisa sangat menantang. Misalnya, iOS membutuhkan properti CSS tambahan, `-webkit-overflow-scrolling: touch`, untuk "mengaktifkan kembali" fling scrolling, tetapi Anda tidak bisa mengontrol sumbunya, seperti yang bisa dilakukan dengan properti overflow standar. Pastikan untuk menguji implementasinya pada berbagai perangkat!
 
 Selain transisi antar tampilan, teknik ini juga bisa diterapkan ke elemen geser-masuk lainnya, seperti elemen navigasi bilah sisi. Satu-satunya perbedaan adalah bahwa Anda tidak perlu memindahkan tampilan lainnya.
 

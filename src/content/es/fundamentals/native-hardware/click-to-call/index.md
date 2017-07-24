@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: En los dispositivos con capacidades de telefonía, permite que los usuarios se conecten directamente contigo con solo tocar un número de teléfono, un método conocido más comúnmente como “Clic para llamar”.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-06-17 #}
 
 # Hacer clic para llamar {: .page-title }
@@ -14,7 +14,7 @@ directamente contigo con solo tocar un número de teléfono, un método conocido
 
 ### TL;DR {: .hide-from-toc }
 
-* Agrupa todos los números de teléfono en hipervínculos con el esquema de <code>tel:</code>.
+* Agrupa todos los números de teléfono en hipervínculos con el esquema de `tel:`.
 * Usa siempre el formato de marcación internacional.
 
 

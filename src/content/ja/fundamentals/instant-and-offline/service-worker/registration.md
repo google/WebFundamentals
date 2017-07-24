@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Service Worker 登録のタイミングのベスト プラクティス
 
-{# wf_updated_on:2016-11-28 #}
-{# wf_published_on:2016-11-28 #}
+{# wf_updated_on: 2017-07-17 #}
+{# wf_published_on: 2016-11-28 #}
 
 # Service Worker 登録 {: .page-title }
 
@@ -59,7 +59,7 @@ Service Worker の詳細を読んだことがある場合は、次のような�
 
 ##  ボイラプレートの改善
 
-解決策として、`navigator.serviceWorker.register()` を呼び出すタイミングを選択することで Service Worker の起動を制御します。単純な経験則では、次のように <code>[load イベント](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)</code> が <code>window</code> で発生するまで登録を遅らせます。
+解決策として、`navigator.serviceWorker.register()` を呼び出すタイミングを選択することで Service Worker の起動を制御します。単純な経験則では、次のように <code>[load イベント](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)</code> が `window` で発生するまで登録を遅らせます。
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
@@ -91,7 +91,7 @@ Service Worker は登録されると、`install` および `activate` [ライフ
 
 ##  早く登録する理由
 
-Service Worker をできるだけ早く登録することに意味はあるでしょうか。思い浮かぶシナリオは、Service Worker で <code>[clients.claim()](https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim)</code> を使用して初回アクセス時のページを制御し、その  <code>fetch</code> ハンドラの内部で[ランタイム キャッシュ](/web/fundamentals/instant-and-offline/offline-cookbook/#on-network-response)を積極的に実行する場合です。この場合は、Service Worker をできるだけ早くアクティブにして、後で取得する可能性があるリソースをランタイム キャッシュに移入するとメリットがあります。ウェブアプリがこのカテゴリに属する場合は、一歩離れて、Service Worker の  <code>install</code> ハンドラがメインページのリクエストと帯域幅を取り合うリソースを要求していないことを確認することをお勧めします。
+Service Worker をできるだけ早く登録することに意味はあるでしょうか。思い浮かぶシナリオは、Service Worker で <code>[clients.claim()](https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim)</code> を使用して初回アクセス時のページを制御し、その  `fetch` ハンドラの内部で[ランタイム キャッシュ](/web/fundamentals/instant-and-offline/offline-cookbook/#on-network-response)を積極的に実行する場合です。この場合は、Service Worker をできるだけ早くアクティブにして、後で取得する可能性があるリソースをランタイム キャッシュに移入するとメリットがあります。ウェブアプリがこのカテゴリに属する場合は、一歩離れて、Service Worker の  `install` ハンドラがメインページのリクエストと帯域幅を取り合うリソースを要求していないことを確認することをお勧めします。
 
 
 

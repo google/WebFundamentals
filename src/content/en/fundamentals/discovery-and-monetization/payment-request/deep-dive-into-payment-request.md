@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-05-24 #}
+{# wf_updated_on: 2017-07-14 #}
 
 # Deep Dive into the Payment Request API {: .page-title }
 
@@ -41,7 +41,7 @@ API is that the API manages the UI but performs no arithmetic; it will simply
 display whatever input you pass to it. Throughout the examples we'll discuss
 what this means for the developer and user.
 
-Dogfood: <code>PaymentRequest</code> is still in development. While we think
+Dogfood: `PaymentRequest` is still in development. While we think
 it's stable enough to implement, it may continue to change. We'll <a
 href="/web/updates/2017/01/payment-request-updates">keep this page updated</a>
 to always reflect the current status of the API. Meanwhile, to protect yourself
@@ -480,12 +480,11 @@ Please bear in mind that `displayItems` are not designed to display a long list 
 items. You should use this for high level entries instead of an itemized list,
 for example subtotal, discount, tax and shipping cost.
 
-<div class="warning">
-It's worth repeating that the the <code>PaymentRequest</code> API does not perform any
-arithmetic. If you look at the above example, all the items values do not add up
-to the total. This is because we've set the total to have a value of zero.
-<strong>It is the responsibility of your web app to calculate the correct total.</strong>
-</div>
+Warning: It's worth repeating that the the `PaymentRequest` API does not perform
+any arithmetic. If you look at the above example, all the items values do not
+add up to the total. This is because we've set the total to have a value of
+zero. **It is the responsibility of your web app to calculate the correct
+total.**
 
 #### Transaction Details: Display Items - Pending
 
@@ -945,10 +944,10 @@ gives you an opportunity to check that the address meets any requirements you
 might have (e.g. you may not ship to specific countries) and it provides an
 opportunity to determine what the available shipping options are.
 
-<div class="warning">
-At the time of writing, you are required to add a <code>shippingaddresschange</code>
- event listener in Chrome (although this behavior is likely to change to be optional).
-</div>
+Warning: At the time of writing, you are required to add a
+`shippingaddresschange` event listener in Chrome (although this behavior is
+likely to change to be optional).
+
 
 You can listen for the event like so:
 
@@ -1330,10 +1329,10 @@ paymentRequest.addEventListener('shippingoptionchange', (event) => {
 });
 ```
 
-<div class="warning">
-At the time of writing, you are required to add a <code>shippingoptionchange</code>
- event listener in Chrome (although this behavior is likely to change to be optional).
-</div>
+Warning: At the time of writing, you are required to add a
+`shippingoptionchange` event listener in Chrome (although this behavior is
+likely to change to be optional).
+
 
 In many ways this event is similar to the `shippingaddresschange` event.
 

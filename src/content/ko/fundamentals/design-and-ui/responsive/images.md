@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 하나의 그림은 1000단어의 가치가 있으며, 이미지는 모든 페이지에서 중요한 역할을 합니다. 그러나 이미지는 다운로드되는 바이트의 대부분을 차지하기도 합니다.  반응형 웹 디자인은 기기 특성에 따라 레이아웃을 변경할 뿐만 아니라 이미지도 변경할 수 있습니다.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-04-29 #}
 
 # 이미지 {: .page-title }
@@ -147,8 +147,8 @@ Dogfood: `picture` 요소가 브라우저에 들어가기 시작했습니다. �
 
 이미지 소스가 여러 가지 밀도로 존재하는 경우
 또는 반응형 디자인에 따라 특정 유형의 화면에 약간 다른 이미지가
-표시되는 경우  <code>picture</code> 요소를 사용하세요.  <code>video</code> 요소와 마찬가지로
-여러  <code>source</code> 요소를 포함할 수 있으므로,
+표시되는 경우  `picture` 요소를 사용하세요.  `video` 요소와 마찬가지로
+여러  `source` 요소를 포함할 수 있으므로,
 미디어 쿼리 또는 이미지 형식에 따라
 다른 이미지 파일을 지정할 수 있습니다.
 
@@ -395,7 +395,7 @@ SVG에는 모바일 및 데스크톱에 대한 [뛰어난 지원](http://caniuse
 
 ##### 데이터 URI
 
-데이터 URI는 이미지와 같은 파일을 인라인으로 포함시키는 방법이며, 이를 위해  <code>img</code> src 요소를 다음 형식의 Base64 인코딩 문자열로 설정할 수 있습니다.
+데이터 URI는 이미지와 같은 파일을 인라인으로 포함시키는 방법이며, 이를 위해  `img` src 요소를 다음 형식의 Base64 인코딩 문자열로 설정할 수 있습니다.
 
 
     <img src="data:image/svg+xml;base64,[data]">
@@ -425,7 +425,7 @@ HTML5 로고의 코드 시작은 다음과 같습니다.
 
 단점:
 
-* 모바일의 경우, 외부  <code>src</code>의 이미지에 비해 [매우 느리게](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/) 데이터 URI가 표시될 수 있습니다.
+* 모바일의 경우, 외부  `src` 의 이미지에 비해 [매우 느리게](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/) 데이터 URI가 표시될 수 있습니다.
 * 데이터 URI는 HTML 요청의 크기를 상당히 증가시킬 수 있습니다.
 * 또한 마크업과 워크플로도 더 복잡합니다.
 * 데이터 URI 형식은 바이너리보다 훨씬 더 크므로(최대 30%), 전체 다운로드 크기는 줄어들지 않습니다.

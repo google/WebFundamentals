@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Pada perangkat dengan kemampuan telepon, permudah pengguna untuk langsung terhubung dengan Anda hanya dengan menekan nomor telepon, lebih dikenal sebagai klik untuk menelepon.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-06-17 #}
 
 # Klik untuk Menelepon {: .page-title }
@@ -14,7 +14,7 @@ dengan Anda hanya dengan menekan nomor telepon, lebih dikenal sebagai klik untuk
 
 ### TL;DR {: .hide-from-toc }
 
-* Menempatkan semua nomor ponsel dalam hyperlink dengan skema <code>tel:</code>.
+* Menempatkan semua nomor ponsel dalam hyperlink dengan skema `tel:`.
 * Selalu menggunakan format panggilan internasional.
 
 

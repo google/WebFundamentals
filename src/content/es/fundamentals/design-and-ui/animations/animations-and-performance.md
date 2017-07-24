@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Las animaciones deben funcionar correctamente; de lo contrario, tendrán un impacto negativo en la experiencia del usuario.
 
-{# wf_updated_on: 2016-08-23 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Animaciones y rendimiento {: .page-title }
@@ -16,7 +16,7 @@ Cada vez que se hace una animación, se deben mantener 60 fps, ya que un número
 * Debes procurar que tus animaciones no causen problemas de rendimiento. Asegúrate de conocer el impacto que tiene animar una determinada propiedad de CSS.
 * La animación de propiedades que modifican las características geométricas de la página (diseño) o generan efectos de pintura implican un consumo de recursos particularmente alto.
 * Siempre que puedas, limítate a realizar cambios en las transformaciones y opacidad.
-* Usa <code>will-change</code> para asegurarte de que el navegador reconozca lo que deseas animar.
+* Usa `will-change` para asegurarte de que el navegador reconozca lo que deseas animar.
 
 
 La animación de propiedades tiene consecuencias, y para algunas propiedades supone un menor consumo de recursos que para otras. Por ejemplo, si se animan las propiedades `width` y `height` de un elemento, se modifica su geometría y esto podría hacer que otros elementos de la página se desplacen o cambien de tamaño. Este proceso se denomina *diseño* (o *reprocesamiento* en los navegadores basados en Gecko, como Firefox) y puede consumir muchos recursos si tu página contiene muchos elementos. Cada vez que se genere un diseño, normalmente se deberá pintar la página o parte de ella, lo cual suele requerir aún más recursos que la operación de diseño.

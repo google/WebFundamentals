@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll learn how to debug a service worker using the new DevTools Application panel. You'll also learn how to simulate a Push notification to verify your subscription is properly setup.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-05-17T00:43:21Z #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -212,7 +212,7 @@ Note that the console now logs the message from the `activate` event handler:
 
 <aside markdown="1" class="key-point">
 <p><strong>Skip waiting</strong></p>
-<p>Having to click the <code>skipWaiting</code> button all the time can get a little annoying. If you'd like your Service Worker to force itself to become active you can include the line <code>self.skipWaiting()</code> in the <code>install</code> event handler. You can learn more about the <code>skipWaiting</code> method in  <a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#service-worker-global-scope-skipwaiting">the Service Workers spec</a>.</p>
+<p>Having to click the `skipWaiting` button all the time can get a little annoying. If you'd like your Service Worker to force itself to become active you can include the line `self.skipWaiting()` in the `install` event handler. You can learn more about the `skipWaiting` method in  <a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#service-worker-global-scope-skipwaiting">the Service Workers spec</a>.</p>
 </aside>
 
 
@@ -399,7 +399,7 @@ Now our response times jump down to a blazing fast few milliseconds per resource
 ![f0f6d3b0a1b1f18d.png](img/f0f6d3b0a1b1f18d.png)
 
 <aside markdown="1" class="warning">
-<p>Before proceeding make sure you set the <strong>Network Throttle</strong> back to <code>No throttling</code></p>
+<p>Before proceeding make sure you set the **Network Throttle** back to `No throttling`</p>
 </aside>
 
 

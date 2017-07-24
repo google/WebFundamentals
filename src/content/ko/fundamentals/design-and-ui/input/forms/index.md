@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 모바일에서는 양식을 작성하기 힘듭니다. 가장 좋은 양식은 가장 적게 입력하는 양식입니다.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-04-30 #}
 
 # 멋진 양식 만들기 {: .page-title }
@@ -95,7 +95,7 @@ description: 모바일에서는 양식을 작성하기 힘듭니다. 가장 좋�
 
 ### TL;DR {: .hide-from-toc }
 - 데이터에 가장 적합한 입력 유형을 선택하여 입력을 단순화하세요.
--  <code>datalist</code> 요소로 사용자가 입력할 때 제안을 제시하세요.
+-  `datalist` 요소로 사용자가 입력할 때 제안을 제시하세요.
 
 
 ### HTML5 입력 유형
@@ -243,7 +243,7 @@ Caution: 입력 유형을 선택할 때 현지화를 명심하세요.
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
-참고:  <code>datalist</code> 값은 제안으로 제공되므로 사용자가 그 제안을 꼭 선택할 필요는 없습니다.
+참고:  `datalist` 값은 제안으로 제공되므로 사용자가 그 제안을 꼭 선택할 필요는 없습니다.
 
 ## 올바른 레이블 및 이름 입력
 
@@ -251,9 +251,9 @@ Caution: 입력 유형을 선택할 때 현지화를 명심하세요.
 
 
 ### TL;DR {: .hide-from-toc }
-- 양식 입력에서 항상  <code>label</code>을 사용하고 필드에 포커스가 맞춰질 때 표시되는지 확인하세요.
--  <code>placeholder</code>를 사용하여 예상 입력에 대한 힌트를 제공하세요.
-- 브라우저가 양식을 자동완성하도록 요소에 대해 설정된  <code>name</code>을 사용하고  <code>autocomplete</code> 속성을 포함하세요.
+- 양식 입력에서 항상  `label` 을 사용하고 필드에 포커스가 맞춰질 때 표시되는지 확인하세요.
+-  `placeholder` 를 사용하여 예상 입력에 대한 힌트를 제공하세요.
+- 브라우저가 양식을 자동완성하도록 요소에 대해 설정된  `name` 을 사용하고  `autocomplete` 속성을 포함하세요.
 
 
 ### 레이블의 중요성
@@ -482,7 +482,7 @@ autofocus 속성은 키보드 포커스를 가로채서 잠재적으로 백스�
 
 
 ### TL;DR {: .hide-from-toc }
--  <code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code> 등과 같은 브라우저의 내장 유효성 검사 속성을 활용합니다.
+-  `pattern`, `required`, `min`, `max` 등과 같은 브라우저의 내장 유효성 검사 속성을 활용합니다.
 - 유효성 검사 요구사항이 더 복잡한 경우 자바스크립트 및 Constraints Validation API를 사용합니다.
 - 실시간으로 유효성 검사 오류를 표시하고, 사용자가 유효하지 않은 양식을 제출하려고 하면 수정해야 하는 모든 필드를 표시합니다.
 

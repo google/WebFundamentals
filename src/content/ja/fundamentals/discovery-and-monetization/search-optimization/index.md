@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: ウェブサイトには、人間だけでなく、検索エンジンのウェブクローラもアクセスします。ここでは、検索の精度とウェブサイトのランキングを向上させる方法について説明します。
 
-{# wf_updated_on:2015-10-05 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on:2014-08-30 #}
 
 # 検索の最適化 {: .page-title }
@@ -14,9 +14,9 @@ description: ウェブサイトには、人間だけでなく、検索エンジ�
 ### TL;DR {: .hide-from-toc }
 - ウェブページの URL 構造を決定します。
 - 最も推奨されるのはレスポンシブ デザインです。
-- PC 向けサイトとモバイル向けサイトのそれぞれ対して、 <code>rel='canonical'</code> と  <code>rel='alternate'</code> を使用します。
-- PC 向け HTML とモバイル向け HTML をそれぞれ動的に配信する 1 つの URL に対して、 <code>Vary HTTP</code> ヘッダーを使用します。
-- URL を知っているユーザーのみがアクセスできるページに対して、 <code>noindex</code> を使用します。
+- PC 向けサイトとモバイル向けサイトのそれぞれ対して、 `rel='canonical'` と  `rel='alternate'` を使用します。
+- PC 向け HTML とモバイル向け HTML をそれぞれ動的に配信する 1 つの URL に対して、 `Vary HTTP` ヘッダーを使用します。
+- URL を知っているユーザーのみがアクセスできるページに対して、 `noindex` を使用します。
 - 非公開にしたいページに対しては適切な認証メカニズムを使用します。
 
 ##  検索エンジンにサイト構造を示す
@@ -274,7 +274,7 @@ X-Robots-Tag の詳細については、以下をご覧ください。
 * [Google](/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/how-can-i-remove-a-url-or-page-from-the-bing-index-37c07477)
 
-注: `robots.txt` を使用してクロールを禁止すると、ページのインデックス登録を望んでいない場合でも、検索ボットがページを引き続きインデックス登録する可能性があります。この理由は、次のとおりです。<ul><li>検索ボットが他のウェブサイトにあるリンクを経由してウェブページを見つける可能性がある。</li><li>クロールできない検索エンジンは  <code>noindex</code> を検出できない。</li></ul>
+注: `robots.txt` を使用してクロールを禁止すると、ページのインデックス登録を望んでいない場合でも、検索ボットがページを引き続きインデックス登録する可能性があります。この理由は、次のとおりです。<ul><li>検索ボットが他のウェブサイトにあるリンクを経由してウェブページを見つける可能性がある。</li><li>クロールできない検索エンジンは  `noindex` を検出できない。</li></ul>
 
 `robots.txt` では検索インデックスを制御できないと考えてください。
 

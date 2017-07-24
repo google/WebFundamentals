@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Payment Request API は、ウェブでの迅速で簡単な支払を実現するためのものです。
 
-{# wf_published_on:2016-07-25 #}
-{# wf_updated_on:2016-12-06 #}
+{# wf_published_on: 2016-07-25 #}
+{# wf_updated_on: 2017-07-17 #}
 
 #  Payment Request API: 統合ガイド {: .page-title }
 
@@ -320,7 +320,7 @@ Payment Request API を使用することで、ユーザーと販売者の両方
 
 <div style="clear:both;"></div>
 
-注:  <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> は  <code>shippingaddresschange</code> イベントを受け取るために、初期化時に  <code>undefined</code> または空の配列である必要があります。そうでない場合、イベントが呼び出されません。
+注:  <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> は  `shippingaddresschange` イベントを受け取るために、初期化時に  `undefined` または空の配列である必要があります。そうでない場合、イベントが呼び出されません。
 
 
     var options = {
@@ -346,7 +346,7 @@ Payment Request API を使用することで、ユーザーと販売者の両方
 
 <div style="clear:both;"></div>
 
-注:  <code>shippingaddresschange</code> イベントを解決して  <code>details.shippingOptions</code> を空の配列のままにしても、住所を拒否したことになります（つまり、その場所には発送できません）。常に、発送オプションが最新の状態であり、ユーザーが指定した住所と一致していることを確認してください。
+注:  `shippingaddresschange` イベントを解決して  `details.shippingOptions` を空の配列のままにしても、住所を拒否したことになります（つまり、その場所には発送できません）。常に、発送オプションが最新の状態であり、ユーザーが指定した住所と一致していることを確認してください。
 
 
     request.addEventListener('shippingaddresschange', e => {
@@ -443,7 +443,7 @@ Payment Request API を使用することで、ユーザーと販売者の両方
     var request = new PaymentRequest(methodData, details, options);
 
 
-注: 前述したとおり、 <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> は <code>shippingaddresschange</code> を受け取るために、初期化時に <code>undefined</code> または空の配列である必要があります。この値を初期化時に設定するのは、発送オプションが住所によって変わらない場合（たとえば、全品送料無料の場合）のみにしてください。
+注: 前述したとおり、 <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> は `shippingaddresschange` を受け取るために、初期化時に `undefined` または空の配列である必要があります。この値を初期化時に設定するのは、発送オプションが住所によって変わらない場合（たとえば、全品送料無料の場合）のみにしてください。
 
 発送オプションを変更すると、価格が変更されることがあります。送料を追加して合計金額を変更するには、ユーザーが発送オプションを選択すると呼び出される、`shippingoptionchange` イベントのイベント リスナーを追加します。これにより、オプション データをプログラムで調べることができるようになります。配送先住所によって送料を変更することもできます。
 

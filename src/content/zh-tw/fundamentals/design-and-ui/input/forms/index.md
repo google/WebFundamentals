@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 手機上很難填寫表單。 最好的表單是輸入量最少的表單。
 
-{# wf_updated_on: 2014-10-20 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-04-30 #}
 
 # 建立令人驚艷的表單 {: .page-title }
@@ -98,7 +98,7 @@ description: 手機上很難填寫表單。 最好的表單是輸入量最少的
 
 ### TL;DR {: .hide-from-toc }
 - 為您的資料選擇最合適的輸入類型，以簡化輸入。
-- 當使用者以 <code>datalist</code> 元素輸入時，提供建議。
+- 當使用者以 `datalist` 元素輸入時，提供建議。
 
 
 #### HTML5 輸入類型
@@ -242,7 +242,7 @@ HTML5 導入了數種新輸入類型。 這些新的輸入類型可以提示瀏�
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
-Note: <code>datalist</code> 值是以建議項目的方式提供，而使用者並不侷限於所提供的建議。
+Note: `datalist` 值是以建議項目的方式提供，而使用者並不侷限於所提供的建議。
 
 
 
@@ -439,7 +439,7 @@ title: "提供即時驗證"
 updated_on: 2014-10-21
 key-takeaways:
   provide-real-time-validation:
-    - 利用瀏覽器的內建驗證屬性，如<code>pattern</code>、<code>required</code>、<code>min</code>、<code>max</code>等。
+    - 利用瀏覽器的內建驗證屬性，如 `pattern`、`required`、`min`、`max` 等。
     - 使用 JavaScript 和 Constraints Validation API 於更複雜的驗證要求上。
     - 以即時方式顯示驗證錯誤，而且如果使用者嘗試提交無效的表單，就顯示他們必須修正的所有欄位。
 notes:
@@ -448,7 +448,7 @@ notes:
   recommend-input:
     - 當表單方法為 post 時，自動完成才有效。  
   use-datalist:
-    - <code>datalist</code> 值是以建議項目的方式提供，而使用者並不侷限於所提供的建議。
+    - `datalist` 值是以建議項目的方式提供，而使用者並不侷限於所提供的建議。
   provide-real-time-validation:
     - 即使以用戶端輸入驗證，需記得一件非常重要的事，請驗證伺服器上的資料，以確保您資料的一致性和安全性。
   show-all-errors:
@@ -697,12 +697,12 @@ HTML5 還導入了數個虛擬類別，
 
 
 
-雖然 <code>requestAutocomplete</code> 原始設計是為了協助使用者填寫任何表單，但時下最常見的用途是在電子商務中，當行動網路上 <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'> 放棄購物車商品率可高達 97% 之際</a>。 想像一下超市中有 97% 的人推著滿滿商品的購物車，突然就把車翻倒並走出門。
+雖然 `requestAutocomplete` 原始設計是為了協助使用者填寫任何表單，但時下最常見的用途是在電子商務中，當行動網路上 <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'> 放棄購物車商品率可高達 97% 之際</a>。 想像一下超市中有 97% 的人推著滿滿商品的購物車，突然就把車翻倒並走出門。
 
 
 ### TL;DR {: .hide-from-toc }
-- <code>requestAutocomplete</code> 可大大簡化結帳過程，並改善使用者體驗。
-- 如果 <code>requestAutocomplete</code> 可供使用，請隱藏結帳表單，並將人們直接移往確認頁。
+- `requestAutocomplete` 可大大簡化結帳過程，並改善使用者體驗。
+- 如果 `requestAutocomplete` 可供使用，請隱藏結帳表單，並將人們直接移往確認頁。
 - 確保輸入欄位包含適當的自動完成的屬性。
 
 

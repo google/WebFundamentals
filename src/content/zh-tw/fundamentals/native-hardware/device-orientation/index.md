@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 裝置動作和定位事件能存取行動裝置中內建的加速計、陀螺儀和羅盤。
 
-{# wf_updated_on: 2014-10-20 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 裝置定向 {: .page-title }
@@ -163,8 +163,8 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 
 ### TL;DR {: .hide-from-toc }
 - 在需要裝置的目前動作時，使用裝置動作。
-- <code>rotationRate</code> 是以 &deg;/sec 為單位呈現。
-- <code>acceleration</code> 和 <code>accelerationWithGravity</code> 是以 m/sec<sup>2</sup> 為單位呈現。
+- `rotationRate` 是以 &deg;/sec 為單位呈現。
+- `acceleration` 和 `accelerationWithGravity` 是以 m/sec<sup>2</sup> 為單位呈現。
 - 請注意瀏覽器實作之間的差異。
 
 

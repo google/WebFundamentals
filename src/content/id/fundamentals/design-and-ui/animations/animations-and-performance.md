@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Animasi harus berjalan dengan baik, jika tidak mereka akan berdampak negatif pada pengalaman pengguna.
 
-{# wf_updated_on: 2016-08-23 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Animasi dan Kinerja {: .page-title }
@@ -16,7 +16,7 @@ Pertahankan 60 fps setiap kali Anda melakukan animasi, karena bila kurang bisa m
 * Jagalah agar animasi tidak menyebabkan masalah kinerja; pastikan Anda tahu dampak menganimasikan properti CSS yang diberikan.
 * Menganimasikan properti yang bisa mengubah geometri laman (layout) atau menyebabkan painting berdampak sangat merugikan.
 * Sebisa mungkin, tetap konsisten pada ubahan transform dan opacity.
-* Gunakan <code>will-change</code> untuk memastikan bahwa browser tahu yang Anda rencanakan untuk dianimasikan.
+* Gunakan `will-change` untuk memastikan bahwa browser tahu yang Anda rencanakan untuk dianimasikan.
 
 
 Menganimasikan properti ini bukannya tanpa risiko, dan beberapa properti lebih mudah dianimasikan dibandingkan yang lainnya. Misalnya, menganimasikan `width` dan `height` dari sebuah elemen akan mengubah geometrinya dan bisa menyebabkan elemen lain pada laman tersebut berpindah atau berubah ukurannya. Proses ini disebut *layout* (atau *mengubah posisi/geometri* di browser berbasis Gecko seperti Firefox), dan bisa sangat merugikan jika laman Anda memiliki banyak elemen. Setiap kali layout terpicu, laman atau bagian darinya biasanya perlu digambar, yang biasanya lebih mahal daripada operasi layout itu sendiri.

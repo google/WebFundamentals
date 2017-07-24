@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-05 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2017-06-28 #}
 {# wf_blink_components: Blink>Payments #}
 
@@ -140,7 +140,7 @@ on brand recognition.
 	appropriate size. You can [learn more here](/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request). 
 
 
-2. This is taken from the <code>&#60;title&#62;</code> tag. 
+2. This is taken from the `<title>` tag.
 	This is your strongest chance to provide a human-readable 
 	indication of what the user is buying and who they're 
 	buying from.

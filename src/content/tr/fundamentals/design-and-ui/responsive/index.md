@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Web'in çogunlugu bu çoklu cihaz deneyimleri için optimize edilmemistir. Sitenizin mobil cihazlarda, masaüstü bilgisayarlarda veya ekrani olan herhangi bir seyde çalismasini saglamak için gereken temel bilgileri edinin.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Duyarli Web Tasarimi Temel Bilgileri {: .page-title }
@@ -48,8 +48,8 @@ Ilk olarak [A List Apart baslikli makalede Ethan Marcotte](http://alistapart.com
 
 ### TL;DR {: .hide-from-toc }
 - Tarayici görüntü alaninin genisligini ve ölçeklemesini kontrol etmek için meta görünüm etiketini kullanin.
-- Ekranin genisligini cihazdan bagimsiz pikseller seklinde eslestirmek için <code>width=device-width</code>kodunu ekleyin.
-- CSS pikselleri ile cihazdan bagimsiz pikseller arasinda bire bir iliski olusturmak için <code>initial-scale=1</code> kodunu ekleyin.
+- Ekranin genisligini cihazdan bagimsiz pikseller seklinde eslestirmek için `width=device-width` kodunu ekleyin.
+- CSS pikselleri ile cihazdan bagimsiz pikseller arasinda bire bir iliski olusturmak için `initial-scale=1` kodunu ekleyin.
 - Sayfaniza, kullanici ölçeklemesini devre disi birakmadan erisilebildiginden emin olun.
 
 
@@ -145,7 +145,7 @@ Medya sorgulari, CSS stillerine uygulanabilecek basit filtrelerdir.  Içerigi ol
 
 ### TL;DR {: .hide-from-toc }
 - Cihaz özelliklerine göre stil uygulamak için medya sorgulari kullanilabilir.
-- En genis deneyimi saglamak için <code>min-device-width</code> yerine <code>min-width</code> kodunu kullanin.
+- En genis deneyimi saglamak için `min-device-width` yerine `min-width` kodunu kullanin.
 - Yerlesimi bozmamak için ögeler için göreli boyutlar kullanin.
 
 

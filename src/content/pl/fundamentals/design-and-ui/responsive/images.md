@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Obraz jest wart tysiąc słów, a grafiki są nieodłączną częścią każdej strony. Jednak często stanowią większość pobieranych danych. Elastyczne projektowanie witryn pozwala na podstawie cech urządzenia zmieniać nie tylko układ strony, ale też obrazy.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Obrazy {: .page-title }
@@ -31,14 +31,14 @@ Czasami obraz trzeba zmienić w większym stopniu &ndash; dopasować proporcje, 
 
 ## Obrazy w znacznikach
 
-Element <code>img</code> ma duże możliwości &ndash; pobiera, dekoduje i renderuje treści &ndash; a współczesne przeglądarki obsługują szeroką gamę formatów graficznych. Dodawanie obrazów, które wyświetlają się na różnych urządzeniach, nie różni się od dodawania tych przeznaczonych na komputery. Aby stworzyć atrakcyjny interfejs, wystarczy wprowadzić tylko kilka drobnych poprawek.
+Element `img` ma duże możliwości &ndash; pobiera, dekoduje i renderuje treści &ndash; a współczesne przeglądarki obsługują szeroką gamę formatów graficznych. Dodawanie obrazów, które wyświetlają się na różnych urządzeniach, nie różni się od dodawania tych przeznaczonych na komputery. Aby stworzyć atrakcyjny interfejs, wystarczy wprowadzić tylko kilka drobnych poprawek.
 
 
 
 ### TL;DR {: .hide-from-toc }
 - Użyj względnych rozmiarów obrazów, by zapobiec przypadkowemu wyjściu poza kontener.
-- Gdy chcesz określić różne obrazy wyświetlane w zależności od cech urządzenia (tzn. dostosować grafikę), użyj elementu <code>picture</code>.
-- Użyj atrybutu <code>srcset</code> i deskryptora <code>x</code> w elemencie <code>img</code>, by przy wyborze obrazu podpowiedzieć przeglądarce, której rozdzielczości najlepiej użyć.
+- Gdy chcesz określić różne obrazy wyświetlane w zależności od cech urządzenia (tzn. dostosować grafikę), użyj elementu `picture`.
+- Użyj atrybutu `srcset` i deskryptora `x` w elemencie `img`, by przy wyborze obrazu podpowiedzieć przeglądarce, której rozdzielczości najlepiej użyć.
 
 
 
@@ -64,7 +64,7 @@ Pamiętaj, by w atrybucie `alt` elementów `img` podać treściwe opisy. Zwięks
   </iframe>
 </div>
 
-Atrybut <code>srcset</code> rozszerza działanie elementu <code>img</code>, ułatwiając wyświetlanie różnych plików graficznych w zależności od cech urządzenia. Podobnie jak natywna <a href="#use_image-set_to_provide_high_res_images">funkcja CSS</a> <code>image-set</code>, atrybut <code>srcset</code> pozwala przeglądarce wybrać obraz, który najlepiej pasuje do możliwości urządzenia. Na przykład pokazać obraz 2x na ekranie 2x, a w przyszłości być może obraz 1x na urządzeniu 2x przy ograniczonej przepustowości sieci.
+Atrybut `srcset` rozszerza działanie elementu `img`, ułatwiając wyświetlanie różnych plików graficznych w zależności od cech urządzenia. Podobnie jak natywna [funkcja CSS](#use_image-set_to_provide_high_res_images") `image-set`, atrybut `srcset` pozwala przeglądarce wybrać obraz, który najlepiej pasuje do możliwości urządzenia. Na przykład pokazać obraz 2x na ekranie 2x, a w przyszłości być może obraz 1x na urządzeniu 2x przy ograniczonej przepustowości sieci.
 
 <div class="clearfix"></div>
 
@@ -78,12 +78,12 @@ Warunki mogą obejmować wszystkie parametry &ndash; od gęstości pikseli aż p
 
 ### Używanie elementu `picture` przy dostosowywaniu grafiki w postaci elastycznych obrazów
 
-Jeśli chcesz wyświetlać obrazy na podstawie cech urządzenia, czyli dostosowywać grafikę, użyj elementu `picture`. Element <code>picture</code> pozwala stworzyć deklarację z wieloma wersjami obrazu, które zależą od różnych cech urządzenia &ndash; takich jak rozmiar, rozdzielczość, orientacja itp.
+Jeśli chcesz wyświetlać obrazy na podstawie cech urządzenia, czyli dostosowywać grafikę, użyj elementu `picture`. Element `picture` pozwala stworzyć deklarację z wieloma wersjami obrazu, które zależą od różnych cech urządzenia &ndash; takich jak rozmiar, rozdzielczość, orientacja itp.
 
 <img class="center" src="img/art-direction.png" alt="Przykład dostosowywania grafiki"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-Note: Element <code>picture</code> zaczyna pojawiać się w przeglądarkach. Mimo że jeszcze nie jest dostępny w każdej z nich, zalecamy jego stosowanie, bo ma dużą zgodność wsteczną i pozwala wykorzystać kod <a href='http://picturefill.responsiveimages.org/'>polyfill Picturefill</a>. Szczegółowe informacje znajdziesz na <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
+Note: Element `picture` zaczyna pojawiać się w przeglądarkach. Mimo że jeszcze nie jest dostępny w każdej z nich, zalecamy jego stosowanie, bo ma dużą zgodność wsteczną i pozwala wykorzystać kod <a href='http://picturefill.responsiveimages.org/'>polyfill Picturefill</a>. Szczegółowe informacje znajdziesz na <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -91,7 +91,7 @@ Note: Element <code>picture</code> zaczyna pojawiać się w przeglądarkach. Mim
   </iframe>
 </div>
 
-Elementu <code>picture</code> należy używać wtedy, gdy mamy obraz źródłowy w różnych gęstościach lub gdy zasady projektowania elastycznego wymagają użycia nieco innego obrazu na niektórych typach ekranów. Podobnie jak w przypadku elementu <code>video</code>, możesz dodać wiele elementów <code>source</code>. To pozwala wskazać różne pliki graficzne w zależności od zapytań o media czy formatu obrazu.
+Elementu `picture` należy używać wtedy, gdy mamy obraz źródłowy w różnych gęstościach lub gdy zasady projektowania elastycznego wymagają użycia nieco innego obrazu na niektórych typach ekranów. Podobnie jak w przypadku elementu `video`, możesz dodać wiele elementów `source`. To pozwala wskazać różne pliki graficzne w zależności od zapytań o media czy formatu obrazu.
 
 <div class="clearfix"></div>
 
@@ -211,7 +211,7 @@ Właściwość CSS `background` to skuteczne narzędzie do umieszczania złożon
 
 ### TL;DR {: .hide-from-toc }
 - Używaj obrazów, które najlepiej pasują do cech wyświetlacza. Weź pod uwagę rozmiar ekranu, rozdzielczość urządzenia i układ strony.
-- Zmień właściwość <code>background-image</code> w CSS na potrzeby wyświetlaczy o wysokiej liczbie DPI, korzystając z zapytań o media z parametrami <code>min-resolution</code> i <code>-webkit-min-device-pixel-ratio</code>.
+- Zmień właściwość `background-image` w CSS na potrzeby wyświetlaczy o wysokiej liczbie DPI, korzystając z zapytań o media z parametrami `min-resolution` i `-webkit-min-device-pixel-ratio`.
 - Dodaj do znaczników atrybut srcset, by oprócz obrazów w skali 1x wyświetlać też wersje w wysokiej rozdzielczości.
 - Rozważ spadek wydajności podczas stosowania technik zastępowania grafik w JavaScripcie lub wyświetlania mocno skompresowanych obrazów w wysokiej rozdzielczości na urządzeniach o niższej rozdzielczości.
 
@@ -409,7 +409,7 @@ Gdy to tylko możliwe, tekst powinien być tekstem, a nie elementem obrazu. Na p
 
 ### Zastępowanie obrazów stylami CSS
 
-Wiele przeglądarek pozwala korzystać z funkcji CSS, by tworzyć style, które dawniej wymagały stosowania obrazów. Na przykład właściwość <code>background</code> umożliwia tworzenie złożonych gradientów, <code>box-shadow</code> &ndash; cieni, a <code>border-radius</code> &ndash; zaokrąglonych narożników.
+Wiele przeglądarek pozwala korzystać z funkcji CSS, by tworzyć style, które dawniej wymagały stosowania obrazów. Na przykład właściwość `background` umożliwia tworzenie złożonych gradientów, `box-shadow` &ndash; cieni, a `border-radius` &ndash; zaokrąglonych narożników.
 
 <p id="noImage">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit 

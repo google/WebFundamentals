@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Explore o estado de todos os itens da sua página pelo console do DevTools.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Avaliar expressões {: .page-title }
@@ -20,7 +20,7 @@ do seu conhecimento de JavaScript e diversos recursos de apoio.
 ### TL;DR {: .hide-from-toc }
 - Avalie uma expressão apenas digitando-a.
 - Selecione elementos usando um dos atalhos.
-- Inspecione elementos de DOM e objetos de pilha JavaScript usando  <code>inspect()</code>.
+- Inspecione elementos de DOM e objetos de pilha JavaScript usando `inspect()`.
 - Acesse elementos e objetos selecionados recentemente usando $0 - 4.
 
 

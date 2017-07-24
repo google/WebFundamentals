@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Práticas recomendadas para determinar o momento de registro dos service workers.
 
-{# wf_updated_on: 2016-11-28 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2016-11-28 #}
 
 # Registro dos service workers {: .page-title }
@@ -76,7 +76,7 @@ A solução é controlar o início do service worker decidindo quando chamar
 `navigator.serviceWorker.register()`. Uma regra geral simples seria atrasar
 o registro até depois do <code>[evento
 "load"](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)</code>
-disparar em <code>window</code>, assim:
+disparar em `window`, assim:
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
@@ -130,11 +130,11 @@ antes é uma boa ideia? Uma que vem à cabeça é quando o service worker usa
 para assumir o controle da página durante o primeiro acesso, e quando ele realiza
 [armazenamento em cache
 em tempo de execução](/web/fundamentals/instant-and-offline/offline-cookbook/#on-network-response)
-de forma agressiva dentro de um gerenciador de <code>fetch</code>. Nesse caso, há uma
+de forma agressiva dentro de um gerenciador de `fetch`. Nesse caso, há uma
 vantagem em ativar o service worker o mais rápido possível: para tentar
 preencher seus caches de tempo de execução com recursos que podem ser úteis no futuro. Se
 o aplicativo web se enquadra nessa categoria, vale a pena dar um passo para trás
-para garantir que o gerenciador de <code>install</code> do service worker não solicite
+para garantir que o gerenciador de `install` do service worker não solicite
 recursos que briguem por largura de banda com as solicitações da página principal.
 
 ## Testando e alinhando tudo

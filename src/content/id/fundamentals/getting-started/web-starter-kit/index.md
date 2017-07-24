@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Kadang-kadang bagian tersulit dari sebuah proyek baru adalah memulainya. Web Starter Kit memberikan Anda dasar yang kuat dengan berbagai alat untuk membantu Anda selama proses development.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-07-16 #}
 
 # Memulai Situs Anda dengan Web Starter Kit {: .page-title }
@@ -236,7 +236,7 @@ Sudah selesai! Sekarang Anda memiliki semua yang dibutuhkan untuk menggunakan al
 Kit.
 
 
-Note: Jika Anda melihat kesalahan izin atau akses seperti <code>EPERM</code> atau <code>EACCESS</code>, jangan gunakan <code>sudo</code> sebagai solusi. Periksa <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>laman ini</a> untuk solusi yang lebih andal.
+Note: Jika Anda melihat kesalahan izin atau akses seperti `EPERM` atau `EACCESS`, jangan gunakan `sudo` sebagai solusi. Periksa [laman ini](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md) untuk solusi yang lebih andal.
 
 <!--
 The next section of this guide covers how to use Gulp, but if you want to see

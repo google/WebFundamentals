@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Referensi Command Line API {: .page-title }
@@ -74,7 +74,7 @@ Contoh berikut mengembalikan referensi ke elemen yang saat ini dipilih dan menam
 
 ![Contoh $('img').src](images/selector-img-src.png)
 
-Note: Jika Anda menggunakan pustaka seperti jQuery yang menggunakan <code>$</code>, fungsionalitas ini akan diganti, dan <code>$</code> akan menyesuaikan dengan implementasi pustaka itu.
+Note: Jika Anda menggunakan pustaka seperti jQuery yang menggunakan `$`, fungsionalitas ini akan diganti, dan `$` akan menyesuaikan dengan implementasi pustaka itu.
 
 ## $$(selector)
 

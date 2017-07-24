@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With responsive web design not only can our layouts change based on device characteristics, but images as well.
 
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Images {: .page-title }
@@ -154,10 +154,10 @@ further details.
   </iframe>
 </div>
 
-Use the <code>picture</code> element when an image source
+Use the `picture` element when an image source
 exists in multiple densities, or when a responsive design dictates a
 somewhat different image on some types of screens.  Similar to the
-<code>video</code> element, multiple <code>source</code> elements can
+`video` element, multiple `source` elements can
 be included, making it possible to specify different image files
 depending on media queries or image format.
 
@@ -430,7 +430,7 @@ identical, but one is around 3KB and the other only 2KB:
 ##### Data URI
 
 Data URIs provide a way to include a file, such as an image, inline by setting
-the src of an <code>img</code> element as a Base64 encoded string using the
+the src of an `img` element as a Base64 encoded string using the
 following format:
 
 
@@ -472,7 +472,7 @@ On the downside:
 
 * On mobile, Data URIs can be
   [signficantly slower](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/)
-  to display on mobile than images from an external <code>src</code>.
+  to display on mobile than images from an external `src`.
 * Data URIs can considerably increase the size of an HTML request.
 * They add complexity to your markup and your workflow.
 * The Data URI format is considerably bigger than binary (up to 30%) and

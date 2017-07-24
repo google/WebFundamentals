@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Content Security Policy can significantly reduce the risk and impact of cross-site scripting attacks in modern browsers.
 
 {# wf_published_on: 2012-06-15 #}
-{# wf_updated_on: 2016-02-19 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
 # Content Security Policy {: .page-title }
@@ -335,9 +335,9 @@ sha256 hash for each of your inline scripts.
 
 Even when an attacker can't inject script directly, they might be able to trick
 your application into converting otherwise inert text into executable JavaScript
-and executing it on their behalf. <code>eval()</code>, <code>new
-Function()</code>, <code>setTimeout([string], ...)</code>, and
-<code>setInterval([string], ...)</code> are all vectors through which injected
+and executing it on their behalf. `eval()`, `new
+Function()`, `setTimeout([string], ...)`, and
+`setInterval([string], ...)` are all vectors through which injected
 text might end up executing something unexpectedly malicious. CSP's default
 response to this risk is to completely block all of these vectors.
 
@@ -388,8 +388,8 @@ CSP's ability to block untrusted resources client-side is a huge win for your
 users, but it would be quite helpful to have some sort of notification
 sent back to the server so that you can identify and squash any bugs that allow
 malicious injection in the first place. To this end, you can instruct the
-browser to <code>POST</code> JSON-formatted violation reports to a location
-specified in a <code>report-uri</code> directive.
+browser to `POST` JSON-formatted violation reports to a location
+specified in a `report-uri` directive.
 
 
     Content-Security-Policy: default-src 'self'; ...; report-uri /my_amazing_csp_report_parser;

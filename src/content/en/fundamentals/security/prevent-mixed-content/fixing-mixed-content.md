@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process.
 
 {# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2016-08-24 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
 # Preventing Mixed Content {: .page-title }
@@ -194,7 +194,7 @@ CSP is useful for many things outside of its mixed content uses. Information abo
 
 Note: Browsers enforce <b>all</b> content security policies that they receive.
 Multiple CSP header values received by the browser in the response header or
-<code>&lt;meta&gt;</code> elements are combined and enforced as a single policy;
+`<meta>` elements are combined and enforced as a single policy;
 reporting policies are likewise combined. Policies are combined by taking the
 intersection of the policies; that is to say, each policy after the first can
 only further restrict the allowed content, not broaden it.
@@ -247,7 +247,7 @@ As an example, if a page contains an image tag with an HTTP URL:
 
 
 The browser instead makes a secure request for
-<code><b>https:</b>//example.com/image.jpg</code>, thus saving the user from mixed
+`<b>https:</b>//example.com/image.jpg`, thus saving the user from mixed
 content.
 
 You can enable this behavior either by sending a `Content-Security-Policy` header

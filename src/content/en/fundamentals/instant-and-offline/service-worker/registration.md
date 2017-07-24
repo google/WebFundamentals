@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Best practices for timing your service worker registration.
 
-{# wf_updated_on: 2016-11-28 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2016-11-28 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -75,9 +75,9 @@ site.
 
 The solution is to control start of the service worker by choosing when to call
 `navigator.serviceWorker.register()`. A simple rule of thumb would be to delay
-registration until after the <code>[load
-event](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)</code>
-fires on <code>window</code>, like so:
+registration until after the [load
+event](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)
+fires on `window`, like so:
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
@@ -131,11 +131,11 @@ possible makes sense? One that comes to mind is when your service worker uses
 to take control of the page during the first visit, and the service worker
 aggressively performs [runtime
 caching](/web/fundamentals/instant-and-offline/offline-cookbook/#on-network-response)
-inside of its <code>fetch</code> handler. In that situation, there's an
+inside of its `fetch` handler. In that situation, there's an
 advantage to getting the service worker active as quickly as possible, to try to
 populate its runtime caches with resources that might come in handy later. If
 your web app falls into this category, it's worth taking a step back to make
-sure that your service worker's <code>install</code> handler doesn't request
+sure that your service worker's `install` handler doesn't request
 resources that fight for bandwidth with the main page's requests.
 
 ## Testing things out

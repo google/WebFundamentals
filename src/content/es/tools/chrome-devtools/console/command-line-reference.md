@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: PENDIENTE
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Referencia de Command Line API {: .page-title }
@@ -74,7 +74,7 @@ En el siguiente ejemplo se muestra una referencia al elemento actualmente selecc
 
 ![Ejemplo de $('img').src](images/selector-img-src.png)
 
-Note: Si usas una biblioteca como jQuery que emplea <code>$</code>, esta funcionalidad se sobrescribirá y <code>$</code> corresponderá a la implementación de esa biblioteca.
+Note: Si usas una biblioteca como jQuery que emplea `$`, esta funcionalidad se sobrescribirá y `$` corresponderá a la implementación de esa biblioteca.
 
 ## $$(selector)
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Os sites não são acessados só por humanos, mas também pelos rastreadores web dos mecanismos de pesquisa. Saiba como melhorar a precisão e a classificação do seu site nas buscas.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-08-30 #}
 
 # Otimização para buscas {: .page-title }
@@ -14,9 +14,9 @@ Os sites não são acessados só por humanos, mas também pelos rastreadores web
 ### TL;DR {: .hide-from-toc }
 - Determine a estrutura de URLs da sua página.
 - Design responsivo é a melhor escolha.
-- Use <code>rel='canonical'</code> + <code>rel='alternate'</code> para sites para computador/dispositivo móvel separados.
-- Use o cabeçalho <code>Vary HTTP</code> para um único URL que fornece HTMLs separados para computador/dispositivo móvel dinamicamente.
-- Use <code>noindex</code> para páginas a que quer limitar o acesso a quem tem o URL.
+- Use `rel='canonical'` + `rel='alternate'` para sites para computador/dispositivo móvel separados.
+- Use o cabeçalho `Vary HTTP` para um único URL que fornece HTMLs separados para computador/dispositivo móvel dinamicamente.
+- Use `noindex` para páginas a que quer limitar o acesso a quem tem o URL.
 - Use um bom mecanismo de autenticação para as páginas que quer manter privadas.
 
 ## Dê aos mecanismos de pesquisa a estrutura do seu site
@@ -278,7 +278,7 @@ Para saber mais sobre a X-Robots-Tag:
 * [Google](/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/how-can-i-remove-a-url-or-page-from-the-bing-index-37c07477)
 
-Observação: se você proibir os rastreadores de usar `robots.txt`, os robôs de pesquisa ainda poderão indexar essas páginas sem saber que você não quer que elas sejam indexadas. Isso pode acontecer porque:<ul><li>Os robôs de pesquisa podem achar suas páginas da web seguindo links de outros sites.</li><li>Os mecanismos de pesquisa que não podem rastrear não conseguem encontrar <code>noindex</code>.</li></ul>
+Observação: se você proibir os rastreadores de usar `robots.txt`, os robôs de pesquisa ainda poderão indexar essas páginas sem saber que você não quer que elas sejam indexadas. Isso pode acontecer porque:<ul><li>Os robôs de pesquisa podem achar suas páginas da web seguindo links de outros sites.</li><li>Os mecanismos de pesquisa que não podem rastrear não conseguem encontrar `noindex`.</li></ul>
 
 Não espere que `robots.txt` controle as indexações de busca.
 

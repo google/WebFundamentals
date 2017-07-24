@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools menyediakan berbagai alat untuk membantu Anda memperbaiki laman web yang melontarkan pengecualian dan men-debug kesalahan di JavaScript Anda.
 
-{# wf_updated_on: 2015-05-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Penanganan Kesalahan dan Pengecualian {: .page-title }
@@ -18,9 +18,9 @@ Di Console Anda bisa melacak pengecualian dan mengusut jalur eksekusi yang menga
 
 ### TL;DR {: .hide-from-toc }
 - Aktifkan Pause on Exceptions untuk men-debug konteks kode bila pengecualian terpicu.
-- Cetak tumpukan panggilan JavaScript saat ini menggunakan <code>console.trace</code>.
-- Letakkan pernyataan dalam kode Anda dan lontarkan pengecualian menggunakan <code>console.assert()</code>.
-- Masukkan ke log kesalahan yang terjadi di browser menggunakan <code>window.onerror</code>.
+- Cetak tumpukan panggilan JavaScript saat ini menggunakan `console.trace`.
+- Letakkan pernyataan dalam kode Anda dan lontarkan pengecualian menggunakan `console.assert()`.
+- Masukkan ke log kesalahan yang terjadi di browser menggunakan `window.onerror`.
 
 
 ## Melacak pengecualian

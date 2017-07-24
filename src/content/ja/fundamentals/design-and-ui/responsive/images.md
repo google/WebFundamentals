@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 1 枚の写真は 1000 語にも匹敵する内容を伝えます。また、画像はすべてのページにおいて非常に重要な役割を果たします。一方で、ダウンロードされるデータ量のほとんどを画像が占めることも少なくありません。レスポンシブ ウェブデザインでは、レイアウトだけでなく画像もデバイス特性に応じて変えることができます。
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-17 #}
 {# wf_published_on: 2014-04-29 #}
 
 # 画像 {: .page-title }
@@ -143,10 +143,10 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
   </iframe>
 </div>
 
- <code>picture</code> 要素は、1 つの画像のソースに対して密度の異なる画像が複数存在する場合、またはレスポンシブ デザインで一部のタイプの画面に別の画像を表示するよう指定する場合に使用します。
+`picture` 要素は、1 つの画像のソースに対して密度の異なる画像が複数存在する場合、またはレスポンシブ デザインで一部のタイプの画面に別の画像を表示するよう指定する場合に使用します。
 
-<code>video</code>
-要素と同様に、複数の  <code>source</code>
+`video`
+要素と同様に、複数の  `source`
 要素を追加して、メディアクエリや画像形式に応じて別の画像ファイルを指定できます。
 
 
@@ -387,7 +387,7 @@ SVG はモバイルおよびデスクトップに[幅広く対応](http://canius
 
 #####  Data URI
 
-Data URI を使用して、次の形式で  <code>img</code> 要素の src を Base64 エンコード文字列として設定すると、画像などのファイルをインラインで埋め込むことできます。
+Data URI を使用して、次の形式で  `img` 要素の src を Base64 エンコード文字列として設定すると、画像などのファイルをインラインで埋め込むことできます。
 
 
     <img src="data:image/svg+xml;base64,[data]">
@@ -417,7 +417,7 @@ Data URI と SVG は CSS でインライン化することもできます。こ�
 
 短所:
 
-* モバイルでは、外部の  <code>src</code> の画像よりも Data URI を表示するほうが[はるかに遅くなる](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/)可能性があります。
+* モバイルでは、外部の  `src` の画像よりも Data URI を表示するほうが[はるかに遅くなる](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/)可能性があります。
 * Data URI によって HTML リクエストのサイズが大幅に増加する場合があります。
 * マークアップやワークフローが複雑になります。
 * Data URI 形式はバイナリ形式よりもサイズかなり大きくなります（最大 30%）。したがって、ダウンロード全体のサイズを削減できません。
