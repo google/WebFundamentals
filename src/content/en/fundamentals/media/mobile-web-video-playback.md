@@ -506,8 +506,9 @@ resources in an infinite scroll case.
 
 If there are more than one video on a page, I would suggest you only play one
 and pause the other ones automatically so that user doesn't have to hear
-multiples audio tracks playing simultaneously.
+multiple audio tracks playing simultaneously.
 
+    // Note: This array should be initialized once all videos have been added.
     var videos = Array.from(document.querySelectorAll('video'));
 
     videos.forEach(function(video) {
