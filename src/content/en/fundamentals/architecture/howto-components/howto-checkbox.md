@@ -284,7 +284,7 @@ limitations under the License.
       // before its prototype has been connected to this class.
       // The `_upgradeProperty` method will check for any instance properties
       // and run them through the proper class setters.
-      // See the [lazy properites](#lazy-properties) section for more details.
+      // See the [lazy properties](#lazy-properties) section for more details.
       this._upgradeProperty('checked');
       this._upgradeProperty('disabled');
 
