@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 
-{# wf_updated_on: 2016-08-25 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-08-26 #}
 
 # Resources {: .page-title }
@@ -15,7 +15,7 @@ languages, **you've** helped to make [/web](/web/) and the web better!
 
 You can [file an issue](https://github.com/Google/WebFundamentals/issues) on
 our [GitHub repository](https://github.com/Google/WebFundamentals/){: .external } and
-someone will take a look, or you can fix it yourself by submiting a
+someone will take a look, or you can fix it yourself by submitting a
 [pull request](#submitting-a-pull-request)!
 
 ## Want to help translate content?

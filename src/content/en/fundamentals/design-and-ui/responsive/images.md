@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With responsive web design not only can our layouts change based on device characteristics, but images as well.
 
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Images {: .page-title }
@@ -471,7 +471,7 @@ one single request.
 On the downside:
 
 * On mobile, Data URIs can be
-  [signficantly slower](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/)
+  [significantly slower](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/)
   to display on mobile than images from an external <code>src</code>.
 * Data URIs can considerably increase the size of an HTML request.
 * They add complexity to your markup and your workflow.

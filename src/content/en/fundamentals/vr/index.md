@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: WebVR
 
-{# wf_updated_on: 2017-05-22 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -98,7 +98,7 @@ and should [use Chrome DevTools’ Timeline to measure your per-frame costs](/we
 ## Embrace Progressive Enhancement
 
 <img src="img/touch-input.png" class="attempt-right"
-  alt="Use Progressive Enhancement to maximise reach" />
+  alt="Use Progressive Enhancement to maximize reach" />
 
 What are you to do if your users don’t have a Head Mounted Display (‘HMD’) or
 VR-capable device? The best answer is to use Progressive Enhancement.

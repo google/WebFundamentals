@@ -2,10 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Element aria-* Attributes Are Valid And Not Misspelled Or Non-Existent" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2017-01-18 #}
 
-# Element ARIA Attributes Are Valid And Not Mispelled Or Non-Existent  {: .page-title }
+# Element ARIA Attributes Are Valid And Not Misspelled Or Non-Existent  {: .page-title }
 
 ## Why the audit is important {: #why }
 

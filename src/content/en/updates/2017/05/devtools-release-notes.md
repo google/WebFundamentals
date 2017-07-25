@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New features and changes coming to DevTools in Chrome 60.
 
-{# wf_updated_on: 2017-07-07 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2017-05-23 #}
 {# wf_tags: chrome60,devtools #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -14,11 +14,33 @@ description: New features and changes coming to DevTools in Chrome 60.
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Welcome! Here's the major features and changes coming to DevTools in Chrome 60.
+Welcome! New features and major changes coming to DevTools in Chrome 60 include:
+
+* [A new Audits panel](#lighthouse), including tests for progressive web apps,
+  performance, accessibility, and best practices.
+* [Third-party badges](#badges). Find out which third-parties are making
+  network requests, logging to the Console, and executing JavaScript.
+* [Continue To Here](#continue). A new gesture that can speed up your
+  JavaScript debugging workflow.
+* [Predictable debugging for asynchronous JavaScript](#step-into-async).
+* [Object previews in the Console](#object-previews).
+* [Real-time updates in the Coverage tab](#coverage).
+* [A new menu for selecting contexts in the Console](#context).
+* [Simpler network throttling options](#network-throttling).
+* [Async stack traces on by default](#async-stacks).
 
 Note: You can check what version of Chrome you're running at
 `chrome://version`. Chrome auto-updates to a new major version about every 6
 weeks.
+
+Check out the video version of these release notes below or read on to learn
+more.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="Qnmb2YhkQmQ"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## New features {: #features }
 
@@ -380,7 +402,7 @@ var label = 'WNDT60 / Async Stacks On By Default / Sentiment';
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
-### DevTools at Google I/O '17 {: #io }
+## DevTools at Google I/O '17 {: #io }
 
 Check out the talk by the mythical Paul Irish below to learn more about
 what the DevTools team has been working on over the past year and the big

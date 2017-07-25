@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-03 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Displaying a Notification {: .page-title }
@@ -248,7 +248,7 @@ In the example above I've defined 4 actions to illustrate that you can define mo
 will be displayed. If you want to know the number actions that will be displayed by the browser
 you can check `Notification.maxActions`, which is used in the body text in the demo.
 
-On desktop the action button icons display their colors (See the pink doughtnut above).
+On desktop the action button icons display their colors (See the pink doughnut above).
 
 On Android Marshmallow the icons are colored to match the system color scheme:
 

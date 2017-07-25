@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-03 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-06-30 #}
 
 # The Web Push Protocol {: .page-title }
@@ -199,7 +199,7 @@ same API (the web push protocol), developers don't have to care who the
 push service is. We can make a request in the right format and expect a
 push message to be sent. The downside of this is that developers could
 conceivably send messages to a push service that isn't trustworthy. By
-encrypting the payload, a push service can't read the data thats sent.
+encrypting the payload, a push service can't read the data that's sent.
 Only the browser can decrypt the information. This protects the user's
 data.
 
@@ -246,7 +246,7 @@ In node we'd do the following:
     const publicKey = keyCurve.getPublicKey();
     const privateKey = keyCurve.getPrivateKey();
 
-#### HKDF: HMAC based key deriviation function
+#### HKDF: HMAC based key derivation function
 
 Wikipedia has a succinct description of [HKDF](https://tools.ietf.org/html/rfc5869):
 

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Create the best mobile media experience on the Web by following these best practises.
 
 {# wf_published_on: 2017-04-07 #}
-{# wf_updated_on: 2017-07-21 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_blink_components: Blink>Media #}
 
 # Mobile Web Video Playback {: .page-title }
@@ -306,7 +306,7 @@ we'll need the [Screen Orientation API]{: .external} which is not yet supported
 everywhere and still prefixed in some browsers at that time. Thus, this will be
 our first progressive enhancement.
 
-How doest this work? As soon as we detect the screen orientation changes, let's
+How does this work? As soon as we detect the screen orientation changes, let's
 request fullscreen if the browser window is in landscape mode (that is, its
 width is greater than its height). If not, let's exit fullscreen. That's all.
 
