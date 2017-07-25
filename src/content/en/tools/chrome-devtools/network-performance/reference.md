@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2017-06-21 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2015-04-13 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -672,7 +672,7 @@ tab:
 * **Content Download**. The browser is receiving the response.
 * **Receiving Push**. The browser is receiving data for this response via HTTP/2
   Server Push.
-* **Reading Push**. The browser is reading the local data previously receieved.
+* **Reading Push**. The browser is reading the local data previously received.
 
 ### View initiators and dependencies {: #initiators-dependencies }
 

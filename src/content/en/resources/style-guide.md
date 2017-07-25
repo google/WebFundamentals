@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: This is the page description placed in the head.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2016-09-13 #}
 
 # Style Guide {: .page-title }
@@ -30,7 +30,7 @@ Section headings (`h2`-`h6`)
 : Use sentence case for all headings
 
 Yes, we're inconsistent about this, but we're trying to fix it, please do your
-best to ahear to these guideslines.
+best to ahear to these guidelines.
 
 ## Heading 2 {: #heading-what-what }
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Let's take a raw video file off a camera and transform it into an encrypted resource that you can play back using a video library such as Google's Shaka Player on a mobile device.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2017-06-30 #}
 
 # From Raw Video to Web Ready {: .page-title }
@@ -188,7 +188,7 @@ encoded with the aac codec.
     ffmpeg -i glocken.webm -vn -c:a vorbis glocken.m4a
 
 The [cheat sheet](/web/fundamentals/media/manipulating/cheatsheet#codec) lists
-commands needed to convert codecs. The tables sumarize the libraries used in
+commands needed to convert codecs. The tables summarize the libraries used in
 ffmpeg to perform the codec conversions for webm and mp4 files. These are the
 formats recommended for DASH and HLS respectively.
 

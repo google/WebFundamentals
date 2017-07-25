@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Much media work requires changing characteristics of media files. In this section, I intend to provide an easy onramp into that world.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2017-06-09 #}
 
 # Application Primers {: .page-title }
@@ -94,7 +94,7 @@ support, Widevine DRM support, live video, and video-on-demand. Despite what it
 says on the packaging, this utility is for more than C++ developers. It can be
 used as both a library for building media software and as a command-line utility
 for preparing media files for playback. It's the later capacity that
-interestests me here. In fact, for web media creators, Shaka Packager is the
+interests me here. In fact, for web media creators, Shaka Packager is the
 only way to do some tasks without spending money on expensive commercial
 applications.
 

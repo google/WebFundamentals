@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-06-12#}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2017-04-06 #}
 
 # HowTo: Components – howto-checkbox {: .page-title }
@@ -57,7 +57,7 @@ not toggleable at all.
 It's possible that a developer using this element might want to give it a
 different role, for example, `role="switch"`. Similarly they might want the
 control to not be focusable just yet, so they might set `tabindex="-1"`. It's
-important to respect the developer's wishes and not surpise them by overiding
+important to respect the developer's wishes and not surprise them by overriding
 their configuration. For this reason, the element checks to see if those
 attributes have been set, before applying its own values.
 
@@ -519,7 +519,7 @@ and install event listeners.</p>
  before its prototype has been connected to this class.
  The <code>_upgradeProperty</code> method will check for any instance properties
  and run them through the proper class setters.
- See the <a href="#lazy-properties">lazy properites</a> section for more details.</p>
+ See the <a href="#lazy-properties">lazy properties</a> section for more details.</p>
 </div>
 <pre><code class="literate-code "><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._upgradeProperty('checked');
 <sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._upgradeProperty('disabled');

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: "Promises simplify deferred and asynchronous computations. A promise represents an operation that hasn't completed yet."
 
 {# wf_published_on: 2013-12-16 #}
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_blink_components: Blink>JavaScript #}
 
 # JavaScript Promises: an Introduction {: .page-title }
@@ -1042,7 +1042,7 @@ pretty much the same as above, but no need for a `spawn` method.
 All methods work in Chrome, Opera, Firefox, Microsoft Edge, and Safari
 unless otherwise noted. The
 [polyfill](https://github.com/jakearchibald/ES6-Promises#readme) provides
-the below for all browers.
+the below for all browsers.
 
 
 ### Static Methods
