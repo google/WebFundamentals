@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-03 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Subscribing a User {: .page-title }
@@ -246,7 +246,7 @@ to generate keys by doing the following:
 You only need to create these keys once for your application, just make sure you keep the
 private key private. (Yeah, I just said that.)
 
-## Permisions and subscribe()
+## Permissions and subscribe()
 
 There is one side effect of calling `subscribe()`. If your web app doesn't have permissions for
 showing notifications at the time of calling `subscribe()`, the browser will request the

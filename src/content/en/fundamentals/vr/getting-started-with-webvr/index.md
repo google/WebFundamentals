@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to take a WebGL scene in Three.js and add WebVR capabilities.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -198,7 +198,7 @@ With that code we really *are* done this time. If you want the final version, do
 
 WebVR is a really awesome way to add immersion to your content, and using libraries like Three.js makes it much easier to get going with WebGL. There are some important things to remember, though.
 
-* **Build in Progressive Enhancement from the start.** As we’ve mentioned several times in this guide, it’s important to build a good base level experience, onto which you can layer WebVR. Many experiences can be implemented with mouse / touch control, and can upgrade through accelerometer controls, to fully-fledged VR experiences. Maximising your audience is always worthwhile.
+* **Build in Progressive Enhancement from the start.** As we’ve mentioned several times in this guide, it’s important to build a good base level experience, onto which you can layer WebVR. Many experiences can be implemented with mouse / touch control, and can upgrade through accelerometer controls, to fully-fledged VR experiences. Maximizing your audience is always worthwhile.
 
 * **Remember you’re going to render your scene twice.** You may need to think about Level of Detail (LOD) and other techniques to ensure that when you render the scene twice it scales down the computation workload for the CPU and GPU. Above all else you must maintain a solid frame rate! No amount of showbiz is worth someone feeling extreme discomfort from motion sickness!
 

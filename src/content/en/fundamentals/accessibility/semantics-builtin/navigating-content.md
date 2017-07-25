@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: The role of semantics in page navigation
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Semantics and Navigating Content {: .page-title }
@@ -38,7 +38,7 @@ effectively to support this feature.
 
 ## Using headings effectively
 
-First, let's reiterate an ealier point: [*DOM order
+First, let's reiterate an earlier point: [*DOM order
 matters*](/web/fundamentals/accessibility/focus/dom-order-matters), not only for
 focus order but for screen reader order. As you experiment with screen readers
 like VoiceOver, NVDA, JAWS, and ChromeVox, you'll find the heading list follows

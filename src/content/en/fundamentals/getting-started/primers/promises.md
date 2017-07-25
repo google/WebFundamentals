@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: "Promises simplify deferred and asynchronous computations. A promise represents an operation that hasn't completed yet."
 
 {# wf_published_on: 2013-12-16 #}
-{# wf_updated_on: 2017-02-21 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_blink_components: Blink>JavaScript #}
 
 # JavaScript Promises: an Introduction {: .page-title }
@@ -176,7 +176,7 @@ Promises have been around for a while in the form of libraries, such as:
 * [WinJS](https://msdn.microsoft.com/en-us/library/windows/apps/br211867.aspx)
 * [RSVP.js](https://github.com/tildeio/rsvp.js)
 
-The above and JavaScript promises share a common, standardised behaviour
+The above and JavaScript promises share a common, standardized behaviour
 called [Promises/A+](https://github.com/promises-aplus/promises-spec). If
 you're a jQuery user, they have something similar called
 [Deferreds](https://api.jquery.com/category/deferred-object/). However,
@@ -186,7 +186,7 @@ so beware. jQuery also has
 [a Promise type](https://api.jquery.com/Types/#Promise), but this is just a
 subset of Deferred and has the same issues.
 
-Although promise implementations follow a standardised behaviour, their
+Although promise implementations follow a standardized behaviour, their
 overall APIs differ. JavaScript promises are similar in API to RSVP.js.
 Here's how you create a promise:
 
@@ -866,7 +866,7 @@ order, but they appear on screen in the right order.
 However, we can still improve perceived performance. When chapter one arrives we
 should add it to the page. This lets the user start reading before the rest of
 the chapters have arrived. When chapter three arrives, we wouldn't add it to the
-page because the user may not realise chapter two is missing. When chapter two
+page because the user may not realize chapter two is missing. When chapter two
 arrives, we can add chapters two and three, etc etc.
 
 To do this, we fetch JSON for all our chapters at the same time, then create a
@@ -1042,7 +1042,7 @@ pretty much the same as above, but no need for a `spawn` method.
 All methods work in Chrome, Opera, Firefox, Microsoft Edge, and Safari
 unless otherwise noted. The
 [polyfill](https://github.com/jakearchibald/ES6-Promises#readme) provides
-the below for all browers.
+the below for all browsers.
 
 
 ### Static Methods
@@ -1163,3 +1163,4 @@ corrections/recommendations.
 Also, thanks to [Mathias Bynens](https://mathiasbynens.be/) for
 [updating various parts](https://github.com/html5rocks/www.html5rocks.com/pull/921/files)
 of the article.
+

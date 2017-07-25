@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: If we have to develop for Desktop, Mobile, Tablet, wearables and other form factors, how can you optimise your workflow to make your life less stressful?
+description: If we have to develop for Desktop, Mobile, Tablet, wearables and other form factors, how can you optimize your workflow to make your life less stressful?
 
-{# wf_updated_on: 2015-02-23 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: bZRPetpUcjQ #}
 
@@ -16,7 +16,7 @@ description: If we have to develop for Desktop, Mobile, Tablet, wearables and ot
 </div>
 
 
-If we have to develop for Desktop, Mobile, Tablet, wearables and other form factors, how can you optimise your workflow to make your life less stressful? There's a solid multi-device approach for quick iteration with LiveReload, Grunt, Yeoman, and the newly-unveiled [Mini Mobile Device Lab](https://github.com/GoogleChrome/MiniMobileDeviceLab). Lastly, if you don't have the physical hardware you want to test, some providers make it available through the cloud.
+If we have to develop for Desktop, Mobile, Tablet, wearables and other form factors, how can you optimize your workflow to make your life less stressful? There's a solid multi-device approach for quick iteration with LiveReload, Grunt, Yeoman, and the newly-unveiled [Mini Mobile Device Lab](https://github.com/GoogleChrome/MiniMobileDeviceLab). Lastly, if you don't have the physical hardware you want to test, some providers make it available through the cloud.
 
 [Slides: Optimizing your Workflow for a Cross-device world](https://gauntface.com/presentations/chrome-dev-summit-2013/cross-device-workflow/#1)
 

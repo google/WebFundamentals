@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 
-{# wf_updated_on: 2015-02-23 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: z6dg_V22wV0 #}
 
@@ -64,7 +64,7 @@ need:
 For those of you who are new to build processes, the easiest way to think of a
 build process is to view it as a program which takes a set of files and performs
 certain tasks on them and outputs new versions in a different location. The
-tasks optimise the files to improve load times, check for possible errors or
+tasks optimize the files to improve load times, check for possible errors or
 handle tasks that can be automated.
 
 In Web Starter Kit we have the following processes:
@@ -158,7 +158,7 @@ doing during that paint.
 
 DevTools now gives a reason why a paint or layout occurred whenever it can, this
 is useful for anyone learning about the timeline, the browser behaviours and
-allows you to optimise your code to prevent performance issues.
+allows you to optimize your code to prevent performance issues.
 
 <p style="text-align: center;">
 <img src="/web/shows/imgs/cds/2014/fundamentals-of-web-dev/image09.png" alt="Screenshot of Invalidation Tracking in Chrome DevTools" width="624" height="396" style="max-width: 100%; height: auto;" />

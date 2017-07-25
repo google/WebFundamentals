@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Uses HTTPS" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-09-19 #}
 
 # Uses HTTPS  {: .page-title }
@@ -32,7 +32,7 @@ Many hosting platforms, such as
 Pages](https://pages.github.com/){: .external }, are secure by default.
 
 If you're running your own servers and need a cheap and easy way to generate
-certficates, check out [Let's Encrypt](https://letsencrypt.org/){: .external }. For more help
+certificates, check out [Let's Encrypt](https://letsencrypt.org/){: .external }. For more help
 on enabling HTTPS on your servers, see the following set of docs: [Encrypting
 data in transit](/web/fundamentals/security/encrypt-in-transit/enable-https).
 

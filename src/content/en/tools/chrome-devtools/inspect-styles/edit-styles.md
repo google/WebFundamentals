@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Styles pane in Chrome DevTools to inspect and modify the CSS styles associated to an element.
 
-{# wf_updated_on: 2016-02-25 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Edit Styles {: .page-title }
@@ -59,7 +59,7 @@ The labels on the image below correspond with the numbered items below it.
 
 Understanding how cascading and inheritance works is essential to
 debugging your styles. The cascade relates to how CSS declarations are
-given weights to determine which rules should take precedence when theyoverlap with another rule. Inheritance relates to how HTML elements inherit
+given weights to determine which rules should take precedence when they overlap with another rule. Inheritance relates to how HTML elements inherit
 CSS properties from their containing elements (ancestors). For more,
 see [W3C documentation on cascading](http://www.w3.org/TR/CSS2/cascade.html).
 

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-13 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Sign in Users {: .page-title }
@@ -413,5 +413,5 @@ Call
 This will ensure the auto sign-in won’t happen until next time the user enables auto sign-in.
 To resume auto sign-in, a user can choose to intentionally sign-in
 by choosing the account they wish to sign in with, from the account chooser.
-Then the user is always signed back in until they explictly sign out.
+Then the user is always signed back in until they explicitly sign out.
 
