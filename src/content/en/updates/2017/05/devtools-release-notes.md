@@ -91,7 +91,7 @@ var label = 'WNDT60 / New Audits Panel / Sentiment';
 Check out the DevTools talk from Google I/O '17 below to learn more about Lighthouse's
 integration in DevTools.
 
-Note: The video should start playing at 32:30, which is when Paul discusses Lightouse.
+Note: The video should start playing at 32:30, which is when Paul discusses Lighthouse.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="PjjlwAvV8Jg"
