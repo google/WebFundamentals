@@ -31,6 +31,6 @@ essentially:
 You can find a list of all deprecated features on chromestatus.com using the 
 [deprecated filter](https://www.chromestatus.com/features#deprecated)
 and removed features by applying the
-[removed filter](https://www.chromestatus.com/features#removed){: .external }.
+[removed filter](https://www.chromestatus.com/features#removed).
 We will also try to summarize some of the changes, reasoning, and migration
 paths in these posts.

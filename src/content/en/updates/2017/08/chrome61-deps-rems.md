@@ -39,7 +39,7 @@ URL should instead escape these characters.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5735596811091968) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=680970)
 
-## Remove usage of notifications from iframes
+## Remove usage of notifications from insecure iframes
 
 Perfmission requests from iframes can confuse users since it is difficult to
 distinguish between the containing page's origin and the origin of the iframe
