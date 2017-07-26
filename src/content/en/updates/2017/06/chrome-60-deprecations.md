@@ -175,6 +175,33 @@ Developers should use `KEYFRAMES_RULE` and `KEYFRAME_RULE` instead.
  &#124; [Chromestatus Tracker](https://www.chromestatus.com/feature/5747368108490752) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=689681)
 
+## User Interface
+
+### Require user gesture for beforeunload dialogs
+
+From Chrome 60 onward, the `beforeunload` dialog will only appear if the frame
+attempting to display it has received a user gesture or user interaction (or if
+any embedded frame has received such a gesture). To be clear, this is not a
+change to the dispatch of the `beforeunload` event. It is just a change to
+whether the dialog is shown.
+
+The `beforeunload` dialog is an app-modal dialog box. As such, it is inherently
+user-hostile, meaning it responds to a user navigation by questioning the user's
+decision. There are positive uses for this feature. For example, it's often used
+to warn users when they will lose data by navigating.
+
+While the ability for a page to provide text for the `beforeunload` dialog was
+removed a while ago, `beforeunload` dialogs remain a vector of abuse. In
+particular, `beforeunload` dialogs are an ingredient of scam websites, where
+autoplay audio and threatening text provide a context where the Chromium
+provided "are you sure you want to leave this page" message becomes worrisome.
+
+We want to thread the needle, and only allow good uses of the `beforeunload`
+dialog. Good uses of the dialog are those where the user has state that might be
+lost. If the user never interacted with the page, then the user cannot have any
+state that might be lost, and therefore we do not risk user data loss by
+suppressing the dialog in that case.
+
 <<../../_deprecation-policy.md>>
 
 {% include "comment-widget.html" %}
