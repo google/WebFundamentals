@@ -91,6 +91,15 @@ The new behavior is implemented in Chrome 61.
 
 ## JavaScript
 
+### Deprecate and remove RTCPeerConnection.getStreamById()
+
+Nearly two years ago, `getStreamById()` was [removed from the Web RTC spec](https://github.com/w3c/webrtc-pc/pull/18). Most other browsers have removed already removed this from their implementations. Though this function is believed to be little-used, it's also believed there is some minor interoperability risk with Edge and WebKit-based browsers *other than* Safari where `getSTreamById()` is still supported. Developers needing an alternative implementation can find example code in the Intent to Remove, below.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/m4DNZbLMkRo/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5751819573657600) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=698163&desc=5)
+
+
 ### Move getContextAttributes() behind a flag
 
 The `getContextAttributes()` function has been supported on
