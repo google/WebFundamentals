@@ -73,7 +73,7 @@ whether the sign-up/sign-in/change password is successful or not.
 For example: 
 
     // Try sign-in with AJAX
-    fetch(/'signin', {
+    fetch('/signin', {
       method: 'POST',
       body: new FormData(e.target),
       credentials: 'include'
