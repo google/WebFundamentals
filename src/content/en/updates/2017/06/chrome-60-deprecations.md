@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 60 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-{# wf_updated_on: 2017-06-12 #}
+{# wf_updated_on: 2017-08-03 #}
 {# wf_published_on: 2017-06-08 #}
 {# wf_tags: deprecations,removals,chrome60 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -66,6 +66,9 @@ back to Chrome 59.
 
 ### Make shadow-piercing descendant combinator behave like descendent combinator
 
+Note: This item was bumped from Chrome 60 to Chrome some time after this article
+was published.
+
 The shadow-piercing descendant combinator (`>>>`), part of
 [CSS Scoping Module Level 1](https://drafts.csswg.org/css-scoping/)
 , was intended to match the children of a particular ancestor element
@@ -80,7 +83,7 @@ including Shadow DOM v1. Rather than break web pages by removing this selector
 from Chromium, we've chosen instead to alias the shadow-piercing descendent
 combinator to the descendant combinator. The original behavior was
 [deprecated in Chrome 45](https://www.chromestatus.com/features/6750456638341120).
-The new behavior is implemented in Chrome 60.
+The new behavior is implemented in Chrome 61.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/HX5Y8Ykr5Ns/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4964279606312960) &#124;
