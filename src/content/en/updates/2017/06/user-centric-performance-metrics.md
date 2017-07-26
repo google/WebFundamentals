@@ -5,6 +5,7 @@ description: Leveraging the Performance Metrics that Most Affect User Experience
 {# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2017-06-01 #}
 {# wf_tags: performance #}
+{# wf_blink_components: Blink>PerformanceAPIs #}
 {# wf_featured_image: /web/updates/images/2017/06/perf-metrics-histogram.png #}
 {# wf_featured_snippet: Leveraging the Performance Metrics that Most Affect User Experience. #}
 
