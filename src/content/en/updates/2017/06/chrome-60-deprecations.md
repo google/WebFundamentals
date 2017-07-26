@@ -66,8 +66,8 @@ back to Chrome 59.
 
 ### Make shadow-piercing descendant combinator behave like descendent combinator
 
-Note: This item was bumped from Chrome 60 to Chrome some time after this article
-was published.
+Note: This item was bumped from Chrome 60 to 61 some time after this article
+was originally published.
 
 The shadow-piercing descendant combinator (`>>>`), part of
 [CSS Scoping Module Level 1](https://drafts.csswg.org/css-scoping/)
