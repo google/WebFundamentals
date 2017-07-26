@@ -93,11 +93,29 @@ The new behavior is implemented in Chrome 61.
 
 ### Deprecate and remove RTCPeerConnection.getStreamById()
 
-Nearly two years ago, `getStreamById()` was [removed from the Web RTC spec](https://github.com/w3c/webrtc-pc/pull/18). Most other browsers have removed already removed this from their implementations. Though this function is believed to be little-used, it's also believed there is some minor interoperability risk with Edge and WebKit-based browsers *other than* Safari where `getSTreamById()` is still supported. Developers needing an alternative implementation can find example code in the Intent to Remove, below.
+Nearly two years ago, `getStreamById()` was [removed from the Web RTC
+spec](https://github.com/w3c/webrtc-pc/pull/18). Most other browsers have
+removed already removed this from their implementations. Though this function is
+believed to be little-used, it's also believed there is some minor
+interoperability risk with Edge and WebKit-based browsers *other than* Safari
+where `getSTreamById()` is still supported. Developers needing an alternative
+implementation can find example code in the Intent to Remove, below.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/m4DNZbLMkRo/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5751819573657600) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=698163&desc=5)
+
+### Deprecate SVGPathElement.getPathSegAtLength
+
+More than two years ago, `getPathSegAtLength()` was [removed from the SVG
+spec](https://github.com/w3c/svgwg/commit/25ad470b300a1274a9a45734811c9a5f809233cf).
+Since there are only a handful of hits for this method in httparchive, it is
+being deprecated in Chrome 60. Removal is expected to be in Chrome 62, which
+will ship some time in early or middle October.
+
+[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Gc1Aw282beo/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5638783282184192) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=669498)
 
 
 ### Move getContextAttributes() behind a flag
