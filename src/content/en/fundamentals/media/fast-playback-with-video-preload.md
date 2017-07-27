@@ -2,17 +2,17 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Preload video and audio for faster playback.
 
-{# wf_published_on: 2017-07-18 #}
-{# wf_updated_on: 2017-07-18 #}
+{# wf_published_on: 2017-07-27 #}
+{# wf_updated_on: 2017-07-27 #}
 
 # Fast Playback with Video Preload {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-Faster playback means more people watching your video. That's a known fact.
-In this article I'll explore different techniques you can use to accelerate
-your media playback by actively preloading resources depending on your use
-case.
+Faster playback start means more people watching your video. That's a known
+fact. In this article I'll explore different techniques you can use to
+accelerate your media playback by actively preloading resources depending on
+your use case.
 
 Note: Unless specified otherwise, this article also applies to the audio element.
 
@@ -80,8 +80,7 @@ HTTP Range requests are not compatible
 Compatible with MSE and segment files
       </td>
       <td>
-Should be used only for audio files or short video clips when fetching full
-resource
+Should be used only for small media files (<5 MB) when fetching full resource
       </td>
     </tr>
     <tr>
@@ -153,26 +152,27 @@ ignore the `preload` attribute. At the time of writing, here are some rules
 applied in Chrome:
 
 - When [Data Saver] is enabled, Chrome forces `preload` value to `none`.
-- In Android 4.3, Chrome forces `preload` value to `none`.
+- In Android 4.3, Chrome forces `preload` value to `none` due to an [Android bug].
 - On a cellular connection (2G, 3G, and 4G), Chrome forces `preload` value to
   `metadata`.
 
 ### Tips
 
-If your website contains plenty of video resources on the same domain, I would
+If your website contains many video resources on the same domain, I would
 recommend you set the `preload` value to `metadata` or define the `poster`
 attribute and set `preload` value to `none`. That way, you would avoid hitting
-the maximum number of HTTP connections per host (6 according to the HTTP 1.1
-spec) which can hang loading of resources. Note that this may also improve page
-speed if videos aren't part of your core user experience.
+the maximum number of HTTP connections to the same domain (6 according to the
+HTTP 1.1 spec) which can hang loading of resources. Note that this may also
+improve page speed if videos aren't part of your core user experience.
 
 ## Link preload
 
 As [covered] in other [articles], [link preload] is a declarative fetch that
 allows you to force the browser to make a request for a resource without
-blocking the `window.onload` event. Resources loaded via `<link rel="preload">`
-are stored locally in the browser, and are effectively inert until they're
-explicitly referenced in the DOM, JavaScript, or CSS.
+blocking the `window.onload` event and while the page is downloading. Resources
+loaded via `<link rel="preload">` are stored locally in the browser, and are
+effectively inert until they're explicitly referenced in the DOM, JavaScript,
+or CSS.
 
 Preload is different from prefetch in that it focuses on current navigation and
 fetches resources with priority based on their type (script, style, font,
@@ -185,10 +185,10 @@ sessions.
 
 ### Preload full video
 
-Here's how to preload a full video  on your website so that when your
-JavaScript asks to fetch video content, it is read from disk cache as the
-resource may have already been cached by the browser. If preload request hasn't
-finished yet, a regular network fetch will happen.
+Here's how to preload a full video on your website so that when your
+JavaScript asks to fetch video content, it is read from cache as the resource
+may have already been cached by the browser. If preload request hasn't finished
+yet, a regular network fetch will happen.
 
 ```
 <link rel="preload" as="video" href="https://cdn.com/small-file.mp4">
@@ -205,7 +205,7 @@ finished yet, a regular network fetch will happen.
 </script>
 ```
 
-Note: I would recommend using this only for audio files or short video clips (< 5MB).
+Note: I would recommend using this only for small media files (< 5MB).
 
 Because the preloaded resource is going to be consumed by a video element in
 the example, the `as` preload link value is `video`. If it were an audio
@@ -265,8 +265,9 @@ rel="preload">` has been fired.
 ```
 
 Warning: For cross-origin resources, make sure your CORS headers are set
-properly because opaque responses retrieved with `fetch(videoFileUrl, { mode:
-'no-cors' })` are not allowed to feed any video or audio element.
+properly. As we can't create an array buffer from an opaque response retrieved
+with `fetch(videoFileUrl, { mode: 'no-cors' })`, we won't be able to feed any
+video or audio element.
 
 ### Support
 
@@ -349,15 +350,20 @@ Player], [JW Player], and [Video.js] are dedicated to handle this for you.
 </script>
 ```
 
-### Battery awareness
+### Considerations
 
-I would suggest you take into account the battery level of user's device before
-thinking about preloading a video in order to preserve battery life when the
-power level is low.
+As you're now in control of the entire buffering media experience, I would suggest you
+consider the device's battery level and the "Data-Saver Mode" user preference
+when thinking about preloading.
 
-Please disable preload or at least preload a lower resolution video when the
+#### Battery awareness
+
+Please take into account the battery level of user's device before thinking
+about preloading a video in order to preserve battery life when the power level
+is low.
+
+Disable preload or at least preload a lower resolution video when the
 device is running out of battery.
-
 
 ```
 if ('getBattery' in navigator) {
@@ -366,22 +372,28 @@ if ('getBattery' in navigator) {
     // If battery is charging or battery level is high enough
     if (battery.charging || battery.level > 0.15) {
       // TODO: Preload the first segment of a video.
-    } else {
-      // TODO: Enable some kind of Power Saving mode.
     }
   });
-} else {
-  // Battery Status API is not supported.
-  // TODO: Preload the first segment of a video.
 }
 ```
+
+#### Detect "Data-Saver"
+
+Use the `Save-Data` client hint request header to deliver fast and light
+applications to users who have opted-in to "data savings" mode in their
+browser. By identifying this request header, your application can customize and
+deliver an optimized user experience to cost- and performance-constrained
+users.
+
+Learn more about it by reading our complete [Delivering Fast and Light
+Applications with Save-Data] article.
 
 
 ### Pre-cache multiple first segments
 
 Now, what if I want to speculatively pre-load some media content without
-knowing which piece of media the user will eventually pick. If user is on a web
-page that contains 10 videos, we probably have enough memory to fetch one
+knowing which piece of media the user will eventually pick. If the user is on a
+web page that contains 10 videos, we probably have enough memory to fetch one
 segment file from each but we should definitely not create 10 hidden video
 elements and 10 `MediaSource` objects and start feeding that data.
 
@@ -518,7 +530,7 @@ function loadFromCacheOrFetch(request) {
       .then(data => {
 
         // Get start position from Range request header.
-        const pos = Number(/^bytes\=(\d+)\-$/g.exec(request.headers.get('range'))[1]);
+        const pos = Number(/^bytes\=(\d+)\-/g.exec(request.headers.get('range'))[1]);
         const options = {
           status: 206,
           statusText: 'Partial Content',
@@ -539,7 +551,7 @@ function loadFromCacheOrFetch(request) {
 ```
 
 It is important to note that I used `response.blob()` to recreate this sliced
-response as this simply gives me a handle to the file while
+response as this simply gives me a handle to the file ([in Chrome]) while
 `response.arrayBuffer()` brings the entire file into renderer memory.
 
 My custom `X-From-Cache` HTTP header can be used to know whether this request
@@ -576,3 +588,6 @@ requests.
 [Google's Shaka Player]: https://github.com/google/shaka-player
 [JW Player]: https://developer.jwplayer.com/
 [Video.js]: http://videojs.com/
+[Android bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=612909
+[Delivering Fast and Light Applications with Save-Data]: https://developers.google.com/web/updates/2016/02/save-data
+[in Chrome]: https://github.com/whatwg/fetch/issues/569
