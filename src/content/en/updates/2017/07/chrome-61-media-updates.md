@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the media updates in Chrome 61.
 
-{# wf_updated_on: 2017-07-21 #}
-{# wf_published_on: 2017-07-21 #}
+{# wf_updated_on: 2017-07-27 #}
+{# wf_published_on: 2017-07-27 #}
 {# wf_tags: news,chrome61,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
 {# wf_featured_snippet: Background video track optimizations and automatic video fullscreen when device is rotated are here! #}
@@ -84,7 +84,7 @@ This magic behaviour only happens when:
 - device is an Android phone (not a tablet)
 - user's screen orientation is set to "Auto-rotate"
 - video size is at least 200x200px
-- video use native controls
+- video uses native controls
 - video is currently playing
 - at least 75% of the video is visible (on-screen)
 - orientation rotates by 90 degrees (not 180 degrees)
