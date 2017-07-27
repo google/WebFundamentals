@@ -230,11 +230,11 @@ The `supportedTypes` parameter tell's Chrome which types of cards to
 filter out, i.e. if a merchant defined `supportedTypes` as `['credit', 'debit']`,
 Chrome would strip out any 'prepaid' cards the user has. 
 
-This does mean that `supportedTypes` **does not guarentee** that the final card
+This means that `supportedTypes` **does not guarentee** that the final card
 you receive will be a supported type. The user can enter details for a new card,
 which could be an unsupported type, and the Payment Request API will allow this.
 The `supportedTypes` option is **just** for filtering out existing cards.
-Merchants will still need to check the card type on their backend.
+Merchants still need to check the card type on their backend.
 
 Chrome version 61 added support for the `supportedTypes` option. In older versions of Chrome
 you would receive the following console warning:
