@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to set up Lighthouse to audit your web apps.
 
-{# wf_updated_on: 2017-03-23 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-09-27 #}
 
 # Lighthouse {: .page-title }
@@ -203,8 +203,9 @@ Lighthouse:
 
 To export a report as a Gist from the CLI version of Lighthouse,
 just manually create a Gist and copy-paste the report's JSON output
-into the Gist. See [Share reports as JSON](#json) for an example of how to
-generate JSON output from the command line tool.
+into the Gist. The Gist filename containing the JSON output must end in
+`.lighthouse.report.json`. See [Share reports as JSON](#json) for an example of
+how to generate JSON output from the command line tool.
 
 To view a report that's been saved as a Gist:
 
