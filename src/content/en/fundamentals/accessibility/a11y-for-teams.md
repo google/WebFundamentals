@@ -156,7 +156,7 @@ efficient for anyone using a keyboard to quickly reach these items.
 ![A design comp with interactive controls numbered.](imgs/tab-order.jpg)
 
 The image above is an example mock which numbers the tab stops in order.
-Creating a mock like this can help by identifying the intended tab order. This
+Creating a mock like this can help you identify the intended tab order. This
 can then be shared with the developers and QA testers to make sure it is
 properly implemented and tested.
 
@@ -170,10 +170,10 @@ label of "Search" to help fill in the missing visual affordance.
 
 Here are a few simple suggestions to follow when designing accessible labels:
 
-- Be succinct - it can be tedious to listen to long descriptions.
+- Be succinct - It can be tedious to listen to long descriptions.
 - Try not to include control type or state - If the control is coded properly
   then a screen reader will announce this automatically.
-- Focus on action verbs - "search" not "magnifying glass".
+- Focus on action verbs - Use "search" not "magnifying glass".
 
 ![A design comp with controls marked with their accessible labels.](imgs/labels.jpg)
 
@@ -203,13 +203,13 @@ notice the issue.
 ## Developer
 
 The developer's role is where focus management and semantics combine to form a
-robust user experience. Below are a few items a developer can keep in mind as
+robust user experience. Below are a few items a developers can keep in mind as
 they're working on their site or application:
 
 - The tab order is logical.
 - Focus is properly managed and visible.
 - Interactive elements have keyboard support.
-- ARIA roles & attributes are applied as needed.
+- ARIA roles and attributes are applied as needed.
 - Elements are properly labeled.
 - Testing is automated.
 
@@ -219,7 +219,7 @@ Native elements like `input`, `button`, and `select` get opted into the tab
 order for free and are automatically focusable with the keyboard. But not all
 elements receive this same behavior! In particular, generic elements like `div`,
 and `span`, are not opted into the tab order. This means if you use a `div` to
-create an interactive control, you'll need to do some additional work to make
+create an interactive control, you'll need to do additional work to make
 it keyboard accessible.
 
 Two options are:
@@ -325,7 +325,7 @@ In addition to checking if your PWA has support for things like [Service
 Worker](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)
 and a [Web App
 Manifest](https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/),
-Lighthouse will also run a series of best practice tests, including for
+Lighthouse will also run a series of best practice tests, including tests for
 accessibility issues.
 
 ## Conclusion
