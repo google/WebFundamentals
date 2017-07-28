@@ -22,7 +22,7 @@ In this episode:
 * [DOM ranges](https://developer.mozilla.org/en/docs/Web/API/Range)
 * [getBoxQuads](https://drafts.csswg.org/cssom-view/#dom-geometryutils-getboxquads)
 * The Determinant 2
-* Drag & drop
+* Drag and drop
 * TypeScript
 
 <a href="http://feeds.feedburner.com/Http203Podcast">
