@@ -24,7 +24,7 @@ played in the background if the video uses [Media Source Extensions (MSE)].
 You can inspect these changes by going to the `chrome://media-internals` page,
 and filter for the "info" property. When the tab containing a playing video
 becomes inactive, you'll see a message like `Selected video track: []`
-indicating that the video track has been disabled. When tab becomes active
+indicating that the video track has been disabled. When the tab becomes active
 again, video track is re-enabled automatically.
 
 <figure>
@@ -36,7 +36,7 @@ again, video track is re-enabled automatically.
   </figcaption>
 </figure>
 
-For those who want to understand what is happening, here's some JavaScript code
+For those who want to understand what is happening, here's a JavaScript code
 snippet that shows you what Chrome is roughly doing behind the scenes.
 
     var video = document.querySelector('video');
@@ -55,7 +55,7 @@ snippet that shows you what Chrome is roughly doing behind the scenes.
 
 You may want to reduce the quality of the video stream when video track is
 disabled. It would be as simple as using the [Page Visibility API] as shown
-above to detect when page is hidden.
+above to detect when a page is hidden.
 
 And here are some restrictions:
 
@@ -71,7 +71,7 @@ If you rotate a device to landscape while a video is playing in the viewport,
 playback will automatically switch to fullscreen mode. Rotating the device to
 portrait puts the video back to windowed mode.
 
-Note that you can implement manually this behaviour yourself (see [Mobile Web Video
+Note that you can implement manually this behaviour yourself. (See the [Mobile Web Video
 Playback] article).
 
 <figure>
