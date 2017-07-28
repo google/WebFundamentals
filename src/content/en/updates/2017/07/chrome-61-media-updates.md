@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the media updates in Chrome 61.
 
-{# wf_updated_on: 2017-07-27 #}
-{# wf_published_on: 2017-07-27 #}
+{# wf_updated_on: 2017-07-28 #}
+{# wf_published_on: 2017-07-28 #}
 {# wf_tags: news,chrome61,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
 {# wf_featured_snippet: Background video track optimizations and automatic video fullscreen when device is rotated are here! #}
@@ -67,9 +67,9 @@ And here are some restrictions:
 
 ## Automatic video fullscreen when device is rotated {: #auto-fullscreen-rotate }
 
-When a video is playing in the viewport, rotating the device to landscape
-orientation will now fullscreen the video. Rotating the device to portrait puts
-the video back to windowed mode as you would expect.
+If you rotate a device to landscape while a video is playing in the viewport,
+playback will automatically switch to fullscreen mode. Rotating the device to
+portrait puts the video back to windowed mode.
 
 Note that you can implement manually this behaviour yourself (see [Mobile Web Video
 Playback] article).
@@ -88,8 +88,8 @@ This magic behaviour only happens when:
 - video is currently playing
 - at least 75% of the video is visible (on-screen)
 - orientation rotates by 90 degrees (not 180 degrees)
-- there is no fullscreen element yet
-- screen is not locked using the Screen Orientation API
+- there is no [fullscreen element] yet
+- screen is not locked using the [Screen Orientation API]
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=713233)
 
@@ -99,3 +99,5 @@ This magic behaviour only happens when:
 [Page Visibility API]: https://www.w3.org/TR/page-visibility/
 [keyframe]: https://en.wikipedia.org/wiki/Key_frame#Video_compression
 [Mobile Web Video Playback]: /web/fundamentals/media/mobile-web-video-playback#fullscreen
+[fullscreen element]: https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenElement
+[Screen Orientation API]: https://w3c.github.io/screen-orientation/
