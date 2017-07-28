@@ -106,8 +106,6 @@ demos, docs and how to get started.
 
 ## And more! {: #more }
 
-* The [Payment Request API](/web/fundamentals/discovery-and-monetization/payment-request/)
-  is now supported on desktop versions of Chrome.
 * The new [Web Budget API](/web/updates/2017/06/budget-api) enables sites with
   the Push Notification permission to send a limited number of push messages
   that trigger background work such as syncing data or dismissing
@@ -115,6 +113,8 @@ demos, docs and how to get started.
 * [`PushSubscription.expirationTime`](https://w3c.github.io/push-api/#dom-pushsubscription-expirationtime)
   is now available, notifying sites when and if a subscription will expire.
 
+Note: The [Payment Request API](/web/fundamentals/discovery-and-monetization/payment-request/)
+was pushed to Chrome 61.
 
 These are just a few of the changes in Chrome 60 for developers.  
 
