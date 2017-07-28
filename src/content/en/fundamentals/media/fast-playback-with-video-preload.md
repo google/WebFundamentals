@@ -335,16 +335,17 @@ Player], [JW Player], and [Video.js] are dedicated to handle this for you.
     var bufferedSeconds = video.buffered.end(0) - video.buffered.start(0);
     console.log(bufferedSeconds + ' seconds of video are ready to play!');
 
-    // Fetch the rest of the video when user starts playing video.
-    video.addEventListener('playing', fetchRemainder, { once: true });
+    // Fetch the next segment of video when user starts playing the video.
+    video.addEventListener('playing', fetchNextSegment, { once: true });
   }
 
-  function fetchRemainder() {
+  function fetchNextSegment() {
     fetch('file.webm', { headers: { range: 'bytes=567140-1196488' } })
     .then(response => response.arrayBuffer())
     .then(data => {
       const sourceBuffer = mediaSource.sourceBuffers[0];
       sourceBuffer.appendBuffer(data);
+      // TODO: Fetch further segment and append it.
     });
   }
 </script>
@@ -493,8 +494,9 @@ function onPlayButtonClick(videoFileUrl) {
 ```
 
 Warning: For cross-origin resources, make sure your CORS headers are set
-properly as opaque responses retrieved with `fetch(videoFileUrl, { mode:
-'no-cors' })` are not allowed to feed any video or audio element.
+properly. As we can't create an array buffer from an opaque response retrieved
+with `fetch(videoFileUrl, { mode: 'no-cors' })`, we won't be able to feed any
+video or audio element.
 
 ### Create Range responses with a Service Worker
 
