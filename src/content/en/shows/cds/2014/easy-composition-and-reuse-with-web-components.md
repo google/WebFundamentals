@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 
-{# wf_updated_on: 2015-02-23 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: 6vcQlD-jadk #}
 
-# Easy Composition and Resuse with Web Components {: .page-title }
+# Easy Composition and Reuse with Web Components {: .page-title }
 
 
 <div class="video-wrapper">

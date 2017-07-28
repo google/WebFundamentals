@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process.
 
 {# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2016-08-24 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
 # Preventing Mixed Content {: .page-title }
@@ -137,7 +137,7 @@ In this case, you should consider one of the following options:
 
 #### Step 2
 
-Change the URl from `http://` to `https://`, save the source file, and redeploy the updated file if necessary.
+Change the URL from `http://` to `https://`, save the source file, and redeploy the updated file if necessary.
 
 #### Step 3
 
@@ -180,7 +180,7 @@ blocking mixed content.
 
 You can enable these features for a page by including the
 `Content-Security-Policy` or `Content-Security-Policy-Report-Only` header in the
-response sent from your server. Additionallyyou can set `Content-Security-Policy` (but
+response sent from your server. Additionally you can set `Content-Security-Policy` (but
 **not** `Content-Security-Policy-Report-Only`) using a `<meta>` tag
 in the `<head>` section of your page. See examples in the following
 sections.

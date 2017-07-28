@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab you'll how to add push notifications to your web app.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-05-16T20:50:03Z #}
+{# wf_updated_on: 2017-07-24T20:50:03Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -153,7 +153,7 @@ const applicationServerPublicKey = '<Your Public Key>';
 Note: You should never put your private key in your web app!
 
 
-## Initialise State
+## Initialize State
 
 
 

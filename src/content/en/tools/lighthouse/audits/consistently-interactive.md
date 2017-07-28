@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Consistently Interactive" Lighthouse audit.
 
-{# wf_updated_on: 2017-06-23 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2017-06-23 #}
 
 # Consistently Interactive {: .page-title }
@@ -12,26 +12,35 @@ description: Reference documentation for the "Consistently Interactive" Lighthou
 The Consistently Interactive metric measures when a page is *fully* interactive:
 
 * *Everything* shown on the screen is interactive.
-* The page strictly meets the R guideline of the RAIL performance model:
-  *everything* on the page responds to user input within 100ms. See [Response:
-  respond in under 100ms][R].
+* The page strictly meets the I guideline of the RAIL performance model:
+  the page yields control back to the main thread at least once every 50ms.
+  See [Idle: maximize idle time][I]. 
 
-[R]: /web/fundamentals/performance/rail#response
+[I]: /web/fundamentals/performance/rail#idle
 
 See also [First Interactive](first-interactive).
 
 ## How to pass the audit {: #how }
 
-There are two general strategies for improving load time:
+To improve your Consistently Interactive score:
 
 * Minimize the number of required or "critical" resources that must be
   downloaded or executed before the page can load. See [Critical Rendering
   Path][CRP].
 * Minimize the size of each critical resource. See [Optimizing Content
   Efficiency][OCE].
+* Maximize idle time so that your JavaScript spends no more than 50ms at
+  a time executing tasks in the main thread. See [Optimizing JavaScript
+  Execution][OJE].
+  
+Note: Maximizing idle time also indirectly improves [Response][R] time.
+The more idle time there is, the more likely that the page will be able
+to respond to user input in the target time of 100ms or less.
 
 [CRP]: /web/fundamentals/performance/critical-rendering-path
 [OCE]: /web/fundamentals/performance/optimizing-content-efficiency
+[OJE]: /web/fundamentals/performance/rendering/optimize-javascript-execution
+[R]: /web/fundamentals/performance/rail#response
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 

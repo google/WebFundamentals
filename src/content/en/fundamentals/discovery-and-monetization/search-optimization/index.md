@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Websites are visited not only by humans, but also by search engine web crawlers. Learn how to improve search accuracy and ranking for your website.
 
-{# wf_updated_on: 2015-10-05 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2014-08-30 #}
 
 # Search Optimization {: .page-title }
@@ -163,7 +163,7 @@ This section also explains how to restrict certain pages from appearing in searc
 
 Before you learn how to control search results, you need to understand how search engines interact with your web page. From your site's point of view, there are roughly two things search engines do to your site: crawling and indexing.  
 
-**Crawling** is when a search engine bot fetches your web page to analyse its content. The content is stored in the search engine's database and can be used to populate search result details, rank pages, and discover new pages by following links.  
+**Crawling** is when a search engine bot fetches your web page to analyze its content. The content is stored in the search engine's database and can be used to populate search result details, rank pages, and discover new pages by following links.  
 
 **Indexing** is when a search engine stores a website's URL and any associated information in its database so it is ready to serve as a search result. 
 

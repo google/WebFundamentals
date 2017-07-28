@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Estimated Input Latency" Lighthouse audit.
 
-{# wf_updated_on: 2016-10-05 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-10-05 #}
 
 # Estimated Input Latency  {: .page-title }
@@ -55,7 +55,7 @@ assumes that your app needs 50ms to completely respond to the user's input
 pixels to the screen). If your main thread is unavailable for 50ms or more,
 that does not leave enough time for your app to complete the response.
 
-There is a 90% probabililty a user would encounter input latency of the
+There is a 90% probability a user would encounter input latency of the
 amount that Lighthouse reports, or less. 10% of users can expect additional
 latency.
 

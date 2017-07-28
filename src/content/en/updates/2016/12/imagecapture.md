@@ -14,7 +14,8 @@ description: Image Capture is an API to control camera settings and take photos.
 {% include "web/_shared/contributors/samdutton.html" %}
 
 Image Capture is an API to capture still images and configure camera hardware
-settings. This API is available in Chrome 59 on Android and desktop.
+settings. This API is available in Chrome 59 on Android and desktop. We've also
+published an [ImageCapture polyfill library](https://github.com/GoogleChrome/imagecapture-polyfill).
 
 The API enables control over camera features such as zoom, brightness,
 contrast, ISO and white balance. Best of all, Image Capture allows you to access

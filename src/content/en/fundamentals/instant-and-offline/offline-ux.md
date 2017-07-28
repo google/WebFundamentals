@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A guide to designing web experiences for slow networks and offline.
 
-{# wf_updated_on: 2017-05-05 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-11-10 #}
 
 # Offline UX Considerations {: .page-title }
@@ -112,7 +112,7 @@ Once example of this would be
 <div class="clearfix"></div>
 
 You may also show the last time the app was updated at all times in a prominent
-space. This would also be useful for a currency convertor app, for example.
+space. This would also be useful for a currency converter app, for example.
 
 <figure>
   <img class="attempt-left" 
@@ -257,7 +257,7 @@ can see the true cost of a file.
 
 ### Help prevent hacked experiences 
 
-Often users hack an experience without realising they are doing it. For example
+Often users hack an experience without realizing they are doing it. For example
 before cloud sharing apps like Google Drive, it was common for users save large
 files and attach them to emails so they could carry on editing from a different
 device. It is important not to be pulled into their hacked experience but rather
@@ -364,7 +364,7 @@ status. Think of the action you are trying to convey rather than presenting the
 user with an abstract concept. For example save or download data would be action
 based.
 
-<img src="images/download-icons-exampels.png" alt="Various icon examples that convey offline">
+<img src="images/download-icons-examples.png" alt="Various icon examples that convey offline">
 
 Offline can mean a number of things depending on the context, such as download, 
 export, pin etc.. For more inspiration checkout the
@@ -442,6 +442,6 @@ When designing for unstable network connections, use these:
 * If the app is data-heavy, educate users about how they can download for
   offline use.
 * Make experiences transferable between devices.
-* Utilise language, icons, imagery, typography and color to express ideas to the 
+* Utilize language, icons, imagery, typography and color to express ideas to the 
   user collectively.
 * Provide reassurance and feedback to help the user.

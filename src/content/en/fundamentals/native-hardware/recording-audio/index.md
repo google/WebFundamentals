@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers can get access to the user's microphone.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-08-23 #}
 {# wf_blink_components: Blink>GetUserMedia #}
 
@@ -148,7 +148,7 @@ The easiest way to save the data from the microphone is to use the
 `MediaRecorder` API.
 
 The `MediaRecorder` API will take the stream created by `getUserMedia` and then
-progressively save the data that is on the stream in to you prefered
+progressively save the data that is on the stream in to you preferred
 destination.
 
 <pre class="prettyprint">

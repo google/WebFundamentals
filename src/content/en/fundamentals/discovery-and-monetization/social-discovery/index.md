@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available.
 
-{# wf_updated_on: 2014-11-08 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2014-10-07 #}
 
 # Social Discovery {: .page-title }
@@ -91,7 +91,7 @@ You can specify the type of item by using the `itemtype` attribute along with th
 of content on your web page. You should be able to find one that is relevant
 in [this page](https://schema.org/docs/full.html).
 
-### Add `itemprop` to describe each item using schema.org vocaburary
+### Add `itemprop` to describe each item using schema.org vocabulary
 `itemprop` defines properties for `itemtype` in the scope. For providing
 metadata to social sites, typical `itemprop` values are `name`, `description`,
 and `image`.
