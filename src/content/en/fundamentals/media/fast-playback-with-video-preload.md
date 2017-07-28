@@ -223,7 +223,7 @@ MSE to feed the video element with those once the `onload` event from `<link
 rel="preload">` has been fired.
 
 ```
-<link rel="preload" as="video" href="https://cdn.com/file_1.webm"
+<link rel="preload" as="fetch" href="https://cdn.com/file_1.webm"
     onload="preloadFinished()" onerror="preloadFailed()">
 
 <video id="video" controls></video>
@@ -281,8 +281,8 @@ availability with the snippet below.
 <video id="video" controls></video>
 
 <script>
-  if (!preloadVideoSupported()) {
-    // TODO: Fetch video from the network and load it.
+  if (!preloadFullVideoSupported()) {
+    // TODO: Fetch full video from the network and load it.
   }
 
   function preloadFinished() {
@@ -293,12 +293,23 @@ availability with the snippet below.
     // TODO: Show "Video is not available" message to user.
   }
 
-  function preloadVideoSupported() {
+  function preloadFullVideoSupported() {
     const link = document.createElement('link');
     link.as = 'video';
     return (link.as === 'video');
   }
 </script>
+```
+
+And here's the function to detect if preloading the first segment of a video is
+supported. Note that I use `fetch` not `video` anymore.
+
+```
+function preloadFirstSegmentSupported() {
+  const link = document.createElement('link');
+  link.as = 'fetch';
+  return (link.as === 'fetch');
+}
 ```
 
 ## Manual Buffering
