@@ -218,28 +218,20 @@ rel="preload">` and use it with Media Source Extensions. If you're not familiar
 with the MSE Javascript API, please read [MSE basics].
 
 For the sake of simplicity, let's assume the entire video has been split into
-smaller files like "file_1.webm", "file_2.webm", "file_3.webm", etc. We'll use
-MSE to feed the video element with those once the `onload` event from `<link
-rel="preload">` has been fired.
+smaller files like "file_1.webm", "file_2.webm", "file_3.webm", etc.
 
 ```
-<link rel="preload" as="fetch" href="https://cdn.com/file_1.webm"
-    onload="preloadFinished()" onerror="preloadFailed()">
+<link rel="preload" as="fetch" href="https://cdn.com/file_1.webm">
 
 <video id="video" controls></video>
 
 <script>
-  // This function is automatically executed when the first segment of video is
-  // preloaded successfully. We may call it explicitly as well later on.
-  function preloadFinished() {
-    const mediaSource = new MediaSource();
-    video.src = URL.createObjectURL(mediaSource);
-    mediaSource.addEventListener('sourceopen', sourceOpen);
-  }
+  const mediaSource = new MediaSource();
+  video.src = URL.createObjectURL(mediaSource);
+  mediaSource.addEventListener('sourceopen', sourceOpen, { once: true });
 
-  function sourceOpen(event) {
+  function sourceOpen() {
     URL.revokeObjectURL(video.src);
-    const mediaSource = event.target;
     const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp9"');
 
     // If video is preloaded already, fetch will return immediately a response
@@ -256,11 +248,6 @@ rel="preload">` has been fired.
       // TODO: Show "Video is not available" message to user.
     });
   }
-
-  // This function is called if the first segment of video is not available.
-  function preloadFailed() {
-    // TODO: Show "Video is not available" message to user.
-  }
 </script>
 ```
 
@@ -272,39 +259,15 @@ video or audio element.
 ### Support
 
 Link preload is not supported in every browser yet. You may want to detect its
-availability with the snippet below.
+availability with the snippets below to adjust your performance metrics.
 
 ```
-<link rel="preload" as="video" href="https://cdn.com/file_1.webm"
-    onload="preloadFinished()" onerror="preloadFailed()">
+function preloadFullVideoSupported() {
+  const link = document.createElement('link');
+  link.as = 'video';
+  return (link.as === 'video');
+}
 
-<video id="video" controls></video>
-
-<script>
-  if (!preloadFullVideoSupported()) {
-    // TODO: Fetch full video from the network and load it.
-  }
-
-  function preloadFinished() {
-    // TODO: Load video.
-  }
-
-  function preloadFailed() {
-    // TODO: Show "Video is not available" message to user.
-  }
-
-  function preloadFullVideoSupported() {
-    const link = document.createElement('link');
-    link.as = 'video';
-    return (link.as === 'video');
-  }
-</script>
-```
-
-And here's the function to detect if preloading the first segment of a video is
-supported. Note that I use `fetch` not `video` anymore.
-
-```
 function preloadFirstSegmentSupported() {
   const link = document.createElement('link');
   link.as = 'fetch';
