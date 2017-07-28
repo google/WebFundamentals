@@ -227,7 +227,7 @@ through a notification over an insecure connection. Web push requires a secure
 origin, so this change will align non-push notifications with push
 notifications. This change is part of our broader effort to
 [remove powerful features from unsecure origins](https://bugs.chromium.org/p/chromium/issues/detail?id=520765).
-Removal is expected in Chrome 61.
+Removal is expected in Chrome 62.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/IVgkxkRNtMo/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5759967025954816) &#124;
