@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Image Capture is an API to control camera settings and take photos.
 
-{# wf_updated_on: 2017-05-25 #}
+{# wf_updated_on: 2017-07-29 #}
 {# wf_published_on: 2016-12-05 #}
 {# wf_tags: canvas,chrome56,media,webrtc #}
 {# wf_featured_image: /web/updates/images/2016/12/imagecapture/featured.jpg #}
@@ -12,6 +12,7 @@ description: Image Capture is an API to control camera settings and take photos.
 
 {% include "web/_shared/contributors/mcasas.html" %}
 {% include "web/_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 Image Capture is an API to capture still images and configure camera hardware
 settings. This API is available in Chrome 59 on Android and desktop. We've also
@@ -122,10 +123,13 @@ streaming, so make sure there is a delay between calling these methods and
 
 "Non-Live" camera capabilities and settings are manipulated via the
 `ImageCapture` object: `ImageCapture.getPhotoCapabilities()` returns a
-[`PhotoCapabilities`](https://w3c.github.io/mediacapture-image/##photocapabilities-section)
-object that provides access to non live available camera options. The photo
-resolution, red eye reduction and flash mode (except torch) belong this section,
-for example:
+[`PhotoCapabilities`](https://w3c.github.io/mediacapture-image/#photocapabilities)
+object that provides access to non live available camera options.
+Correspondingly, starting in Chrome 61, `ImageCapture.getPhotoSettings()`
+returns a
+[`PhotoSettings`](https://w3c.github.io/mediacapture-image/#dictdef-photosettings)
+with the concrete current settings. The photo resolution, red eye reduction and
+flash mode (except torch) belong to this section, for example:
 
     var widthSlider = document.querySelector('input[type=range]');
     // ...
@@ -134,8 +138,12 @@ for example:
         widthSlider.min = photoCapabilities.imageWidth.min;
         widthSlider.max = photoCapabilities.imageWidth.max;
         widthSlider.step = photoCapabilities.imageWidth.step;
+        return imageCapture.getPhotoSettings();
       })
-      .catch(error => console.error('getPhotoCapabilities() error:', error));
+      .then(function(photoSettings) {
+        widthSlider.value = photoSettings.imageWidth;
+      })
+      .catch(error => console.error('Error getting camera capabilities and settings:', error));
 
 
 ### Configuring
