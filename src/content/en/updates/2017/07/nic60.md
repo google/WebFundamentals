@@ -32,7 +32,7 @@ Note: Want the full list of changes? Check out the
 
 <div class="clearfix"></div>
 
-I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 59! 
+I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 60! 
 
 <div class="clearfix"></div>
 
