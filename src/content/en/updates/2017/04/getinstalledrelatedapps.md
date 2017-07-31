@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Is your native app already installed? getInstalledRelatedApps is your friend.
 
 {# wf_published_on: 2017-04-28 #}
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2017-07-31 #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 {# wf_tags: progressive-web-apps,chrome59 #}
 {# wf_featured_snippet: Is your native app already installed? getInstalledRelatedApps is your friend. #}
