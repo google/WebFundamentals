@@ -112,6 +112,9 @@ demos, docs and how to get started.
   notifications, without the need to show a user-visible notification.
 * [`PushSubscription.expirationTime`](https://w3c.github.io/push-api/#dom-pushsubscription-expirationtime)
   is now available, notifying sites when and if a subscription will expire.
+* [Object rest & spread](/web/updates/2017/06/object-rest-spread) properties 
+  are now supported, making it simpler to merge and shallow-clone objects and
+  implement various immutable object patterns. 
 
 Note: The [Payment Request API](/web/fundamentals/discovery-and-monetization/payment-request/)
 was pushed to Chrome 61.
