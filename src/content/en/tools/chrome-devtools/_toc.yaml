@@ -13,18 +13,23 @@ toc:
       path: /web/tools/chrome-devtools/shortcuts
     - title: UI Reference
       path: /web/tools/chrome-devtools/ui
-    - title: Inspect and Edit Pages and Styles
+    - title: Inspect and Edit Pages
       section:
       - title: Overview
         path: /web/tools/chrome-devtools/inspect-styles/
-      - title: Get Started with Viewing and Changing CSS
-        path: /web/tools/chrome-devtools/css/
-      - title: Edit Styles
-        path: /web/tools/chrome-devtools/inspect-styles/edit-styles
       - title: Inspect Animations
         path: /web/tools/chrome-devtools/inspect-styles/animations
       - title: Edit the DOM
         path: /web/tools/chrome-devtools/inspect-styles/edit-dom
+      - title: Edit Styles
+        path: /web/tools/chrome-devtools/inspect-styles/edit-styles
+        status: deprecated
+    - title: View and Change CSS
+      section:
+      - title: Get Started with Viewing and Changing CSS
+        path: /web/tools/chrome-devtools/css/
+      - title: CSS Reference
+        path: /web/tools/chrome-devtools/css/reference
     - title: Inspect and Manage Storage, Caches, and Resources
       section:
       - title: Inspect and Manage Storage, Databases, and Caches
