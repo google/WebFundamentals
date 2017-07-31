@@ -26,7 +26,7 @@ which are lower resolution than that available for still images.
 An `ImageCapture` object is constructed with a `MediaStreamTrack` as source. The
 API has then two capture methods `takePhoto()` and `grabFrame()` and ways to
 retrieve the capabilities and settings of the camera, and to change those
-setings.
+settings.
 
 ## Construction
 

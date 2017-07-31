@@ -230,7 +230,7 @@ If the user has installed the web app using the new Web APK functionality,
 it is possible to determine if your web app is installed. If you know the
 package name of your Web APK then you can use the
 `context.getPackageManager().getApplicationInfo()` API to determine if it
-is installed. Please note that this is experiemental.
+is installed. Please note that this is experimental.
 
 ### Not Working?
 
