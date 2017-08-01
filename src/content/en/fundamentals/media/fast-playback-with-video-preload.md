@@ -10,7 +10,7 @@ description: Preload video and audio for faster playback.
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 Faster playback start means more people watching your video. That's a known
-fact. In this article I'll explore different techniques you can use to
+fact. In this article I'll explore techniques you can use to
 accelerate your media playback by actively preloading resources depending on
 your use case.
 
@@ -47,21 +47,21 @@ But...
 <a href="#video_preload_attribute">Video preload attribute</a>
       </td>
       <td rowspan=3>
-Simple to use for a unique file hosted on a web server
+Simple to use for a unique file hosted on a web server.
       </td>
       <td>
-Browser may completely ignore the attribute
+Browsers may completely ignore the attribute.
       </td>
     <tr>
       <td>
-Resource fetching starts when HTML document has been completely loaded and
-parsed
+Resource fetching starts when the HTML document has been completely loaded and
+parsed.
       </td>
     </tr>
     <tr>
       <td>
-MSE ignores preload attribute on media element because app is responsible for
-providing media to MSE
+MSE ignores the preload attribute on media elements because the app is responsible for
+providing media to MSE.
       </td>
     </tr>
     <tr>
@@ -70,17 +70,17 @@ providing media to MSE
       </td>
       <td>
 Forces the browser to make a request for a video resource without blocking
-the document's <code>onload</code> event
+the document's <code>onload</code> event.
       </td>
       <td>
-HTTP Range requests are not compatible
+HTTP Range requests are not compatible.
       </td>
     <tr>
       <td>
-Compatible with MSE and segment files
+Compatible with MSE and file segments.
       </td>
       <td>
-Should be used only for small media files (<5 MB) when fetching full resource
+Should be used only for small media files (<5 MB) when fetching full resources.
       </td>
     </tr>
     <tr>
@@ -91,7 +91,7 @@ Should be used only for small media files (<5 MB) when fetching full resource
 Full control
       </td>
       <td>
-Complex error handling is website's responsibility
+Complex error handling is the website's responsibility.
       </td>
     </tr>
   </tbody>
@@ -104,18 +104,18 @@ use the video `preload` attribute to provide a hint to the browser as to [how
 much information or content to preload]. This means [Media Source Extensions
 (MSE)] is not compatible with `preload`.
 
-Resource fetching will start only when initial HTML document has been
-completely loaded and parsed (eg. `DOMContentLoaded` event) while the very
-different `window.onload` event will be fired when resource has actually been
-fetched.
+Resource fetching will start only when the initial HTML document has been
+completely loaded and parsed (e.g. the `DOMContentLoaded` event has fired)
+while the very different `window.onload` event will be fired when resource
+has actually been fetched.
 
 <figure>
   <img src="/web/fundamentals/media/images/video-preload/video-preload.svg">
 </figure>
 
-Setting `preload` value to `metadata` indicates that the user is not expected
-to need the video, but that fetching its metadata (dimensions, track list,
-duration, and so on) is desirable.
+Setting the `preload` attribute to `metadata` indicates that the user is not
+expected to need the video, but that fetching its metadata (dimensions, track
+list, duration, and so on) is desirable.
 
 ```
 <video id="video" preload="metadata" src="file.mp4" controls></video>
@@ -130,9 +130,9 @@ duration, and so on) is desirable.
 </script>
 ```
 
-Setting `preload` value to `auto` indicates that the browser may cache enough
-such that the playback to end would be possible without requiring a stop for
-further buffering.
+Setting the `preload` attribute to `auto` indicates that the browser may 
+cache enough such that the playback to end would be possible without 
+requiring a stop for further buffering.
 
 ```
 <video id="video" preload="auto" src="file.mp4" controls></video>
@@ -147,20 +147,20 @@ further buffering.
 </script>
 ```
 
-There are some caveats though. As this is just a hint, browser may completely
+There are some caveats though. As this is just a hint, the browser may completely
 ignore the `preload` attribute. At the time of writing, here are some rules
 applied in Chrome:
 
-- When [Data Saver] is enabled, Chrome forces `preload` value to `none`.
-- In Android 4.3, Chrome forces `preload` value to `none` due to an [Android bug].
-- On a cellular connection (2G, 3G, and 4G), Chrome forces `preload` value to
+- When [Data Saver] is enabled, Chrome forces the `preload` value to `none`.
+- In Android 4.3, Chrome forces the `preload` value to `none` due to an [Android bug].
+- On a cellular connection (2G, 3G, and 4G), Chrome forces the `preload` value to
   `metadata`.
 
 ### Tips
 
 If your website contains many video resources on the same domain, I would
 recommend you set the `preload` value to `metadata` or define the `poster`
-attribute and set `preload` value to `none`. That way, you would avoid hitting
+attribute and set `preload` to `none`. That way, you would avoid hitting
 the maximum number of HTTP connections to the same domain (6 according to the
 HTTP 1.1 spec) which can hang loading of resources. Note that this may also
 improve page speed if videos aren't part of your core user experience.
@@ -187,8 +187,8 @@ sessions.
 
 Here's how to preload a full video on your website so that when your
 JavaScript asks to fetch video content, it is read from cache as the resource
-may have already been cached by the browser. If preload request hasn't finished
-yet, a regular network fetch will happen.
+may have already been cached by the browser. If the preload request hasn't
+finished yet, a regular network fetch will happen.
 
 ```
 <link rel="preload" as="video" href="https://cdn.com/small-file.mp4">
@@ -211,7 +211,7 @@ Because the preloaded resource is going to be consumed by a video element in
 the example, the `as` preload link value is `video`. If it were an audio
 element, it would be `as="audio"`.
 
-### Preload first segment
+### Preload the first segment
 
 The example below shows how to preload the first segment of a video with `<link
 rel="preload">` and use it with Media Source Extensions. If you're not familiar
@@ -275,12 +275,12 @@ function preloadFirstSegmentSupported() {
 }
 ```
 
-## Manual Buffering
+## Manual buffering
 
 Before we dive into the [Cache API] and service workers, let's see how to
 manually buffer a video with MSE. The example below assumes that your web
 server supports HTTP Range requests but this would be pretty similar with
-segment files. Note that some middleware libraries such as [Google's Shaka
+file segments. Note that some middleware libraries such as [Google's Shaka
 Player], [JW Player], and [Video.js] are dedicated to handle this for you.
 
 ```
@@ -327,14 +327,14 @@ Player], [JW Player], and [Video.js] are dedicated to handle this for you.
 
 ### Considerations
 
-As you're now in control of the entire buffering media experience, I would suggest you
+As you're now in control of the entire media buffering experience, I suggest you
 consider the device's battery level and the "Data-Saver Mode" user preference
 when thinking about preloading.
 
 #### Battery awareness
 
-Please take into account the battery level of user's device before thinking
-about preloading a video in order to preserve battery life when the power level
+Please take into account the battery level of users' devices before thinking
+about preloading a video. This will preserve battery life when the power level
 is low.
 
 Disable preload or at least preload a lower resolution video when the
@@ -360,19 +360,19 @@ browser. By identifying this request header, your application can customize and
 deliver an optimized user experience to cost- and performance-constrained
 users.
 
-Learn more about it by reading our complete [Delivering Fast and Light
+Learn more by reading our complete [Delivering Fast and Light
 Applications with Save-Data] article.
 
 
 ### Pre-cache multiple first segments
 
-Now, what if I want to speculatively pre-load some media content without
+Now what if I want to speculatively pre-load some media content without
 knowing which piece of media the user will eventually pick. If the user is on a
 web page that contains 10 videos, we probably have enough memory to fetch one
 segment file from each but we should definitely not create 10 hidden video
 elements and 10 `MediaSource` objects and start feeding that data.
 
-The 2-parts example below shows you how to pre-cache multiple first segments of
+The two part example below shows you how to pre-cache multiple first segments of
 video using the powerful and easy-to-use Cache API. Note that something similar
 can be achieved with IndexedDB as well. We're not using service workers yet as
 the Cache API is also accessible from the Window object.
@@ -410,13 +410,13 @@ function fetchAndCache(videoFileUrl, cache) {
 }
 ```
 
-Note that if were to use HTTP Range request, I would have to recreate manually
+Note that if I were to use HTTP Range requests, I would have to manually recreate
 a `Response` object as the Cache API doesn't support Range responses [yet]. Be
 mindful that calling `networkResponse.arrayBuffer()` fetches the whole content
-of the response at once into renderer memory, hence why you may want to use
+of the response at once into renderer memory, which is why you may want to use
 small ranges.
 
-For reference, here's the modified part of the code above to save HTTP Range
+For reference, I've modified part of the example above to save HTTP Range
 requests to the video pre-cache.
 
 ```
@@ -433,10 +433,10 @@ requests to the video pre-cache.
 
 #### Play video
 
-When user clicks a play button, we'll fetch first segment of video available in
-the Cache API so that playback starts immediately if available. Otherwise,
-we'll simply fetch it from the network. Keep in mind that browser and users may
-decide to clear the [Cache].
+When a user clicks a play button, we'll fetch the first segment of video 
+available in the Cache API so that playback starts immediately if available.
+Otherwise, we'll simply fetch it from the network. Keep in mind that browsers
+and users may decide to clear the [Cache].
 
 As seen before, we use MSE to feed that first segment of video to the video
 element.
@@ -472,10 +472,10 @@ properly. As we can't create an array buffer from an opaque response retrieved
 with `fetch(videoFileUrl, { mode: 'no-cors' })`, we won't be able to feed any
 video or audio element.
 
-### Create Range responses with a Service Worker
+### Create Range responses with a service worker
 
-Now what if you have fetched an entire video file and saved it previously in
-the Cache API. When browser sends a HTTP Range request, you certainly don't
+Now what if you have fetched an entire video file and saved it in
+the Cache API. When the browser sends an HTTP Range request, you certainly don't
 want to bring the entire video into renderer memory as the Cache API doesn't
 support Range responses yet.
 
