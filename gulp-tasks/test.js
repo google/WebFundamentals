@@ -322,10 +322,9 @@ function getFiles() {
     });
   } else {
     gutil.log(' ', 'Searching for changed files');
-    // --diff-filter set to ignore deleted files as this will cause error on `testFile()`
-    let cmd = 'git --no-pager diff --name-only --diff-filter=ACMRTUXB ';
+    let cmd = 'git --no-pager diff --name-only ';
     if (IS_TRAVIS) {
-      cmd += 'FETCH_HEAD $(git merge-base FETCH_HEAD master)';
+      cmd += '$(git merge-base FETCH_HEAD master) FETCH_HEAD';
     } else {
       cmd += '$(git merge-base master HEAD)';
     }
