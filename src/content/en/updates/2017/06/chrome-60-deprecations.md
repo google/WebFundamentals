@@ -93,12 +93,12 @@ The new behavior is implemented in Chrome 61.
 
 ### Deprecate and remove RTCPeerConnection.getStreamById()
 
-Nearly two years ago, `getStreamById()` was [removed from the Web RTC
+Nearly two years ago, `getStreamById()` was [removed from the WebRTC
 spec](https://github.com/w3c/webrtc-pc/pull/18). Most other browsers have
 removed already removed this from their implementations. Though this function is
 believed to be little-used, it's also believed there is some minor
 interoperability risk with Edge and WebKit-based browsers *other than* Safari
-where `getSTreamById()` is still supported. Developers needing an alternative
+where `getStreamById()` is still supported. Developers needing an alternative
 implementation can find example code in the Intent to Remove, below.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/m4DNZbLMkRo/discussion) &#124;
