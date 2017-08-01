@@ -241,7 +241,7 @@ you would receive the following console warning:
 
 `Cannot yet distinguish credit, debit, and prepaid cards.`
 
-It's safe to use this option, the only difference is that some cards wouldn't be filtered
+It's safe to use this option. The only difference is that some cards wouldn't be filtered
 automatically for the user.
 
 ```
