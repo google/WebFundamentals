@@ -4,9 +4,9 @@ description: Custom elements, matrices, TypeScript, and omg Paul is leaving
 
 {# wf_updated_on: 2017-07-28 #}
 {# wf_published_on: 2017-07-28 #}
-{# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-8.mp3 #}
+{# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-8.0.1.mp3 #}
 {# wf_podcast_duration: 01:06:55 #}
-{# wf_podcast_fileSize: 70774609 #}
+{# wf_podcast_fileSize: 79889567 #}
 {# wf_podcast_subtitle: Custom elements, matrices, TypeScript, and omg Paul is leaving #}
 {# wf_featured_image: /web/shows/http203/podcast/images/http203-episode-5-art.jpg #}
 
@@ -30,6 +30,6 @@ In this episode:
   Subscribe
 </a>
 
-<audio src="https://storage.googleapis.com/http-203-podcast/episode-8.mp3" controls preload="none">
+<audio src="https://storage.googleapis.com/http-203-podcast/episode-8.0.1.mp3" controls preload="none">
 
 
