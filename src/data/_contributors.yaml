@@ -22,6 +22,18 @@
 #   country: US               # Optional - ISO Country Code (not shown)
 #   email: test@example.com   # Optional (not shown)
 
+graynorton:
+  name:
+    given: Gray
+    family: Norton
+  org:
+    name: Google
+    unit: Software engineering
+  country: US
+  role:
+    - author
+  email: graynorton@google.com
+
 jbnicolai:
   name:
     given: Joshua
