@@ -535,7 +535,7 @@ Here's a description of each of the UI elements of the **Color Picker**:
 1. **Color Palette**. Click one of these squares to change the color to
    that square.
 1. **Hue**.
-1. **Opactiy**.
+1. **Opacity**.
 1. **Display Value Switcher**. Toggle between the RGBA, HSLA, and Hex
    representations of the current color.
 1. **Color Palette Switcher**. Toggle between the [Material Design
