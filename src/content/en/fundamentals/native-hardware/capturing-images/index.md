@@ -27,7 +27,7 @@ use that. For just displaying the image this works everywhere - create an `img` 
 `src` and you're done.
 
 It's more complicated than that, though, if you want to manipulate the image in any way.
-[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) will prevent you from
+[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) prevents you from
 accessing the actual pixels unless the server sets the appropriate headers and you
 [mark the image as crossorigin](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image)
 ; the only practical way around that is to run a proxy server.
@@ -70,7 +70,7 @@ Adding the `capture` attribute without a value let's the browser decide which ca
 the `"user"` and `"environment"` values tell the browser to prefer the front and rear cameras,
 repectively.
 
-The `capture` attribute will work on Android and iOS, but be ignored on desktop. Be aware, however,
+The `capture` attribute works on Android and iOS, but is ignored on desktop. Be aware, however,
 that on Android this means that the user will no longer have the option of choosing an existing
 picture. The system camera app will be started directly, instead.
 
@@ -104,7 +104,7 @@ Similar to the file input, you can get a `FileList` object from the `dataTransfe
 the `drop` event;
 
 The `dragover` event handler let's us signal to the user what will happen when they drop the file by
-using [the dropEffect property](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/dropEffect).
+using [the `dropEffect` property](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/dropEffect).
 
 Drag and drop has been around for a long time and is well supported by the major browsers.
 
@@ -129,7 +129,7 @@ needs to be both selectable and editable. Both `<textarea>` and `<input type="te
 here, as do elements with the `contenteditable` attribute, but these are also obviously designed for
 editing text.
 
-It can be difficult to make this work smoothly if you don't want to user to be able to input
+It can be difficult to make this work smoothly if you don't want the user to be able to input
 text. Tricks like having a hidden input that gets selected when you click on some other element may
 make maintaining accessibility harder.
 
