@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Discover new workflows for viewing and changing CSS in Chrome DevTools.
 
-{# wf_updated_on: 2017-06-09 #}
+{# wf_updated_on: 2017-08-01 #}
 {# wf_published_on: 2017-06-09 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
