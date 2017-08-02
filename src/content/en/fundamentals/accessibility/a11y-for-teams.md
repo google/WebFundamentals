@@ -139,7 +139,7 @@ minimums, whereas the text on right hand side is low contrast.
 There are a number of tools for measuring color contrast, such as Google’s [Material
 Color Tool](https://material.io/color), [Lea Verou's Contrast Ratio
 app](https://leaverou.github.io/contrast-ratio), and Deque’s
-[aXe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US).
+[aXe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd).
 
 ### Tab order is defined
 
@@ -261,7 +261,9 @@ expected to support.
 
 ![An excerpt from the ARIA Authoring Practices guide explaining how to build a radio group.](imgs/aria-authoring.jpg)
 
-To learn more about adding keyboard support to an element, take a look at the [roving tabindex](https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex#managing_focus_in_components) section in Google’s Accessibility Fundamentals docs.
+To learn more about adding keyboard support to an element, take a look at the
+[roving tabindex](/web/fundamentals/accessibility/focus/using-tabindex#managing_focus_in_components)
+section in Google’s Accessibility Fundamentals docs.
 
 ### ARIA roles and attributes are applied as needed
 
@@ -269,26 +271,29 @@ Not only do custom controls need proper keyboard support, they also need proper
 semantics. After all, a `div`, semantically, is just a generic grouping
 container. If you're using a `div` as the basis for your dropdown menu, you'll
 need to rely on
-[ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/)
+[ARIA](/web/fundamentals/accessibility/semantics-aria/)
 to layer in additional semantics so the control type can be conveyed to
-assistive technology. Here again the [ARIA Authoring Practices Guide](https://w3.org/TR/wai-aria-practices-1.1) can help by identifying which roles,
-states, and properties you should be using. As an added bonus, many of the
-explanations in the ARIA guide also come with sample code!
+assistive technology. Here again the
+[ARIA Authoring Practices Guide](https://w3.org/TR/wai-aria-practices-1.1)
+can help by identifying which roles, states, and properties you should be using.
+As an added bonus, many of the explanations in the ARIA guide also come with
+sample code!
 
 ### Labeling elements
 
-For labeling native inputs, you can use the built-in [`<label>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) as described
-on MDN. Not only will this help you create an onscreen visual affordance, but it
-also gives the input an accessible name in the accessibility tree. This name is
-then picked up by assistive technology (like a screen reader) and announced to
-the user.
+For labeling native inputs, you can use the built-in
+[`<label>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
+as described on MDN. Not only will this help you create an onscreen visual
+affordance, but it also gives the input an accessible name in the accessibility
+tree. This name is then picked up by assistive technology (like a screen reader)
+and announced to the user.
 
 Unfortunately `<label>` _does not_ support giving an accessible name to custom
 controls (like ones created using [Custom
-Elements](https://developers.google.com/web/fundamentals/getting-started/primers/customelements)
+Elements](/web/fundamentals/getting-started/primers/customelements)
 or out of simple divs and spans). For these kinds of controls you'll need to use
 the [`aria-label` and `aria-labelledby`
-attributes](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships#labels).
+attributes](/web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships#labels).
 
 ### Automated testing
 
@@ -298,7 +303,7 @@ manually. There are a number of great industry testing tools that exist today to
 make it easy and fast to check for common accessibility issues:
 
 aXe, created by Deque systems, is available as a [Chrome
-extension](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US)
+extension](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd)
 and [a Node module](https://github.com/dequelabs/axe-core) (good for continuous
 integration environments). This short A11ycast explains a few different ways to
 incorporate aXe into your development process.
@@ -309,12 +314,12 @@ incorporate aXe into your development process.
   </iframe>
 </div>
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is Google’s
+[Lighthouse](/web/tools/lighthouse/) is Google’s
 open source project for auditing the performance of your Progressive Web Apps.
 In addition to checking if your PWA has support for things like [Service
-Worker](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)
+Worker](/web/fundamentals/getting-started/primers/service-workers)
 and a [Web App
-Manifest](https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/),
+Manifest](/web/fundamentals/engage-and-retain/web-app-manifest/),
 Lighthouse will also run a series of best practice tests, including tests for
 accessibility issues.
 
@@ -325,7 +330,7 @@ out a few key items that each team member can use to quickly ramp up on the
 subject and hopefully improve the overall experience of their app.
 
 To learn more about accessibility, be sure to check out [our free Udacity
-course](https://bit.ly/web-a11y) and browse [the accessibility docs](https://developers.google.com/web/fundamentals/accessibility/)
+course](https://bit.ly/web-a11y) and browse [the accessibility docs](/web/fundamentals/accessibility/)
 available here on Web Fundamentals.
 
 
