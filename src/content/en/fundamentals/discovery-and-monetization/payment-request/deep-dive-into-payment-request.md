@@ -226,20 +226,30 @@ UI would start with a suitable card already selected:
   </figure>
 </div>
 
-The `supportedTypes` parameter would allow you to restrict accepted cards to
-credit, debit or prepaid card types, although this isn't currently supported in
-Chrome at the time of writing, if you use this parameter, you'll receive this warning:
+The `supportedTypes` parameter tell's Chrome which types of cards to
+filter out, i.e. if a merchant defined `supportedTypes` as `['credit', 'debit']`,
+Chrome would strip out any 'prepaid' cards the user has. 
+
+This means that `supportedTypes` **does not guarentee** that the final card
+you receive will be a supported type. The user can enter details for a new card,
+which could be an unsupported type, and the Payment Request API will allow this.
+The `supportedTypes` option is **just** for filtering out existing cards.
+Merchants still need to check the card type on their backend.
+
+Chrome version 61 added support for the `supportedTypes` option. In older versions of Chrome
+you would receive the following console warning:
 
 `Cannot yet distinguish credit, debit, and prepaid cards.`
 
-But it's still safe to use:
+It's safe to use this option. The only difference is that some cards wouldn't be filtered
+automatically for the user.
 
 ```
 const creditCardPaymentMethod = {  
   supportedMethods: ['basic-card'],  
   data: {  
     supportedNetworks: ['visa', 'mastercard', 'amex'],  
-    supportedTypes: ['credit'],  
+    supportedTypes: ['credit', 'debit'],  
   },  
 };
 ```
