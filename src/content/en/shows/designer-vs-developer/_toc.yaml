@@ -3,6 +3,8 @@ toc:
     section:
     - title: 'Podcast'
       section:
+      - title: 'Designing a a great performance'
+        path: /web/shows/designer-vs-developer/podcast/DVDS2E02-designing-a-great-performance  
       - title: 'Becoming a creative coder'
         path: /web/shows/designer-vs-developer/podcast/DVDS2E01-becoming-a-creative-coder   
       - title: 'Are existing design tools fit for purpose?'
