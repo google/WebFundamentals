@@ -103,6 +103,21 @@ The new behavior is implemented in Chrome 61.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4964279606312960) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=489954)
 
+## JavaScript
+
+### Disallow defining of indexed properties on windows
+
+Previously some browsers allowed for JavaScript assignments like the following:
+
+    window[0] = 1;
+
+The [current HTML spec 
+notes](https://html.spec.whatwg.org/multipage/window-object.html#windowproxy-defineownproperty)
+that this is an explicit violation of
+the JavaScript sepc. As such, this ability is removed in Chrome 61. As of
+February 2016, Firefox is already in compliance.
+
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695385)
 
 <<../../_deprecation-policy.md>>
 
