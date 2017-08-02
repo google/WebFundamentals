@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components
 
-{# wf_updated_on: 2017-06-15 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-08-01 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -1123,7 +1123,7 @@ Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySe
 For now, `/deep/` [continues to work in `querySelectorAll()` calls](https://bugs.chromium.org/p/chromium/issues/detail?id=633007).
 {% endcomment %}
 
-### Creating elements from a &lt;template> {: #fromtemplate}
+### Creating elements from a &lt;template&gt; {: #fromtemplate}
 
 Instead of populating a shadow root using `.innerHTML`, we can use a declarative
 `<template>`. Templates are an ideal placeholder for declaring the structure of

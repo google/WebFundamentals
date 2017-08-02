@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Let's take a raw video file off a camera and transform it into an encrypted resource that you can play back using a video library such as Google's Shaka Player on a mobile device.
 
-{# wf_updated_on: 2017-07-17 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2017-06-30 #}
 
 # From Raw Video to Web Ready {: .page-title }
@@ -188,7 +188,7 @@ encoded with the aac codec.
     ffmpeg -i glocken.webm -vn -c:a vorbis glocken.m4a
 
 The [cheat sheet](/web/fundamentals/media/manipulating/cheatsheet#codec) lists
-commands needed to convert codecs. The tables sumarize the libraries used in
+commands needed to convert codecs. The tables summarize the libraries used in
 ffmpeg to perform the codec conversions for webm and mp4 files. These are the
 formats recommended for DASH and HLS respectively.
 
@@ -216,9 +216,9 @@ file. It probably goes without saying, but I'm going to say it anyway, that you
 can always lower bitrate and resolution, but increasing them is a problem.
 Without special software and algorithms, quality is going to take a hit.
 
-The first step in changing bitrate and resultion is to [display the file
+The first step in changing bitrate and resolution is to [display the file
 characteristics](/web/fundamentals/media/manipulating/cheatsheet#display_characteristics)
-and verify that your source file has a higher bitrate or resultion than your
+and verify that your source file has a higher bitrate or resolution than your
 desired result.
 
 ### Bitrate
@@ -357,4 +357,4 @@ Widevine works.)
 This does not cover everything you could do to a media file before posting it to
 the web, not by a longshot. To be fair, this subject is one deserving of its own
 website. I'm hoping this introduction will give you enough to help you find your
-own aswers to questions.
+own answers to questions.

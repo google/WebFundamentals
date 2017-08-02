@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript often triggers visual changes. Sometimes that's directly through style manipulations, and sometimes it's calculations that result in visual changes, like searching or sorting data. Badly-timed or long-running JavaScript is a common cause of performance issues. You should look to minimize its impact where you can.
 
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2015-03-20 #}
 {# wf_blink_components: Blink>JavaScript #}
 
@@ -62,7 +62,7 @@ but the problem with this is that the callback will run at _some point_ in the f
 
 In fact, jQuery used to use `setTimeout` for its `animate` behavior. It was changed to use 
 `requestAnimationFrame` in version 3.
-If you are using older version of jQeury, you can 
+If you are using older version of jQuery, you can 
 [patch it to use `requestAnimationFrame`](https://github.com/gnarf/jquery-requestAnimationFrame), 
 which is strongly advised.
 

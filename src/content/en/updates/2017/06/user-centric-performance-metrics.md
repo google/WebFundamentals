@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Leveraging the Performance Metrics that Most Affect User Experience.
 
-{# wf_updated_on: 2017-06-17 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2017-06-01 #}
 {# wf_tags: performance #}
+{# wf_blink_components: Blink>PerformanceAPIs #}
 {# wf_featured_image: /web/updates/images/2017/06/perf-metrics-histogram.png #}
 {# wf_featured_snippet: Leveraging the Performance Metrics that Most Affect User Experience. #}
 
@@ -14,11 +15,11 @@ description: Leveraging the Performance Metrics that Most Affect User Experience
 
 {% include "web/_shared/contributors/philipwalton.html" %}
 
-You've probably heard time and time again that performance matters, and it's
-critical that your web apps are fast.
+You've probably heard time and time again that performance matters, and that it's
+critical your web apps are fast.
 
-But as you try to answer the question: *how fast is my app?* You'll realize that
-fast is a very vague term. What exactly do we mean when we say fast? In what
+But as you try to answer the question: *how fast is my app?*, you'll realize that
+fast is a vague term. What exactly do we mean when we say fast? In what
 context? And fast for whom?
 
 <aside>
@@ -33,16 +34,16 @@ context? And fast for whom?
   </iframe>
 </div>
 
-When talking about performance it's important to be precise, so we don't create
+When talking about performance it's important to be precise so we don't create
 misconceptions or spread myths that can sometimes lead to well-intentioned
 developers optimizing for the wrong things&mdash;ultimately harming the user
 experience rather than improving it.
 
-To offer a specific example, it's very common today to hear people say something
+To offer a specific example, it's common today to hear people say something
 like: __*I tested my app, and it loads in X.XX seconds*__.
 
 The problem with this statement is *not* that it's false, it's that it
-misrepresents reality. Load times will vary dramatically from user to user,
+misrepresents reality. Load times vary dramatically from user to user,
 depending on their device capabilities and network conditions. Presenting load
 times as a single number ignores the users who experienced much longer loads.
 
@@ -76,7 +77,7 @@ but can't type in it, they probably won't care how fast the page rendered.
 
 So rather than measuring load with just one metric, we should be measuring the
 times of every moment throughout the experience that can have an affect on the
-user's load perception.
+user's load *perception*.
 
 A second example of a performance myth is that __*performance is only a concern
 at load time*__.
@@ -97,7 +98,7 @@ traditional performance metrics like
 time are extremely unreliable since when they occur may or may not correspond
 to when the user thinks the app is loaded.
 
-So to ensure we don't make this mistake going forward, we have to answer these
+So to ensure we don't repeat this mistake, we have to answer these
 questions:
 
 1. What metrics most accurately measure performance as perceived by a human?
@@ -118,11 +119,11 @@ feedback to reassure them that everything is going to work as expected.
   </tr>
   <tr>
    <td><strong>Is it useful?</strong></td>
-   <td>Has enough content rendered that I can actually engage with it?</td>
+   <td>Has enough content rendered that users can engage with it?</td>
   </tr>
   <tr>
    <td><strong>Is it usable?</strong></td>
-   <td>Can I interact with the page, or is it still busy loading?</td>
+   <td>Can users interact with the page, or is it still busy loading?</td>
   </tr>
   <tr>
    <td><strong>Is it delightful?</strong></td>
@@ -244,15 +245,15 @@ the load metrics fit in the load experience:
        alt="Screenshots of where these metrics occur in the load experience"/>
 </figure>
 
-The next section details how to measure these metrics on real users.
+The next section details how to measure these metrics on real users' devices.
 
-## Measuring these metrics on real users
+## Measuring these metrics on real users' devices
 
 One of the main reasons we've historically optimized for metrics like load and
-DOMContentLoaded is because they're exposed as events in the browser and easy to
+`DOMContentLoaded` is because they're exposed as events in the browser and easy to
 measure on real users.
 
-By contrast, a lot of these other metrics have been historically very hard to
+By contrast, a lot of other metrics have been historically very hard to
 measure. For example, this code is a hack we often see developers use to detect
 long tasks:
 
@@ -274,8 +275,11 @@ long tasks:
 This code starts an infinite `requestAnimationFrame` loop and records the time
 on each iteration. If the current time is more than 50 milliseconds after the
 previous time, it assumes it was the result of a long task. While this code
-mostly works, it has a lot of downsides: it adds overhead to every frame, it
-prevents idle blocks, and it's terrible for battery life.
+mostly works, it has a lot of downsides:
+
+* It adds overhead to every frame.
+* It prevents idle blocks.
+* It's terrible for battery life.
 
 The most important rule of performance measurement code is that it shouldn't
 make performance worse.
@@ -287,15 +291,15 @@ features prior to releasing them), but these tools don't run on your user's
 devices, so they don't reflect the actual performance experience of your users.
 
 Luckily, with the addition of a few new browser APIs, measuring these metrics on
-real users is finally possible without a lot of hacks or workaround, which can
-often make performance worse.
+real devices is finally possible without a lot of hacks or workarounds that can
+make performance worse.
 
 These new APIs are
 [`PerformanceObserver`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver),
 [`PerformanceEntry`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry),
 and
 [`DOMHighResTimeStamp`](https://developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp).
-To see some code with these new APIs in action, the following code example
+To show some code with these new APIs in action, the following code example
 creates a new `PerformanceObserver` instance and subscribes to be notified
 about paint entries (e.g. FP and FCP) as well as any long tasks that occur:
 
@@ -314,7 +318,7 @@ observer.observe({entryTypes: ['resource', 'paint']});
 ```
 
 What `PerformanceObserver` gives us that we've never had before is the ability
-to subscribe to performance events after they happen and respond to them in an
+to subscribe to performance events after they happen and respond to them in a
 asynchronous fashion. This replaces the older
 [PerformanceTiming](https://www.w3.org/TR/navigation-timing/#sec-navigation-
 timing-interface) interface, which often required polling to see when the data

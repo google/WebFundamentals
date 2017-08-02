@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Polymer is a gateway into the amazing future of Web Components.  Learn more about Web Components and Polymer from the Chrome Dev Summit
 
-{# wf_updated_on: 2015-02-23 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: DH1vTVkqCDQ #}
 
@@ -28,7 +28,7 @@ Building web pages in the 90s was limiting, but powerful. We only had a few elem
 
 Take the humble `<select>` element. There is a ton of functionality built into the element, simply by declaring it:
 
-- Customizable through HTML attributes
+- Customisable through HTML attributes
 - Renders children (e.g. `<option>`) with a default UI, but configurable via attributes.
 - Useful in other contexts like `<form>`
 - Has a DOM API: properties and methods

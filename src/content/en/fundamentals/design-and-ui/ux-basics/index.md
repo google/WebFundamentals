@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A step-by-step guide to the basics of UX design.
 
-{# wf_updated_on: 2016-10-01 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-10-01 #}
 
 # Basics of UX {: .page-title }
@@ -105,7 +105,7 @@ medical facilities by the end of the year” would be a great goal to aim for.
 
 There is one caveat. This method of validation is the least favoured as it
 prevents team discussion and collaboration, potentially creating a siloed
-atmosphere in an organisation. Nevertheless it can yield some good information
+atmosphere in an organization. Nevertheless it can yield some good information
 about the clients and the design challenge that you could otherwise miss.
 
 ### Lightning talks
@@ -328,7 +328,7 @@ It can be both a refreshing and sobering experience.
 
 ### Questions to ask
 
-When testing your desing, ask the user to perform tasks in your app and get them
+When testing your design, ask the user to perform tasks in your app and get them
 to speak aloud and verbalize what they're doing and why. This is an odd thing to
 do but it helps you hear what they're thinking. Try not to interrupt or tell
 them what they should do when they get stuck. Simply ask them why they took a
@@ -364,7 +364,7 @@ didn't work as planned.
 
 You have tested your ideas. The user likes them. The stakeholders are invested
 because they've been involved since the beginning. Now it's time to make the
-thing. By now you should have a clear ida of what needs to be made and what the
+thing. By now you should have a clear idea of what needs to be made and what the
 priorities of the experience are. At each milestone of the project you may want
 to introduce usability testing to help validate your work and keeping you on
 track.

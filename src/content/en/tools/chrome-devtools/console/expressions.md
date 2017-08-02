@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Explore the state of any item on your page from the DevTools console.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Evaluate Expressions {: .page-title }
@@ -35,7 +35,7 @@ the console also provides auto-completion and tab-completion.
 If there are multiple matches,
 <kbd class="kbd">↑</kbd> and <kbd class="kbd">↓</kbd> cycles through them. Pressing <kbd class="kbd">→</kbd> selects the current suggestion.
 If there's a single suggestion,
-<kbd class="kbd">Tab</kbd> selectd it.
+<kbd class="kbd">Tab</kbd> selects it.
 
 ![Simple expressions in the console.](images/evaluate-expressions.png)
 

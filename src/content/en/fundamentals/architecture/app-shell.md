@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Application shell architecture keeps your UI local and loads content dynamically without sacrificing the linkability and discoverability of the web. 
 
-{# wf_updated_on: 2016-09-26 #} 
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2016-09-27 #}
 
 # The App Shell Model {: .page-title }
@@ -104,7 +104,7 @@ There is no need to download new versions before using it.
 Note: The [Lighthouse](https://github.com/googlechrome/lighthouse) auditing
 extension can be used to verify if your PWA using an app shell hits a high-bar
 for performance. [To the Lighthouse](https://www.youtube.com/watch?v=LZjQ25NRV-E)
-is a talk that walks through optimising a PWA using this tool.
+is a talk that walks through optimizing a PWA using this tool.
 
 ## Building your app shell {: #building-your-app-shell }
 

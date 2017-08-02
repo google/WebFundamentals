@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers can get access to the user's camera.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-08-23 #}
 
 # Capturing an Image from the User {: .page-title }
@@ -63,7 +63,7 @@ directly into the web page, and on desktop can't access the user's webcam.
 
 ## Access the camera interactively
 
-Modern browsers can get direct acccess to cameras, allowing us to build
+Modern browsers can get direct access to cameras, allowing us to build
 experiences that are fully integrated with the web page, so the user need never
 leave the browser.
 

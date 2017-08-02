@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2 (or h2) is a binary protocol that brings push, multiplexing streams and frame control to the web.
 
-{# wf_updated_on: 2017-07-13 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>Network,Internals>Network>HTTP2 #}
 
@@ -485,7 +485,7 @@ resources. The simplest strategy to satisfy this requirement is to send all
 resource, ahead of the parent’s response (in other words, `DATA` frames).
 
 Once the client receives a `PUSH_PROMISE` frame it has the option to decline the
-stream (via a `RST_STREAM` frame) if it wants to. (This might occurr for example
+stream (via a `RST_STREAM` frame) if it wants to. (This might occur for example
 because the resource is already in cache.) This is an important improvement over
 HTTP/1.x. By contrast, the use of resource inlining, which is a popular
 "optimization" for HTTP/1.x, is equivalent to a "forced push": the client cannot

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-05 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2017-06-28 #}
 {# wf_blink_components: Blink>Payments #}
 
@@ -58,7 +58,7 @@ forced to continue there.
 In this example a user navigates to a site, selects an item and goes
 through the payment request checkout flow. Once a user clicks buy, the
 browser takes over. If the user has previously entered details such as
-their prefered payment method, these will appear as the defaults.
+their preferred payment method, these will appear as the defaults.
 Otherwise the user can add these. Depending on your particular use
 case you can have defaults auto selected or force the user to fill
 them in.
@@ -340,7 +340,7 @@ API which is followed by a confirmation page.
 ### Delivery 
 Although it is technically possible to auto-select the user's 
 default address it is best practice to allow the user to 
-select their prefered address themselves. This will allow 
+select their preferred address themselves. This will allow
 the merchant verify that the address is correct and 
 deliverable. By allowing the user to change the address, 
 you can update and alter the shipping options. For example 
@@ -363,10 +363,10 @@ will be delivered.
 
 <div class="attempt-left">
   <figure>
-    <img src="images/delivery-options-with-dates.png" 
+    <img src="images/delivery-options-with-dates.png"
     alt="This is an example of delivery options with dates">
     <figcaption>
-    	Give dates to help a user plan and customise 
+    	Give dates to help a user plan and customize 
     	their experience.
 	</figcaption>
   </figure>
@@ -383,7 +383,7 @@ discount coupons.
 
 ## Customizing the Payment Request API flow
 
-### Before calling Payment request api
+### Before calling Payment request API
 The Payment Request API doesn’t deal with vouchers and 
 loyalty codes directly. Instead, give the user the 
 ability to add any codes or loyalty card schemes before 
@@ -412,7 +412,7 @@ Below is an example of this.
 If a merchant's legal team requires a legal text box such as 
 a Terms of Service (TOS) to be displayed during the checkout 
 process we recommend that this appears before the Payment 
-Request API flow begins. Ideally you would want to minimise 
+Request API flow begins. Ideally you would want to minimize 
 the steps and actions taken by the user by keeping the TOS 
 next to the buy button or a link. However there are some 
 cases where this is not possible, so one solution is after 
