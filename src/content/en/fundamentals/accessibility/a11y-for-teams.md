@@ -1,10 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: How to incorporate Accessibility into your team's process.
+description: How to incorporate accessibility into your team's process.
 
 
-{# wf_updated_on: 2017-07-27 #}
-{# wf_published_on: 2017-07-27 #}
+{# wf_updated_on: 2017-08-01 #}
+{# wf_published_on: 2017-08-01 #}
 
 # Accessibility: A How-To Guide for Teams {: .page-title }
 
@@ -12,13 +12,13 @@ description: How to incorporate Accessibility into your team's process.
 
 Making your site more accessible can be a daunting task. If you are approaching
 accessibility for the first time, the sheer breadth of the topic can leave you
-wondering where to start - after all, working to accommodate a diverse range of
+wondering where to start. After all, working to accommodate a diverse range of
 abilities means there are a correspondingly diverse range of issues to consider.
 
-The important thing to realize is that accessibility is a team effort.
-Every person has a role to play. This article outlines criteria for each of
-the major disciplines (project manager, UX designer, and developer) so that they
-can work to incorporate accessibility best practices into their process.
+Remember, accessibility is a team effort. Every person has a role to play. This
+article outlines criteria for each of the major disciplines (project manager, UX
+designer, and developer) so that they can work to incorporate accessibility best
+practices into their process.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="A5XzoDT37iM"
@@ -26,7 +26,7 @@ can work to incorporate accessibility best practices into their process.
   </iframe>
 </div>
 
-## Project Manager {: #project-manager }
+## Project manager {: #project-manager }
 
 An overriding goal for any project manager is to try to include accessibility
 work in every milestone; making sure it’s just as much a priority as other
@@ -41,18 +41,18 @@ keep in mind when working through your process.
 ### Accessibility training
 
 There are a number of great free resources for learning about web accessibility.
-Setting aside time for your team to skill up in this area can make it easier
-to include accessibility early in the process.
+Setting aside time for your team to study the topic can make it easier to
+include accessibility early in the process.
 
 Some resources provided by Google include:
 
-[Web Accessibility by Google](https://bit.ly/web-a11y), a multi-week interactive
+[Web Accessibility by Google](https://bit.ly/web-a11y) — a multi-week interactive
 training course.
 
-[Accessibility Fundamentals](https://bit.ly/a11y-fundamentals), written
+[Accessibility Fundamentals](https://bit.ly/a11y-fundamentals) — written
 accessibility guides and best practices.
 
-[Material Guidelines: Accessibility](https://bit.ly/a11y-material), a set of
+[Material Guidelines: Accessibility](https://bit.ly/a11y-material) — a set of
 UX best practices for inclusive design.
 
 ### Identifying critical user journeys
@@ -61,7 +61,7 @@ Every application has some primary action that the user needs to take. For
 example, if you're building an e-commerce app, then every user will need to be
 able to add an item to their shopping cart.
 
-![Primary user journey: "A user can add an item to their shopping cart."](imgs/primary-action.jpg)
+![Primary user journey: A user can add an item to their shopping cart.](imgs/primary-action.jpg)
 
 Some actions may be of secondary importance, and perhaps only performed
 occasionally. For example, changing your avatar photo is a nice feature, but
@@ -106,17 +106,16 @@ Aim to incorporate feedback from as diverse of a user population as possible.
 Consider users who primarily navigate with the keyboard, or rely on assistive
 technology like screen readers or screen magnifiers.
 
-## UX Designer
+## UX designer
 
 Because people tend to design using their own biases, if you don't have a
 disability and don't have colleagues with disabilities, you might be
 unintentionally designing for only some of your users. As you work, ask yourself
-"what are all the types of users who might rely on this design?" Below are a few
-items a UX designer can aim to address to incorporate more inclusivity into
-their process.
+"what are all the types of users who might rely on this design?" Here are some
+techniques you can try to make your process more inclusive.
 
 - Content has sufficient color contrast.
-- The tab order is identified.
+- The tab order is defined.
 - Controls have accessible labels.
 - There are multiple ways to interact with the UI.
 
@@ -125,7 +124,7 @@ their process.
 The primary goal of most sites is to convey some information to the user, either
 through written text or images. However, if this content is low contrast, it may
 be difficult for some users (particularly those with a vision impairment) to 
-read. This may end up negatively affecting their user experience. To address
+read. This may negatively affect their user experience. To address
 this concern, aim for all text and images to have sufficient color contrast.
 
 Contrast is measured by comparing the luminance of a foreground and background
@@ -142,31 +141,31 @@ Color Tool](https://material.io/color), [Lea Verou's Contrast Ratio
 app](https://leaverou.github.io/contrast-ratio), and Deque’s
 [aXe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US).
 
-### Tab order is identified
+### Tab order is defined
 
-Tab order is defined as the order in which elements receive focus as the user
+The tab order is the order in which elements receive focus as the user
 presses the tab key. For users who navigate primarily with a keyboard, the
 tab key is their primary means of reaching everything on screen. Think of it
 like their mouse cursor.
 
-Ideally the tab order should flow from the top of the page to the bottom, with
-more important items appearing higher up in the order. This makes it more
-efficient for anyone using a keyboard to quickly reach these items.
+Ideally the tab order should follow the reading order and flow from the top of
+the page to the bottom, with more important items appearing higher up in the
+order. This makes it more efficient for anyone using a keyboard to quickly reach
+these items.
 
 ![A design comp with interactive controls numbered.](imgs/tab-order.jpg)
 
-The image above is an example mock which numbers the tab stops in order.
-Creating a mock like this can help you identify the intended tab order. This
-can then be shared with the developers and QA testers to make sure it is
-properly implemented and tested.
+The mock interface above is numbered to show the tab order. Creating a mock like
+this can help by identifying the intended tab order. This can then be shared
+with the developers and QA testers to make sure it is properly implemented and
+tested.
 
 ### Controls have accessible labels
 
-Labels help a user understand the purpose of a control. For users who rely on
-assistive technology like a screen reader, labels play an additional role by
-filling in information that may otherwise be conveyed visually. For example
-a search button that's just a magnifying glass icon can have an accessible
-label of "Search" to help fill in the missing visual affordance.
+For users of assistive technology like screen readers, labels provide
+information that would otherwise be visual only. For example a search button
+that's just a magnifying glass icon can have an accessible label of "Search" to
+help fill in the missing visual affordance.
 
 Here are a few simple suggestions to follow when designing accessible labels:
 
@@ -188,9 +187,9 @@ page primarily using a mouse. When designing, consider how someone will
 interact with a control using a keyboard instead.
 
 Plan your focus states! This means determining what a control will look like
-when the user focuses it with tab or presses the arrow keys. It's useful
-to have these states planned out early, rather than trying to shoehorn them
-into the design later.
+when the user focuses it with tab or presses the arrow keys. It's useful to have
+these states planned early, rather than trying to shoehorn them into the design
+later.
 
 Finally, for any point of interaction, you want to make sure that the user has
 multiple ways of understanding the content. Try not to use color alone to convey
@@ -240,11 +239,11 @@ keyboard support for free.
 
 When you change the content of the page, it's important to direct the user's
 attention by moving focus. A classic example of when this technique is useful is
-opening a modal dialog. If a user relying on a keyboard presses a button to open
-a dialog and their focus _is not_ moved into the dialog element, then their only
-course of action is to tab through the entire site until they eventually can
-interact with the new control. By moving focus into the new content as soon as
-it appears, you can improve the efficiency of these users’ experiences.
+when opening a modal dialog. If a user relying on a keyboard presses a button to
+open a dialog and their focus _is not_ moved into the dialog element, then their
+only course of action is to tab through the entire site until they eventually
+find the new control. By moving focus into the new content as soon as it
+appears, you can improve the efficiency of these users’ experiences.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="JS68faEUduk"
@@ -252,26 +251,17 @@ it appears, you can improve the efficiency of these users’ experiences.
   </iframe>
 </div>
 
-Also note that there may be times where you want to _prevent_ focus from
-entering an area. In these situations the newly proposed [HTML `inert`
-property](https://github.com/wicg/inert) may come in handy. `inert` says that an
-element and all of its descendants should not be keyboard focusable or be part
-of the accessibility tree. This can be very useful when you want to turn off a
-section of the page to effectively trap keyboard focus in just one area. Using
-the dialog example from before, you may want to mark the rest of the page as
-`inert` so the user can only take action on the dialog while it is displaying.
-
 ### Keyboard support for interactive elements
 
 If you're building a custom control like a carousel or dropdown, then you'll
-need to do some additional work to add in keyboard support. The [ARIA Authoring
+need to do some additional work to add keyboard support. The [ARIA Authoring
 Practices Guide](https://w3.org/TR/wai-aria-practices-1.1) is a useful resource
 which identifies various UI patterns and the kinds of keyboard actions they are
 expected to support.
 
 ![An excerpt from the ARIA Authoring Practices guide explaining how to build a radio group.](imgs/aria-authoring.jpg)
 
-To learn more about adding in keyboard support to an element, take a look at the [roving tabindex](https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex#managing_focus_in_components) section in Google’s Accessibility Fundamentals docs.
+To learn more about adding keyboard support to an element, take a look at the [roving tabindex](https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex#managing_focus_in_components) section in Google’s Accessibility Fundamentals docs.
 
 ### ARIA roles and attributes are applied as needed
 
@@ -334,8 +324,8 @@ Accessibility is a team effort. Everyone has a role to play. This guide has laid
 out a few key items that each team member can use to quickly ramp up on the
 subject and hopefully improve the overall experience of their app.
 
-To learn more about Accessibility, be sure to check out [our free Udacity
-course](https://bit.ly/web-a11y) and browse [the Accessibility docs](https://developers.google.com/web/fundamentals/accessibility/)
+To learn more about accessibility, be sure to check out [our free Udacity
+course](https://bit.ly/web-a11y) and browse [the accessibility docs](https://developers.google.com/web/fundamentals/accessibility/)
 available here on Web Fundamentals.
 
 
