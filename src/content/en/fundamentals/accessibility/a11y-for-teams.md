@@ -5,6 +5,7 @@ description: How to incorporate accessibility into your team's process.
 
 {# wf_updated_on: 2017-08-01 #}
 {# wf_published_on: 2017-08-01 #}
+{# wf_blink_components: Blink>Accessibility #}
 
 # Accessibility: A How-To Guide for Teams {: .page-title }
 
