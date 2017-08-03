@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 58 to help you plan.
 
-{# wf_updated_on: 2017-06-08 #}
+{# wf_updated_on: 2017-08-07 #}
 {# wf_published_on: 2017-03-17 #}
 {# wf_tags: deprecations,removals,chrome58 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -109,7 +109,7 @@ anticipated in the subsequent final. will not be in the upcoming proposed
 recommendation or subsequent final recommendation. The API has been showing a
 deprecation message on non-secure origins since Chrome 44 (May 2015). In Chrome
 58, it is now removed. This change is part of our broader effort to
-[remove powerful features from unsecure origins](https://bugs.chromium.org/p/chromium/issues/detail?id=520765).
+[remove powerful features from unsecure origins](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/tXmKPlXsnCQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5724389932793856) &#124;
@@ -227,7 +227,7 @@ through a notification over an insecure connection. Web push requires a secure
 origin, so this change will align non-push notifications with push
 notifications. This change is part of our broader effort to
 [remove powerful features from unsecure origins](https://bugs.chromium.org/p/chromium/issues/detail?id=520765).
-Removal is expected in Chrome 61.
+Removal is expected in Chrome 62.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/IVgkxkRNtMo/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5759967025954816) &#124;

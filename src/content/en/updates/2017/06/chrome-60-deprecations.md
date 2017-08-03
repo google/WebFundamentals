@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 60 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-{# wf_updated_on: 2017-06-12 #}
+{# wf_updated_on: 2017-08-07 #}
 {# wf_published_on: 2017-06-08 #}
 {# wf_tags: deprecations,removals,chrome60 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -66,6 +66,9 @@ back to Chrome 59.
 
 ### Make shadow-piercing descendant combinator behave like descendent combinator
 
+Note: This item was bumped from Chrome 60 to 61 some time after this article
+was originally published.
+
 The shadow-piercing descendant combinator (`>>>`), part of
 [CSS Scoping Module Level 1](https://drafts.csswg.org/css-scoping/)
 , was intended to match the children of a particular ancestor element
@@ -80,13 +83,40 @@ including Shadow DOM v1. Rather than break web pages by removing this selector
 from Chromium, we've chosen instead to alias the shadow-piercing descendent
 combinator to the descendant combinator. The original behavior was
 [deprecated in Chrome 45](https://www.chromestatus.com/features/6750456638341120).
-The new behavior is implemented in Chrome 60.
+The new behavior is implemented in Chrome 61.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/HX5Y8Ykr5Ns/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4964279606312960) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=489954)
 
 ## JavaScript
+
+### Deprecate and remove RTCPeerConnection.getStreamById()
+
+Nearly two years ago, `getStreamById()` was [removed from the WebRTC
+spec](https://github.com/w3c/webrtc-pc/pull/18). Most other browsers have
+removed already removed this from their implementations. Though this function is
+believed to be little-used, it's also believed there is some minor
+interoperability risk with Edge and WebKit-based browsers *other than* Safari
+where `getStreamById()` is still supported. Developers needing an alternative
+implementation can find example code in the Intent to Remove, below.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/m4DNZbLMkRo/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5751819573657600) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=698163&desc=5)
+
+### Deprecate SVGPathElement.getPathSegAtLength
+
+More than two years ago, `getPathSegAtLength()` was [removed from the SVG
+spec](https://github.com/w3c/svgwg/commit/25ad470b300a1274a9a45734811c9a5f809233cf).
+Since there are only a handful of hits for this method in httparchive, it is
+being deprecated in Chrome 60. Removal is expected to be in Chrome 62, which
+will ship some time in early or middle October.
+
+[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Gc1Aw282beo/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5638783282184192) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=669498)
+
 
 ### Move getContextAttributes() behind a flag
 
@@ -144,6 +174,33 @@ Developers should use `KEYFRAMES_RULE` and `KEYFRAME_RULE` instead.
 [Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/mW1njtgDPHA) 
  &#124; [Chromestatus Tracker](https://www.chromestatus.com/feature/5747368108490752) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=689681)
+
+## User Interface
+
+### Require user gesture for beforeunload dialogs
+
+From Chrome 60 onward, the `beforeunload` dialog will only appear if the frame
+attempting to display it has received a user gesture or user interaction (or if
+any embedded frame has received such a gesture). To be clear, this is not a
+change to the dispatch of the `beforeunload` event. It is just a change to
+whether the dialog is shown.
+
+The `beforeunload` dialog is an app-modal dialog box. As such, it is inherently
+user-hostile, meaning it responds to a user navigation by questioning the user's
+decision. There are positive uses for this feature. For example, it's often used
+to warn users when they will lose data by navigating.
+
+While the ability for a page to provide text for the `beforeunload` dialog was
+removed a while ago, `beforeunload` dialogs remain a vector of abuse. In
+particular, `beforeunload` dialogs are an ingredient of scam websites, where
+autoplay audio and threatening text provide a context where the Chromium
+provided "are you sure you want to leave this page" message becomes worrisome.
+
+We want to thread the needle, and only allow good uses of the `beforeunload`
+dialog. Good uses of the dialog are those where the user has state that might be
+lost. If the user never interacted with the page, then the user cannot have any
+state that might be lost, and therefore we do not risk user data loss by
+suppressing the dialog in that case.
 
 <<../../_deprecation-policy.md>>
 
