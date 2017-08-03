@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers can get access to the user's camera.
 
-{# wf_updated_on: 2017-07-28 #}
+{# wf_updated_on: 2017-08-03 #}
 {# wf_published_on: 2016-08-23 #}
+{# wf_blink_components: Blink>ImageCapture #}
 
 # Capturing an Image from the User {: .page-title }
 
@@ -18,22 +19,22 @@ that uses a user generated image that works well everywhere?
 
 ## Start simple and progressively
 
-The easiest thing to do is simply ask the user for a pre-recorded
-file. There are a lot of good options here to give you a great progressive enhancement story.
+If you want to progressively enhance your experience, you need to start with something that works
+everywhere. The easiest thing to do is simply ask the user for a pre-recorded file.
 
 ### Ask for a URL
-This is the best supported but least satisfying option - get the user to give you a URL, and then
-use that. For just displaying the image this works everywhere - create an `img` element, set the
+This is the best supported but least satisfying option. Get the user to give you a URL, and then
+use that. For just displaying the image this works everywhere. Create an `img` element, set the
 `src` and you're done.
 
-It's more complicated than that, though, if you want to manipulate the image in any way.
+Though, if you want to manipulate the image in any way, things are a bit more complicated.
 [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) prevents you from
 accessing the actual pixels unless the server sets the appropriate headers and you
 [mark the image as crossorigin](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image)
 ; the only practical way around that is to run a proxy server.
 
 ### File input
-You can also use a simple file input element, including an `accept` filter that indicates we only
+You can also use a simple file input element, including an `accept` filter that indicates you only
 want image files.
 
     <input type="file" accept="image/*">
@@ -57,7 +58,7 @@ the `files` property of the event `target`.
       fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
     </script>
 
-The `files` property is a `FileList` object, which we'll talk more about later.
+The `files` property is a `FileList` object, which I'll talk more about later.
 
 You can also optionally add the `capture` attribute to the element, which indicates to the browser
 that you prefer getting an image from the camera.
@@ -75,7 +76,7 @@ that on Android this means that the user will no longer have the option of choos
 picture. The system camera app will be started directly, instead.
 
 ### Drag and drop
-If you are already adding in the ability to upload a file, there are a couple of easy ways that you
+If you are already adding the ability to upload a file, there are a couple of easy ways that you
 can make the user experience a little richer.
 
 The first is to add a drop target to your page that allows the user to drag in a file from the
@@ -103,8 +104,9 @@ desktop or another application.
 Similar to the file input, you can get a `FileList` object from the `dataTransfer.files` property of
 the `drop` event;
 
-The `dragover` event handler let's us signal to the user what will happen when they drop the file by
-using [the `dropEffect` property](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/dropEffect).
+The `dragover` event handler let's you signal to the user what will happen when they drop the file
+by using
+[the `dropEffect` property](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/dropEffect).
 
 Drag and drop has been around for a long time and is well supported by the major browsers.
 
@@ -126,7 +128,7 @@ but the user experience is a little harder to get right.
 
 The tricky part with the clipboard API is that, for full cross-browser support, the target element
 needs to be both selectable and editable. Both `<textarea>` and `<input type="text">` fit the bill
-here, as do elements with the `contenteditable` attribute, but these are also obviously designed for
+here, as do elements with the `contenteditable` attribute. But these are also obviously designed for
 editing text.
 
 It can be difficult to make this work smoothly if you don't want the user to be able to input
@@ -134,10 +136,10 @@ text. Tricks like having a hidden input that gets selected when you click on som
 make maintaining accessibility harder.
 
 ### Handling a FileList object
-Since most of the above methods produce a `FileList`, we should talk a little about what that is.
+Since most of the above methods produce a `FileList`, I should talk a little about what that is.
 
 A `FileList` is similar to an `Array`. It has numeric keys and a `length` property, but it isn't
-*actually* an array. There are no array methods, like `forEach` or `pop`, and it isn't iterable.
+*actually* an array. There are no array methods, like `forEach()` or `pop()`, and it isn't iterable.
 Of course, you can get a real Array by using `Array.from(fileList)`.
 
 The entries of the `FileList` are `File` objects. These are exactly the same as `Blob` objects
@@ -163,7 +165,7 @@ except that they have additional `name` and `lastModified` read-only properties.
       }
     </script>
 
-This example finds the first file that has an image MIME type, but you could also handle multiple
+This example finds the first file that has an image MIME type, but it could also handle multiple
 images being selected/pasted/dropped at once.
 
 Once you have access to the file you can do anything you want with it. For
@@ -171,22 +173,21 @@ example, you can:
 
 - Draw it into a `<canvas>` element so that you can manipulate it
 - Download it to the user's device
-- Upload it to a server with `fetch`
+- Upload it to a server with `fetch()`
 
 ## Access the camera interactively
-Now that we've covered our bases, it's time to progressively enhance!
+Now that you've covered your bases, it's time to progressively enhance!
 
-Modern browsers can get direct access to cameras, allowing us to build
+Modern browsers can get direct access to cameras, allowing you to build
 experiences that are fully integrated with the web page, so the user need never
 leave the browser.
 
 ### Acquire access to the camera
-
-We can directly access a camera and microphone by using an API in the WebRTC
+You can directly access a camera and microphone by using an API in the WebRTC
 specification called `getUserMedia()`. This will prompt the user for
 access to their connected microphones and cameras.
 
-Support for `getUserMedia` is pretty good, but it isn't yet everywhere. In particular, it is not
+Support for `getUserMedia()` is pretty good, but it isn't yet everywhere. In particular, it is not
 available in Safari 10 or lower, which at the time of writing is still the latest stable version.
 However, [Apple have announced](https://webkit.org/blog/7726/announcing-webrtc-and-media-capture/)
 that it will be available in Safari 11.
@@ -198,16 +199,15 @@ It's very simple to detect support, however.
 Warning: Direct access to the camera is a powerful feature. It requires consent
 from the user, and your site MUST be on a secure origin (HTTPS).
 
-When you call `getUserMedia`, you need to pass in an object that describes what kind of media you
-want. These choices are called constraints.
+When you call `getUserMedia()`, you need to pass in an object that describes what kind of media you
+want. These choices are called constraints. There are a several possible constraints, covering
+things like whether you prefer a front- or rear-facing camera, whether you want audio, and your
+preferred resolution for the stream.
 
-There are a several possible constraints, covering things like whether you prefer a front- or
-rear-facing camera, whether you want audio, and your preferred resolution for the stream.
-
-To get data from the camera, however, we need just one constraint, and that is `video: true`.
+To get data from the camera, however, you need just one constraint, and that is `video: true`.
 
 If successful the API will return a `MediaStream` that contains data from
-the camera, and we can then either attach it to a `<video>` element and play it
+the camera, and you can then either attach it to a `<video>` element and play it
 to show a real time preview, or attach it to a `<canvas>` to get a
 snapshot.
 
@@ -225,15 +225,14 @@ snapshot.
         });
     </script>
 
-By itself, this isn't that useful. All we can do is take the video data and play
-it back. If we want to get an image, we have to do a little extra work.
+By itself, this isn't that useful. All you can do is take the video data and play
+it back. If you want to get an image, you have to do a little extra work.
 
 ### Grab a snapshot
-Our best supported option for getting an image is to draw a frame from the video to a canvas.
+Your best supported option for getting an image is to draw a frame from the video to a canvas.
 
-Unlike `Web Audio`, there isn't a
-dedicated stream processing API for video on the web so we have to resort to
-a tiny bit of hackery to capture a snapshot from the user's camera.
+Unlike the Web Audio API, there isn't a dedicated stream processing API for video on the web so you
+have to resort to a tiny bit of hackery to capture a snapshot from the user's camera.
 
 The process is as follows:
 
@@ -242,8 +241,6 @@ The process is as follows:
 3. Attach it to a video element
 4. When you want to capture a precise frame, add the data from the video element
    to a canvas object using `drawImage()`.
-
-Done.
 
     <video id="player" controls autoplay></video>
     <button id="capture">Capture</button>
@@ -320,7 +317,7 @@ for the stream returned by `getUserMedia()`.
 ### Ask permission to use camera responsibly
 
 If the user has not previously granted your site access to the camera then
-the instant that you call `getUserMedia` the browser will prompt the user to
+the instant that you call `getUserMedia()` the browser will prompt the user to
 grant your site permission to the camera.
 
 Users hate getting prompted for access to powerful devices on their machine
