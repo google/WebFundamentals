@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Leveraging the Performance Metrics that Most Affect User Experience.
 
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2017-08-03 #}
 {# wf_published_on: 2017-06-01 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -318,7 +318,7 @@ observer.observe({entryTypes: ['resource', 'paint']});
 ```
 
 What `PerformanceObserver` gives us that we've never had before is the ability
-to subscribe to performance events after they happen and respond to them in a
+to subscribe to performance events as they happen and respond to them in an
 asynchronous fashion. This replaces the older
 [PerformanceTiming](https://www.w3.org/TR/navigation-timing/#sec-navigation-
 timing-interface) interface, which often required polling to see when the data
@@ -332,24 +332,51 @@ For example, using Google Analytics you might track first paint times as
 follows:
 
 ```
-const observer = new PerformanceObserver((list) => {
-  for (const entry of list.getEntries()) {
-    // `name` will be either 'first-paint' or 'first-contentful-paint'.
-    const metricName = entry.name;
-    const time = Math.round(entry.startTime + entry.duration);
+<head>
+  <!-- Add the async Google Analytics snippet first. -->
+  <script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-    ga('send', 'event', {
-      eventCategory: 'Performance Metrics',
-      eventAction: metricName,
-      eventValue: time,
-      nonInteraction: true,
-    });
-  }
-});
+  <!-- Register the PerformanceObserver to track paint timing. -->
+  <script>
+  const observer = new PerformanceObserver((list) => {
+    for (const entry of list.getEntries()) {
+      // `name` will be either 'first-paint' or 'first-contentful-paint'.
+      const metricName = entry.name;
+      const time = Math.round(entry.startTime + entry.duration);
 
-// Start observing paint entries.
-observer.observe({entryTypes: ['paint']});
+      ga('send', 'event', {
+        eventCategory: 'Performance Metrics',
+        eventAction: metricName,
+        eventValue: time,
+        nonInteraction: true,
+      });
+    }
+  });
+  observer.observe({entryTypes: ['paint']});
+  </script>
+
+  <!-- Include any stylesheets after creating the PerformanceObserver. -->
+  <link rel="stylesheet" href="...">
+</head>
 ```
+
+<aside>
+  <p><strong>Important:</strong> you must ensure your <code>PerformanceObserver
+  </code> is registered in the <code>&lt;head&gt;</code> of your document
+  before any stylesheets, so it runs before FP/FCP happen.<p>
+  <p>This will no longer be necessary once Level 2 of the <a
+  href="https://w3c.github.io/performance-timeline/">Performance Observer spec
+  </a> is implemented, as it introduces a <a
+  href="https://w3c.github.io/performance-timeline/#dom-performanceobserverinit-
+  buffered"><code>buffered</code></a> flag that allows you to access performance
+  entries queued prior to the <code>PerformanceObserver</code>
+  being created.</p>
+</aside>
 
 ### Tracking FMP using hero elements
 
