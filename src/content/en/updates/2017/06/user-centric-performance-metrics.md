@@ -617,8 +617,8 @@ window.__trackAbandons = () => {
   // Send the data to Google Analytics via the Measurement Protocol.
   navigator.sendBeacon && navigator.sendBeacon(ANALYTICS_URL, [
     'v=1', 't=event', 'ec=Load', 'ea=abandon', 'ni=1',
-    'dl=' + location.href,
-    'dt=' + document.title,
+    'dl=' + encodeURIComponent(location.href),
+    'dt=' + encodeURIComponent(document.title),
     'tid=' + TRACKING_ID,
     'cid=' + CLIENT_ID,
     'ev=' + Math.round(performance.now()),
