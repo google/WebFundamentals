@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-08-04 #}
 
 # Deep Dive into the Payment Request API {: .page-title }
 
@@ -226,11 +226,11 @@ UI would start with a suitable card already selected:
   </figure>
 </div>
 
-The `supportedTypes` parameter tell's Chrome which types of cards to
+The `supportedTypes` parameter tells Chrome which types of cards to
 filter out, i.e. if a merchant defined `supportedTypes` as `['credit', 'debit']`,
 Chrome would strip out any 'prepaid' cards the user has. 
 
-This means that `supportedTypes` **does not guarentee** that the final card
+This means that `supportedTypes` **does not guarantee** that the final card
 you receive will be a supported type. The user can enter details for a new card,
 which could be an unsupported type, and the Payment Request API will allow this.
 The `supportedTypes` option is **just** for filtering out existing cards.
