@@ -386,7 +386,7 @@ Gift cards do not work directly with the Payment
 Request API so we recommend adding a field that allows
 the user to enter their card code beforehand. Once they 
 add the gift card if there is still more to pay you can 
-launch the Payment Request API. The below illustration 
+launch the Payment Request API. The illustration below
 demonstrates this flow. 
 
 <div>
