@@ -48,14 +48,17 @@ landing_page:
     items:
     - heading: Progressive Web Apps
       description: >
-        Find a Google Developer Group in your area and learn the skills you
-        need to start creating Progressive Web Apps. Progressive Web Apps take
-        advantage of new technologies to bring the best of mobile sites and
-        native applications to users.
+        Progressive Web App Roadshows are a series of in-person events run
+        around the world to help you learn the skills you need to start 
+        creating Progressive Web Apps. Progressive Web Apps take advantage of 
+        new technologies to bring the best of mobile sites and native 
+        applications to users.
       image_path: /web/events/images/pwa-roadshow-item.jpg
       buttons:
-      - label: Learn More About Progressive Web App Events
+      - label: Progressive Web App Roadshows
         path: /web/events/pwaroadshow/
+      - label: Progressive Web App Training for Agencies
+        path: /web/events/pwa-agency-training/
     - heading: Polymer Polytechnics
       description: >
         Polytechnics are a series of in-person, community-run events to help
@@ -64,5 +67,5 @@ landing_page:
         familiar with this new technology.
       image_path: /web/events/images/polytechnic-item.jpg
       buttons:
-      - label: Learn More About Polytechnic Events
+      - label: Polytechnic Events
         path: /web/events/polytechnic/
