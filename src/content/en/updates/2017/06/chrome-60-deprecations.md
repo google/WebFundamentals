@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 60 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-{# wf_updated_on: 2017-08-07 #}
+{# wf_updated_on: 2017-08-04 #}
 {# wf_published_on: 2017-06-08 #}
 {# wf_tags: deprecations,removals,chrome60 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -24,7 +24,7 @@ which is in beta as of June 8. This list is subject to change at any time.
 The [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) 
 which has been supported since Chrome 37 has always worked on non-secure
 origins. Because of Chrome's long-standing policy of
-[prefering secure origins for powerful features](https://sites.google.com/a/chromium.org/dev/Home/chromium-security/prefer-secure-origins-for-powerful-new-features?pli=1),
+[preferring secure origins for powerful features](https://sites.google.com/a/chromium.org/dev/Home/chromium-security/prefer-secure-origins-for-powerful-new-features?pli=1),
 `crypto.subtle` is no only visible on secure origins.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/ZD3NWqkk-bo/discussion) &#124;
@@ -33,7 +33,7 @@ origins. Because of Chrome's long-standing policy of
 
 ### Remove content-initiated top frame navigations to data URLs
 
-Because of their unfamilliarity to non-technical browser users, we're
+Because of their unfamiliarity to non-technical browser users, we're
 increasingly seeing the `data:` scheme being used in spoofing and phishing
 attacks. To prevent this, we're blocking web pages from loading `data:` URLs
 in the top frame. This applies to `<a>` tags, `window.open`,
@@ -156,7 +156,7 @@ browser progress the problem has been worked around by library authors.
 
 Developers needing this functionality need to develop their own solution.
 Libraries like [Dexie.js](http://dexie.org/) for example use a global table
-ßwhich is itself another database to track the names of databases.
+which is itself another database to track the names of databases.
 
 This feature was deprecated in Chrome 58 and is now removed.
 
