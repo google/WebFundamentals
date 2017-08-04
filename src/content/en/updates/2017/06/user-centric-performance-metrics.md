@@ -368,7 +368,7 @@ follows:
 <aside>
   <p><strong>Important:</strong> you must ensure your <code>PerformanceObserver
   </code> is registered in the <code>&lt;head&gt;</code> of your document
-  before any stylesheets, so it runs before FP/FCP happen.<p>
+  before any stylesheets, so it runs before FP/FCP happens.<p>
   <p>This will no longer be necessary once Level 2 of the <a
   href="https://w3c.github.io/performance-timeline/">Performance Observer spec
   </a> is implemented, as it introduces a <a
