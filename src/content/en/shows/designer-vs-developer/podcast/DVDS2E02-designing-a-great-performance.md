@@ -4,9 +4,9 @@ description: Addy talks about designing performance.
 
 {# wf_updated_on: 2017-08-07 #}
 {# wf_published_on: 2017-08-07 #}
-{# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E01-becoming-a-creative-coder.mp3 #}
-{# wf_podcast_duration: 00:11:20 #}
-{# wf_podcast_fileSize: 16343189 #}
+{# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E02-designing-a-great-performance.mp3 #}
+{# wf_podcast_duration: 00:13:34 #}
+{# wf_podcast_fileSize: 19566017 #}
 {# wf_podcast_subtitle: Addy talks about designing performance. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s02-e02-cover-large.jpg #}
 
@@ -38,7 +38,7 @@ In this episode:
 
 
 <audio 
-src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E01-becoming-a-creative-coder.mp3" 
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E02-designing-a-great-performance.mp3" 
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
