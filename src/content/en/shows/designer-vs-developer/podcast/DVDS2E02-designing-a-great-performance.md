@@ -12,9 +12,9 @@ description: Addy talks about designing performance.
 
 # Designing a great performance {: .page-title }
 
-Welcome to Designer Vs Developer, a show that tries to solve the 
+Welcome to Designer Vs. Developer, a show that tries to solve the 
 challenges faced in the industry by opening a conversation between 
-the two, providing take aways, solutions to workflows, tools & 
+the two, providing take aways, solutions to workflows, tools and 
 discussions on everyday struggles. 
 
 This week Mustafa speaks to Addy Osmani, a Senior Staff Developer 
@@ -32,7 +32,7 @@ In this episode:
 * Designing for performance.
 * Skeleton screens.
 * [Twitter Lite, Housing.com & Flipkart](https://goo.gl/jt2ZDo).
-* Good old days of Flash.
+* The good old days of Flash.
 * Download the
 [‘Speed Matters - Designing for Mobile Performance’](https://goo.gl/RuL4YB) 
 ebook to learn more. 
