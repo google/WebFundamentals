@@ -33,6 +33,11 @@ In this episode:
 * Skeleton screens.
 * [Twitter Lite, Housing.com & Flipkart](https://goo.gl/jt2ZDo).
 * Good old days of Flash.
+* Download 
+[‘Speed Matters - Designing for Mobile Performance’](https://goo.gl/RuL4YB) 
+ebook to learn more. 
+
+
 
 <audio 
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E02-designing-a-great-performance.mp3" 
