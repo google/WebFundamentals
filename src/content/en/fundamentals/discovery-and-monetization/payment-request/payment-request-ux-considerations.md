@@ -389,7 +389,7 @@ add the gift card if there is still more to pay you can
 launch the Payment Request API. The below illustration 
 demonstrates this flow. 
 
-<div class="attempt-left">
+<div>
   <figure>
     <img src="images/gift-card-checkout-flow.png"
     alt="This is an example of giftcard workflow 
