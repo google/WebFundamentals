@@ -31,11 +31,8 @@ In this episode:
 
 * Designing for performance.
 * Skeleton screens.
-* [Twitter Lite, Housing.com & Flipkart](https://goo.gl/jt2ZDo)
-* Measure Performance with [the RAIL Model](https://goo.gl/DoppBc)
-* Leveraging the performance metrics that 
-[most affect user experience](https://goo.gl/yBYyJi)
-
+* [Twitter Lite, Housing.com & Flipkart](https://goo.gl/jt2ZDo).
+* Good old days of Flash.
 
 <audio 
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E02-designing-a-great-performance.mp3" 
