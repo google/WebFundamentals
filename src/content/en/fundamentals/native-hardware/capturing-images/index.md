@@ -51,12 +51,14 @@ The data can then be attached to a `<form>` or manipulated with JavaScript by
 listening for an `onchange` event on the input element and then reading
 the `files` property of the event `target`.
 
-    <input type="file" accept="image/*" id="file-input">
-    <script>
-      const fileInput = document.getElementById('file-input');
+<pre class="prettyprint">
+&lt;input type="file" accept="image/*" id="file-input">
+&lt;script>
+  const fileInput = document.getElementById('file-input');
 
-      fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
-    </script>
+  fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+&lt;/script>
+</pre>
 
 The `files` property is a `FileList` object, which I'll talk more about later.
 
@@ -82,24 +84,26 @@ can make the user experience a little richer.
 The first is to add a drop target to your page that allows the user to drag in a file from the
 desktop or another application.
 
-    <div id="target">You can drag an image file here</div>
-    <script>
-      const target = document.getElementById('target');
+<pre class="prettyprint">
+&lt;div id="target">You can drag an image file here&lt;/div>
+&lt;script>
+  const target = document.getElementById('target');
 
-      target.addEventListener('drop', (e) => {
-        e.stopPropagation();
-        e.preventDefault();
+  target.addEventListener('drop', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
 
-        doSomethingWithFiles(e.dataTransfer.files);
-      });
+    doSomethingWithFiles(e.dataTransfer.files);
+  });
 
-      target.addEventListener('dragover', (e) => {
-        e.stopPropagation();
-        e.preventDefault();
+  target.addEventListener('dragover', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
 
-        e.dataTransfer.dropEffect = 'copy';
-      });
-    </script>
+    e.dataTransfer.dropEffect = 'copy';
+  });
+&lt;/script>
+</pre>
 
 Similar to the file input, you can get a `FileList` object from the `dataTransfer.files` property of
 the `drop` event;
@@ -114,15 +118,17 @@ Drag and drop has been around for a long time and is well supported by the major
 The final way to get an existing image file is from the clipboard. The code for this is very simple,
 but the user experience is a little harder to get right.
 
-    <textarea id="target">Paste an image here</textarea>
-    <script>
-      const target = document.getElementById('target');
+<pre class="prettyprint">
+&ly;textarea id="target">Paste an image here&lt;/textarea>
+&lt;script>
+  const target = document.getElementById('target');
 
-      target.addEventListener('paste', (e) => {
-        e.preventDefault();
-        doSomethingWithFiles(e.clipboardData.files);
-      });
-    </script>
+  target.addEventListener('paste', (e) => {
+    e.preventDefault();
+    doSomethingWithFiles(e.clipboardData.files);
+  });
+&lt;/script>
+</pre>
 
 (`e.clipboardData.files` is yet another `FileList` object.)
 
@@ -145,25 +151,27 @@ Of course, you can get a real Array by using `Array.from(fileList)`.
 The entries of the `FileList` are `File` objects. These are exactly the same as `Blob` objects
 except that they have additional `name` and `lastModified` read-only properties.
 
-    <img id="output">
-    <script>
-      const output = document.getElementById('output');
+<pre class="prettyprint">
+&lt;img id="output">
+&lt;script>
+  const output = document.getElementById('output');
 
-      function doSomethingWithFiles(fileList) {
-        let file = null;
+  function doSomethingWithFiles(fileList) {
+    let file = null;
 
-        for (let i = 0; i < fileList.length; i++) {
-          if (fileList[i].type.match(/^image\//)) {
-            file = fileList[i];
-            break;
-          }
-        }
-
-        if (file !== null) {
-          output.src = URL.createObjectURL(file);
-        }
+    for (let i = 0; i &lt; fileList.length; i++) {
+      if (fileList[i].type.match(/^image\//)) {
+        file = fileList[i];
+        break;
       }
-    </script>
+    }
+
+    if (file !== null) {
+      output.src = URL.createObjectURL(file);
+    }
+  }
+&lt;/script>
+</pre>
 
 This example finds the first file that has an image MIME type, but it could also handle multiple
 images being selected/pasted/dropped at once.
@@ -211,19 +219,21 @@ the camera, and you can then either attach it to a `<video>` element and play it
 to show a real time preview, or attach it to a `<canvas>` to get a
 snapshot.
 
-    <video id="player" controls autoplay></video>
-    <script>
-      const player = document.getElementById('player');
+<pre class="prettyprint">
+&lt;video id="player" controls autoplay>&lt;/video>
+&lt;script>
+  const player = document.getElementById('player');
 
-      const constraints = {
-        video: true,
-      };
+  const constraints = {
+    video: true,
+  };
 
-      navigator.mediaDevices.getUserMedia(constraints)
-        .then((stream) => {
-          player.srcObject = stream;
-        });
-    </script>
+  navigator.mediaDevices.getUserMedia(constraints)
+    .then((stream) => {
+      player.srcObject = stream;
+    });
+&lt;/script>
+</pre>
 
 By itself, this isn't that useful. All you can do is take the video data and play
 it back. If you want to get an image, you have to do a little extra work.
@@ -242,30 +252,32 @@ The process is as follows:
 4. When you want to capture a precise frame, add the data from the video element
    to a canvas object using `drawImage()`.
 
-    <video id="player" controls autoplay></video>
-    <button id="capture">Capture</button>
-    <canvas id="canvas" width=320 height=240></canvas>
-    <script>
-      const player = document.getElementById('player');
-      const canvas = document.getElementById('canvas');
-      const context = canvas.getContext('2d');
-      const captureButton = document.getElementById('capture');
+<pre class="prettyprint">
+&lt;video id="player" controls autoplay>&lt;/video>
+&lt;button id="capture">Capture&lt;/button>
+&lt;canvas id="canvas" width=320 height=240>&lt;/canvas>
+&lt;script>
+  const player = document.getElementById('player');
+  const canvas = document.getElementById('canvas');
+  const context = canvas.getContext('2d');
+  const captureButton = document.getElementById('capture');
 
-      const constraints = {
-        video: true,
-      };
+  const constraints = {
+    video: true,
+  };
 
-      captureButton.addEventListener('click', () => {
-        // Draw the video frame to the canvas.
-        context.drawImage(player, 0, 0, canvas.width, canvas.height);
-      });
+  captureButton.addEventListener('click', () => {
+    // Draw the video frame to the canvas.
+    context.drawImage(player, 0, 0, canvas.width, canvas.height);
+  });
 
-      // Attach the video stream to the video element and autoplay.
-      navigator.mediaDevices.getUserMedia(constraints)
-        .then((stream) => {
-          player.srcObject = stream;
-        }
-    </script>
+  // Attach the video stream to the video element and autoplay.
+  navigator.mediaDevices.getUserMedia(constraints)
+    .then((stream) => {
+      player.srcObject = stream;
+    }
+&lt;/script>
+</pre>
 
 Once you have data from the camera stored in the canvas you can do many
 things with it. You could:
