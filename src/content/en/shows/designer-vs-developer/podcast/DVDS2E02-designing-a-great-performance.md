@@ -10,7 +10,7 @@ description: Addy talks about designing performance.
 {# wf_podcast_subtitle: Addy talks about designing performance. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s02-e02-cover-large.jpg #}
 
-# Designing a great performance {: .page-title }
+# Designing for great performance {: .page-title }
 
 Welcome to Designer Vs Developer, a show that tries to solve the 
 challenges faced in the industry by opening a conversation between 
