@@ -18,19 +18,19 @@ they can make the required changes to keep their sites running.
 
 
 Chrome currently has a
-[process for deprecations and removals of API's](http://www.chromium.org/blink#TOC-Launch-Process:-Deprecation){:.external},
+[process for deprecations and removals of API's](http://www.chromium.org/blink#TOC-Launch-Process:-Deprecation),
 essentially:
 
 * Announce on the
-  [blink-dev](https://groups.google.com/a/chromium.org/forum/#!forum/blink-dev){: .external }
+  [blink-dev](https://groups.google.com/a/chromium.org/forum/#!forum/blink-dev)
   mailing list.
 * Set warnings and give time scales in the Chrome DevTools Console when usage
   is detected on the page.
 * Wait, monitor, and then remove the feature as usage drops.
 
 You can find a list of all deprecated features on chromestatus.com using the 
-[deprecated filter](https://www.chromestatus.com/features#deprecated){: .external }
+[deprecated filter](https://www.chromestatus.com/features#deprecated)
 and removed features by applying the
-[removed filter](https://www.chromestatus.com/features#removed){: .external }.
+[removed filter](https://www.chromestatus.com/features#removed).
 We will also try to summarize some of the changes, reasoning, and migration
 paths in these posts.
