@@ -2,7 +2,7 @@ toc:
 - title: "Building Components"
   section:
   - title: "Overview"
-    path: /web/fundamentals/building-components/overview
+    path: /web/fundamentals/building-components/
   - title: "Custom Elements v1: Reusable Web Components"
     path: /web/fundamentals/building-components/customelements
   - title: "Shadow DOM v1: Self-Contained Web Components"
@@ -12,7 +12,7 @@ toc:
   - title: Examples
     section:
     - title: "Overview"
-      path: /web/fundamentals/building-components/examples/overview
+      path: /web/fundamentals/building-components/examples/
     - title: "Checkbox"
       path: /web/fundamentals/building-components/examples/howto-checkbox
     - title: "Tooltip"

@@ -613,7 +613,7 @@ redirects:
   to: /web/fundamentals/building-components/shadowdom
 
 - from: /web/fundamentals/architecture/howto-components/overview
-  to: /web/fundamentals/building-components/examples/overview
+  to: /web/fundamentals/building-components/examples/
 
 - from: /web/fundamentals/architecture/howto-components/howto-checkbox
   to: /web/fundamentals/building-components/examples/howto-checkbox
