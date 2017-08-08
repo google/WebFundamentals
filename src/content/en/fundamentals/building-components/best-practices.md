@@ -5,7 +5,7 @@ description: A checklist which breaks down all the things we think it takes to b
 {# wf_updated_on: 2017-01-10 #}
 {# wf_published_on: 2016-11-07 #}
 
-# Custom Element Checklist {: .page-title }
+# Custom Element Best Practices {: .page-title }
 
 Custom Elements allow you to extend HTML and define your own tags. They're an
 incredibly powerful feature, but they're also low-level, which means it's not
@@ -21,7 +21,7 @@ well behaved Custom Element.
   }
 </style>
 
-## Best practices {: #best-practices }
+## Checklist {: #checklist }
 
 ### Shadow DOM {: #shadow-dom }
 
@@ -39,6 +39,12 @@ well behaved Custom Element.
   applies to even simple elements like a checkbox or radio button. It might be
   the case that the only content inside of your shadow root will be the styles
   themselves.
+      </td>
+    </tr>
+    <tr>
+      <td><b>Example</b></td>
+      <td>
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
   </tbody>
@@ -61,6 +67,12 @@ well behaved Custom Element.
   situations where your element is detached and then reattached to the document.
       </td>
     </tr>
+    <tr>
+      <td><b>Example</b></td>
+      <td>
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element.
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -77,6 +89,12 @@ well behaved Custom Element.
   Children created by your element are part of its implementation and should be
   private. Without the protection of a shadow root, outside JavaScript may
   inadvertently interfere with these children.
+      </td>
+    </tr>
+    <tr>
+      <td><b>Example</b></td>
+      <td>
+  The <a href="/web/fundamentals/building-components/examples/howto-tabs"><code>&lt;howto-tabs&gt;</code></a> element.
       </td>
     </tr>
   </tbody>
@@ -103,6 +121,12 @@ well behaved Custom Element.
   should always set a default <code>display</code> value.
       </td>
     </tr>
+    <tr>
+      <td><b>Example</b></td>
+      <td>
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element.
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -126,6 +150,12 @@ well behaved Custom Element.
   attribute on your element to render it <code>display: none</code>. In addition
   to a default <code>display</code> style, add support for <code>hidden</code>
   with <code>:host([hidden]) { display: none }</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><b>Example</b></td>
+      <td>
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
   </tbody>
@@ -154,6 +184,12 @@ well behaved Custom Element.
   element to be interactive.
       </td>
     </tr>
+    <tr>
+      <td><b>Example</b></td>
+      <td>
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="/web/fundamentals/building-components/examples/howto-checkbox#dont-override">Don't override the page author.
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -174,6 +210,12 @@ well behaved Custom Element.
   Configuration can be passed in declaratively, via attributes, or imperatively
   via JavaScript properties. Ideally every attribute should also be linked to
   a corresponding property.
+      </td>
+    </tr>
+    <tr>
+      <td><b>Example</b></td>
+      <td>
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
   </tbody>
@@ -203,6 +245,12 @@ well behaved Custom Element.
   <code>currentTime</code> in a video player. Use your best judgment. If it
   seems like a likely a user will interact with a property or attribute, and
   it's not burdensome to reflect it, then do so.
+      </td>
+    </tr>
+    <tr>
+      <td><b>Example</b></td>
+      <td>
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="/web/fundamentals/building-components/examples/howto-checkbox#avoid-reentrancy">Avoid reentrancy issues</a>.
       </td>
     </tr>
   </tbody>
@@ -273,6 +321,12 @@ well behaved Custom Element.
   binding their properties to a model.
       </td>
     </tr>
+    <tr>
+      <td><b>Example</b></td>
+      <td>
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="/web/fundamentals/building-components/examples/howto-checkbox#lazy-properties">Make properties lazy</a>.
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -338,6 +392,12 @@ well behaved Custom Element.
   (the host knows the current state because it just set it). Dispatching events
   in response to a host setting a property may cause infinite loops with data
   binding systems.
+      </td>
+    </tr>
+    <tr>
+      <td><b>Example</b></td>
+      <td>
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="/web/fundamentals/building-components/examples/howto-checkbox#lazy-properties">Make properties lazy</a>.
       </td>
     </tr>
   </tbody>
