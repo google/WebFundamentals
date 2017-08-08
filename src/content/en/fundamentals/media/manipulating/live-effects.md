@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Many of today's most popular apps let you apply filters and effects to images or video.This article talks about how to implement these features on the open web.
+description: Many of today's most popular apps let you apply filters and effects to images or video. This article talks about how to implement these features on the open web.
 
 {# wf_updated_on: 2017-08-08 #}
 {# wf_published_on: 2017-08-08 #}
@@ -14,7 +14,7 @@ Many of today's most popular apps let you apply filters and effects to images or
 talks about how to implement these features on the open web.
 
 The process is basically the same for videos and images, but I'll cover some important
-video considerations at the end. Throughout the article you can assume that 'image' means 'image or
+video considerations at the end. Throughout the article you can assume that 'image' means 'image a or
 single frame of a video'
 
 ## How to get at the pixel data for an image
@@ -25,7 +25,7 @@ There are 3 basic categories of image manipulation that are common:
 - Whole image distortion, like cropping, skewing, stretching, lens effects, ripples.
 
 All of these involve getting at the actual pixel data of the source image and then creating a new
-image from it, and the only interface for doing that is with a canvas.
+image from it, and the only interface for doing that is a canvas.
 
 The really important choice, then, is whether to do the processing on the CPU, with a 2D canvas, or
 on the GPU, with WebGL.
@@ -55,9 +55,10 @@ Then you get an array of pixel values for the whole canvas.
     const pixels = imageData.data;
 
 At this point the `pixels` variable is a `Uint8ClampedArray` with a length of `width * height * 4`.
-The data is arranged so that every pixel in the image, starting at the top-left and working left to
-right, top to bottom, has 4 bytes of data. The bytes represent the amounts of red, green and blue as
-well as the alpha, or transparency.
+Every array element is one byte and every four elements in the array represents the color of one
+pixel. Each of the four elements represents amount of red, green, blue, and alpha (transparency)
+in that order. The pixels are ordered starting from the top-left corner and working left to right
+and top to bottom.
 
     pixels[0] = red value for pixel 0
     pixels[1] = green value for pixel 0
@@ -74,7 +75,7 @@ well as the alpha, or transparency.
     pixels[12] = red value for pixel 3
     ...
 
-To find the indexes for any given pixel from its coordinates, there is a simple formula.
+To find the index for any given pixel from its coordinates, there is a simple formula.
 
     const index = (x + y * imageWidth) * 4;
     const red = pixels[index];
@@ -170,7 +171,7 @@ to fragment shader code.
 
 ### Pixel Effects
 This is the simplest category to both understand and implement. All of these transformations take
-the color value of a single pixel and passes it into a function that will give you back another
+the color value of a single pixel and pass it into a function that will give you back another
 color value to use as the output.
 
 There are many variations on these operations that are more or less complicated. Some will take into
@@ -179,7 +180,8 @@ be dead simple ideas that give an effect that's mostly reasonable. Either way, t
 
 For example, a brightness control can be implemented by simply taking the red, green and blue values
 of the pixel and multiplying them by a brightness value. A brightness of 0 will make the image
-entirely black. A value of 1 will leave the image unchanged.
+entirely black. A value of 1 will leave the image unchanged. A value greater than 1 will make it
+brighter.
 
 For 2D canvas:
 
@@ -194,7 +196,7 @@ Note that the loop moves 4 bytes along at a time, but only changes three values 
 skips changing the alpha value. Also remember that a Uint8ClampedArray will round all values to
 integers, and clamp any value greater than 255.
 
-Some of these filters do take some extra information, such as the average luminance of the whole
+Some of these filters take extra information, such as the average luminance of the whole
 image, but these are things that can be calculated once for the whole image.
 
 One way of changing contrast, for example, can be to move each pixel towards  or away from some
@@ -210,8 +212,8 @@ Some effects use the color of neighboring pixels when deciding the color of the 
 This slightly changes how you do things in the 2D canvas case because you want to be able to read
 the *original* colors of the image, and the previous example was updating the pixels in place.
 
-This is easy enough, though. When you initially create your imageData object you can make a copy of
-the data.
+This is easy enough, though. When you initially create your image data object you can make a copy
+of the data.
 
     const originalPixels = new Uint8Array(imageData.data);
 
@@ -342,15 +344,11 @@ image.
 
 Canvas 2D:
 
-<pre class="prettyprint">
-context.drawImage(<strong>video</strong>, 0, 0);
-</pre>
+    context.drawImage(**video**, 0, 0);
 
 WebGL:
 
-<pre class="prettyprint">
-gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, <strong>video</strong>);
-</pre>
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, **video**);
 
 However, this will only use the *current* video frame. So if you wish to apply an effect to a
 playing video you need to use `drawImage`/`texImage2D` on each frame to grab a new video frame and
@@ -365,12 +363,12 @@ process it on each browser animation frame.
     }
 
 When working with video it becomes particularly important that your processing is fast. With a still
-image a user might not notices a delay of 100ms between clicking a button and an effect being
+image a user might not notice a delay of 100ms between clicking a button and an effect being
 applied. When animated, however, delays of only 16ms can cause visible jerkiness.
 
 ## Recommended reading
-- [WebGL Fundamentals](https://webglfundamentals.org/): a site that teaches WebGL
+- [WebGL Fundamentals](https://webglfundamentals.org/): a site that teached WebGL
 - [Kernel (image processing)](https://en.wikipedia.org/wiki/Kernel_(image_processing)): Wikipedia
   page that explains convolution filters
-- [Transformations](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations):
-  MDN article about 2D canvas transformations
+- [Transformations](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations)
+  : MDN article about 2D canvas transformations
