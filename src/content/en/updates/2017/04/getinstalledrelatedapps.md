@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Is your native app already installed? getInstalledRelatedApps is your friend.
 
 {# wf_published_on: 2017-04-28 #}
-{# wf_updated_on: 2017-04-28 #}
+{# wf_updated_on: 2017-07-31 #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 {# wf_tags: progressive-web-apps,chrome59 #}
 {# wf_featured_snippet: Is your native app already installed? getInstalledRelatedApps is your friend. #}
@@ -29,7 +29,7 @@ This new API lets you determine if your native app is installed on a device.
 
 Note: This API is behind an [Origin 
 Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/explainer.md), 
-this means that we are in an experiemental mode and are actively looking for 
+this means that we are in an experimental mode and are actively looking for 
 feedback. You have to [opt your 
 site](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md) 
 into this trial because it is not available broadly on the web. You can now 
@@ -230,7 +230,7 @@ If the user has installed the web app using the new Web APK functionality,
 it is possible to determine if your web app is installed. If you know the
 package name of your Web APK then you can use the
 `context.getPackageManager().getApplicationInfo()` API to determine if it
-is installed. Please note that this is experiemental.
+is installed. Please note that this is experimental.
 
 ### Not Working?
 

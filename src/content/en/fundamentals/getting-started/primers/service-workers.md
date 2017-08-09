@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features rely on.
 
 {# wf_published_on: 2014-12-01 #}
-{# wf_updated_on: 2017-02-22 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Service Workers: an Introduction {: .page-title }
@@ -84,7 +84,7 @@ occur when a network request or message is made from your page.
 Below is an overly simplified version of the service worker lifecycle on its
 first installation.
 
-![service worker lifecydle](imgs/sw-lifecycle.png)
+![service worker lifecycle](imgs/sw-lifecycle.png)
 
 
 ## Prerequisites
@@ -408,7 +408,7 @@ cookies. If you want credentials, instead call:
 
 
 This behaviour is on purpose, and is arguably better than XHR's more complex
-default of sending credentials if the URL is same-origin, but omiting them
+default of sending credentials if the URL is same-origin, but omitting them
 otherwise. Fetch's behaviour is more like other CORS requests, such as `<img
 crossorigin>`, which never sends cookies unless you opt-in with `<img
 crossorigin="use-credentials">`.
@@ -485,6 +485,6 @@ that you may find useful.
 
 ## Get help
 
-If you get stuck then please post your questions on Stackoverflow and use the
+If you get stuck then please post your questions on StackOverflow and use the
 '[service-worker](http://stackoverflow.com/questions/tagged/service-worker)'
 tag so that we can keep a track of issues and try and help as much as possible.

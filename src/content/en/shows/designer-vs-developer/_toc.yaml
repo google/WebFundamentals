@@ -3,18 +3,22 @@ toc:
     section:
     - title: 'Podcast'
       section:
-      - title: 'Creating a collaborative environment'
-        path: /web/shows/designer-vs-developer/podcast/DVDS1E01-creating-a-collaborative-environment
-      - title: 'Balancing creativity with user testing'
-        path: /web/shows/designer-vs-developer/podcast/DVDS1E02-balancing-creativity-with-user-testing
-      - title: 'Adopting the native language of the web'
-        path: /web/shows/designer-vs-developer/podcast/DVDS1E03-Adopting-the-native-language-of-the-web
-      - title: 'Are designers born or made?'
-        path: /web/shows/designer-vs-developer/podcast/DVDS1E04-are-designers-born-or-made
-      - title: 'Who is responsible for design?'
-        path: /web/shows/designer-vs-developer/podcast/DVDS1E05-who-is-responsible-for-design
+      - title: 'Designing for great performance'
+        path: /web/shows/designer-vs-developer/podcast/DVDS2E02-designing-a-great-performance  
+      - title: 'Becoming a creative coder'
+        path: /web/shows/designer-vs-developer/podcast/DVDS2E01-becoming-a-creative-coder   
       - title: 'Are existing design tools fit for purpose?'
         path: /web/shows/designer-vs-developer/podcast/DVDS1E06-are-design-tools-fit-for-purpose
+      - title: 'Who is responsible for design?'
+        path: /web/shows/designer-vs-developer/podcast/DVDS1E05-who-is-responsible-for-design
+      - title: 'Are designers born or made?'
+        path: /web/shows/designer-vs-developer/podcast/DVDS1E04-are-designers-born-or-made
+      - title: 'Adopting the native language of the web'
+        path: /web/shows/designer-vs-developer/podcast/DVDS1E03-Adopting-the-native-language-of-the-web
+      - title: 'Balancing creativity with user testing'
+        path: /web/shows/designer-vs-developer/podcast/DVDS1E02-balancing-creativity-with-user-testing
+      - title: 'Creating a collaborative environment'
+        path: /web/shows/designer-vs-developer/podcast/DVDS1E01-creating-a-collaborative-environment
     - title: Video
       path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ
       status: external

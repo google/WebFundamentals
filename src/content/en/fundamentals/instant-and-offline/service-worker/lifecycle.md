@@ -303,7 +303,7 @@ control clients. The promise you pass to `event.waitUntil()` lets the browser
 know when your install completes, and if it was successful.
 
 If your promise rejects, this signals the install failed, and the browser throws
-the service worker away. It'll never control clients. This means we can rely on
+the service worker away. It'll never control clients. This means we can't rely on
 "cat.svg" being present in the cache in our `fetch` events. It's a dependency.
 
 ### Activate
@@ -804,7 +804,7 @@ So, to enable as many patterns as we can, the whole update cycle is observable:
 
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       // This fires when the service worker controlling this page
-      // changes, eg a new worker has as skipped waiting and become
+      // changes, eg a new worker has skipped waiting and become
       // the new active worker.
     });
 

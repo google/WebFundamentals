@@ -38,7 +38,7 @@ const MEDIA_FILES = [
 ];
 const VALID_DATE_FORMATS = [
   'YYYY-MM-DD',
-  'YYYY-YY-YYTHH:mm:ssZ',
+  'YYYY-MM-DDTHH:mm:ssZ',
   'YYYY-MM-DDTHH:mm:ss.sssZ'
 ];
 const REMARK_WARNING_ONLY = [
@@ -125,8 +125,8 @@ let filesWithIssues = {};
  * Logs a message to the console
  *
  * @param {string} level ERROR or WARNING, the level of the error
- * @param {string} filename The file the issue occured in
- * @param {Object} position The line/column the error occured on
+ * @param {string} filename The file the issue occurred in
+ * @param {Object} position The line/column the error occurred on
  * @param {string} message The message to be displayed
  * @param {Object} extra Any extra information to show
  */
@@ -158,8 +158,8 @@ function logMessage(level, filename, position, message, extra) {
 /**
  * Logs an ERROR message to the console
  *
- * @param {string} filename The file the issue occured in
- * @param {Object} position The line/column the error occured on
+ * @param {string} filename The file the issue occurred in
+ * @param {Object} position The line/column the error occurred on
  * @param {string} message The message to be displayed
  * @param {Object} extra Any extra information to show
  */
@@ -174,8 +174,8 @@ function logError(filename, position, message, extra) {
 /**
  * Logs a WARNING message to the console
  *
- * @param {string} filename The file the issue occured in
- * @param {Object} position The line/column the error occured on
+ * @param {string} filename The file the issue occurred in
+ * @param {Object} position The line/column the error occurred on
  * @param {string} message The message to be displayed
  * @param {Object} extra Any extra information to show
  */
@@ -322,10 +322,9 @@ function getFiles() {
     });
   } else {
     gutil.log(' ', 'Searching for changed files');
-    // --diff-filter set to ignore deleted files as this will cause error on `testFile()`
-    let cmd = 'git --no-pager diff --name-only --diff-filter=ACMRTUXB ';
+    let cmd = 'git --no-pager diff --name-only ';
     if (IS_TRAVIS) {
-      cmd += 'FETCH_HEAD $(git merge-base FETCH_HEAD master)';
+      cmd += '$(git merge-base FETCH_HEAD master) FETCH_HEAD';
     } else {
       cmd += '$(git merge-base master HEAD)';
     }
@@ -640,12 +639,20 @@ function testMarkdown(filename, contents, options) {
       logError(filename, position, msg);
     });
 
-    // Warn on bad anchor tags
+    // Error on bad anchor tags
     matched = wfRegEx.getMatches(/{#\w+}/gm, contents);
     matched.forEach(function(match) {
       position = {line: getLineNumber(contents, match.index)};
-      msg = 'Unsuppored anchor style used, use `{: #anchor }`, found: ';
+      msg = 'Unsupported anchor style used, use `{: #anchor }`, found: ';
       msg += `\`${match[0]}\``;
+      logError(filename, position, msg);
+    });
+
+    // Error on script blocks in markdown
+    matched = wfRegEx.getMatches(/<\/?script/gm, contents);
+    matched.forEach(function(match) {
+      position = {line: getLineNumber(contents, match.index)};
+      msg = 'Unescaped script tag in markdown document, use &lt;script...';
       logError(filename, position, msg);
     });
 
@@ -698,7 +705,7 @@ function testMarkdown(filename, contents, options) {
     });
   })
   .catch(function(ex) {
-    let msg = `An exception occured in testMarkdown: ${ex}`;
+    let msg = `An exception occurred in testMarkdown: ${ex}`;
     logError(filename, null, msg, ex);
     return false;
   });
@@ -719,7 +726,7 @@ function testYAML(filename, contents) {
     resolve(true);
   })
   .catch(function(ex) {
-    let msg = `An exception occured in testYAML: ${ex}`;
+    let msg = `An exception occurred in testYAML: ${ex}`;
     logError(filename, null, msg, ex);
     return false;
   });
@@ -740,7 +747,7 @@ function testJSON(filename, contents) {
     resolve(true);
   })
   .catch(function(ex) {
-    let msg = `An exception occured in testJSON: ${ex}`;
+    let msg = `An exception occurred in testJSON: ${ex}`;
     logError(filename, null, msg, ex);
     return false;
   });
@@ -764,7 +771,7 @@ function testJavaScript(filename, contents, options) {
     resolve(true);
   })
   .catch(function(ex) {
-    let msg = `An exception occured in testJavaScript: ${ex}`;
+    let msg = `An exception occurred in testJavaScript: ${ex}`;
     logError(filename, null, msg, ex);
     return false;
   });
@@ -797,7 +804,7 @@ function testHTML(filename, contents, options) {
     resolve(true);
   })
   .catch(function(ex) {
-    let msg = `An exception occured in testHTML: ${ex}`;
+    let msg = `An exception occurred in testHTML: ${ex}`;
     logError(filename, null, msg, ex);
     return false;
   });
@@ -994,7 +1001,7 @@ function testFile(filename, opts) {
     });
   })
   .catch(function(ex) {
-    let msg = `A critical test exception occured: ${ex.message}`;
+    let msg = `A critical test exception occurred: ${ex.message}`;
     logError(filename, null, msg, ex);
   })
   .then(function(wasTested) {
@@ -1035,7 +1042,7 @@ gulp.task('test', function() {
     }));
   })
   .catch(function(ex) {
-    let msg = `A critical gulp task exception occured: ${ex.message}`;
+    let msg = `A critical gulp task exception occurred: ${ex.message}`;
     logError('gulp-tasks/test.js', null, msg, ex);
   })
   .then(printSummary)

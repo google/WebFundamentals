@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Create the best mobile media experience on the Web by following these best practises.
 
 {# wf_published_on: 2017-04-07 #}
-{# wf_updated_on: 2017-07-13 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_blink_components: Blink>Media #}
 
 # Mobile Web Video Playback {: .page-title }
@@ -306,7 +306,7 @@ we'll need the [Screen Orientation API]{: .external} which is not yet supported
 everywhere and still prefixed in some browsers at that time. Thus, this will be
 our first progressive enhancement.
 
-How doest this work? As soon as we detect the screen orientation changes, let's
+How does this work? As soon as we detect the screen orientation changes, let's
 request fullscreen if the browser window is in landscape mode (that is, its
 width is greater than its height). If not, let's exit fullscreen. That's all.
 
@@ -502,6 +502,27 @@ resources in an infinite scroll case.
           type="video/mp4">
 </video>
 
+### Play only one video at a time
+
+If there are more than one video on a page, I would suggest you only play one
+and pause the other ones automatically so that user doesn't have to hear
+multiple audio tracks playing simultaneously.
+
+    // Note: This array should be initialized once all videos have been added.
+    var videos = Array.from(document.querySelectorAll('video'));
+
+    videos.forEach(function(video) {
+      video.addEventListener('play', pauseOtherVideosPlaying);
+    });
+
+    function pauseOtherVideosPlaying(event) {
+      var videosToPause = videos.filter(function(video) {
+        return !video.paused && video != event.target;
+      });
+      // Pause all other videos currently playing.
+      videosToPause.forEach(function(video) { video.pause(); });
+    }
+
 ### Customize Media Notifications
 
 With the [Media Session API]{: .external}, you can also customize media
@@ -520,7 +541,7 @@ session metadata such as the title, artist, album name, and artwork with the
 [Media Session API]{: .external }.
 
 <pre class="prettyprint">
-playPauseButton.addEventListener('click', function() {
+playPauseButton.addEventListener('click', function(event) {
   event.stopPropagation();
   if (video.paused) {
     video.play()

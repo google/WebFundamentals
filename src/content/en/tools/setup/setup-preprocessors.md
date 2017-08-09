@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to set up CSS & JS preprocessors to help you code more efficiently.
 
-{# wf_updated_on: 2015-08-03 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2015-08-03 #}
 
 # Set Up CSS and JS Preprocessors {: .page-title }
@@ -179,4 +179,4 @@ Head over to [Edit Sass, Less or Stylus](/web/tools/chrome-devtools/inspect-styl
 
 ### Editing and debugging preprocessed JavaScript
 
-Learn more about how to debug manified, compiled or transpiled JavaScript in the Sources Panel in [Map Preprocessed Code to Source Code](/web/tools/chrome-devtools/debug/readability/source-maps).
+Learn more about how to debug minified, compiled or transpiled JavaScript in the Sources Panel in [Map Preprocessed Code to Source Code](/web/tools/chrome-devtools/debug/readability/source-maps).

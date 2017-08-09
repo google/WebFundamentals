@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-03 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-06-30 #}
 
 # How Push Works {: .page-title }
@@ -66,7 +66,7 @@ Some questions you might be asking yourself:
 
 ### Who and What is the Push Service?
 
-A push service recieves a network request, validates it and delivers a push message to the appropriate browser. If the browser is offline, the message is queued until the the browser comes online.
+A push service receives a network request, validates it and delivers a push message to the appropriate browser. If the browser is offline, the message is queued until the the browser comes online.
 
 Each browser can use any push service they want, it's something developers have no control
 over. This isn't a problem because every push service expects the **same** API call. Meaning
