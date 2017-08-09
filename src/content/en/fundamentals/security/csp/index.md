@@ -110,8 +110,8 @@ fonts could be enabled via `font-src https://themes.googleusercontent.com`.
 This directive applies to `<frame>`, `<iframe>`, `<embed>`, and `<applet>` tags.
 This directive can't be used in `<meta>` tags and applies only to non-HTML
 resources.
-* **`frame-src`** was deprecated in level 2, but appears not to be in level 3.
-  Exactly how this will work is still behing hashed out.
+* **`frame-src`** was deprecated in level 2, but is restored in level 3. If not
+present it still falls back to  `child-src` as before.
 * **`img-src`** defines the origins from which images can be loaded.
 * **`media-src`** restricts the origins allowed to deliver video and audio.
 * **`object-src`** allows control over Flash and other plugins.
@@ -473,8 +473,8 @@ includes a script from `https://apis.google.com`, and embeds an `<iframe>` from
 origins in order to embed the button. A minimal policy would be `script-src
 https://apis.google.com; child-src https://plusone.google.com`. You also need
 to ensure that the snippet of JavaScript that Google provides is pulled out into
-an external JavaScript file. If you have an existing policy using `frame-src`,
-you were required to change it to `child-src` for CSP Level 2. This may change
+an external JavaScript file. If you had a Level 1-based policy using `frame-src`
+Level 2 required you to change it to `child-src`. This is no longer necessary
 in CSP Level 3.
 
 * Facebook's [Like button](//developers.facebook.com/docs/plugins/like-button){: .external }
