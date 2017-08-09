@@ -40,3 +40,7 @@ consectetur. Etiam eleifend eget nisi a faucibus.
 Sed porttitor ex eget dolor fringilla, eget rutrum odio tempus. Curabitur
 feugiat vitae ex eu tempor. Praesent fermentum leo quis tellus feugiat
 scelerisque vitae at dolor. 
+
+<script>
+  alert('hello world');
+</script>
