@@ -14,8 +14,8 @@ description: A round up of the deprecations and removals in Chrome 61 to help yo
 
 In nearly every version of Chrome, we see a significant number of updates and
 improvements to the product, its performance, and also capabilities of the Web
-Platform. This article describes the deprecations and removals in Chrome 60,
-which is in beta as of June 8. This list is subject to change at any time.
+Platform. This article describes the deprecations and removals in Chrome 61,
+which is in beta as of August 3. This list is subject to change at any time.
 
 ## Security and Privacy
 
