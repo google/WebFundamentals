@@ -1,25 +1,26 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Many of today's most popular apps let you apply filters and effects to images or video. This article talks about how to implement these features on the open web.
+description: Many of today's most popular apps let you apply filters and effects to images or video. This article shows how to implement these features on the open web.
 
 {# wf_updated_on: 2017-08-08 #}
 {# wf_published_on: 2017-08-08 #}
 {# wf_blink_components: Blink>WebGL, Blink>Canvas #}
 
-# Live effects for images and video {: .page-title }
+# Real-Time Effects For Images and Video {: .page-title }
 
 {% include "web/_shared/contributors/mscales.html" %}
 
 Many of today's most popular apps let you apply filters and effects to images or video. This article
-talks about how to implement these features on the open web.
+shows how to implement these features on the open web.
 
 The process is basically the same for videos and images, but I'll cover some important
-video considerations at the end. Throughout the article you can assume that 'image' means 'image a or
-single frame of a video'
+video considerations at the end. Throughout the article you can assume that 'image' means 'image or
+a single frame of a video'
 
 ## How to get at the pixel data for an image
 
 There are 3 basic categories of image manipulation that are common:
+
 - Pixel effects like contrast, brightness, warmth, sepia tone, saturation.
 - Multi-pixel effects, called convolution filters, like sharpening, edge detection, blur.
 - Whole image distortion, like cropping, skewing, stretching, lens effects, ripples.
@@ -60,20 +61,22 @@ pixel. Each of the four elements represents amount of red, green, blue, and alph
 in that order. The pixels are ordered starting from the top-left corner and working left to right
 and top to bottom.
 
-    pixels[0] = red value for pixel 0
-    pixels[1] = green value for pixel 0
-    pixels[2] = blue value for pixel 0
-    pixels[3] = alpha value for pixel 0
-    pixels[4] = red value for pixel 1
-    pixels[5] = green value for pixel 1
-    pixels[6] = blue value for pixel 1
-    pixels[7] = alpha value for pixel 1
-    pixels[8] = red value for pixel 2
-    pixels[9] = green value for pixel 2
-    pixels[10] = blue value for pixel 2
-    pixels[11] = alpha value for pixel 2
-    pixels[12] = red value for pixel 3
-    ...
+<pre>
+pixels[0] = red value for pixel 0
+pixels[1] = green value for pixel 0
+pixels[2] = blue value for pixel 0
+pixels[3] = alpha value for pixel 0
+pixels[4] = red value for pixel 1
+pixels[5] = green value for pixel 1
+pixels[6] = blue value for pixel 1
+pixels[7] = alpha value for pixel 1
+pixels[8] = red value for pixel 2
+pixels[9] = green value for pixel 2
+pixels[10] = blue value for pixel 2
+pixels[11] = alpha value for pixel 2
+pixels[12] = red value for pixel 3
+...
+</pre>
 
 To find the index for any given pixel from its coordinates, there is a simple formula.
 
@@ -91,35 +94,36 @@ corner of the canvas
     context.putImageData(imageData, 0, 0);
 
 ### WebGL
-Anyone who has worked with WebGL before will probably realise that I can't go into the full detail
-of how this works in a single article. If you'd like to learn more about WebGL, check out the
-recommended reading at the end of this article.
+WebGL is a big topic, certainly too big to do it justice in a single article. If you'd like to learn
+more about WebGL, check out the [recommended reading](#recommended_reading) at the end of this
+article.
 
-However, you can take a general overview of what needs to be done in the case of manipulating a
+However, here is a very brief introduction to what needs to be done in the case of manipulating a
 single image.
 
 One of the most important things to remember about WebGL is that it is **not** a 3D graphics API. In
 fact, WebGL (and OpenGL) is good at exactly one thing - drawing triangles. In your application you
-must work out describe what you *actually* want to draw in terms of triangles. In the case of a 2D
+must describe what you *actually* want to draw in terms of triangles. In the case of a 2D
 image, that's very simple, because a rectangle is two similar right-angled triangles, arranged so
 that their hypotenuses are in the same place.
 
 <img src="images/quad-from-triangles.png" class="attempt-right" />
 
 The basic process is:
-- Send data to the GPU that describes the vertices (points) of the triangles
-- Send your source image to the GPU as a texture (image)
-- Create a 'vertex shader'
-- Create a 'fragment shader'
-- Set some shader variables, called 'uniforms'
-- Run the shaders
 
-You allocate some memory on the graphics card called a vertex buffer, and you store data in it that
-describes each point of each triangle. You can also set some variables, called uniforms, that are
-global values through both shaders.
+- Send data to the GPU that describes the vertices (points) of the triangles.
+- Send your source image to the GPU as a texture (image).
+- Create a 'vertex shader'.
+- Create a 'fragment shader'.
+- Set some shader variables, called 'uniforms'.
+- Run the shaders.
+
+Let's go into detail. Start by allocating some memory on the graphics card called a vertex buffer.
+You store data in it that describes each point of each triangle. You can also set some variables,
+called uniforms, that are global values through both shaders.
 
 A vertex shader uses data from the vertex buffer to calculate where on the screen to draw the three
-points of a triangle.
+points of each triangle.
 
 Now the GPU knows which pixels within the canvas need to be drawn. The fragment shader is called
 once per pixel, and needs to return the color that should be drawn to the screen. The fragment
@@ -131,6 +135,8 @@ using two floating-point coordinates between 0 (left or bottom) and 1 (right or 
 If you want to read the texture based on pixel coordinates then you need to pass the size of the
 texture in pixels as a uniform vector so that you can do the conversion for each pixel.
 
+**fragment shader**
+
     // ...
 
     varying vec2 pixelCoords;
@@ -140,43 +146,43 @@ texture in pixels as a uniform vector so that you can do the conversion for each
 
     main() {
       vec2 textureCoords = pixelCoords / textureSize;
-
-      gl_FragColor = texture2D(textureSampler, textureCoords);
+      vec4 textureColor = texture2D(textureSampler, textureCoords);
+      gl_FragColor = textureColor;
 
       // ...
     }
 
 Pretty much every kind of 2D image manipulation that you might want to do can be done in the
-fragment shader, and all of the other WebGL parts can be abstracted away. You can see
-[the abstraction layer](https://github.com/GoogleChrome/snapshot/blob/master/src/image-shader.ts)
-(in TypeScript) that is being in used in one of our sample applications if you'd like to see the
-details.
+fragment shader, and all of the other WebGL parts can be abstracted away. You can see [the
+abstraction layer](https://github.com/GoogleChrome/snapshot/blob/master/src/image-shader.ts) (in
+TypeScript) that is being in used in one of our sample applications if you'd like to see an example.
 
 ### Which should I use?
 For pretty much any professional quality image manipulation, you should use WebGL. There is no
 getting away from the fact that this kind of work is the whole reason GPUs were invented. You can
-process images much, much faster on the GPU, which is essential for any real-time effects.
+process images an order of magnitude faster on the GPU, which is essential for any real-time
+effects.
+
+The way that graphics cards work means that every pixel can be calculated in it's own thread. Even
+if you parallelize your code CPU-based code with `Worker`s, your GPU may have 100s of times as many
+specialized cores as your CPU has general cores.
 
 2D canvas is much simpler, so is great for prototyping and may be fine for one-off transformations.
 However, there are plenty of abstractions around for WebGL that mean you can get the performance
 boost without needing to learn the details.
 
-If even if you parallelize your code with `Worker`s, your GPU may have 100s of times as many
-specialized cores as your CPU has general cores.
+Examples in this article are mostly for 2D canvas to make explanations easier, but the principles
+should translate pretty easily to fragment shader code.
 
-Examples in this article are mostly for 2D canvas, but the principles should translate pretty easily
-to fragment shader code.
+## Effect types
 
-## Effect Types
-
-### Pixel Effects
+### Pixel effects
 This is the simplest category to both understand and implement. All of these transformations take
-the color value of a single pixel and pass it into a function that will give you back another
-color value to use as the output.
+the color value of a single pixel and pass it into a function that returns another color value.
 
 There are many variations on these operations that are more or less complicated. Some will take into
 account how the human brain processes visual information based on decades of research, and some will
-be dead simple ideas that give an effect that's mostly reasonable. Either way, the idea is the same.
+be dead simple ideas that give an effect that's mostly reasonable.
 
 For example, a brightness control can be implemented by simply taking the red, green and blue values
 of the pixel and multiplying them by a brightness value. A brightness of 0 will make the image
@@ -192,9 +198,17 @@ For 2D canvas:
       imageData.data[i + 2] = imageData.data[i + 2] * brightness;
     }
 
-Note that the loop moves 4 bytes along at a time, but only changes three values - this is because it
-skips changing the alpha value. Also remember that a Uint8ClampedArray will round all values to
-integers, and clamp any value greater than 255.
+Note that the loop moves 4 bytes along at a time, but only changes three values - this is because
+this particular transformation doesn't change the alpha value. Also remember that a
+Uint8ClampedArray will round all values to integers, and clamp values to be between 0 and 255.
+
+WebGL fragment shader:
+
+    float brightness = 1.1;
+    gl_FragColor = textureColor;
+    gl_FragColor.rgb *= brightness;
+
+Similarly, only the RGB part of the output color is multiplied for this particular transformation.
 
 Some of these filters take extra information, such as the average luminance of the whole
 image, but these are things that can be calculated once for the whole image.
@@ -217,12 +231,13 @@ of the data.
 
     const originalPixels = new Uint8Array(imageData.data);
 
-Note that in the WebGL case it isn't actually possible to query the **new** color of another pixel
-from inside the shader, so you always get the original.
+For the WebGL case you don't need to make any changes, since the shader does not write to the input
+texture.
 
-The most common category of multi-pixel effect is called a convolution filter. You take each nearby
-pixel, including the current one, and add some multiple of the color, called the weight, to a total.
-Then you divide the result by the sum of the weights.
+The most common category of multi-pixel effect is called a [convolution
+filter](https://en.wikipedia.org/wiki/Kernel_(image_processing)#Convolution). A convolution filter
+is a weighted sum of a pixel and its neighbors. Each pixel in the output depends on mulitiple pixels
+in the input.
 
 The weights can be represented by a matrix, called a kernel, with the central value corresponding to
 the current pixel. For example, this is the kernel for a 3x3 Gaussian blur.
@@ -268,8 +283,8 @@ the nearby pixels bleeding in.
       }
     }
 
-This gives the basic idea, but there are many guides out there that will go into much more
-detail, and list many other useful kernels.
+This gives the basic idea, but there are [guides out there](http://setosa.io/ev/image-kernels/) that
+will go into much more detail, and list many other useful kernels.
 
 ### Whole image
 Some whole image transformations are simple. In a 2D canvas, cropping and scaling is a simple case
@@ -344,11 +359,15 @@ image.
 
 Canvas 2D:
 
-    context.drawImage(**video**, 0, 0);
+<pre class="prettyprint">
+context.drawImage(<strong>video</strong>, 0, 0);
+</pre>
 
 WebGL:
 
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, **video**);
+<pre class="prettyprint">
+gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, <strong>video</strong>);
+</pre>
 
 However, this will only use the *current* video frame. So if you wish to apply an effect to a
 playing video you need to use `drawImage`/`texImage2D` on each frame to grab a new video frame and
@@ -367,8 +386,10 @@ image a user might not notice a delay of 100ms between clicking a button and an 
 applied. When animated, however, delays of only 16ms can cause visible jerkiness.
 
 ## Recommended reading
-- [WebGL Fundamentals](https://webglfundamentals.org/): a site that teached WebGL
+- [WebGL Fundamentals](https://webglfundamentals.org/): a site that teaches WebGL
 - [Kernel (image processing)](https://en.wikipedia.org/wiki/Kernel_(image_processing)): Wikipedia
   page that explains convolution filters
-- [Transformations](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations)
-  : MDN article about 2D canvas transformations
+- [Image Kernels Explained Visually](http://setosa.io/ev/image-kernels/): Descriptions of a few
+  kernels with interactive demos.
+- [Transformations](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations):
+  MDN article about 2D canvas transformations
