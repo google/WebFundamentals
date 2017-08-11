@@ -13,9 +13,9 @@ toc:
     section:
     - title: "Overview"
       path: /web/fundamentals/building-components/examples/
-    - title: "Checkbox"
+    - title: "<howto-checkbox>"
       path: /web/fundamentals/building-components/examples/howto-checkbox
-    - title: "Tooltip"
+    - title: "<howto-tooltip>"
       path: /web/fundamentals/building-components/examples/howto-tooltip
   - title: "Glossary"
     path: /web/fundamentals/building-components/glossary

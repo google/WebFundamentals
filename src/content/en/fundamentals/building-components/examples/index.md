@@ -16,9 +16,6 @@ You can read through the densely commented implementation of different
 components and hopefully learn from them. Note that they are explicitly **NOT**
 a UI library and should **NOT** be used in production.
 
-Note: Howto: Components is currently under development. We will start adding
-articles soon.
-
 ## Goals
 
 Our aim is to demonstrate best practices for writing robust components that are

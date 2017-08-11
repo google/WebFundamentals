@@ -187,7 +187,7 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="/web/fundamentals/building-components/examples/howto-checkbox#dont-override">Don't override the page author.
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="#dont-override">Don't override the page author.
       </td>
     </tr>
   </tbody>
@@ -250,7 +250,7 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="/web/fundamentals/building-components/examples/howto-checkbox#avoid-reentrancy">Avoid reentrancy issues</a>.
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="#avoid-reentrancy">Avoid reentrancy issues</a>.
       </td>
     </tr>
   </tbody>
@@ -324,7 +324,7 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="/web/fundamentals/building-components/examples/howto-checkbox#lazy-properties">Make properties lazy</a>.
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="#lazy-properties">Make properties lazy</a>.
       </td>
     </tr>
   </tbody>
@@ -397,8 +397,131 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="/web/fundamentals/building-components/examples/howto-checkbox#lazy-properties">Make properties lazy</a>.
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
   </tbody>
 </table>
+
+## Explainers {: #explainers }
+
+### Don't override the page author {: #dont-override }
+
+It's possible that a developer using your element might want to override some of
+its initial state. For example, changing its ARIA `role` or focusablity with
+`tabindex`. Check to see if these and any other global attributes have been set,
+before applying your own values.
+
+```js
+connectedCallback() {
+  if (!this.hasAttribute('role'))
+    this.setAttribute('role', 'checkbox');
+  if (!this.hasAttribute('tabindex'))
+    this.setAttribute('tabindex', 0);
+```
+
+### Make properties lazy {: #lazy-properties }
+
+A developer might attempt to set a property on your element before its
+definition has been loaded. This is especially true if the developer is using a
+framework which handles loading components, stamping them to the page, and
+binding their properties to a model.
+
+```html
+<!--
+Here Angular is declaratively binding its model's isChecked property to the
+checkbox's checked property. If the definition for howto-checkbox was lazy
+loaded it's possible that Angular might attempt to set the checked property
+before the element has upgraded.
+-->
+<howto-checkbox [checked]="defaults.isChecked"></howto-checkbox>
+```
+
+A Custom Element should handle this scenario by checking if any properties have
+already been set on its instance. The `<howto-checkbox>` demonstrates this
+pattern using a method called `_upgradeProperty`.
+
+```js
+connectedCallback() {
+  ...
+  this._upgradeProperty('checked');
+}
+
+_upgradeProperty(prop) {
+  if (this.hasOwnProperty(prop)) {
+    let value = this[prop];
+    delete this[prop];
+    this[prop] = value;
+  }
+}
+```
+
+`_upgradeProperty` captures the value from the unupgraded instance and deletes
+the property so it does not shadow the Custom Element's own property setter.
+This way, when the element's definition does finally load, it can immediately
+reflect the correct state.
+
+### Avoid reentrancy issues {: #avoid-reentrancy }
+
+It's tempting to use the `attributeChangedCallback` to reflect state to an
+underlying property, for example:
+
+```js
+// When the [checked] attribute changes, set the checked property to match.
+attributeChangedCallback(name, oldValue, newValue) {
+  if (name === 'checked')
+    this.checked = newValue;
+}
+```
+
+But this can create an infinite loop if the property setter also reflects to
+the attribute.
+
+```js
+set checked(value) {
+  const isChecked = Boolean(value);
+  if (isChecked)
+    // OOPS! This will cause an infinite loop because it triggers the
+    // attributeChangedCallback() which then sets this property again.
+    this.setAttribute('checked', '');
+  else
+    this.removeAttribute('checked');
+}
+```
+
+An alternative is to allow the property setter to reflect to the attribute, and
+have the getter determine its value based on the attribute.
+
+```js
+set checked(value) {
+  const isChecked = Boolean(value);
+  if (isChecked)
+    this.setAttribute('checked', '');
+  else
+    this.removeAttribute('checked');
+}
+
+get checked() {
+  return this.hasAttribute('checked');
+}
+```
+
+In this example, adding or removing the attribute will also effectively set the
+property.
+
+Finally, the `attributeChangedCallback` can be used to just handle side effects
+like applying ARIA states.
+
+```js
+attributeChangedCallback(name, oldValue, newValue) {
+  const hasValue = newValue !== null;
+  switch (name) {
+    case 'checked':
+      // Note the attributeChangedCallback is only handling the *side effects*
+      // of setting the attribute.
+      this.setAttribute('aria-checked', hasValue);
+      break;
+    ...
+  }
+}
+```

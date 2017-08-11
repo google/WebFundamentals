@@ -34,9 +34,10 @@ the test of time?
     </div>
   </a>
   <p>
-    A great user experience can be difficult to attain but is achievable
-    if the design process is broken into smaller chunks. This article runs through
-    the basics of UX design, based on Google's Design Sprint methodology. 
+    Shadow DOM is a web standard that offers component style and markup
+    encapsulation. It is critically important piece in the Web Components story
+    as it ensures that a component will work in any environment, regardless of
+    what other CSS or JavaScript is at play on the page.
     <a href="/web/fundamentals/building-components/shadowdom">Learn more</a>
   </p>
 </div>
@@ -51,9 +52,11 @@ the test of time?
     </div>
   </a>
   <p>
-    Information entry happens more often on mobile than on desktop these days.
-    Mobile forms are hard to fill out. Learn how to make responses to entry
-    and touch both intuitive and beautiful. 
+    Because Custom Elements and Shadow DOM are low-level primitives, it's not
+    always clear how best to combine them to create a component that is robust
+    and works well in many different environments. While you really can do just
+    about anything with these APIs, here are a few best practices to help ensure
+    your components work well anywhere.
     <a href="/web/fundamentals/building-components/best-practices">Learn more</a>
   </p>
 </div>
@@ -66,9 +69,10 @@ the test of time?
     </div>
   </a>
   <p>
-    Modern browsers make it easy to customize components like icons and address
-    bar color, and even add things like custom tiles. Simple tweaks can
-    increase engagement and bring users back to your site.<br>
+    HowTo-Components are a set of elements which demonstrate Custom Element
+    and Shadow DOM best practices. These elements are not intended to be used
+    in production, but are instead presented as a teaching aide to help map
+    best practice suggestions to actual implementations.
     <a href="/web/fundamentals/building-components/examples/">Learn more</a>
   </p>
 </div>
@@ -83,9 +87,9 @@ the test of time?
     </div>
   </a>
   <p>
-    Information entry happens more often on mobile than on desktop these days.
-    Mobile forms are hard to fill out. Learn how to make responses to entry
-    and touch both intuitive and beautiful. 
-    <a href="/web/fundamentals/building-components/glossary">Create amazing forms</a><br>
+    Because Web Components are a new set of standards, you may not be familiar
+    with all of the terminology used. Learn the lingo so you can sling
+    Web Components with the best of 'em.
+    <a href="/web/fundamentals/building-components/glossary">Learn more</a><br>
   </p>
 </div>
