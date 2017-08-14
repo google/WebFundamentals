@@ -236,20 +236,26 @@ texture.
 
 The most common category of multi-pixel effect is called a [convolution
 filter](https://en.wikipedia.org/wiki/Kernel_(image_processing)#Convolution). A convolution filter
-is a weighted sum of a pixel and its neighbors. Each pixel in the output depends on mulitiple pixels
-in the input.
+uses several pixels from the input image to calculate the color of each pixel in the input image.
+The level of influence that each input pixel has on the output is called a *weight*.
 
-The weights can be represented by a matrix, called a kernel, with the central value corresponding to
-the current pixel. For example, this is the kernel for a 3x3 Gaussian blur.
+The weights can be represented by a matrix, called a kernel, with the central value corresponding
+to the current pixel. For example, this is the kernel for a 3x3 Gaussian blur.
 
     | 0  1  0 |
     | 1  4  1 |
     | 0  1  0 |
 
-So to calculate the output pixel you take the colors of the pixels above, below, to the left and to
-the right and sum them all together with four times the value of the current pixel. Then you divide
-the result by 8. You can see how the result will be a pixel that is mostly the original, but with
-the nearby pixels bleeding in.
+So let's say that you want to calculate the output color of the pixel at (23, 19). Take the 8
+pixels surrounding (23, 19) as well as the pixel itself, and multiply the color values for each of
+them by the corresponding weight.
+
+    (22, 18) x 0    (23, 18) x 1    (24, 18) x 0
+    (22, 19) x 1    (23, 19) x 4    (24, 19) x 1
+    (22, 20) x 0    (23, 20) x 1    (24, 20) x 0
+
+Sum them all together then divide the result by 8, which is the sum of the weights. You can see how
+the result will be a pixel that is mostly the original, but with the nearby pixels bleeding in.
 
     const kernel = [[0, 1, 0],
                     [1, 4, 1],
