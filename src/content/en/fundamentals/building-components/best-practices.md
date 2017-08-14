@@ -4,6 +4,7 @@ description: A checklist which breaks down all the things we think it takes to b
 
 {# wf_updated_on: 2017-08-14 #}
 {# wf_published_on: 2017-08-14 #}
+{# wf_blink_components: Blink>DOM #}
 
 # Custom Element Best Practices {: .page-title }
 

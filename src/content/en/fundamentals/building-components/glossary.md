@@ -4,6 +4,7 @@ description: "HowTo: Components"
 
 {# wf_updated_on: 2017-08-14 #}
 {# wf_published_on: 2017-08-14 #}
+{# wf_blink_components: Blink>DOM #}
 
 # Glossary {: .page-title }
 {% include "web/_shared/contributors/robdodson.html" %}

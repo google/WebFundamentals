@@ -4,6 +4,7 @@ description: Components are the building blocks of modern web applications. What
 
 {# wf_updated_on: 2017-08-14 #}
 {# wf_published_on: 2017-08-14 #}
+{# wf_blink_components: Blink>DOM #}
 
 # Building Components {: .page-title }
 
