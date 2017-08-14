@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: "HowTo: Components"
 
-{# wf_updated_on: 2017-06-12 #}
+{# wf_updated_on: 2017-08-14 #}
 {# wf_published_on: 2017-04-06 #}
 # HowTo: Components – Overview {: .page-title }
 {% include "web/_shared/contributors/ewagasperowicz.html" %}

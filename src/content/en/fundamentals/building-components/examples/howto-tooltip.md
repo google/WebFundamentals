@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2017-08-14 #}
 {# wf_published_on: 2017-04-06 #}
 
 # HowTo: Components – howto-tooltip {: .page-title }
@@ -21,25 +21,6 @@ The element that triggers the tooltip references the tooltip element with
 
 The element self-applies the role `tooltip` and sets `tabindex` to -1, as the
 tooltip itself can never be focused.
-
-## Tips and best practices {: #tips-best-practices }
-
-### Don't override the page author {: #dont-override }
-
-It's possible that a developer using this element might want to give it a
-different role, for example, `role="switch"`. Similarly they might want the
-control to not be focusable just yet, so they might set `tabindex="-1"`. It's
-important to respect the developer's wishes and not surprise them by overriding
-their configuration. For this reason, the element checks to see if those
-attributes have been set, before applying its own values.
-
-```js
-connectedCallback() {
-  if (!this.hasAttribute('role'))
-    this.setAttribute('role', 'checkbox');
-  if (!this.hasAttribute('tabindex'))
-    this.setAttribute('tabindex', 0);
-```
 
 ## References
 
@@ -84,8 +65,7 @@ limitations under the License.
 </div>
 
 
-<script src="https://cdn.rawgit.com/webcomponents/custom-elements/master/custom-elements.min.js"></script>
-<script src="https://cdn.rawgit.com/webcomponents/shadydom/master/shadydom.min.js"></script>
+<script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/d5b7ca65/webcomponents-sd-ce.js"></script>
 <script>
   devsite.framebox.AutoSizeClient.initAutoSize(true);
   (function() {

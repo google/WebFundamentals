@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A checklist which breaks down all the things we think it takes to be a well behaved Custom Element.
 
-{# wf_updated_on: 2017-01-10 #}
-{# wf_published_on: 2016-11-07 #}
+{# wf_updated_on: 2017-08-14 #}
+{# wf_published_on: 2017-08-14 #}
 
 # Custom Element Best Practices {: .page-title }
 
@@ -89,12 +89,6 @@ well behaved Custom Element.
   Children created by your element are part of its implementation and should be
   private. Without the protection of a shadow root, outside JavaScript may
   inadvertently interfere with these children.
-      </td>
-    </tr>
-    <tr>
-      <td><b>Example</b></td>
-      <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-tabs"><code>&lt;howto-tabs&gt;</code></a> element.
       </td>
     </tr>
   </tbody>

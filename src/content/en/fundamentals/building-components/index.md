@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Components are the building blocks of modern web applications. What best practices should you follow when building your own components so they can stand the test of time?
 
-{# wf_updated_on: 2017-08-10 #}
-{# wf_published_on: 2017-08-10 #}
+{# wf_updated_on: 2017-08-14 #}
+{# wf_published_on: 2017-08-14 #}
 
 # Building Components {: .page-title }
 
