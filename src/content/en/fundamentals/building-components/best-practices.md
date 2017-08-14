@@ -44,7 +44,8 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element.
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  <code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
   </tbody>
@@ -70,7 +71,8 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element.
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  <code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
   </tbody>
@@ -118,7 +120,8 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element.
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  <code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
   </tbody>
@@ -139,7 +142,8 @@ well behaved Custom Element.
   A Custom Element with a default <code>display</code> style, e.g.
   <code>:host { display: block }</code>, will override the lower specificity
   built-in
-  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden"><code>hidden</code> attribute</a>.
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden">
+  <code>hidden</code> attribute</a>.
   This may surprise developers who expect setting the <code>hidden</code>
   attribute on your element to render it <code>display: none</code>. In addition
   to a default <code>display</code> style, add support for <code>hidden</code>
@@ -149,7 +153,8 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element.
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  <code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
   </tbody>
@@ -181,7 +186,9 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="#dont-override">Don't override the page author.
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  <code>&lt;howto-checkbox&gt;</code></a> element. Further explained in
+  <a href="#dont-override">Don't override the page author.
       </td>
     </tr>
   </tbody>
@@ -209,7 +216,8 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element.
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  <code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
   </tbody>
@@ -244,7 +252,9 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="#avoid-reentrancy">Avoid reentrancy issues</a>.
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  <code>&lt;howto-checkbox&gt;</code></a> element. Further explained in
+  <a href="#avoid-reentrancy">Avoid reentrancy issues</a>.
       </td>
     </tr>
   </tbody>
@@ -318,7 +328,9 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element. Further explained in <a href="#lazy-properties">Make properties lazy</a>.
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  <code>&lt;howto-checkbox&gt;</code></a> element. Further explained in
+  <a href="#lazy-properties">Make properties lazy</a>.
       </td>
     </tr>
   </tbody>
@@ -391,7 +403,8 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox"><code>&lt;howto-checkbox&gt;</code></a> element.
+  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  <code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
   </tbody>
