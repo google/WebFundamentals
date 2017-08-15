@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-06-14T20:48:00Z #}
+{# wf_updated_on: 2017-07-12T20:09:18Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -307,7 +307,7 @@ Finally, treat every attribute of the notification other than `title` and `body`
 
 Button labels should be clear and concise. Although action buttons can have images, not every system can display them. 
 
-Also, don't rely on vibrations to notify the user. Many systems can't vibrate, or won't vibrate if the user has their device volume muted..
+Also, don't rely on vibrations to notify the user. Many systems can't vibrate, or won't vibrate if the user has their device volume muted.
 
 <div id="pushapi"></div>
 
@@ -335,7 +335,16 @@ There are many moving parts to web push that involve client-side management and 
 
 Let's walk through an overview of how web push works.
 
-Each browser manages push notifications through their own system, called a "push service". When the user grants permission for Push on your site, you subscribe the app to the browser's push service. This creates a special subscription object that contains the "endpoint URL" of the push service, which is different for each browser, and a public key. You send your push messages to this URL, encrypted with the public key, and the push service sends it to the right client.
+Each browser manages push notifications through their own system, called a "push service". When the user grants permission for Push on your site, you can then subscribe the app to the browser's push service. This creates a special subscription object that contains the "endpoint URL" of the push service, which is different for each browser, and a public key (see the example below). You send your push messages to this URL, encrypted with the public key, and the push service sends it to the right client. A typical subscription object looks like this:
+
+```
+{"endpoint":"https://fcm.googleapis.com/fcm/send/dpH5lCsTSSM:APA91bHqjZxM0VImWWqDRN7U0a3AycjUf4O-byuxb_wJsKRaKvV_iKw56s16ekq6FUqoCF7k2nICUpd8fHPxVTgqLunFeVeB9lLCQZyohyAztTH8ZQL9WCxKpA6dvTG_TUIhQUFq_n",
+"keys": {
+    "p256dh":"BLQELIDm-6b9Bl07YrEuXJ4BL_YBVQ0dvt9NQGGJxIQidJWHPNa9YrouvcQ9d7_MqzvGS9Alz60SZNCG3qfpk=",
+    "auth":"4vQK-SvRAN5eo-8ASlrwA=="
+    }
+}
+```
 
 How does the push service know which client to send the message to? The endpoint URL contains a unique identifier. This identifier is used to route the message that you send to the correct device, and when processed by the browser, identifies which service worker should handle the request.
 
@@ -505,7 +514,7 @@ For Chrome to route FCM messages to the correct service worker, it needs to know
 
 
 
-Note: The <code>gcm_sender_id</code> is required for Chrome prior to version 52, Opera Android, and Samsung Browser.
+Note: The <code>gcm_sender_id</code> is required for Chrome prior to version 52, Opera Android, and Samsung Internet.
 
 
 
@@ -645,10 +654,10 @@ The solution is to have the publisher optionally identify themselves using the  
 
 The spec lists several benefits of using VAPID:
 
-*  *A consistent identity can be used by a push service to establish behavioral expectations for an application server. Significant deviations from an established norm can then be used to trigger exception handling procedures.* 
-*  *Voluntarily-provided contact information can be used to contact an application server operator in the case of exceptional situations.* 
-*  *Experience with push service deployment has shown that software errors or unusual circumstances can cause large increases in push message volume.  Contacting the operator of the application server has proven to be valuable.* 
-*  *Even in the absence of usable contact information, an application server that has a well-established reputation might be given preference over an unidentified application server when choosing whether to discard a push message.* 
+* A consistent identity can be used by a push service to establish behavioral expectations for an application server. Significant deviations from an established norm can then be used to trigger exception handling procedures.
+* Voluntarily-provided contact information can be used to contact an application server operator in the case of exceptional situations.
+* Experience with push service deployment has shown that software errors or unusual circumstances can cause large increases in push message volume.  Contacting the operator of the application server has proven to be valuable.
+* Even in the absence of usable contact information, an application server that has a well-established reputation might be given preference over an unidentified application server when choosing whether to discard a push message.
 
 Using VAPID also lets you avoid the FCM-specific steps for sending a push message. You no longer need a Firebase project, a `gcm_sender_id`, or an `Authorization` header.
 
@@ -725,7 +734,7 @@ The `Authorization` header is a signed  [JSON Web Token (JWT)](https://jwt.io/) 
 
 A JWT is a way of sharing a JSON object with a second party in such a way that the sending party can sign it and the receiving party can verify the signature is from the expected sender. The structure of a JWT is three encrypted strings, joined with a single dot between them.
 
-`<JWTHeader>.<Payload>.<Signature> `
+`<JWTHeader>.<Payload>.<Signature>` 
 
 ##### JWT header
 
@@ -744,11 +753,11 @@ This is then base64 url encoded and forms the first part of the JWT.
 
 The Payload is another JSON object containing the following:
 
-* Audience ("`aud`")
+* Audience (`aud`)
 * This is the origin of the push service (NOT the origin of your site). In JavaScript, you could do the following to get the audience: <code>const audience = new URL(subscription.endpoint).origin</code>
-* Expiration Time ("`exp`")
+* Expiration Time (`exp`)
 * This is the number of seconds until the request should be regarded as expired. This MUST be within 24 hours of the request being made, in UTC.
-* Subject ("`sub`")
+* Subject (`sub`)
 * The subject needs to be a URL or a mailto: URL. This provides a point of contact in case the push service needs to contact the message sender.
 
 An example payload could look like the following:
