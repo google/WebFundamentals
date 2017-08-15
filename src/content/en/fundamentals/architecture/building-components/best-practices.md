@@ -14,7 +14,7 @@ always clear how best to implement your own element.
 
 To help you create the best possible experiences we've put together this
 checklist which breaks down all the things we think it takes to be a
-well behaved Custom Element.
+well behaved custom element.
 
 <style>
   @media screen and (min-width: 1001px) {
