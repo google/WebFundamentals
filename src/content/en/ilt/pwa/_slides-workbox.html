@@ -1,0 +1,37 @@
+<style>
+  .ilt-slides-wrapper {
+    float: left;
+    margin: 0 20px 40px 0;
+  }
+
+  iframe {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .ilt-slides-wrapper {
+      margin: 0 0 40px 20px;
+    }
+  }
+</style>
+
+<div class="video-wrapper ilt-slides-wrapper">
+  <iframe class=""
+    frameborder="0" width="100%" allowfullscreen="true"
+    mozallowfullscreen="true" webkitallowfullscreen="true"
+    src="https://docs.google.com/presentation/d/{{ slidesId }}/embed">
+  </iframe>
+</div>
+
+<div class="clearfix"></div>
+
+<ul>
+  <li>
+    <a href="https://docs.google.com/presentation/d/{{ slidesId }}">
+      View slides on Google Docs
+    </a>
+  </li>
+</ul>

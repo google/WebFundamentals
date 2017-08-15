@@ -5,3 +5,12 @@ redirects:
 - from: /web/ilt/
   to: /web/ilt/pwa/
   temporary: true
+
+- from: /web/ilt/pwa/using-sw-precache-and-sw-toolbox-slides
+  to: /web/ilt/pwa/workbox-slides
+
+- from: /web/ilt/pwa/using-sw-precache-and-sw-toolbox
+  to: /web/ilt/pwa/workbox-slides
+
+- from: /web/ilt/pwa/lab-sw-precache-and-sw-toolbox
+  to: /web/ilt/pwa/lab-workbox

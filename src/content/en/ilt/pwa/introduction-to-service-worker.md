@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-06-14T20:48:09Z #}
+{# wf_updated_on: 2017-07-12T20:21:59Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -36,12 +36,12 @@ Note: Whether notifications are received when the browser itself is not running 
 
 * The service worker can't access the DOM directly. To communicate with the page, the service worker uses the  [`postMessage()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) method to send data and a "message" event listener to receive data.
 
-Things to note about a service worker:
+Things to note about Service Worker:
 
-* Service worker is a programmable network proxy that lets you control how network requests from your page are handled.
+* A service worker is a programmable network proxy that lets you control how network requests from your page are handled.
 * Service workers only run over HTTPS. Because service workers can intercept network requests and modify responses, "man-in-the-middle" attacks could be very bad.
 
-
+ 
 
 Note: Services like <a href="https://letsencrypt.org/">Letsencrypt</a> let you procure SSL certificates for free to install on your server. 
 
