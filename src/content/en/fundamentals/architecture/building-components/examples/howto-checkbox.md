@@ -115,7 +115,7 @@ limitations under the License.
     <style>
       :host {
         display: inline-block;
-        background: url('/web/fundamentals/building-components/examples/images/unchecked-checkbox.svg') no-repeat;
+        background: url('/web/fundamentals/architecture/building-components/examples/images/unchecked-checkbox.svg') no-repeat;
         background-size: contain;
         width: 24px;
         height: 24px;
@@ -124,17 +124,17 @@ limitations under the License.
         display: none;
       }
       :host([aria-checked="true"]) {
-        background: url('/web/fundamentals/building-components/examples/images/checked-checkbox.svg') no-repeat;
+        background: url('/web/fundamentals/architecture/building-components/examples/images/checked-checkbox.svg') no-repeat;
         background-size: contain;
       }
       :host([aria-disabled="true"]) {
         background:
-          url('/web/fundamentals/building-components/examples/images/unchecked-checkbox-disabled.svg') no-repeat;
+          url('/web/fundamentals/architecture/building-components/examples/images/unchecked-checkbox-disabled.svg') no-repeat;
         background-size: contain;
       }
       :host([aria-checked="true"][aria-disabled="true"]) {
         background:
-          url('/web/fundamentals/building-components/examples/images/checked-checkbox-disabled.svg') no-repeat;
+          url('/web/fundamentals/architecture/building-components/examples/images/checked-checkbox-disabled.svg') no-repeat;
         background-size: contain;
       }
     </style>

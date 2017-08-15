@@ -45,7 +45,7 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  The <a href="/web/fundamentals/architecture/building-components/examples/howto-checkbox">
   <code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
@@ -72,7 +72,7 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  The <a href="/web/fundamentals/architecture/building-components/examples/howto-checkbox">
   <code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
@@ -121,7 +121,7 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  The <a href="/web/fundamentals/architecture/building-components/examples/howto-checkbox">
   <code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
@@ -154,7 +154,7 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  The <a href="/web/fundamentals/architecture/building-components/examples/howto-checkbox">
   <code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
@@ -187,7 +187,7 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  The <a href="/web/fundamentals/architecture/building-components/examples/howto-checkbox">
   <code>&lt;howto-checkbox&gt;</code></a> element. Further explained in
   <a href="#dont-override">Don't override the page author.
       </td>
@@ -217,7 +217,7 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  The <a href="/web/fundamentals/architecture/building-components/examples/howto-checkbox">
   <code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>
@@ -253,7 +253,7 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  The <a href="/web/fundamentals/architecture/building-components/examples/howto-checkbox">
   <code>&lt;howto-checkbox&gt;</code></a> element. Further explained in
   <a href="#avoid-reentrancy">Avoid reentrancy issues</a>.
       </td>
@@ -329,7 +329,7 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  The <a href="/web/fundamentals/architecture/building-components/examples/howto-checkbox">
   <code>&lt;howto-checkbox&gt;</code></a> element. Further explained in
   <a href="#lazy-properties">Make properties lazy</a>.
       </td>
@@ -404,7 +404,7 @@ well behaved Custom Element.
     <tr>
       <td><b>Example</b></td>
       <td>
-  The <a href="/web/fundamentals/building-components/examples/howto-checkbox">
+  The <a href="/web/fundamentals/architecture/building-components/examples/howto-checkbox">
   <code>&lt;howto-checkbox&gt;</code></a> element.
       </td>
     </tr>

@@ -14,7 +14,7 @@ the test of time?
 
 <div class="attempt-left">
   <h2>Custom Elements</h2>
-  <a href="/web/fundamentals/building-components/customelements">
+  <a href="/web/fundamentals/architecture/building-components/customelements">
     <div class="align-center">
       <img width="88" src="/web/images/md-icons/ic_code_black_24px.svg">
     </div>
@@ -24,13 +24,13 @@ the test of time?
     own tags. Because Custom Elements are standards based they benefit from the
     Web's built-in component model. The result is more modular code that can be
     reused in many different contexts.
-    <a href="/web/fundamentals/building-components/customelements">Learn more</a>
+    <a href="/web/fundamentals/architecture/building-components/customelements">Learn more</a>
   </p>
 </div>
 
 <div class="attempt-right">
   <h2>Shadow DOM</h2>
-  <a href="/web/fundamentals/building-components/shadowdom">
+  <a href="/web/fundamentals/architecture/building-components/shadowdom">
     <div class="align-center">
       <img width="88" src="/web/images/md-icons/ic_border_style_black_24px.svg">
     </div>
@@ -40,7 +40,7 @@ the test of time?
     encapsulation. It is critically important piece in the Web Components story
     as it ensures that a component will work in any environment, regardless of
     what other CSS or JavaScript is at play on the page.
-    <a href="/web/fundamentals/building-components/shadowdom">Learn more</a>
+    <a href="/web/fundamentals/architecture/building-components/shadowdom">Learn more</a>
   </p>
 </div>
 
@@ -48,7 +48,7 @@ the test of time?
 
 <div class="attempt-left">
   <h2>Best practices</h2>
-  <a href="/web/fundamentals/building-components/best-practices">
+  <a href="/web/fundamentals/architecture/building-components/best-practices">
     <div class="align-center">
       <img width="88" src="/web/images/md-icons/ic_done_black_24px.svg">
     </div>
@@ -59,13 +59,13 @@ the test of time?
     and works well in many different environments. While you really can do just
     about anything with these APIs, here are a few best practices to help ensure
     your components work well anywhere.
-    <a href="/web/fundamentals/building-components/best-practices">Learn more</a>
+    <a href="/web/fundamentals/architecture/building-components/best-practices">Learn more</a>
   </p>
 </div>
 
 <div class="attempt-right">
   <h2>Examples</h2>
-  <a href="/web/fundamentals/building-components/examples/">
+  <a href="/web/fundamentals/architecture/building-components/examples/">
     <div class="align-center">
       <img width="88" src="/web/images/md-icons/ic_explore_black_24px.svg">
     </div>
@@ -83,7 +83,7 @@ the test of time?
 
 <div class="attempt-left">
   <h2>Glossary</h2>
-  <a href="/web/fundamentals/building-components/glossary">
+  <a href="/web/fundamentals/architecture/building-components/glossary">
     <div class="align-center">
       <img width="88" src="/web/images/md-icons/ic_book_black_24px.svg">
     </div>
@@ -92,6 +92,6 @@ the test of time?
     Because Web Components are a new set of standards, you may not be familiar
     with all of the terminology used. Learn the lingo so you can sling
     Web Components with the best of 'em.
-    <a href="/web/fundamentals/building-components/glossary">Learn more</a><br>
+    <a href="/web/fundamentals/architecture/building-components/glossary">Learn more</a><br>
   </p>
 </div>
