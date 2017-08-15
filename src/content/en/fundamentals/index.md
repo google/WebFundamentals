@@ -34,7 +34,7 @@ nav.devsite-page-nav, .devsite-rating-container, .page-title {display:none;}
 
 <div class="attempt-right">
   <h2>Building Web Components</h2>
-  <img src="/web/images/common/push-notification-16x9.png" class="attempt-right">
+  <img src="/web/images/common/webcomponents-logo.png" class="attempt-right">
   <p>
     Web Components are a new set of standards which let you create your own
     HTML elements. You can use them to build anything, from simple UI elements,
