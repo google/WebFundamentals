@@ -85,7 +85,10 @@ should see a live demo of it just below. Otherwise, check out the
 full source on Github</a>.
 
 <figure class="demoarea">
-  <iframe style="height:360px;width:100%;border:none" src="https://rawgit.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b/raw/fancy-tabs-demo.html"></iframe>
+  <iframe
+    style="height:360px;width:100%;border:none"
+    src="https://rawgit.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b/raw/fancy-tabs-demo.html">
+  </iframe>
   <figcaption>
     <a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">
       View source on Github

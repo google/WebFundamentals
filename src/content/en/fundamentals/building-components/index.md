@@ -23,7 +23,8 @@ the test of time?
     Custom Elements give developers the ability to extend HTML and create their
     own tags. Because Custom Elements are standards based they benefit from the
     Web's built-in component model. The result is more modular code that can be
-    reused in many different contexts. <a href="/web/fundamentals/building-components/customelements">Learn more</a>
+    reused in many different contexts.
+    <a href="/web/fundamentals/building-components/customelements">Learn more</a>
   </p>
 </div>
 

@@ -3,6 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 
 {# wf_updated_on: 2017-08-14 #}
 {# wf_published_on: 2017-04-06 #}
+{# wf_blink_components: Blink>DOM #}
 
 # HowTo: Components – howto-tooltip {: .page-title }
 

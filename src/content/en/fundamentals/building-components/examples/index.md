@@ -4,6 +4,7 @@ description: "HowTo: Components"
 
 {# wf_updated_on: 2017-08-14 #}
 {# wf_published_on: 2017-04-06 #}
+{# wf_blink_components: Blink>DOM #}
 # HowTo: Components – Overview {: .page-title }
 {% include "web/_shared/contributors/ewagasperowicz.html" %}
 {% include "web/_shared/contributors/robdodson.html" %}
