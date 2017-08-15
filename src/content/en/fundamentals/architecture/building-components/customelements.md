@@ -15,7 +15,7 @@ description: Custom elements allow web developers to define new HTML tags, exten
 With [Custom Elements][spec], web developers can **create new HTML tags**,
 beef-up existing HTML tags, or extend the components other developers have
 authored. The API is the foundation of [web
-components](http://webcomponents.org/){: .external }. It brings a web
+components](http://webcomponents.org/). It brings a web
 standards-based way to create reusable components using nothing more than
 vanilla JS/HTML/CSS. The result is less code, modular code, and more reuse in
 our apps.
@@ -24,21 +24,22 @@ our apps.
 
 Note: This article describes the new <a
 href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements"
-target="_blank">Custom Elements v1 spec</a>. If you've been using custom
-elements, chances are you're familiar with the <a
-href="https://www.chromestatus.com/features/4642138092470272">v0 version shipped
-in Chrome 33</a>. The concepts are the same, but the v1 spec has important API
-differences. Keep reading to see what's new or check out the section on <a
-href="#historysupport">History and browser support</a> for more info.
+target="_blank">Custom Elements spec</a>. If you've been using custom elements,
+chances are you're familiar with the <a
+href="https://www.chromestatus.com/features/4642138092470272">version 0 that
+shipped in Chrome 33</a>. The concepts are the same, but the version 1 spec has
+important API differences. Keep reading to see what's new or check out the
+section on <a href="#historysupport">History and browser support</a> for more
+info.
 
 The browser gives us an excellent tool for structuring web applications. It's
 called HTML.  You may have heard of it! It's declarative, portable, well
 supported, and easy to work with. Great as HTML may be, its vocabulary and
 extensibility are limited. The [HTML living
-standard](https://html.spec.whatwg.org/multipage/){: .external } lacks a way to
+standard](https://html.spec.whatwg.org/multipage/) has always lacked a way to
 automatically associate JS behavior with your markup... until now.
 
-Custom elements are the answer to modernizing HTML; filling in the missing
+Custom elements are the answer to modernizing HTML, filling in the missing
 pieces, and bundling structure with behavior. If HTML doesn't provide the
 solution to a problem, we can create a custom element that does. **Custom
 elements teach the browser new tricks while preserving the benefits of HTML**.
@@ -356,7 +357,7 @@ attributes](#attrchanges)). Essentially, this is a performance optimization.
 When users change a common attribute like `style` or `class`, you don't want to
 be spammed with tons of callbacks.
 
-**Reaction callbacks are synchronous**. If someone calls `el.setAttribute(...)`
+**Reaction callbacks are synchronous**. If someone calls `el.setAttribute()`
 on your element, the browser will immediately call `attributeChangedCallback()`.
 Similarly, you'll receive a `disconnectedCallback()` right after your element is
 removed from the DOM (e.g. the user calls `el.remove()`).

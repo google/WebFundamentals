@@ -5,7 +5,7 @@ book_path: /web/fundamentals/_book.yaml
 {# wf_published_on: 2017-04-06 #}
 {# wf_blink_components: Blink>DOM #}
 
-# HowTo: Components – howto-checkbox {: .page-title }
+# HowTo: Components – <howto-checkbox> {: .page-title }
 
 {% include "web/_shared/contributors/ewagasperowicz.html" %}
 {% include "web/_shared/contributors/robdodson.html" %}
@@ -17,7 +17,7 @@ book_path: /web/fundamentals/_book.yaml
 
 A `<howto-checkbox` represents a boolean option in a form. The most common type
 of checkbox is a dual-type which allows the user to toggle between two
-choices -- checked and unchecked.
+choices — checked and unchecked.
 
 The element attempts to self apply the attributes `role="checkbox"` and
 `tabindex="0"` when it is first created. The `role` attribute helps assistive
@@ -26,20 +26,20 @@ The `tabindex` attribute opts the element into the tab order, making it keyboard
 focusable and operable. To learn more about these two topics, check out
 [What can ARIA do?][what-aria] and [Using tabindex][using-tabindex].
 
-When the checkbox is checked, it adds a `[checked]` boolean attribute, and sets
+When the checkbox is checked, it adds a `checked` boolean attribute, and sets
 a corresponding `checked` property to `true`. In addition, the element sets an
-`[aria-checked]` attribute to either `"true"` or `"false"`, depending on its
+`aria-checked` attribute to either `"true"` or `"false"`, depending on its
 state. Clicking on the checkbox with a mouse, or space bar, toggles these
 checked states.
 
 The checkbox also supports a `disabled` state. If either the `disabled` property
-is set to true or the `[disabled]` attribute is applied, the checkbox sets
+is set to true or the `disabled` attribute is applied, the checkbox sets
 `aria-disabled="true"` and set `tabindex="-1"`.
 
 ## Reference {: #reference }
 
-- [Checkbox pattern in ARIA Authoring Practices 1.1][checkbox-pattern]
-- [What can ARIA do?][what-aria]
+- [Checkbox Pattern in ARIA Authoring Practices 1.1][checkbox-pattern]
+- [What can ARIA Do?][what-aria]
 - [Using tabindex][using-tabindex]
 
 [checkbox-pattern]: https://www.w3.org/TR/wai-aria-practices-1.1/#checkbox
@@ -148,7 +148,7 @@ limitations under the License.
     /**
      * The element's constructor is run anytime a new instance is created.
      * Instances are created either by parsing HTML, calling
-     * document.createElement('howto-checkbox), or calling new HowToCheckbox();
+     * document.createElement('howto-checkbox'), or calling new HowToCheckbox();
      * The construtor is a good place to create Shadow DOM, though you should
      * avoid touching any attributes or Light DOM children as they may not
      * be available yet.
