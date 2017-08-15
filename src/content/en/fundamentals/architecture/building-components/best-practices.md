@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: A checklist which breaks down all the things we think it takes to be a well behaved Custom Element.
+description: Custom elements let you construct your own HTML tags. This checklist covers best practices to help you build high quality elements.
 
 {# wf_updated_on: 2017-08-14 #}
 {# wf_published_on: 2017-08-14 #}
@@ -8,11 +8,11 @@ description: A checklist which breaks down all the things we think it takes to b
 
 # Custom Element Best Practices {: .page-title }
 
-Custom Elements allow you to extend HTML and define your own tags. They're an
+Custom elements allow you to extend HTML and define your own tags. They're an
 incredibly powerful feature, but they're also low-level, which means it's not
 always clear how best to implement your own element.
 
-To help teams create the best possible experiences we've put together this
+To help you create the best possible experiences we've put together this
 checklist which breaks down all the things we think it takes to be a
 well behaved Custom Element.
 
@@ -103,8 +103,8 @@ well behaved Custom Element.
       <th colspan=2>
         <h3>
   Set a <code>:host</code> display style (e.g. <code>block</code>,
-  <code>inline-block</code>, <code>flex</code>) unless the default of
-  <code>inline</code> is preferred.
+  <code>inline-block</code>, <code>flex</code>) unless you prefer the default of
+  <code>inline</code>.
         </h3>
       </th>
     </tr>
@@ -113,8 +113,8 @@ well behaved Custom Element.
       <td>
   Custom Elements are <code>display: inline</code> by default, so setting their
   <code>width</code> or <code>height</code> will have no effect. This often
-  comes as a surprise to developers using them and may cause issues related to
-  laying out the page. Unless an <code>inline</code> display is preferred, you
+  comes as a surprise to developers and may cause issues related to
+  laying out the page. Unless you prefer an <code>inline</code> display, you
   should always set a default <code>display</code> value.
       </td>
     </tr>
@@ -140,12 +140,12 @@ well behaved Custom Element.
     <tr>
       <td><b>Why?</b></td>
       <td>
-  A Custom Element with a default <code>display</code> style, e.g.
+  A custom element with a default <code>display</code> style, e.g.
   <code>:host { display: block }</code>, will override the lower specificity
   built-in
   <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden">
   <code>hidden</code> attribute</a>.
-  This may surprise developers who expect setting the <code>hidden</code>
+  This may surprise you if you expect setting the <code>hidden</code>
   attribute on your element to render it <code>display: none</code>. In addition
   to a default <code>display</code> style, add support for <code>hidden</code>
   with <code>:host([hidden]) { display: none }</code>.
@@ -188,7 +188,7 @@ well behaved Custom Element.
       <td><b>Example</b></td>
       <td>
   The <a href="/web/fundamentals/architecture/building-components/examples/howto-checkbox">
-  <code>&lt;howto-checkbox&gt;</code></a> element. Further explained in
+  <code>&lt;howto-checkbox&gt;</code></a> element. This is further explained in
   <a href="#dont-override">Don't override the page author.
       </td>
     </tr>
@@ -229,7 +229,7 @@ well behaved Custom Element.
     <tr>
       <th colspan=2>
         <h3>
-  Aim to keep primitive data attributes and properties in sync. Reflecting from
+  Aim to keep primitive data attributes and properties in sync, reflecting from
   property to attribute, and vice versa.
         </h3>
       </th>
@@ -237,16 +237,16 @@ well behaved Custom Element.
     <tr>
       <td><b>Why?</b></td>
       <td>
-  You never know how a user will try to interact with your element. They might
-  set a property in JavaScript, and then expect to be able to read that value
-  using an API like <code>getAttribute</code>. If every attribute has a
+  You never know how a user will interact with your element. They might
+  set a property in JavaScript, and then expect to read that value
+  using an API like <code>getAttribute()</code>. If every attribute has a
   corresponding property, and both of them reflect, it will make it easier for
   users to work with your element. In other words, calling
   <code>setAttribute('foo', value)</code> should also set a corresponding
-  <code>foo</code> property. And vice versa. There are, of course, exceptions to
+  <code>foo</code> property and vice versa. There are, of course, exceptions to
   this rule. You shouldn't reflect high frequency properties, e.g.
   <code>currentTime</code> in a video player. Use your best judgment. If it
-  seems like a likely a user will interact with a property or attribute, and
+  seems like a user will interact with a property or attribute, and
   it's not burdensome to reflect it, then do so.
       </td>
     </tr>
@@ -254,7 +254,7 @@ well behaved Custom Element.
       <td><b>Example</b></td>
       <td>
   The <a href="/web/fundamentals/architecture/building-components/examples/howto-checkbox">
-  <code>&lt;howto-checkbox&gt;</code></a> element. Further explained in
+  <code>&lt;howto-checkbox&gt;</code></a> element. This is further explained in
   <a href="#avoid-reentrancy">Avoid reentrancy issues</a>.
       </td>
     </tr>
@@ -273,14 +273,14 @@ well behaved Custom Element.
     <tr>
       <td><b>Why?</b></td>
       <td>
-  Generally speaking, there are no example of built-in HTML Elements that accept
-  rich data (plain JavaScript objects and arrays) through their attributes. Rich
-  data is instead accepted either through method calls or properties. There are
-  a couple obvious downsides to accepting rich data as attributes: it can be
-  expensive to serialize a large object to a string, and any object references
-  will be lost in this stringification process. For example, if you stringify an
-  object which has a reference to another object, or perhaps a DOM node, those
-  references will be lost.
+  Generally speaking, there are no examples of built-in HTML elements that
+  accept rich data (plain JavaScript objects and arrays) through their
+  attributes. Rich data is instead accepted either through method calls or
+  properties. There are a couple obvious downsides to accepting rich data as
+  attributes: it can be expensive to serialize a large object to a string, and
+  any object references will be lost in this stringification process. For
+  example, if you stringify an object which has a reference to another object,
+  or perhaps a DOM node, those references will be lost.
       </td>
     </tr>
   </tbody>
@@ -300,8 +300,8 @@ well behaved Custom Element.
       <td>
   Reflecting rich data properties to attributes is needlessly expensive,
   requiring serializing and deserializing the same JavaScript objects. Unless
-  you have a specific use case that this feature solves, it's probably best to
-  avoid it.
+  you have a use case that can only be solved with this feature, it's probably
+  best to avoid it.
       </td>
     </tr>
   </tbody>
@@ -320,10 +320,10 @@ well behaved Custom Element.
     <tr>
       <td><b>Why?</b></td>
       <td>
-  A developer may attempt to set a property on the element before its
-  definition has been loaded. This is especially true if the developer is using
-  a framework which handles loading components, stamping them to the page, and
-  binding their properties to a model.
+  A developer using your element may attempt to set a property on the element
+  before its definition has been loaded. This is especially true if the
+  developer is using a framework which handles loading components, stamping them
+  to the page, and binding their properties to a model.
       </td>
     </tr>
     <tr>
@@ -373,8 +373,8 @@ well behaved Custom Element.
       <td><b>Why?</b></td>
       <td>
   Your component may have properties that change in response to activity that
-  only your component knows about. For example, if a timer or animation
-  finishes, or a resource has finished loading. It's helpful to dispatch events
+  only your component knows about, for example, if a timer or animation
+  completes, or a resource finishes loading. It's helpful to dispatch events
   in response to these changes to notify the host that the component's state is
   different.
       </td>
@@ -432,22 +432,21 @@ connectedCallback() {
 
 A developer might attempt to set a property on your element before its
 definition has been loaded. This is especially true if the developer is using a
-framework which handles loading components, stamping them to the page, and
+framework which handles loading components, inserting them into to the page, and
 binding their properties to a model.
 
+In the following example, Angular is declaratively binding its model's
+`isChecked` property to the checkbox's `checked` property. If the definition for
+howto-checkbox was lazy loaded it's possible that Angular might attempt to set
+the checked property before the element has upgraded.
+
 ```html
-<!--
-Here Angular is declaratively binding its model's isChecked property to the
-checkbox's checked property. If the definition for howto-checkbox was lazy
-loaded it's possible that Angular might attempt to set the checked property
-before the element has upgraded.
--->
 <howto-checkbox [checked]="defaults.isChecked"></howto-checkbox>
 ```
 
-A Custom Element should handle this scenario by checking if any properties have
-already been set on its instance. The `<howto-checkbox>` demonstrates this
-pattern using a method called `_upgradeProperty`.
+A custom element should handle this scenario by checking if any properties have
+already been set on its instance. The [`<howto-checkbox>`](/web/fundamentals/architecture/building-components/examples/howto-checkbox) demonstrates this
+pattern using a method called `_upgradeProperty()`.
 
 ```js
 connectedCallback() {
@@ -464,14 +463,14 @@ _upgradeProperty(prop) {
 }
 ```
 
-`_upgradeProperty` captures the value from the unupgraded instance and deletes
-the property so it does not shadow the Custom Element's own property setter.
+`_upgradeProperty()` captures the value from the unupgraded instance and deletes
+the property so it does not shadow the custom element's own property setter.
 This way, when the element's definition does finally load, it can immediately
 reflect the correct state.
 
 ### Avoid reentrancy issues {: #avoid-reentrancy }
 
-It's tempting to use the `attributeChangedCallback` to reflect state to an
+It's tempting to use the `attributeChangedCallback()` to reflect state to an
 underlying property, for example:
 
 ```js
@@ -514,10 +513,9 @@ get checked() {
 }
 ```
 
-In this example, adding or removing the attribute will also effectively set the
-property.
+In this example, adding or removing the attribute will also set the property.
 
-Finally, the `attributeChangedCallback` can be used to just handle side effects
+Finally, the `attributeChangedCallback()` can be used to handle side effects
 like applying ARIA states.
 
 ```js
