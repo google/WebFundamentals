@@ -111,7 +111,7 @@ well behaved custom element.
     <tr>
       <td><b>Why?</b></td>
       <td>
-  Custom Elements are <code>display: inline</code> by default, so setting their
+  Custom elements are <code>display: inline</code> by default, so setting their
   <code>width</code> or <code>height</code> will have no effect. This often
   comes as a surprise to developers and may cause issues related to
   laying out the page. Unless you prefer an <code>inline</code> display, you
@@ -176,7 +176,7 @@ well behaved custom element.
       <td><b>Why?</b></td>
       <td>
   Global attributes are those that are present on all HTML elements. Some
-  examples include <code>tabindex</code> and <code>role</code>. A Custom Element
+  examples include <code>tabindex</code> and <code>role</code>. A custom element
   may wish to set its initial <code>tabindex</code> to 0 so it will be keyboard
   focusable. But you should always check first to see if the developer using
   your element has set this to another value. If, for example, they've set
@@ -208,7 +208,7 @@ well behaved custom element.
     <tr>
       <td><b>Why?</b></td>
       <td>
-  Custom Elements, like their built-in counterparts, should be configurable.
+  Custom elements, like their built-in counterparts, should be configurable.
   Configuration can be passed in declaratively, via attributes, or imperatively
   via JavaScript properties. Ideally every attribute should also be linked to
   a corresponding property.
