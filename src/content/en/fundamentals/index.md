@@ -10,22 +10,48 @@ nav.devsite-page-nav, .devsite-rating-container, .page-title {display:none;}
 
 # Web Fundamentals {: .page-title }
 
-## Web Push Notifications, a new way to engage users {: .hide-from-toc  }
+<div class="attempt-left">
+  <h2>Web Push</h2>
+  <img src="/web/images/common/push-notification-16x9.png" class="attempt-right">
+  <p>
+    Web push notifications makes it easy to re-engage with users by
+    showing relevant, timely, and contextual notifications to the user, 
+    even when the browser is closed!
+  </p>
+  <p>
+    Web push notifications allow users to opt-in to timely updates from
+    sites they love and allow you to effectively re-engage them with
+    customized, relevant content.
+  </p>
+  <p>
+    The Push API and Notification API open a whole new set of
+    possibilities for you to re-engage with your users.
+  </p>
+  <a href="engage-and-retain/push-notifications/" class="button button-primary">
+    Get Started
+  </a>
+</div>
 
-![Example Push Notification](/web/images/common/push-notification-16x9.png){: .attempt-right }
+<div class="attempt-right">
+  <h2>Building Web Components</h2>
+  <img src="/web/images/common/push-notification-16x9.png" class="attempt-right">
+  <p>
+    Web Components are a new set of standards which let you create your own
+    HTML elements. You can use them to build anything, from simple UI elements,
+    to entire applications.
+  </p>
+  <p>
+    Because Web Components are standards based, they're designed to work in
+    any environment, even if there are other CSS or JavaScript libraries being
+    used on the page. This makes them easy to share amongst teams who might
+    be on different stacks, but still wish to have consistent looking UI.
+  </p>
+  <a href="architecture/building-components/" class="button button-primary">
+    Get Started
+  </a>
+</div>
 
-Web push notifications makes it easy to re-engage with users by
-showing relevant, timely, and contextual notifications to the user, 
-even when the browser is closed!
-
-Web push notifications allow users to opt-in to timely updates from
-sites they love and allow you to effectively re-engage them with
-customized, relevant content.
-
-The Push API and Notification API open a whole new set of
-possibilities for you to re-engage with your users.
-
-[Get started](engage-and-retain/push-notifications/){: .button .button-primary}
+<div class="clearfix"></div>
 
 ## Latest updates for Web Developers {: .hide-from-toc }
 
