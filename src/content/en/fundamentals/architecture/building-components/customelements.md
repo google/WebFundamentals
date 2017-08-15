@@ -618,7 +618,8 @@ dashed #ccc;
 
 <div class="demoarea"> <x-foo-with-markup></x-foo-with-markup> </div>
 
-<script> const supportsCustomElementsV1 = 'customElements' in window;
+ <script>
+const supportsCustomElementsV1 = 'customElements' in window;
 
 if(supportsCustomElementsV1) { customElements.define('x-foo-with-markup', class
   extends HTMLElement { connectedCallback() { this.innerHTML = "<b>I'm an
@@ -628,7 +629,8 @@ if(supportsCustomElementsV1) { customElements.define('x-foo-with-markup', class
 } else { if (self.frameElement) { self.frameElement.style.display = 'none';
   }
 }
-</script> {% endframebox %}
+ </script>
+{% endframebox %}
 
 Note: Overwriting an element's children with new content is generally not a good
 idea because it's unexpected. Users would be surprised to have their markup
@@ -693,7 +695,8 @@ dashed #ccc;
 <div class="demoarea"> <x-foo-shadowdom> <p><b>User's</b> custom text</p>
   </x-foo-shadowdom> </div>
 
-<script> const supportsCustomElementsV1 = 'customElements' in window;
+ <script>
+const supportsCustomElementsV1 = 'customElements' in window;
 
 if(supportsCustomElementsV1) { customElements.define('x-foo-shadowdom', class
   extends HTMLElement { constructor() { super(); // always call super() first in
@@ -705,7 +708,8 @@ if(supportsCustomElementsV1) { customElements.define('x-foo-shadowdom', class
 } else { if (self.frameElement) { self.frameElement.style.display = 'none';
   }
 }
-</script> {% endframebox %}
+ </script>
+{% endframebox %}
 
 ### Creating elements from a `<template>` {: #fromtemplate}
 
@@ -762,7 +766,8 @@ dashed #ccc;
   <p>I'm in Shadow DOM. My markup was stamped from a &lt;template&gt;.</p>
   </template>
 
-<script> const supportsCustomElementsV1 = 'customElements' in window;
+ <script>
+const supportsCustomElementsV1 = 'customElements' in window;
 
 if(supportsCustomElementsV1) { customElements.define('x-foo-from-template',
   class extends HTMLElement { constructor() { super(); let shadowRoot =
@@ -774,7 +779,8 @@ if(supportsCustomElementsV1) { customElements.define('x-foo-from-template',
 } else { if (self.frameElement) { self.frameElement.style.display = 'none';
   }
 }
-</script> {% endframebox %}
+ </script>
+{% endframebox %}
 
 ## Styling a custom element {: #styling}
 

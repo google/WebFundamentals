@@ -1057,7 +1057,7 @@ inheritable styles to their initial value when they cross the shadow boundary.
   </div>
 </div>
 
-<script>
+ <script>
 function supportsShadowDOM() {
   return !!HTMLElement.prototype.attachShadow;
 }
@@ -1081,7 +1081,7 @@ if (supportsShadowDOM()) {
     self.frameElement.style.display = 'none';
   }
 }
-</script>
+ </script>
 {% endframebox %}
 
 ### Finding all the custom elements used by a page {: #findall}
