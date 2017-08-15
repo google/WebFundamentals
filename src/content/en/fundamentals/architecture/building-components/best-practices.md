@@ -161,7 +161,7 @@ well behaved custom element.
   </tbody>
 </table>
 
-### Data and state {: #data-state }
+### Attributes and properties {: #attributes-properties }
 
 <table class="responsive ce-cl">
   <tbody>
