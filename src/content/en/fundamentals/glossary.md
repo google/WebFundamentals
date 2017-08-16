@@ -46,24 +46,6 @@ a new element or removing and existing one will trigger a function to execute.
 For more details, [checkout out the guide on
 WebFundamentals](/web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers).
 
-### Lazy Property
-
-It's possible to set a property on a Custom Element instance *before* its
-definition has been loaded. A "lazy property", is a property which will check to
-see if there is already an instance value when the Custom Element definition is
-loaded. If a value is found, that value will be used in the newly upgraded
-element.
-
-### Roving Tabindex
-
-The `tabindex` attribute adds an element to the focus order, making it reachable
-via the keyboard. Roving tabindex is a technique which involves updating the
-tabindex for a set of children so that one child is focusable while the others
-are not. This technique is often used to provide arrow key support to an element
-which contains focusable children (lists, menus, etc). To learn more about
-roving tabindex [check out the guide on Web
-Fundamentals](/web/fundamentals/accessibility/focus/using-tabindex#managing_focus_in_components).
-
 ### FLIP
 
 FLIP is a technique to set up high-performance animations using CSS transforms.
@@ -71,11 +53,3 @@ To avoid janking animations, start *and* end position are evaluated during the
 setup so that the animation doesn't have to do any expensive calculations. For a
 detailed introduction, [check out Paul Lewis' guide on his
 blog](https://aerotwist.com/blog/flip-your-animations/).
-
-### aria-activedescendant / Active Descendant
-
-Setting the active descendant of an element to another elements ID allows us to
-tell assistive technology that an element should be presented to the user as the
-referenced element when its parent actually has the focus. To learn more about
-aria-activedescendant [check out the guide on Web
-Fundamentals](/web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships#aria-activedescendant).
