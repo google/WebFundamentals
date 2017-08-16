@@ -80,8 +80,8 @@ limitations under the License.
 <span id="join-label">Join Newsletter</span>
 
 
-<script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/d5b7ca65/webcomponents-sd-ce.js"></script>
-<script>
+ <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/d5b7ca65/webcomponents-sd-ce.js"></script>
+ <script>
   devsite.framebox.AutoSizeClient.initAutoSize(true);
   (function() {
     /**
@@ -322,7 +322,7 @@ limitations under the License.
 
 
   })();
-</script>
+ </script>
 </html>
 
 {% endframebox %}
