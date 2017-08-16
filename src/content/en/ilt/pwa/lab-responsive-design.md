@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-06-13T00:06:21Z #}
+{# wf_updated_on: 2017-07-18T13:15:39Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -215,7 +215,7 @@ Save the code and refresh __index.html__ in your browser. Now if you shrink the 
 
 #### Explanation
 
-When the media query is triggered we change the layout from three-column to one-column by setting the  [`flex-flow`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-5) property to `column`. This accomplishes the same result as the media query we added in step 5.  [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) provides tons of other properties like `flex-flow` that let you easily structure, re-order, and justify your content so that it responds well in any context.
+When the media query is triggered we change the layout from three-column to one-column by setting the  [`flex-flow`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-5) property to `column`. This accomplishes the same result as the media query we added in step 5.  [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) provides lots of other properties like `flex-flow` that let you easily structure, re-order, and justify your content so that it responds well in any context.
 
 <div id="6"></div>
 
