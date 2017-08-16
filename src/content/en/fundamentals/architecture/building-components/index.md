@@ -80,15 +80,3 @@ the test of time?
 </div>
 
 <div style="clear:both;"></div>
-
-<h2>Glossary</h2>
-<a href="./glossary">
-  <img width="48" src="/web/images/md-icons/ic_book_black_24px.svg"
-    class="attempt-left">
-</a>
-<p>
-  Because Web Components are a new set of standards, you may not be familiar
-  with all of the terminology used. Learn the lingo so you can sling
-  Web Components with the best of 'em.
-</p>
-<a href="./glossary" class="button button-primary">Learn more</a>

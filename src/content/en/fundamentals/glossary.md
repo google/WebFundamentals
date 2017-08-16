@@ -1,15 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: "HowTo: Components"
+description: "Glossary"
 
 {# wf_updated_on: 2017-08-14 #}
 {# wf_published_on: 2017-08-14 #}
-{# wf_blink_components: Blink>DOM #}
 
 # Glossary {: .page-title }
-{% include "web/_shared/contributors/robdodson.html" %}
-{% include "web/_shared/contributors/surma.html" %}
-
 
 ### Web Components
 
@@ -25,14 +21,14 @@ webcomponents.org](https://www.webcomponents.org/introduction).
 A Custom Element is a developer defined HTML tag. These elements are the
 foundation of Web Components and can be used to create any sort of UI. To learn
 more about Custom Elements [check out the guide on Web
-Fundamentals](/web/fundamentals/getting-started/primers/customelements).
+Fundamentals](/web/fundamentals/architecture/building-components/customelements).
 
 ### Shadow DOM
 
 Shadow DOM introduces scoped CSS and DOM to the web platform. It lets developers
 write encapsulated UI components which can be used in any application. To learn
 more about Shadow DOM [check out the guide on Web
-Fundamentals](/web/fundamentals/getting-started/primers/shadowdom).
+Fundamentals](/web/fundamentals/architecture/building-components/shadowdom).
 
 ### Lifecycle Callback
 
@@ -40,7 +36,7 @@ Every Custom Element has a set of built-in lifecycle callbacks, or "reactions"
 that are called when the element is added/removed from the page, or has an
 attribute mutated. To learn more about Custom Element lifecycle callbacks [check
 out the guide on Web
-Fundamentals](/web/fundamentals/getting-started/primers/customelements#reactions).
+Fundamentals](/web/fundamentals/architecture/building-components/customelements#reactions).
 
 ### Mutation Observer
 

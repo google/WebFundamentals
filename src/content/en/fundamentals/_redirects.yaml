@@ -622,4 +622,4 @@ redirects:
   to: /web/fundamentals/architecture/building-components/examples/howto-tooltip
 
 - from: /web/fundamentals/architecture/howto-components/glossary
-  to: /web/fundamentals/architecture/building-components/glossary
+  to: /web/fundamentals/glossary

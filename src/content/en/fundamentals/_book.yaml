@@ -22,6 +22,8 @@ upper_tabs:
         - include: /web/fundamentals/accessibility/_toc.yaml
         - include: /web/fundamentals/media/_toc.yaml
         - include: /web/fundamentals/vr/_toc.yaml
+        - title: Glossary
+          path: /web/fundamentals/glossary
   - include: /web/_upper_tabs-Tools.yaml
   - include: /web/_upper_tabs-Updates.yaml
   - include: /web/_upper_tabs-Showcase.yaml
