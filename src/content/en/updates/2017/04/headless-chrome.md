@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2017-06-22 #}
+{# wf_updated_on: 2017-08-16 #}
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
@@ -129,7 +129,7 @@ inspectable pages where you can click through and see what Headless is rendering
 
 <figure>
   <img src="/web/updates/images/2017/04/headless-chrome/remote-debugging-ui.jpg"
-       class="screenshot" alt="DevTools Remote ">
+       class="screenshot" alt="DevTools Remote">
   <figcaption>DevTools remote debugging UI</figcaption>
 </figure>
 
@@ -140,9 +140,66 @@ commands going across the wire, communicating with the browser.
 
 ## Using programmatically (Node) {: #node }
 
-### Launching Chrome {: #nodelaunch }
+### The Puppeteer API {: #puppeteer }
 
-In the previous section, we [started Chrome manually](#cli) using
+[Puppeteer](https://github.com/GoogleChrome/puppeteer) is a Node library
+developed by the Chrome team. It provides a high-level API to control headless
+(or full) Chrome. It's similar to other automated testing libraries like Phantom
+and NightmareJS, but it only works with the latest versions of Chrome.
+
+Among other things, Puppeteer can be used to easily screenshots, create PDFs,
+navigate pages, and fetch information about those pages. I recommend the library
+if you want to get up and running quickly with automated browser testing.
+It hides away the complexities of the DevTools Protocol and takes care of
+redundant tasks like launching a debug instance of Chrome.
+
+Install it:
+
+    yarn add puppeteer
+
+**Example** - print the user agent
+
+```javascript
+const puppeteer = require('puppeteer');
+
+(async() => {
+  const browser = await puppeteer.launch();
+  console.lgo(await browser.version());
+  browser.close();
+})();
+```
+
+**Example** - taking a screenshot of the page
+
+```javascript
+const puppeteer = require('puppeteer');
+
+(async() => {
+
+const browser = await puppeteer.launch();
+const page = await browser.newPage();
+await page.goto('https://www.chromestatus.com', {waitUntil: 'networkidle'});
+await page.pdf({path: 'page.pdf', format: 'A4'});
+
+browser.close();
+})();
+```
+
+Check out [Puppeteer's documentation](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md)
+to learn more about the full API.
+
+### The CRI library {: #cri }
+
+[chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface)
+is a lower-level library than Puppeteer's API. I recommend it if you want to be
+close to the metal and use the [DevTools Protocol][dtviewer] directly.
+
+#### Launching Chrome {: #nodelaunch }
+
+chrome-remote-interface doesn't launch Chrome for you, so you'll have to take
+care of that yourself.
+
+In the CLI section, we [started Chrome manually](#cli) using
 `--headless --remote-debugging-port=9222`. However, to fully automate tests, you'll probably
 want to spawn Chrome _from_ your application.
 
@@ -165,7 +222,7 @@ launchHeadlessChrome('https://www.chromestatus.com', (err, stdout, stderr) => {
 But things get tricky if you want a portable solution that works across multiple
 platforms. Just look at that hard-coded path to Chrome :(
 
-#### Using ChromeLauncher {: #nodechromelauncher }
+##### Using ChromeLauncher {: #nodechromelauncher }
 
 [Lighthouse](/web/tools/lighthouse/) is a marvelous
 tool for testing the quality of your web apps. A robust module for launching
@@ -222,12 +279,7 @@ won't be any browser UI. We're headless.
 
 To control the browser, we need the DevTools protocol!
 
-### Retrieving information about the page {: #useprotocol }
-
-[chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface)
-is a great Node package that provides usable APIs for the
-[DevTools Protocol][dtviewer]. You can use it to orchestrate Headless
-Chrome, navigate to pages, and fetch information about those pages.
+#### Retrieving information about the page {: #useprotocol }
 
 Warning: The DevTools protocol can do a ton of interesting stuff, but it can be a bit
 daunting at first. I recommend spending a bit of time browsing the
@@ -238,7 +290,7 @@ Let's install the library:
 
     yarn add chrome-remote-interface
 
-#### Examples
+##### Examples
 
 **Example** - print the user agent
 
