@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Mat talks imposter syndrome.
 
-{# wf_updated_on: 2017-08-07 #}
-{# wf_published_on: 2017-08-07 #}
+{# wf_updated_on: 2017-08-21 #}
+{# wf_published_on: 2017-08-21 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E03-Improving-your-creative-confidence.mp3 #}
 {# wf_podcast_duration: 00:13:00 #}
-{# wf_podcast_fileSize: 19566017 #}
+{# wf_podcast_fileSize: 18738973 #}
 {# wf_podcast_subtitle: Mat talks about imposter syndrome. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s02-e02-cover-large.jpg #}
 
@@ -28,15 +28,10 @@ class="attempt-right">
 
 In this episode:
 
-* Designing for performance.
-* Skeleton screens.
-* [Twitter Lite, Housing.com & Flipkart](https://goo.gl/jt2ZDo).
-* The good old days of Flash.
-* Download the
-[‘Speed Matters - Designing for Mobile Performance’](https://goo.gl/RuL4YB) 
-ebook to learn more. 
-
-
+* [Dunning-Kruger](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect).
+* Cognitive Bias.
+* Responsive Web Design Patterns.
+* [Designing VR experiences](https://developers.google.com/web/fundamentals/vr/).
 
 <audio 
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E03-Improving-your-creative-confidence.mp3" 
