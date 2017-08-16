@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: "HowTo: Components"
 
-{# wf_updated_on: 2017-06-12 #}
+{# wf_updated_on: 2017-08-14 #}
 {# wf_published_on: 2017-04-06 #}
+{# wf_blink_components: Blink>DOM #}
 # HowTo: Components – Overview {: .page-title }
 {% include "web/_shared/contributors/ewagasperowicz.html" %}
 {% include "web/_shared/contributors/robdodson.html" %}
@@ -15,9 +16,6 @@ patterns. The purpose of these implementations is to be an educational resource.
 You can read through the densely commented implementation of different
 components and hopefully learn from them. Note that they are explicitly **NOT**
 a UI library and should **NOT** be used in production.
-
-Note: Howto: Components is currently under development. We will start adding
-articles soon.
 
 ## Goals
 
