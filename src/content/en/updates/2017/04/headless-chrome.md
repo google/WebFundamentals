@@ -118,7 +118,7 @@ in the browser, right from the command line:
 ## Debugging Chrome without a browser UI? {: #frontend }
 
 When you run Chrome with `--remote-debugging-port=9222`, it starts an instance
-with the [DevTools Protocol][dtviewer] enabled. The
+with the [DevTools protocol][dtviewer] enabled. The
 protocol is used to communicate with Chrome and drive the headless
 browser instance. It's also what tools like Sublime, VS Code, and Node use for
 remote debugging an application. #synergy
@@ -147,11 +147,11 @@ developed by the Chrome team. It provides a high-level API to control headless
 (or full) Chrome. It's similar to other automated testing libraries like Phantom
 and NightmareJS, but it only works with the latest versions of Chrome.
 
-Among other things, Puppeteer can be used to easily screenshots, create PDFs,
+Among other things, Puppeteer can be used to easily take screenshots, create PDFs,
 navigate pages, and fetch information about those pages. I recommend the library
-if you want to get up and running quickly with automated browser testing.
-It hides away the complexities of the DevTools Protocol and takes care of
-redundant tasks like launching a debug instance of Chrome.
+if you want to quickly automate browser testing. It hides away the complexities
+of the DevTools protocol and takes care of redundant tasks like launching a
+debug instance of Chrome.
 
 Install it:
 
@@ -192,7 +192,7 @@ to learn more about the full API.
 
 [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface)
 is a lower-level library than Puppeteer's API. I recommend it if you want to be
-close to the metal and use the [DevTools Protocol][dtviewer] directly.
+close to the metal and use the [DevTools protocol][dtviewer] directly.
 
 #### Launching Chrome {: #nodelaunch }
 
@@ -562,7 +562,7 @@ can be used for automated testing in a headless environment. The main difference
 between the two is that Phantom uses an older version of WebKit as its rendering
 engine while Headless Chrome uses the latest version of Blink.
 
-At the moment, Phantom also provides a higher level API than the [DevTools Protocol][dtviewer].
+At the moment, Phantom also provides a higher level API than the [DevTools protocol][dtviewer].
 
 **Where do I report bugs?**
 
