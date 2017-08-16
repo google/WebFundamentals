@@ -452,8 +452,8 @@ the checked property before the element has upgraded.
 ```
 
 A custom element should handle this scenario by checking if any properties have
-already been set on its instance. The [`<howto-checkbox>`](/web/fundamentals/architecture/building-components/examples/howto-checkbox) demonstrates this
-pattern using a method called `_upgradeProperty()`.
+already been set on its instance. The [`<howto-checkbox>`](/web/fundamentals/architecture/building-components/examples/howto-checkbox)
+demonstrates this pattern using a method called `_upgradeProperty()`.
 
 ```js
 connectedCallback() {
