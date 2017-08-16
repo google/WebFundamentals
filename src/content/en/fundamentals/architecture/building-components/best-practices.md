@@ -94,6 +94,13 @@ well behaved custom element.
   inadvertently interfere with these children.
       </td>
     </tr>
+    <tr>
+      <td><b>Example</b></td>
+      <td>
+  The <a href="/web/fundamentals/architecture/building-components/examples/howto-tabs">
+  <code>&lt;howto-tabs&gt;</code></a> element.
+      </td>
+    </tr>
   </tbody>
 </table>
 

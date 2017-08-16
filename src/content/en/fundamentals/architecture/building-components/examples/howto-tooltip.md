@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-08-14 #}
+{# wf_updated_on: 2017-08-16#}
 {# wf_published_on: 2017-04-06 #}
 {# wf_blink_components: Blink>DOM #}
 
-# HowTo: Components – <howto-tooltip> {: .page-title }
+# HowTo: Components – &lt;howto-tooltip&gt; {: .page-title }
 
 {% include "web/_shared/contributors/ewagasperowicz.html" %}
 {% include "web/_shared/contributors/robdodson.html" %}
@@ -13,9 +13,9 @@ book_path: /web/fundamentals/_book.yaml
 
 <link rel="stylesheet" href="main.css">
 
-## Summary
+## Summary {: #summary }
 
-A tooltip is a popup that displays information related to an element
+A `<howto-tooltip>` is a popup that displays information related to an element
 when the element receives keyboard focus or the mouse hovers over it.
 The element that triggers the tooltip references the tooltip element with
 `aria-describedby`.
@@ -23,11 +23,11 @@ The element that triggers the tooltip references the tooltip element with
 The element self-applies the role `tooltip` and sets `tabindex` to -1, as the
 tooltip itself can never be focused.
 
-## References
+## Reference {: #reference }
 
-* [Tooltip pattern in ARIA Authoring Practices 1.1]
+- [Tooltip pattern in ARIA Authoring Practices 1.1][tooltip-pattern]
 
-[Tooltip pattern in ARIA Authoring Practices 1.1]: https://www.w3.org/TR/wai-aria-practices-1.1/#tooltip
+[tooltip-pattern]: https://www.w3.org/TR/wai-aria-practices-1.1/#tooltip
 
 
 ## Demo {: #demo }
@@ -66,8 +66,8 @@ limitations under the License.
 </div>
 
 
- <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/d5b7ca65/webcomponents-sd-ce.js"></script>
- <script>
+<script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/d5b7ca65/webcomponents-sd-ce.js"></script>
+<script>
   devsite.framebox.AutoSizeClient.initAutoSize(true);
   (function() {
     /**
@@ -100,7 +100,7 @@ class HowtoTooltip extends HTMLElement {
   }
 
   /**
-   * `connectedCallback` fires when the element is inserted into the DOM.
+   * `connectedCallback()` fires when the element is inserted into the DOM.
    * It's a good place to set the initial `role`, `tabindex`, internal state,
    * and install event listeners.
    */
@@ -108,19 +108,19 @@ class HowtoTooltip extends HTMLElement {
     if (!this.hasAttribute('role'))
       this.setAttribute('role', 'tooltip');
 
-    if (!this.hasAttribute('tooltip'))
+    if (!this.hasAttribute('tabindex'))
       this.setAttribute('tabindex', -1);
 
     this._hide();
 
     // The element that triggers the tooltip references the tooltip
-    // element with aria-describedby.
+    // element with `aria-describedby`.
     this._target = document.querySelector('[aria-describedby=' + this.id + ']');
     if (!this._target)
       return;
 
-    // The tooltip needs to listen to focus/blur events from the target,
-    // as well as hover events over the target.
+    // The tooltip needs to listen to `focus`/`blur` events from the target,
+    // as well as `hover` events over the target.
     this._target.addEventListener('focus', this._show);
     this._target.addEventListener('blur', this._hide);
     this._target.addEventListener('mouseenter', this._show);
@@ -128,8 +128,8 @@ class HowtoTooltip extends HTMLElement {
   }
 
   /**
-   * `disconnectedCallback` unregisters the event listeners that were set up in
-   * `connectedCallback`.
+   * `disconnectedCallback()` unregisters the event listeners that were set up
+   * in `connectedCallback()`.
    */
   disconnectedCallback() {
     if (!this._target)
@@ -156,7 +156,7 @@ class HowtoTooltip extends HTMLElement {
 window.customElements.define('howto-tooltip', HowtoTooltip);
 
   })();
- </script>
+</script>
 </html>
 
 {% endframebox %}
@@ -172,24 +172,23 @@ window.customElements.define('howto-tooltip', HowtoTooltip);
 <li class="blockcomment ">
 <div class="literate-text "><p>The tooltip is by default unstyled.</p>
 </div>
-<pre><code class="literate-code "><sPan class="indent">&nbsp;&nbsp;</span>howto-tooltip {
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>margin-left: 8px;
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>padding: 4px;
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>background-color: #616161;
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>color: #fff;
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>border-radius: 3px;
-<sPan class="indent">&nbsp;&nbsp;</span>}
-
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>howto-tooltip {
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>margin-left: 8px;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>padding: 4px;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>background-color: #616161;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>color: #fff;
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>border-radius: 3px;
+<span class="indent">&nbsp;&nbsp;</span>}
 &lt;/style&gt;
 
 &lt;div class="text"&gt;
-<sPan class="indent">&nbsp;&nbsp;</span> &lt;label for="name"&gt;Your name:&lt;/label&gt;
-<sPan class="indent">&nbsp;&nbsp;</span> &lt;input id="name" aria-describedby="tp1"/&gt;
-<sPan class="indent">&nbsp;&nbsp;</span> &lt;howto-tooltip id="tp1"&gt;Ideally your name is Batman&lt;/howto-tooltip&gt;
-<sPan class="indent">&nbsp;&nbsp;</span> &lt;br&gt;
-<sPan class="indent">&nbsp;&nbsp;</span> &lt;label for="cheese"&gt;Favourite type of cheese: &lt;/label&gt;
-<sPan class="indent">&nbsp;&nbsp;</span> &lt;input id="cheese" aria-describedby="tp2"/&gt;
-<sPan class="indent">&nbsp;&nbsp;</span> &lt;howto-tooltip id="tp2"&gt;Help I am trapped inside a tooltip message&lt;/howto-tooltip&gt;
+<span class="indent">&nbsp;&nbsp;</span> &lt;label for="name"&gt;Your name:&lt;/label&gt;
+<span class="indent">&nbsp;&nbsp;</span> &lt;input id="name" aria-describedby="tp1"/&gt;
+<span class="indent">&nbsp;&nbsp;</span> &lt;howto-tooltip id="tp1"&gt;Ideally your name is Batman&lt;/howto-tooltip&gt;
+<span class="indent">&nbsp;&nbsp;</span> &lt;br&gt;
+<span class="indent">&nbsp;&nbsp;</span> &lt;label for="cheese"&gt;Favourite type of cheese: &lt;/label&gt;
+<span class="indent">&nbsp;&nbsp;</span> &lt;input id="cheese" aria-describedby="tp2"/&gt;
+<span class="indent">&nbsp;&nbsp;</span> &lt;howto-tooltip id="tp2"&gt;Help I am trapped inside a tooltip message&lt;/howto-tooltip&gt;
 &lt;/div&gt;</code></pre>
 </li>
 
@@ -211,93 +210,93 @@ window.customElements.define('howto-tooltip', HowtoTooltip);
 <li class="blockcomment ">
 <div class="literate-text "><p>The constructor does work that needs to be executed <em>exactly</em> once.</p>
 </div>
-<pre><code class="literate-code "><sPan class="indent">&nbsp;&nbsp;</span>constructor() {</code></pre>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>constructor() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>super();</code></pre>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>super();</code></pre>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> These functions are used in a bunch of places, and always need to
+<div class="literate-text "><p>These functions are used in a bunch of places, and always need to
  bind the correct <code>this</code> reference, so do it once.</p>
 </div>
-<pre><code class="literate-code "><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._show = this._show.bind(this);
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._hide = this._hide.bind(this);
-<sPan class="indent">&nbsp;&nbsp;</span>}</code></pre>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._show = this._show.bind(this);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._hide = this._hide.bind(this);
+<span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
 
 <li class="blockcomment ">
-<div class="literate-text "><p><code>connectedCallback</code> fires when the element is inserted into the DOM.
+<div class="literate-text "><p><code>connectedCallback()</code> fires when the element is inserted into the DOM.
 It&#39;s a good place to set the initial <code>role</code>, <code>tabindex</code>, internal state,
 and install event listeners.</p>
 </div>
-<pre><code class="literate-code "><sPan class="indent">&nbsp;&nbsp;</span>connectedCallback() {</code></pre>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>connectedCallback() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>if (!this.hasAttribute('role'))
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this.setAttribute('role', 'tooltip');
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.hasAttribute('role'))
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('role', 'tooltip');
 
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>if (!this.hasAttribute('tooltip'))
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this.setAttribute('tabindex', -1);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.hasAttribute('tabindex'))
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('tabindex', -1);
 
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._hide();</code></pre>
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._hide();</code></pre>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> The element that triggers the tooltip references the tooltip
- element with aria-describedby.</p>
+<div class="literate-text "><p>The element that triggers the tooltip references the tooltip
+ element with <code>aria-describedby</code>.</p>
 </div>
-<pre><code class="literate-code "><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._target = document.querySelector('[aria-describedby=' + this.id + ']');
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>if (!this._target)
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>return;</code></pre>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._target = document.querySelector('[aria-describedby=' + this.id + ']');
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this._target)
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;</code></pre>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> The tooltip needs to listen to focus/blur events from the target,
- as well as hover events over the target.</p>
+<div class="literate-text "><p>The tooltip needs to listen to <code>focus</code>/<code>blur</code> events from the target,
+ as well as <code>hover</code> events over the target.</p>
 </div>
-<pre><code class="literate-code "><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._target.addEventListener('focus', this._show);
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._target.addEventListener('blur', this._hide);
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._target.addEventListener('mouseenter', this._show);
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._target.addEventListener('mouseleave', this._hide);
-<sPan class="indent">&nbsp;&nbsp;</span>}</code></pre>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._target.addEventListener('focus', this._show);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._target.addEventListener('blur', this._hide);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._target.addEventListener('mouseenter', this._show);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._target.addEventListener('mouseleave', this._hide);
+<span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
 
 <li class="blockcomment ">
-<div class="literate-text "><p><code>disconnectedCallback</code> unregisters the event listeners that were set up in
-<code>connectedCallback</code>.</p>
+<div class="literate-text "><p><code>disconnectedCallback()</code> unregisters the event listeners that were set up
+in <code>connectedCallback()</code>.</p>
 </div>
-<pre><code class="literate-code "><sPan class="indent">&nbsp;&nbsp;</span>disconnectedCallback() {</code></pre>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>disconnectedCallback() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>if (!this._target)
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>return;</code></pre>
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this._target)
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;</code></pre>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> Remove the existing listeners, so that they don&#39;t trigger even though
+<div class="literate-text "><p>Remove the existing listeners, so that they don&#39;t trigger even though
  there&#39;s no tooltip to show.</p>
 </div>
-<pre><code class="literate-code "><sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._target.removeEventListener('focus', this._show);
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._target.removeEventListener('blur', this._hide);
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._target.removeEventListener('mouseenter', this._show);
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._target.removeEventListener('mouseleave', this._hide);
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this._target = null;
-<sPan class="indent">&nbsp;&nbsp;</span>}
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._target.removeEventListener('focus', this._show);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._target.removeEventListener('blur', this._hide);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._target.removeEventListener('mouseenter', this._show);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._target.removeEventListener('mouseleave', this._hide);
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._target = null;
+<span class="indent">&nbsp;&nbsp;</span>}
 
-<sPan class="indent">&nbsp;&nbsp;</span>_show() {
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this.hidden = false;
-<sPan class="indent">&nbsp;&nbsp;</span>}
+<span class="indent">&nbsp;&nbsp;</span>_show() {
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.hidden = false;
+<span class="indent">&nbsp;&nbsp;</span>}
 
-<sPan class="indent">&nbsp;&nbsp;</span>_hide() {
-<sPan class="indent">&nbsp;&nbsp;</span><sPan class="indent">&nbsp;&nbsp;</span>this.hidden = true;
-<sPan class="indent">&nbsp;&nbsp;</span>}
+<span class="indent">&nbsp;&nbsp;</span>_hide() {
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.hidden = true;
+<span class="indent">&nbsp;&nbsp;</span>}
 }
 
 window.customElements.define('howto-tooltip', HowtoTooltip);</code></pre>

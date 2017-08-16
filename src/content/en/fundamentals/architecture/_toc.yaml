@@ -19,6 +19,8 @@ toc:
         path: /web/fundamentals/architecture/building-components/examples/
       - title: "<howto-checkbox>"
         path: /web/fundamentals/architecture/building-components/examples/howto-checkbox
+      - title: "<howto-tabs>"
+        path: /web/fundamentals/architecture/building-components/examples/howto-tabs
       - title: "<howto-tooltip>"
         path: /web/fundamentals/architecture/building-components/examples/howto-tooltip
     - title: "Glossary"

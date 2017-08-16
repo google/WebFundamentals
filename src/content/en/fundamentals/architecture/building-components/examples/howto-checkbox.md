@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-08-14 #}
+{# wf_updated_on: 2017-08-16#}
 {# wf_published_on: 2017-04-06 #}
 {# wf_blink_components: Blink>DOM #}
 
-# HowTo: Components – <howto-checkbox> {: .page-title }
+# HowTo: Components – &lt;howto-checkbox&gt; {: .page-title }
 
 {% include "web/_shared/contributors/ewagasperowicz.html" %}
 {% include "web/_shared/contributors/robdodson.html" %}
@@ -17,7 +17,7 @@ book_path: /web/fundamentals/_book.yaml
 
 A `<howto-checkbox` represents a boolean option in a form. The most common type
 of checkbox is a dual-type which allows the user to toggle between two
-choices — checked and unchecked.
+choices -- checked and unchecked.
 
 The element attempts to self apply the attributes `role="checkbox"` and
 `tabindex="0"` when it is first created. The `role` attribute helps assistive
@@ -61,6 +61,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
+
 <style>
   howto-checkbox {
     vertical-align: middle;
@@ -79,8 +80,8 @@ limitations under the License.
 <span id="join-label">Join Newsletter</span>
 
 
- <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/d5b7ca65/webcomponents-sd-ce.js"></script>
- <script>
+<script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/d5b7ca65/webcomponents-sd-ce.js"></script>
+<script>
   devsite.framebox.AutoSizeClient.initAutoSize(true);
   (function() {
     /**
@@ -140,6 +141,11 @@ limitations under the License.
     </style>
   `;
 
+  // HIDE
+  // ShadyCSS will rename classes as needed to ensure style scoping.
+  ShadyCSS.prepareTemplate(template, 'howto-checkbox');
+  // /HIDE
+
   class HowToCheckbox extends HTMLElement {
     static get observedAttributes() {
       return ['checked', 'disabled'];
@@ -149,8 +155,8 @@ limitations under the License.
      * The element's constructor is run anytime a new instance is created.
      * Instances are created either by parsing HTML, calling
      * document.createElement('howto-checkbox'), or calling new HowToCheckbox();
-     * The construtor is a good place to create Shadow DOM, though you should
-     * avoid touching any attributes or Light DOM children as they may not
+     * The construtor is a good place to create shadow DOM, though you should
+     * avoid touching any attributes or light DOM children as they may not
      * be available yet.
      */
     constructor() {
@@ -160,11 +166,18 @@ limitations under the License.
     }
 
     /**
-     * `connectedCallback` fires when the element is inserted into the DOM.
+     * `connectedCallback()` fires when the element is inserted into the DOM.
      * It's a good place to set the initial `role`, `tabindex`, internal state,
      * and install event listeners.
      */
     connectedCallback() {
+      // HIDE
+      // Shim Shadow DOM styles. This needs to be run in `connectedCallback()`
+      // because if you shim Custom Properties (CSS variables) the element
+      // will need access to its parent node.
+      ShadyCSS.styleElement(this);
+      // /HIDE
+
       if (!this.hasAttribute('role'))
         this.setAttribute('role', 'checkbox');
       if (!this.hasAttribute('tabindex'))
@@ -172,9 +185,10 @@ limitations under the License.
 
       // A user may set a property on an _instance_ of an element,
       // before its prototype has been connected to this class.
-      // The `_upgradeProperty` method will check for any instance properties
+      // The `_upgradeProperty()` method will check for any instance properties
       // and run them through the proper class setters.
-      // See the [lazy properties](#lazy-properties) section for more details.
+      // See the [lazy properites](/web/fundamentals/architecture/building-components/best-practices#lazy-properties)
+      // section for more details.
       this._upgradeProperty('checked');
       this._upgradeProperty('disabled');
 
@@ -191,7 +205,7 @@ limitations under the License.
     }
 
     /**
-     * `disconnectedCallback` fires when the element is removed from the DOM.
+     * `disconnectedCallback()` fires when the element is removed from the DOM.
      * It's a good place to do clean up work like releasing references and
      * removing event listeners.
      */
@@ -204,7 +218,8 @@ limitations under the License.
      * Properties and their corresponding attributes should mirror one another.
      * The property setter for `checked` handles truthy/falsy values and
      * reflects those to the state of the attribute. See the [avoid
-     * reentrancy](#avoid-reentrancy) section for more details.
+     * reentrancy](/web/fundamentals/architecture/building-components/best-practices#avoid-reentrancy)
+     * section for more details.
      */
     set checked(value) {
       const isChecked = Boolean(value);
@@ -231,7 +246,7 @@ limitations under the License.
     }
 
     /**
-     * `attributeChangedCallback` is called when any of the attributes in the
+     * `attributeChangedCallback()` is called when any of the attributes in the
      * `observedAttributes` array are changed. It's a good place to handle
      * side effects, like setting ARIA attributes.
      */
@@ -283,8 +298,8 @@ limitations under the License.
     }
 
     /**
-     * `_toggleChecked` calls the `checked` setter and flips its state.
-     * Because `_toggleChecked` is only caused by a user action, it will
+     * `_toggleChecked()` calls the `checked` setter and flips its state.
+     * Because `_toggleChecked()` is only caused by a user action, it will
      * also dispatch a change event. This event bubbles in order to mimic
      * the native behavior of `<input type=checkbox>`.
      */
@@ -307,7 +322,7 @@ limitations under the License.
 
 
   })();
- </script>
+</script>
 </html>
 
 {% endframebox %}
@@ -400,6 +415,7 @@ than using innerHTML because it avoids addtional HTML parse costs.</p>
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>&lt;/style&gt;
 <span class="indent">&nbsp;&nbsp;</span>`;
 
+<span class="indent">&nbsp;&nbsp;</span>
 <span class="indent">&nbsp;&nbsp;</span>class HowToCheckbox extends HTMLElement {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>static get observedAttributes() {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return ['checked', 'disabled'];
@@ -409,9 +425,9 @@ than using innerHTML because it avoids addtional HTML parse costs.</p>
 <li class="blockcomment ">
 <div class="literate-text "><p>The element&#39;s constructor is run anytime a new instance is created.
 Instances are created either by parsing HTML, calling
-document.createElement(&#39;howto-checkbox), or calling new HowToCheckbox();
-The construtor is a good place to create Shadow DOM, though you should
-avoid touching any attributes or Light DOM children as they may not
+document.createElement(&#39;howto-checkbox&#39;), or calling new HowToCheckbox();
+The construtor is a good place to create shadow DOM, though you should
+avoid touching any attributes or light DOM children as they may not
 be available yet.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>constructor() {</code></pre>
@@ -426,7 +442,7 @@ be available yet.</p>
 </li>
 
 <li class="blockcomment ">
-<div class="literate-text "><p><code>connectedCallback</code> fires when the element is inserted into the DOM.
+<div class="literate-text "><p><code>connectedCallback()</code> fires when the element is inserted into the DOM.
 It&#39;s a good place to set the initial <code>role</code>, <code>tabindex</code>, internal state,
 and install event listeners.</p>
 </div>
@@ -435,18 +451,20 @@ and install event listeners.</p>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.hasAttribute('role'))
+<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>
+<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.hasAttribute('role'))
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('role', 'checkbox');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.hasAttribute('tabindex'))
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('tabindex', 0);</code></pre>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> A user may set a property on an <em>instance</em> of an element,
+<div class="literate-text "><p>A user may set a property on an <em>instance</em> of an element,
  before its prototype has been connected to this class.
- The <code>_upgradeProperty</code> method will check for any instance properties
+ The <code>_upgradeProperty()</code> method will check for any instance properties
  and run them through the proper class setters.
- See the <a href="#lazy-properties">lazy properties</a> section for more details.</p>
+ See the <a href="/web/fundamentals/architecture/building-components/best-practices#lazy-properties">lazy properites</a>
+ section for more details.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._upgradeProperty('checked');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._upgradeProperty('disabled');
@@ -465,7 +483,7 @@ and install event listeners.</p>
 </li>
 
 <li class="blockcomment ">
-<div class="literate-text "><p><code>disconnectedCallback</code> fires when the element is removed from the DOM.
+<div class="literate-text "><p><code>disconnectedCallback()</code> fires when the element is removed from the DOM.
 It&#39;s a good place to do clean up work like releasing references and
 removing event listeners.</p>
 </div>
@@ -482,8 +500,9 @@ removing event listeners.</p>
 <li class="blockcomment ">
 <div class="literate-text "><p>Properties and their corresponding attributes should mirror one another.
 The property setter for <code>checked</code> handles truthy/falsy values and
-reflects those to the state of the attribute. See the <a href="#avoid-reentrancy">avoid
-reentrancy</a> section for more details.</p>
+reflects those to the state of the attribute. See the <a href="/web/fundamentals/architecture/building-components/best-practices#avoid-reentrancy">avoid
+reentrancy</a>
+section for more details.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>set checked(value) {</code></pre>
 </li>
@@ -515,7 +534,7 @@ reentrancy</a> section for more details.</p>
 </li>
 
 <li class="blockcomment ">
-<div class="literate-text "><p><code>attributeChangedCallback</code> is called when any of the attributes in the
+<div class="literate-text "><p><code>attributeChangedCallback()</code> is called when any of the attributes in the
 <code>observedAttributes</code> array are changed. It&#39;s a good place to handle
 side effects, like setting ARIA attributes.</p>
 </div>
@@ -534,7 +553,7 @@ side effects, like setting ARIA attributes.</p>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> The <code>tabindex</code> attribute does not provide a way to fully remove
+<div class="literate-text "><p>The <code>tabindex</code> attribute does not provide a way to fully remove
  focusability from an element.
  Elements with <code>tabindex=-1</code> can still be focused with
  a mouse or by calling <code>focus()</code>.
@@ -546,7 +565,7 @@ side effects, like setting ARIA attributes.</p>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> If the focus is currently on this element, unfocus it by
+<div class="literate-text "><p>If the focus is currently on this element, unfocus it by
  calling the <code>HTMLElement.blur()</code> method.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (document.activeElement === this)
@@ -562,7 +581,7 @@ side effects, like setting ARIA attributes.</p>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> Don’t handle modifier shortcuts typically used by assistive technology.</p>
+<div class="literate-text "><p>Don’t handle modifier shortcuts typically used by assistive technology.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (event.altKey)
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;
@@ -575,7 +594,7 @@ side effects, like setting ARIA attributes.</p>
 </li>
 
 <li class="linecomment ">
-<div class="literate-text "><p> Any other key press is ignored and passed back to the browser.</p>
+<div class="literate-text "><p>Any other key press is ignored and passed back to the browser.</p>
 </div>
 <pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>default:
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;
@@ -588,8 +607,8 @@ side effects, like setting ARIA attributes.</p>
 </li>
 
 <li class="blockcomment ">
-<div class="literate-text "><p><code>_toggleChecked</code> calls the <code>checked</code> setter and flips its state.
-Because <code>_toggleChecked</code> is only caused by a user action, it will
+<div class="literate-text "><p><code>_toggleChecked()</code> calls the <code>checked</code> setter and flips its state.
+Because <code>_toggleChecked()</code> is only caused by a user action, it will
 also dispatch a change event. This event bubbles in order to mimic
 the native behavior of <code>&lt;input type=checkbox&gt;</code>.</p>
 </div>
