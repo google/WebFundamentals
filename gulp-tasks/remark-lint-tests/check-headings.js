@@ -41,16 +41,11 @@ function wfNoMarkupInTitle(ast, file, setting) {
     if (node.depth !== 1) {
       return;
     }
-    let title = toString(node);
-    if (reHTML.test(title)) {
-      file.message('Top level headings cannot contain HTML elements', node);
-    }
-    if (reMD.test(title)) {
-      file.message('Top level headings cannot contain Markdown', node);  
-    }
-    if (reEntity.test(title)) {
-      file.message('Top level headings cannot contain encoded entities', node);  
-    }
+    node.children.forEach((child) => {
+      if (child.type !== 'text') {
+        file.message('Top level headings must only contain text.', node);
+      }
+    });
   });
 }
 
@@ -69,6 +64,3 @@ function wfTLDR(ast, file, setting) {
     }
   });
 }
-
-
-
