@@ -12,7 +12,6 @@ upper_tabs:
         - include: /web/fundamentals/getting-started/_toc.yaml
         - include: /web/fundamentals/performance/_toc.yaml
         - include: /web/fundamentals/architecture/_toc.yaml
-        - include: /web/fundamentals/building-components/_toc.yaml
         - include: /web/fundamentals/instant-and-offline/_toc.yaml
         - include: /web/fundamentals/security/_toc.yaml
         - include: /web/fundamentals/design-and-ui/_toc.yaml
