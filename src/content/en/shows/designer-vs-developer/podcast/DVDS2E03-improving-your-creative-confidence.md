@@ -31,7 +31,7 @@ In this episode:
 * [Dunning-Kruger](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect).
 * Cognitive Bias.
 * Responsive Web Design Patterns.
-* [Designing VR experiences](https://developers.google.com/web/fundamentals/vr/).
+* [Designing VR experiences](/web/fundamentals/vr/).
 
 <audio 
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E03-Improving-your-creative-confidence.mp3" 
