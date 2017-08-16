@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-11-08 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Credential Management API {: .page-title }
@@ -54,7 +54,7 @@ del sitio.
 * Cuando los usuarios cierran sesión, el sitio web se asegura de que no vuelvan a acceder
 automáticamente.
 
-Punto clave: El uso de la Credential Management API requiere que la página se encuentre en un servidor
+Key Point: El uso de la Credential Management API requiere que la página se encuentre en un servidor
 de origen seguro.
 
 ### Recupera las credenciales del usuario y haz que el usuario acceda

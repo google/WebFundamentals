@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 전체 화면 보기
 
-{# wf_updated_on: 2016-10-01 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-01 #}
 
 # 전체 화면 경험 구현 {: .page-title }
@@ -332,7 +332,7 @@ Chrome은 Android 버전 38 이후(2014년 10월)부터 매니페스트를 지�
 
     window.scrollTo(0,1);
 
-주의: 친구로서 말씀드립니다. 그런 방법이 있기는 합니다. 하지만
+Caution: 친구로서 말씀드립니다. 그런 방법이 있기는 합니다. 하지만
          편법입니다. 이 방법을 사용하지 마세요. &mdash; Paul
 
 방법은 상당히 간단합니다. 페이지가 로드되고 브라우저 메뉴에게

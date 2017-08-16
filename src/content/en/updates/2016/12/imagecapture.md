@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Image Capture is an API to control camera settings and take photos.
 
-{# wf_updated_on: 2017-05-25 #}
+{# wf_updated_on: 2017-07-31 #}
 {# wf_published_on: 2016-12-05 #}
 {# wf_tags: canvas,chrome56,media,webrtc #}
 {# wf_featured_image: /web/updates/images/2016/12/imagecapture/featured.jpg #}
@@ -14,7 +14,8 @@ description: Image Capture is an API to control camera settings and take photos.
 {% include "web/_shared/contributors/samdutton.html" %}
 
 Image Capture is an API to capture still images and configure camera hardware
-settings. This API is available in Chrome 59 on Android and desktop.
+settings. This API is available in Chrome 59 on Android and desktop. We've also
+published an [ImageCapture polyfill library](https://github.com/GoogleChrome/imagecapture-polyfill).
 
 The API enables control over camera features such as zoom, brightness,
 contrast, ISO and white balance. Best of all, Image Capture allows you to access
@@ -25,7 +26,7 @@ which are lower resolution than that available for still images.
 An `ImageCapture` object is constructed with a `MediaStreamTrack` as source. The
 API has then two capture methods `takePhoto()` and `grabFrame()` and ways to
 retrieve the capabilities and settings of the camera, and to change those
-setings.
+settings.
 
 ## Construction
 

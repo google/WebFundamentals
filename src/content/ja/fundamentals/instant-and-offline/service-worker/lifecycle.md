@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Service Worker のライフサイクルの詳細
 
-{# wf_updated_on:2016-09-29 #}
-{# wf_published_on:2016-09-29 #}
+{# wf_updated_on: 2017-07-12 #}
+{# wf_published_on: 2016-09-29 #}
 
 # Service Worker のライフサイクル {: .page-title }
 
@@ -27,7 +27,7 @@ Service Worker のライフサイクルは、最も複雑な部分です。そ�
 最後の 1 つは非常に重要です。Service Worker がない場合、ユーザーは 1 つのタブをサイトに読み込み、後で別のタブを開くことができます。これにより、同時に 2 つのバージョンのサイトが動作することになります。これでも正常に動作することがありますが、ストレージを処理する場合は、最終的に共有ストレージの管理方法が大きく異なる 2 つのタブが存在することになります。これにより、エラーが発生するか、もっと悪い場合はデータが失われる可能性があります。
 
 
-警告: ユーザーはデータが失われるのを非常に嫌います。悲痛な気持ちになります。
+Warning: ユーザーはデータが失われるのを非常に嫌います。悲痛な気持ちになります。
 
 ##  最初の Service Worker
 
@@ -611,13 +611,13 @@ Service Worker スクリプトでは、`max-age` は 0 になります。
 
 
 
-警告: 前のバージョンからアップデートしていない場合があります。その場合は、Service Worker の古いバージョンが多数存在する可能性があります。
+Warning: 前のバージョンからアップデートしていない場合があります。その場合は、Service Worker の古いバージョンが多数存在する可能性があります。
 
 Promise を `event.waitUntil()` に渡すと、Promise が解決されるまで機能イベント（`fetch`、`push`、`sync` など）がバッファされます。
 そのため、`fetch` イベントが発生すると、アクティベーションは完了します。
 
 
-警告: Cache Storage API は、（localStorage や IndexedDB のように）「オリジン ストレージ」です。同じオリジンで多くのサイト（`yourname.github.io/myapp` など）を実行する場合は、他のサイトのキャッシュを削除しないように注意してください。これを回避するには、`myapp-static-v1` のようにキャッシュ名に現在のサイトに固有の接頭辞を付け、`myapp-` で始まらないキャッシュには触れないようにします。
+Warning: Cache Storage API は、（localStorage や IndexedDB のように）「オリジン ストレージ」です。同じオリジンで多くのサイト（`yourname.github.io/myapp` など）を実行する場合は、他のサイトのキャッシュを削除しないように注意してください。これを回避するには、`myapp-static-v1` のようにキャッシュ名に現在のサイトに固有の接頭辞を付け、`myapp-` で始まらないキャッシュには触れないようにします。
 
 
 ###  待機段階のスキップ
@@ -648,7 +648,7 @@ Promise を `event.waitUntil()` に渡すと、Promise が解決されるまで�
 
 
 
-警告: `skipWaiting()` は、古いバージョンで読み込まれたページを新しい Service Worker で制御することを意味します。つまり、ページのフェッチの一部は古い Service Worker で処理され、その後のフェッチは新しい Service Worker で処理されます。これで問題になる可能性がある場合は、`skipWaiting()` を使用しないでください。
+Warning: `skipWaiting()` は、古いバージョンで読み込まれたページを新しい Service Worker で制御することを意味します。つまり、ページのフェッチの一部は古い Service Worker で処理され、その後のフェッチは新しい Service Worker で処理されます。これで問題になる可能性がある場合は、`skipWaiting()` を使用しないでください。
 
 
 ###  手動アップデート

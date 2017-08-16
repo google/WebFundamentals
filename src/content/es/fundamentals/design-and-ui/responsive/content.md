@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Considera el contenido, el formato y el diseño gráfico al desarrollar para diferentes usuarios y dispositivos.
 
-{# wf_updated_on: 2016-05-10 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-05-10 #}
 
 # Contenido para varios dispositivos {: .page-title }
@@ -167,7 +167,7 @@ Cuando desarrolles para varias ventanas de visualización diferentes, ten en cue
 
 ### Probar contenido
 
-Éxito: Hagas lo que hagas, ¡**pruébalo**!
+Success: Hagas lo que hagas, ¡**pruébalo**!
 
 * Verifica la lectura en ventanas de visualización más pequeñas con Chrome DevTools y otras [herramientas de emulación](/web/fundamentals/performance/poor-connectivity/).
 * [Prueba tu contenido en condiciones de ancho de banda reducido y latencia alta](/web/fundamentals/performance/poor-connectivity/); prueba el contenido en diferentes situaciones de conectividad.

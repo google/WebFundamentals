@@ -85,7 +85,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 
 ### 别让推广信息喧宾夺主
 
-大型应用安装插页广告（例如，隐藏内容并提示用户安装应用的整页推广信息）令用户反感，让他们难以执行任务。除了让用户反感外，使用应用安装插页广告的网站还无法通过 [Google 移动易用性测试](https://search.google.com/search-console/mobile-friendly)，这可能对其搜索排名产生不良影响。
+大型应用安装插页广告（例如，隐藏内容并提示用户安装应用的整页推广信息）令用户反感，让他们难以执行任务。除了让用户反感外，使用应用安装插页广告的网站还无法通过 [Google 移动易用性测试](https://search.google.com/test/mobile-friendly)，这可能对其搜索排名产生不良影响。
 
 
 
@@ -357,7 +357,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 用户对垂直滚动网站感到顺手，水平滚动则不然。
 避免使用大型、固定宽度的元素。利用 [CSS 媒体查询](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)为不同屏幕应用不同的样式。
 
-不要创建只能在特定[视口宽度](/web/fundamentals/design-and-ui/responsive/#set-the-viewport)下正常显示的内容。强制用户水平滚动的网站无法通过 [Google 移动易用性测试](https://search.google.com/search-console/mobile-friendly)，可能对其搜索排名产生不良影响。
+不要创建只能在特定[视口宽度](/web/fundamentals/design-and-ui/responsive/#set-the-viewport)下正常显示的内容。强制用户水平滚动的网站无法通过 [Google 移动易用性测试](https://search.google.com/test/mobile-friendly)，可能对其搜索排名产生不良影响。
 
 
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Bagian ini menjelaskan istilah utama yang digunakan dalam analisis memori dan berlaku untuk berbagai alat pembuat profil memori untuk bahasa yang berbeda.
 
-{# wf_updated_on: 2015-05-18 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-05-18 #}
 
 # Terminologi Memori {: .page-title }
@@ -60,7 +60,7 @@ Grafik memori dimulai dengan akar, yang mungkin berupa objek `window` browser at
 
 Apa pun yang tidak bisa dijangkau dari akar akan dikumpulkan sampahnya.
 
-Catatan: Kolom ukuran Shallow dan Retained menampilkan data dalam satuan byte.
+Note: Kolom ukuran Shallow dan Retained menampilkan data dalam satuan byte.
 
 ## Pohon penahan objek
 

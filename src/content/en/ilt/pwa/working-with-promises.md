@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-06-14T20:49:19Z #}
+{# wf_updated_on: 2017-07-11T21:33:19Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -367,7 +367,7 @@ Promise.race([promise1, promise2])
 });
 ```
 
-At first glance it looks like this code races two promises—one that rejects, and another that resolves—and uses the first one to return. However, `Promise.race` rejects immediately if one of the supplied promises rejects, even if another supplied promise resolves later. So if `promise1` rejects before `promise2` resolves, `promise.All` will reject even though `promise2` supplies a valid value. `Promise.race` by itself can't be used to reliably return the first promise that resolves.
+At first glance it looks like this code races two promises—one that rejects, and another that resolves—and uses the first one to return. However, `Promise.race` rejects immediately if one of the supplied promises rejects, even if another supplied promise resolves later. So if `promise1` rejects before `promise2` resolves, `Promise.race` will reject even though `promise2` supplies a valid value. `Promise.race` by itself can't be used to reliably return the first promise that resolves.
 
 Another pattern that may be appealing is the following:
 

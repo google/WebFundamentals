@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Pelajari cara mengambil adegan WebGL di Three.js dan menambahkan kemampuan WebVR.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # Memulai dengan WebVR {: .page-title }
@@ -10,7 +10,7 @@ description: Pelajari cara mengambil adegan WebGL di Three.js dan menambahkan ke
 {% include "web/_shared/contributors/paullewis.html" %}
 {% include "web/_shared/contributors/mscales.html" %}
 
-Peringatan: WebVR masih eksperimental dan bisa berubah.
+Caution: WebVR masih eksperimental dan bisa berubah.
 
 Dalam panduan ini kami akan mengeksplorasi WebVR API, dan menggunakannya untuk meningkatkan adegan WebGL sederhana yang dibangun dengan [Three.js](https://threejs.org/). Namun, untuk tugas produksi, Anda mungkin ingin memulai dengan solusi yang ada, seperti [WebVR Boilerplate](https://github.com/borismus/webvr-boilerplate). Jika Anda benar-benar baru mengenal Three.js, Anda bisa menggunakan [panduan mulai berguna](https://aerotwist.com/tutorials/getting-started-with-three-js/) ini. Komunitas ini juga sangat mendukung, jadi jika Anda menemui jalan buntu, cukup beri tahu mereka.
 

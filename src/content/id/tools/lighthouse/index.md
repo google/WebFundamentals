@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Pelajari cara menyiapkan Lighthouse untuk mengaudit aplikasi web Anda.
 
-{# wf_updated_on: 2016-09-27 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-27 #}
 
 # Audit Aplikasi Web Dengan Lighthouse {: .page-title }
@@ -14,7 +14,7 @@ audit, maka Lighthouse menjalankan serangkaian pengujian terhadap laman tersebut
 menghasilkan sebuah laporan mengenai seberapa bagus laman itu menjalaninya. Dari sini Anda bisa menggunakan
 pengujian yang tidak lulus sebagai indikator atas apa yang bisa Anda lakukan untuk meningkatkan aplikasi.
 
-Catatan: Lighthouse saat ini terutama memfokuskan pada fitur Progressive Web App, misalnya Add to Homescreen dan dukungan offline. Akan tetapi, sasaran yang melandasi proyek ini adalah menyediakan audit ujung-ke-ujung atas semua aspek kualitas aplikasi web.
+Note: Lighthouse saat ini terutama memfokuskan pada fitur Progressive Web App, misalnya Add to Homescreen dan dukungan offline. Akan tetapi, sasaran yang melandasi proyek ini adalah menyediakan audit ujung-ke-ujung atas semua aspek kualitas aplikasi web.
 
 ## Memulai
 

@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: WebVR
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # WebVR {: .page-title }
 
-Advertencia: WebVR todavía es experimental y se encuentra sujeta a modificaciones.
+Warning: WebVR todavía es experimental y se encuentra sujeta a modificaciones.
 
 WebVR es una JavaScript API que utiliza las gafas de RV y un dispositivo con capacidad para RV que tengan tus usuarios, como unas [gafas Daydream](https://vr.google.com/daydream/) y un teléfono Pixel, para crear experiencias 3D completamente envolventes en el navegador.
 

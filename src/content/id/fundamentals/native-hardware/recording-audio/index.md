@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Sebagian besar browser bisa mengakses mikrofon pengguna.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-08-23 #}
 
 # Merekam Audio dari Pengguna {: .page-title }
@@ -210,7 +210,7 @@ hanya meminta akses mikrofon bila dibutuhkan saat pertama. Setelah pengguna
 diberi akses, mereka tidakan dimintai lagi, akan tetapi, jika mereka menolak akses, 
 Anda tidak bisa mendapatkan akses lagi untuk meminta izin pengguna.
 
-Peringatan: Meminta akses ke mikrofon saat pemuatan laman akan mengakibatkan sebagian besar pengguna menolak akses ke mikrofon.
+Caution: Meminta akses ke mikrofon saat pemuatan laman akan mengakibatkan sebagian besar pengguna menolak akses ke mikrofon.
 
 ### Gunakan Permission API untuk memeriksa apakah Anda sudah memiliki akses
 

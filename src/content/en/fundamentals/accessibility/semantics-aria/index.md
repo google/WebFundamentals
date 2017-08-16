@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Introduction to ARIA and non-native HTML semantics
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Introduction to ARIA {: .page-title }
@@ -147,7 +147,7 @@ source of definitive information about how the ARIA roles and attributes work
 together and how they can be used in a way that is supported by browsers and
 assistive technologies.
 
-![a list of all the availabe ARIA roles](imgs/aria-roles.jpg)
+![a list of all the available ARIA roles](imgs/aria-roles.jpg)
 
 However, the spec is very dense; a more approachable place to start is the [ARIA
 Authoring Practices document](https://www.w3.org/TR/wai-aria-practices-1.1/){: .external }

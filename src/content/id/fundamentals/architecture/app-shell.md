@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Arsitektur shell aplikasi membuat UI Anda tetap lokal dan memuat konten secara dinamis tanpa mengorbankan kemampuan untuk dapat ditemukan dan ditautkan pada web. 
 
-{# wf_updated_on: 2016-09-26 #} 
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-27 #}
 
 # Model Shell Aplikasi {: .page-title }
@@ -35,7 +35,7 @@ publikasikan ke toko aplikasi saat membangun aplikasi asli. Ini adalah kerangka
 UI Anda dan komponen inti yang diperlukan aplikasi Anda agar berhasil, namun kemungkinan
 tidak berisi data.
 
-Catatan: Cobalah codelab [Progressive Web
+Note: Cobalah codelab [Progressive Web
 App Pertama](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0)
 untuk mempelajari cara merancang dan
 mengimplementasikan shell aplikasi pertama Anda untuk aplikasi cuaca. Video [Pemuatan
@@ -101,7 +101,7 @@ API namun tidak mengorbankan kemampuan untuk dapat ditemukan dan ditautkan dari 
 berikutnya pengguna mengakses aplikasi Anda, versi terbaru ditampilkan secara otomatis.
 Tidak perlu mengunduh versi baru sebelum menggunakannya.
 
-Catatan: Ekstensi audit [Lighthouse](https://github.com/googlechrome/lighthouse) bisa digunakan
+Note: Ekstensi audit [Lighthouse](https://github.com/googlechrome/lighthouse) bisa digunakan
 untuk memverifikasi apakah PWA Anda yang menggunakan shell aplikasi telah
 mencapai kinerja tinggi. [To the Lighthouse](https://www.youtube.com/watch?v=LZjQ25NRV-E)
 adalah perbincangan yang menjelaskan cara mengoptimalkan PWA dengan menggunakan alat (bantu) ini.
@@ -197,7 +197,7 @@ file indeks lengkap. Mari kita lihat apa materinya.
 <div class="clearfix"></div>
 
 
-Catatan: Lihat [https://app-shell.appspot.com/](https://app-shell.appspot.com/) untuk
+Note: Lihat [https://app-shell.appspot.com/](https://app-shell.appspot.com/) untuk
 tampilan sesungguhnya dengan PWA sangat sederhana menggunakan shell aplikasi dan
 rendering sisi-server untuk materi. Shell aplikasi bisa diimplementasikan dengan menggunakan sembarang pustaka atau
 kerangka kerja seperti yang dibahas dalam pembahasan <a
@@ -215,7 +215,7 @@ Shell aplikasi bisa di-cache menggunakan service worker yang ditulis secara manu
 atau yang dihasilkan oleh service worker menggunakan alat (bantu) precache aset statis seperti
 [sw-precache](https://github.com/googlechrome/sw-precache).
 
-Catatan: Contoh disediakan untuk informasi umum dan tujuan ilustrasi
+Note: Contoh disediakan untuk informasi umum dan tujuan ilustrasi
 saja. Sumber daya sesungguhnya yang digunakan mungkin akan berbeda untuk
 aplikasi Anda.
 
@@ -271,7 +271,7 @@ Untuk mengetahui selengkapnya tentang caching aset statis, lihat codelab [Menamb
 sw-precache](https://codelabs.developers.google.com/codelabs/sw-precache/index.html?index=..%2F..%2Findex#0).
 
 
-Catatan: sw-precache berguna untuk caching sumber daya statis offline Anda. Untuk
+Note: sw-precache berguna untuk caching sumber daya statis offline Anda. Untuk
 sumber daya dinamis/waktu proses, kami menyarankan penggunaan pustaka gratis kami
 [sw-toolbox](https://github.com/googlechrome/sw-toolbox).
 

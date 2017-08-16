@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 작은 화면의 휴대폰에서 큰 화면의 TV에 이르기까지 수많은 기기들에서 웹에 액세스할 수 있습니다. 각 기기에는 고유한 장점과 제한이 있습니다. 웹 개발자로서 여러분은 모든 종류의 기기를 지원하도록 해야 합니다.
 
-{# wf_updated_on: 2015-10-05 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2013-12-31 #}
 
 # 여러분의 첫 다중 기기 사이트 {: .page-title }
 
-주의: 이 문서는 한동안 업데이트되지 않았으므로 현실을 반영하지 못할 수도 있습니다. 그 대신, Udacity에서 무료 [반응형 웹 디자인](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) 과정을 확인해 보세요.
+Caution: 이 문서는 한동안 업데이트되지 않았으므로 현실을 반영하지 못할 수도 있습니다. 그 대신, Udacity에서 무료 [반응형 웹 디자인](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) 과정을 확인해 보세요.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
@@ -575,7 +575,7 @@ auto`를 적용해야 합니다.  이렇게 하면 화면은 늘어날 수 있�
 
 ## 마무리하기
 
-성공: 여기를 읽을 즈음이면, 매우 다양한 기기와
+Success: 여기를 읽을 즈음이면, 매우 다양한 기기와
 폼 팩터 및 화면 크기에서 작동하는 간단한 제품 방문 페이지를
 처음으로 만들었을 것입니다.
 

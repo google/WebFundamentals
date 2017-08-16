@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Se puede acceder a la web desde una gran variedad de dispositivos, desde teléfonos de pantalla pequeña hasta televisiones de pantalla grande. Cada dispositivo tiene sus limitaciones y beneficios propios. Como programador web, se espera que soportes una gran variedad de dispositivos.
 
-{# wf_updated_on: 2015-10-05 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2013-12-31 #}
 
 # Tu primer sitio multidispositivo {: .page-title }
 
-Advertencia: Este artículo no se ha actualizado durante un largo tiempo y puede ser que no refleje la realidad. En cambio, consulta el curso gratuito [Diseño web adaptable](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) en Udacity.
+Warning: Este artículo no se ha actualizado durante un largo tiempo y puede ser que no refleje la realidad. En cambio, consulta el curso gratuito [Diseño web adaptable](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893) en Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
@@ -91,7 +91,7 @@ La estructura básica del sitio está completa. Tenemos conocimiento de las secc
 contenido que queremos mostrar en esas secciones y de dónde ubicarlo en la arquitectura
 de la información general. Ahora podemos comenzar a compilar el sitio.
 
-Nota: Más adelante agregaremos el estilo
+Note: Más adelante agregaremos el estilo
 
 ### Crea el título y el formulario
 
@@ -379,7 +379,7 @@ Podemos hacerlo usando una tecnología llamada [Consultas de medios](/web/fundam
 Una pantalla más grande ofrece más espacio; por lo tanto, existe más flexibilidad con respecto a cómo
 puede mostrarse el contenido.
 
-Nota: No necesitas mover todos los elementos a la vez; puedes realizar ajustes más pequeños, si fuera necesario.
+Note: No necesitas mover todos los elementos a la vez; puedes realizar ajustes más pequeños, si fuera necesario.
 
 En el contexto de la página para nuestro producto, al parecer deberemos hacer
 lo siguiente:
@@ -575,7 +575,7 @@ Esto nos brinda una clara y consistente interrupción.
 
 ## Resumen
 
-Éxito: Para cuando leas esto, habrás creado tu
+Success: Para cuando leas esto, habrás creado tu
 primera página de destino de producto simple que funciona en una gran variedad de dispositivos,
 factores de forma y tamaños de pantalla.
 

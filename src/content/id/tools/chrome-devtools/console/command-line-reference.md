@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2015-08-02 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Referensi Command Line API {: .page-title }
@@ -12,7 +12,7 @@ description: TODO
 
 Command Line API berisi kumpulan fungsi praktis untuk melaksanakan tugas umum: memilih dan memeriksa elemen DOM, menampilkan data dalam format yang dapat dibaca, menghentikan dan memulai profiler, serta memantau kejadian DOM.
 
-Catatan: API ini hanya tersedia dari dalam konsol itu sendiri. Anda tidak bisa mengakses Command Line API dari skrip di laman.
+Note: API ini hanya tersedia dari dalam konsol itu sendiri. Anda tidak bisa mengakses Command Line API dari skrip di laman.
 
 
 ## $_
@@ -74,7 +74,7 @@ Contoh berikut mengembalikan referensi ke elemen yang saat ini dipilih dan menam
 
 ![Contoh $('img').src](images/selector-img-src.png)
 
-Catatan: Jika Anda menggunakan pustaka seperti jQuery yang menggunakan <code>$</code>, fungsionalitas ini akan diganti, dan <code>$</code> akan menyesuaikan dengan implementasi pustaka itu.
+Note: Jika Anda menggunakan pustaka seperti jQuery yang menggunakan <code>$</code>, fungsionalitas ini akan diganti, dan <code>$</code> akan menyesuaikan dengan implementasi pustaka itu.
 
 ## $$(selector)
 
@@ -94,7 +94,7 @@ menampilkan nilai setiap properti `src` elemen:
 
 ![Contoh penggunaan $$() untuk memilih semua gambar dalam dokumen dan menampilkan sumbernya.](images/all-selector.png)
 
-Catatan: Tekan <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> di konsol untuk memulai baris baru tanpa mengeksekusi skrip.
+Note: Tekan <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> di konsol untuk memulai baris baru tanpa mengeksekusi skrip.
 
 ## $x(path)
 
@@ -331,7 +331,7 @@ Hasil di panel Profiles:
 ![Profil yang dikelompokkan](images/grouped-profiles.png)
 
 
-Catatan: Beberapa profil CPU bisa beroperasi secara bersamaan dan Anda tidak harus menutupnya dengan urutan yang sama seperti urutan pembuatannya.
+Note: Beberapa profil CPU bisa beroperasi secara bersamaan dan Anda tidak harus menutupnya dengan urutan yang sama seperti urutan pembuatannya.
 
 ## table(data[, columns])
 

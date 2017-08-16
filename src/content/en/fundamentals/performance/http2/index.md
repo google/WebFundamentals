@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2 (or h2) is a binary protocol that brings push, multiplexing streams and frame control to the web.
 
-{# wf_updated_on: 2016-09-29 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>Network,Internals>Network>HTTP2 #}
 
@@ -254,7 +254,7 @@ reassemble them on the other end.
 ![HTTP/2 request and response multiplexing within a shared connection](images/multiplexing01.svg)
 
 The snapshot captures multiple streams in flight within the same connection. The
-client is transmitting a DATA frame (stream 5) to the server, while the server
+client is transmitting a `DATA` frame (stream 5) to the server, while the server
 is transmitting an interleaved sequence of frames to the client for streams 1
 and 3. As a result, there are three parallel streams in flight.
 
@@ -312,7 +312,7 @@ of 12 and its one sibling B has a weight of 4, then to determine the proportion
 of the resources that each of these streams should receive:
 
 1. Sum all the weights: `4 + 12 = 16`
-2. Divide each stream weight by the total weight: `A = 12/16, B = 4/16`
+1. Divide each stream weight by the total weight: `A = 12/16, B = 4/16`
 
 Thus, stream A should receive three-quarters and stream B should receive one-
 quarter of available resources; stream B should receive one-third of the
@@ -323,13 +323,13 @@ in the image above. From left to right:
    on the implicit "root stream"; A has a weight of 12, and B has a weight of 4.
    Thus, based on proportional weights: stream B should receive one-third of the
    resources allocated to stream A.
-2. Stream D is dependent on the root stream; C is dependent on D. Thus, D should
+1. Stream D is dependent on the root stream; C is dependent on D. Thus, D should
    receive full allocation of resources ahead of C. The weights are inconsequential
    because C’s dependency communicates a stronger preference.
-3. Stream D should receive full allocation of resources ahead of C; C should receive
+1. Stream D should receive full allocation of resources ahead of C; C should receive
    full allocation of resources ahead of A and B; stream B should receive one-third of
    the resources allocated to stream A.
-4. Stream D should receive full allocation of resources ahead of E and C; E and C
+1. Stream D should receive full allocation of resources ahead of E and C; E and C
    should receive equal allocation ahead of A and B; A and B should receive proportional
    allocation based on their weights.
 
@@ -475,17 +475,17 @@ the same results, but with additional performance benefits. Push resources can b
 
 ### PUSH_PROMISE 101
 
-All server push streams are initiated via PUSH_PROMISE frames, which signal the
+All server push streams are initiated via `PUSH_PROMISE` frames, which signal the
 server’s intent to push the described resources to the client and need to be
 delivered ahead of the response data that requests the pushed resources. This
 delivery order is critical: the client needs to know which resources the server
 intends to push to avoid creating duplicate requests for these
 resources. The simplest strategy to satisfy this requirement is to send all
-PUSH_PROMISE frames, which contain just the HTTP headers of the promised
-resource, ahead of the parent’s response (in other words, DATA frames).
+`PUSH_PROMISE` frames, which contain just the HTTP headers of the promised
+resource, ahead of the parent’s response (in other words, `DATA` frames).
 
-Once the client receives a PUSH_PROMISE frame it has the option to decline the
-stream (via a RST_STREAM frame) if it wants to. (This might occurr for example
+Once the client receives a `PUSH_PROMISE` frame it has the option to decline the
+stream (via a `RST_STREAM` frame) if it wants to. (This might occur for example
 because the resource is already in cache.) This is an important improvement over
 HTTP/1.x. By contrast, the use of resource inlining, which is a popular
 "optimization" for HTTP/1.x, is equivalent to a "forced push": the client cannot
@@ -495,7 +495,7 @@ With HTTP/2 the client remains in full control of how server push is used. The
 client can limit the number of concurrently pushed streams; adjust the initial
 flow control window to control how much data is pushed when the stream is first
 opened; or disable server push entirely. These preferences are communicated via
-the SETTINGS frames at the beginning of the HTTP/2 connection and may be updated
+the `SETTINGS` frames at the beginning of the HTTP/2 connection and may be updated
 at any time.
 
 Each pushed resource is a stream that, unlike an inlined resource, allows it to
@@ -517,7 +517,7 @@ simple but powerful techniques:
 
 1. It allows the transmitted header fields to be encoded via a static Huffman
    code, which reduces their individual transfer size.
-2. It requires that both the client and server maintain and update an indexed
+1. It requires that both the client and server maintain and update an indexed
    list of previously seen header fields (in other words, it establishes a shared
    compression context), which is then used as a reference to efficiently encode
    previously transmitted values.
@@ -540,8 +540,8 @@ already present in the static or dynamic tables on each side.
 
 Note: The definitions of the request and response header fields in HTTP/2 remains
 unchanged, with a few minor exceptions: all header field names are lowercase,
-and the request line is now split into individual :method, :scheme, :authority,
-and :path pseudo-header fields.
+and the request line is now split into individual `:method`, `:scheme`, 
+`:authority`, and `:path` pseudo-header fields.
 
 ### Security and performance of HPACK
 
@@ -565,7 +565,7 @@ and simple to implement correctly, and of course, enable good compression of
 HTTP header metadata.
 
 For full details of the HPACK compression algorithm, see
-<https://tools.ietf.org/html/draft-ietf-httpbis-header-compression>.
+[IETF HPACK - Header Compression for HTTP/2](https://tools.ietf.org/html/draft-ietf-httpbis-header-compression).
 
 ## Further reading:
 
@@ -573,7 +573,8 @@ For full details of the HPACK compression algorithm, see
     – The full article by Ilya Grigorik
 * [“Setting up HTTP/2”](https://surma.link/things/h2setup/){: .external }
     – How to set up HTTP/2 in different backends by Surma
-* [“HTTP/2 is here, let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19)
+* [“HTTP/2 is here,
+let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19)
     – Presentation by Ilya Grigorik from Velocity 2015
 * [“Rules of Thumb for HTTP/2 Push”](https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit)
     – An analysis by Tom Bergan, Simon Pelchat and Michael Buettner on when and how to use push.

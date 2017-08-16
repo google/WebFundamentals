@@ -13,6 +13,8 @@ toc:
         path: /web/tools/lighthouse/audits/console-time
       - title: Avoids Date.now()
         path: /web/tools/lighthouse/audits/date-now
+      - title: Avoids Deprecated APIs
+        path: /web/tools/lighthouse/audits/deprecated-apis
       - title: Avoids document.write()
         path: /web/tools/lighthouse/audits/document-write
       - title: Avoids Enormous Network Payloads
@@ -23,7 +25,7 @@ toc:
         path: /web/tools/lighthouse/audits/old-flexbox
       - title: Avoids Requesting The Geolocation Permission On Page Load
         path: /web/tools/lighthouse/audits/geolocation-on-load
-      - title: Avoids Requesting The Notfication Permission On Page Load
+      - title: Avoids Requesting The Notification Permission On Page Load
         path: /web/tools/lighthouse/audits/notifications-on-load
       - title: Avoids Web SQL
         path: /web/tools/lighthouse/audits/web-sql
@@ -45,7 +47,7 @@ toc:
         path: /web/tools/lighthouse/audits/critical-request-chains
       - title: Element aria-* Attributes Are Allowed For This Role
         path: /web/tools/lighthouse/audits/aria-allowed-attributes
-      - title: Element aria-* Attributes Are Valid And Not Mispelled Or Non-Existent
+      - title: Element aria-* Attributes Are Valid And Not Misspelled Or Non-Existent
         path: /web/tools/lighthouse/audits/valid-aria-attributes
       - title: Element aria-* Attributes Have Valid Values
         path: /web/tools/lighthouse/audits/valid-aria-values

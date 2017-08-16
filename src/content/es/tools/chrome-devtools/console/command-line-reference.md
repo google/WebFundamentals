@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: PENDIENTE
 
-{# wf_updated_on: 2015-08-02 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Referencia de Command Line API {: .page-title }
@@ -12,7 +12,7 @@ description: PENDIENTE
 
 Command Line API ofrece varias funciones convenientes para realizar tareas comunes: seleccionar e inspeccionar elementos DOM, mostrar datos en formatos legibles, detener e iniciar generadores de perfiles, y controlar eventos DOM.
 
-Nota: Esta API solo está disponible dentro de la misma consola. No puedes acceder a Command Line API desde secuencias de comandos en la página.
+Note: Esta API solo está disponible dentro de la misma consola. No puedes acceder a Command Line API desde secuencias de comandos en la página.
 
 
 ## $_
@@ -74,7 +74,7 @@ En el siguiente ejemplo se muestra una referencia al elemento actualmente selecc
 
 ![Ejemplo de $('img').src](images/selector-img-src.png)
 
-Nota: Si usas una biblioteca como jQuery que emplea <code>$</code>, esta funcionalidad se sobrescribirá y <code>$</code> corresponderá a la implementación de esa biblioteca.
+Note: Si usas una biblioteca como jQuery que emplea <code>$</code>, esta funcionalidad se sobrescribirá y <code>$</code> corresponderá a la implementación de esa biblioteca.
 
 ## $$(selector)
 
@@ -94,7 +94,7 @@ se muestra el valor de la propiedad `src` de cada elemento:
 
 ![Ejemplo en el que se usa $$() para seleccionar todas las imágenes del documento y mostrar sus fuentes](images/all-selector.png)
 
-Nota: Presiona <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> en la consola para iniciar una línea nueva sin ejecutar la secuencia de comandos.
+Note: Presiona <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> en la consola para iniciar una línea nueva sin ejecutar la secuencia de comandos.
 
 ## $x(path)
 
@@ -331,7 +331,7 @@ Resultado en el panel Profiles:
 ![Perfiles agrupados](images/grouped-profiles.png)
 
 
-Nota: Múltiples perfiles de CPU pueden operar a la vez y no debes cerrarlos según el orden en que se crearon.
+Note: Múltiples perfiles de CPU pueden operar a la vez y no debes cerrarlos según el orden en que se crearon.
 
 ## table(data[, columns])
 

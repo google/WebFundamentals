@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-27T18:47:38Z #}
+{# wf_updated_on: 2017-07-12T22:13:18Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -13,7 +13,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 The Payment Request API improves mobile web checkout (shopping cart) and accepts credit cards electronically (and eventually a number of other payment services and solutions in the wild). 
 
-The Payment Request API allows merchants to easily collect payment information with minimal integration. 
+The Payment Request API allows merchants to easily collect payment information with minimal integration. The API is an open and cross-browser standard that replaces traditional checkout flows by allowing merchants to request and accept any payment in a single API call. The API eliminates manual and tedious entry by storing the user's information securely in the browser. The browser passes addresses and credit card (or other payment) details directly to the website. And, because the browser is collecting payment information from the user, making a payment goes from " *n* " taps to one tap.
 
 
 
@@ -44,6 +44,15 @@ Any system that improves or solves one or more of those problems is a welcome ch
 
 
 
+
+The Payment Request API is a system that is meant  *to eliminate checkout forms* . It vastly improves user workflow during the purchase process, providing a more convenient and consistent user experience and enabling web merchants to easily leverage disparate payment methods. The Payment Request API is not a new payment method, nor does it integrate directly with payment processors. Rather, it is a process layer whose goals are:
+
+* To let the browser act as intermediary among merchants, users, and payment methods
+* To standardize the payment communication flow as much as possible
+* To seamlessly support different secure payment methods
+* To work on any browser, device, or platform—mobile or otherwise
+
+The Payment Request API is currently under development by the  [W3C Web Payments Working Group](https://www.w3.org/TR/payment-request/). The group's goal is to create a universal cross-browser standard for any website to accept any form of payment. See the  [Can I use](http://caniuse.com/#feat=payment-request) website for up-to-date browser support.
 
 The Payment Request API's open-web approach is designed:
 

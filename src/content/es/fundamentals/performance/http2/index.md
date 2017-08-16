@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2 (o h2) es un protocolo binario que ofrece transmisiones de multiplexación insertadas y control de tramas a la Web.
 
-{# wf_updated_on: 2016-09-29 #}
+{# wf_updated_on: 2017-07-13 #}
 {# wf_published_on: 2016-09-29 #}
 
 # Introducción a HTTP/2 {: .page-title }
@@ -10,7 +10,7 @@ description: HTTP/2 (o h2) es un protocolo binario que ofrece transmisiones de m
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 {% include "web/_shared/contributors/surma.html" %}
 
-Nota: El siguiente contenido es un extracto de [High Performance Browser
+Note: El siguiente contenido es un extracto de [High Performance Browser
 Networking (Redes de navegadores de alto rendimiento)](http://shop.oreilly.com/product/0636920028048.do) (O'Reilly, Ilya
 Grigorik). Para conocer la versión completa y el contenido relacionado, consulta
 [hpbn.co](https://hpbn.co/){: .external }.
@@ -63,7 +63,7 @@ Específicamente, las metas trazadas para el proyecto se fijaron de la siguiente
 * Desarrollar este protocolo nuevo en colaboración con la comunidad de código abierto.
 * Reunir datos de rendimiento reales para (in)validar el protocolo experimental.
 
-Nota: A fin de lograr una mejora de tiempo de carga de la página en un 50%, SPDY aspiró a realizar un uso más eficiente
+Note: A fin de lograr una mejora de tiempo de carga de la página en un 50%, SPDY aspiró a realizar un uso más eficiente
 de la conexión de TCP subyacente al introducir una nueva capa de entramado binario para
 habilitar la multiplexación de solicitudes y respuestas, la priorización y la compresión
 de encabezados; consulta
@@ -253,7 +253,7 @@ reensamblarlas en el otro extremo.
 ![Multiplexación de solicitudes y respuestas de HTTP/2 dentro de una conexión compartida](images/multiplexing01.svg)
 
 La imagen captura múltiples transmisiones en vuelo dentro de la misma conexión. El
-cliente transmite una trama DATA (stream 5) al servidor, mientras este último
+cliente transmite una trama `DATA` (stream 5) al servidor, mientras este último
 transmite una secuencia intercalada de tramas al cliente para las transmisiones 1
 y 3. En consecuencia, hay tres transmisiones paralelas en vuelo.
 
@@ -340,7 +340,7 @@ también permite al cliente actualizar estas preferencias en cualquier momento, 
 más optimizaciones en el navegador. En otras palabras, podemos cambiar dependencias
 y reasignar pesos en respuesta a la interacción del usuario y otras señales.
 
-Nota: Las dependencias y pesos de transmisión expresan una preferencia de transporte, no un
+Note: Las dependencias y pesos de transmisión expresan una preferencia de transporte, no un
 requisito, y como tales, no garantizan un proceso ni una
 orden de transmisión específicos. Es decir, el cliente no puede forzar al servidor a que procese la
 transmisión en un orden específico mediante la priorización de transmisión. Si bien esto parece ser
@@ -376,7 +376,7 @@ operativos totales y mejora la utilización y capacidad de la red. Como resultad
 el traspaso a HTTP/2 no solo debería reducir la latencia de red, sino también ayudar a
 mejorar el procesamiento y reducir los costos operativos.
 
-Nota: la menor cantidad de conexiones es una función especialmente importante para
+Note: la menor cantidad de conexiones es una función especialmente importante para
 mejorar el rendimiento de implementaciones de HTTPS, lo cual se traduce en menos acuerdos TLS
 costosos, mejor reutilización de sesión y una reducción total en
 recursos de cliente y servidor requeridos.
@@ -446,7 +446,7 @@ de manera explícita.
 ![Servidor inicia transmisiones (promises) nuevas para recursos push
 ](images/push01.svg)
 
-Nota: HTTP/2 se separa de la semántica estricta de solicitud y respuesta y habilita
+Note: HTTP/2 se separa de la semántica estricta de solicitud y respuesta y habilita
 uno a varios flujos de trabajo push iniciados en el servidor que abren un abanico de nuevas
 posibilidades de interacción dentro y fuera del navegador. Se trata de una
 función habilitante que tendrá importantes consecuencias a largo plazo tanto para la forma en que
@@ -474,17 +474,17 @@ los mismos resultados pero con beneficios de rendimiento adicionales. Los recurs
 
 ### PUSH_PROMISE 101
 
-Todas las transmisiones del servidor push se inician a través de tramas PUSH_PROMISE, que indican la
+Todas las transmisiones del servidor push se inician a través de tramas `PUSH_PROMISE`, que indican la
 intención del servidor de insertar los recursos descritos al cliente y necesitan ser
 entregados antes que los datos de respuesta que solicitan los recursos insertados. Este
 orden de entrega es crítico: el cliente necesita saber qué recursos son los que el servidor
 intenta insertar a fin de evitar duplicar solicitudes para estos
 recursos. La estrategia más simple para cumplir este requisito es enviar todas las
-tramas PUSH_PROMISE, que contienen precisamente los encabezados de HTTP del recurso
-promise, antes que la respuesta de las primarias (en otras palabras, las tramas DATA).
+tramas `PUSH_PROMISE`, que contienen precisamente los encabezados de HTTP del recurso
+promise, antes que la respuesta de las primarias (en otras palabras, las tramas `DATA`).
 
-Una vez que el cliente recibe una trama PUSH_PROMISE, tiene la opción de rechazar la
-transmisión (a través de una trama RST_STREAM), si así lo desea. (Esto podría ocurrir, por ejemplo,
+Una vez que el cliente recibe una trama `PUSH_PROMISE`, tiene la opción de rechazar la
+transmisión (a través de una trama `RST_STREAM`), si así lo desea. (Esto podría ocurrir, por ejemplo,
 debido a que el recurso ya está en la caché). Esta es una importante mejora en comparación con
 HTTP/1.x. Por el contrario, el uso de incorporación de recursos, que es una "optimización"
 popular de HTTP/1.x, equivale a una "inserción forzada": el cliente no puede
@@ -494,7 +494,7 @@ Con HTTP/2, el cliente mantiene el control total de la forma en que se utiliza e
 cliente puede limitar la cantidad de transmisiones insertadas de manera concurrente; ajustar la ventana de control de flujo
 inicial para controlar cuántos datos se insertan cuando se abre la transmisión
 por primera vez o inhabilitar el servidor push en su totalidad. Estas preferencias se comunican a través de
-las tramas SETTINGS al comienzo de la conexión de HTTP/2 y pueden actualizarse
+las tramas `SETTINGS` al comienzo de la conexión de HTTP/2 y pueden actualizarse
 en cualquier momento.
 
 Cada recurso insertado es una transmisión que, a diferencia de un recurso incorporado, le permite
@@ -537,10 +537,10 @@ el tamaño de cada solicitud se reduce al usar codificación Huffman estática p
 nunca antes vistos y una sustitución de índices por valores que ya
 están presentes en las tablas estáticas o dinámicas a cada lado.
 
-Nota: Las definiciones de los campos de encabezados de solicitud y respuesta en HTTP/2 se mantienen
+Note: Las definiciones de los campos de encabezados de solicitud y respuesta en HTTP/2 se mantienen
 sin cambios, salvo por muy pocas excepciones: todos los nombres del campo de encabezado están en minúscula
-y la línea de solicitud ahora se divide en campos individuales de seudoencabezados :method, :scheme, :authority
-y :path.
+y la línea de solicitud ahora se divide en campos individuales de seudoencabezados `:method`, `:scheme`, 
+`:authority` y `:path`.
 
 ### Seguridad y rendimiento de HPACK
 
@@ -572,7 +572,8 @@ Para obtener información completa sobre el algoritmo de compresión HPACK, cons
     – El artículo completo de Ilya Grigorik
 * [“Setting up HTTP/2” (Configuración de HTTP/2)](https://surma.link/things/h2setup/){: .external } 
     – Cómo configurar HTTP/2 en backends diferentes de Surma
-* [“HTTP/2 is here, let’s optimize!” (HTTP/2 está aquí, ¡a optimizar!)](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19) 
+* [“HTTP/2 is here, let’s optimize!” (HTTP/2 está aquí, ¡a
+  optimizar!)](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19)
     – Presentación de Ilya Grigorik de Velocity 2015
 * [“Rules of Thumb for HTTP/2 Push” (Reglas generales para HTTP/2 Push)](https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit) 
     – Un análisis de Tom Bergan, Simon Pelchat y Michael Buettner sobre cuándo y cómo usar push.

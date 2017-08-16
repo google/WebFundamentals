@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Obtén información sobre las maneras más simples de agregar videos a tu sitio y asegurarte de que los usuarios disfruten de la mejor experiencia posible en cualquier dispositivo.
 
-{# wf_updated_on: 2014-04-28 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-04-15 #}
 
 # Video {: .page-title }
@@ -116,7 +116,7 @@ video (como puntos de entrada en un DVD) sin necesidad de codificar y
 usar varios archivos.
 
 
-Advertencia: La API de Media Fragments es compatible con la mayoría de las plataformas, pero no con iOS. Asegúrate de que las solicitudes de intervalo sean compatibles con tu servidor. Las solicitudes de intervalo se habilitan de manera predeterminada en la mayoría de los servidores, pero algunos servicios de hosting pueden inhabilitarlas.
+Warning: La API de Media Fragments es compatible con la mayoría de las plataformas, pero no con iOS. Asegúrate de que las solicitudes de intervalo sean compatibles con tu servidor. Las solicitudes de intervalo se habilitan de manera predeterminada en la mayoría de los servidores, pero algunos servicios de hosting pueden inhabilitarlas.
 
 Al usar las herramientas para programadores del de navegador, comprueba que se incluya `Accept-Ranges: bytes` en los
 encabezados de respuesta:
@@ -316,7 +316,7 @@ Para mostrar contenido multimedia en iframes (como en videos de YouTube), prueba
 enfoque adaptable (como el que [propone John Surdakowski](http://avexdesigns.com/responsive-youtube-embed/)).
 
 
-Advertencia: No fuerces el tamaño de los elementos cuando este resulte en una relación de aspecto distinta a la del video original. Los elementos achatados o estirados no quedan bien.
+Warning: No fuerces el tamaño de los elementos cuando este resulte en una relación de aspecto distinta a la del video original. Los elementos achatados o estirados no quedan bien.
 
 **CSS:**
 

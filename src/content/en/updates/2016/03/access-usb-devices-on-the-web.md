@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The WebUSB API makes USB safer and easier to use by bringing it to the Web.
 
-{# wf_updated_on: 2016-09-26 #}
+{# wf_updated_on: 2017-07-19 #}
 {# wf_published_on: 2016-03-30 #}
 {# wf_tags: news,webusb,iot,arduino,origintrials #}
 {# wf_featured_image: /web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-hero-sm.jpg #}
@@ -371,6 +371,7 @@ Android in Chrome 54.
 
 ## Resources
 
+- Stack Overflow: [https://stackoverflow.com/questions/tagged/webusb](https://stackoverflow.com/questions/tagged/webusb)
 - WebUSB API Spec: [http://wicg.github.io/webusb/](https://wicg.github.io/webusb/){: .external }
 - Chrome Feature Status: [https://www.chromestatus.com/features/5651917954875392](https://www.chromestatus.com/features/5651917954875392)
 - Spec Issues: [https://github.com/WICG/webusb/issues](https://github.com/WICG/webusb/issues)

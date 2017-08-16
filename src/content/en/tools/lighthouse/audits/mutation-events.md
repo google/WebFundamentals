@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids Mutation Events In Its Own Scripts" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Avoids Mutation Events In Its Own Scripts  {: .page-title }
@@ -24,7 +24,7 @@ DOM events spec:
 
 ## How to pass the audit {: #how }
 
-Under **URLs**, Lighthouse reports each mutation event listner that it found
+Under **URLs**, Lighthouse reports each mutation event listener that it found
 in your code. Replace each of these mutation events with a `MutationObserver`.
 See [`MutationObserver`][mdn] on MDN for more help.
 

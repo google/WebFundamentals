@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 합성(compositing)은 화면에 표시하기 위해 페이지에서 페인트된 부분을 합치는 과정입니다.
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-20 #}
 
 # 컴포지터(compositor) 전용 속성 고수 및 레이어 수 관리 {: .page-title }
@@ -67,7 +67,7 @@ description: 합성(compositing)은 화면에 표시하기 위해 페이지에�
 
 이는 페이지의 모든 단일 요소를 승격하고 싶다는 우회적인 표현입니다. 여기에서 문제는 생성하는 모든 레이어가 메모리와 관리가 필요하며 이는 공짜가 아니라는 점입니다. 실제로 제한된 메모리를 가진 기기에서 성능에 미치는 영향이 레이어 생성의 이점을 훨씬 상회할 수 있습니다. 모든 레이어의 텍스처는 GPU로 업로드되어야 하며, 따라서 CPU와 GPU 간의 대역폭과 GPU에서 텍스처에 사용할 수 있는 메모리에 추가적인 제약이 있습니다.
 
-경고: 요소를 불필요하게 승격하지 마세요.
+Warning: 요소를 불필요하게 승격하지 마세요.
 
 ## Chrome DevTools를 사용하여 앱의 레이어 이해
 

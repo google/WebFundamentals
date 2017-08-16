@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Tugas Anda belum selesai di tahap memastikan situs berjalan mulus di Chrome dan Android. Meskipun Device Mode bisa menyimulasikan berbagai perangkat lain seperti iPhone, kami sarankan agar Anda memeriksa solusi browser lain untuk emulasi."
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Mengemulasikan dan Menguji Browser Lain {: .page-title }
@@ -97,7 +97,7 @@ App Store](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12).
 
 Setelah selesai, pelajari cara bekerja dengan simulator di [dokumentasi Apple](https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html).
 
-Catatan: Agar tidak perlu membuka Xcode setiap kali Anda ingin menggunakan Simulator iOS, buka simulator, lalu klik kanan ikon iOS Simulator di dok Anda dan pilih `Keep in Dock`. Sekarang, cukup klik ikon ini kapan saja Anda perlu.
+Note: Agar tidak perlu membuka Xcode setiap kali Anda ingin menggunakan Simulator iOS, buka simulator, lalu klik kanan ikon iOS Simulator di dok Anda dan pilih `Keep in Dock`. Sekarang, cukup klik ikon ini kapan saja Anda perlu.
 
 ### Modern.IE
 

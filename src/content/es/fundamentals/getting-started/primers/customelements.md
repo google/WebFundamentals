@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Los elementos personalizados permiten a los programadores web definir nuevas etiquetas HTML, extender las existentes y crear componentes web reutilizables.
 
-{# wf_updated_on: 2016-09-26 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-06-28 #}
 
 # Custom Elements v1: Componentes web reutilizables {: .page-title }
@@ -19,7 +19,7 @@ JS/HTML/CSS básicos. Como resultado se obtiene una reducción del código, la m
 
 ## Introducción {: #intro}
 
-Nota: En este artículo se describen las nuevas <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">especificaciones de elementos personalizados v1</a>. Si ya has usado elementos personalizados, es probable que conozcas la versión <a href="https://www.chromestatus.com/features/4642138092470272">v0 incluida en Chrome 33</a>. El concepto es el mismo, pero las especificaciones de v1 incluyen importantes diferencias en la API. Continúa leyendo para conocer las novedades, o consulta la sección sobre <a href="#historysupport">la historia y la compatibilidad de los navegadores</a> para obtener más información.
+Note: En este artículo se describen las nuevas <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">especificaciones de elementos personalizados v1</a>. Si ya has usado elementos personalizados, es probable que conozcas la versión <a href="https://www.chromestatus.com/features/4642138092470272">v0 incluida en Chrome 33</a>. El concepto es el mismo, pero las especificaciones de v1 incluyen importantes diferencias en la API. Continúa leyendo para conocer las novedades, o consulta la sección sobre <a href="#historysupport">la historia y la compatibilidad de los navegadores</a> para obtener más información.
 
 El navegador ofrece una excelente herramienta para estructurar aplicaciones web.
 Se conoce como “HTML”.  ¡Probablemente hayas oído el término! Es declarativo, portátil, ampliamente compatible y fácil de usar. Si bien el lenguaje HTML es excelente, su vocabulario y extensibilidad son limitados. El [estándar HTML](https://html.spec.whatwg.org/multipage/){: .external } no ofrece una manera de asociar automáticamente el comportamiento de JS con tu lenguaje de marcado... hasta ahora.
@@ -207,7 +207,7 @@ elemento que extiende `<img>` debe extender `HTMLImageElement`.
 Observa que la llamada a `define()` cambia ligeramente al extender un elemento nativo. El tercer parámetro obligatorio indica al navegador la etiqueta que extenderás. Esto es necesario porque muchas etiquetas HTML comparten la misma interfaz del DOM. Ejemplos: `<section>`, `<address>` y `<em>` (entre otras) comparten `HTMLElement`; `<q>` y `<blockquote>` comparten `HTMLQuoteElement`. La especificación de `{extends: 'blockquote'}` le permite al navegador determinar que estás creando una `<blockquote>` modificada en lugar de `<q>`. Consulta [la especificación de HTML](https://html.spec.whatwg.org/multipage/indices.html#element-interfaces) para
 obtener la lista completa de interfaces de DOM del HTML.
 
-Nota: La extensión de `HTMLButtonElement` transmite a nuestro atractivo botón todas las propiedades y todos los métodos del DOM de `<button>`. Eso nos libera de una gran implementaciones: la propiedad `disabled`, el método `click()`, los receptores de `keydown` y la administración de `tabindex`. En su lugar, nuestro foco debe centrarse en mejorar progresivamente `<button>` con funcionalidad personalizada; sobre todo, el método `drawRipple()`. Menos código y más reutilización.
+Note: La extensión de `HTMLButtonElement` transmite a nuestro atractivo botón todas las propiedades y todos los métodos del DOM de `<button>`. Eso nos libera de una gran implementaciones: la propiedad `disabled`, el método `click()`, los receptores de `keydown` y la administración de `tabindex`. En su lugar, nuestro foco debe centrarse en mejorar progresivamente `<button>` con funcionalidad personalizada; sobre todo, el método `drawRipple()`. Menos código y más reutilización.
 
 Los consumidores de un elemento integrado personalizado pueden usarlo de varias maneras.
 Pueden declararlo agregando el atributo `is=""` en la etiqueta nativa:
@@ -264,7 +264,7 @@ También pueden crear una instancia en JavaScript:
     console.assert(image.height === 200);
     
 
-Nota: Algunos navegadores exhiben un rechazo manifiesto por la implementación de la sintaxis  <code>is=""</code>. Esto representa una desventaja para la accesibilidad y la mejora progresiva. Si crees que extender elementos HTML nativos es útil, danos tu opinión <a href='https://github.com/w3c/webcomponents/issues/509'>en Github</a>.
+Note: Algunos navegadores exhiben un rechazo manifiesto por la implementación de la sintaxis  <code>is=""</code>. Esto representa una desventaja para la accesibilidad y la mejora progresiva. Si crees que extender elementos HTML nativos es útil, danos tu opinión <a href='https://github.com/w3c/webcomponents/issues/509'>en Github</a>.
 
 ## Reacciones de los elementos personalizados {: #reactions}
 
@@ -516,7 +516,7 @@ proporciona una promesa que se resuelve al definirse el elemento.
     });
     
 
-Nota: Imagino que los elementos personalizados se encuentran en un limbo antes de su definición. La [especificación](https://dom.spec.whatwg.org/#concept-element-custom-element-state) define el estado de un elemento como “indefinido”, “no personalizado” o “personalizado”. El estado de los elementos integrados como `<div>` siempre es “definido”.
+Note: Imagino que los elementos personalizados se encuentran en un limbo antes de su definición. La [especificación](https://dom.spec.whatwg.org/#concept-element-custom-element-state) define el estado de un elemento como “indefinido”, “no personalizado” o “personalizado”. El estado de los elementos integrados como `<div>` siempre es “definido”.
 
 ## Contenido definido por el elemento {: #addingmarkup}
 
@@ -570,11 +570,11 @@ if (supportsCustomElementsV1) {
 </script>
 {% endframebox %}
 
-Nota: Sobrescribir los campos secundarios de un elemento con contenido nuevo generalmente no se recomienda porque es una medida inesperada. Los usuarios se sorprenderían si se desestimara su lenguaje de marcado. Una mejor manera de agregar contenido definido por el elemento es usar el shadow DOM que trataremos a continuación.
+Note: Sobrescribir los campos secundarios de un elemento con contenido nuevo generalmente no se recomienda porque es una medida inesperada. Los usuarios se sorprenderían si se desestimara su lenguaje de marcado. Una mejor manera de agregar contenido definido por el elemento es usar el shadow DOM que trataremos a continuación.
 
 ### Creación de un elemento que use Shadow DOM {: #shadowdom}
 
-Nota: No abarcaré las características de [Shadow DOM][sd_spec] en este artículo, pero
+Note: No abarcaré las características de [Shadow DOM][sd_spec] en este artículo, pero
 es una API poderosa que puede combinarse con elementos personalizados. Por sí misma, Shadow DOM es
 una herramienta de composición. Cuando se usa con elementos personalizados, los resultados son increíbles.
 
