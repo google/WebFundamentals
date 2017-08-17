@@ -471,7 +471,7 @@ textures more transparent and larger.
 
 <div class="clearfix"></div>
 
-<img src="https://via.placeholder.com/512x512?text=UNKNOWN" class="attempt-right">
+<img src="images/dance-tonite/shadow.png" class="attempt-right">
 
 To create them, we use this black and white texture (with no alpha transparency):
 
