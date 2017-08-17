@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Image Capture is an API to control camera settings and take photos.
 
-{# wf_updated_on: 2017-07-31 #}
+{# wf_updated_on: 2017-08-17 #}
 {# wf_published_on: 2016-12-05 #}
-{# wf_tags: canvas,chrome56,media,webrtc #}
+{# wf_tags: canvas,chrome56,chrome61,media,webrtc #}
 {# wf_featured_image: /web/updates/images/2016/12/imagecapture/featured.jpg #}
 {# wf_featured_snippet: Image Capture is an API to control camera settings and take photos. #}
 {# wf_blink_components: Blink>ImageCapture #}
