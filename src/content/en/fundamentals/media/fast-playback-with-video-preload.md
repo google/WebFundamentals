@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Preload video and audio for faster playback.
 
-{# wf_published_on: 2017-07-27 #}
-{# wf_updated_on: 2017-07-27 #}
+{# wf_published_on: 2017-08-17 #}
+{# wf_updated_on: 2017-08-17 #}
+{# wf_blink_components: Blink>Media #}
 
 # Fast Playback with Video Preload {: .page-title }
 
@@ -130,9 +131,9 @@ list, duration, and so on) is desirable.
 </script>
 ```
 
-Setting the `preload` attribute to `auto` indicates that the browser may 
-cache enough such that the playback to end would be possible without 
-requiring a stop for further buffering.
+Setting the `preload` attribute to `auto` indicates that the browser may cache
+enough data that complete playback is possible without requiring a stop for
+further buffering.
 
 ```
 <video id="video" preload="auto" src="file.mp4" controls></video>
@@ -281,7 +282,7 @@ Before we dive into the [Cache API] and service workers, let's see how to
 manually buffer a video with MSE. The example below assumes that your web
 server supports HTTP Range requests but this would be pretty similar with
 file segments. Note that some middleware libraries such as [Google's Shaka
-Player], [JW Player], and [Video.js] are dedicated to handle this for you.
+Player], [JW Player], and [Video.js] are built to handle this for you.
 
 ```
 <video id="video" controls></video>
@@ -433,7 +434,7 @@ requests to the video pre-cache.
 
 #### Play video
 
-When a user clicks a play button, we'll fetch the first segment of video 
+When a user clicks a play button, we'll fetch the first segment of video
 available in the Cache API so that playback starts immediately if available.
 Otherwise, we'll simply fetch it from the network. Keep in mind that browsers
 and users may decide to clear the [Cache].
