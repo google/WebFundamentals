@@ -649,11 +649,11 @@ function testMarkdown(filename, contents, options) {
     });
 
     // Error on script blocks in markdown
-    matched = wfRegEx.getMatches(/^<script/gm, contents);
+    matched = wfRegEx.getMatches(/<script/gm, contents);
     matched.forEach(function(match) {
       position = {line: getLineNumber(contents, match.index)};
-      msg = 'Unescaped script tag in markdown document, use &lt;script...';
-      logError(filename, position, msg);
+      msg = `'<script> tags are generally not allowed, please double check.`;
+      logWarn(filename, position, msg);
     });
 
     // Warn on missing comment widgets
