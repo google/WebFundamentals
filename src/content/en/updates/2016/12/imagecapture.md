@@ -7,6 +7,7 @@ description: Image Capture is an API to control camera settings and take photos.
 {# wf_tags: canvas,chrome56,media,webrtc #}
 {# wf_featured_image: /web/updates/images/2016/12/imagecapture/featured.jpg #}
 {# wf_featured_snippet: Image Capture is an API to control camera settings and take photos. #}
+{# wf_blink_components: Blink>ImageCapture #}
 
 # Take Photos and Control Camera Settings {: .page-title }
 
