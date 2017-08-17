@@ -653,7 +653,7 @@ function testMarkdown(filename, contents, options) {
     matched.forEach(function(match) {
       position = {line: getLineNumber(contents, match.index)};
       msg = `'<script> tags are generally not allowed, please double check.`;
-      logWarn(filename, position, msg);
+      logWarning(filename, position, msg);
     });
 
     // Warn on missing comment widgets
