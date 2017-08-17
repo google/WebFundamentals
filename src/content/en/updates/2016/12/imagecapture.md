@@ -125,12 +125,12 @@ streaming, so make sure there is a delay between calling these methods and
 "Non-Live" camera capabilities and settings are manipulated via the
 `ImageCapture` object: `ImageCapture.getPhotoCapabilities()` returns a
 [`PhotoCapabilities`](https://w3c.github.io/mediacapture-image/#photocapabilities)
-object that provides access to non live available camera options.
+object that provides access to "Non-Live" available camera capabilities.
 Correspondingly, starting in Chrome 61, `ImageCapture.getPhotoSettings()`
 returns a
 [`PhotoSettings`](https://w3c.github.io/mediacapture-image/#dictdef-photosettings)
-with the concrete current settings. The photo resolution, red eye reduction and
-flash mode (except torch) belong to this section, for example:
+object with the concrete current settings. The photo resolution, red eye
+reduction and flash mode (except torch) belong to this section, for example:
 
     var widthSlider = document.querySelector('input[type=range]');
     // ...
