@@ -3,7 +3,7 @@ book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2017-08-22T10:00:00.000Z #}
 {# wf_updated_on: 2017-08-22T10:00:00.000Z #}
-{# wf_featured_image: /web/showcase/2017/images/dance-tonight/thumb.png #}
+{# wf_featured_image: /web/showcase/2017/images/dance-tonite/featured.jpg #}
 {# wf_featured_snippet: Dance Tonite is an ever-changing VR collaboration with the band LCD Soundsystem and their fans. Built in WebVR, the project works across platforms–with and without VR–giving users a different role into the experience depending on their device. Project creators Jonathan Puckey, Moniker and Google’s Data Arts Team’s creative decisions and advanced optimization techniques enabled high-quality performance–close to 60FPS for 3DoF and 90FPS for 6DoF–and a compelling user experience across all platforms using a single codebase. #}
 {# wf_tags: casestudy,webvr,serviceworker #}
 {# wf_blink_components: Blink>WebVR #}
@@ -14,7 +14,7 @@ book_path: /web/showcase/_book.yaml
 .wf-byline-desc {font-size: smaller; word-break: break-word;}
 </style>
 
-# Dance Tonight in WebVR {: .page-title }
+# Dance Tonite in WebVR {: .page-title }
 
 <section class="wf-byline-meta">
   <div class="wf-byline-name">
@@ -25,7 +25,7 @@ book_path: /web/showcase/_book.yaml
     </span>
   </div>
   <div class="wf-byline-desc">
-      Artist and Dance Tonight creator
+      Artist and Dance Tonite creator
   </div>
 </section>
 
@@ -65,7 +65,7 @@ by how finely you could move and look around in VR, and how much fidelity there
 was. This gave us an idea. Instead of having users look at or create something,
 how about recording their movements?
 
-<img src="images/dance-tonight/img2.jpg" class="attempt-right"
+<img src="images/dance-tonite/img2.jpg" class="attempt-right"
   alt="Someone recording themselves on Dance Tonite. The screen behind them
   shows what they are seeing in their headset">
 
@@ -153,7 +153,7 @@ users could improvise looser versions of performances freely.
 
 ### 4. Interconnected rooms {: #interconnected-rooms }
 
-<img src="images/dance-tonight/img3.jpg" class="attempt-left">
+<img src="images/dance-tonite/img3.jpg" class="attempt-left">
 
 Like a lot of music, the tracks of LCD Soundsystem are built up using precisely
 timed measures. Their track, Tonite, which is featured in our project, features
@@ -409,8 +409,8 @@ users of mobile VR devices (such as Cardboard, Daydream View or Samsung Gear)
 experience the project? For this, we introduced a new element to our
 environment: the yellow orb.
 
-<img src="images/dance-tonight/img4.png" class="attempt-left">
-<img src="images/dance-tonight/img5.jpg" class="attempt-right">
+<img src="images/dance-tonite/img4.png" class="attempt-left">
+<img src="images/dance-tonite/img5.jpg" class="attempt-right">
 
 <div class="clearfix"></div>
 
@@ -452,7 +452,7 @@ isometric point of view. I am quite sure it is for this reason that Zaxxon was
 also one of the first computer games in history to project a dynamic shadow
 under its flying objects.
 
-<img src="images/dance-tonight/img6.png" class="attempt-right">
+<img src="images/dance-tonite/img6.png" class="attempt-right">
 
 It turns out that making shadows in 3D is hard. Especially for constricted
 devices like mobile phones. Initially we had to make the difficult decision to
@@ -558,7 +558,7 @@ HTTP trigger using their Firebase token. This triggers a server process that
 validates the submission, creates a database record, and moves the recording
 to a public directory on Google Cloud Storage.
 
-<img src="https://via.placeholder.com/1920x1080?text=UNKNOWN" class="attempt-right">
+<img src="images/dance-tonite/img9.jpg" class="attempt-right">
 
 All of our public content is stored in a series of flat files in a Cloud Storage
 Bucket. This means our data is quickly accessible around the world and we don’t
