@@ -29,9 +29,10 @@ book_path: /web/showcase/_book.yaml
   </div>
 </section>
 
-
-
-<img src="https://via.placeholder.com/1280x720?text=1-HUGE-GIF" class="attempt-right">
+<video autoplay loop muted class="attempt-right">
+  <source src="images/dance-tonite/img1.webm" type="video/webm">
+  <source src="images/dance-tonite/img1.mp4" type="video/mp4">
+</video>
 
 I was excited when the Google Data Arts team approached Moniker and myself about
 working together to explore the possibilities introduced by WebVR. I have
@@ -496,7 +497,10 @@ blend nicely when they overlap:
 
 ### 4. Being there {: #being-there }
 
-<img src="https://via.placeholder.com/1864x1078?text=7-BIG-GIF" class="attempt-right">
+<video autoplay loop muted class="attempt-right">
+  <source src="images/dance-tonite/img7.webm" type="video/webm">
+  <source src="images/dance-tonite/img7.mp4" type="video/mp4">
+</video>
 
 By clicking on the heads of a performer, visitors without VR are able to watch
 things from the dancer’s point of view. From this angle, lots of little details
