@@ -3,7 +3,7 @@ book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2017-08-22T10:00:00.000Z #}
 {# wf_updated_on: 2017-08-22T10:00:00.000Z #}
-{# wf_featured_image: /web/images/web-fundamentals-icon192x192.png #}
+{# wf_featured_image: /web/showcase/2017/images/dance-tonight/thumb.png #}
 {# wf_featured_snippet: Dance Tonite is an ever-changing VR collaboration with the band LCD Soundsystem and their fans. Built in WebVR, the project works across platforms–with and without VR–giving users a different role into the experience depending on their device. Project creators Jonathan Puckey, Moniker and Google’s Data Arts Team’s creative decisions and advanced optimization techniques enabled high-quality performance–close to 60FPS for 3DoF and 90FPS for 6DoF–and a compelling user experience across all platforms using a single codebase. #}
 {# wf_tags: casestudy,webvr,serviceworker #}
 {# wf_blink_components: Blink>WebVR #}
