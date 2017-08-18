@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-08-16#}
+{# wf_updated_on: 2017-08-18#}
 {# wf_published_on: 2017-04-06 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -44,17 +44,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<style>
-  /* The tooltip is by default unstyled. */
-  howto-tooltip {
-    margin-left: 8px;
-    padding: 4px;
-    background-color: #616161;
-    color: #fff;
-    border-radius: 3px;
-  }
-</style>
-
 <div class="text">
    <label for="name">Your name:</label>
    <input id="name" aria-describedby="tp1"/>
@@ -166,22 +155,7 @@ window.customElements.define('howto-tooltip', HowtoTooltip);
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code ">&lt;style&gt;</code></pre>
-</li>
-
-<li class="blockcomment ">
-<div class="literate-text "><p>The tooltip is by default unstyled.</p>
-</div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>howto-tooltip {
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>margin-left: 8px;
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>padding: 4px;
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>background-color: #616161;
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>color: #fff;
-<span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>border-radius: 3px;
-<span class="indent">&nbsp;&nbsp;</span>}
-&lt;/style&gt;
-
-&lt;div class="text"&gt;
+<pre><code class="literate-code ">&lt;div class="text"&gt;
 <span class="indent">&nbsp;&nbsp;</span> &lt;label for="name"&gt;Your name:&lt;/label&gt;
 <span class="indent">&nbsp;&nbsp;</span> &lt;input id="name" aria-describedby="tp1"/&gt;
 <span class="indent">&nbsp;&nbsp;</span> &lt;howto-tooltip id="tp1"&gt;Ideally your name is Batman&lt;/howto-tooltip&gt;
