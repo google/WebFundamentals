@@ -17,6 +17,7 @@ const reMD = /`/;
 const reTLDR = /tl;dr/i;
 const reHeading = /^<h\d>.*?<\/h\d>$/i;
 const reHideFromTOC = /.hide-from-toc/;
+const validHeadingTypes = ['text', 'linkReference'];
 
 function wfHeadingsInMarkdown(ast, file, setting) {
   let msg = 'Headings must use markdown style, HTML is not permitted.';
@@ -42,8 +43,9 @@ function wfNoMarkupInTitle(ast, file, setting) {
       return;
     }
     node.children.forEach((child) => {
-      if (child.type !== 'text') {
-        file.message('Top level headings must only contain text.', node);
+      if (validHeadingTypes.indexOf(child.type) === -1) {
+        let msg = 'Top level headings must only contain text.'
+        file.message(`${msg} Contained: ${child.type}`, node);
       }
     });
   });
