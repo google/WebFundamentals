@@ -119,7 +119,7 @@ The final way to get an existing image file is from the clipboard. The code for 
 but the user experience is a little harder to get right.
 
 <pre class="prettyprint">
-&ly;textarea id="target">Paste an image here&lt;/textarea>
+&lt;textarea id="target">Paste an image here&lt;/textarea>
 &lt;script>
   const target = document.getElementById('target');
 
