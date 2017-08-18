@@ -331,7 +331,7 @@ limitations under the License.
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code ">&lt;style&gt;
+<pre class="prettyprint"><code class="literate-code ">&lt;style&gt;
 <span class="indent">&nbsp;&nbsp;</span>howto-checkbox {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>vertical-align: middle;
 <span class="indent">&nbsp;&nbsp;</span>}
@@ -356,23 +356,23 @@ limitations under the License.
   
 <li class="blockcomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code ">(function() {</code></pre>
+<pre class="prettyprint"><code class="literate-code ">(function() {</code></pre>
 </li>
 
 <li class="linecomment empty">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code empty"></code></pre>
+<pre class="prettyprint"><code class="literate-code empty"></code></pre>
 </li>
 
 <li class="blockcomment ">
 <div class="literate-text "><p>Define key codes to help with handling keyboard events.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>const KEYCODE = {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>const KEYCODE = {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>SPACE: 32,
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>SPACE: 32,
 <span class="indent">&nbsp;&nbsp;</span>};</code></pre>
 </li>
 
@@ -380,12 +380,12 @@ limitations under the License.
 <div class="literate-text "><p>Cloning contents from a &lt;template&gt; element is more performant
 than using innerHTML because it avoids addtional HTML parse costs.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>const template = document.createElement('template');</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>const template = document.createElement('template');</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>template.innerHTML = `
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>template.innerHTML = `
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>&lt;style&gt;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>:host {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>display: inline-block;
@@ -429,12 +429,12 @@ The construtor is a good place to create shadow DOM, though you should
 avoid touching any attributes or light DOM children as they may not
 be available yet.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>constructor() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>constructor() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>super();
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>super();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.attachShadow({mode: 'open'});
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.shadowRoot.appendChild(template.content.cloneNode(true));
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
@@ -445,12 +445,12 @@ be available yet.</p>
 It&#39;s a good place to set the initial <code>role</code>, <code>tabindex</code>, internal state,
 and install event listeners.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>connectedCallback() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>connectedCallback() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.hasAttribute('role'))
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('role', 'checkbox');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.hasAttribute('tabindex'))
@@ -465,7 +465,7 @@ and install event listeners.</p>
  See the <a href="/web/fundamentals/architecture/building-components/best-practices#lazy-properties">lazy properites</a>
  section for more details.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._upgradeProperty('checked');
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._upgradeProperty('checked');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._upgradeProperty('disabled');
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.addEventListener('keydown', this._onKeyDown);
@@ -486,12 +486,12 @@ and install event listeners.</p>
 It&#39;s a good place to do clean up work like releasing references and
 removing event listeners.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>disconnectedCallback() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>disconnectedCallback() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.removeEventListener('keydown', this._onKeyDown);
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.removeEventListener('keydown', this._onKeyDown);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.removeEventListener('click', this._onClick);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
@@ -503,12 +503,12 @@ reflects those to the state of the attribute. See the <a href="/web/fundamentals
 reentrancy</a>
 section for more details.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>set checked(value) {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>set checked(value) {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const isChecked = Boolean(value);
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const isChecked = Boolean(value);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (isChecked)
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('checked', '');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>else
@@ -537,12 +537,12 @@ section for more details.</p>
 <code>observedAttributes</code> array are changed. It&#39;s a good place to handle
 side effects, like setting ARIA attributes.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>attributeChangedCallback(name, oldValue, newValue) {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>attributeChangedCallback(name, oldValue, newValue) {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const hasValue = newValue !== null;
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const hasValue = newValue !== null;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>switch (name) {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>case 'checked':
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('aria-checked', hasValue);
@@ -559,7 +559,7 @@ side effects, like setting ARIA attributes.</p>
  To make sure an element is disabled and not focusable, remove the
  <code>tabindex</code> attribute.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (hasValue) {
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (hasValue) {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.removeAttribute('tabindex');</code></pre>
 </li>
 
@@ -567,7 +567,7 @@ side effects, like setting ARIA attributes.</p>
 <div class="literate-text "><p>If the focus is currently on this element, unfocus it by
  calling the <code>HTMLElement.blur()</code> method.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.blur();
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.blur();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>} else {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('tabindex', '0');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
@@ -581,7 +581,7 @@ side effects, like setting ARIA attributes.</p>
 <li class="linecomment ">
 <div class="literate-text "><p>Don’t handle modifier shortcuts typically used by assistive technology.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (event.altKey)
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (event.altKey)
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>switch (event.keyCode) {
@@ -594,7 +594,7 @@ side effects, like setting ARIA attributes.</p>
 <li class="linecomment ">
 <div class="literate-text "><p>Any other key press is ignored and passed back to the browser.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>default:
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>default:
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
@@ -610,12 +610,12 @@ Because <code>_toggleChecked()</code> is only caused by a user action, it will
 also dispatch a change event. This event bubbles in order to mimic
 the native behavior of <code>&lt;input type=checkbox&gt;</code>.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_toggleChecked() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_toggleChecked() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (this.disabled)
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (this.disabled)
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.checked = !this.checked;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.dispatchEvent(new CustomEvent('change', {

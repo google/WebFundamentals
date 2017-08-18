@@ -529,7 +529,7 @@ limitations under the License.
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code ">&lt;style&gt;
+<pre class="prettyprint"><code class="literate-code ">&lt;style&gt;
 <span class="indent">&nbsp;&nbsp;</span>howto-tab {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>border: 1px solid black;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>padding: 20px;
@@ -547,7 +547,7 @@ limitations under the License.
 <div class="literate-text "><p>If JavaScript does not run, the element will not match <code>:defined</code>.
 In that case this style adds spacing between tabs and previous panel.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>howto-tabs:not(:defined), howto-tab:not(:defined), howto-panel:not(:defined) {
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>howto-tabs:not(:defined), howto-tab:not(:defined), howto-panel:not(:defined) {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>display: block;
 <span class="indent">&nbsp;&nbsp;</span>}
 &lt;/style&gt;
@@ -569,23 +569,23 @@ In that case this style adds spacing between tabs and previous panel.</p>
   
 <li class="blockcomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code ">(function() {</code></pre>
+<pre class="prettyprint"><code class="literate-code ">(function() {</code></pre>
 </li>
 
 <li class="linecomment empty">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code empty"></code></pre>
+<pre class="prettyprint"><code class="literate-code empty"></code></pre>
 </li>
 
 <li class="blockcomment ">
 <div class="literate-text "><p>Define key codes to help with handling keyboard events.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>const KEYCODE = {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>const KEYCODE = {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>DOWN: 40,
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>DOWN: 40,
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>LEFT: 37,
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>RIGHT: 39,
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>UP: 38,
@@ -599,7 +599,7 @@ In that case this style adds spacing between tabs and previous panel.</p>
  template for the contents of the shadow DOM is shared by all
  <code>&lt;howto-tabs&gt;</code> instances.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>const template = document.createElement('template');
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>const template = document.createElement('template');
 <span class="indent">&nbsp;&nbsp;</span>template.innerHTML = `
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>&lt;style&gt;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>:host {
@@ -621,12 +621,12 @@ In that case this style adds spacing between tabs and previous panel.</p>
 <code>&lt;howto-tabpanel&gt;</code>. This element is stateless, meaning that no values are
 cached and therefore, changes during runtime work.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>class HowtoTabs extends HTMLElement {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>class HowtoTabs extends HTMLElement {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>constructor() {
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>constructor() {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>super();</code></pre>
 </li>
 
@@ -634,7 +634,7 @@ cached and therefore, changes during runtime work.</p>
 <div class="literate-text "><p>Event handlers that are not attached to this element need to be bound
  if they need access to <code>this</code>.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._onSlotChange = this._onSlotChange.bind(this);</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._onSlotChange = this._onSlotChange.bind(this);</code></pre>
 </li>
 
 <li class="linecomment ">
@@ -643,13 +643,13 @@ cached and therefore, changes during runtime work.</p>
  with frameworks. Instead shadow DOM is used to reorder the elements by
  using slots.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.attachShadow({mode: 'open'});</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.attachShadow({mode: 'open'});</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p>Import the shared template to create the slots for tabs and panels.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.shadowRoot.appendChild(template.content.cloneNode(true));
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.shadowRoot.appendChild(template.content.cloneNode(true));
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._tabSlot = this.shadowRoot.querySelector('slot[name=tab]');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._panelSlot = this.shadowRoot.querySelector('slot[name=panel]');</code></pre>
@@ -661,7 +661,7 @@ cached and therefore, changes during runtime work.</p>
  New children will get slotted automatically and cause <code>slotchange</code>
  to fire, so not <code>MutationObserver</code> is needed.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._tabSlot.addEventListener('slotchange', this._onSlotChange);
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._tabSlot.addEventListener('slotchange', this._onSlotChange);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._panelSlot.addEventListener('slotchange', this._onSlotChange);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
@@ -670,19 +670,19 @@ cached and therefore, changes during runtime work.</p>
 <div class="literate-text "><p><code>connectedCallback()</code> groups tabs and panels by reordering and makes sure
 exactly one tab is active.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>connectedCallback() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>connectedCallback() {</code></pre>
 </li>
 
 <li class="linecomment empty">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code empty"></code></pre>
+<pre class="prettyprint"><code class="literate-code empty"></code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p>The element needs to do some manual input event handling to allow
  switching with arrow keys and Home/End.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.addEventListener('keydown', this._onKeyDown);
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.addEventListener('keydown', this._onKeyDown);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.addEventListener('click', this._onClick);
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.hasAttribute('role'))
@@ -695,7 +695,7 @@ exactly one tab is active.</p>
  handler manually. Once the new behavior lands in all browsers, the code
  below can be removed.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>Promise.all([
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>Promise.all([
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>customElements.whenDefined('howto-tab'),
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>customElements.whenDefined('howto-panel'),
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>])
@@ -707,12 +707,12 @@ exactly one tab is active.</p>
 <div class="literate-text "><p><code>disconnectedCallback()</code> removes the event listeners that
 <code>connectedCallback</code> added.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>disconnectedCallback() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>disconnectedCallback() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.removeEventListener('keydown', this._onKeyDown);
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.removeEventListener('keydown', this._onKeyDown);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.removeEventListener('click', this._onClick);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
@@ -721,12 +721,12 @@ exactly one tab is active.</p>
 <div class="literate-text "><p><code>_onSlotChange()</code> is called whenever an element is added or removed from
 one of the shadow DOM slots.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_onSlotChange() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_onSlotChange() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._linkPanels();
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._linkPanels();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
 
@@ -738,19 +738,19 @@ sure only one tab is active.</p>
 only handling the new elements instead of iterating over all of the
 element’s children.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_linkPanels() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_linkPanels() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p>Give each panel a <code>aria-labelledby</code> attribute that refers to the tab
  that controls it.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.forEach(tab =&gt; {
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.forEach(tab =&gt; {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const panel = tab.nextElementSibling;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (panel.tagName.toLowerCase() !== 'howto-panel') {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>console.error(`Tab #${tab.id} is not a` +
@@ -767,7 +767,7 @@ element’s children.</p>
 <div class="literate-text "><p>The element checks if any of the tabs have been marked as selected.
  If not, the first tab is now selected.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const selectedTab =
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const selectedTab =
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.find(tab =&gt; tab.selected) || tabs[0];</code></pre>
 </li>
 
@@ -775,7 +775,7 @@ element’s children.</p>
 <div class="literate-text "><p>Next, switch to the selected tab. <code>selectTab()</code> takes care of
  marking all other tabs as deselected and hiding all other panels.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._selectTab(selectedTab);
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._selectTab(selectedTab);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
 
@@ -787,36 +787,36 @@ panels will not be handled.</p>
 <p>This is a method and not a getter, because a getter implies that it is
 cheap to read.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_allPanels() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_allPanels() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return Array.from(this.querySelectorAll('howto-panel'));
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return Array.from(this.querySelectorAll('howto-panel'));
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
 
 <li class="blockcomment ">
 <div class="literate-text "><p><code>_allTabs()</code> returns all the tabs in the tab panel.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_allTabs() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_allTabs() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return Array.from(this.querySelectorAll('howto-tab'));
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return Array.from(this.querySelectorAll('howto-tab'));
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
 
 <li class="blockcomment ">
 <div class="literate-text "><p><code>_panelForTab()</code> returns the panel that the given tab controls.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_panelForTab(tab) {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_panelForTab(tab) {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const panelId = tab.getAttribute('aria-controls');
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const panelId = tab.getAttribute('aria-controls');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return this.querySelector(`#${panelId}`);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
@@ -825,12 +825,12 @@ cheap to read.</p>
 <div class="literate-text "><p><code>_prevTab()</code> returns the tab that comes before the currently selected
 one, wrapping around when reaching the first one.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_prevTab() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_prevTab() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();</code></pre>
 </li>
 
 <li class="linecomment ">
@@ -838,7 +838,7 @@ one, wrapping around when reaching the first one.</p>
  selected element and subtracts one to get the index of the previous
  element.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>let newIdx =
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>let newIdx =
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.findIndex(tab =&gt; tab.selected) - 1;</code></pre>
 </li>
 
@@ -846,19 +846,19 @@ one, wrapping around when reaching the first one.</p>
 <div class="literate-text "><p>Add <code>tabs.length</code> to make sure the index is a positive number
  and get the modulus to wrap around if necessary.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return tabs[(newIdx + tabs.length) % tabs.length];
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return tabs[(newIdx + tabs.length) % tabs.length];
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
 
 <li class="blockcomment ">
 <div class="literate-text "><p><code>_firstTab()</code> returns the first tab.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_firstTab() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_firstTab() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return tabs[0];
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
@@ -866,12 +866,12 @@ one, wrapping around when reaching the first one.</p>
 <li class="blockcomment ">
 <div class="literate-text "><p><code>_lastTab()</code> returns the last tab.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_lastTab() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_lastTab() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return tabs[tabs.length - 1];
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
@@ -880,12 +880,12 @@ one, wrapping around when reaching the first one.</p>
 <div class="literate-text "><p><code>_nextTab()</code> gets the tab that comes after the currently selected one,
 wrapping around when reaching the last tab.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_nextTab() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_nextTab() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>let newIdx = tabs.findIndex(tab =&gt; tab.selected) + 1;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return tabs[newIdx % tabs.length];
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
@@ -894,12 +894,12 @@ wrapping around when reaching the last tab.</p>
 <li class="blockcomment ">
 <div class="literate-text "><p><code>reset()</code> marks all tabs as deselected and hides all the panels.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>reset() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>reset() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const tabs = this._allTabs();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const panels = this._allPanels();
 
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>tabs.forEach(tab =&gt; tab.selected = false);
@@ -911,30 +911,30 @@ wrapping around when reaching the last tab.</p>
 <div class="literate-text "><p><code>_selectTab()</code> marks the given tab as selected.
 Additionally, it unhides the panel corresponding to the given tab.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_selectTab(newTab) {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_selectTab(newTab) {</code></pre>
 </li>
 
 <li class="linecomment empty">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code empty"></code></pre>
+<pre class="prettyprint"><code class="literate-code empty"></code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p>Deselect all tabs and hide all panels.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.reset();</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.reset();</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p>Get the panel that the <code>newTab</code> is associated with.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const newPanel = this._panelForTab(newTab);</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const newPanel = this._panelForTab(newTab);</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p>If that panel doesn’t exist, abort.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!newPanel)
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!newPanel)
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>throw new Error(`No panel with id ${newPanelId}`);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>newTab.selected = true;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>newPanel.hidden = false;
@@ -945,26 +945,26 @@ Additionally, it unhides the panel corresponding to the given tab.</p>
 <li class="blockcomment ">
 <div class="literate-text "><p><code>_onKeyDown()</code> handles key presses inside the tab panel.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_onKeyDown(event) {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_onKeyDown(event) {</code></pre>
 </li>
 
 <li class="linecomment empty">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code empty"></code></pre>
+<pre class="prettyprint"><code class="literate-code empty"></code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p>If the keypress did not originate from a tab element itself,
  it was a keypress inside the a panel or on empty space. Nothing to do.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (event.target.getAttribute('role') !== 'tab')
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (event.target.getAttribute('role') !== 'tab')
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p>Don’t handle modifier shortcuts typically used by assistive technology.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (event.altKey)
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (event.altKey)
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;</code></pre>
 </li>
 
@@ -972,7 +972,7 @@ Additionally, it unhides the panel corresponding to the given tab.</p>
 <div class="literate-text "><p>The switch-case will determine which tab should be marked as active
  depending on the key that was pressed.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>let newTab;
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>let newTab;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>switch (event.keyCode) {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>case KEYCODE.LEFT:
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>case KEYCODE.UP:
@@ -996,7 +996,7 @@ Additionally, it unhides the panel corresponding to the given tab.</p>
 <li class="linecomment ">
 <div class="literate-text "><p>Any other key press is ignored and passed back to the browser.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>default:
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>default:
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
@@ -1006,39 +1006,39 @@ Additionally, it unhides the panel corresponding to the given tab.</p>
  keys, home or end. The element calls <code>preventDefault()</code> to prevent the
  browser from taking any actions.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>event.preventDefault();</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>event.preventDefault();</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p>Select the new tab, that has been determined in the switch-case.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._selectTab(newTab);
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._selectTab(newTab);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
 </li>
 
 <li class="blockcomment ">
 <div class="literate-text "><p><code>_onClick()</code> handles clicks inside the tab panel.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_onClick(event) {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_onClick(event) {</code></pre>
 </li>
 
 <li class="linecomment empty">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code empty"></code></pre>
+<pre class="prettyprint"><code class="literate-code empty"></code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p>If the click was not targeted on a tab element itself,
  it was a click inside the a panel or on empty space. Nothing to do.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (event.target.getAttribute('role') !== 'tab')
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (event.target.getAttribute('role') !== 'tab')
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return;</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text "><p>If it was on a tab element, though, select that tab.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._selectTab(event.target);
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._selectTab(event.target);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 <span class="indent">&nbsp;&nbsp;</span>}
 <span class="indent">&nbsp;&nbsp;</span>customElements.define('howto-tabs', HowtoTabs);</code></pre>
@@ -1048,7 +1048,7 @@ Additionally, it unhides the panel corresponding to the given tab.</p>
 <div class="literate-text "><p><code>howtoTabCounter</code> counts the number of <code>&lt;howto-tab&gt;</code> instances created. The
  number is used to generated new, unique IDs.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>let howtoTabCounter = 0;</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>let howtoTabCounter = 0;</code></pre>
 </li>
 
 <li class="blockcomment ">
@@ -1060,12 +1060,12 @@ using that panel’s ID as the value for the <code>aria-controls</code> attribut
 <p>A <code>&lt;howto-tab&gt;</code> will automatically generate a unique ID if none
 is specified.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>class HowtoTab extends HTMLElement {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>class HowtoTab extends HTMLElement {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>static get observedAttributes() {
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>static get observedAttributes() {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>return ['selected'];
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
@@ -1080,7 +1080,7 @@ is specified.</p>
 <div class="literate-text "><p>If this is executed, JavaScript is working and the element
  changes its role to <code>tab</code>.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('role', 'tab');
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('role', 'tab');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (!this.id)
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.id = `howto-tab-generated-${howtoTabCounter++}`;</code></pre>
 </li>
@@ -1088,7 +1088,7 @@ is specified.</p>
 <li class="linecomment ">
 <div class="literate-text "><p>Set a well-defined initial state.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('aria-selected', 'false');
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('aria-selected', 'false');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('tabindex', -1);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._upgradeProperty('selected');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}</code></pre>
@@ -1105,12 +1105,12 @@ properties, but lazy loaded its definition. Without this guard, the
 upgraded element would miss that property and the instance property
 would prevent the class property setter from ever being called.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_upgradeProperty(prop) {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>_upgradeProperty(prop) {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (this.hasOwnProperty(prop)) {
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>if (this.hasOwnProperty(prop)) {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>let value = this[prop];
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>delete this[prop];
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this[prop] = value;
@@ -1130,12 +1130,12 @@ should cause a side effect (like setting a corresponding ARIA attribute)
 do that work in the <code>attributeChangedCallback()</code>. This will avoid having
 to manage complex attribute/property reentrancy scenarios.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>attributeChangedCallback() {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>attributeChangedCallback() {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const value = this.hasAttribute('selected');
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>const value = this.hasAttribute('selected');
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('aria-selected', value);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this.setAttribute('tabindex', value ? 0 : -1);
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
@@ -1160,12 +1160,12 @@ to manage complex attribute/property reentrancy scenarios.</p>
 <li class="blockcomment ">
 <div class="literate-text "><p><code>HowtoPanel</code> is a panel for a <code>&lt;howto-tabs&gt;</code> tab panel.</p>
 </div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>class HowtoPanel extends HTMLElement {</code></pre>
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>class HowtoPanel extends HTMLElement {</code></pre>
 </li>
 
 <li class="linecomment ">
 <div class="literate-text empty"></div>
-<pre><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>constructor() {
+<pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>constructor() {
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>super();
 <span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>}
 
