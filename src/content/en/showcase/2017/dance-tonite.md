@@ -522,7 +522,7 @@ doesn’t communicate enough. Instead, we wanted to allow our users to share vid
 of their performances. Actually, why not a GIF? Our animations are flat shaded,
 perfect for the format’s limited color palettes.
 
-<img src="https://via.placeholder.com/600x600?text=8-BIG-GIF" class="attempt-right">
+<img src="images/dance-tonite/img8.gif" class="attempt-right">
 
 We turned to [GIF.js](https://jnordberg.github.io/gif.js/), a JavaScript library
 that allows you to encode animated gifs from within the browser. It offloads the
