@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-08-16#}
+{# wf_updated_on: 2017-08-21 #}
 {# wf_published_on: 2017-04-06 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -253,8 +253,8 @@ limitations under the License.
 
     /**
      * `_allPanels()` returns all the panels in the tab panel. This function
-     * could memoize the result if the DOM queries ever become a performance
-     * issue. The downside of memoization is that dynamically added tabs and
+     * could memorize the result if the DOM queries ever become a performance
+     * issue. The downside of memorization is that dynamically added tabs and
      * panels will not be handled.
      *
      * This is a method and not a getter, because a getter implies that it is
@@ -781,8 +781,8 @@ element’s children.</p>
 
 <li class="blockcomment ">
 <div class="literate-text "><p><code>_allPanels()</code> returns all the panels in the tab panel. This function
-could memoize the result if the DOM queries ever become a performance
-issue. The downside of memoization is that dynamically added tabs and
+could memorize the result if the DOM queries ever become a performance
+issue. The downside of memorization is that dynamically added tabs and
 panels will not be handled.</p>
 <p>This is a method and not a getter, because a getter implies that it is
 cheap to read.</p>
