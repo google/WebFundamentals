@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2017-08-16 #}
+{# wf_updated_on: 2017-08-21 #}
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
@@ -164,7 +164,7 @@ const puppeteer = require('puppeteer');
 
 (async() => {
   const browser = await puppeteer.launch();
-  console.lgo(await browser.version());
+  console.log(await browser.version());
   browser.close();
 })();
 ```

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers can get access to the user's camera.
 
-{# wf_updated_on: 2017-08-03 #}
+{# wf_updated_on: 2017-08-21 #}
 {# wf_published_on: 2016-08-23 #}
 {# wf_blink_components: Blink>ImageCapture #}
 
@@ -71,7 +71,7 @@ that you prefer getting an image from the camera.
 
 Adding the `capture` attribute without a value let's the browser decide which camera to use, while
 the `"user"` and `"environment"` values tell the browser to prefer the front and rear cameras,
-repectively.
+respectively.
 
 The `capture` attribute works on Android and iOS, but is ignored on desktop. Be aware, however,
 that on Android this means that the user will no longer have the option of choosing an existing

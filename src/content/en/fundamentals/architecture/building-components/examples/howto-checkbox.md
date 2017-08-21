@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-08-18#}
+{# wf_updated_on: 2017-08-21 #}
 {# wf_published_on: 2017-04-06 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -109,7 +109,7 @@ limitations under the License.
 
   /**
    * Cloning contents from a &lt;template&gt; element is more performant
-   * than using innerHTML because it avoids addtional HTML parse costs.
+   * than using innerHTML because it avoids additional HTML parse costs.
    */
   const template = document.createElement('template');
   template.innerHTML = `
@@ -155,7 +155,7 @@ limitations under the License.
      * The element's constructor is run anytime a new instance is created.
      * Instances are created either by parsing HTML, calling
      * document.createElement('howto-checkbox'), or calling new HowToCheckbox();
-     * The construtor is a good place to create shadow DOM, though you should
+     * The constructor is a good place to create shadow DOM, though you should
      * avoid touching any attributes or light DOM children as they may not
      * be available yet.
      */
@@ -187,7 +187,7 @@ limitations under the License.
       // before its prototype has been connected to this class.
       // The `_upgradeProperty()` method will check for any instance properties
       // and run them through the proper class setters.
-      // See the [lazy properites](/web/fundamentals/architecture/building-components/best-practices#lazy-properties)
+      // See the [lazy properties](/web/fundamentals/architecture/building-components/best-practices#lazy-properties)
       // section for more details.
       this._upgradeProperty('checked');
       this._upgradeProperty('disabled');
@@ -378,7 +378,7 @@ limitations under the License.
 
 <li class="blockcomment ">
 <div class="literate-text "><p>Cloning contents from a &lt;template&gt; element is more performant
-than using innerHTML because it avoids addtional HTML parse costs.</p>
+than using innerHTML because it avoids additional HTML parse costs.</p>
 </div>
 <pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span>const template = document.createElement('template');</code></pre>
 </li>
@@ -425,7 +425,7 @@ than using innerHTML because it avoids addtional HTML parse costs.</p>
 <div class="literate-text "><p>The element&#39;s constructor is run anytime a new instance is created.
 Instances are created either by parsing HTML, calling
 document.createElement(&#39;howto-checkbox&#39;), or calling new HowToCheckbox();
-The construtor is a good place to create shadow DOM, though you should
+The constructor is a good place to create shadow DOM, though you should
 avoid touching any attributes or light DOM children as they may not
 be available yet.</p>
 </div>
@@ -462,7 +462,7 @@ and install event listeners.</p>
  before its prototype has been connected to this class.
  The <code>_upgradeProperty()</code> method will check for any instance properties
  and run them through the proper class setters.
- See the <a href="/web/fundamentals/architecture/building-components/best-practices#lazy-properties">lazy properites</a>
+ See the <a href="/web/fundamentals/architecture/building-components/best-practices#lazy-properties">lazy properties</a>
  section for more details.</p>
 </div>
 <pre class="prettyprint"><code class="literate-code "><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span><span class="indent">&nbsp;&nbsp;</span>this._upgradeProperty('checked');

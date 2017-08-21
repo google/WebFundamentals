@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements let you construct your own HTML tags. This checklist covers best practices to help you build high quality elements.
 
-{# wf_updated_on: 2017-08-14 #}
+{# wf_updated_on: 2017-08-21 #}
 {# wf_published_on: 2017-08-14 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -358,7 +358,7 @@ well behaved custom element.
       <td>
   Elements that need to express their state should do so using attributes. The
   <code>class</code> attribute is generally considered to be owned by the
-  developer using your element, and writing to it yourself may inadvertantly
+  developer using your element, and writing to it yourself may inadvertently
   stomp on developer classes.
       </td>
     </tr>
@@ -423,7 +423,7 @@ well behaved custom element.
 ### Don't override the page author {: #dont-override }
 
 It's possible that a developer using your element might want to override some of
-its initial state. For example, changing its ARIA `role` or focusablity with
+its initial state. For example, changing its ARIA `role` or focusability with
 `tabindex`. Check to see if these and any other global attributes have been set,
 before applying your own values.
 
