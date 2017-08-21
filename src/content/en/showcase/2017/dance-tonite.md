@@ -98,7 +98,8 @@ movement. We liked the idea of putting people’s brains to work.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="1F5ICP9SYLU"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+          data-autohide="1" data-showinfo="0" data-start="250" frameborder="0"
+          allowfullscreen>
   </iframe>
 </div>
 
@@ -115,7 +116,8 @@ Ballet.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="rlIiT80dqHE"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+          data-autohide="1" data-showinfo="0" data-start="38" frameborder="0"
+          allowfullscreen>
   </iframe>
 </div>
 
@@ -139,8 +141,9 @@ other through movement. Our minds went to Norman McClaren’s recursive
 performance in his 1964 video piece “Canon.”
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="2VrnXw9waJI?t=4m15s"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  <iframe class="devsite-embedded-youtube-video" data-video-id="2VrnXw9waJI"
+          data-autohide="1" data-showinfo="0" data-start="256" frameborder="0"
+          allowfullscreen>
   </iframe>
 </div>
 
