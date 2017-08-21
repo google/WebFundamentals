@@ -327,10 +327,12 @@ always a bit off. Sometimes a fraction of a ms too early, sometimes a fraction
 too late.
 
 This leads to stutters in our beautiful dance recordings, which we want to avoid
-at all costs. To remedy this, we implemented our own timer in JavaScript. This
-way we can be certain that the amount of time changing between frames is exactly
-the amount of time that has passed since the last frame. Whenever our timer goes
-more than 10 ms out of sync with the music, we synchronize it back again.
+at all costs. To remedy this, we implemented our 
+[own timer in JavaScript](https://github.com/puckey/dance-tonite/blob/master/src/audio.js#L89).
+This way we can be certain that the amount of time changing between frames is
+exactly the amount of time that has passed since the last frame. Whenever our
+timer goes more than 10 ms out of sync with the music, we synchronize it back
+again.
 
 
 ### 6. Culling and fog {: #culling-and-fog }
@@ -458,7 +460,7 @@ under its flying objects.
 It turns out that making shadows in 3D is hard. Especially for constricted
 devices like mobile phones. Initially we had to make the difficult decision to
 cut them out of the equation, but after asking the author of Three.js and
-experienced demo hacker [Mr Doob](http://github.com/mrdoob) for advice, he came
+experienced demo hacker [Mr doob](http://github.com/mrdoob) for advice, he came
 up with the novel idea of... faking them.
 
 
@@ -470,16 +472,12 @@ quite easily with just a few tweaks. When the objects come closer to the ground,
 we have the textures become darker and smaller. When they move up, we make the
 textures more transparent and larger.
 
-<div class="clearfix"></div>
+To create them, we used 
+[this texture](https://github.com/puckey/dance-tonite/blob/master/src/props/shadow.png)
+with a soft white to black gradient (with no alpha transparency). We set the
+material as transparent and use subtractive blending. This helps them blend
+nicely when they overlap:
 
-<img src="images/dance-tonite/shadow.png" class="attempt-right">
-
-To create them, we use this black and white texture (with no alpha transparency):
-
-<div class="clearfix"></div>
-
-We set the material as transparent and use subtractive blending. This helps them
-blend nicely when they overlap:
 
     function createShadow() {
         const texture = new THREE.TextureLoader().load(shadowTextureUrl);
@@ -577,19 +575,21 @@ us watch each new submission in VR and publish new playlists from any device.
 
 ### 7. Service Workers {: #service-workers }
 
-Service Workers are a fairly recent innovation that help manage the caching of
-web site assets. In our case, Service Workers load our content lightning fast
-for return visitors and even allow the site to work offline. These are important
+[Service workers](/web/fundamentals/getting-started/primers/service-workers)
+are a fairly recent innovation that help manage the caching of web site
+assets. In our case, service workers load our content lightning fast for
+return visitors and even allow the site to work offline. These are important
 features since many of our visitors will be on mobile connections of varying
 quality.
 
-Adding Service Workers to the project was easy thanks to a
+Adding a service workers to the project was easy thanks to a
 [handy webpack plugin](https://github.com/goldhand/sw-precache-webpack-plugin)
-that handles most of the heavy lifting for you. In the configuration below, you
-can see that we’re telling it to pull the latest playlist file from the network,
-if available, since the playlist will be updating all the time. All the
-recording json files should pull from the cache if available, because these will
-never change.
+that handles most of the heavy lifting for you. In the configuration below,
+we generate a service worker that will automatically cache all our static
+files. It will pull the latest playlist file from the network, if available,
+since the playlist will be updating all the time. All the recording json
+files should pull from the cache if available, because these will never change. 
+
 
 
     const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
@@ -618,16 +618,18 @@ never change.
 
 Currently, the plugin doesn’t handle progressively loaded media assets like our
 music files, so we worked around that by setting the Cloud Storage 
-`Cache-Control` settings on these files to `public, max-age=31536000` so
+`Cache-Control` header on these files to `public, max-age=31536000` so
 that the browser will cache the file for up to one year.
 
 ## Conclusion {: #conclusion }
 
 We’re excited to see how performers will add to this experience and use it as a
 tool for creative expression using motion. We’ve released all the code open
-source, which you can find here. In these early days of VR and especially WebVR,
-we look forward to seeing what new creative and unexpected directions this new
-medium will take. [Dance on](https://tonite.dance).
+source, which you can find at
+[https://github.com/puckey/dance-tonite](https://github.com/puckey/dance-tonite).
+In these early days of VR and especially WebVR, we look forward to seeing
+what new creative and unexpected directions this new medium will take.
+[Dance on](https://tonite.dance).
 
 
 
