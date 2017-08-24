@@ -19,7 +19,7 @@ description: A round up of the media updates in Chrome 61.
 
 ## Background video track optimizations (MSE only) {: #background-video-track-optimizations}
 
-Warning: This feature has been delayed until Chrome 62. See [http://crbug.com/752726]().
+Warning: This feature has been delayed until Chrome 62. See [http://crbug.com/752726](http://crbug.com/752726).
 
 To improve battery life, Chrome now disables video tracks when the video is
 played in the background if the video uses [Media Source Extensions (MSE)].
