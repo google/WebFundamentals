@@ -3,13 +3,16 @@
 /*
     wfContributors.js
     Reads the _contributors.yaml file and uses Handlebars to generate the
-    primary contributors file and the individual include files.
+    primary contributors file and the individual include files. It also takes
+    care of generating individual contributions pages.
  */
 
 var fs = require('fs');
 var path = require('path');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
+var wfHelper = require('./wfHelper');
+var wfTemplateHelper = require('./wfTemplateHelper');
 var Handlebars = require('handlebars');
 require('handlebars-helpers')();
 
@@ -19,6 +22,8 @@ var TEMPLATE_LIST = './src/templates/contributors/index.md';
 var DEST_LIST = './src/content/en/resources/contributors.md';
 var TEMPLATE_INCLUDE = './src/templates/contributors/include.html';
 var DEST_INCLUDE = './src/content/en/_shared/contributors/{{key}}.html';
+var TEMPLATE_ARTICLE_LIST = './src/templates/contributors/article-list.md';
+var DEST_ARTICLE_LIST = './src/content/en/resources/contributors/';
 var MISSING_AVATAR = 'is missing a photo, using simple avatar instead.';
 
 function getPhotoForContributor(key) {
@@ -59,6 +64,30 @@ function buildIndex(contributors) {
   fs.writeFileSync(DEST_LIST, result);
 }
 
+function buildIndividualPages(contributors) {
+  gutil.log(' ', 'Building individual pages of all contributors...');
+  var files = wfHelper.getFileList(GLOBAL.WF.src.content, ['**/*.md']);
+  var filesByAuthor = wfHelper.splitByAuthor(files);
+
+  var keys = Object.keys(contributors);
+  keys.forEach(function(key) {
+    if (!(key in filesByAuthor)) {
+      return;
+    }
+    filesByAuthor[key].sort(wfHelper.updatedComparator);
+    var name = contributors[key].name;
+    var ts = fs.readFileSync(TEMPLATE_ARTICLE_LIST, 'utf8');
+    var template = Handlebars.compile(ts);
+    var context = {
+      title: 'Latest contributions from ' + name.given + ' ' + name.family,
+      articles: filesByAuthor[key],
+    };
+    var result = template(context);
+    var outputFile = path.join(DEST_ARTICLE_LIST, key, 'index.md');
+    fs.writeFileSync(outputFile, result);
+  });
+}
+
 function getContributors() {
   gutil.log(' ', 'Reading contributors.yaml file...');
   var yamlDoc = fs.readFileSync(CONTRIBUTORS_FILE, 'utf8');
@@ -69,6 +98,7 @@ function buildAll() {
   var contributors = getContributors();
   buildIncludes(contributors);
   buildIndex(contributors);
+  buildIndividualPages(contributors);
 }
 
 exports.build = buildAll;
