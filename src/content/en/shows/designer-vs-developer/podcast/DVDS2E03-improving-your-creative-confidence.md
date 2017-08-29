@@ -28,9 +28,8 @@ class="attempt-right">
 
 In this episode:
 
-* [Dunning-Kruger](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect).
+* [Dunning-Kruger](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect) effect.
 * Cognitive Bias.
-* Responsive Web Design Patterns.
 * [Designing VR experiences](/web/fundamentals/vr/).
 
 <audio 
