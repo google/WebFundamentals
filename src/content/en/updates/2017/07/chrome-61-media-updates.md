@@ -2,11 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the media updates in Chrome 61.
 
-{# wf_updated_on: 2017-07-28 #}
+{# wf_updated_on: 2017-08-22 #}
 {# wf_published_on: 2017-07-28 #}
 {# wf_tags: news,chrome61,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
 {# wf_featured_snippet: Background video track optimizations and automatic video fullscreen when device is rotated are here! #}
+{# wf_blink_components: Blink>Media #}
 
 # Media Updates in Chrome 61 {: .page-title }
 
@@ -17,6 +18,8 @@ description: A round up of the media updates in Chrome 61.
 - Video will [go fullscreen when device is rotated](#auto-fullscreen-rotate).
 
 ## Background video track optimizations (MSE only) {: #background-video-track-optimizations}
+
+Warning: This feature has been delayed until Chrome 62. See [http://crbug.com/752726](http://crbug.com/752726).
 
 To improve battery life, Chrome now disables video tracks when the video is
 played in the background if the video uses [Media Source Extensions (MSE)].

@@ -27,7 +27,3 @@ toc:
       path: /web/fundamentals/getting-started/primers/promises
     - title: JavaScript Async Functions
       path: /web/fundamentals/getting-started/primers/async-functions
-    - title: "Shadow DOM v1: Self-Contained Web Components"
-      path: /web/fundamentals/getting-started/primers/shadowdom
-    - title: "Custom Elements v1: Reusable Web Components"
-      path: /web/fundamentals/getting-started/primers/customelements

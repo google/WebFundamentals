@@ -226,7 +226,7 @@ on the this list and may prove helpful in easily testing sites.
       <td>        
         If using a single-page-app (client rendered), transition the user to 
         the next page immediately and show a
-        <a href="http://hannahatkin.com/blog/tag/skeleton-screens/">
+        <a href="http://hannahatkin.com/skeleton-screens/">
         skeleton screen</a> and use any content such as title or
         thumbnail already available while content loads.
       </td>

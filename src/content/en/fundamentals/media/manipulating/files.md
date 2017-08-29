@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Let's take a raw video file off a camera and transform it into an encrypted resource that you can play back using a video library such as Google's Shaka Player on a mobile device.
 
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2017-08-22 #}
 {# wf_published_on: 2017-06-30 #}
 
 # From Raw Video to Web Ready {: .page-title }
@@ -249,7 +249,8 @@ as well. For demonstration purposes, I'm going to target 3G.
 
 In ffmpeg you set the bitrate with the (surprise!) bitrate (`-b`) flag.
 
-    ffmpeg -i glocken.mov -b:v 350K -b:a 64K glocken.mp4
+    ffmpeg -i glocken.mov -b:v 350k glocken.mp4
+    ffmpeg -i glocken.mov -b:a 64k glocken.m4a
 
 Notice that there are two bitrate flags, `-b:a` and `-b:v`. One is for audio and the
 other is for video.

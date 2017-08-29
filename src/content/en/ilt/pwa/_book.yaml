@@ -75,14 +75,12 @@ upper_tabs:
             path: /web/ilt/pwa/live-data-in-the-service-worker-slides
           - title: Concepts
             path: /web/ilt/pwa/live-data-in-the-service-worker
-        - title: Using sw-precache and sw-toolbox
+        - title: Using Workbox
           section:
-          - title: Slides & Video
-            path: /web/ilt/pwa/using-sw-precache-and-sw-toolbox-slides
-          - title: Concepts
-            path: /web/ilt/pwa/using-sw-precache-and-sw-toolbox
+          - title: Slides
+            path: /web/ilt/pwa/workbox-slides
           - title: Lab
-            path: /web/ilt/pwa/lab-sw-precache-and-sw-toolbox
+            path: /web/ilt/pwa/lab-workbox
         - title: Responsive Design
           section:
           - title: Slides & Video
