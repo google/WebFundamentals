@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Mat talks imposter syndrome.
 
-{# wf_updated_on: 2017-08-21 #}
+{# wf_updated_on: 2017-08-29 #}
 {# wf_published_on: 2017-08-21 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E03-Improving-your-creative-confidence.mp3 #}
 {# wf_podcast_duration: 00:13:00 #}
