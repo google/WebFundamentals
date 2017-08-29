@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Async functions allow you to write promise-based code as if it were synchronous
 
 {# wf_published_on: 2016-10-20 #}
-{# wf_updated_on: 2017-06-19 #}
+{# wf_updated_on: 2017-08-29 #}
 {# wf_blink_components: Blink>JavaScript #}
 
 # Async functions - making promises friendly {: .page-title }
@@ -204,18 +204,18 @@ Although you're writing code that looks synchronous, ensure you don't miss the
 opportunity to do things in parallel.
 
     async function series() {
-      await wait(500);
-      await wait(500);
+      await wait(500); // Wait 500ms…
+      await wait(500); // …then wait another 500ms.
       return "done!";
     }
 
 The above takes 1000ms to complete, whereas:
 
     async function parallel() {
-      const wait1 = wait(500);
-      const wait2 = wait(500);
-      await wait1;
-      await wait2;
+      const wait1 = wait(500); // Start a 500ms timer asynchronously…
+      const wait2 = wait(500); // …meaning this timer happens in parallel.
+      await wait1; // Wait 500ms for the first timer…
+      await wait2; // …by which time this timer has already finished.
       return "done!";
     }
 
