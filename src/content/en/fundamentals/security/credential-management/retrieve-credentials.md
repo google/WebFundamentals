@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-08-29 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Sign in Users {: .page-title }
@@ -361,7 +361,7 @@ Then invoke
 to store the identity information.
 
 After successful federation,
-instantiate a `FederatedCredential` synchronously, or asychronously:
+instantiate a `FederatedCredential` synchronously, or asynchronously:
 
 Example of synchronous approach:
 
