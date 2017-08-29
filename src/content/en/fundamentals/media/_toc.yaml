@@ -13,6 +13,8 @@ toc:
         path: /web/fundamentals/media/mse/basics
       - title: Seamless Playback
         path: /web/fundamentals/media/mse/seamless-playback
+    - title: Fast Playback with Video Preload
+      path: /web/fundamentals/media/fast-playback-with-video-preload
     - title: Manipulating Files
       section:
       - title: Application Primers

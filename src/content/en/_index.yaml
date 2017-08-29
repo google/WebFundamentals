@@ -78,7 +78,7 @@ landing_page:
     - heading: Accelerated Mobile Pages
       description: >
         <p>
-          The Accelerated Mobile Pages project provides a new standard,
+          The Accelerated Mobile Pages (AMP) project provides a new standard,
           built on top of existing web technologies, to enable blazing-fast
           page rendering and content delivery.
         </p>
@@ -96,7 +96,7 @@ landing_page:
         </ul>
       icon:
         icon_name: offline_bolt
-      path: https://www.ampproject.org/docs/get_started/create
+      path: /amp/
 
 
   - items:

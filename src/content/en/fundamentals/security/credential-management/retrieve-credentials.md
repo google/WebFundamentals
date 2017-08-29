@@ -49,7 +49,7 @@ don’t forget to check if the user is already signed in:
        navigator.credentials.get({
          password: true,
          federated: {
-           provider: [
+           providers: [
              'https://accounts.google.com'
            ]
          },
@@ -131,7 +131,7 @@ but fail to authenticate the user, you should show an error message:
        navigator.credentials.get({
          password: true,
          federated: {
-           provider: [
+           providers: [
              'https://accounts.google.com'
            ]
          },
@@ -204,7 +204,7 @@ Example showing `mediation: 'optional'`:
        navigator.credentials.get({
          password: true,
          federated: {
-           provider: [
+           providers: [
              'https://accounts.google.com'
            ]
          },
@@ -246,7 +246,7 @@ You should fallback to a sign-in form for any of these reasons:
        navigator.credentials.get({
          password: true,
          federated: {
-           provider: [
+           providers: [
              'https://accounts.google.com'
            ]
          },
