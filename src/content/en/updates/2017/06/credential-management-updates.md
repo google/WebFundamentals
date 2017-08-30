@@ -116,7 +116,7 @@ You can use existing methods to deliver credential information to your server:
     navigator.credentials.get({
       password: true,
       federated: {
-        provider: [ 'https://accounts.google.com' ]
+        providers: [ 'https://accounts.google.com' ]
       },
       mediation: 'silent'
     }).then(c => {
@@ -174,7 +174,7 @@ with a boolean flag. For example:
     navigator.credentials.get({
       password: true,
       federated: {
-        provider: [ 'https://accounts.google.com' ]
+        providers: [ 'https://accounts.google.com' ]
       },
       unmediated: true
     }).then(c => {
@@ -229,7 +229,7 @@ the equivalent of the previous flag, `unmediated: true`:
     navigator.credentials.get({
       password: true,
       federated: {
-        provider: [ 'https://accounts.google.com' ]
+        providers: [ 'https://accounts.google.com' ]
       },
       mediation: 'silent'
     }).then(c => {
