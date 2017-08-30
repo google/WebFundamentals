@@ -7,7 +7,7 @@
     care of generating individual contributions pages.
  */
 
-var fs = require('fs');
+var fs = require('fs-extra');
 var path = require('path');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
@@ -84,7 +84,7 @@ function buildIndividualPages(contributors) {
     };
     var result = template(context);
     var outputFile = path.join(DEST_ARTICLE_LIST, key, 'index.md');
-    fs.writeFileSync(outputFile, result);
+    fs.outputFileSync(outputFile, result);
   });
 }
 
