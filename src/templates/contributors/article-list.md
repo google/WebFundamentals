@@ -21,10 +21,6 @@ book_path: /web/resources/_book.yaml
 
 [Read more]({{url}})
 
-{{#if tags}}
-Tags: {{#each tags}}[{{this}}](/web/{{../../section}}/tags/{{this}}) {{/each}}
-{{/if}}
-
 <div style="clear:both"></div>
 
 {{/each}}
