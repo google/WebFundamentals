@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Filling checkout forms is a pain especially on mobile devices. In this codelab, you'll learn how to improve a traditional e-commerce website using the Payment Request API.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-08-29T16:02:31Z #}
+{# wf_updated_on: 2017-08-30T14:18:47Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -17,7 +17,7 @@ description: Filling checkout forms is a pain especially on mobile devices. In t
 
 Welcome to "Frictionless payment with Payment Request API" codelab. In this codelab, you will learn how to implement  [Payment Request API](https://www.w3.org/TR/payment-request/) onto an existing e-commerce website. Let's get started.
 
-####  ![cbaccf9170087d2c.png](img/cbaccf9170087d2c.png)
+![cbaccf9170087d2c.png](img/cbaccf9170087d2c.png)
 
 #### What you will need
 
