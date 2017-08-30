@@ -117,7 +117,7 @@ has actually been fetched.
 Setting the `preload` attribute to `metadata` indicates that the user is not
 expected to need the video, but that fetching its metadata (dimensions, track
 list, duration, and so on) is desirable. Note that starting in Chrome 62, the
-default value for `preload` is `metadata` (it was `auto` previously).
+default value for `preload` is `metadata`. (It was `auto` previously).
 
 
 ```
