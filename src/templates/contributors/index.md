@@ -35,6 +35,9 @@ book_path: /web/resources/_book.yaml
     margin-left: 80px;
     font-size: smaller;
   }
+  .contributor .wf-byline-desc i {
+    color: #757575;
+  }
   .contributor .wf-byline-social img {
     width: 2em;
   }
@@ -45,9 +48,7 @@ book_path: /web/resources/_book.yaml
 <div class="contributor-container">
   {{#each contributors}}
   <div class="contributor" id="{{id}}" itemscope itemtype="http://schema.org/Person">
-    <a href="/web/resources/contributors/{{id}}">
-      <img class="person" itemprop="image" src="/web/images/contributors/{{photo}}.jpg" alt="{{name.given}} {{name.family}}">
-    </a>
+    <img class="person" itemprop="image" src="/web/images/contributors/{{photo}}.jpg" alt="{{name.given}} {{name.family}}">
     <section class="wf-byline-meta">
       <h3 itemprop="name">
         {{#if homepage}}<a itemprop="url" href="{{homepage}}">{{/if~}}
@@ -57,6 +58,9 @@ book_path: /web/resources/_book.yaml
       <div class="wf-byline-desc">
         {{#if description.en}}{{description.en}}
         {{~else}}{{name.given}} is a contributor to Web<b>Fundamentals</b>{{/if}}
+        <a href="/web/resources/contributors/{{id}}">
+          <i class="material-icons">description</i>
+        </a>
       </div>
       <div class="wf-byline-social">
         {{#if github}}

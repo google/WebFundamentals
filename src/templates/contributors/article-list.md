@@ -9,17 +9,13 @@ book_path: /web/resources/_book.yaml
 
 {{#each articles}}
 
-## {{ title }}
+## [{{ title }}]({{url}})
+{{#if image}}
 <div class="attempt-right">
-  {{#if image}}
     <img src="{{image}}">
-  {{else}}
-    <img src="/web/updates/images/generic/star.png">
-  {{/if}}
 </div>
+{{/if}}
 {{{description}}}
-
-[Read more]({{url}})
 
 <div style="clear:both"></div>
 
