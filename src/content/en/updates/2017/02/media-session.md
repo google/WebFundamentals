@@ -428,6 +428,20 @@ doing so is pretty easy with the [Cache API].
   up an `<audio>` element as the input source to the Web Audio API. Hopefully,
   the proposed [Web AudioFocus API] will improve the situation in the
   near future.
+- Media Mession API calls will affect media notifications only if they come
+  from the same frame as the media resource. See snippet below.
+
+<pre class="prettyprint">
+&lt;iframe id="iframe">
+  &lt;audio>...&lt;/audio>
+&lt;/iframe>
+&lt;script>
+  iframe.contentWindow.navigator.mediaSession.metadata = new MediaMetadata({
+    title: 'Never Gonna Give You Up',
+    ...
+  });
+&lt;/script>
+</pre>
 
 ## Support
 
