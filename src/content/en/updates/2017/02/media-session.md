@@ -429,7 +429,7 @@ doing so is pretty easy with the [Cache API].
   the proposed [Web AudioFocus API] will improve the situation in the
   near future.
 - Media Mession API calls will affect media notifications only if they come
-  from the same frame as the media resource. See snippet below.
+  from the same frame as the media resource. See the snippet below.
 
 <pre class="prettyprint">
 &lt;iframe id="iframe">
