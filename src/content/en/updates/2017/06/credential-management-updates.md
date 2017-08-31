@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Latest Updates to the Credential Management API
 
-{# wf_updated_on: 2017-06-27 #}
+{# wf_updated_on: 2017-08-31 #}
 {# wf_published_on: 2017-06-12 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
@@ -116,7 +116,7 @@ You can use existing methods to deliver credential information to your server:
     navigator.credentials.get({
       password: true,
       federated: {
-        provider: [ 'https://accounts.google.com' ]
+        providers: [ 'https://accounts.google.com' ]
       },
       mediation: 'silent'
     }).then(c => {
@@ -174,7 +174,7 @@ with a boolean flag. For example:
     navigator.credentials.get({
       password: true,
       federated: {
-        provider: [ 'https://accounts.google.com' ]
+        providers: [ 'https://accounts.google.com' ]
       },
       unmediated: true
     }).then(c => {
@@ -229,7 +229,7 @@ the equivalent of the previous flag, `unmediated: true`:
     navigator.credentials.get({
       password: true,
       federated: {
-        provider: [ 'https://accounts.google.com' ]
+        providers: [ 'https://accounts.google.com' ]
       },
       mediation: 'silent'
     }).then(c => {

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-24T14:06:50Z #}
+{# wf_updated_on: 2017-08-29T13:00:25Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -659,7 +659,7 @@ Debugging service workers can be a challenge, and when it involves caching, thin
 
 #### Start Fresh
 
-In some cases, you may find yourself loading cached data or that things aren't updated as you expect. To clear all saved data (localStorage, IndexedDB data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
+In some cases, you may find yourself loading cached data or that things aren't updated as you expect. To clear all saved data (localStoarge, indexedDB data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
 
 Some other tips:
 

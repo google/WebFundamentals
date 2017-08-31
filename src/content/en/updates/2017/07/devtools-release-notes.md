@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New features and changes coming to DevTools in Chrome 61.
 
-{# wf_updated_on: 2017-07-10 #}
+{# wf_updated_on: 2017-08-29 #}
 {# wf_published_on: 2017-07-10 #}
 {# wf_tags: chrome61,devtools #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -30,6 +30,15 @@ New features and major changes coming to DevTools in Chrome 61 include:
 Note: You can check what version of Chrome you're running at
 `chrome://version`. Chrome auto-updates to a new major version about every 6
 weeks.
+
+Check out the video version of these release notes below or read on to learn
+more.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="Lscb4SL58X4"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Simulate low-end and mid-tier mobile devices in Device Mode {: #throttling }
 
