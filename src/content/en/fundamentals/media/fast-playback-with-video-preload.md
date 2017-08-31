@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Preload video and audio for faster playback.
 
 {# wf_published_on: 2017-08-17 #}
-{# wf_updated_on: 2017-08-17 #}
+{# wf_updated_on: 2017-09-01 #}
 {# wf_blink_components: Blink>Media #}
 
 # Fast Playback with Video Preload {: .page-title }
