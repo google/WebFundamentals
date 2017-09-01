@@ -8,7 +8,7 @@
 # givenfamily:  # REQUIRED - place a 512x512 px JPG image file with same name in /images/contributors
 #   name:
 #     given: First # Required
-#     family: Last # Required
+#     family: Last # Optional
 #   homepage: https://developers.google.com/web/ # Optional
 #   google: "123456789012345678901"              # Optional - id (must be quoted) or +Name
 #   twitter: petele                              # Recommended - handle only (no @)
@@ -115,7 +115,7 @@ beaufortfrancois:
   country: FR
   role:
     - author
-  homepage: 'https://plus.google.com/+FrancoisBeaufort'
+  google: +FrancoisBeaufort
   github: beaufortfrancois
   description:
     en: Dives into Chromium source code
