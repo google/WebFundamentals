@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Address Bar Matches Brand Colors" Lighthouse audit.
 
-{# wf_updated_on: 2017-05-12 #}
+{# wf_updated_on: 2017-09-02 #}
 {# wf_published_on: 2017-05-12 #}
 
 # Address Bar Matches Brand Colors  {: .page-title }
@@ -19,7 +19,7 @@ To ensure that the address bar is always themed to your colors:
 1. Add a `theme-color` meta tag to the HTML of every page you want to brand.
 1. Add the `theme_color` property to your Web App Manifest.
 
-The `theme-color` meta tag ensures that the address bar is branded when a user
+The `theme-color` meta tag ensures that the address bar is branded when
 a user visits your site as a normal webpage. Set `content` to any valid CSS
 color value. You need to add this meta tag to every page that you want to
 brand.
