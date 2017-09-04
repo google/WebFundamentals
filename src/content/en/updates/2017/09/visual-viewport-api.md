@@ -5,6 +5,7 @@ description: The visual viewport API gives you details on how the user zooms and
 {# wf_updated_on: 2017-09-04 #}
 {# wf_published_on: 2017-09-04 #}
 {# wf_tags: chrome61 #}
+{# wf_blink_components: Blink>Scroll #}
 {# wf_featured_snippet: The visual viewport API gives you details on how the user zooms and scrolls around your page. #}
 
 # Introducing visualViewport {: .page-title }
