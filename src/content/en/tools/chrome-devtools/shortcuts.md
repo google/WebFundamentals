@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of all of the keyboard shortcuts in Chrome DevTools.
 
-{# wf_updated_on: 2017-09-01 #}
+{# wf_updated_on: 2017-09-05 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Keyboard Shortcuts Reference {: .page-title }
@@ -69,7 +69,7 @@ The following keyboard shortcuts are available in most, if not all, DevTools pan
     <tr>
       <!-- TODO make a bug about this shortcut being ambiguous -->
       <td>
-        Switch back to whatver <a href="/web/tools/chrome-devtools/ui#placement">docking position</a> you last used.
+        Switch back to whatever <a href="/web/tools/chrome-devtools/ui#placement">docking position</a> you last used.
         If DevTools has been in its default position for the entire session, then this shortcut undocks
         DevTools into a separate window
       </td>
@@ -256,7 +256,7 @@ The following keyboard shortcuts are available in most, if not all, DevTools pan
   </tbody>
 </table>
 
-## Sources panel keyboard shorcuts {: #sources }
+## Sources panel keyboard shortcuts {: #sources }
 
 <table>
   <thead>
