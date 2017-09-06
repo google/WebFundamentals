@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Pelajari cara merekam cuplikan heap dengan profiler heap Chrome DevTools dan menemukan kebocoran memori.
 

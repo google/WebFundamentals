@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '주요 요청 체인' Lighthouse 감사의 참조 문서입니다.
 

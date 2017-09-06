@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“页面在其脚本不可用时包含一些内容”Lighthouse 审查的参考文档。
 

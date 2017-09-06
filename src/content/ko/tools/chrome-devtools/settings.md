@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: DevTools의 모양을 변경하고 숨겨진 기능에 액세스합니다.
 

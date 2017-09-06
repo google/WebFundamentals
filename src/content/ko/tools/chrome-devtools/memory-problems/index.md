@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome과 DevTools를 사용하여 페이지 성능에 영향을 미치는 메모리 문제를 찾아내는 방법을 알아봅니다. 메모리 누수, 메모리 팽창 및 잦은 가비지 수집 등이 대표적입니다.
 

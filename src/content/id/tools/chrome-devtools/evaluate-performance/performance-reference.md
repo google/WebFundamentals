@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Mode kejadian timeline menampilkan semua kejadian yang dipicu saat membuat rekaman. Gunakan referensi kejadian timeline untuk mempelajari selengkapnya tentang setiap jenis kejadian timeline.
 

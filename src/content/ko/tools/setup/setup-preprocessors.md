@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: CSS 및 JS 전처리기를 설정하여 더욱 효율적으로 코드를 작성하는 방법을 알아봅니다.
 

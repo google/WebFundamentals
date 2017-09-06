@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Minimalista, cada navegador de área de trabalho vem com um conjunto de ferramentas do desenvolvedor: você pode estender e adicionar a elas extensões ou plug-ins para o navegador.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Editor kode Anda adalah alat development utama; Anda akan memakainya untuk menulis dan menyimpan baris kode. Tulis kode yang lebih baik dengan mempelajari pintasan editor Anda dan memasang plugin utama.
 

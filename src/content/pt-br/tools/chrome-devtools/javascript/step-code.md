@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Ao executar uma linha ou função do código por vez, é possível observar as mudanças dos dados e da página e entender exatamente o que está acontecendo.
 

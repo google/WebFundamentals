@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 할당 프로파일러 도구를 사용하면 적절하게 가비지 수집되지 않은 객체를 찾아내고 계속해서 메모리 공간을 유지할 수 있습니다.
 

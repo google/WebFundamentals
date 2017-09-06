@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用 Application 面板检查、修改和调试网络应用清单、服务工作线程和服务工作线程缓存。
 

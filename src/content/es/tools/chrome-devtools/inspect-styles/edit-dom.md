@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: En la vista de árbol del DOM del panel Elements de Chrome DevTools se muestra la estructura del DOM de la página web actual. Edita en tiempo real el contenido y la estructura de tu página mediante actualizaciones del DOM.
 

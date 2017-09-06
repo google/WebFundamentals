@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Usa puntos de interrupción para pausar tu código JavaScript e investigar los valores de las variables y la pila de llamadas en ese momento en particular.
 

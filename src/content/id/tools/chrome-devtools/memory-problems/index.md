@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Pelajari cara menggunakan Chrome dan DevTools untuk menemukan masalah memori yang memengaruhi kinerja laman, termasuk kebocoran memori, penggelembungan memori, dan pengumpulan sampah yang terlalu sering.
 

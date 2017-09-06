@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:很容易忽视您的用户在使用移动设备时遇到的网络条件。使用 DevTools 可以模拟不同的网络条件。解决全部的加载时间问题，您的用户会感谢您。
 

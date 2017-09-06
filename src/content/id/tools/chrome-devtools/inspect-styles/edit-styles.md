@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Gunakan panel Styles di Chrome DevTools untuk memeriksa dan mengubah gaya CSS yang terkait dengan sebuah elemen.
 

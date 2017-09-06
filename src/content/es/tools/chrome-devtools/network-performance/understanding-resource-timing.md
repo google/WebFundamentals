@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Es fundamental comprender las etapas en las que se recolectan los recursos en la red. Esta es la base para solucionar los problemas de carga."
 

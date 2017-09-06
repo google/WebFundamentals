@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: table() 메서드를 사용하여 유사한 데이터 객체를 비교합니다.
 

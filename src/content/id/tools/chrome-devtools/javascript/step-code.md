@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dengan mengeksekusi kode baris per baris atau fungsi per fungsi, Anda bisa mengamati perubahan dalam data dan dalam laman untuk memahami secara persis apa yang sedang terjadi.
 

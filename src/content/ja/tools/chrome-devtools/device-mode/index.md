@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome の Device Mode の仮想端末を使用して、モバイル ファーストのウェブサイトを構築します。
 

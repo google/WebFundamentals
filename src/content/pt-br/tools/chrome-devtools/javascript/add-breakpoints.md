@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use pontos de interrupção para suspender código JavaScript e investigar valores de variáveis e da pilha de chamadas no momento da interrupção.
 

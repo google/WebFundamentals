@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Log konsol adalah cara andal untuk memeriksa apa yang dilakukan laman atau aplikasi Anda. Mari kita mulai dengan console.log() dan mendalami penggunaan tingkat lanjut lainnya.
 

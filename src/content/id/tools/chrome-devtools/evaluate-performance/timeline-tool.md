@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Gunakan panel Timeline Chrome DevTools untuk merekam dan menganalisis semua aktivitas di aplikasi saat sedang berjalan. Panel ini merupakan tempat terbaik untuk memulai investigasi masalah kinerja yang dirasakan pada aplikasi Anda.
 

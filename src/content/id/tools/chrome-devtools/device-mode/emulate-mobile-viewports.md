@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Device Mode pada Chrome DevTools digunakan untuk meniru tampilan situs development Anda di tahap produksi di berbagai perangkat.
 

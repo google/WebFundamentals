@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Registrar no Console é algo eficaz para inspecionar o que sua página ou seu aplicativo faz. Vamos começar com console.log() e explorar outros usos avançados.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 중단점을 사용하여 자바스크립트 코드를 일시 중지하고 특정 시간의 호출 스택 및 변수 값을 조사합니다.
 

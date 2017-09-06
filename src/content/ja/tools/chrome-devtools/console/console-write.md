@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: コンソールログは、ページやアプリケーションの動作を調査するための効果的な方法です。まずは console.log() から始め、その他の高度な使用方法を確認しましょう。
 

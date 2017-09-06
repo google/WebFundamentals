@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Mudah bagi kita untuk melupakan kondisi jaringan yang dihadapi oleh pengguna di perangkat seluler. Gunakan DevTools untuk mengemulasi kondisi jaringan yang berbeda. Perbaiki masalah waktu muat apa pun, maka pengguna akan berterima kasih.
 

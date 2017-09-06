@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 클라이언트측 코드를 결합하거나 최소화하거나 컴파일한 후에도 읽을 수 있고 디버그할 수 있게 합니다.
 

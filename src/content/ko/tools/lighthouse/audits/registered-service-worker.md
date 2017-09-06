@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '등록된 서비스 워커가 있음' Lighthouse 감사의 참조 문서입니다.
 

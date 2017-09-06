@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:利用 Chrome DevTools，您可以轻松地查看整个应用中的多个变量。
 

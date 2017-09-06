@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Configure atalhos para tarefas da linha de comando que você usa com frequência. Se perceber que está digitando várias vezes a mesma coisa na linha de comando, isso ajudará você.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia de la auditoría de Lighthouse sobre “La página no solicita automáticamente la ubicación geográfica cuando se carga”.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: O Device Mode do Chrome DevTools permite simular como seu site em desenvolvimento ficará na produção em diversos dispositivos.
 

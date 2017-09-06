@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Los fragmentos son pequeñas secuencias de comandos que puedes escribir y ejecutar desde el panel Sources de Chrome DevTools. Puedes tener acceso a ellos y ejecutarlos desde cualquier página. Cuando ejecutas un fragmento, este se ejecuta desde el contexto de la página actualmente abierta.
 

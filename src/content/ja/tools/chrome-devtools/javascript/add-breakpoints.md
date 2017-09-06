@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: ブレークポイントを使用して、JavaScript コードを一時停止し、その特定時点の変数の値とコールスタックを調べることができます。
 

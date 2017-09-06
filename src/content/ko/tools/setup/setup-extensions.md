@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 일반적으로 데스크톱 브라우저는 바로 사용할 수 있는 일련의 개발자 도구를 함께 제공합니다. 이를 확장하고 여기에 각자의 브라우저에 맞는 확장 프로그램이나 플러그인을 추가할 수 있습니다.
 

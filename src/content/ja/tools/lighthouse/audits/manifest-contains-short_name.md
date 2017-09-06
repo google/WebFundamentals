@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Ligjthouse の監査項目「マニフェストでアプリの省略名を定義する」のリファレンス ドキュメント。
 

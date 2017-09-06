@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools를 사용하면 애플리케이션 전체에 걸쳐 여러 변수를 쉽게 확인할 수 있습니다.
 

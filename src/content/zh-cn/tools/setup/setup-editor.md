@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:代码编辑器是您的主要开发工具；可以使用代码编辑器编写和保存代码行。了解代码编辑器的快捷键并安装主要插件可以更快地编写出更好的代码。
 

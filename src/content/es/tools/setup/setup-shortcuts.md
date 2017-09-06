@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Configura combinaciones de teclas para las tareas de la línea de comandos que usas continuamente. Si tienes que escribir lo mismo en la línea de comandos reiteradamente, esto reducirá el esfuerzo.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse の監査項目「サイトの独自スクリプトで変更イベントを使用しない」のリファレンス ドキュメント。
 

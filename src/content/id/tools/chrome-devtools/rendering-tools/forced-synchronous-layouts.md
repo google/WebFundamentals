@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Ikuti terus panduan interaktif ini untuk mempelajari cara menggunakan DevTools guna mendiagnosis layout sinkron paksa.
 

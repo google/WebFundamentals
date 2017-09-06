@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:了解如何设置 CSS 与 JS 预处理器以帮助您高效地编写代码。
 

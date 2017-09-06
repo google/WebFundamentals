@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“页面在加载时不会自动请求通知权限”Lighthouse 审查的参考文档。
 

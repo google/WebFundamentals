@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Gunakan breakpoint untuk menghentikan sementara kode JavaScript Anda serta selidiki nilai-nilai variabel dan tumpukan panggilan pada suatu saat tertentu.
 

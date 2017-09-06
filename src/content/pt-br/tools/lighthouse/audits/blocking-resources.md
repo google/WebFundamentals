@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentação de referência para as auditorias do Lighthouse "Site não usa tags de links que retardam a primeira pintura" e "Site não usa tags de script no cabeçalho que retardam a primeira pintura".
 
