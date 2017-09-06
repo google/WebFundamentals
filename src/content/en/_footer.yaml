@@ -1,60 +1,56 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
 footer:
 - promos:
   - label: Chromium Blog
-    description: The latest news on the Chromium blog
+    description: The latest news on the Chromium blog.
     icon: https://www.gstatic.com/images/icons/material/product/2x/chrome_chromium_64dp.png
     path: https://blog.chromium.org
   - label: GitHub
-    description: Fork our API code samples and other open-source projects.
+    description: Fork our code samples and other open-source projects.
     path: https://github.com/googlechrome
     icon: /site-assets/logo-github.svg
   - label: Twitter
-    description: Connect with @ChromiumDev on Twitter
+    description: Connect with @ChromiumDev on Twitter.
     icon: /site-assets/logo-twitter.svg
     path: https://twitter.com/chromiumdev
   - label: Videos
-    description: Check out the Web Developer Relations team's videos
+    description: Check out our videos.
     icon: https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png
     path: /web/shows/
   - label: Events
-    description: Attend a developer event and get hacking
+    description: Attend a developer event and get hacking.
     icon_name: event
     path: /web/events/
 
+
 - linkboxes:
-  - name: Contribute to WebFundamentals
-    icon_name: track_changes
+  - name: Key Topics
+    icon_name: star
     contents:
-    - label: File Issue
+    - label: Building for Billions
+      path: /web/billions/
+    - label: Chrome Extension Docs
+      path: https://developers.chrome.com/extensions/api_index
+    - label: Developer Feedback Program
+      path: /web/feedback/
+    - label: Progressive Web Apps
+      path: /web/progressive-web-apps/
+
+  - name: More Training
+    icon_name: school
+    contents:
+    - label: Instructor Led Training
+      path: /web/ilt/
+    - label: Web Courses at Udacity
+      path: /web/shows/udacity/
+
+  - name: Contribute
+    icon_name: bug_report
+    contents:
+    - label: File an Issue
       path: https://github.com/google/WebFundamentals/issues
     - label: View Page Source
       path: https://github.com/google/WebFundamentals
-    - label: WebFundamentals Resources
+    - label: Resources
       path: /web/resources/
-
-  - name: Learn
-    icon_name: link
-    contents:
-    - label: Progressive Web Apps
-      path: /web/progressive-web-apps/
-    - label: Instructor Led Training
-      path: /web/ilt/
-    - label: Building for Billions
-      path: /web/billions/
-    - label: Code Labs
-      path: https://codelabs.developers.google.com/?cat=Web
-    - label: Learn with Udacity
-      path: /web/shows/udacity/
-
-  - name: Related Links
-    icon_name: code
-    contents:
-    - label: Developer Feedback
-      path: /web/feedback/
-    - label: Chrome Extension Docs
-      path: https://developers.chrome.com/extensions/api_index
-    - label: Chrome DevTools
-      path: /web/tools/chrome-devtools/
-    - label: Physical Web
-      path: https://google.github.io/physical-web/
+    - label: Translating
+      path: /web/resources/translations
