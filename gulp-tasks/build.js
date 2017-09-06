@@ -167,7 +167,7 @@ gulp.task('build:updates', function() {
   });
   options = {
     outputPath: GLOBAL.WF.src.content,
-    articlesToShow: 2
+    articlesToShow: 4
   }
   wfTemplateHelper.generateLatestWidget(files, options);
 });
