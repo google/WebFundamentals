@@ -41,8 +41,7 @@ Chrome's autoplay policies are simple:
 
 - Muted autoplay is always allowed.
 - Autoplay with sound is allowed if any of the following conditions are met:
-    - User interaction on origin (button click, document activation,
-      navigation, etc.)
+    - User interaction on origin (button click, navigation, etc.)
     - [Media Engagement Index](#mei) threshold is crossed (desktop only)
     - User has added a [PWA] to their homescreen (mobile only)
 - Iframes will require autoplay [permission delegation](#iframe) from
