@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: Alarms, upcoming CSS stuff, impostor syndrome, & the death of Flash.
+description: Alarms, upcoming CSS stuff, impostor syndrome, and the death of Flash.
 
 {# wf_updated_on: 2017-09-06 #}
 {# wf_published_on: 2017-09-06 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-9.mp3 #}
 {# wf_podcast_duration: 01:04:23 #}
 {# wf_podcast_fileSize: 69925907 #}
-{# wf_podcast_subtitle: Alarms, upcoming CSS stuff, impostor syndrome, & the death of Flash. #}
+{# wf_podcast_subtitle: Alarms, upcoming CSS stuff, impostor syndrome, and the death of Flash. #}
 {# wf_featured_image: /web/shows/http203/podcast/images/surma-and-jake.jpg #}
 
 # A is for Effort {: .page-title }
