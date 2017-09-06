@@ -1,0 +1,21 @@
+toc:
+- title: Base Technologies
+  style: accordion
+  section:
+  - title: HTML & DOM
+    section:
+    - include: /web/fundamentals/web-components/_toc.yaml
+  - title: JavaScript
+    section:  
+    - title: Async Functions
+      path: /web/fundamentals/primers/async-functions
+    - title: Promises
+      path: /web/fundamentals/primers/promises
+    - title: Service Workers
+      section:
+      - title: Overview
+        path: /web/fundamentals/primers/service-workers/
+      - title: Life Cycle
+        path: /web/fundamentals/primers/service-workers/lifecycle
+      - title: Registration
+        path: /web/fundamentals/primers/service-workers/registration

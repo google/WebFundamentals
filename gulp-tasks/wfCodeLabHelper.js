@@ -16,7 +16,7 @@ const remarkHtml = require('remark-html');
 const wfRegEx = require('./wfRegEx');
 const mkdirp = require('mkdirp');
 
-function updateCodeLab(sourceFile, destFile, bookPath) {
+function updateCodeLab(sourceFile, destFile, bookPath, projPath) {
   gutil.log(' ', 'Processing', sourceFile);
   let matches;
   var authorId;
@@ -36,7 +36,7 @@ function updateCodeLab(sourceFile, destFile, bookPath) {
   metadata.wfProcessed = true;
   var result = [];
   var markdown = fs.readFileSync(sourceFile, 'utf8');
-  result.push('project_path: /web/_project.yaml');
+  result.push('project_path: ' + projPath);
   result.push('book_path: ' + bookPath);
   if (metadata.summary) {
     result.push('description: ' + metadata.summary);

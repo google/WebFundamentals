@@ -1,18 +1,24 @@
 parent_project_metadata_path: /web/_project.yaml
 
-name: "Tools for Web Developers"
-description: "Discover tools that can help you kickstart your development."
-home_url: /web/tools/
+name: "Web Fundamentals"
+description: "Google's opinionated reference for building amazing web experiences."
+home_url: /web/fundamentals/
 buganizer_id: 180451
 
 content_license: cc3-apache2
 footer_path: /web/_footer.yaml
 
+icon:
+  path: /web/images/web-fundamentals-icon192x192.png
+
 google_analytics_ids:
 - UA-52746336-1
 
-icon:
-  path: /web/images/web-fundamentals-icon192x192.png
+tags:
+- html5
+- mobile
+- performance
+- web
 
 announcement:
   description: Don't miss out on the action at this years <b>Chrome Dev Summit</b>, happening on Oct 23rd & 24th. <a href="https://developer.chrome.com/devsummit/">Learn more</a>.

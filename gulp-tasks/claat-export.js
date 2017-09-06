@@ -34,9 +34,10 @@ function getCLAATFiles(srcPath) {
  * @param {string} destBase The destination to copy to.
  * @param {Boolean} flatten Whether to flatten the files to one directory.
  * @param {string} bookPath The location of the book.yaml file
+ * @param {string} projPath The location of the project.yaml file
  * @return {Promise} The promise that will be resolved on completion.
  */
-function exportAndUpdate(srcPath, destBase, flatten, bookPath) {
+function exportAndUpdate(srcPath, destBase, flatten, bookPath, projPath) {
   return getCLAATFiles(srcPath)
   .then(function(files) {
     return Promise.all(files.map(function(file) {
@@ -50,22 +51,24 @@ function exportAndUpdate(srcPath, destBase, flatten, bookPath) {
         destFile = destFile.replace('/index.md', '.md');
       }
       let destImgPath = path.join(destDir, 'img');
-      wfCodeLabHelper.updateCodeLab(srcFile, destFile, bookPath);
+      wfCodeLabHelper.updateCodeLab(srcFile, destFile, bookPath, projPath);
       return wfHelper.promisedRSync(srcImgPath, destImgPath);
     }));
   });
 }
 
 gulp.task('claat:codelabs', function() {
-  let srcPath = 'src/data/codelabs';
-  let destPath = path.join(GLOBAL.WF.src.content, 'fundamentals/getting-started/codelabs');
-  let bookPath = '/web/fundamentals/_book.yaml';
-  return exportAndUpdate(srcPath, destPath, false, bookPath);
+  const srcPath = 'src/data/codelabs';
+  const destPath = path.join(GLOBAL.WF.src.content, 'fundamentals/codelabs');
+  const bookPath = '/web/fundamentals/_book.yaml';
+  const projPath = '/web/fundamentals/_project.yaml';
+  return exportAndUpdate(srcPath, destPath, false, bookPath, projPath);
 });
 
 gulp.task('claat:ilt-pwa', function() {
-  let srcPath = 'src/data/ilt-pwa';
-  let destPath = path.join(GLOBAL.WF.src.content, 'ilt/pwa');
-  let bookPath = '/web/ilt/pwa/_book.yaml';
-  return exportAndUpdate(srcPath, destPath, true, bookPath);
+  const srcPath = 'src/data/ilt-pwa';
+  const destPath = path.join(GLOBAL.WF.src.content, 'ilt/pwa');
+  const bookPath = '/web/ilt/pwa/_book.yaml';
+  const projPath = '/web/_project.yaml';
+  return exportAndUpdate(srcPath, destPath, true, bookPath, projPath);
 });
