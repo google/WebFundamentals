@@ -90,11 +90,11 @@ gulp.task('build:http203Podcast', function() {
   var src = 'shows/http203/podcast/';
   var baseOutputPath = path.join(GLOBAL.WF.src.content, src);
   var options = {
-    title: 'HTTP 203 Podcast',
-    subtitle: 'Where Paul and Jake occasionally talk web.',
-    author: {name: 'Paul Lewis & Jake Archibald', email: 'jaffathecake@gmail.com'},
-    summary: 'Paul and Jake talk about whatever\'s going on in the world of web development.',
-    image: 'https://developers.google.com/web/shows/http203/podcast/http203-podcast.jpg',
+    title: 'HTTP 203',
+    subtitle: 'Where Surma and Jake occasionally talk web.',
+    author: {name: 'Surma & Jake', email: 'jaffathecake@gmail.com'},
+    summary: 'Surma and Jake talk about whatever\'s going on in the world of web development.',
+    image: 'https://developers.google.com/web/shows/http203/podcast/images/surma-and-jake.jpg',
     section: 'shows',
     outputPath: baseOutputPath,
     baseUrl: 'https://developers.google.com/web/shows/http203/podcast/'
