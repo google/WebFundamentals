@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/feedback/_project.yaml
 book_path: /web/feedback/_book.yaml
 
 {# wf_updated_on: 2017-04-26 #}
