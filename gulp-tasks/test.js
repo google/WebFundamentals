@@ -58,6 +58,10 @@ const VALID_VERTICALS = [
   'education', 'entertainment', 'media', 'real-estate', 'retail',
   'transportation', 'travel'
 ];
+const PAGE_TYPES = {
+  LANDING: 'landing',
+  ARTICLE: 'article',
+};
 const IS_TRAVIS = process.env.TRAVIS === 'true';
 const IS_TRAVIS_PUSH = process.env.TRAVIS_EVENT_TYPE === 'push';
 const IS_TRAVIS_ON_MASTER = process.env.TRAVIS_BRANCH === 'master';
@@ -369,6 +373,11 @@ function testMarkdown(filename, contents, options) {
       options.lastUpdateMaxDays = null;
     }
 
+    let pageType = PAGE_TYPES.ARTICLE;
+    if (/page_type: landing/.test(contents)) {
+      pageType = PAGE_TYPES.LANDING;
+    }
+
     // Verify there are no dots in the filename
     let numDots = filename.split('.');
     if (numDots.length !== 2) {
@@ -543,7 +552,7 @@ function testMarkdown(filename, contents, options) {
 
     // Check for a single level 1 heading with page title
     matched = wfRegEx.RE_TITLE.exec(contents);
-    if (!matched && !isInclude) {
+    if (pageType === PAGE_TYPES.ARTICLE && !matched && !isInclude) {
       msg = 'Page is missing page title eg: `# TITLE {: .page-title }`';
       logError(filename, null, msg);
     }
@@ -670,6 +679,9 @@ function testMarkdown(filename, contents, options) {
 
     remarkLintOptions.firstHeadingLevel = 1;
     if (isInclude) {
+      remarkLintOptions.firstHeadingLevel = 2;
+    }
+    if (pageType === PAGE_TYPES.LANDING) {
       remarkLintOptions.firstHeadingLevel = 2;
     }
     remarkLintOptions.maximumLineLength = false;

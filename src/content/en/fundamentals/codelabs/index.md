@@ -3,6 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 full_width: true
 no_page_title: true
 
+{# wf_updated_on: 2017-09-10 #}
+{# wf_published_on: 2017-09-10 #}
 
 # Welcome {: .page-title }
 
