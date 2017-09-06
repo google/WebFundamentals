@@ -18,8 +18,8 @@ you why and how this is going to affect video playback with sound. Spoiler
 alert: Users are going to love it!
 
 <figure>
-  <img src="/web/updates/images/2017/09/autoplay-memes.png"
-       alt="Internet memes tagged "autoplay">
+  <img src="https://i.imgur.com/kD5AxSS.png"
+       alt="Internet memes tagged autoplay">
   <figcaption>
     <b>Figure 1.</b>
     Internet memes tagged "autoplay"
@@ -41,11 +41,11 @@ Chrome's autoplay policies are simple:
 
 - Muted autoplay is always allowed.
 - Autoplay with sound is allowed if any of the following conditions are met:
-    - User interaction on origin (button click, navigation, etc.)
+    - User has interacted with the site (button click, navigation, etc.)
     - [Media Engagement Index](#mei) threshold is crossed (desktop only)
-    - User has added a [PWA] to their homescreen (mobile only)
-- Iframes will require autoplay [permission delegation](#iframe) from
-  top-level origin.
+    - Site has been installed using the ["Add to Homescreen" flow] (mobile only)
+- Top frame can [delegate autoplay permission](#iframe) to their iframes to
+  allow autoplay with sound.
 
 ### Media Engagement Index (MEI) {: #mei }
 
@@ -53,16 +53,16 @@ The MEI measures an individual's propensity to consume media on a site.
 Chrome's current approach is a ratio of visits to significant media playback
 events per origin:
 
-- Consumption of the video must be greater than 7 seconds.
+- Consumption of the media (audio/video) must be greater than 7 seconds.
 - Audio must be present and unmuted.
 - Tab with video is active.
-- Size of the largest dimension of the video must be greater than 256px.
+- Size of the video (in px) must be greater than [200x140].
 
 From that, Chrome calculates a Media Engagement score which is highest on sites
-where video is the primary content type. When it is high enough, media playback
+where media is played on a regular basis. When it is high enough, media playback
 is allowed to autoplay on desktop only.
 
-Note that you can check out user's MEI at the <i>chrome://media-engagement/</i>
+Note that you can check out user's MEI at the <i>chrome://media-engagement</i>
 internal page in Chrome 62.
 
 <figure>
@@ -70,14 +70,15 @@ internal page in Chrome 62.
        alt="Screenshot of the chrome://media-engagement page">
   <figcaption>
     <b>Figure 2.</b>
-    TODO: Screenshot of the <i>chrome://media-engagement</i> internal page
+    Screenshot of the <i>chrome://media-engagement</i> internal page
   </figcaption>
 </figure>
 
 ### Iframe delegation {: #iframe }
 
 Once an origin has received autoplay permission, it can delegate that
-permission to iframes via a new HTML attribute:
+permission to iframes via a new HTML attribute. Check out the [Gesture
+Delegation API proposal] to learn more.
 
     <iframe src="myvideo.html" gesture="media">
 
@@ -110,7 +111,7 @@ autoplay.
 
 Here's the one thing to remember: Don't ever assume a video will play, and
 don't show a pause button from the start. It is so important that I'm going
-to write one more time below for those who simply skim through that post.
+to write it one more time below for those who simply skim through that post.
 
 Key Point: Don't ever assume a video will play, and don't show a pause button
 from the start.
@@ -146,8 +147,17 @@ this effectively, including Facebook, Twitter, and Instagram.
       });
     </script>
 
+## Feedback
+
+At the time of writing, Chrome's autoplay policies aren't carved in stone.
+Please reach out to the Chrome team, [ChromiumDev on Twitter] to share your
+thoughts.
+
 {% include "comment-widget.html" %}
 
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
-[PWA]: https://developers.google.com/web/progressive-web-apps/
-[Promise]: https://developers.google.com/web/fundamentals/getting-started/primers/promises
+["Add to Homescreen" flow]: /web/updates/2017/02/improved-add-to-home-screen
+[Promise]: /web/fundamentals/getting-started/primers/promises
+[200x140]: https://chromium.googlesource.com/chromium/src/+/1c63b1b71d28851fc495fdee9a2c724ea148e827/chrome/browser/media/media_engagement_contents_observer.cc#38
+[Gesture Delegation API proposal]: https://github.com/mounirlamouri/gesture-delegation/blob/master/explainer.md
+[ChromiumDev on Twitter]: https://twitter.com/chromiumdev
