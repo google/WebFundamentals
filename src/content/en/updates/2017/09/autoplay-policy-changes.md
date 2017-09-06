@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Learn best practices for good user experiences with the new auto-play policies in Chrome.
+description: Learn best practices for good user experiences with the new autoplay policies in Chrome.
 
 {# wf_updated_on: 2017-09-04 #}
 {# wf_published_on: 2017-09-04 #}
@@ -9,43 +9,43 @@ description: Learn best practices for good user experiences with the new auto-pl
 {# wf_featured_snippet: TODO #}
 {# wf_blink_components: Blink>Media #}
 
-# Auto-Play Policy Changes {: .page-title }
+# Autoplay Policy Changes {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-Chrome's auto-play policies are about to change in 2018 and I'm here to tell
+Chrome's autoplay policies are about to change in 2018 and I'm here to tell
 you why and how this is going to affect video playback with sound. Spoiler
 alert: Users are going to love it!
 
 <figure>
   <img src="/web/updates/images/2017/09/autoplay-memes.png"
-       alt="Internet memes tagged "auto-play">
+       alt="Internet memes tagged "autoplay">
   <figcaption>
     <b>Figure 1.</b>
-    Internet memes tagged "auto-play"
+    Internet memes tagged "autoplay"
   </figcaption>
 </figure>
 
 ## New Behaviors {: #new-behaviors }
 
-As you may have [noticed], web browsers are moving towards stricter auto-play
+As you may have [noticed], web browsers are moving towards stricter autoplay
 policies in order to improve the web experience for users, minimize the
 incentives to install extensions that block ads, and reduce data consumption on
 expensive and/or constrained network.
 
-With these new auto-play policies, the Chrome team aims to provide a greater
+With these new autoplay policies, the Chrome team aims to provide a greater
 control to users over content playing in their browser. It will also benefit
-publishers who have legitimate auto-play use cases.
+publishers who have legitimate autoplay use cases.
 
-Chrome's auto-play policies are simple:
+Chrome's autoplay policies are simple:
 
-- Muted auto-play is always allowed.
-- Auto-play with sound is allowed if any of the following conditions are met:
+- Muted autoplay is always allowed.
+- Autoplay with sound is allowed if any of the following conditions are met:
     - User interaction on origin (button click, document activation,
       navigation, etc.)
     - [Media Engagement Index](#mei) threshold is crossed (desktop only)
     - User has added a [PWA] to their homescreen (mobile only)
-- Iframes will require auto-play [permission delegation](#iframe) from
+- Iframes will require autoplay [permission delegation](#iframe) from
   top-level origin.
 
 ### Media Engagement Index (MEI) {: #mei }
@@ -61,7 +61,7 @@ events per origin:
 
 From that, Chrome calculates a Media Engagement score which is highest on sites
 where video is the primary content type. When it is high enough, media playback
-is allowed to auto-play on desktop only.
+is allowed to autoplay on desktop only.
 
 Note that you can check out user's MEI at the <i>chrome://media-engagement/</i>
 internal page in Chrome 62.
@@ -77,7 +77,7 @@ internal page in Chrome 62.
 
 ### Iframe delegation {: #iframe }
 
-Once an origin has received auto-play permission, it can delegate that
+Once an origin has received autoplay permission, it can delegate that
 permission to iframes via a new HTML attribute:
 
     <iframe src="myvideo.html" gesture="media">
@@ -88,24 +88,24 @@ Without iframe delegation, videos will not be able to autoplay with sound.
 
 <b>Example 1:</b> Every time a user visits <i>VideoSubscriptionSite.com</i> on their
 laptop they watch a TV show or a movie. As their Media Engagement score is
-high, auto-play is allowed.
+high, autoplay is allowed.
 
 <b>Example 2:</b> <i>GlobalNewsSite.com</i> has both text and video content.
 Most users go to the site for text content and watch videos only occasionally.
-Users' Media Engagement score is low, so auto-play wouldn't be allowed if a user
+Users' Media Engagement score is low, so autoplay wouldn't be allowed if a user
 navigates directly from a social media page or search. 
 
 <b>Example 3:</b> <i>LocalNewsSite.com</i> has both text and video content.
 Most people enter the site through the homepage and then click on the news
 articles. Autoplay on the news article pages would be allowed because of user
 interaction with the domain. However, care should be taken to make sure users
-aren't surprised by auto-playing content. 
+aren't surprised by autoplaying content.
 
 <b>Example 4:</b> <i>MyMovieReviewBlog.com</i> embeds an iframe with a movie
 trailer to go along with their review. The user interacted with the domain to
-get to the specific blog, so auto-play is allowed. However, the blog needs to
+get to the specific blog, so autoplay is allowed. However, the blog needs to
 explicitly delegate that privilege to the iframe in order for the content to
-auto-play.
+autoplay.
 
 ## Best Practises for Web Developers {: #best-practises }
 
@@ -123,19 +123,19 @@ it was rejected:
     
     if (promise !== undefined) {
       promise.then(_ => {
-        // Auto-play started!
+        // Autoplay started!
       }).catch(error => {
-        // Auto-play was prevented.
+        // Autoplay was prevented.
         // Show a "Play" button so that user can start playback.
       });
     }
 
 Warning: Don't play interstitial ads without showing any
-media controls as they may not auto-play and user will have no way of
+media controls as they may not autoplay and user will have no way of
 starting playback.
 
-One cool way to engage users is about using muted auto-play and let them
-self-select to auto-play (see code snippet below). Some websites already do
+One cool way to engage users is about using muted autoplay and let them
+self-select to autoplay (see code snippet below). Some websites already do
 this effectively, including Facebook, Twitter, and Instagram.
 
     <video id="video" muted autoplay>
