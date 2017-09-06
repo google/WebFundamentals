@@ -7,6 +7,7 @@ description: Sharing is caring. Chrome is running an Origin Trial to enable nati
 {# wf_featured_image: /web/updates/images/generic/share.png #}
 {# wf_tags: chrome55,chrome61,sharing,android,origintrials #}
 {# wf_featured_snippet: Sharing is caring. Web Share is now available in Chrome 61 for Android, and allows websites to invoke the native sharing capabilities of the host platform. #}
+{# wf_blink_components: Blink>WebShare #}
 
 # Introducing the Web Share API {: .page-title }
 
