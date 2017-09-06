@@ -98,19 +98,19 @@ sufficiently mature or standardized to encourage widespread adoption yet.
   <tbody>
     <tr>
       <td>Chrome</td>
-      <td><6% of free space</td>
+      <td>&lt;6% of free space</td>
     </tr>
     <tr>
       <td>Firebox</td>
-      <td><10% of free space</td>
+      <td>&lt;10% of free space</td>
     </tr>
     <tr>
       <td>Safari</td>
-      <td><50MB</td>
+      <td>&lt;50MB</td>
     </tr>
     <tr>
       <td>IE10</td>
-      <td><250MB</td>
+      <td>&lt;250MB</td>
     </tr>
   <tbody>
 </table>
@@ -119,7 +119,8 @@ In Chrome and Opera, your storage is per origin (rather than per API). Both
 storage mechanisms will store data until the browser
 [quota](http://www.html5rocks.com/en/tutorials/offline/quota-research/) is
 reached. Apps can check how much quota they’re using with the [Quota Management
-API](https://www.w3.org/TR/quota-api/). In Chrome, apps can use up to 6% of free
+API](https://developer.mozilla.org/en-US/docs/Web/API/StorageQuota). In Chrome,
+apps can use up to 6% of free
 disk space. In Firefox, apps can use up to 10% of free disk space, but will
 prompt the user for further storage requests after 50MB data stored. In mobile
 Safari, apps can use up to 50MB max, whereas desktop Safari allows unlimited
@@ -276,7 +277,7 @@ precaching for static assets/application shells)
 
 ### IndexedDB libraries worth checking out
 
-* [localForage](https://mozilla.github.io/localForage/)(~8KB, Promises, good
+* [localForage](https://github.com/localForage/localForage)(~8KB, Promises, good
 legacy browser support)
 
 * [Dexie](http://dexie.org/) (~16KB, Promises, complex queries, secondary

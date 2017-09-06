@@ -12,6 +12,19 @@ redirects:
 
 
 # REDIRECTS from Pre-DevSite
+
+- from: /web/feed.xml
+  to: /web/fundamentals/rss.xml
+
+- from: /web/fundamentals/feed.xml
+  to: /web/fundamentals/rss.xml
+
+- from: /web/showcase/feed.xml
+  to: /web/showcase/rss.xml
+
+- from: /web/shows/feed.xml
+  to: /web/shows/rss.xml
+
 - from: /web/fundamentals/design-and-ui/browser-customization/great-icons
   to: /web/fundamentals/design-and-ui/browser-customization/
 

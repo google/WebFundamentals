@@ -17,7 +17,11 @@ CSS の作業にどれくらいかけているか、想像したことがあり�
 
 Houdini タスクフォースは、CSS エンジンの一部を Web 開発者に公開するために Mozilla, Apple, Opera, Microsoft, HP, Intel, Google のエンジニアが集った場所です。このタスクフォースは W3C での正式な標準化を目的として、いくつかのドラフトを策定しています。タスクフォースはハイレベルなゴールを設定し、それらを実現する仕様のドラフトを、そしてさらに、それらのドラフトを実装するためのローレベルな仕様のドラフトも策定しています。これらの仕様がおもに「Houdini」と呼ばれるものです。このポストを書いている時点で、[ドラフトのリスト][Houdini Drafts]はまだ未完成で、いくつかの仕様はプレースホルダだけです。Houdini がどれくらい初期段階なのかがわかるかと思います。
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/EUlIxr8mk7s" frameborder="0" allowfullscreen></iframe>
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="EUlIxr8mk7s"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 **注意**：これからHoudini のドラフトを紹介し、どんな問題を解決しようとしているのかを紹介したいと思っています。現在はドラフト段階ですが、コード例も紹介しようと思います。ですので、すべての仕様が「ドラフト」であり、変わりやすいことを念頭においてください。紹介したサンプルコードが将来も動く保証はありませんし、ましてやドラフトが標準になる保証さえありません。
 
@@ -107,7 +111,11 @@ Paint Worklet の話に戻りましょう。フラグメントごとにコード
 
 以下は Paint Worklet API で[実装][Paint Worklet source]されたリップル（[デモ][Paint Worklet demo]）のビデオです。
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/BX_qv2yKSUk" frameborder="0" allowfullscreen></iframe>
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="BX_qv2yKSUk"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ### Compositor Worklet
 

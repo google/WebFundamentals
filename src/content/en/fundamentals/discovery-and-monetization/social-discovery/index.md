@@ -183,7 +183,7 @@ page will have a card added that includes the rich detail you've added.
 
 ### Use `twitter:` namespaced meta tags to describe metadata
 In order to get a Twitter Card working, [your domain must be
-approved](https://dev.twitter.com/docs/cards/validation/validator) and must
+approved](https://cards-dev.twitter.com/validator) and must
 contain a meta tag that has `twitter:card` as the `name` attribute instead of
 `property` attribute.
   
@@ -207,7 +207,7 @@ To learn more about Twitter Cards, visit:
 ### Validate rich snippets
 In order to validate your markup, Twitter provides:
 
-* [Card Validator](https://dev.twitter.com/docs/cards/validation/validator)
+* [Card Validator](https://cards-dev.twitter.com/validator)
 
 ## The Best Practice
 Given all three options, the best thing you can do is to include them all in

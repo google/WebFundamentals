@@ -7,7 +7,7 @@ toc:
       section:
       - title: Cache Contains start_url From Manifest
         path: /web/tools/lighthouse/audits/cache-contains-start_url
-      - title: Content Size Correctly for Viewport
+      - title: Content Sized Correctly for Viewport
         path: /web/tools/lighthouse/audits/content-sized-correctly-for-viewport
       - title: Critical Request Chains
         path: /web/tools/lighthouse/audits/critical-request-chains
@@ -19,12 +19,54 @@ toc:
         path: /web/tools/lighthouse/audits/registered-service-worker
       - title: HTML Has Viewport Meta Tag
         path: /web/tools/lighthouse/audits/has-viewport-meta-tag
+      - title: Manifest Contains Icons at Least 192px
+        path:  /web/tools/lighthouse/audits/manifest-contains-192px-icon
+      - title: Manifest Contains Background Color
+        path: /web/tools/lighthouse/audits/manifest-contains-background_color
+      - title: Manifest Contains Name
+        path: /web/tools/lighthouse/audits/manifest-contains-name
+      - title: Manifest Contains Short Name
+        path: /web/tools/lighthouse/audits/manifest-contains-short_name
+      - title: Manifest Contains Start URL
+        path: /web/tools/lighthouse/audits/manifest-contains-start_url
+      - title: Manifest Contains Theme Color
+        path: /web/tools/lighthouse/audits/manifest-contains-theme_color
+      - title: Manifest Exists
+        path: /web/tools/lighthouse/audits/manifest-exists
+      - title: Manifest's Display Property Is Set
+        path: /web/tools/lighthouse/audits/manifest-has-display-set
+      - title: Manifest's Short Name Won't Be Truncated
+        path: /web/tools/lighthouse/audits/manifest-short_name-is-not-truncated
       - title: Page Contains Some Content When Its Scripts Are Not Available
         path: /web/tools/lighthouse/audits/no-js
+      - title: Page Does Not Automatically Request Geolocation On Page Load
+        path: /web/tools/lighthouse/audits/geolocation-on-load
+      - title: Page Does Not Automatically Request Notfication Permissions On Page Load
+        path: /web/tools/lighthouse/audits/notifications-on-load
+      - title: Site Does Not Use console.time()
+        path: /web/tools/lighthouse/audits/console-time
+      - title: Site Does Not Use Resources That Delay First Paint
+        path: /web/tools/lighthouse/audits/blocking-resources
+      - title: Site Does Not Use Date.now()
+        path: /web/tools/lighthouse/audits/date-now
+      - title: Site Does Not Use document.write()
+        path: /web/tools/lighthouse/audits/document-write
+      - title: Site Does Not Use Mutation Events
+        path: /web/tools/lighthouse/audits/mutation-events
+      - title: Site Does Not Use The Old CSS Flexbox
+        path: /web/tools/lighthouse/audits/old-flexbox
+      - title: Site Does Not Use Web SQL
+        path: /web/tools/lighthouse/audits/web-sql
+      - title: Site Is On HTTPS
+        path: /web/tools/lighthouse/audits/https
+      - title: Site Opens External Anchors Using rel="noopener"
+        path: /web/tools/lighthouse/audits/noopener
       - title: Site Redirects HTTP Traffic to HTTPS
         path: /web/tools/lighthouse/audits/http-redirects-to-https
-      - title: Site is on HTTPS
-        path: /web/tools/lighthouse/audits/https
+      - title: Site Uses HTTP/2
+        path: /web/tools/lighthouse/audits/http2
+      - title: Site Uses Passive Event Listeners
+        path: /web/tools/lighthouse/audits/passive-event-listeners
       - title: Speed Index
         path: /web/tools/lighthouse/audits/speed-index
       - title: Time to Interactive

@@ -68,9 +68,9 @@ a storage mechanism with global persistence is Google Cloud Storage.
 
 ### Browser Support
 
-Developers should choose an API best suited to their problem domain, however,
+Developers should choose an API best suited to their problem domain; however,
 they should also take into account the fact that standardized and well
-established APIs are preferable over custom or proprietary interfaces, because
+established APIs are preferable to custom or proprietary interfaces, because
 they tend to be longer lived and more widely supported. They may also enjoy a
 broader knowledge base and a richer developer ecosystem.
 

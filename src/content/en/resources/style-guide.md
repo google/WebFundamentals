@@ -105,6 +105,11 @@ automatically converted into HTML entities. This makes it very easy to include
 example HTML source code using Markdown -- just paste it and indent it, and
 Markdown will handle the hassle of encoding the ampersands and angle brackets.
 
+Warning: Wrapping code blocks in &grave;&grave;&grave; is not supported on
+DevSite. DevSite will not automatically style these blocks and our integration
+tests will fail.
+
+
 ### Highlighting
 
 Use `<strong>` to call attention to content within a `<pre>` block. Doing so

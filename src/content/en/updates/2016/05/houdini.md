@@ -32,7 +32,11 @@ usually meant when someone talks about “Houdini”. At the time of writing,
 the [list of drafts][Houdini Drafts] is incomplete and some of the drafts
 are mere placeholders. That’s how early in development of Houdini we are.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/EUlIxr8mk7s" frameborder="0" allowfullscreen></iframe>
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="EUlIxr8mk7s"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 Caution: I want to give a quick overview of the Houdini drafts so you have
 an idea of what kind of problems Houdini tries to tackle. As far as the current
@@ -157,7 +161,11 @@ just like `box-shadow`.
 Here is a video of a ripple [implementation][Paint Worklet source] that uses
 the Paint Worklet API ([Demo][Paint Worklet demo]).
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/BX_qv2yKSUk" frameborder="0" allowfullscreen></iframe>
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="BX_qv2yKSUk"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ### Compositor worklet
 

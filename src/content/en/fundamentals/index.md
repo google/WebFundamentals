@@ -12,7 +12,7 @@ nav.devsite-page-nav, .devsite-rating-container, .page-title {display:none;}
 
 ## Web Push Notifications, a new way to engage users {: .hide-from-toc  }
 
-![Alt text](/web/images/common/push-notification-16x9.png){: .attempt-right }
+![Example Push Notification](/web/images/common/push-notification-16x9.png){: .attempt-right }
 
 Web push notifications makes it easy to re-engage with users by
 showing relevant, timely, and contextual notifications to the user, 
@@ -78,7 +78,7 @@ possibilities for you to re-engage with your users.
   <p>
     App install banners make it easy for users to add your app to their
     home screen with a single click, and is an indication to the user that
-    the app their adding, meets an important quality bar.<br>
+    the app they're adding meets an important quality bar.<br>
     <a href="/web/fundamentals/engage-and-retain/app-install-banners/">Learn more</a>
   </p>
 </div>

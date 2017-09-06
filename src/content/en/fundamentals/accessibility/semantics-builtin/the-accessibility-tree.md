@@ -143,11 +143,12 @@ touchscreen users. To associate a label with an element, either
 
  - Place the input element inside a label element
 
-```
-<label>
-    <input type="checkbox">Receive promotional offers?</input>
-</label>
-```
+<div class="clearfix"></div>
+
+    <label>
+      <input type="checkbox">Receive promotional offers?</input>
+    </label>
+
 
 {% framebox height="60px" %}
 <div style="margin: 10px;">
@@ -162,10 +163,11 @@ or
 
  - Use the label's `for` attribute and refer to the element's `id`
 
-```
-<input id="promo" type="checkbox"></input>
-<label for="promo">Receive promotional offers?</label>
-```
+<div class="clearfix"></div>
+
+    <input id="promo" type="checkbox"></input>
+    <label for="promo">Receive promotional offers?</label>
+
 
 {% framebox height="60px" %}
 <div style="margin: 10px;">
@@ -181,7 +183,7 @@ promotional offers?".
 
 ![on-screen text output from VoiceOver showing the spoken label for a checkbox](imgs/promo-offers.png)
 
->Tip: You can actually use the screen reader to find improperly-associated
+Success: You can actually use the screen reader to find improperly-associated
 labels by tabbing through the page and verifying the spoken roles, states, and
 names.
 

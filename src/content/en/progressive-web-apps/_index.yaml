@@ -35,7 +35,7 @@ landing_page:
         </ul>
         <p>
           This new level of of quality allows Progressive Web Apps to earn a
-          place on the users home screen.
+          place on the user's home screen.
         </p>
       image_path: images/pwa-intro.png
 
@@ -80,7 +80,7 @@ landing_page:
     - heading: Engaging
       description: >
         <p>
-          Progressive Web Apps are installable and live on the users 
+          Progressive Web Apps are installable and live on the users
           <b>home screen</b>, without the need for an app store. They
           offer an <b>immersive full screen</b> experience with help from a
           web app manifest file and can even re-engage users with web
@@ -107,7 +107,7 @@ landing_page:
     classname: devsite-landing-row-100
     items:
     - description: >
-        Building a high-quality Progressive Web App has 
+        Building a high-quality Progressive Web App has
         incredible benefits, making it easy to delight your users,
         grow engagement and increase conversions.
 
@@ -147,11 +147,11 @@ landing_page:
 
   - classname: devsite-landing-row-67 devsite-landing-row-no-image-background devsite-landing-row-grey devsite-landing-row-colored
     items:
-    - heading: Lighthouse 
+    - heading: Lighthouse
       description: >
           Verifying that your Progressive Web App meets previously required a
           great deal of manual testing. Thanks to the new Lighthouse project,
-          it’s possible to automate checks for many of these properties. You 
+          it's possible to automate checks for many of these properties. You
           can even integrate Lighthouse into continuous integration systems to
           catch regressions.
       image_path: images/pwa-lighthouse.png

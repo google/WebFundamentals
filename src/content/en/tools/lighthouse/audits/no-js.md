@@ -32,7 +32,7 @@ for an example of this approach.
 Another camp believes that this strict approach is unfeasible or unnecessary
 for many modern, large-scale web applications and suggests using inline
 critical path CSS in the document `<head>` for absolutely critical page styles.
-See [Critical Rendering Path](/web/fundamentals/performance/critical-rendering-path/) for more on this approach. 
+See [Critical Rendering Path](/web/fundamentals/performance/critical-rendering-path/) for more on this approach.
 
 Given these considerations, this Lighthouse audit performs a simple check to
 ensure that your page isn't blank when JavaScript is disabled. How strictly your
@@ -52,10 +52,7 @@ To see how your site looks and performs when JavaScript is disabled, use
 Chrome DevTools' [Disable
 JavaScript](/web/tools/chrome-devtools/settings#disable-js) feature.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse disables JavaScript on the page and then inspects the page's HTML. If
 the HTML is empty then the audit fails. If the HTML is not empty then the audit

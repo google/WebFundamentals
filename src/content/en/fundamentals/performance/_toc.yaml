@@ -25,9 +25,9 @@ toc:
         path: /web/fundamentals/performance/critical-rendering-path/
       - title: Constructing the Object Model
         path: /web/fundamentals/performance/critical-rendering-path/constructing-the-object-model
-      - title: Render-tree Construction, Layout, and Paint
+      - title: Render-Tree Construction, Layout, and Paint
         path: /web/fundamentals/performance/critical-rendering-path/render-tree-construction
-      - title: Render Blocking CSS
+      - title: Render-Blocking CSS
         path: /web/fundamentals/performance/critical-rendering-path/render-blocking-css
       - title: Adding Interactivity with JavaScript
         path: /web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript

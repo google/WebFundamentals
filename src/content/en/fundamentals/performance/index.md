@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Improving performance starts with minimizing, or at lease, optimizing the data that users download. Understanding how a browser renders those resources is a prerequisite for improving code efficiency. After improving it, you need a way to test it. 
+description: Improving performance starts with minimizing, or at least, optimizing the data that users download. Understanding how a browser renders those resources is a prerequisite for improving code efficiency. After improving it, you need a way to test it. 
 
 {# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
@@ -64,7 +64,7 @@ of app delivery and launch.
 
 ## Related Resources
 
-### Code Labs
+### Codelabs
 
 [Find and Fix Web App Performance Issues](/web/fundamentals/getting-started/codelabs/web-perf/) <br>
 This codelab will help you learn to identify and fix web app performance bottlenecks.
@@ -86,4 +86,9 @@ web apps that maintain 60 frames per second performance.
 Learn about the Critical Rendering Path, or the set of steps browsers must take
 to convert HTML, CSS and JavaScript into living, breathing websites.
 
+[HTTP/1 to HTTP/2](https://udacity.com/ud897)<br>
+Surma starts with the basics of HTTP/1 and goes all the way to HTTP/2, how to
+load assets efficiently and also covers security aspects of these protocols. 
 <div style="clear:both;"></div>
+
+

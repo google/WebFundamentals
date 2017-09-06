@@ -10,7 +10,7 @@ Apakah Anda pengembang web baru, atau pengembang lama yang sudah pro?
 Kami memiliki bahan ajar untuk keduanya.
 
 
-## Code Labs {: #codelabs }
+## Codelabs {: #codelabs }
 
 Code Lab menyediakan panduan, tutorial, dan panduan memprogram 
 langkah-demi-langkah. Code Lab akan memandu Anda melalui proses membangun 

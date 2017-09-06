@@ -36,7 +36,8 @@ The Timeline panel consists of four panes:
 
    You may see one to three dotted, vertical lines on your **Flame Chart**. The 
    blue line represents the `DOMContentLoaded` event. The green line represents 
-   time to first paint. The red line represents the `load` event. 
+   time to first paint. The red line represents the `load` event.
+
 4. **Details**. When an event is selected, this pane shows more information 
    about that event. When no event is selected, this pane shows information 
    about the selected time frame. 
@@ -174,7 +175,7 @@ While looking at events you may want to focus on one type of events. For
 example, perhaps you need to view the details of every `Parse HTML` event. 
 
 Press <kbd>Cmd</kbd>+<kbd>F</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>F</kbd> 
-(Windows / Linux) while the **Timeline** is in focus to open a find toolbar. 
+(Windows / Linux) while the **Timeline** is in focus to open a Find toolbar. 
 Type in the name of the event type that you wish to inspect, such as `Event`.
 
 The toolbar only applies to the currently selected timeframe. Any events 

@@ -36,9 +36,6 @@ the features in your own app:
 * [Add your web app to a user's home
   screen](https://codelabs.developers.google.com/codelabs/add-to-home-screen).
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Checks if the Chrome Debugger returns a service worker version.

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab you'll how to add push notifications to your web app.
 
-{# wf_updated_on: 2016-11-11T22:46:27Z #}
+{# wf_updated_on: 2016-11-21T15:42:20Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -44,11 +44,11 @@ Push messaging provides a simple and effective way to re-engage with your users 
 
 You can get the sample code for this code by either downloading the zip here:
 
-[Download source code](https://github.com/googlechrome/push-notifications/archive/master.zip)
+[Link](https://github.com/googlechrome/push-notifications/archive/master.zip)
 
 or by cloning this git repo:
 
-`git clone https://github.com/GoogleChrome/push-notifications.git`
+    git clone https://github.com/GoogleChrome/push-notifications.git
 
 If you downloaded the source as a zip, unpacking it should give you a root folder `push-notifications-master`.
 
@@ -56,13 +56,13 @@ If you downloaded the source as a zip, unpacking it should give you a root folde
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
+[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar:
+After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-In the ensuing window, click on the Web Server icon:
+In the ensuing window, click on the Web Server icon: 
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -70,9 +70,9 @@ You'll see this dialog next, which allows you to configure your local web server
 
 ![433870360ad308d4.png](img/433870360ad308d4.png)
 
-Click the __choose folder__ button, and select the __`app`__ folder. This will enable you to serve your work in progress via the URL highlighted in the web server dialog (in the __Web Server URL(s)__ section).
+Click the __choose folder__ button, and select the app folder. This will enable you to serve your work in progress via the URL highlighted in the web server dialog (in the __Web Server URL(s)__ section).
 
-Under Options, check the box next to "__Automatically show index.html__", as shown below:
+Under Options, check the box next to "Automatically show index.html", as shown below:
 
 ![39b4e0371e9703e6.png](img/39b4e0371e9703e6.png)
 
@@ -98,13 +98,13 @@ To set this up in Chrome, open DevTools (Right Click > Inspect) and go to the __
 
 
 
-In your __app__ directory, notice that you have an empty file named __sw.js__. This file will be your service worker, for now it can stay empty and we'll be adding code to it later.
+In your `app` directory, notice that you have an empty file named `sw.js`. This file will be your service worker, for now it can stay empty and we'll be adding code to it later.
 
 First we need to register this file as our Service Worker.
 
-Our __app/index.html__ page loads __scripts/main.js__ and it's in this JavaScript file that we'll register our service worker.
+Our `app/index.html` page loads `scripts/main.js` and it's in this JavaScript file that we'll register our service worker.
 
-Add the following code to __scripts/main.js__:
+Add the following code to `scripts/main.js`:
 
 ```
 if ('serviceWorker' in navigator && 'PushManager' in window) {
@@ -125,13 +125,13 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 }
 ```
 
-This code checks if service workers and push messaging is supported by the current browser and if it is, it registers our sw.js file.
+This code checks if service workers and push messaging is supported by the current browser and if it is, it registers our `sw.js` file.
 
 #### Try it out
 
 Check your changes by opening the URL __127.0.0.1:8887__ in the browser.
 
-Open Chrome DevTools to check the console for ‘Service Worker is registered', like so:
+Open Chrome DevTools to check the console for `Service Worker is registered`, like so:
 
 ![d712c8726928ca4.png](img/d712c8726928ca4.png)
 
@@ -143,13 +143,13 @@ Here you can generate a Public and Private key pair.
 
 ![a1304b99e7b981dd.png](img/a1304b99e7b981dd.png)
 
-Copy your public key into __scripts/main.js__ replacing the ‘<Your Public Key>' value:
+Copy your public key into `scripts/main.js` replacing the `<Your Public Key>` value:
 
 ```
 const applicationServerPublicKey = '<Your Public Key>';
 ```
 
-__Note:__ You should never put your private key in your web app!
+Note: You should never put your private key in your web app!
 
 
 ## Initialise State
@@ -159,9 +159,9 @@ __Note:__ You should never put your private key in your web app!
 
 At the moment the web app's button is disabled and can't be clicked. This is because it's good practice to disable the push button by default and enable it once you know push is supported and can know if the user is currently subscribed or not.
 
-Let's create two functions in __scripts/main.js__, one called __initialiseUI__, which will check if the user is currently subscribed, and one called __updateBtn__ which will enable our button and change the text if the user is subscribed or not.
+Let's create two functions in `scripts/main.js`, one called `initialiseUI`, which will check if the user is currently subscribed, and one called `updateBtn` which will enable our button and change the text if the user is subscribed or not.
 
-We want our __initialiseUI()__ function to look like this:
+We want our `initialiseUI` function to look like this:
 
 ```
 function initialiseUI() {
@@ -181,9 +181,9 @@ function initialiseUI() {
 }
 ```
 
-Our new method uses the swRegistration from the previous step and calls __getSubscription()__ on it's pushManager. __getSubscription()__ is a method that returns a promise that resolves with the current subscription if there is one, otherwise it'll return null. With this we can check if the user is already subscribed or not, set some state and then call __updateBtn()__ so the button can be enabled with some helpful text.
+Our new method uses the `swRegistration` from the previous step and calls `getSubscription()` on it's `pushManager`. `getSubscription()` is a method that returns a promise that resolves with the current subscription if there is one, otherwise it'll return `null`. With this we can check if the user is already subscribed or not, set some state and then call `updateBtn()` so the button can be enabled with some helpful text.
 
-Add the following code to implement the __updateBtn()__ function.
+Add the following code to implement the `updateBtn()` function.
 
 ```
 function updateBtn() {
@@ -199,7 +199,7 @@ function updateBtn() {
 
 This function simply changes the text depending on the whether the user is subscribed or not and then enables the button.
 
-The last thing to do is call __initialiseUI()__ when our service worker is registered.
+The last thing to do is call `initialiseUI()` when our service worker is registered.
 
 ```
 navigator.serviceWorker.register('sw.js')
@@ -227,7 +227,7 @@ When we progress through the rest of the code lab you should see the button text
 
 At the moment our ‘Enable Push Messaging' button doesn't do too much, so let's fix that.
 
-Add a click listener to our button in the __initialiseUI()__ function, like so:
+Add a click listener to our button in the `initialiseUI()` function, like so:
 
 ```
 function initialiseUI() {
@@ -260,7 +260,7 @@ function initialiseUI() {
 
 When the user clicks the push button, we first disable the button just to make sure the user can't click it a second time while we're subscribing to push as it can take some time.
 
-Then we call __subscribeUser()__ when we know the user isn't currently subscribed, so copy and paste the following code into __scripts/main.js__.
+Then we call `subscribeUser()` when we know the user isn't currently subscribed, so copy and paste the following code into `scripts/main.js`.
 
 ```
 function subscribeUser() {
@@ -287,9 +287,9 @@ function subscribeUser() {
 
 Lets step through what this code is doing and how it's subscribing the user for push messaging.
 
-First we take the application server's public key, which is base 64 URL safe encoded, and we convert it to a UInt8Array as this is the expected input of the subscribe call. We've already given you the function __urlB64ToUint8Array__ at the top of __scripts/main.js__.
+First we take the application server's public key, which is base 64 URL safe encoded, and we convert it to a `UInt8Array` as this is the expected input of the subscribe call. We've already given you the function `urlB64ToUint8Array` at the top of `scripts/main.js`.
 
-Once we've converted the value, we call the __subscribe()__ method on our service worker's pushManager, passing in our application server's public key and the value ‘userVisibleOnly: true'.
+Once we've converted the value, we call the `subscribe()` method on our service worker's `pushManager`, passing in our application server's public key and the value `userVisibleOnly: true`.
 
 ```
 const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
@@ -299,14 +299,14 @@ swRegistration.pushManager.subscribe({
 })
 ```
 
-The __userVisibleOnly__ parameter is basically an admission that you will show a notification every time a push is sent. At the time of writing this value is required and must be true.
+The `userVisibleOnly` parameter is basically an admission that you will show a notification every time a push is sent. At the time of writing this value is required and must be true.
 
-Calling __subscribe()__ returns a promise which will resolve after the following steps:
+Calling `subscribe()` returns a promise which will resolve after the following steps:
 
 1. The user has granted permission to display notifications.
 2. The browser has sent a network request to a push service to get the details to generate a PushSubscription.
 
-The subscribe() promise will resolve with a PushSubscription if these steps were successful. If the user doesn't grant permission or if there is any problem subscribing the user, the promise will reject with an error. This gives us the following promise chain in our codelab:
+The `subscribe()` promise will resolve with a `PushSubscription` if these steps were successful. If the user doesn't grant permission or if there is any problem subscribing the user, the promise will reject with an error. This gives us the following promise chain in our codelab:
 
 ```
 swRegistration.pushManager.subscribe({
@@ -329,9 +329,9 @@ swRegistration.pushManager.subscribe({
 });
 ```
 
-With this, we get a subscription and treat the user as subscribed or we catch the error and print it to the console. In both scenarios we call updateBtn() to ensure the button is re-enabled and has the appropriate text.
+With this, we get a subscription and treat the user as subscribed or we catch the error and print it to the console. In both scenarios we call `updateBtn()` to ensure the button is re-enabled and has the appropriate text.
 
-The method updateSubscriptionOnServer is a method where in a real application we would send our subscription to a backend, but for our codelab we are going to print the subscription in our UI which will help use later on. Add this method to __scripts/main.js__:
+The method `updateSubscriptionOnServer` is a method where in a real application we would send our subscription to a backend, but for our codelab we are going to print the subscription in our UI which will help us later on. Add this method to `scripts/main.js`:
 
 ```
 function updateSubscriptionOnServer(subscription) {
@@ -356,7 +356,7 @@ If you go back to your web app and try clicking the button you should see a perm
 
 ![5b8a7e9905f2237b.png](img/5b8a7e9905f2237b.png)
 
-If you grant the permission you should see the console print ‘User is subscribed: ‘ with the PushSubscription, the button's text will change to ‘Disable Push Messaging'  and you'll be able to view the subscription as JSON at the bottom of the page.
+If you grant the permission you should see the console print `User is subscribed:` with the `PushSubscription`, the button's text will change to ‘Disable Push Messaging'  and you'll be able to view the subscription as JSON at the bottom of the page.
 
 ![bfdc9f92e001934a.png](img/bfdc9f92e001934a.png)
 
@@ -368,7 +368,7 @@ If you grant the permission you should see the console print ‘User is subscrib
 
 One thing that we haven't handled yet is what happens if the user blocks the permission request. This needs some unique consideration because if the user blocks the permission, our web app will not be able to re-show the permission prompt and will not be able to subscribe the user, so we need to at least disable a push button so the user knows it can't be used.
 
-The obvious place for us to handle this scenario is in the __updateBtn()__ function. All we need to do is check the Notification.permission value, like so:
+The obvious place for us to handle this scenario is in the `updateBtn()` function. All we need to do is check the `Notification.permission` value, like so:
 
 ```
 function updateBtn() {
@@ -389,15 +389,15 @@ function updateBtn() {
 }
 ```
 
-We know that if the permission is ‘denied', then the user can't be subscribed and there is nothing more we can do, so disabling the button for good is the best approach.
+We know that if the permission is `denied`, then the user can't be subscribed and there is nothing more we can do, so disabling the button for good is the best approach.
 
 #### Try it out
 
-Since we've already granted permission for our web app from the previous step we need to click the ‘i' in a circle in the URL bar and change the notifications permission to ‘Use global default (Ask)'.
+Since we've already granted permission for our web app from the previous step we need to click the __i__ in a circle in the URL bar and change the notifications permission to  *Use global default (Ask)* .
 
 ![c69f7428408c5bbc.png](img/c69f7428408c5bbc.png)
 
-After you've changed this setting, refresh the page and click the ‘Enable Push Messaging' button and this time select ‘Block' on the permission dialog. The button text will now be ‘Push Messaging Blocked' and be disabled.
+After you've changed this setting, refresh the page and click the  *Enable Push Messaging*  button and this time select  *Block*  on the permission dialog. The button text will now be  *Push Messaging Blocked*  and be disabled.
 
 ![e36f921fa7598419.png](img/e36f921fa7598419.png)
 
@@ -437,9 +437,9 @@ Let's step through this code. We are listening for push events in our service wo
 self.addEventListener('push', ...... );
 ```
 
-Unless you've played with Web Workers before, ‘self' is probably new. ‘self' is referencing the service worker itself, so we are adding an event listener to our service worker.
+Unless you've played with Web Workers before, `self` is probably new. `self` is referencing the service worker itself, so we are adding an event listener to our service worker.
 
-When a push message is received, our event listener will be fired, and we create a notification by calling showNotification() on our registration. showNotification() expects a title and we can given an options object. Here we are going to set a body message, icon and a badge  in the options (the badge is only used on Android at the time of writing).
+When a push message is received, our event listener will be fired, and we create a notification by calling `showNotification()` on our registration. `showNotification()` expects a `title` and we can given an `options` object. Here we are going to set a body message, icon and a badge  in the options (the badge is only used on Android at the time of writing).
 
 ```
 const title = 'Push Codelab';
@@ -451,7 +451,7 @@ const options = {
 self.registration.showNotification(title, options);
 ```
 
-The last thing to cover in our push event is event.waitUntil(). This method takes a promise and the browser will keep your service worker alive and running until the promise passed in has resolved.
+The last thing to cover in our push event is `event.waitUntil()`. This method takes a promise and the browser will keep your service worker alive and running until the promise passed in has resolved.
 
 To make the code above a little easier to understand we can re-write it like so:
 
@@ -464,15 +464,17 @@ Now that we've stepped through the push event, let's test out a push event.
 
 #### Try it out
 
-With our push event in the service worker we can test what happens when a message is received by triggering a "fake push event" using DevTools.
+With our push event in the service worker we can test what happens when a message is received by triggering a fake push event using DevTools.
 
-In your web app, subscribe to push messaging, making sure you have ‘User IS subscribed.' in your console, then go to the __Application__ panel in DevTools and under the "Service Workers" tab click on the __'Push'__ link under your service worker.
+In your web app, subscribe to push messaging, making sure you have  *User IS subscribed*  in your console, then go to the  *Application*  panel in DevTools and under the  *Service Workers*  tab click on the  *Push*  link under your service worker.
 
 ![c0fab1022906d01f.png](img/c0fab1022906d01f.png)
 
-Once you've clicked it you should see a notification like this (__NOTE:__ If this step doesn't work, try unregistering your service work, via the "Unregister" link in the Devtools Application panel, wait for the service worker to be stopped, and then reload the page):
+Once you've clicked it you should see a notification like this:
 
 ![eee7f9133a97c1c4.png](img/eee7f9133a97c1c4.png)
+
+Note: If this step doesn't work, try unregistering your service work, via the  *Unregister*  link in the DevTools Application panel, wait for the service worker to be stopped, and then reload the page.
 
 
 ## Notification click
@@ -480,9 +482,9 @@ Once you've clicked it you should see a notification like this (__NOTE:__ If thi
 
 
 
-If you click on one these notifications you'll notice nothing happens. We can handle notification clicks by listening for `notificationclick` events in your service worker.
+If you click on one of these notifications you'll notice nothing happens. We can handle notification clicks by listening for `notificationclick` events in your service worker.
 
-Start by adding a `notificationclick` listener  in sw.js like so:
+Start by adding a `notificationclick` listener  in `sw.js` like so:
 
 ```
 self.addEventListener('notificationclick', function(event) {
@@ -510,11 +512,11 @@ Then we open a new window / tab loading the url ‘https://developers.google.com
 clients.openWindow('https://developers.google.com/web/')
 ```
 
-We are calling event.waitUntil() again to ensure the browser doesn't terminate our service worker before our new window has been displayed.
+We are calling `event.waitUntil()` again to ensure the browser doesn't terminate our service worker before our new window has been displayed.
 
 #### Try it out
 
-Try triggering a push message in DevTools again and this click on the notification. You'll now see the notification close and open a new tab.
+Try triggering a push message in DevTools again and click on the notification. You'll now see the notification close and open a new tab.
 
 
 ## Sending push messages
@@ -530,11 +532,11 @@ This is out of scope for this codelab, but you can use the companion site ( [htt
 
 ![cb84e05044ad029f.png](img/cb84e05044ad029f.png)
 
-Then paste this into the companion site in the ‘Subscription to Send To' text area:
+Then paste this into the companion site in the  *Subscription to Send To*  text area:
 
 ![e320ddd1b66682e6.png](img/e320ddd1b66682e6.png)
 
-Then under ‘Text to Send' you can add any string you want to send with the push message and finally click the ‘Send Push Message' button.
+Then under  *Text to Send*  you can add any string you want to send with the push message and finally click the  *Send Push Message*  button.
 
 ![3c5c0d5d1c3deda4.png](img/3c5c0d5d1c3deda4.png)
 
@@ -554,7 +556,7 @@ The companion app is actually just a node server that is using the  [web-push li
 
 The one thing we are missing is the ability to unsubscribe the user from push. To do this we need to call `unsubscribe()` on a `PushSubscription`.
 
-Back in our scripts/main.js file, change the `pushButton`'s click listener in `initialiseUI`() to the following:
+Back in our `scripts/main.js` file, change the `pushButton`'s click listener in `initialiseUI()` to the following:
 
 ```
 pushButton.addEventListener('click', function() {
@@ -567,7 +569,7 @@ pushButton.addEventListener('click', function() {
 });
 ```
 
-Notice we are now going to call a new function `unsubscribeUser()`. In this method we'll get the current subscription and called unsubscribe on it. Add the following code to __scripts/main.js__:
+Notice we are now going to call a new function `unsubscribeUser()`. In this method we'll get the current subscription and called unsubscribe on it. Add the following code to `scripts/main.js`:
 
 ```
 function unsubscribeUser() {
@@ -599,7 +601,7 @@ First we get the current subscription by calling `getSubscription()`:
 swRegistration.pushManager.getSubscription()
 ```
 
-This returns a promise that resolves with a `PushSubscription` if one exists, otherwise it returns null. If there is a subscription, we call `unsubscribe()` on it, which makes the `PushSubscription` invalid.
+This returns a promise that resolves with a `PushSubscription` if one exists, otherwise it returns `null`. If there is a subscription, we call `unsubscribe()` on it, which makes the `PushSubscription` invalid.
 
 ```
 swRegistration.pushManager.getSubscription()
@@ -629,7 +631,7 @@ Calling `unsubscribe()` returns a promise as it can take some time to complete, 
 
 #### Try it out
 
-You should be able to press the ‘Enable Push Messaging' / ‘Disable Push Messaging'  in your web app and the logs will show the user being subscribed and unsubscribed.
+You should be able to press the  *Enable Push Messaging*  /  *Disable Push Messaging*   in your web app and the logs will show the user being subscribed and unsubscribed.
 
 ![32acb7ec17ef75a8.png](img/32acb7ec17ef75a8.png)
 

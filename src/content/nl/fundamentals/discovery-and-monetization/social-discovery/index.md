@@ -137,7 +137,7 @@ Om de markup te valideren kan je deze tool van Facebook gebruiken:
 [Twitter Cards](https://dev.twitter.com/docs/cards){: .external } zijn een uitbreiding op het [Open Graph Protocol toegespitst voor Twitter](https://twitter.com/). Het geeft de mogelijkheid om media zoals afbeeldingen en video's toe te voegen aan een tweet met een link naar jouw site. Door de passende metadata toe te voegen, zullen tweets met een link naar jouw site een zogenaamde card hebben met deze rich media.
 
 ### Gebruik `twitter:` namespaced meta tags om metadata te omschrijven
-Om Twitter Card werkend te krijgen [moet je domein zijn goedgekeurd](https://dev.twitter.com/docs/cards/validation/validator){: .external } en moet de meta tag `twitter:card` met een `name` attribuut hebben.
+Om Twitter Card werkend te krijgen [moet je domein zijn goedgekeurd](https://cards-dev.twitter.com/validator){: .external } en moet de meta tag `twitter:card` met een `name` attribuut hebben.
 
 Hier is een kort voorbeeld:
 
@@ -157,7 +157,7 @@ Om meer te leren over Twitter Cards bezoek:
 ### Valideer rich snippets
 Om je opmaak te valideren levert Twitter:
 
-* [Card Validator](https://dev.twitter.com/docs/cards/validation/validator){: .external }
+* [Card Validator](https://cards-dev.twitter.com/validator){: .external }
 
 ## In de praktijk
 Gegeven deze drie opties wordt in de praktijk meestal alle drie tegelijk geintegreerd in de webpagina. Hier is een voorbeeld:

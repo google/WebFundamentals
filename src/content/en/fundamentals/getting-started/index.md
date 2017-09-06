@@ -9,12 +9,12 @@ book_path: /web/fundamentals/_book.yaml
 Are you new to web development, or an old pro? We've got resources for both. 
 
 
-## Code Labs {: #codelabs }
+## Codelabs {: #codelabs }
 
-These code labs provide a guided, tutorial, hands-on coding experience. Most
-code labs will step you through the process of building a small application,
-or adding a new feature to an existing application.  Find more code labs on
-[codelabs.developers.google.com](https://codelabs.developers.google.com/?cat=Web){: .external }
+These codelabs provide a guided, tutorial, hands-on coding experience. Most
+codelabs will step you through the process of building a small application,
+or adding a new feature to an existing application.  Find more codelabs on
+[codelabs.developers.google.com](https://codelabs.developers.google.com/?cat=Web)
 
 <div class="attempt-left">
   <a href="codelabs/your-first-pwapp/">

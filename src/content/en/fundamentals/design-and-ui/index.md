@@ -82,7 +82,7 @@ and devices?
 
 ## Related resources
 
-### Code labs
+### Codelabs
 
 [Your First Multi-Device Site](/web/fundamentals/getting-started/your-first-multi-screen-site/) <br>
 It's not as hard to build fully responsive sites as you think, and to show you, this guide takes you through the steps that you can use to get started.

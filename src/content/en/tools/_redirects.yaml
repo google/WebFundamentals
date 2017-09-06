@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/inspect-styles/shortcuts
+  to: /web/tools/chrome-devtools/shortcuts
+
 - from: /web/tools/chrome-devtools/remote-debugging/remote-debugging
   to: /web/tools/chrome-devtools/remote-debugging/
 

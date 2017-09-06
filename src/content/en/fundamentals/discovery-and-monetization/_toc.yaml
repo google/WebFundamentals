@@ -10,3 +10,9 @@ toc:
     - title: Monetization with Ads
       path: https://www.google.com/adsense
       status: external
+    - title: Handling Payments
+      section:
+      - title: Payment Request API - an Integration Guide
+        path: /web/fundamentals/discovery-and-monetization/payment-request/
+      - title: Integrating Android Pay into Payment Request
+        path: /web/fundamentals/discovery-and-monetization/payment-request/android-pay

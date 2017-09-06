@@ -128,6 +128,7 @@ Service Worker のテストはシークレットウインドウで行うと便�
 2. ファイルをキャッシュさせる
 3. 必要なアセットがすべてキャッシュされたかを確認する
 
+<div style="clear:both;"></div>
 
     var CACHE_NAME = 'my-site-cache-v1';
     var urlsToCache = [
@@ -146,7 +147,7 @@ Service Worker のテストはシークレットウインドウで行うと便�
           })
       );
     });
-    
+
 
 ここでは、好きなキャッシュ名をつけ `caches.open()` をコールし、その後キャッシュさせたいファイルの配列を `cache.addAll()` に渡しています。一連の処理は `Promise` をチェーンさせています（`caches.open()` と `cache.addAll()`）。 `event.waitUntil()` は `Promise` をとり、インストールにかかる時間と、与えた処理が成功したかどうかを知るために使われます。
 

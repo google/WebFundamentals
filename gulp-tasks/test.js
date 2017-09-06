@@ -19,12 +19,14 @@ var STD_EXCLUDES = [
 ];
 var MAX_DESCRIPTION_LENGTH = 485;
 var ERROR_STRINGS = [
+  {label: 'YouTube videos must use DevSite embed.', regEx: /<iframe .*? src="(https?:)?\/\/(www\.)?youtube.com\/.*?>/g},
   {label: 'Possible template tag ({{)', regEx: /{{/g},
   {label: 'Invalid named anchor', regEx: /{#\w+}/m},
   {label: 'Hard coded language URL in link (hl=xx)', regEx: /[\?|&]hl=\w\w/g},
   {label: 'Hard coded https://developers.google.com in link (MD)', regEx: /\(https:\/\/developers.google.com/},
   {label: 'Hard coded https://developers.google.com in link (HTML)', regEx: /href="https:\/\/developers.google.com/},
 ];
+var VALID_DATE_FORMATS = ['YYYY-MM-DD', 'YYYY-MM-DDTHH:mm:ss.sssZ'];
 
 var contributorList;
 var summary = {
@@ -319,16 +321,18 @@ function validateMarkdown(filename, commonTags) {
         }
       }
 
+
+
       // Validate wf_updated and wf_published
       matched = wfHelper.getRegEx(/{# wf_updated_on: (.*?) #}/, content, 'NOT_FOUND');
-      if (!moment(matched, 'YYYY-MM-DD').isValid()) {
+      if (!moment(matched, VALID_DATE_FORMATS, true).isValid()) {
         errMsg = 'WF Tag `wf_updated_on` missing or invalid format (YYYY-MM-DD)';
         errMsg += ', found: ' + matched;
         logError(filename, errMsg)
         errors++;
       }
       matched = wfHelper.getRegEx(/{# wf_published_on: (.*?) #}/, content, 'NOT_FOUND');
-      if (!moment(matched, 'YYYY-MM-DD').isValid()) {
+      if (!moment(matched, VALID_DATE_FORMATS, true).isValid()) {
         errMsg = 'WF Tag `wf_published_on` missing or invalid format (YYYY-MM-DD)';
         errMsg += ', found: ' + matched;
         logError(filename, errMsg)
@@ -385,7 +389,7 @@ function validateMarkdown(filename, commonTags) {
         logError(filename, errMsg)
         errors++;
       }
-      matched = content.match(/^#[^#].*/gm);
+      matched = content.match(/^#\s{1}[^#].*/gm)
       if (matched) {
         numH1 += matched.length;
       }
@@ -427,6 +431,15 @@ function validateMarkdown(filename, commonTags) {
             errors++;
           }
         });
+      }
+
+      // Search for ``` wrapped code blocks
+      matched = content.match(/```/g);
+      if (matched) {
+        errMsg = 'Found sample code block(s) wrapped in ```.';
+        errMsg += ' Required style is indented by 4 spaces.';
+        logError(filename, errMsg);
+        errors++;
       }
 
       // Verify all TL;DRs are H3 and include hide-from-toc   

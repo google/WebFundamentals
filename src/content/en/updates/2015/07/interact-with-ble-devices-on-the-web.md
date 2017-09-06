@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT.
 
-{# wf_updated_on: 2016-09-26 #}
+{# wf_updated_on: 2016-11-16 #}
 {# wf_published_on: 2015-07-21 #}
 {# wf_tags: news,iot,webbluetooth,physicalweb,origintrials #}
 {# wf_featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png #}
@@ -53,7 +53,7 @@ restart Chrome and you should be able to
 [scan for](#scan-for-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
 nearby Bluetooth devices,
 [read](#read-a-bluetooth-characteristic)/[write](#write-to-a-bluetooth-characteristic)
-Bluetooth characteristics, [receive GATT Notifications](#receive-gatt-notifications) and know when a [Bluetooth device gets
+Bluetooth characteristics, [receive GATT Notifications](#receive-gatt-notifications), and know when a [Bluetooth device gets
 disconnected](#get-disconnected-from-a-bluetooth-device).
 
 ### Available for Origin Trials
@@ -103,9 +103,16 @@ the new Certificate Authority [Let's Encrypt](https://letsencrypt.org/){: .exter
 
 ### User Gesture Required
 
-As a security feature, discovering nearby Bluetooth devices with
-`navigator.bluetooth.requestDevice` must be called via a user gesture
-like a touch or mouse click.
+As a security feature, discovering Bluetooth devices with
+`navigator.bluetooth.requestDevice` must be triggered by [a user
+gesture](https://html.spec.whatwg.org/multipage/interaction.html#activation)
+such as a touch or a mouse click. We're talking about listening to
+[`pointerup`](/web/updates/2016/10/pointer-events),
+`click`, and `touchend` events.
+
+    button.addEventListener('pointerup', function(event) {
+      // Call navigator.bluetooth.requestDevice
+    });
 
 ## Get into the Code
 
@@ -247,7 +254,7 @@ to see how to optionally handle upcoming GATT notifications as well.
     
     function handleBatteryLevelChanged(event) {
       let batteryLevel = event.target.value.getUint8(0);
-      console.log('Battery percentage is ' + batteryLevel + '%');
+      console.log('Battery percentage is ' + batteryLevel);
     }
     
 
@@ -343,10 +350,10 @@ Disconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/device-d
 and the [Automatic Reconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html)
 to dive deeper.
 
-Warning: Bluetooth GATT Services and Characteristics are invalidated when
-device gets disconnected. This means your code should always handle device
-disconnection and revalidate GATT attributes upon disconnect
-([Example](https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html)).
+Warning: Bluetooth GATT attributes, services, characteristics, etc. are
+invalidated when a device disconnects. This means your code should always
+retrieve (through `getPrimaryService(s)`, `getCharacteristic(s)`, etc.) these
+attributes after reconnecting.
 
 ## Samples, Demos and Codelabs
 
@@ -380,8 +387,29 @@ Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/de
 
 ## Libraries
 
-- [&lt;platinum-bluetooth>](https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device) is a new set of [Polymer](https://www.polymer-project.org/) elements to discover and communicate with nearby Bluetooth devices based on the Web Bluetooth API.
 - [web-bluetooth-utils](https://www.npmjs.com/package/web-bluetooth-utils) is a npm module that adds some convenience functions to the API.
+- [&lt;platinum-bluetooth>](https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device) is a new set of [Polymer](https://www.polymer-project.org/) elements to discover and communicate with nearby Bluetooth devices based on the Web Bluetooth API. For instance, here's how to read battery level from a nearby bluetooth device advertising a Battery service:
+
+<div class="clearfix"></div>
+
+    <platinum-bluetooth-device services-filter='["battery_service"]'>
+      <platinum-bluetooth-service service='battery_service'>
+        <platinum-bluetooth-characteristic characteristic='battery_level'>
+        </platinum-bluetooth-characteristic>
+      </platinum-bluetooth-service>
+    </platinum-bluetooth-device>
+
+<div class="clearfix"></div>
+
+    var bluetoothDevice = document.querySelector('platinum-bluetooth-device');
+    var batteryLevel = document.querySelector('platinum-bluetooth-characteristic');
+    
+    bluetoothDevice.request()
+    .then(_ => batteryLevel.read())
+    .then(value => {
+      console.log('Battery percentage is ' + value.getUint8(0));
+    })
+    .catch(error => { console.log(error); });
 
 ## Tools
 

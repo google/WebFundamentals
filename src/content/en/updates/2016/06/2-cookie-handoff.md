@@ -55,11 +55,12 @@ allows you to set up a "2CH worker" for logged in users that can intercept
 all of the network requests your page is making and perform the token swapping
 just like mobile apps do.
 
-If your server already has an endpoint used by mobile apps to obtain a new
-short-lived token, typically using the OAuth protocol. To enable this on the
-web, that endpoint just needs to be updated to understand when it is being
-called by a service worker, and then return a new short-lived session cookie
-formatted in a way that other pages on the site already expect.
+Much of the time your server already has an endpoint used by mobile apps
+to obtain a new short-lived token, typically using the OAuth protocol. To
+enable the above pattern on the web, that endpoint just needs to be updated to
+understand when it is being called by a service worker, and then return a new
+short-lived session cookie formatted in a way that other pages on the site
+already expect.
 
 If your server doesn't already have such an endpoint, it can create one just for
 browser session management.

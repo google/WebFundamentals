@@ -3,7 +3,7 @@ toc:
     section:
     - title: Welcome
       path: /web/fundamentals/getting-started/
-    - title: Code Labs
+    - title: Codelabs
       section:
       - title: Your First Progressive Web App
         path: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
@@ -31,9 +31,3 @@ toc:
       path: /web/fundamentals/getting-started/primers/shadowdom
     - title: "Custom Elements v1: Reusable Web Components"
       path: /web/fundamentals/getting-started/primers/customelements
-    - title: Payment Request API
-      section:
-      - title: Integration Guide
-        path: /web/fundamentals/getting-started/primers/payment-request/
-      - title: Integrating Android Pay into Payment Request
-        path: /web/fundamentals/getting-started/primers/payment-request/android-pay

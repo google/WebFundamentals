@@ -137,7 +137,20 @@ ericbidelman:
   email: e.bidelman@google.com
   description:
     en: 'Engineer @ Google working on Polymer, Chrome, and the web'
-
+  
+bokan:
+  name:
+    given: David
+    family: Bokan
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  twitter: david_bokan
+  email: bokan@google.com
+  
 aliceboxhall:
   name:
     given: Alice

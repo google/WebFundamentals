@@ -14,12 +14,12 @@ homescreen while offline.
 
 ## How to pass the audit {: #how }
 
-1. Define a `start_url` property in your `manifest.json` file. 
+1. Define a `start_url` property in your `manifest.json` file.
 2. Ensure that your service worker properly caches a resource that matches
    the value of `start_url`.
 
-To learn the basics of adding apps to homescreens, 
-see [Add Your Web App to a User's Home 
+To learn the basics of adding apps to homescreens,
+see [Add Your Web App to a User's Home
 Screen](https://codelabs.developers.google.com/codelabs/add-to-home-screen).
 This is a step-by-step, hands-on codelab in which you add "add to
 homescreen" functionality into an existing app. Use what you learn in
@@ -29,14 +29,11 @@ For more help on how to cache files with service workers for offline use,
 see the "How to pass the audit" section of the following Lighthouse doc:
 [URL responds with a 200 when offline](http-200-when-offline#how)
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 When a progressive web app is launched from the homescreen of a mobile
 device, the app opens on a specific URL. That URL is defined in the app's
-`manifest.json` file as the `start_url` property. 
+`manifest.json` file as the `start_url` property.
 
 This audit parses the value of `start_url` from `manifest.json` and then
 ensures that a matching resource is cached in the service worker's cache.

@@ -2,7 +2,7 @@
 name: "Web"
 description: "Build next generation web experiences."
 home_url: /web/
-buganizer_id: 60575
+buganizer_id: 180451
 
 color: google-blue
 content_license: cc3-apache2
@@ -21,6 +21,6 @@ google_analytics_ids:
 - UA-52746336-1
 
 announcement:
-  description: Don't miss out on the action at this year's Chrome Dev Summit, <a href="https://developer.chrome.com/devsummit/">watch live now</a>!
-  start: '2016-11-10T09:00:00Z'
-  end: '2016-11-12T02:00:00Z'
+  description: Join the Progressive Web App Road Show in South East Asia. <span style="font-weight:400;">Stopping in <a href="https://events.withgoogle.com/pwa-roadshow-manila/">Manila</a>, <a href="https://events.withgoogle.com/pwa-roadshow-ho-chi-minh-city/">Ho Chi Minh City</a> and <a href="https://events.withgoogle.com/pwa-roadshow-bangkok/">Bangkok</a>. Learn more and sign up now.<span>
+  start: '2016-11-14T08:00:00Z'
+  end: '2016-11-28T08:00:00Z'

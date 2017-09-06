@@ -27,7 +27,7 @@ the page load performance of your app.
 In the Chrome Extension version of Lighthouse, your report generates a diagram
 like the following:
 
-```
+<pre>
 Initial navigation
 |---lighthouse/ (developers.google.com)
     |---/css (fonts.googleapis.com) - 1058.34ms, 72.80KB
@@ -37,7 +37,7 @@ Initial navigation
     |---2.2.0/jquery.min.js (ajax.googleapis.com) - 2699.55ms, 99.92KB
     |---contributors/kaycebasques.jpg (developers.google.com) - 2841.54ms, 84.74KB
     |---MC30SXJEli4/photo.jpg (lh3.googleusercontent.com) - 3200.39ms, 73.59KB
-```
+</pre>
 
 This diagram represents the page's critical request chains. The path from
 `lighthouse/` to `/css` is one chain. The path from `lighthouse/` to
@@ -60,10 +60,7 @@ You can use this diagram to improve your CRP by:
 
 Optimizing any of these factors results in a faster page load.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse uses network priority as a proxy for identifying render-blocking
 critical resources. See [Chrome Resource Priorities and

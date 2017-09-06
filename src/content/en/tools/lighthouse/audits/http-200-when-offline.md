@@ -18,10 +18,10 @@ offline.
 1. Add a service worker to your app.
 2. Use the service worker to cache files locally.
 3. When offline, use the service worker as a network proxy to return the
-   locally cached version of the file. 
+   locally cached version of the file.
 
 To learn how to add a service worker into an existing app, see [Adding a Service
-Worker and Offline Into Your Web 
+Worker and Offline Into Your Web
 App](https://codelabs.developers.google.com/codelabs/offline). Use what you
 learn in this step-by-step, hands-on codelab to learn how to add a service
 worker into your own app. This covers steps 1 and 3 above.
@@ -34,10 +34,7 @@ Workers](https://codelabs.developers.google.com/codelabs/debugging-service-worke
 Use the [Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/) to
 determine which caching strategy fits your app best. This covers step 2 above.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs or is
-returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse emulates an offline connection using the Chrome Debugging Protocol,
 and then attempts to retrieve the page using `XMLHttpRequest`.

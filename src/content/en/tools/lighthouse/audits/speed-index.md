@@ -20,12 +20,9 @@ load faster. Two good starting places are:
 * [Optimizing Content Efficiency](/web/fundamentals/performance/optimizing-content-efficiency/).
 * [Optimizing the Critical Rendering Path](/web/fundamentals/performance/critical-rendering-path/).
 
-## What the audit tests for {: #what }
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
-
-Lighthouse uses a node module called 
+Lighthouse uses a node module called
 [Speedline](https://github.com/pmdartus/speedline)
 to generate the Speed Index score.
 

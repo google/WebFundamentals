@@ -126,18 +126,20 @@ To install a service worker you need to kick start the process by
 service worker JavaScript file lives.
 
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }).catch(function(err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
       });
     }
 
-
 This code checks to see if the service worker API is available, and if it is,
-the service worker at `/sw.js` is registered.
+the service worker at `/sw.js` is registered
+[once the page is loaded](/web/fundamentals/instant-and-offline/service-worker/registration).
 
 You can call `register()` every time a page loads without concern; the browser will
 figure out if the service worker is already registered or not and handle it
