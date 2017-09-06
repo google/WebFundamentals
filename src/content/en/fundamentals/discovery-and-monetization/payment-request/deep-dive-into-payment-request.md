@@ -341,7 +341,7 @@ There are some edge cases to be aware of when defining your supported payment
 methods.
 
 **Unsupported Payment Methods**  
-If you try to call `show()`` on a `PaymentRequest` object and there are no supported
+If you try to call `show()` on a `PaymentRequest` object and there are no supported
 payment methods, the returned promise will reject immediately with the following
 error:
 
