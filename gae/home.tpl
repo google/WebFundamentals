@@ -15,22 +15,7 @@
         font-weight: bold !important;
       }
       .wf-stage-warning .material-icons { vertical-align: middle; }
-      .devsite-top-section-wrapper {
-        position: fixed;
-        top: 0;
-        width: 100%;
-      }
-      .devsite-collapsible-section {
-        height: 48px;
-        margin-top: 48px;
-        position: relative;
-      }
-      .devsite-product-id-row {
-        padding-top: 0;
-      }
-      #gc-wrapper {
-        margin-top: 48px;
-      }
+      .devsite-top-logo-row-wrapper-wrapper { border-bottom: 1px solid #4285f4; }
     </style>
   </head>
   <body class="devsite-uhura devsite-landing-page devsite-header-no-lower-tabs" id="top_of_page">
@@ -82,33 +67,7 @@
               </div>
             </div>
           </div>
-          <div class="devsite-collapsible-section">
-            <div class="devsite-header-background devsite-full-site-width">
-              <div class="devsite-product-id-row devsite-full-site-width">
-                <div class="devsite-doc-set-nav-row devsite-full-site-width">
-                  <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
-                    <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
-                      <li class="devsite-doc-set-nav-tab-container">
-                        <a href="#" class="devsite-doc-set-nav-active devsite-doc-set-nav-tab">
-                          Tab 1
-                        </a>
-                      </li>
-                      <li class="devsite-doc-set-nav-tab-container">
-                        <a href="#" class="devsite-doc-set-nav-tab">
-                          Tab 1
-                        </a>
-                      </li>
-                      <li class="devsite-doc-set-nav-tab-container">
-                        <a href="#" class="devsite-doc-set-nav-tab">
-                          Tab 1
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% autoescape off %}{{ header }}{% endautoescape %}
         </header>
       </div>
       <div id="gc-wrapper">
