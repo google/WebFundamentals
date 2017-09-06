@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome.
 
-{# wf_updated_on: 2017-09-04 #}
-{# wf_published_on: 2017-09-04 #}
+{# wf_updated_on: 2017-09-06 #}
+{# wf_published_on: 2017-09-06 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Learn best practices for good user experiences with the new autoplay policies in Chrome. #}
 {# wf_blink_components: Blink>Media #}
 
 # Autoplay Policy Changes {: .page-title }
