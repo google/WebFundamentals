@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Set up your workspace to include a good editor, debugging, and build tools for the multi-device web.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Has A &lt;meta name="viewport"&gt; Tag With width Or initial-scale" Lighthouse audit.
 

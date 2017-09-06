@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: The Chrome DevTools Command Line API offers various ways to observe and inspect event listeners
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference on how to access and use common parts of the DevTools UI, and change the UI's appearance.
 

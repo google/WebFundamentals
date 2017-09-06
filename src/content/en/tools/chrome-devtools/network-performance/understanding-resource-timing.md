@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: It is crucial to understand the phases in which resources are gathered over the network. This is the foundation for fixing load issues.
 

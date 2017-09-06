@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Users expect pages to be interactive and smooth. Each stage in  the pixel pipeline represents an opportunity to introduce jank. Learn about  tools and strategies to identify and fix common problems that slow down  runtime performance.
 
