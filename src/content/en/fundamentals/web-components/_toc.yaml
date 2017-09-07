@@ -1,0 +1,21 @@
+toc:
+- title: Web Components
+  section:
+  - title: Overview
+    path: /web/fundamentals/building-components/
+  - title: "Custom Elements v1: Reusable Web Components"
+    path: /web/fundamentals/building-components/customelements
+  - title: "Shadow DOM v1: Self-Contained Web Components"
+    path: /web/fundamentals/building-components/shadowdom
+  - title: Best Practices
+    path: /web/fundamentals/building-components/best-practices
+  - title: Examples
+    section:
+    - title: Overview
+      path: /web/fundamentals/building-components/examples/
+    - title: "<howto-checkbox>"
+      path: /web/fundamentals/building-components/examples/howto-checkbox
+    - title: "<howto-tabs>"
+      path: /web/fundamentals/building-components/examples/howto-tabs
+    - title: "<howto-tooltip>"
+      path: /web/fundamentals/building-components/examples/howto-tooltip

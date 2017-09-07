@@ -87,4 +87,4 @@ and Mozilla's [Push Payload Demo](https://serviceworke.rs/push-payload_demo.html
 
 Note: Unless you're using localhost, the Push API requires HTTPS.
 
-<<../../../_common-links.md>>
+<<../../_common-links.md>>
