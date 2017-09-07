@@ -24,10 +24,10 @@ upper_tabs:
       - name: Code Labs
         contents:
         - include: /web/fundamentals/codelabs/_toc.yaml
-      # - name: Samples
-      #   contents:
-      #   - title: Sample Code
-      #     path: /web/fundamentals/samples/
+      - name: Samples
+        contents:
+        - title: Samples
+          path: https://www.chromestatus.com/samples
   - include: /web/_upper_tabs-Tools.yaml
   - include: /web/_upper_tabs-Updates.yaml
   - include: /web/_upper_tabs-Showcase.yaml

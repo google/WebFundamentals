@@ -49,7 +49,7 @@ page_type: landing
           </p>
           <ul>
             <li><span class="compare-yes"></span> <a href="performance/critical-rendering-path/">Critical Rendering Path</a></li>
-            <li><span class="compare-yes"></span> <a href="/web/fundamentals/performance/rendering/">Rendering Performance</a></li>
+            <li><span class="compare-yes"></span> <a href="performance/rendering/">Rendering Performance</a></li>
           </ul>
         </div>
       </div>
@@ -67,9 +67,8 @@ page_type: landing
             experience should feel true to how the user interacts with the device.
           </p>
           <ul>
-            <li><span class="compare-yes"></span> Get a <a href="#">place on the users home screen</a>.</li>
-            <li><span class="compare-yes"></span> Simplify payments with the <a href="discovery-and-monetization/payment-request/">Payment Request API</a>.</li>
-            <li><span class="compare-yes"></span> Create rich media experiences with the <a href="#">Media Session API</a>.</li>
+            <li><span class="compare-yes"></span> Get a <a href="app-install-banners/">place on the users home screen</a>.</li>
+            <li><span class="compare-yes"></span> Simplify payments with the <a href="payments/">Payment Request API</a>.</li>
           </ul>
         </div>
       </div>
@@ -92,8 +91,8 @@ page_type: landing
             <i>We need to change that perception</i>. The web <b>must</b> be reliable.
           </p>
           <ul>
-            <li><span class="compare-yes"></span> Use the <a href="#">Offline Cookbook</a> to improve reliablity.</li>
-            <li><span class="compare-yes"></span> What should you consider when <a href="#">designing for slow or intermittent networks?</a></li>
+            <li><span class="compare-yes"></span> Use the <a href="instant-and-offline/offline-cookbook/">Offline Cookbook</a> to improve reliablity.</li>
+            <li><span class="compare-yes"></span> What should you consider when <a href="instand-and-offline/offline-ux">designing for slow or intermittent networks?</a></li>
           </ul>
         </div>
       </div>
@@ -113,8 +112,8 @@ page_type: landing
             at the right time, in a beautiful way.
           </p>
           <ul>
-            <li><span class="compare-yes"></span> Use <a href="#">Web Push &amp; Notifications</a> to re-engage with users.</li>
-            <li><span class="compare-yes"></span> Designing <a href="#">beautiful user experiences</a>.</li>
+            <li><span class="compare-yes"></span> Use <a href="push-notifications/">Web Push &amp; Notifications</a> to re-engage with users.</li>
+            <li><span class="compare-yes"></span> Designing <a href="design-and-ux/ux-basics/">beautiful user experiences</a>.</li>
           </ul>
         </div>
       </div>
@@ -138,12 +137,12 @@ page_type: landing
         <img src="images/web-comp.png">
       </figure>
       <div class="devsite-landing-row-item-description">
-        <h3><a href="/web/fundamentals/architecture/building-components/">Web Components</a></h3>
+        <h3><a href="web-components/">Web Components</a></h3>
         <div class="devsite-landing-row-item-description-content">
           Web Components are a new set of standards which let you create your own HTML elements. You can use them to build anything, from simple UI elements, to entire applications.
         </div>
         <div class="devsite-landing-row-item-buttons">
-          <a href="/web/fundamentals/architecture/building-components/" class="button button-white">Learn more</a>
+          <a href="web-components/" class="button button-white">Learn more</a>
         </div>
       </div>
     </div>
@@ -153,12 +152,12 @@ page_type: landing
         <img src="images/pay-req.png">
       </figure>
       <div class="devsite-landing-row-item-description">
-        <h3><a href="/web/fundamentals/discovery-and-monetization/payment-request/">Payment Request API</a></h3>
+        <h3><a href="payments/">Payment Request API</a></h3>
         <div class="devsite-landing-row-item-description-content">
           The Payment Request API is a W3C standard candidate meant to eliminate checkout forms. It  improves the purchase process, provides a more consistent user experience and allows you to easily leverage different payment methods.
         </div>
         <div class="devsite-landing-row-item-buttons">
-          <a href="/web/fundamentals/discovery-and-monetization/payment-request/" class="button button-white">Learn more</a>
+          <a href="payments/" class="button button-white">Learn more</a>
         </div>
       </div>
     </div>
