@@ -20,18 +20,22 @@ In this episode:
 * Especially [Surma & Monica's supercharged](https://www.youtube.com/watch?v=tHJwRWrexqg).
 * How Jake [sweated through supercharged](https://www.youtube.com/watch?v=3Tr-scf7trE).
 * Service workers are being [implemented in Safari](https://bugs.webkit.org/show_bug.cgi?id=174541).
-* Jake built a [silly PWA](https://f1-start.glitch.me/), [endorsed by F1 world champions](https://www.youtube.com/watch?v=6fgGJ-M6X2s).
+* Jake built a [silly PWA](https://f1-start.glitch.me/), [endorsed by F1 world
+  champions](https://www.youtube.com/watch?v=6fgGJ-M6X2s).
 * Surma built [Tinder for bananas](https://tinderforbananas.com/).
-* [CSS animation worklets and custom layouts](https://developers.google.com/web/updates/2016/05/houdini).
-* [CSS shadow parts](https://tabatkins.github.io/specs/css-shadow-parts/) for styling the shadow DOM.
+* [CSS animation worklets and custom layouts](/web/updates/2016/05/houdini).
+* [CSS shadow parts](https://tabatkins.github.io/specs/css-shadow-parts/) for styling the shadow
+  DOM.
 * What has Flash ever done for us?
 * Jake uploaded [an old Flash intro he built](https://cv-ppguyzgojs.now.sh/).
 * Do we cultivate impostor syndrome as if it's a good thing?
-* [Admitting what we don't know](https://twitter.com/jaffathecake/status/835963707368869890) is a good thing.
+* [Admitting what we don't know](https://twitter.com/jaffathecake/status/835963707368869890) is a
+  good thing.
 * Surma knows the difference between align-items and justify-content.
 * Surma [pitches tasklets](https://github.com/GoogleChrome/tasklets).
 * No, nanotasks aren't a thing.
-* Abortable fetch in [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1378342) & [Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/13009916/).
+* Abortable fetch in [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1378342) &
+  [Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/13009916/).
 * [Web platform tests](https://github.com/w3c/web-platform-tests) are great.
 * And, what would you do if you sat on a wet seat?
 
