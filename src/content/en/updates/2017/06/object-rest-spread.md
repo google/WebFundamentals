@@ -5,6 +5,7 @@ description: This update discusses object rest and spread properties, a new Java
 {# wf_updated_on: 2017-06-06 #}
 {# wf_published_on: 2017-06-06 #}
 {# wf_tags: javascript #}
+{# wf_blink_components: Blink>JavaScript>Language #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
