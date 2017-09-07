@@ -1,0 +1,11 @@
+toc:
+- title: Device APIs
+  section:
+  - title: Handling User Location
+    path: /web/fundamentals/native-hardware/user-location/
+  - title: Using Device Orientation & Motion
+    path: /web/fundamentals/native-hardware/device-orientation/
+  - title: Making Fullscreen Experiences
+    path: /web/fundamentals/native-hardware/fullscreen/
+  - title: Click to Call
+    path: /web/fundamentals/native-hardware/click-to-call/

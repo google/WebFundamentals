@@ -1,0 +1,26 @@
+toc:
+- title: Integration & Engagement
+  style: accordion
+  section:
+  - title: Add to Home Screen
+    section:
+    - title: App Install Banners
+      path: /web/fundamentals/integration/app-install-banners/
+    - title: Web App Manfiest
+      path: /web/fundamentals/web-app-manifest/
+    - title: Additional Colors and Icons
+      path: /web/fundamentals/design-and-ux/browser-customization/
+  - include: /web/fundamentals/web-payments/_toc.yaml
+  - include: /web/fundamentals/security/credential-management/_toc.yaml
+  - include: /web/fundamentals/push-notifications/_toc.yaml
+  - include: /web/fundamentals/native-hardware/_toc.yaml
+  - title: User Input
+    section:
+    - title: Create Amazing Forms
+      path: /web/fundamentals/design-and-ux/input/forms/
+    - title: Add Touch To Your Site
+      path: /web/fundamentals/design-and-ux/input/touch/
+  - title: Search Optimization
+    path: /web/fundamentals/discovery/search-optimization/
+  - title: Social Discovery
+    path: /web/fundamentals/discovery/social-discovery/
