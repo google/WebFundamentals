@@ -5,7 +5,7 @@ toc:
   - title: Add to Home Screen
     section:
     - title: App Install Banners
-      path: /web/fundamentals/integration/app-install-banners/
+      path: /web/fundamentals/app-install-banners/
     - title: Web App Manfiest
       path: /web/fundamentals/web-app-manifest/
     - title: Additional Colors and Icons

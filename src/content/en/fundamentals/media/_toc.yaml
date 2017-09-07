@@ -10,7 +10,7 @@ toc:
   - title: Playback Control with Media Source Extensions
     section:
     - title: Overview
-      path: /web/fundamentals/media/mse/
+      path: /web/fundamentals/media/mse/basics
     - title: Seamless Playback
       path: /web/fundamentals/media/mse/seamless-playback
   - title: Fast Playback with Video Preload
@@ -18,17 +18,17 @@ toc:
 - title: Capture and Record
   section:
   - title: Capturing Images
-    path: /web/fundamentals/native-hardware/capturing-images/
-  - title: Capturing Video
-    path: /web/fundamentals/media/
+    path: /web/fundamentals/media/capturing-images/
+  # - title: Capturing Video
+  #   path: /web/fundamentals/media/
   - title: Capturing Audio
-    path: /web/fundamentals/native-hardware/recording-audio/
-  - title: Choosing the Media Device
-    path: /web/fundamentals/media/
-  - title: Controlling the Camera
-    path: /web/fundamentals/media/
-  - title: Audio Streaming
-    path: /web/fundamentals/media/
+    path: /web/fundamentals/media/recording-audio/
+  # - title: Choosing the Media Device
+  #   path: /web/fundamentals/media/
+  # - title: Controlling the Camera
+  #   path: /web/fundamentals/media/
+  # - title: Audio Streaming
+  #   path: /web/fundamentals/media/
 - title: Manipulating Media Files
   section:
   - title: Application Primers

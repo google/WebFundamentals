@@ -129,8 +129,8 @@ def fetchGithubFile(path):
   except urllib2.HTTPError as e:
     logging.error('Unable to fetch Github file: %s' % e.code)
     return None
-
   return content
+
 
 def getLeftNav(requestPath, pathToBook, lang='en'):
   # Returns the left nav. If it's already been generated and stored in
@@ -150,6 +150,7 @@ def getLeftNav(requestPath, pathToBook, lang='en'):
           if 'lower_tabs' in tab:
             result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
             result += buildLeftNav(tab['lower_tabs']['other'][0]['contents'])
+            result += '</ul>\n'
             return result
     except Exception as e:
       msg = ' - Unable to read or parse primary book.yaml: ' + pathToBook
@@ -166,15 +167,13 @@ def buildLeftNav(bookYaml, lang='en'):
   result = ''
   for item in bookYaml:
     if 'include' in item:
-      include = readFile(item['include'], lang)
-      if include:
-        try:
-          include = yaml.load(include)
-          if 'toc' in include and len(include['toc']) == 1:
-            item = include['toc'][0]
-        except Exception as e:
-          msg = ' - Unable to parsing embedded toc file: ' + item['include']
-          logging.exception(msg)
+      try:
+        include = readFile(item['include'], lang)
+        include = yaml.load(include)
+        result += buildLeftNav(include['toc'])
+      except Exception as e:
+        msg = ' - Unable to parsing embedded toc file: ' + item['include']
+        logging.exception(msg)
     if 'path' in item:
       result += '<li class="devsite-nav-item">\n'
       result += '<a href="' + item['path'] + '" class="devsite-nav-title">\n'
@@ -196,7 +195,7 @@ def buildLeftNav(bookYaml, lang='en'):
       result += '</a>'
       result += '<ul class="devsite-nav-section devsite-nav-section-collapsed">\n'
       result += buildLeftNav(item['section'])
-  result += '</ul>\n'
+      result += '</ul>\n'
   return result
 
 
