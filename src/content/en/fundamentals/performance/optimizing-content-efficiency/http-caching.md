@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Caching and reusing previously fetched resources is a critical aspect of optimizing for performance.
 

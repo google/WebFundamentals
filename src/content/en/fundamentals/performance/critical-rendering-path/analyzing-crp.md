@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn to identify and resolve critical rendering path performance bottlenecks.
 

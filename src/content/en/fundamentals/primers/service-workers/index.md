@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features rely on.
 

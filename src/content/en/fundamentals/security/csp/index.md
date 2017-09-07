@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Content Security Policy can significantly reduce the risk and impact of cross-site scripting attacks in modern browsers.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Many of today's most popular apps let you apply filters and effects to images or video. This article shows how to implement these features on the open web.
 

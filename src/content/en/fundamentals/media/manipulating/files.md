@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Let's take a raw video file off a camera and transform it into an encrypted resource that you can play back using a video library such as Google's Shaka Player on a mobile device.
 

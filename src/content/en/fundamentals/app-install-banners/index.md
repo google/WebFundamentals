@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: There are two types of app install banners: web app install banners and native app install banners. They give you the ability to let users quickly and seamlessly add your web or native app to their home screens without leaving the browser.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: "Promises simplify deferred and asynchronous computations. A promise represents an operation that hasn't completed yet."
 

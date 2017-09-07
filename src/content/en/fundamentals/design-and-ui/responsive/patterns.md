@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Responsive web design patterns are quickly evolving, but there are a handful of established patterns that work well across the desktop and mobile devices
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml 
+project_path: /web/fundamentals/_project.yaml 
 book_path: /web/fundamentals/_book.yaml
 description: Application shell architecture keeps your UI local and loads content dynamically without sacrificing the linkability and discoverability of the web. 
 

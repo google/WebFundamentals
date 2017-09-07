@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements let you construct your own HTML tags. This checklist covers best practices to help you build high quality elements.
 

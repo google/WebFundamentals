@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Choose the appropriate easing for your project, whether that's easing in, out, or both. Maybe even use bounces for extra fun!
 
