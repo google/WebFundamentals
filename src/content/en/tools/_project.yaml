@@ -5,6 +5,7 @@ description: "Discover tools that can help you kickstart your development."
 home_url: /web/tools/
 buganizer_id: 180451
 
+color: google-blue
 content_license: cc3-apache2
 footer_path: /web/_footer.yaml
 

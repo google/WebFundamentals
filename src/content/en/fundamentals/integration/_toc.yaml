@@ -10,7 +10,7 @@ toc:
       path: /web/fundamentals/web-app-manifest/
     - title: Additional Colors and Icons
       path: /web/fundamentals/design-and-ux/browser-customization/
-  - include: /web/fundamentals/web-payments/_toc.yaml
+  - include: /web/fundamentals/payments/_toc.yaml
   - include: /web/fundamentals/security/credential-management/_toc.yaml
   - include: /web/fundamentals/push-notifications/_toc.yaml
   - include: /web/fundamentals/native-hardware/_toc.yaml

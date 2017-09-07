@@ -5,6 +5,7 @@ description: "Google's opinionated reference for building amazing web experience
 home_url: /web/fundamentals/
 buganizer_id: 180451
 
+color: google-blue
 content_license: cc3-apache2
 footer_path: /web/_footer.yaml
 
