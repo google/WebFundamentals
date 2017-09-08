@@ -90,13 +90,13 @@ a [FLAC in MP4 encapsulation spec], and the BBC has been experimenting with
 using that with MSE. You can read the BBC's ["Delivering Radio 3 Concert
 Sound"] post to learn more.
 
-So, here's one way to detect if FLAC in MP4 is supported for MSE:
+Here's how you can detect if FLAC in MP4 is supported for MSE:
 
     if (MediaSource.isTypeSupported('audio/mp4; codecs="flac"')) {
       // TODO: Fetch data and feed it to a media source.
     }
 
-If you want to see a full example, check out [our official sample].
+And if you want to see a full example, check out [our official sample].
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/d/msg/blink-dev/ntoLfR7rbmE/3R1DQoBSAAAJ) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/features/5713014258925568) &#124;
