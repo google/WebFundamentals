@@ -77,14 +77,29 @@ Warning: Code above is not implemented by browsers yet.
 So what do you think? Please submit your feedback and raise issues in the
 [Picture In Picture WICG repository]. We're eager to hear your thoughts!
 
-## Prevent PiP
+## Prevent Auto PiP
 
-There is one way you can prevent video to go PiP in Chrome while the API is not
-implemented yet. This hack will certainly stop working at some point, but here
-it is:
+There is one way you can prevent video to go automatically PiP in Chrome while
+the Web API is not implemented yet. 
 
-    // TODO: Replace with real hack.
-    video.pleaseDontGoPiP({'foo': 'bar'});
+Warning: This hack will certainly stop working at some point.
+
+    // Nasty hack ahead!
+    window.addEventListener('resize', function() {
+      if (!document.fullscreenElement) {
+        return;
+      }
+
+      var minimumScreenSize = 0.33;
+      var screenArea = screen.width * screen.height;
+      var windowArea = window.outerHeight * window.outerWidth;
+
+      // If the size of the window relative to the screen is less than a third,
+      // let's assume we're in PiP and exit fullscreen to prevent Auto PiP.
+      if ((windowArea / screenArea) < minimumScreenSize) {
+        document.exitFullscreen();
+      }
+    });
 
 {% include "comment-widget.html" %}
 
