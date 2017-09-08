@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: TODO
+description: Let's discuss about a Web API that would allow websites to create a floating video window over the desktop.
 
 {# wf_updated_on: 2017-09-07 #}
 {# wf_published_on: 2017-09-07 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/generic/picture-in-picture.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Let's discuss about a Web API that would allow websites to create a floating video window over the desktop #}
 {# wf_blink_components: Blink>Media #}
 
 # Picture In Picture (PiP) {: .page-title }
@@ -23,11 +23,11 @@ Home Screen and the playing video will automatically transition in Picture In
 Picture. That's all! Pretty cool right?
 
 <figure>
-  <img src="https://dummyimage.com/1798x854/999999/ffffff&text=Chrome+PiP+screenshot"
-       alt="Chrome PiP screenshot">
+  <img src="/web/updates/images/2017/09/picture-in-picture-hero.jpg"
+       alt="Android Picture in Picture photo">
   <figcaption>
     <b>Figure 1.</b>
-    TODO: Chrome PiP screenshot
+    Android Picture in Picture photo
   </figcaption>
 </figure>
 
@@ -82,8 +82,6 @@ So what do you think? Please submit your feedback and raise issues in the
 There is one way you can prevent video to go automatically PiP in Chrome while
 the Web API is not implemented yet. 
 
-Warning: This hack will certainly stop working at some point.
-
     // Nasty hack ahead!
     window.addEventListener('resize', function() {
       if (!document.fullscreenElement) {
@@ -100,6 +98,8 @@ Warning: This hack will certainly stop working at some point.
         document.exitFullscreen();
       }
     });
+
+Caution: This hack will certainly stop working at some point.
 
 {% include "comment-widget.html" %}
 
