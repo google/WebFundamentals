@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the media updates in Chrome 62.
 
-{# wf_updated_on: 2017-09-01 #}
-{# wf_published_on: 2017-09-01 #}
+{# wf_updated_on: 2017-09-08 #}
+{# wf_published_on: 2017-09-08 #}
 {# wf_tags: news,chrome62,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
 {# wf_featured_snippet: TODO #}
@@ -15,11 +15,23 @@ description: A round up of the media updates in Chrome 62.
 
 - TODO: Media preload defaults to metadata
 - TODO: Support for Offline DRM Licenses on Android
-- TODO: Chrome now disables video tracks when a MSE video is played in the
-  background to optimize performance.
+- [Videos played in the background](#background-video-optimizations) get a
+  special treatment.
 - Web developers can [customize seekable range](#seekable)
   on live MSE streams.
 - Chrome now supports [FLAC in MP4 with MSE](#flac-in-mp4-with-mse).
+
+## Background video optimizations {: #background-video-optimizations }
+
+The chrome team is always trying to find new ways to improve battery life and
+Chrome 62 is no exception:
+
+1. Chrome now disables video tracks when the video is played in the background
+if the video uses [Media Source Extensions (MSE)]. Check out our past
+[Background video track optimizations (MSE only)] article to learn more.
+2. If the video doesn't use MSE and has no audio tracks, the video will now be
+automatically paused when played in the background on desktop. It has been the
+case on mobile since Chrome 57 (January 2017).
 
 ## Customize seekable range on live MSE streams {: #seeakble }
 
@@ -92,6 +104,7 @@ If you want to see a full example, check out [our official sample].
 
 {% include "comment-widget.html" %}
 
+[Background video track optimizations (MSE only)]: /web/updates/2017/07/chrome-61-media-updates#background-video-track-optimizations
 [the official sample]: https://googlechrome.github.io/samples/media/live-seekable-range.html
 [FLAC]: https://xiph.org/flac/
 [Media Source Extensions (MSE)]: /web/fundamentals/media/mse/seamless-playback
