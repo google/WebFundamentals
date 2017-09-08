@@ -18,11 +18,11 @@ you why and how this is going to affect video playback with sound. Spoiler
 alert: Users are going to love it!
 
 <figure>
-  <img src="https://i.imgur.com/kD5AxSS.png"
+  <img src="https://i.imgur.com/mctNpMj.png"
        alt="Internet memes tagged autoplay">
   <figcaption>
     <b>Figure 1.</b>
-    Internet memes tagged "autoplay"
+    Internet memes on <a href="https://imgur.com/mctNpMj">Imgur</a>
   </figcaption>
 </figure>
 
