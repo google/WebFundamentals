@@ -38,8 +38,8 @@ The good news is that a [Picture In Picture Web API] specification is being
 drafted as we speak. This spec aims to allow websites to initiate and control
 this behavior by exposing the following sets of properties to the API:
 
-- Notify the website when it enters and leave Picture in Picture mode.
-- Allow the website to trigger Picture in Picture via a user gesture on a video element.
+- Notify the website when video enters and leaves Picture in Picture mode.
+- Allow the website to trigger Picture in Picture on a video element via a user gesture.
 - Allow the website to exit Picture in Picture.
 - Allow the website to check if Picture in Picture can be triggered.
 
