@@ -13,13 +13,62 @@ description: A round up of the media updates in Chrome 62.
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-- TODO: Media preload defaults to metadata
-- TODO: Support for Offline DRM Licenses on Android
+- [Offline playback with DRM licenses](#offline-playback) is now supported on
+  Android.
 - [Videos played in the background](#background-video-optimizations) get a
   special treatment.
 - Web developers can [customize seekable range](#seekable)
   on live MSE streams.
 - Chrome now supports [FLAC in MP4 with MSE](#flac-in-mp4-with-mse).
+- TODO: Media preload defaults to metadata
+
+## Persistent licenses for Android
+
+Persistent license in [Encrypted Media Extensions (EME)] means the license can
+be persisted on the device, so that application can load the license into
+memory without sending another license request to the server. This is how
+offline playback is supported in EME.
+
+Until now, Chrome OS was the only platform to support persistent licenses. It
+is not true anymore. Playing protected content through EME while device is
+offline is now possible on Android as well.
+
+    const config = [{
+      sessionTypes: ['persistent-license'],
+      videoCapabilities: [{
+        contentType: 'video/webm; codecs="vp9"',
+        robustness: 'HW_SECURE_ALL' // Widevine specific
+      }]
+    }];
+
+    // Chrome will prompt user if website is allowed to uniquely identify
+    // user's device to play protected content.
+    navigator.requestMediaKeySystemAccess('com.widevine.alpha', config)
+    .then(access => {
+      // User will be able to watch encrypted content while being offline when
+      // license is stored locally on device and loaded later.
+    })
+    .catch(error => {
+      // Persistent licenses are not supported on this platform yet.
+    });
+
+You can try it yourself by checking out the [Sample Media PWA] and following
+these steps:
+
+1. Go to [https://biograf-155113.appspot.com/ttt/episode-2/]
+2. Click "Make available offline" and wait for video to be downloaded
+3. Turn airplane mode on
+4. Click "Play" button and enjoy the video!
+
+Shaka Player, the JavaScript library for adaptive media formats (such as DASH
+and HLS) has also [a demo page] for you to try this out: Pick "Angel One
+(multicodec, multilingual, Widevine)", click "Store" button in the "Offline"
+section, wait for it to be downloaded, turn airplane on and click "Load"
+button.
+
+Note: Support for protected content in incognito mode in Android has been
+disabled for now. This is to ensure that users do not inadvertently lose paid
+licenses when closing incognito tabs.
 
 ## Background video optimizations {: #background-video-optimizations }
 
@@ -104,6 +153,10 @@ And if you want to see a full example, check out [our official sample].
 
 {% include "comment-widget.html" %}
 
+[Encrypted Media Extensions (EME)]: https://w3c.github.io/encrypted-media/
+[a demo page]: https://shaka-player-demo.appspot.com/demo/
+[Sample Media PWA]: https://github.com/GoogleChrome/sample-media-pwa
+[https://biograf-155113.appspot.com/ttt/episode-2/]: https://biograf-155113.appspot.com/ttt/episode-2/
 [Background video track optimizations (MSE only)]: /web/updates/2017/07/chrome-61-media-updates#background-video-track-optimizations
 [the official sample]: https://googlechrome.github.io/samples/media/live-seekable-range.html
 [FLAC]: https://xiph.org/flac/
