@@ -8,7 +8,7 @@ description: Yasmine talks learning to design.
 {# wf_podcast_duration: 00:11:02 #}
 {# wf_podcast_fileSize: 18738973 #}
 {# wf_podcast_subtitle: Yasmine talks learning to design. #}
-{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s02-e02-cover-large.jpg #}
+{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s02-e04-cover-large.jpg #}
 
 # Learn how to design {: .page-title }
 
@@ -18,22 +18,25 @@ the two, providing take aways, solutions to workflows, tools and
 discussions on everyday struggles. 
 
 Mustafa speaks to Yasmine Evjen, a Developer Programs Engineer on 
-the Google Developer Relations Team, about how to the 
-Dunning-Kruger effect and how having a little bit of knowledge 
-in design shows that you may know more than you think you know. 
+the Google Developer Relations Team, about learning design skills and 
+debate if technical expertise help or hinder the creative process.
 
 <img 
-src="/web/shows/designer-vs-developer/podcast/images/dvd-s02-e03-cover.jpg" 
+src="/web/shows/designer-vs-developer/podcast/images/dvd-s02-e04-cover.jpg" 
 class="attempt-right">
 
 In this episode:
 
-* [Dunning-Kruger](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect) effect.
-* Cognitive Bias.
-* [Designing VR experiences](/web/fundamentals/vr/).
+* Techincal skills can hinder the process if you jump 
+to solutions too soon.
+* Different types of designers. 
+* Design languages and [Material Design](http://material.io).
+* [Design Spints](https://designsprintkit.withgoogle.com/).
+* [Sketching](https://designsprintkit.withgoogle.com/methods/sketch/).
+
 
 <audio 
-src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E03-Improving-your-creative-confidence.mp3" 
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E04-learn-how-to-design.mp3" 
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
