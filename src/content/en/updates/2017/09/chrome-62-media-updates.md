@@ -20,6 +20,8 @@ description: A round up of the media updates in Chrome 62.
 - Web developers can [customize seekable range](#seekable)
   on live MSE streams.
 - Chrome now supports [FLAC in MP4 with MSE](#flac-in-mp4-with-mse).
+- Video will [go fullscreen when device is rotated](#auto-fullscreen-rotate).
+
 - TODO: Media preload defaults to metadata
 
 ## Persistent licenses for Android
@@ -151,6 +153,14 @@ And if you want to see a full example, check out [our official sample].
 [Chromestatus Tracker](https://www.chromestatus.com/features/5713014258925568) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=666000)
 
+## Automatic video fullscreen when device is rotated {: #auto-fullscreen-rotate }
+
+If you rotate a device to landscape while a video is playing in the viewport,
+playback will automatically switch to fullscreen mode. Rotating the device to
+portrait puts the video back to windowed mode.
+
+Check out our [past article] for more details.
+
 {% include "comment-widget.html" %}
 
 [Encrypted Media Extensions (EME)]: https://w3c.github.io/encrypted-media/
@@ -164,3 +174,4 @@ And if you want to see a full example, check out [our official sample].
 [FLAC in MP4 encapsulation spec]: https://github.com/xiph/flac/blob/master/doc/isoflac.txt
 ["Delivering Radio 3 Concert Sound"]: http://www.bbc.co.uk/rd/blog/2017-04-radio-3-high-quality-flac-dash
 [our official sample]: https://googlechrome.github.io/samples/media/flac-in-mp4-for-mse.html
+[past article]: /web/updates/2017/07/chrome-61-media-updates#auto-fullscreen-rotate
