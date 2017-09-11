@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the media updates in Chrome 61.
+description: A round up of the media (audio/video) updates in Chrome 61.
 
 {# wf_updated_on: 2017-07-28 #}
 {# wf_published_on: 2017-07-28 #}
@@ -8,7 +8,7 @@ description: A round up of the media updates in Chrome 61.
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
 {# wf_featured_snippet: Background video track optimizations and automatic video fullscreen when device is rotated are here! #}
 
-# Media Updates in Chrome 61 {: .page-title }
+# Media (Audio/Video) Updates in Chrome 61 {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 

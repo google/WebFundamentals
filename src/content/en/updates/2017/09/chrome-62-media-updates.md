@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the media updates in Chrome 62.
+description: A round up of the media (audio/video) updates in Chrome 62.
 
 {# wf_updated_on: 2017-09-08 #}
 {# wf_published_on: 2017-09-08 #}
@@ -9,7 +9,7 @@ description: A round up of the media updates in Chrome 62.
 {# wf_featured_snippet: TODO #}
 {# wf_blink_components: Blink>Media #}
 
-# Media Updates in Chrome 62 {: .page-title }
+# Media (Audio/Video) Updates in Chrome 62 {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
