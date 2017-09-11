@@ -15,8 +15,8 @@ description: A round up of the media updates in Chrome 62.
 
 - [Offline playback with DRM licenses](#offline-playback) is now supported on
   Android.
-- [Videos played in the background](#background-video-optimizations) get a
-  special treatment.
+- Chrome now [disables video tracks when a MSE video is played in the
+  background](#background-video-track-optimizations) to optimize performance.
 - Web developers can [customize seekable range](#seekable)
   on live MSE streams.
 - Chrome now supports [FLAC in MP4 with MSE](#flac-in-mp4-with-mse).
@@ -72,17 +72,14 @@ Note: Support for protected content in incognito mode in Android has been
 disabled for now. This is to ensure that users do not inadvertently lose paid
 licenses when closing incognito tabs.
 
-## Background video optimizations {: #background-video-optimizations }
+## Background video track optimizations (MSE only) {: #background-video-track-optimizations}
 
 The chrome team is always trying to find new ways to improve battery life and
-Chrome 62 is no exception:
+Chrome 62 is no exception.
 
-1. Chrome now disables video tracks when the video is played in the background
-if the video uses [Media Source Extensions (MSE)]. Check out our past
-[Background video track optimizations (MSE only)] article to learn more.
-2. If the video doesn't use MSE and has no audio tracks, the video will now be
-automatically paused when played in the background on desktop. It has been the
-case on mobile since Chrome 57 (January 2017).
+Chrome now disables video tracks when the video is played in the background if
+the video uses [Media Source Extensions (MSE)]. Check out our [previous article]
+to learn more.
 
 ## Customize seekable range on live MSE streams {: #seeakble }
 
@@ -157,9 +154,8 @@ And if you want to see a full example, check out [our official sample].
 
 If you rotate a device to landscape while a video is playing in the viewport,
 playback will automatically switch to fullscreen mode. Rotating the device to
-portrait puts the video back to windowed mode.
-
-Check out our [past article] for more details.
+portrait puts the video back to windowed mode. Check out our [past article] for
+more details.
 
 {% include "comment-widget.html" %}
 
@@ -167,7 +163,7 @@ Check out our [past article] for more details.
 [a demo page]: https://shaka-player-demo.appspot.com/demo/
 [Sample Media PWA]: https://github.com/GoogleChrome/sample-media-pwa
 [https://biograf-155113.appspot.com/ttt/episode-2/]: https://biograf-155113.appspot.com/ttt/episode-2/
-[Background video track optimizations (MSE only)]: /web/updates/2017/07/chrome-61-media-updates#background-video-track-optimizations
+[previous article]: /web/updates/2017/07/chrome-61-media-updates#background-video-track-optimizations
 [the official sample]: https://googlechrome.github.io/samples/media/live-seekable-range.html
 [FLAC]: https://xiph.org/flac/
 [Media Source Extensions (MSE)]: /web/fundamentals/media/mse/seamless-playback
