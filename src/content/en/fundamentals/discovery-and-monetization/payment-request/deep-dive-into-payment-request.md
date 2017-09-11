@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-08-04 #}
+{# wf_updated_on: 2017-09-04 #}
 
 # Deep Dive into the Payment Request API {: .page-title }
 
@@ -53,7 +53,7 @@ two major Chrome versions.
 ## Feature Detect
 
 Payment Request has been available since Chrome 53 for Android and has been
-enabled by default since Chrome 60 on desktop. Before we start covering how to
+enabled by default since Chrome 61 on desktop. Before we start covering how to
 use Payment Request, we should feature detect to ensure it's available and
 fallback to a traditional checkout page in browsers that don't support it.
 
@@ -341,7 +341,7 @@ There are some edge cases to be aware of when defining your supported payment
 methods.
 
 **Unsupported Payment Methods**  
-If you try to call `show()`` on a `PaymentRequest` object and there are no supported
+If you try to call `show()` on a `PaymentRequest` object and there are no supported
 payment methods, the returned promise will reject immediately with the following
 error:
 
