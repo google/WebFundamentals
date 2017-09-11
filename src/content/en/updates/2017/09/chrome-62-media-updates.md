@@ -20,14 +20,14 @@ description: A round up of the media (audio/video) updates in Chrome 62.
 - Web developers can [customize seekable range](#seekable)
   on live MSE streams.
 - Chrome now supports [FLAC in MP4 with MSE](#flac-in-mp4-with-mse).
-- Video will [go fullscreen when device is rotated](#auto-fullscreen-rotate).
+- Video will [go fullscreen when the device is rotated](#auto-fullscreen-rotate).
 
 - TODO: Media preload defaults to metadata
 
 ## Persistent licenses for Android
 
 Persistent license in [Encrypted Media Extensions (EME)] means the license can
-be persisted on the device, so that application can load the license into
+be persisted on the device so that applications can load the license into
 memory without sending another license request to the server. This is how
 offline playback is supported in EME.
 
@@ -89,7 +89,7 @@ time range which starts at 0 and ends at the media resource duration. If the
 duration is not available though, such as a live stream, the time range may
 continuously change.
 
-The good news is that we can now more effectively customize the
+The good news is that you can now more effectively customize the
 <code>seekable</code> range logic with [Media Source Extensions (MSE)] by
 providing or removing a single seekable range that is union'ed with the current
 buffered ranges. It results in a single seekable range which fits both, when
@@ -118,7 +118,7 @@ element and contains only its init segment:
     // Seekable time ranges: { [0.000, 6.000) }
     // Buffered time ranges: { [3.000, 6.000) }
 
-There are many cases that I  didn't cover above so I'd suggest you give a try
+There are many cases that I didn't cover above so I'd suggest you give a try
 to [the official sample] to see how buffered and seekable time ranges react to different
 MSE events.
 
@@ -144,13 +144,13 @@ Here's how you can detect if FLAC in MP4 is supported for MSE:
       // TODO: Fetch data and feed it to a media source.
     }
 
-And if you want to see a full example, check out [our official sample].
+If you want to see a full example, check out [our official sample].
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/d/msg/blink-dev/ntoLfR7rbmE/3R1DQoBSAAAJ) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/features/5713014258925568) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=666000)
 
-## Automatic video fullscreen when device is rotated {: #auto-fullscreen-rotate }
+## Automatic video goes to fullscreen when the device is rotated {: #auto-fullscreen-rotate }
 
 If you rotate a device to landscape while a video is playing in the viewport,
 playback will automatically switch to fullscreen mode. Rotating the device to
