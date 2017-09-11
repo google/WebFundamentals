@@ -14,12 +14,12 @@ description: Let's discuss about a Web API that would allow websites to create a
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 Since April 2017, Chrome for [Android O supports Picture In Picture]. It allows
-users to play a `<video>` element in a pinned window that isn't blocked by other
-windows, so that they can watch while doing other things.
+users to play a `<video>` element in a small overlay window that isn't blocked
+by other windows, so that they can watch while doing other things.
 
 Here's how it works: Open Chrome, go to a website that contains a video and
 play it fullscreen. From there, press the Home button to go to your Android
-Home Screen and the playing video will automatically transition in Picture In
+Home Screen and the playing video will automatically transition to Picture In
 Picture. That's all! Pretty cool right?
 
 <figure>
@@ -31,14 +31,14 @@ Picture. That's all! Pretty cool right?
   </figcaption>
 </figure>
 
-It is but... what about desktop? What if the website want to control that
+It is, but... what about desktop? What if the website wants to control that
 experience?
 
 The good news is that a [Picture In Picture Web API] specification is being
 drafted as we speak. This spec aims to allow websites to initiate and control
-this behavior by exposing the following sets of properties to the API:
+this behavior by exposing the following set of properties to the API:
 
-- Notify the website when video enters and leaves Picture in Picture mode.
+- Notify the website when a video enters and leaves Picture in Picture mode.
 - Allow the website to trigger Picture in Picture on a video element via a user gesture.
 - Allow the website to exit Picture in Picture.
 - Allow the website to check if Picture in Picture can be triggered.
@@ -77,12 +77,15 @@ Warning: Code above is not implemented by browsers yet.
 So what do you think? Please submit your feedback and raise issues in the
 [Picture In Picture WICG repository]. We're eager to hear your thoughts!
 
-## Prevent Auto PiP
+## Preventing Android's default PIP behavior
 
-There is one way you can prevent video to go automatically PiP in Chrome while
-the Web API is not implemented yet. 
+Today, you can prevent video from Android's defaut PiP behavior in Chrome by
+responding to a resize event, and detecting when the window size has changed
+significantly. This is a not recommended as a permanent solution but provides a
+temporary option until the Web API is implemented.
 
-    // Nasty hack ahead!
+    // See whether resize is small enough to be PiP. It's a hack, but it'll
+    // work for now.
     window.addEventListener('resize', function() {
       if (!document.fullscreenElement) {
         return;
@@ -98,8 +101,6 @@ the Web API is not implemented yet.
         document.exitFullscreen();
       }
     });
-
-Caution: This hack will certainly stop working at some point.
 
 {% include "comment-widget.html" %}
 
