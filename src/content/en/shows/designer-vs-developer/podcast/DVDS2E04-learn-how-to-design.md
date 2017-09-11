@@ -6,7 +6,7 @@ description: Yasmine talks learning to design.
 {# wf_published_on: 2017-09-11 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E04-learn-how-to-design.mp3 #}
 {# wf_podcast_duration: 00:11:02 #}
-{# wf_podcast_fileSize: 18738973 #}
+{# wf_podcast_fileSize: 15930283 #}
 {# wf_podcast_subtitle: Yasmine talks learning to design. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s02-e04-cover-large.jpg #}
 
