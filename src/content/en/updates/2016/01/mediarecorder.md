@@ -63,7 +63,7 @@ MIME types have more or less specific values, combining container and codecs. Fo
 * video/webm;codecs=vp8
 * video/webm;codecs=vp9
 
-Use the static method `MediaRecoder.isTypeSupported()` to check if a MIME type is supported, for example when you instantiate MediaRecorder:
+Use the static method `MediaRecorder.isTypeSupported()` to check if a MIME type is supported, for example when you instantiate MediaRecorder:
 
 
     var options;
@@ -78,7 +78,7 @@ Use the static method `MediaRecoder.isTypeSupported()` to check if a MIME type i
 
 The full list of MIME types supported by MediaRecorder in Chrome is available [here](https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/LayoutTests/fast/mediarecorder/MediaRecorder-isTypeSupported.html).
 
-Caution: Instantiation will fail if the browser doesn't support the MIME type specified, so use `MediaRecoder.isTypeSupported()` or try/catch — or leave out the `options` argument if you're happy with the browser default.
+Caution: Instantiation will fail if the browser doesn't support the MIME type specified, so use `MediaRecorder.isTypeSupported()` or try/catch — or leave out the `options` argument if you're happy with the browser default.
 
 Next, add a data handler and call the `start()` method to begin recording:
 

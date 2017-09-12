@@ -605,3 +605,21 @@ redirects:
 
 - from: /web/fundamentals/engage-and-retain/push-notifications/sending-messages
   to: /web/fundamentals/engage-and-retain/push-notifications/sending-messages-with-web-push-libraries
+
+- from: /web/fundamentals/getting-started/primers/customelements
+  to: /web/fundamentals/architecture/building-components/customelements
+
+- from: /web/fundamentals/getting-started/primers/shadowdom
+  to: /web/fundamentals/architecture/building-components/shadowdom
+
+- from: /web/fundamentals/architecture/howto-components/overview
+  to: /web/fundamentals/architecture/building-components/examples/
+
+- from: /web/fundamentals/architecture/howto-components/howto-checkbox
+  to: /web/fundamentals/architecture/building-components/examples/howto-checkbox
+
+- from: /web/fundamentals/architecture/howto-components/howto-tooltip
+  to: /web/fundamentals/architecture/building-components/examples/howto-tooltip
+
+- from: /web/fundamentals/architecture/howto-components/glossary
+  to: /web/fundamentals/glossary

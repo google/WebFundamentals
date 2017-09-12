@@ -3,13 +3,23 @@ toc:
   section:
   - title: The App Shell Model
     path: /web/fundamentals/architecture/app-shell
-  - title: "HowTo: Components"
+  - title: "Building Components"
     section:
-    - title: Overview
-      path: /web/fundamentals/architecture/howto-components/overview
-    - title: <howto-checkbox>
-      path: /web/fundamentals/architecture/howto-components/howto-checkbox
-    - title: <howto-tooltip>
-      path: /web/fundamentals/architecture/howto-components/howto-tooltip
-    - title: "Glossary"
-      path: /web/fundamentals/architecture/howto-components/glossary
+    - title: "Overview"
+      path: /web/fundamentals/architecture/building-components/
+    - title: "Custom Elements v1: Reusable Web Components"
+      path: /web/fundamentals/architecture/building-components/customelements
+    - title: "Shadow DOM v1: Self-Contained Web Components"
+      path: /web/fundamentals/architecture/building-components/shadowdom
+    - title: "Best Practices"
+      path: /web/fundamentals/architecture/building-components/best-practices
+    - title: Examples
+      section:
+      - title: "Overview"
+        path: /web/fundamentals/architecture/building-components/examples/
+      - title: "<howto-checkbox>"
+        path: /web/fundamentals/architecture/building-components/examples/howto-checkbox
+      - title: "<howto-tabs>"
+        path: /web/fundamentals/architecture/building-components/examples/howto-tabs
+      - title: "<howto-tooltip>"
+        path: /web/fundamentals/architecture/building-components/examples/howto-tooltip

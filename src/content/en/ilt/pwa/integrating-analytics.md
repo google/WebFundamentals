@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-12T20:53:27Z #}
+{# wf_updated_on: 2017-08-21 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -31,7 +31,7 @@ Using analytics tools gives developers valuable information about their applicat
 * How long users spend on pages, how often they visit pages, and the order in which pages are viewed
 * What times users are visiting the site and from where they arrived at the site
 
-Google Analytics is free, relatively simple to integrate, and customizable. 
+Google Analytics is free, relatively simple to integrate, and customisable.
 
 <div id="account"></div>
 

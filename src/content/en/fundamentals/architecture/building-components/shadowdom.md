@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-08-14 #}
 {# wf_published_on: 2016-08-01 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -85,7 +85,10 @@ should see a live demo of it just below. Otherwise, check out the
 full source on Github</a>.
 
 <figure class="demoarea">
-  <iframe style="height:360px;width:100%;border:none" src="https://rawgit.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b/raw/fancy-tabs-demo.html"></iframe>
+  <iframe
+    style="height:360px;width:100%;border:none"
+    src="https://rawgit.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b/raw/fancy-tabs-demo.html">
+  </iframe>
   <figcaption>
     <a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">
       View source on Github
@@ -1054,7 +1057,7 @@ inheritable styles to their initial value when they cross the shadow boundary.
   </div>
 </div>
 
-<script>
+ <script>
 function supportsShadowDOM() {
   return !!HTMLElement.prototype.attachShadow;
 }
@@ -1078,7 +1081,7 @@ if (supportsShadowDOM()) {
     self.frameElement.style.display = 'none';
   }
 }
-</script>
+ </script>
 {% endframebox %}
 
 ### Finding all the custom elements used by a page {: #findall}

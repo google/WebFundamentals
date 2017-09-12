@@ -13,6 +13,8 @@ toc:
         path: /web/fundamentals/getting-started/codelabs/offline/
       - title: Your First Web Push Notification
         path: /web/fundamentals/getting-started/codelabs/push-notifications/
+      - title: Frictionless Payment with Payment Request API
+        path: /web/fundamentals/getting-started/codelabs/payment-request-api/
       - title: Find and Fix Web App Performance Issues
         path: /web/fundamentals/getting-started/codelabs/web-perf/
       - title: Start Your Site with Web Starter Kit
@@ -27,7 +29,3 @@ toc:
       path: /web/fundamentals/getting-started/primers/promises
     - title: JavaScript Async Functions
       path: /web/fundamentals/getting-started/primers/async-functions
-    - title: "Shadow DOM v1: Self-Contained Web Components"
-      path: /web/fundamentals/getting-started/primers/shadowdom
-    - title: "Custom Elements v1: Reusable Web Components"
-      path: /web/fundamentals/getting-started/primers/customelements

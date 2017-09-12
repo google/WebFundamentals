@@ -649,11 +649,11 @@ function testMarkdown(filename, contents, options) {
     });
 
     // Error on script blocks in markdown
-    matched = wfRegEx.getMatches(/^<script/gm, contents);
+    matched = wfRegEx.getMatches(/<script/gm, contents);
     matched.forEach(function(match) {
       position = {line: getLineNumber(contents, match.index)};
-      msg = 'Unescaped script tag in markdown document, use &lt;script...';
-      logError(filename, position, msg);
+      msg = `'<script> tags are generally not allowed, please double check.`;
+      logWarning(filename, position, msg);
     });
 
     // Warn on missing comment widgets
@@ -847,6 +847,10 @@ function testContributors(filename, contents) {
     Object.keys(contributors).forEach(function(key) {
       let contributor = contributors[key];
       let familyName = contributor.name.family || contributor.name.given;
+      if (key.toLowerCase() === 'index') {
+        msg = '"index" is not a valid name for a contributor.';
+        logError(filename, null, msg);
+      }
       if (prevFamilyName.toLowerCase() > familyName.toLowerCase()) {
         msg = `Contributors must be sorted by family name. `;
         msg += `${prevFamilyName} came before ${familyName}`;

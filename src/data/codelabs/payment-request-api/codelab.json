@@ -1,0 +1,27 @@
+{
+  "environment": "web",
+  "source": "1_wIi9MneyRoW9C0Y-5qXL3922gO803_rOT1SCLJsY68",
+  "format": "md",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2017-08-29T16:02:31Z",
+  "id": "payment-request-api",
+  "duration": 44,
+  "title": "Frictionless payment with Payment Request API",
+  "summary": "Filling checkout forms is a pain especially on mobile devices. In this codelab, you'll learn how to improve a traditional e-commerce website using the Payment Request API.",
+  "theme": "web",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "io2017",
+    "kiosk",
+    "web"
+  ],
+  "feedback": "https://github.com/google-developer-training/pwa-ecommerce-demo/issues",
+  "ga": "UA-56283364-1",
+  "url": "payment-request-api"
+}
