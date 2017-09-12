@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the media updates in Chrome 61.
 
-{# wf_updated_on: 2017-08-22 #}
+{# wf_updated_on: 2017-09-11 #}
 {# wf_published_on: 2017-07-28 #}
 {# wf_tags: news,chrome61,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
@@ -69,6 +69,8 @@ And here are some restrictions:
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663999)
 
 ## Automatic video fullscreen when device is rotated {: #auto-fullscreen-rotate }
+
+Warning: This feature has been delayed until Chrome 62. See [http://crbug.com/713233](https://bugs.chromium.org/p/chromium/issues/detail?id=713233#c30).
 
 If you rotate a device to landscape while a video is playing in the viewport,
 playback will automatically switch to fullscreen mode. Rotating the device to

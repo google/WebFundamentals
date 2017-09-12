@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-09-04 #}
+{# wf_updated_on: 2017-09-07 #}
 
 # Deep Dive into the Payment Request API {: .page-title }
 
@@ -981,7 +981,7 @@ options.
 
 #### Retrieving the shippingAddress
 
-When a `shippingAddressChang`e event has been dispatched, the selected address
+When a `shippingAddressChange` event has been dispatched, the selected address
 will be added to the current `PaymentRequest` instance under the `shippingAddress`
 parameter.
 

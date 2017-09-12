@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Sharing is caring. Chrome is running an Origin Trial to enable native sharing on the web.
 
 {# wf_published_on: 2017-09-07 #}
-{# wf_updated_on: 2017-09-07 #}
+{# wf_updated_on: 2017-09-11 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
 {# wf_tags: chrome55,chrome61,sharing,android,origintrials #}
 {# wf_featured_snippet: Sharing is caring. Web Share is now available in Chrome 61 for Android, and allows websites to invoke the native sharing capabilities of the host platform. #}
@@ -91,7 +91,7 @@ In 2016, we used the Web Share API on Android via an
 [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)
 (note: this is **not** required to use the Web Share API now, as part of Chrome 61). This
 API was a perfect fit for mobile—in previous years, we had disabled share buttons on mobile,
-as space is at a premimum and we couldn't justify having several share targets.
+as space is at a premium and we couldn't justify having several share targets.
 
 <img alt="Santa Tracker share button" src="/web/updates/images/2016/10/santa-phone.png"
   style="margin: 12px auto;"/>
