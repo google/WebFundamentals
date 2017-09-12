@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the media (audio/video) updates in Chrome 62.
 
-{# wf_updated_on: 2017-09-08 #}
-{# wf_published_on: 2017-09-08 #}
+{# wf_updated_on: 2017-09-12 #}
+{# wf_published_on: 2017-09-12 #}
 {# wf_tags: news,chrome62,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
 {# wf_featured_snippet: TODO #}

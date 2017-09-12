@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the media (audio/video) updates in Chrome 58.
 
-{# wf_updated_on: 2017-03-24 #}
+{# wf_updated_on: 2017-09-12 #}
 {# wf_published_on: 2017-03-21 #}
 {# wf_tags: news,chrome58,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
