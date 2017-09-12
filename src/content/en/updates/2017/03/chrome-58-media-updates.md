@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the media (audio/video) updates in Chrome 58.
+description: A round up of the audio/video updates in Chrome 58.
 
 {# wf_updated_on: 2017-09-12 #}
 {# wf_published_on: 2017-03-21 #}
@@ -9,7 +9,7 @@ description: A round up of the media (audio/video) updates in Chrome 58.
 {# wf_featured_snippet: Media controls customization, Autoplay for Progressive Web Apps added to the home screen, pause the autoplaying of muted video when invisible, and color-gamut media query are there! #}
 {# wf_blink_components: Blink>Media #}
 
-# Media (Audio/Video) Updates in Chrome 58 {: .page-title }
+# Audio/Video Updates in Chrome 58 {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 

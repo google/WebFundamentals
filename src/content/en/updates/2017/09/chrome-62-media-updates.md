@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the media (audio/video) updates in Chrome 62.
+description: A round up of the audio/video updates in Chrome 62.
 
 {# wf_updated_on: 2017-09-12 #}
 {# wf_published_on: 2017-09-12 #}
@@ -9,7 +9,7 @@ description: A round up of the media (audio/video) updates in Chrome 62.
 {# wf_featured_snippet: Offline playback with persistent licenses and Widevine L1 on Android, video track optimizations, automatic video fullscreen when device is rotated, customizable seekable range on live MS streams, FLAC in MP4 with MSE are here! #}
 {# wf_blink_components: Blink>Media #}
 
-# Media (Audio/Video) Updates in Chrome 62 {: .page-title }
+# Audio/Video Updates in Chrome 62 {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
