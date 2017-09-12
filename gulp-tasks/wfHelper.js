@@ -235,6 +235,20 @@ function splitByYear(files) {
   return result;
 }
 
+function splitByAuthor(files) {
+  var result = {};
+  files.forEach(function(file) {
+    var authors = file.authors || [];
+    authors.forEach(function(author) {
+      if (!result[author]) {
+        result[author] = [];
+      }
+      result[author].push(file);
+    });
+  });
+  return result;
+}
+
 exports.promisedRSync = promisedRSync;
 exports.promisedExec = promisedExec;
 exports.getRegEx = getRegEx;
@@ -243,3 +257,4 @@ exports.publishedComparator = publishedComparator;
 exports.updatedComparator = updatedComparator;
 exports.featuredComparator = featuredComparator;
 exports.splitByYear = splitByYear;
+exports.splitByAuthor = splitByAuthor;

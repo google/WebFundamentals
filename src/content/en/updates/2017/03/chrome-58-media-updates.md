@@ -216,7 +216,7 @@ Usage in JavaScript:
   document.querySelector('#srgb').innerHTML = 
       (window.matchMedia("(color-gamut: srgb)").matches) ? '&#x2714;' : '&#x274C;';
   document.querySelector('#p3').innerHTML =
-      (window.matchMedia("(color-gamut: p3)").matches) ? '&#x27014;' : '&#x274C;';
+      (window.matchMedia("(color-gamut: p3)").matches) ? '&#x2714;' : '&#x274C;';
   document.querySelector('#rec2020').innerHTML =
       (window.matchMedia("(color-gamut: rec2020)").matches) ? '&#x2714;' : '&#x274C;';
 </script>

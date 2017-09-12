@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Latest Updates to the Credential Management API
 
-{# wf_updated_on: 2017-06-27 #}
+{# wf_updated_on: 2017-09-01 #}
 {# wf_published_on: 2017-06-12 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
@@ -77,7 +77,7 @@ asynchronously creates credential objects.
 <aside class="warning">
   <strong>Warning:</strong>
 Because updates to the Credential Management API landed on Chrome 60 contains
-backward incompatibile changes, it's important that your implementation won't be
+backward incompatible changes, it's important that your implementation won't be
 triggered on older versions. (If you intentionally want to do so, checkout <a href="https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8/edit">this
 migration guide doc.</a>
 </aside>
@@ -116,7 +116,7 @@ You can use existing methods to deliver credential information to your server:
     navigator.credentials.get({
       password: true,
       federated: {
-        provider: [ 'https://accounts.google.com' ]
+        providers: [ 'https://accounts.google.com' ]
       },
       mediation: 'silent'
     }).then(c => {
@@ -174,7 +174,7 @@ with a boolean flag. For example:
     navigator.credentials.get({
       password: true,
       federated: {
-        provider: [ 'https://accounts.google.com' ]
+        providers: [ 'https://accounts.google.com' ]
       },
       unmediated: true
     }).then(c => {
@@ -229,7 +229,7 @@ the equivalent of the previous flag, `unmediated: true`:
     navigator.credentials.get({
       password: true,
       federated: {
-        provider: [ 'https://accounts.google.com' ]
+        providers: [ 'https://accounts.google.com' ]
       },
       mediation: 'silent'
     }).then(c => {

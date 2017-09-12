@@ -21,6 +21,7 @@ google_analytics_ids:
 - UA-52746336-1
 
 announcement:
-  description: Join the Progressive Web App Road Show in South East Asia. <span style="font-weight:400;">Stopping in <a href="https://events.withgoogle.com/pwa-roadshow-manila/">Manila</a>, <a href="https://events.withgoogle.com/pwa-roadshow-ho-chi-minh-city/">Ho Chi Minh City</a> and <a href="https://events.withgoogle.com/pwa-roadshow-bangkok/">Bangkok</a>. Learn more and sign up now.<span>
-  start: '2016-11-14T08:00:00Z'
-  end: '2016-11-28T08:00:00Z'
+  description: Don't miss out on the action at this year's <b>Chrome Dev Summit</b>, happening on Oct 23rd and 24th. <a href="https://developer.chrome.com/devsummit/">Learn more</a>.
+  start: '2017-08-31T08:00:00Z'
+  end: '2017-10-23T08:00:00Z'
+

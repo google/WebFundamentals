@@ -19,6 +19,8 @@ description: A round up of the media (audio/video) updates in Chrome 61.
 
 ## Background video track optimizations (MSE only) {: #background-video-track-optimizations}
 
+Warning: This feature has been delayed until Chrome 62. See [http://crbug.com/752726](http://crbug.com/752726).
+
 To improve battery life, Chrome now disables video tracks when the video is
 played in the background if the video uses [Media Source Extensions (MSE)].
 
@@ -67,6 +69,8 @@ And here are some restrictions:
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663999)
 
 ## Automatic video fullscreen when device is rotated {: #auto-fullscreen-rotate }
+
+Warning: This feature has been delayed until Chrome 62. See [http://crbug.com/713233](https://bugs.chromium.org/p/chromium/issues/detail?id=713233#c30).
 
 If you rotate a device to landscape while a video is playing in the viewport,
 playback will automatically switch to fullscreen mode. Rotating the device to
