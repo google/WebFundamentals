@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Let's discuss about a Web API that would allow websites to create a floating video window over the desktop.
 
-{# wf_updated_on: 2017-09-07 #}
-{# wf_published_on: 2017-09-07 #}
+{# wf_updated_on: 2017-09-12 #}
+{# wf_published_on: 2017-09-12 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/generic/picture-in-picture.png #}
 {# wf_featured_snippet: Let's discuss about a Web API that would allow websites to create a floating video window over the desktop #}
