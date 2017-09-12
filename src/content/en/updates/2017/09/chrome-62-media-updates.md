@@ -13,8 +13,8 @@ description: A round up of the media (audio/video) updates in Chrome 62.
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-- [Offline playback with persistent licenses](#offline-playback) is now supported on
-  Android.
+- [Offline playback with persistent licenses](#android) and [Widevine
+  L1](#android) are now supported on Android.
 - Chrome now [disables video tracks when an MSE video is played in the
   background](#background-video-track-optimizations) to optimize performance.
 - Web developers can [customize seekable range](#seekable)
@@ -24,7 +24,7 @@ description: A round up of the media (audio/video) updates in Chrome 62.
 
 - TODO: Media preload defaults to metadata
 
-## Persistent licenses for Android
+## Android: Persistent licenses and Widevine L1 {: #android }
 
 Persistent license in [Encrypted Media Extensions (EME)] means the license can
 be persisted on the device so that applications can load the license into
@@ -35,11 +35,15 @@ Until now, Chrome OS was the only platform to support persistent licenses. It
 is not true anymore. Playing protected content through EME while the device is
 offline is now possible on Android as well.
 
+How can it be better? That's simple, [Widevine Security Level 1] (aka Widevine
+L1) support has been added in Chrome for Android so that media can be played in
+the most secure way.
+
     const config = [{
       sessionTypes: ['persistent-license'],
       videoCapabilities: [{
         contentType: 'video/webm; codecs="vp9"',
-        robustness: 'HW_SECURE_ALL' // Widevine specific
+        robustness: 'HW_SECURE_ALL' // Widevine L1
       }]
     }];
 
@@ -51,22 +55,28 @@ offline is now possible on Android as well.
       // license is stored locally on device and loaded later.
     })
     .catch(error => {
-      // Persistent licenses are not supported on this platform yet.
+      // Our requested configuration is not supported on this platform yet.
     });
 
-You can try it yourself by checking out the [Sample Media PWA] and following
-these steps:
+You can try persistent licenses yourself by checking out the [Sample Media PWA]
+and following these steps:
 
 1. Go to [https://biograf-155113.appspot.com/ttt/episode-2/]
 2. Click "Make available offline" and wait for the video to be downloaded.
 3. Turn airplane mode on.
 4. Click the "Play" button and enjoy the video!
 
-Shaka Player, the JavaScript library for adaptive media formats (such as DASH
-and HLS) also has [a demo page] for you to try this out: Pick "Angel One
-(multicodec, multilingual, Widevine)", click the "Store" button in the "Offline"
-section, wait for it to be downloaded, turn airplane on and click the "Load"
-button.
+[Shaka Player], the JavaScript library for adaptive media formats (such as DASH
+and HLS) also has a demo for you to try Widevine L1 out:
+
+1. Go to [https://shaka-player-demo.appspot.com/demo/] and click "Allow" when prompted.
+2. Pick "Angel One (multicodec, multilingual, Widevine)".
+3. Enter `HW_SECURE_ALL` in the "Video Robustness" field of the "Configuration"
+   section.
+4. Click the "Store" button in the "Offline" section and wait for it to be
+   downloaded.
+5. Turn airplane mode on.
+6. Click the "Load" button and enjoy the video!
 
 Note: Widevine support is disabled in [Incognito mode] in Android. That way
 users do not inadvertently lose paid licenses when closing Incognito tabs.
@@ -159,9 +169,11 @@ more details.
 {% include "comment-widget.html" %}
 
 [Encrypted Media Extensions (EME)]: https://w3c.github.io/encrypted-media/
-[a demo page]: https://shaka-player-demo.appspot.com/demo/
+[Widevine Security Level 1]: https://storage.googleapis.com/wvdocs/Widevine_DRM_Architecture_Overview.pdf
 [Sample Media PWA]: https://github.com/GoogleChrome/sample-media-pwa
 [https://biograf-155113.appspot.com/ttt/episode-2/]: https://biograf-155113.appspot.com/ttt/episode-2/
+[Shaka Player]: https://github.com/google/shaka-player
+[https://shaka-player-demo.appspot.com/demo/]: https://shaka-player-demo.appspot.com/demo/
 [Incognito mode]: https://support.google.com/chrome/answer/7440301?co=GENIE.Platform%3DAndroid
 [previous article]: /web/updates/2017/07/chrome-61-media-updates#background-video-track-optimizations
 [the official sample]: https://googlechrome.github.io/samples/media/live-seekable-range.html
