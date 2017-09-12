@@ -7,6 +7,7 @@ description: A round up of the media (audio/video) updates in Chrome 58.
 {# wf_tags: news,chrome58,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
 {# wf_featured_snippet: Media controls customization, Autoplay for Progressive Web Apps added to the home screen, pause the autoplaying of muted video when invisible, and color-gamut media query are there! #}
+{# wf_blink_components: Blink>Media #}
 
 # Media (Audio/Video) Updates in Chrome 58 {: .page-title }
 

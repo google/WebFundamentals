@@ -7,6 +7,7 @@ description: A round up of the media (audio/video) updates in Chrome 61.
 {# wf_tags: news,chrome61,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
 {# wf_featured_snippet: Background video track optimizations and automatic video fullscreen when device is rotated are here! #}
+{# wf_blink_components: Blink>Media #}
 
 # Media (Audio/Video) Updates in Chrome 61 {: .page-title }
 
