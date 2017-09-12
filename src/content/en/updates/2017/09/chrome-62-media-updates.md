@@ -154,7 +154,7 @@ Here's how you can detect if FLAC in MP4 is supported for MSE:
 If you want to see a full example, check out [our official sample].
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/d/msg/blink-dev/ntoLfR7rbmE/3R1DQoBSAAAJ) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/features/5713014258925568) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5713014258925568) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=666000)
 
 ## Automatic video goes to fullscreen when the device is rotated {: #auto-fullscreen-rotate }
