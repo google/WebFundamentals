@@ -13,7 +13,7 @@ description: A round up of the media (audio/video) updates in Chrome 62.
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-- [Offline playback with DRM licenses](#offline-playback) is now supported on
+- [Offline playback with persistent licenses](#offline-playback) is now supported on
   Android.
 - Chrome now [disables video tracks when an MSE video is played in the
   background](#background-video-track-optimizations) to optimize performance.
@@ -68,9 +68,8 @@ and HLS) also has [a demo page] for you to try this out: Pick "Angel One
 section, wait for it to be downloaded, turn airplane on and click the "Load"
 button.
 
-Note: Support for protected content in incognito mode in Android has been
-disabled for now. This is to ensure that users do not inadvertently lose paid
-licenses when closing incognito tabs.
+Note: Widevine support is disabled in [Incognito mode] in Android. That way
+users do not inadvertently lose paid licenses when closing Incognito tabs.
 
 ## Background video track optimizations (MSE only) {: #background-video-track-optimizations}
 
@@ -163,6 +162,7 @@ more details.
 [a demo page]: https://shaka-player-demo.appspot.com/demo/
 [Sample Media PWA]: https://github.com/GoogleChrome/sample-media-pwa
 [https://biograf-155113.appspot.com/ttt/episode-2/]: https://biograf-155113.appspot.com/ttt/episode-2/
+[Incognito mode]: https://support.google.com/chrome/answer/7440301?co=GENIE.Platform%3DAndroid
 [previous article]: /web/updates/2017/07/chrome-61-media-updates#background-video-track-optimizations
 [the official sample]: https://googlechrome.github.io/samples/media/live-seekable-range.html
 [FLAC]: https://xiph.org/flac/
