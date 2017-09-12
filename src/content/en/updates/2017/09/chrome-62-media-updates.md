@@ -6,7 +6,7 @@ description: A round up of the media (audio/video) updates in Chrome 62.
 {# wf_published_on: 2017-09-12 #}
 {# wf_tags: news,chrome62,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Offline playback with persistent licenses and Widevine L1 on Android, video track optimizations, automatic video fullscreen when device is rotated, customizable seekable range on live MS streams, FLAC in MP4 with MSE are here! #}
 {# wf_blink_components: Blink>Media #}
 
 # Media (Audio/Video) Updates in Chrome 62 {: .page-title }
@@ -21,8 +21,6 @@ description: A round up of the media (audio/video) updates in Chrome 62.
   on live MSE streams.
 - Chrome now supports [FLAC in MP4 with MSE](#flac-in-mp4-with-mse).
 - Video will [go fullscreen when the device is rotated](#auto-fullscreen-rotate).
-
-- TODO: Media preload defaults to metadata
 
 ## Android: Persistent licenses and Widevine L1 {: #android }
 
@@ -90,7 +88,7 @@ Chrome now disables video tracks when the video is played in the background if
 the video uses [Media Source Extensions (MSE)]. Check out our [previous article]
 to learn more.
 
-## Customize seekable range on live MSE streams {: #seeakble }
+## Customize seekable range on live MSE streams {: #seekable }
 
 As you may already know, the <code>seekable</code> attribute contains the ranges
 of the media resource to which the browser can seek. Typically, it contains a
