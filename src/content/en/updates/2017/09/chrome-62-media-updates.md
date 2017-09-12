@@ -15,7 +15,7 @@ description: A round up of the media (audio/video) updates in Chrome 62.
 
 - [Offline playback with DRM licenses](#offline-playback) is now supported on
   Android.
-- Chrome now [disables video tracks when a MSE video is played in the
+- Chrome now [disables video tracks when an MSE video is played in the
   background](#background-video-track-optimizations) to optimize performance.
 - Web developers can [customize seekable range](#seekable)
   on live MSE streams.
@@ -32,7 +32,7 @@ memory without sending another license request to the server. This is how
 offline playback is supported in EME.
 
 Until now, Chrome OS was the only platform to support persistent licenses. It
-is not true anymore. Playing protected content through EME while device is
+is not true anymore. Playing protected content through EME while the device is
 offline is now possible on Android as well.
 
     const config = [{
@@ -58,14 +58,14 @@ You can try it yourself by checking out the [Sample Media PWA] and following
 these steps:
 
 1. Go to [https://biograf-155113.appspot.com/ttt/episode-2/]
-2. Click "Make available offline" and wait for video to be downloaded
-3. Turn airplane mode on
-4. Click "Play" button and enjoy the video!
+2. Click "Make available offline" and wait for the video to be downloaded.
+3. Turn airplane mode on.
+4. Click the "Play" button and enjoy the video!
 
 Shaka Player, the JavaScript library for adaptive media formats (such as DASH
-and HLS) has also [a demo page] for you to try this out: Pick "Angel One
-(multicodec, multilingual, Widevine)", click "Store" button in the "Offline"
-section, wait for it to be downloaded, turn airplane on and click "Load"
+and HLS) also has [a demo page] for you to try this out: Pick "Angel One
+(multicodec, multilingual, Widevine)", click the "Store" button in the "Offline"
+section, wait for it to be downloaded, turn airplane on and click the "Load"
 button.
 
 Note: Support for protected content in incognito mode in Android has been
@@ -84,9 +84,9 @@ to learn more.
 ## Customize seekable range on live MSE streams {: #seeakble }
 
 As you may already know, the <code>seekable</code> attribute contains the ranges
-of the media resource to which browser can seek. Typically, it contains a single
-time range which starts at 0 and ends at the media resource duration. If the
-duration is not available though, such as a live stream, the time range may
+of the media resource to which the browser can seek. Typically, it contains a
+single time range which starts at 0 and ends at the media resource duration. If
+the duration is not available though, such as a live stream, the time range may
 continuously change.
 
 The good news is that you can now more effectively customize the
@@ -95,7 +95,7 @@ providing or removing a single seekable range that is union'ed with the current
 buffered ranges. It results in a single seekable range which fits both, when
 the media source duration is <code>+Infinity</code>.
 
-In this code below, the media source has already been attached to a media
+In the code below, the media source has already been attached to a media
 element and contains only its init segment:
 
     const mediaSource = new MediaSource();
@@ -129,9 +129,9 @@ MSE events.
 ## FLAC in MP4 for MSE {: #flac-in-mp4-with-mse }
 
 The lossless audio coding format [FLAC] has been supported in regular media
-playback since Chrome 56. FLAC in ISO-BMFF support (aka FLAC in MP4) has been
-added shortly after. And now FLAC in MP4 is available in Chrome 62 for 
-[Media Source Extensions (MSE)].
+playback since Chrome 56. FLAC in ISO-BMFF support (aka FLAC in MP4) was added
+shortly after. And now FLAC in MP4 is available in Chrome 62 for [Media Source
+Extensions (MSE)].
 
 For info, Firefox folks are the ones who developed and implemented support for
 a [FLAC in MP4 encapsulation spec], and the BBC has been experimenting with
