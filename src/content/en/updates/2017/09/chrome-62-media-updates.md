@@ -13,8 +13,8 @@ description: A round up of the audio/video updates in Chrome 62.
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-- [Offline playback with persistent licenses](#android) and [Widevine
-  L1](#android) are now supported on Android.
+- [Offline playback with persistent licenses](#persistent_licenses) and [Widevine
+  L1](#widevine_l1) are now supported on Android.
 - Chrome now [disables video tracks when an MSE video is played in the
   background](#background-video-track-optimizations) to optimize performance.
 - Web developers can [customize seekable range](#seekable)
@@ -23,6 +23,8 @@ description: A round up of the audio/video updates in Chrome 62.
 - Video will [go fullscreen when the device is rotated](#auto-fullscreen-rotate).
 
 ## Android: Persistent licenses and Widevine L1 {: #android }
+
+### Persistent licenses
 
 Persistent license in [Encrypted Media Extensions (EME)] means the license can
 be persisted on the device so that applications can load the license into
@@ -33,15 +35,11 @@ Until now, Chrome OS was the only platform to support persistent licenses. It
 is not true anymore. Playing protected content through EME while the device is
 offline is now possible on Android as well.
 
-How can it be better? That's simple, [Widevine Security Level 1] (aka Widevine
-L1) support has been added in Chrome for Android so that media can be played in
-the most secure way.
-
     const config = [{
       sessionTypes: ['persistent-license'],
       videoCapabilities: [{
         contentType: 'video/webm; codecs="vp9"',
-        robustness: 'HW_SECURE_ALL' // Widevine L1
+        robustness: 'SW_SECURE_DECODE' // Widevine L3
       }]
     }];
 
@@ -53,7 +51,7 @@ the most secure way.
       // license is stored locally on device and loaded later.
     })
     .catch(error => {
-      // Our requested configuration is not supported on this platform yet.
+      // Persistent licenses are not supported on this platform yet.
     });
 
 You can try persistent licenses yourself by checking out the [Sample Media PWA]
@@ -64,8 +62,40 @@ and following these steps:
 3. Turn airplane mode on.
 4. Click the "Play" button and enjoy the video!
 
+Note: Widevine support is disabled in [Incognito mode] in Android. That way
+users do not inadvertently lose paid licenses when closing Incognito tabs.
+
+### Widevine L1
+
+As you may already know, all Android devices are required to support Widevine
+Security Level 3 (Widevine L3). However there are many devices out there
+that also support the highest security level: [Widevine Security Level 1]
+(Widevine L1) where all content processing, cryptography, and control is
+performed within the Trusted Execution Environment (TEE).
+
+Good news! Widevine L1 is now supported in Chrome for Android so that media can
+be played in the most secure way. Note that it was supported already on Chrome
+OS.
+
+    const config = [{
+      videoCapabilities: [{
+        contentType: 'video/webm; codecs="vp9"',
+        robustness: 'HW_SECURE_ALL' // Widevine L1
+      }]
+    }];
+
+    // Chrome will prompt user if website is allowed to uniquely identify
+    // user's device to play protected content.
+    navigator.requestMediaKeySystemAccess('com.widevine.alpha', config)
+    .then(access => {
+      // User will be able to watch encrypted content in the most secure way.
+    })
+    .catch(error => {
+      // Widevine L1 is not supported on this platform yet.
+    });
+
 [Shaka Player], the JavaScript library for adaptive media formats (such as DASH
-and HLS) also has a demo for you to try Widevine L1 out:
+and HLS) has a demo for you to try Widevine L1 out:
 
 1. Go to [https://shaka-player-demo.appspot.com/demo/] and click "Allow" when prompted.
 2. Pick "Angel One (multicodec, multilingual, Widevine)".
@@ -75,9 +105,6 @@ and HLS) also has a demo for you to try Widevine L1 out:
    downloaded.
 5. Turn airplane mode on.
 6. Click the "Load" button and enjoy the video!
-
-Note: Widevine support is disabled in [Incognito mode] in Android. That way
-users do not inadvertently lose paid licenses when closing Incognito tabs.
 
 ## Background video track optimizations (MSE only) {: #background-video-track-optimizations}
 
