@@ -22,9 +22,7 @@ description: A round up of the audio/video updates in Chrome 62.
 - Chrome now supports [FLAC in MP4 with MSE](#flac-in-mp4-with-mse).
 - Video will [go fullscreen when the device is rotated](#auto-fullscreen-rotate).
 
-## Android: Persistent licenses and Widevine L1 {: #android }
-
-### Persistent licenses
+## Persistent licenses for Android {: #persistent_licenses }
 
 Persistent license in [Encrypted Media Extensions (EME)] means the license can
 be persisted on the device so that applications can load the license into
@@ -65,7 +63,7 @@ and following these steps:
 Note: Widevine support is disabled in [Incognito mode] in Android. That way
 users do not inadvertently lose paid licenses when closing Incognito tabs.
 
-### Widevine L1
+## Widevine L1 for Android {: #widevine_l1 }
 
 As you may already know, all Android devices are required to support Widevine
 Security Level 3 (Widevine L3). However there are many devices out there
