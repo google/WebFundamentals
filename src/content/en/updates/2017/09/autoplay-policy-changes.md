@@ -18,11 +18,18 @@ you why and how this is going to affect video playback with sound. Spoiler
 alert: Users are going to love it!
 
 <figure>
-  <img src="https://i.imgur.com/mctNpMj.png"
-       alt="Internet memes tagged autoplay">
+  <a href="https://imgflip.com/i/ngd6c">
+    <img height="241px" src="https://i.imgflip.com/ngd6c.jpg" title="I will find you and I will pause you"/>
+  </a>
+  <a href="https://imgur.com/9pj5LGN">
+    <img height="241px" src="http://i.imgur.com/9pj5LGN.jpg" title="Angry Samuel L Jackson - i don't remember asking you to autoplay a goddamn thing"/>
+  </a>
+  <a href="https://imgur.com/a/p1ZjC">
+    <img height="241px" src="https://i.imgur.com/aFO9wAml.jpg" title="One does not simply autoplay videos"/>
+  </a>
   <figcaption>
     <b>Figure 1.</b>
-    Internet memes on <a href="https://imgur.com/mctNpMj">Imgur</a>
+    Internet memes tagged "autoplay" found on <a href="https://imgflip.com">Imgflip</a> and <a href="https://imgur.com">Imgur</a>
   </figcaption>
 </figure>
 
