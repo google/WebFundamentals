@@ -13,7 +13,7 @@ description: Learn best practices for good user experiences with the new autopla
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-Chrome's autoplay policies are about to change in 2018 and I'm here to tell
+Chrome's autoplay policies will in 2018 and I'm here to tell
 you why and how this is going to affect video playback with sound. Spoiler
 alert: Users are going to love it!
 
