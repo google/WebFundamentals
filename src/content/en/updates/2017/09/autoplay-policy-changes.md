@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome.
 
-{# wf_updated_on: 2017-09-06 #}
-{# wf_published_on: 2017-09-06 #}
+{# wf_updated_on: 2017-09-13 #}
+{# wf_published_on: 2017-09-13 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
 {# wf_featured_snippet: Learn best practices for good user experiences with the new autoplay policies in Chrome. #}
@@ -19,17 +19,22 @@ alert: Users are going to love it!
 
 <figure>
   <a href="https://imgflip.com/i/ngd6c">
-    <img height="241px" src="https://i.imgflip.com/ngd6c.jpg" title="I will find you and I will pause you"/>
+    <img height="241px" src="https://i.imgflip.com/ngd6c.jpg"
+         title="I will find you and I will pause you"/>
   </a>
   <a href="https://imgur.com/9pj5LGN">
-    <img height="241px" src="http://i.imgur.com/9pj5LGN.jpg" title="Angry Samuel L Jackson - i don't remember asking you to autoplay a goddamn thing"/>
+    <img height="241px" src="http://i.imgur.com/9pj5LGN.jpg"
+         title="I don't remember asking you to autoplay a goddamn thing"/>
   </a>
   <a href="https://imgur.com/a/p1ZjC">
-    <img height="241px" src="https://i.imgur.com/aFO9wAml.jpg" title="One does not simply autoplay videos"/>
+    <img height="241px" src="https://i.imgur.com/aFO9wAml.jpg"
+         title="One does not simply autoplay videos"/>
   </a>
   <figcaption>
     <b>Figure 1.</b>
-    Internet memes tagged "autoplay" found on <a href="https://imgflip.com">Imgflip</a> and <a href="https://imgur.com">Imgur</a>
+    Internet memes tagged "autoplay" found on
+    <a href="https://imgflip.com">Imgflip</a> and
+    <a href="https://imgur.com">Imgur</a>
   </figcaption>
 </figure>
 
