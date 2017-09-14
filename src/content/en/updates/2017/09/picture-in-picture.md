@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Let's discuss about a Web API that would allow websites to create a floating video window over the desktop.
+description: Let's discuss a Web API that would allow websites to create a floating video window over the desktop.
 
 {# wf_updated_on: 2017-09-12 #}
 {# wf_published_on: 2017-09-12 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/generic/picture-in-picture.png #}
-{# wf_featured_snippet: Let's discuss about a Web API that would allow websites to create a floating video window over the desktop #}
+{# wf_featured_snippet: Let's discuss a Web API that would allow websites to create a floating video window over the desktop #}
 {# wf_blink_components: Blink>Media #}
 
 # Picture In Picture (PiP) {: .page-title }
@@ -17,7 +17,7 @@ Since April 2017, Chrome for [Android O supports Picture In Picture]. It allows
 users to play a `<video>` element in a small overlay window that isn't blocked
 by other windows, so that they can watch while doing other things.
 
-Here's how it works: Open Chrome, go to a website that contains a video and
+Here's how it works: open Chrome, go to a website that contains a video and
 play it fullscreen. From there, press the Home button to go to your Android
 Home Screen and the playing video will automatically transition to Picture In
 Picture. That's all! Pretty cool right?
@@ -70,7 +70,7 @@ And this is how it could look like:
       });
     </script>
 
-Warning: Code above is not implemented by browsers yet.
+Warning: The code above is not implemented by browsers yet.
 
 ## Feedback
 
@@ -79,10 +79,10 @@ So what do you think? Please submit your feedback and raise issues in the
 
 ## Preventing Android's default PIP behavior
 
-Today, you can prevent video from Android's defaut PiP behavior in Chrome by
-responding to a resize event, and detecting when the window size has changed
-significantly. This is a not recommended as a permanent solution but provides a
-temporary option until the Web API is implemented.
+Today, you can prevent video from using Android's default PiP behavior in
+Chrome by responding to a resize event, and detecting when the window size has
+changed significantly (see code below). This is not recommended as a permanent
+solution but provides a temporary option until the Web API is implemented.
 
     // See whether resize is small enough to be PiP. It's a hack, but it'll
     // work for now.
