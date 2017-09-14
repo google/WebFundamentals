@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Generic Sensor API available for Origin Trials in Chome 62.
+description: Generic Sensor API is available for Origin Trials in Chome 62.
 
 {# wf_updated_on: 2017-09-20 #}
 {# wf_published_on: 2017-09-20 #}
 {# wf_tags: sensors,origintrials,chrome62,news #}
 {# wf_blink_components: Blink>Sensor #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
-{# wf_featured_snippet: Generic Sensor API available for Origin Trials in Chome 62. #}
+{# wf_featured_snippet: Generic Sensor API is available for Origin Trials in Chome 62. #}
 
 # Sensors For The Web! {: .page-title }
 
@@ -15,7 +15,7 @@ description: Generic Sensor API available for Origin Trials in Chome 62.
 {% include "web/_shared/contributors/pozdnyakov.html" %}
 
 Today, sensor data is used in many native applications to enable use cases such
-as immersive gaming, fitness tracking, augmented or virtual reality. Wouldn't
+as immersive gaming, fitness tracking, and augmented or virtual reality. Wouldn't
 it be cool to bridge the gap between native and web applications? The [Generic Sensor
 API](https://www.w3.org/TR/generic-sensor/), FTW!
 
@@ -36,7 +36,7 @@ Typically a concrete sensor class represents an actual sensor on the platform
 e.g., accelerometer or gyroscope. However, in some cases, implementation of a
 sensor class [fuses](https://w3c.github.io/sensors/#sensor-fusion) data from
 several platform sensors and exposes the result in a convenient way to the user.
-For example,
+For example, the
 [AbsoluteOrientation](https://www.w3.org/TR/orientation-sensor/#absoluteorientationsensor)
  sensor provides ready-to-use 4x4 rotation matrix based on the data obtained
 from accelerometer, gyroscope and magnetometer.
@@ -108,7 +108,7 @@ will need to [request a token](http://bit.ly/OriginTrialSignup), so that the
 feature would be automatically enabled for your origin, without the need to
 enable chrome flag.
 
-Need to renew origin trial token? No worries, use [this form](https://docs.google.com/forms/d/e/1FAIpQLSdYpXiwmj8_Y0QV8KizE7V67Ylv2GaDRjb2pp-P1knybNtDsg/viewform?fbzx=-465752095663733600)
+Need to renew origin trial token? No worries. Use [this form](https://docs.google.com/forms/d/e/1FAIpQLSdYpXiwmj8_Y0QV8KizE7V67Ylv2GaDRjb2pp-P1knybNtDsg/viewform?fbzx=-465752095663733600)
 to renew your token and don't forget to leave your valuable feedback.
 
 ## What are all these sensors? How can I use them? {: #what-are-sensors-how-to-use-them }
@@ -116,9 +116,9 @@ to renew your token and don't forget to leave your valuable feedback.
 Sensors is a quite specific area which might need a brief introduction to the
 people who never used them before. If you are familiar with sensors, you can
 jump right to the [hands-on coding section](#lets-code). Otherwise, let’s look at each
-supported sensor in more detail.
+supported sensor in detail.
 
-### Accelerometer and Linear acceleration sensor {: #acceleration-and-linear-accelerometer-sensor }
+### Accelerometer and linear acceleration sensor {: #acceleration-and-linear-accelerometer-sensor }
 
 <div class="attempt-right">
   <figure>
@@ -238,7 +238,7 @@ Here are few snippets:
     // Somewhere in rendering code, update vertex shader attribute for the model
     gl.uniformMatrix4fv(modMatrixAttr, false, modMatrix);
 
-Orientation sensors enable various use cases, such as, immersive gaming,
+Orientation sensors enable various use cases, such as immersive gaming,
 augmented and virtual reality.
 
 For more information about motion sensors, advanced use cases and requirements,
@@ -339,7 +339,7 @@ acceleration function.
 </figure>
 
 
-## Privacy and Security {: privacy-and-security }
+## Privacy and security {: privacy-and-security }
 
 Sensor readings are sensitive data which can be subject to various attacks from
 malicious web pages. Chrome implementation of Generic Sensor APIs embarked on
@@ -351,17 +351,17 @@ so let’s briefly enumerate them.
 
 Because Generic Sensor API is a powerful new feature added to the Web, Chrome
 aims to make it available only to secure contexts. In practice it means that
-in order to use Generic Sensor API you'll need to access your page through
+to use Generic Sensor API you'll need to access your page through
 HTTPS. During the development you can do so via http://localhost but for
 production deployment you'll need to have HTTPS set up on your server. See
 Security with
 [HTTPS article](/web/fundamentals/security/)
  for best practices and guidelines there.
 
-### Only main frame
+### Only the main frame
 
 To prevent iframes from reading sensor data the Sensor objects can be created
-only within main frame context.
+only within a main frame.
 
 ### Sensor readings delivery can be suspended
 
@@ -374,7 +374,7 @@ main frame cannot infer user input.
 
 There is a set of already specified sensor classes to be implemented in nearest
 future such as [Proximity sensor](https://w3c.github.io/proximity/) and
- [Gravity sensor](https://w3c.github.io/accelerometer/#gravitysensor-interface),
+ [Gravity sensor](https://w3c.github.io/accelerometer/#gravitysensor-interface);
 however thanks to the great extensibility of Generic Sensor framework we can
 anticipate appearance of even more new classes representing various sensor types.
 
@@ -390,11 +390,11 @@ The sensor specifications are in active development and we need your feedback to
 make sure that this development goes in the right direction. Try the APIs either
 by enabling runtime [flags](#generic-sensor-api-in-chrome) in Chrome or taking part
 in the [origin trial](#motion-sensors-origin-trials) and share your experience.
-Let us know what features would be great to add there for your application
+Let us know what features would be great to add for your application
 purposes or if there is something you would modify in the API shape.
 
-Please fill the [survey form](https://docs.google.com/forms/d/e/1FAIpQLSdGKPzubbOaDSgjpre9Pxw6Hr1xwYIwgZEsuUOmbs6JPwvcBQ/viewform)
-, also feel free to file [specification issues](https://github.com/w3c/sensors/issues/new)
+Please fill the [survey](https://docs.google.com/forms/d/e/1FAIpQLSdGKPzubbOaDSgjpre9Pxw6Hr1xwYIwgZEsuUOmbs6JPwvcBQ/viewform)
+. Also feel free to file [specification issues](https://github.com/w3c/sensors/issues/new)
 as well as [bugs](https://bugs.chromium.org/p/chromium/issues/entry)
 for the Chrome implementation.
 
