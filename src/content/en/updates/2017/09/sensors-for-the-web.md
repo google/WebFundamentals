@@ -17,18 +17,18 @@ description: Generic Sensor API is available for Origin Trials in Chome 62.
 Today, sensor data is used in many native applications to enable use cases such
 as immersive gaming, fitness tracking, and augmented or virtual reality. Wouldn't
 it be cool to bridge the gap between native and web applications? The [Generic Sensor
-API](https://www.w3.org/TR/generic-sensor/), FTW!
+API](https://www.w3.org/TR/generic-sensor/), For The Web!
 
 ## What is Generic Sensor API? {: #what-is-generic-sensor-api }
 
 The [Generic Sensor API](https://www.w3.org/TR/generic-sensor/) is a set of
 interfaces which expose sensor devices to the web platform. The API consists
 of the base [Sensor](https://w3c.github.io/sensors/#the-sensor-interface)
- interface and a set of concrete sensor classes built on top. Having a base
+interface and a set of concrete sensor classes built on top. Having a base
 interface simplifies the implementation and specification process for the
 concrete sensor classes. For instance, take a look at the
 [Gyroscope](https://w3c.github.io/gyroscope/#gyroscope-interface)
- class, it is super tiny! The core functionality is specified by the base
+class, it is super tiny! The core functionality is specified by the base
 interface, and Gyroscope merely extends it with three attributes representing
 angular velocity.
 
@@ -38,13 +38,13 @@ sensor class [fuses](https://w3c.github.io/sensors/#sensor-fusion) data from
 several platform sensors and exposes the result in a convenient way to the user.
 For example, the
 [AbsoluteOrientation](https://www.w3.org/TR/orientation-sensor/#absoluteorientationsensor)
- sensor provides ready-to-use 4x4 rotation matrix based on the data obtained
-from accelerometer, gyroscope and magnetometer.
+sensor provides a ready-to-use 4x4 rotation matrix based on the data obtained
+from the accelerometer, gyroscope and magnetometer.
 
 You might think that the web platform already provides sensor data and you are
-absolutely right! For instance, [DeviceMotion](https://www.w3.org/TR/2016/CR-orientation-event-20160818/#devicemotion)
- and [DeviceOrientation](https://www.w3.org/TR/2016/CR-orientation-event-20160818/#deviceorientation)
- events expose motion sensor data, while other experimental APIs provide data
+absolutely right! For instance, [DeviceMotion](/web/fundamentals/native-hardware/device-orientation/)
+and [DeviceOrientation](/web/fundamentals/native-hardware/device-orientation/)
+events expose motion sensor data, while other experimental APIs provide data
 from an environmental sensors. So why do we need new API?
 
 Comparing to the existing interfaces, Generic Sensor API provides great
@@ -54,8 +54,8 @@ number of advantages:
   with new sensor classes and each of these classes will keep the generic
   interface. The client code written for one sensor type can be
   reused for another one with very few modifications!
-- You can configure the desired sensor data. For example, request sensor reading
-  delivery rate suitable for your application needs.
+- You can configure sensor, for example, set the sampling frequency suitable for your
+  application needs.
 - You can detect whether a sensor is available on the platform.
 - Sensor readings have high precision timestamps, enabling better
   synchronization with other activities in your application.
@@ -65,7 +65,7 @@ number of advantages:
   Navigator nor Window objects), and it opens up future opportunities of using
   the same API within service workers or implementing Generic Sensor API in headless
   JS runtimes, for instance, on embedded devices.
-- [Security and privacy](#privacy_and_security) aspects are the top priority
+- [Security and privacy](#privacy-and-security) aspects are the top priority
   for the Generic Sensor API and provide much better security level compared to
   older sensor APIs. There is integration with Permissions API.
 
@@ -102,21 +102,20 @@ More information on browser implementation status can be found on
 
 ## Motion sensors are available as an origin trial {: #motion-sensors-origin-trials }
 
-In order to get your valuable feedback, the Generic Sensor API would be
+In order to get your valuable feedback, the Generic Sensor API will be
 available in Chrome 62 as an [origin trial](https://bit.ly/OriginTrials). You
 will need to [request a token](http://bit.ly/OriginTrialSignup), so that the
 feature would be automatically enabled for your origin, without the need to
-enable chrome flag.
+enable Chrome flag.
 
-Need to renew origin trial token? No worries. Use [this form](https://docs.google.com/forms/d/e/1FAIpQLSdYpXiwmj8_Y0QV8KizE7V67Ylv2GaDRjb2pp-P1knybNtDsg/viewform?fbzx=-465752095663733600)
+Need to renew your origin trial token? No worries. Use [this form](https://docs.google.com/forms/d/e/1FAIpQLSdYpXiwmj8_Y0QV8KizE7V67Ylv2GaDRjb2pp-P1knybNtDsg/viewform?fbzx=-465752095663733600)
 to renew your token and don't forget to leave your valuable feedback.
 
 ## What are all these sensors? How can I use them? {: #what-are-sensors-how-to-use-them }
 
-Sensors is a quite specific area which might need a brief introduction to the
-people who never used them before. If you are familiar with sensors, you can
-jump right to the [hands-on coding section](#lets-code). Otherwise, let’s look at each
-supported sensor in detail.
+Sensors is a quite specific area which might need a brief introduction. If you are familiar with
+sensors, you can jump right to the [hands-on coding section](#lets-code). Otherwise, let’s look at
+each supported sensor in detail.
 
 ### Accelerometer and linear acceleration sensor {: #acceleration-and-linear-accelerometer-sensor }
 
@@ -132,7 +131,7 @@ The [Accelerometer](https://www.w3.org/TR/accelerometer/#intro) sensor measures
 acceleration of a device hosting the sensor on three axes (X, Y and Z). This
 sensor is an inertial sensor, meaning that when the device is in linear free
 fall, the total measured acceleration would be 0 m/s<sup>2</sup>, and when a
-device lies flat on a table, the acceleration in upwards direction (Z axis)
+device lying flat on a table, the acceleration in upwards direction (Z axis)
 will be equal to the Earth’s gravity, i.e. g ≈ +9.8 m/s<sup>2</sup> as it is
 measuring the force of the table pushing the device upwards. If you push
 device to the right, acceleration on X axis would be positive, or negative
@@ -148,7 +147,7 @@ orientation sensors.
 The [LinearAccelerationSensor](https://w3c.github.io/accelerometer/#linearaccelerationsensor-interface)
 measures acceleration that is applied to the device hosting the sensor,
 excluding the contribution of a gravity force. When a device is at rest, for
-instance, lies flat on the table, sensor would measure ≈ 0 m/s<sup>2</sup>
+instance, lying flat on the table, the sensor would measure ≈ 0 m/s<sup>2</sup>
 acceleration on three axes.
 
 ### Gyroscope {: #gyroscope-sensor }
@@ -165,16 +164,16 @@ The [Gyroscope](https://w3c.github.io/gyroscope/#intro) sensor measures angular
 velocity in rad/s around the device’s local X, Y and Z axis. Most of the
 consumer devices have mechanical
 ([MEMS](https://en.wikipedia.org/wiki/Microelectromechanical_systems))
- gyroscopes, which are inertial sensors that measure rotation rate based on
+gyroscopes, which are inertial sensors that measure rotation rate based on
 [inertial Coriolis force](https://en.wikipedia.org/wiki/Coriolis_force). A MEMS
 gyroscopes are prone to drift that is caused by sensor’s gravitational
-sensitivity which deforms sensor’s internal mechanical system. Gyroscopes
-oscillate at relative high frequencies e.g., 10’s of kHz, therefore, might
+sensitivity which deforms the sensor’s internal mechanical system. Gyroscopes
+oscillate at relative high frequencies, e.g., 10’s of kHz, and therefore, might
 consume more power compared to other sensors.
 
 <div class="clearfix"></div>
 
-### Orientation sensors {: orientation-sensors }
+### Orientation sensors {: #orientation-sensors }
 
 <div class="attempt-right">
   <figure>
@@ -185,16 +184,16 @@ consume more power compared to other sensors.
 </div>
 
 The [AbsoluteOrientationSensor](https://w3c.github.io/orientation-sensor/#orientationsensor-interface)
- is a fusion sensor that measures rotation of a device in relation to the
+is a fusion sensor that measures rotation of a device in relation to the
 Earth’s coordinate system, while the
 [RelativeOrientationSensor](https://w3c.github.io/orientation-sensor/#relativeorientationsensor-interface)
- provides data representing rotation of a device hosting motion sensors in
+provides data representing rotation of a device hosting motion sensors in
 relation to a stationary reference coordinate system.
 
 All modern 3D JavaScript frameworks support quaternions and rotation matrices
-to represent rotation, however, if you use WebGL directly,
-[OrientationSensor](https://w3c.github.io/orientation-sensor/#orientationsensor-populatematrix)
- interface has convenient methods for WebGL compatible rotation matrices.
+to represent rotation; however, if you use WebGL directly,
+the [OrientationSensor](https://w3c.github.io/orientation-sensor/#orientationsensor-populatematrix)
+interface has convenient methods for WebGL compatible rotation matrices.
 Here are few snippets:
 
 <div class="clearfix"></div>
@@ -241,27 +240,27 @@ Here are few snippets:
 Orientation sensors enable various use cases, such as immersive gaming,
 augmented and virtual reality.
 
-For more information about motion sensors, advanced use cases and requirements,
+For more information about motion sensors, advanced use cases, and requirements,
 please check [motion sensors explainer](https://www.w3.org/TR/motion-sensors/)
 document.
 
 ## Let’s code! {: #lets-code }
 
 The Generic Sensor API is very simple and easy-to-use! The Sensor interface has
-<code>[start()](https://w3c.github.io/sensors/#sensor-start)</code> and 
-<code>[stop()](https://w3c.github.io/sensors/#sensor-stop)</code>  methods to control sensor state
+[`start()`](https://w3c.github.io/sensors/#sensor-start) and 
+[`stop()`](https://w3c.github.io/sensors/#sensor-stop) methods to control sensor state
 and several event handlers for receiving notifications about sensor activation, errors and newly
 available readings. The concrete sensor classes usually add their specific reading attributes to
 the base class.
 
 ### Development environment
 
-During the development you'll be able to use sensors through `localhost`. The simplest way is to
+During development you'll be able to use sensors through `localhost`. The simplest way is to
 serve your web application using [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb).
-If you are developing for mobile device, set up [port forwarding](/web/tools/chrome-devtools/remote-debugging/local-server)
+If you are developing for mobile devices, set up [port forwarding](/web/tools/chrome-devtools/remote-debugging/local-server)
 for your local server, and you are ready to rock!
 
-When your code is ready, you would need to deploy it on a server that supports HTTPS.
+When your code is ready, deploy it on a server that supports HTTPS.
 [GitHub Pages](https://pages.github.com/) are served over HTTPS, making it a great place to share
 your demos.
 
@@ -270,12 +269,12 @@ Note: Don't forget to enable [Generic Sensor API](#generic-sensor-api-in-chrome)
 ### 3D model rotation
 
 In this simple example, we use the data from an absolute orientation sensor to
-modify rotation quaternion of a 3D model. The <code>model</code> is a three.js
-<code>[Object3D](https://threejs.org/docs/index.html#api/core/Object3D)</code> class instance
-that has <code>[quaternion](https://threejs.org/docs/index.html#api/core/Object3D.quaternion)</code>
+modify the rotation quaternion of a 3D model. The `model` is a three.js
+[`Object3D`](https://threejs.org/docs/index.html#api/core/Object3D) class instance that
+has a [`quaternion`](https://threejs.org/docs/index.html#api/core/Object3D.quaternion)
 property. The following code snippet from the
- [orientation phone](https://github.com/intel/generic-sensor-demos/tree/master/orientation-phone)
-demo, illustrates how absolute orientation sensor can be used to rotate 3D model.
+[orientation phone](https://github.com/intel/generic-sensor-demos/tree/master/orientation-phone)
+demo, illustrates how the absolute orientation sensor can be used to rotate a 3D model.
 
     function initSensor() {
         sensor = new AbsoluteOrientationSensor({frequency: 60});
@@ -288,7 +287,7 @@ demo, illustrates how absolute orientation sensor can be used to rotate 3D model
         sensor.start();
     }
 
-Device's orientation will be reflected in 3D <code>model</code> rotation within the WebGL scene.
+The device's orientation will be reflected in 3D `model` rotation within the WebGL scene.
 
 <figure align="center">
   <img src="/web/updates/images/2017/09/sensors/orientation_phone.png"
@@ -300,35 +299,33 @@ Device's orientation will be reflected in 3D <code>model</code> rotation within 
 
 The following code snippet is extracted from the
 [punchmeter demo](https://github.com/intel/generic-sensor-demos/tree/master/punchmeter),
-illustrating how linear acceleration sensor can be used to calculate the maximum
+illustrating how the linear acceleration sensor can be used to calculate the maximum
 velocity of a device under the assumption that it is initially laying still.
 
-```
-   this.maxSpeed = 0;
-   this.vx = 0;
+    this.maxSpeed = 0;
+    this.vx = 0;
+    this.ax = 0;
+    this.t = 0;
 
-   this.ax = 0;
-   this.t = 0;
+    function onreading() {
+        let dt = (this.accel.timestamp - this.t) * 0.001; // In seconds.
+        this.vx += (this.accel.x + this.ax) / 2 * dt;
 
-   function onreading() {
-     let dt = (this.accel.timestamp - this.t) * 0.001; // In seconds.
-     this.vx += (this.accel.x + this.ax) / 2 * dt;
+        let speed = Math.abs(this.vx);
 
-     let speed = Math.abs(this.vx);
+        if (this.maxSpeed < speed) {
+            this.maxSpeed = speed;
+        }
 
-     if (this.maxSpeed < speed)
-       this.maxSpeed = speed;
+        this.t = this.accel.timestamp;
+        this.ax = this.accel.x;
+    }
 
-     this.t = this.accel.timestamp;
-     this.ax = this.accel.x;
-   }
-   ....
+    ....
 
-   this.accel.addEventListener('reading', onreading);
+    this.accel.addEventListener('reading', onreading);
 
-```
-
-The current velocity is calculated as an approximation to integral of the
+The current velocity is calculated as an approximation to the integral of the
 acceleration function.
 
 
@@ -339,24 +336,21 @@ acceleration function.
 </figure>
 
 
-## Privacy and security {: privacy-and-security }
+## Privacy and security {: #privacy-and-security }
 
 Sensor readings are sensitive data which can be subject to various attacks from
-malicious web pages. Chrome implementation of Generic Sensor APIs embarked on
+malicious web pages. Chrome's implementation of Generic Sensor APIs enforces
 few limitations to mitigate the possible security and privacy risks. These
 limitations must be taken into account by developers who intend to use the API,
-so let’s briefly enumerate them.
+so let’s briefly list them.
 
 ### Only HTTPS
 
-Because Generic Sensor API is a powerful new feature added to the Web, Chrome
-aims to make it available only to secure contexts. In practice it means that
-to use Generic Sensor API you'll need to access your page through
-HTTPS. During the development you can do so via http://localhost but for
-production deployment you'll need to have HTTPS set up on your server. See
-Security with
-[HTTPS article](/web/fundamentals/security/)
- for best practices and guidelines there.
+Because Generic Sensor API is a powerful feature, Chrome only allows it on secure contexts.
+In practice it means that to use Generic Sensor API you'll need to access your page
+through HTTPS. During development you can do so via http://localhost but for production
+you'll need to have HTTPS on your server. See Security with [HTTPS article](/web/fundamentals/security/)
+for best practices and guidelines there.
 
 ### Only the main frame
 
@@ -370,11 +364,11 @@ is actually interacting with it. Moreover, sensor data would not be provided
 if the user focuses from a main frame to a cross-origin iframe, so that the
 main frame cannot infer user input.
 
-## What’s next? {: whats-next }
+## What’s next? {: #whats-next }
 
-There is a set of already specified sensor classes to be implemented in nearest
+There is a set of already specified sensor classes to be implemented in the near
 future such as [Proximity sensor](https://w3c.github.io/proximity/) and
- [Gravity sensor](https://w3c.github.io/accelerometer/#gravitysensor-interface);
+[Gravity sensor](https://w3c.github.io/accelerometer/#gravitysensor-interface);
 however thanks to the great extensibility of Generic Sensor framework we can
 anticipate appearance of even more new classes representing various sensor types.
 
@@ -390,8 +384,8 @@ The sensor specifications are in active development and we need your feedback to
 make sure that this development goes in the right direction. Try the APIs either
 by enabling runtime [flags](#generic-sensor-api-in-chrome) in Chrome or taking part
 in the [origin trial](#motion-sensors-origin-trials) and share your experience.
-Let us know what features would be great to add for your application
-purposes or if there is something you would modify in the API shape.
+Let us know what features would be great to add or if there is something you would like to
+modify in the current API.
 
 Please fill the [survey](https://docs.google.com/forms/d/e/1FAIpQLSdGKPzubbOaDSgjpre9Pxw6Hr1xwYIwgZEsuUOmbs6JPwvcBQ/viewform)
 . Also feel free to file [specification issues](https://github.com/w3c/sensors/issues/new)
@@ -402,8 +396,8 @@ for the Chrome implementation.
 - Demo projects: [https://intel.github.io/generic-sensor-demos/](https://intel.github.io/generic-sensor-demos/)
 - Generic Sensor API specification: [https://w3c.github.io/sensors/](https://w3c.github.io/sensors/)
 - Specification issues: [https://github.com/w3c/sensors/issues](https://github.com/w3c/sensors/issues)
-- W3C working group mailing list: [public-device-apis@w3.org](public-device-apis@w3.org )
-- Chrome Feature Status: [https://www.chromestatus.com/feature/5698781827825664](https://www.chromestatus.com/feature/5698781827825664 )
+- W3C working group mailing list: [public-device-apis@w3.org](public-device-apis@w3.org)
+- Chrome Feature Status: [https://www.chromestatus.com/feature/5698781827825664](https://www.chromestatus.com/feature/5698781827825664)
 - Implementation Bugs: [http://crbug.com?q=component:Blink>Sensor](http://crbug.com?q=component:Blink>Sensor)
 - Sensors-dev Google group: [https://groups.google.com/a/chromium.org/forum/#!forum/sensors-dev](https://groups.google.com/a/chromium.org/forum/#!forum/sensors-dev)
 
