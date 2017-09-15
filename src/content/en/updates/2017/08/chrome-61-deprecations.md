@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 61 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-{# wf_updated_on: 2017-08-04 #}
+{# wf_updated_on: 2017-09-15 #}
 {# wf_published_on: 2017-08-03 #}
 {# wf_tags: deprecations,removals,chrome61 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -39,7 +39,7 @@ URL should instead escape these characters.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5735596811091968) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=680970)
 
-## Remove usage of notifications from insecure iframes
+### Remove usage of notifications from insecure iframes
 
 Permission requests from iframes can confuse users since it is difficult to
 distinguish between the containing page's origin and the origin of the iframe
@@ -58,7 +58,7 @@ notification permission.
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693) 
 
 
-## Deprecate and remove Presentation API on insecure contexts
+### Deprecate and remove Presentation API on insecure contexts
 
 It's been found that on insecure origins, the Presentation API can be used as a
 hacking vector on insecure origins. Since displays don't have address bars the
