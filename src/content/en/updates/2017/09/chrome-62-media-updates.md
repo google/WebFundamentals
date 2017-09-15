@@ -198,7 +198,7 @@ more details.
 [previous article]: /web/updates/2017/07/chrome-61-media-updates#background-video-track-optimizations
 [the official sample]: https://googlechrome.github.io/samples/media/live-seekable-range.html
 [FLAC]: https://xiph.org/flac/
-[Media Source Extensions (MSE)]: /web/fundamentals/media/mse/seamless-playback
+[Media Source Extensions (MSE)]: /web/fundamentals/media/mse/basics
 [FLAC in MP4 encapsulation spec]: https://github.com/xiph/flac/blob/master/doc/isoflac.txt
 ["Delivering Radio 3 Concert Sound"]: http://www.bbc.co.uk/rd/blog/2017-04-radio-3-high-quality-flac-dash
 [our official sample]: https://googlechrome.github.io/samples/media/flac-in-mp4-for-mse.html
