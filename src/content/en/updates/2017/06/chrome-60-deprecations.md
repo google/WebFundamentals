@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 60 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-{# wf_updated_on: 2017-08-04 #}
+{# wf_updated_on: 2017-09-15 #}
 {# wf_published_on: 2017-06-08 #}
 {# wf_tags: deprecations,removals,chrome60 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -21,7 +21,7 @@ which is in beta as of June 8. This list is subject to change at any time.
 
 ### crypto.subtle now requires a secure origin
 
-The [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) 
+The [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API)
 which has been supported since Chrome 37 has always worked on non-secure
 origins. Because of Chrome's long-standing policy of
 [preferring secure origins for powerful features](https://sites.google.com/a/chromium.org/dev/Home/chromium-security/prefer-secure-origins-for-powerful-new-features?pli=1),
@@ -50,7 +50,7 @@ This feature was deprecated in Chrome 58 and is now removed.
 ### Temporarily disable navigator.sendBeacon() for some blobs
 
 The `navigator.sendBeacon()` function has been available
-[since Chrome 39](https://www.chromestatus.com/feature/5517433905348608). 
+[since Chrome 39](https://www.chromestatus.com/feature/5517433905348608).
 As originally implemented, the function's `data` argument could contain any
 arbitrary blob whose type is not CORS-safelisted. We believe this is a potential
 security threat, though no one has yet tried to exploit it. Because we do NOT
@@ -95,11 +95,13 @@ The new behavior is implemented in Chrome 61.
 
 Nearly two years ago, `getStreamById()` was [removed from the WebRTC
 spec](https://github.com/w3c/webrtc-pc/pull/18). Most other browsers have
-removed already removed this from their implementations. Though this function is
+already removed this from their implementations. Though this function is
 believed to be little-used, it's also believed there is some minor
 interoperability risk with Edge and WebKit-based browsers *other than* Safari
 where `getStreamById()` is still supported. Developers needing an alternative
 implementation can find example code in the Intent to Remove, below.
+
+Removal is in Chrome 62.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/m4DNZbLMkRo/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5751819573657600) &#124;
@@ -171,7 +173,7 @@ are removed from
 [CSS Rule](https://developer.mozilla.org/en-US/docs/Web/API/CSSRule).
 Developers should use `KEYFRAMES_RULE` and `KEYFRAME_RULE` instead.
 
-[Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/mW1njtgDPHA) 
+[Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/mW1njtgDPHA)
  &#124; [Chromestatus Tracker](https://www.chromestatus.com/feature/5747368108490752) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=689681)
 

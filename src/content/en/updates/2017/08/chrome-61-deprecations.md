@@ -39,7 +39,7 @@ URL should instead escape these characters.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5735596811091968) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=680970)
 
-## Remove usage of notifications from insecure iframes
+### Remove usage of notifications from insecure iframes
 
 Permission requests from iframes can confuse users since it is difficult to
 distinguish between the containing page's origin and the origin of the iframe
@@ -55,10 +55,10 @@ notification permission.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/n37ij1E_1aY/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/6451284559265792) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693) 
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693)
 
 
-## Deprecate and remove Presentation API on insecure contexts
+### Deprecate and remove Presentation API on insecure contexts
 
 It's been found that on insecure origins, the Presentation API can be used as a
 hacking vector on insecure origins. Since displays don't have address bars the
@@ -111,7 +111,7 @@ Previously some browsers allowed for JavaScript assignments like the following:
 
     window[0] = 1;
 
-The [current HTML spec 
+The [current HTML spec
 notes](https://html.spec.whatwg.org/multipage/window-object.html#windowproxy-defineownproperty)
 that this is an explicit violation of
 the JavaScript spec. As such, this ability is removed in Chrome 61. As of
