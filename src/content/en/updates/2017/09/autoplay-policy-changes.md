@@ -13,9 +13,9 @@ description: Learn best practices for good user experiences with the new autopla
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-Chrome's autoplay policies are about to change in 2018 and I'm here to tell
-you why and how this is going to affect video playback with sound. Spoiler
-alert: Users are going to love it!
+Chrome's autoplay policies are about to change in 2018 and I'm here to tell you
+why and how this is going to affect video playback with sound. Spoiler alert:
+Users are going to love it!
 
 <figure>
   <a href="https://imgflip.com/i/ngd6c">
@@ -34,15 +34,15 @@ alert: Users are going to love it!
   </figcaption>
 </figure>
 
-## New Behaviors {: #new-behaviors }
+## New behaviors {: #new-behaviors }
 
 As you may have [noticed], web browsers are moving towards stricter autoplay
 policies in order to improve the web experience for users, minimize the
 incentives to install extensions that block ads, and reduce data consumption on
-expensive and/or constrained network.
+expensive and/or constrained networks.
 
 With these new autoplay policies, the Chrome team aims to provide a greater
-control to users over content playing in their browser. It will also benefit
+control to users over content playing in their browser. Those will also benefit
 publishers who have legitimate autoplay use cases.
 
 Chrome's autoplay policies are simple:
@@ -58,7 +58,7 @@ Chrome's autoplay policies are simple:
 ### Media Engagement Index (MEI) {: #mei }
 
 The MEI measures an individual's propensity to consume media on a site.
-Chrome's current approach is a ratio of visits to significant media playback
+Chrome's [current approach] is a ratio of visits to significant media playback
 events per origin:
 
 - Consumption of the media (audio/video) must be greater than 7 seconds.
@@ -66,7 +66,7 @@ events per origin:
 - Tab with video is active.
 - Size of the video (in px) must be greater than [200x140].
 
-From that, Chrome calculates a Media Engagement score which is highest on sites
+From that, Chrome calculates a media engagement score which is highest on sites
 where media is played on a regular basis. When it is high enough, media playback
 is allowed to autoplay on desktop only.
 
@@ -87,19 +87,21 @@ Once an origin has received autoplay permission, it can delegate that
 permission to iframes via a new HTML attribute. Check out the [Gesture
 Delegation API proposal] to learn more.
 
-    <iframe src="myvideo.html" gesture="media">
+<pre class="prettyprint">
+&lt;iframe src="myvideo.html" gesture="media">
+</pre>
 
 Without iframe delegation, videos will not be able to autoplay with sound.
 
 ### Example scenarios
 
 <b>Example 1:</b> Every time a user visits <i>VideoSubscriptionSite.com</i> on their
-laptop they watch a TV show or a movie. As their Media Engagement score is
+laptop they watch a TV show or a movie. As their media engagement score is
 high, autoplay is allowed.
 
 <b>Example 2:</b> <i>GlobalNewsSite.com</i> has both text and video content.
 Most users go to the site for text content and watch videos only occasionally.
-Users' Media Engagement score is low, so autoplay wouldn't be allowed if a user
+Users' media engagement score is low, so autoplay wouldn't be allowed if a user
 navigates directly from a social media page or search. 
 
 <b>Example 3:</b> <i>LocalNewsSite.com</i> has both text and video content.
@@ -114,17 +116,18 @@ get to the specific blog, so autoplay is allowed. However, the blog needs to
 explicitly delegate that privilege to the iframe in order for the content to
 autoplay.
 
-## Best Practises for Web Developers {: #best-practises }
+## Best practises for web developers {: #best-practises }
 
 Here's the one thing to remember: Don't ever assume a video will play, and
-don't show a pause button from the start. It is so important that I'm going
-to write it one more time below for those who simply skim through that post.
+don't show a pause button when the video is not actually playing. It is so
+important that I'm going to write it one more time below for those who simply
+skim through that post.
 
 Key Point: Don't ever assume a video will play, and don't show a pause button
-from the start.
+when the video is not actually playing.
 
 You should always look at the [Promise] returned by the play function to see if
-it was rejected:
+it was [rejected]:
 
     var promise = document.querySelector('video').play();
     
@@ -137,13 +140,12 @@ it was rejected:
       });
     }
 
-Warning: Don't play interstitial ads without showing any
-media controls as they may not autoplay and user will have no way of
-starting playback.
+Warning: Don't play interstitial ads without showing any media controls as they
+may not autoplay and users will have no way of starting playback.
 
-One cool way to engage users is about using muted autoplay and let them
-self-select to autoplay (see code snippet below). Some websites already do
-this effectively, including Facebook, Twitter, and Instagram.
+One cool way to engage users is about using muted autoplay and let them chose
+to unmute (see code snippet below). Some websites already do this effectively,
+including Facebook, Twitter, and Instagram.
 
     <video id="video" muted autoplay>
     <button id="unmuteButton"></button>
@@ -165,6 +167,8 @@ thoughts.
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
 ["Add to Homescreen" flow]: /web/updates/2017/02/improved-add-to-home-screen
 [Promise]: /web/fundamentals/getting-started/primers/promises
+[rejected]: /web/updates/2017/06/play-request-was-interrupted
 [200x140]: https://chromium.googlesource.com/chromium/src/+/1c63b1b71d28851fc495fdee9a2c724ea148e827/chrome/browser/media/media_engagement_contents_observer.cc#38
 [Gesture Delegation API proposal]: https://github.com/mounirlamouri/gesture-delegation/blob/master/explainer.md
+[current approach]: https://docs.google.com/document/d/1_278v_plodvgtXSgnEJ0yjZJLg14Ogf-ekAFNymAJoU/edit
 [ChromiumDev on Twitter]: https://twitter.com/chromiumdev
