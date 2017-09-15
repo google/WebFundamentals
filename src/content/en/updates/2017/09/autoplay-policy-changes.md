@@ -19,22 +19,18 @@ alert: Users are going to love it!
 
 <figure>
   <a href="https://imgflip.com/i/ngd6c">
-    <img height="241px" src="https://i.imgflip.com/ngd6c.jpg"
+    <img height="335px" src="https://i.imgflip.com/ngd6c.jpg"
          title="I will find you and I will pause you"/>
   </a>
-  <a href="https://imgur.com/9pj5LGN">
-    <img height="241px" src="http://i.imgur.com/9pj5LGN.jpg"
-         title="I don't remember asking you to autoplay a goddamn thing"/>
-  </a>
   <a href="https://imgur.com/a/p1ZjC">
-    <img height="241px" src="https://i.imgur.com/aFO9wAml.jpg"
+    <img height="335px" src="https://i.imgur.com/aFO9wAml.jpg"
          title="One does not simply autoplay videos"/>
   </a>
   <figcaption>
     <b>Figure 1.</b>
     Internet memes tagged "autoplay" found on
-    <a href="https://imgflip.com">Imgflip</a> and
-    <a href="https://imgur.com">Imgur</a>
+    <a href="https://imgflip.com/i/ngd6c">Imgflip</a> and
+    <a href="https://imgur.com/a/p1ZjC">Imgur</a>
   </figcaption>
 </figure>
 
@@ -74,8 +70,7 @@ From that, Chrome calculates a Media Engagement score which is highest on sites
 where media is played on a regular basis. When it is high enough, media playback
 is allowed to autoplay on desktop only.
 
-Note that you can check out user's MEI at the <i>chrome://media-engagement</i>
-internal page in Chrome 62.
+User's MEI is available at the <i>chrome://media-engagement</i> internal page.
 
 <figure>
   <img src="/web/updates/images/2017/09/media-engagement.png"
