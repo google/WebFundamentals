@@ -18,7 +18,7 @@ the two, providing take aways, solutions to workflows, tools and
 discussions on everyday struggles. 
 
 Mustafa speaks to Sam Dutton, a Developer Advocate on the Google 
-Developers Relations Team, about how and why to design for the 
+Developers Relations Team, about why we need to design for the 
 next billion users. We also talk about if it is worth creating 
 a website for everyone.
 
@@ -40,7 +40,7 @@ In this episode:
 
 
 <audio 
-src="hhttps://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E05-designing-for-the-next-billion-users.mp3" 
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E05-designing-for-the-next-billion-users.mp3" 
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
