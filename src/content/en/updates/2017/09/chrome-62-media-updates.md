@@ -99,10 +99,7 @@ and HLS) has a demo for you to try Widevine L1 out:
 2. Pick "Angel One (multicodec, multilingual, Widevine)".
 3. Enter `HW_SECURE_ALL` in the "Video Robustness" field of the "Configuration"
    section.
-4. Click the "Store" button in the "Offline" section and wait for it to be
-   downloaded.
-5. Turn airplane mode on.
-6. Click the "Load" button and enjoy the video!
+4. Click the "Load" button and enjoy the video!
 
 ## Background video track optimizations (MSE only) {: #background-video-track-optimizations}
 
