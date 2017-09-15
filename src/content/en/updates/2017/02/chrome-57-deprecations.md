@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 57 to help you plan.
 
-{# wf_updated_on: 2017-05-01 #}
+{# wf_updated_on: 2017-09-11 #}
 {# wf_published_on: 2017-02-01 #}
 {# wf_tags: deprecations,removals,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -183,7 +183,7 @@ use of RTP/RTCP multiplexing. In Chrome 57, we changed the default
 
 In Chrome 57, "negotiate" is deprecated. We believe this is a non-breaking change
 since the user will get a deprecation message and `RTCPeerConnection` can still
-be created.
+be created. Removal is anticipated in Chrome 63 or 64.
 
 [Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/OP2SGSWF5lo/discussion) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=685727)

@@ -5,6 +5,7 @@ description: An overview of the exciting new features coming to JavaScript regul
 {# wf_updated_on: 2017-07-10 #}
 {# wf_published_on: 2017-07-10 #}
 {# wf_tags: javascript,regex #}
+{# wf_blink_components: Blink>JavaScript>Language #}
 
 {# wf_featured_image: /web/updates/images/2017/07/v8.png #}
 
