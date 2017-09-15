@@ -111,7 +111,7 @@ the security and privacy considerations and how they’re addressed, have a
 peek at the [WebUSB spec](https://wicg.github.io/webusb/).
 
 Then, when you’re ready to dive in, take a look at Francois’
-[WebUSB post](/updates/2016/03/access-usb-devices-on-the-web) on updates.
+[WebUSB post](/web/updates/2016/03/access-usb-devices-on-the-web) on updates.
 
 <div class="clearfix"></div>
 
