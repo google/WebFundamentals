@@ -2,7 +2,6 @@ project_path: /web/feedback/_project.yaml
 book_path: /web/feedback/_book.yaml
 title: Developer Feedback Program
 landing_page:
-  custom_css_path: /styles/wf-root.css
 
   header:
     buttons:

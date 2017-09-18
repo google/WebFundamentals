@@ -84,7 +84,7 @@ occur when a network request or message is made from your page.
 Below is an overly simplified version of the service worker lifecycle on its
 first installation.
 
-![service worker lifecycle](imgs/sw-lifecycle.png)
+![service worker lifecycle](images/sw-lifecycle.png)
 
 
 ## Prerequisites
@@ -156,7 +156,7 @@ whose URL starts with `/example/` (i.e. `/example/page1/`, `/example/page2/`).
 Now you can check that a service worker is enabled by going to
 `chrome://inspect/#service-workers` and looking for your site.
 
-![Inspect service workers](imgs/sw-chrome-inspect.png)
+![Inspect service workers](images/sw-chrome-inspect.png)
 
 When service worker was first being implemented, you could also view your service
 worker details through `chrome://serviceworker-internals`. This may still be

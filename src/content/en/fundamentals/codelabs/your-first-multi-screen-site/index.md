@@ -370,7 +370,7 @@ where we want to change it.
 
 600px appears to be a good place to create our first breakpoint as it will 
 give us scope to reposition elements to make them fit the screen better. 
-We can do this using a technology called [Media Queries](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries).
+We can do this using a technology called [Media Queries](/web/fundamentals/design-and-ux/responsive/#use-media-queries).
 
     @media (min-width: 600px) {
     

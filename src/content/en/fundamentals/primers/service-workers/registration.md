@@ -155,7 +155,7 @@ make. Both screenshots are taken while visiting a [sample
 app](https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo) in
 Incognito mode using network throttling to simulate a slow connection.
 
-![Network traffic with early registration.](../images/early-registration.png
+![Network traffic with early registration.](images/early-registration.png
 "Network traffic with early registration.")
 
 The screenshot above reflects the network traffic when the sample was  modified
@@ -165,7 +165,7 @@ icon](http://stackoverflow.com/questions/33590378/status-code200-ok-from-service
 next to them, originating from the service worker's `install` handler)
 interspersed with requests for the other resources needed to display the page.
 
-![Network traffic with late registration.](../images/late-registration.png
+![Network traffic with late registration.](images/late-registration.png
 "Network traffic with late registration.")
 
 
