@@ -185,7 +185,7 @@ def expandBook(book, lang='en'):
     for item in book:
       if 'include' in item:
         newItems = yaml.load(readFile(item['include'], lang))
-        results = results + newItems['toc']
+        results = results + expandBook(newItems['toc'], lang)
       else:
         results.append(expandBook(item, lang))
     return results
@@ -204,15 +204,16 @@ def getLowerTabs(pathToBook, lang='en'):
       An array of objects with the lower tabs
   """
   result = []
+  yamlNav = parseBookYaml(pathToBook, lang)
   try:
-    yamlNav = parseBookYaml(pathToBook, lang)
     for tab in yamlNav['upper_tabs']:
       if 'lower_tabs' in tab and 'other' in tab['lower_tabs']:
         for lowerTab in tab['lower_tabs']['other']:
           lt = {}
           lt['name'] = lowerTab['name']
-          lt['path'] = lowerTab['contents'][0]['path']
-          result.append(lt)
+          if 'contents' in lowerTab and 'path' in lowerTab['contents'][0]:
+            lt['path'] = lowerTab['contents'][0]['path']
+            result.append(lt)
   except Exception as e:
     logging.exception('Unable to read/parse the lower tabs')
   return result
@@ -233,10 +234,11 @@ def getLeftNav(requestPath, pathToBook, lang='en'):
     for upperTab in yamlNav['upper_tabs']:
       if 'path' in upperTab and requestPath.startswith(upperTab['path']):
         for lowerTab in upperTab['lower_tabs']['other']:
-          if requestPath.startswith(lowerTab['contents'][0]['path']):
-            result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
-            result += buildLeftNav(lowerTab['contents'])
-            result += '</ul>\n'
+          if ('path' not in lowerTab['contents'][0] or
+            requestPath.startswith(lowerTab['contents'][0]['path'])):
+              result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
+              result += buildLeftNav(lowerTab['contents'])
+              result += '</ul>\n'
     return result
   except Exception as e:
     msg = ' - Unable to read or parse primary book.yaml: ' + pathToBook
@@ -250,13 +252,17 @@ def buildLeftNav(bookYaml, lang='en'):
   result = ''
   for item in bookYaml:
     if 'include' in item:
-      try:
-        include = readFile(item['include'], lang)
-        include = yaml.load(include)
-        result += buildLeftNav(include['toc'])
-      except Exception as e:
-        msg = ' - Unable to parsing embedded toc file: ' + item['include']
-        logging.exception(msg)
+      ## TODO(petele): Remove this
+      ## leaving this in for a few weeks while I ensure it doesn't break
+      ## anything.
+      logging.error('***** INCLUDE - this should NOT happen.')
+      # try:
+      #   include = readFile(item['include'], lang)
+      #   include = yaml.load(include)
+      #   result += buildLeftNav(include['toc'])
+      # except Exception as e:
+      #   msg = ' - Unable to parsing embedded toc file: ' + item['include']
+      #   logging.exception(msg)
     if 'path' in item:
       result += '<li class="devsite-nav-item">\n'
       result += '<a href="' + item['path'] + '" class="devsite-nav-title">\n'
