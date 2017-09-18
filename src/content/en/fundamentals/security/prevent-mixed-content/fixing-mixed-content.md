@@ -306,6 +306,6 @@ If your site is hosted for you by a platform such as Blogger, you may not have
 access to modify headers & add a CSP.
 Instead a viable alternative could be to use a website crawler to find issues
 across your site for you, such as
-[HTTPSChecker](https://httpschecker.net/how-it-works#httpsChecker){: .external }
-or
+[HTTPSChecker](https://httpschecker.net/how-it-works#httpsChecker){: .external },
 [Mixed Content Scan](https://github.com/bramus/mixed-content-scan){: .external }
+or [mcdetect](https://github.com/agis/mcdetect){: .external }.
