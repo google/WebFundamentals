@@ -384,7 +384,7 @@ which may negatively impact their search rankings.
 </div>
 
 Retail customers expect sites to let them
-[view high resolution closeups](/web/fundamentals/design-and-ui/media/images#make-product-images-expandable)
+[view high resolution closeups](/web/fundamentals/design-and-ux/responsive/images#make-product-images-expandable)
 of products. Study participants got frustrated when they weren’t able to see
 what they were buying.
 

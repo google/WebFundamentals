@@ -139,10 +139,10 @@ landing_page:
         path: /web/fundamentals/design-and-ui/responsive/content#viewport
         classname: wf-small-link
       - label: Eliminate redundant content
-        path: /web/fundamentals/design-and-ui/content/redundant/
+        path: /web/fundamentals/design-and-ux/responsive/content#redundant
         classname: wf-small-link
       - label: Write for mobile
-        path: /web/fundamentals/design-and-ui/content/write/
+        path: /web/fundamentals/design-and-ui/responsive/content#write
         classname: wf-small-link
       - label: Consider AMP HTML
         path: https://www.ampproject.org/

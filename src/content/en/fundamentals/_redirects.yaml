@@ -36,6 +36,9 @@ redirects:
 - from: /web/fundamentals/getting-started/primers/service-workers
   to: /web/fundamentals/primers/service-workers/
 
+- from: /web/fundamentals/getting-started/primers/customelements
+  to: /web/fundamentals/web-components/customelements
+
 - from: /web/fundamentals/getting-started/primers/...
   to: /web/fundamentals/primers/...
 
