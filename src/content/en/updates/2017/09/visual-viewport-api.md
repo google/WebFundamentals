@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The visual viewport API gives you details on how the user zooms and scrolls around your page.
 
-{# wf_updated_on: 2017-09-04 #}
+{# wf_updated_on: 2017-09-07 #}
 {# wf_published_on: 2017-09-04 #}
 {# wf_tags: chrome61 #}
 {# wf_blink_components: Blink>Scroll #}
@@ -271,7 +271,7 @@ I think (well, I hope) this is [another Chrome
 bug](https://bugs.chromium.org/p/chromium/issues/detail?id=760936).
 
 `offsetLeft` and `offsetTop` are rounded, which is pretty inaccurate once the
-user has zommed in. You can see the issues with this during [the
+user has zoomed in. You can see the issues with this during [the
 demo](https://visual-viewport.glitch.me/) – if the user zooms in and pans
 slowly, the [mini-map snaps between unzoomed
 pixels](https://www.youtube.com/watch?v=z9TXSciTxkc).

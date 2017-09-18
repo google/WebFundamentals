@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Navigation preload lets you overcome service worker startup time by making requests in parallel.
 
-{# wf_updated_on: 2017-09-03 #}
+{# wf_updated_on: 2017-09-07 #}
 {# wf_published_on: 2017-02-15 #}
 {# wf_tags: chrome59,serviceworker,performance #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -86,7 +86,7 @@ service workers that don't have a fetch
 event](https://bugs.chromium.org/p/chromium/issues/detail?id=605844), by
 [launching service workers
 speculatively](https://codereview.chromium.org/2045153003), and other
-optimisations. However, bootup time will always be greater than zero.
+optimizations. However, bootup time will always be greater than zero.
 
 Facebook brought the impact of this problem to our attention, and asked for a
 way to perform navigation requests in parallel:
@@ -282,7 +282,7 @@ const parts = [
 </pre>
 
 Note: `Promise.resolve(event.preloadResponse)` means we get a promise for
-undefined if `event.preloadResponse` is undefined. It's a good way to normalise
+undefined if `event.preloadResponse` is undefined. It's a good way to normalize
 behaviour with browsers that don't support `event.preloadResponse`.
 
 ## Changing the header
@@ -335,7 +335,7 @@ the words "service worker navigation preload" in the issue Summary.
 
 <small>Many thanks to Matt Falkenhagen and Tsuyoshi Horo for their work on this
 feature, and help with this article. And a huge thanks to everyone involved in
-[the standardisation
+[the standardization
 effort](https://github.com/w3c/ServiceWorker/issues/920)</small>
 
 {% include "comment-widget.html" %}
