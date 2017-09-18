@@ -77,7 +77,7 @@ figure {
 
 * Because Android Pay in Chrome uses the PaymentRequest API, it is essential 
 to familiarize yourself with the 
-[Payment Request API](/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request)
+[Payment Request API](/web/fundamentals/payments/deep-dive-into-payment-request)
 before continuing.
 * Even if you are not an Android developer, it will be useful to acquaint 
 yourself with the [Android Pay in-app APIs](/android-pay/android/tutorial). 
@@ -207,7 +207,7 @@ After you add the Android Pay object, Chrome can request a chargeable gateway to
 
 The response from PaymentRequest will contain the shipping and contact 
 information as in the examples outlined in the 
-[PaymentRequest deep dive](/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request), 
+[PaymentRequest deep dive](/web/fundamentals/payments/deep-dive-into-payment-request), 
 but now includes an additional response from Android Pay containing
 
 * Billing address information
@@ -444,7 +444,7 @@ token.
 
 The encrypted response from PaymentRequest will contain the shipping and 
 contact information as in the examples outlined in the 
-[PaymentRequest deep dive](/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request),
+[PaymentRequest deep dive](/web/fundamentals/payments/deep-dive-into-payment-request),
 but now includes an additional response from Android Pay containing
 
 * A tokenized credit card information

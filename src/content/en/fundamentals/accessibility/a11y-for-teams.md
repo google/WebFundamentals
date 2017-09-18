@@ -291,7 +291,7 @@ and announced to the user.
 
 Unfortunately `<label>` _does not_ support giving an accessible name to custom
 controls (like ones created using [Custom
-Elements](/web/fundamentals/getting-started/primers/customelements)
+Elements](/web/fundamentals/web-components/customelements)
 or out of simple divs and spans). For these kinds of controls you'll need to use
 the [`aria-label` and `aria-labelledby`
 attributes](/web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships#labels).

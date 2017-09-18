@@ -34,7 +34,7 @@ information is passed to your site.
 
 If you are unsure of what the Payment Request API is or why it's useful, check
 out the [introduction
-article](/web/fundamentals/discovery-and-monetization/payment-request/).
+article](/web/fundamentals/payments/).
 
 One thing to keep in the back of your mind when working with the Payment Request
 API is that the API manages the UI but performs no arithmetic; it will simply
@@ -333,7 +333,7 @@ const androidPayPaymentMethod = {
 </div>
 
 We won't go into details of how to add Android Pay in this article, [we have a
-section dedicated to that here](/web/fundamentals/discovery-and-monetization/payment-request/android-pay).
+section dedicated to that here](/web/fundamentals/payments/android-pay).
 
 #### Edge Cases
 

@@ -112,6 +112,6 @@ result&mdash;now takes place in a single step; from the website's perspective,
 it requires only a single JavaScript API call; from the payment method's
 perspective, there is no process change whatsoever.
 
-To start getting to grips with API itself, view our [deep dive here](/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request).
+To start getting to grips with API itself, view our [deep dive here](/web/fundamentals/payments/deep-dive-into-payment-request).
 
 <div style="clear:both;"></div>

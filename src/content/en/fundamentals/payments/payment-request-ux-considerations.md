@@ -9,7 +9,7 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/mustafa.html" %}
 
 The 
-[Payment Request API](/web/fundamentals/discovery-and-monetization/payment-request/) 
+[Payment Request API](/web/fundamentals/payments/) 
 was fundamentally built for users, helping
 them get through burdensome checkout flows on mobile efficiently,
 while providing merchants with a higher conversion rate.
@@ -137,7 +137,7 @@ on brand recognition.
 1. The icon is taken from the favicon. Favicon is hi-res and 
 	recognizable for the store. For best practice, provide multiple 
 	icons at different sizes to allow the browser to pick the most 
-	appropriate size. You can [learn more here](/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request). 
+	appropriate size. You can [learn more here](/web/fundamentals/payments/deep-dive-into-payment-request). 
 
 
 2. This is taken from the <code>&#60;title&#62;</code> tag. 
@@ -453,7 +453,7 @@ the Payment Request API OR their own UI.
 * If all conditions are met the merchant serves up a 
 confirmation page. 
 
-You can learn more about this [technique here](/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request#completing_the_transaction)
+You can learn more about this [technique here](/web/fundamentals/payments/deep-dive-into-payment-request#completing_the_transaction)
 
 <div>
   <figure>

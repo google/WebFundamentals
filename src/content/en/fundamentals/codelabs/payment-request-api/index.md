@@ -472,7 +472,7 @@ To learn more about the Payment Request API, visit following links.
 ### Resources
 
 *  [Bringing Easy and Fast Checkout with Payment Request API](/web/updates/2016/07/payment-request)
-*  [Payment Request API: an Integration Guide](/web/fundamentals/discovery-and-monetization/payment-request/)
+*  [Payment Request API: an Integration Guide](/web/fundamentals/payments/)
 *  [Web Payments session video at Chrome Dev Summit 2017](https://www.youtube.com/watch?v=U0LkQijSeko)
 
 ### Specs

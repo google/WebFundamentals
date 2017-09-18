@@ -46,13 +46,13 @@ History and browser support</a> for more info.
 Shadow DOM is one of the four Web Component standards:
 [HTML Templates](https://www.html5rocks.com/en/tutorials/webcomponents/template/),
 [Shadow DOM][sd_spec_whatwg],
-[Custom elements](/web/fundamentals/getting-started/primers/customelements) and
+[Custom elements](/web/fundamentals/web-components/customelements) and
 [HTML Imports](https://www.html5rocks.com/en/tutorials/webcomponents/imports/).
 
 You don't have to author web components that use shadow DOM. But when you do,
 you take advantage of its benefits (CSS scoping, DOM encapsulation,
 composition) and build reusable
-[custom elements](/web/fundamentals/getting-started/primers/customelements),
+[custom elements](/web/fundamentals/web-components/customelements),
 which are resilient, highly configurable, and extremely reusable. If custom
 elements are the way to create a new HTML (with a JS API), shadow DOM is the
 way you provide its HTML and CSS. The two APIs combine to make a component
@@ -184,7 +184,7 @@ For example, this doesn't work:
 ### Creating shadow DOM for a custom element {: #elements}
 
 Shadow DOM is particularly useful when creating
-[custom elements](/web/fundamentals/getting-started/primers/customelements).
+[custom elements](/web/fundamentals/web-components/customelements).
 Use shadow DOM to compartmentalize an element's HTML, CSS, and JS, thus
 producing a "web component".
 
@@ -1133,7 +1133,7 @@ Instead of populating a shadow root using `.innerHTML`, we can use a declarative
 a web component.
 
 See the example in
-["Custom elements: building reusable web components"](/web/fundamentals/getting-started/primers/customelements).
+["Custom elements: building reusable web components"](/web/fundamentals/web-components/customelements).
 
 ## History & browser support {: #historysupport}
 
@@ -1228,7 +1228,7 @@ worth learning. Spend some time with it. Learn it and ask questions!
   from the WebKit Blog.
 - [Web Components and the future of Modular CSS](https://philipwalton.github.io/talks/2015-10-26/)
   by [Philip Walton](https://twitter.com/@philwalton)
-- ["Custom elements: building reusable web components"](/web/fundamentals/getting-started/primers/customelements)
+- ["Custom elements: building reusable web components"](/web/fundamentals/web-components/customelements)
   from Google's WebFundamentals.
 - [Shadow DOM v1 spec][sd_spec_whatwg]
 - [Custom elements v1 spec][ce_spec]
@@ -1256,7 +1256,7 @@ advantage of features like CSS scoping, DOM encapsulation, and composition.
 See [Closed shadow roots](#closed).
 
 [ce_spec]: https://html.spec.whatwg.org/multipage/scripting.html#custom-elements
-[ce_article]: (/web/fundamentals/getting-started/primers/customelements)
+[ce_article]: (/web/fundamentals/web-components/customelements)
 [sd_spec]: http://w3c.github.io/webcomponents/spec/shadow/
 [sd_spec_whatwg]: https://dom.spec.whatwg.org/#shadow-trees
 [differences]: http://hayato.io/2016/shadowdomv1/

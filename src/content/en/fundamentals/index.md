@@ -92,7 +92,7 @@ page_type: landing
           </p>
           <ul>
             <li><span class="compare-yes"></span> Use the <a href="instant-and-offline/offline-cookbook/">Offline Cookbook</a> to improve reliablity.</li>
-            <li><span class="compare-yes"></span> What should you consider when <a href="instand-and-offline/offline-ux">designing for slow or intermittent networks?</a></li>
+            <li><span class="compare-yes"></span> What should you consider when <a href="instant-and-offline/offline-ux">designing for slow or intermittent networks?</a></li>
           </ul>
         </div>
       </div>
