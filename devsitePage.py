@@ -96,6 +96,7 @@ def getPage(requestPath, lang):
         if 'book_path' in md.Meta and len(md.Meta['book_path']) == 1:
           bookPath = md.Meta['book_path'][0]
           leftNav = devsiteHelper.getLeftNav(requestPath, bookPath, lang)
+          lowerTabs = devsiteHelper.getLowerTabs(bookPath, lang)
 
         # Checks if the page should be displayed in full width mode
         if 'full_width' in md.Meta and len(md.Meta['full_width']) == 1:
@@ -137,6 +138,7 @@ def getPage(requestPath, lang):
       response = render(template, {
         'title': title,
         'announcementBanner': devsiteHelper.getAnnouncementBanner(lang),
+        'lowerTabs': lowerTabs,
         'gitHubIssueUrl': gitHubIssueUrl,
         'gitHubEditUrl': gitHubEditUrl,
         'requestPath': requestPath.replace('/index', ''),

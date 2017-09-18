@@ -149,6 +149,7 @@ def generateYaml(lang, requestPath, rawYaml):
   banner = devsiteHelper.getAnnouncementBanner(lang)
   header = 'Generic Page Header Here'
   customCss = ''
+  lowerTabs = devsiteHelper.getLowerTabs(parsedYaml['book_path'], lang)
   if 'custom_css_path' in page:
     customCss = '<link rel="stylesheet" href="'
     customCss += page['custom_css_path']
@@ -205,6 +206,7 @@ def generateYaml(lang, requestPath, rawYaml):
                 'title': title,
                 'announcementBanner': banner,
                 'requestPath': requestPath,
+                'lowerTabs': lowerTabs,
                 'customcss': customCss,
                 'header': header,
                 'content': content,

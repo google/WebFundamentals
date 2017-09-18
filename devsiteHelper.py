@@ -107,6 +107,7 @@ def readFile(requestedFile, lang='en'):
     logging.error(result)
     return None
 
+
 def fetchGithubFile(path):
   """Fetchs a file in a repository hosted on github.com.
 
@@ -132,6 +133,76 @@ def fetchGithubFile(path):
   return content
 
 
+def parseBookYaml(pathToBook, lang='en'):
+  """Read and parse a book.yaml file.
+
+  Args:
+      pathToBook: the string path to the location of the book
+      lang: Which language to use, defaults to 'en'
+
+  Returns:
+      A dictionary with the parsed book.
+  """
+  memcacheKey = 'bookYAML-' + pathToBook
+  result = getFromMemCache(memcacheKey)
+  if result:
+    return result
+  try:
+    result = {}
+    upperTabs = []
+    result['upper_tabs'] = upperTabs
+    bookYaml = yaml.load(readFile(pathToBook, lang))
+    for upperTab in bookYaml['upper_tabs']:
+      if 'lower_tabs' in upperTab:
+        for lowerTab in upperTab['lower_tabs']['other']:
+          lowerTab['contents'] = expandInclude(lowerTab['contents'])
+      upperTabs.append(upperTab)
+    # setMemCache(memcacheKey, bookYaml, 60)
+    from pprint import pprint
+    pprint(result)
+    return result
+  except Exception as e:
+    msg = ''
+    logging.exception(msg)
+  return None
+
+
+def expandInclude(book):
+  result = []
+  for item in book:
+    if 'include' in item:
+      toc = yaml.load(readFile(item['include']))['toc']
+      result = result + toc
+    else:
+      result.append(item)
+  return result
+
+
+def getLowerTabs(pathToBook, lang='en'):
+  """Gets the lower tabs from a parsed book.yaml dictionary.
+
+  Args:
+      pathToBook: the string path to the location of the book
+      lang: Which language to use, defaults to 'en'
+
+  Returns:
+      An array of objects with the lower tabs
+  """
+  result = []
+  try:
+    yamlNav = parseBookYaml(pathToBook, lang)
+    for tab in yamlNav['upper_tabs']:
+      if 'lower_tabs' in tab and 'other' in tab['lower_tabs']:
+        for lowerTab in tab['lower_tabs']['other']:
+          lt = {}
+          lt['name'] = lowerTab['name']
+          lt['path'] = lowerTab['contents'][0]['path']
+          result.append(lt)
+  except Exception as e:
+    logging.exception('Unable to read/parse the lower tabs')
+  return result
+
+
 def getLeftNav(requestPath, pathToBook, lang='en'):
   # Returns the left nav. If it's already been generated and stored in
   # memcache, return that, otherwise, read the file then recursively
@@ -141,24 +212,19 @@ def getLeftNav(requestPath, pathToBook, lang='en'):
   whoops += ' left hand navigation. Check the error logs.'
   whoops += '</p>'
   requestPath = os.path.join('/web/', requestPath)
-  bookContents = readFile(pathToBook, lang)
-  if bookContents:
-    try:
-      yamlNav = yaml.load(bookContents)
-      for tab in yamlNav['upper_tabs']:
-        if 'path' in tab and requestPath.startswith(tab['path']):
-          if 'lower_tabs' in tab:
-            result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
-            result += buildLeftNav(tab['lower_tabs']['other'][0]['contents'])
-            result += '</ul>\n'
-            return result
-    except Exception as e:
-      msg = ' - Unable to read or parse primary book.yaml: ' + pathToBook
-      logging.exception(msg)
-      whoops += '<p>Exception occured.</p>'
-      return whoops
-  else:
-    whoops += '<p>Not found: ' + pathToBook + '</p>'
+  try:
+    yamlNav = parseBookYaml(pathToBook, lang)
+    for tab in yamlNav['upper_tabs']:
+      if 'path' in tab and requestPath.startswith(tab['path']):
+        if 'lower_tabs' in tab:
+          result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
+          result += buildLeftNav(tab['lower_tabs']['other'][0]['contents'])
+          result += '</ul>\n'
+          return result
+  except Exception as e:
+    msg = ' - Unable to read or parse primary book.yaml: ' + pathToBook
+    logging.exception(msg)
+    whoops += '<p>Exception occured.</p>'
     return whoops
 
 
