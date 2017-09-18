@@ -100,7 +100,7 @@ This magic behaviour only happens when:
 
 {% include "comment-widget.html" %}
 
-[Media Source Extensions (MSE)]: /web/fundamentals/media/mse/seamless-playback
+[Media Source Extensions (MSE)]: /web/fundamentals/media/mse/basics
 [Page Visibility API]: https://www.w3.org/TR/page-visibility/
 [keyframe]: https://en.wikipedia.org/wiki/Key_frame#Video_compression
 [Mobile Web Video Playback]: /web/fundamentals/media/mobile-web-video-playback#fullscreen
