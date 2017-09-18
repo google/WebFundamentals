@@ -67,8 +67,7 @@ API can be used to spoof content. It's also possible to exfiltrate data from
 running presentation.
 
 In aligning with Blink’s intention to [remove powerful features on insecure
-origins](https://www.chromium.org/Home/chromium-security/
-deprecating-powerful-features-on-insecure-origins), we plan to deprecate and
+origins](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins), we plan to deprecate and
 remove support for the Presentation API on insecure contexts. Starting in Chrome
 61, `PresentationRequest.start()` will no longer function on insecure origins.
 

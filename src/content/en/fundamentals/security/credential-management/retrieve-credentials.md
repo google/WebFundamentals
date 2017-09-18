@@ -191,7 +191,7 @@ When `mediation` is `required`, the user is always shown an account chooser to s
 This option allows users with multiple accounts to easily switch between them.
 When `mediation` is `optional`,
 the user is explicitly shown an account chooser to sign in after a
-[`navigator.credentials.preventSilentAccess()`](web/fundamentals/security/credential-management/retrieve-credentials#turn_off_auto_sign-in_for_future_visits)
+[`navigator.credentials.preventSilentAccess()`](/web/fundamentals/security/credential-management/retrieve-credentials#turn_off_auto_sign-in_for_future_visits)
 call.
 This is normally to ensure automatic sign-in doesn't happen
 after the user chooses to sign-out or unregister.
