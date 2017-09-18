@@ -272,6 +272,9 @@ redirects:
 - from: /web/updates/2016/04/geolocation-on-secure-contexts-
   to: /web/updates/2016/04/geolocation-on-secure-contexts-only
 
+- from: /web/updates/2016/10/navigator-share
+  to: /web/updates/2016/09/navigator-share
+
 - from: /web/updates/tag/datalist
   to: /web/updates/tags/datalist
 
