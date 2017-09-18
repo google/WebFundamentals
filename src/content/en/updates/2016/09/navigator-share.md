@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Sharing is caring. Chrome is running an Origin Trial to enable native sharing on the web.
 
 {# wf_published_on: 2017-09-07 #}
-{# wf_updated_on: 2017-09-11 #}
+{# wf_updated_on: 2017-09-12 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
 {# wf_tags: chrome55,chrome61,sharing,android,origintrials #}
 {# wf_featured_snippet: Sharing is caring. Web Share is now available in Chrome 61 for Android, and allows websites to invoke the native sharing capabilities of the host platform. #}
@@ -33,7 +33,7 @@ It accepts an object which must have at least one of the properties named `text`
 if (navigator.share) {
   navigator.share({
       title: 'Web Fundamentals',
-      text: 'Check out Web Fundamentals—it rocks!,
+      text: 'Check out Web Fundamentals — it rocks!',
       url: 'https://developers.google.com/web',
   })
     .then(() => console.log('Successful share'))
@@ -75,7 +75,7 @@ experience to the user. For example, you might do:
 ```js
 let url = document.location.href;
 const canonicalElement = document.querySelector('link[rel=canonical]');
-if (canonicalElement !== undefined) {
+if (canonicalElement !== null) {
     url = canonicalElement.href;
 }
 navigator.share({url: url});

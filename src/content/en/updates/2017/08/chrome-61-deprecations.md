@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 61 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-{# wf_updated_on: 2017-09-15 #}
+
+{# wf_updated_on: 2017-09-18 #}
 {# wf_published_on: 2017-08-03 #}
 {# wf_tags: deprecations,removals,chrome61 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -55,7 +56,7 @@ notification permission.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/n37ij1E_1aY/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/6451284559265792) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693) 
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693)
 
 
 ### Deprecate and remove Presentation API on insecure contexts
@@ -111,7 +112,7 @@ Previously some browsers allowed for JavaScript assignments like the following:
 
     window[0] = 1;
 
-The [current HTML spec 
+The [current HTML spec
 notes](https://html.spec.whatwg.org/multipage/window-object.html#windowproxy-defineownproperty)
 that this is an explicit violation of
 the JavaScript spec. As such, this ability is removed in Chrome 61. As of
