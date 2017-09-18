@@ -13,12 +13,14 @@ from google.appengine.ext.webapp.template import render
 
 SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content/')
 
+
 def slugify(str):
   # Very simply slugify
   slug = str.encode('ascii', 'ignore').lower()
   slug = re.sub(r'[^a-z0-9]+', '-', slug).strip('-')
   slug = re.sub(r'[-]+', '-', slug)
   return slug
+
 
 def getFromMemCache(memcacheKey):
   try:
@@ -27,11 +29,13 @@ def getFromMemCache(memcacheKey):
     result = None
   return result
 
-def setMemCache(memcacheKey, value):
+
+def setMemCache(memcacheKey, value, length=3600):
   try:
-    memcache.set(memcacheKey, value)
+    memcache.set(memcacheKey, value, length)
   except Exception as e:
     pass
+
 
 def checkForRedirect(requestedPath, lang, useMemcache):
   # Reads the redirect files from the current directory and up the directory
@@ -153,29 +157,40 @@ def parseBookYaml(pathToBook, lang='en'):
     result['upper_tabs'] = upperTabs
     bookYaml = yaml.load(readFile(pathToBook, lang))
     for upperTab in bookYaml['upper_tabs']:
-      if 'lower_tabs' in upperTab:
-        for lowerTab in upperTab['lower_tabs']['other']:
-          lowerTab['contents'] = expandInclude(lowerTab['contents'])
-      upperTabs.append(upperTab)
-    # setMemCache(memcacheKey, bookYaml, 60)
-    from pprint import pprint
-    pprint(result)
+      upperTabs.append(expandBook(upperTab))
+    setMemCache(memcacheKey, result, 60)
     return result
   except Exception as e:
-    msg = ''
-    logging.exception(msg)
+    logging.exception('Error in parseBookYaml')
   return None
 
 
-def expandInclude(book):
-  result = []
-  for item in book:
-    if 'include' in item:
-      toc = yaml.load(readFile(item['include']))['toc']
-      result = result + toc
-    else:
-      result.append(item)
-  return result
+def expandBook(book, lang='en'):
+  """Iterate and expand includes in a book.yaml file.
+
+  Args:
+      book: the parsed book.yaml file
+      lang: Which language to use, defaults to 'en'
+
+  Returns:
+      A dictionary with the parsed & expanded book.
+  """
+  if isinstance(book, dict):
+    result = {}
+    for k, v in book.iteritems():
+      result[k] = expandBook(v, lang)
+    return result
+  if isinstance(book, list):
+    results = []
+    for item in book:
+      if 'include' in item:
+        newItems = yaml.load(readFile(item['include'], lang))
+        results = results + newItems['toc']
+      else:
+        results.append(expandBook(item, lang))
+    return results
+  return book
+
 
 
 def getLowerTabs(pathToBook, lang='en'):
@@ -213,14 +228,16 @@ def getLeftNav(requestPath, pathToBook, lang='en'):
   whoops += '</p>'
   requestPath = os.path.join('/web/', requestPath)
   try:
+    result = '<h2>No Matches Found</h2>'
     yamlNav = parseBookYaml(pathToBook, lang)
-    for tab in yamlNav['upper_tabs']:
-      if 'path' in tab and requestPath.startswith(tab['path']):
-        if 'lower_tabs' in tab:
-          result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
-          result += buildLeftNav(tab['lower_tabs']['other'][0]['contents'])
-          result += '</ul>\n'
-          return result
+    for upperTab in yamlNav['upper_tabs']:
+      if 'path' in upperTab and requestPath.startswith(upperTab['path']):
+        for lowerTab in upperTab['lower_tabs']['other']:
+          if requestPath.startswith(lowerTab['contents'][0]['path']):
+            result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
+            result += buildLeftNav(lowerTab['contents'])
+            result += '</ul>\n'
+    return result
   except Exception as e:
     msg = ' - Unable to read or parse primary book.yaml: ' + pathToBook
     logging.exception(msg)
