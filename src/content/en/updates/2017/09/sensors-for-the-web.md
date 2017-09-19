@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Generic Sensor API is available for Origin Trials in Chome 62.
 
-{# wf_updated_on: 2017-09-20 #}
-{# wf_published_on: 2017-09-20 #}
+{# wf_updated_on: 2017-09-19 #}
+{# wf_published_on: 2017-09-18 #}
 {# wf_tags: sensors,origintrials,chrome62,news #}
 {# wf_blink_components: Blink>Sensor #}
-{# wf_featured_image: /web/updates/images/generic/sd-card.png #}
-{# wf_featured_snippet: Generic Sensor API is available for Origin Trials in Chome 62. #}
+{# wf_featured_image: /web/updates/images/generic/screen-rotation.png #}
+{# wf_featured_snippet: Sensors are used in many native applications to enable advanced features. Wouldn't it be nice to bridge the gap between native and the web? You can do it with Generic Sensor API, which is available for Origin Trials in Chome 62. #}
 
 # Sensors For The Web! {: .page-title }
 
@@ -205,12 +205,12 @@ Here are few snippets:
     let torus = new THREE.Mesh(torusGeometry, material);
     scene.add(torus);
 
-    // Update mech rotation using quaternion.
+    // Update mesh rotation using quaternion.
     const sensorAbs = new AbsoluteOrientationSensor();
     sensorAbs.onreading = () => torus.quaternion.fromArray(sensorAbs.quaternion);
     sensorAbs.start();
 
-    // Update mech rotation using rotation matrix.
+    // Update mesh rotation using rotation matrix.
     const sensorRel = new RelativeOrientationSensor();
     let rotationMatrix = new Float32Array(16);
     sensor_rel.onreading = () => {
