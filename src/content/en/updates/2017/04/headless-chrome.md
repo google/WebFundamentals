@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2017-08-21 #}
+{# wf_updated_on: 2017-09-20 #}
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
@@ -391,9 +391,9 @@ examples below to get you started.
 #### Using ChromeDriver
 
 [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 2.3.0
-supports Chrome 59 and later and works with headless Chrome. In some cases, you may need
-Chrome 60 to work around bugs. For example, there are known issues with taking
-screenshots in Chrome 59.
+was the first version to support Chrome 59 and work with headless Chrome,
+but you'll want Chrome 61 to work around screenshot bugs. The good news
+is that more recent versions of ChromeDriver (2.3.2) work with Chrome 61!
 
 Install:
 
