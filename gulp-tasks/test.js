@@ -918,7 +918,7 @@ function testGlossary(filename, contents) {
       }
       const termName = term.term.toLowerCase();
       if (!term.description) {
-        logError(filename, null, `${termName} is missing description`);
+        logWarning(filename, null, `${termName} is missing description`);
       }
       if (prevTermName > termName) {
         const extra = `'${prevTermName}' came before '${termName}'`;

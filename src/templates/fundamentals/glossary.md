@@ -15,7 +15,7 @@ book_path: /web/fundamentals/_book.yaml
 ### {{#if link}}<a href="{{ link }}">{{/if}}{{#if acronym}}<abbr title="{{ term }}">{{ acronym }}</abbr> - {{/if}}{{ term }}{{#if link}}</a>{{/if}}
 
 
-{{{description}}}
+: {{{description}}}
 
 {{#if links}}
 <ul>
