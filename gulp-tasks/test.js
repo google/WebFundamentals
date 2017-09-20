@@ -897,6 +897,39 @@ function testContributors(filename, contents) {
   });
 }
 
+
+/**
+ * Tests and validates a glossary.yaml file.
+ *   Note: The returned promise always resolves, it will never reject.
+ *
+ * @param {string} filename The name of the file to be tested.
+ * @param {string} contents The unparsed contents of the glossary file. 
+ * @return {Promise} A promise with the result of the test.
+ */
+function testGlossary(filename, contents) {
+  return new Promise(function(resolve, reject) {
+    const msg = 'Glossary must be sorted alphabetically by term.'; 
+    const glossary = parseYAML(filename, contents);
+    let prevTermName = '';
+    glossary.forEach((term) => {
+      if (!term.term) {
+        logError(filename, null, `'term' is missing`);
+        return;
+      }
+      const termName = term.term.toLowerCase();
+      if (!term.description) {
+        logError(filename, null, `${termName} is missing description`);
+      }
+      if (prevTermName > termName) {
+        const extra = `'${prevTermName}' came before '${termName}'`;
+        logError(filename, null, `${msg} ${extra}`);
+      }
+      prevTermName = termName;
+    });
+    resolve();
+  });
+}
+
 /**
  * Tests and validates a _redirects.yaml file.
  *   Note: The returned promise always resolves, it will never reject.
@@ -1007,6 +1040,8 @@ function testFile(filename, opts) {
       testPromise = testYAML(filename, contents);
     } else if (filenameObj.base === '_contributors.yaml') {
       testPromise = testContributors(filename, contents);
+    } else if (filenameObj.base === 'glossary.yaml') {
+      testPromise = testGlossary(filename, contents);
     } else if (filenameObj.base === '_redirects.yaml') {
       testPromise = testRedirects(filename, contents);
     } else if (filenameObj.base === 'commontags.json') {

@@ -5,6 +5,7 @@ var path = require('path');
 var runSequence = require('run-sequence');
 var wfHelper = require('./wfHelper');
 var wfContributors = require('./wfContributors');
+const wfGlossary = require('./wfGlossary');
 var wfTemplateHelper = require('./wfTemplateHelper');
 var wfYouTubeShows = require('./wfYouTubeShows');
 
@@ -21,6 +22,7 @@ gulp.task('build:fundamentals', function() {
     section: section,
     outputPath: baseOutputPath
   };
+  wfGlossary.build();
   var startPath = path.join(GLOBAL.WF.src.content, section);
   var files = wfHelper.getFileList(startPath, ['**/*.md']);
   files.sort(wfHelper.updatedComparator);
