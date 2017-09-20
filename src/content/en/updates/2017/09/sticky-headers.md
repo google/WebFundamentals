@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Using <code>position: sticky</code> and <code>IntersectionObserver</code> together to determine when elements become sticky. Apply scroll effects without scroll events!
+description: Using position: sticky and IntersectionObserver together to determine when elements become sticky. Apply scroll effects without scroll events!
 
 {# wf_updated_on: 2017-09-19 #}
 {# wf_published_on: 2017-09-19 #}
@@ -30,8 +30,8 @@ figure.flex-center {
 ### TL;DR {: #tldr .hide-from-toc}
 
 Here's a secret: You may not need `scroll` events in your next app. Using an
-[`IntersectionObserver`](https://developers.google.com/web/updates/2016/04/intersectionobserver),
-I show how you can fire a custom event when [`position:sticky`](https://developers.google.com/web/updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit) elements become fixed or when they stop sticking. All without the
+[`IntersectionObserver`](/web/updates/2016/04/intersectionobserver),
+I show how you can fire a custom event when [`position:sticky`](/web/updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit) elements become fixed or when they stop sticking. All without the
 use of scroll listeners. There's even an awesome demo to prove it:
 
 <figure>
@@ -382,7 +382,7 @@ fixed and added scroll effects without the use of `scroll` events.
 
 ### Conclusion
 
-I've often wondered if [`IntersectionObserver`](https://developers.google.com/web/updates/2016/04/intersectionobserver) would
+I've often wondered if [`IntersectionObserver`](/web/updates/2016/04/intersectionobserver) would
 be a helpful tool to replace some of the `scroll` event-based UI patterns that
 have developed over the years. Turns out the answer is yes and no. The semantics
 of the `IntersectionObserver` API make it hard to use for everything. But as
