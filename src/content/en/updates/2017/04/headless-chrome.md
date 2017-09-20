@@ -408,17 +408,8 @@ const fs = require('fs');
 const webdriver = require('selenium-webdriver');
 const chromedriver = require('chromedriver');
 
-// This should be the path to your Canary installation.
-// I'm assuming Mac for the example.
-const PATH_TO_CANARY = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary';
-
 const chromeCapabilities = webdriver.Capabilities.chrome();
-chromeCapabilities.set('chromeOptions', {
-  binary: PATH_TO_CANARY // Screenshots require Chrome 60. Force Canary.
-  'args': [
-    '--headless',
-  ]
-});
+chromeCapabilities.set('chromeOptions', {args: ['--headless']});
 
 const driver = new webdriver.Builder()
   .forBrowser('chrome')
@@ -455,9 +446,6 @@ Example: filter CSS features on chromestatus.com
 const webdriverio = require('webdriverio');
 const chromedriver = require('chromedriver');
 
-// This should be the path to your Canary installation.
-// I'm assuming Mac for the example.
-const PATH_TO_CANARY = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary';
 const PORT = 9515;
 
 chromedriver.start([
@@ -472,10 +460,7 @@ const opts = {
   port: PORT,
   desiredCapabilities: {
     browserName: 'chrome',
-    chromeOptions: {
-      binary: PATH_TO_CANARY // Screenshots require Chrome 60. Force Canary.
-      args: ['--headless']
-    }
+    chromeOptions: {args: ['--headless']}
   }
 };
 
