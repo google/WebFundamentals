@@ -16,7 +16,7 @@ users or precise to their needs. A better user experience is to offer to send
 users a specific type of notification, and to present the permissions request
 after they opt-in.
 
-[good]: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+[good]: /web/fundamentals/push-notifications/
 
 ## How to pass the audit {: #how }
 

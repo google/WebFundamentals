@@ -15,7 +15,7 @@ description: Lighthouse の監査項目「ページの読み込み時に自動�
 
 
 
-[good]: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+[good]: /web/fundamentals/push-notifications/
 
 ##  監査に合格する方法 {: #how }
 

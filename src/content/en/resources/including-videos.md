@@ -79,7 +79,7 @@ Include the video in your article using the following markup. The `autoplay`
 attribute can be removed if autoplay is not desired. I recommend keeping
 `controls` in for as long as iOS 9 is around, as it ignores `autoplay` and the
 user needs a way to start the video. I’d also recommend to [add a poster
-image](/web/fundamentals/design-and-ui/media/video#include_a_poster_image),
+image](/web/fundamentals/media/video#include_a_poster_image),
 especially when autoplay is not enabled.
 
 

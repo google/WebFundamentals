@@ -107,7 +107,7 @@ The initial-scale property controls the zoom level when the page is first loaded
 
 #### For more information
 
-*  [Set the viewport](/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport) - Responsive Web Design Basics 
+*  [Set the viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) - Responsive Web Design Basics 
 *  [Using the viewport meta tag to control layout on mobile browsers](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) - MDN
 
 <div id="4"></div>

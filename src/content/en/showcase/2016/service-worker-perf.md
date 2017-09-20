@@ -600,7 +600,7 @@ It's great to see that more than half of our signed-in users opted to receive pu
 
 ### App install banners
 
-If a progress web app meets the [criteria](/web/fundamentals/engage-and-retain/app-install-banners/web-app-install-banners) and is used frequently by a user, that user may be shown an app install banner, prompting them to add the app to their home screen.
+If a progress web app meets the [criteria](/web/fundamentals/app-install-banners/) and is used frequently by a user, that user may be shown an app install banner, prompting them to add the app to their home screen.
 
 In IOWA, we tracked how often these prompts were shown to the user (and whether they were accepted) with the following code:
 

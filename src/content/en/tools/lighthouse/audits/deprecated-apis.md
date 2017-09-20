@@ -28,7 +28,7 @@ DevTools Console.
 
 [Audit source][src]{:.external}
 
-[src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/deprecations
+[src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/deprecations.js
 
 ## Feedback {: #feedback }
 

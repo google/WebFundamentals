@@ -46,7 +46,7 @@ Note: Como nota al margen, observa que `visibility: hidden` es diferente de `dis
 
 La salida final es una representación con el contenido y la información de estilo de todo el contenido visible en pantalla.  **Una vez preparado el árbol de representación, podemos continuar con la etapa de “diseño”.**
 
-Hasta ahora, hemos calculado los nodos que deben ser visibles y sus estilos computarizados, pero no hemos calculado la posición y el tamaño exactos dentro de la [ventana de visualización](/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport) del dispositivo.---Esta es la etapa de “diseño”, también llamada “reprocesamiento”.
+Hasta ahora, hemos calculado los nodos que deben ser visibles y sus estilos computarizados, pero no hemos calculado la posición y el tamaño exactos dentro de la [ventana de visualización](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) del dispositivo.---Esta es la etapa de “diseño”, también llamada “reprocesamiento”.
 
 Para conocer la posición y el tamaño exactos de cada objeto de la página, el navegador comienza su camino por la raíz del árbol de representación. Veamos un ejemplo simple y práctico:
 

@@ -17,7 +17,10 @@ upper_tabs:
           path: /web/resources/writing-an-article
         - title: Writing an Update or Case Study
           path: /web/resources/writing-an-update
-        - title: Style Guide
+        - title: Writing Style Guide
+          path: /style/
+          status: external
+        - title: Markdown Syntax
           path: /web/resources/style-guide
         - title: Widgets
           path: /web/resources/widgets

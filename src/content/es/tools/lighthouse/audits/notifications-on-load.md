@@ -16,7 +16,7 @@ usuarios ni precisas para sus necesidades. Para proporcionar una mejor experienc
 los usuarios un tipo específico de notificación y presenta las solicitudes de permisos
 después de que acepten la notificación.
 
-[good]: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+[good]: /web/fundamentals/push-notifications/
 
 ## Cómo aprobar la auditoría {: #how }
 

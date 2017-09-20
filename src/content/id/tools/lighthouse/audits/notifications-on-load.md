@@ -16,7 +16,7 @@ atau sesuai dengan kebutuhan mereka. Pengalaman pengguna yang lebih baik adalah 
 notifikasi tipe tertentu, dan menampilkan permintaan izin
 setelah mereka ikut serta.
 
-[good]: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+[good]: /web/fundamentals/push-notifications/
 
 ## Cara untuk lulus audit {: #how }
 
