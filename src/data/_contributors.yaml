@@ -152,7 +152,7 @@ ericbidelman:
     - author
   email: e.bidelman@google.com
   description:
-    en: 'Engineer @ Google working on Lighthouse, Web Components, Chrome, and the web'
+    en: 'Engineer @ Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'
 
 bokan:
   name:
