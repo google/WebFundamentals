@@ -143,13 +143,16 @@ def parseIndexYamlItems(yamlItems):
 def generateYaml(lang, requestPath, rawYaml):
   content = ''
   parsedYaml = yaml.load(rawYaml)
+  bookPath = parsedYaml['book_path']
+  bookYaml = devsiteHelper.parseBookYaml(bookPath, lang)
+  projectPath = parsedYaml['project_path']
   page = parsedYaml['landing_page']
   rows = page['rows']
   title = 'Web'
-  banner = devsiteHelper.getAnnouncementBanner(parsedYaml['project_path'], lang)
+  banner = devsiteHelper.getAnnouncementBanner(projectPath, lang)
   header = 'Generic Page Header Here'
   customCss = ''
-  lowerTabs = devsiteHelper.getLowerTabs(parsedYaml['book_path'], lang)
+  lowerTabs = devsiteHelper.getLowerTabs(bookYaml)
   if 'custom_css_path' in page:
     customCss = '<link rel="stylesheet" href="'
     customCss += page['custom_css_path']

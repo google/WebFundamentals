@@ -96,8 +96,9 @@ def getPage(requestPath, lang):
         # Reads the book.yaml file and generate the lefthand nav
         if 'book_path' in md.Meta and len(md.Meta['book_path']) == 1:
           bookPath = md.Meta['book_path'][0]
-          leftNav = devsiteHelper.getLeftNav(requestPath, bookPath, lang)
-          lowerTabs = devsiteHelper.getLowerTabs(bookPath, lang)
+          bookYaml = devsiteHelper.parseBookYaml(bookPath, lang)
+          leftNav = devsiteHelper.getLeftNav(requestPath, bookYaml)
+          lowerTabs = devsiteHelper.getLowerTabs(bookYaml)
 
         if 'project_path' in md.Meta and len(md.Meta['project_path']) == 1:
           projectPath = md.Meta['project_path'][0]

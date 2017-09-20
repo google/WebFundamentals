@@ -12,6 +12,8 @@ from google.appengine.api import memcache
 from google.appengine.ext.webapp.template import render
 
 SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content/')
+DEVENV = os.environ['SERVER_SOFTWARE'].startswith('Dev')
+USE_MEMCACHE = not DEVENV
 
 
 def slugify(str):
@@ -32,9 +34,10 @@ def getFromMemCache(memcacheKey):
 
 def setMemCache(memcacheKey, value, length=3600):
   try:
-    memcache.set(memcacheKey, value, length)
+    if USE_MEMCACHE:
+      memcache.set(memcacheKey, value, length)
   except Exception as e:
-    pass
+    logging.exception('Unable to cache to MemCache')
 
 
 def checkForRedirect(requestedPath, lang, useMemcache):
@@ -92,7 +95,6 @@ def checkForRedirect(requestedPath, lang, useMemcache):
 def readFile(requestedFile, lang='en'):
   # Reads a file from the file system, first trying the localized, then
   # the English version. If neither exist, it returns None
-  #originalPathToFile = pathToFile
   requestedFile = re.sub(r'^/?web/', '', requestedFile)
   workingFile = os.path.join(SOURCE_PATH, lang, requestedFile)
   if not os.path.isfile(workingFile):
@@ -192,20 +194,18 @@ def expandBook(book, lang='en'):
   return book
 
 
-def getLowerTabs(pathToBook, lang='en'):
+def getLowerTabs(bookYaml):
   """Gets the lower tabs from a parsed book.yaml dictionary.
 
   Args:
-      pathToBook: the string path to the location of the book
-      lang: Which language to use, defaults to 'en'
+      bookYaml: the parsed book.yaml file
 
   Returns:
       An array of objects with the lower tabs
   """
   result = []
-  yamlNav = parseBookYaml(pathToBook, lang)
   try:
-    for tab in yamlNav['upper_tabs']:
+    for tab in bookYaml['upper_tabs']:
       if 'lower_tabs' in tab and 'other' in tab['lower_tabs']:
         for lowerTab in tab['lower_tabs']['other']:
           lt = {}
@@ -218,10 +218,14 @@ def getLowerTabs(pathToBook, lang='en'):
   return result
 
 
-def getLeftNav(requestPath, pathToBook, lang='en'):
+def getLeftNav(requestPath, bookYaml, lang='en'):
   # Returns the left nav. If it's already been generated and stored in
   # memcache, return that, otherwise, read the file then recursively
   # build the tree using buildLeftNav.
+  memcacheKey = 'leftNav-' + requestPath
+  result = getFromMemCache(memcacheKey)
+  if result:
+    return result
   whoops = '<h2>Whoops!</h2>'
   whoops += '<p>An error occured while trying to parse and build the'
   whoops += ' left hand navigation. Check the error logs.'
@@ -229,8 +233,7 @@ def getLeftNav(requestPath, pathToBook, lang='en'):
   requestPath = os.path.join('/web/', requestPath)
   try:
     result = '<h2>No Matches Found</h2>'
-    yamlNav = parseBookYaml(pathToBook, lang)
-    for upperTab in yamlNav['upper_tabs']:
+    for upperTab in bookYaml['upper_tabs']:
       if 'path' in upperTab and requestPath.startswith(upperTab['path']):
         for lowerTab in upperTab['lower_tabs']['other']:
           if ('path' not in lowerTab['contents'][0] or
@@ -238,6 +241,7 @@ def getLeftNav(requestPath, pathToBook, lang='en'):
               result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
               result += buildLeftNav(lowerTab['contents'])
               result += '</ul>\n'
+    setMemCache(memcacheKey, result)
     return result
   except Exception as e:
     msg = ' - Unable to read or parse primary book.yaml: ' + pathToBook
