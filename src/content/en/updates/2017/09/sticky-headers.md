@@ -2,9 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Using <code>position: sticky</code> and <code>IntersectionObserver</code> together to determine when elements become sticky. Apply scroll effects without scroll events!
 
-{# wf_updated_on: 2017-09-12 #}
-{# wf_published_on: 2017-09-12 #}
+{# wf_updated_on: 2017-09-19 #}
+{# wf_published_on: 2017-09-19 #}
 {# wf_blink_components: Blink>CSS,Blink>Layout #}
+{# wf_tags: css,intersectionobserver,stickyposition  #}
+{# wf_featured_image: /web/updates/images/generic/visibility.png #}
+{# wf_featured_snippet: Using <code>position: sticky</code> and <code>IntersectionObserver</code> together to determine when elements become sticky. Apply scroll effects without scroll events! #}
 
 # An event for CSS position:sticky {: .page-title }
 
