@@ -616,6 +616,24 @@ function testMarkdown(filename, contents, options) {
       }
     });
 
+    // Verify all {% includecode %} elements work properly
+    matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDE_CODE, contents);
+    matched.forEach(function(match) {
+      const msg = 'IncludeCode widget -';
+      const widget = match[0];
+      const position = {line: getLineNumber(contents, match.index)};
+      const inclFile = wfRegEx.getMatch(wfRegEx.RE_INCLUDE_CODE_PATH, widget, null);
+      if (inclFile.indexOf('web/') !== 0) {
+        logError(filename, position, `${msg} path must start with 'web/'`);
+      }
+      try {
+        const localPath = inclFile.replace('web/', GLOBAL.WF.src.content);
+        fs.accessSync(localPath, fs.R_OK);
+      } catch (ex) {
+        logError(filename, position, `${msg} file not found: '${inclFile}'`);
+      }
+    });
+
     // Verify all <<include.md>> markdown files are accessible
     matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDE_MD, contents);
     matched.forEach(function(match) {
