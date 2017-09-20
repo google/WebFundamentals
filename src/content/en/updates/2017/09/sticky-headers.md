@@ -6,7 +6,7 @@ description: Using <code>position: sticky</code> and <code>IntersectionObserver<
 {# wf_published_on: 2017-09-12 #}
 {# wf_blink_components: Blink>CSS,Blink>Layout #}
 
-# Know when sticky positioned elements are stuck {: .page-title }
+# An event for CSS position:sticky {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
@@ -65,8 +65,10 @@ top of its parent container:
 }
 ```
 
-Wouldn't it be nice if the browser told when the elements hits that mark? A
-signal like that could unlock a number of **use cases**:
+Wouldn't it be nice if the browser told when the elements hits that mark?
+Apparently I'm [not](https://stackoverflow.com/questions/16302483/event-when-positionsticky-is-triggered)
+the [only one](https://stackoverflow.com/questions/16302483/event-when-positionsticky-is-triggered)
+that thinks so. A signal for `position:sticky` could unlock a number of **use cases**:
 
 1. Apply a drop shadow to a banner as it sticks.
 - As a user reads through your content, record analytics hits to know their
