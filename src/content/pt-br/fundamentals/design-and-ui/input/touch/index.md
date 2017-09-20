@@ -35,7 +35,7 @@ e active. Para alterar a interface para cada um desses estados, precisamos aplic
 às pseudoclasses `:hover`, `:focus` e `:active` conforme é mostrado abaixo:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
 </pre>
 
 [Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
@@ -74,7 +74,7 @@ O Safari e o Chrome adicionam uma cor de destaque de toque que pode ser impedida
 `-webkit-tap-highlight-color`:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
 </pre>
 
 [Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
@@ -93,7 +93,7 @@ Se você estiver usando um elemento `<button>` no Firefox, um gradiente é
 aplicado, e pode ser removido ao definir `background-image: none`.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
 </pre>
 
 [Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
@@ -190,7 +190,7 @@ esses eventos. (`true` significa que você deseja capturar o evento antes de out
 Veja a seguir um exemplo de como detectar o início de uma interação.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
 [Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
@@ -229,7 +229,7 @@ Veja abaixo um snippet do nosso método `handleGestureStart()`, que adiciona os 
 e end ao documento:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
 [Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
@@ -239,7 +239,7 @@ e end do documento e libera a captura do ponteiro
 quando o gesto for concluído, assim:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
 </pre>
 
 [Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
@@ -274,7 +274,7 @@ Se o evento for um `PointerEvent` ou `MouseEvent`, ele extrai o `clientX` e o
 `clientY` do próprio evento.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
 </pre>
 
 [Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
@@ -311,7 +311,7 @@ evento move.
 Na nossa demonstração, nós armazenamos a posição de toque inicial em `handleGestureStart()` (procure `initialTouchPos`):
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
 O método `handleGestureMove()` armazena a posição do seu evento
@@ -319,7 +319,7 @@ antes de solicitar um quadro de animação se necessário, passando na função
 `onAnimFrame()` como retorno de chamada:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-move" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-move" adjust_indentation="auto" %}
 </pre>
 
 O valor `onAnimFrame` é uma função que, quando chamada, altera a IU
@@ -337,7 +337,7 @@ elemento que queiramos mover antes de atualizar `rafPending` para `false`, permi
 o próximo evento de toque solicite um novo quadro de animação.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="on-anim-frame" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="on-anim-frame" adjust_indentation="auto" %}
 </pre>
 
 ### Controlar gestos usando ações de toque
@@ -348,7 +348,7 @@ impedir que o navegador faça qualquer coisa com o toque de um usuário, permiti
 interceptemos todos os eventos de toque.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="touch-action-example" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="touch-action-example" adjust_indentation="auto" %}
 </pre>
 
 Usar `touch-action: none` é um pouco exagerado, pois ela impede todos
@@ -413,7 +413,7 @@ O exemplo a baixo mostra como verificar o suporte e alterar
 os nomes dos eventos.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="pointereventsupport" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="pointereventsupport" adjust_indentation="auto" %}
 </pre>
 
 Para saber mais, confira este [artigo de atualizações da

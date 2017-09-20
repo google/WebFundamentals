@@ -155,7 +155,7 @@ Dogfood: `picture` 요소가 브라우저에 들어가기 시작했습니다. �
 <div style="clear:both;"></div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/media.html){: target="_blank" .external }
@@ -181,7 +181,7 @@ Dogfood: `picture` 요소가 브라우저에 들어가기 시작했습니다. �
 최적의 이미지를 선택하여 다운로드할 수 있습니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/sizes.html){: target="_blank" .external }
@@ -251,7 +251,7 @@ Dogfood: `picture` 요소가 브라우저에 들어가기 시작했습니다. �
 차지해야 합니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/breakpoints.html){: target="_blank" .external }
@@ -465,7 +465,7 @@ CSS `background` 속성은 복잡한 이미지를
 url(large.png)'는 'div'에 적용됩니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/conditional-mq.html){: target="_blank" .external }
@@ -495,7 +495,7 @@ CSS의 `image-set()` 함수는 동작 `background` 속성을 개선하여
 대체 이미지를 포함할 때 주의하세요. 예를 들면 다음과 같습니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-set.html){: target="_blank" .external }
@@ -526,7 +526,7 @@ Chrome, Firefox 및 Opera는 모두 표준 `(min-resolution: 2dppx)`를
 렌더링이 보장된다는 점입니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/media-query-dppx.html){: target="_blank" .external }
@@ -591,7 +591,7 @@ You're a super &#9733;
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-svg.html){: target="_blank" .external }
@@ -623,7 +623,7 @@ You're a super &#9733;
 <div style="clear:both;"></div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-font.html){: target="_blank" .external }
@@ -717,7 +717,7 @@ CSS sprite란 여러 이미지를 단일 'sprite 시트' 이미지에
 <div style="clear:both;"></div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media//image-sprite.html){: target="_blank" .external }

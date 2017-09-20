@@ -191,7 +191,7 @@ Prenons un exemple :
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 * Lorsque la largeur du navigateur est comprise entre <b>0 pixel</b> et <b>640 pixels</b>, `max-640px.css` est appliqué.
@@ -265,7 +265,7 @@ Redimensionnez ensuite le navigateur jusqu'à ce qu'il y ait trop d'espace entre
 Pour insérer un point de rupture à 600 pixels, créez deux feuilles de style ; l'une à utiliser lorsque la taille du navigateur est inférieure ou égale à 600 pixels, et l'autre pour une taille supérieure à 600 pixels.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
 Pour terminer, restructurez la feuille de style en cascade (CSS). Dans cet exemple, les styles courants, tels que les polices, les icônes, les couleurs et le positionnement de base, ont été placés dans le fichier 'weather.css'. Les dispositions spécifiques relatives au petit écran sont ensuite placées dans le fichier 'weather-small.css', tandis que les styles pour grand écran sont placés dans 'weather-large.css'.
@@ -279,7 +279,7 @@ Outre la sélection de points de rupture majeurs lors de modifications important
 Commençons par optimiser la disposition du petit écran. Dans ce cas, nous allons augmenter la taille de police lorsque la largeur de la fenêtre d'affichage est supérieure à 360 pixels. Ensuite, s'il y a suffisamment d'espace, nous pouvons séparer les températures maximale et minimale, de sorte qu'elles se trouvent sur la même ligne, au lieu d'être affichées l'une au-dessus de l'autre. Nous allons également agrandir légèrement les icônes illustrant les conditions météo.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 <img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints." class="attempt-left">
@@ -291,7 +291,7 @@ Commençons par optimiser la disposition du petit écran. Dans ce cas, nous allo
 De même, dans le cas des écrans de grande taille, il est préférable de limiter la largeur maximale du panneau de prévision, de telle sorte qu'il n'occupe pas tout l'écran.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ### Optimiser le texte pour la lecture
@@ -306,7 +306,7 @@ Si l'on se base sur la théorie de lisibilité standard, la colonne idéale doit
 Examinons de plus près l'article de blog ci-dessus.  Sur les écrans plus petits, l'utilisation de la police Roboto avec une taille de 1 em fonctionne parfaitement et génère 10 mots par ligne. Cependant, un point de rupture est nécessaire sur les écrans plus grands. Dans ce cas, si la largeur du navigateur est supérieure à 575 pixels, la largeur idéale du contenu est de 550 pixels.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### Ne jamais masquer complètement le contenu

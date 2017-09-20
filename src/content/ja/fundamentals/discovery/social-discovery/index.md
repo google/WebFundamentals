@@ -70,7 +70,7 @@ description: サイトの各ページにコードを数行追加すると、ソ�
 次に例を示します。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
 </pre>
 
 ほとんどのメタデータはウェブページのヘッダー部分に埋め込みますが、microdata はコンテキストがある場所に挿入します。
@@ -113,7 +113,7 @@ Google+ のリッチ スニペットを検証する場合、次のようなツ�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
 </pre>
 
 このメタデータをページのヘッダー部分に含めると、ページが共有されたときに、リッチ スニペットの情報が表示されます。
@@ -183,7 +183,7 @@ Twitter カードを適切に表示するには、[ドメインが承認され�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="twitter" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="twitter" adjust_indentation="auto" %}
 </pre>
 
 Twitter ID の値を twitter:site に指定すると、この情報が共有される投稿に埋め込まれます。これにより、閲覧者がページの所有者と簡単に交流できるようになります。
@@ -207,7 +207,7 @@ Twitter カードの詳細については、次のサイトをご覧ください
 次に例を示します。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
 </pre>
 
 microdata と OGP が同じマークアップを共有していることに注目してください。

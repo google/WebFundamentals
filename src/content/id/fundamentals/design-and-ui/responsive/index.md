@@ -252,7 +252,7 @@ Mari kita lihat contoh berikut:
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/media-queries.html){: target="_blank" .external }
@@ -374,7 +374,7 @@ Untuk memasukkan breakpoint pada 600 px, buat dua style sheet baru, satu untuk d
 browser 600 px dan kurang dari itu, dan satu ketika luasnya lebih dari 600 px.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-2.html){: target="_blank" .external }
@@ -410,7 +410,7 @@ baris yang sama dan tidak tumpang tindih.  Dan juga mari kita buat ikon
 cuaca sedikit lebih besar.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-small.css" region_tag="mqsmallbpsm" adjust_indentation="auto" %}
 </pre>
 
 <div class="attempt-left">
@@ -438,7 +438,7 @@ Demikian pula, untuk layar besar akan sangat baik membatasi lebar maksimum
 panel prakiraan cuaca sehingga tidak memakai seluruh lebar layar.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-large.css" region_tag="mqsmallbplg" adjust_indentation="auto" %}
 </pre>
 
 ### Mengoptimalkan teks untuk bacaan
@@ -468,7 +468,7 @@ yang lebih besar membutuhkan breakpoint. Pada kasus ini, jika lebar browser lebi
 dari 575px, lebar ideal materi adalah 550px.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/reading.html" region_tag="mqreading" adjust_indentation="auto" %}
 </pre>
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/reading.html){: target="_blank" .external }

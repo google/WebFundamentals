@@ -75,7 +75,7 @@ de búsqueda a comprender mejor los contenidos de la página.
 A continuación, te mostramos un ejemplo:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
 </pre>
 
 Mientras la mayoría de los metadatos están incorporados en la sección de encabezado de una página web, los microdatos
@@ -118,7 +118,7 @@ metadatos necesarios para permitir que las páginas web tengan la misma funciona
 objetos de Facebook.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
 </pre>
 
 Cuando se incluyen en la sección de encabezado de tu página, estos metadatos proveen información enriquecida de
@@ -190,7 +190,7 @@ contener una metaetiqueta que contiene `twitter:card` como el atributo `name` en
 Aquí puedes ver un ejemplo rápido:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="twitter" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="twitter" adjust_indentation="auto" %}
 </pre>
 
 Al asignar la id de Twitter al valor de twitter:site, Twitter incorpora esta
@@ -214,7 +214,7 @@ Dadas las tres opciones, lo mejor que puedes hacer es incluirlas todas en tu
 página web. A continuación, te mostramos un ejemplo:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
 </pre>
 
 Nota que los microdatos y el OGP comparten cierto marcado:

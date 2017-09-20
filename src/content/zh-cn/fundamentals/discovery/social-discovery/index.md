@@ -70,7 +70,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 下面是一个示例：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
 </pre>
 
 尽管大多数元数据嵌入在网页的 head 部分，但 microdata 则是位于存在上下文的位置。
@@ -113,7 +113,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
 </pre>
 
 加入网页的 head 部分时，这些元数据可以在分享网页时提供丰富的摘要信息。
@@ -186,7 +186,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="twitter" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="twitter" adjust_indentation="auto" %}
 </pre>
 
 通过将 Twitter ID 指定为 twitter:site 的值，Twitter 可以将这些信息嵌入到分享的帖子中，这样用户就能轻松地与页面所有者进行互动。
@@ -210,7 +210,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 下面是一个示例：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
 </pre>
 
 请注意，microdata 和 OGP 共享某些标记：

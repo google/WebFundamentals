@@ -187,7 +187,7 @@ Note: Разделяйте атрибуты запятыми, чтобы уст�
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 * При ширине браузера от <b>0 пикс.</b> до <b>640 пикс.</b> применяется max-640px.css.
@@ -264,7 +264,7 @@ Note: Разделяйте атрибуты запятыми, чтобы уст�
 Чтобы сделать 600 пикселей контрольной точкой, нужно создать две таблицы стилей: одну для меньших значений, другую для больших.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
 В конце проведите рефакторинг CSS.  В этом примере мы поместили общие стили (шрифты, значки, цвета и базовое позиционирование) в weather.css.  Затем мы включили макет для маленьких экранов в weather-small.css, а для больших - в weather-large.css.
@@ -281,7 +281,7 @@ Note: Разделяйте атрибуты запятыми, чтобы уст�
 Начнем с оптимизации макета для небольших экранов.  В данном случае мы увеличим шрифт для ширины области просмотра, превышающей 360 пикселей.  Теперь, когда места достаточно, мы можем расположить минимальную температуру на одной линии с максимальной, а не под ней.  Также немного увеличим значки погодных явлений.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -293,7 +293,7 @@ Note: Разделяйте атрибуты запятыми, чтобы уст�
 Этим же способом можно ограничить размер панели прогноза погоды для больших экранов, чтобы она не занимала всю доступную ширину.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ### Оптимизация текста для чтения
@@ -308,7 +308,7 @@ Note: Разделяйте атрибуты запятыми, чтобы уст�
 Рассмотрим подробнее приведенный выше пример записи в блоге.  На маленьком экране отлично помещаются строки длиной в 10 слов шрифтом Roboto с размером 1em, но для экранов большего размера необходимо установить контрольную точку. В этом случае для окна просмотра браузера размером больше 575 пикселей оптимальная ширина контента равна 550 пикселям.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### Никогда не скрывайте контент полностью

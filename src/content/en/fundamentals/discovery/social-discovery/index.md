@@ -75,7 +75,7 @@ engines better understand the contents of the page.
 Here's an example:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
 </pre>
 
 While most metadata are embedded in the head section of a web page, microdata
@@ -118,7 +118,7 @@ metadata necessary to allow web pages to have the same functionality as other
 Facebook objects.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
 </pre>
 
 When included in the head section of your page, this metadata provides rich
@@ -190,7 +190,7 @@ contain a meta tag that has `twitter:card` as the `name` attribute instead of
 Here's a quick example:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="twitter" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="twitter" adjust_indentation="auto" %}
 </pre>
 
 By assigning the Twitter id to the value of twitter:site, Twitter embeds this
@@ -214,7 +214,7 @@ Given all three options, the best thing you can do is to include them all in
 your web page. Here's an example:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
 </pre>
 
 Notice that microdata and OGP share some markup:

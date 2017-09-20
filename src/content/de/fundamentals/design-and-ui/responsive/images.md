@@ -99,7 +99,7 @@ Das <code>picture</code>-Element sollte verwendet werden, wenn eine Bildquelle m
 <div class="clearfix"></div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 Im vorherigen Beispiel wird bei einer Browserbreite von mindestens 800 Pixeln entweder `head.jpg` oder `head-2x.jpg` verwendet, abhängig von der Auflösung des Geräts. Wenn der Browser zwischen 450 und 800 Pixeln breit ist, kommt entweder `head-small.jpg` oder `head-small-2x.jpg` zum Einsatz, wieder abhängig von der Auflösung des Geräts. Für Bildschirmbreiten mit weniger als 450 Pixeln und Rückwärtskompatibilität, bei denen das `picture`-Element nicht unterstützt wird, stellt der Browser stattdessen das `img`-Element dar, das immer verwendet werden sollte.
@@ -111,7 +111,7 @@ Wenn die endgültige Größe des Bilds nicht bekannt ist, kann es schwierig sein
 Statt eine feste Größe und Pixeldichte für Bilder festzulegen, kann die Größe aller bereitgestellten Bilder über das Hinzufügen eines Breitendeskriptors zusammen mit der Größe des Bildelements angegeben werden. So kann der Browser die effektive Pixeldichte automatisch berechnen und das beste Bild zum Herunterladen auswählen.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 Im vorherigen Beispiel wird ein Bild dargestellt, das die Hälfte der Breite des Darstellungsbereichs (sizes=50vw) aufweist. Abhängig von der Breite des Browsers und seinem Gerätepixelverhältnis wird ihm ermöglicht, das richtige Bild unabhängig davon auszuwählen, wie groß das Browserfenster ist. In der folgenden Tabelle ist zu sehen, welches Bild er Browser auswählen würde:
@@ -171,7 +171,7 @@ Im vorherigen Beispiel wird ein Bild dargestellt, das die Hälfte der Breite des
 In vielen Fällen ändert sich die Größe oder das Bild abhängig von den Layoutübergangspunkten der Website. So kann es bei kleinen Bildschirmen wünschenswert sein, die volle Breite des Darstellungsbereichs mit einem Bild abzudecken, während auf größeren Bildschirmen nur ein kleiner proportionaler Teil genutzt werden sollte. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 Das `sizes`-Attribut im vorherigen Beispiel nutzt mehrere Medienabfragen, um die Größe des Bilds festzulegen. Wenn die Breite des Browsers über 600 Pixeln liegt, wird das Bild mit 25 % der Breite des Darstellungsbereichs angezeigt. Bei einer Breite zwischen 500 und 600 Pixeln nimmt es 50 % der Breite des Darstellungsbereichs ein. Unter 500 Pixeln wird die volle Breite in Anspruch genommen.
@@ -233,7 +233,7 @@ Medienabfragen wirken sich nicht nur auf das Seitenlayout aus, sondern können a
 So wird im folgenden Beispiel für kleinere Bildschirme nur `small.png` heruntergeladen und auf die Inhalte des `div`-Containers angewendet, während für größere `background-image: url(body.png)` auf den Hauptteil und `background-image: url(large.png)` auf den Inhalt im `div`-Container angewendet wird.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
 ### `image-set` zur Bereitstellung von Bildern mit hoher Auflösung verwenden
@@ -253,7 +253,7 @@ entsprechend. Anders ausgedrückt: Der Browser geht davon aus, dass 2x-Bilder do
 Die Unterstützung für `image-set()` ist relativ neu und wird aktuell nur von Chrome und Safari mit dem Anbieterpräfix `-webkit` unterstützt. Darüber hinaus muss Sorge dafür getragen werden, dass ein Ersatzbild zur Verfügung steht, falls `image-set()` nicht unterstützt wird. Beispiel:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
 Im vorherigen Beispiel wird das passende Element in Browsern, die `image-set` unterstützen, und ansonsten das 1x-Element geladen. Das Problem hierbei ist natürlich, dass in den meisten Browsern das 1x-Element geladen wird, solange die `image-set()`-Unterstützung bei Browsern gering ist.
@@ -273,7 +273,7 @@ Medienabfragen können Regeln auf Grundlage des [Gerätepixelverhältnisses](htt
 Chrome, Firefox und Opera unterstützen alle standardmäßig `(min-resolution: 2dppx)`, während Safari und Android-Browser beide die ältere Syntax mit Anbieterpräfix ohne `dppx`-Einheit benötigen. Denken Sie daran, dass diese Stile nur dann geladen werden, wenn das Gerät der Medienabfrage entspricht, und Sie Stile für den Grundfall festlegen müssen. Dies hat den Vorteil, dass eine Darstellung auch in dem Fall gewährleistet ist, dass der Browser keine auflösungsspezifischen Medienabfragen unterstützt.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
 </pre>
 
 Sie können auch die `min-width`-Syntax nutzen, um abhängig von der Größe des Darstellungsbereichs alternative Bilder anzeigen zu lassen. Der Vorteil bei dieser Methode ist, dass das Bild nicht heruntergeladen wird, wenn keine Übereinstimmung mit der Medienabfrage gegeben ist. So wird `bg.png` nur dann heruntergeladen und auf das `body`-Element angewendet, wenn die Browserbreite mindestens 500 Pixel beträgt:
@@ -329,7 +329,7 @@ Für komplexere Symbolanforderungen eignen sich SVG-Symbole. Sie sind in der Reg
 &nbsp;
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
 </pre>
 
 ### Symbolschriften mit Vorsicht verwenden
@@ -349,7 +349,7 @@ srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
 alt="Beispiel einer Seite, die Font Awesome für die Schriftartensymbole verwendet">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
 </pre>
 
 Es gibt Hunderte kostenloser und kostenpflichtiger Symbolschriften, darunter [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Pictos](http://pictos.cc/) und [Glyphicons](http://glyphicons.com/).
@@ -406,7 +406,7 @@ CSS-Spriting ist eine Methode, bei der eine Anzahl an Bildern zu einem einzelnen
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Im Beispiel verwendeter Sprite-Block"></a>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
 Spriting hat den Vorteil, dass die Anzahl an einzelnen Downloads reduziert wird, die bei mehreren Bildern anfallen, während eine Zwischenspeicherung weiterhin möglich ist.

@@ -60,7 +60,7 @@ description: Пользоваться Интернетом можно с пом�
 Оба варианта легко преобразуются в разделы страницы, с которыми мы будем работать на протяжении всего проекта.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### Добавление контента на страницу
@@ -76,7 +76,7 @@ Note: О стиле мы напишем позже
 В заголовок поместим простой текст, описывающий суть курса:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 Также нам необходимо создать форму.
@@ -87,7 +87,7 @@ Note: О стиле мы напишем позже
 Чтобы пользователю было удобно вводить информацию на мобильном устройстве, опишем семантические типы элемента ввода. Например, когда необходимо ввести номер телефона, клавиатура переключится в режим набора номера.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
@@ -98,7 +98,7 @@ Note: О стиле мы напишем позже
 в нем будет располагаться список функций наших продуктов и плейсхолдер для видеоролика о работе с ними.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 Видео часто используют, чтобы рассказать о продукте или идее в более интерактивном стиле или показать его в действии.
@@ -111,7 +111,7 @@ Note: О стиле мы напишем позже
 *  для случаев, когда браузер не может проигрывать видео на странице, добавьте фолбэк-текст со ссылкой на скачивание видеоролика.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
@@ -128,7 +128,7 @@ Note: О стиле мы напишем позже
 Такие картинки крайне важны для передачи информации. Например, невозможно представить себе газеты и журналы без фотографий и рисунков. В этом курсе мы используем фотографии преподавателей Криса Уилсона, Питера Лубберса и Шона Беннета.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addimages.html" region_tag="images"   adjust_indentation="auto" %}
 </pre>
 
 Эти изображения расположены так, чтобы заполнить экран по широкой стороне. Такую верстку удобнее всего использовать для устройств с узким экраном. На мониторах стационарных компьютеров она выглядит хуже. Подробнее о том, как сделать верстку удобной для разных экранов, мы поговорим в разделе `Отзвычивый дизайн`.
@@ -146,7 +146,7 @@ Note: О стиле мы напишем позже
 Используйте таблицы только для предоставления табличных данных (например, для информационных матриц).
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### Добавление `подвала страницы`
@@ -156,7 +156,7 @@ Note: О стиле мы напишем позже
 На нашем сайте такими разделами будут `Контакты`, `Условия использования` и `Социальные сети`.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### Заключение
@@ -220,7 +220,7 @@ Note: О стиле мы напишем позже
 Тег viewport сообщает браузеру, что масштаб страницы необходимо изменить, чтобы она полностью помещалась на экране. Вы можете задать несколько параметров для этого тега. Мы рекомендуем следующие параметры по умолчанию:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 Помещать тег viewport нужно только один раз в раздел head.
@@ -323,11 +323,11 @@ auto. В результате на широких экранах контент 
     </div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container"   adjust_indentation="auto" %}
 </pre>
 
 ### Изменение отступа и уменьшение размера текста
@@ -339,7 +339,7 @@ auto. В результате на широких экранах контент 
 На нашей странице мы увеличим отступ до 5% от общей ширины. Также мы увеличим размер текста заголовка в каждом разделе.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
 </pre>
 
 ### Адаптирование элементов для устройств с широким экраном
@@ -360,11 +360,11 @@ auto. В результате на широких экранах контент 
 Чтобы эффективно использовать пространство на широком экране, необходимо разбить на части контент в заголовке и поместить форму рядом со списком.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat"   adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -382,7 +382,7 @@ auto. В результате на широких экранах контент 
 Поэтому необходимо поместить его на одном уровне со списком, а не после него.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo"   adjust_indentation="auto" %}
 </pre>
 
 #### Размещение изображений друг за другом
@@ -394,7 +394,7 @@ auto. В результате на широких экранах контент 
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages"   adjust_indentation="auto" %}
 </pre>
 
 #### Адаптирование параметров изображения в соответствии с разрешением экрана
@@ -431,7 +431,7 @@ auto. В результате на широких экранах контент 
 Таким образом, получается отдельный раздел.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css"   adjust_indentation="auto" %}
 </pre>
 
 ### Завершение работы

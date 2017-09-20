@@ -239,7 +239,7 @@ HTML5 導入了數種新輸入類型。 這些新的輸入類型可以提示瀏�
 `datalist` 元素會在使用者輸入時提供提示。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
 Note: <code>datalist</code> 值是以建議項目的方式提供，而使用者並不侷限於所提供的建議。
@@ -260,7 +260,7 @@ Note: <code>datalist</code> 值是以建議項目的方式提供，而使用者�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
 </pre>
 
 #### 標籤調整大小和放置
@@ -303,7 +303,7 @@ Note: <code>datalist</code> 值是以建議項目的方式提供，而使用者�
 您應該使用：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
 
 #### 建議輸入 `name` 和 `autocomplete` 屬性值
@@ -620,7 +620,7 @@ notes:
 回應。  例如：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
 </pre>
 
 ##### 避免無效表單的表單提交
@@ -630,7 +630,7 @@ notes:
 ，以確定表單是否有效。  例如：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
 </pre>
 
 #### 即時顯示回饋
@@ -682,10 +682,10 @@ HTML5 還導入了數個虛擬類別，
 以在使用者造訪該欄位後，僅顯示無效樣式。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="invalidstyle" adjust_indentation="auto" %}
 </pre>
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
 </pre>
 
 您應該向使用者一次性顯示表單上的所有問題，而非一次展示一個問題。
@@ -730,7 +730,7 @@ HTML5 還導入了數個虛擬類別，
 <img src="imgs/rac_flow.png" class="center" alt="請求自動完成流程">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/rac.html" region_tag="rac"   adjust_indentation="auto" %}
 </pre>
 
 `form` 元素上的 `requestAutocomplete` 函數向瀏覽器指示，
@@ -740,7 +740,7 @@ HTML5 還導入了數個虛擬類別，
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/rac.html" region_tag="handlerac"   adjust_indentation="auto" %}
 </pre>
 
 在 `requestAutocomplete` 完成的同時，此函數將觸發 

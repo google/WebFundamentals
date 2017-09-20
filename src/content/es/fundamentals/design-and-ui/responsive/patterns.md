@@ -54,7 +54,7 @@ Entre los sitios en los que se usa este patrón se incluyen los siguientes:
  * [SimpleBits](http://simplebits.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/mostly-fluid.html" region_tag="mfluid" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/mostly-fluid.html" region_tag="mfluid" adjust_indentation="auto" %}
 </pre>
 
 ## Colocación de columnas 
@@ -81,7 +81,7 @@ Entre los sitios en los que se usa este patrón se incluyen los siguientes:
  * [Wee Nudge](http://weenudge.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/column-drop.html" region_tag="cdrop" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/column-drop.html" region_tag="cdrop" adjust_indentation="auto" %}
 </pre>
 
 ## Layout shifter
@@ -109,7 +109,7 @@ Entre los sitios en los que se usa este patrón se incluyen los siguientes:
  * [Andersson-Wise Architects](http://www.anderssonwise.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/layout-shifter.html" region_tag="lshifter" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/layout-shifter.html" region_tag="lshifter" adjust_indentation="auto" %}
 </pre>
 
 ## Tiny tweaks
@@ -131,7 +131,7 @@ Entre los sitios en los que se usa este patrón se incluyen los siguientes:
  * [Future Friendly](http://futurefriendlyweb.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/tiny-tweaks.html" region_tag="ttweaks" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/tiny-tweaks.html" region_tag="ttweaks" adjust_indentation="auto" %}
 </pre>
 
 
@@ -161,7 +161,7 @@ Entre los sitios en los que se usa este patrón se incluyen los siguientes:
  * [Sitios para celulares de Facebook](https://m.facebook.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/off-canvas.html" region_tag="ocanvas" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/off-canvas.html" region_tag="ocanvas" adjust_indentation="auto" %}
 </pre>
 
 

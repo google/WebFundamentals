@@ -35,7 +35,7 @@ DOM 元素可继承下列任何状态：default、focus、hover 和 active。
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
 </pre>
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
@@ -71,7 +71,7 @@ Safari 和 Chrome 添加的点按突出显示颜色可使用 `-webkit-tap-highli
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
 </pre>
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
@@ -90,7 +90,7 @@ Firefox 有两个副作用需要处理。
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
 </pre>
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
@@ -184,7 +184,7 @@ Firefox 有两个副作用需要处理。
 下面这个示例侦听的是交互的开始。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
@@ -219,7 +219,7 @@ Firefox 有两个副作用需要处理。
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
@@ -229,7 +229,7 @@ Firefox 有两个副作用需要处理。
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
 </pre>
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
@@ -264,7 +264,7 @@ Firefox 有两个副作用需要处理。
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
 </pre>
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
@@ -299,7 +299,7 @@ Firefox 有两个副作用需要处理。
 在演示中，我们将初始触摸位置存储在 `handleGestureStart()` 中（查找 `initialTouchPos`）：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
 `handleGestureMove()` 方法先存储其事件的位置，然后在必要时请求动画帧，并以回调形式传入 `onAnimFrame()` 函数：
@@ -307,7 +307,7 @@ Firefox 有两个副作用需要处理。
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-move" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-move" adjust_indentation="auto" %}
 </pre>
 
 `onAnimFrame` 值是一个函数，被调用时会改变我们的 UI，使其四处移动。
@@ -323,7 +323,7 @@ Firefox 有两个副作用需要处理。
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="on-anim-frame" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="on-anim-frame" adjust_indentation="auto" %}
 </pre>
 
 ### 利用触摸操作控制手势
@@ -334,7 +334,7 @@ CSS 属性 `touch-action` 用于控制元素的默认触摸行为。
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="touch-action-example" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="touch-action-example" adjust_indentation="auto" %}
 </pre>
 
 使用 `touch-action: none` 的影响颇为巨大，因为它会阻止所有默认的浏览器行为。
@@ -399,7 +399,7 @@ CSS 属性 `touch-action` 用于控制元素的默认触摸行为。
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="pointereventsupport" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="pointereventsupport" adjust_indentation="auto" %}
 </pre>
 
 如需了解详细信息，可以看看这篇[来自 Microsoft 的更新文章](https://msdn.microsoft.com/en-us/library/dn304886(v=vs.85).aspx)。

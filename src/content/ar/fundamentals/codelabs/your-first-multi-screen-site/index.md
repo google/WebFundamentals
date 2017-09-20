@@ -59,7 +59,7 @@ Caution: This article has not been updated in a while and may not reflect realit
 يمكن تحويل ذلك بسهولة إلى أقسام تقريبية لصفحة الهيكل التي سنستخدمها في الجزء المتبقي من المشروع.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### إضافة محتوى إلى الصفحة
@@ -75,7 +75,7 @@ Note: سيأتي التصميم في وقت لاحق
 في العنوان، يمكنك إضافة نموذج نص يصف الدورة:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 كما نحتاج إلى ملء النموذج.
@@ -86,7 +86,7 @@ Note: سيأتي التصميم في وقت لاحق
 سنضيف أنواعًا دلالية لنسهل على المستخدمين الوصول إلى المحتوى على أجهزة الجوّال بسرعة.  على سبيل المثال، عند إدخال رقم هاتف، يجب ألا يظهر للمستخدم سوى لوحة اتصال فقط.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
 #### إنشاء قسم الفيديو والمعلومات
@@ -95,7 +95,7 @@ Note: سيأتي التصميم في وقت لاحق
 سيتضمن قائمة نقطية بميزات المنتجات، كما يتضمن علامة موضعية للفيديو تعرض المنتج أثناء عمله للمستخدم.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 يتم كثيرًا الاستعانة بمقاطع الفيديو لوصف المحتوى بطريقة أكثر تفاعلاً، كما يتم استخدامها كثيرًا لتقديم عرض توضيحي للمنتج أو الفكرة.
@@ -108,7 +108,7 @@ Note: سيأتي التصميم في وقت لاحق
 *  إضافة نص تراجع يسمح للمستخدمين بتنزيل الفيديو إذا لم يكن بإمكانهم تشغيله في النافذة.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" adjust_indentation="auto" %}
 </pre>
 
 
@@ -124,7 +124,7 @@ Note: سيأتي التصميم في وقت لاحق
 وتكمن أهمية صور المحتوى في إمكانية استخدامها لتوضيح المقصود من الصفحة. ويمكنك النظر إلى هذه الصور باعتبارها مقالات صحفية. وتعد الصور التي نستخدمها صور دروس المدرسين المشاركين في المشروع: كريس ويلسون وبيتر لوبيرز وسيان بينيت.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addimages.html" region_tag="images" adjust_indentation="auto" %}
 </pre>
 
 وقد تم تعيين الصور بحيث تظهر بعرض 100% من الشاشة. ويتناسب هذا مع الأجهزة ذات إطار العرض الضيق، بينما يكون أقل جودة مع إطار العرض الواسع (مثل جهاز سطح المكتب).  وسنتناول ذلك في قسم التصميم سريع الاستجابة.
@@ -140,7 +140,7 @@ Note: سيأتي التصميم في وقت لاحق
 ويجب عدم استخدام الجداول إلا مع البيانات المجدولة، مثل قوالب المعلومات.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### إضافة تذييل صفحة
@@ -150,7 +150,7 @@ Note: سيأتي التصميم في وقت لاحق
 وفي موقعنا على الويب، سنكتفي بوضع رابط إلى البنود والشروط وصفحة الاتصال وملفاتنا الشخصية على الشبكات الاجتماعية.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### ملخص
@@ -214,7 +214,7 @@ Note: سيأتي التصميم في وقت لاحق
 يشير إطار العرض إلى المتصفح الذي تحتاج إليه الصفحة ليتم ضبط حجمها بحيث تتناسب مع الشاشة.  وهناك العديد من التهيئات المختلفة التي يمكنك استخدامها في إطار العرض لضبط طريقة ظهور الصفحة.  إلا أننا نوصي باستخدام الإعدادات الافتراضية التالية:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 يظهر إطار العرض في رأس المستند ولن نحتاج إلى الإعلان عنه سوى مرة واحدة فقط.
@@ -313,11 +313,11 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
     </div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" adjust_indentation="auto" %}
 </pre>
 
 ### تغيير المساحة المتروكة وتقليل حجم النص
@@ -329,7 +329,7 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
 في صفحة المنتج، سنزيد المساحة المتروكة لعناصر القسم من خلال تعيينها لتبقى عند القيمة 5% من العرض.  كما سنزيد حجم رؤوس الصفحة لكل قسم من الأقسام.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" adjust_indentation="auto" %}
 </pre>
 
 ### ضبط العناصر على إطار العرض الواسع
@@ -350,11 +350,11 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
 وللوصول إلى طريقة استخدام أكثر كفاءة لمساحة الشاشة الأفقية، يلزمنا تقسيم التدفق الخطي لرأس الصفحة ونقل النموذج والقائمة بحيث يصير كل منهما بجانب الآخر.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" adjust_indentation="auto" %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -372,7 +372,7 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
 يجب نقل عنصر الفيديو خارج التدفق العمودي لإطار العرض الضيق ويجب عرضه جنبًا إلى جنب مع القائمة النقطية للمحتوى على إطار عرض واسع.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" adjust_indentation="auto" %}
 </pre>
 
 #### ترتيب الصور
@@ -384,7 +384,7 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
 <img src="images/imageswide.png">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" adjust_indentation="auto" %}
 </pre>
 
 #### جعل الصور أكثر سرعة في الاستجابة لمستوى عدد النقاط في البوصة
@@ -419,7 +419,7 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
 وبذلك نحصل على فصل واضح وثابت.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" adjust_indentation="auto" %}
 </pre>
 
 ### الملخص

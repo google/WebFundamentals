@@ -98,7 +98,7 @@ Het element <code>picture</code> wordt gebruikt als een afbeeldingsbron in meerd
 
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/media.html" region_tag="picture" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/media.html" region_tag="picture" %}
 </pre>
 
 In het bovenstaande voorbeeld wordt, als de breedte van de browser ten minste 800px bedraagt, `head.jpg` of `head-2x.jpg` gebruikt, afhankelijk van de apparaatresolutie. Als de browserbreedte tussen 450px en 800px ligt, dan wordt `head-small.jpg` of `head-small-2x.jpg` gebruikt, maar ook hier is dat weer afhankelijk van de apparaatresolutie. Bij schermbreedten van minder dan 450px en compatibiliteit met eerdere versies, waarbij het element `picture` niet wordt ondersteund, geeft de browser in plaats daarvan het element `img` weer. Dit moet altijd worden gebruikt.
@@ -110,7 +110,7 @@ Als de definitieve grootte van de afbeelding niet bekend is, kan het lastig zijn
 In plaats van vaste afbeeldingsformaten en dichtheden te produceren, kan de grootte van elke geleverde afbeelding worden opgegeven door een descriptor voor de breedte toe te voegen, samen met de grootte van het afbeeldingselement, waardoor de browser automatisch de effectieve pixeldichtheid kan berekenen en de beste afbeelding kan kiezen om te downloaden.
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/sizes.html" region_tag="picture" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/sizes.html" region_tag="picture" %}
 </pre>
 
 In het voorbeeld hierboven wordt een afbeelding weergegeven die de helft van de breedte van de viewport vult (`sizes="50vw"`), afhankelijk van de breedte van de browser en de pixelverhouding van het apparaat. Dit stelt de browser in staat de juiste afbeelding te kiezen, ongeacht hoe groot het browservenster is. In onderstaande tabel ziet u welke afbeelding de browser zou kiezen:
@@ -170,7 +170,7 @@ In het voorbeeld hierboven wordt een afbeelding weergegeven die de helft van de 
 Vaak kan de grootte of afbeelding veranderen, afhankelijk van de lay-outbreekpunten van de site. Op een klein scherm, bijvoorbeeld, wilt u misschien dat de afbeelding de breedte van de viewport geheel vult, terwijl deze op een groter scherm slechts een klein gedeelte in beslag zou nemen.  
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/breakpoints.html" region_tag="picture" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" %}
 </pre>
 
 Het kenmerk `sizes` in het bovenstaande voorbeeld maakt gebruik van diverse mediaquery`s om de grootte van de afbeelding aan te geven. Als de browserbreedte groter is dan 600px, is de afbeelding 25% van de breedte van de viewport, bij een breedte van 500px tot 600px, is de afbeelding 50% van de breedte van de viewport en onder 500px heeft de afbeelding de volle breedte.
@@ -226,7 +226,7 @@ Mediaquery`s beïnvloeden niet alleen de paginalay-out, maar kunnen ook worden g
 In het onderstaande voorbeeld wordt op kleine schermen alleen `small.png` gedownload en toegepast op de inhoud-`div`, terwijl op grote schermen `background-image: url(body.png)` wordt toegepast op de hoofdtekst en `background-image: url(large.png)` op de inhoud-`div`.
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/conditional-mq.html" region_tag="conditional" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/conditional-mq.html" region_tag="conditional" %}
 </pre>
 
 ### Afbeeldingsset gebruiken voor het leveren van afbeeldingen met hoge resolutie
@@ -246,7 +246,7 @@ schalen. Met andere woorden, de browser gaat er vanuit dat 2x afbeeldingen tweem
 Er is nog maar sinds kort ondersteuning voor `image-set()` en dit wordt alleen ondersteund in Chrome en Safari met het voorvoegsel `-webkit` van de leverancier. U moet er ook voor zorgen dat u een reserve-afbeelding toevoegt voor het geval `image-set()` niet wordt ondersteund, bijvoorbeeld:
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/image-set.html" region_tag="imageset" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/image-set.html" region_tag="imageset" %}
 </pre>
 
 De juiste asset wordt in browsers geladen die image-set ondersteunen, en kunnen bij gebrek aan ondersteuning terugvallen op de 1x asset. De logische restrictie is dat zolang `image-set()` browserondersteuning laag is, de meeste browsers de 1x asset zullen ontvangen.
@@ -266,7 +266,7 @@ Mediaquery`s kunnen regels maken die gebaseerd zijn op de [device pixel ratio](h
 Chrome, Firefox en Opera ondersteunen alledrie de standaard `(min-resolution: 2dppx)`, terwijl voor zowel Safari als Android Browser de oudere syntax met voorvoegsel van de leverancier vereist is zonder de eenheid `dppx`. Houd er rekening mee dat deze stijlen alleen worden geladen als het apparaat overeenkomt met de mediaquery, en dat u stijlen moet opgeven voor de basiscasus. Dit biedt ook het voordeel dat er in ieder geval iets wordt weergegeven in het geval de browser geen resolutiespecifieke mediaquery`s ondersteunt.
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/media-query-dppx.html" region_tag="mqdppx" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/media-query-dppx.html" region_tag="mqdppx" %}
 </pre>
 
 U kunt ook de `min-width`-syntax gebruiken voor het weergeven van alternatieve afbeeldingen, afhankelijk van de grootte van de viewport. Deze techniek heeft het voordeel dat de afbeelding niet wordt gedownload als de mediaquery er niet mee overeenkomt.  Zo wordt `bg.png` bijvoorbeeld alleen gedownload en toegepast op de `body` als de breedte van de browser 500 px of groter is:
@@ -314,7 +314,7 @@ Voor meer complexe pictogramvereisten zijn SVG-pictogrammen over het algemeen li
 
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/icon-svg.html" region_tag="iconsvg" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/icon-svg.html" region_tag="iconsvg" %}
 </pre>
 
 ### Let goed op bij het gebruik van pictogramlettertypen
@@ -333,7 +333,7 @@ srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
 alt="Voorbeeld van een pagina waar FontAwesome is gebruikt voor de lettertypepictogrammen.">
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/icon-font.html" region_tag="iconfont" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/icon-font.html" region_tag="iconfont" %}
 </pre>
 
 Er bestaand honderden gratis en betaalde pictogramlettertypen, zoals [Font Awesome](http://fortawesome.github.io/Font-Awesome/){: .external }, [Pictos](http://pictos.cc/) en [Glyphicons](http://glyphicons.com/).
@@ -385,7 +385,7 @@ CSS spriting is een techniek waarbij een aantal afbeeldingen wordt gecombineerd 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Afbeeldingsspritesheet gebruikt in voorbeeld"></a>
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/image-sprite.html" region_tag="sprite" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" %}
 </pre>
 
 Spriting heeft het voordeel dat het aantal downloads wordt verminderd dat vereist is om meerdere afbeeldingen op te halen, terwijl het opslaan in cache mogelijk blijft.

@@ -35,7 +35,7 @@ DOM 요소는 default, focus, hover, active의 네 가지 상태를
  의사 클래스 `:hover`, `:focus` 및 `:active`에 스타일을 적용해야 합니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
@@ -74,7 +74,7 @@ Safari 및 Chrome에서는
 `-webkit-tap-highlight-color` CSS 속성으로 방지가 가능한 탭 하이라이트 색상을 추가합니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
@@ -93,7 +93,7 @@ Firefox에서 `<button>` 요소를 사용 중인 경우 그라데이션을 적�
 , `background-image: none`을 설정하여 이 그라데이션을 제거할 수 있습니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
@@ -190,7 +190,7 @@ Caution: 일부 사용자는 키보드 입력을 원하는데, 터치스크린 �
 다음은 상호작용의 시작을 수신 대기하는 예시입니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
@@ -229,7 +229,7 @@ TouchEvents는 터치가 발생한 위치에 상관없이 동작이 시작된 �
  `handleGestureStart()` 메서드의 스니펫입니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
@@ -239,7 +239,7 @@ TouchEvents는 터치가 발생한 위치에 상관없이 동작이 시작된 �
 동작이 완료되면 포인터 캡처를 해제합니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
@@ -274,7 +274,7 @@ TouchEvents는 터치가 발생한 위치에 상관없이 동작이 시작된 �
 `clientY`를 이벤트 자체로부터 직접 추출합니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
 </pre>
 
 [체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
@@ -311,7 +311,7 @@ DOM 요소에 있는지는 상관없음).
 우리의 데모에서는 초기 터치 위치를 `handleGestureStart()`에 저장합니다(`initialTouchPos` 검색).
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
 `handleGestureMove()` 메서드는
@@ -319,7 +319,7 @@ DOM 요소에 있는지는 상관없음).
 `onAnimFrame()` 함수를 콜백으로 전달합니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-move" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-move" adjust_indentation="auto" %}
 </pre>
 
 `onAnimFrame` 값은 호출 시 UI를 이동하도록 변경하는
@@ -337,7 +337,7 @@ DOM 요소에 있는지는 상관없음).
 새 애니메이션 프레임을 요청할 수 있습니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="on-anim-frame" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="on-anim-frame" adjust_indentation="auto" %}
 </pre>
 
 ### 터치 액션을 사용하여 동작 제어
@@ -348,7 +348,7 @@ CSS 속성 `touch-action`을 사용하여 요소의 기본 터치 동작을
 이렇게 하면 모든 터치 이벤트를 가로챌 수 있습니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="touch-action-example" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="touch-action-example" adjust_indentation="auto" %}
 </pre>
 
 `touch-action: none`은 모든 기본 브라우저 동작을 차단하므로
@@ -413,7 +413,7 @@ IE10을 지원하려면 공급업체 접두사가 붙은 `PointerEvents` 버전�
  전환하는 방법을 보여줍니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="pointereventsupport" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="pointereventsupport" adjust_indentation="auto" %}
 </pre>
 
 자세한 내용은 [Microsoft의

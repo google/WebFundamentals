@@ -107,7 +107,7 @@ Utilizzare l'elemento <code>picture</code> quando esiste un'origine dell'immagin
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media.html" region_tag="picture"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media.html" region_tag="picture"   adjust_indentation="auto" %}
 </pre>
 
 Nell'esempio precedente, se la larghezza del browser è di almeno 800 pixel, in base alla risoluzione del dispositivo viene utilizzato `head.jpg` o `head-2x.jpg`. Se la larghezza del browser è compresa fra 450 e 800 pixel, anche in questo caso viene utilizzato `head.jpg` o `head-2x.jpg` a seconda della risoluzione del dispositivo. Con schermi di larghezze inferiori a 450 pixel e retrocompatibilità nei casi in cui l'elemento `picture` non sia supportato, il browser esegue il rendering dell'elemento `img` (che occorre includere sempre). 
@@ -119,7 +119,7 @@ Se non si conosce la dimensione finale dell'immagine può essere difficile indic
 Invece di indicare densità e dimensioni fisse dell'immagine, è possibile specificare le dimensioni di ciascuna immagine fornita aggiungendo un descrittore di larghezza contenente la dimensione dell'elemento dell'immagine, consentendo al browser di calcolare la densità di pixel effettiva e scegliere l'immagine migliore da scaricare.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/sizes.html" region_tag="picture"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/sizes.html" region_tag="picture"   adjust_indentation="auto" %}
 </pre>
 
 Nell'esempio precedente viene eseguito il rendering di un'immagine di dimensione pari alla metà della larghezza del viewport (sizes="50vw"), basata sulla larghezza del browser e sulle proporzioni in pixel del dispositivo, consentendo al browser di utilizzare l'immagine corretta indipendentemente dalla larghezza della finestra del browser. Ad esempio, la tabella sottostante indica l'immagine che verrà utilizzata dal browser:
@@ -179,7 +179,7 @@ Nell'esempio precedente viene eseguito il rendering di un'immagine di dimensione
 In alcuni casi, le dimensioni o l'immagine potrebbero variare in base ai breakpoint della disposizione del sito. Ad esempio, con schermi di dimensioni ridotte l'immagine potrebbe coprire l'intera larghezza del viewport, mentre su schermi più grandi potrebbe occuparne solo una piccola parte. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/breakpoints.html" region_tag="picture"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture"   adjust_indentation="auto" %}
 </pre>
 
 L'attributo `size` dell'esempio precedente utilizza diverse media query per indicare le dimensioni dell'immagine. Se la larghezza del browser è superiore a 600 pixel, l'immagine occuperà il 25% della larghezza del viewport, mentre con una larghezza compresa fra 500 e 600 pixel l'immagine occuperà il 50% della larghezza del viewport. Infine, con una larghezza inferiore a 500 pixel l'immagine apparirà a larghezza piena.
@@ -241,7 +241,7 @@ Le media query influiscono sulla disposizione della pagina e consentono anche il
 Nell'esempio sottostante, con schermi di dimensioni ridotte viene scaricato e applicato solo `small.png` al contenuto `div`, mentre con schermi di dimensioni elevate `background-image: url(body.png)` viene applicato al corpo e `background-image: url(large.png)` al `div` del contenuto.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/conditional-mq.html" region_tag="conditional"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/conditional-mq.html" region_tag="conditional"   adjust_indentation="auto" %}
 </pre>
 
 ### Utilizzo di image-set per la fornitura di immagini ad alta risoluzione
@@ -261,7 +261,7 @@ adeguato. In altri termini, il browser suppone che le immagini 2x abbiano larghe
 Il supporto di `image-set()` non è ancora diffuso ed è disponibile solo su Chrome e Safari usando il prefisso del fornitore `-webkit`. Attenzione a includere un'immagine alternativa in caso di assenza di supporto di `image-set()`. Ad esempio:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/image-set.html" region_tag="imageset"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-set.html" region_tag="imageset"   adjust_indentation="auto" %}
 </pre>
 
 In questo caso vengono caricate le corrette risorse nei server che supportano image-set o in alternativa la risorsa 1x. Poiché il supporto di `image-set()` non è ancora diffuso, la maggior parte dei browser utilizza la risorsa 1x.
@@ -281,7 +281,7 @@ Le media query possono creare regole basate sulle [proporzioni dei pixel del dis
 Chrome, Firefox e Opera supportano lo standard `(min-resolution: 2dppx)`, mentre Safari e il browser di Android richiedono una sintassi prefissata del fornitore meno recente, senza l'unità `dppx`. Questi stili vengono caricati solo se il dispositivo corrisponde alla media query e richiedono la specifica dello stile per il caso di base. L'operazione consente di eseguire comunque il rendering anche se il browser non supporta la media query specifica della risoluzione.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-query-dppx.html" region_tag="mqdppx"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-query-dppx.html" region_tag="mqdppx"   adjust_indentation="auto" %}
 </pre>
 
 È possibile utilizzare la sintassi `min-width` per la visualizzazione di immagini alternative basate sulla dimensione del viewport. Si tratta di una tecnica vantaggiosa che non richiede il download dell'immagine in caso di mancata corrispondenza con la media query. Ad esempio, `bg.png` viene scaricato e applicato a `body` solo se la larghezza del browser è di almeno 500 pixel:
@@ -337,7 +337,7 @@ Per creare icone più complesse, SVG offre un risultato più leggero, intuitivo 
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/icon-svg.html" region_tag="iconsvg"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-svg.html" region_tag="iconsvg"   adjust_indentation="auto" %}
 </pre>
 
 ### Utilizza i caratteri per icone con attenzione
@@ -356,7 +356,7 @@ I caratteri per icone sono diffusi e intuitivi, ma presentano alcuni svantaggi r
 alt="Esempio di pagina che utilizza FontAwesome come icone dei caratteri.">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/icon-font.html" region_tag="iconfont"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-font.html" region_tag="iconfont"   adjust_indentation="auto" %}
 </pre>
 
 Esistono diversi caratteri per icone gratuiti e a pagamento come [Font Awesome](http://fortawesome.github.io/Font-Awesome/){: .external }, [Pictos](http://pictos.cc/) e [Glyphicons](http://glyphicons.com/).
@@ -412,7 +412,7 @@ Lo spriting CSS è una tecnica che unisce diverse immagini in una singola immagi
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=" Foglio di sprite immagine utilizzato nell'esempio"></a>
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/image-sprite.html" region_tag="sprite"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite"   adjust_indentation="auto" %}
 </pre>
 
 Lo spriting riduce il numero dei download necessari per ottenere immagini multiple senza disattivare il caching.

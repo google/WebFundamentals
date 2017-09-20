@@ -46,7 +46,7 @@ Mostly fluid 模式主要由流动网格组成。在较大和中等屏幕上，�
  * [SimpleBits](http://simplebits.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/mostly-fluid.html" region_tag="mfluid" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/mostly-fluid.html" region_tag="mfluid" adjust_indentation="auto" %}
 </pre>
 
 ## Column drop 
@@ -71,7 +71,7 @@ Mostly fluid 模式主要由流动网格组成。在较大和中等屏幕上，�
  * [Wee Nudge](http://weenudge.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/column-drop.html" region_tag="cdrop" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/column-drop.html" region_tag="cdrop" adjust_indentation="auto" %}
 </pre>
 
 ## Layout shifter
@@ -98,7 +98,7 @@ Layout shifter 模式是自适应性最强的模式，在多种屏幕宽度上�
  * [Andersson-Wise Architects](http://www.anderssonwise.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/layout-shifter.html" region_tag="lshifter" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/layout-shifter.html" region_tag="lshifter" adjust_indentation="auto" %}
 </pre>
 
 ## Tiny tweaks
@@ -120,7 +120,7 @@ Tiny tweaks 只对布局进行细微的更改，例如调整字体大小、调�
  * [Future Friendly](http://futurefriendlyweb.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/tiny-tweaks.html" region_tag="ttweaks" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/tiny-tweaks.html" region_tag="ttweaks" adjust_indentation="auto" %}
 </pre>
 
 
@@ -150,7 +150,7 @@ Off canvas 模式不是垂直排列内容，而是将不常用的内容（可能
  * [Facebook 的移动网站](https://m.facebook.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/off-canvas.html" region_tag="ocanvas" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/off-canvas.html" region_tag="ocanvas" adjust_indentation="auto" %}
 </pre>
 
 

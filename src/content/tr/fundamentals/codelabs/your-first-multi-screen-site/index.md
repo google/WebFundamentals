@@ -58,7 +58,7 @@ Ayrica, hem dar hem de genis görüntü alanlari için kaba bir bilgi mimarisi v
 Bu, projenin geri kalaninda kullanacagimiz iskelet sayfanin kaba bölümlerine kolayca dönüstürülebilir.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### Sayfaya içerik ekleme
@@ -74,7 +74,7 @@ Baslik ve istek bildirim formu, sayfamizin önemli bilesenleridir. Bunlarin kull
 Basliga, kursu açiklamak için basit bir metin ekleyin:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 Formu da doldurmamiz gerekiyor.
@@ -85,7 +85,7 @@ Kullanicilarin ögelere kolayca odaklanmalarini, içinde ne olmasi gerektigini a
 Kullanicilarin bir mobil cihazda içerigi hizli ve basit bir sekilde girebilmelerini saglamak için anlamsal türler ekleyecegiz.  Örnegin, bir telefon numarasi girerken kullanicinin yalnizca bir tus takimi görmesi gerekir.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
@@ -96,7 +96,7 @@ Içerigin Video ve Bilgi bölümü biraz daha derinlige sahiptir.
 Ürünlerimizin özelliklerinin madde imli bir listesini ve ayrica, bir kullaniciyi ürünümüzü kullanirken gösteren bir video yer tutucusunu içerir.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 Videolar genellikle içerigi daha etkilesimli bir sekilde açiklamak ve siklikla bir ürünün veya kavramin tanitim gösterisini göstermek için kullanilir.
@@ -109,7 +109,7 @@ En iyi uygulamalari izleyerek videoyu sitenize kolayca entegre edebilirsiniz:
 *  Kullanicilarin videoyu pencerede oynatamamalari durumunda indirebilmelerini saglamak için yedek metin ekleyin.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
@@ -126,7 +126,7 @@ Sayfamizdaki Resimler bölümü, içerik resimlerinden olusan bir koleksiyondur.
 Içerik resimleri, sayfanin anlamini aktarma açisindan önemlidir. Bunlari, gazete makalelerinde kullanilan resimler gibi düsünebilirsiniz. Kullandigimiz resimler, projenin egitmenleri olan Chris Wilson, Peter Lubbers ve Sean Bennet'in resimleridir.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addimages.html" region_tag="images"   adjust_indentation="auto" %}
 </pre>
 
 Resimler, ekran genisliginin %100 ölçegine ayarlanmistir. Bu, dar görüntü alani olan cihazlarda iyi bir sekilde çalisir, ancak genis görüntü alanina sahip cihazlarda (masaüstü bilgisayarlar gibi) çok iyi görünmez.  Bunu, duyarli tasarim bölümünde ele alacagiz.
@@ -144,7 +144,7 @@ Son bölüm, ürünle ilgili belirli ürün verilerini göstermek için kullanil
 Tablolar yalnizca bilgi matrisleri gibi tablo seklindeki veriler için kullanilmalidir.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### Altbilgi Ekleme
@@ -154,7 +154,7 @@ Tablolar yalnizca bilgi matrisleri gibi tablo seklindeki veriler için kullanilm
 Bizim sitemizde, yalnizca Sartlar ve Kosullar'a, bir Iletisim sayfasina ve sosyal medya profillerimize baglanti verecegiz.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### Özet
@@ -236,7 +236,7 @@ Bu olmadan, siteniz bir mobil cihazda düzgün çalismaz.
 Görüntü alani, tarayiciya sayfanin ekrana sigmasi için ölçeklenmesi gerektigini bildirir.  Görüntü alaninizin sayfanin görüntüsünü kontrol etmesi için belirtebileceginiz birçok farkli yapilandirma vardir.  Varsayilan olarak sunlari öneririz:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 Görüntü alani, dokümanin basinda yer alir ve yalnizca bir kez açiklanmasi gerekir.
@@ -335,11 +335,11 @@ Kapsayici, asagidaki biçimde basit bir `div` ögesi olacak:
     </div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container"   adjust_indentation="auto" %}
 </pre>
 
 ### Dolguyu degistirme ve metin boyutunu küçültme
@@ -351,7 +351,7 @@ Daha genis bir görüntü alanimiz oldugunda kullanicinin daha genis bir ekranda
 Ürün sayfamizda, bölüm ögelerinin dolgusunu genisligin %5'inde kalacak sekilde ayarlayarak dolguyu artiracagiz.  Ayrica, her bir bölümün basliklarinin boyutunu da artiracagiz.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
 </pre>
 
 ### Ögeleri genis görüntü alanina uyarlama
@@ -372,11 +372,11 @@ Dar görüntü alani, ögeleri ekrana rahatça yerlestirmek için çok daha az b
 Yatay ekran alanini daha etkili kullanmak için basligin dogrusal akisindan çikmamiz ve form ile listeyi yan yana olacaklari sekilde tasimamiz gerekir.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat"   adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -394,7 +394,7 @@ Dar görüntü alani arayüzündeki video, ekranin tam genisligini kaplayacak ve
 Video ögesinin, dar görüntü alaninin dikey akisinin disina tasinmasi ve genis bir görüntü alaninda içerigin madde imli listesiyle yan yana görüntülenmesi gerekir.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo"   adjust_indentation="auto" %}
 </pre>
 
 #### Resimleri Döseme
@@ -406,7 +406,7 @@ Resimlerin genis bir görüntü alaninda dogru görünmesini saglamak için kaps
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages"   adjust_indentation="auto" %}
 </pre>
 
 #### Resimleri DPI'ya duyarli yapma
@@ -443,7 +443,7 @@ Sitemizde, yalnizca tablo içerigi için fazladan bir kesme noktasi olusturmamiz
 Bu, bize net ve tutarli bir kesme saglar.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/codelabs/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css"   adjust_indentation="auto" %}
 </pre>
 
 ### Özet

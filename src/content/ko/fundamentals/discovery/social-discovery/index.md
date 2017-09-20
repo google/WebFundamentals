@@ -75,7 +75,7 @@ description: 각 페이지에 코드를 몇 줄 추가하여 소셜 미디어를
 예:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
 </pre>
 
 대부분의 메타데이터는 웹페이지의 헤드 부분에 삽입되지만 마이크로데이터는
@@ -118,7 +118,7 @@ Google+에서는 다음과 같은 도구를 사용하여 리치 스니펫의 유
 메타데이터를 Facebook에 제공합니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
 </pre>
 
 이 메타데이터는 페이지의 헤드 부분에 포함시키면 페이지를 공유할 때 리치 스니펫
@@ -190,7 +190,7 @@ Twitter Card가 작동하도록 하려면 [도메인 승인을 받아야
 간단한 예를 들면 다음과 같습니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="twitter" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="twitter" adjust_indentation="auto" %}
 </pre>
 
 Twitter 사이트의 값에 Twitter ID를 할당하면 Twitter가 공유 게시물에 이 정보를
@@ -214,7 +214,7 @@ Twitter Card에 대해 자세히 알아보려면 아래 사이트를 방문해 �
 포함시키는 것입니다. 예를 들면 다음과 같습니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
 </pre>
 
 마이크로데이터와 OGP는 마크업을 일부 공유한다는 점에 유의하세요.

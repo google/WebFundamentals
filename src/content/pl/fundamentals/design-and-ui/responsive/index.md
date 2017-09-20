@@ -193,7 +193,7 @@ Przyjrzyjmy się przykładowi:
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 * Gdy przeglądarka ma szerokość od <b>0</b> do <b>640&nbsp;pikseli</b>, stosujemy plik `max-640px.css`.
@@ -272,7 +272,7 @@ Następnie powiększaj okno przeglądarki, aż między poszczególnymi elementam
 Aby wstawić punkt graniczny przy 600&nbsp;pikselach, utwórz dwa nowe arkusze stylów: jeden stosowany wtedy, gdy szerokość przeglądarki nie przekracza 600&nbsp;pikseli, a drugi &ndash; powyżej tej wartości.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
 Na koniec popraw style CSS. W tym przykładzie umieściliśmy wspólne style (takie jak czcionki, ikony, podstawowe pozycjonowanie oraz kolory) w pliku `weather.css`. Konkretne układy na mały ekran są w pliku `weather-small.css`, a style na duży &ndash; w pliku `weather-large.css`.
@@ -290,7 +290,7 @@ Oprócz głównych punktów granicznych, przy których układ znacznie się zmie
 Zacznijmy od zoptymalizowania układu na małym ekranie. Gdy szerokość widocznego obszaru przekroczy 360&nbsp;pikseli, powiększymy czcionkę. Jeśli na ekranie będzie dość miejsca, rozdzielimy najniższą i najwyższą temperaturę &ndash; będą w tym samym wierszu zamiast jedna nad drugą. Powiększymy też nieco ikony symbolizujące warunki pogodowe.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 <img src="imgs/weather-4-l.png" class="attempt-left"  srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
@@ -301,7 +301,7 @@ Zacznijmy od zoptymalizowania układu na małym ekranie. Gdy szerokość widoczn
 Podobnie na dużych ekranach warto ograniczyć maksymalną szerokość panelu prognozy, by nie zajął całej szerokości ekranu.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ### Zoptymalizuj tekst do czytania
@@ -316,7 +316,7 @@ Według klasycznych zasad gwarantujących czytelność tekstu idealna szpalta po
 Przyjrzyjmy się dokładniej powyższemu przykładowi posta na blogu. Na mniejszych ekranach czcionka Roboto o rozmiarze 1&nbsp;em działa idealnie, dając 10&nbsp;wyrazów w wierszu, ale na większych wymaga punktu granicznego. Jeśli szerokość przeglądarki przekroczy 575&nbsp;pikseli, idealna szerokość treści to 550&nbsp;pikseli.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### Nigdy nie ukrywaj zupełnie treści

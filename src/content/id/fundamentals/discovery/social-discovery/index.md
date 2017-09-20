@@ -75,7 +75,7 @@ mesin telusur untuk memahami materi laman dengan lebih baik.
 Inilah contohnya:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
 </pre>
 
 Walaupun sebagian besar metadata disematkan di bagian tajuk laman web, mikrodata
@@ -118,7 +118,7 @@ metadata yang diperlukan agar laman web bisa memiliki fungsionalitas yang sama s
 objek Facebook lainnya.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
 </pre>
 
 Bila disertakan di bagian tajuk laman Anda, metadata ini akan menyediakan
@@ -190,7 +190,7 @@ berisi tag meta yang memiliki `twitter:card` sebagai atribut `name`, sebagai gan
 Inilah contoh ringkasnya:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="twitter" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="twitter" adjust_indentation="auto" %}
 </pre>
 
 Dengan menetapkan ID Twitter ke nilai twitter:site, Twitter akan menyematkan
@@ -214,7 +214,7 @@ Dengan ketiga opsi, hal terbaik yang bisa Anda lakukan adalah menyertakan semuan
 laman web Anda. Inilah contohnya:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
 </pre>
 
 Perhatikan, mikrodata dan OGP berbagi beberapa markup:

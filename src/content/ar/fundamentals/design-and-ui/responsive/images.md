@@ -124,7 +124,7 @@ Note: يبدأ العنصر  `picture` الوصول إلى المتصفحات. �
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 في المثال الوارد أعلاه، إذا كانت قيمة عرض المتصفح 800 بكسل على الأقل، فسيتم استخدام `head.jpg` أو `head-2x.jpg`،
@@ -141,7 +141,7 @@ Note: يبدأ العنصر  `picture` الوصول إلى المتصفحات. �
 وصفية إلى حجم عنصر الصورة، مما يتيح للمتصفح تلقائيًا حساب كثافة وحدات بكسل اللازمة واختيار الصورة الأفضل التي يمكن تنزيلها.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 يعرض المثال الموضح أعلاه صورة تحتل نصف قيمة عرض الإطار (`sizes=`50vw``)، وبناءً على قيمة عرض
@@ -205,7 +205,7 @@ Note: يبدأ العنصر  `picture` الوصول إلى المتصفحات. �
 بينما يجب ألا تأخذ الصورة في الشاشات الكبيرة سوى مساحة صغيرة.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 تستخدم السمة `sizes` في المثال السابق عدة استعلامات وسائط لتحديد حجم الصورة.  عندما تكون قيمة عرض
@@ -278,7 +278,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
 على النص الأساسي و`background-image: url(large.png)` على المحتوى `div`.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
 ### استخدام مجموعة صور لتوفير صور عالية الدقة
@@ -302,7 +302,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
 الخدمة `-webkit`. ويجب الاهتمام بتضمين صورة ترجيع عندما لا يكون `image-set()` متوافقًا، على سبيل المثال:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
 سيؤدي ما تمت الإشارة إليه أعلاه إلى تحميل الأصل المناسب في المتصفحات التي تتوافق مع image-set،
@@ -328,7 +328,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
 كما يوفر هذا ميزة التأكد من أنه سيتم عرض شيء ما إذا لم يتوافق المتصفح مع استعلامات وسائط بدقة محددة.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
 </pre>
 
 كما يمكنك استخدام بنية الحد الأدنى لقيمة العرض ليتم عرض الصور البديلة بناءً على حجم إطار العرض.
@@ -383,7 +383,7 @@ You're a super &#9733;
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
 </pre>
 
 ### الحذر عند استخدام خطوط الرموز
@@ -404,7 +404,7 @@ You're a super &#9733;
   alt="مثال على صفحة تستخدم FontAwesome مع رموز الخط.">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
 </pre>
 
 هناك المئات من خطوط الرموز المجانية ومدفوعة المقابل المتاحة، من
@@ -486,7 +486,7 @@ You're a super &#9733;
 </a>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
 تساعد النقوش المتحركة في خفض عدد مرات التنزيل المطلوبة للحصول على عدة صور، بدون تعطيل ذاكرة التخزين المؤقت.

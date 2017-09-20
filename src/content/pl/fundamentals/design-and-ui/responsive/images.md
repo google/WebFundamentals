@@ -96,7 +96,7 @@ Elementu <code>picture</code> należy używać wtedy, gdy mamy obraz źródłowy
 <div class="clearfix"></div>
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/media.html" region_tag="picture" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/media.html" region_tag="picture" %}
 </pre>
 
 Jeśli przeglądarka w przykładzie powyżej ma szerokość co najmniej 800&nbsp;pikseli, to w zależności od rozdzielczości urządzenia wyświetli się plik `head.jpg` lub `head-2x.jpg`. Jeśli szerokość widoku wynosi od 450 do 800&nbsp;pikseli, na tej samej zasadzie pojawi się plik `head-small.jpg` lub `head-small-2x.jpg`. W przypadku szerokości ekranu mniejszej niż 450&nbsp;pikseli i zgodności wstecznej, gdy element `picture` nie jest obsługiwany, przeglądarka renderuje element `img`, który zawsze należy dołączyć.
@@ -108,7 +108,7 @@ Jeśli ostateczny rozmiar obrazu jest nieznany, trudno określić deskryptor gę
 Zamiast podawać stałe rozmiary i gęstości obrazów, wielkość każdego z nich możesz określić, dodając deskryptor szerokości do rozmiaru w elemencie image. To pozwala przeglądarce automatycznie obliczać skuteczną gęstość pikseli i wybierać najlepszy obraz do pobrania.
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/sizes.html" region_tag="picture" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/sizes.html" region_tag="picture" %}
 </pre>
 
 W przykładzie powyżej renderujemy obraz, który ma połowę szerokości widocznego obszaru (`sizes="50vw"`). Przeglądarka w zależności od swojej szerokości i współczynnika pikseli urządzenia wybiera właściwy obraz, bez względu na to, jak duże jest jej okno. Ta tabela pokazuje, który obraz wybierze przeglądarka:
@@ -168,7 +168,7 @@ W przykładzie powyżej renderujemy obraz, który ma połowę szerokości widocz
 W wielu przypadkach rozmiar lub obraz może się zmieniać w zależności od punktów granicznych w układzie strony. Na przykład na małym ekranie obraz może rozciągać się na całą szerokość widocznego obszaru, a na większym &ndash; zajmować tylko jego część. 
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto" content_path="web/fundamentals/design-and-ui/responsive/_code/breakpoints.html" region_tag="picture" %}
+{% includecode adjust_indentation="auto" content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" %}
 </pre>
 
 Atrybut `sizes` w przykładowym kodzie powyżej zawiera kilka zapytań o media, które określają rozmiar obrazu. Gdy szerokość przeglądarki przekracza 600&nbsp;pikseli, obraz ma 25% szerokości widocznego obszaru, od 500 do 600&nbsp;pikseli ma 50%, a poniżej 500&nbsp;pikseli &ndash; pełną szerokość.
@@ -223,7 +223,7 @@ Zapytania o media nie tylko wypływają na układ strony, ale też pozwalają wa
 W przykładzie poniżej na mniejszych ekranach tylko plik `small.png` jest pobierany i stosowany do elementu `div`. Z kolei na większych polecenie `background-image: url(body.png)` jest stosowane do treści, a `background-image: url(large.png)` &ndash; do elementu `div`.
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/conditional-mq.html" region_tag="conditional" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/conditional-mq.html" region_tag="conditional" %}
 </pre>
 
 ### Używanie funkcji image-set do wyświetlania obrazów w wysokiej rozdzielczości
@@ -243,7 +243,7 @@ ją skaluje. Krótko mówiąc, przeglądarka zakłada, że obrazy 2x są dwa raz
 Funkcja `image-set()` jest dość nowa i działa tylko w Chrome i Safari z przedrostkiem dostawcy `-webkit`. Pamiętaj też, by dołączyć obraz zastępczy, na wypadek gdyby funkcja `image-set()` nie była obsługiwana, na przykład:
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/image-set.html" region_tag="imageset" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/image-set.html" region_tag="imageset" %}
 </pre>
 
 Kod powyżej powoduje wczytanie odpowiedniego zasobu w przeglądarkach, w których działa funkcja `image-set`, a w pozostałych &ndash; wyświetlenie zasobu zastępczego 1x. Oczywiście dopóki niewiele przeglądarek obsługuje `image-set()`, najczęściej użytkownicy będą widzieć zasób 1x.
@@ -263,7 +263,7 @@ W zapytaniach o media można tworzyć reguły, które zależą od [współczynni
 Chrome, Firefox i Opera obsługują standardowe polecenie `(min-resolution: 2dppx)`, a Safari i przeglądarka w Androidzie wymagają starszej wersji składni z przedrostkiem dostawcy i bez jednostki `dppx`. Pamiętaj, że te style wczytują się tylko wtedy, gdy urządzenie pasuje do zapytania o media, więc musisz zdefiniować też style stosowane w podstawowym przypadku. Dzięki temu zyskasz pewność, że nawet gdy przeglądarka nie obsługuje rozdzielczości podanej w konkretnych zapytaniach o media, wyrenderuje poprawny widok.
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/media-query-dppx.html" region_tag="mqdppx" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/media-query-dppx.html" region_tag="mqdppx" %}
 </pre>
 
 Możesz też użyć polecenia `min-width`, by wyświetlać alternatywne obrazy w zależności od rozmiaru widocznego obszaru. Zaleta tej techniki polega na tym, że jeśli zapytanie o media nie pasuje, obraz nie jest pobierany. Na przykład plik `bg.png` jest pobierany i stosowany w elemencie `body` tylko wtedy, gdy szerokość przeglądarki wynosi co najmniej 500&nbsp;pikseli:
@@ -312,7 +312,7 @@ Jeśli potrzebujesz bardziej złożonych ikon, skorzystaj z formatu SVG, który 
 &nbsp;
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/icon-svg.html" region_tag="iconsvg" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/icon-svg.html" region_tag="iconsvg" %}
 </pre>
 
 ### Problemy przy stosowaniu czcionek z ikonami
@@ -332,7 +332,7 @@ srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
 alt="Przykład strony z czcionką z ikonami Font Awesome">
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/icon-font.html" region_tag="iconfont" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/icon-font.html" region_tag="iconfont" %}
 </pre>
 
 Istnieją setki darmowych i płatnych czcionek z ikonami, np. [Font Awesome](http://fortawesome.github.io/Font-Awesome/){: .external }, [Pictos](http://pictos.cc/) czy [Glyphicons](http://glyphicons.com/).
@@ -385,7 +385,7 @@ Spriting CSS to technika, w której wiele obrazów łączy się w jeden obraz `a
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Arkusz sprite'ów graficznych użyty jako przykład"></a>
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/responsive/_code/image-sprite.html" region_tag="sprite" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" %}
 </pre>
 
 Zaletą spritingu jest obniżenie liczby plików pobieranych przy wyświetlaniu wielu obrazów, bez utrudniania zapisu w pamięci podręcznej.

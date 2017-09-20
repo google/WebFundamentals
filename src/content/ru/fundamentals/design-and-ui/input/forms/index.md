@@ -225,7 +225,7 @@ description: На мобильных устройствах заполнять �
 списка, элемент `datalist` выдает подсказки по мере того, как пользователь выполняет ввод.
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="datalist" %}
 </pre>
 
 Note: Значения <code>datalist</code> выдаются в качестве подсказки, пользователи при этом не ограничены предоставленными подсказками.
@@ -253,7 +253,7 @@ Note: Значения <code>datalist</code> выдаются в качеств�
 
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="labels" %}
 </pre>
 
 #### Размер и местоположение обозначения
@@ -298,7 +298,7 @@ Note: Заполнители исчезают, как только пользо�
 имя пользователя, его адрес электронной почты и номер телефона, следует использовать:
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="autocomplete" %}
 </pre>
 
 
@@ -615,7 +615,7 @@ blur после ввода данных во втором поле, чтобы �
 ответ.  Например:
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="customvalidation" %}
 </pre>
 
 ##### Не позволяйте отправлять формы с ошибками
@@ -625,7 +625,7 @@ blur после ввода данных во втором поле, чтобы �
 в элементе формы определять ее корректность.  Например:
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="preventsubmission" %}
 </pre>
 
 #### Отображайте ответ в реальном времени
@@ -677,11 +677,11 @@ blur после ввода данных во втором поле, чтобы �
 JavaScript сделать так, чтобы стиль, указывающий на ошибку, использовался только после того, как пользователь перешел в другое поле.
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="invalidstyle" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="initinputs" %}
 </pre>
 
 Note: Пользователю сразу же следует показывать все имеющиеся в форме неполадки, а не по одной за раз.

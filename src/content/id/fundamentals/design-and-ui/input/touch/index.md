@@ -35,7 +35,7 @@ dan active. Untuk mengubah UI masing-masing status, kita perlu menerapkan gaya
 ke kelas pseudo berikut `:hover`, `:focus` dan `:active` seperti yang ditampilkan di bawah ini:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
 </pre>
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
@@ -74,7 +74,7 @@ Safari dan Chrome menambahkan warna sorot ketuk yang bisa dicegah dengan propert
 `-webkit-tap-highlight-color`:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
 </pre>
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
@@ -93,7 +93,7 @@ Jika Anda menggunakan elemen `<button>` pada Firefox, Anda mendapat penerapan
 sebuah gradien, yang bisa Anda buang dengan menyetel `background-image: none`.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
 </pre>
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
@@ -190,7 +190,7 @@ kejadian. (`true` berarti Anda menginginkan kejadian sebelum elemen lainnya.)
 Berikut adalah contoh dari mendengarkan untuk memulai interaksi.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
@@ -229,7 +229,7 @@ Berikut adalah cuplikan metode `handleGestureStart()` kami yang menambahkan keja
 dan kejadian akhir ke dokumen:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
@@ -239,7 +239,7 @@ dan event listener akhir dari dokumen dan melepaskan tangkapan penunjuk
 ketika isyarat telah selesai seperti:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
 </pre>
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
@@ -274,7 +274,7 @@ Jika kejadiannya adalah `PointerEvent` atau `MouseEvent`, itu mengekstrak `clien
 `clientY` langsung dari kejadian itu sendiri.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
 </pre>
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
@@ -311,7 +311,7 @@ kejadian gerak.
 Dalam demo, kami menyimpan posisi sentuh awal di `handleGestureStart()` (carilah `initialTouchPos`):
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
 Metode `handleGestureMove()` menyimpan posisi kejadiannya
@@ -319,7 +319,7 @@ sebelum meminta bingkai animasi bila kita membutuhkannya, meneruskan fungsi
 `onAnimFrame()` sebagai callback:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-move" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-move" adjust_indentation="auto" %}
 </pre>
 
 Nilai `onAnimFrame` adalah sebuah fungsi yang bila dipanggil, akan mengubah UI
@@ -337,7 +337,7 @@ elemen yang ingin dipindah sebelum memperbarui `rafPending` ke `false`, memungki
 kejadian sentuh berikutnya untuk meminta bingkai animasi baru.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="on-anim-frame" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="on-anim-frame" adjust_indentation="auto" %}
 </pre>
 
 ### Mengontrol isyarat menggunakan tindakan sentuh
@@ -348,7 +348,7 @@ mencegah browser melakukan sesuatu dengan sentuhan pengguna, yang memungkinkan k
 untuk mencegat semua kejadian sentuh.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="touch-action-example" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="touch-action-example" adjust_indentation="auto" %}
 </pre>
 
 Menggunakan `touch-action: none` bisa dikatakan opsi ekstrem karena mencegah semua
@@ -413,7 +413,7 @@ Contoh di bawah ini menunjukkan kepada Anda cara memeriksa dukungan dan menggant
 nama kejadian.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="pointereventsupport" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="pointereventsupport" adjust_indentation="auto" %}
 </pre>
 
 Untuk informasi selengkapnya, periksa [pembaruan artikel dari
