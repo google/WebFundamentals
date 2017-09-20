@@ -2,10 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: This is the page description placed in the head.
 
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2017-09-20 #}
 {# wf_published_on: 2016-09-13 #}
 
-# Style Guide {: .page-title }
+# Markdown syntax {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
@@ -16,21 +16,22 @@ find that you need to create a new style that will apply to more than a
 single page, please file an issue on GitHub so that other pages can use it 
 as well. This ensures site-wide consistency.
 
+Note: This document is meant to supplement the [Google's developer
+documentation style guide](/style/). If there are differences, the
+official style guide takes precedence unless otherwise specified. 
+
 ## Headings 
 
 The top-most heading of the page is the page's title. The page body must not
-contain another `<h1>`, to avoid confusing non-visual browsers.
+contain another level 1 heading, to avoid confusing non-visual browsers.
 
 **When should I capitalize headings?**
 
-Page Titles (`h1`)
-: Use Title Case for All Major Words
-
-Section headings (`h2`-`h6`)
-: Use sentence case for all headings
+Use [sentence case](/style/capitalization#capitalization-in-titles-and-headings),
+for **all** titles, and section headings.
 
 Yes, we're inconsistent about this, but we're trying to fix it, please do your
-best to ahear to these guidelines.
+best to adhere to these guidelines.
 
 ## Heading 2 {: #heading-what-what }
 
@@ -43,7 +44,7 @@ Markdown processors are a non-issue.
 
 ### Heading 3
 
-In the Material version of DevSite, `<h2>` and `<h3>` are automatically added
+DevSite will automatically add `<h2>` and `<h3>` elements
 to the table of contents. To keep one from being added (like these two here,
 which do not appear in the table of contents), apply `class="hide-from-toc"`.
 You can also put an `<h2>` or `<h3>` inside a table header (`<th>`) to force
@@ -65,8 +66,8 @@ are styled like regular text, so readers won't be able to tell.
 
 ## Sample code
 
-If your contribution contains code, please make sure that it follows the Google
-[style guide](https://google.github.io/styleguide/javascriptguide.xml).
+If your contribution contains code, please make sure that it follows the 
+[Google coding style guide for JavaScript](https://google.github.io/styleguide/javascriptguide.xml).
 Otherwise, we will have to ask you to make changes, and that's no fun for anyone.
 
 ### Inline code
@@ -173,11 +174,9 @@ If it's inline, you'll need to wrap it in a `<code>` block instead of backticks.
 
 ## Images
 
-Wrap images in `<figure>` blocks, and ideally, use responsive images with the
-`scrset` attribute when possible. Be sure you include `alt` attributes for your
-images as well.
-
-If it makes sense, use the `<figcaption>` tag to provide a caption for the image.
+When adding a caption, wrap images in `<figure>` blocks, and ideally, use
+responsive images with the `scrset` attribute when possible. Be sure you
+include `alt` attributes for your images as well.
 
 <figure>
   <img src="https://placehold.it/350x150" alt="sample image">
@@ -191,8 +190,8 @@ For example:
       <figcaption>This caption should be used to describe the image.</figcaption>
     </figure>
 
-Note: Optimized images are served automatically, simply provide a 2x version,
-and the server will do the rest.
+Note: Optimized images are served automatically only for `index.yaml` pages, 
+simply provide a 2x version, and the server will do the rest.
 
 You can apply `class="screenshot"` to an image to give it a border that
 offsets it from nearby text. This is typically used for screenshots that have
