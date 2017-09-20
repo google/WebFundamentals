@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: In the name of perf! Using <code>position: sticky</code> and <code>IntersectionObserver</code> together to determine when elements become sticky.
+description: Using <code>position: sticky</code> and <code>IntersectionObserver</code> together to determine when elements become sticky. Apply scroll effects without scroll events!
 
 {# wf_updated_on: 2017-09-12 #}
 {# wf_published_on: 2017-09-12 #}
@@ -26,8 +26,9 @@ figure.flex-center {
 
 ### TL;DR {: #tldr .hide-from-toc}
 
-Here's a secret: You may not need `scroll` events in your next app. Using an [`IntersectionObserver`](https://developers.google.com/web/updates/2016/04/intersectionobserver), I show
-how you can fire a custom event when [`position:sticky`](https://developers.google.com/web/updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit) elements become fixed or when they stop sticking. All without the
+Here's a secret: You may not need `scroll` events in your next app. Using an
+[`IntersectionObserver`](https://developers.google.com/web/updates/2016/04/intersectionobserver),
+I show how you can fire a custom event when [`position:sticky`](https://developers.google.com/web/updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit) elements become fixed or when they stop sticking. All without the
 use of scroll listeners. There's even an awesome demo to prove it:
 
 <figure>
@@ -43,16 +44,6 @@ use of scroll listeners. There's even an awesome demo to prove it:
        target="_blank">Source</a>
   </figcaption>
 </figure>
-
-<!-- <figure class="demoarea">
-  <iframe
-    style="height:600px;width:100%;border:none"
-    src="https://ebidel.github.io/demos/sticky-position-event.html?embed">
-  </iframe>
-  <figcaption>
-    <a href="https://github.com/ebidel/demos/blob/master/sticky-position-event.html" target="_blank">View source on Github</a>
-  </figcaption>
-</figure> -->
 
 ## Introducing the `sticky-change` event
 
@@ -78,8 +69,10 @@ Wouldn't it be nice if the browser told when the elements hits that mark? A
 signal like that could unlock a number of **use cases**:
 
 1. Apply a drop shadow to a banner as it sticks.
-- As a user reads through your content, record analytics hits to know their progress.
-- As a user scrolls the page, update a floating TOC widget to the current section.
+- As a user reads through your content, record analytics hits to know their
+progress.
+- As a user scrolls the page, update a floating TOC widget to the current
+section.
 
 With these use cases in mind, we've crafted an end goal: create an event that
 fires when a `position:sticky` element becomes fixed. Let's call it the
@@ -87,7 +80,7 @@ fires when a `position:sticky` element becomes fixed. Let's call it the
 
 ```js
 document.addEventListener('sticky-change', e => {
-  const header = e.detail.target;  // header that became sticky or stopped sticking.
+  const header = e.detail.target;  // header became sticky or stopped sticking.
   const sticking = e.detail.stuck; // true when header is sticky.
   header.classList.toggle('shadow', sticking); // add drop shadow when sticking.
 
@@ -102,15 +95,19 @@ new title at the top of the page.
 <figure class="flex-center">
   <a href="https://ebidel.github.io/demos/sticky-position-event.html"
      target="_blank">
-    <img src="/web/updates/images/2017/09/stickypos/demo.gif" alt="Demo screencast" class="screenshot">
+    <img src="/web/updates/images/2017/09/stickypos/demo.gif"
+         alt="Demo screencast" class="screenshot">
   </a>
-  <figcaption class="success">In the demo, effects are applied without scroll events.</figcaption>
+  <figcaption class="success">
+    In the demo, effects are applied without scrollevents.
+  </figcaption>
 </figure>
 
 ## Scroll effects without scroll events? {: #soln }
 
 <figure class="attempt-right">
-  <img src="/web/updates/images/2017/09/stickypos/regions.png" alt="Terminology" style="height:300px">
+  <img src="/web/updates/images/2017/09/stickypos/regions.png" alt="Terminology"
+       style="height:300px">
   <figcaption>Structure of the page.</figcaption>
 </figure>
 
@@ -120,7 +117,8 @@ throughout the rest of the post:
 1. **Scrolling container** - the content area (visible viewport) containing the
 list of "blog posts".
 - **Headers** - blue title in each section that have `position:sticky`.
-- **Sticky sections** - each content section. The text that scrolls under the sticky headers.
+- **Sticky sections** - each content section. The text that scrolls under the
+sticky headers.
 - **"Sticky mode"** - when `position:sticky` is applying to the element.
 
 To know which *header* enters "sticky mode", we need some way of determining
@@ -175,7 +173,8 @@ The sentinels are positioned at the top and bottom of each section.
 
 <figure>
   <img src="/web/updates/images/2017/09/stickypos/bottomsentinel.png"
-       alt="Bottom sentinel reaching its threshold" class="screenshot" style="height:200px">
+       alt="Bottom sentinel reaching its threshold" class="screenshot"
+      style="height:200px">
   <figcaption>Position of the top and bottom sentinel elements.</figcaption>
 </figure>
 
@@ -229,7 +228,7 @@ First, I set up observers for the header and footer sentinels:
 
 ```js
 /**
- * Notifies when elements with the `sticky` class begin to stick (or stop sticking).
+ * Notifies when elements w/ the `sticky` class begin to stick or stop sticking.
  * Note: the elements should be children of `container`.
  * @param {!Element} container
  */
@@ -395,7 +394,8 @@ most cases. For example, in the demo, we'd receive a callback when the `sticky`
 class is added to an element, but not when the element's computed style changes.
 Recall that the `sticky` class was already declared on page load.
 
-In the future, a "[Style Mutation Observer](http://xml3d.org/xml3d/specification/styleobserver/)"
+In the future, a
+"[Style Mutation Observer](http://xml3d.org/xml3d/specification/styleobserver/)"
 extension to Mutation Observers might be useful to observe changes to an
 element's computed styles.
 `position: sticky`.
