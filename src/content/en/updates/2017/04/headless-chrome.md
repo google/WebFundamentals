@@ -390,10 +390,8 @@ examples below to get you started.
 
 #### Using ChromeDriver
 
-[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 2.3.0
-was the first version to support Chrome 59 and work with headless Chrome,
-but you'll want Chrome 61 to work around screenshot bugs. The good news
-is that more recent versions of ChromeDriver (2.3.2) work with Chrome 61!
+[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 2.3.2
+uses Chrome 61 and works well with headless Chrome.
 
 Install:
 
