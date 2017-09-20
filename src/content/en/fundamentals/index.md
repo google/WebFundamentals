@@ -36,7 +36,7 @@ page_type: landing
   <div class="devsite-landing-row-group">
     <div class="devsite-landing-row-item" id="fast">
       <figure class="devsite-landing-row-item-image">
-        <img src="/web/progressive-web-apps/images/pwa-fast.png">
+        <img src="/web/images/pwa-f-16x9.gif">
       </figure>
       <div class="devsite-landing-row-item-description">
         <h3>Fast</h3>
@@ -56,7 +56,7 @@ page_type: landing
     </div>
     <div class="devsite-landing-row-item" id="integrated">
       <figure class="devsite-landing-row-item-image">
-        <img src="https://via.placeholder.com/800x450">
+        <img src="/web/images/pwa-i-16x9.gif">
       </figure>
       <div class="devsite-landing-row-item-description">
         <h3>Integrated</h3>
@@ -80,7 +80,7 @@ page_type: landing
   <div class="devsite-landing-row-group">
     <div class="devsite-landing-row-item" id="reliable">
       <figure class="devsite-landing-row-item-image">
-        <img src="/web/progressive-web-apps/images/pwa-reliable.png">
+        <img src="/web/images/pwa-r-16x9.gif">
       </figure>
       <div class="devsite-landing-row-item-description">
         <h3>Reliable</h3>
@@ -99,7 +99,7 @@ page_type: landing
     </div>
     <div class="devsite-landing-row-item" id="engaging">
       <figure class="devsite-landing-row-item-image">
-        <img src="/web/progressive-web-apps/images/pwa-engaging.png">
+        <img src="/web/images/pwa-e-16x9.gif">
       </figure>
       <div class="devsite-landing-row-item-description">
         <h3>Engaging</h3>

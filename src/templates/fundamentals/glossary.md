@@ -12,7 +12,8 @@ book_path: /web/fundamentals/_book.yaml
 
 {{#each this}}
 
-### {{#if link}}<a href="{{ link }}">{{/if}}{{ term }} {{#if acronym}}(<abbr title="{{ term }}">{{ acronym }}</abbr>){{/if}}{{#if link}}</a>{{/if}}
+### {{#if link}}<a href="{{ link }}">{{/if}}{{#if acronym}}<abbr title="{{ term }}">{{ acronym }}</abbr> - {{/if}}{{ term }}{{#if link}}</a>{{/if}}
+
 
 {{{description}}}
 
