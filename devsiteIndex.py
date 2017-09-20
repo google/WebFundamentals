@@ -146,7 +146,7 @@ def generateYaml(lang, requestPath, rawYaml):
   page = parsedYaml['landing_page']
   rows = page['rows']
   title = 'Web'
-  banner = devsiteHelper.getAnnouncementBanner(lang)
+  banner = devsiteHelper.getAnnouncementBanner(parsedYaml['project_path'], lang)
   header = 'Generic Page Header Here'
   customCss = ''
   lowerTabs = devsiteHelper.getLowerTabs(parsedYaml['book_path'], lang)

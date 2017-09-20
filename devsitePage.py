@@ -17,6 +17,7 @@ def getPage(requestPath, lang):
   title = 'Web Fundamentals'
   leftNav = '- No Left Nav Found - '
   toc = '- No TOC Found - '
+  announcementBanner = ''
   template = 'gae/article.tpl'
   fileLocations = [
     os.path.join(SOURCE_PATH, lang, requestPath) + '.md',
@@ -98,6 +99,10 @@ def getPage(requestPath, lang):
           leftNav = devsiteHelper.getLeftNav(requestPath, bookPath, lang)
           lowerTabs = devsiteHelper.getLowerTabs(bookPath, lang)
 
+        if 'project_path' in md.Meta and len(md.Meta['project_path']) == 1:
+          projectPath = md.Meta['project_path'][0]
+          announcementBanner = devsiteHelper.getAnnouncementBanner(projectPath, lang)
+
         # Checks if the page should be displayed in full width mode
         if 'full_width' in md.Meta and len(md.Meta['full_width']) == 1:
           fullWidth = md.Meta['full_width'][0]
@@ -132,12 +137,10 @@ def getPage(requestPath, lang):
       gitHubIssueUrl += lang + ']&body='
       gitHubIssueUrl += gitHubEditUrl
 
-      x = devsiteHelper.getFooterPromo()
-
       # Renders the content into the template
       response = render(template, {
         'title': title,
-        'announcementBanner': devsiteHelper.getAnnouncementBanner(lang),
+        'announcementBanner': announcementBanner,
         'lowerTabs': lowerTabs,
         'gitHubIssueUrl': gitHubIssueUrl,
         'gitHubEditUrl': gitHubEditUrl,

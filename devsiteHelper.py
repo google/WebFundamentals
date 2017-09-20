@@ -192,7 +192,6 @@ def expandBook(book, lang='en'):
   return book
 
 
-
 def getLowerTabs(pathToBook, lang='en'):
   """Gets the lower tabs from a parsed book.yaml dictionary.
 
@@ -438,17 +437,13 @@ def getIncludeCode(include_tag, lang='en'):
   return cgi.escape(result)
 
 
-def getAnnouncementBanner(lang='en'):
-  # Returns the announcement banner
-  memcacheKey = 'header-Announcement-' + lang
+def getAnnouncementBanner(pathToProject, lang='en'):
+  memcacheKey = 'projectYAML-' + pathToProject
   result = getFromMemCache(memcacheKey)
-  if result is None:
-    result = ''
-    projectFile = os.path.join(SOURCE_PATH, lang, '_project.yaml')
-    if not os.path.isfile(projectFile):
-      projectFile = os.path.join(SOURCE_PATH, 'en', '_project.yaml')
-    raw = open(projectFile, 'r').read().decode('utf8')
-    project = yaml.load(raw)
+  if result:
+    return result
+  try:
+    project = yaml.load(readFile(pathToProject, lang))
     if 'announcement' in project:
       startBanner = project['announcement']['start']
       startBanner = datetime.strptime(startBanner, '%Y-%m-%dT%H:%M:%SZ')
@@ -462,7 +457,10 @@ def getAnnouncementBanner(lang='en'):
         result += '</div>'
       else:
         logging.warn('Announcement in _project.yaml expired: not shown')
-      setMemCache(memcacheKey, result)
+      setMemCache(memcacheKey, result, 60)
+  except Exception as e:
+    logging.exception('Unable to get announcement from project.yaml')
+    return ''
   return result
 
 
