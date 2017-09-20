@@ -390,7 +390,7 @@ examples below to get you started.
 
 #### Using ChromeDriver
 
-[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 2.3.2
+[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 2.32
 uses Chrome 61 and works well with headless Chrome.
 
 Install:
