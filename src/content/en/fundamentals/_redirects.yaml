@@ -16,7 +16,7 @@ redirects:
   to: /web/fundamentals/
 
 - from: /web/fundamentals/design-and-ui/
-  to: /web/fundamentals/design-and-ux/
+  to: /web/fundamentals/
 
 - from: /web/fundamentals/design-and-ui/...
   to: /web/fundamentals/design-and-ux/...
@@ -86,6 +86,9 @@ redirects:
 
 - from: /web/fundamentals/native-hardware/capturing-images/
   to: /web/fundamentals/media/capturing-images/
+
+- from: /web/fundamentals/primers/payment-request/
+  to: /web/fundamentals/payments/
 
 - from: /web/fundamentals/feed.xml
   to: /web/fundamentals/rss.xml

@@ -33,7 +33,7 @@ To get started quickly, copy the template and start there.
 
 ## YAML Front Matter & Special Attributes
 
-Refer to the [YAML Front Matter](style-guide#yaml-front-matter) section for
+Refer to the [YAML Front Matter](writing-an-article#yaml_front_matter) section for
 full details on the required YAML front matter.
 
 Note: You cannot include HTML in the description attribute. If you'd like to
