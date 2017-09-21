@@ -17,12 +17,12 @@ toc:
     path: /web/fundamentals/media/fast-playback-with-video-preload
 - title: Capture and Record
   section:
+  - title: Capturing Audio
+    path: /web/fundamentals/media/recording-audio/
   - title: Capturing Images
     path: /web/fundamentals/media/capturing-images/
   # - title: Capturing Video
   #   path: /web/fundamentals/media/
-  - title: Capturing Audio
-    path: /web/fundamentals/media/recording-audio/
   # - title: Choosing the Media Device
   #   path: /web/fundamentals/media/
   # - title: Controlling the Camera

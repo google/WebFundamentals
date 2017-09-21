@@ -10,6 +10,7 @@ toc:
     #   path: /web/fundamentals/design-and-ux/ux-basics/pwa
     - title: What Makes a Good Mobile Site?
       path: /web/fundamentals/design-and-ux/principles/
+  - include: /web/fundamentals/accessibility/_toc.yaml
   - title: Animations
     section:
     - title: Overview
@@ -30,7 +31,6 @@ toc:
       path: /web/fundamentals/design-and-ux/animations/asymmetric-animation-timing
     - title: Animations and Performance
       path: /web/fundamentals/design-and-ux/animations/animations-and-performance
-  - include: /web/fundamentals/accessibility/_toc.yaml
   - title: Responsive Web Design
     section:
     - title: Overview
