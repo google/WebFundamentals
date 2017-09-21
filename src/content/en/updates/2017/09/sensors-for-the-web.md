@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Generic Sensor API is available for Origin Trials in Chome 62.
+description: Generic Sensor API is available for Origin Trials in Chrome 62.
 
-{# wf_updated_on: 2017-09-19 #}
+{# wf_updated_on: 2017-09-20 #}
 {# wf_published_on: 2017-09-18 #}
 {# wf_tags: sensors,origintrials,chrome62,news #}
 {# wf_blink_components: Blink>Sensor #}
 {# wf_featured_image: /web/updates/images/generic/screen-rotation.png #}
-{# wf_featured_snippet: Sensors are used in many native applications to enable advanced features. Wouldn't it be nice to bridge the gap between native and the web? You can do it with Generic Sensor API, which is available for Origin Trials in Chome 62. #}
+{# wf_featured_snippet: Sensors are used in many native applications to enable advanced features. Wouldn't it be nice to bridge the gap between native and the web? You can do it with Generic Sensor API, which is available for Origin Trials in Chrome 62. #}
 
 # Sensors For The Web! {: .page-title }
 
@@ -331,7 +331,7 @@ acceleration function.
 
 <figure align="center">
   <img src="/web/updates/images/2017/09/sensors/punchmeter.png"
-    alt="Demo web application for punch speed measurument">
+    alt="Demo web application for punch speed measurement">
   <figcaption><b>Figure 5</b>: Measurement of a punch speed</figcaption>
 </figure>
 
