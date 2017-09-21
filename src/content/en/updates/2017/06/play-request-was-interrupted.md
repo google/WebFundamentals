@@ -7,6 +7,7 @@ description: What is really happening with "DOMException: The play() request was
 {# wf_tags: media,devtools #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
 {# wf_featured_snippet: What is really happening with "DOMException: The play() request was interrupted"? #}
+{# wf_blink_components: Blink>Media #}
 
 # DOMException: The play() request was interrupted {: .page-title }
 
