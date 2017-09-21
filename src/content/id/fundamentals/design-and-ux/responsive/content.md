@@ -57,7 +57,7 @@ Intinya:
 
 Dari segi ukuran byte, laman web menjadi [besar dan semakin besar](http://httparchive.org/trends.php#bytesTotal&reqTotal).
 
-[Teknik desain responsif](/web/fundamentals/design-and-ui/responsive/) memungkinkan untuk menyajikan materi berbeda dalam tampilan yang terlihat yang lebih kecil, tapi akan lebih bijak jika memulai dengan merampingkan teks, gambar dan materi lainnya.
+[Teknik desain responsif](/web/fundamentals/design-and-ux/responsive/) memungkinkan untuk menyajikan materi berbeda dalam tampilan yang terlihat yang lebih kecil, tapi akan lebih bijak jika memulai dengan merampingkan teks, gambar dan materi lainnya.
 
 > Pengguna web sering kali berorientasi tindakan, cenderung aktif memburu jawaban atas pertanyaan mereka saat ini, daripada diam mempelajari buku yang bagus.
 >
@@ -121,7 +121,7 @@ Berikut adalah beberapa sarannya:
 * Daripada gambar, gunakanlah CSS untuk gradien, bayangan, sudut lengkung, dan [tekstur latar belakang](http://lea.verou.me/css3patterns/){: .external }, fitur [didukung oleh semua browser modern](http://caniuse.com/#search=shadows). Namun harap diingat, bahwa CSS mungkin lebih baik dari gambar, tapi tetap ada [penalti render dan pemrosesan](http://www.smashingmagazine.com/2013/04/03/build-fast-loading-mobile-website/), yang signifikan terutama di perangkat seluler.
 * Gambar latar jarang sekali bekerja dengan baik di perangkat seluler. Anda bisa [menggunakan kueri media](http://udacity.github.io/responsive-images/examples/2-06/backgroundImageConditional/) untuk menghindari gambar latar pada tampilan yang terlihat yang kecil.
 * Hindari gambar layar pembuka.
-* [Gunakan CSS untuk animasi UI](/web/fundamentals/design-and-ui/animations/).
+* [Gunakan CSS untuk animasi UI](/web/fundamentals/design-and-ux/animations/).
 * Kenali glyph Anda; gunakan [ikon dan simbol Unicode](https://en.wikipedia.org/wiki/List_of_Unicode_characters) bukan gambar, dengan Web Fonts bila perlu.
 * Pertimbangkan [font ikon](http://weloveiconfonts.com/#zocial); mereka adalah grafis vektor yang bisa diskalakan tanpa batas, dan seluruh kumpulan gambar bisa di unduh dalam satu font. (Namun, ketahui [persoalan ini](https://sarasoueidan.com/blog/icon-fonts-to-svg/).)
 * Elemen `<canvas>` bisa digunakan untuk membuat gambar di JavaScript dari garis, kurva, teks, dan gambar lainnya.
@@ -163,7 +163,7 @@ Ketika membangun untuk berbagai tampilan yang terlihat, pertimbangkan materi ser
 * Tempatkan materi Anda yang paling penting di atas, karena [pengguna cenderung membaca laman web dalam pola berbentuk-F](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/).
 * Pengguna mengunjungi situs Anda untuk mencapai sebuah tujuan. Tanyakan pada diri sendiri apa yang mereka butuhkan untuk mencapai tujuan tersebut dan buang segala sesuatu yang lain. Lakukan tindakan tegas pada hiasan visual dan tekstual, materi lawas, tautan terlalu banyak, dan kesemrawutan lainnya.
 * Hati-hati dengan ikon berbagi sosial; mereka bisa mengacaukan layout, dan kodenya dapat memperlambat pemuatan laman.
-* Desain [layout responsif](/web/fundamentals/design-and-ui/responsive/) untuk materi, bukan ukuran perangkat tetap.
+* Desain [layout responsif](/web/fundamentals/design-and-ux/responsive/) untuk materi, bukan ukuran perangkat tetap.
 
 ### Menguji materi
 

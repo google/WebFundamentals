@@ -370,7 +370,7 @@ es donde deseamos cambiarla.
 
 600 px parece ser un buen lugar para crear nuestro primer punto de interrupción, ya que 
 nos brindará alcance para volver a ubicar los elementos para que entren mejor en la pantalla.
-Podemos hacerlo usando una tecnología llamada [Consultas de medios](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries).
+Podemos hacerlo usando una tecnología llamada [Consultas de medios](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries).
 
     @media (min-width: 600px) {
     

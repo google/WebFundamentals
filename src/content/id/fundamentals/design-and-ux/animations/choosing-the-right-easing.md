@@ -23,7 +23,7 @@ Secara umum, **ease-out** adalah keputusan tepat, dan tentu saja standar yang ba
 Ada grup persamaan ease-out terkemuka selain yang ditetapkan dengan kata kunci `ease-out` di CSS, yang terentang dalam "agresivitas"-nya. Untuk efek ease-out yang cepat, pertimbangkan [ease-out Quintic](http://easings.net/#easeOutQuint).
 
 
-[Lihat animasi ease-out Quintic](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
+[Lihat animasi ease-out Quintic](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
 
 Efek easing lainnya, terutama easing memantul atau elastis tidak boleh sering digunakan, dan hanya dipakai ketika cocok untuk proyek Anda. Ada beberapa hal yang bisa menurunkan kualitas pengalaman pengguna, seperti animasi yang mengagetkan. Jika proyek Anda tidak ditujukan untuk kegembiraan, maka jangan gunakan elemen yang memantul di sekitar UI. Sebaliknya, jika Anda membuat sebuah situs yang seharusnya menggembirakan, maka tentu saja gunakan pantulan!
 

@@ -54,7 +54,7 @@ Abaixo está um exemplo de CSS que move um elemento de 100 pixels nos eixos X e 
       transform: translate(100px, 100px);
     }
     
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-simple.html){: target="_blank" .external }
 
 Além da duração da transição, há opções para *easing*, que é basicamente o resultado da animação. Para saber mais sobre o easing, consulte o guia [Os conceitos básicos de easing](the-basics-of-easing).
 
@@ -128,7 +128,7 @@ Por exemplo, você pode animar a caixa da mesma forma que anima transições, ma
     }
     
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-keyframes.html){: target="_blank" .external }
 
 Com animações CSS, você define a própria animação independentemente do elemento alvo e usa a propriedade animation-name para selecionar a animação necessária.
 
@@ -153,7 +153,7 @@ Animações JavaScript são *imperativas*, pois são programadas em linha como p
 
 Por padrão, animações da Web só modificam a apresentação de um elemento. Se quiser que seu objeto permaneça no local para onde ele foi motivo, modifique seus estilos subjacentes quando a animação for concluída, como é apresentado no nosso exemplo.
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-wa.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-wa.html){: target="_blank" .external }
 
 A Web Animations API é um novo padrão do W3C. Ela tem suporte nativo no Chrome e no Opera e está [sendo desenvolvida para Firefox](https://birtles.github.io/areweanimatedyet/){: .external }. Para outros navegadores modernos, [há um polyfill disponível](https://github.com/web-animations/web-animations-js).
 

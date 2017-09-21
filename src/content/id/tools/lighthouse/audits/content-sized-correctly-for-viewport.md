@@ -18,7 +18,7 @@ layar seluler.
 
 Audit adalah seputar cara menentukan apakah laman Anda telah dioptimalkan untuk
 perangkat seluler. Jika situs Anda tidak dioptimalkan dan memang itu yang Anda inginkan, maka lihat
-[Dasar-Dasar Desain Web Responsif](/web/fundamentals/design-and-ui/responsive/)
+[Dasar-Dasar Desain Web Responsif](/web/fundamentals/design-and-ux/responsive/)
 untuk memulai.
 
 Anda bisa mengabaikan audit ini jika:

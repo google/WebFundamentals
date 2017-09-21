@@ -280,7 +280,7 @@ Das Design sieht ab 600 Pixeln in der Breite unvorteilhaft aus. In unserem Fall 
   </p>
 </video>
 
-600 Pixel stellen eine gute Stelle für den ersten Übergangspunkt dar, da wir nun genug Platz haben, Elemente neu zu positionieren, damit sie besser auf den Bildschirm passen. Wir können dies mithilfe einer Technologie namens [Medienabfragen](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness) tun.
+600 Pixel stellen eine gute Stelle für den ersten Übergangspunkt dar, da wir nun genug Platz haben, Elemente neu zu positionieren, damit sie besser auf den Bildschirm passen. Wir können dies mithilfe einer Technologie namens [Medienabfragen](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness) tun.
 
 
     @media (min-width: 600px) {

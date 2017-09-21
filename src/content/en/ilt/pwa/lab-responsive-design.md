@@ -333,7 +333,7 @@ You have learned to style your content to make it responsive. Using media querie
 
 #### Learn more about the basics of responsive design
 
-*  [Responsive Web Design Basics - Set the viewport](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) 
+*  [Responsive Web Design Basics - Set the viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) 
 *  [A tale of two viewports](http://www.quirksmode.org/mobile/viewports2.html)
 
 #### Learn more about Flexbox as a progressive enhancement

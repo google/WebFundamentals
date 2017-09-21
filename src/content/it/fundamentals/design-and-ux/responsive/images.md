@@ -204,7 +204,7 @@ Il sito di J. Crews è un buon esempio di immagini interattive e dotate di funzi
 La [tecnica di compressione
 delle immagini](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) invia un'immagine 2x a elevata compressione a tutti i dispositivi, indipendentemente dalle funzionalità. In base al tipo d'immagine e al livello di compressione, la qualità dell'immagine potrebbe restare inalterata anche con una significativa riduzione delle dimensioni del file.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html">Vedi esempio</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/compressive.html">Vedi esempio</a>
 
 Note: Utilizza con parsimonia le tecniche di compressione, poiché aumentano i costi in termini di decodifica e memoria. Il ridimensionamento delle immagini di grandi dimensioni per gli schermi di dimensioni ridotte è un'attività costosa che riduce le prestazioni dei dispositivi di fascia bassa con limiti di memoria e di capacità di calcolo.
 
@@ -410,7 +410,7 @@ Esistono diversi strumenti per eseguire un'ulteriore compressione senza perdita 
 
 Lo spriting CSS è una tecnica che unisce diverse immagini in una singola immagine di 'foglio di sprite'. Quindi è possibile utilizzare singole immagini specificando l'immagine di sfondo di un elemento (foglio di sprite) e un offset per la visualizzazione della parte corretta.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=" Foglio di sprite immagine utilizzato nell'esempio"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=" Foglio di sprite immagine utilizzato nell'esempio"></a>
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite"   adjust_indentation="auto" %}
 </pre>

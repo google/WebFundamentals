@@ -158,7 +158,7 @@ dependendo das consultas de mídia ou do formato da imagem.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/media.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/media.html){: target="_blank" .external }
 
 No exemplo acima, se a largura do navegador for de pelo menos 800 pixels, será usado
 `head.jpg` ou `head-2x.jpg`, dependendo da resolução do dispositivo.
@@ -184,7 +184,7 @@ a densidade de pixels efetiva e escolha a melhor imagem a ser baixada.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/sizes.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/sizes.html){: target="_blank" .external }
 
 
 O exemplo acima renderiza uma imagem que tem metade da largura da janela de visualização
@@ -254,7 +254,7 @@ ocupar apenas uma pequena parcela.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/breakpoints.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/breakpoints.html){: target="_blank" .external }
 
 O atributo `sizes` no exemplo acima usa várias consultas de mídia para
 especificar o tamanho da imagem. Quando a largura do navegador é superior a
@@ -292,7 +292,7 @@ do dispositivo em questão.  Dependendo do tipo de imagem e do nível de
 compactação, a qualidade pode não ser visivelmente alterada, mas o tamanho do arquivo é
 significativamente reduzido.
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/compressive.html){: target="_blank" .external }
 
 Warning: Tenha cautela ao usar a técnica de compactação devido aos maiores custos de memória e decodificação que ela exige. O redimensionamento de grandes imagens para caber em telas menores é caro e pode ser particularmente difícil em dispositivos mais acessíveis cuja memória e o processamento são limitados.
 
@@ -468,7 +468,7 @@ url(large.png)` is applied to the content `div`.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/conditional-mq.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/conditional-mq.html){: target="_blank" .external }
 
 ### Use image-set para fornecer imagens de alta resolução
 
@@ -498,7 +498,7 @@ imagem de fallback quando `image-set()` não tiver suporte. Por exemplo:
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-set.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/image-set.html){: target="_blank" .external }
 
 O exemplo acima carregará o ativo apropriado em navegadores que oferecem suporte a image-set e, caso contrário,
 utilizam o ativo de 1x. A ressalva óbvia é que, embora o suporte a
@@ -529,7 +529,7 @@ não oferecer suporte a consultas de mídia de resoluções específicas.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/media-query-dppx.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/media-query-dppx.html){: target="_blank" .external }
 
 Você também pode usar a sintaxe min-width para exibir imagens alternativas dependendo do
 tamanho da janela de visualização.  Essa técnica tem a vantagem de a imagem não ser
@@ -594,14 +594,14 @@ imagens de raster:
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-svg.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-svg.html){: target="_blank" .external }
 
 ### Use fontes de ícone com cautela
 
 <figure class="attempt-right">
   <img src="img/icon-fonts.png" class="center" srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x" alt="Exemplo de uma página que usa FontAwesome para seus ícones de fonte.">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-font.html" target="_blank" class="external">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-font.html" target="_blank" class="external">
       Exemplo de uma página que usa FontAwesome para seus ícones de fonte.
     </a>
   </figcaption>
@@ -626,7 +626,7 @@ em comparação com ícones SVG:
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-font.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-font.html){: target="_blank" .external }
 
 Existem centenas de fontes de ícone gratuitas e pagas, incluindo [Font
 Awesome](https://fortawesome.github.io/Font-Awesome/),
@@ -720,7 +720,7 @@ parte correta.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media//image-sprite.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media//image-sprite.html){: target="_blank" .external }
 
 A criação de sprites tem a vantagem de reduzir o número de downloads necessários para obter
 várias imagens, ainda permitindo o armazenamento em cache.

@@ -41,7 +41,7 @@ CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](
 
 <img src="images/linear.png" style="max-width: 300px" alt="線性緩動動畫曲線。" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html">請參閱線性動畫。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-linear.html">請參閱線性動畫。</a>
 
 隨著時間的推移，值會以等量增加。 直線動作的東西往往感覺很機器化且不自然，而這是使用者會覺得格格不入的東西。 一般而言，您應該要避免直線動作。
 
@@ -64,7 +64,7 @@ CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](
     transition: transform 500ms ease-out;
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html">請參閱緩出動畫。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-out.html">請參閱緩出動畫。</a>
 
 緩出通常最適合使用者介面的工作，因為快速開始給您的動畫回應性的感覺，同時可在結束時允許些許自然減速。
 
@@ -74,7 +74,7 @@ CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](
 
 <img src="images/ease-in.png" style="max-width: 300px" alt="緩入動畫曲線。" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html">請參閱段緩入動畫。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in.html">請參閱段緩入動畫。</a>
 
 這種動畫就像一塊沉重的石頭落下，它慢慢地開始，並砰地一聲快速落地。
 
@@ -92,7 +92,7 @@ CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](
 
 <img src="images/ease-in-out.png" style="max-width: 300px" alt="緩入緩出動畫曲線。" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html">請參閱段緩入緩出動畫。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in-out.html">請參閱段緩入緩出動畫。</a>
 
 在此必須小心，不要採用過長的動畫持續時間，因為緩入開始對動畫會有遲鈍感。 通常在 300-500ms 的範圍左右會比較適合，但實際數字視您專案的感覺而定。 有鑑於此，由於起步緩慢、中間快速及結束緩慢，您將可創造動畫的強烈對照感，讓使用者相當滿意。
 

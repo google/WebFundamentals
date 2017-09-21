@@ -370,7 +370,7 @@ alt 텍스트를 최대한 간결하게 유지해야 합니다.  예를 들어 �
 
 600px 위치의 경우, 화면에 더 잘 맞도록 요소의 위치를 조정할 수 있는 여지가 있으므로,
 첫 번째 중단점을 만들기에 좋은 위치입니다.
-이를 위해 우리는 [미디어 쿼리](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)라는 기술을 사용할 수 있습니다.
+이를 위해 우리는 [미디어 쿼리](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)라는 기술을 사용할 수 있습니다.
 
     @media (min-width: 600px) {
     

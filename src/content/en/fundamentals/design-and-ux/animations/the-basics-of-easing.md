@@ -48,7 +48,7 @@ As time moves along, the value increases in equal amounts. With linear motion, t
 
 Whether you’re coding your animations using CSS or JavaScript, you’ll find that there is always an option for linear motion. 
 
-[See a linear animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html){: target="_blank" .external }
+[See a linear animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-linear.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -71,7 +71,7 @@ Easing out causes the animation to start more quickly than linear ones, and it a
 
 Easing out is typically the best for user interface work, because the fast start gives your animations a feeling of responsiveness, while still allowing for a natural slowdown at the end.
 
-[See an ease-out animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html){: target="_blank" .external }
+[See an ease-out animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-out.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -96,7 +96,7 @@ This kind of animation is like a heavy stone falling, where it starts slowly and
 
 From an interaction point of view, however, ease-ins can feel a little unusual because of their abrupt end; things that move in the real world tend to decelerate rather than simply stopping suddenly. Ease-ins also have the detrimental effect of feeling sluggish when starting, which negatively impacts the perception of responsiveness in your site or app.
 
-[See an ease-in animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html){: target="_blank" .external }
+[See an ease-in animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -118,7 +118,7 @@ Easing both in and out is akin to a car accelerating and decelerating and, used 
 
 Do not use an overly long animation duration, because of the sluggishness of an ease-in start to the animation. Something in the range of 300-500ms is typically suitable, but the exact number depends heavily on the feel of your project. That said, because of the slow start, fast middle, and slow end, there is increased contrast in the animation, which can be quite satisfying for users.
 
-[See an ease-in-out animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html){: target="_blank" .external }
+[See an ease-in-out animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in-out.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 

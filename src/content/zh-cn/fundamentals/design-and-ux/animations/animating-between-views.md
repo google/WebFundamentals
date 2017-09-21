@@ -125,7 +125,7 @@ description:了解如何在应用的两个视图之间设置动画。
       transform: translateX(0);
     }
     
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/inter-view-animation.html){: target="_blank" .external }
 
 您可以扩展此示例以包括多个视图，基本概念仍是一样；每个不可见视图应在屏幕之外，并按需进入屏幕，同时当前屏幕视图应移走。
 

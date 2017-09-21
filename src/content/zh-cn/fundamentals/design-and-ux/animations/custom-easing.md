@@ -37,7 +37,7 @@ description:不走寻常路，为项目创建完全自定义的动画。
   </figure>
 </div>
 
-[查看自定义缓动的动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html){: target="_blank" .external }
+[查看自定义缓动的动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-custom-curve.html){: target="_blank" .external }
 
 此自定义曲线的 CSS 为：
 
@@ -49,7 +49,7 @@ description:不走寻常路，为项目创建完全自定义的动画。
 
 制作自定义曲线很有趣，您可以有效控制对动画的感觉。以上述曲线为例，您可以看到曲线与经典的缓入缓出曲线相似，但缓入即“开始”部分缩短，而结尾减速部分拉长。
 
-使用此[动画曲线工具](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/curve-playground.html){: target="_blank" .external }进行试验，并查看此曲线如何影响动画的感觉。
+使用此[动画曲线工具](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/curve-playground.html){: target="_blank" .external }进行试验，并查看此曲线如何影响动画的感觉。
 
 ## 使用 JavaScript 框架实现更多控制
 
@@ -59,7 +59,7 @@ description:不走寻常路，为项目创建完全自定义的动画。
 
 [GreenSock 的 TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)（或 TweenLite，如果您想要超轻量版本）是一个强大的框架，您可以在小型 JavaScript 库中获得很多控制，它是一个非常成熟的代码库。
 
-[查看弹性缓动的动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-elastic.html){: target="_blank" .external }
+[查看弹性缓动的动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-elastic.html){: target="_blank" .external }
 
 要使用 TweenMax，请在页面中包括此脚本：
 

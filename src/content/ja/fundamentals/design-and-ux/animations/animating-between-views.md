@@ -125,7 +125,7 @@ description: アプリ内の 2 つのビュー間にアニメーションを付�
       transform: translateX(0);
     }
     
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/inter-view-animation.html){: target="_blank" .external }
 
 この手法を拡張して複数のビューに適用することもできます。基本的な概念は同じです。見えていない個々のビューは画面外に移動し、必要に応じて画面内に戻します。その際、現在画面に表示されているビューは画面外に移動する必要があります。
 

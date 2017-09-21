@@ -282,7 +282,7 @@ Het ontwerp ziet er pas slecht uit vanaf een breedte van 600 pixels. In ons voor
   </p>
 </video>
 
-600 pixels blijkt een goede plaats voor ons eerste breekpunt, want het biedt ons het bereik om elementen te verplaatsen zodat ze beter op het scherm passen. We kunnen dit met behulp van de technologie [Mediaquery`s](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
+600 pixels blijkt een goede plaats voor ons eerste breekpunt, want het biedt ons het bereik om elementen te verplaatsen zodat ze beter op het scherm passen. We kunnen dit met behulp van de technologie [Mediaquery`s](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness).
 
 
     @media (min-width: 600px) {

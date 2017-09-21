@@ -23,7 +23,7 @@ No geral, um **ease-out** é a escolha correta e certamente é um bom padrão. E
 Há um grupo de equações de ease-out muito conhecidas além daquela especificada com a palavra-chave `ease-out` no CSS, que variam em "agressividade". Para obter um efeito ease-out muito rápido, considere um [Quintic ease-out](http://easings.net/#easeOutQuint).
 
 
-[Veja uma animação Quintic ease-out](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
+[Veja uma animação Quintic ease-out](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
 
 Outras equações de easing, particularmente eases bounces ou elastic, devem ser usadas em moderação e apenas quando for adequado para o projeto. Uma animação desagradável pode fazer com que o usuário desista da experiência. Se o objetivo do seu projeto não for ser divertido, não adicione animações de bounce nos elementos da IU. Por outro lado, se estiver criando um site que deva ser alegre, use os bounces que quiser!
 

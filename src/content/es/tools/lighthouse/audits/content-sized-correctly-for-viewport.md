@@ -18,7 +18,7 @@ pantallas de dispositivos móviles.
 
 Esta auditoría es una forma indirecta de determinar si tu página está optimizada para
 dispositivos móviles. Si tu sitio no está optimizado y deseas que lo esté, primero consulta
-[Conceptos básicos de diseño web adaptable](/web/fundamentals/design-and-ui/responsive/).
+[Conceptos básicos de diseño web adaptable](/web/fundamentals/design-and-ux/responsive/).
 
 
 Puedes ignorar esta auditoría si:

@@ -241,7 +241,7 @@ Anche se può essere utile definire i breakpoint in base alle classi dei disposi
 
 Progetta i contenuti in funzione degli schermi di piccole dimensioni, quindi espandi lo schermo fino al punto in cui occorre inserire un breakpoint. Così facendo, puoi ottimizzare i breakpoint in base ai contenuti e ridurne il numero.
 
-Passiamo all'esempio preso in esame all'inizio, le [previsioni del tempo](/web/fundamentals/design-and-ui/responsive/).
+Passiamo all'esempio preso in esame all'inizio, le [previsioni del tempo](/web/fundamentals/design-and-ux/responsive/).
 Innanzitutto, occorre conferire un aspetto gradevole alle previsioni su schermo.
 
 <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Anteprima delle previsioni del tempo su schermo di piccole dimensioni.">

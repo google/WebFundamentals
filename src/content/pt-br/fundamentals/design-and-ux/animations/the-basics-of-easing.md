@@ -48,7 +48,7 @@ Conforme o tempo passa, o valor aumenta na mesma proporção. Com o movimento li
 
 Se estiver codificando suas animações usando CSS ou JavaScript, sempre há uma opção melhor do que o movimento linear. 
 
-[Veja uma animação linear](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html){: target="_blank" .external }
+[Veja uma animação linear](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-linear.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -71,7 +71,7 @@ O ease out faz com que a animação comece mais rapidamente do que na linear e t
 
 O ease out é geralmente melhor para o trabalho na interface do usuário, pois o início rápido dá uma sensação de capacidade de resposta à sua animação, permitindo uma desaceleração natural no final.
 
-[Veja uma animação ease-out](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html){: target="_blank" .external }
+[Veja uma animação ease-out](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-out.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -96,7 +96,7 @@ Esse tipo de animação é como uma pedra pesada caindo, onde começa lentamente
 
 No entanto, de um ponto de vista da interação, os ease-ins podem parecer um pouco incomuns por causa de seu término súbito; coisas que se movem no mundo real tendem a desacelerar em vez de simplesmente parar repentinamente. Ease-ins também têm o efeito prejudicial de parecerem lentos no início, o que também afeta negativamente a percepção de resposta do seu site ou aplicativo.
 
-[Veja uma animação ease-in](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html){: target="_blank" .external }
+[Veja uma animação ease-in](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -118,7 +118,7 @@ O ease in e out é semelhante a um carro acelerando e desacelerando e, se usado 
 
 Não crie uma animação longa demais devido à lentidão do início do ease-in na animação. O intervalo de 300 a 500 ms é geralmente adequado, mas o valor exato depende muito do seu projeto específico. Desta forma, início lento, meio rápido e término lento resultarão em maior contraste da animação, o que pode ser bastante satisfatório para o usuário.
 
-[Veja uma animação ease-in-out](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html){: target="_blank" .external }
+[Veja uma animação ease-in-out](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in-out.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 

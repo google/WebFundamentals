@@ -351,7 +351,7 @@ Chris Wilson、Peter Lubbers 和 Sean Bennet。
   </p>
 </video>
 
-600px 看起来适合创建我们的第一个断点，因为它可以为我们提供作用域来调整元素位置，使它们更好地适应屏幕。我们可以利用一项称作[媒体查询](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)的技术来实现这一点。
+600px 看起来适合创建我们的第一个断点，因为它可以为我们提供作用域来调整元素位置，使它们更好地适应屏幕。我们可以利用一项称作[媒体查询](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)的技术来实现这一点。
 
     @media (min-width: 600px) {
     

@@ -18,7 +18,7 @@ mobile screens.
 
 This audit is a roundabout way of determining if your page is optimized for
 mobile devices. If your site is not optimized and you want it to be, then see
-[Responsive Web Design Basics](/web/fundamentals/design-and-ui/responsive/)
+[Responsive Web Design Basics](/web/fundamentals/design-and-ux/responsive/)
 to get started.
 
 You can ignore this audit if:

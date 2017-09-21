@@ -37,7 +37,7 @@ Sebagai perbandingan, di sini ada dua kurva: kurva ease-in-out biasa dan kurva k
   </figure>
 </div>
 
-[Melihat animasi dengan easing khusus](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html){: target="_blank" .external }
+[Melihat animasi dengan easing khusus](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-custom-curve.html){: target="_blank" .external }
 
 CSS untuk kurva khusus adalah:
 
@@ -49,7 +49,7 @@ Dua angka pertama adalah koordinat X dan Y dari titik kontrol pertama, dan dua a
 
 Membuat kurva khusus sangat menyenangkan, dan memberikan Anda kontrol yang banyak atas nuansa animasi. Misalnya, pada kurva di atas, Anda bisa melihat bahwa kurva menyerupai kurva ease-in-out klasik, namun dengan ease-in dipersingkat, atau bagian "memulai," dan perlambatan panjang di bagian akhir.
 
-Lakukan eksperimen dengan [alat (bantu) kurva animasi](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/curve-playground.html){: target="_blank" .external } dan lihat bagaimana kurva memengaruhi nuansa animasi.
+Lakukan eksperimen dengan [alat (bantu) kurva animasi](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/curve-playground.html){: target="_blank" .external } dan lihat bagaimana kurva memengaruhi nuansa animasi.
 
 ## Gunakan kerangka kerja JavaScript untuk lebih banyak kontrol
 
@@ -59,7 +59,7 @@ Terkadang Anda membutuhkan lebih banyak kontrol daripada yang disediakan oleh ku
 
 Salah satu kerangka kerja yang efektif adalah [TweenMax dari GreenSock](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) (atau TweenLite jika ingin membuat segalanya sangat ringan), karena Anda mendapatkan banyak kontrol dalam pustaka JavaScript yang ringan, dan basis kode yang sangat matang.
 
-[Lihat animasi ease elastis](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-elastic.html){: target="_blank" .external }
+[Lihat animasi ease elastis](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-elastic.html){: target="_blank" .external }
 
 Untuk menggunakan TweenMax, sertakan skrip berikut di laman Anda:
 

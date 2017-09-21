@@ -247,7 +247,7 @@ Zwar kann es hilfreich sein, über Übergangspunkte auf Grundlage von Gerätekla
 
 Erstellen Sie Inhalte zunächst so, dass sie auf kleine Bildschirme passen, und erweitern Sie den Bildschirm anschließend, bis ein Übergangspunkt erforderlich wird. So können Sie Übergangspunkte auf Grundlage der Inhalte optimieren und die erforderliche Anzahl dieser Punkte so gering wie möglich halten.
 
-Gehen wir das Beispiel durch, das Sie zu Anfang gesehen haben, die [Wettervorhersage](/web/fundamentals/design-and-ui/responsive/).
+Gehen wir das Beispiel durch, das Sie zu Anfang gesehen haben, die [Wettervorhersage](/web/fundamentals/design-and-ux/responsive/).
 Im ersten Schritte sorgen wir dafür, dass die Vorhersage auf kleinen Bildschirmen gut aussieht.
 
 

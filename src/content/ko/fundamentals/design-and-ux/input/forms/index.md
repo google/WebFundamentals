@@ -40,7 +40,7 @@ description: 모바일에서는 양식을 작성하기 힘듭니다. 가장 좋�
   </figcaption>
 </figure>
 
-반복되는 작업 없이 양식을 필요한 필드만으로 구성하고, [자동완성](/web/fundamentals/design-and-ui/input/forms/#use-metadata-to-enable-auto-complete)을 활용하여 사용자가 미리 채워진 데이터로 쉽게 양식을 완성할 수 있도록 합니다.
+반복되는 작업 없이 양식을 필요한 필드만으로 구성하고, [자동완성](/web/fundamentals/design-and-ux/input/forms/#use-metadata-to-enable-auto-complete)을 활용하여 사용자가 미리 채워진 데이터로 쉽게 양식을 완성할 수 있도록 합니다.
 
 
 
@@ -241,7 +241,7 @@ Caution: 입력 유형을 선택할 때 현지화를 명심하세요.
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 참고:  <code>datalist</code> 값은 제안으로 제공되므로 사용자가 그 제안을 꼭 선택할 필요는 없습니다.
 
@@ -269,7 +269,7 @@ Caution: 입력 유형을 선택할 때 현지화를 명심하세요.
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### 레이블 크기 조정 및 배치
 
@@ -318,7 +318,7 @@ Caution: 자리표시자는 사용자가 요소를 입력하기 시작하면 즉
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 
@@ -657,7 +657,7 @@ Success: 클라이언트측 입력 유효성 검사 시에도 데이터의 일�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### 유효하지 않은 양식의 제출 차단
 
@@ -669,7 +669,7 @@ Success: 클라이언트측 입력 유효성 검사 시에도 데이터의 일�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### 실시간으로 피드백 표시
 
@@ -725,7 +725,7 @@ HTML5에서는 값이나 속성에 따라 입력 스타일을 지정하는 데 �
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 Success: 양식의 모든 문제를 한 번에 하나씩 표시하지 말고 한꺼번에 사용자에게 보여줘야 합니다.

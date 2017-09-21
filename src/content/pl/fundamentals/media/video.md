@@ -75,7 +75,7 @@ To rozwiązanie ma kilka zalet w porównaniu do wykonywania różnego kodu HTML 
 Wszystkie te punkty są szczególnie ważne w kontekście urządzeń mobilnych, na których przepustowość sieci i czas oczekiwania mają duże znaczenie, a cierpliwość użytkownika jest zwykle ograniczona. 
 Brak atrybutu type może wpłynąć na wydajność, gdy wiele typów plików źródłowych nie jest obsługiwanych.
 
-Użyj narzędzi dla programistów w przeglądarce mobilnej, by porównać aktywność sieci, gdy w kodzie <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html">są atrybuty type</a> i gdy <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html">ich nie ma</a>.
+Użyj narzędzi dla programistów w przeglądarce mobilnej, by porównać aktywność sieci, gdy w kodzie <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">są atrybuty type</a> i gdy <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html">ich nie ma</a>.
 Przejrzyj w tych narzędziach także nagłówki odpowiedzi, by [upewnić się, że serwer zgłasza właściwy typ MIME](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types). W przeciwnym razie sprawdzanie typu pliku źródłowego filmu nie będzie działać.
 
 ### Określanie czasu rozpoczęcia i zakończenia
@@ -217,7 +217,7 @@ Chcesz dowiedzieć się, który format wideo wybrała przeglądarka?
 
 Użyj w JavaScripcie właściwości `currentSrc` elementu video, by odczytać nazwę odtwarzanego pliku źródłowego.
 
-Aby zobaczyć, jak to działa, skorzystaj z <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html">tej strony demonstracyjnej</a>. Chrome i Firefox wybierają `chrome.webm` (to pierwszy obsługiwany przez nie plik źródłowy na liście dostępnych), a Safari &ndash; `chrome.mp4`.
+Aby zobaczyć, jak to działa, skorzystaj z <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">tej strony demonstracyjnej</a>. Chrome i Firefox wybierają `chrome.webm` (to pierwszy obsługiwany przez nie plik źródłowy na liście dostępnych), a Safari &ndash; `chrome.mp4`.
 
 
 ## Nadawanie filmom prawidłowych rozmiarów 
@@ -267,7 +267,7 @@ Note: Nie wymuszaj rozmiarów, które nadają elementowi inny współczynnik pro
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
-Porównaj <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html">przykład strony elastycznej</a> z <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/unyt.html">wersją nieelastyczną</a>.
+Porównaj <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html">przykład strony elastycznej</a> z <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/unyt.html">wersją nieelastyczną</a>.
 
 
 ## Dostosowywanie odtwarzacza wideo 
@@ -348,7 +348,7 @@ Na urządzeniach, które obsługują interfejs API Fullscreen, możesz użyć ob
   <p>Ta przeglądarka nie obsługuje elementu video.</p>
 </video>
 
-Aby zobaczyć, jak to działa, skorzystaj ze <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html">strony demonstracyjnej</a>.
+Aby zobaczyć, jak to działa, skorzystaj ze <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html">strony demonstracyjnej</a>.
 
 Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
@@ -542,7 +542,7 @@ Na przykład Chrome na komputerze buforuje 25&nbsp;sekund filmu, a w iOS oraz An
   </tbody>
 </table>
 
-Właściwości playbackRate (<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html">zobacz stronę demonstracyjną</a>) i volume nie działają na urządzeniach mobilnych.
+Właściwości playbackRate (<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html">zobacz stronę demonstracyjną</a>) i volume nie działają na urządzeniach mobilnych.
 
 #### Metody
 
@@ -572,7 +572,7 @@ Właściwości playbackRate (<a href="https://googlesamples.github.io/web-fundam
 </table>
 
 Metody play() i pause() nie działają na urządzeniach mobilnych (z wyjątkiem Opery na Androida), chyba że
-są wywoływane w odpowiedzi na działanie użytkownika, np. kliknięcie przycisku. Zobacz <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html">stronę demonstracyjną</a>. Podobnie nie można rozpoczynać odtwarzania takich treści jak filmy z YouTube umieszczone na stronie.
+są wywoływane w odpowiedzi na działanie użytkownika, np. kliknięcie przycisku. Zobacz <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html">stronę demonstracyjną</a>. Podobnie nie można rozpoczynać odtwarzania takich treści jak filmy z YouTube umieszczone na stronie.
 
 #### Zdarzenia
 

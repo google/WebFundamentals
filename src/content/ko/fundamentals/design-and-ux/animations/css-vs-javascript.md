@@ -54,7 +54,7 @@ CSS로 애니메이션을 만드는 것이 화면에서 움직임을 표현하�
       transform: translate(100px, 100px);
     }
     
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-simple.html){: target="_blank" .external }
 
 전환 기간 이외에도, 애니메이션에 느낌을 적용하는 *easing* 옵션이 있습니다. Easing에 대한 자세한 내용은 [Easing의 기본 사항](the-basics-of-easing) 가이드를 참조하세요.
 
@@ -128,7 +128,7 @@ CSS 전환과 더불어 CSS 애니메이션도 사용할 수 있어야 합니다
     }
     
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-keyframes.html){: target="_blank" .external }
 
 CSS 애니메이션으로 애니메이션 자체를 대상 요소와 독립적으로 정의하고, animation-name 속성을 사용하여 필요한 애니메이션을 선택합니다.
 
@@ -153,7 +153,7 @@ CSS 애니메이션은 여전히 대부분의 업체에서 프리픽스되고 �
 
 기본적으로, 웹 애니메이션은 요소의 표현만을 수정합니다. 이동한 위치에 객체를 그대로 남겨두려면, 애니메이션이 완료된 후에 각 샘플에 따라 기본 스타일을 수정해야 합니다.
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-wa.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-wa.html){: target="_blank" .external }
 
 Web Animations API는 W3C의 새로운 표준입니다. 이 API는 Chrome 및 Opera에서 기본적으로 지원되며, [Firefox용으로 한창 개발 중](https://birtles.github.io/areweanimatedyet/){: .external }입니다. 다른 최신 브라우저의 경우 [폴리필을 사용할 수 있습니다](https://github.com/web-animations/web-animations-js).
 

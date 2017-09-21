@@ -15,7 +15,7 @@ description: Lighthouse の監査項目「HTML にビューポートのメタタ
 詳細については、以下のリンクをご覧ください。
 
 * [ビューポートを設定する](/speed/docs/insights/ConfigureViewport)
-* [ビューポートを設定する](/web/fundamentals/design-and-ui/responsive/#set-the-viewport)
+* [ビューポートを設定する](/web/fundamentals/design-and-ux/responsive/#set-the-viewport)
 
 ##  監査に合格する方法 {: #how }
 

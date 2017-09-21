@@ -61,7 +61,7 @@ Manfaat membuat situs web Anda jadi responsif adalah:
 
 <div style="clear:both;"></div>
   
-Pelajari cara membangun situs web dengan desain web responsif di [Dasar-Dasar Desain Web Responsif](/web/fundamentals/design-and-ui/responsive/).
+Pelajari cara membangun situs web dengan desain web responsif di [Dasar-Dasar Desain Web Responsif](/web/fundamentals/design-and-ux/responsive/).
 
 ### Gunakan `link[rel=canonical]` dan `link[rel=alternate]` saat menyajikan URL terpisah
 

@@ -217,7 +217,7 @@ selectively. Users prefer selecting the orientation.
 
 Chrome introduced the concept of a theme color for your site in 2014. The theme color
 is a hint from your web page that tells the browser what color to tint
-[UI elements such as the address bar](/web/fundamentals/design-and-ui/browser-customization/).  
+[UI elements such as the address bar](/web/fundamentals/design-and-ux/browser-customization/).  
 
 Without a manifest, you have to define the theme color on every single page, and if 
 you have a large site or legacy site, making a lot of site wide changes is not feasible.

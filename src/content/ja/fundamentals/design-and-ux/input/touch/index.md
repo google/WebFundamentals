@@ -38,7 +38,7 @@ DOM 要素は、デフォルト、フォーカス、ホバー、アクティブ�
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 ![状態によって色が異なるボタンの画像](images/button-states.png)
 
@@ -74,7 +74,7 @@ Safari と Chrome ではタップした要素がハイライト表示されま�
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 Windows Phone 版の Internet Explorer でも同様の動作になりますが、これはメタタグを使用して無効にできます。
 
@@ -93,7 +93,7 @@ Firefox で `<button>` 要素を使用するとグラデーションが適用さ
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 Warning: 上述のようにデフォルト スタイルを無効にするのは、`:hover`、`:active`、`:focus` の擬似クラスがある場合だけにしてください。
 
@@ -188,7 +188,7 @@ Chrome（バージョン 55 以降）、Internet Explorer、Edge では、カス
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 注: API の設計上、PointerEvents は 1 回の
 `pointerdown` イベントで、マウスとタップの両方のイベントを処理できます。
@@ -222,7 +222,7 @@ TouchEvents はタップが発生した場所にかかわらず、開始され�
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 以下のように終了コールバックに `handleGestureEnd()` を追加して、ジェスチャーが完了した際に移動と終了のイベントリスナをドキュメントから削除し、PointerCapture を解放します。
 
@@ -232,7 +232,7 @@ TouchEvents はタップが発生した場所にかかわらず、開始され�
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 <div class="attempt-left">
   <p>このパターンに従ってドキュメントに移動イベントを追加すると、ユーザーが要素の操作を開始したあとにジェスチャーの位置が要素外に移った場合でも、ページ上の位置にかかわらずマウス移動を検知できます。これは、ドキュメントからイベントを受信しているためです。
@@ -267,7 +267,7 @@ TouchEvents はタップが発生した場所にかかわらず、開始され�
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-2.html){: target="_blank" .external }
 
 `TouchEvent` には、タップデータを含む 3 つのリストがあります。
 

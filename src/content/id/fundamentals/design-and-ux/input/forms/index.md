@@ -42,7 +42,7 @@ Mendesain formulir efisien dengan menghindari tindakan yang berulang, hanya memi
 
 Pastikan formulir Anda tidak memiliki tindakan berulang, memiliki bidang yang 
 diperlukan saja, dan memanfaatkan dari 
-[isiotomatis](/web/fundamentals/design-and-ui/input/forms/#use-metadata-to-enable-auto-complete),
+[isiotomatis](/web/fundamentals/design-and-ux/input/forms/#use-metadata-to-enable-auto-complete),
 sehingga pengguna bisa dengan mudah melengkapi formulir dengan data yang sudah diisi.
 
 Cari kesempatan untuk mengisi informasi yang Anda sudah tahu, atau mungkin
@@ -241,7 +241,7 @@ tersebut, elemen `datalist` memberikan petunjuk ketika pengguna mengetik.
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 Note: Nilai <code>datalist</code> disediakan sebagai saran, dan pengguna tidak dibatasi pada saran yang diberikan.
 
@@ -269,7 +269,7 @@ fokus pada elemen input.
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### Ukuran dan penempatan label
 
@@ -318,7 +318,7 @@ nama, alamat email dan nomor ponsel pengguna, Anda harus menggunakan:
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 
@@ -657,7 +657,7 @@ yang tepat.  Misalnya:
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### Mencegah pengiriman formulir pada formulir tidak valid
 
@@ -669,7 +669,7 @@ pada elemen formulir untuk menentukan apakah formulir tersebut valid.  Misalnya:
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### Menampilkan umpan balik secara real-time
 
@@ -725,7 +725,7 @@ JavaScript untuk hanya menampilkan penataan gaya yang tidak valid ketika penggun
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 Berhasil: Anda harus langsung menunjukkan kepada pengguna semua masalah pada formulir, bukannya menunjukkan satu per satu.

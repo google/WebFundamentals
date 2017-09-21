@@ -17,7 +17,7 @@ description: Lighthouse の監査項目「ビューポートのサイズに適�
 ##  監査に合格する方法 {: #how }
 
 この監査によって、モバイル端末向けにページが最適化されているかを確認するのは遠回りになります。
-これからサイトを最適化する場合は、まず[レスポンシブ ウェブデザインの基本](/web/fundamentals/design-and-ui/responsive/)をご覧ください。
+これからサイトを最適化する場合は、まず[レスポンシブ ウェブデザインの基本](/web/fundamentals/design-and-ux/responsive/)をご覧ください。
 
 
 

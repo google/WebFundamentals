@@ -30,7 +30,7 @@ description: 另闢蹊徑，為您的專案建立完全自訂的動畫。
 <img src="images/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="緩入緩出動畫曲線。" />
 <img src="images/custom.png" style="display: inline; max-width: 300px" alt="自訂動畫曲線。" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html">請見帶自訂緩動的動畫。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-custom-curve.html">請見帶自訂緩動的動畫。</a>
 
 自訂曲線的 CSS 為：
 
@@ -42,13 +42,13 @@ description: 另闢蹊徑，為您的專案建立完全自訂的動畫。
 
 製作自訂曲線很有趣，並可讓您有效控制動畫的操作感。 例如，以上述曲線而言，您可以看到曲線類似於一般的緩入緩出曲線，但緩入較短 (或稱「開展」部分)，而結束則為拉長的減速。
 
-以此動畫曲線工具實驗， <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/curve-playground.html">看看曲線</a> 對動畫操作感的影響。
+以此動畫曲線工具實驗， <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/curve-playground.html">看看曲線</a> 對動畫操作感的影響。
 
 ## 使用 JavaScript 以進一步控制
 
 有時候您會需要超過一條三次方貝茲曲線所能提供的控制力。 也許您想要彈性彈跳的操作感，或者您想要停止動畫部分的執行，這兩個功能若是使用 CSS 會比較難以達成。 在這種情況下，您應該使用 JavaScript 動畫程式庫。 目前最好的程式庫之一就是 [Greensock 的 TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) (或 TweenLite，如果您想要保持超輕量)，因為您可以一個小小的 JavaScript 程式庫即可獲得高度控制能力，而且這是非常成熟的程式碼基底。
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-elastic.html">請見彈性緩動動畫。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-elastic.html">請見彈性緩動動畫。</a>
 
 要使用如 TweenMax 的技術，請在您的網頁中納入以下指令碼：
 

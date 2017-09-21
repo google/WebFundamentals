@@ -125,7 +125,7 @@ Finalmente, agregamos las declaraciones de CSS para esas clases.
       transform: translateX(0);
     }
     
-[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html){: target="_blank" .external }
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/inter-view-animation.html){: target="_blank" .external }
 
 Puedes expandir esto para que abarque varias vistas y el concepto básico seguirá siendo el mismo; cada vista no visible debe estar fuera de la pantalla y aparecer cuando sea necesario, y la pantalla que se muestra actualmente debe dejar de visualizarse.
 

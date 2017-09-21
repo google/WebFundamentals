@@ -125,7 +125,7 @@ Akhirnya, kita tambahkan deklarasi CSS untuk kelas-kelas tersebut.
       transform: translateX(0);
     }
     
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/inter-view-animation.html){: target="_blank" .external }
 
 Anda bisa meluaskan ini untuk menutupi beberapa tampilan, namun konsep dasarnya harus tetap sama; setiap tampilan tak-terlihat harus di luar layar dan ditampilkan ketika diperlukan, dan tampilan aktif pada layar harus dialihkan keluar.
 

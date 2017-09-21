@@ -111,7 +111,7 @@ Por outro lado, imagens de raster são um desafio muito maior, pois codificam da
 
 Quando multiplicamos a tela física por dois, o número total de pixels é multiplicado por quatro: o dobro do número de pixels horizontais multiplicado pelo dobro do número de pixels verticais. Assim, uma tela duas vezes maior não duplica, mas quadruplica o número de pixels necessários!
 
-O que isso significa na prática? As telas de altas resolução nos permitem exibir belas imagens, que podem ser um ótimo recurso do produto. No entanto, elas também exigem imagens de alta resolução. Prefira imagens vetoriais sempre que possível, pois não dependem de resolução e sempre oferecem resultados nítidos. Se for necessário usar uma imagem de raster, forneça e otimize diversas variantes de cada imagem com a ajuda de [`srcset` e `picture`](/web/fundamentals/design-and-ui/media/images#images-in-markup).
+O que isso significa na prática? As telas de altas resolução nos permitem exibir belas imagens, que podem ser um ótimo recurso do produto. No entanto, elas também exigem imagens de alta resolução. Prefira imagens vetoriais sempre que possível, pois não dependem de resolução e sempre oferecem resultados nítidos. Se for necessário usar uma imagem de raster, forneça e otimize diversas variantes de cada imagem com a ajuda de [`srcset` e `picture`](/web/fundamentals/design-and-ux/media/images#images-in-markup).
 
 ## Otimizar imagens vetoriais
 

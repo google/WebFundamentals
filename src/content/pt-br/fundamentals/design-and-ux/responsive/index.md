@@ -61,7 +61,7 @@ do conteúdo para diferentes tamanhos de telas, seja para renderização em pequ
 ou para um grande monitor de desktop.
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-no.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-no.html">
   <figure>
     <img src="imgs/no-vp.png" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Página sem uma definição de janela de visualização">
     <figcaption>
@@ -71,7 +71,7 @@ ou para um grande monitor de desktop.
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp.html">
   <figure>
     <img src="imgs/vp.png" srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Página com uma definição de janela de visualização">
     <figcaption>
@@ -129,7 +129,7 @@ grandes valores de posicionamento absolutos que podem fazer com que o elemento f
 da janela de visualização em telas pequenas.  
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-fixed.html">
   <figure>
     <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x" alt="Página com um elemento de largura fixa de 344 pixels em um iPhone.">
     <figcaption>
@@ -139,7 +139,7 @@ da janela de visualização em telas pequenas.
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-fixed.html">
   <figure>
     <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x" alt="Página com um elemento de largura fixa de 344 pixels em um Nexus 5.">
     <figcaption>
@@ -243,7 +243,7 @@ para um Web design responsivo são `min-width`, `max-width`, `min-height` e
 Vejamos um exemplo:
 
 <figure>
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/media-queries.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/media-queries.html">
     <img src="imgs/mq.png" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Visualização de uma página que usa consultas de mídia para alterar as propriedades conforme ela é redimensionada.">
     <figcaption>
       Visualização de uma página que usa consultas de mídia para alterar as propriedades conforme ela é redimensionada.
@@ -255,7 +255,7 @@ Vejamos um exemplo:
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/media-queries.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/media-queries.html){: target="_blank" .external }
 
 * Quando o navegador tiver entre <b>0</b> e <b>640</b> pixels de largura, `max-640px.css` será aplicado.
 * Quando o navegador tiver entre <b>500</b> e <b>600</b> de largura, os estilos em `@media` serão aplicados.
@@ -338,7 +338,7 @@ layout se ajusta ao contêiner.
 <figure class="attempt-right">
   <img src="imgs/weather-1.png" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-1.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-1.html">
       Visualização da previsão do tempo em uma tela pequena.
     </a>
   </figcaption>
@@ -358,7 +358,7 @@ tela pequena.
 <figure class="attempt-right">
   <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Visualização da previsão do tempo conforme a página fica mais larga.">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-1.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-1.html">
       Visualização da previsão do tempo conforme a página fica mais larga.
     </a>
   </figcaption>
@@ -377,12 +377,12 @@ navegador tiver até 600 pixels de largura e uma para quando ele tiver mais de 6
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-2.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-2.html){: target="_blank" .external }
 
 <figure class="attempt-right">
   <img src="imgs/weather-3.png"  srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Visualização da previsão do tempo projetada para uma tela mais larga.">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-2.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-2.html">
       Visualização da previsão do tempo projetada para uma tela mais larga.
     </a>
   </figcaption>
@@ -471,7 +471,7 @@ a 575 pixels, o conteúdo ideal terá 550 pixels.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/reading.html" region_tag="mqreading" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/reading.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/reading.html){: target="_blank" .external }
 
 ### Nunca oculte o conteúdo por completo
 

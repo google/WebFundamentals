@@ -24,7 +24,7 @@ description: Выбирайте подходящее изменение скор
 
 <img src="images/quintic-ease-out-markers.png" alt="Кривая анимации с замедлением Quintic" style="max-width: 300px"/>
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">См. анимацию с замедлением Quintic.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-quintic-ease-out.html">См. анимацию с замедлением Quintic.</a>
 
 Другие формулы изменения скорости, особенно отскоки или эластичное изменение скорости, следует использовать реже, только когда они годятся для вашего проекта. Мало что так портит впечатление пользователей, как анимация, которая не работает плавно. Если ваш проект не является развлекательным, не следует заставлять элементы пользовательского интерфейса прыгать в разные стороны! И наоборот, если вы делаете сайт, который должен быть легким и забавным, тогда пусть все прыгает и скачет!
 

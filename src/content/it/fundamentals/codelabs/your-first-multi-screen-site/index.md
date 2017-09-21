@@ -284,7 +284,7 @@ La qualità visiva del progetto inizia a diminuire usando circa 600 pixel di lar
   </p>
 </video>
 
-600 pixel sono perfetti per creare il nostro primo breakpoint grazie a uno spazio sufficiente per riposizionare gli elementi e adattarli al meglio allo schermo. A tale scopo, utilizziamo la tecnologia [media query](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
+600 pixel sono perfetti per creare il nostro primo breakpoint grazie a uno spazio sufficiente per riposizionare gli elementi e adattarli al meglio allo schermo. A tale scopo, utilizziamo la tecnologia [media query](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness).
 
 
     @media (min-width: 600px) {

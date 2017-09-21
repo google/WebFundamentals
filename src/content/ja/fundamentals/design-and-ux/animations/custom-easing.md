@@ -37,7 +37,7 @@ description: 少し本題からそれて、プロジェクト用に完全にカ�
   </figure>
 </div>
 
-[カスタム イージングのアニメーションを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html){: target="_blank" .external }
+[カスタム イージングのアニメーションを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-custom-curve.html){: target="_blank" .external }
 
 カスタム曲線の CSS は次のとおりです。
 
@@ -49,7 +49,7 @@ description: 少し本題からそれて、プロジェクト用に完全にカ�
 
 カスタム曲線の作成は楽しい作業で、アニメーションの見え方を細かく制御することができます。たとえば上記のカスタム曲線は、標準的な ease-in-out 曲線に似ていますが、ease-in の時間が短く（動き出してから短時間で加速）、最後に長い時間をかけて減速しています。
 
-こちらの[アニメーション曲線ツール](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/curve-playground.html){: target="_blank" .external }を使用して、曲線に応じてアニメーションの印象がどう変わるのかをご確認ください。
+こちらの[アニメーション曲線ツール](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/curve-playground.html){: target="_blank" .external }を使用して、曲線に応じてアニメーションの印象がどう変わるのかをご確認ください。
 
 ##  JavaScript フレームワークを使用して細かく制御する
 
@@ -59,7 +59,7 @@ description: 少し本題からそれて、プロジェクト用に完全にカ�
 
 強力なフレームワークの 1 つに [Greensock の TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)（または、超軽量版の TweenLite）があります。これは非常に成熟したコードベースで、小さな JavaScript ライブラリでさまざまな制御が可能です。
 
-[elastic ease アニメーションを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-elastic.html){: target="_blank" .external }
+[elastic ease アニメーションを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-elastic.html){: target="_blank" .external }
 
 TweenMax を使用するには、ページに以下のスクリプトを追加します。
 

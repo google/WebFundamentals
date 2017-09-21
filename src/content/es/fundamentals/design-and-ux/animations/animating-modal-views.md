@@ -13,7 +13,7 @@ description: Aprende a animar vistas modales en tus apps.
   <figure>
     <img src="images/dont-press.gif" alt="Animación de una vista modal." />
     <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html" target="_blank" class="external">Probar</a>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/modal-view-animation.html" target="_blank" class="external">Probar</a>
     </figcaption>
   </figure>
 </div>

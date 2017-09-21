@@ -251,7 +251,7 @@ S'il peut être utile de définir des points de rupture en fonction des catégor
 
 Concevez le contenu pour qu'il s'adapte d'abord aux écrans de petite taille, puis élargissez l'écran jusqu'à ce qu'un point de rupture soit nécessaire. Cela vous permettra d'optimiser les points de rupture en fonction du contenu et de maintenir leur nombre à un niveau minimum.
 
-Examinons l'exemple de [prévision météorologique](/web/fundamentals/design-and-ui/responsive/) que nous avons utilisé au début du cours.
+Examinons l'exemple de [prévision météorologique](/web/fundamentals/design-and-ux/responsive/) que nous avons utilisé au début du cours.
 La première étape consiste à soigner la présentation des prévisions sur un petit écran.
 
 <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Aperçu des prévisions météorologiques sur un petit écran.">

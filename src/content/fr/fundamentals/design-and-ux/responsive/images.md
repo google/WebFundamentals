@@ -201,7 +201,7 @@ Le site J. Crew constitue un excellent exemple de source d'images extensibles su
 La [technique d'image
 compressible](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview){: .external} diffuse des images 2x fortement compressées vers tous les appareils, quelles qu'en soient les capacités réelles. En fonction du type d'image et du niveau de compression, la qualité d'image peut paraître inchangée, mais la taille du fichier diminue de manière significative.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html">Voir l'exemple</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/compressive.html">Voir l'exemple</a>
 
 Note: Soyez prudent lorsque vous utilisez la technique de compression, en raison des exigences supplémentaires sur le plan de la mémoire et du décodage. Le redimensionnement d'images sur des écrans de petite taille est une opération exigeante qui peut se révéler particulièrement laborieuse sur des appareils d'entrée de gamme disposant d'une mémoire et d'une puissance de traitement limitées.
 
@@ -409,7 +409,7 @@ Plusieurs outils permettent d'effectuer une compression sans perte plus poussée
 
 La création de sprites CSS est une technique par laquelle plusieurs images sont regroupées dans un seul fichier appelé `sprite sheet`. Les images individuelles peuvent ensuite être utilisées en indiquant l'image d'arrière-plan d'un élément (la `sprite sheet`), plus un décalage pour afficher la partie appropriée.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=""Sprite sheet" utilisée comme exemple"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=""Sprite sheet" utilisée comme exemple"></a>
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite"   adjust_indentation="auto" %}
 </pre>

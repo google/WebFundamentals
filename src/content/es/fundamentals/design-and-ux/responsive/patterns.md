@@ -40,7 +40,7 @@ que, en general, solo se necesita un punto de interrupción entre las pantallas 
 pequeñas.
 
 <img src="imgs/mostly-fluid.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/mostly-fluid.html" class="button button-primary">Probar</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/mostly-fluid.html" class="button button-primary">Probar</a>
 
 En la vista más pequeña, cada `div` de contenido se apila verticalmente.  Una vez que el ancho de la pantalla
 alcanza los 600 píxeles, el `div` de contenido principal permanece en `width: 100%`, mientras que el
@@ -67,7 +67,7 @@ de puntos de interrupción para este patrón de diseño depende del contenido y 
 para cada diseño.
 
 <img src="imgs/column-drop.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/column-drop.html" class="button button-primary">Probar</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/column-drop.html" class="button button-primary">Probar</a>
 
 Como sucede con los ejemplos que son principalmente fluidos, el contenido se coloca verticalmente en la
 vista más pequeña, pero a medida que se expande la pantalla a más de 600 píxeles, los
@@ -95,7 +95,7 @@ punto de interrupción principal, es más complejo de mantener, y es posible que
 dentro de los elementos, no solo en el diseño de contenido general.
 
 <img src="imgs/layout-shifter.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/layout-shifter.html" class="button button-primary">Probar</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/layout-shifter.html" class="button button-primary">Probar</a>
 
 En este ejemplo simplificado, se muestra el patrón Layout shifter. En las pantallas más pequeñas, el contenido se
 apila verticalmente, pero cambia considerablemente a medida que se
@@ -120,7 +120,7 @@ tamaño de la fuente, cambiar el tamaño de las imágenes o desplazar el conteni
 Funciona correctamente en diseños con una sola columna, como los sitios web lineales de una sola página y los artículos con mucho texto.
 
 <img src="imgs/tiny-tweaks.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/tiny-tweaks.html" class="button button-primary">Probar</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/tiny-tweaks.html" class="button button-primary">Probar</a>
 
 Como lo indica el nombre, en este ejemplo se producen pocos cambios pequeños cuando cambia el tamaño de la pantalla.
 A medida que aumenta el ancho de la pantalla, también cambian el tamaño de la fuente y el relleno.
@@ -143,7 +143,7 @@ muestra cuando el tamaño de la pantalla es suficientemente grande. En las panta
 contenido es posible con solo a un clic.
 
 <img src="imgs/off-canvas.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/off-canvas.html" class="button button-primary">Probar</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/off-canvas.html" class="button button-primary">Probar</a>
 
 En esta muestra, en lugar de apilarse el contenido verticalmente, se usa una declaración `transform: translate(-250px, 0)` para ocultar dos de los `div` de contenido fuera de la pantalla mediante la propiedad.  Se usa JavaScript
 para mostrar los divs agregando una clase abierta al elemento para hacerlo visible.  A medida que se

@@ -57,7 +57,7 @@ Em resumo:
 
 Em termos de tamanho de byte, as páginas da Web são [grandes e estão ficando cada vez maiores](http://httparchive.org/trends.php#bytesTotal&reqTotal).
 
-[Técnicas de design responsivas](/web/fundamentals/design-and-ui/responsive/) possibilitam o fornecimento de diferentes conteúdo para uma janela de visualização menor, mas é interessante começar otimizando o texto, as imagens e outros conteúdos.
+[Técnicas de design responsivas](/web/fundamentals/design-and-ux/responsive/) possibilitam o fornecimento de diferentes conteúdo para uma janela de visualização menor, mas é interessante começar otimizando o texto, as imagens e outros conteúdos.
 
 > Usuários da Web se orientam frequentemente por ações, sempre indo em busca de respostas para suas dúvidas em vez de sentar e absorver um bom livro.
 >
@@ -121,7 +121,7 @@ Veja algumas sugestões:
 * Use CSS em vez de imagens para gradientes, sombras, bordas arredondadas e [texturas de plano de fundo](http://lea.verou.me/css3patterns/){: .external }, que são recursos [com suporte na maioria dos navegadores modernos](http://caniuse.com/#search=shadows). Lembre-se, entretanto, de que, embora o CSS seja melhor do que imagens, ele ainda poderá incorrer em [penalidades de processamento e renderização](http://www.smashingmagazine.com/2013/04/03/build-fast-loading-mobile-website/) especialmente significativas para dispositivos móveis.
 * Imagens de fundo raramente funcionam bem em dispositivos móveis. Você pode [usar consultas de mídia](http://udacity.github.io/responsive-images/examples/2-06/backgroundImageConditional/) para evitar imagens de fundo em janelas de visualização pequenas.
 * Evite imagens na tela de apresentação.
-* [Use CSS para animações na interface](/web/fundamentals/design-and-ui/animations/).
+* [Use CSS para animações na interface](/web/fundamentals/design-and-ux/animations/).
 * Conheça os glifos; use [símbolos e ícones Unicode](https://en.wikipedia.org/wiki/List_of_Unicode_characters) em vez de imagens, com fontes da Web se necessário.
 * Considere usar [fontes de ícone](http://weloveiconfonts.com/#zocial); elas são gráficos vetoriais que podem ser expandidos infinitamente e um conjunto inteiro de imagens pode ser baixado em uma só fonte. (No entanto, [estas informações](https://sarasoueidan.com/blog/icon-fonts-to-svg/) devem ser consideradas.)
 * O elemento `<canvas>` pode ser usado para compilar imagens em JavaScript, de linhas, curvas, texto e outras imagens.
@@ -163,7 +163,7 @@ Ao criar conteúdo para diversas janelas de visualização, considere o conteúd
 * Coloque seu conteúdo mais importante na parte superior, pois os [usuários tendem a ler páginas da Web em um padrão de F](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/).
 * Os usuários acessam seu site para cumprir um objetivo. Pergunte-se do que eles precisam para cumprir esse objetivo e livre-se do resto. Seja rígido quanto a ornamentos visuais e textuais, conteúdo de legado, links excessivos e outros itens desnecessários.
 * Tenha cuidado com ícones de compartilhamento social, pois eles podem deixar o layout desorganizado e seu código pode tornar o carregamento lento.
-* Crie [layouts responsivos](/web/fundamentals/design-and-ui/responsive/) para o conteúdo e não tamanhos fixos de dispositivo.
+* Crie [layouts responsivos](/web/fundamentals/design-and-ux/responsive/) para o conteúdo e não tamanhos fixos de dispositivo.
 
 ### Teste o conteúdo
 

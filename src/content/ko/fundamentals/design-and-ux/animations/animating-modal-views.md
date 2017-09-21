@@ -13,7 +13,7 @@ description: 앱에서 모달 뷰에 애니메이션을 적용하는 방법을 �
   <figure>
     <img src="images/dont-press.gif" alt="모달 뷰 애니메이션" />
     <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html" target="_blank" class="external">체험해 보기</a>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/modal-view-animation.html" target="_blank" class="external">체험해 보기</a>
     </figcaption>
   </figure>
 </div>

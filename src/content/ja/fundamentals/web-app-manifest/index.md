@@ -215,7 +215,7 @@ Chrome では、ウェブアプリを起動した瞬間にこの色が使用さ�
   <figcaption>テーマカラー</figcaption>
 </figure>
 
-Chrome は、サイトのテーマカラーのコンセプトを 2014 年に導入しました。"テーマカラーは、ウェブページがブラウザに、[アドレスバーなどの UI 要素](/web/fundamentals/design-and-ui/browser-customization/)をどの色にするかを指定するためのヒントになります。"
+Chrome は、サイトのテーマカラーのコンセプトを 2014 年に導入しました。"テーマカラーは、ウェブページがブラウザに、[アドレスバーなどの UI 要素](/web/fundamentals/design-and-ux/browser-customization/)をどの色にするかを指定するためのヒントになります。"
 
   
 

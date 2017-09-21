@@ -34,7 +34,7 @@ Mostly fluid 模式主要由流动网格组成。在较大和中等屏幕上，�
 
 
 <img src="imgs/mostly-fluid.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/mostly-fluid.html" class="button button-primary">试一下</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/mostly-fluid.html" class="button button-primary">试一下</a>
 
 在最小的视图中，每个内容 `div` 都垂直排列。在屏幕宽度达到 600px 时，主要内容 `div` 保持 `width: 100%`，而辅助 `div` 在主要 `div` 下面显示为两列。宽度超过 800px 时，容器 `div` 变为固定宽度并在屏幕上居中。
 
@@ -59,7 +59,7 @@ Mostly fluid 模式主要由流动网格组成。在较大和中等屏幕上，�
 
 
 <img src="imgs/column-drop.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/column-drop.html" class="button button-primary">试一下</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/column-drop.html" class="button button-primary">试一下</a>
 
 与 Mostly fluid 示例类似，内容在最小视图中垂直排列，但当屏幕宽度超过 600px 时，主要内容和辅助内容 `div` 占用屏幕的全宽度。`div` 的顺序是使用 CSS 属性的顺序进行设置的。
 在 800px 时，使用全屏宽度来显示全部三个内容 `div`。
@@ -85,7 +85,7 @@ Layout shifter 模式是自适应性最强的模式，在多种屏幕宽度上�
 
 
 <img src="imgs/layout-shifter.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/layout-shifter.html" class="button button-primary">试一下</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/layout-shifter.html" class="button button-primary">试一下</a>
 
 这个简化示例显示了 Layout shifter 模式，在较小的屏幕上内容垂直排列，但在屏幕变大时就会发生显著变化，左侧一个 `div`，右侧排列两个 `div`。
 
@@ -109,7 +109,7 @@ Tiny tweaks 只对布局进行细微的更改，例如调整字体大小、调�
 它在单列布局上表现很好，例如单页面线性网站和文本为主的文章。
 
 <img src="imgs/tiny-tweaks.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/tiny-tweaks.html" class="button button-primary">试一下</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/tiny-tweaks.html" class="button button-primary">试一下</a>
 
 顾名思义，使用本示例时，屏幕大小改变时发生的变化不大。当屏幕宽度增加时，字体大小和内边距也变大。
 
@@ -132,7 +132,7 @@ Off canvas 模式不是垂直排列内容，而是将不常用的内容（可能
 
 
 <img src="imgs/off-canvas.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/off-canvas.html" class="button button-primary">试一下</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/off-canvas.html" class="button button-primary">试一下</a>
 
 此示例不是垂直排列内容，而是使用 `transform: translate(-250px, 0)` 将两个内容 `div` 隐藏在屏幕之外。然后通过给元素添加 open 类来使其可见，使用 JavaScript 来显示这些 div。
 当屏幕变宽时，从元素中去掉屏幕外的定位，并且让它显示在可见视口内。

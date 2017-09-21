@@ -298,7 +298,7 @@ Tasarim, yaklasik 600 piksel genisliginde kötü görünmeye basliyor.  Bizim ö
   </p>
 </video>
 
-600 piksel, ilk kesme noktamizi olusturmak için iyi bir yer gibi görünüyor. Bu, ögeleri ekrana daha iyi sigmalari amaciyla yeniden konumlandirmamiz için gereken alani saglayacak.  Bunu, [Medya Sorgulari](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness) adli bir teknolojiyi kullanarak yapabiliriz.
+600 piksel, ilk kesme noktamizi olusturmak için iyi bir yer gibi görünüyor. Bu, ögeleri ekrana daha iyi sigmalari amaciyla yeniden konumlandirmamiz için gereken alani saglayacak.  Bunu, [Medya Sorgulari](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness) adli bir teknolojiyi kullanarak yapabiliriz.
 
 
     @media (min-width: 600px) {

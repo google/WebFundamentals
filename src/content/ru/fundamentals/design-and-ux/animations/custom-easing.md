@@ -30,7 +30,7 @@ description: Сойдите с наезженной дороги и создай
 <img src="images/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Кривая анимации с ускорением и замедлением." />
 <img src="images/custom.png" style="display: inline; max-width: 300px" alt="Нестандартная кривая анимации." />
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html">См. описание анимации с нестандартным изменением скорости.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-custom-curve.html">См. описание анимации с нестандартным изменением скорости.</a>
 
 Код CSS для нестандартной кривой:
 
@@ -42,13 +42,13 @@ description: Сойдите с наезженной дороги и создай
 
 Делать нестандартные кривые очень интересно, кроме того, вы получаете значительную степень контроля над тем ощущением, которое вызывает анимация. Например, говоря о приведенной выше кривой, можно отметить, что она похожа на классическую кривую ускорения-замедления, когда анимация имеет медленную скорость в начале и в конце, однако отрезок времени с медленной скоростью в начале укорочен, а в конце – продлен.
 
-Поэкспериментируйте с этим <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/curve-playground.html">средством создания кривых анимации</a> и оцените, как используемая кривая влияет на ощущение, создаваемое анимацией.
+Поэкспериментируйте с этим <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/curve-playground.html">средством создания кривых анимации</a> и оцените, как используемая кривая влияет на ощущение, создаваемое анимацией.
 
 ## Использование JavaScript для большего контроля
 
 Иногда нужен еще более высокий уровень контроля, чем тот, который обеспечивается кривой Безье третьего порядка. Скажем, вам может потребоваться реализовать эластичный отскок или остановить выполнение анимации. И того, и другого эффекта намного сложнее добиться с помощью CSS. В подобных случаях следует использовать библиотеки анимации JavaScript. Одной из лучших библиотек является [TweenMax от Greensock](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) (или TweenLite, если вы не хотите ничего усложнять). Эта небольшая библиотека дает вам значительную степень контроля, кроме того это весьма тщательно подобранная база кодов.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-elastic.html">См. анимацию с эластичным изменением скорости.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-elastic.html">См. анимацию с эластичным изменением скорости.</a>
 
 Чтобы применить нечто наподобие TweenMax, включите в страницу следующий скрипт:
 

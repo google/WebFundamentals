@@ -13,7 +13,7 @@ description: Saiba como animar visualizações modais em seus aplicativos.
   <figure>
     <img src="images/dont-press.gif" alt="Animando uma visualização modal." />
     <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html" target="_blank" class="external">Experimente</a>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/modal-view-animation.html" target="_blank" class="external">Experimente</a>
     </figcaption>
   </figure>
 </div>

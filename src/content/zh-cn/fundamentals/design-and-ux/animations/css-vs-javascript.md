@@ -54,7 +54,7 @@ description:您可以通过 CSS 或 JavaScript 编写动画。应使用哪种方
       transform: translate(100px, 100px);
     }
     
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-simple.html){: target="_blank" .external }
 
 除了变换的持续时间之外，还有针对*缓动*的选项，缓动基本上是动画表现的方式。如需详细了解关于缓动的信息，请参阅[缓动基础知识](the-basics-of-easing)指南。
 
@@ -128,7 +128,7 @@ description:您可以通过 CSS 或 JavaScript 编写动画。应使用哪种方
     }
     
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-keyframes.html){: target="_blank" .external }
 
 借助 CSS 动画，可独立于目标元素来定义动画本身，并且使用 animation-name 属性来选择所需的动画。
 
@@ -153,7 +153,7 @@ JavaScript 动画是*命令式*，因为您将它们作为代码的一部分嵌�
 
 默认情况下，Web Animations 仅修改元素的呈现形式。如果您想让您的对象保持在它已移动到的位置，则应在动画完成时，按照我们的示例修改其底层样式。
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-wa.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-wa.html){: target="_blank" .external }
 
 Web Animations API 是来自 W3C 的新标准，在 Chrome 和 Opera 中受原生支持，且[正在进行针对 Firefox 的开发](https://birtles.github.io/areweanimatedyet/){: .external }。对于其他的现代浏览器，[提供 polyfill](https://github.com/web-animations/web-animations-js)。
 

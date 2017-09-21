@@ -57,7 +57,7 @@ description:在针对各类用户和设备进行构建时，要考虑内容以�
 
 就字节大小而言，网页[很大并且越来越大](http://httparchive.org/trends.php#bytesTotal&reqTotal)。
 
-利用[自适应设计技巧](/web/fundamentals/design-and-ui/responsive/)，可以为多个较小视口提供不同的内容，但先精简文本、图像和其他内容始终是明智之举。
+利用[自适应设计技巧](/web/fundamentals/design-and-ux/responsive/)，可以为多个较小视口提供不同的内容，但先精简文本、图像和其他内容始终是明智之举。
 
 > 网络用户通常以行动为导向，在寻找他们当前问题的答案时“身体向前倾”而不是向后倾，以消化一本好书。>> — [Jakob Nielsen](https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/)
 
@@ -121,7 +121,7 @@ description:在针对各类用户和设备进行构建时，要考虑内容以�
 * 使用 CSS 而非图像来设置渐变色、阴影、圆角和[背景纹理](http://lea.verou.me/css3patterns/){: .external }，[所有现代浏览器均支持](http://caniuse.com/#search=shadows)这些功能。但是，请谨记，CSS 可能是比图像更好，但仍存在[处理和渲染不利因素](http://www.smashingmagazine.com/2013/04/03/build-fast-loading-mobile-website/)，特别是在移动设备上。
 * 背景图片很少能够在移动设备上流畅运行。您可以[使用媒体查询](http://udacity.github.io/responsive-images/examples/2-06/backgroundImageConditional/)来避免在小视口上使用背景图片。
 * 避免启动画面图像。
-* [使用 CSS 设置 UI 动画](/web/fundamentals/design-and-ui/animations/)。
+* [使用 CSS 设置 UI 动画](/web/fundamentals/design-and-ux/animations/)。
 * 了解您的字形；使用 [Unicode 符号和图标](https://en.wikipedia.org/wiki/List_of_Unicode_characters)替代图像，如有需要，可使用网络字体。
 * 考虑[图标字体](http://weloveiconfonts.com/#zocial)；它们是可以无限缩放的矢量图形，可将整个图像集以一种字体进行下载。（但请注意[这些问题](https://sarasoueidan.com/blog/icon-fonts-to-svg/)。）
 * 在 JavaScript 中，可使用 `<canvas>` 元素通过行、曲线、文本和其他图像来构建图像。
@@ -163,7 +163,7 @@ description:在针对各类用户和设备进行构建时，要考虑内容以�
 * 将最重要的内容置于顶部，因为[用户往往以 F 形模式阅读网页](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/)。
 * 用户访问您的网站以实现一个目标。问问您自己，为实现该目标他们需要什么，并去除其他内容。果断去除视觉和文本装饰、老旧的内容、过多的链接和其他杂乱无章的内容。
 * 慎用社交分享图标；它们会让布局变得杂乱，其代码会拖慢页面加载速度。
-* 针对内容（而不是固定设备尺寸）设计[自适应布局](/web/fundamentals/design-and-ui/responsive/)。
+* 针对内容（而不是固定设备尺寸）设计[自适应布局](/web/fundamentals/design-and-ux/responsive/)。
 
 ### 测试内容
 

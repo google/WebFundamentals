@@ -48,7 +48,7 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](choosin
 
 不管通过 CSS 还是 JavaScript 来编写动画代码，您将发现始终有线性运动的选项。 
 
-[查看线性动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html){: target="_blank" .external }
+[查看线性动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-linear.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -71,7 +71,7 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](choosin
 
 缓出一般最适合界面，因为开头时快速使动画有反应快的感觉，同时在结尾仍允许有一点自然的减速。
 
-[查看缓出动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html){: target="_blank" .external }
+[查看缓出动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-out.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -96,7 +96,7 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](choosin
 
 但是，从交互的角度来看，缓入可能让人感觉有点不寻常，因为结尾很突然；在现实中移动的物体往往是减速，而不是突然停止。缓入还有让人感觉行动迟缓的不利效果，这会对网站或应用的响应速度给人的感觉产生负面影响。
 
-[查看缓入动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html){: target="_blank" .external }
+[查看缓入动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -118,7 +118,7 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](choosin
 
 由于缓入开头让动画有迟钝感，因此动画持续时间不要过长。300-500 毫秒的时间范围通常比较合适，但实际的数量主要取决于项目的感觉。也就是说，由于开头慢、中间快和结尾慢，动画将有更强的对比，可能让用户感到非常满意。
 
-[查看缓入缓出动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html){: target="_blank" .external }
+[查看缓入缓出动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in-out.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 

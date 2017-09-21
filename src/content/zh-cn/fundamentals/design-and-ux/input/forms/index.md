@@ -40,7 +40,7 @@ description:在移动设备上填写表单很困难。输入操作最少的表�
 </figcaption>
 </figure>
 
-确保表单没有重复操作，只设置必要的字段数量，并利用[自动填充](/web/fundamentals/design-and-ui/input/forms/#use-metadata-to-enable-auto-complete)，使用户能借助预填充的数据轻松填写表单。
+确保表单没有重复操作，只设置必要的字段数量，并利用[自动填充](/web/fundamentals/design-and-ux/input/forms/#use-metadata-to-enable-auto-complete)，使用户能借助预填充的数据轻松填写表单。
 
 
 
@@ -233,7 +233,7 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 注： <code>datalist</code> 值是提供的建议值，并不意味着用户只能选择所提供的建议值。
 
@@ -259,7 +259,7 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### 标签大小和放置
 
@@ -305,7 +305,7 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 
@@ -632,7 +632,7 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### 阻止提交无效的表单
 
@@ -644,7 +644,7 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### 实时显示反馈
 
@@ -698,7 +698,7 @@ HTML5 引入了大量新的输入类型。这些新输入类型可以提示浏�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 成功：应一次性向用户显示表单上的所有问题，而不是一次显示一个问题。

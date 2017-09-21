@@ -73,7 +73,7 @@ Deze benadering heeft diverse voordelen vergeleken bij het aanbieden van verschi
 Al de genoemde punten zijn met name van belang voor mobiele telefoons, waar bandbreedte en wachttijd een grote rol spelen en de gebruiker snel wil worden bediend. 
 Het niet opgeven van een type-kenmerk kan de prestaties beïnvloeden wanneer er meerdere bronnen met niet-ondersteunde typen zijn.
 
-Vergelijk terwijl u uw developertools voor mobiele browsers gebruikt de netwerkactiviteit <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html">met type-kenmerken</a> en <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html">zonder type-kenmerken</a>.
+Vergelijk terwijl u uw developertools voor mobiele browsers gebruikt de netwerkactiviteit <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">met type-kenmerken</a> en <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html">zonder type-kenmerken</a>.
 Controleer ook de reactieheaders in uw browser-developertools om u ervan te [verzekeren dat uw server het juiste MIME-type rapporteert](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types); anders zullen controles van videobrontypen niet werken.
 
 ### Een start- en eindtijd opgeven
@@ -214,7 +214,7 @@ Wilt u weten welke video-indeling de browser heeft gebruikt?
 
 In JavaScript kunt u de gebruikte bron achterhalen met de eigenschap `currentSrc` van de video.
 
-Bekijk <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html">dit voorbeeld</a> om te zien hoe dit in de praktijk werkt: Chrome en Firefox gebruiken `chrome.webm` (omdat deze boven aan de lijst staat van bronnen die door deze browsers worden ondersteund) terwijl Safari `chrome.mp4` gebruikt.
+Bekijk <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">dit voorbeeld</a> om te zien hoe dit in de praktijk werkt: Chrome en Firefox gebruiken `chrome.webm` (omdat deze boven aan de lijst staat van bronnen die door deze browsers worden ondersteund) terwijl Safari `chrome.mp4` gebruikt.
 
 
 ## Juiste videoformaat 
@@ -245,7 +245,7 @@ niet meer gebruiken.
 
 U kunt de afmetingen van uw video regelen met JavaScript of CSS. Met behulp van JavaScript-bibliotheken en plugins zoals [FitVids](//fitvidsjs.com/) kunt u de juiste beeldverhouding behouden, zelf voor Flash-video`s van YouTube of andere bronnen.
 
-Gebruik [CSS-mediaquery's](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness) om het formaat van elementen op te geven afhankelijk van de afmetingen van de viewport; `max-width: 100%` is uw vriend.
+Gebruik [CSS-mediaquery's](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness) om het formaat van elementen op te geven afhankelijk van de afmetingen van de viewport; `max-width: 100%` is uw vriend.
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
@@ -265,7 +265,7 @@ Note: Forceer het aanpassen van de grootte van het element niet als dit resultee
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
-Vergelijk het <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html">responsieve voorbeeld</a> met de <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/unyt.html">niet-responsieve versie</a>.
+Vergelijk het <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html">responsieve voorbeeld</a> met de <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/unyt.html">niet-responsieve versie</a>.
 
 
 ## De videospeler aanpassen 
@@ -346,7 +346,7 @@ Op apparaten die de Fullscreen API ondersteunen, kunt u miniatuurafbeeldingen ge
      <p>Het video-element wordt niet ondersteund door deze browser.</p>
 </video>
 
-Bekijk de demo <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html"></a> om te zien hoe dit in het echt werkt.
+Bekijk de demo <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html"></a> om te zien hoe dit in het echt werkt.
 
 Note: `requestFullScreen()` is currently vendor prefixed and may require extra code for full cross browser compatibility.
 
@@ -538,7 +538,7 @@ In Chrome bijvoorbeeld wordt in een desktopomgeving 25 seconden beeld gebufferd,
   </tbody>
 </table>
 
-Afspeelsnelheid (<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html">zie voorbeeld</a>) en volume worden beide niet ondersteund op mobiel.
+Afspeelsnelheid (<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html">zie voorbeeld</a>) en volume worden beide niet ondersteund op mobiel.
 
 #### Methodes
 
@@ -568,7 +568,7 @@ Afspeelsnelheid (<a href="https://googlesamples.github.io/web-fundamentals/funda
 </table>
 
 Op mobiel werken play() en pause() niet (afgezien van Opera in Android) tenzij
-ze worden aangeroepen in reactie op een gebruikersactie, zoals het klikken op een knop: zie het <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html">voorbeeld</a>. (Op dezelfde manier kan afspelen niet worden gestart voor inhoud zoals geïntegreerde YouTube-video`s.)
+ze worden aangeroepen in reactie op een gebruikersactie, zoals het klikken op een knop: zie het <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html">voorbeeld</a>. (Op dezelfde manier kan afspelen niet worden gestart voor inhoud zoals geïntegreerde YouTube-video`s.)
 
 #### Gebeurtenissen
 

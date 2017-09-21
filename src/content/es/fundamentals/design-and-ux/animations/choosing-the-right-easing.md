@@ -23,7 +23,7 @@ En términos generales, una **salida lenta** será la opción correcta y, sin du
 Existe un grupo de ecuaciones de salida lenta reconocidas más allá de la especificada con la palabra clave `ease-out` en CSS, cuyos niveles de “agresividad” varían. Para obtener un efecto rápido de salida lenta, considera la [salida lenta Quintic](http://easings.net/#easeOutQuint).
 
 
-[Ver una animación de salida lenta Quintic](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
+[Ver una animación de salida lenta Quintic](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
 
 El resto de las ecuaciones de aceleración, especialmente los rebotes y las aceleraciones elásticas, se deben usar con moderación y solo cuando sean adecuadas para tu proyecto. Existen algunos elementos que interrumpen la experiencia del usuario, como una animación estridente. Si tu proyecto no pretende ser divertido, entonces no hagas que los elementos reboten por la IU. Por el contrario, si creas un sitio con la intención de que sea alegre, ¡entonces sí usa rebotes!
 

@@ -38,7 +38,7 @@ DOM 元素可继承下列任何状态：default、focus、hover 和 active。
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 ![说明以不同颜色代表不同按钮状态的图像](images/button-states.png)
 
@@ -74,7 +74,7 @@ Safari 和 Chrome 添加的点按突出显示颜色可使用 `-webkit-tap-highli
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 Windows Phone 上的 Internet Explorer 也有类似行为，但可通过元标记禁止：
 
@@ -93,7 +93,7 @@ Firefox 有两个副作用需要处理。
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 注意：请仅在有对应 `:hover`、`:active` 和 `:focus` 的伪类时禁止上面提到的默认样式！
 
@@ -187,7 +187,7 @@ Firefox 有两个副作用需要处理。
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 注：由于 API 采用了特殊设计，PointerEvents 只需单个 `pointerdown` 事件便可同时处理鼠标和触摸事件。
 
@@ -222,7 +222,7 @@ Firefox 有两个副作用需要处理。
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 我们添加的结束回调是 `handleGestureEnd()`，当手势完成时，这个回调会从文档中移除移动和结束事件侦听器并释放指针捕获，如下所示：
 
@@ -232,7 +232,7 @@ Firefox 有两个副作用需要处理。
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 <div class="attempt-left">  <p>通过按照这种模式向文档添加移动事件，当用户开始与某个元素进行交互并将手势移动到该元素之外时，无论鼠标移动到页面上的什么位置，我们仍可收到鼠标移动事件，因为收到的事件来自文档。</p>
 
@@ -267,7 +267,7 @@ Firefox 有两个副作用需要处理。
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-2.html){: target="_blank" .external }
 
 `TouchEvent` 有三个包含触摸数据的列表：
 

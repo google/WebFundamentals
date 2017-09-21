@@ -158,7 +158,7 @@ bergantung pada kueri media atau format gambar.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/media.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/media.html){: target="_blank" .external }
 
 Pada contoh di atas, jika lebar browser setidaknya 800 px, maka salah satu dari
 `head.jpg` atau `head-2x.jpg` akan digunakan, bergantung pada resolusi perangkat.
@@ -184,7 +184,7 @@ kepadatan piksel efektif dan memilih gambar terbaik untuk diunduh.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/sizes.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/sizes.html){: target="_blank" .external }
 
 
 Contoh di atas merender sebuah gambar yang berukuran setengah lebar tampilan yang terlihat
@@ -254,7 +254,7 @@ menggunakan sebagian kecilnya.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/breakpoints.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/breakpoints.html){: target="_blank" .external }
 
 Atribut `sizes` pada contoh di atas, menggunakan beberapa kueri media untuk
 menentukan ukuran gambar. Ketika lebar browser lebih besar dari
@@ -292,7 +292,7 @@ sebenarnya dari perangkat tersebut.  Tergantung pada tipe gambar dan tingkat
 kompresi, kualitas gambar mungkin tidak terlihat berubah, namun ukuran file turun
 secara signifikan.
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/compressive.html){: target="_blank" .external }
 
 Perhatian: Gunakan teknik kompresi dengan hati-hati karena peningkatan biaya decoding dan memori yang diperlukan. Mengubah ukuran gambar besar agar muat pada layar yang lebih kecil tidak mudah dilakukan dan bisa sangat merugikan pada perangkat low-end karena memori dan kemampuan prosesor terbatas.
 
@@ -468,7 +468,7 @@ url(large.png)` is applied to the content `div`.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/conditional-mq.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/conditional-mq.html){: target="_blank" .external }
 
 ### Gunakan image-set untuk memberikan gambar resolusi tinggi
 
@@ -498,7 +498,7 @@ gambar fallback ketika `image-set()` tidak didukung; misalnya:
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-set.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/image-set.html){: target="_blank" .external }
 
 Hal di atas memuat aset yang tepat di browser yang mendukung image-set; jika tidak akan
 kembali ke aset 1x. Kekurangan yang nyata adalah bahwa meskipun dukungan browser
@@ -529,7 +529,7 @@ tidak mendukung kueri media resolusi spesifik.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/media-query-dppx.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/media-query-dppx.html){: target="_blank" .external }
 
 Anda juga bisa menggunakan sintaks min-width untuk menampilkan gambar alternatif tergantung pada
 ukuran tampilan yang terlihat.  Teknik ini memiliki keuntungan bahwa gambar tidak
@@ -594,14 +594,14 @@ gambar bitmap:
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-svg.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-svg.html){: target="_blank" .external }
 
 ### Gunakan font ikon dengan hati-hati
 
 <figure class="attempt-right">
   <img src="img/icon-fonts.png" class="center" srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x" alt="Contoh laman yang menggunakan FontAwesome untuk ikon font.">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-font.html" target="_blank" class="external">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-font.html" target="_blank" class="external">
       Contoh laman yang menggunakan FontAwesome untuk ikon font.
     </a>
   </figcaption>
@@ -626,7 +626,7 @@ dibandingkan dengan ikon SVG:
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-font.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-font.html){: target="_blank" .external }
 
 Ada ratusan font ikon gratis dan berbayar yang tersedia termasuk [Font
 Awesome](https://fortawesome.github.io/Font-Awesome/),
@@ -720,7 +720,7 @@ bagian yang benar.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media//image-sprite.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media//image-sprite.html){: target="_blank" .external }
 
 Spriting memiliki keuntungan yaitu mengurangi jumlah unduhan yang diperlukan untuk mendapatkan
 beberapa gambar, sambil tetap mengaktifkan caching.

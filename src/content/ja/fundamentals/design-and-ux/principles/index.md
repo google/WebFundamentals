@@ -27,7 +27,7 @@ Google と AnswerLab は、この疑問の答えを出すために[調査](https
 
 ###  CTA（コールトゥアクション）を前面および中央に配置する
 
-二次的なタスクは、[メニュー](/web/fundamentals/design-and-ui/responsive/)またはスクロールしなければ見えない位置に配置します。
+二次的なタスクは、[メニュー](/web/fundamentals/design-and-ux/responsive/)またはスクロールしなければ見えない位置に配置します。
 
 
 <div class="attempt-left">
@@ -256,7 +256,7 @@ Google と AnswerLab は、この疑問の答えを出すために[調査](https
 
 ###  既存の情報を使って利便性を最大限に高める
 
-登録ユーザーの情報を呼び出し、[プリファレンスをあらかじめ入力](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly)します。新規のユーザーには、使い慣れたサードパーティの購入手続きサービスを提供します。
+登録ユーザーの情報を呼び出し、[プリファレンスをあらかじめ入力](/web/fundamentals/design-and-ux/input/forms/#label-and-name-inputs-properly)します。新規のユーザーには、使い慣れたサードパーティの購入手続きサービスを提供します。
 
 ###  複雑なタスクには Click-to-Call ボタンを使用する
 
@@ -295,8 +295,8 @@ Google と AnswerLab は、この疑問の答えを出すために[調査](https
 
 ###  最もシンプルな入力タイプを選ぶ
 
-状況に応じて、[最適な入力タイプ](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type)を選びます。
-[`datalist`](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist) などの要素を使用して、フィールドの入力候補を表示します。
+状況に応じて、[最適な入力タイプ](/web/fundamentals/design-and-ux/input/forms/choose-the-best-input-type)を選びます。
+[`datalist`](/web/fundamentals/design-and-ux/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist) などの要素を使用して、フィールドの入力候補を表示します。
 
 
 
@@ -333,9 +333,9 @@ Google と AnswerLab は、この疑問の答えを出すために[調査](https
 
 ###  効率的なフォームを設計する
 
-[自動入力](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)を活用し、事前に入力されたデータによって簡単にフォームに入力できるようにします。
+[自動入力](/web/fundamentals/design-and-ux/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)を活用し、事前に入力されたデータによって簡単にフォームに入力できるようにします。
 また、既に把握している情報をあらかじめフィールドに入力します。
-たとえば、出荷先および請求先住所を取得するときは、[`requestAutocomplete`](/web/fundamentals/design-and-ui/input/forms/use-request-auto-complete)
+たとえば、出荷先および請求先住所を取得するときは、[`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)
 の使用を試みるか、出荷先住所と請求先住所を相互にコピーできるようにします。
 
  
@@ -346,7 +346,7 @@ Google と AnswerLab は、この疑問の答えを出すために[調査](https
 
 ###  サイト全体をモバイル向けに最適化する
 
-ユーザーの端末のサイズと機能に応じて変化する[レスポンシブ レイアウト](/web/fundamentals/design-and-ui/responsive/)を使用します。
+ユーザーの端末のサイズと機能に応じて変化する[レスポンシブ レイアウト](/web/fundamentals/design-and-ux/responsive/)を使用します。
 調査の参加者によると、PC 版およびモバイル版として最適化されたページが混在しているサイトは、PC 版のみのサイトよりも使いづらいことがわかりました。
 
 
@@ -354,7 +354,7 @@ Google と AnswerLab は、この疑問の答えを出すために[調査](https
 ###  ピンチ操作を不要にする
 
 ユーザーは垂直方向のスクロールには慣れていますが、水平方向のスクロールには慣れていません。
-幅を固定した大きな要素は使用しないでください。[CSS メディアクエリ](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)を使用して、さまざまな画面ごとに異なるスタイルを適用します。特定の[ビューポートの幅](/web/fundamentals/design-and-ui/responsive/#set-the-viewport)のみで適切に表示されるようなコンテンツは、作成しないでください。ユーザーに水平方向のスクロールを強制するサイトは [Google モバイル フレンドリー テスト](https://search.google.com/test/mobile-friendly)で不合格となり、検索ランキングが下がる可能性があります。
+幅を固定した大きな要素は使用しないでください。[CSS メディアクエリ](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness)を使用して、さまざまな画面ごとに異なるスタイルを適用します。特定の[ビューポートの幅](/web/fundamentals/design-and-ux/responsive/#set-the-viewport)のみで適切に表示されるようなコンテンツは、作成しないでください。ユーザーに水平方向のスクロールを強制するサイトは [Google モバイル フレンドリー テスト](https://search.google.com/test/mobile-friendly)で不合格となり、検索ランキングが下がる可能性があります。
 
 
 
@@ -372,7 +372,7 @@ Google と AnswerLab は、この疑問の答えを出すために[調査](https
   </figure>
 </div>
 
-小売店の顧客は商品を[高解像度の拡大画像で見る](/web/fundamentals/design-and-ui/media/images#make-product-images-expandable)ことをサイトに期待します。調査の参加者は、購入したい商品を見ることができない場合にストレスを感じました。
+小売店の顧客は商品を[高解像度の拡大画像で見る](/web/fundamentals/design-and-ux/media/images#make-product-images-expandable)ことをサイトに期待します。調査の参加者は、購入したい商品を見ることができない場合にストレスを感じました。
 
 
 <div style="clear:both;"></div>

@@ -23,7 +23,7 @@ description:为项目选择合适的缓动，无论是缓入、缓出还是缓�
 除了在 CSS 中通过 `ease-out` 关键字指定的公式之外，还有一组知名的缓出公式，它们按其“攻击性”排列。想要快速的缓出效果，请考虑 [Quintic 缓出](http://easings.net/#easeOutQuint)。
 
 
-[查看 Quintic 缓出动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
+[查看 Quintic 缓出动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
 
 其他缓动公式应谨慎使用，特别是弹跳或弹性缓动，并且仅在适合于项目时才使用。很少有东西会像不协调的动画那样让用户体验很差。如果您的项目不是为了追求乐趣，那么就无需使元素在 UI 周围进行弹跳。相反，如果您将要创建一个轻松欢乐的网站，那么请务必使用弹跳！
 

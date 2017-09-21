@@ -40,7 +40,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 
 <img src="imgs/mostly-fluid.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/mostly-fluid.html" class="button button-primary">체험해 보기</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/mostly-fluid.html" class="button button-primary">체험해 보기</a>
 
 가장 작은 뷰에서 각 콘텐츠 `div`가 수직으로 쌓입니다.  화면 너비가 600px에 도달하면
 기본 콘텐츠 `div`가 `width: 100%`로 유지되지만 보조 `div`는 기본 `div` 아래
@@ -67,7 +67,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 
 <img src="imgs/column-drop.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/column-drop.html" class="button button-primary">체험해 보기</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/column-drop.html" class="button button-primary">체험해 보기</a>
 
 유동형 샘플처럼 콘텐츠는 가장 작은 뷰에서 수직으로 쌓이지만, 화면이 600px 이상으로 커지면 기본 및 보조 콘텐츠 `div`가 화면의 전체 너비를 차지합니다.
 
@@ -95,7 +95,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 
 <img src="imgs/layout-shifter.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/layout-shifter.html" class="button button-primary">체험해 보기</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/layout-shifter.html" class="button button-primary">체험해 보기</a>
 
 이 간단한 레이아웃 시프터 패턴의 예를 보면 작은 화면에서 콘텐츠가 수직으로 쌓이지만 화면이 커짐에 따라 한 `div`는 왼쪽에, 두 `div`는 오른쪽에 쌓이게 되는 큰 변화가 일어납니다.
 
@@ -120,7 +120,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 이 패턴은 1페이지 선형 웹사이트, 텍스트가 많은 문서 등 단일 열 레이아웃에서 잘 작동합니다.
 
 <img src="imgs/tiny-tweaks.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/tiny-tweaks.html" class="button button-primary">체험해 보기</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/tiny-tweaks.html" class="button button-primary">체험해 보기</a>
 
 이름에서 알 수 있듯이 이 샘플은 화면 크기의 변화에 비해 변화가 많지 않습니다.
 화면 너비가 커질수록 글꼴 크기와 여백도 커집니다.
@@ -143,7 +143,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 클릭했을 때만 보여줍니다.
 
 <img src="imgs/off-canvas.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/off-canvas.html" class="button button-primary">체험해 보기</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/off-canvas.html" class="button button-primary">체험해 보기</a>
 
 이 샘플은 콘텐츠를 수직으로 쌓지 않고 `transform: translate(-250px, 0)` 선언을 사용하여 두 개의 콘텐츠 `div`를 화면에서 숨깁니다.  자바스크립트를 사용하여 공개 클래스를 요소에 추가하여 보이게 만들어서 div를 표시할 수 있습니다.
   화면이 넓어짐에 따라 요소의 화면 밖 위치가 없어지고 가시적인 뷰포트 내에 요소가 표시됩니다.

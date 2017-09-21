@@ -52,7 +52,7 @@ Translated By:
 使用元视口值 width=device-width 指示网页与屏幕宽度（以设备无关像素为单位）进行匹配。这样一来，网页便可以重排内容，使之适合不同的屏幕大小（从较小的手机到较大的桌面设备显示器，不一而足）。
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-no.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-no.html">
   <figure>
     <img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="未设置视口的网页">
     <figcaption>
@@ -62,7 +62,7 @@ Translated By:
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp.html">
   <figure>
 <img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="已设置视口的网页">
     <figcaption>
@@ -105,7 +105,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 为网页元素设置较大的 CSS 绝对宽度（如下例所示）会导致 div 因过宽而不适合窄视口设备（例如，iPhone 等宽度为 320 CSS 像素的设备）。因此，请改为使用相对宽度值，例如 width: 100%。同样请注意，使用较大的绝对定位值可能会使元素脱离小屏幕上的视口。
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-fixed.html">
   <figure>
       <img src="imgs/vp-fixed-iph.png" class="attempt-left" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="iPhone 上带有 344 像素的固定宽度元素的网页。">
     <figcaption>
@@ -115,7 +115,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-fixed.html">
   <figure>
       <img src="imgs/vp-fixed-n5.png" class="attempt-right" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Nexus 5 上带有 344 像素的固定宽度元素的网页。">
     <figcaption>
@@ -273,7 +273,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 
 先针对小屏幕尺寸进行内容设计，然后扩展至不同尺寸的屏幕，直到必须添加断点为止。如此一来，您便可以根据内容优化断点，并使断点数量降至最低。
 
-我们来分析一下在开头部分看到的示例[天气预报](/web/fundamentals/design-and-ui/responsive/)。
+我们来分析一下在开头部分看到的示例[天气预报](/web/fundamentals/design-and-ux/responsive/)。
 首先使天气预报在较小的屏幕上呈现效果良好。
 
 <figure>

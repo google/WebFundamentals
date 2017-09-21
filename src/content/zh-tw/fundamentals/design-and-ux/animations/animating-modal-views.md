@@ -20,7 +20,7 @@ description: 學習如何在您應用程式中動畫處理強制回應檢視。
 
 <img src="images/dont-press.gif" alt="動畫處理強制回應檢視。" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html">請參閱範例。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/modal-view-animation.html">請參閱範例。</a>
 
 強制回應重疊應對齊檢視區，所以它需要將其 `position` 設定為 `fixed`：
 

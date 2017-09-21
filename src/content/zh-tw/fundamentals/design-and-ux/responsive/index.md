@@ -63,7 +63,7 @@ description: 大多數的網站並未針對多裝置體驗進行最佳化。快�
 使用中繼檢視區值 `width=device-width` 即可運用裝置獨立像素配合螢幕寬度。採用這項做法後，無論網頁是在小型行動裝置或大型桌上型電腦顯示器顯示，都可隨著不同的螢幕大小靈活編排內容。
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-no.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-no.html">
   <figure>
     <img src="imgs/no-vp.png" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Page without a viewport set">
     <figcaption>
@@ -73,7 +73,7 @@ description: 大多數的網站並未針對多裝置體驗進行最佳化。快�
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp.html">
   <figure>
     <img src="imgs/vp.png" srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Page with a viewport set">
     <figcaption>
@@ -116,7 +116,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 如果針對網頁元素設定大型絕對 CSS 寬度 (例如下方示例)，將會導致 `div` 過寬而無法在較窄的裝置正確顯示 (例如 iPhone 這類 CSS 像素寬度為 320 的裝置)。因此，建議您不妨考慮使用相對寬度值，例如 `width: 100%`。相同地，使用大型絕對定位值時也請留意，因為這類值會導致元素超過小螢幕上的檢視區。
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-fixed.html">
   <figure>
     <img src="imgs/vp-fixed-iph.png" class="attempt-left" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Page with a 344px fixed width element on an iPhone.">
     <figcaption>
@@ -126,7 +126,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-fixed.html">
   <figure>
     <img src="imgs/vp-fixed-n5.png" class="attempt-right" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Page with a 344px fixed width element on a Nexus 5.">
     <figcaption>

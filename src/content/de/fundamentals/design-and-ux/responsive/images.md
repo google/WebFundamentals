@@ -196,7 +196,7 @@ Ein gutes Beispiel für ein maximierbares Bild, das angetippt werden kann, läss
 Die [Methode für Komprimierte
 Bilder](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) stellt ein stark komprimiertes 2x-Bild für alle Geräte bereit, unabhängig von den tatsächlichen Funktionen des Geräts. Abhängig vom Bildtyp und der Komprimierungsstufe ist möglicherweise keine Veränderung am Bild wahrnehmbar, die Dateigröße verringert sich jedoch beträchtlich.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html">Siehe Beispiel</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/compressive.html">Siehe Beispiel</a>
 
 Note: Bei der Nutzung der Komprimierung ist aufgrund der erhöhten Speicherbelastung und des erhöhten Aufwands beim Codieren Vorsicht geboten. Die Änderung der Größe für kleinere Bildschirme ist rechenintensiv und kann besonders auf Low-End-Geräten mit wenig Speicher und geringer Rechenkapazität Probleme verursachen.
 
@@ -403,7 +403,7 @@ Viele Tools bieten die Möglichkeit, eine weitere, verlustfreie Komprimierung f�
 
 CSS-Spriting ist eine Methode, bei der eine Anzahl an Bildern zu einem einzelnen Sprite-Block zusammengefügt wird. Einzelne Bilder können anschließend verwendet werden, indem das Hintergrundbild - der Sprite-Block - für ein Element angegeben und um eine Positionsangabe ergänzt wird, damit der richtige Abschnitt erscheint.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Im Beispiel verwendeter Sprite-Block"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Im Beispiel verwendeter Sprite-Block"></a>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}

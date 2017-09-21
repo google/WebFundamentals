@@ -23,7 +23,7 @@ description: イーズイン、イーズアウト、またはその併用など�
 CSS の `ease-out` キーワードでは規定されていませんが、他にも有名な ease-out 方程式が複数あります。これらは、かなりインパクトの強いアニメーションの部類に入ります。高速な ease-out 効果が必要な場合は、[Quintic ease-out](http://easings.net/#easeOutQuint) の使用を検討してください。
 
 
-[Quintic ease-out のアニメーションを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
+[Quintic ease-out のアニメーションを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
 
 他のイージング方程式、特に bounce や elastic ease は、プロジェクトで適切な場合にのみ、慎重に使用してください。ユーザーに不快感を与えるアニメーションが表示されないようにするために、注意すべきポイントがあります。楽しい雰囲気を出したいサイトを除いて、UI 上で要素をバウンスさせないようにしてください。逆に、楽しいサイトを作る場合は、積極的に bounce を使ってください。
 

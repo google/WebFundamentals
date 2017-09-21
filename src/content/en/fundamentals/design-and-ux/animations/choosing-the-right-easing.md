@@ -23,7 +23,7 @@ Generally speaking, an **ease-out** will be the right call, and certainly a good
 There is a group of well-known ease-out equations beyond the one specified with the `ease-out` keyword in CSS, which range in their "aggressiveness." For a fast ease-out effect, consider a [Quintic ease-out](http://easings.net/#easeOutQuint).
 
 
-[See a Quintic ease-out animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
+[See a Quintic ease-out animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
 
 Other easing equations, particularly bounces or elastic eases, should be used sparingly, and only when it’s appropriate to your project. There are few things that bring a user out of an experience like a jarring animation. If your project isn’t intended to be fun, then don’t have elements bouncing around the UI. Conversely, if you’re creating a site that is supposed to be lighthearted, then by all means use bounces!
 

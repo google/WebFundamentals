@@ -42,7 +42,7 @@ Para diseñar formularios eficaces, evita las acciones repetidas, solicita solo 
 
 Asegúrate de que sus formularios no contengan acciones repetidas; solo incluye tantos campos como sea 
 necesario y aprovecha la función 
-[autocompletar](/web/fundamentals/design-and-ui/input/forms/#use-metadata-to-enable-auto-complete),
+[autocompletar](/web/fundamentals/design-and-ux/input/forms/#use-metadata-to-enable-auto-complete),
 de modo que los usuarios puedan completar fácilmente los formularios con los datos completados previamente.
 
 Completa previamente la información que ya conozcas, o que se pueda 
@@ -241,7 +241,7 @@ estas, el elemento `datalist` proporciona sugerencias a medida que el usuario es
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
-[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 Note: Los valores de  <code>datalist</code> se proporcionan como sugerencias, y los usuarios no se ven limitados a las sugerencias ofrecidas.
 
@@ -269,7 +269,7 @@ enfocar el elemento de entrada.
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
 </pre>
 
-[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### Ajuste del tamaño y disposición y de las etiquetas
 
@@ -318,7 +318,7 @@ los nombres, las direcciones de correo electrónico y el número telefónico de 
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
 
-[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 
@@ -657,7 +657,7 @@ correspondiente.  Por ejemplo:
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
 </pre>
 
-[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### Evita el envío de formularios no válidos
 
@@ -669,7 +669,7 @@ en el elemento del formulario para determinar si este último es válido.  Por e
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
 </pre>
 
-[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### Muestra comentarios en tiempo real
 
@@ -725,7 +725,7 @@ JavaScript para mostrar solo los estilos no válidos cuando el usuario haya visi
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
 </pre>
 
-[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 Success: Debes mostrar al usuario todos los problemas con el formulario de una sola vez, en lugar de mostrárselos uno por uno.

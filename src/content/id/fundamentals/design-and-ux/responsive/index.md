@@ -61,7 +61,7 @@ materi agar sesuai dengan ukuran layar yang berbeda, apakah di-render pada telep
 seluler kecil atau monitor desktop yang besar.
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-no.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-no.html">
   <figure>
     <img src="imgs/no-vp.png" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Laman tanpa penyetelan tampilan yang terlihat">
     <figcaption>
@@ -71,7 +71,7 @@ seluler kecil atau monitor desktop yang besar.
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp.html">
   <figure>
     <img src="imgs/vp.png" srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Laman dengan penyetelan tampilan yang terlihat">
     <figcaption>
@@ -129,7 +129,7 @@ nilai pemosisian absolut besar yang bisa menyebabkan elemen berada di luar
 tampilan yang terlihat pada layar kecil.  
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-fixed.html">
   <figure>
     <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x" alt="Laman dengan elemen lebar tetap 344 px pada iPhone.">
     <figcaption>
@@ -139,7 +139,7 @@ tampilan yang terlihat pada layar kecil.
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-fixed.html">
   <figure>
     <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x" alt="Laman dengan elemen lebar tetap 344 px pada Nexus 5.">
     <figcaption>
@@ -243,7 +243,7 @@ sering digunakan untuk desain web responsif adalah `min-width`, `max-width`, `mi
 Mari kita lihat contoh berikut:
 
 <figure>
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/media-queries.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/media-queries.html">
     <img src="imgs/mq.png" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Pratinjau laman menggunakan kueri media untuk mengubah properti ketika diubah ukurannya.">
     <figcaption>
       Pratinjau laman menggunakan kueri media untuk mengubah properti ketika diubah ukurannya.
@@ -255,7 +255,7 @@ Mari kita lihat contoh berikut:
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/media-queries.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/media-queries.html){: target="_blank" .external }
 
 * Ketika browser lebarnya antara <b>0 px</b> dan <b>640 px</b>, diterapkan `max-640px.css`.
 * Ketika browser lebarnya antara <b>500 px</b> dan <b>600 px</b>, gaya dalam `@media` akan diterapkan.
@@ -338,7 +338,7 @@ layout menyesuaikan dengan kontainer.
 <figure class="attempt-right">
   <img src="imgs/weather-1.png" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-1.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-1.html">
       Pratinjau prakiraan cuaca yang ditampilkan di layar kecil.
     </a>
   </figcaption>
@@ -358,7 +358,7 @@ layar kecil.
 <figure class="attempt-right">
   <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Pratinjau prakiraan cuaca ketika laman semakin luas.">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-1.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-1.html">
       Pratinjau prakiraan cuaca ketika laman semakin luas.
     </a>
   </figcaption>
@@ -377,12 +377,12 @@ browser 600 px dan kurang dari itu, dan satu ketika luasnya lebih dari 600 px.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-2.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-2.html){: target="_blank" .external }
 
 <figure class="attempt-right">
   <img src="imgs/weather-3.png"  srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Pratinjau dari prakiraan cuaca yang dirancang untuk layar yang lebih lebar.">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-2.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-2.html">
       Pratinjau dari prakiraan cuaca yang dirancang untuk layar yang lebih lebar.
     </a>
   </figcaption>
@@ -471,7 +471,7 @@ dari 575px, lebar ideal materi adalah 550px.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/reading.html" region_tag="mqreading" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/reading.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/reading.html){: target="_blank" .external }
 
 ### Jangan pernah benar-benar menyembunyikan materi
 

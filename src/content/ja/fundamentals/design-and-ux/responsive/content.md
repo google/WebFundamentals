@@ -57,7 +57,7 @@ description: 幅広いユーザーや端末を対象にする場合、レイア�
 
 バイトサイズで見ると、ウェブページのデータ量は[増加する一方です](http://httparchive.org/trends.php#bytesTotal&reqTotal)。
 
-[レスポンシブ デザインのテクニック](/web/fundamentals/design-and-ui/responsive/)を使用すると、小さいビューポートに合わせて異なるコンテンツを配信できますが、その前にテキスト、画像、その他のコンテンツを簡素化するほうが現実的です。
+[レスポンシブ デザインのテクニック](/web/fundamentals/design-and-ux/responsive/)を使用すると、小さいビューポートに合わせて異なるコンテンツを配信できますが、その前にテキスト、画像、その他のコンテンツを簡素化するほうが現実的です。
 
 > ウェブのユーザーは一般的に行動指向的であり、ゆったりと腰掛けて良書から知識を吸収するよりも、今抱いている疑問に対する答えを「今すぐ」見つけようとします。
 >
@@ -121,7 +121,7 @@ HTML の複雑さを軽減するとページが軽くなり、ローカライズ
 * グラデーション、シャドウ、角丸、[背景のテクスチャ](http://lea.verou.me/css3patterns/){: .external }、[すべての最新ブラウザでサポートされる機能](http://caniuse.com/#search=shadows)を使用する際は、画像ではなく CSS を使用します。ただし、CSS が画像より優れているとしても、依然として[処理やレンダリングの負荷](http://www.smashingmagazine.com/2013/04/03/build-fast-loading-mobile-website/)がかかります。特に、モバイルではそれが顕著になります。
 * 背景画像はほとんどの場合、モバイルではうまく機能しません。小さいビューポートでは[メディア クエリを使用](http://udacity.github.io/responsive-images/examples/2-06/backgroundImageConditional/)すると、背景画像の使用を避けることができます。
 * スプラッシュ画面の画像の使用は避けてください。
-* [UI アニメーションには CSS を使用します](/web/fundamentals/design-and-ui/animations/)。
+* [UI アニメーションには CSS を使用します](/web/fundamentals/design-and-ux/animations/)。
 * グリフについて理解を深め、画像の代わりに [Unicode のシンボルとアイコン](https://en.wikipedia.org/wiki/List_of_Unicode_characters)と、必要に応じてウェブフォントを使用してください。
 * [アイコン フォント](http://weloveiconfonts.com/#zocial)の使用を検討します。アイコン フォントは無限に拡大できるベクター グラフィックで、1 つのフォントで画像セット一式をダウンロードできます（[こちらの注意事項](https://sarasoueidan.com/blog/icon-fonts-to-svg/)をご確認ください）。
 * `<canvas>` 要素を使用すると、線、曲線、テキスト、その他の画像を用いて JavaScript で画像を作成できます。
@@ -163,7 +163,7 @@ HTML の複雑さを軽減するとページが軽くなり、ローカライズ
 * 最も重要なコンテンツをトップに配置します。[ユーザーは、F 字型パターンでウェブページを読む傾向がある](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/)からです。
 * ユーザーは目標を達成するためにサイトにアクセスします。その目標を達成するために求められているものは何かをよく検討し、それ以外のものはすべて排除します。ビジュアルおよびテキストの装飾、旧来のコンテンツ、過剰なリンク、その他の雑然としたものについては、厳しい目で見直してください。
 * ソーシャルの共有アイコンによってレイアウトが煩雑になったり、そのコードが原因でページの読み込みが遅くなる場合があるため、注意してください。
-* 端末のサイズを固定せず、[レスポンシブ レイアウト](/web/fundamentals/design-and-ui/responsive/)でコンテンツをデザインします。
+* 端末のサイズを固定せず、[レスポンシブ レイアウト](/web/fundamentals/design-and-ux/responsive/)でコンテンツをデザインします。
 
 ###  コンテンツをテストする
 

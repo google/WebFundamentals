@@ -57,7 +57,7 @@ description: 다양한 범위의 사용자와 기기용으로 빌드할 경우, 
 
 바이트 크기 측면에서, 웹페이지의 크기가 [점점 더 늘어나고 있습니다](http://httparchive.org/trends.php#bytesTotal&reqTotal).
 
-[반응형 디자인 기법](/web/fundamentals/design-and-ui/responsive/)을 사용하면 더 작은 뷰포트에서 다양한 콘텐츠를 제공할 수 있지만, 처음부터 텍스트, 이미지 및 콘텐츠를 간소화하여 시작하는 것이 현명합니다.
+[반응형 디자인 기법](/web/fundamentals/design-and-ux/responsive/)을 사용하면 더 작은 뷰포트에서 다양한 콘텐츠를 제공할 수 있지만, 처음부터 텍스트, 이미지 및 콘텐츠를 간소화하여 시작하는 것이 현명합니다.
 
 > 웹 사용자들은 대개 액션 지향적으로, 책을 읽기 위해 상체를 뒤로 젖히는 것이 아니라 현재 질문에 대한 해답을 찾기 위해 '상체를 앞으로 기울입니다'.
 >
@@ -121,7 +121,7 @@ HTML의 복잡도를 줄이면 페이지 크기도 줄어들고, 현지화 및 �
 * 그라데이션, 그림자, 둥근 모서리 및 [배경 텍스처](http://lea.verou.me/css3patterns/){: .external }, [모든 최신 브라우저에 의해 지원되는](http://caniuse.com/#search=shadows) 기능에 이미지 대신 CSS를 사용하세요. 그러나 CSS가 이미지보다 더 나을 수 있지만, [처리 및 렌더링 페널티](http://www.smashingmagazine.com/2013/04/03/build-fast-loading-mobile-website/)가 있을 수 있으며 특히 모바일에서는 심각하다는 사실에 유의하세요.
 * 배경 이미지는 모바일에서 거의 효과가 없습니다. [미디어 쿼리를 사용](http://udacity.github.io/responsive-images/examples/2-06/backgroundImageConditional/)하면 작은 뷰포트에서 배경 이미지를 피할 수 있습니다.
 * 스플래시 화면 이미지를 피하세요.
-* [UI 애니메이션에 CSS를 사용하세요](/web/fundamentals/design-and-ui/animations/).
+* [UI 애니메이션에 CSS를 사용하세요](/web/fundamentals/design-and-ux/animations/).
 * 문자 모양을 이해하세요. 이미지를 사용하는 대신, 필요한 경우 웹 글꼴과 함께 [유니코드 기호 및 아이콘](https://en.wikipedia.org/wiki/List_of_Unicode_characters)을 사용하세요.
 * [아이콘 글꼴](http://weloveiconfonts.com/#zocial)을 고려하세요. 이 글꼴은 무한 확장이 가능한 벡터 그래픽이며, 전체 이미지 세트를 하나의 글꼴로 다운로드할 수 있습니다. (그러나 [이러한 문제](https://sarasoueidan.com/blog/icon-fonts-to-svg/)에 주의하세요.)
 * `<canvas>` 요소를 사용하면 자바스크립트에서 선, 곡선, 텍스트 및 기타 이미지로부터 이미지를 빌드할 수 있습니다.
@@ -163,7 +163,7 @@ HTML의 복잡도를 줄이면 페이지 크기도 줄어들고, 현지화 및 �
 * [사용자는 F자 형태로 웹페이지를 읽는 경향이 있습니다](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/). 따라서 가장 중요한 콘텐츠를 맨 위에 놓으세요.
 * 사용자는 목적을 가지고 여러분의 사이트를 방문합니다. 사용자의 목적이 무엇인지 스스로에게 물어보고 그 이외의 모든 것은 제거하세요. 시각적 장식과 텍스트 장식, 레거시 콘텐츠, 과도한 링크 및 기타 지저분한 것들은 과감히 제거하세요.
 * 소셜 공유 아이콘에 주의하세요. 이런 아이콘은 레이아웃을 지저분하게 만들 수 있으며, 그 코드로 인해 페이지 로딩이 느려질 수 있습니다.
-* 고정된 기기 크기가 아니라, 콘텐츠용 [반응형 레이아웃](/web/fundamentals/design-and-ui/responsive/)을 디자인하세요.
+* 고정된 기기 크기가 아니라, 콘텐츠용 [반응형 레이아웃](/web/fundamentals/design-and-ux/responsive/)을 디자인하세요.
 
 ### 콘텐츠 테스트
 

@@ -215,7 +215,7 @@ Chrome 在网络应用启动后会立即使用此颜色，这一颜色将保留�
   <figcaption>主题颜色</figcaption>
 </figure>
 
-Chrome 在 2014 年为您的网站引入了主题颜色这一概念。主题颜色是来自您的网页的提示，用于告知浏览器使用什么颜色来为[地址栏等 UI 元素](/web/fundamentals/design-and-ui/browser-customization/)着色。
+Chrome 在 2014 年为您的网站引入了主题颜色这一概念。主题颜色是来自您的网页的提示，用于告知浏览器使用什么颜色来为[地址栏等 UI 元素](/web/fundamentals/design-and-ux/browser-customization/)着色。
 
   
 

@@ -38,7 +38,7 @@ DOM 요소는 default, focus, hover, active의 네 가지 상태를
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 ![버튼 상태에 따라 다른 색상을 보여주는
 이미지](images/button-states.png)
@@ -77,7 +77,7 @@ Safari 및 Chrome에서는
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 Windows Phone에 설치된 Internet Explorer도 동작은 유사하지만
 다음 메타 태그를 통해 억제됩니다.
@@ -96,7 +96,7 @@ Firefox에서 `<button>` 요소를 사용 중인 경우 그라데이션을 적�
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 Caution: `:hover`, `:active` 및 `:focus`에 대한 의사 클래스가 있는 경우에는
  위에 언급된 기본 스타일만을 억제할 수 있습니다!
@@ -193,7 +193,7 @@ Caution: 일부 사용자는 키보드 입력을 원하는데, 터치스크린 �
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 참고: API 디자인 덕분에 PointerEvents는 마우스 및 터치 이벤트를 처리하기 위해 단일
 `pointerdown` 이벤트만 필요합니다.
@@ -232,7 +232,7 @@ TouchEvents는 터치가 발생한 위치에 상관없이 동작이 시작된 �
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 우리가 추가하는 종료 콜백은 `handleGestureEnd()`이며,
 이 콜백은 이동 및 종료 이벤트 리스너를 문서로부터 제거하고,
@@ -242,7 +242,7 @@ TouchEvents는 터치가 발생한 위치에 상관없이 동작이 시작된 �
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 <div class="attempt-left">
   <p>이 패턴에 따라 이동 이벤트를 문서에 추가하게 되면
@@ -277,7 +277,7 @@ TouchEvents는 터치가 발생한 위치에 상관없이 동작이 시작된 �
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-2.html){: target="_blank" .external }
 
 `TouchEvent`에는 터치 데이터가 포함된 세 개의 목록이 있습니다.
 

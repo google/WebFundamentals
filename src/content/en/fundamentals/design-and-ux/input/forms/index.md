@@ -42,7 +42,7 @@ Design efficient forms by avoiding repeated actions, asking for only the necessa
 
 Make sure your forms have no repeated actions, only as many fields as 
 necessary, and take advantage of 
-[autofill](/web/fundamentals/design-and-ui/input/forms/#use-metadata-to-enable-auto-complete),
+[autofill](/web/fundamentals/design-and-ux/input/forms/#use-metadata-to-enable-auto-complete),
 so that users can easily complete forms with pre-populated data.
 
 Look for opportunities to pre-fill information you already know, or may 
@@ -241,7 +241,7 @@ lists, `datalist` element provides hints as the user types.
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 Note: The <code>datalist</code> values are provided as suggestions, and users are not restricted to the suggestions provided.
 
@@ -269,7 +269,7 @@ focus on the input element.
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### Label sizing and placement
 
@@ -318,7 +318,7 @@ the users name, email address and phone number, you should use:
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 
@@ -657,7 +657,7 @@ response.  For example:
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### Prevent form submission on invalid forms
 
@@ -669,7 +669,7 @@ on the form element to determine if the form is valid.  For example:
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### Show feedback in real-time
 
@@ -725,7 +725,7 @@ JavaScript to only show invalid styling when the user has visited the field.
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 Success: You should show the user all of the issues on the form at once, rather than showing them one at a time.

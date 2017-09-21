@@ -37,7 +37,7 @@ Para comparação, aqui estão duas curvas: uma curva ease-in-out comum e uma cu
   </figure>
 </div>
 
-[Veja uma animação com easing personalizado](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html){: target="_blank" .external }
+[Veja uma animação com easing personalizado](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-custom-curve.html){: target="_blank" .external }
 
 O CSS para a curva personalizada é:
 
@@ -49,7 +49,7 @@ Os primeiros dois números são as coordenadas X e Y do primeiro ponto de contro
 
 Criar uma curva personalizada é muito divertido e oferece um maior controle sobre o resultado da animação. Na curva acima, por exemplo, pode-se observar que ela se assemelha a uma curva ease-in-out clássica, mas com uma parte ease-in menor, ou "inicial", e desaceleração alongada no final.
 
-Experimente com esta [ferramenta de curva de animação](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/curve-playground.html){: target="_blank" .external } e veja como a curva afeta uma animação.
+Experimente com esta [ferramenta de curva de animação](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/curve-playground.html){: target="_blank" .external } e veja como a curva afeta uma animação.
 
 ## Use estruturas JavaScript para obter mais controle
 
@@ -59,7 +59,7 @@ Em alguns casos, você precisará de ainda mais controle do que uma curva de Bé
 
 Uma das melhores estruturas é a [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) (ou TweenLite se quiser uma versão muito leve), pois oferece mais controle em uma pequena biblioteca JavaScript, que é também uma base de código muito madura.
 
-[Veja uma animação de elastic ease](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-elastic.html){: target="_blank" .external }
+[Veja uma animação de elastic ease](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-elastic.html){: target="_blank" .external }
 
 Para usar o TweenMax, inclua este script na sua página:
 

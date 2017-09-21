@@ -61,7 +61,7 @@ description: 웹사이트는 사람만 방문하는 곳이 아닙니다. 실은 
 
 <div style="clear:both;"></div>
   
-[반응형 웹 디자인 기본 사항](/web/fundamentals/design-and-ui/responsive/)에서 반응형 웹 디자인으로 웹사이트를 빌드하는 방법에 대해 자세히 알아보세요.
+[반응형 웹 디자인 기본 사항](/web/fundamentals/design-and-ux/responsive/)에서 반응형 웹 디자인으로 웹사이트를 빌드하는 방법에 대해 자세히 알아보세요.
 
 ### 별개의 URL을 제공할 때 `link[rel=canonical]` 및 `link[rel=alternate]` 사용
 

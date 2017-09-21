@@ -28,7 +28,7 @@ Success: Focus your mobile homepage on connecting users to the content they’re
 
 ### Keep calls to action front and center
 
-Make secondary tasks available through [menus](/web/fundamentals/design-and-ui/responsive/)
+Make secondary tasks available through [menus](/web/fundamentals/design-and-ux/responsive/)
 or “below the fold” (the part of the webpage that can’t be seen without scrolling down).
 
 <div class="attempt-left">
@@ -260,7 +260,7 @@ unclear.
 ### Use existing information to maximize convenience
 
 Remember and
-[pre-fill preferences](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly)
+[pre-fill preferences](/web/fundamentals/design-and-ux/input/forms/#label-and-name-inputs-properly)
 for registered users. Offer familiar, third-party checkout services for new users.
 
 ### Use click-to-call buttons for complex tasks
@@ -302,9 +302,9 @@ the less taps the user must perform, the better.
 
 ### Choose the simplest input
 
-Use the most [appropriate input type](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type)
+Use the most [appropriate input type](/web/fundamentals/design-and-ux/input/forms/choose-the-best-input-type)
 for each scenario. Use elements like
-[`datalist`](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist)
+[`datalist`](/web/fundamentals/design-and-ux/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist)
 to provide suggested values for a field.
 
 ### Provide visual calendar for date selection
@@ -340,11 +340,11 @@ Label inputs properly and validate input in real-time.
 
 ### Design efficient forms
 
-Take advantage of [autofill](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)
+Take advantage of [autofill](/web/fundamentals/design-and-ux/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)
 so that users can easily complete forms with pre-populated data. Pre-fill
 fields with information you already know. For example, when retrieving shipping
 and billing addresses, try to use
-[`requestAutocomplete`](/web/fundamentals/design-and-ui/input/forms/use-request-auto-complete)
+[`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)
 or enable users to copy their shipping address to their billing address (or vice versa). 
 
 ## Usability and form factor
@@ -353,7 +353,7 @@ Success: Delight your mobile users with small things that enhance their experien
 
 ### Optimize your entire site for mobile
 
-Use a [responsive layout](/web/fundamentals/design-and-ui/responsive/) that
+Use a [responsive layout](/web/fundamentals/design-and-ux/responsive/) that
 changes based on the size and capabilities of the user’s device. Study
 participants found sites with a mix of desktop and mobile-optimized pages even
 harder to use than desktop-only sites.
@@ -362,10 +362,10 @@ harder to use than desktop-only sites.
 
 Users are comfortable with scrolling sites vertically, but not horizontally. 
 Avoid large, fixed-width elements. Use
-[CSS media queries](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)
+[CSS media queries](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness)
 to apply different stylings for different screens. Don’t create content that
 only displays well at a particular
-[viewport width](/web/fundamentals/design-and-ui/responsive/#set-the-viewport).
+[viewport width](/web/fundamentals/design-and-ux/responsive/#set-the-viewport).
 Sites that force users to horizontally scroll fail the
 [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly){: .external },
 which may negatively impact their search rankings.
@@ -382,7 +382,7 @@ which may negatively impact their search rankings.
 </div>
 
 Retail customers expect sites to let them
-[view high resolution closeups](/web/fundamentals/design-and-ui/media/images#make-product-images-expandable)
+[view high resolution closeups](/web/fundamentals/design-and-ux/media/images#make-product-images-expandable)
 of products. Study participants got frustrated when they weren’t able to see
 what they were buying.
 

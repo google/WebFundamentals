@@ -37,7 +37,7 @@ CSS로 애니메이션을 만드는 경우, 3차원 베지어 곡선을 정의�
   </figure>
 </div>
 
-[사용자설정 easing 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html){: target="_blank" .external }
+[사용자설정 easing 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-custom-curve.html){: target="_blank" .external }
 
 다음은 사용자설정 곡선용 CSS입니다.
 
@@ -49,7 +49,7 @@ CSS로 애니메이션을 만드는 경우, 3차원 베지어 곡선을 정의�
 
 사용자설정 곡선을 만드는 것은 매우 재미있고, 사용자설정 곡선으로 애니메이션의 느낌을 세밀하게 제어할 수 있습니다. 예를 들어, 위의 곡선은 전통적인 ease-in-out 곡선과 닮았지만 ease-in(또는 '시작') 부분이 짧고 끝의 감속 부분이 긴 것을 확인할 수 있습니다.
 
-이 [애니메이션 곡선 도구](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/curve-playground.html){: target="_blank" .external }를 체험해 보고, 곡선이 애니메이션의 느낌에 어떤 영향을 주는지 확인하세요.
+이 [애니메이션 곡선 도구](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/curve-playground.html){: target="_blank" .external }를 체험해 보고, 곡선이 애니메이션의 느낌에 어떤 영향을 주는지 확인하세요.
 
 ## 더 세밀한 제어를 위해 자바스크립트 프레임워크 사용
 
@@ -59,7 +59,7 @@ CSS로 애니메이션을 만드는 경우, 3차원 베지어 곡선을 정의�
 
 강력한 라이브러리 중 하나는 [GreenSock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)(또는 초경량으로 유지하기를 원할 경우 TweenLite)이며, 작은 자바스크립트 라이브러리로 많은 부분을 제어할 수 있고 매우 풍성한 코드베이스를 제공합니다.
 
-[elastic ease 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-elastic.html){: target="_blank" .external }
+[elastic ease 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-elastic.html){: target="_blank" .external }
 
 TweenMax를 사용하려면 페이지에 이 스크립트를 포함해야 합니다.
 

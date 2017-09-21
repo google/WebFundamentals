@@ -23,7 +23,7 @@ description: 為您的專案選擇適當的緩動，無論是緩入、緩出或�
 
 <img src="images/quintic-ease-out-markers.png" alt=" Quintic 緩出動畫曲線" style="max-width: 300px"/>
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">參閱 Quintic 緩出動畫。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-quintic-ease-out.html">參閱 Quintic 緩出動畫。</a>
 
 尤其是彈跳或彈性緩動等其他緩動方程式，應節制使用，而且只有在適合於您專案時才使用。 還有幾件事情，會像刺耳的動畫一般讓使用者非常出戲。 如果您的專案並不快樂有趣，那麼不要讓 UI 元素四處發出啵嚶聲！反之，如果您正在製作應該要輕鬆有趣的網站，那就當然可以設計彈跳效果！
 

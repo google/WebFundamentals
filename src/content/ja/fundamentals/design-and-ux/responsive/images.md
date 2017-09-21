@@ -156,7 +156,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/media.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/media.html){: target="_blank" .external }
 
 上の例では、ブラウザの幅が
 800px 以上の場合に、デバイスの解像度に応じて
@@ -182,7 +182,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/sizes.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/sizes.html){: target="_blank" .external }
 
 
 上の例では、横幅がビューポート幅の半分（`sizes="50vw"`）になるように画像をレンダリングし、ブラウザ ウィンドウのサイズに関係なく、ブラウザの幅とデバイス ピクセル比に応じて、ブラウザで適切な画像を選択しています。
@@ -252,7 +252,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/breakpoints.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/breakpoints.html){: target="_blank" .external }
 
 上の例では、`sizes` 属性で複数のメディアクエリを使用して画像サイズを指定しています。
 ブラウザ幅が
@@ -290,7 +290,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/compressive.html){: target="_blank" .external }
 
 Warning: メモリや必要なデコードの負荷が増加するため、圧縮技術の使用には注意が必要です。大きな画像を小さい画面に合わせてサイズ変更する処理はリソースを消費し、特にメモリと処理能力が限られているローエンド端末では負荷が大きくなります。
 
@@ -460,7 +460,7 @@ background
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/conditional-mq.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/conditional-mq.html){: target="_blank" .external }
 
 ###  image-set を使用して高解像度の画像を表示する
 
@@ -487,7 +487,7 @@ CSS の `image-set()` 関数を使用して `background` プロパティの動�
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-set.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/image-set.html){: target="_blank" .external }
 
 上の例では、image-set に対応しているブラウザでは適切なアセットを読み込み、非対応の場合は 1x のアセットを代用します。
 ただし `image-set()` に対応しているブラウザは少ないため、ほとんどのブラウザでは 1x のアセットが読み込まれる点に注意してください。
@@ -518,7 +518,7 @@ Chrome、Firefox、Opera は標準の `(min-resolution: 2dppx)` をサポート�
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/media-query-dppx.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/media-query-dppx.html){: target="_blank" .external }
 
 また、min-width 構文を使用して、ビューポートのサイズに応じた代替画像を表示することもできます。
 この方法には、メディアクエリに一致しない限り画像がダウンロードされないというメリットがあります。
@@ -582,14 +582,14 @@ SVG には、ラスター画像と比較して次のような数多くのメリ�
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-svg.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-svg.html){: target="_blank" .external }
 
 ###  アイコン フォント使用時の注意点
 
 <figure class="attempt-right">
 <img src="img/icon-fonts.png" class="center" srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x" alt="フォント アイコンに Font Awesome を使用するページの例">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-font.html" target="_blank" class="external">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-font.html" target="_blank" class="external">
       フォント アイコンに Font Awesome を使用するページの例
     </a>
   </figcaption>
@@ -611,7 +611,7 @@ SVG には、ラスター画像と比較して次のような数多くのメリ�
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-font.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-font.html){: target="_blank" .external }
 
 [Font
 Awesome](https://fortawesome.github.io/Font-Awesome/)、[Pictos](http://pictos.cc/){: .external }、[Glyphicons](https://glyphicons.com/)
@@ -701,7 +701,7 @@ CSS スプライトとは、複数の画像を 1 つの「スプライト シー
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media//image-sprite.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media//image-sprite.html){: target="_blank" .external }
 
 画像スプライトを使用すると、複数の画像を取得するために必要なダウンロードの回数を減らせるというメリットがあります。ただし、キャッシュは有効にしておく必要があります。
 

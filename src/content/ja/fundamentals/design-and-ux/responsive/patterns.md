@@ -34,7 +34,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514) によって認識され、
 ブレークポイントだけが必要であることです。
 
 <img src="imgs/mostly-fluid.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/mostly-fluid.html" class="button button-primary">お試しください</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/mostly-fluid.html" class="button button-primary">お試しください</a>
 
 最小ビューでは、各コンテンツの `div` は垂直にスタックされます。画面幅が 600px になると、プライマリ コンテンツの
 `div` は `width: 100%` を維持し、セカンダリ コンテンツの `div` はプライマリ コンテンツの `div` の下に 2 列で表示されます。
@@ -61,7 +61,7 @@ Column drop は幅いっぱいに表示するマルチカラム レイアウト�
 
 
 <img src="imgs/column-drop.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/column-drop.html" class="button button-primary">お試しください</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/column-drop.html" class="button button-primary">お試しください</a>
 
 主に fluid サンプルでは、コンテンツは最小ビューで垂直にスタックされますが、画面が 600px 以上になった場合、プライマリおよびセカンダリ コンテンツの `div` は、画面の幅いっぱいに表示されます。`div` の順番は CSS の order プロパティで設定されます。
 800px で、すべてのコンテンツの `div` が表示され、全画面幅が使用されます。
@@ -87,7 +87,7 @@ Layout shifter パターンは最もレスポンシブなパターンで、さ�
 含まれる可能性があります。
 
 <img src="imgs/layout-shifter.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/layout-shifter.html" class="button button-primary">お試しください</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/layout-shifter.html" class="button button-primary">お試しください</a>
 
 この簡単な例では、layout shifter パターンを使用しています。小さな画面ではコンテンツは垂直にスタックされますが、画面が大きくなるにつれて大幅に変化し、左に 1 つの `div`、右に 2 つのスタックされた `div` が表示されるようになります。
 
@@ -111,7 +111,7 @@ Tiny tweaks では、フォントサイズの調整、画像のリサイズ、�
 このパターンは、1 ページから成るリニアなウェブサイトや、テキストの多い記事サイトなど、一列で構成されるレイアウトに適しています。
 
 <img src="imgs/tiny-tweaks.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/tiny-tweaks.html" class="button button-primary">お試しください</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/tiny-tweaks.html" class="button button-primary">お試しください</a>
 
 名前からわかるように、このサンプルでは画面サイズの調整などの軽微な変更を行います。画面の幅が大きくなると、フォントサイズやパディングを調整します。
 
@@ -134,7 +134,7 @@ Off canvas パターンでは、コンテンツを縦にスタックせずに、
 
 
 <img src="imgs/off-canvas.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/off-canvas.html" class="button button-primary">お試しください</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/off-canvas.html" class="button button-primary">お試しください</a>
 
 このサンプルでは縦にコンテンツをスタックせずに、`transform: translate(-250px, 0)` 宣言を使用して、2 つのコンテンツの `div` のオフスクリーンを非表示にしています。JavaScript を使用して open クラスを追加することで div を表示し、要素を可視化します。
 画面の幅が大きくなるにつれて、オフスクリーンの位置は要素の外に移動し、要素が可視ビューポート内に表示されます。

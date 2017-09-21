@@ -48,7 +48,7 @@ Ketika waktu berjalan, nilai juga mengalami pertambahan dalam jumlah yang setara
 
 Apakah Anda sedang melakukan pengkodean animasi menggunakan CSS atau JavaScript, Anda akan mendapati bahwa selalu ada pilihan untuk gerakan linear. 
 
-[Lihat animasi linear](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html){: target="_blank" .external }
+[Lihat animasi linear](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-linear.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -71,7 +71,7 @@ Easing out menyebabkan animasi dimulai lebih cepat dari yang linear, dan juga me
 
 Easing out biasanya paling cocok digunakan untuk pekerjaan antarmuka pengguna, karena awal yang cepat dari animasi Anda memberikan kesan responsif, dan masih ada ruang untuk perlambatan alami di bagian akhir.
 
-[Lihat animasi ease-out](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html){: target="_blank" .external }
+[Lihat animasi ease-out](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-out.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -96,7 +96,7 @@ Jenis animasi ini seperti sebuah batu berat yang jatuh, batu itu awalnya jatuh p
 
 Namun, dari sudut pandang interaksi, ease-in terasa sedikit janggal karena akhir yang tiba-tiba; sesuatu yang bergerak di dunia nyata mengalami perlambatan, bukannya langsung berhenti tiba-tiba. Ease-in juga memiliki efek yang merugikan yaitu terasa lambat ketika dimulai, yang berdampak negatif terhadap persepsi daya respons dalam situs atau aplikasi Anda.
 
-[Lihat animasi ease-in](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html){: target="_blank" .external }
+[Lihat animasi ease-in](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -118,7 +118,7 @@ Easing-in dan easing-out mirip dengan mobil yang berakselerasi lalu melambat, da
 
 Jangan menggunakan durasi animasi yang terlalu lama, karena awal animasi ease-in agak lambat. Sesuatu di kisaran 300-500 md biasanya cocok, namun jumlah yang tepat sangat bergantung pada nuansa proyek Anda. Jadi, karena awal yang lambat, cepat di tengah, dan lambat di akhir, akan ada peningkatan kontras di animasi, yang bisa cukup memuaskan bagi pengguna.
 
-[Lihat animasi ease-in-out](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html){: target="_blank" .external }
+[Lihat animasi ease-in-out](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in-out.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 

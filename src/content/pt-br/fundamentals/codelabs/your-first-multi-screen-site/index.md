@@ -370,7 +370,7 @@ que queremos alterar.
 
 600 pixels parece ser um bom local para criar nosso primeiro ponto de interrupção,
 pois ele nos dará o escopo para reposicionar elementos para que eles caibam na tela.
-Podemos fazer isso usando uma tecnologia chamada [consultas de mídia](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries).
+Podemos fazer isso usando uma tecnologia chamada [consultas de mídia](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries).
 
     @media (min-width: 600px) {
     

@@ -55,7 +55,7 @@ landing_page:
       image_path: images/cost.png
       buttons:
       - label: Entiende el costo de cargar los componentes de una app o de una página
-        path: /web/fundamentals/design-and-ui/responsive/content#weight
+        path: /web/fundamentals/design-and-ux/responsive/content#weight
         classname: wf-small-link
       - label: Reduce la cantidad de datos que se requieren para la interacción
         path: /web/fundamentals/performance/optimizing-content-efficiency/
@@ -79,7 +79,7 @@ landing_page:
         path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
         classname: wf-small-link
       - label: Evita las animaciones de IU costosas
-        path: /web/fundamentals/design-and-ui/animations/#avoid-animating-expensive-properties/
+        path: /web/fundamentals/design-and-ux/animations/#avoid-animating-expensive-properties/
         classname: wf-small-link
       - label: "Evita el uso de la radio: elimina descargas innecesarias"
         path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
@@ -88,7 +88,7 @@ landing_page:
         path: /web/fundamentals/getting-started/principles/
         classname: wf-small-link
       - label: Evita las animaciones costosas
-        path: /web/fundamentals/design-and-ui/animations/animations-and-performance/
+        path: /web/fundamentals/design-and-ux/animations/animations-and-performance/
         classname: wf-small-link
 
     - heading: Aplica optimizaciones conforme a la capacidad de los dispositivos
@@ -115,13 +115,13 @@ landing_page:
       image_path: images/content.png
       buttons:
       - label: Diseña contenido que funcione bien en los diferentes tamaños de ventanas de visualización
-        path: /web/fundamentals/design-and-ui/responsive/content#viewport
+        path: /web/fundamentals/design-and-ux/responsive/content#viewport
         classname: wf-small-link
       - label: Elimina el contenido redundante
-        path: /web/fundamentals/design-and-ui/content/redundant/
+        path: /web/fundamentals/design-and-ux/content/redundant/
         classname: wf-small-link
       - label: Redacta tu contenido pensando en las plataformas móviles
-        path: /web/fundamentals/design-and-ui/content/write/
+        path: /web/fundamentals/design-and-ux/content/write/
         classname: wf-small-link
       - label: Considera usar AMP HTML
         path: https://www.ampproject.org/
@@ -135,7 +135,7 @@ landing_page:
         path: /web/fundamentals/getting-started/principles/commerce-and-conversion/
         classname: wf-small-link
       - label: Simplifica los formularios
-        path: /web/fundamentals/design-and-ui/input/forms/
+        path: /web/fundamentals/design-and-ux/input/forms/
         classname: wf-small-link
       - label: Crea diseños con una orientación flexible, que se adapte a pantallas pequeñas
         path: /web/fundamentals/getting-started/principles/#usability-and-form-factor

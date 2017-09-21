@@ -48,7 +48,7 @@ A medida que pasa el tiempo, el valor aumenta en cantidades iguales. Con el movi
 
 Independientemente de que programes tus animaciones mediante CSS o JavaScript, descubrirás que siempre existe una opción alternativa al movimiento lineal. 
 
-[Ver una animación lineal](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html){: target="_blank" .external }
+[Ver una animación lineal](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-linear.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -71,7 +71,7 @@ En las salidas lentas, la animación comienza más rápido que en las animacione
 
 Por lo general, la salida lenta es la mejor opción para las interfaces de usuario, ya que el inicio rápido proporciona a las animaciones una sensación de receptividad y, a la vez, permite una desaceleración natural al final.
 
-[Ver una animación de salida lenta](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html){: target="_blank" .external }
+[Ver una animación de salida lenta](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-out.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -96,7 +96,7 @@ Este tipo de animaciones son como una roca pesada que cae, con un comienzo lento
 
 Sin embargo, desde el punto de vista de la interacción, las entradas lentas pueden resultar inusuales debido a su final abrupto. Los objetos que se mueven en el mundo real tienden a desacelerar en lugar de simplemente detenerse de repente. Las entradas lentas también tienen el efecto perjudicial de verse demasiado lentas al comienzo, lo cual tiene un impacto negativo en la forma de percibir la receptividad de tu sitio o tu app.
 
-[Ver una animación de entrada lenta](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html){: target="_blank" .external }
+[Ver una animación de entrada lenta](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -118,7 +118,7 @@ La inclusión de entradas y salidas lentas se asemeja a un auto que acelera y de
 
 Evita que la duración de la animación sea demasiado prolongada, debido a la lentitud del inicio de la animación con una entrada lenta. Lo adecuado es normalmente algo entre 300 y 500 ms, pero el número exacto depende en gran medida del aspecto de tu proyecto. Dicho esto, debido al inicio lento, una sección intermedia rápida y un final lento, la animación tendrá un contraste mayor, lo cual podría ser bastante atractivo para los usuarios.
 
-[Ver una animación de entrada y salida lentas](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html){: target="_blank" .external }
+[Ver una animación de entrada y salida lentas](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in-out.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 

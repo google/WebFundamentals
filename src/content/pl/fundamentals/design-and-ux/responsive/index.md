@@ -252,7 +252,7 @@ Podczas definiowania punktów granicznych można kierować się klasami urządze
 
 Najpierw zaprojektuj treści tak, by pasowały do ekranu o małym rozmiarze, a potem powiększaj go, aż trzeba będzie utworzyć punkt graniczny. W ten sposób zoptymalizujesz punkty pod kątem treści i uzyskasz najmniejszą ich liczbę.
 
-Opracujmy przykład pokazany na początku &ndash; [prognozę pogody](/web/fundamentals/design-and-ui/responsive/).
+Opracujmy przykład pokazany na początku &ndash; [prognozę pogody](/web/fundamentals/design-and-ux/responsive/).
 W pierwszej kolejności postaraj się, by prognoza dobrze wyglądała na małym ekranie.
 
 <figure>

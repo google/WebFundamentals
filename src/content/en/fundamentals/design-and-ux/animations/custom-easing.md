@@ -37,7 +37,7 @@ For comparison, here are two curves: a typical ease-in-out curve and a custom cu
   </figure>
 </div>
 
-[See an animation with custom easing](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html){: target="_blank" .external }
+[See an animation with custom easing](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-custom-curve.html){: target="_blank" .external }
 
 The CSS for the custom curve is:
 
@@ -49,7 +49,7 @@ The first two numbers are the X and Y coordinates of the first control point, an
 
 Making a custom curve is a lot of fun, and it gives you significant control over the feel of the animation. For example, given the above curve, you can see that the curve resembles a classic ease-in-out curve, but with a shortened ease-in, or "getting started," portion, and an elongated slowdown at the end.
 
-Experiment with this [animation curve tool](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/curve-playground.html){: target="_blank" .external } and see how the curve affects the feel of an animation.
+Experiment with this [animation curve tool](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/curve-playground.html){: target="_blank" .external } and see how the curve affects the feel of an animation.
 
 ## Use JavaScript frameworks for more control
 
@@ -59,7 +59,7 @@ Sometimes you need even more control than a cubic Bézier curve can provide. If 
 
 One powerful framework is [GreenSock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) (or TweenLite if you want to keep things really lightweight), because you get a lot of control from it in a small JavaScript library, and it’s a very mature codebase.
 
-[See an elastic ease animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-elastic.html){: target="_blank" .external }
+[See an elastic ease animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-elastic.html){: target="_blank" .external }
 
 To use TweenMax, include this script in your page:
 

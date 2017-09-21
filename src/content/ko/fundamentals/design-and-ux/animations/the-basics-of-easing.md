@@ -48,7 +48,7 @@ easing을 사용하지 않은 애니메이션을 **선형**이라고 합니다. 
 
 애니메이션 코딩에 CSS를 사용하든 자바스크립트를 사용하든 상관없이 항상 선형 모션에 대한 옵션이 있습니다. 
 
-[선형 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html){: target="_blank" .external }
+[선형 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-linear.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -71,7 +71,7 @@ Easing out은 선형보다 더 빠르게 애니메이션을 시작하며 마지�
 
 Easing out은 빠른 시작으로 애니메이션에 반응 효과를 주면서도 마지막에 자연스러운 감속 효과를 나타내기 때문에, 일반적으로 사용자 인터페이스 작업에 가장 적합합니다.
 
-[Ease-out 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html){: target="_blank" .external }
+[Ease-out 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-out.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -96,7 +96,7 @@ Ease-in 애니메이션은 ease-out 애니메이션과 반대로 느리게 시�
 
 하지만 상호작용 관점에서 ease-in은 갑작스럽게 끝나기 때문에 약간 부자연스러운 느낌이 들 수 있습니다. 실제 세상에서 움직임은 단순히 갑자기 멈추는 것이 아니라 감속하는 경향이 있기 때문입니다. 또한 ease-in은 시작 시 굼뜨게 움직이는 듯한 잘못된 효과로 인해 사이트나 앱에서 반응 인지에 부정적 영향을 미칠 수 있습니다.
 
-[Ease-in 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html){: target="_blank" .external }
+[Ease-in 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -118,7 +118,7 @@ Easing in 및 easing out은 차량의 가속 및 감속과 유사하며, 적절�
 
 ease-in은 애니메이션을 더디게 시작하기 때문에 애니메이션 기간을 지나치게 오래 설정하지 마세요. 일반적으로 300-500ms 사이의 임의 값이 적합하지만, 정확한 값은 프로젝트의 느낌에 따라 상당히 달라집니다. 그러나 느린 시작, 빠른 중간, 느린 종료로 인해 애니메이션의 대비가 증가하여 사용자에게 만족감을 줄 수 있습니다.
 
-[Ease-in-out 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html){: target="_blank" .external }
+[Ease-in-out 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in-out.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 

@@ -28,7 +28,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 
 ### 让吸引注意力的元素前置居中
 
-通过[菜单](/web/fundamentals/design-and-ui/responsive/)或“首屏线以下空间”（网页中不向下滚动便无法看到的部分）提供二级任务。
+通过[菜单](/web/fundamentals/design-and-ux/responsive/)或“首屏线以下空间”（网页中不向下滚动便无法看到的部分）提供二级任务。
 
 
 <div class="attempt-left">
@@ -257,7 +257,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 
 ### 利用现有信息最大限度提高便利性
 
-为注册用户记忆并[预填首选项](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly)。为新用户提供熟悉的第三方结账服务。
+为注册用户记忆并[预填首选项](/web/fundamentals/design-and-ux/input/forms/#label-and-name-inputs-properly)。为新用户提供熟悉的第三方结账服务。
 
 ### 为复杂任务使用点击呼叫按钮
 
@@ -296,8 +296,8 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 
 ### 选择最简单的输入
 
-为每个情境使用最[合适的输入类型](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type)。
-使用 [`datalist`](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist) 之类的元素为字段提供建议值。
+为每个情境使用最[合适的输入类型](/web/fundamentals/design-and-ux/input/forms/choose-the-best-input-type)。
+使用 [`datalist`](/web/fundamentals/design-and-ux/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist) 之类的元素为字段提供建议值。
 
 
 
@@ -334,9 +334,9 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 
 ### 设计高效的表单
 
-充分利用[自动填充](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)，让用户能借助预填充的数据轻松填写表单。
+充分利用[自动填充](/web/fundamentals/design-and-ux/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)，让用户能借助预填充的数据轻松填写表单。
 使用已知信息预先填充字段。
-例如，在检索收货和账单地址时，尝试使用 [`requestAutocomplete`](/web/fundamentals/design-and-ui/input/forms/use-request-auto-complete)，或让用户能够将其收货地址复制到其账单地址（反之亦然）。
+例如，在检索收货和账单地址时，尝试使用 [`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)，或让用户能够将其收货地址复制到其账单地址（反之亦然）。
 
 
  
@@ -347,7 +347,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 
 ### 对您的整个网站进行移动优化
 
-使用可随用户设备的尺寸和能力而变化的[自适应布局](/web/fundamentals/design-and-ui/responsive/)。
+使用可随用户设备的尺寸和能力而变化的[自适应布局](/web/fundamentals/design-and-ux/responsive/)。
 研究参与者发现混合使用桌面和移动优化页面的网站甚至比单纯使用桌面页面的网站还要难以使用。
 
 
@@ -355,9 +355,9 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 ### 别让用户进行捏拉缩放
 
 用户对垂直滚动网站感到顺手，水平滚动则不然。
-避免使用大型、固定宽度的元素。利用 [CSS 媒体查询](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)为不同屏幕应用不同的样式。
+避免使用大型、固定宽度的元素。利用 [CSS 媒体查询](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness)为不同屏幕应用不同的样式。
 
-不要创建只能在特定[视口宽度](/web/fundamentals/design-and-ui/responsive/#set-the-viewport)下正常显示的内容。强制用户水平滚动的网站无法通过 [Google 移动易用性测试](https://search.google.com/test/mobile-friendly)，可能对其搜索排名产生不良影响。
+不要创建只能在特定[视口宽度](/web/fundamentals/design-and-ux/responsive/#set-the-viewport)下正常显示的内容。强制用户水平滚动的网站无法通过 [Google 移动易用性测试](https://search.google.com/test/mobile-friendly)，可能对其搜索排名产生不良影响。
 
 
 
@@ -375,7 +375,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
   </figure>
 </div>
 
-零售客户期望网站允许其[查看产品的高分辨率特写](/web/fundamentals/design-and-ui/media/images#make-product-images-expandable)。研究参与者对无法查看所购买的产品感到失望。
+零售客户期望网站允许其[查看产品的高分辨率特写](/web/fundamentals/design-and-ux/media/images#make-product-images-expandable)。研究参与者对无法查看所购买的产品感到失望。
 
 
 <div style="clear:both;"></div>

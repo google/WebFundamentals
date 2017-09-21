@@ -53,7 +53,7 @@ meta viewport の値 `width=device-width` を使用すると、画面の幅を�
 
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-no.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-no.html">
   <figure>
     <img src="imgs/no-vp.png" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="ビューポートを設定していないページ">
     <figcaption>
@@ -63,7 +63,7 @@ meta viewport の値 `width=device-width` を使用すると、画面の幅を�
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp.html">
   <figure>
     <img src="imgs/vp.png" srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="ビューポートを設定したページ">
     <figcaption>
@@ -119,7 +119,7 @@ CSS でページ要素の幅に絶対値の大きな値を指定すると（以�
   
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-fixed.html">
   <figure>
     <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x" alt="固定幅 344px の要素が表示された iPhone 上のページ。">
     <figcaption>
@@ -129,7 +129,7 @@ CSS でページ要素の幅に絶対値の大きな値を指定すると（以�
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-fixed.html">
   <figure>
     <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x" alt="固定幅 344px の要素が表示された Nexus 5 上のページ。">
     <figcaption>
@@ -233,7 +233,7 @@ CSS ファイルに埋め込み可能なメディアクエリを適用するに�
 以下の例で説明します。
 
 <figure>
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/media-queries.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/media-queries.html">
     <img src="imgs/mq.png" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="メディアクエリを使用してリサイズ時にプロパティを変更するページのプレビュー。">
     <figcaption>
       メディアクエリを使用してリサイズ時にプロパティを変更するページのプレビュー。
@@ -245,7 +245,7 @@ CSS ファイルに埋め込み可能なメディアクエリを適用するに�
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/media-queries.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/media-queries.html){: target="_blank" .external }
 
 * ブラウザの幅が <b>0px</b>～<b>640px</b> の場合、`max-640px.css` が適用されます。
 * ブラウザの幅が <b>500px</b>～<b>600px</b> の場合、`@media` 内のスタイルが適用されます。
@@ -326,7 +326,7 @@ Chrome 39 以降、スタイルシートに、数種類のポインターやカ�
 <figure class="attempt-right">
   <img src="imgs/weather-1.png" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-1.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-1.html">
       小さい画面に表示された天気予報のプレビュー。
 </a>
   </figcaption>
@@ -346,7 +346,7 @@ Chrome 39 以降、スタイルシートに、数種類のポインターやカ�
 <figure class="attempt-right">
   <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="ページ幅を広げたときの天気予報のプレビュー。">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-1.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-1.html">
       ページ幅を広げたときの天気予報のプレビュー。
 </a>
   </figcaption>
@@ -365,12 +365,12 @@ Chrome 39 以降、スタイルシートに、数種類のポインターやカ�
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-2.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-2.html){: target="_blank" .external }
 
 <figure class="attempt-right">
   <img src="imgs/weather-3.png"  srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="広い画面用にデザインされた天気予報のプレビュー。">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-2.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-2.html">
       広い画面用にデザインされた天気予報のプレビュー。
 </a>
   </figcaption>
@@ -455,7 +455,7 @@ Chrome 39 以降、スタイルシートに、数種類のポインターやカ�
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/reading.html" region_tag="mqreading" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/reading.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/reading.html){: target="_blank" .external }
 
 ###  コンテンツを完全に非表示にしないようにする
 

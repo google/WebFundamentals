@@ -40,7 +40,7 @@ que geralmente exige apenas um ponto de interrupção entre telas pequenas e tel
 grandes.
 
 <img src="imgs/mostly-fluid.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/mostly-fluid.html" class="button button-primary">Experimente</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/mostly-fluid.html" class="button button-primary">Experimente</a>
 
 Na visualização menor, cada conteúdo `div` é empilhado verticalmente.  Quando a largura da
 tela atinge 600 pixels, o conteúdo principal `div` permanece em `width: 100%`, enquanto o
@@ -67,7 +67,7 @@ pontos de interrupção para esse padrão de layout depende do conteúdo e varia
 o design.
 
 <img src="imgs/column-drop.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/column-drop.html" class="button button-primary">Experimente</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/column-drop.html" class="button button-primary">Experimente</a>
 
 Como no exemplo do padrão mostly fluid, o conteúdo é empilhado verticalmente na menor
 visualização, mas, conforme a tela se expande além de 600 pixels, o 
@@ -95,7 +95,7 @@ ponto de interrupção principal, é mais complexo de se manter e provavelmente 
 dentro dos elementos, não apenas no layout de conteúdo geral.
 
 <img src="imgs/layout-shifter.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/layout-shifter.html" class="button button-primary">Experimente</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/layout-shifter.html" class="button button-primary">Experimente</a>
 
 Este exemplo simplificado mostra o padrão layout shifter. O conteúdo é empilhado verticalmente
 em telas menores, mas muda significantemente conforme a tela 
@@ -120,7 +120,7 @@ da fonte, redimensionar imagens ou mover ligeiramente o conteúdo.
 Isso funciona bem em layouts de coluna única, como sites de uma página linear e artigos com muito texto.
 
 <img src="imgs/tiny-tweaks.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/tiny-tweaks.html" class="button button-primary">Experimente</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/tiny-tweaks.html" class="button button-primary">Experimente</a>
 
 Como o nome em inglês implica, pouco muda no exemplo conforme o tamanho da tela muda.
 Enquanto a largura da tela aumenta, o tamanho da fonte e o preenchimento a acompanham.
@@ -143,7 +143,7 @@ quando o tamanho da tela for suficiente. Em telas menores,
 o conteúdo pode ser visto com apenas um clique.
 
 <img src="imgs/off-canvas.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/off-canvas.html" class="button button-primary">Experimente</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/off-canvas.html" class="button button-primary">Experimente</a>
 
 Em vez de empilhar conteúdo verticalmente, este exemplo usa uma declaração `transform: translate(-250px, 0)` para ocultar dois `div` de conteúdo da tela.  O JavaScript é usado
 para mostrar os divs adicionando uma classe aberta ao elemento para torná-lo visível.  Conforme a

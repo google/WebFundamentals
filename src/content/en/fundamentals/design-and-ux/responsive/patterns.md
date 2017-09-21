@@ -40,7 +40,7 @@ that it usually only requires one breakpoint between small screens and large
 screens.
 
 <img src="imgs/mostly-fluid.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/mostly-fluid.html" class="button button-primary">Try it</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/mostly-fluid.html" class="button button-primary">Try it</a>
 
 In the smallest view, each content `div` is stacked vertically.  When the screen
 width hits 600px, the primary content `div` remains at `width: 100%`, while the
@@ -67,7 +67,7 @@ breakpoints for this layout pattern is dependent on the content and changes
 for each design.
 
 <img src="imgs/column-drop.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/column-drop.html" class="button button-primary">Try it</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/column-drop.html" class="button button-primary">Try it</a>
 
 Like the mostly fluid sample, content is stacked vertically in the smallest
 view, but as the screen expands beyond 600px, the primary and secondary content
@@ -95,7 +95,7 @@ major breakpoint, it is more complex to maintain and likely involves changes
 within elements, not just overall content layout.
 
 <img src="imgs/layout-shifter.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/layout-shifter.html" class="button button-primary">Try it</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/layout-shifter.html" class="button button-primary">Try it</a>
 
 This simplified example shows the layout shifter pattern, on smaller screens
 content is stacked vertically, but changes significantly as the screen becomes
@@ -120,7 +120,7 @@ size, resizing images, or moving content around in very minor ways.
 It works well on single column layouts such as one page linear websites and text-heavy articles.
 
 <img src="imgs/tiny-tweaks.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/tiny-tweaks.html" class="button button-primary">Try it</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/tiny-tweaks.html" class="button button-primary">Try it</a>
 
 As its name implies, not much changes with this sample as the screen size changes.
 As the screen width gets larger, so do the font size and padding.
@@ -143,7 +143,7 @@ showing it when the screen size is large enough, and on smaller screens,
 content is only a click away.
 
 <img src="imgs/off-canvas.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/off-canvas.html" class="button button-primary">Try it</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/off-canvas.html" class="button button-primary">Try it</a>
 
 Rather than stacking content vertically, this sample uses a `transform: translate(-250px, 0)` declaration to hide two of the content `div`s off screen.  JavaScript is used
 to show the divs by adding an open class to the element to make visible.  As the

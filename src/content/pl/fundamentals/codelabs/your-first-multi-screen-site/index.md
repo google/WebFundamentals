@@ -283,7 +283,7 @@ Projekt zaczyna wyglądać źle przy szerokości około 600&nbsp;pikseli. W nasz
   </p>
 </video>
 
-600&nbsp;pikseli to dobre miejsce na pierwszy punkt graniczny, który pozwala nam zmienić położenie elementów, by lepiej pasowały do ekranu. Możemy do tego użyć technologii nazywanej [zapytaniami o media](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
+600&nbsp;pikseli to dobre miejsce na pierwszy punkt graniczny, który pozwala nam zmienić położenie elementów, by lepiej pasowały do ekranu. Możemy do tego użyć technologii nazywanej [zapytaniami o media](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness).
 
 
     @media (min-width: 600px) {

@@ -40,7 +40,7 @@ description: モバイルでのフォーム入力は大変な作業です。最�
 </figcaption>
 </figure>
 
-フォームに繰り返しのアクションがないことを確認し、フィールドの使用は必要最低限にとどめてください。[自動入力](/web/fundamentals/design-and-ui/input/forms/#use-metadata-to-enable-auto-complete)を活用すると、あらかじめデータが設定されるため、ユーザーは簡単にフォームの入力を完了できます。
+フォームに繰り返しのアクションがないことを確認し、フィールドの使用は必要最低限にとどめてください。[自動入力](/web/fundamentals/design-and-ux/input/forms/#use-metadata-to-enable-auto-complete)を活用すると、あらかじめデータが設定されるため、ユーザーは簡単にフォームの入力を完了できます。
 
 
 
@@ -241,7 +241,7 @@ Warning: 入力タイプを選択する際は、ローカライズについて�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 注:  <code>datalist</code> の値は候補として表示されますが、ユーザーは提示された内容以外も入力できます。
 
@@ -267,7 +267,7 @@ Warning: 入力タイプを選択する際は、ローカライズについて�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ###  ラベルのサイズと配置
 
@@ -313,7 +313,7 @@ Warning: プレースホルダは、ユーザーが要素に入力を始める�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 
@@ -639,7 +639,7 @@ Google のホームページなどのフォームで、ユーザーが特定の�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ###  無効なフォームの送信禁止
 
@@ -651,7 +651,7 @@ Google のホームページなどのフォームで、ユーザーが特定の�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ###  フィードバックのリアルタイム表示
 
@@ -704,7 +704,7 @@ Google のホームページなどのフォームで、ユーザーが特定の�
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 ポイント: 問題点は 1 つずつ表示せずに、フォーム上のすべての問題をまとめてユーザーに表示してください。

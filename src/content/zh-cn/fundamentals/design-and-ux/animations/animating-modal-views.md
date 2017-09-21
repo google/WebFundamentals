@@ -13,7 +13,7 @@ description:了解如何为应用中的模态视图设置动画。
   <figure>
     <img src="images/dont-press.gif" alt="给模态视图设置动画。" />
     <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html" target="_blank" class="external">试一下</a>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/modal-view-animation.html" target="_blank" class="external">试一下</a>
     </figcaption>
   </figure>
 </div>

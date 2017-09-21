@@ -37,7 +37,7 @@ A modo de comparación, presentamos dos curvas: una típica de entrada y salida 
   </figure>
 </div>
 
-[Ver una animación con aceleración personalizada](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html){: target="_blank" .external }
+[Ver una animación con aceleración personalizada](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-custom-curve.html){: target="_blank" .external }
 
 La CSS para la curva personalizada es la siguiente:
 
@@ -49,7 +49,7 @@ Los dos primeros números son las coordenadas X e Y del primer punto de control;
 
 Crear una curva personalizada es una tarea divertida y te proporciona mucho control sobre el aspecto de la animación. Por ejemplo, si analizas la curva que se muestra anteriormente, podrás ver que es similar a una curva clásica de entrada y salida lentas, pero con una entrada lenta abreviada, o una porción de “comenzar”, y una reducción de velocidad más larga al final.
 
-Experimenta con esta [herramienta de curvas de animación](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/curve-playground.html){: target="_blank" .external } y mira cómo la curva afecta la apariencia de la animación.
+Experimenta con esta [herramienta de curvas de animación](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/curve-playground.html){: target="_blank" .external } y mira cómo la curva afecta la apariencia de la animación.
 
 ## Uso de frameworks de JavaScript para tener más control
 
@@ -59,7 +59,7 @@ En algunos casos, necesitas tener incluso más control que el que puede proporci
 
 Un framework potente es [TweenMax de Greensock](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) (o TweenLite, si deseas que todo sea más liviano), ya que de este modo puedes tener mucho control en una pequeña biblioteca de JavaScript y este es un código base muy evolucionado.
 
-[Ver una animación de aceleración elástica](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-elastic.html){: target="_blank" .external }
+[Ver una animación de aceleración elástica](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-elastic.html){: target="_blank" .external }
 
 Para usar TweenMax, incluye la siguiente secuencia de comandos en tu página:
 

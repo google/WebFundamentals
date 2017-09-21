@@ -61,7 +61,7 @@ The benefits of making your website responsive are:
 
 <div style="clear:both;"></div>
   
-Learn to build websites with responsive web design at [Responsive Web Design Basics](/web/fundamentals/design-and-ui/responsive/).
+Learn to build websites with responsive web design at [Responsive Web Design Basics](/web/fundamentals/design-and-ux/responsive/).
 
 ### Use `link[rel=canonical]` and `link[rel=alternate]` when serving separate URLs
 

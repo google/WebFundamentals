@@ -370,7 +370,7 @@ kita ingin mengubahnya.
 
 600 px tampaknya adalah tempat yang bagus untuk membuat breakpoint pertama kita karena akan 
 memberi kita cakupan untuk memosisikan ulang elemen agar mereka sesuai dengan layar.
-Kita bisa melakukannya dengan menggunakan teknologi yang disebut [Kueri Media](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries).
+Kita bisa melakukannya dengan menggunakan teknologi yang disebut [Kueri Media](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries).
 
     @media (min-width: 600px) {
     

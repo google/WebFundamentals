@@ -61,7 +61,7 @@ Os benefícios de tornar o seu site responsivo são:
 
 <div style="clear:both;"></div>
   
-Aprenda a criar sites com design web responsivo em [Conceitos básicos do design web responsivo](/web/fundamentals/design-and-ui/responsive/).
+Aprenda a criar sites com design web responsivo em [Conceitos básicos do design web responsivo](/web/fundamentals/design-and-ux/responsive/).
 
 ### Use `link[rel=canonical]` e `link[rel=alternate]` para fornecer URLs diferentes
 

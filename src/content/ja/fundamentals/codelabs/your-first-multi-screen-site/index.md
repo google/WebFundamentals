@@ -347,7 +347,7 @@ Chris Wilson、Peter Lubbers、Sean Bennet の写真を使用します。
   </p>
 </video>
 
-600px は画面に合うよう要素を再配置する機会になることから、最初のブレークポイントの作成に適したサイズだと言えます。ブレークポイントは、[メディアクエリ](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)という機能を使用することで作成できます。
+600px は画面に合うよう要素を再配置する機会になることから、最初のブレークポイントの作成に適したサイズだと言えます。ブレークポイントは、[メディアクエリ](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)という機能を使用することで作成できます。
 
     @media (min-width: 600px) {
     

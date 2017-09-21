@@ -61,7 +61,7 @@ Beneficios de un sitio web adaptable:
 
 <div style="clear:both;"></div>
   
-Aprende a compilar sitios web con diseño web adaptable en [Aspectos básicos del diseño web adaptable](/web/fundamentals/design-and-ui/responsive/).
+Aprende a compilar sitios web con diseño web adaptable en [Aspectos básicos del diseño web adaptable](/web/fundamentals/design-and-ux/responsive/).
 
 ### Usa `link[rel=canonical]` y `link[rel=alternate]` al enviar URL separadas
 

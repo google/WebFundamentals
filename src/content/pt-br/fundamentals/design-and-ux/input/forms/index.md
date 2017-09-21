@@ -42,7 +42,7 @@ Crie formulários eficientes evitando ações repetidas, perguntando apenas o ne
 
 Certifique-se de que seus formulários não tenham ações repetidas e apenas a quantidade necessária de campos 
 e tire proveito do 
-[preenchimento automático](/web/fundamentals/design-and-ui/input/forms/#use-metadata-to-enable-auto-complete),
+[preenchimento automático](/web/fundamentals/design-and-ux/input/forms/#use-metadata-to-enable-auto-complete),
 para que o usuário possa facilmente preencher os formulários com dados sugeridos.
 
 Busque oportunidades de sugerir informações já conhecidas ou que podem 
@@ -241,7 +241,7 @@ listas, o elemento `datalist` fornece dicas conforme o usuário digita.
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 Observação: Os valores  <code>datalist</code> são fornecidos como sugestões e o usuário não fica restrito às sugestões fornecidas.
 
@@ -269,7 +269,7 @@ o foco no elemento de entrada.
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### Posicionamento e dimensionamento do rótulo
 
@@ -318,7 +318,7 @@ o nome do usuário, endereço de e-mail e telefone, você deve usar:
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 
@@ -657,7 +657,7 @@ adequada.  Por exemplo:
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### Impeça o envio de formulários inválidos
 
@@ -669,7 +669,7 @@ no elemento form para determinar se o formulário é válido.  Por exemplo:
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 ### Mostre feedback em tempo real
 
@@ -725,7 +725,7 @@ JavaScript para mostrar o estilo inválido apenas quando o usuário já tiver vi
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
 Success: Mostre ao usuário todos os problemas no formulário de uma vez em vez de um a um.

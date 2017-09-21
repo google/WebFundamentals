@@ -61,7 +61,7 @@ description: ウェブサイトには、人間だけでなく、検索エンジ�
 
 <div style="clear:both;"></div>
   
-レスポンシブ ウェブデザインを採用したウェブサイトの構築方法については、[レスポンシブ ウェブデザインの基本](/web/fundamentals/design-and-ui/responsive/)をご覧ください。
+レスポンシブ ウェブデザインを採用したウェブサイトの構築方法については、[レスポンシブ ウェブデザインの基本](/web/fundamentals/design-and-ux/responsive/)をご覧ください。
 
 ###  各 URL での配信に `link[rel=canonical]` と `link[rel=alternate]` を使用する
 

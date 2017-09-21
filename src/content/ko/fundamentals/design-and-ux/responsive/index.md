@@ -61,7 +61,7 @@ meta viewport 값 `width=device-width`를 사용하면 기기 독립적 픽셀�
 화면 크기에 맞게 페이지의 콘텐츠를 재배치할 수 있습니다.
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-no.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-no.html">
   <figure>
     <img src="imgs/no-vp.png" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="뷰포트 세트가 없는 페이지">
     <figcaption>
@@ -71,7 +71,7 @@ meta viewport 값 `width=device-width`를 사용하면 기기 독립적 픽셀�
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp.html">
   <figure>
     <img src="imgs/vp.png" srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="뷰포트 세트가 있는 페이지">
     <figcaption>
@@ -129,7 +129,7 @@ CSS 픽셀에서 화면 크기와 너비는 기기마다 크게 다르므로(예
 주의를 기울이세요.  
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-fixed.html">
   <figure>
     <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x" alt="iPhone에서 344px 고정 너비 요소가 있는 페이지.">
     <figcaption>
@@ -139,7 +139,7 @@ CSS 픽셀에서 화면 크기와 너비는 기기마다 크게 다르므로(예
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/vp-fixed.html">
   <figure>
     <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x" alt="Nexus 5에서 344px 고정 너비 요소가 있는 페이지.">
     <figcaption>
@@ -243,7 +243,7 @@ CSS 픽셀에서 화면 크기와 너비는 기기마다 크게 다르므로(예
 예시를 살펴봅시다.
 
 <figure>
-  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/media-queries.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/media-queries.html">
     <img src="imgs/mq.png" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="페이지의 크기가 조정될 때, 속성 변경을 위해 미디어 쿼리를 사용하는 페이지의 미리보기">
     <figcaption>
       페이지의 크기가 조정될 때, 속성 변경을 위해 미디어 쿼리를 사용하는 페이지의 미리보기
@@ -255,7 +255,7 @@ CSS 픽셀에서 화면 크기와 너비는 기기마다 크게 다르므로(예
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/media-queries.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/media-queries.html){: target="_blank" .external }
 
 * 브라우저 너비가 <b>0px</b> - <b>640px</b> 사이인 경우, `max-640px.css`가 적용됩니다.
 * 브라우저 너비가 <b>500px</b> - <b>600px</b> 사이인 경우, `@media` 내의 스타일이 적용됩니다.
@@ -338,7 +338,7 @@ iPhone, 342px 너비의 Blackberry Z10
 <figure class="attempt-right">
   <img src="imgs/weather-1.png" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-1.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-1.html">
       작은 화면에 표시된 날씨 예보의 미리보기
     </a>
   </figcaption>
@@ -358,7 +358,7 @@ iPhone, 342px 너비의 Blackberry Z10
 <figure class="attempt-right">
   <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="페이지가 더 넓어진 날씨 예보의 미리보기">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-1.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-1.html">
       페이지가 더 넓어진 날씨 예보의 미리보기
     </a>
   </figcaption>
@@ -377,12 +377,12 @@ iPhone, 342px 너비의 Blackberry Z10
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-2.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-2.html){: target="_blank" .external }
 
 <figure class="attempt-right">
   <img src="imgs/weather-3.png"  srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="더 넓은 화면용으로 디자인된 날씨 예보의 미리보기">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-2.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/weather-2.html">
       더 넓은 화면용으로 디자인된 날씨 예보의 미리보기
     </a>
   </figcaption>
@@ -471,7 +471,7 @@ iPhone, 342px 너비의 Blackberry Z10
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/reading.html" region_tag="mqreading" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/reading.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/reading.html){: target="_blank" .external }
 
 ### 콘텐츠를 완전히 숨기지 마세요
 

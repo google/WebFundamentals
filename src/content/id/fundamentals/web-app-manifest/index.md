@@ -217,7 +217,7 @@ secara selektif. Pengguna lebih suka memilih orientasi.
 
 Chrome memperkenalkan konsep warna tema untuk situs Anda pada tahun 2014. Warna tema
 merupakan petunjuk dari laman web yang memberi tahu browser tentang warna yang dipakai untuk mewarnai
-[elemen UI seperti bilah alamat](/web/fundamentals/design-and-ui/browser-customization/).  
+[elemen UI seperti bilah alamat](/web/fundamentals/design-and-ux/browser-customization/).  
 
 Tanpa manifes, Anda harus menentukan warna tema pada setiap laman, dan jika 
 Anda memiliki situs yang besar atau situs lawas, membuat perubahan ke seluruh situs bukan pekerjaan yang mudah.

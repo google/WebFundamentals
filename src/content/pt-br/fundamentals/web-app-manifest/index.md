@@ -217,7 +217,7 @@ de forma seletiva. Os usuários preferem selecionar a orientação
 
 O Chrome introduziu o conceito de uma cor de tema para seu site em 2014. A cor de tema
 é uma dica da sua página da Web que informa o navegador qual cor usar para os
-[elementos da IU, como a barra de endereços](/web/fundamentals/design-and-ui/browser-customization/).  
+[elementos da IU, como a barra de endereços](/web/fundamentals/design-and-ux/browser-customization/).  
 
 Sem um manifesto, você precisará definir a cor de tema em cada página e, se 
 tiver um site grande ou legado, não é viável fazer muitas alterações que englobem todo o site.

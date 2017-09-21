@@ -194,7 +194,7 @@ Een goed voorbeeld van uitbreidbare afbeeldingen waarop gebruikers kunnen tikken
 
 De [techniek voor afbeeldingscompressie](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) zorgt voor sterk gecomprimeerde 2x afbeeldingen op alle apparaten, ongeacht de feitelijke mogelijkheden van het apparaat. Afhankelijk van het type afbeelding en het compressieniveau, lijkt de afbeeldingskwaliteit misschien niet te veranderen, maar de bestandsgrootte wordt wel veel kleiner.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html">Voorbeeld bekijken</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/compressive.html">Voorbeeld bekijken</a>
 
 
 Note: Ga verstandig om met de compressietechniek omdat deze hogere geheugen- en decoderingskosten met zich meebrengt. Het aanpassen van het formaat van grote afbeeldingen zodat ze op een kleiner scherm passen is duur en kan vooral op low-end apparaten lastig zijn omdat zowel het geheugen als de verwerkingsmogelijkheden hierop beperkt zijn.
@@ -382,7 +382,7 @@ Er zijn verschillende tools beschikbaar die verdere, lossless compressie op `JPG
 
 CSS spriting is een techniek waarbij een aantal afbeeldingen wordt gecombineerd in een enkele `sprite sheet`-afbeelding. Afzonderlijke afbeeldingen kunnen vervolgens worden gebruikt door de achtergrondafbeelding op te geven voor een element (het spritesheet) plus een offset om het juiste onderdeel weer te geven.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Afbeeldingsspritesheet gebruikt in voorbeeld"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Afbeeldingsspritesheet gebruikt in voorbeeld"></a>
 
 <pre class="prettyprint">
 {% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" %}

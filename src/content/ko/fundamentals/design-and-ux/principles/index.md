@@ -30,7 +30,7 @@ Success: 모바일 홈 페이지에서 사용자와 원하는 콘텐츠를 연�
 
 ### 콜투액션을 앞쪽과 중앙에 유지하세요
 
-보조 작업은 [메뉴](/web/fundamentals/design-and-ui/responsive/)
+보조 작업은 [메뉴](/web/fundamentals/design-and-ux/responsive/)
 또는 “하단부”(아래로 스크롤해야만 볼 수 있는 웹페이지 부분)를 통해 사용할 수 있도록 하세요.
 
 <div class="attempt-left">
@@ -265,7 +265,7 @@ Success: 여러분의 고객 여정을 이해하고 사용자가 자신의 조�
 
 등록된 사용자의 경우
 [기본 설정을 미리
-채우세요](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly). 신규 사용자에게는 친근한 타사 결제 서비스를 제공하세요.
+채우세요](/web/fundamentals/design-and-ux/input/forms/#label-and-name-inputs-properly). 신규 사용자에게는 친근한 타사 결제 서비스를 제공하세요.
 
 ### 복잡한 작업에는 클릭투콜 버튼을 사용하세요
 
@@ -306,8 +306,8 @@ Success: 사용 가능한 양식으로 매끄럽고 원활한 전환 경험을 �
 
 ### 가장 간단한 입력을 선택
 
-각 시나리오에 대해 [가장 적절한 입력 유형](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type)을
-사용하세요. [`datalist`](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist)와
+각 시나리오에 대해 [가장 적절한 입력 유형](/web/fundamentals/design-and-ux/input/forms/choose-the-best-input-type)을
+사용하세요. [`datalist`](/web/fundamentals/design-and-ux/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist)와
 같은 요소를
 사용하여 제안 값을 필드에 제공하세요.
 
@@ -344,11 +344,11 @@ Success: 사용 가능한 양식으로 매끄럽고 원활한 전환 경험을 �
 
 ### 효과적인 양식 디자인
 
-[자동완성](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)을
+[자동완성](/web/fundamentals/design-and-ux/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)을
 활용하면, 미리 채워진 데이터로 사용자가 쉽게 양식을 작성할 수 있습니다. 이미
 알고 있는 정보로 필드를 미리 채우세요. 예를 들어, 배송 주소 및 청구지 주소를
 검색할 경우,
-[`requestAutocomplete`](/web/fundamentals/design-and-ui/input/forms/use-request-auto-complete)를 사용하거나,
+[`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)를 사용하거나,
 사용자가 배송 주소를 청구지 주소에 복사할 수 있도록 하세요(그 반대도 마찬가지). 
 
 ## 사용성 및 폼 팩터
@@ -357,7 +357,7 @@ Success: 경험을 향상시켜주는 사소한 것으로 모바일 사용자를
 
 ### 전체 사이트를 모바일에 최적화
 
-사용자 기기의 크기와 성능에 따라 변화하는 [반응형 레이아웃](/web/fundamentals/design-and-ui/responsive/)을
+사용자 기기의 크기와 성능에 따라 변화하는 [반응형 레이아웃](/web/fundamentals/design-and-ux/responsive/)을
 사용하세요. 연구
 참가자들에 따르면 데스크톱과 모바일에 최적화된 페이지가 함께 있는
 사이트는 데스크톱 전용 사이트에 비해 더 사용이 어렵다고 합니다.
@@ -366,9 +366,9 @@ Success: 경험을 향상시켜주는 사소한 것으로 모바일 사용자를
 
 사용자는 사이트에서 가로가 아닌 세로 스크롤을 좋아합니다.
 크기가 큰 고정 너비 요소를 피하세요. 다른
-화면에 다른 스타일을 적용하려면 [CSS 미디어 쿼리](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)를
+화면에 다른 스타일을 적용하려면 [CSS 미디어 쿼리](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness)를
 사용하세요. 특정
-[뷰포트 너비](/web/fundamentals/design-and-ui/responsive/#set-the-viewport)로만
+[뷰포트 너비](/web/fundamentals/design-and-ux/responsive/#set-the-viewport)로만
 잘 표시되는 콘텐츠는 만들지 마세요.
 사용자에게 가로 스크롤을 강제하는 사이트는 [Google 모바일 친화성 테스트](https://search.google.com/test/mobile-friendly)를
 통과하지 못하며, 이는 사이트의 검색
@@ -386,7 +386,7 @@ Success: 경험을 향상시켜주는 사소한 것으로 모바일 사용자를
 </div>
 
 소매 고객들은 사이트에서 상품을
-[고해상도로 확대해서 보기](/web/fundamentals/design-and-ui/media/images#make-product-images-expandable)를
+[고해상도로 확대해서 보기](/web/fundamentals/design-and-ux/media/images#make-product-images-expandable)를
 원합니다. 연구 참가자들은 구매 중인 상품을 볼 수 없을 때
 실망했습니다.
 

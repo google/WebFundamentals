@@ -278,7 +278,7 @@ La conception commence à se dégrader visuellement à partir d'une largeur appr
   </p>
 </video>
 
-'600 pixels' semble être la valeur idéale pour créer notre premier point de rupture. Cette valeur nous donne l'étendue nécessaire pour repositionner les éléments afin de mieux les adapter à l'écran. Pour ce faire, nous allons utiliser une technologie appelée [Requêtes média](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
+'600 pixels' semble être la valeur idéale pour créer notre premier point de rupture. Cette valeur nous donne l'étendue nécessaire pour repositionner les éléments afin de mieux les adapter à l'écran. Pour ce faire, nous allons utiliser une technologie appelée [Requêtes média](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness).
 
 
     @media (min-width: 600px) {

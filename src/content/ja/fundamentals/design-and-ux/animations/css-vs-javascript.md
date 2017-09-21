@@ -54,7 +54,7 @@ X 軸と Y 軸の両方に対して、要素を 100 ピクセルずつ動かす 
       transform: translate(100px, 100px);
     }
     
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-simple.html){: target="_blank" .external }
 
 遷移の継続時間のほかに、「イージング」のオプションもあります。基本的に、アニメーションの印象はイージングによって決まります。イージングについての詳細は、[イージングの基本](the-basics-of-easing)のガイドを参照してください。
 
@@ -128,7 +128,7 @@ CSS 遷移のほかに、CSS アニメーションも使用できます。これ
     }
     
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-keyframes.html){: target="_blank" .external }
 
 CSS アニメーションでは、ターゲット要素とは別にアニメーション自体を定義し、アニメーション名プロパティを使用して必要なアニメーションを選択します。
 
@@ -153,7 +153,7 @@ JavaScript アニメーションは、コードの一部としてインライン
 
 デフォルトでは、ウェブ アニメーションは要素の体裁のみを変更します。オブジェクトを移動先の位置に保持したい場合は、サンプルのように、アニメーションが完了したときにその基盤となるスタイルを変更する必要があります。
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-wa.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-wa.html){: target="_blank" .external }
 
 Web Animations API は、W3C の新しい標準です。Chrome と Opera ではネイティブでサポートされており、[Firefox 向けの API は積極的に開発中です](https://birtles.github.io/areweanimatedyet/){: .external }。その他の最新ブラウザについては、[Polyfill を利用できます](https://github.com/web-animations/web-animations-js)。
 

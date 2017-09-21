@@ -40,7 +40,7 @@ bahwa pola ini biasanya hanya membutuhkan satu breakpoint antara layar kecil dan
 besar.
 
 <img src="imgs/mostly-fluid.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/mostly-fluid.html" class="button button-primary">Cobalah</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/mostly-fluid.html" class="button button-primary">Cobalah</a>
 
 Pada tampilan terkecil, masing-masing `div` materi ditumpuk secara vertikal.  Saat lebar
 layar menyentuh 600 px, materi `div` utama tetap berukuran `width: 100%`, sedangkan
@@ -67,7 +67,7 @@ breakpoint untuk pola layout ini bergantung pada materi dan berubah
 untuk setiap desain.
 
 <img src="imgs/column-drop.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/column-drop.html" class="button button-primary">Cobalah</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/column-drop.html" class="button button-primary">Cobalah</a>
 
 Seperti kebanyakan contoh fluid, materi ditumpuk secara vertikal pada tampilan
 terkecil, namun ketika layar diluaskan melebihi 600px, materi
@@ -95,7 +95,7 @@ breakpoint utama, itu lebih kompleks untuk mempertahankan dan mungkin melibatkan
 dalam elemen, bukan hanya layout materi secara keseluruhan.
 
 <img src="imgs/layout-shifter.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/layout-shifter.html" class="button button-primary">Cobalah</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/layout-shifter.html" class="button button-primary">Cobalah</a>
 
 Contoh yang disederhanakan ini menunjukkan pola layout shifter, pada layar yang lebih kecil
 materi ditumpuk secara vertikal, namun berubah secara signifikan ketika layar semakin
@@ -120,7 +120,7 @@ font, mengubah ukuran gambar atau memindahkan materi dengan sangat kecil.
 Ini bekerja dengan baik pada layout kolom tunggal seperti situs web linear laman tunggal dan artikel yang mengandung banyak teks.
 
 <img src="imgs/tiny-tweaks.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/tiny-tweaks.html" class="button button-primary">Cobalah</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/tiny-tweaks.html" class="button button-primary">Cobalah</a>
 
 Sesuai dengan namanya, tidak banyak perubahan yang dilakukan dengan contoh ini ketika ukuran layar berubah.
 Ketika lebar layar bertambah besar, begitu juga ukuran font dan pengisi.
@@ -143,7 +143,7 @@ menampilkannya ketika ukuran layar cukup besar, pada layar yang lebih kecil,
 materi hanya satu klik jauhnya.
 
 <img src="imgs/off-canvas.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/off-canvas.html" class="button button-primary">Cobalah</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/off-canvas.html" class="button button-primary">Cobalah</a>
 
 Bukannya menumpuk materi secara vertikal, contoh ini menggunakan deklarasi `transform: translate(-250px, 0)` untuk menyembunyikan dua `div` materi dari layar.  JavaScript digunakan
 untuk menampilkan div dengan menambahkan kelas terbuka ke elemen untuk membuatnya terlihat.  Ketika

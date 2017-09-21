@@ -152,7 +152,7 @@ Dogfood：`picture` 元素刚开始在浏览器上实现。虽然目前还不是
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/media.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/media.html){: target="_blank" .external }
 
 上面的例子中，如果浏览器宽度至少为 800px，则将根据设备分辨率使用 `head.jpg` 或 `head-2x.jpg`。如果浏览器宽度在 450px 和 800px 之间，则将根据设备分辨率使用 `head-small.jpg` 或 `head-small-2x.jpg`。对于屏幕宽度小于 450px，且不支持 `picture` 元素向后兼容的情况，浏览器将渲染 `img` 元素，因此要始终包含该元素。
 
@@ -178,7 +178,7 @@ Dogfood：`picture` 元素刚开始在浏览器上实现。虽然目前还不是
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/sizes.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/sizes.html){: target="_blank" .external }
 
 
 在上面的例子中，渲染了一张宽度为视口宽度一半 (`sizes="50vw"`) 的图像，根据浏览器的宽度及其设备像素比，允许浏览器选择正确的图像，而不考虑浏览器窗口有多大。例如，下面的表格显示了浏览器会选择哪张图像：
@@ -245,7 +245,7 @@ Dogfood：`picture` 元素刚开始在浏览器上实现。虽然目前还不是
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/breakpoints.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/breakpoints.html){: target="_blank" .external }
 
 上面例子中的 `sizes` 属性使用多个媒体查询来指定图片尺寸。
 当浏览器宽度大于 600px 时，图像占据视口宽度的 25%，浏览器宽度在 500px 到 600px 之间时，图像占据视口宽度的 50%，如果低于 500px，图像为全宽。
@@ -281,7 +281,7 @@ J. Crew 网站提供了一个很好的可点按、可展开图像的例子。一
 
 
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/compressive.html){: target="_blank" .external }
 
 注意：请慎用压缩技术，因为它需要增加内存和解码成本。在内存和处理能力有限的低端设备上，调整大图像以适应较小屏幕的开销非常大，并且费时费力。
 
@@ -450,7 +450,7 @@ CSS `background` 属性是一个用于为元素添加复杂图像的工具，功
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/conditional-mq.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/conditional-mq.html){: target="_blank" .external }
 
 ### 使用 image-set 提供高分辨率图像
 
@@ -478,7 +478,7 @@ CSS 中的 `image-set()` 函数增强了 `background` 属性的行为，使它�
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-set.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/image-set.html){: target="_blank" .external }
 
 上例中，会在支持 image-set 的浏览器中加载合适的资产，否则将改为加载 1x 资产。
 需要特别注意的是，支持 `image-set()` 的浏览器非常少，大部分浏览器会加载 1x 资产。
@@ -507,7 +507,7 @@ Chrome、Firefox 和 Opera 都支持标准的 `(min-resolution: 2dppx)`，Safari
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/media-query-dppx.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/media-query-dppx.html){: target="_blank" .external }
 
 您也可以使用 min-width 语法根据视口大小显示备用图像。
 此方法的好处是，如果媒体查询不匹配，则图像不会被下载。
@@ -571,14 +571,14 @@ SVG 的优势比光栅图像多很多：
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-svg.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-svg.html){: target="_blank" .external }
 
 ### 谨慎使用图标字体
 
 <figure class="attempt-right">
   <img src="img/icon-fonts.png" class="center" srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x" alt="使用 FontAwesome 作为其图标字体的页面示例。">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-font.html" target="_blank" class="external">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-font.html" target="_blank" class="external">
       使用 FontAwesome 作为其图标字体的页面示例。
     </a>
   </figcaption>
@@ -600,7 +600,7 @@ SVG 的优势比光栅图像多很多：
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-font.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-font.html){: target="_blank" .external }
 
 免费及收费的图标字体有数百种，包括 [Font Awesome](https://fortawesome.github.io/Font-Awesome/)、[Pictos](http://pictos.cc/){: .external } 和 [Glyphicons](https://glyphicons.com/)。
 
@@ -684,7 +684,7 @@ CSS 精灵是一项技术，可将许多图像合并到一个“精灵表”图�
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media//image-sprite.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media//image-sprite.html){: target="_blank" .external }
 
 精灵化的好处是，减少了读取多张图像所需的下载数量，而且能保持启用缓存。
 

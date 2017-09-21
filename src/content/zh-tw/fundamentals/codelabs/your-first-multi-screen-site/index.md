@@ -311,7 +311,7 @@ Note: 樣式以後還會來
   </p>
 </video>
 
-對我們來說，600px 看來很適合建立第一個中斷點，因為我們可以藉此獲得理想範圍重新安排各項元素，以便更加符合螢幕大小。我們可以透過名為 [Media Queries](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)的技術輕鬆完成修正。
+對我們來說，600px 看來很適合建立第一個中斷點，因為我們可以藉此獲得理想範圍重新安排各項元素，以便更加符合螢幕大小。我們可以透過名為 [Media Queries](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness)的技術輕鬆完成修正。
 
 
     @media (min-width: 600px) {

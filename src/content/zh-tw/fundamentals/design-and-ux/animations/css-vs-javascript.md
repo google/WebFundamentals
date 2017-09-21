@@ -47,7 +47,7 @@ description: 您可以用 CSS 或 JavaScript 進行動畫處理。 您應該使�
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html">請見範例</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-simple.html">請見範例</a>
 
 除了轉換的持續時間之外，同時也提供緩動的選項；緩動基本上是指動畫的操作感。 在 [「緩動基本知識」](the-basics-of-easing.html) 指南中，您可以取得更多相關資訊。
 
@@ -121,7 +121,7 @@ Note: 如果您是動畫新手，主要畫面格是手繪動畫界的一個古�
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html">請見範例</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-keyframes.html">請見範例</a>
 
 使用 CSS 動畫時，您獨立於目標元素之外來定義動畫本身，然後使用 animation-name 屬性來選擇所需的動畫。
 
@@ -165,7 +165,7 @@ Note: 您可能會在網頁上看到針對動畫使用 setInterval 或 setTimeou
     box.startAnimation();
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-js.html">請見範例</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-js.html">請見範例</a>
 
 當您嘗試將它擴大到包含更多情況時，程式碼開始變得非常複雜並難以管理，所以一般來說，從可供動畫使用的眾多 JavaScript 程式庫擇一個來使用，將有助於您。 如果您已經在專案中使用 jQuery，您將受益於堅守使用它以及使用 [`.animate()`](http://api.jquery.com/animate/){: .external } 功能。 在另一方面，如果您需要一個專用的程式庫，那麼就試一下 [Greensock 的 TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)，它的功能非常強大。 它也備有輕量級版本，叫 TweenLite，就檔案大小的角度而言，它耗用的資源較少。
 

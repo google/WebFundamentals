@@ -54,7 +54,7 @@ A continuación, se muestra un fragmento de CSS que mueve un elemento 100 px en 
       transform: translate(100px, 100px);
     }
     
-[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-simple.html){: target="_blank" .external }
 
 Además de la duración de la transición, existen opciones para la *aceleración*, que es básicamente como se percibe la animación. Para obtener más información sobre la aceleración, consulta la guía [Aspectos básicos de la aceleración](the-basics-of-easing).
 
@@ -128,7 +128,7 @@ Por ejemplo, puedes animar el cuadro del mismo modo que las transiciones, pero p
     }
     
 
-[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html){: target="_blank" .external }
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-keyframes.html){: target="_blank" .external }
 
 En las animaciones de CSS, defines la animación independientemente del elemento de destino y usas la propiedad animation-name para elegir la animación necesaria.
 
@@ -153,7 +153,7 @@ Las animaciones de JavaScript son *imperativas*, cuando las escribes de manera i
 
 De forma predeterminada, las animaciones web solo modifican la presentación de un elemento. Si deseas que tu objeto permanezca en la ubicación a la que se movió, entonces debes modificar los estilos subyacentes cuando la animación haya finalizado, según nuestro ejemplo.
 
-[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-wa.html){: target="_blank" .external }
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-wa.html){: target="_blank" .external }
 
 La Web Animations API es un estándar nuevo de W3C. Es compatible de forma nativa con Chrome y Opera y se encuentra en [proceso activo de desarrollo para Firefox](https://birtles.github.io/areweanimatedyet/){: .external }. Para otros navegadores modernos, [se encuentra disponible polyfill](https://github.com/web-animations/web-animations-js).
 

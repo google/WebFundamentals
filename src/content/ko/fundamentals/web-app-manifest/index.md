@@ -216,7 +216,7 @@ description: 웹 앱 매니페스트는 사용자가 네이티브 앱을 볼 것
 </figure>
 
 Chrome은 사이트에 사용되는 테마 색상의 개념을 2014년에 도입했습니다. 테마 색상은
-[주소 표시줄과 같은 UI 요소](/web/fundamentals/design-and-ui/browser-customization/)에 어떤 색조를 사용할지
+[주소 표시줄과 같은 UI 요소](/web/fundamentals/design-and-ux/browser-customization/)에 어떤 색조를 사용할지
 브라우저에 알려줍니다.  
 
 매니페스트가 없으면 여러분이 모든 단일 페이지에서 테마 색상을 정의해야 하며,

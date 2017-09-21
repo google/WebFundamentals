@@ -30,7 +30,7 @@ Berhasil: Fokuskan beranda seluler Anda pada cara menghubungkan pengguna ke mate
 
 ### Pertahankan panggilan untuk aksi di depan dan tengah
 
-Menyediakan tugas sekunder melalui [menu](/web/fundamentals/design-and-ui/responsive/)
+Menyediakan tugas sekunder melalui [menu](/web/fundamentals/design-and-ux/responsive/)
 atau "paro bawah" (bagian dari laman web yang tidak bisa dilihat tanpa gulir ke bawah).
 
 <div class="attempt-left">
@@ -264,7 +264,7 @@ tidak jelas.
 ### Menggunakan informasi yang ada untuk memaksimalkan kemudahan
 
 Ingat dan
-[pra-isi preferensi](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly)
+[pra-isi preferensi](/web/fundamentals/design-and-ux/input/forms/#label-and-name-inputs-properly)
 untuk pengguna terdaftar. Tawarkan layanan checkout pihak ketiga yang familier untuk pengguna baru.
 
 ### Menggunakan tombol click-to-call untuk tugas yang kompleks
@@ -306,9 +306,9 @@ semakin sedikit pengguna melakukan ketukan, semakin baik.
 
 ### Memilih masukan yang paling sederhana
 
-Gunakan [tipe masukan yang paling tepat](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type)
+Gunakan [tipe masukan yang paling tepat](/web/fundamentals/design-and-ux/input/forms/choose-the-best-input-type)
 untuk setiap skenario. Gunakan elemen seperti
-[`datalist`](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist)
+[`datalist`](/web/fundamentals/design-and-ux/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist)
 untuk menyediakan nilai yang disarankan untuk bidang.
 
 ### Menyediakan kalender visual untuk pemilihan tanggal
@@ -344,11 +344,11 @@ Labeli input dengan benar dan validasi input secara real-time.
 
 ### Mendesain formulir efisien
 
-Manfaatkan [isiotomatis](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)
+Manfaatkan [isiotomatis](/web/fundamentals/design-and-ux/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)
 sehingga pengguna bisa dengan mudah melengkapi formulir dengan data pra-isi. Pra-isi
 bidang dengan informasi yang sudah Anda tahu. Misalnya, ketika mengambil alamat pengiriman
 dan penagihan, cobalah untuk menggunakan
-[`requestAutocomplete`](/web/fundamentals/design-and-ui/input/forms/use-request-auto-complete)
+[`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)
 atau memperbolehkan pengguna menyalin alamat pengiriman ke alamat penagihan mereka (atau sebaliknya). 
 
 ## Kegunaan dan faktor bentuk
@@ -357,7 +357,7 @@ Berhasil: Menyenangkan pengguna seluler dengan hal-hal kecil yang meningkatkan p
 
 ### Mengoptimalkan seluruh situs Anda untuk perangkat seluler
 
-Menggunakan [layout responsif](/web/fundamentals/design-and-ui/responsive/) yang
+Menggunakan [layout responsif](/web/fundamentals/design-and-ux/responsive/) yang
 bisa berubah berdasarkan ukuran dan kemampuan perangkat pengguna. Partisipan
 penelitian menemukan bahwa situs dengan campuran laman yang dioptimalkan untuk seluler dan desktop, lebih
 sulit digunakan dibandingkan situs khusus untuk desktop.
@@ -366,10 +366,10 @@ sulit digunakan dibandingkan situs khusus untuk desktop.
 
 Pengguna merasa nyaman dengan pengguliran situs secara vertikal, namun tidak secara horizontal.
 Hindari elemen dengan lebar tetap dan besar. Gunakan
-[kueri media CSS](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)
+[kueri media CSS](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness)
 untuk menerapkan penataan gaya yang berbeda untuk layar berbeda. Jangan membuat materi yang
 hanya terlihat baik pada
-[lebar tampilan yang terlihat](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) tertentu.
+[lebar tampilan yang terlihat](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) tertentu.
 Situs yang memaksa pengguna untuk gulir secara horizontal tidak akan lolos
 [Uji Ramah-Google Seluler](https://search.google.com/test/mobile-friendly),
 yang bisa berdampak negatif terhadap peringkat penelusuran.
@@ -386,7 +386,7 @@ yang bisa berdampak negatif terhadap peringkat penelusuran.
 </div>
 
 Pelanggan retail berharap situs mengizinkan mereka
-[melihat tampilan dekat resolusi tinggi](/web/fundamentals/design-and-ui/media/images#make-product-images-expandable)
+[melihat tampilan dekat resolusi tinggi](/web/fundamentals/design-and-ux/media/images#make-product-images-expandable)
 dari produk. Partisipan penelitian merasa kecewa ketika mereka tidak bisa melihat
 apa yang mereka beli.
 

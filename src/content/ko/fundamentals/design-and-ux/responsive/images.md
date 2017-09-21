@@ -158,7 +158,7 @@ Dogfood: `picture` 요소가 브라우저에 들어가기 시작했습니다. �
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/media.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/media.html){: target="_blank" .external }
 
 위의 예시에서 브라우저 너비가 최소 800px 이상이면 기기 해상도에 따라
 `head.jpg` 또는 `head-2x.jpg`가 사용됩니다.
@@ -184,7 +184,7 @@ Dogfood: `picture` 요소가 브라우저에 들어가기 시작했습니다. �
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/sizes.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/sizes.html){: target="_blank" .external }
 
 
 위의 예에서는 브라우저 너비와 기기 픽셀 비율에 따라
@@ -254,7 +254,7 @@ Dogfood: `picture` 요소가 브라우저에 들어가기 시작했습니다. �
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/breakpoints.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/breakpoints.html){: target="_blank" .external }
 
 위의 예에서 `sizes` 속성은 여러 개의 미디어 쿼리를 사용하여
 이미지의 크기를 지정합니다. 브라우저 너비가 600px 이상인 경우
@@ -292,7 +292,7 @@ Dogfood: `picture` 요소가 브라우저에 들어가기 시작했습니다. �
 파일 크기가 상당히 줄어들지만 화질은 별차이가 없어 보일 수
 있습니다.
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/compressive.html){: target="_blank" .external }
 
 Caution: 압축 기법 사용 시 메모리가 늘어나고 디코딩 비용이 필요하므로 주의하세요. 작은 화면에 맞게 큰 이미지의 크기를 조정하는 것은 비용이 만이 들고, 메모리와 처리 성능이 모두 제한된 저사양 기기에서는 특히 손해가 클 수 있습니다.
 
@@ -468,7 +468,7 @@ url(large.png)'는 'div'에 적용됩니다.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/conditional-mq.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/conditional-mq.html){: target="_blank" .external }
 
 ### image-set을 사용하여 고해상도 이미지 제공
 
@@ -498,7 +498,7 @@ CSS의 `image-set()` 함수는 동작 `background` 속성을 개선하여
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-set.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/image-set.html){: target="_blank" .external }
 
 위에서는 image-set를 지원하는 브라우저에서 적절한 자산을 로드하며,
 그렇지 않을 경우 1x 자산으로 폴백합니다. 주의할 점은
@@ -529,7 +529,7 @@ Chrome, Firefox 및 Opera는 모두 표준 `(min-resolution: 2dppx)`를
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/media-query-dppx.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/media-query-dppx.html){: target="_blank" .external }
 
 또한 min-width 구문을 사용하여 뷰포트 크기에 따라 대체 이미지를
 표시할 수도 있습니다.  이 기법의 이점은, 미디어 쿼리가 일치하지 않으면
@@ -594,14 +594,14 @@ You're a super &#9733;
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-svg.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-svg.html){: target="_blank" .external }
 
 ### 주의해서 아이콘 글꼴 사용
 
 
 <figure class="attempt-right"><img src="img/icon-fonts.png" class="center" srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x" alt="글꼴 아이콘에 FontAwesome을 사용하는 페이지의 예.">
 <figcaption>
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-font.html" target="_blank" class="external">
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-font.html" target="_blank" class="external">
 글꼴 아이콘에 FontAwesome을 사용하는 페이지의 예.
 </a>
 </figcaption>
@@ -626,7 +626,7 @@ You're a super &#9733;
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/icon-font.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/icon-font.html){: target="_blank" .external }
 
 수백 개의 유료 및 무료 아이콘 글꼴이 있습니다(예: [Font
 Awesome](https://fortawesome.github.io/Font-Awesome/),
@@ -720,7 +720,7 @@ CSS sprite란 여러 이미지를 단일 'sprite 시트' 이미지에
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media//image-sprite.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media//image-sprite.html){: target="_blank" .external }
 
 sprite는 여러 이미지를 가져오는 데 필요한 다운로드의 수를
 줄여주면서도 여전히 캐싱이 가능하다는 이점이 있습니다.

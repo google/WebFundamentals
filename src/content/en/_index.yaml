@@ -160,4 +160,4 @@ landing_page:
       image_path: images/content-responsive-2x.jpg
       buttons:
       - label: Learn more
-        path: /web/fundamentals/design-and-ui/responsive/
+        path: /web/fundamentals/design-and-ux/responsive/

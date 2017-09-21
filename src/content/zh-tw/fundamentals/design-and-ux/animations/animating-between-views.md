@@ -116,7 +116,7 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html">請參閱範例。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/inter-view-animation.html">請參閱範例。</a>
 
 您可以加以擴展，以涵蓋多個檢視，基本概念應該是一樣的；每個非可見檢視應該在畫面之外，並在必要時帶回，而目前的畫面上檢視應該要移開。
 

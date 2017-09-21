@@ -23,7 +23,7 @@ description: easing in, easing out 및 easing in out 중에 프로젝트에 적�
 CSS에서 `ease-out` 키워드로 지정된 방정식을 넘어, '공격성'의 범위에 드는 잘 알려진 ease-out 방정식 그룹이 있습니다. 빠른 ease-out 효과를 내려면 [Quintic ease-out](http://easings.net/#easeOutQuint)을 고려하세요.
 
 
-[Quintic ease-out 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
+[Quintic ease-out 애니메이션 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-quintic-ease-out.html){: target="_blank" .external }
 
 다른 easing 방정식, 특히 바운스 또는 elastic ease는 프로젝트에 적합한 경우에만 드물게 사용해야 합니다. 불편한 애니메이션만큼 거슬리는 것도 없습니다. 프로젝트가 재미를 위한 것이 아닌 경우에는, 요소가 UI 주변에 바운드되지 않도록 하세요. 반대로, 경쾌한 사이트를 만드는 중이면 바운스를 사용하세요!
 

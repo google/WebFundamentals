@@ -125,7 +125,7 @@ Success: 모든 애니메이션에서 60fps를 유지해 보세요. 그러면, �
       transform: translateX(0);
     }
     
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/inter-view-animation.html){: target="_blank" .external }
 
 이를 확장하여 여러 뷰에 적용할 수 있으며, 기본 개념은 동일하게 유지됩니다. 즉, 보이지 않는 각 뷰는 화면에서 벗어나 있고 필요에 따라 가져오며, 현재 화면 속 뷰는 화면 밖으로 이동되어야 합니다.
 

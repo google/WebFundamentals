@@ -57,7 +57,7 @@ Lo más importante:
 
 En términos de tamaño en bytes, las páginas web son [grandes y cada vez crecen más](http://httparchive.org/trends.php#bytesTotal&reqTotal).
 
-[Las técnicas de diseño adaptable](/web/fundamentals/design-and-ui/responsive/) hacen posible el aprovisionamiento de contenidos diferentes para ventanas de visualización más pequeñas, pero siempre será una práctica sensata comenzar por optimizar el texto, las imágenes y otros contenidos.
+[Las técnicas de diseño adaptable](/web/fundamentals/design-and-ux/responsive/) hacen posible el aprovisionamiento de contenidos diferentes para ventanas de visualización más pequeñas, pero siempre será una práctica sensata comenzar por optimizar el texto, las imágenes y otros contenidos.
 
 > A menudo, los usuarios de la web se enfocan en la acción, “con una inclinación hacia” la búsqueda de respuestas para sus preguntas actuales, en lugar de recostarse y dejarse absorber por un buen libro.
 >
@@ -121,7 +121,7 @@ Aquí te proporcionamos alguna sugerencias:
 * Usa CSS en lugar de imágenes para degradados, sombras, esquinas redondeadas y [texturas de fondo](http://lea.verou.me/css3patterns/){: .external }, funciones [admitidas en todos los navegadores modernos](http://caniuse.com/#search=shadows). Sin embargo, ten en cuenta que las CSS pueden ser mejores que las imágenes, aunque de todos modos puede haber una [penalidad de representación y procesamiento](http://www.smashingmagazine.com/2013/04/03/build-fast-loading-mobile-website/) particularmente considerable en el dispositivo móvil.
 * Las imágenes de fondo raramente funcionan bien en un dispositivo móvil. Puedes [usar solicitudes de medios](http://udacity.github.io/responsive-images/examples/2-06/backgroundImageConditional/) para evitar imágenes de fondo en pequeñas ventanas de visualización.
 * Evita imágenes de pantallas de presentación.
-* [Usa CSS para animaciones de IU](/web/fundamentals/design-and-ui/animations/).
+* [Usa CSS para animaciones de IU](/web/fundamentals/design-and-ux/animations/).
 * Conoce tus glifos; usa [símbolos e íconos Unicode](https://en.wikipedia.org/wiki/List_of_Unicode_characters) en lugar de imágenes, con fuentes web si es necesario.
 * Ten en cuenta [fuentes de íconos](http://weloveiconfonts.com/#zocial); son gráficos vectoriales que admiten escalamiento infinito, y se puede descargar un conjunto completo de imágenes en una fuente. (Ten en cuenta, no obstante, [estos asuntos](https://sarasoueidan.com/blog/icon-fonts-to-svg/)).
 * El elemento `<canvas>` se puede usar para crear imágenes en JavaScript a partir de líneas, curvas, texto y otras imágenes.
@@ -163,7 +163,7 @@ Cuando desarrolles para varias ventanas de visualización diferentes, ten en cue
 * Pon tu contenido más importante en la parte superior, ya que los [usuarios tienden a leer las páginas web de acuerdo a un patrón en forma de F](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/).
 * Los usuarios visitan tu sitio en busca de un objetivo. Pregúntate qué necesitan para alcanzar ese objetivo y deshazte del resto. Sé firme respecto de los adornos visuales y textuales, el contenido heredado, los vínculos excesivos y otras sobrecargas.
 * Ten cuidado con los íconos de uso compartido en redes sociales; pueden sobrecargar los diseños y su código puede reducir la velocidad de la carga de la página.
-* Crea [diseños adaptables](/web/fundamentals/design-and-ui/responsive/) para el contenido, en lugar de tamaños fijos para diferentes dispositivos.
+* Crea [diseños adaptables](/web/fundamentals/design-and-ux/responsive/) para el contenido, en lugar de tamaños fijos para diferentes dispositivos.
 
 ### Probar contenido
 

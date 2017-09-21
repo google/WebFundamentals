@@ -241,7 +241,7 @@ Het mag dan wel handig zijn om na te denken over het bepalen van breekpunten op 
 
 Ontwerp de inhoud zodat deze eerst op een klein scherm past, breid het scherm steeds uit tot een breekpunt nodig is. Hierdoor kunt u breekpunten optimaliseren op basis van inhoud en moet u zo weinig mogelijk breekpunten onderhouden.
 
-Laten we eens kijken naar het voorbeeld dat we in het begin hebben gezien, de [weersvoorspelling](/web/fundamentals/design-and-ui/responsive/).
+Laten we eens kijken naar het voorbeeld dat we in het begin hebben gezien, de [weersvoorspelling](/web/fundamentals/design-and-ux/responsive/).
 In de eerste stap moeten we ervoor zorgen dat de weersvoorspelling er goed uitzien op een klein scherm.
 
 <figure>

@@ -57,7 +57,7 @@ The bottom line:
 
 In terms of byte size, web pages are [big and getting bigger](http://httparchive.org/trends.php#bytesTotal&reqTotal).
 
-[Responsive design techniques](/web/fundamentals/design-and-ui/responsive/) make it possible to serve different content for smaller viewports, but it's always sensible to start by streamlining text, images and other content.
+[Responsive design techniques](/web/fundamentals/design-and-ux/responsive/) make it possible to serve different content for smaller viewports, but it's always sensible to start by streamlining text, images and other content.
 
 > Web users are often action oriented, "leaning forward" in the hunt for answers to their current question, rather than leaning back to absorb a good book.
 >
@@ -121,7 +121,7 @@ Here are some suggestions:
 * Use CSS rather than images for gradients, shadows, rounded corners, and [background textures](http://lea.verou.me/css3patterns/){: .external }, features [supported by all modern browsers](http://caniuse.com/#search=shadows). Bear in mind, however, that CSS may be better than images, but there can still be a [processing and rendering penalty](http://www.smashingmagazine.com/2013/04/03/build-fast-loading-mobile-website/), especially significant on mobile.
 * Background images rarely work well on mobile. You can [use media queries](http://udacity.github.io/responsive-images/examples/2-06/backgroundImageConditional/) to avoid background images on small viewports.
 * Avoid splash screen images.
-* [Use CSS for UI animations](/web/fundamentals/design-and-ui/animations/).
+* [Use CSS for UI animations](/web/fundamentals/design-and-ux/animations/).
 * Get to know your glyphs; use [Unicode symbols and icons](https://en.wikipedia.org/wiki/List_of_Unicode_characters) instead of images, with Web Fonts if necessary.
 * Consider [icon fonts](http://weloveiconfonts.com/#zocial); they are vector graphics that can be infinitely scaled, and an entire set of images can be downloaded in one font. (Be aware of [these concerns](https://sarasoueidan.com/blog/icon-fonts-to-svg/), however.)
 * The `<canvas>` element can be used to build images in JavaScript from lines, curves, text, and other images.
@@ -163,7 +163,7 @@ When building for a range of viewports, consider content as well as layout and g
 * Put your most important content at the top, since [users tend to read web pages in an F-shaped pattern](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/).
 * Users visit your site to achieve a goal. Ask yourself what they need to achieve that goal and get rid of everything else. Get tough on visual and textual embellishments, legacy content, excessive links, and other clutter.
 * Be careful with social sharing icons; they can clutter layouts, and the code for them can slow down page loading.
-* Design [responsive layouts](/web/fundamentals/design-and-ui/responsive/) for content, not fixed device sizes.
+* Design [responsive layouts](/web/fundamentals/design-and-ux/responsive/) for content, not fixed device sizes.
 
 ### Test content
 

@@ -15,7 +15,7 @@ la ventana de visualización, podrás controlar su longitud y su cambio de tama�
 Consulta los siguientes vínculos para obtener más información:
 
 * [Configurar la ventana de visualización](/speed/docs/insights/ConfigureViewport).
-* [Definir la ventana de visualización](/web/fundamentals/design-and-ui/responsive/#set-the-viewport).
+* [Definir la ventana de visualización](/web/fundamentals/design-and-ux/responsive/#set-the-viewport).
 
 ## Cómo aprobar la auditoría {: #how }
 

@@ -266,7 +266,7 @@ Viewport מתגורר בראש המסמך, ורק צריך להיות מוכלל
   </p>
 </video>
 
-600px נראה מקום טוב כדי לקבוע נקודת העצירה הראשונה שלנו מפני שהוא ייתן לנו מרווח כדי לשנות את מיקום אלמנטים כדי להפוך אותם מותאמים טוב יותר למסך. אנחנו יכולים לעשות את זה באמצעות טכנולוגיה המכונות [שאילתות מדיה(Media Queries)](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)
+600px נראה מקום טוב כדי לקבוע נקודת העצירה הראשונה שלנו מפני שהוא ייתן לנו מרווח כדי לשנות את מיקום אלמנטים כדי להפוך אותם מותאמים טוב יותר למסך. אנחנו יכולים לעשות את זה באמצעות טכנולוגיה המכונות [שאילתות מדיה(Media Queries)](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness)
 
 
     @media (min-width: 600px) {

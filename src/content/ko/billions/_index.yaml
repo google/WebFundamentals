@@ -55,7 +55,7 @@ landing_page:
       image_path: images/cost.png
       buttons:
       - label: 페이지 로드와 앱 구성 요소의 비용 이해
-        path: /web/fundamentals/design-and-ui/responsive/content#weight
+        path: /web/fundamentals/design-and-ux/responsive/content#weight
         classname: wf-small-link
       - label: 상호작용에 필요한 데이터 양 줄이기
         path: /web/fundamentals/performance/optimizing-content-efficiency/
@@ -79,7 +79,7 @@ landing_page:
         path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
         classname: wf-small-link
       - label: 비싼 UI 애니메이션 피하기
-        path: /web/fundamentals/design-and-ui/animations/#avoid-animating-expensive-properties/
+        path: /web/fundamentals/design-and-ux/animations/#avoid-animating-expensive-properties/
         classname: wf-small-link
       - label: "무선 사용 피하기: 불필요한 다운로드 배제"
         path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
@@ -88,7 +88,7 @@ landing_page:
         path: /web/fundamentals/getting-started/principles/
         classname: wf-small-link
       - label: 비싼 애니메이션 피하기
-        path: /web/fundamentals/design-and-ui/animations/animations-and-performance/
+        path: /web/fundamentals/design-and-ux/animations/animations-and-performance/
         classname: wf-small-link
 
     - heading: 기기 기능에 맞게 최적화
@@ -115,13 +115,13 @@ landing_page:
       image_path: images/content.png
       buttons:
       - label: 다양한 뷰포트 크기에 잘 어울리도록 콘텐츠 디자인
-        path: /web/fundamentals/design-and-ui/responsive/content#viewport
+        path: /web/fundamentals/design-and-ux/responsive/content#viewport
         classname: wf-small-link
       - label: 중복 콘텐츠 배제
-        path: /web/fundamentals/design-and-ui/content/redundant/
+        path: /web/fundamentals/design-and-ux/content/redundant/
         classname: wf-small-link
       - label: 모바일용으로 작성
-        path: /web/fundamentals/design-and-ui/content/write/
+        path: /web/fundamentals/design-and-ux/content/write/
         classname: wf-small-link
       - label: AMP HTML 고려
         path: https://www.ampproject.org/
@@ -135,7 +135,7 @@ landing_page:
         path: /web/fundamentals/getting-started/principles/commerce-and-conversion/
         classname: wf-small-link
       - label: 양식 간소화
-        path: /web/fundamentals/design-and-ui/input/forms/
+        path: /web/fundamentals/design-and-ux/input/forms/
         classname: wf-small-link
       - label: 작은 화면에 대해 방향 친화적인 레이아웃 디자인
         path: /web/fundamentals/getting-started/principles/#usability-and-form-factor

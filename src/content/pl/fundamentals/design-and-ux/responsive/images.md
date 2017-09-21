@@ -192,7 +192,7 @@ Dobry przykład obrazów, które można kliknąć i rozwinąć, znajdziemy w wit
 
 [Technika obrazów kompresowanych](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) pozwala wyświetlać bardzo skompresowane obrazy 2x na wszystkich urządzeniach, bez względu na ich faktyczne możliwości. W zależności od typu obrazu i poziomu kompresji zmiana jakości może być niezauważalna, ale rozmiar pliku znacznie się zmniejsza.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html">Zobacz przykład</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/compressive.html">Zobacz przykład</a>
 
 Note: Zachowaj ostrożność przy korzystaniu z technik kompresji, bo dekodowanie wymaga większej ilości pamięci i obciąża procesor. Zmiana rozmiaru dużych obrazów, by zmieściły się na mniejszym ekranie, wymaga znacznych zasobów i jest szczególnie uciążliwa na słabszych urządzeniach z niewielką pamięcią i mocą procesora.
 
@@ -382,7 +382,7 @@ Niektóre dostępne narzędzia wykonują dodatkową, bezstratną kompresję plik
 
 Spriting CSS to technika, w której wiele obrazów łączy się w jeden obraz `arkusza sprite`ów`. Aby następnie wybrać konkretną grafikę, trzeba określić obraz tła elementu (arkusz sprite`ów) i przesunięcie wskazujące właściwą część.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Arkusz sprite'ów graficznych użyty jako przykład"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Arkusz sprite'ów graficznych użyty jako przykład"></a>
 
 <pre class="prettyprint">
 {% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" %}

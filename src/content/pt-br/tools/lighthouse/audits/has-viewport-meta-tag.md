@@ -15,7 +15,7 @@ janela de visualização permite controlar sua largura e escala.
 Consulte os links a seguir para saber mais:
 
 * [Configurar a janela de visualização](/speed/docs/insights/ConfigureViewport).
-* [Definir a janela de visualização](/web/fundamentals/design-and-ui/responsive/#set-the-viewport).
+* [Definir a janela de visualização](/web/fundamentals/design-and-ux/responsive/#set-the-viewport).
 
 ## Como ser aprovado na auditoria {: #how }
 

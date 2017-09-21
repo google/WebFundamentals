@@ -38,7 +38,7 @@ e active. Para alterar a interface para cada um desses estados, precisamos aplic
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 ![Imagem apresentando diferentes cores para estados de
 botões](images/button-states.png)
@@ -77,7 +77,7 @@ O Safari e o Chrome adicionam uma cor de destaque de toque que pode ser impedida
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 O Internet Explorer do Windows Phone tem um comportamento semelhante, mas ele pode ser suprimido
 com uma meta tag:
@@ -96,7 +96,7 @@ aplicado, e pode ser removido ao definir `background-image: none`.
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 Warning: suprima os estilos padrão mencionados acima somente se você tiver pseudo
 classes para `:hover`, `:active` e `:focus`!
@@ -193,7 +193,7 @@ Veja a seguir um exemplo de como detectar o início de uma interação.
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 Observação: Devido ao design da API, PointerEvents só precisam de um evento
 `pointerdown` para manipular eventos de mouse e toque.
@@ -232,7 +232,7 @@ e end ao documento:
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 O retorno de chamada de end que adicionamos é `handleGestureEnd()`, que remove os detectores de eventos move
 e end do documento e libera a captura do ponteiro
@@ -242,7 +242,7 @@ quando o gesto for concluído, assim:
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 <div class="attempt-left">
   <p>Ao seguir esse padrão de adicionar o evento move ao documento, se o usuário
@@ -277,7 +277,7 @@ Se o evento for um `PointerEvent` ou `MouseEvent`, ele extrai o `clientX` e o
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-2.html){: target="_blank" .external }
 
 Um `TouchEvent` tem três listas que contêm dados de toque:
 

@@ -285,7 +285,7 @@ Note: О стиле мы напишем позже
   </p>
 </video>
 
-Чтобы элементы на странице автоматически перераспределялись, нам необходимо внедрить здесь точку разрыва. Сделать это можно с помощью технологии [Media Queries](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
+Чтобы элементы на странице автоматически перераспределялись, нам необходимо внедрить здесь точку разрыва. Сделать это можно с помощью технологии [Media Queries](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness).
 
 
     @media (min-width: 600px) {

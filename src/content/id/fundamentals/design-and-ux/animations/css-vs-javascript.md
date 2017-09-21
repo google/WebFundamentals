@@ -54,7 +54,7 @@ Di bawah ini adalah beberapa CSS yang memindahkan elemen 100 px pada sumbu X dan
       transform: translate(100px, 100px);
     }
     
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-simple.html){: target="_blank" .external }
 
 Selain durasi transisi, ada beberapa pilihan untuk *easing*, yaitu bagaimana animasi terasa. Untuk informasi selengkapnya tentang easing, lihat panduan [Dasar-Dasar Easing](the-basics-of-easing).
 
@@ -128,7 +128,7 @@ Misalnya, Anda bisa menganimasikan kotak dengan cara yang sama seperti transisi,
     }
     
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-keyframes.html){: target="_blank" .external }
 
 Dengan animasi CSS, Anda menentukan animasi secara independen dari elemen target, dan menggunakan properti nama animasi untuk memilih animasi yang diperlukan.
 
@@ -153,7 +153,7 @@ Animasi JavaScript *sangat penting*, ketika Anda menulisnya secara inline sebaga
 
 Secara default, Web Animasi hanya memodifikasi presentasi dari elemen. Jika Anda ingin agar objek tetap berada di lokasi pindahnya, maka Anda harus mengubah gaya dasarnya ketika animasi selesai, seperti contoh kami.
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-wa.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-wa.html){: target="_blank" .external }
 
 Web Animations API adalah standar baru dari W3C. Didukung secara native di Chrome dan Opera, dan dalam [proses development aktif untuk Firefox](https://birtles.github.io/areweanimatedyet/){: .external }. Untuk browser modern lainnya, [tersedia polyfill](https://github.com/web-animations/web-animations-js).
 

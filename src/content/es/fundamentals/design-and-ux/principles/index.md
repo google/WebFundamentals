@@ -30,7 +30,7 @@ Success: Centra la página principal de tu dispositivo móvil en conectar a los 
 
 ### Mantén las llamadas en acción en el centro y frente
 
-Pon a disponibilidad tareas secundarias [menús](/web/fundamentals/design-and-ui/responsive/)
+Pon a disponibilidad tareas secundarias [menús](/web/fundamentals/design-and-ux/responsive/)
 o “debajo de la tapa” (la parte de la página web que no se ve sin desplazarse hacia abajo).
 
 <div class="attempt-left">
@@ -264,7 +264,7 @@ claro.
 ### Usa información existente para maximizar la comodidad
 
 Recuerda y
-[completa por adelantado las preferencias](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly)
+[completa por adelantado las preferencias](/web/fundamentals/design-and-ux/input/forms/#label-and-name-inputs-properly)
 para los usuarios registrados. Ofrece servicios de finalización de compras conocidos y de terceros para los usuarios nuevos.
 
 ### Usa botones "clic para llamar" para tareas complejas
@@ -306,9 +306,9 @@ mientras menos veces el usuario tenga que presionar la pantalla, mejor.
 
 ### Escoge la entrada más sencilla
 
-Usa el [tipo de entrada más apropiado](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type)
+Usa el [tipo de entrada más apropiado](/web/fundamentals/design-and-ux/input/forms/choose-the-best-input-type)
 para cada situación. Usa elementos como
-[`datalist`](/web/fundamentals/design-and-ui/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist)
+[`datalist`](/web/fundamentals/design-and-ux/input/forms/choose-the-best-input-type#offer-suggestions-during-input-with-datalist)
 para brindar valores sugeridos para un campo.
 
 ### Brinda un calendario visual para la selección de fecha
@@ -344,11 +344,11 @@ Etiqueta las entradas de forma apropiada y valídalas en tiempo real.
 
 ### Diseña formularios eficientes
 
-Aprovecha la función [autocompletar](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)
+Aprovecha la función [autocompletar](/web/fundamentals/design-and-ux/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)
 para que los usuarios puedan completar fácilmente formularios con datos ingresados por adelantado. Completa por adelantado
 campos con información que ya conoces. Por ejemplo, cuando recuperes las direcciones de envío
 y facturación, intenta usar
-[`requestAutocomplete`](/web/fundamentals/design-and-ui/input/forms/use-request-auto-complete)
+[`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)
 o habilita a los usuarios para que copien su dirección de envío a su dirección de facturación (o viceversa). 
 
 ## Usabilidad y factor de formulario
@@ -357,7 +357,7 @@ Success: Complace a tus usuarios de dispositivos móviles con pequeños aspectos
 
 ### Optimiza todo tu sitio para apps móviles
 
-Usa un [diseño adaptable](/web/fundamentals/design-and-ui/responsive/) que
+Usa un [diseño adaptable](/web/fundamentals/design-and-ux/responsive/) que
 cambie según el tamaño y las capacidades del dispositivo del usuario. A los participantes
 del estudio les resultaron los sitios con una mezcla de páginas optimizadas para dispositivo móvil y de escritorio hasta
 más difíciles de usar que los sitios que son solo de escritorio.
@@ -366,10 +366,10 @@ más difíciles de usar que los sitios que son solo de escritorio.
 
 Los usuarios se sienten cómodos al desplazarse por los sitios en sentido vertical y no horizontal.
 Evita elementos grandes con un ancho fijo. Usa
-[Consultas de medios de CSS](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)
+[Consultas de medios de CSS](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness)
 para aplicar distintos estilos para distintas pantallas. No crees contenido que
 solo se vea bien en un
-[ancho de ventana de visualización](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) en particular.
+[ancho de ventana de visualización](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) en particular.
 Los sitios que obligan a los usuarios a desplazarse en forma horizontal no aprueban la
 [Prueba de compatibilidad con dispositivos móviles de Google](https://search.google.com/test/mobile-friendly),
 lo cual puede impactar en forma negativa en sus rankings de búsqueda.
@@ -386,7 +386,7 @@ lo cual puede impactar en forma negativa en sus rankings de búsqueda.
 </div>
 
 Los clientes minoristas esperan que los sitios les permitan
-[ver acercamientos en alta resolución](/web/fundamentals/design-and-ui/media/images#make-product-images-expandable)
+[ver acercamientos en alta resolución](/web/fundamentals/design-and-ux/media/images#make-product-images-expandable)
 de los productos. Los participantes del estudio se frustraron cuando no pudieron ver
 qué estaban comprando.
 

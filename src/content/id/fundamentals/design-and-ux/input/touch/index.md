@@ -38,7 +38,7 @@ ke kelas pseudo berikut `:hover`, `:focus` dan `:active` seperti yang ditampilka
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 ![Gambar yang mengilustrasikan perbedaan warna untuk status
 tombol](images/button-states.png)
@@ -77,7 +77,7 @@ Safari dan Chrome menambahkan warna sorot ketuk yang bisa dicegah dengan propert
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 Internet Explorer pada Windows Phone memiliki perilaku yang serupa, namun diredam
 melalui tag meta:
@@ -96,7 +96,7 @@ sebuah gradien, yang bisa Anda buang dengan menyetel `background-image: none`.
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
 Perhatian: Hanya redam gaya default yang disebutkan di atas jika Anda memiliki kelas-kelas
 pseudo untuk `:hover`, `:active` dan `:focus`!
@@ -193,7 +193,7 @@ Berikut adalah contoh dari mendengarkan untuk memulai interaksi.
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 Note: Karena desain dari API, PointerEvents hanya memerlukan kejadian
 `pointerdown` tunggal untuk menangani kejadian mouse dan sentuh.
@@ -232,7 +232,7 @@ dan kejadian akhir ke dokumen:
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 Callback akhir yang kita tambahkan adalah `handleGestureEnd()`, yang membuang event listener gerak
 dan event listener akhir dari dokumen dan melepaskan tangkapan penunjuk
@@ -242,7 +242,7 @@ ketika isyarat telah selesai seperti:
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 <div class="attempt-left">
   <p>Dengan mengikuti pola menambahkan kejadian gerak ke dokumen ini, jika
@@ -277,7 +277,7 @@ Jika kejadiannya adalah `PointerEvent` atau `MouseEvent`, itu mengekstrak `clien
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-2.html){: target="_blank" .external }
 
 Sebuah `TouchEvent` memiliki tiga daftar yang berisi data sentuh:
 
