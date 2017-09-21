@@ -9,21 +9,14 @@ book_path: /web/fundamentals/_book.yaml
 
 {{#each sortedTerms }}
 ## {{ @key }}
-
 {{#each this}}
-
-### {{#if link}}<a href="{{ link }}">{{/if}}{{#if acronym}}<abbr title="{{ term }}">{{ acronym }}</abbr> - {{/if}}{{ term }}{{#if link}}</a>{{/if}}
-
+### {{ term }} {{#if acronym}}(<abbr title="{{ term }}">{{ acronym }}</abbr>){{/if}}
 
 : {{{description}}}
+{{#if link}}: [Learn more]({{ link }}){{/if}}
 
-{{#if links}}
-<ul>
 {{#each links}}
-<li><a href="{{ link }}">{{ title }}</a></li>
+* [{{ title }}]({{ link }})
 {{/each}}
-</ul>
-{{/if}}
-
 {{/each}}
 {{/each}}
