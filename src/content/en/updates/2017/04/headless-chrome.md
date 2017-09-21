@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2017-08-21 #}
+{# wf_updated_on: 2017-09-20 #}
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
@@ -390,10 +390,8 @@ examples below to get you started.
 
 #### Using ChromeDriver
 
-[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 2.3.0
-supports Chrome 59 and later and works with headless Chrome. In some cases, you may need
-Chrome 60 to work around bugs. For example, there are known issues with taking
-screenshots in Chrome 59.
+[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 2.32
+uses Chrome 61 and works well with headless Chrome.
 
 Install:
 
@@ -408,17 +406,8 @@ const fs = require('fs');
 const webdriver = require('selenium-webdriver');
 const chromedriver = require('chromedriver');
 
-// This should be the path to your Canary installation.
-// I'm assuming Mac for the example.
-const PATH_TO_CANARY = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary';
-
 const chromeCapabilities = webdriver.Capabilities.chrome();
-chromeCapabilities.set('chromeOptions', {
-  binary: PATH_TO_CANARY // Screenshots require Chrome 60. Force Canary.
-  'args': [
-    '--headless',
-  ]
-});
+chromeCapabilities.set('chromeOptions', {args: ['--headless']});
 
 const driver = new webdriver.Builder()
   .forBrowser('chrome')
@@ -455,9 +444,6 @@ Example: filter CSS features on chromestatus.com
 const webdriverio = require('webdriverio');
 const chromedriver = require('chromedriver');
 
-// This should be the path to your Canary installation.
-// I'm assuming Mac for the example.
-const PATH_TO_CANARY = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary';
 const PORT = 9515;
 
 chromedriver.start([
@@ -472,10 +458,7 @@ const opts = {
   port: PORT,
   desiredCapabilities: {
     browserName: 'chrome',
-    chromeOptions: {
-      binary: PATH_TO_CANARY // Screenshots require Chrome 60. Force Canary.
-      args: ['--headless']
-    }
+    chromeOptions: {args: ['--headless']}
   }
 };
 
