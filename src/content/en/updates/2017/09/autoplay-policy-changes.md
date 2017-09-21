@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome.
 
-{# wf_updated_on: 2017-09-13 #}
+{# wf_updated_on: 2017-09-21 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -145,7 +145,7 @@ may not autoplay and users will have no way of starting playback.
 
 One cool way to engage users is about using muted autoplay and let them chose
 to unmute (see code snippet below). Some websites already do this effectively,
-including Facebook, Twitter, and Instagram.
+including Facebook, Instagram, Twitter, and YouTube.
 
     <video id="video" muted autoplay>
     <button id="unmuteButton"></button>
