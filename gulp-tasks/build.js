@@ -1,16 +1,43 @@
 'use strict';
 
-var gulp = require('gulp');
-var path = require('path');
-var runSequence = require('run-sequence');
-var wfHelper = require('./wfHelper');
-var wfContributors = require('./wfContributors');
+const fs = require('fs');
+const gulp = require('gulp');
+const path = require('path');
+const glob = require('globule');
+const moment = require('moment');
+const jsYaml = require('js-yaml');
+const wfHelper = require('./wfHelper');
 const wfGlossary = require('./wfGlossary');
-var wfTemplateHelper = require('./wfTemplateHelper');
-var wfYouTubeShows = require('./wfYouTubeShows');
+const runSequence = require('run-sequence');
+const wfContributors = require('./wfContributors');
+const wfYouTubeShows = require('./wfYouTubeShows');
+const wfTemplateHelper = require('./wfTemplateHelper');
 
 gulp.task('build:contributors', function() {
   wfContributors.build();
+});
+
+gulp.task('build:announcement', function() {
+  const globOpts = {
+    srcBase: 'src/content/en/',
+    prefixBase: true,
+  };
+  const dumpYamlOpts = {lineWidth: 1000};
+  const projectYamlFiles = glob.find('**/_project.yaml', globOpts);
+  const file = 'src/content/en/_wf-announcement.yaml';
+  const announcementYaml = jsYaml.safeLoad(fs.readFileSync(file, 'utf8'));
+  const startDate = moment(announcementYaml['start']);
+  const endDate = moment(announcementYaml['end']);
+  const isBetween = moment().isBetween(startDate, endDate);
+  projectYamlFiles.forEach((file) => {
+    let projYaml = jsYaml.safeLoad(fs.readFileSync(file, 'utf8'));
+    if (isBetween) {
+      projYaml['announcement'] = announcementYaml;
+    } else {
+      delete projYaml['announcement'];
+    }
+    fs.writeFileSync(file, jsYaml.safeDump(projYaml, dumpYamlOpts));
+  });
 });
 
 gulp.task('build:fundamentals', function() {
@@ -177,6 +204,7 @@ gulp.task('build:updates', function() {
 gulp.task('build', function(cb) {
   runSequence(
     [
+      'build:announcement',
       'build:contributors',
       'build:fundamentals',
       'build:showcase',
