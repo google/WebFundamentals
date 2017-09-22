@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Background sync is a new web API that lets you defer actions until the user has stable connectivity. This is useful for ensuring that whatever the user wants to send, is actually sent.
 
-{# wf_updated_on: 2015-12-08 #}
+{# wf_updated_on: 2017-09-22 #}
 {# wf_published_on: 2015-12-08 #}
 {# wf_tags: serviceworker #}
 {# wf_featured_image: /web/updates/images/2015/12/sync/emojoy.png #}
