@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Generic Sensor API is available for Origin Trials in Chrome 62.
 
-{# wf_updated_on: 2017-09-20 #}
+{# wf_updated_on: 2017-09-22 #}
 {# wf_published_on: 2017-09-18 #}
-{# wf_tags: sensors,origintrials,chrome62,news #}
+{# wf_tags: sensors,origintrials,chrome63,news #}
 {# wf_blink_components: Blink>Sensor #}
 {# wf_featured_image: /web/updates/images/generic/screen-rotation.png #}
 {# wf_featured_snippet: Sensors are used in many native applications to enable advanced features. Wouldn't it be nice to bridge the gap between native and the web? You can do it with Generic Sensor API, which is available for Origin Trials in Chrome 62. #}
@@ -102,14 +102,11 @@ More information on browser implementation status can be found on
 
 ## Motion sensors are available as an origin trial {: #motion-sensors-origin-trials }
 
-In order to get your valuable feedback, the Generic Sensor API will be
-available in Chrome 62 as an [origin trial](https://bit.ly/OriginTrials). You
+In order to get your valuable feedback, the Generic Sensor API is planned to be
+available as an [origin trial](https://bit.ly/OriginTrials) in Chrome 63. You
 will need to [request a token](http://bit.ly/OriginTrialSignup), so that the
 feature would be automatically enabled for your origin, without the need to
 enable Chrome flag.
-
-Need to renew your origin trial token? No worries. Use [this form](https://docs.google.com/forms/d/e/1FAIpQLSdYpXiwmj8_Y0QV8KizE7V67Ylv2GaDRjb2pp-P1knybNtDsg/viewform?fbzx=-465752095663733600)
-to renew your token and don't forget to leave your valuable feedback.
 
 ## What are all these sensors? How can I use them? {: #what-are-sensors-how-to-use-them }
 
@@ -383,12 +380,12 @@ need.
 The sensor specifications are in active development and we need your feedback to
 make sure that this development goes in the right direction. Try the APIs either
 by enabling runtime [flags](#generic-sensor-api-in-chrome) in Chrome or taking part
-in the [origin trial](#motion-sensors-origin-trials) and share your experience.
+in the [origin trial](#motion-sensors-origin-trials) when it starts and share your experience.
 Let us know what features would be great to add or if there is something you would like to
 modify in the current API.
 
-Please fill the [survey](https://docs.google.com/forms/d/e/1FAIpQLSdGKPzubbOaDSgjpre9Pxw6Hr1xwYIwgZEsuUOmbs6JPwvcBQ/viewform)
-. Also feel free to file [specification issues](https://github.com/w3c/sensors/issues/new)
+Please fill the [survey](https://docs.google.com/forms/d/e/1FAIpQLSdGKPzubbOaDSgjpre9Pxw6Hr1xwYIwgZEsuUOmbs6JPwvcBQ/viewform).
+Also feel free to file [specification issues](https://github.com/w3c/sensors/issues/new)
 as well as [bugs](https://bugs.chromium.org/p/chromium/issues/entry)
 for the Chrome implementation.
 
