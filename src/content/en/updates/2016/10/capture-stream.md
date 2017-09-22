@@ -7,6 +7,7 @@ description: The captureStream() method enables a MediaStream to be captured fro
 {# wf_tags: canvas,chrome53,gif,media,security,webrtc #}
 {# wf_featured_image: /web/updates/images/2016/10/capture-stream/featured.jpg #}
 {# wf_featured_snippet: The <code>captureStream()</code> method makes it possible to capture a MediaStream from a canvas, video or audio element. #}
+{# wf_blink_components: Blink>Media #}
 
 <style>
 video {
