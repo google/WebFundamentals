@@ -152,7 +152,7 @@ ericbidelman:
     - author
   email: e.bidelman@google.com
   description:
-    en: 'Engineer @ Google working on Lighthouse, Web Components, Chrome, and the web'
+    en: 'Engineer @ Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'
 
 bokan:
   name:
@@ -1104,6 +1104,22 @@ jeffposnick:
   description:
     en: Web DevRel @ Google
 
+pozdnyakov:
+  name:
+    given: Mikhail
+    family: Pozdnyakov
+  org:
+    name: Intel
+    unit: Web team
+  country: Finland
+  role:
+    - author
+    - engineer
+  github: pozdnyakov
+  email: mikhail.pozdnyakov@intel.com
+  description:
+    en: Mikhail is an Engineer at Intel
+
 rupl:
   name:
     given: Chris
@@ -1179,6 +1195,22 @@ moinshaikh:
   email: montugshaikh@gmail.com
   description:
     en: Moin is a passionate Opensource tech geek working towards making opensource more adoptable.
+
+alexshalamov:
+  name:
+    given: Alexander
+    family: Shalamov
+  org:
+    name: Intel
+    unit: Web team
+  country: Finland
+  role:
+    - author
+    - engineer
+  github: alexshalamov
+  email: alexander.shalamov@intel.com
+  description:
+    en: Alex is an Engineer at Intel
 
 glenshires:
   name:

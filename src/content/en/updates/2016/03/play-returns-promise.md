@@ -7,6 +7,7 @@ description: Say goodbye to automatic playback uncertainty! play() now returns a
 {# wf_tags: promises,play,video,audio,chrome50 #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
 {# wf_featured_snippet: Say goodbye to automatic playback uncertainty! <code>play()</code> now returns a Promise. #}
+{# wf_blink_components: Blink>Media #}
 
 # HTMLMediaElement.play() Returns a Promise {: .page-title }
 
