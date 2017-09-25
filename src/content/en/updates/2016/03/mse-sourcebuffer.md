@@ -6,6 +6,7 @@ description: The Media Source API enables JavaScript to construct media streams 
 {# wf_published_on: 2016-03-14 #}
 {# wf_tags: audio,chrome50,media,mse,recording,video,webrtc,chrome50 #}
 {# wf_featured_image: /web/updates/images/2016/03/mse-sourcebuffer/featured.jpg #}
+{# wf_blink_components: Blink>Media #}
 
 # Media Source API: Automatically Ensure Seamless Playback of Media Segments in Append Order {: .page-title }
 
