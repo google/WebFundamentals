@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Muted autoplay for video is supported on Android from Chrome 53. Previously, a video element required a user gesture to initiate playback.
 
-{# wf_updated_on: 2016-07-27 #}
+{# wf_updated_on: 2017-09-25 #}
 {# wf_published_on: 2016-07-27 #}
 {# wf_tags: canvas,chrome53,gif,media,security,webrtc #}
 {# wf_featured_image: /web/updates/images/2016/07/autoplay/featured.jpg #}
@@ -28,7 +28,7 @@ description: Muted autoplay for video is supported on Android from Chrome 53. Pr
 }
 </style>
 
-Muted autoplay for video is supported by Chrome for Android as of version 53. Playback will start automatically for a video element once it comes into view if both `autoplay` and `muted` are set, and playback of muted videos can be [initiated progamatically with `play()`](/web/updates/2016/03/play-returns-promise). Previously, playback on mobile had to be initiated by a user gesture, regardless of the muted state.
+Muted autoplay for video is supported by Chrome for Android as of version 53. Playback will start automatically for a video element once it comes into view if both `autoplay` and `muted` are set, and playback of muted videos can be [initiated pragmatically with `play()`](/web/updates/2016/03/play-returns-promise). Previously, playback on mobile had to be initiated by a user gesture, regardless of the muted state.
 
 
     <video autoplay muted>
