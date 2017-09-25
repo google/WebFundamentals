@@ -21,8 +21,8 @@ toc:
     path: /web/fundamentals/media/recording-audio/
   - title: Capturing Images
     path: /web/fundamentals/media/capturing-images/
-  # - title: Capturing Video
-  #   path: /web/fundamentals/media/
+  - title: Capturing Video
+    path: /web/fundamentals/media/recording-video/
   # - title: Choosing the Media Device
   #   path: /web/fundamentals/media/
   # - title: Controlling the Camera
