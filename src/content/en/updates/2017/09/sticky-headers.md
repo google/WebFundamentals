@@ -1,5 +1,5 @@
 project_path: /web/_project.yaml
-book_path: /web/fundamentals/_book.yaml
+book_path: /web/updates/_book.yaml
 description: Using position: sticky and IntersectionObserver together to determine when elements become sticky. Apply scroll effects without scroll events!
 
 {# wf_updated_on: 2017-09-19 #}
