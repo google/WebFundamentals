@@ -92,7 +92,7 @@ works well across multiple devices and screen sizes.
 
 In Web Starter Kit we wanted to add in support for any features which blurred
 the lines between the platform and your site, so we've added support for [add to
-home screen](/web/fundamentals/design-and-ui/browser-customization/)
+home screen](/web/fundamentals/design-and-ux/browser-customization/)
 and splash screens for Android, Windows Phone, iOS and Opera Coast.
 
 <p style="text-align: center;">

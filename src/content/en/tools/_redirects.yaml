@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/polymer-starter-kit/...
+  to: https://www.polymer-project.org/2.0/start/toolbox/set-up
+
 - from: /web/tools/lighthouse/audits/theme-color
   to: /web/tools/lighthouse/audits/address-bar
 

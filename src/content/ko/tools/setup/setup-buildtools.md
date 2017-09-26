@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 다중 기기 사이트를 처음부터 다시 빌드합니다. 빌드 프로세스 도구 집합을 사용하여 개발 속도를 높이고 빠르게 로드하는 사이트를 만드는 방법에 대해 알아봅니다.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: サイト上のすべてのリソースが HTTPS で保護されていることを確認するには、[Security] パネルを使用します。
 

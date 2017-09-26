@@ -38,7 +38,7 @@ Note: Een kleine kanttekening: Let op dat 'visibility: hidden' niet hetzelfde is
 
 De uiteindelijke uitvoer is een weergaveboomstructuur die zowel de inhoud als de stijlinformatie voor alle zichtbare inhoud op het scherm bevat. We zijn er nog niet helemaal, maar het begint er al op te lijken.  **Wanneer de weergaveboomstructuur af is, kunnen we verder gaan met de 'opmaak'-fase.**
 
-Tot nu toe hebben we berekend welke nodes en de bijbehorende berekende stijlen zichtbaar moeten zijn, maar we hebben de exacte positie en grootte binnen de [viewport](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) van het apparaat niet berekend. Dit is de 'opmaak'-fase, ook wel bekend als de 'reflow'.
+Tot nu toe hebben we berekend welke nodes en de bijbehorende berekende stijlen zichtbaar moeten zijn, maar we hebben de exacte positie en grootte binnen de [viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) van het apparaat niet berekend. Dit is de 'opmaak'-fase, ook wel bekend als de 'reflow'.
 
 De browser begint aan de root van de weergaveboomstructuur en loopt de hele structuur af om de geometrie van elk object op de pagina te berekenen om de precieze grootte en positie ervan uit te zoeken. Laten we een eenvoudig praktijkvoorbeeld bekijken:
 

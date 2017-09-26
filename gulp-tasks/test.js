@@ -58,6 +58,10 @@ const VALID_VERTICALS = [
   'education', 'entertainment', 'media', 'real-estate', 'retail',
   'transportation', 'travel'
 ];
+const PAGE_TYPES = {
+  LANDING: 'landing',
+  ARTICLE: 'article',
+};
 const IS_TRAVIS = process.env.TRAVIS === 'true';
 const IS_TRAVIS_PUSH = process.env.TRAVIS_EVENT_TYPE === 'push';
 const IS_TRAVIS_ON_MASTER = process.env.TRAVIS_BRANCH === 'master';
@@ -146,7 +150,8 @@ function logMessage(level, filename, position, message, extra) {
     gutil.log(chalk.red('ERROR:'), fileLoc, message);
     allErrors.push(logMsg);
   } else {
-    gutil.log(chalk.yellow('WARNING:'), fileLoc, message);
+    // TODO(petele): Uncomment, removed while working on new IA
+    // gutil.log(chalk.yellow('WARNING:'), fileLoc, message);
     allWarnings.push(logMsg);
   }
   if (GLOBAL.WF.options.verbose && extra) {
@@ -369,6 +374,11 @@ function testMarkdown(filename, contents, options) {
       options.lastUpdateMaxDays = null;
     }
 
+    let pageType = PAGE_TYPES.ARTICLE;
+    if (/page_type: landing/.test(contents)) {
+      pageType = PAGE_TYPES.LANDING;
+    }
+
     // Verify there are no dots in the filename
     let numDots = filename.split('.');
     if (numDots.length !== 2) {
@@ -543,7 +553,7 @@ function testMarkdown(filename, contents, options) {
 
     // Check for a single level 1 heading with page title
     matched = wfRegEx.RE_TITLE.exec(contents);
-    if (!matched && !isInclude) {
+    if (pageType === PAGE_TYPES.ARTICLE && !matched && !isInclude) {
       msg = 'Page is missing page title eg: `# TITLE {: .page-title }`';
       logError(filename, null, msg);
     }
@@ -603,6 +613,24 @@ function testMarkdown(filename, contents, options) {
       } else {
         msg = `Include path MUST start with \`web/\` - ${inclFile}`;
         logError(filename, position, msg);
+      }
+    });
+
+    // Verify all {% includecode %} elements work properly
+    matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDE_CODE, contents);
+    matched.forEach(function(match) {
+      const msg = 'IncludeCode widget -';
+      const widget = match[0];
+      const position = {line: getLineNumber(contents, match.index)};
+      const inclFile = wfRegEx.getMatch(wfRegEx.RE_INCLUDE_CODE_PATH, widget, null);
+      if (inclFile.indexOf('web/') !== 0) {
+        logError(filename, position, `${msg} path must start with 'web/'`);
+      }
+      try {
+        const localPath = inclFile.replace('web/', GLOBAL.WF.src.content);
+        fs.accessSync(localPath, fs.R_OK);
+      } catch (ex) {
+        logError(filename, position, `${msg} file not found: '${inclFile}'`);
       }
     });
 
@@ -670,6 +698,9 @@ function testMarkdown(filename, contents, options) {
 
     remarkLintOptions.firstHeadingLevel = 1;
     if (isInclude) {
+      remarkLintOptions.firstHeadingLevel = 2;
+    }
+    if (pageType === PAGE_TYPES.LANDING) {
       remarkLintOptions.firstHeadingLevel = 2;
     }
     remarkLintOptions.maximumLineLength = false;
@@ -866,6 +897,39 @@ function testContributors(filename, contents) {
   });
 }
 
+
+/**
+ * Tests and validates a glossary.yaml file.
+ *   Note: The returned promise always resolves, it will never reject.
+ *
+ * @param {string} filename The name of the file to be tested.
+ * @param {string} contents The unparsed contents of the glossary file. 
+ * @return {Promise} A promise with the result of the test.
+ */
+function testGlossary(filename, contents) {
+  return new Promise(function(resolve, reject) {
+    const msg = 'Glossary must be sorted alphabetically by term.'; 
+    const glossary = parseYAML(filename, contents);
+    let prevTermName = '';
+    glossary.forEach((term) => {
+      if (!term.term) {
+        logError(filename, null, `'term' is missing`);
+        return;
+      }
+      const termName = term.term.toLowerCase();
+      if (!term.description) {
+        logWarning(filename, null, `${termName} is missing description`);
+      }
+      if (prevTermName > termName) {
+        const extra = `'${prevTermName}' came before '${termName}'`;
+        logError(filename, null, `${msg} ${extra}`);
+      }
+      prevTermName = termName;
+    });
+    resolve();
+  });
+}
+
 /**
  * Tests and validates a _redirects.yaml file.
  *   Note: The returned promise always resolves, it will never reject.
@@ -976,6 +1040,8 @@ function testFile(filename, opts) {
       testPromise = testYAML(filename, contents);
     } else if (filenameObj.base === '_contributors.yaml') {
       testPromise = testContributors(filename, contents);
+    } else if (filenameObj.base === 'glossary.yaml') {
+      testPromise = testGlossary(filename, contents);
     } else if (filenameObj.base === '_redirects.yaml') {
       testPromise = testRedirects(filename, contents);
     } else if (filenameObj.base === 'commontags.json') {

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools で作成したものを永続化するよう設定します。永続化することにより、変更内容をすぐに確認したり、変更をディスクに保存できます。
 

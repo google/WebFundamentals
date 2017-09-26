@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '오프라인 시 200으로 응답하는 URL' Lighthouse 감사의 참조 문서입니다.
 

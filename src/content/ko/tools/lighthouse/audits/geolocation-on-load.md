@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '페이지 로드 시 위치정보를 자동 요청하지 않는 페이지' Lighthouse 감사의 참조 문서입니다.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用 Security 面板确保您的网站上的所有资源均通过 HTTPS 进行保护。
 

@@ -190,7 +190,7 @@ proceed to the next step.
 If you are selling physical goods, you'll probably need to collect the user's
 shipping address and a shipping preference such as "Free shipping" or "Express
 shipping". Payment Request API certainly supports those use cases. See [the
-integration guide](/web/fundamentals/primers/payment-request/) to learn more.
+integration guide](/web/fundamentals/payments/) to learn more.
 
 ### Adding more payment solutions
 
@@ -251,7 +251,7 @@ versions.
 To learn more about Payment Request API, a few documents and resources are available:
 
 * [Official specification](https://www.w3.org/TR/payment-request/)
-* [Payment Request API integration guide](/web/fundamentals/primers/payment-request/)
+* [Payment Request API integration guide](/web/fundamentals/payments/)
 * [Demo](https://emerald-eon.appspot.com/)
 * [Simple demos and sample
   code](https://googlechrome.github.io/samples/paymentrequest/){: .external }

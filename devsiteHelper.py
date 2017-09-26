@@ -12,6 +12,9 @@ from google.appengine.api import memcache
 from google.appengine.ext.webapp.template import render
 
 SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content/')
+DEVENV = os.environ['SERVER_SOFTWARE'].startswith('Dev')
+USE_MEMCACHE = not DEVENV
+
 
 def slugify(str):
   # Very simply slugify
@@ -20,6 +23,7 @@ def slugify(str):
   slug = re.sub(r'[-]+', '-', slug)
   return slug
 
+
 def getFromMemCache(memcacheKey):
   try:
     result = memcache.get(memcacheKey)
@@ -27,11 +31,14 @@ def getFromMemCache(memcacheKey):
     result = None
   return result
 
-def setMemCache(memcacheKey, value):
+
+def setMemCache(memcacheKey, value, length=3600):
   try:
-    memcache.set(memcacheKey, value)
+    if USE_MEMCACHE:
+      memcache.set(memcacheKey, value, length)
   except Exception as e:
-    pass
+    logging.exception('Unable to cache to MemCache')
+
 
 def checkForRedirect(requestedPath, lang, useMemcache):
   # Reads the redirect files from the current directory and up the directory
@@ -88,7 +95,6 @@ def checkForRedirect(requestedPath, lang, useMemcache):
 def readFile(requestedFile, lang='en'):
   # Reads a file from the file system, first trying the localized, then
   # the English version. If neither exist, it returns None
-  #originalPathToFile = pathToFile
   requestedFile = re.sub(r'^/?web/', '', requestedFile)
   workingFile = os.path.join(SOURCE_PATH, lang, requestedFile)
   if not os.path.isfile(workingFile):
@@ -106,6 +112,7 @@ def readFile(requestedFile, lang='en'):
     result = ' - ReadFile failed trying to find: ' + requestedFile
     logging.error(result)
     return None
+
 
 def fetchGithubFile(path):
   """Fetchs a file in a repository hosted on github.com.
@@ -129,35 +136,117 @@ def fetchGithubFile(path):
   except urllib2.HTTPError as e:
     logging.error('Unable to fetch Github file: %s' % e.code)
     return None
-
   return content
 
-def getLeftNav(requestPath, pathToBook, lang='en'):
+
+def parseBookYaml(pathToBook, lang='en'):
+  """Read and parse a book.yaml file.
+
+  Args:
+      pathToBook: the string path to the location of the book
+      lang: Which language to use, defaults to 'en'
+
+  Returns:
+      A dictionary with the parsed book.
+  """
+  memcacheKey = 'bookYAML-' + pathToBook
+  result = getFromMemCache(memcacheKey)
+  if result:
+    return result
+  try:
+    result = {}
+    upperTabs = []
+    result['upper_tabs'] = upperTabs
+    bookYaml = yaml.load(readFile(pathToBook, lang))
+    for upperTab in bookYaml['upper_tabs']:
+      upperTabs.append(expandBook(upperTab))
+    setMemCache(memcacheKey, result, 60)
+    return result
+  except Exception as e:
+    logging.exception('Error in parseBookYaml')
+  return None
+
+
+def expandBook(book, lang='en'):
+  """Iterate and expand includes in a book.yaml file.
+
+  Args:
+      book: the parsed book.yaml file
+      lang: Which language to use, defaults to 'en'
+
+  Returns:
+      A dictionary with the parsed & expanded book.
+  """
+  if isinstance(book, dict):
+    result = {}
+    for k, v in book.iteritems():
+      result[k] = expandBook(v, lang)
+    return result
+  if isinstance(book, list):
+    results = []
+    for item in book:
+      if 'include' in item:
+        newItems = yaml.load(readFile(item['include'], lang))
+        results = results + expandBook(newItems['toc'], lang)
+      else:
+        results.append(expandBook(item, lang))
+    return results
+  return book
+
+
+def getLowerTabs(bookYaml):
+  """Gets the lower tabs from a parsed book.yaml dictionary.
+
+  Args:
+      bookYaml: the parsed book.yaml file
+
+  Returns:
+      An array of objects with the lower tabs
+  """
+  result = []
+  try:
+    for tab in bookYaml['upper_tabs']:
+      if 'lower_tabs' in tab and 'other' in tab['lower_tabs']:
+        for lowerTab in tab['lower_tabs']['other']:
+          lt = {}
+          lt['name'] = lowerTab['name']
+          if 'contents' in lowerTab and 'path' in lowerTab['contents'][0]:
+            lt['path'] = lowerTab['contents'][0]['path']
+            result.append(lt)
+  except Exception as e:
+    logging.exception('Unable to read/parse the lower tabs')
+  return result
+
+
+def getLeftNav(requestPath, bookYaml, lang='en'):
   # Returns the left nav. If it's already been generated and stored in
   # memcache, return that, otherwise, read the file then recursively
   # build the tree using buildLeftNav.
+  memcacheKey = 'leftNav-' + requestPath
+  result = getFromMemCache(memcacheKey)
+  if result:
+    return result
   whoops = '<h2>Whoops!</h2>'
   whoops += '<p>An error occured while trying to parse and build the'
   whoops += ' left hand navigation. Check the error logs.'
   whoops += '</p>'
   requestPath = os.path.join('/web/', requestPath)
-  bookContents = readFile(pathToBook, lang)
-  if bookContents:
-    try:
-      yamlNav = yaml.load(bookContents)
-      for tab in yamlNav['upper_tabs']:
-        if 'path' in tab and requestPath.startswith(tab['path']):
-          if 'lower_tabs' in tab:
-            result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
-            result += buildLeftNav(tab['lower_tabs']['other'][0]['contents'])
-            return result
-    except Exception as e:
-      msg = ' - Unable to read or parse primary book.yaml: ' + pathToBook
-      logging.exception(msg)
-      whoops += '<p>Exception occured.</p>'
-      return whoops
-  else:
-    whoops += '<p>Not found: ' + pathToBook + '</p>'
+  try:
+    result = '<h2>No Matches Found</h2>'
+    for upperTab in bookYaml['upper_tabs']:
+      if 'path' in upperTab and requestPath.startswith(upperTab['path']):
+        for lowerTab in upperTab['lower_tabs']['other']:
+          if ('path' not in lowerTab['contents'][0] or
+            requestPath.startswith(lowerTab['contents'][0]['path'])):
+              result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
+              result += buildLeftNav(lowerTab['contents'])
+              result += '</ul>\n'
+    setMemCache(memcacheKey, result)
+    return result
+  except Exception as e:
+    msg = ' - Unable to read or parse primary book.yaml: ' + pathToBook
+    logging.exception(msg)
+    whoops += '<p>Exception occured.</p>'
     return whoops
 
 
@@ -166,15 +255,17 @@ def buildLeftNav(bookYaml, lang='en'):
   result = ''
   for item in bookYaml:
     if 'include' in item:
-      include = readFile(item['include'], lang)
-      if include:
-        try:
-          include = yaml.load(include)
-          if 'toc' in include and len(include['toc']) == 1:
-            item = include['toc'][0]
-        except Exception as e:
-          msg = ' - Unable to parsing embedded toc file: ' + item['include']
-          logging.exception(msg)
+      ## TODO(petele): Remove this
+      ## leaving this in for a few weeks while I ensure it doesn't break
+      ## anything.
+      logging.error('***** INCLUDE - this should NOT happen.')
+      # try:
+      #   include = readFile(item['include'], lang)
+      #   include = yaml.load(include)
+      #   result += buildLeftNav(include['toc'])
+      # except Exception as e:
+      #   msg = ' - Unable to parsing embedded toc file: ' + item['include']
+      #   logging.exception(msg)
     if 'path' in item:
       result += '<li class="devsite-nav-item">\n'
       result += '<a href="' + item['path'] + '" class="devsite-nav-title">\n'
@@ -196,7 +287,7 @@ def buildLeftNav(bookYaml, lang='en'):
       result += '</a>'
       result += '<ul class="devsite-nav-section devsite-nav-section-collapsed">\n'
       result += buildLeftNav(item['section'])
-  result += '</ul>\n'
+      result += '</ul>\n'
   return result
 
 
@@ -350,17 +441,13 @@ def getIncludeCode(include_tag, lang='en'):
   return cgi.escape(result)
 
 
-def getAnnouncementBanner(lang='en'):
-  # Returns the announcement banner
-  memcacheKey = 'header-Announcement-' + lang
+def getAnnouncementBanner(pathToProject, lang='en'):
+  memcacheKey = 'projectYAML-' + pathToProject
   result = getFromMemCache(memcacheKey)
-  if result is None:
-    result = ''
-    projectFile = os.path.join(SOURCE_PATH, lang, '_project.yaml')
-    if not os.path.isfile(projectFile):
-      projectFile = os.path.join(SOURCE_PATH, 'en', '_project.yaml')
-    raw = open(projectFile, 'r').read().decode('utf8')
-    project = yaml.load(raw)
+  if result:
+    return result
+  try:
+    project = yaml.load(readFile(pathToProject, lang))
     if 'announcement' in project:
       startBanner = project['announcement']['start']
       startBanner = datetime.strptime(startBanner, '%Y-%m-%dT%H:%M:%SZ')
@@ -374,7 +461,10 @@ def getAnnouncementBanner(lang='en'):
         result += '</div>'
       else:
         logging.warn('Announcement in _project.yaml expired: not shown')
-      setMemCache(memcacheKey, result)
+      setMemCache(memcacheKey, result, 60)
+  except Exception as e:
+    logging.exception('Unable to get announcement from project.yaml')
+    return ''
   return result
 
 

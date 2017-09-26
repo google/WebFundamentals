@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:用户希望页面可以交互并且非常流畅。像素管道的每个阶段均可能出现卡顿现象。了解用于确定和解决会降低运行时性能的常见问题的工具和策略。
 

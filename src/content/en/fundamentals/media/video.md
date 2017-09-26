@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn about the simplest ways to add video to your site and ensure users get the best possible experience on any device.
 
@@ -61,7 +61,7 @@ For example:
 {% includecode content_path="web/fundamentals/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/video-main.html){: target="_blank" .external }
 
 When the browser parses the `<source>` tags, it uses the optional `type`
 attribute to help decide which file to download and play. If the browser
@@ -88,8 +88,8 @@ Not including a type attribute can affect performance when there are
 multiple sources with unsupported types.
 
 Using your mobile browser developer tools, compare network activity
-[with type attributes](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html)
-and [without type attributes](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html).
+[with type attributes](https://googlesamples.github.io/web-fundamentals/fundamentals/media/video-main.html)
+and [without type attributes](https://googlesamples.github.io/web-fundamentals/fundamentals/media/notype.html).
 
 Also check the response headers in your browser developer tools to
 [ensure your server reports the right MIME type](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types);
@@ -322,7 +322,7 @@ and plugins such as [FitVids](http://fitvidsjs.com/) make it possible to maintai
 appropriate size and aspect ratio, even for Flash videos from YouTube and
 other sources.
 
-Use [CSS media queries](/web/fundamentals/design-and-ui/responsive/#css-media-queries)
+Use [CSS media queries](/web/fundamentals/design-and-ux/responsive/#css-media-queries)
 to specify the size of elements depending on the viewport dimensions; `max-
 width: 100%` is your friend.
 
@@ -345,10 +345,10 @@ from the original video. Squashed or stretched looks bad.
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html)
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/responsive_embed.html)
 
-Compare the [responsive sample](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html)
-to the [unresponsive version](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/unyt.html).
+Compare the [responsive sample](https://googlesamples.github.io/web-fundamentals/fundamentals/media/responsive_embed.html)
+to the [unresponsive version](https://googlesamples.github.io/web-fundamentals/fundamentals/media/unyt.html).
 
 
 ## Customize the video player
@@ -458,7 +458,7 @@ On devices that support the Fullscreen API, consider using thumbnail
 images as placeholders for video:
 
 To see this in action, check out the
-[demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html).
+[demo](https://googlesamples.github.io/web-fundamentals/fundamentals/media/fullscreen.html).
 
 Dogfood: `requestFullScreen()` may be vendor prefixed and may require extra code
 for full cross browser compatibility.
@@ -495,7 +495,7 @@ element as a child of the video element:
 {% includecode content_path="web/fundamentals/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/track.html)
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/track.html)
 
 The track element `src` attribute gives the location of the track file.
 
@@ -701,7 +701,7 @@ that can be used to control video playback.
 
 On mobile `play()` and `pause()` don't work unless called in response to user
 action such as clicking a button: see the
-[demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html).
+[demo](https://googlesamples.github.io/web-fundamentals/fundamentals/media/scripted.html).
 (Likewise, you can't initiate playback for content such as embedded
 YouTube videos.)
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:在 Chrome DevTools 中设置永久制作，以便立即查看更改和将这些更改保存到磁盘中。
 

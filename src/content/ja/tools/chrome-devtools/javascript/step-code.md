@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: コードを行または関数ごとに実行すると、データやページ内の変更を観察して、何が起こっているかを正確に把握できます。
 

@@ -75,7 +75,7 @@ Bu yaklasimin farkli HTML sunma veya sunucu tarafi komut dosyasi olusturmaya gö
 Bu noktalarin tümü özellikle bant genisligi ve gecikmenin çok önemli oldugu ve kullanici sabrinin muhtemelen sinirli olacagi mobil baglamlarda önemlidir. 
 Tür özelliginin koda dahil edilmemesi, desteklenmeyen türlere sahip birden çok kaynak oldugunda performansi olumsuz etkileyebilir.
 
-Mobil tarayici gelistirici araçlarinizi kullanarak ag etkinligini <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html">tür özellikleri ile</a> ve <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html">tür özellikleri olmadan</a> karsilastirin.
+Mobil tarayici gelistirici araçlarinizi kullanarak ag etkinligini <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">tür özellikleri ile</a> ve <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html">tür özellikleri olmadan</a> karsilastirin.
 Ayrica, [sunucunuzun dogru MIME türünü bildirdiginden emin olmak](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types) için tarayici gelistirici araçlarinizdaki yanit üstbilgilerini kontrol edin; aksi halde, video kaynagi türü kontrolleri çalismaz.
 
 ### Bir baslangiç ve bitis zamani belirtme
@@ -230,7 +230,7 @@ Tarayicinin hangi video biçimini seçtigini bilmek ister misiniz?
 
 Kullanilan kaynagi döndürmek için JavaScript'te, videonun `currentSrc` özelligini kullanin.
 
-Bunu çalisirken görmek için <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html">bu demoya</a> göz atin: Chrome ve Firefox, `chrome.webm` kaynagini seçerken (bunun, bu tarayicilarin destekledigi olasi kaynaklar listesinde ilk sirada olmasindan kaynaklanir) Safari `chrome.mp4` kaynagini seçer.
+Bunu çalisirken görmek için <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">bu demoya</a> göz atin: Chrome ve Firefox, `chrome.webm` kaynagini seçerken (bunun, bu tarayicilarin destekledigi olasi kaynaklar listesinde ilk sirada olmasindan kaynaklanir) Safari `chrome.mp4` kaynagini seçer.
 
 
 ## Videolarin boyutlarini dogru bir sekilde ayarlama 
@@ -301,7 +301,7 @@ Note: Orijinal videodan farkli bir en boy oraniyla sonuçlanacak öge boyutu aya
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html">Duyarli örnegi</a>, <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/unyt.html">duyarli olmayan sürümle</a> karsilastirin.
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html">Duyarli örnegi</a>, <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/unyt.html">duyarli olmayan sürümle</a> karsilastirin.
 
 
 ## Video oynaticiyi özellestirme 
@@ -392,7 +392,7 @@ Tam Ekran API'sini destekleyen cihazlarda, video için yer tutucu olarak küçü
      <p>Bu tarayici video ögesini desteklemiyor.</p>
 </video>
 
-Bunu çalisirken görmek için <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html">demoya</a> göz atin.
+Bunu çalisirken görmek için <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html">demoya</a> göz atin.
 
 Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
@@ -586,7 +586,7 @@ Varsayilan olarak true degerine ayarlanir, ancak bir WebView uygulamasi bunu dev
   </tbody>
 </table>
 
-PlaybackRate (<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html">demoya bakin</a>) ve volume, mobil cihazlarda desteklenmez.
+PlaybackRate (<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html">demoya bakin</a>) ve volume, mobil cihazlarda desteklenmez.
 
 #### Yöntemler
 
@@ -616,7 +616,7 @@ PlaybackRate (<a href="https://googlesamples.github.io/web-fundamentals/fundamen
 </table>
 
 Mobil cihazlarda (Android için Opera disinda) play() ve pause() yöntemleri, bir
-dügmeyi tiklama gibi kullanici eylemlerine yanit olarak çagrilmadikça çalismaz: <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html">Demoya</a> bakin. (Benzer sekilde, yerlesik YouTube videolari gibi içerik için oynatma baslatilamaz.)
+dügmeyi tiklama gibi kullanici eylemlerine yanit olarak çagrilmadikça çalismaz: <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html">Demoya</a> bakin. (Benzer sekilde, yerlesik YouTube videolari gibi içerik için oynatma baslatilamaz.)
 
 #### Olaylar
 

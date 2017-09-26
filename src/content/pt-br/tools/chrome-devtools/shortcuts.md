@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Uma referência de todos os atalhos de teclado presentes no Chrome DevTools.
 

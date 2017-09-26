@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: コンソール API を使用して、コンソールに情報を書き込んだり、JavaScript プロファイルを作成したり、デバッグ セッションを開始したりできます。
 

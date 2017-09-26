@@ -88,7 +88,7 @@ landing_page:
       image_path: images/content-responsive-2x.jpg
       buttons:
       - label: Pelajari lebih lanjut
-        path: /web/fundamentals/design-and-ui/responsive/
+        path: /web/fundamentals/design-and-ux/responsive/
 
 
   - items:

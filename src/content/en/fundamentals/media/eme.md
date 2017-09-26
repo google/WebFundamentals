@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Enabling HTTPS on your servers is critical to securing your webpages.
 
@@ -409,7 +409,7 @@ using the appendBuffer() method:
     };
 
 Find out more about MSE in the
-[MSE primer](/web/fundamentals/getting-started/primers/media-source-extensions).
+[MSE primer](/web/fundamentals/media/mse/basics).
 
 ## Related technology &num;2&colon; Dynamic Adaptive Streaming over HTTP (DASH)
 
@@ -544,7 +544,7 @@ for APIs that most media plugins rely on.
 
 [DTG Webinar](http://vimeo.com/62269279) (partially obsolete)
 [What is EME?](https://hsivonen.fi/eme/), by Henri Sivonen
-[Media Source Extensions](/web/fundamentals/getting-started/primers/media-source-extensions) primer
+[Media Source Extensions](/web/fundamentals/media/mse/basics) primer
 MPEG-DASH Test Streams: [BBC R&amp;D blog post](http://bbc.co.uk/rd/blog/2013/09/mpeg-dash-test-streams)
 
 ### Demos

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Referensi dokumentasi untuk "Manifes Berisi Ikon yang Setidaknya 192 px" audit Lighthouse.
 

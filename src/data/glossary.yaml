@@ -1,0 +1,96 @@
+# A collection of commonly used terms.
+
+##
+## Please add new terms in alphabetical order.
+##
+
+# EXAMPLE
+# - term: Progressive Web App (REQUIRED)
+#   description: A progressive web app is awesome. (STRONGLY ENCOURAGED)
+#   link: /url/to/more/details (OPTIONAL)
+#   acronym: PWA (OPTIONAL)
+#   blink_component: Blink>GetUserMedia>WebCam (OPTIONAL - not used yet)
+#   tags: (OPTIONAL - not used yet)
+#   - tagA (REQUIRED - must validate from commonTags.json)
+#   links: (OPTIONAL)
+#   - title: Your First PWA Code Lab (REQUIRED)
+#     link: /web/fundamentals/something (REQUIRED)
+
+- term: Add to Home Screen
+  acronym: A2HS
+  link: /web/fundamentals/app-install-banners/
+
+- term: Custom Element
+  description: "A Custom Element is a developer defined HTML tag. These elements are the foundation of Web Components and can be used to create any sort of UI."
+  link: /web/fundamentals/architecture/building-components/customelements
+
+- term: Fast, Integrated, Reliable, Engaging
+  acronym: FIRE
+  description: "Progressive Web Apps (PWA's) should be fast, integrated, reliable, and engaging."
+  link: /web/progressive-web-apps/
+
+- term: First Contentful Paint
+  acronym: FCP
+
+- term: First Meaningful Paint
+  acronym: FMP
+
+- term: First, Last, Invert, Play
+  acronym: FLIP
+  description: "FLIP is a technique to set up high-performance animations using CSS transforms. To avoid janking animations, start and end position are evaluated during the setup so that the animation doesn't have to do any expensive calculations."
+  links:
+  - title: FLIP your animations
+    link: https://aerotwist.com/blog/flip-your-animations/
+
+- term: Lifecycle Callback
+  description: "Every Custom Element has a set of built-in lifecycle callbacks, or \"reactions\" that are called when the element is added/removed from the page, or has an attribute mutated."
+  links:
+  - title: Custom elements - lifecycles
+    link: /web/fundamentals/architecture/building-components/customelements#reactions
+
+- term: Mutation Observer
+  description: "Mutation Observers are a web platform API to detect and react to change to the DOM tree. If an element is observed by a MutationObserver, events like appending a new element or removing and existing one will trigger a function to execute."
+  link: /web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers
+
+- term: Progressive Web App
+  acronym: PWA
+  description: "Progressive Web Apps are user experiences that have the reach of the web, and are fast, integrated, reliable and engaging."
+  link: /web/progressive-web-apps/
+
+- term: Push, Render, Pre-cache, Lazy-load
+  acronym: PRPL
+  description: "PRPL is a pattern for structuring and serving Progressive Web Apps (PWAs), with an emphasis on the performance of app delivery and launch."
+  link: /web/fundamentals/performance/prpl-pattern/
+
+- term: requestAnimationFrame
+  acronym: rAF
+
+- term: requestIdleCallback
+  acronym: rIC
+
+- term: Response, Animation, Idle, Load
+  acronym: RAIL
+  description: "RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in different ways."
+  link: /web/fundamentals/performance/rail
+
+- term: Shadow DOM
+  description: "Shadow DOM introduces scoped CSS and DOM to the web platform. It lets developers write encapsulated UI components which can be used in any application."
+  link: /web/fundamentals/architecture/building-components/shadowdom
+
+- term: Single Page App
+  acronym: SPA
+
+- term: Time To First Byte
+  acronym: TTFB
+
+- term: Time To First Paint
+  acronym: TTFP
+
+- term: Time To Interactive
+  acronym: TTI
+
+- term: Web Components
+  description: "Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component standards, will work across modern browsers, and can be used with any JavaScript library or framework that works with HTML."
+  links:
+  - title: Introduction on webcomponents.org
+    link: https://www.webcomponents.org/introduction

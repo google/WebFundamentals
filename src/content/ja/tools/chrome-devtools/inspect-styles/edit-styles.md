@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools の [Styles] ペインを使用して、要素に関連付けられている CSS スタイルを調査して変更します。
 

@@ -1,18 +1,24 @@
 toc:
-  - title: Getting Started
-    section:
-    - title: Overview
-      path: /web/tools/setup/
-    - title: Setup Your Editor
-      path: /web/tools/setup/setup-editor
-    - title: Setup Persistence with DevTools Workspaces
-      path: /web/tools/setup/setup-workflow
-    - title: Setup CSS & JS Preprocessors
-      path: /web/tools/setup/setup-preprocessors
-    - title: Setup Command Line Shortcuts
-      path: /web/tools/setup/setup-shortcuts
-    - title: Setup Browser Extensions
-      path: /web/tools/setup/setup-extensions
-    - title: Setup Your Build Tools
-      path: /web/tools/setup/setup-buildtools
-
+- title: Setting Up Your Dev Environment
+  section:
+  - title: Overview
+    path: /web/tools/setup/
+    step_group: tools_setup
+  - title: Setup Your Editor
+    path: /web/tools/setup/setup-editor
+    step_group: tools_setup
+  - title: Setup Persistence with DevTools Workspaces
+    path: /web/tools/setup/setup-workflow
+    step_group: tools_setup
+  - title: Setup CSS & JS Preprocessors
+    path: /web/tools/setup/setup-preprocessors
+    step_group: tools_setup
+  - title: Setup Command Line Shortcuts
+    path: /web/tools/setup/setup-shortcuts
+    step_group: tools_setup
+  - title: Setup Browser Extensions
+    path: /web/tools/setup/setup-extensions
+    step_group: tools_setup
+  - title: Setup Your Build Tools
+    path: /web/tools/setup/setup-buildtools
+    step_group: tools_setup

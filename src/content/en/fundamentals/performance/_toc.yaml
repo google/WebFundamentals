@@ -1,63 +1,106 @@
 toc:
   - title: Performance
+    style: accordion
     section:
     - title: Overview
-      path: /web/fundamentals/performance/
-    - title: Measure Performance with the RAIL Model
       path: /web/fundamentals/performance/rail
-    - title: Optimizing Content Efficiency
+    - title: Loading Performance
       section:
-      - title: Overview
-        path: /web/fundamentals/performance/optimizing-content-efficiency/
-      - title: Eliminating Unnecessary Downloads
-        path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
-      - title: Optimizing Encoding and Transfer Size of Text-based Assets
-        path: /web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer
-      - title: Image Optimization
-        path: /web/fundamentals/performance/optimizing-content-efficiency/image-optimization
-      - title: Web Font Optimization
-        path: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
-      - title: HTTP Caching
-        path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
-    - title: Critical Rendering Path
-      section:
-      - title: Overview
-        path: /web/fundamentals/performance/critical-rendering-path/
-      - title: Constructing the Object Model
-        path: /web/fundamentals/performance/critical-rendering-path/constructing-the-object-model
-      - title: Render-Tree Construction, Layout, and Paint
-        path: /web/fundamentals/performance/critical-rendering-path/render-tree-construction
-      - title: Render-Blocking CSS
-        path: /web/fundamentals/performance/critical-rendering-path/render-blocking-css
-      - title: Adding Interactivity with JavaScript
-        path: /web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
-      - title: Measuring the Critical Rendering Path
-        path: /web/fundamentals/performance/critical-rendering-path/measure-crp
-      - title: Analyzing Critical Rendering Path Performance
-        path: /web/fundamentals/performance/critical-rendering-path/analyzing-crp
-      - title: Optimizing the Critical Rendering Path
-        path: /web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path
-      - title: PageSpeed Rules and Recommendations
-        path: /web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations
+      - title: Understanding Low Bandwidth and High Latency
+        path: /web/fundamentals/performance/poor-connectivity/
+      # - title: Overview
+      #   path: /web/fundamentals/perforamance/loading/
+      # - title: Understanding Loading
+      #   path: /web/fundamentals/perforamance/loading/understand
+      - title: Optimizing Content Efficiency
+        section:
+        - title: Overview
+          path: /web/fundamentals/performance/optimizing-content-efficiency/
+          step_group: perf-oce
+        - title: Eliminating Unnecessary Downloads
+          path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
+          step_group: perf-oce
+        - title: Optimizing Encoding and Transfer Size of Text-based Assets
+          path: /web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer
+          step_group: perf-oce
+        - title: Image Optimization
+          path: /web/fundamentals/performance/optimizing-content-efficiency/image-optimization
+          step_group: perf-oce
+        - title: Web Font Optimization
+          path: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
+          step_group: perf-oce
+        - title: HTTP Caching
+          path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
+          step_group: perf-oce
+      - title: Never Load the Same Resource Twice
+        section:
+        - title: Offline Cookbook
+          path: /web/fundamentals/instant-and-offline/offline-cookbook/
+        - title: Web Storage
+          section:
+          - title: Overview
+            path: /web/fundamentals/instant-and-offline/web-storage/
+          - title: Offline Storage for Progressive Web Apps
+            path: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
+          - title: IndexedDB Best Practices for Persisting Application State
+            path: /web/fundamentals/instant-and-offline/web-storage/indexeddb-best-practices-app-state
+        - title: Offline UX Considerations
+          path: /web/fundamentals/instant-and-offline/offline-ux
+      - title: Order Loading Thoughtfully
+        section:
+        - title: Critical Rendering Path
+          section:
+          - title: Overview
+            path: /web/fundamentals/performance/critical-rendering-path/
+            step_group: perf-crp
+          - title: Constructing the Object Model
+            path: /web/fundamentals/performance/critical-rendering-path/constructing-the-object-model
+            step_group: perf-crp
+          - title: Render-Tree Construction, Layout, and Paint
+            path: /web/fundamentals/performance/critical-rendering-path/render-tree-construction
+            step_group: perf-crp
+          - title: Render-Blocking CSS
+            path: /web/fundamentals/performance/critical-rendering-path/render-blocking-css
+            step_group: perf-crp
+          - title: Adding Interactivity with JavaScript
+            path: /web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
+            step_group: perf-crp
+          - title: Measuring the Critical Rendering Path
+            path: /web/fundamentals/performance/critical-rendering-path/measure-crp
+            step_group: perf-crp
+          - title: Analyzing Critical Rendering Path Performance
+            path: /web/fundamentals/performance/critical-rendering-path/analyzing-crp
+            step_group: perf-crp
+          - title: Optimizing the Critical Rendering Path
+            path: /web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path
+            step_group: perf-crp
+          - title: PageSpeed Rules and Recommendations
+            path: /web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations
+            step_group: perf-crp
+        - title: Introduction to HTTP/2
+          path: /web/fundamentals/performance/http2/
+      - title: PRPL Pattern
+        path: /web/fundamentals/performance/prpl-pattern/
     - title: Rendering Performance
       section:
       - title: Overview
         path: /web/fundamentals/performance/rendering/
+        step_group: perf-rendering
       - title: Optimizing JavaScript Execution
         path: /web/fundamentals/performance/rendering/optimize-javascript-execution
+        step_group: perf-rendering
       - title: Reduce the Scope and Complexity of Style Calculations
         path: /web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations
+        step_group: perf-rendering
       - title: Avoid Large, Complex Layouts and Layout Thrashing
         path: /web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing
+        step_group: perf-rendering
       - title: Simplify Paint Complexity and Reduce Paint Areas
         path: /web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
+        step_group: perf-rendering
       - title: Stick to Compositor-Only Properties and Manage Layer Count
         path: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
+        step_group: perf-rendering
       - title: Debounce Your Input Handlers
         path: /web/fundamentals/performance/rendering/debounce-your-input-handlers
-    - title: Understanding Low Bandwidth and High Latency
-      path: /web/fundamentals/performance/poor-connectivity/
-    - title: Introduction to HTTP/2
-      path: /web/fundamentals/performance/http2/
-    - title: The PRPL Pattern
-      path: /web/fundamentals/performance/prpl-pattern/
+        step_group: perf-rendering

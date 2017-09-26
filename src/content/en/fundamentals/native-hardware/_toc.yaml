@@ -1,17 +1,11 @@
 toc:
-  - title: Accessing Native Hardware
-    section:
-    - title: Overview
-      path: /web/fundamentals/native-hardware/
-    - title: User Location
-      path: /web/fundamentals/native-hardware/user-location/
-    - title: Device Orientation & Motion
-      path: /web/fundamentals/native-hardware/device-orientation/
-    - title: Recording Audio from the User
-      path: /web/fundamentals/native-hardware/recording-audio/
-    - title: Capturing an Image from the User
-      path: /web/fundamentals/native-hardware/capturing-images/
-    - title: Making Fullscreen Experiences
-      path: /web/fundamentals/native-hardware/fullscreen/
-    - title: Click to Call
-      path: /web/fundamentals/native-hardware/click-to-call/
+- title: Device APIs
+  section:
+  - title: Handling User Location
+    path: /web/fundamentals/native-hardware/user-location/
+  - title: Using Device Orientation & Motion
+    path: /web/fundamentals/native-hardware/device-orientation/
+  - title: Making Fullscreen Experiences
+    path: /web/fundamentals/native-hardware/fullscreen/
+  - title: Click to Call
+    path: /web/fundamentals/native-hardware/click-to-call/

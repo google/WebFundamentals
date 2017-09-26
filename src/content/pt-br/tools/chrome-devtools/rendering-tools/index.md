@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Os usuários esperam que as páginas sejam interativas e suaves. Cada etapa no pipeline de pixels representa uma oportunidade para introduzir instabilidade. Conheça ferramentas e estratégias para identificar e consertar problemas comuns que prejudicam o desempenho em tempo de execução.
 

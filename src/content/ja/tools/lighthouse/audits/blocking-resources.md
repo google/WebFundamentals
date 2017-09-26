@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse の監査項目「初回ペイントの遅延を引き起こすリンクタグをサイトに使用しない」および「初回ペイントの遅延を引き起こすスクリプトタグをサイトの head 部に使用しない」のリファレンス ドキュメント。
 

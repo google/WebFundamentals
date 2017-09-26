@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:利用 Chrome DevTools 的 Device Mode，您可以在一系列设备上模拟开发网站在生产环境中的运行。
 
@@ -172,7 +172,7 @@ Device Mode 提供了多种用于模拟的设备。如果您发现某款边缘�
 * CSS [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) 规则。
 
 
-* 图像上的 [srcset](/web/fundamentals/design-and-ui/media/images/images-in-markup) 属性。
+* 图像上的 [srcset](/web/fundamentals/design-and-ux/media/images/images-in-markup) 属性。
 
 
 * `window.devicePixelRatio` 属性。
@@ -183,7 +183,7 @@ Device Mode 提供了多种用于模拟的设备。如果您发现某款边缘�
 
 ### 媒体查询 {: #media-queries }
 
-[媒体查询](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)是自适应网页设计的基本部分。要查看媒体查询检查器，请在三圆点菜单中点击 **Show Media queries**。DevTools 会在样式表中检测媒体查询，并在顶端标尺中将它们显示为彩色条形。
+[媒体查询](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)是自适应网页设计的基本部分。要查看媒体查询检查器，请在三圆点菜单中点击 **Show Media queries**。DevTools 会在样式表中检测媒体查询，并在顶端标尺中将它们显示为彩色条形。
 
 
 ![显示媒体查询](imgs/show-media-queries.png)

@@ -1,625 +1,94 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
-
 redirects:
 
-- from: /web/fundamentals/instant-and-offline/
-  to: /web/fundamentals/instant-and-offline/offline-cookbook/
-  temporary: true
+- from: /web/fundamentals/architecture/building-components/...
+  to: /web/fundamentals/web-components/...
 
-- from: /web/fundamentals/design-and-ui/browser-customization/great-icons
-  to: /web/fundamentals/design-and-ui/browser-customization/
+- from: /web/fundamentals/discovery-and-monetization/payment-request/...
+  to: /web/fundamentals/payments/...
 
-- from: /web/fundamentals/design-and-ui/browser-customization/theme-color
-  to: /web/fundamentals/design-and-ui/browser-customization/
+- from: /web/fundamentals/discovery-and-monetization/search-optimization/...
+  to: /web/fundamentals/discovery/search-optimization/...
 
-- from: /web/fundamentals/design-and-ui/input/
-  to: /web/fundamentals/design-and-ui/
+- from: /web/fundamentals/discovery-and-monetization/social-discovery/...
+  to: /web/fundamentals/discovery/social-discovery/...
 
-- from: /web/fundamentals/design-and-ui/input/form/
-  to: /web/fundamentals/design-and-ui/input/forms/
+- from: /web/fundamentals/discovery-and-monetization/...
+  to: /web/fundamentals/
 
-- from: /web/fundamentals/design-and-ui/input/form/
-  to: /web/fundamentals/design-and-ui/input/forms/
+- from: /web/fundamentals/design-and-ui/
+  to: /web/fundamentals/
 
-- from: /web/fundamentals/design-and-ui/input/form/choose-the-best-input-type
-  to: /web/fundamentals/design-and-ui/input/forms/#choose_the_best_input_type
+- from: /web/fundamentals/design-and-ui/...
+  to: /web/fundamentals/design-and-ux/...
 
-- from: /web/fundamentals/design-and-ui/input/form/choose-the-best-input-type
-  to: /web/fundamentals/design-and-ui/input/forms/#choose_the_best_input_type
+- from: /web/fundamentals/engage-and-retain/app-install-banners/...
+  to: /web/fundamentals/app-install-banners/...
 
-- from: /web/fundamentals/design-and-ui/input/form/choose-the-best-input-type
-  to: /web/fundamentals/design-and-ui/input/forms/#choose_the_best_input_type
+- from: /web/fundamentals/engage-and-retain/push-notifications/...
+  to: /web/fundamentals/push-notifications/...
 
-- from: /web/fundamentals/design-and-ui/input/form/label-and-name-inputs
-  to: /web/fundamentals/design-and-ui/input/forms/#label_and_name_inputs_properly
+- from: /web/fundamentals/engage-and-retain/web-app-manifest/...
+  to: /web/fundamentals/web-app-manifest/...
 
-- from: /web/fundamentals/design-and-ui/input/form/label-and-name-inputs
-  to: /web/fundamentals/design-and-ui/input/forms/#label_and_name_inputs_properly
+- from: /web/fundamentals/engage-and-retain/...
+  to: /web/fundamentals/
 
-- from: /web/fundamentals/design-and-ui/input/form/label-and-name-inputs
-  to: /web/fundamentals/design-and-ui/input/forms/#label_and_name_inputs_properly
+- from: /web/fundamentals/getting-started/codelabs/...
+  to: /web/fundamentals/codelabs/...
 
-- from: /web/fundamentals/design-and-ui/input/form/provide-real-time-validation
-  to: /web/fundamentals/design-and-ui/input/forms/#provide_real-time_validation
+- from: /web/fundamentals/getting-started/primers/service-workers
+  to: /web/fundamentals/primers/service-workers/
 
-- from: /web/fundamentals/design-and-ui/input/form/provide-real-time-validation
-  to: /web/fundamentals/design-and-ui/input/forms/#provide_real-time_validation
+- from: /web/fundamentals/getting-started/primers/customelements
+  to: /web/fundamentals/web-components/customelements
 
-- from: /web/fundamentals/design-and-ui/input/form/provide-real-time-validation
-  to: /web/fundamentals/design-and-ui/input/forms/#provide_real-time_validation
-
-- from: /web/fundamentals/design-and-ui/media/
-  to: /web/fundamentals/design-and-ui/
-
-- from: /web/fundamentals/design-and-ui/media/images/
-  to: /web/fundamentals/design-and-ui/media/images
-
-- from: /web/fundamentals/design-and-ui/media/images/avoid-images-completely
-  to: /web/fundamentals/design-and-ui/media/images#avoid-images-completely
-
-- from: /web/fundamentals/design-and-ui/media/images/images-in-css
-  to: /web/fundamentals/design-and-ui/media/images#images-in-css
-
-- from: /web/fundamentals/design-and-ui/media/images/images-in-markup
-  to: /web/fundamentals/design-and-ui/media/images#images-in-markup
-
-- from: /web/fundamentals/design-and-ui/media/images/optimize-images-for-performance
-  to: /web/fundamentals/design-and-ui/media/images#optimize-images-for-performance
-
-- from: /web/fundamentals/design-and-ui/media/images/use-icons
-  to: /web/fundamentals/design-and-ui/media/images#use-svg-for-icons
-
-- from: /web/fundamentals/design-and-ui/media/video/
-  to: /web/fundamentals/design-and-ui/media/video
-
-- from: /web/fundamentals/design-and-ui/media/video/accessibility-matters
-  to: /web/fundamentals/design-and-ui/media/video#accessibility-matters
-
-- from: /web/fundamentals/design-and-ui/media/video/add-a-video
-  to: /web/fundamentals/design-and-ui/media/video#add-a-video
-
-- from: /web/fundamentals/design-and-ui/media/video/customize-the-video-player
-  to: /web/fundamentals/design-and-ui/media/video#customize-the-video-player
-
-- from: /web/fundamentals/design-and-ui/media/video/provide-alternatives-for-legacy-platforms
-  to: /web/fundamentals/design-and-ui/media/video#provide-alternatives-for-legacy-platforms
-
-- from: /web/fundamentals/design-and-ui/media/video/quick-reference
-  to: /web/fundamentals/design-and-ui/media/video#quick-reference
-
-- from: /web/fundamentals/design-and-ui/media/video/size-videos-correctly
-  to: /web/fundamentals/design-and-ui/media/video#size-videos-correctly
-
-- from: /web/fundamentals/design-and-ui/responsive/fundamentals/
-  to: /web/fundamentals/design-and-ui/responsive/
-
-- from: /web/fundamentals/design-and-ui/responsive/fundamentals/how-to-choose-breakpoints
-  to: /web/fundamentals/design-and-ui/responsive/#how-to-choose-breakpoints
-
-- from: /web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport
-  to: /web/fundamentals/design-and-ui/responsive/#set-the-viewport
-
-- from: /web/fundamentals/design-and-ui/responsive/fundamentals/size-content-to-the-viewport
-  to: /web/fundamentals/design-and-ui/responsive/#size-content-to-the-viewport
-
-- from: /web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries
-  to: /web/fundamentals/design-and-ui/responsive/#css-media-queries
-
-- from: /web/fundamentals/design-and-ui/responsive/patterns/
-  to: /web/fundamentals/design-and-ui/responsive/patterns
-
-- from: /web/fundamentals/design-and-ui/responsive/patterns/column-drop
-  to: /web/fundamentals/design-and-ui/responsive/patterns#column-drop
-
-- from: /web/fundamentals/design-and-ui/responsive/patterns/layout-shifter
-  to: /web/fundamentals/design-and-ui/responsive/patterns#layout-shifter
-
-- from: /web/fundamentals/design-and-ui/responsive/patterns/mostly-fluid
-  to: /web/fundamentals/design-and-ui/responsive/patterns#mostly-fluid
-
-- from: /web/fundamentals/design-and-ui/responsive/patterns/off-canvas
-  to: /web/fundamentals/design-and-ui/responsive/patterns#off-canvas
-
-- from: /web/fundamentals/design-and-ui/responsive/patterns/tiny-tweaks
-  to: /web/fundamentals/design-and-ui/responsive/patterns#tiny-tweaks
-
-- from: /web/fundamentals/device-access/stickyness/
-  to: /web/fundamentals/design-and-ui/browser-customization/
-
-- from: /web/fundamentals/device-access/stickyness/specify-an-icon
-  to: /web/fundamentals/design-and-ui/browser-customization/great-icons
-
-- from: /web/fundamentals/device-access/stickyness/use-a-custom-title
-  to: /web/fundamentals/design-and-ui/browser-customization/great-icons
-
-- from: /web/fundamentals/device-access/stickyness/web-app-manifest
-  to: /web/fundamentals/engage-and-retain/simplified-app-installs/
-
-- from: /web/fundamentals/discovery-and-distribution/optimizations-for-crawlers/
-  to: /web/fundamentals/discovery-and-monetization/search-optimization/
-
-- from: /web/fundamentals/discovery-and-distribution/optimizations-for-crawlers/control-crawling-and-indexing
-  to: /web/fundamentals/discovery-and-monetization/search-optimization/control-crawling-and-indexing
-
-- from: /web/fundamentals/discovery-and-distribution/optimizations-for-crawlers/social-sites
-  to: /web/fundamentals/discovery-and-monetization/social-discovery/
-
-- from: /web/fundamentals/discovery-and-distribution/optimizations-for-crawlers/url-structure
-  to: /web/fundamentals/discovery-and-monetization/search-optimization/url-structure
-
-- from: /web/fundamentals/discovery-and-monetization/monetization-with-ads/
-  to: https://support.google.com/adsense/answer/6357180
-
-- from: /web/fundamentals/discovery-and-monetization/search-optimization/control-crawling-and-indexing
-  to: /web/fundamentals/discovery-and-monetization/search-optimization/
-
-- from: /web/fundamentals/discovery-and-monetization/search-optimization/url-structure
-  to: /web/fundamentals/discovery-and-monetization/search-optimization/
-
-- from: /web/fundamentals/engage-and-retain/simplified-app-installs
-  to: /web/fundamentals/engage-and-retain/app-install-banners/
-
-- from: /web/fundamentals/feed.xml
-  to: /web/fundamentals/rss.xml
-
-- from: /web/fundamentals/getting-started/codelabs/
-  to: /web/fundamentals/getting-started/#codelabs
-
-- from: /web/fundamentals/getting-started/codelabs/your-first-PWApp
-  to: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
-
-- from: /web/fundamentals/getting-started/codelabs/your-first-pwapp/pwa-weather.zip
-  to: https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip
-
-- from: /web/fundamentals/getting-started/codelabs/your-first-pwapp/pwa-weather.zip
-  to: https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip
-
-- from: /web/fundamentals/getting-started/primers
-  to: /web/fundamentals/getting-started/
-
-- from: /web/fundamentals/getting-started/primers
-  to: /web/fundamentals/getting-started/
-
-- from: /web/fundamentals/getting-started/primers/
-  to: /web/fundamentals/getting-started/
-
-- from: /web/fundamentals/getting-started/primers/
-  to: /web/fundamentals/getting-started/
-
-- from: /web/fundamentals/getting-started/primers/media-source-extensions
-  to: /web/fundamentals/media/mse/basics
-
-- from: /web/fundamentals/getting-started/primers/payment-request/
-  to: /web/fundamentals/discovery-and-monetization/payment-request/
-
-- from: /web/fundamentals/getting-started/primers/payment-request/android-pay
-  to: /web/fundamentals/discovery-and-monetization/payment-request/android-pay
+- from: /web/fundamentals/getting-started/primers/...
+  to: /web/fundamentals/primers/...
 
 - from: /web/fundamentals/getting-started/principles/commerce-and-conversion
-  to: /web/fundamentals/getting-started/principles/#commerce-and-conversion
+  to: /web/fundamentals/design-and-ux/principles/#commerce-and-conversion
 
 - from: /web/fundamentals/getting-started/principles/form-entry
-  to: /web/fundamentals/getting-started/principles/#form-entry
+  to: /web/fundamentals/design-and-ux/principles/#form-entry
 
 - from: /web/fundamentals/getting-started/principles/site-and-page-navigation
-  to: /web/fundamentals/getting-started/principles/#home-page-and-site-navigation
+  to: /web/fundamentals/design-and-ux/principles/#home-page-and-site-navigation
 
 - from: /web/fundamentals/getting-started/principles/site-search
-  to: /web/fundamentals/getting-started/principles/#site-search
+  to: /web/fundamentals/design-and-ux/principles/#site-search
 
 - from: /web/fundamentals/getting-started/principles/usability-and-form-factor
-  to: /web/fundamentals/getting-started/principles/#usability-and-form-factor
+  to: /web/fundamentals/design-and-ux/principles/#usability-and-form-factor
 
-- from: /web/fundamentals/getting-started/push-notifications/
-  to: /web/fundamentals/getting-started/codelabs/push-notifications/
+- from: /web/fundamentals/getting-started/principles/...
+  to: /web/fundamentals/design-and-ux/principles/...
 
-- from: /web/fundamentals/getting-started/push-notifications/step-01
-  to: /web/fundamentals/getting-started/codelabs/push-notifications/
+- from: /web/fundamentals/getting-started/your-first-multi-screen-site/...
+  to: /web/fundamentals/codelabs/your-first-multi-screen-site/...
 
-- from: /web/fundamentals/getting-started/push-notifications/step-02
-  to: /web/fundamentals/getting-started/codelabs/push-notifications/
+- from: /web/fundamentals/getting-started/...
+  to: /web/fundamentals/
 
-- from: /web/fundamentals/getting-started/push-notifications/step-03
-  to: /web/fundamentals/getting-started/codelabs/push-notifications/
+- from: /web/fundamentals/instant-and-offline/service-worker/lifecycle
+  to: /web/fundamentals/primers/service-workers/lifecycle
 
-- from: /web/fundamentals/getting-started/push-notifications/step-04
-  to: /web/fundamentals/getting-started/codelabs/push-notifications/
+- from: /web/fundamentals/instant-and-offline/service-worker/registration
+  to: /web/fundamentals/primers/service-workers/registration
 
-- from: /web/fundamentals/getting-started/push-notifications/step-05
-  to: /web/fundamentals/getting-started/codelabs/push-notifications/
-
-- from: /web/fundamentals/getting-started/push-notifications/step-06
-  to: /web/fundamentals/getting-started/codelabs/push-notifications/
-
-- from: /web/fundamentals/getting-started/push-notifications/step-07
-  to: /web/fundamentals/getting-started/codelabs/push-notifications/
-
-- from: /web/fundamentals/getting-started/push-notifications/step-08
-  to: /web/fundamentals/getting-started/codelabs/push-notifications/
-
-- from: /web/fundamentals/getting-started/push-notifications/step-09
-  to: /web/fundamentals/getting-started/codelabs/push-notifications/
-
-- from: /web/fundamentals/getting-started/push-notifications/step-10
-  to: /web/fundamentals/getting-started/codelabs/push-notifications/
-
-- from: /web/fundamentals/getting-started/push-notifications/step-11
-  to: /web/fundamentals/getting-started/codelabs/push-notifications/
-
-- from: /web/fundamentals/getting-started/push-notifications/step-12
-  to: /web/fundamentals/getting-started/codelabs/push-notifications/
-
-- from: /web/fundamentals/getting-started/web-starter-kit/development-phases
-  to: /web/fundamentals/getting-started/web-starter-kit/
-
-- from: /web/fundamentals/getting-started/web-starter-kit/setting-up
-  to: /web/fundamentals/getting-started/web-starter-kit/
-
-- from: /web/fundamentals/getting-started/your-first-multi-screen-site/content
-  to: /web/fundamentals/getting-started/your-first-multi-screen-site/
-
-- from: /web/fundamentals/getting-started/your-first-multi-screen-site/responsive
-  to: /web/fundamentals/getting-started/your-first-multi-screen-site/
-
-- from: /web/fundamentals/getting-started/your-first-offline-web-app/
-  to: /web/fundamentals/getting-started/codelabs/offline/
-
-- from: /web/fundamentals/getting-started/your-first-offline-web-app/step-1
-  to: /web/fundamentals/getting-started/codelabs/offline/
-
-- from: /web/fundamentals/getting-started/your-first-offline-web-app/step-2
-  to: /web/fundamentals/getting-started/codelabs/offline/
-
-- from: /web/fundamentals/getting-started/your-first-offline-web-app/step-3
-  to: /web/fundamentals/getting-started/codelabs/offline/
-
-- from: /web/fundamentals/getting-started/your-first-offline-web-app/step-4
-  to: /web/fundamentals/getting-started/codelabs/offline/
-
-- from: /web/fundamentals/getting-started/your-first-offline-web-app/step-5
-  to: /web/fundamentals/getting-started/codelabs/offline/
-
-- from: /web/fundamentals/getting-started/your-first-offline-web-app/step-6
-  to: /web/fundamentals/getting-started/codelabs/offline/
-
-- from: /web/fundamentals/getting-started/your-first-offline-web-app/step-7
-  to: /web/fundamentals/getting-started/codelabs/offline/
-
-- from: /web/fundamentals/getting-started/your-first-offline-web-app/step-8
-  to: /web/fundamentals/getting-started/codelabs/offline/
-
-- from: /web/fundamentals/getting-started/your-first-progressive-web-app/
-  to: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
-
-- from: /web/fundamentals/getting-started/your-first-progressive-web-app/pwa-weather.zip
-  to: https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip
-
-- from: /web/fundamentals/getting-started/your-first-progressive-web-app/pwa-weather.zip
-  to: https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip
-
-- from: /web/fundamentals/getting-started/your-first-progressive-web-app/step-01
-  to: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
-
-- from: /web/fundamentals/getting-started/your-first-progressive-web-app/step-02
-  to: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
-
-- from: /web/fundamentals/getting-started/your-first-progressive-web-app/step-03
-  to: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
-
-- from: /web/fundamentals/getting-started/your-first-progressive-web-app/step-04
-  to: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
-
-- from: /web/fundamentals/getting-started/your-first-progressive-web-app/step-05
-  to: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
-
-- from: /web/fundamentals/getting-started/your-first-progressive-web-app/step-07
-  to: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
-
-- from: /web/fundamentals/getting-started/your-first-progressive-web-app/step-08
-  to: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
-
-- from: /web/fundamentals/introduction-to-media/images/
-  to: /web/fundamentals/design-and-ui/media/images
-
-- from: /web/fundamentals/introduction-to-media/images/
-  to: /web/fundamentals/design-and-ui/media/images
-
-- from: /web/fundamentals/look-and-feel/
-  to: /web/fundamentals/design-and-ui/
-
-- from: /web/fundamentals/media/audio/
-  to: /web/fundamentals/design-and-ui/media/
-
-- from: /web/fundamentals/monetization/
-  to: /web/fundamentals/discovery-and-monetization/
-
-- from: /web/fundamentals/multi-device-layouts/rwd-fundamentals/
-  to: /web/fundamentals/design-and-ui/responsive/
-
-- from: /web/fundamentals/multi-device-layouts/rwd-fundamentals/
-  to: /web/fundamentals/design-and-ui/responsive/
-
-- from: /web/fundamentals/native-hardware/device-orientation/dev-motion
-  to: /web/fundamentals/native-hardware/device-orientation/
-
-- from: /web/fundamentals/native-hardware/device-orientation/dev-orientation
-  to: /web/fundamentals/native-hardware/device-orientation/
-
-- from: /web/fundamentals/native-hardware/user-location/monitor-location
-  to: /web/fundamentals/native-hardware/user-location/
-
-- from: /web/fundamentals/native-hardware/user-location/obtain-location
-  to: /web/fundamentals/native-hardware/user-location/
-
-- from: /web/fundamentals/native-hardware/user-location/user-consent
-  to: /web/fundamentals/native-hardware/user-location/
-
-- from: /web/fundamentals/performance/measuring-performance/
-  to: /web/fundamentals/performance/
-
-- from: /web/fundamentals/performance/optimizing-interactivity/
-  to: /web/fundamentals/performance/
-
-- from: /web/fundamentals/performance/optimizing-networking/
-  to: /web/fundamentals/performance/
-
-- from: /web/fundamentals/performance/poor-connectivity/lie-fi
-  to: /web/fundamentals/performance/poor-connectivity/
-
-- from: /web/fundamentals/performance/poor-connectivity/testing
-  to: /web/fundamentals/performance/poor-connectivity/
-
-- from: /web/fundamentals/primers/
-  to: /web/fundamentals/getting-started/
-
-- from: /web/fundamentals/primers/customelements/
-  to: /web/fundamentals/getting-started/primers/customelements
-
-- from: /web/fundamentals/primers/payment-request/
-  to: /web/fundamentals/getting-started/primers/payment-request/
-
-- from: /web/fundamentals/primers/payment-request/android-pay
-  to: /web/fundamentals/getting-started/primers/payment-request/android-pay
-
-- from: /web/fundamentals/primers/promises
-  to: /web/fundamentals/getting-started/primers/promises
-
-- from: /web/fundamentals/primers/promises/
-  to: /web/fundamentals/getting-started/primers/promises
-
-- from: /web/fundamentals/primers/push-notifications/
-  to: /web/fundamentals/engage-and-retain/push-notifications/
-
-- from: /web/fundamentals/primers/push-notifications/notifications
-  to: /web/fundamentals/engage-and-retain/push-notifications/
-
-- from: /web/fundamentals/primers/push-notifications/on-the-server
-  to: /web/fundamentals/engage-and-retain/push-notifications/
-
-- from: /web/fundamentals/primers/push-notifications/push-messages
-  to: /web/fundamentals/engage-and-retain/push-notifications/
-
-- from: /web/fundamentals/primers/service-worker
-  to: /web/fundamentals/getting-started/primers/service-workers
-
-- from: /web/fundamentals/primers/service-worker/
-  to: /web/fundamentals/getting-started/primers/service-workers
-
-- from: /web/fundamentals/primers/service-worker/cache-and-return-requests
-  to: /web/fundamentals/getting-started/primers/service-workers
-
-- from: /web/fundamentals/primers/service-worker/install
-  to: /web/fundamentals/getting-started/primers/service-workers
-
-- from: /web/fundamentals/primers/service-worker/learn-more-get-help
-  to: /web/fundamentals/getting-started/primers/service-workers
-
-- from: /web/fundamentals/primers/service-worker/prerequisites
-  to: /web/fundamentals/getting-started/primers/service-workers
-
-- from: /web/fundamentals/primers/service-worker/register
-  to: /web/fundamentals/getting-started/primers/service-workers
-
-- from: /web/fundamentals/primers/service-worker/rough-edges-and-gotchas
-  to: /web/fundamentals/getting-started/primers/service-workers
-
-- from: /web/fundamentals/primers/service-worker/service-worker-lifecycle
-  to: /web/fundamentals/getting-started/primers/service-workers
-
-- from: /web/fundamentals/primers/service-worker/update-a-service-worker
-  to: /web/fundamentals/getting-started/primers/service-workers
-
-- from: /web/fundamentals/primers/shadowdom/
-  to: /web/fundamentals/getting-started/primers/shadowdom
-
-- from: /web/fundamentals/principles/
-  to: /web/fundamentals/getting-started/principles/
-
-- from: /web/fundamentals/security/csp/eval-too
-  to: /web/fundamentals/security/csp/
-
-- from: /web/fundamentals/security/csp/inline-harmful
-  to: /web/fundamentals/security/csp/
-
-- from: /web/fundamentals/security/csp/real-world
-  to: /web/fundamentals/security/csp/
-
-- from: /web/fundamentals/security/csp/reporting
-  to: /web/fundamentals/security/csp/
-
-- from: /web/fundamentals/security/csp/source-whitelists
-  to: /web/fundamentals/security/csp/
-
-- from: /web/fundamentals/security/csp/the-future
-  to: /web/fundamentals/security/csp/
-
-- from: /web/fundamentals/security/encrypt-in-transit/
-  to: /web/fundamentals/security/encrypt-in-transit/enable-https
-
-- from: /web/fundamentals/security/encrypt-in-transit/enable-https-on-your-servers
-  to: /web/fundamentals/security/encrypt-in-transit/why-https
-
-- from: /web/fundamentals/security/encrypt-in-transit/generating-keys-and-csr
-  to: /web/fundamentals/security/encrypt-in-transit/enable-https
-
-- from: /web/fundamentals/security/encrypt-in-transit/make-intra-site-urls-relative
-  to: /web/fundamentals/security/encrypt-in-transit/enable-https
-
-- from: /web/fundamentals/security/encrypt-in-transit/migration-concerns
-  to: /web/fundamentals/security/encrypt-in-transit/enable-https
-
-- from: /web/fundamentals/security/encrypt-in-transit/redirect-http-to-https
-  to: /web/fundamentals/security/encrypt-in-transit/enable-https
-
-- from: /web/fundamentals/security/encrypt-in-transit/turn-on-strict-transport-security-and-secure-cookies
-  to: /web/fundamentals/security/encrypt-in-transit/enable-https
-
-- from: /web/fundamentals/security/prevent-mixed-content/
-  to: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
-
-- from: /web/fundamentals/tools/
-  to: /web/tools/
-
-- from: /web/fundamentals/tools/build/build_process
-  to: /web/tools/setup/
-
-- from: /web/fundamentals/tools/build/build_site
-  to: /web/tools/setup/
-
-- from: /web/fundamentals/tools/build/setupbuildprocess
-  to: /web/tools/setup/
-
-- from: /web/fundamentals/tools/build/setupbuildprocess
-  to: /web/tools/setup/
-
-- from: /web/fundamentals/tools/setup/editor
-  to: /web/tools/setup/
-
-- from: /web/fundamentals/tools/test/device
-  to: /web/tools/chrome-devtools/remote-debugging/
-
-- from: /web/fundamentals/user-input/form-input/
-  to: /web/fundamentals/design-and-ui/input/forms/
-
-- from: /web/fundamentals/user-input/form-input/
-  to: /web/fundamentals/design-and-ui/input/forms/
-
-- from: /web/fundamentals/user-input/form-input/use-request-auto-complete
-  to: /web/fundamentals/design-and-ui/input/forms/
-
-- from: /web/fundamentals/user-input/form-input/use-request-auto-complete
-  to: /web/fundamentals/design-and-ui/input/forms/
-
-- from: /web/fundamentals/user-input/touch-input/
-  to: /web/fundamentals/design-and-ui/input/touch/
-
-- from: /web/fundamentals/user-input/touch-input/
-  to: /web/fundamentals/design-and-ui/input/touch/
-
-- from: /web/fundamentals/tools/setup/...
-  to: /web/tools/setup/
-
-- from: /web/fundamentals/performance/performance-codelab/...
-  to: /web/fundamentals/getting-started/codelabs/web-perf/
-
-- from: /web/fundamentals/monetization/principles/...
-  to: /web/fundamentals/getting-started/principles/
-
-- from: /web/fundamentals/monetization/ads/...
-  to: /web/fundamentals/discovery-and-monetization/monetization-with-ads/...cd
-
-- from: /web/fundamentals/media/images/...
-  to: /web/fundamentals/design-and-ui/media/images/
-
-- from: /web/fundamentals/look-and-feel/animations/...
-  to: /web/fundamentals/design-and-ui/animations/...
-
-- from: /web/fundamentals/layouts/rwd-patterns/...
-  to: /web/fundamentals/design-and-ui/responsive/patterns/...
-
-- from: /web/fundamentals/layouts/rwd-fundamentals/...
-  to: /web/fundamentals/design-and-ui/responsive/fundamentals/...
-
-- from: /web/fundamentals/layouts/navigation-patterns/...
-  to: /web/fundamentals/design-and-ui/responsive/
-
-- from: /web/fundamentals/layouts/...
-  to: /web/fundamentals/design-and-ui/responsive/
-
-- from: /web/fundamentals/input/...
-  to: /web/fundamentals/design-and-ui/input/...
-
-- from: /web/fundamentals/engage-and-retain/simplified-app-installs/...
-  to: /web/fundamentals/engage-and-retain/app-install-banners/
-
-- from: /web/fundamentals/documentation/...
-  to: /web/fundamentals/...
-
-- from: /web/fundamentals/discovery-and-distribution/security-with-https/...
-  to: /web/fundamentals/security/encrypt-in-transit/...
-
-- from: /web/fundamentals/discovery-and-distribution/enriching-semantics/...
-  to: /web/fundamentals/discovery-and-monetization/
-
-- from: /web/fundamentals/discovery-and-distribution/avoid-mixed-content/...
-  to: /web/fundamentals/security/prevent-mixed-content/...
-
-- from: /web/fundamentals/discovery-and-distribution/...
-  to: /web/fundamentals/discovery-and-monetization/
-
-- from: /web/fundamentals/device-access/user-location/...
-  to: /web/fundamentals/native-hardware/user-location/...
-
-- from: /web/fundamentals/device-access/stickyness/...
-  to: /web/fundamentals/design-and-ui/browser-customization/
-
-- from: /web/fundamentals/device-access/device-orientation/...
-  to: /web/fundamentals/native-hardware/device-orientation/
-
-- from: /web/fundamentals/device-access/click-to-call/...
-  to: /web/fundamentals/native-hardware/click-to-call/
-
-- from: /web/fundamentals/device-access/...
-  to: /web/fundamentals/native-hardware/
-
-- from: /web/fundamentals/design-and-ui/content/...
-  to: /web/fundamentals/design-and-ui/responsive/content
+- from: /web/fundamentals/media/mse/basics
+  to: /web/fundamentals/media/mse/
 
 - from: /web/fundamentals/webvr/...
   to: /web/fundamentals/vr/...
 
-- from: /web/fundamentals/design-and-ui/media/video
-  to: /web/fundamentals/media/video
+- from: /web/fundamentals/native-hardware/recording-audio/
+  to: /web/fundamentals/media/recording-audio/
 
-- from: /web/fundamentals/design-and-ui/media/images
-  to: /web/fundamentals/design-and-ui/responsive/images
+- from: /web/fundamentals/native-hardware/capturing-images/
+  to: /web/fundamentals/media/capturing-images/
 
-- from: /web/fundamentals/getting-started/primers/media-source-extensions
-  to: /web/fundamentals/media/mse
+- from: /web/fundamentals/primers/payment-request/
+  to: /web/fundamentals/payments/
 
-- from: /web/fundamentals/engage-and-retain/push-notifications/good-notification
-  to: /web/fundamentals/engage-and-retain/push-notifications/display-a-notification
-
-- from: /web/fundamentals/engage-and-retain/push-notifications/permissions-subscriptions
-  to: /web/fundamentals/engage-and-retain/push-notifications/permission-ux
-
-- from: /web/fundamentals/engage-and-retain/push-notifications/sending-messages
-  to: /web/fundamentals/engage-and-retain/push-notifications/sending-messages-with-web-push-libraries
-
-- from: /web/fundamentals/getting-started/primers/customelements
-  to: /web/fundamentals/architecture/building-components/customelements
-
-- from: /web/fundamentals/getting-started/primers/shadowdom
-  to: /web/fundamentals/architecture/building-components/shadowdom
-
-- from: /web/fundamentals/architecture/howto-components/overview
-  to: /web/fundamentals/architecture/building-components/examples/
-
-- from: /web/fundamentals/architecture/howto-components/howto-checkbox
-  to: /web/fundamentals/architecture/building-components/examples/howto-checkbox
-
-- from: /web/fundamentals/architecture/howto-components/howto-tooltip
-  to: /web/fundamentals/architecture/building-components/examples/howto-tooltip
-
-- from: /web/fundamentals/architecture/howto-components/glossary
-  to: /web/fundamentals/glossary
+- from: /web/fundamentals/feed.xml
+  to: /web/fundamentals/rss.xml

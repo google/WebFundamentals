@@ -1,45 +1,38 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
-project_path: /web/_project.yaml
-book_path: /web/_book.yaml
-title: Feedback
+project_path: /web/feedback/_project.yaml
+book_path: /web/feedback/_book.yaml
+title: Developer Feedback Program
 landing_page:
-  custom_css_path: styles/wf-feedback.css
+
+  header:
+    buttons:
+    - label: Broswer Bug Searcher
+      path: /web/feedback/browser-bug-searcher
 
   rows:
-
-  - heading: Developer Feedback
-    classname: devsite-landing-row-67
+  - classname: devsite-landing-row-50
     items:
     - description: >
-        We’re committed to helping you make your site work across platforms
-        and browsers, so you can be successful. We want to make it
-        easy to find and report bugs in any browser, as well as
-        help you find resources while you’re building your site.<br><br>
+        We want to make it easy to find and report bugs in any browser, 
+        as well as help you find resources while you’re building your site.
+        <br><br>
         Telling browser vendors about issues you find in their browser,
         on a specific device or platform is an integral part of making
         the web platform better!
+        <br><br>
         Adding your support to existing bugs helps developers to
         prioritize which issues are effecting users.
       image_path: images/hero-2x.png
 
-  - items:
-    - custom_html: <hr>
-
-  - heading: Search bugs in all web browsers
-    classname: wf-feedback-embedded-search devsite-landing-row-50
+  - classname: devsite-landing-row-67
     items:
-    - custom_html: >
-        <img src="images/content-search-for-bugs-responsive-2x.png" class="devsite-landing-row-item-image">
-        <p>
-          Here you can search through all major browser bug trackers to
-          find a bug you're looking for.
-        </p>
-        <iframe src="https://browser-issue-tracker-search.appspot.com/devsite?embed&client=devsite" scrolling="no"></iframe>
-
-  - items:
-    - custom_html: <hr>
-
-  - heading: Reporting bugs
+    - heading: Look for existing bugs
+      description: >
+        Here you can search through all major browser bug trackers to find a
+        bug you're looking for.
+      image_path: images/content-search-for-bugs-responsive-2x.png
+      buttons:
+      - label: Browser Bug Searcher
+        path: /web/feedback/browser-bug-searcher
     
   - classname: devsite-landing-row-67
     items:
@@ -50,9 +43,8 @@ landing_page:
         chance your bug can be fixed!
       image_path: images/content-file-responsive-2x.png
       buttons:
-      - label: How to file a good bug
+      - label: Learn how to file a good bug
         path: /web/feedback/file-a-bug
-
 
   - classname: devsite-landing-row-67
     items:
@@ -96,25 +88,15 @@ landing_page:
         - name: data-label
           value: webkit-bug
 
-
-  - items:
-      - custom_html: <hr>
-
-  - heading: Discussing solutions
-    classname: wf-discussing
+  - classname: devsite-landing-row-67
     items:
-    - image_path: images/content-developer-discussions-responsive-2x.png
-    - description: >
+    - heading: Discussing solutions
+      description: >
         <p>
           Discussing challenges you are facing with other developers is a
           great way for both learning and share best practices.
         </p>
         <ul>
-          <li>
-            <a href="https://stackoverflow.com/questions/tagged/progressive-web-apps" class="gc-analytics-event" data-category="webfundamentals" data-label="so-pwa">
-              <code>progressive-web-apps</code> tag on Stack Overflow
-            </a>
-          </li>
           <li>
             <a href="https://stackoverflow.com/questions/tagged/google-chrome" class="gc-analytics-event" data-category="webfundamentals" data-label="so-gchrome">
               <code>google-chrome</code> tag on Stack Overflow
@@ -126,3 +108,4 @@ landing_page:
             </a>
           </li>
         </ul>
+      image_path: images/content-developer-discussions-responsive-2x.png

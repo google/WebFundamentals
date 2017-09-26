@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:让您的工作区包含适用于多设备网页的优秀编辑器、调试功能和构建工具。
 

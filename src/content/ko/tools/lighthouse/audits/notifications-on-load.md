@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '페이지 로드 시 알림 권한을 자동 요청하지 않는 페이지' Lighthouse 감사의 참조 문서입니다.
 
@@ -16,7 +16,7 @@ description: '페이지 로드 시 알림 권한을 자동 요청하지 않는 �
 특정 유형의 알림을 전송할 것을 제안하고 사용자가 옵트인한 후에 권한 요청을
 보여주는 것입니다.
 
-[good]: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+[good]: /web/fundamentals/push-notifications/
 
 ## 감사를 통과하는 방법 {: #how }
 

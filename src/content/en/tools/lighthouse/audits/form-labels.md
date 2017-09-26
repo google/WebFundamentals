@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Every Form Element Has A Label" Lighthouse audit.
 
@@ -13,7 +13,7 @@ Labels clarify the purpose of form elements. Although the purpose of each
 element may be obvious for sighted users, this is often not the case for
 users who rely on screen readers.
 
-See [Create Amazing Forms](/web/fundamentals/design-and-ui/input/forms/#label_and_name_inputs_properly) for more information.
+See [Create Amazing Forms](/web/fundamentals/design-and-ux/input/forms/#label_and_name_inputs_properly) for more information.
 
 ## How to pass the audit {: #how }
 

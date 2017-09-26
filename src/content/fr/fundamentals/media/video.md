@@ -74,7 +74,7 @@ Cette approche comporte plusieurs avantages par rapport aux différentes méthod
 Chacun de ces points est particulièrement important pour les plates-formes mobiles. En effet, la bande passante et le temps de réponse sont cruciaux, car la patience de l'utilisateur risque d'être limitée. 
 La performance peut également être affectée si un attribut type n'est pas inclus, lorsque plusieurs sources comportent des types qui ne sont pas compatibles.
 
-À l'aide des outils de développeur de votre navigateur mobile, comparez l'activité du réseau <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html">avec attributs type</a> et <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html">sans attributs type</a>.
+À l'aide des outils de développeur de votre navigateur mobile, comparez l'activité du réseau <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">avec attributs type</a> et <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html">sans attributs type</a>.
 Vérifiez également les en-têtes de réponse dans les outils pour les développeurs de votre navigateur pour [vous assurer que le serveur transmet le bon type MIME](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types), sinon les vérifications de type de source vidéo ne fonctionneront pas.
 
 ##Définir un intervalle de lecture
@@ -215,7 +215,7 @@ Vous voulez savoir quel format vidéo a été sélectionné par le navigateur ?
 
 Dans JavaScript, utilisez la propriété `currentSrc` de la vidéo pour renvoyer la source utilisée.
 
-Pour regarder une démonstration, <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html">cliquez ici</a> : Chrome et Firefox ont sélectionné `chrome.webm` (car c'est le premier format répertorié dans la liste des sources potentielles compatibles avec ces navigateurs). Le navigateur Safari a sélectionné `chrome.mp4`.
+Pour regarder une démonstration, <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">cliquez ici</a> : Chrome et Firefox ont sélectionné `chrome.webm` (car c'est le premier format répertorié dans la liste des sources potentielles compatibles avec ces navigateurs). Le navigateur Safari a sélectionné `chrome.mp4`.
 
 
 ## Définir correctement la taille des vidéos 
@@ -265,7 +265,7 @@ Note: Ne forcez pas la taille d'un élément générant un format d'image diffé
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
-Comparez l'<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html">exemple adaptatif</a> avec la <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/unyt.html">version non-adaptative</a>.
+Comparez l'<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html">exemple adaptatif</a> avec la <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/unyt.html">version non-adaptative</a>.
 
 
 ## Personnaliser le lecteur de vidéos 
@@ -346,7 +346,7 @@ Sur les appareils compatibles avec l'API Fullscreen, il peut être judicieux d'u
      <p>Ce navigateur n'est pas compatible avec l'élément vidéo.</p>
 </video>
 
-Pour voir comment cette vidéo s'affiche en plein écran, regardez la <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html">démonstration</a>.
+Pour voir comment cette vidéo s'affiche en plein écran, regardez la <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html">démonstration</a>.
 
 NOTE: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
@@ -540,7 +540,7 @@ L'article relatif à la [vidéo du site HTML5 Rocks](//www.html5rocks.com/en/tut
   </tbody>
 </table>
 
-Les propriétés "playbackRate" (<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html">voir la démonstration</a>) et `volume` ne sont pas compatibles avec les plates-formes mobiles.
+Les propriétés "playbackRate" (<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html">voir la démonstration</a>) et `volume` ne sont pas compatibles avec les plates-formes mobiles.
 
 #### Méthodes
 
@@ -570,7 +570,7 @@ Les propriétés "playbackRate" (<a href="https://googlesamples.github.io/web-fu
 </table>
 
 Sur les plates-formes mobiles (sauf Opera sur Android), les méthodes `play()` et `pause()` ne fonctionnent pas sauf si
-elles sont appelées en réponse à une action de l'internaute, un clic, par exemple : regardez la <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html">démonstration</a>. De même, la lecture ne peut pas être lancée pour le contenu tel que les vidéos YouTube intégrées.
+elles sont appelées en réponse à une action de l'internaute, un clic, par exemple : regardez la <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html">démonstration</a>. De même, la lecture ne peut pas être lancée pour le contenu tel que les vidéos YouTube intégrées.
 
 #### Événements
 

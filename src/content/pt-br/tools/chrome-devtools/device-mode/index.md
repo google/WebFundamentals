@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use dispositivos virtuais no Device Mode do Chrome para criar sites que priorizam os dispositivos móveis.
 

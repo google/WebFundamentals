@@ -75,7 +75,7 @@ on the this list and may prove helpful in easily testing sites.
       <td><b>To Fix</b></td>
       <td>
         Look at implementing a 
-        <a href="/web/fundamentals/design-and-ui/responsive/fundamentals/">
+        <a href="/web/fundamentals/design-and-ux/responsive/">
         responsive design</a>, or adaptively serving a viewport-friendly site.
       </td>
     </tr>
@@ -96,7 +96,7 @@ on the this list and may prove helpful in easily testing sites.
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Use a <a href="/web/fundamentals/primers/service-worker/">Service Worker</a>.
+        Use a <a href="/web/fundamentals/primers/service-workers/">Service Worker</a>.
       </td>
     </tr>
   </tbody>
@@ -564,7 +564,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Review our guide on <a href="/web/fundamentals/design-and-ui/responsive/">
+        Review our guide on <a href="/web/fundamentals/design-and-ux/responsive/">
         implementing responsive UIs</a>.
       </td>
     </tr>
@@ -855,7 +855,7 @@ notifications is not a requirement for an exemplary progressive web app.
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        See our guide on <a href="/web/fundamentals/engage-and-retain/push-notifications/good-notification">
+        See our guide on <a href="/web/fundamentals/push-notifications/">
         creating great push notifications</a> for advice. If your content is
         not timely and relevant to this user, consider using email instead.
       </td>

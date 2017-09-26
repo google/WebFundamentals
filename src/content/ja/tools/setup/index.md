@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 優れたエディタ、デバッグツール、ビルドツールを含むワークスペースをマルチデバイス ウェブ向けに設定します。
 

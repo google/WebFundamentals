@@ -60,7 +60,7 @@ description: 動画をサイトに追加して、どのデバイスでも最高�
 {% includecode content_path="web/fundamentals/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html){: target="_blank" .external }
 
 ブラウザは `<source>` タグを解析する際に、オプションの `type` 属性を使用して、どのファイルをダウンロードして再生するかを判断します。
 ブラウザが
@@ -84,7 +84,7 @@ description: 動画をサイトに追加して、どのデバイスでも最高�
 
 
 
-モバイル ブラウザ用のデベロッパー ツールを使用して、[type 属性がある場合](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external }と [type 属性がない場合](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html){: target="_blank" .external }のネットワーク アクティビティを比較してください。
+モバイル ブラウザ用のデベロッパー ツールを使用して、[type 属性がある場合](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html){: target="_blank" .external }と [type 属性がない場合](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html){: target="_blank" .external }のネットワーク アクティビティを比較してください。
 
 また、ブラウザ デベロッパー ツールでレスポンス ヘッダーをチェックし、[サーバーが適切な MIME タイプを報告することを確認してください](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types)。そうしないと、動画のソースタイプのチェックが機能しません。
 
@@ -304,7 +304,7 @@ JavaScript や CSS を使用して動画のサイズを制御できます。Java
 などのプラグインを使用すると、YouTube やその他のソースの Flash 動画であっても、適切なサイズとアスペクト比を保持することができます。
 
 
-ビューポートのサイズに応じて要素のサイズを指定するには、[CSS メディアクエリ](/web/fundamentals/design-and-ui/responsive/#css-media-queries)で `max-width: 100%` を使うと便利です。
+ビューポートのサイズに応じて要素のサイズを指定するには、[CSS メディアクエリ](/web/fundamentals/design-and-ux/responsive/#css-media-queries)で `max-width: 100%` を使うと便利です。
 
 iframe 内のメディアコンテンツ（YouTube 動画など）には、レスポンシブ アプローチ（[John Surdakowski が提案している手法など](http://avexdesigns.com/responsive-youtube-embed/)）を試してみてください。
 
@@ -324,10 +324,10 @@ Warning: 要素のサイズ設定で、元の動画と異なるアスペクト�
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html){: target="_blank" .external }
 
-[レスポンシブなバージョン](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }
-と[レスポンシブではないバージョン](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/unyt.html){: target="_blank" .external } を比較してください。
+[レスポンシブなバージョン](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html){: target="_blank" .external }
+と[レスポンシブではないバージョン](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/unyt.html){: target="_blank" .external } を比較してください。
 
 
 ##  動画プレイヤーをカスタマイズする
@@ -431,7 +431,7 @@ video のように要素をフルスクリーン表示する方法は、次の�
 Fullscreen API をサポートしているデバイスでは、動画のプレースホルダとしてサムネイル画像を使用することを検討してください。
 
 
-実際の動作を確認するには、こちらの[デモ](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html){: target="_blank" .external }をご覧ください。
+実際の動作を確認するには、こちらの[デモ](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html){: target="_blank" .external }をご覧ください。
 
 試験運用: `requestFullScreen()` はベンダーのプレフィックス付きであり、クロスブラウザの互換性を完全にサポートするには追加のコードが必要です。
 
@@ -463,7 +463,7 @@ track 要素を video 要素の子として追加するだけで、動画に簡�
 {% includecode content_path="web/fundamentals/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/track.html){: target="_blank" .external }
+[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/track.html){: target="_blank" .external }
 
 track 要素の `src` 属性では、トラック ファイルの場所を指定します。
 
@@ -631,7 +631,7 @@ video 要素のすべての属性と定義の一覧については、[video 要�
   </tbody>
 </table>
 
-`playbackRate`（[デモを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html){: target="_blank" .external }）も `volume` も、モバイル端末ではサポートされていません。
+`playbackRate`（[デモを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html){: target="_blank" .external }）も `volume` も、モバイル端末ではサポートされていません。
 
 ####  メソッド
 
@@ -663,7 +663,7 @@ video 要素のすべての属性と定義の一覧については、[video 要�
 
 モバイル端末（Android
 用 Opera
-を除く）では、`play()` と `pause()` は、ボタンクリックなどのユーザー操作に対するレスポンスとして呼び出された場合にのみ機能します。[デモ](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html){: target="_blank" .external }をご覧ください。（同様に、埋め込まれた
+を除く）では、`play()` と `pause()` は、ボタンクリックなどのユーザー操作に対するレスポンスとして呼び出された場合にのみ機能します。[デモ](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html){: target="_blank" .external }をご覧ください。（同様に、埋め込まれた
 YouTube 動画などのコンテンツの再生も開始できません。）
 
 

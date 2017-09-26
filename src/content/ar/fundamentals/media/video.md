@@ -74,7 +74,7 @@ description: تعرف على أسهل طرق إضافة الفيديو إلى م
 تعد جميع هذه النقاط ذات أهمية خاصة في سياقات الجوّال؛ حيث يعد معدل نقل البيانات ووقت الاستجابة العنصر الأهم، وغالبًا ما تكون قدرة المستخدم على الانتظار محدودة. 
 ويمكن أن يؤدي عدم تضمين سمة النوع إلى التأثير في مستوى الأداء عندما تكون هناك عدة مصادر بأنواع غير متوافقة.
 
-باستخدام أدوات مطوِّري متصفح الجوّال، يمكنك مقارنة نشاط الشبكة <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html">مع سمات النوع</a> و<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html">without type attributes</a>.
+باستخدام أدوات مطوِّري متصفح الجوّال، يمكنك مقارنة نشاط الشبكة <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">مع سمات النوع</a> و<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html">without type attributes</a>.
 راجع كذلك رؤوس الاستجابة في أدوات مطوِّري المتصفح [للتأكد من أن الخادم يعرض نوع MIME المناسب](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types)، وإلا فلن تعمل فحوصات نوع مصدر الفيديو.
 
 ### تحديد وقت بدء ووقت انتهاء
@@ -215,7 +215,7 @@ Note: - تتوافق واجهة برمجة تطبيقات Media Fragments مع �
 
 في جافا سكريبت، يمكنك استخدام الخاصية `currentSrc` في الفيديو لعرض المصدر المستخدم.
 
-للاطلاع على ذلك عمليًا، يمكنك الرجوع إلى <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html">هذا العرض التجريبي</a>: يختار كل من Chrome وFirefox ما يلي `chrome.webm` (نظرًا لأنه الخيار الأول في قائمة المصادر الممكنة التي يتوافق معها هذان المتصفحان) بينما يختار Safari ما يلي `chrome.mp4`.
+للاطلاع على ذلك عمليًا، يمكنك الرجوع إلى <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">هذا العرض التجريبي</a>: يختار كل من Chrome وFirefox ما يلي `chrome.webm` (نظرًا لأنه الخيار الأول في قائمة المصادر الممكنة التي يتوافق معها هذان المتصفحان) بينما يختار Safari ما يلي `chrome.mp4`.
 
 
 ## استخدام حجم الفيديو المناسب 
@@ -270,7 +270,7 @@ Note: لا تفرض حجمًا للعنصر قد يؤدي إلى نسبة عرض
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
-قارن <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html">النموذج سريع الاستجابة</a> بـ <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/unyt.html">النسخة بطيئة الاستجابة</a>.
+قارن <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html">النموذج سريع الاستجابة</a> بـ <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/unyt.html">النسخة بطيئة الاستجابة</a>.
 
 
 ## تخصيص مشغِّل الفيديو 
@@ -350,7 +350,7 @@ src="images/iPad-Retina-landscape-video-playing.png">
      <p>هذا المتصفح ليس متوافقًا مع عنصر الفيديو.</p>
 </video>
 
-للاطلاع على ذلك عمليًا، راجع <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html">demo</a>.
+للاطلاع على ذلك عمليًا، راجع <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html">demo</a>.
 
 Note: `requestFullScreen()` is currently vendor prefixed and may require extra code for full cross browser compatibility.
 
@@ -541,7 +541,7 @@ Note: يتوافق عنصر المسار الصوتي على Chrome لنظام A
   </tbody>
 </table>
 
-لا يتوافق كل من playbackRate (<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html">راجع العرض التجريبي</a>) ومستوى الصوت على الجوّال.
+لا يتوافق كل من playbackRate (<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html">راجع العرض التجريبي</a>) ومستوى الصوت على الجوّال.
 
 #### الطرق
 
@@ -571,7 +571,7 @@ Note: يتوافق عنصر المسار الصوتي على Chrome لنظام A
 </table>
 
 على الجوّال (باستثناء Opera وAndroid) لا يعمل كل من play() وpause() ما لم
-يتم طلب استجابة لإجراء المستخدم، مثل النقر على زر ما: راجع: see the <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html">العرض التجريبي</a>. (وهكذا، لا يمكن بدء التشغيل للمحتوى مثل مقاطع فيديو YouTube المضمَّنة).
+يتم طلب استجابة لإجراء المستخدم، مثل النقر على زر ما: راجع: see the <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html">العرض التجريبي</a>. (وهكذا، لا يمكن بدء التشغيل للمحتوى مثل مقاطع فيديو YouTube المضمَّنة).
 
 #### الأحداث
 

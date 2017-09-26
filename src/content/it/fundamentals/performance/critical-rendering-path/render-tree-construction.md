@@ -38,7 +38,7 @@ Note: Come breve commento, nota che <code>visibility: hidden</code> è diverso d
 
 L'output finale è un rendering che contiene sia il contenuto che le informazioni di stile di tutto il contenuto visibile sullo schermo. Siamo vicini.  **Una volta posizionata la struttura di rendering, possiamo procedere alla fase `layout`.**
 
-Fino ad adesso abbiamo calcolato i nodi che devono essere visibili e i relativi computed style ma non abbiamo calcolato la loro posizione precisa e dimensione all'interno [viewport](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) del dispositivo: questa è la fase `layout`, a volte denominata anche come `reflow.`
+Fino ad adesso abbiamo calcolato i nodi che devono essere visibili e i relativi computed style ma non abbiamo calcolato la loro posizione precisa e dimensione all'interno [viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) del dispositivo: questa è la fase `layout`, a volte denominata anche come `reflow.`
 
 Per individuare le dimensioni e posizione esatta di ciascun oggetto, il browser inizia dalla radice della struttura di rendering e la attraversa per calcolare la geometria di ogni oggetto sulla pagina. Analizziamo un semplice esempio pratico:
 

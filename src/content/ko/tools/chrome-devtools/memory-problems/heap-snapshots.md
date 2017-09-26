@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools 힙 프로파일러로 힙 스냅샷을 기록하여 메모리 누수를 찾아내는 방법을 알아봅니다.
 
