@@ -16,15 +16,14 @@ experience, or it could be delegated to another app on the user's device.
 
 ## Start simple and progressively
 
-The easiest thing to do is simply ask the user for a pre-recorded
-file. Do this by creating a simple file input element and adding
-an `accept` filter that indicates we can only accept audio files and ideally we
-will get them directly from the microphone.
+The easiest thing to do is simply ask the user for a pre-recorded file. Do this by creating a simple
+file input element and adding an `accept` filter that indicates we can only accept audio files, and
+a `capture` attribute that indicates we want to get it direct from the microphone.
 
-    <input type="file" accept="audio/*" capture="microphone">
+    <input type="file" accept="audio/*" capture>
 
 This method works on all platforms. On desktop it will prompt the user to
-upload a file from the file system (ignoring `capture="microphone"`). In Safari
+upload a file from the file system (ignoring the `capture` attribute). In Safari
 on iOS it will open up the microphone app, allowing you to record audio and
 then send it back to the web page; on Android it will give the user the
 choice of which app to use record the audio in before sending it back to the web
@@ -36,7 +35,7 @@ attaching an `onchange` event to the input element and then reading
 the `files` property of the event object.
 
 <pre class="prettyprint">
-&lt;input type="file" accept="audio/*" capture="microphone" id="recorder">
+&lt;input type="file" accept="audio/*" capture id="recorder">
 &lt;audio id="player" controls>&lt;/audio>
 &lt;script>
   var recorder = document.getElementById('recorder');
@@ -74,10 +73,9 @@ We can directly access the Microphone by using an API in the WebRTC
 specification called `getUserMedia()`. `getUserMedia()` will prompt the user for
 access to their connected microphones and cameras.
 
-If successful the API will return a `Stream` that will contain the data from
-either the camera or the microphone, and we can then either attach it to
-an `<audio>` element, attach it to an Web Audio `AudioContext`, or save it using
-the `MediaRecorder` API.
+If successful the API will return a `Stream` that will contain the data from either the camera or
+the microphone, and we can then either attach it to an `<audio>` element, attach it to a WebRTC
+stream, attach it to a Web Audio `AudioContext`, or save it using the `MediaRecorder` API.
 
 To get data from the microphone we just set `audio: true` in the constraints
 object that is passed to the `getUserMedia()` API
@@ -100,8 +98,21 @@ object that is passed to the `getUserMedia()` API
 &lt;/script>
 </pre>
 
-By itself, this isn't that useful. All we can do is take the audio data and play
-it back.
+If you want to choose a particular microphone you can first enumerate the available microphones.
+
+    navigator.mediaDevices.enumerateDevices().then((devices) => {
+      devices = devices.filter((d) => d.kind === 'audioinput');
+    });
+
+You can then pass the deviceId that you wish to use when you call `getUserMedia`.
+
+    navigator.mediaDevices.getUserMedia({
+      audio: {
+        deviceId: devices[0].deviceId
+      }
+    });
+
+By itself, this isn't that useful. All we can do is take the audio data and play it back.
 
 ### Access the raw data from the microphone
 

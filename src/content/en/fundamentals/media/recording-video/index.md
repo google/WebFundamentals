@@ -16,19 +16,28 @@ experience, or it could be delegated to another app on the user's device.
 
 ## Start simple and progressively
 
-The easiest thing to do is simply ask the user for a pre-recorded
-file. Do this by creating a simple file input element and adding
-an `accept` filter that indicates we can only accept video files and ideally we
-will get them directly from the camera.
+The easiest thing to do is simply ask the user for a pre-recorded file. Do this by creating a simple
+file input element and adding an `accept` filter that indicates we can only accept video files and
+a `capture` attribute that indicates we want to get it direct from the camera.
 
-    <input type="file" accept="video/*" capture="camera">
+    <input type="file" accept="video/*" capture>
 
-This method works on all platforms. On desktop it will prompt the user to
-upload a file from the file system (ignoring `capture="camera"`). In Safari
+This method works on all platforms. On desktop it will prompt the user to upload a file from the
+file system (ignoring the `capture` attribute). In Safari
 on iOS it will open up the camera app, allowing you to record video and
 then send it back to the web page; on Android it will give the user the
 choice of which app to use record the video in before sending it back to the web
 page.
+
+Many mobile devices have more than one camera. If you have a preference, you can set the `capture`
+attribute to `user`, if you want the camera that faces the user, or `environment` if you want the
+camera that faces outward.
+
+    <input type="file" accept="video/*" capture="user">
+    <input type="file" accept="video/*" capture="environment">
+
+Note that this is just a hint - if the browser doesn't support the option, or the camera type you
+ask for isn't available, the browser may choose another camera.
 
 Once the user has finished recording and they are back in the website, you
 need to somehow get ahold of the file data. You can get quick access by
@@ -74,9 +83,9 @@ We can directly access the camera by using an API in the WebRTC
 specification called `getUserMedia()`. `getUserMedia()` will prompt the user for
 access to their connected microphones and cameras.
 
-If successful the API will return a `Stream` that will contain the data from
-either the camera or the microphone, and we can then either attach it to
-a `<video>` element or save it using the `MediaRecorder` API.
+If successful the API will return a `Stream` that will contain the data from either the camera or
+the microphone, and we can then either attach it to a `<video>` element, attach it to a WebRTC
+stream, or save it using the `MediaRecorder` API.
 
 To get data from the camera we just set `video: true` in the constraints
 object that is passed to the `getUserMedia()` API
@@ -95,13 +104,41 @@ object that is passed to the `getUserMedia()` API
 &lt;/script>
 </pre>
 
-By itself, this isn't that useful. All we can do is take the video data and play
-it back.
+If you want to choose a particular camera you can first enumerate the available cameras.
+
+    navigator.mediaDevices.enumerateDevices().then((devices) => {
+      devices = devices.filter((d) => d.kind === 'videoinput');
+    });
+
+You can then pass the deviceId that you wish to use when you call `getUserMedia`.
+
+    navigator.mediaDevices.getUserMedia({
+      audio: true,
+      video: {
+        deviceId: devices[0].deviceId
+      }
+    });
+
+By itself, this isn't that useful. All we can do is take the video data and play it back.
 
 ### Access the raw data from the camera
 
 To access the raw video data from the camera you can draw each frame into a `<canvas>` and
-manipulate the pixels directly. You can learn more about this in our article about
+manipulate the pixels directly.
+
+For a 2D canvas you can use the `drawImage` method of the context to draw the current frame of a
+`<video>` element into the canvas.
+
+    context.drawImage(myVideoElement, 0, 0);
+
+With a WebGL canvas you can use a `<video>` element as the source for a texture.
+
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, myVideoElement);
+
+Note that in either case this will use the *current* frame of a playing video. To process multiple
+frames you need to redraw the video to the canvas each time.
+
+You can learn more about this in our article about
 [applying real-time effects to images and video](/web/fundamentals/media/manipulating/live-effects).
 
 ### Save the data from the camera
