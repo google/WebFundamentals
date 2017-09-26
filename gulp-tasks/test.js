@@ -150,8 +150,7 @@ function logMessage(level, filename, position, message, extra) {
     gutil.log(chalk.red('ERROR:'), fileLoc, message);
     allErrors.push(logMsg);
   } else {
-    // TODO(petele): Uncomment, removed while working on new IA
-    // gutil.log(chalk.yellow('WARNING:'), fileLoc, message);
+    gutil.log(chalk.yellow('WARNING:'), fileLoc, message);
     allWarnings.push(logMsg);
   }
   if (GLOBAL.WF.options.verbose && extra) {
