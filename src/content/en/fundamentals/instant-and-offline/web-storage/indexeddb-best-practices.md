@@ -2,11 +2,12 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn best practices for syncing application state between IndexedDB an popular state management libraries.
 
-{# wf_updated_on: 2017-06-08 #}
+{# wf_updated_on: 2017-09-25 #}
 {# wf_published_on: 2017-06-08 #}
 {# wf_tags: javascript,indexeddb #}
+{# wf_blink_components: Blink>Storage>IndexedDB #}
 
-# Best Practices for Persisting Application State with IndexedDB {: .page-title }
+# Best Practices for Using IndexedDB {: .page-title }
 
 {% include "web/_shared/contributors/philipwalton.html" %}
 
@@ -23,23 +24,52 @@ repeat visits. The app can then sync up with any API services in the background
 and update the UI with new data lazily, employing a [stale-while-
 revalidate](https://www.mnot.net/blog/2007/12/12/stale) strategy.
 
+Another good use for IndexedDB is to store user-generated content, either as a temporary store
+before it is uploaded to the server or as a client-side cache of remote data - or, of course, both.
+
 However, when using IndexedDB there are many important things to consider that
 may not be immediately obvious to developers new to the APIs. This article
 answers common questions and discusses some of the most important things to keep
-in mind when persisting application state in IndexedDB.
-
-<aside>
-  <strong>Note:</strong>
-  this article focuses specifically on persisting application state data, i.e.
-  the data needed to render the user interface. The advice presented here
-  doesn't necessarily apply to all types of data you might want to store.
-</aside>
+in mind when persisting data in IndexedDB.
 
 ## Keeping your app predictable
 
 A lot of the complexities around IndexedDB stem from the fact that there are so
 many factors you (the developer) have no control over. This section explores
 many of the issues you must keep in mind when working with IndexedDB.
+
+### Not everything can be stored in IndexedDB on all platforms
+
+If you are storing large, user-generated files such as images or videos, then you may try to store
+them as `File` or `Blob` objects. This will work on some platforms but fail on others. Safari on
+iOS, in particular, cannot store `Blob`s in IndexedDB.
+
+Luckily it is not too difficult to convert a `Blob` into an `ArrayBuffer`, and visa versa. Storing
+`ArrayBuffer`s in IndexedDB is very well supported.
+
+Remember, however, that a `Blob` has a MIME type while an `ArrayBuffer` does not. You will need to
+store the type alongside the buffer in order to do the conversion correctly.
+
+To convert an `ArrayBuffer` to a `Blob` you simply use the `Blob` constructor.
+
+    function arrayBufferToBlob(buffer, type) {
+      return new Blob([buffer], {type: type});
+    }
+
+The other direction is slightly more involved, and is an asynchronous process. You can use a
+`FileReader` object to read the blob as an `ArrayBuffer`. When the reading is finished a `loadend`
+event is triggered on the reader. You can wrap this process in a `Promise` like so:
+
+    function blobToArrayBuffer(blob) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.addEventListener('loadend', (e) => {
+          resolve(reader.result);
+        });
+        reader.addEventListener('error', reject);
+        reader.readAsArrayBuffer(blob);
+      });
+    }
 
 ### Writing to storage may fail
 
@@ -49,13 +79,6 @@ example, some browsers currently don't allow [writing to IndexedDB when in
 private browsing mode](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API#Browser_compatibility).
 There's also the possibility that a user is on a device that's almost out
 of disk space, and the browser will restrict you from storing anything at all.
-
-Because of this, it's critically important that you always implement proper
-error handling in your IndexedDB code. This also means it's generally a good
-idea to keep application state in memory (in addition to storing it), so the UI
-doesn't break when running in private browsing mode or when storage space isn't
-available (even if some of the other app features that require storage won't
-work).
 
 <aside>
   <strong>Note:</strong>
@@ -70,6 +93,21 @@ work).
   href="https://support.google.com/accounts/answer/32050">clear
   cache/cookies</a> operations.
 </aside>
+
+Because of this, it's critically important that you always implement proper
+error handling in your IndexedDB code. This also means it's generally a good
+idea to keep application state in memory (in addition to storing it), so the UI
+doesn't break when running in private browsing mode or when storage space isn't
+available (even if some of the other app features that require storage won't
+work).
+
+You can catch errors in IndexedDB operations by adding an event handler for the `error` event
+whenever you create an `IDBDatabase`, `IDBTransaction` or `IDBRequest` object.
+
+    const request = db.open('example-db', 1);
+    request.addEventListener('error', (event) => {
+      console.log('Request error:', request.error);
+    };
 
 ### Stored data may have been modified or deleted by the user
 
@@ -128,6 +166,10 @@ some cases it will even cause the browser tab to crash or become unresponsive.
 
 Instead of storing the entire state tree in a single record, you should break it
 up into individual records and only update the records that actually change.
+
+The same is true if you store large items like images, music or video in IndexedDB. Store each item
+with its own key rather than inside a larger object, so that you can retrieve the structured data
+without paying the cost of also retrieving the binary file.
 
 As with most best practices, this is not an all-or-nothing rule. In cases where
 it's not feasible to break up a state object and just write the minimal
