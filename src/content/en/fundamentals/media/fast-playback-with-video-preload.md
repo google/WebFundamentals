@@ -364,7 +364,7 @@ users.
 Learn more by reading our complete [Delivering Fast and Light
 Applications with Save-Data] article.
 
-#### Network information
+#### Smart loading based on network information
 
 You may want to check `navigator.connection.type` prior to preloading. When
 it's set to `cellular`, you could prevent preloading and advise users that
