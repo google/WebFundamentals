@@ -225,7 +225,7 @@ network request.
 
 There are scenarios in which you *need* a `fetch` handler to use a caching
 strategy for certain subresources, but your architecture makes it impossible to
-logic to respond to navigation requests. Alternatively, you might be okay with
+respond to navigation requests. Alternatively, you might be okay with
 using cached data in your navigation response, but you still want to make a
 network request for fresh data to swap in after the page has loaded.
 
