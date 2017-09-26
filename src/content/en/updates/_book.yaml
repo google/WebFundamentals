@@ -9,6 +9,8 @@ upper_tabs:
     other:
     - name: Updates
       contents:
+      - title: Featured
+        path: /web/updates/
       - include: /web/updates/2017/_toc.yaml
       - include: /web/updates/2016/_toc.yaml
       - include: /web/updates/2015/_toc.yaml
