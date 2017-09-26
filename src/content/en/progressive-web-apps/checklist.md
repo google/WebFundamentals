@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/progressive-web-apps/_book.yaml
 description: A checklist which breaks down all the things we think it takes to be a baseline progressive web app, and how to take it a step further with an exemplary progressive web app. 
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-09-26 #}
 {# wf_published_on: 2016-11-07 #}
 
 # Progressive Web App Checklist {: .page-title }
@@ -85,12 +85,14 @@ on the this list and may prove helpful in easily testing sites.
 <table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>The start URL (at least) loads while offline</h3></th>
+      <th colspan=2><h3>All app URLs load while offline</h3></th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Use Lighthouse to verify <b>URL responds with a 200 when offline</b>.
+        Load various pages in the PWA with an airplane mode enabled. Ensure
+        the app presents some content even when offline. Use Lighthouse to
+        verify the start <b>URL responds with a 200 when offline</b>.
       </td>
     </tr>
     <tr>
