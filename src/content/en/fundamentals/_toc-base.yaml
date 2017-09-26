@@ -19,3 +19,5 @@ toc:
         path: /web/fundamentals/primers/service-workers/lifecycle
       - title: Registration
         path: /web/fundamentals/primers/service-workers/registration
+      - title: High Performance Loading
+        path: /web/fundamentals/primers/service-workers/high-performance-loading
