@@ -330,7 +330,7 @@ Player], [JW Player], and [Video.js] are built to handle this for you.
 
 As you're now in control of the entire media buffering experience, I suggest you
 consider the device's battery level, the "Data-Saver Mode" user preference and
-the network information when thinking about preloading.
+network information when thinking about preloading.
 
 #### Battery awareness
 
@@ -368,7 +368,7 @@ Applications with Save-Data] article.
 
 You may want to check `navigator.connection.type` prior to preloading. When
 it's set to `cellular`, you could prevent preloading and advise users that
-mobile network operator might be charging for the bandwidth, and only start
+their mobile network operator might be charging for the bandwidth, and only start
 automatic playback of previously cached content.
 
 ```
