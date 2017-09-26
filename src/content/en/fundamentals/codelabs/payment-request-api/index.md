@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Filling checkout forms is a pain especially on mobile devices. In this codelab, you'll learn how to improve a traditional e-commerce website using the Payment Request API.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-08-30T14:18:47Z #}
+{# wf_updated_on: 2017-08-30T14:19:03Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -472,7 +472,7 @@ To learn more about the Payment Request API, visit following links.
 ### Resources
 
 *  [Bringing Easy and Fast Checkout with Payment Request API](/web/updates/2016/07/payment-request)
-*  [Payment Request API: an Integration Guide](/web/fundamentals/payments/)
+*  [Payment Request API: an Integration Guide](/web/fundamentals/discovery-and-monetization/payment-request/)
 *  [Web Payments session video at Chrome Dev Summit 2017](https://www.youtube.com/watch?v=U0LkQijSeko)
 
 ### Specs
