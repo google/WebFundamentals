@@ -7,10 +7,12 @@ upper_tabs:
   path: /web/updates/
   lower_tabs:
     other:
-    - name: Updates
+    - name: Featured
       contents:
       - title: Featured
         path: /web/updates/
+    - name: By Year
+      contents:
       - include: /web/updates/2017/_toc.yaml
       - include: /web/updates/2016/_toc.yaml
       - include: /web/updates/2015/_toc.yaml
@@ -18,5 +20,7 @@ upper_tabs:
       - include: /web/updates/2013/_toc.yaml
       - include: /web/updates/2012/_toc.yaml
       - include: /web/updates/2011/_toc.yaml
+    - name: By Tag
+      contents:
       - include: /web/updates/tags/_toc.yaml
 - include: /web/_upper_tabs-Showcase.yaml
