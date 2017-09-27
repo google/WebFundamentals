@@ -32,6 +32,9 @@
         margin-top: 48px;
       }
     </style>
+    {% autoescape off %}
+      {{ head }}
+    {% endautoescape %}
   </head>
   <body class="devsite-uhura devsite-landing-page devsite-header-no-lower-tabs" id="top_of_page">
     <div class="devsite-wrapper">

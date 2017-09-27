@@ -41,6 +41,9 @@
       }
     </style>
     <title>{{ title }}</title>
+    {% autoescape off %}
+      {{ head }}
+    {% endautoescape %}
   </head>
   <body class="devsite-uhura devsite-doc-page devsite-header-no-lower-tabs" id="top_of_page">
     <div class="devsite-wrapper">
