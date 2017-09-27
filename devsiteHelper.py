@@ -6,15 +6,10 @@ import hashlib
 import logging
 import textwrap
 import urllib2
-
 from datetime import date, datetime
 from google.appengine.api import memcache
-from google.appengine.ext.webapp.template import render
 
 SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content/')
-DEVENV = os.environ['SERVER_SOFTWARE'].startswith('Dev')
-USE_MEMCACHE = not DEVENV
-
 
 def slugify(str):
   # Very simply slugify
@@ -34,8 +29,7 @@ def getFromMemCache(memcacheKey):
 
 def setMemCache(memcacheKey, value, length=3600):
   try:
-    if USE_MEMCACHE:
-      memcache.set(memcacheKey, value, length)
+    memcache.set(memcacheKey, value, length)
   except Exception as e:
     logging.exception('Unable to cache to MemCache')
 
@@ -149,10 +143,6 @@ def parseBookYaml(pathToBook, lang='en'):
   Returns:
       A dictionary with the parsed book.
   """
-  memcacheKey = 'bookYAML-' + pathToBook
-  result = getFromMemCache(memcacheKey)
-  if result:
-    return result
   try:
     result = {}
     upperTabs = []
@@ -160,7 +150,6 @@ def parseBookYaml(pathToBook, lang='en'):
     bookYaml = yaml.load(readFile(pathToBook, lang))
     for upperTab in bookYaml['upper_tabs']:
       upperTabs.append(expandBook(upperTab))
-    setMemCache(memcacheKey, result, 60)
     return result
   except Exception as e:
     logging.exception('Error in parseBookYaml')
@@ -219,13 +208,8 @@ def getLowerTabs(bookYaml):
 
 
 def getLeftNav(requestPath, bookYaml, lang='en'):
-  # Returns the left nav. If it's already been generated and stored in
-  # memcache, return that, otherwise, read the file then recursively
-  # build the tree using buildLeftNav.
-  memcacheKey = 'leftNav-' + requestPath
-  result = getFromMemCache(memcacheKey)
-  if result:
-    return result
+  # Returns the left nav. Read the file then recursively, then build the
+  # tree using buildLeftNav.
   whoops = '<h2>Whoops!</h2>'
   whoops += '<p>An error occured while trying to parse and build the'
   whoops += ' left hand navigation. Check the error logs.'
@@ -241,10 +225,9 @@ def getLeftNav(requestPath, bookYaml, lang='en'):
               result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
               result += buildLeftNav(lowerTab['contents'])
               result += '</ul>\n'
-    setMemCache(memcacheKey, result)
     return result
   except Exception as e:
-    msg = ' - Unable to read or parse primary book.yaml: ' + pathToBook
+    msg = ' - Unable to read or parse primary book.yaml'
     logging.exception(msg)
     whoops += '<p>Exception occured.</p>'
     return whoops
@@ -254,18 +237,6 @@ def buildLeftNav(bookYaml, lang='en'):
   # Recursively reads the book.yaml file and generates the navigation tree
   result = ''
   for item in bookYaml:
-    if 'include' in item:
-      ## TODO(petele): Remove this
-      ## leaving this in for a few weeks while I ensure it doesn't break
-      ## anything.
-      logging.error('***** INCLUDE - this should NOT happen.')
-      # try:
-      #   include = readFile(item['include'], lang)
-      #   include = yaml.load(include)
-      #   result += buildLeftNav(include['toc'])
-      # except Exception as e:
-      #   msg = ' - Unable to parsing embedded toc file: ' + item['include']
-      #   logging.exception(msg)
     if 'path' in item:
       result += '<li class="devsite-nav-item">\n'
       result += '<a href="' + item['path'] + '" class="devsite-nav-title">\n'
@@ -442,10 +413,7 @@ def getIncludeCode(include_tag, lang='en'):
 
 
 def getAnnouncementBanner(pathToProject, lang='en'):
-  memcacheKey = 'projectYAML-' + pathToProject
-  result = getFromMemCache(memcacheKey)
-  if result:
-    return result
+  result = ''
   try:
     project = yaml.load(readFile(pathToProject, lang))
     if 'announcement' in project:
@@ -461,10 +429,9 @@ def getAnnouncementBanner(pathToProject, lang='en'):
         result += '</div>'
       else:
         logging.warn('Announcement in _project.yaml expired: not shown')
-      setMemCache(memcacheKey, result, 60)
   except Exception as e:
     logging.exception('Unable to get announcement from project.yaml')
-    return ''
+    result = ''
   return result
 
 
@@ -497,7 +464,7 @@ def getFooterPromo(lang='en'):
         result += '</a><div class="devsite-footer-promo-description">'
         result += promo['description']
         result += '</div></li>\n'
-      setMemCache(memcacheKey, result)
+      setMemCache(memcacheKey, result, 60)
   return result
 
 
@@ -527,5 +494,5 @@ def getFooterLinkBox(lang='en'):
           result += linkItem['label'] + '</a></li>'
         result += '</ul>'
         result += '</li>'
-      setMemCache(memcacheKey, result)
+      setMemCache(memcacheKey, result, 60)
   return result
