@@ -36,7 +36,7 @@ experience offline.
 Let’s get right to the point with a general recommendation for storing data
 offline:
 
-* For the network resources necessary to load your app while offline, use the [**Cache API**](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage)
+* For the network resources necessary to load your app while offline, use the [**Cache API**](cache-api)
   (part of [service workers](/web/fundamentals/primers/service-worker/)).
 * For all other data, use [**IndexedDB**](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
   (with a [promises wrapper](https://www.npmjs.com/package/idb)).

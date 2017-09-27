@@ -237,6 +237,6 @@ of interest:
 
 * Deep Dive: IndexedDB (coming soon)
 
-* Deep Dive: Cache API (coming soon)
+* [Deep Dive: Cache API](cache-api)
 
 * Analysis of Popular Storage Frameworks (coming soon)
