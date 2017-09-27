@@ -4,13 +4,13 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2017-09-27 #}
 {# wf_updated_on: 2017-09-27 #}
 {# wf_featured_image: /web/images/pwa-f-16x9.gif #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Ele.me is the biggest food ordering and delivery company in mainland China. They built their Progressive Web App (PWA) as a multi-page app to improve its mobile web experience, making it faster and more reliable in flaky connections, while accommodating their operational needs to best serve their customers. #}
 {# wf_tags: casestudy,progressive-web-apps #}
 {# wf_region: asia #}
 {# wf_vertical: retail #}
 {# wf_featured_date: 2017-09-27 #}
 
-# Ele.me improves performance load times with a multi-page PWA {: .page-title }
+# Ele.me improves performance load times with a multi-page Progressive Web App {: .page-title }
 
 <img src="/web/showcase/2017/images/eleme/main.jpg" class="attempt-right">
 
@@ -89,13 +89,14 @@ HTML templates. This allows them to render the skeleton screen directly and
 achieve a more fluid transition when navigating between pages. 
 
 <figure class="attempt-left">
-  <img src="" alt="Skeleton screen during page transition">
+  <img src="images/eleme/skeleton.png" alt="Skeleton screen during page transition">
   <figcaption>Skeleton screen during page transition</figcaption>
 </figure>
 <figure class="attempt-right">
-  <img src="" alt="Page fully rendered after page transition">
+  <img src="images/eleme/rendered.png" alt="Page fully rendered after page transition">
   <figcaption>Page fully rendered after page transition</figcaption>
 </figure>
+
 
 <div class="clearfix"></div>
 
