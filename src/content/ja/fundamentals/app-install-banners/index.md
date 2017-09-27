@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: アプリのインストール バナーには、ウェブアプリのインストール バナーとネイティブ アプリのインストール バナーの 2 種類があります。バナーを使えば、ブラウザから離れることなく、素早くシームレスにウェブアプリやネイティブアプリをホーム画面に追加することができます。
 
-{# wf_updated_on:2016-02-11 #}
+{# wf_updated_on:2017-09-27 #}
 {# wf_published_on:2014-12-16 #}
 
 # ウェブアプリのインストール バナー {: .page-title }
@@ -36,7 +36,7 @@ Chrome は、アプリが次の条件を満たすと、自動的にバナーを�
 * 次の情報が記述された[ウェブアプリ マニフェスト](../web-app-manifest/) ファイルが存在する。
     - `short_name`（ホーム画面で使用）
     - `name`（バナーで使用）
-    - 144x144 の png アイコン（アイコンの宣言には MIME タイプ `image/png` の指定が必要）
+    - 192x192 の png アイコン（アイコンの宣言には MIME タイプ `image/png` の指定が必要）
     - 読み込み先の `start_url`
 * サイトに [Service Worker](/web/fundamentals/getting-started/primers/service-workers) が登録されている。
 * [HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https) 経由で配信されている（Service Worker を使用するための要件）。
@@ -192,7 +192,7 @@ what action the user took.
 * 次の情報が記述された[ウェブアプリ マニフェスト](../web-app-manifest/) ファイルが存在する。
   - `short_name`
   - `name`（バナーのプロンプトで使用）
-  - 144x144 png アイコン。アイコンの宣言に MIME タイプ `image/png` を含める必要があります。
+  - 192x192 png アイコン。アイコンの宣言に MIME タイプ `image/png` を含める必要があります。
   - アプリの情報を設定した `related_applications` オブジェクト
 * [HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https) 経由で配信されている。
 * 2 週間のうち異なる 2 日間で、ユーザーが 2 回アクセスしている。

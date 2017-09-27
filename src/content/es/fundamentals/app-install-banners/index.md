@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Hay dos tipos de banners de instalación de apps: los de apps web y los de apps nativas. Te dan la posibilidad de permitir que los usuarios agreguen de manera rápida y fluida tu app nativa o web a sus pantallas de inicio sin salir del navegador.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-09-27 #}
 {# wf_published_on: 2014-12-16 #}
 
 # Banners de instalación de apps web {: .page-title }
@@ -36,7 +36,7 @@ criterios:
 * Contener un archivo de [manifiesto de aplicación web](../web-app-manifest/) con:
     - un `short_name` (usado en la pantalla de inicio);
     - un `name` (usado en el banner);
-    - un ícono png de 144 x 144 (en las declaraciones del ícono se debe incluir un tipo de mime `image/png`);
+    - un ícono png de 192 x 192 (en las declaraciones del ícono se debe incluir un tipo de mime `image/png`);
     - una `start_url` que se carga.
 * Contener un [service worker](/web/fundamentals/getting-started/primers/service-workers)
   registrado en tu sitio.
@@ -194,7 +194,7 @@ service worker. Tu sitio debe:
 * Contener un archivo de [manifiesto de app web](../web-app-manifest/) con:
   - un `short_name`
   - un `name` (usado en el aviso del banner);
-  - un ícono png de 144x144, la declaración de tu ícono debe incluir un tipo de mime de `image/png`
+  - un ícono png de 192x192, la declaración de tu ícono debe incluir un tipo de mime de `image/png`
   - un `related_applications` objeto con información de la app
 * Ser enviado por [HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https)
 * Ser visitado por el usuario dos veces, en dos días diferentes durante un período de

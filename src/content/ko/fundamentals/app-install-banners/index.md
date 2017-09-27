@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 앱 설치 배너는 웹 앱 설치 배너와 네이티브 앱 설치 배너의 두 종류가 있습니다. 앱 설치 배너를 통해 사용자는 브라우저를 떠나지 않고서도 자신의 홈 화면에 여러분의 웹 앱이나 네이티브 앱을 빠르고 정확하게 추가할 수 있습니다.
 
-{# wf_updated_on: 2016-02-11 #}
+{# wf_updated_on: 2017-09-27 #}
 {# wf_published_on: 2014-12-16 #}
 
 # 웹 앱 설치 배너 {: .page-title }
@@ -36,7 +36,7 @@ description: 앱 설치 배너는 웹 앱 설치 배너와 네이티브 앱 설�
 * [웹 앱매니페스트](../web-app-manifest/) 파일에 다음이 포함됨:
     - `short_name`(홈 화면에 사용)
     - `name`(배너에 사용)
-    - 144x144 png 아이콘(아이콘 선언에 mime 유형의 `image/png`이 포함되어야 함)
+    - 192x192 png 아이콘(아이콘 선언에 mime 유형의 `image/png`이 포함되어야 함)
     - `start_url` 로드
 * [서비스 워커](/web/fundamentals/getting-started/primers/service-workers)가
 여러분 사이트에 등록됨.
@@ -194,7 +194,7 @@ Chrome이 사용자에게 앱을 설치하라는 프롬프트를 표시하는 �
 * [웹 앱 매니페스트](../web-app-manifest/) 파일에 다음이 포함되어야 합니다.
   - `short_name`
   - `name`(배너 프롬프트에 사용)
-  - 144x144 png 아이콘. 아이콘 선언에 MIME 유형의 `image/png`가 포함되어야 합니다.
+  - 192x192 png 아이콘. 아이콘 선언에 MIME 유형의 `image/png`가 포함되어야 합니다.
   - 앱 정보가 포함된 `related_applications` 객체
 * [HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https)를 통해 서비스되어야 합니다.
 * 2주 간의 교육과정 동안 사용자가 각각 다른 날짜에 두 번 방문해야 합니다.

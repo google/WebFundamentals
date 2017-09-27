@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ada dua tipe spanduk pemasangan aplikasi: spanduk pemasangan aplikasi web dan spanduk pemasangan aplikasi asli. Keduanya memberi Anda kemampuan untuk memungkinkan pengguna dengan cepat dan mulus menambahkan aplikasi asli atau web Anda ke layar beranda tanpa meninggalkan browser.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-09-27 #}
 {# wf_published_on: 2014-12-16 #}
 
 # Spanduk Pemasangan Aplikasi Web {: .page-title }
@@ -36,7 +36,7 @@ berikut:
 * Memiliki file [manifes aplikasi web](../web-app-manifest/) dengan:
     - sebuah `short_name` (digunakan di layar beranda)
     - sebuah `name` (digunakan di spanduk)
-    - sebuah ikon png 144x144 (deklarasi ikon harus menyertakan tipe mime dari `image/png`)
+    - sebuah ikon png 192x192 (deklarasi ikon harus menyertakan tipe mime dari `image/png`)
     - sebuah `start_url` yang memuat
 * Memiliki [service worker](/web/fundamentals/getting-started/primers/service-workers)
   yang terdaftar di situs Anda.
@@ -194,7 +194,7 @@ service worker. Situs Anda harus:
 * Memiliki file [manifes aplikasi web](../web-app-manifest/) dengan:
   - sebuah `short_name`
   - sebuah `name` (digunakan di prompt spanduk)
-  - sebuah ikon png 144x144, deklarasi ikon Anda harus menyertakan tipe MIME `image/png`
+  - sebuah ikon png 192x192, deklarasi ikon Anda harus menyertakan tipe MIME `image/png`
   - sebuah objek `related_applications` bersama informasi tentang aplikasi
 * Disajikan melalui [HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https)
 * Dikunjungi oleh pengguna dua kali, pada dua hari berbeda selama kursus

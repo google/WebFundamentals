@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Existem dois tipos de banners de instalação de aplicativo: os web e os nativos. Eles dão a você a possibilidade de permitir que os usuários adicionem seu aplicativo web ou nativo às telas iniciais de forma rápida e fácil, sem sair do navegador.
 
-{# wf_updated_on: 2016-02-11 #}
+{# wf_updated_on: 2017-09-27 #}
 {# wf_published_on: 2014-12-16 #}
 
 # Banners de instalação de aplicativo web {: .page-title }
@@ -36,7 +36,7 @@ critérios:
 * Ter um arquivo de [manifesto de app da Web](../web-app-manifest/) com:
     - um `short_name` (usado na tela inicial)
     - um `name` (usado no banner)
-    - um ícone PNG de 144x144 (as declarações do ícone devem incluir um tipo MIME de `image/png`)
+    - um ícone PNG de 192x192 (as declarações do ícone devem incluir um tipo MIME de `image/png`)
     - um `start_url` que é carregado
 * Ter um [service worker](/web/fundamentals/getting-started/primers/service-workers)
   registrado no seu site.
@@ -194,7 +194,7 @@ ter um service worker. O seu site deve:
 * Ter um arquivo de [manifesto do aplicativo web](../web-app-manifest/) com:
   - um `short_name`
   - um `name` (usado na solicitação do banner)
-  - um ícone em PNG de 144 x 144 (a declaração do ícone deve conter um tipo MIME de `image/png`
+  - um ícone em PNG de 192 x 192 (a declaração do ícone deve conter um tipo MIME de `image/png`
   - um objeto `related_applications` com informações sobre o aplicativo
 * Ser fornecido por [HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https)
 * Ser acessado pelo usuário duas vezes em dois dias separados em um período
