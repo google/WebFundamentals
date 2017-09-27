@@ -3,7 +3,7 @@ book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2017-09-27 #}
 {# wf_updated_on: 2017-09-27 #}
-{# wf_featured_image: /web/images/pwa-f-16x9.gif #}
+{# wf_featured_image: /web/showcase/2017/images/eleme/logo.jpg #}
 {# wf_featured_snippet: Ele.me is the biggest food ordering and delivery company in mainland China. They built their Progressive Web App (PWA) as a multi-page app to improve its mobile web experience, making it faster and more reliable in flaky connections, while accommodating their operational needs to best serve their customers. #}
 {# wf_tags: casestudy,progressive-web-apps #}
 {# wf_region: asia #}
