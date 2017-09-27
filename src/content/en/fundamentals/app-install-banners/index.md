@@ -144,7 +144,7 @@ what action the user took.
     
     btnSave.addEventListener('click', function() {
       if(deferredPrompt !== undefined) {
-        // The user has had a postive interaction with our app and Chrome
+        // The user has had a positive interaction with our app and Chrome
         // has tried to prompt previously, so let's show the prompt.
         deferredPrompt.prompt();
       

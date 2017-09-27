@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-09-27 #}
 {# wf_published_on: 2016-06-30 #}
 
 # The Web Push Protocol {: .page-title }
@@ -302,7 +302,7 @@ When we want to send a push message to a user with a payload, there are three in
 1. The `auth` secret from the `PushSubscription`.
 1. The `p256dh` key from the `PushSubscription`.
 
-We've seen the `auth` and `p256dh` values being retreieved from a `PushSubscription` but for a
+We've seen the `auth` and `p256dh` values being retrieved from a `PushSubscription` but for a
 quick reminder, given a subscription we'd need these values:
 
     subscription.joJSON().keys.auth
