@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: There are two types of app install banners: web app install banners and native app install banners. They give you the ability to let users quickly and seamlessly add your web or native app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2016-02-11 #}
+{# wf_updated_on: 2017-09-27 #}
 {# wf_published_on: 2014-12-16 #}
 
 # Web App Install Banners {: .page-title }
@@ -37,7 +37,7 @@ criteria:
 * Has a [web app manifest](../web-app-manifest/) file with:
     - a `short_name` (used on the home screen)
     - a `name` (used in the banner)
-    - a 144x144 png icon (the icon declarations must include a mime type of `image/png`)
+    - a 192x192 png icon (the icon declarations must include a mime type of `image/png`)
     - a `start_url` that loads
 * Has a [service worker](/web/fundamentals/getting-started/primers/service-workers)
   registered on your site.
@@ -195,7 +195,7 @@ a service worker. Your site must:
 * Have a [web app manifest](../web-app-manifest/) file with:
     - a `short_name`
     - a `name` (used in the banner prompt)
-    - a 144x144 png icon, your icon declaration's should include a mime type of `image/png`
+    - a 192x192 png icon, your icon declaration's should include a mime type of `image/png`
     - a `related_applications` object with information about the app
 * Be served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https)
 * Be visited by the user twice, over two separate days during the course
