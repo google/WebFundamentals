@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ensure you're getting the best performance out of your service worker implementation.
 
-{# wf_updated_on: 2017-09-21 #}
+{# wf_updated_on: 2017-09-27 #}
 {# wf_published_on: 2017-09-21 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -37,7 +37,7 @@ on a page will also lead to a navigation request for the `<iframe>`'s `src`.
 Note: [Single page applications](https://en.wikipedia.org/wiki/Single-page_application),
 relying on the [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
 and in-place DOM modifications, tend to avoid navigation requests when switching
-from view to view. But the initial request in a browser's session for in a
+from view to view. But the initial request in a browser's session for a
 single page app is still a navigation.
 
 While your web app might make many other [subresource
@@ -56,7 +56,7 @@ data being pushed down to the client.
 
 Traditional [caching best
 practices](/web/fundamentals/performance/optimizing-content-efficiency/http-caching#top_of_page),
-the kind that on HTTP `Cache-Control` headers and without a service worker,
+the kind that rely on HTTP `Cache-Control` headers and not a service worker,
 require [going to the network each
 navigation](/web/fundamentals/performance/optimizing-content-efficiency/http-caching#invalidating_and_updating_cached_responses),
 to ensure that all of the subresource URLs are fresh. The holy grail for web
