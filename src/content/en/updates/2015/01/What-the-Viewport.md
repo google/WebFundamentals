@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: The virtual viewport seperates layout and viewing of the viewport.
+description: The virtual viewport separates layout and viewing of the viewport.
 
-{# wf_updated_on: 2015-01-19 #}
+{# wf_updated_on: 2017-09-27 #}
 {# wf_published_on: 2015-01-19 #}
 {# wf_tags: news,virtualviewport #}
 

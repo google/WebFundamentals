@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Using position: sticky and IntersectionObserver together to determine when elements become sticky. Apply scroll effects without scroll events!
 
-{# wf_updated_on: 2017-09-19 #}
+{# wf_updated_on: 2017-09-27 #}
 {# wf_published_on: 2017-09-19 #}
 {# wf_blink_components: Blink>CSS,Blink>Layout #}
 {# wf_tags: css,intersectionobserver,stickyposition  #}
@@ -141,7 +141,7 @@ Instead of `scroll` events, we're going to use an  `IntersectionObserver` to
 determine when *headers* enter and exit sticky mode. Adding two nodes
 (aka sentinels) in each *sticky section*, one at the top and one
 at the bottom, will act as waypoints for figuring out scroll position. As these
-markers enter and leave the container, their visiblitiy changes and
+markers enter and leave the container, their visibility changes and
 Intersection Observer fires a callback.
 
 <figure class="attempt-right">
@@ -298,7 +298,7 @@ sticking or not.
 ```js
 /**
  * Sets up an intersection observer to notify when elements with the class
- * `.sticky_sentinel--bottom` become visible/invisible at the botton of the
+ * `.sticky_sentinel--bottom` become visible/invisible at the bottom of the
  * container.
  * @param {!Element} container
  */

@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: There are two types of app install banners: web app install banners and native app install banners. They give you the ability to let users quickly and seamlessly add your web or native app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2016-02-11 #}
+{# wf_updated_on: 2017-09-27 #}
 {# wf_published_on: 2014-12-16 #}
 
 # Web App Install Banners {: .page-title }
@@ -144,7 +144,7 @@ what action the user took.
     
     btnSave.addEventListener('click', function() {
       if(deferredPrompt !== undefined) {
-        // The user has had a postive interaction with our app and Chrome
+        // The user has had a positive interaction with our app and Chrome
         // has tried to prompt previously, so let's show the prompt.
         deferredPrompt.prompt();
       
