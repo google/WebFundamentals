@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers can get access to the user's microphone.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-09-24 #}
 {# wf_published_on: 2016-08-23 #}
 {# wf_blink_components: Blink>GetUserMedia #}
 
@@ -16,15 +16,14 @@ experience, or it could be delegated to another app on the user's device.
 
 ## Start simple and progressively
 
-The easiest thing to do is simply ask the user for a pre-recorded
-file. Do this by creating a simple file input element and adding
-an `accept` filter that indicates we can only accept audio files and ideally we
-will get them directly from the microphone.
+The easiest thing to do is simply ask the user for a pre-recorded file. Do this by creating a simple
+file input element and adding an `accept` filter that indicates we can only accept audio files, and
+a `capture` attribute that indicates we want to get it direct from the microphone.
 
-    <input type="file" accept="audio/*" capture="microphone">
+    <input type="file" accept="audio/*" capture>
 
 This method works on all platforms. On desktop it will prompt the user to
-upload a file from the file system (ignoring `capture="microphone"`). In Safari
+upload a file from the file system (ignoring the `capture` attribute). In Safari
 on iOS it will open up the microphone app, allowing you to record audio and
 then send it back to the web page; on Android it will give the user the
 choice of which app to use record the audio in before sending it back to the web
@@ -35,18 +34,20 @@ need to somehow get ahold of the file data. You can get quick access by
 attaching an `onchange` event to the input element and then reading
 the `files` property of the event object.
 
-    <input type="file" accept="audio/*" capture="microphone" id="recorder">
-    <audio id="player" controls></audio>
-    <script>
-      var recorder = document.getElementById('recorder');
-      var player = document.getElementById('player')'
+<pre class="prettyprint">
+&lt;input type="file" accept="audio/*" capture id="recorder">
+&lt;audio id="player" controls>&lt;/audio>
+&lt;script>
+  var recorder = document.getElementById('recorder');
+  var player = document.getElementById('player')'
 
-      recorder.addEventListener('change', function(e) {
-        var file = e.target.files[0];
-        // Do something with the audio file.
-        player.src =  URL.createObjectURL(file);
-      });
-    </script>
+  recorder.addEventListener('change', function(e) {
+    var file = e.target.files[0];
+    // Do something with the audio file.
+    player.src =  URL.createObjectURL(file);
+  });
+&lt;/script>
+</pre>
 
 Once you have access to the file you can do anything you want with it. For
 example, you can:
@@ -72,33 +73,46 @@ We can directly access the Microphone by using an API in the WebRTC
 specification called `getUserMedia()`. `getUserMedia()` will prompt the user for
 access to their connected microphones and cameras.
 
-If successful the API will return a `Stream` that will contain the data from
-either the camera or the microphone, and we can then either attach it to
-an `<audio>` element, attach it to an Web Audio `AudioContext`, or save it using
-the `MediaRecorder` API.
+If successful the API will return a `Stream` that will contain the data from either the camera or
+the microphone, and we can then either attach it to an `<audio>` element, attach it to a WebRTC
+stream, attach it to a Web Audio `AudioContext`, or save it using the `MediaRecorder` API.
 
 To get data from the microphone we just set `audio: true` in the constraints
 object that is passed to the `getUserMedia()` API
 
+<pre class="prettyprint">
+&lt;audio id="player" controls>&lt;/audio>
+&lt;script>
+  var player = document.getElementById('player');
 
-    <audio id="player" controls></audio>
-    <script>
-      var player = document.getElementById('player');
+  var handleSuccess = function(stream) {
+    if (window.URL) {
+      player.src = window.URL.createObjectURL(stream);
+    } else {
+      player.src = stream;
+    }
+  };
 
-      var handleSuccess = function(stream) {
-        if (window.URL) {
-          player.src = window.URL.createObjectURL(stream);
-        } else {
-          player.src = stream;
-        }
-      };
+  navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+      .then(handleSuccess)
+&lt;/script>
+</pre>
 
-      navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-          .then(handleSuccess)
-    </script>
+If you want to choose a particular microphone you can first enumerate the available microphones.
 
-By itself, this isn't that useful. All we can do is take the audio data and play
-it back.
+    navigator.mediaDevices.enumerateDevices().then((devices) => {
+      devices = devices.filter((d) => d.kind === 'audioinput');
+    });
+
+You can then pass the deviceId that you wish to use when you call `getUserMedia`.
+
+    navigator.mediaDevices.getUserMedia({
+      audio: {
+        deviceId: devices[0].deviceId
+      }
+    });
+
+By itself, this isn't that useful. All we can do is take the audio data and play it back.
 
 ### Access the raw data from the microphone
 
@@ -165,7 +179,7 @@ destination.
   })
 
   var handleSuccess = function(stream) {
-    const options = {mimeType: 'video/webm;codecs=vp9'};
+    const options = {mimeType: 'audio/webm'};
     const recordedChunks = [];
     <strong>const mediaRecorder = new MediaRecorder(stream, options);
 
@@ -211,7 +225,8 @@ to only ask to access the microphone when first needed. Once the user has
 granted access they won't be asked again, however, if they reject access,
 you can't get access again to ask the user for permission.
 
-Warning: Asking for access to the microphone on page load will result in most of your users rejecting access to the mic.
+Warning: Asking for access to the microphone on page load will result in most of your users
+rejecting access to the mic.
 
 ### Use the permissions API to check if you already have access
 
