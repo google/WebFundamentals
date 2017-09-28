@@ -1,0 +1,24 @@
+{{!--
+    Note that this section omits the return type for:
+    + Constructors
+    + Methods with no explicit return type
+--}}
+{{#with symbol}}
+  {{~#if (needsSignature this)~}}
+    {{!-- CONSTRUCTOR PREFIX --}}
+    {{#is kind 'class'}}
+      {{#embed 'constructor-prefix'}}{{/embed}}
+    {{/is}}
+    {{name}}{{~formatParams params~}}
+    {{~#isnt kind 'class'~}}
+      {{~#if (returnTypes this)~}}
+        {{~translate 'returnTypesSeparator'~}}
+        {{describeType (returnTypes this)~}}
+      {{~/if~}}
+    {{~/isnt~}}
+  {{~else~}}
+    {{~#if type~}}
+      {{~describeType type.parsedType~}}
+    {{~/if~}}
+  {{~/if~}}
+{{/with}}
