@@ -1,9 +1,18 @@
 toc:
 - title: Overview
   path: /web/tools/workbox/
-- title: Workbox Documentation
-  status: external
-  path: https://workboxjs.org/
-- title: Workbox Git Repository
-  status: external
+- title: Get Started
+  section:
+  - title: WebPack
+    path: /web/tools/workbox/get-started/webpack
+  - title: Gulp
+    path: /web/tools/workbox/get-started/gulp
+  - title: NPM
+    path: /web/tools/workbox/get-started/npm-script
+- title: Reference Docs
+  section:
+  - title: "Overview"
+    path: /web/tools/workbox/reference-docs/latest/
+  - include: /web/tools/workbox/reference-docs/latest/_toc.yaml
+- title: Github
   path: https://github.com/GoogleChrome/workbox
