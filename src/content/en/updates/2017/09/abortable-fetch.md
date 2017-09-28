@@ -96,7 +96,7 @@ When you abort an async operation, the promise rejects with a `DOMException` nam
       if (err.name === 'AbortError') {
         console.log('Fetch aborted');
       } else {
-        console.log('Uh oh, an error!', err);
+        console.error('Uh oh, an error!', err);
       }
     });
 
@@ -174,7 +174,7 @@ fetches. Here's how you'd use `fetchStory`:
       console.log(chapters);
     });
 
-In this case, calling `controller.abort()` will either abort whichever fetches are in-progress.
+In this case, calling `controller.abort()` will abort whichever fetches are in-progress.
 
 ## The future
 
@@ -233,7 +233,7 @@ Yeah… it took a long time for this relatively simple API to come together. Her
 As you can see [the GitHub discussion is pretty long](https://github.com/whatwg/fetch/issues/27).
 There a lot of nuance in that thread (and some lack-of-nuance), but the key disagreement is one
 group wanted the `abort` method to exist on the object returned by `fetch()`, whereas the other
-wanted a separation between getting the response and effecting the response.
+wanted a separation between getting the response and affecting the response.
 
 These requirements are incompatible, so one group wasn't going to get what they wanted. If that's
 you, sorry! If it makes you feel better, I was also in that group. But seeing `AbortSignal` fit the
@@ -246,11 +246,10 @@ simple wrapper:
     function abortableFetch(request, opts) {
       const controller = new AbortController();
       const signal = controller.signal;
-      const fetchOpts = Object.assign({ signal }, opts);
 
       return {
         abort: () => controller.abort(),
-        ready: fetch(request, opts)
+        ready: fetch(request, { ...opts, signal })
       };
     }
 
@@ -266,10 +265,10 @@ code:
       // Start spinner, then:
       await someAction();
     }
-    catch cancel(reason) {
+    catch cancel (reason) {
       // Maybe do nothing?
     }
-    catch(err) {
+    catch (err) {
       // Show error message
     }
     finally {
@@ -283,9 +282,11 @@ you hear about cancelled actions, but most of the time you wouldn't need to.
 This got to stage 1 in TC39, but consensus wasn't achieved, and [the proposal was
 withdrawn](https://github.com/tc39/proposal-cancelable-promises).
 
-Rather than go through TC39 again and face potentially months or even years of further delay, we
-tackled the problem in the DOM, resulting in `AbortController`, and rejecting promises with
-`AbortError`.
+Our alternative proposal, `AbortController`, didn't require any new syntax, so it didn't make sense
+to spec it within TC39. Everything we needed from JavaScript was already there, so we defined the
+interfaces within the web platform, specifically [the DOM
+standard](https://dom.spec.whatwg.org/#aborting-ongoing-activities). Once we'd made that decision,
+the rest came together relatively quickly.
 
 ### Large spec change
 
