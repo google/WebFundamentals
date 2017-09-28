@@ -2,3 +2,9 @@ redirects:
 
 - from: /web/fundamentals/security/
   to: /web/fundamentals/
+
+- from: /web/fundamentals/security/encrypt-in-transit/
+  to: /web/fundamentals/security/encrypt-in-transit/why-https
+
+- from: /web/fundamentals/security/prevent-mixed-content/
+  to: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
