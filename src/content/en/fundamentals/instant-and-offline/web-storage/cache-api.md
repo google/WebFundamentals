@@ -163,6 +163,50 @@ If you want to retrieve *all* matching responses, you can use `cache.matchAll`.
 As a shortcut you can search over all caches at once by using `caches.match()` instead of calling
 `cache.match()` for each cache.
 
+## Searching
+
+The Cache API does not provide a way to search for requests or responses except for matching entries
+against a `Response` object. However, you can implement your own search using the features that are
+available.
+
+### Filtering
+
+One way is to iterate over all entries and filter down to the ones that you want. Let's say that you
+want to find all items that have URLs ending with '.png'.
+
+    async function findImages() {
+      // Get a list of all of the caches for this origin
+      const cacheNames = await caches.keys();
+      const result = [];
+
+      for (const name of cacheNames) {
+        // Open the cache
+        const cache = await caches.open(name);
+
+        // Get a list of entries. Each item will be a Request object
+        for (const request of await cache.keys()) {
+          // If the request URL matches, add the response to the result
+          if (request.url.endsWith('.png')) {
+            result.push(await cache.match(request));
+          }
+        }
+      }
+
+      return result;
+    }
+
+This way you can use any property of the `Request` and `Response` objects to filter the entries.
+Note that this will, of course, be slow if you search over large sets of data.
+
+### Creating an index
+
+The other way is to maintain a separate index of entries that can be searched, stored in IndexedDB.
+Since this is the kind of operation that IndexedDB was designed for it will have much better
+performance with large numbers of entries.
+
+If you store the URL of the `Request` alongside the searchable properties then you can easily
+retrieve the correct cache entry after doing the search.
+
 ## Adding to a cache
 
 There are three ways to add an item to a cache. All three methods return a `Promise`.
