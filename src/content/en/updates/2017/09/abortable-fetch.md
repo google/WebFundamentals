@@ -143,7 +143,7 @@ errors, an error is shown, *unless* it's an abort error:
     });
 
 Note: This example uses [async
-functions](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions).
+functions](/web/fundamentals/getting-started/primers/async-functions).
 
 **[Here's a demo](https://fetch-svg-abort.glitch.me/)** – At time of writing, the only browser which
 supports this is Firefox 57.
