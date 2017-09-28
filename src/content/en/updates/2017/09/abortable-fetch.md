@@ -100,9 +100,9 @@ When you abort an async operation, the promise rejects with a `DOMException` nam
       }
     });
 
-Generally you don't want to show an error message to the user if *they* aborted the operation – it
-isn't an "error" if you successfully do that the user wants, so use an if-statement such as the one
-above to handle abort errors specifically.
+You don't often want to show an error message if the user aborted the operation, as it isn't an
+"error" if you successfully do that the user asked. To avoid this, use an if-statement such as the
+one above to handle abort errors specifically.
 
 Here's an example that gives the user a button to load content, and a button to abort. If the fetch
 errors, an error is shown, *unless* it's an abort error:
