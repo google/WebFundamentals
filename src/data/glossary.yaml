@@ -6,9 +6,11 @@
 
 # EXAMPLE
 # - term: Progressive Web App (REQUIRED)
-#   description: A progressive web app is awesome. (STRONGLY ENCOURAGED)
-#   link: /url/to/more/details (OPTIONAL)
+#   description: A progressive web app is awesome. (STRONGLY ENCOURAGED) (HTML permitted)
 #   acronym: PWA (OPTIONAL)
+#   see: (OPTIONAL)
+#     title: The Title of the Article (REQUIRED)
+#     link: /web/fundamentals/woot (REQUIRED)
 #   blink_component: Blink>GetUserMedia>WebCam (OPTIONAL - not used yet)
 #   tags: (OPTIONAL - not used yet)
 #   - tagA (REQUIRED - must validate from commonTags.json)
@@ -18,16 +20,22 @@
 
 - term: Add to Home Screen
   acronym: A2HS
-  link: /web/fundamentals/app-install-banners/
+  see: 
+    title: Web App Install Banners 
+    link: /web/fundamentals/app-install-banners/
 
 - term: Custom Element
   description: "A Custom Element is a developer defined HTML tag. These elements are the foundation of Web Components and can be used to create any sort of UI."
-  link: /web/fundamentals/architecture/building-components/customelements
+  see: 
+    title: "Custom Elements v1: Reusable Web Components"
+    link: /web/fundamentals/architecture/building-components/customelements
 
 - term: Fast, Integrated, Reliable, Engaging
   acronym: FIRE
   description: "Progressive Web Apps (PWA's) should be fast, integrated, reliable, and engaging."
-  link: /web/progressive-web-apps/
+  see:
+    title: Progressive Web Apps
+    link: /web/progressive-web-apps/
 
 - term: First Contentful Paint
   acronym: FCP
@@ -50,17 +58,23 @@
 
 - term: Mutation Observer
   description: "Mutation Observers are a web platform API to detect and react to change to the DOM tree. If an element is observed by a MutationObserver, events like appending a new element or removing and existing one will trigger a function to execute."
-  link: /web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers
+  see:
+    title: Detect DOM changes with Mutation Observers
+    link: /web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers
 
 - term: Progressive Web App
   acronym: PWA
   description: "Progressive Web Apps are user experiences that have the reach of the web, and are fast, integrated, reliable and engaging."
-  link: /web/progressive-web-apps/
+  see:
+    title: Progressive Web Apps
+    link: /web/progressive-web-apps/
 
 - term: Push, Render, Pre-cache, Lazy-load
   acronym: PRPL
   description: "PRPL is a pattern for structuring and serving Progressive Web Apps (PWAs), with an emphasis on the performance of app delivery and launch."
-  link: /web/fundamentals/performance/prpl-pattern/
+  see:
+    title: The PRPL Pattern
+    link: /web/fundamentals/performance/prpl-pattern/
 
 - term: requestAnimationFrame
   acronym: rAF
@@ -71,7 +85,9 @@
 - term: Response, Animation, Idle, Load
   acronym: RAIL
   description: "RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in different ways."
-  link: /web/fundamentals/performance/rail
+  see:
+    title: Measure Performance with the RAIL Model
+    link: /web/fundamentals/performance/rail
 
 - term: Shadow DOM
   description: "Shadow DOM introduces scoped CSS and DOM to the web platform. It lets developers write encapsulated UI components which can be used in any application."
