@@ -240,7 +240,8 @@ you, sorry! If it makes you feel better, I was also in that group. But seeing `A
 requirements of other APIs makes it seem like the right choice. Also, allowing chained promises to
 become abortable would become very complicated, if not impossible.
 
-If you wanted to return an object that provides a response, but can also abort, you could create a simple wrapper:
+If you wanted to return an object that provides a response, but can also abort, you could create a
+simple wrapper:
 
     function abortableFetch(request, opts) {
       const controller = new AbortController();
