@@ -28,7 +28,7 @@ respective tabs. The tabs now function as headings.
 
 ## Reference {: #reference }
 
-- [Tabpanl pattern in ARIA Authoring Practices 1.1][tabs-pattern]
+- [Tabs pattern in ARIA Authoring Practices 1.1][tabs-pattern]
 
 [tabs-pattern]: https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel
 
