@@ -3,6 +3,9 @@ redirects:
 - from: /web/fundamentals/layouts/...
   to: /web/fundamentals/design-and-ux/responsive/
 
+- from: /web/fundamentals/input/form/...
+  to: /web/fundamentals/design-and-ux/input/forms/
+
 - from: /web/fundamentals/design-and-ux/media/images
   to: /web/fundamentals/design-and-ux/responsive/images
 
