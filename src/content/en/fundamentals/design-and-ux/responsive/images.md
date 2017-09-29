@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With responsive web design not only can our layouts change based on device characteristics, but images as well.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-09-29 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Images {: .page-title }
@@ -783,7 +783,7 @@ correct part.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media//image-sprite.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/image-sprite.html){: target="_blank" .external }
 
 Spriting has the advantage of reducing the number of downloads required to get
 multiple images, while still enabling caching.

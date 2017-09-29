@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ada dua tipe spanduk pemasangan aplikasi: spanduk pemasangan aplikasi web dan spanduk pemasangan aplikasi asli. Keduanya memberi Anda kemampuan untuk memungkinkan pengguna dengan cepat dan mulus menambahkan aplikasi asli atau web Anda ke layar beranda tanpa meninggalkan browser.
 
-{# wf_updated_on: 2017-09-27 #}
+{# wf_updated_on: 2017-09-29 #}
 {# wf_published_on: 2014-12-16 #}
 
 # Spanduk Pemasangan Aplikasi Web {: .page-title }
@@ -17,7 +17,7 @@ description: Ada dua tipe spanduk pemasangan aplikasi: spanduk pemasangan aplika
 </div>
 
 Ada dua tipe spanduk pemasangan aplikasi: spanduk pemasangan aplikasi **web** dan
-spanduk pemasangan aplikasi [**asli**](native-app-install). Keduanya memungkinkan pengguna dengan cepat dan mulus menambahkan aplikasi asli atau web Anda ke layar beranda tanpa meninggalkan browser.
+spanduk pemasangan aplikasi [**asli**](#native-app-install). Keduanya memungkinkan pengguna dengan cepat dan mulus menambahkan aplikasi asli atau web Anda ke layar beranda tanpa meninggalkan browser.
 
 Mudah saja menambahkan spanduk pemasangan aplikasi; sebagian besar tugas berat tersebut 
 ditangani Chrome. Anda perlu menyertakan file manifes aplikasi web di
