@@ -20,20 +20,21 @@ The new trial includes some API behavior updates that are consistent with the di
 forthcoming [WebVR 2.0 spec][0]:
 
 - Use of WebVR is restricted in cross-origin iframes. If you intend for embedded cross-origin
-  iframes to be able to use WebVR, add the attribute allow="vr" to the iframe tag, or use a
+  iframes to be able to use WebVR, add the attribute `allow="vr"` to the iframe tag, or use a
   [Feature-Policy][1] header ([spec discussion][2], [bug][3]).
-- Limit use of getFrameData() and submitFrame() to VRDisplay.requestAnimationFrame()
+- Limit use of `getFrameData()` and `submitFrame()` to `VRDisplay.requestAnimationFrame()`
   ([spec discussion][4], [bug][5]).
-- window.requestAnimationFrame() does not fire if the page is not visible, meaning it will not fire
-  on Android while WebVR is presenting ([spec discussion][6], [bug][7]).
+- `window.requestAnimationFrame()` does not fire if the page is not visible, meaning it will not
+  fire on Android while WebVR is presenting ([spec discussion][6], [bug][7]).
 - The synthetic click event at viewport (0, 0) has been removed (for both Cardboard and the Daydream
-  controller touchpad) ([bug][8]). The vrdisplayactivate event is now considered a user gesture, and
-  may be used to request presentation and begin media playback, without relying on the click event.
+  controller touchpad) ([bug][8]). The `vrdisplayactivate` event is now considered a user gesture,
+  and may be used to request presentation and begin media playback, without relying on the click
+  event.
   Code that was previously relying on click event handlers for input should be converted to check
   for gamepad button presses. ([Example implementation][9])
 - Chrome may exit presentation if the page takes greater than 5 seconds to display the first frame
-  ([code change][10]). It is recommended that the page display within 2 seconds and use a splash
-  screen if needed.
+  ([code change][10]). It is recommended that the page display within two seconds and that a splash
+  screen is used if needed.
 
 Your current WebVR Origin Trial tokens will not be recognized by Chrome 62. To participate in this
 new trial please [use the sign up form][11].
