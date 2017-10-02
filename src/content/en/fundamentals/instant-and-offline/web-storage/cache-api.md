@@ -36,8 +36,7 @@ The caches only store pairs of `Request` and `Response` objects, representing HT
 responses, respectively. However, the requests and responses can contain any kind of data that can
 be transferred over HTTP.
 
-Generally speaking, if you are using the API for generic storage, your `Request` objects will not
-need more data than just the URL to be used as a key.
+Create the `Request` object using a URL for the thing being stored:
 
     const request = new Request('/images/sample1.jpg');
 
@@ -76,8 +75,8 @@ you can use. Each returns a `Promise` that resolves with a value of a different 
     <tr>
       <td><code>blob</code></td>
       <td>Returns a <code>Blob</code>. If the <code>Response</code> was created with a
-      <code>Blob</code> then this new <code>Blob</code> will have the same type. Otherwise, the
-      <code>Content-Type</code> of the <code>Response</code> will be used.</td>
+      <code>Blob</code> then this new <code>Blob</code> has the same type. Otherwise, the
+      <code>Content-Type</code> of the <code>Response</code> is used.</td>
     </tr>
     <tr>
       <td><code>text</code></td>
@@ -115,8 +114,8 @@ For example
 ## Creating and opening a cache
 
 To open a cache, use the `caches.open(name)` method, passing the name of the cache as the single
-parameter. If the named cache does not exist it will be created. This method returns a `Promise`
-that will resolve with the `Cache` object.
+parameter. If the named cache does not exist it is created. This method returns a `Promise`
+that resolves with the `Cache` object.
 
     caches.open('my-cache).then((cache) => {
       // do something with cache...
@@ -128,12 +127,12 @@ To find an item in a cache, you can use the `match` method.
 
     cache.match(request).then((response) => console.log(request, response));
 
-If `request` is a string it will first be converted to a `Request` by calling `new
+If `request` is a string it is first be converted to a `Request` by calling `new
 Request(request)`. The function returns a `Promise` that resolves to a `Response` if a matching
 entry is found, or `undefined` otherwise.
 
 To determine if two
-`Requests` match, more than just the URL is used. Two requests will be considered different
+`Requests` match, more than just the URL is used. Two requests are considered different
 if they have different query strings, `Vary` headers and/or methods (`GET`, `POST`, `PUT`, etc.).
 
 You can ignore some or all of these things by passing an options object as a second parameter.
@@ -146,7 +145,7 @@ You can ignore some or all of these things by passing an options object as a sec
 
     cache.match(request, options).then(...);
 
-If more than one cached request matches then the one that was created first will be returned.
+If more than one cached request matches then the one that was created first is returned.
 
 If you want to retrieve *all* matching responses, you can use `cache.matchAll`.
 
@@ -166,13 +165,13 @@ As a shortcut you can search over all caches at once by using `caches.match()` i
 ## Searching
 
 The Cache API does not provide a way to search for requests or responses except for matching entries
-against a `Response` object. However, you can implement your own search using the features that are
-available.
+against a `Response` object. However, you can implement your own search using filtering or by
+creating an index.
 
 ### Filtering
 
-One way is to iterate over all entries and filter down to the ones that you want. Let's say that you
-want to find all items that have URLs ending with '.png'.
+One way to implement your own search is to iterate over all entries and filter down to the ones that
+you want. Let's say that you want to find all items that have URLs ending with '.png'.
 
     async function findImages() {
       // Get a list of all of the caches for this origin
@@ -183,7 +182,7 @@ want to find all items that have URLs ending with '.png'.
         // Open the cache
         const cache = await caches.open(name);
 
-        // Get a list of entries. Each item will be a Request object
+        // Get a list of entries. Each item is a Request object
         for (const request of await cache.keys()) {
           // If the request URL matches, add the response to the result
           if (request.url.endsWith('.png')) {
@@ -196,39 +195,43 @@ want to find all items that have URLs ending with '.png'.
     }
 
 This way you can use any property of the `Request` and `Response` objects to filter the entries.
-Note that this will, of course, be slow if you search over large sets of data.
+Note that this is slow if you search over large sets of data.
 
 ### Creating an index
 
-The other way is to maintain a separate index of entries that can be searched, stored in IndexedDB.
-Since this is the kind of operation that IndexedDB was designed for it will have much better
-performance with large numbers of entries.
+The other way to implement your own search is to maintain a separate index of entries that can be
+searched, stored in IndexedDB. Since this is the kind of operation that IndexedDB was designed for
+it has much better performance with large numbers of entries.
 
 If you store the URL of the `Request` alongside the searchable properties then you can easily
 retrieve the correct cache entry after doing the search.
 
 ## Adding to a cache
 
-There are three ways to add an item to a cache. All three methods return a `Promise`.
+There are three ways to add an item to a cache - `put`, `add` and `addAll`. All three methods return
+a `Promise`.
 
+### `cache.put`
 The first is to use `cache.put(request, response)`. `request` is either a `Request` object or a
-string - if it is a string, then `new Request(request)` will be used instead. `response` must be a
-`Response`. This pair will be stored in the cache.
+string - if it is a string, then `new Request(request)` is used instead. `response` must be a
+`Response`. This pair is stored in the cache.
 
     cache.put('/test.json', new Response('{"foo": "bar"}'));
 
-The second is to use `cache.add(request)`. `request` is treated the same is for `put`, but the
-`Response` that will be stored in the cache is the result of fetching the request from the network.
+### `cache.add`
+The second is to use `cache.add(request)`. `request` is treated the same as for `put`, but the
+`Response` that is stored in the cache is the result of fetching the request from the network.
 If the fetch fails, or if the status code of the response is not in the 200 range, then nothing is
-stored and the `Promise` rejects. Note that cross-origin requests not in CORS mode will have a
+stored and the `Promise` rejects. Note that cross-origin requests not in CORS mode have a
 status of 0, and therefore such requests can only be stored with `put`.
 
+### `cache.addAll`
 Thirdly, there is `cache.addAll(requests)`, where `requests` is an array of `Request`s or URL
-strings. This works similarly to calling `cache.add` for each individual request, except that if any
-single request fails to be cached, all of them will fail.
+strings. This works similarly to calling `cache.add` for each individual request, except that the
+`Promise` rejects if any single request is not cached.
 
-In each of these cases, a new entry will overwrite any matching existing entry, using the same rules
-for whether two requests match as described in the section on retrieving.
+In each of these cases, a new entry overwrites any matching existing entry. This uses the same
+matching rules described in the section on retrieving.
 
 ## Deleting an item
 

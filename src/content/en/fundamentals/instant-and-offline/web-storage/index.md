@@ -192,11 +192,11 @@ many browsers as possible and which offer asynchronous call models, to maximize
 interoperability with the UI. These criteria lead naturally to the following
 technology choices:
 
-* For making your application itself available offline, use the Cache API. This API is available in
-  any browser that supports the core Service Worker technology that is necessary for offline apps,
-  and is ideal for storing resources that are associated with a known URL
+* For offline storage, use the Cache API. This API is available in any browser that supports Service
+Worker technology necessary for creating offline apps. The Cache API is ideal for storing resources
+associated with a known URL.
 
-* For storing application state and user-generated content use IndexedDB. This enables users to work
+* For storing application state and user-generated content, use IndexedDB. This enables users to work
   offline in more browsers than just those that support the Cache API.
 
 * For global byte stream storage: use a Cloud Storage service.
