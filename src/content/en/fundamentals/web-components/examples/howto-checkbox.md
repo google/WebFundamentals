@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
 {# wf_updated_on: 2017-08-21 #}
-{# wf_published_on: 2017-04-06 #}
+{# wf_published_on: 2017-10-02 #}
 {# wf_blink_components: Blink>DOM #}
 
 # HowTo: Components – &lt;howto-checkbox&gt; {: .page-title }
