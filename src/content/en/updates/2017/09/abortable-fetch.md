@@ -154,7 +154,7 @@ A single signal can be used to abort many fetches at once:
 
     async function fetchStory({ signal }={}) {
       const storyResponse = await fetch('/story.json', { signal });
-      const data = await response.json();
+      const data = await storyResponse.json();
 
       const chapterFetches = data.chapterUrls.map(async url => {
         const response = await fetch(url, { signal });
