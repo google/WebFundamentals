@@ -36,6 +36,14 @@ The checkbox also supports a `disabled` state. If either the `disabled` property
 is set to true or the `disabled` attribute is applied, the checkbox sets
 `aria-disabled="true"` and set `tabindex="-1"`.
 
+Warning: Just because you _can_ build a custom element checkbox, doesn't
+necessarily mean that you _should_. As this example shows, you will need to add
+your own keyboard, labeling, and ARIA support. It's also important to note that
+the native `<form>` element will NOT submit values from a custom element. You
+will need to wire that up yourself using AJAX or a hidden `<input>` field. For
+these reasons it can often be preferrable to use the built-in `<input
+type="checkbox">` instead.
+
 ## Reference {: #reference }
 
 - [Checkbox Pattern in ARIA Authoring Practices 1.1][checkbox-pattern]
