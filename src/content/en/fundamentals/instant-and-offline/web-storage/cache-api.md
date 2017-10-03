@@ -2,8 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to use the Cache API to make your application data available offline
 
-{# wf_updated_on: 2017-09-28 #}
-{# wf_published_on: 2016-09-28 #}
+{# wf_updated_on: 2017-10-03 #}
+{# wf_published_on: 2017-10-03 #}
 {# wf_blink_components: Blink>Storage>CacheStorage #}
 
 # Using the Cache API {: .page-title }

@@ -196,8 +196,8 @@ technology choices:
 Worker technology necessary for creating offline apps. The Cache API is ideal for storing resources
 associated with a known URL.
 
-* For storing application state and user-generated content, use IndexedDB. This enables users to work
-  offline in more browsers than just those that support the Cache API.
+* For storing application state and user-generated content, use IndexedDB. This enables users to
+  work offline in more browsers than just those that support the Cache API.
 
 * For global byte stream storage: use a Cloud Storage service.
 

@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn best practices for syncing application state between IndexedDB an popular state management libraries.
 
-{# wf_updated_on: 2017-09-25 #}
+{# wf_updated_on: 2017-10-03 #}
 {# wf_published_on: 2017-06-08 #}
 {# wf_tags: javascript,indexeddb #}
 {# wf_blink_components: Blink>Storage>IndexedDB #}

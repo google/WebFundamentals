@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to store data locally for improved response time and offline support.
 
-{# wf_updated_on: 2017-09-25 #}
+{# wf_updated_on: 2017-10-03 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>Storage #}
 
