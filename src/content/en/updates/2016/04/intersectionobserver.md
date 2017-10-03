@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: IntersectionObservers let you know when an observed element enters or exits the browser’s viewport.
 
-{# wf_updated_on: 2016-04-20 #}
+{# wf_updated_on: 2017-10-03 #}
 {# wf_published_on: 2016-04-20 #}
 {# wf_tags: intersectionobserver,chrome51 #}
 {# wf_featured_image: /web/updates/images/generic/visibility.png #}
