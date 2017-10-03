@@ -20,13 +20,13 @@
 
 - term: Add to Home Screen
   acronym: A2HS
-  see: 
-    title: Web App Install Banners 
+  see:
+    title: Web App Install Banners
     link: /web/fundamentals/app-install-banners/
 
 - term: Custom Element
   description: "A Custom Element is a developer defined HTML tag. These elements are the foundation of Web Components and can be used to create any sort of UI."
-  see: 
+  see:
     title: "Custom Elements v1: Reusable Web Components"
     link: /web/fundamentals/architecture/building-components/customelements
 
@@ -56,6 +56,12 @@
   - title: Custom elements - lifecycles
     link: /web/fundamentals/architecture/building-components/customelements#reactions
 
+- term: Lighthouse
+  description: "Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, and more."
+  see:
+    title: Lighthouse
+    link: /web/tools/lighthouse/
+
 - term: Mutation Observer
   description: "Mutation Observers are a web platform API to detect and react to change to the DOM tree. If an element is observed by a MutationObserver, events like appending a new element or removing and existing one will trigger a function to execute."
   see:
@@ -68,6 +74,18 @@
   see:
     title: Progressive Web Apps
     link: /web/progressive-web-apps/
+
+- term: Promise
+  description: "An object that is used as a placeholder for the eventual results of a deferred (and possibly asynchronous) computation. JavaScript promises are an addition to ECMAscript 6 that provide a cleaner, more intuitive way to deal with the completion (or failure) of asynchronous tasks."
+  see:
+    title: JavaScript Promises
+    link: /web/fundamentals/primers/promises
+
+- term: Push Notifications
+  description: "Web push notifications make it easy to re-engage with users by showing relevant, timely, and contextual notifications, even when the browser is closed."
+  see:
+    title: Web Push Notifications
+    link: /web/fundamentals/push-notifications/
 
 - term: Push, Render, Pre-cache, Lazy-load
   acronym: PRPL
@@ -89,12 +107,31 @@
     title: Measure Performance with the RAIL Model
     link: /web/fundamentals/performance/rail
 
+- term: Responsive Design
+  description: "Responsive web design is an approach to web design aimed at making web pages visually appealing and performant on any form factor. In addition, it is important to understand that responsive web design tasks include offering the same content to a variety of devices for a single website."
+  see:
+    title: Responsive Web Design Basics
+    link: /web/fundamentals/design-and-ux/responsive/
+
+- term: Service Worker
+  description: "Service workers essentially act as proxy servers that sit between web applications, and the browser and network (when available). They are intended to (amongst other things) enable the creation of effective offline experiences, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They also allow access to push notifications and background sync APIs."
+  links:
+  - title: Service Worker API
+    link: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
+
 - term: Shadow DOM
   description: "Shadow DOM introduces scoped CSS and DOM to the web platform. It lets developers write encapsulated UI components which can be used in any application."
   link: /web/fundamentals/architecture/building-components/shadowdom
 
 - term: Single Page App
   acronym: SPA
+  description: "Snappy user-friendly apps that perform more like desktop apps. Typically, SPA content is rendered dynamically using JavaScript, rather than opening a new page. As a result, single-page applications typically load only data (e.g. in JSON or XML format) rather than pre-rendered HTML. This decreases the data transferred on the wire. Google's headline web apps—such as GMail, Inbox, Maps, Docs, Sheets, and so on—have been pioneers here."
+  links:
+  - title: Single-page application
+    link: https://en.wikipedia.org/wiki/Single-page_application
+
+- term: Splash Screen
+  description: "A graphic that is shown to users while an application is loading in the background, giving immediate feedback to the user while the application is launching."
 
 - term: Time To First Byte
   acronym: TTFB
@@ -104,6 +141,12 @@
 
 - term: Time To Interactive
   acronym: TTI
+
+- term: Web App Manifest
+  description: "A JSON-formatted file named manifest.json that is a centralized place to put metadata that controls how the web application appears to the user and how it can be launched. (Do not confuse this with a manifest file used by AppCache.) Some browsers, such as Chrome, use the web app manifest to enable 'add to homescreen'."
+  links:
+  - title: Web App Manifest spec
+    link: https://w3c.github.io/manifest/
 
 - term: Web Components
   description: "Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component standards, will work across modern browsers, and can be used with any JavaScript library or framework that works with HTML."
