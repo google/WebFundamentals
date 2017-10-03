@@ -2,8 +2,8 @@
 <html devsite>
 
 <head>
-  <meta name="project_path" value="/web/_project.yaml" />
-  <meta name="book_path" value="/web/_book.yaml" />
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
   <meta name="gtm_var" data-key="docType" data-value="reference">
   <title>Class: Router</title>
   <link href="jsdoc.css" rel="stylesheet">
@@ -150,12 +150,10 @@ workboxSW.router.registerRoute(&#x27;/about&#x27;, (args) &#x3D;&gt; {
                       </td>
                       <td>
                         <p class="details-table-types">(String, RegExp, or module:workbox-routing.matchCallback)</p>
-                        <p>
-                          <p>The capture for a route can be one of three types:</p>
-                        </p>
+                        <p>The capture for a route can be one of three types:</p>
                         <ol>
                           <li>An Express-style route, like <code>'/path/to/:anything'</code> for same-origin or <code>'https://cross-origin.com/path/to/:anything'</code> for cross-origin routes.</li>
-                          <li>A regular expression that will be tested against request URLs. For cross-origin routes, you must use a RegExp that matches the start of the full URL, like <code>new RegExp('https://cross-origin.com/')</code>.</li>
+                          <li>A regular expression that will be tested against request URLs. For cross-origin routes, you must use a RegExp that matches the start of the full URL, like <code>new RegExp('https://cross-origin\.com/')</code>.</li>
                           <li>A function which is passed the URL and <code>FetchEvent</code>, and should returns a truthy value if the route matches.</li>
                         </ol>
                       </td>
@@ -176,9 +174,7 @@ workboxSW.router.registerRoute(&#x27;/about&#x27;, (args) &#x3D;&gt; {
                       <td>
                         <p class="details-table-optional">Optional</p>
                         <p class="details-table-types">String</p>
-                        <p>
-                          <p>Only match requests that use this HTTP method.</p>
-                        </p>
+                        <p>Only match requests that use this HTTP method.</p>
                         <ul>
                           <li>Defaults to <code>'GET'</code>.</li>
                         </ul>
@@ -190,9 +186,7 @@ workboxSW.router.registerRoute(&#x27;/about&#x27;, (args) &#x3D;&gt; {
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code><a href="module-workbox-routing.Route.html">module:workbox-routing.Route</a></code>&nbsp;
-                    <p>The Route object that was registered.
-                    </p>
+                  <p><code><a href="module-workbox-routing.Route.html">module:workbox-routing.Route</a></code>&nbsp;The Route object that was registered.
                   </p>
                 </dd>
               </dl>

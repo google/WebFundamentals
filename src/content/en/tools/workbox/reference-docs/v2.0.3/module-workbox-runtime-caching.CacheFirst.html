@@ -2,8 +2,8 @@
 <html devsite>
 
 <head>
-  <meta name="project_path" value="/web/_project.yaml" />
-  <meta name="book_path" value="/web/_book.yaml" />
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
   <meta name="gtm_var" data-key="docType" data-value="reference">
   <title>Class: CacheFirst</title>
   <link href="jsdoc.css" rel="stylesheet">
@@ -52,6 +52,7 @@ router.registerRoute({route});</code></pre>
             <h2>Method</h2>
             <section>
               <h3 id="handle" class="symbol-name">handle</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> handle(input)&nbsp;returns&nbsp;Promise containing Response</p>
               <p>The handle method will be called by the
                 <a href="module-workbox-routing.Route.html">Route</a> class when a route matches a request.
@@ -78,9 +79,7 @@ router.registerRoute({route});</code></pre>
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Response</code>&nbsp;
-                    <p>The response, either from the cache, or if that isn't available, the request will be made on the the network and the result will be cached for future use.</p>
-                  </p>
+                  <p><code>Promise containing Response</code>&nbsp;The response, either from the cache, or if that isn't available, the request will be made on the the network and the result will be cached for future use.</p>
                 </dd>
               </dl>
             </section>

@@ -2,8 +2,8 @@
 <html devsite>
 
 <head>
-  <meta name="project_path" value="/web/_project.yaml" />
-  <meta name="book_path" value="/web/_book.yaml" />
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
   <meta name="gtm_var" data-key="docType" data-value="reference">
   <title>Class: RequestWrapper</title>
   <link href="jsdoc.css" rel="stylesheet">
@@ -55,6 +55,7 @@
             <h2>Methods</h2>
             <section>
               <h3 id="fetch" class="symbol-name">fetch</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> fetch(input)&nbsp;returns&nbsp;Promise containing Response</p>
               <p>Wraps <code>fetch()</code>, calls all <code>requestWillFetch</code> before making the network request, and calls any <code>fetchDidFail</code> callbacks from the registered plugins if the request fails.</p>
               <section>
@@ -79,9 +80,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Response</code>&nbsp;
-                    <p>The network response.</p>
-                  </p>
+                  <p><code>Promise containing Response</code>&nbsp;The network response.</p>
                 </dd>
               </dl>
               <section>
@@ -101,6 +100,7 @@
                 </div>
               </section>
               <h3 id="fetchAndCache" class="symbol-name">fetchAndCache</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> fetchAndCache(input)&nbsp;returns&nbsp;Promise containing Response</p>
               <p>Combines both fetching and caching using the previously configured options and calling the appropriate plugins.</p>
               <p>By default, responses with a status of <a href="https://fetch.spec.whatwg.org/#ok-status">2xx</a> will be considered valid and cacheable, but this could be overridden by configuring one or more plugins that implement the <code>cacheWillUpdate</code>                lifecycle callback.</p>
@@ -126,9 +126,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Response</code>&nbsp;
-                    <p>The network response.</p>
-                  </p>
+                  <p><code>Promise containing Response</code>&nbsp;The network response.</p>
                 </dd>
               </dl>
               <section>
@@ -148,15 +146,14 @@
                 </div>
               </section>
               <h3 id="getCache" class="symbol-name">getCache</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> getCache()&nbsp;returns&nbsp;Promise containing Cache</p>
               <p>Opens a cache and maintains a reference to that cache for future use.</p>
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Cache</code>&nbsp;
-                    <p>An open <code>Cache</code> instance based on the configured
-                      <code>cacheName</code>.</p>
-                  </p>
+                  <p><code>Promise containing Cache</code>&nbsp;An open <code>Cache</code> instance based on the configured
+                    <code>cacheName</code>.</p>
                 </dd>
               </dl>
               <section>
@@ -171,6 +168,7 @@
                 </div>
               </section>
               <h3 id="match" class="symbol-name">match</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> match(input)&nbsp;returns&nbsp;Promise containing Response</p>
               <p>Wraps <code>cache.match()</code>, using the previously configured cache name and match options.
               </p>
@@ -196,9 +194,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Response</code>&nbsp;
-                    <p>The cached response.</p>
-                  </p>
+                  <p><code>Promise containing Response</code>&nbsp;The cached response.</p>
                 </dd>
               </dl>
               <section>
@@ -281,9 +277,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing (Response or null)</code>&nbsp;
-                    <p>The response to be used as the effective cache match. This might be the same response as <code>cachedResponse</code>, if it was valid, a modified version of the response, or <code>null</code> if there's no valid match.
-                    </p>
+                  <p><code>Promise containing (Response or null)</code>&nbsp;The response to be used as the effective cache match. This might be the same response as <code>cachedResponse</code>, if it was valid, a modified version of the response, or <code>null</code>                    if there's no valid match.
                   </p>
                 </dd>
               </dl>
@@ -334,9 +328,7 @@ async function cachedResponseWillBeUsed({cachedResponse}) {
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Boolean</code>&nbsp;
-                    <p><code>true</code> if the response meets your criteria for being added to the appropriate cache, and <code>false</code> if it doesn't.</p>
-                  </p>
+                  <p><code>Promise containing Boolean</code>&nbsp;<code>true</code> if the response meets your criteria for being added to the appropriate cache, and <code>false</code> if it doesn't.</p>
                 </dd>
               </dl>
               <section>
@@ -415,9 +407,7 @@ async function cacheWillUpdate({response}) {
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Request</code>&nbsp;
-                    <p>The request that will be used against the network instead.
-                    </p>
+                  <p><code>Promise containing Request</code>&nbsp;The request that will be used against the network instead.
                   </p>
                 </dd>
               </dl>

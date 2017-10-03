@@ -2,8 +2,8 @@
 <html devsite>
 
 <head>
-  <meta name="project_path" value="/web/_project.yaml" />
-  <meta name="book_path" value="/web/_book.yaml" />
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
   <meta name="gtm_var" data-key="docType" data-value="reference">
   <title>Class: CacheExpiration</title>
   <link href="jsdoc.css" rel="stylesheet">
@@ -65,6 +65,7 @@
             <h2>Methods</h2>
             <section>
               <h3 id="expireEntries" class="symbol-name">expireEntries</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> expireEntries(input)&nbsp;returns&nbsp;Promise</p>
               <p>Expires entries based on the the maximum age and the maximum number of entries defined in the constructor.</p>
               <p>To avoid concurrency issues, calls to this method when it's already running will result in the call begin re-run after the current execution has finished.
@@ -91,9 +92,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise</code>&nbsp;
-                    <p>Resolves when the cache expiration has been performed. If the function is currently executing the Promise will resolve immediately.</p>
-                  </p>
+                  <p><code>Promise</code>&nbsp;Resolves when the cache expiration has been performed. If the function is currently executing the Promise will resolve immediately.</p>
                 </dd>
               </dl>
               <section>
@@ -137,10 +136,8 @@ cacheExpiration.expireEntries({
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>boolean</code>&nbsp;
-                    <p>Either <code>true</code> if the response is fresh, or
-                      <code>false</code> if the <code>Response</code> is older than <code>maxAgeSeconds</code> and should no longer be used.</p>
-                  </p>
+                  <p><code>boolean</code>&nbsp;Either <code>true</code> if the response is fresh, or
+                    <code>false</code> if the <code>Response</code> is older than <code>maxAgeSeconds</code> and should no longer be used.</p>
                 </dd>
               </dl>
               <section>
@@ -154,6 +151,7 @@ cacheExpiration.expireEntries({
                 </div>
               </section>
               <h3 id="updateTimestamp" class="symbol-name">updateTimestamp</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> updateTimestamp(input)</p>
               <p>Updates the timestamp stored in IndexedDB for <code>url</code> to be equal to <code>now</code>.</p>
               <p>When using this class directly (i.e. not via <code>CacheExpirationPlugin</code>), it's your responsibility to call <code>updateTimestap()</code> each time an entry is put into the cache. Otherwise, the <code>expireEntries()</code> method

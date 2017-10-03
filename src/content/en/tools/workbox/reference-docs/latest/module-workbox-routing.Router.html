@@ -2,8 +2,8 @@
 <html devsite>
 
 <head>
-  <meta name="project_path" value="/web/_project.yaml" />
-  <meta name="book_path" value="/web/_book.yaml" />
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
   <meta name="gtm_var" data-key="docType" data-value="reference">
   <title>Class: Router</title>
   <link href="jsdoc.css" rel="stylesheet">
@@ -73,9 +73,7 @@ router.setDefaultHandler({
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>boolean</code>&nbsp;
-                    <p>Returns <code>true</code> if this is the first time the method is called and the listener was registered. Returns <code>false</code> if called again, as the listener will only be registered once.</p>
-                  </p>
+                  <p><code>boolean</code>&nbsp;Returns <code>true</code> if this is the first time the method is called and the listener was registered. Returns <code>false</code> if called again, as the listener will only be registered once.</p>
                 </dd>
               </dl>
               <section>
@@ -118,9 +116,7 @@ router.addFetchListener();</code></pre>
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>(Promise containing Response or undefined)</code>&nbsp;
-                    <p>Returns a promise for a response, taking the registered routes into account. If there was no matching route and there's no <code>defaultHandler</code>, then returns undefined.</p>
-                  </p>
+                  <p><code>(Promise containing Response or undefined)</code>&nbsp;Returns a promise for a response, taking the registered routes into account. If there was no matching route and there's no <code>defaultHandler</code>, then returns undefined.</p>
                 </dd>
               </dl>
               <section>

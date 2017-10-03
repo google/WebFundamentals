@@ -2,8 +2,8 @@
 <html devsite>
 
 <head>
-  <meta name="project_path" value="/web/_project.yaml" />
-  <meta name="book_path" value="/web/_book.yaml" />
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
   <meta name="gtm_var" data-key="docType" data-value="reference">
   <title>Module: workbox-precaching</title>
   <link href="jsdoc.css" rel="stylesheet">
@@ -17,9 +17,7 @@
           <header class="page-header">
             <h1><small></small><span class="symbol-name">workbox-precaching</span></h1>
             <div class="symbol-detail-labels"><span class="label label-kind"><small>module</small></span></div>
-            <p>
-              <h1 id="workbox-precaching">workbox-precaching</h1>
-            </p>
+            <h1>workbox-precaching</h1>
             <p>The precaching library intelligently caches and updates files during the install step of your service worker.</p>
             <p>When given a list of URL's to precache, this module will go through each URL and check if the URL is already cached and, if it is, compare the hash to see if revision hash has changed.</p>
             <p>If the revision is old or the entry isn't cached, this library will make a request for the asset and cache it, ensuring the the browsers HTTP cache is skipped by using <code>Request.cache = 'reload'</code> or adding a cache busting search

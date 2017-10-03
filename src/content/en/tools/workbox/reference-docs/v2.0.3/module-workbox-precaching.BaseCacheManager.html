@@ -2,8 +2,8 @@
 <html devsite>
 
 <head>
-  <meta name="project_path" value="/web/_project.yaml" />
-  <meta name="book_path" value="/web/_book.yaml" />
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
   <meta name="gtm_var" data-key="docType" data-value="reference">
   <title>Class: BaseCacheManager</title>
   <link href="jsdoc.css" rel="stylesheet">
@@ -54,15 +54,14 @@
             <h2>Methods</h2>
             <section>
               <h3 id="cleanup" class="symbol-name">cleanup</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> cleanup()&nbsp;returns&nbsp;Promise</p>
               <p>Compare the URL's and determines which assets are no longer required in the cache.</p>
               <p>This should be called in the service worker activate event.</p>
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise</code>&nbsp;
-                    <p>Promise that resolves once the cache entries have been cleaned.
-                    </p>
+                  <p><code>Promise</code>&nbsp;Promise that resolves once the cache entries have been cleaned.
                   </p>
                 </dd>
               </dl>
@@ -72,9 +71,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Array of String</code>&nbsp;
-                    <p>An array of URLs that will be cached.</p>
-                  </p>
+                  <p><code>Array of String</code>&nbsp;An array of URLs that will be cached.</p>
                 </dd>
               </dl>
               <h3 id="getCacheName" class="symbol-name">getCacheName</h3>
@@ -83,20 +80,17 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>String</code>&nbsp;
-                    <p>The cache name used by this manager.</p>
-                  </p>
+                  <p><code>String</code>&nbsp;The cache name used by this manager.</p>
                 </dd>
               </dl>
               <h3 id="install" class="symbol-name">install</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> install()&nbsp;returns&nbsp;Promise containing Array of Object</p>
               <p>This method will go through each asset added to the cache list and fetch and update the cache for assets which have a new revision hash.</p>
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Array of Object</code>&nbsp;
-                    <p>The promise resolves when all the desired assets are cached and up -to-date.</p>
-                  </p>
+                  <p><code>Promise containing Array of Object</code>&nbsp;The promise resolves when all the desired assets are cached and up -to-date.</p>
                 </dd>
               </dl>
             </section>
