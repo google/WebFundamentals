@@ -118,10 +118,13 @@
   links:
   - title: Service Worker API
     link: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
+<<<<<<< HEAD
   - title: Service Workers - an Introduction
     link: https://developers.google.com/web/fundamentals/primers/service-workers/
   - title: Introduction to Service Worker
     link: https://developers.google.com/web/ilt/pwa/introduction-to-service-worker
+=======
+>>>>>>> 9713427b841044d9ab19cb361de3a14398b2a91e
 
 - term: Shadow DOM
   description: "Shadow DOM introduces scoped CSS and DOM to the web platform. It lets developers write encapsulated UI components which can be used in any application."
@@ -129,7 +132,11 @@
 
 - term: Single Page App
   acronym: SPA
+<<<<<<< HEAD
   description: "User-friendly apps that perform more like desktop apps. Typically, SPA content is rendered dynamically using JavaScript, rather than opening a new page. As a result, single-page applications typically load only data (e.g. in JSON or XML format) rather than pre-rendered HTML. This decreases the data transferred on the wire."
+=======
+  description: "Snappy user-friendly apps that perform more like desktop apps. Typically, SPA content is rendered dynamically using JavaScript, rather than opening a new page. As a result, single-page applications typically load only data (e.g. in JSON or XML format) rather than pre-rendered HTML. This decreases the data transferred on the wire. Google's headline web apps—such as GMail, Inbox, Maps, Docs, Sheets, and so on—have been pioneers here."
+>>>>>>> 9713427b841044d9ab19cb361de3a14398b2a91e
   links:
   - title: Single-page application
     link: https://en.wikipedia.org/wiki/Single-page_application
@@ -148,9 +155,12 @@
 
 - term: Web App Manifest
   description: "A JSON-formatted file named manifest.json that is a centralized place to put metadata that controls how the web application appears to the user and how it can be launched. (Do not confuse this with a manifest file used by AppCache.) Some browsers, such as Chrome, use the web app manifest to enable 'add to homescreen'."
+<<<<<<< HEAD
   see:
     title: The Web App Manifest
     link: https://developers.google.com/web/fundamentals/web-app-manifest/
+=======
+>>>>>>> 9713427b841044d9ab19cb361de3a14398b2a91e
   links:
   - title: Web App Manifest spec
     link: https://w3c.github.io/manifest/
