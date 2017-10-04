@@ -21,8 +21,8 @@
 - term: Accelerated Mobile pages
   description: "Accelerated Mobile Pages are web pages that load very quickly. AMP pages are built with three core components: AMP HTML, AMP JS, and the AMP Cache. AMP HTML is HTML with some restrictions for reliable performance. AMP JS is a library that ensures the fast rendering of AMP HTML pages. The AMP Cache is a proxy-based content delivery network used to serve cached AMP HTML pages."
   acronym: AMP
-  links:
-  - title: Overview on ampproject.org
+  see:
+    title: The AMP Project
     link: https://www.ampproject.org/learn/overview/
 
 - term: Add to Home Screen
@@ -41,8 +41,8 @@
 - term: Content Delivery Network
   description: "A network of geographically distributed servers that cooperate to satisfy requests for content. CDNs optimize content delivery by distributing copies of files (such as videos, images, HTML, CSS and JavaScript) to multiple servers. This reduces latency by placing the content closer to the requestor. For example, if a user in India requests a web page from a Brazilian website, the request could be rerouted to deliver assets served from a local CDN server in Mumbai."
   acronym: CDN
-  links:
-  - title: Content deliver network
+  see:
+    title: Content deliver network on Wikipedia
     link: https://en.wikipedia.org/wiki/Content_delivery_network
 
 - term: Custom Element
@@ -60,6 +60,9 @@
 
 - term: Fetch API
   description: "The Fetch API is a promise-based JavaScript interface for requesting resources and reading responses. It provides a global fetch() method that gives an easy, logical way to fetch resources asynchronously across the network. Fetch is a successor to the older XMLHttpRequest."
+  see:
+    title: Working the with Fetch API
+    link: /web/ilt/pwa/working-with-the-fetch-api
   links:
   - title: Using Fetch
     link: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
@@ -73,27 +76,27 @@
 - term: First, Last, Invert, Play
   acronym: FLIP
   description: "FLIP is a technique to set up high-performance animations using CSS transforms. To avoid janking animations, start and end position are evaluated during the setup so that the animation doesn't have to do any expensive calculations."
-  links:
-  - title: FLIP your animations
+  see:
+    title: FLIP your animations
     link: https://aerotwist.com/blog/flip-your-animations/
 
 - term: Flexbox
   description: "The Flexible Box Layout Module (Flexbox) is an API that provides tools to make web content responsive. Flexbox provides an efficient way to lay out, align, and distribute space among items in a container, even when their size is unknown and/or dynamic. The API allows the rapid creation of complex, flexible layouts, and features that have historically proved difficult with CSS."
-  links:
-  - title: Flexbox
+  see:
+    title: Flexbox on MDN
     link: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
 
 - term: Hypertext Transfer Protocol Secure
   description: "HTTPS is a protocol in which the connection between the server and client is encrypted, helping to protect users' information and prevent tampering. APIs such as the Service Worker, Google Maps API, and File API must be served over HTTPS. HTTPS is implemented using the Transport Layer Security (TLS) protocol. Although TLS supersedes Secure Sockets Layer (SSL), it is often referred to as SSL."
   acronym: HTTPS
-  links:
-  - title: HTTPS
+  see:
+    title: HTTPS on Wikipedia
     link: https://en.wikipedia.org/wiki/HTTPS
 
 - term: Lifecycle Callback
   description: "Every Custom Element has a set of built-in lifecycle callbacks, or \"reactions\" that are called when the element is added/removed from the page, or has an attribute mutated."
-  links:
-  - title: Custom elements - lifecycles
+  see:
+    title: Custom elements - lifecycles
     link: /web/fundamentals/architecture/building-components/customelements#reactions
 
 - term: Lighthouse
@@ -155,23 +158,24 @@
 
 - term: Service Worker
   description: "Service workers essentially act as proxy servers that sit between web applications, and the browser and network (when available). They are intended to (amongst other things) enable the creation of effective offline experiences, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They also allow access to push notifications and background sync APIs."
+  see:
+    title: Introduction to Service Workers
+    link: /web/fundamentals/primers/service-workers/
   links:
   - title: Service Worker API
     link: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
-  - title: Service Workers - an Introduction
-    link: https://developers.google.com/web/fundamentals/primers/service-workers/
-  - title: Introduction to Service Worker
-    link: https://developers.google.com/web/ilt/pwa/introduction-to-service-worker
 
 - term: Shadow DOM
   description: "Shadow DOM introduces scoped CSS and DOM to the web platform. It lets developers write encapsulated UI components which can be used in any application."
-  link: /web/fundamentals/architecture/building-components/shadowdom
+  see:
+    title: "Shadow DOM v1: Self-Contained Web Components"
+    link: /web/fundamentals/architecture/building-components/shadowdom
 
 - term: Single Page App
   acronym: SPA
   description: "User-friendly apps that perform more like desktop apps. Typically, SPA content is rendered dynamically using JavaScript, rather than opening a new page. As a result, single-page applications typically load only data (e.g. in JSON or XML format) rather than pre-rendered HTML. This decreases the data transferred on the wire."
   links:
-  - title: Single-page application
+  - title: Single-page application on Wikipedia
     link: https://en.wikipedia.org/wiki/Single-page_application
 
 - term: Splash Screen
@@ -190,13 +194,16 @@
   description: "A JSON-formatted file named manifest.json that is a centralized place to put metadata that controls how the web application appears to the user and how it can be launched. (Do not confuse this with a manifest file used by AppCache.) Some browsers, such as Chrome, use the web app manifest to enable 'add to homescreen'."
   see:
     title: The Web App Manifest
-    link: https://developers.google.com/web/fundamentals/web-app-manifest/
+    link: /web/fundamentals/web-app-manifest/
   links:
   - title: Web App Manifest spec
     link: https://w3c.github.io/manifest/
 
 - term: Web Components
   description: "Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component standards, will work across modern browsers, and can be used with any JavaScript library or framework that works with HTML."
+  see:
+    title: Building Web Components
+    link: /web/fundamentals/web-components/
   links:
   - title: Introduction on webcomponents.org
     link: https://www.webcomponents.org/introduction
