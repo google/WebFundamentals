@@ -14,7 +14,7 @@ que quieres auditar, Lighthouse ejecuta una serie de pruebas contra la página, 
 genera un informe sobre el rendimiento de la página. A partir de aquí, puedes usar
 las pruebas desaprobadas como indicadores de lo que puedes hacer para mejorar tu app.
 
-Note: Lighthouse actualmente tiene un gran enfoque sobre las funciones de las Progressive Web Apps, como Add to homescreen y soporte sin conexión. Sin embargo, el objetivo general del proyecto es ofrecer una auditoría de extremo a extremo de todos los aspectos de la calidad de la app web.
+Nota: Lighthouse actualmente tiene un gran enfoque sobre las funciones de las Progressive Web Apps, como `Add to homescreen` y soporte sin conexión. Sin embargo, el objetivo general del proyecto es ofrecer una auditoría de extremo a extremo de todos los aspectos de la calidad de la app web.
 
 ## Primeros pasos
 
