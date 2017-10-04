@@ -9,6 +9,8 @@ toc:
     path: /web/tools/workbox/get-started/gulp
   - title: NPM
     path: /web/tools/workbox/get-started/npm-script
+- title: Examples
+  path: /web/tools/workbox/examples
 - title: Reference Docs
   section:
   - title: "Overview"
