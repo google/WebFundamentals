@@ -110,6 +110,12 @@ const buildJSDocs = (srcCodePath, docOutputPath, jsdocConfPath) => {
       }
     });
   })
+  .then((docOutputPath) => {
+    // jsdoc-baseline copies over these files for it's own template
+    // but we don't use them for devsite - so remove these files.
+    fse.removeSync(path.join(docOutputPath, 'css'));
+    fse.removeSync(path.join(docOutputPath, 'scripts'));
+  })
   .catch(() => {
     // If we error'd, make sure we didn't create a directory that will stop
     // future doc builds.
