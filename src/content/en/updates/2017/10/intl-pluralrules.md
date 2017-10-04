@@ -43,6 +43,8 @@ formatter on top of it:
 
 ```js
 const suffixes = new Map([
+	// Note: in real-world scenarios, you wouldn’t hardcode the plurals
+	// like this; they’d be part of your translation files.
 	['one',   'cat'],
 	['other', 'cats'],
 ]);
