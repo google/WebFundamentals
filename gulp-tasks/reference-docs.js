@@ -59,11 +59,19 @@ const buildJSDocs = (srcCodePath, docOutputPath, jsdocConfPath) => {
     return;
   }
 
-  const jsdocConfig = require(jsdocConfPath);
+  const contentPath = path.join(__dirname, '..', 'src', 'content', 'en');
+  const templateBasePath = path.join(
+    path.posix.sep,
+    'web',
+    path.relative(contentPath, docOutputPath)
+  );
+  console.log(`\n\n    Using JSDoc basepath=${templateBasePath}.`);
+
+  const jsdocConfigContents = fse.readFileSync(jsdocConfPath);
+  const jsdocConfig = JSON.parse(jsdocConfigContents);
   if (!jsdocConfig.webFundamentals) {
     console.warn(`In your JSDoc config file you MUST provide a 'webFundamentals' property with:`);
     console.warn(`    projectRoot`);
-    console.warn(`    basepath`);
     console.warn(`    productName`);
     return;
   }
@@ -76,7 +84,7 @@ const buildJSDocs = (srcCodePath, docOutputPath, jsdocConfPath) => {
     '-d', docOutputPath,
     '--query', [
       `projectRoot=${jsdocConfPath.projectRoot}`,
-      `basepath=${jsdocConfPath.basepath}`,
+      `basepath=${templateBasePath}`,
       `productName=${jsdocConfPath.productName}`,
     ].join('&'),
   ];
@@ -113,7 +121,7 @@ const buildJSDocs = (srcCodePath, docOutputPath, jsdocConfPath) => {
   });
 };
 
-const generateRefDocs = (projectName, gitUrl, docPath, tag, jsdocConfPath) => {
+const generateRefDocs = (projectName, gitUrl, docPath, tag, jsdocConfPath, isLatest) => {
   // 1. Check if current tag exists, if so return
   const outputPath = path.join(docPath, tag);
   if (fse.pathExistsSync(outputPath)) {
@@ -129,27 +137,17 @@ const generateRefDocs = (projectName, gitUrl, docPath, tag, jsdocConfPath) => {
     return buildJSDocs(tmpSrCodePath, outputPath, jsdocConfPath);
   })
   .then(() => {
+    if (isLatest) {
+      const outputPath = path.join(docPath, 'latest');
+      return buildJSDocs(tmpSrCodePath, outputPath, jsdocConfPath);
+    }
+  })
+  .then(() => {
     fse.removeSync(tmpDirectory);
   }, (err) => {
     fse.removeSync(tmpDirectory);
     throw err;
   });
-};
-
-const copyLatestTag = (localPath, latestGitTags) => {
-  if (latestGitTags.length === 0) {
-    return;
-  }
-
-  // Move latest valid to /latest
-  const latestPath = path.join(localPath, 'latest');
-  let latestValidDocs = path.join(localPath, latestGitTags[0]);
-  if (fse.pathExistsSync(latestValidDocs)) {
-    fse.copySync(latestValidDocs, latestPath);
-  } else {
-    console.warn(`Unable to create latest docs for latest tagged release.`);
-    console.warn(`This is most likely due to a failed doc build.`);
-  }
 };
 
 const buildReferenceDocs = (projectName, gitUrl, localPath, jsdocConfPath) => {
@@ -158,11 +156,17 @@ const buildReferenceDocs = (projectName, gitUrl, localPath, jsdocConfPath) => {
     return latestGitTags.reduce(
       (promiseChain, tag) => {
         return promiseChain.then(() => {
-          return generateRefDocs(projectName, gitUrl, localPath, tag, jsdocConfPath);
+          return generateRefDocs(
+            projectName,
+            gitUrl,
+            localPath,
+            tag,
+            jsdocConfPath,
+            tag === latestGitTags[0],
+          );
         });
       }, Promise.resolve()
-    )
-    .then(() => copyLatestTag(localPath, latestGitTags));
+    );
   });
 };
 
