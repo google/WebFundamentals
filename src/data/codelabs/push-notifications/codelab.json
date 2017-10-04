@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-05-16T20:50:03Z",
+  "updated": "2017-09-26T20:57:50Z",
   "id": "push-notifications",
   "duration": 0,
   "title": "Adding Push Notifications to a Web App",
@@ -27,6 +27,6 @@
     "pwa-roadshow",
     "web"
   ],
-  "feedback": "https://github.com/googlechrome/push-notifications/issues",
+  "feedback": "https://github.com/GoogleChromeLabs/web-push-codelab/issues",
   "url": "push-notifications"
 }

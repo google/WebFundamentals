@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab you'll how to add push notifications to your web app.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-24T20:50:03Z #}
+{# wf_updated_on: 2017-09-26T20:57:50Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -138,7 +138,7 @@ Check the console in Chrome DevTools for `Service Worker is registered`, like so
 
 ### Get Application Server Keys
 
-To work with this code lab you need to generate some application server keys which we can do with this companion site:  [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)
+To work with this code lab you need to generate some application server keys which we can do with this companion site:  [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)
 
 Here you can generate a Public and Private key pair.
 
@@ -153,7 +153,7 @@ const applicationServerPublicKey = '<Your Public Key>';
 Note: You should never put your private key in your web app!
 
 
-## Initialize State
+## Initialise State
 
 
 
@@ -529,7 +529,7 @@ We've seen that our web app is capable of showing a notification using DevTools 
 
 Normally the process for this would be sending a subscription from a web page to a backend and the backend would then trigger a push message by making an API call to the endpoint in the subscription.
 
-This is out of scope for this codelab, but you can use the companion site ( [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) for this codelab to trigger an actual push message. Copy and paste the subscription at the bottom of your page:
+This is out of scope for this codelab, but you can use the companion site ( [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)) for this codelab to trigger an actual push message. Copy and paste the subscription at the bottom of your page:
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
@@ -548,6 +548,8 @@ You should then receive a push message and the text you included will be printed
 This should give you a chance to test out sending and receiving data and manipulate notifications as a result.
 
 The companion app is actually just a node server that is using the  [web-push library](https://github.com/web-push-libs/web-push) to send messages. It's worthwhile checking out the  [web-push-libs org on Github](https://github.com/web-push-libs/) to see what libraries are available to send push messages for you (this handles a lot of the nitty gritty details to trigger push messages).
+
+You can see all the  [code for the companion site here](https://glitch.com/edit/#!/web-push-codelab).
 
 
 ## Unsubscribe the user
@@ -666,4 +668,4 @@ If you are looking to deploy push on your site, you may be interested in adding 
 
 ## Found an issue, or have feedback? {: .hide-from-toc }
 Help us make our code labs better by submitting an 
-[issue](https://github.com/googlechrome/push-notifications/issues) today. And thanks!
+[issue](https://github.com/GoogleChromeLabs/web-push-codelab/issues) today. And thanks!
