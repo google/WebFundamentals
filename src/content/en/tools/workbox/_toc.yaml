@@ -16,5 +16,7 @@ toc:
   - title: "Overview"
     path: /web/tools/workbox/reference-docs/latest/
   - include: /web/tools/workbox/reference-docs/latest/_toc.yaml
+- title: Community
+  path: /web/tools/workbox/community
 - title: Github
   path: https://github.com/GoogleChrome/workbox

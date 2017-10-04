@@ -1,11 +1,11 @@
----
-layout: page
-title: Community & Support
-styles:
- - /styles/community.css
----
+project_path: /web/tools/_project.yaml
+book_path: /web/tools/_book.yaml
+description: Workbox Examples.
 
-# Community & Support
+{# wf_published_on: 2015-01-01 #}
+{# wf_updated_on: 2017-05-16 #}
+
+# Community {: .page-title }
 
 There are a few ways you learn more about plans for Workbox, help others,
 and get support.
@@ -42,4 +42,4 @@ To find out when the next release will be going out or
 to learn when the team is scheduled to chat
 on Slack, check out the calendar below:
 
-<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=gsmnmr45i797q67dfhp08t48no%40group.calendar.google.com&amp;color=%23333333&amp;ctz=America%2FLos_Angeles" frameborder="0" scrolling="no" class="community__iframe"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=gsmnmr45i797q67dfhp08t48no%40group.calendar.google.com&amp;color=%23333333&amp;ctz=America%2FLos_Angeles" frameborder="0" scrolling="no" style="width: 100%; min-height: 350px;"></iframe>
