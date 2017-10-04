@@ -1,9 +1,11 @@
----
-layout: page
-title: Overview
----
+project_path: /web/tools/_project.yaml
+book_path: /web/tools/_book.yaml
+description: Workbox Examples.
 
-# Overview
+{# wf_published_on: 2017-10-04 #}
+{# wf_updated_on: 2017-10-04 #}
+
+# Overview {: .page-title }
 
 Workbox is a collection of libraries and build tools that make it easy to
 store your website's resources locally, on your users' devices. Consider

@@ -2,8 +2,8 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Workbox Examples.
 
-{# wf_published_on: 2015-01-01 #}
-{# wf_updated_on: 2017-05-16 #}
+{# wf_published_on: 2017-10-04 #}
+{# wf_updated_on: 2017-10-04 #}
 
 # Community {: .page-title }
 

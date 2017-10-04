@@ -5,7 +5,7 @@ description: How to use Workbox with NPM Scripts.
 {# wf_updated_on: 2017-10-14 #}
 {# wf_published_on: 2017-10-14 #}
 
-# NPM
+# NPM {: .page-title }
 
 If you already have a build process based on npm scripts you can use
 `workbox-cli` to generate a service worker.

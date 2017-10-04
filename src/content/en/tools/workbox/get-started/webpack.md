@@ -5,7 +5,7 @@ description: How to use Workbox with WebPack.
 {# wf_updated_on: 2017-10-14 #}
 {# wf_published_on: 2017-10-14 #}
 
-# WebPack
+# webpack {: .page-title }
 
 The following example uses [workbox-webpack-plugin](https://www.npmjs.com/package/workbox-webpack-plugin)
 to create a service worker in your webpack build process to precache resources. Every run of the build will

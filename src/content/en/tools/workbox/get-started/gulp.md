@@ -5,7 +5,7 @@ description: How to use Workbox with Gulp.
 {# wf_updated_on: 2017-10-14 #}
 {# wf_published_on: 2017-10-14 #}
 
-# Gulp
+# Gulp {: .page-title }
 
 Use gulp and `workbox-build` to build a precaching service worker. Simply
 install the module then cut and paste the code sample.
