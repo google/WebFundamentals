@@ -5,7 +5,7 @@ const fse = require('fs-extra');
 const path = require('path');
 const os = require('os');
 const spawn = require('child_process').spawn;
-const replace = require('replace-in-file');
+const glob = require('glob');
 
 const PREVIOUS_RELEASES = 2;
 
@@ -121,10 +121,14 @@ const buildJSDocs = (srcCodePath, docOutputPath, jsdocConfPath) => {
   })
   .then((docOutputPath) => {
     // Web Fundamentals linting errors on developers.google.com
-    replace.sync({
-      files: path.join(docOutputPath, '**', '*'),
-      from: 'https://developers.google.com/',
-      to: '/',
+    const allFiles = glob.sync(path.join(docOutputPath, '**', '*'), {
+      absolute: true,
+    });
+    allFiles.forEach((filePath) => {
+      const fileContents = fse.readFileSync(filePath);
+      const cleanContents = fileContents
+        .split('https://developers.google.com/').join('/');
+      fse.writeFileSync(filePath, cleanContents);
     });
 
     return docOutputPath;

@@ -16,8 +16,7 @@
   "homepage": "https://github.com/google/WebFundamentals",
   "devDependencies": {
     "gulp-remark": "^3.0.0",
-    "jsdoc-baseline": "https://github.com/hegemonic/baseline/tarball/master",
-    "replace-in-file": "^3.0.0-beta.2"
+    "jsdoc-baseline": "https://github.com/hegemonic/baseline/tarball/master"
   },
   "private": true,
   "dependencies": {
