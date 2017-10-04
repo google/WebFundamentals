@@ -42,7 +42,7 @@ import Handler from &#x27;./handler&#x27;;
 import {isType, isInstance} from &#x27;../../../../lib/assert&#x27;;
 
 /**
- * An implementation of a [network first](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache)
+ * An implementation of a [network first](/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache)
  * request strategy.
  *
  * By default, &#x60;NetworkFirst&#x60; will cache responses with a 200 status code as
@@ -75,7 +75,7 @@ class NetworkFirst extends Handler {
    *        response isn&#x27;t returned, then the cached response
    *        will be returned instead. If there is no previously cached response,
    *        then an &#x60;null&#x60; response will be returned. This option is meant to
-   *        combat &quot;[lie-fi](https://developers.google.com/web/fundamentals/performance/poor-connectivity/#lie-fi)&quot;
+   *        combat &quot;[lie-fi](/web/fundamentals/performance/poor-connectivity/#lie-fi)&quot;
    *        scenarios.
    * @param {RequestWrapper} [input.requestWrapper] An optional &#x60;RequestWrapper&#x60;
    *        that is used to configure the cache name and request plugins. If
