@@ -315,10 +315,6 @@ resources for both HLS and DASH.
 
     openssl rand -hex -out media.key 16
 
-Note: Some versions of OpenSSL seem to create a file with white space and new
-line characters. Make sure these are absent or removed from `media.key` before
-proceeding.
-
 Use Shaka Packager to do the actual encryption. Use the content of the
 `media.key` file for the `-key` flag.
 

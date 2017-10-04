@@ -33,11 +33,7 @@ Please let me know of useful additions or corrections.
 
     packager input=myvideo.mp4 --dump_stream_info
 
-    ffmpeg -i myvideo.mp4
-
-Technically, ffmpeg always requires an output file format. Calling ffmpeg this
-way will give you an error message explaining that; however, it lists
-information not available from the Shaka Packager command.
+    ffprobe myvideo.mp4
 
 ## Demux (split) audio and video
 
@@ -158,17 +154,14 @@ for live streaming and video on demand for the web.
 You can use the same method to create a key for both DASH and HLS. Do this using
 openssl. The following will create a key made of 16 hex values.
  
-    openssl rand -out media.key 16
+    openssl rand -hex -out media.key 16
     
-This command creates a file with white space and new line characters, which are
-not allowed by Shaka Packager. You'll need to open the key file and manually
-remove all whitespace including the final carriage return.
-
 ### Encrypt
 
-For the `-key` flag use the key created earlier and stored in the media.key
-file. However, when entering it on the command line, be sure you've removed its
-whitespace. For the `-key_id` flag repeat the key value.
+The `-key` flag is copied from the `media.key` file. The `-key_id` flag is
+supposed to be either the first 8 OR the first 16 hex digits of the key. Since
+packager requires the key to be 16 digits and does not allow a 32 digit key,
+both flags are the same length.
  
     packager \
       input=myvideo.mp4,stream=audio,output=glocka.m4a \
@@ -228,22 +221,22 @@ Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need t
 
 2. Create a Clear Key encryption key.
 
-    You'll need to open the key file and manually remove all whitespace
-    including the final carriage return.
-
     ```
-    openssl rand -out media.key 16
+    openssl rand -hex -out media.key 16
     ```
 
 3. Demux the audio and video, encrypt the new files, and output a media
    presentation description (MPD) file.
 
-    The `-key` and `-key_id` flags are copied from the `media.key` file.
+    The `-key` flag is copied from the `media.key` file. The `-key_id` flag is
+    supposed to be either the first 8 OR the first 16 hex digits of the key. Since
+    packager requires the key to be 16 digits and does not allow a 32 digit key,
+    both flags are the same length.
 
     ```packager \```<br/>
     ```  input=myvideo.webm,stream=video,output=myvideo_video.webm \```<br/>
     ```  input=myvideo.webm,stream=audio,output=myvideo_audio.webm \```<br/>
-    ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
+    ```  --enable_fixed_key_encryption \```<br/>
     ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \```<br/>
     ```  --mpd_output myvideo_vod.mpd```
 
@@ -264,22 +257,22 @@ Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need t
      
 2. Create a Clear Key encryption key.
 
-    You'll need to open the key file and manually remove all whitespace
-    including the final carriage return.
-
     ```
-    openssl rand -out media.key 16
+    openssl rand -hex -out media.key 16
     ```
 
 3. Demux the audio and video, encrypt the new files, and output a media
    presentation description (MPD) file.
 
-    The `-key` and `-key_id` flags are copied from the `media.key` file.
+    The `-key` flag is copied from the `media.key` file. The `-key_id` flag is
+    supposed to be either the first 8 OR the first 16 hex digits of the key. Since
+    packager requires the key to be 16 digits and does not allow a 32 digit key,
+    both flags are the same length.
 
     ```packager \```<br/>
     ```  input=mymovie.mp4,stream=audio,output=myaudio.m4a \```<br/>
     ```  input=mymovie.mp4,stream=video,output=myvideo.mp4 \```<br/>
-    ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
+    ```  --enable_fixed_key_encryption \```<br/>
     ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \```<br/>
     ```  --mpd_output myvideo_vod.mpd```
     
@@ -321,14 +314,16 @@ ffmpeg when I need to.
 
 2. Create a Clear Key encryption key.
 
-    You'll need to open the key file and manually remove all whitespace
-    including the final carriage return.
-
     ```
-    openssl rand -out media.key 16
+    openssl rand -hex -out media.key 16
     ```
 
 3. Create a key information file
+
+    The `-key` flag is copied from the `media.key` file. The `-key_id` flag is
+    supposed to be either the first 8 OR the first 16 hex digits of the key. Since
+    packager requires the key to be 16 digits and does not allow a 32 digit key,
+    both flags are the same length.
 
     ```packager \```<br/>
     ```  'input=input.mp4,stream=video,segment_template=output$Number$.ts,
@@ -337,5 +332,5 @@ ffmpeg when I need to.
     playlist_name=audio_playlist.m3u8,hls_group_id=audio,hls_name=ENGLISH' \```<br/>
     ```  --hls_master_playlist_output="master_playlist.m3u8" \```<br/>
     ```  --hls_base_url="http://localhost:1000/" \```<br/>
-    ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
+    ```  --enable_fixed_key_encryption \```<br/>
     ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \```<br/>
