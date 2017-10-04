@@ -50,7 +50,7 @@ npm run build
 To view the site locally, just run:
 
 ```
-npm run start
+npm start
 ```
 
 ## Update the code labs
