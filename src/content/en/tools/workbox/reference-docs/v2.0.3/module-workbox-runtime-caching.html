@@ -21,7 +21,7 @@
             <p>A service worker helper library that implements various runtime caching strategies.
             </p>
             <p>You can learn more about each caching strategy on
-              <a href="https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/">Jake Archibald's blog post</a> which covers various ways of handling fetch events with a service worker.</p>
+              <a href="/web/fundamentals/instant-and-offline/offline-cookbook/">Jake Archibald's blog post</a> which covers various ways of handling fetch events with a service worker.</p>
             <p>These strategies can be used as the
               <a href="module-workbox-routing.Route.html">handler parameter in the Route constructor</a> or as the
               <a href="module-workbox-sw.Router.html#registerRoute">handler parameter in workboxSW.router.registerRoute()</a>.</p>
@@ -30,29 +30,29 @@
             <h2>Classes</h2>
             <section id='members-links'>
               <h3 class="class-list"><a href="module-workbox-runtime-caching.CacheFirst.html">CacheFirst</a></h3>
-              <p>An implementation of a <a href="https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network">cache-first</a> request strategy.</p>
+              <p>An implementation of a <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network">cache-first</a> request strategy.</p>
               <p>The important thing to note with this caching strategy is that once a response is cached, it will not be updated. This is useful for assets that are revisioned since it caches the asset long term and doesn't waste the user's data.</p>
               <h3 class="class-list"><a href="module-workbox-runtime-caching.CacheOnly.html">CacheOnly</a></h3>
-              <p>An implementation of a <a href="https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-only">cache-only</a> request strategy.</p>
+              <p>An implementation of a <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#cache-only">cache-only</a> request strategy.</p>
               <p>The advantage to using this versus directly calling <code>caches.match()</code> is that it will use the cache configuration and trigger the plugins defined in the underlying <code>RequestWrapper</code> which accounts for behaviors like cache
                 expiration.
               </p>
               <h3 class="class-list"><a href="module-workbox-runtime-caching.Handler.html">Handler</a></h3>
               <p>This a base class which each caching strategy extends.</p>
               <h3 class="class-list"><a href="module-workbox-runtime-caching.NetworkFirst.html">NetworkFirst</a></h3>
-              <p>An implementation of a <a href="https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache">network first</a> request strategy.</p>
+              <p>An implementation of a <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache">network first</a> request strategy.</p>
               <p>By default, <code>NetworkFirst</code> will cache responses with a 200 status code as well as <a href="http://stackoverflow.com/q/39109789">opaque responses</a> (responses from cross-origin servers which don't support
                 <a href="https://enable-cors.org/">CORS</a>). You can override this default by passing in a <code>RequestWrapper</code> that includes an appropriately-configured
                 <code>CacheableResponsePlugin</code>.</p>
               <h3 class="class-list"><a href="module-workbox-runtime-caching.NetworkOnly.html">NetworkOnly</a></h3>
-              <p>An implementation of a <a href="https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#network-only">network-only</a> request strategy.</p>
+              <p>An implementation of a <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#network-only">network-only</a> request strategy.</p>
               <p>The advantage to using this versus directly calling <code>fetch()</code> is that it will trigger the plugins defined in the underlying <code>RequestWrapper</code>.</p>
               <h3 class="class-list"><a href="module-workbox-runtime-caching.RequestWrapper.html">RequestWrapper</a></h3>
               <p>This class is used by the various subclasses of
                 <a href="module-workbox-runtime-caching.Handler.html">Handler</a> to configure the cache name and any desired plugins, which is to say classes that implement request lifecycle callbacks.</p>
               <p>It automatically triggers any registered callbacks at the appropriate time.</p>
               <h3 class="class-list"><a href="module-workbox-runtime-caching.StaleWhileRevalidate.html">StaleWhileRevalidate</a></h3>
-              <p>An implementation of a <a href="https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate">stale-while-revalidate</a> request strategy.</p>
+              <p>An implementation of a <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate">stale-while-revalidate</a> request strategy.</p>
               <p>Resources are requested from both the cache and the network in parallel, then responds with the cached version. The cache is replaced with whatever returns from the network. In addition to updating the appropriate caches, it will also trigger
                 any appropriate plugins defined in the underlying
                 <code>RequestWrapper</code>.</p>
