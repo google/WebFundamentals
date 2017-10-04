@@ -59,11 +59,11 @@ While you're free to use your own web server, this codelab is designed to work w
 
 [Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
+After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar:
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-In the ensuing window, click on the Web Server icon: 
+In the ensuing window, click on the Web Server icon:
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -138,7 +138,7 @@ Check the console in Chrome DevTools for `Service Worker is registered`, like so
 
 ### Get Application Server Keys
 
-To work with this code lab you need to generate some application server keys which we can do with this companion site:  [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)
+To work with this code lab you need to generate some application server keys which we can do with this companion site:  [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)
 
 Here you can generate a Public and Private key pair.
 
@@ -529,7 +529,7 @@ We've seen that our web app is capable of showing a notification using DevTools 
 
 Normally the process for this would be sending a subscription from a web page to a backend and the backend would then trigger a push message by making an API call to the endpoint in the subscription.
 
-This is out of scope for this codelab, but you can use the companion site ( [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) for this codelab to trigger an actual push message. Copy and paste the subscription at the bottom of your page:
+This is out of scope for this codelab, but you can use the companion site ( [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)) for this codelab to trigger an actual push message. Copy and paste the subscription at the bottom of your page:
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
@@ -644,7 +644,7 @@ You should be able to press the  *Enable Push Messaging*  /  *Disable Push Messa
 
 Congratulations on completing this codelab!
 
-This code lab has shown you how to get up and running with adding push to your web app. If you want to learn more about what web notifications can do,  [check out theses docs](/web/fundamentals/engage-and-retain/push-notifications/). 
+This code lab has shown you how to get up and running with adding push to your web app. If you want to learn more about what web notifications can do,  [check out theses docs](/web/fundamentals/engage-and-retain/push-notifications/).
 
 If you are looking to deploy push on your site, you may be interested in adding support for older / non-standards compliant browsers which use GCM,  [learn more here](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/).
 
@@ -665,5 +665,5 @@ If you are looking to deploy push on your site, you may be interested in adding 
 
 
 ## Found an issue, or have feedback? {: .hide-from-toc }
-Help us make our code labs better by submitting an 
+Help us make our code labs better by submitting an
 [issue](https://github.com/googlechrome/push-notifications/issues) today. And thanks!
