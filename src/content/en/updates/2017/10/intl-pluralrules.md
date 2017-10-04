@@ -145,13 +145,12 @@ formatOrdinals(103); // '103rd'
 internationalization features. As such, even if you’re not using it
 directly, you might be using a library or framework that depends on it.
 
-`Intl.PluralRules` is available by default in V8 v6.3.172 and Chrome 63.
-Firefox has a working implementation, but it’s behind a flag [for
-now](https://bugzilla.mozilla.org/show_bug.cgi?id=1403318). As this API
-becomes more widely available, you’ll find libraries such as
+`Intl.PluralRules` is available by default in V8 v6.3.172, Chrome 63, and
+Firefox 58. As this API becomes more widely available, you’ll find
+libraries such as
 [Globalize](https://github.com/globalizejs/globalize#plural-module)
-dropping their hardcoded CLDR databases in favor of the native
-functionality, thereby improving load-time performance, parse-time
+dropping their dependency on hardcoded CLDR databases in favor of the
+native functionality, thereby improving load-time performance, parse-time
 performance, run-time performance, and memory usage.
 
 {% include "comment-widget.html" %}
