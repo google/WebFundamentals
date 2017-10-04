@@ -152,8 +152,11 @@ function readMetadataForFile(file) {
     description = wfRegEx.getMatch(wfRegEx.RE_DESCRIPTION, content);
   }
   var published = moment(wfRegEx.getMatch(wfRegEx.RE_PUBLISHED_ON, content));
+  published = published.utcOffset(0, true);
   var updated = moment(wfRegEx.getMatch(wfRegEx.RE_UPDATED_ON, content));
+  updated = updated.utcOffset(0, true);
   var featured = moment(wfRegEx.getMatch(wfRegEx.RE_FEATURED_DATE, content, '1900-01-01'));
+  featured = featured.utcOffset(0, true);
   var url = file.replace('src/content/en/', '/web/');
   url = url.replace('.md', '');
   var result = {
