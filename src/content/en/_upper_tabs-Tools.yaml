@@ -1,8 +1,12 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
 toc:
-  - name: Tools
-    lower_tabs:
-      guides:
-      - title: Home
-        path: /web/tools/
+- name: Tools
+  attributes:
+  - name: data-category
+    value: webFu
+  - name: data-label
+    value: upper-tools
+  lower_tabs:
+    guides:
+    - title: Home
+      path: /web/tools/
 
