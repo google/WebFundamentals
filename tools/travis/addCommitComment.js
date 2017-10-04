@@ -14,12 +14,12 @@ const TEST_LOG_FILE = './test-results.json';
 console.log('Travis Add Commit Comment');
 
 function generateCommitMessage(gitData, testResults) {
-  if (testResults.errors.length === 0 && testResults.warnings.length === 0) {
+  if (!testResults || (testResults.errors.length === 0 && testResults.warnings.length === 0)) {
     return ':+1:';
   }
 
   let body = ['**Whoops!**\n\n'];
-  
+
   if (testResults.errors.length > 0) {
     body.push(`There were **${testResults.errors.length} critical errors** `);
     body.push('that broke the build and prevented it from being automatically ');
@@ -46,7 +46,7 @@ function generateCommitMessage(gitData, testResults) {
 
   if (testResults.errors.length > 0) {
     body.push('\n\n**ERRORS**\n');
-    buildMessages(testResults.errors);    
+    buildMessages(testResults.errors);
   }
 
   if (testResults.warnings.length > 0) {
@@ -66,14 +66,45 @@ function generateCommitMessage(gitData, testResults) {
  * @param {string} body The body of the message to post
  * @return {Promise} The result of the GitHub API push
  */
-function addCommitComment(gitInfo, body) {
-  let github = new GitHubApi({debug: false, Promise: Promise});
-  github.authenticate({type: 'oauth', token: gitInfo.token});
-  return github.repos.createCommitComment({
+function addPRComment(github, gitInfo, body) {
+  return github.repos.createComment({
     owner: gitInfo.repoOwner,
     repo: gitInfo.repoName,
-    sha: gitInfo.prSHA,
-    body: body
+    number: gitInfo.prNum,
+    body,
+  })
+  .then(() => console.log(chalk.green('✓'), 'PR comment posted'))
+  .catch((err) => {
+    console.log(chalk.red('✖'), 'Failed to post PR comment');
+    console.error(err);
+  });
+}
+
+function deletePreviousPRComments(github, gitInfo) {
+  return github.issues.getComments({
+    owner: gitInfo.repoOwner,
+    repo: gitInfo.repoName,
+    number: gitInfo.prNum,
+  })
+  .then((issueCommentsData) => {
+    const issueComments = issueCommentsData.data;
+    const botIssues = issueComments.filter((issueComment) => {
+      return (issueComment.user.login === 'WebFundBot');
+    });
+    return Promise.all(
+      botIssues.map((botIssue) => {
+        return github.issues.deleteComment({
+          id: botIssue.id,
+          owner: gitInfo.repoOwner,
+          repo: gitInfo.repoName,
+        });
+      })
+    );
+  })
+  .then(() => console.log(chalk.green('✓'), 'Deleted previous bot comments'))
+  .catch((err) => {
+    console.log(chalk.red('✖'), 'Failed to delete previous bot comments');
+    console.error(err);
   });
 }
 
@@ -156,12 +187,14 @@ function getTravisInfo() {
 
 getTravisInfo()
   .then(function(data) {
-    if (data) {
-      let testResults = data.testResults;
-      let body = generateCommitMessage(data.git, testResults);
-      return addCommitComment(data.git, body)
-      .catch(function(err) {
-        console.log(chalk.red('✖'), err.message);
-      })
-    }
+    let testResults = data.testResults;
+    let body = generateCommitMessage(data.git, testResults);
+
+    let github = new GitHubApi({debug: false, Promise: Promise});
+    github.authenticate({type: 'oauth', token: data.git.token});
+    return deletePreviousPRComments(github, data.git)
+    .then(() => addPRComment(github, data.git, body));
+  })
+  .catch(function(err) {
+    console.log(chalk.red('✖'), err.message);
   });
