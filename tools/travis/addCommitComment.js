@@ -67,7 +67,7 @@ function generateCommitMessage(gitData, testResults) {
  * @return {Promise} The result of the GitHub API push
  */
 function addPRComment(github, gitInfo, body) {
-  return github.repos.createComment({
+  return github.issues.createComment({
     owner: gitInfo.repoOwner,
     repo: gitInfo.repoName,
     number: gitInfo.prNum,
@@ -87,7 +87,7 @@ function deletePreviousPRComments(github, gitInfo) {
     number: gitInfo.prNum,
   })
   .then((issueCommentsData) => {
-    const issueComments = issueCommentsData.data;
+    const issueComments = issueCommentsData.data || [];
     const botIssues = issueComments.filter((issueComment) => {
       return (issueComment.user.login === 'WebFundBot');
     });
