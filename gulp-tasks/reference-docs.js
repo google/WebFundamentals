@@ -5,8 +5,9 @@ const fse = require('fs-extra');
 const path = require('path');
 const os = require('os');
 const spawn = require('child_process').spawn;
+const replace = require('replace-in-file');
 
-const PREVIOUS_RELEASES = 1;
+const PREVIOUS_RELEASES = 2;
 
 const getLatestTags = (gitUrl) => {
   return remoteGitTags(gitUrl)
@@ -115,13 +116,26 @@ const buildJSDocs = (srcCodePath, docOutputPath, jsdocConfPath) => {
     // but we don't use them for devsite - so remove these files.
     fse.removeSync(path.join(docOutputPath, 'css'));
     fse.removeSync(path.join(docOutputPath, 'scripts'));
+
+    return docOutputPath;
   })
-  .catch(() => {
+  .then((docOutputPath) => {
+    // Web Fundamentals linting errors on developers.google.com
+    replace.sync({
+      files: path.join(docOutputPath, '**', '*'),
+      from: 'https://developers.google.com/',
+      to: '/',
+    });
+
+    return docOutputPath;
+  })
+  .catch((err) => {
     // If we error'd, make sure we didn't create a directory that will stop
     // future doc builds.
     fse.removeSync(docOutputPath);
 
     console.error(`\n\nUnable to build docs for: '${path.relative(process.cwd(), docOutputPath)}'`);
+    console.error(err);
 
     return null;
   });
