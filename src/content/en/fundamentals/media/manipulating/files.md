@@ -112,7 +112,7 @@ ffmpeg and Shaka Packager since neither shows you everything.
 
     packager input=glocken.mp4 --dump_stream_info
 
-    ffmpeg -i glocken.mp4
+    ffprobe glocken.mp4
 
 ## Split the streams
 
@@ -313,14 +313,14 @@ you want, but I'm going to use [OpenSSL](https://www.openssl.org/) to write
 sixteen random hex digits to a file. This step is necessary when preparing
 resources for both HLS and DASH.
 
-    openssl rand -out media.key 16
+    openssl rand -hex -out media.key 16
 
 Note: Some versions of OpenSSL seem to create a file with white space and new
 line characters. Make sure these are absent or removed from `media.key` before
 proceeding.
 
 Use Shaka Packager to do the actual encryption. Use the content of the
-`media.key` file for both the `-key` and `-key-id` flags.
+`media.key` file for the `-key` flag.
 
 Note: For Clear Key, the key ID is supposed to be either the first 8 OR the
 first 16 hex digits of the key. Since packager requires the key to be 16
@@ -329,8 +329,8 @@ digits and does not allow a 32 digit key, both flags are the same length.
     packager \
       input=glocken.mp4,stream=audio,output=glocken_audio_encrypted.m4a \
       input=glocken.mp4,stream=video,output=glocken_video_encrypted.mp4 \
-      --enable_fixed_key_encryption --enable_fixed_key_decryption \
-      -key INSERT_KEY_HERE -key_id INSERT_KEY_HERE
+      --enable_fixed_key_encryption \
+      -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE
 
 ### Widevine Encryption
 
