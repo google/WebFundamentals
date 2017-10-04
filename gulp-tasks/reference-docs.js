@@ -162,7 +162,7 @@ const buildReferenceDocs = (projectName, gitUrl, localPath, jsdocConfPath) => {
             localPath,
             tag,
             jsdocConfPath,
-            tag === latestGitTags[0],
+            tag === latestGitTags[0]
           );
         });
       }, Promise.resolve()

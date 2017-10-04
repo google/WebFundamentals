@@ -19,7 +19,7 @@ The `workbox-sw` example demonstrates a complete service worker
 implementation, demonstrating the common parts of the API. It's an in-depth
 exploration of everything you'd need to build a production-ready service worker.
 
-<a href="https://workbox-samples.glitch.me/examples/workbox-sw/" class="btn">View Example</a>
+<a href="https://workbox-samples.glitch.me/examples/workbox-sw/" class="button">View Example</a>
 
 ## Lower Level Modules
 
@@ -32,24 +32,24 @@ smaller, standalone modules in your service worker.
 Uses the <a href="https://developer.mozilla.org/en-us/docs/web/api/broadcast_channel_api">Broadcast Channel API</a>
 to let you know when two responses are different.
 
-<a href="https://workbox-samples.glitch.me/examples/workbox-broadcast-cache-update/" class="btn">View Example</a>
+<a href="https://workbox-samples.glitch.me/examples/workbox-broadcast-cache-update/" class="button">View Example</a>
 
 #### workbox-cache-expiration
 
 Takes care of expiring cached entries based on the maximum number or age of
 entries.
 
-<a href="https://workbox-samples.glitch.me/examples/workbox-cache-expiration/" class="btn">View Example</a>
+<a href="https://workbox-samples.glitch.me/examples/workbox-cache-expiration/" class="button">View Example</a>
 
 #### workbox-routing
 
 Makes it easy to handle network requests using the response strategy of your
 choice.
 
-<a href="https://workbox-samples.glitch.me/examples/workbox-routing/" class="btn">View Example</a>
+<a href="https://workbox-samples.glitch.me/examples/workbox-routing/" class="button">View Example</a>
 
 #### workbox-runtime-caching
 
 Implements common cache strategies, and provides hooks to extend the default behaviors.
 
-<a href="https://workbox-samples.glitch.me/examples/workbox-runtime-caching/" class="btn">View Example</a>
+<a href="https://workbox-samples.glitch.me/examples/workbox-runtime-caching/" class="button">View Example</a>

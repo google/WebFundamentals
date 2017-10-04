@@ -3,7 +3,7 @@ toc:
   path: /web/tools/workbox/
 - title: Get Started
   section:
-  - title: WebPack
+  - title: webpack
     path: /web/tools/workbox/get-started/webpack
   - title: Gulp
     path: /web/tools/workbox/get-started/gulp
