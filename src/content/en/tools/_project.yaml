@@ -11,6 +11,24 @@ google_analytics_ids:
 icon:
   path: /web/images/web-fundamentals-icon192x192.png
 announcement:
-  description: 'Are you a developer in an agency in the UK, Indonesia or India? Find out more about our free 2 day <a href="https://goo.gl/hscrxF">Progressive Web Apps training</a>.'
+  description: |
+    <style>
+      .devsite-banner-announcement {
+        background-color: #e8f0fe;
+        color: #424242;
+        font-weight: 500;
+      }
+      .devsite-banner-announcement :link,
+      .devsite-banner-announcement :visited {
+        background: #e8f0fe;
+        color: #039BE5;
+      }
+      .devsite-banner-announcement img {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+    </style> <img src="https://www.gstatic.com/images/icons/material/system/1x/school_grey600_24dp.png"> Are you a developer in an agency in the UK, Indonesia or India? Find out more about our free 2 day <a href="https://goo.gl/hscrxF" class="gc-analytics-event" data-category="webFu" data-label="banner-agency">
+      Progressive Web Apps training
+    </a>.
   start: '2017-08-31T08:00:00Z'
   end: '2017-10-18T08:00:00Z'
