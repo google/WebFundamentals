@@ -256,6 +256,29 @@ function readFile(filename) {
 }
 
 /**
+ * Checks if a linked file exists.
+ *
+ * @param {string} filename The WebFundamentals file path.
+ * @return {Boolean} True if it exists, false if not.
+ */
+function doesWFFileExist(filename) {
+  if (!filename) {
+    return false;
+  }
+  filename = filename.trim();
+  if (filename.indexOf('/web') === 0) {
+    filename = filename.replace('/web', '');
+  }
+  filename = path.join('./src/content/en', filename);
+  try {
+    fs.accessSync(filename, fs.R_OK);
+    return true;
+  } catch (ex) {
+    return false;
+  }
+}
+
+/**
  * Parses a JSON file
  *   Note: The returned promise always resolves, it will never reject.
  *
@@ -389,14 +412,30 @@ function testMarkdown(filename, contents, options) {
       logError(filename, null, 'File extension must be `.md`');
     }
 
-    // Validate book_path and project_path
-    if (!wfRegEx.RE_BOOK_PATH.test(contents) && !isInclude) {
+    // Validate book_path is specified and file exists
+    const bookPath = wfRegEx.RE_BOOK_PATH.exec(contents);
+    if (!bookPath && !isInclude) {
       msg = 'Attribute `book_path` missing from top of document';
       logError(filename, null, msg);
     }
-    if (!wfRegEx.RE_PROJECT_PATH.test(contents) && !isInclude) {
+    if (bookPath && bookPath[1] && !isInclude) {
+      msg = 'Unable to find specified `book_path`:'
+      if (doesWFFileExist(bookPath[1]) !== true) {
+        logError(filename, null, `${msg} ${bookPath[1]}`);
+      }
+    }
+
+    // Validate project_path is specified and file exists
+    const projectPath = wfRegEx.RE_PROJECT_PATH.exec(contents);
+    if (!projectPath && !isInclude) {
       msg = 'Attribute `project_path` missing from top of document';
       logError(filename, null, msg);
+    }
+    if (projectPath && projectPath[1] && !isInclude) {
+      msg = 'Unable to find specified `project_path`:'
+      if (doesWFFileExist(projectPath[1]) !== true) {
+        logError(filename, null, `${msg} ${projectPath[1]}`);
+      }
     }
 
     // Validate description
@@ -466,14 +505,7 @@ function testMarkdown(filename, contents, options) {
     // Validate featured image path
     matched = wfRegEx.RE_IMAGE.exec(contents);
     if (matched) {
-      let imgPath = matched[1];
-      if (imgPath.indexOf('/web') === 0) {
-        imgPath = imgPath.replace('/web', '');
-      }
-      imgPath = './src/content/en' + imgPath;
-      try {
-        fs.accessSync(imgPath, fs.R_OK);
-      } catch (ex) {
+      if (doesWFFileExist(matched[1]) !== true) {
         position = {line: getLineNumber(contents, matched.index)};
         msg = 'WF Tag `wf_featured_image` found, but couldn\'t find ';
         msg += `image - ${matched[1]}`;
@@ -484,14 +516,7 @@ function testMarkdown(filename, contents, options) {
     // Validate featured square image path
     matched = wfRegEx.RE_IMAGE_SQUARE.exec(contents);
     if (matched) {
-      let imgPath = matched[1];
-      if (imgPath.indexOf('/web') === 0) {
-        imgPath = imgPath.replace('/web', '');
-      }
-      imgPath = './src/content/en' + imgPath;
-      try {
-        fs.accessSync(imgPath, fs.R_OK);
-      } catch (ex) {
+      if (doesWFFileExist(matched[1]) !== true) {
         position = {line: getLineNumber(contents, matched.index)};
         msg = 'WF Tag `wf_featured_image_square` found, but couldn\'t find ';
         msg += `image - ${matched[1]}`;
