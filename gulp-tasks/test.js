@@ -256,20 +256,17 @@ function readFile(filename) {
 }
 
 /**
- * Checks if a linked file exists.
+ * Checks if a file exists.
  *
  * @param {string} filename The WebFundamentals file path.
  * @return {Boolean} True if it exists, false if not.
  */
-function doesWFFileExist(filename) {
+function doesFileExist(filename) {
   if (!filename) {
     return false;
   }
   filename = filename.trim();
-  if (filename.indexOf('/web') === 0) {
-    filename = filename.replace('/web', '');
-  }
-  filename = path.join('./src/content/en', filename);
+  filename = filename.replace(/^\/?web\/(.*)/, 'src/content/en/$1');
   try {
     fs.accessSync(filename, fs.R_OK);
     return true;
@@ -420,7 +417,7 @@ function testMarkdown(filename, contents, options) {
     }
     if (bookPath && bookPath[1] && !isInclude) {
       msg = 'Unable to find specified `book_path`:'
-      if (doesWFFileExist(bookPath[1]) !== true) {
+      if (doesFileExist(bookPath[1]) !== true) {
         logError(filename, null, `${msg} ${bookPath[1]}`);
       }
     }
@@ -433,7 +430,7 @@ function testMarkdown(filename, contents, options) {
     }
     if (projectPath && projectPath[1] && !isInclude) {
       msg = 'Unable to find specified `project_path`:'
-      if (doesWFFileExist(projectPath[1]) !== true) {
+      if (doesFileExist(projectPath[1]) !== true) {
         logError(filename, null, `${msg} ${projectPath[1]}`);
       }
     }
@@ -505,7 +502,7 @@ function testMarkdown(filename, contents, options) {
     // Validate featured image path
     matched = wfRegEx.RE_IMAGE.exec(contents);
     if (matched) {
-      if (doesWFFileExist(matched[1]) !== true) {
+      if (doesFileExist(matched[1]) !== true) {
         position = {line: getLineNumber(contents, matched.index)};
         msg = 'WF Tag `wf_featured_image` found, but couldn\'t find ';
         msg += `image - ${matched[1]}`;
@@ -516,7 +513,7 @@ function testMarkdown(filename, contents, options) {
     // Validate featured square image path
     matched = wfRegEx.RE_IMAGE_SQUARE.exec(contents);
     if (matched) {
-      if (doesWFFileExist(matched[1]) !== true) {
+      if (doesFileExist(matched[1]) !== true) {
         position = {line: getLineNumber(contents, matched.index)};
         msg = 'WF Tag `wf_featured_image_square` found, but couldn\'t find ';
         msg += `image - ${matched[1]}`;
@@ -625,18 +622,13 @@ function testMarkdown(filename, contents, options) {
         return;
       }
       position = {line: getLineNumber(contents, include.index)};
-      if (inclFile.indexOf('web/') === 0) {
-        let inclPath = inclFile.replace('web/', 'src/content/en/');
-        try {
-          fs.accessSync(inclPath, fs.R_OK);
-        } catch (ex) {
-          msg = '`{% include %}` tag found, but couldn\'t find related '
-          msg += 'include ' + inclFile + ' -- ' + inclPath;
-          logError(filename, position, msg);
-        }
-      } else {
+      if (inclFile.indexOf('web/') !== 0) {
         msg = `Include path MUST start with \`web/\` - ${inclFile}`;
         logError(filename, position, msg);
+      }
+      if (doesFileExist(inclFile) !== true) {
+        msg = '`{% include %}` tag found, but couldn\'t find related include'
+        logError(filename, position, `${msg}: ${inclFile}`);
       }
     });
 
@@ -650,10 +642,7 @@ function testMarkdown(filename, contents, options) {
       if (inclFile.indexOf('web/') !== 0) {
         logError(filename, position, `${msg} path must start with 'web/'`);
       }
-      try {
-        const localPath = inclFile.replace('web/', GLOBAL.WF.src.content);
-        fs.accessSync(localPath, fs.R_OK);
-      } catch (ex) {
+      if (doesFileExist(inclFile) !== true) {
         logError(filename, position, `${msg} file not found: '${inclFile}'`);
       }
     });
@@ -661,15 +650,10 @@ function testMarkdown(filename, contents, options) {
     // Verify all <<include.md>> markdown files are accessible
     matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDE_MD, contents);
     matched.forEach(function(match) {
-      let inclPath;
-      let inclFile = match[1];
-      try {
-        inclPath = path.resolve(path.parse(filename).dir, inclFile);
-        fs.accessSync(inclPath, fs.R_OK);
-      } catch (ex) {
+      let inclFile = path.resolve(path.parse(filename).dir, match[1]);
+      if (doesFileExist(inclFile) !== true) {
         position = {line: getLineNumber(contents, match.index)};
-        msg = `Markdown include ${match[0]} found, but couldn't find `;
-        msg += `actual file: ${inclPath}`;
+        msg = `Markdown include ${match[0]} found, but couldn't find file.`;
         logError(filename, position, msg);
       }
     });
