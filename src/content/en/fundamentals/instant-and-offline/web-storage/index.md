@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-09-28 #}
+{# wf_updated_on: 2017-10-04 #}
 {# wf_published_on: 2016-09-28 #}
 {# wf_blink_components: Blink>Storage #}
 
@@ -192,9 +192,10 @@ many browsers as possible and which offer asynchronous call models, to maximize
 interoperability with the UI. These criteria lead naturally to the following
 technology choices:
 
-* For offline storage, use the Cache API. This API is available in any browser that supports Service
-Worker technology necessary for creating offline apps. The Cache API is ideal for storing resources
-associated with a known URL.
+* For offline storage, use the [Cache API](cache-api). This API is available in any browser that
+supports [Service Worker technology](https://jakearchibald.github.io/isserviceworkerready/)
+necessary for creating offline apps. The Cache API is ideal for storing resources associated with a
+known URL.
 
 * For storing application state and user-generated content, use IndexedDB. This enables users to
   work offline in more browsers than just those that support the Cache API.
@@ -230,13 +231,4 @@ we'll be adding more content soon to dive more deeply into one or more topics
 of interest:
 
 * [Offline Storage Recommendations for Progressive Web Apps](offline-for-pwa)
-
-* Common Storage Patterns (coming soon)
-
-* Recommended Back End Storage Methods (coming soon)
-
-* Deep Dive: IndexedDB (coming soon)
-
 * [Deep Dive: Cache API](cache-api)
-
-* Analysis of Popular Storage Frameworks (coming soon)
