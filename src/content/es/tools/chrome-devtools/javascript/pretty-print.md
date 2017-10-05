@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Transforma tu JavaScript en algo más legible: haz clic en el ícono Pretty-Print de Chrome DevTools.
 

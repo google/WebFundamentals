@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 사용자는 페이지가 대화형으로 원활하게 작동할 것을 기대합니다. 픽셀 파이프라인의 각 단계는 버벅거림이 발생할 가능성을 나타냅니다. 런타임 성능을 저하시키는 보편적인 문제를 식별하고 해결하는 여러 가지 도구와 전략에 대해 알아보세요.
 

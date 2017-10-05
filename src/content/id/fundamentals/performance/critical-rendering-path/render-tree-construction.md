@@ -46,7 +46,7 @@ Note: Untuk catatan, perhatikan bahwa `visibility: hidden` berbeda dari `display
 
 Keluaran akhirnya adalah sebuah render yang berisi materi serta informasi gaya dari semua materi yang terlihat pada layar.  **Dengan telah ditetapkannya pohon render, kita bisa melanjutkan ke tahapan "layout".**
 
-Sejauh ini kita telah menghitung simpul mana yang harus terlihat dan gaya terkomputasi, namun kita belum menghitung posisi dan ukuran persisnya di dalam [tampilan yang terlihat](/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport) perangkat---itulah tahap "layout", disebut juga "mengubah posisi/geometri."
+Sejauh ini kita telah menghitung simpul mana yang harus terlihat dan gaya terkomputasi, namun kita belum menghitung posisi dan ukuran persisnya di dalam [tampilan yang terlihat](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) perangkat---itulah tahap "layout", disebut juga "mengubah posisi/geometri."
 
 Untuk menghitung ukuran dan posisi persisnya dari setiap objek pada laman, browser akan memulai di akar pohon render dan menjalankannya. Mari kita lihat contoh praktik sederhana berikut ini:
 

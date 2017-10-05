@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Optimizing the critical rendering path refers to prioritizing the display of content that relates to the current user action.
 

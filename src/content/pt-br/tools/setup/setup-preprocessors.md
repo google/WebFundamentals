@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Saiba como configurar pré-processadores de CSS e JS para ajudar a escrever código com mais eficiência.
 

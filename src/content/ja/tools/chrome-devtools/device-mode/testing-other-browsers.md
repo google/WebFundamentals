@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome と Android でサイトがうまく実行できることを確認したら作業完了というわけではありません。Device Mode では iPhone などの他のさまざまな端末をシミュレートできますが、他のブラウザ ソリューションでエミュレーションを行ってみることをおすすめします。
 

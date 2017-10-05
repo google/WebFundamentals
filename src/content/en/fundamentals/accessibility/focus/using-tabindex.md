@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Modifying the DOM order with tabindex
 
@@ -126,7 +126,7 @@ We will cover ARIA in more detail later, but for now let's use the guide to help
 us add keyboard support to a new component.
 
 Perhaps you're working on some new [Custom
-Elements](/web/fundamentals/getting-started/primers/customelements) that
+Elements](/web/fundamentals/web-components/customelements) that
 resemble a set of radio buttons, but with your unique take on appearance and
 behavior.
 

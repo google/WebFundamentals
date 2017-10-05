@@ -66,7 +66,7 @@ function getFullFeedEntries(articles) {
         article.feedAuthor = authorName.trim();
       }
     }
-    var rssPubDate = moment.utc(article.datePublished);
+    const rssPubDate = moment(article.datePublished);
     article.rssPubDate = rssPubDate.format('DD MMM YYYY HH:mm:ss [GMT]');
   });
   return articles;
@@ -90,7 +90,7 @@ function generateFeeds(files, options) {
     context.baseUrl += options.section + '/';
     context.analyticsQS = context.analyticsQS.replace('root_feed', options.section + '_feed');
   }
-  const now = moment.utc(lastUpdated);
+  const now = moment().utcOffset(0);
   context.rssPubDate = now.format('DD MMM YYYY HH:mm:ss [GMT]');
   context.atomPubDate = now.format('YYYY-MM-DDTHH:mm:ss[Z]');
 
@@ -105,7 +105,6 @@ function generateFeeds(files, options) {
 
 function generatePodcastFeed(files, options) {
   gutil.log(' ', 'Generating podcast feed for', options.title);
-  var lastUpdated = files[0].datePublished;
   var context = {
     title: options.title,
     subtitle: options.subtitle,
@@ -119,7 +118,8 @@ function generatePodcastFeed(files, options) {
   if (options.baseUrl) {
     context.baseUrl = options.baseUrl;
   }
-  context.rssPubDate = moment.utc(lastUpdated).format('DD MMM YYYY HH:mm:ss [GMT]');
+  const lastUpdated = moment().utcOffset(0);
+  context.rssPubDate = lastUpdated.format('DD MMM YYYY HH:mm:ss [GMT]');
   var template = path.join(GLOBAL.WF.src.templates, 'shows', 'podcast.xml');
   var outputFile = path.join(options.outputPath, 'feed.xml');
   renderTemplate(template, context, outputFile);

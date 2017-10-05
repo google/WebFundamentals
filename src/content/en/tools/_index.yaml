@@ -1,99 +1,86 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
-
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 title: Tools
 
 landing_page:
   custom_css_path: /web/styles/wf-root.css
 
-  header:
-    description: >
-      Discover our tools that can help you kickstart your development.
-
   rows:
-
-  - heading: Chrome DevTools
-    classname: devsite-landing-row-67 devsite-landing-row-no-image-background
+  - classname: devsite-landing-row-cards
     items:
-    - description: >
+    - heading: Chrome DevTools
+      description: >
         The Chrome DevTools are a set of web authoring and debugging tools
         built into Google Chrome. Use the DevTools to iterate, debug and
         profile your site.
-      image_path: images/chrome-devtools.png
+      image_path: images/chrome-devtools-16x9.png
+      path: /web/tools/chrome-devtools/
       buttons:
       - label: Get Started
         path: /web/tools/chrome-devtools/
-        classname: button button-primary
-
-  - heading: Lighthouse
-    classname: devsite-landing-row-67 devsite-landing-row-no-image-background
-    items:
-    - description: >
+    - heading: Lighthouse
+      description: >
         Lighthouse is an open-source, automated tool for improving the quality
         of your web apps. Run it as a Chrome Extension or from the command line.
-      image_path: /web/progressive-web-apps/images/pwa-lighthouse.png
+      image_path: images/lighthouse-16x9.png
+      path: /web/tools/lighthouse/
       buttons:
       - label: Get Started
         path: /web/tools/lighthouse/
-        classname: button button-primary
 
-  - heading: Libraries
+  - classname: devsite-landing-row-cards
     items:
-    - heading: Workbox
+    - heading: Polymer
       description: >
-        Workbox is a set of tools and libraries to help you simplify your
-        Progressive Web App development and take advantage of the
-        many powerful features of service worker. It helps you free your app
-        from the network, without having to write any boilerplate service worker
-        code!
-      buttons:
-      - label: Learn more
-        path: workbox
-    - heading: Material Design Lite
-      description: >
-        Material Design Lite lets you add a Material Design look and feel to
-        your websites. It doesn’t rely on any JavaScript frameworks and aims
-        to optimize for cross-device use, gracefully degrade in older browsers,
-        and offer an experience that is immediately accessible.
-      buttons:
-      - label: Learn more
-        path: https://getmdl.io/
-
-  - heading: Frameworks
-    classname: devsite-landing-row-no-image-background
-    items:
-    - description: >
         The Polymer Project helps you deliver amazing user experiences by
         unlocking the full potential of the web platform. Polymer makes the
         most of Web Components, a powerful new platform feature for extending
         HTML and componentizing your apps, allowing you to build cutting-edge
         Progressive Web Apps that load quickly, respond instantly and work
         from anywhere.
-      image_path: images/polymer-lockup-2016.png
+      image_path: images/polymer-16x9.png
+      path: https://www.polymer-project.org/
       buttons:
-      - label: Learn more
+      - label: Learn More
         path: https://www.polymer-project.org/
-    - description: >
+
+    - heading: Angular2
+      description: >
         Angular2 is a development platform for building applications across web,
         mobile, and desktop. With simple, declarative templates, reusable
         components, and support for all parts of the development experience,
         Angular2 makes it easy to write, test, and deploy high performing
         applications at any scale.
-      image_path: images/angular.png
+      image_path: images/angular-16x9.png
+      path: https://angular.io/
       buttons:
-      - label: Learn more
+      - label: Learn More
         path: https://angular.io/
 
-  - heading: Other Tools
-    classname: devsite-landing-row-no-image-background
-    items:
     - heading: PageSpeed Module
       description: >
         The PageSpeed modules are open-source server modules that optimize
         your site automatically.
+      image_path: images/pagespeed-16x9.png
+      path: /speed/pagespeed/module/
+      buttons:
+      - label: Learn More
+        path: /speed/pagespeed/module/
+
+  - heading: More
+    classname: devsite-landing-row-no-image-background
+    items:
+    - heading: Polymer Starter Kit
+      description: >
+        The Polymer Starter Kit is a starting point for building apps using a
+        drawer-based layout. The layout is provided by app-layout elements.
+      icon:
+        path: images/polymer-logo-1x1.png
+      path: https://www.polymer-project.org/2.0/start/toolbox/set-up
+    - heading: Setting Up Your Dev Environment
+      description: >
+        Set up your workspace to include a good editor, debugging, and build
+        tools for the multi-device web.
       icon:
         path: images/pagespeed.svg
-      buttons:
-      - label: Learn more
-        path: https://developers.google.com/speed/pagespeed/module/
+      path: /web/tools/setup/

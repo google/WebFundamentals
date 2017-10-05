@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:每个桌面浏览器都自带一套开发者工具，能够直接使用，您可以将浏览器的扩展程序或插件扩展和添加至这些工具。
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“具有已注册的服务工作线程”Lighthouse 审查的参考文档。
 

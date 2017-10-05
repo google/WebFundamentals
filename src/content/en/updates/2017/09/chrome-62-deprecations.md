@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 62 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-{# wf_updated_on: 2017-09-15 #}
+{# wf_updated_on: 2017-09-29 #}
 {# wf_published_on: 2017-09-15 #}
 {# wf_tags: deprecations,removals,chrome62 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -40,7 +40,7 @@ This property, which was intended for use in monitoring worker performance was
 removed from the spec more than two years ago and it is not supported in the
 other major browsers. A more modern approach to tracking performance of a worker
 would use
-[`Performance.timeOrigin`](https://developer.mozilla.org/en-US/docs/Web/API/Performance/timeOrigin).
+[`Performance.timing`](https://developer.mozilla.org/en-US/docs/Web/API/Performance/timing).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/KkPl_Szxf50/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/features/5652075467767808) &#124;

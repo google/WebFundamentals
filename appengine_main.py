@@ -18,7 +18,6 @@
 import os
 import webapp2
 import logging
-import traceback
 import devsitePage
 import devsiteIndex
 import devsiteHelper
@@ -28,19 +27,23 @@ from google.appengine.ext.webapp.template import render
 DEFAULT_LANG = 'en'
 DEVENV = os.environ['SERVER_SOFTWARE'].startswith('Dev')
 USE_MEMCACHE = not DEVENV
+SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content/')
 
 class FlushMemCache(webapp2.RequestHandler):
     def get(self):
         memcache.flush_all()
         self.response.out.write('Flushed')
 
+
 class HomePage(webapp2.RequestHandler):
     def get(self):
         self.redirect('/web/', permanent=True)
 
+
 class DevSiteRedirect(webapp2.RequestHandler):
     def get(self, path):
         self.redirect('https://developers.google.com/' + path, permanent=True)
+
 
 class Framebox(webapp2.RequestHandler):
     def get(self, path):
@@ -58,8 +61,15 @@ class Framebox(webapp2.RequestHandler):
           logging.info('200 ' + memcacheKey)
         self.response.out.write(response)      
 
+
 class DevSitePages(webapp2.RequestHandler):
     def get(self, path):
+
+        if path.endswith('.html') or path.endswith('.md'):
+          redirectTo = '/web/' + os.path.splitext(path)[0]
+          self.redirect(redirectTo, permanent=True)
+          return
+
         response = None
         langQS = self.request.get('hl', None)
         langCookie = self.request.cookies.get('hl')
@@ -82,8 +92,11 @@ class DevSitePages(webapp2.RequestHandler):
 
         if response is None:
           try:
-            if path.endswith('/') or path == '':
+            if os.path.isdir(os.path.join(SOURCE_PATH, 'en', path)):
               response = devsiteIndex.getPage(path, lang)
+              if (response is None) and (path.startswith('showcase') or 
+                  path.startswith('shows') or path.startswith('updates')):
+                response = devsiteIndex.getDirIndex(path)
             else:
               response = devsitePage.getPage(path, lang)
           
@@ -108,7 +121,7 @@ class DevSitePages(webapp2.RequestHandler):
             response = render('gae/500.tpl', context)
             logging.exception('500 ' + fullPath)
             self.response.set_status(500)
-
+        
         self.response.out.write(response)
 
 

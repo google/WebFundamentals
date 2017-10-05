@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para la auditoría de Lighthouse "La página no solicita automáticamente los permisos de notificación cuando se carga".
 
@@ -16,7 +16,7 @@ usuarios ni precisas para sus necesidades. Para proporcionar una mejor experienc
 los usuarios un tipo específico de notificación y presenta las solicitudes de permisos
 después de que acepten la notificación.
 
-[good]: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+[good]: /web/fundamentals/push-notifications/
 
 ## Cómo aprobar la auditoría {: #how }
 

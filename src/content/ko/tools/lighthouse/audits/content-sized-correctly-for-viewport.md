@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '뷰포트에 맞게 정확히 크기가 조정된 콘텐츠' Lighthouse 감사의 참조 문서입니다.
 
@@ -18,7 +18,7 @@ description: '뷰포트에 맞게 정확히 크기가 조정된 콘텐츠' Light
 
 이 감사는 페이지가 휴대기기에 최적화되었는지 확인하는
 우회적 방법입니다. 사이트가 최적화되지 않았고 사이트를 최적화하고 싶다면,
-[반응형 웹 디자인 기본 사항](/web/fundamentals/design-and-ui/responsive/)을
+[반응형 웹 디자인 기본 사항](/web/fundamentals/design-and-ux/responsive/)을
 참조하여 시작하세요.
 
 다음과 같은 경우 이 감사를 무시할 수 있습니다.

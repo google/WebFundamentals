@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Saiba como usar o Chrome e o DevTools para encontrar problemas de memória que afetam o desempenho da página, incluindo vazamentos de memória, ocupação excessiva de memória e coletas de lixo frequentes.
 

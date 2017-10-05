@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: ユーザーがモバイル環境で直面するネットワーク状態を見落としてしまうことがよくあります。DevTools を使って、さまざまなネットワーク状態のエミュレーションを行います。ユーザーにとって大切なのは、読み込み時間の問題を解決することです。
 

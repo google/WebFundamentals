@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Content Sized Correctly for Viewport" Lighthouse audit.
 
@@ -18,7 +18,7 @@ mobile screens.
 
 This audit is a roundabout way of determining if your page is optimized for
 mobile devices. If your site is not optimized and you want it to be, then see
-[Responsive Web Design Basics](/web/fundamentals/design-and-ui/responsive/)
+[Responsive Web Design Basics](/web/fundamentals/design-and-ux/responsive/)
 to get started.
 
 You can ignore this audit if:

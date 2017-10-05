@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '매니페스트의 존재' Lighthouse 감사의 참조 문서입니다.
 

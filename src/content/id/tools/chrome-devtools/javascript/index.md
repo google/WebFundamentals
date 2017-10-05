@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Mulailah men-debug JavaScript dengan menggunakan Chrome DevTools dalam tutorial interaktif ini.
 

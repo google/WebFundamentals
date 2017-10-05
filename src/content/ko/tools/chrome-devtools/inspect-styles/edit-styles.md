@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools의 Styles 창을 사용하여 요소와 연관된 CSS 스타일을 검사하고 수정합니다.
 

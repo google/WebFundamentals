@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '스크롤 성능 개선을 위해 패시브 이벤트 리스너를 사용하는 사이트' Lighthouse 감사의 참조 문서입니다.
 

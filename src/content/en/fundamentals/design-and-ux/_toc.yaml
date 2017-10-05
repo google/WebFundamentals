@@ -1,0 +1,43 @@
+toc:
+- title: Design & User Experience
+  style: accordion
+  section:
+  - title: Designing Great User Experiences
+    section:
+    - title: Basics of User Experiences
+      path: /web/fundamentals/design-and-ux/ux-basics/
+    # - title: Designing Great UX for Progressive Web Apps
+    #   path: /web/fundamentals/design-and-ux/ux-basics/pwa
+    - title: What Makes a Good Mobile Site?
+      path: /web/fundamentals/design-and-ux/principles/
+  - include: /web/fundamentals/accessibility/_toc.yaml
+  - title: Animations
+    section:
+    - title: Overview
+      path: /web/fundamentals/design-and-ux/animations/
+    - title: CSS Versus JavaScript
+      path: /web/fundamentals/design-and-ux/animations/css-vs-javascript
+    - title: The Basics of Easing
+      path: /web/fundamentals/design-and-ux/animations/the-basics-of-easing
+    - title: Custom Easing
+      path: /web/fundamentals/design-and-ux/animations/custom-easing
+    - title: Animating Between Views
+      path: /web/fundamentals/design-and-ux/animations/animating-between-views
+    - title: Choosing the Right Easing
+      path: /web/fundamentals/design-and-ux/animations/choosing-the-right-easing
+    - title: Animating Modal Views
+      path: /web/fundamentals/design-and-ux/animations/animating-modal-views
+    - title: Asymmetric Animation Timing
+      path: /web/fundamentals/design-and-ux/animations/asymmetric-animation-timing
+    - title: Animations and Performance
+      path: /web/fundamentals/design-and-ux/animations/animations-and-performance
+  - title: Responsive Web Design
+    section:
+    - title: Overview
+      path: /web/fundamentals/design-and-ux/responsive/
+    - title: Patterns
+      path: /web/fundamentals/design-and-ux/responsive/patterns
+    - title: Responsive Images
+      path: /web/fundamentals/design-and-ux/responsive/images
+    - title: Multi-Device Content
+      path: /web/fundamentals/design-and-ux/responsive/content

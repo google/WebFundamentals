@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:了解通过网络收集资源的阶段至关重要。这是解决加载问题的基础。
 

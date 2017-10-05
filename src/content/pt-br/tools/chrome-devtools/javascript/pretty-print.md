@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Transforme seu JavaScript em um formulário mais legível clicando no ícone Pretty-Print no Chrome DevTools.
 

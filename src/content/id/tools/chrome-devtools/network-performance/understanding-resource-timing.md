@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Penting bagi Anda untuk memahami fase tempat sumber daya dikumpulkan di jaringan. Ini adalah dasar memperbaiki masalah pemuatan.
 

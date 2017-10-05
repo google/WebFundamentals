@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 'rel="noopener"을 사용하여 외부 앵커를 여는 사이트' Lighthouse 감사의 참조 문서입니다.
 

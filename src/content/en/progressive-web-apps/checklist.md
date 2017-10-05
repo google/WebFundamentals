@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/progressive-web-apps/_book.yaml
 description: A checklist which breaks down all the things we think it takes to be a baseline progressive web app, and how to take it a step further with an exemplary progressive web app. 
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-09-26 #}
 {# wf_published_on: 2016-11-07 #}
 
 # Progressive Web App Checklist {: .page-title }
@@ -75,7 +75,7 @@ on the this list and may prove helpful in easily testing sites.
       <td><b>To Fix</b></td>
       <td>
         Look at implementing a 
-        <a href="/web/fundamentals/design-and-ui/responsive/fundamentals/">
+        <a href="/web/fundamentals/design-and-ux/responsive/">
         responsive design</a>, or adaptively serving a viewport-friendly site.
       </td>
     </tr>
@@ -85,18 +85,20 @@ on the this list and may prove helpful in easily testing sites.
 <table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>The start URL (at least) loads while offline</h3></th>
+      <th colspan=2><h3>All app URLs load while offline</h3></th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Use Lighthouse to verify <b>URL responds with a 200 when offline</b>.
+        Load various pages in the PWA with an airplane mode enabled. Ensure
+        the app presents some content even when offline. Use Lighthouse to
+        verify the start <b>URL responds with a 200 when offline</b>.
       </td>
     </tr>
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Use a <a href="/web/fundamentals/primers/service-worker/">Service Worker</a>.
+        Use a <a href="/web/fundamentals/primers/service-workers/">Service Worker</a>.
       </td>
     </tr>
   </tbody>
@@ -564,7 +566,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Review our guide on <a href="/web/fundamentals/design-and-ui/responsive/">
+        Review our guide on <a href="/web/fundamentals/design-and-ux/responsive/">
         implementing responsive UIs</a>.
       </td>
     </tr>
@@ -855,7 +857,7 @@ notifications is not a requirement for an exemplary progressive web app.
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        See our guide on <a href="/web/fundamentals/engage-and-retain/push-notifications/good-notification">
+        See our guide on <a href="/web/fundamentals/push-notifications/">
         creating great push notifications</a> for advice. If your content is
         not timely and relevant to this user, consider using email instead.
       </td>

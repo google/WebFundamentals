@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:为您反复使用的命令行任务设置快捷方式。如果您发现自己在命令行中反复键入相同的内容，这将为您带来很大方便。
 

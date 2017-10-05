@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Cuplikan adalah skrip kecil yang bisa ditulis dan dieksekusi dalam panel Sources pada Chrome DevTools. Anda bisa mengakses dan menjalankannya dari laman apa saja. Bila dijalankan, cuplikan kode akan dieksekusi dari konteks laman yang dibuka saat ini.
 

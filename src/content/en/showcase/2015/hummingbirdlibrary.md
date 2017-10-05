@@ -26,7 +26,7 @@ is the by far best-looking of them all.
 Yet, [Hummingbird Library](http://hummingbirdlibrary.com/){: .external }, which sits on top
 of the existing Hummingbird API, goes one step further, built from scratch
 with Angular and Material Design.
-[Theme color](/web/fundamentals/design-and-ui/browser-customization/)
+[Theme color](/web/fundamentals/design-and-ux/browser-customization/)
 and [manifest](/web/fundamentals/engage-and-retain/app-install-banners/) make
 it look super integrated and installable on the home screen, and the whole
 experience feels very snappy, focussing on the core functionality of the main

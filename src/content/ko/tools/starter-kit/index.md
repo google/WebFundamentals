@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Web Starter Kit는 다중 기기 개발을 위한 상용 도구입니다.
 

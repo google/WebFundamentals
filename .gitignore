@@ -14,6 +14,7 @@ src/content/**/*/_files.json
 src/content/**/*/atom.xml
 src/content/**/*/rss.xml
 src/content/**/*/feed.xml
+src/content/*/fundamentals/glossary.md
 src/content/*/_shared/contributors/*.html
 src/content/*/_shared/latest_show.html
 src/content/*/_shared/latest_articles.html

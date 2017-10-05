@@ -1,4 +1,3 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
 upper_tabs:
   - include: /web/_upper_tabs-Fundamentals.yaml
   - name: Tools
@@ -6,16 +5,22 @@ upper_tabs:
     path: /web/tools/
     lower_tabs:
       other:
-      - name: Tools
+      - name: Home
         contents:
+        - title: Home
+          path: /web/tools/
         - include: /web/tools/setup/_toc.yaml
-        - include: /web/tools/chrome-devtools/_toc.yaml
-        - include: /web/tools/lighthouse/_toc.yaml
-        - title: Workbox
-          path: /web/tools/workbox/
         - title: Web Starter Kit
           path: /web/tools/starter-kit/
-        - title: Polymer Starter Kit
-          path: /web/tools/polymer-starter-kit/
+          status: deprecated
+      - name: Chrome DevTools
+        contents:
+        - include: /web/tools/chrome-devtools/_toc.yaml
+      - name: Lighthouse
+        contents:
+        - include: /web/tools/lighthouse/_toc.yaml
+      - name: Workbox
+        contents:
+        - include: /web/tools/workbox/_toc.yaml
   - include: /web/_upper_tabs-Updates.yaml
   - include: /web/_upper_tabs-Showcase.yaml

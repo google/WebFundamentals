@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dalam komponen internalnya, setiap browser desktop sudah dilengkapi dengan serangkaian alat developer yang dapat Anda kembangkan dan tambahi dengan ekstensi atau plugin untuk browser Anda.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse の監査項目「ページの読み込み時に自動的に位置情報をリクエストしない」のリファレンス ドキュメント。
 

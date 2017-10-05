@@ -9,7 +9,7 @@ description: This is the page description placed in the head.
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-Updates and Case Studies use the same [styles and markdown](style-guide) as
+Updates and Case Studies use the same [styles and markdown](markdown-syntax) as
 [articles](writing-an-article), but have a few extra attributes that you can
 use to change how they're shown in different places across the site. You'll
 also need to [build the related](#build-related) files, like the listing
@@ -33,7 +33,7 @@ To get started quickly, copy the template and start there.
 
 ## YAML Front Matter & Special Attributes
 
-Refer to the [YAML Front Matter](style-guide#yaml-front-matter) section for
+Refer to the [YAML Front Matter](writing-an-article#yaml_front_matter) section for
 full details on the required YAML front matter.
 
 Note: You cannot include HTML in the description attribute. If you'd like to

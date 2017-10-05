@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:在本交互式教程中使用 Chrome DevTools 调试 JavaScript 入门。
 

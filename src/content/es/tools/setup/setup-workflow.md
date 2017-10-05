@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Configura la autoría persistente en Chrome DevTools para poder ver los cambios inmediatamente y guardarlos en el disco.
 

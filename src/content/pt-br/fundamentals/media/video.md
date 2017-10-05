@@ -60,7 +60,7 @@ Por exemplo:
 {% includecode content_path="web/fundamentals/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html){: target="_blank" .external }
 
 Quando o navegador analisa as tags `<source>`, ele usa o atributo opcional `type`
 para decidir qual arquivo baixar e reproduzir. Se o navegador oferecer
@@ -86,7 +86,7 @@ e a latência são escassas e a paciência do usuário provavelmente é limitada
 Não incluir um atributo type pode afetar o desempenho quando há
 várias fontes com tipos incompatíveis.
 
-Usando as ferramentas de desenvolvedor do seu navegador móvel, compare a atividade de rede [com atributos type](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external } e [sem atributos type](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html){: target="_blank" .external }.
+Usando as ferramentas de desenvolvedor do seu navegador móvel, compare a atividade de rede [com atributos type](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html){: target="_blank" .external } e [sem atributos type](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html){: target="_blank" .external }.
 
 Além disso, verifique os cabeçalhos de resposta nas ferramentas de desenvolvedor do navegador para 
 [garantir que o servidor reporte o tipo MIME certo](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types);
@@ -310,7 +310,7 @@ e plug-ins como o [FitVids](http://fitvidsjs.com/) permitem manter
 um tamanho e uma taxa de proporção apropriados, mesmo para vídeos Flash do YouTube e
 de outras fontes.
 
-Use [consultas de mídia CSS](/web/fundamentals/design-and-ui/responsive/#css-media-queries) para especificar o tamanho de elementos dependendo das dimensões da janela de visualização; `max-width: 100%` é muito útil.
+Use [consultas de mídia CSS](/web/fundamentals/design-and-ux/responsive/#css-media-queries) para especificar o tamanho de elementos dependendo das dimensões da janela de visualização; `max-width: 100%` é muito útil.
 
 Para conteúdo de mídia em iframes (como vídeos do YouTube), experimente uma abordagem
 responsiva (como a [proposta por John Surdakowski](http://avexdesigns.com/responsive-youtube-embed/)).
@@ -330,10 +330,10 @@ Warning: Não force dimensionamento de elementos que resulte em uma taxa de prop
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html){: target="_blank" .external }
 
-Compare o [exemplo responsivo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }
-à [versão não responsiva](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/unyt.html){: target="_blank" .external }.
+Compare o [exemplo responsivo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html){: target="_blank" .external }
+à [versão não responsiva](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/unyt.html){: target="_blank" .external }.
 
 
 ## Personalize o reprodutor de vídeos
@@ -437,7 +437,7 @@ os elementos são exibidos no modo de tela inteira.
 Em dispositivos compatíveis com a Fullscreen API, considere usar imagens
 de miniatura como marcadores para vídeos:
 
-Para ver esse recurso em ação, confira [esta demonstração](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html){: target="_blank" .external }.
+Para ver esse recurso em ação, confira [esta demonstração](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html){: target="_blank" .external }.
 
 Dogfood: `requestFullScreen()` pode ter prefixo de fornecedor e pode exigir códigos adicionais para ser totalmente compatível entre navegadores.
 
@@ -469,7 +469,7 @@ track como filho do elemento video:
 {% includecode content_path="web/fundamentals/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/track.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/track.html){: target="_blank" .external }
 
 O atributo `src` do elemento track fornece o local do arquivo da faixa.
 
@@ -642,7 +642,7 @@ atualizando-o com preocupações específicas a dispositivos móveis quando rele
   </tbody>
 </table>
 
-`playbackRate` ([veja a demonstração](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html){: target="_blank" .external }) ou `volume` não são suportados em dispositivos móveis.
+`playbackRate` ([veja a demonstração](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html){: target="_blank" .external }) ou `volume` não são suportados em dispositivos móveis.
 
 #### Métodos
 
@@ -674,7 +674,7 @@ atualizando-o com preocupações específicas a dispositivos móveis quando rele
 
 Em dispositivos móveis (exceto no Opera do Android), `play()` e `pause()` não funcionam
 a não ser que sejam chamados em resposta a uma ação do usuário, como o clique em um botão: confira 
-a [demonstração](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html){: target="_blank" .external }.
+a [demonstração](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html){: target="_blank" .external }.
 (Da mesma forma, não é possível iniciar a reprodução de conteúdo como vídeos
 incorporados do YouTube.)
 

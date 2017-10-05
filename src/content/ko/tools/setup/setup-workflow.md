@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools에서 지속적 작성을 설정하면 변경 내용을 즉시 확인하고 그러한 변경 내용을 디스크에 저장할 수 있습니다.
 

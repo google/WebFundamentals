@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“网站将 HTTP 流量重定向到 HTTPS”Lighthouse 审查的参考文档。
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Console API를 사용하여 실행 시간을 측정하고 문 실행을 계산합니다.
 

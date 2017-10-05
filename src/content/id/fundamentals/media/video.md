@@ -60,7 +60,7 @@ Misalnya:
 {% includecode content_path="web/fundamentals/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html){: target="_blank" .external }
 
 Ketika browser melakukan parse tag `<source>`, atribut `type`
 opsional digunakan untuk membantu memutuskan file mana yang diunduh dan dimainkan. Jika browser
@@ -86,7 +86,7 @@ dan latensi berharga premium, serta kesabaran pengguna ada batasnya.
 Belum lagi atribut tipe yang bisa memengaruhi kinerja ketika ada
 beberapa sumber dengan tipe yang tidak didukung.
 
-Dengan menggunakan alat developer browser seluler, bandingkan aktivitas jaringan [dengan atribut tipe](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external } dan [tanpa atribut tipe](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html){: target="_blank" .external }.
+Dengan menggunakan alat developer browser seluler, bandingkan aktivitas jaringan [dengan atribut tipe](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html){: target="_blank" .external } dan [tanpa atribut tipe](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html){: target="_blank" .external }.
 
 Periksa juga header respons dalam alat developer browser Anda untuk 
 [memastikan server melaporkan tipe MIME yang tepat](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types);
@@ -310,7 +310,7 @@ dan plugin seperti [FitVids](http://fitvidsjs.com/) memungkinkan untuk mempertah
 ukuran dan rasio aspek yang tepat, bahkan untuk video Flash dari YouTube dan
 sumber lainnya.
 
-Gunakan [kueri media CSS](/web/fundamentals/design-and-ui/responsive/#css-media-queries) untuk menentukan ukuran elemen bergantung pada dimensi tampilan yang terlihat; `max-width: 100%` adalah temanmu.
+Gunakan [kueri media CSS](/web/fundamentals/design-and-ux/responsive/#css-media-queries) untuk menentukan ukuran elemen bergantung pada dimensi tampilan yang terlihat; `max-width: 100%` adalah temanmu.
 
 Untuk materi media di iframes (seperti video YouTube), cobalah pendekatan
 responsif (seperti yang [dikemukakan oleh John Surdakowski](http://avexdesigns.com/responsive-youtube-embed/)).
@@ -330,10 +330,10 @@ Perhatian: Jangan memaksakan perubahan ukuran elemen yang mengakibatkan rasio as
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html){: target="_blank" .external }
 
-Bandingkan [contoh responsif](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }
-dengan [versi tidak responsif](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/unyt.html){: target="_blank" .external }.
+Bandingkan [contoh responsif](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html){: target="_blank" .external }
+dengan [versi tidak responsif](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/unyt.html){: target="_blank" .external }.
 
 
 ## Menyesuaikan pemutar video
@@ -437,7 +437,7 @@ elemen ditampilkan dalam mode layar penuh.
 Pada perangkat yang mendukung Fullscreen API, pertimbangkan untuk menggunakan gambar
 kecil sebagai Placeholder untuk video:
 
-Untuk melihatnya beraksi, silakan lihat [demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html){: target="_blank" .external }.
+Untuk melihatnya beraksi, silakan lihat [demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html){: target="_blank" .external }.
 
 Dogfood: `requestFullScreen()` mungkin berawalan vendor dan mungkin memerlukan kode tambahan untuk kompatibilitas penuh lintas browser.
 
@@ -469,7 +469,7 @@ track sebagai anak dari elemen video:
 {% includecode content_path="web/fundamentals/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
 </pre>
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/track.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/track.html){: target="_blank" .external }
 
 Atribut `src` elemen track memberikan lokasi file track.
 
@@ -642,7 +642,7 @@ langsung memperbaruinya dengan mempertimbangkan kebutuhan spesifik untuk seluler
   </tbody>
 </table>
 
-`playbackRate` ([lihat demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html){: target="_blank" .external }) maupun `volume` tidak didukung pada perangkat seluler.
+`playbackRate` ([lihat demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html){: target="_blank" .external }) maupun `volume` tidak didukung pada perangkat seluler.
 
 #### Metode
 
@@ -674,7 +674,7 @@ langsung memperbaruinya dengan mempertimbangkan kebutuhan spesifik untuk seluler
 
 Pada perangkat selular (selain Opera pada Android) `play()` dan `pause()` tidak berfungsi
 kecuali dipanggil sebagai respons terhadap aksi pengguna seperti mengeklik tombol: lihat 
-[demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html){: target="_blank" .external }.
+[demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html){: target="_blank" .external }.
 (Demikian juga, Anda tidak bisa melakukan pemutaran materi seperti video YouTube
 yang disematkan.)
 

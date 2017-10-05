@@ -1,5 +1,5 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/progressive-web-apps/_book.yaml
 title: Progressive Web Apps
 landing_page:
   custom_css_path: /web/progressive-web-apps/styles/wf-pwa.css

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Layar sentuh, chip GPS, dan akselerometer bisa sulit diuji karena sebagian desktop tidak memilikinya. Emulator sensor Chrome DevTools mengurangi biaya pengujian dengan mengemulasi sensor perangkat seluler yang umum.
 

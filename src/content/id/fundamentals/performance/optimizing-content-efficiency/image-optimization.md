@@ -111,7 +111,7 @@ Di lain pihak, gambar bitmap memunculkan tantangan yang jauh lebih besar karena 
 
 Bila kita menggandakan resolusi layar fisik, jumlah total piksel akan bertambah empat kali lipat: dua kali jumlah piksel horizontal, lalu kalikan dengan dua kali jumlah piksel vertikal. Karena itu, "2x" layar tidak hanya berlipat dua kali, namun berlipat empat dari piksel yang diperlukan!
 
-Jadi pada praktiknya seperti apa? Layar resolusi tinggi memungkinkan kita menghasilkan gambar yang indah, yang bisa jadi merupakan fitur produk yang hebat. Akan tetapi, layar resolusi tinggi juga membutuhkan gambar resolusi tinggi: pilihlah sedapat mungkin gambar vektor karena gambar ini bebas dari resolusi dan selalu menghasilkan gambar yang tajam, dan jika gambar bitmap diperlukan, berikan dan optimalkan beberapa variasi setiap gambar dengan bantuan [`srcset` dan `picture`](/web/fundamentals/design-and-ui/media/images#images-in-markup).
+Jadi pada praktiknya seperti apa? Layar resolusi tinggi memungkinkan kita menghasilkan gambar yang indah, yang bisa jadi merupakan fitur produk yang hebat. Akan tetapi, layar resolusi tinggi juga membutuhkan gambar resolusi tinggi: pilihlah sedapat mungkin gambar vektor karena gambar ini bebas dari resolusi dan selalu menghasilkan gambar yang tajam, dan jika gambar bitmap diperlukan, berikan dan optimalkan beberapa variasi setiap gambar dengan bantuan [`srcset` dan `picture`](/web/fundamentals/design-and-ux/media/images#images-in-markup).
 
 ## Mengoptimalkan gambar vektor
 

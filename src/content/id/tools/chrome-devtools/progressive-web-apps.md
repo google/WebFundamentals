@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Gunakan panel Application untuk memeriksa, memodifikasi, dan men-debug manifes aplikasi web, service worker, dan cache service worker.
 

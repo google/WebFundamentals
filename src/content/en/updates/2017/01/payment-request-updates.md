@@ -70,7 +70,7 @@ cards.
 ## Chrome 56
 ### pending
 As part of [payment item
-information](/web/fundamentals/getting-started/primers/payment-request/#create-paymentrequest),
+information](/web/fundamentals/payments/#create-paymentrequest),
 developers can add `pending` to indicate that the price is not fully determined
 yet. The `pending` field accepts a boolean value.
 
@@ -86,14 +86,14 @@ pending fields in the UI for the payment request.
 
 ### requestPayerName
 As part of [shipping
-option](/web/fundamentals/getting-started/primers/payment-request/#contact-information)
+option](/web/fundamentals/payments/#contact-information)
 (third argument to `PaymentRequest`), developers can now add `requestPayerName`
 to request the payer's name separate from shipping address information.
 `requestPayerName` accepts a boolean value.
 
 ### shippingType
 As part of [shipping
-option](/web/fundamentals/getting-started/primers/payment-request/#contact-information)
+option](/web/fundamentals/payments/#contact-information)
 (third argument to `PaymentRequest`), developers can now add `shippingType` to
 request that the UI show "delivery" or "pickup" instead of "shipping".
 `shippingType` accepts the strings `shipping` (default), `delivery`, or
@@ -112,7 +112,7 @@ request that the UI show "delivery" or "pickup" instead of "shipping".
 
 ### Serializer functions available to PaymentResponse and PaymentAddress
 [PaymentResponse
-object](/web/fundamentals/getting-started/primers/payment-request/#shipping-address)
+object](/web/fundamentals/payments/#shipping-address)
 and `PaymentAddress` object are now JSON-serializable. Developers can convert
 one to a JSON object by calling the `toJSON()` function and avoid creating
 cumbersome `toDict()` functions.

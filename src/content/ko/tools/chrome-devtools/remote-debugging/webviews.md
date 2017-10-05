@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome 개발자 도구를 사용하여 네이티브 Android 앱에서 WebView를 디버그합니다.
 

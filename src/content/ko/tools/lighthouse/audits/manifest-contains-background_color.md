@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 'background_color를 포함한 매니페스트' Lighthouse 감사의 참조 문서입니다.
 

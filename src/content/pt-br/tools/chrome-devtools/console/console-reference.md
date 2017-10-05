@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use a Console API para gravar informações no console, criar perfis JavaScript e iniciar uma sessão de depuração.
 

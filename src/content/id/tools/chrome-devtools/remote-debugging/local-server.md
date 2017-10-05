@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Host situs di server web mesin development, kemudian akseslah materinya dari perangkat Android.
 

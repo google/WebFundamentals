@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“页面在加载时不会自动请求通知权限”Lighthouse 审查的参考文档。
 
@@ -14,7 +14,7 @@ description:“页面在加载时不会自动请求通知权限”Lighthouse 审
 
 
 
-[good]: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+[good]: /web/fundamentals/push-notifications/
 
 ## 如何通过此审查{: #how }
 

@@ -60,7 +60,7 @@ description: 동영상을 사이트에 추가하고 모든 기기에서 사용�
 {% includecode content_path="web/fundamentals/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html){: target="_blank" .external }
 
 브라우저가 `<source>` 태그를 파싱할 때, 다운로드하고
 재생할 파일을 결정하기 위해 선택 항목인 `type` 속성을 사용합니다. 브라우저가
@@ -86,7 +86,7 @@ MPEG-4 동영상의 재생이 가능한지 확인합니다.
 유형 속성을 포함시키지 않으면, 지원되지 않는 유형을 가진
 여러 소스가 있는 경우 성능에 영향을 미칠 수 있습니다.
 
-모바일 브라우저 개발자 도구를 사용하여, [type 속성이 있는](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external } 네트워크 동작과 [type 속성이 없는](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html){: target="_blank" .external } 네트워크 동작을 비교합니다.
+모바일 브라우저 개발자 도구를 사용하여, [type 속성이 있는](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html){: target="_blank" .external } 네트워크 동작과 [type 속성이 없는](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html){: target="_blank" .external } 네트워크 동작을 비교합니다.
 
 또한 브라우저 개발자 도구의 응답 헤더에서
 [서버가 올바른 MIME 유형을 보고하는지 확인하세요](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types).
@@ -310,7 +310,7 @@ Caution: iOS를 제외한 대부분의 플랫폼은 Media Fragments API를 지�
 YouTube 및 기타 소스의 Flash 동영상에 대해서도 적절한 크기와
 가로세로 비율을 유지할 수 있습니다.
 
-[CSS 미디어 쿼리](/web/fundamentals/design-and-ui/responsive/#css-media-queries)를 사용하여 뷰포트 크기에 따라 요소의 크기를 지정하세요. `max-width: 100%`가 기본값입니다.
+[CSS 미디어 쿼리](/web/fundamentals/design-and-ux/responsive/#css-media-queries)를 사용하여 뷰포트 크기에 따라 요소의 크기를 지정하세요. `max-width: 100%`가 기본값입니다.
 
 iframe에 있는 미디어 콘텐츠의 경우(예: YouTube 동영상),
 반응형 접근방식을 시도해 보세요([John Surdakowski의 제안](http://avexdesigns.com/responsive-youtube-embed/)과 유사).
@@ -330,10 +330,10 @@ Caution: 원래 동영상과 가로세로 비율이 달라지므로, 요소의 �
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html){: target="_blank" .external }
 
-[반응형 샘플](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }을
-[비반응형 샘플](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/unyt.html){: target="_blank" .external }과 비교해 보세요.
+[반응형 샘플](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html){: target="_blank" .external }을
+[비반응형 샘플](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/unyt.html){: target="_blank" .external }과 비교해 보세요.
 
 
 ## 동영상 플레이어 사용자설정
@@ -437,7 +437,7 @@ iPad의 Safari에서는 동영상을 인라인으로 재생합니다.
 Fullscreen API를 지원하는 기기에서는, 썸네일
 이미지를 동영상의 자리표시자로 사용해보세요.
 
-실제 동작을 보려면, [데모](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html){: target="_blank" .external }를 확인하세요.
+실제 동작을 보려면, [데모](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html){: target="_blank" .external }를 확인하세요.
 
 Dogfood: `requestFullScreen()`은 공급업체에서 프리픽스될 수도 있으며, 브라우저 간의 완벽한 호환성을 위해 추가적인 코드가 필요할 수 있습니다.
 
@@ -469,7 +469,7 @@ Dogfood: `requestFullScreen()`은 공급업체에서 프리픽스될 수도 있�
 {% includecode content_path="web/fundamentals/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/track.html){: target="_blank" .external }
+[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/track.html){: target="_blank" .external }
 
 트랙 요소 `src` 속성은 트랙 파일의 위치를 지정합니다.
 
@@ -642,7 +642,7 @@ Android에서는 전혀 버퍼링이 없습니다. 즉, 데스크톱에는 발�
   </tbody>
 </table>
 
-모바일에서는 `playbackRate`([데모 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html){: target="_blank" .external }) 또는 `volume`이 지원되지 않습니다.
+모바일에서는 `playbackRate`([데모 참조](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html){: target="_blank" .external }) 또는 `volume`이 지원되지 않습니다.
 
 #### 메서드
 
@@ -674,7 +674,7 @@ Android에서는 전혀 버퍼링이 없습니다. 즉, 데스크톱에는 발�
 
 모바일(Android의 Opera는 제외)의 경우 버튼 클릭 등의
 사용자 액션에 응답하여 호출되어야만 `play()` 및 `pause()`가 작동합니다.
-[데모](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html){: target="_blank" .external }를 참조하세요.
+[데모](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html){: target="_blank" .external }를 참조하세요.
 (마찬가지로, 삽입된 YouTube 동영상 등의 콘텐츠에 대해 재생을 시작할 수
 없습니다.)
 

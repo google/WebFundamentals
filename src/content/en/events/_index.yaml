@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/events/_book.yaml
 title: Events
 landing_page:
   header:
-    description: Attend A Developer Event And Get Hacking
+    description: Attend a developer event and get hacking
 
   rows:
 
-  - heading: Find Events Near You
+  - heading: Find events near you
     classname: find-events
     items:
     - description: >
@@ -44,7 +44,7 @@ landing_page:
   - items:
     - custom_html: <hr>
 
-  - heading: Featured Events
+  - heading: Featured events
     items:
     - heading: Progressive Web Apps
       description: >

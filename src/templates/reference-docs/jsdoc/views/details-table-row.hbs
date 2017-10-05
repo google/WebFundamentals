@@ -1,0 +1,40 @@
+<tr>
+  {{#block 'details-table-name'}}
+    <td {{~cssClass '!details-table-name'}}>
+      <p>{{#if name}}{{name}}{{else}}{{translate 'tables.notApplicable'}}{{/if}}</p>
+    </td>
+  {{/block}}
+  <td>
+  {{#block 'details-table-optional'}}
+    {{#if optional}}
+      <p {{~cssClass '!details-table-optional'}}>{{translate 'tables.body.isOptional'}}</p>
+    {{/if}}
+  {{/block}}
+  {{#block 'details-table-types'}}
+    {{#if type}}
+      {{#all type type.parsedType}}
+        <p {{~cssClass '!details-table-types'}}>{{describeType type.parsedType 'extended'}}</p>
+      {{/all}}
+    {{/if}}
+  {{/block}}
+  {{#block 'details-table-description'}}
+    {{#if description}}
+      {{#markdown}}{{resolveLinks description}}{{/markdown}}
+    {{/if}}
+    {{#if (hasModifiers this)}}
+      <p>{{modifierText this}}</p>
+    {{/if}}
+    {{#if ../children}}
+      <p>{{translate 'tables.body.eachValueHasProperties' name=name}}</p>
+        {{#withOnly values=../children}}
+          {{#embed 'details-table'}}{{/embed}}
+        {{/withOnly}}
+    {{/if}}
+  {{/block}}
+  </td>
+</tr>
+
+{{!-- This produces extra <p>'s in the output
+<p {{~cssClass '!details-table-description'}}>
+  {{#markdown}}{{resolveLinks description}}{{/markdown}}</p>
+--}}

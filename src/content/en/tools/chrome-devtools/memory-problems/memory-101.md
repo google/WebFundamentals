@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: This section describes common terms used in memory analysis, and is applicable to a variety of memory profiling tools for different languages.
 

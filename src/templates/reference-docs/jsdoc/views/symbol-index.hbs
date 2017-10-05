@@ -1,0 +1,16 @@
+<div {{~cssClass '!symbol-index'}}>
+  {{#eachIndexGroup allLongnamesTree}}
+    <section>
+      <div {{~cssClass '!symbol-index-content'}}>
+        <h id="{{@groupName}}" {{~cssClass '!symbol-header'}}>{{@groupName}}</h>
+        <div {{~cssClass '!symbol-index-section'}}>
+          {{#each (group this 3)}}
+            {{#withOnly doclets=this}}
+              {{#embed 'symbol-index-section'}}{{/embed}}
+            {{/withOnly}}
+          {{/each}}
+        </div>
+      </div>
+    </section>
+  {{/eachIndexGroup}}
+</div>
