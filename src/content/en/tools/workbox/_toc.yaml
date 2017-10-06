@@ -20,3 +20,4 @@ toc:
   path: /web/tools/workbox/community
 - title: Github
   path: https://github.com/GoogleChrome/workbox
+  status: external

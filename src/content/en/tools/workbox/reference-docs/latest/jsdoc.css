@@ -22,7 +22,6 @@ h2 {
 
 h3.symbol-name {
   margin: 32px 0px 8px 0px;
-  border-top: 2px solid #037BB5;
 }
 
 h3.class-list:first-child {
@@ -49,7 +48,7 @@ td p {
 }
 
 p.type-signature {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: 80%;
   font-style: normal;
   font-variant: normal;
