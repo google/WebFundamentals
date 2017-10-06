@@ -103,7 +103,7 @@ Panduan Terkait:
 
 * [Pengantar Service Worker](/web/fundamentals/primers/service-worker)
 * [Pemberitahuan Push: Tepat Waktu, Relevan, dan
-  Tepat](/web/fundamentals/engage-and-retain/push-notifications)
+  Tepat](/web/fundamentals/push-notifications)
 
 Panel **Service Workers** di panel **Application** adalah tempat utama di
 DevTools untuk memeriksa dan men-debug service worker.
@@ -155,7 +155,7 @@ muncul.
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ## Cache service worker {:#caches}

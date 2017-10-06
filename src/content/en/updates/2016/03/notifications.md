@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: There are lots of great new features in Chrome 50 for Notifications, here is a rundown.
 
-{# wf_updated_on: 2016-03-13 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-03-13 #}
 {# wf_tags: notifications,chrome50 #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
@@ -163,6 +163,6 @@ The timestamp is currently only visible on Chrome for Android. Although it is
 not visible on desktop, it will affect the notification order on both mobile and
 desktop.
 
-Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/push-notifications)
 
 {% include "comment-widget.html" %}

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web Push now supports payloads! Find out how to take advantage of this powerful new feature.
 
-{# wf_updated_on: 2016-03-13 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-03-13 #}
 {# wf_tags: notifications,webpush,payload,encryption,chrome50 #}
 {# wf_featured_image: /web/updates/images/generic/encryption.png #}
@@ -40,7 +40,7 @@ in transit.
 ## Client-side changes
 
 If you have already
-[implemented push notifications without payloads](/web/fundamentals/engage-and-retain/push-notifications/)
+[implemented push notifications without payloads](/web/fundamentals/push-notifications)
 then there are only two small changes that you need to make on the client-side.
 
 This first is that when you send the subscription information to your backend
@@ -396,7 +396,7 @@ By getting your code to output each of the intermediate values of the
 encryption you can paste them into the verifier and check that you are on the
 right track.
 
-Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/push-notifications)
 
 
 {% include "comment-widget.html" %}

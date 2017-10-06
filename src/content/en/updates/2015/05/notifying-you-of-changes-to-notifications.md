@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: 2 new API's have been added in Chrome 44 which makes using Notifications with push easier to work with and customise.
 
-{# wf_updated_on: 2015-07-16 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2015-05-21 #}
 {# wf_tags: news,webpush,notifications,data #}
 
@@ -320,6 +320,6 @@ This can be used like so:
         showOptInUIForNotifications();
     }
     
-Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/push-notifications)
 
 {% include "comment-widget.html" %}

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-09-27 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-09-27 #}
 
 <style>
@@ -25,7 +25,7 @@ personalizado e relevante.
 A Push API e a Notification API abrem um novo mundo de
 possibilidades para que você envolva novamente os usuários.
 
-[Primeiros passos](engage-and-retain/push-notifications/){: .button .button-primary}
+[Primeiros passos](push-notifications){: .button .button-primary}
 
 ## Atualizações mais recentes para desenvolvedores Web {: .hide-from-toc }
 

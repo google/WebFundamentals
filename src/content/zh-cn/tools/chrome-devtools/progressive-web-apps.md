@@ -96,7 +96,7 @@ Console 会告诉您清单是否存在任何问题，并记录与 Add to Homescr
 相关指南：
 
 * [服务工作线程简介](/web/fundamentals/primers/service-worker)
-* [推送通知：及时、相关且精确](/web/fundamentals/engage-and-retain/push-notifications)
+* [推送通知：及时、相关且精确](/web/fundamentals/push-notifications)
 
 
 **Application** 面板中的 **Service Workers** 窗格是在 DevTools 中检查和调试服务工作线程的主要地方。
@@ -130,7 +130,7 @@ Console 会告诉您清单是否存在任何问题，并记录与 Add to Homescr
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ## 服务工作线程缓存 {:#caches}

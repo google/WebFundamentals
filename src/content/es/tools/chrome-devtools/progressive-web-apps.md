@@ -103,7 +103,7 @@ Guías relacionadas:
 
 * [Introducción a Service Workers](/web/fundamentals/primers/service-worker)
 * [Notificaciones push: oportunas, relevantes y
-  precisas](/web/fundamentals/engage-and-retain/push-notifications)
+  precisas](/web/fundamentals/push-notifications)
 
 El subpanel **Service Workers** del panel **Application** es el punto central de
 DevTools donde se inspeccionan y depuran los service worker.
@@ -155,7 +155,7 @@ Si el service worker causa algún error, aparece una etiqueta llamada **Errors**
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ## Cachés de service worker {:#caches}

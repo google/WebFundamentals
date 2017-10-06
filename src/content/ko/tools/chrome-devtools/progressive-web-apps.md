@@ -103,7 +103,7 @@ debugging]을 통해 DevTools에 연결한 다음 DevTools의 **Add to Homescree
 
 * [서비스 워커 소개](/web/fundamentals/primers/service-worker)
 * [푸시 알림: 시기 적절, 관련성,
-  섬세함](/web/fundamentals/engage-and-retain/push-notifications)
+  섬세함](/web/fundamentals/push-notifications)
 
 **Application** 패널의 **Service Workers** 창은 DevTools에서 서비스 워커를 검사하고 디버그하기 위한
 기본 장소입니다.
@@ -155,7 +155,7 @@ debugging]을 통해 DevTools에 연결한 다음 DevTools의 **Add to Homescree
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ## 서비스 워커 캐시 {:#caches}

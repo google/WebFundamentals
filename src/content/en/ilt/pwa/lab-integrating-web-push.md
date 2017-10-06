@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-11T20:49:17Z #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -1048,7 +1048,7 @@ In this lab we have learned how to create notifications and configure them so th
 #### Introduction to push notifications
 
 *  [Enable Push Notifications for your Web App](/web/fundamentals/getting-started/push-notifications/)
-*  [Web Push Notifications: Timely, Relevant, and Precise](/web/fundamentals/engage-and-retain/push-notifications/)
+*  [Web Push Notifications: Timely, Relevant, and Precise](/web/fundamentals/push-notifications)
 
 #### Demos
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Dalam codelab ini, Anda akan mempelajari cara menambahkan pemberitahuan push ke aplikasi web.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -643,13 +643,13 @@ Anda seharusnya bisa menekan  *Enable Push Messaging*  /  *Disable Push Messagin
 
 Selamat telah menyelesaikan codelab ini!
 
-Code lab ini menunjukkan kepada Anda cara bangun dan berjalan dengan menambahkan push ke aplikasi web Anda. Jika Anda ingin mengetahui selengkapnya tentang apa yang bisa dilakukan notifikasi web,  [lihat dokumen ini](/web/fundamentals/engage-and-retain/push-notifications/). 
+Code lab ini menunjukkan kepada Anda cara bangun dan berjalan dengan menambahkan push ke aplikasi web Anda. Jika Anda ingin mengetahui selengkapnya tentang apa yang bisa dilakukan notifikasi web,  [lihat dokumen ini](/web/fundamentals/push-notifications).
 
 Jika Anda ingin menerapkan push pada situs, Anda mungkin tertarik untuk menambahkan dukungan bagi compliant browser lama / non-standar yang menggunakan GCM, [ketahui selengkapnya di sini](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/).
 
 ### Bacaan Lebih Lanjut
 
-*  Dokumentasi [Pemberitahuan Push Web](/web/fundamentals/engage-and-retain/push-notifications/) pada Web__Fundamentals__
+*  Dokumentasi [Pemberitahuan Push Web](/web/fundamentals/push-notifications) pada Web__Fundamentals__
 *  [Pustaka Web Push](https://github.com/web-push-libs/) - Pustaka Web Push termasuk Node.js, PHP, Java dan Python.
 
 #### Entri blog terkait

@@ -103,7 +103,7 @@ Guias relacionados:
 
 * [Introdução aos service workers](/web/fundamentals/primers/service-worker)
 * [Notificações push: Pertinentes, relevantes e
-  precisas](/web/fundamentals/engage-and-retain/push-notifications)
+  precisas](/web/fundamentals/push-notifications)
 
 O painel **Service Workers** na seção **Application** é o lugar no
 DevTools para inspecionar e depurar service workers.
@@ -155,7 +155,7 @@ exibido.
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ## Caches do service worker {:#caches}

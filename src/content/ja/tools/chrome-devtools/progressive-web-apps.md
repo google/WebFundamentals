@@ -97,7 +97,7 @@ Service Worker は、将来のウェブ プラットフォームの基礎とな�
 関連ガイド:
 
 * [Service Worker の概要](/web/fundamentals/primers/service-worker)
-* [プッシュ通知:タイムリー、有用、的確](/web/fundamentals/engage-and-retain/push-notifications)
+* [プッシュ通知:タイムリー、有用、的確](/web/fundamentals/push-notifications)
 
 
 [**Application**] パネルの [**Service Workers**] ペインは、DevTools で Service Worker の調査やデバッグを行う際の主要な場所です。
@@ -135,7 +135,7 @@ Service Worker でエラーが発生すると、[**Errors**] という新しい�
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ##  Service Worker のキャッシュ{:#caches}
