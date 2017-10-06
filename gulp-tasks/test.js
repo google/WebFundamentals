@@ -21,6 +21,7 @@ const wfHelper = require('./wfHelper');
 const parseDiff = require('parse-diff');
 const remarkLint = require('remark-lint');
 const runSequence = require('run-sequence');
+const jsonValidator = require('jsonschema').Validator;
 
 /******************************************************************************
  * Constants & Remark Lint Options
@@ -256,20 +257,17 @@ function readFile(filename) {
 }
 
 /**
- * Checks if a linked file exists.
+ * Checks if a file exists.
  *
  * @param {string} filename The WebFundamentals file path.
  * @return {Boolean} True if it exists, false if not.
  */
-function doesWFFileExist(filename) {
+function doesFileExist(filename) {
   if (!filename) {
     return false;
   }
   filename = filename.trim();
-  if (filename.indexOf('/web') === 0) {
-    filename = filename.replace('/web', '');
-  }
-  filename = path.join('./src/content/en', filename);
+  filename = filename.replace(/^\/?web\/(.*)/, 'src/content/en/$1');
   try {
     fs.accessSync(filename, fs.R_OK);
     return true;
@@ -420,7 +418,7 @@ function testMarkdown(filename, contents, options) {
     }
     if (bookPath && bookPath[1] && !isInclude) {
       msg = 'Unable to find specified `book_path`:'
-      if (doesWFFileExist(bookPath[1]) !== true) {
+      if (doesFileExist(bookPath[1]) !== true) {
         logError(filename, null, `${msg} ${bookPath[1]}`);
       }
     }
@@ -433,7 +431,7 @@ function testMarkdown(filename, contents, options) {
     }
     if (projectPath && projectPath[1] && !isInclude) {
       msg = 'Unable to find specified `project_path`:'
-      if (doesWFFileExist(projectPath[1]) !== true) {
+      if (doesFileExist(projectPath[1]) !== true) {
         logError(filename, null, `${msg} ${projectPath[1]}`);
       }
     }
@@ -505,7 +503,7 @@ function testMarkdown(filename, contents, options) {
     // Validate featured image path
     matched = wfRegEx.RE_IMAGE.exec(contents);
     if (matched) {
-      if (doesWFFileExist(matched[1]) !== true) {
+      if (doesFileExist(matched[1]) !== true) {
         position = {line: getLineNumber(contents, matched.index)};
         msg = 'WF Tag `wf_featured_image` found, but couldn\'t find ';
         msg += `image - ${matched[1]}`;
@@ -516,7 +514,7 @@ function testMarkdown(filename, contents, options) {
     // Validate featured square image path
     matched = wfRegEx.RE_IMAGE_SQUARE.exec(contents);
     if (matched) {
-      if (doesWFFileExist(matched[1]) !== true) {
+      if (doesFileExist(matched[1]) !== true) {
         position = {line: getLineNumber(contents, matched.index)};
         msg = 'WF Tag `wf_featured_image_square` found, but couldn\'t find ';
         msg += `image - ${matched[1]}`;
@@ -625,18 +623,13 @@ function testMarkdown(filename, contents, options) {
         return;
       }
       position = {line: getLineNumber(contents, include.index)};
-      if (inclFile.indexOf('web/') === 0) {
-        let inclPath = inclFile.replace('web/', 'src/content/en/');
-        try {
-          fs.accessSync(inclPath, fs.R_OK);
-        } catch (ex) {
-          msg = '`{% include %}` tag found, but couldn\'t find related '
-          msg += 'include ' + inclFile + ' -- ' + inclPath;
-          logError(filename, position, msg);
-        }
-      } else {
+      if (inclFile.indexOf('web/') !== 0) {
         msg = `Include path MUST start with \`web/\` - ${inclFile}`;
         logError(filename, position, msg);
+      }
+      if (doesFileExist(inclFile) !== true) {
+        msg = '`{% include %}` tag found, but couldn\'t find related include'
+        logError(filename, position, `${msg}: ${inclFile}`);
       }
     });
 
@@ -650,10 +643,7 @@ function testMarkdown(filename, contents, options) {
       if (inclFile.indexOf('web/') !== 0) {
         logError(filename, position, `${msg} path must start with 'web/'`);
       }
-      try {
-        const localPath = inclFile.replace('web/', GLOBAL.WF.src.content);
-        fs.accessSync(localPath, fs.R_OK);
-      } catch (ex) {
+      if (doesFileExist(inclFile) !== true) {
         logError(filename, position, `${msg} file not found: '${inclFile}'`);
       }
     });
@@ -661,15 +651,10 @@ function testMarkdown(filename, contents, options) {
     // Verify all <<include.md>> markdown files are accessible
     matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDE_MD, contents);
     matched.forEach(function(match) {
-      let inclPath;
-      let inclFile = match[1];
-      try {
-        inclPath = path.resolve(path.parse(filename).dir, inclFile);
-        fs.accessSync(inclPath, fs.R_OK);
-      } catch (ex) {
+      let inclFile = path.resolve(path.parse(filename).dir, match[1]);
+      if (doesFileExist(inclFile) !== true) {
         position = {line: getLineNumber(contents, match.index)};
-        msg = `Markdown include ${match[0]} found, but couldn't find `;
-        msg += `actual file: ${inclPath}`;
+        msg = `Markdown include ${match[0]} found, but couldn't find file.`;
         logError(filename, position, msg);
       }
     });
@@ -887,6 +872,77 @@ function testCommonTags(filename, contents) {
 }
 
 /**
+ * Tests and validates a _project.yaml file.
+ *   Note: The returned promise always resolves, it will never reject.
+ *
+ * @param {string} filename The name of the file to be tested.
+ * @param {string} contents The unparsed contents of the contributors file. 
+ * @return {Promise} A promise with the result of the test.
+ */
+function testProject(filename, contents) {
+  return new Promise(function(resolve, reject) {
+    const project = parseYAML(filename, contents);
+    jsonValidator.prototype.customFormats.wfUAString = function(input) {
+      return input === 'UA-52746336-1'
+    }
+    const schemaProject = {
+      id: '/Project',
+      type: 'object',
+      properties: {
+        is_family_root: {type: 'boolean'},
+        parent_project_metadata_path: {
+          type: 'string',
+          pattern: /^\/web\/_project.yaml$/
+        },
+        name: {type: 'string', required: true},
+        description: {type: 'string', required: true},
+        home_url: {type: 'string', pattern: /^\/web\//i, required: true},
+        color: {type: 'string', pattern: /^google-blue$/, required: true},
+        buganizer_id: {type: 'number', pattern: /^180451$/, required: true},
+        content_license: {
+          type: 'string',
+          pattern: /^cc3-apache2$/,
+          required: true
+        },
+        footer_path: {type: 'string', required: true},
+        icon: {
+          type: 'object',
+          properties: {
+            path: {type: 'string', required: true}
+          },
+          additionalProperties: false,
+          required: true,
+        },
+        google_analytics_ids: {
+          type: 'array',
+          items: {type: 'string', format: 'wfUAString'},
+          required: true
+        },
+        tags: {type: 'array'},
+        announcement: {
+          type: 'object',
+          properties: {
+            description: {type: 'string', required: true},
+            start: {type: 'string', required: true},
+            end: {type: 'string', required: true},
+          },
+          additionalProperties: false
+        }
+      },
+      additionalProperties: false,
+    }
+    let validator = new jsonValidator();
+    validator.validate(project, schemaProject).errors.forEach((err) => {
+      let msg = `${err.stack || err.message}`;
+      msg = msg.replace('{}', '(' + err.instance + ')');
+      logError(filename, null, msg);
+    });
+    resolve();
+  });
+}
+
+
+/**
  * Tests and validates a contributors.yaml file.
  *   Note: The returned promise always resolves, it will never reject.
  *
@@ -898,21 +954,71 @@ function testContributors(filename, contents) {
   return new Promise(function(resolve, reject) {
     let msg;
     let contributors = parseYAML(filename, contents);
+    const schemaContributors = {
+      id: '/Contributors',
+      patternProperties: {
+        '.*': {$ref: '/Contributor'}
+      },
+      properties: {
+        index: {
+          not: 'any'
+        },
+      }
+    };
+    const schemaContributor = {
+      id: '/Contributor',
+      properties: {
+        name: {
+          type: 'object',
+          properties: {
+            given: {type: 'string'},
+            family: {type: 'string'},
+          },
+          required: ['given'],
+          additionalProperties: false,
+        },
+        org: {
+          type: 'object',
+          properties: {
+            name: {type: 'string'},
+            unit: {type: 'string'},
+          },
+          additionalProperties: false,
+        },
+        homepage: {type: 'string', pattern: /^https?:\/\//i},
+        google: {type: 'string', pattern: /^(\+[a-z].*$|[0-9].*$)/i},
+        twitter: {type: 'string', pattern: /^[a-z0-9_-]+$/i},
+        github: {type: 'string', pattern: /^[a-z0-9_-]+$/i},
+        lanyrd: {type: 'string', pattern: /^[a-z0-9_-]+$/i},
+        description: {
+          type: 'object',
+          properties: {
+            en: {type: 'string'},
+          },
+          additionalProperties: false,
+        },
+        role: {type: 'array'},
+        country: {type: 'string'},
+        email: {type: 'string'}
+      },
+      required: ['name'],
+      additionalProperties: false,
+    };
+    let validator = new jsonValidator();
+    validator.addSchema(schemaContributor, schemaContributor.id);
+    validator.validate(contributors, schemaContributors)
+      .errors.forEach((err) => {
+        let msg = `${err.stack || err.message}`;
+        msg = msg.replace('{}', '(' + err.instance + ')');
+        logError(filename, null, msg);
+      }
+    );
     let prevFamilyName = '';
-    Object.keys(contributors).forEach(function(key) {
-      let contributor = contributors[key];
-      let familyName = contributor.name.family || contributor.name.given;
-      if (key.toLowerCase() === 'index') {
-        msg = '"index" is not a valid name for a contributor.';
-        logError(filename, null, msg);
-      }
+    Object.keys(contributors).forEach((key) => {
+      const contributor = contributors[key];
+      const familyName = contributor.name.family || contributor.name.given;
       if (prevFamilyName.toLowerCase() > familyName.toLowerCase()) {
-        msg = `Contributors must be sorted by family name. `;
-        msg += `${prevFamilyName} came before ${familyName}`;
-        logError(filename, null, msg);
-      }
-      if (contributor.google && typeof contributor.google !== 'string') {
-        msg = `Google+ ID for ${key} must be a string.`;
+        const msg = `${prevFamilyName} came before ${key}`;
         logError(filename, null, msg);
       }
       prevFamilyName = familyName;
@@ -934,19 +1040,51 @@ function testGlossary(filename, contents) {
   return new Promise(function(resolve, reject) {
     const msg = 'Glossary must be sorted alphabetically by term.'; 
     const glossary = parseYAML(filename, contents);
-    let prevTermName = '';
-    glossary.forEach((term) => {
-      if (!term.term) {
-        logError(filename, null, `'term' is missing`);
+    const schemaGlossary = {
+      id: '/Glossary',
+      type: 'array',
+      items: {$ref: '/GlossaryItem'}
+    };
+    const schemaGlossaryItem = {
+      id: '/GlossaryItem',
+      type: 'object',
+      properties: {
+        term: {type: 'string', required: true},
+        description: {type: 'string', required: true},
+        acronym: {type: 'string'},
+        see: {$ref: '/GlossaryLink'},
+        blink_component: {type: 'string'},
+        tags: {type: 'array'},
+        links: { type: 'array', items: {$ref: '/GlossaryLink'}},
+      },
+      additionalProperties: false,
+    };
+    const schemaGlossaryLink = {
+      id: '/GlossaryLink',
+      properties: {
+        title: {type: 'string', required: true},
+        link: {type: 'string', required: true},
+      },
+      additionalProperties: false
+    };
+    let validator = new jsonValidator();
+    validator.addSchema(schemaGlossaryItem, schemaGlossaryItem.id);
+    validator.addSchema(schemaGlossaryLink, schemaGlossaryLink.id);
+    validator.validate(glossary, schemaGlossary).errors.forEach((err) => {
+      let msg = `${err.stack || err.message}`;
+      msg = msg.replace('{}', '(' + err.instance + ')');
+      if (err.argument === 'description' && err.name === 'required') {
+        logWarning(filename, null, msg);
         return;
       }
+      logError(filename, null, msg);
+    });
+    let prevTermName = '';
+    glossary.forEach((term) => {
       const termName = term.term.toLowerCase();
-      if (!term.description) {
-        logWarning(filename, null, `${termName} is missing description`);
-      }
       if (prevTermName > termName) {
-        const extra = `'${prevTermName}' came before '${termName}'`;
-        logError(filename, null, `${msg} ${extra}`);
+        const msg = `'${prevTermName}' came before '${termName}'`;
+        logError(filename, null, msg);
       }
       prevTermName = termName;
     });
@@ -965,16 +1103,38 @@ function testGlossary(filename, contents) {
 function testRedirects(filename, contents) {
   return new Promise(function(resolve, reject) {
     let parsed = parseYAML(filename, contents);
-    let filepath = path.dirname(filename).split('/').splice(3).join('/');
-    filepath = path.join('/', 'web', filepath, '/');
-    if (parsed.redirects && parsed.redirects.length > 0) {
-      parsed.redirects.forEach((item) => {
-        if (!item.from.startsWith(filepath)) {
-          let msg = `Must only redirect from paths below "${filepath}"`;
-          logError(filename, null, msg);
-        }
-      });
+    let fromPattern = path.dirname(filename).split('/').splice(3).join('/');
+    fromPattern = path.join('/', 'web', fromPattern, '/');
+    const schemaRedirects = {
+      id: '/Redirects',
+      type: 'object',
+      properties: {
+        redirects: {type: 'array', items: {$ref: '/RedirectItem'}}
+      },
+      additionalProperties: false,
+      required: ['redirects']
     };
+    const schemaRedirectItem = {
+      id: '/RedirectItem',
+      type: 'object',
+      properties: {
+        to: {type: 'string', required: true},
+        from: {
+          type: 'string',
+          pattern: new RegExp('^' + fromPattern.replace(/\//g, '\\/')),
+          required: true
+        },
+        temporary: {type: 'boolean'},
+      },
+      additionalProperties: false,
+    };
+    let validator = new jsonValidator();
+    validator.addSchema(schemaRedirectItem, schemaRedirectItem.id);
+    validator.validate(parsed, schemaRedirects).errors.forEach((err) => {
+      let msg = err.stack || err.message;
+      msg = msg.replace('{}', '(' + err.instance + ')');
+      logError(filename, null, msg);
+    });
     resolve();
   });
 }
@@ -1068,6 +1228,8 @@ function testFile(filename, opts) {
       testPromise = testGlossary(filename, contents);
     } else if (filenameObj.base === '_redirects.yaml') {
       testPromise = testRedirects(filename, contents);
+    } else if (filenameObj.base === '_project.yaml') {
+      testPromise = testProject(filename, contents);
     } else if (filenameObj.base === 'commontags.json') {
       testPromise = testCommonTags(filename, contents);
     } else if (MD_FILES.indexOf(filenameObj.ext) >= 0) {
