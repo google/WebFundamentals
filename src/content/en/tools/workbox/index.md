@@ -2,8 +2,8 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Service Worker Libraries.
 
-{# wf_published_on: 2015-01-01 #}
-{# wf_updated_on: 2017-05-16 #}
+{# wf_published_on: 2017-10-04 #}
+{# wf_updated_on: 2017-10-04 #}
 
 # Workbox {: .page-title }
 
@@ -46,7 +46,7 @@ requests and uses the Background Sync API to replay those requests when the user
 comes back online.
 
 Workbox is a rethink our previous service worker libraries and tools,
-`sw-toolbox` and `sw-precache`, and is designed to be more modular, 
+`sw-toolbox` and `sw-precache`, and is designed to be more modular,
 flexible, and extensible.
 
 [Get Workbox](https://workboxjs.org/){: .button .button-primary }
