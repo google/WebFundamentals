@@ -4,7 +4,7 @@ description: Top-level await operators in the Console, new screenshot workflows,
 
 {# wf_updated_on: 2017-10-03 #}
 {# wf_published_on: 2017-08-29 #}
-{# wf_tags: chrome62,devtools #}
+{# wf_tags: chrome62,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: Top-level await operators in the Console, new screenshot workflows, CSS Grid highlighting, and more. #}
 
