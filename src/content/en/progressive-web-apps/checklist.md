@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/progressive-web-apps/_book.yaml
 description: A checklist which breaks down all the things we think it takes to be a baseline progressive web app, and how to take it a step further with an exemplary progressive web app. 
 
-{# wf_updated_on: 2017-09-26 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-11-07 #}
 
 # Progressive Web App Checklist {: .page-title }
@@ -119,7 +119,7 @@ on the this list and may prove helpful in easily testing sites.
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Add a <a href="/web/fundamentals/engage-and-retain/web-app-manifest/">
+        Add a <a href="/web/fundamentals/web-app-manifest">
         Web App Manifest</a> file to your project.
       </td>
     </tr>

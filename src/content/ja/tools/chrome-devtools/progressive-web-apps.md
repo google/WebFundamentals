@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: [Application] パネルを使用して、ウェブアプリ マニフェスト、Service Worker、Service Worker のキャッシュの調査、変更、およびデバッグを行うことができます。
 
-{# wf_updated_on:2016-07-25 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on:2016-07-25 #}
 
 # Progressive Web App のデバッグ {: .page-title }
@@ -38,7 +38,7 @@ description: [Application] パネルを使用して、ウェブアプリ マニ�
 
 関連ガイド:
 
-* [ウェブアプリ マニフェストによるユーザー エクスペリエンスの向上](/web/fundamentals/engage-and-retain/web-app-manifest)
+* [ウェブアプリ マニフェストによるユーザー エクスペリエンスの向上](/web/fundamentals/web-app-manifest)
 * [アプリのインストール バナーの使用](/web/fundamentals/engage-and-retain/app-install-banners)
 
 

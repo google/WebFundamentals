@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Gunakan panel Application untuk memeriksa, memodifikasi, dan men-debug manifes aplikasi web, service worker, dan cache service worker.
 
-{# wf_updated_on: 2016-07-25 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-07-25 #}
 
 # Men-debug Progressive Web App {: .page-title }
@@ -39,7 +39,7 @@ apa aplikasi terlihat saat peluncuran.
 Panduan Terkait:
 
 * [Meningkatkan pengalaman pengguna dengan Manifes
-  Aplikasi Web](/web/fundamentals/engage-and-retain/web-app-manifest)
+  Aplikasi Web](/web/fundamentals/web-app-manifest)
 * [Menggunakan Spanduk
   Pemasangan Aplikasi](/web/fundamentals/engage-and-retain/app-install-banners)
 

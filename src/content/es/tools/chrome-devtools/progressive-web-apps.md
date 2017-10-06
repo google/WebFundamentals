@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Usa el panel Application para inspeccionar, modificar y depurar manifiestos de apps web, service worker y cachés de service worker.
 
-{# wf_updated_on: 2016-07-25 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-07-25 #}
 
 # Depurar Progressive Web App {: .page-title }
@@ -39,7 +39,7 @@ aspecto de la app durante el inicio.
 Guías relacionadas:
 
 * [Mejora la experiencia del usuario con el manifiesto de apps
-  web](/web/fundamentals/engage-and-retain/web-app-manifest)
+  web](/web/fundamentals/web-app-manifest)
 * [Uso de banners de instalación
   de app](/web/fundamentals/engage-and-retain/app-install-banners)
 

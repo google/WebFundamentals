@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use o painel Application para inspecionar, modificar e depurar manifestos, service workers e caches de service worker de aplicativos da Web.
 
-{# wf_updated_on: 2016-07-25 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-07-25 #}
 
 # Depurar Progressive Web Apps {: .page-title }
@@ -39,7 +39,7 @@ do aplicativo quando ele é iniciado.
 Guias relacionados:
 
 * [Melhore a experiência do usuário com um manifesto de
- aplicativo da Web](/web/fundamentals/engage-and-retain/web-app-manifest)
+ aplicativo da Web](/web/fundamentals/web-app-manifest)
 * [Como usar banners de
   instalação de aplicativo](/web/fundamentals/engage-and-retain/app-install-banners)
 

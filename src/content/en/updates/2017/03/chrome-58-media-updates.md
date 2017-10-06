@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 58.
 
-{# wf_updated_on: 2017-09-20 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2017-03-21 #}
 {# wf_tags: news,chrome58,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
@@ -231,6 +231,6 @@ Usage in JavaScript:
 [remoteplayback]: https://w3c.github.io/remote-playback/
 [ControlsList API]: https://github.com/WICG/controls-list/blob/gh-pages/explainer.md
 [improved Add to Home screen]: https://blog.chromium.org/2017/02/integrating-progressive-web-apps-deeply.html
-[web app manifest]: /web/fundamentals/engage-and-retain/web-app-manifest/
+[web app manifest]: /web/fundamentals/web-app-manifest
 [Improving Color on the Web]: https://webkit.org/blog/6682/improving-color-on-the-web/
 [switch between encrypted and clear streams]: /web/updates/2017/03/mixing-streams

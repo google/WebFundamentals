@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用 Application 面板检查、修改和调试网络应用清单、服务工作线程和服务工作线程缓存。
 
-{# wf_updated_on:2016-07-25 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on:2016-07-25 #}
 
 # 调试 Progressive Web App {: .page-title }
@@ -38,7 +38,7 @@ description:使用 Application 面板检查、修改和调试网络应用清单�
 
 相关指南：
 
-* [通过网络应用清单改进用户体验](/web/fundamentals/engage-and-retain/web-app-manifest)
+* [通过网络应用清单改进用户体验](/web/fundamentals/web-app-manifest)
 * [使用应用安装横幅](/web/fundamentals/engage-and-retain/app-install-banners)
 
 

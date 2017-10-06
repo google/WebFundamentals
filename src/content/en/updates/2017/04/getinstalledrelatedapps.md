@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Is your native app already installed? getInstalledRelatedApps is your friend.
 
 {# wf_published_on: 2017-04-28 #}
-{# wf_updated_on: 2017-07-31 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 {# wf_tags: progressive-web-apps,chrome59 #}
 {# wf_featured_snippet: Is your native app already installed? getInstalledRelatedApps is your friend. #}
@@ -57,7 +57,7 @@ described in more detail.
 ### Define the relationship to your native app in your Web App Manifest
 
 You need to ensure that you have a [Web App Manifest linked to from your
-site](/web/fundamentals/engage-and-retain/web-app-manifest/).
+site](/web/fundamentals/web-app-manifest).
 In the manifest you must define a related_applications property that contains a
 list of the apps that you want to detect. The related_applications property is
 an array of objects that contain the platform on which the app is hosted and the
