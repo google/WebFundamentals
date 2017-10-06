@@ -123,7 +123,7 @@ gulp.task('build:http203Podcast', function() {
     subtitle: 'Where Surma and Jake occasionally talk web.',
     author: {name: 'Surma & Jake', email: 'jaffathecake@gmail.com'},
     summary: 'Surma and Jake talk about whatever\'s going on in the world of web development.',
-    image: 'https://developers.google.com/web/shows/http203/podcast/images/surma-and-jake.jpg',
+    image: 'https://developers.google.com/web/shows/http203/podcast/images/surma-and-jake-2.jpg',
     section: 'shows',
     outputPath: baseOutputPath,
     baseUrl: 'https://developers.google.com/web/shows/http203/podcast/'
