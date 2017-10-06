@@ -872,6 +872,77 @@ function testCommonTags(filename, contents) {
 }
 
 /**
+ * Tests and validates a _project.yaml file.
+ *   Note: The returned promise always resolves, it will never reject.
+ *
+ * @param {string} filename The name of the file to be tested.
+ * @param {string} contents The unparsed contents of the contributors file. 
+ * @return {Promise} A promise with the result of the test.
+ */
+function testProject(filename, contents) {
+  return new Promise(function(resolve, reject) {
+    const project = parseYAML(filename, contents);
+    jsonValidator.prototype.customFormats.wfUAString = function(input) {
+      return input === 'UA-52746336-1'
+    }
+    const schemaProject = {
+      id: '/Project',
+      type: 'object',
+      properties: {
+        is_family_root: {type: 'boolean'},
+        parent_project_metadata_path: {
+          type: 'string',
+          pattern: /^\/web\/_project.yaml$/
+        },
+        name: {type: 'string', required: true},
+        description: {type: 'string', required: true},
+        home_url: {type: 'string', pattern: /^\/web\//i, required: true},
+        color: {type: 'string', pattern: /^google-blue$/, required: true},
+        buganizer_id: {type: 'number', pattern: /^180451$/, required: true},
+        content_license: {
+          type: 'string',
+          pattern: /^cc3-apache2$/,
+          required: true
+        },
+        footer_path: {type: 'string', required: true},
+        icon: {
+          type: 'object',
+          properties: {
+            path: {type: 'string', required: true}
+          },
+          additionalProperties: false,
+          required: true,
+        },
+        google_analytics_ids: {
+          type: 'array',
+          items: {type: 'string', format: 'wfUAString'},
+          required: true
+        },
+        tags: {type: 'array'},
+        announcement: {
+          type: 'object',
+          properties: {
+            description: {type: 'string', required: true},
+            start: {type: 'string', required: true},
+            end: {type: 'string', required: true},
+          },
+          additionalProperties: false
+        }
+      },
+      additionalProperties: false,
+    }
+    let validator = new jsonValidator();
+    validator.validate(project, schemaProject).errors.forEach((err) => {
+      let msg = `${err.stack || err.message}`;
+      msg = msg.replace('{}', '(' + err.instance + ')');
+      logError(filename, null, msg);
+    });
+    resolve();
+  });
+}
+
+
+/**
  * Tests and validates a contributors.yaml file.
  *   Note: The returned promise always resolves, it will never reject.
  *
@@ -883,21 +954,71 @@ function testContributors(filename, contents) {
   return new Promise(function(resolve, reject) {
     let msg;
     let contributors = parseYAML(filename, contents);
+    const schemaContributors = {
+      id: '/Contributors',
+      patternProperties: {
+        '.*': {$ref: '/Contributor'}
+      },
+      properties: {
+        index: {
+          not: 'any'
+        },
+      }
+    };
+    const schemaContributor = {
+      id: '/Contributor',
+      properties: {
+        name: {
+          type: 'object',
+          properties: {
+            given: {type: 'string'},
+            family: {type: 'string'},
+          },
+          required: ['given'],
+          additionalProperties: false,
+        },
+        org: {
+          type: 'object',
+          properties: {
+            name: {type: 'string'},
+            unit: {type: 'string'},
+          },
+          additionalProperties: false,
+        },
+        homepage: {type: 'string', pattern: /^https?:\/\//i},
+        google: {type: 'string', pattern: /^(\+[a-z].*$|[0-9].*$)/i},
+        twitter: {type: 'string', pattern: /^[a-z0-9_-]+$/i},
+        github: {type: 'string', pattern: /^[a-z0-9_-]+$/i},
+        lanyrd: {type: 'string', pattern: /^[a-z0-9_-]+$/i},
+        description: {
+          type: 'object',
+          properties: {
+            en: {type: 'string'},
+          },
+          additionalProperties: false,
+        },
+        role: {type: 'array'},
+        country: {type: 'string'},
+        email: {type: 'string'}
+      },
+      required: ['name'],
+      additionalProperties: false,
+    };
+    let validator = new jsonValidator();
+    validator.addSchema(schemaContributor, schemaContributor.id);
+    validator.validate(contributors, schemaContributors)
+      .errors.forEach((err) => {
+        let msg = `${err.stack || err.message}`;
+        msg = msg.replace('{}', '(' + err.instance + ')');
+        logError(filename, null, msg);
+      }
+    );
     let prevFamilyName = '';
-    Object.keys(contributors).forEach(function(key) {
-      let contributor = contributors[key];
-      let familyName = contributor.name.family || contributor.name.given;
-      if (key.toLowerCase() === 'index') {
-        msg = '"index" is not a valid name for a contributor.';
-        logError(filename, null, msg);
-      }
+    Object.keys(contributors).forEach((key) => {
+      const contributor = contributors[key];
+      const familyName = contributor.name.family || contributor.name.given;
       if (prevFamilyName.toLowerCase() > familyName.toLowerCase()) {
-        msg = `Contributors must be sorted by family name. `;
-        msg += `${prevFamilyName} came before ${familyName}`;
-        logError(filename, null, msg);
-      }
-      if (contributor.google && typeof contributor.google !== 'string') {
-        msg = `Google+ ID for ${key} must be a string.`;
+        const msg = `${prevFamilyName} came before ${key}`;
         logError(filename, null, msg);
       }
       prevFamilyName = familyName;
@@ -919,19 +1040,51 @@ function testGlossary(filename, contents) {
   return new Promise(function(resolve, reject) {
     const msg = 'Glossary must be sorted alphabetically by term.'; 
     const glossary = parseYAML(filename, contents);
-    let prevTermName = '';
-    glossary.forEach((term) => {
-      if (!term.term) {
-        logError(filename, null, `'term' is missing`);
+    const schemaGlossary = {
+      id: '/Glossary',
+      type: 'array',
+      items: {$ref: '/GlossaryItem'}
+    };
+    const schemaGlossaryItem = {
+      id: '/GlossaryItem',
+      type: 'object',
+      properties: {
+        term: {type: 'string', required: true},
+        description: {type: 'string', required: true},
+        acronym: {type: 'string'},
+        see: {$ref: '/GlossaryLink'},
+        blink_component: {type: 'string'},
+        tags: {type: 'array'},
+        links: { type: 'array', items: {$ref: '/GlossaryLink'}},
+      },
+      additionalProperties: false,
+    };
+    const schemaGlossaryLink = {
+      id: '/GlossaryLink',
+      properties: {
+        title: {type: 'string', required: true},
+        link: {type: 'string', required: true},
+      },
+      additionalProperties: false
+    };
+    let validator = new jsonValidator();
+    validator.addSchema(schemaGlossaryItem, schemaGlossaryItem.id);
+    validator.addSchema(schemaGlossaryLink, schemaGlossaryLink.id);
+    validator.validate(glossary, schemaGlossary).errors.forEach((err) => {
+      let msg = `${err.stack || err.message}`;
+      msg = msg.replace('{}', '(' + err.instance + ')');
+      if (err.argument === 'description' && err.name === 'required') {
+        logWarning(filename, null, msg);
         return;
       }
+      logError(filename, null, msg);
+    });
+    let prevTermName = '';
+    glossary.forEach((term) => {
       const termName = term.term.toLowerCase();
-      if (!term.description) {
-        logWarning(filename, null, `${termName} is missing description`);
-      }
       if (prevTermName > termName) {
-        const extra = `'${prevTermName}' came before '${termName}'`;
-        logError(filename, null, `${msg} ${extra}`);
+        const msg = `'${prevTermName}' came before '${termName}'`;
+        logError(filename, null, msg);
       }
       prevTermName = termName;
     });
@@ -950,41 +1103,38 @@ function testGlossary(filename, contents) {
 function testRedirects(filename, contents) {
   return new Promise(function(resolve, reject) {
     let parsed = parseYAML(filename, contents);
-    if (!parsed.redirects) {
-      logError(filename, null, 'Missing `redirects:` property.');
-      resolve();
-      return;
-    }
-    let filepath = path.dirname(filename).split('/').splice(3).join('/');
-    filepath = path.join('/', 'web', filepath, '/');
-    const REDIRECT_ITEM_SCHEMA = {
-      id: '/Redirect',
+    let fromPattern = path.dirname(filename).split('/').splice(3).join('/');
+    fromPattern = path.join('/', 'web', fromPattern, '/');
+    const schemaRedirects = {
+      id: '/Redirects',
       type: 'object',
       properties: {
-        to: {type: 'string'},
+        redirects: {type: 'array', items: {$ref: '/RedirectItem'}}
+      },
+      additionalProperties: false,
+      required: ['redirects']
+    };
+    const schemaRedirectItem = {
+      id: '/RedirectItem',
+      type: 'object',
+      properties: {
+        to: {type: 'string', required: true},
         from: {
           type: 'string',
-          pattern: new RegExp('^' + filepath.replace(/\//g, '\\/')),
+          pattern: new RegExp('^' + fromPattern.replace(/\//g, '\\/')),
+          required: true
         },
         temporary: {type: 'boolean'},
       },
       additionalProperties: false,
-      required: ['to', 'from']
     };
-    if (parsed.redirects && parsed.redirects.length > 0) {
-      let i = 0;
-      const validator = new jsonValidator();
-      parsed.redirects.forEach((item) => {
-        validator.validate(item, REDIRECT_ITEM_SCHEMA)
-          .errors.forEach((err) => {
-            let msg = err.stack || err.message;
-            msg = msg.replace('{}', '(' + err.instance + ')');
-            logError(filename, {line: 'i:' + i}, msg);
-          }
-        );
-        i++;
-      });
-    };
+    let validator = new jsonValidator();
+    validator.addSchema(schemaRedirectItem, schemaRedirectItem.id);
+    validator.validate(parsed, schemaRedirects).errors.forEach((err) => {
+      let msg = err.stack || err.message;
+      msg = msg.replace('{}', '(' + err.instance + ')');
+      logError(filename, null, msg);
+    });
     resolve();
   });
 }
@@ -1078,6 +1228,8 @@ function testFile(filename, opts) {
       testPromise = testGlossary(filename, contents);
     } else if (filenameObj.base === '_redirects.yaml') {
       testPromise = testRedirects(filename, contents);
+    } else if (filenameObj.base === '_project.yaml') {
+      testPromise = testProject(filename, contents);
     } else if (filenameObj.base === 'commontags.json') {
       testPromise = testCommonTags(filename, contents);
     } else if (MD_FILES.indexOf(filenameObj.ext) >= 0) {
