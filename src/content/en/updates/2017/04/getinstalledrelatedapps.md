@@ -165,7 +165,7 @@ useful.
 ### Cancel the progressive web app installation if the native app is installed
 
 You can intercept the
-[`beforeinstallprompt`](/web/fundamentals/engage-and-retain/app-install-banners/)
+[`beforeinstallprompt`](/web/fundamentals/app-install-banners)
 event. The general flow is to call `preventDefault()` on the event so the banner
 doesn't show right away, check to see if there are no apps installed and if so
 call `prompt()` to show the banner.

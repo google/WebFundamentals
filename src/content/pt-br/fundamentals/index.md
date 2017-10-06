@@ -79,7 +79,7 @@ possibilidades para que você envolva novamente os usuários.
     Os banners de instalação de aplicativos permitem que os usuários adicionem facilmente seu aplicativo à
     tela inicial com um único clique, além de ser uma indicação para o usuário de que
     o aplicativo que estão adicionando atende a critérios importantes de qualidade.<br>
-    <a href="/web/fundamentals/engage-and-retain/app-install-banners/">Saiba mais</a>
+    <a href="/web/fundamentals/app-install-banners">Saiba mais</a>
   </p>
 </div>
 <div class="attempt-right">

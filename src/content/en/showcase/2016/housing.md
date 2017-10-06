@@ -75,7 +75,7 @@ experience is something that defines state-of-the-art applications.”
 ## Related resources
 
 * [Service Workers](/web/fundamentals/getting-started/primers/service-workers)
-* [Add to Home Screen](/web/fundamentals/engage-and-retain/app-install-banners/)
+* [Add to Home Screen](/web/fundamentals/app-install-banners)
 * [Push Notifications](/web/fundamentals/push-notifications)
 
 ### Codelabs

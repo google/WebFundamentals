@@ -41,7 +41,7 @@ Guías relacionadas:
 * [Mejora la experiencia del usuario con el manifiesto de apps
   web](/web/fundamentals/web-app-manifest)
 * [Uso de banners de instalación
-  de app](/web/fundamentals/engage-and-retain/app-install-banners)
+  de app](/web/fundamentals/app-install-banners)
 
 Cuando hayas configurado el manifiesto, podrás usar el subpanel **Manifest** del panel
 **Application** para inspeccionarlo.

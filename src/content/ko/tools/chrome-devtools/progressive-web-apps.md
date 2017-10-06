@@ -41,7 +41,7 @@ description: Application 패널을 사용하여 웹 앱 매니페스트, 서비�
 * [웹 앱 매니페스트로 사용자
   환경 개선](/web/fundamentals/web-app-manifest)
 * [앱 설치 배너
-  사용](/web/fundamentals/engage-and-retain/app-install-banners)
+  사용](/web/fundamentals/app-install-banners)
 
 매니페스트를 설정하면 **Application** 패널의
 **Manifest** 창을 사용하여 매니페스트를 검사할 수 있습니다.

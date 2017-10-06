@@ -39,7 +39,7 @@ description:使用 Application 面板检查、修改和调试网络应用清单�
 相关指南：
 
 * [通过网络应用清单改进用户体验](/web/fundamentals/web-app-manifest)
-* [使用应用安装横幅](/web/fundamentals/engage-and-retain/app-install-banners)
+* [使用应用安装横幅](/web/fundamentals/app-install-banners)
 
 
 设置好清单后，您可以使用 **Application** 面板的 **Manifest** 窗格对其进行检查。

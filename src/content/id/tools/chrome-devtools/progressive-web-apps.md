@@ -41,7 +41,7 @@ Panduan Terkait:
 * [Meningkatkan pengalaman pengguna dengan Manifes
   Aplikasi Web](/web/fundamentals/web-app-manifest)
 * [Menggunakan Spanduk
-  Pemasangan Aplikasi](/web/fundamentals/engage-and-retain/app-install-banners)
+  Pemasangan Aplikasi](/web/fundamentals/app-install-banners)
 
 Setelah Anda menyiapkan manifes, Anda bisa menggunakan panel **Manifest** dari panel
 **Application** untuk memeriksanya.

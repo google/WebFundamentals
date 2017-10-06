@@ -41,7 +41,7 @@ Guias relacionados:
 * [Melhore a experiência do usuário com um manifesto de
  aplicativo da Web](/web/fundamentals/web-app-manifest)
 * [Como usar banners de
-  instalação de aplicativo](/web/fundamentals/engage-and-retain/app-install-banners)
+  instalação de aplicativo](/web/fundamentals/app-install-banners)
 
 Quando seu manifesto estiver configurado, você pode usar o painel **Manifest** do painel
 **Application** para inspecioná-lo.

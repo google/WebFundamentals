@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: There are two types of app install banners: web app install banners and native app install banners. They give you the ability to let users quickly and seamlessly add your web or native app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2017-09-27 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2014-12-16 #}
 
 # Web App Install Banners {: .page-title }
@@ -115,7 +115,7 @@ This is a good tool for understanding how your users interact with the app
 install prompt.
 
 
-### Deferring or cancelling the prompt
+### Deferring or cancelling the prompt {: #defer_or_cancel }
 
 Chrome manages when to trigger the prompt but for some sites this might not 
 be ideal. You can defer the prompt to a later time in the app's usage or 
