@@ -45,7 +45,7 @@
     title: Content deliver network on Wikipedia
     link: https://en.wikipedia.org/wiki/Content_delivery_network
 
-- term: Custom Element
+- term: custom element
   description: "A Custom Element is a developer defined HTML tag. These elements are the foundation of Web Components and can be used to create any sort of UI."
   see:
     title: "Custom Elements v1: Reusable Web Components"
@@ -58,8 +58,8 @@
     title: Progressive Web Apps
     link: /web/progressive-web-apps/
 
-- term: Fetch API
-  description: "The Fetch API is a promise-based JavaScript interface for requesting resources and reading responses. It provides a global fetch() method that gives an easy, logical way to fetch resources asynchronously across the network. Fetch is a successor to the older XMLHttpRequest."
+- term: fetch API
+  description: "The fetch API is a promise-based JavaScript interface for requesting resources and reading responses. It provides a global fetch() method that gives an easy, logical way to fetch resources asynchronously across the network. Fetch is a successor to the older XMLHttpRequest."
   see:
     title: Working the with Fetch API
     link: /web/ilt/pwa/working-with-the-fetch-api
@@ -80,7 +80,7 @@
     title: FLIP your animations
     link: https://aerotwist.com/blog/flip-your-animations/
 
-- term: Flexbox
+- term: flexbox
   description: "The Flexible Box Layout Module (Flexbox) is an API that provides tools to make web content responsive. Flexbox provides an efficient way to lay out, align, and distribute space among items in a container, even when their size is unknown and/or dynamic. The API allows the rapid creation of complex, flexible layouts, and features that have historically proved difficult with CSS."
   see:
     title: Flexbox on MDN
@@ -105,20 +105,20 @@
     title: Lighthouse
     link: /web/tools/lighthouse/
 
-- term: Mutation Observer
+- term: mutation observer
   description: "Mutation Observers are a web platform API to detect and react to change to the DOM tree. If an element is observed by a MutationObserver, events like appending a new element or removing and existing one will trigger a function to execute."
   see:
     title: Detect DOM changes with Mutation Observers
     link: /web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers
 
-- term: progressive web app
+- term: Progressive Web App
   acronym: PWA
   description: "Progressive Web Apps are user experiences that have the reach of the web, and are fast, integrated, reliable and engaging."
   see:
     title: Progressive Web Apps
     link: /web/progressive-web-apps/
 
-- term: Promise
+- term: promise
   description: "A JavaScript promise is an object that is used as a placeholder for the eventual results of a deferred (and possibly asynchronous) computation. JavaScript promises are an addition to ECMAscript 6 that provide a cleaner, more intuitive way to deal with the completion (or failure) of asynchronous tasks."
   see:
     title: JavaScript Promises
@@ -165,7 +165,7 @@
   - title: Service Worker API
     link: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
 
-- term: Shadow DOM
+- term: shadow DOM
   description: "Shadow DOM introduces scoped CSS and DOM to the web platform. It lets developers write encapsulated UI components which can be used in any application."
   see:
     title: "Shadow DOM v1: Self-Contained Web Components"
@@ -173,7 +173,7 @@
 
 - term: single page app
   acronym: SPA
-  description: "An SPA is user-friendly app that performs more like a desktop app. Typically, SPA content is rendered dynamically using JavaScript, rather than opening a new page. As a result, single-page applications typically load only data (e.g. in JSON or XML format) rather than pre-rendered HTML. This decreases the data transferred on the wire."
+  description: "A single page app is user-friendly app that performs more like a desktop app. Typically, SPA content is rendered dynamically using JavaScript, rather than opening a new page. As a result, single-page applications typically load only data (e.g. in JSON or XML format) rather than pre-rendered HTML. This decreases the data transferred on the wire."
   links:
   - title: Single-page application on Wikipedia
     link: https://en.wikipedia.org/wiki/Single-page_application
