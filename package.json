@@ -15,7 +15,8 @@
   },
   "homepage": "https://github.com/google/WebFundamentals",
   "devDependencies": {
-    "gulp-remark": "^3.0.0"
+    "gulp-remark": "^3.0.0",
+    "jsdoc-baseline": "https://github.com/hegemonic/baseline/tarball/master"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +24,7 @@
     "del": "^2.2.2",
     "fs-extra": "^4.0.1",
     "github": "^8.1.1",
+    "glob": "^7.1.2",
     "globule": "^1.0.0",
     "googleapis": "^12.4.0",
     "gulp": "^3.9.1",
@@ -31,6 +33,7 @@
     "handlebars": "^4.0.5",
     "handlebars-helpers": "^0.7.5",
     "js-yaml": "^3.6.1",
+    "jsdoc": "^3.5.5",
     "marked": "^0.3.6",
     "mdast-util-to-string": "^1.0.2",
     "minimist": "^1.2.0",
@@ -40,9 +43,11 @@
     "remark": "^6.2.0",
     "remark-html": "^5.1.0",
     "remark-lint": "^5.4.0",
+    "remote-git-tags": "^2.0.0",
     "require-dir": "^0.3.0",
     "rsync": "^0.5.0",
     "run-sequence": "^1.2.2",
+    "semver": "^5.4.1",
     "unist-util-visit": "^1.1.1",
     "vfile": "^2.0.1"
   },
