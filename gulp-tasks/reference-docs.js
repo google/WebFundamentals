@@ -77,17 +77,20 @@ const buildJSDocs = (srcCodePath, docOutputPath, jsdocConfPath) => {
     return;
   }
 
+  const queryString = [
+    `projectRoot=${jsdocConfig.webFundamentals.projectRoot}`,
+    `basepath=${templateBasePath}`,
+    `productName=${jsdocConfig.webFundamentals.productName}`,
+  ].join('&');
+  console.log(`    QueryString: '--query ${queryString}'`);
+
   const jsDocParams = [
     '--template', path.join(
       __dirname, '..', 'src', 'templates', 'reference-docs', 'jsdoc'
     ),
     '-c', jsdocConfPath,
     '-d', docOutputPath,
-    '--query', [
-      `projectRoot=${jsdocConfPath.projectRoot}`,
-      `basepath=${templateBasePath}`,
-      `productName=${jsdocConfPath.productName}`,
-    ].join('&'),
+    '--query', queryString,
   ];
 
   const jsdocPath = path.join(__dirname, '..', 'node_modules', 'jsdoc', 'jsdoc.js');
@@ -125,7 +128,7 @@ const buildJSDocs = (srcCodePath, docOutputPath, jsdocConfPath) => {
       absolute: true,
     });
     allFiles.forEach((filePath) => {
-      const fileContents = fse.readFileSync(filePath);
+      const fileContents = fse.readFileSync(filePath).toString();
       const cleanContents = fileContents
         .split('https://developers.google.com/').join('/');
       fse.writeFileSync(filePath, cleanContents);
