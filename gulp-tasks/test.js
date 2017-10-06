@@ -21,6 +21,7 @@ const wfHelper = require('./wfHelper');
 const parseDiff = require('parse-diff');
 const remarkLint = require('remark-lint');
 const runSequence = require('run-sequence');
+const jsonValidator = require('jsonschema').Validator;
 
 /******************************************************************************
  * Constants & Remark Lint Options
@@ -949,14 +950,39 @@ function testGlossary(filename, contents) {
 function testRedirects(filename, contents) {
   return new Promise(function(resolve, reject) {
     let parsed = parseYAML(filename, contents);
+    if (!parsed.redirects) {
+      logError(filename, null, 'Missing `redirects:` property.');
+      resolve();
+      return;
+    }
     let filepath = path.dirname(filename).split('/').splice(3).join('/');
     filepath = path.join('/', 'web', filepath, '/');
+    const REDIRECT_ITEM_SCHEMA = {
+      id: '/Redirect',
+      type: 'object',
+      properties: {
+        to: {type: 'string'},
+        from: {
+          type: 'string',
+          pattern: new RegExp('^' + filepath.replace(/\//g, '\\/')),
+        },
+        temporary: {type: 'boolean'},
+      },
+      additionalProperties: false,
+      required: ['to', 'from']
+    };
     if (parsed.redirects && parsed.redirects.length > 0) {
+      let i = 0;
+      const validator = new jsonValidator();
       parsed.redirects.forEach((item) => {
-        if (!item.from.startsWith(filepath)) {
-          let msg = `Must only redirect from paths below "${filepath}"`;
-          logError(filename, null, msg);
-        }
+        validator.validate(item, REDIRECT_ITEM_SCHEMA)
+          .errors.forEach((err) => {
+            let msg = err.stack || err.message;
+            msg = msg.replace('{}', '(' + err.instance + ')');
+            logError(filename, {line: 'i:' + i}, msg);
+          }
+        );
+        i++;
       });
     };
     resolve();

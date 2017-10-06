@@ -31,6 +31,7 @@
     "handlebars": "^4.0.5",
     "handlebars-helpers": "^0.7.5",
     "js-yaml": "^3.6.1",
+    "jsonschema": "^1.2.0",
     "marked": "^0.3.6",
     "mdast-util-to-string": "^1.0.2",
     "minimist": "^1.2.0",
