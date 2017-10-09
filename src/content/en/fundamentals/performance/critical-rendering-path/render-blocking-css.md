@@ -70,8 +70,3 @@ Let's consider some hands-on examples:
 * The last declaration is only applied when the page is being printed so it is not render blocking when the page is first loaded in the browser.
 
 Finally, note that "render blocking" only refers to whether the browser has to hold the initial rendering of the page on that resource. In either case, the browser still downloads the CSS asset, albeit with a lower priority for non-blocking resources.
-
-<a href="adding-interactivity-with-javascript" class="gc-analytics-event"
-    data-category="CRP" data-label="Next / Adding Interactivity with JS">
-  <button>Next Up: Adding Interactivity with JavaScript</button>
-</a>

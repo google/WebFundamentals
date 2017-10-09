@@ -79,8 +79,3 @@ To find out how long the CSS processing takes you can record a timeline in DevTo
 <img src="images/cssom-timeline.png"  alt="Tracing CSSOM construction in DevTools">
 
 Our trivial stylesheet takes ~0.6ms to process and affects eight elements on the page&mdash;not much, but once again, not free. However, where did the eight elements come from? The CSSOM and DOM are independent data structures! Turns out, the browser is hiding an important step. Next, lets talk about the [render tree](/web/fundamentals/performance/critical-rendering-path/render-tree-construction) that links the DOM and CSSOM together.
-
-<a href="render-tree-construction" class="gc-analytics-event"
-    data-category="CRP" data-label="Next / Render-Tree Construction">
-  <button>Next Up: Render-Tree Construction, Layout, and Paint</button>
-</a>
