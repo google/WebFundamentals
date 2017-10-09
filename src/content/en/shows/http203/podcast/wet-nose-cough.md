@@ -21,7 +21,7 @@ In this episode:
   API](/web/updates/2017/09/visual-viewport-api).
 * The Polymer summit again.
 * [lit-html](https://github.com/PolymerLabs/lit-html) and
-  [hyperHTML](https://github.com/WebReflection/hyperHTML)/
+  [hyperHTML](https://github.com/WebReflection/hyperHTML).
 * VDOM diffing vs targeted updates.
 * [DOM change list](https://github.com/whatwg/dom/issues/270).
 * [Tagged template JavaScript template tag literal
