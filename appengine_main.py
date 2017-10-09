@@ -94,7 +94,7 @@ class DevSitePages(webapp2.RequestHandler):
           try:
             if os.path.isdir(os.path.join(SOURCE_PATH, 'en', path)):
               # Make sure the directory ends with a /, as required by devsite
-              if not path.endswith('/'):
+              if len(path) > 0 and not path.endswith('/'):
                 redirectTo = '/web/' +  path + '/'
                 logging.info('301 ' + redirectTo)
                 self.redirect(redirectTo, permanent=True)
