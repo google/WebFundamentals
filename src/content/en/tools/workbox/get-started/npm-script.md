@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: How to use Workbox with NPM Scripts.
 
-{# wf_updated_on: 2017-10-14 #}
+{# wf_updated_on: 2017-10-09 #}
 {# wf_published_on: 2017-10-14 #}
 
 # NPM {: .page-title }
@@ -36,7 +36,7 @@ npm run build
 ```
 
 The first time you run this, a wizard asks several questions about your
-poject before the module generates a service worker. Answer `Y` when
+project before the module generates a service worker. Answer `Y` when
 prompted to save your choices. Your answers will be saved in a file called
 `workbox-cli-config.json`.
 

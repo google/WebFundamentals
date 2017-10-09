@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: Service Worker Libraries.
 
 {# wf_published_on: 2017-10-04 #}
-{# wf_updated_on: 2017-10-04 #}
+{# wf_updated_on: 2017-10-09 #}
 
 # Workbox {: .page-title }
 
@@ -11,7 +11,7 @@ Use [Workbox](https://workboxjs.org/) to simplify your development by making it
 easy to take advantage of powerful service worker features, eliminate boilerplate code, and automate service worker generation.
 
 <figure class="attempt-right">
-  <img src="/web/tools/workbox/thumb.png" alt="Workbo logo">
+  <img src="/web/tools/workbox/thumb.png" alt="Workbox logo">
 </figure>
 
 Workbox is a collection of loosely-coupled libraries and tools, that focus on
