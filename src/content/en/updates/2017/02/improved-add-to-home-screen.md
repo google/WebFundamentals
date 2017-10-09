@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Progressive Web Apps are becoming more integrated with your device. Learn how.
 
-{# wf_updated_on: 2017-04-17 #}
+{# wf_updated_on: 2017-10-05 #}
 {# wf_published_on: 2017-02-02 #}
 {# wf_tags: addtohomescreen,progressive-web-apps,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -160,7 +160,7 @@ Here are some simple rules:
 
 Some examples:
 
-|  `manifest url` | `start_url` | `scope attr` | `calculated scope` | `caluclated start_url` | `valid?` |
+|  `manifest url` | `start_url` | `scope attr` | `calculated scope` | `calculated start_url` | `valid?` |
 |  ------ | ------ | ------ | ------ | ------ | ------ |
 |  /tech-today/manifest.json | ./index.html | undefined | /tech-today/ | /tech-today/index.html | valid |
 |  /tech-today/manifest.json | ./index.html | ../ | / | /index.html | valid - but scope leaks to higher level |
