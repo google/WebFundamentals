@@ -117,7 +117,7 @@ To open a cache, use the `caches.open(name)` method, passing the name of the cac
 parameter. If the named cache does not exist it is created. This method returns a `Promise`
 that resolves with the `Cache` object.
 
-    caches.open('my-cache).then((cache) => {
+    caches.open('my-cache').then((cache) => {
       // do something with cache...
     });
 
