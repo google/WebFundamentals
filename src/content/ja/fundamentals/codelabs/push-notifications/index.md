@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: このコードラボでは、プッシュ通知をウェブアプリに追加する方法を学びます。
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2016-11-21T15:42:20Z #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -644,13 +644,13 @@ swRegistration.pushManager.getSubscription()
 
 これでこのコードラボは完了です。
 
-このコードラボでは、プッシュをウェブアプリに追加して使用できるようにする方法を説明しました。ウェブ通知で実行できる内容の詳細については、[これらのドキュメントをご覧ください](/web/fundamentals/engage-and-retain/push-notifications/)。
+このコードラボでは、プッシュをウェブアプリに追加して使用できるようにする方法を説明しました。ウェブ通知で実行できる内容の詳細については、[これらのドキュメントをご覧ください](/web/fundamentals/push-notifications)。
 
 サイトにプッシュをデプロイする場合は、GCM を使用する古い標準に準拠していないブラウザのサポートを追加する必要がある場合があります。[詳細については、こちらをご覧ください](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/)。
 
 ###  参考資料
 
-*  Web__Fundamentals__ の[ウェブでのプッシュ通知](/web/fundamentals/engage-and-retain/push-notifications/)のドキュメント
+*  Web__Fundamentals__ の[ウェブでのプッシュ通知](/web/fundamentals/push-notifications)のドキュメント
 *  [ウェブプッシュ ライブラリ](https://github.com/web-push-libs/) - Node.js、PHP、Java、Python などのウェブプッシュ ライブラリ
 
 ####  関連するブログ投稿

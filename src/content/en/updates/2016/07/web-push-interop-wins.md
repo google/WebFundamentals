@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web push has had a few updates in recent versions of Chrome. GCM now supports the web push protocol and if you use VAPID you won't need to sign up for a Google Developer Project and you'll be given an FCM endpoint.
 
-{# wf_updated_on: 2016-07-27 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-07-27 #}
 {# wf_tags: webpush,notifications #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
@@ -268,6 +268,6 @@ VAPID it'll work in all browsers that support web push.  As more browsers
 support VAPID you can decide when to drop the `gcm_sender_id` from your
 manifest.
 
-Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/push-notifications)
 
 {% include "comment-widget.html" %}

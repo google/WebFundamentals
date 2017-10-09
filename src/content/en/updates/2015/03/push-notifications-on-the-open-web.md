@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Push Messaging and Notifications are Landing in Chrome 42.
 
 
-{# wf_updated_on: 2016-06-29 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2015-03-11 #}
 {# wf_tags: news,webpush,notifications,serviceworker #}
 
@@ -11,7 +11,7 @@ description: Push Messaging and Notifications are Landing in Chrome 42.
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
-Warning: This blog post is getting a bit old. If you are looking to learn more about implementing push, check out our [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/) documentation.
+Warning: This blog post is getting a bit old. If you are looking to learn more about implementing push, check out our [Web Push Notifications](/web/fundamentals/push-notifications) documentation.
 
 If you ask a room of developers what mobile device features are missing from the
 web, push notifications are always high on the list.

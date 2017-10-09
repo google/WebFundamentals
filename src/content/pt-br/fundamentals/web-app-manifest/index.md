@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: O manifesto de um aplicativo web é um arquivo JSON que permite controlar como o aplicativo web ou site é exibido para o usuário em áreas que normalmente se espera ver aplicativos nativos (por exemplo, a tela inicial de um dispositivo), como definir o que o usuário pode inicializar e o visual durante a inicialização.
 
-{# wf_updated_on: 2016-08-19 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-02-11 #}
 
 # O manifesto do aplicativo web {: .page-title }
@@ -249,7 +249,7 @@ do manifesto. Acesse [Manifesto
 do aplicativo web](/web/tools/chrome-devtools/progressive-web-apps#manifest) nos
 documentos do Chrome DevTools para saber mais sobre essa guia. Você ainda
 pode simular eventos de adicionar à tela inicial daqui. Leia [Como testar o banner
-de instalação de aplicativos](/web/fundamentals/engage-and-retain/app-install-banners/#testing-the-app-install-banner)
+de instalação de aplicativos](/web/fundamentals/app-install-banners#test)
 para ver mais detalhes sobre esse assunto.
 
 Se quiser adotar uma abordagem automática para validar o manifesto do seu aplicativo web,
@@ -270,7 +270,7 @@ Este artigo deu uma rápida introdução aos manifestos dos aplicativos web, mas
 isso é só o começo.
 
 * Se estiver usando um manifesto de aplicativo web, também seria interessante configurar um
-[banner de instalação de aplicativo](/web/fundamentals/engage-and-retain/app-install-banners/). 
+[banner de instalação de aplicativo](/web/fundamentals/app-install-banners).
 
 * Veja [um guia completo](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 sobre os manifestos de aplicativos web na Mozilla Developer Network.

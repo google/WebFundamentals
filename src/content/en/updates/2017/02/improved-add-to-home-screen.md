@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Progressive Web Apps are becoming more integrated with your device. Learn how.
 
-{# wf_updated_on: 2017-10-05 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2017-02-02 #}
 {# wf_tags: addtohomescreen,progressive-web-apps,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -13,7 +13,7 @@ description: Progressive Web Apps are becoming more integrated with your device.
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
 Chrome first introduced the ["Add to Home screen"
-banners](/web/fundamentals/engage-and-retain/app-install-banners/) in [Chrome
+banners](/web/fundamentals/app-install-banners) in [Chrome
 42](https://blog.chromium.org/2015/03/chrome-42-beta-push-notifications_12.html).
 This was a big step for the web as it provided users the ability to easily keep
 a favorite site on their home screen, much like native apps. We've heard from
@@ -213,7 +213,7 @@ questions you might have.
 
 The requirements are designed to be the same as the [technical requirements for
 the add to home screen
-banner](/web/fundamentals/engage-and-retain/app-install-banners/).
+banner](/web/fundamentals/app-install-banners).
 
 We recommend using [Lighthouse](/web/tools/lighthouse/) to audit your PWA.
 

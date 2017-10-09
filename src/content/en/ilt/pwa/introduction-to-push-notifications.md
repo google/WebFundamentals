@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-12T20:09:18Z #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -523,7 +523,7 @@ To get FCM to push a notification without a payload to your web client, the requ
 * The subscription endpoint URL
 * The public Server key. FCM uses this to check whether the server making the requests is actually allowed to send messages to the receiving user.
 
-A production site or app normally sets up a service to interact with FCM from your server. Check out the  [Web Fundamentals documentation](/web/fundamentals/engage-and-retain/push-notifications/) for more information. 
+A production site or app normally sets up a service to interact with FCM from your server. Check out the  [Web Fundamentals documentation](/web/fundamentals/push-notifications) for more information.
 
 We can test push messaging in our app using  [cURL](https://curl.haxx.se/docs/manpage.html). We can send an empty message, called a "tickle", to the push service, then the push service sends a message to the browser. If the notification displays, then we have done everything correctly and our app is ready to push messages from the server.
 
@@ -1091,7 +1091,7 @@ There are a number of options available to solve this:
 
 #### When to use push notifications
 
-*  [Web Push Notifications: Timely, Relevant, and Precise](/web/fundamentals/engage-and-retain/push-notifications/)
+*  [Web Push Notifications: Timely, Relevant, and Precise](/web/fundamentals/push-notifications)
 
 #### Demos
 

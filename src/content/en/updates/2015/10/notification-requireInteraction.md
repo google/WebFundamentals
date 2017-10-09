@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Notifications on desktop will be automatically dismissed after a short period of time.
 
-{# wf_updated_on: 2015-10-15 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2015-10-15 #}
 {# wf_tags: notifications #}
 {# wf_featured_image: /web/updates/images/2015/10/notification.png #}
@@ -68,6 +68,6 @@ On Chrome for Android, because the notifications are minimized in the notificati
 [Try the demo](https://googlechrome.github.io/samples/notifications/requireInteraction.html).
 
 
-Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/push-notifications)
 
 {% include "comment-widget.html" %}
