@@ -93,6 +93,12 @@ class DevSitePages(webapp2.RequestHandler):
         if response is None:
           try:
             if os.path.isdir(os.path.join(SOURCE_PATH, 'en', path)):
+              # Make sure the directory ends with a /, as required by devsite
+              if not path.endswith('/'):
+                redirectTo = '/web/' +  path + '/'
+                logging.info('301 ' + redirectTo)
+                self.redirect(redirectTo, permanent=True)
+                return
               response = devsiteIndex.getPage(path, lang)
               if (response is None) and (path.startswith('showcase') or 
                   path.startswith('shows') or path.startswith('updates')):
