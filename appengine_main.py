@@ -55,11 +55,11 @@ class Framebox(webapp2.RequestHandler):
         if content is None:
           response = render('gae/404.tpl', {})
           logging.error('404 ' + memcacheKey)
-          self.response.set_status(404)        
+          self.response.set_status(404)
         else:
           response = render('gae/framebox.tpl', {'content': content})
           logging.info('200 ' + memcacheKey)
-        self.response.out.write(response)      
+        self.response.out.write(response)
 
 
 class DevSitePages(webapp2.RequestHandler):
@@ -99,7 +99,7 @@ class DevSitePages(webapp2.RequestHandler):
                 response = devsiteIndex.getDirIndex(path)
             else:
               response = devsitePage.getPage(path, lang)
-          
+
             if response is None:
               # No file found, check for redirect
               redirectTo = devsiteHelper.checkForRedirect(fullPath, lang, USE_MEMCACHE)

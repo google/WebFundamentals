@@ -153,19 +153,19 @@ const applicationServerPublicKey = '<Your Public Key>';
 Note: You should never put your private key in your web app!
 
 
-## Initialise State
+## Initialize State
 
 
 
 
 At the moment the web app's button is disabled and can't be clicked. This is because it's good practice to disable the push button by default and enable it once you know push is supported and can know if the user is currently subscribed or not.
 
-Let's create two functions in `scripts/main.js`, one called `initialiseUI`, which will check if the user is currently subscribed, and one called `updateBtn` which will enable our button and change the text if the user is subscribed or not.
+Let's create two functions in `scripts/main.js`, one called `initializeUI`, which will check if the user is currently subscribed, and one called `updateBtn` which will enable our button and change the text if the user is subscribed or not.
 
-We want our `initialiseUI` function to look like this:
+We want our `initializeUI` function to look like this:
 
 ```
-function initialiseUI() {
+function initializeUI() {
   // Set the initial subscription value
   swRegistration.pushManager.getSubscription()
   .then(function(subscription) {
@@ -200,7 +200,7 @@ function updateBtn() {
 
 This function simply changes the text depending on the whether the user is subscribed or not and then enables the button.
 
-The last thing to do is call `initialiseUI()` when our service worker is registered.
+The last thing to do is call `initializeUI()` when our service worker is registered.
 
 ```
 navigator.serviceWorker.register('sw.js')
@@ -208,7 +208,7 @@ navigator.serviceWorker.register('sw.js')
   console.log('Service Worker is registered', swReg);
 
   swRegistration = swReg;
-  initialiseUI();
+  initializeUI();
 })
 ```
 
@@ -228,10 +228,10 @@ When we progress through the rest of the code lab you should see the button text
 
 At the moment our ‘Enable Push Messaging' button doesn't do too much, so let's fix that.
 
-Add a click listener to our button in the `initialiseUI()` function, like so:
+Add a click listener to our button in the `initializeUI()` function, like so:
 
 ```
-function initialiseUI() {
+function initializeUI() {
   pushButton.addEventListener('click', function() {
     pushButton.disabled = true;
     if (isSubscribed) {
@@ -559,7 +559,7 @@ You can see all the  [code for the companion site here](https://glitch.com/edit/
 
 The one thing we are missing is the ability to unsubscribe the user from push. To do this we need to call `unsubscribe()` on a `PushSubscription`.
 
-Back in our `scripts/main.js` file, change the `pushButton`'s click listener in `initialiseUI()` to the following:
+Back in our `scripts/main.js` file, change the `pushButton`'s click listener in `initializeUI()` to the following:
 
 ```
 pushButton.addEventListener('click', function() {

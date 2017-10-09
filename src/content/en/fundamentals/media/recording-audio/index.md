@@ -39,7 +39,7 @@ the `files` property of the event object.
 &lt;audio id="player" controls>&lt;/audio>
 &lt;script>
   var recorder = document.getElementById('recorder');
-  var player = document.getElementById('player')'
+  var player = document.getElementById('player');
 
   recorder.addEventListener('change', function(e) {
     var file = e.target.files[0];
@@ -94,7 +94,7 @@ object that is passed to the `getUserMedia()` API
   };
 
   navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-      .then(handleSuccess)
+      .then(handleSuccess);
 &lt;/script>
 </pre>
 
@@ -131,20 +131,20 @@ and save it for later use.
 &lt;script>
   var handleSuccess = function(stream) {
     <strong>var context = new AudioContext();
-    var input = context.createMediaStreamSource(stream)
-    var processor = context.createScriptProcessor(1024,1,1);
+    var source = context.createMediaStreamSource(stream);
+    var processor = context.createScriptProcessor(1024, 1, 1);
 
     source.connect(processor);
     processor.connect(context.destination);
 
-    processor.onaudioprocess = function(e){
+    processor.onaudioprocess = function(e) {
       // Do something with the data, i.e Convert this to WAV
       console.log(e.inputBuffer);
     };</strong>
   };
 
   navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-      .then(handleSuccess)
+      .then(handleSuccess);
 &lt;/script>
 </pre>
 
@@ -176,7 +176,7 @@ destination.
 
   stopButton.addEventListener('click', function() {
     shouldStop = true;
-  })
+  });
 
   var handleSuccess = function(stream) {
     const options = {mimeType: 'audio/webm'};

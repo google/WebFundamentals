@@ -42,7 +42,7 @@ def getDirIndex(requestPath):
     for f in fileList:
       if not f.startswith('_'):
         link = os.path.join('/web', requestPath, os.path.splitext(f)[0])
-        result += '<li><a href="' + link + '">' + link + '</a></li>' 
+        result += '<li><a href="' + link + '">' + link + '</a></li>'
   return result
 
 

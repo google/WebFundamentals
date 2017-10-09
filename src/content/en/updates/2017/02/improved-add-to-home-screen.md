@@ -160,7 +160,7 @@ Here are some simple rules:
 
 Some examples:
 
-|  `manifest url` | `start_url` | `scope attr` | `calculated scope` | `caluclated start_url` | `valid?` |
+|  `manifest url` | `start_url` | `scope attr` | `calculated scope` | `calculated start_url` | `valid?` |
 |  ------ | ------ | ------ | ------ | ------ | ------ |
 |  /tech-today/manifest.json | ./index.html | undefined | /tech-today/ | /tech-today/index.html | valid |
 |  /tech-today/manifest.json | ./index.html | ../ | / | /index.html | valid - but scope leaks to higher level |

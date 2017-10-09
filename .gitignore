@@ -19,6 +19,7 @@ src/content/*/_shared/contributors/*.html
 src/content/*/_shared/latest_show.html
 src/content/*/_shared/latest_articles.html
 src/content/*/resources/contributors/*
+src/content/*/resources/contributors.md
 src/content/*/updates/_index.yaml
 src/content/*/updates/*/_toc.yaml
 src/content/*/updates/*/index.md

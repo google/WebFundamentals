@@ -45,6 +45,14 @@ need to re-build those files using:
 npm run build
 ```
 
+## Start Local Server
+
+To view the site locally, just run:
+
+```
+npm start
+```
+
 ## Update the code labs
 To update the Code Labs, you'll need the
 [`claat`](https://github.com/googlecodelabs/tools/tree/master/claat) tool, and

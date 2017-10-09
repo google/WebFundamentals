@@ -258,7 +258,7 @@ samchen:
   role:
     - translator
   homepage: 'http://www.zfanw.com/blog/'
-  google: +%E9%99%88%E4%B8%89
+  google: '104787680206754797134'
   twitter: chenxsan
   email: chenxsan@google.com
   description:
@@ -507,7 +507,7 @@ simongong:
   country: JP
   role:
     - translator
-  google: +%E9%BE%9A%E6%8C%AF%E5%8D%8Esimon
+  google: '113525015220376733647'
   email: simon.gong64@gmail.com
   description:
     en: Simon is a Full Stack Developer
@@ -930,13 +930,8 @@ wayouliu:
   google: +WayouLiu
   twitter: liuwayong
   github: wayou
-  lanyrd:
   description:
     en: "Wayou is a developer and loves the web"
-  org:
-    name:
-    unit:
-  country:
   role:
     - translator
   email: liuwayong@gmail.com
@@ -1177,7 +1172,8 @@ yvoschaap:
   google: +yvo
   twitter: yvoschaap
   email: yvo@yvoschaap.com
-  description: "Loves to code and build great things."
+  description: 
+    en: "Loves to code and build great things."
 
 moinshaikh:
   name:
