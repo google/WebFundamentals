@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-09-26T23:32:43Z #}
+{# wf_updated_on: 2017-10-09T21:08:56Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -21,7 +21,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 [Workbox](https://workboxjs.org/) is the successor to  [`sw-precache`](https://github.com/GoogleChrome/sw-precache) and  [`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox). It is a collection of libraries and tools used for generating a service worker, precaching, routing, and runtime-caching. Workbox also includes modules for easily integrating  [background sync](https://github.com/GoogleChrome/workbox/tree/master/packages/workbox-background-sync) and  [Google analytics](https://github.com/GoogleChrome/workbox/tree/master/packages/workbox-google-analytics) into your service worker.
 
-See the  [Workbox page](/web/tools/workbox/) on developers.google.com for an explanation of each module contained in Workbox. In this lab, we use the main Workbox library, `workbox-sw`, and `workbox-build` to inject an array of static assets to precache into a service worker.
+See the  [Workbox page](/web/tools/workbox/) on developers.google.com for an explanation of each module contained in Workbox. In this lab, we use the main Workbox library, `workbox-sw`, and `workbox-build` to inject an array of static assets that you want to precache into a service worker.
 
 #### What you will learn
 

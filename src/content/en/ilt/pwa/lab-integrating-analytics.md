@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2017-09-29T20:13:26Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -35,7 +35,7 @@ This lab shows you how to integrate Google Analytics into your web apps.
 #### What you should know
 
 * Basic JavaScript and HTML
-* Familiarity with  [Push Notifications](/web/fundamentals/push-notifications)
+* Familiarity with  [Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
 * Some familiarity with the  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * The concept of an  [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (IIFE)
 * How to enable the developer console
@@ -85,7 +85,7 @@ In the browser, you should be prompted to allow notifications. If the prompt doe
 
 You should also see that a service worker registration is logged to the console.
 
-The app for this lab is a simple web page that has some  [push notification](/web/fundamentals/push-notifications) code.
+The app for this lab is a simple web page that has some  [push notification](/web/fundamentals/engage-and-retain/push-notifications/) code. 
 
 __main.js__ requests notification permission and registers a service worker, __sw.js__. The service worker has listeners for push events and notification events.
 
