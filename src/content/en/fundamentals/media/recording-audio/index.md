@@ -218,7 +218,7 @@ If the user has not previously granted your site access to the microphone then
 the instant that you call `getUserMedia` the browser will prompt the user to
 grant your site permission to the microphone.
 
-User's hate getting prompted for access to powerful devices on their machine and
+Users hate getting prompted for access to powerful devices on their machine and
 they will frequently block the request, or they will ignore it if they don't
 understand the context of which the prompt has been created. It is best practice
 to only ask to access the microphone when first needed. Once the user has
