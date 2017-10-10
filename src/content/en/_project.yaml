@@ -28,11 +28,11 @@ announcement:
         background: #e8f0fe;
         color: #039BE5;
       }
-      .devsite-banner-announcement img {
+      .devsite-banner-announcement span.material-icons {
         vertical-align: middle;
         margin-right: 8px;
       }
-    </style> <img src="https://www.gstatic.com/images/icons/material/system/1x/school_grey600_24dp.png"> Are you a developer in an agency in the UK, Indonesia or India? Find out more about our free 2 day <a href="https://goo.gl/hscrxF" class="gc-analytics-event" data-category="webFu" data-label="banner-agency">
+    </style> <span class="material-icons">school</span> Are you a developer in an agency in the UK, Indonesia or India? Find out more about our free 2 day <a href="https://goo.gl/hscrxF" class="gc-analytics-event" data-category="webFu" data-label="banner-agency">
       Progressive Web Apps training
     </a>.
   start: '2017-08-31T08:00:00Z'
