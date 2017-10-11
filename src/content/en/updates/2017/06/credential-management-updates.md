@@ -2,11 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Latest Updates to the Credential Management API
 
-{# wf_updated_on: 2017-09-01 #}
+{# wf_updated_on: 2017-10-11 #}
 {# wf_published_on: 2017-06-12 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
 {# wf_featured_snippet: Latest updates coming to the Credential Management API in Chrome 60. Also includes an update landed in Chrome 57. #}
+{# wf_blink_components: Blink #}
 
 # Latest Updates to the Credential Management API {: .page-title }
 
@@ -78,7 +79,8 @@ asynchronously creates credential objects.
   <strong>Warning:</strong>
 Because updates to the Credential Management API landed on Chrome 60 contains
 backward incompatible changes, it's important that your implementation won't be
-triggered on older versions. (If you intentionally want to do so, checkout <a href="https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8/edit">this
+triggered on older versions. (If you intentionally want to do so, checkout
+<a href="https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8/edit">this
 migration guide doc.</a>
 </aside>
 
