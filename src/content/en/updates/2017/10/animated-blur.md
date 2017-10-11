@@ -184,3 +184,4 @@ as well as the
 [demo](https://googlechromelabs.github.io/ui-element-samples/animated-blur/) and
 hit me up on [Twitter](https://twitter.com/dassurma) if you have any questions!
 
+{% include "comment-widget.html" %}
