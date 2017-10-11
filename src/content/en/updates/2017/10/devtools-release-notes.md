@@ -20,8 +20,9 @@ early-December 2017.
 Welcome back! New features coming to DevTools in Chrome 63 include:
 
 * [Multi-client remote debugging support](#multi-client).
-* [Simulate push notifications with custom data](#push).
 * [Workspaces 2.0](#workspaces).
+* [Simulate push notifications with custom data](#push).
+* [Trigger background sync events with custom tags](#sync).
 
 Note: You can check what version of Chrome you're running at
 `chrome://version`. Chrome auto-updates to a new major version about every 6
@@ -50,39 +51,6 @@ and DevTools in action, side-by-side.
   </iframe>
 </div>
 
-## Simulate push notifications with custom data {: #push }
-
-Simulating push notifications has been around for a while in DevTools,
-with one limitation: you couldn't send custom data. But with
-the new **Push** text box coming to the **Service Worker** pane in Chrome 63,
-now you can. Try it now:
-
-1. Go to [Simple Push Demo](https://gauntface.github.io/simple-push-demo/).
-1. Click **Enable Push Notifications**.
-1. Click **Allow** when Chrome prompts you to allow notifications.
-1. Open DevTools.
-1. Go to the **Service Worker** pane.
-1. Write something in the **Push** text box.
-
-     <figure>
-       <img src="/web/updates/images/2017/10/push-text.png"
-            alt="Simulating a push notification with custom data."
-       <figcaption>
-         <b>Figure 1</b>. Simulating a push notification with custom data
-         via the <b>Push</b> text box in the <b>Service Worker</b> pane
-       </figcaption>
-     </figure>
-
-1. Click **Push** to send the notification.
-
-     <figure>
-       <img src="/web/updates/images/2017/10/push-result.png"
-            alt="The simulated push notification is top-right"/>
-       <figcaption>
-         <b>Figure 2</b>. The simulated push notification is top-right
-       </figcaption>
-     </figure>
-
 ## Workspaces 2.0 {: #workspaces }
 
 Workspaces have been around for some time in DevTools. This feature enables
@@ -105,6 +73,59 @@ CDS 2016 to see Workspaces 2.0 in action.
           data-start="868" allowfullscreen>
   </iframe>
 </div>
+
+## Simulate push notifications with custom data {: #push }
+
+Simulating push notifications has been around for a while in DevTools,
+with one limitation: you couldn't send custom data. But with
+the new **Push** text box coming to the **Service Worker** pane in Chrome 63,
+now you can. Try it now:
+
+1. Go to [Simple Push Demo](https://gauntface.github.io/simple-push-demo/).
+1. Click **Enable Push Notifications**.
+1. Click **Allow** when Chrome prompts you to allow notifications.
+1. Open DevTools.
+1. Go to the **Service Workers** pane.
+1. Write something in the **Push** text box.
+
+     <figure>
+       <img src="/web/updates/images/2017/10/push-text.png"
+            alt="Simulating a push notification with custom data."
+       <figcaption>
+         <b>Figure 1</b>. Simulating a push notification with custom data
+         via the <b>Push</b> text box in the <b>Service Worker</b> pane
+       </figcaption>
+     </figure>
+
+1. Click **Push** to send the notification.
+
+     <figure>
+       <img src="/web/updates/images/2017/10/push-result.png"
+            alt="The simulated push notification"/>
+       <figcaption>
+         <b>Figure 2</b>. The simulated push notification
+       </figcaption>
+     </figure>
+
+## Trigger background sync events with custom tags {: #sync }
+
+Triggering background sync events has also been in the **Service Workers**
+pane for some time, but now you can send custom tags:
+
+1. Open DevTools.
+1. Go to the **Service Workers** pane.
+1. Enter some text in the **Sync** text box.
+1. Click **Sync**.
+
+<figure>
+  <img src="/web/updates/images/2017/10/sync.png"
+       alt="Triggering a custom background sync event"/>
+  <figcaption>
+    <b>Figure 3</b>. After clicking <b>Sync</b>, DevTools sends a background
+    sync event with the custom tag <code>update-content</code> to the service
+    worker
+  </figcaption>
+</figure>
 
 ## Feedback {: #feedback }
 
