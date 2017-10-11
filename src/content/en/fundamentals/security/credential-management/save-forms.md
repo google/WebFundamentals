@@ -45,7 +45,7 @@ Learn more about autofill in
 
     <form id="signup" method="post">
      <input name="email" type="text" autocomplete="username email">
-     <input name="display-name" type="text" autocomplete="name"> 
+     <input name="display-name" type="text" autocomplete="name">
      <input name="password" type="password" autocomplete="new-password">
      <input type="submit" value="Sign Up!">
     </form>
@@ -70,7 +70,7 @@ On the server side, create an endpoint (or simply alter an existing endpoint)
 that responds with HTTP code 200 or 401, so that it’s clear to the browser
 whether the sign-up/sign-in/change password is successful or not.
 
-For example: 
+For example:
 
     // Try sign-in with AJAX
     fetch('/signin', {
@@ -139,7 +139,7 @@ or proceed to the personalized page.
     });
 
 ## Full code example
-    
+
     // Get form's DOM object
     var f = document.querySelector('#signup');
     f.addEventListener('submit', e => {
@@ -148,7 +148,7 @@ or proceed to the personalized page.
       e.preventDefault();
 
       // Try sign-in with AJAX
-      fetch(/'signin', {
+      fetch('/signin', {
         method: 'POST',
         body: new FormData(e.target),
         credentials: 'include'
