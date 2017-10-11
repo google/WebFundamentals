@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to use the Cache API to make your application data available offline
 
-{# wf_updated_on: 2017-10-03 #}
+{# wf_updated_on: 2017-10-11 #}
 {# wf_published_on: 2017-10-03 #}
 {# wf_blink_components: Blink>Storage>CacheStorage #}
 
@@ -70,7 +70,7 @@ you can use. Each returns a `Promise` that resolves with a value of a different 
   <tbody>
     <tr>
       <td><code>arrayBuffer</code></td>
-      <td>Returns an <code>ArrayBuffer</code> containing the body, serialised to bytes.</td>
+      <td>Returns an <code>ArrayBuffer</code> containing the body, serialized to bytes.</td>
     </tr>
     <tr>
       <td><code>blob</code></td>

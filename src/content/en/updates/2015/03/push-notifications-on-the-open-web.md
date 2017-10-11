@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Push Messaging and Notifications are Landing in Chrome 42.
 
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2017-10-11 #}
 {# wf_published_on: 2015-03-11 #}
 {# wf_tags: news,webpush,notifications,serviceworker #}
 
@@ -602,7 +602,7 @@ like focusing a tab or opening a window with a particular URL:
 This example opens the browser to the root of the site's origin, by focusing an
 existing same-origin tab if one exists, and otherwise opening a new one.
 
-Theres a post dedicated to some of the things [you can do with the Notification API
+There's a post dedicated to some of the things [you can do with the Notification API
  here](/web/updates/2015/05/notifying-you-of-changes-to-notifications).
 
 ### Unsubscribe a User's Device
@@ -804,7 +804,7 @@ each approach has pro's and con's.
 
 This is required so that Chrome, Opera for Android and the Samsung Browser can
 use the Firebase Cloud Messaging (FCM) API. The goal is to use the
-Web Push Protocol when the standard is finalised and FCM can support it.
+Web Push Protocol when the standard is finalized and FCM can support it.
 
 ### Why not use Web Sockets or [Server-Sent Events](https://html.spec.whatwg.org/multipage/comms.html#server-sent-events) (EventSource)?
 
