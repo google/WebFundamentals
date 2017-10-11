@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: There are lots of great new features in Chrome 50 for Notifications, here is a rundown.
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2017-10-11 #}
 {# wf_published_on: 2016-03-13 #}
 {# wf_tags: notifications,chrome50 #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
@@ -24,7 +24,7 @@ ability to:
 
 * add icons to notification buttons,
 * modify the timestamp to help create a consistent experience,
-* track notification close events to help synchronise notifications and provide
+* track notification close events to help synchronize notifications and provide
   analytics,
 * manage the renotify experience when a notification replaces the currently
   displayed notification.
@@ -81,13 +81,13 @@ understand how your users are interacting with your notifications. Are they
 leaving them open for a long time and then actively dismissing them or are they
 acting on them right away.
 
-One popular use case is to be able to synchronise notifications between devices.
+One popular use case is to be able to synchronize notifications between devices.
 If the user dismisses a notification on their desktop device, the same
 notification on their mobile device should also be dismissed. We don't yet have
 the ability to do this silently (remember every push message must have a
 notification displayed), but by using notificationclose it opens up the ability
 to handle this by allowing you to track the notification state for the user on
-your server and synchronise that with the other devices as the user uses them.
+your server and synchronize that with the other devices as the user uses them.
 
 To use the notificationclose event, register it inside your service worker and
 it will fire only when the user has actively dismissed a notification, for

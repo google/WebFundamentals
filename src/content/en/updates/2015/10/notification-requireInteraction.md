@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Notifications on desktop will be automatically dismissed after a short period of time.
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2017-10-11 #}
 {# wf_published_on: 2015-10-15 #}
 {# wf_tags: notifications #}
 {# wf_featured_image: /web/updates/images/2015/10/notification.png #}
@@ -20,8 +20,8 @@ close the notification. But we now live in a world with service worker: where we
 live past the lifetime of a window and the service workers are put to sleep as quickly as possible
 to save resources. This means we need another way to create a good experience for users.
 
-The Nofitification spec was recently updated to give the developer the ability to 
-[indicate that the notfication should _not_ be automaticaly dismissed by the system](https://notifications.spec.whatwg.org/#require-interaction-preference-flag).  
+The Notification spec was recently updated to give the developer the ability to
+[indicate that the notification should _not_ be automatically dismissed by the system](https://notifications.spec.whatwg.org/#require-interaction-preference-flag).
 
 > A notification has an associated require interaction preference flag which is initially 
 > unset. When set, indicates that on devices with a sufficiently large screen, the notification 
