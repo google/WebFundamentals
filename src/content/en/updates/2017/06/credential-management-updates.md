@@ -119,11 +119,11 @@ You can use existing methods to deliver credential information to your server:
         providers: [ 'https://accounts.google.com' ]
       },
       mediation: 'silent'
-    }).then(credential => {
-      if (credential) {
+    }).then(passwordCred => {
+      if (passwordCred) {
         let form = new FormData();
-        form.append('email', credential.id);
-        form.append('password', credential.password);
+        form.append('email', passwordCred.id);
+        form.append('password', passwordCred.password);
         form.append('csrf_token', csrf_token);
         return fetch('/signin', {
           method: 'POST',
