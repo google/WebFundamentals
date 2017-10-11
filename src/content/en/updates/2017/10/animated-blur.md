@@ -8,13 +8,10 @@ description: A few tricks are necessary to animate a blur efficiently.
 {# wf_featured_image: /web/updates/images/2017/10/animated-blur/poster.jpg #}
 {# wf_featured_snippet: A few tricks are necessary to animate a blur efficiently. #}
 
-
-# CSS Deep-Dive: matrix3d() For a Frame-Perfect Custom Scrollbar
+# Animating a Blur {: .page-title }
 
 {% include "web/_shared/contributors/surma.html" %}
 {% include "web/_shared/contributors/yigu.html" %}
-
-# Animating a Blur {: .page-title }
 
 Blurring is a great way to redirect a reader's focus. Making some visual
 elements appear blurred while keeping other elements in focus naturally directs
@@ -160,9 +157,9 @@ the content to the ShadowRoot instead of the `<div>` itself. We have to make
 sure to also copy all stylesheets into the ShadowRoot to guarantee that our
 copies are styled the same way as the original.
 
-> Note: In most cases — especially when writing Custom Elements — we advise
-> against using closed ShadowRoots. Find out more in [Eric's
-> article](/web/fundamentals/web-components/shadowdom#closed).
+Note: In most cases — especially when writing Custom Elements — we advise
+against using closed ShadowRoots. Find out more in [Eric's
+article](/web/fundamentals/web-components/shadowdom#closed).
 
 Some browsers do not support Shadow DOM v1 and for those we fall back to just
 duplicating the content and hoping for the best that nothing breaks. We could
