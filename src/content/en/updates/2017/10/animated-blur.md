@@ -17,7 +17,7 @@ Blurring is a great way to redirect a reader's focus. Making some visual
 elements appear blurred while keeping other elements in focus naturally directs
 the reader's focus. Users ignore the blurred content and instead focus on the
 content they can read. One example would be a list of icons that display details
-about the individual items once hovered. During that time the remaining choices
+about the individual items when hovered over. During that time the remaining choices
 could be blurred to redirect the user to the newly displayed information.
 
 ### TL;DR: {: .hide-from-toc }
@@ -61,8 +61,8 @@ blur works with both techniques. So let's try to find the bottleneck by looking
 at DevTools:
 
 If you enable "Paint Flashing" in DevTools, it does not flash at all. It looks
-like no repaints are happening. And it's technically correct as a "repaint"
-refers to the CPU having to repaint the texture of an promoted element. Whenever
+like no repaints are happening. And that's technically correct as a "repaint"
+refers to the CPU having to repaint the texture of a promoted element. Whenever
 an element is both promoted *and* blurred, the blur is applied by the GPU using
 a shader.
 
@@ -81,7 +81,7 @@ well below 60fps.
 
 So what can we do to make this run smoothly? We can use sleight of hand! Instead
 of animating the actual blur value (the radius of the blur), we pre-compute a
-couple of blurred copies where the blur value increases exponentially and
+couple of blurred copies where the blur value increases exponentially then
 cross-fade between them using `opacity`.
 
 The cross-fade is a series of overlapping opacity fade-ins and fade-outs. If we
@@ -102,7 +102,7 @@ elements should be super-duper fast. In theory, this would allow us to
 front-load the expensive work of blurring. Turns out, the logic is flawed. If
 you run [this
 demo](https://googlechromelabs.github.io/ui-element-samples/animated-blur/badblur.html),
-you'll see framerate is still below 60fps — it's actually *worse* than before.
+you'll see that framerate is still below 60fps, and the blurring is actually *worse* than before.
 
 <img src="/web/updates/images/2017/10/animated-blur/badblur.jpg" alt="DevTools
   showing a trace where the GPU has long periods of busy time.">
@@ -115,26 +115,26 @@ promoted and blurred, the effect is applied by the GPU. So even though we are
 not animating the blur value anymore, the texture itself is still unblurred and
 needs to be re-blurred every frame by the GPU. The reason for the frame rate
 being even worse than before stems from the fact that compared to the naïve
-implementation the GPU actually has more work than before as most of the time 2
+implementation the GPU actually has more work than before as most of the time two
 textures are visible that need to be blurred independently.
 
-What we came up with is not pretty, but it makes the animation blazingly fast:
+What we came up with is not pretty, but it makes the animation blazingly fast.
 We go back to *not* promoting the to-be-blurred element, but instead promote a
 parent wrapper. If an element is both blurred and promoted, the effect is
 applied by the GPU — this is what made our demo slow. If the element is blurred
-but not promoted, the CPU calculates the blur instead and rasterize it to the
+but not promoted, the CPU calculates the blur instead and rasterizes it to the
 nearest parent texture. In our case that's the promoted parent wrapper element.
 The blurred image is now the texture of the parent element and can be re-used
 for all future frames. This only works because we know that the blurred elements
 are not animated and caching them is actually beneficial. Here's a
 [demo](https://googlechromelabs.github.io/ui-element-samples/animated-blur/goodblur.html)
 that implements this technique. I wonder what the Moto G4 thinks of this
-approach (spoiler alert: it thinks it's great):
+approach? Spoiler alert: it thinks it's great:
 
 <img src="/web/updates/images/2017/10/animated-blur/badblur.jpg" alt="DevTools
   showing a trace where the GPU has lots of idle time.">
 
-Lots of headroom on the GPU and a silky-smooth 60fps. We did it!
+Now we've got lots of headroom on the GPU and a silky-smooth 60fps. We did it!
 
 ## Productionizing
 
@@ -151,14 +151,14 @@ Elements](/web/fundamentals/web-components/customelements), it is also an
 isolation and performance primitive! JavaScript and CSS cannot pierce Shadow DOM
 boundaries which allows us to duplicate content without interfering with the
 developer's styles or application logic. We already have a `<div>` element for
-each copy to rasterize onto and now use these `<div>`s as Shadow hosts. We
-create a ShadowRoot using `attachShadow({mode: closed'})` and attach a copy of
-the content to the ShadowRoot instead of the `<div>` itself. We have to make
-sure to also copy all stylesheets into the ShadowRoot to guarantee that our
+each copy to rasterize onto and now use these `<div>`s as shadow hosts. We
+create a `ShadowRoot` using `attachShadow({mode: closed'})` and attach a copy of
+the content to the `ShadowRoot` instead of the `<div>` itself. We have to make
+sure to also copy all stylesheets into the `ShadowRoot` to guarantee that our
 copies are styled the same way as the original.
 
-Note: In most cases — especially when writing Custom Elements — we advise
-against using closed ShadowRoots. Find out more in [Eric's
+Note: In most cases — especially when writing custom elements — we advise
+against using closed `ShadowRoots`. Find out more in [Eric's
 article](/web/fundamentals/web-components/shadowdom#closed).
 
 Some browsers do not support Shadow DOM v1 and for those we fall back to just
@@ -173,11 +173,11 @@ out how we can animate blurs efficiently across browsers!
 ## Conclusion
 
 This kind of effect is not to be used lightly. Due to the fact that we copy DOM
-elements and force them onto their own layer we can end up pushing the limits of
-lower-end devices. Copying *all* stylesheets into each ShadowRoot is a potential
+elements and force them onto their own layer we can push the limits of
+lower-end devices. Copying *all* stylesheets into each `ShadowRoot` is a potential
 performance risk as well, so you should decide whether you would rather adjust
-your logic and styles to not be affected by copies in the LightDOM or utilize
-our ShadowDOM technique. But sometimes it might be a worthwhile investment. Take
+your logic and styles to not be affected by copies in the `LightDOM` or use
+our `ShadowDOM` technique. But sometimes our technique might be a worthwhile investment. Take
 a look at the code in your [GitHub
 repository](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/animated-blur)
 as well as the
