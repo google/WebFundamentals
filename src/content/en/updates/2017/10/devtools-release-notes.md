@@ -21,6 +21,7 @@ Welcome back! New features coming to DevTools in Chrome 63 include:
 
 * [Multi-client remote debugging support](#multi-client).
 * [Workspaces 2.0](#workspaces).
+* [Four new audits](#audits).
 * [Simulate push notifications with custom data](#push).
 * [Trigger background sync events with custom tags](#sync).
 
@@ -41,15 +42,30 @@ See the video below for an example of the issue in VS Code.
   </iframe>
 </div>
 
-As of Chrome 63, this problem is no more. DevTools now supports multiple
-remote debugging clients. Watch the video below to see an example of VS Code
-and DevTools in action, side-by-side.
+As of Chrome 63, DevTools now supports multiple remote debugging clients
+by default, no configuration needed. Watch the video below to see an example
+of VS Code and DevTools in action, side-by-side.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="tTWs0ZyXI-0"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
+
+Multi-client remote debugging was the [number 1 most-popular DevTools issue
+on Crbug][Crbug], and number 3 across the entire Chromium project.
+Multi-client support also  opens up quite a few interesting opportunities
+for integrating other tools with DevTools, or using those tools in new
+ways. For example:
+
+[Crbug]: https://crbug.com/129539
+
+* Two WebSocket protocol clients, such as two Puppeteer sessions, can now
+  connect to the same tab simultaneously.
+* Chrome Extensions using the `chrome.debugger` API can now run at the same
+  time as DevTools.
+* Multiple different Chrome Extensions can now use the `chrome.debugger` API
+  on the same tab simultaneously.
 
 ## Workspaces 2.0 {: #workspaces }
 
@@ -73,6 +89,25 @@ CDS 2016 to see Workspaces 2.0 in action.
           data-start="868" allowfullscreen>
   </iframe>
 </div>
+
+## Four new audits {: #audits }
+
+In Chrome 63 the **Audits** panel has 4 new audits:
+
+* Serve images as WebP.
+* Use images with appropriate aspect ratios.
+* Avoid frontend JavaScript libraries with known security vulnerabilities.
+* Browser errors logged to the Console.
+
+See [Run Lighthouse in Chrome DevTools][Audits] to learn how to use the
+**Audits** panel to improve the quality of your pages.
+
+[Audits]: /web/tools/lighthouse/#devtools
+
+See [Lighthouse][LH] to learn more about the project that powers the
+**Audits** panel.
+
+[LH]: /web/tools/lighthouse/
 
 ## Simulate push notifications with custom data {: #push }
 
