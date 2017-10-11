@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-10-04T00:38:53Z #}
+{# wf_updated_on: 2017-10-10T18:31:04Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -124,15 +124,13 @@ The IndexedDB UI in DevTools doesn't always accurately reflect what's in the dat
 
 
 
-Note: If at any point in the codelab your database gets into a bad state, you can delete it in DevTools by going to the __Application__ tab, clicking on the database name under IndexedDB, and clicking the __Delete database__ button. Alternatively, you can click __Clear storage__ (in the Application tab) and then click the __Clear site data__ button. In all browsers you can also delete the database from the console with the following command: `indexedDB.deleteDatabase('couches-n-things');`. Note that you can't delete the database while the testing page is open.
+Note: If at any point in the codelab your database gets into a bad state, you can delete it in Chrome DevTools by going to the __Application__ tab, clicking on the database name under IndexedDB, and clicking the __Delete database__ button. Alternatively, you can click __Clear storage__ (in the Application tab) and then click the __Clear site data__ button. In all browsers you can also delete the database from the console with the following command: `indexedDB.deleteDatabase('couches-n-things');`. 
 
 
 
 ### 3.2 Create an object store
 
 Let's create an object store in the database to hold the furniture objects.
-
-Close the test page. The database version can't be changed while another page is using the database.
 
 Replace `var dbPromise = idb.open('couches-n-things', 1);` in __main.js __with the following:
 
@@ -161,7 +159,7 @@ var dbPromise = idb.open('couches-n-things', 2, function(upgradeDb) {
 
 Save the code and reload the page in the browser. [Open IndexedDB](tools-for-pwa-developers#indexeddb) in your browser's developer tools and expand the `couches-n-things` database. You should see the empty `products` object store.
 
-Open the QUnit test page, __localhost:8080/test/test.html__, in another browser tab. This page contains several tests for testing our app at each stage of the codelab. Passed tests are blue and failed tests are red. Your app should pass the first test that checks whether the `products` object store exists in the database.
+Open the QUnit test page, __localhost:8080/app/test/test.html__, in another browser tab. This page contains several tests for testing our app at each stage of the codelab. Passed tests are blue and failed tests are red. Your app should pass the first test that checks whether the `products` object store exists in the database. Note that you may not be able to delete the database while the testing page is open.
 
 #### Explanation
 
@@ -271,11 +269,11 @@ Reload the test page. The app should now pass the next test that checks whether 
 
 All database operations must be carried out within a  [transaction](https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction). In the code we just wrote, we first open the transaction on the database object and then open the object store on the transaction. Now when we call `store.add` on that object store, the operation happens inside the transaction.
 
-We add each object to the store inside a `Promise.all`. This way if any of the `add` operations fail, we can catch the error and abort the transaction. Aborting the transaction rolls back all the changes that happened in the transaction so that if any of the events fail to add, none of them will be added to the object store. This ensures the database is not left in a partially updated state. 
+We add each object to the store inside a `Promise.all`. This way if any of the `add` operations fail, we can catch the error and abort the transaction. Aborting the transaction rolls back all the changes that happened in the transaction so that if any of the events fail to add, none of them will be added to the object store. This ensures the database is not left in a partially updated state.
 
 
 
-Note: Specify the transaction mode as `readwrite` when making changes to the database (that is, using the `add`, `put`, or `delete` methods).
+Note: Specify the transaction mode as `readwrite` when making changes to the database (that is, for changes that use the `add`, `put`, or `delete` methods).
 
 
 
@@ -382,7 +380,7 @@ Save the code and refresh the page in the browser.
 
 
 
-Note: Make sure the items we added to the database in the previous step are still in the database. If the database is empty, click __Add Products__ to populate it.
+Note: Make sure the items we added to the database in the previous step are still in the database. If the database is empty, click __Add Products__ to populate it. Don't worry about adding things twice. IndexedDB will throw errors in the console if you try to add items that already exist and won't add them to the store.
 
 
 
@@ -392,7 +390,7 @@ Refresh the test page. The app should pass the next test, which checks if the `g
 
 
 
-Note: The `get` method is case sensitive.
+Note: The `get` method (and consequently `getByName`) is case sensitive.
 
 
 
@@ -450,7 +448,7 @@ dbPromise.then(function(db) {
 
 Save the code and refresh the page in the browser. Enter some prices into the 'price' text boxes (without a currency symbol; try 200 and 500) and click __Search__. Items should appear on the page ordered by price. 
 
-Optional to do on your own time: Replace TODO 4.4b in the `getByDesc()` function with the code to get the items by their descriptions. The first part is done for you. The function uses the `only` method on `IDBKeyrange` to match all items with exactly the provided description. To test your code, try putting "A light, high-stool" into the __By Description__ input and clicking __Search__.
+__Optional__: On your own time, replace TODO 4.4b in the `getByDesc()` function with the code to get the items by their descriptions. The first part is done for you. The function uses the `only` method on `IDBKeyrange` to match all items with exactly the provided description. To test your code, try putting "A light, high-stool" into the __By Description__ input and clicking __Search__.
 
 #### Explanation
 
