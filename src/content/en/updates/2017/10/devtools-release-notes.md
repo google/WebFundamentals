@@ -29,7 +29,7 @@ Note: You can check what version of Chrome you're running at
 `chrome://version`. Chrome auto-updates to a new major version about every 6
 weeks.
 
-## Multi-client debugging support {: #multi-client }
+## Multi-client remote debugging support {: #multi-client }
 
 If you've ever tried debugging an app from an IDE like VS Code or WebStorm,
 you've probably discovered that opening DevTools messes up your debug session.
@@ -60,8 +60,8 @@ ways. For example:
 
 [Crbug]: https://crbug.com/129539
 
-* An open DevTools window plus a connected protocol client. This includes Selenium/Chromedriver, Chrome debugging within VS Code or WebStorm, and WebSocket clients like Puppeteer. 
-* Two separate WebSocket protocol clients (eg. [Puppeteer](https://github.com/GoogleChrome/puppeteer) or [chrome-remote-interface](https://github.com/cyrus-and/chrome-remote-interface)), can now
+* Protocol clients such as ChromeDriver or the Chrome debugging extensions for VS Code and Webstorm, and WebSocket clients such as Puppeteer, can now run at the same time as DevTools.
+* Two separate WebSocket protocol clients, such as [Puppeteer](https://github.com/GoogleChrome/puppeteer) or [chrome-remote-interface](https://github.com/cyrus-and/chrome-remote-interface), can now
   connect to the same tab simultaneously.
 * Chrome Extensions using the `chrome.debugger` API can now run at the same
   time as DevTools.
