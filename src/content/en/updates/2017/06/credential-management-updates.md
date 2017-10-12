@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Latest Updates to the Credential Management API
 
-{# wf_updated_on: 2017-10-11 #}
+{# wf_updated_on: 2017-10-12 #}
 {# wf_published_on: 2017-06-12 #}
-{# wf_tags: performance #}
+{# wf_tags: credentials,chrome57,chrome60 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
 {# wf_featured_snippet: Latest updates coming to the Credential Management API in Chrome 60. Also includes an update landed in Chrome 57. #}
 {# wf_blink_components: Blink #}
