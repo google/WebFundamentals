@@ -63,11 +63,11 @@ those but not CSS filters. The good news is that our workaround for animating a
 blur works with both techniques. So let's try to find the bottleneck by looking
 at DevTools:
 
-If you enable "Paint Flashing" in DevTools, it does not flash at all. It looks
-like no repaints are happening. And that's technically correct as a "repaint"
-refers to the CPU having to repaint the texture of a promoted element. Whenever
-an element is both promoted *and* blurred, the blur is applied by the GPU using
-a shader.
+If you enable "Paint Flashing" in DevTools, you won’t see any flashes at all. It
+looks like no repaints are happening. And that's technically correct as a
+"repaint" refers to the CPU having to repaint the texture of a promoted element.
+Whenever an element is both promoted *and* blurred, the blur is applied by the
+GPU using a shader.
 
 Both SVG filters and CSS filters use [convolution
 filters](https://en.wikipedia.org/wiki/Kernel_(image_processing)) to apply a
