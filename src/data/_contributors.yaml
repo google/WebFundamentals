@@ -579,6 +579,17 @@ jgruber:
   description:
     en: Jakob is an engineer working on V8
 
+yigu:
+  name:
+    given: Yi
+    family: Gu
+  org:
+    name: Google
+    unit: Chrome
+  country: Canada
+  role:
+    - author
+
 yangguo:
   name:
     given: Yang
@@ -1172,7 +1183,7 @@ yvoschaap:
   google: +yvo
   twitter: yvoschaap
   email: yvo@yvoschaap.com
-  description: 
+  description:
     en: "Loves to code and build great things."
 
 moinshaikh:
