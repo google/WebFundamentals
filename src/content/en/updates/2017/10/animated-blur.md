@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A few tricks are necessary to animate a blur efficiently.
 
-{# wf_updated_on: 2017-10-11 #}
+{# wf_updated_on: 2017-10-12 #}
 {# wf_published_on: 2017-10-11 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/2017/10/animated-blur/poster.jpg #}
@@ -13,7 +13,7 @@ description: A few tricks are necessary to animate a blur efficiently.
 {% include "web/_shared/contributors/surma.html" %}
 {% include "web/_shared/contributors/yigu.html" %}
 
-Blurring is a great way to redirect a users's focus. Making some visual
+Blurring is a great way to redirect a user's focus. Making some visual
 elements appear blurred while keeping other elements in focus naturally directs
 the user's focus. Users ignore the blurred content and instead focus on the
 content they can read. One example would be a list of icons that display details
@@ -55,7 +55,7 @@ deceptively powerful GPUs.
 As of now, we can't make animating a blur work efficiently. We can, however,
 find a work-around that looks *good enough*, but is, technically speaking, not
 an animated blur. To get started, let's first understand *why* the animated blur
-is slow. To blur elements on the web there're two techniques: The CSS `filter`
+is slow. To blur elements on the web there are two techniques: The CSS `filter`
 property and SVG filters. Thanks to increased support and ease of use, CSS
 filters are typically used. Unfortunately, if you are required to support Internet
 Explorer, you have no choice but to use SVG filters as IE 10 and 11 support
