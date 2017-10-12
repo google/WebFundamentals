@@ -55,7 +55,7 @@ deceptively powerful GPUs.
 As of now, we can't make animating a blur work efficiently. We can, however,
 find a work-around that looks *good enough*, but is, technically speaking, not
 an animated blur. To get started, let's first understand *why* the animated blur
-is slow. To blur elements on the web there're two techniques: The CSS `filter`
+is slow. To blur elements on the web there are two techniques: The CSS `filter`
 property and SVG filters. Thanks to increased support and ease of use, CSS
 filters are typically used. Unfortunately, if you are required to support Internet
 Explorer, you have no choice but to use SVG filters as IE 10 and 11 support
