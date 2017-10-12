@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A few tricks are necessary to animate a blur efficiently.
 
-{# wf_updated_on: 2017-10-11 #}
+{# wf_updated_on: 2017-10-12 #}
 {# wf_published_on: 2017-10-11 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/2017/10/animated-blur/poster.jpg #}
@@ -13,7 +13,7 @@ description: A few tricks are necessary to animate a blur efficiently.
 {% include "web/_shared/contributors/surma.html" %}
 {% include "web/_shared/contributors/yigu.html" %}
 
-Blurring is a great way to redirect a users's focus. Making some visual
+Blurring is a great way to redirect a user's focus. Making some visual
 elements appear blurred while keeping other elements in focus naturally directs
 the user's focus. Users ignore the blurred content and instead focus on the
 content they can read. One example would be a list of icons that display details
@@ -125,16 +125,16 @@ What we came up with is not pretty, but it makes the animation blazingly fast.
 We go back to *not* promoting the to-be-blurred element, but instead promote a
 parent wrapper. If an element is both blurred and promoted, the effect is
 applied by the GPU. This is what made our demo slow. If the element is blurred
-but not promoted, the CPU calculates the blur instead and rasterizes it to the
-nearest parent texture. In our case that's the promoted parent wrapper element.
-The blurred image is now the texture of the parent element and can be re-used
-for all future frames. This only works because we know that the blurred elements
-are not animated and caching them is actually beneficial. Here's a
+but not promoted, the blur is rasterized to the nearest parent texture instead.
+In our case that's the promoted parent wrapper element. The blurred image is now
+the texture of the parent element and can be re-used for all future frames. This
+only works because we know that the blurred elements are not animated and
+caching them is actually beneficial. Here's a
 [demo](https://googlechromelabs.github.io/ui-element-samples/animated-blur/goodblur.html)
 that implements this technique. I wonder what the Moto G4 thinks of this
 approach? Spoiler alert: it thinks it's great:
 
-<img src="/web/updates/images/2017/10/animated-blur/badblur.jpg" alt="DevTools
+<img src="/web/updates/images/2017/10/animated-blur/goodblur.jpg" alt="DevTools
   showing a trace where the GPU has lots of idle time.">
 
 Now we've got lots of headroom on the GPU and a silky-smooth 60fps. We did it!
