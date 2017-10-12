@@ -60,8 +60,11 @@ ways. For example:
 
 [Crbug]: https://crbug.com/129539
 
-* Protocol clients such as ChromeDriver or the Chrome debugging extensions for VS Code and Webstorm, and WebSocket clients such as Puppeteer, can now run at the same time as DevTools.
-* Two separate WebSocket protocol clients, such as [Puppeteer](https://github.com/GoogleChrome/puppeteer) or [chrome-remote-interface](https://github.com/cyrus-and/chrome-remote-interface), can now
+* Protocol clients such as ChromeDriver or the Chrome debugging extensions for VS Code and 
+Webstorm, and WebSocket clients such as Puppeteer, can now run at the same time as DevTools.
+* Two separate WebSocket protocol clients, such as 
+[Puppeteer](https://github.com/GoogleChrome/puppeteer) or 
+[chrome-remote-interface](https://github.com/cyrus-and/chrome-remote-interface), can now
   connect to the same tab simultaneously.
 * Chrome Extensions using the `chrome.debugger` API can now run at the same
   time as DevTools.
