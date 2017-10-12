@@ -13,9 +13,9 @@ description: A few tricks are necessary to animate a blur efficiently.
 {% include "web/_shared/contributors/surma.html" %}
 {% include "web/_shared/contributors/yigu.html" %}
 
-Blurring is a great way to redirect a reader's focus. Making some visual
+Blurring is a great way to redirect a users's focus. Making some visual
 elements appear blurred while keeping other elements in focus naturally directs
-the reader's focus. Users ignore the blurred content and instead focus on the
+the user's focus. Users ignore the blurred content and instead focus on the
 content they can read. One example would be a list of icons that display details
 about the individual items when hovered over. During that time the remaining choices
 could be blurred to redirect the user to the newly displayed information.
@@ -42,6 +42,9 @@ web, you probably found that the animations are anything but smooth, as this
 [demo](https://googlechromelabs.github.io/ui-element-samples/animated-blur/reallybadblur.html)
 shows if you don't have a powerful machine. Can we do better?
 
+Note: Always test your web apps on mobile devices. Desktop machines tend to have
+deceptively powerful GPUs.
+
 ## The problem
 
 <img src="/web/updates/images/2017/10/animated-blur/pipeline.png" alt="Markup is
@@ -54,7 +57,7 @@ find a work-around that looks *good enough*, but is, technically speaking, not
 an animated blur. To get started, let's first understand *why* the animated blur
 is slow. To blur elements on the web there're two techniques: The CSS `filter`
 property and SVG filters. Thanks to increased support and ease of use, CSS
-filters are typically used. However, if you are required to support Internet
+filters are typically used. Unfortunately, if you are required to support Internet
 Explorer, you have no choice but to use SVG filters as IE 10 and 11 support
 those but not CSS filters. The good news is that our workaround for animating a
 blur works with both techniques. So let's try to find the bottleneck by looking
@@ -121,7 +124,7 @@ textures are visible that need to be blurred independently.
 What we came up with is not pretty, but it makes the animation blazingly fast.
 We go back to *not* promoting the to-be-blurred element, but instead promote a
 parent wrapper. If an element is both blurred and promoted, the effect is
-applied by the GPU — this is what made our demo slow. If the element is blurred
+applied by the GPU. This is what made our demo slow. If the element is blurred
 but not promoted, the CPU calculates the blur instead and rasterizes it to the
 nearest parent texture. In our case that's the promoted parent wrapper element.
 The blurred image is now the texture of the parent element and can be re-used
