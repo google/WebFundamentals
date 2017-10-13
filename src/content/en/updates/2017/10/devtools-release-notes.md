@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Multi-client remote debugging, push notifications with custom data, and Workspaces 2.0.
 
-{# wf_updated_on: 2017-10-11 #}
+{# wf_updated_on: 2017-10-12 #}
 {# wf_published_on: 2017-10-11 #}
 {# wf_tags: chrome63,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -39,14 +39,18 @@ As of Chrome 63, DevTools now supports multiple remote debugging clients
 by default, no configuration needed.
 
 Multi-client remote debugging was the [number 1 most-popular DevTools issue
-on Crbug][Crbug], and number 3 across the entire Chromium project.
+on crbug.com][Crbug], and number 3 across the entire Chromium project.
 Multi-client support also  opens up quite a few interesting opportunities
 for integrating other tools with DevTools, or using those tools in new
 ways. For example:
 
 [Crbug]: https://crbug.com/129539
 
-* Two WebSocket protocol clients, such as two Puppeteer sessions, can now
+* Protocol clients such as ChromeDriver or the Chrome debugging extensions for VS Code and 
+Webstorm, and WebSocket clients such as Puppeteer, can now run at the same time as DevTools.
+* Two separate WebSocket protocol clients, such as 
+[Puppeteer](https://github.com/GoogleChrome/puppeteer) or 
+[chrome-remote-interface](https://github.com/cyrus-and/chrome-remote-interface), can now
   connect to the same tab simultaneously.
 * Chrome Extensions using the `chrome.debugger` API can now run at the same
   time as DevTools.
