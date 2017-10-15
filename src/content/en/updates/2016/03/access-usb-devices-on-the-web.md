@@ -133,7 +133,7 @@ of all connected USB devices the origin has access to.
 The `navigator.usb.requestDevice` function takes a mandatory JavaScript object
 that defines `filters`. These filters are used to match any USB device with the
 given vendor (`vendorId`) and optionally product (`productId`) identifiers. The
-`classCode`, `protocolCode`, `serialNumber, and `subclassCode` keys can also be
+`classCode`, `protocolCode`, `serialNumber`, and `subclassCode` keys can also be
 defined there as well.
 
 <img src="/web/updates/images/2016-03-02-access-usb-devices-on-the-web/usb-device-chooser.png" alt="USB Device Chooser screenshot"/>
