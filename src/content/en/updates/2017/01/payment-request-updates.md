@@ -63,7 +63,7 @@ for choosing a credit card payment.
          amount: { currency: 'USD', value: '3.00' }
        }],
        total: {
-         label: ‘Credit card price’,
+         label: 'Credit card price',
          amount: {currency: ‘USD’, value: ‘71.00’}}
      }]
     };
