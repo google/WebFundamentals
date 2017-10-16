@@ -7,7 +7,7 @@ description: Say goodbye to shadow-piercing CSS selectors.
 {# wf_tags: javascript #}
 {# wf_featured_image: /web/updates/images/2017/10/intl-pluralrules.png #}
 {# wf_featured_snippet: Say goodbye to shadow-piercing CSS selectors. #}
-{# wf_blink_components: Blink>DOM>ShadowDOM #}
+{# wf_blink_components: Blink>DOM #}
 
 # Removing ::shadow and /deep/ in Chrome 63 {: .page-title }
 
