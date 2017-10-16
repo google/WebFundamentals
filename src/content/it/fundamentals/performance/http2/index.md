@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2 (o h2) è un protocollo binario che porta gli stream push, multiplex con controllo dei frame sul web.
 
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2016-09-29 #}
 
 # Introduzione a HTTP/2 {: .page-title }
@@ -10,7 +10,7 @@ description: HTTP/2 (o h2) è un protocollo binario che porta gli stream push, m
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 {% include "web/_shared/contributors/surma.html" %}
 
-Note: Il seguetne contenuto è estratto da [High Performance Browser
+Note: Il seguente contenuto è estratto da [High Performance Browser
 Networking](http://shop.oreilly.com/product/0636920028048.do) (O'Reilly, Ilya
 Grigorik). Per la versione completa e relativi contenuti, vedere
 [hpbn.co](https://hpbn.co/){: .external }.
@@ -37,7 +37,7 @@ comprendere e sfruttare nelle proprie applicazioni.
 HTTP/2 non modifica in alcun modo la semantica dell'applicazione di 
 HTTP. Tutti i concetti fondamentali, come metodi HTTP, codici di 
 stato, URI e campi di intestazione, rimangono in vigore. Invece, 
-HTTP/2 modifica come i dati vengono formattati (framed) e trasportati 
+HTTP/2 modifica il modo in cui i dati vengono formattati (framed) e trasportati
 tra il client e il server, che gestiscono l'intero processo e 
 nascondono tutta la complessità delle nostre applicazioni all'interno 
 del nuovo livello di framing. Di conseguenza, tutte le applicazioni 
@@ -47,13 +47,13 @@ esistenti possono essere consegnate senza modifiche.
 
 Per raggiungere gli obiettivi di performance impostati dal gruppo di 
 lavoro HTTP, HTTP/2 introduce un nuovo livello di framing binario che 
-non è compatibile con i server e i client precedenti HTTP/1.x, da qui 
+non è retrocompatibile con i server e i client precedenti HTTP/1.x, da qui
 l'incremento maggiore della versione di protocollo in HTTP/2.
 
-Detto questo, a meno che non si stia implementando un server web (o un 
-client personalizzato) lavorando con socket TCP raw, non si vedrà 
-alcuna differenza: tutte le novità e il framing di basso livello viene 
-eseguito dal client e dal server per tuo conto. Le uniche differenze 
+Detto questo, a meno che non stai implementando un server web (o un 
+client personalizzato) lavorando con socket TCP raw, non si vedrai 
+alcuna differenza: tutte le novità e il framing di basso livello vengono 
+eseguiti dal client e dal server per tuo conto. Le uniche differenze 
 osservabili saranno un miglioramento delle prestazioni e la 
 disponibilità di nuove funzionalità come la priorità nelle richieste, 
 il controllo del flusso e il server push.
@@ -68,11 +68,11 @@ HTTP/1.1.
 In particolare, gli obiettivi del progetto sono 
 stati i seguenti:
 
-* Obiettivo una riduzione del 50% del tempo di caricamento della 
+* Mirare a una riduzione del 50% del tempo di caricamento della 
 pagina (PLT).
 * Evitare la necessità di modifiche al contenuto dagli autori del sito 
 web.
-* Ridurre al minimo la complessità di distribuzione e evitare le 
+* Ridurre al minimo la complessità di distribuzione ed evitare le 
 modifiche delle infrastrutture di rete.
 * Sviluppare questo nuovo protocollo in collaborazione con la comunità 
 open-source.
@@ -95,10 +95,10 @@ l'implementazione sperimentale del nuovo protocollo SPDY:
 > risultati iniziali sono molto incoraggianti: quando scarichiamo i 25 
 > siti web più importanti sulle connessioni di rete simulate, 
 > riscontrando un miglioramento significativo nei tempi di caricamento 
-> delle pagine fino al 55% più veloci.
+> delle pagine fino al 55%.
 > [*(Chromium Blog)*](https://blog.chromium.org/2009/11/2x-faster-web.html)
 
-Andando avanti velocemente al 2012 il nuovo protocollo sperimentale è 
+Passando velocemente al 2012 il nuovo protocollo sperimentale è 
 supportato da Chrome, Firefox e Opera, e da un numero crescente di 
 siti, sia grandi (ad esempio, Google, Twitter, Facebook) che piccoli, 
 attivando SPDY all'interno della loro infrastruttura. In effetti, SPDY 
@@ -125,13 +125,13 @@ progetti intermedi:
 * Marzo 2012: Invito a presentare proposte per HTTP/2
 * Novembre 2012: Prima bozza di HTTP/2 (basato su SPDY)
 * Agosto 2014: Pubblicazione HTTP/2 draft-17 e HPACK draft-12
-* Agosto 2014: Ultima chiamata per il gruppo di lavoro di HTTP/2
+* Agosto 2014: Ultima chiamata del gruppo di lavoro di HTTP/2
 * Febbraio 2015: IESG approva bozze HTTP/2 e HPACK
 * Maggio 2015: Pubblicazione RFC 7540 (HTTP/2) e RFC 7541 (HPACK)
 
 All'inizio del 2015 l'IESG ha esaminato e approvato il nuovo standard 
 HTTP/2 per la pubblicazione. Subito dopo, la squadra di Google Chrome 
-ha annunciato il proprio programma per deprecare l'estensione SPDY e 
+ha annunciato il proprio programma per ritirare l'estensione SPDY e 
 NPN per TLS:
 
 > Le modifiche principali di HTTP/2 rispetto a HTTP/1.1 si concentrano 
@@ -140,23 +140,23 @@ NPN per TLS:
 > la negoziazione del protocollo si sono evolute dal lavoro eseguito 
 > in un precedente protocollo aperto ma non standard, denominato 
 > SPDY. Chrome ha supportato SPDY da Chrome 6, ma poiché la maggior 
-> parte dei vantaggi sono presenti in HTTP/2, è tempo di dirgli addio. 
+> parte dei vantaggi è presente in HTTP/2, è tempo di dirgli addio. 
 > Prevediamo di rimuovere il supporto per SPDY all'inizio del 2016 e 
 > rimuovere anche il supporto per l'estensione TLS denominata NPN a 
 > favore di ALPN in Chrome contemporaneamente. Gli sviluppatori dei 
 > server sono fortemente incoraggiati a passare a HTTP/2 e ALPN.
 
 > Siamo lieti di aver contribuito al processo di standard aperti che 
-> ha portato a HTTP/2 e spero di vedere un'ampia adozione data l'ampio 
-> impegno del settore sulla standardizzazione e l'implementazione. 
+> ha portato a HTTP/2 e speriamo di vedere una forte adozione dato l'ampio
+> impegno del settore nella standardizzazione e nell'implementazione. 
 > [*(Chromium  Blog)*](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html)
 
 L'evoluzione parallela di SPDY e HTTP/2 ha consentito a server, 
 browser e sviluppatori di siti di acquisire esperienza nel mondo reale 
 con il nuovo protocollo mentre era ancora in fase di sviluppo.
-Di conseguenza, lo standard HTTP/2 è uno dei migliori e più ampiamente 
-testati standard già appena uscito. Quando HTTP/2 è stato approvato 
-dall'IESG, c'erano decine di client e server accuratamente testati e 
+Di conseguenza quello di HTTP/2 è uno degli standard migliori e più ampiamente
+testati disponibili. Quando HTTP/2 è stato approvato
+dall'IESG, disponeva di decine di client e server accuratamente testati e
 pronti per la produzione già implementati. Infatti, già poche 
 settimane dopo l'approvazione finale del protocollo, molti utenti 
 stavano beneficiando dei suoi vantaggi con diversi browser popolari (e 
@@ -679,3 +679,6 @@ Per i dettagli completi dell'algoritmo di compressione HPACK, vedere
 * [“Rules of Thumb for HTTP/2 Push”](https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit) 
     – Un'analisi di Tom Bergan, Simon Pelchat e Michael Buettner su 
     quando e come usare il push.
+
+Translated by
+{% include "web/_shared/contributors/lucaberton.html" %}

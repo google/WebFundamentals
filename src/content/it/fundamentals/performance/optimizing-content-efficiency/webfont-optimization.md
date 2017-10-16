@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: La tipografia è fondamentale per un buon design,  branding, leggibilità ed accessibilità. I font web consentono di ottenere tutto ciò, e non solo: il testo è selezionabile, ricercabile, ingrandibile e compatibile con high-DPI, offrendo un rendering coerente e conciso, indipendentemente dalle dimensioni e dalla risoluzione del monitor. I font web sono fondamentali per ottenere design, UX e prestazioni ottimali.
 
 
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2014-09-19 #}
 
 # Ottimizzazione dei font web {: .page-title }

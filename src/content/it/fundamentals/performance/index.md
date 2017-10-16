@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Migliorare le prestazioni inizia minimizzando, o almeno, ottimizzando i dati che gli utenti scaricano. Comprendere come un browser elabora tali risorse è un prerequisito per migliorare l'efficienza dei codici. Dopo averli migliorati, è necessario un modo per testarli.
 
-{# wf_updated_on: 2017-07-07 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2015-09-08 #}
 
 # Performance {: .page-title }
@@ -107,4 +107,5 @@ efficacemente gli asset e copre anche gli aspetti di sicurezza di
 questi protocolli.
 <div style="clear:both;"></div>
 
-
+Translated by
+{% include "web/_shared/contributors/lucaberton.html" %}

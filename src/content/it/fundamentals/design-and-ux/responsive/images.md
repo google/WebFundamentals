@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Un'immagine vale più di mille parole e ricopre un ruolo chiave per tutte le pagine. Tuttavia, le immagini richiedono il download di numerosi dati. Il Web design reattivo consente di modificare disposizione e immagini in base alle caratteristiche del dispositivo.
+description: Un'immagine vale più di mille parole e ricopre un ruolo chiave per tutte le pagine. Tuttavia, le immagini richiedono il download di numerosi dati. Il Web design reactive consente di modificare disposizione e immagini in base alle caratteristiche del dispositivo.
 
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2000-01-01 #}
 
 
@@ -10,19 +10,19 @@ description: Un'immagine vale più di mille parole e ricopre un ruolo chiave per
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-Un'immagine vale più di mille parole e ricopre un ruolo chiave per tutte le
-pagine. Tuttavia, le immagini richiedono il download di numerosi dati. Con il
-Web design reattivo, la disposizione e le immagini possono adattarsi alle
-caratteristiche del dispositivo.
+Un'immagine vale più di mille parole e ricopre un ruolo chiave in ogni
+pagina. Tuttavia spesso rappresenta anche la maggior parte dei byte scaricati.
+Con il Web design reactive, non solo il layout ma anche le immagini possono
+adattarsi alle caratteristiche del dispositivo.
 
 
 ### Immagini reattive
 
-Il Web design reattivo consente di modificare disposizione e contenuti in base
-alle caratteristiche del dispositivo. Ad esempio, devi utilizzare elementi
+Il Web design reactive consente di modificare sia i layout che i contenuti in
+base alle caratteristiche del dispositivo. Ad esempio, devi utilizzare elementi
 grafici ad alta risoluzione sui display (2x) ad alta risoluzione per ottenere
-una buona nitidezza. Un'immagine con una larghezza del 50% rende rendere al
-meglio su un browser di larghezza pari a 800 pixel, ma utilizzerebbe risorse
+una buona nitidezza. Un'immagine con una larghezza del 50% tende a funzionare
+su un browser di larghezza pari a 800 pixel, ma utilizzerebbe risorse
 eccessive su un cellulare dallo schermo ridotto e consumerebbe la stessa
 larghezza di banda anche se scalata per uno schermo piccolo.
 

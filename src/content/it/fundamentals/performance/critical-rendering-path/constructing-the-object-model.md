@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Prima che il browser possa eseguire il rendering del contenuto sullo schermo, deve costruire le strutture DOM e CSSOM. Di conseguenza, dobbiamo assicurarci di fornire al browser sia HTML che CSS nel più breve tempo possibile.
 
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Costruzione del modello ad oggetti {: .page-title }

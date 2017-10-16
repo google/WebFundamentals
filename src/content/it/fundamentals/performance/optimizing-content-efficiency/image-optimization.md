@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Le immagini costituiscono la maggior parte dei byte scaricati su una pagina Web e occupano spesso una parte significativa di spazio visivo. Di conseguenza, ottimizzare le immagini consente spesso di risparmiare byte e migliorare le prestazioni del sito Web: meno byte deve scaricare il browser, meno traffico si crea sulla larghezza di banda del client, più rapidamente il browser è in grado di scaricare e renderizzare contenuti utili sul monitor.
 
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2014-05-06 #}
 
 # Ottimizzazione delle immagini {: .page-title }

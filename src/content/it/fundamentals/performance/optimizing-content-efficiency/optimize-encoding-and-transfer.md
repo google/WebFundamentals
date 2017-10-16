@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Dopo aver eliminato le risorse non necessarie, la cosa migliore che possiamo fare per migliorare il tempo di caricamento della pagina è minimizzare la dimensione totale delle risorse da scaricare ottimizzando e comprimendo le risorse rimaste.
 
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Ottimizzazione della codifica e delle dimensioni di trasferimento delle risorse di testo {: .page-title }

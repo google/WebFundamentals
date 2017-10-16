@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Le risorse più veloci e ottimizzate sono quelle non inviate. Hai verificato le tue risorse di recente? Dovresti farlo periodicamente, per assicurarti che tutte le risorse consentano di offrire all'utente un'esperienza migliore.
 
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Eliminazione dei download non necessari {: .page-title }

@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Ottimizzazione del percorso di rendering critico attraverso l'assegnazione di priorità alla visualizzazione del contenuto che è correlato all'azione principale che l'utente vuole effettuare sulla pagina.
+description: Ottimizzazione del percorso di rendering critico attraverso l'assegnazione di priorità alla visualizzazione del contenuto correlato all'attuale azione dell'utente.
 
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Percorso di rendering critico {: .page-title }
@@ -10,7 +10,7 @@ description: Ottimizzazione del percorso di rendering critico attraverso l'asseg
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
-_L'ottimizzazione del percorso di rendering critico_ è cruciale per il miglioramento delle prestazioni delle nostre pagine: il nostro scopo è assegnare priorità e visualizzare il contenuto relativo all'azione principale che l'utente vuole eseguire sulla pagina.
+_L'ottimizzazione del percorso di rendering critico_ attraverso l'assegnazione di priorità alla visualizzazione del contenuto correlato all'attuale azione dell'utente.
 
 La fornitura di un'esperienza di rete veloce richiede capacità elevate da parte del browser. La maggior parte di questo lavoro è nascosto a noi sviluppatori web: scriviamo il markup e la nostra pagina viene visualizzata sullo schermo. In che modo il browser passa dall'utilizzo di HTML, CSS e JavaScript al rendering dei pixel sullo schermo?
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: RAIL è un modello di performance con l'utente al centro. Ogni applicazione web ha questi quattro distinti aspetti all'interno del suo ciclo di vita e le performance centrano in diversi modi: Response, Animation, Idle, Load.
 
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2015-06-07 #}
 
 # Misurazione performance con il modello RAIL {: .page-title }
@@ -216,4 +216,5 @@ registrati nella linea temporale confrontandoli con le metriche RAIL:
   </tbody>
 </table> 
 
-
+Translated by
+{% include "web/_shared/contributors/lucaberton.html" %}

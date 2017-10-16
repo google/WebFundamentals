@@ -2,18 +2,18 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: È importante capire come si comporta l'applicazione o il sito come quando la connettività è scarsa o inaffidabile, e costruirlo di conseguenza. Una gamma di strumenti può aiutarti.
 
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2016-05-09 #}
 
-# Comprendere la Bassa Larghezza di Banda e la Latenza Elevata {: .page-title }
+# Comprendere la bassa larghezza di banda e la latenza elevata {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
-È importante capire come si comporta l'applicazione o il sito come 
-quando la connettività è scarsa o inaffidabile, e costruirlo di 
+È importante capire come si comporta l'applicazione o il sito
+in caso di connettività scarsa o inaffidabile, e costruire di
 conseguenza. Una gamma di strumenti può aiutarti.
 
-## Test con bassa larghezza di banda e alta latenza {: #testing }
+## Test con bassa larghezza di banda e latenza elevata {: #testing }
 
 Una 
 [quantità crescente](http://adwords.blogspot.co.uk/2015/05/building-for-next-moment.html) 
@@ -23,9 +23,9 @@ di persone utilizza la rete sui dispositivi mobili. Anche a casa,
 In questo contesto, è importante capire come si comporta l'applicazione 
 o il sito quando la connettività è scarsa o inaffidabile. Una gamma di 
 strumenti software può aiutarti 
-[emulare e simulare](https://stackoverflow.com/questions/1584617/simulator-or-emulator-what-is-the-differenza) 
-bassa larghezza di banda e alta 
-[latenza](https: //www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/).
+a [emulare e simulare](https://stackoverflow.com/questions/1584617/simulator-or-emulator-what-is-the-differenza)
+la bassa larghezza di banda e
+[la latenza elevata](https: //www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/).
 
 ### Emulare un rallentamento di rete
 
@@ -86,7 +86,7 @@ città negli Stati Uniti.
 Selezionare una posizione e, dalle impostazioni avanzate, selezionare un 
 tipo di connessione. Puoi anche automatizzare i test utilizzando 
 [scripts](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/scripting) 
-(ad esempio, per fare login a un sito) o utilizzando 
+(ad esempio, per fare login a un sito) o utilizzando le
 [RESTful API](https://sites.google.com/a/webpagetest.org/docs/advanced-features/webpagetest-restful-apis). 
 Questo ti aiuta a includere test di connettività nei processi di 
 generazione o nella registrazione delle prestazioni.
@@ -98,7 +98,7 @@ modem:
 
 ![Fiddler proxy](images/fiddler.png)
 
-### Prova una rete altalenante
+### Test su una rete altalenante
 
 I proxy software e hardware consentono di emulare condizioni di reti 
 mobili problematiche, come la limitazione della larghezza di banda, il 
@@ -108,20 +108,20 @@ di includere test di rete del mondo reale nel loro flusso di lavoro.
 
 Il sistema Facebook di [Augmented Traffic Control](http://facebook.githubith.io/augmented-traffic-control/) 
 (ATC) è un insieme di applicazioni con licenza BSD che possono essere 
-utilizzate per modificare il traffico e emulare le condizioni di rete scarse:
+utilizzate per modificare il traffico ed emulare condizioni di rete scarse.
 
 ![Augmented Traffic Control di Facebook](images/augmented-traffic-control.png)
 
 > Facebook ha anche istituito i 
 [Martedì 2G](https://code.facebook.com/posts/1556407321275493/building-for-emerging-markets-the-story-behind-2g-tuesdays/) 
-per aiutare a capire come le persone su 2G utilizzano Il loro prodotto. 
-Il martedì, i dipendenti ottengono un pop-up che offre loro la 
+per capire come le persone su 2G utilizzano il loro prodotto.
+Il martedì i dipendenti visualizzano un pop-up che offre loro la
 possibilità di simulare una connessione 2G.
 
 Il proxy [Charles](https://www.charlesproxy.com/){:. external} HTTP/HTTPS 
 può essere utilizzato per 
 [regolare la larghezza di banda e la latenza](http://www.charlesproxy.com/documentation/proxying/throttling/). 
-Charles è un software commerciale, ma è disponibile un trial gratuito.
+Charles è un software commerciale ma è disponibile in forma di trial gratuita.
 
 ![Impostazioni della larghezza di banda e latenza del proxy Charles](images/charles.png)
 
@@ -133,7 +133,7 @@ Ulteriori informazioni su Charles sono disponibili su
 ### Che cos'è il lie-fi?
 
 Il termine [lie-fi](http://www.urbandictionary.com/define.php?term=lie-fi")
-risale almeno al 2008 (quando i telefoni sembravano 
+risale almeno al 2008 (quando i telefoni erano fatti così
 [Immagini di telefoni dal 2008](https://www.mobilegazette.com/2008-phones-wallchart.htm)), 
 e si riferisce alla connettività che non è ciò che sembra. Il tuo browser 
 si comporta come se avesse connettività quando, per qualunque motivo, 
@@ -141,12 +141,12 @@ non è così.
 
 La connettività errata può provocare una scarsa esperienza d'uso poiché 
 il browser (o JavaScript) persiste nel tentativo di recuperare risorse 
-anziché abbandonare e scegliere un fallimento comprensibile. Lie-fi può 
-in realtà essere peggio dell'offline; almeno se un dispositivo è offline 
-è al sicuro, il tuo JavaScript può adottare un'opportuna azione 
+anziché abbandonare e scegliere un fallback ragionevole. Il lie-fi può
+in realtà essere peggiore dell'offline; almeno se un dispositivo è decisamente
+offline, il tuo JavaScript può adottare un'opportuna azione
 evasiva.
 
-Lie-fi è probabile che diventi un problema più grande in quanto più 
+È probabile che il lie-fi diventi un problema sempre maggiore in quanto più
 persone si muovono in mobilità e lontano dalla banda larga fissa. Recenti 
 [dati del censimento degli Stati Uniti](https://www.ntia.doc.gov/blog/2016/evolving-technologies-change-nature-internet-use) 
 mostrano un [allontanamento dalla banda larga fissa](https://www.washingtonpost.com/news/the-switch/wp/2016/04/18/new-data-americans-are-abandoning-wired-home-internet/). 
@@ -181,3 +181,6 @@ aiutare ad ottimizzare la distribuzione dei contenuti ed evitare richieste
 monolitiche. Jake Archibald fornisce maggiori dettagli su come affrontare 
 il lie-fi nel 
 [Supercharging page load](https://youtu.be/d5_6yHixpsQ?t=6m42s).
+
+Translated by
+{% include "web/_shared/contributors/lucaberton.html" %}
