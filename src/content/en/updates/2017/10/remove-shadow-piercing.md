@@ -4,8 +4,8 @@ description: Say goodbye to shadow-piercing CSS selectors.
 
 {# wf_updated_on: 2017-10-16 #}
 {# wf_published_on: 2017-10-16 #}
-{# wf_tags: javascript #}
-{# wf_featured_image: /web/updates/images/2017/10/intl-pluralrules.png #}
+{# wf_tags: webcomponents,shadowdom,style,css #}
+{# wf_featured_image: /web/updates/images/generic/styles.png #}
 {# wf_featured_snippet: Say goodbye to shadow-piercing CSS selectors. #}
 {# wf_blink_components: Blink>DOM #}
 
