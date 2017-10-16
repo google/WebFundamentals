@@ -166,9 +166,9 @@ progressively save the data that is on the stream in to you preferred
 destination.
 
 <pre class="prettyprint">
-&lt;a id="download">Download</a>
-&lt;button id="stop">Stop</button>
-&lt;script>
+&lt;a id="download">Download&lt;/a>
+&lt;button id="stop">Stop&lt;/button>
+<script>
   let shouldStop = false;
   let stopped = false;
   const downloadLink = document.getElementById('download');
