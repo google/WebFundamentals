@@ -202,12 +202,11 @@ There are a few things to keep in mind when using this technique:
 +  When you lower the resolution, also called changing representations,
     you must append a new initialization segment, and it must be the one
     intended for the media segments to follow.
-+  The presentation timestamp of the appended media can overlap the
-    timestamps of the data still in the buffer. The browser will remove the
-    duplicate frames. This saves you from having to exactly match the
-    timestamps of the removed frames and allows playback to proceed without
-    interruption or repeated content. If you overlap, be sure not to overlap
-    the playhead. This will cause errors in some buffers.
++  The presentation timestamp of the appended media should match the timestamp
+   of the data in the buffer as closely as possible, but not jump ahead.
+   Overlapping the buffered data may cause a stutter or brief stall, depending
+   on the browser. Regardless of what you append, don't overlap the playhead as
+   this will throw errors.
 +  You may be tempted to seek to a specific location and resume playback
     from there. Be aware that this will cause playback interruption until the
     seek is completed.
