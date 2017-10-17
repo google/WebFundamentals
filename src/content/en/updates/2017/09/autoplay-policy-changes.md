@@ -15,7 +15,7 @@ description: Learn best practices for good user experiences with the new autopla
 
 Chrome's autoplay policies will change in January of 2018 and I'm here to tell
 you why and how this is going to affect video playback with sound. Spoiler
-alert: gUsers are going to love it!
+alert: users are going to love it!
 
 <figure>
   <a href="https://imgflip.com/i/ngd6c">
@@ -38,7 +38,7 @@ alert: gUsers are going to love it!
 
 As you may have [noticed], web browsers are moving towards stricter autoplay
 policies in order to improve the user experience, minimize incentives to install
-add blockers, and reduce data consumption on expensive and/or constrained
+ad blockers, and reduce data consumption on expensive and/or constrained
 networks. These changes are intended to give greater control of playback to
 users and to benefit publishers with legitimate use cases.
 
@@ -47,7 +47,8 @@ Chrome's autoplay policies are simple:
 - Muted autoplay is always allowed.
 - Autoplay with sound is allowed if:
     - User has interacted with the domain (click, tap, etc.).
-    - On desktop, the user's [Media Engagement Index](#mei) threshold has been  crossed meaning the user has previously play video with sound.
+    - On desktop, the user's [Media Engagement Index](#mei) threshold has been crossed,
+      meaning the user has previously play video with sound.
     - On mobile, the user has [added the site to his or her home screen].
 - Top frames can [delegate autoplay permission](#iframe) to their iframes to
   allow autoplay with sound.
