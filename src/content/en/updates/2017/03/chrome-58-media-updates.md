@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 58.
 
-{# wf_updated_on: 2017-09-20 #}
+{# wf_updated_on: 2017-10-17 #}
 {# wf_published_on: 2017-03-21 #}
 {# wf_tags: news,chrome58,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
@@ -53,17 +53,20 @@ sample](https://googlechrome.github.io/samples/media/controlslist.html).
 Usage in HTML:
 
 <pre class="prettyprint lang-html">
-&lt;video controls <b>controlsList="nofullscreen nodownload noremoteplayback foobar"</b>>&lt;/video>
+&lt;video controls <b>controlsList="nofullscreen nodownload noremoteplayback"</b>>&lt;/video>
 </pre>
 
 Usage in JavaScript:
 
     var video = document.querySelector('video');
     video.controls; // true
-    video.controlsList; // "nofullscreen nodownload noremoteplayback" - "foobar" not present
+    video.controlsList; // ["nofullscreen", "nodownload", "noremoteplayback"]
     video.controlsList.remove('noremoteplayback');
-    video.controlsList; // "nofullscreen nodownload" - "noremoteplayback" not present
+    video.controlsList; // ["nofullscreen", "nodownload"]
     video.getAttribute('controlsList'); // "nofullscreen nodownload"
+
+    video.controlsList.supports('foo'); // false
+    video.controlsList.supports('noremoteplayback'); // true
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/tFuQd3AcsIQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5737006365671424) &#124;
