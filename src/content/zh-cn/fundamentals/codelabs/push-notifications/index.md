@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:在此代码实验室中，您将学习如何向网络应用添加推送通知。
 
-{# wf_updated_on: 2016-11-21T15:42:20Z #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -643,13 +643,13 @@ swRegistration.pushManager.getSubscription()
 
 恭喜您完成此代码实验室！
 
-此代码实验室向您介绍了如何设置和运行向网络应用中添加推送的过程。如果您想要了解有关网络通知可以执行的操作的详细信息，[请查看这些文档](/web/fundamentals/engage-and-retain/push-notifications/)。 
+此代码实验室向您介绍了如何设置和运行向网络应用中添加推送的过程。如果您想要了解有关网络通知可以执行的操作的详细信息，[请查看这些文档](/web/fundamentals/push-notifications)。
 
 如果您准备在自己的网站上部署推送，可能会有兴趣了解为使用 GCM 的旧版/非标准合规浏览器添加支持，[在此处了解详细信息](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/)。
 
 ### 深入阅读
 
-*  Web__Fundamentals__ 上的[网络推送通知](/web/fundamentals/engage-and-retain/push-notifications/)文档
+*  Web__Fundamentals__ 上的[网络推送通知](/web/fundamentals/push-notifications)文档
 *  [网络推送库](https://github.com/web-push-libs/) - 网络推送库包括 Node.js、PHP、Java 和 Python。
 
 #### 相关博文

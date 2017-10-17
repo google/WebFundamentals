@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Pantalla completa disponible.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-10-01 #}
 
 # Desarrollar experiencias en pantalla completa {: .page-title }
@@ -231,7 +231,7 @@ Una mejor opción es usar el manifiesto de apps web.
 
 #### El manifiesto de apps web (Chrome, Opera, Firefox, Samsung)
 
-El [manifiesto para las apps web](/web/fundamentals/engage-and-retain/web-app-manifest/)
+El [manifiesto para las apps web](/web/fundamentals/web-app-manifest)
 es un archivo JSON simple que le proporciona a usted, el
 desarrollador, la capacidad de controlar cómo se le muestra su app al usuario en las áreas
 en las que espera ver apps (por ejemplo, la pantalla de inicio de los celulares), dirigir

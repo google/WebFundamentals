@@ -51,7 +51,7 @@ landing_page:
         path: /web/fundamentals/performance/poor-connectivity/#lie-fi
         classname: wf-small-link
       - label: Design for offline
-        path: /web/fundamentals/getting-started/codelabs/offline/
+        path: /web/fundamentals/codelabs/offline/
         classname: wf-small-link
       - label: Reduce the number of resource requests
         path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
@@ -76,7 +76,7 @@ landing_page:
         path: /web/fundamentals/performance/optimizing-content-efficiency/
         classname: wf-small-link
       - label: "Streamline navigation: help users get to what they want"
-        path: /web/fundamentals/getting-started/principles/#home-page-and-site-navigation
+        path: /web/fundamentals/design-and-ux/principles/#home-page-and-site-navigation
         classname: wf-small-link
       - label: Prioritize content display
         path: /web/fundamentals/performance/critical-rendering-path/
@@ -102,7 +102,7 @@ landing_page:
         path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
         classname: wf-small-link
       - label: Reduce user actions required to access content
-        path: /web/fundamentals/getting-started/principles/
+        path: /web/fundamentals/design-and-ux/principles/
         classname: wf-small-link
       - label: Avoid expensive animations
         path: /web/fundamentals/design-and-ux/animations/animations-and-performance
@@ -116,7 +116,7 @@ landing_page:
       image_path: images/capability.png
       buttons:
       - label: Cater for a range of viewports and devices
-        path: /web/fundamentals/getting-started/your-first-multi-screen-site/
+        path: /web/fundamentals/codelabs/your-first-multi-screen-site/
         classname: wf-small-link
       - label: "Design for limited memory and CPU: reduce and optimize"
         path: /web/fundamentals/performance/
@@ -156,13 +156,13 @@ landing_page:
       image_path: images/monetization.png
       buttons:
       - label: Streamline transactions
-        path: /web/fundamentals/getting-started/principles/#commerce-and-conversion
+        path: /web/fundamentals/design-and-ux/principles/#commerce-and-conversion
         classname: wf-small-link
       - label: Streamline forms
         path: /web/fundamentals/design-and-ux/input/forms/
         classname: wf-small-link
       - label: Design orientation-friendly layouts for small screens
-        path: /web/fundamentals/getting-started/principles/#usability-and-form-factor
+        path: /web/fundamentals/design-and-ux/principles/#usability-and-form-factor
         classname: wf-small-link
     - heading: Plan for localization
       description: >

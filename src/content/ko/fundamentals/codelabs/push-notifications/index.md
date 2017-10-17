@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 이 코드랩에서는 웹 앱에 푸시 알림을 추가하는 방법을 배워봅니다.
 
-{# wf_updated_on: 2016-11-21T15:42:20Z #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -643,13 +643,13 @@ swRegistration.pushManager.getSubscription()
 
 드디어 코드랩을 완성했습니다!
 
-이 코드랩에서는 웹 앱에 푸시를 추가하여 활성화하고 실행하는 방법을 알 수 있었습니다. 웹 알림으로 무엇을 할 수 있을지 좀 더 자세히 알아보고 싶으면 [이 문서를 확인해보세요](/web/fundamentals/engage-and-retain/push-notifications/). 
+이 코드랩에서는 웹 앱에 푸시를 추가하여 활성화하고 실행하는 방법을 알 수 있었습니다. 웹 알림으로 무엇을 할 수 있을지 좀 더 자세히 알아보고 싶으면 [이 문서를 확인해보세요](/web/fundamentals/push-notifications).
 
 사이트에 푸시를 배포할 방법을 찾고 있다면, GCM을 사용하는 과거의 브라우저나 표준을 준수하지 않는 브라우저를 위한 지원을 추가하는 데도 관심이 있을지 모르겠습니다. [자세한 내용은 여기서 확인할 수 있습니다](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/).
 
 ### 추가 자료
 
-*  Web__Fundamentals__의 [웹 푸시 알림](/web/fundamentals/engage-and-retain/push-notifications/) 문서
+*  Web__Fundamentals__의 [웹 푸시 알림](/web/fundamentals/push-notifications) 문서
 *  [웹 푸시 라이브러리](https://github.com/web-push-libs/) - Node.js, PHP, 자바 및 Python을 포함한 웹 푸시 라이브러리
 
 #### 관련 블로그 게시물

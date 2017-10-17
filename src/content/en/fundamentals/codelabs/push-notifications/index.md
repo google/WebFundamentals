@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab you'll how to add push notifications to your web app.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-24T20:50:03Z #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -138,7 +138,7 @@ Check the console in Chrome DevTools for `Service Worker is registered`, like so
 
 ### Get Application Server Keys
 
-To work with this code lab you need to generate some application server keys which we can do with this companion site:  [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)
+To work with this code lab you need to generate some application server keys which we can do with this companion site:  [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)
 
 Here you can generate a Public and Private key pair.
 
@@ -160,12 +160,12 @@ Note: You should never put your private key in your web app!
 
 At the moment the web app's button is disabled and can't be clicked. This is because it's good practice to disable the push button by default and enable it once you know push is supported and can know if the user is currently subscribed or not.
 
-Let's create two functions in `scripts/main.js`, one called `initialiseUI`, which will check if the user is currently subscribed, and one called `updateBtn` which will enable our button and change the text if the user is subscribed or not.
+Let's create two functions in `scripts/main.js`, one called `initializeUI`, which will check if the user is currently subscribed, and one called `updateBtn` which will enable our button and change the text if the user is subscribed or not.
 
-We want our `initialiseUI` function to look like this:
+We want our `initializeUI` function to look like this:
 
 ```
-function initialiseUI() {
+function initializeUI() {
   // Set the initial subscription value
   swRegistration.pushManager.getSubscription()
   .then(function(subscription) {
@@ -200,7 +200,7 @@ function updateBtn() {
 
 This function simply changes the text depending on the whether the user is subscribed or not and then enables the button.
 
-The last thing to do is call `initialiseUI()` when our service worker is registered.
+The last thing to do is call `initializeUI()` when our service worker is registered.
 
 ```
 navigator.serviceWorker.register('sw.js')
@@ -208,7 +208,7 @@ navigator.serviceWorker.register('sw.js')
   console.log('Service Worker is registered', swReg);
 
   swRegistration = swReg;
-  initialiseUI();
+  initializeUI();
 })
 ```
 
@@ -228,10 +228,10 @@ When we progress through the rest of the code lab you should see the button text
 
 At the moment our ‘Enable Push Messaging' button doesn't do too much, so let's fix that.
 
-Add a click listener to our button in the `initialiseUI()` function, like so:
+Add a click listener to our button in the `initializeUI()` function, like so:
 
 ```
-function initialiseUI() {
+function initializeUI() {
   pushButton.addEventListener('click', function() {
     pushButton.disabled = true;
     if (isSubscribed) {
@@ -529,7 +529,7 @@ We've seen that our web app is capable of showing a notification using DevTools 
 
 Normally the process for this would be sending a subscription from a web page to a backend and the backend would then trigger a push message by making an API call to the endpoint in the subscription.
 
-This is out of scope for this codelab, but you can use the companion site ( [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) for this codelab to trigger an actual push message. Copy and paste the subscription at the bottom of your page:
+This is out of scope for this codelab, but you can use the companion site ( [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)) for this codelab to trigger an actual push message. Copy and paste the subscription at the bottom of your page:
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
@@ -549,6 +549,8 @@ This should give you a chance to test out sending and receiving data and manipul
 
 The companion app is actually just a node server that is using the  [web-push library](https://github.com/web-push-libs/web-push) to send messages. It's worthwhile checking out the  [web-push-libs org on Github](https://github.com/web-push-libs/) to see what libraries are available to send push messages for you (this handles a lot of the nitty gritty details to trigger push messages).
 
+You can see all the  [code for the companion site here](https://glitch.com/edit/#!/web-push-codelab).
+
 
 ## Unsubscribe the user
 
@@ -557,7 +559,7 @@ The companion app is actually just a node server that is using the  [web-push li
 
 The one thing we are missing is the ability to unsubscribe the user from push. To do this we need to call `unsubscribe()` on a `PushSubscription`.
 
-Back in our `scripts/main.js` file, change the `pushButton`'s click listener in `initialiseUI()` to the following:
+Back in our `scripts/main.js` file, change the `pushButton`'s click listener in `initializeUI()` to the following:
 
 ```
 pushButton.addEventListener('click', function() {
@@ -644,13 +646,13 @@ You should be able to press the  *Enable Push Messaging*  /  *Disable Push Messa
 
 Congratulations on completing this codelab!
 
-This code lab has shown you how to get up and running with adding push to your web app. If you want to learn more about what web notifications can do,  [check out theses docs](/web/fundamentals/engage-and-retain/push-notifications/). 
+This code lab has shown you how to get up and running with adding push to your web app. If you want to learn more about what web notifications can do,  [check out theses docs](/web/fundamentals/push-notifications).
 
 If you are looking to deploy push on your site, you may be interested in adding support for older / non-standards compliant browsers which use GCM,  [learn more here](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/).
 
 ### Further Reading
 
-*  [Web Push Notification](/web/fundamentals/engage-and-retain/push-notifications/) documentation on Web__Fundamentals__.
+*  [Web Push Notification](/web/fundamentals/push-notifications) documentation on Web__Fundamentals__.
 *  [Web Push Libraries](https://github.com/web-push-libs/) - Web Push libraries including Node.js, PHP, Java and Python.
 
 #### Relevant blog posts
@@ -666,4 +668,4 @@ If you are looking to deploy push on your site, you may be interested in adding 
 
 ## Found an issue, or have feedback? {: .hide-from-toc }
 Help us make our code labs better by submitting an 
-[issue](https://github.com/googlechrome/push-notifications/issues) today. And thanks!
+[issue](https://github.com/GoogleChromeLabs/web-push-codelab/issues) today. And thanks!

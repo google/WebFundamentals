@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: El manifiesto de las apps web es un archivo JSON que te permite controlar cómo tu sitio o app web se muestra al usuario en áreas donde normalmente ven apps nativas (por ejemplo, la pantalla de inicio de un dispositivo), además de dirigir lo que el usuario puede iniciar y definir su apariencia al iniciarse.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-02-11 #}
 
 # El manifiesto de las apps web {: .page-title }
@@ -249,7 +249,7 @@ de tu manifiesto. Consulta [Manifiesto
 de app web](/web/tools/chrome-devtools/progressive-web-apps#manifest) en
 la documentación de Chrome DevTools para obtener más información sobre esta pestaña. También
 puedes simular los eventos Add to Homescreen (agregar a la pantalla de inicio) desde aquí. Consulta [Prueba del banner de instalación
-de apps](/web/fundamentals/engage-and-retain/app-install-banners/#testing-the-app-install-banner)
+de apps](/web/fundamentals/app-install-banners#test)
 para obtener más información sobre este tema.
 
 Si prefieres un enfoque automático para validar el manifiesto de tu app web,
@@ -270,7 +270,7 @@ Este artículo te ha brindado una introducción rápida a los manifiestos de app
 hay más por aprender.
 
 * Si usas un manifiesto de apps web, probablemente será conveniente que también configures un
-[banner de instalación de apps](/web/fundamentals/engage-and-retain/app-install-banners/). 
+[banner de instalación de apps](/web/fundamentals/app-install-banners).
 
 * En Mozilla Developer Network puedes encontrar una [guía completa](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 sobre el manifiesto de apps web.

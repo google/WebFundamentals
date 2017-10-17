@@ -138,8 +138,7 @@ ChromeVox Lite を有効にしてこのページを参照すると、スクリ�
 
 
 
-![スクリーン リーダーが DOM を使用して、アクセス可能なノードを作成]
-(imgs/nativecodetoacc.png)
+![スクリーン リーダーが DOM を使用して、アクセス可能なノードを作成](imgs/nativecodetoacc.png)
 
 
 {# wf_devsite_translation #}

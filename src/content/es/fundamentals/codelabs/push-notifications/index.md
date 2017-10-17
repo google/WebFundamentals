@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: En este codelab, aprenderás a agregar notificaciones push a tu app web.
 
-{# wf_updated_on: 2017-07-12T15:42:20Z #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -643,13 +643,13 @@ Deberías poder presionar  *Enable Push Messaging*  /  *Disable Push Messaging* 
 
 ¡Felicitaciones por completar este codelab!
 
-Este code lab te ha enseñado a desarrollar tus conocimiento para agregar push a tu app web. Si quieres conocer más sobre lo que pueden hacer las notificaciones web,  [consulta estos documentos](/web/fundamentals/engage-and-retain/push-notifications/). 
+Este code lab te ha enseñado a desarrollar tus conocimiento para agregar push a tu app web. Si quieres conocer más sobre lo que pueden hacer las notificaciones web,  [consulta estos documentos](/web/fundamentals/push-notifications).
 
 Si buscas implementar push en tu sitio, te puede interesar agregar soporte para navegadores más viejos/no estándar compatibles que usen GCM,  [conoce más aquí](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/).
 
 ### Consultas adicionales
 
-*  Documentación sobre [notificación web push](/web/fundamentals/engage-and-retain/push-notifications/) en Web __Fundamentals__
+*  Documentación sobre [notificación web push](/web/fundamentals/push-notifications) en Web __Fundamentals__
 *  [Bibliotecas web push](https://github.com/web-push-libs/) - Bibliotecas web push que incluyen Node.js, PHP, Java y Python.
 
 #### Entradas de blogs relevantes

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2017-04-20T10:00:00.000Z #}
-{# wf_updated_on: 2017-04-28T10:00:00.000Z #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_featured_image: /web/showcase/2017/images/voot/voot.png #}
 {# wf_featured_snippet: Voot.com launches their media Progressive Web App in India. Within days of implementation, session time per user increased by 39% and daily views per user by 15%. #}
 {# wf_tags: media,casestudy #}
@@ -75,7 +75,7 @@ loads became 5 times faster for first-time visitors, and almost 7 times faster
 for returning users.
 
 To offer a true app-like experience, Voot.com also implemented
-[add to home screen](/web/fundamentals/engage-and-retain/app-install-banners/),
+[add to home screen](/web/fundamentals/app-install-banners),
 allowing users to launch the page from their home screen like a native app. This
 combined with a streamlined login process allows users to quickly and easily
 re-engage with the site and watch their favorite shows.

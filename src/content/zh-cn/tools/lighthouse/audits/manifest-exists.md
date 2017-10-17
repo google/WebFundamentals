@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“清单是否存在”Lighthouse 审查的参考文档。
 
-{# wf_updated_on:2016-09-20 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on:2016-09-20 #}
 
 # 清单是否存在 {: .page-title }
@@ -19,7 +19,7 @@ description:“清单是否存在”Lighthouse 审查的参考文档。
 
 
 
-如需结构较为松散、深入探讨网络应用清单的指南，请参阅[通过网络应用清单改进用户体验](/web/fundamentals/engage-and-retain/web-app-manifest)。
+如需结构较为松散、深入探讨网络应用清单的指南，请参阅[通过网络应用清单改进用户体验](/web/fundamentals/web-app-manifest)。
 
 
 

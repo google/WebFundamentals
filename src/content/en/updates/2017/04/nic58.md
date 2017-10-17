@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 58 for developers? IndexedDB 2.0, display fullscreen and new options for sandboxed iframes.
 
 {# wf_published_on: 2017-04-19 #}
-{# wf_updated_on: 2017-04-19 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome58,new-in-chrome,iframe,sandbox,indexeddb,progressive-web-apps,fullscreen #}
 {# wf_featured_snippet: With Chrome 58, Progressive Web Apps are more immersive with display: fullscreen. IndexedDB 2.0 is now supported and sandboxed iFrames get more options. Pete LePage has all the details and how you can use these new developer features in Chrome 58. #}
@@ -67,7 +67,7 @@ still be a distraction and take up valuable pixels that you may want.
 
 Now you can make your Progressive Web App feel fully immersive by setting 
 `display: fullscreen` in your
-[web app manifest](/web/fundamentals/engage-and-retain/web-app-manifest/). 
+[web app manifest](/web/fundamentals/web-app-manifest).
 
 <figure>
   <img src="/web/updates/images/2017/04/launch-fullscreen.png">

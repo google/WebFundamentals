@@ -55,11 +55,11 @@ class Framebox(webapp2.RequestHandler):
         if content is None:
           response = render('gae/404.tpl', {})
           logging.error('404 ' + memcacheKey)
-          self.response.set_status(404)        
+          self.response.set_status(404)
         else:
           response = render('gae/framebox.tpl', {'content': content})
           logging.info('200 ' + memcacheKey)
-        self.response.out.write(response)      
+        self.response.out.write(response)
 
 
 class DevSitePages(webapp2.RequestHandler):
@@ -93,13 +93,19 @@ class DevSitePages(webapp2.RequestHandler):
         if response is None:
           try:
             if os.path.isdir(os.path.join(SOURCE_PATH, 'en', path)):
+              # Make sure the directory ends with a /, as required by devsite
+              if len(path) > 0 and not path.endswith('/'):
+                redirectTo = '/web/' +  path + '/'
+                logging.info('301 ' + redirectTo)
+                self.redirect(redirectTo, permanent=True)
+                return
               response = devsiteIndex.getPage(path, lang)
               if (response is None) and (path.startswith('showcase') or 
                   path.startswith('shows') or path.startswith('updates')):
                 response = devsiteIndex.getDirIndex(path)
             else:
               response = devsitePage.getPage(path, lang)
-          
+
             if response is None:
               # No file found, check for redirect
               redirectTo = devsiteHelper.checkForRedirect(fullPath, lang, USE_MEMCACHE)

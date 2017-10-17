@@ -2,41 +2,41 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: "If you want to translate Web Fundamentals to other languages, anyone can contribute."
 
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2017-10-10 #}
 {# wf_published_on: 2016-09-13 #}
 
 # Translations {: .page-title }
 
-All article sources are in `src/content`. The base content is in English
-under the `en` directory. Add translations by following the same structure
-with either a two letter or composite language code: e.g. `es`, `pt-br`.
+<!--div class="attempt-right">
+  <figure>
+    <img src="/web/images/gitlocalize_image0.png">
+  </figure>
+</div-->
+We are experimenting with a translation tool called
+[GitLocalize](https://gitlocalize.com/). Follow the steps to get started with
+your contribution:
+
+1. Go to [GitLocalize's Web Fundamentals repository](https://gitlocalize.com/repo/107).
+1. Sign up using your GitHub account.
+1. Find the document you are going to translate.
+1. Start translating.
+1. When you are done, send the translation for reviews.
+1. Reviewed translation will be sent as a Pull Request by language admin in
+the community.
+
+To learn more about how GitLocalize works, visit
+[their help page](https://docs.gitlocalize.com/).
+
+If you find any issues or feature requests, please file them in
+[GitLocalize's issue tracker](https://github.com/gitlocalize/feedback/issues).
+
+To chat with other translation contributors, [register to the ChromiumDev
+Slack](https://chromiumdev-slack.herokuapp.com/) and join #l10n channel.
 
 Our supported languages include: Arabic (AR), German (DE), Spanish (ES),
 French (FR), Hebrew (HE), Bahasa Indonesia (ID), Italian (IT), Japanese (JA),
 Korean (KO), Dutch (NL), Polish (PL), Portuguese (PT-BR), Russian (RU),
 Turkish (TR), Chinese Traditional (ZH-TW) and Chinese Simplified (ZH-CN).
-
-
-## Adding a translation
-
-1.  Find the article in the original source language
-1.  Create the root language code in `src/content` if it does not exist for the
-    language you are translating.  For example create `src/content/es` for
-    Spanish.
-1.  Create the article in the same directory hierarchy but under this new
-    directory.
-1.  Translate the article
-1.  Give yourself credit by adding your details to the contributors file
-    (`src/data/_contributors.yaml`)
-1.  Add your name as described below with `- translator` property.
-
-
-## License
-
-All of our content is Creative Commons 3.0.  Contributions and translations are
-very much appreciated, however you must sign our
-[Contributor License Agreement](https://github.com/google/WebFundamentals/blob/master/CONTRIBUTING.md)
-for the code to be pulled back in to the repository.
 
 ## Credit
 
@@ -67,5 +67,14 @@ to each article.  For example:
       description:
         en: "Paul is a Developer Advocate"
 
+Also, make sure to append your credit to the bottom of the article:
+
+![](/web/images/gitlocalize_image1.png)
 
 
+## License
+
+All of our content is Creative Commons 3.0.  Contributions and translations are
+very much appreciated, however you must sign our
+[Contributor License Agreement](https://github.com/google/WebFundamentals/blob/master/CONTRIBUTING.md)
+for the code to be pulled back in to the repository.

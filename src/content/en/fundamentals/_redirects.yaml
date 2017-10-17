@@ -1,5 +1,26 @@
 redirects:
 
+- from: /web/fundamentals/layouts/...
+  to: /web/fundamentals/design-and-ux/responsive/
+
+- from: /web/fundamentals/input/form/...
+  to: /web/fundamentals/design-and-ux/input/forms/
+
+- from: /web/fundamentals/design-and-ux/media/images
+  to: /web/fundamentals/design-and-ux/responsive/images
+
+- from: /web/fundamentals/primers/shadowdom/
+  to: /web/fundamentals/web-components/shadowdom
+
+- from: /web/fundamentals/primers/shadowdom
+  to: /web/fundamentals/web-components/shadowdom
+
+- from: /web/fundamentals/primers/customelements/
+  to: /web/fundamentals/web-components/
+
+- from: /web/fundamentals/media/images/...
+  to: /web/fundamentals/design-and-ux/responsive/images
+
 - from: /web/fundamentals/architecture/building-components/...
   to: /web/fundamentals/web-components/...
 

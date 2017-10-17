@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-09-21T17:50:05Z #}
+{# wf_updated_on: 2017-10-10T21:30:34Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -21,7 +21,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 [Workbox](https://workboxjs.org/) is the successor to  [`sw-precache`](https://github.com/GoogleChrome/sw-precache) and  [`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox). It is a collection of libraries and tools used for generating a service worker, precaching, routing, and runtime-caching. Workbox also includes modules for easily integrating  [background sync](https://github.com/GoogleChrome/workbox/tree/master/packages/workbox-background-sync) and  [Google analytics](https://github.com/GoogleChrome/workbox/tree/master/packages/workbox-google-analytics) into your service worker.
 
-See the  [Workbox page](/web/tools/workbox/) on developers.google.com for an explanation of each module contained in Workbox. In this lab, we use the main Workbox library, `workbox-sw`, and `workbox-build` to inject an array of static assets to precache into a service worker.
+See the  [Workbox page](/web/tools/workbox/) on developers.google.com for an explanation of each module contained in Workbox. In this lab, we use the main Workbox library, `workbox-sw`, and `workbox-build` to inject an array of static assets that you want to precache into a service worker.
 
 #### What you will learn
 
@@ -118,7 +118,7 @@ Save the __service-worker.js __file. In the command line, run `gulp serve` to op
 
 Here we import the `workbox-sw` library and create an instance of `WorkboxSW` so we can access  [the library methods](https://workboxjs.org/reference-docs/latest/module-workbox-sw.WorkboxSW.html#main) from this object.
 
-In the next line we call `workboxSW.precache([])`. This method takes a manifest of URLs to cache on service worker installation. It is recommended to use `workbox-build` or `workbox-cli` to generate the manifest for you (this is why the array is empty). These build tools will generate hashes of the files along with their URLsWe will do that in the next step. 
+In the next line we call `workboxSW.precache([])`. This method takes a manifest of URLs to cache on service worker installation. It is recommended to use `workbox-build` or `workbox-cli` to generate the manifest for you (this is why the array is empty). These build tools will generate hashes of the files along with their URLs. We will do that in the next step. 
 
 The `precache` method takes care of precaching files, removing cached files no longer in the manifest, updating existing cached files, and it even sets up a fetch handler to respond to any requests for URLs in the manifest using a cache-first strategy. See  [this example](https://workboxjs.org/examples/workbox-sw/#explore-the-code) for a full explanation.
 
