@@ -15,8 +15,8 @@ description: >
         margin-right: 8px;
       }
     </style>
-    Missed the action at this year's <b>Chrome Dev Summit</b>? Catch up with 
-    our playlist on YouTube.
-    <a href="TODO" class="gc-analytics-event" data-category="webFu" data-label="cds-watch-playlist">Watch now.</a>
-start: '2017-10-25T08:00:00Z'
-end: '2017-11-22T08:00:00Z'
+    Don't miss out on the action at this year's <b>Chrome Dev Summit</b>,
+    streaming live on YouTube.
+    <a href="https://developer.chrome.com/devsummit/" class="gc-analytics-event" data-category="webFu" data-label="cds-watch-live">Watch now.</a>
+start: '2017-10-17T08:00:00Z'
+end: '2017-10-25T08:00:00Z'
