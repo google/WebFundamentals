@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_vertical: retail #}
 {# wf_featured_date: 2017-10-18 #}
 
-#BookMyShow’s new Progressive Web App drastically increases conversions in 4 weeks {: .page-title }
+# BookMyShow’s new Progressive Web App drastically increases conversions in 4 weeks {: .page-title }
 
 <video autoplay loop muted class="attempt-right">
   <source src="/web/showcase/2017/images/bookmyshow/bms_pwa.webm" type="video/webm">
