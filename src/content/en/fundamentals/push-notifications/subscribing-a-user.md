@@ -135,7 +135,7 @@ Once we have our service worker registered and we've got permission, we can subs
 calling `registration.pushManager.subscribe()`.
 
     function subscribeUserToPush() {
-      return getSWRegistration()
+      return navigator.serviceWorker.register('service-worker.js')
       .then(function(registration) {
         const subscribeOptions = {
           userVisibleOnly: true,
@@ -260,7 +260,7 @@ We call `subscribe()`, pass in some options, and in return we get a promise that
 `PushSubscription` resulting in some code like so:
 
     function subscribeUserToPush() {
-      return getSWRegistration()
+      return navigator.serviceWorker.register('service-worker.js')
       .then(function(registration) {
         const subscribeOptions = {
           userVisibleOnly: true,
