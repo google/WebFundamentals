@@ -15,11 +15,8 @@ description: >
         margin-right: 8px;
       }
     </style>
-    <span class="material-icons">school</span>
-    Are you a developer in an agency in the UK, Indonesia or India? Find
-    out more about our free 2 day
-    <a href="https://goo.gl/hscrxF" class="gc-analytics-event" data-category="webFu" data-label="banner-agency">
-      Progressive Web Apps training
-    </a>.
+    Don't forget the <b>Chrome Dev Summit</b>, starting Monday at 10:00am
+    (Pacific) and streaming live on YouTube.
+    <a href="https://developer.chrome.com/devsummit/schedule" class="gc-analytics-event" data-category="webFu" data-label="cds-banner-schedule">Schedule.</a>
 start: '2017-08-31T08:00:00Z'
-end: '2017-10-18T08:00:00Z'
+end: '2017-11-22T08:00:00Z'
