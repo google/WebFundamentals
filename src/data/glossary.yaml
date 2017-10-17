@@ -51,6 +51,16 @@
     title: "Custom Elements v1: Reusable Web Components"
     link: /web/fundamentals/architecture/building-components/customelements
 
+- term: DOMContentLoaded
+  acronym: DCL
+  description: "Defined by the HTML specification: <blockquote>The DOMContentLoaded reports the time when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.</blockquote>"
+  see:
+    title: DCL on MDN
+    link: https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded
+  links:
+  - title: DCL in the HTML Specification
+    link: https://html.spec.whatwg.org/#event-domcontentloaded
+
 - term: Fast, Integrated, Reliable, Engaging
   acronym: FIRE
   description: "Progressive Web Apps (PWA's) should be fast, integrated, reliable, and engaging."
@@ -69,9 +79,31 @@
 
 - term: First Contentful Paint
   acronym: FCP
+  description: "Defined by the Paint Timing API and available in Chrome M60+: <blockquote>First Contentful Paint reports the time when the browser first rendered any text, image (including background images), non-white canvas or SVG. This includes text with pending webfonts. This is the first time users could start consuming page content.</blockquote>"
+  see:
+    title: Paint Timing API
+    link: https://w3c.github.io/paint-timing/#first-contentful-paint
+  links:
+  - title: Chrome Platform Status
+    link: https://www.chromestatus.com/feature/5688621814251520
+  - title: FCP on MDN
+    link: https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming
 
 - term: First Meaningful Paint
   acronym: FMP
+  description: ""
+
+- term: First Paint
+  acronym: FP
+  description: "Defined by the Paint Timing API and available in Chrome M60+: <blockquote>First Paint reports the time when the browser first rendered after navigation. This excludes the default background paint, but includes non-default background paint. This is the first key moment developers care about in page load – when the browser has started to render the page.</blockquote>"
+  see:
+    title: Paint Timing API
+    link: https://w3c.github.io/paint-timing/#first-paint
+  links:
+  - title: Chrome Platform Status
+    link: https://www.chromestatus.com/feature/5688621814251520
+  - title: FP on MDN
+    link: https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming
 
 - term: First, Last, Invert, Play
   acronym: FLIP
@@ -111,6 +143,16 @@
     title: Detect DOM changes with Mutation Observers
     link: /web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers
 
+- term: onload
+  acronym: OL
+  description: "Defined by the HTML specification: <blockquote>The load event is fired when the page and its dependent resources have finished loading.</blockquote>"
+  see:
+    title: OL on MDN
+    link: https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded
+  links:
+  - title: OL in the HTML Specification
+    link: https://html.spec.whatwg.org/#event-load
+
 - term: Progressive Web App
   acronym: PWA
   description: "Progressive Web Apps are user experiences that have the reach of the web, and are fast, integrated, reliable and engaging."
@@ -139,9 +181,11 @@
 
 - term: requestAnimationFrame
   acronym: rAF
+  description: ""
 
 - term: requestIdleCallback
   acronym: rIC
+  description: ""
 
 - term: Response, Animation, Idle, Load
   acronym: RAIL
@@ -183,12 +227,15 @@
 
 - term: Time To First Byte
   acronym: TTFB
+  description: ""
 
 - term: Time To First Paint
   acronym: TTFP
+  description: ""
 
 - term: Time To Interactive
   acronym: TTI
+  description: ""
 
 - term: web app manifest
   description: "A web app manifest is a JSON-formatted file named manifest.json that is a centralized place to put metadata that controls how the web application appears to the user and how it can be launched. (Do not confuse this with a manifest file used by AppCache.) Some browsers, such as Chrome, use the web app manifest to enable 'add to homescreen'."
