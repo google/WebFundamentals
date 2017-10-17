@@ -34,7 +34,7 @@ I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome
 <div class="clearfix"></div>
 
 Note: Want the full list of changes? Check out the
-[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/61.0.3163.79..61.0.3163.79?pretty=fuller&n=10000).
+[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/61.0.3163.79..62.0.3202.62).
 
 <div class="clearfix"></div>
 
