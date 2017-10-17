@@ -77,18 +77,6 @@
   - title: Using Fetch
     link: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
-- term: First Paint
-  acronym: FP
-  description: "Defined by the Paint Timing API and available in Chrome M60+: <blockquote>First Paint reports the time when the browser first rendered after navigation. This excludes the default background paint, but includes non-default background paint. This is the first key moment developers care about in page load – when the browser has started to render the page.</blockquote>"
-  see:
-    title: Paint Timing API
-    link: https://w3c.github.io/paint-timing/#first-paint
-  links:
-  - title: Chrome Platform Status
-    link: https://www.chromestatus.com/feature/5688621814251520
-  - title: FP on MDN
-    link: https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming
-
 - term: First Contentful Paint
   acronym: FCP
   description: "Defined by the Paint Timing API and available in Chrome M60+: <blockquote>First Contentful Paint reports the time when the browser first rendered any text, image (including background images), non-white canvas or SVG. This includes text with pending webfonts. This is the first time users could start consuming page content.</blockquote>"
@@ -103,6 +91,19 @@
 
 - term: First Meaningful Paint
   acronym: FMP
+  description: ""
+
+- term: First Paint
+  acronym: FP
+  description: "Defined by the Paint Timing API and available in Chrome M60+: <blockquote>First Paint reports the time when the browser first rendered after navigation. This excludes the default background paint, but includes non-default background paint. This is the first key moment developers care about in page load – when the browser has started to render the page.</blockquote>"
+  see:
+    title: Paint Timing API
+    link: https://w3c.github.io/paint-timing/#first-paint
+  links:
+  - title: Chrome Platform Status
+    link: https://www.chromestatus.com/feature/5688621814251520
+  - title: FP on MDN
+    link: https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming
 
 - term: First, Last, Invert, Play
   acronym: FLIP
@@ -180,9 +181,11 @@
 
 - term: requestAnimationFrame
   acronym: rAF
+  description: ""
 
 - term: requestIdleCallback
   acronym: rIC
+  description: ""
 
 - term: Response, Animation, Idle, Load
   acronym: RAIL
@@ -224,12 +227,15 @@
 
 - term: Time To First Byte
   acronym: TTFB
+  description: ""
 
 - term: Time To First Paint
   acronym: TTFP
+  description: ""
 
 - term: Time To Interactive
   acronym: TTI
+  description: ""
 
 - term: web app manifest
   description: "A web app manifest is a JSON-formatted file named manifest.json that is a centralized place to put metadata that controls how the web application appears to the user and how it can be launched. (Do not confuse this with a manifest file used by AppCache.) Some browsers, such as Chrome, use the web app manifest to enable 'add to homescreen'."
