@@ -20,7 +20,7 @@ There are two types of app install banners: **web** app install banners and
 [**native**](#native_app_install_banners) app install banners. They let users quickly and seamlessly
 add your web or native app to their home screens without leaving the browser.
 
-Adding app install banners is easy; Chrome handles most of the heavy 
+Adding app install banners is easy; Chrome handles most of the heavy
 lifting for you. You need to include a web app manifest file in your site
 with details about your app.
 
@@ -43,7 +43,8 @@ criteria:
   registered on your site.
 * Is served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https)
   (a requirement for using service worker).
-* Is visited at least twice, with at least five minutes between visits.
+* Meets a site engagement heuristic defined by Chrome (this is regularly being
+  changed and can't be relied upon).
 
 Note: Web App Install Banners are an emerging technology. The criteria for displaying app install banners may change in the future. See [What, Exactly, Makes Something a Progressive Web App?](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/) for a canonical reference (that will be updated over time) on the latest web app install banner criteria.
 
@@ -87,20 +88,20 @@ app install banner and even cancel or defer it until a more convenient time.
 
 ### Did a user install the app?
 
-The `beforeinstallprompt` event returns a promise called `userChoice` 
-that resolves when the user acts on the prompt.  The promise 
+The `beforeinstallprompt` event returns a promise called `userChoice`
+that resolves when the user acts on the prompt.  The promise
 returns an object with a value of `dismissed` on the `outcome`
 attribute or `accepted` if the user added the web page to the home screen.
 
     window.addEventListener('beforeinstallprompt', function(e) {
       // beforeinstallprompt Event fired
-      
-      // e.userChoice will return a Promise. 
+
+      // e.userChoice will return a Promise.
       // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
       e.userChoice.then(function(choiceResult) {
-        
+
         console.log(choiceResult.outcome);
-        
+
         if(choiceResult.outcome == 'dismissed') {
           console.log('User cancelled home screen install');
         }
@@ -109,63 +110,63 @@ attribute or `accepted` if the user added the web page to the home screen.
         }
       });
     });
-    
 
-This is a good tool for understanding how your users interact with the app 
+
+This is a good tool for understanding how your users interact with the app
 install prompt.
 
 
 ### Deferring or cancelling the prompt {: #defer_or_cancel }
 
-Chrome manages when to trigger the prompt but for some sites this might not 
-be ideal. You can defer the prompt to a later time in the app's usage or 
-even cancel it. 
+Chrome manages when to trigger the prompt but for some sites this might not
+be ideal. You can defer the prompt to a later time in the app's usage or
+even cancel it.
 
-When Chrome decides to prompt the user to install the app you 
-can prevent the default action and store the event for later. Then when 
-the user has a positive interaction with your site you can then re-trigger 
-the prompt by calling `prompt()` on the stored event. 
+When Chrome decides to prompt the user to install the app you
+can prevent the default action and store the event for later. Then when
+the user has a positive interaction with your site you can then re-trigger
+the prompt by calling `prompt()` on the stored event.
 
-This causes Chrome to show the banner and all the Promise attributes 
-such as `userChoice` will be available to bind to so that you can understand 
+This causes Chrome to show the banner and all the Promise attributes
+such as `userChoice` will be available to bind to so that you can understand
 what action the user took.
-    
+
     var deferredPrompt;
-    
+
     window.addEventListener('beforeinstallprompt', function(e) {
       console.log('beforeinstallprompt Event fired');
       e.preventDefault();
-      
+
       // Stash the event so it can be triggered later.
       deferredPrompt = e;
-      
+
       return false;
     });
-    
+
     btnSave.addEventListener('click', function() {
       if(deferredPrompt !== undefined) {
         // The user has had a positive interaction with our app and Chrome
         // has tried to prompt previously, so let's show the prompt.
         deferredPrompt.prompt();
-      
+
         // Follow what the user has done with the prompt.
         deferredPrompt.userChoice.then(function(choiceResult) {
-      
+
           console.log(choiceResult.outcome);
-          
+
           if(choiceResult.outcome == 'dismissed') {
             console.log('User cancelled home screen install');
           }
           else {
             console.log('User added to home screen');
           }
-          
+
           // We no longer need the prompt.  Clear it up.
           deferredPrompt = null;
         });
       }
     });
-    
+
 
 Alternatively, you can cancel the prompt by preventing the default.
 
@@ -174,7 +175,7 @@ Alternatively, you can cancel the prompt by preventing the default.
       e.preventDefault();
       return false;
     });
-    
+
 ## Native app install banners
 
 <div class="attempt-right">
@@ -213,7 +214,7 @@ platforms of `play` (for Google Play) and the App Id.
       "id": "com.google.samples.apps.iosched"
       }
     ]
-    
+
 
 If just want to offer the user the ability to install your Android
 application, and not show the web app install banner, then add
