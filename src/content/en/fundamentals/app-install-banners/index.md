@@ -44,7 +44,7 @@ criteria:
 * Is served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https)
   (a requirement for using service worker).
 * Meets a site engagement heuristic defined by Chrome (this is regularly being
-  changed and can't be relied upon).
+  changed).
 
 Note: Web App Install Banners are an emerging technology. The criteria for displaying app install banners may change in the future. See [What, Exactly, Makes Something a Progressive Web App?](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/) for a canonical reference (that will be updated over time) on the latest web app install banner criteria.
 
