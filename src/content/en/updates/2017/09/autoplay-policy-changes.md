@@ -148,11 +148,11 @@ including Facebook, Instagram, Twitter, and YouTube.
     <video id="video" muted autoplay>
     <button id="unmuteButton"></button>
 
-    <script>
+    &lt;script>
       unmuteButton.addEventListener('click', function() {
         video.muted = false;
       });
-    </script>
+    &lt;/script>
 
 ## Feedback
 
