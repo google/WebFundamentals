@@ -21,7 +21,7 @@ The processes we used in the past to build and deploy powerful, feature-rich sit
 
 * Slow loading is detrimental for search engine optimization (SEO) because it can lower your site's ranking, resulting in fewer visits, reads, and conversions; Google recently implemented site speed as a ranking signal in its searches (source: [Google Webmaster Central Blog](https://webmasters.googleblog.com/2010/04/using-site-speed-in-web-search-ranking.html)).
 
-# The Goal
+## The Goal
 
 Developers often talk about measurable concepts like Time To Interactivity (TTI) or First Meaningful Paint (FMP). These are attempts to quantify an important and overarching goal, which is simply that *pages should load as quickly as possible* on the first visit and, especially, on subsequent visits so that users can access both content and behavior at the earliest possible moment.
 
