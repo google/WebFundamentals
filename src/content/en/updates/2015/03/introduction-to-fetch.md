@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The fetch() API is landing in the window object and is looking to replace XHRs
 
 
-{# wf_updated_on: 2015-03-10 #}
+{# wf_updated_on: 2017-10-18 #}
 {# wf_published_on: 2015-03-10 #}
 {# wf_tags: news,fetch,xhr #}
 
