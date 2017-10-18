@@ -9,7 +9,7 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/dgash.html" %}
 
 
-Text: letters and numbers, words and phrases, sentences and paragraphs. It's how we convey most of the meaning in a web page. Text content informs, describes, explains concepts and procedures to our readers (not just "visitors"). It is the very basis of web communication.
+Text: letters and numbers, words and phrases, sentences and paragraphs. It's how we convey most of the meaning in web pages. Text content informs, describes, explains concepts and procedures to our readers (not just "visitors"). It is the very basis of web communication.
 
 Text content on the web always has some structure -- even if only top-down, and some formatting -- even if only by default. It can also exhibit behavior, moving or changing, appearing or disappearing in response to a reader's action or the author's intent. But in and of itself, text content doesn't have these qualities and abilities; its structure, appearance, and behavior are implemented and affected by other text-based resources: HTML, CSS, and JavaScript code.
 
