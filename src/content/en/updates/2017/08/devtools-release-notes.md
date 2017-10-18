@@ -131,6 +131,15 @@ parent of the selected item, has `display:grid` applied to it.
   </figcaption>
 </figure>
 
+Check out the video below to learn the basics of CSS Grid in less than
+2 minutes.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="AqwPrR7hklE"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 ## A new API for querying heap objects {: #query-objects }
 
 Call `queryObjects(Constructor)` from the **Console** to return an array
