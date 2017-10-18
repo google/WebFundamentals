@@ -64,7 +64,7 @@ To use it, enter a URL and click `Analyze`. The tabbed report includes the Pingd
 
 ![GTmetrix](images/image_205.png)
 
-# Summary
+## Summary
 
 These are but a few of the many tools available to help measure web page loading and performance speed, but they are among the most popular and useful. You should try to test your page with as many different tools as possible and compare the analyses for both common factors and unique outliers.
 
