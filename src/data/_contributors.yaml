@@ -1277,6 +1277,19 @@ alansilva:
   description:
     en: Alan is a JavaScript Developer
 
+vinamratasingal:
+  name:
+    given: Vinamrata
+    family: Singal
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - author
+  description:
+    en: Lighthouse Product Manager
+
 andismith:
   name:
     given: Andi
@@ -1501,16 +1514,3 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
-
-vinamratasingal:
-  name:
-    given: Vinamrata
-    family: Singal
-  org:
-    name: Google
-    unit: Chrome
-  country: US
-  role:
-    - author
-  description:
-    en: Lighthouse Product Manager
