@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-09-07 #}
+{# wf_updated_on: 2017-10-19 #}
 
 # Deep Dive into the Payment Request API {: .page-title }
 
@@ -78,7 +78,7 @@ construct a new PaymentRequest object.
 ```
 const supportedPaymentMethods = [
   {
-    supportedMethods: ['basic-card'],
+    supportedMethods: 'basic-card',
   }
 ];
 const paymentDetails = {
@@ -141,7 +141,7 @@ identifies the payment method. Each object can contain an optional data object.
 ```
 const supportedPaymentMethods = [
   {
-    supportedMethods: ['name-of-payment-method'],
+    supportedMethods: 'name-of-payment-method',
     data: {
       // Optional data for this payment method
     }
@@ -161,7 +161,7 @@ parameter to contain 'basic-card', like so:
 
 ```
 const creditCardPaymentMethod = {
-  supportedMethods: ['basic-card'],
+  supportedMethods: 'basic-card',
 };
 
 const supportedPaymentMethods = [creditCardPaymentMethod];
@@ -191,7 +191,7 @@ visa, mastercard and amex.
 
 ```
 const creditCardPaymentMethod = {
-  supportedMethods: ['basic-card'],
+  supportedMethods: 'basic-card',
   data: {
     supportedNetworks: ['visa', 'mastercard', 'amex'],
   },
@@ -246,7 +246,7 @@ automatically for the user.
 
 ```
 const creditCardPaymentMethod = {
-  supportedMethods: ['basic-card'],
+  supportedMethods: 'basic-card',
   data: {
     supportedNetworks: ['visa', 'mastercard', 'amex'],
     supportedTypes: ['credit', 'debit'],
@@ -262,7 +262,7 @@ In the above example for basic cards, we created an object
 
 ```
 const creditCardPaymentMethod = {
-  supportedMethods: ['basic-card'],
+  supportedMethods: 'basic-card',
 };
 
 const supportedPaymentMethods = [creditCardPaymentMethod];
@@ -278,11 +278,11 @@ supported payment methods like so:
 
 ```
 const creditCardPaymentMethod = {
-  supportedMethods: ['basic-card'],
+  supportedMethods: 'basic-card',
 };
 
 const bobPayPaymentMethod = {
-  supportedMethods: ["https://example.com/bobpay"],
+  supportedMethods: "https://example.com/bobpay",
   data: {
     merchantIdentifier: "XXXX",
     bobPaySpecificField: true
@@ -305,7 +305,7 @@ shown with Android Pay, which is supported on Chrome for Android.
 
 ```
 const androidPayPaymentMethod = {
-  supportedMethods: ['https://android.com/pay'],
+  supportedMethods: 'https://android.com/pay',
   data: {
     merchantName: 'Android Pay Demo',
     merchantId: '00000000000000000000',
