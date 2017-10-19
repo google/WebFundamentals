@@ -47,6 +47,7 @@ const REMARK_WARNING_ONLY = [
   'code-block-style',
   'heading-style'
 ];
+const RE_BOM = /^\uFEFF/;
 const RE_SRC_BASE = /src\/content\//;
 const RE_DATA_BASE = /src\/data\//;
 const COMMON_TAGS_FILE = 'src/data/commonTags.json';
@@ -249,6 +250,12 @@ function getLineNumber(content, idx) {
 function readFile(filename) {
   try {
     let contents = fs.readFileSync(filename, 'utf8');
+    // Check if Byte order mark was included
+    if (RE_BOM.test(contents)) {
+      contents = contents.replace(RE_BOM, '');
+      const msg = 'File was saved as UTF-8+BOM, please save without BOM';
+      logWarning(filename, null, msg);
+    }
     return contents;
   } catch (ex) {
     logWarning(filename, null, 'Unable to read file, was it deleted?', ex);
