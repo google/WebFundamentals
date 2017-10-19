@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_vertical: retail #}
 {# wf_featured_date: 2017-10-18 #}
 
-# BookMyShow’s new Progressive Web App drastically increases conversions in 4 weeks {: .page-title }
+# BookMyShow’s new Progressive Web App drives an 80% increase in conversions {: .page-title }
 
 <video autoplay loop muted class="attempt-right">
   <source src="/web/showcase/2017/images/bookmyshow/bms_pwa.webm" type="video/webm">
@@ -19,9 +19,8 @@ book_path: /web/showcase/_book.yaml
 
 [BookMyShow](https://in.bookmyshow.com/) is India’s largest ticketing firm,
 with 50+ million monthly visitors. They developed an improved version of their
-mobile website using a Progressive Web App (PWA), delivering an **80%+ increase
+mobile website using a Progressive Web App (PWA), delivering an **80+% increase
 in conversions, which means more users purchasing tickets.**
-
 
 > Since launching our PWA, we’ve seen an exponential increase in mobile
 > conversion rates. The PWA helped us connect with more people on mobile — and
@@ -29,7 +28,11 @@ in conversions, which means more users purchasing tickets.**
 >
 > – Sahil Tewari, Assistant General Manager, Mobile & Web 
 
-
+* BookMyShow's PWA drove an 80%+ increase in their conversion rates.
+* The size of the PWA is 54x smaller than the Android app and 180x smaller
+  than the iOS app.
+* The PWA takes less than 2.94 seconds to load and enables checkout within
+  30 seconds.
 
 <div class="clearfix"></div>
 
