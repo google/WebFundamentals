@@ -61,7 +61,7 @@ actually allowed to send messages to the receiving user.
     // 12-hour notification time to live.  
     headers.append('TTL', 12 * 60 * 60);  
     // Assuming no data is going to be sent  
-    headers.append(Content-Length, 0);
+    headers.append('Content-Length', 0);
 
     // Assuming you're not using VAPID (read on), this
     // proprietary header is needed  
@@ -76,7 +76,7 @@ actually allowed to send messages to the receiving user.
     })  
     .then(response => {  
       if (response.status !== 201) {  
-        throw new Error('Unable to send push message'');  
+        throw new Error('Unable to send push message');  
       }  
     });
 
