@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the deprecations and removals in Chrome 63 to help you plan. In this version, new behavior on interface properties, removal of a webkit function, and a change to <code>RTCRtcpMuxPolicy</code>.
+description: A round up of the deprecations and removals in Chrome 63 to help you plan. In this version, new behavior on interface properties, removal of a webkit function, and a change to RTCRtcpMuxPolicy.
 
 {# wf_updated_on: 2017-10-23 #}
 {# wf_published_on: 2017-10-23 #}
