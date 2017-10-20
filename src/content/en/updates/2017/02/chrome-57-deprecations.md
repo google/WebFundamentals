@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 57 to help you plan.
 
-{# wf_updated_on: 2017-09-11 #}
+{# wf_updated_on: 2017-10-23 #}
 {# wf_published_on: 2017-02-01 #}
 {# wf_tags: deprecations,removals,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -48,7 +48,7 @@ is removed.
 
 Two methods and an event handler, `webkitClearResourceTimings()`,
 `webkitSetResourceTimingBufferSize()`, and `onwebkitresourcetimingbufferfull`
-are obsolete and vendor-specific. The 
+are obsolete and vendor-specific. The
 [standard versions of these APIs](https://www.chromestatus.com/feature/5710624386449408)
 have been supported in since Chrome 46, and the prefixed functions were
 deprecated in that version as well. These features were originally
@@ -76,7 +76,7 @@ events are changed to use `MessageEvent` instead of `ServiceWorkerMessageEvent`.
 
 ## Remove webkit-prefixed IndexedDB global aliases
 
-The `IndexedDB` entry point and global constructors were exposed with `webkit` 
+The `IndexedDB` entry point and global constructors were exposed with `webkit`
 prefixes somewhere around Chrome 11. The non-prefixed versions were added in
 Chrome 24 and the prefixed versions were deprecated in Chrome 38. The
 following interfaces are affected:
@@ -125,7 +125,7 @@ been supported in Chromium. Therefore the webkit version is being removed.
 The `usemap` attribute was formerly defined as caseless. Unfortunately
 implementing this was complicated enough that no browsers implemented it
 correctly. Research suggested that such complicated algorithm is unnecessary,
-and even ASCII case-insensitive matching is unnecessary. 
+and even ASCII case-insensitive matching is unnecessary.
 
 Consequently, the specification was updated so that case-sensitive matching is
 applied. The old behavior is deprecated in Chrome 57, with removal expected in
@@ -143,7 +143,7 @@ has always had the (non-normative) note that "any
 type of synchronous requests must not be initiated inside of a service
 worker", to avoid blocking the service worker. Blocking the service worker
 would block all network requests from controlled pages. Unfortunately, the
-`FileReaderSync` API has long been available in service workers. 
+`FileReaderSync` API has long been available in service workers.
 
 Currently only Firefox and Chrome expose `FileReaderSync` in service workers.
 There's agreement from Firefox in the [spec discussion](https://github.com/w3c/ServiceWorker/issues/735)
@@ -178,12 +178,12 @@ use of RTP/RTCP multiplexing. In Chrome 57, we changed the default
 `rtcpMuxPolicy` to "require" and deprecated "negotiate" for following reasons:
 
 * Non-muxed RTCP uses extra network resources.
-* Removing "negotiate" will make the API surface simpler, since an 
+* Removing "negotiate" will make the API surface simpler, since an
   "RtpSender"/"RtpReceiver" will then only ever have a single transport.
 
 In Chrome 57, "negotiate" is deprecated. We believe this is a non-breaking change
 since the user will get a deprecation message and `RTCPeerConnection` can still
-be created. Removal is anticipated in Chrome 63 or 64.
+be created. Removal is in Chrome 63.
 
 [Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/OP2SGSWF5lo/discussion) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=685727)
