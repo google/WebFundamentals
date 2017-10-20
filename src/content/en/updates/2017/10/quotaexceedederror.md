@@ -9,7 +9,7 @@ description: There are several ways to deal with <code>QuotaExceededError</code>
 {# wf_featured_snippet: There are several ways to deal with <code>QuotaExceededError</code>. #}
 {# wf_blink_components: Blink #}
 
-# Exceeding the Buffering Quota {: .page-title }
+# Exceeding the buffering quota {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
