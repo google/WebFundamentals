@@ -109,19 +109,6 @@ Removing recent data is not as simple as calling `SourceBuffer.remove()`. To
 remove data from the `SourceBuffer`, it's updating flag must be false. If it is
 not, call `SourceBuffer.abort()` before removing any data.
 
-    try {
-      if (!sourceBuffer.updating) {
-        sourceBuffer.appendBuffer(data);
-      }
-    }
-    catch (e) {
-      if (e.name === 'QuotaExceededError') {
-        // Remove unneeded data.  }
-      else {
-        throw e;
-      }
-    }
-
 There are a few things to keep in mind when calling `SourceBuffer.remove()`.
 
 +  **This could have a negative impact on playback.** For example, if you
@@ -187,19 +174,6 @@ additional data costs for some users.
 ## Lower the playback resolution
 
 This is similar to removing recent data and re-appending. In fact, the two may be done together, though the example below only shows lowering the resolution.
-
-    try {
-      sourceBuffer.appendBuffer(data);
-    }
-    catch (e) {
-      if (e.name === 'QuotaExceededError') {
-        sourceBuffer.abort();
-        // NEED CODE
-      }
-      else {
-        throw e;
-      }
-    }
 
 There are a few things to keep in mind when using this technique:
 
