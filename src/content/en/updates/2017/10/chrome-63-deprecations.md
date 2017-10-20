@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the deprecations and removals in Chrome 63 to help you plan. In this version, security improvements, further webkit deprecations, and more.
+description: A round up of the deprecations and removals in Chrome 63 to help you plan.
 
 {# wf_updated_on: 2017-10-23 #}
 {# wf_published_on: 2017-10-23 #}
 {# wf_tags: deprecations,removals,chrome63 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: A round up of the deprecations and removals in Chrome 63 to help you plan. In this version, more restrictions on insecure origins and a change to the shadow-piercing descendant combinator. #}
+{# wf_featured_snippet: A round up of the deprecations and removals in Chrome 63 to help you plan. In this version, . #}
 
 # Deprecations and Removals in Chrome 63 {: .page-title }
 
@@ -26,6 +26,25 @@ This list is subject to change at any time.
 
 ## JavaScript and APIs
 
+### Interface properties with a Promise type no longer throw exceptions
+
+Interface properties and functions that return a promise have been inconsistent
+about whether error conditions throw exceptions or reject, which would invoke a
+promise's `catch()` block. The current version of the [IDL
+spec](https://heycam.github.io/webidl/)
+calls for all promise-returning properties and functions to reject rather than
+throw an exception.
+
+For example, previously, a call to `MediaKeySession.closed` would throw a
+`TypeError` for illegal invocation if called at the wrong time. With this change
+such calls must now implement a `catch()` block.
+
+This change brings Chrome inline with the specification. This change has already
+been made for functions.
+
+[Chromestatus Tracker](https://www.chromestatus.com/features/5654995223445504) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=758023)
+
 ### Remove getMatchedCSSRules()
 
 The getMatchedCSSRules() method is a webkit-only API to get a list of all the
@@ -33,8 +52,6 @@ style rules applied to a particular element. Webkit has an [open bug to remove
 it](https://bugs.webkit.org/show_bug.cgi?id=79653). For these reasons it is
 removed from Chrome in version 63. Developers who need this functionality can
 look at [this Stackoverflow post](https://stackoverflow.com/questions/2952667/find-all-css-rules-that-apply-to-an-element)
-
-###
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/-_Al0I5Rm9Q/discussion) &#124;
 [Chromestatus Tracker](https://groups.google.com/a/chromium.org/d/topic/blink-dev/-_Al0I5Rm9Q/discussion) &#124;
