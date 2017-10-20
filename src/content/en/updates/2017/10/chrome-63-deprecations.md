@@ -29,7 +29,16 @@ This list is subject to change at any time.
 ### Remove getMatchedCSSRules()
 
 The getMatchedCSSRules() method is a webkit-only API to get a list of all the
-style rules applied to a particular element.
+style rules applied to a particular element. Webkit has an [open bug to remove
+it](https://bugs.webkit.org/show_bug.cgi?id=79653). For these reasons it is
+removed from Chrome in version 63. Developers who need this functionality can
+look at [this Stackoverflow post](https://stackoverflow.com/questions/2952667/find-all-css-rules-that-apply-to-an-element)
+
+###
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/-_Al0I5Rm9Q/discussion) &#124;
+[Chromestatus Tracker](https://groups.google.com/a/chromium.org/d/topic/blink-dev/-_Al0I5Rm9Q/discussion) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=437569&desc=2)
 
 ### Remove RTCRtcpMuxPolicy of "negotiate"
 
