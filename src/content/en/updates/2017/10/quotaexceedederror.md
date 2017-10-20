@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: There are several ways to deal with <code>QuotaExceededError</code>.
 
-{# wf_updated_on: 2017-10-18 #}
-{# wf_published_on: 2017-10-18 #}
+{# wf_updated_on: 2017-10-23 #}
+{# wf_published_on: 2017-10-23 #}
 {# wf_tags: media,mediasourceextensions #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
 {# wf_featured_snippet: There are several ways to deal with <code>QuotaExceededError</code>. #}
@@ -17,8 +17,8 @@ description: There are several ways to deal with <code>QuotaExceededError</code>
 
 If you're working with Media Source Extensions (MSE), one thing you will
 eventually need to deal with is an over-full buffer. When this occurs, you'll
-get what's called a `QuotaExceededError`. There are several ways to deal with
-this, which I'll cover in this article.
+get what's called a `QuotaExceededError`. In this article, I'll cover some of
+the ways to deal with it.
 
 # What is the QuotaExceededError?
 
@@ -32,11 +32,11 @@ console window.
 ![image](../../images/2017/10/quota-console-error.png)
 
 There are a few things to note about this. First, notice that the name
-QuotaExceededError appears nowhere in the message. To see that, set a breakpoint
-at a location where you can catch the error and examine it in your watch or
-scope window. I've shown this below.
+`QuotaExceededError` appears nowhere in the message. To see that, set a
+breakpoint at a location where you can catch the error and examine it in your
+watch or scope window. I've shown this below.
 
-![image](../../images/2017/10/quota-console-error.png)
+![image](../../images/2017/10/quota-watch-window.png)
 
 Second, there's no definitive way to find out how much data the `SourceBuffer`
 can handle.
@@ -48,7 +48,7 @@ its builds. Instead it removes frames using a two step algorithm, stopping if
 there is enough room to handle the `appendBuffer()`. First, it frees frames from
 between 0 and 30 seconds before the current time in 30 second chunks. Next, it
 frees frames in 30 second chunks from duration backwards to as close as 30
-seconds after `currentTime`.. You can read more about this in a [Webkit
+seconds after `currentTime`. You can read more about this in a [Webkit
 changeset from
 2014]([https://trac.webkit.org/changeset/172657/webkit](https://trac.webkit.org/changeset/172657/webkit)).
 
@@ -59,22 +59,26 @@ buffer limit
 test]([https://beaufortfrancois.github.io/sandbox/media/source-buffer-limit.html](https://beaufortfrancois.github.io/sandbox/media/source-buffer-limit.html))
 at least lets you observe the behavior.
 
-The exact number varies from browser to browser. Here's the best data I can
+## How much data can I append?
+
+The exact number varies from browser to browser. Since you can't query for the
+amount currently appended data, you'll have to keep track of how much you're
+appending yourself. As for what to watch, here's the best data I can
 gather at the time of writing. For Chrome these numbers are upper limits meaning
 they can be smaller when the system encounters memory pressure.
 
-    |          | Chrome  | Chromecast or limited memory Chrome device | Firefox | Safari | Edge    |
-    ================================
-    | Video    | 150MB   | 30MB      | 100MB   | 290MB  | Unknown |
-    | Audio    | 12MB    | 2MB       | 15MB    | 14MB   | Unknown |
+|          | Chrome  | Chromecast* | Firefox | Safari | Edge    |
+|----------|---------|-----------|---------|--------|---------|
+| Video    | 150MB   | 30MB      | 100MB   | 290MB  | Unknown |
+| Audio    | 12MB    | 2MB       | 15MB    | 14MB   | Unknown |
+
+* Or other limited memory Chrome device.
 
 # So what do I do?
 
 Since the amount of supported data varies so widely and you can't find the
 amount of data in a `SourceBuffer`, you must get it indirectly by handling the
 `QuotaExceededError`. Now let's look at a few ways to do that.
-
-# Dealing with QuotaExceededError
 
 There are several approaches to dealing with `QuotaExceededError`. In reality a
 combination of one or more approaches is best. Your approach should be to base
@@ -92,7 +96,6 @@ Now, let's look at several approaches to dealing with the
 +  Remove unneeded data and re-append.
 +  Append smaller fragments.
 +  Lower the playback resolution.
-+  Wait for currentTime to progress and retry
 
 Though they can be used in combination, I'll cover them one at a time.
 
@@ -121,25 +124,25 @@ not, call `SourceBuffer.abort()` before removing any data.
 
 There are a few things to keep in mind when calling `SourceBuffer.remove()`.
 
-+  This could have a negative impact on playback. For example, if you
++  **This could have a negative impact on playback.** For example, if you
     want the video to replay or loop soon, you may not want to remove the
     beginning of the video. Likewise, if you or the user seeks to a part of the
     video where you've removed data, you'll have to append that data again to
     satisfy that seek.
-+  Remove as conservatively as you can. Beware of removing the currently
++  **Remove as conservatively as you can.** Beware of removing the currently
     playing group of frames beginning at the keyframe at or before
     `currentTime` because doing so could cause playback stall. Such information
     may need to be parsed out of the bytestream by the web app if it is not
-    available in the manifest. Media manifest or app knowledge of keyframe
-    intervals in the media can help guide app's choice of removal ranges to
+    available in the manifest. A media manifest or app knowledge of keyframe
+    intervals in the media can help guide your app's choice of removal ranges to
     prevent removing the currently playing media. Whatever you remove, don't
     remove the currently playing group of pictures or even the first few beyond
     that. Generally, don't remove beyond the current time unless you're certain
     that the media is not needed any longer. If you remove close to the
     playhead you may cause a stall.
-+  Safari 9 and Safari 10 do not correctly implement `SourceBuffer.abort()`,
-    throwing errors that will halt playback. Fortunately there are open bug
-    trackers [here]([http://goo.gl/UZ2rPp](http://goo.gl/UZ2rPp)) and
++  **Safari 9 and Safari 10 do not correctly implement `SourceBuffer.abort()`**.
+    In fact, they throw errors that will halt playback. Fortunately there are
+    open bug trackers [here]([http://goo.gl/UZ2rPp](http://goo.gl/UZ2rPp)) and
     [here]([https://goo.gl/rC3CLj](https://goo.gl/rC3CLj)). In the meantime,
     you'll have to work around this somehow. [Shaka Player does
     it](https://github.com/google/shaka-player/blob/3cd18bb3362841d76db737204a15141b815b7c92/lib/polyfill/mediasource.js#L60-L74)
@@ -180,9 +183,10 @@ additional data costs for some users.
         }
       });
     })(pieces);
+
 ## Lower the playback resolution
 
-    This is similar to removing recent data and re-appending. In fact, the two may be done together, though the example below only shows lowering the resolution.
+This is similar to removing recent data and re-appending. In fact, the two may be done together, though the example below only shows lowering the resolution.
 
     try {
       sourceBuffer.appendBuffer(data);
@@ -199,27 +203,16 @@ additional data costs for some users.
 
 There are a few things to keep in mind when using this technique:
 
-+  When you lower the resolution, also called changing representations,
-    you must append a new initialization segment, and it must be the one
-    intended for the media segments to follow.
-+  The presentation timestamp of the appended media should match the timestamp
-   of the data in the buffer as closely as possible, but not jump ahead.
++  **You must append a new initialization segment.** You must do this any time
+   you change representations. The new initialization segment must be for the
+   media segments that follow.
++  **The presentation timestamp of the appended media should match the timestamp
+   of the data in the buffer as closely as possible, but not jump ahead.**
    Overlapping the buffered data may cause a stutter or brief stall, depending
    on the browser. Regardless of what you append, don't overlap the playhead as
    this will throw errors.
-+  You may be tempted to seek to a specific location and resume playback
-    from there. Be aware that this will cause playback interruption until the
-    seek is completed.
-
-# Wait for currentTime to progress and retry
-
-Most implementations, even Safari's, tend not to evict media near currentTime.
-Simply waiting for playback to advance a bit and retrying the append may allow
-the browser to free up enough space for your append.  
-
-Notes from Matt: "Implementations (even Safari's) typically try not to evict
-media near currentTime, so simply letting currentTime progress a bit and
-retrying your append may allow the implementation to free more data and make
-enough room for your append."
++  **Seeking may interrupt playback.** You may be tempted to seek to a specific
+   location and resume playback from there. Be aware that this will cause
+   playback interruption until the seek is completed.
 
 {% include "comment-widget.html" %}
