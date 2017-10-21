@@ -6,21 +6,19 @@ description: There are several ways to deal with <code>QuotaExceededError</code>
 {# wf_published_on: 2017-10-23 #}
 {# wf_tags: media,mediasourceextensions #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
-{# wf_featured_snippet: There are several ways to deal with <code>QuotaExceededError</code>. #}
+{# wf_featured_snippet: There are several ways to deal with `QuotaExceededError`. #}
 {# wf_blink_components: Blink #}
 
 # Exceeding the buffering quota {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
-# Exceeding the Buffering Quota
-
 If you're working with Media Source Extensions (MSE), one thing you will
 eventually need to deal with is an over-full buffer. When this occurs, you'll
 get what's called a `QuotaExceededError`. In this article, I'll cover some of
 the ways to deal with it.
 
-# What is the QuotaExceededError?
+## What is the QuotaExceededError?
 
 Basically, `QuotaExceededError` is what you get if you try to add too much data
 to your `SourceBuffer` object. (Adding more `SourceBuffer` objects to a parent
@@ -41,7 +39,7 @@ watch or scope window. I've shown this below.
 Second, there's no definitive way to find out how much data the `SourceBuffer`
 can handle.
 
-# Behavior in other browsers
+## Behavior in other browsers
 
 At the time of writing, Safari does not throw a `QuotaExceededError` in many of
 its builds. Instead it removes frames using a two step algorithm, stopping if
@@ -74,7 +72,7 @@ they can be smaller when the system encounters memory pressure.
 
 * Or other limited memory Chrome device.
 
-# So what do I do?
+## So what do I do?
 
 Since the amount of supported data varies so widely and you can't find the
 amount of data in a `SourceBuffer`, you must get it indirectly by handling the
@@ -99,7 +97,7 @@ Now, let's look at several approaches to dealing with the
 
 Though they can be used in combination, I'll cover them one at a time.
 
-## Remove unneeded data and re-append
+### Remove unneeded data and re-append
 
 Really this one should be called, "Remove least-likely-to-be-used-soon data, and
 then retry append of data likely-to-be-used-soon." That was too long of a title.
@@ -135,7 +133,7 @@ There are a few things to keep in mind when calling `SourceBuffer.remove()`.
     it](https://github.com/google/shaka-player/blob/3cd18bb3362841d76db737204a15141b815b7c92/lib/polyfill/mediasource.js#L60-L74)
     by stubbing out an empty `abort()` function on those versions of Safari.
 
-## Append smaller fragments
+### Append smaller fragments
 
 I've shown the procedure below. This may not work in every case, but it has the
 advantage that the size of the smaller chunks can be adjusted to suit your
@@ -171,9 +169,10 @@ additional data costs for some users.
       });
     })(pieces);
 
-## Lower the playback resolution
+### Lower the playback resolution
 
-This is similar to removing recent data and re-appending. In fact, the two may be done together, though the example below only shows lowering the resolution.
+This is similar to removing recent data and re-appending. In fact, the two may
+be done together, though the example below only shows lowering the resolution.
 
 There are a few things to keep in mind when using this technique:
 
