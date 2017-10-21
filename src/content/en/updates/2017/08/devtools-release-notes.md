@@ -32,8 +32,11 @@ Note: You can check what version of Chrome you're running at
 `chrome://version`. Chrome auto-updates to a new major version about every 6
 weeks.
 
-Note: Looking for the video version of these release notes? It'll be
-published around mid-October 2017.
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="eD4fiqjaxHw"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Top-level await operators in the Console {: #await }
 
@@ -127,6 +130,15 @@ parent of the selected item, has `display:grid` applied to it.
     <b>Figure 5</b>. Highlighting a CSS Grid
   </figcaption>
 </figure>
+
+Check out the video below to learn the basics of CSS Grid in less than
+2 minutes.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="AqwPrR7hklE"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## A new API for querying heap objects {: #query-objects }
 

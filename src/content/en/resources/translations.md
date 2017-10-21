@@ -30,6 +30,9 @@ To learn more about how GitLocalize works, visit
 If you find any issues or feature requests, please file them in
 [GitLocalize's issue tracker](https://github.com/gitlocalize/feedback/issues).
 
+To chat with other translation contributors, [register to the ChromiumDev
+Slack](https://chromiumdev-slack.herokuapp.com/) and join #l10n channel.
+
 Our supported languages include: Arabic (AR), German (DE), Spanish (ES),
 French (FR), Hebrew (HE), Bahasa Indonesia (ID), Italian (IT), Japanese (JA),
 Korean (KO), Dutch (NL), Polish (PL), Portuguese (PT-BR), Russian (RU),

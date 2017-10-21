@@ -11,6 +11,8 @@ toc:
     path: /web/tools/workbox/get-started/npm-script
 - title: Examples
   path: /web/tools/workbox/examples
+- title: Codelab
+  path: https://codelabs.developers.google.com/codelabs/workbox-lab/
 - title: Reference Docs
   section:
   - title: "Overview"

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-09-07 #}
+{# wf_updated_on: 2017-10-19 #}
 
 # Deep Dive into the Payment Request API {: .page-title }
 
@@ -60,11 +60,11 @@ fallback to a traditional checkout page in browsers that don't support it.
 The feature detect is simply:
 
 ```
-if(window.PaymentRequest) {  
-  // Use Payment Request API  
-} else {  
-  // Fallback to traditional checkout  
-  window.location.href = '/checkout/traditional';  
+if(window.PaymentRequest) {
+  // Use Payment Request API
+} else {
+  // Fallback to traditional checkout
+  window.location.href = '/checkout/traditional';
 }
 ```
 
@@ -76,27 +76,27 @@ Once you are ready to collect payment details from the user, you'll need to
 construct a new PaymentRequest object.
 
 ```
-const supportedPaymentMethods = [  
-  {  
-    supportedMethods: ['basic-card'],  
-  }  
-];  
-const paymentDetails = {  
-  total: {
-    label: 'Total',  
-    amount:{  
-      currency: 'USD',  
-      value: 0  
-    }  
+const supportedPaymentMethods = [
+  {
+    supportedMethods: 'basic-card',
   }
-};  
-// Options isn't required.  
+];
+const paymentDetails = {
+  total: {
+    label: 'Total',
+    amount:{
+      currency: 'USD',
+      value: 0
+    }
+  }
+};
+// Options isn't required.
 const options = {};
 
-new PaymentRequest(  
-  supportedPaymentMethods,  
-  paymentDetails,  
-  options  
+new PaymentRequest(
+  supportedPaymentMethods,
+  paymentDetails,
+  options
 );
 ```
 
@@ -115,14 +115,14 @@ Constructing a new `PaymentRequest` object can be done at any point in your app.
 Nothing will be shown to the user until you call its `show()` method.
 
 ```
-const request = new PaymentRequest(  
-  supportedPaymentMethods,  
-  paymentDetails,  
-  options  
+const request = new PaymentRequest(
+  supportedPaymentMethods,
+  paymentDetails,
+  options
 );
 
-// Call when you wish to show the UI to the user.  
-request.show()  
+// Call when you wish to show the UI to the user.
+request.show()
 .then(...).catch(...);
 ```
 
@@ -139,13 +139,13 @@ where each payment method must include a  `supportedMethods` parameter that
 identifies the payment method. Each object can contain an optional data object.
 
 ```
-const supportedPaymentMethods = [  
-  {  
-    supportedMethods: ['name-of-payment-method'],  
-    data: {  
-      // Optional data for this payment method  
-    }  
-  }  
+const supportedPaymentMethods = [
+  {
+    supportedMethods: 'name-of-payment-method',
+    data: {
+      // Optional data for this payment method
+    }
+  }
 ];
 
 new PaymentRequest(supportedPaymentMethods, paymentDetails, options);
@@ -160,9 +160,9 @@ To support credit and debit cards, we need to change the `supportedMethods`
 parameter to contain 'basic-card', like so:
 
 ```
-const creditCardPaymentMethod = {  
-  supportedMethods: ['basic-card'],  
-};  
+const creditCardPaymentMethod = {
+  supportedMethods: 'basic-card',
+};
 
 const supportedPaymentMethods = [creditCardPaymentMethod];
 
@@ -190,11 +190,11 @@ define `supportedNetworks`. The following code restricts the accepted cards to
 visa, mastercard and amex.
 
 ```
-const creditCardPaymentMethod = {  
-  supportedMethods: ['basic-card'],  
-  data: {  
-    supportedNetworks: ['visa', 'mastercard', 'amex'],  
-  },  
+const creditCardPaymentMethod = {
+  supportedMethods: 'basic-card',
+  data: {
+    supportedNetworks: ['visa', 'mastercard', 'amex'],
+  },
 };
 ```
 
@@ -228,7 +228,7 @@ UI would start with a suitable card already selected:
 
 The `supportedTypes` parameter tells Chrome which types of cards to
 filter out, i.e. if a merchant defined `supportedTypes` as `['credit', 'debit']`,
-Chrome would strip out any 'prepaid' cards the user has. 
+Chrome would strip out any 'prepaid' cards the user has.
 
 This means that `supportedTypes` **does not guarantee** that the final card
 you receive will be a supported type. The user can enter details for a new card,
@@ -245,12 +245,12 @@ It's safe to use this option. The only difference is that some cards wouldn't be
 automatically for the user.
 
 ```
-const creditCardPaymentMethod = {  
-  supportedMethods: ['basic-card'],  
-  data: {  
-    supportedNetworks: ['visa', 'mastercard', 'amex'],  
-    supportedTypes: ['credit', 'debit'],  
-  },  
+const creditCardPaymentMethod = {
+  supportedMethods: 'basic-card',
+  data: {
+    supportedNetworks: ['visa', 'mastercard', 'amex'],
+    supportedTypes: ['credit', 'debit'],
+  },
 };
 ```
 
@@ -261,11 +261,11 @@ In the above example for basic cards, we created an object
 `PaymentRequest` constructor.
 
 ```
-const creditCardPaymentMethod = {  
-  supportedMethods: ['basic-card'],  
+const creditCardPaymentMethod = {
+  supportedMethods: 'basic-card',
 };
 
-const supportedPaymentMethods = [creditCardPaymentMethod];  
+const supportedPaymentMethods = [creditCardPaymentMethod];
 
 new PaymentRequest(supportedPaymentMethods, paymentDetails, options);
 ```
@@ -277,22 +277,22 @@ accepted payments through BobPay as well as credit cards. You'd define the
 supported payment methods like so:
 
 ```
-const creditCardPaymentMethod = {  
-  supportedMethods: ['basic-card'],  
+const creditCardPaymentMethod = {
+  supportedMethods: 'basic-card',
 };
 
-const bobPayPaymentMethod = {  
-  supportedMethods: ["https://example.com/bobpay"],  
-  data: {  
-    merchantIdentifier: "XXXX",  
-    bobPaySpecificField: true  
-  }  
-};  
+const bobPayPaymentMethod = {
+  supportedMethods: "https://example.com/bobpay",
+  data: {
+    merchantIdentifier: "XXXX",
+    bobPaySpecificField: true
+  }
+};
 
-const supportedPaymentMethods = [  
-  creditCardPaymentMethod,  
-  bobPayPaymentMethod  
-];  
+const supportedPaymentMethods = [
+  creditCardPaymentMethod,
+  bobPayPaymentMethod
+];
 
 new PaymentRequest(supportedPaymentMethods, paymentDetails, order);
 ```
@@ -304,22 +304,22 @@ An example of using a third party payment processor like this can be
 shown with Android Pay, which is supported on Chrome for Android.
 
 ```
-const androidPayPaymentMethod = {  
-  supportedMethods: ['https://android.com/pay'],  
-  data: {  
-    merchantName: 'Android Pay Demo',  
-    merchantId: '00000000000000000000',  
-    environment: 'TEST',  
-    allowedCardNetworks: ['AMEX', 'DISCOVER', 'MASTERCARD', 'VISA'],  
-    paymentMethodTokenizationParameters: {  
-      tokenizationType: 'GATEWAY_TOKEN',  
-      parameters: {  
-        'gateway': 'stripe',  
-        'stripe:publishableKey': 'xx_demo_xxxxxxxxxxxxxxxxxxxxxxxx',  
-        'stripe:version': '2016-07-06',  
-      },  
-    },  
-  },  
+const androidPayPaymentMethod = {
+  supportedMethods: 'https://android.com/pay',
+  data: {
+    merchantName: 'Android Pay Demo',
+    merchantId: '00000000000000000000',
+    environment: 'TEST',
+    allowedCardNetworks: ['AMEX', 'DISCOVER', 'MASTERCARD', 'VISA'],
+    paymentMethodTokenizationParameters: {
+      tokenizationType: 'GATEWAY_TOKEN',
+      parameters: {
+        'gateway': 'stripe',
+        'stripe:publishableKey': 'xx_demo_xxxxxxxxxxxxxxxxxxxxxxxx',
+        'stripe:version': '2016-07-06',
+      },
+    },
+  },
 };
 ```
 
@@ -340,7 +340,7 @@ section dedicated to that here](/web/fundamentals/payments/android-pay).
 There are some edge cases to be aware of when defining your supported payment
 methods.
 
-**Unsupported Payment Methods**  
+**Unsupported Payment Methods**
 If you try to call `show()` on a `PaymentRequest` object and there are no supported
 payment methods, the returned promise will reject immediately with the following
 error:
@@ -352,7 +352,7 @@ method. If, however, you only support a third party payment method, like Android
 Pay, there is a strong chance that it won't be supported by a browser that
 supports the Payment Request API.
 
-**Third Party Payment Method Skipping the Payment Request UI**  
+**Third Party Payment Method Skipping the Payment Request UI**
 In the screenshot above you can see "Android Pay" as the pre-selected payment
 option. This has occurred because the example supports both Android Pay and basic
 cards. If you define Android Pay as your **only** payment method and the browser
@@ -372,14 +372,14 @@ The contents of the `total` parameter should contain a `label` parameter and an
 `amount` parameter consisting of a `currency` and `value`. A basic example would be:
 
 ```
-const paymentDetails = {  
-  total: {  
-    label: 'Total',  
-    amount: {  
-      currency: 'USD',  
-      value: '0',  
-    },  
-  },  
+const paymentDetails = {
+  total: {
+    label: 'Total',
+    amount: {
+      currency: 'USD',
+      value: '0',
+    },
+  },
 };
 
 new PaymentRequest(supportedPaymentMethods, paymentDetails, options);
@@ -407,14 +407,14 @@ the amount for the order.
 To give another example, we can define the total as:
 
 ```
-const paymentDetails = {  
-  total: {  
-    label: 'Purchase Amount',  
-    amount: {  
-      currency: 'GBP',  
-      value: '24.99',  
-    },  
-  },  
+const paymentDetails = {
+  total: {
+    label: 'Purchase Amount',
+    amount: {
+      currency: 'GBP',
+      value: '24.99',
+    },
+  },
 };
 ```
 
@@ -438,37 +438,37 @@ The format of the display items should be an array of items following the same
 structure as the total (i.e., a `label` and an `amount` with `currency` and `value`).
 
 ```
-const allDisplayItems = [  
-  {  
-    label: 'Subtotal',  
-    amount: {  
-      currency: 'USD',  
-      value: 10,  
-    },  
-  }, {  
-    label: 'Discount (10%)',  
-    amount: {  
-      currency: 'USD',  
-      value: -1,  
-    },  
-  }, {  
-    label: 'Tax',  
-    amount: {  
-      currency: 'USD',  
-      value: 0.68,  
-    },  
-  },  
+const allDisplayItems = [
+  {
+    label: 'Subtotal',
+    amount: {
+      currency: 'USD',
+      value: 10,
+    },
+  }, {
+    label: 'Discount (10%)',
+    amount: {
+      currency: 'USD',
+      value: -1,
+    },
+  }, {
+    label: 'Tax',
+    amount: {
+      currency: 'USD',
+      value: 0.68,
+    },
+  },
 ];
 
-const paymentDetails = {  
-  total: {  
-    label: 'Total',  
-    amount: {  
-      currency: 'USD',  
-      value: 0,  
-    },  
-  },  
-  displayItems: allDisplayItems,  
+const paymentDetails = {
+  total: {
+    label: 'Total',
+    amount: {
+      currency: 'USD',
+      value: 0,
+    },
+  },
+  displayItems: allDisplayItems,
 };
 ```
 
@@ -508,21 +508,21 @@ has selected a shipping option, which may adjust the total and tax amounts.
 In the following example, I've set pending to true on the tax entry:
 
 ```
-const transactionDisplayItems = [  
-  {  
-    label: 'Total cost of goods',  
-    amount: {  
-      currency: 'USD',  
-      value: 10,  
-    },  
-  }, {  
-    label: 'Tax',  
-    pending: true,  
-    amount: {  
-      currency: 'USD',  
-      value: 0.75,  
-    },  
-  },  
+const transactionDisplayItems = [
+  {
+    label: 'Total cost of goods',
+    amount: {
+      currency: 'USD',
+      value: 10,
+    },
+  }, {
+    label: 'Tax',
+    pending: true,
+    amount: {
+      currency: 'USD',
+      value: 0.75,
+    },
+  },
 ];
 ```
 
@@ -542,7 +542,7 @@ Which will be given a slightly different text color in Chrome as a result:
 There are some minor edge cases with the `paymentDetails` argument where you can
 stress the UI and incorrectly define the object resulting in an error.
 
-**Long Total Label**  
+**Long Total Label**
 Be wary of the length of the labels. Browsers have
 control of how they are displayed. At the time of writing, Chrome doesn't
 truncate the total label at all, but does truncate display item labels.
@@ -562,34 +562,34 @@ receive the following the error:
 
 `TypeError: Failed to construct 'PaymentRequest': Must specify total`
 
-**Failing to include Label, Amount, Currency or Value**  
+**Failing to include Label, Amount, Currency or Value**
 If you exclude a `label`, `amount`, `currency`, or `value` from the `total` or one of the
 `displayItems`, you'll receive one of the following errors:
 
 ```
-// No label  
+// No label
 'PaymentRequest': required member label is undefined.
 
-// No amount  
+// No amount
 'PaymentRequest': required member amount is undefined.
 
-// No currency  
+// No currency
 'PaymentRequest': required member currency is undefined.
 
-// No Value  
+// No Value
 'PaymentRequest': required member value is undefined.
 ```
 
 If you hit any of these errors, please check the format of the `total` and
 `displayItems`.
 
-**Negative Total (i.e., Refunds)**  
+**Negative Total (i.e., Refunds)**
 The Payment Request API** does not support negative totals**; if you attempt to
 show a total with a negative value you'll receive this error:
 
 `'PaymentRequest': Total amount value should be non-negative`
 
-**Invalid Currency**  
+**Invalid Currency**
 The currency code must be three uppercase characters; passing in anything else
 will throw an error.
 
@@ -612,7 +612,7 @@ the currency code is shown. Compare the screenshots below for 'USD' and 'XBT'.
   </figure>
 </div>
 
-**Multiple Currencies**  
+**Multiple Currencies**
 At the time of writing, Chrome does not support multiple currencies and
 unfortunately the error it throws does not make it clear that mixing currencies
 is not supported.
@@ -622,7 +622,7 @@ is not supported.
 You can [follow changes to this issue
 here](https://bugs.chromium.org/p/chromium/issues/detail?id=709296&q=component%3ABlink%3EPayments%20&colspec=ID%20Pri%20M%20Stars%20ReleaseBlock%20Component%20Status%20Owner%20Summary%20OS%20Modified).
 
-**Formatting Currency**  
+**Formatting Currency**
 You can define the `value` parameter as a string, but it must only contain
 numbers with no more than one decimal point;
 otherwise you'll receive the following error:
@@ -632,7 +632,7 @@ otherwise you'll receive the following error:
 For example, "1,000.00" is invalid because of the comma, whereas "1000.00" is
 valid.
 
-**Right to Left Languages**  
+**Right to Left Languages**
 You can use right-to-left languages for the labels and they will be displayed
 accordingly. The rest of the browser's text will be determined by the user's
 browser / system settings.
@@ -651,10 +651,10 @@ If you require this information you just need to pass in the following options
 object:
 
 ```
-const options = {  
-  requestPayerName: true,  
-  requestPayerPhone: true,  
-  requestPayerEmail: true,  
+const options = {
+  requestPayerName: true,
+  requestPayerPhone: true,
+  requestPayerEmail: true,
 };
 ```
 
@@ -705,14 +705,14 @@ returned by `show()` will resolve; if there was an issue or the user closed the 
 promise will reject.
 
 ```
-paymentRequest.show()  
-.then((paymentResponse) => {  
+paymentRequest.show()
+.then((paymentResponse) => {
   // The user filled in the required fields and completed the flow
   // Get the details from `paymentResponse` and complete the transaction.
-  return paymentResponse.complete();  
-})  
-.catch((err) => {  
-  // The API threw an error or the user closed the UI  
+  return paymentResponse.complete();
+})
+.catch((err) => {
+  // The API threw an error or the user closed the UI
 });
 ```
 
@@ -785,17 +785,17 @@ If you wanted to close the payment request UI immediately, you would call the
 `PaymentResponse.complete()` method.
 
 ```
-paymentRequest.show()  
-.then((paymentResponse) => {  
-  // Close the payment request UI.  
-  return paymentResponse.complete()  
-  .then(() => {  
-    // TODO: Get the payment details from paymentResponse object.  
-    // TODO: Process payment  
-  });  
-})  
-.catch((err) => {  
-  console.error('Payment Request API error: ', err);  
+paymentRequest.show()
+.then((paymentResponse) => {
+  // Close the payment request UI.
+  return paymentResponse.complete()
+  .then(() => {
+    // TODO: Get the payment details from paymentResponse object.
+    // TODO: Process payment
+  });
+})
+.catch((err) => {
+  console.error('Payment Request API error: ', err);
 });
 ```
 
@@ -814,26 +814,26 @@ false otherwise). We'd keep the spinner up and call `complete()` after this meth
 resolved, like so:
 
 ```
-paymentRequest.show()  
-.then((paymentResponse) => {  
-  return validatePaymentWithBackend(paymentResponse)  
-  .then((success) => {  
-    if (success) {  
-      return paymentResponse.complete('success');  
-    } else {  
-      return paymentResponse.complete('fail');  
-    }  
-  });  
-})  
-.catch((err) => {  
-  // The API threw an error or the user closed the UI  
+paymentRequest.show()
+.then((paymentResponse) => {
+  return validatePaymentWithBackend(paymentResponse)
+  .then((success) => {
+    if (success) {
+      return paymentResponse.complete('success');
+    } else {
+      return paymentResponse.complete('fail');
+    }
+  });
+})
+.catch((err) => {
+  // The API threw an error or the user closed the UI
 });
 ```
 
 In this example we are using the 'success' and 'fail' strings to highlight to
 the browser the states of the transaction. If you include these strings the
 browser may show a visual indication to the user suggesting a positive or
-negative outcome.  
+negative outcome.
 
 At the time of writing, Chrome will just hide the UI on success but will show
 an error dialog to the user if you call with `complete('fail')` .
@@ -849,7 +849,7 @@ an error dialog to the user if you call with `complete('fail')` .
 
 ### Edge Cases
 
-**Completing with a Diff String**  
+**Completing with a Diff String**
 One possible gotcha with the `complete()`` method is that if you pass in a string
 that is not defined by the spec (i.e., the string is not 'unknown', 'success,'
 or 'fail'), the promise returned by complete() will reject and the
@@ -859,7 +859,7 @@ The error in the rejected promise will be:
 
 `Failed to execute 'complete' on 'PaymentResponse': The provided value '...' is not a valid enum value of type PaymentComplete.`
 
-**Not Calling Complete**  
+**Not Calling Complete**
 If you fail to call complete() in a timely manner, it will time out and the UI
 will be closed. The browser will show a message to the user highlighting there
 was an issue.
@@ -871,7 +871,7 @@ from your users.
 
 In this section we'll look at how you can request shipping information from the
 user, define the type of shipping, and react to changes to the shipping address
-and shipping option from the user.  
+and shipping option from the user.
 
 ### Request Shipping Details
 
@@ -879,8 +879,8 @@ To start off with, you'll need to request shipping information from the user,
 which is achieved by setting `requestShipping` to `true` in the `options` object.
 
 ```
-const options = {  
-  requestShipping: true,  
+const options = {
+  requestShipping: true,
 };
 ```
 
@@ -963,14 +963,14 @@ At the time of writing, you are required to add a <code>shippingaddresschange</c
 You can listen for the event like so:
 
 ```
-const paymentRequest = new PaymentRequest(  
+const paymentRequest = new PaymentRequest(
     supportedPaymentMethods, paymentDetails, options);
 
-paymentRequest.addEventListener('shippingaddresschange', (event) => {  
-  // TODO: Handle the event  
+paymentRequest.addEventListener('shippingaddresschange', (event) => {
+  // TODO: Handle the event
 });
 
-paymentRequest.show()  
+paymentRequest.show()
 .then(...)
 .catch(...)
 ```
@@ -989,8 +989,8 @@ To give an example, we can print the shipping address to the console like so:
 
 ```
 const paymentRequest = new PaymentRequest(...);
-paymentRequest.addEventListener('shippingaddresschange', (event) => {  
-  console.log(paymentRequest.shippingAddress);  
+paymentRequest.addEventListener('shippingaddresschange', (event) => {
+  console.log(paymentRequest.shippingAddress);
   ...
 });
 ```
@@ -999,9 +999,9 @@ _Alternatively_, you can use `event.target` to access the `PaymentRequest` insta
 
 ```
 const paymentRequest = new PaymentRequest(...);
-paymentRequest.addEventListener('shippingaddresschange', (event) => {  
-    const prInstance = event.target;      
-    console.log(prInstance.shippingAddress);  
+paymentRequest.addEventListener('shippingaddresschange', (event) => {
+    const prInstance = event.target;
+    console.log(prInstance.shippingAddress);
     ...
 });
 ```
@@ -1098,18 +1098,18 @@ For a simple example, we can call `event.updateWith()` with payment details of
 a `total` and an empty array for `shippingOptions`:
 
 ```
-paymentRequest.addEventListener('shippingaddresschange', (event) => {  
-  const paymentDetails = {  
-    total: {  
-      label: 'Total',  
-      amount: {  
-        currency: 'USD',  
-        value: 10,  
-      },  
-    },  
-    shippingOptions: [],  
-  };  
-  event.updateWith(paymentDetails);  
+paymentRequest.addEventListener('shippingaddresschange', (event) => {
+  const paymentDetails = {
+    total: {
+      label: 'Total',
+      amount: {
+        currency: 'USD',
+        value: 10,
+      },
+    },
+    shippingOptions: [],
+  };
+  event.updateWith(paymentDetails);
 });
 ```
 
@@ -1139,19 +1139,19 @@ transaction details you return to `event.updateWith()` will achieve this.
 For example, we can set a custom message with:
 
 ```
-paymentRequest.addEventListener('shippingaddresschange', (event) => {  
-  const paymentDetails = {  
-    total: {  
-      label: 'Total',  
-      amount: {  
-        currency: 'USD',  
-        value: 10,  
-      },  
-    },  
-    error: 'This is an example error message 🎉',  
-    shippingOptions: [],  
-  };  
-  event.updateWith(paymentDetails);  
+paymentRequest.addEventListener('shippingaddresschange', (event) => {
+  const paymentDetails = {
+    total: {
+      label: 'Total',
+      amount: {
+        currency: 'USD',
+        value: 10,
+      },
+    },
+    error: 'This is an example error message 🎉',
+    shippingOptions: [],
+  };
+  event.updateWith(paymentDetails);
 });
 ```
 
@@ -1173,43 +1173,43 @@ by setting the `shippingOptions` to an array of objects containing an `id`, `lab
 and `amount` with `currency` and `value`, like so:
 
 ```
-paymentRequest.addEventListener('shippingaddresschange', (event) => {  
-  const paymentRequest = event.target;  
+paymentRequest.addEventListener('shippingaddresschange', (event) => {
+  const paymentRequest = event.target;
   console.log(paymentRequest.shippingAddress);
 
-  event.updateWith({  
-    total: {  
-      label: 'Total',  
-      amount: {  
-        currency: 'USD',  
-        value: '0',  
-      },  
-    },  
-    shippingOptions: [  
-      {  
-        id: 'economy',  
-        label: 'Economy Shipping (5-7 Days)',  
-        amount: {  
-          currency: 'USD',  
-          value: '0',  
-        },  
-      }, {  
-        id: 'express',  
-        label: 'Express Shipping (2-3 Days)',  
-        amount: {  
-          currency: 'USD',  
-          value: '5',  
-        },  
-      }, {  
-        id: 'next-day',  
-        label: 'Next Day Delivery',  
-        amount: {  
-          currency: 'USD',  
-          value: '12',  
-        },  
-      },  
-    ],  
-  });  
+  event.updateWith({
+    total: {
+      label: 'Total',
+      amount: {
+        currency: 'USD',
+        value: '0',
+      },
+    },
+    shippingOptions: [
+      {
+        id: 'economy',
+        label: 'Economy Shipping (5-7 Days)',
+        amount: {
+          currency: 'USD',
+          value: '0',
+        },
+      }, {
+        id: 'express',
+        label: 'Express Shipping (2-3 Days)',
+        amount: {
+          currency: 'USD',
+          value: '5',
+        },
+      }, {
+        id: 'next-day',
+        label: 'Next Day Delivery',
+        amount: {
+          currency: 'USD',
+          value: '12',
+        },
+      },
+    ],
+  });
 });
 ```
 
@@ -1235,35 +1235,35 @@ can pass a `Promise` to `event.updateWith()`. In the following example we are ma
 API call and setting the shipping options based on the response:
 
 ```
-paymentRequest.addEventListener('shippingaddresschange', (event) => {  
-  const paymentRequest = event.target;  
+paymentRequest.addEventListener('shippingaddresschange', (event) => {
+  const paymentRequest = event.target;
   console.log(paymentRequest.shippingAddress);
 
-  const shippingAddrCheckPromise = fetch('/api/get-shipping-opts/', {  
-    method: 'POST',  
-    credentials: 'include',  
-     headers: {  
-       'Content-Type': 'application/json'  
-     },  
-    body: JSON.stringify(paymentRequest.shippingAddress),  
-  })  
-  .then((response) => {  
-    return response.json();  
-  })  
-  .then((responseData) => {  
-    return {  
-      total: {  
-        label: 'Total',  
-        amount: {  
-          currency: 'USD',  
-          value: '0',  
-        },  
-      },  
-      shippingOptions: responseData.shippingOptions,  
-    };  
+  const shippingAddrCheckPromise = fetch('/api/get-shipping-opts/', {
+    method: 'POST',
+    credentials: 'include',
+     headers: {
+       'Content-Type': 'application/json'
+     },
+    body: JSON.stringify(paymentRequest.shippingAddress),
+  })
+  .then((response) => {
+    return response.json();
+  })
+  .then((responseData) => {
+    return {
+      total: {
+        label: 'Total',
+        amount: {
+          currency: 'USD',
+          value: '0',
+        },
+      },
+      shippingOptions: responseData.shippingOptions,
+    };
   });
 
-  event.updateWith(shippingAddrCheckPromise);  
+  event.updateWith(shippingAddrCheckPromise);
 });
 ```
 
@@ -1280,27 +1280,27 @@ While the network request is being made, the user will see a spinner:
 
 #### Edge Cases
 
-**Never Calling updateWith() or Long Promise**  
+**Never Calling updateWith() or Long Promise**
 If you fail to call `event.updateWith()` or pass it a promise that fails to
 resolve in a timely manner, the UI will close itself and the show promise will
 reject with the following error:
 
 `DOMException: Timed out as the page didn't resolve the promise from change event`
 
-**Using an Invalid Shipping Type**  
+**Using an Invalid Shipping Type**
 If you set the `shippingType` to an invalid value (i.e., something other than
 'shipping', 'delivery' or 'pickup'), you'll receive the following error:
 
 `The provided value '...' is not a valid enum value of type PaymentShippingType.`
 
-**Shipping Options with a Non-Unique ID**  
+**Shipping Options with a Non-Unique ID**
 If the returned shipping options do not have unique IDs
 the Payment Request API will treat this as though the address is invalid. In
 other words, it's the equivalent of setting the `shippingOptions` to an empty
 array, which shows the "Can't ship to this address. Select a different address."
 message.
 
-**Missing Information from a Shipping Option**  
+**Missing Information from a Shipping Option**
 If any of the shipping options are missing a required parameter then the
 promise returned by `show()` will reject with an error highlighting the missing
 parameter. Please note that it does not highlight where the value is missing
@@ -1308,19 +1308,19 @@ parameter. Please note that it does not highlight where the value is missing
 `displayItems`, or `shippingOptions` parameters).
 
 ```
-// Shipping option missing an id parameter  
+// Shipping option missing an id parameter
 DOMException: required member id is undefined.
 
-// Shipping option missing a label parameter  
+// Shipping option missing a label parameter
 DOMException: required member label is undefined.
 
-// Shipping option missing an amount parameter  
+// Shipping option missing an amount parameter
 DOMException: required member amount is undefined.
 
-// Shipping option missing an amount.currency parameter  
+// Shipping option missing an amount.currency parameter
 DOMException: required member currency is undefined.
 
-// Shipping option missing an amount.value parameter  
+// Shipping option missing an amount.value parameter
 DOMException: required member value is undefined.
 ```
 
@@ -1335,8 +1335,8 @@ We add a listener for `shippingoptionchange` events to our `PaymentRequest`
 instance same as `shippingaddresschange`.
 
 ```
-paymentRequest.addEventListener('shippingoptionchange', (event) => {  
-  // TODO: Select a shipping option,  update total and display items.  
+paymentRequest.addEventListener('shippingoptionchange', (event) => {
+  // TODO: Select a shipping option,  update total and display items.
 });
 ```
 
@@ -1364,30 +1364,30 @@ do this we'll take the following steps:
    `event.updateWith()`.
 
 ```
-paymentRequest.addEventListener('shippingoptionchange', (event) => {  
-  // Step 1: Get the payment request object.  
+paymentRequest.addEventListener('shippingoptionchange', (event) => {
+  // Step 1: Get the payment request object.
   const prInstance = event.target;
 
-  // Step 2: Get the ID of the selected shipping option.  
+  // Step 2: Get the ID of the selected shipping option.
   const selectedId = prInstance.shippingOption;
 
-  // Step 3: Mark selected option  
-  globalShippingOptions.forEach((option) => {  
-    option.selected = option.id === selectedId;  
+  // Step 3: Mark selected option
+  globalShippingOptions.forEach((option) => {
+    option.selected = option.id === selectedId;
   });
 
   // TODO: Update total and display items, including pending states.
 
-  event.updateWith({  
-    total: {  
-      label: 'Total',  
-      amount: {  
-        currency: 'USD',  
-        value: '0',  
-      },  
-    },  
-    shippingOptions: globalShippingOptions,  
-  });  
+  event.updateWith({
+    total: {
+      label: 'Total',
+      amount: {
+        currency: 'USD',
+        value: '0',
+      },
+    },
+    shippingOptions: globalShippingOptions,
+  });
 });
 ```
 
@@ -1410,7 +1410,7 @@ All of the edge cases from the `shippingaddresschange` event apply to
 `shippingoptionschange` event. There are a few additional edge cases to be
 aware of.
 
-**Failing to Mark an Option as Selected**  
+**Failing to Mark an Option as Selected**
 One footgun to be aware of is that if you fail to mark a shipping option
 as `selected`, you will end up in a scenario where the user will be stuck in a
 loop without any reason as to why they can't select an option. They can go
@@ -1418,7 +1418,7 @@ through the flow to select a shipping option, the event is triggered and if
 nothing is marked as selected, they'll be taken back to the payment request UI
 and have to select a shipping method again.
 
-**Selecting Multiple Options**  
+**Selecting Multiple Options**
 If you set the selected parameter to `true` on *multiple shipping options*, the last
 entry will be selected.
 
@@ -1442,25 +1442,25 @@ initial `paymentDetails` object (i.e. we don't have to wait until a
 `shippingaddresschange` event):
 
 ```
-const paymentDetails = {  
-  total: {  
-    label: 'Total',  
-    amount: {  
-      currency: 'USD',  
-      value: '0',  
-    },  
-  },  
-  shippingOptions: [  
-    {  
-      id: 'economy',  
-      label: 'Economy Shipping (5-7 Days)',  
-      amount: {  
-        currency: 'USD',  
-        value: '0',  
-      },  
-    },  
-  ],  
-};  
+const paymentDetails = {
+  total: {
+    label: 'Total',
+    amount: {
+      currency: 'USD',
+      value: '0',
+    },
+  },
+  shippingOptions: [
+    {
+      id: 'economy',
+      label: 'Economy Shipping (5-7 Days)',
+      amount: {
+        currency: 'USD',
+        value: '0',
+      },
+    },
+  ],
+};
 new PaymentRequest(paymentMethods, paymentDetails, options);
 ```
 
@@ -1471,26 +1471,26 @@ browser may pre-select an address. For example, if we construct our
 payment request UI with the following input (Note the `selected` parameter):
 
 ```
-const paymentDetails = {  
-  total: {  
-    label: 'Total',  
-    amount: {  
-      currency: 'USD',  
-      value: '0',  
-    },  
-  },  
-  shippingOptions: [  
-    {  
-      id: 'economy',  
-      label: 'Economy Shipping (5-7 Days)',  
-      selected: true,  
-      amount: {  
-        currency: 'USD',  
-        value: '0',  
-      },  
-    },  
-  ],  
-};  
+const paymentDetails = {
+  total: {
+    label: 'Total',
+    amount: {
+      currency: 'USD',
+      value: '0',
+    },
+  },
+  shippingOptions: [
+    {
+      id: 'economy',
+      label: 'Economy Shipping (5-7 Days)',
+      selected: true,
+      amount: {
+        currency: 'USD',
+        value: '0',
+      },
+    },
+  ],
+};
 new PaymentRequest(paymentMethods, paymentDetails, options);
 ```
 
@@ -1519,51 +1519,51 @@ based on the user's address (e.g. you offer worldwide free shipping).
 #### Select a Shipping Option in shippingaddresschange
 
 In the `shippingaddresschange` event we saw that whichever shipping options we
-passed to `event.updateWith()` would be made available to the user.  
+passed to `event.updateWith()` would be made available to the user.
 
 Setting one of the options' `selected` parameter to true will select that option,
 allowing the user to progress through the checkout flow quicker. This is perfect
 if you know the most common shipping option.
 
 ```
-paymentRequest.addEventListener('shippingaddresschange', (event) => {  
-  const paymentRequest = event.target;  
+paymentRequest.addEventListener('shippingaddresschange', (event) => {
+  const paymentRequest = event.target;
   console.log(paymentRequest.shippingAddress);
 
-  event.updateWith({  
-    total: {  
-      label: 'Total',  
-      amount: {  
-        currency: 'USD',  
-        value: '0',  
-      },  
-    },  
-    shippingOptions: [  
-      {  
-        id: 'economy',  
-        label: 'Economy Shipping (5-7 Days)',  
-        selected: true,  
-        amount: {  
-          currency: 'USD',  
-          value: '0',  
-        },  
-      }, {  
-        id: 'express',  
-        label: 'Express Shipping (2-3 Days)',  
-        amount: {  
-          currency: 'USD',  
-          value: '5',  
-        },  
-      }, {  
-        id: 'next-day',  
-        label: 'Next Day Delivery',  
-        amount: {  
-          currency: 'USD',  
-          value: '12',  
-        },  
-      },  
-    ],  
-  });  
+  event.updateWith({
+    total: {
+      label: 'Total',
+      amount: {
+        currency: 'USD',
+        value: '0',
+      },
+    },
+    shippingOptions: [
+      {
+        id: 'economy',
+        label: 'Economy Shipping (5-7 Days)',
+        selected: true,
+        amount: {
+          currency: 'USD',
+          value: '0',
+        },
+      }, {
+        id: 'express',
+        label: 'Express Shipping (2-3 Days)',
+        amount: {
+          currency: 'USD',
+          value: '5',
+        },
+      }, {
+        id: 'next-day',
+        label: 'Next Day Delivery',
+        amount: {
+          currency: 'USD',
+          value: '12',
+        },
+      },
+    ],
+  });
 });
 ```
 
@@ -1575,21 +1575,21 @@ cart sells out during the transaction and you need to close the payment request 
 For a simple example:
 
 ```
-paymentRequest.show()  
-.catch((err) => {  
-  console.error('PaymentRequest error: ', err);  
+paymentRequest.show()
+.catch((err) => {
+  console.error('PaymentRequest error: ', err);
 });
 
-setTimeout(() => {  
-  paymentRequest.abort()  
-  .then(() => {  
-    // Successfully aborted payment request  
-    // TODO: Display message to user.  
-  })  
-  .catch((err) => {  
-    // Unable to abort payment request  
-    console.log('abort() Error: ', err);  
-  });  
+setTimeout(() => {
+  paymentRequest.abort()
+  .then(() => {
+    // Successfully aborted payment request
+    // TODO: Display message to user.
+  })
+  .catch((err) => {
+    // Unable to abort payment request
+    console.log('abort() Error: ', err);
+  });
 }, 4000);
 ```
 
@@ -1644,34 +1644,35 @@ The `canMakePayment()` method tells you whether the user has a payment method th
 fulfils the current `PaymentRequest`'s supported payment methods.
 
 ```
-const paymentRequest = new PaymentRequest(  
+const paymentRequest = new PaymentRequest(
     supportedPaymentMethods, transactionDetails, options);
 
 // If canMakePayment() isn't available, default to assume the method is supported.
-const canMakePaymentPromise = Promise.resolve(true);  
+const canMakePaymentPromise = Promise.resolve(true);
 
 // Feature detect canMakePayment()
-if (request.canMakePayment) {  
-  canMakePaymentPromise = paymentRequest.canMakePayment();  
+if (request.canMakePayment) {
+  canMakePaymentPromise = paymentRequest.canMakePayment();
 }
 
-canMakePaymentPromise.then((result) => {  
-  if (!result) {  
-    // The user does not have a supported payment method.  
-    // TODO: Redirect to traditional checkout flow.  
-    return;  
+canMakePaymentPromise.then((result) => {
+  if (!result) {
+    // The user does not have a supported payment method.
+    // TODO: Redirect to traditional checkout flow.
+    return;
   }
 
-  // TODO: The user has a payment - call show().  
-})  
-.catch((err) => {  
-  // TODO: Either fallback to traditional checkout or call show().  
+  // TODO: The user has a payment - call show().
+})
+.catch((err) => {
+  // TODO: Either fallback to traditional checkout or call show().
 });
 ```
 
 #### Edge Cases
 
-Querying `canMakePayment()` with different payment methods will 
+**Query Quota Exceeded**
+Querying `canMakePayment()` with different payment methods will
 result in a quota error:
 
 `DOMException: Query quota exceeded`
@@ -1680,6 +1681,22 @@ The reason this error is thrown is to block attempts to fingerprint the user.
 
 At the time of writing, Chrome will reset the quota after 30 minutes or when
 it's restarted.
+
+**Will it Ever Fail for Basic-Cards?**
+Basic cards are a standardized payment method of the Payment Request API, so
+is there every a scenario where `canMakePayment()` will fail?
+
+It can fail if the user has no known cards or the known cards are invalid (i.e.
+the details for the card don't pass the [LUHN check](https://en.wikipedia.org/wiki/Luhn_algorithm)).
+
+**How does canMakePayment() Work with Payment Apps?**
+If a site indicates support for URL payment method, like
+'https://example.com/bobpay', `canMakePayment()` will return "false" if the app
+is not installed. When the app is installed, it can decide if `canMakePayment()`
+should return true or false.
+
+*Note*: In incognito mode, the 3rd party app will not be queried and
+`canMakePayment()` will always return "true".
 
 ## PaymentRequest Shim
 
