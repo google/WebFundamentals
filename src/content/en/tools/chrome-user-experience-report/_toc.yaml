@@ -1,0 +1,8 @@
+toc:
+- title: Chrome User Experience Report
+  status: new
+  section:
+  - title: Overview
+    path: /web/tools/chrome-user-experience-report/
+  - title: Getting Started
+    path: /web/tools/chrome-user-experience-report/getting-started.md
