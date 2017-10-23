@@ -187,7 +187,7 @@ FROM
 
 In the example above we’re adding all of the density values in the FCP histogram for “http://example.com” where the FCP bin’s start value is less than 1000 ms. The result is 0.7537, which indicates that ~75.4% of page loads experience the FCP in under a second.
 
-We can go one step further and also segment the dataset via one of the provided dimensions. For example, we can use the effective connection type dimension to understand how the above experience varies for users with different connection speeds.
+We can go one step further and also segment the dataset via one of the provided dimensions. For example, we can use the [effective connection type dimension](#effective_connection_type) to understand how the above experience varies for users with different connection speeds.
 
 ```sql
 #standardSQL
@@ -211,6 +211,6 @@ ORDER BY
 ```
 [Run it on BigQuery](https://bigquery.cloud.google.com/savedquery/226352634162:c5b7ee9ea0394728a821cf60f58737c2)
 
-The result of this query shows the fraction of users that experience the FCP in under one second, split by effective connection type. On first glance, users on a 3G connection may have significantly worse performance, but it's important to remember that the resulting value is relative to the overall population; the reported value is also function of 3G population size, which may be lower — see [analysis tips & best practices](/web/tools/chrome-user-experience-report/#analysis_tips_best_practices) for more. If desired, we can normalize the value against the relative population of each effective connection type.
+The result of this query shows the fraction of users that experience the FCP in under one second, split by effective connection type. On first glance, users on a 3G connection may have significantly worse performance, but it's important to remember that the resulting value is relative to the overall population; the reported value is also function of 3G population size, which may be lower — see [analysis tips & best practices](/web/tools/chrome-user-experience-report/#analysis_tips_best_practices) for more. If desired, we can normalize the value against the relative population size of each effective connection type.
 
 Using these queries as a foundation, you’re ready to start mining the Chrome UX Report for insightful data. Should you need it, feel free to ask the <a href="https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report">discussion group</a> for help.
