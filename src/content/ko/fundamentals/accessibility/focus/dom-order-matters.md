@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 기본 DOM 순서의 중요성
 
-
 {# wf_updated_on: 2016-10-04 #}
 {# wf_published_on: 2016-10-04 #}
 
@@ -11,8 +10,6 @@ description: 기본 DOM 순서의 중요성
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/robdodson.html" %}
-
-
 
 네이티브 요소는 DOM에서의 위치를 기준으로 탭 순서에 자동으로
 삽입되기 때문에 네이티브 요소를 직접 사용해보면 포커스 동작을
@@ -23,9 +20,11 @@ description: 기본 DOM 순서의 중요성
 클릭해 포커스 탐색 시작점을 이동한 다음 `Tab` 키를 눌러 포커스를 버튼 순서대로
 이동합니다.
 
-    <button>I Should</button>
-    <button>Be Focused</button>
-    <button>Last!</button>
+```
+<button>I Should</button>
+<button>Be Focused</button>
+<button>Last!</button>
+```
 
 {% framebox height="80px" %}
 <button>I Should</button>
@@ -42,9 +41,11 @@ description: 기본 DOM 순서의 중요성
 클릭해 포커스 탐색 시작점을 이동한 다음 `Tab` 키를 눌러 포커스를 버튼
 순서대로 이동합니다.
 
-    <button style="float: right">I Should</button>
-    <button>Be Focused</button>
-    <button>Last!</button>
+```
+<button style="float: right">I Should</button>
+<button>Be Focused</button>
+<button>Last!</button>
+```
 
 {% framebox height="80px" %}
 <button style="float: right;">I Should</button>
@@ -64,6 +65,7 @@ CSS를 사용해 화면에서 요소의 시각적 위치를 바꿀 때는 주의
 습관적으로 해보는 것이 좋습니다.
 
 ## 화면 밖 콘텐츠
+
 보조 탐색 메뉴처럼, 현재 표시되지는 않지만 DOM에 계속 두어야 할 콘텐츠가 있다면
 어떻게 해야 할까요? 이처럼 화면 밖에 있는데 포커스 대상이 되는
 요소가 있을 때는 사용자가 페이지를 탭 이동하는 과정에서
@@ -72,19 +74,22 @@ CSS를 사용해 화면에서 요소의 시각적 위치를 바꿀 때는 주의
 사용자가 패널과 상호 작용할 수 있을 때만 포커스를 받을 수 있도록 하는 것이
 이상적입니다.
 
-![화면 밖의 슬라이드 인 패널이 포커스를 앗아갈 수 있음](imgs/slide-in-panel.png)
+![an offscreen slide-in panel can steal
+focus](../../../../en/fundamentals/accessibility/focus/imgs/slide-in-panel.png)
 
 포커스가 어디로 사라져버렸는지 알아내느라 시간을 허비할 때도 가끔
 있습니다. 이럴 때는 콘솔에서 `document.activeElement`를 사용해 현재 포커스가 맞춰진 요소를
 찾아낼 수 있습니다.
 
 포커스를 받는 화면 밖 요소가 무엇인지 알아내면 이를
-`display: none` 또는 `visibility: hidden`으로 설정했다가 `display:
-block` 또는 `visibility: visible`로 다시 설정한 후 사용자에게 표시할 수 있습니다.
+`display: none` 또는 `visibility: hidden`으로 설정했다가 `display: block` 또는 `visibility:
+visible`로 다시 설정한 후 사용자에게 표시할 수 있습니다.
 
-![아무것도 표시하지 않도록 설정된 슬라이드 인 패널](imgs/slide-in-panel2.png)
+![a slide-in panel set to display
+none](../../../../en/fundamentals/accessibility/focus/imgs/slide-in-panel2.png)
 
-![블록을 표시하도록 설정된 슬라이드 인 패널](imgs/slide-in-panel3.png)
+![a slide-in panel set to display
+block](../../../../en/fundamentals/accessibility/focus/imgs/slide-in-panel3.png)
 
 개발자는 사이트를 게시하기 전에 각 페이지를 탭 이동하면서
 탭 순서가 사라지지는 않는지, 논리적 순서를 벗어나 이동하지는 않는지 살펴보는 것이
@@ -92,6 +97,3 @@ block` 또는 `visibility: visible`로 다시 설정한 후 사용자에게 표�
 `display: none` 또는 `visibility: hidden`으로 화면 밖 콘텐츠를 적절히 숨기거나
 요소가 논리적 순서대로 표시되도록 DOM에서 요소의 물리적 위치를 다시
 배열하세요.
-
-
-{# wf_devsite_translation #}
