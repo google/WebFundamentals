@@ -97,7 +97,7 @@ The report is provided as a public [Google BigQuery](https://cloud.google.com/bi
   </tr>
 </table>
 
-For example, the above shows a sample sample record from the Chrome User Experience Report, which indicates that 12.3% of page loads had a “first paint time” measurement in the range of 1000-1200 milliseconds when loading “http://example.com” on a “mobile” device over a ”4G”-like connection. To obtain a cumulative value of users experiencing a first paint time below 1200 milliseconds, you can add up all records whose histogram’s “end” value is less than or equal to 1200. 
+For example, the above shows a sample record from the Chrome User Experience Report, which indicates that 12.3% of page loads had a “first paint time” measurement in the range of 1000-1200 milliseconds when loading “http://example.com” on a “mobile” device over a ”4G”-like connection. To obtain a cumulative value of users experiencing a first paint time below 1200 milliseconds, you can add up all records whose histogram’s “end” value is less than or equal to 1200. 
 
 Note: The Chrome User Experience Report does not provide quantile values (e.g. median). Such values can be approximated from the provided data, but are not exposed directly by the report.
 
