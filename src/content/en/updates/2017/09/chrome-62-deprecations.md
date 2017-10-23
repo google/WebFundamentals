@@ -60,6 +60,8 @@ longer exists in Blink.
 
 ### Remove usage of notifications from insecure iframes
 
+Note: Removal was originally expected in Chrome 61.
+
 Permission requests from iframes can confuse users since it is difficult to
 distinguish between the containing page's origin and the origin of the iframe
 that is making the request. When the requests scope is unclear, it is difficult

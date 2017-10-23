@@ -71,6 +71,26 @@ February 2016, Firefox is already in compliance.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695385)
 
+### Remove usage of notifications from insecure iframes
+
+Note: Removal was pushed to Chrome 62.
+
+Permission requests from iframes can confuse users since it is difficult to
+distinguish between the containing page's origin and the origin of the iframe
+that is making the request. When the requests scope is unclear, it is difficult
+for users to judge whether to grant or deny permission.
+
+Disallowing notifications in iframes will also align the requirements for
+notification permission with that of push notifications, easing friction for
+developers.
+
+Developers who need this functionality can open a new window to request
+notification permission.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/n37ij1E_1aY/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/6451284559265792) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693)
+
 <<../../_deprecation-policy.md>>
 
 {% include "comment-widget.html" %}
