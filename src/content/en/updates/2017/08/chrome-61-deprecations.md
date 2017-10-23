@@ -39,27 +39,6 @@ URL should instead escape these characters.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5735596811091968) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=680970)
 
-### Deprecate usage of notifications from insecure iframes
-
-Permission requests from iframes can confuse users since it is difficult to
-distinguish between the containing page's origin and the origin of the iframe
-that is making the request. When the requests scope is unclear, it is difficult
-for users to judge whether to grant or deny permission.
-
-Disallowing notifications in iframes will also align the requirements for
-notification permission with that of push notifications, easing friction for
-developers.
-
-Developers who need this functionality can open a new window to request
-notification permission.
-
-Removal is expected in Late 2017 or early 2018.
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/n37ij1E_1aY/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/6451284559265792) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693)
-
-
 ### Deprecate and remove Presentation API on insecure contexts
 
 It's been found that on insecure origins, the Presentation API can be used as a
