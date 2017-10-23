@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 접근성 트리 소개
 
-
 {# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
@@ -11,8 +10,6 @@ description: 접근성 트리 소개
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/aliceboxhall.html" %}
-
-
 
 *스크린 리더 사용자 전용* 사용자 인터페이스를 만든다고 생각해 봅시다.
 시각적 UI를 만들 필요는 전혀 없겠지만, 스크린 리더가 사용할 정보는 충분히
@@ -23,7 +20,8 @@ description: 접근성 트리 소개
 시각적 표시에만 유용한 정보가 많고 이런 정보는 제외할 것이기 때문입니다. 아마
 다음과 같은 모습이 될지 모르겠습니다.
 
-![모의 스크린 리더 DOM API](imgs/treestructure.jpg)
+![screen reader DOM API
+mockup](../../../../en/fundamentals/accessibility/semantics-builtin/imgs/treestructure.jpg)
 
 이것이 기본적으로 브라우저가 스크린 리더에 실제로 제공하는 내용입니다. 브라우저는
 DOM 트리를 가져와 보조 기술에
@@ -33,7 +31,8 @@ DOM 트리를 가져와 보조 기술에
 접근성 트리를 마치 90년대에나 볼 수 있었던 웹페이지 스타일로 시각화할 수도 있습니다.
 즉, 이미지 수가 적고 링크는 많으며 입력란과 버튼이 있는 올드한 형태 말입니다.
 
-![1990년대 스타일의 웹페이지](imgs/google1998.png)
+![a 1990s style web
+page](../../../../en/fundamentals/accessibility/semantics-builtin/imgs/google1998.png)
 
 이와 같은 페이지를 잘 살펴보면
 스크린 리더 사용자가 직면하는 것과 비슷한 경험을 하게 됩니다. 즉, 인터페이스는 있지만 접근성 트리 인터페이스처럼
@@ -42,18 +41,13 @@ DOM 트리를 가져와 보조 기술에
 대부분의 보조 기술은 바로 이 접근성 트리와 상호 작용합니다. 다음과
 같은 흐름으로 진행됩니다.
 
- 1. 애플리케이션(브라우저나 기타 앱)이 API를 통해 의미 체계 기반의 UI 버전을
-    보조 기술에 노출합니다.
- 1. 보조 기술은 API를 통해 읽는 정보를 사용하여
-    사용자를 위한 대체 사용자 인터페이스 제공 방식을 만들 수 있습니다. 예를 들어,
-    스크린 리더는 사용자가 앱에서 말해주는 내용을 듣는 인터페이스를
-    생성합니다.
- 1. 사용자는 보조 기술을 이용해 앱과 다른 방식으로 상호 작용할 수도
-    있습니다. 예를 들어, 대부분의 스크린 리더는 사용자가 마우스 클릭이나 손가락으로 탭하는 동작을
-    쉽게 시뮬레이션할 수 있는 후크를 제공합니다.
- 1. 보조 기술은 접근성 API를 통해 사용자 인텐트(예: '클릭')를
-    앱으로 다시 전달합니다. 그러면 앱이 원래 UI의 컨텍스트에 맞춰 적절히
-    작업의 내용을 해석합니다.
+1. 애플리케이션(브라우저나 기타 앱)이 API를 통해 의미 체계 기반의 UI 버전을보조 기술에 노출합니다.
+2. 보조 기술은 API를 통해 읽는 정보를 사용하여사용자를 위한 대체 사용자 인터페이스 제공 방식을 만들 수 있습니다. 예를 들어,스크린
+리더는 사용자가 앱에서 말해주는 내용을 듣는 인터페이스를생성합니다.
+3. 사용자는 보조 기술을 이용해 앱과 다른 방식으로 상호 작용할 수도있습니다. 예를 들어, 대부분의 스크린 리더는 사용자가 마우스 클릭이나
+손가락으로 탭하는 동작을쉽게 시뮬레이션할 수 있는 후크를 제공합니다.
+4. 보조 기술은 접근성 API를 통해 사용자 인텐트(예: '클릭')를앱으로 다시 전달합니다. 그러면 앱이 원래 UI의 컨텍스트에 맞춰
+적절히작업의 내용을 해석합니다.
 
 웹브라우저의 경우 브라우저가 사실은 내부에서 작동하는 웹 앱의 플랫폼이기 때문에
 각 방향으로 추가 단계가 있습니다. 이에 따라 브라우저는
@@ -84,6 +78,8 @@ DOM에는 대부분 *암시적* 의미 체계에 따른 의미가 있으므로
 예를 들어, 이 '버튼'은 실은 버튼이 아닙니다.
 
 {% framebox height="60px" %}
+
+
 <style>
     .fancy-btn {
         display: inline-block;
@@ -95,14 +91,18 @@ DOM에는 대부분 *암시적* 의미 체계에 따른 의미가 있으므로
         cursor: pointer;
     }
 </style>
+
+
+
 <div class="fancy-btn">Give me tacos</div>
 {% endframebox %}
 
+
 여러 가지 방법으로 HTML을 통해 이런 요소를 생성할 수 있지만 아래에 한 가지 방법을 소개합니다.
 
-
-    <div class="button-ish">Give me tacos</div>
-    
+```
+<div class="button-ish">Give me tacos</div>
+```
 
 실제 버튼 요소를 사용하지 않으면 스크린 리더가 그 위치에 무엇이 있는지 알 길이
 없습니다. 또한, 지금 코딩하는 바와 같이 마우스로만 이 요소를 사용할 수 있기 때문에 키보드만 사용하는 사용자가 이 요소를 사용할 수 있도록
@@ -124,10 +124,8 @@ DOM에는 대부분 *암시적* 의미 체계에 따른 의미가 있으므로
 
 넓은 의미에서 다음과 같은 두 가지 유형의 이름이 있습니다.
 
- - *표시 가능한 레이블*: 의미를 요소와 연관시키기 위해 모든 사용자가
-   사용하는 이름
- - *대체 텍스트*: 시각적 레이블이 필요하지 않을 때만 사용하는
-   이름
+- *표시 가능한 레이블*: 의미를 요소와 연관시키기 위해 모든 사용자가사용하는 이름
+- *대체 텍스트*: 시각적 레이블이 필요하지 않을 때만 사용하는이름
 
 텍스트 수준 요소의 경우 당연히 텍스트 콘텐츠가
 있을 것이므로 따로 수행해야 할 작업은 없습니다. 하지만 입력 또는 제어 요소와 이미지 같은 시각적 콘텐츠의 경우
@@ -141,19 +139,24 @@ DOM에는 대부분 *암시적* 의미 체계에 따른 의미가 있으므로
 이는 마우스 또는 터치스크린 사용자에게도
 유용합니다. 레이블을 요소와 연결하려면 다음 중 하나를 수행하세요.
 
- - 레이블 요소 내부에 입력 요소 배치
+- 레이블 요소 내부에 입력 요소 배치
+
 
 <div class="clearfix"></div>
 
-    <label>
-      <input type="checkbox">Receive promotional offers?</input>
-    </label>
 
+```
+<label>
+  <input type="checkbox">Receive promotional offers?</input>
+</label>
+```
 
 {% framebox height="60px" %}
+
+
 <div style="margin: 10px;">
     <label style="font-size: 16px; color: #212121;">
-        <input type="checkbox">Receive promotional offers?</input>
+        <input type="checkbox">Receive promotional offers?
     </label>
 </div>
 {% endframebox %}
@@ -161,33 +164,35 @@ DOM에는 대부분 *암시적* 의미 체계에 따른 의미가 있으므로
 
 또는
 
- - 레이블의 `for` 속성을 사용하고 요소의 `id` 참조
+- 레이블의 `for` 속성을 사용하고 요소의 `id` 참조
+
 
 <div class="clearfix"></div>
 
-    <input id="promo" type="checkbox"></input>
-    <label for="promo">Receive promotional offers?</label>
 
+```
+<input id="promo" type="checkbox"></input>
+<label for="promo">Receive promotional offers?</label>
+```
 
 {% framebox height="60px" %}
+
+
 <div style="margin: 10px;">
-    <input id="promo" type="checkbox"></input>
+    <input id="promo" type="checkbox">
     <label for="promo">Receive promotional offers?</label>
 </div>
 {% endframebox %}
-    
+
 
 체크박스에 레이블이 올바로 지정되면 스크린 리더에서
 해당 요소는 체크박스 역할이고 확인 표시를 한 상태이며 'Receive
 promotional offers?'로 명명되어 있다고 알려줄 수 있습니다.
 
-![체크박스에 대해 음성으로 알려주는 레이블을 보여 주는 VoiceOver의 화상 텍스트 출력](imgs/promo-offers.png)
+![on-screen text output from VoiceOver showing the spoken label for a
+checkbox](../../../../en/fundamentals/accessibility/semantics-builtin/imgs/promo-offers.png)
 
-Success: 이제는 실제로 스크린 리더를 사용하여 페이지를 탭으로 이동하고 음성으로 안내되는 역할, 상태, 이름을 확인하면서 잘못 연결된 레이블을
+Success: 이제는 실제로 스크린 리더를 사용하여 페이지를 탭으로 이동하고 음성으로 안내되는 역할, 상태, 이름을 확인하면서 잘못 연결된
+레이블을
 찾을 수
 있습니다.
-
-
-
-
-{# wf_devsite_translation #}
