@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: ARIA 레이블을 사용하여 액세스 가능한 요소 설명 생성
 
-
 {# wf_updated_on: 2016-10-04 #}
 {# wf_published_on: 2016-10-04 #}
 
@@ -31,32 +30,28 @@ aria-label은 `label` 요소처럼 다른 네이티브 레이블링 메커니즘
 시각적 표시를 인식할 수 없는 사용자를 위해 다른 방법으로
 요소의 목적을 명확히 표시해야 합니다.
 
-![aria-label을 사용하여 이미지로만 표시된 버튼 식별](imgs/aria-label.jpg)
+![using aria-label to identify an image only
+button](../../../../en/fundamentals/accessibility/semantics-aria/imgs/aria-label.jpg)
 
 ### aria-labelledby
 
 `aria-labelledby`를 사용하면 어떤 요소의 레이블로서 DOM에 있는 다른 요소의 ID를
 지정할 수 있습니다.
 
-![aria-labelledby를 사용하여 라디오 그룹 식별](imgs/aria-labelledby.jpg)
+![using aria-labelledby to identify a radio
+group](../../../../en/fundamentals/accessibility/semantics-aria/imgs/aria-labelledby.jpg)
 
 이는 마치 몇 가지 키의 차이점이 있는 `label` 요소를 사용하는 것과 같습니다.
 
- 1. `aria-labelledby`는 레이블 지정 가능한 요소뿐 아니라 어떤 요소에서든 사용할 수 있습니다.
- 1. `label` 요소는 자신이 레이블을 지정하는 대상을 참조하지만
-    `aria-labelledby`의 경우에는 관계가 뒤바뀝니다. 즉, 레이블을 지정하는 대상이
-    레이블을 지정하는 주체를 참조합니다.
- 1. 한 레이블 요소만 레이블 지정 가능한 요소와 연결할 수 있지만,
-    `aria-labelledby`는 IDREF 목록을 선택하여 여러 요소에서 레이블을
-    작성할 수 있습니다. 레이블은 IDREF가 지정되는 순서대로
-    연결됩니다.
- 1. `aria-labelledby`를 사용하여 숨겨져 있거나 접근성 트리에 없는 요소를
-    참조할 수 있습니다. 예를 들어, 레이블을 지정하려는
-    요소 옆에 숨겨진 `span`을 추가하고 `aria-labelledby`로 참조할 수
-    있습니다.
- 1. 하지만 ARIA는 접근성 트리에만 영향을 주므로 `aria-labelledby`를
-    사용하면 `label` 요소를 사용할 때처럼 친숙한 레이블 클릭 동작을 구현할 수는
-    없습니다.
+1. `aria-labelledby`는 레이블 지정 가능한 요소뿐 아니라 어떤 요소에서든 사용할 수 있습니다.
+2. `label` 요소는 자신이 레이블을 지정하는 대상을 참조하지만`aria-labelledby`의 경우에는 관계가 뒤바뀝니다. 즉, 레이블을
+지정하는 대상이레이블을 지정하는 주체를 참조합니다.
+3. 한 레이블 요소만 레이블 지정 가능한 요소와 연결할 수 있지만,`aria-labelledby`는 IDREF 목록을 선택하여 여러 요소에서
+레이블을작성할 수 있습니다. 레이블은 IDREF가 지정되는 순서대로연결됩니다.
+4. `aria-labelledby`를 사용하여 숨겨져 있거나 접근성 트리에 없는 요소를참조할 수 있습니다. 예를 들어, 레이블을 지정하려는요소
+옆에 숨겨진 `span`을 추가하고 `aria-labelledby`로 참조할 수있습니다.
+5. 하지만 ARIA는 접근성 트리에만 영향을 주므로 `aria-labelledby`를사용하면 `label` 요소를 사용할 때처럼 친숙한 레이블
+클릭 동작을 구현할 수는없습니다.
 
 중요한 점은, `aria-labelledby`가 한 요소에 대한 다른 **모든** 이름 소스를 재정의한다는
 점입니다. 예를 들어, 어떤 요소에 `aria-labelledby`와
@@ -71,7 +66,8 @@ aria-label은 `label` 요소처럼 다른 네이티브 레이블링 메커니즘
 관계는 '이 요소가 저 요소에 레이블을 지정한다'는 것입니다.
 
 ARIA 사양에는 [8가지 관계
-속성](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_relationships){: .external }이 나와 있습니다.
+속성](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_relationships){:
+.external }이 나와 있습니다.
 그중 6가지인 `aria-activedescendant`, `aria-controls`, `aria-describedby`,
 `aria-labelledby`, `aria-owns`는 하나 또는 그 이상의 요소를 참조하여
 페이지에 있는 요소들 사이에 새로운 링크를 생성합니다. 각각의 경우에 있어
@@ -88,7 +84,8 @@ DOM 상위 항목의 하위 항목일 수는 없는 경우에는
 `aria-owns`를 사용하여 하위 메뉴를 상위 메뉴의 하위 메뉴로 스크린 리더에 표시할 수
 있습니다.
 
-![aria-owns를 사용하여 메뉴와 하위 메뉴 사이의 관계 설정](imgs/aria-owns.jpg)
+![using aria-owns to establish a relationship between a menu and a
+submenu](../../../../en/fundamentals/accessibility/semantics-aria/imgs/aria-owns.jpg)
 
 ### aria-activedescendant
 
@@ -101,12 +98,14 @@ DOM 상위 항목의 하위 항목일 수는 없는 경우에는
 계속 업데이트된 상태로 유지할 수도 있습니다. 이를 통해 보조 기술 쪽에는 현재 선택한 항목이 마치 포커스된
 항목인 것처럼 나타나게 할 수 있습니다.
 
-![aria-activedescendant를 사용하여 목록 상자에서의 관계 설정](imgs/aria-activedescendant.jpg)
+![using aria-activedescendant to establish a relationship in a
+listbox](../../../../en/fundamentals/accessibility/semantics-aria/imgs/aria-activedescendant.jpg)
 
 ### aria-describedby
 
 `aria-describedby`는
-`aria-labelledby`가 레이블을 제공하는 것과 똑같은 방식으로 액세스 가능한 설명을 제공합니다. `aria-labelledby`와 마찬가지로, `aria-describedby`는
+`aria-labelledby`가 레이블을 제공하는 것과 똑같은 방식으로 액세스 가능한 설명을 제공합니다. `aria-labelledby`와
+마찬가지로, `aria-describedby`는
 DOM에서 숨겨지거나
 보조 기술에서 숨겨졌는지에 상관없이 다른 방법으로는 보이지 않는 요소를 참조할 수 있습니다. 이는
 보조 기술 사용자에게만 적용되든 모든 사용자에게 적용되든 상관없이, 사용자에게 추가적인 설명문이 필요할 때 유용한
@@ -122,7 +121,8 @@ DOM에서 숨겨지거나
 훌륭한 방법이며, 요소의 역할과 같이 더욱 중요한 정보를 전달하는 데
 방해되지 않습니다.
 
-![aria-describedby를 사용하여 비밀번호 입력란과의 관계 설정](imgs/aria-describedby.jpg)
+![using aria-describedby to establish a relationship with a password
+field](../../../../en/fundamentals/accessibility/semantics-aria/imgs/aria-describedby.jpg)
 
 ### aria-posinset 및 aria-setsize
 
@@ -139,7 +139,5 @@ DOM에 있는 요소로는 집합의 크기를 결정할 수 없을 때(예:
 동적 HTML 기술을 사용해 사용자가 필요할 때 전체 목록을 탐색하도록
 할 수 있습니다.
 
-![aria-posinset와 aria-setsize를 사용하여 목록에서의 관계 설정](imgs/aria-posinset.jpg)
-
-
-{# wf_devsite_translation #}
+![using aria-posinset and aria-setsize to establish a relationship in a
+list](../../../../en/fundamentals/accessibility/semantics-aria/imgs/aria-posinset.jpg)
