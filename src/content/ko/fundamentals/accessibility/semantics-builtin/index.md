@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 의미 체계와 보조 기술 소개
 
-
 {# wf_updated_on: 2016-10-04 #}
 {# wf_published_on: 2016-10-04 #}
 
@@ -11,8 +10,6 @@ description: 의미 체계와 보조 기술 소개
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/aliceboxhall.html" %}
-
-
 
 신체장애, 기술적 문제, 개인적인 선호도(키보드 전용으로 설정) 등 이유를 불문하고, 마우스나
 포인팅 기기를 사용할 수 없는 사용자라도 불편 없이
@@ -45,8 +42,8 @@ description: 의미 체계와 보조 기술 소개
 이미지 인식 소프트웨어 같은 첨단 기술을
 가리킬 수도 있습니다.
 
-![목발, 돋보기, 로봇 작동 의수를 포함한 보조 기술의
-예](imgs/assistive-tech1.png)
+![assistive technology examples including crutch magnifying glass and robotic
+prosthesis](../../../../en/fundamentals/accessibility/semantics-builtin/imgs/assistive-tech1.png)
 
 보조 기술은 브라우저 확대/축소처럼 일반적인 기술이나
 맞춤 설계한 게임 컨트롤러처럼 특수한 기술을 포괄할 수 있습니다. 점자 디스플레이와 같은 별개의 물리적
@@ -54,8 +51,9 @@ description: 의미 체계와 보조 기술 소개
 있습니다. 스크린 리더처럼 운영체제 내장 기술일 수도 있고,
 Chrome 확장 프로그램과 같은 부가기능일 수도 있습니다.
 
-![브라우저 확대/축소, 점자 디스플레이, 음성 컨트롤을 포함한 더욱 다양한 보조 기술의
-예](imgs/assistive-tech2.png)
+![more assistive technology examples including browser zoom braille display and
+voice
+control](../../../../en/fundamentals/accessibility/semantics-builtin/imgs/assistive-tech2.png)
 
 보조 기술과 일반적인 기술의 경계는 모호하며, 결국은
 어떤 과제를 해결하려는 사람을 보조하는 모든 기술을 보조 기술이라 할 수도 있겠습니다. 그리고
@@ -90,7 +88,8 @@ Chrome 확장 프로그램과 같은 부가기능일 수도 있습니다.
 잡고 들어 올려야 한다는 점을
 쉽사리 알아차릴 수 있습니다.
 
-![손잡이와 주둥이가 있는 티포트](imgs/teapot.png)
+![a teapot with handle and
+spout](../../../../en/fundamentals/accessibility/semantics-builtin/imgs/teapot.png)
 
 그것이 바로 어포던스가 물뿌리개,
 음료수 병, 커피 머그잔 등의 다른 물건에서 본 것과 비슷한 모습으로 되어 있는 이유입니다. 물론
@@ -106,10 +105,10 @@ Chrome 확장 프로그램과 같은 부가기능일 수도 있습니다.
 예를 들어, 흔한 형태의 요소(어포던스)의 용도를 다음과 같이 바꾸어 말할 수
 있을 것입니다.
 
- - 라디오 버튼 &mdash; '여러 옵션 중 하나를 선택할 수 있습니다.'
- - 체크박스 &mdash; '이 옵션에 대해 '예'나 '아니요'를 선택할 수 있습니다.'
- - 텍스트 필드 &mdash; '이 영역에는 뭔가를 입력할 수 있습니다.'
- - 드롭다운 &mdash; '이 요소를 열어 옵션을 표시할 수 있습니다.'
+- 라디오 버튼 — '여러 옵션 중 하나를 선택할 수 있습니다.'
+- 체크박스 — '이 옵션에 대해 '예'나 '아니요'를 선택할 수 있습니다.'
+- 텍스트 필드 — '이 영역에는 뭔가를 입력할 수 있습니다.'
+- 드롭다운 — '이 요소를 열어 옵션을 표시할 수 있습니다.'
 
 *이런 요소를 볼 수 있다는 이유만으로*
 이들 요소에 대한 결론을 도출할 수 있습니다. 당연히 어떤 요소가 제공하는 시각적 암시를 볼 수 없는 사람은
@@ -133,13 +132,15 @@ Chrome 확장 프로그램과 같은 부가기능일 수도 있습니다.
 설명해 달라고 부탁했습니다. 빅터가 VoiceOver를 사용하는 모습을 담은
 [동영상](https://www.youtube.com/watch?v=QW_dUs9D1oQ)을 보시면 금방 이해될 것입니다.
 
-자, 이제 직접 스크린 리더를 사용해볼 차례입니다. 아래에서 아주 단순하지만 최소한의 기능을 자바스크립트로 구현한 스크린 리더인 *ChromeVox
+자, 이제 직접 스크린 리더를 사용해볼 차례입니다. 아래에서 아주 단순하지만 최소한의 기능을 자바스크립트로 구현한 스크린 리더인
+*ChromeVox
 Lite*가 있는 페이지로 이동할 수 있습니다. 시력이 나쁜
 사용자와 비슷한 체험을 할 수 있도록 화면은 일부러 흐리게 처리했습니다. 따라서 사용자는
 과제를 완수하려면 스크린 리더를 사용할 수밖에 없을 것입니다. 물론, 이런 환경을
 체험하려면 Chrome 브라우저를 사용해야 합니다.
 
-[ChromeVox lite 데모 페이지](http://udacity.github.io/ud891/lesson3-semantics-built-in/02-chromevox-lite/)
+[ChromeVox lite 데모
+페이지](http://udacity.github.io/ud891/lesson3-semantics-built-in/02-chromevox-lite/)
 
 화면 아래쪽의 제어판을 사용하여 스크린 리더를 제어할 수
 있습니다. 이 스크린 리더는 최소한의 기능만 갖추고 있지만
@@ -156,11 +157,10 @@ ChromeVox lite를 사용 설정한 상태에서 이 페이지를 사용해 보�
 귀담아 들어보세요. 제대로 디자인한 스크린 리더라면 화면에 표시되는 각종 요소에 대한 다음과 같은 정보를
 전부 또는 최소한 대부분을 말해줘야 합니다.
 
- - 지정한 요소의 *역할* 또는 유형(요소를 지정해야 함)
- - 요소에 이름이 있을 경우 요소의 *이름*(요소에 이름이 있어야 함)
- - 요소에 값이 있을 경우 요소의 *값*(요소에 값이 있을 수도, 없을 수도 있음)
- - 요소의 *상태*. 예: 사용 또는 중지 여부(해당될
-   경우)
+- 지정한 요소의 *역할* 또는 유형(요소를 지정해야 함)
+- 요소에 이름이 있을 경우 요소의 *이름*(요소에 이름이 있어야 함)
+- 요소에 값이 있을 경우 요소의 *값*(요소에 값이 있을 수도, 없을 수도 있음)
+- 요소의 *상태*. 예: 사용 또는 중지 여부(해당될경우)
 
 스크린 리더는 네이티브 요소가 기본 제공 접근성 메타데이터를 포함하고 있기 때문에
 이런 대체 UI를 생성할 수 있습니다. 렌더링 엔진이
@@ -168,8 +168,5 @@ ChromeVox lite를 사용 설정한 상태에서 이 페이지를 사용해 보�
 메타데이터를 사용하여 이와 같이 액세스 가능한 버전을
 생성합니다.
 
-![스크린 리더는 DOM을 사용하여 액세스 가능한 노드를
-생성함](imgs/nativecodetoacc.png)
-
-
-{# wf_devsite_translation #}
+![a screen reader uses the DOM to create accessible
+nodes](../../../../en/fundamentals/accessibility/semantics-builtin/imgs/nativecodetoacc.png)
