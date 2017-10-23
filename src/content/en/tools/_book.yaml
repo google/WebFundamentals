@@ -22,5 +22,8 @@ upper_tabs:
       - name: Workbox
         contents:
         - include: /web/tools/workbox/_toc.yaml
+      - name: Chrome User Experience Report
+        contents:
+        - include: /web/tools/chrome-user-experience-report/_toc.yaml
   - include: /web/_upper_tabs-Updates.yaml
   - include: /web/_upper_tabs-Showcase.yaml
