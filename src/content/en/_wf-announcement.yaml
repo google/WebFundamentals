@@ -17,6 +17,6 @@ description: >
     </style>
     Don't miss out on the action at this year's <b>Chrome Dev Summit</b>,
     streaming live on YouTube.
-    <a href="TODO" class="gc-analytics-event" data-category="webFu" data-label="cds-watch-live">Watch now.</a>
+    <a href="https://www.youtube.com/watch?v=5xj4kqSFs8Q" class="gc-analytics-event" data-category="webFu" data-label="cds-watch-live">Watch now.</a>
 start: '2017-08-31T08:00:00Z'
 end: '2017-11-22T08:00:00Z'
