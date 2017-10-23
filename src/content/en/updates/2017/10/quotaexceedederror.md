@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: There are several ways to deal with <code>QuotaExceededError</code>.
+description: There are several ways to deal with QuotaExceededError.
 
 {# wf_updated_on: 2017-10-23 #}
 {# wf_published_on: 2017-10-23 #}
