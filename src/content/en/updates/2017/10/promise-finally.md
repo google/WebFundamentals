@@ -68,7 +68,7 @@ const fetchAndDisplay = ({ url, element }) => {
 };
 ```
 
-Not only does this reduce code duplication, it also separates the succes/error
+Not only does this reduce code duplication, it also separates the success/error
 handling phase and the cleanup phase more clearly. Neat!
 
 Currently, the same thing is possible with `async`/`await`, and without
