@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: ARIA 및 비 네이티브 HTML 의미 체계 소개
 
-
 {# wf_updated_on: 2016-10-04 #}
 {# wf_published_on: 2016-10-04 #}
 
@@ -11,8 +10,6 @@ description: ARIA 및 비 네이티브 HTML 의미 체계 소개
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/aliceboxhall.html" %}
-
-
 
 네이티브 HTML 요소가 포커스,
 키보드 지원, 기본 제공 의미 체계를 제공하기 때문에 지금까지는 네이티브 HTML 요소 사용을 권장해왔습니다. 하지만 단순한
@@ -34,35 +31,40 @@ ARIA)은 네이티브 HTML로 관리할 수 없는 접근성 문제가 있는 �
 다음 스니펫에서는 목록 항목을 일종의 사용자설정 확인란으로 사용합니다. CSS
 '확인란' 클래스는 필수적인 시각적 특성을 요소에 부여합니다.
 
-
-    <li tabindex="0" class="checkbox" checked>
-      Receive promotional offers
-    </li>
-    
+```
+<li tabindex="0" class="checkbox" checked>
+  Receive promotional offers
+</li>
+```
 
 이렇게 하면 시력이 정상인 사용자에게는 알맞지만, 스크린 리더는
 이 요소가 확인란이라는 점을 알려주지 못하므로 시력이 나쁜 사용자가 이 요소를
 완전히 놓칠 수도 있습니다.
 
 하지만 ARIA 속성을 사용하면 요소에 누락된 정보를 부여할 수 있으므로
-스크린 리더가 올바로 해석할 수 있습니다. 여기서는 요소를 확인란으로 명시적으로 식별하고 확인란이 기본적으로 선택되어 있음을 나타내기 위해 `role` 및
+스크린 리더가 올바로 해석할 수 있습니다. 여기서는 요소를 확인란으로 명시적으로 식별하고 확인란이 기본적으로 선택되어 있음을 나타내기 위해
+`role` 및
 `aria-checked` 속성을
 추가했습니다. 그러면 접근성 트리에 목록 항목이 추가되고
 스크린 리더가 확인란이라고 올바르게 알려줍니다.
 
-
-    <li tabindex="0" class="checkbox" role="checkbox" checked aria-checked="true">
-      Receive promotional offers
-    </li>
-    
+```
+<li tabindex="0" class="checkbox" role="checkbox" checked aria-checked="true">
+  Receive promotional offers
+</li>
+```
 
 참고: ARIA 속성 목록과 속성을 사용할 시점에 대해서는 [이후에](#what-can-aria-do) 자세히 알아보겠습니다.
 
 ARIA는 표준 DOM 접근성 트리를 변경하고 증가시키는 방식으로 작동합니다.
 
-![표준 DOM 접근성 트리](imgs/acctree1.jpg){: .attempt-right }
+![표준 DOM 접근성
+트리](../../../../en/fundamentals/accessibility/semantics-aria/imgs/acctree1.jpg){:
+.attempt-right }
 
-![ARIA의 증가된 접근성 트리](imgs/acctree2.jpg){: .attempt-right }
+![ARIA의 증가된 접근성
+트리](../../../../en/fundamentals/accessibility/semantics-aria/imgs/acctree2.jpg){:
+.attempt-right }
 
 ARIA를 사용하면 페이지에서 임의의 요소에 대한 접근성 트리를
 미세하게 수정하거나 아예 근본적으로 수정할 수 있지만, 그게 바로 ARIA가 변경하는 유일한 것이기도 합니다. **ARIA는
@@ -76,11 +78,13 @@ ARIA를 사용하면 페이지에서 임의의 요소에 대한 접근성 트리
 필요 없습니다.
 
 또한, 사용할 수 있는 ARIA 역할과 속성에 제한을 두는
-HTML 요소가 있다는 점도 잘 알아두세요. 예를 들어, 표준 `<input
-type="text">` 요소에는 어떤 역할이나 속성도 추가로 적용되지 않을 수 있습니다.
+HTML 요소가 있다는 점도 잘 알아두세요. 예를 들어, 표준 `<input type="text">` 요소에는 어떤 역할이나 속성도 추가로
+적용되지 않을 수 있습니다.
 
->추가 정보는 [HTML 사양의 ARIA](https://www.w3.org/TR/html-aria/#sec-strong-native-semantics){: .external }를
-참조하세요.
+> 추가 정보는 [HTML 사양의
+ARIA](https://www.w3.org/TR/html-aria/#sec-strong-native-semantics){: .external
+}를
+> 참조하세요.
 
 ARIA가 제공하는 다른 기능으로는 어떤 것이 있는지 살펴봅시다.
 
@@ -92,37 +96,41 @@ HTML에는 전혀 존재하지 않는 의미 체계 패턴을 표현할 수도
 있습니다. ARIA를 사용하면 일반 HTML로는 불가능한 위젯 형식의 요소를 만들 수 있을
 때가 많습니다.
 
- - 예를 들어, ARIA는 보조 기술 API에만 노출되는 여분의 레이블 및 설명
-   텍스트를 추가할 수 있습니다.<br>
+- 예를 들어, ARIA는 보조 기술 API에만 노출되는 여분의 레이블 및 설명텍스트를 추가할 수 있습니다.<br>
 
-<div class="clearfix"></div>
-      
-    <button aria-label="screen reader only label"></button>
-
-
- - ARIA는 특정 영역을 제어하는 사용자설정 스크롤 바와 같은 표준 상위/하위 연결을
-   확장하는 요소 간의 의미 체계 관계를 표현할 수
-   있습니다.
 
 <div class="clearfix"></div>
 
-    <div role="scrollbar" aria-controls="main"></div>
-    <div id="main">
-    . . .
-    </div>
 
-    
+```
+<button aria-label="screen reader only label"></button>
+```
 
- - ARIA는 페이지 중 일부를 '라이브' 상태로 만들어 이런 부분이 바뀔 때 즉시
-   보조 기술에 그 사실을 알릴 수 있습니다.
+- ARIA는 특정 영역을 제어하는 사용자설정 스크롤 바와 같은 표준 상위/하위 연결을확장하는 요소 간의 의미 체계 관계를 표현할 수있습니다.
+
 
 <div class="clearfix"></div>
 
-    <div aria-live="true">
-      <span>GOOG: $400</span>
-    </div>
 
-    
+```
+<div role="scrollbar" aria-controls="main"></div>
+<div id="main">
+. . .
+</div>
+```
+
+- ARIA는 페이지 중 일부를 '라이브' 상태로 만들어 이런 부분이 바뀔 때 즉시보조 기술에 그 사실을 알릴 수 있습니다.
+
+
+<div class="clearfix"></div>
+
+
+```
+<div aria-live="true">
+  <span>GOOG: $400</span>
+</div>
+```
+
 ARIA 시스템의 핵심적인 특징 중 하나는 *역할* 모음입니다. 접근성 관련
 용어에서 역할이란 특정 UI 패턴을 축약해서 표시하는
 말입니다. ARIA는 HTML 요소에서 `role`
@@ -147,18 +155,17 @@ ARIA 역할과 속성이 함께 작동하는 방식과 브라우저와
 보조 기술을 통해 지원하는 방식으로 사양을 사용할 수 있는 방법에 대해
 가장 정확하고 명확한 정보를 담고 있습니다.
 
-![사용 가능한 모든 ARIA 역할의 목록](imgs/aria-roles.jpg)
+![a list of all the available ARIA
+roles](../../../../en/fundamentals/accessibility/semantics-aria/imgs/aria-roles.jpg)
 
 하지만 사양은 너무 상세하므로 처음 시작하기에 좀 더 쉽게 접근할 수 있는 수단은 [ARIA
-Authoring Practices 문서](https://www.w3.org/TR/wai-aria-practices-1.1/){: .external }
+Authoring Practices 문서](https://www.w3.org/TR/wai-aria-practices-1.1/){:
+.external }
 입니다. 이 문서에는 사용 가능한 ARIA 역할과 속성을 사용하는 모범 사례가 설명되어
 있습니다.
 
 또한, ARIA는 HTML5에서 사용할 수 있는 옵션을 확장하는 이정표 역할도 제공합니다. 자세한 내용은
 [Landmark Roles Design
-Patterns](https://www.w3.org/TR/wai-aria-practices-1.1#kbd_layout_landmark_XHTML){: .external }
+Patterns](https://www.w3.org/TR/wai-aria-practices-1.1#kbd_layout_landmark_XHTML){:
+.external }
 사양을 참조하세요.
-
-
-
-{# wf_devsite_translation #}
