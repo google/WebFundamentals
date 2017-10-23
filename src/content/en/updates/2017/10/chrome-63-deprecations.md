@@ -20,13 +20,7 @@ Chrome 63, which is in beta as of October 26. Visit the
 for more deprecations and removals from this and previous versions of Chrome.
 This list is subject to change at any time.
 
-## Security and privacy
-
-## CSS
-
-## JavaScript and APIs
-
-### Interface properties with a Promise type no longer throw exceptions
+## Interface properties with a Promise type no longer throw exceptions
 
 Interface properties and functions that return a promise have been inconsistent
 about whether error conditions throw exceptions or reject, which would invoke a
@@ -45,7 +39,7 @@ been made for functions.
 [Chromestatus Tracker](https://www.chromestatus.com/features/5654995223445504) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=758023)
 
-### Remove getMatchedCSSRules()
+## Remove getMatchedCSSRules()
 
 The getMatchedCSSRules() method is a webkit-only API to get a list of all the
 style rules applied to a particular element. Webkit has an [open bug to remove
@@ -57,7 +51,7 @@ look at [this Stackoverflow post](https://stackoverflow.com/questions/2952667/fi
 [Chromestatus Tracker](https://groups.google.com/a/chromium.org/d/topic/blink-dev/-_Al0I5Rm9Q/discussion) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=437569&desc=2)
 
-### Remove RTCRtcpMuxPolicy of "negotiate"
+## Remove RTCRtcpMuxPolicy of "negotiate"
 
 The `rtcpMuxPolicy` is used by Chrome to specify its preferred policy regarding
 use of RTP/RTCP multiplexing. In Chrome 57, we changed the default
