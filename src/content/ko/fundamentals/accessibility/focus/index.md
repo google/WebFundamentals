@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 접근성에서의 화면 포커스 개요
 
-
 {# wf_updated_on: 2016-10-04 #}
 {# wf_published_on: 2016-10-04 #}
 
@@ -11,8 +10,6 @@ description: 접근성에서의 화면 포커스 개요
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/robdodson.html" %}
-
-
 
 이번 과정에서는 *포커스*에 대해 소개하고 애플리케이션에서의 포커스 관리 방법을
 다루겠습니다. 포커스는 화면에서 어떤 컨트롤(예: 필드, 확인란, 버튼 또는 링크)이
@@ -44,29 +41,34 @@ description: 접근성에서의 화면 포커스 개요
 키보드 이벤트를 수신하여 사용자가 입력하는 문자를 표시하게 됩니다. 입력란은 포커스가 있는
 상태에서 클립보드에서 붙여넣는 입력 문자도 수신합니다.
 
-![텍스트 입력란에 키보드 포커스가 있음](imgs/keyboard-focus.png)
+![keyboard focus in a text
+field](../../../../en/fundamentals/accessibility/focus/imgs/keyboard-focus.png)
 
 현재 포커스를 맞춘 항목은 흔히 *포커스 링*으로 표시되는데,
 각 브라우저 고유의 스타일과 페이지 작성자가 적용한 스타일에 모두
 영향을 받습니다. 예를 들어, Chrome에서는 보통 포커스가 있는 요소를 파란색 테두리로 강조표시하는 반면,
 Firefox에서는 파선 테두리로 강조표시합니다.
 
-![가입 버튼](imgs/sign-up.png)
+![sign up
+button](../../../../en/fundamentals/accessibility/focus/imgs/sign-up.png)
 
 거의 전적으로 키보드나 다른 입력 기기로만
 컴퓨터를 조작하는 사용자도 있습니다. 이런 사용자에게는 포커스가 화면 상의 모든 요소에 도달하기 위한
 기본 수단이므로 극히 중요합니다. 이런 이유 때문에, 섹션 2.1.1의 Web AIM 검사 목록에는
 자유형 그리기처럼 키보드로는 할 수 없는 작업이 아닌 한
-[키보드로 모든 페이지 기능을 사용할 수 있어야 한다](http://webaim.org/standards/wcag/checklist#sc2.1.1){: .external }고
+[키보드로 모든 페이지 기능을 사용할 수 있어야
+한다](http://webaim.org/standards/wcag/checklist#sc2.1.1){: .external }고
 명시되어 있습니다.
 
 사용자는 `Tab`,
-`Shift+Tab` 또는 화살표 키를 사용해 현재 어떤 요소에 포커스를 둘지 제어할 수 있습니다. Mac OSX에서는 포커스의 작동 방식이 약간 다릅니다.
+`Shift+Tab` 또는 화살표 키를 사용해 현재 어떤 요소에 포커스를 둘지 제어할 수 있습니다. Mac OSX에서는 포커스의 작동 방식이
+약간 다릅니다.
 Chrome에서는 항상 `Tab`으로 탐색할 수 있지만 Safari 등의 다른 브라우저에서는 포커스를 변경하려면 `Option+Tab`을
 눌러야 합니다. 필요하다면 System Preferences의 Keyboard 섹션에서
 이 설정을 변경할 수 있습니다.
 
-![키보드 기본 설정 대화상자](imgs/system-prefs2.png)
+![keyboard preferences
+dialog](../../../../en/fundamentals/accessibility/focus/imgs/system-prefs2.png)
 
 포커스가
 `Tab`을 통해 대화형 요소 사이를 앞뒤로 움직이는 순서를 *탭 순서*라 부르는 건 당연합니다. 논리적인
@@ -79,13 +81,15 @@ Chrome에서는 항상 `Tab`으로 탐색할 수 있지만 Safari 등의 다른 
 *암시적으로 포커스 가능*합니다. 즉, 이런 요소는 탭 순서에 자동으로 삽입되며
 개발자가 따로 손대지 않아도 키보드 이벤트 처리 기능이 기본 제공된다는 뜻입니다.
 
-![암시적으로 포커스 가능한 입력란](imgs/implicitly-focused.png)
+![implicitly focusable
+fields](../../../../en/fundamentals/accessibility/focus/imgs/implicitly-focused.png)
 
 하지만 모든 요소가 포커스 가능한 것은 아닙니다. 단락, div, 기타 다양한 페이지
 요소는 페이지를 탭 이동할 때 포커스되지 않도록 되어 있습니다.
 일반적으로 사용자가 이런 요소와 상호 작용할 수 없는데 포커스를 둘 필요가 없기 때문입니다.
 
-![모든 요소가 포커스 가능하지는 않음](imgs/not-all-elements.png)
+![not all elements are
+focusable](../../../../en/fundamentals/accessibility/focus/imgs/not-all-elements.png)
 
 ## 포커스의 구현 실례
 
@@ -96,16 +100,17 @@ Chrome에서는 항상 `Tab`으로 탐색할 수 있지만 Safari 등의 다른 
 마우스 입력이 통하지 않습니다. 키보드로 입력하지 않고 얼렁뚱땅 넘어갈 수 없다는 뜻이죠. 여러분을 못 믿는 건 아니지만 말이죠.
 ^^
 
-![항공사 모의 사이트](imgs/airlinesite2.png)
+![airline site
+mockup](../../../../en/fundamentals/accessibility/focus/imgs/airlinesite2.png)
 
 항공권과 관련해 다음 사항을 지정해야 합니다.
 
- - 편도
- - 멜버른행
- - 2017년 10월 12일(2017/10/12) 출발
- - 2017년 10월 23일(2017/10/23) 도착
- - 창가 좌석
- - 판촉 행사 정보는 받지 않음
+- 편도
+- 멜버른행
+- 2017년 10월 12일(2017/10/12) 출발
+- 2017년 10월 23일(2017/10/23) 도착
+- 창가 좌석
+- 판촉 행사 정보는 받지 않음
 
 입력 오류 없이 양식을 완성하고
 Search 버튼을 누르면 양식에 입력한 내용이 지워지고 재설정됩니다. 계속 진행해 양식을 완성한 후
@@ -132,7 +137,3 @@ Search 버튼에 포커스를 두고 `Enter` 키를 눌러 양식을 제출합�
 전부 암시적 포커스가 있는 네이티브 HTML 태그이므로 키보드만으로도
 아무런 문제 없이 양식을 완성할 수 있습니다. 포커스를 추가하거나 관리하려고 따로 코드를 작성할
 필요도 없습니다.
-
-
-
-{# wf_devsite_translation #}
