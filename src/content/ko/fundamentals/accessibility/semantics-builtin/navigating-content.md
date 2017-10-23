@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 페이지 탐색에서 의미 체계의 역할
 
-
 {# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
@@ -11,8 +10,6 @@ description: 페이지 탐색에서 의미 체계의 역할
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/aliceboxhall.html" %}
-
-
 
 앞서 어포던스, 의미 체계, 보조 기술에서
 접근성 트리를 사용해 사용자를 위한 대안적 사용자 환경을 만드는 방법에 대해 알아보았습니다.
@@ -23,7 +20,8 @@ description: 페이지 탐색에서 의미 체계의 역할
 이 과정에서는 덜 명백한 의미 체계를 다룹니다. 특히 탐색과 관련하여 이는 스크린 리더 사용자에게
 매우 중요합니다. 컨트롤은 많이 있지만
 콘텐츠는 그다지 많지 않은 단순한 페이지에서는 페이지를 검색해 필요한 내용을
-쉽게 찾을 수 있습니다. 그러나 Wikipedia나 뉴스 수집 사이트처럼 콘텐츠 양이 많은 페이지에서는 위에서 아래로 모든 내용을 읽어주는 건 실용적이지 않습니다.
+쉽게 찾을 수 있습니다. 그러나 Wikipedia나 뉴스 수집 사이트처럼 콘텐츠 양이 많은 페이지에서는 위에서 아래로 모든 내용을 읽어주는 건
+실용적이지 않습니다.
 이럴 때는 콘텐츠를 효율적으로 탐색할 방법이
 필요합니다.
 
@@ -40,7 +38,8 @@ description: 페이지 탐색에서 의미 체계의 역할
 
 우선, 앞서 설명했던 사항을 다시 떠올려 봅시다. 포커스 순서뿐 아니라
 스크린 리더 순서에 대해서도 [*DOM 순서가
-중요*](/web/fundamentals/accessibility/focus/dom-order-matters)합니다. VoiceOver, NVDA, JAWS, ChromeVox 등의 스크린 리더로 실험해보면
+중요*](/web/fundamentals/accessibility/focus/dom-order-matters)합니다. VoiceOver,
+NVDA, JAWS, ChromeVox 등의 스크린 리더로 실험해보면
 제목 목록이 시각적 순서가 아니라
 DOM 순서를 따른다는 점을 알 수 있을 것입니다.
 
@@ -54,37 +53,38 @@ DOM 순서를 따른다는 점을 알 수 있을 것입니다.
 검사 목록](http://webaim.org/standards/wcag/checklist)에서는 이 기법을 반복해서
 언급합니다.
 
- - [1.3.1](http://webaim.org/standards/wcag/checklist#sc1.3.1){: .external }에서는
-   '의미 체계 마크업을 사용해 제목을 지정한다'고 언급
- - [2.4.1](http://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }에서는
-   제목 구조를 콘텐츠 블록 우회 기법으로
-   언급
- - [2.4.6](http://webaim.org/standards/wcag/checklist#sc2.4.6){: .external }에서는
-   유용한 제목 작성을 위한 세부 사항 설명
- - [2.4.10](http://webaim.org/standards/wcag/checklist#sc2.4.10){: .external }에서는
-   '상황에 맞춰 적절히 제목을 사용해 콘텐츠의 개별 섹션을 지정'한다고
-   설명
+- [1.3.1](http://webaim.org/standards/wcag/checklist#sc1.3.1){: .external
+}에서는'의미 체계 마크업을 사용해 제목을 지정한다'고 언급
+- [2.4.1](http://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }에서는제목
+구조를 콘텐츠 블록 우회 기법으로언급
+- [2.4.6](http://webaim.org/standards/wcag/checklist#sc2.4.6){: .external
+}에서는유용한 제목 작성을 위한 세부 사항 설명
+- [2.4.10](http://webaim.org/standards/wcag/checklist#sc2.4.10){: .external
+}에서는'상황에 맞춰 적절히 제목을 사용해 콘텐츠의 개별 섹션을 지정'한다고설명
 
 화면에 모든 제목을 표시해야 하는 건 아닙니다.
 예를 들어, [Wikipedia](https://www.wikipedia.org/)에서는
 스크린 리더나 다른 보조 기술을 통해서만 *전용*으로 접근할 수 있도록
 일부 제목을 일부러 화면 밖에 배치하는 기술을 사용합니다.
 
-    <style>
-      .sr-only {
-        position:absolute;
-        left:-10000px;
-        top:auto;
-        width:1px;
-        height:1px;
-        overflow:hidden;
-      }
-    </style>
+```
+<style>
+  .sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
+</style>
 
-    <h2 class="sr-only">This heading is offscreen.</h2>
+<h2 class="sr-only">This heading is offscreen.</h2>
+```
 
 참고: WebAIM 사이트에서
-[화면 밖 콘텐츠에 대한 문서](http://webaim.org/techniques/css/invisiblecontent/)를 통해 이 기술에 대한 자세한 내용을 확인할 수 있습니다.
+[화면 밖 콘텐츠에 대한 문서](http://webaim.org/techniques/css/invisiblecontent/)를 통해 이 기술에
+대한 자세한 내용을 확인할 수 있습니다.
 
 복잡한 애플리케이션의 경우 시각적 디자인에 시각적 제목이 필요하지 않거나 이런 제목을 배치할 공간이 없을 때
 이 기술을 사용하면 문제 없이 제목을 수용할 수 있습니다.
@@ -111,16 +111,14 @@ Caution: 이 기술을 남용하지 않도록 주의하세요. 보조 기술
 유의미한 경우에만 유용합니다. 예를 들어, 다음과 같이 링크를 찾기 어렵게 만드는 몇 가지 공통적인
 패턴이 있습니다.
 
- - `href` 속성이 없는 앵커 태그. 단일 페이지 애플리케이션에서
-   종종 사용되는 이런 링크 대상은 스크린 리더에 문제를 일으킵니다. 더 자세한
-   내용은 [단일 페이지 앱에 대한 문서](http://neugierig.org/software/blog/2014/02/single-page-app-links.html)에서 확인할 수 있습니다.
- - 링크와 함께 구현되는 버튼. 이런 버튼은 스크린 리더가
-   링크로 잘못 해석하는 바람에 버튼으로서의 기능을 잃게 되는 문제를 일으킵니다. 이런
-   경우에는 앵커 태그를 실제 버튼으로 바꾸고 그에 맞춰 적절한 스타일을
-   지정하세요.
- - 링크 콘텐츠로 사용되는 이미지. 가끔 필요한 링크 연결 이미지는
-   스크린 리더로는 이용하지 못할 수 있습니다. 이런 링크가 보조 기술에 올바로 노출되도록
-   하려면 이미지에 `alt` 속성 텍스트가 있는지 확인하세요.
+- `href` 속성이 없는 앵커 태그. 단일 페이지 애플리케이션에서종종 사용되는 이런 링크 대상은 스크린 리더에 문제를 일으킵니다. 더
+자세한내용은 [단일 페이지 앱에 대한
+문서](http://neugierig.org/software/blog/2014/02/single-page-app-links.html)에서 확인할
+수 있습니다.
+- 링크와 함께 구현되는 버튼. 이런 버튼은 스크린 리더가링크로 잘못 해석하는 바람에 버튼으로서의 기능을 잃게 되는 문제를 일으킵니다.
+이런경우에는 앵커 태그를 실제 버튼으로 바꾸고 그에 맞춰 적절한 스타일을지정하세요.
+- 링크 콘텐츠로 사용되는 이미지. 가끔 필요한 링크 연결 이미지는스크린 리더로는 이용하지 못할 수 있습니다. 이런 링크가 보조 기술에 올바로
+노출되도록하려면 이미지에 `alt` 속성 텍스트가 있는지 확인하세요.
 
 조악한 링크 텍스트는 또 다른 문제입니다. '자세히 알아보기' 또는 '여기를
 클릭'과 같이 클릭 가능한 텍스트는 해당 링크를 통해 어디로 연결되는지 의미 있는 정보를 전혀 제공하지 않습니다. 따라서
@@ -138,7 +136,8 @@ Caution: 이 기술을 남용하지 않도록 주의하세요. 보조 기술
 
 어떤 개발자는 음성학적 철자로 표기되는 스크린 리더 전용 텍스트를
 제공하여 이런 상황을 개선하려고 시도합니다. 음성학적 철자 표기에 대해서는 한 가지 간단한 규칙이 있습니다.
-그건 바로 **그렇게 하지 말라**는 규칙입니다. 음성학적으로 표기하면 문제를 더욱 악화시킬 뿐이기 때문입니다. 예를 들어, 점자 디스플레이 사용자에게는
+그건 바로 **그렇게 하지 말라**는 규칙입니다. 음성학적으로 표기하면 문제를 더욱 악화시킬 뿐이기 때문입니다. 예를 들어, 점자 디스플레이
+사용자에게는
 철자가 틀린 것으로 인식되므로 혼란만
 가중시킬 뿐입니다. 스크린 리더를 사용하면 단어를 큰소리로 들을 수 있으므로
 사용자가 경험을 통해 이런 오류가 발생할 때 어떻게 이해할지 스스로 해결하도록 두는 것이 최선입니다.
@@ -149,14 +148,10 @@ Caution: 이 기술을 남용하지 않도록 주의하세요. 보조 기술
 
 HTML5에는
 `header`, `footer`, `nav`, `article`, `section`, `main`,
-`aside`를 비롯하여, 페이지의 의미 체계 구조를 정의하는 데 도움이 되는 새로운 요소가 도입되었습니다. 이런 요소는 기본 제공 스타일링을 강요하지 않고
+`aside`를 비롯하여, 페이지의 의미 체계 구조를 정의하는 데 도움이 되는 새로운 요소가 도입되었습니다. 이런 요소는 기본 제공 스타일링을
+강요하지 않고
 페이지에 구조적 단서를 특정하여 제공합니다(어차피 CSS로 해야 할 일임).
 
 의미 체계 구조 요소는 반복되는 여러 `div` 블록을 대체하고
 작성자와 독자 모두를 위해
 페이지 구조를 직관적으로 표현할 좀 더 분명하고 설명적인 방법을 제공합니다.
-
-
-
-
-{# wf_devsite_translation #}
