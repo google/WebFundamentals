@@ -58,11 +58,11 @@ description:在此代码实验室中，您将学习如何向网络应用添加�
 
 [链接](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-安装 Web Server for Chrome 后，点击书签栏上的 Apps 快捷方式： 
+安装 Web Server for Chrome 后，点击书签栏上的 Apps 快捷方式：
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-在随后出现的窗口中，点击 Web Server 图标： 
+在随后出现的窗口中，点击 Web Server 图标：
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -137,7 +137,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 
 ### 获取应用服务器密钥
 
-如需使用此代码实验室，您需要生成一些应用服务器密钥，我们可以使用此配套网站执行这一操作：[https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)
+如需使用此代码实验室，您需要生成一些应用服务器密钥，我们可以使用此配套网站执行这一操作：[https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)
 
 您可以在这里生成一个公私密钥对。
 
@@ -528,7 +528,7 @@ clients.openWindow('https://developers.google.com/web/')
 
 一般情况下，这个过程就是从网页向后端发送订阅，然后后端通过对订阅中的端点实施 API 调用，进而触发推送消息。
 
-这超出了此代码实验室的讨论范围，但您可以使用此代码实验室的配套网站 ( [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) 来触发实际的推送消息。复制粘贴页面底部的订阅：
+这超出了此代码实验室的讨论范围，但您可以使用此代码实验室的配套网站 ( [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)) 来触发实际的推送消息。复制粘贴页面底部的订阅：
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 

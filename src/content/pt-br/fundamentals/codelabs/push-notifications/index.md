@@ -12,7 +12,7 @@ description: Neste codelab você aprenderá como adicionar notificações push a
 
 
 
-Visão geral do ## 
+Visão geral do ##
 
 
 
@@ -58,11 +58,11 @@ Embora você seja livre para usar seu próprio servidor de Web, este codelab é 
 
 [Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-Após instalar o aplicativo Web Server for Chrome, clique no atalho Apps na barra de favoritos: 
+Após instalar o aplicativo Web Server for Chrome, clique no atalho Apps na barra de favoritos:
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-Na janela seguinte, clique no ícone do Web Server: 
+Na janela seguinte, clique no ícone do Web Server:
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -137,7 +137,7 @@ Abra Chrome DevTools para verificar o console quanto a `Service Worker is regist
 
 ### Obtenha as Chaves do Servidor do Aplicativo
 
-Para trabalhar com este codelab, você precisa gerar algumas chaves de servidor de aplicativo, o que podemos fazer com este site associado: [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)
+Para trabalhar com este codelab, você precisa gerar algumas chaves de servidor de aplicativo, o que podemos fazer com este site associado: [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)
 
 Aqui você pode gerar um par de chaves pública e privada.
 
@@ -213,7 +213,7 @@ navigator.serviceWorker.register('sw.js')
 
 #### Experimente
 
-Abra seu app da Web, você deve ver que o botão 'Enable Push Messaging' agora está ativado (é possível clicar nele) e deve ver ‘User NOT subscribed.' no console. 
+Abra seu app da Web, você deve ver que o botão 'Enable Push Messaging' agora está ativado (é possível clicar nele) e deve ver ‘User NOT subscribed.' no console.
 
 ![15f6375617c11974.png](img/15f6375617c11974.png)
 
@@ -225,7 +225,7 @@ Com o progresso ao longo do codelab, você deve ver o texto do botão mudar quan
 
 
 
-No momento, nosso botão 'Enable Push Messaging' não faz quase nada, então vamos consertar isso. 
+No momento, nosso botão 'Enable Push Messaging' não faz quase nada, então vamos consertar isso.
 
 Adicione um ouvinte de clique ao nosso botão na função `initialiseUI()`, assim:
 
@@ -528,7 +528,7 @@ Vimos que nosso app da Web é capaz de mostrar uma notificação usando DevTools
 
 Normalmente, o processo para isso seria o envio de uma inscrição a partir de uma página da Web para um back-end e o back-end acionaria uma mensagem push, fazendo uma chamada de API para o ponto final na inscrição.
 
-Isso está fora do escopo deste codelab, mas você pode usar o site associado ([https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) neste codelab para acionar uma mensagem push real. Copie e cole a inscrição na parte inferior da sua página:
+Isso está fora do escopo deste codelab, mas você pode usar o site associado ([https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)) neste codelab para acionar uma mensagem push real. Copie e cole a inscrição na parte inferior da sua página:
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
@@ -664,7 +664,7 @@ Se procura implantar push em seu site, você pode estar interessado em adicionar
 
 
 ## Encontrou um problema ou tem feedback? {: .hide-from-toc }
-Ajude-nos a melhorar nossos codelabs reportando um 
+Ajude-nos a melhorar nossos codelabs reportando um
 [problema](https://github.com/googlechrome/push-notifications/issues) hoje. E obrigado!
 
 {# wf_devsite_translation #}
