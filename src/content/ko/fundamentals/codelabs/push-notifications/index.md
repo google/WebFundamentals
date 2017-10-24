@@ -58,11 +58,11 @@ description: 이 코드랩에서는 웹 앱에 푸시 알림을 추가하는 방
 
 [링크](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-Web Server for Chrome 앱을 설치한 후 북마크바에서 Apps 단축키를 클릭하세요. 
+Web Server for Chrome 앱을 설치한 후 북마크바에서 Apps 단축키를 클릭하세요.
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-확인하는 창에서 Web Server 아이콘을 클릭하세요. 
+확인하는 창에서 Web Server 아이콘을 클릭하세요.
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -137,7 +137,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 
 ### 애플리케이션 서버 키 가져오기
 
-이 코드랩으로 작업하려면 애플리케이션 서버 키를 몇 개 생성할 필요가 있는데, 도우미 사이트인 [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)에서 생성할 수 있습니다.
+이 코드랩으로 작업하려면 애플리케이션 서버 키를 몇 개 생성할 필요가 있는데, 도우미 사이트인 [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)에서 생성할 수 있습니다.
 
 여기서 공개 키 쌍과 비공개 키 쌍을 생성할 수 있습니다.
 
@@ -528,7 +528,7 @@ DevTools에서 푸시 메시지를 다시 트리거하고 알림을 클릭해보
 
 보통 이를 위한 프로세스는 웹페이지에서 백엔드로 구독을 전송하면 백엔드가 구독에서 엔드포인트에 대한 API 호출을 실행하여 푸시 메시지를 트리거하는 것입니다.
 
-이 내용은 본 코드랩의 범위를 벗어나지만, 이 코드랩의 도우미 사이트([https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/))를 통해 실제 푸시 메시지를 트리거할 수 있습니다. 다음과 같이 구독 정보를 복사해 페이지 하단에 붙여넣으세요.
+이 내용은 본 코드랩의 범위를 벗어나지만, 이 코드랩의 도우미 사이트([https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/))를 통해 실제 푸시 메시지를 트리거할 수 있습니다. 다음과 같이 구독 정보를 복사해 페이지 하단에 붙여넣으세요.
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
@@ -664,7 +664,7 @@ swRegistration.pushManager.getSubscription()
 
 
 ## 문제가 있거나 의견이 있으세요? {: .hide-from-toc }
-언제든 망설이지 말고 
+언제든 망설이지 말고
 [문제](https://github.com/googlechrome/push-notifications/issues)를 제출해 주시면 코드랩에서 더욱 나은 서비스를 제공하는 데 큰 도움이 될 것입니다. 감사합니다!
 
 {# wf_devsite_translation #}

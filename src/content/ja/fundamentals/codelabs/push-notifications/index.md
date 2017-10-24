@@ -138,7 +138,7 @@ Chrome DevTools を開き、コンソールに `Service Worker is registered` �
 
 ###  アプリケーション サーバーキーの入手
 
-このコードラボでの作業には、アプリケーション サーバーキーをいくつか生成する必要があります。生成するにはこのコンパニオン サイト: [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/) を使用します。
+このコードラボでの作業には、アプリケーション サーバーキーをいくつか生成する必要があります。生成するにはこのコンパニオン サイト: [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/) を使用します。
 
 ここで公開鍵と秘密鍵のペアを生成できます。
 
@@ -529,7 +529,7 @@ DevTools を使用してウェブアプリで通知を表示できることを�
 
 通常このプロセスはウェブページからバックエンドに登録を送信し、バックエンドは登録のエンドポイントに対する API 呼び出しを生成してプッシュ メッセージをトリガーします。
 
-これはこのコードラボの範囲外ですが、このコードラボのコンパニオン サイト（[https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)）を使用して実際のプッシュ メッセージをトリガーできます。ページの下部の登録をコピーして貼り付けます。
+これはこのコードラボの範囲外ですが、このコードラボのコンパニオン サイト（[https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)）を使用して実際のプッシュ メッセージをトリガーできます。ページの下部の登録をコピーして貼り付けます。
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
