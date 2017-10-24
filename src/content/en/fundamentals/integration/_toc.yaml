@@ -6,7 +6,7 @@ toc:
     section:
     - title: App Install Banners
       path: /web/fundamentals/app-install-banners/
-    - title: Web App Manfiest
+    - title: Web App Manifest
       path: /web/fundamentals/web-app-manifest/
     - title: Additional Colors and Icons
       path: /web/fundamentals/design-and-ux/browser-customization/
