@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 58 to help you plan.
 
-{# wf_updated_on: 2017-08-04 #}
+{# wf_updated_on: 2017-10-23 #}
 {# wf_published_on: 2017-03-17 #}
 {# wf_tags: deprecations,removals,chrome58 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -33,7 +33,7 @@ Starting with Chrome 58, a mouse on Android M or later will:
 
 * No longer fire `TouchEvents`.
 * Fire a consistent sequence of `MouseEvents` with appropriate buttons and
-  other properties. 
+  other properties.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cNaFvMaYtNA/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5642080642662400) &#124;
@@ -76,7 +76,7 @@ an author-specified path. In compliance with the spec, several properties were
 The names of these properties were changed in the spec in mid 2016. Chrome
 implemented the
 [new names in Chrome 55 and Chrome 56](https://www.chromestatus.com/feature/6390764217040896).
-Console deprecation warnings were also implemented. 
+Console deprecation warnings were also implemented.
 
 In Chrome 58, the old property names are being removed. The affected properties
 and their new names are shown below.
@@ -88,7 +88,7 @@ and their new names are shown below.
 | motion-rotation | offset-rotate |
 | motion | offset |
 
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/o1C5NzGf9Q0/discussion) 
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/o1C5NzGf9Q0/discussion)
 
 ## Remove EME from non-secure contexts
 
@@ -133,7 +133,7 @@ is not supported in Edge or Safari, and it is being
 ## Remove pre-standard ChaCha20-Poly1305 ciphers
 
 In 2013, Chrome 31 deployed
-[new TLS cipher suites](https://security.googleblog.com/2014/04/speeding-up-and-strengthening-https.html) 
+[new TLS cipher suites](https://security.googleblog.com/2014/04/speeding-up-and-strengthening-https.html)
 based on Prof. Dan Bernstein's ChaCha20 and Poly1305 algorithms. These was
 later standardized, with small tweaks, at the IETF as
 [RFC 7539](https://tools.ietf.org/html/rfc7539)
@@ -227,11 +227,30 @@ through a notification over an insecure connection. Web push requires a secure
 origin, so this change will align non-push notifications with push
 notifications. This change is part of our broader effort to
 [remove powerful features from unsecure origins](https://bugs.chromium.org/p/chromium/issues/detail?id=520765).
-Removal is expected in Chrome 62.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/IVgkxkRNtMo/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5759967025954816) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=679821)
+
+### Deprecate usage of notifications from insecure iframes
+
+Permission requests from iframes can confuse users since it is difficult to
+distinguish between the containing page's origin and the origin of the iframe
+that is making the request. When the requests scope is unclear, it is difficult
+for users to judge whether to grant or deny permission.
+
+Disallowing notifications in iframes will also align the requirements for
+notification permission with that of push notifications, easing friction for
+developers.
+
+Developers who need this functionality can open a new window to request
+notification permission.
+
+Removal is in Chrome 62.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/n37ij1E_1aY/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/6451284559265792) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693)
 
 ## Remove indexedDB.webkitGetDatabaseNames()
 

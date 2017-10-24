@@ -1277,6 +1277,19 @@ alansilva:
   description:
     en: Alan is a JavaScript Developer
 
+vinamratasingal:
+  name:
+    given: Vinamrata
+    family: Singal
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - author
+  description:
+    en: Lighthouse Product Manager
+
 andismith:
   name:
     given: Andi

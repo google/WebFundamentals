@@ -161,7 +161,7 @@
     link: /web/progressive-web-apps/
 
 - term: promise
-  description: "A JavaScript promise is an object that is used as a placeholder for the eventual results of a deferred (and possibly asynchronous) computation. JavaScript promises are an addition to ECMAscript 6 that provide a cleaner, more intuitive way to deal with the completion (or failure) of asynchronous tasks."
+  description: "A JavaScript promise is an object that is used as a placeholder for the eventual results of a deferred (and possibly asynchronous) computation. JavaScript promises are an addition to ECMAScript 6 that provide a cleaner, more intuitive way to deal with the completion (or failure) of asynchronous tasks."
   see:
     title: JavaScript Promises
     link: /web/fundamentals/primers/promises
