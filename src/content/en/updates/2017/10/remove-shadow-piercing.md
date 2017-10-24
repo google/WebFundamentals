@@ -13,8 +13,8 @@ description: Say goodbye to shadow-piercing CSS selectors.
 
 {% include "web/_shared/contributors/robdodson.html" %}
 
-Starting in Chrome 63, the shadow-piercing selectors `::shadow` and `/deep/`
-will no longer be able to style content inside of a shadow root.
+Starting in Chrome 63, you cannot use the shadow-piercing selectors `::shadow`
+and `/deep/` to style content inside of a shadow root.
 
 - The `/deep/` combinator will act as a descendant selector. `x-foo /deep/ div`
 will work like `x-foo div`.
@@ -25,9 +25,9 @@ walking through steps to migrate off of `::shadow` and `/deep/`.
 
 ## The decision to remove
 
-The `::shadow` and `/deep/` selectors have been deprecated in Chrome since
-version 45. This was decided by all of the participants at the [April 2015
-Web Components meetup](https://www.w3.org/wiki/Webapps/WebComponentsApril2015Meeting).
+The `::shadow` and `/deep/` were deprecated in Chrome version 45. This was
+decided by all of the participants at the [April 2015 Web Components
+meetup](https://www.w3.org/wiki/Webapps/WebComponentsApril2015Meeting).
 
 The primary concern with shadow-piercing selectors is that they violate
 encapsulation and create situations where a component can no longer change its
@@ -47,14 +47,14 @@ properties at once.
 ## What should I do if my site uses ::shadow and /deep/?
 
 The `::shadow` and `/deep/` selectors only affect legacy Shadow DOM v0
-components. If you're using Shadow DOM v1 you should not need to change anything
-on your site.
+components. If you're using Shadow DOM v1, you should not need to change
+anything on your site.
 
 You can use [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
-to verify your site does not break with these new changes. If you do notice
-issues, see if you can remove any usage of `::shadow` and `/deep/`. If not
-relying on these selectors is too onerous, you may also consider switching from
-native shadow DOM over to the shady DOM polyfill. You should only need to make
-this change if your site relies on native shadow DOM v0.
+to verify your site does not break with these new changes. If you notice issues,
+try and remove any usage of `::shadow` and `/deep/`. If it's too difficult to
+remove usage of these selectors, consider switching from native shadow DOM over
+to the shady DOM polyfill. You should only need to make this change if your site
+relies on native shadow DOM v0.
 
 {% include "comment-widget.html" %}
