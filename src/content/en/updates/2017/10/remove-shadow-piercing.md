@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Say goodbye to shadow-piercing CSS selectors.
 
-{# wf_updated_on: 2017-10-16 #}
-{# wf_published_on: 2017-10-16 #}
+{# wf_updated_on: 2017-10-24 #}
+{# wf_published_on: 2017-10-24 #}
 {# wf_tags: webcomponents,shadowdom,style,css,deprecations,removals #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
 {# wf_featured_snippet: Say goodbye to shadow-piercing CSS selectors. #}
@@ -20,7 +20,7 @@ will no longer be able to style content inside of a shadow root.
 will work like `x-foo div`.
 - The `::shadow` pseudo-element will not match any elements.
 
-Note: If your site uses Polymer, the team has put together [a thorough guide](link tbd)
+Note: If your site uses Polymer, the team has put together [a thorough guide](https://www.polymer-project.org/blog/2017-10-18-upcoming-changes.html)
 walking through steps to migrate off of `::shadow` and `/deep/`.
 
 ## The decision to remove
