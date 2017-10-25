@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Aborting fetches using a new web primitive – The abort controller.
 
-{# wf_updated_on: 2017-09-28 #}
+{# wf_updated_on: 2017-10-25 #}
 {# wf_published_on: 2017-09-28 #}
 {# wf_tags: fetch #}
 {# wf_featured_image: /web/updates/images/2017/09/abortable-fetch.png #}
@@ -20,6 +20,9 @@ bug in maths, because 2015 was in fact "forever" ago.
 2015 was when we first started exploring aborting ongoing fetches, and after 780 GitHub comments, a
 couple of false starts, and 5 pull requests, we finally have abortable fetch landing in browsers,
 with the first being Firefox 57.
+
+**Update:** Noooope, I was wrong. Edge 16 landed with abort support first! Congratulations to the
+Edge team!
 
 I'll dive into the history later, but first, the API:
 
@@ -145,8 +148,8 @@ errors, an error is shown, *unless* it's an abort error:
 Note: This example uses [async
 functions](/web/fundamentals/getting-started/primers/async-functions).
 
-**[Here's a demo](https://fetch-svg-abort.glitch.me/)** – At time of writing, the only browser which
-supports this is Firefox 57.
+**[Here's a demo](https://fetch-svg-abort.glitch.me/)** – At time of writing, the only browsers that
+support this are Edge 16 and Firefox 57.
 
 ## One signal, many fetches
 
@@ -180,12 +183,11 @@ In this case, calling `controller.abort()` will abort whichever fetches are in-p
 
 ### Other browsers
 
-Firefox did a great job to ship this first. Their engineers implemented from the [test
+Edge did a great job to ship this first, and Firefox are hot on their trail. Their engineers
+implemented from the [test
 suite](https://github.com/w3c/web-platform-tests/tree/master/fetch/api/abort) while the spec was
 being written. For other browsers, here are the tickets to follow:
 
-* [Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/13009916/) – closed as
-  "fixed", but it hasn't made it into a released version yet.
 * [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=750599).
 * [Safari](https://bugs.webkit.org/show_bug.cgi?id=174980).
 
