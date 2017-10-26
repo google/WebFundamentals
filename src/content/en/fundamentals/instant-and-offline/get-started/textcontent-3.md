@@ -24,7 +24,17 @@ In a web page, every character of that content, structure, formatting, and behav
 fetched from the server and downloaded to the browser, a decidedly non-trivial task. In this 
 section we'll look at some effective methods for speeding up text content loading.
 
-## Minified Code
+##Separate Development from Deployment
+
+As you reduce the size of text resources and take other actions that affect their readability, 
+it's important to remember that once you modify a 
+chunk of code for deployment, you can't really read it any longer, let alone maintain it. 
+Always keep development and deployment files separate to avoid replacing a development
+file with a deployment version. Although, if it does happen by accident, a code 
+beautifier or "unminifier" (e.g., [http://unminify.com/](http://unminify.com/)) 
+might save the day.
+
+## Minify Your Code
 
 One simple and effective method is *minification*, which is essentially compressing a text 
 resource by removing its whitespace and unnecessary characters without changing its validity 
@@ -115,12 +125,7 @@ and a popular package
 
 that includes a useful chart comparing its compression results with other methods.
 
-### Development vs. Deployment
-
-Once you minify a chunk of code, you can't really read it any longer, let alone modify it, 
-so always keep the unminified files handy and ship only the minified versions. That is, 
-never replace the former with the latter -- although if it does happen by accident, a code 
-beautifier or "unminifier" (e.g., [http://unminify.com/](http://unminify.com/)) might save the day.
+### Frameworks
 
 Of course, chances are good that you do (or will) use a framework, IDE, or other structured 
 environment as you write, rather than copy/pasting your code into a web app one file at a time. 
@@ -160,7 +165,7 @@ location, minifying them during the build. This not only prevents potentially ir
 modification of the source files, but avoids contaminating the production environment during 
 later development and testing.
 
-## Gzip Compression
+## Compress Text Resources
 
 So far we've talked about compression in terms of individual image and text files. But it 
 would also be helpful if we could get our server to automatically compress entire file sets 
@@ -236,8 +241,8 @@ a div, like this.
 
 `<a href="javascript:void(0)" onclick="$('#more').slideToggle()">More...</a>`
 
-Yes, it works great and it's easy to code, but that's a lot of overhead for one text effect. 
-You might consider swapping out that huge library for a simpler -- and far smaller -- 
+Yes, it works great and it's easy to code, but it's a lot of download overhead for one text 
+effect. You might consider swapping out that huge library for a simpler -- and far smaller -- 
 single-purpose function, like this 
 (source: [W3Schools](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp)).
 
@@ -291,6 +296,11 @@ input[type=checkbox]:checked + div {
 The point is, if you don't need an entire 250k library, don't download it. Instead, find 
 and use small, single-purpose routines that do only what you need. (And don't forget to 
 minify them!)
+
+Using local code instead of downloading an external library also has the added benefit of 
+eliminating a server round-trip. See 
+[HTTP Requests](/web/fundaentals/instant-and-offline/get-started/httprequests-5) 
+for more information.
 
 ## Prioritize Text Content
 
