@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-18 #}
-{# wf_published_on: 2017-10-18 #}
+{# wf_updated_on: 2017-10-27 #}
+{# wf_published_on: 2017-10-27 #}
 
 # Text Content {: .page-title }
 
@@ -28,10 +28,10 @@ section we'll look at some effective methods for speeding up text content loadin
 
 As you reduce the size of text resources and take other actions that affect their readability, 
 it's important to remember that once you modify a 
-chunk of code for deployment, you can't really read it any longer, let alone maintain it. 
+chunk of code for deployment, you usually can't read it any longer, let alone maintain it. 
 Always keep development and deployment files separate to avoid replacing a development
 file with a deployment version. Although, if it does happen by accident, a code 
-beautifier or "unminifier" (e.g., [http://unminify.com/](http://unminify.com/)) 
+beautifier or "unminifier" (for example, [http://unminify.com/](http://unminify.com/)) 
 might save the day.
 
 ## Minify Your Code
@@ -43,25 +43,15 @@ or functionality. It doesn't sound that useful, but it is. For example, this lit
 
 ```
 function sortables_init() {
-
     // Find all tables with class sortable and make them sortable
-
     if (!document.getElementsByTagName) return;
-
     tbls = document.getElementsByTagName("table");
-
     for (ti=0;ti<tbls.length;ti++) {
-
    	 thisTbl = tbls[ti];
-
    	 if (((' '+thisTbl.className+' ').indexOf("sortable") != -1) && (thisTbl.id)) {
-
    		 ts_makeSortable(thisTbl);
-
    	 }
-
     }
-
 }
 ```
 
@@ -82,48 +72,26 @@ Looking at the bigger picture, the entire script block from which that snippet c
 HTML and CSS can be minified in the same way, so that you can achieve improved load times for 
 both formatting- and behavior-related code.
 
-Many online and desktop minification tools are available; here are some examples.
+Many online and desktop minification tools are available; here's an example.
 
-### Minifier
-
-This online tool minifies JavaScript or CSS via copy and paste. Paste the code, choose the 
+[Minifier](http://www.minifier.org/)
+is an online tool minifies JavaScript or CSS via copy and paste. Paste the code, choose the 
 type, and click `Minify`.
-
-[http://www.minifier.org/](http://www.minifier.org/)
 
 ![Minifier](images/image_300.png)
 
-### HTML Minifier
+Other minification tools include:
 
-Here's an online tool that also handles HTML, and automatically identifies the code type(s).
-
-[http://www.willpeavy.com/minifier/](http://www.willpeavy.com/minifier/)
-
-![HTML Minifier](images/image_301.png)
-
-### Kangax HTML Minifier
-
+- [HTML Minifier](http://www.willpeavy.com/minifier/):
+This online tool also handles HTML, and automatically identifies the code type(s).
+- [Kangax HTML Minifier](https://kangax.github.io/html-minifier/):
 This online tool offers a broad array of output customization options for the minified code.
-
-[https://kangax.github.io/html-minifier/](https://kangax.github.io/html-minifier/)
-
-![Kangax HTML Minifier](images/image_302.png)
-
-### NPM Packages
-
-The NPMJS site also has various minification packages, for Grunt
-
-[https://www.npmjs.com/package/grunt-html-minify](https://www.npmjs.com/package/grunt-html-minify)
-
-and Gulp,
-
-[https://www.npmjs.com/package/gulp-html-minifier](https://www.npmjs.com/package/gulp-html-minifier)
-
-and a popular package 
-
-[https://www.npmjs.com/package/html-minifier](https://www.npmjs.com/package/html-minifier)
-
-that includes a useful chart comparing its compression results with other methods.
+- [NPM for Grunt](https://www.npmjs.com/package/grunt-html-minify):
+An NPM minification package that integrates into the Grunt workflow.
+- [NPM for Gulp](https://www.npmjs.com/package/gulp-html-minifier):
+An NPM minification package that integrates into the Gulp workflow. 
+- [NPM HTML Minifier](https://www.npmjs.com/package/html-minifier):
+An NPM package that includes a useful chart comparing its compression results with other methods.
 
 ### Frameworks
 
@@ -131,26 +99,18 @@ Of course, chances are good that you do (or will) use a framework, IDE, or other
 environment as you write, rather than copy/pasting your code into a web app one file at a time. 
 Most modern systems have built-in facilities for keeping development files separate from 
 deployment during the build process, and are able to perform a variety of transformations, 
-such as minification, along the way..
+such as minification, along the way.
 
 For example, a Gulp development-to-deployment task that includes HTML minification might 
 look like this.
 
 ```
 var gulp = require('gulp');
-
 var htmlmin = require('gulp-html-minifier');
-
- 
-
 gulp.task('minify', function() {
-
   gulp.src('./src/*.html') //development location
-
     .pipe(htmlmin({collapseWhitespace: true}))
-
     .pipe(gulp.dest('./dist')) //deployment location
-
 });
 ```
 
@@ -185,10 +145,8 @@ Unlike desktop or browser-based local compression, Gzip works at the server to i
 process certain file types that you specify. While all modern browsers support Gzip compression 
 for HTTP requests, you must properly configure your server to deliver the compressed resource 
 when it is requested. Different server types, of course, have different setup requirements. 
-You configure the Apache server, for example -- which nearly half of all active websites 
-currently use (source: [W3Techs](https://w3techs.com/technologies/details/ws-apache/all/all) and 
-[NetCraft](https://news.netcraft.com/archives/2017/02/27/february-2017-web-server-survey.html)) 
--- via the .htaccess file, which would include something like this.
+You configure the Apache server, for example, via the .htaccess file, which would include 
+something like this.
 
 ```
 <IfModule deflate_module>
