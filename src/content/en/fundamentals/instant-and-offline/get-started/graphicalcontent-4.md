@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-26 #}
-{# wf_published_on: 2017-10-26 #}
+{# wf_updated_on: 2017-10-27 #}
+{# wf_published_on: 2017-10-27 #}
 
 # Reduce Performance Costs of Graphical Content {: .page-title }
 
@@ -79,7 +79,7 @@ VerExif's online tool was used to upload the image and identify the metadata for
 ![VerExif's upload dialog](images/image_413.png)
 *VerExif's upload dialog*
 
-It had quite a bit (38k!) of metadata, as you can see in the table below. 
+This image had quite a bit (38k!) of metadata, as you can see in the table below. 
 (Note that the geolocation data is empty, probably because the US-based phone had no 
 service at that location.)
 
@@ -203,17 +203,13 @@ difference.
 
 Once you've determined the size that an image should really be, how do you get it to that size 
 but still retain the quality and characteristics it needs? The first thing you need is a good 
-image manipulation tool. 
-[ResizeIt](https://itunes.apple.com/us/app/resizeit/id416280139?mt=12) 
-is a Mac-only desktop product lets you change the size of 
-multiple images simultaneously, and can convert file formats at the same time. 
+image manipulation tool. For these modifications we used the popular Windows desktop product 
+[paint.net](https://www.getpaint.net). 
 
 Have a look at the following photograph-type JPGs, where the quality is progressively 
-reduced (using the popular Windows desktop product 
-[paint.net](https://www.getmaint.net)), 
-and note the decreasing file sizes. A quick calculation reveals that the size difference 
-between the 100% quality image and the 25% quality image is 90%! But can you actually 
-see the difference? Perhaps more importantly, even if you *can* see any difference, 
+reduced, and note the decreasing file sizes. A quick calculation reveals that the size 
+difference between the 100% quality image and the 25% quality image is 90%! But can you 
+actually see the difference? Perhaps more importantly, even if you *can* see any difference, 
 is it significant enough to warrant a larger file and thus a slower download?
 
 ![burger100.jpg](images/image_405.jpg)
@@ -236,9 +232,12 @@ go before seeing a difference, and then use the smallest one that retains the ph
 
 Additional image manipulation tools:
 
-- http://www.picresize.com/: One of several good browser-based tools that gives you lots of 
-options for cropping, rotating, resizing, adding effects to, and converting images.
-- https://www.gimp.org/: This ever-popular cross-platform tool just gets better with age. 
+- [ResizeIt](https://itunes.apple.com/us/app/resizeit/id416280139?mt=12): A Mac-only 
+desktop product that lets you change the size of multiple images simultaneously, and can 
+convert file formats at the same time. 
+- [PicResize](http://www.picresize.com/): One of several good browser-based tools that gives 
+you lots of options for cropping, rotating, resizing, adding effects to, and converting images.
+- [Gimp](https://www.gimp.org/): This ever-popular cross-platform tool just gets better with age. 
 Powerful and flexible, Gimp lets you perform a wide variety of image manipulation tasks 
 including, of course, resizing.
 
@@ -249,17 +248,20 @@ image editors, although CrazyEgg has a comprehensive article here:
 
 ##Compress Images
 
-PNG and JPG images can be squashed down even more using a compression tool. For example, 
-this test was done with TinyPng, a free online compression tool. 
+PNG and JPG images can be squashed down even more using a compression tool, which reduces file 
+size without affecting either image dimensions or visual quality. 
+For example, here is an image compression done with TinyPng, a free online compression tool. 
 
 [https://tinypng.com/](https://tinypng.com/)
 
-You can see the 76% compression result in the screenshot below. 
+You can see the huge compression result for the image `resizeitscreenshot.png` in the 
+screenshot below (TinyPng uploads but doesn't display the image it is compressing). 
+TinyPng reports that the image size went down from 551k to 133k, a 76% improvement.
 
 ![TinyPng](images/image_411.png)
 *TinyPng*
 
-And yes, TinyPng was used on the TinyPng screenshot itself, saving 57%.
+And yes, TinyPng was used on that TinyPng screenshot itself, saving 57%.
 
 Don't assume that because PNGs are lossless they can't be squashed down even 
 further; they can. And TinyPng is of course not the only tool available. Here's a great 
