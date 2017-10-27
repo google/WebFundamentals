@@ -666,11 +666,11 @@ if (supportsCustomElementsV1) {
     </template>
     
     <script>
+      const t = document.currentScript.ownerDocument.querySelector('#x-foo-from-template');
       customElements.define('x-foo-from-template', class extends HTMLElement {
         constructor() {
           super(); // always call super() first in the ctor.
           let shadowRoot = this.attachShadow({mode: 'open'});
-          const t = document.querySelector('#x-foo-from-template');
           const instance = t.content.cloneNode(true);
           shadowRoot.appendChild(instance);
         }
