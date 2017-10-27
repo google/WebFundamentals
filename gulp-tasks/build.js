@@ -24,15 +24,15 @@ gulp.task('build:announcement', function() {
   };
   const dumpYamlOpts = {lineWidth: 1000};
   const projectYamlFiles = glob.find('**/_project.yaml', globOpts);
-  const file = 'src/content/en/_wf-announcement.yaml';
+  const file = 'src/data/announcement.yaml';
   const announcementYaml = jsYaml.safeLoad(fs.readFileSync(file, 'utf8'));
-  const startDate = moment(announcementYaml['start']);
-  const endDate = moment(announcementYaml['end']);
-  const isBetween = moment().isBetween(startDate, endDate);
+  const showAnnouncement = announcementYaml['enabled'];
   projectYamlFiles.forEach((file) => {
     let projYaml = jsYaml.safeLoad(fs.readFileSync(file, 'utf8'));
-    if (isBetween) {
-      projYaml['announcement'] = announcementYaml;
+    if (showAnnouncement) {
+      projYaml['announcement'] = {
+        description: announcementYaml.description,
+      }
     } else {
       delete projYaml['announcement'];
     }

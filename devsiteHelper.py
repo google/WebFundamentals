@@ -417,18 +417,11 @@ def getAnnouncementBanner(pathToProject, lang='en'):
   try:
     project = yaml.load(readFile(pathToProject, lang))
     if 'announcement' in project:
-      startBanner = project['announcement']['start']
-      startBanner = datetime.strptime(startBanner, '%Y-%m-%dT%H:%M:%SZ')
-      endBanner = project['announcement']['end']
-      endBanner = datetime.strptime(endBanner, '%Y-%m-%dT%H:%M:%SZ')
-      if startBanner < datetime.now() < endBanner:
-        result = '<div class="devsite-banner devsite-banner-announcement">\n'
-        result += '<div class="devsite-banner-inner">\n'
-        result += project['announcement']['description']
-        result += '\n</div>\n'
-        result += '</div>'
-      else:
-        logging.warn('Announcement in _project.yaml expired: not shown')
+      result = '<div class="devsite-banner devsite-banner-announcement">\n'
+      result += '<div class="devsite-banner-inner">\n'
+      result += project['announcement']['description']
+      result += '\n</div>\n'
+      result += '</div>'
   except Exception as e:
     logging.exception('Unable to get announcement from project.yaml')
     result = ''
