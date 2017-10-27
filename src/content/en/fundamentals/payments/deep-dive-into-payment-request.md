@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-10-19 #}
+{# wf_updated_on: 2017-10-27 #}
 
 # Deep Dive into the Payment Request API {: .page-title }
 
@@ -301,39 +301,47 @@ If the browser can support the BobPay payment method it will offer it to the
 user alongside credit cards.
 
 An example of using a third party payment processor like this can be
-shown with Android Pay, which is supported on Chrome for Android.
+shown with "Pay with Google", which is supported on Chrome for Android.
 
 ```
-const androidPayPaymentMethod = {
-  supportedMethods: 'https://android.com/pay',
+const payWithGooglePaymentMethod = {
+  supportedMethods: 'https://google.com/pay',
   data: {
-    merchantName: 'Android Pay Demo',
-    merchantId: '00000000000000000000',
-    environment: 'TEST',
-    allowedCardNetworks: ['AMEX', 'DISCOVER', 'MASTERCARD', 'VISA'],
-    paymentMethodTokenizationParameters: {
-      tokenizationType: 'GATEWAY_TOKEN',
-      parameters: {
-        'gateway': 'stripe',
-        'stripe:publishableKey': 'xx_demo_xxxxxxxxxxxxxxxxxxxxxxxx',
-        'stripe:version': '2016-07-06',
-      },
+    'environment': 'TEST',
+    'apiVersion': 1,
+    'allowedPaymentMethods': ['CARD', 'TOKENIZED_CARD'],
+    'paymentMethodTokenizationParameters': {
+      'tokenizationType': 'PAYMENT_GATEWAY',
+      // Check with your payment gateway on the parameters to pass.
+      'parameters': {}
     },
+    'cardRequirements': {
+      'allowedCardNetworks': ['AMEX', 'DISCOVER', 'MASTERCARD', 'VISA'],
+      'billingAddressRequired': true,
+      'billingAddressFormat': 'MIN'
+    },
+    'phoneNumberRequired': true,
+    'emailRequired': true,
+    'shippingAddressRequired': true
   },
 };
 ```
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-android-and-cards-short-blackout.png" alt="Android Pay example in the payment request UI.">
+    <img src="./images/deep-dive/pr-demo-android-and-cards-short-blackout.png" alt="Pay with Google example in the payment request UI.">
     <figcaption>
-      Android Pay example in payment request UI.
+      Pay with Google example in payment request UI.
     </figcaption>
   </figure>
 </div>
 
-We won't go into details of how to add Android Pay in this article, [we have a
-section dedicated to that here](/web/fundamentals/payments/android-pay).
+We won't go into details of how to add Pay with Google in this article, [we have
+a section dedicated to that here](/payments/mobile-web-setup).
+
+Note: To get access to all forms of payment available with Google, developers
+will need to implement the Pay with Google method. [Learn more
+here](/payments/).
 
 #### Edge Cases
 
