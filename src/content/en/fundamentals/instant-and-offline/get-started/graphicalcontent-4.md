@@ -279,6 +279,6 @@ You can find an excellent in-depth article about image optimization here:
 [https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization](http://tinyurl.com/pmy5d9f)
 
 And see the 
-[Wrap-up and Demo](/web/fundamentals/instant-and-offline/get-started/wrapupanddemo-7/)
+[Wrap-up and Demo](/web/fundamentals/instant-and-offline/get-started/wrapup-7)
 page for direct application of these and other techniques discussed in this set of articles.
 
