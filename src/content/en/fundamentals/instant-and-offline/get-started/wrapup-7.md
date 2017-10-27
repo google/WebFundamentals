@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-18 #}
-{# wf_published_on: 2017-10-18 #}
+{# wf_updated_on: 2017-10-26 #}
+{# wf_published_on: 2017-10-26 #}
 
 # Wrap-up and Demo {: .page-title }
 
@@ -13,7 +13,7 @@ We've now explored various ways to improve page load time. These techniques are 
 fruit" -- simple efforts that produce big performance wins. But talk is cheap; we have not 
 yet seen the techniques in action, so let's do that now.
 
-To demonstrate the techniques' effectiveness, we will run Lighthouse audits on different 
+To demonstrate the techniques' effectiveness, we will run various speed tests on different 
 versions of a web page, beginning with no optimization and progressing through some of 
 the speed-up techniques we've discussed, specifically text resource optimization, 
 graphics resource optimization, and HTTP request reduction.
