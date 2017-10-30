@@ -4,6 +4,18 @@
 
 Welcome to the new Web**Fundamentals**! An effort to showcase best practices and tools for modern Web Development.
 
+Table of Contents (ToC)
+========================
+
+* [What's Changed?](#what-has-changed-?)
+* [What stays the same?](#what-stays-the-same)
+* [Cloning the Repo](#cloning-the-repo)
+* [Getting set up](#getting-set-up)
+* [Build the auto generated files](#build-the-auto-generated-files)
+* [Start Local Server](#start-local-server)
+* [Update the Code Labs](#update-the-code-labs)
+* [Start the Development Server](#start-the-development-server)
+* [Test Your Changes Before Submitting a PR](#test-your-changes-before-submitting-a-pr)
 
 ### What's changed?
 
@@ -19,6 +31,8 @@ Welcome to the new Web**Fundamentals**! An effort to showcase best practices and
 * We want your contributions, either PRs, issues, whatever!
 * The latest is staged at https://web-central.appspot.com/web/
 
+---
+
 ## Cloning the repo
 If you have a high-bandwidth connection, I recommend starting with a fresh clone
 of the repo.
@@ -27,6 +41,8 @@ of the repo.
 git clone https://github.com/google/WebFundamentals.git
 ```
 
+---
+
 ## Getting set up
 The new DevSite infrastructure simplifies the dependencies a lot. Ensure
 you have a recent version of [Node](https://nodejs.org/en/) and the
@@ -34,6 +50,8 @@ you have a recent version of [Node](https://nodejs.org/en/) and the
 already installed.
 
 1. Run `npm install` (needed for the build process)
+
+---
 
 ## Build the auto-generated files
 Some files (contributors includes, some pages for updates, showcases, etc) are
@@ -45,6 +63,8 @@ need to re-build those files using:
 npm run build
 ```
 
+---
+
 ## Start Local Server
 
 To view the site locally, just run:
@@ -52,6 +72,8 @@ To view the site locally, just run:
 ```
 npm start
 ```
+
+---
 
 ## Update the code labs
 To update the Code Labs, you'll need the
@@ -62,8 +84,12 @@ access to the original Doc files. This will likely only work for Googlers.
 1. Run `tools/update-codelabs.sh`
 1. Check the latest changes into GitHub
 
+---
+
 ## Start the development server
 1. Run `npm start`
+
+---
 
 ## Test your changes before submitting a PR
 Please run your changes through npm test before submitting a PR. The test
@@ -74,3 +100,7 @@ if there are any errors! To run:
 ```
 npm test
 ```
+
+---
+
+<img src="https://avatars2.githubusercontent.com/u/1342004?s=200&v=4" width="50"></img>
