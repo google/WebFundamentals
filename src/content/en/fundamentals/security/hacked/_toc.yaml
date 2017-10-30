@@ -1,6 +1,9 @@
 toc:
 - title: Help, I've been hacked
   section:
+  - title: Overview
+    path: /web/fundamentals/security/hacked/
+    step_group: security-hacked
   - title: How do I know if my site is hacked?
     path: /web/fundamentals/security/hacked/how_do_I_know_if_site_hacked
     step_group: security-hacked
