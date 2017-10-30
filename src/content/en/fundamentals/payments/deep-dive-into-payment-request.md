@@ -329,7 +329,7 @@ const payWithGooglePaymentMethod = {
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-android-and-cards-short-blackout.png" alt="Pay with Google example in the payment request UI.">
+    <img src="./images/deep-dive/pr-demo-pwg-and-cards-short-blackout.png" alt="Pay with Google example in the payment request UI.">
     <figcaption>
       Pay with Google example in payment request UI.
     </figcaption>
