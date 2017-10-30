@@ -714,7 +714,7 @@ function testMarkdown(filename, contents, options) {
 
     remarkLintOptions.firstHeadingLevel = 1;
     if (isInclude) {
-      remarkLintOptions.firstHeadingLevel = 2;
+      remarkLintOptions.firstHeadingLevel = false;
     }
     if (pageType === PAGE_TYPES.LANDING) {
       remarkLintOptions.firstHeadingLevel = 2;
