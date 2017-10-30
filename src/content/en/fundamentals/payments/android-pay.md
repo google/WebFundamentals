@@ -10,8 +10,8 @@ description: Android Pay enables simple and secure purchases online and eliminat
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/sieke.html" %}
 
-Note: Integration with Android Pay on the Payment Request API is deprecated. Use
-Pay with Google method instead. [Learn more here](/payments/).
+Warning: Android Pay is now Pay with Google. To learn more about supporting Pay
+with Google, [visit here](/payments/).
 
 Android Pay enables simple and secure purchases online and eliminates the
 need for users to remember and manually enter their payment information.
