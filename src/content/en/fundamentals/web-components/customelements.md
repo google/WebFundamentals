@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
-{# wf_updated_on: 2017-08-14 #}
+{# wf_updated_on: 2017-10-29 #}
 {# wf_published_on: 2016-06-28 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -188,7 +188,9 @@ reactions**.
         state, settings up event listeners, or
         <a href="#shadowdom">creating shadow dom</a>.
         See the
-        <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance">spec</a>
+        <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance">
+        spec
+        </a>
         for restrictions on what you can do in the <code>constructor</code>.
       </td>
     </tr>
