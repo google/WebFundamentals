@@ -16,6 +16,7 @@
   "homepage": "https://github.com/google/WebFundamentals",
   "devDependencies": {
     "gulp-remark": "^3.0.0",
+    "inquirer": "^3.3.0",
     "jsdoc-baseline": "https://github.com/hegemonic/baseline/tarball/master"
   },
   "private": true,

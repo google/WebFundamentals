@@ -930,8 +930,6 @@ function testProject(filename, contents) {
           type: 'object',
           properties: {
             description: {type: 'string', required: true},
-            start: {type: 'string', required: true},
-            end: {type: 'string', required: true},
           },
           additionalProperties: false
         }

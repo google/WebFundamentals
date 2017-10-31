@@ -10,7 +10,7 @@ Welcome to the new Web**Fundamentals**! An effort to showcase best practices and
 * We're now using the [DevSite](https://developers.google.com/) infrastructure
   * New [style guide](https://petele-scratch.appspot.com/web/resources/style-guide)
   * New [widgets](https://petele-scratch.appspot.com/web/resources/widgets) allow inline JavaScript, common links, related guide and more
-* Jekyll has been eliminated, instead pages are rendered at request time
+* Jekyll has been eliminated. Instead, pages are rendered at request time
 * Front-matter has been eliminated from the markdown, but files now require a [simple set of tags](https://petele-scratch.appspot.com/web/resources/writing-an-article#yaml-front-matter)
 
 ### What stays the same?
@@ -36,7 +36,7 @@ already installed.
 1. Run `npm install` (needed for the build process)
 
 ## Build the auto-generated files
-Some files (contributors includes, some pages for updates, showcases, etc) are
+Some files (contributors includes, some pages for updates, showcases, etc.) are
 automatically generated. The first time you clone the repo and run `npm install`,
 this is done for you. However, when you add a case study, update, etc., you'll
 need to re-build those files using:
@@ -55,7 +55,7 @@ npm start
 
 ## Update the code labs
 To update the Code Labs, you'll need the
-[`claat`](https://github.com/googlecodelabs/tools/tree/master/claat) tool, and
+[`claat`](https://github.com/googlecodelabs/tools/tree/master/claat) tool and
 access to the original Doc files. This will likely only work for Googlers.
 
 1. Download the `claat` tool and place it in your `tools` directory.

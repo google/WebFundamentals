@@ -58,11 +58,11 @@ Meskipun Anda bebas menggunakan server web sendiri, codelab ini dirancang untuk 
 
 [Tautan](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-Setelah memasang aplikasi Web Server for Chrome, klik pada pintasan Apps di bilah bookmark: 
+Setelah memasang aplikasi Web Server for Chrome, klik pada pintasan Apps di bilah bookmark:
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-Pada jendela berikutnya, klik ikon Web Server: 
+Pada jendela berikutnya, klik ikon Web Server:
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -137,7 +137,7 @@ Buka Chrome DevTools untuk memeriksa konsol bagi `Service Worker is registered`,
 
 ### Mendapatkan Kunci Server Aplikasi
 
-Untuk bekerja dengan code lab ini Anda harus membuat beberapa kunci server aplikasi yang bisa kita lakukan dengan situs pendamping ini:  [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)
+Untuk bekerja dengan code lab ini Anda harus membuat beberapa kunci server aplikasi yang bisa kita lakukan dengan situs pendamping ini:  [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)
 
 Di sini Anda bisa membuat pasangan kunci Publik dan Privat.
 
@@ -528,7 +528,7 @@ Kita telah melihat bahwa aplikasi web kita mampu menampilkan notifikasi mengguna
 
 Biasanya proses ini akan mengirimkan langganan dari laman web ke backend dan backend kemudian akan memicu pesan push dengan membuat panggilan API ke endpoint di langganan.
 
-Ini di luar cakupan codelab ini, namun Anda bisa menggunakan situs pendamping ( [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) bagi code lab ini untuk memicu pesan push yang sebenarnya. Salin dan tempel langganan di bagian bawah laman Anda:
+Ini di luar cakupan codelab ini, namun Anda bisa menggunakan situs pendamping ( [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)) bagi code lab ini untuk memicu pesan push yang sebenarnya. Salin dan tempel langganan di bagian bawah laman Anda:
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
@@ -664,7 +664,7 @@ Jika Anda ingin menerapkan push pada situs, Anda mungkin tertarik untuk menambah
 
 
 ## Menemukan masalah, atau memiliki masukan? {: .hide-from-toc }
-Bantu kami menjadikan code lab lebih baik dengan mengirimkan 
+Bantu kami menjadikan code lab lebih baik dengan mengirimkan
 [masalah](https://github.com/googlechrome/push-notifications/issues) hari ini. Dan terima kasih!
 
 {# wf_devsite_translation #}

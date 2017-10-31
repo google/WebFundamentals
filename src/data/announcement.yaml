@@ -1,3 +1,4 @@
+enabled: true
 description: >
     <style>
       .devsite-banner-announcement {
@@ -15,8 +16,5 @@ description: >
         margin-right: 8px;
       }
     </style>
-    Don't forget the <b>Chrome Dev Summit</b>, starting Monday at 10:00am
-    (Pacific) and streaming live on YouTube.
-    <a href="https://developer.chrome.com/devsummit/schedule" class="gc-analytics-event" data-category="webFu" data-label="cds-banner-schedule">Schedule.</a>
-start: '2017-08-31T08:00:00Z'
-end: '2017-11-22T08:00:00Z'
+    Missed the action at this year's <b>Chrome Dev Summit</b>? Catch up with our playlist on YouTube.
+    <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcICUD5nBfRdAR6Fveosnqa5m" class="gc-analytics-event" data-category="webFu" data-label="cds-watch-playlist">Watch now.</a>

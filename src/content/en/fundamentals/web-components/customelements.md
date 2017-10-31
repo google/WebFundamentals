@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
-{# wf_updated_on: 2017-08-14 #}
+{# wf_updated_on: 2017-10-29 #}
 {# wf_published_on: 2016-06-28 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -167,191 +167,68 @@ element's properties, inspect its children (`this.children`), query nodes
    to be self-closing. Always write a closing tag
    (<code>&lt;app-drawer&gt;&lt;/app-drawer&gt;</code>).
 
-## Extending elements {: #extend}
-
-The Custom Elements API is useful for creating new HTML elements, but it's also
-useful for extending other custom elements or even the browser's built-in HTML.
-
-### Extending a custom element {: #extendcustomeel}
-
-Extending another custom element is done by extending its class definition.
-
-**Example** - create `<fancy-app-drawer>` that extends `<app-drawer>`:
-
-
-    class FancyDrawer extends AppDrawer {
-      constructor() {
-        super(); // always call super() first in the ctor. This also calls the extended class' ctor.
-        ...
-      }
-
-      toggleDrawer() {
-        // Possibly different toggle implementation?
-        // Use ES2015 if you need to call the parent method.
-        // super.toggleDrawer()
-      }
-
-      anotherMethod() {
-        ...
-      }
-    }
-
-    customElements.define('fancy-app-drawer', FancyDrawer);
-
-
-### Extending native HTML elements {: #extendhtml}
-
-Note: At time of writing, no browser has implemented customized built-in
-elements. Chrome plans to implement them
-([status](https://www.chromestatus.com/feature/4670146924773376)) but other
-browsers have expressed distaste for implementing the <code>is=""</code> syntax.
-This is unfortunate for accessibility and progressive enhancement. If you think
-extending native HTML elements is useful, voice your thoughts <a
-href='https://github.com/w3c/webcomponents/issues/509'>on Github</a>.
-
-Let's say you wanted to create a fancier `<button>`. Instead of replicating the
-behavior and functionality of `<button>`, a better option is to progressively
-enhance the existing element using custom elements.
-
-A **customized built-in element** is a custom element that extends one of the
-browser's built-in HTML tags. The primary benefit of extending an existing
-element is to gain all of its features (DOM properties, methods, accessibility).
-There's no better way to write a [progressive web
-app](/web/progressive-web-apps/) than to **progressively enhance existing HTML
-elements**.
-
-To extend an element, you'll need to create a class definition that inherits
-from the correct DOM interface. For example, a custom element that extends
-`<button>` needs to inherit from `HTMLButtonElement` instead of `HTMLElement`.
-Similarly, an element that extends `<img>` needs to extend `HTMLImageElement`.
-
-**Example** - extending `<button>`:
-
-
-    // See https://html.spec.whatwg.org/multipage/indices.html#element-interfaces
-    // for the list of other DOM interfaces.
-    class FancyButton extends HTMLButtonElement {
-      constructor() {
-        super(); // always call super() first in the ctor.
-        this.addEventListener('click', e => this.drawRipple(e.offsetX, e.offsetY));
-      }
-
-      // Material design ripple animation.
-      drawRipple(x, y) {
-        let div = document.createElement('div');
-        div.classList.add('ripple');
-        this.appendChild(div);
-        div.style.top = `${y - div.clientHeight/2}px`;
-        div.style.left = `${x - div.clientWidth/2}px`;
-        div.style.backgroundColor = 'currentColor';
-        div.classList.add('run');
-        div.addEventListener('transitionend', e => div.remove());
-      }
-    }
-
-    customElements.define('fancy-button', FancyButton, {extends: 'button'});
-
-
-Notice that the call to `define()` changes slightly when extending a native
-element. The required third parameter tells the browser which tag you're
-extending. This is necessary because many HTML tags share the same DOM
-interface. `<section>`, `<address>`, and `<em>` (among others) all share
-`HTMLElement`; both `<q>` and `<blockquote>` share `HTMLQuoteElement`; etc..
-Specifying `{extends: 'blockquote'}` lets the browser know you're creating a
-souped-up `<blockquote>` instead of a `<q>`. See [the HTML
-spec](https://html.spec.whatwg.org/multipage/indices.html#element-interfaces)
-for the full list of HTML's DOM interfaces.
-
-Note: Extending `HTMLButtonElement` endows our fancy button with all the DOM
-properties/methods of `<button>`. That checks off a bunch of stuff we don't have
-to implement ourselves: `disabled` property, `click()` method, `keydown`
-listeners, `tabindex` management. Instead, our focus can be progressively
-enhancing `<button>` with custom functionality, namely, the `drawRipple()`
-method. Less code, more reuse!
-
-Consumers of a customized built-in element can use it in several ways. They can
-declare it by adding the `is=""` attribute on the native tag:
-
-
-    <!-- This <button> is a fancy button. -->
-    <button is="fancy-button" disabled>Fancy button!</button>
-
-
-create an instance in JavaScript:
-
-
-    // Custom elements overload createElement() to support the is="" attribute.
-    let button = document.createElement('button', {is: 'fancy-button'});
-    button.textContent = 'Fancy button!';
-    button.disabled = true;
-    document.body.appendChild(button);
-
-
-or use the `new` operator:
-
-
-    let button = new FancyButton();
-    button.textContent = 'Fancy button!';
-    button.disabled = true;
-
-
-Here's another example that extends `<img>`.
-
-**Example** - extending `<img>`:
-
-
-    customElements.define('bigger-img', class extends Image {
-      // Give img default size if users don't specify.
-      constructor(width=50, height=50) {
-        super(width * 10, height * 10);
-      }
-    }, {extends: 'img'});
-
-
-Users declare this component as:
-
-
-    <!-- This <img> is a bigger img. -->
-    <img is="bigger-img" width="15" height="20">
-
-
-or create an instance in JavaScript:
-
-
-    const BiggerImage = customElements.get('bigger-img');
-    const image = new BiggerImage(15, 20); // pass ctor values like so.
-    console.assert(image.width === 150);
-    console.assert(image.height === 200);
-
 ## Custom element reactions {: #reactions}
 
 A custom element can define special lifecycle hooks for running code during
 interesting times of its existence. These are called **custom element
 reactions**.
 
-<table> <thead> <tr> <th>Name</th> <th>Called when</th> </tr> </thead> <tbody>
-  <tr> <td><code>constructor</code></td> <td>An instance of the element is
-  created or <a href="#upgrades">upgraded</a>. Useful for initializing state,
-  settings up event listeners, or <a href="#shadowdom">creating shadow dom</a>.
-  See the <a
-  href="https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance">spec</a>
-  for restrictions on what you can do in the <code>constructor</code>.</td>
-  </tr> <tr> <td><code>connectedCallback</code></td> <td>Called every time the
-  element is inserted into the DOM. Useful for running setup code, such as
-  fetching resources or rendering. Generally, you should try to delay work until
-  this time.</td> </tr> <tr> <td><code>disconnectedCallback</code></td>
-  <td>Called every time the element is removed from the DOM. Useful for running
-  clean up code (removing event listeners, etc.).</td> </tr> <tr>
-  <td><code>attributeChangedCallback(attrName, oldVal, newVal)</code></td>
-  <td>An attribute was added, removed, updated, or replaced. Also called for
-  initial values when an element is created by the parser, or <a
-  href="#upgrades">upgraded</a>. <b>Note:</b> only attributes listed in the
-  <code>observedAttributes</code> property will receive this callback.</td>
-  </tr> <tr> <td><code>adoptedCallback()</code></td> <td>The custom element has
-  been moved into a new <code>document</code> (e.g. someone called
-  <code>document.adoptNode(el)</code>).</td> </tr> </tbody> </table>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Called when</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>constructor</code></td>
+      <td>An instance of the element is
+        created or <a href="#upgrades">upgraded</a>. Useful for initializing
+        state, settings up event listeners, or
+        <a href="#shadowdom">creating shadow dom</a>.
+        See the
+        <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance">
+        spec
+        </a>
+        for restrictions on what you can do in the <code>constructor</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><code>connectedCallback</code></td>
+      <td>Called every time the
+        element is inserted into the DOM. Useful for running setup code, such as
+        fetching resources or rendering. Generally, you should try to delay work
+        until this time.
+      </td>
+    </tr>
+    <tr>
+      <td><code>disconnectedCallback</code></td>
+      <td>Called every time the element is removed from the DOM. Useful for
+        running clean up code.
+      </td>
+    </tr>
+    <tr>
+      <td><code>attributeChangedCallback(attrName, oldVal, newVal)</code></td>
+      <td>Called when an <a href="#attrchanges">observed attribute</a> has been
+        added, removed, updated, or replaced. Also called for initial values
+        when an element is created by the parser, or
+        <a href="#upgrades">upgraded</a>. <b>Note:</b> only
+        attributes listed in the <code>observedAttributes</code> property will
+        receive this callback.
+      </td>
+    </tr>
+    <tr>
+      <td><code>adoptedCallback()</code></td>
+      <td>The
+        custom element has been moved into a new <code>document</code> (e.g.
+        someone called <code>document.adoptNode(el)</code>).
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-The browser calls the `attributeChangedCallback()` for any attributes
+Note: The browser calls the `attributeChangedCallback()` for any attributes
 whitelisted in the `observedAttributes` array (see [Observing changes to
 attributes](#attrchanges)). Essentially, this is a performance optimization.
 When users change a common attribute like `style` or `class`, you don't want to
@@ -387,38 +264,6 @@ and opens a connection to IndexedDB in `connectedCallback()`, do the necessary
 cleanup work in `disconnectedCallback()`. But be careful! You can't rely on your
 element being removed from the DOM in all circumstances. For example,
 `disconnectedCallback()` will never be called if the user closes the tab.
-
-**Example:** moving a custom element into another document, observing its
-`adoptedCallback()`:
-
-
-    function createWindow(srcdoc) {
-      let p = new Promise(resolve => {
-        let f = document.createElement('iframe');
-        f.srcdoc = srcdoc || '';
-        f.onload = e => {
-          resolve(f.contentWindow);
-        };
-        document.body.appendChild(f);
-      });
-      return p;
-    }
-
-    // 1. Create two iframes, w1 and w2.
-    Promise.all([createWindow(), createWindow()])
-      .then(([w1, w2]) => {
-        // 2. Define a custom element in w1.
-        w1.customElements.define('x-adopt', class extends w1.HTMLElement {
-          adoptedCallback() {
-            console.log('Adopted!');
-          }
-        });
-        let a = w1.document.createElement('x-adopt');
-
-        // 3. Adopts the custom element into w2 and invokes its adoptedCallback().
-        w2.document.body.appendChild(a);
-      });
-
 
 ## Properties and attributes
 
@@ -610,27 +455,35 @@ Declaring this tag will produce:
      <b>I'm an x-foo-with-markup!</b>
     </x-foo-with-markup>
 
-{% framebox height="70px" %} <style> .demoarea { padding: 8px; border: 1px
-dashed #ccc;
-}
-.demoarea::before { display: block; content: 'DEMO';
-}
+{% framebox height="100px" %}
+<style>
+  .demoarea {
+    padding: 8px; border: 1px dashed #ccc;
+  }
+  .demoarea::before {
+    display: block; content: 'DEMO';
+  }
 </style>
 
-<div class="demoarea"> <x-foo-with-markup></x-foo-with-markup> </div>
+<div class="demoarea">
+  <x-foo-with-markup></x-foo-with-markup>
+</div>
 
- <script>
-const supportsCustomElementsV1 = 'customElements' in window;
+<script>
+  const supportsCustomElementsV1 = 'customElements' in window;
 
-if(supportsCustomElementsV1) { customElements.define('x-foo-with-markup', class
-  extends HTMLElement { connectedCallback() { this.innerHTML = "<b>I'm an
-  x-foo-with-markup!</b>";
+  if(supportsCustomElementsV1) {
+    customElements.define('x-foo-with-markup', class extends HTMLElement {
+      connectedCallback() {
+        this.innerHTML = "<b>I'm an x-foo-with-markup!</b>";
+      }
+    });
+  } else {
+    if (self.frameElement) {
+      self.frameElement.style.display = 'none';
     }
-  });
-} else { if (self.frameElement) { self.frameElement.style.display = 'none';
   }
-}
- </script>
+</script>
 {% endframebox %}
 
 Note: Overwriting an element's children with new content is generally not a good
@@ -658,20 +511,29 @@ entire app within a single tag:
 To use Shadow DOM in a custom element, call `this.attachShadow` inside your
 `constructor`:
 
+    let tmpl = document.createElement('template');
+    tmpl.innerHTML = `
+      <style>:host { ... }</style> <!-- look ma, scoped styles -->
+      <b>I'm in shadow dom!</b>
+      <slot></slot>
+    `;
+
     customElements.define('x-foo-shadowdom', class extends HTMLElement {
       constructor() {
         super(); // always call super() first in the ctor.
 
         // Attach a shadow root to the element.
         let shadowRoot = this.attachShadow({mode: 'open'});
-        shadowRoot.innerHTML = `
-          <style>:host { ... }</style> <!-- look ma, scoped styles -->
-          <b>I'm in shadow dom!</b>
-          <slot></slot>
-        `;
+        shadowRoot.appendChild(tmpl.content.cloneNode(true));
       }
       ...
     });
+
+Note: In the above snippet we use a `template` element to clone DOM, instead of
+setting the `innerHTML` of the `shadowRoot`. This technique cuts down on HTML
+parse costs because the content of the template is only parsed once, whereas
+calling `innerHTML` on the `shadowRoot` will parse the HTML for each instance.
+We'll talk more about templates in the next section.
 
 Example usage:
 
@@ -681,35 +543,51 @@ Example usage:
 
     <!-- renders as -->
     <x-foo-shadowdom>
-      <b>I'm in shadow dom!</b>
-      <slot></slot>
+      #shadow-root
+        <b>I'm in shadow dom!</b>
+        <slot></slot> <!-- slotted content appears here -->
     </x-foo-shadowdom>
 
-{% framebox height="130px" %} <style> .demoarea { padding: 8px; border: 1px
-dashed #ccc;
-}
+{% framebox height="142px" %}
+<style>
+  .demoarea {
+    padding: 8px; border: 1px dashed #ccc;
+  }
 
-.demoarea::before { content: 'DEMO'; display: block;
-}
+  .demoarea::before {
+    content: 'DEMO'; display: block;
+  }
 </style>
 
-<div class="demoarea"> <x-foo-shadowdom> <p><b>User's</b> custom text</p>
-  </x-foo-shadowdom> </div>
+<div class="demoarea">
+  <x-foo-shadowdom>
+    <p><b>User's</b> custom text</p>
+  </x-foo-shadowdom>
+</div>
 
- <script>
-const supportsCustomElementsV1 = 'customElements' in window;
+<script>
+  const supportsCustomElementsV1 = 'customElements' in window;
 
-if(supportsCustomElementsV1) { customElements.define('x-foo-shadowdom', class
-  extends HTMLElement { constructor() { super(); // always call super() first in
-  the ctor. let shadowRoot = this.attachShadow({mode: 'open'});
-  shadowRoot.innerHTML = ` <b>I'm in shadow dom!</b> <slot></slot>
-      `;
+  if(supportsCustomElementsV1) {
+    let tmpl = document.createElement('template');
+    tmpl.innerHTML = `
+      <b>I'm in shadow dom!</b>
+      <slot></slot>
+    `;
+
+    customElements.define('x-foo-shadowdom', class extends HTMLElement {
+      constructor() {
+        super(); // always call super() first in the ctor.
+        let shadowRoot = this.attachShadow({mode: 'open'});
+        shadowRoot.appendChild(tmpl.content.cloneNode(true));
+      }
+    });
+  } else {
+    if (self.frameElement) {
+      self.frameElement.style.display = 'none';
     }
-  });
-} else { if (self.frameElement) { self.frameElement.style.display = 'none';
   }
-}
- </script>
+</script>
 {% endframebox %}
 
 ### Creating elements from a `<template>` {: #fromtemplate}
@@ -726,26 +604,27 @@ structure of a custom element**.
 
     <template id="x-foo-from-template">
       <style>
-        p { color: orange; }
+        p { color: green; }
       </style>
       <p>I'm in Shadow DOM. My markup was stamped from a &lt;template&gt;.</p>
     </template>
 
     <script>
+      let tmpl = document.querySelector('#x-foo-from-template');
+      // If your code is inside of an HTML Import you'll need to change the above line to:
+      // let tmpl = document.currentScript.ownerDocument.querySelector('#x-foo-from-template');
+
       customElements.define('x-foo-from-template', class extends HTMLElement {
         constructor() {
           super(); // always call super() first in the ctor.
           let shadowRoot = this.attachShadow({mode: 'open'});
-          const t = document.querySelector('#x-foo-from-template');
-          const instance = t.content.cloneNode(true);
-          shadowRoot.appendChild(instance);
+          shadowRoot.appendChild(tmpl.content.cloneNode(true));
         }
         ...
       });
     </script>
 
-
-These few lines of code pack a punch. Let's understanding the key things going
+These few lines of code pack a punch. Let's understand the key things going
 on:
 
 1. We're defining a new element in HTML: `<x-foo-from-template>`
@@ -753,34 +632,44 @@ on:
 3. The element's DOM is local to the element thanks to Shadow DOM
 4. The element's internal CSS is scoped to the element thanks to Shadow DOM
 
-{% framebox height="100px" %} <style> .demoarea { padding: 8px; border: 1px
-dashed #ccc;
+{% framebox height="120px" %}
+<style>
+.demoarea {
+  padding: 8px; border: 1px dashed #ccc;
 }
 
-.demoarea::before { content: 'DEMO'; display: block;
+.demoarea::before {
+  content: 'DEMO'; display: block;
 }
 </style>
 
-<div class="demoarea"> <x-foo-from-template></x-foo-from-template> </div>
+<div class="demoarea">
+  <x-foo-from-template></x-foo-from-template>
+</div>
 
-<template id="x-foo-from-template"> <style>:host p { color: orange; }</style>
+<template id="x-foo-from-template">
+  <style>:host p { color: green; }</style>
   <p>I'm in Shadow DOM. My markup was stamped from a &lt;template&gt;.</p>
-  </template>
+</template>
 
- <script>
-const supportsCustomElementsV1 = 'customElements' in window;
+<script>
+  const supportsCustomElementsV1 = 'customElements' in window;
 
-if(supportsCustomElementsV1) { customElements.define('x-foo-from-template',
-  class extends HTMLElement { constructor() { super(); let shadowRoot =
-  this.attachShadow({mode: 'open'}); const t =
-  document.querySelector('#x-foo-from-template');
-  shadowRoot.appendChild(t.content.cloneNode(true));
+  if(supportsCustomElementsV1) {
+    customElements.define('x-foo-from-template', class extends HTMLElement {
+      constructor() {
+        super();
+        let shadowRoot = this.attachShadow({mode: 'open'});
+        const t = document.querySelector('#x-foo-from-template');
+        shadowRoot.appendChild(t.content.cloneNode(true));
+      }
+    });
+  } else {
+    if (self.frameElement) {
+      self.frameElement.style.display = 'none';
     }
-  });
-} else { if (self.frameElement) { self.frameElement.style.display = 'none';
   }
-}
- </script>
+</script>
 {% endframebox %}
 
 ## Styling a custom element {: #styling}
@@ -846,6 +735,160 @@ components and fading them in when they become defined.
 
 After `<app-drawer>` becomes defined, the selector (`app-drawer:not(:defined)`)
 no longer matches.
+
+## Extending elements {: #extend}
+
+The Custom Elements API is useful for creating new HTML elements, but it's also
+useful for extending other custom elements or even the browser's built-in HTML.
+
+### Extending a custom element {: #extendcustomeel}
+
+Extending another custom element is done by extending its class definition.
+
+**Example** - create `<fancy-app-drawer>` that extends `<app-drawer>`:
+
+
+    class FancyDrawer extends AppDrawer {
+      constructor() {
+        super(); // always call super() first in the ctor. This also calls the extended class' ctor.
+        ...
+      }
+
+      toggleDrawer() {
+        // Possibly different toggle implementation?
+        // Use ES2015 if you need to call the parent method.
+        // super.toggleDrawer()
+      }
+
+      anotherMethod() {
+        ...
+      }
+    }
+
+    customElements.define('fancy-app-drawer', FancyDrawer);
+
+
+### Extending native HTML elements {: #extendhtml}
+
+Let's say you wanted to create a fancier `<button>`. Instead of replicating the
+behavior and functionality of `<button>`, a better option is to progressively
+enhance the existing element using custom elements.
+
+A **customized built-in element** is a custom element that extends one of the
+browser's built-in HTML tags. The primary benefit of extending an existing
+element is to gain all of its features (DOM properties, methods, accessibility).
+There's no better way to write a [progressive web
+app](/web/progressive-web-apps/) than to **progressively enhance existing HTML
+elements**.
+
+Warning: At time of writing, no browser has implemented customized built-in
+elements ([status](https://www.chromestatus.com/feature/4670146924773376)).
+This is unfortunate for accessibility and progressive enhancement. If you think
+extending native HTML elements is useful, voice your thoughts <a
+href='https://github.com/w3c/webcomponents/issues/509'>on Github</a>.
+
+To extend an element, you'll need to create a class definition that inherits
+from the correct DOM interface. For example, a custom element that extends
+`<button>` needs to inherit from `HTMLButtonElement` instead of `HTMLElement`.
+Similarly, an element that extends `<img>` needs to extend `HTMLImageElement`.
+
+**Example** - extending `<button>`:
+
+
+    // See https://html.spec.whatwg.org/multipage/indices.html#element-interfaces
+    // for the list of other DOM interfaces.
+    class FancyButton extends HTMLButtonElement {
+      constructor() {
+        super(); // always call super() first in the ctor.
+        this.addEventListener('click', e => this.drawRipple(e.offsetX, e.offsetY));
+      }
+
+      // Material design ripple animation.
+      drawRipple(x, y) {
+        let div = document.createElement('div');
+        div.classList.add('ripple');
+        this.appendChild(div);
+        div.style.top = `${y - div.clientHeight/2}px`;
+        div.style.left = `${x - div.clientWidth/2}px`;
+        div.style.backgroundColor = 'currentColor';
+        div.classList.add('run');
+        div.addEventListener('transitionend', e => div.remove());
+      }
+    }
+
+    customElements.define('fancy-button', FancyButton, {extends: 'button'});
+
+
+Notice that the call to `define()` changes slightly when extending a native
+element. The required third parameter tells the browser which tag you're
+extending. This is necessary because many HTML tags share the same DOM
+interface. `<section>`, `<address>`, and `<em>` (among others) all share
+`HTMLElement`; both `<q>` and `<blockquote>` share `HTMLQuoteElement`; etc..
+Specifying `{extends: 'blockquote'}` lets the browser know you're creating a
+souped-up `<blockquote>` instead of a `<q>`. See [the HTML
+spec](https://html.spec.whatwg.org/multipage/indices.html#element-interfaces)
+for the full list of HTML's DOM interfaces.
+
+Note: Extending `HTMLButtonElement` endows our fancy button with all the DOM
+properties/methods of `<button>`. That checks off a bunch of stuff we don't have
+to implement ourselves: `disabled` property, `click()` method, `keydown`
+listeners, `tabindex` management. Instead, our focus can be progressively
+enhancing `<button>` with custom functionality, namely, the `drawRipple()`
+method. Less code, more reuse!
+
+Consumers of a customized built-in element can use it in several ways. They can
+declare it by adding the `is=""` attribute on the native tag:
+
+
+    <!-- This <button> is a fancy button. -->
+    <button is="fancy-button" disabled>Fancy button!</button>
+
+
+create an instance in JavaScript:
+
+
+    // Custom elements overload createElement() to support the is="" attribute.
+    let button = document.createElement('button', {is: 'fancy-button'});
+    button.textContent = 'Fancy button!';
+    button.disabled = true;
+    document.body.appendChild(button);
+
+
+or use the `new` operator:
+
+
+    let button = new FancyButton();
+    button.textContent = 'Fancy button!';
+    button.disabled = true;
+
+
+Here's another example that extends `<img>`.
+
+**Example** - extending `<img>`:
+
+
+    customElements.define('bigger-img', class extends Image {
+      // Give img default size if users don't specify.
+      constructor(width=50, height=50) {
+        super(width * 10, height * 10);
+      }
+    }, {extends: 'img'});
+
+
+Users declare this component as:
+
+
+    <!-- This <img> is a bigger img. -->
+    <img is="bigger-img" width="15" height="20">
+
+
+or create an instance in JavaScript:
+
+
+    const BiggerImage = customElements.get('bigger-img');
+    const image = new BiggerImage(15, 20); // pass ctor values like so.
+    console.assert(image.width === 150);
+    console.assert(image.height === 200);
 
 ## Misc details {: #details}
 

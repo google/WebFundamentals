@@ -8,6 +8,7 @@ book_path: /web/tools/_book.yaml
 
 <img src="images/dataset.png" class="attempt-right" alt="">
 
+<<<<<<< HEAD
 The Chrome User Experience Report is a public dataset of key user experience 
 metrics for popular origins on the web, as experienced by Chrome users under 
 real-world conditions.
@@ -147,7 +148,7 @@ particular origin, split by key dimensions.
   </tr>
 </table>
 
-For example, the above shows a sample sample record from the 
+For example, the above shows a sample record from the 
 Chrome User Experience Report, which indicates that 12.3% of page loads had a 
 “first paint time” measurement in the range of 1000-1200 milliseconds when 
 loading “http://example.com” on a “phone” device over a ”4G”-like connection. 

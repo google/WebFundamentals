@@ -74,7 +74,6 @@ function getFullFeedEntries(articles) {
 
 function generateFeeds(files, options) {
   gutil.log(' ', 'Generating RSS and ATOM feeds...');
-  var lastUpdated = files[0].dateUpdated;
   var context = {
     title: options.title,
     description: options.description,
@@ -90,9 +89,12 @@ function generateFeeds(files, options) {
     context.baseUrl += options.section + '/';
     context.analyticsQS = context.analyticsQS.replace('root_feed', options.section + '_feed');
   }
-  const now = moment().utcOffset(0);
-  context.rssPubDate = now.format('DD MMM YYYY HH:mm:ss [GMT]');
-  context.atomPubDate = now.format('YYYY-MM-DDTHH:mm:ss[Z]');
+  // Note - use last updated instead of now to prevent feeds from being
+  // generated every single time. This will only generate if the feeds are
+  // actually updated.
+  const lastUpdated = moment(files[0].dateUpdated).utcOffset(0);
+  context.rssPubDate = lastUpdated.format('DD MMM YYYY HH:mm:ss [GMT]');
+  context.atomPubDate = lastUpdated.format('YYYY-MM-DDTHH:mm:ss[Z]');
 
   var template = path.join(GLOBAL.WF.src.templates, 'atom.xml');
   var outputFile = path.join(options.outputPath, 'atom.xml');
@@ -118,7 +120,10 @@ function generatePodcastFeed(files, options) {
   if (options.baseUrl) {
     context.baseUrl = options.baseUrl;
   }
-  const lastUpdated = moment().utcOffset(0);
+  // Note - use last updated instead of now to prevent feeds from being
+  // generated every single time. This will only generate if the feeds are
+  // actually updated.
+  const lastUpdated = moment(files[0].datePublished).utcOffset(0);
   context.rssPubDate = lastUpdated.format('DD MMM YYYY HH:mm:ss [GMT]');
   var template = path.join(GLOBAL.WF.src.templates, 'shows', 'podcast.xml');
   var outputFile = path.join(options.outputPath, 'feed.xml');
