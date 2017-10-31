@@ -175,7 +175,7 @@ In order to validate your markup on Facebook, you can use tools such as:
 * [Debugger](https://developers.facebook.com/tools/debug/){: .external }
 
 ## Use Twitter Cards to provide rich snippets on Twitter
-[Twitter Cards](https://dev.twitter.com/docs/cards) are an extension to the
+[Twitter Cards](https://dev.twitter.com/cards/overview) are an extension to the
 Open [Graph Protocol applicable for Twitter](https://twitter.com/){: .external }. They allow
 you to add media attachments like images and video to Tweets with a link to
 your web page. By adding the appropriate metadata, Tweets with links to your
