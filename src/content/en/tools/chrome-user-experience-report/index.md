@@ -8,7 +8,6 @@ book_path: /web/tools/_book.yaml
 
 <img src="images/dataset.png" class="attempt-right" alt="">
 
-<<<<<<< HEAD
 The Chrome User Experience Report is a public dataset of key user experience 
 metrics for popular origins on the web, as experienced by Chrome users under 
 real-world conditions.
