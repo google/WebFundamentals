@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-10-27 #}
+{# wf_updated_on: 2017-11-01 #}
 
 # Deep Dive into the Payment Request API {: .page-title }
 
@@ -340,8 +340,8 @@ We won't go into details of how to add Pay with Google in this article, [we have
 a section dedicated to that here](/payments/mobile-web-setup).
 
 Note: To get access to all forms of payment available with Google, developers
-will need to implement the Pay with Google method. [Learn more
-here](/payments/).
+will need to implement the Pay with Google method. Refer to the [Google Payment
+API](/payments/) docs for more information.
 
 #### Edge Cases
 
