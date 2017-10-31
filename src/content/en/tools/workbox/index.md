@@ -171,13 +171,15 @@ modularity. It aims to reduce friction with a unified interface, while keeping
 the overall library size small. Same great features, easier to use and
 cross-browser compatible.
 
-## A Progress Web App Migration @ Google I/O 2017
+## Workbox: Flexible PWA Libraries @ Chrome Dev Summit 2017
 
-In this talk Ewa discusses how she migrated womentechmakers.com's existing
-site to a PWA and she uses Workbox to help with the service worker development.
+In this talk, Jeff Posnick gives an overview of Workbox's support for caching
+strategies, precaching, and handling navigation requests. It's filled throughout
+with real-world examples of how companies like Pinterest and WIRED are using
+Workbox in production.
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="fyi7auD5MzU"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="DtuJ55tmjps"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
