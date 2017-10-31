@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: Service Worker Libraries.
 
 {# wf_published_on: 2017-10-04 #}
-{# wf_updated_on: 2017-10-09 #}
+{# wf_updated_on: 2017-10-31 #}
 
 <style>
 .index__install-options {
