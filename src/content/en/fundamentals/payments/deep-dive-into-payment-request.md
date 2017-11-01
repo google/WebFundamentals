@@ -132,7 +132,7 @@ constructor, starting with the supported payment methods.
 ### Defining Supported Payment Methods
 
 The Payment Request API is designed to support credit and debit card payments
-as well as third party payment methods (such as Android Pay).
+as well as third party payment methods (such as Pay with Google).
 
 You must supply an array of objects indicating your supported payment methods
 where each payment method must include a  `supportedMethods` parameter that
@@ -152,7 +152,7 @@ new PaymentRequest(supportedPaymentMethods, paymentDetails, options);
 ```
 
 First we'll look at how to define support for credit and debit cards, followed
-by a brief look at supporting Android Pay.
+by a brief look at supporting Pay with Google.
 
 ### Payment Method: 'basic-card'
 
@@ -356,17 +356,18 @@ error:
 `DOMException: The payment method is not supported`
 
 This shouldn't be a problem if you include 'basic-card' as a supported payment
-method. If, however, you only support a third party payment method, like Android
-Pay, there is a strong chance that it won't be supported by a browser that
-supports the Payment Request API.
+method. If, however, you only support a third party payment method, like Pay
+with Google, there is a strong chance that it won't be supported by a browser
+that supports the Payment Request API.
 
 **Third Party Payment Method Skipping the Payment Request UI**
-In the screenshot above you can see "Android Pay" as the pre-selected payment
-option. This has occurred because the example supports both Android Pay and basic
-cards. If you define Android Pay as your **only** payment method and the browser
-supports it, the browser can (and Chrome does, at the time of writing) skip the
-payment request UI altogether after the `show()` method is called. Users will be
-taken straight to the Android Pay app to complete the payment.
+In the screenshot above you can see "Pay with Google" as the pre-selected
+payment option. This has occurred because the example supports both Pay with
+Google and basic cards. If you define Pay with Google as your **only** payment
+method and the browser supports it, the browser can (and Chrome does, at the
+time of writing) skip the payment request UI altogether after the `show()`
+method is called. Users will be taken straight to the Pay with Google app to
+complete the payment.
 
 ### Defining Payment Details
 
@@ -763,8 +764,8 @@ This will be one of the values passed into the `supportedMethods` objects ("basi
 </table>
 
 The details object is only standardized for the basic-card payment method. For
-third party payment methods, like Android Pay, the details object's content will
-be documented by the payment method.
+third party payment methods, like Pay with Google, the details object's content
+will be documented by the payment method.
 
 For 'basic-card' payments, the details object will contain the `billingAddress`,
 `cardNumber`, `cardSecurityCode`, `cardholderName`, `expiryMonth`, and `expiryYear`.
