@@ -103,34 +103,40 @@ function genericComparator(a, b) {
   return 0;
 }
 
-function publishedComparator(a, b) {
-  var aPublished = moment(a.datePublished).unix();
-  var bPublished = moment(b.datePublished).unix();
-  if (aPublished === bPublished) {
-    aPublished = a.title;
-    bPublished = b.title;
+function publishedComparator(aObj, bObj) {
+  const aVal = moment(aObj.datePublished);
+  const bVal = moment(bObj.datePublished);
+  if (aVal.isBefore(bVal)) {
+    return 1;
+  } else if (aVal.isAfter(bVal)) {
+    return -1;
+  } else {
+    return genericComparator(aObj.title, bObj.title);
   }
-  return genericComparator(aPublished, bPublished);
 }
 
-function updatedComparator(a, b) {
-  var aPublished = moment(a.dateUpdated).unix();
-  var bPublished = moment(b.dateUpdated).unix();
-  if (aPublished === bPublished) {
-    aPublished = a.title;
-    bPublished = b.title;
+function updatedComparator(aObj, bObj) {
+  const aVal = moment(aObj.dateUpdated);
+  const bVal = moment(bObj.dateUpdated);
+  if (aVal.isBefore(bVal)) {
+    return 1;
+  } else if (aVal.isAfter(bVal)) {
+    return -1;
+  } else {
+    return genericComparator(aObj.title, bObj.title);
   }
-  return genericComparator(aPublished, bPublished);
 }
 
 function featuredComparator(aObj, bObj) {
-  var a = moment(aObj.featuredDate).unix();
-  var b = moment(bObj.featuredDate).unix();
-  if (a === b) {
-    a = moment(aObj.dateUpdated).unix();
-    b = moment(bObj.dateUpdated).unix();
+  const aVal = moment(aObj.datePublished);
+  const bVal = moment(bObj.datePublished);
+  if (aVal.isBefore(bVal)) {
+    return 1;
+  } else if (aVal.isAfter(bVal)) {
+    return -1;
+  } else {
+    return updatedComparator(aObj, bObj);
   }
-  return genericComparator(a, b);
 }
 
 function getRegEx(regEx, content, defaultResponse) {
@@ -168,6 +174,7 @@ function readMetadataForFile(file) {
     imageSquare: wfRegEx.getMatch(wfRegEx.RE_IMAGE_SQUARE, content),
     datePublished: published.format(DATE_FORMAT_STANDARDIZED),
     datePublishedPretty: published.format(DATE_FORMAT_PRETTY),
+    monthPublished: published.format('MM'),
     yearPublished: published.format('YYYY'),
     dateUpdated: updated.format(DATE_FORMAT_STANDARDIZED),
     dateUpdatedPretty: updated.format(DATE_FORMAT_PRETTY),
@@ -238,6 +245,21 @@ function splitByYear(files) {
   return result;
 }
 
+function splitByMonth(files) {
+  var result = [];
+  files.forEach(function(file) {
+    const month = parseInt(file.monthPublished, 10);
+    if (!result[month]) {
+      result[month] = {
+        title: moment.months()[month - 1],
+        articles: []
+      };
+    }
+    result[month].articles.push(file);
+  });
+  return result;
+}
+
 function splitByAuthor(files) {
   var result = {};
   files.forEach(function(file) {
@@ -260,4 +282,5 @@ exports.publishedComparator = publishedComparator;
 exports.updatedComparator = updatedComparator;
 exports.featuredComparator = featuredComparator;
 exports.splitByYear = splitByYear;
+exports.splitByMonth = splitByMonth;
 exports.splitByAuthor = splitByAuthor;

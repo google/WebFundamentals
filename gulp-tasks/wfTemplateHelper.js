@@ -13,6 +13,7 @@ var mkdirp = require('mkdirp');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
 var wfRegEx = require('./wfRegEx');
+const wfHelper = require('./wfHelper');
 var Handlebars = require('handlebars');
 require('handlebars-helpers')();
 
@@ -22,22 +23,6 @@ function renderTemplate(templateFile, context, outputFile) {
   var result = template(context);
   mkdirp.sync(path.dirname(outputFile));
   fs.writeFileSync(outputFile, result);
-}
-
-function splitArticlesByMonth(files) {
-  var result = [];
-  files.forEach(function(file) {
-    var month = moment(file.datePublished).format('MM');
-    month = parseInt(month, 10);
-    if (!result[month]) {
-      result[month] = {
-        title: moment.months()[month - 1],
-        articles: []
-      };
-    }
-    result[month].articles.push(file);
-  });
-  return result;
 }
 
 function getFullFeedEntries(articles) {
@@ -158,7 +143,7 @@ function generateTOCbyMonth(files, options) {
     year: options.year,
     title: options.title,
     section: options.section,
-    months: splitArticlesByMonth(files).reverse()
+    months: wfHelper.splitByMonth(files).reverse()
   };
   var template = path.join(GLOBAL.WF.src.templates, 'toc-month.yaml');
   var outputFile = path.join(options.outputPath, '_toc.yaml');
