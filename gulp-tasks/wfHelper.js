@@ -15,8 +15,6 @@ const wfRegEx = require('./wfRegEx');
 const exec = require('child_process').exec;
 
 const STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md'];
-const DATE_FORMAT_PRETTY = 'dddd, MMMM Do YYYY';
-const DATE_FORMAT_STANDARDIZED = 'YYYY-MM-DDTHH:mm:ss[Z]';
 
 if (!String.prototype.endsWith) {
   Object.defineProperty(String.prototype, 'endsWith', {
@@ -104,8 +102,8 @@ function genericComparator(a, b) {
 }
 
 function publishedComparator(aObj, bObj) {
-  const aVal = moment(aObj.datePublished);
-  const bVal = moment(bObj.datePublished);
+  const aVal = aObj.datePublishedMoment;
+  const bVal = bObj.datePublishedMoment;
   if (aVal.isBefore(bVal)) {
     return 1;
   } else if (aVal.isAfter(bVal)) {
@@ -116,8 +114,8 @@ function publishedComparator(aObj, bObj) {
 }
 
 function updatedComparator(aObj, bObj) {
-  const aVal = moment(aObj.dateUpdated);
-  const bVal = moment(bObj.dateUpdated);
+  const aVal = aObj.dateUpdatedMoment;
+  const bVal = bObj.dateUpdatedMoment;
   if (aVal.isBefore(bVal)) {
     return 1;
   } else if (aVal.isAfter(bVal)) {
@@ -128,8 +126,8 @@ function updatedComparator(aObj, bObj) {
 }
 
 function featuredComparator(aObj, bObj) {
-  const aVal = moment(aObj.datePublished);
-  const bVal = moment(bObj.datePublished);
+  const aVal = aObj.dateFeaturedMoment;
+  const bVal = bObj.dateFeaturedMoment;
   if (aVal.isBefore(bVal)) {
     return 1;
   } else if (aVal.isAfter(bVal)) {
@@ -170,17 +168,24 @@ function readMetadataForFile(file) {
     url: url,
     title: wfRegEx.getMatch(wfRegEx.RE_TITLE, content),
     description: description,
+    
     image: wfRegEx.getMatch(wfRegEx.RE_IMAGE, content),
     imageSquare: wfRegEx.getMatch(wfRegEx.RE_IMAGE_SQUARE, content),
-    datePublished: published.format(DATE_FORMAT_STANDARDIZED),
-    datePublishedPretty: published.format(DATE_FORMAT_PRETTY),
-    monthPublished: published.format('MM'),
-    yearPublished: published.format('YYYY'),
-    dateUpdated: updated.format(DATE_FORMAT_STANDARDIZED),
-    dateUpdatedPretty: updated.format(DATE_FORMAT_PRETTY),
+    
+    datePublishedMoment: published,
+    datePublishedMonth: published.format('MM'),
+    datePublishedYear: published.format('YYYY'),
+
+    dateUpdatedMoment: updated,
+    dateUpdatedMonth: updated.format('MM'),
+    dateUpdatedYear: updated.format('YYYY'),
+
     tags: [],
     vertical: wfRegEx.getMatch(wfRegEx.RE_VERTICAL, content),
-    featuredDate: featured.format(DATE_FORMAT_STANDARDIZED)
+
+    dateFeaturedMoment: featured,
+    dateFeaturedMonth: featured.format('MM'),
+    dateFeaturedYear: featured.format('YYYY'),
   };
   var authorList = content.match(wfRegEx.RE_AUTHOR_LIST);
   if (authorList) {
@@ -236,7 +241,7 @@ function getFileList(base, patterns) {
 function splitByYear(files) {
   var result = {};
   files.forEach(function(file) {
-    var year = file.yearPublished;
+    var year = file.datePublishedYear;
     if (!result[year]) {
       result[year] = [];
     }
@@ -248,7 +253,7 @@ function splitByYear(files) {
 function splitByMonth(files) {
   var result = [];
   files.forEach(function(file) {
-    const month = parseInt(file.monthPublished, 10);
+    const month = parseInt(file.datePublishedMonth, 10);
     if (!result[month]) {
       result[month] = {
         title: moment.months()[month - 1],
@@ -274,6 +279,22 @@ function splitByAuthor(files) {
   return result;
 }
 
+function dateFormatAtom(dt) {
+  return dateFormatISO(dt);
+}
+
+function dateFormatISO(dt) {
+  return dt.format('YYYY-MM-DDTHH:mm:ss[Z]');
+}
+
+function dateFormatPretty(dt) {
+  return dt.format('dddd, MMMM Do YYYY');
+}
+
+function dateFormatRSS(dt) {
+  return dt.format('DD MMM YYYY HH:mm:ss [GMT]')
+}
+
 exports.promisedRSync = promisedRSync;
 exports.promisedExec = promisedExec;
 exports.getRegEx = getRegEx;
@@ -284,3 +305,7 @@ exports.featuredComparator = featuredComparator;
 exports.splitByYear = splitByYear;
 exports.splitByMonth = splitByMonth;
 exports.splitByAuthor = splitByAuthor;
+exports.dateFormatAtom = dateFormatAtom
+exports.dateFormatISO = dateFormatISO;
+exports.dateFormatPretty = dateFormatPretty
+exports.dateFormatRSS = dateFormatRSS;

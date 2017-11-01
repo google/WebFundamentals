@@ -7,7 +7,6 @@
 
 var fs = require('fs');
 var path = require('path');
-var moment = require('moment');
 var marked = require('marked');
 var mkdirp = require('mkdirp');
 var jsYaml = require('js-yaml');
@@ -51,8 +50,9 @@ function getFullFeedEntries(articles) {
         article.feedAuthor = authorName.trim();
       }
     }
-    const rssPubDate = moment(article.datePublished);
-    article.rssPubDate = rssPubDate.format('DD MMM YYYY HH:mm:ss [GMT]');
+    article.rssPubDate = wfHelper.dateFormatRSS(article.datePublishedMoment);
+    article.atomPubDate = wfHelper.dateFormatAtom(article.datePublishedMoment);
+    article.atomUpdateDate = wfHelper.dateFormatAtom(article.dateUpdatedMoment);
   });
   return articles;
 }
@@ -77,9 +77,8 @@ function generateFeeds(files, options) {
   // Note - use last updated instead of now to prevent feeds from being
   // generated every single time. This will only generate if the feeds are
   // actually updated.
-  const lastUpdated = moment(files[0].dateUpdated).utcOffset(0);
-  context.rssPubDate = lastUpdated.format('DD MMM YYYY HH:mm:ss [GMT]');
-  context.atomPubDate = lastUpdated.format('YYYY-MM-DDTHH:mm:ss[Z]');
+  context.rssPubDate = wfHelper.dateFormatRSS(files[0].dateUpdatedMoment);
+  context.atomPubDate = wfHelper.dateFormatAtom(files[0].dateUpdatedMoment);
 
   var template = path.join(GLOBAL.WF.src.templates, 'atom.xml');
   var outputFile = path.join(options.outputPath, 'atom.xml');
@@ -108,8 +107,7 @@ function generatePodcastFeed(files, options) {
   // Note - use last updated instead of now to prevent feeds from being
   // generated every single time. This will only generate if the feeds are
   // actually updated.
-  const lastUpdated = moment(files[0].datePublished).utcOffset(0);
-  context.rssPubDate = lastUpdated.format('DD MMM YYYY HH:mm:ss [GMT]');
+  context.rssPubDate = wfHelper.dateFormatRSS(files[0].dateUpdatedMoment);
   var template = path.join(GLOBAL.WF.src.templates, 'shows', 'podcast.xml');
   var outputFile = path.join(options.outputPath, 'feed.xml');
   renderTemplate(template, context, outputFile);

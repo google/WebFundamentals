@@ -10,6 +10,7 @@ var path = require('path');
 var gutil = require('gulp-util');
 var google = require('googleapis');
 var moment = require('moment');
+const wfHelper = require('./wfHelper');
 var wfTemplateHelper = require('./wfTemplateHelper');
 
 function buildFeeds(buildType, callback) {
@@ -55,6 +56,7 @@ function buildFeeds(buildType, callback) {
         iframe += 'allowfullscreen></iframe>\n<br>\n<br>';
         var content = video.snippet.description.replace(/\n/g, '<br>\n');
         content = iframe + content;
+        const publishedAtMoment = moment(video.snippet.publishedAt);
         var result = {
           url: video.snippet.resourceId.videoId,
           title: video.snippet.title,
@@ -66,7 +68,9 @@ function buildFeeds(buildType, callback) {
           analyticsUrl: '/web/videos/' + video.snippet.resourceId.videoId,
           content: content,
           atomAuthor: 'Google Developers',
-          rssPubDate: moment(video.snippet.publishedAt).format('DD MMM YYYY HH:mm:ss [GMT]')
+          rssPubDate: wfHelper.dateFormatRSS(publishedAtMoment),
+          atomPubDate: wfHelper.dateFormatAtom(publishedAtMoment),
+          atomUpdateDate: wfHelper.dateFormatAtom(publishedAtMoment)
         };
         articles.push(result);
         var shortDesc = video.snippet.description.replace(/\n/g, '<br>');
@@ -89,6 +93,7 @@ function buildFeeds(buildType, callback) {
       outputFile = path.join(GLOBAL.WF.src.content, '_shared', 'latest_show.html');
       wfTemplateHelper.renderTemplate(template, context, outputFile);
 
+      const lastUpdated = moment(articles[0].datePublished).utcOffset(0, true);
       context = {
         title: 'Web Shows - Google Developers',
         description: 'YouTube videos from the Google Chrome Developers team',
@@ -96,8 +101,8 @@ function buildFeeds(buildType, callback) {
         host: 'https://youtu.be/',
         baseUrl: 'https://youtube.com/user/ChromeDevelopers/',
         analyticsQS: '',
-        atomPubDate: moment().format('YYYY-MM-DDTHH:mm:ss[Z]'),
-        rssPubDate: moment().format('ddd, DD MMM YYYY HH:mm:ss ZZ'),
+        atomPubDate: wfHelper.dateFormatAtom(lastUpdated),
+        rssPubDate: wfHelper.dateFormatRSS(lastUpdated),
         articles: articles
       };
       template = path.join(GLOBAL.WF.src.templates, 'atom.xml');
