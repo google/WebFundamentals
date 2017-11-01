@@ -93,6 +93,9 @@ function buildFeeds(buildType, callback) {
       outputFile = path.join(GLOBAL.WF.src.content, '_shared', 'latest_show.html');
       wfTemplateHelper.renderTemplate(template, context, outputFile);
 
+      // Note - use last updated instead of now to prevent feeds from being
+      // generated every single time. This will only generate if the feeds are
+      // actually updated.
       const lastUpdated = moment(articles[0].datePublished).utcOffset(0, true);
       context = {
         title: 'Web Shows - Google Developers',
