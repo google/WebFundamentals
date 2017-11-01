@@ -83,8 +83,8 @@ toc:
           path: /web/fundamentals/performance/http2/
       - title: PRPL Pattern
         path: /web/fundamentals/performance/prpl-pattern/
-      - title: Resource Prioritization – Getting the Browser to Help You
-        path: /web/fundamentals/performance/resource-prioritization/
+      - title: Resource Prioritization
+        path: /web/fundamentals/performance/resource-prioritization
     - title: Rendering Performance
       section:
       - title: Overview

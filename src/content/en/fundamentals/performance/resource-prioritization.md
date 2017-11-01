@@ -85,7 +85,7 @@ the Network panel in Chrome Developer Tools. Here’s what it looks like:
 <figure>
   <div class="aspect-ratio"
        style="width: 1810px; --aspect-ratio-w: 1810; --aspect-ratio-h: 564">
-    <img src="images/priorities.png"
+    <img src="images/res-prio-priorities.png"
     alt="An example of how priorities are displayed in Chrome Developer Tools">
   </div>
   <figcaption><b>Figure 1</b>: Priorities in Chrome Developer Tools. You may
@@ -142,7 +142,7 @@ Developer Tools, so be sure to keep an eye out for these!
 <figure>
   <div class="aspect-ratio"
        style="width: 1050px; --aspect-ratio-w: 1050; --aspect-ratio-h: 244">
-    <img src="images/timeout.png"
+    <img src="images/res-prio-timeout.png"
     alt="An example of a preload timeout error in Chrome Developer Tools">
   </div>
 </figure>
@@ -319,7 +319,7 @@ fetch:
 <figure>
   <div class="aspect-ratio"
        style="width: 1374px; --aspect-ratio-w: 1374; --aspect-ratio-h: 190">
-    <img src="images/prefetch-double-fetch.png"
+    <img src="images/res-prio-prefetch.png"
          alt="A screenshot of Chrome Developer Tools showing optional.css being
               fetched twice">
   </div>
