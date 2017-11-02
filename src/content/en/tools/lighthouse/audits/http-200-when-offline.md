@@ -31,7 +31,7 @@ using Chrome DevTools. For more detailed help, see the codelab dedicated to
 this topic, [Debugging Service
 Workers](https://codelabs.developers.google.com/codelabs/debugging-service-workers).
 
-Use the [Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/) to
+Use the [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) to
 determine which caching strategy fits your app best. This covers step 2 above.
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
