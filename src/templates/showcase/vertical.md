@@ -36,7 +36,7 @@ full_width: true
   {{{description}}}
 </p>
 <p>
-  {{datePublishedPretty}} 
+  {{ formatDatePretty datePublishedMoment }} 
   {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
 </p>
 <div class="clearfix"></div>
@@ -52,7 +52,7 @@ full_width: true
   {{{description}}}
 </p>
 <p>
-  {{datePublishedPretty}} 
+  {{ formatDatePretty datePublishedMoment }}
   {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
 </p>
 <div class="clearfix"></div>
@@ -68,7 +68,7 @@ full_width: true
   {{{description}}}
 </p>
 <p>
-  {{datePublishedPretty}} 
+  {{ formatDatePretty datePublishedMoment }}
   {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
 </p>
 <div class="clearfix"></div>
@@ -84,7 +84,7 @@ full_width: true
   {{{description}}}
 </p>
 <p>
-  {{datePublishedPretty}} 
+  {{ formatDatePretty datePublishedMoment }}
   {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
 </p>
 <div class="clearfix"></div>
@@ -101,7 +101,7 @@ full_width: true
   {{{description}}}
 </p>
 <p>
-  {{datePublishedPretty}} 
+  {{ formatDatePretty datePublishedMoment }}
   {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
 </p>
 <div class="clearfix"></div>

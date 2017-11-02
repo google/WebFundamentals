@@ -215,8 +215,7 @@ function readMetadataForFile(file) {
       audioUrl: podcast,
       duration: wfRegEx.getMatch(wfRegEx.RE_PODCAST_DURATION, content),
       subtitle: wfRegEx.getMatch(wfRegEx.RE_PODCAST_SUBTITLE, content),
-      fileSize: wfRegEx.getMatch(wfRegEx.RE_PODCAST_SIZE, content),
-      pubDate: published.format('DD MMM YYYY HH:mm:ss [GMT]')
+      fileSize: wfRegEx.getMatch(wfRegEx.RE_PODCAST_SIZE, content)
     };
   }
   return result;
