@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current web page. Live-edit the content and structure of your page through DOM updates.
 
-{# wf_updated_on: 2015-04-29 #}
+{# wf_updated_on: 2017-11-02 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Edit the DOM {: .page-title }
@@ -48,6 +48,13 @@ to go into Inspect Element Mode, then click on an element.
 
 Use the [`inspect`][inspect] method in the console, such as
 `inspect(document.body)`.
+
+### View the rendered and natural sizes of an image {: #image-sizes }
+
+Hover over an `img` tag in the **DOM Tree** to view the rendered and natural sizes of that
+image.
+
+![Rendered and natural image sizes](imgs/image-sizes.png)
 
 ## Navigate the DOM
 
