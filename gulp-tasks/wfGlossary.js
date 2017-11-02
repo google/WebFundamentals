@@ -8,7 +8,6 @@
 
 const fs = require('fs-extra');
 const path = require('path');
-const moment = require('moment');
 const jsYaml = require('js-yaml');
 const gutil = require('gulp-util');
 const wfHelper = require('./wfHelper');
@@ -34,7 +33,6 @@ function buildGlossary(glossary) {
   });
   const context = {
     sortedTerms: terms,
-    updatedOn: moment().utcOffset(0).format()
   };
   const result = template(context);
   fs.outputFileSync(DEST_FILE, result);

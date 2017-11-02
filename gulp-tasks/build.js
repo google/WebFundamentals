@@ -4,7 +4,6 @@ const fs = require('fs');
 const gulp = require('gulp');
 const path = require('path');
 const glob = require('globule');
-const moment = require('moment');
 const jsYaml = require('js-yaml');
 const wfHelper = require('./wfHelper');
 const wfGlossary = require('./wfGlossary');

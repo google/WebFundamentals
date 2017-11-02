@@ -7,12 +7,12 @@
 
 var fs = require('fs');
 var path = require('path');
-var moment = require('moment');
 var marked = require('marked');
 var mkdirp = require('mkdirp');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
 var wfRegEx = require('./wfRegEx');
+const wfHelper = require('./wfHelper');
 var Handlebars = require('handlebars');
 require('handlebars-helpers')();
 
@@ -22,22 +22,6 @@ function renderTemplate(templateFile, context, outputFile) {
   var result = template(context);
   mkdirp.sync(path.dirname(outputFile));
   fs.writeFileSync(outputFile, result);
-}
-
-function splitArticlesByMonth(files) {
-  var result = [];
-  files.forEach(function(file) {
-    var month = moment(file.datePublished).format('MM');
-    month = parseInt(month, 10);
-    if (!result[month]) {
-      result[month] = {
-        title: moment.months()[month - 1],
-        articles: []
-      };
-    }
-    result[month].articles.push(file);
-  });
-  return result;
 }
 
 function getFullFeedEntries(articles) {
@@ -66,8 +50,9 @@ function getFullFeedEntries(articles) {
         article.feedAuthor = authorName.trim();
       }
     }
-    const rssPubDate = moment(article.datePublished);
-    article.rssPubDate = rssPubDate.format('DD MMM YYYY HH:mm:ss [GMT]');
+    article.rssPubDate = wfHelper.dateFormatRSS(article.datePublishedMoment);
+    article.atomPubDate = wfHelper.dateFormatAtom(article.datePublishedMoment);
+    article.atomUpdateDate = wfHelper.dateFormatAtom(article.dateUpdatedMoment);
   });
   return articles;
 }
@@ -92,9 +77,8 @@ function generateFeeds(files, options) {
   // Note - use last updated instead of now to prevent feeds from being
   // generated every single time. This will only generate if the feeds are
   // actually updated.
-  const lastUpdated = moment(files[0].dateUpdated).utcOffset(0);
-  context.rssPubDate = lastUpdated.format('DD MMM YYYY HH:mm:ss [GMT]');
-  context.atomPubDate = lastUpdated.format('YYYY-MM-DDTHH:mm:ss[Z]');
+  context.rssPubDate = wfHelper.dateFormatRSS(files[0].dateUpdatedMoment);
+  context.atomPubDate = wfHelper.dateFormatAtom(files[0].dateUpdatedMoment);
 
   var template = path.join(GLOBAL.WF.src.templates, 'atom.xml');
   var outputFile = path.join(options.outputPath, 'atom.xml');
@@ -123,8 +107,7 @@ function generatePodcastFeed(files, options) {
   // Note - use last updated instead of now to prevent feeds from being
   // generated every single time. This will only generate if the feeds are
   // actually updated.
-  const lastUpdated = moment(files[0].datePublished).utcOffset(0);
-  context.rssPubDate = lastUpdated.format('DD MMM YYYY HH:mm:ss [GMT]');
+  context.rssPubDate = wfHelper.dateFormatRSS(files[0].dateUpdatedMoment);
   var template = path.join(GLOBAL.WF.src.templates, 'shows', 'podcast.xml');
   var outputFile = path.join(options.outputPath, 'feed.xml');
   renderTemplate(template, context, outputFile);
@@ -158,7 +141,7 @@ function generateTOCbyMonth(files, options) {
     year: options.year,
     title: options.title,
     section: options.section,
-    months: splitArticlesByMonth(files).reverse()
+    months: wfHelper.splitByMonth(files).reverse()
   };
   var template = path.join(GLOBAL.WF.src.templates, 'toc-month.yaml');
   var outputFile = path.join(options.outputPath, '_toc.yaml');
