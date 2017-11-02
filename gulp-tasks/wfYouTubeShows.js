@@ -62,15 +62,12 @@ function buildFeeds(buildType, callback) {
           title: video.snippet.title,
           description: video.snippet.description,
           image: video.snippet.thumbnails.default,
-          datePublished: video.snippet.publishedAt,
-          dateUpdated: video.snippet.publishedAt,
+          datePublishedMoment: publishedAtMoment,
+          dateUpdatedMoment: publishedAtMoment,
           tags: [],
           analyticsUrl: '/web/videos/' + video.snippet.resourceId.videoId,
           content: content,
-          atomAuthor: 'Google Developers',
-          rssPubDate: wfHelper.dateFormatRSS(publishedAtMoment),
-          atomPubDate: wfHelper.dateFormatAtom(publishedAtMoment),
-          atomUpdateDate: wfHelper.dateFormatAtom(publishedAtMoment)
+          atomAuthor: 'Google Developers'
         };
         articles.push(result);
         var shortDesc = video.snippet.description.replace(/\n/g, '<br>');

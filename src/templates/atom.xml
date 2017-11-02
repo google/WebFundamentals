@@ -11,14 +11,14 @@
   {{#each articles}}
   <entry>
     <title>{{ title }}</title>
-    <published>{{ atomPubDate }}</published>
-    <updated>{{ atomUpdateDate }}</updated>
+    <published>{{ formatDateAtom datePublishedMoment }}</published>
+    <updated>{{ formatDateAtom dateUpdatedMoment }}</updated>
     <link rel="alternate" type="text/html" href="{{ ../host }}{{ url }}{{{ ../analyticsQS }}}" />
     <id>{{ ../host }}{{ url }}</id>
     <content type="html">
       <![CDATA[
         <img src="https://ga-beacon.appspot.com/UA-52746336-1{{#if analyticsUrl }}{{ analyticsUrl }}{{else}}{{ url }}{{/if}}?feed_type=atom&pixel">
-        
+
         {{{ content }}}
       ]]>
     </content>

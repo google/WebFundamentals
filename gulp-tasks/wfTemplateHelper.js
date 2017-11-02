@@ -16,6 +16,19 @@ const wfHelper = require('./wfHelper');
 var Handlebars = require('handlebars');
 require('handlebars-helpers')();
 
+Handlebars.registerHelper('formatDateAtom', function(dt) {
+  return wfHelper.dateFormatAtom(dt);
+});
+Handlebars.registerHelper('formatDateISO', function(dt) {
+  return wfHelper.dateFormatISO(dt);
+});
+Handlebars.registerHelper('formatDatePretty', function(dt) {
+  return wfHelper.dateFormatPretty(dt);
+});
+Handlebars.registerHelper('formatDateRSS', function(dt) {
+  return wfHelper.dateFormatRSS(dt);
+});
+
 function renderTemplate(templateFile, context, outputFile) {
   var ts = fs.readFileSync(templateFile, 'utf8');
   var template = Handlebars.compile(ts);
