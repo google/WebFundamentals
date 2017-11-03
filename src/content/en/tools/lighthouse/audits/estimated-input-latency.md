@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Estimated Input Latency" Lighthouse audit.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-11-03 #}
 {# wf_published_on: 2016-10-05 #}
 
 # Estimated Input Latency  {: .page-title }
