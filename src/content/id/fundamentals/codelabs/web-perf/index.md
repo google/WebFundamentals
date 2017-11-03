@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Codelab ini akan membantu Anda belajar mengidentifikasi dan memperbaiki bottleneck kinerja aplikasi web.
 
-{# wf_updated_on: 2016-10-20T18:16:09Z #}
+{# wf_updated_on: 2016-10-20 #}
 {# wf_published_on: 2016-01-01 #}
 
 

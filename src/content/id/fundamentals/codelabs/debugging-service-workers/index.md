@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Dalam codelab ini, Anda akan mempelajari cara men-debug service worker menggunakan panel Aplikasi DevTools yang baru. Anda juga akan mempelajari cara menyimulasikan pemberitahuan Push untuk memastikan bahwa langganan Anda disetel dengan benar.
 
-{# wf_updated_on: 2016-10-19T18:28:32Z #}
+{# wf_updated_on: 2016-10-19 #}
 {# wf_published_on: 2016-01-01 #}
 
 

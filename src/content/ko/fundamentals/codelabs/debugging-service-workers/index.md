@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 이 코드랩에서는 새로운 DevTools Application 패널을 사용하여 서비스 워커를 디버그하는 방법을 배울 수 있습니다. 푸시 알림을 시뮬레이션하여 구독이 올바로 설정되어 있는지 확인하는 방법도 살펴보겠습니다.
 
-{# wf_updated_on: 2016-10-19T18:28:32Z #}
+{# wf_updated_on: 2016-10-19 #}
 {# wf_published_on: 2016-01-01 #}
 
 

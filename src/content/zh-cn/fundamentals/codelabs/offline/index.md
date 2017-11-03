@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:学习如何将服务工作线程集成到现有应用内，以使应用能够离线工作。
 
-{# wf_updated_on: 2016-11-09T18:31:19Z #}
+{# wf_updated_on: 2016-11-09 #}
 {# wf_published_on: 2016-01-01 #}
 
 
