@@ -92,6 +92,14 @@ function promisedRSync(src, dest) {
   });
 }
 
+/**
+ * Ascending sorting comparator for generic inputs
+ *  Note: string comparison is case insenstitive 
+ *
+ * @param {Object} a The first item to be compared.
+ * @param {Object} b The second item to be compared. 
+ * @return {number} -1,0,1.
+ */
 function genericComparator(a, b) {
   if (typeof a === 'string') {
     a = a.toLowerCase();
@@ -99,14 +107,22 @@ function genericComparator(a, b) {
   if (typeof b === 'string') {
     b = b.toLowerCase();
   }
-  if (a < b) {
+  if (a > b) {
     return 1;
-  } else if (a > b) {
+  } else if (a < b) {
     return -1;
   }
   return 0;
 }
 
+/**
+ * Descending sorting comparator for datePublishedMoment
+ * - if values are equal, it uses updatedComparator
+ *
+ * @param {Object} aObj The first object to be compared.
+ * @param {Object} bObj The second object to be compared. 
+ * @return {number} -1,0,1.
+ */
 function publishedComparator(aObj, bObj) {
   const aVal = aObj.datePublishedMoment;
   const bVal = bObj.datePublishedMoment;
@@ -115,10 +131,18 @@ function publishedComparator(aObj, bObj) {
   } else if (aVal.isAfter(bVal)) {
     return -1;
   } else {
-    return genericComparator(aObj.title, bObj.title);
+    return updatedComparator(aObj, bObj);
   }
 }
 
+/**
+ * Descending sorting comparator for dateUpdatedMoment
+ * - if values are equal, it uses the article title
+ *
+ * @param {Object} aObj The first object to be compared.
+ * @param {Object} bObj The second object to be compared. 
+ * @return {number} -1,0,1.
+ */
 function updatedComparator(aObj, bObj) {
   const aVal = aObj.dateUpdatedMoment;
   const bVal = bObj.dateUpdatedMoment;
@@ -131,6 +155,14 @@ function updatedComparator(aObj, bObj) {
   }
 }
 
+/**
+ * Descending sorting comparator for dateFeaturedMoment
+ * - if values are equal, it uses updatedComparator
+ *
+ * @param {Object} aObj The first object to be compared.
+ * @param {Object} bObj The second object to be compared. 
+ * @return {number} -1,0,1.
+ */
 function featuredComparator(aObj, bObj) {
   const aVal = aObj.dateFeaturedMoment;
   const bVal = bObj.dateFeaturedMoment;

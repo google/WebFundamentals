@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2016-05-17 #}
-{# wf_updated_on: 2016-05-17 #}
+{# wf_published_on: 2016-05-15 #}
+{# wf_updated_on: 2016-05-15 #}
 {# wf_featured_image: /web/showcase/2016/images/jumia/featured.png #}
 {# wf_featured_snippet: "We finally have proper means to address our fastest growing pool of customers — mobile web users. That’s incredibly valuable. We even see better results from web Push Notifications than from app pushes."<br><b>Jeremy Doutte</b>, Jumia CEO #}
 {# wf_tags: progressive-web-apps,webpush,notifications,serviceworker,casestudy #}
