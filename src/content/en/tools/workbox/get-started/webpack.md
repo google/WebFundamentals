@@ -191,10 +191,14 @@ The object that you pass to `workboxPlugin` configures how Workbox runs.
 Workbox has generated a service worker, but there's no reference to it from
 your app, yet.
 
-1. Click `src/index.js` to open that file.
+1. Click `src/app.js` to open that file.
 1. Register your service worker at the bottom of `init()`.
 
     <pre class="prettyprint">function init() {
+      let manifest = document.createElement('link');
+      manifest.rel = 'manifest';
+      manifest.href = '/manifest.json';
+      document.head.appendChild(manifest);
       let title = document.createElement('h1');
       title.textContent = 'Top 10 Hacker News Stories';
       document.body.appendChild(title);
@@ -212,7 +216,8 @@ your app, yet.
       }</strong>
     }</pre>
 
-1. Re-focus the tab that's running the live version of your app.
+1. Re-focus the tab that's running the live version of your app. In the **Console** of DevTools
+   you see a message indicating that the service worker was registered.
 1. Click the **Application** tab of DevTools.
 1. Click the **Service Workers** tab.
 
@@ -265,7 +270,7 @@ Your app now sort-of works offline. Try it now:
 
 ### Optional: How the service worker code works {: #optional-generated }
 
-The service worker code is generated based on the configuration that you
+The service worker code in `sw.js` is generated based on the configuration that you
 provide in `webpack.config.js`.
 
 * `importScripts('workbox-sw.prod.v2.1.0.js')` imports Workbox's service
@@ -371,6 +376,10 @@ placeholder keywords that instruct Workbox where to inject its code.
 1. Add the following line of code to the `init()` function in `app.js`.
 
     <pre class="prettyprint">function init() {
+      let manifest = document.createElement('link');
+      manifest.rel = 'manifest';
+      manifest.href = '/manifest.json';
+      document.head.appendChild(manifest);
       let title = document.createElement('h1');
       title.textContent = 'Top 10 Hacker News Stories';
       document.body.appendChild(title);
@@ -447,7 +456,8 @@ The app is now all set to handle push notifications. Try it now:
 
 1. Re-focus the tab running the live version of your app.
 1. Click **Allow** when Chrome asks you if you want to grant the app
-   permission to send push notifications.
+   permission to send push notifications. If you don't see the prompt, make sure you're online
+   and then reload the page.
 1. Go to back to the **Service Workers** tab in DevTools.
 1. Enter some text into the **Push** text box, then click **Push**. Your operating system
    displays a push notification from the app.
