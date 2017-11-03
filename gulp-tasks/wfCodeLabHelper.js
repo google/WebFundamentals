@@ -13,6 +13,7 @@ var gutil = require('gulp-util');
 const path = require('path');
 const remark = require('remark');
 const remarkHtml = require('remark-html');
+const wfHelper = require('./wfHelper');
 const wfRegEx = require('./wfRegEx');
 const mkdirp = require('mkdirp');
 
@@ -42,10 +43,11 @@ function updateCodeLab(sourceFile, destFile, bookPath, projPath) {
     result.push('description: ' + metadata.summary);
   }
   result.push('');
-  var dateUpdated = metadata.updated;
+  var dateUpdated = moment(metadata.updated).utcOffset(0, true);
   if (!dateUpdated) {
-    dateUpdated = moment().format('YYYY-MM-DD');
+    dateUpdated = moment();
   }
+  dateUpdated = wfHelper.dateFormatISOShort(dateUpdated);
   result.push('{# wf_auto_generated #}');
   result.push('{# wf_updated_on: ' + dateUpdated + ' #}');
   result.push('{# wf_published_on: 2016-01-01 #}');

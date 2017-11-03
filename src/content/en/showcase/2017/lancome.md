@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2017-05-17T10:00:00.000Z #}
-{# wf_updated_on: 2017-05-17T10:00:00.000Z #}
+{# wf_published_on: 2017-05-17 #}
+{# wf_updated_on: 2017-05-17 #}
 {# wf_featured_image: /web/showcase/2017/images/lancome/lancome-thumb_2x.jpg #}
 {# wf_featured_snippet: To drive both traffic and re-engagement, luxury cosmetics brand Lancôme launched a Progressive Web App (PWA) to deliver a fast, app-like experience on the mobile web. #}
 {# wf_tags: casestudy,progressive-web-apps #}

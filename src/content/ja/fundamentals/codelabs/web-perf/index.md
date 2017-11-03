@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: このコードラボでは、ウェブアプリのパフォーマンスのボトルネックを特定して解決する方法を学びます。
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2016-10-20T18:16:09Z #}
+{# wf_updated_on: 2016-10-20 #}
 {# wf_published_on: 2016-01-01 #}
 
 

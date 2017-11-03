@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 description: Measuring the Real-world Performance Impact of Service Workers
 
-{# wf_published_on: 2016-07-22T18:00:00.000Z #}
-{# wf_updated_on: 2016-07-22T18:00:00.000Z #}
+{# wf_published_on: 2016-07-22 #}
+{# wf_updated_on: 2016-07-22 #}
 {# wf_author: philipwalton #}
 {# wf_featured_image: /web/showcase/2016/images/service-worker-perf/desktop-all.png #}
 {# wf_featured_snippet: One of the most significant benefits of service workers (from a performance perspective, at least) is their ability to proactively control the caching of assets. A web application that can cache all of its necessary resources should load substantially faster for returning visitors. But what do these gains actually look like to real users? And how do you even measure this? #}

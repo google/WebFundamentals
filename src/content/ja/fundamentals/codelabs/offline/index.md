@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Service Worker を既存のアプリに組み込み、オフラインで動作させる方法を学びます。
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2016-11-09T18:31:19Z #}
+{# wf_updated_on: 2016-11-09 #}
 {# wf_published_on: 2016-01-01 #}
 
 

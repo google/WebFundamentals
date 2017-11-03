@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2016-05-17T17:00:00.000Z #}
-{# wf_updated_on: 2016-05-17T17:00:00.000Z #}
+{# wf_published_on: 2016-05-17 #}
+{# wf_updated_on: 2016-05-17 #}
 {# wf_featured_image: /web/showcase/2016/images/suumo/featured.png #}
 {# wf_featured_snippet: "We finally have a way to retain users on the mobile web. This has been a game changer for us!"<br><b>Dai Shibayama</b>, manager, Smart Device Division, Recruit Sumai Company Ltd. #}
 {# wf_tags: progressive-web-apps,serviceworker,casestudy #}

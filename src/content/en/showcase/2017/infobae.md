@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2017-05-17T10:00:00.000Z #}
-{# wf_updated_on: 2017-05-17T10:00:00.000Z #}
+{# wf_published_on: 2017-05-17 #}
+{# wf_updated_on: 2017-05-17 #}
 {# wf_featured_image: /web/showcase/2017/images/infobae/infobae-thumb_2x.jpg #}
 {# wf_featured_snippet: Infobae took advantage of service worker to deliver reliable performance on unreliable networks. Their best-in-class PWA achieved a performance score of 93/100 on Lighthouse, an automated tool for measuring web-page quality. #}
 {# wf_tags: casestudy,progressive-web-apps #}

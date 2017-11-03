@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-08-30T14:19:03Z",
+  "updated": "2017-10-18T21:19:18Z",
   "id": "payment-request-api",
   "duration": 44,
   "title": "Frictionless payment with Payment Request API",
@@ -17,6 +17,7 @@
     "Web"
   ],
   "tags": [
+    "cds17",
     "io2017",
     "kiosk",
     "web"

@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2017-05-17T10:00:00.000Z #}
-{# wf_updated_on: 2017-05-17T10:00:00.000Z #}
+{# wf_published_on: 2017-05-17 #}
+{# wf_updated_on: 2017-05-17 #}
 {# wf_featured_image: /web/showcase/2017/images/ola/ola-thumb_2x.jpg #}
 {# wf_featured_snippet: Ola's new Progressive Web App is PWA is 300X smaller than downloading the Android app and 500X smaller than downloading their iOS app. Repeat visits use as little as 10KB. This low data consumption translates into a 3.4-second first visit and less than a second for repeat visits. #}
 {# wf_tags: casestudy,progressive-web-apps #}
