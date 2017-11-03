@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current web page. Live-edit the content and structure of your page through DOM updates.
 
-{# wf_updated_on: 2017-11-02 #}
+{# wf_updated_on: 2017-11-03 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Edit the DOM {: .page-title }
@@ -55,6 +55,35 @@ Hover over an `img` tag in the **DOM Tree** to view the rendered and natural siz
 image.
 
 ![Rendered and natural image sizes](imgs/image-sizes.png)
+
+### View which image in a source set (srcset) is being used {: #srcset }
+
+The `srcset` property on `img` elements lets you minimize the amount of bytes that you
+must transfer for each image. For example, suppose that you have multiple versions of an image,
+one at 500px width, one at 750px width, and one at 1000px width. If the user's viewport
+is only 400px, then the browser loads the 500px version. If the viewport is 600px, the browser
+loads the 750px version, and so on. If the user widens their viewport, the browser fetches
+each successively larger version of the image as needed. For example, make your viewport narrow
+and load [srcset.salcode.com](http://srcset.salcode.com/), then make it wider and you'll notice
+that the browser loads each larger version only when needed.
+
+To view which version of an image was loaded, select the `img` element, then evaluate
+`$0.currentSrc` in the **Console**.
+
+![currentSrc in the Console][currentSrc console]
+
+[currentSrc console]: /web/tools/chrome-devtools/inspect-styles/imgs/currentSrc-console.png
+
+Note: `$0` is a shortcut in the DevTools **Console**. It provides a reference to the
+currently-selected element in the **DOM Tree**.
+
+You can also view `currentSrc` via the **Properties** tab. The **Properties** tab only displays
+properties for the currently-selected element, so make sure that you've selected the
+correct element before viewing.
+
+![currentSrc in the Properties tab][currentSrc properties]
+
+[currentSrc properties]: /web/tools/chrome-devtools/inspect-styles/imgs/currentSrc-properties.png
 
 ## Navigate the DOM
 
