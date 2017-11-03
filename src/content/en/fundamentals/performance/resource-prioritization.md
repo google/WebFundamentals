@@ -101,7 +101,8 @@ starts offscreen. If you’re curious about priorities,
 [this article by Addy Osmani](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf){: .external}
 digs a lot deeper into the current state of priorities in Chrome.
 
-So what can you do if you find any resources that are marked with a different priority than the one you’d want?
+So what can you do if you find any resources that are marked with a different
+priority than the one you’d want?
 
 This article dives into three different declarative solutions, which are all
 relatively new `<link>` types. If your resources are crucial to the user
