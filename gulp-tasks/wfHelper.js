@@ -316,22 +316,58 @@ function splitByAuthor(files) {
   return result;
 }
 
+/**
+ * Formats a moment() object to: YYYY-MM-DDTHH:mm:ssZ 
+ * Example: 2017-07-13T13:31:13Z
+ * Note: simply a shortcut to dateFormatISO
+ *
+ * @param {Object} dt The moment object to export.
+ * @return {string} YYYY-MM-DDTHH:mm:ssZ.
+ */
 function dateFormatAtom(dt) {
   return dateFormatISO(dt);
 }
 
+/**
+ * Formats a moment() object to: YYYY-MM-DDTHH:mm:ssZ 
+ * Example: 2017-07-13T13:31:13Z
+ *
+ * @param {Object} dt The moment object to export.
+ * @return {string} YYYY-MM-DDTHH:mm:ssZ.
+ */
 function dateFormatISO(dt) {
   return dt.format('YYYY-MM-DDTHH:mm:ss[Z]');
 }
 
+/**
+ * Formats a moment() object to: YYYY-MM-DD
+ * Example: 2017-07-13
+ *
+ * @param {Object} dt The moment object to export.
+ * @return {string} YYYY-MM-DD.
+ */
 function dateFormatISOShort(dt) {
   return dt.format('YYYY-MM-DD');
 }
 
+/**
+ * Formats a moment() object to: dddd, MMMM Do YYYY
+ * Example: Friday, July 13th 2017
+ *
+ * @param {Object} dt The moment object to export.
+ * @return {string} dddd, MMMM Do YYYY.
+ */
 function dateFormatPretty(dt) {
   return dt.format('dddd, MMMM Do YYYY');
 }
 
+/**
+ * Formats a moment() object to: DD MMM YYYY HH:mm:ss GMT
+ * Example: 13 Jul 2017 13:31:13 GMT
+ *
+ * @param {Object} dt The moment object to export.
+ * @return {string} DD MMM YYYY HH:mm:ss GMT.
+ */
 function dateFormatRSS(dt) {
   return dt.format('DD MMM YYYY HH:mm:ss [GMT]')
 }
