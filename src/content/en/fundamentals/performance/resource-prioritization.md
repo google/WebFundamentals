@@ -60,9 +60,8 @@ as CSS before scripts and images.
 
 That said, as with any heuristic, it doesn’t always work out; the browser might
 make the wrong decision, usually because it doesn’t have enough information at
-that time. This article explains the various tools you have at your disposal to
-influence the priority of content adequately in modern browsers, by letting them
-know what you’ll be needing later.
+that time. This article explains how to influence the priority of content
+adequately in modern browsers by letting them know what you’ll be needing later.
 
 ## Default Priorities in the Browser
 
@@ -73,8 +72,8 @@ example, a `<script>` tag in your page’s `<head>` would be loaded in Chrome at
 **Low** if it has the async attribute (meaning it can be loaded and run
 asynchronously).
 
-Priorities become important when investigating loading performance in your site,
-so beyond the usual techniques of
+Priorities become important when investigating loading performance in your site.
+Beyond the usual techniques of
 [measuring](/web/fundamentals/performance/critical-rendering-path/measure-crp)
 and
 [analyzing the critical rendering path](/web/fundamentals/performance/critical-rendering-path/analyzing-crp),
@@ -94,10 +93,10 @@ the Network panel in Chrome Developer Tools. Here’s what it looks like:
 </figure>
 
 
-These priorities will give you an idea of how much relative importance the
+These priorities give you an idea of how much relative importance the
 browser attributes to each resource. And remember that subtle differences are
 enough for the browser to assign a different priority; for example, an image
-that is part of the initial render will be prioritized higher than an image that
+that is part of the initial render is prioritized higher than an image that
 starts offscreen. If you’re curious about priorities,
 [this article by Addy Osmani](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf){: .external}
 digs a lot deeper into the current state of priorities in Chrome.
@@ -107,7 +106,7 @@ So what can you do if you find any resources that are marked with a different pr
 This article dives into three different declarative solutions, which are all
 relatively new `<link>` types. If your resources are crucial to the user
 experience but are being loaded at too low a priority, you can try fixing that
-in one of two ways: preload or preconnect. And if on the other hand you’d like
+in one of two ways: preload or preconnect. On the other hand, if you’d like
 the browser to fetch some resources only when it’s done dealing with everything
 else, try prefetch.
 
@@ -115,7 +114,7 @@ Let’s look at all three!
 
 ## Preload
 
-`<link rel="preload">` informs the browser that a resource will be needed as
+`<link rel="preload">` informs the browser that a resource is needed as
 part of the current navigation, and that it should start getting fetched as soon
 as possible. Here’s how you use it:
 
@@ -124,8 +123,8 @@ as possible. Here’s how you use it:
 
 Most of this is probably what you’d expect, except perhaps for the “as”
 attribute. This allows you to tell the browser the type of the resource you’re
-loading, so that it can be handled correctly; in fact, the browser will not use
-the preloaded resource unless the correct type is set. The resource will be
+loading, so that it can be handled correctly. The browser doesn't use
+the preloaded resource unless the correct type is set. The resource is
 loaded with the same priority as it would otherwise, but now the browser knows
 about it ahead of time, allowing for the download to start earlier.
 
@@ -155,12 +154,12 @@ often sitting at the bottom of one of several CSS files loaded by a page.
 In order to reduce the amount of time the user has to wait for the text content
 of your site, as well as avoid jarring flashes between system fonts and your
 preferred ones, you can use `<link rel="preload">` in your HTML to let the
-browser know immediately that a font will be needed.
+browser know immediately that a font is needed.
 
     <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="myfont.woff2">
 
 Note that the use of `crossorigin` here is important; without this attribute,
-the preloaded font will be ignored by the browser, and a new fetch will take
+the preloaded font is ignored by the browser, and a new fetch takes
 place. This is because fonts are expected to be fetched anonymously by the
 browser, and the preload request is only made anonymous by using the
 `crossorigin` attribute.
@@ -175,32 +174,31 @@ maintenance.
 
 ### Use-case: Critical Path CSS and JavaScript
 
-When talking about page performance, one useful concept is that of the
-“critical path”, most often applied to CSS. This refers to the resources that
-need to be loaded before your initial render, and are thus critical to getting
-the first pixels to the user’s screen.
+When talking about page performance, one useful concept is the “critical path”.
+The critical path refers to the resources that must be loaded before your
+initial render. These resources, like CSS, are critical to getting the first
+pixels on the user’s screen.
 
 Previously, the recommendation was to inline this content into your HTML.
 However, in a multi-page, server-side rendered scenario, this quickly grows into
 a lot of wasted bytes. It also makes versioning harder, as any change in the
 critical code invalidates any page that has it inlined.
 
-`<link rel="preload">`, on the other hand, allows you to keep the benefits of
+`<link rel="preload">` allows you to keep the benefits of
 individual file versioning and caching, while giving you mechanism to request
 the resource as soon as possible.
 
     <link rel="preload" as="script" href="super-important.js">
     <link rel="preload" as="style" href="critical.css">
 
-There’s a downside compared to inlining, however: with `<link rel="preload">`
-you’re still subject to an extra roundtrip. This extra roundtrip comes from the
-fact that the browser first has to fetch the HTML, and only then does it find
-out about the next resources.
+With preload, there is one downside: you’re still subject to an extra roundtrip.
+This extra roundtrip comes from the fact that the browser first has to fetch the
+HTML, and only then does it find out about the next resources.
 
 One way around the extra roundtrip is to use
 [HTTP/2](/web/fundamentals/performance/http2/#server_push)
 push instead, where you preemptively attach the critical assets to the same
-connection through which you’re sending the HTML. This way, you guarantee that
+connection through which you’re sending the HTML. This guarantees that
 there’s no downtime between the user’s browser retrieving the HTML and starting
 the download of the critical assets. Be mindful when using HTTP/2 push, though,
 as it’s a very forceful way of controlling the user’s bandwidth usage (“server
@@ -214,11 +212,11 @@ establish a connection to another origin, and that you’d like the process to
 start as soon as possible.
 
 Establishing connections often involves significant time in slow networks,
-particularly where it comes to secure connections, as it may involve DNS
+particularly when it comes to secure connections, as it may involve DNS
 lookups, redirects, and several round trips to the final server that handles
 the user’s request. Taking care of all this ahead of time can make your
 application feel much snappier to the user without negatively affecting the use
-of bandwidth, as most of the time in establishing a connection is spent waiting,
+of bandwidth. Most of the time in establishing a connection is spent waiting,
 rather than exchanging data.
 
 Informing the browser of your intention is as simple as adding a link tag to
@@ -232,7 +230,7 @@ In this case, we’re letting the browser know that we intend to connect to
 Bear in mind that while `<link rel="preconnect">` is pretty cheap, it can still
 take up valuable CPU time, particularly on secure connections. This is
 especially bad if the connection isn’t used within 10 seconds, as the browser
-will close it, wasting all of that early connection work.
+closes it, wasting all of that early connection work.
 
 In general, try to use `<link rel="preload">` wherever you can, as it’s a more
 comprehensive performance tweak, but do keep `<link rel="preconnect">` in your
@@ -278,10 +276,10 @@ happen faster; instead, it tries to make something non-critical happen earlier,
 if there’s a chance.
 
 It does this by informing the browser of a resource that is expected to be
-needed as part of a future navigation or user interaction, i.e., something that
-*might* be needed later, if the user takes the action we’re expecting. These
-resources will be fetched at the **Lowest** priority in Chrome, when the current
-page is done loading and there’s bandwidth available.
+needed as part of a future navigation or user interaction, for example,
+something that *might* be needed later, if the user takes the action we’re
+expecting. These resources are fetched at the **Lowest** priority in Chrome,
+when the current page is done loading and there’s bandwidth available.
 
 This means that `prefetch` is most suitable to preempt what the user might be
 doing next, and prepare for it, such as retrieving the first product details
@@ -325,21 +323,22 @@ fetch:
   </div>
 </figure>
 
-Double-fetching can be pretty bad for the user, as in this case not only would
-they have to wait for the render-blocking CSS, they would also potentially have
-their bandwidth wasted by downloading the file twice — and remember their
-bandwidth may very well be metered. Be sure to analyze your network requests
+Double-fetching can be bad for users. In this case, not only would they have to
+wait for the render-blocking CSS, but they would also potentially have
+their bandwidth wasted by downloading the file twice. Remember their
+bandwidth may be metered. Be sure to analyze your network requests
 thoroughly, and watch out for any double-fetching!
 
 ## Other Techniques and Tools
 
-These three `<link>` types (and the bonus `<link rel="dns-prefetch">`) offer a
+`<link rel="preload">`, `<link rel="preconect">`, and `<link rel="prefetch">`
+(as well as the bonus `<link rel="dns-prefetch">`) offer a
 great way of declaratively letting the browser know about resources and
 connections ahead of time, and tweaking when things happen, according to when
 they’re needed.
 
 There’s a number of other tools and techniques you can use to tweak the priority
-and timing at which your resources get loaded, though. Be sure to read up on
+and timing at which your resources get loaded. Be sure to read up on
 [HTTP/2 server push](/web/fundamentals/performance/http2/#server_push);
 [using `IntersectionObserver` to lazily load images and other media](/web/updates/2016/04/intersectionobserver);
 [avoiding render-blocking CSS](/web/fundamentals/performance/critical-rendering-path/render-blocking-css)
