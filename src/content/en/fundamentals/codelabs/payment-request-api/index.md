@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Filling checkout forms is a pain especially on mobile devices. In this codelab, you'll learn how to improve a traditional e-commerce website using the Payment Request API.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-08-30T14:19:03Z #}
+{# wf_updated_on: 2017-10-18 #}
 {# wf_published_on: 2016-01-01 #}
 
 

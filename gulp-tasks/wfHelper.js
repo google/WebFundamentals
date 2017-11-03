@@ -286,6 +286,10 @@ function dateFormatISO(dt) {
   return dt.format('YYYY-MM-DDTHH:mm:ss[Z]');
 }
 
+function dateFormatISOShort(dt) {
+  return dt.format('YYYY-MM-DD');
+}
+
 function dateFormatPretty(dt) {
   return dt.format('dddd, MMMM Do YYYY');
 }
@@ -304,7 +308,8 @@ exports.featuredComparator = featuredComparator;
 exports.splitByYear = splitByYear;
 exports.splitByMonth = splitByMonth;
 exports.splitByAuthor = splitByAuthor;
-exports.dateFormatAtom = dateFormatAtom
+exports.dateFormatAtom = dateFormatAtom;
 exports.dateFormatISO = dateFormatISO;
+exports.dateFormatISOShort = dateFormatISOShort;
 exports.dateFormatPretty = dateFormatPretty
 exports.dateFormatRSS = dateFormatRSS;
