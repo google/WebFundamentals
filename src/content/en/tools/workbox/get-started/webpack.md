@@ -313,7 +313,11 @@ that they had an internet connection.
 1. Open `webpack.config.js` again.
 1. Add a `runtimeCaching` property to your Workbox configuration.
    `urlPattern` is a regular expression pattern telling Workbox which
-   URLs to store locally. `handler` defines the caching strategy that Workbox
+   URLs to store locally. *(Please note your regex will be matched
+   against full URLs such as 'https://hacker-news.firebaseio.com' -
+   not against partial URLs. This means you can cache both content from
+   your site and content from external sites as well, as this example
+   demonstrates.)* `handler` defines the caching strategy that Workbox
    uses for any matching URL. See [The Offline Cookbook][cookbook] for more
    on caching strategies.
 
