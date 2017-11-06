@@ -110,6 +110,8 @@ toc:
   path: /web/tools/lighthouse/audits/time-to-interactive
 - title: Unoptimized Images
   path: /web/tools/lighthouse/audits/unoptimized-images
+- title: Uses An Excessive DOM Size
+  path: /web/tools/lighthouse/audits/dom-size
 - title: User Can Be Prompted To Install The Web App
   path: /web/tools/lighthouse/audits/install-prompt
 - title: User Timing Marks and Measures
