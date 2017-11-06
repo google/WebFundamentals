@@ -152,7 +152,7 @@ def parseBookYaml(pathToBook, lang='en'):
       upperTabs.append(expandBook(upperTab))
     return result
   except Exception as e:
-    logging.exception('Error in parseBookYaml')
+    logging.exception(e)
   return None
 
 
@@ -199,9 +199,12 @@ def getLowerTabs(bookYaml):
         for lowerTab in tab['lower_tabs']['other']:
           lt = {}
           lt['name'] = lowerTab['name']
-          if 'contents' in lowerTab and 'path' in lowerTab['contents'][0]:
-            lt['path'] = lowerTab['contents'][0]['path']
-            result.append(lt)
+          if 'contents' in lowerTab:
+            for lowerTabContent in lowerTab['contents']:
+             if 'path' in lowerTabContent:
+                lt['path'] = lowerTabContent['path']
+                result.append(lt)
+                break
   except Exception as e:
     logging.exception('Unable to read/parse the lower tabs')
   return result
@@ -220,8 +223,16 @@ def getLeftNav(requestPath, bookYaml, lang='en'):
     for upperTab in bookYaml['upper_tabs']:
       if 'path' in upperTab and requestPath.startswith(upperTab['path']):
         for lowerTab in upperTab['lower_tabs']['other']:
-          if ('path' not in lowerTab['contents'][0] or
-            requestPath.startswith(lowerTab['contents'][0]['path'])):
+          firstPathInLowerTab = None
+          for lowerTabContent in lowerTab['contents']:
+             if 'path' in lowerTabContent:
+                firstPathInLowerTab = lowerTabContent['path']
+                break
+          if (firstPathInLowerTab is None):
+            if 'path' in lowerTab:
+              firstPathInLowerTab = lowerTab['path']
+          if (firstPathInLowerTab is None or
+            requestPath.startswith(firstPathInLowerTab)):
               result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
               result += buildLeftNav(lowerTab['contents'])
               result += '</ul>\n'
@@ -229,6 +240,7 @@ def getLeftNav(requestPath, bookYaml, lang='en'):
   except Exception as e:
     msg = ' - Unable to read or parse primary book.yaml'
     logging.exception(msg)
+    logging.exception(e)
     whoops += '<p>Exception occured.</p>'
     return whoops
 
@@ -243,6 +255,13 @@ def buildLeftNav(bookYaml, lang='en'):
       result += '<span>' + cgi.escape(item['title']) + '</span>\n'
       result += '</a>\n'
       result += '</li>\n'
+    elif 'heading' in item:
+      result += '<li class="devsite-nav-item devsite-nav-item-heading">\n';
+      result += '<span class="devsite-nav-title devsite-nav-title-no-path" ';
+      result += 'track-type="leftNav" track-name="expandNavSectionNoLink" ';
+      result += 'track-metadata-position="0">\n';
+      result += '<span>' + cgi.escape(item['heading']) + '</span>\n';
+      result += '</span>\n</li>\n';
     elif 'section' in item:
       # Sub-section
       result += '<li class="devsite-nav-item devsite-nav-item-section-expandable">\n'
