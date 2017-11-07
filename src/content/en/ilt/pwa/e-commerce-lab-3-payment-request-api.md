@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-06-14 #}
+{# wf_updated_on: 2017-11-07 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -442,7 +442,7 @@ request.addEventListener('shippingoptionchange', e => {
 
 #### Explanation
 
-Upon receiving the `shippingoptionchange` event, the `request` object's `shippingOption` is updated. The `shippingOption`It indicates the `id` of the selected shipping options. The `id` is passed to `buildPaymentsDetails`, which looksLook for the price of the shipping option and updates the display items so that the user knows the total cost is changed. `buildPaymentsDetails alsoAlso` changes the shipping option's `selected` property to `true` to indicate that the user has chosen the item. Checkout `buildPaymentDetails()` function in __app/scripts/modules/payment-api.js__ to see how it works.
+Upon receiving the `shippingoptionchange` event, the `request` object's `shippingOption` is updated. The `shippingOption`It indicates the `id` of the selected shipping options. The `id` is passed to `buildPaymentsDetails`, which looks for the price of the shipping option and updates the display items so that the user knows the total cost is changed. `buildPaymentsDetails alsoAlso` changes the shipping option's `selected` property to `true` to indicate that the user has chosen the item. Checkout `buildPaymentDetails()` function in __app/scripts/modules/payment-api.js__ to see how it works.
 
 ![40f84cde162b2247.png](img/40f84cde162b2247.png)
 
