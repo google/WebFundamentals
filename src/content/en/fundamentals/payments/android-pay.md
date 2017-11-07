@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Android Pay enables simple and secure purchases online and eliminates the need for users to remember and manually enter their payment information. Integrate Android Pay to reach millions of Android users, drive higher conversion, and give users a true one-touch checkout experience.
 
-{# wf_updated_on: 2017-11-01 #}
+{# wf_updated_on: 2017-11-07 #}
 {# wf_published_on: 2016-09-07 #}
 
 # Integrating Android Pay into Payment Request {: .page-title }
@@ -10,8 +10,9 @@ description: Android Pay enables simple and secure purchases online and eliminat
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/sieke.html" %}
 
-Warning: Android Pay is now Pay with Google. This payment flow is no longer
-supported, instead please check the [Google Payment API](/payments/) docs.
+Warning: Android Pay is now Pay with Google and provides access to payment
+tokens on the device and credit and debit cards from a user's Google account. To
+learn more about Pay with Google, read [Google Payment API](/payments/) docs.
 
 Android Pay enables simple and secure purchases online and eliminates the
 need for users to remember and manually enter their payment information.

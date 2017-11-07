@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-11-01 #}
+{# wf_updated_on: 2017-11-07 #}
 
 # Deep Dive into the Payment Request API {: .page-title }
 
@@ -136,7 +136,8 @@ as well as third party payment methods (such as Pay with Google).
 
 You must supply an array of objects indicating your supported payment methods
 where each payment method must include a  `supportedMethods` parameter that
-identifies the payment method. Each object can contain an optional data object.
+identifies the payment method. Each object can contain an optional `data`
+object.
 
 ```
 const supportedPaymentMethods = [
@@ -157,7 +158,7 @@ by a brief look at supporting Pay with Google.
 ### Payment Method: 'basic-card'
 
 To support credit and debit cards, we need to change the `supportedMethods`
-parameter to contain 'basic-card', like so:
+parameter to 'basic-card', like so:
 
 ```
 const creditCardPaymentMethod = {
@@ -172,6 +173,11 @@ new PaymentRequest(supportedPaymentMethods, paymentDetails, options);
 If the user has no cards set up they'll be prompted to add details, otherwise
 an existing card will be selected for them.
 
+Note: To get access to all forms of payment available with Google, developers
+will need to implement the Pay with Google method. Refer to [Payment Method:
+Multiple Payment Methods](#payment_method_multiple_payment_methods) section then
+the [Google Payment API](/payments/) docs for more information.
+
 <div class="attempt-center">
   <figure>
     <img src="./images/deep-dive/pr-demo-basic-card-only.png" alt="Example of basic-card support in the Payment Request API.">
@@ -181,9 +187,10 @@ an existing card will be selected for them.
   </figure>
 </div>
 
-At the time of writing, Chrome supports 'amex', 'diners', 'discover', 'jcb',
-'maestro', 'mastercard', 'unionpay', 'mir', and 'visa', which you can see listed
-across the top of the UI.
+At the time of writing, Chrome supports `amex`, `diners`, `discover`, `jcb`,
+`mastercard`, `unionpay`, `mir`, and `visa`, which you can see listed across the
+top of the UI. Find out up to date list of approved card identifiers in [the
+spec](https://www.w3.org/Payments/card-network-ids).
 
 To restrict the supported cards, we can add the optional data parameter and
 define `supportedNetworks`. The following code restricts the accepted cards to
@@ -337,11 +344,8 @@ const payWithGooglePaymentMethod = {
 </div>
 
 We won't go into details of how to add Pay with Google in this article, [we have
-a section dedicated to that here](/payments/mobile-web-setup).
+a dedicated document to that](/payments/mobile-web-setup).
 
-Note: To get access to all forms of payment available with Google, developers
-will need to implement the Pay with Google method. Refer to the [Google Payment
-API](/payments/) docs for more information.
 
 #### Edge Cases
 
