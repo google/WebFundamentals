@@ -339,8 +339,8 @@ Necesitas saber lo siguiente:
 - ¿Qué aspectos del prototipo le gustan?
 - ¿Qué aspectos del prototipo no le gustan?
 - ¿Cuáles son los puntos débiles?
-      * ¿Por qué funcionó un flujo?
-      * ¿Por qué no funcionó un flujo?
+  - ¿Por qué funcionó un flujo?
+  - ¿Por qué no funcionó un flujo?
 - ¿Qué aspectos desearía mejorar?
 - ¿Satisfice las necesidades el flujo/diseño general?
 
