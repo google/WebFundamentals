@@ -1,98 +1,95 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: クリティカル レンダリング パスの測定方法を説明します。
+description: Learn to measure the critical rendering path.
 
-{# wf_updated_on:2014-09-17 #}
-{# wf_published_on:2014-03-31 #}
+{# wf_updated_on: 2014-09-17 #}
+{# wf_published_on: 2014-03-31 #}
 
-# クリティカル レンダリング パスの測定 {: .page-title }
+# Measuring the Critical Rendering Path {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-確実なパフォーマンス戦略を立てる上で、正確な計測は欠かせません。
-測定できなければ最適化できません。このドキュメントでは、CRP パフォーマンスを測定するさまざまなアプローチについて説明します。
+The foundation of every solid performance strategy is good measurement and
+instrumentation. You can't optimize what you can't measure. This doc
+explains different approaches for measuring CRP performance.
 
+- The Lighthouse approach runs a series of automated tests against a page,and then generates a report on the page's CRP performance. This approachprovides a quick and easy high-level overview of CRP performance of aparticular page loaded in your browser, allowing you to rapidly test,iterate, and improve its performance.
+- The Navigation Timing API approach captures [Real User
+    Monitoring (RUM)](https://en.wikipedia.org/wiki/Real_user_monitoring)metrics. As the name implies, these metrics are captured from real userinteractions with your site and provide an accurate view intoreal-world CRP performance, as experienced by your users across a varietyof devices and network conditions.
 
-* Lighthouse のアプローチでは、自動化された一連のテストをページに対して実行し、ページの CRP パフォーマンスに関するレポートを生成します。
-このアプローチを採用すると、ブラウザで読み込んだ特定のページの CRP パフォーマンスの概要をすばやく簡単に把握できるため、テスト、反復、パフォーマンス改善を迅速に行うことができます。
-* Navigation Timing API のアプローチでは、[RUM（リアル ユーザー モニタリング）](https://en.wikipedia.org/wiki/Real_user_monitoring) メトリクスを取得します。
+In general, a good approach is to use Lighthouse to identify obvious CRP
+optimization opportunities, and then to instrument your code with the
+Navigation Timing API to monitor how your app performs out in the wild.
 
-名前が意味するとおり、これらのメトリクスはサイトにおける実際のユーザー操作から取得され、さまざまな端末やネットワーク状況においてユーザーが体感したとおりに、実際の CRP パフォーマンスを正確に把握できます。
-一般には、Lighthouse を使用して明らかに CRP を最適化できる箇所を特定し、Navigation Timing API でコードを計測して、アプリの実際のパフォーマンスを監視するというアプローチが推奨されます。
+## Auditing a page with Lighthouse {: #lighthouse }
 
+Lighthouse is a web app auditing tool that runs a series of tests against a
+given page, and then displays the page's results in a consolidated report. You
+can run Lighthouse as a Chrome Extension or NPM module, which is
+useful for integrating Lighthouse with continuous integration systems.
 
+See [Auditing Web Apps With Lighthouse](/web/tools/lighthouse/) to get started.
 
-##  Lighthouse を使用したページの監査{: #lighthouse }
-
-Lighthouse は、指定したページに対して一連のテストを実行し、ページの結果をレポートにまとめて表示するウェブアプリの監査ツールです。
-Lighthouse は Chrome 拡張機能または NPM モジュールとして実行できるため、Lighthouse を継続的インテグレーション システムと統合する場合に便利です。
-
-
-
-使用を開始するには、[Lighthouse によるウェブアプリの監査](/web/tools/lighthouse/)をご覧ください。
-
-Lighthouse を Chrome 拡張機能として実行すると、ページの CRP 結果は以下のスクリーンショットのようになります。
-
+When you run Lighthouse as a Chrome Extension, your page's CRP results look
+like the screenshot below.
 
 ![Lighthouse の CRP 監査](images/lighthouse-crp.png)
 
-この監査結果の詳細については、[クリティカル リクエスト チェーン][crc]をご覧ください。
+See [Critical Request Chains](/web/tools/lighthouse/audits/critical-request-chains) for more information on this audit's
+results.
+
+## Instrumenting your code with the Navigation Timing API {: #navigation-timing }
+
+The combination of the Navigation Timing API and other browser events emitted
+as the page loads allows you to capture and record the real-world CRP
+performance of any page.
 
 
-[crc]: /web/tools/lighthouse/audits/critical-request-chains
-
-##  Navigation Timing API でコードを計測する {: #navigation-timing }
-
-Navigation Timing API と、ページの読み込み時に発行されたその他のブラウザ イベントを組み合わせると、任意のページでの実際の CRP パフォーマンスを取得および記録できます。
+<img src="images/dom-navtiming.png" alt="Navigation Timing">
 
 
+Each of the labels in the above diagram corresponds to a high resolution timestamp that the browser tracks for each and every page it loads. In fact, in this specific case we're only showing a fraction of all the different timestamps — for now we're skipping all network related timestamps, but we'll come back to them in a future lesson.
 
-<img src="images/dom-navtiming.png"  alt="Navigation Timing">
+So, what do these timestamps mean?
 
-上記の図の各ラベルは、ブラウザが読む込むすべてのページについてトラックする、詳細なタイムスタンプに相当します。実は、この具体例では、さまざまなタイムスタンプの一部だけを表示しています。ここではネットワーク関連タイムスタンプはすべて省略してあります。ただし、後の演習で扱う予定です。
+- `domLoading`: this is the starting timestamp of the entire process, thebrowser is about to start parsing the first received bytes of the HTMLdocument.
+- `domInteractive`: marks the point when the browser has finished parsing allof the HTML and DOM construction is complete.
+- `domContentLoaded`: marks the point when both the DOM is ready and there are no stylesheets that are blocking JavaScript execution - meaning we can now (potentially) construct the render tree.
+    - Many JavaScript frameworks wait for this event before they start executing their own logic. For this reason the browser captures the `EventStart` and `EventEnd` timestamps to allow us to track how long this execution took.
+- `domComplete`: as the name implies, all of the processing is complete andall of the resources on the page (images, etc.) have finished downloading -in other words, the loading spinner has stopped spinning.
+- `loadEvent`: as a final step in every page load the browser fires an`onload` event which can trigger additional application logic.
 
-ところで、これらのタイムスタンプは何を意味しているでしょうか。
+The HTML specification dictates specific conditions for each and every event: when it should be fired, which conditions should be met, and so on. For our purposes, we'll focus on a few key milestones related to the critical rendering path:
 
-* `domLoading`: これは、プロセス全体の始動タイムスタンプであり、ブラウザが最初に受け取った HTML ドキュメントのバイトの解析を開始する時点を示します。
-* `domInteractive`: ブラウザが HTML の解析をすべて完了し、DOM の構築を完了した時点を示します。
-* `domContentLoaded`: DOM の準備が整い、JavaScript の実行をブロックするスタイルシートが存在しなくなった時点を示します。つまり、これ以降、レンダリング ツリーの構築を開始できます。
-    * 多くの JavaScript フレームワークでは、このイベントを待ったうえで、それ自体のロジックの実行を開始します。このため、ブラウザでは、`EventStart` と `EventEnd` のタイムスタンプをキャプチャすることで、この処理の所要時間をトラッキングできるようにしています。
-* `domComplete`: 名前が示すように、すべての処理が完了し、ページ上にあるすべてのリソース（画像など）のダウンロードが完了したことを示します。つまり、読み込み中のマークの回転が止まった状態です。
-* `loadEvent`: ページごとの読み込みの最終ステップとして、ブラウザは `onload` イベントを発行します。これにより、追加のアプリケーション ロジックがトリガーされることがあります。
-
-
-HTML 仕様では、イベントを発行するタイミング、満たすべき条件など、すべてのイベントごとに具体的な条件が規定されています。ここでは目的に合わせて、クリティカル レンダリング パスに関係する主なマイルストーンだけに焦点を当てます。
-
-* `domInteractive` は DOM の準備ができた時点を示します。
-* `domContentLoaded` は通常は [DOM と CSSOM の両方の準備ができた時点を示します](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/)。
-    * パーサー ブロック JavaScript が存在しない場合、`DOMContentLoaded` は `domInteractive` の直後に発行されます。
-* `domComplete` はページおよびすべてのサブリソースの準備ができた時点を示します。
+- `domInteractive` marks when DOM is ready.
+- `domContentLoaded` typically marks when [both the DOM and CSSOM are ready](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/).
+    - If there is no parser blocking JavaScript then `DOMContentLoaded` will fire immediately after `domInteractive`.
+- `domComplete` marks when the page and all of its subresources are ready.
 
 
 <div style="clear:both;"></div>
+
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/measure_crp.html){: target="_blank" .external }
 
-上記のサンプルは一見すると厄介そうですが、実はかなりシンプルです。Navigation Timing API がすべての関連タイムスタンプをキャプチャします。このコードでは `onload` イベントが発行されるのを待ち（`onload` イベントは、`domInteractive`、`domContentLoaded`、`domComplete` の後で発行）、さまざまなタイムスタンプ間の差を計算しているだけです。
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/measure_crp.html){: target="_blank" .external }
 
-<img src="images/device-navtiming-small.png"  alt="NavTiming デモ">
-
-以上です。これで、トラッキング対象の具体的なマイルストーンと、その測定値を出力するシンプルな関数がそろいました。これらのメトリックをページに出力する代わりに、コードを修正してアナリティクス サーバーに送信することもできます（[Google アナリティクスではこれを自動で実行](https://support.google.com/analytics/answer/1205784)）。これは、ページのパフォーマンスを正しく把握し、最適化作業によってメリットが生じそうなページを特定する方法として優れています。
-
-##  DevTools とは {: #devtools }
-
-このようなドキュメントでは、Chrome DevTools の [Network] パネルを使用して、CRP のコンセプトを説明している場合がありますが、DevTools は現在、CRP の測定に最適というわけではありません。クリティカルなリソースを特定する仕組みが組み込まれていないためです。
-クリティカルなリソースを特定するには、[Lighthouse](#lighthouse) の監査を実行します。
+The above example may seem a little daunting on first sight, but in reality it is actually pretty simple. The Navigation Timing API captures all the relevant timestamps and our code simply waits for the `onload` event to fire — recall that `onload` event fires after `domInteractive`, `domContentLoaded` and `domComplete` — and computes the difference between the various timestamps.
 
 
-<a href="analyzing-crp" class="gc-analytics-event"
-    data-category="CRP" data-label="Next / Analyzing CRP">
-  <button>次のトピック: クリティカル レンダリング パスのパフォーマンスを分析する</button>
-</a>
+<img src="images/device-navtiming-small.png" alt="NavTiming デモ">
 
 
-{# wf_devsite_translation #}
+All said and done, we now have some specific milestones to track and a simple function to output these measurements. Note that instead of printing these metrics on the page you can also modify the code to send these metrics to an analytics server ([Google Analytics does this automatically](https://support.google.com/analytics/answer/1205784)), which is a great way to keep tabs on performance of your pages and identify candidate pages that can benefit from some optimization work.
+
+## What about DevTools? {: #devtools }
+
+Although these docs sometimes use the Chrome DevTools Network panel to
+illustrate CRP concepts, DevTools is currently not well-suited for CRP
+measurements because it does not have a built-in mechanism for isolating
+critical resources. Run a [Lighthouse](#lighthouse) audit to help
+identify such resources.
