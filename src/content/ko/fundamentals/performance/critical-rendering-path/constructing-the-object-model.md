@@ -1,89 +1,96 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 브라우저가 DOM 및 CSSOM 트리를 생성하는 방법에 대해 알아봅니다.
+description: Learn how the browser constructs the DOM and CSSOM trees.
 
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
-# 객체 모델 생성 {: .page-title }
+# Constructing the Object Model {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-브라우저가 페이지를 렌더링하려면 먼저 DOM 및 CSSOM 트리를 생성해야 합니다. 따라서 HTML 및 CSS를 가능한 한 빨리 브라우저에 제공해야 합니다.
-
+Before the browser can render the page, it needs to construct the DOM and CSSOM trees. As a result, we need to ensure that we deliver both the HTML and CSS to the browser as quickly as possible.
 
 ### TL;DR {: .hide-from-toc }
-- 바이트 → 문자 → 토큰 → 노드 → 객체 모델.
-- HTML 마크업은 DOM(Document Object Model)으로 변환되고, CSS 마크업은 CSSOM(CSS Object Model)으로 변환됩니다.
-- DOM 및 CSSOM은 서로 독립적인 데이터 구조입니다.
-- Chrome DevTools Timeline을 사용하면 DOM 및 CSSOM의 생성 및 처리 비용을 수집하고 점검할 수 있습니다.
 
+- Bytes → characters → tokens → nodes → object model.
+- HTML markup is transformed into a Document Object Model (DOM); CSS markup is transformed into a CSS Object Model (CSSOM).
+- DOM and CSSOM are independent data structures.
+- Chrome DevTools Timeline allows us to capture and inspect the construction and processing costs of DOM and CSSOM.
 
-## DOM(Document Object Model)
+## Document Object Model (DOM)
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/basic_dom.html){: target="_blank" .external }
 
-가장 단순한 경우인 몇몇 텍스트와 하나의 이미지만 포함하는 일반 HTML 페이지부터 살펴보도록 하겠습니다. 브라우저가 이 페이지를 어떻게 처리하나요?
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/basic_dom.html){: target="_blank" .external }
+
+Let’s start with the simplest possible case: a plain HTML page with some text and a single image. How does the browser process this page?
+
 
 <img src="images/full-process.png" alt="DOM 생성 프로세스">
 
-1. **변환:** 브라우저가 HTML의 원시 바이트를 디스크나 네트워크에서 읽어와서, 해당 파일에 대해 지정된 인코딩(예: UTF-8)에 따라 개별 문자로 변환합니다.
-1. **토큰화:** 브라우저가 문자열을 [W3C HTML5 표준](http://www.w3.org/TR/html5/){: .external }에 지정된 고유 토큰으로 변환합니다(예: '&lt;html&gt;', '&lt;body&gt;' 및 꺽쇠괄호로 묶인 기타 문자열). 각 토큰은 특별한 의미와 고유한 규칙을 가집니다.
-1. **렉싱:** 방출된 토큰은 해당 속성 및 규칙을 정의하는 '객체'로 변환됩니다.
-1. **DOM 생성:** 마지막으로, HTML 마크업이 여러 태그(일부 태그는 다른 태그 안에 포함되어 있음) 간의 관계를 정의하기 때문에 생성된 객체는 트리 데이터 구조 내에 연결됩니다. 이 트리 데이터 구조에는 원래 마크업에 정의된 상위-하위 관계도 포합됩니다. 즉, _HTML_ 객체는 _body_ 객체의 상위이고, _body_ 는 _paragraph_ 객체의 상위인 식입니다.
 
-<img src="images/dom-tree.png"  alt="DOM 트리">
+1. **Conversion:** The browser reads the raw bytes of HTML off the disk or network, and translates them to individual characters based on specified encoding of the file (for example, UTF-8).
+2. **Tokenizing:** The browser converts strings of characters into distinct tokens—as specified by the [W3C HTML5 standard](http://www.w3.org/TR/html5/){: .external }; for example, "<html>", "<body>"—and other strings within angle brackets. Each token has a special meaning and its own set of rules.
+3. **Lexing:** The emitted tokens are converted into "objects," which define their properties and rules.
+4. **DOM construction:** Finally, because the HTML markup defines relationships between different tags (some tags are contained within other tags) the created objects are linked in a tree data structure that also captures the parent-child relationships defined in the original markup: the *HTML* object is a parent of the *body* object, the *body* is a parent of the *paragraph* object, and so on.
 
-**이 전체 프로세스의 최종 출력이 바로 이 간단한 페이지의 DOM(Document Object Model)이며, 브라우저는 이후 모든 페이지 처리에 이 DOM을 사용합니다.**
 
-브라우저는 HTML 마크업을 처리할 때마다 위의 모든 단계를 수행합니다. 즉, 바이트를 문자로 변환하고, 토큰을 식별한 후 노드로 변환하고 DOM 트리를 빌드합니다. 이 전체 프로세스를 완료하려면 시간이 약간 걸릴 수 있으며, 특히 처리해야 할 HTML이 많은 경우 그렇습니다.
+<img src="images/dom-tree.png" alt="DOM 트리">
 
-<img src="images/dom-timeline.png"  alt="DevTools에서 DOM 생성 추적">
 
-참고: 여기서는 Chrome DevTools에 대한 기본적인 사항, 즉 네트워크 워터폴(waterfall)을 캡처하거나 타임라인을 기록하는 방법에 대해 알고 있다고 가정합니다. DevTools에 대해 한 번 더 간단하게 되짚어보려면 <a href='/web/tools/chrome-devtools/'>Chrome DevTools 문서</a>를 확인하고, DevTools를 처음 사용하는 경우에는 Codeschool의 <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> 과정을 학습할 것을 권장합니다.
+**The final output of this entire process is the Document Object Model (DOM) of our simple page, which the browser uses for all further processing of the page.**
 
-Chrome DevTools를 열고 페이지가 로드되는 동안 타임라인을 기록하면 이 단계를 수행하는 데 소요된 실제 시간을 확인할 수 있습니다. 위 예시에서는 HTML 조각을 DOM 트리로 변환하는 데 약 5ms 정도 걸립니다. 큰 페이지의 경우 이 프로세스가 훨씬 더 오래 걸릴 수 있습니다. 매끄러운 애니메이션을 만드는 경우, 브라우저가 대량의 HTML을 처리해야 한다면 쉽게 병목 현상이 발생할 수 있습니다.
+Every time the browser processes HTML markup, it goes through all of the steps above: convert bytes to characters, identify tokens, convert tokens to nodes, and build the DOM tree. This entire process can take some time, especially if we have a large amount of HTML to process.
 
-DOM 트리는 문서 마크업의 속성 및 관계를 포함하지만 요소가 렌더링될 때 어떻게 표시될지에 대해서는 알려주지 않습니다. 이것은 CSSOM의 책임입니다.
 
-## CSSOM(CSS Object Model)
+<img src="images/dom-timeline.png" alt="DevTools에서 DOM 생성 추적">
 
-브라우저는 단순한 페이지의 DOM을 생성하는 동안 외부 CSS 스타일시트인 style.css를 참조하는 문서의 헤드 섹션에서 링크 태그를 접합니다. 페이지를 렌더링하는 데 이 리소스가 필요할 것이라고 판단한 브라우저는 이 리소스에 대한 요청을 즉시 발송하고 요청의 결과로 다음 콘텐츠가 반환됩니다.
+
+Note: We're assuming that you have basic familiarity with Chrome DevTools - that is, you know how to capture a network waterfall or record a timeline. If you need a quick refresher, check out the <a href="/web/tools/chrome-devtools/">Chrome DevTools documentation</a>; if you're new to DevTools, we recommend that you take the Codeschool <a href="http://discover-devtools.codeschool.com/">Discover DevTools</a> course.
+
+If you open up Chrome DevTools and record a timeline while the page is loaded, you can see the actual time taken to perform this step—in the example above, it took us ~5ms to convert a chunk of HTML into a DOM tree. For a larger page, this process could take significantly longer. When creating smooth animations, this can easily become a bottleneck if the browser has to process large amounts of HTML.
+
+The DOM tree captures the properties and relationships of the document markup, but it doesn't tell us how the element will look when rendered. That’s the responsibility of the CSSOM.
+
+## CSS Object Model (CSSOM)
+
+While the browser was constructing the DOM of our simple page, it encountered a link tag in the head section of the document referencing an external CSS stylesheet: style.css. Anticipating that it needs this resource to render the page, it immediately dispatches a request for this resource, which comes back with the following content:
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-HTML 마크업 내에 직접(인라인) 스타일을 선언할 수도 있지만 CSS를 HTML과 별도로 유지하면 콘텐츠와 디자인을 별도의 항목으로 처리할 수 있습니다. 즉, 디자이너는 CSS를 처리하고, 개발자는 HTML에만 집중할 수 있습니다.
 
-HTML과 마찬가지로, 수신된 CSS 규칙을 브라우저가 이해하고 처리할 수 있는 형식으로 변환해야 합니다. 따라서 HTML 대신 CSS에 대해 HTML 프로세스를 반복합니다.
+We could have declared our styles directly within the HTML markup (inline), but keeping our CSS independent of HTML allows us to treat content and design as separate concerns: designers can work on CSS, developers can focus on HTML, and so on.
 
-<img src="images/cssom-construction.png"  alt="CSSOM 생성 단계">
-
-CSS 바이트가 문자로 변환된 후 차례로 토큰과 노드로 변환되고 마지막으로 'CSS Object Model'(CSSOM)이라는 트리 구조에 링크됩니다.
-
-<img src="images/cssom-tree.png"  alt="CSSOM 트리">
-
-CSSOM이 트리 구조를 가지는 이유는 무엇일까요? 페이지에 있는 객체의 최종 스타일을 계산할 때 브라우저는 해당 노드에 적용 가능한 가장 일반적인 규칙(예: body 요소의 하위인 경우 모든 body 스타일 적용)으로 시작한 후 더욱 구체적인 규칙을 적용하는 방식으로, 즉 '하향식'으로 규칙을 적용하는 방식으로 계산된 스타일을 재귀적으로 세분화합니다.
-
-더욱 구체화하기 위해 위에 나와 있는 CSSOM 트리를 살펴봅시다. body 요소 내에 있는 _span_ 태그 안에 포함된 모든 텍스트의 글꼴 크기는 16픽셀이고 색상은 빨간색입니다. font-size 지시문은 body에서 span으로 하향식으로 적용되기 때문입니다. 하지만 span 태그가 단락(p) 태그의 하위인 경우 해당 콘텐츠는 표시되지 않습니다.
-
-또한, 위의 트리는 완전한 CSSOM 트리가 아니고 스타일시트에서 재정의하도록 결정한 스타일만 표시한다는 점에 유의하세요. 모든 브라우저는 '사용자 에이전트 스타일'이라고 하는 기본 스타일 집합, 즉 개발자가 고유한 스타일을 제공하지 않을 경우 표시되는 스타일을 제공합니다. 개발자가 작성하는 스타일은 이러한 기본 스타일(예: [기본 IE 스타일](http://www.iecss.com/){: .external })을 간단하게 재정의합니다.
-
-CSS 처리에 시간이 얼마나 걸리는지 알기 위해, DevTools에서 타임라인을 기록하고 'Recalculate Style' 이벤트를 찾을 수 있습니다. DOM 파싱과 달리, 타임라인에 'Parse CSS' 항목이 별도로 표시되지 않으며, 대신 파싱 및 CSSOM 트리 생성과 계산된 스타일의 재귀적 계산이 이 단일 이벤트에서 캡처됩니다.
-
-<img src="images/cssom-timeline.png"  alt="DevTools에서 CSSOM 생성 추적">
-
-작은 스타일시트를 처리하는 데 0.6ms 미만이 걸리며, 페이지에 있는 8개 요소에 영향을 미칩니다. 많지는 않지만 비용이 전혀 안 드는 것은 아니죠. 그런데 8개 요소는 어디서 왔을까요? CSSOM 및 DOM은 서로 독립적인 데이터 구조입니다. 알고보니 브라우저에서 숨겨진 중요한 단계가 있습니다. 다음 섹션에서 DOM 및 CSSOM을 함께 연결하는 [렌더링 트리](/web/fundamentals/performance/critical-rendering-path/render-tree-construction)에 대해 살펴보도록 하겠습니다.
-
-<a href="render-tree-construction" class="gc-analytics-event"
-    data-category="CRP" data-label="Next / Render-Tree Construction">
-  <button>다음 차례: 렌더링 트리 생성, 레이아웃 및 페인트</button>
-</a>
+As with HTML, we need to convert the received CSS rules into something that the browser can understand and work with. Hence, we repeat the HTML process, but for CSS instead of HTML:
 
 
-{# wf_devsite_translation #}
+<img src="images/cssom-construction.png" alt="CSSOM 생성 단계">
+
+
+The CSS bytes are converted into characters, then tokens, then nodes, and finally they are linked into a tree structure known as the "CSS Object Model" (CSSOM):
+
+
+<img src="images/cssom-tree.png" alt="CSSOM 트리">
+
+
+Why does the CSSOM have a tree structure? When computing the final set of styles for any object on the page, the browser starts with the most general rule applicable to that node (for example, if it is a child of a body element, then all body styles apply) and then recursively refines the computed styles by applying more specific rules; that is, the rules "cascade down."
+
+To make it more concrete, consider the CSSOM tree above. Any text contained within the *span* tag that is placed within the body element, has a font size of 16 pixels and has red text—the font-size directive cascades down from the body to the span. However, if a span tag is child of a paragraph (p) tag, then its contents are not displayed.
+
+Also, note that the above tree is not the complete CSSOM tree and only shows the styles we decided to override in our stylesheet. Every browser provides a default set of styles also known as "user agent styles"—that’s what we see when we don’t provide any of our own—and our styles simply override these defaults (for example, [default IE styles](http://www.iecss.com/){: .external }).
+
+To find out how long the CSS processing takes you can record a timeline in DevTools and look for "Recalculate Style" event: unlike DOM parsing, the timeline doesn’t show a separate "Parse CSS" entry, and instead captures parsing and CSSOM tree construction, plus the recursive calculation of computed styles under this one event.
+
+
+<img src="images/cssom-timeline.png" alt="DevTools에서 CSSOM 생성 추적">
+
+
+Our trivial stylesheet takes ~0.6ms to process and affects eight elements on the page—not much, but once again, not free. However, where did the eight elements come from? The CSSOM and DOM are independent data structures! Turns out, the browser is hiding an important step. Next, lets talk about the [render tree](/web/fundamentals/performance/critical-rendering-path/render-tree-construction) that links the DOM and CSSOM together.
