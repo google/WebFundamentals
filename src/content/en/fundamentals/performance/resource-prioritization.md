@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-11-01 #}
+{# wf_updated_on: 2017-11-06 #}
 {# wf_published_on: 2017-11-01 #}
 {# wf_blink_components: Blink>Network,Blink>Loader #}
 
@@ -332,7 +332,7 @@ thoroughly, and watch out for any double-fetching!
 
 ## Other Techniques and Tools
 
-`<link rel="preload">`, `<link rel="preconect">`, and `<link rel="prefetch">`
+`<link rel="preload">`, `<link rel="preconnect">`, and `<link rel="prefetch">`
 (as well as the bonus `<link rel="dns-prefetch">`) offer a
 great way of declaratively letting the browser know about resources and
 connections ahead of time, and tweaking when things happen, according to when
