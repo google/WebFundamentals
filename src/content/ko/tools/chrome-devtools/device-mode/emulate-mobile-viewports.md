@@ -13,12 +13,11 @@ description: Chrome DevTools의 Device Mode를 사용하면 개발 사이트가 
 
 업데이트된 Device Mode(Chrome 49 이후)는 이제 모바일 중심 DevTools의 핵심 부분이며 기본 DevTools 도구 모음을 확장합니다. 이 모드의 컨트롤을 사용하여 광범위한 기기를 시뮬레이션하거나 완전한 응답형을 적용하는 방법을 배웁니다.
 
-
 ### TL;DR {: .hide-from-toc }
+
 - Device Mode의 스크린 에뮬레이터를 사용하여 사이트의 응답성을 테스트해보세요.
 - 사용자설정 기본 설정을 저장해두었다가 나중에 간편하게 액세스할 수 있습니다.
 - Device Mode는 실제 기기 테스트를 대체할 수 있는 것은 아닙니다. 제한사항이 있다는 점에 유의하세요.
-
 
 ## 뷰포트 컨트롤 사용 {: #viewport-controls }
 
@@ -26,8 +25,8 @@ description: Chrome DevTools의 Device Mode를 사용하면 개발 사이트가 
 
 뷰포트 컨트롤을 사용하면 다양한 기기에 대해 사이트를 테스트하고 응답성을 확인할 수 있습니다. 다음 두 가지 모드가 있습니다.
 
-  1. **응답형**. 뷰포트 양쪽의 큰 핸들을 통해 뷰포트 크기를 자유자재로 조정할 수 있게 합니다.
-  2. **특정 기기**. 뷰포트를 특정 기기의 정확한 뷰포트 크기로 잠그고 특정 기기 특성을 에뮬레이트합니다.
+1. **응답형**. 뷰포트 양쪽의 큰 핸들을 통해 뷰포트 크기를 자유자재로 조정할 수 있게 합니다.
+2. **특정 기기**. 뷰포트를 특정 기기의 정확한 뷰포트 크기로 잠그고 특정 기기 특성을 에뮬레이트합니다.
 
 ## 응답형 모드
 
@@ -63,19 +62,22 @@ description: Chrome DevTools의 Device Mode를 사용하면 개발 사이트가 
 
 ### 사용자설정 기기 프리셋 추가
 
-Device Mode는 에뮬레이션을 위한 다양한 기기를 제공합니다. 여기에 포함되지 않은 특정 
-사례나 기기를 발견하면 사용자설정 기기를 추가할 수 있습니다. 
+Device Mode는 에뮬레이션을 위한 다양한 기기를 제공합니다. 여기에 포함되지 않은 특정
+사례나 기기를 발견하면 사용자설정 기기를 추가할 수 있습니다.
 
 <div class="wf-devtools-flex">
   <div>
   <p>사용자설정 기기를 추가하려면:</p>
   <ol>
     <li>DevTools Settings로 이동합니다.</li>
-    <li><strong>Devices</strong> 탭을 클릭합니다.</li>
-    <li><strong>Add custom device</strong>를 클릭합니다.</li>
+    <li>
+<strong>Devices</strong> 탭을 클릭합니다.</li>
+    <li>
+<strong>Add custom device</strong>를 클릭합니다.</li>
     <li>기기 이름, 너비, 높이, 기기 픽셀 비율 및 
 사용자 에이전트 문자열을 입력합니다.</li>
-     <li><strong>Add</strong>를 클릭합니다.</li>
+     <li>
+<strong>Add</strong>를 클릭합니다.</li>
   </ol>
   <p>이제 이 사용자설정 기기를 <strong>Device</strong> 드롭다운 메뉴에서 이용할 수 있습니다.</p>
   </div>
@@ -104,14 +106,16 @@ Device Mode는 에뮬레이션을 위한 다양한 기기를 제공합니다. �
   </div>
 </div>
 
-### 화면 크기에 맞춰 확대/축소  
+### 화면 크기에 맞춰 확대/축소
 
 <div class="wf-devtools-flex">
   <div>
   <p>때로는 브라우저 창에서 실제로 이용 가능한 공간보다 큰 해상도를 지닌 기기를 테스트하고 싶은 경우가 있습니다. 이런 경우 <strong>Zoom to Fit</strong> 옵션을 사용하면 편리합니다.</p>
   <ol>
-    <li><strong>Fit to Window</strong>는 이용 가능한 최대 공간에 맞게 확대/축소 배율을 자동으로 설정합니다.</li>
-    <li><strong>Explicit percentages</strong>는 예컨대 이미지에서 DPI를 테스트하고자 할 때 유용합니다.</li>
+    <li>
+<strong>Fit to Window</strong>는 이용 가능한 최대 공간에 맞게 확대/축소 배율을 자동으로 설정합니다.</li>
+    <li>
+<strong>Explicit percentages</strong>는 예컨대 이미지에서 DPI를 테스트하고자 할 때 유용합니다.</li>
   </ol>
   </div>
   <div class="wf-devtools-flex-third">
@@ -144,22 +148,21 @@ Device Mode는 에뮬레이션을 위한 다양한 기기를 제공합니다. �
 **User Agent Type** 또는 Device Type 설정을 이용하면 기기의 유형을
 변경할 수 있습니다. 가능한 값은 다음과 같습니다.
 
-  1. 모바일
-  2. 데스크톱
-  3. 터치스크린이 있는 데스크톱
+1. 모바일
+2. 데스크톱
+3. 터치스크린이 있는 데스크톱
 
-이 설정을 변경하면 모바일 뷰포트와 터치 이벤트 에뮬레이션에 영향을 미치고 
+이 설정을 변경하면 모바일 뷰포트와 터치 이벤트 에뮬레이션에 영향을 미치고
 UA 문자열이 변경됩니다. 따라서 데스크톱용 응답형 사이트를 만들고
 마우스 오버 효과를 테스트하고자 하는 경우, 응답형 모드에서 '데스크톱'으로 전환하세요.
 
-**팁**: [**Network conditions**][nc]
+**팁**: [**Network conditions**](/web/tools/chrome-devtools/profile/network-performance/network-conditions#network-conditions)
 창에서 사용자 에이전트를 설정할 수도 있습니다.
-
 
 ### 기기 픽셀 비율(DPR)
 
 Retina 디스플레이 기기를 Retina 디스플레이가 없는 장비에서 에뮬레이트하고자 하거나 그 반대의 경우,
-**기기 픽셀 비율**을 조정하세요. **기기 픽셀 
+**기기 픽셀 비율**을 조정하세요. **기기 픽셀
 비율**(DPR)은 논리적 픽셀과 물리적 픽셀 사이의 비율을 말합니다.
 Nexus 6P와 같이 Retina 디스플레이가 탑재된 기기의 경우, 일반 기기보다 픽셀 밀도가
 높습니다. 따라서 시각적인 콘텐츠의 선명도와 크기에 영향을 줄 수
@@ -167,22 +170,24 @@ Nexus 6P와 같이 Retina 디스플레이가 탑재된 기기의 경우, 일반 
 
 다음은 웹에서 '기기 픽셀 비율'(DPI) 감도와 관련된 몇 가지 예입니다.
 
-* CSS 미디어 쿼리의 예:
+- CSS 미디어 쿼리의 예:
 
-      @media (-webkit-min-device-pixel-ratio: 2), 
-             (min-resolution: 192dpi) { ... }
+    ```
+    @media (-webkit-min-device-pixel-ratio: 2), 
+           (min-resolution: 192dpi) { ... }
+    ```
 
-* CSS [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) 
- 규칙
+- CSS [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation)
+    규칙
 
-* 이미지의 [srcset](/web/fundamentals/design-and-ux/media/images/images-in-markup)
- 속성
+- 이미지의 [srcset](/web/fundamentals/design-and-ux/media/images/images-in-markup)
+    속성
 
-* `window.devicePixelRatio` 속성
+- `window.devicePixelRatio` 속성
 
 고유 Retina 디스플레이가 있는 경우, DPI가 높은 자산은 선명한 반면 '인치당 도트 수'(DPI)가
-낮은 자산은 모자이크 형태로 나타나는 것을 확인할 수 있을 것입니다. 이 효과를 
-일반 디스플레이에서 시뮬레이션하려면 DPR을 2로 설정하고 확대/축소 기능을 사용하여 뷰포트 배율을 
+낮은 자산은 모자이크 형태로 나타나는 것을 확인할 수 있을 것입니다. 이 효과를
+일반 디스플레이에서 시뮬레이션하려면 DPR을 2로 설정하고 확대/축소 기능을 사용하여 뷰포트 배율을
 조정합니다. 2x 자산은 계속해서 선명하게 보이는 반면 1x 자산은 모자이크 처리될
 것입니다.
 
@@ -239,41 +244,30 @@ Nexus 6P와 같이 Retina 디스플레이가 탑재된 기기의 경우, 일반 
 이 옵션을 선택하면 Drawer에서 패널이 열리고 네트워크와 관련된 동작을
 변경할 수 있습니다.
 
-  1. **Disk Cache**: 디스크 캐시를 비활성화하면 DevTools가 열려 있는 동안 
-페이지와 자산을 브라우저가 캐시하지 못하도록 차단합니다.
-  2. **Network Throttling**: [네트워크 제한](/web/tools/chrome-devtools/network-performance/network-conditions)에 대해 자세히 알아봅니다.
-  3. **User Agent**: 특정 UA(User Agent) 문자열
-재정의를 설정할 수 있습니다.
-
-**팁**: 또한 [기본 메뉴][nc]에서도 **Network conditions** 창을 
-열 수 있습니다.
+1. **Disk Cache**: 디스크 캐시를 비활성화하면 DevTools가 열려 있는 동안페이지와 자산을 브라우저가 캐시하지 못하도록 차단합니다.
+2. **Network Throttling**: [네트워크 제한](/web/tools/chrome-devtools/network-performance/network-conditions)에 대해 자세히 알아봅니다.
+3. **User Agent**: 특정 UA(User Agent) 문자열재정의를 설정할 수 있습니다.
 
 ## 제한 사항
 
 Device Mode에는 몇 가지 제한이 있습니다.
 
-* **기기 하드웨어**
-  * GPU 및 CPU 동작은 에뮬레이트되지 않습니다.
-* **브라우저 UI**
-  * 주소 표시줄과 같은 시스템 디스플레이 항목은 에뮬레이트되지 않습니다.
-  * `<select>` 요소와 같은 네이티브 디스플레이는 모달 목록으로 에뮬레이트되지 않습니다.
-  * 키패드를 여는 숫자 입력과 같은 일부 개선 기능의 경우 실제 기기의 동작과 다를 수 있습니다.
-* **브라우저 기능**
-  * WebGL은 에뮬레이터에서는 작동하지만 iOS 7 기기에서는 지원되지 않습니다.
-  * MathML은 Chrome에서는 지원되지 않지만 iOS 7 기기에서는 지원됩니다.
-  * [iOS 5 방향 지정 확대/축소 버그](https://github.com/scottjehl/device-bugs/issues/2)는 에뮬레이트되지 않습니다.
-  * line-height CSS 속성은 에뮬레이터에서는 작동하지만 Opera Mini에서는 지원되지 않습니다.
-  * [Internet Explorer](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx)에서와 같은 CSS 규칙 제한은 에뮬레이트되지 않습니다.
-* **AppCache**
-  * 에뮬레이터는 AppCache [매니페스트 파일](https://code.google.com/p/chromium/issues/detail?id=334120) 또는 [소스 요청 보기](https://code.google.com/p/chromium/issues/detail?id=119767)에 대해 <abbr title="User Agent">UA</abbr>를 재정의하지 않습니다.
+- **기기 하드웨어**
+    - GPU 및 CPU 동작은 에뮬레이트되지 않습니다.
+- **브라우저 UI**
+    - 주소 표시줄과 같은 시스템 디스플레이 항목은 에뮬레이트되지 않습니다.
+    - `<select>` 요소와 같은 네이티브 디스플레이는 모달 목록으로 에뮬레이트되지 않습니다.
+    - 키패드를 여는 숫자 입력과 같은 일부 개선 기능의 경우 실제 기기의 동작과 다를 수 있습니다.
+- **브라우저 기능**
+    - WebGL은 에뮬레이터에서는 작동하지만 iOS 7 기기에서는 지원되지 않습니다.
+    - MathML은 Chrome에서는 지원되지 않지만 iOS 7 기기에서는 지원됩니다.
+    - [iOS 5 방향 지정 확대/축소 버그](https://github.com/scottjehl/device-bugs/issues/2)는 에뮬레이트되지 않습니다.
+    - line-height CSS 속성은 에뮬레이터에서는 작동하지만 Opera Mini에서는 지원되지 않습니다.
+    - [Internet Explorer](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx)에서와 같은 CSS 규칙 제한은 에뮬레이트되지 않습니다.
+- **AppCache**
+    - 에뮬레이터는 AppCache [매니페스트 파일](https://code.google.com/p/chromium/issues/detail?id=334120) 또는 [소스 요청 보기](https://code.google.com/p/chromium/issues/detail?id=119767)에 대해 <abbr title="User Agent">UA</abbr>를 재정의하지 않습니다.
 
 이러한 제한에도 불구하고, Device Mode는 대부분의 작업에서 강력한 기능을 발휘합니다.
-실제 기기에서 테스트해야 하는 경우, 
-[원격 디버깅](/web/tools/chrome-devtools/debug/remote-debugging)을 사용하여 
+실제 기기에서 테스트해야 하는 경우,
+[원격 디버깅](/web/tools/chrome-devtools/debug/remote-debugging)을 사용하여
 더욱 자세히 살펴볼 수 있습니다.
-
-
-[nc]: /web/tools/chrome-devtools/profile/network-performance/network-conditions#network-conditions
-
-
-{# wf_devsite_translation #}
