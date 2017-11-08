@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Infinite scrollers are a common UI pattern. Here we explore how to implement this pattern in a memory conservative way that performs at 60fps.
 
-{# wf_updated_on: 2016-07-01 #}
+{# wf_updated_on: 2017-11-07 #}
 {# wf_published_on: 2016-07-01 #}
 {# wf_tags: javascript,css #}
 {# wf_featured_image: /web/updates/images/2016/07/infinite-scroller/featured.png #}
@@ -243,8 +243,8 @@ We hope you see how challenging simple problems can become when you want to comb
 
 All the code can be found in our [repository][Infscroller Code]. We have done our best to keep it reusable, but won’t be publishing it as an actual library on npm or as a separate repo. The primary use is educational.
 
-[Infscroller Demo]: http://googlechrome.github.io/ui-element-samples/infinite-scroller/
-[Infscroller Code]: https://github.com/GoogleChrome/ui-element-samples/tree/gh-pages/infinite-scroller
+[Infscroller Demo]: http://googlechromelabs.github.io/ui-element-samples/infinite-scroller/
+[Infscroller Code]: https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/infinite-scroller
 [Containment]: https://developers.google.com/web/updates/2016/06/css-containment
 [IntersectionObserver]: https://developers.google.com/web/updates/2016/04/intersectionobserver
 [Compositor Worklet]: https://developers.google.com/web/updates/2016/05/houdini

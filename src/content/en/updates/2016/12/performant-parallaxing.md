@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: With a little mathematical wriggling, it's possible to have parallax effects that play nicely with browser architectures!
 
-{# wf_updated_on: 2016-12-02 #}
+{# wf_updated_on: 2017-11-07 #}
 {# wf_published_on: 2016-12-02 #}
 {# wf_tags: performance,parallax,css,3d,style #}
 {# wf_featured_image: /web/updates/images/2016/12/performant-parallaxing/featured-image.jpg #}
@@ -24,7 +24,7 @@ Love it or hate it, parallaxing is here to stay. When used judiciously it can ad
 * Use CSS 3D transforms to create a more accurate parallax effect.
 * For Mobile Safari use `position: sticky` to ensure that the parallax effect gets propagated.
 
-If you want the drop-in solution head over to the [UI Element Samples GitHub repo](https://github.com/GoogleChrome/ui-element-samples) and grab the [Parallax helper JS](https://github.com/GoogleChrome/ui-element-samples/blob/gh-pages/parallax/scripts/parallax.js)! You can see a [live demo of the parallax scroller](http://googlechrome.github.io/ui-element-samples/parallax/) in the GitHub repo.
+If you want the drop-in solution head over to the [UI Element Samples GitHub repo](https://github.com/GoogleChromeLabs/ui-element-samples) and grab the [Parallax helper JS](https://github.com/GoogleChromeLabs/ui-element-samples/blob/gh-pages/parallax/scripts/parallax.js)! You can see a [live demo of the parallax scroller](http://googlechromelabs.github.io/ui-element-samples/parallax/) in the GitHub repo.
 
 ## Problem parallaxers
 
@@ -164,7 +164,7 @@ As with anything, though, there are still lumps and bumps that need to be smooth
 
 ## Conclusion
 
-Parallaxing is a fun effect when used thoughtfully. As you can see it’s possible to implement it in a way that is performant, scroll-coupled, and cross-browser. Since it requires a little bit of mathematical wriggling, and a small amount of boilerplate to get the desired effect, we have wrapped up a small helper library and sample, which you can find in our [UI Element Samples GitHub repo](https://github.com/GoogleChrome/ui-element-samples/tree/gh-pages/parallax).
+Parallaxing is a fun effect when used thoughtfully. As you can see it’s possible to implement it in a way that is performant, scroll-coupled, and cross-browser. Since it requires a little bit of mathematical wriggling, and a small amount of boilerplate to get the desired effect, we have wrapped up a small helper library and sample, which you can find in our [UI Element Samples GitHub repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/parallax).
 
 Have a play, and let us know how you get on.
 

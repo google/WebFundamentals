@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: When making expand and collapse effects you can use scale transforms to keep your UI performant.
 
-{# wf_updated_on: 2017-03-23 #}
+{# wf_updated_on: 2017-11-07 #}
 {# wf_published_on: 2017-03-23 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/2017/03/performant-expand-and-collapse/featured-image.jpg #}
@@ -21,8 +21,11 @@ stretched and skewed during the animation by counter-scaling them.
 Previously we’ve posted updates on how to create performant
 [parallax effects](/web/updates/2016/12/performant-parallaxing) and
 [infinite scrollers](/web/updates/2016/07/infinite-scroller). In this
-post we’re going to look over what’s involved if you want performant clip animations. If you want
-to see a demo, check out the [Sample UI Elements GitHub repo](https://github.com/GoogleChrome/ui-element-samples/tree/gh-pages/animated-clip).
+post we’re going to look over what’s involved if you want performant clip
+animations. If you want to see a
+[demo](https://googlechromelabs.github.io/ui-element-samples/animated-clip/),
+check out the [Sample UI Elements GitHub
+repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/animated-clip).
 
 Take, for example, an expanding menu:
 
@@ -268,7 +271,7 @@ interested in the details for that
 [there’s a bug filed that you can star and follow](https://crbug.com/704067).
 
 The code for the circular expand effect can be found in
-[the GitHub repo](https://github.com/GoogleChrome/ui-element-samples/tree/gh-pages/animated-clip/advanced).
+[the GitHub repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/animated-clip/advanced).
 
 ## Conclusions
 
@@ -295,7 +298,7 @@ Equally, if your app already relies on JavaScript for its animations you may be 
 being at least consistent with your existing codebase.
 
 If you want to have a look through the code for this effect take a look at the
-[UI Element Samples Github repo](https://github.com/GoogleChrome/ui-element-samples/tree/gh-pages/animated-clip) and,
+[UI Element Samples Github repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/animated-clip) and,
 as always, let us know how you get on in the comments below.
 
 {% include "comment-widget.html" %}
