@@ -1,86 +1,80 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: ユーザー補助機能を改善するための適切なスタイル設定の使用
-
+description: Using proper styling to improve accessibility
 
 {# wf_updated_on: 2016-10-04 #}
 {# wf_published_on: 2016-10-04 #}
 
-# 見やすいスタイル {: .page-title }
+# Accessible Styles {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/robdodson.html" %}
 
+We've explored two of the crucial pillars of accessibility, focus and semantics.
+Now let's tackle the third, styling. It's a broad topic that we can cover in
+three sections.
 
+- Ensuring that elements are styled to support our accessibility efforts byadding styles for focus and various ARIA states.
+- Styling our UIs for flexibility so they can be zoomed or scaled toaccommodate users who may have trouble with small text.
+- Choosing the right colors and contrast to avoid conveying information withcolor alone.
 
-ユーザー補助機能の 2 つの重要な柱であるフォーカスとセマンティクスについて説明しました。ここでは、3 つ目のスタイル設定について説明します。この広範なトピックは、次の 3 つのセクションに分けて説明することができます。
+## Styling focus
 
-
- - フォーカスやさまざまな ARIA 状態にスタイルを追加して、ユーザー補助機能を活用できるように要素のスタイル設定をする。
-
- - UI のスタイル設定によって柔軟性を高め、ズームやサイズ変更を可能にして、小さな文字を読み取るのが難しいユーザーに対応する。
-
- - 適切な色とコントラストを選択し、色だけで情報を伝えることは避ける。
-
-
-##  フォーカスのスタイル設定
-
-一般に、要素のフォーカスを扱うときは必ず、組み込みのブラウザのフォーカス機能（CSS の `outline` プロパティ）を利用して要素のスタイルを設定します。フォーカス リングはとても便利です。フォーカス リングがなければ、ユーザーはフォーカスのある要素を見分けられません。{: .external }[WebAIM
-チェックリスト](http://webaim.org/standards/wcag/checklist) でも、この点が指摘されています。「現在、どのページ要素にキーボードのフォーカスが存在するのかを視覚的に明確にする（たとえば、ページのタブ間を移動する場合、どこにいるのかがわかるようにする）」必要があります。
-
-
-
+Generally, any time we focus an element, we rely on the built-in browser focus
+ring (the CSS `outline` property) to style the element. The focus ring is handy
+because, without it, it's impossible for a keyboard user to tell which element
+has the focus. The [WebAIM
+checklist](http://webaim.org/standards/wcag/checklist){: .external } makes a
+point of this, requiring that "It is visually apparent which page element has
+the current keyboard focus (i.e., as you tab through the page, you can see where
+you are)."
 
 ![フォーカス リングのあるフォーム要素](imgs/focus-ring.png)
 
-しかしときには、フォーカス リングが歪んで見えたり、ページのデザインに合っていないことがあります。一部のデベロッパーはこの要素の `outline` に `0` や `none` を設定して、このスタイル自体を削除しています。しかしフォーカスのインジケーターがなければ、キーボードのユーザーはどうやって操作しているアイテムを識別すればよいのでしょうか。
+However, sometimes the focus ring can look distorted or it may just not fit in
+with your page design. Some developers remove this style altogether by setting
+the element's `outline` to `0` or `none`. But without a focus indicator, how is
+a keyboard user supposed to know which item they're interacting with?
 
+Warning: Never set outline to 0 or none without providing a focus alternative!
 
-警告:フォーカスの代わりになるものを提供できない限り、決して outline に 0 や none を設定しないでください。
+You might be familiar with adding hover states to your controls using the CSS
+`:hover` *pseudo-class*. For example, you might use `:hover` on a link element
+to change its color or background when the mouse is over it. Similar to
+`:hover`, you can use the `:focus` pseudo-class to target an element when it has
+focus.
 
-CSS
-`:hover` *疑似クラス*を使用して、コントロールにホバー状態を追加する方法はよく知られています。たとえば、リンク要素に `:hover` を使用すると、その上にカーソルを移動したときに色や背景が変化します。
-`:hover` と同様に、`:focus` 疑似クラスを使用して、フォーカスのあるときに要素をターゲットにすることができます。
+```
+/* At a minimum you can add a focus style that matches your hover style */
+:hover, :focus {
+  background: #c0ffee;
+}
+```
 
+An alternative solution to the problem of removing the focus ring is to give
+your element the same hover and focus styles, which solves the
+"where's-the-focus?" problem for keyboard users. As usual, improving the
+accessibility experience improves everyone's experience.
 
-
-    /* At a minimum you can add a focus style that matches your hover style */
-    :hover, :focus {
-      background: #c0ffee;
-    }
-
-フォーカス リングの削除の問題を解決するもう 1 つの方法として、同じ hover スタイルと focus スタイルを要素に設定すると、キーボード ユーザーの「フォーカス行方不明」問題を解決できます。これまでと同様、ユーザー補助機能を改善すれば、あらゆるユーザーのエクスペリエンスの向上につながります。
-
-
-###  入力モダリティ
+### Input modality
 
 ![フォーカス リングが存在するネイティブ HTML ボタン](imgs/sign-up.png){: .attempt-right }
 
-`button` などのネイティブ要素についは、マウスやキーボード押下によるユーザー操作の発生をブラウザで検出でき、通常、フォーカス リングはキーボードで操作した場合にのみ表示されます。たとえば、ネイティブ
-`button` をマウスでクリックしたときはフォーカス リングは表示されませんが、キーボードでタブ移動するとフォーカス リングが表示されます。
+For native elements like `button`, browsers can detect whether user interaction
+occurred via the mouse or the keyboard press, and typically only display the
+focus ring for keyboard interaction. For example, when you click a native
+`button` with the mouse there is no focus ring, but when you tab to it with the
+keyboard the focus ring appears.
 
+The logic here is that mouse users are less likely to need the focus ring
+because they know what element they clicked. Unfortunately there isn't currently
+a single cross-browser solution that yields this same behavior. As a result, if
+you give any element a `:focus` style, that style will display when *either* the
+user clicks on the element or focuses it with the keyboard. Try clicking on this
+fake button and notice the `:focus` style is always applied.
 
-これは、マウス ユーザーはクリックした要素を把握しているため、フォーカス リングを表示する必要性が低いという考えに基づいています。残念ながら現在のところ、これと同じ動作を実現するクロスブラウザ ソリューションはありません。そのため、任意の要素に `:focus` スタイルを設定すると、要素をクリックしたとき、*または*キーボードで要素にフォーカスが移動したときにそのスタイルが表示されます。次のダミーのボタンをクリックしてみてください。`:focus` スタイルが常に適用されていることがわかります。
-
-
-    <style>
-      fake-button {
-        display: inline-block;
-        padding: 10px;
-        border: 1px solid black;
-        cursor: pointer;
-        user-select: none;
-      }
-
-      fake-button:focus {
-        outline: none;
-        background: pink;
-      }
-    </style>
-    <fake-button tabindex="0">Click Me!</fake-button>
-
-{% framebox height="80px" %}
+```
 <style>
   fake-button {
     display: inline-block;
@@ -96,204 +90,266 @@ CSS
   }
 </style>
 <fake-button tabindex="0">Click Me!</fake-button>
+```
+
+{% framebox height="80px" %}
+
+
+<style>
+  fake-button {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  fake-button:focus {
+    outline: none;
+    background: pink;
+  }
+</style>
+
+
+<fake-button tabindex="0">Click Me!</fake-button>
 {% endframebox %}
 
-これではやや過剰な主張になってしまうため、多くの場合、デベロッパーは JavaScript とカスタム コントロールを駆使して、マウスとキーボードのフォーカスを区別できるようにします。
+This can be a bit annoying, and often times developer will resort to using
+JavaScript with custom controls to help differentiate between mouse and keyboard
+focus.
 
+In Firefox, the `:-moz-focusring` CSS pseudo-class allows you to write a focus
+style that is only applied if the element is focused via the keyboard, quite a
+handy feature. While this pseudo-class is currently only supported in Firefox,
+[there is currently work going on to turn it into a
+standard](https://github.com/wicg/modality){: .external }.
 
+There is also [this great article by Alice Boxhall and Brian
+Kardell](https://www.oreilly.com/ideas/proposing-css-input-modality){: .external }
+that explores the topic of modality and contains prototype code for
+differentiating between mouse and keyboard input. You can use their solution
+today, and then include the focus ring pseudo-class later when it has more
+widespread support.
 
-Firefox では、`:-moz-focusring` CSS 疑似クラスを使用すると、要素がキーボードでフォーカスされた場合にのみ適用される focus スタイルを記述できます。これは非常に便利な機能です。この疑似クラスは現在 Firefox のみでサポートされていますが、[現在、この機能を標準にするための作業が進められています](https://github.com/wicg/modality){: .external }。
+## Styling states with ARIA
 
+When you build components, it's common practice to reflect their state, and thus
+their appearance, using CSS classes controlled with JavaScript.
 
+For example, consider a toggle button that goes into a "pressed" visual state
+when clicked and retains that state until it is clicked again. To style the
+state, your JavaScript might add a `pressed` class to the button. And, because
+you want good semantics on all your controls, you would also set the
+`aria-pressed` state for the button to `true`.
 
-また、[Alice Boxhall と Brian Kardell によるこのすばらしい記事](https://www.oreilly.com/ideas/proposing-css-input-modality){: .external }では、モダリティに関するトピックが取り上げられており、マウスとキーボードの入力を区別するためのプロトタイプ コードが紹介されています。当面はこのソリューションを使用し、フォーカス リング疑似クラスは幅広くサポートされた時点で組み込むとよいでしょう。
+A useful technique to employ here is to remove the class altogether, and just
+use the ARIA attributes to style the element. Now you can update the CSS
+selector for the pressed state of the button from this
 
+```
+.toggle.pressed { ... }
+```
 
+to this.
 
-##  ARIA による状態のスタイル設定
+```
+.toggle[aria-pressed="true"] { ... }
+```
 
-コンポーネントを作成するときは、JavaScript で制御される CSS クラスを使用して、状態を反映し、次に外観へと進むのが通例です。
+This creates both a logical and a semantic relationship between the ARIA state
+and the element's appearance, and cuts down on extra code as well.
 
+## Multi-device responsive design
 
-例として、一度クリックされると「押された」視覚的状態になり、もう一度クリックされるまではその状態が保持される切り替えボタンについて考えましょう。この状態のスタイルを設定するには、JavaScript で `pressed` クラスをボタンに追加する方法も考えられます。すべてのコントロールに適切なセマンティクスを設定するため、さらにボタンの
-`aria-pressed` 状態も `true` に設定するかもしれません。
+We know that it's a good idea to design responsively to provide the best
+multi-device experience, but responsive design also yields a win for
+accessibility.
 
-
-ここで採用すべき有用な方法は、ARIA 属性を使用して要素のスタイルを設定することです。そうすれば、ボタンの押された状態の次の CSS セレクタを更新して
-
-
-    .toggle.pressed { ... }
-    
-
-次のようにできます。
-
-
-    .toggle[aria-pressed="true"] { ... }
-    
-
-これにより、ARIA 状態と要素の外観の間に論理的な関係とセマンティク（意味論的）な関係の両方が構築され、外部のコードも削減できます。
-
-
-##  さまざまな端末に対応したレスポンシブ デザイン
-
-ご存知のとおり、さまざまな端末で最高のエクスペリエンスを実現するにはレスポンシブ デザインの採用が推奨されますが、レスポンシブ デザインはユーザー補助機能の面でも優れています。
-
-
-
-[Udacity.com](https://www.udacity.com/courses/all) のサイトを例にとって考えてみましょう。
+Consider a site like [Udacity.com](https://www.udacity.com/courses/all):
 
 ![倍率 100% の Udacity.com](imgs/udacity.jpg)
 
-小さな印字を読み取るのが難しい視覚障害のある方はページをズームすることがあり、最大倍率は 400% に及ぶ場合があります。サイトがレスポンシブにデザインされていれば、UI 自体が「小さいビューポート」（つまり大きく表示されたページ）に合わせて再配置するため、画面の拡大が必要なデスクトップ ユーザーやモバイルのスクリーン リーダーのユーザーにとっても読みやすくなり、どちらにとってもメリットがあります。以下は、同じページを 400% に拡大したものです。
-
+A low-vision user who has difficulty reading small print might zoom in the page,
+perhaps as much as 400%. Because the site is designed responsively, the UI will
+rearrange itself for the "smaller viewport" (actually for the larger page),
+which is great for desktop users who require screen magnification and for mobile
+screen reader users as well. It's a win-win. Here's the same page magnified to
+400%:
 
 ![倍率 400% の Udacity.com](imgs/udacity-zoomed.jpg)
 
-実際、レスポンシブにデザインすると、[WebAIM チェックリストのルール 1.4.4](http://webaim.org/standards/wcag/checklist#sc1.4.4){: .external } で定義された「テキストのサイズは 2 倍にしても読むことができ、機能できるようにする必要がある」という要件を満たすことができます。
-
-
-
-
-レスポンシブ デザイン全般についてはこのガイドの範囲外なので省略しますが、レスポンシブな処理に役立ち、ユーザーがコンテンツに快適にアクセスできるようにするための重要なポイントをいくつか紹介します。
-
-
-
- - まず、常に適切な `viewport` meta タグ<br>を使用してください。
-   `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
-   <br>`width=device-width` に設定すると、デバイス非依存ピクセルの幅に合わせることができます。`initial-scale=1` に設定すると、CSS ピクセルとデバイス非依存ピクセル間に 1:1 の関係を構築できます。
-
-
-これにより、ブラウザでコンテンツを画面サイズに適合させるため、ユーザーは小さく見づらいテキストに悩まされずに済みます。
-
-
-
-![viewport meta タグがない場合とある場合の端末画面](imgs/scrunched-up.jpg)
-
-警告:viewport meta タグを使用する場合は、maximum-scale=1 や set user-scaleable=no に設定していないことを確認してください。ユーザーが必要に応じてズームできるようにする必要があります。
-
-
- - 別のテクニックとして、レスポンシブ グリッドのデザインがあります。Udacity サイトでご覧のように、グリッドを使用してデザインすると、ページのサイズが変更されるたびにコンテンツのリフローが発生します。このようなレイアウトは多くの場合、ハードコードしたピクセル値ではなくパーセント、em、rem のような相対単位を使用して作成されます。このような方法を使うメリットは、テキストとコンテンツを拡大して、その他の項目をページの下部に移動できる点です。
-倍率によってレイアウトが変更されても、DOM 順序と読み取りの順序は変わりません。
-
-
- - また、テキスト サイズのような要素にもピクセル値ではなく `em` や `rem` を使用することを検討してください。一部のブラウザは、ユーザー プリファレンスでテキストのサイズ変更のみをサポートしています。テキストにピクセル値を使用している場合、この設定はコピーに反映されません。ただし、全体にわたって相対単位を使用した場合は、サイトのコピーでユーザー プリファレンスが反映されます。
-
-
- - 最後に、デザインがモバイル端末に表示されたときに、ボタンやリンクのようなインタラクティブな要素のサイズを大きくして周囲にもスペースを確保し、意図しない他の要素との重なりを回避し、簡単に押せるようにする必要があります。こうすれば多くのユーザー、特に運動障害のあるユーザーにとってメリットがあります。
-
-
-推奨される最小のタッチ ターゲット サイズは、適切にモバイル ビューポートが設定されたサイトで 48dip（デバイス非依存ピクセル）です。たとえば、アイコンの幅と高さが 24px の場合、追加のパディングを使用してタップ ターゲット サイズを 48px にまで拡大します。48x48 ピクセル領域は約 9mm に相当します。これは、指の腹部分と同じくらいのサイズです。
-
-
-![1 組の 48 ピクセルのタッチ ターゲットを示す図](imgs/touch-target.jpg)
-
-タップ ターゲットは、あるタップ ターゲットを押したユーザーの指が、意図せず別のタップ ターゲットをタップしないように、水平方向と垂直方向に約 32 ピクセルの間隔を空ける必要があります。
-
-
-
-![周囲に 32 ピクセルの間隔があるタップ ターゲットの図](imgs/touch-target2.jpg)
-
-##  色とコントラスト
-
-視覚に問題がない方は、誰もが自分と同じように色やテキストの読みやすさを認識していると思いがちですが、当然ながらそれは正しくありません。最後に、色やコントラストを効果的に使用して、誰もがアクセスできる快適なデザインを作成する方法を見ていきましょう。
-
-
-
-
-ご想像どおり、色の組み合わせによっては、一部のユーザーにとっては読みづらかったり、まったく読めないこともあります。これは通常、*色のコントラスト*、つまり前景色と背景色の輝度の関係の問題になります。同系色の場合、コントラスト比は低く、異なる色にするとコントラスト比が高くなります。
-
-
-[WebAIM のガイドライン](http://webaim.org/standards/wcag/){: .external } では、すべてのテキストで AA（最小）コントラスト比 4.5:1 を推奨しています。例外は、非常に大きなテキストです（デフォルトの本文テキストより 120～150% 大きい）。この場合、推奨されるコントラスト比は 3:1 です。以下に、コントラスト比の違いを示します。
-
-
-
-
-![さまざまなコントラスト比の比較](imgs/contrast-ratios.jpg)
-
-コントラスト比 4.5:1 は、レベル AA 向けに指定された値です。これは、約 20/40 の視力に相当する低視力のユーザーが通常経験するコントラスト感度において、認識できない色を補うためです。20/40 は、約 80 歳の人の一般的な視力といわれています。低視力の障がいを持つユーザーや色覚に障がいを持つユーザー向けに、本文テキストのコントラストを 7:1 に上げることができます。
-
-
-Chrome の [Accessibility DevTools 拡張機能](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb){: .external }を使用して、コントラスト比を特定できます。Chrome Devtools を使用するメリットの 1 つは、現在の色に対して AA および AAA（拡張）の代替色を提案する機能を使えることです。値をクリックすると、アプリでプレビューできます。
-
-
-
-色 / コントラストの検証を実行するには、次の基本的なステップを実行します。
-
- 1. 拡張機能をインストールしたら、`Audits` をクリックします。
- 1. `Accessibility` 以外のチェックをすべてはずします。
- 1. `Audit Present State` をクリックします。
- 1. コントラストの警告を確認します。
-
-![devtools のコントラストの検証ダイアログ](imgs/contrast-audit.png)
-
-WebAIM 自体にも、便利な[カラー コントラスト チェッカー](http://webaim.org/resources/contrastchecker/){: .external }があり、色のペアのコントラストを確認するために使用できます。
-
-
-
-###  色だけで情報を伝えない
-
-色覚に障がいを持つユーザーは約 3 億 2 千万にのぼります。男性は 12 人に 1 人、女性は 200 人に 1 人の割合で、なんらかの「色覚異常」を抱えています。つまり、1/20（5%）のユーザーは、あなたが意図したとおりにサイトを見ることができません。色のみに頼って情報を伝えようとすると、それだけの数のユーザーが情報を認識できなくなります。
-
-
-
-
-
-注: 「色覚異常」とは多くの場合、色を識別できない問題を抱えた人の視覚的な状況を指しますが、実際には、完全な色覚異常の方はごくわずかです。色覚異常の方の多くは、一部またはほとんどの色を識別できますが、赤と緑（最もよくあるパターン）、茶とオレンジ、青と紫など、特定の色の区別が困難です。
-
-
-
-たとえば、入力フォームで電話番号に赤色の下線を引き、無効な番号であることを示しても、色覚異常の方やスクリーン リーダーのユーザーには、その情報が完全には伝わりません。したがって、重要な情報については複数のアクセス手段を提供する必要があります。
-
-
-![赤色の下線でエラーを示している入力フォーム](imgs/input-form1.png)
-
-[WebAIM チェックリストのセクション 1.4.1](http://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } には、「色はコンテンツを伝えたり、視覚要素を区別する単独の手段として用いないこと」と記載されています。さらに、特定のコントラスト要件を満たしていない限り、「色だけを使用して周囲のテキストとリンクを区別しないこと」とあります。このチェックリストでは、アクティブなリンクを示すには、下線などのその他の標示を追加することを推奨しています（CSS の `text-decoration` プロパティを使用）。
-
-
-
-前述の例を修正する簡単な方法は、フィールドに、値が無効であることおよびその理由を示すメッセージを追加することです。
-
-
-![明確にするためにエラー メッセージを追加した入力フォーム](imgs/input-form2.png)
-
-アプリを作成するときは、このようなことを念頭に置き、色に過度に依存して重要な情報を伝えている箇所がないかをチェックしてください。
-
-
-
-自分のサイトがさまざまなユーザーにどう見えるのか興味がある方や、過度に色に依存した UI を作成している方は、[NoCoffee Chrome
-拡張機能](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl){: .external }を使用すると、さまざまな色覚異常など、各種の視覚障がいがある方の視覚をシミュレートできます。
-
-
-
-
-###  高コントラスト モード
-
-高コントラスト モードを使用すると、前景色と背景色を反転できます。こうすると多くの場合、テキストが際立ち、読みやすくなります。低視力の障がいを持つ方は、高コントラスト モードにするとページ上のコンテンツをかなりナビゲートしやすくなります。マシンで高コントラストに設定する方法はいくつかあります。
-
-Mac OSX や Windows のようなオペレーティング システムには、システムレベルですべてに対して有効化できる高コントラスト モードが備わっています。または、[Chrome High Contrast
-拡張機能](https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph){: .external }のような拡張機能をインストールして、特定のアプリでのみ高コントラストを有効にできます。
-
-
-
-実際に、高コントラストの設定を有効にして、アプリのすべての UI を見ることができ、使用できるかを確認するとよいでしょう。
-
-
-たとえば、ナビゲーション バーで、現在選択しているページを示すために薄い背景色を使用する場合があります。これを高コントラスト拡張機能で表示すると、かすかな違いは完全に失われ、どのページがアクティブなのかわからなくなります。
-
-
-
-![高コントラスト モードのナビゲーション バー](imgs/tab-contrast.png)
-
-同様に、前のレッスンで取り上げた無効な電話番号フィールドを示す赤色の下線は、区別のつきにくい青や緑の色で表示される可能性があります。
-
-
-
-![高コントラスト モードで表示したフォームのエラー フィールド](imgs/high-contrast.jpg)
-
-前のレッスンで説明したコントラスト比の条件を満たしていれば、高コントラスト モードをサポートしたときでも適切に表示されるはずです。さらに、Chrome High Contrast 拡張機能をインストールして、全体を一通りチェックし、ページの動作と外観が想定どおりであることを確認してください。
-
-
-
-
-
-{# wf_devsite_translation #}
+In fact, just by designing responsively, we're meeting [rule 1.4.4 of the WebAIM
+checklist](http://webaim.org/standards/wcag/checklist#sc1.4.4){: .external },
+which states that a page "...should be readable and functional when the text
+size is doubled."
+
+Going over all of responsive design is outside the scope of this guide, but
+here are a few important takeaways that will benefit your responsive experience
+and give your users better access to your content.
+
+- まず、常に適切な `viewport` meta タグ<br>を使用してください。`<meta name="viewport" content="width=device-width, initial-scale=1.0">`<br>`width=device-width` に設定すると、デバイス非依存ピクセルの幅に合わせることができます。`initial-scale=1` に設定すると、CSS ピクセルとデバイス非依存ピクセル間に 1:1 の関係を構築できます。これにより、ブラウザでコンテンツを画面サイズに適合させるため、ユーザーは小さく見づらいテキストに悩まされずに済みます。
+
+![a phone display without and with the viewport meta tag](imgs/scrunched-up.jpg)
+
+Warning: When using the viewport meta tag, make sure you don't set
+maximum-scale=1 or set user-scaleable=no. Let users zoom if they need to!
+
+- Another technique to keep in mind is designing with a responsive grid. As you
+    saw with the Udacity site, designing with a grid means your content will
+    reflow when the page changes size. Often these layouts are produced using
+    relative units like percents, ems, or rems instead of hard-coded pixel
+    values. The advantage of doing it this way is that text and content can
+    enlarge and force other items down the page. So the DOM order and the reading
+    order remain the same, even if the layout changes because of magnification.
+
+- Also, consider using relative units like `em` or `rem` for things like text
+    size, instead of pixel values. Some browsers support resizing text only in
+    user preferences, and if you're using a pixel value for text, this setting
+    will not affect your copy. If, however, you've used relative units
+    throughout, then the site copy will update to reflect the user's preference.
+
+- Finally, when your design is displayed on a mobile device, you should ensure
+    that interactive elements like buttons or links are large enough, and have
+    enough space around them, to make them easy to press without accidentally
+    overlapping onto other elements. This benefits all users, but is especially
+    helpful for anyone with a motor impairment.
+
+A minimum recommended touch target size is around 48 device independent pixels
+on a site with a properly set mobile viewport. For example, while an icon may
+only have a width and height of 24px, you can use additional padding to bring
+the tap target size up to 48px. The 48x48 pixel area corresponds to around 9mm,
+which is about the size of a person's finger pad area.
+
+![a diagram showing a couple of 48 pixel touch targets](imgs/touch-target.jpg)
+
+Touch targets should also be spaced about 32 pixels
+apart, both horizontally and vertically, so that a user's finger pressing on one
+tap target does not inadvertently touch another tap target.
+
+![a diagram showing 32 pixels of space around a touch target](imgs/touch-target2.jpg)
+
+## Color and contrast
+
+If you have good vision, it's easy to assume that everyone perceives colors, or
+text legibility, the same way you do — but of course that's not the case.
+Let's wrap things up by looking at how we can effectively use color and contrast
+to create pleasant designs that are accessible to everyone.
+
+As you might imagine, some color combinations that are easy for some people to
+read are difficult or impossible for others. This usually comes down to *color
+contrast*, the relationship between the foreground and background colors'
+*luminance*. When the colors are similar, the contrast ratio is low; when they
+are different, the contrast ratio is high.
+
+The [WebAIM guidelines](http://webaim.org/standards/wcag/){: .external }
+recommend an AA (minimum) contrast ratio of 4.5:1 for all text. An exception is
+made for very large text (120-150% larger than the default body text), for which
+the ratio can go down to 3:1. Notice the difference in the contrast ratios shown
+below.
+
+![comparison of various contrast ratios](imgs/contrast-ratios.jpg)
+
+The contrast ratio of 4.5:1 was chosen for level AA because it compensates for
+the loss in contrast sensitivity usually experienced by users with vision loss
+equivalent to approximately 20/40 vision. 20/40 is commonly reported as typical
+visual acuity of people at about age 80. For users with low vision impairments
+or color deficiencies, we can increase the contrast up to 7:1 for body text.
+
+You can use the [Accessibility DevTools
+extension](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb){: .external }
+for Chrome to identify contrast ratios. One benefit of using the Chrome Devtools
+is that they will suggest AA and AAA (enhanced) alternatives to your current
+colors, and you can click the values to preview them in your app.
+
+To run a color/contrast audit, follow these basic steps.
+
+1. After installing the extension, click `Audits`
+2. Uncheck everything except `Accessibility`
+3. Click `Audit Present State`
+4. Note any contrast warnings
+
+![the devtools contrast audit dialog](imgs/contrast-audit.png)
+
+WebAIM itself provides a handy [color contrast
+checker](http://webaim.org/resources/contrastchecker/){: .external } you can use
+to examine the contrast of any color pair.
+
+### Don't convey information with color alone
+
+There are roughly 320 million users with color vision deficiency. About 1 in 12
+men and 1 in 200 women have some form of "color blindness"; that means about
+1/20th, or 5%, of your users will not experience your site the way you intended.
+When we rely on color to convey information, we push that number to unacceptable
+levels.
+
+Note: The term "color blindness" is often used to describe a visual condition
+where a person has trouble distinguishing colors, but in fact very few people
+are truly color blind. Most people with color deficiencies can see some or most
+colors, but have difficulty differentiating between certain colors such as reds
+and greens (most common), browns and oranges, and blues and purples.
+
+For example, in an input form, a telephone number might be underlined in red to
+show that it is invalid. But to a color deficient or screen reader user, that
+information is not conveyed well, if at all. Thus, you should always try to
+provide multiple avenues for the user to access critical information.
+
+![an input form with an error underlined in red](imgs/input-form1.png)
+
+The [WebAIM checklist states in section
+1.4.1](http://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } that
+"color should not be used as the sole method of conveying content or
+distinguishing visual elements." It also notes that "color alone should not be
+used to distinguish links from surrounding text" unless they meet certain
+contrast requirements. Instead, the checklist recommends adding an additional
+indicator such as an underscore (using the CSS `text-decoration` property) to
+indicate when the link is active.
+
+An easy way to fix the previous example is to add an additional message to the
+field, announcing that it is invalid and why.
+
+![an input form with an added error message for clarity](imgs/input-form2.png)
+
+When you're building an app, keep these sorts of things in mind and watch out
+for areas where you may be relying too heavily on color to convey important
+information.
+
+If you're curious about how your site looks to different people, or if you rely
+heavily on the use of color in your UI, you can use the [NoCoffee Chrome
+extension](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl){: .external }
+to simulate various forms of visual impairment, including different types of
+color blindness.
+
+### High contrast mode
+
+High-contrast mode allows a user to invert foreground and background colors,
+which often helps text stand out better. For someone with a low vision
+impairment, high-contrast mode can make it much easier to navigate the content
+on the page. There are a few ways to get a high-contrast setup on your machine.
+
+Operating systems like Mac OSX and Windows offer high-contrast modes that can be
+enabled for everything at the system level. Or users can install an extension,
+like the [Chrome High Contrast
+extension](https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph){: .external }
+to enable high-contrast only in that specific app.
+
+A useful exercise is to turn on high-contrast settings and verify that all of
+the UI in your application is still visible and usable.
+
+For example, a navigation bar might use a subtle background color to indicate
+which page is currently selected. If you view it in a high-contrast extension,
+that subtlety completely disappears, and with it goes the reader's understanding
+of which page is active.
+
+![a navigation bar in high contrast mode](imgs/tab-contrast.png)
+
+Similarly, if you consider the example from the previous lesson, the red
+underline on the invalid phone number field might be displayed in a
+hard-to-distinguish blue-green color.
+
+![a form with an error field in high contrast mode](imgs/high-contrast.jpg)
+
+If you are meeting the contrast ratios covered in the previous lessons you
+should be fine when it comes to supporting high-contrast mode. But for added
+peace of mind, consider installing the Chrome High Contrast extension and giving
+your page a once-over just to check that everything works, and looks, as
+expected.
