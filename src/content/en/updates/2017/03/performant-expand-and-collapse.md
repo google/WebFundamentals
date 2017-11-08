@@ -31,8 +31,10 @@ Take, for example, an expanding menu:
 
 <div style="display: flex; justify-content: center">
   <video loop autoplay muted controls>
-    <source src="/web/updates/images/2017/03/performant-expand-and-collapse/menu.webm" type="video/webm; codecs=vp8">
-    <source src="/web/updates/images/2017/03/performant-expand-and-collapse/menu.mp4" type="video/mp4; codecs=h264">
+    <source src="/web/updates/images/2017/03/performant-expand-and-collapse/menu.webm"
+      type="video/webm; codecs=vp8">
+    <source src="/web/updates/images/2017/03/performant-expand-and-collapse/menu.mp4"
+      type="video/mp4; codecs=h264">
   </video>
 </div>
 
@@ -128,8 +130,10 @@ see below, yes.
 
 <div style="display: flex; justify-content: center">
   <video loop autoplay muted controls>
-    <source src="/web/updates/images/2017/03/performant-expand-and-collapse/squashed.webm" type="video/webm; codecs=vp8">
-    <source src="/web/updates/images/2017/03/performant-expand-and-collapse/squashed.mp4" type="video/mp4; codecs=h264">
+    <source src="/web/updates/images/2017/03/performant-expand-and-collapse/squashed.webm"
+      type="video/webm; codecs=vp8">
+    <source src="/web/updates/images/2017/03/performant-expand-and-collapse/squashed.mp4"
+      type="video/mp4; codecs=h264">
   </video>
 </div>
 
@@ -212,9 +216,9 @@ something like this to map values from 0 to 1 to an eased equivalent.
       return 1 - Math.pow(1 - v, pow);
     }
 
-You can use <a href="https://www.google.com/search?q=1%20-%20((1-x)%5E4)%20from%200%20to%201">Google
-search to plot what that looks like</a> as well. Handy! If you’re in need of other easing equations
-do check out
+You can use [Google search to plot what that looks
+like](https://www.google.com/search?q=1%20-%20((1-x)%5E4)%20from%200%20to%201)
+as well. Handy! If you’re in need of other easing equations do check out
 [Tween.js by Soledad Penadés](https://github.com/tweenjs/tween.js/blob/master/src/Tween.js#L421-L737),
 which contains a whole heap of them.
 
@@ -255,8 +259,10 @@ It’s also possible to use this technique to make circular expand and collapse 
 
 <div style="display: flex; justify-content: center">
   <video loop autoplay muted controls>
-    <source src="/web/updates/images/2017/03/performant-expand-and-collapse/circular.webm" type="video/webm; codecs=vp8">
-    <source src="/web/updates/images/2017/03/performant-expand-and-collapse/circular.mp4" type="video/mp4; codecs=h264">
+    <source src="/web/updates/images/2017/03/performant-expand-and-collapse/circular.webm"
+      type="video/webm; codecs=vp8">
+    <source src="/web/updates/images/2017/03/performant-expand-and-collapse/circular.mp4"
+      type="video/mp4; codecs=h264">
   </video>
 </div>
 
@@ -281,7 +287,9 @@ world it would be great to see clip animations be accelerated (there’s
 Jake Archibald), but until we get there you should be cautious when animating `clip` or `clip-path`,
 and definitely avoid animating `width` or `height`.
 
-It would also be handy to use [Web Animations](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API) for effects like this, because they have a JavaScript
+It would also be handy to use
+[Web Animations](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API)
+for effects like this, because they have a JavaScript
 API but can run on the compositor thread if you only animate `transform` and `opacity`.
 Unfortunately [support for Web Animations isn’t great](http://caniuse.com/#feat=web-animation),
 though you could use progressive enhancement to use them if they’re available.
@@ -298,7 +306,7 @@ Equally, if your app already relies on JavaScript for its animations you may be 
 being at least consistent with your existing codebase.
 
 If you want to have a look through the code for this effect take a look at the
-[UI Element Samples Github repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/animated-clip) and,
-as always, let us know how you get on in the comments below.
+[UI Element Samples Github repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/animated-clip)
+and, as always, let us know how you get on in the comments below.
 
 {% include "comment-widget.html" %}
