@@ -339,8 +339,8 @@ What you need to find out is:
 - What do they like about the prototype?
 - What do they dislike about the prototype?
 - What are the pain points?
-      * Why did a flow work
-      * Why did a flow not work
+  - Why did a flow work
+  - Why did a flow not work
 - What would they like to improve?
 - Does the overall design/flow meet their needs?
 
