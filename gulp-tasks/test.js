@@ -38,9 +38,7 @@ const MEDIA_FILES = [
   '.pdf',
 ];
 const VALID_DATE_FORMATS = [
-  'YYYY-MM-DD',
-  'YYYY-MM-DDTHH:mm:ssZ',
-  'YYYY-MM-DDTHH:mm:ss.sssZ'
+  'YYYY-MM-DD'
 ];
 const REMARK_WARNING_ONLY = [
   'maximum-line-length',
@@ -930,8 +928,6 @@ function testProject(filename, contents) {
           type: 'object',
           properties: {
             description: {type: 'string', required: true},
-            start: {type: 'string', required: true},
-            end: {type: 'string', required: true},
           },
           additionalProperties: false
         }

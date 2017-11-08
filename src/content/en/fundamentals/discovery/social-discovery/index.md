@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-10-31 #}
 {# wf_published_on: 2014-10-07 #}
 
 # Social Discovery {: .page-title }
@@ -175,7 +175,7 @@ In order to validate your markup on Facebook, you can use tools such as:
 * [Debugger](https://developers.facebook.com/tools/debug/){: .external }
 
 ## Use Twitter Cards to provide rich snippets on Twitter
-[Twitter Cards](https://dev.twitter.com/docs/cards) are an extension to the
+[Twitter Cards](https://dev.twitter.com/cards/overview) are an extension to the
 Open [Graph Protocol applicable for Twitter](https://twitter.com/){: .external }. They allow
 you to add media attachments like images and video to Tweets with a link to
 your web page. By adding the appropriate metadata, Tweets with links to your

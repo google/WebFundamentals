@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 62 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-{# wf_updated_on: 2017-10-23 #}
+{# wf_updated_on: 2017-10-24 #}
 {# wf_published_on: 2017-09-15 #}
 {# wf_tags: deprecations,removals,chrome62 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -50,7 +50,7 @@ would use
 
 In Chrome 48, `SVGPathElement.pathSegList()` and related interfaces were removed
 in compliance with the [SVG specification](https://www.w3.org/TR/SVG2/). At that
-time, this method was mistakenly left in. We don't excpct this removal to break
+time, this method was mistakenly left in. We don't expect this removal to break
 any web pages since, for the last two years, it has returned an object that no
 longer exists in Blink.
 

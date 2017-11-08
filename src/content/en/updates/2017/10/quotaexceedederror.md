@@ -47,14 +47,13 @@ there is enough room to handle the `appendBuffer()`. First, it frees frames from
 between 0 and 30 seconds before the current time in 30 second chunks. Next, it
 frees frames in 30 second chunks from duration backwards to as close as 30
 seconds after `currentTime`. You can read more about this in a [Webkit
-changeset from
-2014]([https://trac.webkit.org/changeset/172657/webkit](https://trac.webkit.org/changeset/172657/webkit)).
+changeset from 2014](https://trac.webkit.org/changeset/172657/webkit).
 
 Fortunately, along with Chrome, Edge and Firefox do throw this error. If you're
 using another browser, you'll need to do your own testing. Though probably not
 what you'd build for a real-life media player, François Beaufort's [source
 buffer limit
-test]([https://beaufortfrancois.github.io/sandbox/media/source-buffer-limit.html](https://beaufortfrancois.github.io/sandbox/media/source-buffer-limit.html))
+test](https://beaufortfrancois.github.io/sandbox/media/source-buffer-limit.html)
 at least lets you observe the behavior.
 
 ## How much data can I append?
@@ -83,9 +82,9 @@ combination of one or more approaches is best. Your approach should be to base
 the work on how much you're fetching and attempting to append beyond
 `HTMLMediaElement.currentTime` and adjusting that size based on the
 `QuotaExceededError`. Also using a manifest of some kind such as an [mpd
-file]([https://developers.google.com/web/fundamentals/media/manipulating/cheatsheet#all_together_now](https://developers.google.com/web/fundamentals/media/manipulating/cheatsheet#all_together_now))
+file](/web/fundamentals/media/manipulating/cheatsheet#all_together_now)
 (MPEG-DASH) or an [m3u8
-file]([https://developers.google.com/web/fundamentals/media/manipulating/cheatsheet#hlsmp4](https://developers.google.com/web/fundamentals/media/manipulating/cheatsheet#hlsmp4))
+file](/web/fundamentals/media/manipulating/cheatsheet#hlsmp4)
 (HLS) can help you keep track of the data you're appending to the buffer.
 
 Now, let's look at several approaches to dealing with the
@@ -127,9 +126,9 @@ There are a few things to keep in mind when calling `SourceBuffer.remove()`.
     playhead you may cause a stall.
 +  **Safari 9 and Safari 10 do not correctly implement `SourceBuffer.abort()`**.
     In fact, they throw errors that will halt playback. Fortunately there are
-    open bug trackers [here]([http://goo.gl/UZ2rPp](http://goo.gl/UZ2rPp)) and
-    [here]([https://goo.gl/rC3CLj](https://goo.gl/rC3CLj)). In the meantime,
-    you'll have to work around this somehow. [Shaka Player does
+    open bug trackers [here](https://bugs.webkit.org/show_bug.cgi?id=160316)
+    and [here](https://bugs.webkit.org/show_bug.cgi?id=165342). In the
+    meantime, you'll have to work around this somehow. [Shaka Player does
     it](https://github.com/google/shaka-player/blob/3cd18bb3362841d76db737204a15141b815b7c92/lib/polyfill/mediasource.js#L60-L74)
     by stubbing out an empty `abort()` function on those versions of Safari.
 

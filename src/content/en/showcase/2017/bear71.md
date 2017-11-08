@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2017-02-02T18:00:00.000Z #}
-{# wf_updated_on: 2017-02-02T18:00:00.000Z #}
+{# wf_published_on: 2017-02-02 #}
+{# wf_updated_on: 2017-02-02 #}
 {# wf_featured_image: /web/showcase/2017/images/bear71/featured.png #}
 {# wf_featured_snippet: <emphasis>Bear 71</emphasis> is an interactive documentary launched by the National Film Board of Canada in 2012 to much critical acclaim. When it was built, Flash was in its golden years but with the deprecation of browser support for Flash, we were eager to explore WebVR, both as a way to preserve the project's legacy and a chance to innovate how the story is experienced. #}
 {# wf_tags: webvr,casestudy #}

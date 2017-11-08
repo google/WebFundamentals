@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-10-10T21:30:34Z #}
+{# wf_updated_on: 2017-10-10 #}
 {# wf_published_on: 2016-01-01 #}
 
 
