@@ -1,89 +1,88 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 폰 기능이 있는 장치에서 사용자가 전화번호를 눌러 여러분과 쉽게 직접 연결하도록 할 수 있는데 이 기능을 흔히 클릭투콜(click to call)이라고 합니다.
+description: On devices with phone capabilities, make it easy for users to directly connect with you by simply tapping a phone number, more commonly known as click to call.
 
 {# wf_updated_on: 2016-08-22 #}
 {# wf_published_on: 2014-06-17 #}
 
-# 클릭투콜(Click to Call) {: .page-title }
+# Click to Call {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-폰 기능이 있는 장치에서 사용자가 전화번호를 눌러 여러분과 쉽게 직접
-연결하도록 할 수 있는데 이 기능을 흔히 클릭투콜(click to call)이라고 합니다.
+On devices with phone capabilities, make it easy for users to directly connect
+with you by simply tapping a phone number, more commonly known as click to call.
 
 ### TL;DR {: .hide-from-toc }
 
-*  <code>tel:</code> 스키마를 사용하여 하이퍼링크에 모든 전화번호를 래핑합니다.
-* 항상 국제 전화번호 형식을 사용합니다.
+- Wrap all phone numbers in hyperlinks with the <code>tel:</code> schema.
+- Always use the international dialing format.
 
+## Link telephone numbers for click to call
 
-## 클릭투콜용 전화번호 링크
+While many modern mobile browsers automatically detect phone numbers
+and convert them to links, it’s a good idea to do this directly in your code.
+By manually tagging each phone number, you can ensure that phone numbers are always
+enabled for click to call and that they will be styled to match your site.
 
-상당수의 최신 모바일 브라우저는 자동으로 전화번호를 감지하여
-링크로 변환하지만, 이 작업을 코드에서 직접 수행하는 것이 좋습니다.
-각 전화번호에 수동으로 태그를 지정하면, 전화번호의 클릭투콜이
-항상 활성화되도록 보장하고 사이트와 전화번호의 스타일이 일치하도록 보장할 수 있습니다.
+To mark a phone number as a link, use the `tel:` scheme.  The syntax is
+simple:
 
-전화번호를 링크로 표시하려면 `tel:` 스키마를 사용합니다.  구문은 
-간단합니다.
-
-
-    NIST Telephone Time-of-Day Service 
+```
+NIST Telephone Time-of-Day Service 
 <a href="tel:+1-303-499-7111">+1 (303) 499-7111</a>
+```
 
-브라우저는 이 구문을 다음과 같이 표시합니다.
+Your browser displays this syntax as follows:
 
 NIST Telephone Time-of-Day Service <a href="tel:+1-303-499-7111">+1 (303) 499-7111</a>
 
+
 <div class="attempt-right">
   <figure>
-    <img src="images/click-to-call_framed.jpg" >
-    <figcaption>클릭투콜의 예</figcaption>
+    <img src="images/click-to-call_framed.jpg">
+    <figcaption>Click to call example</figcaption>
   </figure>
 </div>
 
-전화 기능이 있는 대부분 장치에서 사용자는 전화를 걸기 전에
-확인 메시지가 표시되므로 속아서 비싼 장거리 전화나
-프리미엄 전화번호로 전화를 거는 일이 예방됩니다.
-전화 통화를 지원하지 않는 장치에서는, 전화번호를 브라우저가
-처리하는 방식을 선택할 수 있는 메뉴가 표시될 수 있습니다.
 
-음성 통화를 지원하지 않는 데스크톱 브라우저에서는 Google 보이스 또는
-Microsoft Communicator와 같은 컴퓨터의 기본 전화 통신
-앱이 열립니다.
+On most devices with telephone capabilities, the user receives a
+confirmation before the number is dialed, to ensure that the user isn't being
+tricked into calling an expensive long distance or premium phone number.
+When the device doesn’t support phone calls, users may be presented with a
+menu allowing them to choose how the browser should handle the number.
 
-## 국제 전화번호 형식 사용
+Desktop browsers that don’t support voice calls open the default
+telephony app on the computer; for example Google Voice or Microsoft
+Communicator.
 
-항상 국제 전화번호 형식(`+` 기호, 국가 코드, 지역 코드 및 번호)을 사용하여
-전화번호를 제공합니다.  절대적으로
-필요하지 않을 경우, 가독성을 높이고 자동 감지 기능 향상을 위해 하이픈(`-`)을 사용하여
-번호의 각 부분을 분리하는 것이 좋습니다.
+## Use the international dialing format
 
-하이픈으로 구분된 국제 전화번호 형식을 사용하면 몇 백 미터가
-떨어져 있든 몇 천 킬로미터가 떨어져 있든 그 발신
-위치에 상관없이 통화가 연결됩니다.
+Always supply the phone number using the international dialing format:
+the plus sign (`+`), country code, area code, and number.  While not absolutely
+necessary, it’s a good idea to separate each segment of the number with a
+hyphen (`-`) for easier reading and better auto-detection.
 
-## 필요한 경우 자동 감지 기능을 비활성화
+Using a hyphenated international dialing format ensures that no matter where
+the user is calling from, whether a few hundred meters away or thousands
+of kilometers, their call will be connected.
 
-최신 모바일 브라우저는 자동으로 전화번호를 감지하고
-클릭투콜을 활성화합니다. 모바일 Safari는 관련된 하이퍼링크 스타일을 사용하여
-전화번호를 링크로 자동 변환합니다. Android용 Chrome은 자동으로
-전화번호를 감지하고 사용자가 클릭투콜을 사용하도록 허용하지만,
-전화번호를 하이퍼링크에 래핑하거나 특수 스타일을 적용하지는 않습니다.
+## Disable auto-detection when necessary
 
-모바일 Safari가 자동으로 전화번호를 감지하지 않도록 하려면 다음
-메타 태그를 페이지 맨 위에 추가하세요.
+Modern mobile browsers automatically detect phone numbers and enable
+click to call. Mobile Safari automatically converts phone numbers to links
+with the associated hyperlink styles. Chrome for Android automatically
+detects phone numbers and allows users to click to call, but does not wrap
+the phone numbers in hyperlinks or apply any special styles.
 
+To prevent Mobile Safari from automatically detecting phone numbers, add the
+following meta tag to the top of the page:
 
-    <meta name="format-detection" content="telephone=no">
+```
+<meta name="format-detection" content="telephone=no">
+```
 
+## Other click to call features
 
-## 기타 클릭투콜 기능
-
-일부 최신 브라우저는 `tel:` 스키마뿐만 아니라 `sms:` 및 `mms:` 스키마도
-지원합니다. 그러나 지원이 일관되지 않고 메시지 본문 설정과 같은 일부
-기능이 작동하지 않는 경우가 있습니다. 
-
-
-{# wf_devsite_translation #}
+In addition to the `tel:` schema, some modern browsers also support the `sms:`
+and `mms:` schemas, though support is not as consistent, and some
+features like setting the message body don't always work.

@@ -1,224 +1,259 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: クリティカル レンダリング パスにおけるパフォーマンスのボトルネックの特定および解消法について説明します。
+description: Learn to identify and resolve critical rendering path performance bottlenecks.
 
-{# wf_updated_on:2014-04-27 #}
-{# wf_published_on:2014-03-31 #}
+{# wf_updated_on: 2017-07-24 #}
+{# wf_published_on: 2014-03-31 #}
 
-# クリティカル レンダリング パスのパフォーマンスを分析する {: .page-title }
+# Analyzing Critical Rendering Path Performance {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-クリティカル レンダリング パスにおけるパフォーマンスのボトルネックを特定して解消するには、注意が必要なポイントを把握しておく必要があります。
-このページでは、実践的な例を取り上げながら、ページの最適化に役立つ一般的なパフォーマンス パターンについて紹介します。
+Identifying and resolving critical rendering path performance bottlenecks
+requires good knowledge of the common pitfalls. Let's take a hands-on tour
+and extract common performance patterns that will help you optimize your
+pages.
 
+Optimizing the critical rendering path allows the browser to paint the page as quickly as possible: faster pages translate into higher engagement, more pages viewed, and [improved conversion](https://www.google.com/think/multiscreen/success.html). To minimize the amount of time a visitor spends viewing a blank screen, we need to optimize which resources are loaded and in which order.
 
+To help illustrate this process, let's start with the simplest possible case and incrementally build up our page to include additional resources, styles, and application logic. In the process, we'll optimize each case; we'll also see where things can go wrong.
 
+So far we've focused exclusively on what happens in the browser after the resource (CSS, JS, or HTML file) is available to process. We've ignored the time it takes to fetch the resource either from cache or from the network. We'll assume the following:
 
-クリティカル レンダリング パスを最適化する目的は、できる限り早くブラウザがページを描画できるようにすることです。ページの高速化は、エンゲージメントの向上、ページの閲覧回数の増加、[コンバージョン率の改善](https://www.google.com/think/multiscreen/success.html)につながります。訪問者が何もない画面を見つめるだけの時間を最小限にするため、「どのリソースのどの順で読み込むか」を最適化することが必要です。
+- A network roundtrip (propagation latency) to the server costs 100ms.
+- Server response time is 100ms for the HTML document and 10ms for all other files.
 
-このプロセスを説明するために、まずは最もシンプルなケースから始めて、徐々にリソースやスタイル、アプリケーション ロジックを追加してページを構築していきます。その過程で、ケースごとの最適化を行い、失敗しやすいポイントついても説明します。
+## The hello world experience
 
-これまでは、リソース（CSS、JavaScript、HTML などのファイル）が処理できる状態になったあと、ブラウザ側で行われる処理だけに焦点を当てており、リソースをキャッシュから取得する場合とネットワークから取得する場合の所要時間については考慮していませんでした。ここでは、次の前提条件があるとします。
-
-* サーバーまでのネットワーク ラウンドトリップ（プロパゲーション レイテンシ）は 100 ms
-* サーバーの応答時間は、HTML ドキュメントの場合は 100 ms、その他のファイルの場合は 10 ms
-
-##  Hello World サンプル
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/basic_dom_nostyle.html){: target="_blank" .external }
 
-まずは CSS と JavaScript は使わずに、基本的な HTML マークアップと 1 つの画像から始めましょう。Chrome DevTools でネットワーク タイムラインを開き、リソース ウォーターフォールを確認します。
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/basic_dom_nostyle.html){: target="_blank" .external }
 
-<img src="images/waterfall-dom.png" alt=""  alt="CRP">
-
-注: このドキュメントでは DevTools を使用して CRP のコンセプトを説明しますが、現在のところ、DevTools は CRP 分析にあまり適してはいません。
-詳細については、[DevTools に関するドキュメント](measure-crp#devtools)をご覧ください。
+We'll start with basic HTML markup and a single image; no CSS or JavaScript. Let's open up our Network timeline in Chrome DevTools and inspect the resulting resource waterfall:
 
 
-想定どおり、HTML のダウンロードに約 200 ms かかっています。青色の線の透過部分は、ブラウザが応答バイトを受け取っておらず、ネットワーク上で待機している時間を表します。一方、塗りつぶされた部分は、最初の応答バイトを受け取ってからダウンロードが完了するまでの時間を表します。HTML のダウンロード量はわずか（4 K 未満）であるため、1 回のラウンドトリップでファイル全体を取得できます。そのため、HTML ドキュメントを取得するための所要時間は約 200 ms です。この時間の半分はネットワーク上で待機しており、残りの半分はサーバーの応答を待っています。
-
-HTML コンテンツが利用可能になると、ブラウザはバイトを解析してトークンに変換し、DOM ツリーを構築する必要があります。DevTools の下の方には、便宜のために、DOMContentLoaded イベントの時間（216 ms）が表示されています。これは、青色の縦線に相当します。HTML ダウンロードの完了時点と青色の縦線（DOMContentLoaded）の差が、ブラウザで DOM ツリーを構築するのに要した時間です。今回の場合、この時間は数ミリ秒にすぎません。
-
-「awesome photo」が `domContentLoaded` イベントをブロックしていない点にも注目してください。これは、ページの各アセットを待たずに、レンダリング ツリーの構築やページのレンダリングができることを示しています。**初回のレンダリングを高速化する上で、すべてのリソースが必須というわけではありません**。後で、クリティカル レンダリング パスに関するトピックで説明するように、一般に検討対象となるのは、HTML マークアップ、CSS、JavaScript です。画像は、初回のページ レンダリングをブロックしませんが、できる限り早く画像がレンダリングされるように配慮する必要はあります。
-
-ただし、`load` イベント（`onload`）は、画像によってブロックされます。DevTools では、335 ms で `onload` イベントが記録されています。前に説明したとおり、`onload` イベントは、ページに必要な**すべてのリソース**がダウンロードされ、処理が完了した時点を表します。この段階で、ブラウザの読み込み中マークの回転が止まります（ウォーターフォール上の赤色の縦線に相当）。
+<img src="images/waterfall-dom.png" alt="">
 
 
-##  JavaScript と CSS をサンプルに追加する
+Note: Although this doc uses DevTools to illustrate CRP concepts, DevTools is
+currently not well-suited for CRP analysis. See [What about
+DevTools?](measure-crp#devtools) for more information.
 
-「Hello World サンプル」ページは、一見するとシンプルに見えますが、内部ではさまざまな処理が実行されていました。また、現実的には HTML 以外の要素も必要になります。CSS スタイルシートと 1 つ以上のスクリプトを組み合わせて、インタラクティブなページにするケースも多くあります。この両者をサンプルに追加して、どうなるか見てみましょう。
+As expected, the HTML file took approximately 200ms to download. Note that the transparent portion of the blue line represents the length of time that the browser waits on the network without receiving any response bytes whereas the solid portion shows the time to finish the download after the first response bytes have been received. The HTML download is tiny (<4K), so all we need is a single roundtrip to fetch the full file. As a result, the HTML document takes approximately 200ms to fetch, with half the time spent waiting on the network and the other half waiting on the server response.
+
+When the HTML content becomes available, the browser parses the bytes, converts them into tokens, and builds the DOM tree. Notice that DevTools conveniently reports the time for the DOMContentLoaded event at the bottom (216ms), which also corresponds to the blue vertical line. The gap between the end of the HTML download and the blue vertical line (DOMContentLoaded) is the time it takes the browser to build the DOM tree—in this case, just a few milliseconds.
+
+Notice that our "awesome photo" did not block the `domContentLoaded` event. Turns out, we can construct the render tree and even paint the page without waiting for each asset on the page: **not all resources are critical to deliver the fast first paint**. In fact, when we talk about the critical rendering path we are typically talking about the HTML markup, CSS, and JavaScript. Images do not block the initial render of the page—although we should also try to get the images painted as soon as possible.
+
+That said, the `load` event (also known as `onload`), is blocked on the image: DevTools reports the `onload` event at 335ms. Recall that the `onload` event marks the point at which **all resources** that the page requires have been downloaded and processed; at this point, the loading spinner can stop spinning in the browser (the red vertical line in the waterfall).
+
+## Adding JavaScript and CSS into the mix
+
+Our "Hello World experience" page seems simple but a lot goes on under the hood. In practice we'll need more than just the HTML: chances are, we'll have a CSS stylesheet and one or more scripts to add some interactivity to our page. Let's add both to the mix and see what happens:
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/measure_crp_timing.html){: target="_blank" .external }
 
-_JavaScript と CSSを追加する前：_
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/measure_crp_timing.html){: target="_blank" .external }
 
-<img src="images/waterfall-dom.png" alt="DOM の CRP" >
+*Before adding JavaScript and CSS:*
 
-_JavaScript と CSS あり:_
 
-<img src="images/waterfall-dom-css-js.png" alt="DOM、CSSOM、JS" >
+<img src="images/waterfall-dom.png" alt="DOM の CRP">
 
-外部 CSS ファイルと JavaScript ファイルを追加すると、2 つのリクエストがウォーターフォールに追加されます。ブラウザは、ほぼ同時にすべてをディスパッチしています。一方、**`domContentLoaded` イベントと `onload` イベントのタイミングの差は大幅に縮まっています**。
 
-何が起きたのでしょう？
+*With JavaScript and CSS:*
 
-* 前述の HTML のみのサンプルとは異なり、今回は CSS ファイルを取得して解析し、CSSOM を構築する必要があります。また、レンダリング ツリーの構築には、DOM と CSSOM の両方が必要です。
-* パーサーをブロックする JavaScript ファイルをページに追加したことで、CSS ファイルのダウンロードと解析が完了するまで、`domContentLoaded` イベントがブロックされています。この理由は、JavaScript が CSSOM に対してクエリを実行する場合があるため、JavaScript を実行する前に、CSS ファイルをブロックしてダウンロードを待つ必要があるためです。
 
-**外部スクリプトをインライン スクリプトに置き換えるとどうなるでしょうか。** スクリプトをインラインでページに直接組み込んだとしても、CSSOM が構築されるまで、ブラウザはスクリプトを実行できません。つまり、インライン JavaScript もパーサー ブロックになります。
+<img src="images/waterfall-dom-css-js.png" alt="DOM、CSSOM、JS">
 
-CSS をブロックしても、インライン スクリプトの方がページのレンダリングが高速になるでしょうか。実際に試してみましょう。
 
-_外部 JavaScript:_
+Adding external CSS and JavaScript files adds two extra requests to our waterfall, all of which the browser dispatches at about the same time. However, **note that there is now a much smaller timing difference between the `domContentLoaded` and `onload` events.**
 
-<img src="images/waterfall-dom-css-js.png" alt="DOM、CSSOM、JS" >
+What happened?
 
-_インライン JavaScript:_
+- Unlike our plain HTML example, we also need to fetch and parse the CSS file to construct the CSSOM, and we need both the DOM and CSSOM to build the render tree.
+- Because the page also contains a parser blocking JavaScript file, the `domContentLoaded` event is blocked until the CSS file is downloaded and parsed: because the JavaScript might query the CSSOM, we must block the CSS file until it downloads before we can execute JavaScript.
 
-<img src="images/waterfall-dom-css-js-inline.png" alt="DOM、CSSOM、インライン JS" >
+**What if we replace our external script with an inline script?** Even if the script is inlined directly into the page, the browser can't execute it until the CSSOM is constructed. In short, inlined JavaScript is also parser blocking.
 
-リクエストは 1 つ減りますが、`onload` と `domContentLoaded` のタイミングは実質同じです。なぜでしょうか。ご存知のとおり、JavaScript がインラインであっても外部ファイルであっても、大きな違いはありません。どちらの場合も、ブラウザは script タグに遭遇するとブロックして、CSSOM が構築されるまで待機します。また、最初のサンプルでは、CSS と JavaScript がブラウザによって同時にダウンロードされ、ほぼ同時にダウンロードが完了していました。よって、今回の場合は JavaScript コードをインライン化しても、あまりメリットはありません。ただし、ページのレンダリングを高速化するための戦略はいくつかあります。
+That said, despite blocking on CSS, does inlining the script make the page render faster? Let's try it and see what happens.
 
-まず、前述したように、インライン スクリプトは常にパーサー ブロックですが、外部スクリプトは、async キーワードを追加してパーサー ブロックではなくすことができます。インライン化を元に戻し、試してみましょう。
+*External JavaScript:*
+
+
+<img src="images/waterfall-dom-css-js.png" alt="DOM、CSSOM、JS">
+
+
+*Inlined JavaScript:*
+
+
+<img src="images/waterfall-dom-css-js-inline.png" alt="DOM、CSSOM、インライン JS">
+
+
+We are making one less request, but both our `onload` and `domContentLoaded` times are effectively the same. Why? Well, we know that it doesn't matter if the JavaScript is inlined or external, because as soon as the browser hits the script tag it blocks and waits until the CSSOM is constructed. Further, in our first example, the browser downloads both CSS and JavaScript in parallel and they finish downloading at about the same time. In this instance, inlining the JavaScript code doesn't help us much. But there are several strategies that can make our page render faster.
+
+First, recall that all inline scripts are parser blocking, but for external scripts we can add the "async" keyword to unblock the parser. Let's undo our inlining and give that a try:
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/measure_crp_async.html){: target="_blank" .external }
 
-_パーサー ブロック（外部）JavaScript:_
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/measure_crp_async.html){: target="_blank" .external }
 
-<img src="images/waterfall-dom-css-js.png" alt="DOM、CSSOM、JS" >
+*Parser-blocking (external) JavaScript:*
 
-_非同期（外部）JavaScript:_
 
-<img src="images/waterfall-dom-css-js-async.png" alt="DOM、CSSOM、非同期 JS" >
+<img src="images/waterfall-dom-css-js.png" alt="DOM、CSSOM、JS">
 
-ずっと改善されました。`domContentLoaded` イベントは HTML の解析後すぐに発行されています。ブラウザは JavaScript でブロックせず、他にパーサー ブロック スクリプトは存在しないため、CSSOM の構築も並列して処理できます。
 
-別の方法として、CSS と JavaScript の両方をインライン化するというアプローチもあります。
+*Async (external) JavaScript:*
+
+
+<img src="images/waterfall-dom-css-js-async.png" alt="DOM、CSSOM、非同期 JS">
+
+
+Much better! The `domContentLoaded` event fires shortly after the HTML is parsed; the browser knows not to block on JavaScript and since there are no other parser blocking scripts the CSSOM construction can also proceed in parallel.
+
+Alternatively, we could have inlined both the CSS and JavaScript:
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/measure_crp_inlined.html){: target="_blank" .external }
 
-<img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM、インライン CSS、インライン JS" >
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/measure_crp_inlined.html){: target="_blank" .external }
 
-`domContentLoaded` のタイミングは、前のサンプルとほぼ変わりません。今回は avaScript を非同期にする代わりに、CSS と JavaScript の両方を直接ページにインライン化しています。これにより、HTML ページのサイズはかなり大きくなっていますが、すべてがページ内にあるため、ブラウザで外部リソースの取得を待つ必要がないというメリットがあります。
 
-以上のように、非常にシンプルなページでも、クリティカル レンダリング パスの最適化は簡単ではありません。さまざまなリソース間の依存関係図を把握し、どのリソースが「クリティカル」であるか特定し、そのようなリソースをページに組み込む方法をさまざまな戦略の中から選ぶ必要があります。ただし、ページごとに違いがあるため、対策は 1 つではありません。最適な戦略を特定するには、このようなプロセスを自身で実践する必要があります。
+<img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM、インライン CSS、インライン JS">
 
-では、これらのことを踏まえて、一般的なパフォーマンス パターンを特定していきましょう。
 
-##  フォーマンス パターン
+Notice that the `domContentLoaded` time is effectively the same as in the previous example; instead of marking our JavaScript as async, we've inlined both the CSS and JS into the page itself. This makes our HTML page much larger, but the upside is that the browser doesn't have to wait to fetch any external resources; everything is right there in the page.
 
-最もシンプルなページは、CSS、JavaScript、その他のリソースを含まず、HTML マークアップだけで構成されているページです。このページをレンダリングするために、ブラウザはリクエストを開始し、HTML ドキュメントが届くのを待ち、それを解析し、DOM を構築して、ようやく画面上にレンダリングします。
+As you can see, even with a very simple page, optimizing the critical rendering path is a non-trivial exercise: we need to understand the dependency graph between different resources, we need to identify which resources are "critical," and we must choose among different strategies for how to include those resources on the page. There is no one solution to this problem; each page is different. You need to follow a similar process on your own to figure out the optimal strategy.
+
+That said, let's see if we can step back and identify some general performance patterns.
+
+## Performance patterns
+
+The simplest possible page consists of just the HTML markup; no CSS, no JavaScript, or other types of resources. To render this page the browser has to initiate the request, wait for the HTML document to arrive, parse it, build the DOM, and then finally render it on the screen:
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/basic_dom_nostyle.html){: target="_blank" .external }
 
-<img src="images/analysis-dom.png" alt="Hello World の CRP" >
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/basic_dom_nostyle.html){: target="_blank" .external }
 
-**T<sub>0</sub> と T<sub>1</sub> の間の時間は、ネットワークとサーバーの処理時間を表します。**ベストケースの場合（HTML ファイルが小さい場合）、1 回 のネットワーク ラウンドトリップでドキュメント全体を取得できます。ファイルが大きい場合は、TCP 転送プロトコルの仕組み上、必要なラウンドトリップ数が増える可能性があります。**つまり、ベストケースにおいては、上記のページのクリティカル レンダリング パスは（最低で）1 回のラウンドトリップになります。**
 
-では、同じページで、外部 CSS ファイルを使用するケースを検討しましょう。
+<img src="images/analysis-dom.png" alt="Hello World の CRP">
+
+
+**The time between T<sub>0</sub> and T<sub>1</sub> captures the network and server processing times.** In the best case (if the HTML file is small), just one network roundtrip fetches the entire document. Due to how the TCP transports protocols work, larger files may require more roundtrips. **As a result, in the best case the above page has a one roundtrip (minimum) critical rendering path.**
+
+Now, let's consider the same page but with an external CSS file:
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/analysis_with_css.html){: target="_blank" .external }
 
-<img src="images/analysis-dom-css.png" alt="DOM + CSSOM の CRP" >
-
-繰り返しになりますが、HTML ドキュメントを取得する際はネットワーク ラウンドトリップが発生し、取得したマークアップから CSS ファイルも必要であることがわかります。つまり、ブラウザは画面上にページをレンダリングするために、サーバーに戻って CSS を取得する必要があります。**結果的に、このページを表示するには最低 2 回のラウンドトリップが発生します。**CSS ファイルの取得に複数回のラウンドトリップが必要になる場合があるので、「最低」で 2 回です。
-
-クリティカル レンダリング パスに関連する用語の定義は次のとおりです。
-
-* ** クリティカル リソース:** 初回のページ レンダリングをブロックする可能性のあるリソース。
-* ** クリティカル パス長:** すべてのクリティカル リソースを取得するために必要なラウンドトリップ数または総時間。
-* ** クリティカル バイト:** 初回のページ レンダリングに必要な合計バイト数。これは、すべてのクリティカル リソースの転送ファイルサイズの合計になります。最初のサンプルは 1 つのクリティカル リソース（HTML ドキュメント）を含む単一の HTML ページなので、クリティカル パス長は 1 ネットワーク ラウンドトリップ（ファイルサイズが小さい場合）、総クリティカル バイトは HTML ドキュメント自体の転送サイズだけになります。
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/analysis_with_css.html){: target="_blank" .external }
 
 
-では、これと上記の HTML + CSS のサンプルにおけるクリティカル パスの特徴を比較してみましょう。
+<img src="images/analysis-dom-css.png" alt="DOM + CSSOM の CRP">
 
-<img src="images/analysis-dom-css.png" alt="DOM + CSSOM の CRP" >
 
-* クリティカル リソースの数は **2** つ
-* 最小クリティカル パス長のラウンド トリップ数は **2** 以上
-* クリティカル バイト数は **9** KB
+Once again, we incur a network roundtrip to fetch the HTML document, and then the retrieved markup tells us that we also need the CSS file; this means that the browser has to go back to the server and get the CSS before it can render the page on the screen. **As a result, this page incurs a minimum of two roundtrips before it can be displayed.** Once again, the CSS file may take multiple roundtrips, hence the emphasis on "minimum".
 
-レンダリング ツリーの構築には、HTML と CSS の両方が必要です。そのため、HTML と CSS の両方がクリティカル リソースとなります。CSS は、ブラウザが HTML ドキュメントを取得した後にのみ取得可能になるため、クリティカル パス長は、最低で 2 ラウンドトリップとなります。クリティカル バイトは合計 9 KB です。
+Let's define the vocabulary we use to describe the critical rendering path:
 
-では、追加の JavaScript ファイルをサンプルに追加しましょう。
+- **Critical Resource:** Resource that could block initial rendering of the page.
+- **Critical Path Length:** Number of roundtrips, or the total time required to fetch all of the critical resources.
+- **Critical Bytes:** Total number of bytes required to get to first render of the page, which is the sum of the transfer filesizes of all critical resources.Our first example, with a single HTML page, contained a single critical resource (the HTML document); the critical path length was also equal to one network roundtrip (assuming file was small), and the total critical bytes was just the transfer size of the HTML document itself.
+
+Now let's compare that to the critical path characteristics of the HTML + CSS example above:
+
+
+<img src="images/analysis-dom-css.png" alt="DOM + CSSOM の CRP">
+
+
+- **2** critical resources
+- **2** or more roundtrips for the minimum critical path length
+- **9** KB of critical bytes
+
+We need both the HTML and CSS to construct the render tree. As a result, both HTML and CSS are critical resources: the CSS is fetched only after the browser gets the HTML document, hence the critical path length is at minimum two roundtrips. Both resources add up to a total of 9KB of critical bytes.
+
+Now let's add an extra JavaScript file into the mix.
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/analysis_with_css_js.html){: target="_blank" .external }
 
-ページの外部 JavaScript アセットとして `app.js` を追加しました。これはパーサー ブロック リソースであり、クリティカル リソースになります。さらに、JavaScript ファイルを実行するには、ブロックして CSSOM を待つ必要があります。JavaScript では CSSOM に対するクエリが可能であるため、ブラウザは、`style.css` がダウンロードされて CSSOM が構築されるまで、一時停止します。
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/analysis_with_css_js.html){: target="_blank" .external }
 
-<img src="images/analysis-dom-css-js.png" alt="DOM、CSSOM、JavaScript の CRP" >
+We added `app.js`, which is both an external JavaScript asset on the page and a parser blocking (that is, critical) resource. Worse, in order to execute the JavaScript file we have to block and wait for CSSOM; recall that JavaScript can query the CSSOM and hence the browser pauses until `style.css` is downloaded and CSSOM is constructed.
 
-ところで、このページの「ネットワーク ウォーターフォール」を確認すると、CSS リクエストと JavaScript リクエストがほぼ同じタイミングで開始されていることがわかります。ブラウザは HTML を取得し、両方のリソースを発見して両方のリクエストを開始しています。そのため、上記ページのクリティカル パスの特徴は、次のようになります。
 
-* クリティカル リソースの数は **3** つ
-* 最小クリティカル パス長のラウンド トリップ数は **2** 以上
-* クリティカル バイト数は **11** KB
+<img src="images/analysis-dom-css-js.png" alt="DOM、CSSOM、JavaScript の CRP">
 
-今回のクリティカル リソースは 3 つ、クリティカル バイトは合計で 11 KB です。ただし、CSS と JavaScript は同時に転送できるため、クリティカル パス長は変わらず 2 ラウンドトリップです。**クリティカル レンダリング パスの特徴を把握すると、クリティカル リソースを特定し、ブラウザがリソースの取得をスケジューリングする方法を理解できるようになります。**では、サンプルの考察を続けましょう。
 
-サイト デベロッパーからの情報で、ページに組み込まれている JavaScript はブロック不要であることがわかりました。スクリプトに含まれるアナリティクスや他のコードは、ページのレンダリングをブロックする必要がありません。よって、script タグに「async」属性を追加して、パーサーをブロックしないようにすることができます。
+That said, in practice if we look at this page's "network waterfall," you'll see that both the CSS and JavaScript requests are initiated at about the same time; the browser gets the HTML, discovers both resources, and initiates both requests. As a result, the above page has the following critical path characteristics:
+
+- **3** critical resources
+- **2** or more roundtrips for the minimum critical path length
+- **11** KB of critical bytes
+
+We now have three critical resources that add up to 11KB of critical bytes, but our critical path length is still two roundtrips because we can transfer the CSS and JavaScript in parallel. **Figuring out the characteristics of your critical rendering path means being able to identify the critical resources and also understanding how the browser will schedule their fetches.** Let's continue with our example.
+
+After chatting with our site developers, we realize that the JavaScript we included on our page doesn't need to be blocking; we have some analytics and other code in there that doesn't need to block the rendering of our page. With that knowledge, we can add the "async" attribute to the script tag to unblock the parser:
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/analysis_with_css_js_async.html){: target="_blank" .external }
 
-<img src="images/analysis-dom-css-js-async.png" alt="DOM、CSSOM、非同期 JavaScript の CRP" >
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/analysis_with_css_js_async.html){: target="_blank" .external }
 
-非同期スクリプトにはいくつかメリットがあります。
 
-* スクリプトがパーサー ブロックにならず、クリティカル レンダリング パスの一部ではなくなります。
-* 他にクリティカル スクリプトがないため、CSS が `domContentLoaded` イベントをブロックする必要もなくなります。
-* `domContentLoaded` イベントが早く発生するほど、他のアプリケーション ロジックも早く実行できるようになります。
+<img src="images/analysis-dom-css-js-async.png" alt="DOM、CSSOM、非同期 JavaScript の CRP">
 
-この結果、最適化されたページでは、クリティカル リソースが 2 つ（HTML と CSS）に戻り、最小クリティカル パス長は 2 ラウンドトリップ、クリティカル バイト数は合計 9 KB です。
 
-最後に、CSS スタイルシートが印刷にのみ必要なケースではどうなるのか見てみましょう。
+An asynchronous script has several advantages:
+
+- The script is no longer parser blocking and is not part of the critical rendering path.
+- Because there are no other critical scripts, the CSS doesn't need to block the `domContentLoaded` event.
+- The sooner the `domContentLoaded` event fires, the sooner other application logic can begin executing.
+
+As a result, our optimized page is now back to two critical resources (HTML and CSS), with a minimum critical path length of two roundtrips, and a total of 9KB of critical bytes.
+
+Finally, if the CSS stylesheet were only needed for print, how would that look?
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/analysis_with_css_nb_js_async.html){: target="_blank" .external }
 
-<img src="images/analysis-dom-css-nb-js-async.png" alt="DOM、ブロックしない CSS、非同期 JavaScript の CRP" >
-
-style.css リソースは印刷にのみ使用されるため、ブラウザでは、ページをレンダリングする際に CSS をブロックする必要がありません。したがって、DOM 構築が完了した時点で、ブラウザにはページのレンダリングに必要な情報がすべてそろっています。その結果、このページのクリティカル リソースは 1 つ（HTML ドキュメント）、最小クリティカル レンダリング パス長は 1 ラウンドトリップになります。
-
-<a href="optimizing-critical-rendering-path" class="gc-analytics-event"
-    data-category="CRP" data-label="Next / Optimizing CRP">
-  <button>次のトピック: クリティカル レンダリング パスの最適化</button>
-</a>
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/analysis_with_css_nb_js_async.html){: target="_blank" .external }
 
 
-{# wf_devsite_translation #}
+<img src="images/analysis-dom-css-nb-js-async.png" alt="DOM、ブロックしない CSS、非同期 JavaScript の CRP">
+
+
+Because the style.css resource is only used for print, the browser doesn't need to block on it to render the page. Hence, as soon as DOM construction is complete, the browser has enough information to render the page. As a result, this page has only a single critical resource (the HTML document), and the minimum critical rendering path length is one roundtrip.

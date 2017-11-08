@@ -1,41 +1,33 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: クリティカル レンダリング パスを最適化するうえで重要な要素を説明します。
+description: Learn the key factors in optimizing the critical rendering path.
 
-{# wf_updated_on:2015-10-05 #}
-{# wf_published_on:2014-03-31 #}
+{# wf_updated_on: 2015-10-05 #}
+{# wf_published_on: 2014-03-31 #}
 
-# クリティカル レンダリング パスの最適化 {: .page-title }
+# Optimizing the Critical Rendering Path {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-
-  最初のレンダリングまでの時間をできるだけ短縮するには、次の 3 つの要素を最小限に抑える必要があります。
-
+To deliver the fastest possible time to first render, we need
+to minimize three variables:
 
   <ul>
-    <li>クリティカル リソースの数</li>
-    <li>クリティカル パス長</li>
-    <li>クリティカル バイト数</li>
+    <li>The number of critical resources.</li>
+    <li>The critical path length.</li>
+    <li>The number of critical bytes.</li>
   </ul>
 
-クリティカル リソースは、ページの最初のレンダリングをブロックする可能性のあるリソースです。クリティカル リソースが少なければ少ないほど、ブラウザ、CPU、その他のリソースの作業も少なくなります。
 
-同様に、クリティカル パス長は、ページに必要なすべてのクリティカル リソース間の依存関係グラフと各リソースのバイトサイズから決まる値です。一部のリソースのダウンロードは前のリソースの処理が完了しないと開始できず、リソースが大きくなれば、ダウンロードに必要なラウンドトリップ回数が増えます。
+A critical resource is a resource that could block initial rendering of the page. The fewer of these resources, the less work for the browser, the CPU, and other resources.
 
-最後に、ブラウザでダウンロードする必要のあるクリティカル バイト数が少ないほど、コンテンツの処理に早く取りかかることができるため、画面上に早く表示されます。バイト数は、リソースの数を減らす（取り除くか非クリティカルにする）ことで削減できます。また、各リソースを圧縮するか最適化して転送サイズを最小限に抑えることが肝心です。
+Similarly, the critical path length is a function of the dependency graph between the critical resources and their bytesize: some resource downloads can only be initiated after a previous resource has been processed, and the larger the resource the more roundtrips it takes to download.
 
-**クリティカル レンダリング パスの一般的な最適化手順:**
+Finally, the fewer critical bytes the browser has to download, the faster it can process content and render it visible on the screen. To reduce the number of bytes, we can reduce the number of resources (eliminate them or make them non-critical) and ensure that we minimize the transfer size by compressing and optimizing each resource.
 
-1. クリティカル パス（リソース数、バイト数、パス長）を分析して特徴を確認します。
-1. クリティカル リソースの数を最小限に抑えます。リソースの削除、ダウンロードの遅延、非同期化などの方法があります。
-1. クリティカル バイト数を最適化して、ダウンロード時間（ラウンドトリップ数）を削減します。
-1. 残ったクリティカル リソースを読み込む順序を最適化します。すべてのクリティカル アセットをできるだけ早くダウンロードすると、クリティカル パス長が短くなります。
+**The general sequence of steps to optimize the critical rendering path is:**
 
-<a href="page-speed-rules-and-recommendations" class="gc-analytics-event"
-    data-category="CRP" data-label="Next / PageSpeed">
-  <button>次のトピック: PageSpeed ルールおよび推奨事項</button>
-</a>
-
-
-{# wf_devsite_translation #}
+1. Analyze and characterize your critical path: number of resources, bytes, length.
+2. Minimize number of critical resources: eliminate them, defer their download, mark them as async, and so on.
+3. Optimize the number of critical bytes to reduce the download time (number of roundtrips).
+4. Optimize the order in which the remaining critical resources are loaded: download all critical assets as early as possible to shorten the critical path length.

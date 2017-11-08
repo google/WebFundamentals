@@ -1,261 +1,292 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 느린 네트워크 및 오프라인을 위한 웹 경험 디자인 가이드입니다.
+description: A guide to designing web experiences for slow networks and offline.
 
-{# wf_updated_on: 2016-11-10 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-11-10 #}
 
-# 오프라인 사용자 환경 고려 사항 {: .page-title }
+# Offline UX Considerations {: .page-title }
 
 {% include "web/_shared/contributors/mustafa.html" %}
 
-이 글에서는 느린 네트워크와 오프라인에서 훌륭한 경험을
-창출하는 데 필요한 여러 가지 디자인 고려 사항을 살펴보겠습니다.
+This article will take a look at multiple design considerations needed to create
+a great experience on both slow networks and offline.
 
-네트워크 연결의 품질은 다음과 같은 여러 요인의 영향을 받을 수
-있습니다.
+The quality of a network connection can be affected by a number of factors
+such as:
 
-* 공급자의 커버리지 영역에서 벗어남 
-* 악천후
-* 정전
-* 사용자가 네트워크 연결을 차단하는 건물과 같은 '사각지대'로
- 이동 
-* 기차를 타고 터널 통과
-* 공항이나 호텔과 같이 제3자가 관리하는 인터넷 연결에
- 시간 제한이 있음
-* 특정 시간 또는 날짜에 인터넷 액세스를 제한하거나 차단하는
- 문화적 관습
+- Poor coverage of a provider.
+- Extreme weather conditions.
+- Power outages.
+- Users travelling into “dead zones” such as buildings that block theirnetwork connections.
+- Travelling on a train and going through a tunnel.
+- Internet connection is managed by a third party and time boxed when itwill be active or inactive like in an airport or hotel.
+- Cultural practises that require limited or no internet access at specifictimes or days.
 
-연결 상태 변경의 영향을 최소화하여 좋은 경험을 제공하는 것을
-목표로 해야 합니다. 
+Your goal is to provide a good experience that lessens the impact of changes
+in connectivity.
 
-## 네트워크 연결이 불안정할 때 사용자에게 무엇을 보여줘야 하나요?
+## What to show your users when they have a bad network connection?
 
-먼저 네트워크 연결 성공 및 실패 시 어떤 모습인지 알아야
-합니다. 연결에 성공한 경우 앱은
-정상적으로 온라인 상태를 유지합니다. 그러나 연결에 실패한 경우 앱은
-네트워크 지연 시 나타나는 작동 방식을 보이거나 오프라인 상태일 수 있습니다.
+The first question that must be asked is: what does success and failure of a
+network connection look like? A successful connection is your app's normal
+online experience. The failure of a connection however can be both the offline
+state of your app as well how the app behaves when there is a laggy network.
 
-네트워크 연결 성공 또는 실패를 고려할 때 다음과 같은 중요한
-사용자 환경 관련 질문을 자문해야 합니다.
+When thinking about the success or failure of a network connection you need to
+ask yourself these important UX questions:
 
-* 연결 성공 또는 실패를 판별하려면 얼마나 기다려야 하는가? 
-* 성공 또는 실패를 판별하는 동안 무엇을 할 수 있는가? 
-* 실패한 경우 어떻게 해야 하는가?
-* 위 정보를 사용자에게 어떻게 알려줄 것인가?
+- How long do you wait to determine success or failure of a connection?
+- What can you do while success or failure is being determined?
+- What should you do in the event of failure?
+- How do you inform the user of the above?
 
-### 현재 상태 및 상태 변경을 사용자에게 알림
+### Inform users of their current state and change of state
 
-네트워크 오류 시 취할 수 있는 조치와 애플리케이션의 현재 상태를
-사용자에게 알려줍니다. 예를 들어, 다음과 같은 알림이
-제공될 수 있습니다.
+Inform the user of both the actions they can still take when they have a network
+failure and the current state of the application. For example, a notification
+could say:
 
 > “You seem to have a bad network connection. [Not to worry!] Messages will be
-“sent when the network is restored.”
+> “sent when the network is restored.”
+
 
 <figure class="attempt-left">
   <img src="images/emojoy-toast-message.png" alt="상태 변경이 발생한 경우 Emojoy(emoji 메시징 앱)가 사용자에게 알려줍니다.">
   <figcaption>
-    상태 변경이 발생한 경우 가급적 빨리 사용자에게 그 사실을 명확하게 알려주세요.
+    Clearly inform the user when a change in state occurs as soon as possible.
   </figcaption>
 </figure>
 <figure class="attempt-right">
   <img src="images/io-toast-message.png" alt="상태 변경이 발생한 경우 I/O 2016 앱이 사용자에게 알려줍니다.">
   <figcaption>
-    Google I/O 앱은 오프라인일 때 머티리얼 디자인 '알림(toast)'을 사용하여 사용자에게 알려줍니다.
+    The Google I/O app used a material design "toast" to let the user know when it was offline.
   </figcaption>
 </figure>
+
+
 
 <div class="clearfix"></div>
 
-### 네트워크 연결 개선 또는 복원
 
-<figure class="attempt-right">
-  <img src="images/weather-app.png" alt="날씨 앱의 예">
-  <figcaption>
-    이 날씨 앱과 같은 일부 앱은 이전 데이터가 사용자에게 유용하지 않으므로 자동으로 업데이트해야 합니다.
-  </figcaption>
+### Network connection improves or is restored
+
+How you deal with informing the user once their network connection has improved
+will depend largely on your application. For apps that require update
+information displayed as a priority such as a stock market app, auto-updating
+and notifying the user as soon as possible is crucial.
+
+It is recommended that you let the user user know that your web app
+has been updated "in the background" by using a visual cue such as a
+material design toast element. This involves detecting both the
+initial registration of your service worker and that there's been an
+update to the service worker-managed content. You can see a code
+example of this
+<a href="https://github.com/GoogleChrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L29">function at work here</a>.
+
+Once example of this would be
+<a href="https://www.chromestatus.com/features">
+www.chromestatus.com</a>which posts a note to the user when the app has been updated.
+
+<figure>
+  <img class="attempt-right" src="images/weather-app.png" alt="날씨 앱의 예">
+  <img class="attempt-left" src="images/chrome-status-app-updated.png" alt="Chrome Status uses a toast">
 </figure>
 
-네트워크 연결 개선 시 사용자에게 알리는 방법은 애플리케이션에
-따라 많이 다릅니다. 주식 시장 앱과 같이
-업데이트 정보를 우선순위로 표시해야 하는 앱의 경우 신속한 자동 업데이트
-및 사용자 알림이 중요합니다.
+  <figcaption class="clearfix" style="clear:both;">
+</figcaption>
+
+
+Some apps, like the weather app, need to auto update as old data
+is not of use to the user. Where Chrome Status lets the user know
+when content has been updated via a material design toast element.
+
+  
+
+
+
 
 <div class="clearfix"></div>
 
-또한 마지막으로 앱을 업데이트한 시간을 항상 눈에 잘 띄는 공간에 표시할 수
-있습니다. 이는 통화 변환기 앱 등에도 유용합니다.
 
-<figure>
-  <img class="attempt-left" src="images/material-money-rates-out-of-date.png" alt="오래된 Material Money 앱">
-  <img class="attempt-right" src="images/material-money-rates-updated.png" alt="업데이트된 Material Money">
-  <figcaption class="clearfix">
-    Material Money는 최신 통화를 보여주고, 앱이 업데이트되지 않은
- 경우 사용자에게 알려줍니다.
-  </figcaption>
-</figure>
-
-뉴스 앱과 같은 다른 애플리케이션은 탭 업데이트(tap-to-update) 기능을
-사용하여 최신 내용이 있음을 사용자에게 알려주는 간단한 알림을 표시할 수 있습니다. 이렇게 하는 이유는
-사용자가 현재 기사를 읽는 동안 자동 업데이트가 페이지를 새로 고치면
-마지막으로 읽은 부분에서 벗어나기 때문입니다.
+You may also show the last time the app was updated at all times in a prominent
+space. This would also be useful for a currency converter app, for example.
 
 
 <figure>
-  <img class="attempt-left" src="images/tailpiece-normal.png" alt="정상 상태의 뉴스 앱 Tailpiece의 예">
-  <img class="attempt-right" src="images/tailpiece-tap-to-update.png" alt="업데이트할 준비가 된 경우의 뉴스 앱 Tailpiece의 예">
-  <figcaption class="clearfix">
-    온라인 신문인 Tailpiece는 최신 뉴스를 자동으로 다운로드하지만
- 기사에서 마지막으로 읽은 부분에서 벗어나지 않도록 수동으로 새로 고치는 기능을 사용자에게 제공합니다.
+  <img class="attempt-left" src="images/material-money-rates-out-of-date.png" alt="Tailpiece는 다양한 디자인 위젯을 사용하여 오프라인 상태임을 사용자에게 알려줍니다.">
+  <img class="attempt-right" src="images/material-money-rates-updated.png" alt="Tailpiece에는 오프라인으로 사용할 준비가 된 섹션을 보여주는 탐색 창이 있습니다.">
+  <figcaption class="clearfix" style="clear:both;">
+    Material Money shows the latest currency where possible and notifies the
+    user when the app hasn’t been updated.
   </figcaption>
 </figure>
 
-### 상황별 상태 및 찾아보기 모드
 
-각 UI는 성공적인 연결이 필요한지 여부에 따라 변경되는
-고유한 컨텍스트와 기능을 가질 수 있습니다. 일례로, 연결을 다시 설정할 때까지
-구매 버튼과 가격 책정은 비활성화되지만 오프라인으로 찾아볼 수 있는
-전자 상거래 사이트가 있습니다.
+Other applications such as a news app could show a simple notification informing
+the user that there is newer content, with a tap-to-update function. The reason
+for doing that is if a user is currently reading an article an auto-update would
+refresh the page and they would lose where they were reading last.
 
-상황별 상태의 다른 형태로 데이터가 포함될 수 있습니다. 예를 들어, 주식을 구입할 수 있는
-재무 애플리케이션 Robinhood는 색상과 그래픽을 사용하여
-사용자에게 개장 시간을 알려줍니다. 폐장하면 전체 인터페이스가
-흰색으로 변했다가 회색으로 표시됩니다. 주가가 상승 또는 하락할 때
-각 개별 주식 위젯은 상태에 따라 초록색 또는 빨간색으로
-바뀝니다.
 
-### 오프라인 모델을 이해하도록 교육
+<figure>
+  <img class="attempt-left" src="images/tailpiece-normal.png" alt="오프라인 I/O 앱">
+  <img class="attempt-right" src="images/tailpiece-tap-to-update.png" alt="오프라인 Chrome Status 사이트">
+  <figcaption class="clearfix" style="clear:both;">
+    Tailpiece, an online newspaper will auto download the latest news but
+    allow the users to refresh manually so they do not lose their place in the article.
+  </figcaption>
+</figure>
 
-오프라인은 모든 사람을 위한 새로운 심리 모델입니다. 연결되지 않은 경우에 변경되는
-사항에 대해 사용자에게 교육해야 합니다. 대규모 데이터의
-저장 위치를 알려주고 기본 동작을 변경할 수 있는 설정을 제공해야 합니다. 아이콘과 같은 단일 디자인 요소에 의존하지 말고 정보를 담은 언어,
-아이콘, 알림, 색상 및 이미지와 같은 여러 UI 디자인 구성 요소를
-사용하여 이러한
-아이디어를 종합적으로 전달해야
-합니다.
 
-## 기본적으로 오프라인 경험 제공 
+### Contextual states and browse mode
 
-앱에 많은 양의 데이터가 필요하지 않은 경우 기본적으로 해당 데이터를 캐시하세요. 네트워크 연결을
-통해서만 데이터에 액세스할 수 있는 경우 사용자는
-점점 더 좌절할 수 있습니다. 가급적 안정적인 환경을 만들도록 노력해야 합니다. 불안정한
-연결은 앱의 신뢰성을 떨어뜨리지만, 네트워크 오류의 영향을 줄여주는 앱은
-사용자에게 마법적인 느낌을 줍니다.
+Each bit of UI may have its own context and functionality that will change
+depending on if it requires a successful connection. One example would be an
+ecommerce site that can be browsed offline though the Buy button and pricing is
+disabled until a connection has been reestablished.
 
-뉴스 사이트는 당일의 최신 뉴스 콘텐츠를 자동으로
-다운로드하고 저장하는 방식을 사용하므로, 사용자는 기사 이미지가 없는
-텍스트를 다운로드하는 등의 방식으로 연결하지 않고서도 오늘의 뉴스를 읽을 수 있습니다. 또한 사용자의
-행동에 맞춰야 합니다. 가령, 사용자가 스포츠면을 주로 보는 경우
-스포츠 데이터를 우선적으로 다운로드하는 것이 좋습니다.
+Other forms of contextual states could include data. For example, the financial
+application Robinhood allows users to buy stock and uses color and graphics to
+notify the user when the market is open. The whole interface turns white and
+then grays out when the market closes. When the value of stock increases or
+decreases, each individual stock widget turns green or red depending on its
+state.
+
+### Educate the user so they understand what the offline model is
+
+Offline is a new mental model for everyone. You need to educate your users about
+what changes will occur when they don’t have a connection. Inform them of where
+large data is saved and give them settings to change the default behavior. Make
+sure you use multiple UI design components such as informative language, icons,
+notifications, color and imagery to convey these ideas collectively rather than
+relying on one design device, such as an icon on its own, to tell the whole
+story.
+
+## Providing an offline experience by default
+
+If your app doesn't require much data, then cache that data by default. Users
+can become increasingly frustrated if they can only access their data with a
+network connection. Try to make the experience as stable as possible. An
+unstable connection will make your app feel untrustworthy, where an app that
+lessens the impact of a network failure will feel magical to the user.
+
+News sites could benefit from auto downloading and saving the latest news
+content of the day so a user could read today's news without a connection,
+perhaps downloading the text without the article images. Also adapt with the
+user's behaviour so if the sports section is what they typically view, perhaps
+make this the priority data that is downloaded.
+
 
 <figure>
   <img class="attempt-left" src="images/tailpiece-offline.png" alt="Tailpiece는 다양한 디자인 위젯을 사용하여 오프라인 상태임을 사용자에게 알려줍니다.">
   <img class="attempt-right" src="images/tailpiece-offline-sidebar.png" alt="Tailpiece에는 오프라인으로 사용할 준비가 된 섹션을 보여주는 탐색 창이 있습니다.">
   <figcaption class="clearfix">
-    기기가 오프라인인 경우 Tailpiece는 사용자에게 앱을 계속
- 사용할 수 있음을 알리는 상태 메시지를 사용하여 사용자에게 알려줍니다.
+    If the device is offline Tailpiece will notify the user with a status
+    message letting them know that they can still use the app.
   </figcaption>
 </figure>
 
-## 앱이 오프라인으로 사용할 준비가 되면 사용자에게 알림 
 
-웹 앱을 처음 로드할 때 오프라인으로 사용할 준비가
-되었는지 사용자에게 알려줘야 합니다. 예를 들어 섹션이 동기화되거나
-데이터 파일이 다운로드된 경우, 화면 하단의
-메시지를 통해 작업에 대한 [간단한 피드백을 제공하는 위젯](https://material.google.com/components/snackbars-toasts.html "widget that provides brief feedback")으로
-이를 수행합니다.
+## Inform the user when the app is ready for offline consumption
 
-사용하는 언어가 대상 사용자에게 적합한지 다시
-생각해보세요. 메시징이 사용되는 모든 인스턴스에서 동일하게 제공되는지 확인하세요
-. 오프라인이라는 용어는 일반적으로 전문가가 아닌 사람들이
-오해할 수 있으므로 대상 사용자가 관련될 수 있는 작업 기반 언어를 사용하세요.
+When a web app first loads you need to indicate to the user if it is ready
+for offline use. Do this with a
+[widget that provides brief feedback](https://material.google.com/components/snackbars-toasts.html "widget that provides brief feedback")
+about an operation through a message at the bottom of the screen,
+for example when a section has been synced or a data file has downloaded.
+
+Again think of the language you are using to make sure it is fit for your
+audience. Ensure the messaging is given the same in all instances where it’s
+used. The term offline is generally misunderstood by a non-techie audience so
+use action based language that your audience can relate to.
 
 
 <figure>
   <img class="attempt-left" src="images/io-offline-ready.png" alt="오프라인 I/O 앱">
   <img class="attempt-right" src="images/chome-offline.png" alt="오프라인 Chrome Status 사이트">
-  <figcaption class="clearfix">
-    앱을 오프라인에서 사용할 준비가 되면 Google I/O 2016 앱과
- Chrome Status 사이트에서 사용자에게 알려줍니다.
+  <figcaption class="clearfix" style="clear:both;">
+    Both the Google I/O 2016 app and Chrome Status site notify the user when
+    the app is ready for offline use.
   </figcaption>
 </figure>
 
-### 데이터를 많이 사용하는 앱의 경우 '오프라인용으로 저장'을 인터페이스에 명확히 표시
 
-애플리케이션이 많은 양의 데이터를 사용하는 경우, 사용자가
-설정 메뉴를 통해 구체적으로 요구하지 않으면 자동 다운로드 대신
-오프라인용 항목을 추가하는 스위치 또는 핀이 있는지 확인합니다. 핀
-또는 다운로드 UI는 다른 UI 요소가 가리지 않아야 하며 기능이
-명확해야 합니다.
+### Make 'save for offline' an obvious part of the interface for data heavy apps
 
+If an application uses large amounts of data, make sure that there is a switch
+or pin to add an item for offline use rather than auto downloading, unless a
+user has specifically asked for this behavior via a settings menu. Make sure
+that the pin or download UI is not obscured by other UI elements and that the
+feature is obvious to the user.
 
-한 예로 큰 데이터 파일이 필요한 음악 플레이어를 들 수 있습니다. 사용자는
-관련 데이터 비용을 알고 있지만 오프라인 상태에서 플레이어를 사용하고자
-할 수 있습니다. 나중에 사용하기 위해 음악을
-다운로드하려면 사용자가 미리 계획을 세워야 하므로
-온보딩(onboarding) 동안 이에 대한 교육이 필요할 수 있습니다.
+One example would be a music player that requires large data files. The user is
+aware of the associated data cost, but is also aware that they may want to use
+the player when they they are offline. Downloading music for later use requires
+the user to plan ahead, so education about this may be required during
+onboarding.
 
-### 오프라인에서 액세스할 수 있는 항목 명시 
+### Clarify what is accessible offline
 
-제공하는 옵션에 대해 명확히 해야 합니다. 사용자가 스마트폰에 저장한 항목과 저장할
- 항목을 쉽게 볼 수 있도록 '오프라인 라이브러리'를
-보여주는 탭이나 설정을 표시해야 하는 경우가 있습니다. 설정이 간결해야 하며
-데이터 저장 위치와 액세스 권한이 있는 사람을 명확히 해야 합니다.
+Be clear as to the option you are providing. You may need to show a tab or
+setting that shows an “offline library”, so the user can easily see what they
+have stored on their phone and what needs to be saved. Make sure the settings
+are concise and be clear where the data will be stored and who has access to it.
 
-### 실제 작업 비용 표시
+### Show the actual cost of an action
 
-대부분의 사용자는 오프라인 기능을 '다운로드'와 동일시합니다. 네트워크 연결이
-정기적으로 실패하거나 사용할 수 없는 국가의 사용자는 다른
-사용자와 콘텐츠를 공유하거나, 네트워크 연결 동안 오프라인으로 사용할 콘텐츠를 저장합니다.
+Many users equate offline capability with 'downloading'. Users in countries
+where network connections regularly fail or aren't available often share content
+with other users, or save content for offline use when they have connectivity.
 
-데이터 요금제 사용자는 비용을 염려하여 대용량 파일을 다운로드하지
-않을 수 있으므로, 사용자가 특정 파일이나
-작업을 적극적으로 비교할 수 있도록 관련 비용을 표시할 수도 있습니다.  예를 들어, 위의 음악 앱은
-데이터 요금제 사용 여부를 감지하고 사용자가 파일의 실제 비용을
-볼 수 있도록 파일 크기를 표시할 수 있습니다.
+Users on data plans may avoid downloading large files for fear of cost, so you
+may also want to display an associated cost so users can make an active
+comparison for a specific file or task.  For example if the music app above
+could detect if the user is on a data plan and show the file size so that users
+can see the true cost of a file.
 
-### 해킹 방지 
+### Help prevent hacked experiences
 
-사용자가 본의 아니게 해킹할 수 있습니다. 예를 들어,
-Google Drive와 같은 클라우드 공유 앱이 등장하기 전에는 대용량 파일을
-저장하고 이메일에 첨부하여 다른 기기에서 계속 편집할 수
-있었습니다. 사용자가 해킹 경험을 하지 않고 원하는 목표에 집중하도록 하는 것이
-중요합니다. 즉, 사용자에게
-더욱 친숙한 방식으로 대용량 첨부 파일을 첨부할 수 있는 방법을 생각하는 대신,
-여러 기기에서 대용량 파일을 공유하는 문제를 해결하세요.
+Often users hack an experience without realizing they are doing it. For example
+before cloud sharing apps like Google Drive, it was common for users save large
+files and attach them to emails so they could carry on editing from a different
+device. It is important not to be pulled into their hacked experience but rather
+look at what they are trying to achieve. In other words instead of thinking of
+how you can make attaching a large attachment more user friendly, solve the
+problem of sharing large files across multiple devices.
 
-## 기기 간 전송 가능한 환경
+## Transferable experience from one device to another
 
-네트워크 연결이 불안정한 경우 전송할 수 있을 정도로 연결 상태가 원활해지면
-올바르게 동기화할 방법을 찾으세요.
-예를 들어, 예약 도중에 여행 앱의 네트워크 연결이 끊어지는 경우를
-가정해봅시다. 연결이 다시 설정되면 앱이 사용자 계정과 동기화된 후
-데스크톱 기기에서 예약을 계속 진행할 수 있습니다. 전송할
-수 없으면 사용자가 상당히 불만을 가질 수 있습니다.
+When making an experience with a flaky network connection, seek for it to sync
+correctly once the connection improves so that the experience is transferable.
+For example, imagine a travel app losing a network connection mid-way through a
+booking. When the connection is reestablished, the app syncs with the user's
+account and then they can continue their booking on their desktop device. Not
+being able to transfer experiences is incredibly jarring to users.
 
-앱 동기화 여부와 같은 데이터의 현재 상태를 사용자에게
-알려주세요. 하지만 메시지 전송으로 사용자에게 지나친 부담을
-주지 마세요.
+Inform the user of the current state of their data, for example if the app has
+managed to sync or not. Educate them where possible but try not to overburden
+them with messaging.
 
-## 포괄적 디자인 환경 구현 
+## Create inclusive design experiences
 
-디자인 시 사용자의 진행을 방해하지 않고 동작이나 작업을 완료하도록
-안내하는 의미 있는 디자인 기기, 간단한 언어, 표준 아이콘 체계 및 의미 있는
-이미지를 제공하는 방식으로 포괄적인 환경을 구현하세요.
+When designing seek to be inclusive by providing meaningful design devices,
+simple language, standard iconography, and meaningful imagery that will guide
+the user to complete the action or task rather than hinder their progress.
 
-### 간결한 언어로 안내
+### Let simple concise language be a guide
 
-좋은 사용자 환경은 잘 디자인된 인터페이스뿐만 아니라 앱에서 사용하는
-언어와 사용자가 진행하는 흐름도 포함합니다. 앱 또는 개별 UI 구성 요소의
-상태를 설명할 때 기술 전문 용어 사용을 피하세요. '앱 오프라인'이라는
-용어는 앱의 현재 상태를 사용자에게 전달하지 못할 수 있음을 고려하세요.
+Good UX is not just about a well designed interface. It includes the flow a user
+takes as well as the language used in the app. Avoid using tech jargon when
+explaining the state of the app or individual UI components. Consider that the
+phrase “app offline” might not convey to the user the current state of the app.
+
 
 <div class="attempt-left">
   <figure>
     <img src="images/download.png" alt="다운로드 아이콘은 좋은 예에 해당합니다.">
     <figcaption class="success">
-      <b>권장</b>: 작업을 설명하는 언어와 이미지를 사용하세요.
+      <b>DO</b>: Use language and imagery that describes the action.
      </figcaption>
   </figure>
 </div>
@@ -263,31 +294,32 @@ Google Drive와 같은 클라우드 공유 앱이 등장하기 전에는 대용�
   <figure>
     <img src="images/service-worker-ready.png" alt="서비스 워커 아이콘은 좋지 않은 예에 해당합니다.">
     <figcaption class="warning">
-      <b>금지</b>: 접근하기 어려운 추상적인 용어는 피하세요. 
+      <b>DON'T</b>: Avoid abstract terms that may not be accessible. 
      </figcaption>
   </figure>
 </div>
 <div class="clearfix"></div>
 
 
-### 여러 디자인 기기를 사용하여 액세스 가능한 사용자 환경 구현
+### Use multiple design devices to create accessible user experiences
 
-언어, 색 및 시각적인 구성 요소를 사용하여 상태 변경 또는
-현재 상태를 보여줍니다. 상태를 보여주기 위해 색상만 사용하는 경우
-사용자가 알아차리지 못하거나 시각 장애자가 이용하지 못할 수도 수 있습니다.
-또한 디자이너는 직감적으로 회색으로 표시된 UI를 사용하여 오프라인을 나타내는데
-이는 웹에서 로드되었음을 의미할 수 있습니다. 또한 회색으로 표시된 UI는 양식의
-입력 요소와 같이 비활성화된 요소를 나타내기도 합니다. 따라서
-색상만으로 상태를 나타내는 경우 혼란을 일으킬 수 있습니다.
+Use language, color and visual components to demonstrate a change of state or
+current status. Solely using color to demonstrate state may not be noticed by
+the user, and may be inaccessible to users who suffer from visual disabilities.
+Also, the gut instinct for designers is to use grayed UI to represent offline,
+but this can have a loaded meaning on the web. Grayed UI is also used to mean
+that an element is disabled, such as input elements on a form. This can cause
+confusion if you ONLY use color to depict state.
 
-오해를 방지하려면 색상, 레이블 및 UI 구성 요소 등 여러 가지 방법으로
-서로 다른 상태를 표현해야 합니다.
+To prevent misunderstandings, express different states to the user in multiple
+ways: for example with color, labels and UI components.
+
 
 <div class="attempt-left">
   <figure>
     <img src="images/accessibility_color7_do.png" alt="색상과 텍스트를 사용하여 오류를 표시하는 좋은 예">
     <figcaption class="success">
-      <b>권장</b>: 다양한 디자인 요소를 사용하여 의미를 전달하세요.
+      <b>DO</b>: Use a mixture of design elements to convey meaning
      </figcaption>
   </figure>
 </div>
@@ -295,114 +327,111 @@ Google Drive와 같은 클라우드 공유 앱이 등장하기 전에는 대용�
   <figure>
     <img src="images/accessibility_color8_dont.png" alt=" 색상만 사용하는 나쁜 예">
     <figcaption class="warning">
-      <b>금지</b>: 색상만 사용하여 현재 상태를 나타내지 마세요.
+      <b>DON'T</b>: Only use color to describe what is happening.
      </figcaption>
   </figure>
 </div>
 
+
+
 <div class="clearfix"></div>
 
-### 의미를 전달하는 아이콘 사용 
 
-의미 있는 텍스트 레이블과 아이콘을 사용하여 정보를 정확히
-전달해야 합니다. 웹상에서 오프라인은 비교적 새로운 개념이므로
-아이콘만 사용하는 경우 문제가 될 수 있습니다. 사용자가 단독으로 사용된 아이콘을 오해할 수 있습니다. 예를
-들어, 저장의 의미로 사용된 플로피 디스크를 구세대는 이해하지만
-플로피 디스크를 본 적이 없는 젊은 사용자는 혼동할 수 있습니다.
-마찬가지로, 레이블 없이 표시된 '햄버거' 메뉴 아이콘도
-사용자를 혼동시키는 것으로 알려져 있습니다.
+### Use icons that convey meaning
+
+Make sure that information is conveyed correctly with meaningful text labels as
+well as icons. Icons alone can be problematic, since the concept of offline on
+the web is relatively new. Users may misunderstand icons used on their own. For
+example, using a floppy disc for save makes sense to an older generation but
+young users who have never seen a floppy disc may be confused by the metaphor.
+Likewise, the 'hamburger' menu icon has been known to confuse users when
+presented without a label.
+
+When introducing an offline icon try to remain consistent with the industry
+standard visual (if one exists) as well as providing a text label and
+description. For example, saving for offline might be a typical download icon or
+perhaps if the action involves syncing it could be a syncing icon. Some actions
+may be interpreted as saving for offline rather than demonstrating a network's
+status. Think of the action you are trying to convey rather than presenting the
+user with an abstract concept. For example save or download data would be action
+based.
 
 
-오프라인 아이콘을 도입할 때 업계 표준 시각적 표현(있는 경우)과
-일관성을 유지하고 텍스트 레이블 및 설명을
-제공하세요. 예를 들어, 오프라인 저장은 일반적인 다운로드 아이콘이거나
-(동기화 작업과 관련된 경우) 동기화 아이콘일 수 있습니다. 일부 작업은
-네트워크의 상태를 보여주기보다 오프라인 저장으로 해석될 수
-있습니다. 사용자에게 추상적인 개념을 제공하지 말고 전달하려는 액션을
-생각하세요. 예를 들어, 데이터 저장 또는 다운로드는
-액션 기반입니다.
+<img src="images/download-icons-examples.png" alt="Various icon examples that convey offline">
 
-<img src="images/download-icons-exampels.png" alt="오프라인으로 전달되는 다양한 아이콘의 예">
 
-오프라인은 상황에 따라 다운로드, 내보내기, 핀 등 여러 가지를
-의미할 수 있습니다. 더 많은 영감을 얻으려면
-[머티리얼 디자인 아이콘 세트](https://material.io/icons/ "material design icon set")를 참조하세요.
+Offline can mean a number of things depending on the context, such as download,
+export, pin etc.. For more inspiration checkout the
+[material design icon set](https://material.io/icons/ "material design icon set")
 
-### 다른 피드백 메커니즘과 함께 골격 레이아웃 사용 
+### Use skeleton layouts with other feedback mechanism
 
-골격 레이아웃은 본질적으로 콘텐츠가 로드되는 동안 표시되는
-앱의 와이어프레임 버전입니다. 이를 통해 콘텐츠를 로드할 예정임을
-사용자에게 보여줄 수 있습니다. 또한 사용자에게 앱이 로드되고 있음을 알려주는
-텍스트 레이블과 함께 프리로더 UI를 사용하는 것도 고려하세요. 예를 들어, 와이어프레임 콘텐츠를
-진동시켜 앱이 작동하고 로드 중인 듯한 느낌을
-줄 수 있습니다. 이렇게 하면 사용자가 무언가 진행되고 있다는 사실을 알 수 있으므로 앱을 다시 제출하거나
-새로 고치는 상황을 방지하는 데 도움이 됩니다.
+A skeleton layout is essentially a wireframe version of your app that displays
+while content is being loaded. This helps demonstrate to the user that content
+is about to be loaded. Consider also using a preloader UI as well, with a text
+label informing the user that the app is loading. One example would be to
+pulsate the wireframe content giving the app the feeling  that it is alive and
+loading. This reassures the user that something is happening and helps prevent
+resubmissions or refreshes of your app.
+
 
 <figure>
   <img class="attempt-left" src="images/tailpiece-skel-article.png" alt="골격 레이아웃의 예">
   <img class="attempt-right" src="images/tailpiece-normal.png" alt="로드된 기사의 예">
   <figcaption class="clearfix">
-    골격 레이아웃 전과 후
+    Before and after of a skeleton layout.
   </figcaption>
 </figure>
 
-### 콘텐츠를 차단하지 마세요
 
-일부 애플리케이션에서는 사용자가 새 문서 작성과 같은 작업을
-트리거할 수 있습니다. 일부 앱은 새 문서를 동기화하기 위해 서버에 연결하려고
-시도하고, 이를 보여주기 위해 거슬리는 로드 모달 대화상자를 전체 화면으로
-표시합니다. 이는 네트워크 연결이 안정적인 경우
-정상적으로 작동할 수 있지만, 네트워크가 불안정한 경우 사용자가
-해당 작업에서 벗어날 수 없고 UI는 사용자가 다른 작업을 수행하지 못하도록 효과적으로 차단합니다.
-콘텐츠를 차단하는 네트워크 요청은 피해야 합니다. 연결 상태가
-원활해지면 사용자가 계속 앱을 탐색하고, 앞으로 수행하고 동기화할 작업을 계속 큐에 넣을
-수 있도록 허용하세요.
+### Don’t block content
 
-사용자에게 피드백을 제공하여 작업 상태를 보여주세요. 예를
-들어 사용자가 문서를 편집 중인 경우, 온라인 상태일 때와는 시각적으로
-다르지만 파일이 '저장'되었고 네트워크 연결 시 동기화될 것임을
-보여주도록 피드백 디자인 변경을 고려하세요. 이를 통해
-사용자에게 사용 가능한 여러 가지 상태에 대해 알려주고 작업이나 동작이
-저장되었음을 확인시켜 줄 수 있습니다. 따라서 사용자가 애플리케이션 사용 시
-더욱 확신을 갖게 됩니다.
+In some applications a user might trigger an action such as creating a new
+document. Some apps will try to connect to a server in order to sync the new
+document and to demonstrate this they display an intrusive loading modal dialog
+that covers the entire screen. This may work fine if the user has a stable
+network connection, but if the network is unstable they won’t be able to escape
+from this action and the UI effectively blocks them from doing anything else.
+Network requests that block content should be avoided. Allow the user to
+continue to browse your app and queue tasks that will be performed and synced
+once the connection has improved.
 
-## 다음 10억을 위한 디자인
+Demonstrate the state of an action by providing your users with feedback. For
+example, if a user is editing a doc, consider changing the feedback design so it
+is visibly different from when they are online but still shows that their file
+was “saved” and will sync when they have a network connection. This will educate
+the user about the different states available and reassure them that their task
+or action has been stored. This has the added benefit of the user growing more
+confident using your application.
 
-많은 지역에서 저급 기기들이 널리 사용되고 있고 연결을 신뢰할 수 없으며
-많은 사용자의 경우 데이터 요금을 감당할 수 없습니다. 데이터를 투명하고 간결하게 제공하여
-사용자 신뢰를 확보해야 합니다. 연결 상태가 좋지 않은 사용자를 돕고
-작업 속도를 높이기 위해 인터페이스를 단순화하는 방법에 대해 생각해보세요. 데이터를 많이 사용하는
-콘텐츠를 다운로드하기 전에 항상 사용자에게 물어보세요.
+## Designing for the next billion
 
-연결이 지연되는 사용자를 위해 낮은 대역폭 옵션을 제공하세요. 이를 통해 네트워크 연결이
-느리면 작은 자산을 제공하세요. 고품질 또는 저품질 자산을
-선택할 수 있는 옵션을 제공하세요.
+In many regions, low end devices are commonplace, connectivity is unreliable
+and, for many users, data is unaffordable. You will need to earn user trust by
+being transparent and frugal with data. Think about ways to help users on poor
+connections and simplify the interface to help speed up tasks. Always try to ask
+users before downloading data-heavy content.
 
-## 결론
+Offer low bandwidth options for users on laggy connections. So if the network
+connection is slow provide small assets. Offer an option to choose high or low
+quality assets.
 
-사용자는 이러한 개념에 익숙하지 않으므로 교육이 중요합니다. 친숙한 것들과
-연관시켜 보세요. 예를 들어, 나중에 사용하기 위해
-다운로드하는 것은 데이터를 오프라인으로 처리하는 것과 같습니다.
+## Conclusion
 
+Education is key to this as users are unfamiliar with these concepts. Try to
+create associations with things that are familiar, e.g downloading for later use
+is the same as offlining data.
 
-불안정한 네트워크 연결용으로 디자인할 때는 다음 사항에 유의하세요. 
+When designing for unstable network connections, use these:
 
-* 네트워크 연결 성공, 실패 및 불안정에 대해
-어떻게 디자인할지 생각하세요.
-* 데이터가 비쌀 수도 있는 사용자를 배려하세요.
-* 전 세계적으로 대부분 사용자에게 기술 환경은 모바일이 거의 독점적입니다.
-* 제한된 저장소와 메모리 및 처리 능력, 소형 디스플레이 및 
- 낮은 터치스크린 품질을 가진 저급 기기가 널리 사용되고 있습니다. 성능이 디자인 프로세스의 
- 일부인지 확인하세요. 
-* 오프라인일 때 사용자가 애플리케이션을 탐색할 수 있도록 허용하세요.
-* 현재 상태 및 상태 변경을 사용자에게 알려주세요.
-* 앱이 많은 데이터를 필요로 하지 않는 경우 기본적으로 오프라인으로 제공하세요.
-* 앱이 데이터를 많이 사용하는 경우 오프라인용으로 다운로드할
- 수 있는 방법을 사용자에게 알려주세요.
-* 기기 간 전송 가능한 환경을 구현하세요.
-* 언어, 아이콘, 이미지, 입력 체계 및 색상을 활용하여 
- 아이디어를 사용자에게 종합적으로 표현하세요.
-* 사용자에게 도움이 되는 재확인 및 피드백을 제공하세요.
-
-
-{# wf_devsite_translation #}
+- Think how you design for the success, failure and instability of anetwork connection.
+- Data may be expensive, so be considerate to the user.
+- For most users globally, the tech environment is almost exclusively mobile.
+- Low end devices are commonplace, with limited storage, memory and processingpower and, small displays and lower touchscreen quality. Make sure performanceis a part of your design process.
+- Allow users to browser your application when they are offline.
+- Inform users of their current state and of changes in states.
+- Try to provide offline by default if your app doesn't require much data.
+- If the app is data-heavy, educate users about how they can download foroffline use.
+- Make experiences transferable between devices.
+- Utilize language, icons, imagery, typography and color to express ideas to theuser collectively.
+- Provide reassurance and feedback to help the user.

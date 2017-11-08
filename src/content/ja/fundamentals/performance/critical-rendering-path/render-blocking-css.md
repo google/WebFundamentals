@@ -1,79 +1,76 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: デフォルトでは CSS はレンダリング ブロック リソースとして扱われます。CSS によるレンダリングのブロックを回避する方法について説明します。
+description: By default CSS is treated as a render blocking resource. Learn how to prevent it from blocking rendering.
 
-{# wf_updated_on:2014-09-17 #}
-{# wf_published_on:2014-03-31 #}
+{# wf_updated_on: 2014-09-17 #}
+{# wf_published_on: 2014-03-31 #}
 
-#  レンダリング ブロック CSS {: .page-title }
+# Render Blocking CSS {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-デフォルトでは、CSS はレンダリング ブロック リソースとして扱われます。つまり、ブラウザは、CSSOM の構築が完了するまで、処理済みコンテンツのレンダリングを保留します。
-CSS のサイズを削減して、できるだけ早く配信されるようにし、メディアタイプやメディアクエリを利用してレンダリングのブロックを解除してください。
+By default, CSS is treated as a render blocking resource, which means that the
+browser won't render any processed content until the CSSOM is
+constructed. Make sure to keep your CSS lean, deliver it as quickly as
+possible, and use media types and queries to unblock rendering.
 
-
-[レンダリング ツリーの構築](render-tree-construction)セクションで、クリティカル レンダリング パスでは、レンダリング ツリーを構築するために DOM と CSSOM の両方が必要であるということを説明しました。このことは、パフォーマンス上重要な意味を持ちます。すなわち、**HTML と CSS の両方がレンダリング ブロック リソースなのです。**DOM がなければレンダリングできないのですから HTML については理解できます。しかし、CSS が必要である理由はわかりにくいかもしれません。CSS によるレンダリングのブロックを回避して、一般的なページをレンダリングするとどうなるでしょうか。
+In the [render tree construction](render-tree-construction) we saw that the critical rendering path requires both the DOM and the CSSOM to construct the render tree. This creates an important performance implication: **both HTML and CSS are render blocking resources.** The HTML is obvious, since without the DOM we would not have anything to render, but the CSS requirement may be less obvious. What would happen if we try to render a typical page without blocking rendering on CSS?
 
 ### TL;DR {: .hide-from-toc }
-- デフォルトでは、CSS はレンダリング ブロック リソースとして扱われます。
-- メディアタイプやメディアクエリを利用すると、一部の CSS リソースを非レンダリング ブロックとして指定することができます。
-- CSS リソースは、ブロック リソースであるか非ブロック リソースであるかにかかわらず、すべてブラウザでダウンロードされます。
+
+- By default, CSS is treated as a render blocking resource.
+- Media types and media queries allow us to mark some CSS resources as non-render blocking.
+- The browser downloads all CSS resources, regardless of blocking or non-blocking behavior.
 
 
 <div class="attempt-left">
   <figure>
     <img src="images/nytimes-css-device.png" alt="CSS ありの NYTimes">
-    <figcaption>CSS ありの The New York Times</figcaption>
+    <figcaption>The New York Times with CSS</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
     <img src="images/nytimes-nocss-device.png" alt="CSS なしの NYTimes">
-    <figcaption>CSS なしの The New York Times（FOUC）</figcaption>
+    <figcaption>The New York Times without CSS (FOUC)</figcaption>
   </figure>
 </div>
 
+
+
 <div style="clear:both;"></div>
 
-上記の例では、CSS ありと CSS なしで NYTimes のウェブサイトを表示しています。これを見ると、CSS の準備が整うまでレンダリングがブロックされる理由がわかります。CSS がない場合、ページは実質的に利用不可能です。右側のような状態は、一般に「FOUC（Flash of Unstyled Content）」と呼ばれます。ブラウザは、DOM と CSSOM の両方が揃うまでレンダリングをブロックします。
 
-> **_CSS はレンダリング ブロック リソースです。できるだけ早くクライアントに配信して、最初のレンダリングまでの時間を最適化する必要があります。_**
+The above example, showing the NYTimes website with and without CSS, demonstrates why rendering is blocked until CSS is available---without CSS the page is relatively unusable. The experience on the right is often referred to as a "Flash of Unstyled Content" (FOUC). The browser blocks rendering until it has both the DOM and the CSSOM.
 
-一方、ページの印刷や大型モニターへの投影など、特定の状況でのみ使用される CSS スタイルがある場合はどうなるでしょうか。このようなリソースでは、レンダリングをブロックする必要がないということは耳よりな情報でしょう。
+> ***CSS is a render blocking resource. Get it to the client as soon and as quickly as possible to optimize the time to first render.***
 
-CSS の「メディアタイプ」および「メディアクエリ」を使用すると、次のようなユースケースに対応できます。
+However, what if we have some CSS styles that are only used under certain conditions, for example, when the page is being printed or being projected onto a large monitor? It would be nice if we didn’t have to block rendering on these resources.
 
+CSS "media types" and "media queries" allow us to address these use cases:
 
-    <link href="style.css" rel="stylesheet">
-    <link href="print.css" rel="stylesheet" media="print">
-    <link href="other.css" rel="stylesheet" media="(min-width: 40em)">
-    
+```
+<link href="style.css" rel="stylesheet">
+<link href="print.css" rel="stylesheet" media="print">
+<link href="other.css" rel="stylesheet" media="(min-width: 40em)">
+```
 
-[メディアクエリ](../../design-and-ux/responsive/#use-css-media-queries-for-responsiveness)は、メディアタイプと、0 個以上の式（式は特定のメディア機能の条件をチェック）で構成されます。たとえば、1 番目のスタイルシートの宣言は、メディアタイプやメディアクエリを指定していないため、あらゆるケースに適用されます。つまり、常にレンダリング ブロックになります。一方で 2 番目のスタイルシートは、コンテンツが印刷される場合にのみ適用されます。レイアウトやフォントを変更したい、といった理由が考えられます。このスタイルシートは、最初の読み込まれても、ページのレンダリングをブロックする必要はありません。最後のスタイルシートの宣言は、ブラウザによって実行される「メディアクエリ」を規定しています。条件が一致すると、ブラウザは、スタイルシートのダウンロードと処理が完了するまで、レンダリングをブロックします。
+A [media query](../../design-and-ux/responsive/#use-css-media-queries-for-responsiveness) consists of a media type and zero or more expressions that check for the conditions of particular media features. For example, our first stylesheet declaration doesn't provide a media type or query, so it applies in all cases; that is to say, it is always render blocking. On the other hand, the second stylesheet declaration applies only when the content is being printed---perhaps you want to rearrange the layout, change the fonts, and so on, and hence this stylesheet declaration doesn't need to block the rendering of the page when it is first loaded. Finally, the last stylesheet declaration provides a "media query," which is executed by the browser: if the conditions match, the browser blocks rendering until the style sheet is downloaded and processed.
 
-メディアクエリを利用することで、表示用と印刷用など、具体的なユースケースに合わせて体裁を調整でき、画面方向の変化やサイズ変更イベントなど、動的な条件に合わせて調整を行うこともできます。**スタイルシート アセットを宣言する際は、メディアタイプとメディアクエリに十分注意してください。クリティカル レンダリング パスのパフォーマンスに大きな影響を与えます。**
+By using media queries, we can tailor our presentation to specific use cases, such as display versus print, and also to dynamic conditions such as changes in screen orientation, resize events, and more. **When declaring your style sheet assets, pay close attention to the media type and queries; they greatly impact critical rendering path performance.**
 
-実践的なサンプルで考察してみましょう。
+Let's consider some hands-on examples:
 
+```
+<link href="style.css"    rel="stylesheet">
+<link href="style.css"    rel="stylesheet" media="all">
+<link href="portrait.css" rel="stylesheet" media="orientation:portrait">
+<link href="print.css"    rel="stylesheet" media="print">
+```
 
-    <link href="style.css"    rel="stylesheet">
-    <link href="style.css"    rel="stylesheet" media="all">
-    <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
-    <link href="print.css"    rel="stylesheet" media="print">
-    
+- The first declaration is render blocking and matches in all conditions.
+- The second declaration is also render blocking: "all" is the default type so if you don’t specify any type, it’s implicitly set to "all". Hence, the first and second declarations are actually equivalent.
+- The third declaration has a dynamic media query, which is evaluated when the page is loaded. Depending on the orientation of the device while the page is loading, portrait.css may or may not be render blocking.
+- The last declaration is only applied when the page is being printed so it is not render blocking when the page is first loaded in the browser.
 
-* 1 つ目の宣言はレンダリング ブロックであり、すべての条件と一致します。
-* 2 つ目の宣言もレンダリング ブロックです。「all」はデフォルトのタイプであり、タイプを指定しなかった場合、暗黙で「all」に設定されます。したがって、1 つ目と 2 つ目の宣言は、実のところ同等です。
-* 3 つ目の宣言には、ページの読み込み時に評価される動的メディアクエリが含まれています。ページが読み込まれるときの端末画面の向きに応じて、portrait.css がレンダリング ブロックになるかどうかが決まります。
-* 最後の宣言は、ページが印刷される際にのみ適用されます。したがって、ページが最初にブラウザに読み込まれる際にはレンダリング ブロックにはなりません。
-
-最後になりますが「レンダリング ブロック」とは、ブラウザが、該当するリソースでページの初回レンダリングを保留する必要があるか否かということだけを指しています。いずれの場合も、非ブロック リソースで優先順位が低い CSS アセットもブラウザによってダウンロードされます。
-
-<a href="adding-interactivity-with-javascript" class="gc-analytics-event"
-    data-category="CRP" data-label="Next / Adding Interactivity with JS">
-  <button>次のトピック: JavaScript を使用してインタラクティブにする</button>
-</a>
-
-
-{# wf_devsite_translation #}
+Finally, note that "render blocking" only refers to whether the browser has to hold the initial rendering of the page on that resource. In either case, the browser still downloads the CSS asset, albeit with a lower priority for non-blocking resources.

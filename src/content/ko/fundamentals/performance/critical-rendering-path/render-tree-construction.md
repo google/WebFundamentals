@@ -1,98 +1,101 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: TODO
 
 {# wf_updated_on: 2015-08-20 #}
 {# wf_published_on: 2014-03-31 #}
 
-# 렌더링 트리 생성, 레이아웃 및 페인트 {: .page-title }
+# Render-tree Construction, Layout, and Paint {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-CSSOM 및 DOM 트리는 결합하여 렌더링 트리를 형성합니다. 이 렌더링 트리는
-표시되는 각 요소의 레이아웃을 계산하는 데 사용되고 픽셀을 화면에 렌더링하는
-페인트 프로세스에 대한 입력으로 처리됩니다. 최적의 렌더링 성능을 얻기 위해서는 이러한
-단계 각각을 최적화하는 것이 중요합니다.
+The CSSOM and DOM trees are combined into a render tree, which is then used
+to compute the layout of each visible element and serves as an input to the
+paint process that renders the pixels to screen. Optimizing each of these
+steps is critical to achieving optimal rendering performance.
 
-객체 모델을 생성하는 방법을 설명한 이전 섹션에서
-우리는 HTML 및 CSS 입력을 기반으로 DOM 및 CSSOM 트리를 빌드했습니다. 하지만, 이들 모두 문서의
-각기 다른 측면을 캡처하는 서로 독립적인 객체입니다.
-하나는 콘텐츠를 설명하고, 다른 하나는 문서에 적용되어야 하는
-스타일 규칙을 설명합니다. 이 두 가지를 병합하여 브라우저가
-화면에 픽셀을 렌더링하도록 하려면 어떻게 해야 할까요?
+In the previous section on constructing the object model, we built the DOM and
+the CSSOM trees based on the HTML and CSS input. However, both of these are
+independent objects that capture different aspects of the document: one
+describes the content, and the other describes the style rules that need to be
+applied to the document. How do we merge the two and get the browser to render
+pixels on the screen?
 
 ### TL;DR {: .hide-from-toc }
-- DOM 및 CSSOM 트리는 결합되어 렌더링 트리를 형성합니다.
-- 렌더링 트리에는 페이지를 렌더링하는 데 필요한 노드만 포함됩니다.
-- 레이아웃은 각 객체의 정확한 위치 및 크기를 계산합니다.
-- 마지막 단계는 최종 렌더링 트리에서 수행되는 페인트이며, 픽셀을 화면에 렌더링합니다.
+
+- The DOM and CSSOM trees are combined to form the render tree.
+- Render tree contains only the nodes required to render the page.
+- Layout computes the exact position and size of each object.
+- The last step is paint, which takes in the final render tree and renders the pixels to the screen.
+
+First, the browser combines the DOM and CSSOM into a "render tree," which captures all the visible DOM content on the page and all the CSSOM style information for each node.
 
 
-먼저, 브라우저가 DOM 및 CSSOM을 '렌더링 트리'에 결합합니다. 이 트리는 페이지에 표시되는 모든 DOM 콘텐츠와 각 노드에 대한 모든 CSSOM 스타일 정보를 캡처합니다.
+<img src="images/render-tree-construction.png" alt="DOM 및 CSSOM은 결합되어 렌더링 트리를 생성합니다.">
 
-<img src="images/render-tree-construction.png" alt="DOM 및 CSSOM은 결합되어 렌더링 트리를 생성합니다." >
 
-렌더링 트리를 생성하려면 브라우저가 대략적으로 다음 작업을 수행합니다.
+To construct the render tree, the browser roughly does the following:
 
-1. DOM 트리의 루트에서 시작하여 표시되는 노드 각각을 트래버스합니다.
+1. Starting at the root of the DOM tree, traverse each visible node.
 
-    * 일부 노드는 표시되지 않으며(예: 스크립트 태그, 메타 태그 등), 렌더링된 출력에 반영되지 않으므로 생략됩니다.
-    * 일부 노드는 CSS를 통해 숨겨지며 렌더링 트리에서도 생략됩니다. 예를 들어,---위의 예시에서---span 노드의 경우 'display: none' 속성을 설정하는 명시적 규칙이 있기 때문에 렌더링 트리에서 누락됩니다.
+    - Some nodes are not visible (for example, script tags, meta tags, and so on), and are omitted since they are not reflected in the rendered output.
+    - Some nodes are hidden via CSS and are also omitted from the render tree; for example, the span node---in the example above---is missing from the render tree because we have an explicit rule that sets the "display: none" property on it.
 
-1. 표시된 각 노드에 대해 적절하게 일치하는 CSSOM 규칙을 찾아 적용합니다.
-1. 표시된 노드를 콘텐츠 및 계산된 스타일과 함께 내보냅니다.
+2. For each visible node, find the appropriate matching CSSOM rules and apply them.
 
-참고: 간단한 여담으로, `visibility: hidden`은 `display: none`과 다릅니다. 전자는 요소를 보이지 않게 만들지만, 이 요소는 여전히 레이아웃에서 공간을 차지합니다(즉, 비어 있는 상자로 렌더링됨). 반면, 후자(`display: none`)는 요소가 보이지 않으며 레이아웃에 포함되지도 않도록 렌더링 트리에서 요소를 완전히 제거합니다.
+3. Emit visible nodes with content and their computed styles.
 
-최종 출력은 화면에 표시되는 모든 노드의 콘텐츠 및 스타일 정보를 모두 포함하는 렌더링 트리입니다.  **렌더링 트리가 생성되었으므로 '레이아웃' 단계로 진행할 수 있습니다.**
+Note: As a brief aside, note that `visibility: hidden` is different from `display: none`. The former makes the element invisible, but the element still occupies space in the layout (that is, it's rendered as an empty box), whereas the latter (`display: none`) removes the element entirely from the render tree such that the element is invisible and is not part of the layout.
 
-지금까지 표시할 노드와 해당 노드의 계산된 스타일을 계산했습니다. 하지만 기기의 [뷰포트](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) 내에서 이러한 노드의 정확한 위치와 크기를 계산하지는 않았습니다.---이것이 바로 '레이아웃' 단계이며, 경우에 따라 '리플로우'라고도 합니다.
+The final output is a render that contains both the content and style information of all the visible content on the screen.  **With the render tree in place, we can proceed to the "layout" stage.**
 
-페이지에서 각 객체의 정확한 크기와 위치를 파악하기 위해 브라우저는 렌더링 트리의 루트에서 시작하여 렌더링 트리를 트래버스합니다. 간단한 실습 예시를 살펴보도록 하겠습니다.
+Up to this point we've calculated which nodes should be visible and their computed styles, but we have not calculated their exact position and size within the [viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) of the device---that's the "layout" stage, also known as "reflow."
+
+To figure out the exact size and position of each object on the page, the browser begins at the root of the render tree and traverses it. Let's consider a simple, hands-on example:
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-[체험해 보기](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/nested.html){: target="_blank" .external }
 
-위 페이지의 본문에는 두 가지 중첩된 div가 포함되어 있습니다. 첫 번째(상위) div는 노드의 표시 크기를 뷰포트 너비의 50%로 설정하며,---상위 div에 포함된---두 번째 div는 해당 너비를 상위 항목 너비의 50%(즉, 뷰포트 너비의 25%)로 설정합니다.
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/nested.html){: target="_blank" .external }
 
-<img src="images/layout-viewport.png" alt="레이아웃 정보 계산" >
-
-레이아웃 프로세스에서는 뷰포트 내에서 각 요소의 정확한 위치와 크기를 정확하게 캡처하는 '상자 모델'이 출력됩니다. 모든 상대적인 측정값은 화면에서 절대적인 픽셀로 변환됩니다.
-
-마지막으로, 이제 표시되는 노드와 해당 노드의 계산된 스타일 및 기하학적 형태에 대해 파악했으므로, 렌더링 트리의 각 노드를 화면의 실제 픽셀로 변환하는 마지막 단계로 이러한 정보를 전달할 수 있습니다. 이 단계를 흔히 '페인팅' 또는 '래스터화'라고 합니다.
-
-이 경우 브라우저가 처리해야 할 작업이 상당히 많으므로 시간이 약간 걸릴 수 있습니다. 그러나 Chrome DevTools는 위에 설명된 세 단계 모두에 대해 몇 가지 정보를 제공할 수 있습니다. 원래 'hello world' 예시의 레이아웃 단계를 검토해 보도록 하겠습니다.
-
-<img src="images/layout-timeline.png" alt="DevTools에서 레이아웃 측정" >
-
-* 'Layout' 이벤트는 타임라인에서 렌더링 트리 생성, 위치 및 크기 계산을 캡처합니다.
-* 레이아웃이 완료될 때 브라우저가 'Paint Setup' 및 'Paint' 이벤트를 발생시킵니다. 이러한 작업은 렌더링 트리를 화면의 픽셀로 변환합니다.
-
-렌더링 트리 생성, 레이아웃 및 페인트 작업을 수행하는 데 필요한 시간은 문서의 크기, 적용된 스타일 및 실행 중인 기기에 따라 달라집니다. 즉, 문서가 클수록 브라우저가 수행해야 하는 작업도 더 많아지며, 스타일이 복잡할수록 페인팅에 걸리는 시간도 늘어납니다. 예를 들어, 단색은 페인트하는 데 시간과 작업이 적게 필요한 반면, 그림자 효과는 계산하고 렌더링하는 데 시간과 작업이 더 필요합니다.
-
-페이지가 드디어 뷰포트에 표시됩니다.
-
-<img src="images/device-dom-small.png" alt="렌더링된 Hello World 페이지" >
-
-다음은 브라우저의 단계를 빠르게 되짚어 보겠습니다.
-
-1. HTML 마크업을 처리하고 DOM 트리를 빌드합니다.
-1. CSS 마크업을 처리하고 CSSOM 트리를 빌드합니다.
-1. DOM 및 CSSOM을 결합하여 렌더링 트리를 형성합니다.
-1. 렌더링 트리에서 레이아웃을 실행하여 각 노드의 기하학적 형태를 계산합니다.
-1. 개별 노드를 화면에 페인트합니다.
-
-여기에 표시된 데모 페이지는 간단해 보일 수 있지만, 이 페이지에도 꽤 많은 작업이 필요합니다. DOM 또는 CSSOM이 수정된 경우, 화면에 다시 렌더링할 필요가 있는 픽셀을 파악하려면 이 프로세스를 다시 반복해야 합니다.
-
-**_주요 렌더링 경로를 최적화하는 작업_ 은 위 단계에서 1단계~5단계를 수행할 때 걸린 총 시간을 최소화하는 프로세스입니다.** 이렇게 하면 콘텐츠를 가능한 한 빨리 화면에 렌더링할 수 있으며, 초기 렌더링 후 화면 업데이트 사이의 시간을 줄여 줍니다. 따라서 대화형 콘텐츠의 새로고침 속도를 높일 수 있습니다.
-
-<a href="render-blocking-css" class="gc-analytics-event"
-    data-category="CRP" data-label="Next / Render-Blocking CSS">
-  <button>다음 차례: 렌더링 차단 CSS</button>
-</a>
+The body of the above page contains two nested div's: the first (parent) div sets the display size of the node to 50% of the viewport width, and the second div---contained by the parent---sets its width to be 50% of its parent; that is, 25% of the viewport width.
 
 
-{# wf_devsite_translation #}
+<img src="images/layout-viewport.png" alt="레이아웃 정보 계산">
+
+
+The output of the layout process is a "box model," which precisely captures the exact position and size of each element within the viewport: all of the relative measurements are converted to absolute pixels on the screen.
+
+Finally, now that we know which nodes are visible, and their computed styles and geometry, we can pass this information to the final stage, which converts each node in the render tree to actual pixels on the screen. This step is often referred to as "painting" or "rasterizing."
+
+This can take some time because the browser has to do quite a bit of work. However, Chrome DevTools can provide some insight into all three of the stages described above. Let's examine the layout stage for our original "hello world" example:
+
+
+<img src="images/layout-timeline.png" alt="DevTools에서 레이아웃 측정">
+
+
+- The "Layout" event captures the render tree construction, position, and size calculation in the Timeline.
+- When layout is complete, the browser issues "Paint Setup" and "Paint" events, which convert the render tree to pixels on the screen.
+
+The time required to perform render tree construction, layout and paint varies based on the size of the document, the applied styles, and the device it is running on: the larger the document, the more work the browser has; the more complicated the styles, the more time taken for painting also (for example, a solid color is "cheap" to paint, while a drop shadow is "expensive" to compute and render).
+
+The page is finally visible in the viewport:
+
+
+<img src="images/device-dom-small.png" alt="렌더링된 Hello World 페이지">
+
+
+Here's a quick recap of the browser's steps:
+
+1. Process HTML markup and build the DOM tree.
+2. Process CSS markup and build the CSSOM tree.
+3. Combine the DOM and CSSOM into a render tree.
+4. Run layout on the render tree to compute geometry of each node.
+5. Paint the individual nodes to the screen.
+
+Our demo page may look simple, but it requires quite a bit of work. If either the DOM or CSSOM were modified, you would have to repeat the process in order to figure out which pixels would need to be re-rendered on the screen.
+
+***Optimizing the critical rendering path* is the process of minimizing the total amount of time spent performing steps 1 through 5 in the above sequence.** Doing so renders content to the screen as quickly as possible and also reduces the amount of time between screen updates after the initial render; that is, achieve higher refresh rates for interactive content.
