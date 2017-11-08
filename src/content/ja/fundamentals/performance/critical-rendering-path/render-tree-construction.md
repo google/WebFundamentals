@@ -1,95 +1,101 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: TODO
 
-{# wf_updated_on:2015-08-20 #}
-{# wf_published_on:2014-03-31 #}
+{# wf_updated_on: 2015-08-20 #}
+{# wf_published_on: 2014-03-31 #}
 
-#  レンダリング ツリーの構築、レイアウト、ペイント {: .page-title }
+# Render-tree Construction, Layout, and Paint {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-CSSOM ツリーと DOM ツリーを組み合わせたものがレンダリング ツリーに含まれます。レンダリング ツリーは、各表示要素のレイアウトを計算するために使用され、画面にピクセルをレンダリングするペイント処理の入力になります。
-レンダリングのパフォーマンスを最適化するには、これらの各ステップを最適化することが必須です。
+The CSSOM and DOM trees are combined into a render tree, which is then used
+to compute the layout of each visible element and serves as an input to the
+paint process that renders the pixels to screen. Optimizing each of these
+steps is critical to achieving optimal rendering performance.
 
-
-オブジェクト モデルの構築について説明した前のセクションでは、HTML と CSS の入力をベースに DOM ツリーと CSSOM
-ツリーを構築しましたが、これらは異なる角度からドキュメントを表す独立したオブジェクトです。一方はコンテンツを記述し、もう一方はドキュメントに適用するスタイルルールを記述します。
-この 2 つを結合してブラウザの画面上にピクセルをレンダリングするにはどうすればよいでしょうか。
-
+In the previous section on constructing the object model, we built the DOM and
+the CSSOM trees based on the HTML and CSS input. However, both of these are
+independent objects that capture different aspects of the document: one
+describes the content, and the other describes the style rules that need to be
+applied to the document. How do we merge the two and get the browser to render
+pixels on the screen?
 
 ### TL;DR {: .hide-from-toc }
-- DOM ツリーと CSSOM ツリーを組み合わせてレンダリング ツリーが形成されます。
-- レンダリング ツリーにはページのレンダリングに必要なノードのみが含まれています。
-- レイアウトでは各オブジェクトの正確な位置とサイズを計算します。
-- 最後のステップがペイントで、完成したレンダーツリーを取り込んで画面にピクセルをレンダリングします。
+
+- The DOM and CSSOM trees are combined to form the render tree.
+- Render tree contains only the nodes required to render the page.
+- Layout computes the exact position and size of each object.
+- The last step is paint, which takes in the final render tree and renders the pixels to the screen.
+
+First, the browser combines the DOM and CSSOM into a "render tree," which captures all the visible DOM content on the page and all the CSSOM style information for each node.
 
 
-まずは、ブラウザで DOM と CSSOM を組み合わせて、ページ上の表示可能なすべての DOM コンテンツと、各ノードのすべての CSSOM スタイル情報を取り込んだ「レンダリング ツリー」を作成します。
+<img src="images/render-tree-construction.png" alt="DOM と CSSOM を組み合わせてレンダリング ツリーを作成">
 
-<img src="images/render-tree-construction.png" alt="DOM と CSSOM を組み合わせてレンダリング ツリーを作成" >
 
-レンダリング ツリーを作成するため、ブラウザでは概ね次の処理を行います。
+To construct the render tree, the browser roughly does the following:
 
-1. DOM ツリーのルートから順に、表示される各ノードをトラバースします。
+1. Starting at the root of the DOM tree, traverse each visible node.
 
-    * 一部のノード（スクリプトタグ、メタタグなど）は表示されることがなく、レンダリング出力に反映されないので省略されます。
-    * CSS を介して非表示に設定されているノードも、同様にレンダリング ツリーから省略されます。たとえば、上記の例の span ノードには「display: none」プロパティを設定する明示的なルールが指定されているため、レンダリング ツリーに含まれません。
+    - Some nodes are not visible (for example, script tags, meta tags, and so on), and are omitted since they are not reflected in the rendered output.
+    - Some nodes are hidden via CSS and are also omitted from the render tree; for example, the span node---in the example above---is missing from the render tree because we have an explicit rule that sets the "display: none" property on it.
 
-1. 表示されるノードごとに、一致する適切な CSSOM ルールを見つけて適用します。
-1. コンテンツおよび計算済みスタイルを含めて、表示されるノードを出力します。
+2. For each visible node, find the appropriate matching CSSOM rules and apply them.
 
-注: 少し本題からそれますが、`visibility: hidden` と `display: none` は異なります。「visibility: hidden」の場合、要素は非表示になりますが、依然としてレイアウト上のスペースを占めています（つまり、空のボックスとしてレンダリング）。これに対し、「`display: none`」の場合、要素はレンダリング ツリーから完全に削除されるので、要素は非表示となりレイアウトにも含まれません。
+3. Emit visible nodes with content and their computed styles.
 
-最終的に、画面上に表示可能なすべてのコンテンツとそのスタイル情報の両方を含むレンダーツリーが出力されます。**レンダリング ツリーが正しく構築されたら、「レイアウト」段階に進むことができます。**
+Note: As a brief aside, note that `visibility: hidden` is different from `display: none`. The former makes the element invisible, but the element still occupies space in the layout (that is, it's rendered as an empty box), whereas the latter (`display: none`) removes the element entirely from the render tree such that the element is invisible and is not part of the layout.
 
-ここまでで、表示されるノードとそのノードの計算済みのスタイルがわかりましたが、端末の[ビューポート](/web/fundamentals/design-and-ux/responsive/#set-the-viewport)内でのノードの正確な位置とサイズはまだわかりません。これを特定するのが「レイアウト」段階（別名「リフロー」）です。
+The final output is a render that contains both the content and style information of all the visible content on the screen.  **With the render tree in place, we can proceed to the "layout" stage.**
 
-ページ上の各オブジェクトの正確なサイズと位置を算定するため、ブラウザはレンダリング ツリーのルートから順にオブジェクトをトラバースします。実践的で簡単なサンプルで考察してみましょう。
+Up to this point we've calculated which nodes should be visible and their computed styles, but we have not calculated their exact position and size within the [viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) of the device---that's the "layout" stage, also known as "reflow."
+
+To figure out the exact size and position of each object on the page, the browser begins at the root of the render tree and traverses it. Let's consider a simple, hands-on example:
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-[サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/nested.html){: target="_blank" .external }
 
-上記のページの本体にはネストされた 2 つの div があります。1 つ目（親）の div はノードの表示サイズをビューポートの幅の 50% に設定し、この親に含まれている 2 つ目（子）の div はその幅を親の 50%、つまりビューポートの幅の 25% に設定します。
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/nested.html){: target="_blank" .external }
 
-<img src="images/layout-viewport.png" alt="レイアウト情報の計算" >
-
-レイアウト処理の出力は、ビューポート内の各要素の正確な位置とサイズを正確に取り込んだ「ボックスモデル」で、すべての相対的な測定値を画面上の絶対的なピクセルに変換する処理などが行われています。
-
-表示されるノード、そのノードの計算済みのスタイル、形状がわかったので、この情報をもとに最終段階の処理を行うことができます。最終段階では、レンダリング ツリー内の各ノードを画面上の実際のピクセルに変換します。この手順を一般に「ペインティング」または「ラスタライジング」といいます。
-
-ブラウザの処理量が非常に多いため、これには時間がかかります。しかし、Chrome DevTools を利用すると、上述の 3 段階すべての分析情報を得ることができます。元の「Hello World」の例で、レイアウト段階について見ていきましょう。
-
-<img src="images/layout-timeline.png" alt="DevTools でのレイアウトの測定" >
-
-* 「Layout」イベントでは、Timeline でレンダリング ツリーの構築、位置、サイズを計算します。
-* レイアウトが完了すると、ブラウザは「Paint Setup」 イベントと「Paint」イベントを発行し、レンダリング ツリーが画面上のピクセルに変換されます。
-
-レンダリング ツリーの構築、レイアウト、ペイントの実行に必要な時間は、ドキュメントのサイズ、適用されるスタイル、さらに実行端末によって異なります。ドキュメントが大きいほど、ブラウザで必要な処理も増え、スタイルが複雑なほど、ペインティングに要する時間も長くなります（たとえば、べた塗りは負荷が小さく、ドロップ シャドウの計算とレンダリングは負荷が大きくなります）。
-
-すべて完了すると、ページがビューポートに表示されます。
-
-<img src="images/device-dom-small.png" alt="レンダリングされた Hello World ページ" >
-
-以下に、ブラウザで行われた手順を簡単にまとめます。
-
-1. HTML マークアップを処理して DOM ツリーを構築する。
-1. CSS マークアップを処理して CSSOM ツリーを構築する。
-1. DOM と CSSOM を組み合わせてレンダリング ツリーを構成する。
-1. レンダリング ツリーでレイアウトを実行して各ノードの形状を計算する。
-1. 各ノードを画面にペイントする。
-
-このデモページはシンプルに見えるかもしれませんが、かなりの処理が必要です。DOM または CSSOM が変更されると、このプロセスを繰り返して、画面上で再レンダリングが必要なピクセルを判別する必要があります。
-
-** クリティカル レンダリング パスを最適化することで、上記の手順 1～5 の合計所要時間を最小限に抑えることができます。 ** その結果、できるだけ短時間で画面にコンテンツをレンダリングできるようになり、初回レンダリング後の画面の更新間隔も短くなります。つまり、インタラクティブなコンテンツの場合に、高いリフレッシュ レートを実現できます。
-
-<a href="render-blocking-css" class="gc-analytics-event"
-    data-category="CRP" data-label="Next / Render-Blocking CSS">
-  <button>次のトピック: レンダリングをブロックする CSS</button>
-</a>
+The body of the above page contains two nested div's: the first (parent) div sets the display size of the node to 50% of the viewport width, and the second div---contained by the parent---sets its width to be 50% of its parent; that is, 25% of the viewport width.
 
 
-{# wf_devsite_translation #}
+<img src="images/layout-viewport.png" alt="レイアウト情報の計算">
+
+
+The output of the layout process is a "box model," which precisely captures the exact position and size of each element within the viewport: all of the relative measurements are converted to absolute pixels on the screen.
+
+Finally, now that we know which nodes are visible, and their computed styles and geometry, we can pass this information to the final stage, which converts each node in the render tree to actual pixels on the screen. This step is often referred to as "painting" or "rasterizing."
+
+This can take some time because the browser has to do quite a bit of work. However, Chrome DevTools can provide some insight into all three of the stages described above. Let's examine the layout stage for our original "hello world" example:
+
+
+<img src="images/layout-timeline.png" alt="DevTools でのレイアウトの測定">
+
+
+- The "Layout" event captures the render tree construction, position, and size calculation in the Timeline.
+- When layout is complete, the browser issues "Paint Setup" and "Paint" events, which convert the render tree to pixels on the screen.
+
+The time required to perform render tree construction, layout and paint varies based on the size of the document, the applied styles, and the device it is running on: the larger the document, the more work the browser has; the more complicated the styles, the more time taken for painting also (for example, a solid color is "cheap" to paint, while a drop shadow is "expensive" to compute and render).
+
+The page is finally visible in the viewport:
+
+
+<img src="images/device-dom-small.png" alt="レンダリングされた Hello World ページ">
+
+
+Here's a quick recap of the browser's steps:
+
+1. Process HTML markup and build the DOM tree.
+2. Process CSS markup and build the CSSOM tree.
+3. Combine the DOM and CSSOM into a render tree.
+4. Run layout on the render tree to compute geometry of each node.
+5. Paint the individual nodes to the screen.
+
+Our demo page may look simple, but it requires quite a bit of work. If either the DOM or CSSOM were modified, you would have to repeat the process in order to figure out which pixels would need to be re-rendered on the screen.
+
+***Optimizing the critical rendering path* is the process of minimizing the total amount of time spent performing steps 1 through 5 in the above sequence.** Doing so renders content to the screen as quickly as possible and also reduces the amount of time between screen updates after the initial render; that is, achieve higher refresh rates for interactive content.
