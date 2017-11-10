@@ -5,7 +5,7 @@ description: Introduction to the CSS overscroll-behavior property.
 {# wf_updated_on: 2017-11-09 #}
 {# wf_published_on: 2017-11-09 #}
 
-{# wf_tags: chrome63,CSS,overscroll,scroll #}
+{# wf_tags: chrome63,css,overscroll,scroll #}
 {# wf_blink_components: Blink>CSS #}
 {# wf_featured_image:/web/updates/images/2017/11/overscroll-behavior/card.png #}
 {# wf_featured_snippet: The CSS overscroll-behavior property allows developers to override the browser's overflow scroll effects when reaching the top/bottom of content. It can be used to customize or prevent the mobile pull-to-refresh action. #}
