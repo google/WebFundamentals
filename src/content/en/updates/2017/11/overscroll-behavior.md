@@ -324,14 +324,14 @@ body {
 <figure class="flex">
   <div class="flex1">
     <video src="/web/updates/images/2017/11/overscroll-behavior/drawer-glow.mp4"
-           autoplay loop height="350" class="border"></video>
+           autoplay loop height="300" class="border"></video>
     <figcaption>
       <b>Before</b>: hitting scroll boundary shows a glow.
     </figcaption>
   </div>
   <div class="flex1">
     <video src="/web/updates/images/2017/11/overscroll-behavior/drawer-noglow.mp4"
-           autoplay loop height="350" class="border"></video>
+           autoplay loop height="300" class="border"></video>
     <figcaption><b>After</b>: glow disabled.</figcaption>
   </div>
 </figure>
