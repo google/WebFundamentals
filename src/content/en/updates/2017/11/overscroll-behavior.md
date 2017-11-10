@@ -13,6 +13,8 @@ description: Introduction to the CSS overscroll-behavior property.
 # Take control of your scroll: customizing pull-to-refresh and overflow effects {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/majidvp.html" %}
+{% include "web/_shared/contributors/sunyunjia.html" %}
 
 <style>
 figure {
@@ -38,8 +40,8 @@ figcaption {
 The [CSS `overscroll-behavior`][spec] property allows developers to override the
 browser's default overflow scroll behavior when reaching the top/bottom of
 content. Examples use cases include disabling the browser's pull-to-refresh
-feature on mobile, removing overscroll glow and rubberbanding effects, and
-preventing page content from scrolling when it's beneath a modal/overlay.
+feature on mobile, removing overscroll glow and rubberbanding effects,
+and preventing page content from scrolling when it's beneath a modal/overlay.
 
 CSS `overscroll-behavior` is requires Chrome 63+ and is development or being
 considered by other browsers. See
@@ -60,7 +62,7 @@ more information.
   <figcaption>Scroll chaining on Chrome Android.</figcaption>
 </figure>
 
-Scrolling is one of the most fundamental ways to interact with a page but 
+Scrolling is one of the most fundamental ways to interact with a page, but 
 certain UX patterns can be tricky to deal with because of the browser's quirky 
 default behaviors. As an example, take an app drawer with a large number of 
 items that the user may have to scroll through. When they reach the bottom, the
@@ -108,13 +110,13 @@ the same effect. Swiping down at the top of the page refreshes the entire page:
   </figure>
 </div>
 
-For situations like the Twitter PWA, it might make sense to disable the
-native pull-to-refresh action. Why? In this app, you probably don't want the
-user accidentally refreshing the page. There's also the potential to see a
-double refresh animation! Alternatively, it might be nicer to custom the
-browser's action, aligning it more closely to the site's branding. The
-unfortunate part is that this type of customization has been tricky to pull off.
-Developers end up writing unnecessary JavaScript, add 
+For situations like the Twitter [PWA](https://developers.google.com/web/progressive-web-apps/),
+it might make sense to disable the native pull-to-refresh action. Why? In this
+app, you probably don't want the user accidentally refreshing the page. There's
+also the potential to see a double refresh animation! Alternatively, it might
+be nicer to custom the browser's action, aligning it more closely to the site's
+branding. The unfortunate part is that this type of customization has been
+tricky to pull off. Developers end up writing unnecessary JavaScript, add 
 [non-passive](/web/tools/lighthouse/audits/passive-event-listeners)
 touch listeners (which block scrolling), or stick the entire page in a 100vw/vh
 `<div>` (to prevent the page from overflowing). These workarounds have
@@ -128,7 +130,8 @@ We can do better!
 The `overscroll-behavior` [property][spec] is a new CSS feature that controls
 the behavior of what happens when you over-scroll a container (including the
 page itself). You can use it to cancel scroll chaining, disable/customize the
-pull-to-refresh action, disable rubberbanding effects on iOS, and more.
+pull-to-refresh action, disable rubberbanding effects on iOS (when Safari
+implements `overscroll-behavior`), and more.
 The best part is that ** using `overscroll-behavior` does not adversely affect
 page performance** like the hacks mentioned in the intro!
 
@@ -143,7 +146,7 @@ when they've hit a scroll boundary. **Note**: using
 `overscroll-behavior: contain` on the `html` element prevents overscroll
 navigation actions.
 - **none** - same as `contain` but it also prevents overscroll effects within
-the node itself (e.g. Android glow or iOS rubberbanding).
+the node itself (e.g. Android overscroll glow or iOS rubberbanding).
 
 Note: `overscroll-behavior` also supports shorthands for `overscroll-behavior-x`
 and `overscroll-behavior-y` if you only want to define behaviors for a certain
@@ -228,7 +231,7 @@ scroll chaining on the entire viewport-defining element. In most cases, that's
 
 ```css
 body {
-  /* Disables pull-to-refresh but allows overglow effects. */
+  /* Disables pull-to-refresh but allows overscroll glow effects. */
   overscroll-behavior-y: contain;
 }
 ```
@@ -306,14 +309,14 @@ Here's a snippet of the
 </script>
 ```
 
-## Disabling glow bounce and rubberbanding {: #disableglow }
+## Disabling overscroll glow and rubberbanding effects {: #disableglow }
 
 To disable the bounce effect when hitting a scroll boundary, use
 `overscroll-behavior-y: none`:
 
 ```css
 body {
-  /* Disables pull-to-refresh and overglow effects. Still keeps swipe navigations. */
+  /* Disables pull-to-refresh and overscroll glow effect. Still keeps swipe navigations. */
   overscroll-behavior-y: none;
 }
 ```
@@ -323,19 +326,19 @@ body {
     <video src="/web/updates/images/2017/11/overscroll-behavior/drawer-glow.mp4"
            autoplay loop height="350" class="border"></video>
     <figcaption>
-      <b>Before</b>: hitting scroll boundary shows glow bounce.
+      <b>Before</b>: hitting scroll boundary shows a glow.
     </figcaption>
   </div>
   <div class="flex1">
     <video src="/web/updates/images/2017/11/overscroll-behavior/drawer-noglow.mp4"
            autoplay loop height="350" class="border"></video>
-    <figcaption><b>After</b>: glow bounce disabled.</figcaption>
+    <figcaption><b>After</b>: glow disabled.</figcaption>
   </div>
 </figure>
 
-Note: This will still keep left/right swipe navigations. To prevent those as
-well, use `overscroll-behavior-x: none`. However, this feature has yet to be
-implemented in Chrome.
+Note: This will still preserve left/right swipe navigations. To prevent
+navigations, you can use `overscroll-behavior-x: none`. However, this is [still
+being implemented](https://crbug.com/762023) in Chrome.
 
 ## Full demo {: #demo }
 
