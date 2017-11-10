@@ -1334,6 +1334,20 @@ emilystark:
   twitter: estark37
   email: estark@chromium.org
 
+sunyunjia:
+  name:
+    given: Sandra
+    family: Sun
+  org:
+    name: Google
+    unit: Chrome
+  country: Canada
+  role:
+    - engineer
+  email: sunyunjia@google.com
+  description:
+    en: "Software Engineer working on Chromium"
+
 surma:
   name:
     given: Surma
@@ -1404,6 +1418,23 @@ fouadvaladbeigi:
     - author
   google: "115771375659957547634"
   email: fouad.valadbeigi@unit9.com
+
+majidvp:
+  name:
+    given: Majid
+    family: Valipour
+  homepage: http://zgrs.ca
+  twitter: majido
+  github: majido
+  description:
+    en: "Software Engineer working on Chromium"
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  email: majidvp@google.com
 
 johyphenel:
   name:
@@ -1514,35 +1545,3 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
-
-sunyunjia:
-  name:
-    given: Sandra
-    family: Sun
-  org:
-    name: Google
-    unit: Chrome
-  country: Canada
-  role:
-    - engineer
-  email: sunyunjia@google.com
-  description:
-    en: "Software Engineer working on Chromium"
-
-majidvp:
-  name:
-    given: Majid
-    family: Valipour
-  homepage: http://zgrs.ca
-  twitter: majido
-  github: majido
-  description:
-    en: "Software Engineer working on Chromium"
-  org:
-    name: Google
-    unit: Software Engineer
-  country: CA
-  role:
-    - engineer
-  email: majidvp@google.com
-

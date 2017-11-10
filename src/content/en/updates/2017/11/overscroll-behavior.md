@@ -110,7 +110,7 @@ the same effect. Swiping down at the top of the page refreshes the entire page:
   </figure>
 </div>
 
-For situations like the Twitter [PWA](https://developers.google.com/web/progressive-web-apps/),
+For situations like the Twitter [PWA](/web/progressive-web-apps/),
 it might make sense to disable the native pull-to-refresh action. Why? In this
 app, you probably don't want the user accidentally refreshing the page. There's
 also the potential to see a double refresh animation! Alternatively, it might
