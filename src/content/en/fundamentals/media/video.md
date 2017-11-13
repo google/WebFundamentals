@@ -89,7 +89,7 @@ multiple sources with unsupported types.
 
 Using your mobile browser developer tools, compare network activity
 [with type attributes](https://googlesamples.github.io/web-fundamentals/fundamentals/media/video-main.html)
-and [without type attributes](https://googlesamples.github.io/web-fundamentals/fundamentals/media/notype.html).
+and [without type attributes](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/notype.html).
 
 Also check the response headers in your browser developer tools to
 [ensure your server reports the right MIME type](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types);
@@ -348,7 +348,7 @@ from the original video. Squashed or stretched looks bad.
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/responsive_embed.html)
 
 Compare the [responsive sample](https://googlesamples.github.io/web-fundamentals/fundamentals/media/responsive_embed.html)
-to the [unresponsive version](https://googlesamples.github.io/web-fundamentals/fundamentals/media/unyt.html).
+to the [unresponsive version](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/unyt.html).
 
 
 ## Customize the video player
@@ -458,7 +458,7 @@ On devices that support the Fullscreen API, consider using thumbnail
 images as placeholders for video:
 
 To see this in action, check out the
-[demo](https://googlesamples.github.io/web-fundamentals/fundamentals/media/fullscreen.html).
+[demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/fullscreen.html).
 
 Dogfood: `requestFullScreen()` may be vendor prefixed and may require extra code
 for full cross browser compatibility.
@@ -701,7 +701,7 @@ that can be used to control video playback.
 
 On mobile `play()` and `pause()` don't work unless called in response to user
 action such as clicking a button: see the
-[demo](https://googlesamples.github.io/web-fundamentals/fundamentals/media/scripted.html).
+[demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/scripted.html).
 (Likewise, you can't initiate playback for content such as embedded
 YouTube videos.)
 
