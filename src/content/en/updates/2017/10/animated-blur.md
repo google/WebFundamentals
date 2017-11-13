@@ -105,7 +105,8 @@ elements should be super-duper fast. In theory, this would allow us to
 front-load the expensive work of blurring. Turns out, the logic is flawed. If
 you run [this
 demo](https://googlechromelabs.github.io/ui-element-samples/animated-blur/badblur.html),
-you'll see that framerate is still below 60fps, and the blurring is actually *worse* than before.
+you'll see that framerate is still below 60fps, and the blurring is actually
+*worse* than before.
 
 <img src="/web/updates/images/2017/10/animated-blur/badblur.jpg" alt="DevTools
   showing a trace where the GPU has long periods of busy time.">
@@ -176,12 +177,12 @@ out how we can animate blurs efficiently across browsers!
 ## Conclusion
 
 This kind of effect is not to be used lightly. Due to the fact that we copy DOM
-elements and force them onto their own layer we can push the limits of
-lower-end devices. Copying *all* stylesheets into each `ShadowRoot` is a potential
+elements and force them onto their own layer we can push the limits of lower-end
+devices. Copying *all* stylesheets into each `ShadowRoot` is a potential
 performance risk as well, so you should decide whether you would rather adjust
-your logic and styles to not be affected by copies in the `LightDOM` or use
-our `ShadowDOM` technique. But sometimes our technique might be a worthwhile investment. Take
-a look at the code in your [GitHub
+your logic and styles to not be affected by copies in the `LightDOM` or use our
+`ShadowDOM` technique. But sometimes our technique might be a worthwhile
+investment. Take a look at the code in your [GitHub
 repository](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/animated-blur)
 as well as the
 [demo](https://googlechromelabs.github.io/ui-element-samples/animated-blur/) and
