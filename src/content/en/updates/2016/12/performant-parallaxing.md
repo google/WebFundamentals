@@ -34,7 +34,7 @@ repo](https://github.com/GoogleChromeLabs/ui-element-samples) and grab the
 [Parallax helper
 JS](https://github.com/GoogleChromeLabs/ui-element-samples/blob/gh-pages/parallax/scripts/parallax.js)!
 You can see a [live demo of the parallax
-scroller](http://googlechromelabs.github.io/ui-element-samples/parallax/) in the
+scroller](https://googlechromelabs.github.io/ui-element-samples/parallax/) in the
 GitHub repo.
 
 ## Problem parallaxers
@@ -75,8 +75,8 @@ transforms and opacity), and which doesn’t rely on scroll events.
 
 ## CSS in 3D
 
-Both [Scott Kellum](http://codepen.io/scottkellum/details/bHEcA) and [Keith
-Clark](http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/) have
+Both [Scott Kellum](https://codepen.io/scottkellum/details/bHEcA) and [Keith
+Clark](https://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/) have
 done significant work in the area of using CSS 3D to achieve parallax motion,
 and the technique they use is effectively this:
 
@@ -248,16 +248,16 @@ parallax with sticky ends up being the inverse of the one without:
   it moves.
 
 If that all seems a bit abstract, [take a look at this
-demo](http://jsbin.com/sexiwe/edit?html,css,js,output) by Robert Flack, which
+demo](https://jsbin.com/sexiwe/edit?html,css,js,output) by Robert Flack, which
 demonstrates how elements behave differently with and without sticky
 positioning. To see the difference you need Chrome Canary (which is version 56
 at the time of writing) or Safari.
 
-<a href="http://jsbin.com/sexiwe/edit?output">
+<a href="https://jsbin.com/sexiwe/edit?output">
   <img width="50%" src="/web/updates/images/2016/12/performant-parallaxing/jsbin.jpg">
 </a>
 
-[A demo by Robert Flack](http://jsbin.com/sexiwe/edit?output) showing how
+[A demo by Robert Flack](https://jsbin.com/sexiwe/edit?output) showing how
 `position: sticky` affects parallax scrolling.
 
 ## Assorted bugs and workarounds
