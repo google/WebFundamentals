@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Top-level await operators in the Console, new screenshot workflows, CSS Grid highlighting, and more.
 
-{# wf_updated_on: 2017-10-03 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2017-08-29 #}
 {# wf_tags: chrome62,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -180,6 +180,8 @@ DevTools filters out a message if `<text>` is found:
 * In the message text.
 * In the filename from which the message originated.
 * In the stack trace text.
+
+The negative filter also works with regular expressions such as `-/[4-5]*ms/`.
 
 ### URL filters {: #url-filters }
 
