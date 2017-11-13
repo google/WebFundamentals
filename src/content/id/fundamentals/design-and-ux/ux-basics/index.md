@@ -339,8 +339,8 @@ Apa yang perlu Anda ketahui:
 - Apa yang mereka suka dari prototipe?
 - Apa yang mereka tidak suka dari prototipe?
 - Apa saja titik deritanya?
-      * Mengapa alur bekerja
-      * Mengapa alur tidak bekerja
+  - Mengapa alur bekerja
+  - Mengapa alur tidak bekerja
 - Apa yang ingin mereka tingkatkan?
 - Apakah keseluruhan desain/alur memenuhi kebutuhan mereka?
 
