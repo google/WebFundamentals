@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current web page. Live-edit the content and structure of your page through DOM updates.
 
-{# wf_updated_on: 2017-11-03 #}
+{# wf_updated_on: 2017-11-13 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Edit the DOM {: .page-title }
@@ -58,17 +58,13 @@ image.
 
 ### View which image in a source set (srcset) is being used {: #srcset }
 
-The `srcset` property on `img` elements lets you minimize the amount of bytes that you
-must transfer for each image. For example, suppose that you have multiple versions of an image,
-one at 500px width, one at 750px width, and one at 1000px width. If the user's viewport
-is only 400px, then the browser loads the 500px version. If the viewport is 600px, the browser
-loads the 750px version, and so on. If the user widens their viewport, the browser fetches
-each successively larger version of the image as needed. For example, make your viewport narrow
-and load [srcset.salcode.com](http://srcset.salcode.com/), then make it wider and you'll notice
-that the browser loads each larger version only when needed.
+To view which version of an image in a `srcset` was loaded, select the `img` element,
+then evaluate `$0.currentSrc` in the **Console**.
 
-To view which version of an image was loaded, select the `img` element, then evaluate
-`$0.currentSrc` in the **Console**.
+Note: See [Enhance `img`s with `srcset` for high DPI devices][srcset] to learn more about image
+optimization using `srcset`.
+
+[srcset]: /web/fundamentals/design-and-ux/responsive/images#enhance_imgs_with_srcset_for_high_dpi_devices
 
 ![currentSrc in the Console][currentSrc console]
 
