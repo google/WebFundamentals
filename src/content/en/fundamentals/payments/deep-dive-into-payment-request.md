@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-10-19 #}
+{# wf_updated_on: 2017-11-07 #}
 
 # Deep Dive into the Payment Request API {: .page-title }
 
@@ -132,11 +132,12 @@ constructor, starting with the supported payment methods.
 ### Defining Supported Payment Methods
 
 The Payment Request API is designed to support credit and debit card payments
-as well as third party payment methods (such as Android Pay).
+as well as third party payment methods (such as Pay with Google).
 
 You must supply an array of objects indicating your supported payment methods
 where each payment method must include a  `supportedMethods` parameter that
-identifies the payment method. Each object can contain an optional data object.
+identifies the payment method. Each object can contain an optional `data`
+object.
 
 ```
 const supportedPaymentMethods = [
@@ -152,12 +153,12 @@ new PaymentRequest(supportedPaymentMethods, paymentDetails, options);
 ```
 
 First we'll look at how to define support for credit and debit cards, followed
-by a brief look at supporting Android Pay.
+by a brief look at supporting Pay with Google.
 
 ### Payment Method: 'basic-card'
 
 To support credit and debit cards, we need to change the `supportedMethods`
-parameter to contain 'basic-card', like so:
+parameter to 'basic-card', like so:
 
 ```
 const creditCardPaymentMethod = {
@@ -172,6 +173,11 @@ new PaymentRequest(supportedPaymentMethods, paymentDetails, options);
 If the user has no cards set up they'll be prompted to add details, otherwise
 an existing card will be selected for them.
 
+Note: To get access to all forms of payment available with Google, developers
+will need to implement the Pay with Google method. Refer to [Payment Method:
+Multiple Payment Methods](#payment_method_multiple_payment_methods) section then
+the [Google Payment API](/payments/) docs for more information.
+
 <div class="attempt-center">
   <figure>
     <img src="./images/deep-dive/pr-demo-basic-card-only.png" alt="Example of basic-card support in the Payment Request API.">
@@ -181,9 +187,10 @@ an existing card will be selected for them.
   </figure>
 </div>
 
-At the time of writing, Chrome supports 'amex', 'diners', 'discover', 'jcb',
-'maestro', 'mastercard', 'unionpay', 'mir', and 'visa', which you can see listed
-across the top of the UI.
+At the time of writing, Chrome supports `amex`, `diners`, `discover`, `jcb`,
+`mastercard`, `unionpay`, `mir`, and `visa`, which you can see listed across the
+top of the UI. Find out up to date list of approved card identifiers in [the
+spec](https://www.w3.org/Payments/card-network-ids).
 
 To restrict the supported cards, we can add the optional data parameter and
 define `supportedNetworks`. The following code restricts the accepted cards to
@@ -301,39 +308,44 @@ If the browser can support the BobPay payment method it will offer it to the
 user alongside credit cards.
 
 An example of using a third party payment processor like this can be
-shown with Android Pay, which is supported on Chrome for Android.
+shown with "Pay with Google", which is supported on Chrome for Android.
 
 ```
-const androidPayPaymentMethod = {
-  supportedMethods: 'https://android.com/pay',
+const payWithGooglePaymentMethod = {
+  supportedMethods: 'https://google.com/pay',
   data: {
-    merchantName: 'Android Pay Demo',
-    merchantId: '00000000000000000000',
-    environment: 'TEST',
-    allowedCardNetworks: ['AMEX', 'DISCOVER', 'MASTERCARD', 'VISA'],
-    paymentMethodTokenizationParameters: {
-      tokenizationType: 'GATEWAY_TOKEN',
-      parameters: {
-        'gateway': 'stripe',
-        'stripe:publishableKey': 'xx_demo_xxxxxxxxxxxxxxxxxxxxxxxx',
-        'stripe:version': '2016-07-06',
-      },
+    'environment': 'TEST',
+    'apiVersion': 1,
+    'allowedPaymentMethods': ['CARD', 'TOKENIZED_CARD'],
+    'paymentMethodTokenizationParameters': {
+      'tokenizationType': 'PAYMENT_GATEWAY',
+      // Check with your payment gateway on the parameters to pass.
+      'parameters': {}
     },
+    'cardRequirements': {
+      'allowedCardNetworks': ['AMEX', 'DISCOVER', 'MASTERCARD', 'VISA'],
+      'billingAddressRequired': true,
+      'billingAddressFormat': 'MIN'
+    },
+    'phoneNumberRequired': true,
+    'emailRequired': true,
+    'shippingAddressRequired': true
   },
 };
 ```
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-android-and-cards-short-blackout.png" alt="Android Pay example in the payment request UI.">
+    <img src="./images/deep-dive/pr-demo-pwg-and-cards-short-blackout.png" alt="Pay with Google example in the payment request UI.">
     <figcaption>
-      Android Pay example in payment request UI.
+      Pay with Google example in payment request UI.
     </figcaption>
   </figure>
 </div>
 
-We won't go into details of how to add Android Pay in this article, [we have a
-section dedicated to that here](/web/fundamentals/payments/android-pay).
+We won't go into details of how to add Pay with Google in this article, [we have
+a dedicated document to that](/payments/mobile-web-setup).
+
 
 #### Edge Cases
 
@@ -348,17 +360,18 @@ error:
 `DOMException: The payment method is not supported`
 
 This shouldn't be a problem if you include 'basic-card' as a supported payment
-method. If, however, you only support a third party payment method, like Android
-Pay, there is a strong chance that it won't be supported by a browser that
-supports the Payment Request API.
+method. If, however, you only support a third party payment method, like Pay
+with Google, there is a strong chance that it won't be supported by a browser
+that supports the Payment Request API.
 
 **Third Party Payment Method Skipping the Payment Request UI**
-In the screenshot above you can see "Android Pay" as the pre-selected payment
-option. This has occurred because the example supports both Android Pay and basic
-cards. If you define Android Pay as your **only** payment method and the browser
-supports it, the browser can (and Chrome does, at the time of writing) skip the
-payment request UI altogether after the `show()` method is called. Users will be
-taken straight to the Android Pay app to complete the payment.
+In the screenshot above you can see "Pay with Google" as the pre-selected
+payment option. This has occurred because the example supports both Pay with
+Google and basic cards. If you define Pay with Google as your **only** payment
+method and the browser supports it, the browser can (and Chrome does, at the
+time of writing) skip the payment request UI altogether after the `show()`
+method is called. Users will be taken straight to the Pay with Google app to
+complete the payment.
 
 ### Defining Payment Details
 
@@ -755,8 +768,8 @@ This will be one of the values passed into the `supportedMethods` objects ("basi
 </table>
 
 The details object is only standardized for the basic-card payment method. For
-third party payment methods, like Android Pay, the details object's content will
-be documented by the payment method.
+third party payment methods, like Pay with Google, the details object's content
+will be documented by the payment method.
 
 For 'basic-card' payments, the details object will contain the `billingAddress`,
 `cardNumber`, `cardSecurityCode`, `cardholderName`, `expiryMonth`, and `expiryYear`.

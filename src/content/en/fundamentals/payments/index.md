@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Request API is for fast, easy payments on the web.
 
 {# wf_published_on: 2016-07-25 #}
-{# wf_updated_on: 2017-06-16 #}
+{# wf_updated_on: 2017-11-07 #}
 
 # Introducing the Payment Request API {: .page-title }
 
@@ -83,6 +83,16 @@ methods are accepted by the site. The browser determines compatibility between
 the accepted payment methods for the site and the methods the user has installed
 on the target device.
 
+The browser then presents the payments UI to the user, who selects a payment
+method and authorizes the transaction. A payment method can be as
+straightforward as a credit card that is already stored by the browser, or as
+esoteric as third-party application written specifically to deliver payments to
+the site.
+
+Note: Pay with Google is one of payment methods you can use to get cards from a
+user's Google account and payment tokens on the device. To learn more, read [the
+Google Payment API docs](/payments/mobile-web-setup).
+
 <div class="attempt-right">
   <figure>
     <img src="images/5_9_payment_request_ui.png" >
@@ -91,14 +101,9 @@ on the target device.
 </div>
 
 
-The browser then presents the payments UI to the user, who selects a payment
-method and authorizes the transaction. A payment method can be as
-straightforward as a credit card that is already stored by the browser, or as
-esoteric as third-party application written specifically to deliver payments to
-the site (this functionality is coming soon). After the user authorizes the
-transaction, all the necessary payment details are sent directly back to the
-site. For example, for a credit card payment, the site will get back a card
-number, a cardholder name, an expiration date, and a CVC.
+After the user authorizes the transaction, all the necessary payment details are
+sent directly back to the site. For example, for a credit card payment, the site
+will get back a card number, a cardholder name, an expiration date, and a CVC.
 
 Payment Request can also be extended to return additional information, such as
 shipping addresses and options, payer email, and payer phone. This allows you to
