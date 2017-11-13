@@ -24,14 +24,12 @@ figcaption {
   font-size: 14px;
   font-style: italic;
 }
-.flex {
-  display: flex;
-}
-.flex1 {
-  flex: 1;
-}
 .border {
   border: 1px solid #ccc;
+}
+.centered {
+  display: flex;
+  justify-content: center;
 }
 </style>
 
@@ -85,8 +83,8 @@ space for more recent posts to be loaded. In fact, this particular UX has
 become _so popular_ that mobile browsers like Chrome on Android have adopted 
 the same effect. Swiping down at the top of the page refreshes the entire page:
 
-<div class="flex">
-  <figure class="flex1">
+<div class="clearfix centered">
+  <figure class="attempt-left">
     <a href="/web/updates/images/2017/11/overscroll-behavior/twitter.mp4"
        target="_blank">
        <video src="/web/updates/images/2017/11/overscroll-behavior/twitter.mp4"
@@ -97,7 +95,7 @@ the same effect. Swiping down at the top of the page refreshes the entire page:
       their PWA.
     </figcaption>
   </figure>
-  <figure class="flex1">
+  <figure class="attempt-right">
     <a href="/web/updates/images/2017/11/overscroll-behavior/mobilep2r.mp4"
        target="_blank">
        <video src="/web/updates/images/2017/11/overscroll-behavior/mobilep2r.mp4"
@@ -200,8 +198,8 @@ it ends up making the site look buggy.
 
 **Example** - modal with and without `overscroll-behavior: contain`:
 
-<figure class="flex">
-  <div class="flex1">
+<figure class="clearfix centered">
+  <div class="attempt-left">
     <a href="/web/updates/images/2017/11/overscroll-behavior/modal-off.mp4"
        target="_blank">
       <video src="/web/updates/images/2017/11/overscroll-behavior/modal-off.mp4"
@@ -211,7 +209,7 @@ it ends up making the site look buggy.
       <b>Before</b>: page content scrolls beneath overlay.
     </figcaption>
   </div>
-  <div class="flex1">
+  <div class="attempt-right">
     <a href="/web/updates/images/2017/11/overscroll-behavior/modal-on.mp4"
        target="_blank">
       <video src="/web/updates/images/2017/11/overscroll-behavior/modal-on.mp4"
@@ -241,13 +239,13 @@ the [chatbox demo](https://ebidel.github.io/demos/chatbox.html) and can
 instead, implement a custom effect which uses a neater loading animation. The
 entire inbox also blurs as the inbox refreshes:
 
-<figure class="flex">
-  <div class="flex1">
+<figure class="clearfix centered">
+  <div class="attempt-left">
     <video src="/web/updates/images/2017/11/overscroll-behavior/chatbox-double-refresh.mp4"
            autoplay loop height="225"></video>
     <figcaption>Before</figcaption>
   </div>
-  <div class="flex1">
+  <div class="attempt-right">
     <video src="/web/updates/images/2017/11/overscroll-behavior/chatbox-double-refresh-fix.mp4"
            autoplay loop height="225"></video>
     <figcaption>After</figcaption>
@@ -316,20 +314,21 @@ To disable the bounce effect when hitting a scroll boundary, use
 
 ```css
 body {
-  /* Disables pull-to-refresh and overscroll glow effect. Still keeps swipe navigations. */
+  /* Disables pull-to-refresh and overscroll glow effect.
+     Still keeps swipe navigations. */
   overscroll-behavior-y: none;
 }
 ```
 
-<figure class="flex">
-  <div class="flex1">
+<figure class="clearfix centered">
+  <div class="attempt-left">
     <video src="/web/updates/images/2017/11/overscroll-behavior/drawer-glow.mp4"
            autoplay loop height="300" class="border"></video>
     <figcaption>
       <b>Before</b>: hitting scroll boundary shows a glow.
     </figcaption>
   </div>
-  <div class="flex1">
+  <div class="attempt-right">
     <video src="/web/updates/images/2017/11/overscroll-behavior/drawer-noglow.mp4"
            autoplay loop height="300" class="border"></video>
     <figcaption><b>After</b>: glow disabled.</figcaption>
