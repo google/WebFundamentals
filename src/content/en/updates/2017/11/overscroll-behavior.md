@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Introduction to the CSS overscroll-behavior property.
 
-{# wf_updated_on: 2017-11-09 #}
-{# wf_published_on: 2017-11-09 #}
+{# wf_updated_on: 2017-11-14 #}
+{# wf_published_on: 2017-11-14 #}
 
 {# wf_tags: chrome63,css,overscroll,scroll #}
 {# wf_blink_components: Blink>CSS #}
@@ -37,11 +37,11 @@ figcaption {
 
 The [CSS `overscroll-behavior`][spec] property allows developers to override the
 browser's default overflow scroll behavior when reaching the top/bottom of
-content. Examples use cases include disabling the browser's pull-to-refresh
+content. Use cases include disabling the pull-to-refresh
 feature on mobile, removing overscroll glow and rubberbanding effects,
 and preventing page content from scrolling when it's beneath a modal/overlay.
 
-CSS `overscroll-behavior` is requires Chrome 63+ and is development or being
+`overscroll-behavior` requires Chrome 63+. It's in development or being
 considered by other browsers. See
 [chromestatus.com](https://www.chromestatus.com/feature/5734614437986304) for
 more information.
