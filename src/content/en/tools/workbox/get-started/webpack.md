@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to make a webpack-based app work offline by adding Workbox to it.
 
-{# wf_updated_on: 2017-10-31 #}
+{# wf_updated_on: 2017-11-13 #}
 {# wf_published_on: 2017-10-31 #}
 
 # Get Started With Workbox For Webpack {: .page-title }
@@ -318,7 +318,11 @@ that they had an internet connection.
 1. Open `webpack.config.js` again.
 1. Add a `runtimeCaching` property to your Workbox configuration.
    `urlPattern` is a regular expression pattern telling Workbox which
-   URLs to store locally. `handler` defines the caching strategy that Workbox
+   URLs to store locally. *(When your app makes a network request at 
+   runtime, Workbox caches any request that matches the regular 
+   expression in `handler`, regardless of its origin. This means that 
+   you can cache content from external sites as well, as this example
+   demonstrates.)* `handler` defines the caching strategy that Workbox
    uses for any matching URL. See [The Offline Cookbook][cookbook] for more
    on caching strategies.
 
