@@ -58,6 +58,7 @@ const VALID_VERTICALS = [
   'education', 'entertainment', 'media', 'real-estate', 'retail',
   'transportation', 'travel'
 ];
+const RESERVED_FILENAMES = ['index'];
 const PAGE_TYPES = {
   LANDING: 'landing',
   ARTICLE: 'article',
@@ -860,7 +861,7 @@ function testHTML(filename, contents, options) {
  *   Note: The returned promise always resolves, it will never reject.
  *
  * @param {string} filename The name of the file to be tested.
- * @param {string} contents The unparsed contents of the tags file. 
+ * @param {string} contents The unparsed contents of the tags file.
  * @return {Promise} A promise with the result of the test.
  */
 function testCommonTags(filename, contents) {
@@ -881,7 +882,7 @@ function testCommonTags(filename, contents) {
  *   Note: The returned promise always resolves, it will never reject.
  *
  * @param {string} filename The name of the file to be tested.
- * @param {string} contents The unparsed contents of the contributors file. 
+ * @param {string} contents The unparsed contents of the project file.
  * @return {Promise} A promise with the result of the test.
  */
 function testProject(filename, contents) {
@@ -950,7 +951,7 @@ function testProject(filename, contents) {
  *   Note: The returned promise always resolves, it will never reject.
  *
  * @param {string} filename The name of the file to be tested.
- * @param {string} contents The unparsed contents of the contributors file. 
+ * @param {string} contents The unparsed contents of the contributors file.
  * @return {Promise} A promise with the result of the test.
  */
 function testContributors(filename, contents) {
@@ -961,11 +962,6 @@ function testContributors(filename, contents) {
       id: '/Contributors',
       patternProperties: {
         '.*': {$ref: '/Contributor'}
-      },
-      properties: {
-        index: {
-          not: 'any'
-        },
       }
     };
     const schemaContributor = {
@@ -1018,6 +1014,14 @@ function testContributors(filename, contents) {
     );
     let prevFamilyName = '';
     Object.keys(contributors).forEach((key) => {
+      if (/^[a-z]*$/gi.test(key) === false) {
+        const msg = `Identifier must contain only letters, was '${key}'`;
+        logError(filename, null, msg);
+      }
+      if (RESERVED_FILENAMES.indexOf(key.toLowerCase()) >= 0) {
+        const msg = `Identifier cannot contain reserved word: '${key}'`;
+        logError(filename, null, msg);
+      }
       const contributor = contributors[key];
       const familyName = contributor.name.family || contributor.name.given;
       if (prevFamilyName.toLowerCase() > familyName.toLowerCase()) {
@@ -1036,12 +1040,12 @@ function testContributors(filename, contents) {
  *   Note: The returned promise always resolves, it will never reject.
  *
  * @param {string} filename The name of the file to be tested.
- * @param {string} contents The unparsed contents of the glossary file. 
+ * @param {string} contents The unparsed contents of the glossary file.
  * @return {Promise} A promise with the result of the test.
  */
 function testGlossary(filename, contents) {
   return new Promise(function(resolve, reject) {
-    const msg = 'Glossary must be sorted alphabetically by term.'; 
+    const msg = 'Glossary must be sorted alphabetically by term.';
     const glossary = parseYAML(filename, contents);
     const schemaGlossary = {
       id: '/Glossary',
@@ -1100,7 +1104,7 @@ function testGlossary(filename, contents) {
  *   Note: The returned promise always resolves, it will never reject.
  *
  * @param {string} filename The name of the file to be tested.
- * @param {string} contents The unparsed contents of the redirects file. 
+ * @param {string} contents The unparsed contents of the redirects file.
  * @return {Promise} A promise with the result of the test.
  */
 function testRedirects(filename, contents) {
