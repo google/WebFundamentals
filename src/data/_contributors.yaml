@@ -1141,6 +1141,23 @@ rupl:
   description:
     en: Chris is a frontend developer and web performance advocate.
 
+satyakresna:
+  name:
+    given: Kresna
+    family: Satya
+  org:
+    name: Independent
+    unit: Web Programmer
+  country: ID
+  role:
+    - translator
+  homepage: 'https://satyakresna.com'
+  google: +SatyaKresnaAdiPratama
+  twitter: _satyakresna
+  email: satyakresna6295@gmail.com
+  description:
+    en: Kresna is a Web Programmer.
+
 taylorsavage:
   name:
     given: Taylor
@@ -1546,20 +1563,3 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
-
-satyakresna:
-  name:
-    given: Kresna
-    family: Satya
-  org:
-    name: Independent
-    unit: Web Programmer
-  country: ID
-  role:
-    - translator
-  homepage: 'https://satyakresna.com'
-  google: +SatyaKresnaAdiPratama
-  twitter: _satyakresna
-  email: satyakresna6295@gmail.com
-  description:
-    en: Kresna is a Web Programmer.
