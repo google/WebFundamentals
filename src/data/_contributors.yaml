@@ -1546,3 +1546,14 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
+
+kennith:
+  name:
+    given: Kennith
+    family: Leung
+  homepage: http://kennithleung.com
+  twitter: kennith
+  google: +kennith
+  email: kennith.leung@gmail.com
+  role: 
+    - translator
