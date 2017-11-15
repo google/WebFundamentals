@@ -24,7 +24,7 @@ The "update on reload" toggle will force Chrome to check for a new service
 worker every time you refresh the page. This means that any new changes will
 be found on each page load.
 
-![image alt text](image_0.png)
+![Highlighting where Update on Reload is in DevTools](../images/guides/troubleshoot-and-debug/devtools-update-on-reload.png)
 
 ### Clear Storage
 
@@ -32,7 +32,7 @@ There will come a point where you'll want to start from a claim state.
 No service workers, not caching, nothing. You can clear everything with
 the "Clear site data" button.
 
-![image alt text](image_1.png)
+![Clear site data in DevTools](../images/guides/troubleshoot-and-debug/devtools-clear-site-data.png)
 
 ## Bypass for Network
 
@@ -40,12 +40,12 @@ When you aren't working with service workers at all, you can make the browser
 go straight to the network (i.e. not use the service worker) with the "Bypass
 for Network" toggle.
 
-![image alt text](image_2.png)
+![Bybass for Network Checkbox in DevTools](../images/guides/troubleshoot-and-debug/devtools-bypass-for-network.png)
 
 You'll know what this is working because the network panel will stop showing
 "(from ServiceWorker)".
 
-![image alt text](image_3.png)
+![Network panel in DevTools showing a request through service workers](../images/guides/troubleshoot-and-debug/devtools-through-sw-network.png)
 
 There are plenty more features, the above list should help as you start
 working on your service worker files.
@@ -65,7 +65,7 @@ by having multiple tabs or windows open that are using the service worker.
 You can determine if this is the case by looking under your service worker
 in Application > Service Workers.
 
-![image alt text](image_4.png)
+![A service worker in pending state on service worker](../images/guides/troubleshoot-and-debug/devtools-pending.png)
 
 You can fix this by clicking the "skipWaiting" link or by closing the extra
 tabs so you only have one tab using the website (this enables the service
