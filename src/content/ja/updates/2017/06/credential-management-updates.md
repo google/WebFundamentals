@@ -14,12 +14,10 @@ description: Latest Updates to the Credential Management API
 
 このポストで説明している変更点のいくつかは Google I/O のセッション **Secure and Seamless Sign-In: Keeping Users Engaged** でも触れています ：
 
-
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="DBBFK7bvEQo" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-
 
 ## Chrome 57
 
@@ -36,36 +34,33 @@ Chrome は [Credential Management API](/web/fundamentals/security/credential-man
 
 以下のスクリーンショットでは、`login.aliexpress.com` に保存されたクレデンシャルが `m.aliexpress.com` から見えており、ユーザーにより選択可能である状態を示しています。
 
-
 <figure>
   <img src="/web/updates/images/2017/06/credentials.png" alt="Account chooser showing selected subdomain login details">
 </figure>
 
-
-
 <aside class="note">
   <strong>Coming soon:</strong>
   全く違うドメイン間におけるクレデンシャルの共有も現在開発中です。</aside>
-
 
 ## Chrome 60
 
 Chrome 60 の [Credential Management API](/web/fundamentals/security/credential-management) では重要な変更点がいくつかあります：
 
 - [`PasswordCredential` オブジェクトがパスワードを含むようになります。](#password)
--  パスワードの特別な扱いが必要なくなるため、カスタマイズされた `fetch()` 関数が[まもなく廃止されます](#fetchdeprecation)。
+
+- パスワードの特別な扱いが必要なくなるため、カスタマイズされた `fetch()` 関数が[まもなく廃止されます](#fetchdeprecation)。
+
 - `navigator.credentials.get()` は boolean の `unmediated` ではなく、[enum の `mediation` を受け取る](#mediation)ようになります。
 
 - [`requireUserMediation()` は `preventSilentAccess()` に変更されます](#preventsilentaccess)。
+
 - [新しいメソッド `navigator.credentials.create()`](#credentialscreate) を使って、非同期にクレデンシャルオブジェクトを作成できるようになります。
 
 ### 機能検知に注意が必要です
 
-
 <aside class="warning">
   <strong>Warning:</strong>
 Chrome 60 から利用可能になる Credential Management API の変更点が後方互換のない変更を含むため、新しい実装では古いバージョンの API を使わないように注意が必要です（意図的にそうしたい場合は、<a href="https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8/edit">こちらのマイグレーションガイド</a>をご覧ください）。</aside>
-
 
 新しい Credential Management API が利用可能かどうかを調べるには、`preventSilentAccess` が存在するかどうかをチェックします。
 
@@ -77,12 +72,13 @@ if (navigator.credentials && navigator.credentials.preventSilentAccess) {
 
 ### `PasswordCredential` オブジェクトがパスワードを含むようになります {: #password}
 
-Credential Management API はこれまでパスワードの扱いについて保守的なアプローチを取っていました。JavaScript からパスワードを隠蔽していたため、開発者は若干カスタマイズされた `fetch()` API を使って、直接 `PasswordCredential` オブジェクトをサーバーに送って、認証を行う必要がありました。 
+Credential Management API はこれまでパスワードの扱いについて保守的なアプローチを取っていました。JavaScript からパスワードを隠蔽していたため、開発者は若干カスタマイズされた `fetch()` API を使って、直接 `PasswordCredential` オブジェクトをサーバーに送って、認証を行う必要がありました。
 
 しかしこのアプローチでは、いくつもの制約がありました。
 API を採用できない理由として頂いたフィードバックには下記のようなものがあります：
 
 - JSON オブジェクトの一部としてパスワードを送らなければならない。
+
 - サーバーにパスワードのハッシュ値を送らなければならない。
 
 慎重なセキュリティ分析を行った結果、JavaScript からパスワードを隠蔽しても、すべてのアタックベクターに対して期待したほど成果を挙げられないということが判明しました。そして、我々は今回の変更を行うという結論に至ったのです。
@@ -123,11 +119,9 @@ navigator.credentials.get({
 
 ### カスタマイズされた fetch 関数はまもなく使えなくなります {: #fetchdeprecation}
 
-
 <aside class="warning">
   <strong>Warning:</strong>
   パスワードが <code>PasswordCredential</code> オブジェクトに隠されることがなくなったため、カスタマイズされた <code>fetch()</code> 関数は不要となり、Chrome 62 で利用できなくなります。利用者の方はコードを<stromg>更新しなければなりません</stromg>。</aside>
-
 
 カスタマイズされた `fetch()` 関数を使っているかを検証するには、`PasswordCredential` オブジェクト、もしくは `FederatedCredential` オブジェクトを `credentials` プロパティの値として使っているかをご確認ください。例えば：
 
@@ -162,10 +156,10 @@ navigator.credentials.get({
 このフラグは mediation に変更され、ユーザーの仲介は下記のような状況で発生するようになります：
 
 - ユーザーがログインするアカウントを選択する必要がある場合。
+
 - `navigator.credentials.requireUseMediation()` を呼び出した後にユーザーが明示的にログインしたい場合。
 
 `mediation` の値として下記のいずれかを選びます：
-
 
 <table>
   <tr>
@@ -177,14 +171,12 @@ navigator.credentials.get({
   </tr>
   <tr>
     <td><code>silent</code></td>
-    <td> <code>unmediated: true</code>
-</td>
+    <td>unmediated: true</td>
     <td>アカウントチューザーを表示せずにクレデンシャルを返す。</td>
   </tr>
   <tr>
     <td><code>optional</code></td>
-    <td> <code>unmediated: false</code>
-</td>
+    <td>unmediated: false</td>
     <td>前回 <code>preventSilentAccess()</code> が呼ばれている場合、アカウントチューザーを表示する。</td>
     <td></td>
   </tr>
@@ -194,7 +186,6 @@ navigator.credentials.get({
     <td>毎回アカウントチューザーを表示する。アカウントの切り替えに便利。</td>
   </tr>
 </table>
-
 
 この例では、先程のフラグ `unmediated: true` の等値を使うことで、アカウントチューザーを表示することなくクレデンシャルを返します：
 
@@ -283,8 +274,6 @@ let c = await navigator.credentials.create({
 
 ## マイグレーションガイド
 
-既存の Credential Management API の実装をお持ちですか？こちらの[マイグレーションガイド](https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8/edit)
-
-を参考にして下さい。新しい API への対応方法をステップ・バイ・ステップでご紹介します。
+既存の Credential Management API の実装をお持ちですか？こちらの[マイグレーションガイド](https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8/edit)を参考にして下さい。新しい API への対応方法をステップ・バイ・ステップでご紹介します。
 
 {% include "comment-widget.html" %}

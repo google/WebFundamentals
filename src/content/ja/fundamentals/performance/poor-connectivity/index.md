@@ -5,13 +5,13 @@ description: 接続状態が悪く不安定なときのアプリまたはサイ�
 {# wf_updated_on: 2016-08-29 #}
 {# wf_published_on: 2016-05-09 #}
 
-#  低帯域幅と高レイテンシの理解 {: .page-title }
+# 低帯域幅と高レイテンシの理解 {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
 接続状態が悪く不安定なときのアプリまたはサイトの操作性を把握して、それに応じてアプリやサイトを構築することが重要です。これに役立つさまざまなツールがあります。
 
-##  低帯域幅と高レイテンシでのテスト {: #testing }
+## 低帯域幅と高レイテンシでのテスト {: #testing }
 
 モバイル端末でウェブを利用する人の割合は<a href="http://adwords.blogspot.co.uk/2015/05/building-for-next-moment.html">ますます増えています</a>。自宅でも、<a href="https://www.washingtonpost.com/news/the-switch/wp/2016/04/18/new-data-americans-are-abandoning-wired-home-internet/">多くの人が固定ブロードバンドからモバイルに移行しています</a>。
 
@@ -69,7 +69,7 @@ Facebook の [Augmented Traffic Control](http://facebook.github.io/augmented-tra
 
 ![Facebook の Augmented Traffic Control](images/augmented-traffic-control.png)
 
-Facebook は [2G Tuesdays](https://code.facebook.com/posts/1556407321275493/building-for-emerging-markets-the-story-behind-2g-tuesdays/) を設けて、2G を利用するユーザーが自社製品を使用する方法を理解できるようにもしています。毎週火曜日に、従業員にポップアップが表示され、2G 接続をシミュレートするためのオプションが示されます。
+> Facebook は [2G Tuesdays](https://code.facebook.com/posts/1556407321275493/building-for-emerging-markets-the-story-behind-2g-tuesdays/) を設けて、2G を利用するユーザーが自社製品を使用する方法を理解できるようにもしています。毎週火曜日に、従業員にポップアップが表示され、2G 接続をシミュレートするためのオプションが示されます。
 
 [Charles](https://www.charlesproxy.com/){: .external } HTTP/HTTPS プロキシを使用すると、[帯域幅とレイテンシを調整](http://www.charlesproxy.com/documentation/proxying/throttling/)できます。Charles は商用ソフトウェアですが、無料トライアルを利用できます。
 
@@ -77,7 +77,7 @@ Facebook は [2G Tuesdays](https://code.facebook.com/posts/1556407321275493/buil
 
 Charles の詳細については、[codewithchris.com](http://codewithchris.com/tutorial-using-charles-proxy-with-your-ios-development-and-http-debugging/) を参照してください。
 
-##  不安定な接続や "lie-fi" への対応 {: #lie-fi }
+## 不安定な接続や "lie-fi" への対応 {: #lie-fi }
 
 ### lie-fi とは
 
@@ -93,15 +93,12 @@ Charles の詳細については、[codewithchris.com](http://codewithchris.com/
 
 過去には、断続的な接続のテストに [XHR を使用したお粗末な方法](http://stackoverflow.com/questions/189430/detect-that-the-internet-connection-is-offline) が使用されていましたが、Service Worker を使用すれば、より信頼性の高い方法でネットワーク タイムアウトを設定できます。Jeff Posnick が、[sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) のタイムアウトを使用してこれを実現する方法について、プレゼンテーション [Instant Loading with Service Workers](https://youtu.be/jCKZDTtUA2A?t=19m58s) で説明しています。
 
-
-    toolbox.router.get(
-      '/path/to/image',
-      toolbox.networkFirst,
-      {networkTimeoutSeconds: 3}
-    );
-    
+```
+toolbox.router.get(
+  '/path/to/image',
+  toolbox.networkFirst,
+  {networkTimeoutSeconds: 3}
+);
+```
 
 [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) でも、[タイムアウト オプション](https://github.com/whatwg/fetch/issues/20) が計画されています。また、[Streams API](https://www.w3.org/TR/streams-api/) は、コンテンツ配信を最適化して、モノリシック リクエストを回避するのに役立ちます。[Supercharging page load](https://youtu.be/d5_6yHixpsQ?t=6m42s) で、Jake Archibald が lie-fi の追跡方法について詳しく説明しています。
-
-
-{# wf_devsite_translation #}
