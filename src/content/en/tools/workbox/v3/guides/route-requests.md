@@ -2,8 +2,8 @@ project_path: /web/tools/workbox/v3/_project.yaml
 book_path: /web/tools/workbox/v3/_book.yaml
 description: A guide on how to route requests with Workbox.
 
-{# wf_updated_on: 2017-11-06 #}
-{# wf_published_on: 2017-11-06 #}
+{# wf_updated_on: 2017-11-15 #}
+{# wf_published_on: 2017-11-15 #}
 
 # Route Requests {: .page-title }
 
@@ -22,9 +22,11 @@ then we’ll go on to cover the handling of a request, which is where the
 
 ## Matching a Route with a String
 
-Matching a route with a string is the easiest to understand, but also the least flexible option.
+Matching a route with a string is the easiest to understand, but also the
+least flexible option.
 
-The requests URL is compared to the routes string and if they are equal the request will use that routes handler.
+The requests URL is compared to the routes string and if they are equal the
+request will use that routes handler.
 
 So we could define a route for '/logo.png' like so:
 
@@ -50,9 +52,11 @@ workbox.routing.registerRoute(
 
 ## Matching a Route with a Regular Expression
 
-When you have a set of URLs that you want to route as a group, Regular Expressions are the best way to go.
+When you have a set of URLs that you want to route as a group, Regular
+Expressions are the best way to go.
 
-The regular expression needs to match part of the URL to be treated as a match for that route. This provides a lot of flexibility as to how you use it.
+The regular expression needs to match part of the URL to be treated as a
+match for that route. This provides a lot of flexibility as to how you use it.
 If we wanted to route specific file extensions we could write routes such as:
 
 ```javascript
@@ -67,7 +71,8 @@ workbox.routing.registerRoute(
 );
 ```
 
-Or you can write regular expressions that test for a specifc URL format, for example a blog that follows the format `/blog/<year>/<month>/<post title slug>`.
+Or you can write regular expressions that test for a specifc URL format, for
+example a blog that follows the format `/blog/<year>/<month>/<post title slug>`.
 
 ```javascript
 workbox.routing.registerRoute(
@@ -76,7 +81,9 @@ workbox.routing.registerRoute(
 );
 ```
 
-Just like the string matching, requests for different origins are treated differently. Instead of needing match a part of the URL, it must match from the beginning of the URL. For example,
+Just like the string matching, requests for different origins are treated
+differently. Instead of needing match a part of the URL, it must match from
+the beginning of the URL. For example,
 `https://some-other-origin.com/blog/<year>/<month>/<post title slug>` would
 need to match against "https://some-other-origin.com" as well as the path
 name. So we’d have to change our regular expression to something like the
@@ -111,7 +118,8 @@ workbox.routing.registerRoute(
 );
 ```
 
-Now that a request can be matched with a route, it’s time to handle the request (i.e. provide a Response for the request).
+Now that a request can be matched with a route, it’s time to handle the
+request (i.e. provide a Response for the request).
 
 There are two ways you can  handle a request:
 

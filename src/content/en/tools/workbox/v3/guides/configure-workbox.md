@@ -2,12 +2,14 @@ project_path: /web/tools/workbox/v3/_project.yaml
 book_path: /web/tools/workbox/v3/_book.yaml
 description: A guide on how to configure Workbox.
 
-{# wf_updated_on: 2017-11-06 #}
-{# wf_published_on: 2017-11-06 #}
+{# wf_updated_on: 2017-11-15 #}
+{# wf_published_on: 2017-11-15 #}
 
 # Configure Workbox {: .page-title }
 
-Out of the box Workbox comes set up with some default values for cache names and log levels. This guide will cover how you can change these values and what will happen as a result.
+Out of the box Workbox comes set up with some default values for cache
+names and log levels. This guide will cover how you can change these values
+and what will happen as a result.
 
 ## Configure Cache Names
 
@@ -15,18 +17,22 @@ As you start to use Workbox, you'll notice that caches are automatically created
 
 ![Workbox Default Caches](../images/guides/configure-workbox/default-caches.png)
 
-By default, Workbox will only create two caches, one for precaching and one for runtime caching. Using `workbox-core` you can get the current cache names like so:
+By default, Workbox will only create two caches, one for precaching and one
+for runtime caching. Using `workbox-core` you can get the current cache names
+like so:
 
 ```javascript
 const precacheCacheName = workbox.core.cacheNames.precache;
 const runtimeCacheName = workbox.core.cacheNames.runtime;
 ```
 
-Both the precache and runtime cache names are made of three pieces of information:
+Both the precache and runtime cache names are made of three pieces of
+information:
 
 `<prefix>-<Cache ID>-<suffix>`
 
-You can alter the cache names by altering all or some of these pieces of information:
+You can alter the cache names by altering all or some of these pieces of
+information:
 
 ```javascript
 workbox.core.setCacheNameDetails({
@@ -85,17 +91,23 @@ This will result in images being stored in a cache called `my-image-cache`.
 
 ### Configure Debug Builds vs Production Builds
 
-For each of the Workbox service worker libraries, there are two builds, one for development and one for production.
+For each of the Workbox service worker libraries, there are two builds, one for
+development and one for production.
 
-- **Debug Builds:** Come un-minified, have additional logging and performs rigorous assertion checking to make development as easy as possible.
+- **Debug Builds:** Come un-minified, have additional logging and performs
+rigorous assertion checking to make development as easy as possible.
 
-- **Production Builds:** Are minified with any optional logging and logic stripped from the build.
+- **Production Builds:** Are minified with any optional logging and logic
+stripped from the build.
 
-If you are using `workbox-sw`, it’ll automatically use development builds whenever you are developing on a localhost origin, otherwise it’ll use production builds.
+If you are using `workbox-sw`, it’ll automatically use development builds
+whenever you are developing on a localhost origin, otherwise it’ll use
+production builds.
 
 ![Debug vs Production Builds of Workbox](../images/guides/configure-workbox/debug-vs-prod.png)
 
-You can override this behavior with the `debug` option. Setting to true will force debug builds, setting to false will force production builds.
+You can override this behavior with the `debug` option. Setting to true will
+force debug builds, setting to false will force production builds.
 
 ```javascript
 // Force development builds
@@ -105,7 +117,9 @@ workbox.setConfig({ debug: true });
 workbox.setConfig({ debug: false });
 ```
 
-If you are using the modules directly (via CDN of from NPM modules), you can switch between development and production builds by changing the file extension between `<module>.dev.js` and `<module>.prod.js`.
+If you are using the modules directly (via CDN of from NPM modules), you can
+switch between development and production builds by changing the file extension
+between `<module>.dev.js` and `<module>.prod.js`.
 
 ## Configure Log Levels
 
@@ -117,7 +131,8 @@ You can determine the level of a log from the color code:
 
 ![Color coded logs in Workbox](../images/guides/configure-workbox/workbox-core_logs.png)
 
-You can alter the log level to show more or less logs by setting the log level, like so:
+You can alter the log level to show more or less logs by setting the log level,
+like so:
 
 ```javascript
 // The most verbose - displays all logs.

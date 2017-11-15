@@ -2,8 +2,8 @@ project_path: /web/tools/workbox/v3/_project.yaml
 book_path: /web/tools/workbox/v3/_book.yaml
 description:Get Started with Workbox.
 
-{# wf_updated_on: 2017-11-06 #}
-{# wf_published_on: 2017-11-06 #}
+{# wf_updated_on: 2017-11-15 #}
+{# wf_published_on: 2017-11-15 #}
 
 # Get Started {: .page-title }
 
@@ -28,7 +28,7 @@ console.log('Hello from sw.js');
 
 In your web page register your new service worker file like so:
 
-```javascript
+```html
 <script>
 // Check that service workers are registered
 if ('serviceWorker' in navigator) {
@@ -119,7 +119,10 @@ caches of DevTools to check that the request has actually been cached.
 
 ![Example of a JavaScript file being cached.](../images/guides/get-started/cached-request.png)
 
-Workbox provides a few caching strategies that you can use. For example, your CSS could be served from the cache first and updated in the background or your images could be cached and used until it’s a week old, after which it’ll need updating.
+Workbox provides a few caching strategies that you can use. For example, your
+CSS could be served from the cache first and updated in the background or your
+images could be cached and used until it’s a week old, after which it’ll need
+updating.
 
 ```javascript
 workbox.routing.registerRoute(

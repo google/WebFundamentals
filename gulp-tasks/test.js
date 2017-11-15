@@ -903,7 +903,7 @@ function testProject(filename, contents) {
         name: {type: 'string', required: true},
         description: {type: 'string', required: true},
         home_url: {type: 'string', pattern: /^\/web\//i, required: true},
-        color: {type: 'string', pattern: /^google-blue$/, required: true},
+        color: {type: 'string', pattern: /^google-blue|orange$/, required: true},
         buganizer_id: {type: 'number', pattern: /^180451$/, required: true},
         content_license: {
           type: 'string',

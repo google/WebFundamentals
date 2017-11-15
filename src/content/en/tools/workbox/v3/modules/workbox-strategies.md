@@ -2,8 +2,8 @@ project_path: /web/tools/workbox/v3/_project.yaml
 book_path: /web/tools/workbox/v3/_book.yaml
 description: The module guide for workbox-routing.
 
-{# wf_updated_on: 2017-11-06 #}
-{# wf_published_on: 2017-11-06 #}
+{# wf_updated_on: 2017-11-15 #}
+{# wf_published_on: 2017-11-15 #}
 
 # Workbox Strategies {: .page-title }
 
@@ -19,7 +19,7 @@ generates a response after receiving a fetch event.
 apply them in your service worker.
 
 We won’t go into much detail outside of the strategies supported by Workbox,
-but you can [learn more in the Offline Cookbook](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/).
+but you can [learn more in the Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/).
 
 ## Using Strategies
 In the following examples we’ll show you how to use the Workbox caching
@@ -34,7 +34,7 @@ the caching strategies directly without `workbox-routing`.
 
 ![Stale While Revalidate Diagram](../images/modules/workbox-strategies/stale-while-revalidate.png)
 
-The [stale-while-revalidate ](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate)
+The [stale-while-revalidate ](/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate)
 pattern allows you to respond the request as quickly as possible with a
 cached response if available, falling back to the network request if it’s
 not cached. The network request is then used to update the cache.
@@ -55,7 +55,7 @@ workbox.routing(
 
 Offline webapps will rely heavily on the cache, but for assets that are
 non-critical and can be gradually cached, a
-[cache first](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network)
+[cache first](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network)
 is the best option.
 
 Requests will be fulfilled from the cache if possible, otherwise it’ll fall
@@ -74,8 +74,7 @@ workbox.routing(
 ![Network First Diagram](../images/modules/workbox-strategies/network-first.png)
 
 For requests that are updating frequently, the
-[network first](
-https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache)
+[network first](/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache)
 strategy is the ideal solution. By default it will try and fetch the latest
 request from the network. If the request is successful, it’ll put the response
 in the cache. If the network fails to return a response, the caches response
@@ -93,7 +92,7 @@ workbox.routing(
 ![Network Only Diagram](../images/modules/workbox-strategies/network-only.png)
 
 If you require specific requests to be fulfilled from the network, the
-[network first](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#network-only)
+[network first](/web/fundamentals/instant-and-offline/offline-cookbook/#network-only)
 is the strategy to use.
 
 ```javascript
@@ -107,7 +106,7 @@ workbox.routing(
 
 ![Cache Only Diagram](../images/modules/workbox-strategies/cache-only.png)
 
-The [cache only](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-only)
+The [cache only](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-only)
 strategy ensures that requests are obtained from a cache. This is less common
 in workbox, but can be useful if you have your own precaching step.
 

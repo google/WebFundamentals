@@ -2,8 +2,8 @@ project_path: /web/tools/workbox/v3/_project.yaml
 book_path: /web/tools/workbox/v3/_book.yaml
 description: The module guide for workbox-core.
 
-{# wf_updated_on: 2017-11-06 #}
-{# wf_published_on: 2017-11-06 #}
+{# wf_updated_on: 2017-11-15 #}
+{# wf_published_on: 2017-11-15 #}
 
 # Workbox Core {: .page-title }
 
@@ -11,19 +11,28 @@ description: The module guide for workbox-core.
 
 ## What is Workbox Core?
 
-Workbox has been built to be modular, allowing developers to select the pieces they want to use without forcing them to download everything in a single file.
+Workbox has been built to be modular, allowing developers to select the
+pieces they want to use without forcing them to download everything in a
+single file.
 
-There is however overlap between modules, for example, each module will like need to interact with the console, throw meaningful errors and make use of the network or cache. To avoid each module implementing the same logic, `workbox-core` contains this common code which each module relies on.
+There is however overlap between modules, for example, each module will like
+need to interact with the console, throw meaningful errors and make use of
+the network or cache. To avoid each module implementing the same logic,
+`workbox-core` contains this common code which each module relies on.
 
-This module does provide some functionality to developers, but beyond log levels and caching, `workbox-core` offers internal logic to each module, rather than the end developer.
+This module does provide some functionality to developers, but beyond log
+levels and caching, `workbox-core` offers internal logic to each module,
+rather than the end developer.
 
 ## Change the Log Level
 
-Workbox uses a very thin wrapper over `console.log` so that you can filter out the Workbox messages separate from your own logic.
+Workbox uses a very thin wrapper over `console.log` so that you can filter
+out the Workbox messages separate from your own logic.
 
 ![workbox-core Log Demo](../images/modules/workbox-core/workbox-core_logs.png)
 
-To adjust the log level, all you need to do is call `setLogLevel()` and pass in a value from `LOG_LEVELS`.
+To adjust the log level, all you need to do is call `setLogLevel()` and pass
+in a value from `LOG_LEVELS`.
 
 ```javascript
 // The most verbose - displays all logs.
@@ -48,7 +57,11 @@ You can see what the current log level is like so:
 console.log(workbox.core.logLevel);
 ```
 
-The default log level changes depending on the build type. If you use the debug build, `workbox-core.dev.js`, the log level will be set to `LOG_LEVELS.log` (i.e. it will log everything except debug messages). For production builds, `workbox-core.prod.js`, the log level will be set to `LOG_LEVELS.warn`, meaning you’ll only see warnings and errors.
+The default log level changes depending on the build type. If you use the
+debug build, `workbox-core.dev.js`, the log level will be set to
+`LOG_LEVELS.log` (i.e. it will log everything except debug messages).
+For production builds, `workbox-core.prod.js`, the log level will be set
+to `LOG_LEVELS.warn`, meaning you’ll only see warnings and errors.
 
 ## View and Change the Default Cache Names
 
@@ -62,11 +75,13 @@ console.log(workbox.core.cacheNames.runtime);
 console.log(workbox.core.cacheNames.googleAnalytics);
 ```
 
-These cache names are constructed in the format of a prefix, a name and suffix, where the name changes based on the use of the cache.
+These cache names are constructed in the format of a prefix, a name and
+suffix, where the name changes based on the use of the cache.
 
 `<prefix>-<cache id (precache | runtime | googleAnalytics)>-<suffix>`
 
-You can change these default names by altering all or some of the values passed into `setCacheNameDetails()`.
+You can change these default names by altering all or some of the values
+passed into `setCacheNameDetails()`.
 
 ```javascript
 workbox.core.setCacheNameDetails({
@@ -87,4 +102,7 @@ console.log(workbox.core.cacheNames.runtime);
 console.log(workbox.core.cacheNames.googleAnalytics);
 ```
 
-The main use case for the prefix and suffix is that if you use Workbox for multiple projects and use the same localhost for each project, setting a custom prefix for each module will prevent the caches from conflicting with each other.
+The main use case for the prefix and suffix is that if you use Workbox for
+multiple projects and use the same localhost for each project, setting a
+custom prefix for each module will prevent the caches from conflicting
+with each other.

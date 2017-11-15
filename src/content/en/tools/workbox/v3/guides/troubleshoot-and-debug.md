@@ -2,8 +2,8 @@ project_path: /web/tools/workbox/v3/_project.yaml
 book_path: /web/tools/workbox/v3/_book.yaml
 description: A guide on how to troubleshoot and debugging issues with Workbox.
 
-{# wf_updated_on: 2017-11-06 #}
-{# wf_published_on: 2017-11-06 #}
+{# wf_updated_on: 2017-11-15 #}
+{# wf_published_on: 2017-11-15 #}
 
 # Troubleshoot and Debug {: .page-title }
 
@@ -49,7 +49,7 @@ You'll know what this is working because the network panel will stop showing
 
 There are plenty more features, the above list should help as you start
 working on your service worker files.
-[Learn what other features exist in DevTools here](https://developers.google.com/web/tools/chrome-devtools/progressive-web-apps#service-workers).
+[Learn what other features exist in DevTools here](/web/tools/chrome-devtools/progressive-web-apps#service-workers).
 
 ## Common Problems
 
