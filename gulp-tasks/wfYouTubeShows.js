@@ -25,7 +25,7 @@ function buildFeeds(buildType, callback) {
     if (buildType === 'production') {
       return callback('youtubeAPIKey.txt not found.');
     }
-    var videoPlaceholder = {snippet: 
+    var videoPlaceholder = {snippet:
       {title: 'Lorem Ipsum - placeholder title', resourceId: {videoId: 'dQw4w9WgXcQ'}}
     };
     var context = {
@@ -93,7 +93,7 @@ function buildFeeds(buildType, callback) {
       // Note - use last updated instead of now to prevent feeds from being
       // generated every single time. This will only generate if the feeds are
       // actually updated.
-      const lastUpdated = moment(articles[0].datePublished).utcOffset(0, true);
+      const lastUpdated = articles[0].datePublishedMoment;
       context = {
         title: 'Web Shows - Google Developers',
         description: 'YouTube videos from the Google Chrome Developers team',
