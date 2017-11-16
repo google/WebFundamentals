@@ -7,7 +7,7 @@ const MAX_COLLABORATORS = 20;
 
 function getContributorHTML(contributorStats) {
   const contributor = contributorStats.author;
-  let html = `
+  var html = `
 <div class="wb-contrib">
   <a class="wb-contrib__img-link" href="${contributor.url}" target="_blank">
     <img class="wb-contrib__image" src="${contributor.avatar_url}">
