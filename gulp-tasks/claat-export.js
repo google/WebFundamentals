@@ -4,7 +4,6 @@ const gulp = require('gulp');
 const path = require('path');
 const glob = require('globule');
 const wfHelper = require('./wfHelper');
-const runSequence = require('run-sequence');
 const wfCodeLabHelper = require('./wfCodeLabHelper');
 
 /**
@@ -72,12 +71,4 @@ gulp.task('claat:ilt-pwa', function() {
   const bookPath = '/web/ilt/pwa/_book.yaml';
   const projPath = '/web/_project.yaml';
   return exportAndUpdate(srcPath, destPath, true, bookPath, projPath);
-});
-
-gulp.task('claat:all', function(callback) {
-  runSequence(
-    ['claat:codelabs',
-    'claat:ilt-pwa'],
-    callback
-  );
 });
