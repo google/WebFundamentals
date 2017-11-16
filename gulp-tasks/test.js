@@ -1303,6 +1303,7 @@ gulp.task('test:travis-init', function() {
   github.authenticate({type: 'oauth', token: token});
   return github.pullRequests.get(prOpts).then((prData) => {
     const body = prData.body;
+    console.log(body);
     const ciFlags = wfRegEx.getMatch(/\[WF_IGNORE:(.*)\]/, body, '').split(',');
     if (ciFlags.indexOf('BLINK') >= 0) {
       GLOBAL.WF.options.ignoreBlink = true;
@@ -1316,6 +1317,7 @@ gulp.task('test:travis-init', function() {
     if (ciFlags.indexOf('FILE_SIZE') >= 0) {
       GLOBAL.WF.options.ignoreFileSize = true;
     }
+    console.log(GLOBAL.WF.options);
   })
 });
 
