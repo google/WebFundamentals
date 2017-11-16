@@ -1,0 +1,29 @@
+toc:
+
+- heading: Reference Docs
+- title: "Full API"
+  path: /web/tools/workbox/v3/reference-docs/latest/index-all.html
+
+- heading: Service Worker Libraries
+- title: "workbox"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox
+- title: "workbox.core"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox.core
+- title: "workbox.precaching"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox.precaching
+- title: "workbox.routing"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox.routing
+- title: "workbox.strategies"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox.strategies
+- title: "workbox.expiration"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox.expiration
+- title: "workbox.backgroundSync"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox.backgroundSync
+- title: "workbox.googleAnalytics"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox.googleAnalytics
+
+- heading: Node Modules
+- title: workbox-build
+  path: /web/tools/workbox/v3/reference-docs/latest/module-workbox-build
+- title: workbox-webpack-plugin
+  path: /web/tools/workbox/v3/reference-docs/latest/module-workbox-webpack-plugin

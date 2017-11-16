@@ -1,0 +1,51 @@
+project_path: /web/tools/workbox/v3/_project.yaml
+book_path: /web/tools/workbox/v3/_book.yaml
+
+landing_page:
+  header:
+    description: <!-- No Description -->
+
+  rows:
+  - heading: Welcome
+    description: >
+      TODO: Description
+
+    items:
+    - heading: Get Started
+      description: >
+        "TODO: Description"
+      custom_image:
+        background: google-green
+        icon_name: history
+      buttons:
+      - label: Get started
+        path: /time-travel/quickstart
+
+  - heading: "Workbox @ Chrome Dev Summit"
+    background: grey
+    items:
+    - heading: ""
+      description: >
+        In this talk, Jeff Posnick gives an overview of Workbox's support for
+        caching strategies, precaching, and handling navigation requests. It's
+        filled throughout with real-world examples of how companies like
+        Pinterest and WIRED are using Workbox in production.
+      youtube_id: DtuJ55tmjps
+
+  - heading: "Who's Using Workbox?"
+    description: >
+      <p>TODO: Description</p>
+
+      <img src="images/third_party/logos/forbes.png" alt="Forbes Logo" />
+
+      <img src="images/third_party/logos/iheartradio.png" alt="iHeart Radio Logo" />
+
+      <img src="images/third_party/logos/tinder.png" alt="Tinder Logo" />
+
+  - heading: "Contributors"
+    background: grey
+    description: >
+      <p>Workbox is built and maintained by friendly bunch of contributors
+      without whom none of this would be possible.</p>
+
+      {% include 'web/tools/workbox/templates/contributors.html' %}

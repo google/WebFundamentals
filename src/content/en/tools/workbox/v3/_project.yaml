@@ -1,0 +1,29 @@
+name: "Workbox"
+description: Workbox is a set of service worker libraries that making build progressive web apps easy.
+home_url: /web/tools/workbox/v3/
+buganizer_id: 180451
+color: orange
+content_license: cc3-apache2
+footer_path: /web/tools/workbox/v3/_footer.yaml
+google_analytics_ids:
+  - UA-52746336-1
+icon:
+  path: /web/tools/workbox/v3/images/workbox-icon192x192.png
+announcement:
+  description: |
+    <style>
+      .devsite-banner-announcement {
+        background-color: #e8f0fe;
+        color: #424242;
+        font-weight: 500;
+      }
+      .devsite-banner-announcement :link,
+      .devsite-banner-announcement :visited {
+        background: #e8f0fe;
+        color: #039BE5;
+      }
+      .devsite-banner-announcement span.material-icons {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+    </style> Missed the action at this year's <b>Chrome Dev Summit</b>? Catch up with our playlist on YouTube. <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcICUD5nBfRdAR6Fveosnqa5m" class="gc-analytics-event" data-category="webFu" data-label="cds-watch-playlist">Watch now.</a>
