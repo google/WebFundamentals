@@ -1290,7 +1290,10 @@ function testFile(filename, opts) {
  *****************************************************************************/
 
 gulp.task('test:travis-init', function() {
+  console.log('process.env.TRAVIS_BRANCH', process.env.TRAVIS_BRANCH, IS_TRAVIS_ON_MASTER);
+  console.log('process.env.TRAVIS', process.env.TRAVIS, IS_TRAVIS)
   if (!IS_TRAVIS || IS_TRAVIS_ON_MASTER) {
+    console.log('skipping')
     return Promise.resolve();
   }
   const github = new GitHubApi({debug: false, Promise: Promise});
