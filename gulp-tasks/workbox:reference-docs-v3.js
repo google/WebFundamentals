@@ -180,7 +180,7 @@ const buildReferenceDocs = (projectName, gitUrl, localPath, jsdocConfPath) => {
     localPath,
     'v3',
     jsdocConfPath,
-    true,
+    true
   );
 };
 
