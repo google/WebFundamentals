@@ -1,0 +1,22 @@
+upper_tabs:
+  - include: /web/_upper_tabs-Fundamentals.yaml
+  - name: Tools
+    heading: "Workbox"
+    path: /web/tools/
+    lower_tabs:
+      other:
+      - name: Home
+        contents:
+        - title: Home
+          path: /web/tools/workbox/v3/
+      - name: Guides
+        contents:
+        - include: /web/tools/workbox/v3/guides/_toc.yaml
+      - name: Modules
+        contents:
+        - include: /web/tools/workbox/v3/modules/_toc.yaml
+      - name: Reference Docs
+        contents:
+        - include: /web/tools/workbox/v3/reference-docs/_toc.yaml
+  - include: /web/_upper_tabs-Updates.yaml
+  - include: /web/_upper_tabs-Showcase.yaml
