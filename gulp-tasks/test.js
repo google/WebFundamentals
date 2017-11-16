@@ -1291,7 +1291,7 @@ function testFile(filename, opts) {
 
 gulp.task('test:travis-init', function() {
   // Get the PR number and verify we're running on travis
-  const prNumber = process.env.TRAVIS_PULL_REQUEST;
+  const prNumber = parseInt(process.env.TRAVIS_PULL_REQUEST, 10);
   if (!IS_TRAVIS || !prNumber) {
     return Promise.resolve();
   }
@@ -1340,7 +1340,7 @@ gulp.task('test', ['test:travis-init'], function() {
   // Supress wf_blink_components warnings
   if (GLOBAL.WF.options.ignoreBlink) {
     let msg = `${chalk.yellow('wf_blink_components')} check was skipped`;
-    logWarning('gulp-tasks/tests.js', null, msg);
+    logWarning('gulp-tasks/test.js', null, msg);
   } else {
     opts.blinkComponents = parseJSON(BLINK_COMPONENTS_FILE, readFile(BLINK_COMPONENTS_FILE));
   }
@@ -1348,21 +1348,21 @@ gulp.task('test', ['test:travis-init'], function() {
   // Supress max line length warnings
   if (GLOBAL.WF.options.ignoreMaxLen) {
     let msg = `${chalk.yellow('max line length')} check was skipped`;
-    logWarning('gulp-tasks/tests.js', null, msg);
+    logWarning('gulp-tasks/test.js', null, msg);
     opts.enforceLineLengths = false;
   }
 
   // Supress markdown script warnings
   if (GLOBAL.WF.options.ignoreScript) {
     let msg = `${chalk.yellow('<script> tag')} check was skipped`;
-    logWarning('gulp-tasks/tests.js', null, msg);
+    logWarning('gulp-tasks/test.js', null, msg);
     opts.ignoreScriptTags = true;
   }
 
   // Supress file size warnings
   if (GLOBAL.WF.options.ignoreFileSize) {
     let msg = `${chalk.yellow('file size')} check was skipped`;
-    logWarning('gulp-tasks/tests.js', null, msg);
+    logWarning('gulp-tasks/test.js', null, msg);
     opts.ignoreFileSize = true;
   }
 
