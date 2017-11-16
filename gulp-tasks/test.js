@@ -16,6 +16,7 @@ const moment = require('moment');
 const remark = require('remark');
 const jsYaml = require('js-yaml');
 const gutil = require('gulp-util');
+const GitHubApi = require('github');
 const wfRegEx = require('./wfRegEx');
 const wfHelper = require('./wfHelper');
 const parseDiff = require('parse-diff');
@@ -543,18 +544,20 @@ function testMarkdown(filename, contents, options) {
 
     // Check for valid Blink components
     matched = wfRegEx.RE_BLINK_COMPONENTS.exec(contents);
-    if (matched && options.blinkComponents) {
-      position = {line: getLineNumber(contents, matched.index)};
-      matched[1].split(',').forEach(function(component) {
-        component = component.trim();
-        if (options.blinkComponents.indexOf(component) === -1) {
-          msg = `The component (\`${component}\`) is non-standard or misspelled.`
-          logError(filename, position, msg);
-        }
-      })
-    } else {
-      msg = 'No `wf_blink_components` field found in metadata. Add if appropriate.';
-      logWarning(filename, '', msg);
+    if (options.blinkComponents) {
+      if (matched) {
+        position = {line: getLineNumber(contents, matched.index)};
+        matched[1].split(',').forEach(function(component) {
+          component = component.trim();
+          if (options.blinkComponents.indexOf(component) === -1) {
+            msg = `The component (\`${component}\`) is non-standard or misspelled.`
+            logError(filename, position, msg);
+          }
+        })
+      } else {
+        msg = 'No `wf_blink_components` field found in metadata. Add if appropriate.';
+        logWarning(filename, '', msg);
+      }
     }
 
     // Check for valid regions
@@ -692,12 +695,14 @@ function testMarkdown(filename, contents, options) {
     });
 
     // Error on script blocks in markdown
-    matched = wfRegEx.getMatches(/<script/gm, contents);
-    matched.forEach(function(match) {
-      position = {line: getLineNumber(contents, match.index)};
-      msg = `'<script> tags are generally not allowed, please double check.`;
-      logWarning(filename, position, msg);
-    });
+    if (!options.ignoreScriptTags) {
+      matched = wfRegEx.getMatches(/<script/gm, contents);
+      matched.forEach(function(match) {
+        position = {line: getLineNumber(contents, match.index)};
+        msg = `'<script> tags are generally not allowed, please double check.`;
+        logWarning(filename, position, msg);
+      });
+    }
 
     // Warn on missing comment widgets
     let reComment = /^{%\s?include "comment-widget\.html"\s?%}/m;
@@ -1180,6 +1185,10 @@ function testFile(filename, opts) {
     // Check media files & verify they're not too big
     if (MEDIA_FILES.indexOf(filenameObj.ext) >= 0) {
       let fsOK = true;
+      if (opts.ignoreFileSize) {
+        resolve(fsOK);
+        return;
+      }
       try {
         // Read the file size and check if it exceeds the known limits
         const stats = fs.statSync(filename);
@@ -1277,10 +1286,46 @@ function testFile(filename, opts) {
 }
 
 /******************************************************************************
+ * Get PR data to potentially ignore any tests
+ *****************************************************************************/
+
+gulp.task('test:travis-init', function() {
+  // Get the PR number and verify we're running on travis
+  const prNumber = process.env.TRAVIS_PULL_REQUEST;
+  if (!IS_TRAVIS || !prNumber) {
+    return Promise.resolve();
+  }
+  const prOpts = {
+    owner: 'Google',
+    repo: 'WebFundamentals',
+    number: prNumber,
+  };
+  // Look up the PR body and check it's contents
+  const github = new GitHubApi({debug: false, Promise: Promise});
+  github.authenticate({type: 'oauth', token: process.env.GIT_TOKEN});
+  return github.pullRequests.get(prOpts).then((prData) => {
+    const body = prData.body;
+    const ciFlags = wfRegEx.getMatch(/\[WF_IGNORE:(.*)\]/, body, '').split(',');
+    if (ciFlags.indexOf('BLINK') >= 0) {
+      GLOBAL.WF.options.ignoreBlink = true;
+    }
+    if (ciFlags.indexOf('MAX_LEN') >= 0) {
+      GLOBAL.WF.options.ignoreMaxLen = true;
+    }
+    if (ciFlags.indexOf('SCRIPT') >= 0) {
+      GLOBAL.WF.options.ignoreScript = true;
+    }
+    if (ciFlags.indexOf('FILE_SIZE') >= 0) {
+      GLOBAL.WF.options.ignoreFileSize = true;
+    }
+  })
+});
+
+/******************************************************************************
  * Gulp Test Task
  *****************************************************************************/
 
-gulp.task('test', function() {
+gulp.task('test', ['test:travis-init'], function() {
   if (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MASTER) {
     GLOBAL.WF.options.testAll = true;
   }
@@ -1290,26 +1335,59 @@ gulp.task('test', function() {
     warnOnJavaScript: true,
     commonTags: parseJSON(COMMON_TAGS_FILE, readFile(COMMON_TAGS_FILE)),
     contributors: parseYAML(CONTRIBUTORS_FILE, readFile(CONTRIBUTORS_FILE)),
-    blinkComponents: parseJSON(BLINK_COMPONENTS_FILE, readFile(BLINK_COMPONENTS_FILE))
   }
+
+  // Supress wf_blink_components warnings
+  if (GLOBAL.WF.options.ignoreBlink) {
+    let msg = `${chalk.yellow('wf_blink_components')} check was skipped`;
+    logWarning('gulp-tasks/tests.js', null, msg);
+  } else {
+    opts.blinkComponents = parseJSON(BLINK_COMPONENTS_FILE, readFile(BLINK_COMPONENTS_FILE));
+  }
+
+  // Supress max line length warnings
+  if (GLOBAL.WF.options.ignoreMaxLen) {
+    let msg = `${chalk.yellow('max line length')} check was skipped`;
+    logWarning('gulp-tasks/tests.js', null, msg);
+    opts.enforceLineLengths = false;
+  }
+
+  // Supress markdown script warnings
+  if (GLOBAL.WF.options.ignoreScript) {
+    let msg = `${chalk.yellow('<script> tag')} check was skipped`;
+    logWarning('gulp-tasks/tests.js', null, msg);
+    opts.ignoreScriptTags = true;
+  }
+
+  // Supress file size warnings
+  if (GLOBAL.WF.options.ignoreFileSize) {
+    let msg = `${chalk.yellow('file size')} check was skipped`;
+    logWarning('gulp-tasks/tests.js', null, msg);
+    opts.ignoreFileSize = true;
+  }
+
+  // Test the test files
   if (GLOBAL.WF.options.testTests) {
     GLOBAL.WF.options.testPath = './src/tests';
     opts.lastUpdateMaxDays = false;
   }
+
+  // Test all files
   if (GLOBAL.WF.options.testAll) {
     opts.enforceLineLengths = false;
     opts.lastUpdateMaxDays = false;
   }
+
   return getFiles()
-  .then(function(files) {
-    return Promise.all(files.map(function(filename) {
-      return testFile(filename, opts);
-    }));
-  })
-  .catch(function(ex) {
-    let msg = `A critical gulp task exception occurred: ${ex.message}`;
-    logError('gulp-tasks/test.js', null, msg, ex);
-  })
-  .then(printSummary)
-  .then(throwIfFailed);
+    .then(function(files) {
+      return Promise.all(files.map(function(filename) {
+        return testFile(filename, opts);
+      }));
+    })
+    .catch(function(ex) {
+      let msg = `A critical gulp task exception occurred: ${ex.message}`;
+      logError('gulp-tasks/test.js', null, msg, ex);
+    })
+    .then(printSummary)
+    .then(throwIfFailed);
 });
