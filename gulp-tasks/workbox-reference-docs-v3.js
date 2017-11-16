@@ -184,7 +184,7 @@ const buildReferenceDocs = (projectName, gitUrl, localPath, jsdocConfPath) => {
   );
 };
 
-gulp.task('workbox:reference-docs-v3', () => {
+gulp.task('workbox-reference-docs-v3', () => {
   return buildReferenceDocs(
     'Workbox',
     'https://github.com/GoogleChrome/workbox.git',

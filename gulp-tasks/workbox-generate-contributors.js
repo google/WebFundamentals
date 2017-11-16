@@ -21,7 +21,7 @@ function getContributorHTML(contributorStats) {
   return html;
 }
 
-gulp.task(`workbox:generate-contributors`, function() {
+gulp.task(`workbox-generate-contributors`, function() {
   if (!process.env.GITHUB_TOKEN) {
     console.warn(`Unable to build Workbox contributors due to no ` +
       `GITHUB_TOKEN existing on the current Path.`);
