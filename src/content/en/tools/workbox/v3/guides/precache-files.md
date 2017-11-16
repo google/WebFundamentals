@@ -262,11 +262,30 @@ workboxBuild.injectManifest({
 .catch((err) => {
   console.error(`Unable to inject the precache manifest into sw.js`);
   throw err;
-};
+});
 ```
 
 Running this will read in `app/sw.js` and output a version of it to `dist/sw.js`
 with the manifest injected into it.
+
+To use this in Gulp, you would do the following:
+
+```javascript
+const workboxBuild = require('workbox-build');
+const gulp = require('gulp');
+
+gulp.task('build-sw', () => {
+  return workboxBuild.injectManifest({
+    swSrc: path.join(__dirname, 'app', 'sw.js'),
+    swDest: path.join(__dirname, 'dist', 'sw.js'),
+    injectionPointRegexp: /(\.precacheAndRoute\()\s*\[\s*\]\s*(\))/,
+  })
+  .catch((err) => {
+    console.error(`Unable to inject the precache manifest into sw.js`);
+    throw err;
+  });
+});
+```
 
 ### Using the webpack Plugin
 
