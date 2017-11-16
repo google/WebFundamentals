@@ -2,6 +2,7 @@ const GitHubApi = require('github');
 const fs = require('fs-extra');
 const path = require('path');
 const gulp = require('gulp');
+var gutil = require('gulp-util');
 
 const MAX_COLLABORATORS = 20;
 
@@ -22,9 +23,15 @@ function getContributorHTML(contributorStats) {
 }
 
 gulp.task(`workbox-generate-contributors`, function() {
-  if (!process.env.GITHUB_TOKEN) {
-    console.warn(`Unable to build Workbox contributors due to no ` +
-      `GITHUB_TOKEN existing on the current Path.`);
+  let token = process.env.GITHUB_TOKEN;
+  if (!token) {
+    token = fs.readFileSync('./src/data/githubKey.txt', 'utf8');
+  }
+
+  if (!token) {
+    gutil.log(`Unable to build Workbox contributors due to no ` +
+      `GITHUB_TOKEN existing on the current PATH or ` +
+      `in src/data/githubKey.txt.`);
 
     // Return a promise so gulp is happy and thinks the task completed
     return Promise.resolve();
