@@ -7,6 +7,12 @@ const wfTemplateHelper = require('./wfTemplateHelper');
 
 const MAX_COLLABORATORS = 20;
 
+/**
+ * Generates a list of contributors with links and images into
+ * tools/workbox/templates using the Github API to get the top 20
+ * contributors.
+ */
+
 gulp.task(`workbox-generate-contributors`, function() {
   var token = process.env.GITHUB_TOKEN;
   if (!token) {

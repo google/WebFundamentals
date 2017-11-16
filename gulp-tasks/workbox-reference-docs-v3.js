@@ -7,6 +7,12 @@ const os = require('os');
 const glob = require('glob');
 const wfHelper = require('./wfHelper');
 
+/**
+ * Temporary build script to generate the reference docs for v3.
+ *
+ * This should be removed when workbox v3 is merged into master
+ */
+
 const PREVIOUS_RELEASES = 0;
 
 const buildJSDocs = (srcCodePath, docOutputPath, jsdocConfPath) => {
