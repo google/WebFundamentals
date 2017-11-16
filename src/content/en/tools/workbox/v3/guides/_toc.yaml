@@ -1,0 +1,11 @@
+toc:
+
+- title: Overview
+  path: /web/tools/workbox/v3/guides/
+
+- title: "Get Started"
+  path: /web/tools/workbox/v3/guides/get-started
+- title: "How to configure Workbox"
+  path: /web/tools/workbox/v3/guides/how-to-configure-workbox
+- title: "How to Troubleshoot and Debug"
+  path: /web/tools/workbox/v3/guides/how-to-troubleshoot-and-debug
