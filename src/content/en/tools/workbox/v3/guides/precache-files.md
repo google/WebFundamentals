@@ -101,10 +101,20 @@ one of the following Workbox tools:
 
 In the rest of this document we'll cover how you can use these tools to
 generate the precache manifest and inject it in your service worker, but
-it's worth noting that this list can be generated from other tools, the
-format just needs to be `{url: '<URL of file to precache>', revision:
-'<Hash of the file contents>' }`. You just need to ensure that any change
-you make to a file updates the revision otherwise files will fail to be
+it's worth noting that this list can be generated from other tools. The
+format for the list must be an array of objects with a `url` and `revision`
+property like so:
+
+```javascript
+{
+  url: '<URL of file to precache>',
+  revision: '<Hash of the file contents>'
+}
+```
+
+The most imporant thing to note is that the `revision` is updated whenever
+there is a change to the file. An md5 hash of the file contents is normally
+enough. If the revision isn't updated files will fail to be
 updated when you update your service worker, see the
 [workbox.precaching for more info](../modules/workbox-precaching).
 
@@ -117,9 +127,110 @@ this sounds like something you want, stop reading this guide
 and check out
 [Generate a Complete Service Worker Guide](./generate-complete-sw).
 
-### Using the Workbox CLI
+### Setup
 
-TODO: How to inject manifest
+Before you can inject a manifest into your service worker, you need to make sure
+that your service worker file has the following snippet of code:
+
+```javascript
+workbox.precaching.precacheAndRoute([]);
+```
+
+The reason this is needed is that the Workbox tools will look for this snippet
+and "inject" the list of assets to precache into the empty array.
+
+```javascript
+workbox.precaching.precacheAndRoute([
+  {
+    "url": "basic.html",
+    "revision": "7ca37fd5b27f91cd07a2fc68f20787c3"
+  },
+  {
+    "url": "favicon.ico",
+    "revision": "1378625ad714e74eebcfa67bb2f61d81"
+  },
+  {
+    "url": "images/hamburger.svg",
+    "revision": "d2cb0dda3e8313b990e8dcf5e25d2d0f"
+  },
+
+  ...
+
+]);
+```
+
+If you haven't already, make sure you have a `sw.js` file and make sure that
+you've added the snippet above to it.
+
+### Using the Workbox Command Line Interface
+
+The Workbox Command Line Interface (a.k.a the Workbox CLI) has the ability to
+setup a config file for your project which can then be used to generate the
+list of files to precache and inject that list into your service worker.
+
+This method is useful if you aren't too familiar with Node and aren't using
+webpack.
+
+Start by install the cli:
+
+```
+npm install workbox-cli -g
+```
+
+You should be able to run the command `workbox --help` after it's installed.
+
+```
+$ workbox --help
+
+  workbox-cli is the command line interface for Workbox.
+
+  Usage:
+  $ workbox <command> [options]
+
+  ...
+```
+
+The next to set up precaching it run the wizard which will ask a set of
+questions about your project to determine which files should be precached.
+
+Running `workbox wizard` will step through a set of questions to understand
+your project. Below is an example set of questions.
+
+![Workbox CLI Steps](../images/guides/get-started/cli-wizard-5.png)
+
+After you've run the wizard we'll need to add the location of our service
+worker to the config file. Notice the `swSrc` entry added to the workbox
+config.
+
+```javascript
+module.exports = {
+  "globDirectory": "app/",
+  "globPatterns": [
+    "**/*.{html,ico,svg,png,js,css}"
+  ],
+  "swDest": "dist/sw.js",
+  "swSrc": "app/sw.js"
+};
+```
+
+With this, you can run the `injectManifest` command that will read the file
+defined in `swSrc` and generate a version of it with the manifest to the
+location defined in `swDest`.
+
+In this case it will take `app/sw.js`, inject the manifest and write the file
+to `dist/sw.js`.
+
+When the inject manifest command is run, it'll print up some stats on the
+number of files and the total size.
+
+```
+$ workbox injectManifest workbox-config.js
+The service worker was written to dist/sw.js
+11 files will be precached, totalling 43.5 kB.
+```
+
+Run the `workbox injectManifest` command before you deploy your site to ensure
+the precache list is up to date.
 
 ### Using workbox-build
 
