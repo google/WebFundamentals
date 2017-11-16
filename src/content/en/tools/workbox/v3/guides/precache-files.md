@@ -234,7 +234,39 @@ the precache list is up to date.
 
 ### Using workbox-build
 
-TODO: How to inject manifest
+The `workbox-build` module provides a method to inject the precace manifest
+into your service worker.
+
+This module is the best option if you currently have a Node based build process
+for your project (i.e. you are using a tool like [Gulp](https://gulpjs.com/)).
+
+To install the module just run:
+
+```
+npm install workbox-build --save-dev
+```
+
+Then in your build process you'll want to `require` in the module and
+use the
+[injectManifest method](../reference-docs/latest/module-workbox-build#.injectManifest)
+to read in your service worker and output a version with the injected manifest.
+
+```javascript
+const workboxBuild = require('workbox-build');
+
+workboxBuild.injectManifest({
+  swSrc: path.join(__dirname, 'app', 'sw.js'),
+  swDest: path.join(__dirname, 'dist', 'sw.js'),
+  injectionPointRegexp: /(\.precacheAndRoute\()\s*\[\s*\]\s*(\))/,
+})
+.catch((err) => {
+  console.error(`Unable to inject the precache manifest into sw.js`);
+  throw err;
+};
+```
+
+Running this will read in `app/sw.js` and output a version of it to `dist/sw.js`
+with the manifest injected into it.
 
 ### Using the webpack Plugin
 
