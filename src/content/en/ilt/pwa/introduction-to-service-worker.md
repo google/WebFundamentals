@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-11-06 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -43,7 +43,7 @@ Things to note about Service Worker:
 
  
 
-Note: Services like <a href="https://letsencrypt.org/">Let's Encrypt</a> let you procure SSL certificates for free to install on your server.
+Note: Services like <a href="https://letsencrypt.org/">Letsencrypt</a> let you procure SSL certificates for free to install on your server. 
 
 
 
