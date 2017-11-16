@@ -243,6 +243,13 @@ def buildLeftNav(bookYaml, lang='en'):
       result += '<span>' + cgi.escape(item['title']) + '</span>\n'
       result += '</a>\n'
       result += '</li>\n'
+    elif 'heading' in item:
+      result += '<li class="devsite-nav-item devsite-nav-item-heading">\n';
+      result += '<span class="devsite-nav-title devsite-nav-title-no-path" ';
+      result += 'track-type="leftNav" track-name="expandNavSectionNoLink" ';
+      result += 'track-metadata-position="0">\n';
+      result += '<span>' + cgi.escape(item['heading']) + '</span>\n';
+      result += '</span>\n</li>\n';
     elif 'section' in item:
       # Sub-section
       result += '<li class="devsite-nav-item devsite-nav-item-section-expandable">\n'
