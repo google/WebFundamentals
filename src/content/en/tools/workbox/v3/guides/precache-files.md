@@ -291,4 +291,6 @@ gulp.task('build-sw', () => {
 
 TODO: How to inject manifest
 
-TODO: Handling Revisioned URLs
+## Handling Revisioned URLs
+
+TODO: Explain revisioned URLs and link up the warning fix.
