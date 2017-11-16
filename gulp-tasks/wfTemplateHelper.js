@@ -29,6 +29,7 @@ Handlebars.registerHelper('formatDateRSS', function(dt) {
   return wfHelper.dateFormatRSS(dt);
 });
 
+// Renders a template using handlebases
 function renderTemplate(templateFile, context, outputFile) {
   var ts = fs.readFileSync(templateFile, 'utf8');
   var template = Handlebars.compile(ts);
