@@ -1290,10 +1290,8 @@ function testFile(filename, opts) {
  *****************************************************************************/
 
 gulp.task('test:travis-init', function() {
-  console.log('process.env.TRAVIS_BRANCH', process.env.TRAVIS_BRANCH, IS_TRAVIS_ON_MASTER);
-  console.log('process.env.TRAVIS', process.env.TRAVIS, IS_TRAVIS)
-  if (!IS_TRAVIS || IS_TRAVIS_ON_MASTER) {
-    console.log('skipping')
+  const prNumber = process.env.TRAVIS_PULL_REQUEST;
+  if (!IS_TRAVIS || !prNumber) {
     return Promise.resolve();
   }
   const github = new GitHubApi({debug: false, Promise: Promise});
@@ -1301,12 +1299,11 @@ gulp.task('test:travis-init', function() {
   const prOpts = {
     owner: 'Google',
     repo: 'WebFundamentals',
-    number: process.env.TRAVIS_PULL_REQUEST
+    number: prNumber,
   };
   github.authenticate({type: 'oauth', token: token});
   return github.pullRequests.get(prOpts).then((prData) => {
     const body = prData.body;
-    console.log(body);
     const ciFlags = wfRegEx.getMatch(/\[WF_IGNORE:(.*)\]/, body, '').split(',');
     if (ciFlags.indexOf('BLINK') >= 0) {
       GLOBAL.WF.options.ignoreBlink = true;
@@ -1320,7 +1317,6 @@ gulp.task('test:travis-init', function() {
     if (ciFlags.indexOf('FILE_SIZE') >= 0) {
       GLOBAL.WF.options.ignoreFileSize = true;
     }
-    console.log(GLOBAL.WF.options);
   })
 });
 
