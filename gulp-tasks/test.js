@@ -16,6 +16,7 @@ const moment = require('moment');
 const remark = require('remark');
 const jsYaml = require('js-yaml');
 const gutil = require('gulp-util');
+const GitHubApi = require('github');
 const wfRegEx = require('./wfRegEx');
 const wfHelper = require('./wfHelper');
 const parseDiff = require('parse-diff');
@@ -68,7 +69,6 @@ const IS_TRAVIS_PUSH = process.env.TRAVIS_EVENT_TYPE === 'push';
 const IS_TRAVIS_ON_MASTER = process.env.TRAVIS_BRANCH === 'master';
 const TRAVIS_BRANCH = process.env.TRAVIS_BRANCH;
 const TRAVIS_EVENT_TYPE = process.env.TRAVIS_EVENT_TYPE;
-const TRAVIS_COMMIT_MESSAGE = process.env.TRAVIS_COMMIT_MESSAGE || '';
 
 let remarkLintOptions = {
   external: [
@@ -1286,13 +1286,44 @@ function testFile(filename, opts) {
 }
 
 /******************************************************************************
+ * Get PR data to potentially ignore any tests
+ *****************************************************************************/
+
+gulp.task('test:travis-init', function() {
+  if (!IS_TRAVIS || IS_TRAVIS_ON_MASTER) {
+    return Promise.resolve();
+  }
+  const github = new GitHubApi({debug: false, Promise: Promise});
+  const token = process.env.GIT_TOKEN;
+  const prOpts = {
+    owner: 'Google',
+    repo: 'WebFundamentals',
+    number: process.env.TRAVIS_PULL_REQUEST
+  };
+  github.authenticate({type: 'oauth', token: token});
+  return github.pullRequests.get(prOpts).then((prData) => {
+    const body = prData.body;
+    const ciFlags = wfRegEx.getMatch(/\[WF_IGNORE:(.*)\]/, body, '').split(',');
+    if (ciFlags.indexOf('BLINK') >= 0) {
+      GLOBAL.WF.options.ignoreBlink = true;
+    }
+    if (ciFlags.indexOf('MAX_LEN') >= 0) {
+      GLOBAL.WF.options.ignoreMaxLen = true;
+    }
+    if (ciFlags.indexOf('SCRIPT') >= 0) {
+      GLOBAL.WF.options.ignoreScript = true;
+    }
+    if (ciFlags.indexOf('FILE_SIZE') >= 0) {
+      GLOBAL.WF.options.ignoreFileSize = true;
+    }
+  })
+});
+
+/******************************************************************************
  * Gulp Test Task
  *****************************************************************************/
 
-gulp.task('test', function() {
-
-  console.log('\n' + TRAVIS_COMMIT_MESSAGE + '\n');
-
+gulp.task('test', ['test:travis-init'], function() {
   if (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MASTER) {
     GLOBAL.WF.options.testAll = true;
   }
@@ -1304,30 +1335,27 @@ gulp.task('test', function() {
     contributors: parseYAML(CONTRIBUTORS_FILE, readFile(CONTRIBUTORS_FILE)),
   }
 
-  let ciFlags = wfRegEx.getMatch(/\[WF_IGNORE:(.*)\]/, TRAVIS_COMMIT_MESSAGE, '');
-  ciFlags = ciFlags.split(',');
-
   // Supress wf_blink_components warnings
-  if (ciFlags.includes('BLINK')) {
+  if (GLOBAL.WF.options.ignoreBlink) {
     logWarning('wf_blink_components', null, `check was skipped`);
   } else {
-    opts.blinkComponents = parseJSON(BLINK_COMPONENTS_FILE, readFile(BLINK_COMPONENTS_FILE))
+    opts.blinkComponents = parseJSON(BLINK_COMPONENTS_FILE, readFile(BLINK_COMPONENTS_FILE));
   }
 
   // Supress max line length warnings
-  if (ciFlags.includes('MAX_LEN')) {
+  if (GLOBAL.WF.options.ignoreMaxLen) {
     logWarning('max line length', null, `check was skipped`);
     opts.enforceLineLengths = false;
   }
 
   // Supress markdown script warnings
-  if (ciFlags.includes('BLINK')) {
+  if (GLOBAL.WF.options.ignoreScript) {
     logWarning('<script> tag', null, `check was skipped`);
     opts.ignoreScriptTags = true;
   }
 
   // Supress file size warnings
-  if (ciFlags.includes('FILE_SIZE')) {
+  if (GLOBAL.WF.options.ignoreFileSize) {
     logWarning('file size', null, `check was skipped`);
     opts.ignoreFileSize = true;
   }
