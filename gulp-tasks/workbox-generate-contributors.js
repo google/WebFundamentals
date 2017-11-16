@@ -8,7 +8,7 @@ const wfTemplateHelper = require('./wfTemplateHelper');
 const MAX_COLLABORATORS = 20;
 
 gulp.task(`workbox-generate-contributors`, function() {
-  let token = process.env.GITHUB_TOKEN;
+  var token = process.env.GITHUB_TOKEN;
   if (!token) {
     token = fs.readFileSync('./src/data/githubKey.txt', 'utf8');
   }
