@@ -199,9 +199,11 @@ def getLowerTabs(bookYaml):
         for lowerTab in tab['lower_tabs']['other']:
           lt = {}
           lt['name'] = lowerTab['name']
-          if 'contents' in lowerTab and 'path' in lowerTab['contents'][0]:
-            lt['path'] = lowerTab['contents'][0]['path']
-            result.append(lt)
+          if 'contents' in lowerTab:
+            firstTabPath = getFirstTabPath(lowerTab['contents'])
+            if firstTabPath is not None:
+              lt['path'] = firstTabPath
+              result.append(lt)
   except Exception as e:
     logging.exception('Unable to read/parse the lower tabs')
   return result
@@ -245,8 +247,6 @@ def getLeftNav(requestPath, bookYaml, lang='en'):
     lowerTabs = currentUpperTab['lower_tabs']['other']
     for lowerTab in lowerTabs:
       lowerTabPath = getFirstTabPath(lowerTab['contents'])
-      if (lowerTabPath is None):
-        logging.info('Its NONE <---------------')
       if (lowerTabPath is None or
         requestPath.startswith(lowerTabPath)):
           result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
