@@ -9,8 +9,6 @@ description: Image formats!
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 
-### The tl;dr {: #the-tldr }
-
 **We should all be automating our image compression.**
 
 In 2017, image optimization should be automated. It's easy to forget, best
