@@ -67,7 +67,7 @@ Image optimization consists of different measures that can reduce the file size 
 
 
 <img
-        src="https://res.cloudinary.com/ddxwdqwkr/image/upload/v1502426282/essential-image-optimization/image-optimisation"
+        src="images/image-optimisation"
         alt="Image optimization covers a number of different techniques" />
 <strong>Image optimization:</strong> Choose the right format, compress carefully and prioritize critical images over those that can be lazy-loaded.
 
@@ -76,7 +76,7 @@ Common image optimizations include compression, responsively serving them down b
 
 
 <img
-       src="https://res.cloudinary.com/ddxwdqwkr/image/upload/v1502834117/chart_naedwl.jpg"
+       src="images/chart_naedwl.jpg"
         alt="A histogram of potential image savings from the HTTP Archive validating the 30KB of potential image savings at the 95th percentile." />
 Per the [HTTP Archive](http://jsfiddle.net/rviscomi/rzneberp/embedded/result/), per-image savings at the 95th percentile (looking at the Cumulative Distribution Function) are 30KB!</strong>
 
@@ -85,7 +85,7 @@ There's plenty of room for us to collectively optimize images better.
 
 
 <img
-        src="https://res.cloudinary.com/ddxwdqwkr/image/upload/v1502519576/essential-image-optimization/image-optim.jpg"
+        src="images/image-optim.jpg"
         alt="ImageOptim in use on Mac with a number of images that have been compressed with savings over 50%" />
 
 ImageOptim is free, reduces image size through modern compression techniques and by stripping unnecessary EXIF meta-data.
@@ -273,7 +273,7 @@ Our eyes are more forgiving to loss of color detail in an image (chroma) than th
 
 
 <img
-        src="https://res.cloudinary.com/ddxwdqwkr/image/upload/v1503683718/essential-image-optimization/luma-signal.jpg"
+        src="images/luma-signal.jpg"
         alt="signal = chroma + luma" />
 
 
@@ -301,7 +301,7 @@ By reducing pixels in our chroma components, it’s possible to reduce the size 
 
 
 <img
-        src="https://res.cloudinary.com/ddxwdqwkr/image/upload/v1503684781/essential-image-optimization/subsampling.jpg"
+        src="images/subsampling.jpg"
         alt="Chrome subsampling configurations for a JPEG at quality 80." />
 Chrome subsampling configurations for a JPEG at quality 80.
 
@@ -518,7 +518,7 @@ In the last year, WebP gained a few percent over compression-wise in lossy and l
 
 
 <img
-       src="https://res.cloudinary.com/ddxwdqwkr/image/upload/q_100/v1502426282/essential-image-optimization/Modern-Image16.jpg"
+       src="images/Modern-Image16.jpg"
         alt="comparison of webp at different quality settings. q=90, 646KB. q=80= 290KB. q=75, 219KB. q=70, 199KB" />
 WebP: A comparison of file sizes and visual similarity scores at different qualities.
 
@@ -769,7 +769,7 @@ On Mac, try the [Quick Look plugin for WebP](https://github.com/Nyx0uf/qlImageSi
 
 
 <img
-      src="https://res.cloudinary.com/ddxwdqwkr/image/upload/v1502426282/essential-image-optimization/Modern-Image22.jpg"
+      src="images/Modern-Image22.jpg"
         alt="Desktop on a mac showing a WebP file previewed using the Quick Look plugin for WebP files"
          />
 
@@ -931,7 +931,7 @@ Keeping SVGs lean means stripping out anything unnecessary. SVG files created wi
 
 
 <img
-        src="https://res.cloudinary.com/ddxwdqwkr/image/upload/v1502426282/essential-image-optimization/Modern-Image26.jpg"
+        src="images/Modern-Image26.jpg"
         alt="svgo"
          />
 [SVGOMG](https://jakearchibald.github.io/svgomg/), by Jake Archibald, is a GUI interface enabling you to optimize your SVGs to your preference  by selecting optimizations, with a live preview of the outputted markup 
@@ -1005,7 +1005,7 @@ When Google shipped a new logo, we announced that the [smallest](https://twitter
 
 
 <img
-        src="https://res.cloudinary.com/ddxwdqwkr/image/upload/v1502426282/essential-image-optimization/Modern-Image30.jpg"
+        src="images/Modern-Image30.jpg"
         alt="the smallest version of the new google logo was only 305 bytes in size"
          />
 
@@ -1085,7 +1085,7 @@ When building their new [mobile web experience](https://medium.com/@paularmstron
 
 
 <img
-        src="https://res.cloudinary.com/ddxwdqwkr/image/upload/v1502426282/essential-image-optimization/image-decoding.jpg"
+        src="images/image-decoding.jpg"
         alt="Chrome DevTools Timeline/Performance panel highlighting image decode times before and after Twitter Lite optimized their image pipeline. Before was higher."
          />
 Chrome DevTools Timeline/Performance panel highlighting image decode times (in green) before and after Twitter Lite optimized their image pipeline.
@@ -1174,7 +1174,7 @@ Color spaces have three channels (red, green and blue). There are 255 colors pos
 
 
 <img
-        src="https://res.cloudinary.com/ddxwdqwkr/image/upload/v1504564915/srgb-rgb_ntuhi4.jpg"
+        src="images/srgb-rgb_ntuhi4.jpg"
         alt="sRGB, Adobe RGB and ProPhoto RGB" />
 A comparison of sRGB, Adobe RGB and ProPhoto RGB using an image from [Yardstick](https://yardstick.pictures/tags/img%3Adci-p3). It's incredibly hard to show this concept in sRGB, when you can't show colors that can't be seen. A regular photo in sRGB vs wide gamut should have everything identical, except most saturated "juicy" colors.
 
@@ -1273,7 +1273,7 @@ For examples of lazy loading, look at most any major site that hosts a lot of im
 
 
 <img
-        src="https://res.cloudinary.com/ddxwdqwkr/image/upload/v1502426282/essential-image-optimization/Modern-Image35.jpg"
+        src="images/Modern-Image35.jpg"
         alt="inline previews for images on medium.com"
          />
 An example of Gaussian-blurred inline previews for images on Medium.com
@@ -1328,7 +1328,7 @@ with minimal effort:
 
 
 <img
-        src="https://res.cloudinary.com/ddxwdqwkr/image/upload/v1502501095/essential-image-optimization/cloudinary-responsive-images.jpg"
+        src="images/cloudinary-responsive-images.jpg"
         alt="Cloudinary supports on-demand control of image quality, format and several other features."
          />
 
