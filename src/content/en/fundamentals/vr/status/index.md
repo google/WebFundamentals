@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Get the latest info on WebVR's status, as well as things to keep in mind when building WebVR experiences.
 
-{# wf_updated_on: 2017-10-17 #}
+{# wf_updated_on: 2017-11-17 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -14,12 +14,17 @@ Warning: WebVR is still experimental and subject to change.
 
 ### Version 1.1 {:#version_1_1}
 
-Today the WebVR API is available in:
+Today the WebVR 1.1 API is available in:
 
 * Chrome Beta (M56+), via an
   [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
 * Firefox Nightly.
 * Samsung Internet for Android and for Gear VR.
+
+It's supported on:
+
+ * Daydream View since M56
+ * Google Cardboard since M57
 
 <iframe width="100%" height="320"
   src="https://www.chromestatus.com/feature/4532810371039232?embed"
