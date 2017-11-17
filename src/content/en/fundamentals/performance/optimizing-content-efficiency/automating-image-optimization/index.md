@@ -2,8 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Image formats!
 
-{# wf_updated_on: 2017-09-25 #}
-{# wf_published_on: 2017-09-25 #}
+{# wf_updated_on: 2017-11-16 #}
+{# wf_published_on: 2017-11-16 #}
 
 # Automating image optimization {: .page-title }
 
@@ -105,7 +105,7 @@ of your images. It ultimately depends on what visual fidelity your images
 require.
 
 
-<img src="images/image-optimisation" alt="Image optimization covers a number of
+<img src="images/image-optimisation.jpg" alt="Image optimization covers a number of
         different techniques" /> <strong>Image optimization:</strong> Choose the
         right format, compress carefully and prioritize critical images over
         those that can be lazy-loaded.
@@ -113,8 +113,8 @@ require.
 
 Common image optimizations include compression, responsively serving them down
 based on screen size using
-[`<picture>`](/web/fundamentals/design-and-ux/responsive/images#art_direction_in_responsive_images_with_picture)/[`<img
-srcset>`](/web/fundamentals/design-and-ux/responsive/images#enhance_imgs_with_srcset_for_high_dpi_devices),
+[`<picture>`](/web/fundamentals/design-and-ux/responsive/images)/[`<img
+srcset>`](/web/fundamentals/design-and-ux/responsive/images),
 and resizing them to reduce image decode costs.
 
 
@@ -1694,7 +1694,7 @@ this happen and it can impact performance.
 
 <img src="images/image-pipeline.jpg" alt="There are many steps involved in a
         browser grabbing an image specified in a tag and displaying it on a
-        screen. These include request, decode, resize, copy to GPU and display."
+        screen. These include request, decode, resize, copy to GPU, display."
          />
 
 When a browser fetches an image, it has to decode the image from the original
