@@ -58,6 +58,8 @@ def parse(requestPath, fileLocation, rawYaml, lang='en'):
     if 'heading' in row:
       section += '<h2 id="' + devsiteHelper.slugify(row['heading']) +'">'
       section += row['heading'] + '</h2>'
+    if 'description' in row:
+      section += row['description']
     if 'items' in row:
       section += '<div class="devsite-landing-row-group">'
       section += parseIndexYamlItems(row['items'])

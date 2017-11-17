@@ -3,6 +3,7 @@
 .DS_Store
 node_modules/*
 src/data/youtubeAPIKey.txt
+src/data/githubKey.txt
 gulp-tasks/devsite.js
 scratch/*
 tools/claat

@@ -199,36 +199,68 @@ def getLowerTabs(bookYaml):
         for lowerTab in tab['lower_tabs']['other']:
           lt = {}
           lt['name'] = lowerTab['name']
-          if 'contents' in lowerTab and 'path' in lowerTab['contents'][0]:
-            lt['path'] = lowerTab['contents'][0]['path']
-            result.append(lt)
+          if 'contents' in lowerTab:
+            firstTabPath = getFirstTabPath(lowerTab['contents'])
+            if firstTabPath is not None:
+              lt['path'] = firstTabPath
+              result.append(lt)
   except Exception as e:
     logging.exception('Unable to read/parse the lower tabs')
   return result
 
 
+# Given a list of tab contents, find the first item with a path and return
+# the path
+def getFirstTabPath(tabContents):
+  for tabContent in tabContents:
+    if 'path' in tabContent:
+      return tabContent['path']
+    if 'section' in tabContent:
+      tabPath = getFirstTabPath(tabContent['section'])
+      if tabPath is not None:
+        return tabPath
+  return None
+
+
+# Returns the left nav. Read the file then recursively, then build the
+# tree using buildLeftNav.
 def getLeftNav(requestPath, bookYaml, lang='en'):
-  # Returns the left nav. Read the file then recursively, then build the
-  # tree using buildLeftNav.
-  whoops = '<h2>Whoops!</h2>'
-  whoops += '<p>An error occured while trying to parse and build the'
-  whoops += ' left hand navigation. Check the error logs.'
-  whoops += '</p>'
   requestPath = os.path.join('/web/', requestPath)
+  result = '<h2>No Matches Found</h2>'
   try:
-    result = '<h2>No Matches Found</h2>'
+    currentUpperTab = None
     for upperTab in bookYaml['upper_tabs']:
-      if 'path' in upperTab and requestPath.startswith(upperTab['path']):
-        for lowerTab in upperTab['lower_tabs']['other']:
-          if ('path' not in lowerTab['contents'][0] or
-            requestPath.startswith(lowerTab['contents'][0]['path'])):
-              result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
-              result += buildLeftNav(lowerTab['contents'])
-              result += '</ul>\n'
+      # We generate the left nav based on the lower tab entries
+      # but we need to find the right lower tab based on the the upper tab
+      if 'path' not in upperTab:
+        continue
+      if not requestPath.startswith(upperTab['path']):
+        continue
+
+      currentUpperTab = upperTab
+      break
+
+    # There should be 'currentUpperTab', if not, there is nothing we can show
+    if currentUpperTab is None:
+      return result
+
+    lowerTabs = currentUpperTab['lower_tabs']['other']
+    for lowerTab in lowerTabs:
+      lowerTabPath = getFirstTabPath(lowerTab['contents'])
+      if (lowerTabPath is None or
+        requestPath.startswith(lowerTabPath)):
+          result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
+          result += buildLeftNav(lowerTab['contents'])
+          result += '</ul>\n'
+
     return result
   except Exception as e:
-    msg = ' - Unable to read or parse primary book.yaml'
-    logging.exception(msg)
+    logging.exception(' - Unable to read or parse primary book.yaml')
+    logging.exception(e)
+    whoops = '<h2>Whoops!</h2>'
+    whoops += '<p>An error occured while trying to parse and build the'
+    whoops += ' left hand navigation. Check the error logs.'
+    whoops += '</p>'
     whoops += '<p>Exception occured.</p>'
     return whoops
 
