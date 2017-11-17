@@ -72,7 +72,7 @@ Image optimization consists of different measures that can reduce the file size 
 <strong>Image optimization:</strong> Choose the right format, compress carefully and prioritize critical images over those that can be lazy-loaded.
 
 
-Common image optimizations include compression, responsively serving them down based on screen size using [`<picture>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)/[`<img srcset>`](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images), and resizing them to reduce image decode costs.
+Common image optimizations include compression, responsively serving them down based on screen size using [`<picture>`](/web/fundamentals/design-and-ux/responsive/images#art_direction_in_responsive_images_with_picture)/[`<img srcset>`](/web/fundamentals/design-and-ux/responsive/images#enhance_imgs_with_srcset_for_high_dpi_devices), and resizing them to reduce image decode costs.
 
 
 <img
