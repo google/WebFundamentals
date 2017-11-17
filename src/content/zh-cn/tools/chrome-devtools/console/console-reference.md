@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用 Console API 可以向控制台写入信息、创建 JavaScript 配置文件，以及启动调试会话。
 

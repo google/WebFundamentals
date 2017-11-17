@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools Command Line API는 이벤트 리스너를 관찰 및 검사하는 다양한 방법을 제공합니다.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 자주 사용하는 명령줄 작업의 단축키를 설정하세요. 명령줄에 같은 내용을 입력하는 일을 되풀이하고 있다면, 이렇게 해서 부담을 덜 수 있습니다.
 

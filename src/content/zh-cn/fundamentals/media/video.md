@@ -60,7 +60,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 {% includecode content_path="web/fundamentals/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html){: target="_blank" .external }
 
 浏览器在解析 `<source>` 标记时，会使用可选的 `type` 属性帮助确定要下载并播放的文件。
 如果浏览器支持 `WebM`，则会播放 chrome.webm，否则，浏览器会检查自己是否可以播放 MPEG-4 视频。
@@ -84,7 +84,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 
 
 
-使用移动浏览器开发者工具比较[具有 type 属性](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external }的网络活动和[没有 type 属性](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html){: target="_blank" .external }的网络活动。
+使用移动浏览器开发者工具比较[具有 type 属性](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html){: target="_blank" .external }的网络活动和[没有 type 属性](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html){: target="_blank" .external }的网络活动。
 
 同时，请检查浏览器开发者工具中的响应标头以[确保服务器报告正确的 MIME 类型](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types)；否则，视频来源类型检查将不起作用。
 
@@ -304,7 +304,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 
 
 
-使用 [CSS 媒体查询](/web/fundamentals/design-and-ui/responsive/#css-media-queries)来根据视口尺寸指定元素大小；`max-width: 100%` 是您的好帮手。
+使用 [CSS 媒体查询](/web/fundamentals/design-and-ux/responsive/#css-media-queries)来根据视口尺寸指定元素大小；`max-width: 100%` 是您的好帮手。
 
 对于 iframe 中的媒体内容（如 YouTube 视频），请尝试使用自适应方法（如 [John Surdakowski 提出的](http://avexdesigns.com/responsive-youtube-embed/)方法）。
 
@@ -324,9 +324,9 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html){: target="_blank" .external }
 
-对比[自适应示例](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }和[非自适应版本](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/unyt.html){: target="_blank" .external }。
+对比[自适应示例](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html){: target="_blank" .external }和[非自适应版本](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/unyt.html){: target="_blank" .external }。
 
 
 
@@ -431,7 +431,7 @@ iPad 版 Safari 以内联模式播放视频：
 在支持 Fullscreen API 的设备中，考虑将缩略图用作视频占位符：
 
 
-要了解此操作实例，请观看[演示](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html){: target="_blank" .external }。
+要了解此操作实例，请观看[演示](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html){: target="_blank" .external }。
 
 Dogfood：`requestFullScreen()` 可能添加了供应商前缀，并且可能需要额外代码才能实现全面的跨浏览器兼容性。
 
@@ -463,7 +463,7 @@ Dogfood：`requestFullScreen()` 可能添加了供应商前缀，并且可能需
 {% includecode content_path="web/fundamentals/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
 </pre>
 
-[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/track.html){: target="_blank" .external }
+[试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/track.html){: target="_blank" .external }
 
 跟踪元素的 `src` 属性决定跟踪文件的位置。
 
@@ -629,7 +629,7 @@ Dogfood：Chrome（Android 版）、iOS Safari 以及当前的所有桌面版浏
   </tbody>
 </table>
 
-移动设备既不支持 `playbackRate`（[观看演示](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html){: target="_blank" .external }），也不支持 `volume`。
+移动设备既不支持 `playbackRate`（[观看演示](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html){: target="_blank" .external }），也不支持 `volume`。
 
 #### 方法
 
@@ -659,7 +659,7 @@ Dogfood：Chrome（Android 版）、iOS Safari 以及当前的所有桌面版浏
   </tbody>
 </table>
 
-除非以响应用户操作（例如点击按钮）的方式调用 `play()` 和 `pause()`， 否则这两种方法无法在移动设备（Android 版 Opera 除外）上起作用：观看[演示](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html){: target="_blank" .external }。（同样，您也无法对嵌入式 YouTube 视频等内容执行开始播放的操作。）
+除非以响应用户操作（例如点击按钮）的方式调用 `play()` 和 `pause()`， 否则这两种方法无法在移动设备（Android 版 Opera 除外）上起作用：观看[演示](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html){: target="_blank" .external }。（同样，您也无法对嵌入式 YouTube 视频等内容执行开始播放的操作。）
 
 
 

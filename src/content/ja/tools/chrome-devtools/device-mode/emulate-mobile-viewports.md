@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools の Device Mode では、開発サイトがさまざまな端末で本番環境においてどのように表示されるかを再現できます。
 
@@ -174,7 +174,7 @@ Nexus 6P などの Retina ディスプレイ搭載端末では、標準の端末
 * CSS [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) ルール。
 
 
-* 画像の [srcset](/web/fundamentals/design-and-ui/media/images/images-in-markup) 属性。
+* 画像の [srcset](/web/fundamentals/design-and-ux/media/images/images-in-markup) 属性。
 
 
 * `window.devicePixelRatio` プロパティ。
@@ -186,7 +186,7 @@ Nexus 6P などの Retina ディスプレイ搭載端末では、標準の端末
 
 ###  メディアクエリ {: #media-queries }
 
-[メディアクエリ](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)は、レスポンシブ ウェブデザインに不可欠な要素です。メディアクエリ インスペクターを表示するには、スリードット メニューで [**Show Media queries**] をクリックします。
+[メディアクエリ](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)は、レスポンシブ ウェブデザインに不可欠な要素です。メディアクエリ インスペクターを表示するには、スリードット メニューで [**Show Media queries**] をクリックします。
 DevTools によってスタイルシートのメディアクエリが検出され、一番上のルーラーに色付きのバーとして表示されます。
 
 

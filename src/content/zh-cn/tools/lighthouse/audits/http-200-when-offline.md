@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“处于离线状态时访问网址返回 200”Lighthouse 审查的参考文档。
 

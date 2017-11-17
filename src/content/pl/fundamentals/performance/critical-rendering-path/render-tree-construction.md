@@ -39,7 +39,7 @@ Note: Na marginesie: pamiętaj, że atrybut <code>visibility: hidden</code> ró�
 
 Końcowym efektem jest obraz zrenderowany na ekranie z odwzorowaniem zarówno całej widocznej treści, jak i jej stylów &ndash; zbliżamy się do celu.  **Po przygotowaniu drzewa renderowania możemy przejść do etapu wyznaczania `układu strony`.**
 
-Do tej chwili określaliśmy, które węzły powinny być widoczne, oraz ich style. Nie wyznaczaliśmy ich dokładnego położenia w [widocznym obszarze](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) urządzenia &ndash; to etap znajdowania `układu strony`, określanego również pojęciem `rozmieszczenia elementów`.
+Do tej chwili określaliśmy, które węzły powinny być widoczne, oraz ich style. Nie wyznaczaliśmy ich dokładnego położenia w [widocznym obszarze](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) urządzenia &ndash; to etap znajdowania `układu strony`, określanego również pojęciem `rozmieszczenia elementów`.
 
 Przeglądarka rozpoczyna wyznaczanie dokładnego rozmiaru i położenia każdego obiektu od korzenia drzewa renderowania i przeszukuje całe drzewo, obliczając geometrię każdego obiektu na stronie. Oto prosty przykład:
 

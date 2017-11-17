@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Timeline イベントモードでは、記録中に発生したイベントがすべて表示されます。この Timeline イベント リファレンスを使って、各種 Timeline イベントを確認します。
 

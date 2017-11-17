@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Remote debug live content on an Android device from a Windows,  Mac or Linux computer.
 

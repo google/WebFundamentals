@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Has A &lt;meta name="viewport"&gt; Tag With width Or initial-scale" Lighthouse audit.
 
@@ -15,7 +15,7 @@ the viewport enables you to control the width and scaling of the viewport.
 Check out the following links to learn more:
 
 * [Configure the Viewport](/speed/docs/insights/ConfigureViewport)
-* [Set the Viewport](/web/fundamentals/design-and-ui/responsive/#set-the-viewport)
+* [Set the Viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport)
 
 ## How to pass the audit {: #how }
 

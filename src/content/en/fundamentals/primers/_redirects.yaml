@@ -1,0 +1,10 @@
+redirects:
+
+- from: /web/fundamentals/primers/service-worker
+  to: /web/fundamentals/primers/service-workers/
+
+- from: /web/fundamentals/primers/service-worker/
+  to: /web/fundamentals/primers/service-workers/
+
+- from: /web/fundamentals/primers/
+  to: /web/fundamentals/

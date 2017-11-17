@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Menyiapkan pintasan untuk tugas baris perintah yang sering Anda pakai. Jika Anda sering mengetik hal yang sama di baris perintah berulang kali, ini akan membantu meringankannya.
 

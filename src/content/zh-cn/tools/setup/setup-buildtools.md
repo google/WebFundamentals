@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:从头开始构建您的多设备网站。了解如何使用一套构建流程工具加快开发速度和创建快速加载的网站。
 

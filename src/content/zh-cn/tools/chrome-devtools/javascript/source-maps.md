@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:保持您的客户端代码便于阅读和调试，即使在您组合、缩减或编译代码后也应如此。
 

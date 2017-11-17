@@ -1,0 +1,7 @@
+<div {{~cssClass '!symbol-index-column'}}>
+  {{#each doclets}}
+    <p {{~cssClass '!symbol-index-name'}}>
+      {{linkLongnameWithSignature this '!symbol-index-name'}}
+    </p>
+  {{/each}}
+</div>

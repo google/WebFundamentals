@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Follow along with this interactive guide to learn how to use  DevTools to diagnose forced synchronous layouts.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Saiba como registrar resumos de pilha com o criador de perfil de pilha do Chrome DevTools e encontrar vazamentos de memória.
 

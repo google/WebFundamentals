@@ -111,7 +111,7 @@ Por otra parte, las imágenes de trama presentan un desafío mucho más grande p
 
 Cuando duplicamos la resolución de la pantalla física, la cantidad total de píxeles se multiplica por cuatro: se duplica la cantidad de píxeles horizontales y se duplica la cantidad de píxeles verticales. Por lo tanto, en una pantalla “2x” no solo se duplica, sino que se cuadruplica la cantidad necesaria de píxeles.
 
-¿Qué significa esto en la práctica? Las pantallas de alta resolución nos permiten mostrar imágenes bellas, lo cual puede ser una excelente función de producto. Sin embargo, para las pantallas de alta resolución también se requieren imágenes de alta resolución: usa imágenes vectoriales siempre que sea posible, ya que no dependen de la resolución y siempre proporcionan buenos resultados. Si fuera necesario usar una imagen de trama, proporciona y optimiza diferentes variantes de cada imagen con la ayuda de  [`srcset` y `picture`](/web/fundamentals/design-and-ui/media/images#images-in-markup).
+¿Qué significa esto en la práctica? Las pantallas de alta resolución nos permiten mostrar imágenes bellas, lo cual puede ser una excelente función de producto. Sin embargo, para las pantallas de alta resolución también se requieren imágenes de alta resolución: usa imágenes vectoriales siempre que sea posible, ya que no dependen de la resolución y siempre proporcionan buenos resultados. Si fuera necesario usar una imagen de trama, proporciona y optimiza diferentes variantes de cada imagen con la ayuda de  [`srcset` y `picture`](/web/fundamentals/design-and-ux/media/images#images-in-markup).
 
 ## Optimización de imágenes vectoriales
 

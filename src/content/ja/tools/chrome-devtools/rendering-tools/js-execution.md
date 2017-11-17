@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:Chrome DevTools の CPU Profiler を使って負荷の高い関数を見極めます。
 

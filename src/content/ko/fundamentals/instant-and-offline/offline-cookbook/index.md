@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-08-26 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2014-12-09 #}
 
 # 오프라인 설명서 {: .page-title }
@@ -242,7 +242,7 @@ ServiceWorker는 이벤트 처리를 마쳤으므로 레벨 11-20이
 
 <img src="images/cm-on-push.png">
 
-[Push API](/web/fundamentals/engage-and-retain/push-notifications/)는
+[Push API](/web/fundamentals/push-notifications)는
 ServiceWorker 위에 빌드된 또 다른 기능입니다. 이 기능을 사용하여
 OS의 메시징 서비스의 메시지에 대한 응답으로 ServiceWorker를
 활성화할 수 있습니다. 이는 사용자가 사이트에 대해 탭을 열지 않은 경우에도

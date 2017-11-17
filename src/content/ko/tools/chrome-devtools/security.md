@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Security 패널을 사용하여 사이트 내 모든 리소스가 HTTPS로 보호되도록 보장합니다.
 

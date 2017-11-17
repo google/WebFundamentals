@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Crie do zero seu site para vários dispositivos. Aprenda como agilizar o desenvolvimento e criar um site com carregamento rápido usando um pacote de ferramentas de compilação.
 

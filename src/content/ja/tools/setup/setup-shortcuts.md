@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 繰り返し使用するコマンドライン タスクのショートカットを設定します。コマンドラインで同じ入力を繰り返している場合は、ショートカットを設定して入力を減らします。
 

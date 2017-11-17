@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:从 Windows、Mac 或 Linux 计算机远程调试 Android 设备上的实时内容。
 

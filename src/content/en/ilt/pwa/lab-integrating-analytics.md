@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-12T20:48:53Z #}
+{# wf_updated_on: 2017-09-29 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -143,7 +143,7 @@ The account creation screen should look like this:
 
 #### What would you like to track? 
 
-Choose website. 
+Choose __Website__. 
 
 
 
@@ -687,7 +687,7 @@ Save the script. Refresh the page to install the new service worker. Then close 
 
 Now try these experiments and check the console and Google Analytics dashboard for each:
 
-1. Trigger a push notification. 
+1. [Trigger a push notification](tools-for-pwa-developers#push). 
 2. Click the notification, and note what happens. 
 3. Trigger another notification and then close it (with the x in the upper right corner).
 

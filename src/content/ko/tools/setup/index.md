@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 우수한 편집기, 디버깅 기능과 다중 기기 웹을 위한 빌드 도구를 포함하도록 작업 영역을 설정하세요.
 

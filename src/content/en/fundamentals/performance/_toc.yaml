@@ -9,9 +9,9 @@ toc:
       - title: Understanding Low Bandwidth and High Latency
         path: /web/fundamentals/performance/poor-connectivity/
       # - title: Overview
-      #   path: /web/fundamentals/perforamance/loading/
+      #   path: /web/fundamentals/performance/loading/
       # - title: Understanding Loading
-      #   path: /web/fundamentals/perforamance/loading/understand
+      #   path: /web/fundamentals/performance/loading/understand
       - title: Optimizing Content Efficiency
         section:
         - title: Overview
@@ -45,8 +45,10 @@ toc:
             path: /web/fundamentals/instant-and-offline/web-storage/
           - title: Offline Storage for Progressive Web Apps
             path: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
-          - title: IndexedDB Best Practices for Persisting Application State
-            path: /web/fundamentals/instant-and-offline/web-storage/indexeddb-best-practices-app-state
+          - title: Using the Cache API
+            path: /web/fundamentals/instant-and-offline/web-storage/cache-api
+          - title: IndexedDB Best Practices
+            path: /web/fundamentals/instant-and-offline/web-storage/indexeddb-best-practices
         - title: Offline UX Considerations
           path: /web/fundamentals/instant-and-offline/offline-ux
       - title: Order Loading Thoughtfully
@@ -84,6 +86,8 @@ toc:
           path: /web/fundamentals/performance/http2/
       - title: PRPL Pattern
         path: /web/fundamentals/performance/prpl-pattern/
+      - title: Resource Prioritization
+        path: /web/fundamentals/performance/resource-prioritization
     - title: Rendering Performance
       section:
       - title: Overview

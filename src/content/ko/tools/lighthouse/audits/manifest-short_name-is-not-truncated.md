@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '홈 화면에 표시되었을 때 매니페스트의 short_name이 잘리지 않음' Lighthouse 감사의 참조 문서입니다.
 

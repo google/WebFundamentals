@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Properly Size Images" Lighthouse audit.
 
@@ -24,14 +24,14 @@ of each image, and then specify which version to use in your HTML or CSS using
 media queries, viewport dimensions, and so on. See [Images in markup][iim]
 or [Images in CSS][iic] to learn more.
 
-[iim]: /web/fundamentals/design-and-ui/responsive/images#images_in_markup
-[iic]: /web/fundamentals/design-and-ui/responsive/images#images_in_css
+[iim]: /web/fundamentals/design-and-ux/responsive/images#images_in_markup
+[iic]: /web/fundamentals/design-and-ux/responsive/images#images_in_css
 
 Another strategy is to use vector-based image formats, like SVG. With a
 finite amount of code, an SVG image can scale to any size. See [Replace
 complex icons with SVG][svg] to learn more.
 
-[svg]: /web/fundamentals/design-and-ui/responsive/images#replace_complex_icons_with_svg
+[svg]: /web/fundamentals/design-and-ux/responsive/images#replace_complex_icons_with_svg
 
 Yet another strategy is called "client hints". With client hints, the browser
 advertises its viewport dimensions and device pixel ratio when requesting

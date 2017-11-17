@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para las auditorías de Lighthouse "El sitio no usa etiquetas de enlaces que demoran la primera pintura" y "El sitio no usa etiquetas de secuencias de comandos en el encabezado que demoran la primera pintura".
 

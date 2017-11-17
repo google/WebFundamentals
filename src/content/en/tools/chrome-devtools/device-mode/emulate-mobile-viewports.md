@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools' Device Mode lets you mimic how your development  site will look in production on a range of devices.
 
@@ -196,7 +196,7 @@ Some examples of "Device Pixel Ratio" (DPR) sensitivity on the web are:
 * CSS [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) 
   rules.
 
-* The [srcset](/web/fundamentals/design-and-ui/media/images/images-in-markup) 
+* The [srcset](/web/fundamentals/design-and-ux/responsive/images#images-in-markup) 
   attribute on images.
 
 * The `window.devicePixelRatio` property.
@@ -209,7 +209,7 @@ pixelated.
 
 ### Media queries {: #media-queries }
 
-[Media queries](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)
+[Media queries](/web/fundamentals/design-and-ux/responsive/#use-media-queries)
 are an essential part of responsive web design.To view the media query inspector,
 click **Show Media queries** in the three dot menu. The DevTools detect media
 queries in your stylesheets and display them as colored bars in the top ruler.

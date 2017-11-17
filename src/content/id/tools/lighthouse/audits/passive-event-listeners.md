@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk audit Lighthouse "Situs Menggunakan Event Listener Pasif untuk Meningkatkan Kinerja Pengguliran".
 

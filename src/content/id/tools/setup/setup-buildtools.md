@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Bangun situs multi-perangkat Anda dari nol. Pelajari cara mempercepat development dan membuat situs yang dimuat cepat bersama serangkaian alat proses pembangunan.
 

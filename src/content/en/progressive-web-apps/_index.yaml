@@ -1,5 +1,5 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/progressive-web-apps/_book.yaml
 title: Progressive Web Apps
 landing_page:
   custom_css_path: /web/progressive-web-apps/styles/wf-pwa.css
@@ -124,7 +124,7 @@ landing_page:
       - description: >
           <ul class="checkmarks">
             <li>
-              <a href="/web/fundamentals/engage-and-retain/app-install-banners/">
+              <a href="/web/fundamentals/app-install-banners">
               Worthy of being on the home screen</a><br>
               When the Progressive Web App criteria are met, Chrome prompts
               users to add the Progressive Web App to their home screen.
@@ -204,7 +204,7 @@ landing_page:
       - description: >
           <ul>
             <li>
-              <a href="/web/fundamentals/engage-and-retain/app-install-banners/">
+              <a href="/web/fundamentals/app-install-banners">
                 App Install Banners
               </a><br>Chrome uses a set of criteria and visit frequency
               heuristics to determine when to show the banner.

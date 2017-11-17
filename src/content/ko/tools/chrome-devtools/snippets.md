@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 스니펫은 Chrome DevTools의 Sources 패널 내에서 작성하고 실행할 수 있는 소형 스크립트입니다. 이들은 어느 페이지에서나 액세스하고 실행할 수 있습니다. 스니펫을 실행하면 현재 열려 있는 페이지의 맥락에 따라 실행됩니다.
 

@@ -37,6 +37,9 @@ var RE_INCLUDE_MD = /^<<(.*?)>>/gm;
 var RE_INCLUDE_FILE = /["|'](.*)["|']/;
 var RE_INCLUDES = /^{%\s?include ["|'](.*)["|']\s?%}/gm;
 
+const RE_INCLUDE_CODE = /{% includecode .*?%}/gm;
+const RE_INCLUDE_CODE_PATH = /content_path=["']?(.*?)["' ]/;
+
 var RE_SINGLE_LINE_COMMENT = /^{%\s?comment\s?%}.*{%\s?endcomment\s?%}$/gm;
 
 var RE_MD_INCLUDE = /^{#\s?wf_md_include\s?#}/m;
@@ -88,6 +91,8 @@ exports.RE_MD_INCLUDE = RE_MD_INCLUDE;
 exports.RE_INCLUDES = RE_INCLUDES;
 exports.RE_INCLUDE_MD = RE_INCLUDE_MD;
 exports.RE_INCLUDE_FILE = RE_INCLUDE_FILE;
+exports.RE_INCLUDE_CODE = RE_INCLUDE_CODE;
+exports.RE_INCLUDE_CODE_PATH = RE_INCLUDE_CODE_PATH;
 exports.RE_SINGLE_LINE_COMMENT = RE_SINGLE_LINE_COMMENT;
 exports.RE_AUTO_GENERATED = RE_AUTO_GENERATED;
 exports.RE_DEVSITE_TRANSLATION = RE_DEVSITE_TRANSLATION;

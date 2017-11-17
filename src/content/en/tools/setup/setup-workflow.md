@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Set up persistent authoring in Chrome DevTools so you can both see your changes immediately and save those changes to disk.
 

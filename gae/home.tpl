@@ -32,6 +32,9 @@
         margin-top: 48px;
       }
     </style>
+    {% autoescape off %}
+      {{ head }}
+    {% endautoescape %}
   </head>
   <body class="devsite-uhura devsite-landing-page devsite-header-no-lower-tabs" id="top_of_page">
     <div class="devsite-wrapper">
@@ -88,21 +91,13 @@
                 <div class="devsite-doc-set-nav-row devsite-full-site-width">
                   <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
                     <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
-                      <li class="devsite-doc-set-nav-tab-container">
-                        <a href="#" class="devsite-doc-set-nav-active devsite-doc-set-nav-tab">
-                          Tab 1
-                        </a>
-                      </li>
-                      <li class="devsite-doc-set-nav-tab-container">
-                        <a href="#" class="devsite-doc-set-nav-tab">
-                          Tab 1
-                        </a>
-                      </li>
-                      <li class="devsite-doc-set-nav-tab-container">
-                        <a href="#" class="devsite-doc-set-nav-tab">
-                          Tab 1
-                        </a>
-                      </li>
+                      {% for tab in lowerTabs %}
+                        <li class="devsite-doc-set-nav-tab-container">
+                          <a href="{{tab.path}}" class="devsite-doc-set-nav-tab">
+                            {{tab.name}}
+                          </a>
+                        </li>
+                      {% endfor %}
                     </ul>
                   </nav>
                 </div>

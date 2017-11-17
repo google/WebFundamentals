@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:通过每次执行一个代码行或一个函数，您可以观察数据和页面中的变化，准确了解正在发生什么。
 

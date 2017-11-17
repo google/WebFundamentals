@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Device Mode pada Chrome DevTools digunakan untuk meniru tampilan situs development Anda di tahap produksi di berbagai perangkat.
 
@@ -175,7 +175,7 @@ Berikut beberapa contoh sensitivitas "Rasio Piksel Perangkat" (DPR) di web:
 * Aturan [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) 
   CSS.
 
-* Atribut [srcset](/web/fundamentals/design-and-ui/media/images/images-in-markup) 
+* Atribut [srcset](/web/fundamentals/design-and-ux/media/images/images-in-markup) 
   pada gambar.
 
 * Properti `window.devicePixelRatio`.
@@ -188,7 +188,7 @@ mengalami pikselisasi.
 
 ### Kueri media {: #media-queries }
 
-[Kueri media](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)
+[Kueri media](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)
 adalah bagian penting dari desain web responsif. Untuk menampilkan pemeriksa kueri media,
 klik **Show Media queries** di menu tiga titik. DevTools mendeteksi kueri
 media di stylesheet dan menampilkannya sebagai bilah berwarna di penggaris atas.

@@ -1,0 +1,25 @@
+toc:
+- title: Overview
+  path: /web/tools/workbox/
+- title: Get Started
+  section:
+  - title: webpack
+    path: /web/tools/workbox/get-started/webpack
+  - title: Gulp
+    path: /web/tools/workbox/get-started/gulp
+  - title: NPM
+    path: /web/tools/workbox/get-started/npm-script
+- title: Examples
+  path: /web/tools/workbox/examples
+- title: Codelab
+  path: https://codelabs.developers.google.com/codelabs/workbox-lab/
+- title: Reference Docs
+  section:
+  - title: "Overview"
+    path: /web/tools/workbox/reference-docs/latest/
+  - include: /web/tools/workbox/reference-docs/latest/_toc.yaml
+- title: Community
+  path: /web/tools/workbox/community
+- title: Github
+  path: https://github.com/GoogleChrome/workbox
+  status: external

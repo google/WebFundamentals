@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: すべてのデスクトップ ブラウザには、すぐに使える開発ツールが用意されています。ブラウザの拡張機能やプラグインを使って、開発ツールの拡張や追加を行います。
 

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
-{# wf_updated_on: 2017-04-14 #}
+{# wf_updated_on: 2017-09-25 #}
 {# wf_published_on: 2017-04-14 #}
 
 # Progressive Web Apps Training {: .page-title }
@@ -33,7 +33,7 @@ experiences. It shows how to use service workers, APIs, and an application
 shell architecture for meaningful offline experiences, fast first load, and
 easy user reengagement upon repeat visits.
 
-## Course Materials
+## Course materials
 
 ### Codelabs
 
@@ -50,7 +50,13 @@ Each codelab has an accompanying text that explains the concepts in the
 codelab in more detail. Links to corresponding texts are included at the
 top of each codelab.
 
-### Other Resources
+### Other resources
 
 Find more codelabs on
 [codelabs.developers.google.com](https://codelabs.developers.google.com)
+
+## Agency training
+
+Are you an agency in the UK, India or Indonesia? <a href="https://goo.gl/BgmVzk"
+class="gc-analytics-event" data-category="web" data-label="agency-training">
+Apply to attend the training</a> with professional trainers at no cost.

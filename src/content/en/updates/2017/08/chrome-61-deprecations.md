@@ -2,8 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 61 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-
-{# wf_updated_on: 2017-09-18 #}
+{# wf_updated_on: 2017-10-23 #}
 {# wf_published_on: 2017-08-03 #}
 {# wf_tags: deprecations,removals,chrome61 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -40,25 +39,6 @@ URL should instead escape these characters.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5735596811091968) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=680970)
 
-### Remove usage of notifications from insecure iframes
-
-Permission requests from iframes can confuse users since it is difficult to
-distinguish between the containing page's origin and the origin of the iframe
-that is making the request. When the requests scope is unclear, it is difficult
-for users to judge whether to grant or deny permission.
-
-Disallowing notifications in iframes will also align the requirements for
-notification permission with that of push notifications, easing friction for
-developers.
-
-Developers who need this functionality can open a new window to request
-notification permission.
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/n37ij1E_1aY/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/6451284559265792) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693)
-
-
 ### Deprecate and remove Presentation API on insecure contexts
 
 It's been found that on insecure origins, the Presentation API can be used as a
@@ -67,42 +47,13 @@ API can be used to spoof content. It's also possible to exfiltrate data from
 running presentation.
 
 In aligning with Blink’s intention to [remove powerful features on insecure
-origins](https://www.chromium.org/Home/chromium-security/
-deprecating-powerful-features-on-insecure-origins), we plan to deprecate and
+origins](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins), we plan to deprecate and
 remove support for the Presentation API on insecure contexts. Starting in Chrome
 61, `PresentationRequest.start()` will no longer function on insecure origins.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/lumj0lVdtHA/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5766218384408576) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=733381)
-
-
-## CSS
-
-### Make shadow-piercing descendant combinator behave like descendent combinator
-
-Note: This change was originally slated for Chrome 60, but was bumped after
-Chrome 60 removals were published.
-
-The shadow-piercing descendant combinator (`>>>`), part of
-[CSS Scoping Module Level 1](https://drafts.csswg.org/css-scoping/)
-, was intended to match the children of a particular ancestor element
-even when they appeared inside of a shadow tree. This had some limitations.
-First, [per the spec](https://drafts.csswg.org/css-scoping/#deep-combinator), it
-could only be used in JavaScript calls such as `querySelector()` and did not
-work in stylesheets. More importantly, browser vendors were unable to make it
-work beyond one level of the Shadow DOM.
-
-Consequently, the descendant combinator has been removed from relevant specs
-including Shadow DOM v1. Rather than break web pages by removing this selector
-from Chromium, we've chosen instead to alias the shadow-piercing descendent
-combinator to the descendant combinator. The original behavior was
-[deprecated in Chrome 45](https://www.chromestatus.com/features/6750456638341120).
-The new behavior is implemented in Chrome 61.
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/HX5Y8Ykr5Ns/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/4964279606312960) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=489954)
 
 ## JavaScript
 
@@ -119,6 +70,26 @@ the JavaScript spec. As such, this ability is removed in Chrome 61. As of
 February 2016, Firefox is already in compliance.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695385)
+
+### Remove usage of notifications from insecure iframes
+
+Note: Removal was pushed to Chrome 62.
+
+Permission requests from iframes can confuse users since it is difficult to
+distinguish between the containing page's origin and the origin of the iframe
+that is making the request. When the requests scope is unclear, it is difficult
+for users to judge whether to grant or deny permission.
+
+Disallowing notifications in iframes will also align the requirements for
+notification permission with that of push notifications, easing friction for
+developers.
+
+Developers who need this functionality can open a new window to request
+notification permission.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/n37ij1E_1aY/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/6451284559265792) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693)
 
 <<../../_deprecation-policy.md>>
 

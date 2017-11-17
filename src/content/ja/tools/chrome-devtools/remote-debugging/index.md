@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Windows、Mac、または Linux コンピュータから Android 端末上のライブ コンテンツのリモート デバッグを行います。
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“HTML 具有视口元标记”Lighthouse 审查的参考文档。
 
@@ -15,7 +15,7 @@ description:“HTML 具有视口元标记”Lighthouse 审查的参考文档。
 
 
 * [配置视口](/speed/docs/insights/ConfigureViewport)。
-* [设置视口](/web/fundamentals/design-and-ui/responsive/#set-the-viewport)。
+* [设置视口](/web/fundamentals/design-and-ux/responsive/#set-the-viewport)。
 
 ## 如何通过此审查{: #how }
 

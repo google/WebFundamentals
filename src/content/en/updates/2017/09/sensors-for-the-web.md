@@ -393,7 +393,7 @@ for the Chrome implementation.
 - Demo projects: [https://intel.github.io/generic-sensor-demos/](https://intel.github.io/generic-sensor-demos/)
 - Generic Sensor API specification: [https://w3c.github.io/sensors/](https://w3c.github.io/sensors/)
 - Specification issues: [https://github.com/w3c/sensors/issues](https://github.com/w3c/sensors/issues)
-- W3C working group mailing list: [public-device-apis@w3.org](public-device-apis@w3.org)
+- W3C working group mailing list: [public-device-apis@w3.org](mailto:public-device-apis@w3.org)
 - Chrome Feature Status: [https://www.chromestatus.com/feature/5698781827825664](https://www.chromestatus.com/feature/5698781827825664)
 - Implementation Bugs: [http://crbug.com?q=component:Blink>Sensor](http://crbug.com?q=component:Blink>Sensor)
 - Sensors-dev Google group: [https://groups.google.com/a/chromium.org/forum/#!forum/sensors-dev](https://groups.google.com/a/chromium.org/forum/#!forum/sensors-dev)

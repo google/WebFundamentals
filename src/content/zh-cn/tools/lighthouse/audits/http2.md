@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“网站使用 HTTP/2 传输自身资源”Lighthouse 审查的参考文档。
 

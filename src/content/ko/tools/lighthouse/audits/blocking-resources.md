@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '첫 번째 페인트를 지연시키는 리소스를 사용하지 않는 사이트'와 '헤드에서 첫 번째 페인트를 지연시키는 스크립트 태그를 사용하지 않는 사이트' Lighthouse 감사의 참조 문서입니다.
 

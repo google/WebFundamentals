@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Uses HTTPS" Lighthouse audit.
 
@@ -36,7 +36,7 @@ certificates, check out [Let's Encrypt](https://letsencrypt.org/){: .external }.
 on enabling HTTPS on your servers, see the following set of docs: [Encrypting
 data in transit](/web/fundamentals/security/encrypt-in-transit/enable-https).
 
-If you're page is already running on HTTPS but you're failing this audit, then
+If your page is already running on HTTPS but you're failing this audit, then
 you may have problems with mixed content. Mixed content is when a secure site
 requests an unprotected (HTTP) resource. Check out the following doc on the
 Chrome DevTools Security panel to learn how to debug these situations:

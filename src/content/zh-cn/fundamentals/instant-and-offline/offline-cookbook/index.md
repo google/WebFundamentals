@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on:2016-08-26 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on:2014-12-09 #}
 
 # 离线指南 {: .page-title }
@@ -235,7 +235,7 @@ ServiceWorker 为您提供一个 `install` 事件。您可以使用该事件做�
 
 <img src="images/cm-on-push.png">
 
-[Push API](/web/fundamentals/engage-and-retain/push-notifications/) 是基于 ServiceWorker 构建的另一个功能。
+[Push API](/web/fundamentals/push-notifications) 是基于 ServiceWorker 构建的另一个功能。
 该 API 允许唤醒 ServiceWorker 以响应来自操作系统消息传递服务的消息。即使用户没有为您的网站打开标签，也会如此，仅唤醒 ServiceWorker。
 您从页面请求执行此操作的权限，用户将收到提示。
 

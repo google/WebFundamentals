@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: O modo de eventos de linha do tempo exibe todos os eventos acionados durante uma gravação. Use a referência ao evento de linha do tempo para saber mais sobre cada tipo de evento de linha do tempo.
 

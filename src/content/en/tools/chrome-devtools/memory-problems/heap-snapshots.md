@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to record heap snapshots with the Chrome DevTools heap profiler and find memory leaks.
 

@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Manifest Exists" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-20 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-09-20 #}
 
 # Manifest Exists  {: .page-title }
@@ -21,7 +21,7 @@ User's Home Screen](https://codelabs.developers.google.com/codelabs/add-to-home-
 
 For a more loosely-structured guide that goes into more depth about Web App
 Manifests, see [Improve User Experiences with a Web App
-Manifest](/web/fundamentals/engage-and-retain/web-app-manifest).
+Manifest](/web/fundamentals/web-app-manifest).
 
 Use what you learn in these guides to add A2HS support in your
 own web app.

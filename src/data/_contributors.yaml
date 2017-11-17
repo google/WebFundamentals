@@ -130,6 +130,7 @@ lucaberton:
   country: IT
   role:
     - contributor
+    - translator
   homepage: 'http://mrevolution.eu'
   google: +LucaBerton
   twitter: mrevolution85
@@ -258,7 +259,7 @@ samchen:
   role:
     - translator
   homepage: 'http://www.zfanw.com/blog/'
-  google: +%E9%99%88%E4%B8%89
+  google: '104787680206754797134'
   twitter: chenxsan
   email: chenxsan@google.com
   description:
@@ -507,7 +508,7 @@ simongong:
   country: JP
   role:
     - translator
-  google: +%E9%BE%9A%E6%8C%AF%E5%8D%8Esimon
+  google: '113525015220376733647'
   email: simon.gong64@gmail.com
   description:
     en: Simon is a Full Stack Developer
@@ -578,6 +579,17 @@ jgruber:
   email: jgruber@google.com
   description:
     en: Jakob is an engineer working on V8
+
+yigu:
+  name:
+    given: Yi
+    family: Gu
+  org:
+    name: Google
+    unit: Chrome
+  country: Canada
+  role:
+    - author
 
 yangguo:
   name:
@@ -930,13 +942,8 @@ wayouliu:
   google: +WayouLiu
   twitter: liuwayong
   github: wayou
-  lanyrd:
   description:
     en: "Wayou is a developer and loves the web"
-  org:
-    name:
-    unit:
-  country:
   role:
     - translator
   email: liuwayong@gmail.com
@@ -1177,7 +1184,8 @@ yvoschaap:
   google: +yvo
   twitter: yvoschaap
   email: yvo@yvoschaap.com
-  description: "Loves to code and build great things."
+  description:
+    en: "Loves to code and build great things."
 
 moinshaikh:
   name:
@@ -1270,6 +1278,19 @@ alansilva:
   description:
     en: Alan is a JavaScript Developer
 
+vinamratasingal:
+  name:
+    given: Vinamrata
+    family: Singal
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - author
+  description:
+    en: Lighthouse Product Manager
+
 andismith:
   name:
     given: Andi
@@ -1313,6 +1334,20 @@ emilystark:
   homepage: 'https://www.emilymstark.com/'
   twitter: estark37
   email: estark@chromium.org
+
+sunyunjia:
+  name:
+    given: Sandra
+    family: Sun
+  org:
+    name: Google
+    unit: Chrome
+  country: Canada
+  role:
+    - engineer
+  email: sunyunjia@google.com
+  description:
+    en: "Software Engineer working on Chromium"
 
 surma:
   name:
@@ -1384,6 +1419,23 @@ fouadvaladbeigi:
     - author
   google: "115771375659957547634"
   email: fouad.valadbeigi@unit9.com
+
+majidvp:
+  name:
+    given: Majid
+    family: Valipour
+  homepage: http://zgrs.ca
+  twitter: majido
+  github: majido
+  description:
+    en: "Software Engineer working on Chromium"
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  email: majidvp@google.com
 
 johyphenel:
   name:

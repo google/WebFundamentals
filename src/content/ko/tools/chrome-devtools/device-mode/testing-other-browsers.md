@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 사이트가 Chrome과 Android에서 모두 잘 실행되는 것을 확인했다고 할 일이 끝난 것은 아닙니다. Device Mode로 iPhone과 같은 여러 다른 기기를 시뮬레이션할 수 있지만, 그래도 다른 브라우저 솔루션에서 에뮬레이션을 확인해보는 것이 좋습니다.
 

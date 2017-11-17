@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools menyediakan berbagai alat untuk membantu Anda memperbaiki laman web yang melontarkan pengecualian dan men-debug kesalahan di JavaScript Anda.
 

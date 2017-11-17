@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: DevTools 콘솔에서 페이지의 항목 상태를 탐색합니다.
 

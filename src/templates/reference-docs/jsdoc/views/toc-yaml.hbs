@@ -1,0 +1,7 @@
+toc:
+{{#each symbols~}}
+- title: "{{tocYamlName}}"
+  path: {{../basepath}}/{{basename (url longname) '.html'}}
+{{/each}}
+- title: "Index of all"
+  path: {{basepath}}/index-all

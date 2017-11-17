@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-12T20:18:22Z #}
+{# wf_updated_on: 2017-10-10 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -79,7 +79,7 @@ This folder contains:
 
 Because IndexedDB isn't supported by all browsers, we need to check that the user's browser supports it before using it.
 
-Replace TODO 2 in <strong>app/js/main.js</strong> with the following code:
+Replace TODO 2 in __app/js/main.js__ with the following code:
 
 #### main.js
 
@@ -102,7 +102,7 @@ if (!('indexedDB' in window)) {
 
 Create the database for your app. 
 
-In <strong>js/main.js</strong>, replace `var dbPromise;` with the following code:
+In __js/main.js__, replace `var dbPromise;` with the following code:
 
 #### main.js
 
@@ -110,13 +110,11 @@ In <strong>js/main.js</strong>, replace `var dbPromise;` with the following code
 var dbPromise = idb.open('couches-n-things', 1);
 ```
 
-In the browser, [open IndexedDB](tools-for-pwa-developers#indexeddb) in the developer tools and confirm that your database exists.
-
-Open the QUnit test page, __app/test/test.html__, in another browser tab. This page contains several tests for testing our app at each stage of the codelab. Passed tests are blue and failed tests are red. Your app should pass the first test that checks whether the `couches-n-things` database exists in the browser.
+Save the file and refresh the page in the browser. [Open IndexedDB](tools-for-pwa-developers#indexeddb) in the developer tools and confirm that your database exists.
 
 
 
-Note: Be sure to open the test page using the localhost address so that it opens from the server and not directly from the file system.
+The IndexedDB UI in DevTools doesn't always accurately reflect what's in the database. In Chrome, if you don't see your changes, try right-clicking on __IndexedDB__ in the __Application__ tab and then click __Refresh IndexedDB__. If it still doesn't update, then try closing and re-opening DevTools.
 
 
 
@@ -126,7 +124,7 @@ Note: Be sure to open the test page using the localhost address so that it opens
 
 
 
-Note: If at any point in the codelab your database gets into a bad state, you can delete it from the console with the following command: <code>indexedDB.deleteDatabase('couches-n-things');</code>. Note that you can't delete the database while the testing page is open.
+Note: If at any point in the codelab your database gets into a bad state, you can delete it in Chrome DevTools by going to the __Application__ tab, clicking on the database name under IndexedDB, and clicking the __Delete database__ button. Alternatively, you can click __Clear storage__ (in the Application tab) and then click the __Clear site data__ button. In all browsers you can also delete the database from the console with the following command: `indexedDB.deleteDatabase('couches-n-things');`. 
 
 
 
@@ -134,13 +132,7 @@ Note: If at any point in the codelab your database gets into a bad state, you ca
 
 Let's create an object store in the database to hold the furniture objects.
 
-
-
-Note: Close the test page. The database version can't be changed while another page is using the database.
-
-
-
-To complete TODO 3.2 in <strong>main.js</strong>, replace <code>var dbPromise = idb.open('couches-n-things', 1);</code> with the following:
+Replace `var dbPromise = idb.open('couches-n-things', 1);` in __main.js __with the following:
 
 #### main.js
 
@@ -167,11 +159,11 @@ var dbPromise = idb.open('couches-n-things', 2, function(upgradeDb) {
 
 Save the code and reload the page in the browser. [Open IndexedDB](tools-for-pwa-developers#indexeddb) in your browser's developer tools and expand the `couches-n-things` database. You should see the empty `products` object store.
 
-Open the QUnit test page. Your app should now pass the second test that checks whether the `products` object store exists.
+Open the QUnit test page, __localhost:8080/app/test/test.html__, in another browser tab. This page contains several tests for testing our app at each stage of the codelab. Passed tests are blue and failed tests are red. Your app should pass the first test that checks whether the `products` object store exists in the database. Note that you may not be able to delete the database while the testing page is open.
 
 #### Explanation
 
-To ensure database integrity, object stores and indexes can only be created during database upgrades. This means they are created inside the upgrade callback function in `idb.open`, which executes only if the version number (in this case it's `2`) is greater than the existing version in the browser or if the database doesn't exist. The callback is passed the `UpgradeDB` object (see the  [documentation](https://github.com/jakearchibald/idb#idbopenname-version-upgradecallback) for details), which is used to create the object stores.
+To ensure database integrity, object stores and indexes can only be created during database upgrades. This means they are created inside the upgrade callback function in `idb.open`, which executes only if the version number (in this case it's `2`) is greater than the existing version in the browser, or if the database doesn't exist. The callback is passed the `UpgradeDB` object (see the  [documentation](https://github.com/jakearchibald/idb#idbopenname-version-upgradecallback) for details), which is used to create the object stores.
 
 Inside the callback, we include a switch block that executes its cases based on the version of the database already existing in the browser. `case 0` executes if the database doesn't yet exist. The database already exists for us, but we need a `case 0` in case we delete the database, or in case someone else uses our app on their own machine.
 
@@ -192,7 +184,7 @@ Note: We are deliberately not including `break` statements in the switch block t
 
 Add some sample furniture items to the object store. 
 
-Replace TODO 3.3 in <strong>main.js</strong> with the following code:
+Replace TODO 3.3 in __main.js__ with the following code:
 
 #### main.js
 
@@ -256,29 +248,32 @@ dbPromise.then(function(db) {
       quantity: 11
     }
   ];
-  items.forEach(function(item) {
-    console.log('Adding item: ', item);
-    store.add(item);
+  return Promise.all(items.map(function(item) {
+      console.log('Adding item: ', item);
+      return store.add(item);
+    })
+  ).catch(function(e) {
+    tx.abort();
+    console.log(e);
+  }).then(function() {
+    console.log('All items added successfully!');
   });
-  return tx.complete;
-}).then(function() {
-  console.log('All items added successfully!');
-}).catch(function(e) {
-  console.log('Error adding items: ', e);
 });
 ```
 
-Save the file and reload the page in the browser. Click __Add Products__ and refresh the page. Confirm that the objects display in the `products` object store under `couches-n-things` in the developer tools.
+Save the file and reload the page in the browser. Click __Add Products__ and refresh the page. Confirm that the objects display in the `products` object store under `couches-n-things` in the developer tools. Remember you may need to refresh IndexedDB to see the changes by right clicking __IndexedDB__ and clicking __Refresh IndexedDB__. If that doesn't work, then try collapsing IndexedDB and closing and re-opening DevTools.
 
-Reload the test page. The app should now pass the third test that checks whether the objects have been added to the `products` object store. 
+Reload the test page. The app should now pass the next test that checks whether the objects have been added to the `products` object store. 
 
 #### Explanation
 
-All database operations must be carried out within a  [transaction](https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction). The transaction rolls back any changes to the database if any of the operations fail. This ensures the database is not left in a partially updated state. 
+All database operations must be carried out within a  [transaction](https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction). In the code we just wrote, we first open the transaction on the database object and then open the object store on the transaction. Now when we call `store.add` on that object store, the operation happens inside the transaction.
+
+We add each object to the store inside a `Promise.all`. This way if any of the `add` operations fail, we can catch the error and abort the transaction. Aborting the transaction rolls back all the changes that happened in the transaction so that if any of the events fail to add, none of them will be added to the object store. This ensures the database is not left in a partially updated state.
 
 
 
-Note: Specify the transaction mode as <code>readwrite</code> when making changes to the database (that is, using the <code>add</code>, <code>put</code>, or <code>delete</code> methods).
+Note: Specify the transaction mode as `readwrite` when making changes to the database (that is, for changes that use the `add`, `put`, or `delete` methods).
 
 
 
@@ -299,13 +294,9 @@ Note: Specify the transaction mode as <code>readwrite</code> when making changes
 
 Create some indexes on your object store.
 
+Close the test page. The database version can't be changed while another page is using the database.
 
-
-Note: Close the test page. The database version can't be changed while another page is using the database.
-
-
-
-Replace TODO 4.1 in <strong>main.js</strong> with the following code:
+Replace TODO 4.1 in __main.js__ with the following code:
 
 #### main.js
 
@@ -316,13 +307,7 @@ case 2:
   store.createIndex('name', 'name', {unique: true});
 ```
 
-
-
-__Important:__ Remember to change the version number to 3 before you test the code in the browser.
-
-
-
-The full `idb.open` method should look like this:
+Change the version number to 3 in the call to `idb.open`. The full `idb.open` method should look like this:
 
 #### main.js
 
@@ -355,9 +340,9 @@ Note: We did not include break statements in the switch block so that all of the
 
 
 
-Save the file and reload the page in the browser. Confirm that the `name` index displays in the `products` object store in the developer tools.
+Save the file and reload the page in the browser. Confirm that the `name` index displays in the `products` object store in the developer tools. You may need to refresh IndexedDB to see your changes.
 
-Open the test page. The app should now pass the fourth test that checks whether the `name` index exists.
+Open the test page. The app should now pass the next test that checks whether the `name` index exists.
 
 #### Explanation
 
@@ -370,29 +355,15 @@ In the example, we create an index on the `name` property, allowing us to search
 
 ### 4.2 Create `price` and `description` indexes
 
-To complete TODO 4.2 in <strong>main.js</strong>, write a case 3 to add  and `description` indexes to the object store. Do not include the optional <code>{unique: true}</code> argument since these values do not need to be unique.
+This step is for you to complete on your own. In __main.js__, write a `case 3` in `idb.open` to add `price` and `description` indexes to the `products` object store. Do not include the optional `{unique: true}` argument since these values do not need to be unique. The code should be very similar to the code in the previous step. Remember to change the version number of the database to 4 before testing the code.
 
-
-
-Note: Remember to change the version number of the database to 4 before testing the code.
-
-
-
-
-
-Note: Remember to close the test page. The database version can't be changed while another page is using the database.
-
-
-
-Save the code and refresh the page in the browser. Confirm that the `price` and `description` indexes display in the `products` object store in the developer tools.
-
-Open the test page. The app should now pass tests five and six. These check whether the `price` and `description` indexes have been added to the store.
+Before testing your code, close the unit test page in the browser. Save your changes to the code and refresh the page in the browser. Confirm that the `price` and `description` indexes display in the `products` object store in the developer tools. You may need to clear the database for the changes to appear in DevTools. Otherwise, you can just re-open the unit test page. If your app is passing the next two tests which check if the `price` and `description` indexes exist, you've done this step correctly.
 
 ### 4.3 Use the get method
 
 Use the indexes you created in the previous sections to retrieve items from the store.
 
-Replace TODO 4.3 in <strong>main.js</strong> with the following code:
+Add the following code to the `getByName` function in __main.js__:
 
 #### main.js
 
@@ -409,23 +380,23 @@ Save the code and refresh the page in the browser.
 
 
 
-Note: Make sure the items we added to the database in the previous step are still in the database. If the database is empty, click <strong>Add Products</strong> to populate it.
+Note: Make sure the items we added to the database in the previous step are still in the database. If the database is empty, click __Add Products__ to populate it. Don't worry about adding things twice. IndexedDB will throw errors in the console if you try to add items that already exist and won't add them to the store.
 
 
 
-Enter an item name from step 3.3 into the __By Name__ field and click __Search__ next to the text box. The corresponding furniture item should display on the page.
+Enter an item name from step 3.3 (try "Chair") into the __By Name__ field and click __Search__ next to the text box. The corresponding furniture item should display on the page.
 
-Refresh the test page. The app should pass the seventh test, which checks if the `getByName` function returns a database object.
+Refresh the test page. The app should pass the next test, which checks if the `getByName` function returns a database object.
 
 
 
-Note: The <code>get</code> method is case sensitive.
+Note: The `get` method (and consequently `getByName`) is case sensitive.
 
 
 
 #### Explanation
 
-This code calls the `get` method on the 'name' index to retrieve an item by its 'name' property.
+The __Search__ button calls the `displayByName` function, which passes the user input string to the `getByName` function. The code we just added calls the `get` method on the `name` index to retrieve an item by its `name` property.
 
 #### For more information
 
@@ -435,7 +406,7 @@ This code calls the `get` method on the 'name' index to retrieve an item by its 
 
 Use a cursor object to get items from your store within a price range.
 
-Replace TODO 4.4a in <strong>main.js</strong> with the following code:
+Replace TODO 4.4a in __main.js__ with the following code:
 
 #### main.js
 
@@ -475,11 +446,9 @@ dbPromise.then(function(db) {
 });
 ```
 
-Save the code and refresh the page in the browser. Enter some prices into the 'price' text boxes (without a currency symbol) and click __Search__. Items should appear on the page ordered by price. 
+Save the code and refresh the page in the browser. Enter some prices into the 'price' text boxes (without a currency symbol; try 200 and 500) and click __Search__. Items should appear on the page ordered by price. 
 
-<strong>Optional</strong>: Replace TODO 4.4b in the <code>getByDesc()</code> function with the code to get the items by their descriptions. The first part is done for you. The function uses the 'only' method on <code>IDBKeyrange</code> to match all items with exactly the provided description.
-
-Save the code and refresh the page in the browser. Enter a description (must match the description in the desired object exactly) into the description text box and click __Search__.
+__Optional__: On your own time, replace TODO 4.4b in the `getByDesc()` function with the code to get the items by their descriptions. The first part is done for you. The function uses the `only` method on `IDBKeyrange` to match all items with exactly the provided description. To test your code, try putting "A light, high-stool" into the __By Description__ input and clicking __Search__.
 
 #### Explanation
 
@@ -493,7 +462,7 @@ After getting the price values from the page, we determine which method to call 
 
 #### Solution code
 
-The solution code can be found in the __04-4-get-data__ directory.
+The solution code for the lab up to this point can be found in the __04-4-get-data__ directory.
 
 <div id="5"></div>
 
@@ -507,33 +476,21 @@ In this section we create an `orders` object store to contain a user's orders. W
 
 ### 5.1 Create an orders object store
 
-Create an object store to hold pending orders.
+This step is for you to complete on your own. Create an object store to hold pending orders.
 
-To complete TODO 5.1 in <strong>main.js</strong>, write a case 4 that adds an `orders` object store to the database. Make the <code>keyPath</code> the `id` property. This is very similar to creating the `products` object store in <code>case 1</code>.
+To complete TODO 5.1 in __main.js__, write a case 4 that adds an `orders` object store to the database. Make the `keyPath` the `id` property. This is very similar to creating the `products` object store in `case 1`. Remember to change the version number of the database to 5 so the callback executes.
 
+Before testing your code, close the unit test page. Save the code and refresh the page in the browser. Confirm that the object store displays in the developer tools.
 
-
-__Important:__ Remember to change the version number of the database to 5 so the callback executes.
-
-
-
-
-
-Note: Remember to close the test page. The database version can't be changed while another page is using the database.
-
-
-
-Save the code and refresh the page in the browser. Confirm that the object store displays in the developer tools.
-
-Open the test page. Your app should pass the eighth test which tests if the `orders` object store exists.
+Open the test page. Your app should pass the next test which tests if the `orders` object store exists.
 
 ### 5.2 Add sample orders
 
-To complete TODO 5.2 in <strong>main.js</strong>, add the following items to the `orders` object store.
+This step is for you to complete on your own. In the `addOrders` function in __main.js__, write the code to add the following items to the `orders` object store:
 
 
 
-Note: You'll need to write the code to actually add the items.
+__Hint: __This code will be very similar to the `addProducts` function that we wrote at the start of the lab.
 
 
 
@@ -573,31 +530,31 @@ var items = [
 
 Save the code and refresh the page in the browser. Click __Add Orders__ and refresh the page again. Confirm that the objects show up in the `orders` store in the developer tools.
 
-Refresh the test page. Your app should now pass the ninth test which checks if the sample orders were added to the `orders` object store.
+Refresh the test page. Your app should now pass the next test which checks if the sample orders were added to the `orders` object store.
 
 ### 5.3 Display orders
 
-To complete TODO 5.3 in <strong>main.js</strong>, write the code to display all of the objects in the `orders` object store on the page. This is very similar to the <code>getByPrice</code> function except you don't need to define a range for the cursor. The code to insert the <code>s</code> variable into the HTML is already written.
+This step is for you to complete on your own. To complete TODO 5.3 in __main.js__, write the code to display all of the objects in the `orders` object store on the page. This is very similar to the `getByPrice` function except you don't need to define a range for the cursor and you should display the name instead of the price. The code to insert the `s` variable into the HTML is already written.
 
 Save the code and refresh the page in the browser. Click __Show Orders__ to display the orders on the page.
 
 ### 5.4 Get all orders
 
-To complete TODO 5.4 in the <code>getOrders</code> function in <strong>main.js</strong>, write the code to get all objects from the `orders` object store. You must use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll">getAll() method</a> on the object store. This returns an array containing all the objects in the store, which is then passed to the <code>processOrders</code> function in <code>.then</code>.
+This step is for you to complete on your own. To complete TODO 5.4 in the `getOrders` function in __main.js__, write the code to get all objects from the `orders` object store. You must use the  [getAll() method](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll) on the object store. This returns an array containing all the objects in the store, which is then passed to the `processOrders` function in in the `fulfillOrders` function.
 
 
 
-__Hint:__ Return the call to <code>dbPromise</code> otherwise the orders array will not be passed to the <code>processOrders</code> function.
+__Hint:__ Return the call to `dbPromise` otherwise the orders array will not be passed to the `processOrders` function.
 
 
 
-Refresh the test page. Your app should now pass the tenth test, which checks if the `getOrders` function gets objects from the `orders` object store.
+Refresh the test page. Your app should now pass the next test, which checks if the `getOrders` function gets objects from the `orders` object store.
 
 ### 5.5 Process the orders
 
 This step processes the array of orders passed to the `processOrders` function.
 
-Replace TODO 5.5 in <strong>main.js</strong> with the following code:
+Replace TODO 5.5 in __main.js__ with the following code:
 
 #### main.js
 
@@ -628,7 +585,7 @@ This code gets each object from the `products` object store with an id matching 
 
 Now we need to check if there are enough items left in the `products` object store to fulfill the order.
 
-Replace TODO 5.6 in <strong>main.js</strong> with the following code:
+Replace TODO 5.6 in __main.js__ with the following code:
 
 #### main.js
 
@@ -647,7 +604,7 @@ return new Promise(function(resolve, reject) {
 });
 ```
 
-Refresh the test page. Your app should now pass the eleventh test, which checks if the `decrementQuantity` function subtracts the quantity ordered from the quantity available.
+Refresh the test page. Your app should now pass the next test, which checks if the `decrementQuantity` function subtracts the quantity ordered from the quantity available.
 
 #### Explanation
 
@@ -659,12 +616,12 @@ Here we are subtracting the quantity ordered from the quantity left in the `prod
 
 ### 5.7 Update the `products` object store
 
-Finally, we must update the `products` object store with the new quantities of each item.
+Finally, we must update the `products` object store with the new quantities of each item. This step is for you to complete on your own.
 
-Replace TODO 5.7 in <strong>main.js</strong> with the code to update the items in the `products` objects store with their new quantities. We already updated the values in the <code>decrementQuantity</code> function and passed the array of updated objects into the <code>updateProductsStore</code> function. All that's left to do is use <a id="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put">ObjectStore.put</a> to update each item in the store. A few hints:
+Replace TODO 5.7 in __main.js__ with the code to update the items in the `products` objects store with their new quantities. We already updated the values in the `decrementQuantity` function and passed the array of updated objects into the `updateProductsStore` function. All that's left to do is use  [ObjectStore.put](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put) to update each item in the store. A few hints:
 
-* Remember to make the transaction mode <code>'readwrite'</code>
-* Remember to return <code>transaction.complete</code> (<code>tx.complete</code>) after putting the items into the store
+* Remember to make the transaction mode `'readwrite'`
+* Remember to return `tx.complete` after putting the items into the store
 
 Save the code and refresh the page in the browser. Check the quantity property of the cabinet, armchair, and couch items in the products object store. Click __Fulfill__ in the page, refresh, and check the quantities again. They should be reduced by the amount of each product that was ordered.
 

@@ -38,7 +38,7 @@ Note: Notez que la propriété <code>visibility: hidden</code> est différente d
 
 La sortie finale est un affichage qui contient à la fois les informations sur le contenu et sur le style de tout le contenu visible à l'écran. Nous avons presque terminé ! **Une fois l'arborescence d'affichage en place, nous pouvons passer à l'étape de 'mise en page'.**
 
-Jusqu'à maintenant, nous avons calculé quels nœuds doivent être visibles, ainsi que leurs styles calculés. Toutefois, nous n'avons pas calculé leur position et leur taille exactes dans la [fenêtre](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) de l'appareil. C'est l'étape de 'mise en page', parfois appelée 'ajustement de la mise en page'.
+Jusqu'à maintenant, nous avons calculé quels nœuds doivent être visibles, ainsi que leurs styles calculés. Toutefois, nous n'avons pas calculé leur position et leur taille exactes dans la [fenêtre](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) de l'appareil. C'est l'étape de 'mise en page', parfois appelée 'ajustement de la mise en page'.
 
 Pour définir la taille et la position exactes de chaque objet, le navigateur commence à la racine de l'arborescence d'affichage et la traverse pour calculer la géométrie de chaque objet sur la page. Prenons un exemple simple et concret :
 

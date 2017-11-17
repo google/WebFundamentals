@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Configure criação persistente no Chrome DevTools para poder ver as mudanças imediatamente e salvá-las no disco.
 

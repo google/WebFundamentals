@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2017-02-02T18:00:00.000Z #}
-{# wf_updated_on: 2017-02-02T18:00:00.000Z #}
+{# wf_published_on: 2017-02-02 #}
+{# wf_updated_on: 2017-02-02 #}
 {# wf_featured_image: /web/showcase/2017/images/matterport/VR_FourSeason_InGame.jpg #}
 {# wf_featured_snippet: <emphasis>Matterport VR</emphasis> lets you experience thousands of real-world places in interactive virtual reality. Using a combination of automated 3D interior mapping technology and robust vision processing algorithms, Matterport's 3D media system enables anyone to create immersive virtual environments from real places. Unlike 360˚ photos, Matterport Spaces allow users to interactively walk through any location.<br><br>With WebVR, anyone can <a href="https://matterport.com/virtual-reality/webvr/">explore Matterport's library</a> of over 300,000 VR Spaces with a WebVR-enabled browser. Tour everything from celebrity homes to museums, canyons, iconic architecture, and beyond. #}
 {# wf_tags: webvr,casestudy #}

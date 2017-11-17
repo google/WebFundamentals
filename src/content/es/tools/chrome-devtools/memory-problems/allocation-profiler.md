@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Usa la herramienta de generación de perfiles de asignación para buscar objetos que la recolección de elementos no usados no procese correctamente, y que sigan reteniendo memoria.
 

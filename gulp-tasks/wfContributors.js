@@ -74,7 +74,7 @@ function buildIndividualPages(contributors) {
     if (!(key in filesByAuthor)) {
       return;
     }
-    filesByAuthor[key].sort(wfHelper.updatedComparator);
+    filesByAuthor[key].sort(wfHelper.publishedComparator);
     var name = contributors[key].name;
     var ts = fs.readFileSync(TEMPLATE_ARTICLE_LIST, 'utf8');
     var template = Handlebars.compile(ts);

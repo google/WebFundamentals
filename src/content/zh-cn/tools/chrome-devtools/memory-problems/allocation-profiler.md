@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用分配分析器工具可以查找未正确执行垃圾回收的对象，并继续保留内存。
 

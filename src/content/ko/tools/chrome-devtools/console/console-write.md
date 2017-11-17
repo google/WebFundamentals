@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 콘솔 로깅은 페이지 또는 애플리케이션이 수행하는 작업을 검사하는 강력한 방법입니다. console.log()로 시작하고 다른 고급 용도를 탐구해 봅시다.
 

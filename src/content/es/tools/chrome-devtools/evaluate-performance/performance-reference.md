@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: El modo de eventos de la línea de tiempo muestra todos los eventos desencadenados mientras se realiza una grabación. Usa la referencia de eventos de la línea de tiempo para obtener más información sobre cada tipo de evento de esta.
 

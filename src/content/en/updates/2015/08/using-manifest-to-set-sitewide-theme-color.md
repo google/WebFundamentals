@@ -14,7 +14,7 @@ description: Set a theme-color in the manifest and have it available to all page
 
 Chrome introduced the concept of a theme color for your site in 2014. The theme color
 is a hint from your web page that tells the browser what color to tint
- [UI elements such as the address bar](/web/fundamentals/design-and-ui/browser-customization/theme-color).  
+ [UI elements such as the address bar](/web/fundamentals/design-and-ux/browser-customization/).  
  
 For example, below is this site with and without the theme color applied.
 

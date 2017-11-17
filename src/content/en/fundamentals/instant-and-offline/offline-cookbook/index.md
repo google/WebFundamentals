@@ -1,7 +1,7 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2014-12-09 #}
 
 # The Offline Cookbook {: .page-title }
@@ -242,7 +242,7 @@ This is very similar to HTTP's
 
 <img src="images/cm-on-push.png">
 
-The [Push API](/web/fundamentals/engage-and-retain/push-notifications/)
+The [Push API](/web/fundamentals/push-notifications)
 is another feature built on top of ServiceWorker. This allows the
 ServiceWorker to be awoken in response to a message from the OS's
 messaging service. This happens even when the user doesn't have a tab open to

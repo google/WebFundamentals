@@ -55,7 +55,7 @@ landing_page:
       image_path: images/cost.png
       buttons:
       - label: Pahami biaya pemuatan laman dan komponen aplikasi
-        path: /web/fundamentals/design-and-ui/responsive/content#weight
+        path: /web/fundamentals/design-and-ux/responsive/content#weight
         classname: wf-small-link
       - label: Kurangi jumlah data yang diperlukan untuk interaksi
         path: /web/fundamentals/performance/optimizing-content-efficiency/
@@ -79,7 +79,7 @@ landing_page:
         path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
         classname: wf-small-link
       - label: Hindari animasi UI yang berat
-        path: /web/fundamentals/design-and-ui/animations/#avoid-animating-expensive-properties/
+        path: /web/fundamentals/design-and-ux/animations/#avoid-animating-expensive-properties/
         classname: wf-small-link
       - label: "Hindari penggunaan radio: hilangkan unduhan yang tidak perlu"
         path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
@@ -88,7 +88,7 @@ landing_page:
         path: /web/fundamentals/getting-started/principles/
         classname: wf-small-link
       - label: Hindari animasi yang berat
-        path: /web/fundamentals/design-and-ui/animations/animations-and-performance/
+        path: /web/fundamentals/design-and-ux/animations/animations-and-performance/
         classname: wf-small-link
 
     - heading: Mengoptimalkan kemampuan perangkat
@@ -115,13 +115,13 @@ landing_page:
       image_path: images/content.png
       buttons:
       - label: Desainlah materi agar bekerja dengan baik pada berbagai ukuran tampilan yang terlihat
-        path: /web/fundamentals/design-and-ui/responsive/content#viewport
+        path: /web/fundamentals/design-and-ux/responsive/content#viewport
         classname: wf-small-link
       - label: Hilangkan materi yang berlebihan
-        path: /web/fundamentals/design-and-ui/content/redundant/
+        path: /web/fundamentals/design-and-ux/content/redundant/
         classname: wf-small-link
       - label: Tulislah untuk perangkat seluler
-        path: /web/fundamentals/design-and-ui/content/write/
+        path: /web/fundamentals/design-and-ux/content/write/
         classname: wf-small-link
       - label: Pertimbangkan AMP HTML
         path: https://www.ampproject.org/
@@ -135,7 +135,7 @@ landing_page:
         path: /web/fundamentals/getting-started/principles/commerce-and-conversion/
         classname: wf-small-link
       - label: Sederhanakan formulir
-        path: /web/fundamentals/design-and-ui/input/forms/
+        path: /web/fundamentals/design-and-ux/input/forms/
         classname: wf-small-link
       - label: Desainlah layout yang menyesuaikan dengan orientasi untuk layar kecil
         path: /web/fundamentals/getting-started/principles/#usability-and-form-factor

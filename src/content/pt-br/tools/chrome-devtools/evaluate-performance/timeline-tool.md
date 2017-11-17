@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use o painel Timeline do Chrome DevTools para registrar e analisar todas as atividades no seu aplicativo enquanto ele está em execução. É o melhor lugar para começar a investigar problemas de desempenho percebidos no seu aplicativo.
 

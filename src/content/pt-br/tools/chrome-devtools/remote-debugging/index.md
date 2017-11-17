@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Depure remotamente conteúdo ativo de um dispositivo Android em um computador Windows, Mac ou Linux.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Los usuarios esperan que las páginas sean interactivas y fluidas. Cada etapa en la canalización de píxeles representa una oportunidad para introducir bloqueos. Conoce herramientas y estrategias para identificar y solucionar problemas comunes que lentifican el rendimiento del tiempo de ejecución.
 

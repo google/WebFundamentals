@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Many of today's most popular apps let you apply filters and effects to images or video. This article shows how to implement these features on the open web.
 
@@ -154,7 +154,7 @@ texture in pixels as a uniform vector so that you can do the conversion for each
 
 Pretty much every kind of 2D image manipulation that you might want to do can be done in the
 fragment shader, and all of the other WebGL parts can be abstracted away. You can see [the
-abstraction layer](https://github.com/GoogleChrome/snapshot/blob/master/src/image-shader.ts) (in
+abstraction layer](https://github.com/GoogleChromeLabs/snapshot/blob/master/src/filters/image-shader.ts) (in
 TypeScript) that is being in used in one of our sample applications if you'd like to see an example.
 
 ### Which should I use?

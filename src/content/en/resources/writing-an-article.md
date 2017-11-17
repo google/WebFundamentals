@@ -84,9 +84,9 @@ To include an author or translator attribution, use:
 
 ## Write Your Content
 
-Next, it's time to add your content. Refer to the [style guide](style-guide)
-for full details on the styles you can use and how to go about making stuff
-look pretty.
+Next, it's time to add your content. Refer to the [writing style guide](/style/)
+and [markdown syntax](markdown-syntax) guide for full details on the
+styles you can use and how to go about making stuff look pretty.
 
 ## Add Article to the Book
 

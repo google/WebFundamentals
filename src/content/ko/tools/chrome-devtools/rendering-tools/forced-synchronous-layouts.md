@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 이 대화형 가이드를 따라 DevTools를 사용하여 강제 동기식 레이아웃을 진단하는 방법을 배워보세요.
 
