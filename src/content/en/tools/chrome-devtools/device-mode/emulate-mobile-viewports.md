@@ -282,7 +282,7 @@ Device Mode has some limitations.
 * **Browser functionality**
     * WebGL operates in the emulator, but is not supported on iOS 7 devices.
     * MathML is not supported in Chrome, but is supported on iOS 7 devices.
-    * [HLS playback](https://en.wikipedia.org/wiki/HTTP_Live_Streaming) (HTTP Live Streaming for video) is not supported while emulating, but is supported natively on Android Chrome.
+    * [HLS playback](https://en.wikipedia.org/wiki/HTTP_Live_Streaming) (HTTP Live Streaming for video) is not supported while emulating, but is supported natively on Android Chrome and iOS.
     * The [iOS 5 orientation zoom bug](https://github.com/scottjehl/device-bugs/issues/2) is not emulated.
     * The line-height CSS property operates in the emulator, but is not supported in Opera Mini.
     * CSS rule limits, such as those in [Internet Explorer](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx), are not emulated.
