@@ -213,6 +213,10 @@ def getFirstTabPath(tabContents):
   for tabContent in tabContents:
     if 'path' in tabContent:
       return tabContent['path']
+    if 'section' in tabContent:
+      tabPath = getFirstTabPath(tabContent['section'])
+      if tabPath is not None:
+        return tabPath
   return None
 
 
@@ -241,7 +245,8 @@ def getLeftNav(requestPath, bookYaml, lang='en'):
     lowerTabs = currentUpperTab['lower_tabs']['other']
     for lowerTab in lowerTabs:
       lowerTabPath = getFirstTabPath(lowerTab['contents'])
-
+      if (lowerTabPath is None):
+        logging.info('Its NONE <---------------')
       if (lowerTabPath is None or
         requestPath.startswith(lowerTabPath)):
           result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
