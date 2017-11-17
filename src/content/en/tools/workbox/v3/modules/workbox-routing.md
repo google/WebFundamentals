@@ -7,6 +7,8 @@ description: The module guide for workbox-routing.
 
 # Workbox Routing {: .page-title }
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 [Demo](https://workbox-demos.firebaseapp.com/demo/workbox-routing/) | [Reference Docs](http://localhost:8080/web/tools/workbox/v3/reference-docs/latest/workbox.routing)
 
 ## What is Workbox Routing?

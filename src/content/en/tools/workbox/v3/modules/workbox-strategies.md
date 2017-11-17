@@ -7,6 +7,8 @@ description: The module guide for workbox-routing.
 
 # Workbox Strategies {: .page-title }
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 [Demo](https://workbox-demos.firebaseapp.com/demo/workbox-runtime-caching/) | [Reference Docs](http://localhost:8080/web/tools/workbox/v3/reference-docs/latest/workbox.strategies)
 
 ## What is a Workbox Runtime Caching Strategy?

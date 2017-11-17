@@ -7,6 +7,8 @@ description: A guide on how to route requests with Workbox.
 
 # Route Requests {: .page-title }
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 Routing in Workbox is the process of a Router *matching* a request to a
 route and the route then *handling* that request (i.e. providing a response).
 

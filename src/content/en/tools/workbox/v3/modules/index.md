@@ -7,6 +7,8 @@ description: The troubleshooting and debugging guide for Workbox.
 
 # Workbox Modules {: .page-title}
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 Workbox is a set of service worker libraries and Node modules.
 
 The service worker libraries can be loaded and used within a service worker to

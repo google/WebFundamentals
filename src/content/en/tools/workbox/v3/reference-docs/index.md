@@ -7,6 +7,8 @@ description: Reference docs for Workbox.
 
 # Reference Docs {: .page-title}
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 You can view the available API's for the Workbox service worker libraries and
 node modules by selecting the appropriate link on the left.
 

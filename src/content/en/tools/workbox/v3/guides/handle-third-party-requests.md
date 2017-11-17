@@ -7,6 +7,8 @@ description: A guide on how to handle third party requests with Workbox.
 
 # Handle Third Party Requests {: .page-title }
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 A lot of websites will use files from a different origin. For example, if you
 use Google Fonts, you’ll be importing the styles and fonts from
 `https://fonts.googleapis.com/`. Any request for a file from a different

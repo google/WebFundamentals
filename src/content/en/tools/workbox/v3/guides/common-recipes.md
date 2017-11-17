@@ -7,6 +7,8 @@ description: A common recipes to use with Workbox.
 
 # Common Recipes {: .page-title }
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 This page contains a set of example caching strategies you can use with Workbox.
 
 ## Google Fonts

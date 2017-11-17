@@ -7,4 +7,6 @@ description: The module guide for workbox-build.
 
 # Workbox Webpack Plugin {: .page-title}
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 Sorry. This module's documentation hasn't been written yet.

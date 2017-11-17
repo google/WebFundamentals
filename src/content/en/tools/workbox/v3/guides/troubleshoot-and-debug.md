@@ -7,6 +7,8 @@ description: A guide on how to troubleshoot and debugging issues with Workbox.
 
 # Troubleshoot and Debug {: .page-title }
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 Working with service workers can be challenging, especially when
 starting out. This page will cover a few useful tips to help working
 with service workers and help with Workbox.

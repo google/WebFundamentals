@@ -7,6 +7,8 @@ description: Workbox Examples.
 
 # Overview {: .page-title }
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 Workbox is a collection of libraries and build tools that make it easy to
 store your website's resources locally, on your users' devices. Consider
 Workbox if you want to:

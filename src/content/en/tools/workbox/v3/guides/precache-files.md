@@ -7,6 +7,8 @@ description: A guide on how to precache files with Workbox.
 
 # Precache Files {: .page-title }
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 If you want your web app to work offline or there are assets you know can be
 cached for a long time, precaching is the best approach.
 

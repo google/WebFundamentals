@@ -7,4 +7,6 @@ description: A guide on how to generate a complete service worker with Workbox.
 
 # Generate a Complete Service Worker {: .page-title }
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 Sorry. This guide hasn't been written yet.

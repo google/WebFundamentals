@@ -7,4 +7,6 @@ description: The module guide for workbox-cli.
 
 # Workbox CLI {: .page-title}
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 Sorry. This module's documentation hasn't been written yet.

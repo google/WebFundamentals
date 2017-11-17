@@ -7,6 +7,8 @@ description:Get Started with Workbox.
 
 # Get Started {: .page-title }
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 This guide will show you how to get up and running with Workbox to route
 common requests for a web page and demonstrate how to cache using a common
 strategy.

@@ -7,6 +7,8 @@ description: A guide on how to configure Workbox.
 
 # Configure Workbox {: .page-title }
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 Out of the box Workbox comes set up with some default values for cache
 names and log levels. This guide will cover how you can change these values
 and what will happen as a result.

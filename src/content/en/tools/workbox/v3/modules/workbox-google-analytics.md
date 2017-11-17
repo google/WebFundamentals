@@ -9,4 +9,6 @@ description: The module guide for workbox-google-analytics.
 No Demo | [Reference Docs](http://localhost:8080/web/tools/workbox/v3/reference-docs/latest/workbox.googleAnalytics)
 
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 Sorry. This module's documentation hasn't been written yet.

@@ -7,6 +7,8 @@ description: A set of guides on how to use Workbox.
 
 # Guides {: .page-title}
 
+{% include "web/tools/workbox/v3/_shared/alpha.html" %}
+
 Workbox offers a range of functionality and features that developers can
 take advantage of.
 
