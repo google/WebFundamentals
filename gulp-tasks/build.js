@@ -20,10 +20,6 @@ gulp.task('build:announcement', function() {
   const globOpts = {
     srcBase: 'src/content/en/',
     prefixBase: true,
-    ignore: [
-      // Disable forced announcements on Workbox.
-      '**/workbox/**/_project.yaml',
-    ]
   };
   const dumpYamlOpts = {lineWidth: 1000};
   const projectYamlFiles = glob.find('**/_project.yaml', globOpts);
