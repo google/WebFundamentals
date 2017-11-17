@@ -57,15 +57,15 @@ with slow encode times: try
 
 Some browsers advertise support for image formats via the Accept request header.
 This can be used to conditionally serve formats: e.g lossy
-[WebP](https://developers.google.com/speed/webp/) for Blink-based browsers like
+[WebP](/speed/webp/) for Blink-based browsers like
 Chrome and fallbacks like JPEG/PNG for other browsers.
 
 There's always more you can do. Tools exists to generate and serve `srcset`
 breakpoints. Resource selection can be automated in Blink-based browsers with
-[client-hints](https://developers.google.com/web/updates/2015/09/automating-resource-selection-with-client-hints)
+[client-hints](/web/updates/2015/09/automating-resource-selection-with-client-hints)
 and you can ship fewer bytes to users who opted into "data savings" in-browser
 by heeding the
-[Save-Data](https://developers.google.com/web/updates/2016/02/save-data) hint.
+[Save-Data](/web/updates/2016/02/save-data) hint.
 
 
 The smaller in file-size you can make your images, the better a network
@@ -874,7 +874,7 @@ intermediate to advanced users.
 
 ## What is WebP? {: #what-is-webp }
 
-[WebP](https://developers.google.com/speed/webp/) is a recent image format from
+[WebP](/speed/webp/) is a recent image format from
 Google aiming to offer lower file-sizes for lossless and lossy compression at an
 acceptable visual quality. It includes support for alpha-channel transparency
 and animation.
@@ -898,7 +898,7 @@ examine why.
 
 WebP lossy files, using a VP8 or VP9 video key frame encoding variant, are on
 average cited by the WebP team as being
-[25-34%](https://developers.google.com/speed/webp/docs/webp_study) smaller than
+[25-34%](/speed/webp/docs/webp_study) smaller than
 JPEG files.
 
 In the low-quality range (0-50), WebP has a large advantage over JPEG because it
@@ -910,7 +910,7 @@ quality.
 **Lossless Compression**
 
 [WebP lossless files are 26% smaller than PNG
-files](https://developers.google.com/speed/webp/docs/webp_lossless_alpha_study).
+files](/speed/webp/docs/webp_lossless_alpha_study).
 The lossless load-time decrease compared to PNG is 3%. That said, you generally
 don't want to deliver your users lossless on the web. There's a difference
 between lossless and sharp edges (e.g non-JPEG). Lossless WebP may be more
@@ -1005,7 +1005,7 @@ Compressor](https://www.youtube.com/watch?v=FdMoL3PzmSA&index=7&list=PLOU2XLYxms
 vs JPEG's Huffman.
 
 If you want to dive deeper, Google Developer’s article [WebP Compression
-Techniques](https://developers.google.com/speed/webp/docs/compression) goes into
+Techniques](/speed/webp/docs/compression) goes into
 this topic in depth.
 
 
@@ -1171,7 +1171,7 @@ using an app or a build system, bash and image optimization binaries keep things
 fairly simple.
 
 You can bulk convert your images to WebP using
-[cwebp](https://developers.google.com/speed/webp/docs/cwebp):
+[cwebp](/speed/webp/docs/cwebp):
 
 ```
 find ./ -type f -name '*.jpg' -exec cwebp -q 70 {} -o {}.webp \;
@@ -1992,7 +1992,7 @@ Images can have an embedded color profile as described by the [International
 Color Consortium](http://www.color.org/icc_specs2.xalter) (ICC) to represent
 precisely how colors should appear. This is supported by different formats
 including JPEGs, PNGs, SVGs and
-[WebP](https://developers.google.com/speed/webp/docs/riff_container) and most
+[WebP](/speed/webp/docs/riff_container) and most
 major browsers support embedded ICC profiles. When an image is displayed in an
 app and it knows the monitor's capabilities, these colors can be adjusted based
 on the color profile. 
