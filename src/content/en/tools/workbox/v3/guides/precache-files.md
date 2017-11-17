@@ -288,11 +288,3 @@ gulp.task('build-sw', () => {
   });
 });
 ```
-
-### Using the webpack Plugin
-
-TODO: How to inject manifest
-
-## Handling Revisioned URLs
-
-TODO: Explain revisioned URLs and link up the warning fix.

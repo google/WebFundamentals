@@ -165,4 +165,4 @@ as more information on configuring Workbox. Find a full list on the left, but
 the next natural step is to enable precaching, which is the process of adding
 files to the cache when your service worker loads.
 
-<a href="./how-to-precache-files" class="button">Learn More About Precaching</a>
+<a href="./precache-files" class="button">Learn More About Precaching</a>

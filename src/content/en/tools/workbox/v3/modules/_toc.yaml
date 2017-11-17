@@ -16,15 +16,5 @@ toc:
   path: /web/tools/workbox/v3/modules/workbox-strategies
 - title: workbox.expiration
   path: /web/tools/workbox/v3/modules/workbox-cache-expiration
-- title: workbox.backgroundSync
-  path: /web/tools/workbox/v3/modules/workbox-background-sync
-- title: workbox.googleAnalytics
-  path: /web/tools/workbox/v3/modules/workbox-google-analytics
 
 - heading: Node Modules
-- title: workbox-cli
-  path: /web/tools/workbox/v3/modules/workbox-cli
-- title: workbox-build
-  path: /web/tools/workbox/v3/modules/workbox-build
-- title: workbox-webpack-plugin
-  path: /web/tools/workbox/v3/modules/workbox-webpack-plugin
