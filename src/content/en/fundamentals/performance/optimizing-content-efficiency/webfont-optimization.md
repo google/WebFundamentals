@@ -280,7 +280,7 @@ The next section describes a number of options for customizing this default beha
 
 If there's a high probability that your page will need a specific Webfont hosted
 at a URL you know in advance, you can take advantage of a new web platform
-feature: [`<link rel="preload">`](https://developers.google.com/web/fundamentals/performance/resource-prioritization).
+feature: [`<link rel="preload">`](/web/fundamentals/performance/resource-prioritization).
 
 It allows you to include an element in your HTML, usually as part of the
 `<head>`, that will trigger a request for the Webfont early in the critical
@@ -522,9 +522,10 @@ to do or it may do it as a low priority depending on what it thinks would be
 best for the user. This can be beneficial in situations where the user is on a
 weak connection and pulling down a font may not be the best use of resources.
 
-`font-display` is not [widely enabled](https://caniuse.com/#feat=css-font-rendering-controls)
-in browsers other than Chrome as of this writing, but it should bring
-consistency to browser behaviors as it gets wider support.
+`font-display` is [gaining adoption](https://caniuse.com/#feat=css-font-rendering-controls)
+in many modern browsers. You can look forward to consistency in browser
+behavior as it becomes widely implemented.
+
 
 ### The Font Loading API
 
@@ -570,8 +571,8 @@ Note: The Font Loading API is still <a href='http://caniuse.com/#feat=font-loadi
 
 Font resources are, typically, static resources that don't see frequent updates. As a result, they are ideally suited for a long max-age expiry - ensure that you specify both a [conditional ETag header](/web/fundamentals/performance/optimizing-content-efficiency/http-caching#validating-cached-responses-with-etags), and an [optimal Cache-Control policy](/web/fundamentals/performance/optimizing-content-efficiency/http-caching#cache-control) for all font resources.
 
-If your web application uses a [service worker](https://developers.google.com/web/fundamentals/primers/service-workers/),
-serving font resources with a [cache-first strategy](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-then-network)
+If your web application uses a [service worker](/web/fundamentals/primers/service-workers/),
+serving font resources with a [cache-first strategy](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-then-network)
 is appropriate for most use cases.
 
 You should not store fonts using [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
@@ -594,4 +595,4 @@ That said, a naive implementation may incur large downloads and unnecessary dela
 * **Customize font loading and rendering using `<link rel="preload">`, `font-display`, or the Font Loading API:** default lazyloading behavior may result in delayed text rendering. These web platform features allow you to override this behavior for particular fonts, and to specify custom rendering and timeout strategies for different content on the page.
 * **Specify revalidation and optimal caching policies:** fonts are static resources that are infrequently updated. Make sure that your servers provide a long-lived max-age timestamp and a revalidation token to allow for efficient font reuse between different pages. If using a service worker, a cache-first strategy is appropriate.
 
-*This article contains contributions from [Monica Dinculescu](https://meowni.ca/posts/web-fonts/), [Rob Dodson](https://developers.google.com/web/updates/2016/02/font-display), and Jeff Posnick.*
+*This article contains contributions from [Monica Dinculescu](https://meowni.ca/posts/web-fonts/), [Rob Dodson](/web/updates/2016/02/font-display), and Jeff Posnick.*
