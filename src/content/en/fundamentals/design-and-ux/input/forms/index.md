@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-11-20 #}
 {# wf_published_on: 2014-04-30 #}
 
 # Create Amazing Forms {: .page-title }
@@ -153,8 +153,9 @@ type.
     </tr>
     <tr>
       <td data-th="Input type">
-        <code>number</code><br>For numeric input, can be any rational
-        integer or float value.
+        <code>number</code><br>For numeric input, can be any rational integer. Additionally, 
+        <a href="https://www.filamentgroup.com/lab/type-number.html">iOS requires using</a> 
+        <code>pattern="\d*"</code> to show the numeric keyboard.
       </td>
       <td data-th="Typical keyboard">
         <img src="imgs/number-android.png" srcset="imgs/number-android.png 1x, imgs/number-android-2x.png 2x" class="keybimg">
