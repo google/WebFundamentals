@@ -25,7 +25,7 @@ article compares the two and gives an overview of what's new.
 Back in September, Chrome 61 shipped with support for the ES2015 `import` statement within
 [modules](https://jakearchibald.com/2017/es-modules-in-browsers/).
 
-Consider the following module, located at `./utils.js`:
+Consider the following module, located at `./utils.mjs`:
 
 ```js
 // Default export
@@ -39,17 +39,27 @@ export const doStuff = () => {
 };
 ```
 
-Here's how to statically import and use the `./utils.js` module:
+Here's how to statically import and use the `./utils.mjs` module:
 
 ```html
 <script type="module">
-  import * as module from './utils.js';
+  import * as module from './utils.mjs';
   module.default();
   // → logs 'Hi from the default export!'
   module.doStuff();
   // → logs 'Doing stuff…'
 </script>
 ```
+
+Note: The previous example uses the `.mjs` extension to signal that it's a module rather than a
+regular script. On the web, file extensions don't really matter, as long as the files are served
+with the correct MIME type (e.g. `text/javascript` for JavaScript files) in the `Content-Type` HTTP
+header. The `.mjs` extension is [especially
+useful](https://github.com/nodejs/node-eps/blob/master/002-es-modules.md#32-determining-if-source-is-an-es-module)
+on other platforms such as Node.js, where there's no concept of MIME types or other hooks such as
+`type="module"` to determine whether something is a module or a regular script. We're using the
+same extension here for consistency across platforms and to clearly make the distinction between
+modules and regular scripts.
 
 This syntactic form for importing modules is a **static** declaration: it only accepts a string
 literal as the module specifier, and introduces bindings into the local scope via a pre-runtime
@@ -72,11 +82,11 @@ function-like form of `import` that caters to those use cases. `import(moduleSpe
 promise for the module namespace object of the requested module, which is created after fetching,
 instantiating, and evaluating all of the module's dependencies, as well as the module itself.
 
-Here's how to dynamically import and use the `./utils.js` module:
+Here's how to dynamically import and use the `./utils.mjs` module:
 
 ```html
 <script type="module">
-  const moduleSpecifier = './utils.js';
+  const moduleSpecifier = './utils.mjs';
   import(moduleSpecifier)
     .then((module) => {
       module.default();
@@ -124,16 +134,6 @@ single-page application:
   }
 </script>
 ```
-
-Note: The previous example uses the `.mjs` extension to signal that it's a module rather than a
-regular script. On the web, file extensions don't really matter, as long as the files are served
-with the correct MIME type (e.g. `text/javascript` for JavaScript files) in the `Content-Type` HTTP
-header. The `.mjs` extension is [especially
-useful](https://github.com/nodejs/node-eps/blob/master/002-es-modules.md#32-determining-if-source-is-an-es-module)
-on other platforms such as Node.js, where there's no concept of MIME types or other hooks such as
-`type="module"` to determine whether something is a module or a regular script. We're using the
-same extension here for consistency across platforms and to clearly make the distinction between
-modules and regular scripts.
 
 The lazy-loading capabilities enabled by dynamic `import()` can be quite powerful when applied
 correctly. For demonstration purposes, [Addy](https://twitter.com/addyosmani) modified [an example
