@@ -82,11 +82,11 @@ function-like form of `import` that caters to those use cases. `import(moduleSpe
 promise for the module namespace object of the requested module, which is created after fetching,
 instantiating, and evaluating all of the module's dependencies, as well as the module itself.
 
-Here's how to dynamically import and use the `./utils.js` module:
+Here's how to dynamically import and use the `./utils.mjs` module:
 
 ```html
 <script type="module">
-  const moduleSpecifier = './utils.js';
+  const moduleSpecifier = './utils.mjs';
   import(moduleSpecifier)
     .then((module) => {
       module.default();
