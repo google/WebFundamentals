@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Introduction to the CSS overscroll-behavior property.
 
-{# wf_updated_on: 2017-11-14 #}
+{# wf_updated_on: 2017-11-21 #}
 {# wf_published_on: 2017-11-14 #}
 
 {# wf_tags: chrome63,css,overscroll,scroll #}
@@ -297,7 +297,7 @@ Here's a snippet of the
 
   inbox.addEventListener('touchmove', e => {
     const y = e.touches[0].pageY;
-    // Activate custom pull-to-refresh effects when at the top fo the container
+    // Activate custom pull-to-refresh effects when at the top of the container
     // and user is scrolling up.
     if (document.scrollingElement.scrollTop === 0 && y > _startY &&
         !document.body.classList.contains('refreshing')) {
