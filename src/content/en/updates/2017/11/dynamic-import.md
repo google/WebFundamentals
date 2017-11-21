@@ -53,7 +53,7 @@ Here's how to statically import and use the `./utils.js` module:
 
 This syntactic form for importing modules is a **static** declaration: it only accepts a string
 literal as the module specifier, and introduces bindings into the local scope via a pre-runtime
-“linking” process. The static `import` syntax can only be used at the very start of the file.
+“linking” process. The static `import` syntax can only be used at the top-level of the file.
 Static `import` enables important use cases such as static analysis, bundling tools, and
 tree-shaking.
 
