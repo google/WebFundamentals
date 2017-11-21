@@ -127,7 +127,7 @@ single-page application:
 
 Note: The previous example uses the `.mjs` extension to signal that it's a module rather than a
 regular script. On the web, file extensions don't really matter, as long as the files are served
-with the correct MIME type (e.g. `text/javascript` for JavaScript files) in the `Content-Type` HTTP
+with the correct MIME type (e.g. `application/javascript` for JavaScript files) in the `Content-Type` HTTP
 header. The `.mjs` extension is [especially
 useful](https://github.com/nodejs/node-eps/blob/master/002-es-modules.md#32-determining-if-source-is-an-es-module)
 on other platforms such as Node.js, where there's no concept of MIME types or other hooks such as
