@@ -21,7 +21,7 @@ In this episode:
 * [Comlink over WebRTC](https://dassur.ma/things/comlink-webrtc/).
 * [How WebRTC works](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API).
 * [WebTorrent](https://webtorrent.io/).
-* [Spaceteam](https://play.google.com/store/apps/details?id=com.sleepingbeastgames.spaceteam&hl=en_GB).
+* [Spaceteam](https://play.google.com/store/apps/details?id=com.sleepingbeastgames.spaceteam).
 * Do you know when you're falling asleep?
 * [Promotable iframes](https://discourse.wicg.io/t/proposal-for-promotable-iframe/2375), although it
   looks unlikely that browsers will be able to adopt this for security reasons.
