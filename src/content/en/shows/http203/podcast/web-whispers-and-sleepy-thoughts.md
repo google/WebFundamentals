@@ -18,6 +18,8 @@ In this episode:
 
 * How to cheat at developing Sonic 3D.
 * How well did Team Jake do at the pub quiz?
+* [C'est la vie by B*witched](https://www.youtube.com/watch?v=UvjLgjtJKsc) is the greatest song
+  ever.
 * [Comlink over WebRTC](https://dassur.ma/things/comlink-webrtc/).
 * [How WebRTC works](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API).
 * [WebTorrent](https://webtorrent.io/).
