@@ -1,0 +1,25 @@
+---
+footer:
+- promos:
+  - description: Chromium博客上的最新消息。
+  - 
+  - description: 在Twitter上與@ChromiumDev聯繫。
+    label: 推特
+  - description: 看看我們的視頻。
+- linkboxes:
+  - contents:
+    - 
+    - label: Chrome擴展程式文件
+    - label: 開發者反饋計劃
+    name: 關鍵主題
+  - contents:
+    - label: 教練帶領培訓
+    - label: PWA培訓機構
+    - label: 在Udacity的網絡課程
+    icon_name: 學校
+    name: 更多培訓
+  - contents:
+    - label: 提出問題
+    - label: 查看頁面源代碼
+    - label: 資源
+    - label: 翻譯
