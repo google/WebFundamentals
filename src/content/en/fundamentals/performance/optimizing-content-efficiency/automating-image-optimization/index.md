@@ -2015,7 +2015,7 @@ interested in learning more about profiles.
 #### Color profiles and web browsers {: #color-profiles }
 
 Earlier versions of Chrome did not have great support for color management, but
-this is improvng in 2017 with [Color Correct
+this is improving in 2017 with [Color Correct
 Rendering](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/ptuKdRQwPAo).
 Displays that are not sRGB (newer Macbook Pros) will convert colors from sRGB to
 the display profile. This will mean colors should look more similar across
@@ -2023,10 +2023,9 @@ different systems and browsers. Safari, Edge and Firefox can now also take ICC
 profiles into account, so images with a different color profile (e.g ICC) can
 now display them correctly whether your screen has wide gamut or not.
 
-<aside class="key-point"><b>Note:</b> For a great guide on how color applies to
-a broader spectrum of ways we work on the web, see the [nerd’s guide to color on
-the web](https://css-tricks.com/nerds-guide-color-web/) by Sarah
-Drasner.</aside>
+Note: For a great guide on how color applies to a broader spectrum of ways we 
+work on the web, see the [nerd’s guide to color on the web](https://css-tricks.com/nerds-guide-color-web/) by Sarah
+Drasner.
 
 ## Image spriting {: #image-sprites }
 
