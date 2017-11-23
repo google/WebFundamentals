@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Image formats!
 
-{# wf_updated_on: 2017-11-16 #}
+{# wf_updated_on: 2017-11-23 #}
 {# wf_published_on: 2017-11-16 #}
 
 # Automating image optimization {: .page-title }
@@ -160,7 +160,7 @@ compressed more efficiently and the estimated file-size savings of doing so.
 
 
 [Lighthouse](/web/tools/lighthouse/) audits for performance best practices. It
-includes audits for image optimisation and can make suggestions for images that
+includes audits for image optimization and can make suggestions for images that
 could be compressed further or point out images that are off-screen and could be
 lazy-loaded.
 
@@ -170,7 +170,7 @@ DevTools:
 
 
 <img class="lazyload small" data-src="images/hbo.jpg" alt="Lighthouse audit for
-        HBO.com, displaying image optimisation recommendations" /> Lighthouse
+        HBO.com, displaying image optimization recommendations" /> Lighthouse
         can audit for Web Performance, Best Practices and Progressive Web App
         features.
 
@@ -230,7 +230,7 @@ fidelity while keeping file sizes as small as possible.
 **What image quality is acceptable for your use-case?**
 
 Formats like JPEG are best suited for photographs or images with a number of
-color regions. Most optimisation tools will allow you to set what level of
+color regions. Most optimization tools will allow you to set what level of
 compression you're happy with; higher compression reduces file size but can
 introduce artifacts, halos or blocky degrading.
 
@@ -275,7 +275,7 @@ popular modes are baseline (sequential), Progressive JPEG (PJPEG) and lossless.
 
 **How do baseline (or sequential) JPEGs and Progressive JPEGs differ?**
 
-Baseline JPEGs (the default for most image editing and optimisation tools) are
+Baseline JPEGs (the default for most image editing and optimization tools) are
 encoded and decoded in a relatively simple manner: top to bottom. When baseline
 JPEGs load on slow or spotty connections, users see the top of the image with
 more of it revealed as the image loads. Lossless JPEGs are similar but have a
@@ -366,7 +366,7 @@ compression.
     and found it was in part responsible for ~4.5% of their image size reduction
     savings. They also saved an extra 13.8% using MozJPEG
 
-### The disavantages of Progressive JPEGs {: #the-disadvantages-of-progressive-jpegs }
+### The disadvantages of Progressive JPEGs {: #the-disadvantages-of-progressive-jpegs }
 
 PJPEGs can be slower to decode than baseline JPEGs - sometimes taking 3x as
 long. On desktop machines with powerful CPUs this can be less of a concern, but
@@ -755,7 +755,7 @@ gulp.task('guetzli', () =>
 
 
 <img src="images/Modern-Image12.jpg" alt="guetzli being run from gulp for
-        optimisation" />
+        optimization" />
 
 
 It took almost seven minutes (and high CPU usage) to encode 3 x 3MP images using
@@ -805,7 +805,7 @@ How does Guetzli compare to MozJPEG? - Kornel's take:
   [jpeg-archive](https://github.com/danielgtaylor/jpeg-archive)
 
 A number of methods exist for determining if compressed images are visually
-similar or perceivably similar to their sources. Image quality studies often use
+similar or perceivable similar to their sources. Image quality studies often use
 methods like [SSIM](https://en.wikipedia.org/wiki/Structural_similarity)
 (structural similarity). Guetzli however optimizes for Butteraugli.
 
@@ -829,7 +829,7 @@ Butteraugli looks at the worst part.
 
 
 In practice, you would define a target goal for visual quality and then run
-through a number of different image optimisation strategies, looking at your
+through a number of different image optimization strategies, looking at your
 Butteraugli scores, before choosing something that fits the best balance of
 file- size and level.
 
@@ -849,7 +849,7 @@ file- size and level.
 comment](https://github.com/google/guetzli/issues/10#issuecomment-276295265)
 from a Guetzli project member suggests Guetzli scores best on Butteraugli, worst
 on SSIM and MozJPEG scores about as well on both. This is in line with the
-research I've put into my own image optimisation strategy. I run Butteraugli and
+research I've put into my own image optimization strategy. I run Butteraugli and
 a Node module like [img-ssim](https://www.npmjs.com/package/img-ssim) over
 images comparing the source to their SSIM scores before/after Guetzli and
 MozJPEG.
@@ -1057,10 +1057,10 @@ images in multiple ways.
 <img src="images/Modern-Image20.png" alt="XNConvert app on Mac where a number of
         images have been converted to WebP"
          />
-XnConvert supports batch image optimisation, allowing straight-forward
+XnConvert supports batch image optimization, allowing straight-forward
 conversion from source files to WebP and other formats. In addition to
 compression, XnConvert can also help with metadata stripping, cropping, color
-depth customisation and other transforms.
+depth customization and other transforms.
 
 
 Some of the options listed on the xnview website include:
@@ -1107,7 +1107,7 @@ imagemin(['images/*.{jpg}'], 'images', {
 ```
 
 
-Similar to JPEGs, it's possible to notice compression artefacts in our output.
+Similar to JPEGs, it's possible to notice compression artifacts in our output.
 Evaluate what quality setting makes sense for your own images. Imagemin-webp can
 also be used to encode lossless quality WebP images (supporting 24-bit color and
 full transparency) by passing `lossless: true` to options:
@@ -1412,7 +1412,7 @@ an annual fee. This seems out of character for a genuinely open source solution.
 
 **Short Pixel** — Another option for use with Cache Enabler, also at a cost, is
 Short Pixel. Short Pixel functions much like Optimizer, described above. You can
-optimize upto 100 images a month for free.
+optimize up to 100 images a month for free.
 
 **Compressing Animated GIFs and why `<video>` is better**
 
@@ -2015,7 +2015,7 @@ interested in learning more about profiles.
 #### Color profiles and web browsers {: #color-profiles }
 
 Earlier versions of Chrome did not have great support for color management, but
-this is improvng in 2017 with [Color Correct
+this is improving in 2017 with [Color Correct
 Rendering](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/ptuKdRQwPAo).
 Displays that are not sRGB (newer Macbook Pros) will convert colors from sRGB to
 the display profile. This will mean colors should look more similar across
@@ -2620,7 +2620,7 @@ device-class you’re targeting. This is useful as your budget for image sizes o
 desktop over WiFi may vary heavily to your budgets on mobile.
 
 
-<img src="images/budgets.jpg" alt="Calibre supports bugets for image sizes."
+<img src="images/budgets.jpg" alt="Calibre supports budgets for image sizes."
          />
 
 ## Closing recommendations {: #closing-recommendations }
