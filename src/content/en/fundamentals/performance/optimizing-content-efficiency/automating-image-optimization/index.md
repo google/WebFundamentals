@@ -2023,10 +2023,9 @@ different systems and browsers. Safari, Edge and Firefox can now also take ICC
 profiles into account, so images with a different color profile (e.g ICC) can
 now display them correctly whether your screen has wide gamut or not.
 
-<aside class="key-point"><b>Note:</b> For a great guide on how color applies to
-a broader spectrum of ways we work on the web, see the [nerd’s guide to color on
-the web](https://css-tricks.com/nerds-guide-color-web/) by Sarah
-Drasner.</aside>
+Note: For a great guide on how color applies to a broader spectrum of ways we 
+work on the web, see the [nerd’s guide to color on the web](https://css-tricks.com/nerds-guide-color-web/) by Sarah
+Drasner.
 
 ## Image spriting {: #image-sprites }
 
