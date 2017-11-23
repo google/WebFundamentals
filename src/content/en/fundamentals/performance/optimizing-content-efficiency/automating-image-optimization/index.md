@@ -449,10 +449,9 @@ may not contain color, but thanks to luma, they can be just as detailed as their
 color counterparts. Chroma (color) has less of an impact on visual perception.
 
 
-<img
+<img src="images/no-subsampling.jpg"
+     alt="JPEG includes support for numerous subsampling types: none, horizontal and horizontal and vertical." />
 
-        src="images/no-subsampling.jpg"
-        alt="JPEG includes support for numerous subsampling types: none, horizontal and horizontal and vertical." />
 JPEG supports a number of different subsampling types: none, horizontal and
 horizontal and vertical. This diagram is from [JPEGs for the horseshoe
 crabs](http://frdx.free.fr/JPEG_for_the_horseshoe_crabs.pdf) by Frédéric Kayser.
