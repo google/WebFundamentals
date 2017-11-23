@@ -221,7 +221,7 @@ owencm:
     unit: Product Management
   country: US
   role:
-    - contributer
+    - contributor
   homepage: 'http://www.owencampbellmoore.com/'
   google: +OwenCampbellMoore
   twitter: owencm
@@ -1064,7 +1064,7 @@ addyosmani:
   org:
     name: Google
     unit: Developer Relations
-  country: UK
+  country: USA
   role:
     - author
   google: +AddyOsmani
