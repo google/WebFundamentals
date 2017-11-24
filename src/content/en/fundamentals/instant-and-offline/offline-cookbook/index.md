@@ -528,7 +528,7 @@ possible, but still display up-to-date content once it arrives.
       return response.json();
     }).then(function(data) {
       networkDataReceived = true;
-      updatePage();
+      updatePage(data);
     });
 
     // fetch cached data
