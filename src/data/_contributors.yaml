@@ -922,8 +922,8 @@ henrylim:
     given: Henry
     family: Lim
   org:
-    name: Independent
-    unit: Developer
+    name: Google Developer Group Kuala Lumpur
+    unit: Community Co-organizer
   country: MY
   role:
     - translator
@@ -932,7 +932,7 @@ henrylim:
   homepage: 'https://limhenry.xyz'
   email: lets.email.henry@gmail.com
   description:
-    en: 'Co-Organizer @ GDG Kuala Lumpur'
+    en: 'Henry is the community co-organizer @ Google Developer Group Kuala Lumpur.'
 
 wayouliu:
   name:
