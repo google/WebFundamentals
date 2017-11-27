@@ -14,7 +14,7 @@ artinya browser tidak akan merender materi yang telah diproses hingga CSSOM
 dibuat. Pastikan CSS Anda tetap rapi, kirim secepatnya
 dan gunakan tipe dan kueri media untuk membuka blokir rendering.
 
-Dalam [konstruksi pohon render](render-tree-construction) kita melihat bahwa jalur rendering penting membutuhkan baik DOM maupun CSSOM untuk membuat pohon render. Ini menimbulkan implikasi kinerja penting: **baik HTML maupun CSS merupakan sumber daya pemblokiran render.** Untuk HTML, sudah kentara karena tanpa DOM kita tidak memiliki apa pun untuk di-render, namun persyaratan CSS mungkin tidak begitu kentara. Apa yang terjadi jika kita mencoba me-render laman biasa tanpa pemblokir rendering pada CSS?
+Dalam [konstruksi pohon render](render-tree-construction) kita melihat bahwa jalur rendering penting membutuhkan baik DOM maupun CSSOM untuk membuat pohon render. Ini menimbulkan implikasi kinerja penting: **baik HTML maupun CSS merupakan sumber daya pemblokiran render.** Untuk HTML, sudah kentara karena tanpa DOM kita tidak memiliki apa pun untuk di-render, namun persyaratan CSS mungkin tidak begitu kentara. Apa yang terjadi jika kita mencoba merender laman biasa tanpa pemblokir rendering pada CSS?
 
 ### TL;DR {: .hide-from-toc }
 - Secara default, CSS diperlakukan sebagai sumber daya pemblokiran render.
@@ -51,7 +51,7 @@ Akan tetapi, bagaimana jika kita memiliki sebagian gaya CSS yang hanya digunakan
     <link href="other.css" rel="stylesheet" media="(min-width: 40em)">
     
 
-[Kueri media](../../design-and-ui/responsive/#use-css-media-queries-for-responsiveness) terdiri dari tipe media dan nol atau lebih banyak ekspresi yang memeriksa kondisi fitur media tertentu. Misalnya, deklarasi stylesheet pertama kita tidak menyediakan tipe atau kueri media, sehingga hal itu berlaku dalam semua kasus; berarti selalu memblokir render. Di lain pihak, deklarasi stylesheet kedua hanya berlaku bila materi sedang dicetak---mungkin Anda ingin menata ulang layout, mengubah font dan seterusnya, sehingga deklarasi stylesheet ini tidak perlu memblokir rendering laman saat dimuat pertama kali. Pada akhirnya, deklarasi stylesheet terakhir menyediakan "kueri media", yang dieksekusi oleh browser: jika ketentuannya cocok, browser akan memblokir rendering hingga stylesheet diunduh dan diproses.
+[Kueri media](../../design-and-ux/responsive/#use-css-media-queries-for-responsiveness) terdiri dari tipe media dan nol atau lebih banyak ekspresi yang memeriksa kondisi fitur media tertentu. Misalnya, deklarasi stylesheet pertama kita tidak menyediakan tipe atau kueri media, sehingga hal itu berlaku dalam semua kasus; berarti selalu memblokir render. Di lain pihak, deklarasi stylesheet kedua hanya berlaku bila materi sedang dicetak---mungkin Anda ingin menata ulang layout, mengubah font dan seterusnya, sehingga deklarasi stylesheet ini tidak perlu memblokir rendering laman saat dimuat pertama kali. Pada akhirnya, deklarasi stylesheet terakhir menyediakan "kueri media", yang dieksekusi oleh browser: jika ketentuannya cocok, browser akan memblokir rendering hingga stylesheet diunduh dan diproses.
 
 Dengan menggunakan kueri media, kita bisa menyesuaikan presentasi dengan kasus penggunaan tertentu seperti tampilan versus cetak, juga dengan kondisi dinamis seperti perubahan orientasi layar, kejadian pengubahan ukuran, dan lainnya. **Saat mendeklarasikan aset stylesheet Anda, perhatikan baik-baik tipe dan kueri media; keduanya sangat memengaruhi kinerja jalur rendering penting.**
 

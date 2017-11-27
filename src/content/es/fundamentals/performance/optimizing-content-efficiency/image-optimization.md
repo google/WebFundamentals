@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
 
-{# wf_updated_on: 2014-05-09 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-05-06 #}
 
 # Optimización de la imagen {: .page-title }
@@ -111,7 +111,7 @@ Por otra parte, las imágenes de trama presentan un desafío mucho más grande p
 
 Cuando duplicamos la resolución de la pantalla física, la cantidad total de píxeles se multiplica por cuatro: se duplica la cantidad de píxeles horizontales y se duplica la cantidad de píxeles verticales. Por lo tanto, en una pantalla “2x” no solo se duplica, sino que se cuadruplica la cantidad necesaria de píxeles.
 
-¿Qué significa esto en la práctica? Las pantallas de alta resolución nos permiten mostrar imágenes bellas, lo cual puede ser una excelente función de producto. Sin embargo, para las pantallas de alta resolución también se requieren imágenes de alta resolución: usa imágenes vectoriales siempre que sea posible, ya que no dependen de la resolución y siempre proporcionan buenos resultados. Si fuera necesario usar una imagen de trama, proporciona y optimiza diferentes variantes de cada imagen con la ayuda de  [`srcset` y `picture`](/web/fundamentals/design-and-ui/media/images#images-in-markup).
+¿Qué significa esto en la práctica? Las pantallas de alta resolución nos permiten mostrar imágenes bellas, lo cual puede ser una excelente función de producto. Sin embargo, para las pantallas de alta resolución también se requieren imágenes de alta resolución: usa imágenes vectoriales siempre que sea posible, ya que no dependen de la resolución y siempre proporcionan buenos resultados. Si fuera necesario usar una imagen de trama, proporciona y optimiza diferentes variantes de cada imagen con la ayuda de  [`srcset` y `picture`](/web/fundamentals/design-and-ux/media/images#images-in-markup).
 
 ## Optimización de imágenes vectoriales
 
@@ -157,7 +157,7 @@ A nivel interno, el navegador asigna 256 valores (tonos) para cada canal, lo cu
 * 10 000 píxeles x 4 bytes = 40 000 bytes
 * 40 000 bytes/1024 = 39 KB
 
-Nota: A modo de aclaración, independientemente del formato de imagen utilizado para transferir los datos del servidor al cliente, cuando el navegador decodifica la imagen, cada píxel siempre ocupa 4 bytes de memoria. Esta puede ser una limitación importante para las imágenes grandes y los dispositivos que no tienen mucha memoria disponible; por ejemplo dispositivos móviles de gama baja.
+Note: A modo de aclaración, independientemente del formato de imagen utilizado para transferir los datos del servidor al cliente, cuando el navegador decodifica la imagen, cada píxel siempre ocupa 4 bytes de memoria. Esta puede ser una limitación importante para las imágenes grandes y los dispositivos que no tienen mucha memoria disponible; por ejemplo dispositivos móviles de gama baja.
 
 <table>
 <thead>
@@ -202,7 +202,7 @@ Una estrategia simple consiste en reducir la "profundidad de bits" de la imagen 
 
 <img src="images/artifacts.png"  alt="Alteraciones de la compresión">
 
-Nota: De izquierda a derecha (PNG): 32 bits (16 millones de colores), 7 bits (128 colores), 5 bits (32 colores). Las escenas complejas con transiciones de color graduales (gradientes, cielo, etc.) requieren paletas de colores más amplias para evitar anomalías visuales, como un cielo pixelado en el recurso de 5 bits. Por el contrario, si la imagen solo usa pocos colores, la presencia de una paleta grande implicará la pérdida de bits valiosos.
+Note: De izquierda a derecha (PNG): 32 bits (16 millones de colores), 7 bits (128 colores), 5 bits (32 colores). Las escenas complejas con transiciones de color graduales (gradientes, cielo, etc.) requieren paletas de colores más amplias para evitar anomalías visuales, como un cielo pixelado en el recurso de 5 bits. Por el contrario, si la imagen solo usa pocos colores, la presencia de una paleta grande implicará la pérdida de bits valiosos.
 
 A continuación, una vez que optimicemos los datos almacenados en píxeles individuales, podríamos profundizar y observar también los píxeles cercanos: al parecer, muchas imágenes, y en especial las fotos, tienen muchos píxeles cercanos con colores similares; por ejemplo, el cielo, texturas repetidas, etc. Al usar esa información para nuestro beneficio, el compresor puede aplicar “[codificación delta](https://en.wikipedia.org/wiki/Delta_encoding)”. En lugar de almacenar valores individuales para cada píxel, podemos guardar la diferencia entre los píxeles cercanos. Si los píxeles adyacentes son los mismos, delta es “cero” y solo necesitamos almacenar un solo bit. Pero no hay por qué detenerse allí...
 
@@ -239,13 +239,13 @@ De hecho, debido a la forma en que funciona el ojo, a menudo podemos descartar a
 
 A modo de ejemplo práctico, al usar un formato con pérdida, como JPEG, el compresor generalmente expondrá una configuración de "calidad" personalizable (por ejemplo, el control deslizante de calidad proporcionado por la funcionalidad "Save for Web", en Adobe Photoshop), que generalmente es un número entre 1 y 100 con el cual se controla el funcionamiento interno del conjunto específico de algoritmos con pérdida y sin pérdida. Para obtener mejores resultados, experimenta con varias configuraciones de calidad para tus imágenes, y no dudes en reducir la calidad. Los resultados visuales generalmente son muy buenos y la reducción del tamaño de archivo puede ser muy importante.
 
-Nota: Ten en cuenta que los niveles de calidad para los diferentes formatos de imagen no son directamente comparables debido a la diferencia en los algoritmos empleados para codificar la imagen: la calidad 90 JPEG producirá un resultado muy diferente del de la calidad 90 WebP. De hecho, incluso los niveles de calidad para el mismo formato de imagen pueden producir resultados visiblemente diferentes en la implementación del compresor.
+Note: Ten en cuenta que los niveles de calidad para los diferentes formatos de imagen no son directamente comparables debido a la diferencia en los algoritmos empleados para codificar la imagen: la calidad 90 JPEG producirá un resultado muy diferente del de la calidad 90 WebP. De hecho, incluso los niveles de calidad para el mismo formato de imagen pueden producir resultados visiblemente diferentes en la implementación del compresor.
 
 
 ## Selección del formato de imagen correcto
 
 ### TL;DR {: .hide-from-toc }
-- Comienza por seleccionar el formato universal correcto: GIF, PNG, JPEG
+- Comienza por seleccionar el formato universal correcto: GIF, PNG, JPEG.
 - Experimenta y selecciona la mejor configuración para cada formato: calidad, tamaño de la paleta, etc.
 - Considera agregar recursos WebP y JPEG XR para clientes modernos.
 
@@ -369,7 +369,7 @@ La optimización de la imagen se reduce a dos criterios: la optimización de la 
 
 En consecuencia, una de las técnicas más simples y eficaces de optimización de imágenes es asegurarse de no usar más píxeles que los necesarios para mostrar el recurso y su tamaño previsto en el navegador. ¿Suena simple, no es así? Lamentablemente, la mayoría de las páginas no superan esta prueba a causa de varios de sus recursos de imagen. Generalmente, envían recursos más grandes y derivan al navegador el ajuste de escala (lo cual también consumen más recursos de CPU) y la visualización con una resolución más baja.
 
-Nota: El desplazamiento sobre el elemento de imagen en Chrome DevTools revela los tamaños "natural" y "de visualización" del recurso de imagen. En el ejemplo anterior se descarga la imagen de 300 x 260 píxeles, pero luego se reduce (245 x 212) en el cliente para poder mostrarla.
+Note: El desplazamiento sobre el elemento de imagen en Chrome DevTools revela los tamaños "natural" y "de visualización" del recurso de imagen. En el ejemplo anterior se descarga la imagen de 300 x 260 píxeles, pero luego se reduce (245 x 212) en el cliente para poder mostrarla.
 
 La sobrecarga del uso de píxeles innecesarios para que el navegador modifique el tamaño de la imagen implica la pérdida de una gran oportunidad de reducir y optimizar la cantidad total de bytes para la representación de la página. Además, ten en cuenta que la modificación del tamaño no depende simplemente de la reducción en píxeles de la imagen, sino también de su tamaño natural.
 

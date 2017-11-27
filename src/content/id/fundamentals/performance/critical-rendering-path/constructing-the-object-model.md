@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ketahui cara browser mengonstruksikan pohon DOM dan CSSOM.
 
-{# wf_updated_on: 2014-09-11 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Mengonstruksikan Model Objek {: .page-title }
@@ -32,7 +32,7 @@ Mari kita mulai dengan kasus yang sesederhana mungkin: laman HTML biasa dengan b
 <img src="images/full-process.png" alt="Proses konstruksi DOM">
 
 1. **Konversi:** Browser membaca byte mentah dari HTML dari disk atau jaringan dan menerjemahkannya menjadi karakter individual berdasarkan enkode yang ditetapkan file (mis. UTF-8).
-1. **Pentokenan:** Browser mengonversi string karakter ke dalam token khas&mdash;yang ditetapkan oleh [standar W3C HTML5](http://www.w3.org/TR/html5/){: .external }; misalnya, "&lt;html&gt;", "&lt;isi&gt;"&mdash;dan string lainnya di dalam kurung siku. Setiap token memiliki arti spesial dan seperangkat aturan.
+1. **Pentokenan:** Browser mengonversi string karakter ke dalam token khas&mdash;yang ditetapkan oleh [standar W3C HTML5](http://www.w3.org/TR/html5/){: .external }; misalnya, "&lt;html&gt;", "&lt;body&gt;"&mdash;dan string lainnya di dalam kurung siku. Setiap token memiliki arti spesial dan seperangkat aturan.
 1. **Lexing:** Token yang dipancarkan dikonversikan ke dalam "objek" yang mendefinisikan properti dan aturannya.
 1. **Konstruksi DOM:** Terakhir, karena markup HTML mendefinisikan tag berbeda di antara tag (sebagian tag berada di dalam tag), objek yang dibuat ditautkan dalam struktur data pohon yang juga merekam hubungan induk-anak yang didefinisikan dalam markup asli: objek _HTML_ adalah induk dari objek _body_, _body_ adalah induk dari _paragraph_, dan seterusnya.
 
@@ -44,7 +44,7 @@ Setiap kali browser memroses markup HTML, browser harus melewati semua langkah d
 
 <img src="images/dom-timeline.png"  alt="Melacak konstruksi DOM dalam DevTools">
 
-Catatan: Kami menganggap sudah memiliki pengetahuan dasar Chrome DevTools - artinya Anda sudah tahu cara merekam jenjang jaringan, atau merekam timeline. Jika Anda butuh penyegaran cepat, lihat <a href='/web/tools/chrome-devtools/'>dokumentasi Chrome DevTools</a>, atau jika Anda baru mengenal DevTools, sebaiknya mengambil kursus <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> dari Codeschool.
+Note: Kami menganggap sudah memiliki pengetahuan dasar Chrome DevTools - artinya Anda sudah tahu cara merekam jenjang jaringan, atau merekam timeline. Jika Anda butuh penyegaran cepat, lihat <a href='/web/tools/chrome-devtools/'>dokumentasi Chrome DevTools</a>, atau jika Anda baru mengenal DevTools, sebaiknya mengambil kursus <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> dari Codeschool.
 
 Jika Anda membuka Chrome DevTools dan merekam timeline saat laman dimuat, Anda bisa melihat waktu sebenarnya yang dihabiskan untuk melakukan langkah ini&mdash;dalam contoh di atas, butuh waktu sekitar 5 md untuk mengonversikan HTML dalam jumlah besar ke dalam pohon DOM. Untuk laman yang lebih besar, proses ini mungkin menghabiskan waktu lebih lama. Saat pembuatan animasi yang lancar, hal ini bisa menjadi bottleneck apabila browser harus memroses banyak HTML.
 

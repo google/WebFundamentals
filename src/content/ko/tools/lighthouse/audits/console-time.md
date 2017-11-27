@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "스크립트에서 console.time()을 사용하지 않는 사이트" Lighthouse 감사의 참조 문서입니다.
+description: '스크립트에서 console.time()을 사용하지 않는 사이트' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-12-01 #}
 {# wf_published_on: 2016-12-01 #}
@@ -10,7 +10,7 @@ description: "스크립트에서 console.time()을 사용하지 않는 사이트
 ## 감사가 중요한 이유 {: #why }
 
 `console.time()`을 사용하여 페이지 성능을 측정하고 있다면
-대신 User Timing API를 사용하세요. 장점:
+대신 User Timing API를 사용하세요. 이점은 다음과 같습니다.
 
 * 고해상도 타임스탬프
 * 내보낼 수 있는 타이밍 데이터
@@ -30,8 +30,8 @@ Lighthouse는 **URLs**에서 찾은 `console.time()`의 모든 인스턴스를
 두 개의 마크 사이에서 경과한 시간을 측정하고 싶다면
 `performance.measure()`를 사용하세요.
 
-API 사용 방법에 대한 자세한 내용은 [User Timing API: 웹 앱의 이해][html5rocks]
-를 참조하세요.
+API 사용 방법에 대한 자세한 내용은 [User Timing API: 웹 앱의 이해][html5rocks]를
+참조하세요.
 
 [html5rocks]: https://www.html5rocks.com/en/tutorials/webperformance/usertiming/
 

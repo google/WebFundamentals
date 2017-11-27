@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Aprende a usar Chrome y DevTools para encontrar problemas de memoria que afecten el rendimiento de la página, incluidos fugas o aumentos de memoria y recolecciones frecuentes de elementos no usados.
 
@@ -254,8 +254,8 @@ Para grabar una línea de tiempo de asignación, abre DevTools, ve al panel **Pr
 activa el botón de selección **Record Allocation Timeline**, presiona el botón **Start**,
 realiza la acción que sospechas que genera la fuga de memoria y
 luego presiona el botón **stop recording** 
-(![botón stop recording][sr]{:.inline})
-. 
+(![botón stop recording][sr]{:.inline}).
+ 
 
 A medida que realices la grabación, observa si aparecen barras azules en la línea del tiempo
 de asignación, como se muestra en la siguiente captura de pantalla. 

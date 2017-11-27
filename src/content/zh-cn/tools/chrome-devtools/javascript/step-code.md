@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:通过每次执行一个代码行或一个函数，您可以观察数据和页面中的变化，准确了解正在发生什么。
 
@@ -105,7 +105,7 @@ Scope 窗格显示在 local、closure 和 global 级别定义的属性。
 ![显示暗淡的属性](imgs/enumerables.png)
 
 深颜色属性可以计数。浅颜色、显示暗淡的属性则不可计数。
-如需了解详细信息，请参阅以下 Stack Overflow 主题：[Chrome 开发者工具 Scope 面板中的颜色有何含义？](http://stackoverflow.com/questions/36535221/what-do-the-colors-mean-in-chrome-developer-tools-scope-panel/36545767#36545767)
+如需了解详细信息，请参阅以下 Stack Overflow 主题：[Chrome 开发者工具 Scope 面板中的颜色有何含义？](Chrome 开发者工具 Scope 面板中的颜色有何含义？)
 
 
 

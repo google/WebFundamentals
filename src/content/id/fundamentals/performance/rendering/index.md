@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Pengguna akan tahu jika situs dan aplikasi tidak berjalan dengan baik, jadi optimalisasi kinerja rendering sangatlah penting!
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-20 #}
 
 # Kinerja Rendering {: .page-title }
@@ -95,7 +95,7 @@ browser akan melompatinya untuk melakukan komposisi saja.
 Versi akhir ini paling murah dan paling diinginkan untuk titik tekanan tinggi
 dalam daur hidup aplikasi, seperti animasi atau pengguliran.
 
-Catatan: Jika Anda ingin mengetahui manakah dari ketiga versi di atas yang mengubah properti CSS yang akan dipicu, lihat [Pemicu CSS](https://csstriggers.com). Dan jika Anda ingin jalur cepat ke animasi berkinerja tinggi, bacalah bagian tentang [mengubah properti compositor-saja](stick-to-compositor-only-properties-and-manage-layer-count).
+Note: Jika Anda ingin mengetahui manakah dari ketiga versi di atas yang mengubah properti CSS yang akan dipicu, lihat [Pemicu CSS](https://csstriggers.com). Dan jika Anda ingin jalur cepat ke animasi berkinerja tinggi, bacalah bagian tentang [mengubah properti compositor-saja](stick-to-compositor-only-properties-and-manage-layer-count).
 
 Kinerja adalah seni menghindari pekerjaan, dan membuat pekerjaan yang Anda lakukan jadi
 seefisien mungkin. Umumnya, ini adalah tentang bekerja sama dengan browser, bukan

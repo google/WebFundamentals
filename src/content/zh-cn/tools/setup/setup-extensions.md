@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:每个桌面浏览器都自带一套开发者工具，能够直接使用，您可以将浏览器的扩展程序或插件扩展和添加至这些工具。
 
@@ -19,7 +19,7 @@ description:每个桌面浏览器都自带一套开发者工具，能够直接�
 ## Emmet Re:View
 
 Emmet Re:View 可以让您轻松查看网站在您每次进行媒体查询时的外观，以及同步所有页面的滚动。
-您可以[在它们的网站上](http://re-view.emmet.io/) 观看演示。
+您可以[在它们的网站上](http://re-view.emmet.io/)观看演示。
 
 
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La habilitación de HTTPS en tus servidores es fundamental para la seguridad de tus páginas web. 
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-27 #}
 
 # Habilitación de HTTPS en tus servidores {: .page-title }
@@ -130,7 +130,7 @@ subdominios; de lo contrario, solo puedes comprar uno o más certificados para u
 posees más de cinco subdominios, por ejemplo, tal vez un certificado comodín
 te resulte más conveniente cuando decidas habilitar HTTPS en tus servidores).
 
-Nota: Ten en cuenta que, en los certificados comodín, el comodín se aplica a una sola etiqueta de DNS. Un certificado que sea conveniente para \*.example.com será útil para foo.example.com y bar.example.com, pero _no_ para foo.bar.example.com.
+Note: Ten en cuenta que, en los certificados comodín, el comodín se aplica a una sola etiqueta de DNS. Un certificado que sea conveniente para \*.example.com será útil para foo.example.com y bar.example.com, pero _no_ para foo.bar.example.com.
 
 Copia los certificados a todos tus servidores front-end en un
 espacio al que no se pueda acceder a través de la Web, como `/etc/ssl` (Linux y Unix), o en cualquier lugar donde lo requiera IIS (Windows).
@@ -160,7 +160,7 @@ que es fundamental para los hosting virtuales HTTPS basados en nombres.
 En el futuro, y esperamos que sea un futuro cercano, los clientes que no ofrezcan compatibilidad con SNI serán reemplazados
 por software moderno. Controla la cadena usuario-agente en tus registros de solicitudes para saber
 el momento en que se produjo la migración de suficientes usuarios propios a un software moderno. (Puedes
-decidir cuál es tu límite; tal vez el &lt; 5% o el &lt; 1%).
+decidir cuál es tu límite; tal vez &lt; 5% o &lt; 1%).
 
 Si el servicio HTTPS aún no está disponible en tus servidores, habilítalo ahora mismo
 (sin redireccionar HTTP a HTTPS. Consulta la información a continuación). Configura tu servidor web para usar
@@ -172,9 +172,9 @@ puede resultarte útil.
 Si posees muchos nombres de host o subdominios, cada uno deberá usar el certificado
 adecuado.
 
-Advertencia: Si ya completaste estos pasos, pero usas HTTPS con le único objetivo de redirigir a los clientes a HTTP, deja de hacerlo ahora. Consulta la próxima sección para asegurarte de que HTTPS y HTTP funcionen correctamente.
+Warning: Si ya completaste estos pasos, pero usas HTTPS con le único objetivo de redirigir a los clientes a HTTP, deja de hacerlo ahora. Consulta la próxima sección para asegurarte de que HTTPS y HTTP funcionen correctamente.
 
-Nota: En última instancia, debes redireccionar las solicitudes de HTTP a HTTPS y usar Seguridad de transporte estricta HTTP (HSTS). Sin embargo, esta no es la etapa adecuada del proceso de migración para hacerlo. Consulta “Redirecciona de HTTP a HTTPS” y “Activa la Seguridad de transporte estricta y cookies de seguridad”.
+Note: En última instancia, debes redireccionar las solicitudes de HTTP a HTTPS y usar Seguridad de transporte estricta HTTP (HSTS). Sin embargo, esta no es la etapa adecuada del proceso de migración para hacerlo. Consulta “Redirecciona de HTTP a HTTPS” y “Activa la Seguridad de transporte estricta y cookies de seguridad”.
 
 Ahora mismo, y durante el tiempo que dure tu sitio, verifica la configuración de HTTPS a través de la
 [práctica herramienta SSL Server Test de Qualys](https://www.ssllabs.com/ssltest/){: .external }. Tu sitio
@@ -193,7 +193,7 @@ Verifica que las URL dentro del sitio y las URL externas sean independientes del
 Surge un problema cuando sirves una página vía HTTPS que incluye recursos
 HTTP, conocidos como [contenido mixto](/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content). Los navegadores les advierten a los usuarios que se ha perdido la fuerza total de HTTPS. De hecho, en el caso del contenido mixto activo (secuencias de comandos, complementos, CSS o iframes), a menudo, los navegadores simplemente no cargarán ni ejecutarán el contenido, lo cual ocasionará desperfectos en la página.
 
-Nota: Es totalmente correcto incluir recursos de HTTPS en una página HTTP.
+Note: Es totalmente correcto incluir recursos de HTTPS en una página HTTP.
 
 Además, si incluyes vínculos con otras páginas en tu sitio, los usuarios podrían
 sufrir una degradación de HTTPS a HTTP.
@@ -244,7 +244,7 @@ Cuando realices vinculaciones a otros sitios (que es diferente de incluir recurs
 no cambies el protocolo, ya que no puedes controlar el modo en el que operan esos
 sitios.
 
-Éxito: Recomendamos usar URL relativas de protocolo para que la migración de sitios grandes se realice sin problemas. Si todavía no estás seguro de si ya puedes implementar HTTPS por completo, forzar a tu sitio para que utilice HTTPS para todos los subrecursos podría tener consecuencias negativas. Es posible que durante algún tiempo HTTPS resulte nuevo y extraño. De todos modos, el sitio HTTP debe funcionar tan bien como siempre. Con el tiempo, completarás la migración y podrás utilizar HTTPS definitivamente (consulta las dos secciones siguientes).
+Success: Recomendamos usar URL relativas de protocolo para que la migración de sitios grandes se realice sin problemas. Si todavía no estás seguro de si ya puedes implementar HTTPS por completo, forzar a tu sitio para que utilice HTTPS para todos los subrecursos podría tener consecuencias negativas. Es posible que durante algún tiempo HTTPS resulte nuevo y extraño. De todos modos, el sitio HTTP debe funcionar tan bien como siempre. Con el tiempo, completarás la migración y podrás utilizar HTTPS definitivamente (consulta las dos secciones siguientes).
 
 Si tu sitio depende de una secuencia de comandos, una imagen u otros recursos ofrecidos por un
 tercero, como CDN o jquery.com, tienes dos opciones:
@@ -256,7 +256,7 @@ como HTTPS. De todos modos, esta suele ser una buena idea, ya que luego puedes t
 control sobre la apariencia, el rendimiento y la seguridad de tu sitio. Además,
 no tienes que confiar en un tercero, lo cual siempre es positivo.
 
-Nota: Ten en cuenta que también debes cambiar las URL dentro del sitio en tus hojas de estilos, JavaScript, reglas de redirección, etiquetas `<link>` y declaraciones del CSP, no solo en las páginas HTML.
+Note: Ten en cuenta que también debes cambiar las URL dentro del sitio en tus hojas de estilos, JavaScript, reglas de redirección, etiquetas `<link>` y declaraciones del CSP, no solo en las páginas HTML.
 
 ## Redirecciona de HTTP a HTTPS
 
@@ -279,13 +279,13 @@ si siguen una referencia `http://`. Esto elimina los ataques, como los de
 se evita el costo de ida y vuelta del `301 redirect` que habilitamos en la sección
 [Redirecciona de HTTP a HTTPS](#redirect-http-to-https).
 
-Nota: Es probable que los clientes que consideran a tu sitio un host de HSTS reconocido <a href="https://tools.ietf.org/html/rfc6797#section-12.1"><i>no quieran volver a usarlo</i> si tu sitio alguna vez tiene un error en su configuración de la TLS</a> (por ejemplo, un certificado vencido). La HSTS se diseñó explícitamente de esta forma para asegurarse de que los atacantes a la red no puedan engañar a los clientes para que accedan al sitio sin HTTPS. No habilites HSTS hasta asegurarte de que el funcionamiento de tu sitio es lo suficientemente sólido como para evitar que se implemente HTTPS con errores de validación de certificados.
+Note: Es probable que los clientes que consideran a tu sitio un host de HSTS reconocido <a href="https://tools.ietf.org/html/rfc6797#section-12.1"><i>no quieran volver a usarlo</i> si tu sitio alguna vez tiene un error en su configuración de la TLS</a> (por ejemplo, un certificado vencido). La HSTS se diseñó explícitamente de esta forma para asegurarse de que los atacantes a la red no puedan engañar a los clientes para que accedan al sitio sin HTTPS. No habilites HSTS hasta asegurarte de que el funcionamiento de tu sitio es lo suficientemente sólido como para evitar que se implemente HTTPS con errores de validación de certificados.
 
 Activa la Seguridad de transporte estricta de HTTP (HSTS) estableciendo el encabezado `Strict-Transport-Security`. [La página sobre HSTS de OWASP tiene vínculos a las instrucciones](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security) para diferentes opciones de software del servidor.
 
 La mayoría de los servidores web ofrecen una capacidad similar para agregar encabezados personalizados.
 
-Nota: `max-age` se mide en segundos. Puedes comenzar con valores bajos y aumentar gradualmente el valor de `max-age` a medida que te sientas más cómodo con el uso de un sitio que sea solamente HTTPS.
+Note: `max-age` se mide en segundos. Puedes comenzar con valores bajos y aumentar gradualmente el valor de `max-age` a medida que te sientas más cómodo con el uso de un sitio que sea solamente HTTPS.
 
 También es importante asegurarse de que los clientes nunca envíen cookies (por ejemplo, para
 realizar autenticaciones o debido a las preferencias del sitio) a través de HTTP. Por ejemplo, si la cookie de autenticación
@@ -334,7 +334,7 @@ maneras:
 
 Ya que los motores de búsqueda están migrando a HTTPS, en el futuro, es probable que veas _más_ encabezados de referencia cuando migres a HTTPS.
 
-Advertencia: Según la [RFC de HTTP](https://tools.ietf.org/html/rfc2616#section-15.1.3), los clientes **NO DEBEN** incluir un campo de encabezado de referencia en una solicitud de HTTP (no segura) si la página de referencia se transfiere con un protocolo seguro.
+Warning: Según la [RFC de HTTP](https://tools.ietf.org/html/rfc2616#section-15.1.3), los clientes **NO DEBEN** incluir un campo de encabezado de referencia en una solicitud de HTTP (no segura) si la página de referencia se transfiere con un protocolo seguro.
 
 ### Ingresos por anuncios
 

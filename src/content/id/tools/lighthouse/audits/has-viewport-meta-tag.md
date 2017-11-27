@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk audit Lighthouse "HTML Memiliki Tag Meta Viewport".
 
@@ -15,7 +15,7 @@ tampilan yang terlihat akan memungkinkan Anda mengontrol lebarnya dan menskalaka
 Periksalah tautan berikut untuk mengetahui selengkapnya:
 
 * [Konfigurasikan Tampilan yang Terlihat](/speed/docs/insights/ConfigureViewport).
-* [Setel Tampilan yang Terlihat](/web/fundamentals/design-and-ui/responsive/#set-the-viewport).
+* [Setel Tampilan yang Terlihat](/web/fundamentals/design-and-ux/responsive/#set-the-viewport).
 
 ## Cara untuk lulus audit {: #how }
 

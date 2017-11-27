@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools는 예외가 발생한 웹페이지를 수정하고 자바스크립트 오류를 디버그하는 데 도움이 되는 도구를 제공합니다.
 
@@ -28,7 +28,7 @@ Chrome DevTools는 예외가 발생한 웹페이지를 수정하고 자바스크
 문제가 발생한 경우 DevTools 콘솔을 열어(`Ctrl+Shift+J` / `Cmd+Option+J`) 자바스크립트 오류 메시지를 봅니다.
 각 메시지에는 파일 이름에 대한 링크와 이동할 수 있는 줄 번호가 있습니다.
 
-예외의 예시:
+예외 관련 예시:
 ![예외 예시](images/track-exceptions-tracking-exceptions.jpg)
 
 ### 예외 스택 추적 보기
@@ -89,7 +89,7 @@ Scripts 패널 아래쪽의 3상 중지 버튼을 사용하여 여러 예외 처
 `lib.js`가 제공하는 `callLibMethod()` 함수가 호출됩니다.
 
 이 함수는 `console.log`를 출력한
-후에 콘솔 API가 제공하지 않는 메서드인 `console.slog`
+후에 Console API가 제공하지 않는 메서드인 `console.slog`
 를 호출합니다.
 이 경우 오류가 트리거됩니다.
 

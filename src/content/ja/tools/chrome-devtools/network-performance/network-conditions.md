@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: ユーザーがモバイル環境で直面するネットワーク状態を見落としてしまうことがよくあります。DevTools を使って、さまざまなネットワーク状態のエミュレーションを行います。ユーザーにとって大切なのは、読み込み時間の問題を解決することです。
 
@@ -29,7 +29,7 @@ Network conditioning は、[Network] パネルから有効にします。ドロ�
 
 ![ネットワーク スロットルの選択](imgs/throttle-selection.png)
 
-**使い方**:[Network conditions](#network-conditions) ドロワーからネットワーク スロットルを設定することもできます。
+**使い方**: [Network conditions](#network-conditions) ドロワーからネットワーク スロットルを設定することもできます。
 
 
 スロットルを有効にすると、パネルのインジケーターに警告アイコンが表示されます。このアイコンにより、他のパネルを表示しているときもスロットルが有効になっていることが分かります。

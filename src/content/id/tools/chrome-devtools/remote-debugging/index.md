@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Debug materi langsung dari jauh di perangkat Android dari komputer Windows, Mac atau Linux.
 
-{# wf_updated_on: 2016-12-09 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 <style>
@@ -12,21 +12,21 @@ description: Debug materi langsung dari jauh di perangkat Android dari komputer 
 }
 </style>
 
-# Mulai dengan Men-debug Perangkat Android dari Jauh {: .page-title }
+# Memulai dengan Men-debug Perangkat Android dari Jauh {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
 Debug materi langsung dari jauh di perangkat Android dari komputer 
 Windows, Mac, atau Linux. Tutorial ini mengajarkan kepada Anda cara:
 
-* Mempersiapkan perangkat Android untuk debug dari jauh, dan menemukannya dari 
+* Menyiapkan perangkat Android untuk debug dari jauh, dan menemukannya dari 
   mesin development Anda.
 * Memeriksa dan men-debug materi langsung di perangkat Android dari
   mesin development Anda.
 * Melakukan siaran layar atas materi dari perangkat Android ke instance DevTools di
   mesin development.
 
-!ilustrasi debug dari jauh](imgs/remote-debugging.png)
+![ilustrasi debug dari jauh](imgs/remote-debugging.png)
 
 ## Persyaratan {: #requirements }
 
@@ -46,14 +46,14 @@ Windows, Mac, atau Linux. Tutorial ini mengajarkan kepada Anda cara:
    Android 4.2 dan yang lebih baru. Lihat [Mengaktifkan Opsi Developer Pada-Perangkat][android]
    untuk mempelajari cara mengaktifkannya.
 
-	[android]: https://developer.android.com/studio/run/device.html#developer-device-options
+[android]: https://developer.android.com/studio/run/device.html#developer-device-options
 
 1. Di mesin development, buka Chrome. Anda harus masuk ke
    Chrome dengan salah satu akun Google. Debug dari jauh tidak berfungsi di
    [Mode Penyamaran][incognito] atau [Akses Tamu][guest].
 
-	[guest]: https://support.google.com/chrome/answer/6130773
-	[incognito]: https://support.google.com/chrome/answer/95464
+[guest]: https://support.google.com/chrome/answer/6130773
+[incognito]: https://support.google.com/chrome/answer/95464
 
 1. [Buka DevTools](/web/tools/chrome-devtools/#open).
 
@@ -62,24 +62,26 @@ Windows, Mac, atau Linux. Tutorial ini mengajarkan kepada Anda cara:
 
      ![Membuka panel samping perangkat jauh][open]
 
-	[main]: /web/tools/chrome-devtools/images/three-dot.png
-	[open]: /web/tools/chrome-devtools/remote-debugging/imgs/open-remote-devices.png
+[main]: /web/tools/chrome-devtools/images/three-dot.png
+[open]: /web/tools/chrome-devtools/remote-debugging/imgs/open-remote-devices.png
 
 1. Di DevTools, klik tab **Settings**, jika ada tab lain yang ditampilkan.
 
 1. Pastikan **Discover USB devices** telah diaktifkan.
-    ![Discover USB devices telah diaktifkan][discover]
-	
-	[discover]: /web/tools/chrome-devtools/remote-debugging/imgs/discover-usb-devices.png
+
+     ![Discover USB devices telah diaktifkan][discover]
+
+[discover]: /web/tools/chrome-devtools/remote-debugging/imgs/discover-usb-devices.png
 
 1. Hubungkan perangkat Android Anda secara langsung ke mesin development
    dengan menggunakan kabel USB. Jangan gunakan hub USB perantara. Jika baru pertama kali
    menghubungkan perangkat Android ke mesin development, perangkat
    Anda akan ditampilkan pada **Unknown**, bersama teks **Pending Authorization** di
    bawahnya.
+
        ![Perangkat tidak dikenal, menunggu otorisasi][unknown]
 
-	[unknown]: /web/tools/chrome-devtools/remote-debugging/imgs/unknown-device.png
+[unknown]: /web/tools/chrome-devtools/remote-debugging/imgs/unknown-device.png
 
 1. Jika perangkat Anda ditampilkan sebagai **Unknown**, terimalah konfirmasi izin **Allow USB
    Debugging** di perangkat Android. **Unknown** diganti
@@ -87,7 +89,7 @@ Windows, Mac, atau Linux. Tutorial ini mengajarkan kepada Anda cara:
    dan teks **Connected** menunjukkan bahwa Anda siap men-
    debug dari jauh perangkat Android dari mesin development.
 
-Catatan: Jika mengalami masalah selama proses pencarian, Anda 
+Note: Jika mengalami masalah selama proses pencarian, Anda 
 bisa mengulanginya dengan memilih **Settings** > **Developer Options** >
 **Revoke USB Debugging Authorizations** di perangkat Android.
 

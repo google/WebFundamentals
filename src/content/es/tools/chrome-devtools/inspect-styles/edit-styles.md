@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Usa el panel Styles en Chrome DevTools para inspeccionar y modificar los estilos de CSS asociados a un elemento.
 
-{# wf_updated_on: 2016-02-25 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Editar estilos {: .page-title }
@@ -51,8 +51,7 @@ Las etiquetas en la imagen que se muestra a continuación corresponden a los ele
    texto tachado.
 4. Los estilos **heredados** se muestran como un grupo bajo el encabezado "Inherited
    from `<NODE>`" . Haz clic en el nodo del DOM en el título para navegar hasta
-   su posición en la vista de árbol del DOM. (La [tabla de propiedades de CSS 2.1
-   ](http://www.w3.org/TR/CSS21/propidx.html) muestra las propiedades
+   su posición en la vista de árbol del DOM. (La [tabla de propiedades de CSS 2.1](http://www.w3.org/TR/CSS21/propidx.html) muestra las propiedades
    que son heredables.)
 5. Las entradas de color gris son reglas que no están definidas sino que
    **se computan en tiempo de ejecución**.
@@ -82,7 +81,7 @@ Haz clic en el botón **.cls** para ver todas las clases de CSS asociadas con el
 elemento seleccionado actualmente. Desde allí, puedes hacer lo siguiente:
 
 * habilitar o inhabilitar las clases asociadas actualmente al elemento;
-* Agregar nuevas clases al elemento. 
+* agregar nuevas clases al elemento. 
 
 ![panel classes](imgs/classes.png)
 
@@ -113,7 +112,7 @@ Haz clic en un espacio vacío dentro de una regla de CSS editable para crear una
 Escríbela o pega la CSS en el subpanel **Styles**. Las propiedades y sus 
 valores se analizan e ingresan en los campos correctos.
 
-Nota: para habilitar o inhabilitar una declaración de estilo, selecciona o desmarca la casilla de verificación al lado de ella.
+Note: para habilitar o inhabilitar una declaración de estilo, selecciona o desmarca la casilla de verificación al lado de ella.
 
 ## Agregar una regla de estilo
 
@@ -140,7 +139,7 @@ Existen tres maneras de establecer estos estados dinámicos en un elemento:
   en el panel **Styles** y usa las casillas de verificación para habilitar o inhabilitar los 
   selectores  para el elemento seleccionado actualmente.
 
-  ![:hov pane](imgs/hov.png)
+  ![panel :hov](imgs/hov.png)
 
 ## Agregar color de fondo o color a una regla de estilo
 
@@ -169,12 +168,12 @@ valor de la declaración. Haz clic en este pequeño cuadrado para abrir el **Sel
 
 Puedes interactuar con el **Selector de colores** de diferentes maneras:
 
-1. **Cuentagotas**. consulta la sección [Cuentagotas](#eyedropper) para obtener más información.
+1. **Cuentagotas**: consulta la sección [Cuentagotas](#eyedropper) para obtener más información.
 2. **Color actual**: una representación visual del **valor actual**.
 3. **Valor actual**: la representación hexadecimal, RGBA o HSL del 
    **color actual**.
-4. **Paleta de colores**: Para más información, consulta [Paleta de colores](#color-palettes) 
-   .
+4. **Paleta de colores**: para más información, consulta [Paleta de colores](#color-palettes).
+
 5. **Selector de tonos y sombras**.
 6. **Selector de matices**.
 7. **Selector de opacidad**.
@@ -219,12 +218,12 @@ borrar todos los colores de la plantilla.
 ## Ver y editar propiedades personalizadas de CSS (variables de CSS) {:#custom-properties}
 
 Puedes ver y editar declaraciones que definen o usan [propiedades 
-personalizadas de CSS][introducción] (conocidas informalmente como variables de CSS) al igual que cualquier otra 
+personalizadas de CSS][intro] (conocidas informalmente como variables de CSS) al igual que cualquier otra 
 declaración. 
 
 Las propiedades personalizadas suelen [definirse][def] en el selector `:root`.
- Para ver una propiedad personalizada definida en `:root`, inspecciona el elemento `html` 
-.
+ Para ver una propiedad personalizada definida en `:root`, inspecciona el elemento `html`.
+
 
 ![propiedad personalizada definida en :root](imgs/css-var-defined-on-root.png)
 
@@ -242,8 +241,8 @@ manera de pasar a la definición de propiedad personalizada.
 
 ![usar una propiedad personalizada](imgs/css-var-in-use.png)
 
-[introducción]: /web/updates/2016/02/css-variables-why-should-you-care
-[definición]: https://drafts.csswg.org/css-variables/#defining-variables
+[intro]: /web/updates/2016/02/css-variables-why-should-you-care
+[def]: https://drafts.csswg.org/css-variables/#defining-variables
 
 ## Editar Sass, Less o Stylus
 
@@ -280,7 +279,7 @@ Cuando guardas los cambios en un archivo del preprocesador de CSS en DevTools, e
 - **¿Usas <a href="/web/tools/setup/setup-workflow">espacios de trabajo</a>?** Asegúrate de que el archivo CSS también esté asignado en el espacio de trabajo. Puedes verificarlo en el árbol de la derecha del panel Sources. Allí puedes ver si el archivo CSS proviene de tu carpeta local.
 - **Para que DevTools vuelva a cargar automáticamente los estilos** cuando cambies el archivo de origen, debes configurar el preprocesador para que regenere los archivos CSS cuando un archivo de origen cambia. De lo contrario, debes regenerar los archivos CSS manualmente y volver a cargar la página para ver los cambios.
 - **Debes acceder al sitio o a la app desde un servidor web** (en lugar de un **archivo://** URL) y el servidor debe proporcionar los archivos CSS, al igual que los mapas de origen (.css.map) y los archivos de origen (.scss, etc.).
-- Si _no_ usas la función Workspaces, el servidor web también debe proporcionar el encabezado `Last-Modified` .
+- Si _no_ usas la función Workspaces, el servidor web también debe proporcionar el encabezado `Last-Modified`.
 
 Aprende cómo configurar mapas de origen en [Configurar preprocesadores de CSS y JS](/web/tools/setup/setup-preprocessors).
 

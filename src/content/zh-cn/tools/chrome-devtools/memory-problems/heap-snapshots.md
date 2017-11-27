@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:了解如何使用 Chrome DevTools 的堆分析器记录堆快照以及如何查找内存泄漏。
 

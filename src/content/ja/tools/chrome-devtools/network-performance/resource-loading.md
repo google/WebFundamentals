@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools の [Network] パネルを使って、ウェブ アプリケーションのネットワーク パフォーマンスを測定します。
 
@@ -35,17 +35,12 @@ description: Chrome DevTools の [Network] パネルを使って、ウェブ ア
 1. **コントロール**。このパネルのオプションを使って、[**Network**] パネルの外観と機能を管理します。
 2. **フィルタ**。
 このパネルのオプションを使って、**リクエスト表**に表示するリソースを管理します。
-使い方: 複数のフィルタを同時に選択するには、<kbd>Cmd</kbd>（Mac）または <kbd>Ctrl</kbd>
-   （Window/Linux）を押しながらフィルタをクリックします。
+使い方: 複数のフィルタを同時に選択するには、<kbd>Cmd</kbd>（Mac）または <kbd>Ctrl</kbd>（Window/Linux）を押しながらフィルタをクリックします。
 3. **概要**。
 このグラフは、リソースが取得された時点のタイムラインを示します。
    複数のバーが縦に積み重なっている場合、それらのリソースが同時に取得されたことを表します。
 4. **リクエスト表**。
-この表には、取得されたリソースがすべて一覧されます。
-   デフォルトでは、この表は時系列に並べ替えられ、先頭が最初に取得されたリソースになります。
-
-   リソースの名前をクリックすると、詳細情報が表示されます。
-   使い方: 表の見出しのいずれか（[**Timeline**] 以外）を右クリックすると、情報の列を追加または削除できます。
+この表には、取得されたリソースがすべて一覧されます。デフォルトでは、この表は時系列に並べ替えられ、先頭が最初に取得されたリソースになります。リソースの名前をクリックすると、詳細情報が表示されます。使い方: 表の見出しのいずれか（[**Timeline**] 以外）を右クリックすると、情報の列を追加または削除できます。
 5. **要約**。
 このペインでは、リクエストの総数、データ転送の量、読み込み時間がひと目で分かります。
 
@@ -67,9 +62,7 @@ description: Chrome DevTools の [Network] パネルを使って、ウェブ ア
 
 
 * [**Size**]。サーバーから配信時のレスポンス ヘッダーとレスポンス本文の合計サイズ（通常は、数百バイト）。
- 
 * [**Time**]。リクエスト開始からレスポンスの最終バイトを受け取るまでにかかった合計時間。
- 
 * [**Timeline**]。[Timeline] 列には、すべてのネットワーク リクエストの流れが目に見える形で表示されます。
 この列見出しをクリックすると、追加の並べ替えフィールドのメニューが表示されます。
 
@@ -82,7 +75,6 @@ description: Chrome DevTools の [Network] パネルを使って、ウェブ ア
 
 **記録** ボタンを見れば、DevTools によって記録が行われているかどうかを判断できます。
 ボタンが赤の場合（![記録ボタン オン](imgs/record-on.png){:.inline}）、DevTools は記録中です。
-
 ボタンが灰色の場合（![記録ボタン オフ](imgs/record-off.png){:.inline}）、DevTools は記録を行っていません。
 記録を開始または終了するには、このボタンをクリックするか、キーボード ショートカット <kbd>Cmd/Ctrl</kbd>+<kbd>e</kbd> を押します。
 
@@ -158,8 +150,7 @@ Filmstrip を有効にするには、**カメラ** アイコンをクリック�
 
 ライフサイクルは、以下のカテゴリにかかった時間を示します。
 
-<!-- the screenshot above and list below are redundant, but we include
-     the text for SEO -->
+<!-- the screenshot above and list below are redundant, but we include the text for SEO -->
 
 * Queuing
 * Stalled
@@ -231,10 +222,8 @@ Filmstrip を有効にするには、**カメラ** アイコンをクリック�
 * [**Domain**]。Cookie が所属するドメイン。
 * [**Path**]。Cookie の発生元 URL パス。
 * [**Expires / Max-Age**]。Cookie の expires プロパティまたは max-age プロパティの値。
-
 * [**Size**]。Cookie のサイズ（バイト単位）。
 * [**HTTP**]。HTTP リクエストの Cookie はブラウザだけが設定し、JavaScript からはアクセスできないことを示します。
-
 * [**Secure**]。この属性が存在する場合、セキュリティ保護された接続経由で Cookie を送信する必要があることを示します。
 
 
@@ -273,7 +262,6 @@ Filmstrip を有効にするには、**カメラ** アイコンをクリック�
 **現在の実装についての注意事項:**
 
 * 新しいメッセージの配信後に [**Frames**] の表を更新するには、左側のリソース名をクリックします。
-
 * [**Frames**] の表に保持されるのは、最新 100 件の `WebSocket` メッセージだけです。
 
 ##  リソースの開始元と依存関係の表示 {:#initiators-dependencies}
@@ -311,15 +299,11 @@ Filmstrip を有効にするには、**カメラ** アイコンをクリック�
 
 
 * [**Timeline**]。各ネットワーク リクエストを開始時間順に並べ替えます。これはデフォルトの並べ替え順で、[**Start Time**] オプションで並べ替えるのと同じです。
-
 * [**Start Time**]。各ネットワーク リクエストを開始時間順に並べ替えます（[**Timeline**] オプションで並べ替えるのと同じです）。
-
 * [**Response Time**]。各リクエストをレスポンスが返った時間順に並べ替えます。
 * [**End Time**]。各リクエストを完了時間順に並べ替えます。
 * [**Duration**]。各リクエストを合計時間順に並べ替えます。このフィルタを選択すると、読み込みに最も時間がかかるリソースを判断できます。
-
-* [**Latency**]。リクエストを開始してからレスポンスが始まるまでにかかった時間で並べ替えます。
-このフィルタを選択すると、最初のバイトを受け取るまでの時間（TTFB）が最も長かったリソースを判断できます。
+* [**Latency**]。リクエストを開始してからレスポンスが始まるまでにかかった時間で並べ替えます。このフィルタを選択すると、最初のバイトを受け取るまでの時間（TTFB）が最も長かったリソースを判断できます。
 
 
 ![Timeline の並べ替え項目](imgs/timeline-sort-fields.png)
@@ -354,33 +338,22 @@ Filmstrip を有効にするには、**カメラ** アイコンをクリック�
 * `domain`。指定したドメインのリソースのみを表示します。複数のドメインを含めるには、ワイルドカード文字（`*`）を使用します。
 たとえば、`*.com` はドメイン名が `.com` で終わるすべてのドメインのリソースを表示します。
 DevTools では、見つかったすべてのドメインを含むオートコンプリート ドロップダウン メニューが設定されます。
-
-
 * `has-response-header`。指定した HTTP レスポンス ヘッダーを含むリソースを表示します。
 DevTools では、見つかったすべてのレスポンス ヘッダーを含むオートコンプリート ドロップダウンが設定されます。
-
 * `is`。`is:running` を使用して、`WebSocket` リソースを検索します。
 * `larger-than`。指定したサイズ（バイト単位）よりも長いリソースを表示します。
 値 `1000` を設定するのと値 `1k` を設定するのは同じです。
 * `method`。指定した HTTP メソッドの種類で取得されたリソースを表示します。
 DevTools では、見つかったすべての HTTP メソッドを含むドロップダウンが設定されます。
-
 * `mime-type`。指定した MIME タイプのリソースを表示します。DevTools では、見つかったすべての MIME タイプを含むドロップダウンが設定されます。
-
 * `mixed-content`。すべての混在コンテンツ リソース（`mixed-content:all`）または現在表示されている混在コンテンツ リソースのみ（`mixed-content:displayed`）を表示します。
-
 * `scheme`。保護されていない HTTP （`scheme:http`）または保護されている HTTPS （`scheme:https`）を経由して取得されたリソースを表示します。
-
 * `set-cookie-domain`。指定した値と一致する `Domain` 属性を持つ `Set-Cookie` ヘッダーを含むリソースを表示します。
 DevTools では、見つかったすべての Cookie ドメインを含むオートコンプリート ドロップダウンが設定されます。
-
-
 * `set-cookie-name`。指定した値と一致する名前を持つ `Set-Cookie` ヘッダーを含むリソースを表示します。
 DevTools では、見つかったすべての Cookie 名を含むオートコンプリート ドロップダウンが設定されます。
-
 * `set-cookie-value`。指定した値と一致する値を持つ `Set-Cookie` ヘッダーを含むリソースを表示します。
 DevTools では、見つかったすべての Cookie 値を含むオートコンプリート ドロップダウンが設定されます。
-
 * `status-code`。指定したコードと一致する HTTP ステータス コードを持つリソースだけを表示します。
 DevTools では、見つかったすべてのステータス コードを含むオートコンプリート ドロップダウン メニューが設定されます。
 
@@ -397,37 +370,25 @@ DevTools では、見つかったすべてのステータス コードを含む�
 
 ネットワーク情報をコピー、保存、または削除するには、**リクエスト表**内でその情報を右クリックします。
 一部のオプションは状況に依存するため、1 つのリソースを操作する場合、そのリソースの行を右クリックする必要があります。
-
 以下に、それぞれのオプションについて説明します。
 
 * [**Copy Response**]。選択したリソースの HTTP レスポンスをシステム クリップボードにコピーします。
-
-* [**Copy as cURL**]。選択したリソースのネットワーク リクエストを [cURL](http://curl.haxx.se/){: .external } コマンド文字列としてシステム クリップボードにコピーします。
-
-  [リクエストを cURL コマンドとしてコピーする](#copy-requests-as-curl-commands)をご覧ください。
-* [**Copy All as HAR**]。すべてのリソースを [HAR](https://en.wikipedia.org/wiki/.har){: .external } データとしてシステム クリップボードにコピーします。
-
-  HAR ファイルには、ネットワークの「ウォーターフォール」について記述する JSON データ構造が含まれています。
+* [**Copy as cURL**]。選択したリソースのネットワーク リクエストを [cURL](http://curl.haxx.se/){: .external } コマンド文字列としてシステム クリップボードにコピーします。[リクエストを cURL コマンドとしてコピーする](#copy-requests-as-curl-commands)をご覧ください。
+* [**Copy All as HAR**]。すべてのリソースを [HAR](https://en.wikipedia.org/wiki/.har){: .external } データとしてシステム クリップボードにコピーします。HAR ファイルには、ネットワークの「ウォーターフォール」について記述する JSON データ構造が含まれています。
 いくつかの [サードパーティ](https://ericduran.github.io/chromeHAR/){: .external }
 の [ツール](https://code.google.com/p/harviewer/){: .external } は、HAR ファイル内のデータからネットワーク ウォーターフォールを再構築できます。
 詳細については、「[Web Performance Power Tool:
 HTTP Archive (HAR)](https://www.igvita.com/2012/08/28/web-performance-power-tool-http-archive-har/)」をご覧ください。
-
-
 * [**Save as HAR with Content**]。すべてのネットワークデータを各ページリソースと共に HAR ファイルに保存します。
 イメージなどのバイナリリソースは、Base64 エンコードのテキストとしてエンコードされます。
 
 * [**Clear Browser Cache**]。ブラウザキャッシュをクリアします。
   **使い方**:[**Network conditions**][nc] ドロワーからブラウザキャッシュを有効または無効にすることもできます。
-
 * [**Clear Browser Cookies**]。ブラウザの Cookie をクリアします。
 * [**Open in Sources Panel**]。選択したリソースを [**Sources**] パネルで開きます。
-
 * [**Open Link in New Tab**]。選択したリソースを新しいタブで開きます。[Network] の表内のリソース名をダブルクリックすることもできます。
-
 * [**Copy Link Address**]。リソースの URL をシステム クリップボードにコピーします。
 * [**Save**]。選択したテキストリソースを保存します。テキストリソースのみに表示されます。
-
 * [**Replay XHR**]。選択した `XMLHTTPRequest` を再送信します。XHR リソースのみに表示されます。
 
 
@@ -476,7 +437,6 @@ HTTP Archive (HAR)](https://www.igvita.com/2012/08/28/web-performance-power-tool
 ###  ナビゲーション時のネットワーク ログの保存
 
 ネットワーク アクティビティの記録は、デフォルトでは、現在のページを再読み込みするか別のページを読み込むたびに破棄されます。
-
 [**Preserve log**] チェックボックスをオンにすると、このようなシナリオにまたがってネットワークのログが保存されます。
 新しいレコードは、**リクエスト表** の下に追加されます。
 
@@ -485,18 +445,8 @@ HTTP Archive (HAR)](https://www.igvita.com/2012/08/28/web-performance-power-tool
 アプリケーションのネットワーク パフォーマンスの最適化については、以下の資料で詳細をご覧ください。
 
 * サイトに適用できるパフォーマンスのベスト プラクティスを特定するには、[PageSpeed Insights](/speed/pagespeed/insights) を使用し、それらのベスト プラクティスを適用するプロセスを自動化するには、[PageSpeed 最適化ツール](/speed/pagespeed/optimization)を使用します。
-
-
-
-
-
 * [Google Chrome の高パフォーマンス ネットワーク](https://www.igvita.com/posa/high-performance-networking-in-google-chrome/)では、Chrome ネットワークの内部と、それを利用してサイトを高速にする方法について説明されています。
-
-
-
 * [GZIP による圧縮の仕組み](/speed/articles/gzip)では、GZIP 圧縮の概要と GZIP が適している理由について説明されています。
-
-
 * [ウェブ パフォーマンスのベスト プラクティス](/speed/docs/best-practices/rules_intro)では、ウェブページまたはウェブ アプリケーションのネットワーク パフォーマンスを最適化する場合の考え方が示されています。
 
 

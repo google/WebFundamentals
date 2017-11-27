@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: 사용자는 페이지가 대화형으로 원활하게 작동할 것을 기대합니다. 픽셀 파이프라인의 각 단계는 버벅거림이 발생할 가능성을 나타냅니다. 런타임 성능을 저하시키는 보편적인 문제를 식별하고 해결하는 여러 가지 도구와 전략에 대해 알아보십시오.
+description: 사용자는 페이지가 대화형으로 원활하게 작동할 것을 기대합니다. 픽셀 파이프라인의 각 단계는 버벅거림이 발생할 가능성을 나타냅니다. 런타임 성능을 저하시키는 보편적인 문제를 식별하고 해결하는 여러 가지 도구와 전략에 대해 알아보세요.
 
 {# wf_updated_on: 2016-03-15 #}
 {# wf_published_on: 2015-04-13 #}
@@ -13,7 +13,7 @@ description: 사용자는 페이지가 대화형으로 원활하게 작동할 �
 사용자는 페이지가 대화형으로 원활하게 작동할 것을 기대합니다. 픽셀 파이프라인의 
 각 단계는 버벅거림이 발생할 가능성을 나타냅니다. 런타임 성능을 
 저하시키는 보편적인 문제를 식별하고 해결하는 여러 가지 
-도구와 전략에 대해 알아보십시오.
+도구와 전략에 대해 알아보세요.
 
 
 ### TL;DR {: .hide-from-toc }
@@ -33,14 +33,14 @@ description: 사용자는 페이지가 대화형으로 원활하게 작동할 �
 
 **타임라인** [기록][recording]을 만들어 의심스러울 정도로 긴 
 **Evaluate Script** 이벤트를 찾아봅니다. 하나라도 발견되면,
-JS 프로파일러][profiler]를 활성화하여 기록을 다시 수행하면 정확히 어느 JS 함수를 호출했고 각각 어느 정도의 시간이
+[JS 프로파일러][profiler]를 활성화하여 기록을 다시 수행하면 정확히 어느 JS 함수를 호출했고 각각 어느 정도의 시간이
 걸렸는지 좀 더 자세한 정보를 얻을 수
 있습니다.
 
 자바스크립트에 버벅거림이 꽤 많이 발견되는 경우, 한층 심층적인 분석을 수행하여
 자바스크립트 CPU 프로필을 수집할 수 있습니다.
 CPU 프로필에는 페이지 함수 내 어느 지점에서 실행 시간이 소모되는지 표시됩니다.
-CPU 프로필을 만드는 방법은 [자바스크립트 실행 가속화][cpu]를 참조하세요.
+CPU 프로필을 만드는 방법은 [자바스크립트 실행 속도 개선][cpu]을 참조하세요.
 
 [profiler]: ../evaluate-performance/timeline-tool#profile-js
 [cpu]: js-execution
@@ -59,7 +59,7 @@ CPU 프로필을 만드는 방법은 [자바스크립트 실행 가속화][cpu]�
     <tr>
       <td data-th="Problem">고비용 입력 핸들러가 응답 또는 애니메이션에 영향을 미칩니다.</td>
       <td data-th="Example">터치, 시차 스크롤링.</td>
-      <td data-th="Solution">브라우저가 터치와 스크롤을 처리하도록 하거나, 리스너를 가급적 늦게 바인딩합니다(<a href="http://calendar.perfplanet.com/2013/the-runtime-performance-checklist/">Paul Lewis의 런타임 성능 검사 목록 중 고비용 입력 핸들러</a>를 참조하세요).</td>
+      <td data-th="Solution">브라우저가 터치와 스크롤을 처리하도록 하거나, 리스너를 가급적 늦게 바인딩합니다(<a href="http://calendar.perfplanet.com/2013/the-runtime-performance-checklist/">Paul Lewis의 런타임 성능 검사 목록 중 고비용 입력 핸들러</a> 참조).</td>
     </tr>
     <tr>
       <td data-th="Problem">타이밍이 나쁜 자바스크립트가 응답, 애니메이션, 로드에 영향을 미칩니다.</td>
@@ -93,9 +93,11 @@ CPU 프로필을 만드는 방법은 [자바스크립트 실행 가속화][cpu]�
 
 ### 도구
 
-**타임라인** [기록][recording]을 만듭니다. 대형 **Recalculate Style**이벤트 기록을 확인합니다(보라색으로 표시됨).
+**타임라인 **[기록][recording]을 만듭니다. 대형
+**Recalculate Style**이벤트 기록을 확인합니다(보라색으로 표시됨).
 
-**Recalculate Style** 이벤트를 클릭하면 이에 대한 자세한 정보를 **Details** 창에서 볼 수 있습니다. 스타일 변경에 시간이 오래 걸리는 경우, 성능에 
+**Recalculate Style** 이벤트를 클릭하면 이에 대한 자세한 정보를
+**Details** 창에서 볼 수 있습니다. 스타일 변경에 시간이 오래 걸리는 경우, 성능에 
 영향을 줍니다. 스타일 계산으로 다수의 요소에 영향이 미치는 경우 
 이는 또 다른 개선의 여지가 있는 부분입니다.
 
@@ -106,10 +108,10 @@ CPU 프로필을 만드는 방법은 [자바스크립트 실행 가속화][cpu]�
 * [CSS 트리거](https://csstriggers.com)를 사용하여 
 레이아웃, 페인트 및 복합(composite)을 트리거하는 CSS 속성이 무엇인지 알아봅니다. 이들 속성은 렌더링 성능에 최악의 영향을 
 미칩니다.
-* 영향력이 덜한 속성으로 전환하십시오. 자세한 지침은 [컴포지터 전용 속성 고수 및
-레이어 카운트 관리][compositor]를 참조하세요.
+* 영향력이 덜한 속성으로 전환하세요. 자세한 지침은 [컴포지터 전용 속성 고수 및
+레이어 수 관리][컴포지터]를 참조하세요.
 
-[compositor]: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
+[컴포지터]: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
 
 ### 문제
 
@@ -151,7 +153,7 @@ CPU 프로필을 만드는 방법은 [자바스크립트 실행 가속화][cpu]�
 갈 수 있습니다.
 
 일반적인 기본 원칙으로, 프레임이 완료되기 전에 DOM으로부터 기하학적 값을 되돌려달라고 요청하면
-"강제 동기식 레이아웃"이 발생하게 됩니다.
+'강제 동기식 레이아웃'이 발생하게 됩니다.
 이 과정이 자주 반복되거나 대형 DOM 트리에 대해 수행되면
 엄청난 성능 병목 현상을 초래할 수 있습니다. 
 
@@ -211,8 +213,8 @@ Chrome DevTools의 **Timeline**은 페이지가 강제
 합성(compositing)은 화면에 표시하기 위해 페이지에서 페인트된 부분을
 합치는 과정입니다. 대부분의 경우, 컴포지터 전용 
 속성만 고수하고 페인트를 아예 회피하면 성능이 대폭 개선되지만, 
-레이어 카운트가 과도하지 않은지 주의해야 합니다(
-[컴포지터 전용 속성 고수 및 레이어 카운트 관리](/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count) 참조).
+레이어 수가 과도하지 않은지 주의해야 합니다(
+[컴포지터 전용 속성 고수 및 레이어 수 관리](/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count) 참조).
 
 ### 도구
 
@@ -246,7 +248,7 @@ Chrome DevTools의 **Timeline**은 페이지가 강제
       <td data-th="Problem">레이어 폭증이 애니메이션에 영향을 미칩니다.</td>
       <td data-th="Example">너무 많은 translateZ(0)가 있는 요소를 과도하게 승격하면 애니메이션 성능에 엄청난 영향을 미칩니다.
 </td>
-      <td data-th="Solution">레이어로 승격을 드물게 하고, 현실적인 개선을 확신하는 경우에만 승격합니다(<a href="/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count">컴포지터 전용 속성 고수 및 레이어 카운트 관리</a> 참조).</td>
+      <td data-th="Solution">레이어로 승격을 드물게 하고, 현실적인 개선을 확신하는 경우에만 승격합니다(<a href="/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count">컴포지터 전용 속성 고수 및 레이어 수 관리</a> 참조).</td>
     </tr>
   </tbody>
 </table>

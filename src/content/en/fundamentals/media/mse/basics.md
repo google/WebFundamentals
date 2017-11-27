@@ -1,13 +1,15 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Media Source Extensions (MSE) is a JavaScript API that lets you build streams for playback from segments of audio or video.
 
 {# wf_published_on: 2017-02-08 #}
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2017-07-14 #}
+{# wf_blink_components: Internals>Media #}
 
 # Media Source Extensions {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 [Media Source Extensions (MSE)](https://www.w3.org/TR/media-source/)
 is a JavaScript API that lets you build streams for playback from segments of
@@ -71,7 +73,7 @@ In practice, the chain looks like this:
   
 If you can sort things out from the explanations so far, feel free to stop
 reading now. If you want a more detailed explanation, then please keep reading.
-I'm going to walk through this chain by building a simple MSE example. Each of
+I'm going to walk through this chain by building a basic MSE example. Each of
 the build steps will add code to the previous step. 
 
 ### A note about clarity
@@ -89,7 +91,32 @@ Here, in no particular order, are a few things I won't cover.
 
 +  Playback controls. We get those for free by virtue of using the HTML5
    `<audio>` and `<video>` elements.
-+  Error handling for the sake of simplicity and clarity.
++  Error handling.
+
+### For use in production environments
+
+Here are some things I'd recommend in a production usage of MSE related APIs:
+
+- Before making calls on these APIs, handle any error events or API
+  exceptions, and check `HTMLMediaElement.readyState` and
+  `MediaSource.readyState`. These values can change before associated events are
+  delivered.
+- Make sure previous `appendBuffer()` and `remove()` calls are not still in
+  progress by checking the `SourceBuffer.updating` boolean value before
+  updating the `SourceBuffer`'s `mode`, `timestampOffset`, `appendWindowStart`,
+  `appendWindowEnd`, or calling `appendBuffer()` or `remove()` on the
+  `SourceBuffer`.
+- For all `SourceBuffer` instances added to your `MediaSource`, ensure none of
+  their `updating` values are true before calling `MediaSource.endOfStream()`
+  or updating the `MediaSource.duration`.
+- If `MediaSource.readyState` value is `ended`, calls like `appendBuffer()` and
+  `remove()`, or setting `SourceBuffer.mode` or `SourceBuffer.timestampOffset`
+  will cause this value to transition to `open`. This means you should be
+  prepared to handle multiple `sourceopen` events.
+- When handling `HTMLMediaElement error` events, the contents of
+  [`MediaError.message`](https://googlechrome.github.io/samples/media/error-message.html)
+  can be useful to determine the root cause of the failure, especially for
+  errors that are hard to reproduce in test environments.
 
 ## Attach a MediaSource instance to a media element
 
@@ -164,10 +191,11 @@ if (window.MediaSource) {
 }</strong>
 </pre>  
 
-Notice that I've also called `revokeObjectURL()`. I can do this any time after
-the media element's `src` attribute is connected to a `MediaSource` instance.
-Calling this method doesn't destroy any objects. It _does_ allow the platform to
-handle garbage collection at an appropriate time.
+Notice that I've also called `revokeObjectURL()`. I know this seems premature,
+but I can do this any time after the media element's `src` attribute is
+connected to a `MediaSource` instance. Calling this method doesn't destroy any
+objects. It _does_ allow the platform to handle garbage collection at an
+appropriate time, which is why I'm calling it immediately.
 
 ## Create a SourceBuffer
 
@@ -213,7 +241,7 @@ function sourceOpen(e) {
 ## Get the media file
 
 If you do an internet search for MSE examples, you'll find plenty that retrieve
-media files using XHR. Just to keep things simple, not to mention cutting edge,
+media files using XHR. To be more cutting edge,
 I'm going to use the [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch)
 API and the [Promise](/web/fundamentals/getting-started/primers/promises) it
 returns. If you're trying to do this in Safari, it won't work without a
@@ -306,7 +334,7 @@ function sourceOpen(e) {
 ## The final version
 
 Here's the complete code example. I hope you have learned something about Media
-Source Extenstions. We recommend [stackoverflow](http://stackoverflow.com/questions/tagged/media-source).
+Source Extensions.
 
     var vidElement = document.querySelector('video');
     

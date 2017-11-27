@@ -29,7 +29,7 @@ mem-bootstrap saluran aman ke server.
 
 ## Apa yang dimaksud dengan otoritas sertifikat (CA)?
 
-**Certificate Authority (CA)** adalah organisasi yang menjamin
+**Otoritas Sertifikat (CA)** adalah organisasi yang menjamin
 pemetaan antara kunci publik dan nama DNS publik (misalnya "www.foobar.com").
 Misalnya, bagaimana klien mengetahui apakah kunci publik tertentu memang kunci publik yang _benar_
 untuk www.foobar.com? Sebelum diteliti keadaan yang sebenarnya, tidak ada cara untuk mengetahuinya. CA menjamin

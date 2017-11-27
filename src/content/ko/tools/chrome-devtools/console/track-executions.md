@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: 콘솔 API를 사용하여 실행 시간을 측정하고 문 실행을 계산합니다.
+description: Console API를 사용하여 실행 시간을 측정하고 문 실행을 계산합니다.
 
 {# wf_updated_on: 2015-05-11 #}
 {# wf_published_on: 2015-04-13 #}
@@ -11,7 +11,7 @@ description: 콘솔 API를 사용하여 실행 시간을 측정하고 문 실행
 {% include "web/_shared/contributors/flaviocopes.html" %}
 {% include "web/_shared/contributors/pbakaus.html" %}
 
-콘솔 API를 사용하여 실행 시간을 측정하고 문 실행을 계산합니다.
+Console API를 사용하여 실행 시간을 측정하고 문 실행을 계산합니다.
 
 
 ### TL;DR {: .hide-from-toc }

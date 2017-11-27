@@ -111,7 +111,7 @@ WCAG 围绕四大原则进行组织，通常使用首字母缩写词 *POUR* 来�
  - **可理解**：用户是否能理解内容？用户能否理解界面，以及其一致性是否足以避免产生混淆？
 
 
- - **强健**：内容是否能被多种用户代理（浏览器）使用？
+ - **强健**：内容是否能被多种 User Agent（浏览器）使用？
 它是否能与辅助技术协作？
 
 尽管 WCAG 提供了无障碍内容含义的全面概览，可能还会让人觉得有点不知所措。
@@ -162,8 +162,8 @@ WCAG 围绕四大原则进行组织，通常使用首字母缩写词 *POUR* 来�
 
 
 <figure class="attempt-right">
-  <img src="imgs/braille-reader.png" alt="一个盲文阅读器">	
-  <figcaption>一个盲文阅读器</figcaption>
+  <img src="imgs/braille-reader.png" alt="一台盲文阅读器">	
+  <figcaption>一台盲文阅读器</figcaption>
 </figure>
 
 现在，完全没有任何视力实际上相当罕见，但您认识或遇到至少一位全盲者的几率还是很高的。不过，还存在着数量庞大得多的所谓弱视用户。

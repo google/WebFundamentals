@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Three.js에서 WebGL 장면을 가져와서 WebVR 기능을 추가하는 방법을 알아봅니다.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # WebVR 시작하기 {: .page-title }
@@ -10,9 +10,9 @@ description: Three.js에서 WebGL 장면을 가져와서 WebVR 기능을 추가�
 {% include "web/_shared/contributors/paullewis.html" %}
 {% include "web/_shared/contributors/mscales.html" %}
 
-경고: WebVR는 아직 실험 단계이며 변경될 수 있습니다.
+Warning: WebVR은 아직 실험 단계이며 변경될 수 있습니다.
 
-이 가이드에서는 WebVR API를 탐색하고 이를 사용하여 [Three.js](https://threejs.org/)로 빌드한 간단한 WebGL 장면을 개선합니다. 그러나 프로덕션 작업의 경우 [WebVR Boilerplate](https://github.com/borismus/webvr-boilerplate)와 같은 기존 솔루션으로 시작하기를 원할 수도 있습니다. Three.js에 대해 전혀 모르는 경우 [유용한 시작 가이드](https://aerotwist.com/tutorials/getting-started-with-three-js/)를 참조하세요. 진행하다가 막히는 부분이 있으면 관련 커뮤니티에 문의하세요.
+이 가이드에서는 WebVR API를 탐색하고 이를 사용하여 [Three.js](https://threejs.org/)로 빌드한 간단한 WebGL 장면을 개선합니다. 그러나 프로덕션 작업의 경우 [WebVR 상용구](https://github.com/borismus/webvr-boilerplate)와 같은 기존 솔루션으로 시작하기를 원할 수도 있습니다. Three.js에 대해 전혀 모르는 경우 [유용한 시작 가이드](https://aerotwist.com/tutorials/getting-started-with-three-js/)를 참조하세요. 진행하다가 막히는 부분이 있으면 관련 커뮤니티에 문의하세요.
 
 [Google Chrome 샘플 저장소](https://github.com/GoogleChrome/samples/tree/gh-pages/web-vr/hello-world)에 있는 코드인 [와이어프레임 내부에 상자를 넣는 장면](https://googlechrome.github.io/samples/web-vr/hello-world/)부터 시작해 보겠습니다.
 
@@ -20,7 +20,7 @@ description: Three.js에서 WebGL 장면을 가져와서 WebVR 기능을 추가�
 
 ### 지원 관련 참고 사항
 
-Chrome 56+에서 런타임 플래그 뒤에 WebVR를 포함할 수 있습니다. 해당 플래그를 활성화하면(`chrome://flags`로 이동하여 "WebVR" 검색) VR 작업을 로컬로 빌드하고 테스트할 수 있습니다. 방문자에게 WebVR를 지원하려면 [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)을 옵트인하여 원본에 대해 WebVR를 활성화할 수 있습니다.
+Chrome 56+에서 런타임 플래그 뒤에 WebVR을 포함할 수 있습니다. 해당 플래그를 활성화하면(`chrome://flags`로 이동하여 'WebVR' 검색) VR 작업을 로컬로 빌드하고 테스트할 수 있습니다. 방문자에게 WebVR을 지원하려면 [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)을 옵트인하여 원본에 대해 WebVR을 활성화할 수 있습니다.
 
 [Web VR 폴리필](https://github.com/googlevr/webvr-polyfill)을 사용할 수도 있지만 폴리필을 사용하는 경우 성능이 상당히 저하됩니다. 대상 기기에서 확실히 테스트해야 하며 기기의 새로고침 빈도를 따라가지 못하는 항목은 제공해서는 안 됩니다. 프레임 속도가 느리거나 가변적인 경우 사용자가 상당히 불편을 느낄 수 있습니다.
 
@@ -28,7 +28,7 @@ Chrome 56+에서 런타임 플래그 뒤에 WebVR를 포함할 수 있습니다.
 
 ## VR 디스플레이에 액세스하기
 
-WebGL 장면에서 WebVR를 사용하려면 어떻게 해야 할까요? 먼저 navigator.getVRDisplays()를 사용하여 브라우저에 VR 디스플레이가 있는지 쿼리해야 합니다.
+WebGL 장면에서 WebVR을 사용하려면 어떻게 해야 할까요? 먼저 navigator.getVRDisplays()를 사용하여 브라우저에 VR 디스플레이가 있는지 쿼리해야 합니다.
 
     navigator.getVRDisplays().then(displays => {
       // Filter down to devices that can present.
@@ -53,7 +53,7 @@ WebGL 장면에서 WebVR를 사용하려면 어떻게 해야 할까요? 먼저 n
 
 2. **사용 가능한 VR 기기가 없을 수 있습니다.** 비 VAL 설정에 대해 잘 작동하는 환경을 만들고, VR의 가용성을 점진적 향상으로 취급해야 합니다.
 
-3. **사용 가능한 VR 기기가 여러 개 있을 수 있습니다.** 마찬가지로 사용 가능한 VR 기기가 여러 개 있을 수 있는데, 가능하다면 가장 적합한 기기를 선택하도록 허용해야 합니다.
+3. **사용 가능한 VR 기기가 여러 개 있을 수 있습니다. **마찬가지로 사용 가능한 VR 기기가 여러 개 있을 수 있는데, 가능하다면 가장 적합한 기기를 선택하도록 허용해야 합니다.
 
 ## WebVR 에뮬레이션 Chrome DevTools 확장 프로그램 설치
 
@@ -65,13 +65,13 @@ WebGL 장면에서 WebVR를 사용하려면 어떻게 해야 할까요? 먼저 n
 
 ## 기기에서 프레젠테이션 요청
 
-"VR 모드"로 프레젠테이션을 시작하려면 기기에서 요청해야 합니다.
+'VR 모드'로 프레젠테이션을 시작하려면 기기에서 요청해야 합니다.
 
     this._vr.display.requestPresent([{
       source: this._renderer.domElement
     }]);
 
-`requestPresent`는 [Web VR 사양](https://w3c.github.io/webvr/#vrlayer)에서 "VRLayer"라고 하는 배열을 취합니다. 이 배열은 본질적으로 VR 기기에 지정된 Canvas 요소의 래퍼입니다. 위의 코드 스니펫에서는 Three.js가 제공하는 Canvas 요소(`WebGLRenderer.domElement`)를 취하여 단일 VRLayer의 소스 속성으로 전달합니다. 그러면 `requestPresent`가 [프라미스](/web/fundamentals/getting-started/primers/promises)를 제공합니다. 프라미스는 요청이 성공하면 해결하고 실패하면 거부합니다.
+`requestPresent`는 [Web VR 사양](https://w3c.github.io/webvr/#vrlayer)에서 'VRLayer'라고 하는 배열을 취합니다. 이 배열은 본질적으로 VR 기기에 지정된 Canvas 요소의 래퍼입니다. 위의 코드 스니펫에서는 Three.js가 제공하는 Canvas 요소(`WebGLRenderer.domElement`)를 취하여 단일 VRLayer의 소스 속성으로 전달합니다. 그러면 `requestPresent`가 [프라미스](/web/fundamentals/getting-started/primers/promises)를 제공합니다. 프라미스는 요청이 성공하면 해결하고 실패하면 거부합니다.
 
 ## VR 장면 그리기
 
@@ -118,7 +118,7 @@ WebGL 장면에서 WebVR를 사용하려면 어떻게 해야 할까요? 먼저 n
 
 * **모델 뷰 행렬.** 3D 공간에서 객체의 위치를 지정하는 데 사용됩니다. 행렬 작동 방식 때문에 장면 그래프를 생성하고 그래프 아래로 이동하여 각 노드의 행렬을 곱하고 문제의 객체에 대한 최종 모델 뷰 행렬에 도달할 수 있습니다.
 
-프로젝션 행렬과 모델 뷰 행렬에 대해 훨씬 심도 있게 설명하는 훌륭한 가이드가 웹에 많이 있으므로 필요한 경우 google에서 자세한 배경 정보를 검색해 보십시오.
+프로젝션 행렬과 모델 뷰 행렬에 대해 훨씬 심도 있게 설명하는 훌륭한 가이드가 웹에 많이 있으므로 필요한 경우 google에서 자세한 배경 정보를 검색해 보세요.
 
 ## 장면 렌더링 제어
 
@@ -154,7 +154,7 @@ WebGL 장면에서 WebVR를 사용하려면 어떻게 해야 할까요? 먼저 n
 
 중요한 두 가지 구현 주의 사항이 있습니다.
 
-* **이동의 대상은 카메라가 아니라 세계입니다.** 이전에 경험해 보지 않은 경우 약간 이상하게 보일 수 있지만 카메라를 원점(0, 0, 0)에 그대로 두고 세계를 이동하는 것은 흔한 그래픽 작업입니다. 너무 철학적으로 접근하지 않고 생각해 봅시다. 내가 10미터 앞으로 이동한 경우 내가 10미터 앞으로 이동한 것일까요, 아니면 세계가 10미터 뒤로 이동한 것일까요? 이는 관점에 따라 상대적이며 수학적 관점에서는 어느 쪽이든 문제가 안 됩니다. WebVR API는 "눈의 모델 행렬의 *역*"을 반환하므로 카메라 자체가 아닌 세계(우리의 코드에서 `this._scene`)에 적용될 것으로 예상됩니다.
+* **이동의 대상은 카메라가 아니라 세계입니다.** 이전에 경험해 보지 않은 경우 약간 이상하게 보일 수 있지만 카메라를 원점(0, 0, 0)에 그대로 두고 세계를 이동하는 것은 흔한 그래픽 작업입니다. 너무 철학적으로 접근하지 않고 생각해 봅시다. 내가 10미터 앞으로 이동한 경우 내가 10미터 앞으로 이동한 것일까요, 아니면 세계가 10미터 뒤로 이동한 것일까요? 이는 관점에 따라 상대적이며 수학적 관점에서는 어느 쪽이든 문제가 안 됩니다. WebVR API는 '눈의 모델 행렬의 *역*'을 반환하므로 카메라 자체가 아닌 세계(우리의 코드에서 `this._scene`)에 적용될 것으로 예상됩니다.
 
 * **값을 변경한 후 행렬을 직접 업데이트해야 합니다.** Three.js는 값을 매우 많이 캐시하는데(성능 우수!), 이는 변경 사항을 보려면 *반드시* 변경되었음을 알려줘야 함을 의미합니다. 이 작업은 `updateMatrixWorld()` 메서드로 수행합니다. 이 메서드는 부울을 사용하여 계산이 장면 그래프 아래로 전파되도록 보장합니다.
 
@@ -181,7 +181,7 @@ WebGL 장면에서 WebVR를 사용하려면 어떻게 해야 할까요? 먼저 n
     this._scene.updateMatrixWorld(true);
     this._renderer.render(this._scene, this._camera);
 
-드디어 마쳤습니다! 사실 그다지 대단하지는...
+드디어 마쳤습니다! 사실 그다지 대단한지는 모르겠습니다.
 
 ## 기기에 업데이트 지시
 
@@ -195,21 +195,21 @@ WebGL 장면에서 WebVR를 사용하려면 어떻게 해야 할까요? 먼저 n
 
 ## 결론 및 리소스
 
-WebVR는 콘텐츠에 몰입형 경험을 추가하는 정말 멋진 방법이며 Three.js와 같은 라이브러리를 사용하면 WebGL을 훨씬 쉽게 시작할 수 있습니다. 그러나 기억해야 할 몇 가지 중요한 사항이 있습니다.
+WebVR은 콘텐츠에 몰입형 경험을 추가하는 정말 멋진 방법이며 Three.js와 같은 라이브러리를 사용하면 WebGL을 훨씬 쉽게 시작할 수 있습니다. 그러나 기억해야 할 몇 가지 중요한 사항이 있습니다.
 
 * **처음부터 점진적 향상으로 빌드합니다.** 이 가이드에서 여러 번 언급했듯이 WebVR을 계층화할 수 있는 기본 수준의 훌륭한 경험을 구현하는 것이 중요합니다. 대부분의 경험은 마우스/터치 컨트롤로 구현할 수 있으며 가속도계 컨트롤을 통해 완전한 VR 경험으로 업그레이드할 수 있습니다. 잠재고객을 최대한으로 유지하는 것은 항상 중요합니다.
 
 * **장면을 두 번 렌더링한다는 사실을 기억하세요.** 장면을 두 번 렌더링할 때 CPU 및 GPU의 계산 작업량을 줄이도록 세부정보 수준(LOD) 및 기타 기법에 대해 생각해야 할 수도 있습니다. 무엇보다도 견고한 프레임 속도를 유지해야 합니다! 아무리 좋은 기능이라도 멀미를 유발할 정도로 극단적인 불편함을 주어서는 안 됩니다!
 
-* **실제 기기에서 테스트합니다.** 이는 이전 내용과 관련 있습니다. 특히 휴대기기를 대상으로 하는 경우 빌드 중인 항목을 테스트할 수 있는 실제 기기를 확보해야 합니다. ["노트북은 더러운 거짓말쟁이"](https://youtu.be/4bZvq3nodf4?list=PLNYkxOF6rcIBTs2KPy1E6tIYaWoFcG3uj&t=405)라는 말이 있습니다.
+* **실제 기기에서 테스트합니다.** 이는 이전 내용과 관련 있습니다. 특히 휴대기기를 대상으로 하는 경우 빌드 중인 항목을 테스트할 수 있는 실제 기기를 확보해야 합니다. ['노트북은 더러운 거짓말쟁이'](https://youtu.be/4bZvq3nodf4?list=PLNYkxOF6rcIBTs2KPy1E6tIYaWoFcG3uj&t=405)라는 말이 있습니다.
 
 찾아보면 WebVR 콘텐츠 제작과 관련하여 빠르게 시작하는 데 도움이 되는 리소스가 많이 있습니다.
 
 * **[VRView](https://github.com/googlevr/vrview)**. 이 라이브러리는 360도 파노라마 사진과 동영상을 포함하는 데 도움이 됩니다.
 
-* **[WebVR Boilerplate](https://github.com/borismus/webvr-boilerplate)**. WebVR 및 Three.js를 시작하는 데 도움이 됩니다.
+* **[WebVR 상용구](https://github.com/borismus/webvr-boilerplate)**. WebVR 및 Three.js를 시작하는 데 도움이 됩니다.
 
-* **[WebVR Polyfill](https://github.com/googlevr/webvr-polyfill)**. WebVR에 대한 필수 API를 다시 채웁니다. 폴리필을 사용하는 경우 성능이 저하되므로 이 기능이 제공되는 동안 사용자는 비 VR 경험을 사용하는 편이 좋을 수도 있습니다.
+* **[WebVR 폴리필](https://github.com/googlevr/webvr-polyfill)**. WebVR에 대한 필수 API를 다시 채웁니다. 폴리필을 사용하는 경우 성능이 저하되므로 이 기능이 제공되는 동안 사용자는 비 VR 경험을 사용하는 편이 좋을 수도 있습니다.
 
 * **[Ray-Input](https://github.com/borismus/ray-input)**. VR 기기 및 비 VR 기기에 대한 다양한 입력 유형(예: 마우스, 터치 및 VR Gamepad 컨트롤러)을 처리하는 데 도움이 되는 라이브러리입니다.
 

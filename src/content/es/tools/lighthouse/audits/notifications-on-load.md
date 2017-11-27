@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para la auditoría de Lighthouse "La página no solicita automáticamente los permisos de notificación cuando se carga".
 
@@ -16,7 +16,7 @@ usuarios ni precisas para sus necesidades. Para proporcionar una mejor experienc
 los usuarios un tipo específico de notificación y presenta las solicitudes de permisos
 después de que acepten la notificación.
 
-[good]: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+[good]: /web/fundamentals/push-notifications/
 
 ## Cómo aprobar la auditoría {: #how }
 
@@ -35,7 +35,7 @@ Lighthouse recolecta el código JavaScript que se ejecutó al cargar la página.
 código contiene llamadas a `notification.requestPermission()` y todavía no se otorgó el
 permiso de notificación, esto significa que se solicitó permiso de notificación.
 
-[ayuda]: https://support.google.com/chrome/answer/6148059
+[help]: https://support.google.com/chrome/answer/6148059
 
 
 {# wf_devsite_translation #}

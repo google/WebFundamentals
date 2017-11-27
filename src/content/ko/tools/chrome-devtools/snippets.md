@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: 스니펫은 Chrome DevTools의 Sources 패널 내에서 작성하고 실행할 수 있는 소형 스크립트입니다. 이들은 어느 페이지에서나 액세스하고 실행할 수 있습니다. 스니펫을 실행하면 현재 열려있는 페이지의 맥락에 따라 실행됩니다.
+description: 스니펫은 Chrome DevTools의 Sources 패널 내에서 작성하고 실행할 수 있는 소형 스크립트입니다. 이들은 어느 페이지에서나 액세스하고 실행할 수 있습니다. 스니펫을 실행하면 현재 열려 있는 페이지의 맥락에 따라 실행됩니다.
 
 {# wf_updated_on: 2016-06-26 #}
 {# wf_published_on: 2015-10-12 #}
@@ -15,14 +15,14 @@ description: 스니펫은 Chrome DevTools의 Sources 패널 내에서 작성하�
 따라 실행됩니다.
 
 여러 페이지에서 반복적으로 사용하는 소형 유틸리티 또는 디버깅 스크립트가 있는 경우, 
-그러한 스크립트를 스니펫으로 저장해두는 방안을 고려해보십시오.
+그러한 스크립트를 스니펫으로 저장해두는 방안을 고려해보세요.
 또한 스니펫을 
 [북마크릿](https://en.wikipedia.org/wiki/Bookmarklet)의 대안으로 사용할 수도 있습니다.
 
 
 ### TL;DR {: .hide-from-toc }
 - 스니펫은 어느 페이지에서나 실행할 수 있는 소형 스크립트입니다(북마크릿과 유사함).
-- 콘솔에서 스니펫 부분을 실행하려면 "Evaluate in Console" 기능을 사용합니다.
+- 콘솔에서 스니펫 부분을 실행하려면 'Evaluate in Console' 기능을 사용합니다.
 - 중단점과 같은 Sources 패널에서 제공하는 인기 기능에서도 스니펫을 사용할 수 있습니다.
 
 
@@ -48,14 +48,14 @@ description: 스니펫은 Chrome DevTools의 Sources 패널 내에서 작성하�
  마우스 오른쪽 버튼으로 클릭한 다음 **Run**을 선택합니다.
 * **Run** 버튼(![스니펫 실행 
   버튼](images/run.png){:.inline})을 클릭합니다.
-* <kbd>Command</kbd>+<kbd>Enter</kbd> (Mac) 또는 
-  <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (Windows, Linux)를 누릅니다.
+* <kbd>Command</kbd>+<kbd>Enter</kbd>(Mac) 또는 
+  <kbd>Ctrl</kbd>+<kbd>Enter</kbd>(Windows, Linux)를 누릅니다.
 
 콘솔에서 스니펫의 일부분을 평가하려면, 해당 부분을 
 강조표시하고 편집기에서 아무 곳이나 마우스 오른쪽 버튼으로 클릭한 다음 
 **Evaluate in Console**을 선택하거나 단축키 
-<kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> (Mac) 또는
-<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> (Windows, Linux)를 사용합니다.
+<kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>(Mac) 또는
+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>(Windows, Linux)를 사용합니다.
 
 ![콘솔에서 평가](images/evaluate-in-console.png)
 

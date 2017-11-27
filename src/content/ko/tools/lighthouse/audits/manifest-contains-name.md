@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "이름을 포함한 매니페스트" Lighthouse 감사의 참조 문서입니다.
+description: '이름을 포함한 매니페스트' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-09-21 #}
 {# wf_published_on: 2016-09-21 #}
@@ -28,14 +28,14 @@ description: "이름을 포함한 매니페스트" Lighthouse 감사의 참조 �
 Chrome의 [최대
 길이](https://developer.chrome.com/apps/manifest/name)는 45자입니다.
 
-앱에서 "Add to Homescreen"을 적절히 구현하고 테스트하는 방법을 안내하는 가이드 목록은 [매니페스트의 존재](manifest-exists#how)
-를 참조하세요.
+앱에서 'Add to Homescreen'을 적절히 구현하고 테스트하는 방법을 안내하는 가이드 목록은 [매니페스트의 존재](manifest-exists#how)를
+참조하세요.
 
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse는 매니페스트를 가져와서 `name` 속성이 있는지 확인합니다.
-Lighthouse가 가져오는 매니페스트는Chrome이 페이지에서 사용하는 것과 별개로, 부정확한 결과가 나올 수 있습니다.
+Lighthouse가 가져오는 매니페스트는 Chrome이 페이지에서 사용하는 것과 별개로, 부정확한 결과가 나올 수 있습니다.
 
 
 

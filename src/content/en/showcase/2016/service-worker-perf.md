@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 description: Measuring the Real-world Performance Impact of Service Workers
 
-{# wf_published_on: 2016-07-22T18:00:00.000Z #}
-{# wf_updated_on: 2016-07-22T18:00:00.000Z #}
+{# wf_published_on: 2016-07-22 #}
+{# wf_updated_on: 2017-11-07 #}
 {# wf_author: philipwalton #}
 {# wf_featured_image: /web/showcase/2016/images/service-worker-perf/desktop-all.png #}
 {# wf_featured_snippet: One of the most significant benefits of service workers (from a performance perspective, at least) is their ability to proactively control the caching of assets. A web application that can cache all of its necessary resources should load substantially faster for returning visitors. But what do these gains actually look like to real users? And how do you even measure this? #}
@@ -600,7 +600,7 @@ It's great to see that more than half of our signed-in users opted to receive pu
 
 ### App install banners
 
-If a progress web app meets the [criteria](/web/fundamentals/engage-and-retain/app-install-banners/web-app-install-banners) and is used frequently by a user, that user may be shown an app install banner, prompting them to add the app to their home screen.
+If a progress web app meets the [criteria](/web/fundamentals/app-install-banners/) and is used frequently by a user, that user may be shown an app install banner, prompting them to add the app to their home screen.
 
 In IOWA, we tracked how often these prompts were shown to the user (and whether they were accepted) with the following code:
 
@@ -652,7 +652,7 @@ What we could have done to work around this limitation was store the client ID v
 
 **3. Let the service worker report online/offline status**
 
-Inspecting `navigator.onLine` will let you know if your browser is able to connect to the router or local area network, but it won't necessarily tell if you if the user has real connectivety. And since our offline analytics service worker script simply replayed failed hits (without modifying them, or marking them as failed), we were probably under-reporting our offline usage.
+Inspecting `navigator.onLine` will let you know if your browser is able to connect to the router or local area network, but it won't necessarily tell if you if the user has real connectivity. And since our offline analytics service worker script simply replayed failed hits (without modifying them, or marking them as failed), we were probably under-reporting our offline usage.
 
 In the future we should track both the status of `navigator.onLine` as well as whether the hit was replayed by the service worker due to an initial network failure. This will give us a more accurate picture of the true offline usage.
 

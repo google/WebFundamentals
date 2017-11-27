@@ -1,5 +1,14 @@
 redirects:
 
+- from: /web/tools/polymer-starter-kit/...
+  to: https://www.polymer-project.org/2.0/start/toolbox/set-up
+
+- from: /web/tools/lighthouse/audits/theme-color
+  to: /web/tools/lighthouse/audits/address-bar
+
+- from: /web/tools/lighthouse/audits/manifest-contains-theme_color
+  to: /web/tools/lighthouse/audits/address-bar
+
 - from: /web/tools/chrome-devtools/javascript/add-breakpoints
   to: /web/tools/chrome-devtools/javascript/breakpoints
 
@@ -155,3 +164,6 @@ redirects:
 
 - from: /web/tools/chrome-devtools/javascript/console/...
   to: /web/tools/chrome-devtools/console/...
+
+- from: /web/tools/service-worker-libraries/
+  to: /web/tools/workbox/

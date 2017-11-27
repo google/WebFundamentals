@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "매니페스트의 디스플레이 속성 설정" Lighthouse 감사의 참조 문서입니다.
+description: '매니페스트의 display 속성 설정' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-09-21 #}
 {# wf_published_on: 2016-09-21 #}
 
-# 매니페스트의 디스플레이 속성 설정  {: .page-title }
+# 매니페스트의 display 속성 설정  {: .page-title }
 
 ## 감사가 중요한 이유 {: #why }
 
@@ -23,12 +23,12 @@ description: "매니페스트의 디스플레이 속성 설정" Lighthouse 감�
       ...
     }
 
-각 값에 대한 자세한 내용은 [MDN의 디스플레이 속성
-참조](https://developer.mozilla.org/en-US/docs/Web/Manifest#display)
-를 참조하세요.
+각 값에 대한 자세한 내용은 [MDN의 display 속성
+참조](https://developer.mozilla.org/en-US/docs/Web/Manifest#display)를
+참조하세요.
 
-앱에서 "Add to Homescreen"을 적절히 구현하고 테스트하는 방법을 안내하는 가이드 목록은 [매니페스트의 존재](manifest-exists#how)
-를 참조하세요.
+앱에서 'Add to Homescreen'을 적절히 구현하고 테스트하는 방법을 안내하는 가이드 목록은 [매니페스트의 존재](manifest-exists#how)를
+참조하세요.
 
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}

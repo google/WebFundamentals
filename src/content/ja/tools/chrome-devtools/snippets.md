@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: スニペットは、Chrome DevTools の [Sources] パネルで作成および実行できる小さいスクリプトです。どのページからもアクセスしたり実行したりできます。スニペットを実行すると、そのスニペットは現在開いているページのコンテキストから実行されます。
 
@@ -15,7 +15,6 @@ description: スニペットは、Chrome DevTools の [Sources] パネルで作�
 
 
 複数のページで繰り返し使用している小さいユーティリティやデバッグ スクリプトに気付いたら、これらのスクリプトをスニペットとして保存することを考えてください。
-
 スニペットを[ブックマークレット](https://en.wikipedia.org/wiki/Bookmarklet)の代わりに使用することもできます。
 
 
@@ -34,7 +33,6 @@ description: スニペットは、Chrome DevTools の [Sources] パネルで作�
 ![スニペットの作成](images/create-snippet.png)
 
 エディタでコードを入力します。未保存の変更があるスクリプトには、次のスクリーンショットのように名前の横にアスタリスクが付きます。
-
 <kbd>Command</kbd>+<kbd>S</kbd>（Mac）または <kbd>Ctrl</kbd>+<kbd>S</kbd>
 （Windows、Linux）を押して変更を保存します。 
 
@@ -45,9 +43,7 @@ description: スニペットは、Chrome DevTools の [Sources] パネルで作�
 スニペットを実行するには 3 つの方法があります。 
 
 * すべてのスニペットのリストが表示された左側のペインでスニペットのファイル名を右クリックし、[**Run**] を選択します。
-
 * [**Run**] ボタン（![[run snippet] ボタン](images/run.png){:.inline}）をクリックします。
-
 * <kbd>Command</kbd>+<kbd>Enter</kbd>（Mac）または <kbd>Ctrl</kbd>+<kbd>Enter</kbd>（Windows、Linux）を押します。
 
 
@@ -73,7 +69,6 @@ description: スニペットは、Chrome DevTools の [Sources] パネルで作�
 ![スニペットの履歴](images/snippet-history.png)
 
 タイムスタンプはそれぞれ変更を表します。タイムスタンプの横にあるカラットを展開すると、その時点の変更の差分が表示されます。[**revert**] リンクをクリックすると、改訂履歴が削除されます。
-
 2016 年 6 月 27 日時点では、[**apply revision content**] と [**apply original content**] の各リンクは意図したとおりに動作しないようです。
 
 

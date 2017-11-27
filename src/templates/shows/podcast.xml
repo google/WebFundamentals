@@ -23,9 +23,10 @@
       {{{ description }}}
     </itunes:summary>
     <itunes:image href="{{ image }}" />
+    <itunes:explicit>no</itunes:explicit>
     <enclosure url="{{ podcast.audioUrl }}" length="{{podcast.fileSize}}" type="audio/mpeg"/>
     <guid isPermaLink="true">{{ ../host }}{{ url }}</guid>
-    <pubDate>{{ podcast.pubDate }}</pubDate>
+    <pubDate>{{ formatDateRSS datePublishedMoment }}</pubDate>
     <itunes:duration>{{ podcast.duration }}</itunes:duration>
   </item>
   {{/each}}

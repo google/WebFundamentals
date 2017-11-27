@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: TODO
 
@@ -148,7 +148,7 @@ UI를 사용하여 모든 중단점을 비활성화합니다.
 
 `dir(object)`는 모든 지정된 객체
 속성의 객체 스타일 목록을 표시합니다.
-이 메서드는 콘솔 API의 `console.dir()` 메서드의 별칭입니다.
+이 메서드는 Console API의 `console.dir()` 메서드의 별칭입니다.
 
 다음 예시는 명령줄에서 `document.body`를 직접
 평가하는 방법과
@@ -187,7 +187,7 @@ Sources 패널에서 검사할 문서를 엽니다.
 
 `getEventListeners(object)`는 지정된 객체에 등록된
 이벤트 리스너를 반환합니다.
-반환 값은 등록된 각 이벤트 유형(예: "click" 또는 "keydown")에 대한
+반환 값은 등록된 각 이벤트 유형(예: 'click' 또는 'keydown')에 대한
 배열을 포함하는 객체입니다.
 각 배열의 멤버는 각 유형에 등록된
 리스너를 설명하는 객체입니다.
@@ -202,7 +202,7 @@ Sources 패널에서 검사할 문서를 엽니다.
 지정된 객체에 리스너를 두 개 이상 등록한 경우
 배열이 각 리스너에 대한 구성원을 포함합니다.
 다음 예에는
-"mousedown" 이벤트에 대해
+'mousedown' 이벤트에 대해
 #scrollingList 요소에 등록된 2개의 이벤트 리스너가 있습니다.
 
 ![다중 리스너](images/scrolling-list.png)
@@ -249,7 +249,7 @@ Sources 패널에서 검사할 문서를 엽니다.
 지정된 이벤트 중 하나가 지정된 객체에서 발생하면
 Event 객체가 콘솔에 기록됩니다.
 모니터링할 단일 이벤트,
-이벤트 배열 또는 사전 정의된 이벤트 컬렉션에 매핑된 제네릭 이벤트 "유형" 중 하나를
+이벤트 배열 또는 사전 정의된 이벤트 컬렉션에 매핑된 제네릭 이벤트 '유형' 중 하나를
 지정할 수 있습니다. 아래 예를 참조하세요.
 
 다음은 window 객체에서 모든 resize 이벤트를 모니터링합니다.
@@ -262,7 +262,7 @@ Event 객체가 콘솔에 기록됩니다.
 
 		monitorEvents(window, ["resize", "scroll"])
 
-사용 가능한 이벤트 "유형" 중 하나인,
+사용 가능한 이벤트 '유형' 중 하나인,
 미리 정의된 이벤트 집합에 매핑하는 문자열을 지정할 수도 있습니다.
 아래 표에는 사용 가능한 이벤트 유형과
 그와 연관된 이벤트 매핑이 나열되어 있습니다.
@@ -309,13 +309,13 @@ Event 객체가 콘솔에 기록됩니다.
 자바스크립트 CPU 프로파일링 세션을 시작합니다.
 `profileEnd()`는 프로필을 완료하고 그 결과를
 Profile 패널에 표시합니다.
-([자바스크립트 실행 속도 높이기](/web/tools/chrome-devtools/rendering-tools/js-execution)를 참조하세요.)
+([자바스크립트 실행 속도 개선](/web/tools/chrome-devtools/rendering-tools/js-execution)을 참조하세요.)
 
-프로파일링을 시작하려면:
+프로파일링을 시작하려면 다음과 같이 합니다.
 
 		profile("My profile")
 
-프로파일링을 중지하고 그 결과를 Profiles 패널에 표시하려면:
+프로파일링을 중지하고 그 결과를 Profiles 패널에 표시하려면 다음과 같이 합니다.
 
 		profileEnd("My profile")
 
@@ -326,7 +326,7 @@ Profile 패널에 표시합니다.
 		profileEnd('A');
 		profileEnd('B');
 
-Profiles 패널의 결과:
+Profiles 패널의 결과는 다음과 같습니다.
 
 ![그룹화된 프로필](images/grouped-profiles.png)
 
@@ -377,7 +377,7 @@ Profiles 패널의 결과:
 예를 들어,
 다음 코드는 현재 선택한 요소에서
 모든 마우스 이벤트 모니터링을 시작한 후에
-"mousemove" 이벤트 모니터링을 중지합니다(대개 콘솔 출력에서 노이즈를 줄일 목적으로).
+'mousemove' 이벤트 모니터링을 중지합니다(대개 콘솔 출력에서 노이즈를 줄일 목적으로).
 
 		monitorEvents($0, "mouse");
 		unmonitorEvents($0, "mousemove");

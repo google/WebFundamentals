@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools의 Timeline 패널을 사용하면 애플리케이션에서 작업이 실행될 때 모든 작업을 기록하고 분석할 수 있습니다. 이는 애플리케이션에서 인지된 성능 문제를 조사하는 데 가장 좋은 출발점입니다.
 
@@ -48,10 +48,10 @@ Timeline 패널은 네 개의 창으로 구성되어 있습니다.
 
 **Overview** 창은 세 개의 그래프로 이루어져 있습니다.
 
-1. **FPS** 초당 프레임 수입니다. 녹색 막대가 높이 올라갈수록 
+1. **FPS**. 초당 프레임 수입니다. 녹색 막대가 높이 올라갈수록 
 FPS가 높은 것입니다. FPS 그래프 위에 있는 빨간색 블록은 긴 프레임을 의미하는데, 이것은 
 [버벅거림][jank] 발생 후보일 가능성이 높습니다. 
-2. **CPU** CPU 리소스입니다. 이 [영역 차트][ac]를 보면 CPU 리소스를 사용한 이벤트의 유형을
+2. **CPU**. CPU 리소스입니다. 이 [영역 차트][ac]를 보면 CPU 리소스를 사용한 이벤트의 유형을
 알 수 있습니다.
 3. **NET**. 각 색상의 막대는 리소스를 나타냅니다. 막대 길이가 길수록 
 리소스를 회수하는 데 시간이 오래 걸렸다는 뜻입니다. 각 막대의 색이 옅은 부분은 
@@ -63,12 +63,12 @@ FPS가 높은 것입니다. FPS 그래프 위에 있는 빨간색 블록은 긴 
    막대에 색상이 지정되는 방식은 다음과 같습니다. 
 <!-- source: https://goo.gl/eANVFf -->
    
-   * HTML 파일은 **<span style="color:hsl(214, 67%, 66%)">파란색</span>** 입니다.
-   * 스크립트는 **<span style="color:hsl(43, 83%, 64%)">노란색</span>** 입니다.
-   * 스타일시트는 **<span style="color:hsl(256, 67%, 70%)">보라색</span>** 입니다.
-   * 미디어 파일은 **<span style="color:hsl(109, 33%, 55%)">녹색</span>** 입니다.
+   * HTML 파일은 **<span style="color:hsl(214, 67%, 66%)">파란색</span>**입니다.
+   * 스크립트는 **<span style="color:hsl(43, 83%, 64%)">노란색</span>**입니다.
+   * 스타일시트는 **<span style="color:hsl(256, 67%, 70%)">보라색</span>**입니다.
+   * 미디어 파일은 **<span style="color:hsl(109, 33%, 55%)">녹색</span>**입니다.
    * 기타 리소스는
-     **<span style="color:hsl(0, 0%, 70%)">회색</span>** 입니다.
+     **<span style="color:hsl(0, 0%, 70%)">회색</span>**입니다.
 
 ![Overview 창, 주석 지정](imgs/overview-annotated.jpg)
 
@@ -96,10 +96,10 @@ FPS가 높은 것입니다. FPS 그래프 위에 있는 빨간색 블록은 긴 
 
 * **기록은 가급적 짧을수록 좋습니다**. 기록이 짧아야 분석하기 
 쉽기 때문입니다.
-* **불필요한 작업은 피하십시오.** 기록하고 분석하고자 하는 활동에 관련 없는 다른 작업(마우스 클릭, 네트워크 로드 
+* **불필요한 작업은 피하세요.** 기록하고 분석하고자 하는 활동에 관련 없는 다른 작업(마우스 클릭, 네트워크 로드 
 등)은 피하는 것이 좋습니다.
   예컨대 Login
- 버튼을 클릭한 다음 발생하는 이벤트를 기록하고자 하는 경우 페이지를 스크롤하거나 이미지를 로드하는 등 다른 작업도 함께 하지 마십시오.
+ 버튼을 클릭한 다음 발생하는 이벤트를 기록하고자 하는 경우 페이지를 스크롤하거나 이미지를 로드하는 등 다른 작업도 함께 하지 마세요.
 * **브라우저 캐시를 비활성화합니다.** 네트워크 작업을 기록할 때에는 
 DevTools 설정 패널 또는 
 [**Network conditions**][nc] 창에서 브라우저 캐시를 비활성화하는 것이 좋습니다.
@@ -107,7 +107,7 @@ DevTools 설정 패널 또는
 타임라인 기록에 무관한 노이즈가 추가될 수 있습니다. Chrome 창을
   [incognito 모드][incognito]로 열거나 새 
   [Chrome 사용자 프로필][new chrome profile]을 만들어 환경에 확장 프로그램이 없도록
-  하십시오.
+  하세요.
 
 [nc]: /web/tools/chrome-devtools/profile/network-performance/network-conditions#network-conditions
 [incognito]: https://support.google.com/chrome/answer/95464
@@ -115,7 +115,7 @@ DevTools 설정 패널 또는
 
 ## 기록 세부정보 보기
 
-**Flame Chart**에서 이벤트를 선택하면 **Details**창에 해당 이벤트에 대한
+**Flame Chart**에서 이벤트를 선택하면 **Details** 창에 해당 이벤트에 대한
 자세한 정보가 표시됩니다.
 
 ![Details 창](imgs/details-pane.png)
@@ -143,7 +143,7 @@ DevTools 설정 패널 또는
 
 <video src="animations/hover.mp4" autoplay muted loop controls></video>
 
-## Javascript 프로필 {:#profile-js}
+## 자바스크립트 프로필 {:#profile-js}
 
 기록을 하기 전에 **JS Profile** 확인란을 활성화해야 타임라인 기록의
 자바스크립트 스택을 캡처할 수 있습니다. JS 프로파일러가 활성화되면 
@@ -162,8 +162,8 @@ Flame Chart에 호출된 자바스크립트 함수가 모두 표시됩니다.
 
 ### 렌더링 설정 {:#rendering-settings}
 
-기본 DevTools 메뉴를 열고 **More tools** > **Rendering settings**
-를 선택하면 페인트 문제를 디버그할 때 유용한 여러 가지 렌더링 설정에 액세스할 수 있습니다.
+기본 DevTools 메뉴를 열고 **More tools** > **Rendering settings**를
+선택하면 페인트 문제를 디버그할 때 유용한 여러 가지 렌더링 설정에 액세스할 수 있습니다.
 렌더링 설정은 **Console** 창 옆에 탭으로 열립니다(창이 숨겨져 있는 경우,
 <kbd>esc</kbd>를 누르면 창이 표시됨).
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para la auditoría de Lighthouse "El sitio usa HTTP/2 para sus propios recursos".
 
@@ -17,7 +17,7 @@ ofrece en comparación con HTTP/1.1.
 
 Consulta [Introducción a HTTP/2][intro] para obtener información técnica detallada.
 
-[faq]: https://http2.github.io/faq/
+[preguntas frecuentes]: https://http2.github.io/faq/
 [intro]: /web/fundamentals/performance/http2/
 
 ## Cómo aprobar la auditoría {: #how }
@@ -27,7 +27,7 @@ Para aprobar esta auditoría, proporciona estos recursos por HTTP/2.
 
 Para obtener más información sobre cómo habilitar HTTP/2 en los servidores, consulta [Configurar HTTP/2][setup].
 
-[configurar]: https://dassur.ma/things/h2setup/
+[setup]: https://dassur.ma/things/h2setup/
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:本部分将介绍内存分析中的常用术语，适用于不同语言的各种内存分析工具。
 
@@ -11,7 +11,7 @@ description:本部分将介绍内存分析中的常用术语，适用于不同�
 
 本部分将介绍内存分析中的常用术语，适用于不同语言的各种内存分析工具。
 
-此处介绍的术语和概念适用于 [Chrome DevTools 堆分析器] (/web/tools/chrome-devtools/profile/memory-problems/heap-snapshots)。如果您之前使用过 Java、.NET 或其他内存分析器，那么本部分内容对您来说将是全新的。
+此处介绍的术语和概念适用于 [Chrome DevTools 堆分析器](/web/tools/chrome-devtools/profile/memory-problems/heap-snapshots)。如果您之前使用过 Java、.NET 或其他内存分析器，那么本部分内容对您来说将是全新的。
 
 
 
@@ -28,7 +28,7 @@ description:本部分将介绍内存分析中的常用术语，适用于不同�
 
 * 通过保持对其他对象的引用隐式占用，这种方式可以阻止这些对象被垃圾回收器（简称 **GC**）自动处置。
 
-使用 DevTools 中的堆分析器（一种用于检查在“Profiles”下发现的内存问题的工具）时，您会看到多个信息列。<strong>浅层大小</strong>和<strong>保留大小</strong>这两个列比较引人注目，但它们表示什么呢？
+使用 DevTools 中的堆分析器（一种用于检查在“Profiles”下发现的内存问题的工具）时，您会看到多个信息列。<strong>Shallow Size</strong> 和 <strong>Retained Size</strong> 这两个列比较引人注目，但它们表示什么呢？
 
 ![浅层大小和保留大小](imgs/shallow-retained.png)
 

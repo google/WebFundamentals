@@ -1,14 +1,17 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Styles pane in Chrome DevTools to inspect and modify the CSS styles associated to an element.
 
-{# wf_updated_on: 2016-02-25 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Edit Styles {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
+
+Warning: This page is deprecated. See [CSS
+Reference](/web/tools/chrome-devtools/css/reference).
 
 Use the <strong>Styles</strong> pane to modify the CSS
 styles associated to an element.
@@ -59,7 +62,7 @@ The labels on the image below correspond with the numbered items below it.
 
 Understanding how cascading and inheritance works is essential to
 debugging your styles. The cascade relates to how CSS declarations are
-given weights to determine which rules should take precedence when theyoverlap with another rule. Inheritance relates to how HTML elements inherit
+given weights to determine which rules should take precedence when they overlap with another rule. Inheritance relates to how HTML elements inherit
 CSS properties from their containing elements (ancestors). For more,
 see [W3C documentation on cascading](http://www.w3.org/TR/CSS2/cascade.html).
 
@@ -78,6 +81,9 @@ that other elements outside of the viewport are also affected by the selector.
 
 ## Add, enable, and disable CSS classes {:#classes}
 
+Warning: This page is deprecated. See [Toggle a
+class](/web/tools/chrome-devtools/css/reference#toggle-class).
+
 Click on the **.cls** button to view all of the CSS classes associated to the
 currently selected element. From there, you can:
 
@@ -87,6 +93,9 @@ currently selected element. From there, you can:
 ![classes pane](imgs/classes.png)
 
 ## Edit an existing property name or value
+
+Warning: This page is deprecated. See [Change a declaration name or
+value](/web/tools/chrome-devtools/css/reference#change-declaration).
 
 Click on a CSS property name or value to edit it. While a name or value is 
 highlighted, press <kbd>Tab</kbd> to move forward to the next property, name,
@@ -109,6 +118,9 @@ following keyboard shortcuts:
 
 ## Add a new property declaration
 
+Warning: This page is deprecated. See [Add a declaration to an
+element](/web/tools/chrome-devtools/css/reference#add-declaration).
+
 Click an empty space within an editable CSS rule to create a new declaration. 
 Type it out, or paste the CSS into the **Styles** pane. Properties and their 
 values are parsed and entered into the correct fields.
@@ -117,6 +129,9 @@ Note: To enable or disable a style declaration, check or uncheck the checkbox ne
 
 ## Add a style rule
 
+Warning: This page is deprecated. See [Add a style
+rule](/web/tools/chrome-devtools/css/reference#style-rule).
+
 Click the **New Style Rule** 
 (![new style rule button](imgs/new-style-rule.png){:.inline}) button to add a 
 new CSS rule. 
@@ -124,6 +139,9 @@ new CSS rule.
 Click and hold the button to choose which stylesheet the rule is added to. 
 
 ## Add or remove dynamic styles (pseudo-classes) {:#pseudo-classes}
+
+Warning: This page is deprecated. See [Toggle a
+pseudo-class](/web/tools/chrome-devtools/css/reference#pseudo-class).
 
 You can manually set dynamic pseudo-class selectors (such as `:active`, 
 `:focus`, `:hover`, and `:visited`) on elements. 
@@ -144,6 +162,10 @@ There are two ways to set these dynamic states on an element:
 
 ## Add background-color or color to a style rule
 
+Warning: This page is deprecated. See [Add a background-color
+declaration](/web/tools/chrome-devtools/css/reference#background-color) and
+[Add a color declaration](/web/tools/chrome-devtools/css/reference#color).
+
 The **Styles** pane provides a shortcut for adding `color` and
 `background-color` declarations to a style rule.
 
@@ -159,6 +181,9 @@ declaration](imgs/add-background-color.png){:.inline}). Click on one of these
 buttons to add the declaration to the style rule. 
 
 ## Modify colors with the Color Picker {:#color-picker}
+
+Warning: This page is deprecated. See [Change colors with the Color
+Picker](/web/tools/chrome-devtools/css/reference#color-picker).
 
 To open the **Color Picker**, find a CSS declaration in the **Styles** pane 
 that defines a color (such as `color: blue`). To the left of the declaration 
@@ -286,9 +311,12 @@ Learn how to setup source maps in [Setup CSS & JS Preprocessors](/web/tools/setu
 
 ## Emulate print media {:#emulate-print-media}
 
+Warning: This page is deprecated. See [View a page in print
+mode](/web/tools/chrome-devtools/css/reference#print-mode).
+
 To view a page in print mode:
 
-1. Open the [Main Menu](ui#main-menu).
+1. Open the **Main Menu**.
 1. Select **More Tools** > **Rendering Settings**. The Rendering Settings
    tab opens at the bottom of your DevTools window.
 1. Set **Emulate media** to **Print**.

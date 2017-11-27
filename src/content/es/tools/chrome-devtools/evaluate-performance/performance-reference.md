@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: El modo de eventos de la línea de tiempo muestra todos los eventos desencadenados mientras se realiza una grabación. Usa la referencia de eventos de la línea de tiempo para obtener más información sobre cada tipo de evento de esta."
+description: El modo de eventos de la línea de tiempo muestra todos los eventos desencadenados mientras se realiza una grabación. Usa la referencia de eventos de la línea de tiempo para obtener más información sobre cada tipo de evento de esta.
 
 {# wf_updated_on: 2015-05-11 #}
 {# wf_published_on: 2015-04-13 #}
@@ -10,7 +10,7 @@ description: El modo de eventos de la línea de tiempo muestra todos los eventos
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/flaviocopes.html" %}
 
-El modo de eventos de la línea de tiempo muestra todos los eventos desencadenados mientras se realiza una grabación. Usa la referencia de eventos de la línea de tiempo para obtener más información sobre cada tipo de evento de esta."
+El modo de eventos de la línea de tiempo muestra todos los eventos desencadenados mientras se realiza una grabación. Usa la referencia de eventos de la línea de tiempo para obtener más información sobre cada tipo de evento de esta.
 
 
 ## Propiedades de eventos comunes de la línea de tiempo

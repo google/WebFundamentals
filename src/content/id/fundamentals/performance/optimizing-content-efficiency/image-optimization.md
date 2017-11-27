@@ -2,14 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
 
-{# wf_updated_on: 2014-05-09 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-05-06 #}
 
 # Optimalisasi Gambar {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-Gambar sering menjadi sumber besarnya byte yang diunduh pada laman web dan juga sering kali menempati sejumlah besar ruang visual. Hasilnya, pengoptimalan gambar bisa menghasilkan beberapa penghematan byte terbesar dan meningkatkan kinerja situs web Anda: semakin sedikit byte yang harus diunduh browser, semakin sedikit persaingan untuk bandwidth klien dan lebih cepat browser mengunduh dan me-render materi yang bermanfaat pada layar.
+Gambar sering menjadi sumber besarnya byte yang diunduh pada laman web dan juga sering kali menempati sejumlah besar ruang visual. Hasilnya, pengoptimalan gambar bisa menghasilkan beberapa penghematan byte terbesar dan meningkatkan kinerja situs web Anda: semakin sedikit byte yang harus diunduh browser, semakin sedikit persaingan untuk bandwidth klien dan lebih cepat browser mengunduh dan merender materi yang bermanfaat pada layar.
 
 Optimalisasi gambar adalah seni dan juga sains: seni karena tidak ada satu jawaban pasti mengenai cara terbaik mengompresi satu gambar, dan sains karena ada banyak teknik yang cukup berkembang dan algoritme yang dapat mengurangi ukuran sebuah gambar secara signifikan. Menemukan setelan yang optimal untuk gambar Anda membutuhkan analisis yang cermat di banyak dimensi: kemampuan format, materi data yang dienkodekan, kualitas, dimensi piksel, dan lainnya.
 
@@ -57,7 +57,7 @@ Setelah Anda menentukan bahwa sebuah gambar memang faktanya merupakan format yan
 <div style="clear:both;"></div>
 
 * [Grafik vektor](https://en.wikipedia.org/wiki/Vector_graphics) menggunakan garis, titik, dan bentuk jamak untuk merepresentasikan sebuah gambar.
-* [Grafis bitmap](https://en.wikipedia.org/wiki/Raster_graphics) merepresentasikan sebuah gambar dengan mengenkodekan setiap nilai dari setiap piksel di dalam kisi berbentuk persegi panjang.
+* [Grafis bitmap](https://en.wikipedia.org/wiki/Raster_graphics) merepresentasikan sebuah gambar dengan mengenkodekan setiap nilai dari setiap piksel di dalam grid berbentuk persegi panjang.
 
 Setiap format memiliki kelebihan dan kekurangannya sendiri. Format vektor idealnya cocok untuk gambar yang terdiri dari bentuk geometris sederhana (misalnya logo, teks, ikon, dan seterusnya), dan memberikan hasil yang tajam di setiap setelan resolusi dan zoom, sehingga membuatnya menjadi format yang ideal untuk layar resolusi tinggi dan aset yang perlu ditampilkan pada beragam ukuran.
 
@@ -78,7 +78,7 @@ Saat kita berbicara tentang piksel gambar, kita harus membedakan antara berbagai
 
 <img src="images/css-vs-device-pixels.png"  alt="Piksel CSS vs piksel perangkat">
 
-Layar DPI Tinggi (HiDPI) memproduksi hasil yang indah, namun ada satu kompromi yang jelas dibutuhkan: aset gambar kita membutuhkan lebih banyak detail untuk memanfaatkan hitungan piksel perangkat yang lebih tinggi. Kabar gembiranya, gambar vektor idealnya cocok untuk tugas ini, karena bisa di-render berapa pun resolusinya dengan hasil tajam - kita mungkin harus mengeluarkan biaya pemrosesan lebih tinggi untuk me-render detail yang lebih halus, namun aset yang mendasari masih tetap sama dan bebas dari resolusi.
+Layar DPI Tinggi (HiDPI) memproduksi hasil yang indah, namun ada satu kompromi yang jelas dibutuhkan: aset gambar kita membutuhkan lebih banyak detail untuk memanfaatkan hitungan piksel perangkat yang lebih tinggi. Kabar gembiranya, gambar vektor idealnya cocok untuk tugas ini, karena bisa di-render berapa pun resolusinya dengan hasil tajam - kita mungkin harus mengeluarkan biaya pemrosesan lebih tinggi untuk merender detail yang lebih halus, namun aset yang mendasari masih tetap sama dan bebas dari resolusi.
 
 Di lain pihak, gambar bitmap memunculkan tantangan yang jauh lebih besar karena gambar ini mengenkode data gambar atas dasar per piksel. Oleh karena itu, semakin besar jumlah piksel, semakin besar ukuran file dari gambar bitmap. Misalnya, anggap perbedaan antara aset foto yang ditampilkan pada aset foto yang ditampilkan pada piksel 100x100 (CSS):
 
@@ -111,7 +111,7 @@ Di lain pihak, gambar bitmap memunculkan tantangan yang jauh lebih besar karena 
 
 Bila kita menggandakan resolusi layar fisik, jumlah total piksel akan bertambah empat kali lipat: dua kali jumlah piksel horizontal, lalu kalikan dengan dua kali jumlah piksel vertikal. Karena itu, "2x" layar tidak hanya berlipat dua kali, namun berlipat empat dari piksel yang diperlukan!
 
-Jadi pada praktiknya seperti apa? Layar resolusi tinggi memungkinkan kita menghasilkan gambar yang indah, yang bisa jadi merupakan fitur produk yang hebat. Akan tetapi, layar resolusi tinggi juga membutuhkan gambar resolusi tinggi: pilihlah sedapat mungkin gambar vektor karena gambar ini bebas dari resolusi dan selalu menghasilkan gambar yang tajam, dan jika gambar bitmap diperlukan, berikan dan optimalkan beberapa variasi setiap gambar dengan bantuan [`srcset` dan `picture`](/web/fundamentals/design-and-ui/media/images#images-in-markup).
+Jadi pada praktiknya seperti apa? Layar resolusi tinggi memungkinkan kita menghasilkan gambar yang indah, yang bisa jadi merupakan fitur produk yang hebat. Akan tetapi, layar resolusi tinggi juga membutuhkan gambar resolusi tinggi: pilihlah sedapat mungkin gambar vektor karena gambar ini bebas dari resolusi dan selalu menghasilkan gambar yang tajam, dan jika gambar bitmap diperlukan, berikan dan optimalkan beberapa variasi setiap gambar dengan bantuan [`srcset` dan `picture`](/web/fundamentals/design-and-ux/media/images#images-in-markup).
 
 ## Mengoptimalkan gambar vektor
 
@@ -136,7 +136,7 @@ Semua browser modern mendukung Scalable Vector Graphics (SVG), yang merupakan fo
     </svg>
     
 
-Contoh di atas me-render satu bentuk lingkaran sederhana dengan garis luar hitam dan latar belakang merah dan diekspor dari Adobe Illustrator. Seperti yang bisa Anda lihat, gambar ini mengandung banyak metadata seperti informasi layer, komentar, dan namespace XML yang sering kali tidak diperlukan untuk me-render aset dalam browser. Hasilnya, ada baiknya mengecilkan file SVG dengan menjalankan alat seperti [svgo](https://github.com/svg/svgo).
+Contoh di atas merender satu bentuk lingkaran sederhana dengan garis luar hitam dan latar belakang merah dan diekspor dari Adobe Illustrator. Seperti yang bisa Anda lihat, gambar ini mengandung banyak metadata seperti informasi layer, komentar, dan namespace XML yang sering kali tidak diperlukan untuk merender aset dalam browser. Hasilnya, ada baiknya mengecilkan file SVG dengan menjalankan alat seperti [svgo](https://github.com/svg/svgo).
 
 Yang terjadi di sini, svgo mengurangi ukuran file SVG di atas yang dihasilkan oleh Illustrator sebesar 58%, menguranginya dari 470 menjadi 199 byte. Selanjutnya, karena SVG merupakan format berbasis XML, kita juga dapat menerapkan kompresi GZIP untuk mengurangi ukuran transfernya - pastikan server Anda telah dikonfigurasikan untuk mengompresi aset SVG!
 
@@ -144,20 +144,20 @@ Yang terjadi di sini, svgo mengurangi ukuran file SVG di atas yang dihasilkan ol
 ## Mengoptimalkan gambar bitmap
 
 ### TL;DR {: .hide-from-toc }
-- Gambar bitmap adalah kisi yang terdiri dari piksel
+- Gambar bitmap adalah grid yang terdiri dari piksel
 - Setiap piksel mengenkode informasi warna dan transparansi
 - Kompresor gambar menggunakan berbagai variasi teknik untuk mengurangi jumlah bits per piksel yang diperlukan untuk mengurangi ukuran gambar
 
 
-Gambar bitmap cuma petak 2 dimensi dari "piksel" individual - misalnya, gambar 100x100 piksel adalah rangkaian 10.000 piksel. Pada gilirannya, setiap piksel menyimpan nilai "[RGBA](https://en.wikipedia.org/wiki/RGBA_color_space)": saluran merah (R), saluran hijau (G), saluran biru (B), dan saluran (A) alfa (transparansi).
+Gambar bitmap cuma grid 2 dimensi dari "piksel" individual - misalnya, gambar 100x100 piksel adalah rangkaian 10.000 piksel. Pada gilirannya, setiap piksel menyimpan nilai "[RGBA](https://en.wikipedia.org/wiki/RGBA_color_space)": saluran merah (R), saluran hijau (G), saluran biru (B), dan saluran (A) alfa (transparansi).
 
-Secara internal, browser mengalokasikan 256 nilai (corak) untuk setiap saluran, yang diterjemahkan menjadi 8 bit per saluran (2 ^ 8 = 256), dan 4 byte per piksel (4 saluran x 8 bit = 32 bit = 4 byte). Hasilnya, jika kita tahu dimensi dari kisi kita bisa menghitung ukuran file dengan mudah:
+Secara internal, browser mengalokasikan 256 nilai (corak) untuk setiap saluran, yang diterjemahkan menjadi 8 bit per saluran (2 ^ 8 = 256), dan 4 byte per piksel (4 saluran x 8 bit = 32 bit = 4 byte). Hasilnya, jika kita tahu dimensi dari grid kita bisa menghitung ukuran file dengan mudah:
 
 * Gambar 100 x 100px terdiri dari 10.000 piksel
 * 10.000 piksel x 4 byte = 40.000 byte
 * 40.000 byte / 1024 = 39 KB
 
-Catatan: Sebagai cadangan, format gambar apa pun yang digunakan untuk mentransfer data dari server ke klien, bila gambar dienkode oleh browser, setiap piksel selalu menempati memori sebesar 4 byte. Ini bisa menjadi batasan penting untuk gambar besar dan perangkat yang tidak memiliki banyak ketersediaan memori - misalnya, perangkat seluler kelas bawah.
+Note: Sebagai cadangan, format gambar apa pun yang digunakan untuk mentransfer data dari server ke klien, bila gambar dienkode oleh browser, setiap piksel selalu menempati memori sebesar 4 byte. Ini bisa menjadi batasan penting untuk gambar besar dan perangkat yang tidak memiliki banyak ketersediaan memori - misalnya, perangkat seluler kelas bawah.
 
 <table>
 <thead>
@@ -202,12 +202,12 @@ Satu strategi sederhana adalah mengurangi "kedalaman bit" dari gambar dari 8 bit
 
 <img src="images/artifacts.png"  alt="Artefak kompresi">
 
-Catatan: Kiri ke kanan (PNG): 32-bit (16 juta warna), 7-bit (128 warna), 5-bit (32 warna). Gambar kompleks dengan transisi gradasi warna (gradasi, langit, dll.) membutuhkan palet warna lebih besar untuk menghindari artefak visual seperti langit yang pecah dalam aset 5 bit. Di sisi lain, jika gambar hanya menggunakan sedikit warna, maka palet besar hanya akan membuang-buang bit yang berharga!
+Note: Kiri ke kanan (PNG): 32-bit (16 juta warna), 7-bit (128 warna), 5-bit (32 warna). Gambar kompleks dengan transisi gradasi warna (gradasi, langit, dll.) membutuhkan palet warna lebih besar untuk menghindari artefak visual seperti langit yang pecah dalam aset 5 bit. Di sisi lain, jika gambar hanya menggunakan sedikit warna, maka palet besar hanya akan membuang-buang bit yang berharga!
 
 Berikutnya, setelah mengoptimalkan data yang tersimpan dalam setiap piksel, kita bisa menjadi lebih cerdas dan juga melihat piksel terdekat: ternyata, banyak gambar, dan terutama foto, yang memiliki banyak piksel terdekat dengan warna serupa - misalnya langit, tekstur berulang, dan seterusnya. Dengan memanfaatkan informasi ini, kompresor dapat menerapkan "[enkode delta](https://en.wikipedia.org/wiki/Delta_encoding)" yang daripada menyimpan masing-masing nilai untuk setiap piksel, kita bisa menyimpan selisih antara piksel di sekitarnya: jika piksel yang terdekat sama, maka deltanya adalah "nol" dan kita hanya perlu menyimpan satu bit! Namun kita tidak perlu berhenti di situ...
 
 Mata manusia memiliki tingkat sensitivitas yang berbeda terhadap warna yang berbeda: kita dapat mengoptimalkan enkode warna kita untuk diperhitungkan dengan mengurangi atau menambah palet bagi warna tersebut.
-Piksel "Di Sekitar" membentuk dua kisi dimensi, yang artinya bahwa setiap piksel memiliki beberapa tetangga: kita bisa menggunakan fakta ini untuk lebih menyempurnakan enkode delta.
+Piksel "Di Sekitar" membentuk dua grid dimensi, yang artinya bahwa setiap piksel memiliki beberapa tetangga: kita bisa menggunakan fakta ini untuk lebih menyempurnakan enkode delta.
 Daripada hanya melihat tetangga terdekat di setiap piksel, kita dapat melihat blok piksel terdekat yang lebih besar dan mengenkode blok berbeda dengan setelan berbeda. Dan seterusnya...
 
 Seperti yang bisa Anda lihat, optimalisasi gambar menjadi semakin rumit (atau menyenangkan, tergantung cara Anda melihatnya), dan terus menjadi bidang penelitian di kalangan akademisi dan komersial. Gambar menempati banyak byte dan mengembangkan teknik kompresi gambar yang lebih baik akan sangat bermanfaat! Jika Anda penasaran untuk mempelajari lebih lanjut, buka [laman Wikipedia](https://en.wikipedia.org/wiki/Image_compression), atau lihat [dokumen resmi teknik kompresi WebP](/speed/webp/docs/compression) untuk melihat contohnya secara langsung.
@@ -239,7 +239,7 @@ Jadi apa konfigurasi optimalisasi lossy dan lossless yang "optimal"? Jawabannya 
 
 Sebagai contoh langsung, saat menggunakan format lossy seperti JPEG, kompresor biasanya akan mengekspos setelan "kualitas" yang dapat disesuaikan (misalnya, slider kualitas yang disediakan oleh fungsionalitas "Save for Web" di Adobe Photoshop), yang biasanya berupa angka antara 1 dan 100 yang mengontrol cara kerja bagian dalam dari kumpulan algoritme lossy dan lossless tertentu. Untuk hasil yang terbaik, lakukan eksperimen pada beberapa setelan kualitas untuk gambar Anda, dan jangan takut untuk menurunkan kualitas - hasil visualnya sering kali sangat bagus dan penghematan ukuran filenya bisa cukup besar.
 
-Catatan: Perhatikan, tingkat kualitas untuk berbagai format gambar tidak dapat dibandingkan secara langsung karena perbedaan algoritme yang digunakan untuk mengenkode gambar: kualitas 90 JPEG akan memberikan hasil yang jauh berbeda dari kualitas 90 WebP. Sebenarnya, bahkan tingkat kualitas untuk format gambar sama mungkin menghasilkan keluaran berbeda yang kentara berdasarkan implementasi kompresor!
+Note: Perhatikan, tingkat kualitas untuk berbagai format gambar tidak dapat dibandingkan secara langsung karena perbedaan algoritme yang digunakan untuk mengenkode gambar: kualitas 90 JPEG akan memberikan hasil yang jauh berbeda dari kualitas 90 WebP. Sebenarnya, bahkan tingkat kualitas untuk format gambar sama mungkin menghasilkan keluaran berbeda yang kentara berdasarkan implementasi kompresor!
 
 
 ## Memilih format gambar yang tepat
@@ -317,7 +317,7 @@ Karena baik WebP maupun JPEG XR tidak didukung secara universal, Anda harus mena
 * Sebagian alat sumber terbuka (misalnya, PageSpeed untuk Apache atau Nginx) mengotomatiskan optimalisasi, konversi, dan penyajian aset yang sesuai.
 * Anda bisa menambah logika aplikasi tambahan untuk mendeteksi klien, memeriksa format mana yang didukung, dan menyajikan format gambar terbaik dari yang ada.
 
-Terakhir, perhatikan bahwa jika Anda menggunakan Webview untuk me-render materi dalam aplikasi asli, maka Anda memiliki kendali penuh atas klien dan dapat menggunakan WebP secara eksklusif! Facebook, Google, dan banyak lagi yang lainnya memakai WebP untuk menayangkan semua gambar mereka di dalam aplikasi - penghematannya benar-benar bermanfaat. Untuk mengetahui selengkapnya tentang WebP, lihat presentasi [WebP: Deploying Faster, Smaller, and More Beautiful Images](https://www.youtube.com/watch?v=pS8udLMOOaE) dari Google I/O 2013.
+Terakhir, perhatikan bahwa jika Anda menggunakan Webview untuk merender materi dalam aplikasi asli, maka Anda memiliki kendali penuh atas klien dan dapat menggunakan WebP secara eksklusif! Facebook, Google, dan banyak lagi yang lainnya memakai WebP untuk menayangkan semua gambar mereka di dalam aplikasi - penghematannya benar-benar bermanfaat. Untuk mengetahui selengkapnya tentang WebP, lihat presentasi [WebP: Deploying Faster, Smaller, and More Beautiful Images](https://www.youtube.com/watch?v=pS8udLMOOaE) dari Google I/O 2013.
 
 
 ## Alat dan penyempurnaan parameter
@@ -369,9 +369,9 @@ Optimalisasi gambar pada akhirnya terdari dua kriteria: mengoptimalkan jumlah by
 
 Hasilnya, salah satu teknik optimalisasi gambar paling sederhana dan efektif adalah memastikan bahwa kita tidak memberikan piksel tambahan lagi selain dari yang diperlukan untuk menampilkan aset pada ukuran yang diinginkan dalam browser. Terdengar sederhana bukan? Sayangnya, kebanyakan laman gagal dalam ujian ini untuk mayoritas aset gambarnya: biasanya, laman menerjunkan aset yang lebih besar dan mengandalkan browser untuk mengubah skalanya - yang juga akan menghabiskan lebih banyak sumber daya CPU - dan menampilkannya pada resolusi lebih rendah.
 
-Catatan: Mengarahkan kursor ke atas elemen gambar dalam Chrome DevTools akan memunculkan ukuran "alami" dan "tampilan" dari aset gambar. Dalam contoh di atas, gambar 300x260 piksel diunduh namun kemudian skalanya diturunkan (245x212) di klien saat ditampilkan.
+Note: Mengarahkan kursor ke atas elemen gambar dalam Chrome DevTools akan memunculkan ukuran "alami" dan "tampilan" dari aset gambar. Dalam contoh di atas, gambar 300x260 piksel diunduh namun kemudian skalanya diturunkan (245x212) di klien saat ditampilkan.
 
-Overhead penyampaian piksel yang tak perlu - hanya untuk browser mengubah skala gambar untuk Anda, berarti hilangnya kesempatan besar untuk mengurangi dan mengoptimalkan jumlah byte yang diperlukan untuk me-render laman. Selanjutnya, perhatikan bahwa mengubah ukuran tidak hanya memfungsikan pengurangan jumlah piksel gambar, namun juga tentang ukuran alaminya.
+Overhead penyampaian piksel yang tak perlu - hanya untuk browser mengubah skala gambar untuk Anda, berarti hilangnya kesempatan besar untuk mengurangi dan mengoptimalkan jumlah byte yang diperlukan untuk merender laman. Selanjutnya, perhatikan bahwa mengubah ukuran tidak hanya memfungsikan pengurangan jumlah piksel gambar, namun juga tentang ukuran alaminya.
 
 <table>
 <thead>

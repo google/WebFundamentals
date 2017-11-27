@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:按框架、网域、类型或其他条件组织资源。
 
@@ -30,7 +30,9 @@ description:按框架、网域、类型或其他条件组织资源。
 * 顶层（上面屏幕截图中的 `top`）是主文档。
 * 在这下方（例如上面屏幕截图中的 `widget2`）是主文档的子框架。
 展开一个子框架可以查看源自该框架的资源。
+
 * 子框架下方是图像、脚本，以及主文档的其他资源。
+
 * 最后是主文档本身。
 
 点击资源可以查看其预览。

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspecciona y edita el código HTML y la CSS de las páginas.
 
@@ -115,7 +115,7 @@ Suponiendo que configuraste la autoría persistente, esto es lo que debes hacer 
 * Para deshacer todas las modificaciones realizadas en un archivo, abre el panel **Sources** 
   y selecciona **revert** junto al nombre del archivo.
 
-[Inspeccionar]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
+[inspect]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
 
 
 {# wf_devsite_translation #}

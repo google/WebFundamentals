@@ -2,14 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Temukan cara menggunakan pustaka Ray Input untuk menambahkan masukan ke adegan WebVR.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # Menambahkan Masukan ke Adegan WebVR {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-Peringatan: WebVR masih eksperimental dan dapat berubah.
+Caution: WebVR masih eksperimental dan dapat berubah.
 
 Di [bagian Memulai WebVR](../getting-started-with-webvr/) kita mengamati cara mengambil adegan WebGL dan menambahkan fungsionalitas WebVR padanya. Walaupun hal itu berhasil, dan Anda bisa melihat-lihat adegan VR, ada banyak hal yang lebih menyenangkan bila Anda bisa berinteraksi dengan entitas dalam adegan tersebut.
 

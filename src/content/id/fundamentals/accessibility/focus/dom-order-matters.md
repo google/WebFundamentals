@@ -69,7 +69,7 @@ di DOM, misalnya navigasi samping yang responsif? Bila Anda memiliki elemen sepe
 menerima fokus bila sedang tidak tampak di layar, elemen ini bisa terlihat seakan fokusnya
 menghilang dan muncul kembali saat pengguna berpindah tab di laman &mdash; ini jelas
 sebuah efek yang tidak diinginkan. Idealnya, kita harus mencegah agar panel tidak mendapat fokus
-bila sedang tidak tampak di layar, dan hanya bisa difokus bila pengguna bisa
+bila sedang di luar layar, dan hanya bisa difokus bila pengguna bisa
 berinteraksi dengannya.
 
 ![panel slide-in di luar layar bisa mencuri fokus](imgs/slide-in-panel.png)
@@ -78,7 +78,7 @@ Kadang-kadang Anda perlu melakukan semacam pekerjaan detektif untuk mengetahui
 ke mana larinya fokus. Anda bisa menggunakan `document.activeElement` dari konsol untuk mengetahui
 elemen mana yang saat ini difokus.
 
-Setelah mengetahui elemen tak tampak mana yang sedang difokus, Anda bisa menyetelnya ke
+Setelah mengetahui elemen di luar layar mana yang sedang difokus, Anda bisa menyetelnya ke
 `display: none` atau `visibility: hidden`, kemudian menyetelnya kembali ke `display:
 block` atau `visibility: visible` sebelum menampilkannya kepada pengguna.
 

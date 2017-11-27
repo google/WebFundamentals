@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Pantalla completa disponible.
 
-{# wf_updated_on: 2016-10-01 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-10-01 #}
 
 # Desarrollar experiencias en pantalla completa {: .page-title }
@@ -28,7 +28,7 @@ Hay varios modos de que un usuario o desarrollador pueda obtener pantalla comple
 * Instala la app en la página principal.
 * Simulación: esconder automáticamente la barra de direcciones.
 
-### Solicítale al navegador el modo de pantalla completa en respuesta al gesto de un usuario.
+### Solicítale al navegador el modo de pantalla completa en respuesta al gesto de un usuario
 
 <a href="http://caniuse.com/#feat=fullscreen">No todas las plataformas son iguales</a>.
 Safari de iOS no tiene una API con el modo de pantalla completa, pero Chrome en Android,
@@ -43,7 +43,7 @@ API JS por las que te tienes que preocupar cuando desarrollas una experiencia en
 * `document.fullscreenElement` (actualmente con prefijo en Chrome, Firefox y en IE)
   muestra true si alguno de los elementos está en modo de pantalla completa.
 
-Nota: Ten en cuenta que en las versiones con prefijo hay mucha
+Note: Ten en cuenta que en las versiones con prefijo hay mucha
       inconsistencia en el uso de mayúsculas y minúsculas para la “S”. Esto es raro, pero
       este es el problema con las especificaciones que están en vuelo.
 
@@ -66,7 +66,7 @@ al modo de pantalla completa.
 El ejemplo anterior es un poco forzado; he ocultado toda la complejidad alrededor del
 uso de los prefijos de proveedores.
 
-Nota: ¡Benditos prefijos de proveedores!
+Note: ¡Benditos prefijos de proveedores!
 
 El código actual es mucho más complejo. <a
 href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Mozilla
@@ -153,7 +153,7 @@ los controles que quieres que vea el usuario.
       <div>
         <button>Play</button>
         <button>Stop</button>
-        <button id="goFS">Go Fullscreen</button>
+        <button id="goFS">Go fullscreen</button>
       </div>
     </div>
     <script>
@@ -231,7 +231,7 @@ Una mejor opción es usar el manifiesto de apps web.
 
 #### El manifiesto de apps web (Chrome, Opera, Firefox, Samsung)
 
-El [manifiesto para las apps web](/web/fundamentals/engage-and-retain/web-app-manifest/)
+El [manifiesto para las apps web](/web/fundamentals/web-app-manifest)
 es un archivo JSON simple que le proporciona a usted, el
 desarrollador, la capacidad de controlar cómo se le muestra su app al usuario en las áreas
 en las que espera ver apps (por ejemplo, la pantalla de inicio de los celulares), dirigir
@@ -332,7 +332,7 @@ Puedes "simular la pantalla completa" ocultando automáticamente la barra de dir
 
     window.scrollTo(0,1);
 
-Advertencia: Te lo digo como amigo. Existe. Es una cosa, pero
+Warning: Te lo digo como amigo. Existe. Es una cosa, pero
          es una modificación. Por favor no lo uses. &mdash; Paul
 
 Este es un método bastante simple, la página se carga y se le indica a la barra del navegador que
@@ -483,7 +483,7 @@ No interceptes el primer evento táctil y llama a `requestFullscreen()`.
 Si quieres iniciar la pantalla completa de las apps, piensa en el uso de las experiencias de instalación
 para cada plataforma.
 
-### No le envíes correo no deseado al usuario para que instale tu app en una pantalla de inicio.
+### No le envíes correo no deseado al usuario para que instale tu app en una pantalla de inicio
 
 Si planeas ofrecer una experiencia de pantalla completa a través de los mecanismos de la app instalada
 se considerado con el usuario.

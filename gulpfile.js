@@ -84,6 +84,8 @@ gulp.task('clean', function() {
     'src/content/**/atom.xml',
     'src/content/**/_files.json',
     'src/content/en/sitemap.xml',
+    'src/content/*/fundamentals/glossary.md',
+    'src/content/*/resources/contributors/*',
     'src/content/*/showcase/_index.yaml',
     'src/content/*/showcase/*/_toc.yaml',
     'src/content/*/showcase/*/index.md',
@@ -98,6 +100,8 @@ gulp.task('clean', function() {
     'src/content/*/updates/tags/*',
     'src/data/codelabs/*/*.md',
     'src/data/codelabs/*/img/**',
+    'src/data/ilt-pwa/*/*.md',
+    'src/data/ilt-pwa/*/img/**',
     '!src/content/*/**/_generated.md'
   ];
   var opts = {dryRun: false, dot: true};

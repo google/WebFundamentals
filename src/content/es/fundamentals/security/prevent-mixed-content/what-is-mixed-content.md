@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: El contenido mixto ocurre cuando un HTML inicial se carga en una conexión HTTPS segura, pero otros recursos se cargan en una conexión HTTP insegura.
 
-{# wf_updated_on: 2016-08-24 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-09-25 #}
 
 # ¿Qué es el contenido mixto? {: .page-title }
@@ -93,7 +93,7 @@ es bastante común en la web. Por eso, los navegadores no pueden simplemente blo
 mixtas sin que con ello restrinjan la funcionalidad de muchos sitios.
 
 <figure>
-  <img src="imgs/image-gallery-warning.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure image. This content should also be served over HTTPS.">
+  <img src="imgs/image-gallery-warning.png" alt="Contenido mixto: La página se cargó en HTTPS, pero solicitó una imagen insegura. Este contenido también debería ofrecerse en HTTPS.">
   <figcaption>
     Depende de ti, el desarrollador, solucionar los problemas de contenido mixto de tu app.
   </figcaption>
@@ -103,7 +103,7 @@ mixtas sin que con ello restrinjan la funcionalidad de muchos sitios.
 
 Carga de una secuencia de comandos insegura en una página HTTPS.
 
-Si visitas esta página de ejemplo a través de **HTTPS**&mdash; ([**https**://googlesamples.github.io/web-fundamentals/.../simple-example.html](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/simple-example.html){: .external}&mdash;), verás que hay una etiqueta de secuencia de comandos **HTTP** que intentará cargar contenido mixto. 
+Si visitas esta página de ejemplo a través de **HTTPS** ([**https**://googlesamples.github.io/web-fundamentals/.../simple-example.html](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/simple-example.html){: .external}), verás que hay una etiqueta de secuencia de comandos **HTTP** que intentará cargar contenido mixto. 
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/simple-example.html" adjust_indentation="auto" %}
@@ -118,7 +118,7 @@ Afortunadamente, la mayoría de los navegadores actuales bloquean este tipo de c
 forma predeterminada. Consulta la sección [Comportamiento de los navegadores con contenido mixto](#browser-behavior-with-mixed-content){: .external}.
 
 <figure>
-  <img src="imgs/simple-mixed-content-error.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure script. This request has been blocked; the content must be served over HTTPS.">
+  <img src="imgs/simple-mixed-content-error.png" alt="Contenido mixto: La página se cargó en HTTPS, pero solicitó una secuencia de comandos insegura. Esta solicitud se bloqueó; el contenido se debe ofrecer en HTTPS.">
   <figcaption>Chrome bloquea la secuencia de comandos insegura.</figcaption>
 </figure>
 
@@ -126,7 +126,7 @@ forma predeterminada. Consulta la sección [Comportamiento de los navegadores co
 
 Carga de datos inseguros con XMLHttpRequest.
 
-En la visualización de esta página de ejemplo a través de **HTTPS**&mdash; [**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/xmlhttprequest-example.html){: .external}&mdash;, se incluirá una `XMLHttpRequest` a través de **HTTP** para capturar datos `JSON` con contenido mixto.
+En la visualización de esta página de ejemplo a través de **HTTPS** ([**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/xmlhttprequest-example.html){: .external}) se incluirá una `XMLHttpRequest` a través de **HTTP** para capturar datos `JSON` con contenido mixto.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/xmlhttprequest-example.html" adjust_indentation="auto" %}
@@ -143,7 +143,7 @@ toda la página.
 La mayoría de los navegadores actuales también bloquean estas solicitudes peligrosas.
 
 <figure>
-  <img src="imgs/xmlhttprequest-mixed-content-error.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint. This request has been blocked; the content must be served over HTTPS.">
+  <img src="imgs/xmlhttprequest-mixed-content-error.png" alt="Contenido mixto: La página se cargó en HTTPS, pero solicitó un punto final XMLHttpRequest inseguro. Esta solicitud se bloqueó; el contenido se debe ofrecer en HTTPS.">
   <figcaption>Chrome bloquea la XMLHttpRequest insegura.</figcaption>
 </figure>
 
@@ -151,7 +151,7 @@ La mayoría de los navegadores actuales también bloquean estas solicitudes peli
 
 Carga de imágenes inseguras con un lightbox jQuery.
 
-Si visitas esta página de ejemplo a través de **HTTPS**&mdash; ([**https**://googlesamples.github.io/web-fundamentals/.../image-gallery-example.html](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/image-gallery-example.html){: .external}&mdash;), verás que no se muestra ningún problema de contenido mixto al principio. Sin embargo, cuando hagas clic en una imagen en miniatura, se cargará una imagen de tamaño completo y contenido mixto a través de **HTTP**. 
+Si visitas esta página de ejemplo a través de **HTTPS** ([**https**://googlesamples.github.io/web-fundamentals/.../image-gallery-example.html](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/image-gallery-example.html){: .external}), verás que no se muestra ningún problema de contenido mixto al principio. Sin embargo, cuando hagas clic en una imagen en miniatura, se cargará una imagen de tamaño completo y contenido mixto a través de **HTTP**. 
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html" adjust_indentation="auto" %}
@@ -167,7 +167,7 @@ anula el comportamiento predeterminado del vínculo (navegar a una página nueva
 carga la imagen **HTTP** en esta página. 
 
 <figure>
-  <img src="imgs/image-gallery-warning.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure image. This content should also be served over HTTPS.">
+  <img src="imgs/image-gallery-warning.png" alt="Contenido mixto: La página se cargó en HTTPS, pero solicitó una imagen insegura. Este contenido también debería ofrecerse en HTTPS.">
 </figure>
 
 Las imágenes inseguras degradan la seguridad de tu sitio, pero no son tan peligrosas 
@@ -216,7 +216,7 @@ muestran una advertencia, ya que este contenido representa un riesgo para la seg
 tus usuarios. 
 
 <figure>
-  <img src="imgs/passive-mixed-content-warnings.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure video. This content should also be served over HTTPS.">
+  <img src="imgs/passive-mixed-content-warnings.png" alt="Contenido mixto: La página se cargó en HTTPS, pero solicitó un video inseguro. Este contenido también debería ofrecerse en HTTPS.">
   <figcaption>Advertencias de contenido mixto en la consola JavaScript de Chrome.</figcaption>
 </figure>
 
@@ -242,7 +242,7 @@ A continuación, se muestran algunos ejemplos de contenido mixto activo:
 [Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/active-mixed-content.html){: target="_blank" .external }
 
 <figure>
-  <img src="imgs/active-mixed-content-errors.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure resource. This request has been blocked; the content must be served over HTTPS.">
+  <img src="imgs/active-mixed-content-errors.png" alt="Contenido mixto: La página se cargó en HTTPS, pero solicitó un recurso inseguro. Esta solicitud se bloqueó; el contenido se debe ofrecer en HTTPS.">
   <figcaption>Errores de contenido mixto en la consola de JavaScript de Chrome.</figcaption>
 </figure>
 
@@ -278,7 +278,7 @@ No incluimos información específica sobre cada navegador, ya que el comportami
 constantemente. Si te interesa conocer el comportamiento de un navegador en particular, busca información 
 que el proveedor haya publicado directamente. 
 
-Nota: Los usuarios esperan que los protejas cuando visitan tu sitio web. Es importante que soluciones los problemas de contenido mixto para proteger a <b>todos</b> los visitantes, incluso aquellos que usen navegadores anteriores.
+Note: Los usuarios esperan que los protejas cuando visitan tu sitio web. Es importante que soluciones los problemas de contenido mixto para proteger a <b>todos</b> los visitantes, incluso aquellos que usen navegadores anteriores.
 
 
 

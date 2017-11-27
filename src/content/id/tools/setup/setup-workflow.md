@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Siapkan penulisan persisten di Chrome DevTools sehingga Anda bisa melihat perubahan langsung dan menyiapkan perubahan tersebut di disk.
 
 {# wf_updated_on: 2015-07-30 #}
 {# wf_published_on: 2015-07-08 #}
 
-# Mempersiapkan Persistensi dengan DevTools Workspace {: .page-title }
+# Menyiapkan Persistensi dengan DevTools Workspace {: .page-title }
 
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
@@ -119,7 +119,7 @@ Untuk memaksa penyegaran kapan saja, klik kanan folder dan pilih **Refresh**.
 
 Ini juga berguna jika Anda mengubah file yang dibuka bersamaan di editor eksternal dan ingin menampilkan perubahan di DevTools. Biasanya, DevTools otomatis menangkap perubahan tersebut, tetapi jika Anda ingin memastikan, cukup segarkan folder seperti dijelaskan di atas.
 
-### Meelusuri file atau teks
+### Menelusuri file atau teks
 
 Untuk menelusuri file yang dimuat di DevTools,
 tekan <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">O</kbd> atau <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">O</kbd> (Mac)

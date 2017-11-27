@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools를 사용하면 애플리케이션 전체에 걸쳐 여러 변수를 쉽게 확인할 수 있습니다.
 
@@ -47,7 +47,7 @@ Sources 창은 애플리케이션에서 변수를 조사하는 기능을 제공�
 
 ## 변수 삭제
 
-조사 대상 항목을 최소한으로 유지하여 작업 속도를 높이기 위해 조사 목록에서 변수를 삭제해야 하는 경우가 수 있습니다.
+조사 대상 항목을 최소한으로 유지하여 작업 속도를 높이기 위해 조사 목록에서 변수를 삭제해야 하는 경우가 있을 수 있습니다.
 이렇게 하려면 변수를 마우스로 가리킨 다음 오른쪽에 나타나는 삭제 아이콘을 클릭합니다.
 
 ![변수를 마우스로 가리켜 조사 목록에서 삭제](imgs/hover-to-delete-watched-variable.png)

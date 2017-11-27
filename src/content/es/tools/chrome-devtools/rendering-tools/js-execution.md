@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Identifica funciones pesadas con el generador de perfiles de CPU de Chrome DevTools.
 
@@ -33,10 +33,10 @@ Los perfiles de CPU muestran los puntos en los cuales se invierte el tiempo de e
    página, interactuar con ella o simplemente dejar que se ejecute.
 5. Presiona el botón **Stop** cuando finalices. 
 
-También puedes usar la [API de líneas de comandos][profile] para grabar y agrupar perfiles 
+También puedes usar la [Command Line API][profile] para grabar y agrupar perfiles 
 desde la línea de comandos.
 
-[Perfil]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#profilename-and-profileendname
+[profile]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#profilename-and-profileendname
 
 ## Ver el perfil de CPU {:#view-profile}
 

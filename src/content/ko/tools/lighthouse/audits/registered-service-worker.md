@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "등록된 서비스 워커가 있음" Lighthouse 감사의 참조 문서입니다.
+description: '등록된 서비스 워커가 있음' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-07-25 #}
 {# wf_published_on: 2016-07-25 #}
@@ -24,10 +24,10 @@ description: "등록된 서비스 워커가 있음" Lighthouse 감사의 참조 
 더 많은 노력이 필요합니다.
 
 오프라인용으로 파일을 캐싱하는 방법에 대한 자세한 내용은
-Lighthouse 문서: [오프라인 시 200으로 응답하는 URL
-](http-200-when-offline#how)의 "감사를 통과하는 방법" 섹션을 참조하세요.
+Lighthouse 문서 [오프라인 시 200으로 응답하는 URL
+](http-200-when-offline#how)의 '감사를 통과하는 방법' 섹션을 참조하세요.
 
-푸시 알림이나 "홈 화면에 추가"를 활성화하려면
+푸시 알림이나 '홈 화면에 추가'를 활성화하려면
 다음의 단계별 가이드를 완료한 다음, 배운 내용을 활용하여
 앱에서 기능을 구현하세요.
 

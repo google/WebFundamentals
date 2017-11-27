@@ -60,7 +60,7 @@ description:向辅助技术隐藏内容
     </div>
 
 例如，如果您要创建某个模态 UI 来阻止对主页面的访问，可以使用 `aria-hidden`。
-在此情况下，视力正常用户可以看到某种半透明叠层，这表示页面的大部分内容当前无法使用，但屏幕阅读器用户仍可探索页面的其他部分。在此情况下以及创建键盘陷阱[前文有说明](/web/fundamentals/accessibility/focus/using-tabindex#modals-and-keyboard-traps)的情况下，您需要确保那些当前超出范围的页面部分同样处于 `aria-hidden` 状态。
+在此情况下，视力正常用户可以看到某种半透明叠层，这表示页面的大部分内容当前无法使用，但屏幕阅读器用户仍可探索页面的其他部分。在此情况下以及创建键盘陷阱（[前文有说明](/web/fundamentals/accessibility/focus/using-tabindex#modals-and-keyboard-traps)）的情况下，您需要确保那些当前超出范围的页面部分同样处于 `aria-hidden` 状态。
 
 
 

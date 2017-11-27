@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Page contains some content when its scripts are not available" Lighthouse audit.
+description: Reference documentation for the "Contains Some Content When JavaScript Is Not Available" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-20 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-09-20 #}
 
-# Page Contains Some Content When Its Scripts Are Not Available  {: .page-title }
+# Contains Some Content When JavaScript Is Not Available  {: .page-title }
 
 ## Why the audit is important {: #why }
 

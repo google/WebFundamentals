@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Saiba como configurar pré-processadores de CSS e JS para ajudar a escrever código com mais eficiência.
 
@@ -30,7 +30,7 @@ Com JavaScript como saída, eles convertem (compilam) a partir de uma linguagem 
 
 ## Depurar e editar conteúdo pré-processado
 
-Assim que estiver no navegador e usar o DevTOols para [editar o CSS](/web/tools/chrome-devtools/inspect-styles/edit-styles) ou depurar o JavaScript, um problema se torna muito aparente: o que você está vendo não reflete sua origem, e não ajuda de verdade a resolver o problema.
+Assim que estiver no navegador e usar o DevTools para [editar o CSS](/web/tools/chrome-devtools/inspect-styles/edit-styles) ou depurar o JavaScript, um problema se torna muito aparente: o que você está vendo não reflete sua origem, e não ajuda de verdade a resolver o problema.
 
 Para resolver isso, a maioria dos pré-processadores modernos são compatíveis com um recurso chamado <b>Source Maps</b>.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 자주 사용하는 명령줄 작업의 단축키를 설정하세요. 명령줄에 같은 내용을 입력하는 일을 되풀이하고 있다면, 이렇게 해서 부담을 덜 수 있습니다.
 
@@ -14,14 +14,14 @@ description: 자주 사용하는 명령줄 작업의 단축키를 설정하세�
 
 
 ### TL;DR {: .hide-from-toc }
-- 명령줄을 유용하게 사용할 수 있습니다. 기억하기 쉽고 빨리 입력할 수 있는 별칭을 만드십시오.
+- 명령줄을 유용하게 사용할 수 있습니다. 기억하기 쉽고 빨리 입력할 수 있는 별칭을 만드세요.
 - Github dotfile에서 명령줄 단축키를 저장, 공유 및 동기화할 수 있습니다.
 
 
 ## 설정 방법
 
 명령줄 단축키를 만드는 가장 간편한 방법은 보편적인 
-명령어에 대한 별칭을 bashrc 파일에 추가하는 것입니다. Mac 또는 Linux의 경우:
+명령어에 대한 별칭을 bashrc 파일에 추가하는 것입니다. Mac 또는 Linux의 경우 다음과 같이 합니다.
 
 1. 명령줄(위치 무관)에 다음을 입력합니다.
 
@@ -34,7 +34,7 @@ description: 자주 사용하는 명령줄 작업의 단축키를 설정하세�
 3. git repo가 있는 디렉토리에 위치했을 때면 언제든 이 명령어 
 `master`를 실행하여 이것이 마스터 분기를 확인해주도록 할 수 있습니다.
 
-참고: 다음 [Windows 
+참고: [Windows 
 별칭 설정 방법](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx) 안내를 참조하세요.
 
 ## 권장 단축키

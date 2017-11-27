@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Crea tu sitio para varios dispositivos desde cero. Obtén información sobre cómo acelerar el desarrollo y crear un sitio de carga rápida con un conjunto de herramientas de proceso de compilación.
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-09-24 #}
 
 # Configura tus herramientas de compilación {: .page-title }
@@ -52,7 +52,7 @@ menos flexibles.
 <table class="responsive">
   <thead>
     <tr>
-      <th colspan="2">Plataformas admitidas &amp; Nombre de la herramienta</th>
+      <th colspan="2">Plataformas admitidas y nombre de la herramienta</th>
     </tr>
   </thead>
   <tbody>
@@ -174,7 +174,7 @@ Para optimizar imágenes, puedes usar estos módulos.
 <table class="responsive">
   <thead>
     <tr>
-      <th colspan="2">Gulp &amp; Grunt</th>
+      <th colspan="2">Gulp y Grunt</th>
     </tr>
   </thead>
   <tbody>
@@ -230,7 +230,7 @@ Web Starter Kit usa la sincronización del navegador para admitir Live Reload.
   </tbody>
 </table>
 
-Nota: Si te gusta la idea de hacer Live Reload, pero no quieres tener un proceso de compilación, el [artículo de Addy Osmani sobre HTML5Rocks](http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/) presenta una serie de alternativas (algunas gratuitas y otras comerciales).
+Note: Si te gusta la idea de hacer Live Reload, pero no quieres tener un proceso de compilación, el [artículo de Addy Osmani sobre HTML5Rocks](http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/) presenta una serie de alternativas (algunas gratuitas y otras comerciales).
 
 
 {# wf_devsite_translation #}

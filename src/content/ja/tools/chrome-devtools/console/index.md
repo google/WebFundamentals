@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools JavaScript コンソールの操作方法について説明します。
 
@@ -38,7 +38,6 @@ description: Chrome DevTools JavaScript コンソールの操作方法につい�
 次のいずれかの方法で、専用の [**Console**] パネルとして開きます。
 
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd>（Windows / Linux）または <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd class="kbd">J</kbd>（Mac）を押します。
-
 * DevTools が既に開いている場合は、[**Console**] ボタンをクリックします。
 
 [Console] パネルを開くと、[Console] ドロワーは自動的に折りたたまれます。
@@ -56,7 +55,6 @@ description: Chrome DevTools JavaScript コンソールの操作方法につい�
 ##  メッセージ スタッキング
 
 連続して繰り返されるメッセージの場合は、各インスタンスが新しい行に出力されるのではなく、「スタック」されて左側の余白に数字が表示されます。
-
 この数字は、メッセージが繰り返された回数を示します。
 
 

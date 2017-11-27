@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use o painel Application para inspecionar, modificar e depurar manifestos, service workers e caches de service worker de aplicativos da Web.
 
-{# wf_updated_on: 2016-07-25 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-07-25 #}
 
 # Depurar Progressive Web Apps {: .page-title }
@@ -39,14 +39,14 @@ do aplicativo quando ele é iniciado.
 Guias relacionados:
 
 * [Melhore a experiência do usuário com um manifesto de
- aplicativo da Web](/web/fundamentals/engage-and-retain/web-app-manifest)
+ aplicativo da Web](/web/fundamentals/web-app-manifest)
 * [Como usar banners de
-  instalação de aplicativo](/web/fundamentals/engage-and-retain/app-install-banners)
+  instalação de aplicativo](/web/fundamentals/app-install-banners)
 
 Quando seu manifesto estiver configurado, você pode usar o painel **Manifest** do painel
 **Application** para inspecioná-lo.
 
-![painel manifest][manifest]
+![manifest pane][manifest]
 
 * Para ver o código do manifesto, clique no link abaixo do rótulo **App Manifest**
   (`https://airhorner.com/manifest.json` na imagem acima).
@@ -56,7 +56,7 @@ Quando seu manifesto estiver configurado, você pode usar o painel **Manifest** 
   código do manifesto em uma vista mais simplista.
 * A seção **Icons** exibe todos os ícones especificados.
 
-[manifesto]: images/manifest.png
+[manifest]: images/manifest.png
 
 ### Simule eventos de adição à tela inicial {:#add-to-homescreen}
 
@@ -89,8 +89,8 @@ conectar um dispositivo móvel real ao DevTools por [depuração remota][remote
 debugging] e, em seguida, clicar no botão **Add to Homescreen** (no DevTools)
 para acionar a mensagem "adicionar à tela inicial" no dispositivo móvel conectado.
 
-[prateleira]: images/io.png
-[depuração remota]: /web/tools/chrome-devtools/debug/remote-debugging/remote-debugging
+[shelf]: images/io.png
+[remote debugging]: /web/tools/chrome-devtools/debug/remote-debugging/remote-debugging
 
 ## Service workers {:#service-workers}
 
@@ -103,7 +103,7 @@ Guias relacionados:
 
 * [Introdução aos service workers](/web/fundamentals/primers/service-worker)
 * [Notificações push: Pertinentes, relevantes e
-  precisas](/web/fundamentals/engage-and-retain/push-notifications)
+  precisas](/web/fundamentals/push-notifications)
 
 O painel **Service Workers** na seção **Application** é o lugar no
 DevTools para inspecionar e depurar service workers.
@@ -155,8 +155,8 @@ exibido.
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[convite]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
-[erros]: images/sw-error.png
+[tickle]: /web/fundamentals/push-notifications/how-push-works
+[errors]: images/sw-error.png
 
 ## Caches do service worker {:#caches}
 

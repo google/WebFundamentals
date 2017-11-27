@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“预计输入延迟时间”Lighthouse 审查的参考文档。
 
@@ -46,6 +46,8 @@ RAIL 性能模型建议应用在 100 毫秒内响应用户输入，而 Lighthous
 
 原因是 Lighthouse 使用一个代理指标来测量您的应用在响应用户输入方面的表现：主线程的可用性。
 Lighthouse 假定您的应用需要 50 毫秒的时间来完全响应用户的输入（从实现任意 JavaScript 执行到以物理方式将新像素绘制到屏幕）。
+
+
 如果主线程的不可用时间达 50 毫秒或更长，那么，您的应用将没有足够的时间完成响应。
 
 

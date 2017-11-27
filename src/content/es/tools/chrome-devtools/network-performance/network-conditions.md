@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Fácilmente pueden pasarse por alto las condiciones de red que tus usuarios experimentarán en los dispositivos móviles. Usa DevTools para emular diferentes condiciones de red. Si solucionas los problemas de tiempo de carga, los usuarios te lo agradecerán.
 

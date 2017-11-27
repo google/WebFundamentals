@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Device Mode de Chrome DevTools te permite imitar cómo se verá tu sitio de desarrollo en producción cuando esté en un conjunto de dispositivos.
 
@@ -33,7 +33,7 @@ Los Controles de la ventana de visualización te permiten probar tu sitio con un
 
 Recomendamos que uses **Responsive Mode** como tu modo de trabajo predeterminado. Úsalo durante el desarrollo activo de tu sitio y app, y modifica el tamaño de la ventana de visualización con frecuencia a fin de crear un diseño libremente adaptable que se adapte incluso a tipos de dispositivos futuros y desconocidos.
 
-Activa la [Media Queries Bar] para aprovechar Responsive Mode al máximo(#media-queries).
+Activa la [Media Queries Bar](#media-queries) para aprovechar Responsive Mode al máximo.
 
 ### Personalizar el tamaño de la ventana de visualización
 
@@ -71,13 +71,13 @@ dispositivo personalizado si encuentras un dispositivo de caso límite o nuevo q
   <p>Para agregar un dispositivo personalizado:</p>
   <ol>
     <li>Ve a DevTools Settings.</li>
-    <li>Haz clic en la pestaña <strong>Devices</strong> .</li>
+    <li>Haz clic en la pestaña <strong>Devices</strong>.</li>
     <li>Haz clic en <strong>Add custom device</strong>.</li>
     <li>Ingresa un nombre de dispositivo, el ancho, la altura, la relación de píxeles del dispositivo y 
      la cadena user agent.</li>
      <li>Haz clic en <strong>Add</strong>.</li>
   </ol>
-  <p>Tu dispositivo personalizado ahora está disponible en el menú desplegable <strong>Device</strong> .</p>
+  <p>Tu dispositivo personalizado ahora está disponible en el menú desplegable <strong>Device</strong>.</p>
   </div>
   <div class="wf-devtools-flex-half">
     <img src="imgs/custom-device.png" alt="selecciona un dispositivo">
@@ -108,7 +108,7 @@ Cuando se emula a un dispositivo específico, la barra de herramientas de Device
 
 <div class="wf-devtools-flex">
   <div>
-  <p>A veces querrás probar un dispositivo con una resolución mayor que el espacio real disponible en la ventana de tu navegador. En estos casos, es útil la opción <strong>Zoom to Fit</strong> :</p>
+  <p>A veces querrás probar un dispositivo con una resolución mayor que el espacio real disponible en la ventana de tu navegador. En estos casos, es útil la opción <strong>Zoom to Fit</strong>:</p>
   <ol>
     <li><strong>Fit to Window</strong> automáticamente establece el nivel de zoom según el espacio máximo disponible.</li>
     <li><strong>Explicit percentages</strong> son útiles, por ejemplo, si deseas probar DPI en imágenes.</li>
@@ -125,7 +125,7 @@ Cuando se emula a un dispositivo específico, la barra de herramientas de Device
   <div>
   <p>Los controles opcionales pueden cambiarse o habilitarse si haces clic en los tres puntos pequeños que aparecen en el lado derecho de la barra de herramientas del dispositivo. Las opciones actuales incluyen</p>
   <ul>
-    <li>Tipo user agent (Emula UA y eventos táctiles)</li>
+    <li>Tipo de user agent (Emula UA y eventos táctiles)</li>
     <li>Relación de píxeles del dispositivo</li>
     <li>Consultas de medios</li>
     <li>Reglas</li>
@@ -152,8 +152,8 @@ Cambiar esta configuración influirá en la emulación de la ventana de visualiz
 además cambiará la cadena UA. Así que si te gustaría crear un sitio adaptable para
 Desktop y quieres probar los efectos de desplazamiento, cambia a "Desktop" en Responsive Mode.
 
-**Sugerencia**: También puedes establecer user agent en el panel lateral [**Network conditions**][nc] 
-.
+**Sugerencia**: También puedes establecer user agent en el panel lateral [**Network conditions**][nc].
+
 
 
 ### Relación de píxeles del dispositivo (DPR)
@@ -175,10 +175,10 @@ Algunos ejemplos de sensibilidad "Relación de píxeles del dispositivo" (DPR) e
 * las reglas [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) 
  de las CSS;
 
-* el atributo [srcset](/web/fundamentals/design-and-ui/media/images/images-in-markup) 
+* el atributo [srcset](/web/fundamentals/design-and-ux/media/images/images-in-markup) 
  en las imágenes;
 
-* La propiedad `window.devicePixelRatio` .
+* La propiedad `window.devicePixelRatio`.
 
 Si tienes una pantalla Retina nativa, verás que los recursos con valores bajos de "Puntos por pulgada" 
 (PPP) parecen pixelados mientras que los recursos con valores altos de PPP son nítidos. Para simular 
@@ -188,7 +188,7 @@ pixelado.
 
 ### Consultas de medios{: #media-queries }
 
-[Consultas de medios](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)
+[Consultas de medios](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)
 son una parte esencial del diseño web adaptable. Para ver el inspector de consulta de medios,
 haz clic en **Show Media queries** en el menú de tres puntos. DevTools detecta las consultas de
 medios en tus hojas de estilo y las muestra como barras coloreadas en la regla superior.

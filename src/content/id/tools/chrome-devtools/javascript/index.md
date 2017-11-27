@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Mulailah men-debug JavaScript dengan menggunakan Chrome DevTools dalam tutorial interaktif ini.
 
-{# wf_updated_on: 2017-01-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2017-01-04 #}
 
 <style>
@@ -16,7 +16,7 @@ description: Mulailah men-debug JavaScript dengan menggunakan Chrome DevTools da
      make demo responsive
 -->
 
-# Mulai Men-debug JavaScript di Chrome DevTools {: .page-title }
+# Memulai dengan Men-debug JavaScript di Chrome DevTools {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -66,14 +66,16 @@ menghentikan sementara kode Anda disebut **breakpoint**. Cobalah sekarang:
    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows, Linux).
 
 1. Klik tab **Sources**.
-	<!-- TODO add a screenshot. Don't create the screenshot until demo design is
+
+<!-- TODO add a screenshot. Don't create the screenshot until demo design is
      finished. Add it here rather than previous screenshot in case Sources
      is hidden -->
 
 1. Klik **Event Listener Breakpoints** untuk meluaskan bagian. DevTools akan menampilkan
    daftar kategori kejadian yang bisa diluaskan, misalnya **Animation** dan
    **Clipboard**.
-	<!-- TODO or maybe add it here -->
+
+<!-- TODO or maybe add it here -->
 
 1. Di sebelah kategori kejadian **Mouse**, klik **Expand** ![ikon
    Expand](/web/tools/chrome-devtools/images/expand.png){: .devtools-inline}.
@@ -100,26 +102,26 @@ menghentikan sementara kode Anda disebut **breakpoint**. Cobalah sekarang:
 
        `function onClick() {`
 
-Bila memilih kotak centang **click**, persiapkan breakpoint berbasis kejadian pada
+Bila memilih kotak centang **click**, siapkan breakpoint berbasis kejadian pada
 semua kejadian `click`. Bila *ada* simpul yang diklik, dan simpul itu memiliki penangan `click`,
 DevTools secara otomatis akan berhenti sementara pada baris pertama penangan
 `click` simpul itu.
 
-Catatan: Ini cuma salah satu dari sekian banyak tipe breakpoint yang ditawarkan DevTools.
+Note: Ini cuma salah satu dari sekian banyak tipe breakpoint yang ditawarkan DevTools.
 Breakpoint yang harus Anda gunakan bergantung pada masalah yang sedang Anda debug.
 
 [resume]: /web/tools/chrome-devtools/images/resume-script-execution.png
 
-## Langkah 3: Runut kode
+## Langkah 3: Penyusuran kode
 
 Satu penyebab bug yang umum adalah bila skrip mengeksekusi dalam
-urutan yang salah. Perunutan kode memungkinkan Anda mengikuti proses
+urutan yang salah. Penyusuran kode memungkinkan Anda mengikuti proses
 eksekusi kode, baris demi baris, dan mengetahui secara persis bila
 baris dieksekusi dalam urutan yang berbeda dengan yang Anda harapkan. Cobalah sekarang:
 
 1. Pada panel **Sources** di DevTools, klik **Step into next function
    call** ![Step into next function call][into]{:.devtools-inline} untuk
-   merunut eksekusi fungsi `onClick()`, baris demi baris.
+   menyusuri eksekusi fungsi `onClick()`, baris demi baris.
    DevTools menyoroti baris kode berikut:
 
        `if (inputsAreEmpty()) {` 
@@ -130,9 +132,9 @@ baris dieksekusi dalam urutan yang berbeda dengan yang Anda harapkan. Cobalah se
    Karena `inputsAreEmpty()` dievaluasi sebagai false, maka blok kode pernyataan `if`
    tidak dieksekusi.
 
-Itulah gambaran umum mengenai perunutan kode. Jika mengamati kode dalam
+Itulah gambaran umum mengenai penyusuran kode. Jika mengamati kode dalam
 `get-started.js`, Anda bisa melihat bahwa bug tersebut mungkin ada di suatu tempat di fungsi
-`updateLabel()`. Daripada merunut setiap baris kode,
+`updateLabel()`. Daripada menyusuri setiap baris kode,
 Anda bisa menggunakan tipe breakpoint lain untuk menghentikan sementara kode tersebut lebih dekat dengan
 lokasi bug.
 
@@ -268,13 +270,13 @@ cara lainnya, termasuk:
    href="add-breakpoints" target="_blank"
    rel="noopener noreferrer"><button>Tampilkan Semua Breakpoint</button></a>
 
-Ada sepasang kontrol perunutan kode yang belum dijelaskan dalam
+Ada sepasang kontrol penyusuran kode yang belum dijelaskan dalam
 tutorial ini. Periksalah tautan di bawah untuk mengetahui selengkapnya tentang keduanya.
 
 <a class="gc-analytics-event"
    data-category="DevTools / Debug JS / Get Started / Next Steps / Breakpoints"
    href="step-code#stepping_in_action" target="_blank"
-   rel="noopener noreferrer"><button>Saya Ingin Menguasai Perunutan Kode</button></a>
+   rel="noopener noreferrer"><button>Saya Ingin Menguasai Penyusuran Kode</button></a>
 
 ## Masukan
 

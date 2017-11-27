@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Compositing is where the painted parts of the page are put together for displaying on screen.
 
@@ -26,7 +26,7 @@ The best-performing version of the pixel pipeline avoids both layout and paint, 
 
 <img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg"  alt="The pixel pipeline with no layout or paint.">
 
-In order to achieve this you will need to stick to changing properties that can be handled by the compositor alone. Today there are only two properties for which that is true: **`transforms`** and **`opacity`**:
+In order to achieve this you will need to stick to changing properties that can be handled by the compositor alone. Today there are only two properties for which that is true - `transform`s and `opacity`:
 
 <img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg"  alt="The properties you can animate without triggering layout or paint.">
 

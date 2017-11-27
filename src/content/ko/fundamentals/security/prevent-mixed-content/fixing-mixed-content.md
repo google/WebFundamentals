@@ -3,13 +3,13 @@ book_path: /web/fundamentals/_book.yaml
 description: 혼합 콘텐츠를 찾아 수정하는 것은 중요한 작업이지만 많은 시간이 소요될 수 있습니다. 이 가이드에서는 해당 프로세스를 지원하는 데 사용할 수 있는 몇몇 도구에 대해 설명합니다.
 
 {# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2016-08-24 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # 혼합 콘텐츠 방지 {: .page-title }
 
 {% include "web/_shared/contributors/johyphenel.html" %}
 
-성공: 웹사이트에 대한 HTTPS 지원은 사이트와 사용자를 공격으로부터 보호하는 중요한 단계이지만 혼합 콘텐츠가 해당 보호를 쓸모없게 만들 수 있습니다. 사이트와 사용자를 보호하려면 혼합 콘텐츠 문제를 찾아 수정해야 합니다.
+Success: 웹사이트에 대한 HTTPS 지원은 사이트와 사용자를 공격으로부터 보호하는 중요한 단계이지만 혼합 콘텐츠가 해당 보호를 쓸모없게 만들 수 있습니다. 사이트와 사용자를 보호하려면 혼합 콘텐츠 문제를 찾아 수정해야 합니다.
 
 혼합 콘텐츠를 찾아 수정하는 것은 중요한 작업이지만 많은 시간이 소요될 수 있습니다. 이 가이드에서는 해당 프로세스를 지원하는 데 사용할 수 있는 몇몇 도구와 기술에 대해 설명합니다. 혼합 콘텐츠에 대한 자세한 내용은 [혼합 콘텐츠란?](./what-is-mixed-content)을 참조하세요.
 
@@ -25,10 +25,10 @@ description: 혼합 콘텐츠를 찾아 수정하는 것은 중요한 작업이�
 
 ### 사이트를 방문하여 혼합 콘텐츠 찾기
 
-Google Chrome에서 HTTPS 페이지를 방문하면 브라우저가 자바스크립트 콘솔의 오류 및 경고로서 
+Google Chrome에서 HTTPS 페이지를 방문하면 브라우저가 JavaScript 콘솔의 오류 및 경고로서 
 혼합 콘텐츠가 있음을 경고합니다.
 
-이런 경고를 보려면 혼합 콘텐츠 또는 능동적 혼합 콘텐츠 샘플 페이지로 이동해 Chrome 자바스크립트 콘솔을 여세요. 콘솔은 View 메뉴(_View_ -&gt; _Developer_ -&gt; _JavaScript Console_)에서 열거나 페이지를 마우스 오른쪽 버튼으로 클릭한 다음 _Inspect Element_와 _Console_을 차례로 선택하여 열 수 있습니다.
+이런 경고를 보려면 혼합 콘텐츠 또는 능동적 혼합 콘텐츠 샘플 페이지로 이동해 Chrome JavaScript 콘솔을 여세요. 콘솔은 View 메뉴(_View_ -&gt; _Developer_ -&gt; _JavaScript Console_)에서 열거나 페이지를 마우스 오른쪽 버튼으로 클릭한 다음 _Inspect Element_ 와 _Console_ 을 차례로 선택하여 열 수 있습니다.
 
 [혼합 콘텐츠란?](what-is-mixed-content#passive-mixed-content){: .external} 페이지에서 [수동적 혼합 콘텐츠의 예](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/passive-mixed-content.html){: .external}를 실행하면 아래와 같이 혼합 콘텐츠 경고가 표시됩니다.
 
@@ -50,7 +50,7 @@ Google Chrome에서 HTTPS 페이지를 방문하면 브라우저가 자바스크
 
 사이트의 소스에서 이런 오류와 경고에 표시되는 http:// URL을 수정해야 합니다. 이런 오류와 경고를 찾은 페이지와 함께, 이들을 수정할 때 사용할 URL 목록을 만들면 도움이 됩니다. 
 
-참고: 혼합 콘텐츠 오류 및 경고는 현재 보고 있는 페이지에 대해서만 표시되며, 자바스크립트 콘솔은 새 페이지로 이동할 때마다 지워집니다. 즉, 사이트의 모든 페이지를 개별적으로 보고 해당 오류를 찾아야 합니다. 일부 오류는 페이지의 일부와 상호작용한 후에만 표시될 수 있습니다. 이전 가이드에서 이미지 갤러리 혼합 콘텐츠 예시를 참조하세요.
+참고: 혼합 콘텐츠 오류 및 경고는 현재 보고 있는 페이지에 대해서만 표시되며, JavaScript 콘솔은 새 페이지로 이동할 때마다 지워집니다. 즉, 사이트의 모든 페이지를 개별적으로 보고 해당 오류를 찾아야 합니다. 일부 오류는 페이지의 일부와 상호작용한 후에만 표시될 수 있습니다. 이전 가이드에서 이미지 갤러리 혼합 콘텐츠 예시를 참조하세요.
 
 ### 소스 코드에서 혼합 콘텐츠 찾기
 
@@ -99,7 +99,7 @@ Chrome에서 다음 혼합 콘텐츠 오류를 예시로 사용합니다.
   <figure>
     <img src="imgs/puppy-https.png">
     <figcaption class="success">
-      HTTPS 이미지가 오류 없이 로드되고 HTTP 이미지와 동일합니다. <a href="#step-2">2단계</a>로 이동하십시오!
+      HTTPS 이미지가 오류 없이 로드되고 HTTP 이미지와 동일합니다. <a href="#step-2">2단계</a>로 이동하세요!
      </figcaption>
   </figure>
 </div>
@@ -121,7 +121,7 @@ Chrome에서 다음 혼합 콘텐츠 오류를 예시로 사용합니다.
   <figure>
     <img src="imgs/https-cert-warning.png">
     <figcaption class="warning">
-      HTTPS를 통해 리소스를 보려고 시도할 때 발생한 인증서 경고.
+      HTTPS를 통해 리소스를 보려고 시도할 때 발생한 인증서 경고
      </figcaption>
   </figure>
 </div>
@@ -264,8 +264,7 @@ CSP 지시문입니다. 이 지시문은 네트워크 요청을 하기 전에 �
 
 
 HTTPS를 통해 리소스를 사용할 수 없는 경우 
-업그레이드된 요청이 실패하고 리소스가 로드되지 않음에 주목할 만합니다. 이는 페이지의  
-보안을 유지합니다. 
+업그레이드된 요청이 실패하고 리소스가 로드되지 않음에 주목할 만합니다. 이는 페이지의 보안을 유지합니다. 
 
 `upgrade-insecure-requests` 지시문은 `<iframe>` 문서에 계단식으로 배열되며 
 전체 페이지를 보호합니다.

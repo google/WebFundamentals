@@ -26,7 +26,7 @@ description: 자바스크립트는 종종 시각적 변화를 유발합니다. �
 * 시각적 업데이트에 setTimeout 또는 setInterval을 피하고 대신 항상 requestAnimationFrame을 사용합니다.
 * 메인 스레드를 벗어나 오래 실행되는 자바스크립트를 Web Workers로 이전합니다.
 * 마이크로 작업을 사용하여 여러 프레임에서 DOM을 변경합니다.
-* Chrome DevTools의 Timeline 및 JavaScript Profiler를 사용하여 JavaScript의 영향을 평가합니다.
+* Chrome DevTools의 Timeline 및 자바스크립트 프로파일러를 사용하여 자바스크립트의 영향을 평가합니다.
 
 ## 시각적 변화에 `requestAnimationFrame` 사용
 
@@ -71,7 +71,7 @@ description: 자바스크립트는 종종 시각적 변화를 유발합니다. �
 
 
 
-일부 작업은 이 모델에 적합하지 않을 수 있습니다. Web Workers는 DOM 액세스 권한이 없습니다. 작업이 메인 스레드에 있어야 하는 경우, 큰 작업을 각각 몇 밀리초 이하의 마이크로 작업으로 세분화하고, 각 프레임에서 `requestAnimationFrame` 핸들러 내부에서 실행하는 일괄 처리 방식을 고려해 보십시오.
+일부 작업은 이 모델에 적합하지 않을 수 있습니다. Web Workers는 DOM 액세스 권한이 없습니다. 작업이 메인 스레드에 있어야 하는 경우, 큰 작업을 각각 몇 밀리초 이하의 마이크로 작업으로 세분화하고, 각 프레임에서 `requestAnimationFrame` 핸들러 내부에서 실행하는 일괄 처리 방식을 고려해 보세요.
 
 
     var taskList = breakBigTaskIntoMicroTasks(monsterTaskList);
@@ -111,7 +111,7 @@ description: 자바스크립트는 종종 시각적 변화를 유발합니다. �
 
 <img src="images/optimize-javascript-execution/js-profiler-toggle.jpg" alt="DevTools에서 JS 프로파일러 활성화">
 
-이 방법으로 자바스크립트를 프로파일링하는 데 따르는 오버헤드가 있으므로 자바스크립트 런타임 특성을 더 세부적으로 파악하려는 경우에만 활성화하십시오. 이제 확인란이 활성화된 상태에서 동일한 작업을 수행하고 자바스크립트에서 호출된 함수에 대해 휠씬 더 많은 정보를 얻을 수 있습니다.
+이 방법으로 자바스크립트를 프로파일링하는 데 따르는 오버헤드가 있으므로 자바스크립트 런타임 특성을 더 세부적으로 파악하려는 경우에만 활성화하세요. 이제 확인란이 활성화된 상태에서 동일한 작업을 수행하고 자바스크립트에서 호출된 함수에 대해 휠씬 더 많은 정보를 얻을 수 있습니다.
 
 <img src="images/optimize-javascript-execution/high-js-detail.jpg" alt="높은 수준의 JS 실행 세부정보를 제공하는 Chrome DevTools의 Timeline">
 

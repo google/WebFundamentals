@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use o painel Styles do Chrome DevTools para inspecionar e modificar os estilos CSS associados a um elemento.
 

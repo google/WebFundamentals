@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/events/_book.yaml
+title: Events
 landing_page:
-  custom_css_path: /web/events/events.css
   header:
-    description: Attend A Developer Event And Get Hacking
+    description: Attend a developer event and get hacking
 
   rows:
 
-  - heading: Find Events Near You
+  - heading: Find events near you
     classname: find-events
     items:
     - description: >
@@ -44,18 +44,21 @@ landing_page:
   - items:
     - custom_html: <hr>
 
-  - heading: Featured Events
+  - heading: Featured events
     items:
     - heading: Progressive Web Apps
       description: >
-        Find a Google Developer Group in your area and learn the skills you
-        need to start creating Progressive Web Apps. Progressive Web Apps take
-        advantage of new technologies to bring the best of mobile sites and
-        native applications to users.
+        Progressive Web App Roadshows are a series of in-person events run
+        around the world to help you learn the skills you need to start 
+        creating Progressive Web Apps. Progressive Web Apps take advantage of 
+        new technologies to bring the best of mobile sites and native 
+        applications to users.
       image_path: /web/events/images/pwa-roadshow-item.jpg
       buttons:
-      - label: Learn More About Progressive Web App Events
+      - label: Progressive Web App Roadshows
         path: /web/events/pwaroadshow/
+      - label: Progressive Web App Training for Agencies
+        path: /web/events/pwa-agency-training/
     - heading: Polymer Polytechnics
       description: >
         Polytechnics are a series of in-person, community-run events to help
@@ -64,5 +67,5 @@ landing_page:
         familiar with this new technology.
       image_path: /web/events/images/polytechnic-item.jpg
       buttons:
-      - label: Learn More About Polytechnic Events
+      - label: Polytechnic Events
         path: /web/events/polytechnic/

@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "AUDIT_NAME" Lighthouse 감사의 참조 문서입니다.
+description: 'AUDIT_NAME' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-10-04 #}
 {# wf_published_on: 2016-10-04 #}

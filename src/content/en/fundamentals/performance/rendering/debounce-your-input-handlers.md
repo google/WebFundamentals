@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Input handlers are a potential cause of performance problems in your apps, as they can block frames from completing, and can cause additional and unnecessary layout work.
 

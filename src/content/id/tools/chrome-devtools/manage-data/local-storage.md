@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Periksa dan kelola storage, database, dan cache dari panel Application.
 
@@ -13,16 +13,16 @@ Periksa dan kelola storage, database, dan cache dari panel
 
 
 ### TL;DR {: .hide-from-toc }
-- Lihat dan edit storage lokal dan sesi.
+- Lihat dan edit penyimpanan lokal dan sesi.
 - Periksa dan modifikasi database IndexedDB.
 - Eksekusi pernyataan di database Web SQL.
 - Tampilkan Cache Aplikasi dan Service Worker.
 - Kosongkan semua storage, database, cache, dan service worker dengan sekali klik tombol.
 
 
-## Storage lokal {:#local-storage}
+## Penyimpanan lokal {:#local-storage}
 
-Jika Anda menggunakan [storage lokal][ls] untuk menyimpan pasangan nilai-kunci (KVP), Anda bisa
+Jika Anda menggunakan [penyimpanan lokal][ls] untuk menyimpan pasangan nilai-kunci (KVP), Anda bisa
 memeriksa, mengubah, dan menghapus KVP ini dari panel **Local Storage**.
 
 ![panel local storage][ls-pane]
@@ -45,7 +45,7 @@ memeriksa, mengubah, dan menghapus KVP ini dari panel **Local Storage**.
 ## Storage sesi {:#session-storage}
 
 Panel **Session Storage** sama cara kerjanya dengan panel **Local Storage**.
- Periksalah bagian [Storage lokal](#local-storage) di atas untuk mempelajari cara
+ Lihat bagian [Penyimpanan lokal](#local-storage) di atas untuk mempelajari cara
 menampilkan dan mengedit [storage sesi][ss].
 
 [ss]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
@@ -158,7 +158,7 @@ bisa memiliki status berikut:
 ## Cache Service Worker {:#service-worker-caches}
 
 Panel **Cache Storage** di panel **Aplikasi** memungkinkan Anda memeriksa,
-mengubah, dan men-debug cache yang dibuat dengan API Cache (service worker). Periksalah
+mengubah, dan men-debug cache yang dibuat dengan API Cache (service worker). Lihat
 panduan di bawah ini untuk bantuan selengkapnya.
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.pwa #}

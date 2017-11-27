@@ -1,8 +1,12 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
 toc:
-  - name: Fundamentals
-    heading: Web Fundamentals
-    lower_tabs:
-      guides:
-      - title: Home
-        path: /web/fundamentals/
+- name: Fundamentals
+  heading: Web Fundamentals
+  attributes:
+  - name: data-category
+    value: webFu
+  - name: data-label
+    value: upper-webfu
+  lower_tabs:
+    guides:
+    - title: Home
+      path: /web/fundamentals/

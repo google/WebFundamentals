@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Site redirects HTTP traffic to HTTPS" Lighthouse audit.
+description: Reference documentation for the "Redirects HTTP Traffic To HTTPS" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-20 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-09-20 #}
 
-# Site Redirects HTTP Traffic to HTTPS  {: .page-title }
+# Redirects HTTP Traffic To HTTPS  {: .page-title }
 
 ## Why the audit is important {: #why }
 

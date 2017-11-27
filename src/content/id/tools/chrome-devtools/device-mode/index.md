@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Menggunakan perangkat virtual di Device Mode Chrome untuk membangun situs web yang mengedepankan perangkat seluler.
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Menyimulasikan Perangkat Seluler dengan Device Mode {: .page-title }
@@ -11,7 +11,7 @@ description: Menggunakan perangkat virtual di Device Mode Chrome untuk membangun
 
 Menggunakan Device Mode pada Chrome DevTools untuk membangun situs web yang mengedepankan perangkat seluler dan sepenuhnya responsif. Pelajari cara menyimulasikan beragam perangkat dan kemampuannya.
 
-Peringatan: Device Mode bisa meniru penampilan situs Anda
+Caution: Device Mode bisa meniru penampilan situs Anda
 di perangkat seluler dengan cukup mirip, tetapi untuk memperoleh gambaran utuh, sebaiknya selalu
 uji situs Anda di perangkat sungguhan. Misalnya, DevTools tidak bisa mengemulasi karakteristik
 kinerja perangkat seluler.

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Configura la autoría persistente en Chrome DevTools para poder ver los cambios inmediatamente y guardarlos en el disco.
 
@@ -37,7 +37,7 @@ Para que los archivos de origen de una carpeta local se puedan editar en el pane
 1. Haz clic con el botón secundario en el panel izquierdo.
 2. Selecciona **Add Folder to Workspace**.
 3. Elige la ubicación de la carpeta local a la que desees realizar la asignación.
-4. Haz clic en **Allow**para otorgar a Chrome acceso a la carpeta. 
+4. Haz clic en **Allow** para otorgar a Chrome acceso a la carpeta. 
 
 ![Add Folder to Workspace](imgs/addfolder.png)
 
@@ -50,7 +50,7 @@ pero el navegador sigue proporcionando el contenido de la carpeta de la red.
 Para asignar automáticamente los cambios persistentes al navegador,
 asigna los archivos locales de la carpeta a una URL:
 
-1. Haz clic con el botón secundario o presiona Control y haz clic en un archivo en el panel izquierdo Sources .
+1. Haz clic con el botón secundario o presiona Control y haz clic en un archivo en el panel izquierdo Sources.
 2. Selecciona **Map to File System Resource**.
 3. Selecciona el archivo local en el espacio de trabajo persistente.
 4. Vuelve a cargar la página en Chrome.

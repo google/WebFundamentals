@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Security 패널을 사용하여 사이트 내 모든 리소스가 HTTPS로 보호되도록 보장합니다.
 
@@ -54,7 +54,7 @@ Security 패널은 비보안 페이지를 두 가지 유형으로 구분합니�
 ![보안 개요, 혼합 콘텐츠](images/overview-mixed.png)
 
 Network
-패널의 필터를 적용한 보기를 열려면 **View request in Network 패널**를 클릭하여 정확히 어느 요청이 HTTP를 통해 제공되는지 알아보세요. 여기에는
+패널의 필터를 적용한 보기를 열려면 **View request in Network 패널**을 클릭하여 정확히 어느 요청이 HTTP를 통해 제공되는지 알아보세요. 여기에는
 모든 출처에서 가져온 보호되지 않는 요청이 모두 표시됩니다. 
 
 ![네트워크 패널, 비보안 리소스, 모든 출처](images/network-all.png)

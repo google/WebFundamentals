@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "스크립트에서 변이 이벤트를 사용하지 않는 사이트" Lighthouse 감사의 참조 문서입니다.
+description: '스크립트에서 변이 이벤트를 사용하지 않는 사이트' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-10-04 #}
 {# wf_published_on: 2016-10-04 #}
@@ -26,7 +26,7 @@ description: "스크립트에서 변이 이벤트를 사용하지 않는 사이�
 
 Lighthouse는 **URLs**에 코드에서 발견된 각 변이 이벤트 리스너를
 보고합니다. 각 변이 이벤트를 `MutationObserver`로 대체하세요.
-자세한 내용은 MDN의 [`MutationObserver`][mdn]을 참조하세요.
+자세한 내용은 MDN의 [`MutationObserver`][mdn]를 참조하세요.
 
 [mdn]: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
 

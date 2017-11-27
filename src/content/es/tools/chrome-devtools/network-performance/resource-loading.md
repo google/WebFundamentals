@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Mide el rendimiento de la red de tu app web por medio del panel de red Chrome DevTools.
 
-{# wf_updated_on: 2016-02-21 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Medir los tiempos de carga de los recursos {: .page-title }
@@ -32,13 +32,13 @@ una página, incluidos detalles de sincronización, encabezados de solicitud y r
 
 El panel Network incluye cinco subpaneles:
 
-1. **Controls**. usa las opciones de este para controlar la visualización y el funcionamiento 
+1. **Controls**: usa las opciones de este para controlar la visualización y el funcionamiento 
    del panel **Network**.
 2. **Filters**: las opciones de este te permitirán controlar los recursos que se muestran en 
    **Requests Table**. Sugerencia: mantén presionado <kbd>Cmd</kbd> (Mac) o <kbd>Ctrl</kbd>
    (Windows/Linux) y luego haz clic en un filtro para seleccionar varios filtros 
 al mismo tiempo.
-3. **Overview**: En este gráfico se muestra una línea de tiempo del momento en que se recuperaron los recursos.
+3. **Overview**: en este gráfico se muestra una línea de tiempo del momento en que se recuperaron los recursos.
    Si ves varias barras apiladas verticalmente, significa que esos recursos 
    se recuperaron simultáneamente.
 4. **Requests Table**: en esta tabla se enumeran todos los recursos recuperados.
@@ -47,7 +47,7 @@ al mismo tiempo.
    Si haces clic en el nombre de un recurso, se muestra más información sobre él.
    Sugerencia: haz clic con el botón secundario en cualquiera de los encabezados de la tabla, a excepción de **Timeline**, para 
    agregar o quitar columnas de información.
-5. **Summary**: A simple vista, este panel indica la cantidad total de solicitudes,
+5. **Summary**: a simple vista, este panel indica la cantidad total de solicitudes,
     la cantidad de datos transferidos y los tiempos de carga.
 
 ![subpaneles del panel network](imgs/panes.png)
@@ -61,7 +61,7 @@ El subpanel **Requests Table** muestra las siguientes columnas en forma predeter
 * **Initiator**: objeto o proceso que inició la solicitud. Puede 
   tener uno de los siguientes valores:
   * **Parser**: el analizador HTML de Chrome inicia la solicitud.
-  * **Redirect**: Un redireccionamiento HTTP inició la solicitud.
+  * **Redirect**: un redireccionamiento HTTP inició la solicitud.
   * **Script**: una secuencia de comandos inicia la solicitud.
   * **Other**: algún otro proceso o acción inicia la solicitud, 
     como la navegación del usuario hacia una página a través de un vínculo o del ingreso de una 
@@ -143,10 +143,10 @@ para ver más información de ese recurso.
 Las pestañas disponibles cambian según el tipo de recurso seleccionado,
 pero las cuatro pestañas que se incluyen a continuación son las más comunes.
 
-* **Headers**: Los encabezados HTTP asociados con el recurso.
+* **Headers**: los encabezados HTTP asociados con el recurso.
 * **Preview**: vistas previas de los recursos JSON, de imagen y texto.
 * **Response**: datos de la respuesta HTTP (si existen).
-* **Timing**: Un detalle granular del ciclo de vida de la solicitud para el 
+* **Timing**: un detalle granular del ciclo de vida de la solicitud para el 
   recurso.
 
 ![ver detalles para un solo recurso](imgs/network-headers.png)
@@ -171,7 +171,7 @@ El ciclo de vida muestra el tiempo dedicado a las siguientes categorías:
 ![pestaña de sincronización](imgs/timing-tab.png)
 
 Si desplazas el mouse sobre un 
-recurso dentro del gráfico **Timeline**, también puedes ver esta información, 
+recurso dentro del gráfico **Timeline**, también puedes ver esta información. 
 
 ![datos de sincronización para un recurso en la línea de tiempo](imgs/timeline-view-hover.png)
 
@@ -249,8 +249,8 @@ inicia una conexión `WebSocket`.
 
 ![pestaña frames de websocket](imgs/websocket-frames.png)
 
-La siguiente lista describe cada columna de la tabla de la pestaña **Frames**
-:
+La siguiente lista describe cada columna de la tabla de la pestaña **Frames**:
+
 
 * **Data**: carga del mensaje. Si el mensaje es texto sin formato, se 
   muestra aquí. Para los códigos de operación binarios, en este campo se 
@@ -261,7 +261,7 @@ La siguiente lista describe cada columna de la tabla de la pestaña **Frames**
   * marco ping;
   * marco pong.
 * **Length**: extensión de la carga del mensaje en bytes.
-* **Time**: La marca de tiempo del momento en que se creó el mensaje.
+* **Time**: la marca de tiempo del momento en que se creó el mensaje.
 
 Los mensajes están codificados por color según el tipo al que pertenecen: 
 
@@ -334,7 +334,7 @@ para ocultar o mostrar el subpanel **Filters**.
 Usa los botones de tipo de contenido para mostrar solamente los recursos del tipo de contenido 
 seleccionado. 
 
-Nota: Mantén presionado <kbd>Cmd</kbd> Mac) o <kbd>Ctrl</kbd> (Windows/Linux) y luego haz clic para habilitar múltiples filtros simultáneamente.
+Note: Mantén presionado <kbd>Cmd</kbd> Mac) o <kbd>Ctrl</kbd> (Windows/Linux) y luego haz clic para habilitar múltiples filtros simultáneamente.
 
 ![múltiples filtros de tipo de contenido seleccionados 
 simultáneamente](imgs/multiple-content-type-filters.png)
@@ -346,42 +346,42 @@ nombres de archivo coincidan con la cadena especificada.
 ![filtrado de nombres de recursos](imgs/resource-name-filtering.png)
 
 El campo de texto **filter** también admite diversas palabras clave que te permiten 
-clasificar recursos por diferentes propiedades, como el tamaño de archivo, por medio de la palabra clave `larger-than`
-.
+clasificar recursos por diferentes propiedades, como el tamaño de archivo, por medio de la palabra clave `larger-than`.
+
 
 La siguiente lista describe todas las palabras clave. 
 
-* `domain`. solo muestra recursos del dominio especificado. Puedes usar 
+* `domain`: solo muestra recursos del dominio especificado. Puedes usar 
   un carácter comodín (`*`) para incluir varios dominios. Por ejemplo, `*.com` 
   muestra recursos de todos los nombres de dominio que terminan en `.com`. DevTools 
   rellena el menú desplegable de autocompletar con todos los dominios
   que encuentra.
-* `has-response-header`. muestra los recursos que contienen el encabezado de respuesta 
+* `has-response-header`: muestra los recursos que contienen el encabezado de respuesta 
   HTTP especificado. DevTools completa el menú desplegable de autocompletar con 
   todos los encabezados de respuesta que encuentra.
-* `is`. usa `is:running` para encontrar recursos `WebSocket`.
-* `larger-than`. muestra recursos de tamaño superior al especificado, 
+* `is`: usa `is:running` para encontrar recursos `WebSocket`.
+* `larger-than`: muestra recursos de tamaño superior al especificado, 
   en bytes. Establecer un valor de `1000` equivale a fijar un valor de `1k`.
-* `method`. muestra recursos recuperados con un tipo de método HTTP
+* `method`: muestra recursos recuperados con un tipo de método HTTP
   especificado. DevTools completa el menú desplegable de autocompletar con todos los métodos HTTP
   que encuentra.
-* `mime-type`. muestra recursos de un tipo de MIME especificado. DevTools completa
+* `mime-type`: muestra recursos de un tipo de MIME especificado. DevTools completa
   el menú desplegable de autocompletar con todos los tipos de MIME que encuentra.
-* `mixed-content`. muestra todos los recursos de contenido mixto (`mixed-content:all`) o
+* `mixed-content`: muestra todos los recursos de contenido mixto (`mixed-content:all`) o
   solo los que se visualizan en el momento (`mixed-content:displayed`).
-* `scheme`. muestra los recursos recuperados a través de una conexión HTTP no protegida (`scheme:http`) 
+* `scheme`: muestra los recursos recuperados a través de una conexión HTTP no protegida (`scheme:http`) 
   o HTTPS protegida (`scheme:https`).
-* `set-cookie-domain`. muestra los recursos que tienen un encabezado `Set-Cookie` 
+* `set-cookie-domain`: muestra los recursos que tienen un encabezado `Set-Cookie` 
   con un atributo `Domain` que coincide con el valor especificado. DevTools 
   completa el menú desplegable de autocompletar con todos los dominios de cookies que 
   encuentra.
-* `set-cookie-name`. muestra los recursos que tienen un encabezado `Set-Cookie` 
+* `set-cookie-name`: muestra los recursos que tienen un encabezado `Set-Cookie` 
   con un nombre que coincide con el valor especificado. DevTools completa 
   el menú desplegable de autocompletar con todos los nombres de las cookies que encuentra.
-* `set-cookie-value`. muestra los recursos que tienen un encabezado `Set-Cookie`
+* `set-cookie-value`: muestra los recursos que tienen un encabezado `Set-Cookie`
   con un valor que coincide con el valor especificado. DevTools completa 
   el menú desplegable de autocompletar con todos los valores de las cookies que encuentra.
-* `status-code`. solo muestra los recursos cuyo código de estado HTTP coincide con el 
+* `status-code`: solo muestra los recursos cuyo código de estado HTTP coincide con el 
   código especificado. DevTools completa el menú desplegable de autocompletar con todos 
   los códigos de estado encontrados.
 
@@ -393,7 +393,7 @@ en la siguiente captura de pantalla, al escribir `domain:` se activó el menú d
 
 ![filtrar autocompletar campo de texto](imgs/filter-autocomplete.png)
 
-## Copiar, guardar y borrar información de la red.
+## Copiar, guardar y borrar información de la red
 
 Haz clic con el botón derecho dentro de **Requests Table** para copiar, guardar, o
 eliminar información de la red. Algunas de las opciones dependen del contexto. Por lo tanto, 
@@ -402,10 +402,10 @@ fila de ese recurso. En la lista siguiente, se describe cada una de las opciones
 
 * **Copy Response**: envía una copia de la respuesta HTTP del recurso seleccionado al 
   portapapeles del sistema.
-* **Copy as cURL**: Copia la solicitud de red del recurso seleccionado como una
+* **Copy as cURL**: copia la solicitud de red del recurso seleccionado como una
   cadena de comandos [cURL](http://curl.haxx.se/){: .external } al portapapeles del sistema.
    Consulta [Copiar solicitudes como comandos cURL](#copy-requests-as-curl-commands).
-* **Copy All as HAR**: Copia todos los recursos al portapapeles del sistema como
+* **Copy All as HAR**: copia todos los recursos al portapapeles del sistema como
   datos [HAR](https://en.wikipedia.org/wiki/.har){: .external }.
   Un archivo HAR contiene una estructura de datos JSON que describe la 
   “cascada” de la red. Varias [herramientas](https://ericduran.github.io/chromeHAR/){: .external }
@@ -428,8 +428,8 @@ fila de ese recurso. En la lista siguiente, se describe cada una de las opciones
 * **Copy Link Address**: envía una copia la URL del recurso al portapapeles del sistema.
 * **Save**: guarda el recurso de texto seleccionado. Solo se muestra en los recursos de 
   texto.
-* **Replay XHR**: vuelve a enviar el elemento `XMLHTTPRequest` seleccionado. Solo se muestra en los recursos XHR
-.
+* **Replay XHR**: vuelve a enviar el elemento `XMLHTTPRequest` seleccionado. Solo se muestra en los recursos XHR.
+
 
 ![copiar y guardar menú contextual](imgs/copy-save-menu.png) 
 

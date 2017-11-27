@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Menemukan dan memperbaiki materi campuran adalah tugas penting, namun bisa makan waktu. Panduan ini mendiskusikan beberapa alat yang tersedia untuk membantu prosesnya.
 
 {# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2016-08-24 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # Mencegah Materi Campuran {: .page-title }
 
@@ -50,7 +50,7 @@ ditampilkan:
 
 Anda perlu memperbaiki URL http:// yang dicantumkan dalam kesalahan dan peringatan ini, di sumber situs Anda. Ada baiknya membuat daftar URL ini, bersama laman tempat Anda menemukannya, untuk digunakan bila Anda memperbaikinya. 
 
-Catatan: Kesalahan dan peringatan materi campuran hanya ditunjukkan untuk laman yang saat ini Anda tampilkan, dan Konsol JavaScript dikosongkan setiap kali Anda mengarah ke laman baru. Berarti Anda harus menampilkan setiap laman di situs Anda secara individual untuk menemukan kesalahan ini. Beberapa kesalahan mungkin hanya ditunjukkan setelah Anda berinteraksi dengan suatu bagian laman, lihat contoh materi campuran galeri gambar dari panduan kami sebelumnya.
+Note: Kesalahan dan peringatan materi campuran hanya ditunjukkan untuk laman yang saat ini Anda tampilkan, dan Konsol JavaScript dikosongkan setiap kali Anda mengarah ke laman baru. Berarti Anda harus menampilkan setiap laman di situs Anda secara individual untuk menemukan kesalahan ini. Beberapa kesalahan mungkin hanya ditunjukkan setelah Anda berinteraksi dengan suatu bagian laman, lihat contoh materi campuran galeri gambar dari panduan kami sebelumnya.
 
 ### Menemukan materi campuran dalam kode sumber Anda
 
@@ -191,7 +191,7 @@ CSP berguna untuk banyak hal di luar penggunaan materi campurannya. Informasi te
 * [CSP playground](http://www.cspplayground.com/){: .external }
 * [Spesifikasi CSP](//www.w3.org/TR/CSP/){: .external }
 
-Catatan: Beberapa browser memberlakukan <b>semua</b> kebijakan keamanan materi yang mereka terima.
+Note: Beberapa browser memberlakukan <b>semua</b> kebijakan keamanan materi yang mereka terima.
 Beberapa nilai header CSP sekaligus yang diterima oleh browser di header respons atau elemen
 <code>&lt;meta&gt;</code> dikombinasikan dan diberlakukan sebagai satu kebijakan;
 sehingga melaporkan kebijakan juga dikombinasikan. Kebijakan dikombinasikan dengan mengambil

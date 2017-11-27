@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools의 Device Mode를 사용하면 개발 사이트가 제작을 마친 뒤 다양한 기기에서 어떻게 보일지 흉내 낼 수 있습니다.
 
@@ -49,7 +49,7 @@ description: Chrome DevTools의 Device Mode를 사용하면 개발 사이트가 
   <div>
   <p>기기 드롭다운 메뉴에 현재 가장 인기 있는 기기가 포함되어 있습니다. 기기를 선택하고 나면 각 프리셋이 특정 기기 특성의 에뮬레이션을 자동으로 구성합니다.</p>
   <ul>
-    <li>정확한 "User Agent"(UA) 문자열을 설정합니다.</li>
+    <li>정확한 'User Agent'(UA) 문자열을 설정합니다.</li>
     <li>기기 해상도와 DPI(기기 픽셀 비율)를 설정합니다.</li>
     <li>터치 이벤트를 에뮬레이트합니다(해당되는 경우).</li>
     <li>모바일 스크롤바 오버레이와 meta viewport를 에뮬레이트합니다.</li>
@@ -141,7 +141,7 @@ Device Mode는 에뮬레이션을 위한 다양한 기기를 제공합니다. �
 
 ### 사용자 에이전트 유형
 
-**User Agent Type**, 또는 Device Type 설정을 이용하면 기기의 유형을
+**User Agent Type** 또는 Device Type 설정을 이용하면 기기의 유형을
 변경할 수 있습니다. 가능한 값은 다음과 같습니다.
 
   1. 모바일
@@ -150,7 +150,7 @@ Device Mode는 에뮬레이션을 위한 다양한 기기를 제공합니다. �
 
 이 설정을 변경하면 모바일 뷰포트와 터치 이벤트 에뮬레이션에 영향을 미치고 
 UA 문자열이 변경됩니다. 따라서 데스크톱용 응답형 사이트를 만들고
-마우스 오버 효과를 테스트하고자 하는 경우, 응답형 모드에서 "데스크톱"으로 전환하세요.
+마우스 오버 효과를 테스트하고자 하는 경우, 응답형 모드에서 '데스크톱'으로 전환하세요.
 
 **팁**: [**Network conditions**][nc]
 창에서 사용자 에이전트를 설정할 수도 있습니다.
@@ -165,7 +165,7 @@ Nexus 6P와 같이 Retina 디스플레이가 탑재된 기기의 경우, 일반 
 높습니다. 따라서 시각적인 콘텐츠의 선명도와 크기에 영향을 줄 수
 있습니다.
 
-다음은 웹에서 "기기 픽셀 비율"(DPI) 감도와 관련된 몇 가지 예입니다.
+다음은 웹에서 '기기 픽셀 비율'(DPI) 감도와 관련된 몇 가지 예입니다.
 
 * CSS 미디어 쿼리의 예:
 
@@ -173,23 +173,23 @@ Nexus 6P와 같이 Retina 디스플레이가 탑재된 기기의 경우, 일반 
              (min-resolution: 192dpi) { ... }
 
 * CSS [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) 
- 규칙.
+ 규칙
 
-* 이미지의 [srcset](/web/fundamentals/design-and-ui/media/images/images-in-markup)
+* 이미지의 [srcset](/web/fundamentals/design-and-ux/media/images/images-in-markup)
  속성
 
-* `window.devicePixelRatio` 속성.
+* `window.devicePixelRatio` 속성
 
-고유 Retina 디스플레이가 있는 경우, DPI가 높은 자산은 선명한 반면 '인치당 도트 수'
-(DPI)가 낮은 자산은 모자이크 형태로 나타나는 것을 확인할 수 있을 것입니다. 이 효과를 
+고유 Retina 디스플레이가 있는 경우, DPI가 높은 자산은 선명한 반면 '인치당 도트 수'(DPI)가
+낮은 자산은 모자이크 형태로 나타나는 것을 확인할 수 있을 것입니다. 이 효과를 
 일반 디스플레이에서 시뮬레이션하려면 DPR을 2로 설정하고 확대/축소 기능을 사용하여 뷰포트 배율을 
 조정합니다. 2x 자산은 계속해서 선명하게 보이는 반면 1x 자산은 모자이크 처리될
 것입니다.
 
 ### 미디어 쿼리 {: #media-queries }
 
-[미디어 쿼리](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)
-는 응답형 웹 디자인의 필수적인 부분입니다. 미디어 쿼리 검사기를 보려면
+[미디어 쿼리](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)는
+응답형 웹 디자인의 필수적인 부분입니다. 미디어 쿼리 검사기를 보려면
 세 점 메뉴에서 **Show Media queries**를 클릭하세요. DevTools는 스타일시트의 미디어
 쿼리를 감지하여 이를 상단의 눈금자에 컬러 막대로 표시합니다.
 

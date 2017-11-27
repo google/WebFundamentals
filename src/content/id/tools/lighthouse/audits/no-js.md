@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk audit Lighthouse "Laman berisi beberapa materi bila skripnya tidak tersedia".
 
@@ -37,7 +37,7 @@ Lihat [Jalur Rendering Penting](/web/fundamentals/performance/critical-rendering
 Mengingat pertimbangan ini, audit Lighthouse melakukan pengecekan sederhana untuk
 memastikan bahwa laman Anda tidak kosong ketika JavaScript dinonaktifkan. Seberapa ketat aplikasi
 Anda mengikuti peningkatan progresif adalah topik perdebatan, tapi ada
-kesepakatan bersama bahwa semua laman harus menampilkan setidaknya *beberapa* informasi
+kesepakatan bersama bahwa semua laman harus menampilkan setidaknya *suatu* informasi
 bila JavaScript dinonaktifkan, bahkan jika materi tersebut hanyalah sebuah peringatan kepada pengguna
 bahwa JavaScript diperlukan untuk menggunakan laman.
 

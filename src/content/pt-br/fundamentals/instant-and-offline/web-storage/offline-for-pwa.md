@@ -13,8 +13,8 @@ description: Saiba como armazenar dados localmente para obter melhor tempo de re
 <figure class="attempt-right">
   <img src="images/pwa-in-devtools.jpg" alt="PWA no DevTools">
   <figcaption>
-    O <a href="https://pokedex.org" class="external">Pokedex</a>
-    O Progressive Web App usa o IndexedDB para o estado do aplicativo e o conjunto de dados
+    O Progressive Web App <a href="https://pokedex.org" class="external">Pokedex</a>
+    usa o IndexedDB para o estado do aplicativo e o conjunto de dados
     Pokemon. A Cache API é usada para recursos endereçáveis por URL.
   </figcaption>
 </figure>

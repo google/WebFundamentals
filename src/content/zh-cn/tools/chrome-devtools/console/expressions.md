@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:从 DevTools 控制台查看页面上任意项目的状态。
 
@@ -68,7 +68,7 @@ DevTools 控制台让您可通过特定方式了解您页面中的项目状态�
 目标选择的示例：
 
     $('code') // Returns the first code element in the document.
-    $$('figure') // rns an array of all figure elements in the document.。
+    $$('figure') // Returns an array of all figure elements in the document.
     $x('html/body/p') // Returns an array of all paragraphs in the document body.
 
 ## 检查 DOM 元素和 JavaScript 堆对象
@@ -88,7 +88,7 @@ DevTools 控制台让您可通过特定方式了解您页面中的项目状态�
     $('[data-target="inspecting-dom-elements-example"]')
     inspect($_)
 
-## 访问最近选择的元素和对象。
+## 访问最近选择的元素和对象
 
 控制台在变量中存储最后使用的五个元素和对象，以方便访问。使用 $0 - 4 从控制台访问这些元素。请记住，计算机从 0 开始计算，这意味着最新的项目是 $0，最早的项目是 $4。
 

@@ -1,0 +1,12 @@
+{{#extend 'layout'}}
+  {{#content 'title'}}
+    <title>Index All</title>
+  {{/content}}
+  {{#content 'body-main-content'}}
+    <ul>
+      {{#each longnames}}
+        <li>{{link this}}</li>
+      {{/each}}
+    </ul>
+  {{/content}}
+{{/extend}}

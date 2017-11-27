@@ -126,7 +126,7 @@ As WCAG são organizadas em torno de quatro princípios frequentemente referidos
    exemplo, algo que requer uma interação de passar cursor não pode ser operado por
    alguém que não consegue usar um mouse ou tela sensível ao toque.
 
- - **Understandable** (compreensível): Os usuários conseguem entender o conteúdo? Os usuários conseguem entender a
+ - **Understandable**(compreensível): Os usuários conseguem entender o conteúdo? Os usuários conseguem entender a
    interface e ela é consistente o suficiente para evitar a confusão?
 
  - **Robusto**: O conteúdo pode ser consumido por uma grande variedade de agentes

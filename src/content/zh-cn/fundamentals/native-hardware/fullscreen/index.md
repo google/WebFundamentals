@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:进入全屏模式。
 
-{# wf_updated_on:2016-10-01 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on:2016-10-01 #}
 
 # 打造全屏体验 {: .page-title }
@@ -35,6 +35,7 @@ description:进入全屏模式。
 
 
 * `element.requestFullscreen()`（目前在 Chrome、Firefox 和 IE 中添加前缀）：以全屏模式显示元素。
+
 * `document.exitFullscreen()`（目前在 Chrome、Firefox 和 IE 中添加前缀。
   Firefox 改用 `cancelFullScreen()`）：取消全屏模式。
 * `document.fullscreenElement`（目前在 Chrome、Firefox 和 IE 中添加前缀）：如有任何元素处于全屏模式，返回 true。
@@ -223,7 +224,7 @@ Chrome 团队近期实现的一项功能可在用户已将页面添加到主屏�
 
 #### 网络应用清单（Chrome、Opera、Firefox、Samsung）
 
-[网络应用清单](/web/fundamentals/engage-and-retain/web-app-manifest/)是一个简单的 JSON 文件，使您（开发者）能够控制在用户可能看到应用的区域（例如手机主屏幕）中如何向用户显示应用，指示用户可以启动哪些功能，更重要的是说明启动方法。未来，清单将让您对应用进行更多控制，但现在我们只侧重于如何启动应用。
+[网络应用清单](/web/fundamentals/web-app-manifest)是一个简单的 JSON 文件，使您（开发者）能够控制在用户可能看到应用的区域（例如手机主屏幕）中如何向用户显示应用，指示用户可以启动哪些功能，更重要的是说明启动方法。未来，清单将让您对应用进行更多控制，但现在我们只侧重于如何启动应用。
 
 具体而言：
 
@@ -435,7 +436,7 @@ iOS 没有硬件返回按钮或刷新手势。因此，必须确保用户能在�
 这意味着您无法让构建的全屏网站跨越多个页面，这是因为：
 
 
-* 利用 `window.location ="http://example.com"` 以编程方式更改网址会摆脱全屏模式。
+* 利用 ‘window.location =  "http://example.com"` 以编程方式更改网址会摆脱全屏模式。
 * 用户点击页面内的外部链接时将会退出全屏模式。
 * 通过 `navigator.pushState` API 更改网址也会摆脱全屏体验。
 
@@ -474,8 +475,10 @@ iOS 没有硬件返回按钮或刷新手势。因此，必须确保用户能在�
 
 
 * 谨慎小心。利用横幅或页脚告知用户他们可以安装应用。
+
 * 如果他们关闭了提示，不要再次显示。
 * 用户首次访问时，除非他们对您的服务感到满意，否则可能并不想安装应用。可以考虑在用户与网站的交互产生了积极印象后再提示他们安装。
+
 * 如果用户经常访问网站却没有安装应用，那么他们未来也不太可能安装应用。不要不断地滥发信息骚扰用户。
 
 ##  结论

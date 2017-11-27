@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Application 패널에서 저장소, 데이터베이스 및 캐시를 검사하고 관리합니다.
 
@@ -25,17 +25,17 @@ description: Application 패널에서 저장소, 데이터베이스 및 캐시�
 로컬 저장소 키-값 쌍(KVP)을 저장하기 위해 [로컬 저장소][ls]를 사용하는 경우, 이와 같은 KVP를 
 **Local Storage** 창에서 검사, 수정 및 삭제할 수 있습니다.
 
-![로컬 저장소 창][ls-pane]
+![Local Storage 창][ls-pane]
 
 * 키 또는 값을 두 번 클릭하면 해당 값을 편집할 수 있습니다.
 * 빈 셀을 두 번 클릭하면 새 KVP를 추가할 수 있습니다.
 * KVP를 클릭하고 **delete** 버튼
-(![삭제 버튼][delete]{:.inline})을 누르면 해당 KVP가 삭제됩니다. [**Clear storage** 창](#clear-storage)에서 
+(![delete 버튼][delete]{:.inline})을 누르면 해당 KVP가 삭제됩니다. [**Clear storage** 창](#clear-storage)에서 
 한 번의 버튼 클릭으로 로컬 저장소 데이터를 
 모두 지울 수 있습니다.
 * 페이지와 상호작용하면서 KVP를 생성, 삭제 또는 수정하면 
 변경 내용이 실시간으로 업데이트되는 것을 확인할 수 없습니다. 변경 내용을 확인하려면
-**refresh** 버튼(![새로고침 버튼][refresh]{:.inline})을 클릭합니다.
+**refresh** 버튼(![refresh 버튼][refresh]{:.inline})을 클릭합니다.
 
 [ls]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 [ls-pane]: /web/tools/chrome-devtools/manage-data/imgs/local-storage.png
@@ -46,7 +46,7 @@ description: Application 패널에서 저장소, 데이터베이스 및 캐시�
 
 **Session Storage** 창도 **Local Storage**
 창과 똑같이 작용합니다. 위의 [로컬 저장소](#local-storage) 섹션에서
-세션 저장소][ss]를 보고 편집하는 방법을 알 수 있습니다.
+[세션 저장소][ss]를 보고 편집하는 방법을 알 수 있습니다.
 
 [ss]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 
@@ -83,10 +83,10 @@ description: Application 패널에서 저장소, 데이터베이스 및 캐시�
 ![필터링된 kvp][idb-filter]
 
 값을 추가, 수정 또는 삭제해도 변경 내용이 실시간으로 업데이트되지
-않습니다. 데이터베이스를 업데이트하려면 **refresh** 버튼(![새로고침 버튼][refresh]{:.inline})
+않습니다. 데이터베이스를 업데이트하려면 **refresh** 버튼(![refresh 버튼][refresh]{:.inline})
 을 클릭합니다.
 
-**clear object store** 버튼(![대상 저장소 지우기][cos]{:.inline})
+**clear object store** 버튼(![clear object store][cos]{:.inline})
 을 클릭하면 데이터베이스에서 모든 데이터가 삭제됩니다. 이는 서비스 워커 등록을 해제하고
 다른 저장소와 캐시를 삭제하는 방법으로도 가능합니다. 그러려면
 [**Clear storage** 창](#clear-storage)에서 한 번만 클릭하면 됩니다.
@@ -115,7 +115,7 @@ description: Application 패널에서 저장소, 데이터베이스 및 캐시�
 할 수 있습니다(위 내용 참조).
 * 열 헤더를 클릭하면 테이블이 해당 열을 기준으로 정렬됩니다.
 * 테이블을 변경해도 변경 내용이 실시간으로 업데이트되지 않습니다. 업데이트한 내용을 확인하려면 
-**refresh** 버튼(![새로고침 버튼][refresh]{:.inline})을 
+**refresh** 버튼(![refresh 버튼][refresh]{:.inline})을 
 클릭합니다.
 * 공백으로 구분되거나 쉼표로 구분된 열 이름 목록을
 **Visibile columns** 텍스트 입력란에 입력하면 해당 열만 표시됩니다.
@@ -126,9 +126,9 @@ description: Application 패널에서 저장소, 데이터베이스 및 캐시�
 ## 애플리케이션 캐시 {:#application-cache}
 
 **Application Cache** 창을 사용하면
-[애플리케이션 캐시 API][appcache-api]를 통해 생성된 리소스와 규칙을 검사할 수 있습니다.
+[Application Cache API][appcache-api]를 통해 생성된 리소스와 규칙을 검사할 수 있습니다.
 
-![애플리케이션 캐시 창][appcache]
+![Application Cache 창][appcache]
 
 각 행은 리소스를 나타냅니다.
 
@@ -157,7 +157,7 @@ description: Application 패널에서 저장소, 데이터베이스 및 캐시�
 
 ## 서비스 워커 캐시 {:#service-worker-caches}
 
-**Application** 패널에 있는 **Cache Storage** 창을 사용하면 (서비스 워커) 캐시 API로 생성한 캐시를 검사, 
+**Application** 패널에 있는 **Cache Storage** 창을 사용하면 (서비스 워커) Cache API로 생성한 캐시를 검사, 
 수정 및 디버그할 수 있습니다. 추가 도움이
 필요하면 아래의 가이드를 참조하세요.
 
@@ -172,7 +172,7 @@ Storage** 창을 사용하면 서비스 워커 저장소 및 캐시를 선택적
 data**를 클릭하기만 하면 됩니다. 이 작업은 
 **Clear storage** 레이블 아래 나열된 출처의 데이터를 모두 지웁니다.
 
-![저장소 지우기][clear]
+![clear storage][clear]
 
 [clear]: /web/tools/chrome-devtools/manage-data/imgs/clear-storage.png
 

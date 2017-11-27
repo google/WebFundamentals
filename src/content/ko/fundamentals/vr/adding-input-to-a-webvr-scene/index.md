@@ -2,20 +2,20 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ray Input 라이브러리를 사용하여 WebVR 장면에 입력을 추가하는 방법을 알아봅니다.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # WebVR 장면에 입력 추가 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-경고: WebVR는 아직 실험 단계이며 변경될 수 있습니다.
+Warning: WebVR은 아직 실험 단계이며 변경될 수 있습니다.
 
 [WebVR 시작하기](../getting-started-with-webvr/) 섹션에서는 WebGL 장면을 가져와서 WebVR 기능을 추가하는 방법을 살펴봤습니다. 실행되는 동안 VR에서 장면을 둘러볼 수 있기 때문에 장면의 엔터티와 상호작용할 때 훨씬 재미있습니다.
 
 ![WebVR 장면에서 입력을 표시하는 레이 빔](./img/ray-input.jpg)
 
-WebVR(및 일반적으로 3D)를 사용하면 다양한 입력이 가능하며, 이상적으로 말하자면 모든 입력을 고려할 뿐만 아니라 사용자의 상황이 바뀔 때마다 입력을 전환할 수 있습니다.
+WebVR(및 일반적으로 3D)을 사용하면 다양한 입력이 가능하며, 이상적으로 말하자면 모든 입력을 고려할 뿐만 아니라 사용자의 상황이 바뀔 때마다 입력을 전환할 수 있습니다.
 
 현재 사용할 수 있는 입력 유형은 다음과 같습니다.
 
@@ -28,7 +28,7 @@ WebVR(및 일반적으로 3D)를 사용하면 다양한 입력이 가능하며, 
 * **자유도가 3도인 컨트롤러**(예: Daydream Controller). 자유도가 3도인 컨트롤러는 방향 정보를 제공하지만 위치 정보는 제공하지 않습니다. 일반적으로 이러한 컨트롤러는 사람의 왼손 또는 오른손에 있는 것으로 가정하고 3D 공간에서 위치를 추정합니다.
 * **자유도가 6도인 컨트롤러**(예: Oculus Rift 또는 Vive). 자유도가 6도인 컨트롤러는 방향 정보와 위치 정보를 모두 제공합니다. 이러한 컨트롤러는 일반적으로 기능 범위의 상단에 있으며 최상의 정확도를 제공합니다.
 
-앞으로 WebVR가 발전하면서 새로운 입력 유형이 나올 수 있으므로 가급적 미래 지향적 코드를 제공해야 합니다. 그러나 모든 입력 순열을 처리하는 코드를 작성하는 것은 복잡하고 다루기 어려워질 수 있습니다. Boris Smus의 [Ray Input](https://github.com/borismus/ray-input) 라이브러리는 현재 사용 가능한 대부분의 입력 유형을 지원하는데, 여기서는 이를 토대로 설명하겠습니다.
+앞으로 WebVR이 발전하면서 새로운 입력 유형이 나올 수 있으므로 가급적 미래 지향적 코드를 제공해야 합니다. 그러나 모든 입력 순열을 처리하는 코드를 작성하는 것은 복잡하고 다루기 어려워질 수 있습니다. Boris Smus의 [Ray Input](https://github.com/borismus/ray-input) 라이브러리는 현재 사용 가능한 대부분의 입력 유형을 지원하는데, 여기서는 이를 토대로 설명하겠습니다.
 
 이전 장면에서 [Ray Input을 사용하여 입력 핸들러를 추가](https://googlechrome.github.io/samples/web-vr/basic-input/)해 봅시다. 최종 코드는 [Google Chrome 샘플 저장소](https://github.com/GoogleChrome/samples/tree/gh-pages/web-vr/basic-input/)를 참조하세요.
 
@@ -54,7 +54,7 @@ VR 디스플레이에 액세스한 후에 사용 가능한 모든 입력에 대�
       this._onDeselected(this._box);
     });
 
-Let’s take a look inside both the `_getInput` 및 `_addInputEventListeners` 함수를 들여다 봅시다.
+`_getInput` 및 `_addInputEventListeners` 함수를 모두 들여다 봅시다.
 
     _getInput () {
       this._rayInput = new RayInput.default(
@@ -126,9 +126,9 @@ Ray Input을 생성하려면 장면에서 Three.js 카메라를 전달하고 마
       console.error(`Unable to init VR: ${e}`);
     });
 
-일반적으로 HTML 요소를 사용하여 사용자에게 해당 정보를 표시할 수 있지만 HMD는 WebGL 컨텍스트만 표시하므로 거기에 메시지를 나타내야 합니다. Three.js는 카메라 쪽을 항상 향하고 이미지를 그려 넣을 수 있는 [스프라이트 프리미티브](https://threejs.org/docs/#Reference/Objects/Sprite)(일반적으로 "Billboarding"이라고 함)를 사용합니다.
+일반적으로 HTML 요소를 사용하여 사용자에게 해당 정보를 표시할 수 있지만 HMD는 WebGL 컨텍스트만 표시하므로 거기에 메시지를 나타내야 합니다. Three.js는 카메라 쪽을 항상 향하고 이미지를 그려 넣을 수 있는 [Sprite 프리미티브](https://threejs.org/docs/#Reference/Objects/Sprite)(일반적으로 'Billboarding'이라고 함)를 사용합니다.
 
-![사용자에게 "Press Button" 메시지 표시](./img/press-a-button.jpg)
+![사용자에게 'Press Button' 메시지 표시](./img/press-a-button.jpg)
 
 이를 수행하는 코드는 다음과 같습니다.
 

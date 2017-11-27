@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools의 모든 단축키에 대한 참조입니다.
 
@@ -271,7 +271,7 @@ Styles 사이드바에서 사용할 수 있는 단축키:
   </tbody>
 </table>
 
-### 소스
+### Sources
 
 <table>
   <thead>
@@ -420,7 +420,7 @@ Styles 사이드바에서 사용할 수 있는 단축키:
   </tbody>
 </table>
 
-### 타임라인
+### Timeline
 
 <table>
   <thead>
@@ -447,7 +447,7 @@ Styles 사이드바에서 사용할 수 있는 단축키:
   </tbody>
 </table>
 
-### 프로필
+### Profiles
 
 <table>
   <thead>
@@ -528,7 +528,7 @@ Styles 사이드바에서 사용할 수 있는 단축키:
   </tbody>
 </table>
 
-#### 스크린캐스팅 중인 경우
+#### 스크린캐스팅 시
 
 <table>
   <thead>

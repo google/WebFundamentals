@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse の監査項目 「操作可能になるタイミング」のリファレンス ドキュメント。
 
@@ -18,7 +18,6 @@ description: Lighthouse の監査項目 「操作可能になるタイミング�
 ##  監査に合格する方法 {: #how }
 
 ページの読み込み時のパフォーマンスを改善する方法ついては、Speed Index の[監査に合格する方法](speed-index#how)で紹介されているリソースをご覧ください。
-
 この「操作可能になるタイミング」のスコアが低いほど、パーフォーマンスが高くなります。
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与元素关联的 CSS 样式。
 
@@ -45,7 +45,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 ![带标注的 Styles 窗格](/web/tools/chrome-devtools/inspect-styles/imgs/styles-annotated.png)
 
 1. 与元素匹配的选择器的关联样式。
-2. [用户代理样式表](http://meiert.com/en/blog/20070922/user-agent-style-sheets/)清晰标记，并且在网页上经常被 CSS 替换。
+2. [User Agent 样式表](http://meiert.com/en/blog/20070922/user-agent-style-sheets/)清晰标记，并且在网页上经常被 CSS 替换。
 3. 已被**级联规则**替换的规则将显示为带删除线的文本。
 4. **继承的**样式将在“Inherited from `<NODE>`”标头下显示为一组。点击标头中的 DOM 节点可以导航到其在 DOM 树视图中的位置。
 （[CSS 2.1 属性表](http://www.w3.org/TR/CSS21/propidx.html)显示了哪些属性是可以继承的。）
@@ -259,7 +259,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 
 - DevTools 无法检测到**在外部编辑器中进行的更改**，直至包含关联的源文件的 Sources 标签重新获得焦点。
 - **手动修改 Sass/LESS/其他编译器生成的 CSS 文件**将中断源映射关联，直至页面重新加载。
-- **使用<a href="/web/tools/setup/setup-workflow">工作区</a>？** 确保生成的 CSS 文件同时映射到工作区中。为此，您可以查看 Sources 面板右侧树，确定 CSS 是从您的本地文件夹提供。
+- **使用<a href="/web/tools/setup/setup-workflow">工作区</a>？**确保生成的 CSS 文件同时映射到工作区中。为此，您可以查看 Sources 面板右侧树，确定 CSS 是从您的本地文件夹提供。
 - **要使 DevTools 在您更改源文件时自动重新加载样式**，必须将您的预处理器设置为在源文件每次发生更改时都重新生成 CSS 文件。否则，您必须手动重新生成 CSS 文件并重新加载页面才能看到更改。
 - **您必须从网络服务器访问您的网站或应用**（不是从 **file://** 网址），服务器必须提供 CSS 文件，以及源映射 (.css.map) 和源文件 (.scss, etc.)。
 - 如果您_未_使用“工作区”功能，网络服务器还必须提供 `Last-Modified` 标头。

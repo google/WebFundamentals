@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Opsi 1
 
@@ -56,7 +56,7 @@ Debug JavaScript menggunakan breakpoint di panel Sources atau hubungkan file lok
 
 * [Men-debug dengan Breakpoint](/web/tools/chrome-devtools/javascript/add-breakpoints)
 * [Debug Kode yang Membingungkan](/web/tools/chrome-devtools/javascript/add-breakpoints)
-* [Persiapkan Persistensi dengan DevTools Workspace](/web/tools/setup/setup-workflow)
+* [Siapkan Persistensi dengan DevTools Workspace](/web/tools/setup/setup-workflow)
 
 <div style="clear:both;"></div>
 

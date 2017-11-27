@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Discover new debugging workflows in this comprehensive reference of Chrome DevTools debugging features.
 
@@ -407,7 +407,7 @@ To edit a script:
 1. Open the file in the Editor pane of the Sources panel.
 1. Make your changes in the Editor pane.
 1. Press <kbd>Command</kbd>+<kbd>S</kbd> (Mac) or
-   <kbd>Command</kbd>+<kbd>S</kbd> (Windows, Linux) to save. DevTools patches
+   <kbd>Ctrl</kbd>+<kbd>S</kbd> (Windows, Linux) to save. DevTools patches
    the entire JS file into Chrome's JavaScript engine.
 
  <figure>

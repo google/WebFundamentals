@@ -1,7 +1,11 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
 toc:
-  - name: Case Studies
-    lower_tabs:
-      guides:
-      - title: Home
-        path: /web/showcase/
+- name: Case Studies
+  attributes:
+  - name: data-category
+    value: webFu
+  - name: data-label
+    value: upper-showcase
+  lower_tabs:
+    guides:
+    - title: Home
+      path: /web/showcase/

@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "첫 번째 페인트를 지연시키는 리소스를 사용하지 않는 사이트"와 "헤드에서 첫 번째 페인트를 지연시키는 스크립트 태그를 사용하지 않는 사이트" Lighthouse 감사의 참조 문서입니다.
+description: '첫 번째 페인트를 지연시키는 리소스를 사용하지 않는 사이트'와 '헤드에서 첫 번째 페인트를 지연시키는 스크립트 태그를 사용하지 않는 사이트' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-12-01 #}
 {# wf_published_on: 2016-12-01 #}
@@ -24,7 +24,7 @@ Lighthouse는 렌더링을 차단하는 모든 링크 또는 스크립트를 탐
 세 가지 유형의 렌더링 차단 링크(스크립트, 스타일시트, HTML
 가져오기)를 플래그로 표시합니다. 최적화 방법은 어떤 리소스를 사용하는지에 따라 달라집니다.
 
-참고: 아래와 같이 리소스를 "주요(critical)"라고 언급할 경우,
+참고: 아래와 같이 리소스를 '주요(critical)'라고 언급할 경우,
 이 리소스는 첫 번째 페인트에 필요하거나 페이지의 핵심 기능에
 중요합니다.
 

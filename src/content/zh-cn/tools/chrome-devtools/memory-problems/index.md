@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:了解如何使用 Chrome 和 DevTools 查找影响页面性能的内存问题，包括内存泄漏、内存膨胀和频繁的垃圾回收。
 
@@ -72,7 +72,7 @@ description:了解如何使用 Chrome 和 DevTools 查找影响页面性能的�
 1. 右键点击任务管理器的表格标题并启用 **JavaScript memory**。
 
 
-   ![启用 Javascript memory](imgs/js-memory.png)
+   ![启用 JavaScript memory](imgs/js-memory.png)
 
 
 下面两列可以告诉您与页面的内存使用有关的不同信息：

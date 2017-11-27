@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-09-28 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-28 #}
 
 # O padrão PRPL {: .page-title }
@@ -108,7 +108,7 @@ usando [Web Components](http://webcomponents.org/):
 ![diagrama de um aplicativo que tem duas vistas, com ambas tendo dependências individuais
 e compartilhadas](images/app-build-components.png)
 
-Nota: embora o HTML Imports seja a estratégia de agrupamento preferida do Polymer, você pode
+Note: embora o HTML Imports seja a estratégia de agrupamento preferida do Polymer, você pode
 usar agrupamento baseado em rotas e divisão de código para ter uma configuração parecida com a que se consegue com
 agrupadores de módulo JavaScript modernos
 
@@ -153,7 +153,7 @@ produzir duas versões:
 -   Uma versão não agrupada voltada para combinações de servidor/navegador compatíveis com
     HTTP/2 para fornecer os recursos de que o navegador precisa para produzir uma rápida primeira gravação 
     otimizando o armazenamento em cache ao mesmo tempo. O fornecimento desses recursos pode ser acionado
-    com eficiência por [`<link rel="preload">`][Dicas para recursos] ou [Envio push de HTTP/2].
+    com eficiência por [`<link rel="preload">`][Resource hints] ou [HTTP/2 Push].
 
 -   Uma versão agrupada voltada para minimizar o número de idas e voltas necessárias para
     fazer o aplicativo funcionar em combinações de servidor/navegador que não são compatíveis com
@@ -225,7 +225,7 @@ significa poder armazená-los em cache com eficiência e compartilhá-los entre 
 O envio push do HTTP/2 precisa ser utilizado com cuidado, já que ele força os dados ao navegador,
 mesmo se o arquivo já estiver no cache local do navegador ou a largura de banda já
 estiver saturada. Se usado de forma incorreta, pode prejudicar o desempenho. As 
-[`<link rel="preload">`][Dicas para recursos] podem ser uma boa alternativa para permitir 
+[`<link rel="preload">`][Resource hints] podem ser uma boa alternativa para permitir 
 que o navegador tome decisões inteligentes sobre a priorização das solicitações.  
 
 ## Conclusão
@@ -247,8 +247,8 @@ Superando esse desafio, o PRPL pode ajudar a fornecer o código funcional mínim
 os usuários caem interativa
 
 [HTTP/2]: /web/fundamentals/performance/http2/
-[Dicas para recursos]: https://developers.google.com/web/updates/2016/03/link-rel-preload
-[Envio do HTTP/2]: /web/fundamentals/performance/http2/#server-push
+[Resource hints]: https://developers.google.com/web/updates/2016/03/link-rel-preload
+[HTTP/2 Push]: /web/fundamentals/performance/http2/#server-push
 
 
 {# wf_devsite_translation #}

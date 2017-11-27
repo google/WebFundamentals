@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: コンソール API を使用して、コンソールに情報を書き込んだり、JavaScript プロファイルを作成したり、デバッグ セッションを開始したりできます。
 
@@ -213,7 +213,6 @@ HTML 要素や XML 要素に対して `console.dirxml()` を呼び出すこと�
 ##  console.time(label) {:#time}
 
 ラベルを関連付けて新しいタイマーを開始します。同じラベルを指定して `console.timeEnd()` を呼び出すと、タイマーは停止し、コンソールに経過時間が表示されます。
-
 タイマー値の精度はミリ秒単位です。`time()` と `timeEnd()` に渡す文字列は一致している必要があり、一致していない場合、timer は終了しません。
 
 

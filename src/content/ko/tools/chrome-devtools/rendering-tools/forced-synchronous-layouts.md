@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 이 대화형 가이드를 따라 DevTools를 사용하여 강제 동기식 레이아웃을 진단하는 방법을 배워보세요.
 
@@ -30,8 +30,8 @@ DevTools를 사용하여
 우선, 데이터를 캡처하여 페이지가 실행될 때 정확히 무슨 일이 일어나는지
 확실히 파악해야 합니다. 
 
-1. [데모](https://googlesamples.github.io/web-fundamentals/tools/chrome-devtools/rendering-tools/forcedsync.html)를 엽니다. 
-1. DevTools의 **Timeline** 패널을 엽니다. 
+1. [데모](https://googlesamples.github.io/web-fundamentals/tools/chrome-devtools/rendering-tools/forcedsync.html)를 엽니다.
+1. DevTools의 **Timeline** 패널을 엽니다.
 1. **JS Profile** 옵션을 활성화합니다. 나중에 Flame Chart를 분석할 때, 이 옵션을 보고
 정확히 어떤 함수를 호출했는지 확인할 수 있습니다.
 1. 페이지에서 **Start**를 클릭하여 애니메이션을 시작합니다. 
@@ -70,9 +70,9 @@ DevTools를 사용하여
 
 ![확대된 타임라인 기록](imgs/zoom.png)
 
-스택 맨 위에 `Animation Frame Fired` 이벤트가 있습니다. 이 이벤트가 발생할 때마다 
-`requestAnimationFrame()`에 전달한 함수가 호출됩니다. 
-`Animation Frame Fired` 아래 `Function Call`이 있고, 그 아래 
+스택 맨 위에 `Animation Frame Fired` 이벤트가 있습니다. 이 이벤트가 발생할 때마다
+`requestAnimationFrame()`에 전달한 함수가 호출됩니다.
+`Animation Frame Fired` 아래 `Function Call`이 있고, 그 아래
 `update`가 표시됩니다. `update()`라는 메서드가 
 `requestAnimationFrame()`의 콜백이라는 사실을 추론할 수 있습니다. 
 
@@ -119,10 +119,10 @@ DevTools 경고를 볼 수 있습니다. 강제 리플로우는
 이 스크립트는 HTML에 포함되어 있으므로 **Sources** 패널을 통해 편집할 수 없습니다.
 (하지만 `*.js` 내의 스크립트는 Sources 패널에서 편집할 수 있습니다). 
 
-하지만 변경 사항을 테스트하려면 해당 함수를 콘솔에서 재정의하면 됩니다. 
-HTML 파일에서 함수 정의를 복사하여 DevTools 콘솔에 
+하지만 변경 사항을 테스트하려면 해당 함수를 콘솔에서 재정의하면 됩니다.
+HTML 파일에서 함수 정의를 복사하여 DevTools 콘솔에
 붙여넣습니다. `offsetTop`을 사용하는 문을 삭제하고 그 아래에 있는 문의 주석 처리를 
-제거합니다. 작업을 마치면 `Enter`를 누릅니다. 
+제거합니다. 작업을 마치면 `Enter` 키를 누릅니다. 
 
 ![문제 있는 함수 재정의](imgs/redefinition.png)
 

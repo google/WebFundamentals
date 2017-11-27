@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para la auditoría de Lighthouse "Latencia de entrada estimada".
 
@@ -12,7 +12,7 @@ description: Documentación de referencia para la auditoría de Lighthouse "Late
 La capacidad de respuesta a la entrada es un factor clave en la forma en que los usuarios perciben el rendimiento
 de tu app. Las apps tienen 100 ms para responder a la entrada del usuario. Si superan ese tiempo,
 el usuario percibe a la app como retardada. Para más información, consulta [Medir el rendimiento con el modelo
-RAIL](/web/fundamentals/performance/rail) .
+RAIL](/web/fundamentals/performance/rail).
 
 Consulta la sección [Qué prueba la auditoría](#what) de este documento para conocer la
 explicación de por qué esta auditoría prueba un puntaje objetivo de 50ms (en lugar de
@@ -22,8 +22,8 @@ explicación de por qué esta auditoría prueba un puntaje objetivo de 50ms (en 
 
 Para lograr que tu app responda a la entrada del usuario con mayor rapidez, necesitas optimizar la forma en que
 tu código se ejecuta en el navegador. Comprueba la serie de técnicas detalladas
-en los documentos [Rendimiento de la representación](/web/fundamentals/performance/rendering/)
-. Estas sugerencias abarcan desde cálculos de descarga hasta web workers para
+en los documentos [Rendimiento de la representación](/web/fundamentals/performance/rendering/).
+ Estas sugerencias abarcan desde cálculos de descarga hasta web workers para
 liberar la cadena principal, refactorizar tus selectores de CSS para realizar
 menos cálculos, usar las propiedades de CSS que minimizan la cantidad de
 operaciones intensivas en el navegador.
@@ -36,8 +36,8 @@ esté visualmente completa.
 
 Para medirla de forma manual, haz una grabación con
 Timeline de Chrome DevTools. Para obtener más ayuda, consulta [Cómo usar la herramienta
-Timeline](/web/tools/chrome-devtools/evaluate-performance/timeline-tool) 
-. La idea básica consiste en iniciar una grabación, realizar la entrada de usuario
+Timeline](/web/tools/chrome-devtools/evaluate-performance/timeline-tool).
+ La idea básica consiste en iniciar una grabación, realizar la entrada de usuario
 que deseas medir, detener la grabación y luego analizar el gráfico de llamas
 para asegurarte de que todas las etapas de [la canalización
 de píxeles](/web/fundamentals/performance/rendering/#the_pixel_pipeline) se

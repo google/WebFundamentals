@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Bangun situs multi-perangkat Anda dari nol. Pelajari cara mempercepat development dan membuat situs yang dimuat cepat bersama serangkaian alat proses pembangunan.
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-09-24 #}
 
-# Persiapkan Alat Pembangunan Anda {: .page-title }
+# Siapkan Alat Pembangunan Anda {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}
@@ -28,7 +28,7 @@ awal Anda memulainya.
 
 
 Sebelum memulai pengkodean, Anda perlu mempertimbangkan cara mengoptimalkan dan membangun
-versi produksi situs Anda. Dengan mempersiapkan alur kerja ini dari awal
+versi produksi situs Anda. Dengan menyiapkan alur kerja ini dari awal
 akan mencegah kejutan tidak menyenangkan di akhir proyek dan Anda bisa menambahkan alat
 ke dalam alur kerja yang mempercepat development, yang melakukan tugas-tugas monoton
 untuk Anda.
@@ -230,7 +230,7 @@ Web Starter Kit menggunakan browser-sync untuk dukungan Live Reload.
   </tbody>
 </table>
 
-Catatan: Jika Anda suka dengan gagasan Live Reloading, namun tidak ingin melakukan proses pembangunan, [Tulisan Addy Osmani pada HTML5Rocks](http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/) membahas beragam alternatif (sebagian gratis dan sebagian berbayar).
+Note: Jika Anda suka dengan gagasan Live Reloading, namun tidak ingin melakukan proses pembangunan, [Tulisan Addy Osmani pada HTML5Rocks](http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/) membahas beragam alternatif (sebagian gratis dan sebagian berbayar).
 
 
 {# wf_devsite_translation #}

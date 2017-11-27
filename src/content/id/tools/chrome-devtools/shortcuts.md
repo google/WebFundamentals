@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Referensi dari semua pintasan keyboard di Chrome DevTools.
 
@@ -420,7 +420,7 @@ Pintasan yang tersedia di bilah sisi Styles:
   </tbody>
 </table>
 
-### Timeline.
+### Timeline
 
 <table>
   <thead>

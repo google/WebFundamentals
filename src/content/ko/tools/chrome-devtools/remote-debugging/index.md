@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Windows, Mac 또는 Linux 컴퓨터에서 Android 기기의 라이브 콘텐츠를 원격으로 디버그합니다.
 
@@ -32,7 +32,7 @@ DevTools 인스턴스로 스크린캐스트합니다.
 
 * 개발용 컴퓨터에 Chrome 32 이상 설치
 * Windows를 사용 중인 경우 개발용 컴퓨터에 [USB 드라이버][drivers]
-  설치 (_장치 관리자_가 USB 드라이버를 제대로 보고하는지 확인하세요.)
+  설치 (_장치 관리자_ 가 USB 드라이버를 제대로 보고하는지 확인하세요.)
 * Android 기기를 개발용 컴퓨터에 연결할 USB  케이블
 * Android 4.0 이상
 * Android용 Chrome이 Android 기기에 설치되어 있어야 합니다.
@@ -42,7 +42,7 @@ DevTools 인스턴스로 스크린캐스트합니다.
 ## 1단계: Android 기기 찾기 {: #discover }
 
 1. Android 기기에서 **Settings** > **Developer Options** >
-   **Enable USB Debugging**을 선택합니다. Android 4.2 이상의 버전에서는**Developer Options**가
+   **Enable USB Debugging**을 선택합니다. Android 4.2 이상의 버전에서는 **Developer Options**가
 기본적으로 숨겨져 있습니다. 활성화 방법에 대한 자세한 내용은 [온디바이스 개발자 옵션][android]
 을 참조하세요.
 
@@ -57,7 +57,7 @@ Chrome에 로그인해야 합니다. 원격 디버깅은
 
 1. [DevTools를 엽니다](/web/tools/chrome-devtools/#open).
 
-1. DevTools에서 **Main Menu**![메인 메뉴][main]{:.devtools-inline}를
+1. DevTools에서 **Main Menu**![기본 메뉴][main]{:.devtools-inline}를
 클릭한 다음 **More tools** > **Remote devices**를 선택합니다. 
 
      ![원격 기기 창 열기][open]
@@ -67,7 +67,7 @@ Chrome에 로그인해야 합니다. 원격 디버깅은
 
 1. DevTools에서 다른 탭이 열려 있다면 **Settings** 탭을 엽니다.
 
-1. **Discover USB devices**가 활성화되어 있는지 확인합니다.
+1.**Discover USB devices** 가 활성화되어 있는지 확인합니다.
 
      ![USB 기기 활성화 확인][discover]
 
@@ -93,9 +93,9 @@ Android 기기의 모델명으로 교체됩니다. 녹색 원과
 Android 기기에서 **Settings** > **Developer Options** >
 **Revoke USB Debugging Authorizations**를 선택하여 다시 시작합니다.
 
-## 2단계: 개발용 컴퓨터에서 Android 기기의 콘텐츠를 디버깅합니다.{: #debug }
+## 2단계: 개발용 컴퓨터에서 Android 기기의 콘텐츠 디버깅 {: #debug }
 
-1. 아직 Android 기기에 Chrome이 열려 있지 않으면 지금 여세요.
+1. 아직 Android 기기에 Chrome이 열려 있지 않으면 지금 엽니다.
 
 1. DevTools로 돌아와서 기기 모델명과 같은
 탭을 클릭합니다. 이 페이지 위에 Android 기기 모델명이 보이고,
@@ -153,7 +153,7 @@ Android 기기 화면의 요소를 누릅니다. **Select Element**는
 
 * 클릭은 탭으로 변환되어 기기에 적절한 터치 이벤트를 발생시킵니다. 
 * 컴퓨터의 키 입력은 기기로 전송됩니다. 
-* 손가락 모으기 동작을 시뮬레이션하려면 <kbd>Shift</kbd>를 누른 상태로 끕니다. 
+* 손가락 모으기 동작을 시뮬레이션하려면 <kbd>Shift</kbd> 키를 누른 상태로 드래그합니다. 
 * 스크롤하려면 트랙패드 또는 마우스 휠을 사용하거나 마우스
   포인터로 이동합니다.
 
@@ -178,17 +178,17 @@ Chrome 검색 주소창, Android 상태
 <p>가이드를 성공적으로 완료했나요?</p>
 <button class="gc-analytics-event"
    data-category="DevTools / Remote Debugging"
-   data-label="Completed / Yes">지원</button>
+   data-label="Completed / Yes">예</button>
 <button class="gc-analytics-event"
    data-category="DevTools / Remote Debugging"
-   data-label="Completed / No">지원 안 함</button>
+   data-label="Completed / No">아니요</button>
 <p>이 가이드에 찾던 정보가 포함되어 있나요?</p>
 <button class="gc-analytics-event"
    data-category="DevTools / Remote Debugging"
-   data-label="Relevant / Yes">지원</button>
+   data-label="Relevant / Yes">예</button>
 <button class="gc-analytics-event"
    data-category="DevTools / Remote Debugging"
-   data-label="Relevant / No">지원 안 함</button>
+   data-label="Relevant / No">아니요</button>
 {% endframebox %}
 
 

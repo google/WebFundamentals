@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: このインタラクティブなチュートリアルでは、Chrome DevTools を使用して JavaScript をデバッグします。
 
@@ -32,7 +32,6 @@ description: このインタラクティブなチュートリアルでは、Chro
 ##  ステップ 1: バグを再現する{: #step-1 }
 
 デバッグを始めるには、必ず最初にバグを再現する必要があります。「バグを再現する」とは、バグを一貫して発生させる一連のアクションを特定することです。
-
 バグを何度も発生させる必要がある場合もあるため、不要なステップは排除してください。
 
 
@@ -66,11 +65,15 @@ DevTools を使用すると、コードの実行中にコードを一時停止�
 
 
 1. [**Sources**] タブをクリックします。
-	<!-- TODO add a screenshot.Don't create the screenshot until demo design is
-	     finished.Add it here rather than previous screenshot in case Sources
-	     is hidden -->
-1. [**Event Listener Breakpoints**] をクリックして、セクションを展開します。DevTools に、[**Animation**] や [**Clipboard**] などの         展開可能なイベント カテゴリのリストが表示されます。
- 	<!-- TODO or maybe add it here -->
+
+<!-- TODO add a screenshot.Don't create the screenshot until demo design is
+     finished.Add it here rather than previous screenshot in case Sources
+     is hidden -->
+
+1. [**Event Listener Breakpoints**] をクリックして、セクションを展開します。DevTools に、[**Animation**] や [**Clipboard**] などの展開可能なイベント カテゴリのリストが表示されます。
+
+<!-- TODO or maybe add it here -->
+
 1. [**Mouse**] イベント カテゴリの横にある [**Expand**] ![展開アイコン](/web/tools/chrome-devtools/images/expand.png){: .devtools-inline} をクリックします。
 
    DevTools に、[**click**] など、チェックボックスが横にあるマウスイベントのリストが表示されます。
@@ -85,14 +88,9 @@ DevTools を使用すると、コードの実行中にコードを一時停止�
          <b>図 1</b>: デモで開かれた DevTools。[Sources] パネルが表示されており、クリック イベント リスナのブレークポイントが有効になっています。
 
          DevTools ウィンドウが大きい場合、[<b>Event Listener Breakpoints</b>] ペインは左下ではなく、スクリーンショットのように右側に表示されます。</figcaption>
-
-
-
      </figure>
 
-1. デモに戻り、[**Add Number 1 and Number 2**] を再度押します。DevTools はデモを一時停止し、[**Sources**] パネルでコード行をハイライト表示します。
-
-   DevTools では次のコード行がハイライト表示されています。
+1. デモに戻り、[**Add Number 1 and Number 2**] を再度押します。DevTools はデモを一時停止し、[**Sources**] パネルでコード行をハイライト表示します。DevTools では次のコード行がハイライト表示されています。
 
        `function onClick() {`
 
@@ -110,7 +108,6 @@ DevTools を使用すると、コードの実行中にコードを一時停止�
 
 バグの一般的な原因の 1 つは、スクリプトの実行順序が間違っていることです。
 コードをステップ実行すると、コードを 1 行ずつ実行して、予想とは異なる順序で実行されているコード行を見つけることができます。
-
 さっそく試してみましょう。
 
 1. DevTools の [**Sources**] パネルで、[**Step into next function call**] ![Step into next function call][into]{:.devtools-inline} をクリックし、`onClick()` 関数を 1 行ずつステップ実行します。
@@ -121,13 +118,10 @@ DevTools を使用すると、コードの実行中にコードを一時停止�
        `if (inputsAreEmpty()) {` 
 
 1. [**Step over next function call**] ![Step over next function call][over]{:.devtools-inline} をクリックします。
-DevTools は、ステップ実行せずに、`inputsAreEmpty()` を実行します。
-DevTools が数行のコードをスキップしていることに注意してください。
-   これは、`inputsAreEmpty()` が false と評価されたため、`if` 文のコードブロックが実行されなかったからです。
+DevTools は、ステップ実行せずに、`inputsAreEmpty()` を実行します。DevTools が数行のコードをスキップしていることに注意してください。これは、`inputsAreEmpty()` が false と評価されたため、`if` 文のコードブロックが実行されなかったからです。
 
 
 以上がコードをステップ実行する際の基本的な考え方です。`get-started.js` 内のコードを調べると、`updateLabel()` 関数のどこかにバグがあることがわかります。
-
 コードの各行をステップ実行する代わりに、別のタイプのブレークポイントを使用すると、バグがある箇所の付近でコードを一時停止することができます。
 
 
@@ -138,7 +132,6 @@ DevTools が数行のコードをスキップしていることに注意して�
 ##  ステップ 4: 別のブレークポイントを設定する
 
 コード行のブレークポイントは、最も一般的なタイプのブレークポイントです。特定のコード行で一時停止したい場合は、コード行のブレークポイントを使用します。
-
 さっそく試してみましょう。
 
 1. `updateLabel()` の最後のコード行には、次のようなコードがあります。
@@ -151,9 +144,7 @@ DevTools が数行のコードをスキップしていることに注意して�
    これで、DevTools は、このコード行が実行される前に常に一時停止します。
 1. [**Resume script execution**] ![Resume script execution][resume]{:.devtools-inline} をクリックします。
 スクリプトは、ブレークポイントを設定したコード行に到達するまで実行されます。
-1. 既に実行された `updateLabel()` のコード行を確認します。
-
-   DevTools で、`addend1`、`addend2`、および `sum` の値が出力されています。
+1. 既に実行された `updateLabel()` のコード行を確認します。DevTools で、`addend1`、`addend2`、および `sum` の値が出力されています。
 
 `sum` の値に問題がありそうです。この値は、数字である必要がありますが、文字列として評価されているようです。
 これがバグの原因であると考えられます。
@@ -162,13 +153,11 @@ DevTools が数行のコードをスキップしていることに注意して�
 
 バグのもう 1 つの一般的な原因は、変数または関数が予想とは異なる値を生成することです。
 多くのデベロッパーは `console.log()` を使用して値の変化を追っていますが、`console.log()` による方法は手間がかかり、効率が悪くなる場合があります。理由は 2 つあります。
-
 まず、`console.log()` を何回も呼び出すようにコードを手動で編集しなければならない場合があります。
 さらに、どの変数がバグに関連しているかを特定できていない場合は、多くの変数をログに出力しなければなりません。
 
 
 DevTools では、`console.log()` の代替ツールの 1 つとして Watch Expression を使用できます。Watch Expression を使用して、変数値の経時的な変化を監視します。名前が示しているように、Watch Expression は変数以外にも使用できます。
-
 任意の有効な JavaScript 式を Watch Expression に保存することもできます。
 さっそく試してみましょう。
 
@@ -183,10 +172,7 @@ DevTools では、`console.log()` の代替ツールの 1 つとして Watch Exp
          alt="[Watch Expression] ペイン"
        <figcaption>
          <b>図 1</b>:  <code>typeof sum</code> Watch Expression を作成した後の [Watch Expression] ペイン（右下）。
-
          DevTools ウィンドウが大きい場合、[Watch Expression] ペインは、右側の [<b>Event Listener Breakpoints</b>] ペインの上に表示されます。</figcaption>
-
-
      </figure>
 
 予想どおり、`sum` は、数字ではなく、文字列として評価されています。
@@ -222,17 +208,11 @@ DevTools には `console.log()` に代わるもう 1 つの代替ツール、Con
 DevTools UI 内で JavaScript コードを直接編集できます。
 さっそく試してみましょう。
 
-1. DevTools の [**Sources**] パネルのコードエディタで、`var sum = addend1 + addend2` を `var sum = parseInt(addend1) + parseInt(addend2);` に置き替えます。
-この行は、現在一時停止している行の 1 つ上の行です。
-1. <kbd>Command</kbd>+<kbd>S</kbd> キー（Mac）または <kbd>Control</kbd>+<kbd>S</kbd> キー（Windows、Linux）を押して変更を保存します。
-   コードの背景が赤に変更され、DevTools 内でスクリプトが変更されたことが示されます。
-1. [**Deactivate breakpoints**] ![Deactivate breakpoints][deactivate]{:.devtools-inline} をクリックします。
-コードの背景が青に変わり、スクリプトがアクティブになっていることが示されます。
-このように設定されていると、DevTools では、設定済みのブレークポイントを無視します。
+1. DevTools の [**Sources**] パネルのコードエディタで、`var sum = addend1 + addend2` を `var sum = parseInt(addend1) + parseInt(addend2);` に置き替えます。この行は、現在一時停止している行の 1 つ上の行です。
+1. <kbd>Command</kbd>+<kbd>S</kbd> キー（Mac）または <kbd>Control</kbd>+<kbd>S</kbd> キー（Windows、Linux）を押して変更を保存します。コードの背景が赤に変更され、DevTools 内でスクリプトが変更されたことが示されます。
+1. [**Deactivate breakpoints**] ![Deactivate breakpoints][deactivate]{:.devtools-inline} をクリックします。コードの背景が青に変わり、スクリプトがアクティブになっていることが示されます。このように設定されていると、DevTools では、設定済みのブレークポイントを無視します。
 1. [**Resume script execution**] ![Resume script execution][resume]{:.devtools-inline} をクリックします。
-1. さまざまな値をデモに入力してみてください。
-
-デモで合計が正しく計算されるようになっているはずです。
+1. さまざまな値をデモに入力してみてください。デモで合計が正しく計算されるようになっているはずです。
 
 
 このワークフローでは、ブラウザで実行されているコードのみに修正が適用されることに注意してください。
@@ -250,7 +230,6 @@ DevTools UI 内で JavaScript コードを直接編集できます。
 
 
 * 指定した条件が満たされた場合にのみトリガーされる条件付きブレークポイント。
-
 * 捕捉された例外または捕捉されていない例外に対するブレークポイント。
 * リクエストした URL が指定した文字列に部分一致した場合にトリガーされる XHR ブレークポイント。
 
@@ -274,35 +253,35 @@ DevTools UI 内で JavaScript コードを直接編集できます。
 
 {% framebox width="auto" height="auto" %}
 
-<p>Did you complete the tutorial successfully?</p>
+<p>チュートリアルを完了できましたか？</p>
 
 <button class="gc-analytics-event"
         data-category="DevTools / JS / Get Started"
-        data-label="Completed / Yes">Yes</button>
+        data-label="Completed / Yes">はい</button>
 
 <button class="gc-analytics-event"
         data-category="DevTools / JS / Get Started"
-        data-label="Completed / No">No</button>
+        data-label="Completed / No">いいえ</button>
 
-<p>Did this tutorial contain the information you were looking for?</p>
-
-<button class="gc-analytics-event"
-        data-category="DevTools / JS / Get Started"
-        data-label="Relevant / Yes">Yes</button>
+</p>このチュートリアルには、探していた情報が含まれていましたか？<p>
 
 <button class="gc-analytics-event"
         data-category="DevTools / JS / Get Started"
-        data-label="Relevant / No">No</button>
-
-<p>Was the tutorial too long?</p>
+        data-label="Relevant / Yes">はい</button>
 
 <button class="gc-analytics-event"
         data-category="DevTools / JS / Get Started"
-        data-label="Too Long / Yes">Yes</button>
+        data-label="Relevant / No">いいえ</button>
+
+<p>このチュートリアルは長すぎますか？</p>
 
 <button class="gc-analytics-event"
         data-category="DevTools / JS / Get Started"
-        data-label="Too Long / No">No</button>
+        data-label="Too Long / Yes">はい</button>
+
+<button class="gc-analytics-event"
+        data-category="DevTools / JS / Get Started"
+        data-label="Too Long / No">いいえ</button>
 
 {% endframebox %}
 

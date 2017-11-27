@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Pelajari cara mempersiapkan praprosesor CSS & JS untuk membantu Anda menyusun kode secara lebih efisien.
+description: Pelajari cara menyiapkan praprosesor CSS & JS untuk membantu Anda menyusun kode secara lebih efisien.
 
 {# wf_updated_on: 2015-08-03 #}
 {# wf_published_on: 2015-08-03 #}
 
-# Mempersiapkan Praprosesor CSS dan JS {: .page-title }
+# Menyiapkan Praprosesor CSS dan JS {: .page-title }
 
 {% include "web/_shared/contributors/pbakaus.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
@@ -24,9 +24,9 @@ Praprosesor CSS seperti Sass, serta praprosesor dan transpiler JS bisa sangat me
 
 Praprosesor mengambil file sumber sementara dan mengonversinya ke dalam sesuatu yang dipahami browser. 
 
-Dengan CSS sebagai outputnya, praprosesor digunakan untuk menambahkan fitur yang awalnya tidak ada: Variabel CSS, Penyarangan, dan sebagainya. Contoh utama dalam kategori ini adalah [Sass](http://sass-lang.com/), [Less](http://lesscss.org/){: .external } dan [Stylus](https://learnboost.github.io/stylus/).
+Dengan CSS sebagai keluarannya, praprosesor digunakan untuk menambahkan fitur yang awalnya tidak ada: Variabel CSS, Penyarangan, dan sebagainya. Contoh utama dalam kategori ini adalah [Sass](http://sass-lang.com/), [Less](http://lesscss.org/){: .external } dan [Stylus](https://learnboost.github.io/stylus/).
 
-Dengan JavaScript sebagai output, alat tersebut mengonversi (mengompilasi) dari bahasa yang sama sekali berbeda atau mengonversi (mentranspilasi) superset atau standar bahasa baru menjadi standar yang masih berlaku saat ini. Contoh utama dalam kategori ini adalah [CoffeeScript](http://coffeescript.org/){: .external } dan ES6 (melalui [Babel](https://babeljs.io/)).
+Dengan JavaScript sebagai keluaran, alat tersebut mengonversi (mengompilasi) dari bahasa yang sama sekali berbeda atau mengonversi (mentranspilasi) superset atau standar bahasa baru menjadi standar yang masih berlaku saat ini. Contoh utama dalam kategori ini adalah [CoffeeScript](http://coffeescript.org/){: .external } dan ES6 (melalui [Babel](https://babeljs.io/)).
 
 ## Men-debug dan mengedit materi yang dipraproses
 
@@ -105,7 +105,7 @@ Dewasa ini, hampir apa saja yang dikompilasi menjadi bahasa JavaScript memiliki 
     <tr>
       <td data-th="Compiler"><a href="http://coffeescript.org/#source-maps">CoffeeScript</a></td>
       <td data-th="Command"><code>$ coffee -c square.coffee -m</code></td>
-      <td data-th="Instructions">Flag -m (--map) adalah satu saja yang diperlukan bagi compiler untuk membuat output source map, selain menangani penambahan pragma komentar sourceMapURL bagi Anda ke file yang dihasilkan.</td>
+      <td data-th="Instructions">Flag -m (--map) adalah satu saja yang diperlukan bagi compiler untuk membuat keluaran source map, selain menangani penambahan pragma komentar sourceMapURL bagi Anda ke file yang dihasilkan.</td>
     </tr>
     <tr>
       <td data-th="Compiler"><a href="http://www.typescriptlang.org/">TypeScript</a></td>
@@ -115,7 +115,7 @@ Dewasa ini, hampir apa saja yang dikompilasi menjadi bahasa JavaScript memiliki 
     <tr>
       <td data-th="Compiler"><a href="https://github.com/google/traceur-compiler/wiki/SourceMaps">Traceur</a></td>
       <td data-th="Command"><code>$ traceur --source-maps=[file|inline]</code></td>
-      <td data-th="Instructions">Dengan <code>--source-maps=file</code>, setiap file output yang berakhiran <code>.js</code> akan memiliki file sourcemap yang berakhiran <code>.map</code>; dengan  <code>source-maps='inline'</code>, setiap file output yang berakhiran <code>.js</code> akan diakhiri dengan komentar yang berisi sourcemap yang dienkodekan di dalam <code>data:</code> URL.</td>
+      <td data-th="Instructions">Dengan <code>--source-maps=file</code>, setiap file keluaran yang berakhiran <code>.js</code> akan memiliki file sourcemap yang berakhiran <code>.map</code>; dengan  <code>source-maps='inline'</code>, setiap file keluaran yang berakhiran <code>.js</code> akan diakhiri dengan komentar yang berisi sourcemap yang dienkodekan di dalam <code>data:</code> URL.</td>
     </tr>
     <tr>
       <td data-th="Compiler"><a href="https://babeljs.io/docs/usage/cli/#compile-with-source-maps">Babel</a></td>
@@ -125,7 +125,7 @@ Dewasa ini, hampir apa saja yang dikompilasi menjadi bahasa JavaScript memiliki 
     <tr>
       <td data-th="Compiler"><a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a></td>
       <td data-th="Command"><code>$ uglifyjs file.js -o file.min.js --source-map file.min.js.map</code></td>
-      <td data-th="Instructions">Ini adalah perintah paling dasar yang dibutuhkan untuk menghasilkan source map untuk 'file.js'. Ini juga akan menambahkan pragma komentar ke file output.</td>
+      <td data-th="Instructions">Ini adalah perintah paling dasar yang dibutuhkan untuk menghasilkan source map untuk 'file.js'. Ini juga akan menambahkan pragma komentar ke file keluaran.</td>
     </tr>
   </tbody>
 </table>
@@ -154,7 +154,7 @@ Dewasa ini, hampir apa saja yang dikompilasi menjadi bahasa JavaScript memiliki 
     <tr>
       <td data-th="Compiler"><a href="https://learnboost.github.io/stylus/">Stylus</a></td>
       <td data-th="Command"><code>$ stylus --sourcemaps styles.style styles.css</code></td>
-      <td data-th="Instructions">Ini akan menyematkan sourcemap sebagai string berenkode base64 langsung di file output.</td>
+      <td data-th="Instructions">Ini akan menyematkan sourcemap sebagai string berenkode base64 langsung di file keluaran.</td>
     </tr>
     <tr>
       <td data-th="Compiler"><a href="http://compass-style.org/">Compass</a></td>

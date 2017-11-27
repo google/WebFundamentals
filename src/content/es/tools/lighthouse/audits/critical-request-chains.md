@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para la auditoría de Lighthouse "Cadenas de solicitudes críticas".
 
@@ -15,8 +15,8 @@ posible al priorizar qué recursos se cargan y el orden en el que se
 cargan.
 
 Para obtener más información, consulta los documentos [Ruta crítica de
-representación](/web/fundamentals/performance/critical-rendering-path/) 
-.
+representación](/web/fundamentals/performance/critical-rendering-path/).
+
 
 ## Cómo aprobar la auditoría {: #how }
 

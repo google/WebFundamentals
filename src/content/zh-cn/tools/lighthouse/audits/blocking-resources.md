@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“网站不使用延迟首次绘制的链接标记”与“网站在标头中不使用延迟首次绘制的脚本标记”Lighthouse 审查的参考文档。
 
@@ -49,7 +49,7 @@ Lighthouse 可标识三种类型的阻塞资源。
 * 没有 `disabled` 属性。如果具有此属性，则浏览器不会下载样式表。
 * 没有与用户的设备匹配的 `media` 属性。
 
-`<link rel="import">` 标记，其具有以下特征：：
+`<link rel="import">` 标记，其具有以下特征：
 
 * 没有 `async` 属性。
 

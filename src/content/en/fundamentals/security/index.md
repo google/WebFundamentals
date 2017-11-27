@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Security is a big topic, learn about HTTPS, why it's important and how you can deploy it to your servers.
 
-{# wf_updated_on: 2016-09-09 #}
+{# wf_updated_on: 2017-05-22 #}
 {# wf_published_on: 2015-09-08 #}
+{# wf_blink_components: Blink>SecurityFeature,Internals>Network>SSL #}
 
 # Security and Identity {: .page-title }
 
@@ -13,7 +14,7 @@ description: Security is a big topic, learn about HTTPS, why it's important and 
   </iframe>
 </div>
 
-Security is a big topic, here are a few things to get you started. 
+Security is a big topic, here are a few things to get you started.
 
 <div class="clearfix"></div>
 
@@ -48,6 +49,10 @@ One of the most critical security features, one that is required for many modern
 <div style="clear:both"></div>
 
 ## Related Resources
+
+* [Learn Web Security with Google](https://www.youtube.com/watch?v=tgEIo7ZSkbQ)
+* [Getting the Green Lock: HTTPS Stories from the
+  Field](https://www.youtube.com/watch?v=GoXgl9r0Kjk)
 
 ### Chrome DevTools
 

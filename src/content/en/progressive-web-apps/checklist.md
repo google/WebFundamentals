@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/progressive-web-apps/_book.yaml
 description: A checklist which breaks down all the things we think it takes to be a baseline progressive web app, and how to take it a step further with an exemplary progressive web app. 
 
-{# wf_updated_on: 2017-01-10 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-11-07 #}
 
 # Progressive Web App Checklist {: .page-title }
@@ -11,10 +11,10 @@ Progressive Web Apps (PWA) are reliable, fast, and engaging, although there are
 many things that can take a PWA from a baseline to exemplary experience.
 
 To help teams create the best possible experiences we've put together this 
-checklist which breaks down all the things we think it takes to be a [Baseline](#baseline) 
-PWA, and how to take that a step further with an [Exemplary](#exemplary) PWA by providing a 
-more meaningful offline experience, reaching interactive even faster and taking 
-care of many more important details.
+checklist which breaks down all the things we think it takes to be a
+[Baseline](#baseline) PWA, and how to take that a step further with an
+[Exemplary](#exemplary) PWA by providing a more meaningful offline experience,
+reaching interactive even faster and taking care of many more important details.
 
 [lighthouse]: https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk
 
@@ -61,11 +61,11 @@ on the this list and may prove helpful in easily testing sites.
       <td>
         <ul>
           <li>
-            Use Lighthouse to verify Yes to all of <b>Design is mobile-friendly</b>,
-            although manually checking can also be helpful.
+            Use Lighthouse to verify Yes to all of <b>Design is mobile-friendly
+            </b>, although manually checking can also be helpful.
           </li>
           <li>
-            Check the <a href="//search.google.com/search-console/mobile-friendly">
+            Check the <a href="//search.google.com/test/mobile-friendly">
             Mobile Friendly Test</a>
           </li>
         </ul>
@@ -75,7 +75,7 @@ on the this list and may prove helpful in easily testing sites.
       <td><b>To Fix</b></td>
       <td>
         Look at implementing a 
-        <a href="/web/fundamentals/design-and-ui/responsive/fundamentals/">
+        <a href="/web/fundamentals/design-and-ux/responsive/">
         responsive design</a>, or adaptively serving a viewport-friendly site.
       </td>
     </tr>
@@ -85,18 +85,20 @@ on the this list and may prove helpful in easily testing sites.
 <table class="responsive pwa-cl">
   <tbody>
     <tr>
-      <th colspan=2><h3>The start URL (at least) loads while offline</h3></th>
+      <th colspan=2><h3>All app URLs load while offline</h3></th>
     </tr>
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Use Lighthouse to verify <b>URL responds with a 200 when offline</b>.
+        Load various pages in the PWA with an airplane mode enabled. Ensure
+        the app presents some content even when offline. Use Lighthouse to
+        verify the start <b>URL responds with a 200 when offline</b>.
       </td>
     </tr>
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Use a <a href="/web/fundamentals/primers/service-worker/">Service Worker</a>.
+        Use a <a href="/web/fundamentals/primers/service-workers/">Service Worker</a>.
       </td>
     </tr>
   </tbody>
@@ -117,7 +119,7 @@ on the this list and may prove helpful in easily testing sites.
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Add a <a href="/web/fundamentals/engage-and-retain/web-app-manifest/">
+        Add a <a href="/web/fundamentals/web-app-manifest">
         Web App Manifest</a> file to your project.
       </td>
     </tr>
@@ -226,7 +228,7 @@ on the this list and may prove helpful in easily testing sites.
       <td>        
         If using a single-page-app (client rendered), transition the user to 
         the next page immediately and show a
-        <a href="http://hannahatkin.com/blog/tag/skeleton-screens/">
+        <a href="http://hannahatkin.com/skeleton-screens/">
         skeleton screen</a> and use any content such as title or
         thumbnail already available while content loads.
       </td>
@@ -523,7 +525,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
   <tbody>
     <tr>
       <th colspan=2>
-        <h3>Content is easily sharable from standalone or full screen mode</h3>
+        <h3>Content is easily shareable from standalone or full screen mode</h3>
       </th>
     </tr>
     <tr>
@@ -564,7 +566,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Review our guide on <a href="/web/fundamentals/design-and-ui/responsive/">
+        Review our guide on <a href="/web/fundamentals/design-and-ux/responsive/">
         implementing responsive UIs</a>.
       </td>
     </tr>
@@ -617,7 +619,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
           <li>Intercept the <code>beforeinstallprompt</code> event and prompt later</li>
           <li>
             Chrome manages when to trigger the prompt but for situations this
-            might not be ideal. You can <a href="/web/fundamentals/engage-and-retain/app-install-banners/#deferring_or_cancelling_the_prompt">defer the prompt</a>
+            might not be ideal. You can <a href="/web/fundamentals/app-install-banners#defer_or_cancel">defer the prompt</a>
             to a later time in the app's usage. It may also help to dim the screen,
             as advised for requesting permissions below.
           </li>
@@ -783,8 +785,8 @@ notifications is not a requirement for an exemplary progressive web app.
       <td><b>To Test</b></td>
       <td>
         Visit the site and find the push notifications opt in flow. Ensure 
-        that if you dismiss or decline to turn on push notifications that the 
-        site does not re-prompt in the same way within the same session.
+        that if you dismiss push notification, the site does not re-prompt 
+        in the same way within the same session.
       </td>
     </tr>
     <tr>
@@ -855,7 +857,7 @@ notifications is not a requirement for an exemplary progressive web app.
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        See our guide on <a href="/web/fundamentals/engage-and-retain/push-notifications/good-notification">
+        See our guide on <a href="/web/fundamentals/push-notifications/">
         creating great push notifications</a> for advice. If your content is
         not timely and relevant to this user, consider using email instead.
       </td>

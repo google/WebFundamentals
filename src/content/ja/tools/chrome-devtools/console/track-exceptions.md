@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools には、例外をスローしているウェブページの修正や JavaScript のエラーのデバッグに役立つツールが用意されています。
 
@@ -53,7 +53,6 @@ Chrome DevTools には、例外をスローしているウェブページの修�
 ## スタックトレースの出力
 
 ウェブページの動作をより的確に把握するには、ログメッセージをコンソールに出力します。関連するスタックトレースを含め、ログエントリにさらに情報を組み込みます。
-
 これにはいくつかの方法があります。
 
 ### Error.stack

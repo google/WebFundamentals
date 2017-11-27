@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para la auditoría de Lighthouse "La propiedad short_name del manifiesto no se truncará cuando se la muestra en la pantalla de inicio".
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 할당 프로파일러 도구를 사용하면 적절하게 가비지 수집되지 않은 객체를 찾아내고 계속해서 메모리 공간을 유지할 수 있습니다.
 
@@ -13,9 +13,9 @@ description: 할당 프로파일러 도구를 사용하면 적절하게 가비�
 
 ## 이 도구의 작동 원리
 
-**할당 프로파일러**는 
-[힙 프로파일러](/web/tools/chrome-devtools/profile/memory-problems/heap-snapshots)
-의 상세 스냅샷 정보를 
+**할당 프로파일러**는
+[힙 프로파일러](/web/tools/chrome-devtools/profile/memory-problems/heap-snapshots)의
+상세 스냅샷 정보를
 [Timeline 패널](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool)의 증분식 업데이트 및 추적 기능과 조합한 것입니다.
 이들 도구와 마찬가지로, 객체의 힙 할당을 추적하는 과정에는 기록을 시작하고
 일련의 작업을 수행한 다음, 분석을 위해 기록을 멈추는 과정이 포함됩니다.
@@ -30,9 +30,9 @@ description: 할당 프로파일러 도구를 사용하면 적절하게 가비�
 
 할당 프로파일러 사용을 시작하는 방법은 다음과 같습니다.
 
-1. [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html)가 최신 버전이어야 합니다.
+1. 최신 버전 [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html)가 설치되어 있어야 합니다.
 2. 개발자 도구를 열어 아래 오른쪽에 위치한 기어 아이콘을 클릭합니다. 
-3. 이제 Profiler 패널을 열면 "Record Heap Allocations"라는 프로필을 볼 수 있습니다.
+3. 이제 Profiler 패널을 열면 'Record Heap Allocations'라는 프로필을 볼 수 있습니다.
 
 ![Record heap allocations 프로파일러](imgs/record-heap.png)
 
@@ -49,8 +49,8 @@ description: 할당 프로파일러 도구를 사용하면 적절하게 가비�
 
 ![할당 프로파일러 스냅샷](imgs/collected.png)
 
-위의 스냅샷에서는 한 가지 작업이 10회 수행되었습니다. 
-샘플 프로그램이 객체를 다섯 개 캐시하므로 마지막 다섯 개의 파란색 막대를 예상할 수 있습니다. 
+위의 스냅샷에서는 한 가지 작업이 10회 수행되었습니다.
+샘플 프로그램이 객체를 다섯 개 캐시하므로 마지막 다섯 개의 파란색 막대를 예상할 수 있습니다.
 하지만 맨 왼쪽의 파란색 막대는 문제가 발생할 가능성을 나타냅니다.
 
 그러면 위의 타임라인에 있는 슬라이더를 사용하여 특정 스냅샷을 확대한 다음, 

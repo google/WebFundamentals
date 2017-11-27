@@ -1,3 +1,7 @@
+.devsite-landing-page .devsite-product-description-row {
+  max-width: 100%;
+}
+
 ul.checkmarks {
   list-style-type:none;
   padding:0;

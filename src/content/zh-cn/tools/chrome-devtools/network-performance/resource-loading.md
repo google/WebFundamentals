@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用 Chrome DevTools 的 Network 面板测量您的网络应用的网络性能。
 
@@ -34,8 +34,7 @@ Network 面板由五个窗格组成：
 
 1. **Controls**。使用这些选项可以控制 **Network** 面板的外观和功能。
 2. **Filters**。
-使用这些选项可以控制在 **Requests Table** 中显示哪些资源。提示：按住 <kbd>Cmd</kbd> (Mac) 或 <kbd>Ctrl</kbd>
- (Windows/Linux) 并点击过滤器可以同时选择多个过滤器。
+使用这些选项可以控制在 **Requests Table** 中显示哪些资源。提示：按住 <kbd>Cmd</kbd> (Mac) 或 <kbd>Ctrl</kbd> (Windows/Linux) 并点击过滤器可以同时选择多个过滤器。
 3. **Overview**。
 此图表显示了资源检索时间的时间线。如果您看到多条竖线堆叠在一起，则说明这些资源被同时检索。
 4. **Requests Table**。
@@ -119,8 +118,7 @@ Network 面板由五个窗格组成：
 
 1. **Overview** 窗格中的红色竖线表示事件。
 2. **Requests Table** 中的红色竖线也表示事件。
-3. 在 **Summary** 窗格中，
-4. 您可以看到事件的确切时间。
+3. 在 **Summary** 窗格中，您可以看到事件的确切时间。
 
 ![Network 面板上的 load 事件](imgs/load.png)
 

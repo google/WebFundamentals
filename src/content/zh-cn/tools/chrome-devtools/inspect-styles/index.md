@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:检查和编辑页面的 HTML 与 CSS。
 
@@ -38,7 +38,7 @@ DOM 树视图会显示树的当前状态；可能会与最初因其他原因加�
 
 ## 实时编辑样式
 
-在 **Styles** 窗格中实时编辑样式属性名称和值。所有样式均可修改，除了灰色部分（与用户代理样式表一样）。
+在 **Styles** 窗格中实时编辑样式属性名称和值。所有样式均可修改，除了灰色部分（与 User Agent 样式表一样）。
 
 
 

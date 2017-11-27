@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: En este instructivo interactivo, comenzarás a depurar JavaScript con Chrome DevTools.
 
-{# wf_updated_on: 2017-01-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2017-01-04 #}
 
 <style>
@@ -107,10 +107,10 @@ los eventos `click`. Cuando se haga clic en *cualquier* nodo, y el nodo tenga un
 DevTools realizará una pausa automáticamente en la primera línea del controlador
 `click` de dicho nodo.
 
-Nota: Este es solo uno de los varios tipos de puntos de interrupción que DevTools ofrece.
+Note: Este es solo uno de los varios tipos de puntos de interrupción que DevTools ofrece.
 El que debas usar depende del tipo de problema que estés depurando.
 
-[Reanudar]: /web/tools/chrome-devtools/images/resume-script-execution.png
+[resume]: /web/tools/chrome-devtools/images/resume-script-execution.png
 
 ## Paso 3: recorre el código
 
@@ -127,7 +127,7 @@ se ejecuta en un orden distinto del esperado. Inténtalo ahora:
        `if (inputsAreEmpty()) {` 
 
 1. Haz clic en **Step over next function call** ![Step over next function
-   call][saltear]{:.devtools-inline}. DevTools ejecuta `inputsAreEmpty()`
+   call][over]{:.devtools-inline}. DevTools ejecuta `inputsAreEmpty()`
    sin recorrerla. Observa que DevTools saltea unas líneas de código.
    Es porque `inputsAreEmpty()` se evaluó como false; por lo tanto, el bloque de código de la sentencia `if`
   no se ejecutó.
@@ -156,7 +156,7 @@ de línea de código. Inténtalo ahora:
    **32**. Esto significa que la línea tiene un punto de interrupción de línea de código.
    De ahora en adelante, DevTools siempre realizará una pausa antes de ejecutar esta línea de código.
 1. Haz clic en **Resume script execution** ![Resume script
-   execution][reanudar]{:.devtools-inline}. La secuencia de comandos continuará su ejecución
+   execution][resume]{:.devtools-inline}. La secuencia de comandos continuará su ejecución
    hasta llegar a la línea de código con el punto de interrupción.
 1. Observa las líneas de código de `updateLabel()` que ya se ejecutaron.
    DevTools muestra los valores de `addend1`, `addend2` y `sum`.
@@ -219,7 +219,7 @@ potenciales del error que acabas de descubrir. Inténtalo ahora:
        </figcaption>
      </figure>
 
-[sumar]: /web/tools/chrome-devtools/javascript/imgs/add-expression.png
+[add]: /web/tools/chrome-devtools/javascript/imgs/add-expression.png
 
 ## Paso 6: soluciona el problema
 
@@ -237,11 +237,11 @@ en la IU de DevTools. Inténtalo ahora:
    El color de fondo del código cambia a rojo para indicar que la secuencia de comandos
    se modificó en DevTools.
 1. Haz clic en **Deactivate breakpoints** ![Deactivate
-   breakpoints][desactivar]{:.devtools-inline}. El ícono cambia de color a azul para indicar
+   breakpoints][deactivate]{:.devtools-inline}. El ícono cambia de color a azul para indicar
    que está activo. Cuando esta opción está activa, DevTools ignora todos los puntos de interrupción
    que hayas colocado.
 1. Haz clic en **Resume script execution** ![Resume script
-   execution][reanudar]{:.devtools-inline}.
+   execution][resume]{:.devtools-inline}.
 1. Prueba la demostración con diferentes valores. La demostración debería calcular
    las sumas correctamente.
 
@@ -250,11 +250,11 @@ se ejecuta en tu navegador. No corregirá el código para todos los usuarios que
 página. Para hacerlo, debes corregir el código en los servidores
 que proveen tu página.
 
-[desactivar]: /web/tools/chrome-devtools/images/deactivate-breakpoints-button.png
+[deactivate]: /web/tools/chrome-devtools/images/deactivate-breakpoints-button.png
 
 ## Próximos pasos
 
-Felicitaciones. Ahora conoces las nociones básicas de la depuración de JavaScript en DevTools.
+¡Felicitaciones! Ahora conoces las nociones básicas de la depuración de JavaScript en DevTools.
 
 En este instructivo, solo se mostraron dos formas de colocar puntos de interrupción. DevTools ofrece muchas
 otras formas, como las siguientes:

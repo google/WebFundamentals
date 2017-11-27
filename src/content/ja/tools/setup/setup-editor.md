@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: コードエディタが主要開発ツールです。コードエディタを使って、コード行を記述し、保存します。優れたコードを短時間で記述できるよう、エディタのショートカットを習得し、主要プラグインをインストールします。
 

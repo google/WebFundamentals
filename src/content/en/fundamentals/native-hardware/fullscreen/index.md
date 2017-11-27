@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Going fullscreen.
 
-{# wf_updated_on: 2016-10-01 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-10-01 #}
 
 # Making Fullscreen Experiences {: .page-title }
@@ -44,7 +44,7 @@ JS API's that you need to care about when building a fullscreen experience are:
   returns true if any of the elements are in fullscreen mode.
 
 Note: You will notice that in the prefixed versions there is a lot of
-      inconsitency between the casing of the 'S' in screen. This is awkward, but
+      inconsistency between the casing of the 'S' in screen. This is awkward, but
       this is the problem with specs that are in flight.
 
 When your app is fullscreen you no longer have the browser's UI controls
@@ -231,7 +231,7 @@ A better option is to use the Web App Manifest.
 
 #### Web App Manifest (Chrome, Opera, Firefox, Samsung)
 
-The [Manifest for Web applications](/web/fundamentals/engage-and-retain/web-app-manifest/)
+The [Manifest for Web applications](/web/fundamentals/web-app-manifest)
 is a simple JSON file that gives you, the
 developer, the ability to control how your app appears to the user in the areas
 that they would expect to see apps (for example the mobile home screen), direct
@@ -336,7 +336,7 @@ Caution: I am telling you this as a friend. It exists. It is a thing, but it
          is a hack. Please don't use it. &mdash; Paul
 
 This is a pretty simple method, the page loads and the browser bar is told to
-get out of the way. Unfortunately it is not standardised and not well
+get out of the way. Unfortunately it is not standardized and not well
 supported. You also have to work around a bunch of quirks.
 
 For example browsers often restore the position on the page when the user
@@ -394,7 +394,7 @@ pure fullscreen it will be:
 
     }
 
-If the user launches the applicaiton in standalone mode, the `display-mode`
+If the user launches the application in standalone mode, the `display-mode`
 media query will be `standalone`:
 
     @media (display-mode: standalone) {
@@ -499,6 +499,6 @@ be considerate to the user.
 
 ## Conclusion
 
-While we don't have a fully standardised and implemented API, using some of the
+While we don't have a fully standardized and implemented API, using some of the
 guidance presented in this article you can easily build experiences that take
 advantage of the user's entire screen, irrespective of the client.

@@ -34,7 +34,7 @@ description: クリティカル レンダリング パスを最適化するう�
 
 <a href="page-speed-rules-and-recommendations" class="gc-analytics-event"
     data-category="CRP" data-label="Next / PageSpeed">
-  <button>次のトピック:PageSpeed ルールおよび推奨事項</button>
+  <button>次のトピック: PageSpeed ルールおよび推奨事項</button>
 </a>
 
 

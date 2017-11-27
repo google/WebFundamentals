@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
 
-{# wf_updated_on: 2014-05-09 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2014-05-06 #}
 
 # Image Optimization {: .page-title }
@@ -111,7 +111,7 @@ On the other hand, raster images pose a much larger challenge because they encod
 
 When we double the resolution the physical screen the total number of pixels increases by a factor of four: double the number of horizontal pixels, times double the number of vertical pixels. Hence, a "2x" screen not just doubles, but quadruples the number of required pixels!
 
-So, what does this mean in practice? High resolution screens enable us to deliver beautiful images, which can be a great product feature. However, high resolution screens also require high-resolution images: prefer vector images whenever possible as they are resolution independent and always deliver sharp results, and if a raster image is required, deliver and optimize multiple variants of each imagewith the help of [`srcset` and `picture`](/web/fundamentals/design-and-ui/media/images#images-in-markup).
+So, what does this mean in practice? High resolution screens enable us to deliver beautiful images, which can be a great product feature. However, high resolution screens also require high-resolution images: prefer vector images whenever possible as they are resolution independent and always deliver sharp results, and if a raster image is required, deliver and optimize multiple variants of each imagewith the help of [`srcset` and `picture`](/web/fundamentals/design-and-ux/responsive/images#images-in-markup).
 
 ## Optimizing vector images
 
@@ -237,7 +237,7 @@ So, what is the "optimal" configuration of lossy and lossless optimization? The 
 
 <img src="images/save-for-web.png" class="attempt-right" alt="Save for web">
 
-As a hands-on example, when using a lossy format such as JPEG, the compressor will typically expose a customizable "quality" setting (for example, the quality slider provided by the "Save for Web" functionality in Adobe Photoshop), which is typically a number between 1 and 100 that controls the inner workings of the specific collection of lossy and lossless algorithms. For best results, experiment with various quality settings for your images, and don't be afraid to dial down the quality - the visual results are often very good and the filesize savings can be quite large.
+As a hands-on example, when using a lossy format such as JPEG, the compressor will typically expose a customisable "quality" setting (for example, the quality slider provided by the "Save for Web" functionality in Adobe Photoshop), which is typically a number between 1 and 100 that controls the inner workings of the specific collection of lossy and lossless algorithms. For best results, experiment with various quality settings for your images, and don't be afraid to dial down the quality - the visual results are often very good and the filesize savings can be quite large.
 
 Note: Note that quality levels for different image formats are not directly comparable due to differences in algorithms used to encode the image: quality 90 JPEG will produce a very different result than a quality 90 WebP. In fact, even quality levels for the same image format may produce visibly different output based on implementation of the compressor!
 

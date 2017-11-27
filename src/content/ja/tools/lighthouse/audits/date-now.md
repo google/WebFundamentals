@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse の監査項目「サイトの独自スクリプトで Date.now() を使用しない」のリファレンス ドキュメント。
 
@@ -27,7 +27,6 @@ Lighthouse のレポートでは、検出された `Date.now()` のインスタ�
 
 Lighthouse では、指定したページと同じホスト上にあるスクリプトで検出された `Date.now()` のインスタンスがすべて報告されます。
 その他のホスト上のスクリプトは制御不可能とみなされるため、報告対象から除外されます。
-
 したがって、ページで `Date.now()` を使用するスクリプトが他にあったとしても、Lighthouse のレポートには含まれない場合があります。
 
 

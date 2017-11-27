@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“网站在 HTTPS 上”Lighthouse 审查的参考文档。
 
@@ -16,8 +16,8 @@ HTTPS 可防止入侵者篡改或被动地侦听您的网站和您的用户之�
 HTTPS 也是许多强大的新网络平台功能（如拍照或录制音频）的前提条件。
 
 
-根据定义，一个应用如果不在 HTTPS 上运行，那么它就不符合成为渐进式网络应用的条件。
-这是因为许多核心的渐进式网络应用技术（如服务工作线程）都需要使用 HTTPS。
+根据定义，一个应用如果不在 HTTPS 上运行，那么它就不符合成为 Progressive Web App 的条件。
+这是因为许多核心的 Progressive Web App 技术（如服务工作线程）都需要使用 HTTPS。
 
 
 有关为什么所有网站都应使用 HTTPS 进行保护的详细信息，请参阅[为什么应始终使用 HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https)。

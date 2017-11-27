@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Log konsol adalah cara andal untuk memeriksa apa yang dilakukan laman atau aplikasi Anda. Mari kita mulai dengan console.log() dan mendalami penggunaan tingkat lanjut lainnya.
 
@@ -41,15 +41,15 @@ sudah Anda ketikkan. Ini berisi perintah sebelumnya yang telah Anda eksekusi.
 
 ![contoh pelengkapan otomatis](images/autocomplete.png)
 
-## Mengorganisir output Console {:#organizing}
+## Mengorganisir keluaran Console {:#organizing}
 
 ### Mengelompokkan pesan
 
-Anda bisa mengelompokkan output terkait dengan perintah grup. Perintah [`console.group()`](./console-reference#consolegroupobject-object-) menggunakan satu parameter string untuk menyetel nama grup. Setelah memanggilnya di JavaScript Anda, konsol akan mulai mengelompokkan semua output selanjutnya.
+Anda bisa mengelompokkan keluaran terkait dengan perintah grup. Perintah [`console.group()`](./console-reference#consolegroupobject-object-) menggunakan satu parameter string untuk menyetel nama grup. Setelah memanggilnya di JavaScript Anda, konsol akan mulai mengelompokkan semua keluaran selanjutnya.
 
 Untuk mengakhiri pengelompokan, Anda hanya perlu memanggil [`console.groupEnd()`](./console-reference#consolegroupend) bila telah selesai.
 
-Contoh input:
+Contoh masukan:
 
 
     var user = "jsmith", authenticated = false;
@@ -62,8 +62,8 @@ Contoh input:
     console.groupEnd();
     
 
-Contoh output:
-![Output grup konsol sederhana](images/console-write-group.png)
+Contoh keluaran:
+![Keluaran grup konsol sederhana](images/console-write-group.png)
 
 #### Grup tersarang
 
@@ -90,8 +90,8 @@ Contoh ini menampilkan grup log untuk tahap autentikasi proses masuk:
     console.log("A group-less log trace.");
     
 
-Dan inilah beberapa output grup tersarang di konsol:
-![Output grup konsol sederhana](images/console-write-nestedgroup.png)
+Dan inilah beberapa keluaran grup tersarang di konsol:
+![Keluaran grup konsol sederhana](images/console-write-nestedgroup.png)
 
 #### Menciutkan grup otomatis
 
@@ -105,7 +105,7 @@ Saat banyak menggunakan grup, bisa jadi akan sangat berguna bila melihatnya buka
     console.groupEnd();
     
 
-groupCollapsed() output:
+groupCollapsed() keluaran:
 ![Grup yang diciutkan pertama](images/console-write-groupcollapsed.png)
 
 ## Kesalahan dan peringatan
@@ -125,7 +125,7 @@ Metode [`console.error()`](./console-reference#consoleerrorobject--object-) mena
 
 berubah menjadi
 
-![Output contoh kesalahan](images/console-write-error-server-not-resp.png)
+![Keluaran contoh kesalahan](images/console-write-error-server-not-resp.png)
 
 ### console.warn()
 
@@ -160,7 +160,7 @@ Bagaimana suatu pernyataan gagal ditampilkan di konsol:
 
 Parameter pertama yang diteruskan ke suatu metode log mungkin berisi satu atau beberapa specifier format. Specifier format terdiri dari sebuah simbol `%` diikuti dengan huruf yang menunjukkan format yang diterapkan pada nilainya. Parameter setelah string berlaku pada placeholder sesuai urutan.
 
-Contoh berikut menggunakan formatter string dan digit untuk memasukkan nilai ke dalam string output. Anda akan melihat "Sam has 100 points" di konsol.
+Contoh berikut menggunakan formatter string dan digit untuk memasukkan nilai ke dalam string keluaran. Anda akan melihat "Sam has 100 points" di konsol.
 
     console.log("%s has %d points", "Sam", 100);
 
@@ -173,7 +173,7 @@ Daftar lengkap specifier format adalah:
 | %f        | Memformat nilai sebagai nilai floating point                                       |
 | %o        | Memformat nilai sebagai elemen DOM yang bisa diperluas. Seperti terlihat di panel Elements     |
 | %O        | Memformat nilai sebagai objek JavaScript yang bisa diperluas                              |
-| %c        | Menerapkan aturan CSS string output sebagaimana ditetapkan oleh parameter kedua |
+| %c        | Menerapkan aturan CSS string keluaran sebagaimana ditetapkan oleh parameter kedua |
 
 Contoh ini menggunakan specifier digit untuk memformat nilai `document.childNodes.length`. Ia juga menggunakan specifier floating point untuk memformat nilai `Date.now()`.
 
@@ -183,10 +183,10 @@ Kode:
     console.log("Node count: %d, and the time is %f.", document.childNodes.length, Date.now());
     
 
-Output dari contoh kode sebelumnya:
-![Contoh output substitusi](images/console-write-log-multiple.png)
+Keluaran dari contoh kode sebelumnya:
+![Contoh keluaran substitusi](images/console-write-log-multiple.png)
 
-### Menata gaya output konsol dengan CSS
+### Menata gaya keluaran konsol dengan CSS
 
 Specifier format CSS memungkinkan Anda menyesuaikan tampilan di konsol.
 Mulailah string dengan specifier dan berikan gaya yang ingin Anda terapkan sebagai parameter kedua.
@@ -197,7 +197,7 @@ Cobalah kode ini:
     console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
     
 
-..untuk membuat output log Anda menjadi besar dan berwarna biru:
+..untuk membuat keluaran log Anda menjadi besar dan berwarna biru:
 
 ![String yang diformat](images/console-write-format-string.png)
 

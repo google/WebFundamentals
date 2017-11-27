@@ -30,7 +30,7 @@ landing_page:
     items:
     - heading: 원활한 연결을 위한 디자인
       description: >
-        대역폭이 낮거나 연결이 간헐적으로만 제공되는 환경은 웹에 액세스하는 다수의 사람들이 일반적으로 접하는 상황입니다. 온라인상의 대부분의 사람들이 여전히 2G 연결을 사용하거나 2G로 다운그레이드되는 "3G" 연결을 사용합니다. 2020년에도 사용자의 10% 이상이 여전히 2G에 머무를 것으로 전망됩니다. 많은 스마트폰이 오프라인으로 사용되고 있고, 사용자들은 데이터 소모를 피하기 위해 주기적으로 비행기 모드를 켭니다.
+        대역폭이 낮거나 연결이 간헐적으로만 제공되는 환경은 웹에 액세스하는 다수의 사람들이 일반적으로 접하는 상황입니다. 온라인상의 대부분의 사람들이 여전히 2G 연결을 사용하거나 2G로 다운그레이드되는 '3G' 연결을 사용합니다. 2020년에도 사용자의 10% 이상이 여전히 2G에 머무를 것으로 전망됩니다. 많은 스마트폰이 오프라인으로 사용되고 있고, 사용자들은 데이터 소모를 피하기 위해 주기적으로 비행기 모드를 켭니다.
       image_path: images/connectivity.png
       buttons:
       - label: 에뮬레이트된 낮은 대역폭 및 높은 지연 시간으로 테스트
@@ -50,12 +50,12 @@ landing_page:
         classname: wf-small-link
     - heading: 데이터 사용량 절약
       description: >
-        종종 비싼 데이터 비용이 연결 불량보다 액세스에 더 큰 장애물입니다. 모바일 사용자들은 비용에 민감합니다. "데이터 무제한" 요금제조차 로밍을 이용하거나 예상치 않은 요금이 적용되면 비싸질 수 있습니다. 대다수의 모바일 사용자는 비용에 극도로 민감하고 그럴 만한 이유도 있습니다.
+        종종 비싼 데이터 비용이 연결 불량보다 액세스에 더 큰 장애물입니다. 모바일 사용자들은 비용에 민감합니다. '데이터 무제한' 요금제조차 로밍을 이용하거나 예상치 않은 요금이 적용되면 비싸질 수 있습니다. 대다수의 모바일 사용자는 비용에 극도로 민감하고 그럴 만한 이유도 있습니다.
         예컨대 인도에서는 500MB 데이터 요금제를 사용하는 경우 최저임금 기준으로 17시간 노동에 해당하는 비용이 부과됩니다.
       image_path: images/cost.png
       buttons:
       - label: 페이지 로드와 앱 구성 요소의 비용 이해
-        path: /web/fundamentals/design-and-ui/responsive/content#weight
+        path: /web/fundamentals/design-and-ux/responsive/content#weight
         classname: wf-small-link
       - label: 상호작용에 필요한 데이터 양 줄이기
         path: /web/fundamentals/performance/optimizing-content-efficiency/
@@ -79,7 +79,7 @@ landing_page:
         path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
         classname: wf-small-link
       - label: 비싼 UI 애니메이션 피하기
-        path: /web/fundamentals/design-and-ui/animations/#avoid-animating-expensive-properties/
+        path: /web/fundamentals/design-and-ux/animations/#avoid-animating-expensive-properties/
         classname: wf-small-link
       - label: "무선 사용 피하기: 불필요한 다운로드 배제"
         path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
@@ -88,7 +88,7 @@ landing_page:
         path: /web/fundamentals/getting-started/principles/
         classname: wf-small-link
       - label: 비싼 애니메이션 피하기
-        path: /web/fundamentals/design-and-ui/animations/animations-and-performance/
+        path: /web/fundamentals/design-and-ux/animations/animations-and-performance/
         classname: wf-small-link
 
     - heading: 기기 기능에 맞게 최적화
@@ -115,13 +115,13 @@ landing_page:
       image_path: images/content.png
       buttons:
       - label: 다양한 뷰포트 크기에 잘 어울리도록 콘텐츠 디자인
-        path: /web/fundamentals/design-and-ui/responsive/content#viewport
+        path: /web/fundamentals/design-and-ux/responsive/content#viewport
         classname: wf-small-link
       - label: 중복 콘텐츠 배제
-        path: /web/fundamentals/design-and-ui/content/redundant/
+        path: /web/fundamentals/design-and-ux/content/redundant/
         classname: wf-small-link
       - label: 모바일용으로 작성
-        path: /web/fundamentals/design-and-ui/content/write/
+        path: /web/fundamentals/design-and-ux/content/write/
         classname: wf-small-link
       - label: AMP HTML 고려
         path: https://www.ampproject.org/
@@ -135,7 +135,7 @@ landing_page:
         path: /web/fundamentals/getting-started/principles/commerce-and-conversion/
         classname: wf-small-link
       - label: 양식 간소화
-        path: /web/fundamentals/design-and-ui/input/forms/
+        path: /web/fundamentals/design-and-ux/input/forms/
         classname: wf-small-link
       - label: 작은 화면에 대해 방향 친화적인 레이아웃 디자인
         path: /web/fundamentals/getting-started/principles/#usability-and-form-factor

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Ligjthouse の監査項目「マニフェストでアプリ名を定義する」のリファレンス ドキュメント。
 
@@ -25,7 +25,7 @@ description: Ligjthouse の監査項目「マニフェストでアプリ名を�
       ...
     }
 
-Chrome における [最大文字数](https://developer.chrome.com/apps/manifest/name)は 45 文字です。
+Chrome における[最大文字数](https://developer.chrome.com/apps/manifest/name)は 45 文字です。
 
 
 アプリに "Add to Homescreen"

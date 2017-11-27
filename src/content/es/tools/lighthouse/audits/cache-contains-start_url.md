@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para la auditoría de Lighthouse "Caché contiene start_url del manifiesto".
 
@@ -21,9 +21,9 @@ dispositivo móvil mientras está sin conexión.
 Para conocer los conceptos básicos sobre agregar apps a las pantallas de inicio,
 consulta [Agrega tu app web a la pantalla de inicio de un
 usuario](https://codelabs.developers.google.com/codelabs/add-to-home-screen).
-Se trata de un codelab práctico paso a paso en el cual agregas la funcionalidad "agregar a
-pantalla de inicio" en una app existente. Aplica lo que aprendiste en
-este codelab para integrar la funcionalidad "agregar a pantalla de inicio" en tu propia app.
+Se trata de un codelab práctico paso a paso en el cual agregas la funcionalidad "add to
+homescreen" en una app existente. Aplica lo que aprendiste en
+este codelab para integrar la funcionalidad "add to homescreen" en tu propia app.
 
 Para obtener más ayuda sobre cómo almacenar en caché a archivos con service workers para uso sin conexión,
 consulta la sección "Cómo aprobar la auditoría" del siguiente documento de Lighthouse:

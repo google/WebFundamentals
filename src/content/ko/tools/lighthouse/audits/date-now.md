@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "스크립트에서 Date.now() In을 사용하지 않는 사이트" Lighthouse 감사의 참조 문서입니다.
+description: '스크립트에서 Date.now()를 사용하지 않는 사이트' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-12-01 #}
 {# wf_published_on: 2016-12-01 #}
 
-# 스크립트에서 Date.now() In을 사용하지 않는 사이트  {: .page-title }
+# 스크립트에서 Date.now()를 사용하지 않는 사이트  {: .page-title }
 
 ## 감사가 중요한 이유 {: #why }
 
@@ -19,7 +19,7 @@ description: "스크립트에서 Date.now() In을 사용하지 않는 사이트"
 Lighthouse는 **URLs**에서 찾은 `Date.now()`의 모든 인스턴스를
 보고서에 나열합니다. 각각의 호출을 `performance.now()`로 교체합니다.
 
-API에 대한 자세한 내용은 [`performance.now()`][MDN]을 참조하세요.
+API에 대한 자세한 내용은 [`performance.now()`][MDN]를 참조하세요.
 
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API/Performance/now
 
@@ -28,7 +28,7 @@ API에 대한 자세한 내용은 [`performance.now()`][MDN]을 참조하세요.
 Lighthouse는 페이지와 같은 호스트에 있는 스크립트에서 찾은 모든 `Date.now()` 인스턴스를
 보고합니다. Lighthouse는 여러분이 다른 호스트의 스크립트를
 통제할 수 없다고 가정하기 때문에
-이는 제외합니다. 페이지에 `Date.now()`을 사용하는 다른 스크립트가 있더라도
+이는 제외합니다. 페이지에 `Date.now()`를 사용하는 다른 스크립트가 있더라도
 Lighthouse 보고서에는 나타나지 않습니다.
 
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Windows、Mac、または Linux コンピュータから Android 端末上のライブ コンテンツのリモート デバッグを行います。
 
@@ -20,9 +20,7 @@ Windows、Mac、または Linux コンピュータから Android 端末上のラ
 このチュートリアルでは、次の操作を行う方法について説明します。
 
 * Android 端末をリモート デバッグ用に設定し、開発マシンから検出します。
-
 * 開発マシンで Android 端末上のライブ コンテンツを調査し、デバッグします。
-
 * Android 端末のコンテンツを開発マシン上の DevTools インスタンスにスクリーンキャストします。
 
 
@@ -77,8 +75,6 @@ Android 4.2 以降のバージョンでは、[**Developer Options**] はデフ�
 中間 USB ハブは使用しないでください。この開発マシンに Android 端末を初めて接続する場合、端末は **Unknown** として表示され、その下に **Pending Authorization** というテキストが表示されます。
 
 
-
-
        ![承認待ち状態の不明な端末][unknown]
 
 [unknown]: /web/tools/chrome-devtools/remote-debugging/imgs/unknown-device.png
@@ -99,9 +95,7 @@ Android 4.2 以降のバージョンでは、[**Developer Options**] はデフ�
 
 1. DevTools に戻り、端末のモデル名に一致するタブをクリックします。
 ページの上部に Android 端末のモデル名が表示され、その横にシリアル番号が表示されます。
-その下には、端末で実行している Chrome のバージョンが表示され、かっこ内にバージョン番号が示されます。
-
-開いている各 Chrome タブについて独自のセクションが表示されます。このセクションからそのタブを操作することができます。
+その下には、端末で実行している Chrome のバージョンが表示され、かっこ内にバージョン番号が示されます。開いている各 Chrome タブについて独自のセクションが表示されます。このセクションからそのタブを操作することができます。
 WebView を使用しているアプリがある場合は、それらの各アプリのセクションが表示されます。
 次のスクリーンショットではタブまたは WebView が開いていません。
 
@@ -113,10 +107,7 @@ WebView を使用しているアプリがある場合は、それらの各アプ
 1. [**New tab**] の横に URL を入力して、[**Open**] をクリックします。Android 端末の新しいタブでページが開きます。
 
 
-1. 開いた URL の横にある [**Inspect**] をクリックします。新しい DevTools インスタンスが開きます。
-Android 端末で実行している Chrome のバージョンによって、開発マシン上で起動する DevTools のバージョンが決まります。
-
-   そのため、Android 端末で非常に古いバージョンの Chrome を使用している場合は、DevTools インスタンスが、使い慣れたものとは異なって見えることがあります。
+1. 開いた URL の横にある [**Inspect**] をクリックします。新しい DevTools インスタンスが開きます。Android 端末で実行している Chrome のバージョンによって、開発マシン上で起動する DevTools のバージョンが決まります。そのため、Android 端末で非常に古いバージョンの Chrome を使用している場合は、DevTools インスタンスが、使い慣れたものとは異なって見えることがあります。
 
 
 ###  その他のアクション: タブを再読み込みする、フォーカスを移動する、閉じる{: #more-actions }
@@ -135,7 +126,6 @@ DevTools インスタンスの [**Elements**] パネルを表示し、要素に�
 
 Android 端末の画面上で要素をタップすることにより、[**Elements**] パネルの要素を選択することもできます。
 DevTools インスタンスで [**Select Element**] ![Select Element][select]{:.devtools-inline} をクリックしてから、Android 端末の画面上で要素をタップします。
-
 1 回タップすると [**Select Element**] が無効になるため、この機能を使用するたびに再度有効にする必要があることに注意してください。
 
 
@@ -160,11 +150,7 @@ DevTools インスタンスで [**Select Element**] ![Select Element][select]{:.
 スクリーンキャストに関する注意事項:
 
 * スクリーンキャストではページのコンテンツのみが表示されます。スクリーンキャストの透明な部分は、Chrome のアドレスバー、Android のステータスバー、Android のキーボードなど、端末のインターフェースを表します。
-
-
 * スクリーンキャストはフレームレートに悪影響を及ぼします。スクロールやアニメーションを調整するときには、スクリーンキャストを無効にすると、ページのパフォーマンスをより正確に把握できます。
-
-
 * Android 端末の画面をロックすると、スクリーンキャストのコンテンツが非表示になります。
 Android 端末の画面をロック解除すると、スクリーンキャストが自動的に再開します。
 
@@ -174,21 +160,21 @@ Android 端末の画面をロック解除すると、スクリーンキャスト
 このチュートリアルを改善するために、以下の質問にご回答ください。
 
 
-{% framebox width="auto" height="auto" %}
-<p>Did you complete the tutorial successfully?</p>
+{% framebox width="auto" height="auto" %}<p>チュートリアルを完了できましたか？</p>
+
 <button class="gc-analytics-event"
    data-category="DevTools / Remote Debugging"
-   data-label="Completed / Yes">Yes</button>
+   data-label="Completed / Yes">はい</button>
 <button class="gc-analytics-event"
    data-category="DevTools / Remote Debugging"
-   data-label="Completed / No">No</button>
-<p>Did the tutorial contain the information you were looking for?</p>
+   data-label="Completed / No">いいえ</button>
+<p>チュートリアルには、探していた情報が含まれていましたか？</p>
 <button class="gc-analytics-event"
    data-category="DevTools / Remote Debugging"
-   data-label="Relevant / Yes">Yes</button>
+   data-label="Relevant / Yes">はい</button>
 <button class="gc-analytics-event"
    data-category="DevTools / Remote Debugging"
-   data-label="Relevant / No">No</button>
+   data-label="Relevant / No">いいえ</button>
 {% endframebox %}
 
 

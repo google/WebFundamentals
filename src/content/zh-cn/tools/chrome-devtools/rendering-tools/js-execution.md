@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用 Chrome DevTools CPU 分析器识别开销大的函数。
 
@@ -36,7 +36,7 @@ description:使用 Chrome DevTools CPU 分析器识别开销大的函数。
 您也可以使用 [Command Line API][profile] 对命令行产生的分析进行记录和分组。
 
 
-[分析]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#profilename-and-profileendname
+[profile]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#profilename-and-profileendname
 
 ## 查看 CPU 分析 {:#view-profile}
 

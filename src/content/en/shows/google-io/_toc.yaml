@@ -1,6 +1,8 @@
 toc:
   - title: Google I/O
     section:
+    - title: "2017"
+      path: https://www.youtube.com/playlist?list=PLNYkxOF6rcICniLJ2rfj0FexlA-9zmJJE
     - include: /web/shows/google-io/2016/_toc.yaml
     - include: /web/shows/google-io/2015/_toc.yaml
     - include: /web/shows/google-io/2014/_toc.yaml

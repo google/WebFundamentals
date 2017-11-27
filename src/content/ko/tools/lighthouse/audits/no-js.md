@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "스크립트를 사용할 수 없을 때 페이지에 일부 콘텐츠 포함" Lighthouse 감사의 참조 문서입니다.
+description: '스크립트를 사용할 수 없을 때 페이지에 일부 콘텐츠 포함' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-09-20 #}
 {# wf_published_on: 2016-09-20 #}
@@ -9,8 +9,8 @@ description: "스크립트를 사용할 수 없을 때 페이지에 일부 콘�
 
 ## 감사가 중요한 이유 {: #why }
 
-[점진적 개선](https://en.wikipedia.org/wiki/Progressive_enhancement)
-은 웹 개발 전략으로, 사이트를 최대한 많은 사람이 액세스할 수 있게
+[점진적 개선](https://en.wikipedia.org/wiki/Progressive_enhancement)은
+웹 개발 전략으로, 사이트를 최대한 많은 사람이 액세스할 수 있게
 해줍니다. 점진적 개선의 가장 일반적인 정의는
 다음과 같습니다.
 
@@ -26,8 +26,8 @@ description: "스크립트를 사용할 수 없을 때 페이지에 일부 콘�
 점진적 개선은 방대하고 논란의 여지가 있는 주제입니다. 어떤 사람은
 점진적 개선 전략을 준수하기 위해 기본 콘텐츠와 페이지 기능은 HTML만 사용하도록
 페이지를 레이어링해야 한다고 주장합니다. 이러한 접근방식에 대한 자세한 내용은 
-[점진적 개선: 정의와 사용 방법](https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/)
-을 참조하세요.
+[점진적 개선: 정의와 사용 방법](https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/)을
+참조하세요.
 
 어떤 사람은 엄격한 접근방식은 실행이 불가능하거나 최신 대규모 웹 애플리케이션에는 불필요하다고 생각하고
 `<head>` 문서에서

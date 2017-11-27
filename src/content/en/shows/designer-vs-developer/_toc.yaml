@@ -3,12 +3,30 @@ toc:
     section:
     - title: 'Podcast'
       section:
-      - title: 'Creating a collaborative environment'
-        path: /web/shows/designer-vs-developer/podcast/DVDS1E01-creating-a-collaborative-environment
-      - title: 'Balancing creativity with user testing'
-        path: /web/shows/designer-vs-developer/podcast/DVDS1E02-balancing-creativity-with-user-testing
-      - title: 'Adopting the native language of the web'
+      - title: 'How The Web Can Compete With Native'
+        path: /web/shows/designer-vs-developer/podcast/DVDS2E06-how-the-web-can-compete-with-native
+      - title: 'Designing For The Next Billion Users'
+        path: /web/shows/designer-vs-developer/podcast/DVDS2E05-designing-for-the-next-billion-users
+      - title: 'Learn How to Design'
+        path: /web/shows/designer-vs-developer/podcast/DVDS2E04-learn-how-to-design
+      - title: 'Improving Your Creative Confidence'
+        path: /web/shows/designer-vs-developer/podcast/DVDS2E03-improving-your-creative-confidence  
+      - title: 'Designing for Great Performance'
+        path: /web/shows/designer-vs-developer/podcast/DVDS2E02-designing-a-great-performance  
+      - title: 'Becoming A Creative Coder'
+        path: /web/shows/designer-vs-developer/podcast/DVDS2E01-becoming-a-creative-coder   
+      - title: 'Are Existing Design Tools Fit for Purpose?'
+        path: /web/shows/designer-vs-developer/podcast/DVDS1E06-are-design-tools-fit-for-purpose
+      - title: 'Who Is Responsible for Design?'
+        path: /web/shows/designer-vs-developer/podcast/DVDS1E05-who-is-responsible-for-design
+      - title: 'Are Designers Born or Made?'
+        path: /web/shows/designer-vs-developer/podcast/DVDS1E04-are-designers-born-or-made
+      - title: 'Adopting the Native Language of the Web'
         path: /web/shows/designer-vs-developer/podcast/DVDS1E03-Adopting-the-native-language-of-the-web
+      - title: 'Balancing Creativity with User Testing'
+        path: /web/shows/designer-vs-developer/podcast/DVDS1E02-balancing-creativity-with-user-testing
+      - title: 'Creating A Collaborative Environment'
+        path: /web/shows/designer-vs-developer/podcast/DVDS1E01-creating-a-collaborative-environment
     - title: Video
       path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ
       status: external

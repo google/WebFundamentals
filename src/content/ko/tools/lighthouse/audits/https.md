@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "HTTPS를 사용하는 사이트" Lighthouse 감사의 참조 문서입니다.
+description: 'HTTPS를 사용하는 사이트' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-09-19 #}
 {# wf_published_on: 2016-09-19 #}
@@ -39,7 +39,7 @@ Pages](https://pages.github.com/){: .external })은 기본적으로 안전합니
 이미 HTTPS에서 페이지를 실행하고 있지만 이 감사를 통과하지 못했다면
 혼합된 콘텐츠에 문제가 있을 수 있습니다. 혼합된 콘텐츠는 보안 사이트가
 보호되지 않은(HTTP) 리소스를 요청할 때 나타납니다. 이 상황을 해결하기 위한 자세한 방법은
-Chrome DevTools Security 패널의 문서:
+Chrome DevTools Security 패널 관련 문서
 [보안 문제 이해](/web/tools/chrome-devtools/debug/security)를 참조하세요.
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}

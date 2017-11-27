@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 다중 기기 사이트를 처음부터 다시 빌드합니다. 빌드 프로세스 도구 집합을 사용하여 개발 속도를 높이고 빠르게 로드하는 사이트를 만드는 방법에 대해 알아봅니다.
 
@@ -42,7 +42,7 @@ description: 다중 기기 사이트를 처음부터 다시 빌드합니다. 빌
 
 빌드 프로세스를 구현하는 데 가장 많이 사용되는 도구는
 명령줄 도구에 해당하는 [Gulp](http://gulpjs.com/){: .external } 및
-[Grunt](http://gruntjs.com/)입니다. 이 둘을 사용해 본 경험이 없는 경우 Gulp를 사용해 보십시오.
+[Grunt](http://gruntjs.com/)입니다. 이 둘을 사용해 본 경험이 없는 경우 Gulp를 사용해 보세요.
 우리처럼 Gulp를 [Web Starter Kit](/web/tools/starter-kit/)용으로
 사용하도록 권장합니다.
 

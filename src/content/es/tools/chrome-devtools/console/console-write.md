@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: El registro por consola es un poderoso método para inspeccionar el comportamiento de tu página o app. Empecemos por console.log() y exploremos otros usos avanzados.
 
@@ -15,8 +15,8 @@ El registro por consola es un poderoso método para inspeccionar el comportamien
 
 ### TL;DR {: .hide-from-toc }
 - Usa <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolelogobject--object-''>console.log()</a> para registros básicos
-- Usa <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consoleerrorobject--object-''>console.error()</a> y<a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolewarnobject--object-''>console.warn()</a> para cosas atractivas
-- Usa <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolegroupobject-object-''>console.group()</a> y<a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolegroupend''>console.groupEnd()</a> para agrupar mensajes relacionados y evitar el desorden
+- Usa <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consoleerrorobject--object-''>console.error()</a> y <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolewarnobject--object-''>console.warn()</a> para cosas atractivas
+- Usa <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolegroupobject-object-''>console.group()</a> y <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolegroupend''>console.groupEnd()</a> para agrupar mensajes relacionados y evitar el desorden
 - Usa <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consoleassertexpression-object''>console.assert()</a> para mostrar mensajes de error condicional
 
 
@@ -168,7 +168,7 @@ A continuación, se proporciona toda la lista de especificadores de formato:
 
 | Especificador | Salida                                                                            |
 |-----------|:----------------------------------------------------------------------------------|
-| %s        | Dar al valor el formato de una string.                                                     |
+| %s        | Da al valor el formato de una string.                                                     |
 | %i o %d  | Da al valor el formato de un entero.                                                   |
 | %f        | Da al valor el formato de un punto flotante.                                        |
 | %o        | Da al valor el formato de un elemento DOM expandible. Tal como se ve en el panel Elements,     |

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Gunakan Console API untuk menulis informasi ke konsol,  membuat profil JavaScript, dan memulai sesi debug.
 
@@ -109,7 +109,7 @@ metode.
 
 ## console.group(object[, object, ...])
 
-Memulai grup log baru dengan judul opsional. Semua output konsol yang
+Memulai grup log baru dengan judul opsional. Semua keluaran konsol yang
 terjadi setelah `console.group()` dan sebelum `console.groupEnd()` secara visual
 akan dikelompokkan bersama. 
 

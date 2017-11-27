@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Buat agar kode sisi klien tetap bisa dibaca dan di-debug bahkan setelah Anda mengombinasikan, mengecilkan, atau mengompilasinya.
 
@@ -64,7 +64,7 @@ Masuk ke
 **[demo](http://www.thecssninja.com/demo/source_mapping/compile.html)**, kemudian:
 
 * Buka DevTools dan masuk ke panel **Sources**.
-* Masukkan nama file ke dalam bidang input _Name your code:.
+* Masukkan nama file ke dalam bidang masukan _Name your code:.
 * Klik tombol **compile**.
 * Sebuah peringatan akan muncul bersama jumlah yang telah dievaluasi dari sumber CoffeeScript.
 

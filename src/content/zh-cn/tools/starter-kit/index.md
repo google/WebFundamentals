@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:Web Starter Kit 是多设备开发的样板文件和工具
 
@@ -30,7 +30,7 @@ description:Web Starter Kit 是多设备开发的样板文件和工具
 
 ## 快速入门
 
-[下载](https://github.com/google/web-starter-kit/releases/latest) 工具包或者克隆[这个](https://github.com/google/web-starter-kit)存储区并根据 `app` 目录中包含的内容进行构建。
+[下载](https://github.com/google/web-starter-kit/releases/latest)工具包或者克隆[这个](https://github.com/google/web-starter-kit)存储区并根据 `app` 目录中包含的内容进行构建。
 
 
 

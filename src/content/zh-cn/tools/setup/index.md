@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:让您的工作区包含适用于多设备网页的优秀编辑器、调试功能和构建工具。
 
@@ -18,7 +18,7 @@ description:让您的工作区包含适用于多设备网页的优秀编辑器�
 * [设置浏览器扩展程序](setup-extensions)
 * [设置构建工具](setup-buildtools)
 
-完成后，继续详细了解 [Chrome Developer Tools (DevTools)](/web/tools/chrome-devtools)，它是 Chrome 内置的工具，可以帮助您开发、测试和调试页面。
+完成后，继续详细了解 [Chrome 开发者工具 (DevTools)](/web/tools/chrome-devtools)，它是 Chrome 内置的工具，可以帮助您开发、测试和调试页面。
 
 
 {# wf_devsite_translation #}

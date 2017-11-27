@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 전체 화면 보기
 
-{# wf_updated_on: 2016-10-01 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-10-01 #}
 
 # 전체 화면 경험 구현 {: .page-title }
@@ -15,7 +15,7 @@ description: 전체 화면 보기
 
 몰입형 전체 화면 웹사이트와 애플리케이션을 쉽게 만들 수 있지만
 웹상의 다른 기술과 마찬가지로 이를 실행하는 방법은 여러 가지가 있습니다.
-전체 화면을 실행하는 "설치형 웹 앱" 경험을 지원하는 브라우저가 늘어나고 있는 요즘에는
+전체 화면을 실행하는 '설치형 웹 앱' 경험을 지원하는 브라우저가 늘어나고 있는 요즘에는
 이 점이 특히 중요합니다.
 
 <div class="clearfix"></div>
@@ -31,10 +31,10 @@ description: 전체 화면 보기
 ### 사용자 동작에 응답하여 브라우저에 전체 화면 요청
 
 <a href="http://caniuse.com/#feat=fullscreen">플랫폼은 동일하지 않습니다</a>.
-iOS Safari는 전Fullscreen API가 없지만 Android의 Chrome과
+iOS Safari는 Fullscreen API가 없지만 Android의 Chrome과
 Firefox, IE 11+에는 있습니다. 여러분이 빌드하는 대부분 애플리케이션은 전체 화면 사양에서 제공하는
-JS API와 CSS 선택기를 함께 사용합니다. 전체 화면 경험을 구현할 때
-주의해야 할 주요 JS API:
+JS API와 CSS 선택기를 함께 사용합니다. 전체 화면 경험을 빌드할 때
+주의해야 할 주요 JS API는 다음과 같습니다.
 
 * `element.requestFullscreen()`: (현재 Chrome, Firefox, IE에서 프리픽스됨)
   전체 화면 모드에서 요소를 표시합니다.
@@ -69,8 +69,8 @@ JS API와 CSS 선택기를 함께 사용합니다. 전체 화면 경험을 구�
 참고: 공급업체 프리펙스는 골치가 아픕니다!
 
 실제 코드는 훨씬 더 복잡합니다. <a
-href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Mozilla
-</a>는 전체 화면 전환에 사용할 수 있는 매우 유용한 스크립트를 개발했습니다.  보다시피
+href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Mozilla</a>는
+전체 화면 전환에 사용할 수 있는 매우 유용한 스크립트를 개발했습니다.  보다시피
 공급업체 프리픽스 상황에서는 지정된 API에 비해
 코드가 복잡하고 느려집니다. 아래와 같이 코드를 단순화하더라도
 여전히 복잡합니다.
@@ -115,7 +115,7 @@ WebKit 또는 Blink 기반 렌더링 엔진을 사용하는 경우
 
 <figure class="attempt-right" style="max-width: 320px;">
 <img src="images/document.png" >
-<figcaption>그림 2: 문서 요소의 전체 화면.</figcaption>
+<figcaption>그림 2: 문서 요소의 전체 화면</figcaption>
 </figure>
 
 이 문제를 해결하려면 본문 요소 대신 문서 요소를 사용해야 합니다.
@@ -165,7 +165,7 @@ WebKit 또는 Blink 기반 렌더링 엔진을 사용하는 경우
     </script>
 
 이렇게 하면 컨테이너 객체를
-CSS 의사 선택기와 결합할 수 있기 때문에 유연성이 높아집니다(예: "goFS" 버튼 숨기기).
+CSS 의사 선택기와 결합할 수 있기 때문에 유연성이 높아집니다(예: 'goFS' 버튼 숨기기).
 
     <style>
       #goFS:-webkit-full-screen #goFS {
@@ -194,7 +194,7 @@ CSS 의사 선택기와 결합할 수 있기 때문에 유연성이 높아집니
 사용자가 웹 페이지를 탐색할 때 전체 화면 웹 페이지를 시작하는 것은 불가능합니다.
 브라우저 공급업체는 페이지를 로드할 때마다 전체 화면이 되면 매우 짜증을 유발할 수 있으므로
 전체 화면으로 진입하려면 사용자 동작이 필요하다는 것을 잘 알고 있습니다.
-그러나 공급업체는 사용자가 앱을 "설치"하는 것은 허용합니다.
+그러나 공급업체는 사용자가 앱을 '설치'하는 것은 허용합니다.
 앱을 설치하면 사용자가 플랫폼에서 앱을 시작하고 싶다는 신호를 
 운영체제에 보내는 것과 같습니다.
 
@@ -223,7 +223,7 @@ iOS Safari 모델과 유사합니다.
     <meta name="mobile-web-app-capable" content="yes">
 
 > 애플리케이션 바로가기 아이콘을 기기 홈 화면에 추가하고
-> Android용 Chrome의 "Add to Home screen" 메뉴 항목을 사용하여 
+> Android용 Chrome의 'Add to Home screen' 메뉴 항목을 사용하여 
 > 앱을 전체 화면으로 실행하도록 웹 앱을 설정할 수 있습니다.
 >  <a href="https://developers.chrome.com/multidevice/android/installtohomescreen">Google Chrome</a>
 
@@ -231,7 +231,7 @@ iOS Safari 모델과 유사합니다.
 
 #### 웹 앱 매니페스트(Chrome, Opera, Firefox, Samsung)
 
-[웹 애플리케이션의 매니페스트](/web/fundamentals/engage-and-retain/web-app-manifest/)
+[웹 애플리케이션의 매니페스트](/web/fundamentals/web-app-manifest)
 는 원하는 영역(예: 모바일 홈 화면)에 표시되는 앱의 모양을 제어할 수 있는 기능을
 개발자에게 제공하고 실행 가능한 것과 실행 방식을
 지시하는 단순한 JSON 파일입니다.
@@ -239,7 +239,7 @@ iOS Safari 모델과 유사합니다.
 앱에 대한 더 세밀한 제어 기능을 제공할 것이지만, 현재로서는 앱 실행 방식에만 집중합니다.
  구체적인 사항은 다음과 같습니다.
 
-1.브라우저에 매니페스트에 대한 정보 전달
+1. 브라우저에 매니페스트에 대한 정보 전달
 2. 실행 방법 설명
 
 맨니페스트를 생성하고 사이트에 호스팅한 후에는 다음과 같이
@@ -322,17 +322,17 @@ Chrome은 Android 버전 38 이후(2014년 10월)부터 매니페스트를 지�
 
 여러분의 뉴스 사이트에 뉴스 중심적인 앱 느낌을 주기 위해
 앱처럼 취급하고 UI에서 모든 웹과 유사한 chrmome을 제거하고 싶다면
-디스플레이를 `standalone`로 설정하세요.
+디스플레이를 `standalone`으로 설정하세요.
 
     "display": "standalone"
 
 ### 주소 표시줄을 자동으로 숨겨서 가상으로 전체 화면 구성
 
-다음과 같이 주소 표시줄을 자동으로 숨겨서 "가짜 전체 화면"을 만들 수 있습니다.
+다음과 같이 주소 표시줄을 자동으로 숨겨서 '가짜 전체 화면'을 만들 수 있습니다.
 
     window.scrollTo(0,1);
 
-주의: 친구로서 말씀드립니다. 그런 방법이 있기는 합니다. 하지만
+Caution: 친구로서 말씀드립니다. 그런 방법이 있기는 합니다. 하지만
          편법입니다. 이 방법을 사용하지 마세요. &mdash; Paul
 
 방법은 상당히 간단합니다. 페이지가 로드되고 브라우저 메뉴에게
@@ -376,7 +376,7 @@ iOS에서는 `navigator.standalone` 부울을 사용하여 사용자가
 
 사용자가 사이트에서 동작을 통해 전체 화면을 요청하면
 
-표준 전체 화면 API를 사용할 수 있습니다. 예를 들어, 다음과 같이 전체 화면 상태에 반응하도록 UI를 변경할 수 있는 CSS 의사 선택기 등이 있습니다.
+표준 Fullscreen API를 사용할 수 있습니다. 예를 들어, 다음과 같이 전체 화면 상태에 반응하도록 UI를 변경할 수 있는 CSS 의사 선택기 등이 있습니다.
 
     selector:-webkit-full-screen {
       display: block; // displays the element only when in fullscreen
@@ -387,8 +387,8 @@ iOS에서는 `navigator.standalone` 부울을 사용하여 사용자가
     }
 
 사용자가 홈 화면에서 사이트를 실행하면 `display-mode` 미디어
-쿼리가 웹 앱 매니페스트에 정의된 내용으로 설정됩니다. 순수 전체 화면의 경우:
-
+쿼리가 웹 앱 매니페스트에 정의된 내용으로 설정됩니다. 순수 전체 화면의 경우
+다음과 같습니다.
 
     @media (display-mode: fullscreen) {
 
@@ -405,7 +405,7 @@ iOS에서는 `navigator.standalone` 부울을 사용하여 사용자가
 #### Firefox
 
 사용자가 사이트에서 전체 화면을 요청하거나
-전체 화면 모드에서 앱을 실행하면 표준 전체 화면 API를 사용할 수 있습니다. 예를 들어, 다음과 같이 전체 화면 상태에 반응하도록 UI를 변경할 수 있는
+전체 화면 모드에서 앱을 실행하면 표준 Fullscreen API를 사용할 수 있습니다. 예를 들어, 다음과 같이 전체 화면 상태에 반응하도록 UI를 변경할 수 있는
 CSS 의사 선택기 등이 있습니다.
 
 
@@ -444,7 +444,7 @@ Chrome 및 Firefox와 유사하게 동작합니다.
 
 ### 사용자를 전체 화면에 고정
 
-전체 화면 API는 때로 세심한 주의가 필요합니다. 브라우저 공급업체는
+Fullscreen API는 때로 세심한 주의가 필요합니다. 브라우저 공급업체는
 사용자를 전체 화면 페이지에 가두고 싶어 하지 않으므로 최대한 빨리 전체 화면에서 벗어나는
 메커니즘을 개발했습니다.  즉, 여러 페이지에 걸친
 전체 화면 웹사이트를 빌드할 수 없다는 뜻입니다.
@@ -458,9 +458,9 @@ Chrome 및 Firefox와 유사하게 동작합니다.
 사용자를 전체 화면에 고정하고 싶다면 두 가지 옵션이 있습니다.
 
 1. 설치 가능한 웹 앱 메커니즘을 사용하여 전체 화면을 실행합니다.
-2. 프래그먼트를 사용하여 UI와 앱 상태를 관리합니다.
+2. \# 프래그먼트를 사용하여 UI와 앱 상태를 관리합니다.
 
-#syntax를 사용하여 url (window.location = "#somestate")을 업데이트하고
+\#syntax를 사용하여 url (window.location = "#somestate")을 업데이트하고
 `window.onhashchange` 이벤트를 수신하면 브라우저의 자체
 기록 스택으로 애플리케이션 상태 변경을 관리할 수 있습니다. 이 방법으로 사용자가
 하드웨어 뒤로 버튼을 사용할 수 있게 하거나 다음과 같이 기록 API를 사용하여 간단한 프로그래밍 방식의 뒤로 버튼
@@ -483,7 +483,7 @@ Chrome 및 Firefox와 유사하게 동작합니다.
 앱을 전체 화면으로 실행하고 싶다면 각 플랫폼의 설치 경험을
 활용해보세요.
 
-### 앱을 홈 화면에 설치하라는 스팸을 사용자에게 보내지 마세요.
+### 앱을 홈 화면에 설치하라는 스팸을 사용자에게 보내지 마세요
 
 설치된 앱 메커니즘을 통해 전체 화면 경험을 제공하고 싶다면
 사용자를 배려하세요.

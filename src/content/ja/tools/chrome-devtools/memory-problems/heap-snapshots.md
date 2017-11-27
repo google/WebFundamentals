@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools のヒープ プロファイラを使ってヒープのスナップショットを記録し、メモリリークを見つける方法について説明します。
 
@@ -122,7 +122,6 @@ Comparison ビューに、2 つのスナップショットの違いが表示さ�
 ### Containment ビュー
 
 Containment ビューは、基本的にはアプリケーションのオブジェクト構造の「鳥瞰図」です。関数クロージャの内部を見て、JavaScript オブジェクトを構成する VM の内部オブジェクトを観察し、アプリケーションが非常に下位レベルで使用するメモリ量を把握できます。
-
 ビューには複数のエントリ ポイントがあります。
 
 * **DOMWindow オブジェクト**は、JavaScript コードでは「グローバル」オブジェクトと考えられるオブジェクトです。

@@ -28,9 +28,9 @@ entre os botões.
     <button>Last!</button>
 
 {% framebox height="80px" %}
-<button>Eu Devo</button>
-<button>Ter concentração</button>
-<button>Último!</button>
+<button>I Should</button>
+<button>Be Focused</button>
+<button>Last!</button>
 {% endframebox %}
 
 No entanto, é importante observar que, ao utilizar CSS, é possível as coisas
@@ -47,15 +47,15 @@ mover o foco entre os botões.
     <button>Last!</button>
 
 {% framebox height="80px" %}
-<button style="float: right;">Eu Devo</button>
-<button>Ter concentração</button>
-<button>Último!</button>
+<button style="float: right;">I Should</button>
+<button>Be Focused</button>
+<button>Last!</button>
 {% endframebox %}
 
 Cuidado ao mudar a posição visual de elementos na tela usando CSS.
 Isso pode fazer a ordem de guias para saltar ao redor, aparentemente de forma aleatória, confundindo
 os usuários que usam o teclado. Por esta razão, a lista de verificação do Web AIM afirma,
-[na seção 1.3.2](http://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }
+[na seção 1.3.2] (http://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }
 que a ordem de leitura e de navegação, determinada pela ordem do código, deve ser
 lógica e intuitiva.
 

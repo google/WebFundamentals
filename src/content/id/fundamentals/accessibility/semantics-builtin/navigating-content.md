@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Peran semantik dalam navigasi laman
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Semantik dan Menyusuri Materi {: .page-title }
@@ -67,7 +67,7 @@ teknik ini.
 
 Tidak semua heading harus terlihat di layar.
 [Wikipedia](https://www.wikipedia.org/), misalnya, menggunakan teknik yang
-sengaja menempatkan sebagian heading tidak tampak untuk membuatnya
+sengaja menempatkan sebagian heading di luar layar untuk membuatnya
 *hanya* bisa diakses oleh pembaca layar dan teknologi pendukung lainnya.
 
     <style>
@@ -81,9 +81,9 @@ sengaja menempatkan sebagian heading tidak tampak untuk membuatnya
       }
     </style>
 
-    <h2 class="sr-only">Heading ini di luar layar.</h2>
+    <h2 class="sr-only">This heading is offscreen.</h2>
 
-Catatan: Situs WebAIM mendiskusikan teknik ini panjang lebar dalam [artikel
+Note: Situs WebAIM mendiskusikan teknik ini panjang lebar dalam [artikel
 ini di materi di luar layar](http://webaim.org/techniques/css/invisiblecontent/).
 
 Bagi aplikasi yang kompleks, ini bisa menjadi cara yang bagus untuk mengakomodasi heading bila
@@ -124,7 +124,7 @@ sulit ditemukan.
 
 Masalah lain adalah tautan yang buruk. Teks yang bisa diklik seperti "ketahui selengkapnya" atau "klik
 di sini" tidak menyediakan informasi semantik tentang akan ke mana tautan tersebut. Sebagai gantinya, gunakan
-teks deskriptif seperti "ketahui selengkapnya tentang desain responsif" ayau "lihat
+teks deskriptif seperti "ketahui selengkapnya tentang desain responsif" atau "lihat
 tutorial kanvas ini" untuk membantu pembaca layar menyediakan konteks yang bermakna tentang tautan.
 
 Rotor bisa juga mengambil *daftar kontrol formulir*. Dengan daftar ini, pembaca bisa

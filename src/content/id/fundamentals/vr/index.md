@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: WebVR
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # WebVR {: .page-title }
 
-Peringatan: WebVR masih eksperimental dan dapat berubah.
+Caution: WebVR masih eksperimental dan dapat berubah.
 
 WebVR adalah JavaScript API yang memanfaatkan headset VR dan perangkat berkemampuan VR yang dimiliki pengguna — seperti [headset Daydream](https://vr.google.com/daydream/) dan ponsel Pixel — untuk menciptakan pengalaman 3D yang lebih mendalam di browser Anda.
 
@@ -32,7 +32,7 @@ Bila ragu, jangan sampai membuat orang mabuk darat lantaran kinerja pengalaman y
 Untuk membuat materi WebVR Anda perlu memanfaatkan beberapa API baru, serta teknologi yang ada seperti [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial) dan [Web Audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API), serta mempertimbangkan beragam tipe masukan dan headset.
 
 <div class="attempt-left">
-  <h3>Mulai dengan WebVR</h3>
+  <h3>Memulai dengan WebVR</h3>
   <a href="./getting-started-with-webvr/">
     <img src="img/getting-started-with-webvr.jpg" alt="Mulai dengan WebVR" />
   </a>

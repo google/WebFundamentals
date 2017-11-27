@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Referensi dokumentasi untuk "Manifes Berisi Ikon yang Setidaknya 192 px" audit Lighthouse.
 
@@ -9,7 +9,7 @@ description: Referensi dokumentasi untuk "Manifes Berisi Ikon yang Setidaknya 19
 
 ## Mengapa audit itu penting {: #why }
 
-Ketika pengguna menambahkan aplikasi ke homescreen, perangkat seluler membutuhkan ikon untuk
+Ketika pengguna menambahkan aplikasi ke layar beranda, perangkat seluler membutuhkan ikon untuk
 ditampilkan. Ikon tersebut ditetapkan dalam larik `icons` dari Manifes Aplikasi Web.
 
 Kehadiran ikon 192-pixel memastikan bahwa ikon Anda akan ditampilkan dengan baik pada

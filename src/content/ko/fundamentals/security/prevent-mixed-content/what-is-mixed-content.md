@@ -26,7 +26,7 @@ HTTP 콘텐츠와 HTTPS 콘텐츠가 함께 로드되어 동일한 페이지를 
 
 브라우저가 웹사이트 페이지를 _방문_할 때 HTML을 요청합니다. 그러면 웹 서버가 HTML 콘텐츠를 반환하고, 브라우저는 해당 콘텐츠를 파싱하여 사용자에게 표시합니다. 일반적으로 단일 HTML 파일로 전체 페이지를 표시하는 데 충분하지 않으므로 HTML 파일은 브라우저가 요청해야 하는 다른 리소스에 대한 참조를 포함합니다. 이와 같은 하위 리소스의 예로는 이미지, 비디오, 추가 HTML, CSS 또는 자바스크립트 등이 있으며 각 항목은 개별 요청으로 가져옵니다. 
 
-## HTTPS의 장점
+## HTTPS의 이점
 
 브라우저가 HTTPS(HTTP Secure)를 통해 리소스를 요청할 때 
 암호화된 연결을 사용하여 웹 서버와 통신합니다.
@@ -72,10 +72,10 @@ HTTPS는 HTTP Secure(Hyper(t)ext Transfer Protocol Secure)의 약자입니다. �
 HTTPS, TLS 및 SSL에 대한 자세한 정보는 이 글에서는 다루지 않습니다. 
 자세한 정보는 다음을 참조하세요.
 
-* [Wikipedia HTTPS](https://en.wikipedia.org/wiki/HTTPS){: .external}
-* [Wikipedia TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security){: .external}
-* [Khan Academy Cryptography course](https://www.khanacademy.org/computing/computer-science/cryptography){: .external}
-* [High Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545){: .external}의 [TLS 장](http://chimera.labs.oreilly.com/books/1230000000545/ch04.html){: .external}(저자: Ilya Grigorik) 
+* [Wikipedia HTTPS](https://en.wikipedia.org/wiki/HTTPS)
+* [Wikipedia TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)
+* [Khan Academy Cryptography course](https://www.khanacademy.org/computing/computer-science/cryptography)
+* [High Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545) 의 [TLS 장](http://chimera.labs.oreilly.com/books/1230000000545/ch04.html) (저자: Ilya Grigorik) 
 
 ## 혼합 콘텐츠로 인한 HTTPS 약화
 
@@ -126,7 +126,7 @@ HTTPS 페이지에서 보안되지 않은 스크립트를 로드합니다.
 
 XMLHttpRequest를 통해 비보안 데이터를 로드합니다.
 
-**HTTPS**를 통해 보는 이 샘플 페이지([**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/xmlhttprequest-example.html){: .external})에는 혼합 콘텐츠 `JSON` 데이터를 가져오는 **HTTP**를 통한 `XMLHttpRequest`가 포함되어 있습니다.
+**HTTPS**를 통해 보는 이 샘플 페이지[**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/xmlhttprequest-example.html){: .external}에는 혼합 콘텐츠 `JSON` 데이터를 가져오는 **HTTP**를 통한 `XMLHttpRequest`가 포함되어 있습니다.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/xmlhttprequest-example.html" adjust_indentation="auto" %}
@@ -217,7 +217,7 @@ JQuery 라이트박스를 사용하여 보안되지 않은 이미지를 로드�
 
 <figure>
   <img src="imgs/passive-mixed-content-warnings.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure video. This content should also be served over HTTPS.">
-  <figcaption>Chrome 자바스크립트 콘솔에서 발생한 혼합 콘텐츠 경고.</figcaption>
+  <figcaption>Chrome JavaScript 콘솔에서 발생한 혼합 콘텐츠 경고.</figcaption>
 </figure>
 
 ### 능동적 혼합 콘텐츠
@@ -243,7 +243,7 @@ JQuery 라이트박스를 사용하여 보안되지 않은 이미지를 로드�
 
 <figure>
   <img src="imgs/active-mixed-content-errors.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure resource. This request has been blocked; the content must be served over HTTPS.">
-  <figcaption>Chrome 자바스크립트 콘솔에서 발생한 혼합 콘텐츠 오류.</figcaption>
+  <figcaption>Chrome JavaScript 콘솔에서 발생한 혼합 콘텐츠 오류.</figcaption>
 </figure>
 
 ## 혼합 콘텐츠가 있는 브라우저 동작
@@ -256,9 +256,9 @@ JQuery 라이트박스를 사용하여 보안되지 않은 이미지를 로드�
 
 최신 브라우저는 [**선택적으로 차단할 수 있는 콘텐츠**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-optionally-blockable){: .external} 및 [**차단할 수 있는 콘텐츠**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-blockable){: .external} 범주를 정의하는 [혼합 콘텐츠 사양](https://w3c.github.io/webappsec/specs/mixedcontent/){: .external }을 따릅니다. 
 
-해당 사양에서 리소스는 "웹의 
+해당 사양에서 리소스는 '웹의 
 상당한 부분을 중단시키는 위험이 혼합 콘텐츠 사용을 허용하는 
-위험보다 클 때" 선택적으로 차단할 수 있는 콘텐츠 자격을 충족합니다. 이는 위에서 설명한 [수동적 혼합 
+위험보다 클 때' 선택적으로 차단할 수 있는 콘텐츠 자격을 충족합니다. 이는 위에서 설명한 [수동적 혼합 
 콘텐츠](#passive-mixed-content) 범주의 하위 집합입니다. 이 글을 작성하는 시점에서 사전에 가져온 링크뿐만 아니라 이미지, 
 비디오 및 오디오 리소스는 선택적으로 차단할 수 있는 콘텐츠에 
 포함되는 유일한 리소스 유형입니다. 이 범주는 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse の監査項目「ページの読み込み時に自動的に通知パーミッションをリクエストしない」のリファレンス ドキュメント。
 
@@ -11,12 +11,11 @@ description: Lighthouse の監査項目「ページの読み込み時に自動�
 
 [適切に通知する方法][good]で説明しているとおり、適切な通知とはタイムリーで、関連性があり、正確な通知です。
 ページの読み込み時にプッシュ通知のパーミッションを要求している場合、その通知はユーザーにとって関連性がなく、ユーザのニーズに合うものはない可能性があることに注意してください。
-
 ユーザー エクスペリエンスを改善するには、まずはユーザーに対して特定のタイプの通知を表示することを提案し、ユーザーがオプトインした後でパーミッションをリクエストするようにします。
 
 
 
-[good]: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+[good]: /web/fundamentals/push-notifications/
 
 ##  監査に合格する方法 {: #how }
 

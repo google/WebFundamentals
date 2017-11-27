@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A vista da árvore do DOM no painel Elements do Chrome DevTools exibe a estrutura do DOM da página web atual. Edite em tempo real o conteúdo e a estrutura da sua página com atualizações do DOM.
 
@@ -146,7 +146,7 @@ Observação: Se você excluir um nó por acidente, pressione <kbd class='kbd'>C
 O menu **more actions** permite interagir com um nó do DOM de diversas
 maneiras. Para visualizar o menu, clique com o botão direito em um nó
 ou selecione-o e pressione o botão **more actions** (![botão more 
-action](imgs/more-actions-button.png){:.inline})). O botão só é 
+action](imgs/more-actions-button.png){:.inline}). O botão só é 
 exibido no elemento atualmente selecionado.
 
 ![Menu more actions](imgs/more-actions-menu.png)
@@ -331,7 +331,7 @@ provavelmente será resolvido na estrutura ou no código da biblioteca.
 
 
 
-[inspecionar]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
+[inspect]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
 
 
 {# wf_devsite_translation #}

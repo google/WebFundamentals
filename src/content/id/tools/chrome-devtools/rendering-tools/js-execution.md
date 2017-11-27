@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Identifikasi fungsi yang berat dengan menggunakan CPU Profiler di Chrome DevTools.
 
@@ -36,7 +36,7 @@ Profil CPU menampilkan di mana saja waktu eksekusi dihabiskan di fungsi laman An
 Anda juga bisa menggunakan [Command Line API][profile] untuk merekam dan mengelompokkan profil 
 dari baris perintah.
 
-[profil]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#profilename-and-profileendname
+[profile]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#profilename-and-profileendname
 
 ## Tampilkan profil CPU {:#view-profile}
 

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Introducción al árbol de accesibilidad
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
 # El árbol de accesibilidad {: .page-title }
@@ -50,7 +50,7 @@ flujo es parecido a esto.
     hablada de la app.
  1. La tecnología asistencial también puede permitirle al usuario interactuar con la app de
     otra manera. Por ejemplo, la mayoría de los lectores de pantalla brindan vínculos que le permiten al
-    usuario simular fácilmente un clic en un mouse clic o presión con el dedo.
+    usuario simular fácilmente un clic de mouse o el presionar con el dedo.
  1. La tecnología asistencial transmite la intención del usuario (como "clic") a
     la app a través de la API de accesibilidad. La app tiene la responsabilidad de
     interpretar la acción en forma correcta en el contexto de la IU original.
@@ -95,7 +95,7 @@ Por ejemplo, este "botón" no es un botón.
         cursor: pointer;
     }
 </style>
-<div class="fancy-btn">Dame tacos</div>
+<div class="fancy-btn">Give me tacos</div>
 {% endframebox %}
 
 Se puede construir en HTML de varias formas, una de ellas es la siguiente.
@@ -178,12 +178,12 @@ o
     
 
 Cuando se etiqueta correctamente la casilla de verificación, el lector de pantalla puede informar que
-el elemento tiene un rol de casilla de verificación y se llama "¿Recibes
-ofertas de promoción?".
+el elemento tiene un rol de casilla de verificación y se llama "Receive
+promotional offers?".
 
 ![salida de texto en pantalla de VoiceOver que muestra la etiqueta en oralidad de una casilla de verificación](imgs/promo-offers.png)
 
-Éxito: Puedes usar el lector de pantalla para encontrar etiquetas
+Success: Puedes usar el lector de pantalla para encontrar etiquetas
 asociadas en forma incorrecta tocando la pantalla y verificando los roles, estados y
 nombres en la oralidad.
 

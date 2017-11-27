@@ -17,7 +17,7 @@ App“shell”是支持用户界面所需的最小的 HTML、CSS 和 JavaScript�
 只需要从网络中加载必要的内容。
 
 
-对于使用包含大量 JavaScript 的架构的 [单页应用](https://en.wikipedia.org/wiki/Single-page_application) 来说，App Shell 是一种常用方法。这种方法依赖渐进式缓存 Shell（使用 [服务工作线程](/web/fundamentals/primers/service-worker/)）让应用运行。接下来，为使用 JavaScript 的每个页面加载动态内容。App Shell 非常适合用于在没有网络的情况下将一些初始 HTML 快速加载到屏幕上。
+对于使用包含大量 JavaScript 的架构的[单页应用](https://en.wikipedia.org/wiki/Single-page_application)来说，App Shell 是一种常用方法。这种方法依赖渐进式缓存 Shell（使用[服务工作线程](/web/fundamentals/primers/service-worker/)）让应用运行。接下来，为使用 JavaScript 的每个页面加载动态内容。App Shell 非常适合用于在没有网络的情况下将一些初始 HTML 快速加载到屏幕上。
 
 
 
@@ -28,7 +28,7 @@ App“shell”是支持用户界面所需的最小的 HTML、CSS 和 JavaScript�
 
 
 
-注：请尝试[第一个渐进式网络应用](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0)代码实验室，了解如何为天气应用构建和实现第一个 App Shell。[使用 App Shell 模型即时加载](https://www.youtube.com/watch?v=QhUzmR8eZAo)视频也演练了这种模式。
+注：请尝试[第一个 Progressive Web App](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0) 代码实验室，了解如何为天气应用构建和实现第一个 App Shell。[使用 App Shell 模型即时加载](https://www.youtube.com/watch?v=QhUzmR8eZAo)视频也演练了这种模式。
 
 
 
@@ -100,7 +100,7 @@ App Shell 可保证 UI 的本地化以及从 API 动态加载内容，但同时�
 <figure>
   <img src="images/wikipedia.jpg"
     alt="App Shell 与内容缓存搭配使用的离线维基百科应用">
-  <figcaption>Jake Archibald 的 <a href="https://wiki-offline.jakearchibald.com/wiki/Rick_and_Morty">离线维基百科应用</a>就是使用 App Shell 模型的 PWA 好例子。它会在重复访问时即时加载，但同时使用 JS 动态抓取内容。系统随后会离线缓存此内容，以备以后访问。
+  <figcaption>Jake Archibald 的<a href="https://wiki-offline.jakearchibald.com/wiki/Rick_and_Morty">离线维基百科应用</a>就是使用 App Shell 模型的 PWA 好例子。它会在重复访问时即时加载，但同时使用 JS 动态抓取内容。系统随后会离线缓存此内容，以备以后访问。
 </figcaption>
 </figure>
 
@@ -175,8 +175,8 @@ App Shell 可保证 UI 的本地化以及从 API 动态加载内容，但同时�
 <div class="clearfix"></div>
 
 
-注：请参阅 [https://app-shell.appspot.com/](https://app-shell.appspot.com/)，查看一个非常简单的、使用 App Shell 和内容服务器端渲染的 PWA 的真实演示。App Shell 可通过使用任意内容库或框架实现（如我们的 <a
-href="https://www.youtube.com/watch?v=srdKq0DckXQ">所有框架上的 Progressive Web App </a>讲座中所述）。您可以使用 Polymer (<a
+注：请参阅 [https://app-shell.appspot.com/](https://app-shell.appspot.com/)，查看一个非常简单的、使用 App Shell 和内容服务器端渲染的 PWA 的真实演示。App Shell 可通过使用任意内容库或框架实现（如我们的<a
+href="https://www.youtube.com/watch?v=srdKq0DckXQ">所有框架上的 Progressive Web App</a> 讲座中所述）。您可以使用 Polymer (<a
 href="https://shop.polymer-project.org">Shop</a>) 和 React （<a
 href="https://github.com/insin/react-hn">ReactHN</a>、<a
 href="https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo">iFixit</a>）查看示例。

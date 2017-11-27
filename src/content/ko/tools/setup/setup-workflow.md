@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools에서 지속적 작성을 설정하면 변경 내용을 즉시 확인하고 그러한 변경 내용을 디스크에 저장할 수 있습니다.
 
 {# wf_updated_on: 2015-07-30 #}
 {# wf_published_on: 2015-07-08 #}
 
-# [DevTools 작업 영역을 사용하여 지속성 설정] {: .page-title }
+# DevTools 작업 영역을 사용하여 지속성 설정 {: .page-title }
 
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
@@ -25,8 +25,8 @@ Chrome DevTools를 사용하면 웹 페이지에서 요소와 스타일을
 
 
 ### TL;DR {: .hide-from-toc }
-- 변경 내용을 수동으로 로컬 파일에 복사하지 마십시오. 작업 영역을 사용하여 DevTools에서 변경한 내용을 로컬 리소스에서 지속하십시오.
-- 로컬 파일을 브라우저에 스테이지하십시오. 파일을 URL로 매핑할 수도 있습니다.
+- 변경 내용을 수동으로 로컬 파일에 복사하지 마세요. 작업 영역을 사용하여 DevTools에서 변경한 내용을 로컬 리소스에서 지속하세요.
+- 로컬 파일을 브라우저에 스테이지하세요. 파일을 URL로 매핑할 수도 있습니다.
 - 지속적 작업 영역이 설정되고 나면 Elements 패널에서 적용한 스타일 변경 내용이 자동으로 지속됩니다. DOM 변경은 지속되지 않습니다. 대신 Sources 패널에서 요소 변경을 지속할 수 있습니다.
 
 
@@ -91,7 +91,7 @@ Chrome이 매핑된 URL을 로드하고
 
 1. 왼쪽 Sources 창에서 폴더를 마우스 오른쪽 버튼으로 클릭합니다. 
 2. **New File**을 선택합니다. 
-3. 새 파일의 이름을 확장자까지 포함하여 입력하고(예: `newscripts.js`) **Enter**를 누릅니다. 그러면 파일이 로컬 폴더에 추가됩니다.
+3. 새 파일의 이름을 확장자까지 포함하여 입력하고(예: `newscripts.js`) **Enter** 키를 누릅니다. 그러면 파일이 로컬 폴더에 추가됩니다.
 
 ### 파일 삭제
 
@@ -109,7 +109,7 @@ Chrome이 매핑된 URL을 로드하고
 
 1. 왼쪽 Sources 창에서 파일을 마우스 오른쪽 버튼으로 클릭합니다. 
 2. **Make a Copy...**를 선택합니다. 
-3. 파일 이름을 확장자까지 포함하여 입력하고(예: `mystyles-org.css`) **Enter**를 누릅니다.
+3. 파일 이름을 확장자까지 포함하여 입력하고(예: `mystyles-org.css`) **Enter** 키를 누릅니다.
 
 ### 새로고침
 
@@ -122,8 +122,8 @@ Sources 디렉토리가 자동으로 새로 고쳐지면서 파일 변경 내용
 ### 파일 또는 텍스트 검색
 
 DevTools에서 로드된 파일을 검색하려면 
-<kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">O</kbd> 또는 <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">O</kbd>(Mac)
-를 눌러 검색 대화상자를 엽니다. 
+<kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">O</kbd> 또는 <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">O</kbd>(Mac)를
+눌러 검색 대화상자를 엽니다. 
 작업 영역에서도 이렇게 할 수 있지만, 
 원격으로 로드된 파일과 
 Workspace 폴더에 있는 로컬 파일 양쪽으로 검색이 확장됩니다.
@@ -132,7 +132,7 @@ Workspace 폴더에 있는 로컬 파일 양쪽으로 검색이 확장됩니다.
 
 1. 검색 창을 엽니다. **Show Drawer** 버튼![창 표시](imgs/show_drawer_button.png){:.inline}을 클릭한 다음 **Search**를 클릭하거나 
 <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">F</kbd> 또는 <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Opt</kbd> + <kbd class="kbd">F</kbd>(Mac)를 누릅니다. 
-2. 검색 필드에 문자열을 입력한 다음 **Enter**를 누릅니다. 
+2. 검색 필드에 문자열을 입력한 다음 **Enter** 키를 누릅니다. 
 3. 문자열이 정규 식이거나 대/소문자를 구분하지 않는 경우, 적절한 확인란을 클릭합니다.
 
 ![여러 파일에 걸쳐 문자열 검색](imgs/searchacross.png)

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Cookie は、[Application] パネルで調査および削除します。
 
@@ -88,9 +88,7 @@ Cookie は、ドメインごとに表示されます。これには、メイン 
 Cookie を削除する方法はいくつかあります。
 
 * Cookie を選択し、**削除**ボタン（![削除ボタン][delete]{:.inline}）をクリックしてその Cookie のみを削除します。
-
 * **消去**ボタン（![消去ボタン][cos]{:.inline}）をクリックして、指定したフレーム グループのすべての Cookie を削除します。
-
 * Cookie の [**Domain**] 値を右クリックし、[**Clear all from "..."**]（**"..."** はドメイン名）を選択して、そのドメインからすべての Cookie を削除します。
 
 

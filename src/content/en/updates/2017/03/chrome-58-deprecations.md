@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 58 to help you plan.
 
-{# wf_updated_on: 2017-03-23 #}
+{# wf_updated_on: 2017-10-23 #}
 {# wf_published_on: 2017-03-17 #}
 {# wf_tags: deprecations,removals,chrome58 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -17,67 +17,11 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 58,
 which is in beta as of March 16. This list is subject to change at any time.
 
-## Deprecate FileReaderSync from service workers
-
-The Service Worker spec has always had the (non-normative) note that "any type
-of synchronous requests must not be initiated inside of a service worker", to
-avoid blocking the service worker (as blocking the service worker would block
-all network requests from controlled pages). However synchronous APIs such as
-`FileReaderSync` were still available in service workers. Starting in Chrome 57,
-`FileReaderSync` is deprecated. Removal is anticipated in Chrome 59.
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cjWtqRD6iw8/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5739144722513920) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688586)
-
-
-## Remove cross-origin top navigation without a user gesture
-
-Content in an <iframe> can generally navigate the top level browsing context
-unless explicitly forbidden by the sandbox attribute (sometimes called
-'framebusting'). Framebusting was originally used by content that wanted to
-prevent being placed in an <iframe>. Not only are there more specific tools to
-accomplish this (see below), but this specific framebusting technique is being
-used by malicious content to forcibly navigate users to a different URL.
-
-Starting in Chrome 57, cross-origin framebusting requires a user gesture unless
-the frame and the top-level content are from the same origin. Sites that want to
-prevent their content from appearing in an <iframe> should use the
-[CSP frame-ancestors directive](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
-or [X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options).
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Xi8-y4ySjA4/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5851021045661696) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=640057)
-
-
-## Remove webkit-prefixed IndexedDB global aliases
-
-IndexedDB was originally implemented with prefixed aliases and constructors
-around the time of Chrome 11. The non-prefixed versions were shipped in Chrome
-24 and the prefixed versions deprecated in Chrome 38. In Chrome 57, the prefixed
-constructors are removed. The effected interfaces include:
-
-* `webkitIndexedDB` (main entry point) 
-* `webkitIDBKeyRange` (non-callable global constructor, but has useful static methods)
-* `webkitIDBCursor`
-* `webkitIDBDatabase`
-* `webkitIDBFactory`
-* `webkitIDBIndex`
-* `webkitIDBObjectStore`
-* `webkitIDBRequest`
-* `webkitIDBTransaction` (non-callable global constructors)
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/L-EY3r4HnMc/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5775330191081472) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=665243)
-
-
 ## Mouse on Android stops firing TouchEvents
 
 Until Chrome 57, Android low-level mouse events in Chrome primarily followed an
-event path designed for touch interactions. For example, mouse drag motion while
-a mouse button is pressed generates `MotionEvents` delivered through
+event path designed for touch interactions. For example, a mouse drag motion occurring while
+a mouse button is pressed generates `MotionEvents`, delivered through
 `View.onTouchEvent`.
 
 But since touch events cannot support hover, hovering mousemoves followed a
@@ -89,12 +33,11 @@ Starting with Chrome 58, a mouse on Android M or later will:
 
 * No longer fire `TouchEvents`.
 * Fire a consistent sequence of `MouseEvents` with appropriate buttons and
-  other properties. 
+  other properties.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cNaFvMaYtNA/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5642080642662400) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=468806)
-
 
 ## Remove case-insensitive matching for usemap attribute
 
@@ -110,18 +53,53 @@ applied. The old behavior was deprecated in Chrome 57, and is now removed.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5760965337415680) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=659464)
 
+## Remove content-initiated top frame navigations to data URLs
+
+Because of their unfamiliarity to non-technical browser users, we're
+increasingly seeing the `data:` scheme being used in spoofing and phishing
+attacks. To prevent this, we're blocking web pages from loading `data:` URLs
+in the top frame. This applies to `&lt;a&gt;` tags, `window.open`,
+`window.location` and similar mechanisms. The `data:` scheme will still work for
+resources loaded below by a page.
+
+This feature will be removed in Chrome 60.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/GbVcuwg_QjM/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5669602927312896) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=684011&desc=2)
+
+## Remove deprecated names for motion path properties
+
+Motion path CSS properties allow authors to animate any graphical object along
+an author-specified path. In compliance with the spec, several properties were
+[implemented in Chrome 45](https://www.chromestatus.com/feature/6190642178818048).
+The names of these properties were changed in the spec in mid 2016. Chrome
+implemented the
+[new names in Chrome 55 and Chrome 56](https://www.chromestatus.com/feature/6390764217040896).
+Console deprecation warnings were also implemented.
+
+In Chrome 58, the old property names are being removed. The affected properties
+and their new names are shown below.
+
+| Removed Property | Current Name |
+|------------------|--------------|
+| motion-path | offset-path |
+| motion-offset | offset-distance |
+| motion-rotation | offset-rotate |
+| motion | offset |
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/o1C5NzGf9Q0/discussion)
 
 ## Remove EME from non-secure contexts
 
 Some usages of
-[Encrypted Media Extenions (EME)](https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
+[Encrypted Media Extensions (EME)](https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
 expose digital rights management implementations that are not open source,
 involve access to persistent unique identifiers, and/or run unsandboxed or with
 privileged access. Security risks are increased for sites exposed via non-secure
 HTTP because they can be attacked by anyone on the channel. Additionally, when
 user consent is required, acceptance persisted for a non-secure HTTP site can be
 exploited by such an attacker.
-
 
 Support for non-secure contexts was removed from the
 [EME version 1 spec](https://w3c.github.io/encrypted-media/)
@@ -131,12 +109,11 @@ anticipated in the subsequent final. will not be in the upcoming proposed
 recommendation or subsequent final recommendation. The API has been showing a
 deprecation message on non-secure origins since Chrome 44 (May 2015). In Chrome
 58, it is now removed. This change is part of our broader effort to
-[remove powerful features from unsecure origins](https://bugs.chromium.org/p/chromium/issues/detail?id=520765).
+[remove powerful features from unsecure origins](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/tXmKPlXsnCQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5724389932793856) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=672605)
-
 
 ## Remove legacy caller for HTMLEmbedElement and HTMLObjectElement
 
@@ -153,29 +130,21 @@ is not supported in Edge or Safari, and it is being
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5715026367217664) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663662)
 
+## Remove pre-standard ChaCha20-Poly1305 ciphers
 
-## Remove deprecated names for motion path properties
+In 2013, Chrome 31 deployed
+[new TLS cipher suites](https://security.googleblog.com/2014/04/speeding-up-and-strengthening-https.html)
+based on Prof. Dan Bernstein's ChaCha20 and Poly1305 algorithms. These was
+later standardized, with small tweaks, at the IETF as
+[RFC 7539](https://tools.ietf.org/html/rfc7539)
+and [RFC 7905](https://tools.ietf.org/html/rfc7905).
+We shipped the standardized variant early in 2016 with
+[Chrome 49](https://www.chromestatus.com/feature/5355238106071040).
+We are now removing the pre-standard variants.
 
-Motion path CSS properties allow authors to animate any graphical object along
-an author-specified path. In compliance with the spec, several properties were
-[implemented in Chrome 45](https://www.chromestatus.com/feature/6190642178818048).
-The names of these properties were changed in the spec in mid 2016. Chrome
-implemented the
-[new names in Chrome 55 and Chrome 56](https://www.chromestatus.com/feature/6390764217040896).
-Console deprecation warnings were also implemented. 
-
-In Chrome 58, the old property names are being removed. The affected properties
-and their new names are shown below.
-
-| Removed Property | Current Name |
-|------------------|--------------|
-| motion-path | offset-path |
-| motion-offset | offset-distance |
-| motion-rotation | offset-rotate |
-| motion | offset |
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/o1C5NzGf9Q0/discussion) 
-
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/8YAc7tQW4RQ/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5633556340539392) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=682816)
 
 ## Remove support for commonName matching in certificates
 
@@ -208,6 +177,28 @@ may set the `EnableCommonNameFallbackForLocalAnchors` Enterprise policy.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4981025180483584) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=308330)
 
+## VTTRegion-related bits of TextTrack
+
+The interface elements `regions`, `addRegion()` and `removeRegion()`, have been
+removed from the WebVTT spec and are removed in Chrome 58 to comply with
+the [latest spec](https://w3c.github.io/webvtt/). We expect little impact from
+this removal since the feature was never enabled by default (meaning it was
+behind a flag). Those needing an alternative can use the `VTTCue.region`
+property which is being added in Chrome 58.
+
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5308626495340544) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=690014)
+
+## WebAudio: remove AudioSourceNode interface
+
+The `AudioSourceNode` interface is not part of the
+[Web Audio specification](https://www.w3.org/TR/webaudio/),
+is not constructible, and has no attributes so it basically has no developer-
+accessible functionality. Therefore it is being removed.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/D-QJm9GCisc/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5753709124386816) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663818)
 
 ## Remove webkitdropzone global attribute
 
@@ -227,31 +218,63 @@ the prefixed version is being removed from Chrome.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5718005866561536) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=688943)
 
+## Deprecate insecure usage of notifications
 
-## VTTRegion-related bits of TextTrack
+Notifications are a powerful feature as they allow websites to invoke a system
+UI to transmit either private information itself or a signal that private
+information has been changed. Attackers may sniff or steal any information sent
+through a notification over an insecure connection. Web push requires a secure
+origin, so this change will align non-push notifications with push
+notifications. This change is part of our broader effort to
+[remove powerful features from unsecure origins](https://bugs.chromium.org/p/chromium/issues/detail?id=520765).
 
-The interface elements regions, `addRegion()` and `removeRegion()`, have been
-removed from the WebVTT spec and is removed in Chrome 58 to comply with
-the [latest spec](https://w3c.github.io/webvtt/). We expect little impact from
-this removal since the feature was never enabled by default (meaning it was
-behind a flag). Those needing an alternative can use the `VTTCue.region`
-property which is being added in Chrome 58.
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/IVgkxkRNtMo/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5759967025954816) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=679821)
 
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5308626495340544) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=690014)
+### Deprecate usage of notifications from insecure iframes
 
+Permission requests from iframes can confuse users since it is difficult to
+distinguish between the containing page's origin and the origin of the iframe
+that is making the request. When the requests scope is unclear, it is difficult
+for users to judge whether to grant or deny permission.
 
-## WebAudio: remove AudioSourceNode interface
+Disallowing notifications in iframes will also align the requirements for
+notification permission with that of push notifications, easing friction for
+developers.
 
-The `AudioSourceNode` interface is not part of the
-[Web Audio specification](https://www.w3.org/TR/webaudio/),
-is not constructible, and has no attributes so it basically has no developer-
-accessible functionality. Therefore it is being removed.
+Developers who need this functionality can open a new window to request
+notification permission.
 
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/D-QJm9GCisc/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5753709124386816) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663818)
+Removal is in Chrome 62.
 
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/n37ij1E_1aY/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/6451284559265792) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693)
+
+## Remove indexedDB.webkitGetDatabaseNames()
+
+We added this feature when Indexed DB was relatively new in Chrome and prefixing
+was all the rage. The API asynchronously returns a list of existing database
+names in an origin, which seemed sensible enough.
+
+Unfortunately, the design is flawed, in that the results may be obsolete as soon
+as they are returned, so it can really only be used for logging, not serious
+application logic. The
+[github issue](https://github.com/w3c/IndexedDB/issues/31) tracks/links to
+previous discussion on alternatives, which would require a different approach.
+While there's been on-and-off interest by developers, given the lack of cross-
+browser progress the problem has been worked around by library authors.
+
+Developers needing this functionality need to develop their own solution.
+Libraries like [Dexie.js](http://dexie.org/) for example use a global table
+which is itself another database to track the names of databases.
+
+This feature is removed in Chrome 60.
+
+[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/2fUr-3wFPKI/discussion)
+&#124; [Chromestatus Tracker](https://www.chromestatus.com/feature/5725741740195840) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=696010)
 
 <<../../_deprecation-policy.md>>
 

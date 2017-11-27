@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Campuran terjadi bila HTML pertama dimuat melalui koneksi HTTPS aman, namun sumber daya lainnya dimuat melalui koneksi HTTPS tidak aman.
 
-{# wf_updated_on: 2016-08-24 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-09-25 #}
 
 # Apa yang Dimaksud Dengan Materi Campuran? {: .page-title }
@@ -53,7 +53,7 @@ _Apakah ada orang yang mengutak-atik materi yang saya kirim atau terima?_
 HTTPS memungkinkan browser mendeteksi apakah penyerang telah mengubah data yang 
 diterima browser. Saat mentransfer uang menggunakan situs web bank Anda, ini akan mencegah 
 penyerang mengubah nomor rekening tujuan saat permintaan Anda sedang 
-transit. 
+dikirim. 
 
 ### Kerahasiaan
 
@@ -161,7 +161,7 @@ Bila menampilkan contoh laman ini melalui **HTTPS**&mdash;[**https**://googlesam
 
 Galeri gambar sering kali mengandalkan tag `<img>` atribut `src` untuk menampilkan gambar kecil 
 di laman, tag jangkar (`<a>`) atribut `href` 
-kemudian digunakan untuk memuat gambar berukuran penuh untuk hamparan galeri. Biasanya, tag 
+kemudian digunakan untuk memuat gambar berukuran penuh untuk overlay galeri. Biasanya, tag 
 `<a>` tidak menyebabkan materi campuran, namun dalam hal ini, kode jQuery 
 menggantikan perilaku tautan default&mdash;untuk mengarahkan ke laman baru&mdash;dan sebagai ganti 
 memuat gambar **HTTP** pada laman ini. 
@@ -211,7 +211,7 @@ Berikut ini adalah contoh materi campuran pasif:
 
 [Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/passive-mixed-content.html){: target="_blank" .external }
 
-Sebagian besar browser tetap me-render tipe materi campuran ini pada pengguna, akan tetapi 
+Sebagian besar browser tetap merender tipe materi campuran ini pada pengguna, akan tetapi 
 juga menampilkan peringatan karena ini menimbulkan risiko keamanan dan privasi pada situs 
 dan pengguna Anda. 
 
@@ -278,7 +278,7 @@ Perilaku persis setiap browser terus berubah, sehingga kita tidak akan memasukka
 secara spesifik di sini. Jika Anda tertarik dengan cara perilaku browser spesifik, carilah 
 informasi yang dipublikasikan oleh vendornya secara langsung. 
 
-Catatan: Pengguna mengandalkan Anda untuk melindungi mereka saat mengunjungi situs web Anda. Masalah materi campuran perlu Anda diperbaiki untuk melindungi <b>semua</b> pengunjung, termasuk mereka yang menggunakan browser lama.
+Note: Pengguna mengandalkan Anda untuk melindungi mereka saat mengunjungi situs web Anda. Masalah materi campuran perlu Anda diperbaiki untuk melindungi <b>semua</b> pengunjung, termasuk mereka yang menggunakan browser lama.
 
 
 

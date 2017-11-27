@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Pelajari cara mengidentifikasi dan mengatasi bottleneck kinerja jalur rendering penting.
 
-{# wf_updated_on: 2014-04-27 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Menganalisis Kinerja Jalur Rendering Penting {: .page-title }
@@ -36,7 +36,7 @@ Kita akan mulai dengan markup HTML dasar dan gambar tunggal; tanpa CSS atau Java
 
 <img src="images/waterfall-dom.png" alt=""  alt="CRP">
 
-Catatan: Walaupun dokumen ini menggunakan DevTools untuk mengilustrasikan konsep CRP, DevTools
+Note: Walaupun dokumen ini menggunakan DevTools untuk mengilustrasikan konsep CRP, DevTools
 saat ini tidak cocok untuk analisis CRP. Lihat [Bagaimana dengan
 DevTools?](measure-crp#devtools) untuk informasi selengkapnya.
 
@@ -124,7 +124,7 @@ Dengan demikian, mari kita lihat apakah kita bisa mundur selangkah dan mengident
 
 ## Pola kinerja
 
-Laman paling sederhana mungkin hanya terdiri dari markup HTML: tanpa CSS, tanpa JavaScript, atau tipe sumber daya lainnya. Untuk me-render laman ini, browser harus memulai permintaan, tunggu dokumen HTML tiba, lakukan parse, bangun DOM dan terakhir render pada layar.
+Laman paling sederhana mungkin hanya terdiri dari markup HTML: tanpa CSS, tanpa JavaScript, atau tipe sumber daya lainnya. Untuk merender laman ini, browser harus memulai permintaan, tunggu dokumen HTML tiba, lakukan parse, bangun DOM dan terakhir render pada layar.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}

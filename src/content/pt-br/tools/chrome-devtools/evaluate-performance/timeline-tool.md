@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use o painel Timeline do Chrome DevTools para registrar e analisar todas as atividades no seu aplicativo enquanto ele está em execução. É o melhor lugar para começar a investigar problemas de desempenho percebidos no seu aplicativo.
 
@@ -190,7 +190,7 @@ em um evento no **Flame Chart**.
 
 ![barra de ferramentas de busca](imgs/find-toolbar.png)
 
-## Aumente o zoom em uma seção da Timeline {:#zoom}
+## Aumentar o zoom em uma seção da Timeline {:#zoom}
 
 Você pode aumentar o zoom em uma seção de uma gravação para facilitar a análise. Você usa
 o painel **Overview** para aproximar a vista em uma seção da gravação. Depois de aumentar o zoom,

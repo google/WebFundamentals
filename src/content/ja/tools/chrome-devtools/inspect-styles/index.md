@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: ページの HTML と CSS を調査して編集します。
 
@@ -71,7 +71,6 @@ DOM ツリービューには、ツリーの現在の状態が表示されます�
 ![非静的に計算される要素](imgs/computed-non-static.png)
 
 `position: fixed` と `position: absolute` 要素の場合は、中央のフィールドに、選択された要素の実際の **offsetWidth × offsetHeight** ピクセル寸法が表示されます。
-
 すべての値は、[Styles] ペインのプロパティ値と同様に、ダブルクリックするだけで変更できます。
 ただし、これは具象要素の位置指定の仕様に従うため、変更が有効になるとは限りません。
 
@@ -88,17 +87,12 @@ DOM ツリービューには、ツリーの現在の状態が表示されます�
 
 1. [**Styles**] ペインで、変更したファイルをクリックします。DevTools で [**Sources**] パネルが表示されます。
 1. ファイルを右クリックします。
-
 1. [**Local modifications**] を選択します。
 
 変更内容を詳しく調べるには、次のようにします。
 
 * 変更が行われた時間 ![変更が行われた時間](imgs/image_25.png){:.inline}を表示するには、最上位のファイル名を展開します。
-
-
-* 変更に対応する [diff](https://en.wikipedia.org/wiki/Diff)（変更前と変更後）を表示するには、第 2 レベルの項目を展開します。
-
-背景がピンク色の行は削除を示し、緑色の行は追加を示します。
+* 変更に対応する [diff](https://en.wikipedia.org/wiki/Diff)（変更前と変更後）を表示するには、第 2 レベルの項目を展開します。背景がピンク色の行は削除を示し、緑色の行は追加を示します。
 
 
 ##  変更を元に戻す

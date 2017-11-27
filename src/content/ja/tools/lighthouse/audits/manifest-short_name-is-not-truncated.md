@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse の監査項目「マニフェストの short_name が切れずにホーム画面上に表示される」のリファレンス ドキュメント。
 
@@ -37,7 +37,6 @@ Chrome の場合は、`short_name` が定義されておらず、`name` プロ�
 
 Lighthouse はマニフェストを取得して、`short_name` プロパティが 12 文字以下であることを検証します。
 `name` プロパティは `short_name` の代わりに使用されることがあるため、Lighthouse では short_name プロパティも代替値としてテストする点に注意してください。
-
 つまり、マニフェストに `short_name` がない場合でも、`name` が 12 文字以下であれば監査には合格します。
 なお、Lighthouse
 で取得するマニフェストは、Chrome がページで使用するマニフェストとは別のファイルであるため、正確な結果が出ない場合があります。

@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Site Does Not Use console.time() In Its Own Scripts" Lighthouse audit.
+description: Reference documentation for the "Avoids console.time() In Its Own Scripts" Lighthouse audit.
 
-{# wf_updated_on: 2016-12-01 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-12-01 #}
 
-# Site Does Not Use console.time() In Its Own Scripts  {: .page-title }
+# Avoids console.time() In Its Own Scripts  {: .page-title }
 
 ## Why the audit is important {: #why }
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Telas de toque, chips de GPS e acelerômetros podem ser difíceis de testar, já que a maioria dos computadores não tem esses recursos. Os emuladores de sensor do Chrome DevTools reduzem a sobrecarga dos testes com a emulação de sensores comuns de dispositivos móveis.
 

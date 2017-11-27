@@ -23,7 +23,7 @@ por ejemplo, omiten la política del mismo origen al engañar a un sitio para qu
 entregue código malicioso junto con el contenido esperado. Se trata de un
 problema grave, ya que los navegadores consideran confiable todo el código que aparece en una página como si
 fuera una parte legítima del origen de seguridad de dicha página. La
-[hoja de referencia de XSS](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet){: .external} es una muestra antigua pero representativa de los métodos que un atacante podría usar para engañar esa confianza al insertar código malicioso. Si un atacante logra insertar _cualquier_clase_de_código, no
+[hoja de referencia de XSS](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet){: .external} es una muestra antigua pero representativa de los métodos que un atacante podría usar para engañar esa confianza al insertar código malicioso. Si un atacante logra insertar _cualquier_ clase de código, no
 habrá vuelta atrás: los datos de la sesión del usuario se verán comprometidos y
 la información que debería ser secreta quedará expuesta a la acción de quienes tengan malas intenciones. Por supuesto que nos
 gustaría evitarlo tanto como sea posible.

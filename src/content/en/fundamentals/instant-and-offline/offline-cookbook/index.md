@@ -1,7 +1,7 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-21 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2014-12-09 #}
 
 # The Offline Cookbook {: .page-title }
@@ -242,7 +242,7 @@ This is very similar to HTTP's
 
 <img src="images/cm-on-push.png">
 
-The [Push API](/web/fundamentals/engage-and-retain/push-notifications/)
+The [Push API](/web/fundamentals/push-notifications)
 is another feature built on top of ServiceWorker. This allows the
 ServiceWorker to be awoken in response to a message from the OS's
 messaging service. This happens even when the user doesn't have a tab open to
@@ -310,7 +310,7 @@ This code updates caches before showing a notification:
 
 [Background sync](/web/updates/2015/12/background-sync)
 is another feature built on top of
-ServiceWorker. It allows you to request background data synchronisation
+ServiceWorker. It allows you to request background data synchronization
 as a one-off, or on an (extremely heuristic) interval. This happens even
 when the user doesn't have a tab open to your site, only the ServiceWorker
 is woken up. You request permission to do this from a page & the user will
@@ -365,7 +365,7 @@ To work around this, there's a proposed API,
 Of course, the user has to grant permission. Making the user part of this
 flow is important, as we can now expect them to be in control of deletion.
 If their device comes under storage pressure, and clearing non-essential
-data doesn't solve it, the user gets to make a judgement call on which items
+data doesn't solve it, the user gets to make a judgment call on which items
 to keep and remove.
 
 For this to work, it requires operating systems to treat "durable" origins
@@ -528,7 +528,7 @@ possible, but still display up-to-date content once it arrives.
       return response.json();
     }).then(function(data) {
       networkDataReceived = true;
-      updatePage();
+      updatePage(data);
     });
 
     // fetch cached data
@@ -616,7 +616,7 @@ and render that instead.
     importScripts('templating-engine.js');
 
     self.addEventListener('fetch', function(event) {
-      var requestURL = new URL(event.request);
+      var requestURL = new URL(event.request.url);
 
       event.respondWith(
         Promise.all([

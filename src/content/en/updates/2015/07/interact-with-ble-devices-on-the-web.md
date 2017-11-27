@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT.
 
-{# wf_updated_on: 2017-02-06 #}
+{# wf_updated_on: 2017-07-19 #}
 {# wf_published_on: 2015-07-21 #}
 {# wf_tags: news,iot,webbluetooth,physicalweb,origintrials #}
 {# wf_featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png #}
@@ -41,11 +41,12 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 
 A subset of the Web Bluetooth API is available in Chrome 56 for Chrome OS,
 Chrome for Android M, and Mac. This means you should be able to
-[request](#request-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
+[request](#request_bluetooth_devices) and [connect to](#connect_to_a_bluetooth_device)
 nearby Bluetooth devices,
-[read](#read-a-bluetooth-characteristic)/[write](#write-to-a-bluetooth-characteristic)
-Bluetooth characteristics, [receive GATT Notifications](#receive-gatt-notifications), and know when a [Bluetooth device gets
-disconnected](#get-disconnected-from-a-bluetooth-device).
+[read](#read_a_bluetooth_characteristic)/[write](#write_to_a_bluetooth_characteristic)
+Bluetooth characteristics, [receive GATT Notifications](#receive_gatt_notifications),
+know when a [Bluetooth device gets disconnected](#get_disconnected_from_a_bluetooth_device), and even [read and write
+to Bluetooth descriptors](#read_and_write_to_bluetooth_descriptors).
 
 On Linux, you still have to go to
 `chrome://flags/#enable-experimental-web-platform-features`, enable the
@@ -361,14 +362,58 @@ invalidated when a device disconnects. This means your code should always
 retrieve (through `getPrimaryService(s)`, `getCharacteristic(s)`, etc.) these
 attributes after reconnecting.
 
+### Read and write to Bluetooth descriptors
+
+Bluetooth GATT descriptors are attributes that describe a characteristic value.
+You can read and write them to in a similar way to Bluetooth GATT
+characteristics.
+
+Let's see for instance how to read the user description of the measurement
+interval of the device's health thermometer.
+
+In the example below, `health_thermometer` is the [Health
+Thermometer service](https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.service.health_thermometer.xml), `measurement_interval` the [Measurement Interval characteristic](https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.measurement_interval.xml), and `gatt.characteristic_user_description` the [Characteristic User Description descriptor](https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.descriptor.gatt.characteristic_user_description.xml).
+
+<pre class="prettyprint">
+navigator.bluetooth.requestDevice({ filters: [{ services: ['health_thermometer'] }] })
+.then(device => device.gatt.connect())
+.then(server => server.getPrimaryService('health_thermometer'))
+.then(service => service.getCharacteristic('measurement_interval'))
+<strong>.then(characteristic => characteristic.getDescriptor('gatt.characteristic_user_description'))
+.then(descriptor => descriptor.readValue())
+.then(value => {
+  let decoder = new TextDecoder('utf-8');
+  console.log('User Description: ' + decoder.decode(value));
+})</strong>
+.catch(error => { console.log(error); });
+</pre>
+
+Now that we've read the user description of the measurement interval of the
+device's health thermometer, let's see how to update it and write a custom
+value.
+
+<pre class="prettyprint">
+navigator.bluetooth.requestDevice({ filters: [{ services: ['health_thermometer'] }] })
+.then(device => device.gatt.connect())
+.then(server => server.getPrimaryService('health_thermometer'))
+.then(service => service.getCharacteristic('measurement_interval'))
+.then(characteristic => characteristic.getDescriptor('gatt.characteristic_user_description'))
+<strong>.then(descriptor => {
+  let encoder = new TextEncoder('utf-8');
+  let userDescription = encoder.encode('Defines the time between measurements.');
+  return descriptor.writeValue(userDescription);
+})</strong>
+.catch(error => { console.log(error); });
+</pre>
+
 ## Samples, Demos and Codelabs
 
 All [Web Bluetooth samples](https://googlechrome.github.io/samples/web-bluetooth/index.html) below
-have been tested with the Web Bluetooth flag enabled. To enjoy these samples to
-their fullest, I recommend you install the
+have been successfully tested. To enjoy these samples to their fullest, I
+recommend you install the
 [BLE Peripheral Simulator Android App](https://play.google.com/store/apps/details?id=io.github.webbluetoothcg.bletestperipheral)
-which simulates a BLE Peripheral with a Battery Service or a Heart Rate
-Service.
+which simulates a BLE peripheral with a Battery Service, a Heart Rate
+Service, or a Health Thermometer Service.
 
 ### Beginner
 
@@ -379,6 +424,7 @@ Service.
 - [Notifications](https://googlechrome.github.io/samples/web-bluetooth/notifications.html) - start and stop characteristic notifications from a BLE Device.
 - [Device Disconnect](https://googlechrome.github.io/samples/web-bluetooth/device-disconnect.html) - disconnect and get notified from a disconnection of a BLE Device after connecting to it.
 - [Get Characteristics](https://googlechrome.github.io/samples/web-bluetooth/get-characteristics.html) - get all characteristics of an advertised service from a BLE Device.
+- [Get Descriptors](https://googlechrome.github.io/samples/web-bluetooth/get-descriptors.html) - get all characteristics' descriptors of an advertised service from a BLE Device.
 
 ### Combining multiple operations
 
@@ -388,6 +434,8 @@ Service.
 - [Discover Services & Characteristics](https://googlechrome.github.io/samples/web-bluetooth/discover-services-and-characteristics.html) - discover all accessible primary services and their characteristics from a BLE Device.
 - [Automatic Reconnect](https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html) - reconnect to a disconnected BLE device using an exponential backoff algorithm.
 - [Read Characteristic Value Changed](https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html) - read battery level and be notified of changes from a BLE Device.
+- [Read Descriptors](https://googlechrome.github.io/samples/web-bluetooth/read-descriptors.html) - read all characteristic's descriptors of a service from a BLE Device.
+- [Write Descriptor](https://googlechrome.github.io/samples/web-bluetooth/write-descriptor.html) - write to the descriptor "Characteristic User Description" on a BLE Device.
 
 Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/demos) and [official Web Bluetooth Codelabs](https://github.com/googlecodelabs?query=bluetooth) as well.
 
@@ -426,23 +474,23 @@ Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/de
 
 ## Dev Tips
 
-A Bluetooth Console is available in Chrome OS developer shell. Press [ Ctrl ] [
-Alt ] [ T ] to open a browser tab terminal and use the `bt_console` command to
-start poking around your bluetooth settings. The `help` command will give you a
-list of all available commands.
+A "Bluetooth Internals" page is available in Chrome at
+`chrome://bluetooth-internals` so that you can inspect everything about
+nearby Bluetooth devices: status, services, characteristics, and descriptors.
 
-<img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-developer-console.png" alt="Bluetooth Developer Console screenshot"/>
+<figure>
+  <img src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-internals.png" alt="Bluetooth Internals">
+</figure>
 
-I would recommend you check out the official [Bluetooth debug page](https://sites.google.com/a/chromium.org/dev/developers/how-tos/file-web-bluetooth-bugs) as debugging Bluetooth can be hard sometimes.
+I would also recommend you check out the official ["How to file Web Bluetooth bugs"](https://sites.google.com/a/chromium.org/dev/developers/how-tos/file-web-bluetooth-bugs) page as debugging Bluetooth can be hard sometimes.
 
 ## What's next
 
 Check the [browser and platform implementation
-status](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md)
+status](https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md)
 first to know which parts of the Web Bluetooth API are currently being implemented.
 
-Though it's still incomplete, here's a sneak peek of what to expect in the
-coming months:
+Though it's still incomplete, here's a sneak peek of what to expect in the near future:
 
 - [Scanning for nearby BLE advertisements](https://github.com/WebBluetoothCG/web-bluetooth/pull/239)
   will happen with `navigator.bluetooth.requestLEScan()`.
@@ -455,11 +503,12 @@ coming months:
   removed from a Bluetooth GATT Service.
 
 At the time of writing, Chrome OS, Android M, Linux, and Mac are [the most advanced
-platforms](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md).
+platforms](https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md).
 Windows 8.1+ and iOS will be supported as much as feasible by the platforms.
 
 ## Resources
 
+- Stack Overflow: [https://stackoverflow.com/questions/tagged/web-bluetooth](https://stackoverflow.com/questions/tagged/web-bluetooth)
 - Web Bluetooth Community: [https://plus.google.com/communities/108953318610326025178](https://plus.google.com/communities/108953318610326025178)
 - Chrome Feature Status: [https://www.chromestatus.com/feature/5264933985976320](https://www.chromestatus.com/feature/5264933985976320)
 - Implementation Bugs: [https://crbug.com/?q=component:Blink>Bluetooth](https://crbug.com/?q=component:Blink>Bluetooth)

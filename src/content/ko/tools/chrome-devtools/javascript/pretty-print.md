@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools에서 Pretty-Print 아이콘을 클릭하여 자바스크립트를 읽기 쉬운 형식으로 변형합니다.
 

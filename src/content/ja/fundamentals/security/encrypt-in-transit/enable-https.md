@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: サーバーでの HTTPS の有効化は、ウェブページのセキュリティを保護するために不可欠です。 
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-27 #}
 
 # サーバーでの HTTPS の有効化 {: .page-title }
@@ -273,7 +273,6 @@ jquery.com など、ほとんどの会社はこのサービスを提供してい
 * Cookie には常に secure フラグを設定します。
 
 最初に [StrictTransportSecurity](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) を使用して、`http://` の手順に従う場合にも、常に HTTPS 経由でサーバーに接続する必要があることをクライアントに伝達します。
-
 これにより、[SSL ストリッピング](http://www.thoughtcrime.org/software/sslstrip/){: .external } などの攻撃から守られ、[HTTPS に HTTP をリダイレクトする](#redirect-http-to-https)で有効化された
 `301 redirect`
 のラウンドトリップ コストを回避します。
@@ -290,9 +289,6 @@ jquery.com など、ほとんどの会社はこのサービスを提供してい
 クライアントが HTTP 経由で（認証用やサイト設定用などの）Cookie を送信しないようにすることも重要です。
 たとえば、ユーザーの認証 Cookie がプレーン テキストで公開されると、他のすべてのことを正しく行っていても、セッション全体のセキュリティが保証されなくなります。
 
-
-
-
 そのため、ウェブ アプリケーションで設定される Cookie には常に secure フラグを設定するようにアプリケーションを変更してください。[この OWASP ページ](https://www.owasp.org/index.php/SecureFlag)で、複数のアプリケーション フレームワークにおける secure フラグの設定方法を説明しています。
 すべてのアプリケーション フレームワークに、フラグを設定するための方法が用意されています。
 
@@ -307,16 +303,12 @@ jquery.com など、ほとんどの会社はこのサービスを提供してい
 ###  検索ランキング
 
 [Google では、HTTPS を優れた検索品質のインジケーターとして使用しています](https://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html)。また、Google は、検索ランクを維持したまま[サイトを転送、移動、または移行する方法](https://support.google.com/webmasters/topic/6029673)に関するガイドも発行しています。
-
-
 Bing も[ウェブマスター向けガイドライン](http://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a)を発行しています。
 
 
 ### パフォーマンス
 
 コンテンツとアプリケーション層がよく調整されている場合（[Steve Souders の著作](https://stevesouders.com/){: .external }の素晴らしいアドバイスを参照）、残りの TLS のパフォーマンス問題は、一般的に、全体的なアプリケーションのコストを基準に考えると小さなものです。
-
-
 さらに、これらのコストを削減し、償却することができます
 （TLS の最適化に関する素晴らしいアドバイスと一般事項については、Ilya Grigorik による [High Performance BrowserNetworking](http://chimera.labs.oreilly.com/books/1230000000545) を参照してください）。
 Ivan Ristic の[『OpenSSL Cookbook』](https://www.feistyduck.com/books/openssl-cookbook/)および[『Bulletproof SSL And TLS』](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)も参照してください。
@@ -334,7 +326,7 @@ Chris Palmer は、[Chrome Dev Summit 2014 で HTTPS と HTTP/2 のパフォー�
 
 検索エンジンは HTTPS に移行しているため、HTTPS に移行すると、今より多くのリファラー ヘッダーを目にすることになるでしょう。
 
-警告: [HTTP RFC](https://tools.ietf.org/html/rfc2616#section-15.1.3) によると、参照ページがセキュアなプロトコルで転送される場合、クライアントは、（非セキュアな）HTTP リクエストにリファラー ヘッダー項目を含めることは**できません**。
+Warning: [HTTP RFC](https://tools.ietf.org/html/rfc2616#section-15.1.3) によると、参照ページがセキュアなプロトコルで転送される場合、クライアントは、（非セキュアな）HTTP リクエストにリファラー ヘッダー項目を含めることは**できません**。
 
 ###  広告収入
 
@@ -347,7 +339,6 @@ Chris Palmer は、[Chrome Dev Summit 2014 で HTTPS と HTTP/2 のパフォー�
 
 広告主は（このページの「サーバーでの HTTPS の有効化」セクションの説明に従うなどして）、少なくとも HTTPS を介して広告サービスを提供する必要があります。
 ほとんどの場合これは既に実施されています。HTTPS のサービス提供を行っていない広告主には、少なくとも提供を開始するように依頼する必要があります。
-
 十分な数の広告主と適切に相互運用できるようになるまで、このガイドの[イントラサイト URL を相対 URL にする](#make-intrasite-urls-relative)の実施は遅らせることをおすすめします。
 
 

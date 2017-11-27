@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-09-28 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-28 #}
 
 # Pola PRPL {: .page-title }
@@ -22,7 +22,7 @@ mereka dapat melakukannya di aplikasi asli.
 Di waktu yang bersamaan, sebagian besar komputasi kami telah dipindahkan dari mesin desktop yang kuat
 dengan koneksi yang cepat dan andal untuk perangkat seluler
 berkualitas rendah dengan koneksi yang cenderung lambat, tidak andal, atau keduanya. Ini
-terutama kerap terjadi di belahan dunia dengan miliaran datangnya pengguna 
+terutama kerap terjadi di belahan dunia dengan miliaran datangnya pengguna
 online.
 
 Sayangnya, pola yang dirancang untuk membangun dan menerapkan aplikasi web
@@ -108,7 +108,7 @@ menggunakan [Komponen Web](http://webcomponents.org/):
 ![diagram aplikasi yang memiliki dua tampilan, yang memiliki dependensi individual dan bersama
 ](images/app-build-components.png)
 
-Catatan: meskipun HTML Imports adalah strategi bundling yang dipilih Polymer, Anda dapat
+Note: meskipun HTML Imports adalah strategi bundling yang dipilih Polymer, Anda dapat
 menggunakan pemisahan-kode dan pemotongan berbasis rute untuk mendapatkan persiapan serupa yang didapatkan dengan
 bundler modul JavaScript modern
 
@@ -153,9 +153,9 @@ menghasilkan dua pembangunan versi:
 -   Versi yang tidak dibundel didesain untuk kombinasi server/browser yang mendukung
     HTTP/2 untuk mengirim sumber daya yang diperlukan browser untuk paint pertama yang cepat 
     sambil mengoptimalkan caching. Pengiriman sumber daya ini dapat dipicu
-    secara efisien menggunakan [`<link rel="preload">`][Petunjuk sumber daya] atau [Push HTTP/2].
+    secara efisien menggunakan [`<link rel="preload">`][Resource hints] atau [HTTP/2 Push].
 
--   Versi bundel didesain untuk meminimalkan jumlah perjalanan pulang pergi yang diperlukan untuk
+-   Versi yang bundel didesain untuk meminimalkan jumlah perjalanan pulang pergi yang diperlukan untuk
     menjalankan aplikasi pada kombinasi server/browser yang tidak mendukung
     server push.
 
@@ -169,7 +169,7 @@ fragmen. Diagram di bawah ini menunjukkan bagaimana aplikasi yang sederhana dibu
 Komponen Web:
 
 ![diagram aplikasi yang sama dengan sebelumnya, dengan adanya tiga dependensi
-yang di-bundle](images/app-build-bundles.png)
+yang dibundel](images/app-build-bundles.png)
 
 Setiap dependensi yang dibagikan dengan dua atau lebih fragmen dibundel dengan shell dan
 dependensi statisnya.
@@ -225,7 +225,7 @@ berarti sumber daya tersebut dapat di-cache secara efisien dan dibagikan antar l
 Push HTTP/2 harus digunakan dengan saksama, karena data dipaksa ke browser,
 bahkan jika file sudah berada di cache lokal browser atau bandwidth sudah di
 saturasi. Jika dilakukan dengan keliru, kinerja akan terpengaruh,
-[`<link rel="preload">`][Petunjuk sumber daya] bisa menjadi alternatif yang baik untuk memperbolehkan
+[`<link rel="preload">`][Resource hints] bisa menjadi alternatif yang baik untuk memperbolehkan
 browser mengambil keputusan cerdas tentang penentuan prioritas permintaan ini.  
 
 ## Kesimpulan
@@ -247,8 +247,8 @@ PRPL dapat membantu mengirim kode fungsi minimal yang dibutuhkan untuk membuat r
 Anda mendapat pada interaktif, dengan mengatasi tantangan ini.
 
 [HTTP/2]: /web/fundamentals/performance/http2/
-[Petunjuk sumber daya]: https://developers.google.com/web/updates/2016/03/link-rel-preload
-[Push HTTP/2]: /web/fundamentals/performance/http2/#server-push
+[Resource hints]: https://developers.google.com/web/updates/2016/03/link-rel-preload
+[HTTP/2 Push]: /web/fundamentals/performance/http2/#server-push
 
 
 {# wf_devsite_translation #}

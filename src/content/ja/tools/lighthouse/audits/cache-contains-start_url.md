@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse の監査項目「キャッシュにマニフェストの start_url を保持する」のリファレンス ドキュメント。
 
@@ -20,7 +20,6 @@ description: Lighthouse の監査項目「キャッシュにマニフェスト�
 
 ホーム画面にアプリを追加するための基本的な手順については、[ユーザーのホーム画面にウェブアプリを追加する](https://codelabs.developers.google.com/codelabs/add-to-home-screen)
 をご覧ください。
-
 この実践形式のコードラボでは、"Add to Homescreen" 機能を既存のアプリに追加する方法を順を追って説明しています。
 このコードラボの内容を参考にして、自身のアプリで "Add to Homescreen" 機能を有効にしてください。
 
@@ -44,8 +43,6 @@ Service Workerでファイルをキャッシュしてオフラインでの使用
 この監査の欠点として、Service Worker に `start_url`
 リクエストを解決させずに、キャッシュの中身を直接チェックしているという点が挙げられます。
 そのため、`start_url` の値と厳密に一致するリソースがキャッシュに存在しなくても、実際に Service Worker がキャッシュに存在する別のリソースにリダイレクトしてリクエストを正常に解決している場合は、検出漏れが発生する可能性があります。
-
-
 逆に、`start_url` に一致するリソースがキャッシュに含まれていても、Service Worker が存在しないリソースにリクエストをリダイレクトしていると、誤検知が発生する可能性があります
 
 

@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Usa el panel Application para inspeccionar, modificar y depurar manifiestos de apps web, service worker y cachés de service worker.
 
-{# wf_updated_on: 2016-07-25 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-07-25 #}
 
 # Depurar Progressive Web App {: .page-title }
@@ -39,14 +39,14 @@ aspecto de la app durante el inicio.
 Guías relacionadas:
 
 * [Mejora la experiencia del usuario con el manifiesto de apps
-  web](/web/fundamentals/engage-and-retain/web-app-manifest)
+  web](/web/fundamentals/web-app-manifest)
 * [Uso de banners de instalación
-  de app](/web/fundamentals/engage-and-retain/app-install-banners)
+  de app](/web/fundamentals/app-install-banners)
 
 Cuando hayas configurado el manifiesto, podrás usar el subpanel **Manifest** del panel
 **Application** para inspeccionarlo.
 
-![manifest pane][manifest]
+![panel manifest][manifest]
 
 * Para ver el código del manifiesto, haz clic en el vínculo debajo de la etiqueta **App Manifest**
  (`https://airhorner.com/manifest.json` en la captura de pantalla anterior).
@@ -85,12 +85,12 @@ correctamente tu app a tu biblioteca de escritorio, también funcionará en disp
 móviles.
 
 Si deseas probar la experiencia real en dispositivos móviles, puedes
-conectar un dispositivo móvil real a DevTools a través de [la depuración remota][Depuración
-remota] y hacer clic en el botón **Add to Homescreen** (en DevTools)
+conectar un dispositivo móvil real a DevTools a través de [la depuración remota][remote
+debugging] y hacer clic en el botón **Add to Homescreen** (en DevTools)
 para que aparezca la solicitud “Add to Homescreen” en el dispositivo móvil conectado.
 
 [shelf]: images/io.png
-[Depuración remota]: /web/tools/chrome-devtools/debug/remote-debugging/remote-debugging
+[remote debugging]: /web/tools/chrome-devtools/debug/remote-debugging/remote-debugging
 
 ## Service worker {:#service-workers}
 
@@ -103,12 +103,12 @@ Guías relacionadas:
 
 * [Introducción a Service Workers](/web/fundamentals/primers/service-worker)
 * [Notificaciones push: oportunas, relevantes y
-  precisas](/web/fundamentals/engage-and-retain/push-notifications)
+  precisas](/web/fundamentals/push-notifications)
 
 El subpanel **Service Workers** del panel **Application** es el punto central de
 DevTools donde se inspeccionan y depuran los service worker.
 
-![service worker pane][sw]
+![panel service worker][sw]
 
 * Si el service worker está instalado en la página actualmente abierta, lo verás
   en la lista de este subpanel. Por ejemplo, en la captura de pantalla anterior, hay un proceso
@@ -151,11 +151,11 @@ DevTools donde se inspeccionan y depuran los service worker.
 Si el service worker causa algún error, aparece una etiqueta llamada **Errors**.
 
 
-![service worker with errors][errors]
+![service worker con errores][errors]
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ## Cachés de service worker {:#caches}
@@ -163,7 +163,7 @@ Si el service worker causa algún error, aparece una etiqueta llamada **Errors**
 En el subpanel **Cache Storage**, se proporciona una lista de solo lectura de los recursos que se almacenaron
 en caché usando la [API de caché][sw-cache] (del service worker).
 
-![service worker cache pane][sw-cache-pane]
+![panel de caché del service worker][sw-cache-pane]
 
 Ten en cuenta que la primera vez que abras un caché y agregues un recurso, es posible que DevTools
 no detecte el cambio. Vuelve a cargar la página para ver la caché.
@@ -171,7 +171,7 @@ no detecte el cambio. Vuelve a cargar la página para ver la caché.
 Si tienes uno o más cachés abiertos, los verás enumerados debajo del menú desplegable
 **Cache Storage**.
 
-![multiple service worker caches][multiple-caches]
+![caché de varios service worker][multiple-caches]
 
 [sw-cache]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
 [sw-cache-pane]: images/sw-cache.png

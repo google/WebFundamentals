@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and manage storage, databases, and caches from the Application panel.
 
-{# wf_updated_on: 2016-07-28 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Inspect and Manage Storage, Databases, and Caches {: .page-title }
@@ -118,7 +118,7 @@ Click on a database table to view that table's data.
   **refresh** button (![refresh button][refresh]{:.inline}) to view your
   updates.
 * Enter a space-separated or comma-separated list of column names in the
-  **Visibile columns** textfield to only display those columns.
+  **Visible columns** textfield to only display those columns.
 
 [wsc]: /web/tools/chrome-devtools/manage-data/imgs/web-sql-console.png
 [wst]: /web/tools/chrome-devtools/manage-data/imgs/web-sql-table.png

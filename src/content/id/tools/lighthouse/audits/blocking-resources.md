@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk audit Lighthouse "Situs Tidak Menggunakan Tautan Tag Yang Menunda Gambar Pertama" dan "Situs Tidak Menggunakan Tag Skrip Di Header Yang Menunda Gambar Pertama".
 
-{# wf_updated_on: 2016-12-01 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-01 #}
 
 # Situs Tidak Menggunakan Sumber Daya Yang Menunda Gambar Pertama  {: .page-title }
@@ -24,7 +24,7 @@ Sebagaimana disebutkan dalam [Cara implementasi audit](#implementation), Lightho
 menandai tiga tipe tautan yang memblokir rendering: impor skrip, stylesheet, dan
 HTML. Cara Anda mengoptimalkan bergantung pada tipe sumber daya yang sedang Anda gunakan.
 
-Catatan: Bila sumber daya disebutkan sebagai "penting" di bawah ini, berarti
+Note: Bila sumber daya disebutkan sebagai "penting" di bawah ini, berarti
 sumber daya itu diperlukan untuk gambar pertama atau penting untuk
 fungsionalitas inti laman tersebut.
 

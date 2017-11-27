@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用 Chrome DevTools 动画检查器检查和修改动画。
 
@@ -26,6 +26,7 @@ description:使用 Chrome DevTools 动画检查器检查和修改动画。
 Chrome DevTools 动画检查器有两个主要用途。 
 
 * 检查动画。您希望慢速播放、重播或检查动画组的源代码。
+ 
 * 修改动画。您希望修改动画组的时间、延迟、持续时间或关键帧偏移。
 当前不支持编辑贝塞尔曲线和关键帧。
  

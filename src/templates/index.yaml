@@ -2,6 +2,7 @@
 # ATTENTION - This file is auto-generated, changes must be made to the template!
 project_path: /web/_project.yaml
 book_path: /web/{{section}}/_book.yaml
+{{#if title}}title: {{title}}{{/if}}
 landing_page:
 
   header:
@@ -108,7 +109,7 @@ landing_page:
         <h4>{{articles.12.title}}</h4>
         <p>{{{articles.12.description}}} <a href="{{articles.12.url}}">Read more</a></p>
         <h4>Even more</h4>
-        <p>See more from the <a href="/web/{{section}}/{{articles.12.yearPublished}}/">archives</a>
+        <p>See more from the <a href="/web/{{section}}/{{articles.12.datePublishedYear}}/">archives</a>
         and stay up to date with the latest updates by <a href="https://developers.google.com/web/{{section}}/rss.xml">subscribing</a> to our RSS feed.</p>
         <link rel="alternate" type="application/rss+xml" title="RSS" href="https://developers.google.com/web/{{section}}/rss.xml">
         <link rel="alternate" type="application/atom+xml" title="ATOM" href="https://developers.google.com/web/{{section}}/atom.xml">

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 코드를 한 번에 한 줄씩 또는 한 함수씩 실행함으로써, 데이터와 페이지의 변경사항을 관찰하여 무슨 일이 발생하는지 정확히 이해할 수 있습니다.
 
@@ -106,7 +106,8 @@ Scope 창은 로컬, 클로저,
 
 어두운 속성은 열거 가능합니다. 그보다 밝고 흐릿한 속성은
 그렇지 않습니다. 자세한 내용은 다음의 Stack Overflow 스레드를 참조하세요.
-[Chrome Developer Tools Scope 패널에서 색상은 어떤 의미인가요?](What do the colors mean in Chrome Developer Tools Scope panel?)
+[Chrome Developer Tools Scope
+패널에서 색상은 어떤 의미인가요?](What do the colors mean in Chrome Developer Tools Scope panel?)
 
 ## 호출 스택
 
@@ -222,7 +223,7 @@ DOM 요소를 선택합니다. `onClick` 함수는
 
 코드 실행이 일시 중지하면 처리 중인 데이터를 관찰 및 수정할 수 있습니다. 이는 예기치 않은 전달된 매개변수 또는 잘못된 값을 가진 듯한 변수를 추적하려고 시도할 때 중요합니다.
 
-**Show/Hide drawer**![창 표시/숨기기](imgs/image_16.png){: .inline}를 클릭하여 Console 창을 표시하거나 <kbd class="kbd">Esc</kbd>를 누릅니다. 단계별로 실행하는 동안 콘솔이 열린 상태에서 다음을 수행할 수 있습니다.
+**Show/Hide drawer** ![Show/Hide drawer](imgs/image_16.png){: .inline}를 클릭하여 Console 창을 표시하거나 <kbd class="kbd">Esc</kbd> 키를 누릅니다. 단계별로 실행하는 동안 콘솔이 열린 상태에서 다음을 수행할 수 있습니다.
 
 * 변수의 이름을 입력하여 현재 함수의 범위에서 현재 값을 봅니다.
 * 자바스크립트 대입문을 입력하여 값을 변경합니다.
@@ -262,7 +263,7 @@ DOM 요소를 선택합니다. `onClick` 함수는
 Sources 패널의 **Threads** 창을 사용하여 다른 스레드(예: 서비스 워커 또는 웹 워커 스레드)를
 일시 중지, Step Into 및 검사합니다.
 
-Threads 창을 보여주기 위해 이 섹션에서는 다음 데모를 사용합니다:
+Threads 창을 보여주기 위해 이 섹션에서는 다음 데모를 사용합니다.
 [웹 워커 기본 예시](http://mdn.github.io/simple-web-worker/).
 
 앱에서 DevTools를 열면 메인 스크립트가

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para la auditoría de Lighthouse "El sitio no usa SQL Web".
 
@@ -11,7 +11,7 @@ description: Documentación de referencia para la auditoría de Lighthouse "El s
 
 SQL Web dejó de estar disponible. Consulta la [Base de datos de SQL Web][spec] para obtener más información.
 
-[especificación]: https://www.w3.org/TR/webdatabase/
+[spec]: https://www.w3.org/TR/webdatabase/
 
 ## Cómo aprobar la auditoría {: #how }
 
@@ -22,7 +22,7 @@ Consulta [Información general del almacenamiento web][overview] para obtener in
 disponibles.
 
 [indexeddb]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
-[información general]: /web/fundamentals/instant-and-offline/web-storage/
+[overview]: /web/fundamentals/instant-and-offline/web-storage/
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 

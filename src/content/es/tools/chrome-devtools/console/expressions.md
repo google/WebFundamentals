@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Explora el estado de cualquier elemento en tu página desde la consola de DevTools.
 
@@ -46,7 +46,7 @@ Usa las siguientes combinaciones de teclas para seleccionar elementos:
 <table class="responsive">
   <thead>
     <tr>
-      <th colspan="2">Descripción &amp; de la combinación de teclas</th>
+      <th colspan="2">Combinación de teclas y descripción</th>
     </tr>
   </thead>
   <tbody>

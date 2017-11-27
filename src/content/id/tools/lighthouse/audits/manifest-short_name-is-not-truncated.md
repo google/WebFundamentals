@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk "Manifes short_name tidak akan terpotong ketika ditampilkan pada homescreen" audit Lighthouse.
 
@@ -9,9 +9,9 @@ description: Dokumentasi referensi untuk "Manifes short_name tidak akan terpoton
 
 ## Mengapa audit itu penting {: #why }
 
-Ketika pengguna menambahkan aplikasi web Anda ke homescreen, properti `short_name` ditampilkan
+Ketika pengguna menambahkan aplikasi web Anda ke layar beranda, properti `short_name` ditampilkan
 sebagai label di sebelah ikon aplikasi. Bila `short_name` lebih panjang
-dari 12 karakter, itu akan terpotong di homescreen.
+dari 12 karakter, itu akan terpotong di layar beranda.
 
 Perhatikan bahwa, jika tidak terdapat `short_name`, Chrome bisa kembali ke properti
 `name` jika itu cukup singkat.

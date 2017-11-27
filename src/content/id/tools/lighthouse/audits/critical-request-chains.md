@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk audit Lighthouse "Rantai Permintaan Penting".
 
@@ -14,7 +14,7 @@ Critical Rendering Path (CRP). CRP memungkinkan browser memuat laman secepat
 mungkin dengan memprioritaskan sumber daya mana yang akan dimuat serta
 urutan pemuatannya.
 
-Periksa dokumen [Jalur Rendering
+Lihat dokumen [Jalur Rendering
 Penting](/web/fundamentals/performance/critical-rendering-path/) untuk mengetahui
 selengkapnya.
 

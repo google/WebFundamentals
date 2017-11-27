@@ -12,10 +12,7 @@ book_path: /web/fundamentals/_book.yaml
 ユーザーのログインを実行するには、ブラウザのパスワード マネージャーから認証情報を取得し、その情報を使用してログイン処理を行う必要があります。
 
 
-ユーザーの認証情報を取得するには、認証オブジェクトを引数に指定して解決される Promise を返す `navigator.credentials.get()` を使用します。
-
-取得される認証オブジェクトは、[`PasswordCredential`](#authenticate_with_a_server) または [`FederatedCredential`](#authenticate_with_an_identity_provider) のいずれかです。
-
+ユーザーの認証情報を取得するには、認証オブジェクトを引数に指定して解決される Promise を返す `navigator.credentials.get()` を使用します。取得される認証オブジェクトは、[`PasswordCredential`](#authenticate_with_a_server) または [`FederatedCredential`](#authenticate_with_an_identity_provider) のいずれかです。
 認証情報が存在しない場合は、`null` が返されます。
 
 
@@ -50,7 +47,6 @@ book_path: /web/fundamentals/_book.yaml
         <code>Boolean</code><br>
          <code>true</code> に設定すると  <code>PasswordCredentials</code> を取得します。
         既定値は  <code>false</code> です。</td>
-
     </tr>
     <tr>
       <td>
@@ -59,10 +55,8 @@ book_path: /web/fundamentals/_book.yaml
       <td>
         <code>Object</code><br>
          <code>provider</code> または  <code>protocol</code> をキーとして受け取るオブジェクト。パラメータの配列が含まれます。
- <code>provider</code> オブジェクトには
+         <code>provider</code> オブジェクトには
         プロバイダを識別する文字列配列を指定します。現在、 <code>protocol</code> を実装しているブラウザはありません。</td>
-
-
     </tr>
     <tr>
       <td>
@@ -71,7 +65,6 @@ book_path: /web/fundamentals/_book.yaml
       <td>
         <code>Boolean</code><br>
          <code>true</code> に設定すると Account Chooser UI を非表示にします。</td>
-
     </tr>
   </tbody>
 </table>
@@ -141,7 +134,6 @@ navigator.credentials.get({
 </pre>
 
 ユーザーが使用するアカウントを選択したら、その選択に基づいて、`PasswordCredential` または `FederatedCredential` で Promise が解決されます。
-
 その後、[認証情報のタイプを決定し](#determine-credential-type)、提供された認証情報でユーザーを認証します。
 
 
@@ -191,9 +183,7 @@ navigator.credentials.get({
 `undefined` 値は、次の場合に返されます。
 
 * ユーザーが自動ログイン機能を認識しなかった（ブラウザ インスタンスごとに一度）。
-
 * ユーザーの認証情報がオリジンに保存されていない、または 3 つ以上の認証オブジェクトが保存されている。
-
 * ユーザーがオリジンにユーザー メディエーションが必要であることをリクエストしている。
 
 
@@ -210,15 +200,15 @@ navigator.credentials.get({
 POST 送信すると、`fetch` によって、`PasswordCredential` オブジェクトが、`multipart/form-data` としてエンコードされた `FormData` オブジェクトに自動的に変換されます。
 
 
-    ------
+    ------WebKitFormBoundaryOkstjzGAv8zab97W
+    Content-Disposition: form-data; name="id"
 
+    chromedemojp@gmail.com
+    ------WebKitFormBoundaryOkstjzGAv8zab97W
+    Content-Disposition: form-data; name="password"
 
-
-    ------
-
-
-
-    ------
+    testtest
+    ------WebKitFormBoundaryOkstjzGAv8zab97W--
 
 注: `XMLHttpRequest` を使用して、`PasswordCredential` をサーバーに POST 送信することはできません。
 
@@ -239,7 +229,6 @@ POST 送信すると、`fetch` によって、`PasswordCredential` オブジェ�
       <td>
         <code>String</code><br>
         ユーザー ID の文字列。</td>
-
     </tr>
     <tr>
       <td>
@@ -248,7 +237,6 @@ POST 送信すると、`fetch` によって、`PasswordCredential` オブジェ�
       <td>
         <code>String</code><br>
         JavaScript を使用して取得できない不透明型のパスワード。</td>
-
     </tr>
     <tr>
       <td>
@@ -257,7 +245,6 @@ POST 送信すると、`fetch` によって、`PasswordCredential` オブジェ�
       <td>
         <code>String</code><br>
         ユーザー名の文字列。</td>
-
     </tr>
     <tr>
       <td>
@@ -266,7 +253,6 @@ POST 送信すると、`fetch` によって、`PasswordCredential` オブジェ�
       <td>
         <code>String</code><br>
         ユーザー アイコン画像の URL 文字列。</td>
-
     </tr>
   </tbody>
 </table>

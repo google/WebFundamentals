@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2015-08-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Konstruksi Pohon Render, Layout, dan Menggambar {: .page-title }
@@ -42,11 +42,11 @@ Untuk mengonstruksikan pohon render, browser secara kasar kira-kira melakukan ya
 1. Untuk setiap simpul yang terlihat, temukan aturan CSSOM yang sesuai dan terapkan.
 1. Pancarkan simpul yang terlihat dengan materi dan gaya terkomputasi.
 
-Catatan: Untuk catatan, perhatikan bahwa `visibility: hidden` berbeda dari `display: none`. Yang pertama membuat elemen tidak terlihat, namun elemen itu masih menempati ruang dalam layout (yaitu dirender sebagai kotak kosong), sementara yang kedua (`display: none`) meniadakan seluruh elemen dari pohon render sedemikian hingga elemen itu tidak terlihat dan bukan merupakan bagian dari layout.
+Note: Untuk catatan, perhatikan bahwa `visibility: hidden` berbeda dari `display: none`. Yang pertama membuat elemen tidak terlihat, namun elemen itu masih menempati ruang dalam layout (yaitu dirender sebagai kotak kosong), sementara yang kedua (`display: none`) meniadakan seluruh elemen dari pohon render sedemikian hingga elemen itu tidak terlihat dan bukan merupakan bagian dari layout.
 
 Keluaran akhirnya adalah sebuah render yang berisi materi serta informasi gaya dari semua materi yang terlihat pada layar.  **Dengan telah ditetapkannya pohon render, kita bisa melanjutkan ke tahapan "layout".**
 
-Sejauh ini kita telah menghitung simpul mana yang harus terlihat dan gaya terkomputasi, namun kita belum menghitung posisi dan ukuran persisnya di dalam [tampilan yang terlihat](/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport) perangkat---itulah tahap "layout", disebut juga "mengubah posisi/geometri."
+Sejauh ini kita telah menghitung simpul mana yang harus terlihat dan gaya terkomputasi, namun kita belum menghitung posisi dan ukuran persisnya di dalam [tampilan yang terlihat](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) perangkat---itulah tahap "layout", disebut juga "mengubah posisi/geometri."
 
 Untuk menghitung ukuran dan posisi persisnya dari setiap objek pada laman, browser akan memulai di akar pohon render dan menjalankannya. Mari kita lihat contoh praktik sederhana berikut ini:
 

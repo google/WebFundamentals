@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Organiza recursos por marco, dominio, tipo u otros criterios.
 
@@ -53,13 +53,13 @@ Los recursos se ordenarán por marco solamente.
 ![sin carpetas](imgs/no-folders.png)
 
 [frames-pane]: /web/tools/chrome-devtools/manage-data/imgs/frames-pane.png
-[frames]: /web/tools/chrome-devtools/manage-data/imgs/frames.png
-[resource]: /web/tools/chrome-devtools/manage-data/imgs/resource.png
+[marcos]: /web/tools/chrome-devtools/manage-data/imgs/frames.png
+[recurso]: /web/tools/chrome-devtools/manage-data/imgs/resource.png
 
 ## Organizar recursos por dominio y carpeta {:#sources}
 
-Para ver recursos organizados por dominio y directorio, usa el panel **Sources**
-.
+Para ver recursos organizados por dominio y directorio, usa el panel **Sources**.
+
 
 ![panel sources](imgs/sources.png)
 

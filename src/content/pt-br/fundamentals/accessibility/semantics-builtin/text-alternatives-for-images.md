@@ -25,7 +25,7 @@ imagem em uma página para descobrir que tipo de alternativa de texto ela deve t
     </article>
 
 <article>
-  <h2>Estudo mostra que 9 em cada 10 gatos silenciosamente julgam seus tutores enquanto estes dormem</h2>
+  <h2>Study shows 9 out of 10 cats quietly judging their owners as they sleep</h2>
   <img src="imgs/160204193356-01-cat-500.jpg">
 </article>
 
@@ -37,7 +37,7 @@ utilidade alguma.
 Você pode usar o atributo `alt` para fornecer uma alternativa de texto útil a
 esta imagem &mdash; por exemplo, "Um gato olhando ameaçadoramente para o espaço".
 
-    <img src="/160204193356-01-cat-500.jpg" alt="A cat staring menacingly off into space">
+    <img src="/160204193356-01-cat-500.jpg" alt="Um gato encarando de forma ameaçadora">
 
 Assim, o leitor de tela pode anunciar uma descrição sucinta da imagem (
 vista na barra preta VoiceOver) e o usuário pode escolher se deseja ir para
@@ -60,7 +60,7 @@ contexto.
 Considere uma imagem do logotipo vinculado no cabeçalho de uma página, como os mostrados acima.
 Podemos descrever a imagem com bastante precisão como "O logotipo da Funion".
 
-    <img class="logo" src="logo.jpg" alt="The Funion logo">
+    <img class="logo" src="logo.jpg" alt="O logotipo da Funion">
 
 Pode ser tentador dar-lhe uma alternativa de texto simples como "casa" ou "página
 principal", mas isso é um desserviço a usuários de baixa visão e àqueles que enxergam.

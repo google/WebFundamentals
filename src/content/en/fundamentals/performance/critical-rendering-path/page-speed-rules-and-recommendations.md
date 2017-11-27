@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: This guide examines PageSpeed Insights rules in context: what to pay attention to when optimizing the critical rendering path, and why.
 
-{# wf_updated_on: 2015-10-05 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2014-03-31 #}
 
 # PageSpeed Rules and Recommendations {: .page-title }
@@ -22,7 +22,7 @@ JavaScript resources are parser blocking by default unless marked as `async` or 
 
 ### Prefer asynchronous JavaScript resources
 
-Asynchronus resources unblock the document parser and allow the browser to avoid blocking on CSSOM prior to executing the script. Often, if the script can use the `async` attribute, it also means it is not essential for the first render. Consider loading scripts asynchronously after the initial render.
+Asynchronous resources unblock the document parser and allow the browser to avoid blocking on CSSOM prior to executing the script. Often, if the script can use the `async` attribute, it also means it is not essential for the first render. Consider loading scripts asynchronously after the initial render.
 
 ### Avoid synchronous server calls
 
@@ -78,7 +78,7 @@ The `fetch()` method can also handle POST requests.
         "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
       },  
       body: 'foo=bar&lorem=ipsum'  
-    }).then(function() { // Aditional code });
+    }).then(function() { // Additional code });
     </script>
     
 

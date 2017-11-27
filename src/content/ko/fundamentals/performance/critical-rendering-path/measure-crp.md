@@ -18,8 +18,8 @@ description: 주요 렌더링 경로를 측정하는 방법에 대해 알아봅�
  브라우저에 로드된 특정 페이지의 CRP 성능을 쉽고 빠르게 측정해 주며,
 신속하게 테스트를 수행하고 반복하여 성능을
 개선해 줍니다.
-* Navigation Timing API 접근방식에서는 [Real User Monitoring
-(RUM)](https://en.wikipedia.org/wiki/Real_user_monitoring)
+* Navigation Timing API 접근방식에서는 [RUM(Real User
+Monitoring)](https://en.wikipedia.org/wiki/Real_user_monitoring)
 지표를 캡처합니다. 이름에서 알 수 있듯이, 이 지표는
  실제 사용자의 사이트 상호작용으로부터 캡처되며,
  다양한 기기와 네트워크 조건에서 사용자가 경험하는

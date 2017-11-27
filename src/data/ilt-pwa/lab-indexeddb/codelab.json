@@ -1,0 +1,20 @@
+{
+  "environment": "web",
+  "source": "1Zay_ffXuJw0fQIrKsXMERf4jKaUTcTBzI4PF8pAmi6w",
+  "format": "md",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2017-10-10T18:31:04Z",
+  "id": "lab-indexeddb",
+  "duration": 0,
+  "title": "Lab: IndexedDB",
+  "summary": "",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [
+    "2-day",
+    "3-day"
+  ],
+  "url": "lab-indexeddb"
+}

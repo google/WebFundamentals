@@ -73,7 +73,7 @@ Microsoft Communicator와 같은 컴퓨터의 기본 전화 통신
 전화번호를 하이퍼링크에 래핑하거나 특수 스타일을 적용하지는 않습니다.
 
 모바일 Safari가 자동으로 전화번호를 감지하지 않도록 하려면 다음
-메타 태그를 페이지 맨 위에 추가하십시오.
+메타 태그를 페이지 맨 위에 추가하세요.
 
 
     <meta name="format-detection" content="telephone=no">

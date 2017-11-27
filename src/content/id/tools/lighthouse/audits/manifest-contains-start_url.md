@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk "Manifes Berisi start_url" audit Lighthouse.
 
@@ -9,12 +9,12 @@ description: Dokumentasi referensi untuk "Manifes Berisi start_url" audit Lighth
 
 ## Mengapa audit itu penting {: #why }
 
-Setelah aplikasi web Anda ditambahkan ke homescreen pengguna, properti `start_url`
+Setelah aplikasi web Anda ditambahkan ke layar beranda pengguna, properti `start_url`
 di Manifes Aplikasi Web menentukan laman yang terlebih dulu dimuat aplikasi Anda
-ketika pengguna meluncurkan aplikasi dari homescreen.
+ketika pengguna meluncurkan aplikasi dari layar beranda.
 
 Bila tidak terdapat properti `start_url`, maka browser mengatur default ke laman
-apa pun yang aktif saat pengguna memutuskan untuk menambahkan aplikasi ke homescreen.
+apa pun yang aktif saat pengguna memutuskan untuk menambahkan aplikasi ke layar beranda.
 
 ## Cara untuk lulus audit {: #how }
 

@@ -3,7 +3,7 @@ book_path: /web/showcase/_book.yaml
 description: Beyond the Rack re-engages users on the mobile web, increasing revenue per visit by 26% with push notifications.
 
 {# wf_published_on: 2015-10-25 #}
-{# wf_updated_on: 2015-10-25 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_author: paulkinlan #}
 {# wf_featured_image: /web/showcase/2015/images/beyond-the-rack/card.jpg #}
 {# wf_featured_snippet: Push notifications allowed us to bring one of the most compelling capabilities from our native app to our mobile site. We see a direct 20% click through rate from push notifications—having another channel to reach our users is a game changer. #}
@@ -11,7 +11,7 @@ description: Beyond the Rack re-engages users on the mobile web, increasing reve
 
 # Beyond the Rack {: .page-title }
 
-<img src="images/beyond-the-rack/btr-1.png" class="attempt-right">
+<img src="images/beyond-the-rack/btr-1.jpg" class="attempt-right">
 
 ### TL;DR {: .hide-from-toc }
 
@@ -85,4 +85,4 @@ compelling content.
 For more information on Push Notifications on the web check out our resources:
 
 * [Getting Started with your first Push Notifications](/web/fundamentals/getting-started/codelabs/push-notifications/)
-* [Push and Notifications guide](/web/fundamentals/engage-and-retain/push-notifications/)
+* [Push and Notifications guide](/web/fundamentals/push-notifications)

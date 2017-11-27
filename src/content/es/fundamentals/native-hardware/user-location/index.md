@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La mayoría de los navegadores y dispositivos tienen acceso a la ubicación geográfica de los usuarios. Aprenda a utilizar la ubicación del usuario en su sitio y sus apps.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-01-01 #}
 
 # Ubicación del usuario {: .page-title }
@@ -17,7 +17,7 @@ genera muchos casos de uso interesantes, como la integración con sistemas de re
 
 Tienes que tener en cuenta varias cosas cuando usas la Geolocation API. Esta guía te ayudará con los casos de uso comunes y las soluciones.
 
-Nota: A partir de Chrome 50, la [Geolocation API solo funciona en contextos seguros (HTTPS)](/web/updates/2016/04/geolocation-on-secure-contexts-only). Si tu sitio se aloja en un origen que no es seguro (como `HTTP`), cualquier solicitud de ubicación del usuario **no volverá a** funcionar.
+Note: A partir de Chrome 50, la [Geolocation API solo funciona en contextos seguros (HTTPS)](/web/updates/2016/04/geolocation-on-secure-contexts-only). Si tu sitio se aloja en un origen que no es seguro (como `HTTP`), cualquier solicitud de ubicación del usuario **no volverá a** funcionar.
 
 ### TL;DR {: .hide-from-toc }
 
@@ -298,7 +298,7 @@ error, para que puedas notificar al usuario en el callback:
     };
 
 
-### Reducción de la necesidad de iniciar el hardware de ubicación geográfica
+### Reduce de la necesidad de iniciar el hardware de ubicación geográfica
 
 Para muchos casos de uso, no necesitas la ubicación más actualizada del usuario;
 solo necesitas una ubicación aproximada.
@@ -361,7 +361,7 @@ A menos que establezcas un tiempo de espera, es posible que nunca obtengas respu
     };
 
 
-### Dale preferencia a las ubicaciones comunes en lugar de las ubicaciones específicas.
+### Dale preferencia a las ubicaciones comunes en lugar de las ubicaciones específicas
 
 Si deseas encontrar la tienda más cercana a la ubicación de un usuario, es poco probable que necesites
 una precisión de 1 metro. La API está diseñada para proporcionar una ubicación 

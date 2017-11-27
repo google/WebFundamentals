@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“网站在其自身的脚本中不使用突变事件”Lighthouse 审查的参考文档。
 

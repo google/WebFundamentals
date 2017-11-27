@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Pelajari cara menggunakan Chrome dan DevTools untuk menemukan masalah memori yang memengaruhi kinerja laman, termasuk kebocoran memori, penggelembungan memori, dan pengumpulan sampah yang terlalu sering.
 
@@ -21,7 +21,7 @@ pengumpulan sampah yang terlalu sering.
 - Mengetahui cara memori baru dialokasikan di heap JS Anda dengan perekaman Allocation Timeline.
 
 
-## Ikhtisar
+## Ringkasan
 
 Dengan prinsip model kinerja [RAIL][RAIL], upaya peningkatan kinerja
 sebaiknya difokuskan pada pengguna.
@@ -150,7 +150,7 @@ dari saat dimulai ("dimulai" disini adalah titik setelah pengumpulan sampah
 secara paksa). Dalam kondisi nyata, jika Anda melihat pola meningkatnya
 ukuran heap JS atau ukuran simpul, ini berarti ada kemungkinan kebocoran memori.
 
-[rekaman]: https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
+[recording]: https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
 
 [cg]: imgs/collect-garbage.png
 

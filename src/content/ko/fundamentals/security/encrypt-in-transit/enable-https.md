@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 서버에서 HTTPS를 활성화하는 것은 웹페이지 보안에 매우 중요한 요소입니다. 
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-27 #}
 
 # 서버에서 HTTPS 활성화 {: .page-title }
@@ -172,12 +172,12 @@ Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/){: .e
 호스트 이름/하위 도메인이 많은 경우 각각 올바른
 인증서를 사용해야 합니다.
 
-경고: 이미 이런 절차를 완료했지만 클라이언트를 HTTP로 다시 리디렉션하는 용도로만 HTTPS를 사용하고 있다면 지금 사용을 중단하세요. HTTPS와 HTTP가 원활하게 작동하도록 하려면 다음 섹션을 참조하세요.
+Warning: 이미 이런 절차를 완료했지만 클라이언트를 HTTP로 다시 리디렉션하는 용도로만 HTTPS를 사용하고 있다면 지금 사용을 중단하세요. HTTPS와 HTTP가 원활하게 작동하도록 하려면 다음 섹션을 참조하세요.
 
-참고: 궁극적으로, HTTP 요청을 HTTPS로 리디렉션하고 HSTS(HTTP StrictTransport Security)를 사용해야 합니다. 하지만 이는 이 작업을 수행하기 위한 마이그레이션 프로세스에서 적절한 단계가 아닙니다. "HTTP를 HTTPS로 리디렉션" 및 "STS(Strict Transport Security) 및 보안 쿠키 설정"을 참조하세요.
+참고: 궁극적으로, HTTP 요청을 HTTPS로 리디렉션하고 HSTS(HTTP StrictTransport Security)를 사용해야 합니다. 하지만 이는 이 작업을 수행하기 위한 마이그레이션 프로세스에서 적절한 단계가 아닙니다. 'HTTP를 HTTPS로 리디렉션' 및 'STS(Strict Transport Security) 및 보안 쿠키 설정'을 참조하세요.
 
 지금뿐만 아니라 사이트 수명 전체에 걸쳐 [Qualys의 편리한 SSL Server Test](https://www.ssllabs.com/ssltest/){: .external }를 사용하여
-HTTPS 구성을 확인하십시오. 운영하는 사이트는
+HTTPS 구성을 확인하세요. 운영하는 사이트는
 A 또는 A+ 등급을 받아야 하며, 이보다 낮은 등급을 초래하는 모든 원인은 버그로 처리해야 합니다.
 (알고리즘과 프로토콜을 상대로 한 공격은
 항상 발전하므로 현재의 A 등급은 향후 B 등급이 됩니다!)
@@ -201,7 +201,7 @@ HTTPS에서 HTTP로 다운그레이드될 수 있습니다.
 이러한 문제는 페이지에 *http://* 스키마를 사용하는 정규화된 사이트 내 URL이
 포함될 때 발생합니다. 
 
-<p><span class="compare-worse">권장하지 않음</span> — 정규화된 사이트 내 URL을 사용하지 않는 것이 좋습니다.</p>
+<p><span class="compare-worse">권장되지 않음</span> — 정규화된 사이트 내 URL을 사용하지 않는 것이 좋습니다.</p>
 
     <h1>Welcome To Example.com</h1>
     <script src="http://example.com/jquery.js"></script>
@@ -236,15 +236,15 @@ HTTPS에서 HTTP로 다운그레이드될 수 있습니다.
     <p>Check out this <a href="http://foo.com/">other cool
     site.</a></p>
 
-이 작업은 직접 하지 말고 스크립트를 사용하여 수행하십시오. 사이트 콘텐츠가 데이터베이스에 포함된 경우
+이 작업은 직접 하지 말고 스크립트를 사용하여 수행하세요. 사이트 콘텐츠가 데이터베이스에 포함된 경우
 데이터베이스의 개발 복사본에서 스크립트를 테스트하세요. 사이트
 콘텐츠가 단순한 파일로 구성된 경우 파일의 개발 복사본에서 스크립트를 테스트하세요. 변경 사항이 QA를 통과한 후에만 평상시와 같이 운영 환경에 적용하세요. [Bram van Damme의 스크립트](https://github.com/bramus/mixed-content-scan)나 유사한 스크립트를 사용하여 사이트의 혼합 콘텐츠를 검색할 수 있습니다.
 
 다른 사이트의 리소스를 포함하는 것과 달리 다른 사이트에 연결하는 경우에는
 해당 사이트의 작동 방식을 제어할 수 없으므로
-프로토콜을 변경하지 마십시오.
+프로토콜을 변경하지 마세요.
 
-성공: 대규모 사이트에 대한 마이그레이션 작업이 더 원활하게 진행되도록 하려면 프로토콜에 상대적인 URL을 사용하는 것이 좋습니다. 아직 HTTPS를 완전히 배포할 수 있을지 확실치 않은 경우에 사이트의 모든 하위 리소스에 대해 HTTPS를 강제로 사용하게 하면 역효과가 날 수 있습니다. 일정 기간 HTTPS가 새롭고 이상할 가능성이 크므로 HTTP 사이트도 계속해서 작동되어야 합니다. 시간이 지남에 따라 마이그레이션을 완료하고 HTTPS를 락인(lock in)할 것입니다(아래 두 섹션 참조).
+Success: 대규모 사이트에 대한 마이그레이션 작업이 더 원활하게 진행되도록 하려면 프로토콜에 상대적인 URL을 사용하는 것이 좋습니다. 아직 HTTPS를 완전히 배포할 수 있을지 확실치 않은 경우에 사이트의 모든 하위 리소스에 대해 HTTPS를 강제로 사용하게 하면 역효과가 날 수 있습니다. 일정 기간 HTTPS가 새롭고 이상할 가능성이 크므로 HTTP 사이트도 계속해서 작동되어야 합니다. 시간이 지남에 따라 마이그레이션을 완료하고 HTTPS를 락인(lock in)할 것입니다(아래 두 섹션 참조).
 
 사이트가 타사(예: CDN 또는 jquery.com)에서
 제공하는 스크립트, 이미지 또는 기타 리소스를 사용하는 경우 두 가지 옵션을 사용할 수 있습니다.
@@ -256,7 +256,7 @@ HTTPS를 지원하지 않을 경우 이를 지원하도록 요청합니다. jque
 장점이 있습니다. 또한,
 타사를 따로 신뢰할 필요가 없습니다.
 
-참고: HTML 페이지뿐만 아니라 스타일시트, 자바스크립트, 리디렉션 규칙, `<link>` 태그, CSP 선언에서도 사이트 내 URL을 변경해야 한다는 점을 명심하십시오.
+참고: HTML 페이지뿐만 아니라 스타일시트, 자바스크립트, 리디렉션 규칙, `<link>` 태그, CSP 선언에서도 사이트 내 URL을 변경해야 한다는 점을 명심하세요.
 
 ## HTTP를 HTTPS로 리디렉션
 
@@ -267,7 +267,7 @@ HTTPS가 사이트에 액세스할 수 있는 가장 좋은 방법임을 검색 
 
 ## STS(Strict Transport Security) 및 보안 쿠키 설정
 
-이제 HTTPS 사용을 "락인(lock in)"할 준비가 되었습니다. 
+이제 HTTPS 사용을 '락인(lock in)'할 준비가 되었습니다. 
 
 * 301 리디렉션 비용을 방지하려면 HSTS(HTTP Strict Transport Security)를 사용하세요.
 * 항상 쿠키에 보안 플래그를 설정하세요.
@@ -279,13 +279,13 @@ HTTPS가 사이트에 액세스할 수 있는 가장 좋은 방법임을 검색 
 [HTTP를 HTTPS로 리디렉션](#redirect-http-to-https)에서 활성화한 `301 redirect`의
 라운드 트립 비용도 방지됩니다.
 
-참고: <a href="https://tools.ietf.org/html/rfc6797#section-12.1">사이트의 TLS 구성에 오류가 발생한 경우(예: 만료된 인증서) 알려진 HSTS 호스트로 사이트를 확인한 클라이언트는 <i>실패</i></a>할 가능성이 높습니다. HSTS는 이런 식으로 네트워크 공격자가 클라이언트를 속여 HTTPS로 보호되지 않는 사이트에 액세스하도록 유인할 수 없도록 한다는 명시적으로 목적으로 고안된 기술입니다. 인증서 유효성 검사 오류와 함께 HTTPS 배포를 방지하는 데 충분한 정도로 사이트 운영이 강력하다고 확신하기 전에는 HSTS를 활성화하지 마십시오.
+참고: <a href="https://tools.ietf.org/html/rfc6797#section-12.1">사이트의 TLS 구성에 오류가 발생한 경우(예: 만료된 인증서) 알려진 HSTS 호스트로 사이트를 확인한 클라이언트는 <i>실패</i></a>할 가능성이 높습니다. HSTS는 이런 식으로 네트워크 공격자가 클라이언트를 속여 HTTPS로 보호되지 않는 사이트에 액세스하도록 유인할 수 없도록 한다는 명시적으로 목적으로 고안된 기술입니다. 인증서 유효성 검사 오류와 함께 HTTPS 배포를 방지하는 데 충분한 정도로 사이트 운영이 강력하다고 확신하기 전에는 HSTS를 활성화하지 마세요.
 
-`Strict-Transport-Security` 헤더를 설정하여 HSTS(HTTP Strict Transport Security)를 설정하십시오. [OWASP의 HSTS 페이지에 다양한 서버 소프트웨어에 대한 지침 링크가 나와 있습니다](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security).
+`Strict-Transport-Security` 헤더를 설정하여 HSTS(HTTP Strict Transport Security)를 설정하세요. [OWASP의 HSTS 페이지에 다양한 서버 소프트웨어에 대한 지침 링크가 나와 있습니다](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security).
 
 대부분의 웹 서버는 사용자설정 헤더를 추가하기 위한 유사한 기능을 제공합니다.
 
-참고: `max-age`는 초 단위로 측정됩니다. 낮은 값부터 시작하고 HTTPS 전용 사이트를 운영하는 데 더 편안해질수록 `max-age`를 점차 높이십시오.
+참고: `max-age`는 초 단위로 측정됩니다. 낮은 값부터 시작하고 HTTPS 전용 사이트를 운영하는 데 더 편안해질수록 `max-age`를 점차 높이세요.
 
 또한 클라이언트가 HTTP를 통해 쿠키(예:
 인증 또는 사이트 기본 설정용 쿠키)를 전송하지 않도록 하는 것도 중요합니다. 예를 들어, 사용자의
@@ -294,10 +294,10 @@ HTTPS가 사이트에 액세스할 수 있는 가장 좋은 방법임을 검색 
 됩니다.
 
 따라서, 웹 애플리케이션을 변경하여 항상 이 애플리케이션에서 설정하는
-쿠키에 보안 플래그를 설정하도록 하십시오. [이 OWASP 페이지에서는 여러 애플리케이션 프레임워크에서 보안 플래그를 설정하는 방법에 대해 설명합니다](https://www.owasp.org/index.php/SecureFlag). 모든 애플리케이션 프레임워크에는 플래그를 설정하기 위한 방법이 있습니다.
+쿠키에 보안 플래그를 설정하도록 하세요. [이 OWASP 페이지에서는 여러 애플리케이션 프레임워크에서 보안 플래그를 설정하는 방법에 대해 설명합니다](https://www.owasp.org/index.php/SecureFlag). 모든 애플리케이션 프레임워크에는 플래그를 설정하기 위한 방법이 있습니다.
 
 대부분의 웹 서버는 단순한 리디렉션 기능을 제공합니다. `301 (Moved Permanently)`를 사용하여
-검색 엔진 및 브라우저에 HTTPS 버전이 기본임을 알리고 사용자를 사이트의 HTTP 버전에서 HTTPS 버전으로 리디렉션하십시오.
+검색 엔진 및 브라우저에 HTTPS 버전이 기본임을 알리고 사용자를 사이트의 HTTP 버전에서 HTTPS 버전으로 리디렉션하세요.
 
 ## 마이그레이션 우려 사항
 
@@ -321,7 +321,7 @@ Google은 [HTTPS를 긍정적인 검색 품질 지표로 사용합니다](https:
 상각할 수 있습니다. (TLS 최적화를 비롯한 유용한 정보는 Ilya Grigorik의
 [High Performance BrowserNetworking](http://chimera.labs.oreilly.com/books/1230000000545)을 참조하세요.) Ivan Ristic의 [OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/)과 [Bulletproof SSL 및 TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)도 참조하세요.
 
-경우에 따라 TLS는 성능을 _향상_시킬 수 있습니다. 이는 주로 HTTP/2가 실현
+경우에 따라 TLS는 성능을 _향상_ 시킬 수 있습니다. 이는 주로 HTTP/2가 실현
 가능해졌기 때문입니다. Chris Palmer는 [Chrome Dev Summit 2014에서 HTTPS 및 HTTP/2 성능](/web/shows/cds/2014/tls-all-the-things)에 관한 고찰을 발표했습니다.
 
 ### 참조자 헤더
@@ -334,7 +334,7 @@ Google은 [HTTPS를 긍정적인 검색 품질 지표로 사용합니다](https:
 
 검색 엔진이 HTTPS로 마이그레이션하는 중이기 때문에 HTTPS로 마이그레이션하면 앞으로 _더 많은_ 참조자 헤더를 볼 가능성이 높습니다.
 
-주의: [HTTP RFC](https://tools.ietf.org/html/rfc2616#section-15.1.3)에 따라, 클라이언트는 참조 페이지가 보안 프로토콜로 이전된 경우 참조자 헤더 필드를 (보안이 유지되지 않는) HTTP 요청에 포함하지 **않아야** 합니다.
+Caution: [HTTP RFC](https://tools.ietf.org/html/rfc2616#section-15.1.3)에 따라, 클라이언트는 참조 페이지가 보안 프로토콜로 이전된 경우 참조자 헤더 필드를 (보안이 유지되지 않는) HTTP 요청에 포함하지 **않아야** 합니다.
 
 ### 광고 수익
 
@@ -346,7 +346,7 @@ Google은 [HTTPS를 긍정적인 검색 품질 지표로 사용합니다](https:
 없습니다. 하지만 사이트 운영자가 HTTPS로 마이그레이션할 때까지 광고주는 HTTPS를 통해 게시할 생각을 거의 갖지 않습니다.
 
 광고주는 적어도 HTTPS를 통해 광고 서비스를 제공해야 합니다(이 페이지의
-"서버에서 HTTPS 활성화" 섹션을 참조하여 설정을 완료하는 방법을 통해). 많은 광고주가 이미 이렇게 하고 있습니다. HTTPS를
+'서버에서 HTTPS 활성화' 섹션을 참조하여 설정을 완료하는 방법을 통해). 많은 광고주가 이미 이렇게 하고 있습니다. HTTPS를
 전혀 지원하지 않는 광고주에게는 적어도 이를 시작하도록 요청해야 합니다.
 많은 광고주가 제대로 상호 운용할 때까지 개발자는 [사이트 내 URL을 상대 URL로 만들기](#make-intrasite-urls-relative)를 시도하는 것을 연기하고 싶을 수 있습니다.
 

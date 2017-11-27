@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Kebanyakan browser dan perangkat memiliki akses ke lokasi geografis pengguna. Pelajari cara menggunakan lokasi pengguna di situs dan aplikasi Anda.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-01-01 #}
 
 # Lokasi Pengguna {: .page-title }
@@ -13,11 +13,11 @@ Geolocation API memungkinkan Anda menemukan, dengan persetujuan pengguna, lokasi
 
 Geolocation API juga memungkinkan Anda mengetahui di mana pengguna berada
 dan mengikutinya saat mereka bergerak, selalu dengan persetujuan pengguna (dan hanya saat laman dibuka). Ini 
-menciptakan banyak kasus penggunaan yang menarik, misalnya mengintegrasikan dengan sistem backend untuk mempersiapkan urutan kumpulan jika pengguna dekat dengannya.
+menciptakan banyak kasus penggunaan yang menarik, misalnya mengintegrasikan dengan sistem backend untuk menyiapkan urutan kumpulan jika pengguna dekat dengannya.
 
 Anda perlu mengetahui banyak hal saat menggunakan Geolocation API. Panduan ini membimbing Anda melalui beberapa kasus penggunaan umum dan solusi.
 
-Catatan: Sejak Chrome 50, [Geolocation API hanya bekerja pada konteks aman (HTTPS)](/web/updates/2016/04/geolocation-on-secure-contexts-only). Jika situs Anda ditampung pada asal yang tidak aman (misalnya `HTTP`), maka semua permintaan lokasi pengguna **tidak lagi** berfungsi.
+Note: Sejak Chrome 50, [Geolocation API hanya bekerja pada konteks aman (HTTPS)](/web/updates/2016/04/geolocation-on-secure-contexts-only). Jika situs Anda ditampung pada asal yang tidak aman (misalnya `HTTP`), maka semua permintaan lokasi pengguna **tidak lagi** berfungsi.
 
 ### TL;DR {: .hide-from-toc }
 
@@ -142,7 +142,7 @@ Anda ingin mereka melakukan tindakan.
 
 Kami merekomendasikan: 
 
-1.  Persiapkan timer yang akan terpicu setelah periode singkat;
+1.  Siapkan timer yang akan terpicu setelah periode singkat;
     5 detik adalah nilai yang bagus.
 2.  Jika Anda mendapatkan pesan kesalahan, tampilkan pesan kepada pengguna.
 3.  Jika Anda mendapatkan respons positif, nonaktifkan timer dan proses hasilnya.
@@ -403,7 +403,7 @@ diatasi dan menggunakan baterai lebih banyak.
   </figure>
 </div>
 
-Setelah mempersiapkan geolokasi, Anda perlu:
+Setelah menyiapkan geolokasi, Anda perlu:
 
 * Uji cara kerja aplikasi Anda di beberapa geolokasi berbeda.
 * Verifikasi apakah aplikasi Anda mengalami degradasi secara halus bila geolokasi tidak tersedia.

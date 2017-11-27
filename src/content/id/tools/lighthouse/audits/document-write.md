@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk audit Lighthouse "Situs Tidak Menggunakan document.write()".
 
@@ -23,10 +23,10 @@ Dalam laporan Anda, Lighthouse mencantumkan setiap panggilan ke `document.write(
 Tinjaulah daftar ini, dan catat panggilan yang secara dinamis menyuntikkan skrip.
 Jika skrip tersebut memenuhi kriteria yang dijelaskan secara singkat dalam pengantar
 [Ikut campur pada `document.write()`][blog], Chrome tidak akan mengeksekusi
-skrip yang disuntikkan. Inilah panggilan ke `document.write()` tyang ingin Anda
+skrip yang disuntikkan. Inilah panggilan ke `document.write()` yang ingin Anda
 ubah. Lihat [Bagaimana memperbaikinya?][fix] untuk solusi yang memungkinkan. 
 
-[perbaiki]: /web/updates/2016/08/removing-document-write#how_do_i_fix_this
+[fix]: /web/updates/2016/08/removing-document-write#how_do_i_fix_this
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 

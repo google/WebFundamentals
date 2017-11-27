@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: このインタラクティブなガイドに従って、レイアウトの強制同期の診断に DevTools を使う方法を習得します。
+description:このインタラクティブなガイドに従って、レイアウトの強制同期の診断に DevTools を使う方法を習得します。
 
 {# wf_updated_on: 2016-03-31 #}
 {# wf_published_on: 2015-04-13 #}
@@ -15,7 +15,6 @@ description: このインタラクティブなガイドに従って、レイア�
 
 このガイドでは、ライブデモを使って問題を特定して解決することで、[レイアウトの強制同期][fsl]をデバッグする方法を学びます。
 このデモでは、[`requestAnimationFrame()`][raf] を使って、イメージをアニメーションにします。アニメーションにする場合は、フレームベースのアニメーションのアプローチが推奨されます。
-
 ただし、このアニメーションにはかなりの量の問題点が含まれます。
 目標は、デモが 60 FPS でスムーズに実行されるように、問題点の原因を見極め、解決することです。
  
@@ -33,10 +32,8 @@ description: このインタラクティブなガイドに従って、レイア�
 1. [デモ](https://googlesamples.github.io/web-fundamentals/tools/chrome-devtools/rendering-tools/forcedsync.html)を開きます。
 1. DevTools の [**Timeline**] パネルを開きます。
 1. [**JS Profile**] オプションを有効にします。後でフレーム チャートを分析する際に、このオプションによって呼び出された関数が正確に表示されるようになります。
-
 1. ページの [**Start**] をクリックして、アニメーションを開始します。
 1. [Timeline] パネルの**記録**ボタンをクリックして、Timeline の記録を開始します。
-
 1. 2 秒間待機します。
 1. もう一度**記録**ボタンをクリックして、記録を停止します。 
 
@@ -71,8 +68,6 @@ Timeline 記録の [**Summary**] ペインを見ると、ブラウザは大半�
 ![拡大した Timeline 記録](imgs/zoom.png)
 
 スタックの一番上に `Animation Frame Fired` イベントがあります。このイベントが発生すると、必ず `requestAnimationFrame()` に渡した関数が呼び出されています。`Animation Frame Fired` の下には `Function Call` が、その下には `update` があります。
-
-
 `update()` というメソッドが `requestAnimationFrame()` のコールバックだと推測できます。
  
 
@@ -104,7 +99,6 @@ Timeline 記録の [**Summary**] ペインを見ると、ブラウザは大半�
 `update()` 関数は `requestAnimationCallback()` のコールバック ハンドラです。
 ハンドラは、イメージの `offsetTop` 値に基づいて各イメージの `left` プロパティを計算します。
 この計算により、ブラウザは新しいレイアウトの即時実行を強制され、正確な値になるようにします。
-
 アニメーションのフレームで毎回レイアウトの適用が強制されると、ページのアニメーションが不自然になる原因になります。
  
 
@@ -120,7 +114,6 @@ Timeline 記録の [**Summary**] ペインを見ると、ブラウザは大半�
  
 
 ただし、変更点をテストするために、コンソールで関数を再定義できます。HTML ファイルから DevTools コンソールに関数の定義をコピーして貼り付けます。
-
 `offsetTop` を使用しているステートメントを削除し、その下のステートメントのコメントを解除します。
 完了したら、`Enter` キーを押します。 
 

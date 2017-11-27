@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-09-28 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-28 #}
 
 # El patrón PRPL {: .page-title }
@@ -108,7 +108,7 @@ usando [Componentes web](http://webcomponents.org/):
 ![un diagrama de una app que tiene dos vistas, que tienen dependencias
 individuales y compartidas](images/app-build-components.png)
 
-Nota: a pesar de que las importaciones de HTML son la estrategia de agrupación preferida de Polymer, puedes
+Note: a pesar de que las importaciones de HTML son la estrategia de agrupación preferida de Polymer, puedes
 usar división de código y fragmentación basada en ruta para lograr una configuración similar con
 modernos agrupadores de módulo de JavaScript
 
@@ -153,7 +153,7 @@ producir dos compilaciones:
 -   Una compilación no agrupada diseñada para combinaciones de servidor/navegador compatibles con
     HTTP/2 para brindar los recursos que el navegador necesita para una rápida primera pintura 
     mientras optimizan el almacenamiento en caché. La proporción de estos recursos se puede activar
-    eficientemente usando [`<link rel="preload">`][Pistas de recurso] o [push de HTTP/2].
+    eficientemente usando [`<link rel="preload">`][Resource hints] o [HTTP/2 Push].
 
 -   Una compilación agrupada diseñada para minimizar la cantidad de viajes ida y vuelta necesarios para
     hacer que la app se ejecute en combinaciones de servidor/navegador que no son compatibles
@@ -197,8 +197,7 @@ En HTTP/1:
 
 *   El navegador solicita el archivo HTML.
 *   El servidor muestra el archivo HTML y el navegador comienza a analizarlo.
-*   El navegador encuentra la etiqueta `<link rel="stylesheet">` y comienza una nueva
-solicitud de la hoja de estilo.
+*   El navegador encuentra la etiqueta `<link rel="stylesheet">` y comienza una nueva solicitud de la hoja de estilo.
 *   El navegador recibe la hoja de estilo.
 
 Con push HTTP/2:
@@ -207,7 +206,7 @@ Con push HTTP/2:
 *   El servidor muestra el archivo HTML y envía la hoja de estilo al mismo
     tiempo.
 *   El navegador comienza a analizar el HTML. Para cuando encuentra la `<link
-    rel="stylesheet">, la hoja de estilo ya está en ﻿la caché.
+    rel="stylesheet">`, la hoja de estilo ya está en ﻿la caché.
 
 En el caso más sencillo, el servidor push HTTP/2 elimina una respuesta a solicitud
 de HTTP único.
@@ -225,7 +224,7 @@ significa que se pueden almacenar en caché de manera eficiente y se pueden comp
 El HTTP/2 Push se debe usar con cuidado, ya que envía datos al navegador a la fuerza,
 incluso si el archivo ya está en la caché local del navegador o si el ancho de banda
 ya está saturado. Si se hace en forma incorrecta, se puede perjudicar el rendimiento. Las 
-[`<link rel="preload">`][Pistas de recurso] pueden ser una buena alternativa para permitirle 
+[`<link rel="preload">`][Resource hints] pueden ser una buena alternativa para permitirle 
 al navegador tomar decisiones inteligentes sobre la prioridad de estas solicitudes.  
 
 ## Conclusión
@@ -247,8 +246,8 @@ PRPL puede ayudar a brindar el mínimo código funcional necesario para hacer qu
 usuarios aterrizan sea interactiva, abordando este desafío.
 
 [HTTP/2]: /web/fundamentals/performance/http2/
-[Pistas de recurso]: https://developers.google.com/web/updates/2016/03/link-rel-preload
-[Push HTTP/2]: /web/fundamentals/performance/http2/#server-push
+[Resource hints]: https://developers.google.com/web/updates/2016/03/link-rel-preload
+[HTTP/2 Push]: /web/fundamentals/performance/http2/#server-push
 
 
 {# wf_devsite_translation #}

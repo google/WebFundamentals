@@ -46,7 +46,7 @@ Observação: um outro ponto que vale destacar é que `visibility: hidden` é di
 
 O resultado final é uma renderização com o conteúdo e as informações de estilo de todo o conteúdo visível na tela.  **Com a árvore de renderização concluída, podemos prosseguir para a fase de layout.**
 
-Até agora, calculamos que nós devem ser visíveis e seus estilos processados. Mas ainda não calculamos a posição e o tamanho exatos na [janela de visualização](/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport) do dispositivo---essa é a fase do layout, também conhecida como "reflow".
+Até agora, calculamos que nós devem ser visíveis e seus estilos processados. Mas ainda não calculamos a posição e o tamanho exatos na [janela de visualização](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) do dispositivo---essa é a fase do layout, também conhecida como "reflow".
 
 Para determinar o tamanho e a posição exatos de cada objeto, o navegador começa na raiz da árvore de renderização e passa por toda ela. Vamos analisar um exemplo prático simples:
 

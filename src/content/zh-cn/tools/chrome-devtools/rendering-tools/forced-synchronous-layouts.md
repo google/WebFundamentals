@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:请遵循此互动指南，了解如何使用 DevTools 诊断强制同步布局。
 
@@ -31,8 +31,10 @@ description:请遵循此互动指南，了解如何使用 DevTools 诊断强制�
 1. 打开[演示](https://googlesamples.github.io/web-fundamentals/tools/chrome-devtools/rendering-tools/forcedsync.html)。
 1. 打开 DevTools 的 **Timeline** 面板。
 1. 启用 **JS Profile** 选项。稍后分析火焰图时，您可以通过此选项准确地查看调用了哪些函数。
+
 1. 点击页面上的 **Start** 启动动画。
 1. 点击 Timeline 面板上的 **Record** 按钮启动 Timeline 记录。
+
 1. 等待两秒。
 1. 再次点击 **Record** 按钮停止记录。 
 

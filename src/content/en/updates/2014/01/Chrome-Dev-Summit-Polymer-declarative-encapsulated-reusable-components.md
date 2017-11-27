@@ -78,7 +78,7 @@ I would be remissed if I didn't give a shout out to the standards behind Web Com
 
 We're on the cusp of a very exciting time in web development. Unlike other new features being added to the web platform, the APIs that make up [Web Components](http://www.w3.org/TR/components-intro/) are not shiny or user-facing. They're purely for **developer productivity**. Each of the four main APIs is useful by itself, but together magical things happen!
 
-1. [Shadow DOM](/web/fundamentals/getting-started/primers/shadowdom) - style and DOM encapsulation
+1. [Shadow DOM](/web/fundamentals/web-components/shadowdom) - style and DOM encapsulation
 - [Custom Elements](/web/fundamentals/getting-started/primers/customelements) - define new HTML elements. Give them an API with properties and methods.
 - [HTML Imports](https://www.html5rocks.com/en/tutorials/webcomponents/imports/) is the distribution model for a package of CSS, JS, and HTML.
 - [Templates](https://www.html5rocks.com/en/tutorials/webcomponents/template/) - proper DOM templating for defining inert chunks of markup to be stamped out later

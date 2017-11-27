@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Allocation Profiler Tool を使って、ガーベジ コレクションが正しく行われていないオブジェクトを探し、引き続きメモリを保持します。
 

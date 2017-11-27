@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Pelajari cara merekam cuplikan heap dengan profiler heap Chrome DevTools dan menemukan kebocoran memori.
 
-{# wf_updated_on: 2015-08-03 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-06-08 #}
 
 # Cara Merekam Cuplikan Heap {: .page-title }
@@ -33,7 +33,7 @@ di bawah judul cuplikan akan muncul angka, yang menunjukkan ukuran total
 
 ![Total objek yang dapat dijangkau](imgs/total-size.png)
 
-Catatan: Hanya objek yang bisa dijangkau yang disertakan di cuplikan. Selain itu, mengambil cuplikan selalu dimulai dengan pengumpulan sampah.
+Note: Hanya objek yang bisa dijangkau yang disertakan di cuplikan. Selain itu, mengambil cuplikan selalu dimulai dengan pengumpulan sampah.
 
 ## Menghapus cuplikan
 
@@ -65,7 +65,7 @@ Untuk beralih antar tampilan, gunakan pemilih di bagian bawah tampilan:
 
 ![Pemilih Switch views](imgs/switch-views.png)
 
-Catatan: Tidak semua properti disimpan di heap JavaScript. Properti yang diimplementasikan menggunakan getter yang mengeksekusi kode bawaan tidak direkam cuplikannya. Selain itu, nilai non-string seperti angka tidak direkam cuplikannya.
+Note: Tidak semua properti disimpan di heap JavaScript. Properti yang diimplementasikan menggunakan getter yang mengeksekusi kode bawaan tidak direkam cuplikannya. Selain itu, nilai non-string seperti angka tidak direkam cuplikannya.
 
 ### Tampilan Summary
 

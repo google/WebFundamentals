@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk "Properti tampilan Manifes Telah Disetel" audit Lighthouse.
 
@@ -9,7 +9,7 @@ description: Dokumentasi referensi untuk "Properti tampilan Manifes Telah Disete
 
 ## Mengapa audit itu penting {: #why }
 
-Ketika aplikasi diluncurkan dari homescreen, Anda bisa menggunakan properti `display`
+Ketika aplikasi diluncurkan dari layar beranda, Anda bisa menggunakan properti `display`
 di Manifes Aplikasi Web untuk menentukan mode tampilan bagi aplikasi.
 
 ## Cara untuk lulus audit {: #how }

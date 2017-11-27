@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Gunakan panel Timeline Chrome DevTools untuk merekam dan menganalisis semua aktivitas di aplikasi saat sedang berjalan. Panel ini merupakan tempat terbaik untuk memulai investigasi masalah kinerja yang dirasakan pada aplikasi Anda.
 
@@ -146,7 +146,7 @@ kanan untuk menyimulasikan animasi perekaman.
 ## Profil JavaScript {:#profile-js}
 
 Aktifkan kotak centang **JS Profile** sebelum Anda merekam untuk menangkap 
-tumpukan JavaScript dalam rekaman timeline Anda. Ketika JS profiler
+tumpukan JavaScript dalam rekaman timeline Anda. Ketika JS profiler 
 diaktifkan, bagan api akan menunjukkan semua fungsi JavaScript yang dipanggil. 
 
 ![bagan api dengan JS profile diaktifkan](imgs/js-profile.png)

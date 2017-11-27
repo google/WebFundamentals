@@ -1,12 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2017-03-26T18:00:00.000Z #}
-{# wf_updated_on: 2017-03-26T18:00:00.000Z #}
+{# wf_published_on: 2017-03-26 #}
+{# wf_updated_on: 2017-03-26 #}
 {# wf_featured_image: /web/showcase/2017/images/santa/featured.png #}
 {# wf_featured_snippet: Santa Tracker is a fun and educational experience for everyone-a holiday tradition here at Google. In 2016, we upgraded the Santa Tracker site to support offline via the Service Worker API. #}
 {# wf_tags: progressive-web-apps,polymer,serviceworker,casestudy #}
-
+{# wf_featured_date: 2017-04-18 #}
+{# wf_vertical: entertainment #}
 
 # Santa Tracker as a PWA {: .page-title }
 
@@ -281,4 +282,4 @@ While Santa is largely a custom-built solution, many of its principles can be fo
 Project's [App Toolbox](https://www.polymer-project.org/1.0/toolbox/).
 We suggest you check it out if you're building a new PWA from scratch—or, if you're looking for a
 framework-agnostic approach, try the
-[Service Worker Helpers Library](https://github.com/GoogleChrome/sw-helpers).
+[Workbox Library](https://github.com/GoogleChrome/workbox).

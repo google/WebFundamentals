@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "페이지 로드 시 위치정보를 자동 요청하지 않는 페이지" Lighthouse 감사의 참조 문서입니다.
+description: '페이지 로드 시 위치정보를 자동 요청하지 않는 페이지' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-11-30 #}
 {# wf_published_on: 2016-11-30 #}
@@ -11,7 +11,7 @@ description: "페이지 로드 시 위치정보를 자동 요청하지 않는 �
 
 사용자는 페이지 로드 시 자동으로 위치를 요청하는 페이지를 신뢰하지 않거나
 이러한 페이지에 혼란을 느낍니다. 페이지 로드 시 사용자 위치를 자동으로 요청하지 않고
-요청을 사용자 동작(예: "Find Stores Near Me" 버튼 누르기)과 연결합니다.
+요청을 사용자 동작(예: 'Find Stores Near Me' 버튼 누르기)과 연결합니다.
  동작이 사용자 위치의 필요성을 명확하고 명시적으로
 표현해야 합니다.
 

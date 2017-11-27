@@ -10,7 +10,7 @@ upper_tabs:
       other:
       - name: Progressive Web Apps
         contents:
-        - title: Progressive Web Apps
+        - title: Overview
           path: /web/progressive-web-apps/
         - title: Progressive Web App Checklist
           path: /web/progressive-web-apps/checklist

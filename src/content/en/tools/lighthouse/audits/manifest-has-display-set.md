@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Manifest's display Property Is Set" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-21 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-09-21 #}
 
-# Manifest's Display Property Is Set  {: .page-title }
+# Manifest's display Property Is Set  {: .page-title }
 
 ## Why the audit is important {: #why }
 

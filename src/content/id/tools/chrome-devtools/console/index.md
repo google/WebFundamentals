@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Pelajari cara menjelajahi Konsol JavaScript pada Chrome DevTools.
 
@@ -109,7 +109,7 @@ Biasanya konteks disetel ke `top` (bingkai atas laman).
 Bingkai dan ekstensi lain beroperasi di konteksnya masing-masing. Untuk menggarap konteks
 lain ini, Anda perlu memilihnya dari menu tarik-turun. Misalnya,
 jika ingin melihat keluaran log elemen `<iframe>` dan mengubah
-variabel yang berada di konteks itu, Anda perlu memilihnya dari 
+variabel yang berada di konteks itu, Anda perlu memilihnya dari
 menu tarik-turun Pemilih Konteks Eksekusi.
 
 Secara default Console berada dalam konteks `top`, kecuali jika Anda mengakses DevTools dengan

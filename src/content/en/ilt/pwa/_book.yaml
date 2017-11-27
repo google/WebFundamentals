@@ -1,0 +1,149 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+
+upper_tabs:
+  - include: /web/_upper_tabs-Fundamentals.yaml
+  - include: /web/_upper_tabs-Tools.yaml
+  - include: /web/_upper_tabs-Updates.yaml
+  - include: /web/_upper_tabs-Showcase.yaml
+  - name: Progressive Web Apps Training
+    path: /web/ilt/
+    lower_tabs:
+      other:
+      - name: ILT
+        contents:
+        - title: Progressive Web Apps
+          path: /web/ilt/pwa/
+        - title: Your Audience, Your Content
+          path: /web/ilt/pwa/your-audience-your-content
+        - title: Design For All Your Users
+          path: /web/ilt/pwa/design-for-all-your-users
+        - title: Why Build Progressive Web Apps
+          path: /web/ilt/pwa/why-build-pwa
+        - title: Core Technologies
+          path: /web/ilt/pwa/core-technologies
+        - title: Introduction to Service Workers
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/introduction-to-service-worker-slides
+          - title: Concepts
+            path: /web/ilt/pwa/introduction-to-service-worker
+          - title: Lab
+            path: /web/ilt/pwa/lab-scripting-the-service-worker
+        - title: Working with the Fetch API
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/working-with-the-fetch-api-slides
+          - title: Concepts
+            path: /web/ilt/pwa/working-with-the-fetch-api
+          - title: Lab
+            path: /web/ilt/pwa/lab-fetch-api
+        - title: Caching Files With Service Worker
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/caching-files-with-service-worker-slides
+          - title: Concepts
+            path: /web/ilt/pwa/caching-files-with-service-worker
+          - title: Lab
+            path: /web/ilt/pwa/lab-caching-files-with-service-worker
+        - title: Lighthouse PWA Analysis Tool
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/lighthouse-pwa-analysis-tool-slides
+          - title: Concepts
+            path: /web/ilt/pwa/lighthouse-pwa-analysis-tool
+          - title: Lab
+            path: /web/ilt/pwa/lab-auditing-with-lighthouse
+        - title: Working with Promises
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/working-with-promises-slides
+          - title: Concepts
+            path: /web/ilt/pwa/working-with-promises
+          - title: Lab
+            path: /web/ilt/pwa/lab-promises
+        - title: Working with IndexedDB
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/working-with-indexeddb-slides
+          - title: Concepts
+            path: /web/ilt/pwa/working-with-indexeddb
+          - title: Lab
+            path: /web/ilt/pwa/lab-indexeddb
+        - title: Live Data in the Service Worker
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/live-data-in-the-service-worker-slides
+          - title: Concepts
+            path: /web/ilt/pwa/live-data-in-the-service-worker
+        - title: Using Workbox
+          section:
+          - title: Slides
+            path: /web/ilt/pwa/workbox-slides
+          - title: Lab
+            path: /web/ilt/pwa/lab-workbox
+        - title: Migrating to Workbox
+          section:
+          - title: Lab
+            path: /web/ilt/pwa/lab-migrating-to-workbox-from-sw-precache-and-sw-toolbox
+        - title: Responsive Design
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/responsive-design-slides
+          - title: Lab
+            path: /web/ilt/pwa/lab-responsive-design
+        - title: Responsive Images
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/responsive-images-slides
+          - title: Lab
+            path: /web/ilt/pwa/lab-responsive-images
+        - title: Introduction to PWA Architectures
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/introduction-to-progressive-web-app-architectures-slides
+          - title: Concepts
+            path: /web/ilt/pwa/introduction-to-progressive-web-app-architectures
+        - title: Offline Quickstart
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/offline-quickstart-slides
+          - title: Concepts
+            path: /web/ilt/pwa/offline-quickstart
+          - title: Lab
+            path: /web/ilt/pwa/lab-offline-quickstart
+        - title: Working with Gulp
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/introduction-to-gulp-slides
+          - title: Concepts
+            path: /web/ilt/pwa/introduction-to-gulp
+          - title: Lab
+            path: /web/ilt/pwa/lab-gulp-setup
+        - title: Introduction to Push Notifications
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/introduction-to-push-notifications-slides
+          - title: Concepts
+            path: /web/ilt/pwa/introduction-to-push-notifications
+          - title: Lab
+            path: /web/ilt/pwa/lab-integrating-web-push
+        - title: The Payment Request API
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/introduction-to-the-payment-request-api-slides
+          - title: Concepts
+            path: /web/ilt/pwa/introduction-to-the-payment-request-api
+        - title: Integrating Analytics
+          section:
+          - title: Slides & Video
+            path: /web/ilt/pwa/integrating-analytics-slides
+          - title: Concepts
+            path: /web/ilt/pwa/integrating-analytics
+          - title: Lab
+            path: /web/ilt/pwa/lab-integrating-analytics
+        - title: Appendix
+          section:
+          - title: Setting Up the Labs
+            path: /web/ilt/pwa/setting-up-the-labs
+          - title: Tools for PWA Developers
+            path: /web/ilt/pwa/tools-for-pwa-developers

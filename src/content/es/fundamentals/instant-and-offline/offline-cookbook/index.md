@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-08-26 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2014-12-09 #}
 
 # La guía sin conexión {: .page-title }
@@ -242,7 +242,7 @@ Es muy parecido a
 
 <img src="images/cm-on-push.png">
 
-La [Push API](/web/fundamentals/engage-and-retain/push-notifications/)
+La [Push API](/web/fundamentals/push-notifications)
 es otra característica de ServiceWorker. Le permite a
 ServiceWorker despertarse cuando llegue un mensaje del servicio de mensajería del
 SO. Esto ocurre incluso cuando el usuario no tiene una pestaña abierta
@@ -563,7 +563,7 @@ Siempre se acude a la red y se actualiza la caché a medida que se avanza.
       );
     });
 
-Nota: El código anterior todavía no funciona en Chrome porque debemos exponer `fetch` y `caches` a páginas ([vale n.º 1](https://code.google.com/p/chromium/issues/detail?id=436770) y [vale n.º 2](https://code.google.com/p/chromium/issues/detail?id=439389)).
+Note: El código anterior todavía no funciona en Chrome porque debemos exponer `fetch` y `caches` a páginas ([vale n.º 1](https://code.google.com/p/chromium/issues/detail?id=436770) y [vale n.º 2](https://code.google.com/p/chromium/issues/detail?id=439389)).
 
 En [Trained-to-thrill][ttt], lo solucioné de la siguiente manera:
 usé [XHR en lugar de fetch](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/utils.js#L3) y

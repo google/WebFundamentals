@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:从 Application 面板检查和删除 Cookie。
 
@@ -90,6 +90,7 @@ Cookie 按网域列示。其中包括主文档和所有嵌套的框架。
 * 选择 Cookie 并按 **Delete** 按钮
 (![Delete 按钮][delete]{:.inline}) 可以删除相应 Cookie。
 * 按 **Clear** 按钮 (![Clear 按钮][cos]{:.inline}) 可以删除指定框架组的所有 Cookie。
+
 * 右键点击 Cookie 的**Domain**值，然后选择 **Clear all from "..."**（其中 **"..."** 是网域的名称）可以删除来自该网域的所有 Cookie。
 
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“缓存包含来自清单的 start_url”Lighthouse 审查的参考文档。
 
@@ -9,7 +9,7 @@ description:“缓存包含来自清单的 start_url”Lighthouse 审查的参�
 
 ## 为什么说此审查非常重要{: #why }
 
-可确保在离线状态下从移动设备主屏幕正确启动渐进式网络应用。
+可确保在离线状态下从移动设备主屏幕正确启动 Progressive Web App。
 
 
 ## 如何通过此审查{: #how }
@@ -27,7 +27,7 @@ description:“缓存包含来自清单的 start_url”Lighthouse 审查的参�
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
-从移动设备的主屏幕启动一个渐进式网络应用时，此应用将在特定网址上打开。
+从移动设备的主屏幕启动一个 Progressive Web App 时，此应用将在特定网址上打开。
 该网址在应用的 `manifest.json` 文件中被定义为 `start_url` 属性。
 
 

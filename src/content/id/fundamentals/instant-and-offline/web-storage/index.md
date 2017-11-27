@@ -31,7 +31,7 @@ Model untuk menyimpan unit data menentukan cara menyusun data secara internal,
 yang memengaruhi kemudahan penggunaan, biaya serta kinerja permintaan storage dan
 pengambilan. 
 
-* **Terstruktur:** Data yang disimpan dalam tabel dengan bidang-bidang yang telah
+* **Terstruktur: **Data yang disimpan dalam tabel dengan bidang-bidang yang telah
 didefinisikan sebelumnya, sebagaimana umumnya
 sistem manajemen database berbasis SQL, mendukung penggunaan kueri yang fleksibel dan dinamis, ketika beragam tipe kueri mungkin tidak dikenali secara a
 priori. Contoh jelas datastore terstruktur adalah IndexedDB di
@@ -54,7 +54,7 @@ sistem file dan layanan cloud storage.
 Metode storage untuk aplikasi web bisa dianalisis sesuai dengan cakupan persistensi
 yang dibuat untuk data.
 
-* **Persistensi Sesi:** Data dalam kategori ini hanya disimpan selama
+* **Persistensi Sesi: **Data dalam kategori ini hanya disimpan selama
 sesi web tunggal atau selama tab browser masih aktif. Contoh mekanisme storage
 dengan persistensi sesi adalah Session Storage API.
 

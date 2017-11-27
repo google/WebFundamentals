@@ -14,7 +14,7 @@ const gutil = require('gulp-util');
 const wfRegEx = require('./wfRegEx');
 const exec = require('child_process').exec;
 
-var STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md'];
+const STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md'];
 
 if (!String.prototype.endsWith) {
   Object.defineProperty(String.prototype, 'endsWith', {
@@ -50,7 +50,6 @@ function promisedExec(cmd, cwd) {
       stdErr = stdErr.trim();
       if (err) {
         gutil.log(' ', cmdLog, chalk.red('FAILED'));
-        const output = (stdOut + '\n' + stdErr).trim();
         reject(err);
         return;
       }
@@ -93,34 +92,87 @@ function promisedRSync(src, dest) {
   });
 }
 
-
+/**
+ * Ascending sorting comparator for generic inputs
+ *  Note: string comparison is case insenstitive 
+ *
+ * @param {Object} a The first item to be compared.
+ * @param {Object} b The second item to be compared. 
+ * @return {number} -1,0,1.
+ */
 function genericComparator(a, b) {
-  if (a < b) {
+  if (typeof a === 'string') {
+    a = a.toLowerCase();
+  }
+  if (typeof b === 'string') {
+    b = b.toLowerCase();
+  }
+  if (a > b) {
     return 1;
-  } else if (a > b) {
+  } else if (a < b) {
     return -1;
   }
   return 0;
 }
 
-function publishedComparator(a, b) {
-  var aPublished = moment(a.datePublished).unix();
-  var bPublished = moment(b.datePublished).unix();
-  if (aPublished === bPublished) {
-    aPublished = a.title;
-    bPublished = b.title;
+/**
+ * Descending sorting comparator for datePublishedMoment
+ * - if values are equal, it uses updatedComparator
+ *
+ * @param {Object} aObj The first object to be compared.
+ * @param {Object} bObj The second object to be compared. 
+ * @return {number} -1,0,1.
+ */
+function publishedComparator(aObj, bObj) {
+  const aVal = aObj.datePublishedMoment;
+  const bVal = bObj.datePublishedMoment;
+  if (aVal.isBefore(bVal)) {
+    return 1;
+  } else if (aVal.isAfter(bVal)) {
+    return -1;
+  } else {
+    return updatedComparator(aObj, bObj);
   }
-  return genericComparator(aPublished, bPublished);
 }
 
-function updatedComparator(a, b) {
-  var aPublished = moment(a.dateUpdated).unix();
-  var bPublished = moment(b.dateUpdated).unix();
-  if (aPublished === bPublished) {
-    aPublished = a.title;
-    bPublished = b.title;
+/**
+ * Descending sorting comparator for dateUpdatedMoment
+ * - if values are equal, it uses the article title
+ *
+ * @param {Object} aObj The first object to be compared.
+ * @param {Object} bObj The second object to be compared. 
+ * @return {number} -1,0,1.
+ */
+function updatedComparator(aObj, bObj) {
+  const aVal = aObj.dateUpdatedMoment;
+  const bVal = bObj.dateUpdatedMoment;
+  if (aVal.isBefore(bVal)) {
+    return 1;
+  } else if (aVal.isAfter(bVal)) {
+    return -1;
+  } else {
+    return genericComparator(aObj.title, bObj.title);
   }
-  return genericComparator(aPublished, bPublished);
+}
+
+/**
+ * Descending sorting comparator for dateFeaturedMoment
+ * - if values are equal, it uses updatedComparator
+ *
+ * @param {Object} aObj The first object to be compared.
+ * @param {Object} bObj The second object to be compared. 
+ * @return {number} -1,0,1.
+ */
+function featuredComparator(aObj, bObj) {
+  const aVal = aObj.dateFeaturedMoment;
+  const bVal = bObj.dateFeaturedMoment;
+  if (aVal.isBefore(bVal)) {
+    return 1;
+  } else if (aVal.isAfter(bVal)) {
+    return -1;
+  } else {
+    return updatedComparator(aObj, bObj);
+  }
 }
 
 function getRegEx(regEx, content, defaultResponse) {
@@ -142,7 +194,11 @@ function readMetadataForFile(file) {
     description = wfRegEx.getMatch(wfRegEx.RE_DESCRIPTION, content);
   }
   var published = moment(wfRegEx.getMatch(wfRegEx.RE_PUBLISHED_ON, content));
+  published = published.utcOffset(0, true);
   var updated = moment(wfRegEx.getMatch(wfRegEx.RE_UPDATED_ON, content));
+  updated = updated.utcOffset(0, true);
+  var featured = moment(wfRegEx.getMatch(wfRegEx.RE_FEATURED_DATE, content, '1900-01-01'));
+  featured = featured.utcOffset(0, true);
   var url = file.replace('src/content/en/', '/web/');
   url = url.replace('.md', '');
   var result = {
@@ -150,21 +206,36 @@ function readMetadataForFile(file) {
     url: url,
     title: wfRegEx.getMatch(wfRegEx.RE_TITLE, content),
     description: description,
-    authors: [],
+    
     image: wfRegEx.getMatch(wfRegEx.RE_IMAGE, content),
-    datePublished: published.format(),
-    datePublishedPretty: published.format('dddd, MMMM Do YYYY'),
-    yearPublished: published.format('YYYY'),
-    dateUpdated: updated.format(),
-    dateUpdatedPretty: updated.format('dddd, MMMM Do YYYY'),
-    tags: []
+    imageSquare: wfRegEx.getMatch(wfRegEx.RE_IMAGE_SQUARE, content),
+    
+    datePublishedMoment: published,
+    datePublishedMonth: published.format('MM'),
+    datePublishedYear: published.format('YYYY'),
+
+    dateUpdatedMoment: updated,
+    dateUpdatedMonth: updated.format('MM'),
+    dateUpdatedYear: updated.format('YYYY'),
+
+    tags: [],
+    vertical: wfRegEx.getMatch(wfRegEx.RE_VERTICAL, content),
+
+    dateFeaturedMoment: featured,
+    dateFeaturedMonth: featured.format('MM'),
+    dateFeaturedYear: featured.format('YYYY'),
   };
   var authorList = content.match(wfRegEx.RE_AUTHOR_LIST);
   if (authorList) {
+    result.authors = [];
     authorList.forEach(function(contributor) {
       var author = wfRegEx.getMatch(wfRegEx.RE_AUTHOR_KEY, contributor).trim();
       result.authors.push(author);
     });
+  }
+  var region = wfRegEx.getMatch(wfRegEx.RE_REGION, content);
+  if (region) {
+    result.region = region;
   }
   var tags = wfRegEx.getMatch(wfRegEx.RE_TAGS, content);
   if (tags) {
@@ -182,8 +253,7 @@ function readMetadataForFile(file) {
       audioUrl: podcast,
       duration: wfRegEx.getMatch(wfRegEx.RE_PODCAST_DURATION, content),
       subtitle: wfRegEx.getMatch(wfRegEx.RE_PODCAST_SUBTITLE, content),
-      fileSize: wfRegEx.getMatch(wfRegEx.RE_PODCAST_SIZE, content),
-      pubDate: published.format('DD MMM YYYY HH:mm:ss [GMT]')
+      fileSize: wfRegEx.getMatch(wfRegEx.RE_PODCAST_SIZE, content)
     };
   }
   return result;
@@ -202,15 +272,13 @@ function getFileList(base, patterns) {
       results.push(metaData);
     }
   });
-  // var filename = path.join(base, '_files.json');
-  // fs.writeFileSync(filename, JSON.stringify(results, null, 2));
   return results;
 }
 
 function splitByYear(files) {
   var result = {};
   files.forEach(function(file) {
-    var year = file.yearPublished;
+    var year = file.datePublishedYear;
     if (!result[year]) {
       result[year] = [];
     }
@@ -219,10 +287,103 @@ function splitByYear(files) {
   return result;
 }
 
+function splitByMonth(files) {
+  var result = [];
+  files.forEach(function(file) {
+    const month = parseInt(file.datePublishedMonth, 10);
+    if (!result[month]) {
+      result[month] = {
+        title: moment.months()[month - 1],
+        articles: []
+      };
+    }
+    result[month].articles.push(file);
+  });
+  return result;
+}
+
+function splitByAuthor(files) {
+  var result = {};
+  files.forEach(function(file) {
+    var authors = file.authors || [];
+    authors.forEach(function(author) {
+      if (!result[author]) {
+        result[author] = [];
+      }
+      result[author].push(file);
+    });
+  });
+  return result;
+}
+
+/**
+ * Formats a moment() object to: YYYY-MM-DDTHH:mm:ssZ 
+ * Example: 2017-07-13T13:31:13Z
+ * Note: simply a shortcut to dateFormatISO
+ *
+ * @param {Object} dt The moment object to export.
+ * @return {string} YYYY-MM-DDTHH:mm:ssZ.
+ */
+function dateFormatAtom(dt) {
+  return dateFormatISO(dt);
+}
+
+/**
+ * Formats a moment() object to: YYYY-MM-DDTHH:mm:ssZ 
+ * Example: 2017-07-13T13:31:13Z
+ *
+ * @param {Object} dt The moment object to export.
+ * @return {string} YYYY-MM-DDTHH:mm:ssZ.
+ */
+function dateFormatISO(dt) {
+  return dt.format('YYYY-MM-DDTHH:mm:ss[Z]');
+}
+
+/**
+ * Formats a moment() object to: YYYY-MM-DD
+ * Example: 2017-07-13
+ *
+ * @param {Object} dt The moment object to export.
+ * @return {string} YYYY-MM-DD.
+ */
+function dateFormatISOShort(dt) {
+  return dt.format('YYYY-MM-DD');
+}
+
+/**
+ * Formats a moment() object to: dddd, MMMM Do YYYY
+ * Example: Friday, July 13th 2017
+ *
+ * @param {Object} dt The moment object to export.
+ * @return {string} dddd, MMMM Do YYYY.
+ */
+function dateFormatPretty(dt) {
+  return dt.format('dddd, MMMM Do YYYY');
+}
+
+/**
+ * Formats a moment() object to: DD MMM YYYY HH:mm:ss GMT
+ * Example: 13 Jul 2017 13:31:13 GMT
+ *
+ * @param {Object} dt The moment object to export.
+ * @return {string} DD MMM YYYY HH:mm:ss GMT.
+ */
+function dateFormatRSS(dt) {
+  return dt.format('DD MMM YYYY HH:mm:ss [GMT]')
+}
+
 exports.promisedRSync = promisedRSync;
 exports.promisedExec = promisedExec;
 exports.getRegEx = getRegEx;
 exports.getFileList = getFileList;
 exports.publishedComparator = publishedComparator;
 exports.updatedComparator = updatedComparator;
+exports.featuredComparator = featuredComparator;
 exports.splitByYear = splitByYear;
+exports.splitByMonth = splitByMonth;
+exports.splitByAuthor = splitByAuthor;
+exports.dateFormatAtom = dateFormatAtom;
+exports.dateFormatISO = dateFormatISO;
+exports.dateFormatISOShort = dateFormatISOShort;
+exports.dateFormatPretty = dateFormatPretty
+exports.dateFormatRSS = dateFormatRSS;

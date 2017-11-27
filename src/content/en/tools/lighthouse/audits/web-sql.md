@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Site Does Not Use Web SQL" Lighthouse audit.
+description: Reference documentation for the "Avoids Web SQL" Lighthouse audit.
 
-{# wf_updated_on: 2016-12-05 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-12-05 #}
 
-# Site Does Not Use Web SQL  {: .page-title }
+# Avoids Web SQL  {: .page-title }
 
 ## Why the audit is important {: #why }
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Polymer Starter Kit.
 
@@ -23,14 +23,14 @@ secara progresif memuatnya bila dibutuhkan saat pengguna mengarah ke berbagai ba
 
 Pola PRPL, secara ringkas:
 
-* **Mendorong** komponen yang diperlukan untuk rute awal
-* **Merender** rute awal secepatnya
-* **Lebih dahulu meng-cache** komponen untuk rute selebihnya
-* **Memuat lambat** dan secara progresif meningkatkan versi rute berikutnya hanya bila dibutuhkan
+* **Push** komponen yang diperlukan untuk rute awal
+* **Render** rute awal secepatnya
+* **Pre-cache** komponen untuk rute selebihnya
+* **Lazy-load** dan secara progresif meningkatkan versi rute berikutnya hanya bila dibutuhkan
 
 ### Migrasi dari Polymer Starter Kit v1?
 
-[Periksalah entri blog kami yang membahas perubahan apa saja yang ada di PSK2 dan cara migrasi!](https://www.polymer-project.org/1.0/blog/2016-08-18-polymer-starter-kit-or-polymer-cli.html){: .external }
+[Lihat entri blog kami yang membahas perubahan apa saja yang ada di PSK2 dan cara migrasi!](https://www.polymer-project.org/1.0/blog/2016-08-18-polymer-starter-kit-or-polymer-cli.html){: .external }
 
 ## Persiapan
 
@@ -99,7 +99,7 @@ di-precache (dan bundelnya akan dibuat dalam versi `bundled` fallback).
 
 ## Langkah Berikutnya
 
-Lihatlah [panduan memulai](https://www.polymer-project.org/1.0/start/toolbox/set-up){: .external }
+Lihat [panduan memulai](https://www.polymer-project.org/1.0/start/toolbox/set-up){: .external }
 
 ## Ketahui Selengkapnya
 

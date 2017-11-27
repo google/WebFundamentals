@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Site Uses HTTP/2 For Its Own Resources" Lighthouse audit.
+description: Reference documentation for the "Uses HTTP/2 For Its Own Resources" Lighthouse audit.
 
-{# wf_updated_on: 2016-12-05 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-12-05 #}
 
-# Site Uses HTTP/2 For Its Own Resources  {: .page-title }
+# Uses HTTP/2 For Its Own Resources  {: .page-title }
 
 ## Why the audit is important {: #why }
 

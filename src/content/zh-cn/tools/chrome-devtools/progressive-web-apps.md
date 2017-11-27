@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用 Application 面板检查、修改和调试网络应用清单、服务工作线程和服务工作线程缓存。
 
-{# wf_updated_on:2016-07-25 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on:2016-07-25 #}
 
-# 调试渐进式网络应用 {: .page-title }
+# 调试 Progressive Web App {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -14,9 +14,9 @@ description:使用 Application 面板检查、修改和调试网络应用清单�
 
 相关指南： 
 
-* [渐进式网络应用](/web/progressive-web-apps)
+* [Progressive Web App](/web/progressive-web-apps)
 
-本指南仅讨论 **Application** 面板的渐进式网络应用功能。
+本指南仅讨论 **Application** 面板的 Progressive Web App 功能。
 如果您希望获得其他窗格的帮助，请参阅本指南的最后一部分，即[其他 Application 面板指南](#other)。
 
 
@@ -38,8 +38,8 @@ description:使用 Application 面板检查、修改和调试网络应用清单�
 
 相关指南：
 
-* [通过网络应用清单改进用户体验](/web/fundamentals/engage-and-retain/web-app-manifest)
-* [使用应用安装横幅](/web/fundamentals/engage-and-retain/app-install-banners)
+* [通过网络应用清单改进用户体验](/web/fundamentals/web-app-manifest)
+* [使用应用安装横幅](/web/fundamentals/app-install-banners)
 
 
 设置好清单后，您可以使用 **Application** 面板的 **Manifest** 窗格对其进行检查。
@@ -63,7 +63,7 @@ description:使用 Application 面板检查、修改和调试网络应用清单�
 
 
 
-您可以使用 [Google I/O 2016 渐进式网络应用](https://events.google.com/io2016/){: .external } 测试此功能，该应用可以为 Add to Homescreen 提供相应支持。在应用打开时点击 **Add to Homescreen** 会提示 Chrome 显示“add this site to your shelf”横幅（桌面设备），而在移动设备上则会显示“add to homescreen”横幅。
+您可以使用 [Google I/O 2016 Progressive Web App](https://events.google.com/io2016/){: .external } 测试此功能，该应用可以为 Add to Homescreen 提供相应支持。在应用打开时点击 **Add to Homescreen** 会提示 Chrome 显示“add this site to your shelf”横幅（桌面设备），而在移动设备上则会显示“add to homescreen”横幅。
 
 
 
@@ -79,8 +79,7 @@ Console 会告诉您清单是否存在任何问题，并记录与 Add to Homescr
 
 
 
-如果您希望测试真实的移动体验，则可以通过[远程调试][远程调试]将一台真实的移动设备连接到 DevTools，然后点击 DevTools 上的 **Add to Homescreen** 按钮，在连接的移动设备上触发“add to homescreen”提示。
-
+如果您希望测试真实的移动体验，则可以通过[远程调试][remote debugging]将一台真实的移动设备连接到 DevTools，然后点击 DevTools 上的 **Add to Homescreen** 按钮，在连接的移动设备上触发“add to homescreen”提示。
 
 
 
@@ -97,7 +96,7 @@ Console 会告诉您清单是否存在任何问题，并记录与 Add to Homescr
 相关指南：
 
 * [服务工作线程简介](/web/fundamentals/primers/service-worker)
-* [推送通知：及时、相关且精确](/web/fundamentals/engage-and-retain/push-notifications)
+* [推送通知：及时、相关且精确](/web/fundamentals/push-notifications)
 
 
 **Application** 面板中的 **Service Workers** 窗格是在 DevTools 中检查和调试服务工作线程的主要地方。
@@ -117,7 +116,7 @@ Console 会告诉您清单是否存在任何问题，并记录与 Add to Homescr
 * **Source** 行可以告诉您当前正在运行的服务工作线程的安装时间。
 链接是服务工作线程源文件的名称。点击链接会将您定向至服务工作线程来源。
 * **Status** 行可以告诉您服务工作线程的状态。此行上的数字（上方屏幕截图中的 `#1`）指示服务工作线程已被更新的次数。如果启用 **update on reload** 复选框，您会注意到每次页面加载时此数字都会增大。在状态旁边，您将看到 **start** 按钮（如果服务工作线程已停止）或 **stop** 按钮（如果服务工作线程正在运行）。服务工作线程设计为可由浏览器随时停止和启动。
-使用 **stop** 按钮明确停止服务工作线程可以模拟这一点。停止服务工作线程是测试服务工作线程再次重新启动时的代码行为方式的绝佳方法。它通常可以揭示由于对持续全局状态的不完善假设而引发的错误
+使用 **stop** 按钮明确停止服务工作线程可以模拟这一点。停止服务工作线程是测试服务工作线程再次重新启动时的代码行为方式的绝佳方法。它通常可以揭示由于对持续全局状态的不完善假设而引发的错误。
 * **Clients** 行可以告诉您服务工作线程作用域的原点。
 如果您已启用 **show all** 复选框，**focus** 按钮将非常实用。
 在此复选框启用时，系统会列出所有注册的服务工作线程。
@@ -131,7 +130,7 @@ Console 会告诉您清单是否存在任何问题，并记录与 Add to Homescr
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ## 服务工作线程缓存 {:#caches}
@@ -155,7 +154,7 @@ Console 会告诉您清单是否存在任何问题，并记录与 Add to Homescr
 
 ## 清除存储 {:#clear-storage}
 
-开发渐进式网络应用时，**Clear Storage** 窗格是一个非常实用的功能。
+开发 Progressive Web App 时，**Clear Storage** 窗格是一个非常实用的功能。
 利用此窗格，只需点击一次按钮即可注销服务工作线程并清除所有缓存与存储。
 参阅下面的部分了解详情。
 

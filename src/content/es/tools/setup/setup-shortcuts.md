@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Configura combinaciones de teclas para las tareas de la línea de comandos que usas continuamente. Si tienes que escribir lo mismo en la línea de comandos reiteradamente, esto reducirá el esfuerzo.
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-09-24 #}
 
 # Configura combinaciones de teclas para la línea de comandos {: .page-title }
@@ -34,7 +34,7 @@ comunes al archivo bashrc. En Mac o Linux:
 3. Cada vez que estés en el directorio con un repositorio de git, podrás ejecutar el comando
    `master` y este se encargará de controla la rama principal.
 
-Nota: Consulta estas instrucciones para [configurar alias de
+Note: Consulta estas instrucciones para [configurar alias de
 Windows](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx).
 
 ## Combinaciones de teclas que recomendamos

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools 힙 프로파일러로 힙 스냅샷을 기록하여 메모리 누수를 찾아내는 방법을 알아봅니다.
 
@@ -37,13 +37,13 @@ Profiles 패널에서 **Take Heap Snapshot**을 선택한 다음 **Start**를 �
 
 ## 스냅샷 지우기
 
-스냅샷을 (DevTools와 렌더러 메모리 양쪽에서) 삭제하려면 Clear all profiles(모든 프로필 지우기) 아이콘을 누릅니다.
+스냅샷을 (DevTools와 렌더러 메모리 양쪽에서) 삭제하려면 Clear all profiles 아이콘을 누릅니다.
 
 ![스냅샷 삭제](imgs/remove-snapshots.png)
 
 DevTools 창을 닫아도 프로필이 렌더러 메모리에서 삭제되지는 않습니다. DevTools를 다시 열면 이전에 촬영한 스냅샷이 모두 스냅샷 목록에 다시 표시됩니다.
 
-<p class="note"><strong>예:</strong> 다음의 <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example3.html">분산된 객체</a> 예시를 힙 프로파일러로 프로파일링해보십시오. 여러 개의 (객체) 항목 할당이 표시되어야 정상입니다.</p>
+<p class="note"><strong>예:</strong> 다음의 <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example3.html">분산된 객체</a> 예시를 힙 프로파일러로 프로파일링해보세요. 여러 개의 (객체) 항목 할당이 표시되어야 정상입니다.</p>
 
 ## 스냅샷 보기
 
@@ -73,7 +73,7 @@ DevTools 창을 닫아도 프로필이 렌더러 메모리에서 삭제되지는
 
 ![Summary 뷰](imgs/summary-view.png)
 
-최상위 항목은 "총" 줄 수입니다. 여기에 표시되는 내용은 다음과 같습니다.
+최상위 항목은 '총' 줄 수입니다. 여기에 표시되는 내용은 다음과 같습니다.
 
 * **Constructor**는 이 생성자를 사용하여 생성된 모든 객체를 나타냅니다.
 * **Number of object instances**는 # 열에 표시됩니다.
@@ -106,7 +106,7 @@ DevTools 창을 닫아도 프로필이 렌더러 메모리에서 삭제되지는
 
 ### Comparison 뷰
 
-여러 개의 스냅샷을 서로 비교하여 누수된 객체를 찾아냅니다. 특정 애플리케이션 작업이 누수를 발생시키지 않는지 확인하려면(예를 들어 문서를 열었다가 닫는 것처럼 직접 및 역방향 작업이 쌍을 이루는 경우 가비지를 남기지 않아야 합니다), 아래의 시나리오를 따르세요.
+여러 개의 스냅샷을 서로 비교하여 누수된 객체를 찾아냅니다. 특정 애플리케이션 작업이 누수를 발생시키지 않는지 확인하려면(예를 들어 문서를 열었다가 닫는 것처럼 직접 및 역방향 작업이 쌍을 이루는 경우 가비지를 남기지 않아야 함), 아래의 시나리오를 따르세요.
 
 1. 작업을 수행하기 전에 힙 스냅샷을 촬영합니다. 
 2. 작업을 수행합니다(누수를 초래한다고 생각되는 방식으로 페이지와 상호작용). 
@@ -121,18 +121,18 @@ Comparison 뷰에 두 스냅샷의 차이점이 표시됩니다. total 항목을
 
 ### Containment 뷰
 
-Containment 뷰는 기본적으로 애플리케이션의 객체 구조를 '조감도' 형태로 보여줍니다. 이 뷰를 사용하면 함수 클로저 안쪽을 들여다볼 수 있고, Javascript 객체를 구성하는 VM 내부 객체를 관찰할 수도 있으며, 애플리케이션이 얼마나 많은 메모리를 사용하는지 아주 낮은 수준에서 파악할 수 있습니다.
+Containment 뷰는 기본적으로 애플리케이션의 객체 구조를 '조감도' 형태로 보여줍니다. 이 뷰를 사용하면 함수 클로저 안쪽을 들여다볼 수 있고, 자바스크립트 객체를 구성하는 VM 내부 객체를 관찰할 수도 있으며, 애플리케이션이 얼마나 많은 메모리를 사용하는지 아주 낮은 수준에서 파악할 수 있습니다.
 
 이 뷰는 여러 진입점을 제공합니다.
 
-* **DOMWindow objects**는 자바스크립트 코드에 대해 "전역" 객체로 간주되는 객체입니다.
+* **DOMWindow objects**는 자바스크립트 코드에 대해 '전역' 객체로 간주되는 객체입니다.
 * **GC roots**는 VM의 가비지가 사용하는 실제 GC 루트입니다. GC 루트는 기본 제공 객체 맵, 기호 테이블, VM 스레드 스택, 컴파일 캐시, 핸들 범위, 전역 핸들 등으로 구성될 수 있습니다.
 * **Native objects**는 자동화할 수 있도록 자바스크립트 가상 머신 내부로 '푸시'되는 브라우저 객체입니다(DOM 노드, CSS 규칙 등).
 
 ![Containment 뷰](imgs/containment-view.png)
 
 <p class="note">
-  <strong>예:</strong>이 뷰를 사용하여 클로저와 이벤트 핸들러를 탐색하는 방법을 알아보려면 이 <a href="https://developer.chrome.com/devtools/docs/heap-profiling-containment">데모 페이지</a>를 살펴보세요.
+  <strong>예:</strong> 이 뷰를 사용하여 클로저와 이벤트 핸들러를 탐색하는 방법을 알아보려면 이 <a href="https://developer.chrome.com/devtools/docs/heap-profiling-containment">데모 페이지</a>를 살펴보세요.
 
 
 <strong>클로저에 대한 팁</strong>
@@ -174,20 +174,20 @@ Containment 뷰는 기본적으로 애플리케이션의 객체 구조를 '조�
 
 ### Dominators 뷰
 
-[Dominators](/web/tools/chrome-devtools/profile/memory-problems/memory-101#dominators)뷰는 힙 그래프의 도미네이터 트리를 보여줍니다.
+[Dominators](/web/tools/chrome-devtools/profile/memory-problems/memory-101#dominators) 뷰는 힙 그래프의 도미네이터 트리를 보여줍니다.
 이 뷰는 Containment 뷰와 유사하지만 속성 이름이 없습니다.
 그 이유는 객체의 도미네이터에는 이에 대한 직접 참조가 없을 수도 있기 때문입니다.
 도미네이터 트리는 그래프의 스패닝 트리가 아닙니다.
 하지만 메모리 누적 지점을 신속하게 파악할 수 있기 때문에
 더 유용한 경우도 있습니다.
 
-<p class="note"><strong>참고:</strong>Chrome Canary에서 Dominators 뷰를 활성화하려면 Settings > Show advanced heap snapshot properties로 이동하여 DevTools를 다시 시작하면 됩니다.</p>
+<p class="note"><strong>참고:</strong> Chrome Canary에서 Dominators 뷰를 활성화하려면 Settings > Show advanced heap snapshot properties로 이동하여 DevTools를 다시 시작하면 됩니다.</p>
 
 ![Dominators 뷰](imgs/dominators-view.png)
 
 <p class="note">
     <strong>예:</strong>
-    누적 지점을 찾아내는 방법을 연습하려면 이<a href="https://developer.chrome.com/devtools/docs/heap-profiling-dominators">데모</a>를 살펴보세요. 이어서 <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example10.html">보존 경로 및 도미네이터</a>의 예시도 둘러보세요.
+    누적 지점을 찾아내는 방법을 연습하려면 이 <a href="https://developer.chrome.com/devtools/docs/heap-profiling-dominators">데모</a>를 살펴보세요. 이어서 <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example10.html">보존 경로 및 도미네이터</a>의 예시도 둘러보세요.
 </p>
 
 ## 색 구분 검색
@@ -195,10 +195,10 @@ Containment 뷰는 기본적으로 애플리케이션의 객체 구조를 '조�
 객체의 속성과 속성 값은 각기 유형이 다르며 
 그에 따라 색이 지정됩니다. 각 속성은 다음 네 가지 중 한 가지 유형을 지닙니다.
 
-* **a: property** — 이름이 있는 일반 속성으로, .(점) 연산자 또는 [ ](괄호) 표기법을 통해 액세스(예: ["foo bar"])
-* **0: element** — 숫자 색인이 있는 일반 속성으로, [ ](괄호) 표기법을 통해 액세스
-* **a: context var** - 함수 컨텍스트의 변수로, 함수 클로저 내에서 이름으로 액세스 가능
-* **a: system prop** - 자바스크립트 VM이 추가하는 속성으로, 자바스크립트 코드에서는 액세스할 수 없음
+* **a: property** - 이름이 있는 일반 속성으로, .(점) 연산자 또는 [ ](괄호) 표기법(예: ["foo bar"])을 통해 액세스됩니다.
+* **0: element** - 숫자 색인이 있는 일반 속성으로, [ ](괄호) 표기법을 통해 액세스됩니다.
+* **a: context var** - 함수 컨텍스트의 변수로, 함수 클로저 내에서 이름으로 액세스 가능합니다.
+* **a: system prop** - 자바스크립트 VM이 추가하는 속성으로, 자바스크립트 코드에서는 액세스할 수 없습니다.
 
 `System `으로 지정된 객체는 상응하는 자바스크립트 유형이 없습니다. 이들은 자바스크립트 VM의 객체 시스템 구현의 일부분입니다. V8은 대부분의 내부 객체를 사용자의 JS 객체와 같은 힙에 할당합니다. 따라서 이들은 그저 v8 내부 객체일 뿐입니다.
 
@@ -246,7 +246,7 @@ DOM 누수는 생각보다 규모가 클 수 있습니다.
 </p>
 
 DOM 누수와 메모리 분석 기본 사항에 대해 더 자세한 내용을 읽어보려면 Gonzlao Ruiz de Villa가 작성한 
-[Chrome DevTools 로 메모리 누수 찾기 및 디버깅](http://slid.es/gruizdevilla/memory) 문서를 참조하세요.
+[Chrome DevTools로 메모리 누수 찾기 및 디버깅](http://slid.es/gruizdevilla/memory) 문서를 참조하세요.
 
 <p class="note">
     <strong>예:</strong>

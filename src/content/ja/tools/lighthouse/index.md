@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse を設定してウェブアプリを監査する方法について説明します。
 
@@ -10,7 +10,6 @@ description: Lighthouse を設定してウェブアプリを監査する方法�
 [Lighthouse](https://github.com/GoogleChrome/lighthouse) はオープンソースの自動化されたツールでウェブアプリの品質向上に役立ちます。
 このツールは Chrome 拡張機能として実行するか、コマンドラインから実行できます。
 Lighthouse に監査したい URL を指定して実行すると、ページに対する集中的なテストを実行してパフォーマンスに関するレポートを生成できます。
-
 今後は弱点を検出するテストを利用して、アプリの品質改善の指針を得られるようになります。
 
 

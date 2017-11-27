@@ -1,9 +1,9 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Es fundamental comprender las etapas en las que se recolectan los recursos en la red. Esta es la base para solucionar los problemas de carga."
 
 {# wf_published_on: 2016-02-03 #}
-{# wf_updated_on: 2016-02-03 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # Comprende Resource Timing {: .page-title }
 
@@ -14,18 +14,18 @@ Es fundamental comprender las etapas en las que se recolectan los recursos en la
 
 ### TL;DR {: .hide-from-toc }
 - Comprende las fases de la sincronización de recursos.
-- Conoce lo que cada etapa proporciona a la API Resource Timing.
+- Conoce lo que cada etapa proporciona a la Resource Timing API.
 - Identifica distintos indicadores de problemas de rendimiento en el gráfico de la línea del tiempo, por ejemplo, series de barras transparentes o fragmentos verdes grandes.
 
 
 Todas las solicitudes de la red se consideran recursos.
 Cuando se recuperan a través de la red, los recursos tienen ciclos de vida distintivos que se expresan en términos de sincronización de recursos.
-El panel Network usa la misma [API Resource Timing](http://www.w3.org/TR/resource-timing) que está disponible para los desarrolladores de apps.
+El panel Network usa la misma [Resource Timing API](http://www.w3.org/TR/resource-timing) que está disponible para los desarrolladores de apps.
 
-Nota: cuando usas la API Resource Timing con recursos de distintos orígenes, asegúrate
+Note: cuando usas la Resource Timing API con recursos de distintos orígenes, asegúrate
 de que todos los recursos tengan encabezados CORS.
 
-La API Resource Timing ofrece información detallada sobre el tiempo de recepción de cada recurso.
+La Resource Timing API ofrece información detallada sobre el tiempo de recepción de cada recurso.
 Las fases primarias del ciclo de vida de la solicitud son las siguientes:
 
 * Redireccionamiento:
@@ -47,7 +47,7 @@ Las fases primarias del ciclo de vida de la solicitud son las siguientes:
   * `responseStart` es el momento en el cual un servidor responde inicialmente a la solicitud.
   * `responseEnd` es el tiempo en que finaliza la solicitud y se recuperan los datos.
 
-![Diagrama de la API Resource Timing](imgs/resource-timing-api.png)
+![Diagrama de la Resource Timing API](imgs/resource-timing-api.png)
 
 ## Visualización en DevTools
 
@@ -55,7 +55,7 @@ Para ver toda la información de sincronización para una entrada específica de
 
 1. Desplazarte sobre el gráfico de sincronización que se encuentra debajo de la columna de línea de tiempo. Se abrirá una ventana emergente con todos los datos de la sincronización.
 2. Hacer clic en cualquier entrada y abre la pestaña Timing de la entrada.
-3. Usar la API Resource Timing para recuperar los datos sin procesar de JavaScript.
+3. Usar la Resource Timing API para recuperar los datos sin procesar de JavaScript.
 
 ![Información de Resource Timing](imgs/resource-timing-data.png)
 

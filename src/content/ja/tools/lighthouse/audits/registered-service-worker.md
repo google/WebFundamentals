@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse の監査項目 「Service Worker を登録する」のリファレンス ドキュメント。
 
@@ -32,7 +32,6 @@ Service Worker
 
 
 * [ウェブアプリでプッシュ通知を有効にする](https://codelabs.developers.google.com/codelabs/push-notifications)
-
 * [ユーザーのホーム画面にウェブアプリを追加する](https://codelabs.developers.google.com/codelabs/add-to-home-screen)
 
 

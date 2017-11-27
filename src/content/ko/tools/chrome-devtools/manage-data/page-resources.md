@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 리소스를 프레임, 도메인, 유형 또는 기타 기준에 따라 구성합니다.
 

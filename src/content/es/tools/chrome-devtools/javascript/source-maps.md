@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Haz que tu código del lado del cliente sea legible y depurable aún después de combinarlo, comprimirlo y compilarlo.
 
@@ -49,7 +49,7 @@ De forma predeterminada, los mapas de origen ya están habilitados (a partir de 
 
 Cuando [depures tu código](/web/tools/chrome-devtools/debug/breakpoints/step-code) y los mapas de origen estén habilitados, estos mapas se mostrarán en dos lugares:
 
-1. En la consola (el vínculo al origen debe ser el archivo original y no el generado)
+1. En la consola (el vínculo al origen debe ser el archivo original y no el generado).
 2. Cuando recorras el código (los vínculos en la pila de llamadas deben abrir el archivo de origen).
 
 ## @sourceURL y displayName

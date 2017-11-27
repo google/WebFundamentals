@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentação de referência para a auditoria do Lighthouse "Site não usa cache de aplicativos".
 
@@ -11,7 +11,7 @@ description: Documentação de referência para a auditoria do Lighthouse "Site 
 
 O cache de aplicativos, também conhecido como AppCache, está [obsoleto][deprecated].
 
-[obsoleto]: https://html.spec.whatwg.org/multipage/browsers.html#offline
+[deprecated]: https://html.spec.whatwg.org/multipage/browsers.html#offline
 
 ## Como ser aprovado na auditoria {: #how }
 
@@ -28,7 +28,7 @@ off-line.
 
 [API]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
 
-[sw-appcache-behavior]: https://github.com/GoogleChrome/sw-helpers/blob/master/packages/sw-appcache-behavior
+[sw-appcache-behavior]: https://github.com/GoogleChrome/sw-appcache-behavior
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 

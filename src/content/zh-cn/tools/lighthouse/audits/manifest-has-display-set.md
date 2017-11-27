@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description:“清单的显示属性已设置”Lighthouse 审查的参考文档。
+description:“清单的 display 属性已设置”Lighthouse 审查的参考文档。
 
 {# wf_updated_on:2016-09-21 #}
 {# wf_published_on:2016-09-21 #}
 
-# 清单的显示属性已设置 {: .page-title }
+# 清单的 display 属性已设置 {: .page-title }
 
 ## 为什么说此审查非常重要{: #why }
 

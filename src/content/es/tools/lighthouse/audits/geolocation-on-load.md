@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia de la auditoría de Lighthouse sobre “La página no solicita automáticamente la ubicación geográfica cuando se carga”.
 
@@ -24,7 +24,7 @@ las solicitudes a gestos del usuario.
 Consulta [Pedir permiso de modo responsable][ask] para conocer una lista de las prácticas recomendadas
 cuando necesites solicitar la ubicación del usuario.
 
-[pedir]: /web/fundamentals/native-hardware/user-location/#ask_permission_responsibly
+[ask]: /web/fundamentals/native-hardware/user-location/#ask_permission_responsibly
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
@@ -38,7 +38,7 @@ código llama a `geolocation.getCurrentPosition()` o
 `geolocation.watchPosition()`, y el permiso de ubicación geográfica todavía no se
 había otorgado, significa que se solicitó la ubicación del usuario.
 
-[ayuda]: https://support.google.com/chrome/answer/6148059
+[help]: https://support.google.com/chrome/answer/6148059
 
 
 {# wf_devsite_translation #}

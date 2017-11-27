@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: O HTTP/2 (ou h2) é um protocolo binário que traz envio push, fluxos multiplexados e controle de quadros à web.
 
-{# wf_updated_on: 2016-09-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-29 #}
 
 # Introdução ao HTTP/2 {: .page-title }
@@ -77,7 +77,7 @@ código-fonte para a implementação experimental do novo protocolo SPDY:
 > muito animadores: quando baixamos os 25 principais sites por conexões casa
 > rede simuladas, vimos uma melhoria considerável no desempenho — as páginas
 > carregavam até 55% mais rápido. 
-> [*Blog do Chromium)*](https://blog.chromium.org/2009/11/2x-faster-web.html)
+> [*(Blog do Chromium)*](https://blog.chromium.org/2009/11/2x-faster-web.html)
 
 Pulando agora para 2012, o novo protocolo experimental era compatível com Chrome,
 Firefox e Opera, e cada vez mais sites, tanto grandes (por exemplo,
@@ -253,7 +253,7 @@ reagrupem-nos na outra ponta.
 ![Multiplexação de solicitações e respostas HTTP/2 em uma conexão compartilhada](images/multiplexing01.svg)
 
 A imagem mostra a captura de diversos fluxos durante o trânsito dentro da mesma conexão. O
-cliente está transmitindo um quadro DATA (fluxo 5) ao servidor, enquanto que o servidor
+cliente está transmitindo um quadro `DATA` (fluxo 5) ao servidor, enquanto que o servidor
 está transmitindo uma sequência intercalada de quadros ao cliente para os fluxos 1
 e 3. Sendo assim, há três fluxos paralelos em trânsito.
 
@@ -268,7 +268,7 @@ nós:
 * Usemos uma única conexão para entregar diversas solicitações e respostas em paralelo.
 * Removamos soluções paliativas desnecessárias do HTTP/1.x (ver
   [Otimização do HTTP/1.x](https://hpbn.co/optimizing-application-delivery/#optimizing-for-http1x),
-  como arquivos concatenados, sprites de imagem e fragmentação de domínio.
+  como arquivos concatenados, image sprites e fragmentação de domínio.
 * Forneçamos tempos de carregamento de página mais curtos por meio da eliminação de latência desnecessária e melhoria
   da utilização da capacidade de rede disponível.
 * *E muito mais...*
@@ -472,19 +472,19 @@ os mesmos resultados, mas com mais benefícios de desempenho. Os recursos enviad
 * Priorizados pelo servidor
 * Recusados pelo cliente
 
-### INTRODUÇÃO AO PUSH_PROMISE
+### INTRODUÇÃO AO `PUSH_PROMISE`
 
-Todo fluxo de push do servidor é iniciado por quadros PUSH_PROMISE, que sinalizam a
+Todo fluxo de push do servidor é iniciado por quadros `PUSH_PROMISE`, que sinalizam a
 intenção do servidor de enviar os recursos descritos por push ao cliente e a necessidade
 de enviá-los antes dos dados da resposta que solicita os recursos enviados. Essa
 ordem de envio é fundamental: o cliente precisa saber que recursos o servidor
 pretende enviar por push para evitar criar solicitações duplicadas para
 eles. A estratégia mais simples para satisfazer essa exigência é enviar todos
-os quadros PUSH_PROMISE, que contêm somente os cabeçalhos HTTP dos recursos
-prometidos, antes da resposta do primário (ou seja, quadros DATA).
+os quadros `PUSH_PROMISE`, que contêm somente os cabeçalhos HTTP dos recursos
+prometidos, antes da resposta do primário (ou seja, quadros `DATA`).
 
-Quando o cliente receber um quadro PUSH_PROMISE, poderá recusar o
-fluxo (pelo quadro RST_STREAM), se quiser (isso pode ocorrer, por exemplo,
+Quando o cliente receber um quadro `PUSH_PROMISE`, poderá recusar o
+fluxo (pelo quadro `RST_STREAM`), se quiser (isso pode ocorrer, por exemplo,
 porque o recurso já está armazenado em cache). Essa é uma evolução importante em relação ao
 HTTP/1.x. Por outro lado, o uso da incorporação de recursos, que é uma "otimização"
 popular do HTTP/1.x, é equivalente a um "push forçado": o cliente não pode
@@ -494,7 +494,7 @@ Com o HTTP/2, o cliente detém todo o controle sobre como o envio push do servid
 cliente pode limitar o número de fluxos enviados por push simultaneamente, ajustar a janela
 de controle de fluxo inicial para controlar a quantidade de dados que é enviada por push quando o fluxo é aberto
 pela primeira vez ou desativar totalmente o envio push do servidor. Essas preferências são comunicadas pelos
-quadros SETTINGS no início da conexão HTTP/2 e podem ser atualizadas
+quadros `SETTINGS` no início da conexão HTTP/2 e podem ser atualizadas
 a qualquer momento.
 
 Cada recurso enviado por push é um fluxo que, ao contrário de um recurso embutido, permite
@@ -539,8 +539,8 @@ presentes nas tabelas estática e dinâmica de cada lado.
 
 Observação: As definições dos campos de cabeçalho da solicitação e da resposta no HTTP/2 continuam
 as mesmas, com algumas pequenas exceções: os nomes de campo de cabeçalho só contêm letras minúsculas
-e a linha da solicitação agora é dividida nos campos individuais :method, :scheme, :authority
-e :path, que não são genuinamente do cabeçalho.
+e a linha da solicitação agora é dividida nos campos individuais `:method`, `:scheme`, `:authority`
+e `:path`, que não são genuinamente do cabeçalho.
 
 ### Segurança e desempenho do HPACK
 

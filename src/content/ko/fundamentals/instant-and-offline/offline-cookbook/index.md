@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-08-26 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2014-12-09 #}
 
 # 오프라인 설명서 {: .page-title }
@@ -22,7 +22,7 @@ AppCache가 현장에 도착했을 때 콘텐츠를 오프라인으로 작동하
 여러 패턴을 함께 사용할 것입니다.
 
 별도의 언급이 없는 한 모든 코드 예시는 Chrome과 Firefox에서 작동합니다.
-서비스 워커 지원에 대한 자세한 내용은 ["Is Service Worker Ready?"][is_sw_ready]를 참조하세요.
+서비스 워커 지원에 대한 자세한 내용은 ['Is Service Worker Ready?'][is_sw_ready]를 참조하세요.
 
 이러한 일부 패턴의 실제 데모를 보려면 [Trained-to-thrill][ttt]과, 
 성능 영향을 보여주는 [이 동영상](https://www.youtube.com/watch?v=px-J9Ghvcx4)을 
@@ -44,7 +44,7 @@ ServiceWorker의 이전 버전이 여전히 실행 중이며 페이지를 제공
 있으므로 여기에서 수행하는 작업이 그것을 방해해서는 안 됩니다.
 
 **이상적인 대상:** CSS, 이미지, 글꼴, JS, 템플릿… 기본적으로 사이트의
-해당 "버전"에 정적인 것으로 간주되는 모든 것.
+해당 '버전'에 정적인 것으로 간주되는 모든 것.
 
 이들은 가져오기에 실패할 경우 사이트가 완전히 작동하지
 못하게 하고, 해당 네이티브 앱이 초기 다운로드에
@@ -151,7 +151,7 @@ ServiceWorker는 이벤트 처리를 마쳤으므로 레벨 11-20이
 사용자가 오프라인에서 사용할 콘텐츠를 선택할 수 있습니다. (예: YouTube 등의
 동영상, Wikipedia의 글, Flickr의 특정 갤러리)
 
-사용자에게 "Read later" 또는 "Save for offline" 버튼을 제공합니다. 해당 버튼을
+사용자에게 'Read later' 또는 'Save for offline' 버튼을 제공합니다. 해당 버튼을
 클릭하면 네트워크에서 필요한 것을 가져와서 캐시에 넣습니다.
 
     document.querySelector('.cache-article').addEventListener('click', function(event) {
@@ -169,7 +169,7 @@ ServiceWorker는 이벤트 처리를 마쳤으므로 레벨 11-20이
       });
     });
 
-[캐시 API][caches_api]는 서비스 워커뿐만 아니라 페이지에서도
+[Caches API][caches_api]는 서비스 워커뿐만 아니라 페이지에서도
 사용할 수 있습니다. 즉, 캐시에 항목을 추가하기 위해
 서비스 워커를 개입시킬 필요가 없습니다.
 
@@ -180,7 +180,7 @@ ServiceWorker는 이벤트 처리를 마쳤으므로 레벨 11-20이
 
 **이상적인 대상:** 사용자의 받은 편지함 또는 글 내용과 같은
 자주 업데이트되는 리소스. 아바타와 같이 비필수적인 콘텐츠에도 유용하지만
-주의가 필요합니다
+주의가 필요합니다.
 
 요청이 캐시의 내용과 일치하지 않으면 네트워크에서 요청을 가져와서
 페이지로 보내고 그와 동시에 캐시에 추가합니다.
@@ -242,7 +242,7 @@ ServiceWorker는 이벤트 처리를 마쳤으므로 레벨 11-20이
 
 <img src="images/cm-on-push.png">
 
-[푸시 API](/web/fundamentals/engage-and-retain/push-notifications/)는
+[Push API](/web/fundamentals/push-notifications)는
 ServiceWorker 위에 빌드된 또 다른 기능입니다. 이 기능을 사용하여
 OS의 메시징 서비스의 메시지에 대한 응답으로 ServiceWorker를
 활성화할 수 있습니다. 이는 사용자가 사이트에 대해 탭을 열지 않은 경우에도
@@ -270,7 +270,7 @@ OS의 메시징 서비스의 메시지에 대한 응답으로 ServiceWorker를
 
 연결이 없으면 Twitter는 푸시 메시지와 관련된 콘텐츠를
 제공하지 못합니다. 그러나 푸시 메시지를 누르면 알림은 제거되고 사용자가
-누르기 전보다 적은 정보를 제공합니다. 이렇게 하지 마십시오!
+누르기 전보다 적은 정보를 제공합니다. 이렇게 하지 마세요!
 
 <div style="clear:both;"></div>
 
@@ -370,7 +370,7 @@ IndexedDB, Filesystem 및 Caches 등 모든 원본 저장소 사이에 공유됩
 지워도 해결되지 않는 경우 사용자가 보존하고 삭제할 항목을
 판단하게 됩니다.
 
-이를 위해 브라우저를 단일 항목으로 보고하지 않고 "지속형" 원본을
+이를 위해 브라우저를 단일 항목으로 보고하지 않고 '지속형' 원본을
 네이티브 앱과 동일한 것으로 취급하는
 운영체제가 필요합니다.
 
@@ -385,7 +385,7 @@ ServiceWorker가 캐시를 사용하지 않습니다. 다음은 요청 처리를
 
 <img src="images/ss-cache-only.png">
 
-**이상적인 대상:** 사이트의 해당 "버전"에 정적인 것으로 간주되는 모든 것.
+**이상적인 대상:** 사이트의 해당 '버전'에 정적인 것으로 간주되는 모든 것.
 설치 이벤트에서 이를 캐시해야 했으므로 거기에 있는 것에
 의존할 수 있습니다.
 
@@ -430,8 +430,8 @@ ServiceWorker가 캐시를 사용하지 않습니다. 다음은 요청 처리를
       );
     });
 
-이렇게 하면 캐시 항목에 대한 "캐시 전용" 동작과
-캐시되지 않은 항목(캐시할 수 없는 모든 비 GET 요청 포함)에 대한 "네트워크 전용" 동작이
+이렇게 하면 캐시 항목에 대한 '캐시 전용' 동작과
+캐시되지 않은 항목(캐시할 수 없는 모든 비 GET 요청 포함)에 대한 '네트워크 전용' 동작이
 제공됩니다.
 
 ### 캐시와 네트워크의 경쟁 {: #cache-and-network-race }
@@ -475,7 +475,7 @@ ServiceWorker가 캐시를 사용하지 않습니다. 다음은 요청 처리를
 
 <img src="images/ss-network-falling-back-to-cache.png">
 
-**이상적인 대상:** 사이트의 "버전" 범위 밖에서 자주 업데이트되는 리소스에
+**이상적인 대상:** 사이트의 '버전' 범위 밖에서 자주 업데이트되는 리소스에
 대한 빠른 수정. 기사, 아바타, 소셜 미디어 타임라인,
 게임 순위표 등이 여기에 해당합니다.
 
@@ -511,7 +511,7 @@ ServiceWorker가 캐시를 사용하지 않습니다. 다음은 요청 처리를
 때로는 새로운 데이터(예: 게임 순위표)가 도착할 때 현재 데이터를 바꿀
 수 있지만 훨씬 큰 콘텐츠로 인해 혼란스러울
 수 있습니다. 기본적으로 사용자가 읽고 있거나 상호작용하고 있을 수 있는
-항목을 "사라지게 하지" 마십시오.
+항목을 '사라지게 하지' 마세요.
 
 Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
 방해하지 않도록 스크롤 위치를 조정합니다. Twitter는 일반적으로
@@ -578,7 +578,7 @@ Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
 캐시 및/또는 네트워크에서 응답이 없으면 일반적인 폴백을
 제공하도록 지정할 수 있습니다.
 
-**이상적인 대상:** 실패한 POST 요청, "오프라인에서 사용할 수 없음" 페이지,
+**이상적인 대상:** 실패한 POST 요청, '오프라인에서 사용할 수 없음' 페이지,
 아바타와 같은 보조 이미지.
 
     self.addEventListener('fetch', function(event) {
@@ -611,7 +611,7 @@ Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
 
 [서버의 페이지를 렌더링하면 작업 속도가 빨라지지만](https://jakearchibald.com/2013/progressive-enhancement-is-faster/)
  캐시에서 이해할 수
-없는 상태 데이터(예: "Logged in as…")를 포함할 수 있습니다. ServiceWorker가 페이지를 제어하는 경우
+없는 상태 데이터(예: 'Logged in as…')를 포함할 수 있습니다. ServiceWorker가 페이지를 제어하는 경우
 그 대신에 JSON 데이터를 템플릿과 함께 요청하여
 렌더링할 수 있습니다.
 
@@ -713,7 +713,7 @@ Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
 * [레이아웃](http://thenounproject.com/term/layout/36872/){: .external } 아이콘: Mister Pixel 제공
 * [구름](http://thenounproject.com/term/cloud/2788/){: .external } 아이콘: P.J. Onori 제공
 
-"게시하기" 전에 많은 오류를 찾아 주신 [Jeff Posnick](https://twitter.com/jeffposnick) 에게도
+'게시하기' 전에 많은 오류를 찾아 주신 [Jeff Posnick](https://twitter.com/jeffposnick)에게도
 감사드립니다.
 
 ### 추가 자료

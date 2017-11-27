@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools Command Line API menawarkan beragam cara untuk mengamati dan memeriksa event listener
 
@@ -59,7 +59,7 @@ kode berikut menampilkan daftar semua event listener yang terdaftar pada objek d
 
     getEventListeners(document);
 
-![Output penggunaan getEventListeners()](images/events-call-geteventlisteners.png)
+![Keluaran penggunaan getEventListeners()](images/events-call-geteventlisteners.png)
 
 Jika terdaftar lebih dari satu listener pada objek yang ditetapkan,
 larik akan berisi satu anggota untuk setiap listener.

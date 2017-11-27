@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:利用 Chrome DevTools 的 Device Mode，您可以在一系列设备上模拟开发网站在生产环境中的运行。
 
@@ -26,14 +26,14 @@ description:利用 Chrome DevTools 的 Device Mode，您可以在一系列设备
 
 利用视口控件，您可以针对各种设备测试网站，以及是否能够实现完全自适应。它包括以下两个模式：
 
-  1. **Responsive**。使视口可以通过任意一侧的大手柄随意调整大小。
+  1. **自适应**。使视口可以通过任意一侧的大手柄随意调整大小。
   2. **特定设备**。将视口锁定为特定设备确切的视口大小，并模拟特定设备特性。
 
-## Responsive 模式
+## 自适应模式
 
-我们建议将 **Responsive 模式**用作您的默认工作模式。在您的网站和应用的活动开发期间使用这一模式，并经常调整视口大小以创建完全自适应设计，这种设计可以适应未知和未来的设备类型。
+我们建议将**自适应模式**用作您的默认工作模式。在您的网站和应用的活动开发期间使用这一模式，并经常调整视口大小以创建完全自适应设计，这种设计可以适应未知和未来的设备类型。
 
-要充分利用 Responsive 模式，请启用[媒体查询栏](#media-queries)。
+要充分利用自适应模式，请启用[媒体查询栏](#media-queries)。
 
 ### 自定义视口大小
 
@@ -49,7 +49,7 @@ description:利用 Chrome DevTools 的 Device Mode，您可以在一系列设备
   <div>
   <p>我们已在设备下拉菜单中包含了当前最热门的设备。选择设备后，每个预设都会自动配置特定设备特性的模拟：</p>
   <ul>
-    <li>设置正确的“用户代理”(UA) 字符串。</li>
+    <li>设置正确的“User Agent”(UA) 字符串。</li>
     <li>设置设备分辨率和 DPI（设备像素比）。</li>
     <li>模拟触摸事件（如果适用）。</li>
     <li>模拟移动设备滚动条叠加和 meta viewport。</li>
@@ -73,7 +73,7 @@ Device Mode 提供了多种用于模拟的设备。如果您发现某款边缘�
     <li>转至 DevTools 的 Settings 面板。</li>
     <li>点击 <strong>Devices</strong> 标签。</li>
     <li>点击 <strong>Add custom device</strong>。</li>
-    <li>输入设备名称、宽度、高度、设备像素比和用户代理字符串。</li>
+    <li>输入设备名称、宽度、高度、设备像素比和 User Agent 字符串。</li>
      <li>点击 <strong>Add</strong>。</li>
   </ol>
   <p>现在，您的自定义设备将显示在 <strong>Device</strong> 下拉菜单中。</p>
@@ -124,7 +124,7 @@ Device Mode 提供了多种用于模拟的设备。如果您发现某款边缘�
   <div>
   <p>点击设备工具栏右侧上的三个小圆点，可以更改或启用可选控件。当前选项包括：</p>
   <ul>
-    <li>用户代理类型（模拟 UA 和触摸事件）</li>
+    <li>User Agent 类型（模拟 UA 和触摸事件）</li>
     <li>设备像素比</li>
     <li>媒体查询</li>
     <li>标尺</li>
@@ -138,7 +138,7 @@ Device Mode 提供了多种用于模拟的设备。如果您发现某款边缘�
 
 继续阅读，详细了解特定选项。
 
-### 用户代理类型
+### User Agent 类型
 
 **User Agent Type** 或 Device Type 设置让您可以更改设备的类型。
 可能的值为：
@@ -151,7 +151,7 @@ Device Mode 提供了多种用于模拟的设备。如果您发现某款边缘�
 因此，如果您想要为桌面设备创建自适应网站，且想要测试悬停效果，请在 Responsive 模式下切换到“Desktop”。
 ：
 
-**提示**：您也可以在 [**Network conditions**][nc] 抽屉式导航栏中设置用户代理。
+**提示**：您也可以在 [**Network conditions**][nc] 抽屉式导航栏中设置 User Agent。
 
 
 
@@ -172,7 +172,7 @@ Device Mode 提供了多种用于模拟的设备。如果您发现某款边缘�
 * CSS [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) 规则。
 
 
-* 图像上的 [srcset](/web/fundamentals/design-and-ui/media/images/images-in-markup) 属性。
+* 图像上的 [srcset](/web/fundamentals/design-and-ux/media/images/images-in-markup) 属性。
 
 
 * `window.devicePixelRatio` 属性。
@@ -183,7 +183,7 @@ Device Mode 提供了多种用于模拟的设备。如果您发现某款边缘�
 
 ### 媒体查询 {: #media-queries }
 
-[媒体查询](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries) 是自适应网页设计的基本部分。要查看媒体查询检查器，请在三圆点菜单中点击 **Show Media queries**。DevTools 会在样式表中检测媒体查询，并在顶端标尺中将它们显示为彩色条形。
+[媒体查询](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)是自适应网页设计的基本部分。要查看媒体查询检查器，请在三圆点菜单中点击 **Show Media queries**。DevTools 会在样式表中检测媒体查询，并在顶端标尺中将它们显示为彩色条形。
 
 
 ![显示媒体查询](imgs/show-media-queries.png)
@@ -234,7 +234,7 @@ Device Mode 提供了多种用于模拟的设备。如果您发现某款边缘�
 
   1. **Disk Cache**：停用 Disk Cache 将在打开 DevTools 时停止浏览器缓存页面及其资源。
   2. **Network Throttling**：在此处阅读更多有关[网络节流](/web/tools/chrome-devtools/network-performance/network-conditions)的信息。
-  3. **User Agent**：允许您设置特定的 UA（用户代理）字符串替换值。
+  3. **User Agent**：允许您设置特定的 UA (User Agent) 字符串替换值。
 
 
 **提示**：您也可以从[主菜单][nc]中打开 **Network conditions** 抽屉式导航栏。

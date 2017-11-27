@@ -1,15 +1,15 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Build your multi-device site from the ground up. Learn how to speed up development and create a fast loading site with a set of build process tools.
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2014-09-24 #}
 
 # Set Up Your Build Tools {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}
-Build your multi-device site from the ground up. Learn how to speed up development and create a fast loading site with a set of build process tools. Every site should have a development version and a production version.<br /><br />The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on.<br /><br />A production version will take these files, minify them, concatenate / merge them and optimise files like images.
+Build your multi-device site from the ground up. Learn how to speed up development and create a fast loading site with a set of build process tools. Every site should have a development version and a production version.<br /><br />The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on.<br /><br />A production version will take these files, minify them, concatenate / merge them and optimize files like images.
 
 Web developers have to think about a million things at once and the build step
 is one of the most critical, yet most cumbersome to get started with.  You
@@ -23,11 +23,11 @@ minute you start.
 
 
 ### TL;DR {: .hide-from-toc }
-- Your build process tools must optimise for performance; they should automatically minify and concatenate JavaScript, CSS, HTML, and images.
+- Your build process tools must optimize for performance; they should automatically minify and concatenate JavaScript, CSS, HTML, and images.
 - Use tools like LiveReload to make your development process smoother.
 
 
-Before you start coding, you need to consider how to optimise and build the
+Before you start coding, you need to consider how to optimize and build the
 production version of your site. Setting up this workflow from the start
 prevents any nasty surprises at the end of the project and you can add tools
 into your workflow that speed up your development, doing the monotonous tasks
@@ -135,7 +135,7 @@ For minification, use the following:
   </tbody>
 </table>
 
-For concatentation, use the following:
+For concatenation, use the following:
 
 <table>
   <thead>

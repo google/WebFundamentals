@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "주요 요청 체인" Lighthouse 감사의 참조 문서입니다.
+description: '주요 요청 체인' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-10-06 #}
 {# wf_published_on: 2016-10-06 #}
@@ -20,7 +20,7 @@ description: "주요 요청 체인" Lighthouse 감사의 참조 문서입니다.
 
 ## 감사를 통과하는 방법 {: #how }
 
-현재 이 감사는 "통과" 또는 "실패"로 구성되어 있지 않습니다. 이 감사가 제공하는 정보는
+현재 이 감사는 '통과' 또는 '실패'로 구성되어 있지 않습니다. 이 감사가 제공하는 정보는
 앱의 페이지 로드 성능을 개선할 수 있는
 기회로 활용할 수 있습니다.
 
@@ -43,7 +43,7 @@ Initial navigation
 `lighthouse/`에서 `/css`까지의 경로는 하나의 체인입니다. `lighthouse/`에서
 `css/devsite-googler-buttons.css`까지의 경로는 다른 체인입니다. 이런 식으로 계속됩니다. 이 감사에서 가장 위에 있는 점수는
 체인 개수를 나타냅니다. 예를 들어 위의 다이어그램의
-"점수"는 7입니다.
+'점수'는 7입니다.
 
 또한, 이 다이어그램은 각 리소스를 다운로드하는 데 사용한 시간과
 각 리소스 다운로드에 필요한 바이트 수를 분석합니다.

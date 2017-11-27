@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Documentación de referencia para la auditoría de Lighthouse "El sitio no usa caché de la app".
+description: Documentación de referencia para la auditoría de Lighthouse "El sitio no usa Application Cache".
 
 {# wf_updated_on: 2017-01-04 #}
 {# wf_published_on: 2017-01-04 #}
@@ -11,14 +11,14 @@ description: Documentación de referencia para la auditoría de Lighthouse "El s
 
 Application Cache, también conocido como AppCache, es [obsoleto][deprecated].
 
-[obsoleto]: https://html.spec.whatwg.org/multipage/browsers.html#offline
+[deprecated]: https://html.spec.whatwg.org/multipage/browsers.html#offline
 
 ## Cómo aprobar la auditoría {: #how }
 
-En su lugar considera usar el service worker [API de caché][API] .
+En su lugar considera usar el service worker [API de caché][API].
 
 Para ayudar a migrar desde AppCache a service workers, considera usar la biblioteca
-[sw-appcache-behavior][sw-appcache-behavior] . Esta biblioteca genera una
+[sw-appcache-behavior][sw-appcache-behavior]. Esta biblioteca genera una
 implementación basada en service worker del comportamiento definido en un manifiesto de
 AppCache.
 
@@ -28,7 +28,7 @@ sin conexión.
 
 [API]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
 
-[sw-appcache-behavior]: https://github.com/GoogleChrome/sw-helpers/blob/master/packages/sw-appcache-behavior
+[sw-appcache-behavior]: https://github.com/GoogleChrome/sw-appcache-behavior
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 

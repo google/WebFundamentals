@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Usa dispositivos virtuales en Device Mode de Chrome para compilar sitios web que prioricen los dispositivos móviles.
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Simular dispositivos móviles con Device Mode {: .page-title }
@@ -11,7 +11,7 @@ description: Usa dispositivos virtuales en Device Mode de Chrome para compilar s
 
 Usa Device Mode de Chrome DevTools para compilar sitios web completamente adaptables y que prioricen los dispositivos móviles. Aprende a usar esta opción para simular una amplia variedad de dispositivos y sus capacidades.
 
-Advertencia: Device Mode proporciona una aproximación sobre cómo se verá tu sitio
+Warning: Device Mode proporciona una aproximación sobre cómo se verá tu sitio
 en un dispositivo móvil; pero, para conocer plenamente su apariencia, siempre debes
 probar tu sitio en dispositivos reales. DevTools no puede emular las características de
 desempeño de los dispositivos móviles, por ejemplo.

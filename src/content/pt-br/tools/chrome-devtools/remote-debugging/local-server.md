@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Hospede um site em um servidor Web da máquina de desenvolvimento e acesse o conteúdo com um dispositivo Android.
 
@@ -98,11 +98,11 @@ Para configurar o encaminhamento de portas para um proxy:
 Em seguida, você precisa configurar seu dispositivo Android para se comunicar com o 
 servidor proxy. 
 
-1. No dispositivo Android, acesse **Configurar** > **Wi-Fi**.
+1. No dispositivo Android, acesse **Settings** > **Wi-Fi**.
 1. Mantenha pressionado o nome da rede em que você está conectado.
    **Observação**: As configurações de proxy se aplicam por rede.
-3. Toque em **Modificar a rede**.
-4. Toque em **Opções avançadas**. As configurações de proxy serão exibidas. 
+3. Toque em **Modify network**.
+4. Toque em **Advanced options**. As configurações de proxy serão exibidas. 
 5. Toque no menu **Proxy** e selecione **Manual**.
 6. No campo **Proxy hostname**, insira `localhost`.
 7. No campo **Proxy port**, digite o número da porta que digitou em

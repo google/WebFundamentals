@@ -38,7 +38,7 @@ seu método de `focus()`
     margin: 10px;
   }
 </style>
-<custom-button tabindex="0">Pressione Tab para me focar!</custom-button>
+<custom-button tabindex="0">Press Tab to Focus Me!</custom-button>
 {% endframebox %}
 
 `tabindex="-1"`: Remove um elemento da ordem natural de tabulação, mas o elemento
@@ -48,9 +48,9 @@ ainda pode ser focado chamando seu método `focus()`
     <button onclick="foo.focus();">Focus my sibling</button>
 
 {% framebox height="80px" %}
-<button id="foo" tabindex="-1">Não sou focalizável pelo teclado</button>
-<button onclick="foo.focus();">Foque meu </button>
-irmão {% endframebox %}
+<button id="foo" tabindex="-1">I'm not keyboard focusable</button>
+<button onclick="foo.focus();">Focus my sibling</button>
+{% endframebox %}
 
 `tabindex="5"`: Qualquer tabindex maior que 0 passa o elemento para a frente
 na ordem natural de tabulação. Se houver vários elementos com um tabindex maior
@@ -58,14 +58,14 @@ que 0, a ordem de tabulação começa partir do valor mais baixo que é maior
 que zero e vai subindo. Usar um tabindex maior que 0 é considerado
 um **anti-padrão**.
 
-    <button>I should be first</button>
-    <button>And I should be second</button>
-    <button tabindex="5">But I jumped to the front!</button>
+    <button>Eu deveria ser o primeiro</button>
+    <button>E eu deveria ser o segundo</button>
+    <button tabindex="5">Mas eu passei na frente!</button>
 
 {% framebox height="80px" %}
-<button>Eu deveria ser o primeiro</button>
-<button>E eu deveria ser o segundo</button>
-<button tabindex="5">Mas eu passei na frente!</button>
+<button>I should be first</button>
+<button>And I should be second</button>
+<button tabindex="5">But I jumped to the front!</button>
 {% endframebox %}
 
 Isso é particularmente verdadeiro para elementos não interativos, como

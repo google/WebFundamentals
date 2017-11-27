@@ -1,8 +1,6 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/events/_book.yaml
 landing_page:
-  custom_css_path: /web/events/events.css
-
   header:
     description: Attend a Progressive Web App Roadshow in your area, or start one yourself!
 
@@ -14,7 +12,7 @@ landing_page:
     - description: >
         <p>
           Progressive Web App (PWA) Roadshows are local events where speakers and developers
-          get together to learn about the amazing new set of technologies that are revolutioning
+          get together to learn about the amazing new set of technologies that are revolutionizing
           the mobile web. If you're interested in learning more about building offline experiences
           with Service Worker or Push notifications come join a nearby PWA Roadshow or use the
           material on this site to run one yourself! Check the map to see if there's a PWA Roadshow
@@ -56,167 +54,168 @@ landing_page:
       - heading: Plan
         icon:
           icon_name: assignment
-          is_white: True
+          foreground: white
+          background: theme
         description:
             <a href="https://drive.google.com/open?id=1VM9sBu1T2FGEWGeluuQtrqNviiDvhC7nLwyibhXO-Q4">Event Guide</a>
             &mdash; Understand how to plan your event.<br />
       - heading: Tech Talk
         icon:
           icon_name: lightbulb_outline
-          is_white: True
+          foreground: white
+          background: theme
         description: >
           <a href="https://drive.google.com/open?id=0B55wxScz_BJtVk1ScDJWS1N2VHM">Speaker Decks</a> &mdash; Start with the basics!<br />
           <a href="#">Training Video (coming soon)</a> &mdash; Learn from the team.
       - heading: Curriculum
         icon:
           icon_name: school
-          is_white: True
+          foreground: white
+          background: theme
         description: >
           <a href="https://codelabs.developers.google.com/pwa-roadshow">Code Labs</a> &mdash; Get Hacking!
     - items:
       - heading: Graphic Assets
         icon:
           icon_name: collections
-          is_white: True
+          foreground: white
+          background: theme
         description: >
           <a href="https://drive.google.com/open?id=0B55wxScz_BJtMmdfQ2tiV1hKVlE">PWA Sticker</a> &mdash; Decorate your laptops.<br />
           <a href="https://drive.google.com/open?id=0B55wxScz_BJtUkRNNUNsX0luN0U">PWA Shirt</a> &mdash; Dress for success.
       - heading: PWA Experts
         icon:
           icon_name: supervisor_account
-          is_white: True
+          foreground: white
+          background: theme
         description: >
           <a href="#">Q&A Hangout (coming soon)</a> &mdash; Get answers to common questions.
       - heading: Communities
         icon:
           icon_name: question_answer
-          is_white: True
+          foreground: white
+          background: theme
         description: >
           <a href="https://chromiumdev-slack.herokuapp.com">ChromiumDev Slack</a> &mdash; Discuss in realtime.<br />
 
-  - classname: devsite-landing-row-fullbleed faq dark-background
+  - background: blue-grey
     heading: Frequently Asked Questions
-    items:
-    - custom_html: >
-        <p class="faq-question">
-          What is a Progressive Web App Roadshow?
-        </p>
-        <p class="faq-answer">
-          A Progressive Web App (PWA) Roadshow is an event series of in-person,
-          community-run events to help developers learn how to build PWAs.
-          These events are run by Googlers, local Google Dveloper Groups, or
-          other developer meetups all over the world. Each event is a little
-          different, but generally, a PWA Roadshow can include a tech talk,
-          series of code labs, and time for personal hacking.
-        </p>
-        <p class="faq-question">
-          Why is your team organizing them?
-        </p>
-        <p class="faq-answer">
-          The Chrome team wants to help developers all over the world try these
-          future facing technologies. We also want to hear developer feedback
-          to better understand the challenges developers face when implementing
-          PWAs so we can improve their experience.
-        </p>
-        <p class="faq-question">
-          How do I add my event to the map?
-        </p>
-        <p class="faq-answer">
-          If you’re already part of a Google Developer Group you’ll want to add
-          your event to the <a href="/events">GDG
+    columns:
+    - items:
+      - heading: What is a Progressive Web App Roadshow?
+        description: >
+          A Progressive Web App (PWA) Roadshow is an event series of
+          in-person, community-run events to help developers learn how to
+          build PWAs. These events are run by Googlers, local Google Developer
+          Groups, or other developer meetups all over the world. Each event
+          is a little different, but generally, a PWA Roadshow can include a
+          tech talk, series of code labs, and time for personal hacking.
+        icon:
+          icon_name: question_answer
+
+      - heading: Why is your team organizing them?
+        description: >
+          The Chrome team wants to help developers all over the world try
+          these future facing technologies. We also want to hear developer
+          feedback to better understand the challenges developers face when
+          implementing PWAs so we can improve their experience.
+        icon:
+          icon_name: question_answer
+
+      - heading: How do I add my event to the map?
+        description: >
+          If you’re already part of a Google Developer Group you’ll want to
+          add your event to the <a href="/events">GDG
           Calendar</a> and use the tag “pwa roadshow”. For non-GDG events, you
           can use <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRn2mZNMZySA7lCksdNk3gw3jCbavkh04-98Fj6dxlRdwvSA/viewform">
           this form to add your event to the map</a>.
-        </p>
-        <p class="faq-question">
+        icon:
+          icon_name: question_answer
+
+      - heading: >
           What hashtag do I use to talk about PWA Roadshows on social media?
-        </p>
-        <p class="faq-answer">
+        description: >
           Great questions! Please use #pwaroadshow and be sure to follow and
           mention @ChromiumDev.
-        </p>
-        <p class="faq-question">
+        icon:
+          icon_name: question_answer
+
+      - heading: >
           I’d like to organize my PWA Roadshow event, do we have to do the
           events in September/November?
-        </p>
-        <p class="faq-answer">
+        description: >
           Nope! You can run a PWA Roadshow event any time!
-        </p>
-        <p class="faq-question">
+        icon:
+          icon_name: question_answer
+
+      - heading: >
           I’d like to do the all day event, but I want to replace some of the
           talks. Can I remove some of the agenda items and add different
           sessions?
-        </p>
-        <p class="faq-answer">
+        description: >
           It is important not to drop any talks from the agenda, particularly
-          to replace them with sessions on other topics, since they’re designed
-          to give a complete understanding of Progressive Web Apps. If you don’t
-          have enough time to cover all of the talks, we recommend instead using
-          the Short event schedule, and adding more detail.
-        </p>
-        <p class="faq-question">
-          I’m excited about learning about Progressive Web Apps right now, and
-          don’t want to wait for a PWA Roadshow event. What should I do?
-        </p>
-        <p class="faq-answer">
-          For a good overview of the major ideas behind Progressive Web Apps,
-          take a look at <a href="https://www.youtube.com/watch?v=9Jef9IluQw0">
-          Alex Russell’s keynote</a> from the recent Progressive Web Apps
-          Summit, and <a href="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/">
-          the blog post that started it all</a>.
-        </p>
-        <p class="faq-question">
-          I’m excited about learning about Progressive Web Apps right now, and
-          don’t want to wait for a PWA Roadshow event. What should I do?
-        </p>
-        <p class="faq-answer">
+          to replace them with sessions on other topics, since they’re
+          designed to give a complete understanding of Progressive Web Apps.
+          If you don’t have enough time to cover all of the talks, we
+          recommend instead using the Short event schedule, and adding more
+          detail.
+        icon:
+          icon_name: question_answer
+
+    - items:
+      - heading: >
+          I’m excited about learning about Progressive Web Apps right now, want
+          to run my own PWA Roadshow event. What should I do?
+        description: >
           Check out the content that’s available in the <a href="#run-your-own-pwa-roadshow">
-          Run your own PWA Roadshow</a> section. The team also regularly answers
-          questions on StackOverflow using the
+          Run your own PWA Roadshow</a> section. The team also regularly
+          answers questions on StackOverflow using the
           <a href="http://stackoverflow.com/questions/tagged/service-worker">service-worker</a>
           and
           <a href="http://stackoverflow.com/questions/tagged/progressive-web-apps">progressive-web-apps</a>
           tags.
-        </p>
-        <p class="faq-question">
+        icon:
+          icon_name: question_answer
+
+      - heading: >
           I’d like to organize my own PWA Roadshow event, how do I get swag?
-        </p>
-        <p class="faq-answer">
-          We've provided links to the swag designs in the resources section. If
-          you are a GDG in need of support to get swag printed you should
+        description: >
+          We've provided links to the swag designs in the resources section.
+          If you are a GDG in need of support to get swag printed you should
           contact your regional lead.
-        </p>
-        <p class="faq-question">
-          Will Google help sponsor these PWA Roadshow events?
-        </p>
-        <p class="faq-answer">
+        icon:
+          icon_name: question_answer
+
+      - heading: Will Google help sponsor these PWA Roadshow events?
+        description: >
           Venue, food, and other direct sponsorship will be handled at the
           local level. It will depend on local resource constraints and the
           specific of your event. If you are a GDG, please work with your
           Google regional lead.
-        </p>
-        <p class="faq-question">
-          Are the PWA Roadshow events official Google events?
-        </p>
-        <p class="faq-answer">
-          Most PWA Roadshow events are produced by local developer communities,
-          Google Developer Groups, meetups, or other organizations. Only the
-          events marked on the map as “Official Google Event” are put on by
-          Googlers.
-        </p>
-        <p class="faq-question">
-          Should a PWA Roadshow event have a Code of Conduct?
-        </p>
-        <p class="faq-answer">
+        icon:
+          icon_name: question_answer
+
+      - heading: Are the PWA Roadshow events official Google events?
+        description: >
+          Most PWA Roadshow events are produced by local developer
+          communities, Google Developer Groups, meetups, or other
+          organizations. Only the events marked on the map as “Official
+          Google Event” are put on by Googlers.
+        icon:
+          icon_name: question_answer
+
+      - heading: Should a PWA Roadshow event have a Code of Conduct?
+        description: >
           Yes! It's important to make everyone feel safe and welcome at your
           event. We have provided a <a href="https://events.withgoogle.com/pwa-roadshow-north-america/code-of-conduct/">
           Code of Conduct</a> that you may use for your own event.
-        </p>
-        <p class="faq-question">
-          Are the PWA Roadshow events vetted by Google?
-        </p>
-        <p class="faq-answer">
+        icon:
+          icon_name: question_answer
+
+      - heading: Are the PWA Roadshow events vetted by Google?
+        description: >
           The PWA Roadshow events listed on this site are not vetted by Google
           with the exception of those events marked on the map as official
           Google run events.
-        </p>
+        icon:
+          icon_name: question_answer

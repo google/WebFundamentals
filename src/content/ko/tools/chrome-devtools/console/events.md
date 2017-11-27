@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools Command Line API는 이벤트 리스너를 관찰 및 검사하는 다양한 방법을 제공합니다.
 
@@ -48,8 +48,8 @@ Chrome DevTools Command Line API는 이벤트 리스너를 관찰 및 검사하�
 
 ## 객체에 등록된 이벤트 리스너 보기
 
-[getEventListeners() API](/web/tools/chrome-devtools/debug/command-line/command-line-reference#geteventlistenersobject)
-는 지정된 객체에 등록된 이벤트 리스너를 반환합니다.
+[getEventListeners() API](/web/tools/chrome-devtools/debug/command-line/command-line-reference#geteventlistenersobject)는
+지정된 객체에 등록된 이벤트 리스너를 반환합니다.
 
 반환 값은 등록된 각 이벤트 유형(예: `click` 또는 `keydown`)에 대한 배열을 포함하는 객체입니다.
 각 배열의 멤버는 각 유형에 등록된 리스너를 설명하는 객체입니다.
@@ -64,7 +64,7 @@ Chrome DevTools Command Line API는 이벤트 리스너를 관찰 및 검사하�
 지정된 객체에 리스너를 두 개 이상 등록한 경우
 배열이 각 리스너에 대한 구성원을 포함합니다.
 다음 예시에는
-`mousedown` 이벤트에 대해#scrollingList 요소에 등록된 2개의 이벤트 리스너가 있습니다.
+`mousedown` 이벤트에 대해 #scrollingList 요소에 등록된 2개의 이벤트 리스너가 있습니다.
 
 ![mousedown에 첨부된 이벤트 리스너 보기](images/events-geteventlisteners_multiple.png)
 

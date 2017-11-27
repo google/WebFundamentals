@@ -53,7 +53,7 @@ Há alguns pontos que merecem atenção nesse código.
 
 2. **É possível que não haja dispositivos de RV disponíveis.** Devemos buscar criar experiências que funcionem muito bem em aparelhos que não oferecem RV e tratar a disponibilidade de RV como Progressive Enhancement.
 
-3. **É possível que haja muitos dispositivos de RV disponíveis.** Igualmente, é perfeitamente possível que alguém tenha diversos dispositivos de RV disponíveis e, por isso, devemos, na medida do possível, deixar o usuário escolher o dispositivo mais adequado para ele.
+3. **É possível que haja muitos dispositivos de RV disponíveis. **Igualmente, é perfeitamente possível que alguém tenha diversos dispositivos de RV disponíveis e, por isso, devemos, na medida do possível, deixar o usuário escolher o dispositivo mais adequado para ele.
 
 ## Instale uma extensão de emulação da WebVR do Chrome DevTools
 

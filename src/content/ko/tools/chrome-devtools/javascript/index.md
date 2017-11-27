@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: 이 대화형 가이드에서는 Chrome DevTools을 사용한 자바스크립트 디버깅을 시작합니다.
+description: 이 대화형 가이드에서는 Chrome DevTools를 사용한 자바스크립트 디버깅을 시작합니다.
 
 {# wf_updated_on: 2017-01-04 #}
 {# wf_published_on: 2017-01-04 #}
@@ -32,7 +32,7 @@ Chrome DevTools에서 자바스크립트를 디버깅하는 기본 워크플로�
 ## 1단계: 버그 재현 {: #step-1 }
 
 버그 재현은 항상 디버깅의 첫 단계입니다.
-"버그 재현"이란 일관적으로 버그를 일으키는 일련의
+'버그 재현'이란 일관적으로 버그를 일으키는 일련의
 액션을 찾는 것입니다. 버그를 여러 번 재현해야 할 수도 있으므로
 불필요한 단계가 있으면 제거하세요.
 
@@ -46,12 +46,13 @@ Chrome DevTools에서 자바스크립트를 디버깅하는 기본 워크플로�
        rel="noopener noreferrer">
        <button>Open Demo</button>
      </a>
+
 1. 데모에서 **Number 1**에 `5`를 입력합니다.
 1. **Number 2**에 `1`을 입력합니다.
 1. **Add Number 1 and Number 2**를 클릭합니다.
 1. 입력과 버튼 아래의 레이블을 살펴봅니다. `5 + 1 = 51`라고 되어 있습니다.
 
-이런. 잘못된 결과입니다. 올바른 결과는 `6`입니다. 이 버그를
+이런, 잘못된 결과입니다. 올바른 결과는 `6`입니다. 이 버그를
 수정해야 합니다.
 
 ## 2단계: 중단점으로 코드 일시 중지
@@ -61,8 +62,8 @@ DevTools에서는 코드를 실행하는 도중에 일시 중지하고
 도구는 **중단점**이라고 합니다. 체험해보세요.
 
 1. 데모에서
-   <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd>(Mac) 또는
-   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>(Windows, Linux)를 눌러서 DevTools를 엽니다.
+<kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd>(Mac) 또는
+<kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>(Windows, Linux)를 눌러서 DevTools를 엽니다.
 
 1. **Sources** 탭을 클릭합니다.
 
@@ -71,15 +72,13 @@ DevTools에서는 코드를 실행하는 도중에 일시 중지하고
      is hidden -->
 
 1. **Event Listener Breakpoints**를 클릭하여 섹션을 펼칩니다. DevTools에
-확장 가능한 이벤트 범주 목록(예: **애니메이션**과
-**클립보드**)이 나타납니다.
+확장 가능한 이벤트 범주 목록(예: **애니메이션**과**클립보드**)이 나타납니다.
 
 <!-- TODO or maybe add it here -->
 
-1. **Mouse** 이벤트 범주 옆에서 **Expand**![펼치기
-   아이콘](/web/tools/chrome-devtools/images/expand.png){: .devtools-inline}를 클릭합니다.
+1. **Mouse** 이벤트 범주 옆에서 **Expand** ![Expand아이콘](/web/tools/chrome-devtools/images/expand.png){: .devtools-inline}를 클릭합니다.
    DevTools에 마우스 이벤트 목록(예: **click**)이 나타납니다.
-   그 옆에 확인란이 있습니다.
+그 옆에 확인란이 있습니다.
 1. **click** 확인란에 표시합니다.
 
      <figure>
@@ -88,16 +87,16 @@ DevTools에서는 코드를 실행하는 도중에 일시 중지하고
               click 이벤트 리스너 중단점이 활성화되어 있습니다."
        <figcaption>
          <b>그림 1</b>: 데모에서 열린 DevTools,
-			Sources 패널에 포커스가 있고 click 이벤트 리스너 중단점이 활성화되어 있습니다.
+	Sources 패널에 포커스가 있고 click 이벤트 리스너 중단점이 활성화되어 있습니다.
          DevTools 창이 큰 경우 <b>Event
-		Listener Breakpoints</b> 창은 스크린샷과 같이 왼쪽 아래가 아니라 오른쪽에
-		있습니다.
-		</figcaption>
+	Listener Breakpoints</b> 창은 스크린샷과 같이 왼쪽 아래가 아니라 오른쪽에
+	있습니다.
+	</figcaption>
      </figure>
 
 1. 데모로 돌아가서 다시 **Add Number 1 and Number 2**를 클릭합니다. DevTools는
-   데모를 일시 중지하고 **Sources** 패널의 코드 줄을 강조표시합니다.
-   DevTools이 강조표시하는 코드 줄은 다음과 같습니다.
+데모를 일시 중지하고 **Sources** 패널의 코드 줄을 강조표시합니다.
+   DevTools가 강조표시하는 코드 줄은 다음과 같습니다.
 
        `function onClick() {`
 
@@ -119,13 +118,13 @@ DevTools에서는 코드를 실행하는 도중에 일시 중지하고
 알아낼 수 있습니다. 체험해보세요.
 
 1. DevTools의 **Sources** 패널에서 **Step into next function
-call**![Step into next function call][into]{:.devtools-inline}을 클릭하여
+call** ![Step into next function call][into]{:.devtools-inline}을 클릭하여
 `onClick()` 함수를 한 번에 한 줄씩 순차 실행합니다.
-   DevTools가 강조표시하는 코드 줄:
+   DevTools가 다음 코드 줄을 강조표시합니다.
 
        `if (inputsAreEmpty()) {` 
 
-1. **Step over next function call**![Step over next function
+1. **Step over next function call** ![Step over next function
    call][over]{:.devtools-inline}을 클릭합니다. DevTools가 Step Into하지 않고 `inputsAreEmpty()`
 를 실행합니다. DevTools가 어떻게 몇 줄의 코드를 건너뛰는지 살펴봅니다.
    `inputsAreEmpty()`가 false로 평가되었기 때문이며, 따라서 `if`
@@ -154,8 +153,8 @@ call**![Step into next function call][into]{:.devtools-inline}을 클릭하여
 보일 것입니다. **32**. **32**를 클릭합니다. DevTools가
 **32** 위에 파란색 아이콘을 표시합니다. 이 줄에 코드 줄 중단점이 있다는 뜻입니다.
    이제 DevTools는 이 코드 줄을 실행하기 전에 항상 일시 중지합니다.
-1. **Resume script execution**![스크립트 실행
-다시 시작][resume]{:.devtools-inline}을 클릭합니다. 스크립트는 중단점을 넣은
+1. **Resume script execution** ![Resume script
+   execution][resume]{:.devtools-inline}을 클릭합니다. 스크립트는 중단점을 넣은
 코드 줄에 도달할 때까지 계속 실행됩니다.
 1. 이미 실행된 `updateLabel()` 코드 줄을 살펴보세요.
    DevTools가 `addend1`, `addend2` 및 `sum` 값을 출력합니다.
@@ -178,9 +177,9 @@ Watch Expression을 사용하여 시간에 따라 변수 값을 모니터링합�
 모든 유효한 자바스크립트 식을 저장할 수 있습니다. 체험해보세요.
 
 1. DevTools의 **Sources** 패널에서 **Watch**를 클릭합니다. 섹션이 펼쳐집니다.
-1. **Add Expression**![식 추가][add]{:.devtools-inline}을 클릭합니다.
+1. **Add Expression** ![Add Expression][add]{:.devtools-inline}을 클릭합니다.
 1. `typeof sum`을 입력합니다.
-1. <kbd>Enter</kbd>를 누릅니다. DevTools가 `typeof sum: "string"`을 보여줍니다. 콜론 오른쪽
+1. <kbd>Enter</kbd> 키를 누릅니다. DevTools가 `typeof sum: "string"`을 보여줍니다. 콜론 오른쪽
 값이 Watch Expression의 결과입니다.
 
      <figure>
@@ -203,10 +202,10 @@ Console을 사용하여 임의의 자바스크립트 문을 평가합니다.
 재정의합니다. 이 경우, Console이 방금 발견한 버그의 잠재적 해결책을
 테스트하는 데 도움을 줄 수 있습니다. 체험해보세요.
 
-1. Console 창이 열려 있지 않으면 <kbd>Escape</kbd>를 눌러서
+1. Console 창이 열려 있지 않으면 <kbd>Esc</kbd> 키를 눌러서
 창을 엽니다. 이 창은 DevTools 창 아래에서 열립니다.
 1. Console에서 `parseInt(addend1) + parseInt(addend2)`를 입력합니다.
-1. <kbd>Enter</kbd>를 누릅니다. DevTools가 명령문을 평가하고
+1. <kbd>Enter</kbd> 키를 누릅니다. DevTools가 명령문을 평가하고
 `6`을 출력합니다. 원래 데모에서 발생시킬 것으로 기대한 결과입니다.
 
      <figure>
@@ -227,7 +226,7 @@ Console을 사용하여 임의의 자바스크립트 문을 평가합니다.
 DevTools를 떠날 필요는 없습니다. DevTools UI 내에서 자바스크립트 코드를
 직접 수정할 수 있습니다. 체험해보세요.
 
-1. DevTools의 **Sources**패널에 있는 코드 에디터에서
+1. DevTools의 **Sources** 패널에 있는 코드 에디터에서
 `var sum = addend1 + addend2`를
 `var sum = parseInt(addend1) + parseInt(addend2);`로 교체합니다. 현재 일시 중지한
 위치 위에 있는 한 줄입니다.
@@ -235,12 +234,12 @@ DevTools를 떠날 필요는 없습니다. DevTools UI 내에서 자바스크립
 <kbd>Control</kbd>+<kbd>S</kbd>(Windows, Linux)를 눌러서 변경 사항을 저장합니다.
    코드 배경이 빨간색으로 변경되어 DevTools에서
 스크립트가 변경되었음을 나타냅니다.
-1. **Deactivate breakpoints**![중단점
-비활성화][deactivate]{:.devtools-inline}를 클릭합니다. 파란색으로 바뀌어서
+1. **Deactivate breakpoints** ![Deactivate
+   breakpoints][deactivate]{:.devtools-inline}를 클릭합니다. 파란색으로 바뀌어서
 활성화되었음을 나타냅니다. 이 기능이 설정되면 DevTools가 설정된 중단점을
 모두 무시합니다.
-1. **Resume script execution**![스크립트 실행
-다시 시작][resume]{:.devtools-inline}을 클릭합니다.
+1. **Resume script execution** ![Resume script
+   execution][resume]{:.devtools-inline}을 클릭합니다.
 1. 다른 값으로 데모를 시험합니다. 이제 데모가 합계를 올바르게
 계산할 것입니다.
 
@@ -287,31 +286,31 @@ DevTools를 떠날 필요는 없습니다. DevTools UI 내에서 자바스크립
 
 <button class="gc-analytics-event"
         data-category="DevTools / JS / Get Started"
-        data-label="Completed / Yes">지원</button>
+        data-label="Completed / Yes">예</button>
 
 <button class="gc-analytics-event"
         data-category="DevTools / JS / Get Started"
-        data-label="Completed / No">지원 안 함</button>
+        data-label="Completed / No">아니요</button>
 
 <p>이 가이드에 찾던 정보가 포함되어 있나요?</p>
 
 <button class="gc-analytics-event"
         data-category="DevTools / JS / Get Started"
-        data-label="Relevant / Yes">지원</button>
+        data-label="Relevant / Yes">예</button>
 
 <button class="gc-analytics-event"
         data-category="DevTools / JS / Get Started"
-        data-label="Relevant / No">지원 안 함</button>
+        data-label="Relevant / No">아니요</button>
 
 <p>가이드가 너무 길었나요?</p>
 
 <button class="gc-analytics-event"
         data-category="DevTools / JS / Get Started"
-        data-label="Too Long / Yes">지원</button>
+        data-label="Too Long / Yes">예</button>
 
 <button class="gc-analytics-event"
         data-category="DevTools / JS / Get Started"
-        data-label="Too Long / No">지원 안 함</button>
+        data-label="Too Long / No">아니요</button>
 
 {% endframebox %}
 

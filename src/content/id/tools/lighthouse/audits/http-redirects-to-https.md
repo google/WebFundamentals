@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk audit Lighthouse "Situs mengalihkan lalu lintas HTTP ke HTTPS".
 
@@ -12,7 +12,7 @@ description: Dokumentasi referensi untuk audit Lighthouse "Situs mengalihkan lal
 Semua situs harus dilindungi dengan HTTPS. Lihat dokumen Lighthouse berikut untuk
 mengetahui mengapa: [Situs berada di HTTPS](https).
 
-Setelah mempersiapkan HTTPS, Anda perlu memastikan bahwa semua lalu lintas HTTP
+Setelah menyiapkan HTTPS, Anda perlu memastikan bahwa semua lalu lintas HTTP
 yang tidak aman ke situs Anda telah dialihkan ke HTTPS.
 
 ## Cara untuk lulus audit {: #how }

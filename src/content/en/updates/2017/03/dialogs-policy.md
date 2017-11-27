@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) used to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs.
 
-{# wf_updated_on: 2017-03-24 #}
+{# wf_updated_on: 2017-06-27 #}
 {# wf_published_on: 2017-03-24 #}
 {# wf_tags: policy,dialog,javascript #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -52,16 +52,19 @@ The ability for a page to specify the `onbeforeunload` string was
 [removed in Chrome 51](https://www.chromestatus.com/feature/5349061406228480).
 (It was also removed by Safari starting with Safari 9.1 and in Firefox 4.)
 
-`alert()/confirm()/prompt()` dialogs are being changed. Rather than being app-modal,
-they [will be dismissed when their tab is switched from](https://crbug.com/629964).
-(Safari 9.1 already does this.) This is fully enabled on the canary and dev channels
-and partially enabled on the beta and stable channels, and will be enabled more in the
-future.
+`alert()/confirm()/prompt()` dialogs have changed from being app-modal to [being
+dismissed when their tab is switched from](https://crbug.com/629964). This
+change took place across all channels at the beginning of May 2017.
 
-The current plan for `beforeunload` dialogs is to require a user gesture
-to allow them to show. (This would not change the dispatching of the `beforeunload`
-event.) This aligns Chromium with Firefox, which made this change with
-[Firefox 44](https://bugzilla.mozilla.org/show_bug.cgi?id=636905).
+`beforeunload` dialogs require a user gesture on the page to allow them to show
+[starting in Chrome 60](https://www.chromestatus.com/feature/5082396709879808).
+(This does not change the dispatching of the `beforeunload` event.) This aligns
+Chromium with Firefox, which made this change with [Firefox
+44](https://bugzilla.mozilla.org/show_bug.cgi?id=636905).
+
+Showing an `alert()/confirm()/prompt()` dialog while in fullscreen will cause
+fullscreen to be lost
+[starting in Chrome 61](https://www.chromestatus.com/feature/5669548871122944).
 
 Because of these changes, if your site uses dialogs, it is highly recommended
 that you move to using the earlier-mentioned alternatives so that this will not

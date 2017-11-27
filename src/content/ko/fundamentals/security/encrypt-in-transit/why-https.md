@@ -19,7 +19,7 @@ description: 민감한 통신을 처리하지 않는 경우에도 항상 HTTPS�
 모든 웹사이트를 보호해야 합니다. 웹사이트와 사용자의 개인정보 모두에 대한
 중요한 보안 및 데이터 무결성을 제공하는 것과는 별개로, HTTPS는
 수많은 새로운 브라우저 기능, 특히
-[PWA(progressive web apps)](/web/progressive-web-apps/)에 필요한 기능을 위한 필수 요건입니다.
+[PWA(Progressive Web App)](/web/progressive-web-apps/)에 필요한 기능을 위한 필수 요건입니다.
 
 ### TL;DR {: .hide-from-toc }
 
@@ -67,9 +67,9 @@ HTTPS가 필요하다고 많이 오해합니다. 모든
 `getUserMedia()`를 통한
 오디오 녹음 또는 사진 촬영, 서비스 워커를 통한 오프라인 앱 경험 활성화, 또는 Progressive Web App 빌드를 비롯한 강력한 새 플랫폼 기능은
 사용자가 명시적으로
-허가해야 실행됩니다. [geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) API 등과 같은 대부분의 이전 API도 실행하려면
-허락이 필요하도록
-업데이트 {: .external}
+허가해야 실행됩니다. [geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation){: .external}
+API 등과 같은 대부분의 이전 API도 실행하려면
+허락이 필요하도록 업데이트되는
 중입니다. HTTPS는 이러한 새 기능과 업데이트된 API에 대한 권한 워크플로의
 주요 구성 요소입니다.
 

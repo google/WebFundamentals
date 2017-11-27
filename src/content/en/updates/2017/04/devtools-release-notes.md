@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New features and changes coming to DevTools in Chrome 59.
 
-{# wf_updated_on: 2017-04-12 #}
+{# wf_updated_on: 2017-04-19 #}
 {# wf_published_on: 2017-04-12 #}
-{# wf_tags: chrome59,devtools #}
+{# wf_tags: chrome59,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: New features and changes coming to DevTools in Chrome 59. #}
 
@@ -14,10 +14,16 @@ description: New features and changes coming to DevTools in Chrome 59.
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Welcome to another installment of the DevTools release notes. Here's what's
-new for Chrome 59.
+Welcome to another installment of the DevTools release notes. Watch the video
+below or read on to see what's new in Chrome DevTools in Chrome 59!
 
 Note: You can check which version of Chrome you're running at `chrome://help`.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="4mx1m7UbBR0"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Highlights {: #highlights }
 
@@ -30,8 +36,6 @@ Note: You can check which version of Chrome you're running at `chrome://help`.
 * [**Step over async await**](#async). Step through async functions predictably.
 * [**Unified Command Menu**](#command-menu). Execute commands and open files
   from the newly-unified Command Menu.
-* [**Workspaces 2.0**](#workspaces). Check out the new UX for using DevTools
-  as your code editor.
 
 ## New features {: #new-features }
 
@@ -50,7 +54,28 @@ that you need.
   </figcaption>
 </figure>
 
-To open the tab:
+Clicking on a URL reveals that file in the **Sources** panel with a breakdown
+of which lines of code executed.
+
+<figure>
+  <img src="/web/updates/images/2017/04/coverage-breakdown.png"
+       alt="A breakdown of code coverage in the Sources panel"/>
+  <figcaption>
+    <b>Figure 2</b>. A breakdown of code coverage in the <b>Sources</b> panel
+  </figcaption>
+</figure>
+
+Each line of code is color-coded:
+
+* Solid green means that line of code executed.
+* Solid red means it did not execute.
+* A line of code that is both red and green, such as line 3 in **Figure 2**,
+  means that only some code on that line executed. For example, a ternary
+  expression like `var b = (a > 0) ? a : 0` is colored both red and green.
+
+Note: The color-coding is likely to change in future Chrome releases.
+
+To open the **Coverage** tab:
 
 1. Open the [Command Menu][CM].
 1. Start typing `Coverage` and select **Show Coverage**.
@@ -79,7 +104,7 @@ pops up in the Drawer, which lets you manage blocked requests.
   <img src="/web/updates/images/2017/04/block-request-url.png"
        alt="Block Request URL"/>
   <figcaption>
-    <b>Figure 2</b>. Block Request URL
+    <b>Figure 3</b>. Block Request URL
   </figcaption>
 </figure>
 
@@ -119,29 +144,6 @@ P.S. want to level up your debugging skills? Check out these new-ish docs:
 * [JS Debugging Reference](/web/tools/chrome-devtools/javascript/reference)
 
 [breakpoints]: /web/tools/chrome-devtools/javascript/breakpoints
-
-### Workspaces 2.0 {: #workspaces }
-
-The new UX for using DevTools as your code editor, also known as Workspaces
-or Persistence, has been released from Experiments.
-
-1. Go to the **Sources** panel.
-1. Click the **Filesystem** tab.
-1. Click **Add folder to workspace**.
-1. Select the folder in your filesystem containing your source code.
-1. Click **Allow** to grant DevTools read and write access to the folder.
-
-DevTools automagically maps the files in your filesystem to the files being
-served from the network. No more need to manually map one to the other.
-
-<figure>
-  <img src="/web/updates/images/2017/04/workspaces2.png"
-       alt="A network file mapped to the filesystem"/>
-  <figcaption>
-    <b>Figure 3</b>. The green dot next to <code>(index)</code> means
-    that it's been mapped to a filesystem resource
-  </figcaption>
-</figure>
 
 ## Changes {: #changes }
 

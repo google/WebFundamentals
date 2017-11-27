@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:了解通过网络收集资源的阶段至关重要。这是解决加载问题的基础。
 
 {# wf_published_on:2016-02-03 #}
 {# wf_updated_on:2016-02-03 #}
 
-# 了解资源耗时 {: .page-title }
+# 了解 Resource Timing {: .page-title }
 
 {% include "web/_shared/contributors/jonathangarbee.html" %}
 
@@ -13,12 +13,12 @@ description:了解通过网络收集资源的阶段至关重要。这是解决�
 
 
 ### TL;DR {: .hide-from-toc }
-- 了解资源耗时的阶段。
+- 了解 Resource Timing 的阶段。
 - 了解每个阶段向 Resource Timing API 提供的内容。
 - 了解时间线图表中不同的性能问题指示器，例如一系列透明栏或者大片的绿块。
 
 
-所有网络请求都被视为资源。通过网络对它们进行检索时，资源具有不同生命周期，以资源耗时表示。Network 面板使用与应用开发者所用相同的 [Resource Timing API](http://www.w3.org/TR/resource-timing)。
+所有网络请求都被视为资源。通过网络对它们进行检索时，资源具有不同生命周期，以 Resource Timing 表示。Network 面板使用与应用开发者所用相同的 [Resource Timing API](http://www.w3.org/TR/resource-timing)。
 
 
 
@@ -57,7 +57,7 @@ Resource Timing API 提供了与接收各个资源的时间有关的大量详细
 2. 点击任何条目并打开该条目的 Timing 标签。
 3. 使用 Resource Timing API 从 JavaScript 检索原始数据。
 
-![资源耗时信息](imgs/resource-timing-data.png)
+![Resource Timing 信息](imgs/resource-timing-data.png)
 
 <figure>
 <figcaption>
@@ -71,7 +71,7 @@ Resource Timing API 提供了与接收各个资源的时间有关的大量详细
   performance.getEntriesByType('resource').filter(item => item.name.includes("style.css"))</code>
 
 </figcaption>
-<img src="imgs/resource-timing-entry.png" alt="资源耗时条目">
+<img src="imgs/resource-timing-entry.png" alt="Resource Timing 条目">
 </figure>
 
 <style>

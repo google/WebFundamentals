@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools CPU Profiler를 사용하여 고비용 함수를 식별합니다.
 
@@ -43,7 +43,7 @@ CPU 프로필에는 페이지 함수의 어디에서 실행 시간이 소모되�
 기록을 마쳤으면 DevTools가 해당 기록에서 가져온 데이터를 사용하여 자동으로 Profile 패널을
 채웁니다. 
 
-기본 뷰는 **Heavy (Bottom Up)** 입니다. 이 뷰를 사용하면 
+기본 뷰는 **Heavy (Bottom Up)**입니다. 이 뷰를 사용하면 
 성능에 가장 크게 영향을 미치는 함수가 무엇인지 확인하고 그러한 함수로 이어지는 
 호출 경로를 검사할 수 있습니다. 
 
@@ -71,8 +71,8 @@ CPU 프로필에는 페이지 함수의 어디에서 실행 시간이 소모되�
 ### 함수 제외 {:#exclude}
 
 CPU 프로필에서 함수를 제외하려면 해당 항목을 클릭하여 선택한 다음 
-**exclude selected function** 아이콘을 누릅니다. 
-(![함수 제외 아이콘](imgs/exclude.png){:.inline}). 제외된 함수를
+**exclude selected function** 아이콘(![함수 제외 아이콘](imgs/exclude.png){:.inline})을
+누릅니다. 제외된 함수를
 호출한 호출자에게 제외된 함수의 총 시간이 부과됩니다.
 
 **모든 함수 복원** 아이콘

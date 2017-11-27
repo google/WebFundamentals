@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para la auditoría de Lighthouse "Tiene un service worker registrado".
 
@@ -14,7 +14,7 @@ funciones de la app web progresiva:
 
 * Sin conexión
 * Notificaciones push
-* Agregar a la pantalla de inicio
+* Add to homescreen
 
 ## Cómo aprobar la auditoría {: #how }
 
@@ -27,7 +27,7 @@ Para obtener más ayuda sobre cómo almacenar en caché archivos para uso sin co
 la auditoría" del siguiente documento de Lighthouse: [La URL responde con un 200 cuando está
 sin conexión](http-200-when-offline#how).
 
-Para habilitar las notificaciones push o "agregar a la pantalla de inicio", completa los
+Para habilitar las notificaciones push o "add to homescreen", completa los
 siguientes instructivos paso a paso y luego usa lo que aprendiste para implementar
 las funciones en tu propia app:
 

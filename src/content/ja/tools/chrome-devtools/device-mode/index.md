@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome の Device Mode の仮想端末を使用して、モバイル ファーストのウェブサイトを構築します。
 
@@ -12,7 +12,6 @@ description: Chrome の Device Mode の仮想端末を使用して、モバイ�
 Chrome DevTools の Device Mode を使用して、モバイル ファーストの非常にレスポンシブなウェブサイトを構築します。ここでは、Device Mode を使用してさまざまな端末やその機能をシミュレートする方法について説明します。
 
 警告:Device Mode では、モバイル端末でサイトがどのように見えるか、実際に近い見た目で確認できますが、全体像を把握するには、常に実際の端末を使ってテストする必要があります。
-
 たとえば、DevTools ではモバイル端末のパフォーマンス特性はエミュレートできません。
 
 

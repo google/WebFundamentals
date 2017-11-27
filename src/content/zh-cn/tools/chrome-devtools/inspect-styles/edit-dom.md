@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:Chrome DevTools 的 Elements 面板中的 DOM 树视图可以显示当前网页的 DOM 结构。通过 DOM 更新实时修改页面的内容和结构。
 
@@ -257,7 +257,7 @@ code for screenshot
 <html>
 <body onload="console.log('onload');">
   <div onfocus="console.log('focus');">
-    <button id="button" onclick="console.log('onclick');">click me</button>
+    <button id="button" onclick="console.log('onclick');">点我</button>
   </div>
 </body>
 </html>
@@ -285,7 +285,7 @@ code for screenshot
 <html>
 <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
 <body>
-  <button id="button">click me, please</button>
+  <button id="button">请点我</button>
   <script>
     $('#button').click(function() {
       $('#button').text('hehe, that tickled, thanks');

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools の Device Mode では、開発サイトがさまざまな端末で本番環境においてどのように表示されるかを再現できます。
 
@@ -160,7 +160,6 @@ Device Mode には、エミュレーション用にさまざまな端末が用�
 
 Retina ではないマシンで Retina 端末（またはその逆）をエミュレートする場合は [**Device pixel ratio**] を調整します。
 **デバイス ピクセル比** （DPR）は、論理ピクセルと物理ピクセルの比です。
-
 Nexus 6P などの Retina ディスプレイ搭載端末では、標準の端末よりピクセル密度が高くなります。これは、ビジュアル コンテンツの鮮明さやサイズに影響する可能性があります。
 
 
@@ -175,21 +174,19 @@ Nexus 6P などの Retina ディスプレイ搭載端末では、標準の端末
 * CSS [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) ルール。
 
 
-* 画像の [srcset](/web/fundamentals/design-and-ui/media/images/images-in-markup) 属性。
+* 画像の [srcset](/web/fundamentals/design-and-ux/media/images/images-in-markup) 属性。
 
 
 * `window.devicePixelRatio` プロパティ。
 
 ネイティブ Retina ディスプレイでは、1 インチあたりのドット数（DPI）が低いと粗い表示になり、DPI アセットが高いほど鮮明になることがわかります。
 標準ディスプレイでこの効果をシミュレートするには、DPR を 2 に設定し、ズームでビューポートのサイズを変更します。
-
 2x のアセットは表示が鮮明で、1x のアセットは表示が粗くなります。
 
 
 ###  メディアクエリ {: #media-queries }
 
-[メディアクエリ](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)は、レスポンシブ ウェブデザインに不可欠な要素です。メディアクエリ インスペクターを表示するには、スリードット メニューで [**Show Media queries**] をクリックします。
-
+[メディアクエリ](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)は、レスポンシブ ウェブデザインに不可欠な要素です。メディアクエリ インスペクターを表示するには、スリードット メニューで [**Show Media queries**] をクリックします。
 DevTools によってスタイルシートのメディアクエリが検出され、一番上のルーラーに色付きのバーとして表示されます。
 
 
@@ -240,7 +237,6 @@ DevTools によってスタイルシートのメディアクエリが検出さ�
 
 
   1. **Disk Cache**: [Disk Cache] を無効にすると、DevTools が開いている間にページとそのアセットがブラウザによってキャッシュに保存されなくなります。
-
   2. **Network Throttling**: [ネットワーク スロットリングの詳細](/web/tools/chrome-devtools/network-performance/network-conditions)を参照してください。
   3. **User Agent**: 特定の UA（User Agent）文字列のオーバーライドを設定できます。
 

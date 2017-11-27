@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: En la vista de árbol del DOM del panel Elements de Chrome DevTools se muestra la estructura del DOM de la página web actual. Edita en tiempo real el contenido y la estructura de tu página mediante actualizaciones del DOM.
 
-{# wf_updated_on: 2015-04-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Editar el DOM {: .page-title }
@@ -46,7 +46,7 @@ Haz clic en el botón **Inspect Element**
 ![Ícono de inspeccionar](/web/tools/chrome-devtools/inspect-styles/imgs/inspect-icon.png){:.inline}
 para ir a Inspect Element Mode y luego haz clic en un elemento.
 
-Usa el método [`inspect`][inspeccionar] en la consola, como
+Usa el método [`inspect`][inspect] en la consola, como
 `inspect(document.body)`.
 
 ## Navegar por el DOM
@@ -105,8 +105,8 @@ Para editar el nombre o atributo de un nodo del DOM:
 * Destaca el nodo, presiona <kbd>Enter</kbd> y luego presiona <kbd>Tab</kbd>
   hasta que se seleccione el nombre o atributo.
 * Abre el [menú de más acciones](#more-actions) y selecciona **Add Attribute** 
-  o **Edit Attribute**. **Edit Attribute** depende del contexto; la parte  
-  donde haces clic determina lo que se edita.
+  o **Edit Attribute**. **Edit Attribute** depende del contexto; la parte donde haces clic determina lo que se edita.
+
 
 La etiqueta de cierre se actualiza automáticamente cuando terminas.
 
@@ -137,16 +137,16 @@ Haz clic en un nodo, mantenlo presionado y muévelo.
 Para borrar un nodo del DOM:
 
 * Abre el [menú de más acciones](#more-actions) y selecciona **Delete Node**.
-* Selecciona el nodo y presiona la tecla <kbd>Delete</kbd> .
+* Selecciona el nodo y presiona la tecla <kbd>Delete</kbd>.
 
-Nota: Si borras un nodo por accidente, presiona <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd> (o <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd> en Mac) para deshacer tu última acción.
+Note: Si borras un nodo por accidente, presiona <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd> (o <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd> en Mac) para deshacer tu última acción.
 
 ## Mostrar el menú more actions {:#more-actions}
 
 El menú **more actions** te permite interactuar con un nodo del DOM de diversas
 maneras. Para ver el menú, haz clic con el botón secundario en un nodo o selecciona un nodo
 y luego presiona el botón de **más acciones** (![botón 
-more actions](imgs/more-actions-button.png){:.inline})). El botón solo 
+more actions](imgs/more-actions-button.png){:.inline}). El botón solo 
 se muestra en el elemento actualmente seleccionado.
 
 ![menú more actions] (imgs/more-actions-menu.png)
@@ -228,7 +228,7 @@ pausa en el depurador:
 ## Ver receptores de eventos de elementos
 
 Ve los receptores de eventos de JavaScript asociados con un nodo del DOM en el panel 
-**Event Listeners** . 
+**Event Listeners**. 
 
 ![panel event listeners](imgs/event-listeners-pane.png)
 
@@ -246,7 +246,7 @@ Haz clic en la flecha del expansor que está al lado del identificador de un ele
 <table class="responsive">
   <thead>
     <tr>
-      <th colspan="2">Propiedades del receptor de eventos &amp; Descripción</th>
+      <th colspan="2">Propiedades del receptor de eventos y descripción</th>
     </tr>
   </thead>
   <tbody>
@@ -256,12 +256,12 @@ Haz clic en la flecha del expansor que está al lado del identificador de un ele
     </tr>
     <tr>
       <td data-th="Value"><code>useCapture</code></td>
-      <td data-th="Description">Un valor booleano que indica si se estableció el marcador <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener">useCapture</a>  <code>addEventListener</code> .</td>
+      <td data-th="Description">Un valor booleano que indica si se estableció el marcador <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener">useCapture</a>  <code>addEventListener</code>.</td>
     </tr>
   </tbody>
 </table>
 
-Nota: Muchas extensiones de Chrome agregan sus propios receptores de eventos en el DOM. Si ves una serie de receptores de eventos que no son establecidos por tu código, puede que desees reabrir tu página en una [Ventana de incógnito](https://support.google.com/chrome/answer/95464). Las ventanas de incógnito evitan que las extensiones se ejecuten de manera predeterminada.
+Note: Muchas extensiones de Chrome agregan sus propios receptores de eventos en el DOM. Si ves una serie de receptores de eventos que no son establecidos por tu código, puede que desees reabrir tu página en una [Ventana de incógnito](https://support.google.com/chrome/answer/95464). Las ventanas de incógnito evitan que las extensiones se ejecuten de manera predeterminada.
 
 ### Ver receptores de eventos antecesores
 
@@ -289,7 +289,7 @@ dicho nodo.
 Cuando se inhabilita la casilla de verificación, solo se muestran los receptores de eventos para el 
 nodo seleccionado actualmente.
 
-!antecesores inhabilitados](imgs/ancestors-disabled.png)
+![antecesores inhabilitados](imgs/ancestors-disabled.png)
 
 ### Ver receptores de marcos
 
@@ -331,7 +331,7 @@ probablemente resolverá en alguna parte del código del marco o la biblioteca.
 
 
 
-[Inspeccionar]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
+[inspect]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
 
 
 {# wf_devsite_translation #}

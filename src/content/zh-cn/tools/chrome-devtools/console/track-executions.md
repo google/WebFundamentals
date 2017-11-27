@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:利用 Console API 测量执行时间和对语句执行进行计数。
 
@@ -45,7 +45,7 @@ description:利用 Console API 测量执行时间和对语句执行进行计数�
 
 ### Timeline 上的计时器
 
-当 [Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool)记录在 `time()` 操作期间发生时，它也会对 Timeline 进行标注。如果您想要跟踪应用的操作和操作来自何处，请使此记录。
+当 [Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool) 记录在 `time()` 操作期间发生时，它也会对 Timeline 进行标注。如果您想要跟踪应用的操作和操作来自何处，请使此记录。
 
 执行 `time()` 时 Timeline 上的标注如下所示：
 

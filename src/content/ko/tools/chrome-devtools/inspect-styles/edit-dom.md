@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools의 Elements 패널에 있는 DOM 트리 뷰에 현재 웹 페이지의 DOM 구조가 표시됩니다. DOM 업데이트를 통해 페이지의 콘텐츠와 구조를 실시간으로 편집할 수 있습니다.
 
@@ -37,8 +37,8 @@ DOM 트리에서 검사할 수 있습니다. 아무 요소나 선택하여 적�
 <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd>
 + <kbd class="kbd">C</kbd>(Windows) 또는 <kbd class="kbd">Cmd</kbd>
 + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">C</kbd>(Mac)를 눌러 
-DevTools를 Inspect Element 모드로 연 다음, 요소 위로 마우스를 가져갑니다. DevTools가 
-**Elements** 패널에서 마우스를 가져간 요소를 자동으로 
+DevTools를 Inspect Element 모드로 연 다음, 요소 위로 마우스를 가져갑니다. DevTools가
+**Elements** 패널에서 마우스를 가져간 요소를 자동으로
 강조표시합니다. 해당 요소를 클릭하면 검사 모드를 종료해도 
 **Elements** 패널에서 요소가 강조표시된 상태로 유지됩니다. 
 
@@ -46,7 +46,7 @@ DevTools를 Inspect Element 모드로 연 다음, 요소 위로 마우스를 가
 ![검사 아이콘](/web/tools/chrome-devtools/inspect-styles/imgs/inspect-icon.png){:.inline}
 을 클릭하여 요소 검사 모드로 들어간 다음, 요소를 클릭합니다.
 
-콘솔에서 [`inspect`][inspect] 메서드를 사용합니다(예: 
+콘솔에서 [`inspect`][검사] 메서드를 사용합니다(예: 
 `inspect(document.body)`).
 
 ## DOM 탐색
@@ -102,8 +102,8 @@ DevTools는 트레일 내에서 가능한 한 많은 수의 항목을 표시합�
 DOM 이름 또는 속성을 편집하려면:
 
 * 노드 이름 또는 속성을 직접 두 번 클릭합니다.
-* 노드를 강조표시하고 <kbd>Enter</kbd>를 누른 다음 원하는 이름 또는 속성이 표시될 때까지
-  <kbd>Tab</kbd>을 누릅니다.
+* 노드를 강조표시하고 <kbd>Enter</kbd> 키를 누른 다음 원하는 이름 또는 속성이 표시될 때까지
+  <kbd>Tab</kbd> 키를 누릅니다.
 * [추가 작업 메뉴](#more-actions)를 연 다음 **Add Attribute** 
 또는 **Edit Attribute**를 선택합니다. **Edit Attribute**는 상황별 메뉴로, 클릭하는 부분에 따라
 편집되는 항목이 달라집니다.
@@ -121,7 +121,7 @@ DOM 노드와 자식 노드를 HTML로 편집하려면:
 * <kbd>F2</kbd>(Windows/Linux) 또는 <kbd>Fn</kbd>+<kbd>F2</kbd>(Mac)를 누릅니다.
 * <kbd>Ctrl</kbd>+<kbd>Enter</kbd>(Windows/Linux) 또는 
 <kbd>Cmd</kbd>+<kbd>Enter</kbd>(Mac)를 눌러 변경 내용을 저장합니다. 
-* <kbd>Esc</kbd>를 누르면 작업한 내용을 저장하지 않고 편집기를 종료합니다.
+* <kbd>Esc</kbd> 키를 누르면 작업한 내용을 저장하지 않고 편집기를 종료합니다.
 
 ![HTML로 편집](imgs/edit-as-html.png)
 
@@ -139,14 +139,14 @@ DOM 노드를 삭제하려면:
 * [추가 작업 메뉴](#more-actions)를 열고 **Delete Node**를 선택합니다.
 * 노드를 선택하고 <kbd>Delete</kbd> 키를 누릅니다.
 
-참고: "실수로 노드를 삭제하는 경우, <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd>(또는 Mac의 경우 <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd>)를 사용하여 마지막 작업을 취소하면 됩니다.
+참고: 실수로 노드를 삭제하는 경우, <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd>(또는 Mac의 경우 <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd>)를 사용하여 마지막 작업을 취소하면 됩니다.
 
 ## 추가 작업 메뉴 표시 {:#more-actions}
 
 **추가 작업** 메뉴를 사용하면 DOM 노드와 여러 가지 방식으로 상호작용할 수
 있습니다. 메뉴를 보려면 노드를 마우스 오른쪽 버튼으로 클릭하거나 노드를 선택하고 
 **추가 작업** 버튼(![추가 작업 
-버튼](imgs/more-actions-button.png){:.inline}))을 누릅니다. 버튼은
+버튼](imgs/more-actions-button.png){:.inline})을 누릅니다. 버튼은
 현재 선택한 요소에서만 표시됩니다.
 
 ![추가 작업 메뉴](imgs/more-actions-menu.png)
@@ -154,9 +154,9 @@ DOM 노드를 삭제하려면:
 ## 스크롤하여 보기
 
 DOM 노드 위로 마우스를 가져가거나 노드를 선택하면 렌더링된 노드가
-뷰포트에서 강조표시됩니다. 노드를 스크롤하여 화면 밖으로 벗어나면 
-노드가 현재 뷰포트보다 위에 있는 경우 
-뷰포트 맨 위에, 노드가 현재 뷰포트 아래에 있는 경우 뷰포트 맨 아래에 도움말이 
+뷰포트에서 강조표시됩니다. 노드를 스크롤하여 화면 밖으로 벗어나면
+노드가 현재 뷰포트보다 위에 있는 경우
+뷰포트 맨 위에, 노드가 현재 뷰포트 아래에 있는 경우 뷰포트 맨 아래에 도움말이
 표시됩니다. 예를 들어 DevTools 아래의 스크린샷을 보면 현재
 **Elements** 패널에서 선택한 요소가 뷰포트 아래에 있습니다.
 
@@ -220,7 +220,7 @@ Elements 및 Sources 패널에는 모두 DOM
 * 확인란을 **전환**하여 중단점을 활성화 또는 비활성화합니다.
 
 DOM 중단점을 트리거하면 해당 중단점이 DOM
-Breakpoints 창에 강조표시됩니다. **Call Stack** 창에 디버거 일시 중지의**이유**가 표시됩니다.
+Breakpoints 창에 강조표시됩니다. **Call Stack** 창에 디버거 일시 중지의 **이유**가 표시됩니다.
 
 
 ![중단점 이유](imgs/breakpoint-reason.png)
@@ -246,7 +246,7 @@ Event Listeners 창에서 맨 윗 단계의 항목은 등록된 리스너가 있
 <table class="responsive">
   <thead>
     <tr>
-      <th colspan="2">이벤트 리스너 속성 &amp; 설명</th>
+      <th colspan="2">이벤트 리스너 속성 및 설명</th>
     </tr>
   </thead>
   <tbody>

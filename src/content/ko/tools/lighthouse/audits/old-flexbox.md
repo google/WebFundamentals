@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "이전 CSS Flexbox를 사용하지 않는 사이트" Lighthouse 감사의 참조 문서입니다.
+description: '이전 CSS Flexbox를 사용하지 않는 사이트' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-12-05 #}
 {# wf_published_on: 2016-12-05 #}
@@ -10,8 +10,8 @@ description: "이전 CSS Flexbox를 사용하지 않는 사이트" Lighthouse �
 ## 감사가 중요한 이유 {: #why }
 
 Flexbox의 오래된 2009년 사양은 지원이 중단되었고 최신 사양보다 2.3배
-속도가 느립니다. 자세한 내용은 [Flexbox 레이아웃은 느리지 않습니다][slow]
-를 참조하세요.
+속도가 느립니다. 자세한 내용은 [Flexbox 레이아웃은 느리지 않습니다][slow]를
+참조하세요.
 
 [slow]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
 

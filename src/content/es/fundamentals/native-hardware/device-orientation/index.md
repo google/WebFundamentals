@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Los eventos de movimiento y orientación del dispositivo proporcionan acceso al acelerómetro, el giroscopio y la brújula incorporados en los dispositivos móviles.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-06-17 #}
 
 # Movimiento y orientación del dispositivo {: .page-title }
@@ -17,7 +17,7 @@ la dirección o acción del personaje. Si se los usa junto con la ubicación geo
 crear una navegación paso a paso más precisa o proporcionar información sobre
 una ubicación específica.
 
-Advertencia: No todos los navegadores usan el mismo sistema de coordenadas, y podrían informar diferentes valores en situaciones idénticas. Esto ha mejorado con el tiempo, pero asegúrate de probar tu situación.
+Warning: No todos los navegadores usan el mismo sistema de coordenadas, y podrían informar diferentes valores en situaciones idénticas. Esto ha mejorado con el tiempo, pero asegúrate de probar tu situación.
 
 ### TL;DR {: .hide-from-toc }
 
@@ -146,7 +146,7 @@ aumenta a medida que la parte superior del dispositivo se apunta hacia la superf
 
 La rotación alrededor del eje y. El valor de `gamma` es de 0&deg; cuando los bordes izquierdos y
 derechos del dispositivo se encuentran a la misma distancia de la superficie de la Tierra.  El valor
-aumenta a medida que la parte derecha del dispositivo se apunta hacia la superficie de la tierra.
+aumenta a medida que la parte derecha del dispositivo se apunta hacia la superficie de la Tierra.
 
 <div style="clear:both;"></div>
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“处于离线状态时访问网址返回 200”Lighthouse 审查的参考文档。
 
@@ -9,7 +9,7 @@ description:“处于离线状态时访问网址返回 200”Lighthouse 审查�
 
 ## 为什么说此审查非常重要{: #why }
 
-渐进式网络应用可在离线状态下运行。如果在离线状态下访问页面时 Lighthouse 没有收到 HTTP 200 响应，则此页面在离线状态下无法访问。
+Progressive Web App 可在离线状态下运行。如果在离线状态下访问页面时 Lighthouse 没有收到 HTTP 200 响应，则此页面在离线状态下无法访问。
 
 
 

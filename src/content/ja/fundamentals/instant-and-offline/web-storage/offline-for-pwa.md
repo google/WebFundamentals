@@ -19,11 +19,7 @@ description: レスポンス タイムとオフライン サポートの向上�
   </figcaption>
 </figure>
 
-外出中はインターネット接続が不安定であったり存在しなかったりする場合があります。このような理由から、オフライン サポートと信頼性の高いパフォーマンスが [Progressive Web App](/web/progressive-web-apps/) における一般的な特徴となっています。
-
-完全なワイヤレス環境であっても、キャッシュやその他のストレージ テクニックを適切に利用すれば、ユーザー エクスペリエンスを大幅に向上させることができます。
-
-この投稿は、PWA のオフライン データ ストレージに関するアイデアをまとめたものです。有意義なエクスペリエンスをオフラインで提供するために必要な JSON ペイロード、画像、一般的な静的データについて考えてみましょう。
+外出中はインターネット接続が不安定であったり存在しなかったりする場合があります。このような理由から、オフライン サポートと信頼性の高いパフォーマンスが [Progressive Web App](/web/progressive-web-apps/) における一般的な特徴となっています。完全なワイヤレス環境であっても、キャッシュやその他のストレージ テクニックを適切に利用すれば、ユーザー エクスペリエンスを大幅に向上させることができます。この投稿は、PWA のオフライン データ ストレージに関するアイデアをまとめたものです。有意義なエクスペリエンスをオフラインで提供するために必要な JSON ペイロード、画像、一般的な静的データについて考えてみましょう。
 
 
 
@@ -36,39 +32,19 @@ description: レスポンス タイムとオフライン サポートの向上�
 
 
 * URL 指定可能なリソースには、[**Cache API**](https://davidwalsh.name/cache)（[Service Worker](/web/fundamentals/primers/service-worker/) の一部）を使用します。
-
 * その他のすべてのデータには、（[Promise](/web/fundamentals/getting-started/primers/promises) ラッパーで）[**IndexedDB**](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) を使用します。
 
 
 その理由を次に示します。
 
-両方の API は非同期です（IndexedDB はイベントベース、Cache API は Promise ベースです）。
-両方とも [Web Worker、ウィンドウ、および Service Worker](https://nolanlawson.github.io/html5workertest/) でも動作します。
-IndexedDB は[どこでも](http://caniuse.com/#feat=indexeddb)利用できます。
-Service Worker（および Cache API）は、Chrome、Firefox、Opera で[利用可能](https://jakearchibald.github.io/isserviceworkerready/)になりましたが、Edge については開発中です。
-
-
-IndexedDB の Promise ラッパーにより、IndexedDB ライブラリに付属の強力で複雑な機構（トランザクション、スキーマ バージョニングなど）の一部は隠されます。
-
-
-IndexedDB は[オブザーバー](https://github.com/WICG/indexed-db-observers)をサポートしているため、タブ間で簡単に同期を取ることができます。
+両方の API は非同期です（IndexedDB はイベントベース、Cache API は Promise ベースです）。両方とも [Web Worker、ウィンドウ、および Service Worker](https://nolanlawson.github.io/html5workertest/) でも動作します。IndexedDB は[どこでも](http://caniuse.com/#feat=indexeddb)利用できます。Service Worker（および Cache API）は、Chrome、Firefox、Opera で[利用可能](https://jakearchibald.github.io/isserviceworkerready/)になりましたが、Edge については開発中です。IndexedDB の Promise ラッパーにより、IndexedDB ライブラリに付属の強力で複雑な機構（トランザクション、スキーマ バージョニングなど）の一部は隠されます。IndexedDB は[オブザーバー](https://github.com/WICG/indexed-db-observers)をサポートしているため、タブ間で簡単に同期を取ることができます。
 
 
 
-Safari 10 は、最新の Tech Preview で[長年にわたる多くの IndexedDB バグ](https://gist.github.com/nolanlawson/08eb857c6b17a30c1b26)を修正しました。
-
-注: 一部のユーザーの方は、Safari 10 の IndexedDB と PouchDB の安定性の問題に遭遇し、動作が少し遅いと感じたことがあるでしょう。
-
-さらに調査が行われるまでは、状況は異なっている可能性があります。ブラウザのバグをテストして報告し、@webkit や関連する OSS ライブラリの作成者が確認できるようにしてください。
-
-LocalForage、PouchDB、YDN、および Lovefield は、Safari ではデフォルトで WebSQL を使用しています（壊れた IndexedDB の機能テストを効率的に実行する方法がないため）。
-
-つまり、これらのライブラリは、余分な労力なしで Safari 10 で動作します（IndexedDB を直接使用しないだけでなく）。
+Safari 10 は、最新の Tech Preview で[長年にわたる多くの IndexedDB バグ](https://gist.github.com/nolanlawson/08eb857c6b17a30c1b26)を修正しました。注: 一部のユーザーの方は、Safari 10 の IndexedDB と PouchDB の安定性の問題に遭遇し、動作が少し遅いと感じたことがあるでしょう。さらに調査が行われるまでは、状況は異なっている可能性があります。ブラウザのバグをテストして報告し、@webkit や関連する OSS ライブラリの作成者が確認できるようにしてください。LocalForage、PouchDB、YDN、および Lovefield は、Safari ではデフォルトで WebSQL を使用しています（壊れた IndexedDB の機能テストを効率的に実行する方法がないため）。つまり、これらのライブラリは、余分な労力なしで Safari 10 で動作します（IndexedDB を直接使用しないだけでなく）。
 
 
-PWA では、Cache API を使用したアプリシェル（JS / CSS / HTML シェル）を作成して静的リソースをキャッシュし、IndexedDB からオフライン ページデータを入力できます。
-
-IndexedDB のデバッグ サポートは、現在は [Chrome](/web/tools/chrome-devtools/iterate/manage-data/local-storage)（[Application] タブ）、Opera、[Firefox](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector)（Storage Inspector）、および Safari（[Storage] タブ）で利用できます。
+PWA では、Cache API を使用したアプリシェル（JS / CSS / HTML シェル）を作成して静的リソースをキャッシュし、IndexedDB からオフライン ページデータを入力できます。IndexedDB のデバッグ サポートは、現在は [Chrome](/web/tools/chrome-devtools/iterate/manage-data/local-storage)（[Application] タブ）、Opera、[Firefox](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector)（Storage Inspector）、および Safari（[Storage] タブ）で利用できます。
 
 
 
@@ -76,12 +52,7 @@ IndexedDB のデバッグ サポートは、現在は [Chrome](/web/tools/chrome
 
 ##  その他のストレージ メカニズムについて
 
-ウエブ ストレージ（LocalStorage、SessionStorage など）は同期的であり、Web Worker のサポートはありません。また、サイズとタイプ（文字列のみ）が制限されています。
-Cookie には[固有の用途](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)がありますが、同期的であり、Web Worker のサポートはありません。また、サイズが制限されています。WebSQL は広範なブラウザ サポートがないため、その使用は推奨されていません。File System API は Chrome 以外のブラウザではサポートされていません。
-
-
-
-[File API](https://developer.mozilla.org/en-US/docs/Web/API/File) は [File and Directory Entries API](https://wicg.github.io/entries-api/) と [File API](https://w3c.github.io/FileAPI/) 仕様で改良されているものの、どちらも十分に成熟または標準化されていないため、まだ幅広く採用されていません。
+ウエブ ストレージ（LocalStorage、SessionStorage など）は同期的であり、Web Worker のサポートはありません。また、サイズとタイプ（文字列のみ）が制限されています。Cookie には[固有の用途](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)がありますが、同期的であり、Web Worker のサポートはありません。また、サイズが制限されています。WebSQL は広範なブラウザ サポートがないため、その使用は推奨されていません。File System API は Chrome 以外のブラウザではサポートされていません。[File API](https://developer.mozilla.org/en-US/docs/Web/API/File) は [File and Directory Entries API](https://wicg.github.io/entries-api/) と [File API](https://w3c.github.io/FileAPI/) 仕様で改良されているものの、どちらも十分に成熟または標準化されていないため、まだ幅広く採用されていません。
 
 
 
@@ -115,24 +86,13 @@ Cookie には[固有の用途](https://developer.mozilla.org/en-US/docs/Web/HTTP
   <tbody>
 </table>
 
-Chrome と Opera では、ストレージは（API ごとではなく）オリジンごとです。両方のストレージ メカニズムでは、ブラウザの[割り当て](http://www.html5rocks.com/en/tutorials/offline/quota-research/)に到達するまでデータを保存します。
-
-
-アプリで [Quota Management
-API](https://developer.mozilla.org/en-US/docs/Web/API/StorageQuota) を使用して現在使用している割り当てを確認できます。Chrome では、アプリは空きディスク領域の最大 6% を使用できます。
-
-Firefox では、アプリは空きディスク領域の最大 10% を使用できますが、50 MB のデータが保存されると、ユーザーはストレージを増やすよう要求されます。
-モバイル Safari のアプリは最大 50 MB を使用できますが、PC 用 Safari ではストレージは無制限です（5 MB を超えるとストレージを増やすよう要求されます）。
-
-IE10 以降では、250 MB で限度に達しますが、10 MB でユーザーに通知します。
-PouchDB は、IDB ストレージの動作を[追跡](https://pouchdb.com/faq.html#data_limits)します。
+Chrome と Opera では、ストレージは（API ごとではなく）オリジンごとです。両方のストレージ メカニズムでは、ブラウザの[割り当て](http://www.html5rocks.com/en/tutorials/offline/quota-research/)に到達するまでデータを保存します。アプリで [Quota Management
+API](https://developer.mozilla.org/en-US/docs/Web/API/StorageQuota) を使用して現在使用している割り当てを確認できます。Chrome では、アプリは空きディスク領域の最大 6% を使用できます。Firefox では、アプリは空きディスク領域の最大 10% を使用できますが、50 MB のデータが保存されると、ユーザーはストレージを増やすよう要求されます。モバイル Safari のアプリは最大 50 MB を使用できますが、PC 用 Safari ではストレージは無制限です（5 MB を超えるとストレージを増やすよう要求されます）。IE10 以降では、250 MB で限度に達しますが、10 MB でユーザーに通知します。PouchDB は、IDB ストレージの動作を[追跡](https://pouchdb.com/faq.html#data_limits)します。
 
 
 ##  アプリで使用しているストレージ領域を知る方法
 
-Chrome では、[Quota Management API](https://www.w3.org/TR/quota-api/) を使用して、現在使用されているストレージ領域のサイズとアプリで利用できるサイズを問い合わせることができます。
-
-新しい [Storage Quota Estimate
+Chrome では、[Quota Management API](https://www.w3.org/TR/quota-api/) を使用して、現在使用されているストレージ領域のサイズとアプリで利用できるサイズを問い合わせることができます。新しい [Storage Quota Estimate
 API](https://www.chromestatus.com/features/5630353511284736) を使用すると、Promise のサポートにより、オリジンで使用している割り当てを簡単に調べることができます。
 
 
@@ -164,21 +124,13 @@ API](https://www.chromestatus.com/features/5630353511284736) を使用すると�
   <tbody>
 </table>
 
-オリジンには、好きなように利用できる領域が与えられます。この空き領域は、あらゆる形式のオリジン ストレージ（IndexedDB、Cache API、localStorage など）で共有されます。
-
-与えられる領域のサイズは決まっておらず、端末とストレージの条件によって異なります。
+オリジンには、好きなように利用できる領域が与えられます。この空き領域は、あらゆる形式のオリジン ストレージ（IndexedDB、Cache API、localStorage など）で共有されます。与えられる領域のサイズは決まっておらず、端末とストレージの条件によって異なります。
 
 
-ウェブ ストレージが少なくなると、UA はストレージを消去して領域を使用できるようにします。これにより、オフラインの応答性が低下する可能性があるため、最近アップデートされた[ストレージ](https://storage.spec.whatwg.org/)仕様では、「永続性」および「ベスト エフォート」戦略（デフォルトは「ベスト エフォート」）が定義されています。
+ウェブ ストレージが少なくなると、UA はストレージを消去して領域を使用できるようにします。これにより、オフラインの応答性が低下する可能性があるため、最近アップデートされた[ストレージ](https://storage.spec.whatwg.org/)仕様では、「永続性」および「ベスト エフォート」戦略（デフォルトは「ベスト エフォート」）が定義されています。「ベスト エフォート」ではユーザーを妨げることなくストレージを消去できますが、長期間のデータや重要なデータに対しては永続性が低くなります。現在、IndexedDB と Cache API は両方とも「ベスト エフォート」カテゴリに分類されます。
 
 
-「ベスト エフォート」ではユーザーを妨げることなくストレージを消去できますが、長期間のデータや重要なデータに対しては永続性が低くなります。
-
-現在、IndexedDB と Cache API は両方とも「ベスト エフォート」カテゴリに分類されます。
-
-
-「永続性」ストレージは、ストレージが少なくなっても自動的に消去されることはありません。ユーザーが（ブラウザ設定により）手動でこのストレージを消去する必要があります。
-Chrome は、オリジン トライアルで[永続性ストレージ](/web/updates/2016/06/persistent-storage)のサポートをテストしており、最新のニュースで [Chrome 55](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5Sihi1iAXYc/wnvNDFIPAQAJ) から対応することを示唆しています。
+「永続性」ストレージは、ストレージが少なくなっても自動的に消去されることはありません。ユーザーが（ブラウザ設定により）手動でこのストレージを消去する必要があります。Chrome は、オリジン トライアルで[永続性ストレージ](/web/updates/2016/06/persistent-storage)のサポートをテストしており、最新のニュースで [Chrome 55](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5Sihi1iAXYc/wnvNDFIPAQAJ) から対応することを示唆しています。
 
 
 

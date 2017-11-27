@@ -35,9 +35,9 @@ nama literalnya, `"/160204193356-01-cat-500.jpg"`. Itu memang akurat, namun tida
 sama sekali.
 
 Anda bisa menggunakan atribut `alt` untuk menyediakan alternatif berupa teks yang berguna bagi
-gambar &mdash; misalnya, "Seekor kucing dengan pandangan mengancam ke dalam ruangan."
+gambar &mdash; misalnya, "A cat staring menacingly off into space."
 
-    <img src="/160204193356-01-cat-500.jpg" alt="Seekor kucing dengan pandangan mengancam ke dalam ruangan">
+    <img src="/160204193356-01-cat-500.jpg" alt="A cat staring menacingly off into space">
 
 Kemudian pembaca layar bisa membacakan keterangan singkat mengenai gambar tersebut (
 terlihat di bilah hitam VoiceOver) dan pengguna bisa memilih apakah akan berpindah

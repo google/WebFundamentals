@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: [Application] パネルを使用して、ウェブアプリ マニフェスト、Service Worker、Service Worker のキャッシュの調査、変更、およびデバッグを行うことができます。
 
-{# wf_updated_on:2016-07-25 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on:2016-07-25 #}
 
 # Progressive Web App のデバッグ {: .page-title }
@@ -38,9 +38,8 @@ description: [Application] パネルを使用して、ウェブアプリ マニ�
 
 関連ガイド:
 
-* [ウェブアプリ マニフェストによるユーザー エクスペリエンスの向上](/web/fundamentals/engage-and-retain/web-app-manifest)
-
-* [アプリのインストール バナーの使用](/web/fundamentals/engage-and-retain/app-install-banners)
+* [ウェブアプリ マニフェストによるユーザー エクスペリエンスの向上](/web/fundamentals/web-app-manifest)
+* [アプリのインストール バナーの使用](/web/fundamentals/app-install-banners)
 
 
 マニフェストを設定したら、[**Application**] パネルの [**Manifest**] ペインを使用して調べることができます。
@@ -49,11 +48,9 @@ description: [Application] パネルを使用して、ウェブアプリ マニ�
 ![[Manifest] ペイン][manifest]
 
 * マニフェスト ソースを確認するには、[**App Manifest**] ラベルの下のリンク（上のスクリーンショットでは `https://airhorner.com/manifest.json`）をクリックします。
-
 * ホーム画面への追加イベントをシミュレートするには、[**Add to homescreen**] ボタンをクリックします。
 詳細については、次のセクションをご覧ください。
 * [**Identity**] セクションと [**Presentation**] セクションには、マニフェスト ソースの項目がわかりやすく表示されます。
-
 * [**Icons**] セクションには、指定したすべてのアイコンが表示されます。
 
 [manifest]: images/manifest.png
@@ -66,9 +63,7 @@ description: [Application] パネルを使用して、ウェブアプリ マニ�
 
 
 
-ホーム画面への追加を正式にサポートしている [Google I/O 2016 Progressive Web App](https://events.google.com/io2016/){: .external } でこの機能をテストすることができます。
-
-アプリが開いているときに [**Add to homescreen**] をクリックすると、Chrome ではバナー「add this site to your shelf」が表示されます。これは、モバイル端末の「add to homescreen」バナーに相当するデスクトップ用のバナーです。
+ホーム画面への追加を正式にサポートしている [Google I/O 2016 Progressive Web App](https://events.google.com/io2016/){: .external } でこの機能をテストすることができます。アプリが開いているときに [**Add to homescreen**] をクリックすると、Chrome ではバナー「add this site to your shelf」が表示されます。これは、モバイル端末の「add to homescreen」バナーに相当するデスクトップ用のバナーです。
 
 
 
@@ -102,7 +97,7 @@ Service Worker は、将来のウェブ プラットフォームの基礎とな�
 関連ガイド:
 
 * [Service Worker の概要](/web/fundamentals/primers/service-worker)
-* [プッシュ通知:タイムリー、有用、的確](/web/fundamentals/engage-and-retain/push-notifications)
+* [プッシュ通知:タイムリー、有用、的確](/web/fundamentals/push-notifications)
 
 
 [**Application**] パネルの [**Service Workers**] ペインは、DevTools で Service Worker の調査やデバッグを行う際の主要な場所です。
@@ -114,34 +109,19 @@ Service Worker は、将来のウェブ プラットフォームの基礎とな�
 たとえば、上のスクリーンショットでは、`https://events.google.com/io2016/` のスコープについて Service Worker がインストールされています。
 
 * [**Offline**] チェックボックスをオンにすると、DevTools はオフライン モードになります。これは、[**Network**] パネルや、[コマンド メニュー][cm]の [`Go offline`] オプションから使用できるオフライン モードと同じです。
-
-
 * [**Update on reload**] チェックボックスをオンにすると、ページが読み込まれるたびに Service Worker が強制的に更新されます。
-
 * [**Bypass for network**] チェックボックスをオンにすると、Service Worker がバイパスされ、ブラウザは、リクエストされたリソースのためにネットワークにアクセスするよう強制されます。
-
 * [**Update**] ボタンを使用すると、指定した Service Worker の 1 回限りの更新が実行されます。
-
 * [**Push**] ボタンを使用すると、ペイロードを含まないプッシュ通知（[通知][tickle]とも呼ばれる）がエミュレートされます。
-
 * [**Sync**] ボタンを使用すると、バックグラウンド同期イベントがエミュレートされます。
 * [**Unregister**] ボタンを使用すると、指定した Service Worker の登録が解除されます。1 回のボタンクリックするだけで、Service Worker の登録を解除し、ストレージとキャッシュを消去する方法については、[ストレージの消去](#clear-storage)をご覧ください。
-
-
 * [**Source**] 行では、現在実行中の Service Worker がインストールされた日時を確認できます。
 リンクは、Service Worker のソースファイルの名前です。リンクをクリックすると、Service Worker のソースに送信されます。
-
 * [**Status**] 行では、Service Worker のステータスを確認できます。この行の数字（上のスクリーンショットでは `#1`）は、Service Worker が更新された回数を示します。
-
 [**Update on reload**] チェックボックスをオンにした場合、ページが読み込まれるたびにこの数が増えます。
-ステータスの横には、[**start**] ボタン（Service Worker が停止している場合）または [**stop**] ボタン（Service Worker が実行中の場合）が表示されます。
-
-Service Worker は、ブラウザによっていつでも停止および起動されるように設計されています。
-Service Worker を [**stop**] ボタンを使用して明示的に停止すると、これをシミュレートできます。
-
-  Service Worker が再起動されたときにコードがどのように動作するかをテストするには、Service Worker を停止するのが最適な方法です。
+ステータスの横には、[**start**] ボタン（Service Worker が停止している場合）または [**stop**] ボタン（Service Worker が実行中の場合）が表示されます。Service Worker は、ブラウザによっていつでも停止および起動されるように設計されています。
+Service Worker を [**stop**] ボタンを使用して明示的に停止すると、これをシミュレートできます。 Service Worker が再起動されたときにコードがどのように動作するかをテストするには、Service Worker を停止するのが最適な方法です。
 これにより、永続的なグローバル状態についての前提が間違っているために発生するバグが明らかになることがよくあります。
-
 * [**Clients**] 行では、Service Worker のスコープのオリジンを確認できます。
 [**focus**] ボタンは主に、[**Show all**] チェックボックスをオンにしている場合に便利です。
 このチェックボックスをオンにすると、登録されているすべての Service Worker が表示されます。
@@ -155,7 +135,7 @@ Service Worker でエラーが発生すると、[**Errors**] という新しい�
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ##  Service Worker のキャッシュ{:#caches}

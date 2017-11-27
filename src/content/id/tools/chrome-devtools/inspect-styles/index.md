@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Memeriksa dan mengedit HTML dan CSS laman.
 
@@ -103,10 +103,10 @@ Untuk menjelajah perubahan yang dibuat:
 
 ## Mengurungkan perubahan
 
-Jika Anda belum [mempersiapkan penulisan persisten](/web/tools/setup/setup-workflow), 
+Jika Anda belum [menyiapkan penulisan persisten](/web/tools/setup/setup-workflow), 
 setiap kali Anda memuat ulang laman, semua pengeditan langsung akan hilang.
 
-Jika Anda sudah mempersiapkan penulisan persisten, untuk mengurungkan perubahan:
+Jika Anda sudah menyiapkan penulisan persisten, untuk mengurungkan perubahan:
 
 * Gunakan <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Z</kbd> (Windows) atau 
   <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Z</kbd> (Mac) untuk secara cepat mengurungkan 

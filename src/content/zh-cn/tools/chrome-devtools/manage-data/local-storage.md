@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:从 Application 面板检查和管理存储、数据库与缓存。
 
@@ -31,6 +31,8 @@ description:从 Application 面板检查和管理存储、数据库与缓存。
 * 双击空白单元格可以添加新 KVP。
 * 点击 KVP ，然后按 **Delete** 按钮 (![Delete 按钮][delete]{:.inline}) 可以删除该 KVP。
 只需点击一次按钮，即可从 [**Clear storage** 窗格](#clear-storage)擦除所有本地存储数据。
+
+
 * 如果您使用一种可以创建、删除或修改 KVP 的方式与页面交互，则不会看到这些更改实时更新。
 点击 **refresh** 按钮 (![refresh 按钮][refresh]{:.inline}) 可以查看您的更改。
 
@@ -110,8 +112,11 @@ description:从 Application 面板检查和管理存储、数据库与缓存。
 ![web sql 表][wst]
 
 * 您无法从这里更新值，但是可以通过数据库控制台（参见上文）更新。
+
 * 点击列标题可以按该列排序表格。
 * 您对表格的更改不会实时更新。点击 **refresh** 按钮 (![refresh 按钮][refresh]{:.inline}) 可以查看更新。
+
+
 * 在 **Visibile columns** 文本字段中输入一个由空格分隔或逗号分隔的列名称列表可以仅显示列表中包含的列。
 
 
@@ -130,8 +135,10 @@ description:从 Application 面板检查和管理存储、数据库与缓存。
 **Type** 列的值为以下值之一：
 
 * **Master**。资源上指示此缓存为其主文件的 `manifest` 属性。
+
 * **Explicit**。此资源在清单中明确列出。
 * **Network**。指定此资源的清单必须来自网络。
+
 * **Fallback**。**Resource** 列中的网址作为另一个网址（未在 DevTools 中显示）的回退网址形式列出。
 
 

@@ -125,8 +125,9 @@ book_path: /web/fundamentals/_book.yaml
       <td>
         <code>string</code><br>
         调用身份提供程序特定的身份验证流程时使用的用户标识符，通常作为 OAuth 中  <code>login_hint</code>
-        的值。
-      </td>
+的
+        值。
+</td>
     </tr>
     <tr>
       <td>
@@ -136,6 +137,9 @@ book_path: /web/fundamentals/_book.yaml
         <code>string</code><br>
         用于登录的提供程序来源的 ASCII 串行化形式。
         例如，Facebook 由  <code>https://www.facebook.com</code> 表示，Google 由  <code>https://accounts.google.com</code> 表示。</td>
+
+
+
     </tr>
     <tr>
       <td>
@@ -144,7 +148,7 @@ book_path: /web/fundamentals/_book.yaml
       <td>
         <code>string</code>（可选）<br>
         通过身份提供程序获取。
-      </td>
+</td>
     </tr>
     <tr>
       <td>
@@ -153,7 +157,7 @@ book_path: /web/fundamentals/_book.yaml
       <td>
         <code>string</code>（可选）<br>
         通过身份提供程序获取。
-      </td>
+</td>
     </tr>
   </tbody>
 </table>

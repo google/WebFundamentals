@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2 (atau h2) adalah protokol biner yang membawa kontrol push, aliran multiplexing, dan bingkai ke web.
 
-{# wf_updated_on: 2016-09-29 #}
+{# wf_updated_on: 2017-07-13 #}
 {# wf_published_on: 2016-09-29 #}
 
 # Pengantar HTTP/2 {: .page-title }
@@ -10,7 +10,7 @@ description: HTTP/2 (atau h2) adalah protokol biner yang membawa kontrol push, a
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 {% include "web/_shared/contributors/surma.html" %}
 
-Catatan: Materi berikut ini merupakan kutipan dari [High Performance Browser
+Note: Materi berikut ini merupakan kutipan dari [High Performance Browser
 Networking](http://shop.oreilly.com/product/0636920028048.do) (O'Reilly, Ilya
 Grigorik). Untuk versi lengkap dan materi terkaitnya, lihat
 [hpbn.co](https://hpbn.co/){: .external }.
@@ -63,7 +63,7 @@ Terutama, tujuan proyek yang dijelaskan disetel sebagai berikut:
 * Kembangkan protokol baru ini dalam kemitraan dengan komunitas open-source.
 * Kumpulkan data kinerja nyata untuk mem(batalkan)validasi protokol eksperimental.
 
-Catatan: Untuk mencapai peningkatan PLT 50%, SPDY bertujuan untuk menggunakan dengan lebih efisien
+Note: Untuk mencapai peningkatan PLT 50%, SPDY bertujuan untuk menggunakan dengan lebih efisien
 koneksi TCP yang mendasari dengan memperkenalkan layer pembingkaian biner baru untuk
 memampukan permintaan dan multiplexing respons, penentuan prioritas, dan kompresi
 header; lihat
@@ -151,7 +151,7 @@ sumber daya yang efektif, sehingga penggunaan koneksi TCP yang mendasarinya menj
 dan lain sebagainya.
 
 Pembatasan ini tidak fatal, namun sebagai aplikasi web yang terus tumbuh
-dalam cakupan, kompleksitas, dan kepentingannya di kehidupan kami sehari-hari, pembatasan ini mengakibatkan 
+dalam cakupan, kompleksitas, dan kepentingannya di kehidupan kami sehari-hari, pembatasan ini mengakibatkan
 beban yang berkembang baik pada developer maupun pengguna web, yang merupakan celah
 yang tepat bagi HTTP/2 untuk didesain dan diatasi:
 
@@ -253,7 +253,7 @@ merakit kembali di ujung satunya.
 ![Multiplexing permintaan dan respons HTTP/2 di dalam koneksi bersama](images/multiplexing01.svg)
 
 Cuplikan menangkap beberapa aliran di flight dalam koneksi yang sama. 
-Klien mentransmisikan bingkai DATA (aliran 5) ke server, sementara server
+Klien mentransmisikan bingkai `DATA` (aliran 5) ke server, sementara server
 mentransmisikan urutan interleave bingkai ke klien untuk aliran 1
 dan 3. Hasilnya, ada tiga aliran paralel saat ini.
 
@@ -305,7 +305,7 @@ aliran menunjukkan bahwa, jika memungkinkan, aliran induk harus dialokasikan
 sumber daya di depan dependensi. Dengan kata lain, "Harap proses dan kirimkan
 respons D sebelum respons C".
 
-Aliran yang berbagi induk yang sama (dengan kata lain, aliran sibling) harua dialokasikan
+Aliran yang berbagi induk yang sama (dengan kata lain, aliran sibling) harus dialokasikan
 sumber daya sesuai dengan bobotnya. Misalnya, jika aliran A memiliki bobot
 12 dan satu sibling B memiliki bobot 4, maka untuk menentukan proporsi
 sumber daya, setiap aliran ini harus menerima:
@@ -340,7 +340,7 @@ juga memungkinkan klien untuk memperbarui preferensi ini setiap saat, yang menga
 optimasi selanjutnya di browser. Dengan kata lain, kita dapat mengubah dependensi
 dan mengalokasikan kembali bobot sehubungan dengan interaksi pengguna dan sinyal lainnya.
 
-Catatan: Alirkan dependensi dan bobot menyampaikan preferensi transport, bukan
+Note: Alirkan dependensi dan bobot menyampaikan preferensi transport, bukan
 persyaratan, dan dengan demikian tidak menjamin pemrosesan tertentu atau
 urutan transmisi. Klien tidak dapat memaksa server untuk memroses
 aliran dalam urutan tertentu menggunakan penentuan prioritas aliran. Sementara ini mungkin tampak
@@ -376,7 +376,7 @@ biaya operasional dan meningkatkan utilitas serta kemampuan jaringan. Hasilnya,
 perpindahan ke HTTP/2 tidak hanya mengurangi latensi jaringan, tetapi juga membantu
 meningkatkan throughput dan mengurangi biaya operasional.
 
-Catatan: Berkurangnya jumlah koneksi merupakan fitur sangat penting untuk
+Note: Berkurangnya jumlah koneksi merupakan fitur sangat penting untuk
 meningkatkan penyebaran penerapan HTTPS: fitur ini diterjemahkan menjadi
 TLS handshake yang sedikit berat, penggunaan kembali sesi yang lebih baik, dan pengurangan secara keseluruhan dalam
 sumber daya klien dan server yang diperlukan.
@@ -407,7 +407,7 @@ alur level-koneksi dan alirannya sendiri:
 * Kontrol alur sifatnya berarah. Setiap penerima dapat memilih untuk menyetel ukuran jendela
  yang diinginkan untuk setiap aliran dan seluruh koneksi.
 * Kontrol alur berbasis kredit. Setiap penerima mengiklankan koneksi inisialnya
-  dan jendela kontrol alur aliran (dalam byte), yang dikurangi kapan saja
+  dan jendela kontrol alur aliran (dalam byte), yang dikurangi kapan saja 
   pengirim memancarkan bingkai `DATA` dan ditingkatkan melalui bingkai `WINDOW_UPDATE` yang dikirimkan
   oleh penerima.
 * Kontrol alur tidak dapat dinonaktifkan. Saat koneksi HTTP/2 ditetapkan, 
@@ -416,7 +416,7 @@ alur level-koneksi dan alirannya sendiri:
   ke 65.535 byte namun penerima dapat menyetel ukuran jendela maksimum yang besar 
   (`2^31-1` byte) dan mempertahankannya dengan mengirimkan bingkai `WINDOW_UPDATE` kapan saja 
   data diterima.
-* Kontrol alur sifatnya hop-by-hop, bukan end-to-end. Yaitu, perantara dapat menggunakannya
+* Kontrol alur sifatnya hop-by-hop, bukan end-to-end. Yaitu, perantara dapat menggunakannya 
  untuk mengontrol penggunaan dan sumber daya dan mengimplementasikan mekanisme alokasi sumber daya berdasarkan
   kriteria dan heuristiknya sendiri.
 
@@ -446,7 +446,7 @@ permintaan secara eksplisit.
 ![Server mengawali aliran baru (promise) untuk sumber daya push
 ](images/push01.svg)
 
-Catatan: HTTP/2 menjauh dari semantik respons-permintaan yang ketat dan memungkinkan
+Note: HTTP/2 menjauh dari semantik respons-permintaan yang ketat dan memungkinkan
 satu dengan banyak dan alur kerja push yang diawali dengan server yang membuka dunia
 baru kemungkinan interaksi baik di dalam maupun di luar browser. Ini
 mengaktifkan fitur yang akan memiliki konsekuensi jangka panjang penting untuk cara
@@ -474,17 +474,17 @@ hasil yang sama, namun dengan manfaat kinerja tambahan. Sumber daya push dapat:
 
 ### PUSH_PROMISE 101
 
-Semua aliran server push dinisiasi melalui bingkai PUSH_PROMISE, yang memberi sinyal
+Semua aliran server push dinisiasi melalui bingkai `PUSH_PROMISE`, yang memberi sinyal
 tujuan server untuk mendorong sumber daya yang dijelaskan ke klien dan harus di
 kirimkan sebelum data respons yang meminta sumber daya didorong. Urutan
 pengiriman ini penting: klien perlu mengetahui sumber daya mana yang
 server maksudkan untuk didorong guna menghindari duplikasi permintaan untuk 
 sumber daya tersebut. Strategi paling sederhana untuk memenuhi persyaratan ini adalah mengirimkan semua
-bingkai PUSH_PROMISE, yang hanya berisi header HTTP sumber daya
-yang di-promise, sebelum respons induk (dengan kata lain, bingkai DATA).
+bingkai `PUSH_PROMISE`, yang hanya berisi header HTTP sumber daya
+yang di-promise, sebelum respons induk (dengan kata lain, bingkai `DATA`).
 
-Setelah klien menerima bingkai PUSH_PROMISE, klien memiliki opsi untuk menolak
-aliran (melalui bingkai RST_STREAM) jika dinginkan. (Ini dapat terjadi misalnya
+Setelah klien menerima bingkai `PUSH_PROMISE`, klien memiliki opsi untuk menolak
+aliran (melalui bingkai `RST_STREAM`) jika dinginkan. (Ini dapat terjadi misalnya
 karena sumber daya sudah ada di cache.) Ini adalah peningkatan penting pada
 HTTP/1.x. Sebaliknya, penggunaan penyisipan sumber daya, yang merupakan 
 "optimasi" populer untuk HTTP/1.x, setara dengan "forced push": klien tidak dapat
@@ -494,7 +494,7 @@ Dengan HTTP/2, klien tetap dalam kontrol penuh terhadap bagaimana server push di
 dapat membatasi jumlah aliran yang didorong secara konkuren; menyesuaikan jendela kontrol alur
 awal untuk seberapa banyak data didorong saat aliran pertama
 dibuka; atau menonaktifkan server push seluruhnya. Preferensi ini dikomunikasikan melalui
-bingkai SETELAN di awal koneksi HTTP/2 dan dapat diperbarui
+bingkai `SETTINGS` di awal koneksi HTTP/2 dan dapat diperbarui
 setiap saat.
 
 Setiap sumber daya yang didorong adalah aliran yang, tidak seperti sumber daya yang disisipkan, memungkinkannya untuk
@@ -514,7 +514,7 @@ terkadang lebih beberapa kilobyte jika cookie HTTP sedang digunakan. (Lihat
 dan merespons metadata header menggunakan format kompresi HPACK yang menggunakan dua
 teknik yang sederhana namun kuat:
 
-1. Bidang-bidang header yang diansmisikan boleh dienkodekan melalui kode Huffman
+1. Bidang-bidang header yang diansmisikan boleh dienkodekan melalui kode Huffman 
    statis, yang mengurangi ukuran transfer individunya.
 2. Klien dan server harus menjaga dan memperbarui daftar
    yang diindeks dari bidang header yang tampak sebelumnya (dengan kata lain, teknik ini menetapkan konteks
@@ -537,10 +537,10 @@ ukuran setiap permintaan dikurangi dengan menggunakan pengkodean Huffman statis 
 yang belum tampak sebelumnya, dan pengganti indeks untuk nilai yang
 sudah ada di tabel statis atau dinamis di setiap sisi.
 
-Catatan: Definisi bidang header permintaan dan respons di HTTP/2 tetap
+Note: Definisi bidang header permintaan dan respons di HTTP/2 tetap
 tidak berubah, dengan beberapa pengecualian kecil: semua nama bidang header ditulis dengan huruf kecil,
-dan garis permintaan kini terpisah menjadi individu bidang pseudo-header :method, :scheme, :authority,
-dan :path.
+dan garis permintaan kini terpisah menjadi individu bidang pseudo-header `:method`, `:scheme`, 
+`:authority`, dan `:path`.
 
 ### Keamanan dan kinerja HPACK
 
@@ -572,7 +572,8 @@ Untuk detail selengkapnya tentang algoritme kompresi HPACK, lihat
     – Artikel lengkap oleh Ilya Grigorik
 * [“Setting up HTTP/2”](https://surma.link/things/h2setup/){: .external } 
     – Bagaimana menyiapkan HTTP/2 di berbagai backends oleh Surma
-* [“HTTP/2 is here, let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19) 
+* [“HTTP/2 is here,
+  let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19)
     – Presentasi oleh Ilya Grigorik dari Velocity 2015
 * [“Rules of Thumb for HTTP/2 Push”](https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit) 
     – Analisis oleh Tom Bergan, Simon Pelchat, dan Michael Buettner tentang kapan dan bagaimana menggunakan push.

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-11-08 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Recuperar credenciales {: .page-title }
@@ -35,7 +35,7 @@ existe información sobre la credencial, se muestra `null`.
     });
 
 
-### `navigator.credentials.get` Parámetros{: .hide-from-toc }
+###  Parámetros de `navigator.credentials.get` {: .hide-from-toc }
 
 <table class="responsive properties">
   <tbody>
@@ -220,10 +220,10 @@ en un objeto `FormData` codificado como `multipart/form-data`:
     testtest
     ------WebKitFormBoundaryOkstjzGAv8zab97W--
 
-Nota: No puedes usar `XMLHttpRequest` para PUBLICAR el `PasswordCredential` 
+Note: No puedes usar `XMLHttpRequest` para PUBLICAR el `PasswordCredential` 
 en tu servidor.
 
-#### `PasswordCredential` parámetros
+#### Parámetros de `PasswordCredential`
 
 Un objeto obtenido `PasswordCredential` incluye los siguientes parámetros:
 
@@ -278,7 +278,7 @@ PUBLICACIÓN de autenticación.
 
 Cambia las claves de parámetros asignando una string a `.idName` o `.passwordName`.
 
-También puedes agregar parámetros adicionales como un token de falsificación de solicitudes entre sitios (XSRF)
+También puedes agregar parámetros adicionales como un token de falsificación de solicitudes entre sitios (CSRF)
 asignando `.additionalData` al `FormData` y puedes anexarle 
 pares clave-valor.
 

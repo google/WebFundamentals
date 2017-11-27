@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: CSS 및 JS 전처리기를 설정하여 더욱 효율적으로 코드를 작성하는 방법을 알아봅니다.
 
@@ -115,12 +115,12 @@ Coffeescript, TypeScript, JSX 등을 비롯하여 자바스크립트 언어로 �
     <tr>
       <td data-th="Compiler"><a href="https://github.com/google/traceur-compiler/wiki/SourceMaps">Traceur</a></td>
       <td data-th="Command"><code>$ traceur --source-maps=[file|inline]</code></td>
-      <td data-th="Instructions"> <code>--source-maps=file</code>를 사용하면  <code>.js</code>로 끝나는 모든 출력 파일에  <code>.map</code>로 끝나는 소스 맵 파일이 생성되고  <code>source-maps='inline'</code>를 사용하면  <code>.js</code>로 끝나는 모든 출력 파일이  <code>data:</code> URL로 인코딩된 소스 맵을 포함하는 주석으로 끝나게 됩니다.</td>
+      <td data-th="Instructions"> <code>--source-maps=file</code>을 사용하면  <code>.js</code>로 끝나는 모든 출력 파일에  <code>.map</code>으로 끝나는 소스 맵 파일이 생성되고  <code>source-maps='inline'</code>을 사용하면  <code>.js</code>로 끝나는 모든 출력 파일이  <code>data:</code> URL로 인코딩된 소스 맵을 포함하는 주석으로 끝나게 됩니다.</td>
     </tr>
     <tr>
       <td data-th="Compiler"><a href="https://babeljs.io/docs/usage/cli/#compile-with-source-maps">Babel</a></td>
       <td data-th="Command"><code>$ babel script.js --out-file script-compiled.js --source-maps</code></td>
-      <td data-th="Instructions">--source-maps 또는 -s를 사용하여 소스 맵을 생성합니다. 인라인 소스 맵의 경우  <code>--source-maps inline</code>를 사용합니다.</td>
+      <td data-th="Instructions">--source-maps 또는 -s를 사용하여 소스 맵을 생성합니다. 인라인 소스 맵의 경우  <code>--source-maps inline</code>을 사용합니다.</td>
     </tr>
     <tr>
       <td data-th="Compiler"><a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a></td>
@@ -179,7 +179,7 @@ DevTools 내에서 직접 소스 맵으로 연결된 스타일을 편집하고 �
 
 ### 전처리된 자바스크립트 편집 및 디버그
 
-Sources 패널에서 최소화, 컴파일 또는 트랜스파일된 자바스크립트를 디버그하는 방법을 자세히 알아보려면 [전처리된 코드를 소스 코드로 매핑](/web/tools/chrome-devtools/debug/readability/source-maps)을 참조하세요.
+Sources 패널에서 최소화, 컴파일 또는 트랜스파일된 자바스크립트를 디버그하는 방법을 자세히 알아보려면 [전처리된 코드를 소스 코드에 매핑](/web/tools/chrome-devtools/debug/readability/source-maps)을 참조하세요.
 
 
 {# wf_devsite_translation #}

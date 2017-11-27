@@ -5,7 +5,7 @@ description: Pelajari cara menyimpan data secara lokal untuk waktu respons dan d
 {# wf_updated_on: 2016-09-29 #}
 {# wf_published_on: 2016-09-29 #}
 
-# Offline Storage untuk Progressive Web App {: .page-title }
+# Storage Offline untuk Progressive Web App {: .page-title }
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 {% include "web/_shared/contributors/mco.html" %}
@@ -184,9 +184,9 @@ pada percobaan asal, dan berita terbaru mengatakan penyediaannya akan bersama
 [Chrome
 55](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5Sihi1iAXYc/wnvNDFIPAQAJ).
 
-## Pekerjaan offline storage saat ini dan akan datang
+## Pekerjaan storage offline saat ini dan akan datang
 
-Jika tertarik dengan offline storage, upaya di bawah ini
+Jika tertarik dengan storage offline, upaya di bawah ini
 layak disimak.
 
 * [Storage Tahan Lama](https://storage.spec.whatwg.org/): melindungi storage dari
@@ -237,7 +237,7 @@ interaksi file lokal secara mulus.
 * Untuk aplikasi yang memerlukan storage lebih persisten, lihat pekerjaan yang sedang berlangsung pada
 [Storage Tahan Lama](https://storage.spec.whatwg.org/).
 
-Offline storage bukanlah keajaiban dan pemahaman atas API yang mendasarinya
+Storage offline bukanlah keajaiban dan pemahaman atas API yang mendasarinya
 akan berguna dalam membantu Anda memanfaatkan sebaik mungkin apa yang sekarang tersedia.
 Bila Anda lebih suka menggunakan API ini secara langsung atau menggunakannya bersama pustaka
 abstraksi, sisihkan waktu untuk mempelajari opsi Anda.

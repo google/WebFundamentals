@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Introdução à árvore de acessibilidade
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
 # A árvore de acessibilidade {: .page-title }
@@ -95,7 +95,7 @@ Por exemplo, este "botão" não é um botão.
         cursor: pointer;
     }
 </style>
-<div class="fancy-btn">Me dê tacos</div>
+<div class="fancy-btn">Give me tacos</div>
 {% endframebox %}
 
 Ele pode ser construído em HTML de diversas maneiras; uma maneira é mostrado abaixo.
@@ -146,14 +146,14 @@ de mouse ou tela sensível ao toque. Para associar um rótulo a um elemento,
 <div class="clearfix"></div>
 
     <label>
-      <input type="checkbox">Receive promotional offers?</input>
+      <input type="checkbox">Receber ofertas promocionais?</input>
     </label>
 
 
 {% framebox height="60px" %}
 <div style="margin: 10px;">
     <label style="font-size: 16px; color: #212121;">
-        <input type="checkbox">Receive promotional offers?</input>
+        <input type="checkbox">Receber ofertas promocionais?</input>
     </label>
 </div>
 {% endframebox %}
@@ -183,7 +183,7 @@ estado marcado, e tem o nome "Receber ofertas promocionais?".
 
 ![saída de texto em tela do VoiceOver, mostrando o rótulo falado de uma caixa de seleção](imgs/promo-offers.png)
 
-Sucesso: Você pode realmente usar o leitor de tela para encontrar rótulos associados
+Success: Você pode realmente usar o leitor de tela para encontrar rótulos associados
 indevidamente tabulando pela página e verificando as funções, estados e
 nomes falados.
 

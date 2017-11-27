@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:通过 Chrome DevTools Command Line API，您可以使用各种方式观察和检查事件侦听器
 

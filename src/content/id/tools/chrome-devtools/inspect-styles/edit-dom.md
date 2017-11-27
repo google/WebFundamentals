@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Tampilan pohon DOM di panel Elemen Chrome DevTools menampilkan struktur DOM laman web saat ini. Edit materi dan struktur laman Anda secara langsung melalui pembaruan DOM.
 
-{# wf_updated_on: 2015-04-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Mengedit DOM {: .page-title }
@@ -139,14 +139,14 @@ Untuk menghapus simpul DOM:
 * Buka [menu more actions](#more-actions) dan pilih **Delete Node**.
 * Pilih simpul dan tekan tombol <kbd>Delete</kbd>.
 
-Catatan: Jika Anda tidak sengaja menghapus simpul, tekan <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd> (atau <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd> di Mac) untuk mengurungkan tindakan terakhir.
+Note: Jika Anda tidak sengaja menghapus simpul, tekan <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd> (atau <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd> di Mac) untuk mengurungkan tindakan terakhir.
 
 ## Menampilkan menu more actions {:#more-actions}
 
 Menu **more actions** memungkinkan Anda berinteraksi dengan simpul DOM dengan berbagai
 cara. Untuk menampilkan menu, klik kanan simpul atau pilih simpul
-, lalu tekan tombol **more actions** (![tombol 
-more actions]((imgs/more-actions-button.png){:.inline})). Tombol ini hanya 
+, lalu tekan tombol **more actions**  (![tombol 
+more action](imgs/more-actions-button.png){:.inline}). Tombol ini hanya 
 ditampilkan pada elemen yang saat ini dipilih.
 
 ![menu more actions](imgs/more-actions-menu.png)
@@ -261,7 +261,7 @@ Klik tanda panah luaskan di sebelah identifier elemen untuk melihat properti pen
   </tbody>
 </table>
 
-Catatan: Banyak ekstensi Chrome yang menambahkan event listener-nya sendiri ke DOM. Jika Anda melihat beberapa event listener yang tidak disetel oleh kode Anda, sebaiknya buka kembali laman Anda di [jendela Samaran](https://support.google.com/chrome/answer/95464). Jendela samaran mencegah ekstensi berjalan secara default.
+Note: Banyak ekstensi Chrome yang menambahkan event listener-nya sendiri ke DOM. Jika Anda melihat beberapa event listener yang tidak disetel oleh kode Anda, sebaiknya buka kembali laman Anda di [jendela Samaran](https://support.google.com/chrome/answer/95464). Jendela samaran mencegah ekstensi berjalan secara default.
 
 ### Melihat event listener pendahulu
 
@@ -273,7 +273,7 @@ code for screenshot
 <html>
 <body onload="console.log('onload');">
   <div onfocus="console.log('focus');">
-    <button id="button" onclick="console.log('onclick');">click me, please</button>
+    <button id="button" onclick="console.log('onclick');">click me</button>
   </div>
 </body>
 </html>
@@ -301,7 +301,7 @@ code for screenshot
 <html>
 <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
 <body>
-  <button id="button">click me</button>
+  <button id="button">click me, please</button>
   <script>
     $('#button').click(function() {
       $('#button').text('hehe, that tickled, thanks');
@@ -331,7 +331,7 @@ mungkin akan diselesaikan di suatu bagian di kode kerangka kerja atau pustaka.
 
 
 
-[periksa]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
+[inspect]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
 
 
 {# wf_devsite_translation #}

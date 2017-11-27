@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“关键请求链”Lighthouse 审查的参考文档。
 
@@ -51,7 +51,9 @@ Initial navigation
 您可以根据此图表利用以下方式提升您的 CRP：
 
 * 将关键资源数降至最低：消除关键资源、延迟关键资源的下载并将它们标记为不同步等。
+
 * 优化关键字节数以缩短下载时间（往返次数）。
+
 * 优化其余关键资源的加载顺序：尽早下载所有关键资产，以缩短关键路径长度。
 
 

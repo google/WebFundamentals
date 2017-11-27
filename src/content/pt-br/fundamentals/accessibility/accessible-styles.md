@@ -109,7 +109,7 @@ neste botão falso e observe que o estilo `:focus` é sempre aplicado.
     background: pink;
   }
 </style>
-<fake-button tabindex="0">Clique Aqui!</fake-button>
+<fake-button tabindex="0">Click Me!</fake-button>
 {% endframebox %}
 
 Isso pode ser um pouco irritante, e muitas vezes o desenvolvedor recorre ao uso

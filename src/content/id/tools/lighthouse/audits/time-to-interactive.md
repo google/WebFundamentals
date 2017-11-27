@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk audit Lighthouse "Saatnya untuk Interaktif".
 
@@ -17,7 +17,7 @@ pengguna bisa berinteraksi dengannya.
 
 ## Cara untuk lulus audit {: #how }
 
-Periksa sumber daya di bagian [Cara lulus audit](speed-index#how)
+Lihat sumber daya di bagian [Cara untuk lulus audit](speed-index#how)
 dari audit Indeks Kecepatan untuk bantuan selengkapnya tentang cara meningkatkan kinerja pemuatan laman.
 Semakin rendah nilai Saatnya untuk Interaktif, maka akan semakin baik.
 

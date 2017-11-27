@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: リソースがネットワーク経由で集められる際の複数のフェーズを理解しておくことは重要です。これを理解することが、読み込みの問題を解決する場合の基盤になります。
 

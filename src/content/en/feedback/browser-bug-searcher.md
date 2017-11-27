@@ -1,7 +1,7 @@
-project_path: /web/_project.yaml
+project_path: /web/feedback/_project.yaml
 book_path: /web/feedback/_book.yaml
 
-{# wf_updated_on: 2016-10-24 #}
+{# wf_updated_on: 2017-04-26 #}
 {# wf_published_on: 2016-10-24 #}
 
 # Browser Bug Searcher {: .page-title }
@@ -28,7 +28,7 @@ book_path: /web/feedback/_book.yaml
         devsite.framebox.AutoSizeClient.requestQueryAndFragment(function(query) {
           iframe.src = 'https://browser-issue-tracker-search.appspot.com/devsite' + query;
         });
-      }, 150);
+      }, 1500);
     }
   </script>
 {% endframebox %}

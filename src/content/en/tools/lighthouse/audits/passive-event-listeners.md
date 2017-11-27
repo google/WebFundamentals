@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Site Uses Passive Event Listeners to Improve Scrolling Performance" Lighthouse audit.
+description: Reference documentation for the "Uses Passive Event Listeners to Improve Scrolling Performance" Lighthouse audit.
 
-{# wf_updated_on: 2016-11-30 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-11-30 #}
 
-# Site Uses Passive Event Listeners to Improve Scrolling Performance  {: .page-title }
+# Uses Passive Event Listeners to Improve Scrolling Performance  {: .page-title }
 
 ## Why the audit is important {: #why }
 

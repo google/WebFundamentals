@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Opção 1
 
@@ -22,7 +22,7 @@ Dogfood: Se você está procurando a versão mais atualizada, o [Chrome Canary](
 ## Descobrir os painéis
 
 ### Device Mode
-<img src="/web/tools/chrome-devtools/images/devicemode.png" alt="Device Mode" class="attempt-right">
+<img src="images/devicemode.png" alt="Device Mode" class="attempt-right">
 Use o Device Mode para criar experiências web totalmente responsivas e voltadas a dispositivos móveis.</p>
 
 * [Device Mode](/web/tools/chrome-devtools/device-mode/)

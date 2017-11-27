@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: コードを行または関数ごとに実行すると、データやページ内の変更を観察して、何が起こっているかを正確に把握できます。
 
@@ -88,7 +88,7 @@ description: コードを行または関数ごとに実行すると、データ�
 
 このペインは、以下のスクリーンショットでは青色でハイライト表示されています。
 
-![[Sources] パネルの [Scope] ペイン](imgs/scope-pane.png)
+![\[Sources\] パネルの \[Scope\] ペイン](imgs/scope-pane.png)
 
 [Scope] ペインにはスクリプトが一時停止された場合のみ表示されます。ページの実行中は、[Scope] ペインは空です。
 
@@ -105,8 +105,7 @@ description: コードを行または関数ごとに実行すると、データ�
 ![淡色表示されたプロパティ](imgs/enumerables.png)
 
 濃色で表示されたプロパティは列挙可能です。淡色で表示されたプロパティはそうではありません。
-詳しくは、Stack Overflow スレッド（[What do the colors mean in Chrome Developer Tools Scope
-panel?](What do the colors mean in Chrome Developer Tools Scope panel?)）をご覧ください。
+詳しくは、Stack Overflow スレッド（[What do the colors mean in Chrome Developer Tools Scope panel?](What do the colors mean in Chrome Developer Tools Scope panel?)）をご覧ください。
 
 
 ##  コールスタック
@@ -144,9 +143,7 @@ panel?](What do the colors mean in Chrome Developer Tools Scope panel?)）をご
 
 動画では、ブレークポイントがトリガーされ、コールスタックが展開されています。スタックには、1 つの呼び出し `f` のみがあります。
 非同期コールスタック機能を有効にしてスクリプトを再開すると、ブレークポイントが再度トリガーされ、コールスタックが再び展開されます。
-
 今度はコールスタックに `f` までのすべての呼び出し（サードパーティ ライブラリの呼び出しや `onClick` の呼び出しを含む）が含まれています。
-
 最初にスクリプトが呼び出されたときは、コールスタックに呼び出しが 1 つしかありませんでした。
 2 回目は、4 つありました。つまり、非同期コールスタック機能を使用すると、非同期関数のコールスタック全体が把握しやすくなります。
 
@@ -164,7 +161,6 @@ panel?](What do the colors mean in Chrome Developer Tools Scope panel?)）をご
 
 最初のスクリーンショットのコールスタックでは、上の 2 つの関数に `(anonymous function)` というタイトルだけが付いています。
 2 つ目のスクリーンショットでは、上の 2 つの関数に名前が付いているため、プログラム フローが一目でわかります。
-
 サードパーティのライブラリやフレームワークなど、多くのスクリプト ファイルを使用し、コールスタックの呼び出しの深さが 5 または 10 の場合は、関数に名前を付けると、コールスタック フローが理解しやすくなります。
 
 
@@ -252,7 +248,6 @@ DevTools により、そのパターンに一致するスクリプトが除外�
 ![ライブ エディット](imgs/image_18.png)
 
 パラメータ `dow` は、どのような場合でも、関数 `setone()` に渡されると 1 ずつずれる疑いがあります。つまり、`dow<` の値は、受信時に 0 のはずが 1 に、1 のはずが 2 になっています。
-
 渡された値を減らすことでこれが問題であることが裏付けられるかどうかをすばやくテストするために、関数の先頭に行 17 を追加し、<kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">S</kbd> でコミットして再開します。
 
 
@@ -299,20 +294,12 @@ Web Worker は乗算を実行して、main スクリプトに結果を渡しま�
 たとえば、上のスクリーンショットでは、[**Main**] スレッドが選択されています。 
 
 コードをステップ実行するための DevTools コントロール（スクリプトの実行の再開または一時停止、次の関数呼び出しのステップ オーバー、次の関数呼び出しのステップインなど）のすべては、特定のスレッドに関係しています。
-
-
 つまり、DevTools が上のスクリーンショットのような場合に [**Resume script execution**] ボタンをクリックすると、Main スレッドは実行を再開しますが、Web Worker スレッドは一時停止したままです。
-
-
 また、[**Call Stack**] セクションと [**Scope**] セクションは、Main スレッドの情報のみを表示しています。
 
 
 Web Worker スレッドのコードをステップ実行する場合、またはそのスコープとコールスタックの情報を確認する場合は、[Threads] ペインでそのラベルをクリックすると、青い矢印がその横に表示されます。
-
 以下のスクリーンショットは、Worker スレッドの選択後にコールスタックとスコープの情報がどのように変化するかを示しています。再度、コードのステップ実行ボタン（スクリプトの実行の再開、次の関数呼び出しのステップ オーバーなど）のいずれかをクリックすると、その操作は Worker スレッドにのみ関係します。
-
-
-
 Main スレッドは影響を受けません。
 
 ![フォーカスされている Worker スレッド](imgs/worker-thread.png)

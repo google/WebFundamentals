@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspecciona y modifica las animaciones con Animation Inspector de Chrome DevTools.
 
@@ -107,7 +107,7 @@ su propia fila.
 ![detalles de un grupo de animaciones](imgs/animation-group-details.png)
 
 Desplázate sobre una animación para destacarla en la ventana de visualización. Haz clic en la animación
-para seleccionarla en el panel **Elements** . 
+para seleccionarla en el panel **Elements**. 
 
 ![desplázate sobre una animación para destacarla en 
 la ventana de visualización](imgs/highlight-animation.png)

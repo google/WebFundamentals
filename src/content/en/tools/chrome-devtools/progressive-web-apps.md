@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Application panel to inspect, modify, and debug web app manifests, service workers, and service worker caches.
 
@@ -39,9 +39,9 @@ the app looks like on launch.
 Related Guides:
 
 * [Improve user experiences with a Web App
-  Manifest](/web/fundamentals/engage-and-retain/web-app-manifest)
+  Manifest](/web/fundamentals/web-app-manifest)
 * [Using App Install
-  Banners](/web/fundamentals/engage-and-retain/app-install-banners)
+  Banners](/web/fundamentals/app-install-banners)
 
 Once you've got your manifest set up, you can use the **Manifest** pane of the
 **Application** panel to inspect it.
@@ -103,7 +103,7 @@ Related Guides:
 
 * [Intro to Service Workers](/web/fundamentals/primers/service-worker)
 * [Push Notifications: Timely, Relevant, and
-  Precise](/web/fundamentals/engage-and-retain/push-notifications)
+  Precise](/web/fundamentals/push-notifications)
 
 The **Service Workers** pane in the **Application** panel is the main place in
 DevTools to inspect and debug service workers.
@@ -155,7 +155,7 @@ up.
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/ui#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ## Service worker caches {:#caches}

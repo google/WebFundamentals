@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: サイト上のすべてのリソースが HTTPS で保護されていることを確認するには、[Security] パネルを使用します。
 
@@ -10,7 +10,6 @@ description: サイト上のすべてのリソースが HTTPS で保護されて
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
 ウェブサイトと、ウェブサイトに個人情報の管理を任せているユーザーの両方にとって、HTTPS は[重要なセキュリティとデータ整合性][why-https]を与えるものです。
-
 セキュリティの問題をデバッグしたり、ウェブサイトに HTTPS が正しく実装されていることを確認したりするには、Chrome DevTools の [Security] パネルを使用します。
 
 
@@ -46,7 +45,6 @@ description: サイト上のすべてのリソースが HTTPS で保護されて
 ![[Security Overview]、セキュアでないメインオリジン](images/overview-non-secure.png)
 
 リクエストされたページが HTTPS を介して取得され、次にそのページが HTTP を使用して他のオリジンからコンテンツを取得する場合も、ページに非セキュアのフラグが付けられます。
-
 これは、[混合コンテンツ][mixed-content] ページと呼ばれています。
 混合コンテンツ ページは、HTTP コンテンツが盗聴者からアクセス可能で、man-in-the-middle 攻撃に対して脆弱であるため、部分的にしか保護されていません。
  

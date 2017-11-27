@@ -1,17 +1,17 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: 콘솔 API를 사용하여 콘솔에 정보를 기록하고 자바스크립트 프로필을 만들고 디버깅 세션을 시작합니다.
+description: Console API를 사용하여 콘솔에 정보를 기록하고 자바스크립트 프로필을 만들고 디버깅 세션을 시작합니다.
 
 {# wf_updated_on: 2016-03-21 #}
 {# wf_published_on: 2016-03-21 #}
 
-# 콘솔 API 참조 {: .page-title }
+# Console API 참조 {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/pbakaus.html" %}
 
-콘솔 API를 사용하여 콘솔에 정보를 기록하고 자바스크립트 프로필을 만들고 디버깅 세션을 시작합니다.
+Console API를 사용하여 콘솔에 정보를 기록하고 자바스크립트 프로필을 만들고 디버깅 세션을 시작합니다.
 
 
 
@@ -167,7 +167,7 @@ HTML 요소인 경우 DOM 표현의 속성이
 
 ## console.info(object [, object, ...])
 
-[`console.log()`](#log)와 같은 메시지를 출력할 뿐만 아니라 출력 옆에 아이콘(흰색 "i"가 있는 파란색
+[`console.log()`](#log)와 같은 메시지를 출력할 뿐만 아니라 출력 옆에 아이콘(흰색 'i'가 있는 파란색
 원)을 표시합니다. 
 
 ## console.log(object [, object, ...]) {:#log}

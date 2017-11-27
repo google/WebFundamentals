@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "오프라인 시 200으로 응답하는 URL" Lighthouse 감사의 참조 문서입니다.
+description: '오프라인 시 200으로 응답하는 URL' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-09-15 #}
 {# wf_published_on: 2016-09-15 #}
@@ -20,7 +20,7 @@ Progressive Web App은 오프라인에서 작동합니다. Lighthouse가 오프�
 3. 오프라인일 때 서비스 워커를 네트워크 프록시로 사용하여
 로컬에서 캐시된 파일 버전을 반환합니다.
 
-서비스 워커를 기존 앱에 추가하는 방법에 대한 자세한 내용은[서비스 워커와
+서비스 워커를 기존 앱에 추가하는 방법에 대한 자세한 내용은 [서비스 워커와
 오프라인을
 웹 앱에 추가](https://codelabs.developers.google.com/codelabs/offline)를 참조하세요. 이 단계별 실습 코드랩에서 배운 내용을
 활용하여 서비스 워커를 앱에 추가하는 방법을

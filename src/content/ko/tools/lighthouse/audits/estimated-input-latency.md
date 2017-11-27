@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: "예상된 입력 지연" Lighthouse 감사의 참조 문서입니다.
+description: '예상된 입력 지연' Lighthouse 감사의 참조 문서입니다.
 
 {# wf_updated_on: 2016-10-05 #}
 {# wf_published_on: 2016-10-05 #}
@@ -50,9 +50,9 @@ Lighthouse의 목표 점수는 50ms입니다. 그 이유는 무엇일까요?
 
 Lighthouse는 프록시 지표를 사용하여 앱이 사용자 입력에 얼마나 잘 반응하는지 측정합니다.
 즉, 메인 스레드의 가용성을 측정합니다. Lighthouse는
-앱이 사용자 입력에 완전히 반응하려면 50ms가 필요하다고 가정합니다
-(자바스크립트를 실행하는 것에서 화면에 물리적으로 새 픽셀을 그리는 것까지
-). 메인 스레드를 50ms 이상 사용할 수 없다면
+앱이 사용자 입력에 완전히 반응하려면 50ms가 필요하다고
+가정합니다(자바스크립트를 실행하는 것에서 화면에 물리적으로 새 픽셀을 그리는
+것까지). 메인 스레드를 50ms 이상 사용할 수 없다면
 앱이 반응을 완료할 시간이 부족해집니다.
 
 사용자가 Lighthouse에서 보고하는 정도의 입력 지연 시간을

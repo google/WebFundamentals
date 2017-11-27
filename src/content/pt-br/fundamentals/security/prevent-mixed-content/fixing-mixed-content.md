@@ -3,13 +3,13 @@ book_path: /web/fundamentals/_book.yaml
 description: Encontrar e consertar conteúdo misto é uma tarefa importante, mas pode ser demorado. Este guia aborda algumas ferramentas que foram disponibilizadas para ajudar no processo.
 
 {# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2016-08-24 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # Como evitar conteúdo misto {: .page-title }
 
 {% include "web/_shared/contributors/johyphenel.html" %}
 
-Sucesso: oferecer suporte a HTTPS no seu site é um passo importante para garantir proteção contra ataques, mas o conteúdo misto pode tornar essa proteção inútil. Para proteger seu site e os usuários, é muito importante encontrar e resolver problemas de conteúdo misto.
+Success: oferecer suporte a HTTPS no seu site é um passo importante para garantir proteção contra ataques, mas o conteúdo misto pode tornar essa proteção inútil. Para proteger seu site e os usuários, é muito importante encontrar e resolver problemas de conteúdo misto.
 
 Encontrar e consertar conteúdo misto é uma tarefa importante, mas pode ser demorado. Este guia discuta algumas ferramentas e técnicas disponíveis para ajudar no processo. Para saber mais sobre conteúdo misto em si, consulte [O que é conteúdo misto?](./what-is-mixed-content).
 

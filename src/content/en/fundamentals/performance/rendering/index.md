@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Users notice if sites and apps don't run well, so optimizing rendering performance is crucial!
 

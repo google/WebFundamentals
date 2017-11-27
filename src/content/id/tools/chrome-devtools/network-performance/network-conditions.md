@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Mudah bagi kita untuk melupakan kondisi jaringan yang dihadapi oleh pengguna di perangkat seluler. Gunakan DevTools untuk mengemulasi kondisi jaringan yang berbeda. Perbaiki masalah waktu muat apa pun, maka pengguna akan berterima kasih.
 
@@ -25,7 +25,7 @@ Ini juga membatasi throughput pengunduhan dan pengunggahan maksimum.
 Manipulasi latensi memaksa penundaan minimum pada round-trip time (RTT) koneksi.
 
 Penyesuaian kondisi jaringan diaktifkan melalui panel Network.
-Pilih koneksi dari menu tarik-turun untuk menerapkan pembatasan jaringan dan manipulasi latensi.
+Pilih koneksi dari menu tarik-turun untuk menerapkan throttling jaringan dan manipulasi latensi.
 
 ![Pilih Network Throttle](imgs/throttle-selection.png)
 

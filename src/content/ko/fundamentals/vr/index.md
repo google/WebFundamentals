@@ -2,14 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: WebVR
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # WebVR {: .page-title }
 
-경고: WebVR는 아직 실험 단계이며 변경될 수 있습니다.
+Warning: WebVR은 아직 실험 단계이며 변경될 수 있습니다.
 
-WebVR는 사용자가 보유한 VR 헤드셋과 VR 지원 기기(예: [Daydream 헤드셋](https://vr.google.com/daydream/) 및 픽셀폰)를 사용하여 브라우저에서 완전 몰입형 3D 경험을 제공하는 JavaScript API입니다.
+WebVR은 사용자가 보유한 VR 헤드셋과 VR 지원 기기(예: [Daydream 헤드셋](https://vr.google.com/daydream/) 및 픽셀폰)를 사용하여 브라우저에서 완전 몰입형 3D 경험을 제공하는 JavaScript API입니다.
 
 <img src="img/getting-started-with-webvr.jpg" alt="WebVR 시작하기" />
 
@@ -19,11 +19,11 @@ WebVR는 사용자가 보유한 VR 헤드셋과 VR 지원 기기(예: [Daydream 
 
 * [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)을 통한 Chrome Beta (M56+)
 * Firefox Nightly
-* Gear VR용 삼성 인터넷 브라우저. (참고: 현재 WebVR 사양의 이전 버전을 지원합니다.)
+* Gear VR용 삼성 인터넷 브라우저 (참고: 현재 WebVR 사양의 이전 버전을 지원합니다.)
 
-브라우저가 WebVR를 지원하지 않거나 이전 버전의 API를 사용하는 경우 [WebVR Polyfill](https://github.com/googlevr/webvr-polyfill)로 대체할 수 있습니다. 그러나 VR는 *성능에 매우 민감하며* 폴리필은 일반적으로 성능 비용이 상대적으로 높기 때문에 WebVR를 기본적으로 지원하지 않는 사용자에 대해 폴리필을 사용할지 여부를 고려해야 할 수 있습니다.
+브라우저가 WebVR을 지원하지 않거나 이전 버전의 API를 사용하는 경우 [WebVR 폴리필](https://github.com/googlevr/webvr-polyfill)로 대체할 수 있습니다. 그러나 VR은 *성능에 매우 민감하며* 폴리필은 일반적으로 성능 비용이 상대적으로 높기 때문에 WebVR을 기본적으로 지원하지 않는 사용자에 대해 폴리필을 사용할지 여부를 고려해야 할 수 있습니다.
 
-의심스러울 때는 낮은 성능으로 인해 사용자가 멀미를 일으키는 상황을 피하십시오!
+의심스러울 때는 낮은 성능으로 인해 사용자가 멀미를 일으키는 상황을 피하세요!
 
 [WebVR에 대한 최신 상태를 확인하세요.](./status/)
 
@@ -37,7 +37,7 @@ WebVR 콘텐츠를 만들려면 [WebGL](https://developer.mozilla.org/en-US/docs
     <img src="img/getting-started-with-webvr.jpg" alt="WebVR 시작하기" />
   </a>
   <p>
-    WebGL 장면을 가져오고 VR API를 추가하여 WebVR를 시작합니다.<br>
+    WebGL 장면을 가져오고 VR API를 추가하여 WebVR을 시작합니다.<br>
     <a href="./getting-started-with-webvr/">자세히 알아보기</a>
   </p>
 </div>

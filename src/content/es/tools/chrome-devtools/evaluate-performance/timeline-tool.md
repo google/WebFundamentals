@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Usa el panel Timeline de Chrome DevTools para registrar y analizar toda la actividad de tu app mientras se ejecuta. Es el mejor punto de partida para investigar los problemas percibidos sobre el rendimiento de tu app.
 
@@ -28,7 +28,7 @@ app.
 
 El panel Timeline consta de cuatro subpaneles:
 
-1. **Controls**. te permitirá iniciar y detener una grabación, además de 
+1. **Controls**: te permitirá iniciar y detener una grabación, además de 
    configurar la información que debe recopilarse durante esta.
 2. **Overview**: presenta resumen general del rendimiento de la página. Se ofrece más información sobre esto 
    a continuación.
@@ -72,8 +72,8 @@ El subpanel **Overview** consta de tres gráficos:
 
 ![Subpanel Overview con anotaciones](imgs/overview-annotated.jpg)
 
-[gráfico de área]: https://en.wikipedia.org/wiki/Area_chart 
-[bloqueo]: /web/fundamentals/performance/rendering/
+[ac]: https://en.wikipedia.org/wiki/Area_chart 
+[jank]: /web/fundamentals/performance/rendering/
 
 ## Realizar una grabación
 
@@ -110,8 +110,8 @@ para ti y la mostrará automáticamente.
   no tenga extensiones.
 
 [nc]: /web/tools/chrome-devtools/profile/network-performance/network-conditions#network-conditions
-[incógnito]: https://support.google.com/chrome/answer/95464
-[nuevo perfil de Chrome]: https://support.google.com/chrome/answer/142059
+[incognito]: https://support.google.com/chrome/answer/95464
+[new chrome profile]: https://support.google.com/chrome/answer/142059
 
 ## Ver información de una grabación
 
@@ -122,9 +122,9 @@ información adicional sobre el evento en el subpanel **Details**.
 
 Algunas pestañas, como **Summary**, están presentes en todos los tipos de eventos. Otras
 solo están disponibles para determinados tipos de eventos. Consulta [Referencia de eventos 
-de Timeline][referencia de eventos] para obtener información sobre cada tipo de grabación.
+de Timeline][event reference] para obtener información sobre cada tipo de grabación.
 
-[Referencia de eventos]: /web/tools/chrome-devtools/profile/evaluate-performance/performance-reference
+[event reference]: /web/tools/chrome-devtools/profile/evaluate-performance/performance-reference
 
 ## Obtener capturas de pantalla durante la grabación {:#filmstrip}
 

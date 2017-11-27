@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript seringkali memicu perubahan visual. Kadang-kadang hal itu secara langsung melalui manipulasi gaya, dan kadang-kadang penghitungannya, yang akan mengakibatkan perubahan visual, seperti menelusuri atau mengurutkan data. JavaScript yang berjalan lama atau jelek pengaturan waktunya bisa menjadi penyebab umum masalah kinerja. Anda harus berusaha sebisa mungkin meminimalkan dampaknya.
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-20 #}
 
 # Optimalkan Eksekusi JavaScript {: .page-title }
@@ -17,7 +17,7 @@ Anda harus berusaha sebisa mungkin meminimalkan dampaknya.
 
 Membuat profil kinerja JavaScript merupakan seni tersendiri, karena JavaScript yang Anda tulis bukanlah seperti kode yang sebenarnya dieksekusi. Browser modern menggunakan compiler JIT dan semua cara optimalisasi dan trik untuk dicoba dan memberi Anda eksekusi yang secepat mungkin, dan ini pada dasarnya akan mengubah dinamika kode.
 
-Catatan: Jika benar-benar ingin melihat aksi JIT, Anda harus melihat <a href='http://mrale.ph/irhydra/2/'>IRHydra<sup>2</sup> oleh Vyacheslav Egorov</a>. Ini menampilkan suatu keadaan-antara untuk kode JavaScript bila mesin JavaScript di Chrome, V8, mengoptimalkannya.
+Note: Jika benar-benar ingin melihat aksi JIT, Anda harus melihat <a href='http://mrale.ph/irhydra/2/'>IRHydra<sup>2</sup> oleh Vyacheslav Egorov</a>. Ini menampilkan suatu keadaan-antara untuk kode JavaScript bila mesin JavaScript di Chrome, V8, mengoptimalkannya.
 
 Berdasarkan semua itu, bagaimana pun juga, ada beberapa hal yang pasti bisa Anda lakukan untuk membantu aplikasi mengeksekusi JavaScript dengan baik.
 

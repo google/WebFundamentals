@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 使用 ARIA 标签创建可访问元素说明
+description:使用 ARIA 标签创建可访问元素说明
+
 
 {# wf_updated_on: 2016-10-04 #}
 {# wf_published_on: 2016-10-04 #}
@@ -43,9 +44,14 @@ ARIA 提供了多种向元素添加标签和说明的机制。事实上，ARIA �
 
  1. `aria-labelledby` 可以用于任何元素，而不仅仅是可标记元素。
  1. `label` 元素引用其标记的对象，但对于 `aria-labelledby` 来说，关系则相反 &mdash; 被标记的对象引用标记它的元素。
+
+
  1. 只有一个标签元素与可标记元素关联，但是 `aria-labelledby` 可以利用一组 IDREF 从多个元素构建标签。标签将按照 IDREF 的提供顺序串联。
+
  1. 您可以使用 `aria-labelledby` 引用隐藏和不在可访问性树中的元素。
 例如，您可以在想要标记的元素旁添加一个隐藏的 `span`，然后使用 `aria-labelledby` 引用该元素。
+
+
  1. 不过，由于 ARIA 仅影响可访问性树，`aria-labelledby` 并不会展现使用 `label` 元素时熟悉的标签点击行为。
 
 

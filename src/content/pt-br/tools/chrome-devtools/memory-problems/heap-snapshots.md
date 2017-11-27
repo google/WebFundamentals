@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Saiba como registrar resumos de pilha com o criador de perfil de pilha do Chrome DevTools e encontrar vazamentos de memória.
 
@@ -197,8 +197,8 @@ por isso, são coloridos. Cada propriedade tem um dos quatro tipos:
 
 * **a: property** — propriedade regular com um nome, acessado pelo operador . (ponto), ou por notação em [ ] (colchetes), por exemplo, ["foo bar"];
 * **0: element** — propriedade regular com um índice numérico, acessada por notação em [ ] (colchetes);
-* **a: context var** - variável no contexto de uma função, acessível por seu nome de dentro de um fechamento de função;
-* **a: system prop** - propriedade adicionada pela VM do JavaScript, não acessível pelo código JavaScript.
+* **a: context var** — variável no contexto de uma função, acessível por seu nome de dentro de um fechamento de função;
+* **a: system prop** — propriedade adicionada pela VM do JavaScript, não acessível pelo código JavaScript.
 
 Objetos designados como `System `não têm um tipo de JavaScript correspondente. Elas fazem parte da implementação do sistema de objetos da MV JavaScript. O V8 aloca a maior parte dos seus objetos internos na mesma pilha que os objetos JS do usuário. Esses são apenas detalhes internos do v8.
 

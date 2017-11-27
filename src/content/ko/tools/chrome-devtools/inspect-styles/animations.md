@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools Animation Inspector로 애니메이션을 검사하고 수정합니다.
 
@@ -53,8 +53,8 @@ Animation Inspector를 여는 두 가지 방법이 있습니다.
 
 * **Styles** 창(**Elements** 패널에 있음)으로 이동하여 
 **Animations** 버튼(![애니메이션 
- 버튼(imgs/animations-button.png){:.inline})을 누릅니다. 
-* Command Menu를 열고 `Drawer: Show Animations`를 입력합니다. 
+ 버튼](imgs/animations-button.png){:.inline})을 누릅니다. 
+* 명령 메뉴를 열고 `Drawer: Show Animations`를 입력합니다. 
 
 Animation Inspector가 콘솔 창 옆에 탭으로 열립니다. 이 탭은
 Drawer 탭이기 때문에 DevTools 패널 어디에서나 사용할 수 있습니다. 
@@ -66,11 +66,11 @@ Animation Inspector는 크게 네 개의 섹션(또는 창)으로 그룹이 지�
 
 1. **Controls**. 여기에서 현재 캡처된 애니메이션
 그룹을 모두 지우거나 현재 선택한 애니메이션 그룹의 속도를 변경할 수 있습니다.
-2. **Overview** 조사할 애니메이션 그룹을 선택하고 
+2. **Overview**. 조사할 애니메이션 그룹을 선택하고 
 **Details** 창에서 수정합니다. 
-3. **Timeline** 애니메이션을 일시 중지하고 시작하거나, 애니메이션의 특정 
+3. **Timeline**. 애니메이션을 일시 중지하고 시작하거나, 애니메이션의 특정 
 지점으로 점프합니다. 
-4. **Details** 현재 선택한
+4. **Details**. 현재 선택한
    애니메이션 그룹을 검사하고 수정합니다. 
 
 ![주석 Animation Inspector](imgs/annotated-animation-inspector.png)
@@ -88,8 +88,8 @@ Animation Inspector는 크게 네 개의 섹션(또는 창)으로 그룹이 지�
 애니메이션을 캡처한 후에 이를 재생할 수 있는 몇 가지 방법이 있습니다.
 
 * **Overview** 창에서 애니메이션의 썸네일 이미지에 마우스를 가져가서 미리 볼 수 있습니다.
-* **Overview** 창에서 애니메이션 그룹을 선택하고(
-**Details** 창에 표시되도록 함) **재생** 버튼
+* **Overview** 창에서 애니메이션 그룹을 선택하고(**Details** 창에
+표시되도록 함) **재생** 버튼
 (![재생 버튼](imgs/replay-button.png){:.inline})을 누릅니다. 해당 애니메이션이
  뷰포트에서 재생됩니다.
   **애니메이션 속도** 버튼(![애니메이션 속도
@@ -102,7 +102,7 @@ Animation Inspector는 크게 네 개의 섹션(또는 창)으로 그룹이 지�
 
 애니메이션 그룹을 캡처한 후에 이를 **Overview** 창에서 클릭하여 
 세부정보를 봅니다. **Details** 창에서 각각의 애니메이션은 자체
-행을 가집니다 
+행을 가집니다. 
 
 ![애니메이션 그룹 세부정보](imgs/animation-group-details.png)
 

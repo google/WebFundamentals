@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Después de eliminar las descargas de recursos innecesarias, lo mejor que podemos hacer para mejorar la velocidad de carga de la página es minimizar el tamaño general de las descargas optimizando y comprimiendo los recursos restantes.
 
-{# wf_updated_on: 2016-08-26 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Optimización de la codificación y el tamaño de transferencia e recursos basados en texto {: .page-title }
@@ -88,7 +88,7 @@ Una vez aplicados los pasos anteriores, nuestra página pasa de 406 a 150 caract
 
 Demos un paso atrás. En el ejemplo anterior se ilustra un punto importante: un compresor multipropósito&mdash;digamos, uno diseñado para comprimir texto arbitrario&mdash;quizás podría hacer un buen trabajo de compresión de la página anterior, pero jamás podría tener capacidad para eliminar comentarios, contraer las reglas de CSS o hacer muchas otras optimizaciones específicas del contenido. Por eso el procesamiento previo, la minificación y la optimización pertinente al contenido pueden ser herramientas muy poderosas.
 
-Nota: Un buen ejemplo es la versión de desarrollo sin compresión de la biblioteca JQuery, que se está acercando a los ~300 KB. La misma biblioteca, aunque reducida (sin comentarios, etc.) es aproximadamente 3 veces más pequeña: ~100 KB.
+Note: Un buen ejemplo es la versión de desarrollo sin compresión de la biblioteca JQuery, que se está acercando a los ~300 KB. La misma biblioteca, aunque reducida (sin comentarios, etc.) es aproximadamente 3 veces más pequeña: ~100 KB.
 
 De igual manera, las técnicas anteriores se pueden extender más allá de los recursos basados en texto. Las imágenes, los videos y otros tipos de contenido tienen sus propias formas de metadatos y diferentes cargas. Por ejemplo, cada vez que sacas una foto con una cámara, la foto incorpora mucha información adicional: configuración de la cámara, ubicación, etc. Según la app, estos datos pueden ser críticos (por ejemplo, un sitio donde se comparten fotos) o completamente obsoletos y deberías considerar si vale la pena eliminarlos. En la práctica, estos metadatos pueden sumar decenas de kilobytes por cada imagen.
 
@@ -185,7 +185,7 @@ El proyecto HTML5 Boilerplate contiene [ejemplos de archivos de configuración](
 
 Una forma rápida y simple de ver a GZIP en acción es abrir Chrome DevTools e inspeccionar la columna “Size/Content” en el panel Network: “Size” indica el tamaño de transferencia del recurso y “Content” el tamaño del recurso sin comprimir. Para el recurso HTML del ejemplo anterior, GZIP ahorró 98,8 KB durante la transferencia.
 
-Nota: A veces, GZIP aumenta el tamaño del recurso. Generalmente, esto ocurre cuando el recurso es muy pequeño y la sobrecarga del diccionario de GZIP supera lo que se ahorra en la compresión o cuando el recurso ya está bien comprimido. Algunos servidores te permiten especificar un umbral de tamaño de archivo mínimo para evitar este problema.
+Note: A veces, GZIP aumenta el tamaño del recurso. Generalmente, esto ocurre cuando el recurso es muy pequeño y la sobrecarga del diccionario de GZIP supera lo que se ahorra en la compresión o cuando el recurso ya está bien comprimido. Algunos servidores te permiten especificar un umbral de tamaño de archivo mínimo para evitar este problema.
 
 Por último, si bien la mayoría de los servidores comprimen automáticamente los recursos al proporcionárselos a los usuarios, algunas CDN requieren especial atención y esfuerzo manual para garantizar que se proporcione el recurso GZIP. Audita tu sitio y asegúrate de que tus recursos [se compriman](http://www.whatsmyip.org/http-compression-test/).
 

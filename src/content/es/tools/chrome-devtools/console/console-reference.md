@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Usa Console API para escribir información a la consola, crear perfiles JavaScript e iniciar una sesión de depuración.
 
@@ -43,7 +43,7 @@ Si la casilla de verificación [**Preserve log**](index#preserve-log) está sele
 o se aplica la combinación de teclas <kbd>Ctrl</kbd>+<kbd>L</kbd> mientras la consola esté seleccionada, se
 podrá borrar la consola. 
 
-Para obtener más información, consulta [Borrar la consola](index#clearing) .
+Para obtener más información, consulta [Borrar la consola](index#clearing).
 
 ## console.count(label) {:#count}
 
@@ -58,7 +58,7 @@ línea y con la misma etiqueta.
 
 ![Ejemplo de console.count()](images/count.png)
 
-Para obtener más ejemplos, consulta [Contar ejecuciones de instrucciones][cse] .
+Para obtener más ejemplos, consulta [Contar ejecuciones de instrucciones][cse].
 
 [cse]: track-executions#counting-statement-executions
 
@@ -206,7 +206,7 @@ perfil, llama a `console.profileEnd()`. Cada perfil se agrega al panel **Profile
 ## console.profileEnd() {:#profileend}
 
 Detiene la sesión de generación de perfiles CPU JavaScript actual si una está en progreso y 
-emite el informe al panel **Profiles** .
+emite el informe al panel **Profiles**.
 
 Consulta [`console.profile()`](#profile) para conocer un ejemplo.
 

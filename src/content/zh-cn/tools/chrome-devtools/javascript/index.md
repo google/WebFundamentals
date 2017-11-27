@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:在本交互式教程中使用 Chrome DevTools 调试 JavaScript 入门。
 
@@ -13,7 +13,7 @@ description:在本交互式教程中使用 Chrome DevTools 调试 JavaScript 入
 </style>
 
 <!-- TODO
-     使演示页面自适应
+     make demo responsive
 -->
 
 # 在 Chrome DevTools 中调试 JavaScript 入门 {: .page-title }
@@ -63,13 +63,11 @@ DevTools 让您可以暂停执行中的代码，并对暂停时刻的*所有*变
 
 1. 按 <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) 或 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>（Windows、Linux）在演示页面上打开 DevTools。
 
-
-
 1. 点击 **Sources** 标签。
 
-<!-- TODO 添加一个屏幕截图。请在演示页面设计完成时再创建屏幕截图。
-如果 Sources 处于隐藏状态，将其添加于此处而不是上一幅屏幕截图 -->
-
+<!-- TODO add a screenshot.Don't create the screenshot until demo design is
+     finished.Add it here rather than previous screenshot in case Sources
+     is hidden -->
 
 1. 点击 **Event Listener Breakpoints** 将该部分展开。DevTools 显示一个包含 **Animation** 和 **Clipboard** 等可展开事件类别的列表。
 
@@ -77,27 +75,18 @@ DevTools 让您可以暂停执行中的代码，并对暂停时刻的*所有*变
 
 <!-- TODO or maybe add it here -->
 
-1. 在 **Mouse** 事件类别旁，点击 **Expand** ![Expand 图标](/web/tools/chrome-devtools/images/expand.png){: .devtools-inline}。
-
-   DevTools 显示一个包含 **click** 等 Mouse 事件的列表，事件旁有相应的复选框。
+1. 在 **Mouse** 事件类别旁，点击 **Expand** ![Expand 图标](/web/tools/chrome-devtools/images/expand.png){: .devtools-inline}。DevTools 显示一个包含 **click** 等 Mouse 事件的列表，事件旁有相应的复选框。
 1. 选中 **click** 复选框。
-
 
      <figure>
        <img src="imgs/get-started-click-breakpoint.png"
          alt="DevTools 在演示页面上打开，Sources 面板获得焦点，click 事件侦听器断点处于启用状态。"
-
        <figcaption>
          <b>图 1</b>：DevTools 在演示页面上打开，Sources 面板获得焦点，click 事件侦听器断点处于启用状态。
-
          如果 DevTools 窗口较大，则 <b>Event Listener Breakpoints</b> 窗格位于右侧，而不是像屏幕截图中那样位于左下方。</figcaption>
-
-
-
      </figure>
 
 1. 返回至演示页面，再次点击 **Add Number 1 and Number 2**。DevTools 暂停演示并在 **Sources** 面板中突出显示一行代码。
-
    DevTools 突出显示的是下面这行代码：
 
        `function onClick() {`
@@ -110,7 +99,7 @@ DevTools 让您可以暂停执行中的代码，并对暂停时刻的*所有*变
 注：这不过是 DevTools 提供的众多断点类型中的一种。应使用的断点类型取决于您要调试的问题类型。
 
 
-[继续]: /web/tools/chrome-devtools/images/resume-script-execution.png
+[resume]: /web/tools/chrome-devtools/images/resume-script-execution.png
 
 ## 第 3 步：单步调试代码
 
@@ -121,7 +110,7 @@ DevTools 让您可以暂停执行中的代码，并对暂停时刻的*所有*变
 
        `if (inputsAreEmpty()) {` 
 
-1. 点击 **Step over next function call** ![单步执行时越过下一个函数调用][越过]]{:.devtools-inline}。
+1. 点击 **Step over next function call** ![单步执行时越过下一个函数调用][over]{:.devtools-inline}。
 DevTools 执行 `inputsAreEmpty()` 但不进入它。
 请注意 DevTools 是如何跳过几行代码的。
    这是因为 `inputsAreEmpty()` 求值结果为 false，所以 `if` 语句的代码块未执行。
@@ -131,8 +120,8 @@ DevTools 执行 `inputsAreEmpty()` 但不进入它。
 
 
 
-[进入]: /web/tools/chrome-devtools/images/step-into.png
-[越过]: /web/tools/chrome-devtools/images/step-over.png
+[into]: /web/tools/chrome-devtools/images/step-into.png
+[over]: /web/tools/chrome-devtools/images/step-over.png
 
 ## 第 4 步：设置另一个断点
 
@@ -146,7 +135,7 @@ DevTools 执行 `inputsAreEmpty()` 但不进入它。
 **32**。点击 **32**。DevTools 会在 **32** 上放置一个蓝色图标。
 这意味着这行代码上有一个代码行断点。
    DevTools 现在总是会在执行这行代码之前暂停。
-1. 点击 **Resume script execution** ![继续执行脚本][继续]{:.devtools-inline}。
+1. 点击 **Resume script execution** ![继续执行脚本][resume]{:.devtools-inline}。
 脚本继续执行，直至到达您设置了断点的代码行。
 1. 看一下 `updateLabel()` 中已执行的代码行。
 
@@ -199,7 +188,7 @@ DevTools 为 `console.log()` 提供的另一个替代工具是 Console。可以�
          <b>图 1</b>：对  <code>parseInt(addend1) + parseInt(addend2)</code> 求值后的 Console 抽屉。</figcaption>
      </figure>
 
-[添加]: /web/tools/chrome-devtools/javascript/imgs/add-expression.png
+[add]: /web/tools/chrome-devtools/javascript/imgs/add-expression.png
 
 ## 第 6 步：应用修正
 
@@ -210,9 +199,9 @@ DevTools 为 `console.log()` 提供的另一个替代工具是 Console。可以�
 
 1. 在 DevTools 的 **Sources** 面板上的代码编辑器中，将 `var sum = addend1 + addend2` 替换为 `var sum = parseInt(addend1) + parseInt(addend2);`。它就是您当前暂停位置上面那行代码。
 1. 按 <kbd>Command</kbd>+<kbd>S</kbd> (Mac) 或 <kbd>Ctrl</kbd>+<kbd>S</kbd>（Windows、Linux）保存更改。代码的背景色变为红色，这表示在 DevTools 内更改了脚本。
-1. 点击 **Deactivate breakpoints** ![停用断点][停用]{:.devtools-inline}。它变为蓝色，表示处于活动状态。
+1. 点击 **Deactivate breakpoints** ![停用断点][deactivate]{:.devtools-inline}。它变为蓝色，表示处于活动状态。
 如果进行了此设置，DevTools 会忽略您已设置的任何断点。
-1. 点击 **Resume script execution** ![继续执行脚本][继续]{:.devtools-inline}。
+1. 点击 **Resume script execution** ![继续执行脚本][resume]{:.devtools-inline}。
 1. 使用不同的值测试演示页面。现在演示页面应能正确计算求和。
 
 
@@ -221,7 +210,7 @@ DevTools 为 `console.log()` 提供的另一个替代工具是 Console。可以�
 要实现该目的，您需要修正运行在提供页面的服务器上的代码。
 
 
-[停用]: /web/tools/chrome-devtools/images/deactivate-breakpoints-button.png
+[deactivate]: /web/tools/chrome-devtools/images/deactivate-breakpoints-button.png
 
 ## 后续步骤
 
@@ -238,7 +227,7 @@ DevTools 为 `console.log()` 提供的另一个替代工具是 Console。可以�
 <a class="gc-analytics-event"
    data-category="DevTools / Debug JS / Get Started / Next Steps / Breakpoints"
    href="add-breakpoints" target="_blank"
-   rel="noopener noreferrer"><button>Show Me All The Breakpoints</button></a>
+   rel="noopener noreferrer"><button>为我演示所有断点</button></a>
 
 有几个代码单步执行控件在本教程中未予说明。
 请点击以下链接，了解有关它们的更多信息。
@@ -246,7 +235,7 @@ DevTools 为 `console.log()` 提供的另一个替代工具是 Console。可以�
 <a class="gc-analytics-event"
    data-category="DevTools / Debug JS / Get Started / Next Steps / Breakpoints"
    href="step-code#stepping_in_action" target="_blank"
-   rel="noopener noreferrer"><button>I Want To Master Code Stepping</button></a>
+   rel="noopener noreferrer"><button>我想要掌握代码单步调试知识</button></a>
 
 ## 反馈
 

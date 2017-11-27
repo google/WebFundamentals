@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 콘솔 로깅은 페이지 또는 애플리케이션이 수행하는 작업을 검사하는 강력한 방법입니다. console.log()로 시작하고 다른 고급 용도를 탐구해 봅시다.
 
@@ -24,7 +24,7 @@ description: 콘솔 로깅은 페이지 또는 애플리케이션이 수행하�
 
 <a href="/web/tools/chrome-devtools/debug/console/console-reference#consolelogobject--object-">console.log()</a> 메서드를 사용하여 콘솔에 기본적인 로깅을 수행합니다. 해당 메서드는 하나 이상의 식을 매개변수로 취하고 현재 값을 콘솔에 쓰고 여러 매개변수를 공백으로 구분된 줄에 연결합니다.
 
-자바스크립트에서 다음 코드 줄 실행:
+자바스크립트에서 다음 코드 줄을 실행하면
 
 
     console.log("Node count:", a.childNodes.length, "and the current time is:", Date.now());
@@ -160,13 +160,13 @@ groupCollapsed() output:
 
 로깅 메서드로 전달되는 첫 번째 매개변수는 하나 이상의 서식 지정자를 포함할 수 있습니다. 서식 지정자는 `%` 기호와 그 뒤에 값에 적용되는 서식을 나타내는 문자로 구성됩니다. 문자열 뒤의 매개변수는 자리표시자에 순서대로 적용됩니다.
 
-다음 예시는 문자열과 숫자 포맷터를 사용하여 출력 문자열에 값을 삽입합니다. 콘솔에  "Sam has 100 points"가 표시됩니다.
+다음 예시는 문자열과 숫자 포맷터를 사용하여 출력 문자열에 값을 삽입합니다. 콘솔에 'Sam has 100 points'가 표시됩니다.
 
     console.log("%s has %d points", "Sam", 100);
 
 서식 지정자의 전체 목록은 다음과 같습니다.
 
-| Specifier | Output                                                                            |
+| 지정자 | 출력                                                                            |
 |-----------|:----------------------------------------------------------------------------------|
 | %s        | 값의 서식을 문자열로 지정합니다.                                                     |
 | %i or %d  | 값의 서식을 정수로 지정합니다.                                                   |
@@ -197,13 +197,13 @@ CSS 서식 지정자를 사용하여 콘솔 표시를 사용자설정할 수 있
     console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
     
 
-..로그 출력을 크게 그리고 파란색으로 만들려면:
+..로그 출력을 파란색으로 크게 표시되게 할 수 있습니다.
 
 ![서식이 있는 문자열](images/console-write-format-string.png)
 
 ### DOM 요소를 자바스크립트 객체로 서식 지정
 
-기본적으로 DOM 요소는 HTML 표현으로 콘솔에 로그되지만 DOM 요소를 자바스크립트 객체로 액세스하여 해당 속성을 검사하길 원할 수 있습니다. 이 경우 `%o` 문자열 지정자를 사용하거나(위 참조) `console.dir`를 사용할 수 있습니다. 
+기본적으로 DOM 요소는 HTML 표현으로 콘솔에 로그되지만 DOM 요소를 자바스크립트 객체로 액세스하여 해당 속성을 검사하길 원할 수 있습니다. 이 경우 `%o` 문자열 지정자를 사용하거나(위 참조) `console.dir`을 사용할 수 있습니다. 
 
 ![dir()을 사용하여 요소 로깅](images/dir-element.png)
 

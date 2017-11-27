@@ -1,17 +1,19 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Element ARIA Attributes Are Valid" Lighthouse audit.
+description: Reference documentation for the "Element aria-* Attributes Are Valid And Not Misspelled Or Non-Existent" Lighthouse audit.
 
-{# wf_updated_on: 2017-01-18 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2017-01-18 #}
 
-# Element ARIA Attributes Are Valid  {: .page-title }
+# Element ARIA Attributes Are Valid And Not Misspelled Or Non-Existent  {: .page-title }
 
 ## Why the audit is important {: #why }
 
 Misspelled or nonexistent ARIA attributes may be preventing the screen reader
 from properly understanding the current state of a widget. This could make the
 page unusable to users who rely on screen readers.
+
+See [Introduction to ARIA](/web/fundamentals/accessibility/semantics-aria/) for more information.
 
 ## How to pass the audit {: #how }
 

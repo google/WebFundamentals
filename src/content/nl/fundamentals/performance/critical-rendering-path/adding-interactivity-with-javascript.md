@@ -35,7 +35,7 @@ JavaScript is een dynamische taal die in de browser wordt uitgevoerd. Met JavaSc
 
 Met de vorige stap hebben we de inhoud en de CSS-stijl van een bestaande DOM-node aangepast en een volledig nieuwe node aan het document toegevoegd. Onze pagina zal geen ontwerpprijzen winnen, maar het is een illustratie van de kracht en flexibiliteit die JavaScript ons biedt.
 
-Maar hieronder ligt wel een grote prestatieslurper verborgen. Javascript biedt ons veel meer mogelijkheden, maar het creëert ook veel extra beperkingen op wanneer en hoe een pagina wordt weergegeven.
+Maar hieronder ligt wel een grote prestatieslurper verborgen. JavaScript biedt ons veel meer mogelijkheden, maar het creëert ook veel extra beperkingen op wanneer en hoe een pagina wordt weergegeven.
 
 Zoals u kunt zien, staat ons inline script in het voorbeeld hierboven bijna helemaal onderaan de pagina. Waarom? Eigenlijk zou u het zelf moeten uitproberen, maar als we het script verplaatsen naar boven het element _span_, zult u merken dat het script mislukt en een melding geeft dat het geen enkele referentie naar de elementen _span_ in het document kan vinden, dat wil zeggen _getElementsByTagName('span')_ geeft _null_ als antwoord. Dit demonstreert een belangrijke eigenschap: ons script wordt uitgevoerd op het precieze punt waar dit in het document wordt ingevoegd. Wanneer de HTML-parser een scripttag tegenkomt, wordt het proces van de DOM-opbouw gepauzeerd en krijgt de JavaScript-engine de controle. Zodra de JavaScript-engine klaar is, neemt de browser het weer over op het punt waar deze gebleven was en gaat verder met de DOM-opbouw.
 

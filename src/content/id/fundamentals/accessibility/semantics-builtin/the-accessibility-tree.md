@@ -132,7 +132,7 @@ Secara umum, ada dua tipe nama:
 Untuk elemen level-teks, kita tidak perlu melakukan apa-apa, karena menurut definisi, elemen
 akan berisi beberapa teks. Akan tetapi, untuk elemen masukan atau elemen kontrol, serta materi
 visual seperti gambar, kita perlu memastikan bahwa kita menetapkan sebuah nama. Sebenarnya,
-menyediakan alternatif berupa teks bagi elemen non-teks adalah [item paling
+menyediakan alternatif berupa teks bagi materi non-teks adalah [item paling
 pertama pada daftar periksa WebAIM](http://webaim.org/standards/wcag/checklist#g1.1).
 
 Salah satu cara melakukannya adalah mengikuti saran bahwa "Masukan formulir memiliki

@@ -91,7 +91,7 @@ sentuhan adalah tipe animasi.
 Pengguna akan merasa bila laju bingkai animasi bervariasi.
 Sasaran Anda adalah menghasilkan 60 bingkai per detik, dan setiap bingkai harus melalui semua langkah ini:
 
-![Langkah-langkah merender bingkai(images/render-frame.png)
+![Langkah-langkah merender bingkai](images/render-frame.png)
 
 Dari sudut pandang matematika murni, setiap bingkai dianggarkan sekitar 
 16 md (1000 md / 60 bingkai per detik = 16,66 md per bingkai). Akan tetapi, karena

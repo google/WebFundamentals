@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description:“网站使用 Using rel="noopener" 打开外部锚”Lighthouse 审查的参考文档。
+description:“网站使用 rel="noopener" 打开外部锚”Lighthouse 审查的参考文档。
 
 {# wf_updated_on:2016-11-30 #}
 {# wf_published_on:2016-11-30 #}
 
-# 网站使用 Using rel="noopener" 打开外部锚 {: .page-title }
+# 网站使用 rel="noopener" 打开外部锚 {: .page-title }
 
 ## 为什么说此审查非常重要{: #why }
 

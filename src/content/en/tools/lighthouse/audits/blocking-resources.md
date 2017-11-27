@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Site Does Not Use Link Tags That Delay First Paint" and "Site Does Not Use Script Tags In Head That Delay First Paint" Lighthouse audits.
+description: Reference documentation for the "Render-blocking stylesheets" and "Render-blocking scripts" Lighthouse audits.
 
-{# wf_updated_on: 2016-12-01 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-12-01 #}
 
-# Site Does Not Use Resources That Delay First Paint  {: .page-title }
+# Render-Blocking Resources {: .page-title }
 
 ## Why the audit is important {: #why }
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 페이지의 HTML 및 CSS를 검사하고 편집합니다.
 
@@ -33,7 +33,7 @@ DOM 노드를 실시간 편집하려면
 
 DOM 트리 뷰에 현재 트리 상태가 표시됩니다.
 여러 가지 이유로 인해 원래 로드한 HTML과 일치하지 않을 수 있습니다. 예를 들어,
-Javascript를 사용하여 DOM 트리를 수정할 수 있습니다. 브라우저 엔진은
+자바스크립트를 사용하여 DOM 트리를 수정할 수 있습니다. 브라우저 엔진은
 잘못된 작성자 마크업을 수정하려 시도하고 예측하지 못한 DOM을 만듭니다.
 
 ## 스타일 실시간 편집
@@ -43,7 +43,7 @@ Javascript를 사용하여 DOM 트리를 수정할 수 있습니다. 브라우�
 스타일시트의 경우와 마찬가지).
 
 이름이나 값을 편집하려면 원하는 항목을 클릭하고 변경한 다음
-<kbd class="kbd">Tab</kbd> 또는 <kbd class="kbd">Enter</kbd>를 눌러 변경 내용을 저장합니다.
+<kbd class="kbd">Tab</kbd> 키 또는 <kbd class="kbd">Enter</kbd> 키를 눌러 변경 내용을 저장합니다.
 
 ![속성 이름 편집](imgs/edit-property-name.png)
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Tipografi adalah hal mendasar bagi terciptanya desain, branding, keterbacaan, dan aksesibilitas yang baik. Webfont memungkinkan semua hal di atas dan juga yang lainnya: teks dapat dipilih, ditelusuri, di-zoom, dan ramah untuk DPI yang tinggi, menyediakan rendering teks yang konsisten dan tajam apa pun ukuran dan resolusinya.
 
-{# wf_updated_on: 2016-08-31 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-09-19 #}
 
 # Optimasi Font Web {: .page-title }
@@ -11,7 +11,7 @@ description: Tipografi adalah hal mendasar bagi terciptanya desain, branding, ke
 
 Tipografi adalah hal mendasar bagi terciptanya desain, branding, keterbacaan, dan aksesibilitas yang baik. Webfont memungkinkan semua hal di atas dan juga yang lainnya: teks dapat dipilih, ditelusuri, di-zoom, dan ramah untuk DPI yang tinggi, menyediakan rendering teks yang konsisten dan tajam apa pun ukuran dan resolusinya. Webfont sangat penting bagi desain yang baik, UX, dan kinerja.
 
-Optimalisasi webfont merupakan bagian penting dari strategi kinerja keseluruhan. Setiap font merupakan sumber daya tambahan, dan sebagian font mungkin memblokir rendering teks, namun karena laman menggunakan webfont tidak berarti bahwa laman harus me-render lebih lambat. Sebaliknya, font yang dioptimalkan, dipadukan dengan strategi yang cermat mengenai cara webfont dimuat dan diterapkan pada laman akan dapat membantu mengurangi ukuran laman total, dan memperbaiki waktu rendering laman.
+Optimalisasi webfont merupakan bagian penting dari strategi kinerja keseluruhan. Setiap font merupakan sumber daya tambahan, dan sebagian font mungkin memblokir rendering teks, namun karena laman menggunakan webfont tidak berarti bahwa laman harus merender lebih lambat. Sebaliknya, font yang dioptimalkan, dipadukan dengan strategi yang cermat mengenai cara webfont dimuat dan diterapkan pada laman akan dapat membantu mengurangi ukuran laman total, dan memperbaiki waktu rendering laman.
 
 
 ## Anatomi webfont
@@ -41,7 +41,7 @@ Jadi, apa arti semua ini bagi kita? Tidak ada satu format tunggal yang berfungsi
 * Menyajikan varian TTF ke browser Android lawas (di bawah 4.4).
 * Menyajikan varian EOT ke browser IE lawas (di bawah IE9).
 
-Catatan: Secara teknis, ada format kontainer lain, <a href='http://caniuse.com/svg-fonts'>kontainer font SVG</a>, namun IE dan Firefox tidak pernah mendukungnya, dan kini tidak digunakan lagi di Chrome. Dengan demikian, penggunaannya terbatas dan itu sengaja dihilangkan dalam panduan ini.
+Note: Secara teknis, ada format kontainer lain, <a href='http://caniuse.com/svg-fonts'>kontainer font SVG</a>, namun IE dan Firefox tidak pernah mendukungnya, dan kini tidak digunakan lagi di Chrome. Dengan demikian, penggunaannya terbatas dan itu sengaja dihilangkan dalam panduan ini.
 
 ### Mengurangi ukuran font dengan kompresi
 
@@ -53,7 +53,7 @@ Font merupakan koleksi glyph, masing-masing dengan seperangkat jalur yang menjel
 
 Terakhir, perlu diperhatikan bahwa sebagian format font mengandung metadata tambahan, misalnya informasi [petunjuk font](https://en.wikipedia.org/wiki/Font_hinting) dan [kerning](https://en.wikipedia.org/wiki/Kerning) mungkin tidak diperlukan di beberapa platform, yang memungkinkan optimalisasi ukuran file lebih lanjut. Lihatlah kompresor font Anda untuk opsi optimalisasi yang tersedia, dan jika Anda mengambil rute ini, pastikan bahwa Anda memiliki infrastruktur yang sesuai untuk menguji dan mengirimkan font yang telah dioptimalkan ini ke setiap browser. Misalnya, Google Fonts mempertahankan 30+ varian yang dioptimalkan untuk setiap font dan secara otomatis mendeteksi dan mengirimkan varian optimal untuk setiap platform dan browser.
 
-Catatan: Pertimbangkan menggunakan <a href='http://en.wikipedia.org/wiki/Zopfli'>kompresi Zopfli</a> untuk format EOT, TTF, dan WOFF. Zopfli adalah kompresor kompatibel zlib yang menghasilkan pengurangan ukuran file sebesar ~5% lewat gzip.
+Note: Pertimbangkan menggunakan <a href='http://en.wikipedia.org/wiki/Zopfli'>kompresi Zopfli</a> untuk format EOT, TTF, dan WOFF. Zopfli adalah kompresor kompatibel zlib yang menghasilkan pengurangan ukuran file sebesar ~5% lewat gzip.
 
 ## Mendefinisikan jenis font dengan @font-face
 
@@ -100,7 +100,7 @@ yang dipisah koma dari varian sumber daya:
 * Direktif `url()` memungkinkan Anda untuk memuat font eksternal, dan dimungkinkan untuk petunjuk `format()` opsional yang mengindikasikan format dari font yang direferensikan oleh URL yang disediakan.
 
 
-Catatan: Kecuali Anda mereferensikan salah satu dari font sistem default, pada praktiknya, pengguna jarang yang memasangnya secara lokal, terutama di perangkat seluler, tempat yang tidak mungkin untuk dipasang font tambahan. Hasilnya, Anda harus selalu menyediakan daftar lokasi font eksternal.
+Note: Kecuali Anda mereferensikan salah satu dari font sistem default, pada praktiknya, pengguna jarang yang memasangnya secara lokal, terutama di perangkat seluler, tempat yang tidak mungkin untuk dipasang font tambahan. Hasilnya, Anda harus selalu menyediakan daftar lokasi font eksternal.
 
 Ketika browser menentukan bahwa font diperlukan, browser menyatakan melalui daftar sumber daya yang diberikan dalam urutan yang ditetapkan serta mencoba memuat sumber daya yang sesuai. Misalnya, mengikuti contoh di atas:
 
@@ -112,7 +112,7 @@ Ketika browser menentukan bahwa font diperlukan, browser menyatakan melalui daft
 
 Kombinasi direktif lokal dan eksternal dengan petunjuk format yang sesuai memungkinkan kita untuk menetapkan semua font yang tersedia dan membiarkan browser menangani yang tersisa. Browser menentukan sumber daya mana yang dibutuhkan dan akan memilih format yang optimal.
 
-Catatan: Urutan varian font perlu dispesifikasikan. Browser akan memilih format pertama yang didukungnya. Karena itu, jika Anda ingin browser yang lebih baru menggunakan WOFF2, maka Anda harus menempatkan deklarasi WOFF2 di atas WOFF, dan seterusnya.
+Note: Urutan varian font perlu dispesifikasikan. Browser akan memilih format pertama yang didukungnya. Karena itu, jika Anda ingin browser yang lebih baru menggunakan WOFF2, maka Anda harus menempatkan deklarasi WOFF2 di atas WOFF, dan seterusnya.
 
 ### Men-subset rentang unicode
 
@@ -156,7 +156,7 @@ Latin dan Jepang, masing-masing akan diunduh oleh browser sesuai kebutuhan:
     }
     
 
-Catatan: Subset rentang unicode terutama penting bagi bahasa-bahasa di Asia, yang memiliki jumlah glyph lebih banyak daripada bahasa Barat dan font "penuh" biasa sering kali diukur dalam megabyte, dan bukan puluhan kilobyte.
+Note: Subset rentang unicode terutama penting bagi bahasa-bahasa di Asia, yang memiliki jumlah glyph lebih banyak daripada bahasa Barat dan font "penuh" biasa sering kali diukur dalam megabyte, dan bukan puluhan kilobyte.
 
 Penggunaan subset rentang unicode, dan file terpisah untuk setiap varian bergaya dari font memungkinkan kita untuk mendefinisikan jenis font komposit yang sama-sama lebih cepat dan lebih efisien untuk diunduh. Pengunjung hanya mengunduh varian dan subset yang diperlukan, dan tidak dipaksa mengunduh subset yang mungkin tidak pernah mereka lihat atau gunakan di laman. 
 
@@ -235,12 +235,12 @@ gaya-font ke miring?
 
 
 > Penulis juga harus menyadari bahwa pendekatan yang disintesis mungkin tidak cocok untuk skrip seperti Cyrillic, yang mana format miring sangat berbeda bentuknya. Selalu lebih baik untuk menggunakan font miring daripada mengandalkan versi sintetik.
-> ><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">gaya-fony CSS3</a>
+> ><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">gaya-font CSS3</a>
 
 
 Contoh di atas menggambarkan perbedaan di antara hasil font aktual vs. disintesiskan untuk Open-Sans. Semua varian yang disintesiskan dihasilkan dari font 400-bobot. Seperti yang Anda bisa lihat, ada perbedaan yang mencolok dalam hasilnya. Detail mengenai cara menghasilkan varian tebal dan miring tidak ditetapkan. Oleh karena itu, hasilnya bervariasi dari browser ke browser, dan sangat bergantung pada font.
 
-Catatan: Untuk konsistensi dan hasil visual terbaik, jangan mengandalkan sintesis font. Sebaliknya, minimalkan jumlah varian font yang digunakan dan tentukan lokasinya, sedemikian rupa sehingga browser bisa mengunduhnya saat digunakan pada laman. Dengan demikian, dalam sebagian kasus varian yang disintesiskan <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>mungkin merupakan opsi yang layak</a>, namun gunakan secara hati-hati.
+Note: Untuk konsistensi dan hasil visual terbaik, jangan mengandalkan sintesis font. Sebaliknya, minimalkan jumlah varian font yang digunakan dan tentukan lokasinya, sedemikian rupa sehingga browser bisa mengunduhnya saat digunakan pada laman. Dengan demikian, dalam sebagian kasus varian yang disintesiskan <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>mungkin merupakan opsi yang layak</a>, namun gunakan secara hati-hati.
 
 ## Mengoptimalkan pemuatan dan rendering
 
@@ -255,7 +255,7 @@ Mengingat deklarasi ini, browser menghitung subset yang diperlukan dan varian se
 
 ### Webfonts dan jalur rendering penting
 
-Pemuatan yang lambat dari font membawa implikasi tersembunyi penting yang mungkin menunda rendering: browser harus [mengonstruksikan pohon render](/web/fundamentals/performance/critical-rendering-path/render-tree-construction), yang bergantung pada pohon DOM dan CSSOM, sebelum mengetahui sumber daya font mana yang diperlukan untuk merender teks. Akibatnya, permintaan font tertunda setelah sumber daya penting lain, dan browser dapat diblokir dari me-render teks sampai sumber daya diambil.
+Pemuatan yang lambat dari font membawa implikasi tersembunyi penting yang mungkin menunda rendering: browser harus [mengonstruksikan pohon render](/web/fundamentals/performance/critical-rendering-path/render-tree-construction), yang bergantung pada pohon DOM dan CSSOM, sebelum mengetahui sumber daya font mana yang diperlukan untuk merender teks. Akibatnya, permintaan font tertunda setelah sumber daya penting lain, dan browser dapat diblokir dari merender teks sampai sumber daya diambil.
 
 <img src="images/font-crp.png"  alt="Jalur rendering penting font">
 
@@ -314,7 +314,7 @@ Selanjutnya, karena kita dapat memeriksa status font (lewat metode [check()](htt
 
 Bagusnya, Anda bisa memadu-madankan strategi di atas untuk berbagai materi di laman. Misalnya, Anda bisa menunda rendering teks pada beberapa bagian sampai font tersedia, gunakan font fallback, lalu merender ulang setelah unduhan font selesai, menetapkan berbagai waktu tunggu, dan sebagainya. 
 
-Catatan: Font Loading API masih <a href='http://caniuse.com/#feat=font-loading'> dalam development di beberapa browser</a>. Pertimbangkan menggunakan <a href='https://github.com/bramstein/fontloader'>FontLoader polyfill</a>, atau <a href='https://github.com/typekit/webfontloader'>pustaka webfontloader</a>, untuk memberikan fungsionalitas yang serupa, meski dengan overhead dependensi JavaScript tambahan.
+Note: Font Loading API masih <a href='http://caniuse.com/#feat=font-loading'> dalam development di beberapa browser</a>. Pertimbangkan menggunakan <a href='https://github.com/bramstein/fontloader'>FontLoader polyfill</a>, atau <a href='https://github.com/typekit/webfontloader'>pustaka webfontloader</a>, untuk memberikan fungsionalitas yang serupa, meski dengan overhead dependensi JavaScript tambahan.
 
 ### Mengoptimalkan rendering font dengan penyisipan
 
@@ -325,7 +325,7 @@ Alternatif sederhana untuk menggunakan Font Loading API untuk meniadakan "masala
 
 Strategi penyisipan tidak sama fleksibelnya dan tidak memungkinkan Anda untuk mendefinisikan waktu tunggu khusus atau strategi rendering untuk materi berbeda, namun hal itu merupakan solusi sederhana dan ampuh yang bekerja di seluruh browser. Untuk hasil terbaik, pisahkan font yang disisipkan ke dalam style sheet yang berdiri sendiri serta berikan umur maksimal yang panjang. Dengan demikian, ketika CSS diperbarui, Anda tidak memaksa pengunjung Anda untuk mengunduh kembali font. 
 
-Catatan: Gunakan penyisipan secara selektif. Ingatlah bahwa alasan @font-face menggunakan perilaku lazyload adalah untuk menghindari unduhan varian font dan subset yang tidak perlu. Juga, meningkatkan ukuran CSS lewat penyisipan agresif akan berdampak negatif pada <a href='/web/fundamentals/performance/critical-rendering-path/'>jalur rendering penting</a>. Browser harus mengunduh semua CSS sebelum dapat mengonstruksikan CSSOM, membangun pohon render, dan materi laman render ke layar.
+Note: Gunakan penyisipan secara selektif. Ingatlah bahwa alasan @font-face menggunakan perilaku lazyload adalah untuk menghindari unduhan varian font dan subset yang tidak perlu. Juga, meningkatkan ukuran CSS lewat penyisipan agresif akan berdampak negatif pada <a href='/web/fundamentals/performance/critical-rendering-path/'>jalur rendering penting</a>. Browser harus mengunduh semua CSS sebelum dapat mengonstruksikan CSSOM, membangun pohon render, dan materi laman render ke layar.
 
 ### Mengoptimalkan penggunaan kembali font dengan caching HTTP
 

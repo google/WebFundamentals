@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Aprende a tomar una escena de WebGL en Three.js y agregarle capacidades de WebVR.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # Primeros pasos con WebVR {: .page-title }
@@ -10,7 +10,7 @@ description: Aprende a tomar una escena de WebGL en Three.js y agregarle capacid
 {% include "web/_shared/contributors/paullewis.html" %}
 {% include "web/_shared/contributors/mscales.html" %}
 
-Advertencia: WebVR todavía es experimental y se encuentra sujeta a modificaciones.
+Warning: WebVR todavía es experimental y se encuentra sujeta a modificaciones.
 
 En esta guía exploraremos las WebVR API, y las usaremos para mejorar una escena simple de WebGL compilada con [Three.js](https://threejs.org/). Sin embargo, para el trabajo de producción, tal vez sea conveniente que comiences con soluciones ya creadas, como [WebVR Boilerplate](https://github.com/borismus/webvr-boilerplate). Si es tu primera vez con Three.js, puedes usar esta [útil guía de inicio](https://aerotwist.com/tutorials/getting-started-with-three-js/). La comunidad también brinda mucho apoyo, así que si no puedes avanzar, definitivamente puedes acudir a ellos.
 
@@ -53,7 +53,7 @@ Este código contiene algunos aspectos para analizar.
 
 2. **Puede que no exista ningún dispositivo de RV disponible.** Deberíamos tener como objetivo crear experiencias que funcionen correctamente con una configuración fuera de la RV, y tratar la disponibilidad de la RV como una mejora progresiva.
 
-3. **Puede que existan varios dispositivos de RV disponibles.** De la misma manera, es absolutamente posible que alguien tenga varios dispositivos de RV disponibles. Deberíamos permitir eso, si fuese posible, permitiéndoles que elijan el más adecuado.
+3. **Puede que existan varios dispositivos de RV disponibles. **De la misma manera, es absolutamente posible que alguien tenga varios dispositivos de RV disponibles. Deberíamos permitir eso, si fuese posible, permitiéndoles que elijan el más adecuado.
 
 ## Instala una extensión de emulación de WebVR para Chrome DevTools
 
@@ -114,7 +114,7 @@ La información del fotograma contiene muchos datos interesantes, así que veám
 
 Si no tienes experiencia trabajando con 3D, las matrices de proyección y de vista-modelo pueden parecer abrumadoras. Aunque tienen una explicación matemática detrás de sus funciones, no necesitamos conocer exactamente cómo trabajan, sino qué es lo que hacen.
 
-* **Matrices de proyección** Se usan para crear una impresión de perspectiva dentro de una escena. Normalmente hacen esto distorsionando la escala de los objetos en la escena mientras más se alejan del ojo.
+* **Matrices de proyección.** Se usan para crear una impresión de perspectiva dentro de una escena. Normalmente hacen esto distorsionando la escala de los objetos en la escena mientras más se alejan del ojo.
 
 * **Matrices de modelo-vista.** Se usan para posicionar un objeto en el espacio 3D. Debido a la forma en la que trabajan las matrices, puedes crear los gráficos de la escena y desde allí continuar por el gráfico, multiplicando la matriz de cada nodo, hasta llegar a la última matriz de modelo-vista para el objeto en cuestión.
 

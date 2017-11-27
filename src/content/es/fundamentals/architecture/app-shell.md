@@ -2,14 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La arquitectura de shell de la app mantiene tu IU local y carga contenido dinámicamente sin sacrificar las vínculos y la visibilidad de la Web. 
 
-{# wf_updated_on: 2016-09-26 #} 
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-27 #}
 
 # El modelo de "shell de app" {: .page-title }
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 
-Una arquitectura de **shell de app** (o shell de app) es una forma de crear una
+Una arquitectura de **shell de aplicación** (o shell de app) es una forma de crear una
 Progressive Web App que se carga al instante y de manera confiable en la pantalla de tu usuario,
 en forma similar a lo que ves en las apps nativas.
 
@@ -35,7 +35,7 @@ publicarías en una tienda de apps al compilar una app nativa. Es el esqueleto d
 IU y contiene los componentes principales necesarios para poner en marcha tu app, pero probablemente
 no contenga los datos.
 
-Nota: Prueba el laboratorio de código de la [Primera app
+Note: Prueba el laboratorio de código de la [Primera app
 web progresiva](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0)
 para saber cómo diseñar y cómo
 implementar tu primera shell de app para una app sobre el clima. El video [Carga
@@ -101,7 +101,7 @@ API, pero no sacrifica los enlaces ni la visibilidad de la Web. La
 siguiente vez que el usuario acceda a tu app, se mostrará la última versión automáticamente.
 No es necesario descargar nuevas versiones antes de usarla.
 
-Nota: La extensión de auditoría [Lighthouse](https://github.com/googlechrome/lighthouse)
+Note: La extensión de auditoría [Lighthouse](https://github.com/googlechrome/lighthouse)
 se puede utilizar para verificar si tu PWA que utiliza una shell de app ofrece un
 rendimiento superior. [A Lighthouse](https://www.youtube.com/watch?v=LZjQ25NRV-E)
 es una charla que explica cómo optimizar una PWA con esta herramienta.
@@ -160,7 +160,7 @@ archivo index completo. Observemos lo que contiene.
 
     <body>
       <header class="header">
-        <h1 class="header__title">App Shell</h1>
+        <h1 class="header__title">Shell de app</h1>
       </header>
       
       <nav class="nav">
@@ -197,7 +197,7 @@ archivo index completo. Observemos lo que contiene.
 <div class="clearfix"></div>
 
 
-Nota: Visita [https://app-shell.appspot.com/](https://app-shell.appspot.com/) para ver una PWA
+Note: Visita [https://app-shell.appspot.com/](https://app-shell.appspot.com/) para ver una PWA
 simple y real que utiliza una shell de app y
 representación de contenido del lado del servidor. Una shell de app se puede implementar por medio de cualquier biblioteca o
 framework mencionado en nuestra charla sobre <a
@@ -215,7 +215,7 @@ Una shell de app se puede almacenar en caché a través de un service worker esc
 service worker generado a través de una herramienta de almacenamiento previo en caché de recursos estáticos
 [sw-precache](https://github.com/googlechrome/sw-precache).
 
-Nota: Los ejemplos se incluyen solo para fines de ilustración
+Note: Los ejemplos se incluyen solo para fines de ilustración
 y de información general. Los recursos reales utilizados probablemente serán diferentes para tu
 app.
 
@@ -271,7 +271,7 @@ Para obtener más información sobre el almacenamiento en caché de elementos es
 sw-precache](https://codelabs.developers.google.com/codelabs/sw-precache/index.html?index=..%2F..%2Findex#0)
 .
 
-Nota: sw-precache es útil para el almacenamiento en caché de tus recursos estáticos sin conexión. En cuanto a los recursos de
+Note: sw-precache es útil para el almacenamiento en caché de tus recursos estáticos sin conexión. En cuanto a los recursos de
 tiempo de ejecución/dinámicos, recomendamos usar nuestra biblioteca complementaria
 [sw-toolbox](https://github.com/googlechrome/sw-toolbox).
 

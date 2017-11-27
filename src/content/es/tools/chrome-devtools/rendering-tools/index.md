@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Los usuarios esperan que las páginas sean interactivas y fluidas. Cada etapa en la canalización de píxeles representa una oportunidad para introducir bloqueos. Conoce herramientas y estrategias para identificar y solucionar problemas comunes que lentifican el rendimiento del tiempo de ejecución.
 
@@ -109,7 +109,7 @@ Para reducir el efecto de los eventos **Recalculate Style**, realiza lo siguient
   que activan diseño, pintura y composición. Estas propiedades tienen el efecto más negativo
   en el rendimiento de la representación.
 * Realiza un cambio a propiedades cuyo impacto sea menor. Consulta [Limítate solo a 
-  propiedades del compositor y administra el recuento de capas] para obtener más información.
+  propiedades del compositor y administra el recuento de capas][compositor] para obtener más información.
 
 [compositor]: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
 
