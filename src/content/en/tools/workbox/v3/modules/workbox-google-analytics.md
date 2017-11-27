@@ -23,7 +23,7 @@ Workbox Google Analytics solves this problem for Google Analytics users by
 leveraging Service Worker's ability to detect failed requests.
 
 Google Analytics receives all data via HTTP requests to the
-[Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/v1/),
+[Measurement Protocol](/analytics/devguides/collection/protocol/v1/),
 which means a Service Worker script can add a fetch handler to detect
 failed requests sent to the Measurement Protocol. It can store these
 requests in IndexedDB and then retry them later once connectivity is
@@ -31,11 +31,11 @@ restored.
 
 Workbox Google Analytics does exactly this. It also also adds fetch
 handlers to cache the
-[analytics.js](https://developers.google.com/analytics/devguides/collection/analyticsjs/) and
-[gtag.js](https://developers.google.com/analytics/devguides/collection/gtagjs/)
+[analytics.js](/analytics/devguides/collection/analyticsjs/) and
+[gtag.js](/analytics/devguides/collection/gtagjs/)
 scripts, so they can also be run offline. Lastly, when failed requests are
 retried Workbox Google Analytics also automatically sets (or updates) the
-[`qt`](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#qt)
+[`qt`](/analytics/devguides/collection/protocol/v1/parameters#qt)
 in the request payload to ensure timestamps in Google Analytics reflect the
 time of the original user interaction.
 
@@ -67,7 +67,7 @@ requests, you can specify either the `parameterOverrides` or `hitFilters`
 [configuration options](../reference-docs/latest/workbox.googleAnalytics#.initialize).
 
 These options let you modify the
-[Measurement Protocol parameters](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters)
+[Measurement Protocol parameters](/analytics/devguides/collection/protocol/v1/parameters)
 that get sent in the retried request. The `parameterOverrides` option
 should be used when you want to set the same value for a particular
 parameter for every retried request. The `hitFilter` option should be used
@@ -143,7 +143,7 @@ in Google Analytics. Give it a name like "Offline Queue Time", set its
 and set its formatting type to "Time" (in seconds).
 
 **2)** Use the `hitFilter` option to get the value the
-[`qt`](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#qt)
+[`qt`](/analytics/devguides/collection/protocol/v1/parameters#qt)
 param and divide it by 1000 (to convert it to seconds). Then set that value
 as a param with the index of the newly created metric. If this is your
 first custom metric, the parameter name would be "cm1":
