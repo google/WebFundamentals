@@ -72,7 +72,9 @@ Just run the following command:
 workbox generateSW path/to/config.js
 ```
 
-Developers who are happy with Workbox's built-in precaching and runtime caching capabilities, and don't need to customize their service worker's behavior are recommended to use `generateSW` mode.
+Developers who are happy with Workbox's built-in precaching and runtime caching
+capabilities, and don't need to customize their service worker's behavior
+are recommended to use `generateSW` mode.
 
 ### `injectManifest`
 
@@ -80,7 +82,8 @@ For developers who ant more control of their final service worker file
 can use the `injectManifest` mode. This mode assumes that you have an
 existing service worker file (the location of which is specified in config.js).
 
-When `workbox injectManifest` is run, it looks for a specific string (`precaching.precacheAndRoute([])` by default) in your source
+When `workbox injectManifest` is run, it looks for a specific string
+(`precaching.precacheAndRoute([])` by default) in your source
 service worker file. It replaces the empty array with a list of
 URLs to precache and writes the service worker file to its
 destination location, based on the configuration options in `config.js`.
@@ -122,7 +125,8 @@ If you have an existing build process that is based entirely on
 [npm scripts](https://docs.npmjs.com/misc/scripts),
 then the `workbox-cli` is a good choice.
 
-If you're currently using [webpack](https://webpack.js.org/) as your build tool, then using the [workbox-webback-plugin](./workbox-webpack-plugin)
+If you're currently using [webpack](https://webpack.js.org/) as your build
+tool, then using the [workbox-webback-plugin](./workbox-webpack-plugin)
 is a better choice.
 
 If you're currently using [Gulp](https://gulpjs.com/),

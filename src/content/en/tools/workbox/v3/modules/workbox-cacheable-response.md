@@ -25,7 +25,8 @@ with a specific value, or a combination of the two.
 ## Caching Based on Status Codes
 
 You can configure a [Workbox strategy](./workbox-strategies) to consider
-set of status codes as being eligible for caching by setting the `cacheableResponse` option with an array of `statuses`:
+set of status codes as being eligible for caching by setting the
+`cacheableResponse` option with an array of `statuses`:
 
 ```js
 workbox.routing.registerRoute(
@@ -43,7 +44,8 @@ This configuration tells Workbox that when processing responses for
 requests against `https://third-party.example.com/images/`, cache any requests
 with a status code of '0' or '200'.
 
-Note: Status code '0' is used for [opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses).
+Note: Status code '0' is used for
+[opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses).
 
 ## Caching Based on Headers
 
@@ -71,11 +73,15 @@ take a look at the header named `X-Is-Cachable` (which would be added
 to the response by the server). If that header is present, and if it is
 set to a value of 'true', then the response can be cached.
 
-If multiple headers are specified, then only one of the headers needs to match the associated values.
+If multiple headers are specified, then only one of the headers needs to
+match the associated values.
 
 ## Caching Based on Headers and Status Codes
 
-You can mix together both status and header configuration. Both conditions must be met in order for a response to be considered cacheable; in other words, the response must have one of the configured status codes, **and** it must have at least one of the provided headers.
+You can mix together both status and header configuration. Both conditions
+must be met in order for a response to be considered cacheable; in other words,
+the response must have one of the configured status codes, **and** it must
+have at least one of the provided headers.
 
 ```js
 workbox.routing.registerRoute(
@@ -100,7 +106,8 @@ default to determine whether a response received from the network should
 be cached:
 
 * staleWhileRevalidate and networkFirst: Responses with a status of 0
-([an opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses)) or 200 are considered cacheable.
+([an opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses))
+or 200 are considered cacheable.
 * cacheFirst: Responses with a status of 200 are considered cacheable.
 
 By default, response headers are not used to determine cacheability.
@@ -111,7 +118,8 @@ The defaults vary around whether responses with a status of 0
 (i.e. [opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses))
 will end up cached. Due to the "black box" nature of opaque responses,
 it's not possible for the service worker to know whether the response
-is valid, or whether it reflects an error response returned from the cross-origin server.
+is valid, or whether it reflects an error response returned from the
+cross-origin server.
 
 For strategies that include some means of updating the cached response,
 like staleWhileRevalidate and networkFirst, the risk of caching a

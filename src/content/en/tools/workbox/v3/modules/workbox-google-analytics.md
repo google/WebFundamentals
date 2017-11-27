@@ -89,14 +89,16 @@ To track requests that were replayed by the service worker using a custom
 dimension with Workbox Google Analytics, follow these steps:
 
 **1)** [Create a new custom dimension](https://support.google.com/analytics/answer/2709829)
-in Google Analytics. Give it a name like "Network Status" and set its [scope to "hit"](https://support.google.com/analytics/answer/2709828#example-hit)
+in Google Analytics. Give it a name like "Network Status" and set its
+[scope to "hit"](https://support.google.com/analytics/answer/2709828#example-hit)
 (since any interaction can be offline).
 
 **2)** Take note the index assigned for the newly created dimension and pass
 that as the parameter name to the `parameterOverrides` configuration option
 in your Workbox Google Analytics code.
 
-For example, if this is your first custom dimension, its index would be `1`, and the parameter name would be `cd1` (if the index were 8 it would be `cd8`):
+For example, if this is your first custom dimension, its index would be `1`,
+and the parameter name would be `cd1` (if the index were 8 it would be `cd8`):
 
 ```js
 workbox.googleAnalytics.initialize({
@@ -135,7 +137,11 @@ ga('send', 'pageview');
 
 ### Using a custom metric to track time requests spent in the queue
 
-If you were curious to know how much time had passed between when an offline interaction took place and when connectivity was restored and the request was successfully retried, you could track this using a [custom metric](https://support.google.com/analytics/answer/2709828) and the `hitFilter` configuration option:
+If you were curious to know how much time had passed between when an offline
+interaction took place and when connectivity was restored and the request was
+successfully retried, you could track this using a
+[custom metric](https://support.google.com/analytics/answer/2709828) and
+the `hitFilter` configuration option:
 
 **1)** [Create a new custom metric](https://support.google.com/analytics/answer/2709829)
 in Google Analytics. Give it a name like "Offline Queue Time", set its
