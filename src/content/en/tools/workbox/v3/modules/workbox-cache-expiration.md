@@ -123,12 +123,12 @@ Whenever you update a cached entry, you need to call the `updateTimestamp()`
 method so that it’s age is updated.
 
 ```javascript
-openCache.put(
+await openCache.put(
   request,
   response
 );
 
-expirationManager.updateTimestamp(request.url);
+await expirationManager.updateTimestamp(request.url);
 ```
 
 Then whenever you want to expire a set of entries you can call the
@@ -136,5 +136,5 @@ Then whenever you want to expire a set of entries you can call the
 `maxEntries` configuration.
 
 ```javascript
-expirationManager.expireEntries();
+await expirationManager.expireEntries();
 ```
