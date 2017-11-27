@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New features and changes coming to DevTools in Chrome 60.
 
-{# wf_updated_on: 2017-05-23 #}
+{# wf_updated_on: 2017-07-14 #}
 {# wf_published_on: 2017-05-23 #}
-{# wf_tags: chrome60,devtools #}
+{# wf_tags: chrome60,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: New features and changes coming to DevTools in Chrome 60. #}
 
@@ -14,14 +14,30 @@ description: New features and changes coming to DevTools in Chrome 60.
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Welcome! Here's what's new in DevTools in Chrome 60. You can check what
-version of Chrome you're running at `chrome://version`.
+Welcome! New features and major changes coming to DevTools in Chrome 60 include:
 
-Google I/0 '17 is a wrap. Check out Paul Irish's "DevTools: State of the
-Union" talk below to learn more about what the team has been working on.
+* [A new Audits panel](#lighthouse), including tests for progressive web apps,
+  performance, accessibility, and best practices.
+* [Third-party badges](#badges). Find out which third-parties are making
+  network requests, logging to the Console, and executing JavaScript.
+* [Continue To Here](#continue). A new gesture that can speed up your
+  JavaScript debugging workflow.
+* [Predictable debugging for asynchronous JavaScript](#step-into-async).
+* [Object previews in the Console](#object-previews).
+* [Real-time updates in the Coverage tab](#coverage).
+* [A new menu for selecting contexts in the Console](#context).
+* [Simpler network throttling options](#network-throttling).
+* [Async stack traces on by default](#async-stacks).
+
+Note: You can check what version of Chrome you're running at
+`chrome://version`. Chrome auto-updates to a new major version about every 6
+weeks.
+
+Check out the video version of these release notes below or read on to learn
+more.
 
 <div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="PjjlwAvV8Jg"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="Qnmb2YhkQmQ"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -33,6 +49,19 @@ Union" talk below to learn more about what the team has been working on.
 The Audits panel is now powered by [Lighthouse][LH]. Lighthouse provides a
 comprehensive set of tests for measuring the quality of your web pages.
 
+[LH]: /web/tools/lighthouse
+
+The scores at the top for [**Progressive Web App**][PWA], [**Performance**][Perf],
+[**Accessibility**][a11y], and [**Best Practices**][BP] are your aggregate scores for each
+of those categories. The rest of the report is a breakdown of each of the
+tests that determined your scores. Improve the quality of your web page by
+fixing the failing tests.
+
+[PWA]: /web/progressive-web-apps/
+[Perf]: /web/fundamentals/performance/
+[a11y]: /web/fundamentals/accessibility/
+[BP]: /web/fundamentals/
+
 <figure>
   <img src="/web/updates/images/2017/05/lh-report.png"
        alt="A Lighthouse report"/>
@@ -40,16 +69,6 @@ comprehensive set of tests for measuring the quality of your web pages.
     <b>Figure 1</b>. A Lighthouse report
   </figcaption>
 </figure>
-
-Check out the DevTools talk from Google I/O '17 below to learn more. Lighthouse
-is discussed at 32:30.
-
-<div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="PjjlwAvV8Jg"
-          data-autohide="1" data-showinfo="0" frameborder="0" 
-          data-start="1948" allowfullscreen>
-  </iframe>
-</div>
 
 To audit a page:
 
@@ -59,17 +78,37 @@ To audit a page:
    device, runs a bunch of tests against the page, and then displays the
    results in the **Audits** panel.
 
-The scores at the top for **Progressive Web App**, **Performance**,
-**Accessibility**, and **Best Practices** are your aggregate scores for each
-of those categories. The rest of the report is a breakdown of each of the
-tests that determined your scores. Improve the quality of your web page by
-fixing the failing tests.
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'WNDT60 / New Audits Panel / Sentiment';
+{% include "web/updates/2017/05/_sentiment.js" %}
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
 
-[LH]: /web/tools/lighthouse
+#### Lighthouse at Google I/O '17 {: #lighthouse-at-io }
+
+Check out the DevTools talk from Google I/O '17 below to learn more about Lighthouse's
+integration in DevTools.
+
+Note: The video should start playing at 32:30, which is when Paul discusses Lighthouse.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="PjjlwAvV8Jg"
+          data-autohide="1" data-showinfo="0" frameborder="0" 
+          data-start="1948" allowfullscreen>
+  </iframe>
+</div>
+
+#### Contribute to Lighthouse {: #contribute-to-lighthouse }
 
 Lighthouse is an open-source project. To learn lots more about how it works
 and how to contribute to it, check out the Lighthouse talk from Google I/O
 '17 below.
+
+[Got an idea for a Lighthouse audit? Post it here!][ideas]
+
+[ideas]: https://groups.google.com/d/msg/google-chrome-developer-tools/Wb76dhsEll4/W8Ab2WICBAAJ
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="NoRYn6gOtVo"
@@ -80,7 +119,8 @@ and how to contribute to it, check out the Lighthouse talk from Google I/O
 ### Third-party badges {: #badges }
 
 Use third-party badges to get more insight into the entities that are
-making network requests on a page and logging to the Console.
+making network requests on a page, logging to the Console, and executing
+JavaScript.
 
 <figure>
   <img src="/web/updates/images/2017/05/network-badges.png"
@@ -105,7 +145,10 @@ To enable third-party badges:
 
 Use the **Group by product** option in the **Call Tree** and
 **Bottom-Up** tabs to group performance recording activity by the third-party
-entities that caused the activities.
+entities that caused the activities. See [Get Started With Analyzing Runtime
+Performance][GSRP] to learn how to analyze performance with DevTools.
+
+[GSRP]: /web/tools/chrome-devtools/evaluate-performance/
 
 <figure>
   <img src="/web/updates/images/2017/05/group-by-product.png"
@@ -114,6 +157,50 @@ entities that caused the activities.
     <b>Figure 4</b>. Grouping by product in the <b>Bottom-Up</b> tab
   </figcaption>
 </figure>
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'WNDT60 / Third-Party Badges / Sentiment';
+{% include "web/updates/2017/05/_sentiment.js" %}
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var response = 'Thanks for the feedback. Please tweet us at ' +
+    '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
+    '<a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">mailing ' +
+    'list</a> if you\'ve got any strong opinions on the matter.';
+var label = 'WNDT60 / Third-Party Badges / Should Be Enabled By Default';
+var feedback = {
+  "category": "DevTools",
+  "question": 'Do you think Third-Party Badges should be enabled by default?',
+  "choices": [
+    {
+      "button": {
+        "text": "Yes"
+      },
+      "response": response,
+      "analytics": {
+        "label": label
+      }
+    },
+    {
+      "button": {
+        "text": "No"
+      },
+      "response": response,
+      "analytics": {
+        "label": label,
+        "value": 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
 
 ### A new gesture for Continue to Here {: #continue }
 
@@ -134,6 +221,19 @@ highlights the jumpable destinations in blue.
   </figcaption>
 </figure>
 
+See [Get Started With Debugging JavaScript][GSDJ] to learn the basics of
+debugging in DevTools.
+
+[GSDJ]: /web/tools/chrome-devtools/javascript/
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'WNDT60 / Continue To Here / Sentiment';
+{% include "web/updates/2017/05/_sentiment.js" %}
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
+
 ### Step into async {: #step-into-async }
 
 A big theme for the DevTools team in the near future is to make debugging
@@ -146,12 +246,23 @@ Linux), DevTools highlights jumpable asynchronous destinations in green.
 
 Check out the demo below from the DevTools talk at I/O for an example.
 
+Note: The video should start playing at 17:40, which is when Paul discusses
+the feature.
+
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="PjjlwAvV8Jg"
           data-autohide="1" data-showinfo="0" frameborder="0" 
           data-start="1060" allowfullscreen>
   </iframe>
 </div>
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'WNDT60 / Step Into Async / Sentiment';
+{% include "web/updates/2017/05/_sentiment.js" %}
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
 
 ## Changes {: #changes }
 
@@ -177,6 +288,14 @@ Now, the Console provides more information about the contents of the object.
   </figcaption>
 </figure>
 
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'WNDT60 / New Object Previews UI / Sentiment';
+{% include "web/updates/2017/05/_sentiment.js" %}
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
+
 ### More informative context selection menu in the Console {: #context }
 
 The Console's Context Selection menu now provides more information about
@@ -195,10 +314,18 @@ available contexts.
   </figcaption>
 </figure>
 
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'WNDT60 / New Context Selection Menu UI / Sentiment';
+{% include "web/updates/2017/05/_sentiment.js" %}
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
+
 ### Real-time updates in the Coverage tab {: #coverage }
 
 When recording code coverage in Chrome 59, the **Coverage** tab would just
-display **Recording**, with no visibility into what code was being used.
+display "Recording...", with no visibility into what code was being used.
 Now, the **Coverage** tab shows you in real-time what code is being used.
 
 <figure>
@@ -218,6 +345,14 @@ Now, the **Coverage** tab shows you in real-time what code is being used.
     <b>Coverage</b> tab
   </figcaption>
 </figure>
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'WNDT60 / Real-Time Coverage Tab Updates / Sentiment';
+{% include "web/updates/2017/05/_sentiment.js" %}
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
 
 ### Simpler network throttling options {: #network-throttling }
 
@@ -239,6 +374,14 @@ throttling tools. DevTools no longer shows the latency, download, and upload
 metrics next to each option, because those values were misleading. The goal
 is to match the true experience of each option.
 
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'WNDT60 / Simplified Network Throttling / Sentiment';
+{% include "web/updates/2017/05/_sentiment.js" %}
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
+
 ### Async stacks on by default {: #async-stacks }
 
 The **Async** checkbox has been removed from the **Sources** panel. Async
@@ -251,11 +394,39 @@ capture async stack traces` command in the [Command Menu][CM].
 [Settings]: /web/tools/chrome-devtools/ui#settings
 [CM]: /web/tools/chrome-devtools/ui#command-menu
 
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'WNDT60 / Async Stacks On By Default / Sentiment';
+{% include "web/updates/2017/05/_sentiment.js" %}
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
+
+## DevTools at Google I/O '17 {: #io }
+
+Check out the talk by the mythical Paul Irish below to learn more about
+what the DevTools team has been working on over the past year and the big
+themes that they're tackling in the near future.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="PjjlwAvV8Jg"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 ## Feedback {: #feedback }
 
 The best place to discuss any of the features or changes you see here is
-the [google-chrome-developer-tools@googlegroups.com mailing list][ML].
+the [google-chrome-developer-tools@googlegroups.com mailing list][ML]. You
+can also tweet us at [@ChromeDevTools](https://twitter.com/chromedevtools) if
+you're short on time.
 
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 
-That's all for what's new in DevTools in Chrome 60. See you in 6 weeks!
+That's all for what's new in DevTools in Chrome 60. See you in 6 weeks for
+Chrome 61!
+
+## Links to previous release notes {: #links }
+
+* [What's New In DevTools (Chrome 59)](/web/updates/2017/04/devtools-release-notes)
+* [What's New In DevTools (Chrome 58)](/web/updates/2017/03/devtools-release-notes)

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: O Kit do iniciante na Web é modelo e um conjunto de ferramentas para desenvolver aplicativos para vários dispositivos.
 

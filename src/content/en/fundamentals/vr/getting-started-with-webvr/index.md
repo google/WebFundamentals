@@ -1,16 +1,16 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to take a WebGL scene in Three.js and add WebVR capabilities.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-10-18 #}
 {# wf_published_on: 2016-12-12 #}
+{# wf_blink_components: Blink>WebVR #}
 
 # Getting Started with WebVR {: .page-title }
 
-{% include "web/_shared/contributors/paullewis.html" %}
-{% include "web/_shared/contributors/mscales.html" %}
-
-Warning: WebVR is still experimental and subject to change.
+Note: This article is written for [WebVR 1.1](../status#version_1_1), not
+[WebVR 2.0](../status#version_2_0), which is still under development. WebVR is
+still experimental and subject to change.
 
 In this guide we will be exploring the WebVR APIs, and using them to enhance a simple WebGL scene built with [Three.js](https://threejs.org/). For production work, however, you may want to starting with existing solutions, like [WebVR Boilerplate](https://github.com/borismus/webvr-boilerplate). If you’re totally new to Three.js, you can use this [handy starting guide](https://aerotwist.com/tutorials/getting-started-with-three-js/). The community is also extremely supportive, so if you get stuck, definitely give them a shout.
 
@@ -28,7 +28,7 @@ For more information, take a look at [the WebVR Status](../status/) page.
 
 ## Get access to VR Displays
 
-So with a WebGL scene, what do we need to do get it working with WebVR? Well, firstly we need to query the browser to discover if there are any VR displays available, which we can do with navigator.getVRDisplays().
+So with a WebGL scene, what do we need to do get it working with WebVR? Well, firstly we need to query the browser to discover if there are any VR displays available, which we can do with `navigator.getVRDisplays()`.
 
     navigator.getVRDisplays().then(displays => {
       // Filter down to devices that can present.
@@ -81,11 +81,11 @@ Finally, we’re ready to present the user with a VR scene, which is really exci
 
 Firstly let’s talk about what we need to do.
 
-* Ensure we use the device’s `requestAnimationFrame` callback.
+* Ensure we use the device’s `requestAnimationFrame()` callback.
 * Request the current pose, orientation, and eye information from the VR device.
 * Split our WebGL context into two halves, one for each eye, and draw each.
 
-Why do we need to use a different `requestAnimationFrame` to the one provided with the window object? Because we’re working with a display whose refresh rate may differ from the host machine! If the headset has a refresh rate of 120Hz, we need to generate frames according to that rate, even if the host machine refreshes its screen at 60Hz. The WebVR API accounts for that by giving us a different `requestAnimationFrame` API to call. In the case of a mobile device, there is typically only one display (and on Android today the refresh rate is 60Hz), but even so we should use the correct API to make our code future-proof and as broadly compatible as possible.
+Why do we need to use a different `requestAnimationFrame()` to the one provided with the window object? Because we’re working with a display whose refresh rate may differ from the host machine! If the headset has a refresh rate of 120Hz, we need to generate frames according to that rate, even if the host machine refreshes its screen at 60Hz. The WebVR API accounts for that by giving us a different `requestAnimationFrame()` API to call. In the case of a mobile device, there is typically only one display (and on Android today the refresh rate is 60Hz). Even so we should use the correct API to make our code future-proof and as broadly compatible as possible.
 
     _render () {
       // Use the VR display's in-built rAF (which can be a diff refresh rate to
@@ -95,18 +95,18 @@ Why do we need to use a different `requestAnimationFrame` to the one provided wi
       …
     }
 
-Next up we need to request the information about where the person’s head is, its rotation, and any other information we need to be able to do the drawing correctly, which we do with `getFrameData()`.
+Next, we need to request the information about where the person’s head is, its rotation, and any other information we need to be able to do the drawing correctly, which we do with `getFrameData()`.
 
     // Get all the latest data from the VR headset and dump it into frameData.
     this._vr.display.getFrameData(this._vr.frameData);
 
-`getFrameData()` will take an object on which it can place the information we need. It needs to be a `VRFrameData` object, which we can create with `new VRFrameData()`.
+`getFrameData()` takes an object on which it can place the information we need. It needs to be a `VRFrameData` object, which we can create with `new VRFrameData()`.
 
     this._vr.frameData = new VRFrameData();
 
 There’s lots of interesting information in the frame data, so let’s take a quick look over that.
 
-* **timestamp**. The timestamp of the update from the device. This value starts at 0 the first time getFrameData is invoked on the VR display.
+* **timestamp**. The timestamp of the update from the device. This value starts at 0 the first time getFrameData() is invoked on the VR display.
 
 * **leftProjectionMatrix** and **rightProjectionMatrix**. These are the matrices for the camera that account for the perspective of the eyes in the scene. We’ll talk more about these in a moment.
 
@@ -197,7 +197,7 @@ With that code we really *are* done this time. If you want the final version, do
 
 WebVR is a really awesome way to add immersion to your content, and using libraries like Three.js makes it much easier to get going with WebGL. There are some important things to remember, though.
 
-* **Build in Progressive Enhancement from the start.** As we’ve mentioned several times in this guide, it’s important to build a good base level experience, onto which you can layer WebVR. Many experiences can be implemented with mouse / touch control, and can upgrade through accelerometer controls, to fully-fledged VR experiences. Maximising your audience is always worthwhile.
+* **Build in Progressive Enhancement from the start.** As we’ve mentioned several times, it’s important to build a good base level experience onto which you can layer WebVR. While billions of people can reach your page only a few million can see your VR content. Many experiences can be implemented with mouse / touch control, and can upgrade through accelerometer controls, to fully-fledged VR experiences. Maximizing your audience is always worthwhile.
 
 * **Remember you’re going to render your scene twice.** You may need to think about Level of Detail (LOD) and other techniques to ensure that when you render the scene twice it scales down the computation workload for the CPU and GPU. Above all else you must maintain a solid frame rate! No amount of showbiz is worth someone feeling extreme discomfort from motion sickness!
 

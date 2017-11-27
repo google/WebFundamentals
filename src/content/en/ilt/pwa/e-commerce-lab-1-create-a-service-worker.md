@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-27T21:27:42Z #}
+{# wf_updated_on: 2017-06-14 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -73,7 +73,7 @@ Then run the following:
 
     npm run serve
 
-This runs the default task in __gulpfile.babel.js__ which copies the project files to the appropriate folder and starts a server. Open your browser and navigate to localhost:8080. The app is a mock furniture website, "Modern Furniture Store". Several furniture items should display on the front page. 
+This runs the default task in __gulpfile.babel.js__ which copies the project files to the appropriate folder and starts a server. Open your browser and navigate to `localhost:8080`. The app is a mock furniture website, "Modern Furniture Store". Several furniture items should display on the front page. 
 
 When the app opens, confirm that a service worker is not registered at local host by  [checking developer tools](tools-for-pwa-developers#accesssw). If there is a service worker at localhost,  [unregister it](tools-for-pwa-developers#unregister) so it doesn't interfere with the lab.
 

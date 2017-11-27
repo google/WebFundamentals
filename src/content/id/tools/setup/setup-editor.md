@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Editor kode Anda adalah alat development utama; Anda akan memakainya untuk menulis dan menyimpan baris kode. Tulis kode yang lebih baik dengan mempelajari pintasan editor Anda dan memasang plugin utama.
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-05-28 #}
 
 # Menyiapkan Editor Anda {: .page-title }
@@ -27,7 +27,7 @@ paket yang memudahkan Anda memasang plugin dan menambahkan fungsionalitas baru.
 
 Ada dua opsi unduhan untuk Sublime Text, yaitu [versi 2](http://www.sublimetext.com/2) atau [versi 3](http://www.sublimetext.com/3). Versi 3 cukup stabil dan akan memberi Anda akses ke paket yang tidak tersedia di Sublime Text 2, tetapi mungkin versi 2 terasa lebih andal.
 
-Catatan: <a href='http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/'>Entri blog</a> Rob Dodson tentang cara mengenali dan menyukai Sublime adalah referensi yang sangat baik untuk mendapatkan manfaat maksimal dari editor Anda. Konsepnya relevan untuk semua editor teks, bukan hanya Sublime.
+Note: <a href='http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/'>Entri blog</a> Rob Dodson tentang cara mengenali dan menyukai Sublime adalah referensi yang sangat baik untuk mendapatkan manfaat maksimal dari editor Anda. Konsepnya relevan untuk semua editor teks, bukan hanya Sublime.
 
 ## Mengapa sebaiknya menggunakan pengelola paket?
 
@@ -106,7 +106,7 @@ Tambahkan penanda di gutter setiap kali ada perubahan yang dibuat pada file.
 
 ### Gutter Color
 
-Catatan: Ini hanya tersedia di Sublime Text 3
+Note: Ini hanya tersedia di Sublime Text 3
 
 Gutter Color menampilkan sampel warna kecil di sebelah CSS Anda.
 

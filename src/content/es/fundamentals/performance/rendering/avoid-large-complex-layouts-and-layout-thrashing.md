@@ -4,7 +4,7 @@ description: El diseño es el aspecto a través del cual el navegador descifra l
 
 # Evita los diseños grandes y complejos, y la paginación excesiva de diseños {: .page-title }
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-20 #}
 
 {% include "web/_shared/contributors/paullewis.html" %}
@@ -56,7 +56,7 @@ Si no es posible evitar el diseño, la clave es, nuevamente, usar Chrome DevTool
 
 Si analizamos el fotograma del ejemplo anterior, veremos que más de 20 ms se destinan al diseño interior, un valor demasiado elevado si necesitamos 16 ms para que en una animación aparezca un fotograma en la pantalla. También podrás ver que DevTools te indicará el tamaño del árbol (1618 elementos en este caso) y la cantidad de nodos que necesitaban diseño.
 
-Nota: ¿Deseas acceder a una lista completa de las propiedades de la CSS que activan el diseño, la pintura o la composición? Consulta [Desencadenadores de CSS](https://csstriggers.com).
+Note: ¿Deseas acceder a una lista completa de las propiedades de la CSS que activan el diseño, la pintura o la composición? Consulta [Desencadenadores de CSS](https://csstriggers.com).
 
 ## Usa flexbox en lugar de modelos de diseño anteriores
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-05-22T22:49:18Z #}
+{# wf_updated_on: 2017-07-11 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -345,17 +345,9 @@ You can check Lighthouse flags and options with:
 
     lighthouse --help
 
+The lighthouse command line tool will generate an HTML (the same as the Chrome extension) in the working directory. You can then open the file with your browser.
 
-## The lighthouse command line tool will generate an HTML (the same as the Chrome extension) in the working directory. You can then open the file with your browser.
-
-
-
-
-
-## <a id="8" />
-
-
-
+<div id="8"></div>
 
 
 ## Congratulations!
@@ -363,6 +355,6 @@ You can check Lighthouse flags and options with:
 
 
 
-You now know how to use the Lighthouse tool to audit your progressive web apps. 
+You have learned how to use the Lighthouse tool to audit your progressive web apps. 
 
 

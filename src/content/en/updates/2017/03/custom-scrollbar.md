@@ -2,14 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Custom transform matrices allow you to build frame-perfect custom scrollbars.
 
-{# wf_updated_on: 2017-03-23 #}
+{# wf_updated_on: 2017-11-07 #}
 {# wf_published_on: 2017-03-23 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/2017/03/custom-scrollbar/poster.jpg #}
 {# wf_featured_snippet: Custom transform matrices allow you to build frame-perfect custom scrollbars. #}
 
 
-# CSS deep-dive: matrix3d() for a frame-perfect custom scrollbar {: .page-title }
+# CSS Deep-Dive: matrix3d() For a Frame-Perfect Custom Scrollbar {: .page-title }
 
 {% include "web/_shared/contributors/surma.html" %}
 
@@ -23,9 +23,9 @@ JavaScript while scrolling, just some setup code.
 
 ### TL;DR: {: .hide-from-toc }
 You don’t care about the nitty gritty? You just want to look at the
-[Nyan cat demo](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/)
+[Nyan cat demo](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/)
 and get the library? You can find the demo’s code in our
-[GitHub repo](https://github.com/GoogleChrome/ui-element-samples/tree/gh-pages/custom-scrollbar).
+[GitHub repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/custom-scrollbar).
 
 ### LAM;WRA (Long and mathematical; will read anyways): {: .hide-from-toc }
 Note: This article does some weird stuff with homogeneous coordinates as well as
@@ -110,7 +110,7 @@ Before we can make use of `matrix3d()`, we need a 3D context – because without
 homogeneous coordinates. To create a 3D context we need a container with a
 `perspective` and some elements inside that we can transform in the newly
 created 3D space. For
-[example](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-1.html):
+[example](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/step-1.html):
 
 <img src="/web/updates/images/2017/03/custom-scrollbar/perspective.png"
   alt="A piece of CSS code that distorts a div using CSS’
@@ -190,7 +190,7 @@ coordinate instead of subtracting it. The element will be translated _downwards_
 if we scroll _down_.
 
 However, if we just put this matrix in our
-[example](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-2.html),
+[example](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/step-2.html),
 the element will not be displayed. This is because the CSS spec requires that any
 vertex with _w_ < 0 blocks the element from being rendered. And since our z
 coordinate is currently 0, and p is 1, _w_ will be -1.
@@ -210,7 +210,7 @@ to set z = -2.
     }
 
 Lo and behold, our
-[box is back](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-3.html)!
+[box is back](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/step-3.html)!
 
 ## Step 2: Make it move
 Now our box is there and is looking the same way it would have without any
@@ -236,7 +236,7 @@ spacer element that takes up space:
     </style>
 
 And now
-[scroll the box](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-4.html)!
+[scroll the box](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/step-4.html)!
 The red box moves down.
 
 ## Step 3: Give it a size
@@ -281,7 +281,7 @@ with permanent native scrollbars. We will completely hide the native scrollbars
 later with a trick.
 
 The size of the thumb is
-[looking good](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-5.html),
+[looking good](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/step-5.html),
 but it’s moving way too fast. This is where we can grab our technique from the
 parallax scroller. If we move the element further back it will move slower while
 scrolling. We can correct the size by scaling it up. But how much should we push
@@ -329,13 +329,13 @@ codify this!
     </script>
 
 We have a
-[scrollbar](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/step-6.html)!
+[scrollbar](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/step-6.html)!
 And it’s just a DOM element that we can style however we like. One thing that is
 important to do in terms of accessibility is to make the thumb respond to
 click-and-drag, as many users are used to interacting with a scrollbar that way.
 For the sake of not making this blog post even longer, I am not going explain
 the details for that part. Take a look at the
-[library code](https://github.com/GoogleChrome/ui-element-samples/blob/gh-pages/custom-scrollbar/scrollbar.js#L5-L25)
+[library code](https://github.com/GoogleChromeLabs/ui-element-samples/blob/gh-pages/custom-scrollbar/scrollbar.js#L5-L25)
 for details if you want to see how it’s done.
 
 ## What about iOS?
@@ -360,7 +360,7 @@ now out of view.
 ## Fin
 Putting it all together, we can now build a frame-perfect custom
 scrollbar – like the one in our
-[Nyan cat demo](https://googlechrome.github.io/ui-element-samples/custom-scrollbar/).
+[Nyan cat demo](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/).
 
 If you can’t see Nyan cat, you are experiencing
 [a bug that we found and filed](https://crbug.com/699140)

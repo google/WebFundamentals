@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn how to get started building Progressive Web Apps
 
-{# wf_updated_on: 2015-12-15 #}
+{# wf_updated_on: 2017-10-11 #}
 {# wf_published_on: 2015-12-15 #}
 {# wf_tags: progressive-web-apps,serviceworker #}
 {# wf_featured_image: /web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg #}
@@ -13,7 +13,7 @@ description: Learn how to get started building Progressive Web Apps
 
 
 
-There's been much welcome discussion about [Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) lately. They're still a relatively new model, but their principles can equally enhance apps built with vanilla JS, React, Polymer, Angular or any other framework. In this post, I'll summarise some options and reference apps for getting started with your own progressive web app today.
+There's been much welcome discussion about [Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) lately. They're still a relatively new model, but their principles can equally enhance apps built with vanilla JS, React, Polymer, Angular or any other framework. In this post, I'll summarize some options and reference apps for getting started with your own progressive web app today.
 
 
 ## What is a Progressive Web App?
@@ -22,11 +22,11 @@ There's been much welcome discussion about [Progressive Web Apps](https://infreq
 
 **It's important to remember that Progressive Web Apps work everywhere but are supercharged in modern browsers. Progressive enhancement is a backbone of the model**.
 
-Aaron Gustafson likened [progressive enhancement](http://alistapart.com/article/understandingprogressiveenhancement) to a peanut M&M. The peanut is your content, the chocolate coating is your presentation layer and your JavaScript is the hard candy shell. This layer can vary in color and the exerience can vary depending on the capabilities of the browser using it.
+Aaron Gustafson likened [progressive enhancement](http://alistapart.com/article/understandingprogressiveenhancement) to a peanut M&M. The peanut is your content, the chocolate coating is your presentation layer and your JavaScript is the hard candy shell. This layer can vary in color and the experience can vary depending on the capabilities of the browser using it.
 
 Think of the candy shell as where many Progressive Web App features can live. They are experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser tab, no install required.
 
-As the user builds a relationship with these apps through repeat use, they make the candy shell even sweeter - loading very fast on slow network connections (thanks to [service worker](/web/fundamentals/getting-started/primers/service-workers)), sending relevant [Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/) and having a first-class icon on the user's home screen that can load them as fullscreen app experiences. They can also take advantage of smart [web app install banners](/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
+As the user builds a relationship with these apps through repeat use, they make the candy shell even sweeter - loading very fast on slow network connections (thanks to [service worker](/web/fundamentals/getting-started/primers/service-workers)), sending relevant [Push Notifications](/web/fundamentals/push-notifications) and having a first-class icon on the user's home screen that can load them as fullscreen app experiences. They can also take advantage of smart [web app install banners](/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
 
 <img
 src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg" alt="Web app install banners for engagement, launch from the user's home screen, splash screen in Chrome for Android, works offline with service worker"/>
@@ -150,7 +150,7 @@ Chrome, Opera and Firefox have all implemented support for service worker with E
 
 > Push notifications allow your users to opt-in to timely updates from sites they love and allow you to effectively re-engage them with customized, engaging content.
 
-Effectively, you can build web apps that users can engage with outside of a tab. The browser can be closed and they don't even need to be actively using your web app to engage with your experience. The feature requires both service worker and a web app manifest, building on some of the features summarised earlier.
+Effectively, you can build web apps that users can engage with outside of a tab. The browser can be closed and they don't even need to be actively using your web app to engage with your experience. The feature requires both service worker and a web app manifest, building on some of the features summarized earlier.
 
 The Push API is [implemented](https://www.chromestatus.com/features/5416033485586432) in Chrome, in development in Firefox and [under consideration](https://dev.windows.com/en-us/microsoft-edge/platform/status/pushapi) in Edge. There are no public signals from Safari about their intent to implement this feature just yet.
 
@@ -172,7 +172,7 @@ One-shot Background Sync has been [enabled](https://codereview.chromium.org/1514
 
 There's really nothing stopping you from applying any of the above principles to an existing application or framework you're building with. A few other principles worth keeping in mind while building your Progressive Web App are the [RAIL](/web/tools/chrome-devtools/profile/evaluate-performance/rail) user-centric performance model and [FLIP](https://aerotwist.com/blog/flip-your-animations/) based animations.
 
-I'm hopeful that during 2016, we'll see an increasing number of boilerplates and seed projects organically baking in support for Progressive Web Apps as a first-class citizen. Until then, the barrier to adding these features to your own apps isn't very high and are imo, quite worth the effort.
+I'm hopeful that during 2016, we'll see an increasing number of boilerplates and seed projects organically baking in support for Progressive Web Apps as a first-class citizen. Until then, the barrier to adding these features to your own apps isn't very high and are IMHO, quite worth the effort.
 
 ## Architecture
 
@@ -180,7 +180,7 @@ There are different levels of how "all-in" one goes on the Progressive Web App m
 
 The [Application Shell architecture](https://medium.com/google-developers/instant-loading-web-apps-with-an-application-shell-architecture-7c0c2f10c73#.1s0o3w42k) encourages caching your application shell (the User Interface) so it works offline and populate its content using JavaScript. On repeat visits, this allows you to get meaningful pixels on the screen really fast without the network, even if your content eventually comes from there. This comes with significant performance gains.
 
-<img src="/web/updates/images/2015/12/getting-started-pwa/pwa-application-shell.jpg" alt="The application shell being visualised as breaking down the UI of your app, such as the drawer and the main content area"/>
+<img src="/web/updates/images/2015/12/getting-started-pwa/pwa-application-shell.jpg" alt="The application shell being visualized as breaking down the UI of your app, such as the drawer and the main content area"/>
 
 Jeremy Keith recently [commented](https://adactio.com/journal/9963) that in this type of model perhaps server-side rendering should not be viewed as a fallback but client-side rendering should be looked at as an enhancement. This is fair feedback.
 
@@ -196,7 +196,7 @@ My recommendation is reading our write-up on the architecture and evaluating how
 
 The `app-shell` repository contains a near-complete implementation of the [Application Shell architecture](https://medium.com/google-developers/instant-loading-web-apps-with-an-application-shell-architecture-7c0c2f10c73#.1s0o3w42k). It has a backend written in [Express.js](http://expressjs.com/en/index.html) and a front-end written in ES2015.
 
-Given that it covers both client and server-side portions of the model and there's quite a lot going on there, it will take some time to familiarise yourself with the codebase. It's otherwise our most comprehensive Progressive Web App starting point right now. Docs will be our next focus for this project.
+Given that it covers both client and server-side portions of the model and there's quite a lot going on there, it will take some time to familiarize yourself with the codebase. It's otherwise our most comprehensive Progressive Web App starting point right now. Docs will be our next focus for this project.
 
 ### Polymer starter kit
 

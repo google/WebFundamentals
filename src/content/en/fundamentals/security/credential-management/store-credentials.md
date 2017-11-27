@@ -1,7 +1,7 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-11-08 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Store Credentials {: .page-title }
@@ -124,7 +124,7 @@ For example:
       </td>
       <td>
         <code>string</code><br>
-        User identifer when invoking the identity provider specific
+        User identifier when invoking the identity provider specific
         authentication flow, typically as a value for <code>login_hint</code>
         in OAuth.
       </td>

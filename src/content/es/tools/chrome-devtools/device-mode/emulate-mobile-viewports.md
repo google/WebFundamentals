@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Device Mode de Chrome DevTools te permite imitar cómo se verá tu sitio de desarrollo en producción cuando esté en un conjunto de dispositivos.
 
@@ -175,7 +175,7 @@ Algunos ejemplos de sensibilidad "Relación de píxeles del dispositivo" (DPR) e
 * las reglas [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) 
  de las CSS;
 
-* el atributo [srcset](/web/fundamentals/design-and-ui/media/images/images-in-markup) 
+* el atributo [srcset](/web/fundamentals/design-and-ux/media/images/images-in-markup) 
  en las imágenes;
 
 * La propiedad `window.devicePixelRatio`.
@@ -188,7 +188,7 @@ pixelado.
 
 ### Consultas de medios{: #media-queries }
 
-[Consultas de medios](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)
+[Consultas de medios](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)
 son una parte esencial del diseño web adaptable. Para ver el inspector de consulta de medios,
 haz clic en **Show Media queries** en el menú de tres puntos. DevTools detecta las consultas de
 medios en tus hojas de estilo y las muestra como barras coloreadas en la regla superior.

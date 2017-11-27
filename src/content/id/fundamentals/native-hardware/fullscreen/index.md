@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Beralih ke layar penuh.
 
-{# wf_updated_on: 2016-10-01 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-10-01 #}
 
 # Membuat Pengalaman Layar Penuh {: .page-title }
@@ -43,7 +43,7 @@ utama yang perlu Anda perhatikan saat membangun pengalaman layar penuh adalah:
 * `document.fullscreenElement` (saat ini menjadi awalan di Chrome, Firefox dan IE)
   mengembalikan true jika ada elemen dalam mode layar penuh.
 
-Catatan: Anda akan melihat bahwa dalam versi berawalan ada banyak
+Note: Anda akan melihat bahwa dalam versi berawalan ada banyak
       inkonsistensi di antara casing 'S' di layar. Ini janggal, namun
       inilah masalah yang terjadi pada spesifikasi saat ini.
 
@@ -66,7 +66,7 @@ mode layar penuh.
 Contoh di atas sedikit rumit; saya telah menyembunyikan semua kompleksitas seputar
 penggunaan awalan vendor.
 
-Catatan: Huh, awalan vendor memang merepotkan!
+Note: Huh, awalan vendor memang merepotkan!
 
 Kode sesungguhnya jauh lebih kompleks. <a
 href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Mozilla
@@ -231,7 +231,7 @@ Opsi yang lebih baik untuk menggunakan Manifes Aplikasi Web.
 
 #### Manifes Aplikasi Web (Chrome, Opera, Firefox, Samsung)
 
-[Manifes untuk aplikasi web](/web/fundamentals/engage-and-retain/web-app-manifest/)
+[Manifes untuk aplikasi web](/web/fundamentals/web-app-manifest)
 adalah file JSON sederhana yang memberi Anda, sebagai
 developer, kemampuan mengontrol bagaimana aplikasi Anda muncul pada pengguna di berbagai area
 yang mereka harapkan untuk melihat aplikasi (misalnya layar beranda seluler), mengarahkan

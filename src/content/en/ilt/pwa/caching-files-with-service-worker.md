@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-25T15:50:01Z #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -23,7 +23,7 @@ Codelab:  [Caching Files with Service Worker](lab-caching-files-with-service-wor
 
 The Service Worker API comes with a  [Cache interface](https://developer.mozilla.org/en-US/docs/Web/API/Cache), that lets you create stores of responses keyed by request. While this interface was intended for service workers it is actually exposed on the window, and can be accessed from anywhere in your scripts. The entry point is `caches`.
 
-You are responsible for implementing how your script (service worker) handles updates to the cache. All updates to items in the cache must be explicitly requested; items will not expire and must be deleted. 
+You are responsible for implementing how your script (service worker) handles updates to the cache. All updates to items in the cache must be explicitly requested; items will not expire and must be deleted. However, if the amount of cached data exceeds the browser's storage limit, the browser will begin evicting all data associated with an origin, one origin at a time, until the storage amount goes under the limit again. See  [Browser storage limits and eviction criteria](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) for more information.
 
 <div id="whentostore"></div>
 

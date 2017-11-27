@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Opens External Anchors Using rel="noopender"" Lighthouse audit.
+description: Reference documentation for the "Opens External Anchors Using rel="noopener"" Lighthouse audit.
 
 {# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-11-30 #}

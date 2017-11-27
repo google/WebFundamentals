@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Chrome DevTools Timeline panel to record and analyze  all the activity in your application as it runs. It's the best place to start  investigating perceived performance issues in your application.
 

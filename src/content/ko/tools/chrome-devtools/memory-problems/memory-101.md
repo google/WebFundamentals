@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 이 섹션에서는 메모리 분석에 흔히 사용되는 일반적인 용어를 설명합니다. 이러한 용어는 여러 언어의 다양한 메모리 프로파일링 도구에 적용할 수 있습니다.
 

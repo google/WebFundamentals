@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to evaluate runtime performance in Chrome DevTools.
 
-{# wf_updated_on: 2017-04-26 #}
+{# wf_updated_on: 2017-06-08 #}
 {# wf_published_on: 2017-04-06 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -22,6 +22,48 @@ Animation, and Idle phases of your page.
 Caution: This tutorial is based on Chrome 59. If you use another version of
 Chrome, the UI and features of DevTools may be different. Check `chrome://help`
 to see what version of Chrome you're running.
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var response1 = "That's OK! This tutorial covers how the Performance panel works in depth. You " +
+    "should have no problem following along.";
+var response2 = "The Performance panel is pretty complicated. You may still learn some new stuff!";
+var feedback = {
+  "category": "DevTools",
+  "question": "Let's get started! How much do you use the Performance panel?",
+  "choices": [
+    {
+      "button": {
+        "text": "Never used it"
+      },
+      "response": response1,
+      "analytics": {
+        "label": "Runtime Tutorial / Experience / None"
+      }
+    },
+    {
+      "button": {
+        "text": "Sometimes"
+      },
+      "response": response1,
+      "analytics": {
+        "label": "Runtime Tutorial / Experience / Some"
+      }
+    },
+    {
+      "button": {
+        "text": "All the time"
+      },
+      "response": response2,
+      "analytics": {
+        "label": "Runtime Tutorial / Experience / A Lot"
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
 
 ## Get started {: #get-started }
 

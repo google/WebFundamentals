@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Application 패널에서 저장소, 데이터베이스 및 캐시를 검사하고 관리합니다.
 

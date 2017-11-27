@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 58 to help you plan.
 
-{# wf_updated_on: 2017-05-01 #}
+{# wf_updated_on: 2017-10-23 #}
 {# wf_published_on: 2017-03-17 #}
 {# wf_tags: deprecations,removals,chrome58 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -20,8 +20,8 @@ which is in beta as of March 16. This list is subject to change at any time.
 ## Mouse on Android stops firing TouchEvents
 
 Until Chrome 57, Android low-level mouse events in Chrome primarily followed an
-event path designed for touch interactions. For example, mouse drag motion while
-a mouse button is pressed generates `MotionEvents` delivered through
+event path designed for touch interactions. For example, a mouse drag motion occurring while
+a mouse button is pressed generates `MotionEvents`, delivered through
 `View.onTouchEvent`.
 
 But since touch events cannot support hover, hovering mousemoves followed a
@@ -33,7 +33,7 @@ Starting with Chrome 58, a mouse on Android M or later will:
 
 * No longer fire `TouchEvents`.
 * Fire a consistent sequence of `MouseEvents` with appropriate buttons and
-  other properties. 
+  other properties.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cNaFvMaYtNA/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5642080642662400) &#124;
@@ -53,6 +53,21 @@ applied. The old behavior was deprecated in Chrome 57, and is now removed.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5760965337415680) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=659464)
 
+## Remove content-initiated top frame navigations to data URLs
+
+Because of their unfamiliarity to non-technical browser users, we're
+increasingly seeing the `data:` scheme being used in spoofing and phishing
+attacks. To prevent this, we're blocking web pages from loading `data:` URLs
+in the top frame. This applies to `&lt;a&gt;` tags, `window.open`,
+`window.location` and similar mechanisms. The `data:` scheme will still work for
+resources loaded below by a page.
+
+This feature will be removed in Chrome 60.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/GbVcuwg_QjM/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5669602927312896) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=684011&desc=2)
+
 ## Remove deprecated names for motion path properties
 
 Motion path CSS properties allow authors to animate any graphical object along
@@ -61,7 +76,7 @@ an author-specified path. In compliance with the spec, several properties were
 The names of these properties were changed in the spec in mid 2016. Chrome
 implemented the
 [new names in Chrome 55 and Chrome 56](https://www.chromestatus.com/feature/6390764217040896).
-Console deprecation warnings were also implemented. 
+Console deprecation warnings were also implemented.
 
 In Chrome 58, the old property names are being removed. The affected properties
 and their new names are shown below.
@@ -73,12 +88,12 @@ and their new names are shown below.
 | motion-rotation | offset-rotate |
 | motion | offset |
 
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/o1C5NzGf9Q0/discussion) 
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/o1C5NzGf9Q0/discussion)
 
 ## Remove EME from non-secure contexts
 
 Some usages of
-[Encrypted Media Extenions (EME)](https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
+[Encrypted Media Extensions (EME)](https://developer.mozilla.org/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
 expose digital rights management implementations that are not open source,
 involve access to persistent unique identifiers, and/or run unsandboxed or with
 privileged access. Security risks are increased for sites exposed via non-secure
@@ -94,7 +109,7 @@ anticipated in the subsequent final. will not be in the upcoming proposed
 recommendation or subsequent final recommendation. The API has been showing a
 deprecation message on non-secure origins since Chrome 44 (May 2015). In Chrome
 58, it is now removed. This change is part of our broader effort to
-[remove powerful features from unsecure origins](https://bugs.chromium.org/p/chromium/issues/detail?id=520765).
+[remove powerful features from unsecure origins](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/tXmKPlXsnCQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5724389932793856) &#124;
@@ -118,7 +133,7 @@ is not supported in Edge or Safari, and it is being
 ## Remove pre-standard ChaCha20-Poly1305 ciphers
 
 In 2013, Chrome 31 deployed
-[new TLS cipher suites](https://security.googleblog.com/2014/04/speeding-up-and-strengthening-https.html) 
+[new TLS cipher suites](https://security.googleblog.com/2014/04/speeding-up-and-strengthening-https.html)
 based on Prof. Dan Bernstein's ChaCha20 and Poly1305 algorithms. These was
 later standardized, with small tweaks, at the IETF as
 [RFC 7539](https://tools.ietf.org/html/rfc7539)
@@ -212,11 +227,54 @@ through a notification over an insecure connection. Web push requires a secure
 origin, so this change will align non-push notifications with push
 notifications. This change is part of our broader effort to
 [remove powerful features from unsecure origins](https://bugs.chromium.org/p/chromium/issues/detail?id=520765).
-Removal is expected in Chrome 61.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/IVgkxkRNtMo/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5759967025954816) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=679821)
+
+### Deprecate usage of notifications from insecure iframes
+
+Permission requests from iframes can confuse users since it is difficult to
+distinguish between the containing page's origin and the origin of the iframe
+that is making the request. When the requests scope is unclear, it is difficult
+for users to judge whether to grant or deny permission.
+
+Disallowing notifications in iframes will also align the requirements for
+notification permission with that of push notifications, easing friction for
+developers.
+
+Developers who need this functionality can open a new window to request
+notification permission.
+
+Removal is in Chrome 62.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/n37ij1E_1aY/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/6451284559265792) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693)
+
+## Remove indexedDB.webkitGetDatabaseNames()
+
+We added this feature when Indexed DB was relatively new in Chrome and prefixing
+was all the rage. The API asynchronously returns a list of existing database
+names in an origin, which seemed sensible enough.
+
+Unfortunately, the design is flawed, in that the results may be obsolete as soon
+as they are returned, so it can really only be used for logging, not serious
+application logic. The
+[github issue](https://github.com/w3c/IndexedDB/issues/31) tracks/links to
+previous discussion on alternatives, which would require a different approach.
+While there's been on-and-off interest by developers, given the lack of cross-
+browser progress the problem has been worked around by library authors.
+
+Developers needing this functionality need to develop their own solution.
+Libraries like [Dexie.js](http://dexie.org/) for example use a global table
+which is itself another database to track the names of databases.
+
+This feature is removed in Chrome 60.
+
+[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/2fUr-3wFPKI/discussion)
+&#124; [Chromestatus Tracker](https://www.chromestatus.com/feature/5725741740195840) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=696010)
 
 <<../../_deprecation-policy.md>>
 

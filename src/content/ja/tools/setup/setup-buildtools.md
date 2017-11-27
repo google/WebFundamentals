@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: マルチデバイス サイトをゼロから構築します。ここでは、一連のビルドプロセス ツールを使用して、開発をスピードアップしたり、高速読み込みサイトを作成したりする方法について説明します。
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:由于大多数桌面设备都没有触摸屏、GPS 芯片和加速度计，所以测试它们比较困难。Chrome DevTools 传感器模拟器可以通过模拟常见的移动设备传感器来降低测试的开销。
 

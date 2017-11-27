@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para la auditoría de Lighthouse "El sitio no usa Application Cache".
 
@@ -28,7 +28,7 @@ sin conexión.
 
 [API]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
 
-[sw-appcache-behavior]: https://github.com/GoogleChrome/sw-helpers/blob/master/packages/sw-appcache-behavior
+[sw-appcache-behavior]: https://github.com/GoogleChrome/sw-appcache-behavior
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 

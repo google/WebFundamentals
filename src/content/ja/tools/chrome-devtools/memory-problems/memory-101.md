@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: このセクションでは、メモリ分析に使用される一般的な用語について説明します。このセクションは、さまざまな言語のさまざまなメモリ プロファイリング ツールに当てはめることができます。
 

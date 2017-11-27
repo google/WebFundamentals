@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Mantenha o código do lado do cliente legível e depurável mesmo depois de combinar, minificar ou compilar.
 

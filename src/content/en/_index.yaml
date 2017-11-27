@@ -31,6 +31,13 @@ landing_page:
       icon:
         path: /web/images/web-fundamentals-icon192x192.png
       path: /web/fundamentals/
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webHome
+      - name: data-label
+        value: hero-webfu
     - heading: Tools
       description: >
         Discover tools that can help you kickstart your development and 
@@ -38,6 +45,13 @@ landing_page:
       icon:
         icon_name: build
       path: /web/tools/
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webHome
+      - name: data-label
+        value: hero-tools
     - heading: Updates
       description: >
         Stay up to date on new web platform features, changes to Chrome
@@ -45,6 +59,13 @@ landing_page:
       icon:
         icon_name: whatshot
       path: /web/updates/
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webHome
+      - name: data-label
+        value: hero-updates
 
 
 
@@ -75,10 +96,17 @@ landing_page:
       icon:
         icon_name: devices_other
       path: /web/progressive-web-apps/
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webHome
+      - name: data-label
+        value: solution-pwa
     - heading: Accelerated Mobile Pages
       description: >
         <p>
-          The Accelerated Mobile Pages project provides a new standard,
+          The Accelerated Mobile Pages (AMP) project provides a new standard,
           built on top of existing web technologies, to enable blazing-fast
           page rendering and content delivery.
         </p>
@@ -96,7 +124,14 @@ landing_page:
         </ul>
       icon:
         icon_name: offline_bolt
-      path: https://www.ampproject.org/docs/get_started/create
+      path: /amp/
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webHome
+      - name: data-label
+        value: solution-amp
 
 
   - items:
@@ -110,6 +145,13 @@ landing_page:
       icon:
         icon_name: bug_report
       path: feedback/
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webHome
+      - name: data-label
+        value: solution-feedback
     - heading: ''
       description: ''
 
@@ -120,10 +162,10 @@ landing_page:
         <div class="feed hfeed" data-limit="2">
           <a href="https://google-developers.appspot.com/web/updates/rss.xml"></a>
           <article class="hentry">
-            <a class="link"><header></header></a>
+            <a class="link gc-analytics-event" data-category="webHome" data-label="whats-new"><header></header></a>
             <article class="entry-content" data-truncate="50w"></article>
             <div>
-              <a class="link"><time class="updated published"></time></a>
+              <a class="link gc-analytics-event" data-category="webHome" data-label="whats-new"><time class="updated published"></time></a>
             </div>
           </article>
         </div>
@@ -141,6 +183,12 @@ landing_page:
       buttons:
       - label: Learn more
         path: /web/fundamentals/security/
+        classname: gc-analytics-event
+        attributes:
+        - name: data-category
+          value: webHome
+        - name: data-label
+          value: bp-https
 
     - heading: Optimize performance
       description: >
@@ -151,6 +199,12 @@ landing_page:
       buttons:
       - label: Learn more
         path: /web/fundamentals/performance/
+        classname: gc-analytics-event
+        attributes:
+        - name: data-category
+          value: webHome
+        - name: data-label
+          value: bp-optimize
 
     - heading: Make it responsive
       description: >
@@ -160,4 +214,10 @@ landing_page:
       image_path: images/content-responsive-2x.jpg
       buttons:
       - label: Learn more
-        path: /web/fundamentals/design-and-ui/responsive/
+        path: /web/fundamentals/design-and-ux/responsive/
+        classname: gc-analytics-event
+        attributes:
+        - name: data-category
+          value: webHome
+        - name: data-label
+          value: bp-responsive

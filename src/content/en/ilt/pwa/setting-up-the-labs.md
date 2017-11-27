@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-05-05T00:51:33Z #}
+{# wf_updated_on: 2017-08-10 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -52,11 +52,11 @@ If you have installed Node Version Manager (for macOS, Linux, or Windows):
 
 For example:
 
-    nvm install node 6.9.2
+    nvm install node 6.11.2
 
 For the Windows version you can specify whether to install the 32-bit or 64-bit binaries.  For example:
 
-    nvm install node 6.9.2 64
+    nvm install node 6.11.2 64
 
 ### Without NVM
 
@@ -98,7 +98,7 @@ Some projects in the download contain folders that correspond to checkpoints in 
 
 
 
-Note: If you do not use Git, then you can <a href="https://github.com/google-developer-training/pwa-training-labs/archive/master.zip>download the repo as a zip file</a>. Note that if you download the repository with this method, it will be named __pwa-training-labs-master__ instead of __pwa-training-labs__. Rename the folder to __pwa-training-labs__ so that the name is consistent with the lab instructions.
+Note: If you do not use Git, then you can <a href="https://github.com/google-developer-training/pwa-training-labs/archive/master.zip">download the repo as a zip file</a>. Note that if you download the repository with this method, it will be named __pwa-training-labs-master__ instead of __pwa-training-labs__. Rename the folder to __pwa-training-labs__ so that the name is consistent with the lab instructions.
 
 
 
@@ -110,15 +110,15 @@ Note: If you do not use Git, then you can <a href="https://github.com/google-dev
 
 From the __pwa-training-labs__ directory, run the server with the following:
 
+
+
+Note: If this command blocks your command line, open a new command-line window.
+
+
+
     http-server -p 8080 -a localhost -c 0
 
 Remember to restart the server if you shut down your computer, or end the process using  `Ctrl-c`.
-
-
-
-Note: If this command blocks your command line, open a new command line window.
-
-
 
 ### Explanation
 

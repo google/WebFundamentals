@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: En este instructivo interactivo, comenzarás a depurar JavaScript con Chrome DevTools.
 
-{# wf_updated_on: 2017-01-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2017-01-04 #}
 
 <style>
@@ -107,7 +107,7 @@ los eventos `click`. Cuando se haga clic en *cualquier* nodo, y el nodo tenga un
 DevTools realizará una pausa automáticamente en la primera línea del controlador
 `click` de dicho nodo.
 
-Nota: Este es solo uno de los varios tipos de puntos de interrupción que DevTools ofrece.
+Note: Este es solo uno de los varios tipos de puntos de interrupción que DevTools ofrece.
 El que debas usar depende del tipo de problema que estés depurando.
 
 [resume]: /web/tools/chrome-devtools/images/resume-script-execution.png

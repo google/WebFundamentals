@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Ikuti terus panduan interaktif ini untuk mempelajari cara menggunakan DevTools guna mendiagnosis layout sinkron paksa.
 
-{# wf_updated_on: 2016-03-31 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Mendiagnosis Layout Sinkron Paksa {: .page-title }
@@ -76,7 +76,7 @@ Di bawah `Animation Frame Fired`, Anda akan melihat `Function Call`, dan di bawa
 melihat `update`. Anda kini mengetahui bahwa metode yang disebut sebagai `update()` adalah callback untuk
 `requestAnimationFrame()`. 
 
-Catatan: Di sinilah opsi **JS Profile** yang Anda aktifkan tadi menjadi 
+Note: Di sinilah opsi **JS Profile** yang Anda aktifkan tadi menjadi 
 berguna. Jika opsi ini dinonaktifkan, Anda hanya akan melihat `Function Call`, yang diikuti
 oleh semua kejadian ungu kecil (yang akan dibahas nanti), tanpa detail tentang
 fungsi mana yang sebenarnya dipanggil.

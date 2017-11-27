@@ -1,11 +1,6 @@
 toc:
-- title: Architecture
+- title: Architectural Patterns
+  style: accordion
   section:
-  - title: The App Shell Model
+  - title: App Shell Model
     path: /web/fundamentals/architecture/app-shell
-  - title: "HowTo: Components"
-    section:
-    - title: Overview
-      path: /web/fundamentals/architecture/howto-components/overview
-    - title: "Glossary"
-      path: /web/fundamentals/architecture/howto-components/glossary

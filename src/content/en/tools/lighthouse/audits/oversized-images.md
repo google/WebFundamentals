@@ -1,17 +1,17 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Oversized Images" Lighthouse audit.
+description: Reference documentation for the "Properly Size Images" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-25 #}
+{# wf_updated_on: 2017-06-29 #}
 {# wf_published_on: 2017-04-25 #}
 
-# Oversized Images  {: .page-title }
+# Properly Size Images  {: .page-title }
 
 ## Why the audit is important {: #why }
 
 Ideally, your page should never serve images that are larger than the
-user's screen. Anything larger than that just results in wasted bytes and
-slows down page load time.
+version that's rendered on the user's screen. Anything larger than that
+just results in wasted bytes and slows down page load time.
 
 ## How to pass the audit {: #how }
 
@@ -24,14 +24,14 @@ of each image, and then specify which version to use in your HTML or CSS using
 media queries, viewport dimensions, and so on. See [Images in markup][iim]
 or [Images in CSS][iic] to learn more.
 
-[iim]: /web/fundamentals/design-and-ui/responsive/images#images_in_markup
-[iic]: /web/fundamentals/design-and-ui/responsive/images#images_in_css
+[iim]: /web/fundamentals/design-and-ux/responsive/images#images_in_markup
+[iic]: /web/fundamentals/design-and-ux/responsive/images#images_in_css
 
 Another strategy is to use vector-based image formats, like SVG. With a
 finite amount of code, an SVG image can scale to any size. See [Replace
 complex icons with SVG][svg] to learn more.
 
-[svg]: /web/fundamentals/design-and-ui/responsive/images#replace_complex_icons_with_svg
+[svg]: /web/fundamentals/design-and-ux/responsive/images#replace_complex_icons_with_svg
 
 Yet another strategy is called "client hints". With client hints, the browser
 advertises its viewport dimensions and device pixel ratio when requesting
@@ -56,4 +56,39 @@ against the size of the actual image. The rendered size also accounts
 for device pixel ratio. If the rendered size is at least 25KB smaller than
 the actual size, then the image fails the audit.
 
-{% include "web/tools/lighthouse/audits/_feedback/oversized-images.html" %}
+## Feedback {: #feedback }
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'Oversized Images / Helpful';
+var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
+      label + ']';
+var feedback = {
+  "category": "Lighthouse",
+  "choices": [
+    {
+      "button": {
+        "text": "This Doc Was Helpful"
+      },
+      "response": "Thanks for the feedback.",
+      "analytics": {
+        "label": label
+      }
+    },
+    {
+      "button": {
+        "text": "This Doc Was Not Helpful"
+      },
+      "response": 'Sorry to hear that. Please <a href="' + url +
+          '" target="_blank">open a GitHub issue</a> and tell us how to ' +
+          'make it better.',
+      "analytics": {
+        "label": label,
+        "value": 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}

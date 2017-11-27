@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-26T16:30:17Z #}
+{# wf_updated_on: 2017-11-09 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -59,7 +59,7 @@ Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service w
 
 
 
-If you have a text editor that lets you open a project, open the __service-worker/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
+If you have a text editor that lets you open a project, open the __service-worker-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
 
 This folder contains:
 
@@ -337,7 +337,9 @@ The default scope is the path to the service worker file, and extends to all low
 
 ### 5.2 Move the service worker 
 
-Move __service-worker.js__ into the __app/below__ directory and update the service worker URL in the registration code. <a href="tools-for-pwa-developers#unregister">Unregister the service worker</a> and refresh the page. 
+[Unregister](/web/ilt/pwa/tools-for-pwa-developers#unregister) the current service worker.
+
+Then move __service-worker.js__ into the __app/below__ directory and update the service worker URL in the registration code. <a href="tools-for-pwa-developers#unregister">Unregister the service worker</a> and refresh the page. 
 
 The console shows that the scope of the service worker is now __localhost:8080/service-worker-lab/app/below/__. 
 
@@ -350,6 +352,8 @@ Back on the main page, click __Other page__,  __Another page__ and  __Back__. Wh
 The service worker's default scope is the path to the service worker file. Since the service worker file is now in __app/below/__, that is its scope. The console is now only logging fetch events for __another.html__, __another.css__, and __another.js__, because these are the only resources within the service worker's scope (__app/below/__).
 
 ### 5.3 Set an arbitrary scope
+
+[Unregister](/web/ilt/pwa/tools-for-pwa-developers#unregister) the current service worker again.
 
 Move the service worker back out into the project root directory (__app__) and update the service worker URL in the registration code.
 

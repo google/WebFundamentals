@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Estimated Input Latency" Lighthouse audit.
 
-{# wf_updated_on: 2016-10-05 #}
+{# wf_updated_on: 2017-11-03 #}
 {# wf_published_on: 2016-10-05 #}
 
 # Estimated Input Latency  {: .page-title }
@@ -14,9 +14,8 @@ of your app. Apps have 100ms to respond to user input. Any longer than that,
 and the user perceives the app as laggy. See [Measure Performance with the RAIL
 Model](/web/fundamentals/performance/rail) for more information.
 
-See the [What the audit tests for](#what) section of this doc for an
-explanation of why this audit tests for a target score of 50ms (rather than
-100ms, which is what the RAIL model recommends).
+See [How the audit is implemented](#implementation) for an explanation of why this audit tests
+for a target score of 50ms (rather than 100ms, which is what the RAIL model recommends).
 
 ## How to pass the audit {: #how }
 
@@ -55,9 +54,14 @@ assumes that your app needs 50ms to completely respond to the user's input
 pixels to the screen). If your main thread is unavailable for 50ms or more,
 that does not leave enough time for your app to complete the response.
 
-There is a 90% probabililty a user would encounter input latency of the
+There is a 90% probability a user would encounter input latency of the
 amount that Lighthouse reports, or less. 10% of users can expect additional
 latency.
 
+The timing of this audit is from First Meaningful Paint to the end of the [trace][trace],
+which is roughly 5 seconds after the time to [Consistently Interactive][CI].
+
+[trace]: https://www.chromium.org/developers/how-tos/trace-event-profiling-tool
+[CI]: /web/tools/lighthouse/audits/consistently-interactive
 
 {% include "web/tools/lighthouse/audits/_feedback/estimated-input-latency.html" %}

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Uso de estilo adecuado para mejorar la accesibilidad
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Estilos accesibles {: .page-title }
@@ -43,7 +43,7 @@ al diseño de tu página. Algunos programadores quitan este estilo por completo 
 el `outline` del elemento en `0` o `none`. Pero sin indicador de foco, ¿cómo puede
 un usuario de teclado saber con qué artículo está interactuando?
 
-Advertencia: Nunca configures el contorno en 0 ni none sin brindar una alternativa de foco.
+Warning: Nunca configures el contorno en 0 ni none sin brindar una alternativa de foco.
 
 Puede ser que conozcas cómo agregar estados de desplazamiento a tus controles con la *pseudoclase*
 `:hover` del CSS. Por ejemplo, puedes usar `:hover` en un elemento vínculo
@@ -196,7 +196,7 @@ y les darán a tus usuarios mejor acceso a tu contenido.
 
 ![una pantalla de teléfono sin y con la metaetiqueta de ventana de visualización](imgs/scrunched-up.jpg)
 
-Advertencia: Cuando uses la metaetiqueta de ventana de visualización, asegúrate de no configurar
+Warning: Cuando uses la metaetiqueta de ventana de visualización, asegúrate de no configurar
 la escala máxima=1 o establecer escalable por usuario=no. Permite que los usuarios amplíen si lo necesitan.
 
  - Otra técnica para tener en cuenta es el diseño con una planilla receptiva. Como
@@ -287,7 +287,7 @@ hombres y 1 de 200 mujeres tienen alguna forma de "daltonismo", lo que significa
 Cuando confiamos en el color para transmitir la información, movemos ese número hasta niveles
 inaceptables.
 
-Nota: El término "daltonismo" se usa para describir una afección visual
+Note: El término "daltonismo" se usa para describir una afección visual
 debido a la que una persona tiene dificultades para distinguir los colores, pero muy pocas personas
 realmente no distinguen ningún color. La mayoría de las personas que sufren deficiencias de color ven algunos o la mayorías de los
 colores, pero tienen dificultades para diferenciar entre ciertos colores, tales como rojos

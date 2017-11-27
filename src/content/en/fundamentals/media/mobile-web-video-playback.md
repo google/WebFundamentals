@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Create the best mobile media experience on the Web by following these best practises.
 
 {# wf_published_on: 2017-04-07 #}
-{# wf_updated_on: 2017-05-23 #}
+{# wf_updated_on: 2017-07-25 #}
+{# wf_blink_components: Blink>Media #}
 
 # Mobile Web Video Playback {: .page-title }
 
@@ -11,14 +12,14 @@ description: Create the best mobile media experience on the Web by following the
 
 How do you create the best mobile media experience on the Web? Easy! It all
 depends on user engagement and the importance you give to the media on a web
-page. I think we all agree that a web page where video is THE reason of user's
-visit will have to feature an immersive and re-engaging user experience.
+page. I think we all agree that if video is THE reason for a user's visit,
+the user's experience has to be immersive and re-engaging.
 
 <figure>
   <img src="/web/fundamentals/media/images/mobile-web-video-playback-hero.png">
 </figure>
 
-The goal here is to show you how to enhance in a progressive way your media
+In this article I show you how to enhance in a progressive way your media
 experience and make it more immersive thanks to a plethora of Web APIs. That's
 why we're going to build a simple mobile player experience with custom
 controls, fullscreen, and background playback.
@@ -199,9 +200,9 @@ Here's below what we have created so far. In the next section, we'll implement
 the fullscreen button.
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/video-play-pause-seek.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-play-pause-seek.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/video-play-pause-seek.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-play-pause-seek.mp4"
           type="video/mp4">
 </video>
 
@@ -215,9 +216,9 @@ Obviously, you don't have to use all of them. Just pick the ones that make
 sense to you and combine them to create your custom flow.
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.mp4"
           type="video/mp4">
 </video>
 
@@ -291,9 +292,9 @@ may want to use [screenfull.js] wrapper as well.
     });
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/toggle-fullscreen-on-button-click.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/toggle-fullscreen-on-button-click.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/toggle-fullscreen-on-button-click.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/toggle-fullscreen-on-button-click.mp4"
           type="video/mp4">
 </video>
 
@@ -305,7 +306,7 @@ we'll need the [Screen Orientation API]{: .external} which is not yet supported
 everywhere and still prefixed in some browsers at that time. Thus, this will be
 our first progressive enhancement.
 
-How doest this work? As soon as we detect the screen orientation changes, let's
+How does this work? As soon as we detect the screen orientation changes, let's
 request fullscreen if the browser window is in landscape mode (that is, its
 width is greater than its height). If not, let's exit fullscreen. That's all.
 
@@ -360,9 +361,9 @@ fullscreenButton.addEventListener('click', function(event) {
     }
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/lock-screen-in-landscape-on-button-click.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/lock-screen-in-landscape-on-button-click.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/lock-screen-in-landscape-on-button-click.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/lock-screen-in-landscape-on-button-click.mp4"
           type="video/mp4">
 </video>
 
@@ -421,9 +422,9 @@ As you can see, this is the seamless fullscreen experience we were looking for.
 To see this in action, check out the [sample]{: .external }.
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.webm"
           type="video/webm; codecs=vp8">
-  <source src="/web/fundamentals/media/videos/perfect-fullscreen.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/perfect-fullscreen.mp4"
           type="video/webm; codecs=mp4">
 </video>
 
@@ -452,7 +453,7 @@ allowed to play in the background.
       }
     });
 
-Note: Chrome for Android already pauses videos when page is hidden.  
+Note: Chrome for Android already pauses videos when page is hidden.
 
 ### Show/hide mute button on video visibility change
 
@@ -495,11 +496,32 @@ resources in an infinite scroll case.
     });
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/video-visibility.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-visibility.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/video-visibility.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/video-visibility.mp4"
           type="video/mp4">
 </video>
+
+### Play only one video at a time
+
+If there are more than one video on a page, I would suggest you only play one
+and pause the other ones automatically so that user doesn't have to hear
+multiple audio tracks playing simultaneously.
+
+    // Note: This array should be initialized once all videos have been added.
+    var videos = Array.from(document.querySelectorAll('video'));
+
+    videos.forEach(function(video) {
+      video.addEventListener('play', pauseOtherVideosPlaying);
+    });
+
+    function pauseOtherVideosPlaying(event) {
+      var videosToPause = videos.filter(function(video) {
+        return !video.paused && video != event.target;
+      });
+      // Pause all other videos currently playing.
+      videosToPause.forEach(function(video) { video.pause(); });
+    }
 
 ### Customize Media Notifications
 
@@ -519,7 +541,7 @@ session metadata such as the title, artist, album name, and artwork with the
 [Media Session API]{: .external }.
 
 <pre class="prettyprint">
-playPauseButton.addEventListener('click', function() {
+playPauseButton.addEventListener('click', function(event) {
   event.stopPropagation();
   if (video.paused) {
     video.play()
@@ -607,9 +629,9 @@ notification is synced automagically to any paired wearable device. And it also
 shows up on lock screens.
 
 <video controls controlsList="nodownload" muted playsinline>
-  <source src="/web/fundamentals/media/videos/media-session.webm"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/media-session.webm"
           type="video/webm">
-  <source src="/web/fundamentals/media/videos/media-session.mp4"
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/media-session.mp4"
           type="video/mp4">
 </video>
 

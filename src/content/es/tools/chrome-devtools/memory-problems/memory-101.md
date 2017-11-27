@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: En esta sección se describen términos comunes que se usan en el análisis de memoria y que se pueden aplicar a una variedad de herramientas de generación de perfiles de memoria para diferentes idiomas.
 
-{# wf_updated_on: 2015-05-18 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-05-18 #}
 
 # Terminología de memoria {: .page-title }
@@ -60,7 +60,7 @@ El gráfico de la memoria comienza con una raíz, que puede ser el objeto `windo
 
 El GC elimina todo aquello que la raíz no puede alcanzar.
 
-Nota: Las columnas Shallow Size y Retained Size representan datos en bytes.
+Note: Las columnas Shallow Size y Retained Size representan datos en bytes.
 
 ## Árbol de retención de objetos
 

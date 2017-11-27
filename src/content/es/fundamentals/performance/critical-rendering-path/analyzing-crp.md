@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Aprende a identificar y resolver cuellos de botella en el rendimiento de la ruta de acceso de representación crítica.
 
-{# wf_updated_on: 2014-04-27 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Analizar el rendimiento de la ruta de acceso de representación crítica {: .page-title }
@@ -36,7 +36,7 @@ Comenzaremos con lenguaje de marcado HTML básico y una sola imagen (sin CSS ni 
 
 <img src="images/waterfall-dom.png" alt=""  alt="Ruta de acceso de representación crítica">
 
-Nota: Aunque este documento use DevTools para ilustrar conceptos de CRP, DevTools
+Note: Aunque este documento use DevTools para ilustrar conceptos de CRP, DevTools
 actualmente no es adecuado para un análisis de CRP. Para más información, consulta [¿Qué hay de
 DevTools?](measure-crp#devtools).
 

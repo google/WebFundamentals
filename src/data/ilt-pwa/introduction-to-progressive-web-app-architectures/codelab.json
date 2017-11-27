@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-05-05T21:20:37Z",
+  "updated": "2017-08-10T18:53:21Z",
   "id": "introduction-to-progressive-web-app-architectures",
   "duration": 0,
   "title": "Introduction to Progressive Web App Architectures",
@@ -12,6 +12,9 @@
   "theme": "",
   "status": null,
   "category": null,
-  "tags": [],
+  "tags": [
+    "2-day",
+    "3-day"
+  ],
   "url": "introduction-to-progressive-web-app-architectures"
 }

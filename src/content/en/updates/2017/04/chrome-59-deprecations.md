@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the deprecations and removals in Chrome 58 to help you plan.
+description: A round up of the deprecations and removals in Chrome 59 to help you plan.
 
-{# wf_updated_on: 2017-05-01 #}
+{# wf_updated_on: 2017-08-04 #}
 {# wf_published_on: 2017-05-01 #}
 {# wf_tags: deprecations,removals,chrome59 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: A round up of the deprecations and removals in Chrome 58 to help you plan. #}
+{# wf_featured_snippet: A round up of the deprecations and removals in Chrome 59 to help you plan. #}
 
 # Deprecations and Removals in Chrome 59 {: .page-title }
 
@@ -16,6 +16,21 @@ In nearly every version of Chrome, we see a significant number of updates and
 improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 59,
 which is in beta as of April 27. This list is subject to change at any time.
+
+### Temporarily disable navigator.sendBeacon() for some blobs
+
+The `navigator.sendBeacon()` function has been available
+[since Chrome 39](https://www.chromestatus.com/feature/5517433905348608). 
+As originally implemented, the function's `data` argument could contain any
+arbitrary blob whose type is not CORS-safelisted. We believe this is a potential
+security threat, though no one has yet tried to exploit it. Because we do NOT
+have a reasonable immediate fix for it, temporarily, `sendBeacon()` can no
+longer be invokable on blobs whose type is NOT CORS-safelisted.
+
+Although this change was implemented for Chrome 60, it is has since been merged
+back to Chrome 59.
+
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=720283)
 
 ## Remove features from WebVR that are not in the revised spec
 
@@ -60,7 +75,7 @@ and [`DeviceMotionEvent`](https://developer.mozilla.org/en-US/docs/Web/API/Devic
 
 Since Chrome is
 [enabling these constructors by default](https://www.chromestatus.com/features/4659236399218688)
-in Chrome 59 the legacy initialization fuctions, `initDeviceMotionEvent()` and
+in Chrome 59 the legacy initialization functions, `initDeviceMotionEvent()` and
 `initDeviceOrientationEvent()` are also removed. Edge has deprecated the
 initialization functions and Firefox has already shipped the constructors.
 
@@ -109,7 +124,7 @@ To conform with the platform and most recent spec, `ProgressEvent` is now remove
 ## Remove SVGTests.required Features
 
 In the first version of the SVG spec, an application could call
-`DOMImplementation.hasFeature` to verify that a particuilar SVG interface is
+`DOMImplementation.hasFeature` to verify that a particular SVG interface is
 supported. Many SVG elements contained a `requiredFeatures` attribute that
 returned the same information.
 

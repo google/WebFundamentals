@@ -2,14 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Aprende a usar la biblioteca Ray Input para agregar entrada a tu escena de WebVR.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # Agregar entrada a una escena de WebVR {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-Advertencia: WebVR todavía es experimental y se encuentra sujeta a modificaciones.
+Warning: WebVR todavía es experimental y se encuentra sujeta a modificaciones.
 
 En la sección [Primeros pasos con WebVR](../getting-started-with-webvr/) analizamos cómo tomar una escena WebGL y agregarle la funcionalidad de WebVR. Aunque eso funciona, y puedes mirar dentro de la escena en RV, puede resultar mucho más divertido cuando puedes interactuar con entidades en la escena.
 

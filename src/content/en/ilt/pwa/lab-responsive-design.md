@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-27T16:11:56Z #}
+{# wf_updated_on: 2017-09-26 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -107,7 +107,7 @@ The initial-scale property controls the zoom level when the page is first loaded
 
 #### For more information
 
-*  [Set the viewport](/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport) - Responsive Web Design Basics 
+*  [Set the viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) - Responsive Web Design Basics 
 *  [Using the viewport meta tag to control layout on mobile browsers](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) - MDN
 
 <div id="4"></div>
@@ -215,7 +215,7 @@ Save the code and refresh __index.html__ in your browser. Now if you shrink the 
 
 #### Explanation
 
-When the media query is triggered we change the layout from three-column to one-column by setting the  [`flex-flow`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-5) property to `column`. This accomplishes the same result as the media query we added in step 5.  [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) provides tons of other properties like `flex-flow` that let you easily structure, re-order, and justify your content so that it responds well in any context.
+When the media query is triggered we change the layout from three-column to one-column by setting the  [`flex-flow`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-5) property to `column`. This accomplishes the same result as the media query we added in step 5.  [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) provides lots of other properties like `flex-flow` that let you easily structure, re-order, and justify your content so that it responds well in any context.
 
 <div id="6"></div>
 
@@ -333,7 +333,7 @@ You have learned to style your content to make it responsive. Using media querie
 
 #### Learn more about the basics of responsive design
 
-*  [Responsive Web Design Basics - Set the viewport](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) 
+*  [Responsive Web Design Basics - Set the viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) 
 *  [A tale of two viewports](http://www.quirksmode.org/mobile/viewports2.html)
 
 #### Learn more about Flexbox as a progressive enhancement

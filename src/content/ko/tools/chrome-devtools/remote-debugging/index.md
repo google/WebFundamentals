@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Windows, Mac 또는 Linux 컴퓨터에서 Android 기기의 라이브 콘텐츠를 원격으로 디버그합니다.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Registers A Service Worker" Lighthouse audit.
 
@@ -15,6 +15,8 @@ progressive web app features:
 * Offline
 * Push notifications
 * Add to homescreen
+
+See [Service Workers: an Introduction](/web/fundamentals/getting-started/primers/service-workers) to learn more.
 
 ## How to pass the audit {: #how }
 

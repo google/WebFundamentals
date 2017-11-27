@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: En la vista de árbol del DOM del panel Elements de Chrome DevTools se muestra la estructura del DOM de la página web actual. Edita en tiempo real el contenido y la estructura de tu página mediante actualizaciones del DOM.
 
-{# wf_updated_on: 2015-04-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Editar el DOM {: .page-title }
@@ -139,7 +139,7 @@ Para borrar un nodo del DOM:
 * Abre el [menú de más acciones](#more-actions) y selecciona **Delete Node**.
 * Selecciona el nodo y presiona la tecla <kbd>Delete</kbd>.
 
-Nota: Si borras un nodo por accidente, presiona <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd> (o <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd> en Mac) para deshacer tu última acción.
+Note: Si borras un nodo por accidente, presiona <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd> (o <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd> en Mac) para deshacer tu última acción.
 
 ## Mostrar el menú more actions {:#more-actions}
 
@@ -261,7 +261,7 @@ Haz clic en la flecha del expansor que está al lado del identificador de un ele
   </tbody>
 </table>
 
-Nota: Muchas extensiones de Chrome agregan sus propios receptores de eventos en el DOM. Si ves una serie de receptores de eventos que no son establecidos por tu código, puede que desees reabrir tu página en una [Ventana de incógnito](https://support.google.com/chrome/answer/95464). Las ventanas de incógnito evitan que las extensiones se ejecuten de manera predeterminada.
+Note: Muchas extensiones de Chrome agregan sus propios receptores de eventos en el DOM. Si ves una serie de receptores de eventos que no son establecidos por tu código, puede que desees reabrir tu página en una [Ventana de incógnito](https://support.google.com/chrome/answer/95464). Las ventanas de incógnito evitan que las extensiones se ejecuten de manera predeterminada.
 
 ### Ver receptores de eventos antecesores
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:请遵循此互动指南，了解如何使用 DevTools 诊断强制同步布局。
 

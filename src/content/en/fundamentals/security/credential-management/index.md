@@ -1,7 +1,7 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-11-08 #}
+{# wf_updated_on: 2017-07-13 #}
 {# wf_published_on: 2016-11-08 #}
 
 # The Credential Management API {: .page-title }
@@ -29,6 +29,25 @@ and take a look at the
 
 <div class="clearfix"></div>
 
+### Check Credential Management API browser support
+
+Before using the Credential Management API,
+first check the API is supported,
+and that the version of the API is compatible with your code.
+
+[Updates to the Credential Management API](/web/updates/2017/06/credential-management-updates)
+landed in Chrome 60.
+These updates contain backward incompatible changes.
+To check that your implementation isn't triggered in older versions of the API,
+see if `preventSilentAccess exists`:
+
+    if (navigator.credentials && navigator.credentials.preventSilentAccess) {
+      // The new Credential Management API is available
+    }
+
+For more information, see the
+[Chrome 60 migration guide](https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8).
+
 ### Sign in user
 
 To sign in the user, retrieve the credentials from the browser's password
@@ -37,7 +56,7 @@ manager and use them to log in the user.
 For example:
 
 1. When a user lands on your site and they are not signed in, 
-   call [`navigator.credential.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get).
+   call [`navigator.credentials.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get).
 2. Use the retrieved credentials to sign in the user.
 3. Update the UI to indicate the user has been signed in.
 
@@ -67,7 +86,7 @@ Learn more in
 
 ### Sign out
 
-When the user signs out, call [`navigator.credentials.requireUserMediation()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/requireUserMediation)
+When the user signs out, call [`navigator.credentials.preventSilentAccess()`](/web/fundamentals/security/credential-management/retrieve-credentials#turn_off_auto_sign-in_for_future_visits)
 to prevent the user from being automatically signed back in.
 
 Disabling auto-sign-in also enables users to switch between accounts easily,

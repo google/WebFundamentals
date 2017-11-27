@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Configura tu espacio de trabajo para incluir un buen editor y herramientas de depuración y compilación para la Web destinada a diferentes dispositivos.
 

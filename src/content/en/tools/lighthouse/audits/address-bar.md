@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Address Bar Matches Brand Colors" Lighthouse audit.
 
-{# wf_updated_on: 2017-05-12 #}
+{# wf_updated_on: 2017-09-02 #}
 {# wf_published_on: 2017-05-12 #}
 
 # Address Bar Matches Brand Colors  {: .page-title }
@@ -19,7 +19,7 @@ To ensure that the address bar is always themed to your colors:
 1. Add a `theme-color` meta tag to the HTML of every page you want to brand.
 1. Add the `theme_color` property to your Web App Manifest.
 
-The `theme-color` meta tag ensures that the address bar is branded when a user
+The `theme-color` meta tag ensures that the address bar is branded when
 a user visits your site as a normal webpage. Set `content` to any valid CSS
 color value. You need to add this meta tag to every page that you want to
 brand.
@@ -54,4 +54,39 @@ The audit passes if Lighthouse finds a `theme-color` meta tag in the page's
 HTML and a `theme_color` property in the Web App Manifest. Lighthouse does
 not test whether the values are valid CSS color values.
 
-{% include "web/tools/lighthouse/audits/_feedback/_template.html" %}
+## Feedback {: #feedback }
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'Address Bar / Helpful';
+var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
+      label + ']';
+var feedback = {
+  "category": "Lighthouse",
+  "choices": [
+    {
+      "button": {
+        "text": "This Doc Was Helpful"
+      },
+      "response": "Thanks for the feedback.",
+      "analytics": {
+        "label": label
+      }
+    },
+    {
+      "button": {
+        "text": "This Doc Was Not Helpful"
+      },
+      "response": 'Sorry to hear that. Please <a href="' + url +
+          '" target="_blank">open a GitHub issue</a> and tell us how to ' +
+          'make it better.',
+      "analytics": {
+        "label": label,
+        "value": 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}

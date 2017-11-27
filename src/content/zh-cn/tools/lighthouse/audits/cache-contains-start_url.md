@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“缓存包含来自清单的 start_url”Lighthouse 审查的参考文档。
 

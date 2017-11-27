@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn to identify and resolve critical rendering path performance bottlenecks.
 
-{# wf_updated_on: 2014-04-27 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Analyzing Critical Rendering Path Performance {: .page-title }
@@ -49,7 +49,7 @@ Notice that our "awesome photo" did not block the `domContentLoaded` event. Turn
 That said, the `load` event (also known as `onload`), is blocked on the image: DevTools reports the `onload` event at 335ms. Recall that the `onload` event marks the point at which **all resources** that the page requires have been downloaded and processed; at this point, the loading spinner can stop spinning in the browser (the red vertical line in the waterfall).
 
 
-## Adding javaScript and CSS into the mix
+## Adding JavaScript and CSS into the mix
 
 Our "Hello World experience" page seems simple but a lot goes on under the hood. In practice we'll need more than just the HTML: chances are, we'll have a CSS stylesheet and one or more scripts to add some interactivity to our page. Let's add both to the mix and see what happens:
 
@@ -214,8 +214,3 @@ Finally, if the CSS stylesheet were only needed for print, how would that look?
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, non-blocking CSS, and async JavaScript CRP" >
 
 Because the style.css resource is only used for print, the browser doesn't need to block on it to render the page. Hence, as soon as DOM construction is complete, the browser has enough information to render the page. As a result, this page has only a single critical resource (the HTML document), and the minimum critical rendering path length is one roundtrip.
-
-<a href="optimizing-critical-rendering-path" class="gc-analytics-event"
-    data-category="CRP" data-label="Next / Optimizing CRP">
-  <button>Next Up: Optimizing the Critical Rendering Path</button>
-</a>

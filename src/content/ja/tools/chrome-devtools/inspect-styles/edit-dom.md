@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools の [Elements] パネルの DOM ツリービューには、現在のウェブページの DOM 構造が表示されます。DOM のアップデートを通じて、ページのコンテンツと構造をライブ編集します。
 

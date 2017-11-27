@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-05-02T17:27:42Z #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -652,7 +652,9 @@ Now add a `Y-Custom` header to the Headers object. Save the script, refresh the 
 
 You should get an error similar to this in the console:
 
-`Fetch API cannot load http://localhost:5000/. Request header field y-custom is not allowed by Access-Control-Allow-Headers in preflight response.`
+```
+Fetch API cannot load http://localhost:5000/. Request header field y-custom is not allowed by Access-Control-Allow-Headers in preflight response.
+```
 
 #### Explanation
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Aprende a tomar una escena de WebGL en Three.js y agregarle capacidades de WebVR.
 
-{# wf_updated_on: 2016-12-12 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-12 #}
 
 # Primeros pasos con WebVR {: .page-title }
@@ -10,7 +10,7 @@ description: Aprende a tomar una escena de WebGL en Three.js y agregarle capacid
 {% include "web/_shared/contributors/paullewis.html" %}
 {% include "web/_shared/contributors/mscales.html" %}
 
-Advertencia: WebVR todavía es experimental y se encuentra sujeta a modificaciones.
+Warning: WebVR todavía es experimental y se encuentra sujeta a modificaciones.
 
 En esta guía exploraremos las WebVR API, y las usaremos para mejorar una escena simple de WebGL compilada con [Three.js](https://threejs.org/). Sin embargo, para el trabajo de producción, tal vez sea conveniente que comiences con soluciones ya creadas, como [WebVR Boilerplate](https://github.com/borismus/webvr-boilerplate). Si es tu primera vez con Three.js, puedes usar esta [útil guía de inicio](https://aerotwist.com/tutorials/getting-started-with-three-js/). La comunidad también brinda mucho apoyo, así que si no puedes avanzar, definitivamente puedes acudir a ellos.
 

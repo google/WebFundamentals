@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Lighthouse の監査項目「サイトで rel="noopender" を使用して外部アンカーを開く」のリファレンス ドキュメント。
+description: Lighthouse の監査項目「サイトで rel="noopener" を使用して外部アンカーを開く」のリファレンス ドキュメント。
 
 {# wf_updated_on:2016-11-30 #}
 {# wf_published_on:2016-11-30 #}
 
-#  サイトで rel="noopender" を使用して外部アンカーを開く {: .page-title }
+#  サイトで rel="noopener" を使用して外部アンカーを開く {: .page-title }
 
 ##  監査が重要である理由 {: #why }
 

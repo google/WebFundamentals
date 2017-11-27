@@ -1,14 +1,14 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Get started with Google Chrome's built-in authoring, debugging, and profiling development tools.
+description: Get started with Google Chrome's built-in web developer tools.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-06-16 #}
 {# wf_published_on: 2016-03-28 #}
 
 # Chrome DevTools {: .page-title }
 
-The Chrome DevTools are a set of web authoring and debugging tools built
-into Google Chrome. Use the DevTools to iterate, debug, and profile your site.
+Chrome DevTools is a set of authoring, debugging, and profiling tools built
+into Google Chrome.
 
 Note: Many of the DevTools docs are based on [Chrome Canary][canary], which
 provides the latest Chrome features.
@@ -22,9 +22,9 @@ provides the latest Chrome features.
 * Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) or
   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows, Linux).
 
-## Discover DevTools
+## Discover DevTools {: #discover-devtools }
 
-### Device Mode
+### Device Mode {: #device-mode }
 
 <img src="images/device-mode.png" alt="Device Mode" class="attempt-right">
 Build fully responsive, mobile-first web experiences.</p>
@@ -35,11 +35,13 @@ Build fully responsive, mobile-first web experiences.</p>
 
 <div style="clear:both;"></div>
 
-### Elements panel
+### Elements panel {: #elements }
 
 <img src="images/panels/elements.png" alt="Elements Panel" class="attempt-right">
+
 Iterate on the layout and design of your site by freely manipulating the DOM and CSS.
 
+* [Get Started With Viewing And Changing CSS](/web/tools/chrome-devtools/css/)
 * [Inspect and Tweak Your Pages](/web/tools/chrome-devtools/inspect-styles/)
 * [Edit Styles](/web/tools/chrome-devtools/inspect-styles/edit-styles)
 * [Edit the DOM](/web/tools/chrome-devtools/inspect-styles/edit-dom)
@@ -47,19 +49,22 @@ Iterate on the layout and design of your site by freely manipulating the DOM and
 
 <div style="clear:both;"></div>
 
-### Console panel
+### Console panel {: #console }
 
 <img src="images/panels/console.png" alt="Console Panel" class="attempt-right">
+
 Log diagnostic information during development or interact with the JavaScript on the page.
 
 * [Using the Console](/web/tools/chrome-devtools/console/)
 * [Interact from Command Line](/web/tools/chrome-devtools/console/command-line-reference)
+* [Console API Reference](/web/tools/chrome-devtools/console/console-reference)
 
 <div style="clear:both;"></div>
 
-### Sources panel
+### Sources panel {: #sources }
 
 <img src="images/panels/sources.png" alt="Sources Panel" class="attempt-right">
+
 Debug your JavaScript using breakpoints or connect your local files via Workspaces to use
 DevTools as a code editor.
 
@@ -71,7 +76,7 @@ DevTools as a code editor.
 
 <div style="clear:both;"></div>
 
-### Network panel
+### Network panel {: #network }
 
 <img src="images/panels/network.png" alt="Network Panel" class="attempt-right">
 
@@ -83,7 +88,7 @@ Optimize page load performance and debug request issues.
 
 <div style="clear:both;"></div>
 
-### Performance panel (previously Timeline panel)
+### Performance panel (previously Timeline panel) {: #performance }
 
 Note: In Chrome 58 the Timeline panel was renamed to the Performance panel.
 
@@ -93,7 +98,7 @@ Improve the runtime performance of your page by recording and exploring the
 various events that happen during the lifecycle of a site.
 
 * [Get Started With Analyzing Runtime Performance][runtimegs]
-* [How to look at performance](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
+* [Performance Analysis Reference](/web/tools/chrome-devtools/evaluate-performance/reference)
 * [Analyze runtime performance](/web/tools/chrome-devtools/rendering-tools/)
 * [Diagnose Forced Synchronous Layouts](/web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts)
 
@@ -101,7 +106,7 @@ various events that happen during the lifecycle of a site.
 
 <div style="clear:both;"></div>
 
-### Memory panel (previously Profiles panel)
+### Memory panel (previously Profiles panel) {: #memory }
 
 Note: In Chrome 58 the Profiles panel was renamed to the Memory panel.
 
@@ -113,9 +118,7 @@ Profile memory usage and track down leaks.
 
 <div style="clear:both;"></div>
 
-### Application panel (previously Resources panel)
-
-Note: In Chrome 52 the Resources panel was renamed to the Application panel.
+### Application panel {: #application }
 
 <img src="images/panels/application.png" alt="Application Panel" class="attempt-right">
 
@@ -129,16 +132,17 @@ session storage, cookies, Application Cache, images, fonts, and stylesheets.
 
 <div style="clear:both;"></div>
 
-### Security panel
+### Security panel {: #security }
 
 <img src="images/panels/security.png" alt="Security Panel" class="attempt-right">
+
 Debug mixed content issues, certificate problems, and more.
 
 * [Understand Security Issues](/web/tools/chrome-devtools/security)
 
 <div style="clear:both;"></div>
 
-## Get Involved
+## Get Involved (Bugs and Feature Requests) {: #community }
 
 <style>
   .cdt-but {
@@ -146,37 +150,34 @@ Debug mixed content issues, certificate problems, and more.
   }
 </style>
 
-The best place to file bug reports and feature requests for Chrome DevTools
-is Crbug, which is the master tracker for the DevTools engineering team.
+The best place to file feature requests for Chrome DevTools is the mailing list.
+The team needs to understand use cases, gauge community interest, and discuss
+feasibility before implementing any new features.
+
+<a class="button button-primary gc-analytics-event cdt-but"
+   href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools"
+   data-category="DevTools" data-label="Home / Mailing List">Mailing List</a>
+
+File bug reports in Crbug, which is the engineering team's bug tracker.
 
 <a class="button button-primary gc-analytics-event" href="https://crbug.com"
    data-category="DevTools" data-label="Home / Crbug">Crbug</a>
 
-For quick bug reports or feature requests, send a tweet to @ChromeDevTools.
-Ultimately, somebody converts your tweet to an issue on Crbug, so you can
-file the Crbug issue yourself if you want to ensure that it gets addressed
-by the DevTools engineering team.
+If you want to alert us to a bug or feature request but don't have much time,
+you're welcome to send a tweet to @ChromeDevTools. We reply and send
+announcements from the account regularly.
 
 <a class="button button-primary gc-analytics-event"
    data-category="DevTools" data-label="Home / Twitter"
    href="https://twitter.com/ChromeDevTools">Twitter</a>
 
-For help with using DevTools, Stack Overflow or the mailing list are the
-best channels.
-
-<div>
-
-<a class="button button-primary gc-analytics-event cdt-but"
-   href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools"
-   data-category="DevTools" data-label="Home / Mailing List">Mailing List</a>
+For help with using DevTools, Stack Overflow is the best channel.
 
 <a class="button button-primary gc-analytics-event cdt-but"
    href="https://stackoverflow.com/questions/ask?tags=google-chrome-devtools"
    data-category="DevTools" data-label="Home / Stack Overflow">
   Stack Overflow
 </a>
-
-</div>
 
 To file bugs or feature requests on the DevTools docs, open a GitHub issue
 on the Web Fundamentals repository.
@@ -185,7 +186,8 @@ on the Web Fundamentals repository.
    href="https://github.com/google/webfundamentals/issues/new"
    data-category="DevTools" data-label="Home / GitHub">Docs Issues</a>
 
-DevTools also has a Slack channel, but it doesn't get much activity.
+DevTools also has a Slack channel, but the team doesn't monitor it
+consistently.
 
 <a class="button button-primary gc-analytics-event"
    href="https://chromiumdev.slack.com/messages/devtools/"

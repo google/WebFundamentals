@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Aprovecha la API de la consola para medir tiempos de ejecución y contar ejecuciones de instrucciones.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Medir y contar ejecuciones {: .page-title }
@@ -53,7 +53,7 @@ Cómo se ve una anotación de `time()` en la línea del tiempo:
 
 ### Marcar la línea del tiempo
 
-*Nota: El método `timeStamp()` solo funciona cuando hay una grabación de Timeline en curso.
+*Note: El método `timeStamp()` solo funciona cuando hay una grabación de Timeline en curso.
 
 El [panel Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool) proporciona una vista general completa de dónde invierte el tiempo el motor.
 Puedes agregar una marca a la línea del tiempo desde la consola con [`timeStamp()`](./console-reference#consoletimestamplabel). Esta es una manera simple de relacionar eventos en tu app con otros eventos.

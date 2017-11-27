@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on:2016-08-26 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on:2014-12-09 #}
 
 # オフライン クックブック {: .page-title }
@@ -234,7 +234,7 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
 
 <img src="images/cm-on-push.png">
 
-[Push API](/web/fundamentals/engage-and-retain/push-notifications/) は、Service Worker をベースに構築された別の機能です。OS のメッセージング サービスからのメッセージに応答して Service Worker を起動できます。このときユーザーがサイトのタブを開いていない場合でも、Service Worker のみが起動されます。
+[Push API](/web/fundamentals/push-notifications) は、Service Worker をベースに構築された別の機能です。OS のメッセージング サービスからのメッセージに応答して Service Worker を起動できます。このときユーザーがサイトのタブを開いていない場合でも、Service Worker のみが起動されます。
 ページからこれを実行するパーミッションをリクエストして、ユーザーにプロンプトを表示します。
 
 

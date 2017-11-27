@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and modify animations with the Chrome DevTools  Animation Inspector.
 
-{# wf_updated_on: 2016-05-02 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-05-02 #}
 
 # Inspect animations {: .page-title }
@@ -95,7 +95,7 @@ Once you've captured an animation, there are a few ways to replay it:
   Click on the **animation speed** buttons (![animation speed 
   buttons](imgs/animation-speed-buttons.png){:.inline}) to change the preview 
   speed of the currently selected Animation Group. You can use the red 
-  veritcal bar to change your current position. 
+  vertical bar to change your current position. 
 * Click and drag the red vertical bar to scrub the viewport animation. 
 
 ### View animation details

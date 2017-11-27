@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Debug WebViews di aplikasi asli Android Anda dengan Chrome Developer Tools.
 

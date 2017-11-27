@@ -2,9 +2,10 @@
 <html lang="{{ lang }}">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
-    <link rel="stylesheet" href="/wf-local/styles/uhura-google-blue.css">
     <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+    <link rel="stylesheet" href="/wf-local/styles/devsite-google-blue.css">
     <link rel="canonical" href="https://developers.google.com/web/{{requestPath}}">
     <style>
       .wf-stage-warning {
@@ -22,15 +23,33 @@
         box-shadow: 0 1px 4px rgba(0,0,0,.37);
       }
       .devsite-rating-stars { text-align:right; }
-      .devsite-top-logo-row-wrapper-wrapper { border-bottom: 1px solid #4285f4; }
+      .devsite-top-section-wrapper {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .devsite-collapsible-section {
+        height: 48px;
+        margin-top: 48px;
+        position: relative;
+      }
+      .devsite-product-id-row {
+        padding-top: 0;
+      }
+      #gc-wrapper {
+        margin-top: 90px;
+      }
     </style>
     <title>{{ title }}</title>
+    {% autoescape off %}
+      {{ head }}
+    {% endautoescape %}
   </head>
   <body class="devsite-uhura devsite-doc-page devsite-header-no-lower-tabs" id="top_of_page">
     <div class="devsite-wrapper">
       <div class="devsite-top-section-wrapper">
-        <header class="devsite-top-section nocontent devsite-top-section-pinned" style="position: static;">
-          <div class="devsite-top-logo-row-wrapper-wrapper" style="position:fixed;">
+        <header class="devsite-top-section nocontent devsite-top-section-pinned">
+          <div class="devsite-top-logo-row-wrapper-wrapper">
             <div class="devsite-top-logo-row-wrapper">
               <div class="devsite-top-logo-row devsite-full-site-width">
                 <div class="devsite-product-name-wrapper">
@@ -76,15 +95,21 @@
             </div>
           </div>
 
-          <div class="devsite-collapsible-section" style="margin-top: 0px;">
+          <div class="devsite-collapsible-section">
             <div class="devsite-header-background devsite-full-site-width">
-              <div class="devsite-product-id-row devsite-full-site-width" style="visibility: visible;">
-                <div class="devsite-product-description-row">
-                  <ul class="devsite-breadcrumb-list">
-                    <li class="devsite-breadcrumb-item">
-                      Section Name
-                    </li>
-                  </ul>
+              <div class="devsite-product-id-row devsite-full-site-width">
+                <div class="devsite-doc-set-nav-row devsite-full-site-width">
+                  <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+                    <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+                      {% for tab in lowerTabs %}
+                        <li class="devsite-doc-set-nav-tab-container">
+                          <a href="{{tab.path}}" class="devsite-doc-set-nav-tab">
+                            {{tab.name}}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </nav>
                 </div>
               </div>
             </div>

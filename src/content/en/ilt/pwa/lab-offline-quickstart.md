@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-26T00:10:21Z #}
+{# wf_updated_on: 2017-07-11 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -107,7 +107,7 @@ Save the file.
 
 This code starts by defining a cache name, and a list of URLs to be cached. An install event listener is then added to the service worker. When the service worker installs, it opens a cache and stores the app's static assets. Now these assets are available for quick loading from the cache, without a network request.
 
-Note that __.__ is also cached. This represents the current directory, in this case, __app/__. We do this because the browser attempts to fetch __app/__ first before fetching __index.html__. When the app is offline, this results in a 404 error if we have not cached __app/__. They should both be cached to be safe.  
+Note that `.` is also cached. This represents the current directory, in this case, __app/__. We do this because the browser attempts to fetch __app/__ first before fetching __index.html__. When the app is offline, this results in a 404 error if we have not cached __app/__. They should both be cached to be safe.  
 
 
 
@@ -162,11 +162,11 @@ This code adds a fetch event listener to the service worker. When a resource is 
 * If the response is invalid, throws an error and logs a message to the console (`catch`).
 * If the response is valid, creates a copy of the response (`clone`), stores it in the cache, and then returns the original response.
 
-<div class=`"`note`"`>
+
 
 Note: We <code>clone</code> the response because the request is a stream that can only be consumed once. Because we want to put it in the cache and serve it to the user, we need to clone a copy. See Jake Archibald's <a href="https://jakearchibald.com/2014/reading-responses/">What happens when you read a response</a> article for a more in-depth explanation.
 
-</div>
+
 
 ### 2.3 Register the service worker
 

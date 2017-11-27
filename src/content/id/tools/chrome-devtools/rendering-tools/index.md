@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Pengguna mengharapkan laman berjalan mulus dan interaktif. Setiap tahap di pipeline piksel menyatakan peluang timbulnya jank. Pelajari tentang alat dan strategi untuk mengidentifikasi dan memperbaiki masalah umum yang memperlambat kinerja waktu proses.
 

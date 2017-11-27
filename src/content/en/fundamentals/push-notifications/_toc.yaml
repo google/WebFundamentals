@@ -1,0 +1,41 @@
+toc:
+- title: Web Push Notifications
+  section:
+  - title: Overview
+    path: /web/fundamentals/push-notifications/
+    step_group: web-push
+  - title: How Push Works
+    path: /web/fundamentals/push-notifications/how-push-works
+    step_group: web-push
+  - title: Subscribing a User
+    path: /web/fundamentals/push-notifications/subscribing-a-user
+    step_group: web-push
+  - title: Permission UX
+    path: /web/fundamentals/push-notifications/permission-ux
+    step_group: web-push
+  - title: Sending Messages with Web Push Libraries
+    path: /web/fundamentals/push-notifications/sending-messages-with-web-push-libraries
+    step_group: web-push
+  - title: Web Push Protocol
+    path: /web/fundamentals/push-notifications/web-push-protocol
+    step_group: web-push
+  - title: Handling Push Events
+    path: /web/fundamentals/push-notifications/handling-messages
+    step_group: web-push
+  - title: Displaying a Notification
+    path: /web/fundamentals/push-notifications/display-a-notification
+    step_group: web-push
+  - title: Notification Behavior
+    path: /web/fundamentals/push-notifications/notification-behaviour
+    step_group: web-push
+  - title: Common Notification Patterns
+    path: /web/fundamentals/push-notifications/common-notification-patterns
+    step_group: web-push
+  - title: FAQ
+    path: /web/fundamentals/push-notifications/faq
+    step_group: web-push
+  - title: Common Issues and Reporting Bugs
+    path: /web/fundamentals/push-notifications/common-issues-and-reporting-bugs
+    step_group: web-push
+  - title: "Video: Web Push Notifications (I/O 2016)"
+    path: /web/fundamentals/push-notifications/video

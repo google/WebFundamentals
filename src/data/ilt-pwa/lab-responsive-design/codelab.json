@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-04-27T16:11:56Z",
+  "updated": "2017-09-26T16:24:10Z",
   "id": "lab-responsive-design",
   "duration": 0,
   "title": "Lab: Responsive Design",
@@ -12,6 +12,9 @@
   "theme": "",
   "status": null,
   "category": null,
-  "tags": [],
+  "tags": [
+    "2-day",
+    "3-day"
+  ],
   "url": "lab-responsive-design"
 }

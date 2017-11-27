@@ -1,15 +1,42 @@
 'use strict';
 
-var gulp = require('gulp');
-var path = require('path');
-var runSequence = require('run-sequence');
-var wfHelper = require('./wfHelper');
-var wfContributors = require('./wfContributors');
-var wfTemplateHelper = require('./wfTemplateHelper');
-var wfYouTubeShows = require('./wfYouTubeShows');
+const fs = require('fs');
+const gulp = require('gulp');
+const path = require('path');
+const glob = require('globule');
+const jsYaml = require('js-yaml');
+const wfHelper = require('./wfHelper');
+const wfGlossary = require('./wfGlossary');
+const runSequence = require('run-sequence');
+const wfContributors = require('./wfContributors');
+const wfYouTubeShows = require('./wfYouTubeShows');
+const wfTemplateHelper = require('./wfTemplateHelper');
 
 gulp.task('build:contributors', function() {
   wfContributors.build();
+});
+
+gulp.task('build:announcement', function() {
+  const globOpts = {
+    srcBase: 'src/content/en/',
+    prefixBase: true,
+  };
+  const dumpYamlOpts = {lineWidth: 1000};
+  const projectYamlFiles = glob.find('**/_project.yaml', globOpts);
+  const file = 'src/data/announcement.yaml';
+  const announcementYaml = jsYaml.safeLoad(fs.readFileSync(file, 'utf8'));
+  const showAnnouncement = announcementYaml['enabled'];
+  projectYamlFiles.forEach((file) => {
+    let projYaml = jsYaml.safeLoad(fs.readFileSync(file, 'utf8'));
+    if (showAnnouncement) {
+      projYaml['announcement'] = {
+        description: announcementYaml.description,
+      }
+    } else {
+      delete projYaml['announcement'];
+    }
+    fs.writeFileSync(file, jsYaml.safeDump(projYaml, dumpYamlOpts));
+  });
 });
 
 gulp.task('build:fundamentals', function() {
@@ -21,6 +48,7 @@ gulp.task('build:fundamentals', function() {
     section: section,
     outputPath: baseOutputPath
   };
+  wfGlossary.build();
   var startPath = path.join(GLOBAL.WF.src.content, section);
   var files = wfHelper.getFileList(startPath, ['**/*.md']);
   files.sort(wfHelper.updatedComparator);
@@ -90,11 +118,11 @@ gulp.task('build:http203Podcast', function() {
   var src = 'shows/http203/podcast/';
   var baseOutputPath = path.join(GLOBAL.WF.src.content, src);
   var options = {
-    title: 'HTTP 203 Podcast',
-    subtitle: 'Where Paul and Jake occasionally talk web.',
-    author: {name: 'Paul Lewis & Jake Archibald', email: 'jaffathecake@gmail.com'},
-    summary: 'Paul and Jake talk about whatever\'s going on in the world of web development.',
-    image: 'https://developers.google.com/web/shows/http203/podcast/http203-podcast-art.jpg',
+    title: 'HTTP 203',
+    subtitle: 'Where Surma and Jake occasionally talk web.',
+    author: {name: 'Surma & Jake', email: 'jaffathecake@gmail.com'},
+    summary: 'Surma and Jake talk about whatever\'s going on in the world of web development.',
+    image: 'https://developers.google.com/web/shows/http203/podcast/images/surma-and-jake-2.jpg',
     section: 'shows',
     outputPath: baseOutputPath,
     baseUrl: 'https://developers.google.com/web/shows/http203/podcast/'
@@ -144,7 +172,7 @@ gulp.task('build:updates', function() {
   var baseOutputPath = path.join(GLOBAL.WF.src.content, section);
   var options = {
     title: 'Updates',
-    description: 'The latest and freshest updates from the Web teams at Google. Chrome, Tooling and more.',
+    description: 'The latest and freshest updates from the Web teams at Google. Chrome, V8, tooling, and more.',
     section: section,
     outputPath: baseOutputPath
   };
@@ -167,7 +195,7 @@ gulp.task('build:updates', function() {
   });
   options = {
     outputPath: GLOBAL.WF.src.content,
-    articlesToShow: 2
+    articlesToShow: 4
   }
   wfTemplateHelper.generateLatestWidget(files, options);
 });
@@ -175,6 +203,7 @@ gulp.task('build:updates', function() {
 gulp.task('build', function(cb) {
   runSequence(
     [
+      'build:announcement',
       'build:contributors',
       'build:fundamentals',
       'build:showcase',

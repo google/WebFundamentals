@@ -1,15 +1,16 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Two of the hurdles developers face when migrating to HTTPS are concepts and terminology. This guide provides a brief overview of both.
 
 {# wf_updated_on: 2016-08-22 #}
 {# wf_published_on: 2015-03-27 #}
+{# wf_blink_components: Blink>SecurityFeature #}
 
 # Important Security Terminology {: .page-title }
 
 {% include "web/_shared/contributors/chrispalmer.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}
-  
+
 ### TL;DR {: .hide-from-toc }
 
 * Public/private keys are used to sign and decrypt messages between the browser and the server.

@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Tampilan pohon DOM di panel Elemen Chrome DevTools menampilkan struktur DOM laman web saat ini. Edit materi dan struktur laman Anda secara langsung melalui pembaruan DOM.
 
-{# wf_updated_on: 2015-04-29 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Mengedit DOM {: .page-title }
@@ -139,7 +139,7 @@ Untuk menghapus simpul DOM:
 * Buka [menu more actions](#more-actions) dan pilih **Delete Node**.
 * Pilih simpul dan tekan tombol <kbd>Delete</kbd>.
 
-Catatan: Jika Anda tidak sengaja menghapus simpul, tekan <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd> (atau <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd> di Mac) untuk mengurungkan tindakan terakhir.
+Note: Jika Anda tidak sengaja menghapus simpul, tekan <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd> (atau <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd> di Mac) untuk mengurungkan tindakan terakhir.
 
 ## Menampilkan menu more actions {:#more-actions}
 
@@ -261,7 +261,7 @@ Klik tanda panah luaskan di sebelah identifier elemen untuk melihat properti pen
   </tbody>
 </table>
 
-Catatan: Banyak ekstensi Chrome yang menambahkan event listener-nya sendiri ke DOM. Jika Anda melihat beberapa event listener yang tidak disetel oleh kode Anda, sebaiknya buka kembali laman Anda di [jendela Samaran](https://support.google.com/chrome/answer/95464). Jendela samaran mencegah ekstensi berjalan secara default.
+Note: Banyak ekstensi Chrome yang menambahkan event listener-nya sendiri ke DOM. Jika Anda melihat beberapa event listener yang tidak disetel oleh kode Anda, sebaiknya buka kembali laman Anda di [jendela Samaran](https://support.google.com/chrome/answer/95464). Jendela samaran mencegah ekstensi berjalan secara default.
 
 ### Melihat event listener pendahulu
 

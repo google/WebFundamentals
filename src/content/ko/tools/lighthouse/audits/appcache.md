@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 'Application Cache를 사용하지 않는 사이트' Lighthouse 감사의 참조 문서입니다.
 
@@ -28,7 +28,7 @@ AppCache 매니페스트에서 정의된 동작을 서비스 워커 기반으로
 
 [API]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
 
-[sw-appcache-behavior]: https://github.com/GoogleChrome/sw-helpers/blob/master/packages/sw-appcache-behavior
+[sw-appcache-behavior]: https://github.com/GoogleChrome/sw-appcache-behavior
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 

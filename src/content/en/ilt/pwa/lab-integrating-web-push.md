@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-05-19T20:40:29Z #}
+{# wf_updated_on: 2017-07-11 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -136,7 +136,7 @@ If the prompt does not appear, you can [set the permissions](tools-for-pwa-devel
 
 #### Explanation
 
-This opens a popup when the user first lands on the page prompting them to allow or block notifications. Once the user accepts, you can display a notification. This permission status is stored along with your app, so calling this again returns the user's last choice.
+This opens a popup when the user first lands on the page prompting them to allow or block notifications. Once the user accepts, you can display a notification. This permission status is stored in the browser, so calling this again returns the user's last choice.
 
 ### 2.3 Display the notification
 

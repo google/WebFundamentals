@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-08-26 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2014-12-09 #}
 
 # The Offline Cookbook {: .page-title }
@@ -242,7 +242,7 @@ Isso é bastante semelhante ao
 
 <img src="images/cm-on-push.png">
 
-A [Push API](/web/fundamentals/engage-and-retain/push-notifications/)
+A [Push API](/web/fundamentals/push-notifications)
 é outro recurso baseado no ServiceWorker. Isso permite que o
 ServiceWorker seja despertado em resposta a uma mensagem do serviço de
 mensagens do SO. Isso acontecerá mesmo se o usuário não tiver uma guia aberta em

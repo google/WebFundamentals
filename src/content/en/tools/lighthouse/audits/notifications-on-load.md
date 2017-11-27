@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids Requesting The Notification Permission On Page Load" Lighthouse audit.
 
@@ -16,7 +16,7 @@ users or precise to their needs. A better user experience is to offer to send
 users a specific type of notification, and to present the permissions request
 after they opt-in.
 
-[good]: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+[good]: /web/fundamentals/push-notifications/
 
 ## How to pass the audit {: #how }
 

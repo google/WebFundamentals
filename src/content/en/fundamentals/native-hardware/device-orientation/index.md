@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Device motion and orientation events provide access to the built-in accelerometer, gyroscope, and compass in mobile devices.
 

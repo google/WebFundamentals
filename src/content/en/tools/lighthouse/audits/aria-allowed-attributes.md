@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Element aria-* Attributes Are Allowed For This Role" Lighthouse audit.
 
@@ -11,6 +11,8 @@ description: Reference documentation for the "Element aria-* Attributes Are Allo
 
 Invalid role-attribute combinations can disable the accessibility of your
 page.
+
+See [Introduction to ARIA](/web/fundamentals/accessibility/semantics-aria/) for more information.
 
 ## How to pass the audit {: #how }
 

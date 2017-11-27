@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of convenience functions available in the Chrome DevTools Console.
 
@@ -63,7 +63,7 @@ while `$1` returns the previously selected one:
 `$(selector)` returns the reference to the first DOM element
 with the specified CSS selector.
 This function is an alias for the
-[document.querySelector()](https://docs.webplatform.org/wiki/css/selectors_api/querySelector)
+[document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 function.
 
 The following example returns a reference
@@ -88,7 +88,7 @@ will be overwritten, and <code>$</code> will correspond to that library's implem
 `$$(selector)` returns an array of elements
 that match the given CSS selector.
 This command is equivalent to calling
-[document.querySelectorAll()](https://docs.webplatform.org/wiki/css/selectors_api/querySelectorAll).
+[document.querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll).
 
 The following example uses `$$()` to create an array
 of all `<img>` elements in the current document and

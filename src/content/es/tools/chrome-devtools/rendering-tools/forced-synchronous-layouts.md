@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Sigue esta guía interactiva para aprender a usar DevTools a fin de diagnosticar diseños sincrónicos forzados.
 
-{# wf_updated_on: 2016-03-31 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Diagnosticar diseños sincrónicos forzados {: .page-title }
@@ -76,7 +76,7 @@ Debajo de `Animation Frame Fired` verás `Function Call` y, debajo de este,
 `update`. Puedes inferir que el método denominado `update()` es el callback de
 `requestAnimationFrame()`. 
 
-Nota: En este punto, resultará útil la opción **JS Profile** que habilitaste 
+Note: En este punto, resultará útil la opción **JS Profile** que habilitaste 
 antes. Si estuviera inhabilitada, solo verías el evento `Function Call`, seguido
 de todos los pequeños eventos morados (se tratarán a continuación), sin detalles precisos de las funciones
 llamadas.

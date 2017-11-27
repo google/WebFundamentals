@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-05-05T21:20:37Z #}
+{# wf_updated_on: 2017-08-10 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -106,11 +106,9 @@ The app shell model is great but how does it work in browsers that do not suppor
 <p>cache</p>
 </td><td colspan="1" rowspan="1">
 <p>There are two types of cache in the browser: browser-managed cache and application-managed cache (service worker).</p>
-<ul>
-<li><strong>Browser-managed caches</strong> are a temporary storage location on your computer for files downloaded by your browser to display websites. Files that are cached locally include any documents that make up a website, such as HTML files, CSS style sheets, JavaScript scripts, as well as graphic images and other multimedia content. This cache is managed automatically by the browser and is not available offline.</li>
-<li><strong>Application-managed caches</strong> are created using the  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache API</a> independent of the browser-managed caches. This API is available to applications (via <strong><code>window.caches</code></strong>) and the service worker. Application- managed caches hold the same kinds of assets as a browser cache but are accessible offline (e.g. by the service worker to enable offline support).This cache is managed by developers who implement scripts that use the Cache API to explicitly update items in named cache objects.</li>
-</ul>
-<p>Cache is a great tool you can use when building your app, as long as the cache you use is appropriate for each resource. Several caching strategies are described in the PWA  <a href="#bestcaching">Caching Strategies</a> tutorial.</p>
+<p><strong>Browser-managed caches</strong> are a temporary storage location on your computer for files downloaded by your browser to display websites. Files that are cached locally include any documents that make up a website, such as HTML files, CSS style sheets, JavaScript scripts, as well as graphic images and other multimedia content. This cache is managed automatically by the browser and is not available offline.</p>
+<p><strong>Application-managed caches</strong> are created using the  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache API</a> independent of the browser-managed caches. This API is available to applications (via <strong><code>window.caches</code></strong>) and the service worker. Application- managed caches hold the same kinds of assets as a browser cache but are accessible offline (e.g. by the service worker to enable offline support).This cache is managed by developers who implement scripts that use the Cache API to explicitly update items in named cache objects.</p>
+<p>Cache is a great tool you can use when building your app, as long as the cache you use is appropriate for each resource. Several caching strategies are described in the PWA Caching Strategies tutorial.</p>
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
@@ -441,7 +439,7 @@ The app shell keeps your UI local and pulls in content dynamically through an AP
 
 Building a PWA does not mean starting from scratch. If you are building a modern  [single-page app (SPA)](https://en.wikipedia.org/wiki/Single-page_application), then you are probably using something similar to an app shell already whether you call it that or not. The details might vary a bit depending upon which libraries or frameworks you are using, but the concept itself is framework agnostic. 
 
-To see how Google built an app shell architecture, take a look at  [To the Lighthouse](/web/shows/pwa-devsummit/amsterdam-2016/to-the-lighthouse-progressive-web-app-summit-2016) demo. . This real-world app started with a SPA to create a PWA that pre caches content using a service worker, dynamically loads new pages, gracefully transitions between views, and reuses content after the first load. 
+To see how Google built an app shell architecture, take a look at  [To the Lighthouse](/web/shows/pwa-devsummit/amsterdam-2016/to-the-lighthouse-progressive-web-app-summit-2016) demo. This real-world app started with a SPA to create a PWA that pre caches content using a service worker, dynamically loads new pages, gracefully transitions between views, and reuses content after the first load. 
 
 When should you use the app shell architecture?  It makes the most sense for apps and sites with relatively unchanging navigation but changing content. A number of modern JavaScript frameworks and libraries already encourage splitting your application logic from the content, making this architecture more straightforward to apply. For a certain class of websites that only have static content you can still follow the same model but the site is 100% app shell.
 
@@ -509,7 +507,15 @@ By using service workers, the appropriate architectural styles, APIs, and the ap
 
 Development with the service worker is not necessarily a trivial process. It is, by design, a low-level API and there can be a fair bit of code involved. While you could write your own service worker code, there are some libraries provided that automate many of the details for you while also following the best practices and avoiding common gotchas. 
 
-The `sw-toolbox` library and `sw-precache` module go hand-in-hand and are built on top of the service worker primitives, like the Cache and Fetch APIs. These tools abstract low-level complexities and make it easier for developers to work with service workers. This section provides some simple examples of these tools, but the sw-precache and sw-toolbox  [codelabs](lab-sw-precache-and-sw-toolbox) and accompanying  [Using sw-precache and sw-toolbox](using-sw-precache-and-sw-toolbox) textbook provide more details and examples.
+Earlier versions of PWA used the `sw-toolbox` library and `sw-precache` module that are built on top of the service worker primitives, like the Cache and Fetch APIs. These tools abstract low-level complexities and make it easier for developers to work with service workers. This section provides some simple examples of these tools, but we recommend using Workbox. 
+
+
+
+Note: Workbox is the successor to  [`sw-precache`](https://github.com/GoogleChrome/sw-precache) and  [`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox). It is a collection of libraries and tools used for generating a service worker, precaching, routing, and runtime-caching. Workbox also includes modules for easily integrating background sync and Google analytics into your service worker.
+
+See the  [PWA Workbox Lab](lab-workbox)to learn how to use Workbox to easily create production-ready service workers. Also, see the  [Workbox page](/web/tools/workbox/) on developers.google.com for an explanation of each module contained in Workbox.
+
+
 
 #### The `sw-toolbox` Library
 
@@ -517,7 +523,7 @@ The `sw-toolbox` library and `sw-precache` module go hand-in-hand and are built 
 
 ##### Setting Up `sw-toolbox` for Common Caching Strategies 
 
-You can install `sw-toolbox` through `Bower`, `npm` or direct from  [`GitHub`](https://github.com/GoogleChrome/sw-toolbox):
+You can install `sw-toolbox` through `Bower`, `npm` or direct from  [GitHub](https://github.com/GoogleChrome/sw-toolbox):
 
     bower install --save sw-toolbox
     
@@ -611,8 +617,7 @@ Use the following table to determine which caching strategy is most appropriate 
 </td>
 </tr>
 <tr><td colspan="1" rowspan="1">
-<p>Cache first,</p>
-<p>Network fallback</p>
+<p>Cache first, Network fallback</p>
 </td><td colspan="1" rowspan="1">
 <p>Loads the local (cached) HTML and JavaScript first, if possible, bypassing the network. If cached content is not available, then the service worker returns a response from the network instead and caches the network response. </p>
 </td><td colspan="1" rowspan="1">

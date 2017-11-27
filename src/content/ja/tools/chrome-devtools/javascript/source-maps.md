@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: クライアント側のコードを結合、圧縮、またはコンパイルした後も、読みやすく、デバッグ可能な状態にしておきます。
 

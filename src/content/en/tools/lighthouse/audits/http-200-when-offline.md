@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Responds With A 200 When Offline" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-11-03 #}
 {# wf_published_on: 2016-09-15 #}
 
 # Responds With A 200 When Offline {: .page-title }
@@ -31,7 +31,7 @@ using Chrome DevTools. For more detailed help, see the codelab dedicated to
 this topic, [Debugging Service
 Workers](https://codelabs.developers.google.com/codelabs/debugging-service-workers).
 
-Use the [Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/) to
+Use the [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) to
 determine which caching strategy fits your app best. This covers step 2 above.
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}

@@ -1,0 +1,20 @@
+<table class="function param responsive">
+  {{#block 'details-table-header'}}
+    <tr>
+      <th colspan="2">
+        {{#if isEnum}}
+          <h>{{translateHeading 'values' params}}</h>
+        {{else}}
+          <h>{{translateHeading 'parameters' params}}</h>
+        {{/if}}
+      </th>
+    </tr>
+  {{/block}}
+  {{#block 'details-table-body'}}
+    <tbody>
+      {{#each values}}
+        {{#embed 'details-table-row'}}{{/embed}}
+      {{/each}}
+    </tbody>
+  {{/block}}
+</table>

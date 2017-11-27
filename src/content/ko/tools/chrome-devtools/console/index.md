@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools JavaScript 콘솔을 탐색하는 방법에 대해 자세히 알아봅니다.
 

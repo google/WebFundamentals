@@ -18,6 +18,7 @@ var RE_PUBLISHED = /^{#\s?wf_published_on:\s?(.*?)\s?#}\s?\n/m;
 
 var RE_IMAGE = /^{#\s?wf_featured_image:\s?(.*?)\s?#}\s?\n/m;
 var RE_IMAGE_SQUARE = /^{#\s?wf_featured_image_square:\s?(.*?)\s?#}\s?\n/m;
+var RE_BLINK_COMPONENTS = /^{#\s?wf_blink_components:\s?(.*?)\s?#}\s?\n/m;
 var RE_TAGS = /^{#\s?wf_tags:\s?(.*?)\s?#}\s?\n/m;
 var RE_SNIPPET = /^{#\s?wf_featured_snippet:\s?(.*?)\s?#}\s?\n/m;
 
@@ -35,6 +36,9 @@ var RE_PODCAST_SIZE = /^{#\s?wf_podcast_fileSize: (.*?)\s?#}\s?\n/m;
 var RE_INCLUDE_MD = /^<<(.*?)>>/gm;
 var RE_INCLUDE_FILE = /["|'](.*)["|']/;
 var RE_INCLUDES = /^{%\s?include ["|'](.*)["|']\s?%}/gm;
+
+const RE_INCLUDE_CODE = /{% includecode .*?%}/gm;
+const RE_INCLUDE_CODE_PATH = /content_path=["']?(.*?)["' ]/;
 
 var RE_SINGLE_LINE_COMMENT = /^{%\s?comment\s?%}.*{%\s?endcomment\s?%}$/gm;
 
@@ -67,6 +71,7 @@ exports.RE_PROJECT_PATH = RE_PROJECT_PATH;
 exports.RE_UPDATED_ON = RE_UPDATED;
 exports.RE_PUBLISHED_ON = RE_PUBLISHED;
 exports.RE_DESCRIPTION = RE_DESCRIPTION;
+exports.RE_BLINK_COMPONENTS = RE_BLINK_COMPONENTS;
 exports.RE_REGION = RE_REGION;
 exports.RE_VERTICAL = RE_VERTICAL;
 exports.RE_FEATURED_DATE = RE_FEATURED_DATE;
@@ -86,6 +91,8 @@ exports.RE_MD_INCLUDE = RE_MD_INCLUDE;
 exports.RE_INCLUDES = RE_INCLUDES;
 exports.RE_INCLUDE_MD = RE_INCLUDE_MD;
 exports.RE_INCLUDE_FILE = RE_INCLUDE_FILE;
+exports.RE_INCLUDE_CODE = RE_INCLUDE_CODE;
+exports.RE_INCLUDE_CODE_PATH = RE_INCLUDE_CODE_PATH;
 exports.RE_SINGLE_LINE_COMMENT = RE_SINGLE_LINE_COMMENT;
 exports.RE_AUTO_GENERATED = RE_AUTO_GENERATED;
 exports.RE_DEVSITE_TRANSLATION = RE_DEVSITE_TRANSLATION;

@@ -3,13 +3,13 @@ book_path: /web/fundamentals/_book.yaml
 description: Buscar y solucionar problemas de contenido mixto es una tarea importante, pero puede tomar mucho tiempo. En esta guía, se analizan algunas herramientas disponibles para facilitar el proceso.
 
 {# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2016-08-24 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # Prevención del contenido mixto {: .page-title }
 
 {% include "web/_shared/contributors/johyphenel.html" %}
 
-Éxito: Admitir HTTPS en tu sitio web es un paso importante para proteger a tu sitio y a los usuarios contra ataques. Sin embargo, el contenido mixto puede inutilizar esta protección. Para brindar protección a tu sitio y a los usuarios, es muy importante que encuentres y soluciones los problemas de contenido mixto.
+Success: Admitir HTTPS en tu sitio web es un paso importante para proteger a tu sitio y a los usuarios contra ataques. Sin embargo, el contenido mixto puede inutilizar esta protección. Para brindar protección a tu sitio y a los usuarios, es muy importante que encuentres y soluciones los problemas de contenido mixto.
 
 Buscar y solucionar problemas de contenido mixto es una tarea importante, pero puede tomar mucho tiempo. En esta guía, se analizan algunas herramientas y técnicas disponibles para facilitar el proceso. Para obtener más información sobre el contenido mixto en sí, consulta [Qué es el contenido mixto](./what-is-mixed-content).
 
@@ -50,7 +50,7 @@ mixto:
 
 Tienes que corregir las URL del tipo http:// que se muestran en estos errores y advertencias, en la fuente de tu sitio. Es útil hacer una lista de estas URL junto con la página en la que las encontraste para usar cuando las corrijas. 
 
-Nota: Solo se muestran los errores y las advertencias de contenido mixto de la página que estés viendo, y la consola de JavaScript se borra cada vez que te diriges a otra página. Esto significa que deberás ver cada una de las páginas de tu sitio para encontrar estos errores. Algunos errores solo aparecerán cuando interactúes con parte de la página, consulta el ejemplo de contenido mixto en la galería de imágenes de la guía anterior.
+Note: Solo se muestran los errores y las advertencias de contenido mixto de la página que estés viendo, y la consola de JavaScript se borra cada vez que te diriges a otra página. Esto significa que deberás ver cada una de las páginas de tu sitio para encontrar estos errores. Algunos errores solo aparecerán cuando interactúes con parte de la página, consulta el ejemplo de contenido mixto en la galería de imágenes de la guía anterior.
 
 ### Encontrar contenido mixto en tu código fuente
 
@@ -191,7 +191,7 @@ La CSP es útil para muchas cosas fuera de sus usos de contenido mixto. La infor
 * [CSP playground](http://www.cspplayground.com/){: .external }
 * [Especificación de la CSP](//www.w3.org/TR/CSP/){: .external }
 
-Nota: Los navegadores implementan <b>todas</b> las políticas de seguridad de contenido.
+Note: Los navegadores implementan <b>todas</b> las políticas de seguridad de contenido.
 Los diferentes valores del encabezado de CSP que el navegador recibe en el encabezado de respuesta o en los elementos
 <code>&lt;meta&gt;</code> se combinan e implementan como una única política.
 Asimismo, se combinan las políticas de informes. Para combinar las políticas, se toman las

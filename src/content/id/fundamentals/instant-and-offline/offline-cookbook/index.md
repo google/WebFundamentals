@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-08-26 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2014-12-09 #}
 
 # Buku Petunjuk Offline {: .page-title }
@@ -242,7 +242,7 @@ Di HTTP ini sangat mirip dengan
 
 <img src="images/cm-on-push.png">
 
-[Push API](/web/fundamentals/engage-and-retain/push-notifications/)
+[Push API](/web/fundamentals/push-notifications)
 adalah fitur lain yang dibangun berbasis ServiceWorker. Ini memungkinkan
 ServiceWorker dibangunkan untuk merespons pesan dari
 layanan perpesanan OS. Ini terjadi bahkan bila pengguna tidak memiliki tab yang dibuka untuk
@@ -563,7 +563,7 @@ Kita selalu masuk ke jaringan & memperbarui cache sambil jalan.
       );
     });
 
-Catatan: Kode di atas tidak berfungsi di Chrome, karena kami mengekspos `fetch` dan `caches` ke laman ([tiket #1](https://code.google.com/p/chromium/issues/detail?id=436770), [tiket #2](https://code.google.com/p/chromium/issues/detail?id=439389)).
+Note: Kode di atas tidak berfungsi di Chrome, karena kami mengekspos `fetch` dan `caches` ke laman ([tiket #1](https://code.google.com/p/chromium/issues/detail?id=436770), [tiket #2](https://code.google.com/p/chromium/issues/detail?id=439389)).
 
 Di [trained-to-thrill][ttt] saya memperbaikinya dengan menggunakan
 [XHR sebagai ganti pengambilan atau fetch](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/utils.js#L3),

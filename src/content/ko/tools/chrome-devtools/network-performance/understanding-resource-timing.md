@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 네트워크를 통해 리소스가 수집되는 단계를 이해하는 것은 매우 중요합니다. 이는 로드 문제를 해결하기 위한 기반입니다.
 

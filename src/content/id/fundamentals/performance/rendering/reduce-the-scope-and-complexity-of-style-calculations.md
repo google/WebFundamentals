@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript sering kali memicu perubahan visual. Kadang-kadang itu langsung melalui manipulasi gaya, dan kadang-kadang penghitungannya yang akan mengakibatkan perubahan visual, seperti mencari atau mengurutkan sejumlah data. JavaScript yang berjalan lama atau jelek pengaturan waktunya bisa menjadi penyebab umum masalah kinerja, dan Anda harus berusaha meminimalkan dampaknya sebisa mungkin.
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-20 #}
 
 # Kurangi Cakupan dan Kompleksitas Penghitungan Gaya {: .page-title }
@@ -59,11 +59,11 @@ Pertimbangan kinerja lainnya, yang biasanya merupakan _faktor yang lebih penting
 
 Dalam artian umum, kasus terburuk untuk biaya penghitungan gaya elemen terkomputasi adalah jumlah elemen dikali jumlah pemilih, karena setiap elemen setidaknya perlu diperiksa sekali terhadap setiap gaya untuk mengetahui kecocokannya.
 
-Catatan: Biasanya jika Anda mengubah sebuah kelas di -- anggaplah -- elemen body, semua anak di laman tersebut perlu dihitung ulang gaya terkomputasinya. Syukurlah hal itu tidak berlaku lagi; beberapa browser malah mempertahankan sekumpulan kecil aturan yang berbeda untuk setiap elemen yang, jika berubah, akan menyebabkan gaya elemen harus dihitung ulang. Itu berarti bahwa suatu elemen mungkin atau mungkin tidak perlu dihitung ulang, bergantung pada tempatnya di pohon, dan apa yang secara spesifik berubah.
+Note: Biasanya jika Anda mengubah sebuah kelas di -- anggaplah -- elemen body, semua anak di laman tersebut perlu dihitung ulang gaya terkomputasinya. Syukurlah hal itu tidak berlaku lagi; beberapa browser malah mempertahankan sekumpulan kecil aturan yang berbeda untuk setiap elemen yang, jika berubah, akan menyebabkan gaya elemen harus dihitung ulang. Itu berarti bahwa suatu elemen mungkin atau mungkin tidak perlu dihitung ulang, bergantung pada tempatnya di pohon, dan apa yang secara spesifik berubah.
 
 Penghitungan gaya sering kali bisa ditargetkan pada beberapa elemen secara langsung, daripada membuat invalid laman secara keseluruhan. Di browser modern, cenderung lebih sedikit masalah karena browser tidak perlu memeriksa semua elemen yang berpotensi terpengaruh oleh perubahan. Sebaliknya, browser lama tidak perlu dioptimalkan untuk tugas demikian. Di sinilah Anda seharusnya bisa **mengurangi jumlah elemen yang dibuat invalid**.
 
-Catatan: Jika Anda masuk ke Komponen Web sebaiknya perhatikan bahwa penghitungan gaya di sini sedikit berbeda, karena secara default gaya tidak melewati batas Shadow DOM, dan menjadi cakupan komponen individual bukannya pohon sebagai keseluruhan. Akan tetapi, umumnya berlaku konsep yang sama: pohon yang lebih kecil dengan aturan lebih sederhana akan diproses lebih efisien daripada pohon yang besar atau aturan yang kompleks.
+Note: Jika Anda masuk ke Komponen Web sebaiknya perhatikan bahwa penghitungan gaya di sini sedikit berbeda, karena secara default gaya tidak melewati batas Shadow DOM, dan menjadi cakupan komponen individual bukannya pohon sebagai keseluruhan. Akan tetapi, umumnya berlaku konsep yang sama: pohon yang lebih kecil dengan aturan lebih sederhana akan diproses lebih efisien daripada pohon yang besar atau aturan yang kompleks.
 
 ## Ukur Biaya Penghitungan Ulang Gaya Anda
 

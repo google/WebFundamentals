@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-04-26T00:11:32Z",
+  "updated": "2017-10-10T18:31:04Z",
   "id": "lab-indexeddb",
   "duration": 0,
   "title": "Lab: IndexedDB",
@@ -12,6 +12,9 @@
   "theme": "",
   "status": null,
   "category": null,
-  "tags": [],
+  "tags": [
+    "2-day",
+    "3-day"
+  ],
   "url": "lab-indexeddb"
 }

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Usar HTTPS nos servidores é fundamental para proteger páginas da web. 
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-27 #}
 
 # Como usar o HTTPS nos servidores {: .page-title }
@@ -244,7 +244,7 @@ Ao oferecer links para outros sites (em vez de incluir os recursos deles),
 como você não tem controle sobre o funcionamento deles,
 não altere o protocolo.
 
-Sucesso: para fazer migrações mais suaves de sites grandes, recomendamos usar URLs relativos a protocolo. Se você não tem certeza de que já consegue implantar o HTTPS totalmente, forçar o site a usar HTTPS para todos os recursos secundários pode não dar certo. É provável que o HTTPS seja algo novo e estranho para você por algum tempo. Enquanto isso, o site HTTP deverá funcionar normalmente como sempre. Com o tempo, você vai concluir a migração e poder forçar o uso do HTTPS (veja as duas próximas seções).
+Success: para fazer migrações mais suaves de sites grandes, recomendamos usar URLs relativos a protocolo. Se você não tem certeza de que já consegue implantar o HTTPS totalmente, forçar o site a usar HTTPS para todos os recursos secundários pode não dar certo. É provável que o HTTPS seja algo novo e estranho para você por algum tempo. Enquanto isso, o site HTTP deverá funcionar normalmente como sempre. Com o tempo, você vai concluir a migração e poder forçar o uso do HTTPS (veja as duas próximas seções).
 
 Se o site depende de scripts, imagens ou outros recursos fornecidos por
 terceiros, como CDN, jquery.com, você tem duas opções:
@@ -334,7 +334,7 @@ resolver:
 
 Como os mecanismos de pesquisa estão migrando para HTTPS, no futuro, você provavelmente verá _mais_ cabeçalhos Referer quando migrar para HTTPS.
 
-Atenção: De acordo com a [RFC do HTTP](https://tools.ietf.org/html/rfc2616#section-15.1.3), os clientes **NÃO DEVEM** incluir um campo de cabeçalho Referer em uma solicitação HTTP (desprotegida) se a página referida tiver sido transferida por meio de um protocolo seguro.
+Warning: De acordo com a [RFC do HTTP](https://tools.ietf.org/html/rfc2616#section-15.1.3), os clientes **NÃO DEVEM** incluir um campo de cabeçalho Referer em uma solicitação HTTP (desprotegida) se a página referida tiver sido transferida por meio de um protocolo seguro.
 
 ### Receita com anúncios
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: De manera predeterminada, cada navegador de escritorio viene con un conjunto de herramientas para el desarrollador. Puedes ampliar este conjunto con extensiones o complementos para el navegador.
 

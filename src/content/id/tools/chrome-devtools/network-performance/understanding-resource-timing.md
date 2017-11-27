@@ -1,9 +1,9 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Penting bagi Anda untuk memahami fase tempat sumber daya dikumpulkan di jaringan. Ini adalah dasar memperbaiki masalah pemuatan.
 
 {# wf_published_on: 2016-02-03 #}
-{# wf_updated_on: 2016-02-03 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # Memahami Resource Timing {: .page-title }
 
@@ -22,7 +22,7 @@ Semua permintaan jaringan dianggap sebagai sumber daya.
 Saat diambil melalui jaringan, sumber daya memiliki daur hidup yang diekspresikan dalam bentuk pengaturan waktu sumber daya.
 Panel Network menggunakan [Resource Timing API](http://www.w3.org/TR/resource-timing) yang sama, yang tersedia untuk developer aplikasi.
 
-Catatan: saat menggunakan Resource Timing API dengan sumber daya lintas-sumber, pastikan
+Note: saat menggunakan Resource Timing API dengan sumber daya lintas-sumber, pastikan
 bahwa semua sumber daya memiliki header CORS.
 
 Resource Timing API menyediakan tingkat detail yang lengkap tentang setiap waktu aset yang akan diterima.

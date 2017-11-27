@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para las auditorías de Lighthouse "El sitio no usa etiquetas de enlaces que demoran la primera pintura" y "El sitio no usa etiquetas de secuencias de comandos en el encabezado que demoran la primera pintura".
 
-{# wf_updated_on: 2016-12-01 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-12-01 #}
 
 # El sitio no usa recursos que demoran la primera pintura  {: .page-title }
@@ -24,7 +24,7 @@ Tal como se menciona en [Cómo se implementa la auditoría](#implementation), Li
 indica tres tipos de enlaces que bloquean la representación: secuencias de comandos, hojas de estilo e importaciones
 HTML. La forma en que optimizas depende del tipo de recurso con el que trabajas.
 
-Nota: Si a continuación se hace referencia a un recurso como "crítico", significa que el
+Note: Si a continuación se hace referencia a un recurso como "crítico", significa que el
 recurso es necesario para la primera pintura o es crucial para la funcionalidad central de la
 página.
 

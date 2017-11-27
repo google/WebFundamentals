@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Conheça as maneiras mais simples de adicionar vídeos ao seu site e garanta a melhor experiência possível para os usuários em qualquer dispositivo.
 
-{# wf_updated_on: 2014-04-28 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2014-04-15 #}
 
 # Vídeo {: .page-title }
@@ -37,8 +37,8 @@ possível para os usuários em qualquer dispositivo.
 Adicione o elemento `video` para carregar, decodificar e reproduzir vídeos no seu site:
 
 <video controls>
-  <source src="video/chrome.webm" type="video/webm">
-  <source src="video/chrome.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" type="video/mp4">
   <p>Este navegador não oferece suporte para o elemento video.</p>
 </video>
 
@@ -60,7 +60,7 @@ Por exemplo:
 {% includecode content_path="web/fundamentals/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html){: target="_blank" .external }
 
 Quando o navegador analisa as tags `<source>`, ele usa o atributo opcional `type`
 para decidir qual arquivo baixar e reproduzir. Se o navegador oferecer
@@ -86,7 +86,7 @@ e a latência são escassas e a paciência do usuário provavelmente é limitada
 Não incluir um atributo type pode afetar o desempenho quando há
 várias fontes com tipos incompatíveis.
 
-Usando as ferramentas de desenvolvedor do seu navegador móvel, compare a atividade de rede [com atributos type](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external } e [sem atributos type](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html){: target="_blank" .external }.
+Usando as ferramentas de desenvolvedor do seu navegador móvel, compare a atividade de rede [com atributos type](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html){: target="_blank" .external } e [sem atributos type](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html){: target="_blank" .external }.
 
 Além disso, verifique os cabeçalhos de resposta nas ferramentas de desenvolvedor do navegador para 
 [garantir que o servidor reporte o tipo MIME certo](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types);
@@ -98,8 +98,8 @@ Economize largura de banda e deixe seu site mais responsivo: use a Media
 Fragments API para adicionar horários de início e de término ao elemento video.
 
 <video controls>
-  <source src="video/chrome.webm#t=5,10" type="video/webm">
-  <source src="video/chrome.mp4#t=5,10" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm#t=5,10" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4#t=5,10" type="video/mp4">
   <p>Este navegador não oferece suporte para o elemento video.</p>
 </video>
 
@@ -116,7 +116,7 @@ vídeo &ndash; como pontos de sinalização em um DVD &ndash; sem precisar codif
 enviar vários arquivos.
 
 
-Atenção: A maioria das plataformas oferece suporte à Media Fragments API, exceto o iOS. Certifique-se também de que seu servidor ofereça suporte a solicitações de Range. Por padrão, a maioria dos servidores aceita solicitações de Range, mas alguns serviços de hospedagem podem desativá-las.
+Warning: A maioria das plataformas oferece suporte à Media Fragments API, exceto o iOS. Certifique-se também de que seu servidor ofereça suporte a solicitações de Range. Por padrão, a maioria dos servidores aceita solicitações de Range, mas alguns serviços de hospedagem podem desativá-las.
 
 Usando as ferramentas de desenvolvedor do navegador, verifique se `Accept-Ranges: bytes` está presente
 nos cabeçalhos de resposta:
@@ -310,13 +310,13 @@ e plug-ins como o [FitVids](http://fitvidsjs.com/) permitem manter
 um tamanho e uma taxa de proporção apropriados, mesmo para vídeos Flash do YouTube e
 de outras fontes.
 
-Use [consultas de mídia CSS](/web/fundamentals/design-and-ui/responsive/#css-media-queries) para especificar o tamanho de elementos dependendo das dimensões da janela de visualização; `max-width: 100%` é muito útil.
+Use [consultas de mídia CSS](/web/fundamentals/design-and-ux/responsive/#css-media-queries) para especificar o tamanho de elementos dependendo das dimensões da janela de visualização; `max-width: 100%` é muito útil.
 
 Para conteúdo de mídia em iframes (como vídeos do YouTube), experimente uma abordagem
 responsiva (como a [proposta por John Surdakowski](http://avexdesigns.com/responsive-youtube-embed/)).
 
 
-Atenção: Não force dimensionamento de elementos que resulte em uma taxa de proporção diferente da do vídeo original. Elementos comprimidos ou esticados ficam feios.
+Warning: Não force dimensionamento de elementos que resulte em uma taxa de proporção diferente da do vídeo original. Elementos comprimidos ou esticados ficam feios.
 
 **CSS:**
 
@@ -330,10 +330,10 @@ Atenção: Não force dimensionamento de elementos que resulte em uma taxa de pr
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html){: target="_blank" .external }
 
-Compare o [exemplo responsivo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }
-à [versão não responsiva](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/unyt.html){: target="_blank" .external }.
+Compare o [exemplo responsivo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html){: target="_blank" .external }
+à [versão não responsiva](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/unyt.html){: target="_blank" .external }.
 
 
 ## Personalize o reprodutor de vídeos
@@ -429,15 +429,15 @@ Você também pode usar a pseudoclasse `:fullscreen` do CSS para alterar a manei
 os elementos são exibidos no modo de tela inteira.
 
 <video autoplay muted loop class="attempt-right">
-  <source src="video/fullscreen.webm" type="video/webm">
-  <source src="video/fullscreen.mp4" type="video/mp4">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.webm" type="video/webm">
+  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/fullscreen.mp4" type="video/mp4">
   <p>Este navegador não oferece suporte para o elemento video.</p>
 </video>
 
 Em dispositivos compatíveis com a Fullscreen API, considere usar imagens
 de miniatura como marcadores para vídeos:
 
-Para ver esse recurso em ação, confira [esta demonstração](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html){: target="_blank" .external }.
+Para ver esse recurso em ação, confira [esta demonstração](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html){: target="_blank" .external }.
 
 Dogfood: `requestFullScreen()` pode ter prefixo de fornecedor e pode exigir códigos adicionais para ser totalmente compatível entre navegadores.
 
@@ -469,7 +469,7 @@ track como filho do elemento video:
 {% includecode content_path="web/fundamentals/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
 </pre>
 
-[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/track.html){: target="_blank" .external }
+[Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/track.html){: target="_blank" .external }
 
 O atributo `src` do elemento track fornece o local do arquivo da faixa.
 
@@ -642,7 +642,7 @@ atualizando-o com preocupações específicas a dispositivos móveis quando rele
   </tbody>
 </table>
 
-`playbackRate` ([veja a demonstração](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html){: target="_blank" .external }) ou `volume` não são suportados em dispositivos móveis.
+`playbackRate` ([veja a demonstração](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html){: target="_blank" .external }) ou `volume` não são suportados em dispositivos móveis.
 
 #### Métodos
 
@@ -674,7 +674,7 @@ atualizando-o com preocupações específicas a dispositivos móveis quando rele
 
 Em dispositivos móveis (exceto no Opera do Android), `play()` e `pause()` não funcionam
 a não ser que sejam chamados em resposta a uma ação do usuário, como o clique em um botão: confira 
-a [demonstração](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html){: target="_blank" .external }.
+a [demonstração](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html){: target="_blank" .external }.
 (Da mesma forma, não é possível iniciar a reprodução de conteúdo como vídeos
 incorporados do YouTube.)
 

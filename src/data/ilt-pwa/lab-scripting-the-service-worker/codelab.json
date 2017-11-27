@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-04-26T16:30:17Z",
+  "updated": "2017-11-09T18:35:31Z",
   "id": "lab-scripting-the-service-worker",
   "duration": 0,
   "title": "Lab: Scripting the Service Worker",
@@ -12,6 +12,8 @@
   "theme": "",
   "status": null,
   "category": null,
-  "tags": [],
+  "tags": [
+    "3-day"
+  ],
   "url": "lab-scripting-the-service-worker"
 }

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La pintura es el proceso de rellenar los píxeles que, finalmente, se convierten en una composición en las pantallas de los usuarios. A menudo, es la tarea del proceso que más tiempo se ejecuta, y la que se debe evitar siempre que sea posible.
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-03-20 #}
 
 # Simplifica la complejidad de la pintura y reduce las áreas de pintura {: .page-title }
@@ -105,7 +105,7 @@ Si promoviste un elemento a una capa nueva, usa DevTools para confirmar que al h
 
 En algunos casos, no obstante, aunque se promuevan los elementos será necesario realizar trabajos de pintura de todos modos. Un gran desafío, en términos de problemas relacionados con la pintura, es que los navegadores unen dos áreas que necesitan pintura; esto puede hacer que se vuelva a pintar toda la pantalla. Entonces, por ejemplo, si tienes un encabezado fijo en la parte superior de la página y un elemento que se está pintando en la parte inferior de la pantalla, es posible que se pinte nuevamente toda la pantalla.
 
-Nota: Los elementos de las pantallas con valores altos de PPP (Puntos por pulgada) que están en una posición fija se promueven automáticamente a su propia capa del compositor. Esto no es así en los dispositivos con valores bajos de PPP, debido a que la promoción modifica la representación de los textos desde subpíxeles a escala de grises, y la promoción de las capas debe hacerse manualmente.
+Note: Los elementos de las pantallas con valores altos de PPP (Puntos por pulgada) que están en una posición fija se promueven automáticamente a su propia capa del compositor. Esto no es así en los dispositivos con valores bajos de PPP, debido a que la promoción modifica la representación de los textos desde subpíxeles a escala de grises, y la promoción de las capas debe hacerse manualmente.
 
 Reducir las áreas de pintura suele implicar orquestar tus animaciones y transiciones para que no se superpongan demasiado, o encontrar estrategias para evitar animar ciertas partes de la página.
 

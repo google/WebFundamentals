@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Element aria-* Attributes Have Valid Values" Lighthouse audit.
 
@@ -12,6 +12,8 @@ description: Reference documentation for the "Element aria-* Attributes Have Val
 Invalid ARIA attribute values may be preventing the screen reader
 from properly understanding the current state of a widget. This could make the
 page unusable to users who rely on screen readers.
+
+See [Introduction to ARIA](/web/fundamentals/accessibility/semantics-aria/) for more information.
 
 ## How to pass the audit {: #how }
 

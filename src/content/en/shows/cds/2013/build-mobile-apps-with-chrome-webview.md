@@ -18,7 +18,7 @@ description: With the introduction of a Chromium powered WebView in Android 4.4 
 
 We all know the problems that developers have had in the past building for WebView:  Limited HTML5 features, no debugging tools, no build tools.  With the introduction of a [Chromium powered WebView](/chrome/mobile/docs/webview/overview) in Android 4.4 (KitKat) developers now have a huge range of new tools at their disposal to build great native apps using the WebView.
 
-The WebView supports full [remote debugging](/chrome-developer-tools/docs/remote-debugging#debugging-webviews) with the same tools you use for Chrome. You can also take your trusted web development workflow with Grunt and integrate that into your native stack tooling via Gradle.  Further merging worlds, there's a clever trick to use the Chrome DevTools to test your native code from Javascript.
+The WebView supports full [remote debugging](/chrome-developer-tools/docs/remote-debugging#debugging-webviews) with the same tools you use for Chrome. You can also take your trusted web development workflow with Grunt and integrate that into your native stack tooling via Gradle.  Further merging worlds, there's a clever trick to use the Chrome DevTools to test your native code from JavaScript.
 
 [Slides: Build Mobile Apps using the Chrome WebView](https://gauntface.com/presentations/chrome-dev-summit-2013/chrome-webview/)
 

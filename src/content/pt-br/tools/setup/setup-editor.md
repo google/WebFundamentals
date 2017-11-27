@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: O editor de código é a sua principal ferramenta de desenvolvimento: você o usa para escrever e salvar linhas de código. Escreva código melhor e mais rápido conhecendo os atalhos do editor e instalando plug-ins importantes.
 

@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-05-22T23:38:23Z",
+  "updated": "2017-07-12T22:10:27Z",
   "id": "lighthouse-pwa-analysis-tool",
   "duration": 0,
   "title": "Lighthouse PWA Analysis Tool",
@@ -12,6 +12,9 @@
   "theme": "",
   "status": null,
   "category": null,
-  "tags": [],
+  "tags": [
+    "2-day",
+    "3-day"
+  ],
   "url": "lighthouse-pwa-analysis-tool"
 }

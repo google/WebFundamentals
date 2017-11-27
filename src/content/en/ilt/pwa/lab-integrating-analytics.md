@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-05-23T21:46:44Z #}
+{# wf_updated_on: 2017-09-29 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -79,6 +79,7 @@ This folder contains:
 * __analytics-helper.js__ is an empty helper file
 * __sw.js__ is the service worker file
 * __manifest.json__ is the manifest for push notifications
+* __package.json__ is used for tracking Node packages (optional)
 
 In the browser, you should be prompted to allow notifications. If the prompt does not appear, then [manually allow notifications](tools-for-pwa-developers#permissions). You should see a permission status of "granted" in the console.
 
@@ -130,7 +131,7 @@ In a separate tab or window, navigate to  [analytics.google.com](https://analyti
 
 Create another one. Select the __Admin__ tab. Under __account__, select your current Google Analytics account and choose __create new account__. A single Gmail account can have multiple (currently 100) Google Analytics accounts. 
 
-![Adding an account](img/67167bdc1b3d25ee.png)
+![Adding an account](img/76e8d691850a2b7c.png)
 
 #### If you don't have a Google Analytics account:
 
@@ -138,11 +139,11 @@ Select __Sign up__ to begin creating your account.
 
 The account creation screen should look like this:
 
-![Creating an account](img/77f0da1cc8479fea.png)
+![Creating an account](img/e5475081784bd614.png)
 
 #### What would you like to track? 
 
-Choose website. 
+Choose __Website__. 
 
 
 
@@ -207,7 +208,7 @@ If you lost your place:
 3. Then under __property__, select your property (for example "GA Code Lab Site") from the down list. 
 4. Now choose __Tracking Info__, followed by __Tracking Code__. 
 
-![Finding the snippet](img/e6c84f2ccde27125.png)
+![Finding the snippet](img/dc1b90e9a8dd54c9.png)
 
 Your tracking ID looks like `UA-XXXXXXXX-Y` and your tracking code snippet looks like:
 
@@ -228,17 +229,13 @@ a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script', \
 
 Copy this script (from the Google Analytics page) and paste it in TODO 3 in <strong>index.html</strong> and <strong>pages/other.html</strong>. Save the scripts and refresh the <strong>app</strong> page (you can close the <strong>page-push-notification.html</strong> page that was opened from the notification click). 
 
-Now return to the Google Analytics site. Examine the real time data:
+Now return to the Google Analytics site. Examine the real time data by selecting __Real-Time__ and then __Overview__:
 
-1. Select the __Reporting__ tab.
-2. Select __Real-Time.__
-3. Select __Overview.__
+![Real-time navigation](img/7939d0762e616983.png)
 
-![Real-time navigation](img/b2dba5f011013e99.png)
+You should see yourself being tracked. The screen should look similar to this:
 
-You should see yourself being tracked. The screen should look similar to this (note that the full path may be shown):
-
-![Real-time screen](img/83ce80dc15443148.png)
+![Real-time screen](img/6293fe6be6811ccd.png)
 
 
 
@@ -294,7 +291,7 @@ The code so far provides the basic functionality of Google Analytics. A tracker 
 
 
 
-We are using the real-time viewing mode because we have just created the app. Normally, records of past data would also be available. You can view this from the reporting tab by selecting __Audience__ and then __Overview__. 
+We are using the real-time viewing mode because we have just created the app. Normally, records of past data would also be available. You can view this by selecting __Audience__ and then __Overview__. 
 
 
 
@@ -304,11 +301,11 @@ Note: Data for our app is not available yet. It takes some time to process the d
 
 Here you can see general information such as pageview records, bounce rate, ratio of new and returning visitors, and other statistics.
 
-![Records overview](img/1b6463f39646e4e1.png)
+![Records overview](img/74d4a769d29dacc2.png)
 
 You can also see specific information like visitors' language, country, city, browser, operating system, service provider, screen resolution, and device.
 
-![Records details](img/66759e07d712dd12.png)
+![Records details](img/6f1ff51dd71cedfe.png)
 
 #### For more information
 
@@ -372,9 +369,9 @@ ga('send', {
 
 Save the script and refresh the page. Click __BUY NOW!!!__. Check the console log, do you see the custom event? 
 
-Now return to the real-time reporting section of the Google Analytics dashboard (from the __Reporting__ tab, select __Real-Time__). Instead of selecting __Overview__, select __Events__. Do you see the custom event? (If not, try clicking __BUY NOW!!!__ again.)
+Now return to the __Real-Time__ reporting section of the Google Analytics dashboard. Instead of selecting __Overview__, select __Events__. Do you see the custom event? (If not, try clicking __BUY NOW!!!__ again.)
 
-![Real-time events](img/1f21b1938268723a.png)
+![Real-time events](img/83a15cc1df334a9.png)
 
 #### Explanation
 
@@ -390,9 +387,9 @@ You can see all method signatures in the <a href="/analytics/devguides/collectio
 
 __Optional__: Update the custom event that you just added to use the alternative signature described in the <a href="/analytics/devguides/collection/analyticsjs/command-queue-reference">command queue reference</a>. Hint: Look for the "send" command examples.
 
-You can view past events in the Google Analytics dashboard from the __Reporting__ tab by selecting __Behavior__, followed by __Events__ and then __Overview__. However your account won't yet have any past events to view (because you just created it).
+You can view past events in the Google Analytics dashboard by selecting __Behavior__, followed by __Events__ and then __Overview__. However your account won't yet have any past events to view (because you just created it).
 
-![Recorded events](img/3107f35a9adc1fb3.png)
+![Recorded events](img/90b6a60013803441.png)
 
 #### For more information
 
@@ -690,7 +687,7 @@ Save the script. Refresh the page to install the new service worker. Then close 
 
 Now try these experiments and check the console and Google Analytics dashboard for each:
 
-1. Trigger a push notification. 
+1. [Trigger a push notification](tools-for-pwa-developers#push). 
 2. Click the notification, and note what happens. 
 3. Trigger another notification and then close it (with the x in the upper right corner).
 

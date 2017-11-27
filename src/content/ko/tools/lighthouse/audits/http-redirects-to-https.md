@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 'HTTP 트래픽을 HTTPS로 리디렉션하는 사이트' Lighthouse 감사의 참조 문서입니다.
 

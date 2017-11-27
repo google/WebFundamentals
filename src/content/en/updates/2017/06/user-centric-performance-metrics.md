@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Leveraging the Performance Metrics that Most Affect User Experience.
 
-{# wf_updated_on: 2017-06-01 #}
+{# wf_updated_on: 2017-08-03 #}
 {# wf_published_on: 2017-06-01 #}
 {# wf_tags: performance #}
+{# wf_blink_components: Blink>PerformanceAPIs #}
 {# wf_featured_image: /web/updates/images/2017/06/perf-metrics-histogram.png #}
 {# wf_featured_snippet: Leveraging the Performance Metrics that Most Affect User Experience. #}
 
@@ -14,11 +15,11 @@ description: Leveraging the Performance Metrics that Most Affect User Experience
 
 {% include "web/_shared/contributors/philipwalton.html" %}
 
-You've probably heard time and time again that performance matters, and it's
-critical that your web apps are fast.
+You've probably heard time and time again that performance matters, and that it's
+critical your web apps are fast.
 
-But as you try to answer the question: *how fast is my app?* You'll realize that
-fast is a very vague term. What exactly do we mean when we say fast? In what
+But as you try to answer the question: *how fast is my app?*, you'll realize that
+fast is a vague term. What exactly do we mean when we say fast? In what
 context? And fast for whom?
 
 <aside>
@@ -33,16 +34,16 @@ context? And fast for whom?
   </iframe>
 </div>
 
-When talking about performance it's important to be precise, so we don't create
+When talking about performance it's important to be precise so we don't create
 misconceptions or spread myths that can sometimes lead to well-intentioned
 developers optimizing for the wrong things&mdash;ultimately harming the user
 experience rather than improving it.
 
-To offer a specific example, it's very common today to hear people say something
+To offer a specific example, it's common today to hear people say something
 like: __*I tested my app, and it loads in X.XX seconds*__.
 
 The problem with this statement is *not* that it's false, it's that it
-misrepresents reality. Load times will vary dramatically from user to user,
+misrepresents reality. Load times vary dramatically from user to user,
 depending on their device capabilities and network conditions. Presenting load
 times as a single number ignores the users who experienced much longer loads.
 
@@ -76,7 +77,7 @@ but can't type in it, they probably won't care how fast the page rendered.
 
 So rather than measuring load with just one metric, we should be measuring the
 times of every moment throughout the experience that can have an affect on the
-user's load perception.
+user's load *perception*.
 
 A second example of a performance myth is that __*performance is only a concern
 at load time*__.
@@ -91,20 +92,20 @@ care about the entire experience, and we developers should too.
 
 A common theme in all of these performance misconceptions is they focus on
 things that have little or nothing to do with the user experience. Likewise,
-traditional performance metrics like [load](https://developer.mozilla.org/en-
-US/docs/Web/Events/load) time or
-[DOMContentLoaded](https://developer.mozilla.org/en-
-US/docs/Web/Events/DOMContentLoaded) time are extremely unreliable since when
-they occur may or may not correspond to when the user thinks the app is loaded.
+traditional performance metrics like
+[load](https://developer.mozilla.org/en-US/docs/Web/Events/load) time or
+[DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded)
+time are extremely unreliable since when they occur may or may not correspond
+to when the user thinks the app is loaded.
 
-So to ensure we don't make this mistake going forward, we have to answer these
+So to ensure we don't repeat this mistake, we have to answer these
 questions:
 
-1. What metrics most accurately measure performance as perceived by a human? 2.
-How do we measure these metrics on our actual users? 3. How do we interpret our
-measurements to determine whether an app is "fast"? 4. Once we understand our
-app's real-user performance, what do we do to prevent regressions and hopefully
-improve performance in the future?
+1. What metrics most accurately measure performance as perceived by a human?
+2. How do we measure these metrics on our actual users?
+3. How do we interpret our measurements to determine whether an app is "fast"?
+4. Once we understand our app's real-user performance, what do we do to prevent
+   regressions and hopefully improve performance in the future?
 
 ## User-centric performance metrics
 
@@ -118,11 +119,11 @@ feedback to reassure them that everything is going to work as expected.
   </tr>
   <tr>
    <td><strong>Is it useful?</strong></td>
-   <td>Has enough content rendered that I can actually engage with it?</td>
+   <td>Has enough content rendered that users can engage with it?</td>
   </tr>
   <tr>
    <td><strong>Is it usable?</strong></td>
-   <td>Can I interact with the page, or is it still busy loading?</td>
+   <td>Can users interact with the page, or is it still busy loading?</td>
   </tr>
   <tr>
    <td><strong>Is it delightful?</strong></td>
@@ -149,11 +150,11 @@ or even a `<canvas>` element.
 
 ### First meaningful paint and hero element timing
 
-*First meaningful paint (FMP) is the metric that answers the question: "is it
-*useful?". While the concept of "useful" is very hard to spec in a way that
-*applies generically to all web pages (and thus no spec exists, yet), it's quite
-*easy for web developers themselves to know what parts of their pages are going
-*to be most useful to their users.
+First meaningful paint (FMP) is the metric that answers the question: "is it
+useful?". While the concept of "useful" is very hard to spec in a way that
+applies generically to all web pages (and thus no spec exists, yet), it's quite
+easy for web developers themselves to know what parts of their pages are going
+to be most useful to their users.
 
 <figure>
   <img src="/web/updates/images/2017/06/perf-metrics-hero-elements.png"
@@ -200,8 +201,9 @@ is both visually rendered and capable of reliably responding to user input. An
 application could be unable to respond to user input for a couple of reasons:
 
 * The JavaScript needed to make the components on the page work hasn't yet
-* loaded. There are long tasks blocking the main thread (as described in the
-* last section).
+  loaded.
+* There are long tasks blocking the main thread (as described in the last
+  section).
 
 The TTI metric identifies the point at which the page's initial JavaScript is
 loaded and the main thread is idle (free of long tasks).
@@ -243,15 +245,15 @@ the load metrics fit in the load experience:
        alt="Screenshots of where these metrics occur in the load experience"/>
 </figure>
 
-The next section details how to measure these metrics on real users.
+The next section details how to measure these metrics on real users' devices.
 
-## Measuring these metrics on real users
+## Measuring these metrics on real users' devices
 
 One of the main reasons we've historically optimized for metrics like load and
-DOMContentLoaded is because they're exposed as events in the browser and easy to
+`DOMContentLoaded` is because they're exposed as events in the browser and easy to
 measure on real users.
 
-By contrast, a lot of these other metrics have been historically very hard to
+By contrast, a lot of other metrics have been historically very hard to
 measure. For example, this code is a hack we often see developers use to detect
 long tasks:
 
@@ -273,8 +275,11 @@ long tasks:
 This code starts an infinite `requestAnimationFrame` loop and records the time
 on each iteration. If the current time is more than 50 milliseconds after the
 previous time, it assumes it was the result of a long task. While this code
-mostly works, it has a lot of downsides: it adds overhead to every frame, it
-prevents idle blocks, and it's terrible for battery life.
+mostly works, it has a lot of downsides:
+
+* It adds overhead to every frame.
+* It prevents idle blocks.
+* It's terrible for battery life.
 
 The most important rule of performance measurement code is that it shouldn't
 make performance worse.
@@ -286,18 +291,17 @@ features prior to releasing them), but these tools don't run on your user's
 devices, so they don't reflect the actual performance experience of your users.
 
 Luckily, with the addition of a few new browser APIs, measuring these metrics on
-real users is finally possible without a lot of hacks or workaround, which can
-often make performance worse.
+real devices is finally possible without a lot of hacks or workarounds that can
+make performance worse.
 
-These new APIs are [PerformanceObserver](https://developer.mozilla.org/en-
-US/docs/Web/API/PerformanceObserver),
-[PerformanceEntry](https://developer.mozilla.org/en-
-US/docs/Web/API/PerformanceEntry), and
-[DOMHighResTimeStamp](https://developer.mozilla.org/en-
-US/docs/Web/API/DOMHighResTimeStamp). To see some code with these new APIs in
-action, the following code example creates a new `PerformanceObserver` instance
-and subscribes to be notified about paint entries (e.g. FP and FCP) as well as
-any long tasks that occur:
+These new APIs are
+[`PerformanceObserver`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver),
+[`PerformanceEntry`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry),
+and
+[`DOMHighResTimeStamp`](https://developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp).
+To show some code with these new APIs in action, the following code example
+creates a new `PerformanceObserver` instance and subscribes to be notified
+about paint entries (e.g. FP and FCP) as well as any long tasks that occur:
 
 ```
 const observer = new PerformanceObserver((list) => {
@@ -314,7 +318,7 @@ observer.observe({entryTypes: ['resource', 'paint']});
 ```
 
 What `PerformanceObserver` gives us that we've never had before is the ability
-to subscribe to performance events after they happen and respond to them in an
+to subscribe to performance events as they happen and respond to them in an
 asynchronous fashion. This replaces the older
 [PerformanceTiming](https://www.w3.org/TR/navigation-timing/#sec-navigation-
 timing-interface) interface, which often required polling to see when the data
@@ -328,24 +332,51 @@ For example, using Google Analytics you might track first paint times as
 follows:
 
 ```
-const observer = new PerformanceObserver((list) => {
-  for (const entry of list.getEntries()) {
-    // `name` will be either 'first-paint' or 'first-contentful-paint'.
-    const metricName = entry.name;
-    const time = Math.round(entry.startTime + entry.duration);
+<head>
+  <!-- Add the async Google Analytics snippet first. -->
+  <script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-    ga('send', 'event', {
-      eventCategory: 'Performance Metrics',
-      eventAction: metricName,
-      eventValue: time,
-      nonInteraction: true,
-    });
-  }
-});
+  <!-- Register the PerformanceObserver to track paint timing. -->
+  <script>
+  const observer = new PerformanceObserver((list) => {
+    for (const entry of list.getEntries()) {
+      // `name` will be either 'first-paint' or 'first-contentful-paint'.
+      const metricName = entry.name;
+      const time = Math.round(entry.startTime + entry.duration);
 
-// Start observing paint entries.
-observer.observe({entryTypes: ['paint']});
+      ga('send', 'event', {
+        eventCategory: 'Performance Metrics',
+        eventAction: metricName,
+        eventValue: time,
+        nonInteraction: true,
+      });
+    }
+  });
+  observer.observe({entryTypes: ['paint']});
+  </script>
+
+  <!-- Include any stylesheets after creating the PerformanceObserver. -->
+  <link rel="stylesheet" href="...">
+</head>
 ```
+
+<aside>
+  <p><strong>Important:</strong> you must ensure your <code>PerformanceObserver
+  </code> is registered in the <code>&lt;head&gt;</code> of your document
+  before any stylesheets, so it runs before FP/FCP happens.<p>
+  <p>This will no longer be necessary once Level 2 of the <a
+  href="https://w3c.github.io/performance-timeline/">Performance Observer spec
+  </a> is implemented, as it introduces a <a
+  href="https://w3c.github.io/performance-timeline/#dom-performanceobserverinit-
+  buffered"><code>buffered</code></a> flag that allows you to access performance
+  entries queued prior to the <code>PerformanceObserver</code>
+  being created.</p>
+</aside>
 
 ### Tracking FMP using hero elements
 
@@ -396,8 +427,9 @@ DOMContentLoaded as the start time, but it's often more accurate to use
 something like the moment your hero elements are visible or the point when you
 know all your event listeners have been added.
 
-Refer to the [TTI polyfill documentation](https://github.com/deepanjanroy/tti-
-polyfill) for complete installation and usage instructions.
+Refer to the [TTI polyfill
+documentation](https://github.com/GoogleChrome/tti-polyfill) for complete
+installation and usage instructions.
 
 <aside>
   <strong>Note:</strong> As with FMP, it's quite hard to spec a TTI metric
@@ -494,7 +526,7 @@ primary reasons:
 
 * Validating that your app performs as expected.
 * Identifying places where poor performance is negatively affecting conversions
-(whatever that means for your app).
+  (whatever that means for your app).
 * Finding opportunities to improve the user experience and delight your users.
 
 One thing definitely worth comparing is how your app performs on mobile devices
@@ -594,33 +626,40 @@ before sending data to Google Analytics. You can send it directly via the
 [Measurement Protocol](/analytics/devguides/collection/protocol/v1/).
 
 This code adds a listener to the
-[visibilitychange](https://developer.mozilla.org/en-
-US/docs/Web/Events/visibilitychange) event (which fires if the page is being
-unloaded or goes into the background) and it sends the value of
-`performance.now()` at that point.
+[`visibilitychange`](https://developer.mozilla.org/en-US/docs/Web/Events/visibilitychange)
+event (which fires if the page is being unloaded or goes into the background)
+and it sends the value of `performance.now()` at that point.
 
 ```
+<script>
 window.__trackAbandons = () => {
   // Remove the listener so it only runs once.
   document.removeEventListener('visibilitychange', window.__trackAbandons);
   const ANALYTICS_URL = 'https://www.google-analytics.com/collect';
   const GA_COOKIE = document.cookie.replace(
     /(?:(?:^|.*;)\s*_ga\s*\=\s*(?:\w+\.\d\.)([^;]*).*$)|^.*$/, '$1');
-  const TRACKING_ID = 'UA-21292978-3';
+  const TRACKING_ID = 'UA-XXXXX-Y';
   const CLIENT_ID =  GA_COOKIE || (Math.random() * Math.pow(2, 52));
 
   // Send the data to Google Analytics via the Measurement Protocol.
   navigator.sendBeacon && navigator.sendBeacon(ANALYTICS_URL, [
     'v=1', 't=event', 'ec=Load', 'ea=abandon', 'ni=1',
+    'dl=' + encodeURIComponent(location.href),
+    'dt=' + encodeURIComponent(document.title),
     'tid=' + TRACKING_ID,
     'cid=' + CLIENT_ID,
     'ev=' + Math.round(performance.now()),
   ].join('&'));
 };
 document.addEventListener('visibilitychange', window.__trackAbandons);
+</script>
 ```
 
-Of course, you'll want to make sure you remove this listener once the page
+You can use this code by copying it into `<head>` of your document and replacing
+the `UA-XXXXX-Y` placeholder with your
+[tracking ID](https://support.google.com/analytics/answer/1008080).
+
+You'll also want to make sure you remove this listener once the page
 becomes interactive or you'll be reporting abandonment for loads where you were
 also reporting TTI.
 
@@ -677,10 +716,10 @@ and then hopefully have less input latency and fewer slow frames.
 
 In addition to splitting up code into separate files, you can also split up
 large chunks of synchronous code into smaller chunks that can execute
-asynchronously or be [deferred to the next idle point](/web/updates/2015/08
-/using-requestidlecallback). By executing this logic asynchronously in smaller
-chunks, you leave room on the main thread for the browser to respond to user
-input.
+asynchronously or be
+[deferred to the next idlepoint](/web/updates/2015/08/using-requestidlecallback).
+By executing this logic asynchronously in smaller chunks, you leave room on
+the main thread for the browser to respond to user input.
 
 Lastly, you should make sure you're testing your third party code and holding
 any slow running code accountable. Third party ads or tracking scripts that

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:在开发计算机网络服务器上托管网站，然后从 Android 设备访问内容。
 

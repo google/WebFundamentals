@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2017-04-26 #}
+{# wf_updated_on: 2017-11-03 #}
 {# wf_published_on: 2015-04-13 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -656,6 +656,7 @@ tab:
     * There are higher priority requests.
     * There are already six TCP connections open for this origin, which is
       the limit. Applies to HTTP/1.0 and HTTP/1.1 only.
+    * The browser is briefly allocating space in the disk cache
 * **Stalled**. The request could be stalled for any of the reasons described
   in **Queueing**.
 * **DNS Lookup**. The browser is resolving the request's IP address.
@@ -666,8 +667,12 @@ tab:
 * **Request to ServiceWorker**. The request is being sent to the service
   worker.
 * **Waiting (TTFB)**. The browser is waiting for the first byte of a response.
-  TTFB stands for Time To First Byte.
+  TTFB stands for Time To First Byte. This timing includes 1 round trip of latency
+  and the time the server took to prepare the response.
 * **Content Download**. The browser is receiving the response.
+* **Receiving Push**. The browser is receiving data for this response via HTTP/2
+  Server Push.
+* **Reading Push**. The browser is reading the local data previously received.
 
 ### View initiators and dependencies {: #initiators-dependencies }
 
@@ -737,6 +742,19 @@ requests aren't counted.
   </figcaption>
 </figure>
 
+### View the stack trace that caused a request {: #initiator-stack-trace }
+
+When a JavaScript statement causes a resource to be requested, hover over the **Initiator**
+column to view the stack trace leading up to the request.
+
+<figure>
+  <img src="imgs/initiator-stack.png"
+       alt="The stack trace leading up to a resource request">
+  <figcaption>
+    <b>Figure 32</b>. The stack trace leading up to a resource request
+  </figcaption>
+</figure>
+
 ## Export requests data
 
 ### Save a request as HAR with content {: #save-as-har }
@@ -750,7 +768,7 @@ To save a request in the HAR format with content:
   <img src="imgs/save-as-har.png"
        alt="Selecting Save As HAR With Content.">
   <figcaption>
-    <b>Figure 32</b>. Selecting Save As HAR With Content
+    <b>Figure 33</b>. Selecting Save As HAR With Content
   </figcaption>
 </figure>
 
@@ -768,7 +786,7 @@ hover over **Copy**, and select one of the following options:
 <figure>
   <img src="imgs/copy.png" alt="Selecting Copy Response.">
   <figcaption>
-    <b>Figure 33</b>. Selecting Copy Response
+    <b>Figure 34</b>. Selecting Copy Response
   </figcaption>
 </figure>
 
@@ -785,7 +803,7 @@ Click **Filter** ![Filter][filter]{: .devtools-inline } to hide it.
 <figure>
   <img src="imgs/hide-filters.svg" alt="The Hide Filters button">
   <figcaption>
-    <b>Figure 34</b>. Hide Filters, outlined in blue
+    <b>Figure 35</b>. Hide Filters, outlined in blue
   </figcaption>
 </figure>
 
@@ -800,7 +818,7 @@ rows][large]{:.devtools-inline} to use large rows, instead.
 <figure>
   <img src="imgs/large-request-rows.svg" alt="The Large Request Rows button">
   <figcaption>
-    <b>Figure 35</b>. Large Request Rows, outlined in blue
+    <b>Figure 36</b>. Large Request Rows, outlined in blue
   </figcaption>
 </figure>
 
@@ -808,7 +826,7 @@ rows][large]{:.devtools-inline} to use large rows, instead.
   <img src="imgs/small-request-rows.png"
        alt="An example of small request rows in the Requests pane.">
   <figcaption>
-    <b>Figure 36</b>. An example of small request rows in the Requests pane
+    <b>Figure 37</b>. An example of small request rows in the Requests pane
   </figcaption>
 </figure>
 
@@ -816,7 +834,7 @@ rows][large]{:.devtools-inline} to use large rows, instead.
   <img src="imgs/large-request-rows.png"
        alt="An example of large request rows in the Requests pane.">
   <figcaption>
-    <b>Figure 37</b>. An example of large request rows in the Requests pane
+    <b>Figure 38</b>. An example of large request rows in the Requests pane
   </figcaption>
 </figure>
 
@@ -830,7 +848,7 @@ Click **Hide overview** ![Hide overview][hide]{:.devtools-inline} to hide it.
 <figure>
   <img src="imgs/hide-overview.svg" alt="The Hide Overview button">
   <figcaption>
-    <b>Figure 38</b>. Hide Overview, outlined in blue
+    <b>Figure 39</b>. Hide Overview, outlined in blue
   </figcaption>
 </figure>
 

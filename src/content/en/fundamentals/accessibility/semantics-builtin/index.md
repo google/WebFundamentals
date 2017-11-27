@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Introduction to semantics and assistive technology
 
@@ -134,7 +134,7 @@ screen reader on OS X, called VoiceOver. See [this
 video](https://www.youtube.com/watch?v=QW_dUs9D1oQ) of Victor using VoiceOver.
 
 Now, it's your turn to try using a screen reader. Here is a page with *ChromeVox
-Lite*, a minimal but functioning screen reader written in Javascript. The screen
+Lite*, a minimal but functioning screen reader written in JavaScript. The screen
 is purposefully blurred to simulate a low-vision experience and force the user
 to complete the task with a screen reader. Of course, you'll need to use the
 Chrome browser for this exercise.

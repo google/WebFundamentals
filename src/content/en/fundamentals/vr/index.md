@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: WebVR
 
-{# wf_updated_on: 2017-05-22 #}
+{# wf_updated_on: 2017-10-17 #}
 {# wf_published_on: 2016-12-12 #}
+{# wf_blink_components: Blink>WebVR #}
 
 # WebVR {: .page-title }
 
@@ -23,7 +24,9 @@ and Pixel phone — to create fully immersive 3D experiences in your browser.
 
 ## Support and Availability
 
-Today the WebVR API is available in:
+Today the WebVR 2.0 API is
+[under development](https://www.chromestatus.com/features/5680169905815552),
+but you can try out the WebVR 1.1 API in:
 
 * Chrome Beta (M56+), via an [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
 * Firefox Nightly.
@@ -97,7 +100,7 @@ and should [use Chrome DevTools’ Timeline to measure your per-frame costs](/we
 ## Embrace Progressive Enhancement
 
 <img src="img/touch-input.png" class="attempt-right"
-  alt="Use Progressive Enhancement to maximise reach" />
+  alt="Use Progressive Enhancement to maximize reach" />
 
 What are you to do if your users don’t have a Head Mounted Display (‘HMD’) or
 VR-capable device? The best answer is to use Progressive Enhancement.

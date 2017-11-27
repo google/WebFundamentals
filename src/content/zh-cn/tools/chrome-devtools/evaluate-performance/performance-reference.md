@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:时间线事件模式可以显示记录时触发的所有事件。使用时间线事件参考可以详细了解每一个时间线事件类型。
 

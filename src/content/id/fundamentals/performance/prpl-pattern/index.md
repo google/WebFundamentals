@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-09-28 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-09-28 #}
 
 # Pola PRPL {: .page-title }
@@ -108,7 +108,7 @@ menggunakan [Komponen Web](http://webcomponents.org/):
 ![diagram aplikasi yang memiliki dua tampilan, yang memiliki dependensi individual dan bersama
 ](images/app-build-components.png)
 
-Catatan: meskipun HTML Imports adalah strategi bundling yang dipilih Polymer, Anda dapat
+Note: meskipun HTML Imports adalah strategi bundling yang dipilih Polymer, Anda dapat
 menggunakan pemisahan-kode dan pemotongan berbasis rute untuk mendapatkan persiapan serupa yang didapatkan dengan
 bundler modul JavaScript modern
 

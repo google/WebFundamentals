@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Enabling HTTPS on your servers is critical to securing your webpages. 
+description: Enabling HTTPS on your servers is critical to securing your webpages.
 
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2014-01-16 #}
+{# wf_blink_components: Blink>Media #}
 
 # What is EME? {: .page-title }
 
@@ -76,7 +77,7 @@ Here's how the components of EME interact, corresponding to the
 
 > If multiple formats or codecs are available,
 > [MediaSource.isTypeSupported()](https://www.w3.org/TR/media-source/#dom-mediasource-istypesupported) or
-> [HTMLMediaElement.canPlayType()](https://dev.w3.org/html5/spec-preview/media-elements.html#dom-navigator-canplaytype
+> [HTMLMediaElement.canPlayType()](https://dev.w3.org/html5/spec-preview/media-elements.html#dom-navigator-canplaytype)
 > can both be used to select the right one.
 > However, the CDM may only support a subset of what the browser supports for
 > unencrypted content. It's best to negotiate a MediaKeys configuration before
@@ -408,7 +409,7 @@ using the appendBuffer() method:
     };
 
 Find out more about MSE in the
-[MSE primer](/web/fundamentals/getting-started/primers/media-source-extensions).
+[MSE primer](/web/fundamentals/media/mse/basics).
 
 ## Related technology &num;2&colon; Dynamic Adaptive Streaming over HTTP (DASH)
 
@@ -453,7 +454,7 @@ The BBC has begun [providing test streams using DASH](http://bbc.co.uk/rd/blog/2
 > start requesting segments from that representation. Content is encoded in such
 > a way to make this switching easy for the client to do. In addition to a
 > number of media segments, a representation generally also has an
-> Initialisation Segment. This can be thought of as a header, containing
+> Initialization Segment. This can be thought of as a header, containing
 > information about the encoding, frame sizes, etc. A client needs to obtain
 > this for a given representation before consuming media segments from that
 > representation.
@@ -537,13 +538,13 @@ for APIs that most media plugins rely on.
 [Media Source Extensions](https://w3c.github.io/media-source/): latest Editor's Draft
 [DASH standard](http://standards.iso.org/ittf/PubliclyAvailableStandards/c057623_ISO_IEC_23009-1_2012.zip)
 (yes, it's a PDF)
-[Overview of the DASH standard](http://dashif.org/mpeg-dash/)
+[Overview of the DASH standard](http://dashif.org/about/)
 
 ### Articles
 
 [DTG Webinar](http://vimeo.com/62269279) (partially obsolete)
 [What is EME?](https://hsivonen.fi/eme/), by Henri Sivonen
-[Media Source Extensions](/web/fundamentals/getting-started/primers/media-source-extensions) primer
+[Media Source Extensions](/web/fundamentals/media/mse/basics) primer
 MPEG-DASH Test Streams: [BBC R&amp;D blog post](http://bbc.co.uk/rd/blog/2013/09/mpeg-dash-test-streams)
 
 ### Demos

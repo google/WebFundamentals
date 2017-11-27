@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Layar sentuh, chip GPS, dan akselerometer bisa sulit diuji karena sebagian desktop tidak memilikinya. Emulator sensor Chrome DevTools mengurangi biaya pengujian dengan mengemulasi sensor perangkat seluler yang umum.
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Mengemulasikan Sensor: Geolokasi dan Akselerometer {: .page-title }
@@ -33,7 +33,7 @@ Chip GPS dan akselerometer bisa sulit diuji karena sebagian desktop tidak memili
   </div>
 </div>
 
-Catatan: Jika aplikasi Anda mendeteksi pemuatan sensor menggunakan JavaScript (misalnya Modernizr), pastikan Anda memuat ulang laman setelah mengaktifkan emulator sensor.
+Note: Jika aplikasi Anda mendeteksi pemuatan sensor menggunakan JavaScript (misalnya Modernizr), pastikan Anda memuat ulang laman setelah mengaktifkan emulator sensor.
 
 ## Mengganti data geolokasi
 

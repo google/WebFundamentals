@@ -14,11 +14,15 @@ fi
 # Decrypt the Service Account Key
 openssl aes-256-cbc -K $encrypted_7c1b14c4fe42_key -iv $encrypted_7c1b14c4fe42_iv -in gcloud-client-secret.json.enc -out gcloud-client-secret.json -d
 
-# Download & install the Google Cloud SDK
-curl https://sdk.cloud.google.com | bash
+if [ ! -f "$HOME/google-cloud-sdk/bin/gcloud" ]; then
+  # Remove the automatically created directory
+  rm -rf $HOME/google-cloud-sdk
+  # Download & install the Google Cloud SDK
+  curl https://sdk.cloud.google.com | bash;
+fi
 
 # Update any necessary components
-$HOME/google-cloud-sdk/bin/gcloud components update app -q
+$HOME/google-cloud-sdk/bin/gcloud components update -q
 
 # Set the AppEngine App ID to $AE_APP_ID
 $HOME/google-cloud-sdk/bin/gcloud config set project $AE_APP_ID

@@ -1,7 +1,7 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-11-08 #}
+{# wf_updated_on: 2017-10-10 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Save Credentials from Forms {: .page-title }
@@ -11,7 +11,8 @@ book_path: /web/fundamentals/_book.yaml
 
 <div class="attempt-right">
   <figure>
-    <video src="animations/credential-management-smaller.mov" style="max-height: 400px;" autoplay muted loop controls></video>
+    <video src="animations/credential-management-smaller.mov"
+           style="max-height: 400px;" autoplay muted loop controls></video>
     <figcaption>Save Credentials from sign-in forms</figcaption>
   </figure>
 </div>
@@ -25,7 +26,7 @@ To store user credentials from forms:
 
 1. Include `autocomplete` in the form.
 2. Interrupt the form submission event.
-3. Authenticate by sending a request via AJAX.
+3. Authenticate by sending a request.
 4. Store the credential.
 5. Update the UI or proceed to the personalized page.
 
@@ -44,7 +45,7 @@ Learn more about autofill in
 
     <form id="signup" method="post">
      <input name="email" type="text" autocomplete="username email">
-     <input name="display-name" type="text" autocomplete="name"> 
+     <input name="display-name" type="text" autocomplete="name">
      <input name="password" type="password" autocomplete="new-password">
      <input type="submit" value="Sign Up!">
     </form>
@@ -61,39 +62,36 @@ and prevent the default behavior.
 By preventing a page transition,
 you can retain the credential information while verifying its authenticity.
 
-## Authenticate by sending a request via AJAX
+## Authenticate by sending a request
 
-To authenticate the user, send a request via AJAX and respond with profile information,
-for example, in JSON format.
+To authenticate the user, deliver credential information to your server using AJAX.
 
 On the server side, create an endpoint (or simply alter an existing endpoint)
 that responds with HTTP code 200 or 401, so that it’s clear to the browser
 whether the sign-up/sign-in/change password is successful or not.
 
-For example: 
+For example:
 
-      // Try sign-in with AJAX
-      fetch(/'signin', {
-        method: 'POST',
-        body: new FormData(e.target),
-        credentials: 'include'
-      }).then(res => {
-        if (res.status == 200) {
-          return Promise.resolve();
-        } else {
-          return Promise.reject('Sign in failed');
-        }
-      }).then(profile => {
+    // Try sign-in with AJAX
+    fetch('/signin', {
+      method: 'POST',
+      body: new FormData(e.target),
+      credentials: 'include'
+    })
 
 ## Store the credential
 
 To store a credential, first check if the API is available,
 then instantiate a
 [`PasswordCredential`](https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential)
-with the form element as an argument.
-Call [`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store).
+with the form element as an argument
+either synchronously or asynchronously.
+Call
+[`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store).
 If the API is not available,
 you can simply forward the profile information to the next step.
+
+Synchronous example:
 
     if (navigator.credentials) {
        var c = new PasswordCredential(e.target);
@@ -101,6 +99,16 @@ you can simply forward the profile information to the next step.
      } else {
        return Promise.resolve(profile);
      }
+
+Asynchronous example:
+
+    if (navigator.credentials) {
+       var c = await navigator.credentials.create({password: e.target});
+       return navigator.credentials.store(c);
+     } else {
+       return Promise.resolve(profile);
+     }
+
 Once the request succeeds, store the credential information.
 (Don't store the credentials information if the request failed
 as doing so confuses returning users.)
@@ -131,7 +139,7 @@ or proceed to the personalized page.
     });
 
 ## Full code example
-    
+
     // Get form's DOM object
     var f = document.querySelector('#signup');
     f.addEventListener('submit', e => {
@@ -140,7 +148,7 @@ or proceed to the personalized page.
       e.preventDefault();
 
       // Try sign-in with AJAX
-      fetch(/'signin', {
+      fetch('/signin', {
         method: 'POST',
         body: new FormData(e.target),
         credentials: 'include'

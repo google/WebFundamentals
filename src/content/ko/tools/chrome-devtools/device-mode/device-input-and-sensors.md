@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 터치 스크린, GPS 칩과 가속도계는 대부분의 데스크톱에 없는 항목이라 테스트하기 어려울 수 있습니다. Chrome DevTools 센서 에뮬레이터는 일반 휴대기기 센서를 에뮬레이트하여 테스트 부담을 줄여줍니다.
 

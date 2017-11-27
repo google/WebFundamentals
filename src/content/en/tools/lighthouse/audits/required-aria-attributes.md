@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Elements With ARIA Roles Have The Required aria-* Attributes" Lighthouse audit.
 
@@ -12,6 +12,8 @@ description: Reference documentation for the "Elements With ARIA Roles Have The 
 The `role` attribute helps screen readers understand the purpose of an ARIA
 widget. A `role` may have a set of required, additional attributes that
 describe the state of the widget to the screen reader.
+
+See [Introduction to ARIA](/web/fundamentals/accessibility/semantics-aria/) for more information.
 
 ## How to pass the audit {: #how }
 

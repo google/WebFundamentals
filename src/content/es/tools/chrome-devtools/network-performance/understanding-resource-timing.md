@@ -1,9 +1,9 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Es fundamental comprender las etapas en las que se recolectan los recursos en la red. Esta es la base para solucionar los problemas de carga."
 
 {# wf_published_on: 2016-02-03 #}
-{# wf_updated_on: 2016-02-03 #}
+{# wf_updated_on: 2017-07-12 #}
 
 # Comprende Resource Timing {: .page-title }
 
@@ -22,7 +22,7 @@ Todas las solicitudes de la red se consideran recursos.
 Cuando se recuperan a través de la red, los recursos tienen ciclos de vida distintivos que se expresan en términos de sincronización de recursos.
 El panel Network usa la misma [Resource Timing API](http://www.w3.org/TR/resource-timing) que está disponible para los desarrolladores de apps.
 
-Nota: cuando usas la Resource Timing API con recursos de distintos orígenes, asegúrate
+Note: cuando usas la Resource Timing API con recursos de distintos orígenes, asegúrate
 de que todos los recursos tengan encabezados CORS.
 
 La Resource Timing API ofrece información detallada sobre el tiempo de recepción de cada recurso.

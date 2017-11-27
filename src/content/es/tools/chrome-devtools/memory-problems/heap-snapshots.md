@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Aprende a registrar capturas de pantalla de montón con el generador de perfiles de montón de Chrome DevTools y a encontrar fugas de memoria.
 
-{# wf_updated_on: 2015-08-03 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2015-06-08 #}
 
 # Cómo registrar capturas de pantalla de montón {: .page-title }
@@ -33,7 +33,7 @@ aparece un número debajo del título de la captura de pantalla que indica el ta
 
 ![Tamaño total de los objetos que se pueden alcanzar](imgs/total-size.png)
 
-Nota: En la captura de pantalla, solo se incluyen los objetos que se pueden alcanzar. Además, la toma de una captura de pantalla siempre comienza con una recolección de elementos no utilizados.
+Note: En la captura de pantalla, solo se incluyen los objetos que se pueden alcanzar. Además, la toma de una captura de pantalla siempre comienza con una recolección de elementos no utilizados.
 
 ## Borrar capturas de pantalla
 
@@ -65,7 +65,7 @@ Para alternar entre las vistas, usa el selector que se encuentran en la parte in
 
 ![Selector para cambiar de vista](imgs/switch-views.png)
 
-Nota: En el montón de JavaScript, no se guardan todas las propiedades. No se capturan las propiedades implementadas con captadores que ejecutan código nativo. Tampoco se capturan los valores que no son de cadena.
+Note: En el montón de JavaScript, no se guardan todas las propiedades. No se capturan las propiedades implementadas con captadores que ejecutan código nativo. Tampoco se capturan los valores que no son de cadena.
 
 ### Vista Summary
 

@@ -1,0 +1,14 @@
+{{#extend 'layout'}}
+  {{#content 'title'}}
+    <title>Overview</title>
+  {{/content}}
+  {{#content 'body-main-content'}}
+    {{#if readme}}
+      {{{ readme }}}
+    {{else}}
+      {{#block 'body-symbol-index'}}
+        {{#embed 'symbol-index'}}{{/embed}}
+      {{/block}}
+    {{/if}}
+  {{/content}}
+{{/extend}}

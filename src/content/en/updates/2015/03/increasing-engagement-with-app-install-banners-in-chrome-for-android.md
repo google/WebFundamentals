@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Web App Manifest ✔︎, Service Worker ✔.Get ready for Web App Install banners 
 
 
-{# wf_updated_on: 2017-02-20 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2015-03-11 #}
 {# wf_tags: news,addtohomescreen,webapp,install #}
 
@@ -12,7 +12,7 @@ description: Web App Manifest ✔︎, Service Worker ✔.Get ready for Web App I
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
 Warning: This article is out of date. The <a
-href="/web/fundamentals/engage-and-retain/app-install-banners/">latest guidance
+href="/web/fundamentals/app-install-banners">latest guidance
 for Add to Homescreen can be found in Web Fundamentals.</a>
 
 <img src="/web/updates/images/2015-03-03/add-to-home-screen.gif" 
@@ -48,7 +48,7 @@ the following criteria Chrome will manage the prompting of users:
   - The manifest must have a \`short\_name\`, a `name` for
   display in the banner,
   - A start URL (e.g. `/` or `index.html`) which must be loadable,
-  - *At least* an \`144x144\` PNG icon
+  - *At least* an \`192x192\` PNG icon
   - Your icon declarations should include a mime type of `image/png`
 * You have a [service
   worker](/web/fundamentals/primers/service-worker/)
@@ -71,8 +71,8 @@ and one here for quick reference:
       "name": "Kinlan's Amazing Application ++",
       "icons": [
         {
-          "src": "launcher-icon-3x.png",
-          "sizes": "144x144",
+          "src": "launcher-icon-4x.png",
+          "sizes": "192x192",
           "type": "image/png"
         }
       ],
@@ -154,7 +154,7 @@ Service Worker:
   file](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android)
   - The manifest defines how your app appears on the user's system and how it
   should be launched - and you are required to have a \`short\_name\` and a
-  \`144x144\` png icon
+  \`192x192\` png icon
   - Your icon declarations should include a mime type of `image/png`
 * Your site is served over
   [HTTPS](https://docs.google.com/document/d/1oRXJUIttqQxuxmjj2tgYjj096IKw4Zcw6eAoIKWZ2oQ/edit)

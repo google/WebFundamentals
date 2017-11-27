@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:ユーザーは、ページがインタラクティブでスムーズに操作できることを期待します。ピクセル パイプラインの各段階で、問題が発生する可能性があります。ここでは、実行時のパフォーマンスを低下させる一般的な問題を特定して解決するためのツールと戦略について説明します。
 

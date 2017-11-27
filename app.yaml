@@ -19,6 +19,9 @@ handlers:
 - url: /wf-local/styles/
   static_dir: gae/styles/
 
+- url: /wf-local/images/
+  static_dir: gae/images/
+
 - url: /web/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3|mov))
   static_files: src/content/en/\1
   expiration: 1d
@@ -55,12 +58,19 @@ handlers:
   secure: always
 
 skip_files:
+- ^CONTRIBUTING\.md$
+- ^README\.md$
+- ^TRANSLATION\.md$
+- ^gcloud-client-secret\.json.*
+- ^gulpfile\.js$
+- ^package\.json$
 - ^gulp-tasks/.*
 - ^node_modules/.*
 - ^scratch/.*
-- ^tools/.*
 - ^src/data/.*
 - ^src/templates/.*
+- ^src/tests/.*
+- ^tools/.*
 - ^(.*/)?#.*#$
 - ^(.*/)?.*~$
 - ^(.*/)?.*\.DS_Store$
