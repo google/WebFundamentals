@@ -11,19 +11,20 @@ description: The module guide for workbox-routing.
 
 [Demo](https://workbox-demos.firebaseapp.com/demo/workbox-runtime-caching/) | [Reference Docs](http://localhost:8080/web/tools/workbox/v3/reference-docs/latest/workbox.strategies)
 
-## What is a Workbox Runtime Caching Strategy?
+## What are Workbox Strategies?
 
 When service workers were first introduced, a set of common caching strategies
 emerged. A caching strategy is a pattern that determines how a service worker
 generates a response after receiving a fetch event.
 
-`workbox-runtime-caching` provides these caching strategies so it’s easy to
+`workbox-strategies` provides the most common caching strategies so it’s easy to
 apply them in your service worker.
 
 We won’t go into much detail outside of the strategies supported by Workbox,
 but you can [learn more in the Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/).
 
 ## Using Strategies
+
 In the following examples we’ll show you how to use the Workbox caching
 strategies with `workbox-routing`. There are some options you can define with
 each strategy that is covered in the
@@ -60,9 +61,10 @@ non-critical and can be gradually cached, a
 [cache first](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network)
 is the best option.
 
-Requests will be fulfilled from the cache if possible, otherwise it’ll fall
-back to the Network. (Note: Workbox will cache this response for the next
-request).
+If there is a Response in the cache, the Request will be fulfilled using the
+cached response, the network will not be used at all. If there isn't a cached
+response, the Request will be fulfilled by a a network request and the response
+will be cached so that the next request is served directly from the cache.
 
 ```javascript
 workbox.routing(
@@ -166,13 +168,20 @@ workbox.registerRoute(
 ```
 
 ### Add Custom Plugins
+
 Each strategy can have additional plugins used during fetching and caching
 requests, allowing extra functionality (like the `CacheExpirationPlugin`
-mentioned above.
+mentioned above).
 
 ```javascript
 const myCustomPlugin = {
-  cachedResponseWillBeUsed: ({cacheName,request,cachedResponse}) => {...},
+  cachedResponseWillBeUsed: ({cacheName,request,cachedResponse}) => {
+    // TODO: Return the `cachedResponse`, a different Response or null
+
+    // NOTE: This can be synchronous or return a Promise that resolves
+    // to a Response or null.
+    ...
+  },
   ...
 };
 
