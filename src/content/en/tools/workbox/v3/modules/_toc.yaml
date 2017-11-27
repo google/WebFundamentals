@@ -26,3 +26,5 @@ toc:
 #  path: /web/tools/workbox/v3/modules/workbox-broadcast-cache-update
 
 - heading: Node Modules
+- title: Workbox CLI
+  path: /web/tools/workbox/v3/modules/workbox-cli
