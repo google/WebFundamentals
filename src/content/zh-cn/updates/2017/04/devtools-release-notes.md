@@ -14,9 +14,15 @@ description: Chrome 59 中添加到 DevTools 的新功能和变更。
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-欢迎来到新一期的 DevTools 更新日志。以下是 Chrome 59 中的新功能。
+欢迎来到新一期的 DevTools 更新日志。观看下面的视频或者继续阅读以了解 Chrome 59 中 DevTools 的新功能。
 
 提示：你可以访问 `chrome://help` 来查看当前使用的 Chrome 版本。
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="4mx1m7UbBR0"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## 亮点 {: #highlights }
 
