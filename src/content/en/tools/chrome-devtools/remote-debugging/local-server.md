@@ -38,9 +38,7 @@ To enable port forwarding:
    device in the left-hand menu of the **Inspect Devices** dialog and a 
    **Connected** status indicator. 
 1. In the **Inspect Devices** dialog in DevTools, enable **Port forwarding**.
-1. Click **Add rule**.
-
-   ![adding a port forwarding rule](imgs/add-rule.png)
+1. Click **Add rule**. ![adding a port forwarding rule](imgs/add-rule.png)
 1. In the **Device port** textfield on the left, enter the `localhost` port 
    number from which you want to be able to access the site on your Android 
    device. For example, if you wanted to access the site from `localhost:5000` 
