@@ -9,12 +9,12 @@ description: The module guide for workbox-routing.
 
 {% include "web/tools/workbox/v3/_shared/alpha.html" %}
 
-[Demo](https://workbox-demos.firebaseapp.com/demo/workbox-routing/) | [Reference Docs](http://localhost:8080/web/tools/workbox/v3/reference-docs/latest/workbox.routing)
+[Demo](https://workbox-demos.firebaseapp.com/demo/workbox-routing/) | [Reference Docs](../reference-docs/latest/workbox.routing)
 
 ## What is Workbox Routing?
 
 A service worker can intercept network requests for a page. It may respond to
-the browser with cached content,content from the network or content generated
+the browser with cached content, content from the network or content generated
 in the service worker.
 
 `workbox-routing` is a module which makes is easy to "route" these requests to
@@ -41,7 +41,7 @@ expressions or Route instances each of which we’ll look at next.
 
 ## Matching and Handling in Routes
 
-A "route" in workbox is nothing more than two functions a “matching” function
+A "route" in workbox is nothing more than two functions: a “matching” function
 to determine if the route should match a request and a “handling” function,
 which should handle the request and respond with a Response.
 
@@ -49,7 +49,7 @@ Workbox comes with some helpers that’ll perform the matching and handling for
 you, but if you ever find yourself wanting different behaviour, writing a
 custom match and handler function is the best option.
 
-A match function will be given a FetchEvent and a URL object and you can
+A match function will be given a `FetchEvent` and a URL object and you can
 match against a request by returning a truthy value. For a simple example,
 you could match against a specific URL like so:
 
@@ -80,8 +80,8 @@ const handlerCb = ({url, event, params}) => {
 ```
 
 Your handler must return a Promise that resolves to a Response. The `params`
-value is is the value of any value returned by the "match" function. This may
-be useful is you parsed the URL or request and want to pass that values into
+value is the value returned by the "match" function. This may
+be useful if you parsed the URL or request and want to pass values into
 the “handler” for a matching request.
 
 You can register these callbacks via like so:
@@ -92,7 +92,7 @@ workbox.routing.registerRoute(matchCb, handlerCb);
 
 The only limitation is that "match" **must synchronously** return a truthy
 value, you can’t perform any asynchronous work. The reason for this is that
-the Router must synchronously respond to the fetch event or allow falling
+the `Router` must synchronously respond to the fetch event or allow falling
 through to other fetch events.
 
 The "handler" callback should return a Promise that resolves to a
@@ -101,10 +101,10 @@ Where that Response comes from is up to you, the network, a cache or
 generated in the service worker.
 
 Normally the "handler" callback would use one of the strategies provided
-by `workbox-runtime-caching` like so:
+by [workbox-strategies](./workbox-strategies) like so:
 
 ```javascript
-workbox.routing.registerRoute(matchCb, workbox.stratgies.staleWhileRevalidate());
+workbox.routing.registerRoute(matchCb, workbox.strategies.staleWhileRevalidate());
 ```
 
 In this page we’ll focus on `workbox-routing` but you can
@@ -112,8 +112,8 @@ In this page we’ll focus on `workbox-routing` but you can
 
 ## How to Register a Regular Expression Route
 
-A common practice is to skip avoid using the "match" callback and instead use
-a Regular Expression to match requests.
+A common practice is to use a regular expression instead of a "match" callback.
+Workbox makes this easy to implement like so:
 
 ```javascript
 workbox.routing.registerRoute(new RegExp('/styles/.*\.css'), handlerCb);
@@ -121,7 +121,7 @@ workbox.routing.registerRoute(new RegExp('/styles/.*\.css'), handlerCb);
 
 For requests from the
 [same origin](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy),
-this route will be used as long as part of the request’s URL matches the
+this regular expression will match as long as the request’s URL matches the
 regular expression.
 
 - https://example.com<span style="color: #2ecc71">/styles/main.css</span>
@@ -163,7 +163,7 @@ workbox.routing.registerNavigationRoute('/single-page-app.html');
 
 Whenever a user goes to your site in the browser, the request for the page
 will be a navigation request and will be served the cached page
-'/single-page-app.html'. (Note: should have the page cached via
+'/single-page-app.html'. (Note: You should have the page cached via
 `workbox-precaching` or through your own installation step).
 
 By default this will respond to *all* navigation requests, if you want to
@@ -236,7 +236,7 @@ through Workbox.
 
 If you need more verbose information you can set the log level to `debug` to
 view logs on requests not handled by the Router. See our
-[debugging guide](../guides/how-to-troubleshoot-and-debug) for more info on
+[debugging guide](../guides/troubleshoot-and-debug) for more info on
 setting the log level.
 
 ![Debug and Log Routing Messages](../images/modules/workbox-routing/workbox-routing-logs.png)
