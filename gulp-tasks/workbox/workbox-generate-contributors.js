@@ -50,7 +50,7 @@ gulp.task(`workbox-generate-contributors`, async function() {
       global.WF.src.templates, 'workbox', 'contributors.html');
     const outputPath = path.join(
       __dirname, '..', '..', 'src', 'content', 'en', 'tools',
-      'workbox', 'templates', 'contributors.html');
+      'workbox', '_shared', 'contributors.html');
 
     await wfTemplateHelper.renderTemplate(
       template,

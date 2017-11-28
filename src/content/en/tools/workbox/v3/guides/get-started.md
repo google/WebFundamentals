@@ -67,7 +67,7 @@ service worker.
 Change your service worker so that it has the following `importScripts()` call.
 
 ```javascript
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0-alpha.24/workbox-sw.js');
+importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);

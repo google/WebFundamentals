@@ -14,7 +14,7 @@ const buildJSDocs = require('../reference-docs/build-js-docs');
  * This should be removed when workbox v3 is merged into master
  */
 
-gulp.task('workbox-reference-docs-v3', ['workbox-generate-contributors'],
+gulp.task('workbox-reference-docs-v3', ['workbox-generate-contributors', 'workbox-generate-cdn-include-v3'],
   async () => {
   const gitUrl = 'https://github.com/GoogleChrome/workbox.git';
   const toolsPath = path.join(
