@@ -1,3 +1,5 @@
+'use strict';
+
 const remoteGitTags = require('remote-git-tags');
 const semver = require('semver');
 /**

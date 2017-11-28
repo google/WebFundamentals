@@ -1,3 +1,5 @@
+'use strict';
+
 const GitHubApi = require('github');
 const fs = require('fs-extra');
 const path = require('path');

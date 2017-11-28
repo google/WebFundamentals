@@ -1,7 +1,8 @@
+'use strict';
+
 const gulp = require('gulp');
 const path = require('path');
 const fs = require('fs-extra');
-
 
 const getLatestTags = require('../reference-docs/get-latest-tags');
 

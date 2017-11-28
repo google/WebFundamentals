@@ -1,3 +1,5 @@
+'use strict';
+
 const gutil = require('gulp-util');
 const fs = require('fs-extra');
 const path = require('path');
