@@ -19,7 +19,7 @@ const canFindJSDocConf = (jsdocConfPath) => {
   }
 };
 
-const buildJSDocs = async (srcCodePath, docOutputPath, jsdocConfPath) => {
+const buildJSDocs = (srcCodePath, docOutputPath, jsdocConfPath) => {
   // Make sure the JSDoc conf exists
   if (!canFindJSDocConf(jsdocConfPath)) {
     return;
@@ -70,10 +70,9 @@ const buildJSDocs = async (srcCodePath, docOutputPath, jsdocConfPath) => {
   const jsdocPath = path.join(webfundmentalRoot,
     'node_modules', 'jsdoc', 'jsdoc.js');
 
-  try {
-    await wfHelper.promisedExec(
-      `${jsdocPath} ${jsDocParams.join(' ')}`, srcCodePath);
-
+  return wfHelper.promisedExec(
+    `${jsdocPath} ${jsDocParams.join(' ')}`, srcCodePath)
+  .then(() => {
     // jsdoc-baseline copies over these files for it's own template
     // but we don't use them for devsite - so remove these files.
     fs.removeSync(path.join(docOutputPath, 'css'));
@@ -90,12 +89,13 @@ const buildJSDocs = async (srcCodePath, docOutputPath, jsdocConfPath) => {
         .split('https://developers.google.com/').join('/');
       fs.writeFileSync(filePath, cleanContents);
     });
-  } catch (err) {
+  })
+  .catch((err) => {
     // If we error'd, make sure we didn't create a directory that will stop
     // future doc builds.
     fs.removeSync(docOutputPath);
     throw err;
-  }
+  });
 };
 
 module.exports = buildJSDocs;
