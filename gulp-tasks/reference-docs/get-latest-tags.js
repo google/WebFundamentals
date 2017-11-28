@@ -10,7 +10,8 @@ const semver = require('semver');
  * versions.
  * @return {Promise<Array<string>>}
  */
-const getLatestTags = (gitUrl, options = {}) => {
+const getLatestTags = (gitUrl, options) => {
+  options = options || {};
   const numberOfReleases = options.numberOfReleases || 1;
   const includePrerelease = options.includePrerelease || false;
 
