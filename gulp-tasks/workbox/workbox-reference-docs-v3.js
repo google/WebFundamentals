@@ -15,7 +15,7 @@ const buildJSDocs = require('../reference-docs/build-js-docs');
  */
 
 gulp.task('workbox-reference-docs-v3', ['workbox-generate-contributors', 'workbox-generate-cdn-include-v3'],
-  async () => {
+  () => {
   const gitUrl = 'https://github.com/GoogleChrome/workbox.git';
   const toolsPath = path.join(
     __dirname, '..', '..', 'src', 'content', 'en', 'tools'
@@ -24,23 +24,32 @@ gulp.task('workbox-reference-docs-v3', ['workbox-generate-contributors', 'workbo
   const jsdocConfPath = path.join(toolsPath, 'workbox', 'v3', '_jsdoc.conf');
 
   // Get all of the latest tags from Github
-  const latestTags = await getLatestTags(gitUrl, {
+  let latestTags;
+  return getLatestTags(gitUrl, {
     includePrerelease: true,
+  })
+  .then((tags) => {
+    latestTags = tags;
+    // Filter the list down to tags that need to be built
+    return filterTagsToBuild(latestTags, docPath);
+  })
+  .then((tagsToBuild) => {
+    return tagsToBuild.reduce((promiseChain, tag) => {
+      const tmpSrCodePath = path.join(os.tmpdir(), Date.now().toString(), tag);
+      return promiseChain.then(() => {
+        return getSourceCode(gitUrl, tag, tmpSrCodePath);
+      })
+      .then(() => {
+        const taggedOutputPath = path.join(docPath, tag);
+        return buildJSDocs(tmpSrCodePath, taggedOutputPath, jsdocConfPath);
+      })
+      .then(() => {
+        if (tag === latestTags[0]) {
+          const latestOutputPath = path.join(docPath, 'latest');
+          fs.removeSync(latestOutputPath);
+          return buildJSDocs(tmpSrCodePath, latestOutputPath, jsdocConfPath);
+        }
+      });
+    }, Promise.resolve());
   });
-  // Filter the list down to tags that need to be built
-  const tagsToBuild = await filterTagsToBuild(latestTags, docPath);
-
-  for (const tag of tagsToBuild) {
-    const tmpSrCodePath = path.join(os.tmpdir(), Date.now().toString(), tag);
-    await getSourceCode(gitUrl, tag, tmpSrCodePath);
-
-    const taggedOutputPath = path.join(docPath, tag);
-    await buildJSDocs(tmpSrCodePath, taggedOutputPath, jsdocConfPath);
-
-    if (tag === latestTags[0]) {
-      const latestOutputPath = path.join(docPath, 'latest');
-      await fs.remove(latestOutputPath);
-      await buildJSDocs(tmpSrCodePath, latestOutputPath, jsdocConfPath);
-    }
-  }
 });

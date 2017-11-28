@@ -13,7 +13,7 @@ const MAX_COLLABORATORS = 20;
  * contributors.
  */
 
-gulp.task(`workbox-generate-contributors`, async function() {
+gulp.task(`workbox-generate-contributors`, function() {
   let token = process.env.GITHUB_TOKEN;
   if (!token) {
     token = fs.readFileSync('./src/data/githubKey.txt', 'utf8');
@@ -34,12 +34,11 @@ gulp.task(`workbox-generate-contributors`, async function() {
     token: process.env.GITHUB_TOKEN,
   });
 
-  try {
-    let contributorStats = await github.repos.getStatsContributors({
-      owner: 'googlechrome',
-      repo: 'workbox',
-    });
-
+  return github.repos.getStatsContributors({
+    owner: 'googlechrome',
+    repo: 'workbox',
+  })
+  .then((contributorStats) => {
     contributorStats.sort((a, b) => b.total - a.total);
 
     if (contributorStats.length > MAX_COLLABORATORS) {
@@ -52,16 +51,17 @@ gulp.task(`workbox-generate-contributors`, async function() {
       __dirname, '..', '..', 'src', 'content', 'en', 'tools',
       'workbox', '_shared', 'contributors.html');
 
-    await wfTemplateHelper.renderTemplate(
+    return wfTemplateHelper.renderTemplate(
       template,
       {contributorStats},
       outputPath
     );
-  } catch (err) {
+  })
+  .catch((err) => {
     gutil.log(gutil.colors.red(
       `An error occured when generating the Workbox ` +
       `collaborators.`
     ));
     gutil.log(err);
-  }
+  });
 });
