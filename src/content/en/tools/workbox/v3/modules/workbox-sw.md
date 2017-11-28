@@ -26,7 +26,7 @@ The easiest way to start using this module is via the CDN. You just need to
 add the following to your service worker:
 
 ```javascript
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0-alpha.28/workbox-sw.prod.js');
+importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 ```
 
 With this you’ll have the `workbox` namespace in your service worker that will
