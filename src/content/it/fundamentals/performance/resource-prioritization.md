@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-11-24 #}
+{# wf_updated_on: 2017-11-28 #}
 {# wf_published_on: 2017-11-01 #}
 {# wf_blink_components: Blink>Network,Blink>Loader #}
 
@@ -49,7 +49,7 @@ book_path: /web/fundamentals/_book.yaml
 }
 </style>
 
-# Priorizzare le Risorse – Fare in modo che il Browser ti aiuti {: .page-title }
+# Priorizzare le risorse: fare in modo che il browser ti sia d'aiuto {: .page-title }
 
 {% include "web/_shared/contributors/sgomes.html" %}
 
@@ -67,7 +67,7 @@ avrai bisogno più avanti.
 ## Priorità predefinite nel browser
 
 Come accennato in precedenza, il browser assegna diverse priorità relative
-diversi tipi di risorse in base a quanto possano essere critici. Così per
+a diversi tipi di risorse in base a quanto possano essere critici. Così,
 ad esempio, un tag `<script>` in `<head>` della pagina verrà caricato in Chrome
 a priorità **Alta** (dopo i CSS ad **Altissima**), ma quella priorità
 cambierebbe in **Bassa** se ha l'attributo async (significa che può essere caricato
@@ -98,16 +98,16 @@ presenta:
 
 
 Queste priorità ti danno un'idea dell'importanza relativa ad ogni attributo del
-browser per ciascuna risorsa. Ricordate che le sottili differenze sono
+browser per ciascuna risorsa. Ricorda che le differenze sottili sono
 sufficienti perché il browser assegni una priorità diversa; ad esempio,
 un'immagine che fa parte del rendering iniziale è maggiormente prioritaria
 rispetto ad un'immagine che inizia fuori dallo schermo. Se vuoi approfondire le
 priorità,
 [questo articolo di Addy Osmani](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf){: .external}
-è molto approfondito sullo stato attuale delle priorità in Chrome.
+approfondisce l'argomento dello stato attuale delle priorità in Chrome.
 
 Allora, cosa puoi fare se trovi delle risorse contrassegnate da una priorità
-diversa da quella che si desidera?
+diversa da quella che desideri?
 
 Questo articolo esamina tre diverse soluzioni dichiarative, tutte
 relative ai nuovi tipi `<link>`. Se le risorse sono fondamentali per
@@ -122,7 +122,7 @@ Esaminiamo tutte e tre!
 
 `<link rel="preload">` informa il browser che una risorsa è necessaria come
 parte della navigazione corrente, e che dovrebbe iniziare ad essere recuperata
-al più presto possibile. Ecco come usarlo:
+il prima possibile. Ecco come usarla:
 
     <link rel="preload" as="script" href="super-important.js">
     <link rel="preload" as="style" href="critical.css">
@@ -134,7 +134,7 @@ Il browser non utilizza la risorsa precaricata se non viene impostato il tipo
 corretto. La risorsa è caricata con la stessa priorità, ma ora il browser lo sa
 in anticipo, permettendo al download di iniziare prima.
 
-Attenzione che `<link rel="preload">` è un'istruzione obbligatoria per il
+Si può notare che `<link rel="preload">` è un'istruzione obbligatoria per il
 browser; a differenza degli altri suggerimenti sulle risorse di cui parleremo,
 è qualcosa che il browser deve fare, piuttosto che un semplice suggerimento
 opzionale. È particolarmente importante testare con attenzione questo aspetto,
@@ -143,8 +143,8 @@ di recuperare qualcosa che non è necessario.
 
 Le risorse che vengono scaricate usando `<link rel="preload">`, ma non
 vengono utilizzate dalla pagina corrente entro 3 secondi attiveranno un
-avvertimento nella Console in Strumenti per sviluppatori di Chrome, quindi
-assicuratevi di tenerle sott'occhio!
+avviso nella Console di Chrome Developer Tools, quindi
+assicurati di tenerle sott'occhio!
 
 <figure>
   <div class="aspect-ratio"
@@ -156,7 +156,7 @@ assicuratevi di tenerle sott'occhio!
 
 ### Caso d'uso: Fonts
 
-I caratteri sono un ottimo esempio di risorse scoperte in ritardo che devono
+I font sono un ottimo esempio di risorse scoperte in ritardo che devono
 essere recuperate, spesso al termine di uno dei numerosi file CSS caricati da
 una pagina.
 
@@ -170,14 +170,14 @@ immediatamente al browser che è necessario un font.
 Si noti che l'uso di `crossorigin` qui è importante; senza questo attributo,
 il font precaricato viene ignorato dal browser e viene eseguito un nuovo
 recupero. Questo perché i caratteri dovrebbero essere recuperati in modo
-anonimo dal browser, e la richiesta di preload è resa anonima solo usando il
-attributo `crossorigin`.
+anonimo dal browser, e la richiesta di preload è resa anonima solo usando
+l'attributo `crossorigin`.
 
 Caution: se stai utilizzando un CDN, come Google Fonts, assicurati che i file
 dei font che stai pre-caricando corrispondano a quelli del CSS, il che può
 essere complicato a causa di intervalli di unicode, pesi e varianti di
 carattere. I font possono anche essere aggiornati regolarmente, e se stai
-pre-caricando una vecchia versione mentre nel CSS usi il più recente, potresti
+precaricando una vecchia versione mentre nel CSS usi la più recente, potresti
 finire per scaricare due versioni dello stesso font e sprecare la larghezza di
 banda degli utenti. Potresti usare `<link rel="preconnect">` invece per una
 manutenzione più semplice.
@@ -191,7 +191,7 @@ fondamentali per ottenere i primi pixel sullo schermo dell'utente.
 
 In precedenza, la raccomandazione consisteva nell'integrare questo contenuto
 all'interno del codice HTML. Tuttavia, in uno scenario di rendering
-multi-pagina o lato server questo cresce rapidamente in molti byte sprecati.
+multi-pagina o lato server questo porta al rapido spreco di molti byte.
 Rende anche più difficile il controllo delle versioni, poiché qualsiasi modifica
 nel codice critico invalida qualsiasi pagina in cui è stata inserita.
 
@@ -211,7 +211,7 @@ Un modo per aggirare il roundtrip extra è quello di utilizzare
 push, per trasportare preventivamente le risorse critiche all'interno della
 stessa connessione con cui si invia l'HTML. Ciò garantisce che non vi siano
 tempi di inattività tra il browser dell'utente che recupera l'HTML e l'avvio
-del download delle risorse critiche. Siate consapevoli quando si utilizza
+del download delle risorse critiche. Stai attento però quando utilizzi
 HTTP/2 push però, dato che è un modo molto forzato per controllare l'utilizzo
 della larghezza di banda dell'utente ("server knows best") perché lascia al
 browser poco spazio per prendere le proprie decisioni come non recuperare uno
@@ -223,7 +223,7 @@ stesso file già nella sua cache!
 una connessione con un'altra origine e che vorresti che il processo iniziasse il
 prima possibile.
 
-Stabilire connessioni spesso comporta un tempo significativo con reti lente, in
+Stabilire connessioni spesso richiede tempo con reti lente, in
 particolare quando si tratta di connessioni sicure, poiché potrebbe comportare
 ricerche DNS, reindirizzamenti e diversi roundtrip sul server finale che
 gestisce la richiesta dell'utente. Prendersi cura di tutto ciò in anticipo può
@@ -232,7 +232,7 @@ negativamente sull'utilizzo della larghezza di banda. La maggior parte del tempo
 per stabilire una connessione è speso in attesa, piuttosto che per scambiare
 dati.
 
-Informare il browser della tua intenzione è semplice come aggiungere un tag link
+Per informare il browser della tua intenzione basta aggiungere un tag link
 alla tua pagina:
 
     <link rel="preconnect" href="https://example.com">
@@ -261,7 +261,7 @@ ampio, quindi può essere un bel fallback. Lo usi nello stesso modo:
 A causa delle dipendenze con versioni, a volte finisci in una situazione in cui
 sai che recupererai una risorsa da un dato CDN, ma non il percorso esatto. In
 altri casi, è possibile recuperare una delle numerose risorse, in base alle
-media queries o ai controlli delle funzionalità di runtime sul browser
+media query o ai controlli delle funzionalità di runtime sul browser
 dell'utente.
 
 In queste situazioni, se la risorsa che stai recuperando è importante, potresti
@@ -284,7 +284,7 @@ volta che sei pronto per iniziare il recupero.
 
 ## Prefetch
 
-`<link rel="prefetch">` è in qualche modo diverso da `<link rel="preload">` e
+`<link rel="prefetch">` è piuttosto diverso da `<link rel="preload">` e
 `<link rel="preconnect">`, nel senso che non tenta di far succedere qualcosa di
 critico più velocemente; invece, cerca di far succedere qualcosa di non critico
 prima, se possibile.
@@ -292,14 +292,14 @@ prima, se possibile.
 Lo fa informando il browser di una risorsa che dovrebbe essere necessaria come
 parte di una futura navigazione o interazione dell'utente, ad esempio,
 qualcosa che *potrebbe* essere necessario in seguito, se l'utente intraprende
-l'azione che siamo aspettando. Queste risorse vengono recuperate con la priorità
+l'azione ci aspettiamo. Queste risorse vengono recuperate con la priorità
 **più bassa** in Chrome, quando viene caricata la pagina corrente e c'è
 larghezza di banda disponibile.
 
 Ciò significa che `prefetch` è più adatto a prevedere ciò che l'utente potrebbe
 fare in seguito e prepararsi, come recuperare la prima pagina dei dettagli del
 prodotto in un elenco di risultati o recuperare la pagina successiva in
-contenuto impaginato.
+un contenuto impaginato.
 
     <link rel="prefetch" href="page-2.html">
 
@@ -325,7 +325,7 @@ priorità del successivo `<link rel="stylesheet">`:
       </body>
     </html>
 
-Tuttavia, questo farà sì che il tuo foglio di stile venga prelevato due volte
+Tuttavia, questo farà sì che il tuo foglio di stile venga recuperato due volte
 (anche con un potenziale cache hit la seconda volta), una volta con priorità
 predefinita **Massima** e una volta con priorità **Più bassa**, come prefetch
 per un recupero successivo:
@@ -342,7 +342,7 @@ per un recupero successivo:
 Il doppio recupero può essere negativo per gli utenti. In questo caso, non solo
 avrebbero dovuto attendere il CSS che bloccava il rendering, ma avrebbero anche
 potenzialmente perso larghezza di banda scaricando il file due volte. Ricorda
-che la loro larghezza di banda potrebbe essere contabilizzata. Assicurati di
+che la loro larghezza di banda potrebbe essere in base al consumo. Assicurati di
 analizzare a fondo le richieste della tua rete e fai attenzione a quelle doppie!
 
 ## Altre tecniche e strumenti
@@ -356,9 +356,9 @@ Esistono numerosi altri strumenti e tecniche che è possibile utilizzare per
 modificare la priorità ed i tempi di caricamento delle risorse. Assicurati di
 leggere
 [HTTP/2 server push](/web/fundamentals/performance/http2/#server_push);
-[utilizzare `IntersectionObserver` per carimanto lazy di immagini ed altri media](/web/updates/2016/04/intersectionobserver);
+[utilizzare `IntersectionObserver` per il caricamento lazy di immagini ed altri media](/web/updates/2016/04/intersectionobserver);
 [evitare CSS che bloccano il render](/web/fundamentals/performance/critical-rendering-path/render-blocking-css)
-con media queries e librerie come
+con media query e librerie come
 [loadCSS](https://github.com/filamentgroup/loadCSS){: .external};
 e ritardare il recupero, la compilazione e l'esecuzione di JavaScript con
 [async](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async){: .external}
