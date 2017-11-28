@@ -43,6 +43,9 @@ function promisedExec(cmd, cwd) {
   return new Promise(function(resolve, reject) {
     const cmdLog = chalk.cyan(`$ ${cmd}`);
     gutil.log(' ', cmdLog);
+    if (cwd) {
+      gutil.log('    (CWD):', cwd);
+    }
     const execOptions = {
       cwd: cwd,
       maxBuffer: 1024 * 1024
@@ -51,11 +54,11 @@ function promisedExec(cmd, cwd) {
       stdOut = stdOut.trim();
       stdErr = stdErr.trim();
       if (err) {
-        gutil.log(' ', cmdLog, chalk.red('FAILED'));
+        gutil.log('    (CMD):', chalk.red('FAILED'));
         reject(err);
         return;
       }
-      gutil.log(' ', cmdLog, chalk.green('OK'));
+      gutil.log('    (CMD):', chalk.green('OK'));
       resolve(stdOut);
     });
   });

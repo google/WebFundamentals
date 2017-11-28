@@ -13,8 +13,8 @@ const MAX_COLLABORATORS = 20;
  * contributors.
  */
 
-gulp.task(`workbox-generate-contributors`, function() {
-  var token = process.env.GITHUB_TOKEN;
+gulp.task(`workbox-generate-contributors`, async function() {
+  let token = process.env.GITHUB_TOKEN;
   if (!token) {
     token = fs.readFileSync('./src/data/githubKey.txt', 'utf8');
   }
@@ -31,30 +31,35 @@ gulp.task(`workbox-generate-contributors`, function() {
   const github = new GitHubApi();
   github.authenticate({
     type: 'token',
-    token: process.env.GITHUB_TOKEN
+    token: process.env.GITHUB_TOKEN,
   });
 
-  return github.repos.getStatsContributors({
-    owner: 'googlechrome',
-    repo: 'workbox',
-  })
-  .then((contributorStats) => {
+  try {
+    let contributorStats = await github.repos.getStatsContributors({
+      owner: 'googlechrome',
+      repo: 'workbox',
+    });
 
     contributorStats.sort((a, b) => b.total - a.total);
+
     if (contributorStats.length > MAX_COLLABORATORS) {
       contributorStats = contributorStats.splice(0, MAX_COLLABORATORS);
     }
-    const template = path.join(global.WF.src.templates, 'workbox', 'contributors.html');
-    const outputPath = path.join(__dirname, '..', 'src', 'content',
-    'en', 'tools', 'workbox', 'templates', 'contributors.html');
-    return wfTemplateHelper.renderTemplate(
+
+    const template = path.join(
+      global.WF.src.templates, 'workbox', 'contributors.html');
+    const outputPath = path.join(
+      __dirname, '..', 'src', 'content', 'en', 'tools',
+      'workbox', 'templates', 'contributors.html');
+
+    await wfTemplateHelper.renderTemplate(
       template,
       {contributorStats},
-      outputPath);
-  })
-  .catch((err) => {
-    console.warn(`An error occured when generating the Workbox ` +
+      outputPath
+    );
+  } catch (err) {
+    gutil.warn(`An error occured when generating the Workbox ` +
       `collaborators.`);
-    console.warn(err);
-  });
+    gutil.warn(err);
+  }
 });

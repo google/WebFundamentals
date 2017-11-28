@@ -10,7 +10,7 @@ var runSequence = require('run-sequence');
 
 requireDir('./gulp-tasks');
 
-GLOBAL.WF = {
+global.WF = {
   gae: 'appengine-config',
   src: {
     content: 'src/content/en/',
@@ -34,41 +34,41 @@ var defaultOptions = {
     testWarnOnly: false
   }
 }
-GLOBAL.WF.options = minimist(process.argv.slice(2), defaultOptions);
+global.WF.options = minimist(process.argv.slice(2), defaultOptions);
 
 var optionsOK = true;
 gutil.log('---------------------------------');
 gutil.log(gutil.colors.dim('Web') + gutil.colors.bold('Fundamentals'), 'Build Script');
 gutil.log('---------------------------------');
-if (GLOBAL.WF.options.lang) {
-  var langs = GLOBAL.WF.options.lang.split(',');
+if (global.WF.options.lang) {
+  var langs = global.WF.options.lang.split(',');
   langs.forEach(function(lang) {
-    if (GLOBAL.WF.langs.indexOf(lang) === -1) {
+    if (global.WF.langs.indexOf(lang) === -1) {
       gutil.log(' ', 'ERROR: Language ', chalk.red(lang), 'not supported.');
       optionsOK = false;
     }
   });
-  GLOBAL.WF.options.lang = langs;
+  global.WF.options.lang = langs;
 } else {
-  GLOBAL.WF.options.lang = GLOBAL.WF.langs;
+  global.WF.options.lang = global.WF.langs;
 }
-gutil.log('Language: ', gutil.colors.cyan(GLOBAL.WF.options.lang));
-if (GLOBAL.WF.options.verbose !== false) {
-  GLOBAL.WF.options.verbose = true;
+gutil.log('Language: ', gutil.colors.cyan(global.WF.options.lang));
+if (global.WF.options.verbose !== false) {
+  global.WF.options.verbose = true;
 }
-gutil.log('Verbose: ', gutil.colors.cyan(GLOBAL.WF.options.verbose));
+gutil.log('Verbose: ', gutil.colors.cyan(global.WF.options.verbose));
 
-if (GLOBAL.WF.options.testAll !== false) {
+if (global.WF.options.testAll !== false) {
   gutil.log('testAll:', chalk.cyan('true'));
-  GLOBAL.WF.options.testAll = true;
+  global.WF.options.testAll = true;
 }
-if (GLOBAL.WF.options.testTests !== false) {
+if (global.WF.options.testTests !== false) {
   gutil.log('testTests:', chalk.cyan('true'));
-  GLOBAL.WF.options.testTests = true;
+  global.WF.options.testTests = true;
 }
-if (GLOBAL.WF.options.testWarnOnly !== false) {
+if (global.WF.options.testWarnOnly !== false) {
   gutil.log('testWarnOnly: ', gutil.colors.cyan('true'));
-  GLOBAL.WF.options.testWarnOnly = true;
+  global.WF.options.testWarnOnly = true;
 }
 
 if (optionsOK === false) {

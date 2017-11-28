@@ -1,4 +1,12 @@
 toc:
+- title: "BroadcastCacheUpdate"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox.broadcastUpdate.BroadcastCacheUpdate
+- title: "BroadcastCacheUpdatePlugin"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox.broadcastUpdate.BroadcastCacheUpdatePlugin
+- title: "CacheableResponse"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox.cacheableResponse.CacheableResponse
+- title: "CacheableResponsePlugin"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox.cacheableResponse.CacheableResponsePlugin
 - title: "CacheExpiration"
   path: /web/tools/workbox/v3/reference-docs/latest/workbox.expiration.CacheExpiration
 - title: "CacheExpirationPlugin"
@@ -31,8 +39,12 @@ toc:
   path: /web/tools/workbox/v3/reference-docs/latest/workbox
 - title: "workbox.backgroundSync"
   path: /web/tools/workbox/v3/reference-docs/latest/workbox.backgroundSync
+- title: "workbox.broadcastUpdate"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox.broadcastUpdate
 - title: "workbox.core"
   path: /web/tools/workbox/v3/reference-docs/latest/workbox.core
+- title: "workbox.expiration"
+  path: /web/tools/workbox/v3/reference-docs/latest/workbox.expiration
 - title: "workbox.expiration"
   path: /web/tools/workbox/v3/reference-docs/latest/workbox.expiration
 - title: "workbox.googleAnalytics"

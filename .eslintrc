@@ -1,0 +1,13 @@
+{
+  "extends": ["eslint:recommended", "google"],
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    // Additional, per-project rules...
+  }
+}
