@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
-const wfTemplateHelper = require('./wfTemplateHelper');
+const wfTemplateHelper = require('../wfTemplateHelper');
 
 const MAX_COLLABORATORS = 20;
 
@@ -58,8 +58,10 @@ gulp.task(`workbox-generate-contributors`, async function() {
       outputPath
     );
   } catch (err) {
-    gutil.warn(`An error occured when generating the Workbox ` +
-      `collaborators.`);
-    gutil.warn(err);
+    gutil.log(gutil.colors.red(
+      `An error occured when generating the Workbox ` +
+      `collaborators.`
+    ));
+    gutil.log(err);
   }
 });

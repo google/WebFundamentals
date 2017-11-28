@@ -9,6 +9,7 @@ var requireDir = require('require-dir');
 var runSequence = require('run-sequence');
 
 requireDir('./gulp-tasks');
+requireDir('./gulp-tasks/workbox');
 
 global.WF = {
   gae: 'appengine-config',

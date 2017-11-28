@@ -3,10 +3,10 @@ const path = require('path');
 const os = require('os');
 const fs = require('fs-extra');
 
-const getLatestTags = require('./reference-docs/get-latest-tags');
-const filterTagsToBuild = require('./reference-docs/filter-tags-to-build');
-const getSourceCode = require('./reference-docs/get-source-code');
-const buildJSDocs = require('./reference-docs/build-js-docs');
+const getLatestTags = require('../reference-docs/get-latest-tags');
+const filterTagsToBuild = require('../reference-docs/filter-tags-to-build');
+const getSourceCode = require('../reference-docs/get-source-code');
+const buildJSDocs = require('../reference-docs/build-js-docs');
 
 /**
  * Temporary build script to generate the reference docs for v3.
@@ -18,7 +18,7 @@ gulp.task('workbox-reference-docs-v3', ['workbox-generate-contributors'],
   async () => {
   const gitUrl = 'https://github.com/GoogleChrome/workbox.git';
   const toolsPath = path.join(
-    __dirname, '..', 'src', 'content', 'en', 'tools'
+    __dirname, '..', '..', 'src', 'content', 'en', 'tools'
   );
   const docPath = path.join(toolsPath, 'workbox', 'v3', 'reference-docs');
   const jsdocConfPath = path.join(toolsPath, 'workbox', 'v3', '_jsdoc.conf');

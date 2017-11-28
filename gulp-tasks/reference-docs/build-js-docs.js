@@ -9,8 +9,10 @@ const canFindJSDocConf = (jsdocConfPath) => {
     fs.accessSync(jsdocConfPath, fs.F_OK);
     return true;
   } catch (err) {
-    gutil.warn(`Unable to find jsdoc Config File @ '${jsdocConfPath}'`);
-    gutil.warn(err);
+    gutil.log(gutil.colors.red(
+      `Unable to find jsdoc Config File @ '${jsdocConfPath}'`
+    ));
+    gutil.log(err);
     return false;
   }
 };
@@ -25,10 +27,12 @@ const buildJSDocs = async (srcCodePath, docOutputPath, jsdocConfPath) => {
   const jsdocConfigContents = fs.readFileSync(jsdocConfPath);
   const jsdocConfig = JSON.parse(jsdocConfigContents);
   if (!jsdocConfig.webFundamentals) {
-    gutil.warn(`In your JSDoc config file you MUST provide a ` +
-      `'webFundamentals' property with:`);
-    gutil.warn(`    projectRoot`);
-    gutil.warn(`    productName`);
+    gutil.log(gutil.colors.red(
+      `In your JSDoc config file you MUST provide a ` +
+      `'webFundamentals' property with:`
+    ));
+    gutil.log(gutil.colors.red(`    projectRoot`));
+    gutil.log(gutil.colors.red(`    productName`));
     return;
   }
 
