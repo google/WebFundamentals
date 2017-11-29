@@ -54,11 +54,11 @@ function promisedExec(cmd, cwd) {
       stdOut = stdOut.trim();
       stdErr = stdErr.trim();
       if (err) {
-        gutil.log('    (CMD):', chalk.red('FAILED'));
+        gutil.log('    (CMD):', cmdLog, chalk.red('FAILED'));
         reject(err);
         return;
       }
-      gutil.log('    (CMD):', chalk.green('OK'));
+      gutil.log('    (CMD):', cmdLog, chalk.green('OK'));
       resolve(stdOut);
     });
   });
