@@ -1,8 +1,5 @@
 toc:
 
-- title: Overview
-  path: /web/tools/workbox/v3/guides/
-
 - title: "Get Started"
   path: /web/tools/workbox/v3/guides/get-started
 - title: "Precache Files"
