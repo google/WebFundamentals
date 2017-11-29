@@ -21,8 +21,8 @@ landing_page:
         Getting started with Workbox is easy, in a few minutes you'll be
         caching assets for your web site and serving them up in your web app.
       custom_image:
-        background: google-green
-        icon_name: history
+        background: orange
+        icon_name: computer
       buttons:
       - label: Get started
         path: /web/tools/workbox/v3/guides/get-started

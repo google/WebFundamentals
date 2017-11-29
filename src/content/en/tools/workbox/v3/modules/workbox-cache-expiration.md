@@ -2,8 +2,8 @@ project_path: /web/tools/workbox/v3/_project.yaml
 book_path: /web/tools/workbox/v3/_book.yaml
 description: The module guide for workbox-cache-expiration.
 
-{# wf_updated_on: 2017-11-15 #}
-{# wf_published_on: 2017-11-15 #}
+{# wf_updated_on: 2017-11-27 #}
+{# wf_published_on: 2017-11-27 #}
 
 # Workbox Cache Expiration {: .page-title }
 
@@ -123,12 +123,12 @@ Whenever you update a cached entry, you need to call the `updateTimestamp()`
 method so that it’s age is updated.
 
 ```javascript
-openCache.put(
+await openCache.put(
   request,
   response
 );
 
-expirationManager.updateTimestamp(request.url);
+await expirationManager.updateTimestamp(request.url);
 ```
 
 Then whenever you want to expire a set of entries you can call the
@@ -136,5 +136,5 @@ Then whenever you want to expire a set of entries you can call the
 `maxEntries` configuration.
 
 ```javascript
-expirationManager.expireEntries();
+await expirationManager.expireEntries();
 ```
