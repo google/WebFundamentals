@@ -88,52 +88,53 @@ purpose using a feature called
 To track requests that were replayed by the service worker using a custom
 dimension with Workbox Google Analytics, follow these steps:
 
-**1)** [Create a new custom dimension](https://support.google.com/analytics/answer/2709829)
+1. [Create a new custom dimension](https://support.google.com/analytics/answer/2709829)
 in Google Analytics. Give it a name like "Network Status" and set its
 [scope to "hit"](https://support.google.com/analytics/answer/2709828#example-hit)
 (since any interaction can be offline).
 
-**2)** Take note the index assigned for the newly created dimension and pass
+1. Take note the index assigned for the newly created dimension and pass
 that as the parameter name to the `parameterOverrides` configuration option
 in your Workbox Google Analytics code.
 
-For example, if this is your first custom dimension, its index would be `1`,
-and the parameter name would be `cd1` (if the index were 8 it would be `cd8`):
+    For example, if this is your first custom dimension, its index would be `1`,
+    and the parameter name would be `cd1` (if the index were 8 it would be
+    `cd8`):
 
-```js
-workbox.googleAnalytics.initialize({
-  parameterOverrides: {
-    cd1: 'offline',
-  },
-});
-```
+    ```js
+    workbox.googleAnalytics.initialize({
+      parameterOverrides: {
+        cd1: 'offline',
+      },
+    });
+    ```
 
-**3)** *(Optional)* Since values in `parameterOverrides` are only applied
+1. *(Optional)* Since values in `parameterOverrides` are only applied
 to retried ("offline") requests, you may also want to set a default value
 of "online" for all other requests. While this isn't strictly necessary,
 it'll make your reports easier to read.
 
-For example, if you used the default analytics.js tracking snippet to
-install Google Analytics, you could add the line
-`ga('set', 'cd1', 'online')` to use a default value of "online" for your
-"Network Status" custom dimension for all requests not replayed by the
-service worker.
+    For example, if you used the default analytics.js tracking snippet to
+    install Google Analytics, you could add the line
+    `ga('set', 'cd1', 'online')` to use a default value of "online" for your
+    "Network Status" custom dimension for all requests not replayed by the
+    service worker.
 
-```html
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ```html
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('create', 'UA-XXXXX-Y', 'auto');
 
-// Set default value of custom dimension 1 to 'online'
-ga('set', 'cd1', 'online');
+    // Set default value of custom dimension 1 to 'online'
+    ga('set', 'cd1', 'online');
 
-ga('send', 'pageview');
-</script>
-```
+    ga('send', 'pageview');
+    </script>
+    ```
 
 ### Using a custom metric to track time requests spent in the queue
 
@@ -143,22 +144,22 @@ successfully retried, you could track this using a
 [custom metric](https://support.google.com/analytics/answer/2709828) and
 the `hitFilter` configuration option:
 
-**1)** [Create a new custom metric](https://support.google.com/analytics/answer/2709829)
+1. [Create a new custom metric](https://support.google.com/analytics/answer/2709829)
 in Google Analytics. Give it a name like "Offline Queue Time", set its
 [scope to "hit"](https://support.google.com/analytics/answer/2709828#example-hit),
 and set its formatting type to "Time" (in seconds).
 
-**2)** Use the `hitFilter` option to get the value the
+1. Use the `hitFilter` option to get the value the
 [`qt`](/analytics/devguides/collection/protocol/v1/parameters#qt)
 param and divide it by 1000 (to convert it to seconds). Then set that value
 as a param with the index of the newly created metric. If this is your
 first custom metric, the parameter name would be "cm1":
 
-```js
-workbox.googleAnalytics.initialize({
-  hitFilter: (params) => {
-    const queueTimeInSeconds = Math.round(params.get('qt') / 1000);
-    params.set('cm1', queueTimeInSeconds);
-  },
-});
-```
+    ```js
+    workbox.googleAnalytics.initialize({
+      hitFilter: (params) => {
+        const queueTimeInSeconds = Math.round(params.get('qt') / 1000);
+        params.set('cm1', queueTimeInSeconds);
+      },
+    });
+    ```

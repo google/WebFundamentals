@@ -23,15 +23,15 @@ terminal.
 
 * {NPM}
 
-    ```
+    <pre class="devsite-terminal">
     npm install --global workbox-cli
-    ```
+    </pre>
 
 * {Yarn}
 
-    ```
+    <pre class="devsite-terminal">
     yarn global add workbox-cli
-    ```
+    </pre>
 
 ## CLI Modes
 
