@@ -1,10 +1,11 @@
-'use strict';
-
-/*
-    wfGlossary.js
-    Reads the glossary.yaml file and uses Handlebars to generate the
-    glossary file.
+/**
+ * @fileoverview Reads the glossary.yaml file and uses Handlebars to
+ *  generate the glossary file.
+ *
+ * @author Pete LePage <petele@google.com>
  */
+
+'use strict';
 
 const fs = require('fs-extra');
 const path = require('path');

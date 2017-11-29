@@ -1,5 +1,5 @@
 /**
- * @fileoverview Gulp Task for staging and publishing /web from a Git repo.
+ * @fileoverview Gulp Task for testing/validating source files.
  *
  * @author Pete LePage <petele@google.com>
  */

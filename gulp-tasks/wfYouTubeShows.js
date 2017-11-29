@@ -1,9 +1,10 @@
-'use strict';
-
-/*
-    wfYouTubeShows.js
-    TODO
+/**
+ * @fileoverview Generates the list of latest shows from YouTube
+ *
+ * @author Pete LePage <petele@google.com>
  */
+
+'use strict';
 
 var fs = require('fs');
 var path = require('path');

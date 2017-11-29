@@ -1,8 +1,10 @@
-'use strict';
-
-/*
-    wfHelper.js
+/**
+ * @fileoverview Helper utilities used to build/generate WebFundamentals.
+ *
+ * @author Pete LePage <petele@google.com>
  */
+
+'use strict';
 
 const fs = require('fs');
 const chalk = require('chalk');
@@ -94,10 +96,10 @@ function promisedRSync(src, dest) {
 
 /**
  * Ascending sorting comparator for generic inputs
- *  Note: string comparison is case insenstitive 
+ *  Note: string comparison is case insenstitive
  *
  * @param {Object} a The first item to be compared.
- * @param {Object} b The second item to be compared. 
+ * @param {Object} b The second item to be compared.
  * @return {number} -1,0,1.
  */
 function genericComparator(a, b) {
@@ -120,7 +122,7 @@ function genericComparator(a, b) {
  * - if values are equal, it uses updatedComparator
  *
  * @param {Object} aObj The first object to be compared.
- * @param {Object} bObj The second object to be compared. 
+ * @param {Object} bObj The second object to be compared.
  * @return {number} -1,0,1.
  */
 function publishedComparator(aObj, bObj) {
@@ -140,7 +142,7 @@ function publishedComparator(aObj, bObj) {
  * - if values are equal, it uses the article title
  *
  * @param {Object} aObj The first object to be compared.
- * @param {Object} bObj The second object to be compared. 
+ * @param {Object} bObj The second object to be compared.
  * @return {number} -1,0,1.
  */
 function updatedComparator(aObj, bObj) {
@@ -160,7 +162,7 @@ function updatedComparator(aObj, bObj) {
  * - if values are equal, it uses updatedComparator
  *
  * @param {Object} aObj The first object to be compared.
- * @param {Object} bObj The second object to be compared. 
+ * @param {Object} bObj The second object to be compared.
  * @return {number} -1,0,1.
  */
 function featuredComparator(aObj, bObj) {
@@ -206,10 +208,10 @@ function readMetadataForFile(file) {
     url: url,
     title: wfRegEx.getMatch(wfRegEx.RE_TITLE, content),
     description: description,
-    
+
     image: wfRegEx.getMatch(wfRegEx.RE_IMAGE, content),
     imageSquare: wfRegEx.getMatch(wfRegEx.RE_IMAGE_SQUARE, content),
-    
+
     datePublishedMoment: published,
     datePublishedMonth: published.format('MM'),
     datePublishedYear: published.format('YYYY'),
@@ -317,7 +319,7 @@ function splitByAuthor(files) {
 }
 
 /**
- * Formats a moment() object to: YYYY-MM-DDTHH:mm:ssZ 
+ * Formats a moment() object to: YYYY-MM-DDTHH:mm:ssZ
  * Example: 2017-07-13T13:31:13Z
  * Note: simply a shortcut to dateFormatISO
  *
@@ -329,7 +331,7 @@ function dateFormatAtom(dt) {
 }
 
 /**
- * Formats a moment() object to: YYYY-MM-DDTHH:mm:ssZ 
+ * Formats a moment() object to: YYYY-MM-DDTHH:mm:ssZ
  * Example: 2017-07-13T13:31:13Z
  *
  * @param {Object} dt The moment object to export.

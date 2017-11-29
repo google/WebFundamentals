@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Remark linter to verify links
+ *
+ * @author Pete LePage <petele@google.com>
+ */
+
 'use strict';
 
 const url = require('url');

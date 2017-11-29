@@ -1,9 +1,11 @@
-'use strict';
-
-/*
-    wfRegEx.js
-    Standardized list of RegEx's used across the building of WebFundamentals
+/**
+ * @fileoverview Standardized list of RegEx's used across the building of
+ *  WebFundamentals
+ *
+ * @author Pete LePage <petele@google.com>
  */
+
+'use strict';
 
 var RE_BOOK_PATH = /^book_path: (.*)\n/m;
 var RE_PROJECT_PATH = /^project_path: (.*)\n/m;
