@@ -1,6 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: TBD
+description: You should keep your network transmission and parse/compile cost
+for JavaScript low to ensure pages get interactive quickly.
 
 {# wf_updated_on: 2017-11-30 #}
 {# wf_published_on: 2017-11-30 #}
