@@ -5,7 +5,7 @@ description: The module guide for workbox-cacheable-response.
 {# wf_updated_on: 2017-11-27 #}
 {# wf_published_on: 2017-11-27 #}
 
-# Workbox Cachable Response  {: .page-title }
+# Workbox Cacheable Response  {: .page-title }
 
 {% include "web/tools/workbox/v3/_shared/alpha.html" %}
 
@@ -69,7 +69,7 @@ workbox.routing.registerRoute(
 ```
 
 When processing responses for request URLs containing `/path/to/api/`,
-take a look at the header named `X-Is-Cachable` (which would be added
+take a look at the header named `X-Is-Cacheable` (which would be added
 to the response by the server). If that header is present, and if it is
 set to a value of 'true', then the response can be cached.
 
