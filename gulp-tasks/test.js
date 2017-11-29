@@ -1308,8 +1308,8 @@ gulp.task('test:travis-init', function() {
   const github = new GitHubApi({debug: false, Promise: Promise});
   github.authenticate({type: 'oauth', token: gitToken});
   return github.pullRequests.get(prOpts).then((prData) => {
-    gutil.log(' ', `${prData.title} (${prData.number})`)
-    guilt.log(' ', prData.body);
+    gutil.log('  ', `${prData.title} (${prData.number})`)
+    gutil.log('  ', prData.body);
     const body = prData.body;
     const ciFlags = wfRegEx.getMatch(/\[WF_IGNORE:(.*)\]/, body, '').split(',');
     if (ciFlags.indexOf('BLINK') >= 0) {
