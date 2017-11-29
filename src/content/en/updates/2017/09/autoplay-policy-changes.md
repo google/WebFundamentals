@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming January 2018.
 
-{# wf_updated_on: 2017-11-29 #}
+{# wf_updated_on: 2017-10-17 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -81,19 +81,15 @@ User's MEI is available at the <i>chrome://media-engagement</i> internal page.
 
 ### Iframe delegation {: #iframe }
 
-A [feature policy] allows developers to selectively enable and disable use of
-various browser features and APIs. Once an origin has received autoplay
-permission, it can delegate that permission to cross-origin iframes with a new
-[feature policy for autoplay]. Note that autoplay is allowed by default on
-same-origin iframes.
+Once an origin has received autoplay permission, it can delegate that
+permission to iframes via a new HTML attribute. Check out the [Gesture
+Delegation API proposal] to learn more.
 
 <pre class="prettyprint">
-&lt;iframe src="myvideo.html" allow="autoplay">
+&lt;iframe src="myvideo.html" gesture="media">
 </pre>
 
-When the feature policy for autoplay is disabled, calls to `play()` without a
-user gesture will reject the promise with a `NotAllowedError` DOMException. And
-the autoplay attribute will also be ignored.
+Without iframe delegation, videos will not be able to autoplay with sound.
 
 ### Example scenarios
 
@@ -171,7 +167,6 @@ thoughts.
 [Promise]: /web/fundamentals/getting-started/primers/promises
 [rejected]: /web/updates/2017/06/play-request-was-interrupted
 [200x140]: https://chromium.googlesource.com/chromium/src/+/1c63b1b71d28851fc495fdee9a2c724ea148e827/chrome/browser/media/media_engagement_contents_observer.cc#38
-[feature policy for autoplay]: https://github.com/WICG/feature-policy/blob/gh-pages/features.md
-[feature policy]: https://wicg.github.io/feature-policy/
+[Gesture Delegation API proposal]: https://github.com/mounirlamouri/gesture-delegation/blob/master/explainer.md
 [current approach]: https://docs.google.com/document/d/1_278v_plodvgtXSgnEJ0yjZJLg14Ogf-ekAFNymAJoU/edit
 [ChromiumDev on Twitter]: https://twitter.com/chromiumdev
