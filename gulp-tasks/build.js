@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Gulp Tasks for building the WebFundamentals repo.
+ *
+ * @author Pete LePage <petele@google.com>
+ */
+
 'use strict';
 
 const fs = require('fs');

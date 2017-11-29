@@ -1,9 +1,11 @@
-'use strict';
-
-/*
-    wfCodeLabHelper.js
-    TODO
+/**
+ * @fileoverview Helper Utility to 'normalize' content exported from CLAAT
+ *  to fit the WebFu styles.
+ *
+ * @author Pete LePage <petele@google.com>
  */
+
+'use strict';
 
 var fs = require('fs');
 var chalk = require('chalk');
@@ -69,7 +71,7 @@ function updateCodeLab(sourceFile, destFile, bookPath, projPath) {
   let reGitBooks = /https:\/\/google-developer-training\.gitbooks\.io\/progressive-web-apps-ilt-.*?\/content\/docs\/(.*?)\.html/g;
   markdown = markdown.replace(reGitBooks, function(match) {
     match = match.replace(reGitBooks, '$1').replace(/_/g, '-');
-    return match; 
+    return match;
   });
 
   // Remove .md from URLs in the current directory and change _ to -
@@ -118,19 +120,19 @@ function updateCodeLab(sourceFile, destFile, bookPath, projPath) {
 
   // Change any Specials to key-point
   markdown = markdown.replace(/<aside markdown="1" class="special">/g, '<aside markdown="1" class="key-point">');
-  
+
   // Convert any unclosed named anchors to simple div's
   markdown = markdown.replace(/^<a id="(.*?)"\s*\/*?>/gm, '<div id="$1"></div>');
-  
+
   // Add image info to images using IMAGEINFO syntax
   markdown = markdown.replace(/!\[.+?\]\((.+?)\)\[IMAGEINFO\]:.+,\s*(.+?)\n/g, '![$2]($1)\n');
-  
+
   // Replace [ICON HERE] with the correct icon
   markdown = markdown.replace(/(\[ICON HERE\])(.*?)!\[(.*?)]\((.*?)\)/g, '<img src="$4" style="width:20px;height:20px;" alt="$3"> $2');
 
   // Remove the table of contents section
   markdown = markdown.replace(/^## Contents?(\n|\s)+(\[.*?]\(.*?\).*\n+)+/gm, '');
-  
+
   // Remove any bold from headings
   markdown = markdown.replace(/^(#+) __(.*)__/gm, '$1 $2');
 

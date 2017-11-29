@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Remark linter to verify image paths & existance
+ *
+ * @author Pete LePage <petele@google.com>
+ */
+
 'use strict';
 
 const fs = require('fs');
@@ -26,7 +32,7 @@ function doesImageExist(file, imgPath, node) {
   }
   let filePath = file.cwd;
   if (imgPath.indexOf('/') === 0) {
-    filePath = path.join(filePath, 'src/content/en', imgPath.replace('/web/', '')); 
+    filePath = path.join(filePath, 'src/content/en', imgPath.replace('/web/', ''));
   } else {
     filePath = path.join(filePath, file.dirname, imgPath);
   }

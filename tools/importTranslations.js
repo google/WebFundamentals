@@ -1,8 +1,10 @@
-'use strict';
-
-/*
-    importTranslation.js
+/**
+ * @fileoverview Imports a collection of translated files
+ *
+ * @author Pete LePage <petele@google.com>
  */
+
+'use strict';
 
 const fs = require('fs');
 const chalk = require('chalk');

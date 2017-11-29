@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Remark linter to verify headings
+ *
+ * @author Pete LePage <petele@google.com>
+ */
+
 'use strict';
 
 const wfRegEx = require('../wfRegEx');
@@ -25,7 +31,7 @@ function wfHeadingsInMarkdown(ast, file, setting) {
     if (reHeading.test(node.value)) {
       file.message(msg, node);
     }
-  });  
+  });
 }
 
 function wfHeadingsBlank(ast, file, setting) {

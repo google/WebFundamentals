@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Remark linter to check links in HTML docs
+ *
+ * @author Pete LePage <petele@google.com>
+ */
+
 'use strict';
 
 const url = require('url');
@@ -25,7 +31,7 @@ function wfYouTube(ast, file, setting) {
     if (reYouTube.test(node.value)) {
       file.message(msg, node);
     }
-  });  
+  });
 }
 
 function wfHTMLDGCLinks(ast, file, setting) {
@@ -34,7 +40,7 @@ function wfHTMLDGCLinks(ast, file, setting) {
     if (reDGCLink.test(node.value)) {
       file.message(msg, node);
     }
-  });  
+  });
 }
 
 function wfInternalLinks(ast, file, setting) {
@@ -43,7 +49,7 @@ function wfInternalLinks(ast, file, setting) {
     if (reSandboxedLink.test(node.value)) {
       file.message(msg, node);
     }
-  });  
+  });
 }
 
 function wfUnsafeShortLinks(ast, file, setting) {
@@ -52,7 +58,7 @@ function wfUnsafeShortLinks(ast, file, setting) {
     if (reGooGL.test(node.value)) {
       file.message(msg, node);
     }
-  });  
+  });
 }
 
 function wfForcedLang(ast, file, setting) {
@@ -66,7 +72,7 @@ function wfForcedLang(ast, file, setting) {
         file.message(msg, node);
       }
     }
-  });  
+  });
 }
 
 

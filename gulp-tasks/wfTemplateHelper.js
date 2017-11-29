@@ -1,9 +1,10 @@
-'use strict';
-
-/*
-    wfTemplateHelper.js
-    TODO
+/**
+ * @fileoverview Helper utility to simplify handlebars template generation
+ *
+ * @author Pete LePage <petele@google.com>
  */
+
+'use strict';
 
 var fs = require('fs');
 var path = require('path');

@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Gulp Task exporting CLAAT related docs.
+ *
+ * @author Pete LePage <petele@google.com>
+ */
+
 'use strict';
 
 const gulp = require('gulp');
