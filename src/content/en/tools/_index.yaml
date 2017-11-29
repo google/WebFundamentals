@@ -27,6 +27,16 @@ landing_page:
       buttons:
       - label: Get Started
         path: /web/tools/lighthouse/
+    - heading: Workbox
+      description: >
+        Workbox is a set of service worker libraries and tools that make it
+        easy to build an offline PWA and take advantage of the service worker
+        APIs.
+      image_path: images/workbox-16x9.png
+      path: /web/tools/workbox/
+      buttons:
+      - label: Get Started
+        path: /web/tools/workbox/
 
   - classname: devsite-landing-row-cards
     items:
