@@ -39,7 +39,7 @@ gulp.task(`workbox-generate-contributors`, function() {
   const github = new GitHubApi();
   github.authenticate({
     type: 'token',
-    token: process.env.GITHUB_TOKEN,
+    token,
   });
 
   return github.repos.getStatsContributors({
