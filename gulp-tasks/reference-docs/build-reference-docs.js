@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Helper function that gets all tags, filters out
+ * built tags, downloads the remaining tags from git and then builds the
+ * JSDocs for that tag.
+ *
+ * @author Matt Gaunt <gauntface@google.com>
+ */
 'use strict';
 
 const path = require('path');

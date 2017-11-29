@@ -1,3 +1,8 @@
+/**
+ * @fileoverview Gets all tags for a Git repo.
+ *
+ * @author Matt Gaunt <gauntface@google.com>
+ */
 'use strict';
 
 const remoteGitTags = require('remote-git-tags');

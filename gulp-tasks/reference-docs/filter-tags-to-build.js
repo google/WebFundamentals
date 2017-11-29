@@ -1,3 +1,8 @@
+/**
+ * @fileoverview Filters tags if they exist.
+ *
+ * @author Matt Gaunt <gauntface@google.com>
+ */
 'use strict';
 
 const fs = require('fs-extra');

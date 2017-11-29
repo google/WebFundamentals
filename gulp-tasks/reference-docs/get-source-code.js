@@ -1,3 +1,8 @@
+/**
+ * @fileoverview Gets the source code for a particular git tag.
+ *
+ * @author Matt Gaunt <gauntface@google.com>
+ */
 'use strict';
 
 const fs = require('fs-extra');

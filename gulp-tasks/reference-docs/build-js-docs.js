@@ -1,3 +1,8 @@
+/**
+ * @fileoverview Runs code through JSDocs with Devsite template.
+ *
+ * @author Matt Gaunt <gauntface@google.com>
+ */
 'use strict';
 
 const gutil = require('gulp-util');
