@@ -29,6 +29,8 @@ toc:
         - title: Automating Image Optimization
           path: /web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization
           step_group: perf-oce
+        - title: JavaScript Start-up Optimization
+          path: /web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization
         - title: Web Font Optimization
           path: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
           step_group: perf-oce
