@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Generate the latest CDN URL that can be included in docs.
+ *
+ * @author Matt Gaunt <gauntface@google.com>
+ */
+
 'use strict';
 
 const gulp = require('gulp');

@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Generate the list of contributors for Workbox to include
+ * in docs.
+ *
+ * @author Matt Gaunt <gauntface@google.com>
+ */
 'use strict';
 
 const GitHubApi = require('github');

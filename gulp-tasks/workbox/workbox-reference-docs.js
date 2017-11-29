@@ -1,3 +1,8 @@
+/**
+ * @fileoverview Build Workbox JSDocs.
+ *
+ * @author Matt Gaunt <gauntface@google.com>
+ */
 'use strict';
 
 const gulp = require('gulp');

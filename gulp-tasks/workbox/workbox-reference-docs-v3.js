@@ -1,3 +1,8 @@
+/**
+ * @fileoverview Build V3 JSDocs for workbox. Delete when no longer pre-release.
+ *
+ * @author Matt Gaunt <gauntface@google.com>
+ */
 'use strict';
 
 const gulp = require('gulp');
