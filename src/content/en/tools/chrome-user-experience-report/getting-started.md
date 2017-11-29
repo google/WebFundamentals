@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2017-10-23 #}
+{# wf_updated_on: 2017-11-29 #}
 {# wf_published_on: 2017-10-23 #}
 
 # Chrome User Experience Report {: .page-title }
@@ -74,7 +74,7 @@ each row.
 
 With access to the dataset, querying it is straightforward:
 
-1. Navigate to [BigQuery]().
+1. Navigate to [BigQuery](https://bigquery.cloud.google.com/dataset/chrome-ux-report:chrome_ux_report).
 1. Click **Compose Query** on top of the side panel.
 <img src="images/bq-compose.png" class="screenshot" alt="Composing a new query on BigQuery" />
 1. Enter your query in the main panel.
