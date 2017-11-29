@@ -1290,11 +1290,15 @@ function testFile(filename, opts) {
  *****************************************************************************/
 
 gulp.task('test:travis-init', function() {
-  // Get the PR number and verify we're running on travis
+  // Get the PR number and GitHub Token
   const prNumber = parseInt(process.env.TRAVIS_PULL_REQUEST, 10);
-  if (!IS_TRAVIS || !prNumber) {
+  const gitToken = process.env.GIT_TOKEN;
+  // Verify we're on Travis, have a PR# and have the git token
+  if (!IS_TRAVIS || !prNumber || !gitToken) {
+    gutil.log(' ', 'Not Travis.');
     return Promise.resolve();
   }
+  gutil.log(' ', `${chalk.cyan('Travis PR')} - getting title & description.`);
   const prOpts = {
     owner: 'Google',
     repo: 'WebFundamentals',
@@ -1302,8 +1306,10 @@ gulp.task('test:travis-init', function() {
   };
   // Look up the PR body and check it's contents
   const github = new GitHubApi({debug: false, Promise: Promise});
-  github.authenticate({type: 'oauth', token: process.env.GIT_TOKEN});
+  github.authenticate({type: 'oauth', token: gitToken});
   return github.pullRequests.get(prOpts).then((prData) => {
+    gutil.log(' ', `${prData.title} (${prData.number})`)
+    guilt.log(' ', prData.body);
     const body = prData.body;
     const ciFlags = wfRegEx.getMatch(/\[WF_IGNORE:(.*)\]/, body, '').split(',');
     if (ciFlags.indexOf('BLINK') >= 0) {
