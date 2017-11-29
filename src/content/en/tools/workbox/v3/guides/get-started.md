@@ -31,7 +31,7 @@ console.log('Hello from sw.js');
 In your web page register your new service worker file like so:
 
 ```html
-<script>
+&lt;script&gt;
 // Check that service workers are registered
 if ('serviceWorker' in navigator) {
   // Use the window load event to keep the page load performant
@@ -39,7 +39,7 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
   });
 }
-</script>
+&lt;/script&gt;
 ```
 
 This tell's the browser this is the service worker to use for site.

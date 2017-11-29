@@ -1,0 +1,35 @@
+project_path: /web/tools/workbox/v3/_project.yaml
+book_path: /web/tools/workbox/v3/_book.yaml
+
+landing_page:
+  header:
+    description: <!-- No Description -->
+
+  rows:
+  - heading: Modules
+    description: >
+      Workbox is a set of service worker libraries and Node modules.
+
+      The service worker libraries can be loaded and used within a service worker to
+      make it easy to handle network requests and take full advantage of the service
+      worker API's and events.
+
+      The Node modules make it easy to precache files efficiently for
+      your users, a vital step to making your site work offline.
+    items:
+      - heading: Service Worker Libraries
+        description: >
+          TODO: Description
+        list:
+        - heading: workbox
+          description: >
+            TODO: Description
+          classname: devsite-landing-row-50
+        - heading: workbox.core
+          description: >
+            TODO: Description
+          classname: devsite-landing-row-50
+      - heading: Node Modules
+        description: >
+          TODO: Description
+
