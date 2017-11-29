@@ -8,8 +8,14 @@
 const fs = require('fs-extra');
 const wfHelper = require('../wfHelper');
 
-const getSourceCode = (gitUrl, tag, tmpPath) => {
-  fs.ensureDirSync(tmpPath);
+/**
+ * Get the source code from a tag from a git repo.
+ * @param {string} gitUrl URL to git repo.
+ * @param {string} tag The tag to get.
+ * @param {string} outPath Path to write the source code to
+ */
+const getSourceCode = (gitUrl, tag, outPath) => {
+  fs.ensureDirSync(outPath);
 
   const args = [
     'clone',
@@ -17,7 +23,7 @@ const getSourceCode = (gitUrl, tag, tmpPath) => {
     '--depth', '1',
     '--config', 'advice.detachedHead=false',
     gitUrl,
-    tmpPath,
+    outPath,
   ];
   return wfHelper.promisedExec(`git ${args.join(' ')}`);
 };

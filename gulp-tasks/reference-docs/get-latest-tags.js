@@ -7,6 +7,7 @@
 
 const remoteGitTags = require('remote-git-tags');
 const semver = require('semver');
+
 /**
  * Get the latest tags for a git repo.
  *

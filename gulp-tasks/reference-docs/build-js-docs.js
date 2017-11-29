@@ -11,6 +11,10 @@ const path = require('path');
 const glob = require('glob');
 const wfHelper = require('../wfHelper');
 
+/**
+ * Helper method that checks the JSDoc config file exists.
+ * @param {string} jsdocConfPath
+ */
 const canFindJSDocConf = (jsdocConfPath) => {
   try {
     fs.accessSync(jsdocConfPath, fs.F_OK);
@@ -24,6 +28,12 @@ const canFindJSDocConf = (jsdocConfPath) => {
   }
 };
 
+/**
+ * Build Devsite friend JSDocs.
+ * @param {string} srcCodePath Path of source code to generate docs for.
+ * @param {string} docOutputPath Where the docs should be written to.
+ * @param {string} jsdocConfPath Path of the JSDoc config file.
+ */
 const buildJSDocs = (srcCodePath, docOutputPath, jsdocConfPath) => {
   // Make sure the JSDoc conf exists
   if (!canFindJSDocConf(jsdocConfPath)) {

@@ -16,6 +16,14 @@ const filterTagsToBuild = require('./filter-tags-to-build');
 const getSourceCode = require('./get-source-code');
 const buildJSDocs = require('./build-js-docs');
 
+/**
+ * Build the reference docs for a project.
+ *
+ * @param {string} gitUrl The Github URL.
+ * @param {string} docPath Path to place the documentation files (i.e. built
+ * JSDocs)
+ * @param {string} jsdocConfPath Path to the JSDoc config path/
+ */
 const buildReferenceDocs = (gitUrl, docPath, jsdocConfPath) => {
   // Get all of the latest tags from Github
   let latestTags;
