@@ -1,3 +1,4 @@
+{# wf_md_include #}
 ## Step 6: Create your own service worker {: #inject }
 
 Up until now, you've been letting Workbox generate your entire service
@@ -42,18 +43,18 @@ placeholder keywords that instruct Workbox where to inject its code.
 
     <pre class="prettyprint"><strong>// TODO: Replace Xs.
     importScripts('/node_modules/workbox-sw/build/importScripts/workbox-sw.prod.vX.X.X.js');
-    
+
     // Note: Ignore the error that Glitch raises about WorkboxSW being undefined.
     const workbox = new WorkboxSW({
       skipWaiting: true,
       clientsClaim: true
     });
-    
+
     workbox.router.registerRoute(
       new RegExp('^https://hacker-news.firebaseio.com'),
       workbox.strategies.staleWhileRevalidate()
     );
-    
+
     self.addEventListener('push', (event) => {
       const title = 'Get Started With Workbox';
       const options = {

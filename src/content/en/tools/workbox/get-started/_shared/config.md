@@ -1,3 +1,4 @@
+{# wf_md_include #}
 * `globDirectory` is where Workbox watches for changes. `globPatterns`
   is relative to this directory.
 

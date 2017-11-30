@@ -1,3 +1,4 @@
+{# wf_md_include #}
 ## Step 4: Register and inspect the generated service worker {: #register }
 
 Workbox has generated a service worker, but there's no reference to it from
@@ -7,7 +8,7 @@ your app, yet.
 1. Register your service worker at the bottom of `init()`.
 
     <pre class="prettyprint">function init() {
-      ... 
+      ...
       <strong>if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js').then(registration => {

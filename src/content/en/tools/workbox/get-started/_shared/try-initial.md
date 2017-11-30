@@ -1,3 +1,4 @@
+{# wf_md_include #}
 ### Try out the initial app {: #starting-point }
 
 The client-side JavaScript in the app fetches the top 10 Hacker News (HN)

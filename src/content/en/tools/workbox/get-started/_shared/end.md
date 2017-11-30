@@ -1,3 +1,4 @@
+{# wf_md_include #}
 ### Try out push notifications {: #try-push }
 
 The app is now all set to handle push notifications. Try it now:
