@@ -8,28 +8,33 @@
 
 'use strict';
 
-var fs = require('fs-extra');
-var path = require('path');
-var jsYaml = require('js-yaml');
-var gutil = require('gulp-util');
-var wfHelper = require('./wfHelper');
-var Handlebars = require('handlebars');
-require('handlebars-helpers')();
+const path = require('path');
+const fs = require('fs-extra');
+const jsYaml = require('js-yaml');
+const gutil = require('gulp-util');
+const wfHelper = require('./wfHelper');
+const wfTemplateHelper = require('./wfTemplateHelper');
 
-var CONTRIBUTORS_FILE = './src/data/_contributors.yaml';
-var PHOTO_PATH = './src/content/en/images/contributors/';
-var TEMPLATE_LIST = './src/templates/contributors/index.md';
-var DEST_LIST = './src/content/en/resources/contributors/index.md';
-var TEMPLATE_INCLUDE = './src/templates/contributors/include.html';
-var DEST_INCLUDE = './src/content/en/_shared/contributors/{{key}}.html';
-var TEMPLATE_ARTICLE_LIST = './src/templates/contributors/article-list.md';
-var DEST_ARTICLE_LIST = './src/content/en/resources/contributors/{{key}}.md';
-var MISSING_AVATAR = 'is missing a photo, using simple avatar instead.';
+const CONTRIBUTORS_FILE = './src/data/_contributors.yaml';
+const PHOTO_PATH = './src/content/en/images/contributors/';
+const TEMPLATE_LIST = './src/templates/contributors/index.md';
+const DEST_LIST = './src/content/en/resources/contributors/index.md';
+const TEMPLATE_INCLUDE = './src/templates/contributors/include.html';
+const DEST_INCLUDE = './src/content/en/_shared/contributors/{{key}}.html';
+const TEMPLATE_ARTICLE_LIST = './src/templates/contributors/article-list.md';
+const DEST_ARTICLE_LIST = './src/content/en/resources/contributors/{{key}}.md';
+const MISSING_AVATAR = 'is missing a photo, using simple avatar instead.';
 
+/**
+ * Parses & normalizes a markdown file.
+ *
+ * @param {string} key The key identifying the user
+ * @return {string} filename to use
+ */
 function getPhotoForContributor(key) {
-  var localImagePath = path.join(PHOTO_PATH, key) + '.jpg';
+  const localImagePath = path.join(PHOTO_PATH, key) + '.jpg';
   try {
-    var stat = fs.statSync(localImagePath);
+    const stat = fs.statSync(localImagePath);
     if (stat.isFile()) {
       return key;
     }
@@ -40,67 +45,81 @@ function getPhotoForContributor(key) {
   return 'no-photo';
 }
 
+/**
+ * Loop through each contributor and render include file for each person.
+ *
+ * @param {Array} contributors The list of contributors
+ */
 function buildIncludes(contributors) {
   gutil.log(' ', 'Building include file for each contributor...');
-  var ts = fs.readFileSync(TEMPLATE_INCLUDE, 'utf8');
-  var template = Handlebars.compile(ts);
-  var keys = Object.keys(contributors);
+  const keys = Object.keys(contributors);
   keys.forEach(function(key) {
-    var contributor = contributors[key];
+    let contributor = contributors[key];
     contributor.id = key;
     contributor.photo = getPhotoForContributor(key);
-    var result = template(contributor);
-    fs.writeFileSync(DEST_INCLUDE.replace('{{key}}', key), result);
+    const dest = DEST_INCLUDE.replace('{{key}}', key);
+    wfTemplateHelper.renderTemplate(TEMPLATE_INCLUDE, contributor, dest);
   });
   gutil.log('  ', 'Built', gutil.colors.magenta(keys.length + ' files'));
 }
 
+/**
+ * Build the index file for all contributors.
+ *
+ * @param {Array} contributors The list of contributors.
+ */
 function buildIndex(contributors) {
   gutil.log(' ', 'Building index file of all contributors...');
-  var ts = fs.readFileSync(TEMPLATE_LIST, 'utf8');
-  var template = Handlebars.compile(ts);
-  var context = {
-    contributors: contributors
-  };
-  var result = template(context);
-  fs.outputFileSync(DEST_LIST, result);
+  const context = {contributors: contributors};
+  wfTemplateHelper.renderTemplate(TEMPLATE_LIST, context, DEST_LIST);
 }
 
+/**
+ * Loop through each contributor and render individaul contribution index.
+ *
+ * @param {Array} contributors The list of contributors
+ */
 function buildIndividualPages(contributors) {
   gutil.log(' ', 'Building individual pages of all contributors...');
-  var files = wfHelper.getFileList(global.WF.src.content, ['**/*.md']);
-  var filesByAuthor = wfHelper.splitByAuthor(files);
-
-  var keys = Object.keys(contributors);
+  const files = wfHelper.getFileList(global.WF.src.content, ['**/*.md']);
+  const filesByAuthor = wfHelper.splitByAuthor(files);
+  const keys = Object.keys(contributors);
   keys.forEach(function(key) {
     if (!(key in filesByAuthor)) {
       return;
     }
     filesByAuthor[key].sort(wfHelper.publishedComparator);
-    var name = contributors[key].name;
-    var ts = fs.readFileSync(TEMPLATE_ARTICLE_LIST, 'utf8');
-    var template = Handlebars.compile(ts);
-    var title = 'Latest contributions from ' + name.given;
+    const name = contributors[key].name;
+    let title = 'Latest contributions from ' + name.given;
     if (name.family) {
       title += ' ' + name.family;
     }
-    var context = {
-      title,
+    const context = {
+      title: title,
       articles: filesByAuthor[key],
     };
-    var result = template(context);
-    fs.outputFileSync(DEST_ARTICLE_LIST.replace('{{key}}', key), result);
+    const dest = DEST_ARTICLE_LIST.replace('{{key}}', key);
+    wfTemplateHelper.renderTemplate(TEMPLATE_ARTICLE_LIST, context, dest);
   });
 }
 
+/**
+ * Reads the contributors file and parses it from YAML to JSON.
+ *
+ * @return {Array} The list of contributors
+ */
 function getContributors() {
   gutil.log(' ', 'Reading contributors.yaml file...');
-  var yamlDoc = fs.readFileSync(CONTRIBUTORS_FILE, 'utf8');
+  const yamlDoc = fs.readFileSync(CONTRIBUTORS_FILE, 'utf8');
   return jsYaml.safeLoad(yamlDoc);
 }
 
+/**
+ * Build all of the necessary contributors files.
+ *
+ */
 function buildAll() {
-  var contributors = getContributors();
+  const contributors = getContributors();
   buildIncludes(contributors);
   buildIndex(contributors);
   buildIndividualPages(contributors);
