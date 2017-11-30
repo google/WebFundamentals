@@ -183,7 +183,7 @@ function featuredComparator(aObj, bObj) {
 /**
  * Gets the first regEx match on a string
  *
- * @deprecated
+ * @deprecated Use wfRegEx.getMatch instead
  *
  * @param {RegEx} regEx The regex to test.
  * @param {string} content The content to search.

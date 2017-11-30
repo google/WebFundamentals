@@ -50,6 +50,14 @@ const RE_AUTO_GENERATED = /^{#\s?wf_auto_generated\s?#}/m;
 const RE_DEVSITE_TRANSLATION = /^{# wf_devsite_translation #}/m;
 
 
+/**
+ * Gets the first regEx match on a string
+ *
+ * @param {RegEx} regEx The regex to test.
+ * @param {string} content The content to search.
+ * @param {string} [defaultResponse] The default response to provide.
+ * @return {string} The regex match.
+ */
 function getMatch(regEx, content, defaultResponse) {
   const result = content.match(regEx);
   if (result && result[1]) {
@@ -58,6 +66,13 @@ function getMatch(regEx, content, defaultResponse) {
   return defaultResponse;
 }
 
+/**
+ * Gets all of the regEx match on a string
+ *
+ * @param {RegEx} regEx The regex to test.
+ * @param {string} content The content to search.
+ * @return {Array} The regex matches.
+ */
 function getMatches(regEx, content) {
   let results = [];
   let myArray;
