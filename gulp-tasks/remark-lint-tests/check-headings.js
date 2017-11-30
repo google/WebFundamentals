@@ -21,6 +21,13 @@ const reHeading = /^<h\d>.*?<\/h\d>$/i;
 const reHideFromTOC = /.hide-from-toc/;
 const validHeadingTypes = ['text', 'linkReference'];
 
+/**
+ * Remark Lint Test - flags HTML style heading tags.
+ *
+ * @param {Object} ast
+ * @param {Object} file
+ * @param {Object} setting
+ */
 function wfHeadingsInMarkdown(ast, file, setting) {
   let msg = 'Headings must use markdown style, HTML is not permitted.';
   visit(ast, 'html', function(node) {
@@ -30,6 +37,13 @@ function wfHeadingsInMarkdown(ast, file, setting) {
   });
 }
 
+/**
+ * Remark Lint Test - flags empty headings.
+ *
+ * @param {Object} ast
+ * @param {Object} file
+ * @param {Object} setting
+ */
 function wfHeadingsBlank(ast, file, setting) {
   visit(ast, 'heading', function(node) {
     let title = toString(node).trim();
@@ -39,6 +53,13 @@ function wfHeadingsBlank(ast, file, setting) {
   });
 }
 
+/**
+ * Remark Lint Test - verifies there is no markup in level 1 headings.
+ *
+ * @param {Object} ast
+ * @param {Object} file
+ * @param {Object} setting
+ */
 function wfNoMarkupInTitle(ast, file, setting) {
   visit(ast, 'heading', function(node) {
     if (node.depth !== 1) {
@@ -53,9 +74,17 @@ function wfNoMarkupInTitle(ast, file, setting) {
   });
 }
 
+/**
+ * Remark Lint Test - verifies TL;DRs are at least L3 & hidden from the TOC.
+ *
+ * @param {Object} ast
+ * @param {Object} file
+ * @param {Object} setting
+ */
 function wfTLDR(ast, file, setting) {
-  let msgLevel = 'TL;DR headings must be level 3 or greater.';
-  let msgHide = 'TL;DR headings must be hidden from the TOC with `{: .hide-from-toc }`';
+  const msgLevel = 'TL;DR headings must be level 3 or greater.';
+  const msgHide = 'TL;DR headings must be hidden from the TOC with ' +
+      ' `{: .hide-from-toc }`';
   visit(ast, 'heading', function(node) {
     let body = toString(node);
     if (reTLDR.test(body)) {
