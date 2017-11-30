@@ -67,7 +67,7 @@ function buildIndex(contributors) {
 
 function buildIndividualPages(contributors) {
   gutil.log(' ', 'Building individual pages of all contributors...');
-  var files = wfHelper.getFileList(GLOBAL.WF.src.content, ['**/*.md']);
+  var files = wfHelper.getFileList(global.WF.src.content, ['**/*.md']);
   var filesByAuthor = wfHelper.splitByAuthor(files);
 
   var keys = Object.keys(contributors);

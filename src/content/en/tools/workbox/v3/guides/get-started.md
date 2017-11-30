@@ -30,8 +30,8 @@ console.log('Hello from sw.js');
 
 In your web page register your new service worker file like so:
 
-```html
-<script>
+<pre class="prettyprint html">
+&lt;script&gt;
 // Check that service workers are registered
 if ('serviceWorker' in navigator) {
   // Use the window load event to keep the page load performant
@@ -39,8 +39,8 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
   });
 }
-</script>
-```
+&lt;/script&gt;
+</pre>
 
 This tell's the browser this is the service worker to use for site.
 
@@ -66,15 +66,15 @@ service worker.
 
 Change your service worker so that it has the following `importScripts()` call.
 
-```javascript
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0-alpha.24/workbox-sw.js');
+<pre class="prettyprint js">
+importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);
 } else {
   console.log(`Boo! Workbox didn't load 😬`);
 }
-```
+</pre>
 
 With this you should see the “Yay” message so we know that Workbox is
 officially loaded in our service worker.
@@ -94,7 +94,10 @@ is to register a route with Workbox that will match any “.js” files that are
 requested, which we can do with a regular expression:
 
 ```javascript
-workbox.routing.registerRoute(new RegExp('.*\.js'), … );
+workbox.routing.registerRoute(
+  new RegExp('.*\.js'),
+  …
+);
 ```
 
 This tells Workbox that when a request is made, it should see if the regular
@@ -107,7 +110,10 @@ but fallback to the cached version if the network fails, we can use the
 “network first” strategy to achieve this.
 
 ```javascript
-workbox.routing.registerRoute(new RegExp('.*\.js'), workbox.strategies.networkFirst());
+workbox.routing.registerRoute(
+  new RegExp('.*\.js'),
+  workbox.strategies.networkFirst()
+);
 ```
 
 Add this code to your service worker and refresh the page. If your web page

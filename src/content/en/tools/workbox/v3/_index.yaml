@@ -70,4 +70,4 @@ landing_page:
       <p>Workbox is built and maintained by friendly bunch of contributors
       without whom none of this would be possible.</p>
 
-      {% include 'web/tools/workbox/templates/contributors.html' %}
+      {% include 'web/tools/workbox/_shared/contributors.html' %}
