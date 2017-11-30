@@ -39,7 +39,7 @@ footer:
       path: "/web/events/pwa-agency-training/"
     - label: 在Udacity的網絡課程
       path: "/web/shows/udacity/"
-    icon_name: 學校
+    icon_name: school
     name: 更多培訓
   - contents:
     - label: 提出問題
