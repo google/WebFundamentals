@@ -1,62 +1,73 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 另闢蹊徑，為您的專案建立完全自訂的動畫。
+description:不走尋常路，爲項目創建完全自定義的動畫。
 
-{# wf_updated_on: 2014-10-20 #}
+{# wf_updated_on: 2016-08-23 #}
 {# wf_published_on: 2014-08-08 #}
 
-# 自訂緩動 {: .page-title }
+# 自定義緩動 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 {% include "web/_shared/contributors/samthorogood.html" %}
 
-
-有時您不會想使用 CSS 內建的緩動關鍵字，或您將會使用 JavaScript 架構的動畫程式庫。 在這兩種情況，通常可以定義您自己的曲線 (或方程式)，而這可讓您高度控制您專案動畫的操作感。
+有時您不想使用 CSS 隨附的緩動關鍵字，或者要使用 Web Animations 或 JavaScript 框架。在這些情況下，一般可以定義自己的曲線（或公式），這讓您能更好地控制項目動畫的感覺。
 
 ### TL;DR {: .hide-from-toc }
-- 自訂緩動將可讓您為專案帶來更多個性。
-- 您可以建立類似於預設動畫曲線 (緩出、緩入等) 的三次方貝茲曲線，兩者的著重在於不同地方。
-- 當您需要進一步控制權動畫的計時和行為時，請使用 JavaScript（例如 彈性或彈跳動畫）。
+* 自定義緩動使您能夠給項目提供更多個性。
+* 您可以創建與默認動畫曲線（緩出、緩入等）相似的三次貝塞爾曲線，只是重點放在不同的地方。
+* 當需要對動畫時間和行爲（例如彈性或彈跳動畫）進行更多控制時，請使用 JavaScript。
 
 
-如果您正以 CSS 進行動畫處理，您會發現可以定義三次方貝茲曲線來定義計時。 事實上，關鍵字`ease` 、`ease-in`、`ease-out` 和 `linear` 對應至預先定義的貝茲曲線，這在 [CSS 轉換規格](http://www.w3.org/TR/css3-transitions/)中有詳述。
+如果使用 CSS 編寫動畫，您將發現可以通過定義三次貝塞爾曲線來定義時間。事實上，關鍵字 `ease`、`ease-in`、`ease-out` 和 `linear` 映射到預定義的貝塞爾曲線，詳細說明請參考 [CSS 變換規範](http://www.w3.org/TR/css3-transitions/) 和 [Web Animations 規範](https://w3c.github.io/web-animations/#scaling-using-a-cubic-bezier-curve)。
 
-在 CSS 中，這些貝茲曲線會取四個值或 2 組數字，每一組都描述一條三次方貝茲曲線控制點的 X 和 Y 座標。  貝茲曲線的起始點座標為 (0, 0)，結束座標是 (1, 1)；您可以設定這兩個控制點的 X 和 Y 值。 兩個控制點的 X 值必須介於 0 和 1 之間，而每個控制點的 Y 值可以超出 [0, 1] 限制，不過規格對於其幅度並未明確說明！
+這些貝塞爾曲線有四個值，即 2 對數字，每對數字描述三次貝塞爾曲線的控制點的 X 和 Y 座標。貝塞爾曲線的起點座標爲 (0, 0)，終點座標爲 (1, 1)；由您設置兩個控制點的 X 和 Y 值。兩個控制點的 X 值必須在 0 到 1 之間，每個控制點的 Y 值可以超過 [0, 1] 限制，但此規範未說明可超過多少。
 
-變更每個控制點的 X 和 Y 值會呈現出非常不同的曲線，因此對您動畫也會有相當大差別的操作感。 例如，如果第一個控制點是在右下角，動畫將緩慢啟動。 如果是在左上方，它會快速啟動。 反之，如果第二個控制點位於格線右下角，結束時就會很快，要是在左上角，結束時將會緩慢。
+更改每個控制點的 X 和 Y 值將實現截然不同的曲線，從而使動畫有截然不同的感覺。例如，如果第一個控制點在右下角，則動畫在開頭緩慢。如果它在左上角，動畫在開頭會顯得很快。相反，如果第二控制點在網格的右下角，則動畫在結尾處變快；而在左上角時，動畫將在結尾處變慢。
 
-做為對照，這裡有兩條曲線：一般的緩入緩出動畫曲線和自訂曲線：
+爲了對比，以下有兩條曲線：一條典型的緩入緩出曲線和一條自定義曲線：
 
-<img src="images/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="緩入緩出動畫曲線。" />
-<img src="images/custom.png" style="display: inline; max-width: 300px" alt="自訂動畫曲線。" />
+<div class="attempt-left">
+  <figure>
+    <img src="images/ease-in-out-markers.png" alt="緩入緩出動畫的曲線。" />
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/custom.png" alt="自定義動畫的曲線。" />
+  </figure>
+</div>
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-custom-curve.html">請見帶自訂緩動的動畫。</a>
+[查看自定義緩動的動畫](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-custom-curve.html){: target="_blank" .external }
 
-自訂曲線的 CSS 為：
+此自定義曲線的 CSS 爲：
 
 
     transition: transform 500ms cubic-bezier(0.465, 0.183, 0.153, 0.946);
     
 
-第一組數字是第一個控制點的 X 和 Y 座標，第二組數字是第二個控制點的 X 和 Y 座標。
+前兩個數字是第一個控制點的 X 和 Y 座標，後兩個數字是第二個控制點的 X 和 Y 座標。
 
-製作自訂曲線很有趣，並可讓您有效控制動畫的操作感。 例如，以上述曲線而言，您可以看到曲線類似於一般的緩入緩出曲線，但緩入較短 (或稱「開展」部分)，而結束則為拉長的減速。
+製作自定義曲線很有趣，您可以有效控制對動畫的感覺。以上述曲線爲例，您可以看到曲線與經典的緩入緩出曲線相似，但緩入即“開始”部分縮短，而結尾減速部分拉長。
 
-以此動畫曲線工具實驗， <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/curve-playground.html">看看曲線</a> 對動畫操作感的影響。
+使用此[動畫曲線工具](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/curve-playground.html){: target="_blank" .external }進行試驗，並查看此曲線如何影響動畫的感覺。
 
-## 使用 JavaScript 以進一步控制
+## 使用 JavaScript 框架實現更多控制
 
-有時候您會需要超過一條三次方貝茲曲線所能提供的控制力。 也許您想要彈性彈跳的操作感，或者您想要停止動畫部分的執行，這兩個功能若是使用 CSS 會比較難以達成。 在這種情況下，您應該使用 JavaScript 動畫程式庫。 目前最好的程式庫之一就是 [Greensock 的 TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) (或 TweenLite，如果您想要保持超輕量)，因為您可以一個小小的 JavaScript 程式庫即可獲得高度控制能力，而且這是非常成熟的程式碼基底。
+有時您需要三次貝塞爾曲線未能提供的更多控制。如果您需要彈跳的感覺，您可以考慮使用 JavaScript 框架，因爲使用 CSS 或 Web Animations 很難實現這個效果。
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-elastic.html">請見彈性緩動動畫。</a>
+### TweenMax
 
-要使用如 TweenMax 的技術，請在您的網頁中納入以下指令碼：
+[GreenSock 的 TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)（或 TweenLite，如果您想要超輕量版本）是一個強大的框架，您可以在小型 JavaScript 庫中獲得很多控制，它是一個非常成熟的代碼庫。
+
+[查看彈性緩動的動畫](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-elastic.html){: target="_blank" .external }
+
+要使用 TweenMax，請在頁面中包括此腳本：
 
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     
 
-一旦安裝好，您可以呼叫 TweenMax 作用於您的元素上，並告訴它您要使用哪些屬性，搭配您要使用的任何緩動。 您可以使用的緩動選項多不勝數；以下的程式碼使用一種彈性緩出：
+將該腳本放到合適位置後，您可以對元素調用 TweenMax，並且告訴它您想要的任何緩動，以及您想要哪些屬性。有大量緩動選項可供使用；以下代碼使用一個彈性緩出：
 
 
     var box = document.getElementById('my-box');
@@ -68,7 +79,10 @@ description: 另闢蹊徑，為您的專案建立完全自訂的動畫。
     });
     
 
-[TweenMax 文件](http://greensock.com/docs/#/HTML5/GSAP/TweenMax/) 重點提示了此處的所有選項，它非常值得一讀。
+[TweenMax 文檔](https://greensock.com/docs/#/HTML5/GSAP/TweenMax/)重點說明了您使用的所有選項，非常值得一讀。
 
 
 
+
+
+{# wf_devsite_translation #}

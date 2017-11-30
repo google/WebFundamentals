@@ -1,38 +1,48 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 學習如何在您的應用程式的兩個檢視之間執行動畫處理。
+description:瞭解如何在應用的兩個視圖之間設置動畫。
 
-{# wf_updated_on: 2014-10-21 #}
-{# wf_published_on: 2014-08-08 #}
+{# wf_updated_on:2016-08-23 #}
+{# wf_published_on:2014-08-08 #}
 
-# 檢視之間的動畫處理 {: .page-title }
+# 在視圖之間設置動畫 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-
-您可能常常會想要在應用程式中，讓使用者於檢視之間移動 -- 無論是前往詳細資料檢視的清單，或是顯示側邊欄導覽。 檢視之間的動畫處理能讓使用者不至於分心，並為專案增添更多的活力。
+您常常需要讓用戶在應用的各視圖之間切換，不管是從列表換到詳情視圖，還是顯示邊欄導航。在這些視圖之間設置動畫可以吸引用戶，並讓您的項目更生動活潑。
 
 ### TL;DR {: .hide-from-toc }
-- 使用轉換，以在檢視之間移動；避免使用 `left`、`top` 或觸發版面配置的任何其他屬性。
-- 確保您使用的任何動畫不但要潮，而且控制持續時間要短。
-- 同時要考慮螢幕變大時的動畫和版面配置變化；較小螢幕上可行的內容，在桌面環境上可能看起來很突兀。
+* 使用變換來切換不同視圖；避免使用 `left`、`top` 或任何其他會觸發佈局的屬性。
+* 確保使用的所有動畫簡潔明快，並且設置較短的持續時間。
+* 考慮在屏幕尺寸增大時您的動畫和佈局如何變化；考慮哪些適合小屏幕的動畫用在桌面環境時可能看起來很怪。
 
+這些視圖變換的外觀及行爲在很大程度上取決於您所處理的視圖類型。例如，給視圖上層的模態疊加層設置動畫，會帶來一種與在列表和詳情視圖之間變換不同的體驗。
 
-這些檢視轉換的外觀和行為重度取決於您正在處理的檢視類型，因此在檢視上層動畫處理強制回應重疊，較之於在清單和詳細資訊檢視之間轉換，應該是個不同的經驗。
+成功：力求使所有動畫保持 60fps。這樣，用戶不會覺得動畫卡頓，從而不會影響其使用體驗。確保任何動畫元素爲您打算在動畫開始之前更改的任何內容設置了 `will-change`。對於視圖變換，您很可能要使用 `will-change: transform`。
 
-Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使用者就不會遇到會間斷的動畫，而導致他們的體驗很出戲。 確保早在動畫開始之前，針對您計畫變更的一切，設定好動畫處理元素的 will-change。 針對檢視轉換，極有可能您會想要使用<code>will-change: transform</code>。
+## 使用變換來切換不同視圖
 
-## 使用轉換以在檢視之間移動
+<div class="attempt-left">
+  <figure>
+    <img src="images/view-translate.gif" alt="在兩個視圖之間變換" />
+  </figure>
+</div>
 
-要讓過程更容易些，讓我們假設有兩個檢視： 一個清單檢視和一個詳細資訊檢視。 當使用者在清單檢視內點選一個清單項目，詳細資訊檢視將滑入，而清單檢視將滑出。
+爲簡單起見，我們假定有兩個視圖：一個列表視圖和一個詳情視圖。當用戶點按列表視圖內的列表項時，詳情視圖將滑入屏幕，並且列表視圖滑出。
 
-<img src="images/view-translate.gif" alt="在兩個檢視之間轉換" />
+<div style="clear:both;"></div>
 
-要達到這個效果，您需要針對兩種檢視使用容器，並將之設定 `overflow: hidden`。 以這種方式，兩個檢視都可以在容器裡並排，而不會顯示任何水平捲軸，而每一檢視也也可視需要在容器內並排滑動。
+<div class="attempt-right">
+  <figure>
+    <img src="images/container-two-views.svg" alt="視圖層次。" />
+  </figure>
+</div>
 
-<img src="images/container-two-views.svg" alt="視圖層次。" />
+要實現此效果，您需要一個容納這兩個視圖的容器，併爲容器設置 `overflow: hidden`。這樣兩個視圖可以並排放在容器內，而不顯示任何水平滾動條，並且每個視圖可以按需在容器內側向滑動。
 
-該容器的 CSS 為：
+<div style="clear:both;"></div>
+
+此容器的 CSS 代碼爲：
 
 
     .container {
@@ -43,7 +53,7 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
     }
     
 
-該容器的位置被設定為 `relative`。 這代表其中的每個檢視可以定位在最左上角，然後以變形來到處移動。 較之使用 `left` 屬性 (會觸發版面配置與繪製)，這種方法的效能更好，通常也更容易合理化。
+容器的位置被設置爲 `relative`。這意味着，其中的每個視圖可以絕對定位在左上角，然後通過變形移動位置。此方法比使用 `left` 屬性性能更佳（因爲該屬性會觸發佈局和繪圖），並且通常更容易合理化。
 
 
     .view {
@@ -59,7 +69,7 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
     }
     
 
-在 `transform` 屬性上新增 `transition`，會提供不錯的滑動效果。 為了給它一個不錯的感覺，它使用自訂 `cubic-bezier` 曲線，如我們在 [自訂緩動指南](custom-easing.html) 中所討論。
+在 `transform` 屬性上添加 `transition` 可實現不錯的滑動效果。爲實現不錯的感覺，它使用了自定義的 `cubic-bezier` 曲線，我們在[自定義緩動指南](custom-easing)中討論了該曲線。
 
 
     .view {
@@ -69,7 +79,7 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
     }
     
 
-畫面之外的檢視應該解譯為往右，因此在此例中，詳細資訊檢視應該要移動：
+屏幕之外的視圖應變換到右側，因此在這種情況下需要移動詳情視圖：
 
 
     .details-view {
@@ -78,7 +88,7 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
     }
     
 
-現在需要少量的 JavaScript 來處理類別。 這會切換檢視上的適當類別。
+現在，需要少量 JavaScript 來處理類。這將切換視圖上相應的類。
 
 
     var container = document.querySelector('.container');
@@ -93,16 +103,16 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
       container.classList.toggle('view-change');
     }
     
-    // When you click on a list item bring on the details view.
+    // When you click a list item, bring on the details view.
     for (var i = 0; i < listItems.length; i++) {
       listItems[i].addEventListener('click', onViewChange, false);
     }
     
-    // And switch it back again when you click on the back button
+    // And switch it back again when you click the back button
     backButton.addEventListener('click', onViewChange);
     
 
-最後，我們為這些類別新增 CSS 宣告。
+最後，我們爲這些類添加 CSS 聲明。
 
 
     .view-change .list-view {
@@ -115,19 +125,27 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
       transform: translateX(0);
     }
     
+[試一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/inter-view-animation.html){: target="_blank" .external }
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/inter-view-animation.html">請參閱範例。</a>
+您可以擴展此示例以包括多個視圖，基本概念仍是一樣；每個不可見視圖應在屏幕之外，並按需進入屏幕，同時當前屏幕視圖應移走。
 
-您可以加以擴展，以涵蓋多個檢視，基本概念應該是一樣的；每個非可見檢視應該在畫面之外，並在必要時帶回，而目前的畫面上檢視應該要移開。
+注意：以跨瀏覽器的方式設計此類層次結構可能很難。例如，iOS 需要額外的 CSS 屬性 <code>-webkit-overflow-scrolling: touch</code> 來“重新啓用”拋式滾動，但是您不能像使用標準溢出屬性一樣，控制動作所針對的軸。一定要在各種設備上測試您的實現方法！
 
-Note: 要跨瀏覽器設計這種階層，可能頗具挑戰性。 例如，iOS 需要額外的 CSS 屬性 <code>-webkit-overflow-scrolling: touch</code>，以「重新啟用」快滑捲動，但不同於標準溢出屬性的是，您無法控制要針對哪個軸執行。 一定要在不同裝置測試您的建置！
+除了在視圖之間變換之外，此技術還能應用於其他滑入元素，例如邊欄導航元素。唯一差異是不需要移動其他視圖。
 
-除了在檢視之間轉換，這項技巧也可套用於其他滑入元素中，例如側邊欄導覽元素。 唯一真正的區別是您應該不需要移動其他檢視。
+## 確保動畫在較大屏幕上正常顯示
 
-## 確保您的動畫可搭配較大螢幕運作
+<div class="attempt-right">
+  <figure>
+    <img src="images/container-two-views-ls.svg" alt="大屏幕上的視圖層次。" />
+  </figure>
+</div>
 
-針對較大的螢幕，您應該隨時保持清單檢視 (而非移除它)，並從右手邊滑入詳細資訊檢視。 大概就和處理導覽檢視相同。
-
-<img src="images/container-two-views-ls.svg" alt="在較大螢幕上的視圖層次。" />
+對於較大屏幕，始終應讓列表視圖留在周圍，而不是將其移除，並且從右側滑入詳情視圖。它與處理導航視圖幾乎一樣。
 
 
+
+
+
+
+{# wf_devsite_translation #}
