@@ -53,6 +53,10 @@ Chrome's autoplay policies are simple:
 - Top frames can [delegate autoplay permission](#iframe) to their iframes to
   allow autoplay with sound.
 
+Note: You can try out these new policies by setting the experimental flag
+`chrome://flags/#autoplay-policy` to "Document user activation is required." in
+Chrome 64.
+
 ### Media Engagement Index (MEI) {: #mei }
 
 The MEI measures an individual's propensity to consume media on a site.
