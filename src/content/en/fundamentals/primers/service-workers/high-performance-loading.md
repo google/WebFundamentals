@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ensure you're getting the best performance out of your service worker implementation.
 
-{# wf_updated_on: 2017-09-27 #}
+{# wf_updated_on: 2017-11-30 #}
 {# wf_published_on: 2017-09-21 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
