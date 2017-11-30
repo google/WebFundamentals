@@ -29,7 +29,7 @@ Translated by
 
 目前，shadow-piercing选择器的问题是它违反了封装(encapsulation)以及在某些时候组件无法更改组件的内部实施。
 
-注：目前JavaScript API如`querySelector()` 和`querySelectorAll()`会继续支持`::shadow` 和`/deep/`。目前这API的支持[正在在GitHub上讨论](https://github.com/w3c/webcomponents/issues/78)。
+Note: 目前JavaScript API如`querySelector()` 和`querySelectorAll()`会继续支持`::shadow` 和`/deep/`。目前这API的支持[正在在GitHub上讨论](https://github.com/w3c/webcomponents/issues/78)。
 
 
 [CSS Shadow Parts](https://tabatkins.github.io/specs/css-shadow-parts/)的规范正在被推进为shadow piercing选择器的替代。 Shadow Parts 将会允许组件的开发者公开指定的元素。这将会保留封装(encapsulation) 并允许网页的开发者可以一次过设计(style)多个属性。
