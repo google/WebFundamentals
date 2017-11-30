@@ -19,7 +19,7 @@ description: "歡迎您將Web Fundamentals翻譯去其他的語言。"
 2. 使用您的GitHub帳戶開啟新的GitLocalize帳戶。
 3. 尋找您想要翻譯的文章。
 4. 開始翻譯。
-5. 當翻譯完畢，放送您的翻譯以進行檢查。
+5. 當翻譯完畢，請發送您的翻譯以進行審查。
 6. 檢查完畢的文章將會被語言管理員作為Pull Request發送到GitHub。
 
 您可以從GitLocalize的[幫助頁面](https://docs.gitlocalize.com/)學到GitLocalize是如何操作的。
