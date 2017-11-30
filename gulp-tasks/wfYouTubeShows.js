@@ -84,7 +84,7 @@ function buildFeeds(buildType, callback) {
       var outputFile = path.join(global.WF.src.content, 'shows', 'index.md');
       wfTemplateHelper.renderTemplate(template, context, outputFile);
 
-      var context = {
+      context = {
         video: response.items[0]
       };
       template = path.join(global.WF.src.templates, 'shows', 'latest.html');

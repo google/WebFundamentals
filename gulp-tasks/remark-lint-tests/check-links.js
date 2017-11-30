@@ -19,7 +19,7 @@ module.exports = {
 // Check for links with hard coded languages
 function wfForcedLang(ast, file, setting) {
   let msg = 'Hard coded language URL in link (`hl=xx`)';
-  visit(ast, 'link', function (node) {
+  visit(ast, 'link', function(node) {
     let parsedUrl = url.parse(node.url);
     let queryString = parsedUrl.query;
     if (queryString && queryString.toLowerCase().indexOf('hl=') >= 0) {
@@ -31,7 +31,7 @@ function wfForcedLang(ast, file, setting) {
 // Check for links with FQDN to DevSite
 function wfDGCLinks(ast, file, setting) {
   let msg = 'Do not hard code `developers.google.com` in links.';
-  visit(ast, 'link', function (node) {
+  visit(ast, 'link', function(node) {
     let parsedUrl = url.parse(node.url);
     let hostname = parsedUrl.hostname;
     if (hostname && hostname.toLowerCase() === 'developers.google.com') {
@@ -43,7 +43,7 @@ function wfDGCLinks(ast, file, setting) {
 // Check for unsecured shortlinks
 function wfUnsafeShort(ast, file, setting) {
   let msg = 'Do not use unsafe `HTTP://goo.gl/` links';
-  visit(ast, 'link', function (node) {
+  visit(ast, 'link', function(node) {
     let parsedUrl = url.parse(node.url);
     let protocol = parsedUrl.protocol;
     let hostname = parsedUrl.hostname;
@@ -58,7 +58,7 @@ function wfUnsafeShort(ast, file, setting) {
 // Check for internal & sandboxed links
 function wfInternalLinks(ast, file, setting) {
   let msg = 'Do not use internal Google sandboxed links.';
-  visit(ast, 'link', function (node) {
+  visit(ast, 'link', function(node) {
     let parsedUrl = url.parse(node.url);
     let hostname = parsedUrl.hostname;
     if (hostname && hostname.toLowerCase() === 'sandbox.google.com') {

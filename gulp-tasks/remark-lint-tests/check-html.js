@@ -7,9 +7,7 @@
 'use strict';
 
 const url = require('url');
-const wfRegEx = require('../wfRegEx');
 const visit = require('unist-util-visit');
-const toString = require('mdast-util-to-string');
 
 module.exports = {
   'wf-html-you-tube': wfYouTube,
@@ -27,7 +25,7 @@ const reHref = /^<a\s.*href=['|"](.*)['|"]>/i;
 
 function wfYouTube(ast, file, setting) {
   let msg = 'YouTube videos must use DevSite embed.';
-  visit(ast, 'html', function (node) {
+  visit(ast, 'html', function(node) {
     if (reYouTube.test(node.value)) {
       file.message(msg, node);
     }
@@ -36,7 +34,7 @@ function wfYouTube(ast, file, setting) {
 
 function wfHTMLDGCLinks(ast, file, setting) {
   let msg = 'Do not hard code `developers.google.com` in links.';
-  visit(ast, 'html', function (node) {
+  visit(ast, 'html', function(node) {
     if (reDGCLink.test(node.value)) {
       file.message(msg, node);
     }
@@ -45,7 +43,7 @@ function wfHTMLDGCLinks(ast, file, setting) {
 
 function wfInternalLinks(ast, file, setting) {
   let msg = 'Do not use internal Google sandboxed links';
-  visit(ast, 'html', function (node) {
+  visit(ast, 'html', function(node) {
     if (reSandboxedLink.test(node.value)) {
       file.message(msg, node);
     }
@@ -54,7 +52,7 @@ function wfInternalLinks(ast, file, setting) {
 
 function wfUnsafeShortLinks(ast, file, setting) {
   let msg = 'Do not use unsafe `HTTP://goo.gl/` links';
-  visit(ast, 'html', function (node) {
+  visit(ast, 'html', function(node) {
     if (reGooGL.test(node.value)) {
       file.message(msg, node);
     }
@@ -63,7 +61,7 @@ function wfUnsafeShortLinks(ast, file, setting) {
 
 function wfForcedLang(ast, file, setting) {
   let msg = 'Hard coded language URL in link (`hl=xx`).';
-  visit(ast, 'html', function (node) {
+  visit(ast, 'html', function(node) {
     let match = reHref.exec(node.value);
     if (match && match[1]) {
       let parsedUrl = url.parse(match[1]);
@@ -74,6 +72,3 @@ function wfForcedLang(ast, file, setting) {
     }
   });
 }
-
-
-

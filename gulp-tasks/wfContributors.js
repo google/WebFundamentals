@@ -13,7 +13,6 @@ var path = require('path');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
 var wfHelper = require('./wfHelper');
-var wfTemplateHelper = require('./wfTemplateHelper');
 var Handlebars = require('handlebars');
 require('handlebars-helpers')();
 
@@ -34,7 +33,9 @@ function getPhotoForContributor(key) {
     if (stat.isFile()) {
       return key;
     }
-  } catch (ex) {}
+  } catch (ex) {
+    // do nothing
+  }
   gutil.log('  ', gutil.colors.red(key), MISSING_AVATAR);
   return 'no-photo';
 }
@@ -82,7 +83,7 @@ function buildIndividualPages(contributors) {
     var title = 'Latest contributions from ' + name.given;
     if (name.family) {
       title += ' ' + name.family;
-    };
+    }
     var context = {
       title,
       articles: filesByAuthor[key],

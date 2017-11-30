@@ -8,11 +8,8 @@
 'use strict';
 
 const fs = require('fs-extra');
-const path = require('path');
 const jsYaml = require('js-yaml');
 const gutil = require('gulp-util');
-const wfHelper = require('./wfHelper');
-const wfTemplateHelper = require('./wfTemplateHelper');
 const Handlebars = require('handlebars');
 require('handlebars-helpers')();
 

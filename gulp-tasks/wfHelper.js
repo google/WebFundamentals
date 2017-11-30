@@ -19,6 +19,7 @@ const exec = require('child_process').exec;
 const STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md'];
 
 if (!String.prototype.endsWith) {
+  // eslint-disable-next-line no-extend-native
   Object.defineProperty(String.prototype, 'endsWith', {
     value: function(searchString, position) {
       var subjectString = this.toString();
@@ -72,7 +73,7 @@ function promisedRSync(src, dest) {
   gutil.log(' ', chalk.blue('rsync'), src, '->', dest);
   return new Promise(function(resolve, reject) {
     if (fs.existsSync(src) === false) {
-      console.log(src, 'doesnt exist');
+      gutil.log(' ', chalk.red(src), 'doesn\'t exist.');
       resolve();
     }
     const rsync = new RSync()
@@ -85,6 +86,7 @@ function promisedRSync(src, dest) {
     rsync.execute(function(error, code, cmd) {
       if (code !== 0) {
         gutil.log(' ', 'Copying', chalk.blue(src), chalk.red('Failed!'));
+        // eslint-disable-next-line no-console
         console.log(error);
         reject(error);
         return;
@@ -178,6 +180,7 @@ function featuredComparator(aObj, bObj) {
 }
 
 function getRegEx(regEx, content, defaultResponse) {
+  // eslint-disable-next-line no-console
   console.log(chalk.red('WARN:'), chalk.cyan('wfHelper.getRegEx'), 'is deprecated');
   var result = content.match(regEx);
   if (result && result[1]) {
@@ -371,7 +374,7 @@ function dateFormatPretty(dt) {
  * @return {string} DD MMM YYYY HH:mm:ss GMT.
  */
 function dateFormatRSS(dt) {
-  return dt.format('DD MMM YYYY HH:mm:ss [GMT]')
+  return dt.format('DD MMM YYYY HH:mm:ss [GMT]');
 }
 
 exports.promisedRSync = promisedRSync;
@@ -387,5 +390,5 @@ exports.splitByAuthor = splitByAuthor;
 exports.dateFormatAtom = dateFormatAtom;
 exports.dateFormatISO = dateFormatISO;
 exports.dateFormatISOShort = dateFormatISOShort;
-exports.dateFormatPretty = dateFormatPretty
+exports.dateFormatPretty = dateFormatPretty;
 exports.dateFormatRSS = dateFormatRSS;

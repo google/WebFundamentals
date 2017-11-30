@@ -25,7 +25,7 @@ global.WF = {
   ],
 };
 var defaultOptions = {
-  string: ['lang', 'verbose', 'testAll', 'testTests', 'testWarnOnly', ],
+  string: ['lang', 'verbose', 'testAll', 'testTests', 'testWarnOnly'],
   default: {
     lang: null,
     verbose: false,
@@ -34,7 +34,7 @@ var defaultOptions = {
     testTests: false,
     testWarnOnly: false
   }
-}
+};
 global.WF.options = minimist(process.argv.slice(2), defaultOptions);
 
 var optionsOK = true;
@@ -115,6 +115,7 @@ gulp.task('presubmit', function(cb) {
 });
 
 gulp.task('default', function(cb) {
+  /* eslint-disable no-console */
   console.log(chalk.red('ERROR:'), 'no command specified.');
   console.log('Usage: gulp <command> [arguments]');
   console.log(' ', 'Commands');
@@ -127,4 +128,5 @@ gulp.task('default', function(cb) {
   console.log('  ', chalk.cyan('--lang'), 'Comma separated list of languages to use', chalk.gray('eg: --lang=en,fr'));
   console.log('  ', chalk.cyan('--verbose'), 'Log with verbose output');
   console.log('');
+  /* eslint-enable no-console */
 });

@@ -218,7 +218,7 @@ function generateTagPages(files, options) {
   var tmpl = path.join(global.WF.src.templates, 'tags', 'tag-index.md');
   var outputFile = path.join(options.outputPath, 'index.md');
   renderTemplate(tmpl, context, outputFile);
-  tmpl = path.join(global.WF.src.templates, 'tags' ,'tag_toc.yaml');
+  tmpl = path.join(global.WF.src.templates, 'tags', 'tag_toc.yaml');
   outputFile = path.join(options.outputPath, '_toc.yaml');
   renderTemplate(tmpl, context, outputFile);
   Object.keys(allTags).forEach(function(key) {

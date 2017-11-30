@@ -37,7 +37,7 @@ gulp.task('build:announcement', function() {
     if (showAnnouncement) {
       projYaml['announcement'] = {
         description: announcementYaml.description,
-      }
+      };
     } else {
       delete projYaml['announcement'];
     }

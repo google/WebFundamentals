@@ -8,6 +8,10 @@
     "es6": true
   },
   "rules": {
-    // Additional, per-project rules...
+    "comma-dangle": "warn",
+    "max-len": "warn",
+    "no-var": "warn",
+    "require-jsdoc": "warn",
+    "valid-jsdoc": "warn"
   }
 }

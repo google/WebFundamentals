@@ -26,7 +26,7 @@ function getCLAATFiles(srcPath) {
     .then(function() {
       let opts = {
         srcBase: srcPath,
-        prefixBase: true
+        prefixBase: true,
       };
       let files = glob.find('**/index.md', opts);
       resolve(files);

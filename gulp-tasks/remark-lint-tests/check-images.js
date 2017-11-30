@@ -16,9 +16,7 @@ module.exports = {
 };
 
 const reRemote = /(https?:)?\/\//i;
-const reImgTag = /<img /i;
 const reImgSrc = /src=['|"](.*?)['|"|>|\s]/i;
-
 
 function doesImageExist(file, imgPath, node) {
   let msgHardCoded = 'Do not hard code `developers.google.com` in paths.';
@@ -46,7 +44,7 @@ function doesImageExist(file, imgPath, node) {
 }
 
 function wfImagesInMD(ast, file, setting) {
-  visit(ast, 'image', function (node) {
+  visit(ast, 'image', function(node) {
     if (node.url && node.url.trim().length > 0) {
       doesImageExist(file, node.url, node);
     }
@@ -54,7 +52,7 @@ function wfImagesInMD(ast, file, setting) {
 }
 
 function wfImagesInHTML(ast, file, setting) {
-  visit(ast, 'html', function (node) {
+  visit(ast, 'html', function(node) {
     let matched = reImgSrc.exec(node.value);
     if (matched && matched[1]) {
       doesImageExist(file, matched[1], node);

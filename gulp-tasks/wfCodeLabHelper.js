@@ -9,7 +9,6 @@
 
 var fs = require('fs');
 var chalk = require('chalk');
-var glob = require('globule');
 var moment = require('moment');
 var gutil = require('gulp-util');
 const path = require('path');
@@ -35,6 +34,7 @@ function updateCodeLab(sourceFile, destFile, bookPath, projPath) {
     authorJSON = JSON.parse(authorJSON);
     authorId = authorJSON.author;
   } catch (ex) {
+    gutil.log(' ', 'Unable to read & parse `author.json`');
   }
   metadata.wfProcessed = true;
   var result = [];
@@ -107,7 +107,7 @@ function updateCodeLab(sourceFile, destFile, bookPath, projPath) {
   markdown = markdown.replace(/^\*Duration is \d+ min\*\n/gm, '');
 
   // Make any links to d.g.c absolute, but not fully qualified
-  markdown = markdown.replace(/\(https:\/\/developers.google.com\//g, '(\/');
+  markdown = markdown.replace(/\(https:\/\/developers.google.com\//g, '(/');
   markdown = markdown.replace(/href="https:\/\/developers.google.com\//g, 'href="/');
 
   // Change any empty markdown links to simply [Link](url)

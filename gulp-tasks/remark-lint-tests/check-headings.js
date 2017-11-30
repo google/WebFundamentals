@@ -6,9 +6,8 @@
 
 'use strict';
 
-const wfRegEx = require('../wfRegEx');
 const visit = require('unist-util-visit');
-var toString = require('mdast-util-to-string');
+const toString = require('mdast-util-to-string');
 
 module.exports = {
   'wf-headings-tldr': wfTLDR,
@@ -17,9 +16,6 @@ module.exports = {
   'wf-headings-no-markup-in-title': wfNoMarkupInTitle,
 };
 
-const reEntity = /&\w*?;/;
-const reHTML = /</;
-const reMD = /`/;
 const reTLDR = /tl;dr/i;
 const reHeading = /^<h\d>.*?<\/h\d>$/i;
 const reHideFromTOC = /.hide-from-toc/;
@@ -27,7 +23,7 @@ const validHeadingTypes = ['text', 'linkReference'];
 
 function wfHeadingsInMarkdown(ast, file, setting) {
   let msg = 'Headings must use markdown style, HTML is not permitted.';
-  visit(ast, 'html', function (node) {
+  visit(ast, 'html', function(node) {
     if (reHeading.test(node.value)) {
       file.message(msg, node);
     }
@@ -50,7 +46,7 @@ function wfNoMarkupInTitle(ast, file, setting) {
     }
     node.children.forEach((child) => {
       if (validHeadingTypes.indexOf(child.type) === -1) {
-        let msg = 'Top level headings must only contain text.'
+        let msg = 'Top level headings must only contain text.';
         file.message(`${msg} Contained: ${child.type}`, node);
       }
     });
