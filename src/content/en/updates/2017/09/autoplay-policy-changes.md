@@ -99,6 +99,9 @@ When the feature policy for autoplay is disabled, calls to `play()` without a
 user gesture will reject the promise with a `NotAllowedError` DOMException. And
 the autoplay attribute will also be ignored.
 
+Note: You can try out this feature policy by enabling the experimental flag
+`chrome://flags/#enable-feature-policy-autoplay-feature`.
+
 ### Example scenarios
 
 <b>Example 1:</b> Every time a user visits <i>VideoSubscriptionSite.com</i> on their
