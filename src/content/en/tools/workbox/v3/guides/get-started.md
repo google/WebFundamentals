@@ -66,7 +66,7 @@ service worker.
 
 Change your service worker so that it has the following `importScripts()` call.
 
-```javascript
+<pre class="prettyprint js">
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 if (workbox) {
@@ -74,7 +74,7 @@ if (workbox) {
 } else {
   console.log(`Boo! Workbox didn't load 😬`);
 }
-```
+</pre>
 
 With this you should see the “Yay” message so we know that Workbox is
 officially loaded in our service worker.

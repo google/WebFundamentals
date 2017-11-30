@@ -25,9 +25,9 @@ on your own server.
 The easiest way to start using this module is via the CDN. You just need to
 add the following to your service worker:
 
-```javascript
+<pre class="prettyprint js">
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
-```
+</pre>
 
 With this you’ll have the `workbox` namespace in your service worker that will
 provide access to all of the Workbox modules.
