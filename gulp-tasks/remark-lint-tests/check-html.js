@@ -14,15 +14,23 @@ module.exports = {
   'wf-html-dgc-links': wfHTMLDGCLinks,
   'wf-html-internal-links': wfInternalLinks,
   'wf-html-link-forced-lang': wfForcedLang,
-  'wf-html-unsafe-short-links': wfUnsafeShortLinks
+  'wf-html-unsafe-short-links': wfUnsafeShortLinks,
 };
 
+// eslint-disable-next-line max-len
 const reYouTube = /^<iframe\s.*?src=['|"]https?:\/\/(www.)?youtube.com\/.*?['|"| ].*>[.\s\n\r]*?<\/iframe>$/i;
 const reDGCLink = /^<a\s.*?href=['|"]?(https?:)?\/\/developers.google.com/i;
 const reSandboxedLink = /^<a\s.*?href=['|"]?(https?:)?\/\/sandbox.google.com/i;
 const reGooGL = /^<a\s.*?href=['|"]?http:\/\/goo\.gl\//i;
 const reHref = /^<a\s.*href=['|"](.*)['|"]>/i;
 
+/**
+ * Remark Lint Test - flags iframes that embed YouTube content.
+ *
+ * @param {Object} ast
+ * @param {Object} file
+ * @param {Object} setting
+ */
 function wfYouTube(ast, file, setting) {
   let msg = 'YouTube videos must use DevSite embed.';
   visit(ast, 'html', function(node) {
@@ -32,6 +40,13 @@ function wfYouTube(ast, file, setting) {
   });
 }
 
+/**
+ * Remark Lint Test - flags hard coded developers.google.com links.
+ *
+ * @param {Object} ast
+ * @param {Object} file
+ * @param {Object} setting
+ */
 function wfHTMLDGCLinks(ast, file, setting) {
   let msg = 'Do not hard code `developers.google.com` in links.';
   visit(ast, 'html', function(node) {
@@ -41,6 +56,13 @@ function wfHTMLDGCLinks(ast, file, setting) {
   });
 }
 
+/**
+ * Remark Lint Test - flags *.sandbox.google.com links.
+ *
+ * @param {Object} ast
+ * @param {Object} file
+ * @param {Object} setting
+ */
 function wfInternalLinks(ast, file, setting) {
   let msg = 'Do not use internal Google sandboxed links';
   visit(ast, 'html', function(node) {
@@ -50,6 +72,13 @@ function wfInternalLinks(ast, file, setting) {
   });
 }
 
+/**
+ * Remark Lint Test - flags unsafe goo.gl short links.
+ *
+ * @param {Object} ast
+ * @param {Object} file
+ * @param {Object} setting
+ */
 function wfUnsafeShortLinks(ast, file, setting) {
   let msg = 'Do not use unsafe `HTTP://goo.gl/` links';
   visit(ast, 'html', function(node) {
@@ -59,6 +88,13 @@ function wfUnsafeShortLinks(ast, file, setting) {
   });
 }
 
+/**
+ * Remark Lint Test - flags hard coded language links (hl=xx).
+ *
+ * @param {Object} ast
+ * @param {Object} file
+ * @param {Object} setting
+ */
 function wfForcedLang(ast, file, setting) {
   let msg = 'Hard coded language URL in link (`hl=xx`).';
   visit(ast, 'html', function(node) {
