@@ -900,6 +900,17 @@ petelepage:
   lanyrd: petele
   description:
     en: Pete is a Developer Advocate
+ 
+kennith:
+  name:
+    given: Kennith
+    family: Leung
+  homepage: http://kennithleung.com
+  twitter: kennith
+  google: +kennith
+  email: kennith.leung@gmail.com
+  role: 
+    - translator
 
 paullewis:
   name:

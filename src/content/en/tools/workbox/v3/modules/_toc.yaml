@@ -22,8 +22,8 @@ toc:
   path: /web/tools/workbox/v3/modules/workbox-google-analytics
 - title: workbox.cacheableResponse
   path: /web/tools/workbox/v3/modules/workbox-cacheable-response
-# - title: workbox.broadcastUpdate
-#  path: /web/tools/workbox/v3/modules/workbox-broadcast-cache-update
+- title: workbox.broadcastUpdate
+  path: /web/tools/workbox/v3/modules/workbox-broadcast-cache-update
 
 - heading: Node Modules
 - title: Workbox CLI

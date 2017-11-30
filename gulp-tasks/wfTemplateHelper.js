@@ -42,7 +42,7 @@ function renderTemplate(templateFile, context, outputFile) {
 function getFullFeedEntries(articles) {
   var yamlCont = fs.readFileSync('./src/data/_contributors.yaml', 'utf8');
   var contributors = jsYaml.safeLoad(yamlCont);
-  articles = articles.slice(0, GLOBAL.WF.maxArticlesInFeed);
+  articles = articles.slice(0, global.WF.maxArticlesInFeed);
   articles.forEach(function(article) {
     var content = fs.readFileSync(article.filePath, 'utf8');
     content = content.replace(/{#.*#}/g, '');
@@ -95,11 +95,11 @@ function generateFeeds(files, options) {
   context.rssPubDate = wfHelper.dateFormatRSS(files[0].dateUpdatedMoment);
   context.atomPubDate = wfHelper.dateFormatAtom(files[0].dateUpdatedMoment);
 
-  var template = path.join(GLOBAL.WF.src.templates, 'atom.xml');
+  var template = path.join(global.WF.src.templates, 'atom.xml');
   var outputFile = path.join(options.outputPath, 'atom.xml');
   renderTemplate(template, context, outputFile);
 
-  template = path.join(GLOBAL.WF.src.templates, 'rss.xml');
+  template = path.join(global.WF.src.templates, 'rss.xml');
   outputFile = path.join(options.outputPath, 'rss.xml');
   renderTemplate(template, context, outputFile);
 }
@@ -123,7 +123,7 @@ function generatePodcastFeed(files, options) {
   // generated every single time. This will only generate if the feeds are
   // actually updated.
   context.rssPubDate = wfHelper.dateFormatRSS(files[0].dateUpdatedMoment);
-  var template = path.join(GLOBAL.WF.src.templates, 'shows', 'podcast.xml');
+  var template = path.join(global.WF.src.templates, 'shows', 'podcast.xml');
   var outputFile = path.join(options.outputPath, 'feed.xml');
   renderTemplate(template, context, outputFile);
 }
@@ -134,7 +134,7 @@ function _generateListPage(files, options) {
     section: options.section,
     articles: files
   };
-  var template = path.join(GLOBAL.WF.src.templates, 'article-list.md');
+  var template = path.join(global.WF.src.templates, 'article-list.md');
   if (options.template) {
     template = options.template;
   }
@@ -158,7 +158,7 @@ function generateTOCbyMonth(files, options) {
     section: options.section,
     months: wfHelper.splitByMonth(files).reverse()
   };
-  var template = path.join(GLOBAL.WF.src.templates, 'toc-month.yaml');
+  var template = path.join(global.WF.src.templates, 'toc-month.yaml');
   var outputFile = path.join(options.outputPath, '_toc.yaml');
   renderTemplate(template, context, outputFile);
 }
@@ -173,7 +173,7 @@ function generateIndex(files, options) {
   if (options.title) {
     context.title = options.title;
   }
-  var template = path.join(GLOBAL.WF.src.templates, 'index.yaml');
+  var template = path.join(global.WF.src.templates, 'index.yaml');
   if (options.template) {
     template = options.template;
   }
@@ -189,7 +189,7 @@ function generateLatestWidget(files, options) {
   var context = {
     articles: files.splice(0, options.articlesToShow)
   };
-  var template = path.join(GLOBAL.WF.src.templates, 'latest_articles.html');
+  var template = path.join(global.WF.src.templates, 'latest_articles.html');
   var outputFile = path.join(options.outputPath, '_shared', 'latest_articles.html');
   renderTemplate(template, context, outputFile);
 }
@@ -215,10 +215,10 @@ function generateTagPages(files, options) {
     tags: Object.keys(allTags).sort(),
     section: options.section
   };
-  var tmpl = path.join(GLOBAL.WF.src.templates, 'tags', 'tag-index.md');
+  var tmpl = path.join(global.WF.src.templates, 'tags', 'tag-index.md');
   var outputFile = path.join(options.outputPath, 'index.md');
   renderTemplate(tmpl, context, outputFile);
-  tmpl = path.join(GLOBAL.WF.src.templates, 'tags' ,'tag_toc.yaml');
+  tmpl = path.join(global.WF.src.templates, 'tags' ,'tag_toc.yaml');
   outputFile = path.join(options.outputPath, '_toc.yaml');
   renderTemplate(tmpl, context, outputFile);
   Object.keys(allTags).forEach(function(key) {

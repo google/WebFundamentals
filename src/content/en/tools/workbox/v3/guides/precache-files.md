@@ -175,14 +175,14 @@ webpack.
 
 Start by install the cli:
 
-```
+<pre class="devsite-terminal">
 npm install workbox-cli -g
-```
+</pre>
 
 You should be able to run the command `workbox --help` after it's installed.
 
-```
-$ workbox --help
+<pre class="devsite-terminal">
+workbox --help
 
   workbox-cli is the command line interface for Workbox.
 
@@ -190,7 +190,7 @@ $ workbox --help
   $ workbox <command> [options]
 
   ...
-```
+</pre>
 
 The next to set up precaching it run the wizard which will ask a set of
 questions about your project to determine which files should be precached.
@@ -225,11 +225,11 @@ to `dist/sw.js`.
 When the inject manifest command is run, it'll print up some stats on the
 number of files and the total size.
 
-```
-$ workbox injectManifest workbox-config.js
+<pre class="devsite-terminal">
+workbox injectManifest workbox-config.js
 The service worker was written to dist/sw.js
 11 files will be precached, totalling 43.5 kB.
-```
+</pre>
 
 Run the `workbox injectManifest` command before you deploy your site to ensure
 the precache list is up to date.
@@ -244,9 +244,9 @@ for your project (i.e. you are using a tool like [Gulp](https://gulpjs.com/)).
 
 To install the module just run:
 
-```
+<pre class="devsite-terminal">
 npm install workbox-build --save-dev
-```
+</pre>
 
 Then in your build process you'll want to `require` in the module and
 use the

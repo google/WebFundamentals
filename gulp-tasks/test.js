@@ -155,7 +155,7 @@ function logMessage(level, filename, position, message, extra) {
     gutil.log(chalk.yellow('WARNING:'), fileLoc, message);
     allWarnings.push(logMsg);
   }
-  if (GLOBAL.WF.options.verbose && extra) {
+  if (global.WF.options.verbose && extra) {
     console.log(extra);
   }
   filesWithIssues[filename] = true;
@@ -170,7 +170,7 @@ function logMessage(level, filename, position, message, extra) {
  * @param {Object} extra Any extra information to show
  */
 function logError(filename, position, message, extra) {
-  if (GLOBAL.WF.options.testWarnOnly) {
+  if (global.WF.options.testWarnOnly) {
     logWarning(filename, position, message, extra);
     return;
   }
@@ -218,7 +218,7 @@ function printSummary() {
  * Throws an exception if there are any test failures.
  */
 function throwIfFailed() {
-  if (allErrors.length >= 1 && !GLOBAL.WF.options.testWarnOnly) {
+  if (allErrors.length >= 1 && !global.WF.options.testWarnOnly) {
     let errorMessage = `There were ${allErrors.length} errors.`;
     throw new Error(errorMessage);
   }
@@ -332,20 +332,20 @@ function parseYAML(filename, contents) {
  * @return {Promise} The list of files
  */
 function getFiles() {
-  if (GLOBAL.WF.options.testPath || GLOBAL.WF.options.testAll) {
+  if (global.WF.options.testPath || global.WF.options.testAll) {
     return new Promise(function(resolve, reject) {
       let globs = [];
       let opts = {
         prefixBase: true,
         filter: 'isFile'
       };
-      if (GLOBAL.WF.options.testPath) {
-        gutil.log(' ', 'Searching for files in', chalk.cyan(GLOBAL.WF.options.testPath));
-        opts.srcBase = GLOBAL.WF.options.testPath;
+      if (global.WF.options.testPath) {
+        gutil.log(' ', 'Searching for files in', chalk.cyan(global.WF.options.testPath));
+        opts.srcBase = global.WF.options.testPath;
         globs.push('**/*');
       } else {
         opts.srcBase = './src/content';
-        GLOBAL.WF.options.lang.forEach(function(lang) {
+        global.WF.options.lang.forEach(function(lang) {
           gutil.log(' ', 'Searching for files in', chalk.cyan(`${opts.srcBase}/${lang}`));
           globs.push(`${lang}/**/*`);
         });
@@ -1174,7 +1174,7 @@ function testFile(filename, opts) {
 
     // Check if the file is an extension we skip
     if (EXTENSIONS_TO_SKIP.indexOf(filenameObj.ext) >= 0) {
-      if (GLOBAL.WF.options.verbose) {
+      if (global.WF.options.verbose) {
         msg = 'Skipped (extension).';
         gutil.log(chalk.gray('SKIP:'), chalk.cyan(filename), msg);
       }
@@ -1224,7 +1224,7 @@ function testFile(filename, opts) {
 
     // Check if the file is auto-generated, if it is, ignore it
     if (wfRegEx.RE_AUTO_GENERATED.test(contents)) {
-      if (GLOBAL.WF.options.verbose) {
+      if (global.WF.options.verbose) {
         msg = 'Skipped (auto-generated).';
         gutil.log(chalk.gray('SKIP:'), chalk.cyan(filename), msg);
       }
@@ -1232,7 +1232,7 @@ function testFile(filename, opts) {
       return;
     }
 
-    if (GLOBAL.WF.options.verbose) {
+    if (global.WF.options.verbose) {
       gutil.log('TEST:', chalk.cyan(filename));
     }
 
@@ -1313,16 +1313,16 @@ gulp.task('test:travis-init', function() {
     const body = prData.body;
     const ciFlags = wfRegEx.getMatch(/\[WF_IGNORE:(.*)\]/, body, '').split(',');
     if (ciFlags.indexOf('BLINK') >= 0) {
-      GLOBAL.WF.options.ignoreBlink = true;
+      global.WF.options.ignoreBlink = true;
     }
     if (ciFlags.indexOf('MAX_LEN') >= 0) {
-      GLOBAL.WF.options.ignoreMaxLen = true;
+      global.WF.options.ignoreMaxLen = true;
     }
     if (ciFlags.indexOf('SCRIPT') >= 0) {
-      GLOBAL.WF.options.ignoreScript = true;
+      global.WF.options.ignoreScript = true;
     }
     if (ciFlags.indexOf('FILE_SIZE') >= 0) {
-      GLOBAL.WF.options.ignoreFileSize = true;
+      global.WF.options.ignoreFileSize = true;
     }
   })
 });
@@ -1333,7 +1333,7 @@ gulp.task('test:travis-init', function() {
 
 gulp.task('test', ['test:travis-init'], function() {
   if (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MASTER) {
-    GLOBAL.WF.options.testAll = true;
+    global.WF.options.testAll = true;
   }
   let opts = {
     enforceLineLengths: true,
@@ -1344,7 +1344,7 @@ gulp.task('test', ['test:travis-init'], function() {
   }
 
   // Supress wf_blink_components warnings
-  if (GLOBAL.WF.options.ignoreBlink) {
+  if (global.WF.options.ignoreBlink) {
     let msg = `${chalk.yellow('wf_blink_components')} check was skipped`;
     logWarning('gulp-tasks/test.js', null, msg);
   } else {
@@ -1352,34 +1352,34 @@ gulp.task('test', ['test:travis-init'], function() {
   }
 
   // Supress max line length warnings
-  if (GLOBAL.WF.options.ignoreMaxLen) {
+  if (global.WF.options.ignoreMaxLen) {
     let msg = `${chalk.yellow('max line length')} check was skipped`;
     logWarning('gulp-tasks/test.js', null, msg);
     opts.enforceLineLengths = false;
   }
 
   // Supress markdown script warnings
-  if (GLOBAL.WF.options.ignoreScript) {
+  if (global.WF.options.ignoreScript) {
     let msg = `${chalk.yellow('<script> tag')} check was skipped`;
     logWarning('gulp-tasks/test.js', null, msg);
     opts.ignoreScriptTags = true;
   }
 
   // Supress file size warnings
-  if (GLOBAL.WF.options.ignoreFileSize) {
+  if (global.WF.options.ignoreFileSize) {
     let msg = `${chalk.yellow('file size')} check was skipped`;
     logWarning('gulp-tasks/test.js', null, msg);
     opts.ignoreFileSize = true;
   }
 
   // Test the test files
-  if (GLOBAL.WF.options.testTests) {
-    GLOBAL.WF.options.testPath = './src/tests';
+  if (global.WF.options.testTests) {
+    global.WF.options.testPath = './src/tests';
     opts.lastUpdateMaxDays = false;
   }
 
   // Test all files
-  if (GLOBAL.WF.options.testAll) {
+  if (global.WF.options.testAll) {
     opts.enforceLineLengths = false;
     opts.lastUpdateMaxDays = false;
   }

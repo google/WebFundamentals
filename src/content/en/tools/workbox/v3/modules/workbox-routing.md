@@ -53,7 +53,7 @@ A match function will be given a `FetchEvent` and a URL object and you can
 match against a request by returning a truthy value. For a simple example,
 you could match against a specific URL like so:
 
-```javascript
+```js
 const matchCb = ({url, event}) => {
   return (url.pathname === '/special/url');
 };
@@ -66,7 +66,7 @@ A "handler" will be given the url and event as well and you can determine how
 to respond, whether it’s from the network, from the cache or generated in the
 service worker.
 
-```javascript
+```js
 const handlerCb = ({url, event, params}) => {
   return fetch(event.request)
   .then((response) => {
@@ -76,7 +76,6 @@ const handlerCb = ({url, event, params}) => {
     return new Response(`${responseBody} <!-- Look Ma. Added Content. -->`);
   });
 };
-
 ```
 
 Your handler must return a Promise that resolves to a Response. The `params`
@@ -86,7 +85,7 @@ the “handler” for a matching request.
 
 You can register these callbacks via like so:
 
-```javascript
+```js
 workbox.routing.registerRoute(matchCb, handlerCb);
 ```
 
@@ -103,8 +102,11 @@ generated in the service worker.
 Normally the "handler" callback would use one of the strategies provided
 by [workbox-strategies](./workbox-strategies) like so:
 
-```javascript
-workbox.routing.registerRoute(matchCb, workbox.strategies.staleWhileRevalidate());
+```js
+workbox.routing.registerRoute(
+  matchCb,
+  workbox.strategies.staleWhileRevalidate()
+);
 ```
 
 In this page we’ll focus on `workbox-routing` but you can
@@ -115,8 +117,11 @@ In this page we’ll focus on `workbox-routing` but you can
 A common practice is to use a regular expression instead of a "match" callback.
 Workbox makes this easy to implement like so:
 
-```javascript
-workbox.routing.registerRoute(new RegExp('/styles/.*\.css'), handlerCb);
+```js
+workbox.routing.registerRoute(
+  new RegExp('/styles/.*\.css'),
+  handlerCb
+);
 ```
 
 For requests from the
