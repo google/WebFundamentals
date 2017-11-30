@@ -21,7 +21,7 @@ Translated by
 - `/deep/` 组合者(combinator)将会成为后代选择器。 `x-foo /deep/ div` 将会当成 `x-foo div`.
 - `::shadow` 伪元素(pseudo-element)将不会匹配任何元素。
 
-注：如果你的網頁使用Polymer, Polymer團隊已發布了一個[如何讓你迁移](https://www.polymer-project.org/blog/2017-10-18-upcoming-changes.html) `::shadow` 和 `/deep/`的文章。
+Note: 如果你的網頁使用Polymer, Polymer團隊已發布了一個[如何讓你迁移](https://www.polymer-project.org/blog/2017-10-18-upcoming-changes.html) `::shadow` 和 `/deep/`的文章。
 
 ## 决定删除::shadow 和 /deep/ 的原因
 
