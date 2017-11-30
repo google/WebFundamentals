@@ -16,10 +16,21 @@ const path = require('path');
  * @param {String} docPath Path where the JSDocs for a tag should be written to.
  */
 const filterTagsToBuild = (tags, docPath) => {
-  return tags.filter((tag) => {
-    const outputPath = path.join(docPath, tag);
-    return !fs.pathExistsSync(outputPath);
-  });
+  const tagsToBuild = [];
+  return tags.reduce((promiseChain, tag) => {
+    return promiseChain
+    .then(() => {
+      const outputPath = path.join(docPath, tag);
+      console.log(outputPath);
+      return fs.pathExists(outputPath);
+    })
+    .then((exists) => {
+      if (!exists) {
+        tagsToBuild.push(tag);
+      }
+    });
+  }, Promise.resolve())
+  .then(() => tagsToBuild);
 };
 
 module.exports = filterTagsToBuild;
