@@ -39,7 +39,6 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
   });
 }
-&lt;/script&gt;
 </pre>
 
 This tell's the browser this is the service worker to use for site.
