@@ -101,13 +101,13 @@ in your Workbox Google Analytics code.
     and the parameter name would be `cd1` (if the index were 8 it would be
     `cd8`):
 
-    ```js
+    <pre class="prettyprint js">
     workbox.googleAnalytics.initialize({
       parameterOverrides: {
         cd1: 'offline',
       },
     });
-    ```
+    </pre>
 
 1. *(Optional)* Since values in `parameterOverrides` are only applied
 to retried ("offline") requests, you may also want to set a default value
@@ -155,11 +155,11 @@ param and divide it by 1000 (to convert it to seconds). Then set that value
 as a param with the index of the newly created metric. If this is your
 first custom metric, the parameter name would be "cm1":
 
-    ```js
+    <pre class="prettyprint js">
     workbox.googleAnalytics.initialize({
       hitFilter: (params) => {
         const queueTimeInSeconds = Math.round(params.get('qt') / 1000);
         params.set('cm1', queueTimeInSeconds);
       },
     });
-    ```
+    </pre>
