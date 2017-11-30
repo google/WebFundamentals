@@ -1,7 +1,7 @@
 toc:
 
 - title: "Overview"
-  path: /web/tools/workbox/v3/reference-docs/
+  path: /web/tools/workbox/v3/reference-docs/latest/index
 
 - heading: Service Worker Libraries
 - title: "workbox"
