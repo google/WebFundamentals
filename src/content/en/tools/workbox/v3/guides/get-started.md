@@ -94,7 +94,10 @@ is to register a route with Workbox that will match any “.js” files that are
 requested, which we can do with a regular expression:
 
 ```javascript
-workbox.routing.registerRoute(new RegExp('.*\.js'), … );
+workbox.routing.registerRoute(
+  new RegExp('.*\.js'),
+  …
+);
 ```
 
 This tells Workbox that when a request is made, it should see if the regular
@@ -107,7 +110,10 @@ but fallback to the cached version if the network fails, we can use the
 “network first” strategy to achieve this.
 
 ```javascript
-workbox.routing.registerRoute(new RegExp('.*\.js'), workbox.strategies.networkFirst());
+workbox.routing.registerRoute(
+  new RegExp('.*\.js'),
+  workbox.strategies.networkFirst()
+);
 ```
 
 Add this code to your service worker and refresh the page. If your web page
