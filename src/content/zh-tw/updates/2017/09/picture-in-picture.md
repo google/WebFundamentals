@@ -13,9 +13,6 @@ description: 讓我們來討論如何使用一個Web API以在桌面創建一個
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-Translated by
-{% include "web/_shared/contributors/henrylim.html" %}
-
 自2017年4月起，[Android O的Chrome支持畫中畫](https://developer.android.com/about/versions/oreo/android-8.0.html#opip)。這功能可讓用戶在同個時間，在悬浮窗中的`<video>`元素播放視頻，一邊做其他的事情。
 
 要如何使用畫中畫呢？首先開啟Chrome, 然後開啟一個擁有視頻的網頁嗎，然後將那個視頻在全屏中播放。然後按主頁按鈕以回到Android的主頁，你將會發現正在播放著的視頻將會自動地進入畫中畫模式。是不是很酷呢？
@@ -67,7 +64,7 @@ Translated by
 </script>
 ```
 
-注意: 目前沒有任何的游覽器可以運行以上的代碼。
+Note: 目前沒有任何的游覽器可以運行以上的代碼。
 
 ## 反馈
 
@@ -96,5 +93,9 @@ window.addEventListener('resize', function() {
   }
 });
 ```
+
+Translated by
+{% include "web/_shared/contributors/henrylim.html" %}
+
 
 {% include "comment-widget.html" %}
