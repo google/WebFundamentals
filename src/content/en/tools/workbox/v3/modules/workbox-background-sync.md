@@ -5,7 +5,7 @@ description: The module guide for workbox-background-sync.
 {# wf_updated_on: 2017-11-27 #}
 {# wf_published_on: 2017-11-27 #}
 
-# Workbox Background Sync  {: .page-title }
+# Workbox Background Sync {: .page-title }
 
 ## What is Workbox Background Sync?
 
