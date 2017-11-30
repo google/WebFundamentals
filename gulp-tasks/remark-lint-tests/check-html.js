@@ -1,6 +1,9 @@
 /**
  * @fileoverview Remark linter to check links in HTML docs
  *
+ * @see check-html.js - these are essentially the same, this is for checking
+ *   html links, while check-links.js is for markdown links.
+ *
  * @author Pete LePage <petele@google.com>
  */
 
