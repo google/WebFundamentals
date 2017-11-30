@@ -73,7 +73,7 @@ additional caches for specific uses, like a cache just for images.
 
 In other parts of the Workbox API’s there will in an option to supply a
 `cacheName` property as an option. For example, the
-[runtime strategies](/web/tools/workbox/modules/workbox-runtime-caching)
+[runtime strategies](/web/tools/workbox/modules/workbox-strategies)
 accepts a `cacheName` option. In these cases, the cache name will be used
 exactly as you define, the prefix and suffix **will not be used**.
 

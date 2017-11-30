@@ -38,7 +38,7 @@ workbox.routing.registerRoute(
 ```
 
 With this, the
-[CacheExpirationPlugin](../reference-docs/latest/workbox.expiration.CacheExpirationPlugin)
+[CacheExpirationPlugin](../next/reference-docs/latest/workbox.expiration.CacheExpirationPlugin)
 will be added to this route. After a cached response is used or a new request
 is added to the cache the plugin will look at the configured cache and ensure
 that the number of cached entries doesn’t exceed the limit. If it does,
@@ -102,7 +102,7 @@ workbox.routing.registerRoute(
 
 If you’d like to use the expiration logic separate from any other Workbox
 modules you can do so with the
-[CacheExpiration](../reference-docs/latest/workbox.expiration.CacheExpiration)
+[CacheExpiration](../next/reference-docs/latest/workbox.expiration.CacheExpiration)
 class.
 
 To apply restrictions to a cache, you’d create an instance of `CacheExpiration`

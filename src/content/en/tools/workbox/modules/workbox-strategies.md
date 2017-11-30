@@ -149,7 +149,7 @@ asset is cached and / or restrict the number of entries that are cached.
 
 To do this, you can define some `cacheExpiration` options and Workbox will
 create and add a
-[CacheExpirationPlugin](../reference-docs/latest/workbox.expiration.CacheExpirationPlugin)
+[CacheExpirationPlugin](../next/reference-docs/latest/workbox.expiration.CacheExpirationPlugin)
 to the strategy.
 
 ```javascript
@@ -213,4 +213,4 @@ self.addEventListener('fetch', (event) => {
 ```
 
 You can find the list of available classes in the
-[workbox-strategies reference docs](../reference-docs/latest/workbox.strategies).
+[workbox-strategies reference docs](../next/reference-docs/latest/workbox.strategies).

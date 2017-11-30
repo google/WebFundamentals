@@ -18,7 +18,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-sw
         - label: Reference
-          path: ../reference-docs/latest/workbox
+          path: ../next/reference-docs/latest/workbox
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-sw/
 
@@ -30,7 +30,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-core
         - label: Reference
-          path: ../reference-docs/latest/workbox.core
+          path: ../next/reference-docs/latest/workbox.core
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-core/
 
@@ -42,7 +42,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-precaching
         - label: Reference
-          path: ../reference-docs/latest/workbox.precaching
+          path: ../next/reference-docs/latest/workbox.precaching
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-precaching/
 
@@ -54,7 +54,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-routing
         - label: Reference
-          path: ../reference-docs/latest/workbox.routing
+          path: ../next/reference-docs/latest/workbox.routing
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-routing/
 
@@ -67,7 +67,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-strategies
         - label: Reference
-          path: ../reference-docs/latest/workbox.strategies
+          path: ../next/reference-docs/latest/workbox.strategies
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-strategies/
 
@@ -79,7 +79,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-cache-expiration
         - label: Reference
-          path: ../reference-docs/latest/workbox.expiration
+          path: ../next/reference-docs/latest/workbox.expiration
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
 
@@ -91,7 +91,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-background-sync
         - label: Reference
-          path: ../reference-docs/latest/workbox.backgroundSync
+          path: ../next/reference-docs/latest/workbox.backgroundSync
         # - label: Demo
         #   path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
 
@@ -102,7 +102,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-google-analytics
         - label: Reference
-          path: ../reference-docs/latest/workbox.googleAnalytics
+          path: ../next/reference-docs/latest/workbox.googleAnalytics
         # - label: Demo
         #   path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
 
@@ -115,7 +115,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-cacheable-response
         # - label: Reference
-        #   path: ../reference-docs/latest/workbox.cacheableResponse
+        #   path: ../next/reference-docs/latest/workbox.cacheableResponse
         # - label: Demo
         #   path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
 
@@ -127,7 +127,7 @@ landing_page:
         # - label: Learn more
         #   path: ./workbox-broadcast-cache-update
         # - label: Reference
-        #   path: ../reference-docs/latest/workbox.broadcastUpdate
+        #   path: ../next/reference-docs/latest/workbox.broadcastUpdate
         # - label: Demo
         #   path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
 
@@ -153,7 +153,7 @@ landing_page:
         # - label: Learn more
         #   path: ./workbox-build
         - label: Reference
-          path: ../reference-docs/latest/module-workbox-build
+          path: ../next/reference-docs/latest/module-workbox-build
 
       - heading: workbox-webpack-plugin
         description: >
@@ -163,7 +163,7 @@ landing_page:
         # - label: Learn more
         #  path: ./workbox-webpack-plugin
         - label: Reference
-          path: ../reference-docs/latest/module-workbox-webpack-plugin
+          path: ../next/reference-docs/latest/module-workbox-webpack-plugin
 
       # Force Devsite 4-up layout
       - heading: ""
