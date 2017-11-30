@@ -6,16 +6,19 @@
 
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var marked = require('marked');
-var mkdirp = require('mkdirp');
-var jsYaml = require('js-yaml');
-var gutil = require('gulp-util');
-var wfRegEx = require('./wfRegEx');
+const fs = require('fs');
+const path = require('path');
+const marked = require('marked');
+const mkdirp = require('mkdirp');
+const jsYaml = require('js-yaml');
+const gutil = require('gulp-util');
+const wfRegEx = require('./wfRegEx');
 const wfHelper = require('./wfHelper');
-var Handlebars = require('handlebars');
+const Handlebars = require('handlebars');
 require('handlebars-helpers')();
+
+// eslint-disable-next-line max-len
+const ANALYTICS_QS = '?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=root_feed';
 
 Handlebars.registerHelper('formatDateAtom', function(dt) {
   return wfHelper.dateFormatAtom(dt);
@@ -30,21 +33,33 @@ Handlebars.registerHelper('formatDateRSS', function(dt) {
   return wfHelper.dateFormatRSS(dt);
 });
 
-// Renders a template using handlebases
+/**
+ * Renders a template
+ *
+ * @param {string} templateFile The path to the template.
+ * @param {Object} context The data to render into the template.
+ * @param {string} outputFile The path to the rendered file.
+ */
 function renderTemplate(templateFile, context, outputFile) {
-  var ts = fs.readFileSync(templateFile, 'utf8');
-  var template = Handlebars.compile(ts);
-  var result = template(context);
+  const ts = fs.readFileSync(templateFile, 'utf8');
+  const template = Handlebars.compile(ts);
+  const result = template(context);
   mkdirp.sync(path.dirname(outputFile));
   fs.writeFileSync(outputFile, result);
 }
 
+/**
+ * Gets the full article to use in feeds
+ *
+ * @param {Array} articles List of files to get content.
+ * @return {Array} list of articles
+ */
 function getFullFeedEntries(articles) {
-  var yamlCont = fs.readFileSync('./src/data/_contributors.yaml', 'utf8');
-  var contributors = jsYaml.safeLoad(yamlCont);
+  let yamlCont = fs.readFileSync('./src/data/_contributors.yaml', 'utf8');
+  let contributors = jsYaml.safeLoad(yamlCont);
   articles = articles.slice(0, global.WF.maxArticlesInFeed);
   articles.forEach(function(article) {
-    var content = fs.readFileSync(article.filePath, 'utf8');
+    let content = fs.readFileSync(article.filePath, 'utf8');
     content = content.replace(/{#.*#}/g, '');
     content = content.replace(/{%.*%}/g, '');
     content = content.replace(wfRegEx.RE_BOOK_PATH, '');
@@ -53,9 +68,9 @@ function getFullFeedEntries(articles) {
     content = content.replace(/{:.*}/g, '');
     article.content = marked(content);
     if (article.authors && article.authors[0]) {
-      var author = contributors[article.authors[0]];
+      let author = contributors[article.authors[0]];
       if (author) {
-        var authorName = '';
+        let authorName = '';
         if (author.name.given) {
           authorName += author.name.given + ' ';
         }
@@ -72,22 +87,29 @@ function getFullFeedEntries(articles) {
   return articles;
 }
 
+/**
+ * Generate the RSS & ATOM feeds for a list of files
+ *
+ * @param {Array} files List of files to generate feed items for
+ * @param {Object} options Options used to generate the feed
+ */
 function generateFeeds(files, options) {
   gutil.log(' ', 'Generating RSS and ATOM feeds...');
-  var context = {
+  let context = {
     title: options.title,
     description: options.description,
     articles: getFullFeedEntries(files),
     host: 'https://developers.google.com',
     baseUrl: 'https://developers.google.com/web/',
-    analyticsQS: '?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=root_feed'
+    analyticsQS: ANALYTICS_QS,
   };
   if (options.baseUrl) {
     context.baseUrl = options.baseUrl;
   }
   if (options.section) {
     context.baseUrl += options.section + '/';
-    context.analyticsQS = context.analyticsQS.replace('root_feed', options.section + '_feed');
+    // eslint-disable-next-line max-len
+    context.analyticsQS = ANALYTICS_QS.replace('root_feed', options.section + '_feed');
   }
   // Note - use last updated instead of now to prevent feeds from being
   // generated every single time. This will only generate if the feeds are
@@ -95,8 +117,8 @@ function generateFeeds(files, options) {
   context.rssPubDate = wfHelper.dateFormatRSS(files[0].dateUpdatedMoment);
   context.atomPubDate = wfHelper.dateFormatAtom(files[0].dateUpdatedMoment);
 
-  var template = path.join(global.WF.src.templates, 'atom.xml');
-  var outputFile = path.join(options.outputPath, 'atom.xml');
+  let template = path.join(global.WF.src.templates, 'atom.xml');
+  let outputFile = path.join(options.outputPath, 'atom.xml');
   renderTemplate(template, context, outputFile);
 
   template = path.join(global.WF.src.templates, 'rss.xml');
@@ -104,9 +126,15 @@ function generateFeeds(files, options) {
   renderTemplate(template, context, outputFile);
 }
 
+/**
+ * Generate feeds for a podcast
+ *
+ * @param {Array} files List of files to generate feed items for
+ * @param {Object} options Options used to generate the feed
+ */
 function generatePodcastFeed(files, options) {
   gutil.log(' ', 'Generating podcast feed for', options.title);
-  var context = {
+  let context = {
     title: options.title,
     subtitle: options.subtitle,
     summary: options.summary,
@@ -114,7 +142,7 @@ function generatePodcastFeed(files, options) {
     image: options.image,
     articles: files,
     host: 'https://developers.google.com',
-    baseUrl: 'https://developers.google.com/web/'
+    baseUrl: 'https://developers.google.com/web/',
   };
   if (options.baseUrl) {
     context.baseUrl = options.baseUrl;
@@ -123,110 +151,149 @@ function generatePodcastFeed(files, options) {
   // generated every single time. This will only generate if the feeds are
   // actually updated.
   context.rssPubDate = wfHelper.dateFormatRSS(files[0].dateUpdatedMoment);
-  var template = path.join(global.WF.src.templates, 'shows', 'podcast.xml');
-  var outputFile = path.join(options.outputPath, 'feed.xml');
+  const template = path.join(global.WF.src.templates, 'shows', 'podcast.xml');
+  const outputFile = path.join(options.outputPath, 'feed.xml');
   renderTemplate(template, context, outputFile);
 }
 
+/**
+ * Generate a list page
+ * @private
+ *
+ * @param {Array} files List of files to generate page for
+ * @param {Object} options Options used to generate the page
+ */
 function _generateListPage(files, options) {
-  var context = {
+  let context = {
     title: options.title,
     section: options.section,
-    articles: files
+    articles: files,
   };
-  var template = path.join(global.WF.src.templates, 'article-list.md');
+  let template = path.join(global.WF.src.templates, 'article-list.md');
   if (options.template) {
     template = options.template;
   }
-  var outputFile = options.outputFile;
+  let outputFile = options.outputFile;
   if (!outputFile) {
     outputFile = path.join(options.outputPath, 'index.md');
   }
   renderTemplate(template, context, outputFile);
 }
 
+/**
+ * Generate a list page
+ *
+ * @param {Array} files List of files to generate page for
+ * @param {Object} options Options used to generate the page
+ */
 function generateListPage(files, options) {
   gutil.log(' ', 'Generating article list page for', options.title);
-  return _generateListPage(files, options);
+  _generateListPage(files, options);
 }
 
+/**
+ * Generate a TOC page by month
+ *
+ * @param {Array} files List of files to generate page for
+ * @param {Object} options Options used to generate the page
+ */
 function generateTOCbyMonth(files, options) {
   gutil.log(' ', 'Generating _toc.yaml for', options.title);
-  var context = {
+  let context = {
     year: options.year,
     title: options.title,
     section: options.section,
-    months: wfHelper.splitByMonth(files).reverse()
+    months: wfHelper.splitByMonth(files).reverse(),
   };
-  var template = path.join(global.WF.src.templates, 'toc-month.yaml');
-  var outputFile = path.join(options.outputPath, '_toc.yaml');
+  const template = path.join(global.WF.src.templates, 'toc-month.yaml');
+  const outputFile = path.join(options.outputPath, '_toc.yaml');
   renderTemplate(template, context, outputFile);
 }
 
+/**
+ * Generate an index page
+ *
+ * @param {Array} files List of files to generate page for
+ * @param {Object} options Options used to generate the page
+ */
 function generateIndex(files, options) {
   gutil.log(' ', 'Generating index page...');
-  var context = {
+  let context = {
     description: options.description,
     section: options.section,
-    articles: files
+    articles: files,
   };
   if (options.title) {
     context.title = options.title;
   }
-  var template = path.join(global.WF.src.templates, 'index.yaml');
+  let template = path.join(global.WF.src.templates, 'index.yaml');
   if (options.template) {
     template = options.template;
   }
-  var outputFile = path.join(options.outputPath, '_index.yaml');
+  let outputFile = path.join(options.outputPath, '_index.yaml');
   if (options.outputFile) {
     outputFile = options.outputFile;
   }
   renderTemplate(template, context, outputFile);
 }
 
+/**
+ * Generate the latest updates widget
+ *
+ * @param {Array} files List of files
+ * @param {Object} options Options used to generate the widget
+ */
 function generateLatestWidget(files, options) {
   gutil.log(' ', 'Generating latest updates widget...');
-  var context = {
-    articles: files.splice(0, options.articlesToShow)
+  const context = {
+    articles: files.splice(0, options.articlesToShow),
   };
-  var template = path.join(global.WF.src.templates, 'latest_articles.html');
-  var outputFile = path.join(options.outputPath, '_shared', 'latest_articles.html');
+  const template = path.join(global.WF.src.templates, 'latest_articles.html');
+  const outputFile = path.join(options.outputPath, '_shared',
+      'latest_articles.html');
   renderTemplate(template, context, outputFile);
 }
 
+/**
+ * Generate the tag pages
+ *
+ * @param {Array} files List of files
+ * @param {Object} options Options used to generate the widget
+ */
 function generateTagPages(files, options) {
   gutil.log(' ', 'Generating tag pages for ' + options.section + '...');
-  var allTags = {};
+  let allTags = {};
   files.forEach(function(file) {
-    var tags = file.tags;
+    const tags = file.tags;
     tags.forEach(function(tag) {
       tag = tag.toLowerCase();
       if (!allTags[tag]) {
         allTags[tag] = {
           tag: tag,
-          articles: []
+          articles: [],
         };
       }
       allTags[tag].articles.push(file);
     });
   });
-  var context = {
+  let context = {
     title: options.title,
     tags: Object.keys(allTags).sort(),
-    section: options.section
+    section: options.section,
   };
-  var tmpl = path.join(global.WF.src.templates, 'tags', 'tag-index.md');
-  var outputFile = path.join(options.outputPath, 'index.md');
+  let tmpl = path.join(global.WF.src.templates, 'tags', 'tag-index.md');
+  let outputFile = path.join(options.outputPath, 'index.md');
   renderTemplate(tmpl, context, outputFile);
   tmpl = path.join(global.WF.src.templates, 'tags', 'tag_toc.yaml');
   outputFile = path.join(options.outputPath, '_toc.yaml');
   renderTemplate(tmpl, context, outputFile);
   Object.keys(allTags).forEach(function(key) {
-    var name = options.section.replace(/(\w)(\w+[^s])(s|S)?\b/, (_, a, b) => a.toUpperCase() + b + 's');
-    var opts = {
+    // eslint-disable-next-line max-len
+    let name = options.section.replace(/(\w)(\w+[^s])(s|S)?\b/, (_, a, b) => a.toUpperCase() + b + 's');
+    const opts = {
       title: 'All ' + name + ' tagged: ' + key + '',
       section: options.section,
-      outputFile: path.join(options.outputPath, key + '.md')
+      outputFile: path.join(options.outputPath, key + '.md'),
     };
     _generateListPage(allTags[key].articles, opts);
   });
