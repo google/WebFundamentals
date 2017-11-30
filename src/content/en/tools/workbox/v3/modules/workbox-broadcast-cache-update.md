@@ -22,7 +22,7 @@ commonly used along with the
 Whenever the "revalidate" step of that strategy retrieves a
 response from the network that differs from what was previously cached,
 this module will use the
-[Broadcast Channel API](https://developers.google.com/web/updates/2016/09/broadcastchannel)
+[Broadcast Channel API](/web/updates/2016/09/broadcastchannel)
 to announce the update. Clients can listen for updates using that API
 and take appropriate action, like automatically displaying a message to the
 user letting them know that updates are available.
