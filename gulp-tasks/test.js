@@ -710,14 +710,16 @@ function testMarkdown(filename, contents, options) {
     }
 
     // Warn on missing comment widgets
-    let reComment = /^{%\s?include "comment-widget\.html"\s?%}/m;
-    let reUpdatesPath = /src\/content\/.+?\/updates\/\d{4}\//;
-    if (reUpdatesPath.test(filename)) {
-      if (!reComment.test(contents)) {
-        position = {line: getLineNumber(contents, contents.length -1)};
-        msg = 'Updates post is missing comment widget: ';
-        msg += '`{% include "comment-widget.html" %}`';
-        logWarning(filename, position, msg);
+    if (!options.ignoreMissingCommentWidget) {
+      const reComment = /^{%\s?include "comment-widget\.html"\s?%}/m;
+      const reUpdatesPath = /src\/content\/.+?\/updates\/\d{4}\//;
+      if (reUpdatesPath.test(filename)) {
+        if (!reComment.test(contents)) {
+          position = {line: getLineNumber(contents, contents.length -1)};
+          msg = 'Updates post is missing comment widget: ';
+          msg += '`{% include "comment-widget.html" %}`';
+          logWarning(filename, position, msg);
+        }
       }
     }
 
@@ -1384,10 +1386,13 @@ gulp.task('test:travis-init', function() {
  *****************************************************************************/
 
 gulp.task('test', ['test:travis-init'], function() {
-  if (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MASTER) {
+  if ((global.WF.options.testMaster) ||
+      (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MASTER)) {
     global.WF.options.testAll = true;
     global.WF.options.ignoreBlink = true;
     global.WF.options.ignoreScript = true;
+    global.WF.options.ignoreFileSize = true;
+    global.WF.options.ignoreCommentWidget = true;
   }
   let opts = {
     enforceLineLengths: true,
@@ -1434,6 +1439,13 @@ gulp.task('test', ['test:travis-init'], function() {
     let msg = `${chalk.yellow('file size')} check was skipped`;
     logWarning('gulp-tasks/test.js', null, msg);
     opts.ignoreFileSize = true;
+  }
+
+  // Supress missing comment widget warnings
+  if (global.WF.options.ignoreCommentWidget) {
+    let msg = `${chalk.yellow('comment_widget')} check was skipped`;
+    logWarning('gulp-tasks/test.js', null, msg);
+    opts.ignoreMissingCommentWidget = true;
   }
 
   // Test the test files
