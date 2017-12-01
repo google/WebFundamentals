@@ -8,10 +8,12 @@
 
 const visit = require('unist-util-visit');
 const toString = require('mdast-util-to-string');
+const generated = require('unist-util-generated');
 
 module.exports = {
   'wf-headings-tldr': wfTLDR,
   'wf-headings-blank': wfHeadingsBlank,
+  'wf-headings-at-least': wfHeadingsAtLeast,
   'wf-headings-in-markdown': wfHeadingsInMarkdown,
   'wf-headings-no-markup-in-title': wfNoMarkupInTitle,
 };
@@ -20,6 +22,30 @@ const reTLDR = /tl;dr/i;
 const reHeading = /^<h\d>.*?<\/h\d>$/i;
 const reHideFromTOC = /.hide-from-toc/;
 const validHeadingTypes = ['text', 'linkReference'];
+
+/**
+ * Remark Lint Test - minimum heading level.
+ *
+ * @param {Node} ast - Root node.
+ * @param {File} file - Virtual file.
+ * @param {number} minLevel
+ */
+function wfHeadingsAtLeast(ast, file, minLevel) {
+  if (!minLevel || minLevel <= 1 || minLevel > 6) {
+    return;
+  }
+  visit(ast, 'heading', function(node) {
+    if (generated(node)) {
+      return;
+    }
+    if (node.depth <= minLevel) {
+      const msg = `First heading level should be at least ${minLevel} ` +
+        `was ${node.depth}.`;
+      file.message(msg, node);
+    }
+    return false;
+  });
+}
 
 /**
  * Remark Lint Test - flags HTML style heading tags.

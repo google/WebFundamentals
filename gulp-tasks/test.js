@@ -88,6 +88,7 @@ let remarkLintOptions = {
   wfHeadingsTldr: true,
   wfHeadingsBlank: true,
   wfHeadingsInMarkdown: true,
+  wfHeadingsAtLeast: 1,
   wfHeadingsNoMarkupInTitle: true,
 
   /* from check-html.js */
@@ -721,11 +722,10 @@ function testMarkdown(filename, contents, options) {
     }
 
     remarkLintOptions.firstHeadingLevel = 1;
-    if (isInclude) {
-      remarkLintOptions.firstHeadingLevel = 2;
-    }
-    if (pageType === PAGE_TYPES.LANDING) {
-      remarkLintOptions.firstHeadingLevel = 2;
+    remarkLintOptions.wfHeadingsAtLeast = 1;
+    if (isInclude || pageType === PAGE_TYPES.LANDING) {
+      remarkLintOptions.firstHeadingLevel = false;
+      remarkLintOptions.wfHeadingsAtLeast = 2;
     }
     remarkLintOptions.maximumLineLength = false;
     if (options.enforceLineLengths) {
