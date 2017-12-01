@@ -184,22 +184,18 @@ workbox.routing.registerRoute(
 );
 ```
 
-There are some options you can set on each strategy to customise the behavior
-of a route.
+With each strategy you can customise the behavior of the Route by defining
+a custom cache to use and / or adding plugins.
 
 ```javascript
 workbox.strategies.staleWhileRevalidate({
    // Use a custom cache for this route
   cacheName: 'my-cache-name',
-  // Force the cache to clear out the cached requests
-  cacheExpiration: {
-    // Limit the cache to storing 10 requests
-    maxEntries: 10,
-    // Don’t let a request to be cached longer than 1 hour
-    maxAgeSeconds: 60 * 60,
-  },
-  // Add some plugins to provide extra behaviors
-  plugins: [...]
+
+  // Add an array of custom plugins (like workbox.expiration.Plugin)
+  plugins: [
+    ...
+  ]
 });
 ```
 

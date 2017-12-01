@@ -22,9 +22,11 @@ workbox.routing.registerRoute(
   new RegExp('https://fonts.googleapis.com/(.*)'),
   workbox.strategies.cacheFirst({
     cacheName: 'googleapis',
-    cacheExpiration: {
-      maxEntries: 30
-    }
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 30
+      })
+    ]
   })
 );
 ```
@@ -39,10 +41,12 @@ workbox.routing.registerRoute(
   /\.(?:png|gif|jpg|jpeg|svg)$/,
   workbox.strategies.cacheFirst({
     cacheName: 'images',
-    cacheExpiration: {
-      maxEntries: 60,
-      maxAgeSeconds: 30 * 24 * 60 * 60 // 30 Days
-    }
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60 // 30 Days
+      })
+    ]
   })
 );
 ```
@@ -104,11 +108,15 @@ workbox.routing.registerRoute(
     'https://hacker-news.firebaseio.com/v0/*',
     workbox.strategies.cacheFirst({
         cacheName: 'stories',
-        cacheExpiration: {
+        plugins: [
+          new workbox.expiration.Plugin({
             maxEntries: 50,
             maxAgeSeconds: 5 * 60 // 5 minutes
-        },
-        cacheableResponse: {statuses: [0, 200]}
+          }),
+          new workbox.cacheableResponse.Plugin({
+            statuses: [0, 200]
+          })
+        ]
     })
 );
 
