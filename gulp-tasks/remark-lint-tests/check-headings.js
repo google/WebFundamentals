@@ -38,12 +38,12 @@ function wfHeadingsAtLeast(ast, file, minLevel) {
     if (generated(node)) {
       return;
     }
-    if (node.depth <= minLevel) {
-      const msg = `First heading level should be at least ${minLevel} ` +
-        `was ${node.depth}.`;
-      file.message(msg, node);
+    if (node.depth >= minLevel) {
+      return false;
     }
-    return false;
+    const msg = `First heading level should be at least ${minLevel} ` +
+      `was ${node.depth}.`;
+    file.message(msg, node);
   });
 }
 
