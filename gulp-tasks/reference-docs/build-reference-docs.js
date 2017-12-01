@@ -16,6 +16,18 @@ const filterTagsToBuild = require('./filter-tags-to-build');
 const getSourceCode = require('./get-source-code');
 const buildJSDocs = require('./build-js-docs');
 
+/**
+ * Given a set of tags - Loop through each one and build the docs if needed.
+ *
+ * @param {Array<string>} latestTags The array of Git tags to build.
+ * @param {string} gitUrl The URL of the Git repo to get tags from.
+ * @param {string} docPath The path to write the docs to.
+ * @param {string} jsdocConfPath The path to the JSDoc config file.
+ * @param {string} latestDirName The name to use for a copy of the most up
+ * to date docs. For stable releases this would be 'latest', for prereleases
+ * it's 'prerelease'.
+ * @return {Promise}
+ */
 const buildReferenceDocsForTags =
   (latestTags, gitUrl, docPath, jsdocConfPath, latestDirName) => {
   // Filter the list down to tags that need to be built
