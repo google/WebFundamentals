@@ -1386,6 +1386,8 @@ gulp.task('test:travis-init', function() {
 gulp.task('test', ['test:travis-init'], function() {
   if (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MASTER) {
     global.WF.options.testAll = true;
+    global.WF.options.ignoreBlink = true;
+    global.WF.options.ignoreScript = true;
   }
   let opts = {
     enforceLineLengths: true,
