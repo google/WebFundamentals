@@ -1,28 +1,41 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 透過優先顯示與使用者要在網頁上執行的主要操作有關的內容，將關鍵轉譯路徑最佳化。
+description:优化关键渲染路径是指优先显示与当前用户操作有关的内容。
 
-{# wf_updated_on: 2014-04-27 #}
+{# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
-# 關鍵轉譯路徑 {: .page-title }
+# 关键渲染路径 {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
-將關鍵轉譯路徑最佳化，對於改善網頁效能至關重要：我們的目標是優先顯示與使用者要在網頁上執行的主要操作有關的內容。
+_优化关键渲染路径_ 是指优先显示与当前用户操作有关的内容。
 
-如要提供快速的網路使用者體驗，瀏覽器需要完成許多工作。網站開發人員其實看不到這當中的大多數工作：我們只要編寫標記，螢幕上就會顯示出漂亮的網頁。但是，瀏覽器究竟是如何使用我們的 HTML、CSS 和 JavaScript 在螢幕上呈現像素呢？
 
-從收到 HTML、CSS 和 JavaScript 位元組，再對程式碼進行必需的處理，到最後轉變為顯示像素的過程中還有許多中間步驟。將效能最佳化其實就是瞭解這些步驟中所有的活動，這就是所謂的**關鍵轉譯路徑**。
+要提供快速的网络体验，浏览器需要做许多工作。这类工作大多数是我们这些网络开发者看不到的：我们编写标记，屏幕上就会显示出漂亮的页面。
 
-<img src="images/progressive-rendering.png" class="center" alt="漸進式網頁轉譯">
+但浏览器到底是如何使用我们的 HTML、CSS 和 JavaScript 在屏幕上渲染像素的呢？
 
-透過將關鍵轉譯路徑最佳化，我們可以大幅縮短初次轉譯網頁的時間。另外，瞭解關鍵轉譯路徑之後，還可以為您要建構的高成效互動式應用程式打下基礎。其實，處理互動式更新的過程是相同的，只是在連續迴圈中完成，理想情況下每秒播放 60 個畫面！ 但是，我們還是按部就班來學習吧。首先，我們從頭開始快速介紹一下瀏覽器如何顯示簡單網頁。
 
+从收到 HTML、CSS 和 JavaScript 字节到对其进行必需的处理，从而将它们转变成渲染的像素这一过程中有一些中间步骤，优化性能其实就是了解这些步骤中发生了什幺 - 即**关键渲染路径**。
+
+
+
+
+<img src="images/progressive-rendering.png"  alt="渐进式页面渲染">
+
+通过优化关键渲染路径，我们可以显着缩短首次渲染页面的时间。
+此外，了解关键渲染路径还可以为构建高性能交互式应用打下基础。
+
+处理交互式更新的过程是相同的，只是在连续循环中完成，理想情况下每秒可以处理 60 帧！不过，我们先来看一下浏览器如何显示简单的网页。
+
+<a href="constructing-the-object-model" class="gc-analytics-event"
+    data-category="CRP" data-label="Next / Constructing the Object Model">
+  <button>下一课：构建对象模型</button>
+</a>
 
 {% include "web/_shared/udacity/ud884.html" %}
 
 
-
-
+{# wf_devsite_translation #}

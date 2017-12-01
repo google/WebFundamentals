@@ -1,209 +1,157 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 回應式網頁設計模式正在快速演化，但已有一些能跨桌面和行動裝置運作良好的既定模式
+description:自適應網頁設計模式正在快速發展，但只有少數幾種成熟的模式可以跨桌面設備和移動設備流暢運行
 
-{# wf_updated_on: 2014-10-20 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_updated_on:2014-10-20 #}
+{# wf_published_on:2014-04-29 #}
 
-# 回應式網頁設計模式 {: .page-title }
+# 自適應網頁設計模式 {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
+自適應網頁設計模式正在快速發展，但只有少數幾種成熟的模式可以跨桌面設備和移動設備流暢運行。
 
-
-回應式網頁設計模式正在快速演化，但已有一些能跨桌面和行動裝置運作良好的既定模式
-
-
-回應式網頁使用的大多數版面配置可以分成五大外觀設計模式：主體為流動 (mostly fluid)、欄內容下排 (column drop)、版面配置位移 (layout shifter)、微小調整 (tiny tweaks) 和畫布外空間利用 (off canvas)。
-
-在某些情況下，網頁可能會使用不同模式組合，例如欄內容下排與畫布外空間利用。
-  最初是由
- [Luke Wroblewski](http://www.lukew.com/ff/entry.asp?1514) 識別出來的這些模式，可為任何回應式網頁提供紮實的起點。
-
-
-## 模式
-
-若要建立簡單、容易理解的範例，
-以下每個範例是以真正標記使用
- [`flexbox`](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes)建立
- -- 通常是使用`div`包含於一主要容器中`div`的三個內容。
- 每個範例都是以最小檢視起頭撰寫，
-而中斷點是在必要時加入。  就最新瀏覽器而言，
-[彈性方塊版面配置模式已廣受支援](http://caniuse.com/#search=flexbox)，儘管最佳化支援仍需要廠商首碼設定。
+自適應網頁所用的大部分佈局可以歸類爲五種模式之一：mostly fluid、column drop、layout shifter、tiny tweaks 和 off canvas。在某些情況下，頁面可能使用組合模式，例如 column drop 和 off canvas。這些模式最初由 [Luke Wroblewski](http://www.lukew.com/ff/entry.asp?1514) 確定，爲任何自適應頁面提供了可靠的起點。
 
 
 
+### 模式
 
-
-## 主體為流動 
-
-
-
-
-主體為流動模式主要包含一個流動網格。  在大型或中型螢幕上，它通常保持為相同的大小，只是會在較寬螢幕上調整邊界。
-
-在小螢幕上，
-流動網格會導致內容自動重排，而欄則是是垂直堆疊。  這種模式的一大主要優勢是它在小螢幕與大螢幕之間，
-只需要一個中斷點。
+出於簡單易懂上的考慮，下面每個示例都是使用 [`flexbox`](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes) 通過真實標記創建的，一般在主要容器 `div` 內容納了三個內容 `div`。每個示例都先從最小的視圖開始，然後在必要時加上斷點。
+現代瀏覽器[能很好地支持 flexbox 佈局模式](http://caniuse.com/#search=flexbox)，儘管可能仍需要供應商前綴才能實現最佳支持。
 
 
 
-  <img src="imgs/mostly-fluid.svg">
-  嘗試一下
+## Mostly Fluid
+
+Mostly fluid 模式主要由流動網格組成。在較大和中等屏幕上，它通常保持相同大小，只在更寬的屏幕上調整邊距。
 
 
-在最小的檢視中，每個內容 `div` 都垂直堆疊。  一旦螢幕寬度達到 600px，
-主要內容 `div` 會保持在 `width: 100%`，
-而次要 `div` 會在主要 `div` 下顯示為兩欄。  超過 800px 時，
-容器 `div` 變成固定寬度，並在螢幕上居中。
 
-使用這種模式的網站包括：
+在較小屏幕上，流動網格使主內容自動重排，同時各列垂直排列。
+此模式的一個主要優點是，在小屏幕和大屏幕之間通常只需要一個視圖斷點。
+
+
+
+<img src="imgs/mostly-fluid.svg">
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/mostly-fluid.html" class="button button-primary">試一下</a>
+
+在最小的視圖中，每個內容 `div` 都垂直排列。在屏幕寬度達到 600px 時，主要內容 `div` 保持 `width: 100%`，而輔助 `div` 在主要 `div` 下面顯示爲兩列。寬度超過 800px 時，容器 `div` 變爲固定寬度並在屏幕上居中。
+
+
+使用此模式的網站包括：
 
  * [A List Apart](http://mediaqueri.es/ala/){: .external }
  * [Media Queries](http://mediaqueri.es/){: .external }
  * [SimpleBits](http://simplebits.com/){: .external }
 
-
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/mostly-fluid.html" region_tag="mfluid"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/mostly-fluid.html" region_tag="mfluid" adjust_indentation="auto" %}
 </pre>
 
+## Column drop 
+
+對於全寬度的多列布局，當窗口寬度太窄不能容納內容時，Column drop 就將各列垂直排列。
+
+
+最終使所有列都垂直排列。爲此佈局模式選擇視圖斷點時要依據內容，並隨不同設計而改變。
 
 
 
-## 欄內容下排 
+<img src="imgs/column-drop.svg">
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/column-drop.html" class="button button-primary">試一下</a>
+
+與 Mostly fluid 示例類似，內容在最小視圖中垂直排列，但當屏幕寬度超過 600px 時，主要內容和輔助內容 `div` 佔用屏幕的全寬度。`div` 的順序是使用 CSS 屬性的順序進行設置的。
+在 800px 時，使用全屏寬度來顯示全部三個內容 `div`。
 
 
+使用此模式的網站包括：
 
-
-針對全寬度多欄版面配置，視窗寬度之於內容變得太窄時，欄內容下排只是會垂直堆疊所有欄而已。  
-
-最後結果是所有欄會被垂直堆疊。
-  為這種版面配置模式選擇中斷點，
-視內容而定，也會因每一種設計而變動。
-
-
-
-  <img src="imgs/column-drop.svg">
-  嘗試一下
-
-
-
-就像主體為流動的範例，
-內容被垂直堆疊於最小檢視中，但在螢幕擴展超出 600px 時，主要與次要內容 
-`div` 會佔據整個螢幕寬度。  `div` 的順序是以舊 CSS 屬性來設定。
-  在 800px 時，所有三個內容 `div` 都會顯示，使用完整螢幕寬度。
-
-
-使用這種模式的網站包括：
-
- * [Modernizr](http://modernizr.com/){: .external }
+ * [Modernizr](https://modernizr.com/){: .external }
  * [Wee Nudge](http://weenudge.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/column-drop.html" region_tag="cdrop"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/column-drop.html" region_tag="cdrop" adjust_indentation="auto" %}
 </pre>
 
+## Layout shifter
+
+Layout shifter 模式是自適應性最強的模式，在多種屏幕寬度上採用多個斷點。
+
+
+此佈局的關鍵是內容移動的方式，而不是自動重排並放到其他列下面。
+由於每個主要視圖斷點之間的顯著差異，其維護更復雜，並且可能涉及元素內的更改，而不只是總體內容佈局的更改。
 
 
 
-## 版面配置位移 
+<img src="imgs/layout-shifter.svg">
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/layout-shifter.html" class="button button-primary">試一下</a>
+
+這個簡化示例顯示了 Layout shifter 模式，在較小的屏幕上內容垂直排列，但在屏幕變大時就會發生顯著變化，左側一個 `div`，右側排列兩個 `div`。
 
 
 
-
-版面配置位移模式是最為回應式的模式，帶有跨數個螢幕寬度的多個中斷點。
-
-這種版面配置的關鍵在於內容四處移動的方式，
-而非自動重排或欄內容下排。  由於每個主要中斷點之間的顯著差異，
-它的維護更複雜，並可能涉及元素內的變更，
-而非整體的內容版面配置。
-
-
-  <img src="imgs/layout-shifter.svg">
-  嘗試一下
-
-
-以下的簡化範例會顯示版面配置位移模式。
-在較小的螢幕上，內容會垂直堆疊，
-但在螢幕變得較大時大幅變更，帶有一個左 `div` ，和兩個堆疊的 `div` 在右邊。
-
-使用這種模式的網站包括：
+使用此模式的網站包括：
 
  * [Food Sense](http://foodsense.is/){: .external }
- * [基本回應式設計
-範例](http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html)
+ * [Seminal 自適應設計示例](http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html)
  * [Andersson-Wise Architects](http://www.anderssonwise.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/layout-shifter.html" region_tag="lshifter"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/layout-shifter.html" region_tag="lshifter" adjust_indentation="auto" %}
 </pre>
 
+## Tiny tweaks
+
+Tiny tweaks 只對佈局進行細微的更改，例如調整字體大小、調整圖像大小或對內容進行極其細微的移動。
 
 
+它在單列布局上表現很好，例如單頁面線性網站和文本爲主的文章。
 
-## 微小調整 
+<img src="imgs/tiny-tweaks.svg">
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/tiny-tweaks.html" class="button button-primary">試一下</a>
 
-
-
-
-微小調整只是對版面配置做出小小變更，例如調整字型大小 、調整影像大小，或小幅移動內容。  
-
-它適用於單欄版面配置，例如單網頁線性網站、大量文字
-的文章。
+顧名思義，使用本示例時，屏幕大小改變時發生的變化不大。當屏幕寬度增加時，字體大小和內邊距也變大。
 
 
-  <img src="imgs/tiny-tweaks.svg">
-  嘗試一下
+使用此模式的網站包括：
 
-
-顧名思義，螢幕大小變更時，此範例也沒什麼變化。
-螢幕寬度越大，字型和邊框間距也是如此。
-
-使用這種模式的網站包括：
-
- * [Opera's Shiny Demos](http://shinydemos.com/){: .external }
  * [Ginger Whale](http://gingerwhale.com/){: .external }
  * [Future Friendly](http://futurefriendlyweb.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/tiny-tweaks.html" region_tag="ttweaks"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/tiny-tweaks.html" region_tag="ttweaks" adjust_indentation="auto" %}
 </pre>
 
 
+## Off canvas
+
+Off canvas 模式不是垂直排列內容，而是將不常用的內容（可能是導航或應用的菜單）放在屏幕之外，只在屏幕足夠大時才顯示。在較小屏幕上，只需點擊就能顯示內容。
 
 
-## 畫布外空間利用 
+
+
+<img src="imgs/off-canvas.svg">
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/off-canvas.html" class="button button-primary">試一下</a>
+
+此示例不是垂直排列內容，而是使用 `transform: translate(-250px, 0)` 將兩個內容 `div` 隱藏在屏幕之外。然後通過給元素添加 open 類來使其可見，使用 JavaScript 來顯示這些 div。
+當屏幕變寬時，從元素中去掉屏幕外的定位，並且讓它顯示在可見視口內。
 
 
 
-
-它不會垂直堆疊內容，畫布外空間利用模式會將較不常用的內容 -- 可能是導覽或應用程式功能表 -- 放在螢幕外，當螢幕足夠大時才顯示，而且在較小的螢幕上，內容只需按一下就會顯示。
-
-
-  <img src="imgs/off-canvas.svg">
-  嘗試一下
+注意，在本示例中，Safari for iOS 6 和 Android 瀏覽器不支持 `flexbox` 的 `flex-flow: row nowrap` 功能，因此我們必須回退到絕對定位。
 
 
-不垂直堆疊內容，本範例使用一個 `transform: translate(-250px, 0)`，
-以將兩個內容 `div` 隱藏於螢幕之外。  透過新增一個開放類別給元素，
-以使其可見，這裡使用了 JavaScript 來顯示 div。  在螢幕變更寬的同時，
-螢幕外的定位會從元素移除，而元素會在可見檢視區中顯示。
 
+使用此模式的網站包括：
 
-注意在此範例中，
-iOS 6 版本 Safari 和 Android 瀏覽器不支援 `flexbox` 的 `flex-flow: row nowrap` 功能，所以我們必須退回到絕對定位方式。
-
-
-使用這種模式的網站包括：
-
- * [HTML5Rocks
- 文章](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
- * [Google Nexus](http://www.google.com/nexus/){: .external }
- * [臉書行動版網站](https://m.facebook.com/){: .external }
+ * [HTML5Rocks 文章](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
+ * [Google Nexus](https://www.google.com/nexus/){: .external }
+ * [Facebook 的移動網站](https://m.facebook.com/){: .external }
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/off-canvas.html" region_tag="ocanvas"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/off-canvas.html" region_tag="ocanvas" adjust_indentation="auto" %}
 </pre>
 
 
+{# wf_devsite_translation #}

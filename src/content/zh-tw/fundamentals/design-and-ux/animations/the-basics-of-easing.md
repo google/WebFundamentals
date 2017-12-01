@@ -1,51 +1,58 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 了解如何柔化並為您的動畫加權。
+description:瞭解如何緩和或加強您的動畫。
 
-{# wf_updated_on: 2014-10-20 #}
-{# wf_published_on: 2014-08-08 #}
+{# wf_updated_on:2016-08-23 #}
+{# wf_published_on:2014-08-08 #}
 
-# 緩動基礎 {: .page-title }
+# 緩動的基礎知識 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-
-自然界中沒有樣一東西是從一個點直線移動到另一個點。 在現實中，事物在移動時總會加速或減速。 我們的大腦設計會期待這類動作，所以在動畫處理時，應該加以利用它。 自然動作會讓您的使用者更適應您的應用程式，反過來會帶來更好的整體使用者體驗。
+自然界中沒有東西是從一點呈線性地移動到另一點。現實中，物體在移動時往往會加速或減速。我們的大腦習慣於期待這種運動，因此在做動畫時，應利用此規律。自然的運動會讓用戶對您的應用感覺更舒適，從而產生更好的總體體驗。
 
 ### TL;DR {: .hide-from-toc }
-- 緩動會讓您的動畫感覺更自然。
-- 為 UI 元素選擇緩出動畫。
-- 除非您可以保持動畫持續時間短，否則請避免緩動或緩入緩出動畫；對最終使用者而言，它們往往令人感到遲鈍。
+* 緩動使您的動畫感覺更自然。
+* 爲 UI 元素選擇緩出動畫。
+* 避免緩入或緩入緩出動畫，除非可以使其保持簡短；這類動畫可能讓最終用戶覺得很遲鈍。
 
 
-在傳統動畫中，慢慢開始並加快的運動之字眼是「慢入」，而快速開始並減速的動作被稱為「慢出」，但網頁上最常用的字眼分別是「緩入」和「緩出」。 有時兩者合併在一起，稱為「緩入緩出」。 因此，緩動事實上是指讓動畫降低劇烈或顯著感的過程。
+在經典動畫中，緩慢開始然後加速的動畫術語是“慢入”，快速開始然後減速的動畫被稱爲“慢出”。網絡上對於這些動畫最常用的術語分別是“緩入”和“緩出”。有時兩種動畫相組合，稱爲“緩入緩出”。緩動實際上是使動畫不再那麼尖銳或生硬的過程。
 
 ## 緩動關鍵字
 
-CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](choosing-the-right-easing)。 您可以使用影響動畫的緩動 (或有時候稱為計時) 之關鍵字。 您還可以 [完全自訂您的緩動](custom-easing)，給您更多自由以表達您應用程式的個性。
+CSS 變換和動畫都允許您[選擇要爲動畫使用的緩動類型](choosing-the-right-easing)。您可以使用影響相關動畫的緩動（或有時稱爲 `timing`）的關鍵字。還可以[完全自定義您的緩動](custom-easing)，藉此方式更自由地表達應用的個性。
 
-以下是您可以在 CSS 中使用的關鍵字：
+以下是可在 CSS 中使用的一些關鍵字：
 
 * `linear`
 * `ease-in`
 * `ease-out`
 * `ease-in-out`
 
-資料來源： [CSS Transitions, W3C](http://www.w3.org/TR/css3-transitions/#transition-timing-function-property)
+資料來源：[CSS 變換，W3C](http://www.w3.org/TR/css3-transitions/#transition-timing-function-property)
 
-您也可以使用一個 `steps` 關鍵字，讓您建立具有分離步驟的轉換，但以上的關鍵字對於建立感覺自然的動畫才最實用，而這正是您想要達成的。
+還可以使用 `steps` 關鍵字，它允許您創建具有離散步驟的變換，但上面列出的關鍵字對於創建感覺自然的動畫最有用，並且這絕對是您要的效果。
 
 ## 線性動畫
 
-不帶任何緩動的動畫被稱為 **線性**。 線性轉換的圖形看似這樣：
+<div class="attempt-right">
+  <figure>
+    <img src="images/linear.png" alt="線性緩動動畫的曲線。" />
+  </figure>
+</div>
 
-<img src="images/linear.png" style="max-width: 300px" alt="線性緩動動畫曲線。" />
+沒有任何緩動的動畫稱爲**線性**動畫。線性變換的圖形看起來像這樣：
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-linear.html">請參閱線性動畫。</a>
+隨着時間推移，其值以等量增加。採用線性運動時，動畫內容往往顯得很僵硬，不自然，讓用戶覺得不協調。一般來說，應避免線性運動。
 
-隨著時間的推移，值會以等量增加。 直線動作的東西往往感覺很機器化且不自然，而這是使用者會覺得格格不入的東西。 一般而言，您應該要避免直線動作。
+不管通過 CSS 還是 JavaScript 來編寫動畫代碼，您將發現始終有線性運動的選項。 
 
-無論您是以 CSS 或 JavaScript 來編寫動畫，您會發現總存在著直線動作的選項。 要以 CSS 達成以上效果，程式碼必須如下所示：
+[查看線性動畫](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-linear.html){: target="_blank" .external }
+
+<div style="clear:both;"></div>
+
+要通過 CSS 實現上述效果，代碼將類似下面這樣：
 
 
     transition: transform 500ms linear;
@@ -54,52 +61,75 @@ CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](
 
 ## 緩出動畫
 
-緩出會使動畫比直線動畫更快速地開始，但結尾會減速。
+<div class="attempt-right">
+  <figure>
+    <img src="images/ease-out.png" alt="緩出動畫的曲線。" />
+  </figure>
+</div>
 
-<img src="images/ease-out.png" style="max-width: 300px" alt="緩出動畫曲線。" />
+緩出使動畫在開頭處比線性動畫更快，還會在結尾處減速。
 
-有多種途徑可以達成緩出效果，但最簡單的是 CSS 中的 `ease-out` 關鍵字：
+緩出一般最適合界面，因爲開頭時快速使動畫有反應快的感覺，同時在結尾仍允許有一點自然的減速。
+
+[查看緩出動畫](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-out.html){: target="_blank" .external }
+
+<div style="clear:both;"></div>
+
+有很多方法來實現緩出效果，但最簡單的方法是 CSS 中的 `ease-out` 關鍵字：
 
 
     transition: transform 500ms ease-out;
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-out.html">請參閱緩出動畫。</a>
-
-緩出通常最適合使用者介面的工作，因為快速開始給您的動畫回應性的感覺，同時可在結束時允許些許自然減速。
 
 ## 緩入動畫
 
-緩入動畫是慢慢開始，快速結束；緩出則相反。
+<div class="attempt-right">
+  <figure>
+     <img src="images/ease-in.png" alt="緩入動畫的曲線。" />
+  </figure>
+</div>
 
-<img src="images/ease-in.png" style="max-width: 300px" alt="緩入動畫曲線。" />
+緩入動畫開頭慢結尾快，與緩出動畫正好相反。
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in.html">請參閱段緩入動畫。</a>
+這種動畫像沉重的石頭掉落一樣，開始時很慢，然後快速地重重撞擊地面，突然沉寂下來。
 
-這種動畫就像一塊沉重的石頭落下，它慢慢地開始，並砰地一聲快速落地。
+但是，從交互的角度來看，緩入可能讓人感覺有點不尋常，因爲結尾很突然；在現實中移動的物體往往是減速，而不是突然停止。緩入還有讓人感覺行動遲緩的不利效果，這會對網站或應用的響應速度給人的感覺產生負面影響。
 
-類似緩出和線性動畫，要使用緩入動畫，您可以使用它的關鍵字：
+[查看緩入動畫](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in.html){: target="_blank" .external }
+
+<div style="clear:both;"></div>
+
+要使用緩入動畫，與緩出和線性動畫類似，可以使用其關鍵字：
 
 
     transition: transform 500ms ease-in;
     
 
-然而從互動的角度來看，緩入因為其突兀的結束而感覺有點不尋常；現實世界中移動的東西傾向於減速，而非突然停止不動。 緩入也有一開始就感覺遲鈍的不利影響，而這會負面影響在您網站或應用程式給人的回應能力印象。
-
 ## 緩入緩出動畫
 
-緩入緩出類似一輛汽車加速和減速，若是明智使用，可以提供比純緩出更戲劇性的效果。
+<div class="attempt-right">
+  <figure>
+    <img src="images/ease-in-out.png" alt="緩入緩出動畫的曲線。" />
+  </figure>
+</div>
 
-<img src="images/ease-in-out.png" style="max-width: 300px" alt="緩入緩出動畫曲線。" />
+緩入並緩出與汽車加速和減速相似，使用得當時，可以實現比單純緩出更生動的效果。
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in-out.html">請參閱段緩入緩出動畫。</a>
+由於緩入開頭讓動畫有遲鈍感，因此動畫持續時間不要過長。300-500 毫秒的時間範圍通常比較合適，但實際的數量主要取決於項目的感覺。也就是說，由於開頭慢、中間快和結尾慢，動畫將有更強的對比，可能讓用戶感到非常滿意。
 
-在此必須小心，不要採用過長的動畫持續時間，因為緩入開始對動畫會有遲鈍感。 通常在 300-500ms 的範圍左右會比較適合，但實際數字視您專案的感覺而定。 有鑑於此，由於起步緩慢、中間快速及結束緩慢，您將可創造動畫的強烈對照感，讓使用者相當滿意。
+[查看緩入緩出動畫](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-in-out.html){: target="_blank" .external }
 
-要使用緩入緩出動畫，您可以使用 `ease-in-out` CSS 關鍵字：
+<div style="clear:both;"></div>
+
+
+要設置緩入緩出動畫，可以使用 `ease-in-out` CSS 關鍵字：
 
 
     transition: transform 500ms ease-in-out;
     
 
 
+
+
+{# wf_devsite_translation #}
