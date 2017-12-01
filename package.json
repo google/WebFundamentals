@@ -53,6 +53,7 @@
     "rsync": "^0.5.0",
     "run-sequence": "^1.2.2",
     "semver": "^5.4.1",
+    "unist-util-generated": "^1.1.0",
     "unist-util-visit": "^1.1.1",
     "vfile": "^2.0.1"
   },
