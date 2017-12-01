@@ -76,6 +76,8 @@ Developers who are happy with Workbox's built-in precaching and runtime caching
 capabilities, and don't need to customize their service worker's behavior
 are recommended to use `generateSW` mode.
 
+{% include "web/tools/workbox/_shared/when-to-use-generate-sw.md %}
+
 ### `injectManifest`
 
 For developers who ant more control of their final service worker file
@@ -94,6 +96,8 @@ You can use Workbox in this mode like so:
 <pre class="devsite-terminal">
 workbox injectManifest path/to/config.js
 </pre>
+
+{% include "web/tools/workbox/_shared/when-to-use-inject-manifest.md %}
 
 ### `copyLibraries`
 
