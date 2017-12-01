@@ -18,10 +18,20 @@ const wfContributors = require('./wfContributors');
 const wfYouTubeShows = require('./wfYouTubeShows');
 const wfTemplateHelper = require('./wfTemplateHelper');
 
+
+/**
+ * Builds the contributors listing and individual pages
+ * @todo - Move this gulp task to wfContributors.js
+ */
 gulp.task('build:contributors', function() {
   wfContributors.build();
 });
 
+
+/**
+ * Reads src/data/announcement.yaml and adds/removes the announcement
+ * to all _project.yaml files.
+ */
 gulp.task('build:announcement', function() {
   const globOpts = {
     srcBase: 'src/content/en/',
@@ -37,7 +47,7 @@ gulp.task('build:announcement', function() {
     if (showAnnouncement) {
       projYaml['announcement'] = {
         description: announcementYaml.description,
-      }
+      };
     } else {
       delete projYaml['announcement'];
     }
@@ -45,34 +55,55 @@ gulp.task('build:announcement', function() {
   });
 });
 
-gulp.task('build:fundamentals', function() {
-  var section = 'fundamentals';
-  var baseOutputPath = path.join(global.WF.src.content, section);
-  var options = {
-    title: 'Web Fundamentals',
-    description: 'The latest changes to https://developers.google.com/web/fundamentals',
-    section: section,
-    outputPath: baseOutputPath
-  };
+
+/**
+ * Builds the WebFu glossary
+ * @todo - Move this gulp task to wfGlossary.js
+ */
+gulp.task('build:glossary', function() {
   wfGlossary.build();
-  var startPath = path.join(global.WF.src.content, section);
-  var files = wfHelper.getFileList(startPath, ['**/*.md']);
+});
+
+
+/**
+ * Builds the RSS & ATOM feeds for /web/fundamentals/
+ */
+gulp.task('build:fundamentals', function() {
+  const section = 'fundamentals';
+  const baseOutputPath = path.join(global.WF.src.content, section);
+  const description = 'The latest changes to ' +
+      'https://developers.google.com/web/fundamentals';
+  const options = {
+    title: 'Web Fundamentals',
+    description: description,
+    section: section,
+    outputPath: baseOutputPath,
+  };
+  const startPath = path.join(global.WF.src.content, section);
+  const files = wfHelper.getFileList(startPath, ['**/*.md']);
   files.sort(wfHelper.updatedComparator);
   wfTemplateHelper.generateFeeds(files, options);
 });
 
+
+/**
+ * Builds all of the listing pages, including RSS & ATOM feeds
+ * for /web/showcase/
+ */
 gulp.task('build:showcase', function() {
-  var section = 'showcase';
-  var baseOutputPath = path.join(global.WF.src.content, section);
-  var options = {
+  const section = 'showcase';
+  const baseOutputPath = path.join(global.WF.src.content, section);
+  const description = 'Learn why and how other developers have used the web ' +
+      'to create amazing web experiences for their users.';
+  const options = {
     title: 'Case Studies',
-    description: 'Learn why and how other developers have used the web to create amazing web experiences for their users.',
+    description: description,
     section: section,
-    outputPath: baseOutputPath
+    outputPath: baseOutputPath,
   };
-  var startPath = path.join(global.WF.src.content, 'showcase');
-  var patterns = ['**/*.md', '!tags/*', '!**/index.md'];
-  var files = wfHelper.getFileList(startPath, patterns);
+  const startPath = path.join(global.WF.src.content, 'showcase');
+  const patterns = ['**/*.md', '!tags/*', '!**/index.md'];
+  let files = wfHelper.getFileList(startPath, patterns);
 
   // Generate landing page with featured case studies
   files.sort(wfHelper.featuredComparator);
@@ -101,7 +132,7 @@ gulp.task('build:showcase', function() {
 
   // Generate the listings by Year
   options.template = null;
-  var filesByYear = wfHelper.splitByYear(files);
+  const filesByYear = wfHelper.splitByYear(files);
   Object.keys(filesByYear).forEach(function(year) {
     options.year = year;
     options.outputPath = path.join(baseOutputPath, year);
@@ -116,81 +147,114 @@ gulp.task('build:showcase', function() {
   wfTemplateHelper.generateFeeds(files, options);
 });
 
+
+/**
+ * Builds index page and RSS & ATOM feeds for /web/shows/
+ * @todo - Move this gulp task to wfYouTubeShows.js
+ */
 gulp.task('build:shows', function(cb) {
   wfYouTubeShows.buildFeeds(global.WF.options.buildType, cb);
 });
 
+
+/**
+ * Builds RSS & ATOM feeds for the HTTP203 Podcast
+ */
 gulp.task('build:http203Podcast', function() {
-  var src = 'shows/http203/podcast/';
-  var baseOutputPath = path.join(global.WF.src.content, src);
-  var options = {
+  const src = 'shows/http203/podcast/';
+  const baseOutputPath = path.join(global.WF.src.content, src);
+  const summary = 'Surma and Jake talk about whatever\'s going on in the ' +
+      'world of web development.';
+  const image = 'https://developers.google.com/web/shows/http203/podcast/' +
+      'images/surma-and-jake-2.jpg';
+  const options = {
     title: 'HTTP 203',
     subtitle: 'Where Surma and Jake occasionally talk web.',
     author: {name: 'Surma & Jake', email: 'jaffathecake@gmail.com'},
-    summary: 'Surma and Jake talk about whatever\'s going on in the world of web development.',
-    image: 'https://developers.google.com/web/shows/http203/podcast/images/surma-and-jake-2.jpg',
+    summary: summary,
+    image: image,
     section: 'shows',
     outputPath: baseOutputPath,
-    baseUrl: 'https://developers.google.com/web/shows/http203/podcast/'
+    baseUrl: 'https://developers.google.com/web/shows/http203/podcast/',
   };
-  var files = wfHelper.getFileList(baseOutputPath, ['*.md', '!index.md']);
+  let files = wfHelper.getFileList(baseOutputPath, ['*.md', '!index.md']);
   files.sort(wfHelper.updatedComparator);
   wfTemplateHelper.generateListPage(files, options);
   wfTemplateHelper.generatePodcastFeed(files, options);
 });
 
+
+/**
+ * Builds RSS & ATOM feeds for Designer vs Developer podcast
+ */
 gulp.task('build:DVDPodcast', function() {
-  var src = 'shows/designer-vs-developer/podcast/';
-  var baseOutputPath = path.join(global.WF.src.content, src);
-  var options = {
+  const src = 'shows/designer-vs-developer/podcast/';
+  const baseOutputPath = path.join(global.WF.src.content, src);
+  const subtitle = 'A show that tries to solve the challenges faced in ' +
+      'industry by having an open conversation between the two.';
+  const baseUrl = 'https://developers.google.com/web/shows/' +
+      'designer-vs-developer/podcast/';
+  const image = baseUrl + 'images/dvd-series-cover-large.jpg';
+  const options = {
     title: 'Designer Vs Developer',
-    subtitle: 'A show that tries to solve the challenges faced in industry by having an open conversation between the two.',
+    subtitle: subtitle,
     author: {name: 'Mustafa Kurtuldu', email: 'mustafa.kurtuldu@gmail.com'},
-    summary: 'A show that tries to solve the challenges faced in industry by having an open conversation between the two.',
-    image: 'https://developers.google.com/web/shows/designer-vs-developer/podcast/images/dvd-series-cover-large.jpg',
+    summary: subtitle,
+    image: image,
     section: 'shows',
     outputPath: baseOutputPath,
-    baseUrl: 'https://developers.google.com/web/shows/designer-vs-developer/podcast/'
+    baseUrl: baseUrl,
   };
-  var files = wfHelper.getFileList(baseOutputPath, ['*.md', '!index.md']);
+  let files = wfHelper.getFileList(baseOutputPath, ['*.md', '!index.md']);
   files.sort(wfHelper.updatedComparator);
   wfTemplateHelper.generateListPage(files, options);
   wfTemplateHelper.generatePodcastFeed(files, options);
 });
 
+
+/**
+ * Builds RSS & ATOM feeds /web/tools/
+ */
 gulp.task('build:tools', function() {
-  var section = 'tools';
-  var baseOutputPath = path.join(global.WF.src.content, section);
-  var options = {
+  const section = 'tools';
+  const baseOutputPath = path.join(global.WF.src.content, section);
+  const options = {
     title: 'Tools',
     description: 'The latest changes to https://developers.google.com/web/tools',
     section: section,
-    outputPath: baseOutputPath
+    outputPath: baseOutputPath,
   };
-  var startPath = path.join(global.WF.src.content, section);
-  var files = wfHelper.getFileList(startPath, ['**/*.md']);
+  const startPath = path.join(global.WF.src.content, section);
+  let files = wfHelper.getFileList(startPath, ['**/*.md']);
   files.sort(wfHelper.updatedComparator);
   wfTemplateHelper.generateFeeds(files, options);
 });
 
+
+/**
+ * Builds all of the listing pages, including RSS & ATOM feeds
+ * for /web/updates/
+ */
 gulp.task('build:updates', function() {
-  var section = 'updates';
-  var baseOutputPath = path.join(global.WF.src.content, section);
-  var options = {
+  const section = 'updates';
+  const baseOutputPath = path.join(global.WF.src.content, section);
+  const description = 'The latest and freshest updates from the Web teams ' +
+      'at Google. Chrome, V8, tooling, and more.';
+  let options = {
     title: 'Updates',
-    description: 'The latest and freshest updates from the Web teams at Google. Chrome, V8, tooling, and more.',
+    description: description,
     section: section,
-    outputPath: baseOutputPath
+    outputPath: baseOutputPath,
   };
-  var startPath = path.join(global.WF.src.content, section);
-  var patterns = ['**/*.md', '!tags/*', '!**/index.md'];
-  var files = wfHelper.getFileList(startPath, patterns);
+  const startPath = path.join(global.WF.src.content, section);
+  const patterns = ['**/*.md', '!tags/*', '!**/index.md'];
+  let files = wfHelper.getFileList(startPath, patterns);
   files.sort(wfHelper.publishedComparator);
   wfTemplateHelper.generateIndex(files, options);
   wfTemplateHelper.generateFeeds(files, options);
   options.outputPath = path.join(baseOutputPath, 'tags');
   wfTemplateHelper.generateTagPages(files, options);
-  var filesByYear = wfHelper.splitByYear(files);
+  let filesByYear = wfHelper.splitByYear(files);
   Object.keys(filesByYear).forEach(function(year) {
     options.outputPath = path.join(baseOutputPath, year);
     options.year = year;
@@ -206,18 +270,23 @@ gulp.task('build:updates', function() {
   wfTemplateHelper.generateLatestWidget(files, options);
 });
 
+
+/**
+ * Builds all the things!
+ */
 gulp.task('build', function(cb) {
   runSequence(
     [
       'build:announcement',
       'build:contributors',
+      'build:glossary',
       'build:fundamentals',
       'build:showcase',
       'build:shows',
       'build:http203Podcast',
       'build:DVDPodcast',
       'build:tools',
-      'build:updates'
+      'build:updates',
     ],
     cb);
 });

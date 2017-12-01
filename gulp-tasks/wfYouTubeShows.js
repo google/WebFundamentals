@@ -6,16 +6,23 @@
 
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var gutil = require('gulp-util');
-var google = require('googleapis');
-var moment = require('moment');
+const fs = require('fs');
+const path = require('path');
+const gutil = require('gulp-util');
+const google = require('googleapis');
+const moment = require('moment');
 const wfHelper = require('./wfHelper');
-var wfTemplateHelper = require('./wfTemplateHelper');
+const wfTemplateHelper = require('./wfTemplateHelper');
 
+/**
+ * Build the RSS and ATOM feeds for the the latest shows
+ *
+ * @param {string} buildType
+ * @param {Function} callback
+ * @return {null} Nothing of interest
+ */
 function buildFeeds(buildType, callback) {
-  var apiKey;
+  let apiKey;
   try {
     apiKey = process.env.YOUTUBE_API_KEY;
     if (!apiKey) {
@@ -26,20 +33,28 @@ function buildFeeds(buildType, callback) {
     if (buildType === 'production') {
       return callback('youtubeAPIKey.txt not found.');
     }
-    var videoPlaceholder = {snippet:
-      {title: 'Lorem Ipsum - placeholder title', resourceId: {videoId: 'dQw4w9WgXcQ'}}
+    let videoPlaceholder = {
+      snippet: {
+        title: 'Lorem Ipsum - placeholder title',
+        resourceId: {videoId: 'dQw4w9WgXcQ'},
+      },
     };
-    var context = {
-      videos: [videoPlaceholder, videoPlaceholder, videoPlaceholder, videoPlaceholder]
+    let context = {
+      videos: [
+        videoPlaceholder,
+        videoPlaceholder,
+        videoPlaceholder,
+        videoPlaceholder,
+      ],
     };
-    var template = path.join(global.WF.src.templates, 'shows', 'index.md');
-    var outputFile = path.join(global.WF.src.content, 'shows', 'index.md');
+    const template = path.join(global.WF.src.templates, 'shows', 'index.md');
+    const outputFile = path.join(global.WF.src.content, 'shows', 'index.md');
     wfTemplateHelper.renderTemplate(template, context, outputFile);
     callback();
     return;
   }
-  var youtube = google.youtube({version: 'v3', auth: apiKey});
-  var opts = {
+  const youtube = google.youtube({version: 'v3', auth: apiKey});
+  const opts = {
     maxResults: 25,
     part: 'id,snippet',
     playlistId: 'UUnUYZLuoy1rq1aVMwx4aTzw',
@@ -49,16 +64,16 @@ function buildFeeds(buildType, callback) {
       gutil.log(' ', 'Error, unable to retreive playlist', err);
       callback(err);
     } else {
-      var articles = [];
+      let articles = [];
       response.items.forEach(function(video) {
-        var iframe = '<iframe width="560" height="315" ';
+        let iframe = '<iframe width="560" height="315" ';
         iframe += 'src="https://www.youtube.com/embed/';
         iframe += video.snippet.resourceId.videoId + '" frameborder="0" ';
         iframe += 'allowfullscreen></iframe>\n<br>\n<br>';
-        var content = video.snippet.description.replace(/\n/g, '<br>\n');
+        let content = video.snippet.description.replace(/\n/g, '<br>\n');
         content = iframe + content;
         const publishedAtMoment = moment(video.snippet.publishedAt);
-        var result = {
+        let result = {
           url: video.snippet.resourceId.videoId,
           title: video.snippet.title,
           description: video.snippet.description,
@@ -68,26 +83,23 @@ function buildFeeds(buildType, callback) {
           tags: [],
           analyticsUrl: '/web/videos/' + video.snippet.resourceId.videoId,
           content: content,
-          atomAuthor: 'Google Developers'
+          atomAuthor: 'Google Developers',
         };
         articles.push(result);
-        var shortDesc = video.snippet.description.replace(/\n/g, '<br>');
+        let shortDesc = video.snippet.description.replace(/\n/g, '<br>');
         if (shortDesc.length > 256) {
           shortDesc = shortDesc.substring(0, 254) + '...';
         }
         video.shortDesc = shortDesc;
       });
-      var context = {
-        videos: response.items
-      };
-      var template = path.join(global.WF.src.templates, 'shows', 'index.md');
-      var outputFile = path.join(global.WF.src.content, 'shows', 'index.md');
+      let context = {videos: response.items};
+      let template = path.join(global.WF.src.templates, 'shows', 'index.md');
+      let outputFile = path.join(global.WF.src.content, 'shows', 'index.md');
       wfTemplateHelper.renderTemplate(template, context, outputFile);
 
-      var context = {
-        video: response.items[0]
-      };
+      context = {video: response.items[0]};
       template = path.join(global.WF.src.templates, 'shows', 'latest.html');
+      // eslint-disable-next-line max-len
       outputFile = path.join(global.WF.src.content, '_shared', 'latest_show.html');
       wfTemplateHelper.renderTemplate(template, context, outputFile);
 
@@ -104,7 +116,7 @@ function buildFeeds(buildType, callback) {
         analyticsQS: '',
         atomPubDate: wfHelper.dateFormatAtom(lastUpdated),
         rssPubDate: wfHelper.dateFormatRSS(lastUpdated),
-        articles: articles
+        articles: articles,
       };
       template = path.join(global.WF.src.templates, 'atom.xml');
       outputFile = path.join(global.WF.src.content, 'shows', 'atom.xml');

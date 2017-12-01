@@ -8,6 +8,5 @@
     "es6": true
   },
   "rules": {
-    // Additional, per-project rules...
   }
 }
