@@ -8,10 +8,5 @@
     "es6": true
   },
   "rules": {
-    "comma-dangle": "warn",
-    "max-len": "warn",
-    "no-var": "warn",
-    "require-jsdoc": "warn",
-    "valid-jsdoc": "warn"
   }
 }
