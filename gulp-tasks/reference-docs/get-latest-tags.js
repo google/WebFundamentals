@@ -11,11 +11,9 @@ const semver = require('semver');
 /**
  * Get the latest tags for a git repo.
  *
- * @param {string} gitUrl URL of the git repo you want to get tags for
- * @param {Object} options
- * @param {number} [options.numberOfReleases=1] Latest release.
- * @param {boolean} [options.includePrerelease=false] Include prerelease
- * versions.
+ * @param {string} gitUrl URL of the git repo you want to get tags for.
+ * @param {number} [numberOfReleases=1] Number of releases to build if missing.
+ * @param {string} tagType (This should be 'stable' or 'prerelease')
  * @return {Promise<Array<string>>}
  */
 const getAllTags = (gitUrl, numberOfReleases, tagType) => {

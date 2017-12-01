@@ -16,12 +16,11 @@ const filterTagsToBuild = require('./filter-tags-to-build');
 const getSourceCode = require('./get-source-code');
 const buildJSDocs = require('./build-js-docs');
 
-const buildReferenceDocsForTags = (latestTags, gitUrl, docPath, jsdocConfPath, latestDirName) => {
+const buildReferenceDocsForTags =
+  (latestTags, gitUrl, docPath, jsdocConfPath, latestDirName) => {
   // Filter the list down to tags that need to be built
-  console.log('latestTags: ', latestTags);
   return filterTagsToBuild(latestTags, docPath)
   .then((tagsToBuild) => {
-    console.log('tagsToBuild: ', tagsToBuild);
     return tagsToBuild.reduce((promiseChain, tag) => {
       return promiseChain.then(() => {
         const tmpSrCodePath = path.join(
@@ -41,7 +40,7 @@ const buildReferenceDocsForTags = (latestTags, gitUrl, docPath, jsdocConfPath, l
       });
     }, Promise.resolve());
   });
-}
+};
 
 /**
  * Builds the stable release tags.
@@ -50,12 +49,14 @@ const buildReferenceDocsForTags = (latestTags, gitUrl, docPath, jsdocConfPath, l
  * @param {string} docPath Path to place the documentation files (i.e. built
  * JSDocs)
  * @param {string} jsdocConfPath Path to the JSDoc config path/
+ * @return {Promise}
  */
 const buildStableReleases = (gitUrl, docPath, jsdocConfPath) => {
   // Get all of the latest tags from Github
   return getLatestTags.stable(gitUrl)
   .then((tags) => {
-    return buildReferenceDocsForTags(tags, gitUrl, docPath, jsdocConfPath, 'latest');
+    return buildReferenceDocsForTags(
+      tags, gitUrl, docPath, jsdocConfPath, 'latest');
   });
 };
 
@@ -66,11 +67,13 @@ const buildStableReleases = (gitUrl, docPath, jsdocConfPath) => {
  * @param {string} docPath Path to place the documentation files (i.e. built
  * JSDocs)
  * @param {string} jsdocConfPath Path to the JSDoc config path/
+ * @return {Promise}
  */
 const buildPreleases = (gitUrl, docPath, jsdocConfPath) => {
   return getLatestTags.prerelease(gitUrl)
   .then((tags) => {
-    return buildReferenceDocsForTags(tags, gitUrl, docPath, jsdocConfPath, 'prerelease');
+    return buildReferenceDocsForTags(
+      tags, gitUrl, docPath, jsdocConfPath, 'prerelease');
   });
 };
 
@@ -81,11 +84,12 @@ const buildPreleases = (gitUrl, docPath, jsdocConfPath) => {
  * @param {string} docPath Path to place the documentation files (i.e. built
  * JSDocs)
  * @param {string} jsdocConfPath Path to the JSDoc config path/
+ * @return {Promise}
  */
 const buildReferenceDocs = (gitUrl, docPath, jsdocConfPath) => {
   return buildStableReleases(gitUrl, docPath, jsdocConfPath)
   .then(() => {
-    return buildPreleases(gitUrl, docPath, jsdocConfPath)
+    return buildPreleases(gitUrl, docPath, jsdocConfPath);
   });
 };
 

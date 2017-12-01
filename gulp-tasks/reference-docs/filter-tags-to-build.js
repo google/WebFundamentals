@@ -14,6 +14,7 @@ const path = require('path');
  *
  * @param {Array<string>} tags Array of tags.
  * @param {String} docPath Path where the JSDocs for a tag should be written to.
+ * @return {Promise}
  */
 const filterTagsToBuild = (tags, docPath) => {
   const tagsToBuild = [];
@@ -21,7 +22,6 @@ const filterTagsToBuild = (tags, docPath) => {
     return promiseChain
     .then(() => {
       const outputPath = path.join(docPath, tag);
-      console.log(outputPath);
       return fs.pathExists(outputPath);
     })
     .then((exists) => {
