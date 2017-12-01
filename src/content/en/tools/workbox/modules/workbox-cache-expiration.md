@@ -30,9 +30,11 @@ workbox.routing.registerRoute(
   new RegExp('/images/'),
   workbox.strategies.cacheFirst({
     cacheName: 'image-cache',
-    cacheExpiration: {
-      maxEntries: 20,
-    },
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 20,
+      }),
+    ],
   })
 );
 ```
@@ -54,9 +56,11 @@ workbox.routing.registerRoute(
   /\/images\//,
   workbox.strategies.cacheFirst({
     cacheName: 'image-cache',
-    cacheExpiration: {
-      maxAgeSeconds: 20,
-    },
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxAgeSeconds: 24 * 60 * 60,
+      }),
+    ],
   })
 );
 ```
@@ -74,32 +78,6 @@ as it doesn’t require an IndexedDB lookup..
 
 ## Advanced Usage
 
-Above discusses the common usage of `workbox-cache-expiration` which is
-largely abstracted behind configuration, but you can use the underlying
-classes to use as a normal Workbox plugin or use the logic seperate from
-any other Workbox modules.
-
-### Using the Plugin Directly
-
-The plugin can be instantiated and used like so:
-
-```javascript
-workbox.routing.registerRoute(
-  new RegExp('/images/'),
-  workbox.strategies.cacheFirst({
-    cacheName: 'image-cache',
-    plugins: [
-      new workbox.expiration.CacheExpirationPlugin({
-        maxAgeSeconds: 60 * 60,
-        maxEntries 20,
-      }),
-    ],
-  })
-);
-```
-
-### Using Just the Cache Expiration Logic
-
 If you’d like to use the expiration logic separate from any other Workbox
 modules you can do so with the
 [CacheExpiration](../next/reference-docs/latest/workbox.expiration.CacheExpiration)
@@ -113,7 +91,7 @@ const cacheName = 'my-cache';
 const expirationManager = new workbox.expiration.CacheExpiration(
   cacheName,
   {
-    maxAgeSeconds: 60 * 60,
+    maxAgeSeconds: 24 * 60 * 60,
     maxEntries 20,
   }
 );

@@ -25,17 +25,19 @@ with a specific value, or a combination of the two.
 ## Caching Based on Status Codes
 
 You can configure a [Workbox strategy](./workbox-strategies) to consider
-set of status codes as being eligible for caching by setting the
-`cacheableResponse` option with an array of `statuses`:
+set of status codes as being eligible for caching by adding a
+`workbox.cacheableResponse.Plugin` instance to a strategies `plugins`:
 
 ```js
 workbox.routing.registerRoute(
   new RegExp('^https://third-party.example.com/images/'),
   workbox.strategies.cacheFirst({
-    cacheName: 'image-cache'
-    cacheableResponse: {
-      statuses: [0, 200],
-    }
+    cacheName: 'image-cache',
+    plugins: [
+      new workbox.cacheableResponse.Plugin({
+        statuses: [0, 200],
+      })
+    ]
   })
 );
 ```
@@ -51,19 +53,20 @@ Note: Status code '0' is used for
 
 You can configure a [Workbox strategy](./workbox-strategies) to check
 for the presence of specific header values as criteria for being added
-to the cache by setting the `cacheableResponse` option with a `headers`
-object:
+to the cache by setting the `headers` object when constructing the plugin:
 
 ```js
 workbox.routing.registerRoute(
   new RegExp('/path/to/api/'),
   workbox.strategies.staleWhileRevalidate({
     cacheName: 'api-cache',
-    cacheableResponse: {
-      headers: {
-        'X-Is-Cacheable': 'true',
-      },
-    }
+    plugins: [
+      new workbox.cacheableResponse.Plugin({
+        headers: {
+          'X-Is-Cacheable': 'true',
+        },
+      })
+    ]
   })
 );
 ```
@@ -88,12 +91,14 @@ workbox.routing.registerRoute(
   new RegExp('/path/to/api/'),
   workbox.strategies.staleWhileRevalidate({
     cacheName: 'api-cache',
-    cacheableResponse: {
-      statuses: [200, 404],
-      headers: {
-        'X-Is-Cacheable': 'true',
-      },
-    }
+    plugins: [
+      new workbox.cacheableResponse.Plugin({
+        statuses: [200, 404],
+        headers: {
+          'X-Is-Cacheable': 'true',
+        },
+      })
+    ]
   })
 );
 ```
@@ -101,8 +106,8 @@ workbox.routing.registerRoute(
 ## What Are the Defaults?
 
 If you use one of Workbox's built-in strategies without explicitly
-configuring `cacheableRepsonse`, the following criteria are used by
-default to determine whether a response received from the network should
+configuring a `cacheableRepsonse.Plugin`, the following default criteria is
+used to determine whether a response received from the network should
 be cached:
 
 * staleWhileRevalidate and networkFirst: Responses with a status of 0
