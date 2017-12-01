@@ -247,6 +247,17 @@ def getLeftNav(requestPath, bookYaml, lang='en'):
     lowerTabs = currentUpperTab['lower_tabs']['other']
     for lowerTab in lowerTabs:
       lowerTabPath = getFirstTabPath(lowerTab['contents'])
+
+      # If a left nav starts with a file like "/guides/get-started" in a TOC
+      # yaml we want "/guides/next-page" to have the same TOC.
+      # If the lower tab path does not end in a "/" remove the file name.
+      # Change "/guides/get-started" to '/guides/' to make it match for
+      # "/guides/next-page"
+      if lowerTabPath is not None and not lowerTabPath.endswith('/'):
+        tabPathParts = lowerTabPath.split('/')
+        tabPathParts.pop()
+        lowerTabPath = '/'.join(tabPathParts)+'/'
+
       if (lowerTabPath is None or
         requestPath.startswith(lowerTabPath)):
           result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
