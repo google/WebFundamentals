@@ -143,53 +143,29 @@ workbox.routing.registerRoute(
 );
 ```
 
-### Setting a Cache Expiration
-There may be scenarios where you want to enforce a limit of how long an
-asset is cached and / or restrict the number of entries that are cached.
+### Using Plugins
+Workbox comes with a set of plugins that can be used with these strategies.
 
-To do this, you can define some `cacheExpiration` options and Workbox will
-create and add a
-[CacheExpirationPlugin](../next/reference-docs/latest/workbox.expiration.CacheExpirationPlugin)
-to the strategy.
+- workbox.expiration.Plugin
+- workbox.cacheableResponse.Plugin
+- workbox.broadcastUpdate.Plugin
+- workbox.backgroundSync.Plugin
+
+To use any of these plugins (or a custom plugin), you just need to pass in
+instances to the `plugins` option.
 
 ```javascript
 workbox.registerRoute(
   new RegExp('/images/'),
   workbox.strategies.cacheFirst({
     cacheName: 'image-cache',
-    cacheExpiration: {
-      // Only cache requests for a week
-      maxAgeSeconds: 7 * 24 * 60 * 60,
-      // Only cache 10 requests.
-      maxEntries: 10,
-    }
-  }
-);
-```
-
-### Add Custom Plugins
-
-Each strategy can have additional plugins used during fetching and caching
-requests, allowing extra functionality (like the `CacheExpirationPlugin`
-mentioned above).
-
-```javascript
-const myCustomPlugin = {
-  cachedResponseWillBeUsed: ({cacheName,request,cachedResponse}) => {
-    // TODO: Return the `cachedResponse`, a different Response or null
-
-    // NOTE: This can be synchronous or return a Promise that resolves
-    // to a Response or null.
-    ...
-  },
-  ...
-};
-
-workbox.registerRoute(
-  new RegExp('/images/'),
-  workbox.strategies.cacheFirst({
     plugins: [
-       myCustomPlugin,
+      new workbox.expiration.Plugin({
+        // Only cache requests for a week
+        maxAgeSeconds: 7 * 24 * 60 * 60,
+        // Only cache 10 requests.
+        maxEntries: 10,
+      }),
     ]
   }
 );

@@ -52,16 +52,18 @@ caching strategy, since that strategy involves returning a cached
 response immediately, but also provides a mechanism for updating the
 cache asynchronously.
 
-To broadcast updates, you just need to add `broadcastUpdate` to your
-stragy options.
+To broadcast updates, you just need to add a `broadcastUpdate.Plugin` to your
+strategy options.
 
 ```js
 workbox.routing.registerRoute(
   new RegExp('/api/'),
   workbox.strategies.staleWhileRevalidate({
-    broadcastUpdate: {
-      channelName: 'api-updates',
-    }
+    plugins: [
+      new workbox.broadcastUpdate.Plugin({
+        channelName: 'api-updates',
+      })
+    ]
   })
 );
 ```
@@ -119,22 +121,24 @@ property.
 workbox.routing.registerRoute(
   new RegExp('/api/'),
   workbox.strategies.staleWhileRevalidate({
-    broadcastUpdate: {
-      channelName: 'api-updates',
-      headersToCheck: ['X-My-Custom-Header']
-    }
+    plugins: [
+      new workbox.broadcastUpdate.Plugin({
+        channelName: 'api-updates',
+        headersToCheck: ['X-My-Custom-Header']
+      })
+    ]
   })
 );
 ```
 
 ## Advanced Usage
 
-While most developers will use `workbox-broadcast-cache-update` as an option
+While most developers will use `workbox-broadcast-cache-update` as a plugin
 of a particular strategy as shown above, it's possible to use the underlying
 logic in service worker code.
 
 ```js
-const broadcastUpdate = new workbox.broadcastCacheUpdate.BroadcastCacheUpdate(
+const broadcastUpdate = new workbox.broadcastUpdate.BroadcastCacheUpdate(
   'api-updates',
   {
     headersToCheck: ['X-My-Custom-Header'],

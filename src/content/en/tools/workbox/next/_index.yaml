@@ -55,13 +55,13 @@ landing_page:
       }
       </style>
       <div class="using-workbox">
-      <div><img src="images/third_party/logos/wired.png" alt="Wired Logo" /></div>
-      <div><img src="images/third_party/logos/pinterest.png" alt="Pinterest Logo" /></div>
-      <div><img src="images/third_party/logos/starbucks.png" alt="Starbucks Logo" /></div>
+      <div><img src="../images/third_party/logos/wired.png" alt="Wired Logo" /></div>
+      <div><img src="../images/third_party/logos/pinterest.png" alt="Pinterest Logo" /></div>
+      <div><img src="../images/third_party/logos/starbucks.png" alt="Starbucks Logo" /></div>
 
-      <div><img src="images/third_party/logos/forbes.png" alt="Forbes Logo" /></div>
-      <div><img src="images/third_party/logos/iheartradio.png" alt="iHeart Radio Logo" /></div>
-      <div><img src="images/third_party/logos/tinder.png" alt="Tinder Logo" /></div>
+      <div><img src="../images/third_party/logos/forbes.png" alt="Forbes Logo" /></div>
+      <div><img src="../images/third_party/logos/iheartradio.png" alt="iHeart Radio Logo" /></div>
+      <div><img src="../images/third_party/logos/tinder.png" alt="Tinder Logo" /></div>
       </div>
 
   - heading: "Contributors"

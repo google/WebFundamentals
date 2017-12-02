@@ -22,10 +22,12 @@ workbox.routing.registerRoute(
   new RegExp('https://fonts.googleapis.com/(.*)'),
   workbox.strategies.cacheFirst({
     cacheName: 'googleapis',
-    cacheExpiration: {
-      maxEntries: 30
-    }
-  })
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 30,
+      }),
+    ],
+  }),
 );
 ```
 
@@ -39,11 +41,13 @@ workbox.routing.registerRoute(
   /\.(?:png|gif|jpg|jpeg|svg)$/,
   workbox.strategies.cacheFirst({
     cacheName: 'images',
-    cacheExpiration: {
-      maxEntries: 60,
-      maxAgeSeconds: 30 * 24 * 60 * 60 // 30 Days
-    }
-  })
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+      }),
+    ],
+  }),
 );
 ```
 
@@ -56,8 +60,8 @@ aren't precached.
 workbox.routing.registerRoute(
   /\.(?:js|css)$/,
   workbox.strategies.staleWhileRevalidate({
-    cacheName: 'static-resources'
-  })
+    cacheName: 'static-resources',
+  }),
 );
 ```
 
@@ -70,7 +74,7 @@ like `googleapis.com` and `gstatic.com` with a single route.
 ```javascript
 workbox.routing.registerRoute(
   /.*(?:googleapis|gstatic)\.com.*$/,
-  workbox.strategies.staleWhileRevalidate()
+  workbox.strategies.staleWhileRevalidate(),
 );
 ```
 
@@ -81,15 +85,15 @@ store assets in  cache for each origin.
 workbox.routing.registerRoute(
   /.*(?:googleapis)\.com.*$/,
   workbox.strategies.staleWhileRevalidate({
-    cacheName: 'googleapis'
-  })
+    cacheName: 'googleapis',
+  }),
 );
 
 workbox.routing.registerRoute(
   /.*(?:gstatic)\.com.*$/,
   workbox.strategies.staleWhileRevalidate({
-    cacheName: 'gstatic'
-  })
+    cacheName: 'gstatic',
+  }),
 );
 ```
 
@@ -104,12 +108,16 @@ workbox.routing.registerRoute(
     'https://hacker-news.firebaseio.com/v0/*',
     workbox.strategies.cacheFirst({
         cacheName: 'stories',
-        cacheExpiration: {
+        plugins: [
+          new workbox.expiration.Plugin({
             maxEntries: 50,
-            maxAgeSeconds: 5 * 60 // 5 minutes
-        },
-        cacheableResponse: {statuses: [0, 200]}
-    })
+            maxAgeSeconds: 5 * 60, // 5 minutes
+          }),
+          new workbox.cacheableResponse.Plugin({
+            statuses: [0, 200],
+          }),
+        ],
+    }),
 );
 
 ```
@@ -123,6 +131,6 @@ we could use the regular expression `new RegExp('/static/.*/')`, like so:
 ```javascript
 workbox.routing.registerRoute(
   new RegExp('/static/(.*)'),
-  workbox.strategies.staleWhileRevalidate()
+  workbox.strategies.staleWhileRevalidate(),
 );
 ```

@@ -87,15 +87,17 @@ Workbox will log a warning letting you know that the response wasn’t cached.
 ## Force Caching of Opaque Responses
 
 If you are certain that you want to cache an opquae response, you can do
-so using the `CachaeablResponsePlugin`, like so:
+so using the `workbox.cacheableResponse.Plugin`, like so:
 
 ```javascript
 workbox.routing.registerRoute(
   'https://cdn.google.com/example-script.min.js',
   workbox.strategies.cacheFirst({
-    cacheableResponse: {
-      statuses: [0, 200]
-    }
+    plugins: [
+      new workbox.cacheableResponse.Plugin({
+        statuses: [0, 200]
+      })
+    ]
   }),
 );
 ```
