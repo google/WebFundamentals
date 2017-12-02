@@ -100,8 +100,8 @@ When a `message` event listener as received in your web app, the
   meta: 'workbox-broadcast-cache-update',
   // The two payload values vary depending on the actual update:
   payload: {
-    cacheName: *'the-cache-name'*,
-    updatedUrl: *'https://example.com/'*
+    cacheName: 'the-cache-name',
+    updatedUrl: 'https://example.com/'
   }
 }
 ```
