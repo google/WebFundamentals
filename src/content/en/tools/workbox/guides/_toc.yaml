@@ -24,3 +24,5 @@ toc:
 #  path: /web/tools/workbox/guides/migrate
 # - title: "Use as ES2015 Imports"
 #  path: /web/tools/workbox/guides/use-es2015-imports
+- title: "Service Worker Checklist"
+  path: /web/tools/workbox/guides/service-worker-checklist
