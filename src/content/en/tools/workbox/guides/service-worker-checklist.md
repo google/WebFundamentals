@@ -15,7 +15,7 @@ hidden suprises while developing your site.
 
 In general, you should wait for the window load event before registering your
 service worker. This will allow the browser to prioritise assets for the page
-and will prevent any risk of precaching interferring with the page.
+and will prevent any risk of precaching interfering with the page.
 
 ```js
 if ('serviceWorker' in navigator) {
@@ -33,11 +33,11 @@ if ('serviceWorker' in navigator) {
 
 When you register your service worker file, the browser will make a network
 request for the file. If your server returns a `Cache-Control` header with
-your service worker file, some browsers browser will
+your service worker file, some browsers will
 **cache your service worker file in the HTTP cache**. Future requests for
-your service worker file will consult the HTTP cache, which can cause some
+your service worker file will check the HTTP cache, which can cause some
 confusion while developing locally or after publishing a new service worker
-and changes don't seem to be taking affect.
+and changes don't seem to be taking effect.
 
 Generally, most developers will want to set the `Cache-Control` header
 to `no-cache`, forcing browsers to always check the *server* for
