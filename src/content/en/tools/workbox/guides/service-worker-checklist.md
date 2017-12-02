@@ -45,7 +45,7 @@ to 'no-cache', forcing browsers to always check the *server* for
 a new service worker file.
 
 If you are unsure what your current `Cache-Control` header is for your
-service worker, you can check with CURL:
+service worker, you can check with [curl](https://curl.haxx.se/):
 
 <pre class="devsite-terminal">
 curl -I -L https://workbox-demos.firebaseapp.com/demo/workbox-core/sw.js | grep cache-control
