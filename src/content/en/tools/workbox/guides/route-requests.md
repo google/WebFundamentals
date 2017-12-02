@@ -1,5 +1,5 @@
 project_path: /web/tools/workbox/_project.yaml
-book_path: /web/tools/workbox/next/_book.yaml
+book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to route requests with Workbox.
 
 {# wf_updated_on: 2017-11-15 #}

@@ -1,5 +1,5 @@
 project_path: /web/tools/workbox/_project.yaml
-book_path: /web/tools/workbox/next/_book.yaml
+book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
 {# wf_updated_on: 2017-11-27 #}
