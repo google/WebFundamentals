@@ -18,7 +18,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-sw
         - label: Reference
-          path: ../next/reference-docs/latest/workbox
+          path: ../reference-docs/prerelease/workbox
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-sw/
 
@@ -30,7 +30,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-core
         - label: Reference
-          path: ../next/reference-docs/latest/workbox.core
+          path: ../reference-docs/prerelease/workbox.core
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-core/
 
@@ -42,7 +42,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-precaching
         - label: Reference
-          path: ../next/reference-docs/latest/workbox.precaching
+          path: ../reference-docs/prerelease/workbox.precaching
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-precaching/
 
@@ -54,7 +54,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-routing
         - label: Reference
-          path: ../next/reference-docs/latest/workbox.routing
+          path: ../reference-docs/prerelease/workbox.routing
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-routing/
 
@@ -67,7 +67,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-strategies
         - label: Reference
-          path: ../next/reference-docs/latest/workbox.strategies
+          path: ../reference-docs/prerelease/workbox.strategies
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-strategies/
 
@@ -79,7 +79,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-cache-expiration
         - label: Reference
-          path: ../next/reference-docs/latest/workbox.expiration
+          path: ../reference-docs/prerelease/workbox.expiration
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
 
@@ -91,9 +91,9 @@ landing_page:
         - label: Learn more
           path: ./workbox-background-sync
         - label: Reference
-          path: ../next/reference-docs/latest/workbox.backgroundSync
+          path: ../reference-docs/prerelease/workbox.backgroundSync
         # - label: Demo
-        #   path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
+        #   path: https://workbox-demos.firebaseapp.com/demo/workbox-background-sync/
 
       - heading: workbox.googleAnalytics
         description: >
@@ -102,9 +102,9 @@ landing_page:
         - label: Learn more
           path: ./workbox-google-analytics
         - label: Reference
-          path: ../next/reference-docs/latest/workbox.googleAnalytics
+          path: ../reference-docs/prerelease/workbox.googleAnalytics
         # - label: Demo
-        #   path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
+        #   path: https://workbox-demos.firebaseapp.com/demo/workbox-google-analytics/
 
     - items:
       - heading: workbox.cacheableResponse
@@ -114,22 +114,22 @@ landing_page:
         buttons:
         - label: Learn more
           path: ./workbox-cacheable-response
-        # - label: Reference
-        #   path: ../next/reference-docs/latest/workbox.cacheableResponse
-        # - label: Demo
-        #   path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
+        - label: Reference
+          path: ../reference-docs/prerelease/workbox.cacheableResponse
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-cacheable-response/
 
       - heading: workbox.broadcastUpdate
         description: >
           Send messages to pages (via Broadcast Channels) when a cache is
           updated with a new response.
-        # buttons:
-        # - label: Learn more
-        #   path: ./workbox-broadcast-cache-update
-        # - label: Reference
-        #   path: ../next/reference-docs/latest/workbox.broadcastUpdate
-        # - label: Demo
-        #   path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
+        buttons:
+        - label: Learn more
+          path: ./workbox-broadcast-cache-update
+        - label: Reference
+          path: ../reference-docs/prerelease/workbox.broadcastUpdate
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-broadcast-cache-update/
 
     - heading: Node Modules
       description: >
@@ -153,7 +153,7 @@ landing_page:
         # - label: Learn more
         #   path: ./workbox-build
         - label: Reference
-          path: ../next/reference-docs/latest/module-workbox-build
+          path: ../reference-docs/prerelease/module-workbox-build
 
       - heading: workbox-webpack-plugin
         description: >
@@ -163,7 +163,7 @@ landing_page:
         # - label: Learn more
         #  path: ./workbox-webpack-plugin
         - label: Reference
-          path: ../next/reference-docs/latest/module-workbox-webpack-plugin
+          path: ../reference-docs/prerelease/module-workbox-webpack-plugin
 
       # Force Devsite 4-up layout
       - heading: ""
