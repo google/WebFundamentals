@@ -14,7 +14,9 @@ const getLatestTags = require('../reference-docs/get-latest-tags');
 
 gulp.task('workbox-generate-cdn-include-v3', () => {
   const gitUrl = 'https://github.com/GoogleChrome/workbox.git';
-  return getLatestTags.prerelease(gitUrl)
+  return getLatestTags(gitUrl, {
+    includePrerelease: true,
+  })
   .then((latestTags) => {
     // TODO: Replace these three lines for Workbox-build when getModuleUrl()
     // will be exposed
