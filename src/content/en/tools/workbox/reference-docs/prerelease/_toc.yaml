@@ -1,16 +1,10 @@
 toc:
 - title: "BroadcastCacheUpdate"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.broadcastUpdate.BroadcastCacheUpdate
-- title: "BroadcastCacheUpdatePlugin"
-  path: /web/tools/workbox/reference-docs/prerelease/workbox.broadcastUpdate.BroadcastCacheUpdatePlugin
 - title: "CacheableResponse"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.cacheableResponse.CacheableResponse
-- title: "CacheableResponsePlugin"
-  path: /web/tools/workbox/reference-docs/prerelease/workbox.cacheableResponse.CacheableResponsePlugin
 - title: "CacheExpiration"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.expiration.CacheExpiration
-- title: "CacheExpirationPlugin"
-  path: /web/tools/workbox/reference-docs/prerelease/workbox.expiration.CacheExpirationPlugin
 - title: "CacheFirst"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.strategies.CacheFirst
 - title: "CacheOnly"
@@ -21,12 +15,18 @@ toc:
   path: /web/tools/workbox/reference-docs/prerelease/workbox.strategies.NetworkFirst
 - title: "NetworkOnly"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.strategies.NetworkOnly
+- title: "backgroundSync.Plugin"
+  path: /web/tools/workbox/reference-docs/prerelease/workbox.backgroundSync.Plugin
+- title: "cacheableResponse.Plugin"
+  path: /web/tools/workbox/reference-docs/prerelease/workbox.cacheableResponse.Plugin
+- title: "broadcastUpdate.Plugin"
+  path: /web/tools/workbox/reference-docs/prerelease/workbox.broadcastUpdate.Plugin
+- title: "expiration.Plugin"
+  path: /web/tools/workbox/reference-docs/prerelease/workbox.expiration.Plugin
 - title: "PrecacheController"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.precaching.PrecacheController
 - title: "Queue"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.backgroundSync.Queue
-- title: "QueuePlugin"
-  path: /web/tools/workbox/reference-docs/prerelease/workbox.backgroundSync.QueuePlugin
 - title: "RegExpRoute"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.routing.RegExpRoute
 - title: "Route"
@@ -41,10 +41,10 @@ toc:
   path: /web/tools/workbox/reference-docs/prerelease/workbox.backgroundSync
 - title: "workbox.broadcastUpdate"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.broadcastUpdate
+- title: "workbox.cacheableResponse"
+  path: /web/tools/workbox/reference-docs/prerelease/workbox.cacheableResponse
 - title: "workbox.core"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.core
-- title: "workbox.expiration"
-  path: /web/tools/workbox/reference-docs/prerelease/workbox.expiration
 - title: "workbox.expiration"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.expiration
 - title: "workbox.googleAnalytics"
