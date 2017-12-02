@@ -26,7 +26,7 @@ with a specific value, or a combination of the two.
 
 You can configure a [Workbox strategy](./workbox-strategies) to consider
 set of status codes as being eligible for caching by adding a
-`workbox.cacheableResponse.Plugin` instance to a strategies `plugins`:
+`workbox.cacheableResponse.Plugin` instance to a strategy's `plugins` parameter:
 
 ```js
 workbox.routing.registerRoute(

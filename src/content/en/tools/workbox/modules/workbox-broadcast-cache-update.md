@@ -53,7 +53,7 @@ response immediately, but also provides a mechanism for updating the
 cache asynchronously.
 
 To broadcast updates, you just need to add a `broadcastUpdate.Plugin` to your
-stragy options.
+strategy options.
 
 ```js
 workbox.routing.registerRoute(
