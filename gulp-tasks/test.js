@@ -628,8 +628,8 @@ function testMarkdown(filename, contents, options) {
     }
 
     // Verify all includes start with web/
-    matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDES, contents);
-    matched.forEach(function(include) {
+    const includesMatches = wfRegEx.getMatches(wfRegEx.RE_INCLUDES, contents);
+    includesMatches.forEach(function(include) {
       let inclFile = include[1];
       if (inclFile === 'comment-widget.html' ||
           inclFile.indexOf('web/_shared/contributors/') === 0 ||
@@ -646,6 +646,24 @@ function testMarkdown(filename, contents, options) {
         logError(filename, position, `${msg}: ${inclFile}`);
       }
     });
+
+    // This checks for invalid includes like:
+    // `{% include "web/no-closing-quotes %}`
+    const includeStartMatches = wfRegEx.getMatches(
+      wfRegEx.RE_INCLUDES_SOFT, contents);
+    if (includesMatches.length !== includeStartMatches.length) {
+      const strictIncludeMatches = includesMatches.map((match) => match[0]);
+      const problemIncludes = [];
+      includeStartMatches.forEach((includeMatch) => {
+        if (strictIncludeMatches.indexOf(includeMatch[0]) === -1) {
+          problemIncludes.push(includeMatch[0]);
+        }
+      });
+
+      msg = 'Invalid `{% include %}` tags found';
+      logError(
+        filename, null, `${msg}:\n${JSON.stringify(problemIncludes, null, 2)}`);
+    }
 
     // Verify all {% includecode %} elements work properly
     matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDE_CODE, contents);
