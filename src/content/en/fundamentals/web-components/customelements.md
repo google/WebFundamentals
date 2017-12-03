@@ -785,7 +785,7 @@ Warning: At time of writing, no browser has implemented customized built-in
 elements ([status](https://www.chromestatus.com/feature/4670146924773376)).
 This is unfortunate for accessibility and progressive enhancement. If you think
 extending native HTML elements is useful, voice your thoughts <a
-href='https://github.com/w3c/webcomponents/issues/509'>on Github</a>.
+href='https://github.com/w3c/webcomponents/issues/662'>on Github</a>.
 
 To extend an element, you'll need to create a class definition that inherits
 from the correct DOM interface. For example, a custom element that extends

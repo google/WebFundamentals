@@ -264,7 +264,7 @@ Custom Elements API는 새로운 HTML 요소를 생성하는 데 유용하지만
     console.assert(image.height === 200);
     
 
-참고: 일부 브라우저는  <code>is=""</code> 구문 구현을 지원하지 않습니다. 이는 접근성 및 점진적인 개선에 있어서는 불행한 일입니다. 기본 HTML 요소를 확장하는 것이 유용하다고 생각되면 여러분의 생각을 <a href='https://github.com/w3c/webcomponents/issues/509'>Github</a>에 올려 주세요.
+참고: 일부 브라우저는  <code>is=""</code> 구문 구현을 지원하지 않습니다. 이는 접근성 및 점진적인 개선에 있어서는 불행한 일입니다. 기본 HTML 요소를 확장하는 것이 유용하다고 생각되면 여러분의 생각을 <a href='https://github.com/w3c/webcomponents/issues/662'>Github</a>에 올려 주세요.
 
 ## 사용자설정 요소 반응 {: #reactions}
 

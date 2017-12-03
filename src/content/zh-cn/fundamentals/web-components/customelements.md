@@ -260,7 +260,7 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
     console.assert(image.height === 200);
     
 
-注：某些浏览器不推荐使用  <code>is=""</code> 语法。这对可访问性和渐进式增强都不是好消息。如果您认为扩展原生 HTML 元素很有用，请<a href='https://github.com/w3c/webcomponents/issues/509'>在 Github 上</a>发表您的观点。
+注：某些浏览器不推荐使用  <code>is=""</code> 语法。这对可访问性和渐进式增强都不是好消息。如果您认为扩展原生 HTML 元素很有用，请<a href='https://github.com/w3c/webcomponents/issues/662'>在 Github 上</a>发表您的观点。
 
 ## 自定义元素响应{: #reactions}
 

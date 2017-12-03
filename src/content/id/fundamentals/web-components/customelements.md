@@ -264,7 +264,7 @@ atau membuat instance di JavaScript:
     console.assert(image.height === 200);
     
 
-Note: Sebagian browser menyatakan keengganan untuk mengimplementasikan sintaks <code>is=""</code>. Hal ini tidak menguntungkan untuk aksesibilitas dan penyempurnaan progresif. Jika menurut Anda memperluas elemen HTML native berguna, sampaikan pendapat Anda <a href='https://github.com/w3c/webcomponents/issues/509'>di Github</a>.
+Note: Sebagian browser menyatakan keengganan untuk mengimplementasikan sintaks <code>is=""</code>. Hal ini tidak menguntungkan untuk aksesibilitas dan penyempurnaan progresif. Jika menurut Anda memperluas elemen HTML native berguna, sampaikan pendapat Anda <a href='https://github.com/w3c/webcomponents/issues/662'>di Github</a>.
 
 ## Reaksi elemen khusus {: #reactions}
 
