@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to configure Workbox.
 
-{# wf_updated_on: 2017-11-15 #}
+{# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Configure Workbox {: .page-title }
@@ -67,7 +67,7 @@ without mixing up the caches.
 
 ### Custom Cache Names in Strategies
 
-Above discusses how to customise the **default cache names** used
+Above discusses how to customize the **default cache names** used
 for precaching and runtime caching, but it’s not uncommon to want
 additional caches for specific uses, like a cache just for images.
 

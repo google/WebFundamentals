@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
-{# wf_updated_on: 2017-11-27 #}
+{# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Background Sync {: .page-title }
@@ -102,7 +102,7 @@ requests that fail will automatically be added to a Workbox Background Sync
 queue:
 
 For example, the following code creates a QueuePlugin instance, adds it to
-a workbox strategy that gets handled by a roune, and then registers that
+a workbox strategy that gets handled by a route, and then registers that
 route with the default router. The end result is all failed POST requests
 to the API will get retried when connectivity is restored:
 

@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with Workbox.
 
-{# wf_updated_on: 2017-11-15 #}
+{# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Precache Files {: .page-title }
@@ -114,7 +114,7 @@ property like so:
 }
 ```
 
-The most imporant thing to note is that the `revision` is updated whenever
+The most important thing to note is that the `revision` is updated whenever
 there is a change to the file. An md5 hash of the file contents is normally
 enough. If the revision isn't updated files will fail to be
 updated when you update your service worker, see the
@@ -236,7 +236,7 @@ the precache list is up to date.
 
 ### Using workbox-build
 
-The `workbox-build` module provides a method to inject the precace manifest
+The `workbox-build` module provides a method to inject the precache manifest
 into your service worker.
 
 This module is the best option if you currently have a Node based build process

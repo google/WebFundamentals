@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to handle third party requests with Workbox.
 
-{# wf_updated_on: 2017-11-15 #}
+{# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Handle Third Party Requests {: .page-title }
@@ -86,7 +86,7 @@ Workbox will log a warning letting you know that the response wasn’t cached.
 
 ## Force Caching of Opaque Responses
 
-If you are certain that you want to cache an opquae response, you can do
+If you are certain that you want to cache an opaque response, you can do
 so using the `workbox.cacheableResponse.Plugin`, like so:
 
 ```javascript
