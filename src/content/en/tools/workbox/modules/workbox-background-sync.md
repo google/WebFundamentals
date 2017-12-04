@@ -102,7 +102,7 @@ requests that fail will automatically be added to a Workbox Background Sync
 queue:
 
 For example, the following code creates a QueuePlugin instance, adds it to
-a workbox strategy that gets handled by a routine, and then registers that
+a workbox strategy that gets handled by a route, and then registers that
 route with the default router. The end result is all failed POST requests
 to the API will get retried when connectivity is restored:
 
