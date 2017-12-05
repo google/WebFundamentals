@@ -1,0 +1,53 @@
+---
+book_path: "/web/events/_book.yaml"
+landing_page:
+  header:
+    description: 參加的開發人員活動並開始黑客
+  rows:
+  - classname: find-events
+    heading: 找你附近的活動
+    items:
+    - description: |-
+        <p>
+        活動由Google員工，本地Google開發人員小組或其他開發者聚會運行。 每個事件都有一點不同，但通常情況下，一個事件可以包括一個技術講座，一系列的代碼實驗室，以及個人編碼的時間。 在你的地區找到一個或開始你自己的！
+        </p>
+        <p>
+        如果您無法找到附近的活動，請不要擔心！ 一切
+           材料是可用的，所以你可以組織你自己的事件或
+           通過家裡的內容工作。 <a href="\"#featured-events\"">按入精選活動部分了解更多詳情</a>.
+        </p>
+    - custom_html: |-
+        {% framebox height=\"500px\" %}
+          <link rel="\"stylesheet\"" href="\"/web/events/embeds/event-map.css\"">
+          </div><div id="\"map\"" data-tags="\"pwaroadshow,polymer\"">
+          <div id="\"map-key\"">
+            <span class="\"map-key-event" sponsored-pwa="">= Google Organized PWA Road Show</span>
+            <span class="\"map-key-event" pwa="">= PWA Road Show</span>
+            <span class="\"map-key-event" polymer="">= Polymer Polytechnic</span>
+          </div>
+
+          </script><script src="\"/web/events/embeds/event-map.js\"">
+          </script><script src="\"https://maps.googleapis.com/maps/api/js?key=AIzaSyDIJ9XX2ZvRKCJcFRrl-lRanEtFUow4piM&callback=initMap\"" async="" defer="defer">
+        {% endframebox %}
+  - items:
+    - custom_html: "<hr>"
+  - heading: 精選活動
+    items:
+    - buttons:
+      - label: Progressive Web App 路演
+        path: "/web/events/pwaroadshow/"
+      - label: 給機構 Progressive Web App 培訓
+        path: "/web/events/pwa-agency-training/"
+      description: Progressive Web App 路演是一系列在世界各地運行的面對面活動，幫助您學習開始創建漸進式Web應用程序所需的技能。
+        Progressive Web App 應用程序充分利用新技術帶來最佳的移動網站和本地應用程序的用戶。
+      heading: Progressive Web Apps
+      image_path: "/web/events/images/pwa-roadshow-item.jpg"
+    - buttons:
+      - label: Polytechnic 活動
+        path: "/web/events/polytechnic/"
+      description: 理工學院是一系列面對面的社區活動，幫助開發者學習聚合物。 構建在Web Components上面，Polymer讓開發者擴展HTML！
+        來享受談話和hacking，以熟悉這種新技術。
+      heading: Polymer 理工學院
+      image_path: "/web/events/images/polytechnic-item.jpg"
+project_path: "/web/_project.yaml"
+title: 活動
