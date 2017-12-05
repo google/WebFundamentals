@@ -1,0 +1,12 @@
+---
+toc:
+- attributes:
+  - name: data-category
+    value: webFu
+  - name: data-label
+    value: upper-updates
+  lower_tabs:
+    guides:
+    - path: "/web/updates/"
+      title: 主頁
+  name: 更新
