@@ -1557,3 +1557,17 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
+  
+dmitryskripunov:
+  name:
+    given: Dmitry
+    family: Skripunov
+  country: Russia
+  role:
+    - translator
+  twitter: dmitryskripunov
+  google: "116954151022889696749"
+  github: dmitryskripunov
+  email: dskripunov@gmail.com
+  description:
+    en: Dmitry is a Software Engineer
