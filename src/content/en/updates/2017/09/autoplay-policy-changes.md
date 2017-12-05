@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming January 2018.
 
-{# wf_updated_on: 2017-11-29 #}
+{# wf_updated_on: 2017-12-05 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -100,7 +100,7 @@ user gesture will reject the promise with a `NotAllowedError` DOMException. And
 the autoplay attribute will also be ignored.
 
 Note: You can try out this feature policy by enabling the experimental flag
-`chrome://flags/#enable-feature-policy-autoplay-feature`.
+`chrome://flags/#enable-experimental-web-platform-features`.
 
 ### Example scenarios
 
