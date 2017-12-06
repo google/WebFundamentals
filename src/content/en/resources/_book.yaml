@@ -17,6 +17,8 @@ upper_tabs:
           path: /web/resources/writing-an-article
         - title: Writing an update or case study
           path: /web/resources/writing-an-update
+        - title: YAML Front Matter & Attribute Reference
+          path: /web/resources/yaml-and-attr-reference
         - title: Writing style guide
           path: /style/
           status: external
