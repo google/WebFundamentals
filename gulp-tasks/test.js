@@ -570,7 +570,8 @@ function testMarkdown(filename, contents, options) {
           }
         });
       } else {
-        msg = 'No `wf_blink_components` attribute found. Add if appropriate.';
+        msg = 'No `wf_blink_components` attribute found. Please check ' +
+          'https://goo.gl/MVeN2r and add if appropriate.';
         logWarning(filename, null, msg);
       }
     }
