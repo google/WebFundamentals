@@ -15,7 +15,7 @@ description: What's new in Chrome 63 for developers?
 <div class="clearfix"></div>
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="F3_-jTLaFSs"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -35,7 +35,7 @@ I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome
 <div class="clearfix"></div>
 
 Note: Want the full list of changes? Check out the
-[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/62.0.3202.62..63.X.XXXX.XX).
+[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/62.0.3202.62..63.0.3239.84).
 
 ## Dynamic module imports {: #dynamic }
 
