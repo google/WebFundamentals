@@ -630,13 +630,17 @@ function testMarkdown(filename, contents, options) {
     // Verify all includes start with web/
     matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDES, contents);
     matched.forEach(function(include) {
-      let inclFile = include[1];
-      if (inclFile === 'comment-widget.html' ||
-          inclFile.indexOf('web/_shared/contributors/') === 0 ||
-          inclFile.indexOf('web/_shared/latest_show.html') === 0) {
+      position = {line: getLineNumber(contents, include.index)};
+      const inclFile = include[2];
+      const quoteL = include[1];
+      const quoteR = include[3];
+      if (quoteL !== quoteR) {
+        msg = '`{% include %}` tag is badly quoted';
+        logError(filename, position, `${msg}: ${include[0]}`);
+      }
+      if (inclFile === 'comment-widget.html') {
         return;
       }
-      position = {line: getLineNumber(contents, include.index)};
       if (inclFile.indexOf('web/') !== 0) {
         msg = `Include path MUST start with \`web/\` - ${inclFile}`;
         logError(filename, position, msg);
