@@ -571,15 +571,15 @@ function testMarkdown(filename, contents, options) {
           matched[1].split(',').forEach(function(component) {
             component = component.trim();
             if (options.blinkComponents.indexOf(component) === -1) {
-              msg = `The component \`${component}\` is unknown or misspelled.`;
+              msg = `Unknown 'wf_blink_component' (${component}), see ` +
+                `https://goo.gl/VXmg9e`;
               logError(filename, position, msg);
             }
           });
         }
       } else {
-        msg = 'No `wf_blink_components` attribute found. Please check ' +
-          'https://goo.gl/MVeN2r and add if appropriate.';
-        logWarning(filename, null, msg);
+        msg = `No 'wf_blink_components' found, see https://goo.gl/VXmg9e`;
+        logError(filename, null, msg);
       }
     }
 
