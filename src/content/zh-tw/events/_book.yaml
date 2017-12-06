@@ -1,0 +1,25 @@
+---
+upper_tabs:
+- include: "/web/_upper_tabs-Fundamentals.yaml"
+- include: "/web/_upper_tabs-Tools.yaml"
+- include: "/web/_upper_tabs-Updates.yaml"
+- include: "/web/_upper_tabs-Showcase.yaml"
+- heading: 活動
+  lower_tabs:
+    other:
+    - contents:
+      - path: "/web/events/"
+        title: 主頁
+      name: 主頁
+    - contents:
+      - path: "/web/events/pwaroadshow/"
+        title: 路演
+      - path: "/web/events/pwa-agency-training/"
+        title: 培訓機構
+      name: Progressive Web Apps
+    - contents:
+      - path: "/web/events/polytechnic/"
+        title: 理工學院
+      name: 理工學院
+  name: 活動
+  path: "/web/events/"
