@@ -15,9 +15,13 @@
   },
   "homepage": "https://github.com/google/WebFundamentals",
   "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-config-google": "^0.9.1",
     "gulp-remark": "^3.0.0",
+    "husky": "^0.14.3",
     "inquirer": "^3.3.0",
-    "jsdoc-baseline": "https://github.com/hegemonic/baseline/tarball/master"
+    "jsdoc-baseline": "https://github.com/hegemonic/baseline/tarball/master",
+    "workbox-build": "^3.0.0-alpha.1"
   },
   "private": true,
   "dependencies": {
@@ -50,15 +54,17 @@
     "rsync": "^0.5.0",
     "run-sequence": "^1.2.2",
     "semver": "^5.4.1",
+    "unist-util-generated": "^1.1.0",
     "unist-util-visit": "^1.1.1",
     "vfile": "^2.0.1"
   },
   "scripts": {
-    "clean": "gulp clean",
-    "postinstall": "gulp build",
     "build": "gulp build",
+    "clean": "gulp clean",
+    "start": "./start-appengine.sh",
     "test": "gulp test",
+    "prepush": "npm test",
     "prestart": "gulp build",
-    "start": "./start-appengine.sh"
+    "postinstall": "gulp build"
   }
 }

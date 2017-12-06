@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-cli/src/bin.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-cli/src/bin.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>#! /usr/bin/env node
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+**/
+
+const meow &#x3D; require(&#x27;meow&#x27;);
+const updateNotifier &#x3D; require(&#x27;update-notifier&#x27;);
+
+const app &#x3D; require(&#x27;./app.js&#x27;);
+const cleanupStackTrace &#x3D; require(&#x27;./lib/cleanup-stack-trace.js&#x27;);
+const helpText &#x3D; require(&#x27;./lib/help-text&#x27;);
+const logger &#x3D; require(&#x27;./lib/logger&#x27;);
+
+(async () &#x3D;&gt; {
+  const params &#x3D; meow(helpText);
+  updateNotifier({pkg: params.pkg}).notify();
+
+  try {
+    await app(...params.input);
+  } catch (error) {
+    // Show the full error and stack trace if we&#x27;re run with --debug.
+    if (params.flags.debug) {
+      logger.error(&#x60;\n${error.stack}&#x60;);
+    } else {
+      logger.error(&#x60;\n${error.message}&#x60;);
+      logger.debug(&#x60;${cleanupStackTrace(error, &#x27;app.js&#x27;)}\n&#x60;);
+    }
+
+    process.exit(1);
+  }
+})();
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

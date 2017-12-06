@@ -1,9 +1,16 @@
+/**
+ * @fileoverview Gulp Task exporting CLAAT related docs.
+ *
+ * @author Pete LePage <petele@google.com>
+ */
+
 'use strict';
 
 const gulp = require('gulp');
 const path = require('path');
 const glob = require('globule');
 const wfHelper = require('./wfHelper');
+const runSequence = require('run-sequence');
 const wfCodeLabHelper = require('./wfCodeLabHelper');
 
 /**
@@ -19,7 +26,7 @@ function getCLAATFiles(srcPath) {
     .then(function() {
       let opts = {
         srcBase: srcPath,
-        prefixBase: true
+        prefixBase: true,
       };
       let files = glob.find('**/index.md', opts);
       resolve(files);
@@ -59,7 +66,7 @@ function exportAndUpdate(srcPath, destBase, flatten, bookPath, projPath) {
 
 gulp.task('claat:codelabs', function() {
   const srcPath = 'src/data/codelabs';
-  const destPath = path.join(GLOBAL.WF.src.content, 'fundamentals/codelabs');
+  const destPath = path.join(global.WF.src.content, 'fundamentals/codelabs');
   const bookPath = '/web/fundamentals/_book.yaml';
   const projPath = '/web/fundamentals/_project.yaml';
   return exportAndUpdate(srcPath, destPath, false, bookPath, projPath);
@@ -67,8 +74,16 @@ gulp.task('claat:codelabs', function() {
 
 gulp.task('claat:ilt-pwa', function() {
   const srcPath = 'src/data/ilt-pwa';
-  const destPath = path.join(GLOBAL.WF.src.content, 'ilt/pwa');
+  const destPath = path.join(global.WF.src.content, 'ilt/pwa');
   const bookPath = '/web/ilt/pwa/_book.yaml';
   const projPath = '/web/_project.yaml';
   return exportAndUpdate(srcPath, destPath, true, bookPath, projPath);
+});
+
+gulp.task('claat:all', function(callback) {
+  runSequence(
+    ['claat:codelabs',
+    'claat:ilt-pwa'],
+    callback
+  );
 });

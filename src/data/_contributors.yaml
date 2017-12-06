@@ -130,6 +130,7 @@ lucaberton:
   country: IT
   role:
     - contributor
+    - translator
   homepage: 'http://mrevolution.eu'
   google: +LucaBerton
   twitter: mrevolution85
@@ -220,7 +221,7 @@ owencm:
     unit: Product Management
   country: US
   role:
-    - contributer
+    - contributor
   homepage: 'http://www.owencampbellmoore.com/'
   google: +OwenCampbellMoore
   twitter: owencm
@@ -899,6 +900,17 @@ petelepage:
   lanyrd: petele
   description:
     en: Pete is a Developer Advocate
+ 
+kennith:
+  name:
+    given: Kennith
+    family: Leung
+  homepage: http://kennithleung.com
+  twitter: kennith
+  google: +kennith
+  email: kennith.leung@gmail.com
+  role: 
+    - translator
 
 paullewis:
   name:
@@ -921,8 +933,8 @@ henrylim:
     given: Henry
     family: Lim
   org:
-    name: Independent
-    unit: Developer
+    name: Google Developer Group Kuala Lumpur
+    unit: Community Co-organizer
   country: MY
   role:
     - translator
@@ -931,7 +943,7 @@ henrylim:
   homepage: 'https://limhenry.xyz'
   email: lets.email.henry@gmail.com
   description:
-    en: 'Co-Organizer @ GDG Kuala Lumpur'
+    en: 'Henry is the community co-organizer @ Google Developer Group Kuala Lumpur.'
 
 wayouliu:
   name:
@@ -1063,7 +1075,7 @@ addyosmani:
   org:
     name: Google
     unit: Developer Relations
-  country: UK
+  country: USA
   role:
     - author
   google: +AddyOsmani
@@ -1334,6 +1346,20 @@ emilystark:
   twitter: estark37
   email: estark@chromium.org
 
+sunyunjia:
+  name:
+    given: Sandra
+    family: Sun
+  org:
+    name: Google
+    unit: Chrome
+  country: Canada
+  role:
+    - engineer
+  email: sunyunjia@google.com
+  description:
+    en: "Software Engineer working on Chromium"
+
 surma:
   name:
     given: Surma
@@ -1404,6 +1430,23 @@ fouadvaladbeigi:
     - author
   google: "115771375659957547634"
   email: fouad.valadbeigi@unit9.com
+
+majidvp:
+  name:
+    given: Majid
+    family: Valipour
+  homepage: http://zgrs.ca
+  twitter: majido
+  github: majido
+  description:
+    en: "Software Engineer working on Chromium"
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  email: majidvp@google.com
 
 johyphenel:
   name:

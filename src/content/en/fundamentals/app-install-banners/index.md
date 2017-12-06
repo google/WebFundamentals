@@ -202,6 +202,15 @@ a service worker. Your site must:
 * Be visited by the user twice, over two separate days during the course
   of two weeks.
 
+In addition to the above, if your site has a restrictive
+[Content Security Policy](/web/fundamentals/security/csp/), make sure to add
+`*.googleusercontent.com` to the `img-src` directive as Chrome will want to download the icon
+associated with your app from the Play Store.
+
+Note: `*.googleusercontent.com` maybe more verbose than desired. It's possible to narrow this down
+by [remote debugging](/web/tools/chrome-devtools/remote-debugging/) an Android device to find out
+what the URL is of the app icon that Chrome wants to download.
+
 ### Manifest requirements
 
 To integrate into any manifest, add a `related_applications` array with the

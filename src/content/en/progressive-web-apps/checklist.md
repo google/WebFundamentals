@@ -11,10 +11,10 @@ Progressive Web Apps (PWA) are reliable, fast, and engaging, although there are
 many things that can take a PWA from a baseline to exemplary experience.
 
 To help teams create the best possible experiences we've put together this 
-checklist which breaks down all the things we think it takes to be a [Baseline](#baseline) 
-PWA, and how to take that a step further with an [Exemplary](#exemplary) PWA by providing a 
-more meaningful offline experience, reaching interactive even faster and taking 
-care of many more important details.
+checklist which breaks down all the things we think it takes to be a
+[Baseline](#baseline) PWA, and how to take that a step further with an
+[Exemplary](#exemplary) PWA by providing a more meaningful offline experience,
+reaching interactive even faster and taking care of many more important details.
 
 [lighthouse]: https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk
 
@@ -61,8 +61,8 @@ on the this list and may prove helpful in easily testing sites.
       <td>
         <ul>
           <li>
-            Use Lighthouse to verify Yes to all of <b>Design is mobile-friendly</b>,
-            although manually checking can also be helpful.
+            Use Lighthouse to verify Yes to all of <b>Design is mobile-friendly
+            </b>, although manually checking can also be helpful.
           </li>
           <li>
             Check the <a href="//search.google.com/test/mobile-friendly">

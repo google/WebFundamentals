@@ -1,9 +1,10 @@
-'use strict';
-
-/*
-    updateGitStatus.js
-    Updates the Git Status based on Deployment Success Failure
+/**
+ * @fileoverview Updates the Git Status based on Deployment Success Failure.
+ *
+ * @author Pete LePage <petele@google.com>
  */
+
+'use strict';
 
 var chalk = require('chalk');
 let GitHubApi = require('github');

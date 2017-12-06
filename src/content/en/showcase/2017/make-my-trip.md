@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2017-05-17T10:00:00.000Z #}
-{# wf_updated_on: 2017-05-17T10:00:00.000Z #}
+{# wf_published_on: 2017-05-17 #}
+{# wf_updated_on: 2017-05-17 #}
 {# wf_featured_image: /web/showcase/2017/images/make-my-trip/make-my-trip-thumb_2x.jpg #}
 {# wf_featured_snippet: After launching a Progressive Web App, MakeMyTrip.com's conversion rate on the mobile web tripled, while their page-load speed improved by 38%. #}
 {# wf_tags: casestudy,progressive-web-apps #}

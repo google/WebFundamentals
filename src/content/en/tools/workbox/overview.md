@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: Workbox Examples.
 
 {# wf_published_on: 2017-10-04 #}
-{# wf_updated_on: 2017-10-04 #}
+{# wf_updated_on: 2017-11-10 #}
 
 # Overview {: .page-title }
 
@@ -97,7 +97,7 @@ If you've got a simple site, it may suffice to let Workbox generate the
 entire service worker for you. See [`generateSW()`][generateSW] for an
 example.
 
-[generateSW]: /reference-docs/latest/module-workbox-build.html#.generateSW
+[generateSW]: reference-docs/latest/module-workbox-build.html#.generateSW
 
 If you've got a complex site, chances are that you're going to need to set
 up some custom routing logic. In that case, you can write a custom service
@@ -136,7 +136,7 @@ workbox.precache([
 
 See [`injectManifest()`][injectManifest] for an example.
 
-[injectManifest]: /reference-docs/latest/module-workbox-build.html#.injectManifest
+[injectManifest]: reference-docs/latest/module-workbox-build.html#.injectManifest
 
 ## Feedback
 

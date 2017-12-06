@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools' Device Mode lets you mimic how your development  site will look in production on a range of devices.
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2017-11-17 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -31,7 +31,8 @@ The Viewport Controls allow you to test your site against a variety of devices, 
 responsively. It comes in two modes:
 
   1. **Responsive**. Makes the Viewport freely resizable via big handles on either side. 
-  2. **Specific Device**. Locks the Viewport to the exact viewport size of a specific device and emulates certain device characteristics.
+  2. **Specific Device**. Locks the Viewport to the exact viewport size of a specific device and 
+  emulates certain device characteristics.
 
 ## Responsive mode
 
@@ -220,7 +221,12 @@ queries in your stylesheets and display them as colored bars in the top ruler.
 
 Media queries are color-coded as follows:
 
-<style>#colortable { width: 60%; border: none; } #colortable td { border: none; } .max-width { background: #327ff2; width: 10%; } .max-and-min { background: #3b9903; width: 10%; } .min-width { background: #d4731f; width: 10%; }</style>
+<style>
+  #colortable { width: 60%; border: none; } #colortable td { border: none; } 
+  .max-width { background: #327ff2; width: 10%; } 
+  .max-and-min { background: #3b9903; width: 10%; }
+  .min-width { background: #d4731f; width: 10%; }
+</style>
 
 <table id="colortable">
   <tbody>
@@ -282,11 +288,18 @@ Device Mode has some limitations.
 * **Browser functionality**
     * WebGL operates in the emulator, but is not supported on iOS 7 devices.
     * MathML is not supported in Chrome, but is supported on iOS 7 devices.
-    * The [iOS 5 orientation zoom bug](https://github.com/scottjehl/device-bugs/issues/2) is not emulated.
+    * [HLS playback](https://en.wikipedia.org/wiki/HTTP_Live_Streaming) (HTTP Live Streaming for 
+		video) is not supported while emulating, but is supported natively on Android Chrome and iOS.
+    * The [iOS 5 orientation zoom bug](https://github.com/scottjehl/device-bugs/issues/2) is not 
+		emulated.
     * The line-height CSS property operates in the emulator, but is not supported in Opera Mini.
-    * CSS rule limits, such as those in [Internet Explorer](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx), are not emulated.
+    * CSS rule limits, such as those in 
+		[Internet Explorer](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx), 
+		are not emulated.
 * **AppCache**
-    * The emulator does not override the <abbr title="User Agent">UA</abbr> for AppCache [manifest files](https://code.google.com/p/chromium/issues/detail?id=334120) or [view source requests](https://code.google.com/p/chromium/issues/detail?id=119767).
+    * The emulator does not override the <abbr title="User Agent">UA</abbr> for AppCache 
+		[manifest files](https://code.google.com/p/chromium/issues/detail?id=334120) or 
+		[view source requests](https://code.google.com/p/chromium/issues/detail?id=119767).
 
 Despite these limitations, the Device Mode is robust enough for most tasks. 
 When you need to test on a real device, you can use 

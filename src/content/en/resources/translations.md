@@ -21,7 +21,7 @@ your contribution:
 1. Find the document you are going to translate.
 1. Start translating.
 1. When you are done, send the translation for reviews.
-1. Reviewed translation will be sent as a Pull Request by language admin in
+1. Reviewed translation will be sent as a Pull Request by language moderator in
 the community.
 
 To learn more about how GitLocalize works, visit
@@ -32,6 +32,11 @@ If you find any issues or feature requests, please file them in
 
 To chat with other translation contributors, [register to the ChromiumDev
 Slack](https://chromiumdev-slack.herokuapp.com/) and join #l10n channel.
+
+Note: It's important you find someone to review your translation. Try finding a
+reviewer in the Slack's #l10n channel if [no one is assigned as a language
+moderator yet](https://gitlocalize.com/repo/107/roles). If you are interested in
+becoming a moderator, ping @agektmr in #l10n.
 
 Our supported languages include: Arabic (AR), German (DE), Spanish (ES),
 French (FR), Hebrew (HE), Bahasa Indonesia (ID), Italian (IT), Japanese (JA),
@@ -67,7 +72,9 @@ to each article.  For example:
       description:
         en: "Paul is a Developer Advocate"
 
-Also, make sure to append your credit to the bottom of the article:
+Also, make sure to append your credit to the bottom of the article. Because in
+GitLocalize you can't add a new section, add your credit after multiple empty
+lines in the existing last section like following screenshot:
 
 ![](/web/images/gitlocalize_image1.png)
 

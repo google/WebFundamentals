@@ -1,9 +1,10 @@
-'use strict';
-
-/*
-    addCommitComment.js
-    Adds a comment to the current commit with the build status.
+/**
+ * @fileoverview Adds a comment to the current commit with the build status.
+ *
+ * @author Pete LePage <petele@google.com>
  */
+
+'use strict';
 
 const fs = require('fs');
 const chalk = require('chalk');

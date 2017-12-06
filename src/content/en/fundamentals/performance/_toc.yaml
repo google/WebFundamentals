@@ -9,9 +9,9 @@ toc:
       - title: Understanding Low Bandwidth and High Latency
         path: /web/fundamentals/performance/poor-connectivity/
       # - title: Overview
-      #   path: /web/fundamentals/perforamance/loading/
+      #   path: /web/fundamentals/performance/loading/
       # - title: Understanding Loading
-      #   path: /web/fundamentals/perforamance/loading/understand
+      #   path: /web/fundamentals/performance/loading/understand
       - title: Optimizing Content Efficiency
         section:
         - title: Overview
@@ -25,6 +25,9 @@ toc:
           step_group: perf-oce
         - title: Image Optimization
           path: /web/fundamentals/performance/optimizing-content-efficiency/image-optimization
+          step_group: perf-oce
+        - title: Automating Image Optimization
+          path: /web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization
           step_group: perf-oce
         - title: Web Font Optimization
           path: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
@@ -83,6 +86,8 @@ toc:
           path: /web/fundamentals/performance/http2/
       - title: PRPL Pattern
         path: /web/fundamentals/performance/prpl-pattern/
+      - title: Resource Prioritization
+        path: /web/fundamentals/performance/resource-prioritization
     - title: Rendering Performance
       section:
       - title: Overview

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-strategies/NetworkFirst.mjs</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-strategies/NetworkFirst.mjs</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+ Copyright 2016 Google Inc. All Rights Reserved.
+ Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+import {cacheNames} from &#x27;workbox-core/_private/cacheNames.mjs&#x27;;
+import {cacheWrapper} from &#x27;workbox-core/_private/cacheWrapper.mjs&#x27;;
+import {fetchWrapper} from &#x27;workbox-core/_private/fetchWrapper.mjs&#x27;;
+import {assert} from &#x27;workbox-core/_private/assert.mjs&#x27;;
+import {logger} from &#x27;workbox-core/_private/logger.mjs&#x27;;
+
+import messages from &#x27;./utils/messages.mjs&#x27;;
+import cacheOkAndOpaquePlugin from &#x27;./plugins/cacheOkAndOpaquePlugin.mjs&#x27;;
+import &#x27;./_version.mjs&#x27;;
+
+// TODO: Change opaque responses to d.g.c link
+// TODO: Replace &#x60;plugins&#x60; parameter link with link to d.g.c.
+
+/**
+ * An implementation of a
+ * [network first]{@link /web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache}
+ * request strategy.
+ *
+ * By default, this strategy will cache responses with a 200 status code as
+ * well as [opaque responses]{@link https://docs.google.com/document/d/1nHIjXdmXs9nT6_lcGcsZY5UZ-tL9JxXESlKbzAJdBG4/edit?usp&#x3D;sharing}.
+ * Opaque responses are are cross-origin requests where the response doesn&#x27;t
+ * support [CORS]{@link https://enable-cors.org/}.
+ *
+ * @memberof workbox.strategies
+ */
+class NetworkFirst {
+  /**
+   * @param {Object} options
+   * @param {string} options.cacheName Cache name to store and retrieve
+   * requests. Defaults to cache names provided by
+   * [workbox-core]{@link workbox.core.cacheNames}.
+   * @param {string} options.plugins [Plugins]{@link https://docs.google.com/document/d/1Qye_GDVNF1lzGmhBaUvbgwfBWRQDdPgwUAgsbs8jhsk/edit?usp&#x3D;sharing}
+   * to use in conjunction with this caching strategy.
+   * @param {number} options.networkTimeoutSeconds If set, any network requests
+   * that fail to respond within the timeout will fallback to the cache.
+   *
+   * This option can be used to combat
+   * &quot;[lie-fi]{@link /web/fundamentals/performance/poor-connectivity/#lie-fi}&quot;
+   * scenarios.
+   */
+  constructor(options &#x3D; {}) {
+    this._cacheName &#x3D; cacheNames.getRuntimeName(options.cacheName);
+
+    if (options.plugins) {
+      let isUsingCacheWillUpdate &#x3D;
+        options.plugins.some((plugin) &#x3D;&gt; !!plugin.cacheWillUpdate);
+      this._plugins &#x3D; isUsingCacheWillUpdate ?
+        options.plugins : [cacheOkAndOpaquePlugin, ...options.plugins];
+    } else {
+      // No plugins passed in, use the default plugin.
+      this._plugins &#x3D; [cacheOkAndOpaquePlugin];
+    }
+
+    this._networkTimeoutSeconds &#x3D; options.networkTimeoutSeconds;
+    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+      if (this._networkTimeoutSeconds) {
+        assert.isType(this._networkTimeoutSeconds, &#x27;number&#x27;, {
+          moduleName: &#x27;workbox-strategies&#x27;,
+          className: &#x27;NetworkFirst&#x27;,
+          funcName: &#x27;constructor&#x27;,
+          paramName: &#x27;networkTimeoutSeconds&#x27;,
+        });
+      }
+    }
+  }
+
+  /**
+   * This method will perform a request strategy and follows an API that
+   * will work with the
+   * [Workbox Router]{@link workbox.routing.Router}.
+   *
+   * @param {Object} input
+   * @param {FetchEvent} input.event The fetch event to run this strategy
+   * against.
+   * @return {Promise&amp;lt;Response&gt;}
+   */
+  async handle({event}) {
+    const logs &#x3D; [];
+    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+      assert.isInstance(event, FetchEvent, {
+        moduleName: &#x27;workbox-strategies&#x27;,
+        className: &#x27;NetworkFirst&#x27;,
+        funcName: &#x27;handle&#x27;,
+        paramName: &#x27;event&#x27;,
+      });
+    }
+
+    const promises &#x3D; [];
+    let timeoutId;
+
+    if (this._networkTimeoutSeconds) {
+      const {id, promise} &#x3D; this._getTimeoutPromise(event, logs);
+      timeoutId &#x3D; id;
+      promises.push(promise);
+    }
+
+    const networkPromise &#x3D; this._getNetworkPromise(timeoutId, event, logs);
+    promises.push(networkPromise);
+
+    const response &#x3D; await Promise.race(promises);
+
+    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+      logger.groupCollapsed(
+        messages.strategyStart(&#x27;NetworkFirst&#x27;, event));
+      for (let log of logs) {
+        logger.log(log);
+      }
+      messages.printFinalResponse(response);
+      logger.groupEnd();
+    }
+
+    return response;
+  }
+
+  /**
+   * @param {FetchEvent} event
+   * @param {Array} logs A reference to the logs array
+   * @return {Promise&amp;lt;Response&gt;}
+   *
+   * @private
+   */
+  _getTimeoutPromise(event, logs) {
+    let timeoutId;
+    const timeoutPromise &#x3D; new Promise((resolve) &#x3D;&gt; {
+      const onNetworkTimeout &#x3D; async () &#x3D;&gt; {
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+          logs.push(&#x60;Timing out the network response at &#x60; +
+            &#x60;${this._networkTimeoutSeconds} seconds.&#x60;);
+        }
+
+        resolve(await this._respondFromCache(event.request));
+      };
+
+      timeoutId &#x3D; setTimeout(
+        onNetworkTimeout,
+        this._networkTimeoutSeconds * 1000,
+      );
+    });
+
+    return {
+      promise: timeoutPromise,
+      id: timeoutId,
+    };
+  }
+
+  /**
+   * @param {number} timeoutId
+   * @param {FetchEvent} event
+   * @param {Array} logs A reference to the logs Array.
+   * @return {Promise&amp;lt;Response&gt;}
+   *
+   * @private
+   */
+  async _getNetworkPromise(timeoutId, event, logs) {
+    let error;
+    let response;
+    try {
+      response &#x3D; await fetchWrapper.fetch(
+        event.request,
+        this._plugins
+      );
+    } catch (err) {
+      error &#x3D; err;
+    }
+
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+
+    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+      if (response) {
+        logs.push(&#x60;Got response from network.&#x60;);
+      } else {
+        logs.push(&#x60;Unable to get a response from the network. Will respond &#x60; +
+          &#x60;with a cached response.&#x60;);
+      }
+    }
+
+    if (error || !response) {
+      response &#x3D; await this._respondFromCache(event.request);
+      if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+        if (response) {
+          logs.push(&#x60;Found a cached response in the &#x27;${this._cacheName}&#x27;&#x60; +
+            &#x60; cache.&#x60;);
+        } else {
+          logs.push(&#x60;No response found in the &#x27;${this._cacheName}&#x27; cache.&#x60;);
+        }
+      }
+    } else {
+       // Keep the service worker alive while we put the request in the cache
+      const responseClone &#x3D; response.clone();
+      event.waitUntil(
+        cacheWrapper.put(
+          this._cacheName,
+          event.request,
+          responseClone,
+          this._plugins
+        )
+      );
+    }
+
+    return response;
+  }
+
+  /**
+   * Used if the network timeouts or fails to make the request.
+   *
+   * @param {Request} request The fetchEvent request to match in the cache
+   * @return {Promise&amp;lt;Object&gt;}
+   *
+   * @private
+   */
+  _respondFromCache(request) {
+    return cacheWrapper.match(
+      this._cacheName,
+      request,
+      null,
+      this._plugins
+    );
+  }
+}
+
+export {NetworkFirst};
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

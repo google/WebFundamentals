@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Console API to write information to the console,  create JavaScript profiles, and start a debugging session.
 
-{# wf_updated_on: 2016-03-21 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2016-03-21 #}
 
 # Console API Reference {: .page-title }
@@ -209,6 +209,19 @@ Stops the current JavaScript CPU profiling session if one is in progress and
 prints the report to the **Profiles** panel.
 
 See [`console.profile()`](#profile) for an example.
+
+## console.table(array) {: #table }
+
+Logs an array of objects as a table.
+
+    let data = [
+      { name: "Yusuf", age: 26 },
+      { age: 34, name: "Chen" }
+    ];
+
+    console.table(data);
+
+![an example of console.table()](images/table2.png)
 
 ## console.time([label]) {: #time }
 

@@ -538,7 +538,7 @@ for APIs that most media plugins rely on.
 [Media Source Extensions](https://w3c.github.io/media-source/): latest Editor's Draft
 [DASH standard](http://standards.iso.org/ittf/PubliclyAvailableStandards/c057623_ISO_IEC_23009-1_2012.zip)
 (yes, it's a PDF)
-[Overview of the DASH standard](http://dashif.org/mpeg-dash/)
+[Overview of the DASH standard](http://dashif.org/about/)
 
 ### Articles
 
