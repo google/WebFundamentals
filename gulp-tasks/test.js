@@ -367,13 +367,23 @@ function getFiles() {
     return wfHelper.promisedExec(cmd, '.')
     .then(function(results) {
       let files = [];
+      let warnForSideEffect = false;
       results.split('\n').forEach(function(filename) {
-        if (RE_SRC_BASE.test(filename) || RE_DATA_BASE.test(filename) ||
-            RE_GULP_BASE.test(filename) || filename === 'app.yaml' ||
-            filename == 'gulpfile.js') {
-              files.push(filename);
+        if (RE_GULP_BASE.test(filename) || filename === 'gulpfile.js') {
+          warnForSideEffect = true;
+          files.push(filename);
+        } else if (RE_SRC_BASE.test(filename) || RE_DATA_BASE.test(filename) ||
+                   filename === 'app.yaml') {
+          files.push(filename);
         }
       });
+      if (warnForSideEffect === true) {
+        const warn = chalk.yellow('WARNING:');
+        const msg = `Gulp tasks have changed, be sure to run with ` +
+          `${chalk.cyan('--testAll')} or ${chalk.cyan('--testMaster')} ` +
+          `to catch any unintended side effects!`;
+        gutil.log(warn, msg);
+      }
       return files;
     });
   }
