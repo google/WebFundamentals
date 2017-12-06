@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Image formats!
 
-{# wf_updated_on: 2017-11-23 #}
+{# wf_updated_on: 2017-12-05 #}
 {# wf_published_on: 2017-11-16 #}
 
 # Automating image optimization {: .page-title }
