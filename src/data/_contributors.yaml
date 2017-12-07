@@ -1302,6 +1302,20 @@ vinamratasingal:
   description:
     en: Lighthouse Product Manager
 
+dmitryskripunov:
+  name:
+    given: Dmitry
+    family: Skripunov
+  country: Russia
+  role:
+    - translator
+  twitter: dmitryskripunov
+  google: "116954151022889696749"
+  github: dmitryskripunov
+  email: dskripunov@gmail.com
+  description:
+    en: Dmitry is a Software Engineer
+    
 andismith:
   name:
     given: Andi
