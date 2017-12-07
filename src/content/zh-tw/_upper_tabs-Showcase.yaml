@@ -1,0 +1,12 @@
+---
+toc:
+- attributes:
+  - name: data-category
+    value: webFu
+  - name: data-label
+    value: upper-showcase
+  lower_tabs:
+    guides:
+    - path: "/web/showcase/"
+      title: 主頁
+  name: 實例探究
