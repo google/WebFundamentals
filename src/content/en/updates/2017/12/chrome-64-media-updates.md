@@ -4,7 +4,7 @@ description: A round up of the audio/video updates in Chrome 64.
 
 {# wf_updated_on: 2017-12-05 #}
 {# wf_published_on: 2017-12-05 #}
-{# wf_tags: news,chrome64,media #}
+{# wf_tags: news,chrome64,media,audio,video #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
 {# wf_featured_snippet: Predictable media playback, HDR on Windows 10, offline playback with persistent licenses, and more are waiting for you in Chrome 64. #}
 {# wf_blink_components: Blink>Media #}
@@ -13,7 +13,7 @@ description: A round up of the audio/video updates in Chrome 64.
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-- Web developers can now [predict whether a playback will be smooth and power
+- Web developers can now [predict whether playback will be smooth and power
   efficient](#media-capabilities-decoding-info-api).
 - Chrome now supports [HDR video playback on Windows
   10](#hdr-video-playback-windows-10).
@@ -72,17 +72,17 @@ navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result => {
 
 You can try different media configurations until you find the best one
 (`smooth` and `powerEfficient`) and use it to play the appropriate media
-stream. For info, Chrome’s current implementation is based on previously
+stream. By the way, Chrome’s current implementation is based on previously
 recorded playback information. It defines `smooth` as true when the percentage
 of dropped frames is less than 10% while `powerEfficient` is true when hardware
 decoded frames occur more than 50% - it will also include frame size as small
 frames are always power efficient.
 
-Note: the returning result from `navigator.mediaCapabilities.decodingInfo` will
+Note: The result returned from `navigator.mediaCapabilities.decodingInfo` will
 always be supported if the media configuration playback stats have not been
 recorded yet by the browser.
 
-I would recommend you use a snippet similar to the one below to detect
+I recommend using a snippet similar to the one below to detect
 availability and fallback to your current implementation for browsers that
 don’t support this API.
 
@@ -119,8 +119,8 @@ function isMediaConfigSupported(mediaConfig) {
 }
 ```
 
-Caution: Snippet above must use `canPlayType()` instead of `isTypeSupported()`
-if media configuration type is `"file"`.
+Caution: The snippet above must use `canPlayType()` instead of `isTypeSupported()`
+if the media configuration type is `"file"`.
 
 In order to get your valuable feedback, the Decoding Info API (part of Media
 Capabilities) is available as an [Origin Trial] in Chrome 64. You will need to
@@ -263,12 +263,12 @@ and following these steps:
 
 1. Go to [https://biograf-155113.appspot.com/ttt/episode-2/]
 2. Click "Make available offline" and wait for the video to be downloaded.
-3. Turn off internet connection.
+3. Turn off your internet connection.
 4. Click the "Play" button and enjoy the video!
 
 ## Media preload defaults to "metadata" {: #media-preload-defaults-metadata }
 
-Matching other browsers implementations, Chrome desktop now sets the default
+Matching other browsers' implementations, Chrome desktop now sets the default
 preload value for `<video>` and `<audio>` elements to "metadata" in order to
 reduce bandwidth and resource usage. This new behaviour only applies to cases
 where no preload value is set. Note that the preload attribute's hint is
@@ -285,8 +285,8 @@ sample](https://googlechrome.github.io/samples/media/preload-metadata).
 
 ## Unsupported playbackRate raises an exception {: #unsupported-playbackRate-raises-exception }
 
-Following an [HTML specification change], when media elements' playbackRate
-is set to a value not supported by Chrome (eg. negative value), a
+Following an [HTML specification change], when media elements' `playbackRate`
+is set to a value not supported by Chrome (e.g. a negative value), a
 "NotSupportedError" DOMException is thrown in Chrome 63.
 
 ```js
@@ -298,7 +298,7 @@ try {
 }
 ```
 
-For info, Chrome’s current implementation raises this exception when new
+By the way, Chrome’s current implementation raises this exception when new
 playbackRate is either negative, less than 0.0625, or more than 16. Give a try
 to the [official
 sample](https://googlechrome.github.io/samples/media/playback-rate-exception)
@@ -321,7 +321,7 @@ from a similar change that was only applying to [MSE videos in Chrome 62].
 
 ## Remove muting for extreme playbackRates {: #remove-muting-extreme-playbackrates }
 
-Before Chrome 64, sound was muted when playbackRate was below 0.5 and above 4
+Before Chrome 64, sound was muted when `playbackRate` was below 0.5 or above 4
 as the quality degraded significantly. As Chrome has switched to a
 Waveform-Similarity-Overlap-Add (WSOLA) approach for quality degrading, sound
 doesn’t need to be muted anymore. It means you can play sound crazy slow and
