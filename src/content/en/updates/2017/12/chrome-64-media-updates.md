@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 64.
 
-{# wf_updated_on: 2017-12-05 #}
-{# wf_published_on: 2017-12-05 #}
-{# wf_tags: news,chrome64,media,audio,video #}
+{# wf_updated_on: 2017-12-08 #}
+{# wf_published_on: 2017-12-08 #}
+{# wf_tags: news,chrome64,media,audio,video,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
 {# wf_featured_snippet: Predictable media playback, HDR on Windows 10, offline playback with persistent licenses, and more are waiting for you in Chrome 64. #}
 {# wf_blink_components: Blink>Media #}
@@ -21,7 +21,7 @@ description: A round up of the audio/video updates in Chrome 64.
   are now supported on Windows and Mac.
 - The [default preload value](#media-preload-defaults-metadata) for `<video>` and
   `<audio>` elements is now "metadata".
-- An [error](#unsupported-playbackRate-raises-exception) is now thrown media
+- An [error](#unsupported-playbackRate-raises-exception) is now thrown when media
   playbackRate is unsupported.
 - Chrome now [pauses all background video-only
   media](#background-video-track-optimizations).
@@ -34,11 +34,11 @@ Today, web developers rely on `isTypeSupported()` or `canPlayType()` to vaguely
 know if some media can be decoded or not. The real question though should be:
 “How well it would perform on this device?”
 
-This is exactly one the things the proposed [Media Capabilities] wants to solve:
-An API to query the browser about the decoding abilities of the device based on
-information such as the codecs, profile, resolution, bitrates, etc. It would
-expose information such as whether the playback should be smooth and power
-efficient based on previous playback statistics recorded by the browser.
+This is exactly one of the things the proposed [Media Capabilities] wants to
+solve: An API to query the browser about the decoding abilities of the device
+based on information such as the codecs, profile, resolution, bitrates, etc. It
+would expose information such as whether the playback should be smooth and
+power efficient based on previous playback statistics recorded by the browser.
 
 In a nutshell, here’s how the Decoding Info API works for now. Check out the
 [official
@@ -74,9 +74,9 @@ You can try different media configurations until you find the best one
 (`smooth` and `powerEfficient`) and use it to play the appropriate media
 stream. By the way, Chrome’s current implementation is based on previously
 recorded playback information. It defines `smooth` as true when the percentage
-of dropped frames is less than 10% while `powerEfficient` is true when hardware
-decoded frames occur more than 50% - it will also include frame size as small
-frames are always power efficient.
+of dropped frames is less than 10% while `powerEfficient` is true when more
+than 50% of frames are decoded by the hardware. Small frames are always
+considered power efficient.
 
 Note: The result returned from `navigator.mediaCapabilities.decodingInfo` will
 always be supported if the media configuration playback stats have not been
@@ -121,6 +121,8 @@ function isMediaConfigSupported(mediaConfig) {
 
 Caution: The snippet above must use `canPlayType()` instead of `isTypeSupported()`
 if the media configuration type is `"file"`.
+
+### Available for Origin Trials
 
 In order to get your valuable feedback, the Decoding Info API (part of Media
 Capabilities) is available as an [Origin Trial] in Chrome 64. You will need to
@@ -298,8 +300,8 @@ try {
 }
 ```
 
-By the way, Chrome’s current implementation raises this exception when new
-playbackRate is either negative, less than 0.0625, or more than 16. Give a try
+By the way, Chrome’s current implementation raises this exception when
+`playbackRate` is either negative, less than 0.0625, or more than 16. Give a try
 to the [official
 sample](https://googlechrome.github.io/samples/media/playback-rate-exception)
 to see this in action.
@@ -325,7 +327,7 @@ Before Chrome 64, sound was muted when `playbackRate` was below 0.5 or above 4
 as the quality degraded significantly. As Chrome has switched to a
 Waveform-Similarity-Overlap-Add (WSOLA) approach for quality degrading, sound
 doesn’t need to be muted anymore. It means you can play sound crazy slow and
-fast now.
+crazy fast now.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=289354)
 
