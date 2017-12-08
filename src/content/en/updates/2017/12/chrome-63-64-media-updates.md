@@ -1,15 +1,15 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the audio/video updates in Chrome 64.
+description: A round up of the audio/video updates in Chrome 63/64.
 
 {# wf_updated_on: 2017-12-08 #}
 {# wf_published_on: 2017-12-08 #}
-{# wf_tags: news,chrome64,media,audio,video,origintrials #}
+{# wf_tags: news,chrome63,chrome64,media,audio,video,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
 {# wf_featured_snippet: Predictable media playback, HDR on Windows 10, offline playback with persistent licenses, and more are waiting for you in Chrome 64. #}
 {# wf_blink_components: Blink>Media #}
 
-# Audio/Video Updates in Chrome 64 {: .page-title }
+# Audio/Video Updates in Chrome 63/64 {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
@@ -152,7 +152,7 @@ support for wide color gamut means colors are more vibrant.
 
 As VP9 Profile 2 10-bit playback is now supported in Chrome for Windows 10 Fall
 Creator Update, Chrome additionally supports HDR video playback when [Windows 10
-is in HDR mode]. On a technical note, Chrome now supports the [scRGB] color
+is in HDR mode]. On a technical note, Chrome 64 now supports the [scRGB] color
 profile which in turn allows media to play back in HDR.
 
 You can give it a try by watching [The World in HDR in 4K (ULTRA HD)] on YouTube
@@ -239,7 +239,7 @@ offline playback is supported in EME.
 
 Until now, Chrome OS and Android were the only platforms to support persistent
 licenses. It is not true anymore. Playing protected content through EME while
-the device is offline is now possible on Windows and Mac as well.
+the device is offline is now possible in Chrome 64 on Windows and Mac as well.
 
 ```js
 const config = [{
@@ -272,10 +272,10 @@ and following these steps:
 
 Matching other browsers' implementations, Chrome desktop now sets the default
 preload value for `<video>` and `<audio>` elements to "metadata" in order to
-reduce bandwidth and resource usage. This new behaviour only applies to cases
-where no preload value is set. Note that the preload attribute's hint is
-discarded when a `MediaSource` is attached to the media element as the web site
-handles its own preload.
+reduce bandwidth and resource usage. This new behaviour only applies in Chrome
+64 to cases where no preload value is set. Note that the preload attribute's
+hint is discarded when a `MediaSource` is attached to the media element as the
+web site handles its own preload.
 
 In other words, `<video>` preload value is now "metadata" while `<video
 preload="auto">` preload value stays "auto". Give a try to the [official
