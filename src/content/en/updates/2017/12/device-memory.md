@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: The Device Memory API allows developers to serve different resources to user based on their device's memory capabilities.
+description: The Device Memory API allows developers to serve different resources to users based on their device's memory capabilities.
 
 {# wf_updated_on: 2017-12-07 #}
 {# wf_published_on: 2017-12-07 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
 {# wf_featured_image: /web/updates/images/2017/06/perf-metrics-histogram.png #}
-{# wf_featured_snippet: The Device Memory API allows developers to serve different resources to user based on their device's memory capabilities. #}
+{# wf_featured_snippet: The Device Memory API allows developers to serve different resources to users based on their device's memory capabilities. #}
 
 # The Device Memory API {: .page-title }
 
@@ -59,8 +59,8 @@ Accept: */*
 
 With this technique you can create one or more versions of your application
 script(s) and respond to requests from the client conditionally based on the
-value set in the `Device-Memory` header. These versions don't need to be
-completely different logic (that's hard to maintain), most of the time the
+value set in the `Device-Memory` header. These versions don't need to contain
+completely different code (as that's harder to maintain). Most of the time the
 "lite" version will just exclude features that may be expensive and not critical
 to the user experience.
 
@@ -111,13 +111,14 @@ app.get('/static/js/:scriptId', (req, res) => {
 
 <aside>
   <strong>Note:</strong>
-  The Accept-CH header works well for a page's subresource, but it doesn't help
-  if you want to conditionally serve page contents based on device capabilities.
-  To address this, the
-  <a href="http://httpwg.org/http-extensions/client-hints.html#accept-ch-lifetime">
-  Accept-CH-Lifetime</a> header (coming soon to Chrome) instructs browsers to
-  include the specified client hints headers in all subsequent request from
-  this origin for the number of seconds specified by the header value.
+  The <code>Accept-CH</code> header works well for a page's subresource, but it
+  doesn't help if you want to conditionally serve page contents based on device
+  capabilities. To address this, the <a
+  href="http://httpwg.org/http-extensions/client-hints.html#accept-ch-lifetime">
+  <code>Accept-CH-Lifetime</code></a> header (coming soon to Chrome) instructs
+  browsers to include the specified client hints headers in all subsequent
+  requests from this origin for the number of seconds specified by the header
+  value.
 </aside>
 
 ### Using the JavaScript API
@@ -126,9 +127,8 @@ In some cases (like with a static file server or a CDN) you won't be able to
 conditionally respond to requests based on an HTTP header. In these cases you
 can use the JavaScript API to make conditional requests in your JavaScript code.
 
-The following logic is very similar to the Express route above, except it
-dynamically determines the script URL in the client-side logic:
-
+The following logic is similar to the Express route above, except it dynamically
+determines the script URL in the client-side logic:
 
 ```
 // Low-memory devices should load the "lite" version of the component.
@@ -147,13 +147,12 @@ serve a component at all.
 In many cases, components are purely enhancements. They add some nice touches to
 the experience, but they aren't required for the app's core functionality. In
 these cases, it may be wise to not load such components in the first place.
-After all, if a component whose purpose is to improve the user experience
-actually ends up making the app load slower or less responsive to user input, is
-it really achieving its goal?
+If a component intended to improve the user experience makes the app sluggish
+or unresponsive, it's not achieving its goal.
 
-With any decision you make that affects the user experience, it's critical that
-you're measuring its impact. It's also critical that you have a clear picture of
-how your app performs today.
+With any decision you make that affects the user experience, it's critical you
+measure its impact. It's also critical that you have a clear picture of how your
+app performs today.
 
 Understanding how device memory correlates with user behavior for the current
 version of your app will better inform what action needs to be taken, and it'll
@@ -162,26 +161,24 @@ give you a baseline against which you can measure the success of future changes.
 
 ## Tracking device memory with analytics
 
-The Device Memory API is very new, and most analytics providers are not tracking
-it by default. However, most analytics providers give you a way to track custom
+The Device Memory API is new, and most analytics providers are not tracking it
+by default. Fortunately, most analytics providers give you a way to track custom
 data (for example, Google Analytics has a feature called [Custom
-Dimensions](https://support.google.com/analytics/answer/2709828)), and you can
-use that to track Device Memory for you users devices.
+Dimensions](https://support.google.com/analytics/answer/2709828)), that you can use to track device memory for you users' devices.
 
-### Using a custom Device Memory dimension
+### Using a custom device memory dimension
 
 Using custom dimensions in Google Analytics is a two-step process.
 
-1. First you have to [set up the custom dimension](
+1. [Set up the custom dimension](
    https://support.google.com/analytics/answer/2709829) in Google Analytics
-2. Next you have to update your tracking code to [`set`](
+2. Update your tracking code to [`set`](
    /analytics/devguides/collection/analyticsjs/accessing-trackers)
    the device memory value for the custom dimension you just created.
 
 When creating the custom dimension, give it the name "Device Memory" and choose
-a [scope](https://support.google.com/analytics/answer/2709828) of "session"
-(since the value will not change during the course of a user's browsing
-session):
+a [scope](https://support.google.com/analytics/answer/2709828) of "session" since the value will not change during the course of a user's browsing
+session:
 
 <figure>
   <img src="/web/updates/images/2017/12/device-memory-custom-dimension.png"
@@ -189,7 +186,6 @@ session):
        width="290"
        height="328" />
 </figure>
-
 
 Next update your tracking code. Here's an example of what it might look like.
 Note that for browsers that don't support the Device Memory API, the dimension
@@ -221,7 +217,7 @@ Analytics will include this value. This will allow you to break down any metric
 you want (e.g. [page load
 times](https://support.google.com/analytics/answer/1205784), [goal completion
 rate](https://support.google.com/analytics/answer/1012040), etc.) by device
-memory, to see if there are any correlations.
+memory to see if there are any correlations.
 
 Since device memory is a custom dimension rather than a built-in dimension, you
 won't see it in any of the standard reports. To access this data you'll have to
@@ -251,15 +247,15 @@ the results and see if they've improved.
 ## Wrapping up
 
 This post outlines how to use the Device Memory API to tailor your application
-to the capabilities of your users devices, and it shows how to measure how these
-users experience your app.
+to the capabilities of your users' devices, and it shows how to measure how
+these users experience your app.
 
 While this post focuses on the Device Memory API, most of the techniques
 described here could be applied to any API that reports device capabilities or
 [network conditions](https://www.chromestatus.com/feature/6338383617982464).
 
-As the device landscape continues to widen, it's more important than ever before
-that web developers consider the entire spectrum of users when making decisions
-that affect their users.
+As the device landscape continues to widen, it's more important than ever that
+web developers consider the entire spectrum of users when making decisions that
+affect their experience.
 
 {% include "comment-widget.html" %}
