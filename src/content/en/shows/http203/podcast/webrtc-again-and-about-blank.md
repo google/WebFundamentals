@@ -9,6 +9,7 @@ description: WebRTC again, and about:blank weirdness.
 {# wf_podcast_fileSize: 16481061 #}
 {# wf_podcast_subtitle: WebRTC again, and about:blank weirdness. #}
 {# wf_featured_image: /web/shows/http203/podcast/images/surma-and-jake-2.jpg #}
+{# wf_blink_components: Blink>WebRTC, Blink>DOM #}
 
 # WebRTC again, and about:blank weirdness {: .page-title }
 
