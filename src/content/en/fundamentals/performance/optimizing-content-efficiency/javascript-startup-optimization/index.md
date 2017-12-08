@@ -1,6 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: You should keep your network transmission and parse/compile cost
+description: Keep your network transmission and parse/compile cost
 for JavaScript low to ensure pages get interactive quickly.
 
 {# wf_updated_on: 2017-11-30 #}
@@ -12,7 +12,7 @@ for JavaScript low to ensure pages get interactive quickly.
 
 As we build sites more heavily reliant on JavaScript, we sometimes pay for what
 we send down in ways that we can’t always easily see. In this article, we’ll
-cover why a little **discipline **can help if you’d like your site to load & be
+cover why a little **discipline** can help if you’d like your site to load and be
 interactive quickly on mobile devices. Delivering less JavaScript can mean less
 time in network transmission, less spent decompressing code and less time
 parsing and compiling this JavaScript.
@@ -20,7 +20,7 @@ parsing and compiling this JavaScript.
 ## Network
 
 When most developers think about the cost of JavaScript, they think about it in
-terms of the **download & execution cost**. Sending more bytes of JavaScript
+terms of the **download and execution cost**. Sending more bytes of JavaScript
 over the wire takes longer the slower a user’s connection is.
 
 <img src="images/1_U00XcnhqoczTuJ8NH8UhOw.png" alt="When a browser requests a
@@ -29,8 +29,8 @@ of resources like JavaScript, they must be parsed and compiled prior to
 execution."/>
 
 This can be a problem, even in first-world countries, as the **effective network
-connection type** a user has might not actually be 3G, 4G or WiFi. You can be on
-coffee-shop Wifi but connected to a cellular hotspot with 2G speeds.
+connection type** a user has might not actually be 3G, 4G or Wi-Fi. You can be on
+coffee-shop Wi-Fi but connected to a cellular hotspot with 2G speeds.
 
 You can **reduce** the network transfer cost of JavaScript through:
 
@@ -61,10 +61,10 @@ You can **reduce** the network transfer cost of JavaScript through:
 * **Removing unused code**. 
     * Identify opportunities for code that can be removed or lazily loaded in
       with [DevTools code
-      coverage](/web/updates/2017/04/devtools-release-notes).
+      coverage](/web/updates/2017/04/devtools-release-notes#coverage).
     * Use
       [babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
-      & browserlist to avoid transpiling features already in modern browsers.
+      and browserlist to avoid transpiling features already in modern browsers.
       Advanced developers may find careful [analysis of their webpack
       bundles](https://github.com/webpack-contrib/webpack-bundle-analyzer) helps
       identify opportunities to trim unneeded dependencies.
@@ -80,9 +80,9 @@ You can **reduce** the network transfer cost of JavaScript through:
     * Use [HTTP
       caching](/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
       to ensure browsers cache responses effectively. Determine optimal
-      lifetimes for scripts (max-age) & supply validation tokens (ETag) to avoid
+      lifetimes for scripts (max-age) and supply validation tokens (ETag) to avoid
       transferring unchanged bytes. 
-    * Service Worker caching can make your app network resilient & give you
+    * Service Worker caching can make your app network resilient and give you
       eager access to features like [V8’s code
       cache](https://v8project.blogspot.com/2015/07/code-caching.html). 
     * Use long-term caching to avoid having to re-fetch resources that haven't
@@ -98,11 +98,16 @@ DevTools](web/tools/chrome-devtools/), parse and compile are part of the yellow
 
 <img src="images/1__4gNDmBlXxOF2-KmsOrKkw.png"/>
 
-The Bottom-Up/Call Tree allow viewing exact Parse/compile timings:
+The Bottom-Up and Call Tree tabs show you exact Parse/compile timings:
 
 <figure> <img src="images/1_GdrVt_BTTzzBOIoyZZsQZQ.png"/> <figcaption> Chrome
 DevTools Performance panel > Bottom-Up. With V8’s Runtime Call Stats enabled, we
 can see time spent in phases like Parse and Compile </figcaption> </figure>
+
+Note: Performance panel support for Runtime Call Stats is currently experimental. 
+To enable, go to chrome://flags/#enable-devtools-experiments -> restart Chrome -> 
+go to DevTools -> Settings -> Experiments -> hit shift 6 times -> check the option
+called `Timeline: V8 Runtime Call Stats on Timeline` and close then re-open DevTools.
 
 But, why does this matter?
 
@@ -110,7 +115,7 @@ But, why does this matter?
 
 Spending a long time parsing/compiling code can heavily delay how soon a user
 can interact with your site. The more JavaScript you send, the longer it will
-take to parse & compile it before your site is interactive.
+take to parse and compile it before your site is interactive.
 
 > Byte-for-byte, **JavaScript is more expensive for the browser to process than
 > the equivalently sized image or Web Font **— Tom Dale
@@ -142,7 +147,7 @@ code between the fastest phones on the market and average phones**.
 
 <figure> <img src="images/1_8BQ3bCYu1AVvJWPR1x8Yig.png"/> <figcaption>This graph
 highlights parse times for a 1MB bundle of JavaScript (~250KB gzipped) across
-desktop & mobile devices of differing classes. When looking at the cost of
+desktop and mobile devices of differing classes. When looking at the cost of
 parse, it’s the decompressed figures to consider e.g ~250KB gzipped JS
 decompresses to ~1MB of code.</figcaption> </figure>
 
@@ -158,7 +163,7 @@ Snapdragon 617 in more average Android hardware.</figcaption> </figure>
 
 This highlights the importance of testing on **average** hardware (like the Moto
 G4) instead of just the phone that might be in your pocket. Context matters
-however: **optimize for the device & network conditions your users have.**
+however: **optimize for the device and network conditions your users have.**
 
 <figure> <img src="images/1_6oEpMEi_pjRNjmtN9i2TCA.png"/> <figcaption>Google
 Analytics can provide insight into the <a
@@ -173,7 +178,7 @@ operating with.</figcaption> </figure>
 Using HTTP Archive (top ~500K sites) to analyze the state of [JavaScript on
 mobile](http://beta.httparchive.org/reports/state-of-javascript#bytesJs), we can
 see that 50% of sites take over 14 seconds to get interactive. These sites spend
-up to 4 seconds just parsing & compiling JS.
+up to 4 seconds just parsing and compiling JS.
 
 <img src="images/1_sVgunAoet0i5FWEI9NSyMg.png"/>
 
@@ -182,7 +187,7 @@ perhaps not surprising that users can be left waiting a while before feeling
 pages are ready to use. We can definitely do better here.
 
 **Removing non-critical JavaScript from your pages can reduce transmission
-times, CPU-intensive parsing & compiling and potential memory overhead. This
+times, CPU-intensive parsing and compiling and potential memory overhead. This
 also helps get your pages interactive quicker.**
 
 ## Execution time
@@ -221,7 +226,7 @@ JavaScript can impact page performance in other ways:
 
 ## Patterns for reducing JavaScript delivery cost
 
-When you’re trying to keep parse/compile & network transmit times for JavaScript
+When you’re trying to keep parse/compile and network transmit times for JavaScript
 slow, there are patterns that can help like route-based chunking or
 [PRPL](/web/fundamentals/performance/prpl-pattern/).
 
@@ -275,7 +280,7 @@ Progressive Bootstrapping are patterns that can help accomplish this.
 for CPU bound devices. Keeping these low matters.**
 
 Teams have found success adopting strict performance budgets for keeping their
-JavaScript transmission & parse/compile times low. See Alex Russell’s "[Can You
+JavaScript transmission and parse/compile times low. See Alex Russell’s "[Can You
 Afford It?: Real-world Web Performance
 Budgets](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/)"
 for guidance on budgets for mobile.
