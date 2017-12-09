@@ -15,13 +15,15 @@ into key actions, providing **goals** and **guidelines** for these actions.
 By laying out a structure for thinking about performance, RAIL enables
 designers and developers to reliably target the highest-impact work.
 
-Every web app has these four distinct aspects to its life cycle, and performance fits into them in different ways:
+Every web app has these four distinct aspects to its life cycle, and performance 
+fits into them in different ways:
 
 ![RAIL performance model](images/rail.png)
 
 ### TL;DR {: .hide-from-toc }
 
-- Focus on the user; the end goal isn't to make your site perform fast on any specific device, it's to ultimately make users happy.
+- Focus on the user; the end goal isn't to make your site perform fast on any 
+specific device, it's to ultimately make users happy.
 - Respond to users immediately; acknowledge user input in under 100ms.
 - When animating or scrolling, produce a frame in under 10ms.
 - Maximize main thread idle time.
@@ -171,7 +173,7 @@ Working in 50ms blocks allows the task to finish while still ensuring instant re
 
 **Goal**: 
 
-* On first load, pages should load and get [interactive](https://developers.google.com/web/tools/lighthouse/audits/time-to-interactive) in under 5 
+* On first load, pages should load and get [interactive](/web/tools/lighthouse/audits/time-to-interactive) in under 5 
 seconds over slow 3G on median mobile hardware.
 * Subsequent loads should take under 2s
 
