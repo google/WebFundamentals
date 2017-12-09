@@ -87,7 +87,7 @@ as effective).
 ## Using Workbox Background Sync with other Workbox Packages
 
 In addition to the Queue class, Workbox Background Sync also provides a
-`QueuePlugin` class, so it can easily integrate with Workbox strategy
+`Plugin` class, so it can easily integrate with Workbox strategy
 classes that takes plugins as options,
 as well as Workbox routes, which respond to requests using Workbox
 strategies.
@@ -96,24 +96,24 @@ For example, if an app that lets users upload images to a server will
 likely use a
 [network-first](./workbox-strategies#network_first_network_falling_back_to_cache)
 strategy, which takes a
-plugin that can respond to failed fetches. By adding the `QueuePlugin`
+plugin that can respond to failed fetches. By adding the `Plugin`
 class to the list of the `NetworkFirst` strategy's plugins, network
 requests that fail will automatically be added to a Workbox Background Sync
 queue:
 
-For example, the following code creates a QueuePlugin instance, adds it to
+For example, the following code creates a `Plugin` instance, adds it to
 a workbox strategy that gets handled by a route, and then registers that
 route with the default router. The end result is all failed POST requests
 to the API will get retried when connectivity is restored:
 
 ```js
-// Create a background sync queue plugin, which automatically adds
+// Create a background sync plugin, which automatically adds
 // failed requests to a background sync queue.
-const queuePlugin = new workbox.backgroundSync.QueuePlugin('myQueueName');
+const bgSyncPlugin = new workbox.backgroundSync.Plugin('myQueueName');
 
-// Create a workbox strategy that uses the queue plugin.
+// Create a workbox strategy that uses the bg sync plugin.
 const networkFirstStrategy = new workbox.strategies.NetworkFirst({
-  plugins: [queuePlugin],
+  plugins: [bgSyncPlugin],
 });
 
 // Create a route that handles requests with the above strategy.
