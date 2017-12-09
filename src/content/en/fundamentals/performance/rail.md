@@ -4,6 +4,7 @@ description: RAIL is a user-centric performance model. Every web app has these f
 
 {# wf_updated_on: 2017-12-08 #}
 {# wf_published_on: 2015-06-07 #}
+{# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
 # Measure Performance with the RAIL Model {: .page-title }
 
