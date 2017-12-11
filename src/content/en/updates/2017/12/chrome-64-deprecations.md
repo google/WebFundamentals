@@ -5,6 +5,7 @@ description: A round up of the deprecations and removals in Chrome 64 to help yo
 {# wf_updated_on: 2017-12-14 #}
 {# wf_published_on: 2017-12-14 #}
 {# wf_tags: deprecations,removals,chrome64 #}
+{# wf_blink_components: Blink #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 64 to help you plan. In this version, performance API changes, removal of support for multiple shadow roots, and removal of a webkit API. #}
 
