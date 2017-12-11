@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: It's important to understand what using your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help you.
 
-{# wf_updated_on: 2016-08-29 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-05-09 #}
 
 # Understanding Low Bandwidth and High Latency {: .page-title }
@@ -25,7 +25,7 @@ When building or updating a site, you must ensure adequate performance in a vari
 
 [Chrome DevTools](/web/tools/chrome-devtools) lets you test your site with a
 variety of upload/download speeds and [round-trip times][rtt], using presets
-or custom settings from the Network panel. See [Get Started with Analyize
+or custom settings from the Network panel. See [Get Started with Analyze
 Network Performance](/web/tools/chrome-devtools/network-performance) to
 learn the basics.
 

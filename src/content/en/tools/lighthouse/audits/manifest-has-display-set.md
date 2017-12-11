@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Manifest's display Property Is Set" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-21 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-09-21 #}
 
-# Manifest's Display Property Is Set  {: .page-title }
+# Manifest's display Property Is Set  {: .page-title }
 
 ## Why the audit is important {: #why }
 
@@ -38,3 +38,6 @@ exists and that it's value is `fullscreen`, `standalone`, or `browser`.
 
 The manifest that Lighthouse fetches is separate from the one that Chrome
 is using on the page, which can possibly cause inaccurate results.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/manifest-has-display-set.html" %}

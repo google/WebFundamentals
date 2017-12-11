@@ -22,3 +22,6 @@ redirects:
 
 - from: /web/fundamentals/resources/...
   to: /web/resources/
+
+- from: /web/fundamentals/media
+  to: /web/fundamentals/media/video

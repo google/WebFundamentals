@@ -1,8 +1,8 @@
-{% setvar question "Are you currently paused on line 19?" %}
 {% setvar category "DevTools" %}
-{% setvar label "JS / Get Started / Paused On Correct Line" %}
-{% setvar success_button "Yes" %}
+{% setvar label "JS / Get Started / (3) Paused On Correct Line" %}
+{% setvar url %}https://github.com/google/webfundamentals/issues/new?title=[{{ category }} / {{ label }}] {% endsetvar %}
+{% setvar success_button "I'm paused on line 19" %}
 {% setvar success_response "Great. You're right where you should be." %}
-{% setvar fail_button "No" %}
-{% setvar fail_response "Hmm, something's wrong." %}
+{% setvar fail_button "I'm paused on another line" %}
+{% setvar fail_response %}Hmm, something's wrong. Please <a href="{{url}}">open an issue</a> and tell us what line you're paused on.{% endsetvar %}
 {% include "web/_shared/feedback.html" %}

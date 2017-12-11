@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Content Security Policy can significantly reduce the risk and impact of cross-site scripting attacks in modern browsers.
 
 {# wf_published_on: 2012-06-15 #}
-{# wf_updated_on: 2016-02-19 #}
+{# wf_updated_on: 2017-08-11 #}
+{# wf_blink_components: Blink>SecurityFeature #}
 
 # Content Security Policy {: .page-title }
 
@@ -11,35 +12,36 @@ description: Content Security Policy can significantly reduce the risk and impac
 {% include "web/_shared/contributors/josephmedley.html" %}
 
 The web's security model is rooted in the
-[_same-origin policy_](//en.wikipedia.org/wiki/Same-origin_policy){: .external}. Code
+[_same-origin policy_](//en.wikipedia.org/wiki/Same-origin_policy). Code
 from `https://mybank.com` should only have access to `https://mybank.com`'s
 data, and `https://evil.example.com` should certainly never be allowed access.
 Each origin is kept isolated from the rest of the web, giving developers a safe
 sandbox in which to build and play. In theory, this is perfectly brilliant. In
 practice, attackers have found clever ways to subvert the system.
 
-[Cross-site scripting (XSS)](//en.wikipedia.org/wiki/Cross-site_scripting){: .external}
+[Cross-site scripting (XSS)](//en.wikipedia.org/wiki/Cross-site_scripting)
 attacks, for example, bypass the same origin policy by tricking a site into
 delivering malicious code along with the intended content. This is a huge
 problem, as browsers trust all of the code that shows up on a page as being
 legitimately part of that page's security origin. The
-[XSS Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet){: .external} is an old but representative cross-section of the methods an attacker might use to violate this trust by injecting malicious code. If an attacker successfully injects _any_ code at
-all, it's pretty much game over: user session data is compromised and
-information that should be kept secret is exfiltrated to The Bad Guys. We'd
-obviously like to prevent that if possible.
+[XSS Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
+is an old but representative cross-section of the methods an attacker might use
+to violate this trust by injecting malicious code. If an attacker successfully
+injects _any_ code at all, it's pretty much game over: user session data is
+compromised and information that should be kept secret is exfiltrated to The Bad
+Guys. We'd obviously like to prevent that if possible.
 
 This overview highlights a defense that can significantly reduce the risk and
 impact of XSS attacks in modern browsers: Content Security Policy (CSP).
 
 ### TL;DR {: .hide-from-toc }
-* Use whitelists to tell the client what's alowed and what isn't.
+* Use whitelists to tell the client what's allowed and what isn't.
 * Learn what directives are available.
 * Learn the keywords they take.
 * Inline code and `eval()` are considered harmful.
 * Report policy violations to your server before enforcing them.
 
-
-## Source Whitelists 
+## Source whitelists
 
 
 The issue exploited by XSS attacks is the browser's inability to distinguish
@@ -53,7 +55,7 @@ probably isn't. The browser happily downloads and executes any code a page
 requests, regardless of source.
 
 Instead of blindly trusting _everything_ that a server delivers, CSP defines the
-`Content-Security-Policy` HTTP header that allows you to create a whitelist of
+`Content-Security-Policy` HTTP header, which allows you to create a whitelist of
 sources of trusted content, and instructs the browser to only execute or render
 resources from those sources. Even if an attacker can find a hole through which
 to inject script, the script won't match the whitelist, and therefore won't be
@@ -87,13 +89,18 @@ than the success they were expecting.
 While script resources are the most obvious security risks, CSP provides a rich
 set of policy directives that enable fairly granular control over the resources
 that a page is allowed to load. You've already seen `script-src`, so the concept
-should be clear. Let's quickly walk through the rest of the resource directives:
+should be clear.
+
+Let's quickly walk through the rest of the resource directives. The list below
+represents the state of the directives as of level 2. A [level 3
+spec](https://www.w3.org/TR/CSP3/) has been published, but is [largely
+unimplemented](https://www.chromestatus.com/features#csp3) in the major
+browsers.
 
 * **`base-uri`** restricts the URLs that can appear in a page's `<base>` element.
 * **`child-src`** lists the URLs for workers and embedded frame contents. For
   example: `child-src https://youtube.com` would enable embedding videos from
-  YouTube but not from other origins. Use this in place of the deprecated
-  **`frame-src`** directive.
+  YouTube but not from other origins.
 * **`connect-src`** limits the origins that you can connect to (via XHR,
   WebSockets, and EventSource).
 * **`font-src`** specifies the origins that can serve web fonts. Google's web
@@ -103,7 +110,8 @@ fonts could be enabled via `font-src https://themes.googleusercontent.com`.
 This directive applies to `<frame>`, `<iframe>`, `<embed>`, and `<applet>` tags.
 This directive can't be used in `<meta>` tags and applies only to non-HTML
 resources.
-* **`frame-src`** deprecated. Use **`child-src`** instead.
+* **`frame-src`** was deprecated in level 2, but is restored in level 3. If not
+present it still falls back to  `child-src` as before.
 * **`img-src`** defines the origins from which images can be loaded.
 * **`media-src`** restricts the origins allowed to deliver video and audio.
 * **`object-src`** allows control over Flash and other plugins.
@@ -115,6 +123,10 @@ tags.
 * **`upgrade-insecure-requests`** instructs user agents to rewrite URL schemes,
 changing HTTP to HTTPS. This directive is for websites with large numbers of
 old    URL's that need to be rewritten.
+* **`worker-src`** is a CSP Level 3 directive that restricts the URLs that may
+be loaded as a worker, shared worker, or service worker. As of July 2017, this
+directive has
+[limited implementations](https://www.chromestatus.com/features/5922594955984896).
 
 By default, directives are wide open. If you don't set a specific policy for a
 directive, let's say `font-src`, then that directive behaves by default as
@@ -204,7 +216,7 @@ inside of an `<iframe>` with a `sandbox` attribute. This can have a wide range o
 effects on the page: forcing the page into a unique origin, and preventing form
 submission, among others. It's a bit beyond the scope of this article, but you
 can find full details on valid sandboxing attributes in the
-["Sandboxing" section of the HTML5 spec](https://developers.whatwg.org/origin-0.html#sandboxing){: .external}.{: .external}.
+["Sandboxing" section of the HTML5 spec](https://html.spec.whatwg.org/dev/origin.html#sandboxing)..
 
 ### The meta tag
 
@@ -274,7 +286,8 @@ code if you do the work to move code into external resources.
 
 Inline style is treated in the same way: both the `style` attribute and `style`
 tags should be consolidated into external stylesheets to protect against a
-variety of [surprisingly clever](http://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html){: .external}
+variety of [surprisingly
+clever](http://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html)
 data exfiltration methods that CSS enables.
 
 If you must have inline script and style, you can enable it
@@ -345,7 +358,7 @@ This has more than a few impacts on the way you build applications:
 
 *   You must parse JSON via the built-in `JSON.parse`, rather than relying on
     `eval`. Native JSON operations are available in
-    [every browser since IE8](http://caniuse.com/#feat=json){: .external}, and they're
+    [every browser since IE8](http://caniuse.com/#feat=json), and they're
     completely safe.
 *   Rewrite any `setTimeout` or `setInterval` calls you're currently making
     with inline functions rather than strings. For example:
@@ -368,10 +381,11 @@ would be better written as:
     nifty application of dynamic programming, but comes at the risk of
     evaluating malicious text. Some frameworks support CSP out of the box,
     falling back to a robust parser in the absence of `eval`.
-    [AngularJS's ng-csp directive](https://docs.angularjs.org/api/ng/directive/ngCsp){: .external} is a good example of this.
+    [AngularJS's ng-csp directive](https://docs.angularjs.org/api/ng/directive/ngCsp)
+    is a good example of this.
 
 However, a better choice would be a templating language that offers
-precompilation ([Handlebars does](http://handlebarsjs.com/precompilation.html){: .external},
+precompilation ([Handlebars does](http://handlebarsjs.com/precompilation.html),
 for instance). Precompiling your templates can make the user experience even
 faster than the fastest runtime implementation, and it's safer too.  If eval and
 its text-to-JavaScript brethren are essential to your application, you can
@@ -380,7 +394,7 @@ directive, but we strongly discourage this. Banning the ability to execute
 strings makes it much more difficult for an attacker to execute unauthorized
 code on your site.
 
-## Reporting 
+## Reporting
 
 
 CSP's ability to block untrusted resources client-side is a huge win for your
@@ -435,7 +449,7 @@ turn up; when you're satisfied with its effect, start enforcing the new policy.
 
 
 
-## Real World Usage 
+## Real World Usage
 
 CSP 1 is quite usable in Chrome, Safari, and Firefox, but has very limited
 support in IE 10. You can <a href="http://caniuse.com/#feat=contentsecuritypolicy">
@@ -453,14 +467,15 @@ best be able to support them within the protective confines of CSP.
 
 ### Use case #1: social media widgets
 
-* Google's [+1 button](/+/web/+1button/){: .external}
+* Google's [+1 button](/+/web/+1button/)
 includes a script from `https://apis.google.com`, and embeds an `<iframe>` from
 `https://plusone.google.com`. You need a policy that includes both these
 origins in order to embed the button. A minimal policy would be `script-src
 https://apis.google.com; child-src https://plusone.google.com`. You also need
 to ensure that the snippet of JavaScript that Google provides is pulled out into
-an external JavaScript file. If you have an existing policy using `child-src`,
-you need to change it to `child-src`.
+an external JavaScript file. If you had a Level 1-based policy using `frame-src`
+Level 2 required you to change it to `child-src`. This is no longer necessary
+in CSP Level 3.
 
 * Facebook's [Like button](//developers.facebook.com/docs/plugins/like-button){: .external }
 
@@ -479,8 +494,8 @@ You'll be all set with `script-src https://platform.twitter.com; child-src
 https://platform.twitter.com`, as long as you move the JavaScript snippet
 that Twitter provides out into an external JavaScript file.
 
-* Other platforms have similar requirements, and can be addressed similarly. 
-We suggest just setting a `default-src` of `'none'`, and watching your console to 
+* Other platforms have similar requirements, and can be addressed similarly.
+We suggest just setting a `default-src` of `'none'`, and watching your console to
 determine which resources you'll need to enable to make the widgets work.
 
 Including multiple widgets is straightforward: simply combine the policy
@@ -525,7 +540,7 @@ overwrites the default for that specific type of resource.
 Content Security Policy Level 2 is a <a href="http://www.w3.org/TR/CSP2/">
 Candidate Recommendation</a>. The W3C's Web Application Security Working Group
 has already begun work on the specification's next iteration,
-[Content Security Policy Level 3](https://www.w3.org/TR/CSP3/){: .external }. 
+[Content Security Policy Level 3](https://www.w3.org/TR/CSP3/){: .external }.
 
 
 If you're interested in the discussion around these upcoming features,

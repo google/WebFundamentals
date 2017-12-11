@@ -1,92 +1,99 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Composição é onde as partes pintadas da página são agrupadas para exibição na tela.
+description: A composição é o agrupamento das partes gravadas da página para exibição na tela.
 
+{# wf_updated_on: 2015-03-20 #}
+{# wf_published_on: 2015-03-20 #}
 
-{# wf_updated_on: 2015-03-19 #}
-{# wf_published_on: 2000-01-01 #}
-
-# Atenha-se a propriedades de compositor-unico e gerencia a contagem de camada {: .page-title }
+# Trabalhar apenas com propriedades do compositor e gerenciar o número de camadas {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-
-Composição é onde as partes pintadas da página são agrupadas para exibição na tela.
-
-### TL;DR {: .hide-from-toc }
-- Atenha-se à mudanças de transforms e opacity para suas animações.
-- Promova elementos de movimentação com will-change ou translateZ.
-- Evite usar muitas regras de promoção; as camadas exigem mais memória e gerenciamento.
-
+A composição é o agrupamento das partes gravadas da página 
+para exibição na tela.
 
 Há dois fatores principais nesta área que afetam o desempenho da página: o número de camadas do compositor que precisam ser gerenciadas e as propriedades usadas para animações.
 
-## Use mudanças de transforms e opacity para animações
-A versão de melhor desempenho do pixel pipeline evita o layout e a pintura e exige apenas mudanças de composição:
+### TL;DR {: .hide-from-toc }
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg"  alt="O pixel pipeline sem layout ou pintura.">
+* Limitar-se a mudanças de "transform" e "opacity" nas animações.
+* Promover elementos movimentáveis com `will-change` ou `translateZ`.
+* Evitar uso excessivo das regras de promoção — as camadas exigem memória e gerenciamento.
 
-Para isso, você precisará ater-se às propriedades de alteração que podem ser tratadas apenas pelo compositor. Hoje há apenas duas propriedades onde isso é acontece: **transforms** e **opacity**:
+## Use mudanças de transform e opacity para animações
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg"  alt="As propriedades que você pode animar sem acionar o layout ou a pintura.">
+A versão do pipeline de pixels com o melhor desempenho evita o layout e a coloração e exige apenas mudanças de composição:
 
-A advertência para o uso de transforms e opacity é que o elemento no qual você altera essas propriedades deve estar em _sua própria camada do compositor_. Para criar uma camada, você deve promover o elemento, que será abordado a seguir.
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg"  alt="O pipeline de pixels sem layout ou coloração.">
 
-Note: Se você está preocupado que não poderá limitar suas animações apenas para essas propriedades, veja o <a href='http://aerotwist.com/blog/flip-your-animations'>Princípio FLIP</a>, que pode ajudá-lo a remapear animações para mudanças de transforms e opacity de propriedades mais caras.
+Para isso, você precisará se limitar a mudar propriedades que podem ser tratadas apenas pelo compositor. Atualmente, existem apenas duas propriedades onde isso é verdade: **`transforms`** e **`opacity`**:
 
-## Promova elementos que planeja animar
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg"  alt="As propriedades que podem ser animadas sem acionar o layout ou a coloração.">
 
-Como mencionado na seção “[Simplificar a complexidade da pintura e reduzir as áreas de pintura](simplify-paint-complexity-and-reduce-paint-areas)”, promova elementos a serem animados (com bom senso, sem exageros!) para sua própria camada:
+A limitação do uso de `transform`s e `opacity` é que o elemento em que essas propriedades são alteradas deve estar em _sua própria camada de composição_. Para criar uma camada, você deve promover o elemento. Veremos esse tópico a seguir.
+
+Observação: se você está preocupado que pode não ter como limitar as animações apenas para a propriedades, dê uma olhada no [Princípio FLIP](https://aerotwist.com/blog/flip-your-animations) para obter ajudar para remapear as animações nas mudanças de transforms e opacity por parte de propriedades mais pesadas.
+
+## Promover os elementos que serão animados
+
+Como mencionado na seção "[Simplificar a complexidade da coloração e reduzir as áreas de coloração](simplify-paint-complexity-and-reduce-paint-areas)", promova os elementos que pretende animar (com bom senso, sem exageros!) para a sua própria camada:
 
 
     .moving-element {
       will-change: transform;
     }
-    
 
-Para navegadores mais antigos ou aqueles que não suportam will-change:
+
+Ou, para navegadores mais antigos ou que não permitem will-change:
 
 
     .moving-element {
       transform: translateZ(0);
     }
-    
 
-Isso envia ao navegador uma advertência de que as alterações estão em andamento e, dependendo do que será alterado, o navegador pode realizar provisões, como a criação de camadas do compositor.
 
-## Gerencie camadas e evite explosões de camada
+Isso envia ao navegador uma advertência sobre alterações iminentes. Dependendo do que será alterado, o navegador poderá tomar algumas medidas, como a criação de camadas do compositor.
 
-Tendo em vista que as camadas podem ajudar no desempenho, talvez você considere promover todos os elementos na sua página da seguinte forma:
+## Gerenciar camadas e evitar um número excessivo de camadas
+
+Como as camadas podem frequentemente ajudar no desempenho, pode ser tentador promover todos os elementos da página da seguinte forma:
 
 
     * {
       will-change: transform;
       transform: translateZ(0);
     }
-    
 
-Que é uma forma indireta de dizer que gostaria de promover todos os elemento da página. O problema é que cada camada criada exige memória e gerenciamento, que acarreta custos. Na verdade, em dispositivos com memória limitada, o impacto sobre o desempenho pode superar qualquer benefício de criação da camada. Cada textura de camada precisa ser carregada na GPU. Portanto, há mais restrições em termos de largura de banda entre CPU e GPU e memória disponível para texturas no GPU.
 
-Em resumo, **não promova elementos desnecessariamente**.
+O que é uma forma indireta de dizer que você quer promover todos os elementos da página. O problema é que cada camada criada exige memória e gerenciamento, e isso gera custos. Na verdade, em dispositivos com memória limitada, o impacto negativo sobre o desempenho pode superar qualquer benefício da criação da camada. Cada textura de camada precisa ser carregada na GPU. Portanto, há mais restrições em termos de largura de banda entre a CPU e a GPU e de memória disponível para texturas na GPU.
 
-## Use o Chrome DevTools para compreender as camadas em seu aplicativo
+Aviso: não promova elementos sem necessidade.
 
-Para uma melhor compreensão das camadas em seu aplicativo e qualquer elemento que tenha uma camada, habilite o gerador de perfis de Pintura na Linha cronológica do Chrome DevTools:
+## Usar o Chrome DevTools para compreender as camadas do aplicativo
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg"  alt="A alternância para o gerador de perfis de pintura no Chrome DevTools.">
+<div class="attempt-right">
+  <figure>
+    <img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg" alt="A ativação do gerador de perfis de coloração no Chrome DevTools.">
+  </figure>
+</div>
 
-Com isso ativado, você precisará de uma gravação. Quando a gravação for finalizada, você poderá clicar em frames individuais, encontrado entre as barras frames-por-segundo e os detalhes:
+Para uma melhor compreensão das camadas do aplicativo e do motivo pelo qual um elemento tem uma camada, ative o gerador de perfis de coloração no Timeline do Chrome DevTools:
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg"  alt="Um frame que o desenvolvedor está interessado em perfilar.">
+<div style="clear:both;"></div>
 
-Clicar nisso trará uma nova opção nos detalhes: a guia camadas.
+Após a ativação, faça uma gravação. Quando a gravação for finalizada, você poderá clicar em quadros individuais que se encontram entre barras de quadros por segundo e os detalhes:
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg"  alt="O botão da guia camadas no Chrome DevTools.">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg"  alt="Um quadro para o qual o desenvolvedor quer gerar um perfil.">
 
-Essa opção exibirá uma nova visualização que permite deslocar, digitalizar e ampliar em todas as camadas durante esse frame, junto com os motivos pelos quais cada camada foi criada.
+Clique no quadro para exibir uma nova opção nos detalhes: uma guia Layer.
+
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg"  alt="O botão da guia Layer no Chrome DevTools.">
+
+Essa opção exibirá uma nova visualização que permite deslocar, percorrer e aumentar o zoom em todas as camadas desse quadro, bem como os motivos pelos quais cada camada foi criada.
 
 <img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-view.jpg"  alt="A visualização de camadas no Chrome DevTools.">
 
-Com essa visualização você pode rastrear o número de camadas que possui. Se estiver gastando muito tempo na composição durante ações críticas de desempenho como rolagem ou transições (o ideal é algo em torno de **4-5 ms**), pode-se usar essa informação para verificar o número de camadas, por quê elas foram criadas e a partir desse ponto, gerenciar as contagens de camadas em seu aplicativo.
+Com essa visualização, você pode controlar o número de camadas. Se você estiver gastando muito tempo na composição durante ações de desempenho crítico, como rolagem ou transições (o ideal é algo em torno de **4 a 5 ms**), poderá usar essas informações para verificar o número de camadas e o motivo da sua criação, além de gerenciar o número de camadas do aplicativo.
 
 
+{# wf_devsite_translation #}

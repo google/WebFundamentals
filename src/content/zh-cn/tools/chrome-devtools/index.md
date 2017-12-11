@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 选项1
 
-{# wf_updated_on: 2017-01-25 #}
+{# wf_updated_on: 2017-07-12 #}
 {# wf_published_on: 2016-03-28 #}
 
 # Chrome 开发者工具 {: .page-title }
@@ -84,7 +84,7 @@ Dogfood: 寻找最新版本的Chrome 开发者工具, [Chrome Canary](https://ww
 
 
 ### 性能面板
-注意: 在 Chrome 57 之后时间线面板更名为性能面板.
+Note: 在 Chrome 57 之后时间线面板更名为性能面板.
 <img src="images/panels/performance.png" alt="Timeline Panel" class="attempt-right">
 
 使用时间轴面板可以通过记录和查看网站生命周期内发生的各种事件来提高页面的运行时性能。
@@ -97,7 +97,7 @@ Dogfood: 寻找最新版本的Chrome 开发者工具, [Chrome Canary](https://ww
 
 
 ### 内存面板
-注意: 在 Chrome 57 之后分析面板更名为内存面板.
+Note: 在 Chrome 57 之后分析面板更名为内存面板.
 <img src="images/panels/memory.png" alt="Profiles Panel" class="attempt-right">
 
 如果需要比时间轴面板提供的更多信息，可以使用“配置”面板，例如跟踪内存泄漏。
@@ -110,7 +110,7 @@ Use the Profiles panel if you need more information than the Timeline provide, f
 
 
 ### 应用面板
-注意: 在 Chrome 52 之后资源面板更名为应用面板.
+Note: 在 Chrome 52 之后资源面板更名为应用面板.
 <img src="images/panels/application.png" alt="Application Panel" class="attempt-right">
 
 使用资源面板检查加载的所有资源，包括IndexedDB与Web SQL数据库，本地和会话存储，cookie，应用程序缓存，图像，字体和样式表。

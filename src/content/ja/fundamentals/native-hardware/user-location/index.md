@@ -1,149 +1,171 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: ほとんどのブラウザおよび端末は、ユーザーの地理的位置を検知することができます。 お使いのサイトやアプリ内でユーザーの場所を使って作業する方法を学習します。
+description: ほとんどのブラウザおよび端末は、ユーザーの地理的位置を検知することができます。ここでは、自身のサイトやアプリ内でユーザーの位置情報を扱う方法を学習します。
 
+{# wf_updated_on:2016-08-22 #}
+{# wf_published_on:2014-01-01 #}
 
-{# wf_updated_on: 2014-10-20 #}
-{# wf_published_on: 2014-06-06 #}
-
-# User Location {: .page-title }
+# ユーザーの現在地 {: .page-title }
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
+Geolocation API では、ユーザーの同意を得たうえでユーザーの現在地を確認できます。この機能を使用すると、ユーザーを目的地に案内したり、ユーザーが作成したコンテンツにジオタグを付けたり（写真を撮った場所に印を付けるなど）できます。
 
-Geolocation API では、ユーザーの場所を確認できますが、これは常にユーザーの 同意を得て行います。」 この機能は、ユーザーのクエリの一部として使用することができます。たとえば、 目的地点に人を案内するなどです。 また、「ジオ タグ」ユーザーが作成したいくつかのコンテンツに使用することができます。たとえば、 写真を撮った場所に印を付ける などです。
-
-また、Geolocation API では、ユーザーの場所を確認でき、
-移動するにつれてタブを保持できますが、これらは常にユーザーの同意を得て行います (ページが開いている間のみ)。これには興味深い多くのユースケースがあります。たとえば、ユーザーが近くにいる場合に、バックエンド·システムと統合して、集荷の注文の準備ができます。
-
-Geolocation API を使用する際には多くの注意が必要ですが、このガイドで一般的なユースケースと解決策を説明します。
+Geolocation API では、ユーザーの同意を得ていれば（ページが開いている間のみ）ユーザーの位置を確認でき、移動中もどこにいるのかをトラックできます。
+これにより、さまざまな興味深いユースケースが実現できるようになります。たとえば、バックエンド システムと統合することで、ユーザーが近くにいる場合に、注文した品を受け取れるように準備することができます。
 
 
+Geolocation API を使用する際は、さまざまな点に注意する必要があります。このガイドでは一般的なユースケースとソリューションについて順を追って説明します。
 
-## ユーザーから位置情報提供の同意を得る 
-
-
-
-
-ウェブ開発者として、ユーザーの位置情報にアクセスすることにより、高度なフィルタリング、地図上のユーザー位置のピンポイントでの特定、ユーザーの現在位置に基づいてユーザーが出来ることをプロアクティブに提案する、といった非常に多くの機会を得ることができます。
-
-ユーザーとしては、物理的な場所は
-秘密情報であり、信用できる人のみにその情報を提供します。  これが、サイトがユーザーの場所を尋ねる場合に、ブラウザでプロンプトを
-表示する理由です。
-
-
-最近のユーザー研究によると、
-ユーザーは、ページ読み込み後にユーザーの
-場所を単純に尋ねるサイトを信用しないということが<a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">示されて</a>います。 では、ベスト プラクティスは何でしょうか?
+注: Chrome 50 の時点では、[Geolocation API はセキュアなコンテキスト（HTTPS）でのみ機能します](/web/updates/2016/04/geolocation-on-secure-contexts-only)。セキュアでない仕組み（`HTTP` など）でホストされているサイトの場合、ユーザーの場所を取得するリクエストは**機能しなくなります**。
 
 ### TL;DR {: .hide-from-toc }
-- ユーザーは自分の場所を知らせようとしない、ということを前提にします。
-- ユーザーの位置情報へのアクセスを必要とする理由を明確にします。
-- ページが読み込まれた時点で直ちにはプロンプトを表示しないようにします。
+
+* ユーザーにメリットがあるときに位置情報を使用します。
+* ユーザー操作に対する明確なレスポンスとしてパーミッションを要求します。 
+* ユーザーのブラウザが位置情報をサポートしていない場合に備えて、機能検出を使用します。
+* 位置情報を実装する方法だけでなく、位置情報を最大限活用する方法を学びます。
+* サイトで位置情報をテストします。
+
+##  位置情報の用途
+
+*  特定の物理的な位置に最も近いユーザーの現在地を検索し、ユーザー エクスペリエンスを調整します。
+*  ユーザーのいる場所に応じた情報（ニュースなど）を表示します。
+*  ユーザーの位置を地図上に表示します。
+*  タグデータは、アプリケーション内にユーザーの位置情報と共に作成されます（写真のジオタグなど）。
 
 
-### ユーザーは自分の場所を知らせようとしない、ということを前提にします。
+##  責任を持ってパーミッションを求める
 
-これは難しいかも知れませんが、多くのユーザーは自分の
-場所を知らせたくないと考えるため、防御的な開発スタイルを変える必要があります。
+最近のユーザー調査では、ユーザーは、ページ読み込み後に単純に位置情報を要求するサイトを信用しないという結果が[示されています](http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf)。では、ベスト プラクティスは何でしょうか?
 
-1.  Geolocation API からのすべてのエラーを処理して、
-    サイトをこの条件に適応させるようにします。
-2.  位置情報の必要性を明確かつ明示的にします。
-3.  必要な場合は、代替ソリューションを使用します。
+###  ユーザーは自分の場所を知らせようとしないと想定する
 
-### Geolocation が必要な場合は、代替ソリューションを使用します。
-
-サイトやアプリケーションを、ユーザーの現在位置への
-アクセスを必要しないようにすることを推奨しますが、アプリケーションやサイトが
-それをどうしても必要とする場合は、ユーザーの現在位置の
-最良の推測を可能にするサードパーティのソリューションがあります。
-
-そういったアプリケーションの多くは、ユーザーの IP アドレスを取得して、これを RIPE データベースに登録された
-物理的な位置にマッピングすることによって機能します。  その位置情報は、
-あまり正確でないことが多く、ユーザーに最も近い
-無線通信ハブや電波搭の位置を提供します。  多くの
-ケースでは、特にユーザーが VPN 
-または他のプロキシ サービスを使用していると、さらに不正確になることもあります。
-
-### 常に、ユーザーの操作時に位置情報へのアクセスをリクエストします。
-
-ユーザーが、なぜ位置情報を求められているのか、提供するとどのような
-利点があるかを、ユーザーが理解できるようにします。  
-サイトが読み込まれると同時に、ホームページで位置情報を求めることは、あまり良くないユーザー エクスペリエンスを与える結果になります。
+多くのユーザーは自分の場所を知らせたくないと考えるため、受け身の開発スタイルを採用する必要があります。
 
 
-<figure class="attempt-left">
-  <img src="images/sw-navigation-bad.png" srcset="images/sw-navigation-bad.png 1x, images/sw-navigation-bad-2x.png 2x" alt="">
-  <figcaption>サイトが読み込まれると同時に、ホームページで位置情報を求めることは、あまり良くないユーザー エクスペリエンスを与える結果になります。</figcaption>
-</figure>
-<figure class="attempt-right">
-  <img src="images/sw-navigation-good.png" srcset="images/sw-navigation-good.png 1x, images/sw-navigation-good-2x.png 2x" alt="">
-  <figcaption> 常に、ユーザーの操作時に位置情報へのアクセスをリクエストします。</figcaption>
-</figure>
-<div class="clearfix"></div>
+1. Geolocation API からのすべてのエラーを処理して、サイトをこの条件に適応させるようにします。
+2. 位置情報の必要性を明確かつ明示的にします。
+3. 必要に応じて代替ソリューションを使用します。
 
 
-代わりに、ユーザーに対して明確なアクションを要求する、または
-ユーザーの操作が位置情報へのアクセスを必要としていることを示します。  すると、ユーザーは、
-より容易に、アクセスのシステム プロンプトと、
-今開始したばかりのアクションを関連付けることができます。
+###  Geolocation で必要な場合は、代替ソリューションを使用する
 
-### ユーザーのアクションが位置情報を必要とすることを明確に示します。
+サイトやアプリケーションで、ユーザーの現在位置へのアクセスを要求しないようにすることをお勧めしますが、
+現在位置を取得する必要がある場合は、サードパーティのソリューションによってユーザーの現在位置を適切に推測することができます。
 
-<a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">Google Ad チームの研究では</a>、ユーザーが、特定のホテルのサイトで開催が予定されているコンファレンスのためにボストンのホテルを予約するように求められると、ホームページの「検索と予約」のアクション呼び出しをタップすると直後に GPS の位置情報の共有が求められます。
 
-いくつかのケースでは、
-ボストンのホテルの部屋を予約したいときに、なぜ
-サンフランシスコのホテルが表示されるのか、理解に苦しんでフラストレーションを感じることがあります。
 
-より良いエクスペリエンスは、
-その場所を求める理由をユーザーが理解できるようにすることです。 距離計のような、
-デバイスによらず一般的な記号表現を追加します。
+そういったソリューションの多くは、ユーザーの IP アドレスを取得して、それを RIPE データベースに登録された物理的な位置にマッピングすることによって機能します。多くの場合、これらの位置情報はあまり正確ではなく、通常、ユーザーに最も近い無線通信ハブや電波搭の位置が提供されます。多くのケースでは、特にユーザーが VPN または他のプロキシ サービスを使用していると、さらに精度が落ちる場合もあります。
 
-<img src="images/indication.png">
 
-または、「この近くを検索」のような非常に明示的なアクションの呼び出しを考慮します。
 
-<img src="images/nearme.png">
+###  ユーザーの操作時に限って位置情報へのアクセスをリクエストする
 
-### 位置情報へのアクセス許可が得られるように、丁寧に誘導します。
+位置情報が必要な理由と位置情報を提供した場合の利点を、ユーザーが理解できるようにします。
+サイトが読み込まれた直後にホームページで位置情報を求めると、ユーザーにあまり良くない印象を与えてしまいます。
 
-ユーザーの動作の各ステップにまではアクセスできません。  
-どのような場合にユーザーが位置情報へのアクセスを拒否するかは正確に理解できてても、
-どのような場合にアクセスに同意するかは不明で、結果が表示されたときにのみアクセスが得られたことがわかります。
 
-ユーザーのアクションの完了を必要とする場合は、アクションを起こすようにユーザーの「注意を引く」ことが重要です。
+<div class="attempt-left">
+  <figure>
+    <img src="images/sw-navigation-good.png">
+    <figcaption class="success">
+      <b>推奨</b>: ユーザーの操作時に限って位置情報へのアクセスをリクエストします。</figcaption>
+
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure id="fig1">
+    <img src="images/sw-navigation-bad.png">
+    <figcaption class="warning">
+      <b>非推奨</b>: サイトの読み込み時にホームページで位置情報を求めると、ユーザーにあまり良くない印象を与えてしまいます。</figcaption>
+
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
+
+代わりに、ユーザーに対して明確なアクションを求めるか、ユーザーのアクションには位置情報へのアクセスが必要であることを示します。
+この対応により、ユーザーは、自分が今行ったアクションによって、アクセスを要求するシステム プロンプトが表示されていることを理解しやすくなります。
+
+
+###  ユーザーのアクションに位置情報が必要であることを明確に示す
+
+[Google Ads チームのある調査](http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf)では、ユーザーに対して、特定のホテルの会場で開催されるコンファレンスのためにボストンのホテルを予約するように求めました。ユーザーがホームページ上で [検索と予約] という行動喚起用のボタンをタップすると、直後に GPS の位置情報を共有するよう要求されます。
+
+
+
+
+中には、ボストンのホテルの部屋を予約したいときに、サンフランシスコのホテルが表示される理由が分からず、ストレスを感じたユーザーもいました。
+
+
+
+ユーザー エクスペリエンスを改善するには、位置情報を要求している理由をユーザーが理解できるようにする必要があります。
+レンジ ファインダーのような端末によらない共通のマークを追加するか、[この近くを検索] などの明示的な行動喚起を行うことを検討します。
+
+
+
+<div class="attempt-left">
+  <figure>
+    <img src="images/indication.png">
+    <figcaption>
+      レンジ ファインダーの使用</figcaption>
+
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure id="fig1">
+    <img src="images/nearme.png">
+    <figcaption>
+      付近を検索するための具体的な行動喚起</figcaption>
+
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
+
+### 位置情報へのアクセス許可が得られるようにユーザーを丁寧に誘導する
+
+あらゆるユーザー操作にアクセスできるわけではありません。ユーザーが位置情報へのアクセスを拒否するシーンは自明でも、アクセスを許可するシーンは特定できないため、結果が表示されるまではアクセスが許可されたことを知ることができません。
+
+
+
+
+ユーザーにアクションを完了してほしい場合は、アクションを行うようにユーザーを「誘導する」ことが重要です。
+
 
 推奨事項: 
 
-1.  短い時間経過後にトリガーするタイマーを設定します - 5 秒が適切な値です。
-2.  エラー メッセージが出る場合は、そのメッセージをユーザーにも表示します。
-3.  望ましい応答が得られたら、タイマーを無効にして結果を処理します。
-4.  タイマーがタイムアウトしても望む応答が得られない場合は、ユーザーに通知を表示します。
-5.  応答が遅れて得られ、通知がまだ表示されている場合は、その通知を画面から消去します。
+1.  短い時間が経過した後にトリガーするタイマーを設定します（推奨値は 5 秒）。
+2.  エラー メッセージが出る場合は、そのメッセージをユーザーに表示します。
+3.  期待する応答が得られたら、タイマーを無効にして結果を処理します。
+4.  タイムアウトしても期待する応答が得られない場合は、ユーザーに通知を表示します。
+5.  応答が遅れて得られ、通知がまだ表示されている場合は、その通知を画面から削除します。
 
-<div class="clearfix"></div>
+
+
+
+<div style="clear:both;"></div>
 
     button.onclick = function() {
       var startPos;
       var element = document.getElementById("nudge");
-    
+
       var showNudgeBanner = function() {
         nudge.style.display = "block";
       };
-    
+
       var hideNudgeBanner = function() {
         nudge.style.display = "none";
       };
-    
+
       var nudgeTimeoutId = setTimeout(showNudgeBanner, 5000);
-    
+
       var geoSuccess = function(position) {
         hideNudgeBanner();
         // We have the location, don't display banner
         clearTimeout(nudgeTimeoutId); 
-    
+
         // Do magic with location
         startPos = position;
         document.getElementById('startLat').innerHTML = startPos.coords.latitude;
@@ -156,50 +178,16 @@ Geolocation API を使用する際には多くの注意が必要ですが、こ�
             showNudgeBanner();
             break;
       };
-    
+
       navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
     };
-    
+
+## ブラウザ対応
+
+Geolocation API は現在、大部分のブラウザでサポートされていますが、処理を実行する前には必ずサポート状況を確認することをお勧めします。
 
 
-
-## Obtain the user's current location 
-
-
-Geolocation API では、ユーザーの場所を確認できますが、これは常にユーザーの同意を得て行います。 この機能は、ユーザーのクエリの一部として使用することができます。たとえば、目的地点に人を案内するなどです。 また、ユーザーが作成したいくつかのコンテンツの「ジオタグ」に使用することができます。たとえば、写真を撮った場所に印を付けるなどです。
-
-
-### TL;DR {: .hide-from-toc }
-- API を使用する前に互換性を確認します。
-- 高精度位置よりも低精度位置が適しています。
-- 常にエラーを処理。
-- ユーザーのバッテリーを節約するために、頻繁にデータをポーリングしないでください。
-
-
-API は端末に依存しません。クライアントが標準の方法
-で場所データを要求および受信する限り、ブラウザが場所を特定する
-方法も考慮しません。 基礎となるメカニズムは、GPS、Wi-Fi を媒介する可能性があります。
-あるいは、ユーザーに手動で場所の入力を求めます。 これらの検索のいずれかに時間がかかるため、
-API は非同期になっています。
-場所をリクエストするたびにコールバック メソッドを渡します。
-
-### Geolocation を使用する場合
-
-*  ご自身の物理的な場所に最も近いユーザーの場所を検索し、
-ユーザー·エクスペリエンスを調整します。
-*  ユーザーの場所へ送る情報 (ニュースなど) を調整します。
-*  ユーザの位置を地図上に表示します。
-*  タグ データは、アプリケーション内にユーザーの位置と共に作成されます
- (写真のジオタグなど)。
-
-
-### 互換性の確認
-
-Geolocation API は現在、大部分のブラウザーでサポートされていますが、
-何かを実行する前に必ずサポートについて確認することをお勧めします。
-
-Geolocation オブジェクトの存在をテストすることによって、互換性を
-確認することができます。
+Geolocation オブジェクトの有無を調べることで、簡単に互換性を確認することができます。
 
 
     // check for Geolocation support
@@ -207,15 +195,14 @@ Geolocation オブジェクトの存在をテストすることによって、�
       console.log('Geolocation is supported!');
     }
     else {
-      console.log('Geolocation is not supported for this Browser/OS version yet.');
+      console.log('Geolocation is not supported for this Browser/OS.');
     }
-    
 
-### ユーザーザの現在位置を決定する
 
-Geolocation API は、ユーザーの位置を取得するために、
-単純な「ワンショット」法を提供しています`getCurrentPosition()`。  このメソッドの呼び出しは、
-非同期的にユーザーの現在の場所を報告します。
+##  ユーザーの現在位置を測定する
+
+Geolocation API の `getCurrentPosition()` を利用すると、一度の操作で簡単にユーザーの位置情報を取得できます。
+このメソッドを呼び出すと、非同期的にユーザーの現在位置が報告されます。
 
 
     window.onload = function() {
@@ -227,37 +214,59 @@ Geolocation API は、ユーザーの位置を取得するために、
       };
       navigator.geolocation.getCurrentPosition(geoSuccess);
     };
-    
 
-このドメイン上のアプリケーションがアクセス許可を要求したのが今回が初めての場合、
-ブラウザは通常、ユーザーの同についてチェックします。 ブラウザによって
-、常に許可または非許可の設定を行う場合があります。
-許可の検索を行う場合は、確認プロセスがバイパスされます。
 
-ブラウザが使用している場所の端末によっては、位置オブジェクトが、
-実際には単に緯度と経度よりも多くを含んでいる場合があります。たとえば、高度や方向などです。  実際にデータが返されるまで、その場システムが使用する追加情報がどのようなものかは分かりません。
+そのドメイン上のアプリケーションが初めてアクセス許可をリクエストした場合、ブラウザは通常、ユーザーに位置情報の利用を許可するか確認します。ブラウザによっては、常に許可または拒否の設定がある場合があります。許可したうえで検索を行うと、以降は確認プロセスがスキップされます。
 
-### Geolocation のサイトでのテスト
 
-アプリケーションで HTML5 の Geolocation を使って作業する場合には、
-経度と緯度に異なる値を使用したときには、
-受信した出力をデバッグするために役立ちます。
+ブラウザで使用している位置情報デバイスによっては、緯度と経度に加えて、さらに多くの情報（高度や方向など）が位置オブジェクトに含まれている場合があります。ただし、実際にデータが返されるまで、その位置検出システムで使用する追加情報はわかりません。
 
-DevTools は、navigator.geolocation の更新位置の値と、
-更新メニューで提供されていない模擬ジオロケーションの両方をサポートしています。
 
-<img src="images/emulategeolocation.png">
 
-1. DevTools で更新メニューを開きます。
-2. “Override Geolocation” をクリックして、Lat = 41.4949819 and Lon = -0.1461206 を入力します。
-3. ページを更新すると、Geolocation の位置が更新されます。
+##  ユーザーの位置を監視する
 
-###  常にエラーを処理
+Geolocation API を使用すると、一回 `getCurrentPosition()` を呼び出すことで、ユーザーの位置を取得することができます（ユーザーの同意が必要）。
+  
 
-残念ながら、検索が正常に行われていない場所があります。 GPS で位置を確認できなかったか、
-あるいはユーザーが場所の検索を突然無効にした可能性があります。 2 つめの
-任意の `getCurrentPosition()` の引数は、エラー発生時に呼び出され、
-コールバックの内部をユーザーに通知することができます。
+ユーザーの現在位置を継続的に監視する必要がある場合は、Geolocation API メソッド `watchPosition()` を使用します。
+動作は `getCurrentPosition()` と同様ですが、このメソッドは以下のような場合に、位置情報を得るために繰り返し処理を実行します。
+
+
+
+1.  より正確なユーザーの現在位置をトラックする。
+2.  ユーザーの位置が変化していることを特定する。
+ 
+
+    var watchId = navigator.geolocation.watchPosition(function(position) {
+      document.getElementById('currentLat').innerHTML = position.coords.latitude;
+      document.getElementById('currentLon').innerHTML = position.coords.longitude;
+    });
+
+###  ユーザーの位置を確認するために位置情報を使用する場合
+
+*  より正確なユーザーの現在位置をトラックしたい。
+*  新しい位置情報に基づいて、アプリケーションでユーザー インターフェースをアップデートする必要がある。
+*  ユーザーが特別に定義されたゾーンに入ったときに、アプリケーションでビジネス ロジックをアップデートする必要がある。
+
+
+
+##  位置情報を使用するときのベスト プラクティス
+
+###  不要な追跡は必ず停止してバッテリーを節約する
+
+GeoLocation で位置情報の変化を監視するには、リソースが必要になります。オペレーティング システムでプラットフォーム機能を導入し、アプリケーションから地理サブシステムに接続できるようになっても、ウェブ開発者側は、ユーザーの端末でどの位置監視機能がサポートされているかを知ることができません。また、位置を監視している間は、端末上で追加の処理が多く発生します。
+
+
+
+
+
+ユーザーの位置を追跡する必要がなくなったら、`clearWatch` を呼び出して、位置情報システムをオフにしてください。
+
+
+###  エラーを正しく処理する
+
+残念ながら、検索が正常に行われない場合もあります。たとえば GPS で位置を確認できない場合や、ユーザーが場所の検索を突然無効にした場合などです。
+エラーが発生した場合、任意で `getCurrentPosition()` の第 2 引数に指定したコールバック関数が呼び出されるため、その中でユーザーにエラーを通知することができます。
 
 
     window.onload = function() {
@@ -267,7 +276,7 @@ DevTools は、navigator.geolocation の更新位置の値と、
         document.getElementById('startLat').innerHTML = startPos.coords.latitude;
         document.getElementById('startLon').innerHTML = startPos.coords.longitude;
       };
-      var geoError = function(position) {
+      var geoError = function(error) {
         console.log('Error occurred. Error code: ' + error.code);
         // error.code can be:
         //   0: unknown error
@@ -277,31 +286,30 @@ DevTools は、navigator.geolocation の更新位置の値と、
       };
       navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
     };
-    
 
-### 地理的位置のハードウェアの起動の必要性を低減
 
-多くのユースケースでは、ユーザーの最新の場所の情報は必要ありません。
-大まかな目安だけが必要です。
+###  位置情報ハードウェアを極力起動しないようにする
 
-`maximumAge` のオプションのプロパティを使用して、最近得られた地理的位置の結果を使用するようにブラウザに
-指示します。  ユーザーが前のデータをリクエストした場合、より迅速に返されるだけでなく、
-Wifi の三角測量や GPS などのジオロケーション 
-ハードウェア·インタフェースをブラウザが起動しないようにします。
+多くのユースケースでは、ユーザーの最新の位置情報は必要なく、大まかな位置がわかれば十分です。
+
+
+`maximumAge` オプション プロパティを使用して、最近得られた位置情報の結果を使用するようにブラウザに指示します。
+これにより、ユーザーが以前にデータをリクエストしていた場合に、より迅速にデータが返されるようになるだけでなく、ブラウザによって WiFi の三角測量や GPS などの位置情報ハードウェア インターフェースが起動されなくなります。
+
 
 
     window.onload = function() {
       var startPos;
       var geoOptions = {
-      	maximumAge: 5 * 60 * 1000,
+        maximumAge: 5 * 60 * 1000,
       }
-    
+
       var geoSuccess = function(position) {
         startPos = position;
         document.getElementById('startLat').innerHTML = startPos.coords.latitude;
         document.getElementById('startLon').innerHTML = startPos.coords.longitude;
       };
-      var geoError = function(position) {
+      var geoError = function(error) {
         console.log('Error occurred. Error code: ' + error.code);
         // error.code can be:
         //   0: unknown error
@@ -309,14 +317,14 @@ Wifi の三角測量や GPS などのジオロケーション
         //   2: position unavailable (error response from location provider)
         //   3: timed out
       };
-    
+
       navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
     };
-    
 
-### ユーザー待たせず、タイムアウトを設定する
 
-タイムアウトを設定しない限り、現在の位置のリクエストが戻らない可能性があります。
+###  ユーザー待たせず、タイムアウトを設定する
+
+タイムアウトを設定しないと、現在位置のリクエストに対するレスポンスがずっと返ってこない場合があります。
 
 
     window.onload = function() {
@@ -324,7 +332,7 @@ Wifi の三角測量や GPS などのジオロケーション
       var geoOptions = {
          timeout: 10 * 1000
       }
-    
+
       var geoSuccess = function(position) {
         startPos = position;
         document.getElementById('startLat').innerHTML = startPos.coords.latitude;
@@ -338,20 +346,19 @@ Wifi の三角測量や GPS などのジオロケーション
         //   2: position unavailable (error response from location provider)
         //   3: timed out
       };
-    
+
       navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
     };
-    
 
-### 高精度位置よりも低精度位置が適しています。
 
-ユーザーに最も近い店舗を検索する場合、
-1 メートルの精度を必要とすることはほとんどありません。  API は、可能な限り迅速に返すために、
-低精度位置を提示するように設計されています。
+###  高精度の位置情報よりも低精度の位置情報を優先する
 
-高精度が必要な場合には、`enableHighAccuracy` オプションで
-デフォルト設定を上書きすることが可能です。  これは慎重に使用してください。解像が遅くなり、
-多くのバッテリーを消費します。
+ユーザーに最も近い店舗を検索する際に、誤差が 1 メートル程度の高精度な情報が必要になることはほぼありません。
+API は、可能な限り迅速に結果を返すために、低精度の位置情報を返すように設計されています。
+
+
+高精度の位置情報が必要な場合は、`enableHighAccuracy` オプションでデフォルトの設定をオーバーライドすることができます。
+ただし、高精度の測位には時間がかかり、バッテリーの消費量も多いため、この設定は慎重に行ってください。
 
 
     window.onload = function() {
@@ -359,7 +366,7 @@ Wifi の三角測量や GPS などのジオロケーション
       var geoOptions = {
         enableHighAccuracy: true
       }
-    
+
       var geoSuccess = function(position) {
         startPos = position;
         document.getElementById('startLat').innerHTML = startPos.coords.latitude;
@@ -373,98 +380,35 @@ Wifi の三角測量や GPS などのジオロケーション
         //   2: position unavailable (error response from location provider)
         //   3: timed out
       };
-    
+
       navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
     };
-    
+
+
+##  Chrome DevTools で位置情報をエミュレートする{: #devtools }
+
+<div class="attempt-right">
+  <figure id="fig1">
+    <img src="images/sensors-drawer.png" class="screenshot">
+  </figure>
+</div>
+
+位置情報をセットアップしたら、次の操作を行う必要があります。
+
+* さまざまな位置情報に対してアプリがどのように機能するかをテストする。
+* 位置情報が利用できないときに、アプリの機能が適切に制限されることを確認する。
+
+Chrome DevTools では、この両方の確認が可能です。
+
+[Chrome DevTools を開いて](/web/tools/chrome-devtools/#open)、[Console Drawer を表示します](/web/tools/chrome-devtools/console/#open_as_drawer)。
+
+
+[Console Drawer のメニューを開き](/web/tools/chrome-devtools/settings#drawer-tabs)、[**Sensors**] オプションをクリックして、Sensors Drawer を表示します。
+
+
+ここで、位置をプリセットされた主要都市でオーバーライドしたり、カスタムの位置情報を入力したり、オーバーライドを **Location unavailable** に設定して位置情報を無効にしたりできます。
 
 
 
 
-## Monitor the user's location 
-
-Geolocation API では、ユーザーの場所を確認でき、移動するにつれてタブを保持できますが、これらは常にユーザーの同意を得て行います。
-
-
-API は端末に依存しません。クライアントが標準の方法
-で場所データを要求および受信する限り、ブラウザが場所を特定する
-方法も考慮しません。 基礎となるメカニズムは、GPS、Wi-Fi を媒介する可能性があります。 これらの検索の
-いずれかに時間がかかるため、API は非同期になっています。
-場所をリクエストするたびにコールバック メソッドを渡します。
-
-### TL;DR {: .hide-from-toc }
-- API を使用する前に互換性を確認します。
-- バッテリーを節約するために、ユーザーの位置確認の使用を最小限に抑えます。
-- 常にエラーを処理。
-
-
-### ユーザーの位置を確認するために Geolocation を使用する場合
-
-*  ユーザーの位置のより正確なロックを取得します。
-*  アプリケーションは、新しい位置情報に基づいてユーザー インターフェースをアップデートする
-必要があります。
-*  アプリケーションは、ユーザーが特定の定義されたゾーンに入ったときに、
-ビジネス ロジックをアップデートする必要があります。
-
-### ユーザーの位置の監視
-
-Geolocation API を使用すると、`getCurrentPosition()` に一度コールするためで、ユーザーの位置を取得することができます (ユーザーの
-同意が必要)。  
-
-継続的にユーザーの位置を監視する場合、Geolocation API 
-の `watchPosition()` と呼ばれるメソッドを使用します。 これは、
-`getCurrentPosition()` と同様に動作しますが、位置決定ソフトウェアとして
-複数回起動します。
-
-1.  利用者のより正確なロックを取得します。
-2.  ユーザーの位置が変わります。
- 
-<div class="clearfix"></div>
-
-    var watchId = navigator.geolocation.watchPosition(function(position) {
-      document.getElementById('currentLat').innerHTML = position.coords.latitude;
-      document.getElementById('currentLon').innerHTML = position.coords.longitude;
-    });
-    
-
-### 常にクリアーしてバッテリーを節約する
-
-GeoLocation での変更の監視は、無料の操作ではありません。  オペレーティング 
-システムがプラットフォーム機能を導入して、
-アプリケーションが地理サブシステムにフックできるようにしながら、
-ウェブ開発者は、ユーザーの位置を監視するためのユーザー端末のサポートが分からないことがあります。
-また、位置を監視している間、端末で多くの処理が生じています。
-
-ユーザーの位置を追跡する必要がなくなったら、`clearWatch` をコールして、
-GeoLocation システムをオフにしてください。
-
-###  常にエラーを処理
-
-残念ながら、検索が正常に行われていない場所があります。 GPS で位置を確認できなかったか、
-あるいはユーザーが場所の検索を突然無効にした可能性があります。 2 つめの
-任意の getCurrentPosition() の引数は、エラー発生時に呼び出され、
-コールバックの内部をユーザーに通知することができます。
-
-<div class="clearfix"></div>
-
-
-    window.onload = function() {
-      var startPos;
-      var geoSuccess = function(position) {
-        startPos = position;
-        document.getElementById('startLat').innerHTML = startPos.coords.latitude;
-        document.getElementById('startLon').innerHTML = startPos.coords.longitude;
-      };
-      var geoError = function(position) {
-        console.log('Error occurred. Error code: ' + error.code);
-        // error.code can be:
-        //   0: unknown error
-        //   1: permission denied
-        //   2: position unavailable (error response from location provider)
-        //   3: timed out
-      };
-      navigator.geolocation.watchPosition(geoSuccess, geoError);
-    };
-    
-
-
+{# wf_devsite_translation #}

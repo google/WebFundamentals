@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Time to Interactive" Lighthouse audit.
 
@@ -28,3 +28,6 @@ key webfonts are visible, and the main thread is available enough to handle
 user input.
 
 Note that this metric is in early phases and is subject to change.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/time-to-interactive.html" %}

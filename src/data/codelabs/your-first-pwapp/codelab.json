@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2017-02-07T11:41:09Z",
+  "updated": "2017-10-29T12:12:01Z",
   "id": "your-first-pwapp",
   "duration": 0,
   "title": "Your First Progressive Web App",
@@ -18,11 +18,15 @@
     "Web"
   ],
   "tags": [
+    "cds17",
     "chrome-dev-summit-2016",
+    "gdd17",
     "io2016",
+    "io2017",
     "kiosk",
     "pwa-dev-summit",
     "pwa-roadshow",
+    "typtwd17",
     "web"
   ],
   "feedback": "https://github.com/googlecodelabs/your-first-pwapp/issues",

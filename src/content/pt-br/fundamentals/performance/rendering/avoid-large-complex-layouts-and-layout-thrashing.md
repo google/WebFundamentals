@@ -1,39 +1,43 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Layout é onde o navegador descobre a informação geométrica para os elementos: seu tamanho e localização na página. Cada elemento terá uma informação de dimensionamento explícita ou implícita com base no CSS que foi usado, o conteúdo do elemento ou um elemento principal. O processo é chamado Layout in Blink, navegadores WebKit e Internet Explorer. Em navegadores baseados em Gecko, como o Firefox, ele é chamado de Reflow, mas na realidade esses processos são iguais.
+description: É pelo layout que o navegador computa informações geométricas dos elementos: seu tamanho e localização na página. Cada elemento terá informações de dimensionamento explícitas ou implícitas de acordo com o CSS usado, o conteúdo do elemento ou um elemento principal. O processo é chamado de Layout no Chrome.
 
-{# wf_updated_on: 2015-03-19 #}
-{# wf_published_on: 2000-01-01 #}
+# Evitar layouts grandes e complexos e paginação constante de layouts {: .page-title }
 
-# Evitar grandes layouts complexos e layout desnecessário {: .page-title }
+{# wf_updated_on: 2015-03-20 #}
+{# wf_published_on: 2015-03-20 #}
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-
-Layout é onde o navegador descobre a informação geométrica para os elementos: seu tamanho e localização na página. Cada elemento terá uma informação de dimensionamento explícita ou implícita com base no CSS que foi usado, o conteúdo do elemento ou um elemento principal. O processo é chamado Layout no Chrome, Opera, Safari e Internet Explorer. No Firefox, é chamado de Reflow, mas na realidade o processo é o mesmo.
-
-### TL;DR {: .hide-from-toc }
-- O layout é normalmente delimitado para todo o documento.
-- O número de elementos DOM afetará o desempenho; você deve evitar acionar o layout sempre que possível.
-- Avalie o desempenho do modelo de layout; o novo Flexbox é geralmente mais rápido do que o Flexbox mais antigo ou modelos de layout baseados em flutuação.
-- Evite layouts sincronizados forçados e layout desnecessário; leia os valores de estilo e faça as mudanças de estilo.
-
+É pelo layout que o navegador computa informações geométricas dos 
+elementos: seu tamanho e localização na página. Cada elemento terá 
+informações de tamanho implícitas ou explícitas de acordo com o CSS usado, 
+o conteúdo do elemento ou um elemento primário. O processo é chamado de Layout 
+no Chrome, no Opera, no Safari e no Internet Explorer. No Firefox, o nome é 
+Reflow, mas, na prática, o processo é o mesmo.
 
 Da mesma forma que os cálculos de estilo, as preocupações imediatas para o custo do layout são:
 
 1. O número de elementos que exigem layout.
 2. A complexidade desses layouts.
 
+### TL;DR {: .hide-from-toc }
+
+* Normalmente o escopo do layout é o documento todo.
+* O número de elementos DOM afeta o desempenho: você deve evitar acionar o layout sempre que possível.
+* "Avalie o desempenho do modelo de layout: o novo Flexbox geralmente é mais rápido do que Flexbox antigos ou modelos de layout baseados em flutuação."
+* Evite layouts síncronos forçados e a troca frequente de layouts: leia os valores de estilo e depois faça as mudanças.
+
 ## Evite o layout sempre que possível
 
-Quando você muda de estilos, o navegador verifica se alguma mudança exige que o layout seja calculado e, para isso, a árvore de renderização deve ser atualizada. Mudanças nas “propriedades geométricas”, como larguras, alturas, esquerda ou topo, exigem layout.
+Quando você muda de estilos, o navegador verifica se alguma mudança exige que o layout seja calculado e que a árvore de renderização seja atualizada. Mudanças nas "propriedades geométricas", como larguras, alturas, esquerda ou topo, exigem layout.
 
 
     .box {
       width: 20px;
       height: 20px;
     }
-    
+
     /**
      * Changing width and height
      * triggers layout.
@@ -42,68 +46,70 @@ Quando você muda de estilos, o navegador verifica se alguma mudança exige que 
       width: 200px;
       height: 350px;
     }
-    
 
-**O layout é quase sempre orientado para todo o documento.** Se você tiver muitos elementos, levará muito tempo para descobrir as localizações e dimensões de todos.
 
-Se não for possível evitar o layout, então a solução é usar novamente o Chrome DevTools para ver quanto tempo está levando e determinar se o layout é a causa do estrangulamento. Primeiro, abra o DevTools, vá para a guia Linha cronológica, clique em registro e interaja com o seu site. Quando você parar de gravar, verá um detalhamento da execução do seu site:
+**Quase sempre, o escopo do layout é todo o documento.** Se você tiver muitos elementos, levará muito tempo para descobrir as localizações e as dimensões de todos.
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg"  alt="DevTools mostrando um tempo longo no Layout" />
+Se não for possível evitar o layout, então a solução é usar novamente o Chrome DevTools para analisar o tempo necessário e determinar se o layout é a causa do gargalo. Primeiro, abra o DevTools, vá para a guia Timeline, clique em Record e interaja com o site. Quando interromper a gravação, você verá o detalhamento do desempenho do site:
 
-Ao detalhar o frame do exemplo acima, vemos que mais de 20 ms são gastos dentro do layout. Quando temos 16 ms para exibir um frame na tela em uma animação, esse valor é muito alto. Você também pode ver que o DevTools dirá o tamanho da árvore (1.618 elementos nesse caso) e quantos nós precisaram de layout.
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg" alt="DevTools mostrando um tempo longo no Layout" />
 
-Note: Deseja uma lista definitiva de quais propriedades CSS acionam o layout, pintura ou composição? Veja <a href='http://csstriggers.com/''>Acionadores CSS</a>.
+Detalhando o quadro do exemplo acima, vemos que mais de 20 ms são gastos dentro do layout. Quando temos 16 ms para exibir quadro de uma animação na tela, 20 ms é tempo demais. Também podemos ver que o DevTools informa o tamanho da árvore (neste caso, 1.618 elementos) e quantos nós precisaram de layout.
 
-## Use o flexbox em modelos de layout mais antigos
-A Web tem uma variedade de modelos de layout, alguns suportados mais amplamente do que outros. O modelo de layout CSS mais antigo nos permite posicionar elementos na tela de forma relativa, absoluta e por elementos flutuantes.
+Observação: Quer uma lista definitiva das propriedades CSS que acionam layout, gravação ou composição? Confira [CSS Triggers](https://csstriggers.com).
 
-A captura de tela abaixo mostra o custo de layout ao usar flutuações em 1.300 caixas. É realmente um elemento artificial, porque a maioria dos aplicativos usarão vários meios para posicionar elementos.
+## Use o flexbox em vez dos modelos de layout mais antigos
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg"  alt="Usando flutuações como layout" />
+A Web tem uma variedade de modelos de layout, alguns com compatibilidade mais ampla que os demais. O modelo de layout CSS mais antigo permite posicionar elementos na tela de forma relativa, absoluta e por elementos flutuantes.
 
-Se atualizarmos a amostra para usar o Flexbox, uma adição mais recente à plataforma da Web, veremos uma imagem diferente:
+A captura de tela abaixo mostra o custo de layout ao usar flutuações em 1.300 caixas. É realmente um exemplo artificial, porque a maioria dos aplicativos usam vários meios para posicionar elementos.
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg"  alt="Usando o flexbox como layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg" alt="Usar flutuações como layout" />
 
-Agora gastamos muito menos tempo (3,5 ms vs 14 ms nesse caso) no layout para o _mesmo número de elementos_ e o mesmo visual. É importante lembrar que para alguns contextos, você talvez não poderá selecionar o Flexbox, porque ele é [menos suportado do que as flutuações](http://caniuse.com/#search=flexbox), mas onde puder, deve pelo menos investigar o impacto do modelo de layout no seu desempenho e escolher aquele que reduz o custo de execução.
+Se atualizarmos o exemplo para usar o Flexbox, uma adição mais recente à plataforma da Web, teremos uma situação diferente:
 
-Em qualquer caso, selecionando o Flexbox ou não, você ainda deve **testar e evitar acionar o layout** durante pontos de alta pressão do seu aplicativo!
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg" alt="Usar flexbox como layout" />
 
-## Evite layouts sincronizados forçados
-Enviar um frame para a tela tem a seguinte ordem:
+Agora, gastamos muito menos tempo (3,5 ms vs. 14 ms nesse caso) no layout para o _mesmo número de elementos_ e a mesma aparência visual. É importante lembrar que, para alguns contextos, pode não ser possível escolher o Flexbox, porque ele tem [compatibilidade menos abrangente do que as flutuações](http://caniuse.com/#search=flexbox). No entanto, onde possível, pelo menos investigue o impacto do modelo de layout no desempenho e escolha o que reduz o custo de execução.
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg"  alt="Usando o flexbox como layout" />
+De qualquer maneira, escolhendo o Flexbox ou não, você ainda deve **tentar evitar totalmente o acionamento do layout** durante os pontos mais intensos do aplicativo.
 
-Primeiro, o JavaScript é executado, _em seguida_ os cálculos de estilo _e depois_ o layout. No entanto, é possível forçar um navegador a realizar o layout antes com o JavaScript. É chamado de**layout sincronizado forçado**.
+## Evitar layouts síncronos forçados
 
-A primeira coisa a se lembrar é que, como o JavaScript executa todo o layout antigo, os valores do frame anterior são conhecidos e estão disponíveis para consulta. Portanto se, por exemplo você deseja escrever a altura de um elemento (vamos chamá-lo de “caixa”) no início do frame, você pode criar um código como o seguinte:
+O envio de um quadro à tela é feito nesta ordem:
+
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg" alt="Usar flexbox como layout" />
+
+Primeiro, o JavaScript é executado. _Em seguida_, os cálculos de estilo _e depois_ o layout. No entanto, é possível forçar o navegador a executar antecipadamente o layout com o JavaScript. Esse recurso é denominado **layout síncrono forçado**.
+
+A primeira coisa a se lembrar é que, à medida que o JavaScript é executado, todos os valores de layout antigos do quadro anterior são conhecidos e estão disponíveis para consulta. Portanto, se por exemplo você quiser exibir a altura de um elemento (vamos chamá-lo de "caixa") no início do quadro, poderá criar um código semelhante a este:
 
 
     // Schedule our function to run at the start of the frame.
     requestAnimationFrame(logBoxHeight);
-    
+
     function logBoxHeight() {
       // Gets the height of the box in pixels and logs it out.
       console.log(box.offsetHeight);
     }
-    
 
-Você terá problemas se tiver alterado os estilos da caixa _antes_ de perguntar sua altura:
+
+As coisas ficam mais complicadas se você alterou os estilos da caixa _antes_ de consultar sua altura:
 
 
     function logBoxHeight() {
-    
+
       box.classList.add('super-big');
-    
+
       // Gets the height of the box in pixels
       // and logs it out.
       console.log(box.offsetHeight);
     }
-    
 
-Agora, para poder responder a pergunta de altura, o navegador deve _primeiro_ aplicar a mudança de estilo (por causa da adição da classe `super-big`) e _em seguida_ executar o layout. Somente então poderá retornar a altura correta. É um trabalho desnecessário e possivelmente caro.
 
-Por causa disso, você sempre deve agrupar suas leituras de estilo e executá-las primeiro (onde o navegador pode usar os valores de layout do frame anterior) e, em seguida, fazer as criações:
+Agora, para poder responder à consulta de altura, o navegador deve _primeiro_ aplicar a mudança de estilo (por causa da adição da classe `super-big`) e, _em seguida_, executar o layout. Somente então será possível retornar a altura correta. Esse trabalho é desnecessário e possivelmente caro.
+
+É por isso que você deve sempre agrupar suas leituras de estilo e executá-las primeiro (enquanto o navegador pode usar os valores de layout do quadro anterior) e somente depois executar as alterações:
 
 Realizada corretamente, a função acima seria:
 
@@ -112,42 +118,43 @@ Realizada corretamente, a função acima seria:
       // Gets the height of the box in pixels
       // and logs it out.
       console.log(box.offsetHeight);
-    
+
       box.classList.add('super-big');
     }
-    
 
-No geral, você não precisará aplicar estilos e consultar valores; usar os valores do último frame é suficiente. Executar os cálculos de estilo e layout de forma sincronizada e antes do que o navegador gostaria são possíveis estrangulamentos, o que não é recomendável.
 
-## Evite avalanches de layout 
-Há uma forma de piorar layouts sincronizados forçadamente: _criando muitos deles em sucessão_. Vamos dar uma olhada neste código:
+Na maioria das vezes, não será necessário aplicar estilos e consultar valores. O uso dos valores do último quadro deverá ser suficiente. A execução dos cálculos de estilo e layout de forma síncrona e antes do momento escolhido pelo navegador é um possível gargalo e, normalmente, deve ser evitada.
+
+## Evitar a troca frequente de layouts
+Há uma forma de piorar ainda mais os layouts síncronos forçados: _executar vários deles em rápida sucessão_. Vamos dar uma olhada neste código:
 
 
     function resizeAllParagraphsToMatchBlockWidth() {
-    
+
       // Puts the browser into a read-write-read-write cycle.
       for (var i = 0; i < paragraphs.length; i++) {
         paragraphs[i].style.width = box.offsetWidth + 'px';
       }
     }
-    
 
-Este código faz um loop sobre um grupo de parágrafos e define cada largura de parágrafo para corresponder com a largura de um elemento chamado “caixa”. Parece inofensivo, mas o problema é que cada iteração do loop lê um valor de estilo (`box.offsetWidth`) e o usa imediatamente para atualizar a largura de um parágrafo (`paragraphs[i].style.width`). Na próxima iteração do loop, o navegador deverá levar em conta que os estilos mudaram desde que o `offsetWidth` foi solicitado pela última vez (na iteração anterior) e, portanto, aplicar mudanças de estilo e executar o layout. Isso acontecerá a _cada iteração!_.
 
-A correção para essa amostra é apenas _ler _ e _criar_ valores novamente:
+Este código faz um loop sobre um grupo de parágrafos e define cada largura de parágrafo para corresponder com a largura de um elemento chamado “caixa”. Parece inofensivo, mas o problema é que cada iteração do loop lê um valor de estilo (`box.offsetWidth`) e o usa imediatamente para atualizar a largura de um parágrafo (`paragraphs[i].style.width`). Na próxima iteração do loop, o navegador deverá considerar que os estilos mudaram desde que o `offsetWidth` foi solicitado pela última vez (na iteração anterior) e, portanto, terá de aplicar mudanças de estilo e executar o layout. Isso acontecerá em _todas as iterações_!
+
+Novamente, a correção para exemplo é _ler _ e depois _alterar_ os valores:
 
 
     // Read.
     var width = box.offsetWidth;
-    
+
     function resizeAllParagraphsToMatchBlockWidth() {
       for (var i = 0; i < paragraphs.length; i++) {
         // Now write.
         paragraphs[i].style.width = width + 'px';
       }
     }
-    
-
-Se você deseja garantir a segurança, verifique o [FastDOM](https://github.com/wilsonpage/fastdom), que agrupa automaticamente suas leituras e gravações e evita que você acione layouts sincronizados forçados ou avalanches de layouts automaticamente.
 
 
+Se você deseja garantir a segurança, verifique o [FastDOM](https://github.com/wilsonpage/fastdom), que agrupa automaticamente suas leituras e gravações em lotes e evita que você acione acidentalmente layouts síncronos forçados ou troca frequente de layouts.
+
+
+{# wf_devsite_translation #}

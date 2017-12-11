@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in very different ways: Response, Animation, Idle, Load.
 
-{# wf_updated_on: 2015-06-07 #}
+{# wf_updated_on: 2017-04-24 #}
 {# wf_published_on: 2015-06-07 #}
 
 # Measure Performance with the RAIL Model {: .page-title }
@@ -67,7 +67,7 @@ Understand how users perceive performance delays:
   </tbody>
 </table>
 
-## Response: respond in under 100ms
+## Response: respond in under 100ms {: #response }
 
 You have 100ms to respond to user input before they notice a lag.
 This applies to most inputs, such as clicking buttons, toggling form
@@ -83,7 +83,7 @@ If possible, do work in the background.
 
 For actions that take longer than 500ms to complete, always provide feedback.
 
-## Animation: produce a frame in 10ms
+## Animation: produce a frame in 10ms {: #animation }
 
 Animations aren't just fancy UI effects. For example, scrolling and touch
 drags are types of animations.
@@ -106,7 +106,7 @@ chances of hitting 60fps.
 For more information, see
 [Rendering Performance](/web/fundamentals/performance/rendering/).
 
-## Idle: maximize idle time
+## Idle: maximize idle time {: #idle }
 
 Use idle time to complete deferred work. For example, keep pre-load data to a minimum so that your app loads fast, and use idle time to load remaining data.
 
@@ -118,7 +118,7 @@ such that it can execute its pixel pipeline, react to user input, and so on.
 
 Working in 50ms blocks allows the task to finish while still ensuring instant response.
 
-## Load: deliver content under 1000ms
+## Load: deliver content under 1000ms {: #load }
 
 Load your site in under 1 second. If you don't, user attention wanders,
 and their perception of dealing with the task is broken.

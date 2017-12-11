@@ -1,28 +1,41 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Como otimizar o caminho de processamento essencial ao priorizar a exibição de conteúdo relacionado à ação principal que o usuário deseja realizar em uma página.
+description: Otimizar o caminho crítico de renderização é priorizar a exibição do conteúdo relacionado à ação atual do usuário.
 
-{# wf_updated_on: 2014-04-27 #}
+{# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Caminho de processamento essencial {: .page-title }
+# Caminho crítico de renderização {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
-Otimizar o caminho de processamento essencial é muito importante para melhorar o desempenho de nossas páginas: a meta é priorizar e exibir o conteúdo relacionado à ação primária que o usuário deseja realizar na página.
+_Otimizar o caminho crítico de renderização_ é priorizar a exibição do
+conteúdo relacionado à ação atual do usuário.
 
-Fornecer uma experiência de Web rápida requer muito trabalho por parte do navegador. A maior parte desse trabalho não aparece para nós, desenvolvedores de Web: escrevemos a marcação e uma bela página aparece na tela. Mas como, exatamente o navegador passa da adoção do HTML, CSS e JavaScript aos pixels renderizados na tela?
+A entrega de uma experiência rápida de web exige muito trabalho do navegador. A maior parte
+desse trabalho não aparece para nós, desenvolvedores web: escrevemos a marcação e uma página
+bonita é exibida na tela. Mas como exatamente o navegador transforma o
+consumo do HTML, CSS e JavaScript em pixels renderizados na tela?
 
-Otimizar para o desempenho requer uma compreensão sobre o que acontece nessas etapas intermediárias entre o recebimento dos bytes de HTML, CSS e JavaScript e o processamento necessário para transformá-los em pixels renderizados: esse é o **caminho de processamento essencial**.
+A otimização do desempenho é baseada no entendimento do que acontece nessas
+etapas intermediárias entre o recebimento de bytes de HTML, CSS e JavaScript e
+o processamento necessário para transformá-los em pixels renderizados. Esse é
+o **caminho crítico de renderização**.
 
-<img src="images/progressive-rendering.png" class="center" alt="renderização progressiva da página">
+<img src="images/progressive-rendering.png"  alt="renderização progressiva da página">
 
-Ao otimizar o caminho de processamento essencial, é possível melhorar significativamente o tempo da primeira renderização das páginas. Além disso, entender o caminho de processamento essencial também serve como base para criar aplicativos interativos com bom desempenho. Acontece que o método para o processamento de atualizações interativas permanece o mesmo, apenas feito em um ciclo contínuo e idealmente em 60 frames por segundo. Mas não vamos nos adiantar. Primeiro, vejamos rápida e detalhadamente como o navegador exibe uma página simples.
+A otimização do caminho crítico de renderização permite reduzir consideravelmente o
+tempo da primeira renderização das páginas. Além disso, entender o caminho crítico
+de renderização também serve como base para criar aplicativos
+interativos com bom desempenho. Na verdade, o processo para as atualizações interativas é o mesmo, mas é feito em loop contínuo e, idealmente, a 60 quadros por segundo. Mas primeiro, vamos ver um resumo de como o navegador exibe uma página mais simples.
 
+<a href="constructing-the-object-model" class="gc-analytics-event"
+    data-category="CRP" data-label="Next / Constructing the Object Model">
+  <button>A seguir: Desenvolvimento do modelo de objeto</button>
+</a>
 
 {% include "web/_shared/udacity/ud884.html" %}
 
 
-
-
+{# wf_devsite_translation #}

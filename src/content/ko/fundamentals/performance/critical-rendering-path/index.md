@@ -1,27 +1,41 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 사용자가 페이지에서 행하는 주요 동작과 관련있는 콘텐츠를 우선 노출하여 크리티컬 렌더링 패스를 최적화하는 방법을 설명합니다.
+description: 주요 렌더링 경로를 최적화하는 것은 현재 사용자 작업과 관련된 콘텐츠 표시의 우선순위를 지정하는 것을 말합니다.
 
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
-# 크리티컬 렌더링 패스(Critical Rendering Path) {: .page-title }
+# 주요 렌더링 경로 {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-사용자가 페이지에서 행하는 주요 동작과 관련있는 콘텐츠를 우선 노출하여 크리티컬 렌더링 패스를 최적화하는 방법을 설명합니다.
 
-빠른 웹 경험을 사용자에게 제공하기 위해서 브라우저는 많은 작업을 합니다. 하지만 이 작업의 대부분은 웹 개발자인 우리가 볼 수 없는 곳에서 이루어집니다. 그냥 마크업을 작성하면 멋진 페이지가 스크린에 나올 뿐이죠. 그렇다면 브라우저는 어떻게 정확히 HTML, CSS, JavaScript를 스크린에 픽셀로 그리는 걸까요?
-  
+_주요 렌더링 경로 최적화_ 란 현재 사용자 작업과 관련된 콘텐츠 표시의
+우선순위를 지정하는 것을 말합니다.
+
+빠른 웹 환경을 제공하려면 브라우저가 많은 작업을 수행해야 합니다. 이러한 작업
+대부분은 웹 개발자에게 숨겨져 있습니다. 즉, 개발자가 마크업을 작성하면 그저 멋진
+페이지가 화면에 표시될 뿐이죠. 그렇다면 브라우저가
+HTML, CSS 및 자바스크립트를 사용하여 화면에 렌더링된 픽셀로 변환하는 과정은 정확히 어떻게 될까요?
+
+성능을 최적화하려면 HTML, CSS 및 자바스크립트 바이트를 수신한 후
+렌더링된 픽셀로 변환하기 위해 필요한 처리까지, 그 사이에 포함된 중간 단계에서
+어떠한 일이 일어나는지를 파악하기만 하면 됩니다. 이러한 단계가 바로
+**주요 렌더링 경로**입니다.
+
+<img src="images/progressive-rendering.png"  alt="프로그레시브 페이지 렌더링">
+
+주요 렌더링 경로를 최적화하면 최초 페이지 렌더링에 걸리는 시간을
+상당히 단축시킬 수 있습니다. 또한, 주요
+렌더링 경로에 대한 이해를 토대로 뛰어난 성능의 대화형 애플리케이션을
+빌드할 수도 있습니다. 대화형 업데이트 프로세스도 이와 동일합니다. 연속 루프에서 실행되며 이상적인 속도는 초당 60프레임입니다. 그러나 먼저 브라우저에서 간단한 페이지를 표시하는 방법을 살펴봅시다.
+
+<a href="constructing-the-object-model" class="gc-analytics-event"
+    data-category="CRP" data-label="Next / Constructing the Object Model">
+  <button>다음 차례: 객체 모델 생성</button>
+</a>
+
 {% include "web/_shared/udacity/ud884.html" %}
 
 
-성능을 최적화 한다는 말은 HTML, CSS, Javascript 코드를 받아 이를 모두 픽셀로 화면에 그리는 과정 중간 중간을 이해하는 것입니다. 이게 바로 **크리티컬 렌더링 패스** 입니다.
-
-<img src="images/progressive-rendering.png" class="center" alt="progressive page rendering">
-
-크리티컬 렌더링 패스를 최적화하면 페이지 최초 렌더링 시간을 크게 향상시킬 수 있습니다. 게다가, 크리티컬 렌더링 패스에 대한 이해를 토대로 좋은 인터랙션을 가진 애플리케이션을 만들 수도 있습니다. 대화식 업데이트 처리과정은 단지 이상적인 초당 60프레임으로 작업을 계속해서 반복하는 것과 같습니다. 하지만 아직 결론 내리기에는 이릅니다. 먼저 브라우저가 어떻게 간단한 페이지를 화면에 그리는지 간략한 개요를 살펴봅시다.
-
-Translated By: 
-{% include "web/_shared/contributors/jeokrang.html" %}
-{% include "web/_shared/contributors/captainpangyo.html" %}
+{# wf_devsite_translation #}

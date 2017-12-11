@@ -18,7 +18,7 @@ to deprecate powerful features like geolocation on non-secure origins, and we
 hope that others will follow.
 
 Starting with Chrome 50, Chrome no longer supports [obtaining the user's 
-location](/web/fundamentals/native-hardware/user-location/obtain-location) 
+location](/web/fundamentals/native-hardware/user-location/) 
 using [the HTML5 Geolocation 
 API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) 
 from pages delivered by non-secure connections. This means that the page that's 

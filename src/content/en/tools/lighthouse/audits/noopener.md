@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Site Opens External Anchors Using rel="noopender"" Lighthouse audit.
+description: Reference documentation for the "Opens External Anchors Using rel="noopener"" Lighthouse audit.
 
-{# wf_updated_on: 2016-11-30 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-11-30 #}
 
-# Site Opens External Anchors Using rel="noopener"  {: .page-title }
+# Opens External Anchors Using rel="noopener"  {: .page-title }
 
 ## Why the audit is important {: #why }
 
@@ -43,3 +43,6 @@ might want to be aware of if you're working on a large site. If your page opens
 a link to another section of your site without using `rel="noopener"`, the
 performance implications of this audit still apply. However, you won't see these
 links in your Lighthouse results.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/noopener.html" %}

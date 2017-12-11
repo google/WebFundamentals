@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "User Timing Marks and Measures" Lighthouse audit.
 
@@ -33,3 +33,6 @@ JavaScript performance.
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse extracts User Timing data from Chrome's Trace Event Profiling Tool.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/user-timing.html" %}

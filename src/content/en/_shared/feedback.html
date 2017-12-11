@@ -3,13 +3,14 @@
   usage.
 {% endcomment %}
 {% framebox width="auto" height="auto" enable_widgets="true" %}
-{% setvar url %}https://github.com/google/webfundamentals/issues/new?title=[{{ category }} / {{ label }}] {% endsetvar %}
 <style>
   .wf-feedback--hidden {
     display: none;
   }
 </style>
+{% if question %}
 <p>{{ question }}<p>
+{% endif %}
 <button type="button" class="button button-primary gc-analytics-event"
     data-category="{{ category }}" data-label="{{ label }}" data-value="1">
   {{ success_button }}
@@ -19,10 +20,7 @@
   {{ fail_button }}
 </button>
 <aside class="success wf-feedback--hidden">{{ success_response }}</aside>
-<aside class="caution wf-feedback--hidden">
-  {{ fail_response }} Please <a href="{{ url }}">open an issue on our docs
-  repo</a> and tell us more.
-</aside>
+<aside class="caution wf-feedback--hidden">{{ fail_response }}</aside>
 <script>
   function disableButtons() {
     successButton.disabled = true;

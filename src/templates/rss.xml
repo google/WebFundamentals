@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>{{ title }}</title>
     <link>{{ baseUrl }}{{{ analyticsQS }}}</link>
@@ -16,18 +16,18 @@
     {{#each articles}}
     <item>
       <title>{{ title }}</title>
-      <pubDate>{{ rssPubDate }}</pubDate>
+      <pubDate>{{ formatDateRSS datePublishedMoment }}</pubDate>
       <link>{{ ../host }}{{ url }}{{{ ../analyticsQS }}}</link>
       <guid isPermaLink="true">{{ ../host }}{{ url }}{{{ ../analyticsQS }}}</guid>
       <description>
         <![CDATA[
           <img src="https://ga-beacon.appspot.com/UA-52746336-1{{#if analyticsUrl }}{{ analyticsUrl }}{{else}}{{ url }}{{/if}}?feed_type=rss&pixel">
-        
+
         {{{ content }}}
         ]]>
       </description>
       {{#each tags}}<category>{{ this }}</category> {{/each}}
-      <author>{{ feedAuthor }}</author>
+      {{#if feedAuthor }}<dc:creator>{{ feedAuthor }}</dc:creator>{{/if}}
     </item>
     {{/each}}
   </channel>

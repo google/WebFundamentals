@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A guide to designing web experiences for slow networks and offline.
 
-{# wf_updated_on: 2016-11-10 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-11-10 #}
 
 # Offline UX Considerations {: .page-title }
@@ -54,13 +54,17 @@ could say:
 “sent when the network is restored.”
 
 <figure class="attempt-left">
-  <img src="images/emojoy-toast-message.png" alt="Emojoy, the emoji messaging app informing the user when a change in state occurs.">
+  <img 
+  src="images/emojoy-toast-message.png" 
+  alt="Emojoy, the emoji messaging app informing the user when a change in state occurs.">
   <figcaption>
     Clearly inform the user when a change in state occurs as soon as possible.
   </figcaption>
 </figure>
 <figure class="attempt-right">
-  <img src="images/io-toast-message.png" alt="The I/O 2016 app informing the user when a change in state occurs.">
+  <img 
+  src="images/io-toast-message.png" 
+  alt="The I/O 2016 app informing the user when a change in state occurs.">
   <figcaption>
     The Google I/O app used a material design "toast" to let the user know when it was offline.
   </figcaption>
@@ -70,27 +74,54 @@ could say:
 
 ### Network connection improves or is restored
 
-<figure class="attempt-right">
-  <img src="images/weather-app.png" alt="An example of a weather app.">
-  <figcaption>
-    Some apps, like this weather app, need to auto update as old data is not of use to the user.
-  </figcaption>
-</figure>
-
 How you deal with informing the user once their network connection has improved
 will depend largely on your application. For apps that require update
 information displayed as a priority such as a stock market app, auto-updating
 and notifying the user as soon as possible is crucial.
 
+It is recommended that you let the user user know that your web app 
+has been updated "in the background" by using a visual cue such as a 
+material design toast element. This involves detecting both the 
+initial registration of your service worker and that there's been an 
+update to the service worker-managed content. You can see a code 
+example of this 
+<a 
+href="https://github.com/GoogleChrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L29">function at work here</a>.
+
+Once example of this would be 
+<a href="https://www.chromestatus.com/features">
+  www.chromestatus.com</a>which posts a note to the user when the app has been updated.
+
+
+<figure >
+  <img class="attempt-right" 
+  src="images/weather-app.png" 
+  alt="An example of a weather app.">
+  <img class="attempt-left" 
+  src="images/chrome-status-app-updated.png" 
+  alt="Chrome Status uses a toast">
+
+  <figcaption class="clearfix" style="clear:both;">
+
+  Some apps, like the weather app, need to auto update as old data 
+  is not of use to the user. Where Chrome Status lets the user know 
+  when content has been updated via a material design toast element.
+  </figcaption>
+</figure>
+
 <div class="clearfix"></div>
 
 You may also show the last time the app was updated at all times in a prominent
-space. This would also be useful for a currency convertor app, for example.
+space. This would also be useful for a currency converter app, for example.
 
 <figure>
-  <img class="attempt-left" src="images/material-money-rates-out-of-date.png" alt="Material money app that is out-of-date">
-  <img class="attempt-right" src="images/material-money-rates-updated.png" alt="Material money has been updated">
-  <figcaption class="clearfix">
+  <img class="attempt-left" 
+  src="images/material-money-rates-out-of-date.png" 
+  alt="Material money app that is out-of-date">
+  <img class="attempt-right" 
+  src="images/material-money-rates-updated.png" 
+  alt="Material money has been updated">
+  <figcaption class="clearfix" style="clear:both;">
     Material Money shows the latest currency where possible and notifies the
     user when the app hasn’t been updated.
   </figcaption>
@@ -103,9 +134,13 @@ refresh the page and they would lose where they were reading last.
 
 
 <figure>
-  <img class="attempt-left" src="images/tailpiece-normal.png" alt="Example news app, Tailpiece in its normal state">
-  <img class="attempt-right" src="images/tailpiece-tap-to-update.png" alt="Example news app, Tailpiece when its ready to be updated">
-  <figcaption class="clearfix">
+  <img class="attempt-left" 
+  src="images/tailpiece-normal.png" 
+  alt="Example news app, Tailpiece in its normal state">
+  <img class="attempt-right" 
+  src="images/tailpiece-tap-to-update.png" 
+  alt="Example news app, Tailpiece when its ready to be updated">
+  <figcaption class="clearfix" style="clear:both;">
     Tailpiece, an online newspaper will auto download the latest news but
     allow the users to refresh manually so they do not lose their place in the article.
   </figcaption>
@@ -150,8 +185,13 @@ user's behaviour so if the sports section is what they typically view, perhaps
 make this the priority data that is downloaded.
 
 <figure>
-  <img class="attempt-left" src="images/tailpiece-offline.png" alt="Tailpiece informs the user that they are offline with various design widgets">
-  <img class="attempt-right" src="images/tailpiece-offline-sidebar.png" alt="Tailpiece has a navigational draw that shows what sections are ready for offline use.">
+  <img 
+  class="attempt-left" 
+  src="images/tailpiece-offline.png" 
+  alt="Tailpiece informs the user that they are offline with various design widgets">
+  <img class="attempt-right" 
+  src="images/tailpiece-offline-sidebar.png" 
+  alt="Tailpiece has a navigational draw that shows what sections are ready for offline use.">
   <figcaption class="clearfix">
     If the device is offline Tailpiece will notify the user with a status
     message letting them know that they can still use the app.
@@ -175,7 +215,7 @@ use action based language that your audience can relate to.
 <figure>
   <img class="attempt-left" src="images/io-offline-ready.png" alt="I/O app offline">
   <img class="attempt-right" src="images/chome-offline.png" alt="Chrome Status site is offline">
-  <figcaption class="clearfix">
+  <figcaption class="clearfix" style="clear:both;">
     Both the Google I/O 2016 app and Chrome Status site notify the user when
     the app is ready for offline use.
   </figcaption>
@@ -217,7 +257,7 @@ can see the true cost of a file.
 
 ### Help prevent hacked experiences 
 
-Often users hack an experience without realising they are doing it. For example
+Often users hack an experience without realizing they are doing it. For example
 before cloud sharing apps like Google Drive, it was common for users save large
 files and attach them to emails so they could carry on editing from a different
 device. It is important not to be pulled into their hacked experience but rather
@@ -285,7 +325,9 @@ ways: for example with color, labels and UI components.
 
 <div class="attempt-left">
   <figure>
-    <img src="images/accessibility_color7_do.png" alt="Good example that uses color and text to show an error.">
+    <img 
+    src="images/accessibility_color7_do.png" 
+    alt="Good example that uses color and text to show an error.">
     <figcaption class="success">
       <b>DO</b>: Use a mixture of design elements to convey meaning
      </figcaption>
@@ -322,7 +364,7 @@ status. Think of the action you are trying to convey rather than presenting the
 user with an abstract concept. For example save or download data would be action
 based.
 
-<img src="images/download-icons-exampels.png" alt="Various icon examples that convey offline">
+<img src="images/download-icons-examples.png" alt="Various icon examples that convey offline">
 
 Offline can mean a number of things depending on the context, such as download, 
 export, pin etc.. For more inspiration checkout the
@@ -400,6 +442,6 @@ When designing for unstable network connections, use these:
 * If the app is data-heavy, educate users about how they can download for
   offline use.
 * Make experiences transferable between devices.
-* Utilise language, icons, imagery, typography and color to express ideas to the 
+* Utilize language, icons, imagery, typography and color to express ideas to the 
   user collectively.
 * Provide reassurance and feedback to help the user.

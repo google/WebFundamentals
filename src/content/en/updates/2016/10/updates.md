@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: "The new Web Fundamentals: better navigation, new content and more!"
 
-{# wf_updated_on: 2016-10-07 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-10-07 #}
 {# wf_featured_image: /web/updates/images/2016/09/broadcast.png #}
 {# wf_featured_snippet: We recently made some big changes to Web<b>Fundamentals</b>, improving navigation, adding lots of new content, and making it easier for you to contribute. #}
@@ -41,13 +41,13 @@ Some of the new content includes:
   guidance including an [Offline cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/), 
   a [Service Worker life-cycle](/web/fundamentals/instant-and-offline/service-worker/lifecycle) guide,
   an introduction to [App Shell](/web/fundamentals/architecture/app-shell) and a
-  getting started guide for [Shadow DOM](/web/fundamentals/getting-started/primers/shadowdom) 
-  and [Web Push](/web/fundamentals/engage-and-retain/push-notifications/)
+  getting started guide for [Shadow DOM](/web/fundamentals/web-components/shadowdom) 
+  and [Web Push](/web/fundamentals/push-notifications)
 * Added a new [Instant and Reliable Loading](/web/fundamentals/instant-and-offline/) 
   section, and updated our guidance on [hardware integrations](/web/fundamentals/native-hardware/) 
   with guidance on using [cameras](/web/fundamentals/native-hardware/capturing-images/) 
   and [microphones](/web/fundamentals/native-hardware/recording-audio/), 
-  as well as created a new [UX Basics](/web/fundamentals/design-and-ui/ux-basics/)
+  as well as created a new [UX Basics](/web/fundamentals/design-and-ux/ux-basics/)
   guide.
 
 Of course, we still have lots of work to do, there's new guidance that needs

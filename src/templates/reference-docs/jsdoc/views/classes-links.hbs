@@ -1,0 +1,13 @@
+{{#any items}}
+<h>{{translateHeading headingKey items}}</h>
+  <section id='members-links'>
+  {{#each items}}
+    <h3 {{~cssClass '!class-list'}}>{{link longname name}}</h3>
+    {{#if classdesc}}
+      {{#markdown}}{{resolveLinks classdesc}}{{/markdown}}
+    {{else}}
+      {{#markdown}}{{resolveLinks description}}{{/markdown}}
+    {{/if}}
+  {{/each}}
+  </section>
+{{/any}}

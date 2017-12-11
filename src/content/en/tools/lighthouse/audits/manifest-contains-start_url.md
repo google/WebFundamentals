@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Manifest Contains start_url" Lighthouse audit.
 
@@ -35,3 +35,6 @@ implement and test "Add to Homescreen" support in your app.
 Lighthouse fetches the manifest and verifies that it has a `start_url` property.
 The manifest that Lighthouse fetches is separate from the one that Chrome is
 using on the page, which can possibly cause inaccurate results.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/manifest-contains-start_url.html" %}

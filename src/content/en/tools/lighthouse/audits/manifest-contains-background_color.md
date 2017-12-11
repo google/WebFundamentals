@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Manifest Contains background_color" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-21 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-09-21 #}
 
-# Manifest Contains Background Color  {: .page-title }
+# Manifest Contains background_color  {: .page-title }
 
 ## Why the audit is important {: #why }
 
@@ -35,3 +35,6 @@ Audit passes if the manifest contains a `background_color` property.
 The manifest that Lighthouse fetches is separate from the one that Chrome is
 using on the page, which can possibly cause inaccurate results. Lighthouse does
 not validate that the value is a valid CSS color.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/manifest-contains-background_color.html" %}

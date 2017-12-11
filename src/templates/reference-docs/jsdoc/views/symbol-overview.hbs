@@ -1,0 +1,75 @@
+{{#any docs}}
+  {{#first docs}}
+    {{#embed 'symbol-header'}}{{/embed}}
+  {{/first}}
+{{/any}}
+
+{{#each docs}}
+  {{#if @first}}
+    {{!-- heading that indicates what we're about to list --}}
+    {{#is pageCategory 'classes'}}
+      <section>
+    {{else}}
+      {{#any exports}}
+        <section>
+          <h>{{translateHeading 'exports' docs}}</h>
+      {{/any}}
+    {{/is}}
+  {{/if}}
+
+  {{!--
+      If a module exports only one symbol, document the symbol in the overview, since it's not a
+      member of anything else.
+  --}}
+  {{#is kind 'module'}}
+    {{#if exports}}
+      {{#each exports}}
+        {{#withOnly symbol=this}}
+          <section>
+            {{#embed 'symbol-detail'}}{{/embed}}
+          </section>
+        {{/withOnly}}
+      {{/each}}
+    {{/if}}
+  {{!-- Classes also need additional information in the overview. --}}
+  {{else is kind 'class'}}
+    {{#unless hideconstructor}}
+      <section>
+        <h>Constructor</h>
+        <section>
+          {{#withOnly symbol=this}}
+            {{#embed 'symbol-detail'}}{{/embed}}
+          {{/withOnly}}
+        </section>
+      </section>
+    {{/unless}}
+  {{!-- Externals also need additional information in the overview. --}}
+  {{else is kind 'external'}}
+    <section>
+      {{#with this}}
+        <dl {{~cssClass '!dl-compact'}}>
+          {{#embed 'details'}}{{/embed}}
+        </dl>
+      {{/with}}
+    </section>
+  {{!-- Namespaces that are functions also need additional information in the overview. --}}
+  {{else is kind 'namespace'}}
+    {{#if (needsSignature this)}}
+      <section>
+        {{#withOnly symbol=this}}
+          {{#embed 'symbol-detail'}}{{/embed}}
+        {{/withOnly}}
+      </section>
+    {{/if}}
+  {{/is}}
+
+  {{#if @last}}
+    {{#is pageCategory 'classes'}}
+      </section>
+    {{else}}
+      {{#any exports}}
+        </section>
+      {{/any}}
+    {{/is}}
+  {{/if}}
+{{/each}}

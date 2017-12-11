@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: The minute you start developing a site, the first tool you’ll use is a text editor, whether it’s as simple as notepad or a full-blown IDE. In this episode, Addy & Matt look at their collection of plugins for Sublime Text and discuss how each one helps with their workflow.
 
-{# wf_updated_on: 2015-05-19 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2015-05-19 #}
 {# wf_youtube_id: 2eu23_if6Lw #}
 
@@ -38,7 +38,7 @@ instructions on how to do so here](https://packagecontrol.io/installation).
 [JSHint](http://jshint.com/){: .external } is a JavaScript linter which examines your JavaScript
 and highlights any possible errors or bad practices in your code.
 
-For exmample, if you accidentally typed a variable name wrong, like
+For example, if you accidentally typed a variable name wrong, like
 below, then JSHint will point out that `fo` was never defined and is
 going to cause an error.
 
@@ -148,7 +148,7 @@ and more importantly reduces the risk of typos.
 
 ## Autoprefixer
 
-We've all had that moment of realisation where we've forgotten to
+We've all had that moment of realization where we've forgotten to
 add a prefixed CSS property. With
 [Autoprefixer](https://packagecontrol.io/packages/Autoprefixer)
 you simple run it on your CSS and it'll

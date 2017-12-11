@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Enabling HTTPS on your servers is critical to securing your webpages. 
+description: Enabling HTTPS on your servers is critical to securing your webpages.
 
 {# wf_updated_on: 2016-08-22 #}
 {# wf_published_on: 2015-03-27 #}
+{# wf_blink_components: Blink>SecurityFeature,Internals>Network>SSL #}
 
 # Enabling HTTPS on Your Servers {: .page-title }
 
@@ -199,7 +200,7 @@ Additionally, when you link to other pages in your site, users could get
 downgraded from HTTPS to HTTP.
 
 These problems happen when your pages include fully-qualified, intrasite URLs
-that use the *http://* scheme. 
+that use the *http://* scheme.
 
 <p><span class="compare-worse">Not recommended</span> — We don't recommend that you use fully qualified intrasite URLs.</p>
 
@@ -250,7 +251,7 @@ If your site depends on scripts, images, or other resources served from a third
 party, such as a CDN or jquery.com, you have two options:
 
 * Use protocol-relative URLs for these resources. If the third party does not
-serve HTTPS, ask them to. Most already do, including jquery.com. 
+serve HTTPS, ask them to. Most already do, including jquery.com.
 * Serve the resources from a server that you control, and which offers both HTTP
 and HTTPS. This is often a good idea anyway, because then you have better
 control over your site's appearance, performance, and security. In addition,
@@ -267,7 +268,7 @@ helps search engines determine the best way to get to your site.
 
 ## Turn on Strict Transport Security and secure cookies
 
-At this point, you are ready to "lock in" the use of HTTPS. 
+At this point, you are ready to "lock in" the use of HTTPS.
 
 * Use HTTP Strict Transport Security (HSTS) to avoid the cost of the 301 redirect.
 * Always set the Secure flag on cookies.
@@ -276,7 +277,7 @@ First, use [Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict
 to tell clients that they should always connect to your server via HTTPS, even
 when following an `http://` reference. This defeats attacks such as
 [SSL Stripping](http://www.thoughtcrime.org/software/sslstrip/){: .external }, and also
-avoids the round-trip cost of the `301 redirect` that we enabled in 
+avoids the round-trip cost of the `301 redirect` that we enabled in
 [Redirect HTTP to HTTPS](#redirect-http-to-https).
 
 Note: Clients that have noted your site as a known HSTS Host are likely to <a href="https://tools.ietf.org/html/rfc6797#section-12.1"><i>hard-fail</i> if your site ever has an error in its TLS configuration</a> (such as an expired certificate). HSTS is explicitly designed this way to ensure that network attackers cannot trick clients into accessing the site without HTTPS. Do not enable HSTS until you are certain that your site operation is robust enough to avoid ever deploying HTTPS with certificate validation errors.
@@ -318,7 +319,7 @@ When the content and application layers are well-tuned (see
 [Steve Souders' books](https://stevesouders.com/){: .external } for great advice), the
 remaining TLS performance concerns are generally small, relative to the
 overall cost of the application. Additionally, you can reduce and amortize
-those costs. (For great advice on TLS optimization and generally, see 
+those costs. (For great advice on TLS optimization and generally, see
 [High Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545) by Ilya Grigorik.) See also Ivan Ristic's [OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/) and [Bulletproof SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/).
 
 In some cases, TLS can _improve_ performance, mostly as a result of making
@@ -346,6 +347,6 @@ site operators cannot migrate to HTTPS without losing ad revenue; but until site
 operators migrate to HTTPS, advertisers have little motivation to publish HTTPS.
 
 Advertisers should at least offer ad service via HTTPS (such as by completing
-the "Enable HTTPS on your servers" section on this page. Many already do. You 
-should ask advertisers that do not serve HTTPS at all to at least start. 
+the "Enable HTTPS on your servers" section on this page. Many already do. You
+should ask advertisers that do not serve HTTPS at all to at least start.
 You may wish to defer completing [Make IntraSite URLs relative](#make-intrasite-urls-relative) until enough advertisers interoperate properly.

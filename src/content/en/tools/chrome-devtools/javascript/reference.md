@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Discover new debugging workflows in this comprehensive reference of Chrome DevTools debugging features.
 
@@ -47,7 +47,7 @@ execute the function without stepping into it.
   <img src="imgs/step-over-outline.svg"
        alt="Selecting 'Step over'."/>
   <figcaption>
-    <b>Figure X</b>. <b>Step over</b>, outlined in blue
+    <b>Figure 1</b>. <b>Step over</b>, outlined in blue
   </figcaption>
 </figure>
 
@@ -77,7 +77,7 @@ investigate that function further.
   <img src="imgs/step-into-outline.svg"
        alt="Selecting 'Step into'."/>
   <figcaption>
-    <b>Figure X</b>. <b>Step into</b>, outlined in blue
+    <b>Figure 2</b>. <b>Step into</b>, outlined in blue
   </figcaption>
 </figure>
 
@@ -106,7 +106,7 @@ to execute the rest of the function's code.
   <img src="imgs/step-out-outline.svg"
        alt="Selecting 'Step out'."/>
   <figcaption>
-    <b>Figure X</b>. <b>Step out</b>, outlined in blue
+    <b>Figure 3</b>. <b>Step out</b>, outlined in blue
   </figcaption>
 </figure>
 
@@ -144,7 +144,7 @@ then pauses on that line.
 <figure>
   <img src="imgs/continue-to-here.png" alt="Selecting 'Continue to here'."/>
   <figcaption>
-    <b>Figure X</b>. Selecting <b>Continue to here</b>
+    <b>Figure 4</b>. Selecting <b>Continue to here</b>
   </figcaption>
 </figure>
 
@@ -174,7 +174,7 @@ on `B`, without ever setting a breakpoint or pressing
   <img src="imgs/restart-frame.png"
     alt="Selecting 'Restart Frame'."/>
   <figcaption>
-    <b>Figure X</b>. Selecting <b>Restart Frame</b>
+    <b>Figure 5</b>. Selecting <b>Restart Frame</b>
   </figcaption>
 </figure>
 
@@ -188,7 +188,7 @@ DevTools executes the script up until the next breakpoint, if any.
   <img src="imgs/resume-script-execution-outline.svg"
        alt="Selecting 'Resume script execution'."/>
   <figcaption>
-    <b>Figure X</b>. <b>Resume script execution</b>, outlined in blue
+    <b>Figure 6</b>. <b>Resume script execution</b>, outlined in blue
   </figcaption>
 </figure>
 
@@ -204,7 +204,7 @@ execution](imgs/force-script-execution.png){:.devtools-inline}.
   <img src="imgs/selecting-force-script-execution.png"
        alt="Selecting 'Force script execution'."/>
   <figcaption>
-    <b>Figure X</b>. Selecting <b>Force script execution</b>
+    <b>Figure 7</b>. Selecting <b>Force script execution</b>
   </figcaption>
 </figure>
 
@@ -217,7 +217,7 @@ which context is currently selected.
 <figure>
   <img src="imgs/threads.svg" alt="The Threads pane."/>
   <figcaption>
-    <b>Figure X</b>. The Threads pane, outlined in blue
+    <b>Figure 8</b>. The Threads pane, outlined in blue
   </figcaption>
 </figure>
 
@@ -238,7 +238,7 @@ values of properties and variables in the local, closure, and global scopes.
 <figure>
   <img src="imgs/scope.svg" alt="The Scope pane."/>
   <figcaption>
-    <b>Figure X</b>. The Scope pane, outlined in blue
+    <b>Figure 9</b>. The Scope pane, outlined in blue
   </figcaption>
 </figure>
 
@@ -258,7 +258,7 @@ currently highlighting.
   <img src="imgs/call-stack.svg"
     alt="The Call Stack pane."/>
   <figcaption>
-    <b>Figure X</b>. The Call Stack pane, outlined in blue
+    <b>Figure 10</b>. The Call Stack pane, outlined in blue
   </figcaption>
 </figure>
 
@@ -278,7 +278,7 @@ to copy the current call stack to the clipboard.
   <img src="imgs/copy-stack-trace.png"
     alt="Selecting 'Copy Stack Trace'."/>
   <figcaption>
-    <b>Figure X</b>. Selecting <b>Copy Stack Trace</b>
+    <b>Figure 11</b>. Selecting <b>Copy Stack Trace</b>
   </figcaption>
 </figure>
 
@@ -318,7 +318,7 @@ To blackbox a script from the Editor pane:
   <img src="imgs/blackbox-editor-pane.png"
     alt="Blackboxing a script from the Editor pane."/>
   <figcaption>
-    <b>Figure X</b>. Blackboxing a script from the Editor pane
+    <b>Figure 12</b>. Blackboxing a script from the Editor pane
   </figcaption>
 </figure>
 
@@ -333,7 +333,7 @@ To blackbox a script from the Call Stack pane:
   <img src="imgs/blackbox-call-stack-pane.png"
     alt="Blackboxing a script from the Call Stack pane."/>
   <figcaption>
-    <b>Figure X</b>. Blackboxing a script from the Call Stack pane
+    <b>Figure 13</b>. Blackboxing a script from the Call Stack pane
   </figcaption>
 </figure>
 
@@ -351,7 +351,7 @@ To blackbox a single script or pattern of scripts from Settings:
   <img src="imgs/blackbox.png"
     alt="Blackboxing a script from Settings."/>
   <figcaption>
-    <b>Figure X</b>. Blackboxing a script from Settings
+    <b>Figure 14</b>. Blackboxing a script from Settings
   </figcaption>
 </figure>
 
@@ -372,7 +372,7 @@ You can watch any valid JavaScript expression.
 <figure>
   <img src="imgs/watch.svg"
     alt="The Watch pane."/>
-  <figcaption><b>Figure X</b>. The Watch pane, outlined in blue</figcaption>
+  <figcaption><b>Figure 15</b>. The Watch pane, outlined in blue</figcaption>
 </figure>
 
 * Click **Add Expression** ![Add
@@ -393,7 +393,7 @@ minified file human-readable.
 <figure>
   <img src="imgs/format.svg"
     alt="The Format button."/>
-  <figcaption><b>Figure X</b>. <b>Format</b>, outlined in blue</figcaption>
+  <figcaption><b>Figure 16</b>. <b>Format</b>, outlined in blue</figcaption>
 </figure>
 
 ## Edit a script {: #edit }
@@ -407,11 +407,11 @@ To edit a script:
 1. Open the file in the Editor pane of the Sources panel.
 1. Make your changes in the Editor pane.
 1. Press <kbd>Command</kbd>+<kbd>S</kbd> (Mac) or
-   <kbd>Command</kbd>+<kbd>S</kbd> (Windows, Linux) to save. DevTools patches
+   <kbd>Ctrl</kbd>+<kbd>S</kbd> (Windows, Linux) to save. DevTools patches
    the entire JS file into Chrome's JavaScript engine.
 
  <figure>
    <img src="imgs/editor.svg"
      alt="The Editor pane."/>
-   <figcaption><b>Figure X</b>. The Editor pane, outlined in blue</figcaption>
+   <figcaption><b>Figure 17</b>. The Editor pane, outlined in blue</figcaption>
  </figure>

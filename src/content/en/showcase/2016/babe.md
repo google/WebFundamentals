@@ -1,11 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2016-05-17T20:00:00.000Z #}
-{# wf_updated_on: 2016-05-17T20:00:00.000Z #}
+{# wf_published_on: 2016-05-14 #}
+{# wf_updated_on: 2016-05-14 #}
 {# wf_featured_image: /web/showcase/2016/images/babe/featured.png #}
 {# wf_featured_snippet: "For us, it’s no longer an either-or decision. To reach new users, we must be on the mobile web!",<br> <b>Weihan Liew</b>, BaBe CEO. #}
 {# wf_tags: progressive-web-apps,serviceworker,casestudy #}
+{# wf_region: asia #}
+{# wf_vertical: retail #}
 
 # BaBe {: .page-title }
 

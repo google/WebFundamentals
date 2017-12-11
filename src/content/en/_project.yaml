@@ -1,26 +1,17 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
-name: "Web"
-description: "Build next generation web experiences."
+name: Web
+description: Build next generation web experiences.
 home_url: /web/
 buganizer_id: 180451
-
+is_family_root: true
 color: google-blue
 content_license: cc3-apache2
 footer_path: /web/_footer.yaml
-
 icon:
   path: /web/images/web-fundamentals-icon192x192.png
-
 tags:
-- html5
-- mobile
-- performance
-- web
-
+  - html5
+  - mobile
+  - performance
+  - web
 google_analytics_ids:
-- UA-52746336-1
-
-announcement:
-  description: Join the Progressive Web App Road Show in South East Asia. <span style="font-weight:400;">Stopping in <a href="https://events.withgoogle.com/pwa-roadshow-manila/">Manila</a>, <a href="https://events.withgoogle.com/pwa-roadshow-ho-chi-minh-city/">Ho Chi Minh City</a> and <a href="https://events.withgoogle.com/pwa-roadshow-bangkok/">Bangkok</a>. Learn more and sign up now.<span>
-  start: '2016-11-14T08:00:00Z'
-  end: '2016-11-28T08:00:00Z'
+  - UA-52746336-1

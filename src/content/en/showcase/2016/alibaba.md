@@ -1,15 +1,17 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2016-11-09T19:00:00.000Z #}
-{# wf_updated_on: 2017-02-15T19:00:00.000Z #}
+{# wf_published_on: 2016-11-09 #}
+{# wf_updated_on: 2017-02-15 #}
 {# wf_featured_image: /web/showcase/2016/images/alibaba/card.png #}
 {# wf_featured_snippet: Alibaba.com is the world’s largest online business-to-business (B2B) trading platform, serving 200+ countries and regions. After upgrading their site to a Progressive Web App (PWA), they saw a 76 percent increase in total conversions across browsers.  #}
 {# wf_tags: progressive-web-apps,serviceworker,casestudy #}
+{# wf_region: asia #}
+{# wf_vertical: retail #}
 
 # Alibaba {: .page-title }
 
-<img src="images/alibaba/featured.png" class="attempt-right">
+<img src="images/alibaba/featured.gif" class="attempt-right">
 
 ### TL;DR {: .hide-from-toc }
 

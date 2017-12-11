@@ -1,91 +1,99 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: コンポジットは、ページのペイント部分を画面に一緒に置かれている場所です。
+description: コンポジットは、画面に表示するために、ページのペイントされた部分がまとめて置かれている場所です。
 
-{# wf_updated_on: 2015-03-19 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_updated_on:2015-03-20 #}
+{# wf_published_on:2015-03-20 #}
 
-# Stick to compositor-only properties and manage layer count {: .page-title }
+# コンポジタ専用プロパティの優先使用、およびレイヤー数の管理 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
+コンポジットは、画面に表示するために、ページのペイントされた部分がまとめて置かれている場所です。
 
-コンポジットは、ページのペイント部分を画面に一緒に置かれている場所です。
+
+ページのパフォーマンスに影響を与える 2 つの重要な要因があります。管理対象となるコンポジタ レイヤーの数と、アニメーションのために使用するプロパティです。
 
 ### TL;DR {: .hide-from-toc }
-- アニメーションの形状と不透明度の変更に固執します。
-- 移動要素を will-change または translateZ でプロモートします。
-- プロモーション ルールを乱用しないでください。レイヤーはメモリーと管理を必要とします。
 
+* アニメーションの形状と不透明度の変更のみを行うようにします。
+* 移動要素を `will-change` または `translateZ` でプロモートします。
+* プロモーション ルールにより、レイヤーでメモリーと管理が必要になるため、ルールの多用は避けてください。
 
-ページのパフォーマンスに影響を与える 2 つの重要な要因があります。管理対象となる必要コンポジタ レイヤーの数と、アニメーションのために使用するプロパティです。
+## アニメーションの形状と不透明度の変更の使用
 
-## 形状と不透明度の変更をアニメーションにしようしてます
-ピクセル パイプラインの最適パフォーマンス バージョンは、レイアウト、ペイントの両方を回避し、コンポジットの変更だけを要します。
+最もパフォーマンスの高いピクセル パイプラインでは、レイアウトとペイントの両方を避け、コンポジットの変更のみを必要とします。
 
 <img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg"  alt="レイアウトまたはペイントなしのピクセル パイプライン。">
 
-これを達成するために、コンポジタで扱うことができる変化の特性に固執する必要があります。 現在は**transforms** および**opacity**の 2 つのプロパティだけがあります。
+これを実現するには、コンポジタのみで処理できるプロパティの変更のみを行う必要があります。現在、これに当てはまるプロパティは **`transforms`** と **`opacity`** のみです。
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg"  alt="プロパティは、レイアウトやペイントを起動することなく、アニメーション化することができます。">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg"  alt="レイアウトやペイントをトリガーせずにアニメーション化できるプロパティ。">
 
-形状と不透明度を使用するための注意点は、これらのプロパティを変更するに要素が自身コンポジタのレイヤーでなければならないということです。 レイヤーを作成するためには、次の要素をプロモートしなければなりません。
+`transform` と `opacity` を使用する際の注意点は、これらのプロパティを変更する要素がそれ自身のコンポジ層になければならないということです。レイヤーを作成するには、要素をプロモートする必要があります。これについては、次のセクションで説明します。
 
-Note: これらのプロパティだけにアニメーションを制限することができない場合は、<a href="http://aerotwist.com/blog/flip-your-animations">FLIP principle</a> を参照してください。より高価なプロパティからの形状と不透明度の変化にアニメーションを再マッピングするのに役立つことがあります。
+注: これらのプロパティだけにアニメーションを制限することができない場合は、FLIP principle(https://aerotwist.com/blog/flip-your-animations) を参照してください。より高価なプロパティから、形状と不透明度の変更にアニメーションを再マッピングするのに役立つ場合があります。
 
-## アニメーション化する要素をプロモート
+## アニメーション化する要素をプロモートする
 
-“[Simplify paint complexity and reduce paint areas](simplify-paint-complexity-and-reduce-paint-areas)”セクションで説明したように、独自のレイヤーにアニメーション化する要素をプロモートしますが、合理的な範囲に留めてください。
+[ペイントの複雑さの簡略化とペイントエリアの縮小](simplify-paint-complexity-and-reduce-paint-areas) セクションで説明したように、アニメーション化する要素をそれら自身のレイヤーにプロモートする必要があります（合理的な範囲にとどめてください）。
 
 
     .moving-element {
       will-change: transform;
     }
-    
 
-あるいは、古いブラウザまたは will-change をサポートしていないブラウザ:
+
+古いブラウザ、または will-change をサポートしていないブラウザの場合は、次のようにします。
 
 
     .moving-element {
       transform: translateZ(0);
     }
-    
 
-これにより、ブラウザに変更予定を伝え、変更予定の内容に応じて、ブラウザはコンポジタ レイヤーの作成など、事前警告を与えます。
 
-## レイヤーを管理し、レイヤーの破裂を避ける
+これにより、ブラウザに変更が行われることが予告されます。予定されている変更の内容に応じて、ブラウザは、コンポジット層を作成するなどの準備をすることができます。
 
-それはおそらく魅力的ですが、レイヤーは多くの場合パフォーマンスを助けることを理解し、次のものを使用してページ上のすべての要素をプロモートします。
+## レイヤーを管理して、レイヤーが増えすぎないようにする
+
+レイヤーによってパフォーマンスが向上することが多いことを知ると、次のように、ページ上のすべての要素をプロモートしたくなることでしょう。
 
 
     * {
       will-change: transform;
       transform: translateZ(0);
     }
-    
 
-つまり、ページ上のすべての単一の要素をプロモートするということです。 ここでの問題は、作成したすべてのレイヤーは、メモリーおよび管理を必要とすることであり、それは無料ではありません。 実際には、限られたメモリーの端末におけるパフォーマンスへの影響は、これまでレイヤーを作成するための利益を上回ることがあります。 すべてのレイヤーのテクスチャは GPU にアップロードする必要があるため、CPU と GPU、および GPUのテクスチャの使用可能なメモリー間の帯域幅の面でさらなる制約が生じます。
 
-要するに、**不必要に要素をプロモートしてはいけません**.。
+これは、ページ上のあらゆる要素をプロモートしたいという遠回しな言い方です。ここでの問題は、作成したすべてのレイヤーにメモリと管理が必要であり、それはコストなしでは行えないということです。実際、メモリが限られている端末では、レイヤーの作成によって得られる利益を、パフォーマンスへの影響がはるかに上回ることがあります。すべてのレイヤーのテクスチャは GPU にアップロードする必要があるため、CPU と GPU 間の帯域幅や、GPU のテクスチャで使用可能なメモリの面でさらなる制約が生じます。
+
+警告:要素を不必要にプロモートしないでください。
 
 ## Chrome DevTools を使用してアプリのレイヤーを理解する
 
-アプリ内の各レイヤーを理解し、その要素がなぜレイヤーを有しているかを知るために、Chrome DevTools の  Timeline でペイント プロファイラを有効にする必要があります。
+<div class="attempt-right">
+  <figure>
+    <img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg" alt="Chrome DevTools のペイント プロファイラ用のトグル。">
+  </figure>
+</div>
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg"  alt="Chrome DevTools のペイント プロファイラ用のトグル。">
+アプリ内の各レイヤーを理解し、その要素がなぜレイヤーを有しているかを知るために、Chrome DevTools の Timeline でペイント プロファイラを有効にする必要があります。
 
-切り替えると記録を取ることができます。 記録が終了したら、個々のフレームをクリックすることができるようになります。これは frames-per-second バーと詳細の間にあります。
+<div style="clear:both;"></div>
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg"  alt="フレーム開発者は、プロファイリングに関心があります。">
+これがオンになっている場合、記録を実行する必要があります。記録が終了したら、frames-per-second バーと詳細の間にある個々のフレームをクリックできるようになります。
 
-これをクリックすると、新しいオプションの詳細が提供されます: レイヤー タブ。
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg"  alt="デベロッパーがプロファイリングを行うフレーム。">
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg"  alt="レイヤー タブ ボタンは Chrome DevTools にあります。">
+これをクリックすると、詳細に新しいオプションの [layer] タブが表示されます。
 
-このオプションでは新しいビューが表示されます。これによって、各レイヤーが作成された理由とともに、フレームの間に全てのレイヤーをパン、スキャン、およびズームインすることができます。
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg"  alt="Chrome DevTools の [layer] タブボタン。">
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-view.jpg"  alt="Chrome DevTools のレイヤー ビュー。">
+このオプションでは新しいビューが表示されます。これを使用して、対象のフレームの間にすべてのレイヤーをパン、スキャン、およびズームインすることができ、各レイヤーが作成された理由も示されます。
 
-このビューを使用すると、すでにあるレイヤーの数を追跡することができます。 スクロールやトランジションなどのパフォーマンスが重要なアクションの間に合成に多くの時間を費やしている場合 (目標は**4-5 ミリ秒**)、この情報を使用して、自分のアプリでレイヤ数を管理することができます。
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-view.jpg"  alt="Chrome DevTools の [layer] ビュー。">
+
+このビューを使用すると、現在あるレイヤーの数を追跡することができます。スクロールやトランジションなどのパフォーマンスが重要なアクションの間に合成に多くの時間を費やしている場合（目標は **4～5 ミリ秒**）、この情報を使用して、現在あるレイヤーの数とレイヤーが作成された理由を確認できます。また、このビューから、自分のアプリのレイヤー数を管理できます。
 
 
+{# wf_devsite_translation #}

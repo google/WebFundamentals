@@ -1,11 +1,13 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Web Starter Kit is boilerplate and tooling for multi-device development
 
 {# wf_published_on: 2015-01-01 #}
-{# wf_updated_on: 2016-09-12 #}
+{# wf_updated_on: 2017-07-24 #}
 
 # Web Starter Kit {: .page-title }
+
+Warning: Web Starter Kit is no longer supported.
 
 [Download Web Starter Kit (beta)](https://github.com/google/web-starter-kit/releases/latest){: .button .button-primary }
 
@@ -19,7 +21,7 @@ description: Web Starter Kit is boilerplate and tooling for multi-device develop
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Responsive boilerplate | A responsive boilerplate optimized for the multi-screen web. Powered by [Material Design Lite](http://getmdl.io).  You're free to use either this or a completely clean-slate  via [basic.html](https://github.com/google/web-starter-kit/blob/master/app/basic.html).                          |
 | Sass support                           | Compile [Sass](http://sass-lang.com/) into CSS with ease, bringing support for variables, mixins and more. (Run `gulp serve` or `gulp` for production)                                                                                                      |
-| Performance optimization               | Minify and concatenate JavaScript, CSS, HTML and images to help keep your pages lean. (Run `gulp` to create an optimised version of your project to `/dist`)                                                                                                |
+| Performance optimization               | Minify and concatenate JavaScript, CSS, HTML and images to help keep your pages lean. (Run `gulp` to create an optimized version of your project to `/dist`)                                                                                                |
 | Code Linting               | JavaScript code linting is done using [ESLint](http://eslint.org) - a pluggable linter tool for identifying and reporting on patterns in JavaScript. Web Starter Kit uses ESLint with [eslint-config-google](https://github.com/google/eslint-config-google), which tries to follow the Google JavaScript style guide.                                                                                                |
 | ES2015 via Babel 6.0                   | Optional ES2015 support using [Babel](https://babeljs.io/){: .external }. To enable ES2015 support remove the line `"only": "gulpfile.babel.js",` in the [.babelrc](https://github.com/google/web-starter-kit/blob/master/.babelrc) file. ES2015 source code will be automatically transpiled to ES5 for wide browser support.  |
 | Built-in HTTP Server                   | A built-in server for previewing your site locally while you develop and iterate                                                                                                                                                                            |

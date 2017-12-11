@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Site Does Not Use Date.now() In Its Own Scripts" Lighthouse audit.
+description: Reference documentation for the "Avoids Date.now() In Its Own Scripts" Lighthouse audit.
 
-{# wf_updated_on: 2016-12-01 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-12-01 #}
 
-# Site Does Not Use Date.now() In Its Own Scripts  {: .page-title }
+# Avoids Date.now() In Its Own Scripts  {: .page-title }
 
 ## Why the audit is important {: #why }
 
@@ -30,3 +30,6 @@ scripts that are on the same host as the page. Scripts from other hosts are
 excluded, because Lighthouse assumes that you don't have control over these
 scripts. So, there may be other scripts using `Date.now()` on your page,
 but these won't show up in your Lighthouse report.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/date-now.html" %}

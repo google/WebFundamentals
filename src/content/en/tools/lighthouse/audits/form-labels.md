@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Every Form Element Has A Label" Lighthouse audit.
 
@@ -12,6 +12,8 @@ description: Reference documentation for the "Every Form Element Has A Label" Li
 Labels clarify the purpose of form elements. Although the purpose of each
 element may be obvious for sighted users, this is often not the case for
 users who rely on screen readers.
+
+See [Create Amazing Forms](/web/fundamentals/design-and-ux/input/forms/#label_and_name_inputs_properly) for more information.
 
 ## How to pass the audit {: #how }
 
@@ -42,3 +44,6 @@ This audit is powered by the aXe Accessibility Engine. See [Form elements must
 have labels][axe] for more information.
 
 [axe]: https://dequeuniversity.com/rules/axe/1.1/label
+
+
+{% include "web/tools/lighthouse/audits/_feedback/form-labels.html" %}

@@ -8,7 +8,7 @@
 # givenfamily:  # REQUIRED - place a 512x512 px JPG image file with same name in /images/contributors
 #   name:
 #     given: First # Required
-#     family: Last # Required
+#     family: Last # Optional
 #   homepage: https://developers.google.com/web/ # Optional
 #   google: "123456789012345678901"              # Optional - id (must be quoted) or +Name
 #   twitter: petele                              # Recommended - handle only (no @)
@@ -115,10 +115,27 @@ beaufortfrancois:
   country: FR
   role:
     - author
-  homepage: 'https://plus.google.com/+FrancoisBeaufort'
+  google: +FrancoisBeaufort
   github: beaufortfrancois
   description:
     en: Dives into Chromium source code
+
+lucaberton:
+  name:
+    given: Luca
+    family: Berton
+  org:
+    name: Independent
+    unit: DevOps
+  country: IT
+  role:
+    - contributor
+    - translator
+  homepage: 'http://mrevolution.eu'
+  google: +LucaBerton
+  twitter: mrevolution85
+  github: lucab85
+  email: mr.evolution85@gmail.com
 
 ericbidelman:
   name:
@@ -136,7 +153,7 @@ ericbidelman:
     - author
   email: e.bidelman@google.com
   description:
-    en: 'Engineer @ Google working on Lighthouse, Web Components, Chrome, and the web'
+    en: 'Engineer @ Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'
 
 bokan:
   name:
@@ -177,6 +194,24 @@ yatesbuckley:
   google: +YatesBuckley
   email: yates@unit9.com
 
+mathiasbynens:
+  name:
+    given: Mathias
+    family: Bynens
+  org:
+    name: Google
+    unit: V8
+  country: DE
+  role:
+    - author
+  homepage: https://mathiasbynens.be/
+  twitter: mathias
+  github: mathiasbynens
+  email: mths@google.com
+  lanyrd: mathias
+  description:
+    en: V8 developer advocate
+
 owencm:
   name:
     given: Owen
@@ -186,11 +221,27 @@ owencm:
     unit: Product Management
   country: US
   role:
-    - contributer
+    - contributor
   homepage: 'http://www.owencampbellmoore.com/'
   google: +OwenCampbellMoore
   twitter: owencm
   email: owencm@google.com
+
+mcasas:
+  name:
+    given: Miguel
+    family: Casas-Sanchez
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - engineer
+  twitter: yellowdoge
+  github: yellowdoge
+  email: mcasas@chromium.org
+  description:
+    en: Miguel is an engineer in the Chrome team
 
 michaelchang:
   name:
@@ -208,7 +259,7 @@ samchen:
   role:
     - translator
   homepage: 'http://www.zfanw.com/blog/'
-  google: +%E9%99%88%E4%B8%89
+  google: '104787680206754797134'
   twitter: chenxsan
   email: chenxsan@google.com
   description:
@@ -356,6 +407,15 @@ samdutton:
   description:
     en: Sam is a Developer Advocate
 
+flackr:
+  name:
+    given: Robert
+    family: Flack
+  country: AN
+  role:
+    - author
+  email: flackr@google.com
+
 jonathangarbee:
   name:
     given: Jonathan
@@ -448,7 +508,7 @@ simongong:
   country: JP
   role:
     - translator
-  google: +%E9%BE%9A%E6%8C%AF%E5%8D%8Esimon
+  google: '113525015220376733647'
   email: simon.gong64@gmail.com
   description:
     en: Simon is a Full Stack Developer
@@ -503,6 +563,49 @@ ilyagrigorik:
   twitter: igrigorik
   description:
     en: Ilya is a Developer Advocate and Web Perf Guru
+
+jgruber:
+  name:
+    given: Jakob
+    family: Gruber
+  org:
+    name: Google
+    unit: V8
+  country: DE
+  role:
+    - author
+  twitter: schuay
+  github: schuay
+  email: jgruber@google.com
+  description:
+    en: Jakob is an engineer working on V8
+
+yigu:
+  name:
+    given: Yi
+    family: Gu
+  org:
+    name: Google
+    unit: Chrome
+  country: Canada
+  role:
+    - author
+
+yangguo:
+  name:
+    given: Yang
+    family: Guo
+  org:
+    name: Google
+    unit: V8
+  country: DE
+  role:
+    - author
+  twitter: hashseed
+  github: hashseed
+  email: yangguo@google.com
+  description:
+    en: Yang is an engineer working on V8
 
 umarhansa:
   name:
@@ -761,6 +864,23 @@ nurinamu:
   description:
     en: Wonjae loves WebRTC and HHK
 
+plegner:
+  name:
+    given: Philipp
+    family: Legner
+  homepage: https://mathigon.org
+  twitter: philipplegner
+  github: plegner
+  role:
+    - engineer
+  description:
+    en: Software Engineer at Gogole
+  org:
+    name: Google
+    unit: Software Engineer
+  country: GB
+  email: plegner@google.com
+
 petelepage:
   name:
     given: Pete
@@ -780,6 +900,17 @@ petelepage:
   lanyrd: petele
   description:
     en: Pete is a Developer Advocate
+ 
+kennith:
+  name:
+    given: Kennith
+    family: Leung
+  homepage: http://kennithleung.com
+  twitter: kennith
+  google: +kennith
+  email: kennith.leung@gmail.com
+  role: 
+    - translator
 
 paullewis:
   name:
@@ -802,8 +933,8 @@ henrylim:
     given: Henry
     family: Lim
   org:
-    name: Independent
-    unit: Developer
+    name: Google Developer Group Kuala Lumpur
+    unit: Community Co-organizer
   country: MY
   role:
     - translator
@@ -812,7 +943,21 @@ henrylim:
   homepage: 'https://limhenry.xyz'
   email: lets.email.henry@gmail.com
   description:
-    en: 'Co-Organizer @ GDG Kuala Lumpur'
+    en: 'Henry is the community co-organizer @ Google Developer Group Kuala Lumpur.'
+
+wayouliu:
+  name:
+    given: Wayou
+    family: Liu
+  homepage: https://wayou.github.io/
+  google: +WayouLiu
+  twitter: liuwayong
+  github: wayou
+  description:
+    en: "Wayou is a developer and loves the web"
+  role:
+    - translator
+  email: liuwayong@gmail.com
 
 heathermahan:
   name:
@@ -862,6 +1007,17 @@ renatomangini:
   twitter: renatomangini
   email: mangini@google.com
 
+smcgruer:
+  name:
+    given: Stephen
+    family: McGruer
+  org:
+    name: Google
+    unit: Chrome
+  country: Canada
+  role:
+    - author
+
 josephmedley:
   name:
     given: Joseph
@@ -873,6 +1029,21 @@ josephmedley:
   email: jmedley@google.com
   description:
     en: Technical Writer
+
+kuu:
+  name:
+    given: Kuu
+    family: Miyazaki
+  org:
+    name: Independent
+    unit: Developer
+  country: Japan
+  role:
+    - translator
+  twitter: miyazaqui
+  email: miyazaqui@gmail.com
+  description:
+    en: "Kuu is interested in media technology on the Web"
 
 jacquerie:
   name:
@@ -904,7 +1075,7 @@ addyosmani:
   org:
     name: Google
     unit: Developer Relations
-  country: UK
+  country: USA
   role:
     - author
   google: +AddyOsmani
@@ -951,6 +1122,22 @@ jeffposnick:
   description:
     en: Web DevRel @ Google
 
+pozdnyakov:
+  name:
+    given: Mikhail
+    family: Pozdnyakov
+  org:
+    name: Intel
+    unit: Web team
+  country: Finland
+  role:
+    - author
+    - engineer
+  github: pozdnyakov
+  email: mikhail.pozdnyakov@intel.com
+  description:
+    en: Mikhail is an Engineer at Intel
+
 rupl:
   name:
     given: Chris
@@ -964,6 +1151,23 @@ rupl:
   email: chris.ruppel@gmail.com
   description:
     en: Chris is a frontend developer and web performance advocate.
+
+satyakresna:
+  name:
+    given: Kresna
+    family: Satya
+  org:
+    name: Independent
+    unit: Web Programmer
+  country: ID
+  role:
+    - translator
+  homepage: 'https://satyakresna.com'
+  google: +SatyaKresnaAdiPratama
+  twitter: _satyakresna
+  email: satyakresna6295@gmail.com
+  description:
+    en: Kresna is a Web Programmer.
 
 taylorsavage:
   name:
@@ -1008,7 +1212,8 @@ yvoschaap:
   google: +yvo
   twitter: yvoschaap
   email: yvo@yvoschaap.com
-  description: "Loves to code and build great things."
+  description:
+    en: "Loves to code and build great things."
 
 moinshaikh:
   name:
@@ -1026,6 +1231,22 @@ moinshaikh:
   email: montugshaikh@gmail.com
   description:
     en: Moin is a passionate Opensource tech geek working towards making opensource more adoptable.
+
+alexshalamov:
+  name:
+    given: Alexander
+    family: Shalamov
+  org:
+    name: Intel
+    unit: Web team
+  country: Finland
+  role:
+    - author
+    - engineer
+  github: alexshalamov
+  email: alexander.shalamov@intel.com
+  description:
+    en: Alex is an Engineer at Intel
 
 glenshires:
   name:
@@ -1085,6 +1306,33 @@ alansilva:
   description:
     en: Alan is a JavaScript Developer
 
+vinamratasingal:
+  name:
+    given: Vinamrata
+    family: Singal
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - author
+  description:
+    en: Lighthouse Product Manager
+
+dmitryskripunov:
+  name:
+    given: Dmitry
+    family: Skripunov
+  country: Russia
+  role:
+    - translator
+  twitter: dmitryskripunov
+  google: "116954151022889696749"
+  github: dmitryskripunov
+  email: dskripunov@gmail.com
+  description:
+    en: Dmitry is a Software Engineer
+    
 andismith:
   name:
     given: Andi
@@ -1128,6 +1376,20 @@ emilystark:
   homepage: 'https://www.emilymstark.com/'
   twitter: estark37
   email: estark@chromium.org
+
+sunyunjia:
+  name:
+    given: Sandra
+    family: Sun
+  org:
+    name: Google
+    unit: Chrome
+  country: Canada
+  role:
+    - engineer
+  email: sunyunjia@google.com
+  description:
+    en: "Software Engineer working on Chromium"
 
 surma:
   name:
@@ -1182,8 +1444,7 @@ samthorogood:
   role:
     - author
     - engineer
-  homepage: 'http://whistlr.info/'
-  google: +SamThorogood
+  homepage: 'https://whistlr.info/'
   twitter: samthor
   email: thorogood@google.com
   description:
@@ -1201,6 +1462,23 @@ fouadvaladbeigi:
   google: "115771375659957547634"
   email: fouad.valadbeigi@unit9.com
 
+majidvp:
+  name:
+    given: Majid
+    family: Valipour
+  homepage: http://zgrs.ca
+  twitter: majido
+  github: majido
+  description:
+    en: "Software Engineer working on Chromium"
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  email: majidvp@google.com
+
 johyphenel:
   name:
     given: Jo-el
@@ -1215,6 +1493,23 @@ johyphenel:
   google: +Jo-elvanBergen
   twitter: johyphenel
   email: jo-el@google.com
+
+philipwalton:
+  name:
+    given: Philip
+    family: Walton
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  homepage: 'https://philipwalton.com'
+  twitter: philwalton
+  github: philipwalton
+  role:
+    - author
+  email: philip@philipwalton.com
+  description:
+    en: 'Engineer at Google working on the Web Platform'
 
 wangyu:
   name:

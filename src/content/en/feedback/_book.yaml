@@ -1,5 +1,3 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
-
 upper_tabs:
   - include: /web/_upper_tabs-Fundamentals.yaml
   - include: /web/_upper_tabs-Tools.yaml
@@ -11,10 +9,9 @@ upper_tabs:
       other:
       - name: Feedback
         contents:
-        - title: Developer Feedback
+        - title: Home
           path: /web/feedback/
         - title: How to File a Good Bug
           path: /web/feedback/file-a-bug
         - title: Browser Bug Searcher
           path: /web/feedback/browser-bug-searcher
-

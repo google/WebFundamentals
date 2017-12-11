@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Manifest's short_name won't be truncated when displayed on homescreen" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-21 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-09-21 #}
 
-# Manifest's Short Name Won't Be Truncated When Displayed on Homescreen {: .page-title }
+# Manifest's short_name Won't Be Truncated When Displayed on Homescreen {: .page-title }
 
 ## Why the audit is important {: #why }
 
@@ -42,3 +42,6 @@ So, if you don't include a `short_name` in your manifest, but your `name` is
 less than 12 characters, then the audit passes. The manifest that Lighthouse
 fetches is separate from the one that Chrome is using on the page, which can
 possibly cause inaccurate results.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/manifest-short_name-is-not-truncated.html" %}

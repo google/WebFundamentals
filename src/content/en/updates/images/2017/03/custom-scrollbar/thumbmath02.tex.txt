@@ -1,0 +1,2 @@
+\text{factor} = \frac{\text{scroller.height} -
+\text{thumb.height}}{\text{scroller.scrollHeight} - \text{scroller.height}}

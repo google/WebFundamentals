@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: If your video is short and you want it to auto-play&mdash;basically, if you are considering a GIF&mdash;then this guide might be just what you need.
 
-{# wf_updated_on: 2016-10-12 #}
+{# wf_updated_on: 2017-04-26 #}
 {# wf_published_on: 2016-10-12 #}
 
 # Including Videos {: .page-title }
@@ -39,23 +39,26 @@ to automate the process:
     #!/bin/bash
     BITRATE=${BITRATE:-500k}
 
-    ffmpeg -i $1 ${@:2} -c:v libx264 -b:v ${BITRATE} -movflags +faststart -pix_fmt yuv420p -c:a null ${1%.*}_x264.mp4
+    ffmpeg -i $1 ${@:2} -c:v libx264 -profile:v main -level 4.0 -preset veryslow -tune animation -movflags +faststart -b:v ${BITRATE} -pix_fmt yuv420p -c:a null ${1%.*}_x264.mp4
     ffmpeg -i $1 ${@:2} -c:v libvpx -b:v ${BITRATE} -c:a null ${1%.*}_vp8.webm
 
 Notes about the script:
 
 * Usage: `BITRATE=500k ./transcode_video.sh <filename> [additional ffmpeg options]`
 * The script _will_ strip out any audio.
-* You might want to play around with the bitrate for each format individually. 
-  VP8 tends to achieve the same quality with a smaller bitrate (and therefore 
+* You should change the `-tune` parameter to `film` if it’s not a screenrecording.
+* Details about the x264 encoder options can be found [here](https://trac.ffmpeg.org/wiki/Encode/H.264)
+* Details about the VP8 encoder options can be found [here](https://trac.ffmpeg.org/wiki/Encode/VP8)
+* You might want to play around with the bitrate for each format individually.
+  VP8 tends to achieve the same quality with a smaller bitrate (and therefore
   smaller filesize) than h264.
 
 ## Useful options
 
-* `-r 15`: Resample to 15 fps. I use this when I am screencasting the DevTool 
+* `-r 15`: Resample to 15 fps. I use this when I am screencasting the DevTool
   console or a terminal.
-* `-vf 'scale=trunc(iw/4)*2:-2'`: Makes the video half as big. When using it 
-  make sure both width and height are a multiple of 2. (This is a requirement 
+* `-vf 'scale=trunc(iw/4)*2:-2'`: Makes the video half as big. When using it
+  make sure both width and height are a multiple of 2. (This is a requirement
   for h264).
 * `-vf 'scale=trunc(iw/8)*4:-2'`: Does the same thing as the previous option,
   except that it makes the video a quarter as big rather than half as big.
@@ -76,7 +79,7 @@ Include the video in your article using the following markup. The `autoplay`
 attribute can be removed if autoplay is not desired. I recommend keeping
 `controls` in for as long as iOS 9 is around, as it ignores `autoplay` and the
 user needs a way to start the video. I’d also recommend to [add a poster
-image](/web/fundamentals/design-and-ui/media/video#include_a_poster_image),
+image](/web/fundamentals/media/video#include_a_poster_image),
 especially when autoplay is not enabled.
 
 

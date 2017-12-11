@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Lighthouse 검사 항목 "크리티컬 요청 체인"을 위한 참조 문서
+description: Lighthouse 감사 항목 "크리티컬 요청 체인"을 위한 참조 문서
 
 {# wf_updated_on: 2017-02-20 #}
 {# wf_published_on: 2016-10-06 #}
 
 # 크리티컬 요청 체인 (Critical Request Chains) {: .page-title }
 
-## 왜 이 검사가 중요한가 {: #why }
+## 왜 이 감사가 중요한가 {: #why }
 
 크리티컬 요청 체인(Critical Request Chains)은 CRP(크리티컬 렌더링 패스, Critical Rendering Path)
 최적화 전략에서 따온 컨셉입니다. CRP를 사용하면 어떤 리소스가 로드되고 어떤 순서로 로드되는 지
@@ -16,10 +16,10 @@ description: Lighthouse 검사 항목 "크리티컬 요청 체인"을 위한 참
 더 자세한 사항은 [크리티컬 렌더링 패스(Critical Rendering
 Path)](/web/fundamentals/performance/critical-rendering-path/) 문서를 살펴보길 바랍니다.
 
-## 어떻게 이 검사를 통과하는가 {: #how }
+## 어떻게 이 감사를 통과하는가 {: #how }
 
-이 검사는 "통과"나 "실패"로 구성하지 않습니다.
-이 검사가 제공하는 정보는 앱의 페이지 로딩 성능 향상의 기회를 줍니다.
+이 감사는 "통과"나 "실패"로 구성하지 않습니다.
+이 감사가 제공하는 정보는 앱의 페이지 로딩 성능 향상의 기회를 줍니다.
 
 Lighthouse의 Chrome 확장프로그램 버전의 보고서에서는 다음과같은 다이어그램을 생성합니다.
 
@@ -38,7 +38,7 @@ Initial navigation
 이 다이어그램은 페이지의 크리티컬 요청 체인을 나타냅니다.
 경로 `lighthouse/`부터 `/css`까지는 한 체인입니다.
 경로 `lighthouse/`부터 `css/devsite-googler-buttons.css`는 다른 체인입니다. 기타등등.
-이 검사의 최상위 점수는 이 체인 수를 나타냅니다.
+이 감사의 최상위 점수는 이 체인 수를 나타냅니다.
 예를 들어, 위 다이어그램의 "점수"는 7입니다.
 
 또한 다이어그램은 각 리소스를 다운로드하는 데 소요 된 시간과 

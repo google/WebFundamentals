@@ -20,14 +20,13 @@
     <itunes:author>{{ ../author.name }}</itunes:author>
     <itunes:subtitle>{{ podcast.subtitle }}</itunes:subtitle>
     <itunes:summary>
-      <![CDATA[
-        <img src="https://ga-beacon.appspot.com/UA-52746336-1{{#if analyticsUrl }}{{ analyticsUrl }}{{else}}{{ url }}{{/if}}?feed_type=podcast&pixel">
-        {{{ description }}}
-      ]]></itunes:summary>
+      {{{ description }}}
+    </itunes:summary>
     <itunes:image href="{{ image }}" />
+    <itunes:explicit>no</itunes:explicit>
     <enclosure url="{{ podcast.audioUrl }}" length="{{podcast.fileSize}}" type="audio/mpeg"/>
     <guid isPermaLink="true">{{ ../host }}{{ url }}</guid>
-    <pubDate>{{ podcast.pubDate }}</pubDate>
+    <pubDate>{{ formatDateRSS datePublishedMoment }}</pubDate>
     <itunes:duration>{{ podcast.duration }}</itunes:duration>
   </item>
   {{/each}}

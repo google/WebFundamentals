@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 56 to help you plan.
 
-{# wf_updated_on: 2017-02-22 #}
+{# wf_updated_on: 2017-03-02 #}
 {# wf_published_on: 2016-12-08 #}
 {# wf_tags: deprecations,removals,chrome56 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -59,28 +59,6 @@ optimizations.
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/1eKb8bqT1Ds/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5740978103123968) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=658341)
-
-## Mouse on Android stops firing TouchEvents
-
-Until version 55, Android low-level mouse events in Chrome primarily followed an
-event path designed for touch interactions. For example, mouse drag motion while
-a mouse button is pressed generates `MotionEvents` delivered through
-`View.onTouchEvent`.
-
-However, since touch events cannot support hover, hovering mousemoves followed a
-separate path. The whole design had quite a few side-effects including mouse
-interactions firing `TouchEvents`, all moue buttons appearing as *left* mouse
-buttons, and `MouseEvents` being suppressed by `TouchEvents`.
-
-Starting with Chrome 56, a mouse on Android M Or later will:
-
-* No longer fire `TouchEvents`.
-* Fire a consistent sequence of `MouseEvents` with appropriate buttons and
-  other properties. 
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cNaFvMaYtNA/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5642080642662400) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=468806)
 
 ## Remove user gestures from touch scroll
 

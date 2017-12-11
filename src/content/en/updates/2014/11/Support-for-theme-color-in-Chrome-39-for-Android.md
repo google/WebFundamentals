@@ -32,7 +32,7 @@ and we recommend providing a 192&times;192px PNG file. For example:
 Check out the theme-color here on HTML5Rocks as well as on the [Web
 Fundamentals](/web/fundamentals/) site, and be sure
 to check out the
-[Add to home screen docs](/web/fundamentals/design-and-ui/browser-customization/)
+[Add to home screen docs](/web/fundamentals/design-and-ux/browser-customization/)
 for more ways to make your site stand out.
 
 

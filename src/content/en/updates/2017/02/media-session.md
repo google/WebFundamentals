@@ -2,11 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Customize web media notifications and respond to media related events with the new Media Session API.
 
-{# wf_updated_on: 2017-02-15 #}
+{# wf_updated_on: 2017-09-01 #}
 {# wf_published_on: 2017-02-06 #}
 {# wf_tags: news,chrome57,media,notifications,play #}
 {# wf_featured_image: /web/updates/images/2017/02/tldr.png #}
 {# wf_featured_snippet: Finally! We can customize web media notifications (title, artist, album name, artwork) and respond to media related events such as seeking or track changing with the new Media Session API. #}
+{# wf_blink_components: Blink>Media #}
 
 # Customize Media Notifications and Handle Playlists {: .page-title }
 
@@ -22,9 +23,13 @@ The Media Session API is supported in Chrome 57 (beta in February 2017, stable
 in March 2017).
 
 <figure>
-  <img src="/web/updates/images/2017/02/tldr.png"
-    alt="Media Session TL;DR;"/>
-  <figcaption><a href="https://en.wikipedia.org/wiki/Rick_Astley#/media/File:Rick_Astley_Tivoli_Gardens.jpg">Photo</a> by Michael Alø-Nielsen / <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
+  <img src="/web/updates/images/2017/02/tldr.png" alt="Media Session TL;DR;"/>
+  <figcaption>
+    <a href="https://wikipedia.org/wiki/Rick_Astley#/media/File:Rick_Astley_Tivoli_Gardens.jpg">
+      Photo
+    </a> by Michael Alø-Nielsen /
+    <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </figcaption>
 </figure>
 
 ## Gimme what I want
@@ -263,8 +268,17 @@ shows up on lock screens.
 <div class="clearfix"></div>
 <div class="attempt-left">
   <figure>
-    <img src="/web/updates/images/2017/02/lock-screen.png" alt="Lock Screen">
-    <figcaption>Lock Screen - <a href="https://en.wikipedia.org/wiki/Rick_Astley#/media/File:Rick_Astley_Tivoli_Gardens.jpg">Photo</a> by Michael Alø-Nielsen / <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
+    <img src="/web/updates/images/2017/02/lock-screen.jpg" alt="Lock Screen">
+    <figcaption>
+      Lock Screen - 
+      <a href="https://wikipedia.org/wiki/Rick_Astley#/media/File:Rick_Astley_Tivoli_Gardens.jpg">
+        Photo
+      </a>
+      by Michael Alø-Nielsen / 
+      <a href="https://creativecommons.org/licenses/by/2.0/">
+        CC BY 2.0
+      </a>
+    </figcaption>
   </figure>
 </div>
 <div class="attempt-right">
@@ -415,6 +429,20 @@ doing so is pretty easy with the [Cache API].
   up an `<audio>` element as the input source to the Web Audio API. Hopefully,
   the proposed [Web AudioFocus API] will improve the situation in the
   near future.
+- Media Mession calls will affect media notifications only if they come from
+  the same frame as the media resource. See the snippet below.
+
+<pre class="prettyprint">
+&lt;iframe id="iframe">
+  &lt;audio>...&lt;/audio>
+&lt;/iframe>
+&lt;script>
+  iframe.contentWindow.navigator.mediaSession.metadata = new MediaMetadata({
+    title: 'Never Gonna Give You Up',
+    ...
+  });
+&lt;/script>
+</pre>
 
 ## Support
 
@@ -424,19 +452,35 @@ status can be found on [Chrome Platform Status].
 
 ## Samples & demos
 
-Check out our official Chrome [Media Session samples] featuring [Blender Foundation] and [Jan Morgenstern's work].
+Check out our official Chrome [Media Session samples] featuring [Blender Foundation]
+and [Jan Morgenstern's work].
 
 <video autoplay loop muted style="max-width: 100%"
     poster="https://storage.googleapis.com/media-session/screenrecord.png">
-  <source src="https://storage.googleapis.com/media-session/screenrecord.webm" type="video/webm; codecs=vp8">
-  <source src="https://storage.googleapis.com/media-session/screenrecord.mp4" type="video/mp4; codecs=h264">
+  <source src="https://storage.googleapis.com/media-session/screenrecord.webm"
+          type="video/webm; codecs=vp8">
+  <source src="https://storage.googleapis.com/media-session/screenrecord.mp4"
+          type="video/mp4; codecs=h264">
 </video>
 
 ## Resources
 
-- Media Session Spec: [https://wicg.github.io/mediasession](https://wicg.github.io/mediasession)
-- Spec Issues: [https://github.com/WICG/mediasession/issues](https://github.com/WICG/mediasession/issues)
-- Chrome Bugs: [https://crbug.com/?q=component:Internals>Media>Session](https://crbug.com/?q=component:Internals>Media>Session)
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="kLlPYtQeQQ8"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+Media Session Spec:
+[wicg.github.io/mediasession](https://wicg.github.io/mediasession)
+
+Spec Issues:
+[github.com/WICG/mediasession/issues](https://github.com/WICG/mediasession/issues)
+
+Chrome Bugs:
+[crbug.com](https://crbug.com/?q=component:Internals>Media>Session)
+
+<div class="clearfix"></div>
 
 {% include "comment-widget.html" %}
 

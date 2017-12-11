@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: Widgets you can use to simplify your writing and development
 
-{# wf_updated_on: 2016-09-13 #}
+{# wf_updated_on: 2017-05-21 #}
 {# wf_published_on: 2016-09-13 #}
 
 # Widgets {: .page-title }
@@ -26,7 +26,7 @@ standard reference link markdown syntax:
 Be sure to add links sorted alphabetically by id, check to ensure the link
 you're adding doesn't already exist yet.
 
-Next, include the [`_common-links.md`][common-links] file in your document. 
+Next, include the [`_common-links.md`][common-links] file in your document.
 
     <<../_common-links.md>>
 
@@ -105,6 +105,11 @@ $(document).ready(function() {
 </script>
 {% endhtmlescape %}&#123;% endframebox %}</pre>
 
+Supported parameters for framebox:
+
+* `height`: Sets the height of the framebox
+* `class`: Adds a class to the framebox’ `iframe`
+
 ## Including code from the local project (`includecode`)
 
 Use `includecode` with a `content_path` argument to refer to a path to
@@ -118,7 +123,7 @@ also checks for the file in the en locale before failing.
 &lt;/pre>
 </pre>
 
-Includes can be limited by using `region_tag="region"` and including a 
+Includes can be limited by using `region_tag="region"` and including a
 `[START region]` and `[END region]` within the code file.
 
 By default `includecode` returns the specified section of the source code,
@@ -161,7 +166,8 @@ bottom of the page. For example:
 &#123;% include "comment-widget.html" %}
 </pre>
 
-Note: the comment widget does **not** render in the staging or development environment, and will only be visible when the page is published on DevSite.
+Note: the comment widget does **not** render in the staging or development
+environment, and will only be visible when the page is published on DevSite.
 
 
 ## Videos
@@ -172,9 +178,9 @@ Note: the comment widget does **not** render in the staging or development envir
   </iframe>
 </div>
 
-Wrap all YouTube videos in `<div class="video-wrapper">` or 
+Wrap all YouTube videos in `<div class="video-wrapper">` or
 `<div class="video-wrapper-full-width">`. `class="video-wrapper"`
-automatically floats the video right on larger screens, keeping it at 50% of 
+automatically floats the video right on larger screens, keeping it at 50% of
 the column width but forcing the video into vertical layout on smaller screens,
 with the video at 100% of the column width. As the video's size changes, it
 automatically maintains a 16:9 ratio. `class="video-wrapper-full-width"` keeps
@@ -188,7 +194,7 @@ automatically maintain a 16:9 ratio.
     </div>
 
 
-[common-links]: https://github.com/google/WebFundamentals/blob/next-version/src/content/en/_common-links.md
+[common-links]: https://github.com/google/WebFundamentals/blob/master/src/content/en/_common-links.md
 
 
 ## Inline Feedback {: #inline-feedback }
@@ -197,17 +203,21 @@ Gain more feedback on your doc by asking your readers yes / no questions.
 
 ### Example
 
-See question at bottom of [Get Started Debugging JS][inline feedback example].
+See [Get Started Debugging JS][inline feedback example] for examples. Each of
+the questions at the bottom of the sections use the Inline Feedback widget.
 
-[inline feedback example]: /web/tools/chrome-devtools/javascript/#step-1
+[inline feedback example]: /web/tools/chrome-devtools/javascript/
 
 ### Usage
 
 1. Make a directory called `_feedback` near the doc that'll include the feedback.
+2. If you want to include a question before your buttons, then copy
+   `/src/content/en/tools/chrome-devtools/javascript/_feedback/7.html` into
+   your `_feedback` directory. Else, copy `.../1.html`.
 2. Copy `/src/content/en/tools/chrome-devtools/javascript/_feedback/1.html`
    into your `_feedback` directory.
-3. Modify all of the variables to suit your question. All variables are
-   required.
+3. Modify all of the variables to suit your question. All variables except
+   `question` are required.
 4. Include `_feedback/1.html` into your doc, like this:
 
 <pre class="prettyprint">
@@ -234,5 +244,5 @@ analytics data.
 
 See Google Analytics > Behavior > Events. When the user clicks "fail",
 a value of 0 is sent for this label. When user clicks "success", a value
-of 1 is sent. So, you can determine how much users are clicking
-"success" or "fail" based on a 0 to 1 scale.
+of 1 is sent. So, a value of 1 means that users are always clicking your
+"success" button.

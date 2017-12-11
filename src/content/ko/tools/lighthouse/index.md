@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to set up Lighthouse to audit and improve your web apps.
 
-{# wf_updated_on: 2017-01-31 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-09-27 #}
 
 # Lighthouse {: .page-title }
@@ -41,7 +41,7 @@ figure {
 }
 </style>
 
-[Lighthouse](/web/tools/lighthouse/)는 웹 앱의 품질을 개선하는
+Lighthouse는 웹 앱의 품질을 개선하는
 [오픈 소스](https://github.com/GoogleChrome/lighthouse) 자동화 도구입니다.
 
 Lighthouse는 Chrome 확장프로그램, 커맨드 라인에서, 노드 모듈에서 프로그램으로도 사용할 수 있습니다.
@@ -65,7 +65,7 @@ Lighthouse에 확인할 URL을 지정하고, 페이지에 대한 테스트를 �
   </a>
 </p>
 
-Note: Lighthouse는 현재 [홈스크린에 추가](/web/fundamentals/engage-and-retain/app-install-banners/)나 오프라인 지원 같은,
+Note: Lighthouse는 현재 [홈스크린에 추가](/web/fundamentals/app-install-banners)나 오프라인 지원 같은,
 프로그레시브 웹 앱 기능에 중점을 둡니다. 그러나 프로젝트의 가장 중요한 목표는 웹 앱 품질의 모든 측면에 대한 end-to-end 테스트를 제공하는 겁니다.
 
 ## Lighthouse 설정하기

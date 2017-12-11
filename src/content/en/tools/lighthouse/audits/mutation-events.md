@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Site Does Not Use Mutation Events In Its Own Scripts" Lighthouse audit.
+description: Reference documentation for the "Avoids Mutation Events In Its Own Scripts" Lighthouse audit.
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-10-04 #}
 
-# Site Does Not Use Mutation Events In Its Own Scripts  {: .page-title }
+# Avoids Mutation Events In Its Own Scripts  {: .page-title }
 
 ## Why the audit is important {: #why }
 
@@ -24,7 +24,7 @@ DOM events spec:
 
 ## How to pass the audit {: #how }
 
-Under **URLs**, Lighthouse reports each mutation event listner that it found
+Under **URLs**, Lighthouse reports each mutation event listener that it found
 in your code. Replace each of these mutation events with a `MutationObserver`.
 See [`MutationObserver`][mdn] on MDN for more help.
 
@@ -35,3 +35,6 @@ See [`MutationObserver`][mdn] on MDN for more help.
 Lighthouse collects all of the event listeners on the page, and flags
 any listener that uses one of the types listed in [Why the audit is
 important](#why).
+
+
+{% include "web/tools/lighthouse/audits/_feedback/mutation-events.html" %}

@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: The virtual viewport seperates layout and viewing of the viewport.
+description: The virtual viewport separates layout and viewing of the viewport.
 
-{# wf_updated_on: 2015-01-19 #}
+{# wf_updated_on: 2017-09-27 #}
 {# wf_published_on: 2015-01-19 #}
 {# wf_tags: news,virtualviewport #}
 
@@ -19,7 +19,7 @@ difference to users.
 When mobile browsers started out, the lack of a viewport meta tag meant they would make the web page think it had
 approximately 980px of screen real estate and render at this size. With a viewport meta
 tag, developers could define the width, most common of which is "device-width", which sets the screen size to that of the device. You can [learn more on Web
-Fundamentals](/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport).
+Fundamentals](/web/fundamentals/design-and-ux/responsive/#set-the-viewport).
 
 The way [Rick Byers](https://plus.google.com/+RickByers/about) describes the virtual viewport is
 as follows: the idea of the virtual viewport is to split the notion of "the

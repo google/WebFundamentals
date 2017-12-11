@@ -1,0 +1,20 @@
+{
+  "environment": "web",
+  "source": "1RwBR3atWRcQIex8lpa2kHAqhtrgxdNVT5-0zfTpx6Ok",
+  "format": "md",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2017-07-12T20:10:42Z",
+  "id": "lab-fetch-api",
+  "duration": 0,
+  "title": "Lab: Fetch API",
+  "summary": "",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [
+    "2-day",
+    "3-day"
+  ],
+  "url": "lab-fetch-api"
+}

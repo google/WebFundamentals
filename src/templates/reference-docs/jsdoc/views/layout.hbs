@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html devsite>
+    {{#block 'head'}}
+        <head>
+            {{#block 'meta'}}
+                <meta name="project_path" value="{{query 'projectRoot'}}_project.yaml" />
+                <meta name="book_path" value="{{query 'projectRoot'}}_book.yaml" />
+                <meta name="gtm_var" data-key="docType" data-value="reference">
+            {{/block}}
+            {{#block 'title'}}
+                <title>{{translatePageTitle pageTitlePrefix pageTitle pageCategory}}</title>
+            {{/block}}
+            {{#block 'css'}}
+                <link href="jsdoc.css" rel="stylesheet">
+            {{/block}}
+        </head>
+    {{/block}}
+    {{#block 'body'}}
+        <body>
+            {{#block 'body-container'}}
+                <div id="jsdoc-body-container">
+                    {{#block 'body-content'}}
+                        <div id="jsdoc-content">
+                            {{#block 'body-content-container'}}
+                                <div id="jsdoc-content-container">
+                                    {{#block 'body-banner'}}
+                                        <div id="jsdoc-banner" role="banner">
+                                            {{#block 'body-banner-content'}}
+                                                {{!--
+                                                    Override the `body-banner-content` block
+                                                    to add content.
+                                                --}}
+                                            {{/block}}
+                                        </div>
+                                    {{/block}}
+                                    {{#block 'body-main'}}
+                                        {{!-- Adding a section here causes heading to bump down H1 > H2, etc. --}}
+                                        <div id="jsdoc-main" role="main">
+                                            {{#block 'body-main-content'}}
+                                                {{!--
+                                                    Override the `body-main-content` block
+                                                    to add content.
+                                                --}}
+                                            {{/block}}
+                                        </div>
+                                    {{/block}}
+                                </div>
+                            {{/block}}
+                            {{#block 'body-toc-navbar'}}
+                                {{!-- content is inserted on page load --}}
+                                <nav id="jsdoc-toc-nav" role="navigation"></nav>
+                            {{/block}}
+                        </div>
+                    {{/block}}
+                </div>
+            {{/block}}
+            {{#block 'body-footer'}}
+            {{/block}}
+            {{!-- No scripts in Devsite --}}
+        </body>
+    {{/block}}
+</html>

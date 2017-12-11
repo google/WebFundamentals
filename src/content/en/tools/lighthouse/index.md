@@ -1,9 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Learn how to set up Lighthouse to audit and improve your web apps.
+description: Learn how to set up Lighthouse to audit your web apps.
 
-{# wf_updated_on: 2017-02-18 #}
+{# wf_updated_on: 2017-09-26 #}
 {# wf_published_on: 2016-09-27 #}
+
+{% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
 # Lighthouse {: .page-title }
 
@@ -18,49 +20,58 @@ figure {
   height: 150px;
   width: auto;
 }
-.lighthouse-install-container .button-primary {
+.lighthouse-call-to-action-container .button-primary {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 32px;
   background-color: #2979ff;
 }
-.button-primary.lighthouse-install {
+.button-primary.lighthouse-primary-call-to-action {
   background: url('images/lighthouse-icon-128.png') no-repeat 0 50%;
   background-size: 63px;
   background-color: #304ffe;
   padding: 32px 16px 32px 64px;
 }
-.lighthouse-install-container .material-icons {
+.lighthouse-call-to-action-container .material-icons {
   margin-right: 4px;
   vertical-align: middle;
 }
-.lighthouse-install-container {
+.lighthouse-call-to-action-container {
   text-align: center;
   margin: 32px;
 }
+.lighthouse-inline {
+  max-height: 1em;
+  vertical-align: middle;
+}
 </style>
 
-[Lighthouse](/web/tools/lighthouse/) is an
-[open-source](https://github.com/GoogleChrome/lighthouse),
-automated tool for improving the quality of your web apps.
+<script src="/_static/js/managed/cws_install.js" async></script>
 
-Lighthouse can be run as a Chrome Extension, from the command line, or used
-programmatically as a Node module. You give Lighthouse a URL that you
-want to audit, it runs a barrage of tests against the page, and then it
-generates a report on how well the page did. From here you can use the
-failing tests as indicators on what you can do to improve your app.
+Lighthouse is an [open-source](https://github.com/GoogleChrome/lighthouse),
+automated tool for improving the quality of web pages. You can run it against
+any web page, public or requiring authentication. It has audits for performance,
+accessibility, progressive web apps, and more.
 
-<p class="lighthouse-install-container">
-  <a class="button button-primary lighthouse-install devsite-crx-install gc-analytics-event"
-     data-category="lighthouse" data-action="install" data-label="blipmdconlkpinefehnmjammfjpmpbjk"
-     href="https://chrome.google.com/webstore/detail/blipmdconlkpinefehnmjammfjpmpbjk"
-     title="Install Lighthouse Chrome Extension" target="_blank">
-    <span class="material-icons">file_download</span>
-    Install Lighthouse
+You can run Lighthouse in Chrome DevTools, from the command line, or as a
+Node module. You give Lighthouse a URL to audit, it runs a series of audits
+against the page, and then it generates a report on how well the page did.
+From there, use the failing audits as indicators on how to improve the page.
+Each audit has a reference doc explaining why the audit is important, as
+well as how to fix it.
+
+<p class="lighthouse-call-to-action-container">
+  <a class="button button-primary lighthouse-primary-call-to-action gc-analytics-event"
+     data-category="Lighthouse" data-action="click"
+     data-label="Home / Run Lighthouse In DevTools"
+     href="#devtools"
+     title="Run Lighthouse in Chrome DevTools">
+    Run Lighthouse In Chrome DevTools
   </a>
   <a class="button button-primary gc-analytics-event"
-     data-category="ligthhouse" data-action="bug"
+     data-category="Lighthouse" data-action="click"
+     data-label="Home / File Bug"
      href="https://github.com/GoogleChrome/lighthouse/issues/new"
      title="File an issue or feature request" target="_blank">
     <span class="material-icons">bug_report</span>
@@ -68,106 +79,199 @@ failing tests as indicators on what you can do to improve your app.
   </a>
 </p>
 
-Note: Lighthouse currently has a large focus on Progressive Web App features,
-such as [Add to Homescreen](/web/fundamentals/engage-and-retain/app-install-banners/)
-and offline support. However, the overarching goal of the project is to provide
-an end-to-end audit of all aspects of web app quality.
+Check out the video below from Google I/O 2017 to learn more about how to use
+and contribute to Lighthouse.
 
-## Setting up Lighthouse
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="NoRYn6gOtVo"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
-There are two primary ways to run Lighthouse, as a Chrome Extension, or as a command
-line tool. The Chrome Extension provides a more user-friendly interface for
-reading reports. The command line tool enables you to integrate Lighthouse into
-continuous integration systems.
+## Get started {: #get-started }
 
-### Install the Chrome Extension
+Choose the Lighthouse workflow that suits you best:
 
-To install the extension, do the following:
+* [In Chrome DevTools](#devtools). Easily audit pages that require authentication,
+  and read your reports in a user-friendly format.
+* [From the command line](#cli). Automate your Lighthouse runs via shell scripts.
+* [As a Node module](#programmatic). Integrate Lighthouse into your continuous
+  integration systems.
 
-1. Download Google Chrome 54 or later.
-- Install the <a class="gc-analytics-event"
-     data-category="crx-install" data-label="lighthouse-install-button"
-     href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk"
-     title="Install Lighthouse Chrome Extension" target="_blank">
-    <span class="material-icons" style="vertical-align:middle">file_download</span>
-    Lighthouse Chrome Extension</a> from the Chrome Webstore.
+Note: Every Lighthouse workflow requires you to have an instance of Google Chrome
+installed on your machine.
 
-### Install the Node Command line tool
+### Run Lighthouse in Chrome DevTools {: #devtools }
 
-To install the Node module, do the following:
+Lighthouse now powers the **Audits** panel of Chrome DevTools. To run a report:
 
-1. Install [Node](https://nodejs.org), version 5 or greater.
-- Install Lighthouse as a global module:
+1. Download [Google Chrome for Desktop][desktop].
+1. In Google Chrome, go to the URL you want to audit. You can audit any URL on the web.
+1. [Open Chrome DevTools](/web/tools/chrome-devtools/#open).
+1. Click the **Audits** tab.
+
+     <figure>
+       <img src="images/audits.png" alt="The Audits panel of Chrome DevTools">
+       <figcaption>
+         <b>Figure 1</b>. To the left is the viewport of the page that will be
+         audited. To the right is the <b>Audits</b> panel of Chrome DevTools, which
+         is now powered by Lighthouse
+       </figcaption>
+     </figure>
+
+1. Click **Perform an audit**. DevTools shows you a list of audit categories.
+   Leave them all enabled.
+1. Click **Run audit**. After 60 to 90 seconds, Lighthouse gives you a report
+   on the page.
+
+     <figure>
+       <img src="images/cdt-report.png" alt="A Lighthouse report in Chrome DevTools">
+       <figcaption>
+         <b>Figure 2</b>. A Lighthouse report in Chrome DevTools
+       </figcaption>
+     </figure>
+
+### Install and run the Node command line tool {: #cli }
+
+To install the Node module:
+
+1. Download [Google Chrome for Desktop][desktop].
+1. Install the current [Long-Term Support](https://github.com/nodejs/LTS)
+   version of [Node](https://nodejs.org).
+1. Install Lighthouse. The `-g` flag installs it as a global module.
 
         npm install -g lighthouse
 
-Then, run Lighthouse against a URL to audit the page:
+To run an audit:
 
-    lighthouse https://airhorner.com/
+    lighthouse <url>
 
-Pass the `--help` flag to see available options.
+To see audit options:
 
     lighthouse --help
 
-Note: Lighthouse can also be used programmatically as a Node module. See
-[this example][example] for how call Lighthouse to create custom reports, run
-your own audits, and integrate with Mocha testing.
+#### Run the Node module programmatically {: #programmatic }
 
-## Get started
+See [Using programmatically][programmatic] for an example of running Lighthouse
+programmatically, as a Node module.
 
-### Chrome Extension
+[programmatic]: https://github.com/GoogleChrome/lighthouse#using-programmatically
 
-Go to the page that you want to audit.
+### Run Lighthouse as a Chrome Extension {: #extension }
 
-Click on the Lighthouse icon (![Lighthouse
-icon](images/lighthouse-icon-16.png))in the Chrome toolbar. You should see a menu.
+Note: Unless you have a specific reason, you should use the Chrome DevTools workflow
+rather than this Chrome Extension workflow. The DevTools workflow provides
+the same benefits as the Extension workflow, with the added bonus of no installation
+needed.
 
-![Lighthouse icon on Chrome Toolbar](images/icon-on-toolbar.jpg)
+To install the extension:
 
-If you want to only run a subset of the audits, click the **Options** button
-and disable the audits that you don't care about. Scroll down and press **OK**
-to confirm your changes.
+1. Download [Google Chrome for Desktop][desktop].
 
-![Lighthouse options menu](images/options.jpg)
+1. Install the <a class="gc-analytics-event" data-category="Lighthouse"
+   data-label="Home / Install Extension (Secondary CTA)" href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk"
+   title="Install Lighthouse Chrome Extension" target="_blank">Lighthouse
+   Chrome Extension</a> from the Chrome Webstore.
 
-Click the **Generate report** button to run Lighthouse's tests against the
-currently-open page.
+[desktop]: https://www.google.com/chrome/browser/desktop/
 
-When the audits are finished, Lighthouse opens up a new tab and displays a
-report on the page's results.
+To run an audit:
 
-![Lighthouse report](images/report.jpg)
+1. In Chrome, go to the page you want to audit.
 
-## Online Report Viewer
+1. Click **Lighthouse** ![Lighthouse][icon]{:.lighthouse-inline}. It should
+   be next to the Chrome address bar. If not, open Chrome's main menu and
+   access it at the top of the menu. After clicking, the Lighthouse
+   menu expands.
 
-The [Lighthouse Viewer](https://googlechrome.github.io/lighthouse/viewer/) is
-a useful way for viewing and sharing reports, online.
+     <figure>
+       <img src="images/menu.png" alt="The Lighthouse menu.">
+       <figcaption>
+         <b>Figure 3</b>. The Lighthouse menu
+       </figcaption>
+     </figure>
 
-![Lighthouse Report Viewer](/web/updates/images/2016/12/lighthouse-dbw/viewer.png)
+[icon]: images/lighthouse-icon-16.png
 
-There are several ways to view a report:
+1. Click **Generate report**. Lighthouse runs its audits against the
+   currently-focused page, then opens up a new tab with a report of the
+   results.
 
-1. When viewing the HTML version of a report, click the "Export" button
-in the top right corner of the report and choose "Open in Viewer".
-2.  Drag and drop the JSON output of a Lighthouse run onto the app or click to
-upload a report file. If you're a CLI user, run Lighthouse with the `--output=json` flag to
-generate a json file that can be opened in the Viewer.
-3. Add the `?gist=GISTID"` parameter to the URL of the Viewer.
-4. Paste the URL of a [Github gist](https://gist.github.com/) that contains a Lighthouse
-JSON report onto the app.
+     <figure>
+       <img src="images/report.png" alt="The Lighthouse menu.">
+       <figcaption>
+         <b>Figure 4</b>. A Lighthouse report
+       </figcaption>
+     </figure>
 
-![Export or share options](images/viewer_icons.png){: .attempt-right}
 
-The Viewer also lets you share reports with others. Reports can be shared
-by clicking the share icon in the top right corner and signing in to Github.
-Reports are stashed as secret gists in your account so you can easily delete or
-update the report later on. Using Github for data storage also means free
-version control.
+## Share and view reports online {: #report-viewer }
 
-## Contributing
+Use the [Lighthouse Viewer][viewer] to view and share reports online.
+
+<figure>
+  <img src="images/viewer.png" alt="The Lighthouse Viewer.">
+  <figcaption>
+    <b>Figure 5</b>. The Lighthouse Viewer
+  </figcaption>
+</figure>
+
+[viewer]: https://googlechrome.github.io/lighthouse/viewer/
+
+### Share reports as JSON {: #json }
+
+The Lighthouse Viewer needs the JSON output of a Lighthouse report. The
+list below explains how to get the JSON output, depending on what
+Lighthouse workflow you're using:
+
+* **Chrome DevTools**. Click **Download Report** ![Download
+  Report](images/download-report.png){:.cdt-inl}.
+* **Command line**. Run:
+
+    `lighthouse --output json --output-path <path/for/output.json>`
+
+* **Chrome Extension**. Click **Export** > **Save as JSON**.
+
+To view the report data:
+
+1. Open the [Lighthouse Viewer][viewer] in Google Chrome.
+1. Drag the JSON file onto the viewer, or click anywhere on the Viewer to
+   open your file navigator and select the file.
+
+### Share reports as GitHub Gists {: #gists }
+
+If you don't want to manually pass around JSON files, you can also share your
+reports as secret GitHub Gists. One benefit of Gists is free version control.
+
+To export a report as a Gist from the Chrome Extension version of
+Lighthouse:
+
+1. Click **Export** > **Open In Viewer**. The report opens in the
+   Viewer, located at `https://googlechrome.github.io/lighthouse/viewer/`.
+1. In the Viewer, click **Share** ![Share][share]{: .lighthouse-inline}. The
+   first time you do this, a popup asks permission to access your basic
+   GitHub data, and to read and write to your Gists.
+
+To export a report as a Gist from the CLI version of Lighthouse,
+just manually create a Gist and copy-paste the report's JSON output
+into the Gist. The Gist filename containing the JSON output must end in
+`.lighthouse.report.json`. See [Share reports as JSON](#json) for an example of
+how to generate JSON output from the command line tool.
+
+To view a report that's been saved as a Gist:
+
+* Add `?gist=<ID>` to the Viewer's URL, where `<ID>` is the ID of the Gist.
+
+    `https://googlechrome.github.io/lighthouse/viewer/?gist=<ID>`
+
+* Open the [Viewer][viewer], and paste the URL of a Gist into it.
+
+[share]: images/share.png
+
+## Contribute to Lighthouse {: #contribute }
 
 Lighthouse is open source and [contributions are welcome](https://github.com/GoogleChrome/lighthouse/blob/master/CONTRIBUTING.md).
-Check out the repository's [issues tracker](https://github.com/GoogleChrome/lighthouse/issues)
+Check out the repository's [issue tracker](https://github.com/GoogleChrome/lighthouse/issues)
 to find bugs that you can fix, or audits that you can create or improve upon.
 The issues tracker is also a good place to discuss audit metrics, ideas for
 new audits, or anything else related to Lighthouse.

@@ -1,8 +1,8 @@
-{% setvar question "Is the demo working now?" %}
 {% setvar category "DevTools" %}
-{% setvar label "JS / Get Started / Demo Is Fixed" %}
-{% setvar success_button "Yes, It's Adding Correctly Now" %}
+{% setvar label "JS / Get Started / (6) Demo Is Fixed" %}
+{% setvar url %}https://github.com/google/webfundamentals/issues/new?title=[{{ category }} / {{ label }}] {% endsetvar %}
+{% setvar success_button "I Fixed The Demo!" %}
 {% setvar success_response "You did it!" %}
-{% setvar fail_button "No, It's Still Not Working" %}
-{% setvar fail_response "Ah, dang. So close." %}
+{% setvar fail_button "It's Still Not Working" %}
+{% setvar fail_response %}Ah, dang. So close. Please <a href="{{url}}">open an issue</a> and tell us what you're seeing.{% endsetvar %}
 {% include "web/_shared/feedback.html" %}

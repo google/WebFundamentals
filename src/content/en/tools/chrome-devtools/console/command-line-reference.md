@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: TODO
+description: A reference of convenience functions available in the Chrome DevTools Console.
 
-{# wf_updated_on: 2015-08-02 #}
+{# wf_updated_on: 2017-04-07 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Command Line API Reference {: .page-title }
@@ -10,9 +10,12 @@ description: TODO
 {% include "web/_shared/contributors/andismith.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
-The Command Line API contains a collection of convenience functions for performing common tasks: selecting and inspecting DOM elements, displaying data in readable format, stopping and starting the profiler, and monitoring DOM events.
+The Command Line API contains a collection of convenience functions for performing common
+tasks: selecting and inspecting DOM elements, displaying data in readable format, stopping and
+starting the profiler, and monitoring DOM events.
 
-Note: This API is only available from within the console itself. You cannot access the Command Line API from scripts on the page.
+Note: This API is only available from within the console itself. You cannot access the Command
+Line API from scripts on the page.
 
 
 ## $_
@@ -36,7 +39,8 @@ to become the latest evaluated expression, 4:
 
 ## $0 - $4
 
-The `$0`, `$1`, `$2`, `$3` and `$4` commands work as a historical reference to the last five DOM elements inspected within the Elements panel
+The `$0`, `$1`, `$2`, `$3` and `$4` commands work as a historical reference to the last five
+DOM elements inspected within the Elements panel
 or the last five JavaScript heap objects selected in the Profiles panel.
 `$0` returns the most recently selected element or JavaScript object,
 `$1` returns the second most recently selected one, and so on.
@@ -59,7 +63,8 @@ while `$1` returns the previously selected one:
 `$(selector)` returns the reference to the first DOM element
 with the specified CSS selector.
 This function is an alias for the
-[document.querySelector()](https://docs.webplatform.org/wiki/css/selectors_api/querySelector) function.
+[document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+function.
 
 The following example returns a reference
 to the first `<img>` element in the document:
@@ -70,18 +75,20 @@ Right-click on the returned result and
 select 'Reveal in Elements Panel' to find it in the DOM,
 or 'Scroll in to View' to show it on the page.
 
-The following example returns a reference to the currently selected element and displays its src property:
+The following example returns a reference to the currently selected element and displays its src
+property:
 
 ![Example of $('img').src](images/selector-img-src.png)
 
-Note: If you are using a library such as jQuery that uses <code>$</code>, this functionality will be overwritten, and <code>$</code> will correspond to that library's implementation.
+Note: If you are using a library such as jQuery that uses <code>$</code>, this functionality
+will be overwritten, and <code>$</code> will correspond to that library's implementation.
 
 ## $$(selector) {: #queryselectorall }
 
 `$$(selector)` returns an array of elements
 that match the given CSS selector.
 This command is equivalent to calling
-[document.querySelectorAll()](https://docs.webplatform.org/wiki/css/selectors_api/querySelectorAll).
+[document.querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll).
 
 The following example uses `$$()` to create an array
 of all `<img>` elements in the current document and
@@ -92,9 +99,11 @@ displays the value of each element's `src` property:
 			console.log(images[each].src);
 		}
 
-![Example of using $$() to select all images in the document and display their sources.](images/all-selector.png)
+![Example of using $$() to select all images in the document and display their
+sources.](images/all-selector.png)
 
-Note: Press <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> in the console to start a new line without executing the script.
+Note: Press <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> in the console to start
+a new line without executing the script.
 
 ## $x(path) {: #xpath }
 
@@ -161,18 +170,22 @@ and using `dir()` to display the same element:
 ![Logging document.body with and without dir() function](images/dir.png)
 
 For more information,
-see the [`console.dir()`](/web/tools/chrome-devtools/debug/console/console-reference#console.dir(object)) entry in the Console API.
+see the
+[`console.dir()`](/web/tools/chrome-devtools/debug/console/console-reference#console.dir(object))
+entry in the Console API.
 
 ## dirxml(object)
 
 `dirxml(object)` prints an XML representation of the specified object,
 as seen in the Elements tab.
-This method is equivalent to the [console.dirxml()](https://developer.mozilla.org/en-US/docs/Web/API/Console) method.
+This method is equivalent to the
+[console.dirxml()](https://developer.mozilla.org/en-US/docs/Web/API/Console) method.
 
 ## inspect(object/function) {:#inspect}
 
 `inspect(object/function)` opens and selects the specified element
-or object in the appropriate panel: either the Elements panel for DOM elements or the Profiles panel for JavaScript heap objects.
+or object in the appropriate panel: either the Elements panel for DOM elements or the
+Profiles panel for JavaScript heap objects.
 
 The following example opens the `document.body` in the Elements panel:
 
@@ -224,8 +237,8 @@ suppose your application defined the following object:
 
 		var player1 = { "name": "Ted", "level": 42 }
 
-Assuming `player1` was defined in the global namespace (for simplicity), typing `keys(player1)` and `values(player1)` in the console results
-in the following:
+Assuming `player1` was defined in the global namespace (for simplicity), typing `keys(player1)`
+and `values(player1)` in the console results in the following:
 
 ![Example of keys() and values() methods](images/keys-values.png)
 
@@ -277,7 +290,8 @@ their associated event mappings:
 	<tbody>
 		<tr>
 			<td>mouse</td>
-			<td>"mousedown", "mouseup", "click", "dblclick", "mousemove", "mouseover", "mouseout", "mousewheel"</td>
+			<td>"mousedown", "mouseup", "click", "dblclick", "mousemove",
+                            "mouseover", "mouseout", "mousewheel"</td>
 		</tr>
 		<tr>
 			<td>key</td>
@@ -289,7 +303,8 @@ their associated event mappings:
 		</tr>
 		<tr>
 			<td>control</td>
-			<td>"resize", "scroll", "zoom", "focus", "blur", "select", "change", "submit", "reset"</td>
+			<td>"resize", "scroll", "zoom", "focus", "blur", "select", "change",
+                            "submit", "reset"</td>
 		</tr>
 	</tbody>
 </table>
@@ -310,7 +325,8 @@ Below is sample output after typing a characters in the text field:
 with an optional name.
 `profileEnd()` completes the profile and displays the results
 in the Profile panel.
-(See also [Speed Up JavaScript Execution](/web/tools/chrome-devtools/rendering-tools/js-execution).)
+(See also
+[Speed Up JavaScript Execution](/web/tools/chrome-devtools/rendering-tools/js-execution).)
 
 To start profiling:
 
@@ -332,7 +348,8 @@ Result in the profiles panel:
 ![Grouped profiles](images/grouped-profiles.png)
 
 
-Note: Multiple CPU profiles can operate at once and you aren't required to close them out in creation order.
+Note: Multiple CPU profiles can operate at once and you aren't required to close them out
+in creation order.
 
 ## table(data[, columns])
 

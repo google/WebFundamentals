@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Manifest Contains short_name" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-21 #}
+{# wf_updated_on: 2017-04-18 #}
 {# wf_published_on: 2016-09-21 #}
 
-# Manifest Contains Short Name  {: .page-title }
+# Manifest Contains short_name  {: .page-title }
 
 ## Why the audit is important {: #why }
 
@@ -36,3 +36,6 @@ implement and test "Add to Homescreen" support in your app.
 Audit passes if the manifest contains either `short_name` or `name` property.
 The manifest that Lighthouse fetches is separate from the one that Chrome is
 using on the page, which can possibly cause inaccurate results.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/manifest-contains-short_name.html" %}
