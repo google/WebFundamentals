@@ -31,7 +31,8 @@ HTTPS 也是許多強大的新網絡平臺功能（如拍照或錄製音頻）�
 
 
 
-如果您運行自己的服務器並且需要一個成本低廉且簡單的方式來生成證書，請訪問 [Let's Encrypt](https://letsencrypt.org/){: .external }。
+如果您運行自己的服務器並且需要一個成本低廉且簡單的方式來生成證書，請訪問 
+[Let's Encrypt](https://letsencrypt.org/){: .external }。
 有關在您的服務器上啓用 HTTPS 的更多幫助，請參閱以下文檔集：[對傳輸中的數據進行加密](/web/fundamentals/security/encrypt-in-transit/enable-https)。
 
 
