@@ -29,7 +29,7 @@ description:使用 Application 面板檢查、修改和調試網絡應用清單�
 - 從 <strong>Clear Storage</strong> 窗格中點擊一次按鈕，註銷服務工作線程並清除所有存儲與緩存。
 
 
-## 網絡應用清單 {:#manifest}
+## 網絡應用清單 {: #manifest }
 
 如果您希望用戶能夠將您的應用添加到他們移動設備的主屏幕上，那麼您需要一個網絡應用清單。
 清單定義應用在主屏幕上的外觀、從主屏幕啓動時將用戶定向到何處，以及應用在啓動時的外觀。
@@ -55,7 +55,7 @@ description:使用 Application 面板檢查、修改和調試網絡應用清單�
 
 [manifest]: images/manifest.png
 
-### 模擬 Add to Homescreen 事件 {:#add-to-homescreen}
+### 模擬 Add to Homescreen 事件 {: #add-to-homescreen }
 
 只有至少已經訪問網站兩次、訪問至少間隔五分鐘時纔可以將網絡應用添加到主屏幕上。
 開發或調試您的 Add to Homescreen 工作流時，此條件非常不便。利用 **App Manifest** 窗格上的 **Add to homescreen** 按鈕，您可以隨時模擬 Add to Homescreen 事件。
@@ -86,7 +86,7 @@ Console 會告訴您清單是否存在任何問題，並記錄與 Add to Homescr
 [shelf]: images/io.png
 [remote debugging]: /web/tools/chrome-devtools/debug/remote-debugging/remote-debugging
 
-## 服務工作線程 {:#service-workers}
+## 服務工作線程 {: #service-workers }
 
 服務工作線程是未來網絡平臺中的一種基礎技術。它們是瀏覽器獨立於網頁在後臺運行的腳本。這些腳本使您可以訪問不需要網頁或用戶交互的功能，例如推送通知、後臺同步和離線體驗。
 
@@ -133,7 +133,7 @@ Console 會告訴您清單是否存在任何問題，並記錄與 Add to Homescr
 [tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
-## 服務工作線程緩存 {:#caches}
+## 服務工作線程緩存 { :#caches }
 
 **Cache Storage** 窗格提供了一個已使用（服務工作線程）[Cache API][sw-cache] 緩存的只讀資源列表。
 
@@ -152,7 +152,7 @@ Console 會告訴您清單是否存在任何問題，並記錄與 Add to Homescr
 [sw-cache-pane]: images/sw-cache.png
 [multiple-caches]: images/multiple-caches.png
 
-## 清除存儲 {:#clear-storage}
+## 清除存儲 {: #clear-storage }
 
 開發 Progressive Web App 時，**Clear Storage** 窗格是一個非常實用的功能。
 利用此窗格，只需點擊一次按鈕即可註銷服務工作線程並清除所有緩存與存儲。
@@ -164,7 +164,7 @@ Console 會告訴您清單是否存在任何問題，並記錄與 Add to Homescr
 * [清除存儲](/web/tools/chrome-devtools/iterate/manage-data/local-storage#clear-storage)
 
 
-## 其他 Application 面板指南 {:#other}
+## 其他 Application 面板指南 {: #other }
 
 參閱下面的部分，獲取有關 **Application** 面板其他窗格的更多幫助。
 
