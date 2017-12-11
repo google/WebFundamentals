@@ -17,7 +17,7 @@ footer:
     label: 視頻
     path: "/web/shows/"
   - description: 參加開發者活動。
-    icon_name: 活動
+    icon_name: event
     label: 活動
     path: "/web/events/"
 - linkboxes:
