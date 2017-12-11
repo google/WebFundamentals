@@ -7,7 +7,7 @@ description:“網站在 HTTPS 上”Lighthouse 審查的參考文檔。
 
 # 網站在 HTTPS 上 {: .page-title }
 
-## 爲什麼說此審查非常重要{: #why }
+## 爲什麼說此審查非常重要 {: #why }
 
 所有網站均應使用 HTTPS 進行保護，即使是不處理敏感數據的網站也應如此。
 HTTPS 可防止入侵者篡改或被動地偵聽您的網站和您的用戶之間的通信。
@@ -23,7 +23,7 @@ HTTPS 也是許多強大的新網絡平臺功能（如拍照或錄製音頻）�
 有關爲什麼所有網站都應使用 HTTPS 進行保護的詳細信息，請參閱[爲什麼應始終使用 HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https)。
 
 
-## 如何通過此審查{: #how }
+## 如何通過此審查 {: #how }
 
 將您的網站遷移到 HTTPS。
 

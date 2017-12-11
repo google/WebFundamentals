@@ -7,7 +7,7 @@ description:“網站使用 HTTP/2 傳輸自身資源”Lighthouse 審查的參�
 
 # 網站使用 HTTP/2 傳輸自身資源 {: .page-title }
 
-## 爲什麼說此審查非常重要{: #why }
+## 爲什麼說此審查非常重要 {: #why }
 
 HTTP/2 可更快地提供頁面的資源，並且可減少通過網絡傳輸的數據。
 
@@ -20,7 +20,7 @@ HTTP/2 可更快地提供頁面的資源，並且可減少通過網絡傳輸的�
 [faq]: https://http2.github.io/faq/
 [intro]: /web/fundamentals/performance/http2/
 
-## 如何通過此審查{: #how }
+## 如何通過此審查 {: #how }
 
 在 **URLs** 下，Lighthouse 列出不是通過 HTTP/2 提供的每個資源。要通過此審查，需要通過 HTTP/2 提供其中的每個資源。
 
