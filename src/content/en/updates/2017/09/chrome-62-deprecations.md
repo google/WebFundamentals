@@ -5,6 +5,7 @@ description: A round up of the deprecations and removals in Chrome 62 to help yo
 {# wf_updated_on: 2017-12-15 #}
 {# wf_published_on: 2017-09-15 #}
 {# wf_tags: deprecations,removals,chrome62 #}
+{# wf_blink_components: Blink #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 62 to help you plan. In this version, more restrictions on insecure origins and a change to the shadow-piercing descendant combinator. #}
 
