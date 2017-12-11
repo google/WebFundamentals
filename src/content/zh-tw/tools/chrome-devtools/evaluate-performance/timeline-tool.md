@@ -24,7 +24,7 @@ description:使用 Chrome DevTools 的 Timeline 面板可以記錄和分析您�
 - 放大顯示一部分記錄以簡化分析。
 
 
-## Timeline 面板概覽 {:#timeline-overview}
+## Timeline 面板概覽 {: #timeline-overview }
 
 Timeline 面板包含以下四個窗格：
 
@@ -116,7 +116,7 @@ CPU 資源。此[面積圖][ac]指示消耗 CPU 資源的事件類型。
 
 [event reference]: /web/tools/chrome-devtools/profile/evaluate-performance/performance-reference
 
-## 在記錄期間捕捉屏幕截圖{:#filmstrip}
+## 在記錄期間捕捉屏幕截圖 {: #filmstrip }
 
 **Timeline** 面板可以在頁面加載時捕捉屏幕截圖。此功能稱爲**幻燈片**。
 
@@ -133,7 +133,7 @@ CPU 資源。此[面積圖][ac]指示消耗 CPU 資源的事件類型。
 
 <video src="animations/hover.mp4" autoplay muted loop controls></video>
 
-## 分析 JavaScript {:#profile-js}
+## 分析 JavaScript {: #profile-js }
 
 開始記錄前，請啓用 **JS Profile** 複選框，以便在您的時間線記錄中捕捉 JavaScript 堆棧。
 啓用 JS 分析器後，您的火焰圖會顯示調用的每個 JavaScript 函數。
@@ -141,7 +141,7 @@ CPU 資源。此[面積圖][ac]指示消耗 CPU 資源的事件類型。
 
 ![啓用 JS 分析的火焰圖](imgs/js-profile.png)
 
-## 分析繪製 {:#profile-painting}
+## 分析繪製 {: #profile-painting }
 
 開始記錄前，請啓用 **Paint** 複選框，以便獲取有關 **Paint** 事件的更多數據分析。
 啓用繪製分析並點擊 **Paint** 事件後，新 **Paint Profiler** 標籤會出現在 **Details** 窗格中，後者顯示了許多與事件相關的更精細信息。
@@ -150,7 +150,7 @@ CPU 資源。此[面積圖][ac]指示消耗 CPU 資源的事件類型。
 
 ![paint profiler](imgs/paint-profiler.png)
 
-### 渲染設置 {:#rendering-settings}
+### 渲染設置 {: #rendering-settings }
 
 打開主 DevTools 菜單，然後選擇**More tools** > **Rendering settings** 訪問渲染設置，這些設置在調試繪製問題時非常有用。渲染設置會作爲一個標籤顯示在 **Console** 抽屜式導航欄（如果隱藏，請按 <kbd>esc</kbd> 顯示抽屜式導航欄）旁邊。
 
@@ -174,7 +174,7 @@ CPU 資源。此[面積圖][ac]指示消耗 CPU 資源的事件類型。
 
 ![查找工具欄](imgs/find-toolbar.png)
 
-## 在 Timeline 部分上放大 {:#zoom}
+## 在 Timeline 部分上放大 {: #zoom }
 
 您可以放大顯示一部分記錄，以便簡化分析。使用 **Overview** 窗格可以放大顯示一部分記錄。
 放大後，**火焰圖**會自動縮放以匹配同一部分。
