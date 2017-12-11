@@ -7,7 +7,7 @@ description:“網站不使用舊版 CSS Flexbox”Lighthouse 審查的參考文
 
 # 網站不使用舊版 CSS Flexbox {: .page-title }
 
-## 爲什麼說此審查非常重要{: #why }
+## 爲什麼說此審查非常重要 {: #why }
 
 2009 年的舊 Flexbox 規範已棄用，其速度比最新的規範慢 2.3 倍。
 請參閱 [Flexbox 佈局並不慢][slow]瞭解更多信息。
@@ -15,7 +15,7 @@ description:“網站不使用舊版 CSS Flexbox”Lighthouse 審查的參考文
 
 [slow]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
 
-## 如何通過此審查{: #how }
+## 如何通過此審查 {: #how }
 
 在 **URLs** 下，Lighthouse 列出了它在頁面樣式表中找到的 `display: box` 的每個實例。
 將每個實例替換爲新語法，`display: flex`。

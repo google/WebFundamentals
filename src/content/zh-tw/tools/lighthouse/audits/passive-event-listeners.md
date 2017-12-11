@@ -7,7 +7,7 @@ description:“網站使用被動事件偵聽器以提升滾動性能”Lighthou
 
 # 網站使用被動事件偵聽器以提升滾動性能 {: .page-title }
 
-## 爲什麼說此審查非常重要{: #why }
+## 爲什麼說此審查非常重要 {: #why }
 
 在您的觸摸和滾輪事件偵聽器上設置 `passive` 選項可提升滾動性能。
 
@@ -21,7 +21,7 @@ description:“網站使用被動事件偵聽器以提升滾動性能”Lighthou
 [blog]: https://developers.google.com/web/updates/2016/06/passive-event-listeners
 [explainer]: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
 
-## 如何通過此審查{: #how }
+## 如何通過此審查 {: #how }
 
 將 `passive` 標誌添加到 Lighthouse 已識別的所有事件偵聽器。
 一般情況下，將 `passive` 標誌添加到每個沒有調用 `preventDefault()` 的 `wheel`、`mousewheel`、`touchstart` 和 `touchmove` 事件偵聽器。
