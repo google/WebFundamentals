@@ -168,7 +168,7 @@ Command Line API 包含一個用於執行以下常見任務的便捷函數集合
 
 
 
-## inspect(object/function) {:#inspect}
+## inspect(object/function) {: #inspect }
 
 `inspect(object/function)` 在相應的面板中打開並選擇指定的元素或對象：針對 DOM 元素使用 Elements 面板，或針對 JavaScript 堆對象使用 Profiles 面板。
 

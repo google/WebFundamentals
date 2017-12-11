@@ -15,7 +15,7 @@ description:使用 Console API 可以向控制檯寫入信息、創建 JavaScrip
 
 
 
-## console.assert(expression, object) {:#assert}
+## console.assert(expression, object) {: #assert }
 
 在被評估的表達式爲 `false` 時向控制檯寫入一個[錯誤](#error)。
  
@@ -29,7 +29,7 @@ description:使用 Console API 可以向控制檯寫入信息、創建 JavaScrip
 
 ![console.assert() 示例](images/assert.png)
 
-## console.clear() {:#clear}
+## console.clear() {: #clear }
 
 清除控制檯。
 
@@ -45,7 +45,7 @@ description:使用 Console API 可以向控制檯寫入信息、創建 JavaScrip
 
 如需瞭解詳細信息，請參閱[清除控制檯](index#clearing)。
 
-## console.count(label) {:#count}
+## console.count(label) {: #count }
 
 寫入在同一行使用相同標籤調用 `count()` 的次數。
 
@@ -66,7 +66,7 @@ description:使用 Console API 可以向控制檯寫入信息、創建 JavaScrip
 
 與 [`console.log()`](#log) 作用相同。
 
-## console.dir(object) {:#dir}
+## console.dir(object) {: #dir }
 
 輸出以 JavaScript 形式表示的指定對象。如果正在記錄的對象是 HTML 元素，將輸出其以 DOM 形式表示的屬性，如下所示：
 
@@ -95,7 +95,7 @@ description:使用 Console API 可以向控制檯寫入信息、創建 JavaScrip
 
 ![console.dirxml() example](images/dirxml.png)
 
-## console.error(object [, object, ...]) {:#error}
+## console.error(object [, object, ...]) {: #error }
 
 輸出一條類似於 [`console.log()`](#log) 的消息，將消息設置成錯誤樣式，並在調用此方法的地方包含一個堆疊追蹤。
 
@@ -161,7 +161,7 @@ description:使用 Console API 可以向控制檯寫入信息、創建 JavaScrip
     console.groupEnd();
     
 
-## console.groupEnd() {:#groupend}
+## console.groupEnd() {: #groupend }
 
 關閉日誌組。相關示例請參閱 [`console.group`](#group)。
 
@@ -170,7 +170,7 @@ description:使用 Console API 可以向控制檯寫入信息、創建 JavaScrip
 輸出一條類似 [`console.log()`](#log) 的消息，但同時在輸出旁顯示一個圖標（帶白色“i”的藍色圓圈）。
  
 
-## console.log(object [, object, ...]) {:#log}
+## console.log(object [, object, ...]) {: #log}
 
 在控制檯中顯示一條消息。將一個或多個對象傳遞到此方法。每個對象都會進行評估並級聯到一個由空格分隔的字符串中。
 
@@ -179,7 +179,7 @@ description:使用 Console API 可以向控制檯寫入信息、創建 JavaScrip
     console.log('Hello, Logs!');
     
 
-### 格式說明符{:#format-specifiers}
+### 格式說明符{: #format-specifiers }
 
 您傳遞的第一個對象可以包含一個或多個**格式說明符**。格式說明符由百分號 (`%`) 與緊跟其後面的一個字母組成，字母指示要應用的格式。
 
@@ -189,7 +189,7 @@ description:使用 Console API 可以向控制檯寫入信息、創建 JavaScrip
 
 * [組織控制檯輸出](console-write)
 
-## console.profile([label]) {:#profile}
+## console.profile([label]) {: #profile }
 
 啓動一個帶有可選標籤的 JavaScript CPU 配置文件。要完成配置文件，請調用 `console.profileEnd()`。
 每一個配置文件都會添加到 **Profiles** 面板中。
@@ -203,14 +203,14 @@ description:使用 Console API 可以向控制檯寫入信息、創建 JavaScrip
     }
     
 
-## console.profileEnd() {:#profileend}
+## console.profileEnd() {: #profileend }
 
 停止當前的 JavaScript CPU 分析會話（如果正在進行此會話），並將報告輸出到 **Profiles** 面板中。
 
 
 相關示例請參閱 [`console.profile()`](#profile)。
 
-## console.time(label) {:#time}
+## console.time(label) {: #time  }
 
 啓動一個具有關聯標籤的新計時器。使用相同標籤調用 `console.timeEnd()` 時，定時器將停止，經過的時間將顯示在控制檯中。計時器值精確到亞毫秒。傳遞到 `time()` 和 `timeEnd()` 的字符串必須匹配，否則計時器不會結束。
 
@@ -227,14 +227,14 @@ description:使用 Console API 可以向控制檯寫入信息、創建 JavaScrip
 
 ![console.time() example](images/time.png)
 
-## console.timeEnd(label) {:#timeend}
+## console.timeEnd(label) {: #timeend }
 
 停止當前的計時器（如果正在運行一個計時器），並將計時器標籤和經過的時間輸出到控制檯。
  
 
 相關示例請參閱 [`console.time()`](#time)。 
 
-## console.timeStamp([label]) {:#timestamp}
+## console.timeStamp([label]) {: #timestamp }
 
 在錄製會話期間向 **Timeline** 添加一個事件。 
 
@@ -249,7 +249,7 @@ description:使用 Console API 可以向控制檯寫入信息、創建 JavaScrip
 * [使用 Timeline 工具](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 
 
-## console.trace(object) {:#trace}
+## console.trace(object) {: #trace }
 
 從調用此方法的位置輸出一個堆疊追蹤。 
 
@@ -257,7 +257,7 @@ description:使用 Console API 可以向控制檯寫入信息、創建 JavaScrip
 
 ![console.trace() 示例](images/trace.png)
 
-## console.warn(object [, object, ...]) {:#warn}
+## console.warn(object [, object, ...]) {: #warn }
 
 輸出一條類似 [`console.log()`](#log) 的消息，但同時在記錄的消息旁顯示一個黃色警告圖標。
 

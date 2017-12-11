@@ -33,13 +33,13 @@ description:控制檯日誌是一種可以檢查您的頁面或應用所進行�
 將在控制檯中輸出以下內容：
 ![記錄多個](images/console-write-log-multiple.png)
 
-## 自動填充命令 {:#autocomplete}
+## 自動填充命令 {: #autocomplete}
 
 在控制檯中鍵入內容時，控制檯將自動顯示與您已鍵入文字匹配的相關方法的自動填充下拉菜單。其中包括您已經執行的前幾個命令。
 
 ![自動填充的示例](images/autocomplete.png)
 
-## 組織控制檯輸出 {:#organizing}
+## 組織控制檯輸出 {: #organizing }
 
 ### 將消息組織到一起
 

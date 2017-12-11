@@ -71,7 +71,7 @@ description:瞭解如何導航 Chrome DevTools JavaScript 控制檯。
 
 ## 處理控制檯歷史記錄
 
-### 清除歷史記錄{: #clearing}
+### 清除歷史記錄 {: #clearing }
 
 您可以通過以下方式清除控制檯歷史記錄：
 
@@ -81,7 +81,7 @@ description:瞭解如何導航 Chrome DevTools JavaScript 控制檯。
 * 按 <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">L</kbd> （Mac、Windows、Linux）。
 
 
-### 保留歷史記錄{: #preserve-log}
+### 保留歷史記錄 {: #preserve-log }
 
 啓用控制檯頂部的 **Preserve log** 複選框可以在頁面刷新或更改之間保留控制檯歷史記錄。
 消息將一直存儲，直至您清除控制檯或者關閉標籤。
@@ -94,7 +94,7 @@ description:瞭解如何導航 Chrome DevTools JavaScript 控制檯。
 
 ![將控制檯的輸出保存到日誌文件](images/console-save-as.png)
 
-## 選擇執行環境{: #execution-context }
+## 選擇執行環境 {: #execution-context }
 
 以下屏幕截圖中以藍色突出顯示的下拉菜單稱爲 **Execution Context Selector**。
 
