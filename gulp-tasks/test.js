@@ -47,6 +47,7 @@ const REMARK_WARNING_ONLY = [
 ];
 const RE_BOM = /^\uFEFF/;
 const RE_SRC_BASE = /src\/content\//;
+const RE_SRC_TRANSLATED_PATH = /^src\/content\/(?!en)..\/.*/;
 const RE_DATA_BASE = /src\/data\//;
 const RE_GULP_BASE = /^gulp-tasks\/?/;
 const ESLINT_RC_FILE = '.eslintrc';
@@ -413,12 +414,8 @@ function testMarkdown(filename, contents, options) {
     let msg;
     let matched;
     let position;
-    let isInclude = wfRegEx.RE_MD_INCLUDE.test(contents);
-
-    if (wfRegEx.RE_DEVSITE_TRANSLATION.test(contents)) {
-      options.enforceLineLengths = false;
-      options.lastUpdateMaxDays = null;
-    }
+    const isInclude = wfRegEx.RE_MD_INCLUDE.test(contents);
+    const isTranslation = RE_SRC_TRANSLATED_PATH.test(filename);
 
     let pageType = PAGE_TYPES.ARTICLE;
     if (/page_type: landing/.test(contents)) {
@@ -488,7 +485,7 @@ function testMarkdown(filename, contents, options) {
 
     // Validate wf_updated
     matched = wfRegEx.RE_UPDATED_ON.exec(contents);
-    if (!isInclude) {
+    if (!isInclude && !isTranslation) {
       if (!matched) {
         msg = 'WF Tag `wf_updated_on` is missing (YYYY-MM-DD)';
         logError(filename, null, msg);
@@ -512,7 +509,7 @@ function testMarkdown(filename, contents, options) {
 
     // Validate wf_published
     matched = wfRegEx.RE_PUBLISHED_ON.exec(contents);
-    if (!isInclude) {
+    if (!isInclude && !isTranslation) {
       if (!matched) {
         msg = 'WF Tag `wf_published_on` is missing (YYYY-MM-DD)';
         logError(filename, null, msg);
@@ -564,7 +561,7 @@ function testMarkdown(filename, contents, options) {
 
     // Check for valid Blink components
     matched = wfRegEx.RE_BLINK_COMPONENTS.exec(contents);
-    if (options.blinkComponents && !isInclude) {
+    if (options.blinkComponents && !isInclude && !isTranslation) {
       if (matched) {
         position = {line: getLineNumber(contents, matched.index)};
         if (matched[1].trim().toUpperCase() !== 'N/A') {
@@ -752,7 +749,7 @@ function testMarkdown(filename, contents, options) {
       remarkLintOptions.wfHeadingsAtLeast = 2;
     }
     remarkLintOptions.maximumLineLength = false;
-    if (options.enforceLineLengths) {
+    if (options.enforceLineLengths && !isTranslation) {
       remarkLintOptions.maximumLineLength = 100;
       contents = contents.replace(wfRegEx.RE_DESCRIPTION, '\n');
       contents = contents.replace(wfRegEx.RE_SNIPPET, '\n\n');
