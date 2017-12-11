@@ -68,10 +68,10 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以檢查和修改與�
 
 ![查看受選擇器影響的元素](imgs/selector-hover.png)
 
-**注**：此功能僅突出顯示視口中的元素；視口以外的其他元素也可能受選擇器影響。
+Note：此功能僅突出顯示視口中的元素；視口以外的其他元素也可能受選擇器影響。
  
 
-## 添加、啓用和停用 CSS 類 {:#classes}
+## 添加、啓用和停用 CSS 類 {: #classes }
 
 點擊 **.cls** 按鈕可以查看與當前選定元素關聯的所有 CSS 類。
 從這裏，您可以執行以下操作：
@@ -103,7 +103,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以檢查和修改與�
 鍵入，或者將 CSS 粘貼到 **Styles** 窗格中。屬性及其值將解析並輸入到正確的字段中。
 
 
-注：要啓用或停用樣式聲明，請選中或取消選中旁邊的複選框。
+Note: 要啓用或停用樣式聲明，請選中或取消選中旁邊的複選框。
 
 ## 添加樣式規則
 
@@ -145,7 +145,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以檢查和修改與�
 將鼠標懸停到此圖標上可以調出用於添加 `color` 聲明 (![添加 color 聲明](imgs/add-color.png){:.inline}) 或 `background-color` 聲明 (![添加 background-color 聲明](imgs/add-background-color.png){:.inline}) 的按鈕。點擊這些按鈕之一可以將聲明添加到樣式規則中。
  
 
-## 使用 Color Picker 修改顏色 {:#color-picker}
+## 使用 Color Picker 修改顏色 {: #color-picker }
 
 要打開 **Color Picker**，請在 **Styles** 窗格中查找一個定義顏色的 CSS 聲明（例如 `color: blue`）。
 聲明值的左側有一個帶顏色的小正方形。
@@ -170,7 +170,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以檢查和修改與�
 
 [md]: https://www.google.com/design/spec/style/color.html
 
-### 取色器 {:#eyedropper}
+### 取色器 {: #eyedropper }
 
 點擊**取色器**按鈕將其啓用 (![啓用的取色器](imgs/eyedropper-enabled.png){:.inline})，在實時頁面上將鼠標懸停到某種顏色上，然後點擊，將當前選定的聲明值設置爲您懸停的顏色。
 
@@ -179,7 +179,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以檢查和修改與�
 
 ![取色器實例](imgs/eyedropper.jpg)
 
-### 調色板 {:#color-palettes}
+### 調色板 {: #color-palettes }
 
 **Color Picker** 提供了下列調色板：
 
@@ -188,7 +188,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以檢查和修改與�
 * **Custom**。您選擇的任意一組顏色。DevTools 可以保存您的自定義調色板（甚至在不同的頁面間），直至您將其刪除。
  
 
-#### 修改自定義調色板 {:#custom-color-palette}
+#### 修改自定義調色板 {: #custom-color-palette }
 
 按**加號**按鈕可以將當前顏色添加到調色板中。
 點擊並按住顏色可以將其拖動到不同的位置，或者將其拖動到**垃圾桶**圖標進行刪除。
@@ -198,7 +198,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以檢查和修改與�
 
 
 
-## 查看和編輯 CSS 自定義屬性（CSS 變量）{:#custom-properties}
+## 查看和編輯 CSS 自定義屬性（CSS 變量）{: #custom-properties }
 
 您可以查看和編輯定義或使用 [CSS 自定義屬性][intro]（之前稱爲 CSS 變量）的聲明，就像查看和編輯任何其他聲明一樣。
 

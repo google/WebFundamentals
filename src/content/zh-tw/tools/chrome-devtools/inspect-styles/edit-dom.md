@@ -135,7 +135,7 @@ DevTools 會在記錄中顯示儘可能多的項目。如果狀態欄無法顯�
 
 注：如果您意外刪除了節點，按 <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd>（Mac 上爲 <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd>）可以撤消您的上一步操作。
 
-## 顯示 more actions 菜單 {:#more-actions}
+## 顯示 more actions 菜單 {: #more-actions }
 
 利用 **more actions** 菜單，您可以通過多種方式與 DOM 節點交互。
 要查看該菜單，請右鍵點擊節點，或者選擇節點，然後按 **more actions** 按鈕 (![more action 按鈕](imgs/more-actions-button.png){:.inline}))。按鈕僅在當前選定的元素上顯示。

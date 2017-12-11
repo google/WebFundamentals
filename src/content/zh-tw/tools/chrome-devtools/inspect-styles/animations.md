@@ -21,7 +21,7 @@ description:使用 Chrome DevTools 動畫檢查器檢查和修改動畫。
 - 通過更改動畫時間、延遲、持續時間或關鍵幀偏移修改動畫。
 
 
-## 概覽 {:#overview}
+## 概覽 {: #overview }
 
 Chrome DevTools 動畫檢查器有兩個主要用途。 
 
@@ -75,7 +75,7 @@ Chrome DevTools 動畫檢查器有兩個主要用途。
 <video src="animations/capture-animations.mp4"
        autoplay loop muted controls></video>
 
-## 檢查動畫 {:#inspect}
+## 檢查動畫 {: #inspect }
 
 捕捉動畫後，可以通過以下幾種方式重播動畫：
 
@@ -112,7 +112,7 @@ Chrome DevTools 動畫檢查器有兩個主要用途。
 
 ![帶有彩色編碼的動畫](imgs/color-coded-animations.png)
 
-## 修改動畫 {:#modify}
+## 修改動畫 {: #modify }
 
 可以通過以下三種方式使用動畫檢查器修改動畫：
 
