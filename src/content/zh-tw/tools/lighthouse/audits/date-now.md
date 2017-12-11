@@ -7,14 +7,14 @@ description:“網站在其自身的腳本中不使用 Date.now()”Lighthouse �
 
 # 網站在其自身的腳本中不使用 Date.now() {: .page-title }
 
-## 爲什麼說此審查非常重要{: #why }
+## 爲什麼說此審查非常重要 {: #why }
 
 如果您使用 `Date.now()` 測量時間，請考慮改用 `performance.now()`。`performance.now()` 可提供較高的時間戳分辨率，並始終以恆定的速率增加，它不受系統時鐘（可以調整或手動傾斜）的影響。
 
 
 
 
-## 如何通過此審查{: #how }
+## 如何通過此審查 {: #how }
 
 在您的報告中，Lighthouse 列出了其在 **URLs** 下找到的 `Date.now()` 的每個實例。
 將每個調用替換爲 `performance.now()`。
