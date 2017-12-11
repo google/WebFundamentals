@@ -20,7 +20,7 @@ description:利用 Chrome DevTools 的 Device Mode，您可以在一系列設備
 - Device Mode 不能替代真實設備測試。請注意它的限制。
 
 
-## 使用視口控件{: #viewport-controls }
+## 使用視口控件 {: #viewport-controls }
 
 ![Device Mode 已啓用](imgs/device-mode.png)
 
