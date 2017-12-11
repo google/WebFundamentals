@@ -7,7 +7,7 @@ description:“網站將 HTTP 流量重定向到 HTTPS”Lighthouse 審查的參
 
 # 網站將 HTTP 流量重定向到 HTTPS {: .page-title }
 
-## 爲什麼說此審查非常重要{: #why }
+## 爲什麼說此審查非常重要 {: #why }
 
 所有網站都應使用 HTTPS 進行保護。請參閱以下 Lighthouse 文檔瞭解原因：[網站在 HTTPS 上](https)。
 
@@ -15,7 +15,7 @@ description:“網站將 HTTP 流量重定向到 HTTPS”Lighthouse 審查的參
 在您設置好 HTTPS 後，您需要確保將網站的所有不安全的 HTTP 流量重定向到 HTTPS。
 
 
-## 如何通過此審查{: #how }
+## 如何通過此審查 {: #how }
 
 1. 在 HTML 的 `head` 中使用規範鏈接，以幫助搜索引擎瞭解到達此頁面的最佳方式。
 

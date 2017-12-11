@@ -7,7 +7,7 @@ description:“HTML 具有視口元標記”Lighthouse 審查的參考文檔。
 
 # HTML 具有視口元標記 {: .page-title }
 
-## 爲什麼說此審查非常重要{: #why }
+## 爲什麼說此審查非常重要 {: #why }
 
 如果沒有視口元標記，移動設備將以典型的桌面設備屏幕寬度渲染頁面，然後對頁面進行縮放以適合移動設備屏幕。
 通過設置視口，您可以控制視口的寬度和縮放比例。查看以下鏈接可瞭解詳情：
@@ -17,7 +17,7 @@ description:“HTML 具有視口元標記”Lighthouse 審查的參考文檔。
 * [配置視口](/speed/docs/insights/ConfigureViewport)。
 * [設置視口](/web/fundamentals/design-and-ux/responsive/#set-the-viewport)。
 
-## 如何通過此審查{: #how }
+## 如何通過此審查 {: #how }
 
 在 HTML 的 `<head>` 中添加一個視口 `<meta>` 標記。
 
