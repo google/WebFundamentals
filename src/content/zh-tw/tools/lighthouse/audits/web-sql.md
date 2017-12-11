@@ -7,13 +7,13 @@ description:“網站不使用 Web SQL”Lighthouse 審查的參考文檔。
 
 # 網站不使用 Web SQL {: .page-title }
 
-## 爲什麼說此審查非常重要{: #why }
+## 爲什麼說此審查非常重要 {: #why }
 
 Web SQL 已棄用。請參閱 [Web SQL 數據庫][spec]瞭解更多信息。
 
 [spec]: https://www.w3.org/TR/webdatabase/
 
-## 如何通過此審查{: #how }
+## 如何通過此審查 {: #how }
 
 請考慮將您的 Web SQL 數據庫替換爲一個可替代它的現代數據庫（如 [IndexedDB][indexeddb]）。
 
