@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Elements With ARIA Roles Have The Required aria-* Attributes" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-19 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-01-17 #}
+{# wf_blink_components: N/A #}
 
 # Elements With ARIA Roles Have The Required aria-* Attributes  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 The `role` attribute helps screen readers understand the purpose of an ARIA
 widget. A `role` may have a set of required, additional attributes that
@@ -15,7 +16,7 @@ describe the state of the widget to the screen reader.
 
 See [Introduction to ARIA](/web/fundamentals/accessibility/semantics-aria/) for more information.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 <<_shared/query.md>>
 
@@ -34,7 +35,7 @@ To find each element's missing required attributes:
 
 [roles]: https://www.w3.org/TR/wai-aria/roles#role_definitions
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [Required ARIA
 attributes must be provided][axe] for more information.

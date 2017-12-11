@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Render-blocking stylesheets" and "Render-blocking scripts" Lighthouse audits.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-12-01 #}
+{# wf_blink_components: N/A #}
 
 # Render-Blocking Resources {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Fast page loads result in higher user engagement, more pageviews, and
 improved conversion.
@@ -15,13 +16,12 @@ improved conversion.
 You can improve your page load speed by inlining links and scripts that
 are required for first paint, and deferring those that aren't.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 In your report, Lighthouse lists all of the render-blocking links or scripts
 that it has detected. The goal is to reduce this number.
 
-As mentioned in [How the audit is implemented](#implementation), Lighthouse
-flags three types of render-blocking links: scripts, stylesheets, and HTML
+Lighthouse flags three types of render-blocking links: scripts, stylesheets, and HTML
 imports. How you optimize depends on what type of resource you're working with.
 
 Note: When a resource is referred to as "critical" below, it means that the
@@ -42,7 +42,7 @@ functionality.
 [js]: /web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
 [css]: /web/fundamentals/performance/critical-rendering-path/render-blocking-css
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+More information {: #more-info }
 
 Lighthouse identifies three types of blocking resources.
 

@@ -2,17 +2,18 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Buttons have an accessible name" Lighthouse audit.
 
-{# wf_updated_on: 2017-05-11 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-05-11 #}
+{# wf_blink_components: N/A #}
 
 # Buttons Have An Accessible Name {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Buttons without names are unusable for users who rely on screen readers.
 When a button doesn't have a name, screen readers announce "button".
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Lighthouse flags each element that fails the audit. The fix depends on what
 type of element is flagged:
@@ -40,7 +41,7 @@ For `<input type="submit">` and `<input type="reset">`:
 * Set the `aria-labelledby` attribute. See the description in the bullet-point
   list above.
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [Buttons must have
 discernible text][axe].

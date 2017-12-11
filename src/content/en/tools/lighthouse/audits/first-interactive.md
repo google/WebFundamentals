@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "First Interactive" Lighthouse audit.
 
-{# wf_updated_on: 2017-06-23 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-06-23 #}
+{# wf_blink_components: N/A #}
 
 # First Interactive {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 The First Interactive metric measures when a page is *minimally* interactive:
 
@@ -17,7 +18,7 @@ The First Interactive metric measures when a page is *minimally* interactive:
 
 See also [Consistently Interactive](consistently-interactive).
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 There are two general strategies for improving load time:
 
@@ -30,7 +31,7 @@ There are two general strategies for improving load time:
 [CRP]: /web/fundamentals/performance/critical-rendering-path
 [OCE]: /web/fundamentals/performance/optimizing-content-efficiency
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+More information {: #more-info }
 
 The score is a lognormal distribution of some complicated calculations based on
 the definition of the First Interactive metric. See [First Interactive And

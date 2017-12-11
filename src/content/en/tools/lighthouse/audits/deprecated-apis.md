@@ -2,17 +2,18 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids Deprecated APIs" Lighthouse audit.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-07-12 #}
+{# wf_blink_components: N/A #}
 
 # Avoids Deprecated APIs  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Deprecated APIs are scheduled to be removed from Chrome. Calling these APIs
 after they're removed will cause errors on your site.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Lighthouse flags the deprecated APIs in your report. Go to [Chrome Platform
 Status][CPS]{:.external} and expand the entries for the APIs that you're using
@@ -21,7 +22,7 @@ them.
 
 [CPS]: https://www.chromestatus.com/features#deprecated
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+More information {: #more-info }
 
 Lighthouse collects the deprecated API warnings that Chrome logs to the
 DevTools Console.

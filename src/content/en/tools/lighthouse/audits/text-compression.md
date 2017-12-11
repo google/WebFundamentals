@@ -2,17 +2,18 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Enable Text Compression" Lighthouse audit.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-06-12 #}
+{# wf_blink_components: N/A #}
 
 # Enable Text Compression  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Text compression minimizes the byte size of network responses that include text
 content. Less bytes downloaded means faster page loads.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Lighthouse lists each response that was sent without text compression. Enable
 text compression on the server(s) that served these responses in order to
@@ -78,7 +79,7 @@ To compare the compressed and de-compressed sizes of a response:
 
 [lg]: /web/tools/chrome-devtools/network-performance/reference#request-rows
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+More information {: #more-info }
 
 Lighthouse gathers all responses that:
 

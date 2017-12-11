@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Manifest Contains start_url" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-21 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-09-21 #}
+{# wf_blink_components: N/A #}
 
 # Manifest Contains Start URL  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 After your web app has been added to a user's homescreen, the `start_url`
 property in the Web App Manifest determines what page of your app loads first
@@ -16,7 +17,7 @@ when the user launches your app from the homescreen.
 If the `start_url` property is absent, then the browser defaults to whatever
 page was active when the user decided to add the app to the homescreen.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Add a `start_url` property in your Web App Manifest.
 
@@ -26,11 +27,11 @@ Add a `start_url` property in your Web App Manifest.
       ...
     }
 
-Check out [Manifest Exists](manifest-exists#how)
+Check out [Manifest Exists](manifest-exists#recommendations)
 for a list of guides that teach you how to properly
 implement and test "Add to Homescreen" support in your app.
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+More information {: #more-info }
 
 Lighthouse fetches the manifest and verifies that it has a `start_url` property.
 The manifest that Lighthouse fetches is separate from the one that Chrome is

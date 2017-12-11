@@ -2,18 +2,19 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Manifest Exists" Lighthouse audit.
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-09-20 #}
+{# wf_blink_components: N/A #}
 
 # Manifest Exists  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 The Web App Manifest is the web technology that enables you to add your web app
 to a user's homescreen. This feature is commonly referred to as "Add to
 Homescreen (A2HS)".
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 For a hands-on, step-by-step guide on adding A2HS support in an
 existing application, check out the following codelab: [Add Your Web App to a
@@ -30,7 +31,7 @@ You can emulate and test A2HS events in Chrome DevTools. See the following
 section for more help: [Web App
 Manifest](/web/tools/chrome-devtools/debug/progressive-web-apps/#manifest).
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+More information {: #more-info }
 
 Lighthouse fetches the manifest and verifies that it has data. The manifest that
 Lighthouse fetches is separate from the one that Chrome is using on the page, which

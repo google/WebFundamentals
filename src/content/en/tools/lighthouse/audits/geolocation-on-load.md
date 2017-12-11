@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids Requesting The Geolocation Permission On Page Load" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-11-30 #}
+{# wf_blink_components: N/A #}
 
 # Avoids Requesting The Geolocation Permission On Page Load  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Users are mistrustful of or confused by pages that automatically request
 their location on page load. Rather than automatically requesting a
@@ -15,7 +16,7 @@ user's location on page load, tie the request to a user's gesture, such as
 a tapping a "Find Stores Near Me" button. Make sure that the gesture clearly
 and explicitly expresses the need for the user's location.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Under **URLs**, Lighthouse reports the line and column numbers where your
 code is requesting the user's location. Remove these calls, and tie the
@@ -26,7 +27,7 @@ requesting a user's location.
 
 [ask]: /web/fundamentals/native-hardware/user-location/#ask_permission_responsibly
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+More information {: #more-info }
 
 If geolocation permission was already granted to a page before Lighthouse's
 audit, Lighthouse cannot determine if the page requests the user's location
