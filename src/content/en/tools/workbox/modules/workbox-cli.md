@@ -80,7 +80,7 @@ are recommended to use `generateSW` mode.
 
 ### `injectManifest`
 
-For developers who ant more control of their final service worker file
+For developers who want more control of their final service worker file
 can use the `injectManifest` mode. This mode assumes that you have an
 existing service worker file (the location of which is specified in config.js).
 
