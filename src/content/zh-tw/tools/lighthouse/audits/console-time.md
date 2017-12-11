@@ -6,8 +6,8 @@ description:“網站在其自身的腳本中不使用 console.time()”Lighthou
 {# wf_published_on: 2016-12-01 #}
 
 # 網站在其自身的腳本中不使用 console.time() {: .page-title }
-
-## 爲什麼說此審查非常重要{: #why }
+ 
+## 爲什麼說此審查非常重要 {: #why }
 
 如果您使用 `console.time()` 測量頁面的性能，請考慮改用 User Timing API。
 其優勢包括：
@@ -23,7 +23,7 @@ description:“網站在其自身的腳本中不使用 console.time()”Lighthou
 
 [timeline]: /web/tools/lighthouse/images/user-timing-measurement-in-devtools.png
 
-## 如何通過此審查{: #how }
+## 如何通過此審查 {: #how }
 
 在您的報告中，Lighthouse 列出了其在 **URLs** 下找到的 `console.time()` 的每個實例。
 將每個調用替換爲 `performance.mark()`。如果您要測量在兩個標記之間經過的時間，則使用 `performance.measure()`。

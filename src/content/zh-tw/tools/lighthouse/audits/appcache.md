@@ -7,13 +7,13 @@ description:“網站不使用應用緩存”Lighthouse 審查的參考文檔。
 
 # 網站不使用應用緩存 {: .page-title }
 
-## 爲什麼說此審查非常重要{: #why }
+## 爲什麼說此審查非常重要 {: #why }
 
 應用緩存（也稱爲 AppCache）已[棄用][deprecated]。
 
 [deprecated]: https://html.spec.whatwg.org/multipage/browsers.html#offline
 
-## 如何通過此審查{: #how }
+## 如何通過此審查 {: #how }
 
 考慮使用服務工作線程 [Cache API][API]。
 

@@ -7,12 +7,12 @@ description:“緩存包含來自清單的 start_url”Lighthouse 審查的參�
 
 # 緩存包含來自清單的 start_url {: .page-title }
 
-## 爲什麼說此審查非常重要{: #why }
+## 爲什麼說此審查非常重要 {: #why }
 
 可確保在離線狀態下從移動設備主屏幕正確啓動 Progressive Web App。
 
 
-## 如何通過此審查{: #how }
+## 如何通過此審查 {: #how }
 
 1. 在您的 `manifest.json` 文件中定義一個 `start_url` 屬性。
 2. 確保您的服務工作線程正確緩存與 `start_url` 的值匹配的資源。
