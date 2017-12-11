@@ -7,12 +7,12 @@ description:“清單的 display 屬性已設置”Lighthouse 審查的參考文
 
 # 清單的 display 屬性已設置 {: .page-title }
 
-## 爲什麼說此審查非常重要{: #why }
+## 爲什麼說此審查非常重要 {: #why }
 
 當您的應用從主屏幕啓動時，您可以使用網絡應用清單中的 `display` 屬性指定應用的顯示模式。
 
 
-## 如何通過此審查{: #how }
+## 如何通過此審查 {: #how }
 
 將一個 `display` 屬性添加到您的網絡應用清單，並將其設置爲以下值之一：`fullscreen`、`standalone` 或 `browser`。
 
