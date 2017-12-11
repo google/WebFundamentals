@@ -236,7 +236,11 @@ YAML front matter must always be at the top of the document.
   </tr>
   <tr>
     <td>Notes</td>
-    <td>If no blink components are relevant, use <code>N/A</code>.</td>
+    <td>If no blink components are relevant, use:
+    <br />
+    <code>
+      &#123;# wf_blink_components: N/A #}
+    </code></td>
   </tr>
 </table>
 
