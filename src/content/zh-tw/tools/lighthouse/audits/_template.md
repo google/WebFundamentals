@@ -7,9 +7,9 @@ description:“AUDIT_NAME”Lighthouse 審查的參考文檔。
 
 # AUDIT_NAME {: .page-title }
 
-## 爲什麼說此審查非常重要{: #why }
+## 爲什麼說此審查非常重要 {: #why }
 
-## 如何通過此審查{: #how }
+## 如何通過此審查 {: #how }
 
 {% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
