@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 62 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-{# wf_updated_on: 2017-10-24 #}
+{# wf_updated_on: 2017-12-15 #}
 {# wf_published_on: 2017-09-15 #}
 {# wf_tags: deprecations,removals,chrome62 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -58,7 +58,7 @@ longer exists in Blink.
 [Chromestatus Tracker](https://www.chromestatus.com/features/5638783282184192) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=669498)
 
-### Remove usage of notifications from insecure iframes
+## Remove usage of notifications from insecure iframes
 
 Note: Removal was originally expected in Chrome 61.
 
