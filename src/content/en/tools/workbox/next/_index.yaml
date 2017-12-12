@@ -6,16 +6,77 @@ landing_page:
     description: <!-- No Description -->
 
   rows:
-  - heading: Welcome
-    description: >
-      Welcome to the home of Workbox!
+  - custom_html: >
+      <style>
+        .button-primary {
+          background-color: #fb8c00;
+        }
+        .workbox-heading {
+          text-align: center;
+        }
 
-      Workbox is a set of libraries and Node modules that make it easy to cache
-      assets of your sites offline and take full advantage of features used
-      to build progressive web apps.
+        .workbox-heading__logo {
+          margin: 0 40px;
+        }
+      </style>
+      <div class="workbox-heading">
+      <p><img class="workbox-heading__logo" src="../images/Workbox-Logo-Grey.svg" alt="Workbox Logo" /></p>
 
+      <p class="devsite-landing-row-description">JavaScript Libraries for adding offline support to web apps</p>
 
+      <p><a class="button button-primary" href="/web/tools/workbox/guides/get-started">Get Started</a></p>
+      </div>
+
+  - background: grey
     items:
+    - description: >
+        Welcome, Workbox is a set of libraries and Node modules that make it
+        easy to cache assets and take full advantage of features used to
+        build
+        <a href="https://developers.google.com/web/progressive-web-apps/">progressive web apps</a>.
+
+  - custom_html: >
+      <style>
+        .workbox-columns {
+          display: flex;
+          flex-direction: row;
+        }
+      </style>
+      <div class="workbox-columns">
+        <div class="workbox-columns__column">
+          <img src="../images/performance.svg" alt="Performance Icon" />
+          <h3>Performance</h3>
+          <p>Stop waiting on the network! You can improve your web apps performance by caching and serving your files, powered by a service worker.</p>
+        </div>
+        <div class="workbox-columns__column">
+          <img src="../images/no-network.svg" alt="No Network Icon" />
+          <h3>Resilience</h3>
+          <p>Even on an unreliable connection, your web app can still work using the right runtime caching strategies.</p>
+        </div>
+        <div class="workbox-columns__column">
+          <img src="../images/pwa.svg" alt="Progressive Web App Logo" />
+          <h3>Enhancement</h3>
+          <p>Looking to build a progressive web app? Workbox makes it easy to create an offline first experience.</p>
+        </div>
+      </div>
+
+  - heading: Why Workbox?
+    items:
+    - description: >
+        <p>Workbox is a library that bakes in a set of best practices and removes the boilerplate every  developer writes when working with <a href="https://developers.google.com/web/fundamentals/primers/service-workers/">service workers</a>.</p>
+
+        <ul>
+        <li>Precaching</li>
+        <li>Runtime caching</li>
+        <li>Strategies</li>
+        <li>Request routing</li>
+        <li>Background sync</li>
+        <li>Helpful debugging</li>
+        <li>Greate flexibility and feature set than sw-precache and sw-toolbox</li>
+        </ul>
+      background: grey
+
+  - items:
     - heading: Get Started
       description: >
         Getting started with Workbox is easy, in a few minutes you'll be
