@@ -14,8 +14,8 @@ toc:
 #  path: /web/tools/workbox/guides/build-and-use-plugins
 - title: "Common Recipes"
   path: /web/tools/workbox/guides/common-recipes
-# - title: "Enable Offline Analytics"
-#  path: /web/tools/workbox/guides/enable-offline-analytics
+- title: "Enable Offline Google Analytics"
+  path: /web/tools/workbox/guides/enable-offline-analytics
 - title: "Troubleshoot and Debug"
   path: /web/tools/workbox/guides/troubleshoot-and-debug
 # - title: "Generate a Complete Service Worker"
