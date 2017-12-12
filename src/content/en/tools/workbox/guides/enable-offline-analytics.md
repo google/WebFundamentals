@@ -8,6 +8,8 @@ description: A guide on how to enable offline Google Analytics.
 
 # Enable Offline Google Analytics {: .page-title }
 
+{% include "web/tools/workbox/_shared/alpha.html" %}
+
 Offline analytics is a module that will use background sync to ensure
 that requests to Google Analytics are made regardless of the current network
 condition. This is especially useful if you've built an app that works offline.
