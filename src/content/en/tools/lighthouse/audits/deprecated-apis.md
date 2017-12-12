@@ -22,7 +22,7 @@ them.
 
 [CPS]: https://www.chromestatus.com/features#deprecated
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse collects the deprecated API warnings that Chrome logs to the
 DevTools Console.

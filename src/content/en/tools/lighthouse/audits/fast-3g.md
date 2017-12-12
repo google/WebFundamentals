@@ -47,7 +47,7 @@ Performance][RP] for strategies.
 [load]: /web/tools/chrome-devtools/evaluate-performance/reference#record-load
 [RP]: /web/fundamentals/performance/rendering/
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse throttles the page if the network connection is faster than
 3G and then measures the time to first interactive. If the time to first

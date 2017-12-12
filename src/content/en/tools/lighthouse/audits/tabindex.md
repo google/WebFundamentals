@@ -27,7 +27,7 @@ that should not be keyboard navigable, or `0`, for elements that should. If
 you need an element to appear earlier in the tab order, consider moving
 it earlier in the DOM.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [Elements should not
 have tabindex greater than zero][axe] for more information.

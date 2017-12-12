@@ -44,7 +44,7 @@ To improve your Consistently Interactive score:
 [OCE]: /web/fundamentals/performance/optimizing-content-efficiency
 [OJE]: /web/fundamentals/performance/rendering/optimize-javascript-execution
 
-More information {: #more-info }
+## More information {: #more-info }
 
 The score is a lognormal distribution of some complicated calculations based on
 the definition of the Consistently Interactive metric. See [First Interactive

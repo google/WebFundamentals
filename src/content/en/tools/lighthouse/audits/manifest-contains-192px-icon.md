@@ -37,7 +37,7 @@ Check out [Manifest Exists](manifest-exists#recommendations)
 for a list of guides that teach you how to properly
 implement and test "Add to Homescreen" support in your app.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 This audit can only guarantee that your icon displays well on Android devices.
 Other operating systems may require a different icon size for optimal

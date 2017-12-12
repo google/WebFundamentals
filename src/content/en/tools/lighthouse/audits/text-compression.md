@@ -79,7 +79,7 @@ To compare the compressed and de-compressed sizes of a response:
 
 [lg]: /web/tools/chrome-devtools/network-performance/reference#request-rows
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse gathers all responses that:
 

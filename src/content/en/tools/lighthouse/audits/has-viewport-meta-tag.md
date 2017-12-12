@@ -32,7 +32,7 @@ The `width=device-width` key-value pair sets the width of the viewport to
 the width of the device. The `initial-scale=1` key-value pair sets the initial
 zoom level when visiting the page.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse checks that there's a `<meta name="viewport">` tag in the `<head>`
 of the document. It also checks that the node contains a `content` attribute

@@ -30,7 +30,7 @@ To learn how to enable HTTP/2 on your servers, see [Setting Up HTTP/2][setup].
 
 [setup]: https://dassur.ma/things/h2setup/
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse gathers all of the resources that are from the same host as the
 page, and then checks the HTTP protocol version of each resource.

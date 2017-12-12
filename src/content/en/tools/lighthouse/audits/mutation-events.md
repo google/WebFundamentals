@@ -31,7 +31,7 @@ See [`MutationObserver`][mdn] on MDN for more help.
 
 [mdn]: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse collects all of the event listeners on the page, and flags
 any listener that uses one of the types listed above.

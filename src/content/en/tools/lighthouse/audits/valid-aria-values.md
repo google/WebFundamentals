@@ -36,7 +36,7 @@ To find each listed element's invalid attribute values:
 [xp]: /web/tools/chrome-devtools/console/command-line-reference#xpath
 [states]: https://www.w3.org/TR/wai-aria/states_and_properties#state_prop_def
 
-More information {: #more-info }
+## More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [ARIA attributes
 must conform to valid values][axe] for more information.

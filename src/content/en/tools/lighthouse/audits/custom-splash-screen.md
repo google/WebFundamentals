@@ -33,7 +33,7 @@ you meet the following requirements in your web app manifest:
 * The `icons` array specifies an icon that is at least 512px by 512px.
 * The icon exists and is a PNG.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Note: See [Audit: icon size coverage][discuss] for a discussion on what icon
 sizes should be included in your project. Lighthouse's opinion is that a

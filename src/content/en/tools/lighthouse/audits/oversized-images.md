@@ -50,7 +50,7 @@ when you upload an image, or request it from your page.
 [gr]: https://www.npmjs.com/package/gulp-responsive
 [rig]: https://www.npmjs.com/package/responsive-images-generator
 
-More information {: #more-info }
+## More information {: #more-info }
 
 For each image on the page, Lighthouse compares the size of the rendered image
 against the size of the actual image. The rendered size also accounts

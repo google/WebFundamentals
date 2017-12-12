@@ -61,7 +61,7 @@ You can use this diagram to improve your CRP by:
 
 Optimizing any of these factors results in a faster page load.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse uses network priority as a proxy for identifying render-blocking
 critical resources. See [Chrome Resource Priorities and

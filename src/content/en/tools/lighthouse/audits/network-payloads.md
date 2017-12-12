@@ -51,7 +51,7 @@ Here are some strategies for reducing payload size:
 [http]: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
 [SW]: /web/fundamentals/getting-started/primers/service-workers
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse sums up the total byte size of all resources that the page
 requested.

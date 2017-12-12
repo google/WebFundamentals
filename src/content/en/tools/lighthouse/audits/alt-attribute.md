@@ -42,7 +42,7 @@ useful as possible for them. You don't need to explain every detail of the
 image, instead consider the context in which the image is being used, and try
 to convey the gist of the scene as efficiently as possible.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [Images must have
 alternate text][axe] for more information.

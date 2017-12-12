@@ -37,7 +37,7 @@ To find each listed element's invalid attribute names:
 [xp]: /web/tools/chrome-devtools/console/command-line-reference#xpath
 [roles]: https://www.w3.org/TR/wai-aria/roles#role_definitions
 
-More information {: #more-info }
+## More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [ARIA attributes
 must conform to valid names][axe] for more information.

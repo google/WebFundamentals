@@ -24,7 +24,7 @@ See [`performance.now()`][MDN] for more information on the API.
 
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API/Performance/now
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse reports every instance of `Date.now()` that it finds from
 scripts that are on the same host as the page. Scripts from other hosts are

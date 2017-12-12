@@ -68,7 +68,7 @@ var feedback = {
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
-More information {: #more-info }
+## More information {: #more-info }
 
 [Audit source][src]{:.external}
 

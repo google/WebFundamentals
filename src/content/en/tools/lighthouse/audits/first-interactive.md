@@ -31,7 +31,7 @@ There are two general strategies for improving load time:
 [CRP]: /web/fundamentals/performance/critical-rendering-path
 [OCE]: /web/fundamentals/performance/optimizing-content-efficiency
 
-More information {: #more-info }
+## More information {: #more-info }
 
 The score is a lognormal distribution of some complicated calculations based on
 the definition of the First Interactive metric. See [First Interactive And

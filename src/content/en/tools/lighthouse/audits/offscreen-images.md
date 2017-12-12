@@ -40,7 +40,7 @@ If you do use an IntersectionObserver, make sure to include the
 
 [polyfill]: https://github.com/WICG/IntersectionObserver/tree/gh-pages/polyfill
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse flags offscreen images that were requested before the
 Time To Interactive (TTI) event.

@@ -47,7 +47,7 @@ from printing out vendor prefixes by adding the following rule to your
 
 [map]: https://wiki.csswg.org/spec/flexbox-2009-2011-spec-property-mapping
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse collects all of the stylesheets used on the page and checks if any of
 them uses `display: box`. Lighthouse does not check if the stylesheets use any

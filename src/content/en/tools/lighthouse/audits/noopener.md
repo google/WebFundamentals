@@ -30,7 +30,7 @@ in a new window or tab.
 
     <a href="https://examplepetstore.com" target="_blank" rel="noopener">...</a>
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse uses the following algorithm to flag links as `rel="noopener"`
 candidates:

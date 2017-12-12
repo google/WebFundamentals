@@ -53,7 +53,7 @@ To see how your site looks and performs when JavaScript is disabled, use
 Chrome DevTools' [Disable
 JavaScript](/web/tools/chrome-devtools/settings#disable-js) feature.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse disables JavaScript on the page and then inspects the page's HTML. If
 the HTML is empty then the audit fails. If the HTML is not empty then the audit

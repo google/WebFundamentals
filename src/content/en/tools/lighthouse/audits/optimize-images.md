@@ -26,7 +26,7 @@ See [Image Optimization][IO] to learn more about the topic in general.
 Web services like [TinyJPG](https://tinyjpg.com/) can help automate the
 process of image optimization.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse collects each JPEG image on the page, sets each image's compression
 level to 85, and then compares the original version with the compressed

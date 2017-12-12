@@ -51,7 +51,7 @@ To find and fix each of element that does not have a sufficient contrast ratio:
 [AE]: https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US
 [CR]: http://leaverou.github.io/contrast-ratio/
 
-More information {: #more-info }
+## More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [Text elements
 must have sufficient color contrast against the background][axe] for more

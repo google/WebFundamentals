@@ -24,7 +24,7 @@ appears to display its primary content.
 [Optimizing the Critical Rendering Path](/web/fundamentals/performance/critical-rendering-path/)
 is particularly helpful towards achieving a faster First Meaningful Paint.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 First Meaningful Paint is essentially the paint after which the biggest
 above-the-fold layout change has happened, and web fonts have loaded. See the

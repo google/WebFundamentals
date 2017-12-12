@@ -22,7 +22,7 @@ load faster. Two good starting places are:
 * [Optimizing Content Efficiency](/web/fundamentals/performance/optimizing-content-efficiency/).
 * [Optimizing the Critical Rendering Path](/web/fundamentals/performance/critical-rendering-path/).
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse uses a node module called
 [Speedline](https://github.com/pmdartus/speedline)

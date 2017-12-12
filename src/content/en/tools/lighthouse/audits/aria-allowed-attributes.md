@@ -40,7 +40,7 @@ attributes.
 [xp]: /web/tools/chrome-devtools/console/command-line-reference#xpath
 [roles]: https://www.w3.org/TR/wai-aria/roles#role_definitions
 
-More information {: #more-info }
+## More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [Elements must only
 use allowed ARIA attributes][axe] for more information.

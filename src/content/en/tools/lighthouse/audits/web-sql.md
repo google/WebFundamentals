@@ -25,7 +25,7 @@ storage options.
 [indexeddb]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 [overview]: /web/fundamentals/instant-and-offline/web-storage/
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse checks if the page has a Web SQL database instance.
 
