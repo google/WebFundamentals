@@ -8,6 +8,8 @@ description: A guide to using plugins with Workbox.
 
 # Using Plugins {: .page-title }
 
+{% include "web/tools/workbox/_shared/alpha.html" %}
+
 In a number of situations it’s beneficial being able to manipulate a request
 and response as it’s being fetched and cached as it allows you to add
 additional behaviours to your service worker without writing substantial
