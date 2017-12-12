@@ -8,18 +8,24 @@ description: A guide to using plugins with Workbox.
 
 # Using Plugins {: .page-title }
 
-In a number of situations it’s beneficial being able to manipulate a request and response as it’s being fetched and cached as it allows you to add additional behaviours to your service worker without writing substantial boilerplate code.
+In a number of situations it’s beneficial being able to manipulate a request
+and response as it’s being fetched and cached as it allows you to add
+additional behaviours to your service worker without writing substantial
+boilerplate code.
 
-Workbox Plugins allow you to add additional behaviors by manipulating responses and requests during the lifecycle of a request.
+Workbox Plugins allow you to add additional behaviors by manipulating
+responses and requests during the lifecycle of a request.
 
-Out of the box Workbox provides a number of plugins that you can use and you can implement your own plugins if you want to add custom logic.
+Out of the box Workbox provides a number of plugins that you can use and
+you can implement your own plugins if you want to add custom logic.
 
 ## Workbox Plugins
 
 Workbox provides the following plugins:
 
 * [workbox.backgroundSync.Plugin](../reference-docs/prerelease/workbox.backgroundSync.Plugin)
-    * If a network request ever fails, add it to a background sync queue and retry the request when the next sync event is triggered.
+    * If a network request ever fails, add it to a background sync queue
+    and retry the request when the next sync event is triggered.
 * [workbox.broadcastUpdate.Plugin](../reference-docs/prerelease/workbox.broadcastUpdate.Plugin)
     * When ever a cache is updated dispatch a message on a Broadcast Channel.
 * [workbox.cacheableResponse.Plugin](../reference-docs/prerelease/workbox.cacheableResponse.Plugin)
@@ -27,7 +33,8 @@ Workbox provides the following plugins:
 * [workbox.expiration.Plugin](../reference-docs/prerelease/workbox.expiration.Plugin)
     * Manage the number of cached items or the age of items in the cache.
 
-You can use these plugins with a Workbox strategy by adding an instance to the `plugins` property:
+You can use these plugins with a Workbox strategy by adding an instance to
+the `plugins` property:
 
 ```javascript
 workbox.routing.registerRoute(
@@ -46,20 +53,30 @@ workbox.routing.registerRoute(
 
 ## Custom Plugins
 
-You can create your own plugins by passing in an object that has any of the following functions:
+You can create your own plugins by passing in an object that has any of the
+following functions:
 
 * `cacheWillUpdate`
-    * Called before a [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) is used to update a cache. You can alter the Response before it’s added to the cache or return null to avoid updating the cache at all.
+    * Called before a
+    [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) is
+    used to update a cache. You can alter the Response before it’s added to the
+    cache or return null to avoid updating the cache at all.
 * `cacheDidUpdate`
-    * Called when a new entry is added to a cache or it’s updated. Useful if you wish to perform an action after a cache update.
+    * Called when a new entry is added to a cache or it’s updated. Useful
+    if you wish to perform an action after a cache update.
 * `cachedResponseWillBeUsed`
-    * Before a cached Response is used to respond to a `fetch` event, this callback can be used to allow or block the Response from being used.
+    * Before a cached Response is used to respond to a `fetch` event, this
+    callback can be used to allow or block the Response from being used.
 * `requestWillFetch`
-    * This is called whenever a fetch event is about to be made. You can alter the [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) in this callback.
+    * This is called whenever a fetch event is about to be made. You can alter
+    the [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request)
+    in this callback.
 * `fetchDidFail`
-    * Called when a fetch event fails (note this is when the network request can’t be made at all and not when a request is a non-200 request).
+    * Called when a fetch event fails (note this is when the network request
+    can’t be made at all and not when a request is a non-200 request).
 
-All of these functions will be called whenever a cache or fetch event reaches the relevant point for the callback.
+All of these functions will be called whenever a cache or fetch event
+reaches the relevant point for the callback.
 
 A plugin using all of these callbacks would look like this:
 
