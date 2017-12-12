@@ -2,18 +2,19 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Properly Size Images" Lighthouse audit.
 
-{# wf_updated_on: 2017-06-29 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-04-25 #}
+{# wf_blink_components: N/A #}
 
 # Properly Size Images  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Ideally, your page should never serve images that are larger than the
 version that's rendered on the user's screen. Anything larger than that
 just results in wasted bytes and slows down page load time.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 In the results of this audit, Lighthouse lists every image that failed.
 Refactor how you serve these images to pass the audit.
@@ -49,7 +50,7 @@ when you upload an image, or request it from your page.
 [gr]: https://www.npmjs.com/package/gulp-responsive
 [rig]: https://www.npmjs.com/package/responsive-images-generator
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+More information {: #more-info }
 
 For each image on the page, Lighthouse compares the size of the rendered image
 against the size of the actual image. The rendered size also accounts

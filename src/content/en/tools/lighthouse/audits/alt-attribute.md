@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Every Image Element Has An alt Attribute" Lighthouse audit.
 
-{# wf_updated_on: 2017-07-27 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-01-23 #}
+{# wf_blink_components: N/A #}
 
 # Every Image Element Has An alt Attribute  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Informative images should have an `alt` attribute that includes a text
 description of the contents of that image. Screen readers enable
@@ -18,7 +19,7 @@ information is not accessible to visually-impaired users.
 
 See [Text Alternatives for Images](/web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images) for more information.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 <<_shared/query.md>>
 
@@ -41,7 +42,7 @@ useful as possible for them. You don't need to explain every detail of the
 image, instead consider the context in which the image is being used, and try
 to convey the gist of the scene as efficiently as possible.
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [Images must have
 alternate text][axe] for more information.

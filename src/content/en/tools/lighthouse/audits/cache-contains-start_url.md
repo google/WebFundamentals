@@ -2,17 +2,18 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Cache contains start_url from manifest" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-15 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-09-15 #}
+{# wf_blink_components: N/A #}
 
 # Cache Contains start_url From Manifest  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Ensures that a progressive web app properly launches from a mobile device
 homescreen while offline.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 1. Define a `start_url` property in your `manifest.json` file.
 2. Ensure that your service worker properly caches a resource that matches
@@ -27,9 +28,9 @@ this codelab to integrate "add to homescreen" functionality in your own app.
 
 For more help on how to cache files with service workers for offline use,
 see the "How to pass the audit" section of the following Lighthouse doc:
-[URL responds with a 200 when offline](http-200-when-offline#how)
+[URL responds with a 200 when offline](http-200-when-offline#recommendations)
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+More information {: #more-info }
 
 When a progressive web app is launched from the homescreen of a mobile
 device, the app opens on a specific URL. That URL is defined in the app's

@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "No Element Has a tabindex Attribute Greater Than 0" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-01-23 #}
+{# wf_blink_components: N/A #}
 
 # No Element Has a tabindex Attribute Greater Than 0  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 The `tabindex` attribute makes elements keyboard navigable.
 Positive values indicate an explicit navigation ordering of elements.
@@ -17,7 +18,7 @@ creates unusable experiences for users who rely on assistive technologies.
 See [Using tabindex](/web/fundamentals/accessibility/focus/using-tabindex)
 for more information.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 <<_shared/query.md>>
 
@@ -26,7 +27,7 @@ that should not be keyboard navigable, or `0`, for elements that should. If
 you need an element to appear earlier in the tab order, consider moving
 it earlier in the DOM.
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [Elements should not
 have tabindex greater than zero][axe] for more information.
