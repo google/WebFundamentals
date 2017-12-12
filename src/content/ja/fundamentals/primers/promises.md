@@ -902,7 +902,7 @@ ES6 では [Generator](http://wiki.ecmascript.org/doku.php?id=harmony:generators
   </td>
 </tr>
 </table>
-    
+
 ### インスタンス メソッド
 
 <table class="responsive methods">

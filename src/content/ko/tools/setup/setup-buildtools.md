@@ -9,7 +9,7 @@ description: 다중 기기 사이트를 처음부터 다시 빌드합니다. 빌
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}
-다중 기기 사이트를 처음부터 다시 빌드합니다. 빌드 프로세스 도구 집합을 사용하여 개발 속도를 높이고 빠르게 로드하는 사이트를 만드는 방법에 대해 알아봅니다. 모든 사이트에는 개발 버전과 프로덕션 버전이 있어야 합니다.<br /><br />개발 버전에는 멋진 사이트를 완벽하게 구성하는 모든 HTML, CSS, JS 및 이미지 파일이 있습니다.<br /><br />프로덕션 버전에서는 이러한 파일을 가져와서 간소화 및 연결/병합하고 이미지와 같은 파일을 최적화합니다.
+다중 기기 사이트를 처음부터 다시 빌드합니다. 빌드 프로세스 도구 집합을 사용하여 개발 속도를 높이고 빠르게 로드하는 사이트를 만드는 방법에 대해 알아봅니다. 모든 사이트에는 개발 버전과 프로덕션 버전이 있어야 합니다.<br><br>개발 버전에는 멋진 사이트를 완벽하게 구성하는 모든 HTML, CSS, JS 및 이미지 파일이 있습니다.<br><br>프로덕션 버전에서는 이러한 파일을 가져와서 간소화 및 연결/병합하고 이미지와 같은 파일을 최적화합니다.
 
 웹 개발자는 한 번에 100만 개를 고려해야 하며 빌드 단계는
 가장 중요하지만 시작하기가 가장 성가신 단계입니다.  이미지
@@ -21,11 +21,10 @@ description: 다중 기기 사이트를 처음부터 다시 빌드합니다. 빌
 따르도록 워크플로를 구성하는 가장 좋은 방법에
 대해서 알아봅니다.
 
-
 ### TL;DR {: .hide-from-toc }
+
 - 빌드 프로세스 도구는 성능을 위해 최적화해야 합니다. 자바스크립트, CSS, HTML 및 이미지를 자동으로 최소화하고 연결해야 합니다.
 - LiveReload와 같은 도구를 사용하여 개발 프로세스를 훨씬 원활하게 수행할 수 있습니다.
-
 
 코딩을 시작하기 전에 사이트의 프로덕션 버전을 최적화 및
 빌드하는 방법을 고려해야 합니다. 이 워크플로를 처음부터 설정하면
@@ -58,7 +57,7 @@ description: 다중 기기 사이트를 처음부터 다시 빌드합니다. 빌
   <tbody>
     <tr>
       <td data-th="Supported Platforms">OS X / Windows</td>
-      <td data-th="Gulp"><a href="http://alphapixels.com/prepros/">Prepros</a></td>
+      <td data-th="Gulp"><a href="https://prepros.io/">Prepros</a></td>
     </tr>
     <tr>
       <td data-th="Supported Platforms">OS X</td>
@@ -70,7 +69,6 @@ description: 다중 기기 사이트를 처음부터 다시 빌드합니다. 빌
     </tr>
   </tbody>
 </table>
-
 
 ## 빌드 프로세스에 수행해야 하는 작업은?
 
@@ -90,9 +88,9 @@ Gulp 또는 Grunt에 대해 잘 모르는 상태에서 고유한
 빌드 프로세스를 만들려면 빠른 시작 가이드를 참조하여 첫 번째 빌드 프로세스를
 설치하고 실행하는 것이 가장 좋습니다.
 
-* [Grunt 시작하기](http://gruntjs.com/getting-started)
-* [Gulp
- 시작하기](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#getting-started)
+- [Grunt 시작하기](http://gruntjs.com/getting-started)
+- [Gulp
+    시작하기](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#getting-started)
 
 ### 사이트 속도를 높이기 위해 연결 및 최소화 사용
 
@@ -148,19 +146,22 @@ Gulp 또는 Grunt에 대해 잘 모르는 상태에서 고유한
   <tbody>
     <tr>
       <td data-th="Type of File">CSS (Sass)</td>
-      <td data-th="Gulp"><a href="https://github.com/dlmanning/gulp-sass">gulp-sass</a> 또는 <a href="https://github.com/jonkemp/gulp-useref">gulp-useref</a></td>
-      <td data-th="Grunt"><a href="https://github.com/gruntjs/grunt-contrib-sass">grunt-contrib-sass</a> 또는 <a href="https://github.com/yeoman/grunt-usemin">grunt-usemin</a></td>
+      <td data-th="Gulp">
+<a href="https://github.com/dlmanning/gulp-sass">gulp-sass</a> 또는 <a href="https://github.com/jonkemp/gulp-useref">gulp-useref</a>
+</td>
+      <td data-th="Grunt">
+<a href="https://github.com/gruntjs/grunt-contrib-sass">grunt-contrib-sass</a> 또는 <a href="https://github.com/yeoman/grunt-usemin">grunt-usemin</a>
+</td>
     </tr>
     <tr>
       <td data-th="Type of File">JS</td>
       <td data-th="Gulp"><a href="https://github.com/jonkemp/gulp-useref">gulp-useref</a></td>
-      <td data-th="Grunt"><a href="https://github.com/yeoman/grunt-usemin">grunt-usemin</a> 또는 <a href="https://github.com/fatso83/grunt-codekit">grunt-codekit</a></td>
+      <td data-th="Grunt">
+<a href="https://github.com/yeoman/grunt-usemin">grunt-usemin</a> 또는 <a href="https://github.com/fatso83/grunt-codekit">grunt-codekit</a>
+</td>
     </tr>
   </tbody>
 </table>
-
-**참고**: Sass는 '가져오기' 기능을 통해 사용할 수 있습니다([예시는 Web Starter
-Kit 참조](https://github.com/google/web-starter-kit/blob/master/app/styles/main.scss)).
 
 ### 이미지 최적화
 
@@ -205,7 +206,8 @@ Kit 참조](https://github.com/google/web-starter-kit/blob/master/app/styles/mai
   </tbody>
 </table>
 
-**참고**  
+**참고**
+
 원하는 경우 [Sublime 패키지를 추가하여 자동 프리픽싱을 수행할 수
 있습니다](/web/tools/setup/setup-editor#autoprefixer).
 
@@ -225,12 +227,11 @@ Web Starter Kit는 실시간 새로고침을 지원하기 위해 browser-sync를
   <tbody>
     <tr>
       <td data-th="Gulp"><a href="http://www.browsersync.io/docs/gulp/">browser-sync</a></td>
-      <td data-th="Grunt"><a href="https://github.com/gruntjs/grunt-contrib-connect">grunt-contrib-connect</a> 및 <a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch</a></td>
+      <td data-th="Grunt">
+<a href="https://github.com/gruntjs/grunt-contrib-connect">grunt-contrib-connect</a> 및 <a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch</a>
+</td>
     </tr>
   </tbody>
 </table>
 
 참고: 실시간 새로고침은 원하지만 빌드 프로세스는 원하지 않는 경우 [Addy Osmani가 HTML5Rocks에 게시한 글](http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/)을 참조하며 다양한 대안(무료 및 유료)을 검토하세요.
-
-
-{# wf_devsite_translation #}

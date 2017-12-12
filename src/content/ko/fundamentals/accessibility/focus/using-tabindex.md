@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: tabindex로 DOM 순서 변경
 
-
 {# wf_updated_on: 2016-10-04 #}
 {# wf_published_on: 2016-10-04 #}
 
@@ -12,8 +11,6 @@ description: tabindex로 DOM 순서 변경
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/robdodson.html" %}
 
-
-
 네이티브 요소의 DOM 위치가 제공하는 기본 탭 순서가
 편리하기는 하지만 탭 순서를 수정하고 싶은 경우도 있을 것입니다.
 HTML에서 요소를 물리적으로 이동하는 것은 때로 적합하지 못하거나 심지어
@@ -21,7 +18,7 @@ HTML에서 요소를 물리적으로 이동하는 것은 때로 적합하지 못
 요소의 탭 위치를 설정합니다.
 
 `tabindex`는 어떤 요소에든 적용할 수 있습니다. 그러나
-모든 요소에서 반드시 필요한 것은 아니며 다양한 정수값 범위를 취합니다. 
+모든 요소에서 반드시 필요한 것은 아니며 다양한 정수값 범위를 취합니다.
 `tabindex`를 사용하면 포커스 가능한 요소에 대해 명시적 순서를 지정하고
 포커스 불가능한 요소를 탭 순서에 삽입하고 탭 순서에서
 요소를 제거합니다. 예를 들면 다음과 같습니다.
@@ -30,22 +27,28 @@ HTML에서 요소를 물리적으로 이동하는 것은 때로 적합하지 못
 `focus()` 메서드를 호출하는 방식으로 요소에 포커스를
 맞출 수 있습니다.
 
-    <custom-button tabindex="0">Press Tab to Focus Me!</custom-button>
+```
+<custom-button tabindex="0">Press Tab to Focus Me!</custom-button>
+```
 
 {% framebox height="60px" %}
+
 <style>
   custom-button {
     margin: 10px;
   }
 </style>
+
 <custom-button tabindex="0">Press Tab to Focus Me!</custom-button>
 {% endframebox %}
 
 `tabindex="-1"`: 일반적인 탭 순서에서 요소를 삭제하더라도
 `focus()` 메서드를 호출하여 계속 요소에 포커스를 맞출 수 있습니다.
 
-    <button id="foo" tabindex="-1">I'm not keyboard focusable</button>
-    <button onclick="foo.focus();">Focus my sibling</button>
+```
+<button id="foo" tabindex="-1">I'm not keyboard focusable</button>
+<button onclick="foo.focus();">Focus my sibling</button>
+```
 
 {% framebox height="80px" %}
 <button id="foo" tabindex="-1">I'm not keyboard focusable</button>
@@ -58,9 +61,11 @@ HTML에서 요소를 물리적으로 이동하는 것은 때로 적합하지 못
 계속 높은 값으로 이동합니다. 0보다 큰 tabindex를 사용하는 것은
 **안티패턴**으로 간주됩니다.
 
-    <button>I should be first</button>
-    <button>And I should be second</button>
-    <button tabindex="5">But I jumped to the front!</button>
+```
+<button>I should be first</button>
+<button>And I should be second</button>
+<button tabindex="5">But I jumped to the front!</button>
+```
 
 {% framebox height="80px" %}
 <button>I should be first</button>
@@ -74,11 +79,10 @@ DOM 시퀀스가 논리적인 탭 순서를 제공하도록 소스 코드를 적
 좋습니다. `tabindex`를 사용한다면 버튼, 탭, 드롭다운, 텍스트 필드와
 같이 사용자가 입력을 제공할 것으로 예상되는 요소인 사용자설정 대화형 컨트롤로 제한하세요.
 
-
 스크린 리더에는
 `tabindex`가 없으므로 사용자가 중요한 콘텐츠를 놓치지 않을까 걱정하지 마세요. 이미지와 같이 매우 중요한 콘텐츠라도
 사용자가 상호작용할 수 있는 대상이 아니라면 포커스 가능하게 만들 이유가 없습니다.
- 스크린 리더 사용자는 적절한 `alt` 속성 지원을 제공하기만 한다면
+스크린 리더 사용자는 적절한 `alt` 속성 지원을 제공하기만 한다면
 이미지 콘텐츠를 이해하는 데는 문제가 없습니다. 이 속성 지원에 대해서는 잠시 후 다룰 것입니다.
 
 ## 페이지 수준에서 포커스 관리
@@ -105,12 +109,14 @@ DOM 시퀀스가 논리적인 탭 순서를 제공하도록 소스 코드를 적
 주로 키보드를 사용하는 사용자가 여전히 컨트롤과 상호작용할 수 있도록 이와 동일한 유형의 동작을
 노출하고 싶을 것입니다.
 
-    <!-- Focus the element using Tab and use the up/down arrow keys to navigate -->
-    <select>
-      <option>Aisle seat</option>
-      <option>Window seat</option>
-      <option>No preference</option>
-    </select>
+```
+<!-- Focus the element using Tab and use the up/down arrow keys to navigate -->
+<select>
+  <option>Aisle seat</option>
+  <option>Window seat</option>
+  <option>No preference</option>
+</select>
+```
 
 <select>
   <option>Aisle seat</option>
@@ -119,7 +125,7 @@ DOM 시퀀스가 논리적인 탭 순서를 제공하도록 소스 코드를 적
 </select>
 
 어떤 키보드 동작을 구현할지 알기 어려울 수 있지만
-참조하면 도움이 될 만한 문서가 있습니다. 
+참조하면 도움이 될 만한 문서가 있습니다.
 [Accessible Rich Internet Applications(ARIA) Authoring Practices](https://www.w3.org/TR/wai-aria-practices/){: .external }
 가이드는 구성 요소 유형과 이들이 지원하는 키보드 동작 유형을 보여줍니다.
 나중에 ARIA에 대해서는 더욱 상세히 설명하겠지만 지금 이 가이드는
@@ -130,13 +136,15 @@ DOM 시퀀스가 논리적인 탭 순서를 제공하도록 소스 코드를 적
 만들고 고유한 외형과
 동작을 적용할 수 있습니다.
 
-    <radio-group>
-      <radio-button>Water</radio-button>
-      <radio-button>Coffee</radio-button>
-      <radio-button>Tea</radio-button>
-      <radio-button>Cola</radio-button>
-      <radio-button>Ginger Ale</radio-button>
-    </radio-group>
+```
+<radio-group>
+  <radio-button>Water</radio-button>
+  <radio-button>Coffee</radio-button>
+  <radio-button>Tea</radio-button>
+  <radio-button>Cola</radio-button>
+  <radio-button>Ginger Ale</radio-button>
+</radio-group>
+```
 
 어떤 종류의 키보드 지원이 필요할지 결정하려면
 [ARIA Authoring Practices 가이드](https://www.w3.org/TR/wai-aria-practices/){: .external }를 참조하세요.
@@ -153,27 +161,31 @@ DOM 시퀀스가 논리적인 탭 순서를 제공하도록 소스 코드를 적
 현재 활성 상태인 하위 항목을 제외한 모든 하위 항목에 대해 `tabindex`를 -1로 설정하면
 이동 tabindex가 작동합니다.
 
-    <radio-group>
-      <radio-button tabindex="0">Water</radio-button>
-      <radio-button tabindex="-1">Coffee</radio-button>
-      <radio-button tabindex="-1">Tea</radio-button>
-      <radio-button tabindex="-1">Cola</radio-button>
-      <radio-button tabindex="-1">Ginger Ale</radio-button>
-    </radio-group>
+```
+<radio-group>
+  <radio-button tabindex="0">Water</radio-button>
+  <radio-button tabindex="-1">Coffee</radio-button>
+  <radio-button tabindex="-1">Tea</radio-button>
+  <radio-button tabindex="-1">Cola</radio-button>
+  <radio-button tabindex="-1">Ginger Ale</radio-button>
+</radio-group>
+```
 
 이 구성 요소는 키보드 이벤트 리스너를 사용하여 사용자가 어느 키를 눌렀는지 확인합니다.
 이때 이전에 포커스를 맞춘 하위 항목의
 `tabindex`를 -1로 설정하고 포커스를 맞출 하위 항목의 `tabindex`를 0으로 설정한 다음
 여기에 포커스 메서드를 호출합니다.
 
-    <radio-group>
-      // Assuming the user pressed the down arrow, we'll focus the next available child
-      <radio-button tabindex="-1">Water</radio-button>
-      <radio-button tabindex="0">Coffee</radio-button> // call .focus() on this element
-      <radio-button tabindex="-1">Tea</radio-button>
-      <radio-button tabindex="-1">Cola</radio-button>
-      <radio-button tabindex="-1">Ginger Ale</radio-button>
-    </radio-group>
+```
+<radio-group>
+  // Assuming the user pressed the down arrow, we'll focus the next available child
+  <radio-button tabindex="-1">Water</radio-button>
+  <radio-button tabindex="0">Coffee</radio-button> // call .focus() on this element
+  <radio-button tabindex="-1">Tea</radio-button>
+  <radio-button tabindex="-1">Cola</radio-button>
+  <radio-button tabindex="-1">Ginger Ale</radio-button>
+</radio-group>
+```
 
 사용자가 마지막(또는 첫 번째, 포커스 이동 방향에 따라 달라짐)
 하위 요소에 도달하면 첫 번째(또는 마지막)
@@ -183,6 +195,7 @@ DOM 시퀀스가 논리적인 탭 순서를 제공하도록 소스 코드를 적
 검사해 보면서 tabindex가 라디오 버튼 사이를 이동하는지 살펴보세요.
 
 {% framebox height="130px" %}
+
 <style>
   .demo {
     margin-left: 80px;
@@ -343,6 +356,7 @@ DOM 시퀀스가 논리적인 탭 순서를 제공하도록 소스 코드를 적
 
   window.customElements.define('radio-group', RadioGroup);
 </script>
+
 {% endframebox %}
 
 GitHub에서
@@ -371,36 +385,25 @@ Web AIM 검사 목록의 섹션 2.1.2에서는 이 문제에 대해
 모달이 표시되는 동안만 포커스를 트랩하고
 모달이 닫히면 이전에 포커스를 받았던 항목으로 다시 포커스가 돌아가게 할 수 있습니다.
 
->개발자 입장에서 이 작업을 더욱 쉽게 처리할 수 있게 해주는 방법이 있지만(예:
-`<dialog>` 요소), 브라우저에서 아직은 널리 지원되지 않습니다.
->
->>이 [MDN 기사](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog){: .external }에서
-`<dialog>`에 대한 추가 정보를 얻을 수 있고
-[모달 예시](https://github.com/gdkraus/accessible-modal-dialog){: .external }에서
-모달 창에 대한 추가 정보를 얻을 수 있습니다.
+> 개발자 입장에서 이 작업을 더욱 쉽게 처리할 수 있게 해주는 방법이 있지만(예:
+> `<dialog>` 요소), 브라우저에서 아직은 널리 지원되지 않습니다.
+> 이 [MDN 기사](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog){: .external }에서
+> `<dialog>`에 대한 추가 정보를 얻을 수 있고
+> [모달 예시](https://github.com/gdkraus/accessible-modal-dialog){: .external }에서
+> 모달 창에 대한 추가 정보를 얻을 수 있습니다.
 
 몇몇 요소를 포함한 `div`와 배경 오버레이를 나타내는
 또 다른 `div`로 표시되는 모달 대화상자를 생각해 봅시다. 이 상황에서 임시 키보드 트랩 구현에
 필요한 기본적인 단계를 수행해 봅시다.
 
- 1. `document.querySelector`를 사용하여 모달 및 오버레이 div를 선택하고
-    관련 참조를 저장합니다.
- 1. 모달이 열렸을 때 포커스가 주어졌던 요소에 대한 참조를 저장하여
-    모달이 열릴 때 그 요소로 포커스를 되돌릴 수 있도록 합니다.
- 1. *keydown listener*를 사용하여 모달이 열려 있는 동안 키를 누를 때 키를 인식하도록
-    합니다. 배경 오버레이에서 클릭 동작을 수신하여
-    사용자가 배경 오버레이를 클릭하면 모달을 닫을 수도 있습니다.
- 1. 다음으로, 모달 내에서 포커스 가능한 요소 모음을 가져옵니다. 첫 번째와
-    마지막의 포커스 가능한 요소는 포커스를 앞뒤로 루프 순환하면서 모달 내에 머무르도록
-    할 시점을 알 수 있게 해주는 '센티널' 역할을 합니다.
- 1. 모달 창을 표시하고 포커스 가능한 첫 번째 요소를 포커스합니다.
- 1. 사용자가 `Tab` 또는 `Shift+Tab`을 누를 때 포커스를 앞이나 뒤로 이동하면서
-    마지막 요소나 첫 번째 요소에서 적절히 루프를 수행하도록 합니다.
- 1. 사용자가 `Esc` 키를 누르면 모달을 닫습니다. 이렇게 하면 사용자가 닫기 버튼을 찾지 않고도
-    모달을 닫을 수 있으므로 매우 유용합니다.
-    이는 마우스를 사용할 때도 유용한 기능입니다.
- 1. 모달이 닫힐 때 모달과 배경 오버레이를 숨기고
-    앞서 저장한 이전에 포커스를 받던 요소로 포커스를 복원합니다.
+1. `document.querySelector`를 사용하여 모달 및 오버레이 div를 선택하고관련 참조를 저장합니다.
+2. 모달이 열렸을 때 포커스가 주어졌던 요소에 대한 참조를 저장하여모달이 열릴 때 그 요소로 포커스를 되돌릴 수 있도록 합니다.
+3. *keydown listener*를 사용하여 모달이 열려 있는 동안 키를 누를 때 키를 인식하도록합니다. 배경 오버레이에서 클릭 동작을 수신하여사용자가 배경 오버레이를 클릭하면 모달을 닫을 수도 있습니다.
+4. 다음으로, 모달 내에서 포커스 가능한 요소 모음을 가져옵니다. 첫 번째와마지막의 포커스 가능한 요소는 포커스를 앞뒤로 루프 순환하면서 모달 내에 머무르도록할 시점을 알 수 있게 해주는 '센티널' 역할을 합니다.
+5. 모달 창을 표시하고 포커스 가능한 첫 번째 요소를 포커스합니다.
+6. 사용자가 `Tab` 또는 `Shift+Tab`을 누를 때 포커스를 앞이나 뒤로 이동하면서마지막 요소나 첫 번째 요소에서 적절히 루프를 수행하도록 합니다.
+7. 사용자가 `Esc` 키를 누르면 모달을 닫습니다. 이렇게 하면 사용자가 닫기 버튼을 찾지 않고도모달을 닫을 수 있으므로 매우 유용합니다.이는 마우스를 사용할 때도 유용한 기능입니다.
+8. 모달이 닫힐 때 모달과 배경 오버레이를 숨기고앞서 저장한 이전에 포커스를 받던 요소로 포커스를 복원합니다.
 
 이 절차에 따르면 모든 사용자가 유용하고 쉽게 효과적으로 사용할 수 있는
 모달 창을 제공할 수 있습니다.
@@ -408,7 +411,3 @@ Web AIM 검사 목록의 섹션 2.1.2에서는 이 문제에 대해
 더 자세한 내용은 이 [샘플 코드](https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/solution){: .external }를
 살펴보고
 [완료된 페이지](http://udacity.github.io/ud891/lesson2-focus/07-modals-and-keyboard-traps/solution/index.html){: .external }의 라이브 예시를 살펴보세요.
-
-
-
-{# wf_devsite_translation #}

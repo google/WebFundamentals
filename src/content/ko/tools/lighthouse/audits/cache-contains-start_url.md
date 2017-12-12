@@ -33,9 +33,9 @@ description: Reference documentation for the "Cache contains start_url from mani
 이 검사는 `manifest.json`의 `start_url`의 값을 파싱하고
 서비스 워커의 캐시에 캐시되는 것을 보장합니다.
 
-**서비스 워커가 `start_url` 요청과 리디렉션 하는 경우, 이 검사는 정확하지 못한 결과가 발생할 수 있습니다.**
+서비스 워커가 `start_url` 요청과 리디렉션 하는 경우, 이 검사는 정확하지 못한 결과가 발생할 수 있습니다.
 
-이 검사의 한가지 단점은 서비스 워커에서 `start_url`을 
+이 검사의 한가지 단점은 서비스 워커에서 `start_url`을
 해결하도록 요청하는 대신 캐시 내용을 직접 검사한다는 것입니다.
 이는 서비스 워커가 캐시의 다른 리소스로 리디렉션하기 때문에
 실제로는 성곡적으로 해결되는 시나이로에서도 `start_url`의 정확한 값과 일치하는 리소스가
@@ -43,3 +43,5 @@ description: Reference documentation for the "Cache contains start_url from mani
 반대로 캐시에 `start_url`과 일치하는 리소스가 포함되어 있지만
 서비스 워커가 요청을 존재하지 않는 리소스로 리디렉션하면
 검사가 잘못된 결과를 생성할 수 있습니다.
+
+{% include "web/tools/lighthouse/audits/_feedback/cache-contains-start_url.html" %}
