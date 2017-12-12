@@ -79,8 +79,8 @@ than 50% of frames are decoded by the hardware. Small frames are always
 considered power efficient.
 
 Note: The result returned from `navigator.mediaCapabilities.decodingInfo` will
-always be supported if the media configuration playback stats have not been
-recorded yet by the browser.
+always be reported as smooth and power-efficient if the media configuration is
+supported and playback stats have not been recorded yet by the browser.
 
 I recommend using a snippet similar to the one below to detect
 availability and fallback to your current implementation for browsers that
