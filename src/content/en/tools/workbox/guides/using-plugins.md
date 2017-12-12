@@ -1,0 +1,89 @@
+project_path: /web/tools/workbox/_project.yaml
+book_path: /web/tools/workbox/_book.yaml
+description: A guide to using plugins with Workbox.
+
+{# wf_updated_on: 2017-11-15 #}
+{# wf_published_on: 2017-11-15 #}
+
+# Using Plugins {: .page-title }
+
+In a number of situations it’s beneficial being able to manipulate a request and response as it’s being fetched and cached as it allows you to add additional behaviours to your service worker without writing substantial boilerplate code.
+
+Workbox Plugins allow you to add additional behaviors by manipulating responses and requests during the lifecycle of a request.
+
+Out of the box Workbox provides a number of plugins that you can use and you can implement your own plugins if you want to add custom logic.
+
+## Workbox Plugins
+
+Workbox provides the following plugins:
+
+* [workbox.backgroundSync.Plugin](../reference-docs/prerelease/workbox.backgroundSync.Plugin)
+    * If a network request ever fails, add it to a background sync queue and retry the request when the next sync event is triggered.
+* [workbox.broadcastUpdate.Plugin](../reference-docs/prerelease/workbox.broadcastUpdate.Plugin)
+    * When ever a cache is updated dispatch a message on a Broadcast Channel.
+* [workbox.cacheableResponse.Plugin](../reference-docs/prerelease/workbox.cacheableResponse.Plugin)
+    * Only cache cache requests that meet a certain criteria.
+* [workbox.expiration.Plugin](../reference-docs/prerelease/workbox.expiration.Plugin)
+    * Manage the number of cached items or the age of items in the cache.
+
+You can use these plugins with a Workbox strategy by adding an instance to the `plugins` property:
+
+```javascript
+workbox.routing.registerRoute(
+  /\.(?:png|gif|jpg|jpeg|svg)$/,
+  workbox.strategies.cacheFirst({
+    cacheName: 'images',
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+      }),
+    ],
+  }),
+);
+```
+
+## Custom Plugins
+
+You can create your own plugins by passing in an object that has any of the following functions:
+
+* `cacheWillUpdate`
+    * Called before a [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) is used to update a cache. You can alter the Response before it’s added to the cache or return null to avoid updating the cache at all.
+* `cacheDidUpdate`
+    * Called when a new entry is added to a cache or it’s updated. Useful if you wish to perform an action after a cache update.
+* `cachedResponseWillBeUsed`
+    * Before a cached Response is used to respond to a `fetch` event, this callback can be used to allow or block the Response from being used.
+* `requestWillFetch`
+    * This is called whenever a fetch event is about to be made. You can alter the [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) in this callback.
+* `fetchDidFail`
+    * Called when a fetch event fails (note this is when the network request can’t be made at all and not when a request is a non-200 request).
+
+All of these functions will be called whenever a cache or fetch event reaches the relevant point for the callback.
+
+A plugin using all of these callbacks would look like this:
+
+```javascript
+const myPlugin = {
+  cacheWillUpdate: ({request, response}) => {
+    // Return `response`, a different Response object or null
+    return response;
+  },
+  cacheDidUpdate: ({cacheName, request, oldResponse, newResponse}) => {
+    // No return expected
+  },
+  cachedResponseWillBeUsed: ({cacheName, request, matchOptions, cachedResponse}) => {
+    // Return `cachedResponse`, a different Response object or null
+    return cachedResponse;
+  },
+  requestWillFetch: ({request}) => {
+    // Return `request` or a different Request
+    return request;
+  },
+  fetchDidFail: ({originalRequest, request}) => {
+    // No return expected.
+    // NOTE: original request is the browser request, request is the
+    // request after being passed through plugins with
+    // `requestWillFetch` callbacks.
+  }
+};
+```
