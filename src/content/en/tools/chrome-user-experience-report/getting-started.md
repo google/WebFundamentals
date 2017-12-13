@@ -3,6 +3,7 @@ book_path: /web/tools/_book.yaml
 
 {# wf_updated_on: 2017-12-12 #}
 {# wf_published_on: 2017-10-23 #}
+{# wf_blink_components: N/A #}
 
 # Chrome User Experience Report {: .page-title }
 
