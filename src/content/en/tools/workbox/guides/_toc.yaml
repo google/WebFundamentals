@@ -26,3 +26,5 @@ toc:
 #  path: /web/tools/workbox/guides/use-es2015-imports
 - title: "Service Worker Checklist"
   path: /web/tools/workbox/guides/service-worker-checklist
+- title: "Advanced Recipes"
+  path: /web/tools/workbox/guides/advanced-recipes
