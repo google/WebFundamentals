@@ -131,6 +131,21 @@ landing_page:
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-broadcast-cache-update/
 
+      - heading: workbox.rangeRequest
+        description: >
+          This modules provides support for responding to a request with a
+          ranger header from a Cache.
+        buttons:
+        # - label: Learn more
+        #   path: ./workbox-broadcast-cache-update
+        - label: Reference
+          path: ../reference-docs/prerelease/workbox.rangeRequests
+        # - label: Demo
+        #   path: https://workbox-demos.firebaseapp.com/demo/workbox-broadcast-cache-update/
+
+      # Force Devsite 4-up layout
+      - heading: ""
+
     - heading: Node Modules
       description: >
         Workbox provides a set of Node modules that make it easy to generate
