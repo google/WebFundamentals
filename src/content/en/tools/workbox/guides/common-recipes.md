@@ -1,8 +1,8 @@
 project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
-description: A common recipes to use with Workbox.
+description: Common recipes to use with Workbox.
 
-{# wf_updated_on: 2017-11-15 #}
+{# wf_updated_on: 2017-12-17 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Common Recipes {: .page-title }
