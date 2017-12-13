@@ -100,6 +100,12 @@ user clicks on the UI to refresh the page, we post a message to the new
 service worker telling it to force an activation. After this a message is
 posted to all windows telling them to reload.
 
+Note: This is one possible approach to refreshing the page on a new service
+worker. For a more thorough answer as well as an explanation of alternative
+approaches this
+[article by Redfin Engineering](https://redfin.engineering/how-to-fix-the-refresh-button-when-using-service-workers-a8e27af6df68)
+discuess a range of options.
+
 **Add to your service worker**
 
 ```javascript
