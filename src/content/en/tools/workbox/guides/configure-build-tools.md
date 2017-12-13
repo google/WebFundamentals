@@ -20,20 +20,6 @@ Supported configurations vary from tool to tool, and from mode to mode within ea
 following guide presents a list of all the possible usage combinations, along with required and
 optional configuration parameters that each combination supports.
 
-Each build tool accepts configuration options in a slightly different way.
-
-- When using the `workbox-build` module directly, pass the configuration as properties of an
-`Object` to the appropriate method. For example, `workboxBuild.injectManifest({option: 'value'})`
-or `workboxBuild.generateSW({option: 'value'})`.
-
-- When using the `workbox-cli` command line interface, use the `--config-file` flag to point to a
-CommonJS module file that assigns the configuration object to `module.exports`. If you leave out
-`--config-file`, the CLI will look for a file named `workbox-config.js` in the current
-directory.
-
-- When using `workbox-webpack-plugin` within a webpack build, pass the configuration as properties
-of an `Object` to the plugin's constructor, like new `WorkboxPlugin({option: 'value'})`.
-
 Each option documented here includes an example, which, for the sake of illustration, assumes the
 following local filesystem setup. Please adjust the example values to match your actual setup.
 
@@ -57,6 +43,10 @@ following local filesystem setup. Please adjust the example values to match your
 
 ## workbox-build
 
+Pass the configuration as properties of an `Object` to the appropriate method. For example,
+
+    workboxBuild.generateSW({option: 'value'})
+
 ### generateSW
 
 <table class="responsive">
@@ -65,6 +55,104 @@ following local filesystem setup. Please adjust the example values to match your
       <th colspan="2">Supported Options</th>
     </tr>
 {% include "web/tools/workbox/guides/_shared/generate-sw-schema.html" %}
+{% include "web/tools/workbox/guides/_shared/common-generate-schema.html" %}
+{% include "web/tools/workbox/guides/_shared/base-schema.html" %}
+  </tbody>
+</table>
+
+### injectManifest
+
+<table class="responsive">
+ <tbody>
+   <tr>
+     <th colspan="2">Supported Options</th>
+   </tr>
+{% include "web/tools/workbox/guides/_shared/inject-manifest-schema.html" %}
+{% include "web/tools/workbox/guides/_shared/base-schema.html" %}
+ </tbody>
+</table>
+
+### generateSWString
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan="2">Supported Options</th>
+    </tr>
+{% include "web/tools/workbox/guides/_shared/generate-sw-string-schema.html" %}
+{% include "web/tools/workbox/guides/_shared/common-generate-schema.html" %}
+{% include "web/tools/workbox/guides/_shared/base-schema.html" %}
+  </tbody>
+</table>
+
+### getManifest
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan="2">Supported Options</th>
+    </tr>
+{% include "web/tools/workbox/guides/_shared/get-manifest-schema.html" %}
+{% include "web/tools/workbox/guides/_shared/base-schema.html" %}
+  </tbody>
+</table>
+
+## workbox-cli
+
+Use the `--config-file` flag to point to a CommonJS module file that assigns the configuration
+object to `module.exports`. If you leave out `--config-file`, the CLI will look for a file named
+`workbox-config.js` in the current directory. For example:
+
+    // Inside workbox-config.js:
+    module.exports = {
+      option: 'value'
+    };
+
+### generateSW
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan="2">Supported Options</th>
+    </tr>
+{% include "web/tools/workbox/guides/_shared/generate-sw-schema.html" %}
+{% include "web/tools/workbox/guides/_shared/common-generate-schema.html" %}
+{% include "web/tools/workbox/guides/_shared/base-schema.html" %}
+  </tbody>
+</table>
+
+### injectManifest
+
+<table class="responsive">
+ <tbody>
+   <tr>
+     <th colspan="2">Supported Options</th>
+   </tr>
+{% include "web/tools/workbox/guides/_shared/inject-manifest-schema.html" %}
+{% include "web/tools/workbox/guides/_shared/base-schema.html" %}
+ </tbody>
+</table>
+
+## workbox-webpack-plugin
+
+Pass the configuration as properties of an `Object` to the plugin's constructor. For example:
+
+    // Inside of webpack.config.js:
+    module.exports = {
+      // Other webpack config...
+      plugins: [
+        // Other plugins...
+        WorkboxPlugin({option: 'value'})
+      ]
+    };
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan="2">Supported Options</th>
+    </tr>
+{% include "web/tools/workbox/guides/_shared/webpack-specific.html" %}
+{% include "web/tools/workbox/guides/_shared/generate-sw-string-schema.html" %}
 {% include "web/tools/workbox/guides/_shared/common-generate-schema.html" %}
 {% include "web/tools/workbox/guides/_shared/base-schema.html" %}
   </tbody>
