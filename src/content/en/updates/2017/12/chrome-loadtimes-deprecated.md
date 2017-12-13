@@ -355,4 +355,8 @@ The `chrome.loadTimes()` API will be deprecated in Chrome 64 and is targeted to 
 removed in late 2018. Developers should migrate their code as soon as possible
 to avoid any loss in data.
 
+[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/QqvFGFgoTyI/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/features/5637885046816768) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=621512)
+
 {% include "comment-widget.html" %}
