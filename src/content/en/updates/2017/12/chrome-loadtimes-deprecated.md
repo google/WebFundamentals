@@ -307,7 +307,7 @@ function wasFetchedViaSpdy() {
 ### `wasNpnNegotiated`
 
 ```
-function wasFetchedViaSpdy() {
+function wasNpnNegotiated() {
   // NPN is deprecated in favor of ALPN, but this implementation returns true
   // for HTTP/2 or HTTP2+QUIC/39 requests negotiated via ALPN.
   if (window.PerformanceNavigationTiming) {
