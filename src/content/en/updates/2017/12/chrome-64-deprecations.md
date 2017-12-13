@@ -16,31 +16,11 @@ description: A round up of the deprecations and removals in Chrome 64 to help yo
 In nearly every version of Chrome, we see a significant number of updates and
 improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes some of the deprecations and removals in Chrome
-64, which is in beta as of December 14. Visit the
-[deprecations page](/web/updates/tags/deprecations) for more deprecations and
-removals from this and previous versions of Chrome. This list is subject to
-change at any time.
+64, which is in beta as of December 14.
 
-## Deprecate chrome.loadTimes()
-
-The `chrome.loadTimes()` method is a non-standard API that enables collecting
-loading-related metrics in real-world operations. A [Resource Timing Level
-1](https://www.w3.org/TR/resource-timing-1/) API has existed for several years
-while the current version of it is a W3C Candidate Recommendation. Chrome itself
-has been working to implement these for some time. For these reasons,
-the `chrome.loadTimes()` method is deprecated in Chrome 64. Removal is
-anticipated some time in late 2018.
-
-Developers needing an alternative should look at several spec-based APIs. Most
-of the data returned by `chrome.loadTimes()` can be retrieved with the
-[Navigation Timing API](https://developer.mozilla.org/en-US/docs/Web/API/Navigation_timing_API).
-`chrome.loadTimes()` also returns a `firstPaintTime` property. The spec-based
-alternative is the
-[PerformancePaintTiming interface](https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming).
-
-[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/QqvFGFgoTyI/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/features/5637885046816768) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=621512)
+To see all deprecations and removals for this and previous versions of Chrome,
+visit the [deprecations page](/web/updates/tags/deprecations). This list is
+subject to change at any time.
 
 ## Remove support for multiple shadow roots
 
@@ -63,7 +43,7 @@ It's now being removed because it's not on a standards track.
 Since there is currently no standards-based alternative, developers would need
 to create their own. There is at least [one example on
 StackOverflow](https://stackoverflow.com/questions/2952667/find-all-css-rules-
-that-apply-to-an-element). 
+that-apply-to-an-element).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/-_Al0I5Rm9Q/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/features/4606972603138048) &#124;
