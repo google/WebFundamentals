@@ -2,10 +2,13 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description:A checklist of things to ensure when setting up a service worker.
 
-{# wf_updated_on: 2017-11-15 #}
+{# wf_updated_on: 2017-12-17 #}
 {# wf_published_on: 2017-11-15 #}
+{# wf_blink_components: N/A #}
 
 # Service Worker Checklist {: .page-title }
+
+{% include "web/tools/workbox/_shared/alpha.html" %}
 
 This page contains a couple of tips that will ensure your users get the
 best experience from your web app as well as ensuring there aren't any
