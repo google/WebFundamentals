@@ -1004,6 +1004,7 @@ function testProject(filename, contents) {
           type: 'object',
           properties: {
             description: {type: 'string', required: true},
+            background: {type: 'string', required: false},
           },
           additionalProperties: false,
         },
