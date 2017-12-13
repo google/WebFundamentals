@@ -1,0 +1,94 @@
+<tr>
+  <td>
+    <p>globDirectory</p>
+  </td>
+  <td>
+    <p>
+      <em>Required <code>String</code></em>
+    </p>
+    <p>
+      The base directory you wish to match <code>globPatterns</code> against, relative to the
+      current working directory.
+    </p>
+    <p>
+      <strong>Example:</strong>
+    </p>
+    <pre class="prettyprint">// Treat all patterns as relative to the current directory:
+globDirectory: process.cwd()
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <p>importScripts</p>
+  </td>
+  <td>
+    <p>
+      <em>Optional <code>Array</code> of <code>String</code>, defaulting to <code>[]</code></em>
+    </p>
+    <p>
+      An optional list of JavaScript files that should be passed to
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts" class="external"><code>importScripts()</code></a>
+      inside the generated service worker file.
+    </p>
+    <p>
+      This is useful when you want to let Workbox create your top-level service worker file, but
+      also want to include some additional code, such as a <code>push</code> event listener.
+    </p>
+    <p>
+      <em>Note:</em> It's not necessary to include a URL for the <code>workbox-sw.js</code>
+      runtime code here, as it will automatically be added.
+    </p>
+    <p>
+      <strong>Example:</strong>
+    </p>
+    <pre class="prettyprint">importScripts: ['push-listener.abcd1234.js']</pre>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <p>importWorkboxFromCDN</p>
+  </td>
+  <td>
+    <p>
+      <em>Optional <code>Boolean</code>, defaulting to <code>true</code></em>
+    </p>
+    <p>
+      If true, the <code>workbox-sw.js</code> runtime and associated libraries will be automatically
+      imported into the generated service worker from the official CDN URL.
+    </p>
+    <p>
+      If false, the <code>workbox-sw.js</code> runtime and associated libraries will be copied
+      locally into a versioned subdirectory of <code>swDest</code>.
+    </p>
+    <p>
+      Functionality is identical regardless of which option is used; setting this to
+      <code>false</code> is recommended for developers who would prefer not to rely on the official
+      CDN as a dependency.
+    </p>
+    <p>
+      <strong>Example:</strong>
+    </p>
+    <pre class="prettyprint">importWorkboxFromCDN: false</pre>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <p>swDest</p>
+  </td>
+  <td>
+    <p>
+      <em>Required <code>String</code></em>
+    </p>
+    <p>
+      The path to the final service worker file that will be created by the build process, relative
+      to the current working directory.
+    </p>
+    <p>
+      <strong>Example:</strong>
+    </p>
+    <pre class="prettyprint">swDest: path.join('dist', 'sw.js')</pre>
+  </td>
+</tr>

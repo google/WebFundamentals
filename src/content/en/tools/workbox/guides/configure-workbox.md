@@ -5,7 +5,7 @@ description: A guide on how to configure Workbox.
 {# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-15 #}
 
-# Configure Workbox {: .page-title }
+# Configure the Runtime Options {: .page-title }
 
 {% include "web/tools/workbox/_shared/alpha.html" %}
 
