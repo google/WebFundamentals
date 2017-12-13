@@ -10,8 +10,8 @@ toc:
   path: /web/tools/workbox/guides/configure-workbox
 - title: "Handle Third-Party Requests"
   path: /web/tools/workbox/guides/handle-third-party-requests
-# - title: "Build and Use Plugins"
-#  path: /web/tools/workbox/guides/build-and-use-plugins
+- title: "Using Plugins"
+  path: /web/tools/workbox/guides/using-plugins
 - title: "Common Recipes"
   path: /web/tools/workbox/guides/common-recipes
 - title: "Enable Offline Google Analytics"
