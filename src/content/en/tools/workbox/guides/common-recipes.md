@@ -4,6 +4,7 @@ description: Common recipes to use with Workbox.
 
 {# wf_updated_on: 2017-12-17 #}
 {# wf_published_on: 2017-11-15 #}
+{# wf_blink_components: N/A #}
 
 # Common Recipes {: .page-title }
 

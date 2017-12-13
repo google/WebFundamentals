@@ -3,7 +3,8 @@ book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
 {# wf_updated_on: 2017-12-17 #}
-{# wf_published_on: 2017-11-15 #}
+{# wf_published_on: 2017-12-17 #}
+{# wf_blink_components: N/A #}
 
 # Advanced Recipes {: .page-title }
 
@@ -118,3 +119,19 @@ If you setup routes with a custom cachename you can do the same, just replace
 the `cacheName` with your custom value.
 
 ## Provide a fallback response to a route
+
+There are scenarios where returning a fallback response is better than failing
+to return a response at all. An example is returning a placeholder image when
+the original image can't be retrieved.
+
+To do this in Workbox you can use the `handle()` method on strategy to make
+a custom handler function.
+
+```javascript
+const FALLBACK_IMAGE_URL = '/images/fallback.png';
+const imagesHandler = workbox.strategies.cacheFirst();
+worbox.routing.registerRoute(new RegExp('/images/'), ({event}) => {
+  return imagesHandler.handle({event})
+    .catch(() => caches.match(FALLBACK_IMAGE_URL));
+});
+```
