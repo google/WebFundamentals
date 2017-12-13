@@ -164,7 +164,8 @@ give you a baseline against which you can measure the success of future changes.
 The Device Memory API is new, and most analytics providers are not tracking it
 by default. Fortunately, most analytics providers give you a way to track custom
 data (for example, Google Analytics has a feature called [Custom
-Dimensions](https://support.google.com/analytics/answer/2709828)), that you can use to track device memory for you users' devices.
+Dimensions](https://support.google.com/analytics/answer/2709828)), that you can
+use to track device memory for you users' devices.
 
 ### Using a custom device memory dimension
 
@@ -177,8 +178,8 @@ Using custom dimensions in Google Analytics is a two-step process.
    the device memory value for the custom dimension you just created.
 
 When creating the custom dimension, give it the name "Device Memory" and choose
-a [scope](https://support.google.com/analytics/answer/2709828) of "session" since the value will not change during the course of a user's browsing
-session:
+a [scope](https://support.google.com/analytics/answer/2709828) of "session"
+since the value will not change during the course of a user's browsing session:
 
 <figure>
   <img src="/web/updates/images/2017/12/device-memory-custom-dimension.png"
