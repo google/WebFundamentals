@@ -2,8 +2,9 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to configure workbox-build, workbox-webpack-plugin, and workbox-cli.
 
-{# wf_updated_on: 2017-12-08 #}
-{# wf_published_on: 2017-12-08 #}
+{# wf_updated_on: 2017-12-13 #}
+{# wf_published_on: 2017-12-13 #}
+{# wf_blink_components: Blink>ServiceWorker #}
 
 # Configure the Build Tools {: .page-title }
 
