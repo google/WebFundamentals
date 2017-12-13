@@ -20,27 +20,41 @@ To do this you'll need to add some code to your page and to your service worker.
 **Add to your page**
 
 ```javascript
-const showRefreshUI = (registration) => {
-  const container = document.querySelector('.new-sw');
-  container.style.display = 'block';
+function showRefreshUI(registration) {
+  // TODO: Display a toast or refresh UI.
 
-  const button = document.querySelector('button');
-  button.addEventListener('click', () => {
+  // This demo creates and injects a button.
+
+  var button = document.createElement('button');
+  button.style.position = 'absolute';
+  button.style.bottom = '24px';
+  button.style.left = '24px';
+  button.textContent = 'This site has updated. Please click here to see changes.';
+
+  button.addEventListener('click', function() {
+    if (!registration.waiting) {
+      // Just to ensure registration.waiting is available before
+      // calling postMessage()
+      return;
+    }
+
     button.disabled = true;
 
     registration.waiting.postMessage('force-activate');
   });
+
+  document.body.appendChild(button);
 };
 
-const onNewServiceWorker = (registration, callback) => {
+function onNewServiceWorker(registration, callback) {
   if (registration.waiting) {
     // SW is waiting to activate. Can occur if multiple clients open and
     // one of the clients is refreshed.
     return callback();
   }
 
-  const listenInstalledStateChange = () => {
-    registration.installing.addEventListener('statechange', () => {
+  function listenInstalledStateChange() {
+    registration.installing.addEventListener('statechange', function() {
       if (event.target.state === 'installed') {
         // A new service worker is available, inform the user
         callback();
@@ -57,9 +71,9 @@ const onNewServiceWorker = (registration, callback) => {
   registration.addEventListener('updatefound', listenInstalledStateChange);
 }
 
-window.addEventListener('load', () => {
+window.addEventListener('load', function() {
   // When the user asks to refresh the UI, we'll need to reload the window
-  navigator.serviceWorker.addEventListener('message', (event) => {
+  navigator.serviceWorker.addEventListener('message', function(event) {
     if (!event.data) {
       return;
     }
@@ -83,7 +97,7 @@ window.addEventListener('load', () => {
       return;
     }
 
-    onNewServiceWorker(registration, () => {
+    onNewServiceWorker(registration, function() {
       showRefreshUI(registration);
     });
   });
@@ -131,8 +145,8 @@ self.addEventListener('message', (event) => {
 
 This will receive a the 'force-activate' message and call `skipWaiting()` and
 `clients.claim()` so that the service worker activates immediately and controls
-all of the currently open windows, which in turn results in the `
-controllerchange` event firing causing the windows to reload.
+all of the currently open windows. We then message each window with a
+'reload-window' message so each tab is refreshed with the latest content.
 
 ## "Warm" the runtime cache
 
