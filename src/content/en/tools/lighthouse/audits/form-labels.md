@@ -39,7 +39,7 @@ Explicit labels:
     <span id="foo">Select seat:</span>
     <custom-dropdown aria-labelledby="foo">...</custom-dropdown>
 
-More information {: #more-info }
+## More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [Form elements must
 have labels][axe] for more information.

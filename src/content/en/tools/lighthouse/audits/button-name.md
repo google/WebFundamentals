@@ -41,7 +41,7 @@ For `<input type="submit">` and `<input type="reset">`:
 * Set the `aria-labelledby` attribute. See the description in the bullet-point
   list above.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [Buttons must have
 discernible text][axe].

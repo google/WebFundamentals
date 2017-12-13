@@ -42,7 +42,7 @@ tuning][tools] for some examples of optimization tools.
 
 [tools]: /web/fundamentals/performance/optimizing-content-efficiency/image-optimization#tools_and_parameter_tuning
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse optimizes each image it finds on the page, and then compares
 the version used on the page against its own optimized version. The audit

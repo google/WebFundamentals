@@ -39,7 +39,7 @@ the features in your own app:
 * [Add your web app to a user's home
   screen](https://codelabs.developers.google.com/codelabs/add-to-home-screen).
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Checks if the Chrome Debugger returns a service worker version.
 

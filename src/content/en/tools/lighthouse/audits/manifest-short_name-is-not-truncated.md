@@ -34,7 +34,7 @@ Check out [Manifest Exists](manifest-exists#recommendations)
 for a list of guides that teach you how to properly
 implement and test "Add to Homescreen" support in your app.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse fetches the manifest and verifies that the `short_name` property is
 less than 12 characters. Note that since the `name` property can be used as a

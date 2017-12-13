@@ -31,7 +31,7 @@ You can emulate and test A2HS events in Chrome DevTools. See the following
 section for more help: [Web App
 Manifest](/web/tools/chrome-devtools/debug/progressive-web-apps/#manifest).
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse fetches the manifest and verifies that it has data. The manifest that
 Lighthouse fetches is separate from the one that Chrome is using on the page, which

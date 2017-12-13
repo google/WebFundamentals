@@ -32,7 +32,7 @@ Check out [Manifest Exists](manifest-exists#recommendations)
 for a list of guides that teach you how to properly
 implement and test "Add to Homescreen" support in your app.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse fetches the manifest and verifies that the `display` property
 exists and that it's value is `fullscreen`, `standalone`, or `browser`.

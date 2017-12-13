@@ -29,7 +29,7 @@ to change. See [How do I fix this?][fix] for possible solutions.
 
 [fix]: /web/updates/2016/08/removing-document-write#how_do_i_fix_this
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse reports every instance of `document.write()` that it encounters.
 Note that Chrome's intervention against `document.write()` only applies to

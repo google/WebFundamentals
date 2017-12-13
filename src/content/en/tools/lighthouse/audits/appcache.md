@@ -31,7 +31,7 @@ offline.
 
 [sw-appcache-behavior]: https://github.com/GoogleChrome/sw-appcache-behavior
 
-More information {: #more-info }
+## More information {: #more-info }
 
 The audit passes if no AppCache manifest is detected.
 

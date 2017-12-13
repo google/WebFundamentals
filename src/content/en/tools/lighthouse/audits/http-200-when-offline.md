@@ -35,7 +35,7 @@ Workers](https://codelabs.developers.google.com/codelabs/debugging-service-worke
 Use the [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) to
 determine which caching strategy fits your app best. This covers step 2 above.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse emulates an offline connection using the Chrome Debugging Protocol,
 and then attempts to retrieve the page using `XMLHttpRequest`.

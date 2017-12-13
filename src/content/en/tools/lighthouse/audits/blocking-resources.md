@@ -42,7 +42,7 @@ functionality.
 [js]: /web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
 [css]: /web/fundamentals/performance/critical-rendering-path/render-blocking-css
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse identifies three types of blocking resources.
 

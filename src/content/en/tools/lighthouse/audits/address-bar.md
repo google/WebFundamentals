@@ -49,7 +49,7 @@ CSS color value.
 See [Manifest Exists](manifest-exists#recommendations) for more resources on adding a
 manifest to your app.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 The audit passes if Lighthouse finds a `theme-color` meta tag in the page's
 HTML and a `theme_color` property in the Web App Manifest. Lighthouse does

@@ -27,7 +27,7 @@ requesting a user's location.
 
 [ask]: /web/fundamentals/native-hardware/user-location/#ask_permission_responsibly
 
-More information {: #more-info }
+## More information {: #more-info }
 
 If geolocation permission was already granted to a page before Lighthouse's
 audit, Lighthouse cannot determine if the page requests the user's location

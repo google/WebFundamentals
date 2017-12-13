@@ -28,7 +28,7 @@ You can ignore this audit if:
 * The content width of your page is intentionally smaller or larger than the
   viewport width.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 The audit passes if `window.innerWidth === window.outerWidth`.
 

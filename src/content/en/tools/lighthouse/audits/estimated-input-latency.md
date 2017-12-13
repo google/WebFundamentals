@@ -43,7 +43,7 @@ to ensure that all stages of [the pixel
 pipeline](/web/fundamentals/performance/rendering/#the_pixel_pipeline) are
 complete within 50ms.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 The RAIL performance model recommends that apps respond to user input within
 100ms, whereas Lighthouse's target score is 50ms. Why?

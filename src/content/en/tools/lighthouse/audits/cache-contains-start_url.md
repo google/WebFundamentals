@@ -30,7 +30,7 @@ For more help on how to cache files with service workers for offline use,
 see the "How to pass the audit" section of the following Lighthouse doc:
 [URL responds with a 200 when offline](http-200-when-offline#recommendations)
 
-More information {: #more-info }
+## More information {: #more-info }
 
 When a progressive web app is launched from the homescreen of a mobile
 device, the app opens on a specific URL. That URL is defined in the app's

@@ -25,7 +25,7 @@ Under **URLs**, Lighthouse reports the line and column numbers where your
 code is requesting permission to send notifications. Remove these calls,
 and tie the requests to user gestures instead.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 If notification permissions was already granted or denied to a page before
 Lighthouse's audit, Lighthouse cannot determine if the page requests

@@ -21,7 +21,7 @@ a user can interact with it.
 See [Speed Index](speed-index#recommendations) for more help on improving page load performance.
 The lower your Time to Interactive score, the better.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Time to Interactive is defined as the point at which layout has stabilized,
 key webfonts are visible, and the main thread is available enough to handle

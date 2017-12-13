@@ -43,7 +43,7 @@ implement passive event listeners.
 
 [polyfill]: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse uses the following algorithm to flag potential passive event
 listener candidates:

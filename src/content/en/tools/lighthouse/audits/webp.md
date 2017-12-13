@@ -28,7 +28,7 @@ support for WebP?][fallback] for an overview of fallback techniques.
 
 [fallback]: /speed/webp/faq#how_can_i_detect_browser_support_for_webp
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse collects each JPEG and PNG image on the page, and then converts
 each to WebP. Lighthouse omits the image from its report if the potential

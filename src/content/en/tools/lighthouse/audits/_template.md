@@ -12,7 +12,7 @@ description: Reference documentation for the "AUDIT_NAME" Lighthouse audit.
 
 ## Recommendations {: #recommendations }
 
-More information {: #more-info }
+## More information {: #more-info }
 
 [Audit source][src]{:.external}
 

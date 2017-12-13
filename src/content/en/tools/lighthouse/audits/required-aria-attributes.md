@@ -35,7 +35,7 @@ To find each element's missing required attributes:
 
 [roles]: https://www.w3.org/TR/wai-aria/roles#role_definitions
 
-More information {: #more-info }
+## More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [Required ARIA
 attributes must be provided][axe] for more information.

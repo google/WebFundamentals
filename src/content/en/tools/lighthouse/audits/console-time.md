@@ -36,7 +36,7 @@ to learn how to use the API.
 
 [html5rocks]: https://www.html5rocks.com/en/tutorials/webperformance/usertiming/
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse reports every instance of `console.time()` that it finds from
 scripts that are on the same host as the page. Scripts from other hosts are

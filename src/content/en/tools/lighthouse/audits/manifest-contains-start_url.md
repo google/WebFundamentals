@@ -31,7 +31,7 @@ Check out [Manifest Exists](manifest-exists#recommendations)
 for a list of guides that teach you how to properly
 implement and test "Add to Homescreen" support in your app.
 
-More information {: #more-info }
+## More information {: #more-info }
 
 Lighthouse fetches the manifest and verifies that it has a `start_url` property.
 The manifest that Lighthouse fetches is separate from the one that Chrome is
