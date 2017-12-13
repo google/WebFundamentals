@@ -63,7 +63,7 @@ It's now being removed because it's not on a standards track.
 Since there is currently no standards-based alternative, developers would need
 to create their own. There is at least [one example on
 StackOverflow](https://stackoverflow.com/questions/2952667/find-all-css-rules-
-that-apply-to-an-element). One of the developers for this change has also created a [polyfill](https://gist.github.com/darrnshn/addeabe2575177342cc6242e20ecadbd).
+that-apply-to-an-element). 
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/-_Al0I5Rm9Q/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/features/4606972603138048) &#124;
