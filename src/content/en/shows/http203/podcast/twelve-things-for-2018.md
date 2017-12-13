@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: Twelve things for 2018.
+description: With a limit of two minutes per topic.
 
 {# wf_updated_on: 2017-12-14 #}
 {# wf_published_on: 2017-12-14 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-13.mp3 #}
 {# wf_podcast_duration: 00:25:26 #}
 {# wf_podcast_fileSize: 27846941 #}
-{# wf_podcast_subtitle: Twelve things for 2018. #}
+{# wf_podcast_subtitle: With a limit of two minutes per topic. #}
 {# wf_featured_image: /web/shows/http203/podcast/images/surma-and-jake-2.jpg #}
 {# wf_blink_components: N/A #}
 
