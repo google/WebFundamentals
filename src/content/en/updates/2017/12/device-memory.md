@@ -6,7 +6,7 @@ description: The Device Memory API allows developers to serve different resource
 {# wf_published_on: 2017-12-07 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
-{# wf_featured_image: /web/updates/images/2017/06/perf-metrics-histogram.png #}
+{# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_featured_snippet: The Device Memory API allows developers to serve different resources to users based on their device's memory capabilities. #}
 
 # The Device Memory API {: .page-title }
