@@ -4,7 +4,7 @@ What's changed, or what was fixed?
 
 **Fixes:** #issue
 
-**Target Live Date:** YYYY-DD-MM
+**Target Live Date:** YYYY-MM-DD
 
 - [ ] This has been reviewed and approved by (NAME)
 - [ ] I have run `gulp test` locally and all tests pass.
