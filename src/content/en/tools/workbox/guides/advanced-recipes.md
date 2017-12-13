@@ -21,49 +21,72 @@ To do this you'll need to add some code to your page and to your service worker.
 
 ```javascript
 const showRefreshUI = (registration) => {
-  // TODO: Show a toast of some UI to offer a refresh to the user.
+  const container = document.querySelector('.new-sw');
+  container.style.display = 'block';
 
-  const refreshButton = document.querySelector('.refresh-button');
-  refreshButton.addEventListener('click', () => {
+  const button = document.querySelector('button');
+  button.addEventListener('click', () => {
     button.disabled = true;
-
-    // The user has asked us to refresh so reload when the force activate
-    // takes affect and clients.claim() is called.
-    // This is also safe from DevTools update on reload
-    navigator.serviceWorker.oncontrollerchange = function() {
-      window.location.reload();
-    };
 
     registration.waiting.postMessage('force-activate');
   });
 };
 
-navigator.serviceWorker.register('/sw.js')
-.then(function (registration) {
-    // Track updates to the Service Worker.
-  if (!navigator.serviceWorker.controller) {
-    // The window client isn't currently controlled so it's a new service
-    // worker that will activate immediately
-    return;
-  }
-
+const onNewServiceWorker = (registration, callback) => {
   if (registration.waiting) {
     // SW is waiting to activate. Can occur if multiple clients open and
     // one of the clients is refreshed.
-    return showRefreshUI(registration);
+    return callback();
+  }
+
+  const listenInstalledStateChange = () => {
+    registration.installing.addEventListener('statechange', () => {
+      if (event.target.state === 'installed') {
+        // A new service worker is available, inform the user
+        callback();
+      }
+    });
+  };
+
+  if (registration.installing) {
+    return listenInstalledStateChange();
   }
 
   // We are currently controlled so a new SW may be found...
   // Add a listener in case a new SW is found,
-  registration.onupdatefound = function () {
-    console.log('SW has a new version...');
-    registration.installing.onstatechange = function (event) {
-      if (event.target.state === 'installed') {
-        // A new service worker is available, inform the user
-        showRefreshUI(registration);
-      }
-    };
-  };
+  registration.addEventListener('updatefound', listenInstalledStateChange);
+}
+
+window.addEventListener('load', () => {
+  // When the user asks to refresh the UI, we'll need to reload the window
+  navigator.serviceWorker.addEventListener('message', (event) => {
+    if (!event.data) {
+      return;
+    }
+
+    switch (event.data) {
+      case 'reload-window':
+        window.location.reload();
+        break;
+      default:
+        // NOOP
+        break;
+    }
+  });
+
+  navigator.serviceWorker.register('/sw.js')
+  .then(function (registration) {
+      // Track updates to the Service Worker.
+    if (!navigator.serviceWorker.controller) {
+      // The window client isn't currently controlled so it's a new service
+      // worker that will activate immediately
+      return;
+    }
+
+    onNewServiceWorker(registration, () => {
+      showRefreshUI(registration);
+    });
+  });
 });
 ```
 
@@ -71,17 +94,17 @@ This code handles the verious possible lifecycles of the service worker
 and detects when a new service worker has become installed and is waiting to
 activate.
 
-When a waiting service worker is found, a `controllerchange` listener is
-added to `navigator.serviceWorker` to listen for when / if the controlling
-service worker changes, when this happens we'll reload the page. Once the
-listener is set up, a message is posted to the new service worker telling
-it to force and activation.
+When a waiting service worker is found we set up a message listener on
+`navigator.serviceWorker` so we know when to reload the window. When the
+user clicks on the UI to refresh the page, we post a message to the new
+service worker telling it to force an activation. After this a message is
+posted to all windows telling them to reload.
 
 **Add to your service worker**
 
 ```javascript
 self.addEventListener('message', (event) => {
-  if (!event.data) {
+  if (!event.data){
     return;
   }
 
@@ -89,8 +112,13 @@ self.addEventListener('message', (event) => {
     case 'force-activate':
       self.skipWaiting();
       self.clients.claim();
+      self.clients.matchAll().then((clients) => {
+        clients.forEach((client) => client.postMessage('reload-window'));
+      });
+      break;
     default:
       // NOOP
+      break;
   }
 });
 ```
@@ -125,7 +153,9 @@ to return a response at all. An example is returning a placeholder image when
 the original image can't be retrieved.
 
 To do this in Workbox you can use the `handle()` method on strategy to make
-a custom handler function.
+a custom handler function. **Note:** You'll need to cache any assets you
+use for your fallback, in the example below we'd need to cache the
+`FALLBACK_IMAGE_URL`.
 
 ```javascript
 const FALLBACK_IMAGE_URL = '/images/fallback.png';
