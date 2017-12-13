@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: The non-standard chrome.loadTimes() API will be deprecated in Chrome 64 now that standards-based equivalents exist for all of its features.
+description: The non-standard chrome.loadTimes() API will be deprecated in Chrome 64 now that standards-based equivalents exist for all of its useful features.
 
 {# wf_updated_on: 2017-12-14 #}
 {# wf_published_on: 2017-12-14 #}
-{# wf_tags: performance #}
+{# wf_tags: performance,deprecations,removals,chrome64 #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: The non-standard chrome.loadTimes() API will be deprecated in Chrome 64 now that standards-based equivalents exist for all of its features. #}
+{# wf_featured_snippet: The non-standard chrome.loadTimes() API will be deprecated in Chrome 64 now that standards-based equivalents exist for all of its useful features. #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
 
 # Chrome 64 to deprecate the chrome.loadTimes() API {: .page-title }
@@ -18,10 +18,13 @@ description: The non-standard chrome.loadTimes() API will be deprecated in Chrom
 network information to developers in order to help them better understand their
 site's performance in the real world.
 
-Since this API was implemented in 2009, all of the information it reports can be
-found in standardized APIs such as [Navigation Timing 2](https://www.w3.org/TR
-/navigation-timing-2/), [Paint Timing](https://www.w3.org/TR/paint-timing/), and
-the recent [`nextHopProtocol`](https://www.w3.org/TR/resource-timing-2/#dom-
+Since this API was implemented in 2009, all of the useful information it reports can be
+found in standardized APIs such as:
+
+* [Navigation Timing 2](https://www.w3.org/TR
+/navigation-timing-2/)
+* [Paint Timing](https://www.w3.org/TR/paint-timing/)
+* The [`nextHopProtocol`](https://www.w3.org/TR/resource-timing-2/#dom-
 performanceresourcetiming-nexthopprotocol) addition to Navigation Timing 2 and
 [Resource Timing 2](https://www.w3.org/TR/resource-timing-2/).
 
@@ -54,7 +57,7 @@ of calling `chrome.loadTimes()` on [www.google.com](https://www.google.com):
 
 ## Standardized replacements
 
-Each of the above values can now be found using standardized APIs. The following
+You can now find each of the above values using standardized APIs. The following
 table matches each value to its standardized API, and the sections below show
 code examples of how to get each value in the old API with modern equivalents.
 
@@ -64,7 +67,7 @@ code examples of how to get each value in the old API with modern equivalents.
     <th>Standardized API replacement</th>
   </tr>
   <tr>
-    <td>requestTime</td>
+    <td><code>requestTime</code></td>
     <td>
       <a href="https://www.w3.org/TR/navigation-timing-2/">
         Navigation Timing 2
@@ -72,7 +75,7 @@ code examples of how to get each value in the old API with modern equivalents.
     </td>
   </tr>
   <tr>
-    <td>startLoadTime</td>
+    <td><code>startLoadTime</code></td>
     <td>
       <a href="https://www.w3.org/TR/navigation-timing-2/">
         Navigation Timing 2
@@ -80,7 +83,7 @@ code examples of how to get each value in the old API with modern equivalents.
     </td>
   </tr>
   <tr>
-    <td>commitLoadTime</td>
+    <td><code>commitLoadTime</code></td>
     <td>
       <a href="https://www.w3.org/TR/navigation-timing-2/">
         Navigation Timing 2
@@ -88,7 +91,7 @@ code examples of how to get each value in the old API with modern equivalents.
   </td>
   </tr>
   <tr>
-    <td>finishDocumentLoadTime</td>
+    <td><code>finishDocumentLoadTime</code></td>
     <td>
       <a href="https://www.w3.org/TR/navigation-timing-2/">
         Navigation Timing 2
@@ -96,7 +99,7 @@ code examples of how to get each value in the old API with modern equivalents.
   </td>
   </tr>
   <tr>
-    <td>finishLoadTime</td>
+    <td><code>finishLoadTime</code></td>
     <td>
       <a href="https://www.w3.org/TR/navigation-timing-2/">
         Navigation Timing 2
@@ -104,7 +107,7 @@ code examples of how to get each value in the old API with modern equivalents.
   </td>
   </tr>
   <tr>
-    <td>firstPaintTime</td>
+    <td><code>firstPaintTime</code></td>
     <td>
       <a href="https://www.w3.org/TR/paint-timing/">
         Paint Timing
@@ -112,11 +115,11 @@ code examples of how to get each value in the old API with modern equivalents.
   </td>
   </tr>
   <tr>
-    <td>firstPaintAfterLoadTime</td>
+    <td><code>firstPaintAfterLoadTime</code></td>
     <td>N/A</td>
   </tr>
   <tr>
-    <td>navigationType</td>
+    <td><code>navigationType</code></td>
     <td>
       <a href="https://www.w3.org/TR/navigation-timing-2/">
         Navigation Timing 2
@@ -124,7 +127,7 @@ code examples of how to get each value in the old API with modern equivalents.
   </td>
   </tr>
   <tr>
-    <td>wasFetchedViaSpdy</td>
+    <td><code>wasFetchedViaSpdy</code></td>
     <td>
       <a href="https://www.w3.org/TR/navigation-timing-2/">
         Navigation Timing 2
@@ -132,7 +135,7 @@ code examples of how to get each value in the old API with modern equivalents.
   </td>
   </tr>
   <tr>
-    <td>wasNpnNegotiated</td>
+    <td><code>wasNpnNegotiated</code></td>
     <td>
       <a href="https://www.w3.org/TR/navigation-timing-2/">
         Navigation Timing 2
@@ -140,7 +143,7 @@ code examples of how to get each value in the old API with modern equivalents.
   </td>
   </tr>
   <tr>
-    <td>npnNegotiatedProtocol</td>
+    <td><code>npnNegotiatedProtocol</code></td>
     <td>
       <a href="https://www.w3.org/TR/navigation-timing-2/">
         Navigation Timing 2
@@ -148,11 +151,11 @@ code examples of how to get each value in the old API with modern equivalents.
     </td>
   </tr>
   <tr>
-    <td>wasAlternateProtocolAvailable</td>
+    <td><code>wasAlternateProtocolAvailable</code></td>
     <td>N/A</td>
   </tr>
   <tr>
-    <td>connectionInfo</td>
+    <td><code>connectionInfo</code></td>
     <td>
       <a href="https://www.w3.org/TR/navigation-timing-2/">
         Navigation Timing 2
@@ -168,7 +171,7 @@ code examples of how to get each value in the old API with modern equivalents.
 </aside>
 
 The code examples below return equivalent values to those returned by
-`chrome.loadTimes()`. However, for new code these code example are not
+`chrome.loadTimes()`. However, for new code these code examples are not
 recommended. The reason is `chrome.loadTimes()` gives times values in [epoch
 time](https://en.wikipedia.org/wiki/Unix_time) in seconds whereas new performance APIs
 typically report values in milliseconds relative to a page's [time origin](https://www.w3.org/TR
@@ -208,7 +211,8 @@ function startLoadTime() {
     return (ntEntry.startTime + performance.timeOrigin) / 1000;
   } else {
     return performance.timing.navigationStart / 1000;
-  }}
+  }
+}
 ```
 
 ### `commitLoadTime`
