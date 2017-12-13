@@ -5,7 +5,7 @@ description: A round up of the deprecations and removals in Chrome 64 to help yo
 {# wf_updated_on: 2017-12-14 #}
 {# wf_published_on: 2017-12-14 #}
 {# wf_tags: deprecations,removals,chrome64 #}
-{# wf_blink_components: Blink>PerformanceAPIs,Blink>DOM>ShadowDOM,Blink>CSS #}
+{# wf_blink_components: Blink>PerformanceAPIs,Blink>DOM,Blink>CSS #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 64 to help you plan. In this version, performance API changes, removal of support for multiple shadow roots, and removal of a WebKit API. #}
 
@@ -63,7 +63,7 @@ It's now being removed because it's not on a standards track.
 Since there is currently no standards-based alternative, developers would need
 to create their own. There is at least [one example on
 StackOverflow](https://stackoverflow.com/questions/2952667/find-all-css-rules-
-that-apply-to-an-element).
+that-apply-to-an-element). One of the developers for this change has also created a [polyfill](https://gist.github.com/darrnshn/addeabe2575177342cc6242e20ecadbd).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/-_Al0I5Rm9Q/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/features/4606972603138048) &#124;
