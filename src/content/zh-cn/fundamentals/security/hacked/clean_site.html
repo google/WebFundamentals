@@ -1,0 +1,198 @@
+<html devsite><head>
+  <title>清理并维护网站</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>您需要：</h3>
+
+<ul>
+  <li>拥有您网站服务器（网络、数据库、文件）的外壳/终端管理员访问权限</li>
+  <li>关于外壳/终端命令的知识</li>
+  <li>懂代码（如 PHP 或 JavaScript）</li>
+  <li>拥有足够的存储空间来创建网站的备份（包括文件、数据库、映像等）</li>
+</ul>
+    <div class="video-wrapper">
+      <iframe class="devsite-embedded-youtube-video" data-video-id="OAvydrgDa6Q" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+
+<h3>后续操作：</h3>
+
+<p>此环节包括以下几步操作：</p>
+
+<ul>
+  <li>如果您认为黑客的意图是为了获取用户的个人信息（例如通过网上诱骗网页），那么您应到哪里寻找更多资源</li>
+  <li>（可选）使用 Search Console 中的<a href="https://www.google.com/webmasters/tools/removals">移除网址</a>功能，更快速地移除由黑客创建的全新、有害且用户可见的网址，以避免它们出现在 Google 搜索结果中</li>
+  <li>（可选）使用 Search Console 中的 <a href="https://www.support.google.com/webmasters/answer/1352276">Google 抓取方式</a>功能，让 Google 更快速地处理您希望在 Google 搜索结果中出现的正常网页（也就是新网页或刚刚更新过的网页）</li>
+  <li>安装最新、最安全版本的软件</li>
+  <li>移除可能会导致您的网站在日后出现更严重漏洞的不必要或不使用的应用/插件</li>
+  <li>恢复正常内容并清除黑客的内容</li>
+  <li>修复被黑客利用的根源漏洞</li>
+  <li>更改所有密码</li>
+  <li>制定保障网站安全的计划</li>
+</ul>
+
+<h4>1. 在处理机密信息损失（例如因网上诱骗网页而泄露机密信息）时，找到支持资源</h4>
+
+<p>如果黑客从您的网站中获取了机密用户信息（例如通过网上诱骗攻击），那么您应该在开始清理网站或删除任何文件之前，先考虑商业、规章或法律方面的责任。对于网上诱骗，<a href="https://antiphishing.org">antiphishing.org</a> 提供了实用的资源，例如这篇文档：<a href="https://docs.apwg.org/reports/APWG_WTD_HackedWebsite.pdf">如果您的网站遭到了网上诱骗者的攻击，您应该怎么做</a> (What to do if you your site has been hacked by phishers)。</p>
+
+<h4>2. 考虑更快速地移除由黑客创建的新网址</h4>
+
+<p>如果黑客创建了全新且用户可见的网址，那么您可以使用 Search Console 中的<a href="https://www.google.com/webmasters/tools/removals">移除网址</a>功能，更快速地从 Google 搜索结果中移除相关网页。您完全可以视需要执行此步骤；如果您直接删除相关网页，然后将您的服务器配置为返回 <a href="https://www.support.google.com/webmasters/answer/40132">404 状态代码</a>，这些网页在经过一段时间后便会自然地从 Google 的索引中消失。</p>
+
+<ul>
+  <li>是否要使用“网址移除”功能可能取决于由黑客创建的有害新网页的数量（在“移除网址”操作中加入过多的网页可能会很麻烦），以及这些网页可能会对用户造成的损害。此外，要确保通过“网址移除”功能提交的网页再也不会出现在搜索结果中，请务必针对有害/已移除的网址将这些网页配置为返回 404（未找到文件）响应。</li>
+  <li>请勿使用此工具请求移除原本正常但只是遭到黑客破坏的网页，因为您仍希望这些网页在经过清理后会出现在搜索结果中。
+    <em>“网址移除”功能仅适用于您希望再也不会出现搜索结果中的网页。</em></li>
+</ul>
+
+<h4>3. 考虑加快 Google 对您的正常网页的处理速度</h4>
+
+<p>如果您新建或更新了正常网页，则可使用 Search Console 中的 <a href="https://www.support.google.com/webmasters/answer/1352276">Google 抓取方式</a>功能将这些网页提交给 Google 的索引。您完全可以视需要执行此步骤；如果您跳过此步骤，Google 可能要过一段时间才会抓取并处理您新建或修改的网页。</p>
+
+<h4>4. 开始清理您的服务器</h4>
+
+<p>现在，请根据您在<a href="hacked_with_spam">评估受破坏程度</a>和<a href="vulnerability">找出漏洞</a>步骤中记录的信息，开始清理您的网站。您在此步骤中应执行的具体操作取决于您现有的备份类型。</p>
+
+<ul>
+  <li>正常且最新的备份</li>
+  <li>正常但已过期的备份</li>
+  <li>无备份</li>
+</ul>
+
+<p>首先，检查并确认该备份是在您的网站被黑客入侵<strong>之前</strong>创建的。</p>
+
+<ul>
+  <li><strong>正常且最新的备份</strong>
+
+    <ol>
+      <li>恢复您的备份。</li>
+      <li>安装所有可用的软件升级、更新或补丁。这包括操作系统软件（如果您对服务器拥有控制权）以及所有应用（例如内容管理系统、电子商务平台、插件、模板等）。</li>
+      <li>考虑是否可在您的服务器上清除该网站不再使用的软件（例如小部件、插件或应用）。</li>
+      <li>修复漏洞。</li>
+      <li>确保<a href="hacked_with_spam">评估受破坏程度</a>步骤中发现的所有问题均已解决。</li>
+      <li>再次修改该网站的所有关联帐号（例如 FTP 登录帐号、数据库登录帐号、系统管理员帐号和 CMS 帐号）的密码。在基于 Unix 的系统上：
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>正常但已过期的备份</strong>
+    <ol>
+      <li>为当前网站制作磁盘映像（即使该网站仍处于受感染状态）。保留该副本只是为了安全起见。将该副本标记为“infected”，以便与其他副本区分开来。在基于 Unix 的系统上，可使用以下命令制作磁盘映像：
+        <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9
+  &gt; /mirror/full-backup-20120125-infected.gz</pre>
+      </li>
+      <li>为您的服务器（包括图片和媒体文件）制作备份文件系统副本。如果您有数据库，也请同时备份数据库。
+        <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/ $ mysqldump -u root
+  -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+      </li>
+      <li>在您的服务器上恢复正常但已过期的备份。</li>
+      <li>考虑是否可在您的服务器上清除该网站不再使用的软件（例如小部件、插件或应用）。</li>
+      <li>升级所有软件（包括操作系统，如果您对服务器拥有控制权的话）以及所有软件应用（例如内容管理系统、电子商务平台、插件、模板等）。请务必检查并安装可用的安全更新和补丁。</li>
+      <li>修复漏洞。</li>
+      <li>针对正常备份和当前受感染副本，以手动或自动方式对该网站执行 <code>diff</code> 命令。
+        <pre>
+$diff -qr www/ backups/full-backup-20120124/</pre>
+      </li>
+      <li>上传您要从受感染副本中保留到升级后服务器上的所有正常的新内容。
+        <pre>
+$rsync -avz /backups/full-backup-20120124/www/clean-file.jpg /www/</pre>
+      </li>
+      <li>确保<a href="hacked_with_spam">评估受破坏程度</a>步骤中列出的所有网址均已更正。</li>
+      <li>再次修改该网站的所有关联帐号（例如 FTP 登录帐号、数据库登录帐号、系统管理员帐号和 CMS 帐号）的密码。在基于 Unix 的系统上：
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>无备份</strong>
+    <ol>
+      <li>为您的网站制作两个备份（即使该网站仍处于受感染状态）。多制作一个备份既有助于恢复意外删除的内容，也可让您在操作失误的情况下进行还原并重试。我们建议您将这两个备份都标为“infected”，以备日后参考。
+        <ul>
+          <li>其中一个备份应是您网站的磁盘映像（“克隆版本”）。这种格式可进一步简化内容恢复操作。建议您妥善保存该磁盘映像以备急用。在基于 Unix 的系统上，可使用以下命令制作磁盘映像：
+            <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9 &gt;
+  /mirror/full-backup-20120125-infected.gz</pre>
+          </li>
+          <li>另一个备份应是您服务器（包括图片和媒体文件）的文件系统副本。如果您有数据库，也请同时备份数据库。
+            <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/</pre>
+             
+
+            <pre>
+$mysqldump -u root -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+          </li>
+          <li>如果您没有磁盘映像，则请制作两个数据库备份和两个文件系统备份。</li>
+        </ul>
+      </li>
+      <li>在新的备份文件系统副本（而非服务器本身）上清理该网站的内容
+        <ol>
+          <li>如果您在之前的调查中发现了过于宽松的文件权限，请进行更正。请务必在备份副本（而非服务器本身）上执行此操作。</li>
+          <li>也是在备份副本上，清理与<a href="hacked_with_spam">评估受破坏程度</a>步骤中发现的被入侵网址对应的所有文件。这些文件可能是服务器配置文件、JavaScript、HTML、PHP。</li>
+          <li>另外，请务必针对由黑客创建的新文件返回 404 响应（无论您是否已在 Search Console 中使用“网址移除”工具提交了这些文件）。</li>
+          <li>修复被破解的密码，或您的代码中可能存在的漏洞。使用输入内容验证库或安全审核可能会有所帮助。</li>
+          <li>如果您的网站有数据库，请开始在备份中清理被黑客修改过的记录。当您觉得差不多就要大功告成时，请对更多记录执行一次完好性检查，以确保一切正常。</li>
+          <li>再次修改该网站的所有关联帐号（例如 FTP 登录帐号、数据库登录帐号、系统管理员帐号和 CMS 帐号）的密码。在基于 Unix 的系统上：
+            <pre>
+$passwd admin1</pre>
+          </li>
+          <li>这时，您网站的曾受到感染的备份副本应该就只包含正常数据了。请保存好这一正常副本，然后执行第 5 步操作。</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h4>5. 清除不必要的软件</h4>
+
+<p>考虑是否可在您的服务器上清除该网站不再使用的软件（例如小部件、插件或应用）。这样可提高安全性并简化以后的维护工作。</p>
+
+<h4>6. 清理所有服务器</h4>
+
+<ol>
+  <li>请执行全新安装，而不只是升级。倘若只是进行升级，某些旧版文件便可能会遗留下来。如果服务器上有残留的受感染文件，则很可能会再次遭到黑客入侵。
+    <ul>
+      <li>全新安装应包括安装操作系统（如果您对服务器拥有控制权）以及所有软件应用（例如内容管理系统、电子商务平台、插件、模板等）。请务必检查是否有可用的安全更新和补丁。</li>
+    </ul>
+  </li>
+  <li>将正常的备份文件系统副本中的正常内容传输到新安装的服务器中。您应只上传/恢复已知为正常的文件/数据库。请务必保留合适的文件权限，且不要覆盖新安装的系统文件。</li>
+  <li>最后一次修改该网站的所有关联帐号（例如 FTP 登录帐号、数据库登录帐号、系统管理员帐号和 CMS 帐号）的密码。在基于 Unix 的系统上：
+    <pre>
+$passwd admin1</pre>
+  </li>
+</ol>
+
+<h4>7. 制定长期维护计划</h4>
+
+<p>网络上有很多介绍如何对网站实施可靠维护的实用资源，例如 StopBadware 的<a href="https://www.stopbadware.org/prevent-badware-basics">阻止有害软件：基础知识</a> (Preventing badware: basics)。此外，我们强烈建议您执行以下操作：</p>
+
+<ul>
+  <li>定期对您的网站进行自动备份。</li>
+  <li>注意及时更新软件。</li>
+  <li>在您的服务器上安装任何应用、插件、第三方软件等内容之前，先了解一下相关的安全做法。即使只有一款软件应用中存在安全漏洞，也可能会影响您整个网站的安全性。</li>
+  <li>强制创建安全系数高的密码。</li>
+  <li>确保所有用来登录计算机的设备都是安全的（更新的操作系统和浏览器）。</li>
+</ul>
+
+<h4>8. 仔细检查以确认已完成清理</h4>
+
+<p>请确保您对以下问题都能做出肯定的回答：</p>
+
+<ul>
+  <li>如果黑客获得了用户的个人信息，我是否已采取了适当的应对措施？</li>
+  <li>我的网站上运行的软件是否为最新、最安全的版本？</li>
+  <li>我是否已移除所有可能会导致我的网站在日后出现更严重漏洞的不必要或不使用的应用/插件？</li>
+  <li>我是否恢复了自己的内容并清除了黑客的内容？</li>
+  <li>我是否修复了导致我的网站被黑客入侵的根源漏洞？</li>
+  <li>我是否制定了保障网站安全的计划？</li>
+</ul>
+
+<h4>9. 使您的网站重新上线</h4>
+<h2>下一步</h2>
+<p>快要大功告成了！此流程中的最后一步是<a href="request_review">提交审核请求</a>。</p>
+
+</body></html>

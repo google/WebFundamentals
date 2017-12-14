@@ -1,0 +1,147 @@
+<html devsite><head>
+  <title>修正日文關鍵字植入問題</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="DGV7xNragN9HZ8y5MSlU2fxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmoailNK2BnFK9vo6D7ZUkV7Qcmve4gLC1dniNzb2FV146rz+M3RfOj6o9TWwqB6UaE="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+
+<p>本指南旨在協助您處理所謂的日文關鍵字植入問題。顧名思義，遭到入侵的網站會出現自動產生的日文字。<a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">各大內容管理系統</a> (CMS) 的使用者皆可參考本指南。不過，即使您並未使用 CMS，本指南仍提供了十分實用的資訊。</p>
+
+<p><strong>注意：</strong>不確定您的網站是否遭到入侵嗎？首先請詳閱我們的<a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">如何檢查網站是否遭到入侵</a>指南。</p>
+
+<aside class="note">我們希望確定本指南確實對您有所幫助。歡迎<a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">提供意見</a>，協助我們讓指南內容更臻完善！</aside>
+
+<h2>目錄</h2>
+
+<ul>
+  <li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">步驟 1：判別這類入侵行為</a></li>
+  <li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">步驟 2：修正入侵問題</a></li>
+  <li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">步驟 3：其他資源</a></li>
+  <li><a href="/web/fundamentals/hacked/FAQs_for_hacked_sites">網站遭到入侵的常見問題</a></li>
+</ul>
+
+<a name="identifying"></a>
+  <h2>判別這類入侵行為</h2>
+
+<p>日文關鍵字植入通常會以隨機產生目錄名稱 (例如 http://example.com/ltjmnjp/341.html) 的方式在您的網站上建立新網頁，其中充斥自動產生的日文字。這些網頁會使用聯盟連結指向販售冒牌商品的商店，並顯示在 Google 搜尋服務中，藉此達到營利目的。這類網頁的外觀可能如下：</p>
+
+<img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExamplePage.png" style="padding:0px 25px">
+
+<p>從事這類入侵行為的駭客通常會在 Search Console 中將自己新增為資源擁有者，以便操縱您網站的設定 (例如指定地理區域或 Sitemap)，讓利潤更可觀。如果系統通知您，有不明人士在 <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a> 中驗證了您的網站，很可能是您的網站遭到入侵。</p>
+
+<p>首先請在 Search Console 中查看<a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">安全性問題工具</a>，看看 Google 是否在您的網站上找到任何這類遭到入侵的網頁。開啟 Google 搜尋視窗並輸入 <code class="notranslate l10n-notranslate">site:[your site root URL]</code>，有時也能找出這類網頁。您網站上已經由 Google 建立索引的網頁都會顯示，包括遭到入侵的網頁。請瀏覽搜尋結果中的一些網頁，看看有無任何不尋常的網址。如果 Google 搜尋未顯示任何遭到入侵的內容，請使用其他搜尋引擎搜尋相同的字詞。其他搜尋引擎可能會顯示 Google 已從索引中移除的遭入侵內容。這類搜尋結果的外觀可能如下。</p>
+
+<img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<p>請注意，這裡的搜尋結果包含許多不是由網站擁有者建立的網頁。如果您仔細觀察說明，就會看到這類入侵行為所建立的日文關鍵字。</p>
+
+<p>當您造訪遭到入侵的網頁時，可能會看到表示網頁不存在的訊息 (例如 404 錯誤訊息)。請別上當！駭客會讓您以為遭到入侵的網頁已移除或已修正，製造網站沒有問題的假象。這種做法稱為<a href="https://support.google.com/webmasters/answer/66355" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqausFnRYfcPdJtT7j/7LC0qWg==">偽裝</a>內容。請在 Search Console 的 <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Google 模擬器</a>工具中輸入您網站的網址，查看有無偽裝內容。Google 模擬器工具可讓您查看基本的隱藏內容。</p>
+
+<a name="fixing"></a>
+  <h2>修正入侵問題</h2>
+<p>首先，請為所有要移除的檔案建立離線複本，再移除檔案，以免日後需要還原檔案。您甚至可以先備份整個網站，再開始執行清理程序。如要這麼做，請將位於您伺服器上的所有檔案儲存到其他位置，或是搜尋您的 CMS 專用的最佳備份做法。如果您是 CMS 使用者，必須一併備份資料庫。</p>
+
+  <h3>將新建立的帳戶從 Search Console 中移除</h3>
+<p>如有您不認識的新擁有者加入您的 Search Console 帳戶，請儘快撤銷其存取權。如要查看您網站上有哪些經過驗證的使用者，請前往 <a href="https://www.google.com/webmasters/verification" l10n-encrypted-href="w+/AxGxgV5VhCAsoJueEswSJUyK0ahq5p2Xo+yKO2LBRkz9eV7ohMxFBbvqnrm26jlSneBdGNunDHPmxSA8Tjw==">Search Console 驗證頁面</a>，針對您的網站按一下 [驗證詳細資料] 即可查看所有經過驗證的使用者。</p>
+
+<p>如要將擁有者從 Search Console 中移除，請詳閱<a href="https://support.google.com/webmasters/answer/2453966" l10n-encrypted-href="h8KunduxzUQTzb6KfNx3KV8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqauvOHSfE0UitWWNywfgF9JeA==">管理使用者、擁有者和權限</a>這篇說明中心文章的「移除擁有者」一節。您必須移除相關聯的驗證憑證，這通常是位於您網站根目錄的 HTML 檔案，或是動態產生的 .htaccess 檔案 (模擬 HTML 檔案)。</p>
+
+<p>如果您在網站上找不到 HTML 驗證憑證，請查看 .htaccess 檔案中的重新寫入規則。
+  外觀大致如下：</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  RewriteEngine On
+  RewriteRule ^google(.*)\.html$ dir/file.php?google=$1 [L] </pre>
+
+<p><b>注意：</b>一般來說，查看您是否成功移除了動態產生的驗證憑證時，您可以瀏覽模擬的驗證憑證檔案，例如 <code class="notranslate l10n-notranslate">wwww.example.com/google[random number and letters].html</code>。舉例來說，如果您的網站是 www.brandonsbaseballcards.com，請嘗試前往 www.brandonsbaseballcards.com/google1234.html。如果該網頁傳回 HTTP 404，表示動態產生的驗證憑證應已修正。</p>
+
+<p>如要將動態產生的驗證憑證從 .htaccess 檔案中移除，請按照以下步驟操作。
+
+  </p><h3>檢查 .htaccess 檔案 (2 個步驟)</h3>
+<p>除了使用 .htaccess 檔案建立動態產生的驗證憑證以外，駭客也經常使用 .htaccess 規則將使用者重新導向或建立充斥垃圾內容的網頁。除非您有自訂 .htaccess 規則，否則建議您替換 .htaccess，改用全新的複本。</p>
+
+  <strong>步驟 1</strong>
+<p>在您的網站上找出 .htaccess 檔案。如果您不確定所在位置，且您使用的是 WordPress、Joomla 或 Drupal 這類 CMS，請在搜尋引擎中使用「.htaccess 檔案位置」搭配您的 CMS 名稱進行搜尋。.htaccess 檔案數量可能不只一個 (因網站而異)。請以清單記錄所有 .htaccess 檔案位置。</p>
+
+  <strong>步驟 2</strong>
+<p>使用沒有惡意內容或預設版本的 .htaccess 檔案取代所有 .htaccess 檔案。一般來說，如要尋找預設版本的 .htaccess 檔案，您可以使用「預設 .htaccess 檔案」搭配您的 CMS 名稱進行搜尋。如果您的網站有多個 .htaccess 檔案，請針對各個檔案 找出沒有惡意內容的版本，再執行取代作業。</p>
+
+<p><strong>注意：</strong>.htaccess 經常是「隱藏的檔案」。搜尋時請務必讓系統顯示所有隱藏的檔案。</p>
+
+  <h3>移除所有惡意檔案和指令碼 (4 個步驟)</h3>
+<p>判別惡意檔案不太容易，可能需要數小時。請耐心檢查檔案。如果您尚未備份網站上的檔案，這時可以順便進行備份。請透過 Google 搜尋「備份網站」和您的 CMS 名稱，尋找相關的操作說明。</p>
+
+  <strong>步驟 1</strong>
+<p>如果您使用 CMS，請重新安裝預設 CMS 版本內含的所有核心 (預設) 檔案，以確保這些檔案完全沒有遭到入侵的內容。您可以透過 Google 搜尋「重新安裝」和您的 CMS 名稱，尋找重新安裝程序的相關操作說明。如果您有任何外掛程式、模組、擴充功能或主題，別忘了一併重新安裝這些項目。</p>
+
+<p>如果您直接編輯過檔案，重新安裝核心檔案會使您失去所有自訂設定。請務必先為資料庫和所有檔案建立備份，再重新安裝。</p>
+
+  <strong>步驟 2</strong>
+<p>駭客會經常修改您的 Sitemap 或新增 Sitemap，讓網址更快編入索引。如果您先前建立了 Sitemap 檔案，請檢查檔案中有無任何惡意連結並予以移除。
+  如果網站上多出您不記得的任何 Sitemap 檔案，請詳加檢查。如果其中只含垃圾網址，請移除這類 Sitemap 檔案。</p>
+
+  <strong>步驟 3</strong>
+<p>尋找有無遺留任何惡意或遭到入侵的檔案。您可能在前兩個步驟已經移除了所有惡意檔案，但最好還是執行後續幾步，以免網站上殘留其他遭到入侵的檔案。</p>
+
+<p>請別誤以為您必須開啟每個 PHP 檔案並詳加檢視。首先請建立可疑的 PHP 檔案清單，列出您要調查的檔案。判別可疑的 PHP 檔案時，可以採用以下這些方法：</p>
+   <ul>
+    <li>由於您已重新載入 CMS 檔案，因此只需檢視不屬於預設 CMS 檔案或資料夾的檔案。這樣可以排除大多數的 PHP 檔案，只剩一些檔案需要檢視。</li>
+    <li>依上次修改日期排序您網站上的檔案，找出修改時間與您首次發現網站遭到入侵的時間相差不到幾個月的檔案。</li>
+    <li>依大小排序您網站上的檔案，找出所有特別大的檔案。</li>
+  </ul>
+
+<p><strong>注意：</strong>攻擊者常在下列檔案中植入指令碼：
+  index.php、wp-load.php、404.php 和 view.php。</p>
+
+  <strong>步驟 4</strong>
+<p>建立可疑的 PHP 檔案清單後，請檢查有無惡意檔案。如果您對 PHP 不熟悉，可能需要花費更多時間，不妨先溫習一些 <a href="https://php.net/docs.php">PHP 說明文件</a>。如果您是編寫程式碼的新手，建議您<a href="/web/fundamentals/security/hacked/support_team">尋求協助</a>。同時，您可以尋找一些有助於判別惡意檔案的基本模式。</p>
+
+<p>如果您使用 CMS，而且沒有直接編輯這些檔案的習慣，可以針對您伺服器上的檔案與 CMS 封裝的預設檔案清單 (以及任何外掛程式和主題) 進行比較，尋找多出的檔案，以及大小超過預設狀態的檔案。</p>
+
+<p>掃描您已找出的惡意檔案，找出經過模糊處理的程式碼區塊。這可能看起來像是雜亂的字母和數字組合。經過模糊處理的程式碼前面通常有 PHP 函式組合 (例如 base64_decode、rot13、eval、strrev、gzinflate)，不過有時甚至連這些函式也會經過模糊處理。這類程式碼區塊可能的外觀如下。有時這類程式碼會全部包進一長串文字，看起來比實際上更小：</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  $O_O0O_O0_0=urldecode("%6E1%7A%62%2F%6D%615%5C%76%740%6928%2D%70
+  %78%75%71%79%2A6%6C%72%6B%64%679%5F%65%68%63%73%77%6F4%2B%6637%6A");
+  $OO0_0OO0__=$O_O0O_O0_0{26}.$O_O0O_O0_0{6}.$O_O0O_O0_0{10}.$O_O0O_O0_0{30}</pre>
+
+  <h3>檢查網站是否沒有惡意內容</h3>
+<p>清理完遭到入侵的檔案後，請檢查您的一番苦心是否奏效。還記得您稍早找到了一些充斥胡言亂語的網頁嗎？請再次使用 Google 模擬器檢查這些網頁，看看是否仍然存在。如果 Google 模擬器傳回「找不到」回應，表示您的網站應該沒問題了！</p>
+
+<p>您也可以按照<a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">網站遭入侵疑難排解工具</a>中的步驟檢查您的網站上是否仍有遭到入侵的內容。</p>
+
+  <h3>如何避免再次遭到入侵？</h3>
+<p>修正網站的安全性漏洞是修正網站問題的最後一步，也是重要的一步。<a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html" l10n-encrypted-href="HaoVnhrvp1ipt6jkrRLULkQg8+fqoPqLZVbZwHZzVSGEbm/ALd8tKcGkbG0DXJPH9mJYV+4aaiZf3CtTQGk0SoAD8yPFagwfQx1QvJaFoc6lviyJWslHwkLxMOd1ngrY">最近的研究</a>發現曾遭入侵的網站中有 12% 會在 30 天內再次遭到入侵。因此，確切瞭解網站遭到入侵的方式實在很有幫助。請詳閱<a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">垃圾內容發佈者入侵網站的常見方式</a>指南，針對安全性漏洞展開調查。不過，如果您無法找出網站遭到入侵的方式，請參考以下檢查清單，瞭解可有效減少  網站安全性漏洞的一些做法：</p>
+  <ul>
+    <li><strong>定期掃描電腦：</strong>使用信任的病毒掃描工具檢查有無病毒或安全性漏洞。</li>
+    <li><strong>定期變更關鍵字：</strong>定期變更您所有網站帳戶 (例如代管服務供應商、FTP 和 CMS) 的密碼可防止他人在未經授權的情況下存取您的網站。請務必為每個帳戶建立非重複的高強度密碼。</li>
+    <li><strong>使用<a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">雙重驗證 (2FA)</a>：</strong>建議您為所有要求您登入的服務啟用 2FA。這樣一來，即使駭客成功竊取您的密碼，仍然不易冒用您的身分登入。</li>
+    <li><strong>定期更新 CMS、外掛程式、擴充功能和模組：</strong>希望您已經完成這個步驟。許多網站正是因為執行的軟體版本過舊而遭到入侵。部分 CMS 支援自動更新功能。</li>
+    <li><strong>考慮訂閱安全性服務，協助您監控網站：</strong>有許多優質服務可協助您監控網站，且費用不高。建議您註冊這類服務，確保您的網站安全無虞。</li>
+  </ul>
+
+
+<a name="resources"></a>
+  <h2>其他資源</h2>
+<p>如果您仍然無法順利修正網站問題，還有另一些資源可能對您有所幫助。</p>
+
+<p>這些工具會掃描您的網站，有助於發現有問題的內容。除了 VirusTotal 以外，Google 並未針對這些工具提供支援。</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>、<a href="https://aw-snap.info/">Aw-snap.info</a>、<a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>、<a href="https://www.quttera.com/">Quttera</a>：這些工具都能為您掃描網站，協助找出問題內容。但提醒您，這些掃描工具不一定能判別所有類型的問題內容。</p>
+
+<p>Google 另外提供了以下資源，可能對您有所幫助：</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">
+Google 網站管理員說明論壇</a></li>
+<li><a href="/web/fundamentals/security/hacked/">網站遭到入侵時適用的 Google 網站管理員說明</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google 安全瀏覽</a></li>
+</ul>
+
+
+
+
+
+
+</body></html>

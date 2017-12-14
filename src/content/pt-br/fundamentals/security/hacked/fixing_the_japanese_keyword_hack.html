@@ -1,0 +1,152 @@
+<html devsite><head>
+  <title>Correção da invasão de palavras-chave japonesas</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="DGV7xNragN9HZ8y5MSlU2fxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmoailNK2BnFK9vo6D7ZUkV7Qcmve4gLC1dniNzb2FV146rz+M3RfOj6o9TWwqB6UaE="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+
+<p>Este guia foi criado especificamente para um tipo de invasão que cria texto em japonês gerado automaticamente no seu site, a qual chamamos de invasão de palavras-chave japonesas. Este guia foi projetado para usuários dos <a href="https://pt.wikipedia.org/wiki/Sistema_de_gerenciamento_de_conte%C3%BAdo" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">Sistemas de gerenciamento de conteúdo mais conhecidos</a> (CMS, na sigla em inglês), mas será útil mesmo se você não usar um CMS.</p>
+
+<p><strong>Observação:</strong> você não tem certeza se o site foi invadido? Comece com a leitura do guia sobre <a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">como verificar se o site foi invadido</a>.</p>
+
+<aside class="note">Esperamos que este guia seja realmente útil para você. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">Deixe seu feedback</a> para nos ajudar a melhorar!</aside>
+
+<h2>Índice</h2>
+
+<ul>
+  <li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Etapa 1: como identificar esse tipo de invasão</a></li>
+  <li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Etapa 2: como corrigir a invasão</a></li>
+  <li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Etapa 3: outros recursos</a></li>
+  <li><a href="/web/fundamentals/hacked/FAQs_for_hacked_sites">Perguntas frequentes sobre sites invadidos</a></li>
+</ul>
+
+<a name="identifying"></a>
+  <h2>Como identificar esse tipo de invasão</h2>
+
+<p>A invasão de palavras-chave japonesas normalmente cria novas páginas com texto em japonês gerado automaticamente no site em nomes de diretórios gerados aleatoriamente (por exemplo, http://example.com/ltjmnjp/341.html). Essas páginas geram receita com links afiliados para lojas que vendem mercadorias de marcas falsas e são exibidas na Pesquisa Google. Veja um exemplo de uma dessas páginas:</p>
+
+<img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExamplePage.png" style="padding:0px 25px">
+
+<p>Neste tipo de invasão, o hacker normalmente adiciona a si mesmo como proprietário no Search Console para aumentar os lucros, manipulando as configurações do site, como a segmentação geográfica e sitemaps. Se você recebeu uma notificação de que alguém desconhecido verificou seu site no <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a>, há uma grande possibilidade de que ele tenha sido invadido.</p>
+
+<p>Comece pela verificação da <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Ferramenta de problemas de segurança</a> no Search Console para ver se o Google descobriu alguma dessas páginas invadidas no site. Também é possível descobrir páginas como essa ao abrir a Pesquisa Google e pesquisar <code class="notranslate l10n-notranslate">site:[your site root URL]</code>. Isso mostrará as páginas do seu site que o Google indexou, incluindo as páginas invadidas. Confira algumas páginas dos resultados da pesquisa para ver se você consegue identificar URLs incomuns. Caso não encontre conteúdo invadido na Pesquisa Google, use os mesmos termos de pesquisa em um mecanismo de pesquisa diferente. Outros mecanismos de pesquisa podem mostrar conteúdos invadidos que o Google removeu do índice. Veja abaixo um exemplo disso.</p>
+
+<img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<p>Os resultados da pesquisa contêm várias páginas que não foram criadas pelo proprietário do site. Se você ler as descrições com atenção, verá exemplos do texto em japonês criados por essa invasão.</p>
+
+<p>Ao visitar uma página invadida, talvez encontre uma mensagem informando que a página não existe (por exemplo, um erro 404). Não se deixe enganar! Os hackers tentarão fazer com que você acredite que as páginas invadidas saíram do ar ou foram corrigidas.
+  Eles fazem isso com <a href="https://support.google.com/webmasters/answer/66355" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqausFnRYfcPdJtT7j/7LC0qWg==">técnicas de cloaking</a> de conteúdo. Verifique se há técnicas de cloaking inserindo os URLs do site na ferramenta <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Fetch as Google</a> do Search Console.
+  Com a ferramenta Fetch as Google, você pode ver o conteúdo escondido subjacente.</p>
+
+<a name="fixing"></a>
+  <h2>Correção da invasão</h2>
+<p>Faça uma cópia off-line dos arquivos antes de removê-los, caso precise restaurá-los mais tarde. Ou, então, faça backup do site inteiro antes de iniciar o processo de limpeza. É possível fazer isso salvando todos os arquivos que estão no seu servidor para um local fora dele ou procurando as melhores opções de backup para seu CMS específico. Se você usar um CMS, também será necessário fazer o backup do banco de dados.</p>
+
+  <h3>Remover as novas contas criadas no Search Console</h3>
+<p>Se um novo proprietário que você não reconhece tiver sido adicionado à sua conta do Search Console, revogue o acesso dele o mais rápido possível. É possível consultar quais usuários estão verificados para o site na <a href="https://www.google.com/webmasters/verification" l10n-encrypted-href="w+/AxGxgV5VhCAsoJueEswSJUyK0ahq5p2Xo+yKO2LBRkz9eV7ohMxFBbvqnrm26jlSneBdGNunDHPmxSA8Tjw==">página de verificação do Search Console</a>. Clique em "Detalhes da verificação" do site para visualizar todos os usuários verificados.</p>
+
+<p>Para remover um proprietário do Search Console, consulte a seção "Remover proprietário" na <a href="https://support.google.com/webmasters/answer/2453966" l10n-encrypted-href="h8KunduxzUQTzb6KfNx3KV8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqauvOHSfE0UitWWNywfgF9JeA==">Central de Ajuda sobre gerenciamento de usuários, proprietários e permissões</a>.
+  Você precisará remover o token de verificação associado que normalmente é um arquivo HTML na raiz do site ou um arquivo .htaccess gerado dinamicamente imitando um arquivo HTML.</p>
+
+<p>Se você não conseguir encontrar um token de verificação HTML no site, verifique se há uma regra de regravação no seu arquivo .htaccess. A regra de regravação será semelhante a este exemplo:</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  RewriteEngine On
+  RewriteRule ^google(.*)\.html$ dir/file.php?google=$1 [L] </pre>
+
+<p><b>Observação:</b> normalmente, é possível conferir se o token de verificação gerado dinamicamente foi removido acessando um arquivo de token de verificação simulado, como <code class="notranslate l10n-notranslate">wwww.example.com/google[random number and letters].html</code>.
+  Por exemplo, se o site for www.brandonsbaseballcards.com, navegue para www.brandonsbaseballcards.com/google1234.html.
+  Se essa página retornar um HTTP 404, o token de verificação gerado dinamicamente provavelmente estará corrigido.</p>
+
+<p>Para remover o token de verificação gerado dinamicamente do seu arquivo .htaccess, siga as etapas abaixo.
+
+  </p><h3>Verificar o arquivo .htaccess (2 etapas)</h3>
+<p>Além de usar um arquivo .htaccess para criar tokens de verificação gerados dinamicamente, os hackers costumam usar regras de .htaccess para redirecionar os usuários ou criar páginas de spam com conteúdo sem sentido. A menos que você tenha regras personalizadas de .htaccess, recomendamos trocar seu .htaccess por uma cópia completamente nova.</p>
+
+  <strong>Etapa 1</strong>
+<p>Localize o arquivo .htaccess no seu site. Se você não tiver certeza de onde encontrá-lo e estiver usando um CMS, como WordPress, Joomla ou Drupal, pesquise "local do arquivo .htaccess" em um mecanismo de pesquisa juntamente com o nome do CMS. Dependendo do site, você encontrará vários arquivos .htaccess. Faça uma lista com todos os locais dos arquivos .htaccess.</p>
+
+  <strong>Etapa 2</strong>
+<p>Substitua todos os arquivos .htaccess por uma versão limpa ou padrão. Normalmente, é possível encontrar uma versão padrão do arquivo .htaccess pesquisando por "arquivo .htaccess padrão" e o nome do CMS. Para sites com vários arquivos .htaccess, encontre a versão limpa de cada um deles e faça a substituição.</p>
+
+<p><strong>Observação:</strong> muitas vezes, o .htaccess é um "arquivo oculto". Ative a exibição de arquivos ocultos ao procurá-lo.</p>
+
+  <h3>Remover todos os arquivos e scripts maliciosos (4 etapas)</h3>
+<p>Identificar arquivos maliciosos pode ser complicado e demorar várias horas.
+  Leve o tempo que precisar para verificar os arquivos. Este é um bom momento para fazer backup dos arquivos do site, caso ainda não o tenha feito. Pesquise no Google "backup de site" e o nome do CMS para encontrar instruções sobre como fazer isso.</p>
+
+  <strong>Etapa 1</strong>
+<p>Se você usar um CMS, reinstale todos os arquivos principais (padrão) que vêm na distribuição padrão do CMS. Isso ajuda a garantir que esses arquivos não tenham conteúdo invadido. Pesquise no Google "reinstalar" e o nome do CMS para encontrar instruções sobre o processo de reinstalação. Se você tiver plug-ins, módulos, extensões ou temas, reinstale-os também.</p>
+
+<p>Reinstalar os arquivos principais pode fazer com que você perca as personalizações feitas, se os arquivos tiverem sido editados diretamente. Faça backup do seu banco de dados e de todos os arquivos antes da reinstalação.</p>
+
+  <strong>Etapa 2</strong>
+<p>Os hackers normalmente modificarão seu sitemap ou adicionarão novos sitemaps para fazer com que os URLs deles sejam indexados mais rapidamente. Se você já tiver um arquivo de sitemap, verifique se há links suspeitos nele e remova-os do sitemap. Se houver arquivos de sitemap que você não se lembra de ter adicionado ao seu site, verifique-os e remova-os, caso eles tenham somente URLs de spam.</p>
+
+  <strong>Etapa 3</strong>
+<p>Procure por outros arquivos maliciosos ou comprometidos. Todos os arquivos maliciosos podem já ter sido removidos nas duas etapas anteriores, mas é melhor seguir estas próximas etapas caso haja mais arquivos comprometidos no site.</p>
+
+<p>Não se preocupe achando que vai precisar abrir e examinar todos os arquivos PHP. Comece criando uma lista de arquivos PHP suspeitos que você quer investigar. Veja algumas maneiras de determinar quais arquivos PHP são suspeitos:</p>
+   <ul>
+    <li>Como você já atualizou os arquivos do CMS, verifique somente os arquivos que não fazem parte dos arquivos ou pastas padrão do CMS. Isso eliminará um grande número de arquivos PHP e deixará você com menos arquivos a serem examinados.</li>
+    <li>Classifique os arquivos do site pela data da última modificação. Procure arquivos que foram modificados nos meses anteriores ao momento em que você descobriu pela primeira vez que o site foi invadido.</li>
+    <li>Classifique os arquivos do site por tamanho. Procure os arquivos muito grandes.</li>
+  </ul>
+
+<p><strong>Observação:</strong> os invasores geralmente injetam scripts nos arquivos index.php, wp-load.php, 404.php e view.php.</p>
+
+  <strong>Etapa 4</strong>
+<p>Depois de fazer uma lista de arquivos PHP suspeitos, verifique se eles são maliciosos. Se você não estiver familiarizado com PHP, esse processo pode ser mais demorado. Por isso, recomendamos consultar a <a href="https://php.net/docs.php">documentação sobre PHP</a>.
+  Se não tiver muito conhecimento sobre codificação, recomendamos que você <a href="/web/fundamentals/security/hacked/support_team">procure ajuda</a>. Enquanto isso, existem alguns padrões básicos que você pode procurar para identificar arquivos maliciosos.</p>
+
+<p>Se você usa um CMS e não tem o hábito de editar esses arquivos diretamente, compare os arquivos no seu servidor com uma lista de arquivos padrão entregues com o CMS, plug-ins e temas. Procure arquivos que não deveriam estar presentes e arquivos com tamanhos maiores que o padrão.</p>
+
+<p>Analise os arquivos suspeitos já identificados para procurar blocos de código ofuscados. Esses blocos podem parecer uma combinação de letras e números aparentemente sem sentido. Em geral, o código ofuscado é precedido por uma combinação de funções PHP, como base64_decode, rot13, eval, strrev, gzinflate, embora às vezes até mesmo essas funções estejam ofuscadas. Veja abaixo um exemplo desse bloco de código. Muitas vezes, todo esse código está em uma linha longa de texto, o que faz com que ele pareça menor do que realmente é:</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  $O_O0O_O0_0=urldecode("%6E1%7A%62%2F%6D%615%5C%76%740%6928%2D%70
+  %78%75%71%79%2A6%6C%72%6B%64%679%5F%65%68%63%73%77%6F4%2B%6637%6A");
+  $OO0_0OO0__=$O_O0O_O0_0{26}.$O_O0O_O0_0{6}.$O_O0O_O0_0{10}.$O_O0O_O0_0{30}</pre>
+
+  <h3>Verificar se o site está limpo</h3>
+<p>Depois de remover os arquivos invadidos, verifique se o trabalho valeu a pena. Você se lembra das páginas sem sentido identificadas anteriormente? Use a ferramenta Fetch as Google novamente para ver se elas ainda existem. Se a resposta do Fetch as Google for "Não encontrado", é provável que o site esteja em boas condições.</p>
+
+<p>Também é possível seguir as etapas no <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Solucionador de problemas para sites invadidos</a> a fim de verificar se ainda há conteúdo invadido no site.</p>
+
+  <h3>Como evitar ser invadido novamente?</h3>
+<p>A correção de vulnerabilidades é uma etapa final essencial para a correção do site. Um <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html" l10n-encrypted-href="HaoVnhrvp1ipt6jkrRLULkQg8+fqoPqLZVbZwHZzVSGEbm/ALd8tKcGkbG0DXJPH9mJYV+4aaiZf3CtTQGk0SoAD8yPFagwfQx1QvJaFoc6lviyJWslHwkLxMOd1ngrY">estudo recente</a> descobriu que 12% dos sites invadidos são invadidos novamente dentro de 30 dias. É importante saber exatamente como o site foi invadido. Leia o guia <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">Formas mais comuns de invasão de websites por criadores de spam</a> para começar sua investigação. No entanto, se você não conseguir descobrir como seu site foi invadido, veja abaixo uma lista de verificação de medidas que você pode tomar para reduzir as vulnerabilidades do site.</p>
+  <ul>
+    <li><strong>Faça uma varredura regularmente no seu computador:</strong> use um programa antivírus confiável para verificar vulnerabilidades ou a presença de vírus.</li>
+    <li><strong>Troque suas senhas regularmente:</strong> trocar regularmente as senhas de todas as contas do seu website, como a senha do provedor de hospedagem, do FTP e do CMS, pode impedir o acesso não autorizado ao site. É importante criar uma senha forte e exclusiva para cada conta.</li>
+    <li><strong>Use a <a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">autenticação de dois fatores (2FA)</a>:</strong> recomendamos a ativação da 2FA em todos os serviços que exigem login. A 2FA dificulta o login de hackers, mesmo que eles roubem sua senha.</li>
+    <li><strong>Atualize regularmente o CMS, plug-ins, extensões e módulos:</strong> se tudo estiver certo, você já deve ter feito esta etapa. Muitos sites são invadidos por causa de um software desatualizado sendo executado no site. Alguns CMSs são compatíveis com a atualização automática.</li>
+    <li><strong>Considere se inscrever em um serviço de segurança para monitorar o site:</strong> há muitos serviços excelentes que podem ajudar você no monitoramento do site por uma pequena taxa. Recomendamos que você faça registro em um deles para manter o site seguro.</li>
+  </ul>
+
+
+<a name="resources"></a>
+  <h2>Outros recursos</h2>
+<p>Se você ainda estiver com problemas para corrigir o site, há mais alguns recursos que podem ajudá-lo.</p>
+
+<p>Estas ferramentas fazem a varredura do site e podem encontrar conteúdos problemáticos.
+  O Google não desenvolve nem oferece suporte para elas, a não ser a VirusTotal.</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: são algumas ferramentas que podem fazer a varredura do site em busca de conteúdos problemáticos. Esses scanners não garantem a identificação de todos os tipos de conteúdo problemático.</p>
+
+<p>Veja outros recursos do Google que podem ajudar você:</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">
+  Fórum de Ajuda para webmasters do Google</a></li>
+<li><a href="/web/fundamentals/security/hacked/">Ajuda para webmasters do Google para sites invadidos</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google SafeBrowsing</a></li>
+</ul>
+
+
+
+
+
+
+</body></html>

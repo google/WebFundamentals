@@ -1,0 +1,86 @@
+project_path: /webmasters/hacked/_project.yaml
+book_path: /webmasters/hacked/_book.yaml
+landing_page:
+  rows:
+  - heading: หากคุณเป็นเจ้าของไซต์และเห็นอย่างใดอย่างหนึ่งต่อไปนี้...
+    columns:
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-harm.png
+      - image_path: https://www.google.com/webmasters/hacked/example-malwarechrome.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-compromised.png
+      - image_path: https://www.google.com/webmasters/hacked/example-reportedattack.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-interstitial.png
+      - image_path: https://www.google.com/webmasters/hacked/example-phishing.png
+  - heading: คุณอาจถูกแฮ็กแล้ว
+    classname: devsite-landing-row-100
+    items:
+    - description: >
+        อาชญากรคอมพิวเตอร์โจมตีเว็บไซต์หลายพันแห่งในทุกๆ วัน แม้ว่าผู้ใช้มักจะมองไม่เห็นการแฮ็ก
+        แต่หน้าที่ถูกแฮ็กก็ยังเป็นภัยต่อทุกคนที่เข้าดู รวมถึงเจ้าของไซต์ด้วย เช่น
+        แฮ็กเกอร์อาจฝังโค้ดที่เป็นอันตรายไว้ในไซต์โดยที่เจ้าของไซต์ไม่รู้ตัวเพื่อบันทึกการกดแป้นพิมพ์ในคอมพิวเตอร์ของผู้เข้าชม
+        ขโมยข้อมูลรับรองการเข้าสู่ระบบสำหรับการทำธุรกรรมธนาคารหรือธุรกรรมการเงินทางออนไลน์
+        หากไม่แน่ใจว่าไซต์ของคุณถูกแฮ็กหรือไม่ ให้เริ่มด้วยการอ่านคำแนะนำเรื่อง<a
+        href="/webmasters/hacked/docs/how_do_I_know_if_site_hacked.html">ฉันจะรู้ได้อย่างไรว่าไซต์ถูกแฮ็กหรือไม่</a>
+        ตอนนี้เลย
+  - heading: เรียนรู้เกี่ยวกับการแฮ็ก
+    items:
+    - youtube_id: mbJvL61DOZg
+    - heading: "วิดีโอนี้อธิบาย:"
+      description: >
+        <ul><li>ไซต์ถูกแฮ็กได้อย่างไรและเพราะอะไร</li> <li>กระบวนการในการกู้คืนไซต์และนำคำเตือนที่แสดงต่อผู้ใช้ออก</li>
+        <li>เวลาโดยประมาณที่ใช้ในการแก้ไขไซต์</li> <li>การแก้ไขปัญหาเองหรือการจ้างมืออาชีพ</li></ul>
+  - heading: ดำเนินการ
+    columns:
+    - items:
+      - heading: 1. สร้างทีม
+        description: >
+          ติดต่อผู้ให้บริการโฮสต์เว็บและสร้างทีมสนับสนุน
+        path: /web/fundamentals/security/hacked/support_team
+        icon:
+          icon_name: supervisor_account
+      - heading: 2. กำหนดให้ไซต์เป็นเขตกักบริเวณ
+        description: >
+          ป้องกันไม่ให้แฮ็กเกอร์ทำความเสียหายเพิ่มขึ้นอีก
+        path: /web/fundamentals/security/hacked/quarantine_site
+        icon:
+          icon_name: error_outline
+      - heading: 3. ใช้ Search Console
+        description: >
+          ใช้ Search Console เพื่อช่วยระบุประเภทของการแฮ็ก
+        path: /web/fundamentals/security/hacked/use_search_console
+        icon:
+          icon_name: build
+    - items:
+      - heading: 4A. ประเมินความเสียหาย (สแปม)
+        description: >
+          สำหรับการแฮ็กให้แสดงสแปม คิดหาคำตอบว่าต้องแก้ไขสิ่งใดบ้าง
+        path: /web/fundamentals/security/hacked/hacked_with_spam
+        icon:
+          icon_name: bug_report
+      - heading: 4B. ประเมินความเสียหาย (มัลแวร์)
+        description: >
+          สำหรับการแฮ็กเพื่อแพร่กระจายมัลแวร์ คิดหาคำตอบว่าต้องแก้ไขสิ่งใดบ้าง
+        path: /web/fundamentals/security/hacked/hacked_with_malware
+        icon:
+          icon_name: bug_report
+    - items:
+      - heading: 5. ระบุช่องโหว่
+        description: >
+          คิดหาคำตอบว่าแฮ็กเกอร์เข้ามาได้อย่างไร
+        path: /web/fundamentals/security/hacked/vulnerability
+        icon:
+          icon_name: search
+      - heading: 6. ทำความสะอาดและดูแลรักษาไซต์
+        description: >
+          ปิดช่องโหว่ที่ทำให้แฮ็กเกอร์เข้ามาได้
+        path: /web/fundamentals/security/hacked/clean_site
+        icon:
+          icon_name: verified_user
+      - heading: 7. ขอให้ตรวจสอบ
+        description: >
+          ขอให้ Google พิจารณาการติดป้ายกำกับว่า "ถูกแฮ็ก" อีกครั้ง
+        path: /web/fundamentals/security/hacked/request_review
+        icon:
+          icon_name: done

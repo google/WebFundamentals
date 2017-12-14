@@ -1,0 +1,38 @@
+<html devsite><head>
+  <title>Poddaj witrynę kwarantannie</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Czego potrzebujesz:</h3>
+<ul>
+  <li>Możliwości zablokowania wyświetlania Twoich stron na serwerze internetowym (możesz też omówić dostępne opcje z firmą hostingową). Pamiętaj, że na późniejszych etapach trzeba będzie na krótki czas ponownie udostępnić witrynę online.</li>
+  <li>Uprawnień do zarządzania kontem (które pozwalają przeglądać informacje o wszystkich użytkownikach, usuwać ich oraz zmieniać hasła powiązane z Twoim kontem).</li>
+</ul>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="StID0NXeycw" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+<h3>Kolejne działania:</h3>
+<ol>
+  <li><strong>Przełącz witrynę w tryb offline</strong>, by jej treść nie była już dostępna dla użytkowników. Na przykład zatrzymaj serwer internetowy lub zmień wpisy DNS witryny, tak by wskazywały statyczną stronę na innym serwerze, który zwraca kod odpowiedzi HTTP 503.
+<p>Całkowite przełączenie zaatakowanej witryny w tryb offline pozwala wykonać zadania administracyjne przy mniejszym ryzyku, że haker je utrudni. Poza tym użytkownicy przestaną być narażeni na złośliwy kod i nie będą do nich wysyłane pliki ze spamem. Chwilowe czy sporadyczne wyłączanie witryny podczas procesu odzyskiwania nie powinno mieć wpływu na jej pozycję w wynikach wyszukiwania.</p>
+      <ul>
+        <li>Jeśli nie masz pewności, jak przełączyć witrynę w tryb offline, skontaktuj się ze swoją firmą hostingową. Może ona np. ustawić na potrzeby witryny odpowiedź 503 <em>spoza zainfekowanych katalogów</em> (co jest dobrym rozwiązaniem). Poinformuj firmę hostingową, że wkrótce, podczas testowania witryny, trzeba będzie na bieżąco przełączać ją między trybem online i offline. Być może wówczas firma udostępni Ci najbardziej samoobsługową metodę przełączania witryny.
+        </li><li>Zwracanie <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">kodu stanu HTTP</a> 4xx czy 5xx nie wystarcza, by ochronić użytkowników witryny. Wraz z kodem 404, 503 itp. nadal mogą do nich trafiać szkodliwe treści. <em>Kod stanu 503 to przydatna informacja, że witryna jest tymczasowo wyłączona, ale powinien on pochodzić spoza zaatakowanego serwera i witryny</em>.
+        </li>
+        <li>Użycie <a href="/search/reference/robots_txt">instrukcji odmowy dostępu w pliku robots.txt</a> też nie wystarcza, bo blokuje ona tylko roboty wyszukiwarek. Zwykli użytkownicy wciąż mają dostęp do szkodliwych treści.</li>
+      </ul>
+  </li>
+  <li>Jeśli firma hostingowa nic jeszcze nie wie o sytuacji, <strong>skontaktuj się z nią i powiadom o wszystkim</strong>. Jeżeli systemy tej firmy też zostały zaatakowane, ułatwisz jej webmasterom poznanie zakresu problemu.</li>
+  <li><strong>Przeprowadź dokładną kontrolę kont użytkowników</strong>.
+    <ul>
+      <li>Przejrzyj listę kont użytkowników witryny i sprawdź, czy haker nie utworzył nowych. Jeśli lista zawiera podejrzane konta, zapisz ich nazwy, by później je przeanalizować. Następnie usuń konta, by haker nie mógł zalogować się na nie w przyszłości.</li>
+      <li>Zmień hasła do wszystkich kont użytkowników i innych związanych z witryną. Dotyczy to loginów do serwera FTP, bazy danych, kont administratorów systemu oraz kont w systemie zarządzania treścią.</li>
+    </ul>
+  </li>
+</ol>
+ <h2>Kolejny etap</h2>
+<p>Kolejny etap procesu – <a href="use_search_console">Użyj Search Console</a>.</p>
+
+</body></html>

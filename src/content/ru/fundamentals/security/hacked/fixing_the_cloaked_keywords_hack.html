@@ -1,0 +1,168 @@
+<html devsite><head>
+  <title>Восстановление сайта после взлома с замаскированными ключевыми словами</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="DGV7xNragN9HZ8y5MSlU2fxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmoLMiYpjArW9nlDUh5Fd/tj3ANwnrHrtJgc3J1GP4EyxKrz+M3RfOj6o9TWwqB6UaE="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+
+<p>В этом руководстве описывается тип взлома, при котором на сайт добавляются страницы с множественными вхождениями ключевых слов и большим количеством бессмысленного текста. Оно предназначено для тех, кто использует <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">систему управления контентом</a>, однако может пригодиться и другим веб-мастерам.</p>
+
+<p><strong>Примечание.</strong> Если вы не можете точно определить, взломан ли ваш сайт, прочитайте сначала <a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">это руководство</a>.</p>
+
+
+
+<aside class="note">Мы хотим знать, насколько полезной для вас была информация, представленная в этом руководстве. Чтобы мы могли улучшить его, <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">отправьте нам свой отзыв</a>.</aside>
+
+<h2>Оглавление</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Шаг 1. Идентификация этого типа взлома</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Шаг 2. Устранение последствий</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Шаг 3: Дополнительные ресурсы</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/hacked/FAQs_for_hacked_sites">Часто задаваемые вопросы по взломанным сайтам</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>Идентификация этого типа взлома</h2>
+
+<p>Главный признак – замаскированные ключевые слова. В этом случае автоматически создается множество страниц с бессмысленными ссылками, изображениями и текстом. Иногда такие страницы содержат основные элементы шаблона исходного сайта и похожи на обычные разделы ресурса. Отличить их от последних можно, лишь ознакомившись с текстом.</p>
+
+<p>Взломанные страницы создаются для управления факторами рейтинга Google. Хакеры часто пытаются получать деньги за продажу ссылок на взломанные страницы третьим сторонам или переадресацию посетителей на ресурсы нерелевантной тематики (например, порносайты).</p>
+
+<p>Для начала с помощью инструмента <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Проблемы безопасности</a> в <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a> проверьте, обнаружил ли сканер Google такие взломанные страницы на вашем сайте. Иногда их можно найти, если в окне Google Поиска ввести <code class="notranslate l10n-notranslate">site:[your site]</code> (после двоеточия укажите корневой URL своего веб-ресурса). Так вы увидите страницы сайта, которые проиндексированы Google, в том числе взломанные. Просмотрите несколько страниц с результатами поиска и проверьте, нет ли на них необычных URL. Если в Google Поиске взломанных страниц не обнаружилось, используйте те же запросы в другой поисковой системе. Другие поисковые системы могут показать взломанный контент, который удален из индекса Google.
+  Вот пример таких страниц в результатах поиска:</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<p l10n-encrypted-style="/eDMjbcyQ8YpGjRJggEDIBQTTm7qpsvvmfgxV6fkusE=" style="padding:0px 25px"><strong>Обратите внимание,</strong> <em>что в этих результатах поиска есть страницы, созданные не владельцем сайта.Просмотрев описания, можно заметить образцы бессмысленного текста.</em></p>
+
+<p>Также может появиться сообщение о том, что страница не существует (например, ошибка 404). Однако это может не соответствовать действительности: хакеры вводят пользователей в заблуждение, создавая впечатление, что взломанная страница исчезла или работает нормально. Это делается с помощью <a href="//support.google.com/webmasters/answer/66355" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9BJHSzkBQAHlU9iNsiuhPw">маскировки</a> контента. Чтобы выявить маскировку, введите URL страниц своего сайта в инструменте <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Просмотреть как Googlebot</a>. Он позволяет увидеть ту или иную страницу так, как ее видит робот Google.
+  Вот пример взломанной страницы:</p>
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExamplePage.png" style="padding:0px 25px">
+
+
+<a name="fixing"></a>
+<h2>Устранение последствий</h2>
+
+<p>Прежде чем начать, сделайте копии всех файлов, которые вы собираетесь удалить: возможно, вам понадобится восстановить их позже. Оптимальный вариант – создать резервную копию всего сайта. Для этого можно сохранить все файлы с сервера на своем компьютере или воспользоваться средствами системы управления контентом, с которой вы работаете.</p>
+
+<h3>Проверка файла .htaccess (3 этапа)</h3>
+
+<p>При этом виде взлома файл .htaccess используется для автоматического создания замаскированных страниц на сайте. Рекомендуем изучить <a href="https://httpd.apache.org/docs/current/howto/HTACCESS.html" l10n-encrypted-href="oxukPFo/pb0BlXrrDLS8MY7H/A2VvrDif6x7R0dUeR+8wuajVXML/gAzUrl+oK27sJoXxFM3eSyNYOSGo/0x9Q==">основы работы с .htaccess</a> на официальном сайте Apache, чтобы лучше понять, как взлом влияет на сайт. </p>
+
+<p><b>Этап 1</b></p>
+<p>Найдите на своем сайте файл .htaccess. Если вы не знаете, где он находится, и используете платформу для создания сайтов (например, WordPress, Joomla или Drupal), в поисковой системе введите запрос "как найти файл .htaccess" и укажите название платформы. Учтите, что таких файлов может быть несколько. Составьте список путей ко всем файлам .htaccess.
+</p>
+
+<p><strong>Примечание.</strong> Файлы .htaccess часто бывают скрытыми. При поиске убедитесь, что они отображаются.</p>
+
+
+<p><b>Этап 2</b></p>
+<p>Откройте файл .htaccess и просмотрите его содержание. В файле должна быть строка, которая выглядит примерно так:</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  RewriteRule (.*cj2fa.*|^tobeornottobe$) /injected_file.php?q=$1 [L]
+</pre>
+
+<p>Переменные могут меняться. Вместо cj2fa и tobeornottobe могут быть любые сочетания букв или слов. Вам нужен файл PHP, указанный в этой строке.</p>
+
+<p>Запишите название файла PHP, указанного в файле .htaccess. В этом примере он называется injected_file.php, но в вашем случае может быть другое название. Обычно это случайно подобранные слова, например horsekeys.php, potatolake.php и т. д. Вполне вероятно, что это вредоносный файл PHP, который нужно будет найти и удалить.</p>
+
+<div class="alert">Если строка в файле .htaccess содержит подстроку RewriteRule и имя файла PHP, это ещё не значит, что файл поврежден.
+  Проконсультируйтесь с опытными разработчиками на <a href="https://support.google.com/webmasters/go/community" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhFJD1Yl7IKG6D/z+YJGpyzQKhraDV8RTvPIa5MbSVtR/w==">форумах для веб-мастеров</a>, если вы не уверены.</div>
+
+<p><b>Этап 3</b></p>
+<p>Замените все файлы .htaccess исходной или стандартной версией. Чтобы найти ее, введите в поисковой системе запрос "файл .htaccess по умолчанию" и название платформы, на которой размещен ваш сайт. Если файлов .htaccess несколько, вам нужно найти исходную версию каждого из них и заменить ею поврежденные файлы.</p>
+
+<p>Если файла .htaccess по умолчанию нет и вы никогда не создавали его, значит найденный на сайте файл .htaccess, скорее всего, создан хакерами. Сохраните копию файлов .htaccess на всякий случай на локальном компьютере и удалите их с сайта.</p>
+
+<h3>Поиск и удаление других вредоносных файлов (5 этапов)</h3>
+
+<p>Выявление вредоносных файлов может оказаться сложным и занять несколько часов. Во время проверки файлов не спешите. Не забудьте создать их резервные копии. Чтобы узнать, как это сделать, введите в Google поисковый запрос "резервная копия сайта" и укажите название платформы, на которой размещен ваш веб-ресурс.</p>
+
+<p><b>Этап 1</b></p>
+<p>Если вы используете систему управления контентом (CMS), переустановите все основные файлы, которые применяются в ней, а также файлы, добавленные вами (темы, модули, плагины и т. д.). Таким образом вы избавитесь от взломанного контента. Чтобы узнать, как это сделать, введите в Google поисковый запрос "переустановка" и укажите название платформы, на которой размещен ваш веб-ресурс. Если у вас есть плагины, модули, расширения или темы, обязательно переустановите их.</p>
+
+<div class="alert">Переустановка основных файлов может привести к потере ваших настроек. Поэтому обязательно создайте резервную копию своей базы данных и всех файлов.</div>
+
+<p><b>Этап 2</b></p>
+<p>Начните с поиска файла PHP, который вы выявили ранее в файле .htaccess. На вашем сервере должна быть система поиска файлов сайта. Выполните поиск вредоносного файла по имени. Если он нашелся, создайте его резервную копию и сохраните ее в другом месте на случай, если файл окажется неповрежденным, затем удалите его с сайта.</p>
+
+<p><b>Этап 3</b></p>
+<p>Проверьте, не осталось ли вредоносных или взломанных файлов. Возможно, вы уже удалили их на предыдущих этапах. Однако рекомендуется выполнить описанные ниже действия на случай, если вы что-то пропустили.</p>
+
+<p>Не беспокойтесь: вам не нужно открывать и просматривать каждый файл PHP. Для начала создайте список подозрительных файлов с этим расширением, которые нужно проверить. Ниже описано, как определить такие файлы.</p><p>
+
+</p><ul>
+<li>Если вы уже перезагрузили файлы системы управления контентом, проверяйте только те файлы и папки, которые не использовались у вас по умолчанию. Таким образом можно исключить большую часть файлов PHP и оставить для анализа только некоторые из них.</li>
+<li>Отсортируйте файлы сайта по дате изменения. Ищите те, которые были изменены в течение нескольких месяцев после взлома сайта.</li>
+<li>Отсортируйте файлы на сайте по размеру. Ищите файлы подозрительно большого размера.</li>
+</ul>
+
+<p><b>Этап 4</b></p>
+<p>Составив список подозрительных файлов PHP, проверьте, взломаны они или нет.
+  Если вы не знакомы с PHP, этот процесс может оказаться трудоемким. Предлагаем изучить <a href="https://php.net/docs.php">документацию</a> по этому языку.
+  Но даже если вы совершенно незнакомы с программированием, вы можете найти базовые шаблоны, которые используются во вредоносных файлах.</p>
+
+<p>Сначала в составленном вами списке подозрительных файлов найдите большие блоки текста с бессмысленным набором букв и цифр. Таким блокам обычно предшествуют функции PHP, например base64_decode, rot13, eval, strrev, gzinflate. Ниже приведен пример такого кода. Он может не содержать пробелов и переноса строки (благодаря этому он кажется короче, чем есть на самом деле).</p>
+
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks of texts.
+Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0Vn
+ZgknbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2c
+hVmcnBydvJGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2b
+lRGI5xWZ0Fmb1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah
+1GIvRHIzlGa0BSZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch
+1GIlR2bjBCZlRXYjNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+<p>Иногда код выглядит как обычный скрипт и не содержит бессмысленных наборов символов. Если вы не знаете, взломан ли код, попросите помощи у специалистов на <a href="https://productforums.google.com/forum/#!forum/webmasters">справочном форуме для веб-мастеров</a>.</p>
+
+<p><b>Этап 5</b></p>
+<p>Выявив подозрительные файлы, сохраните их резервную или локальную копию на своем компьютере на случай, если они окажутся не вредоносными, и удалите эти файлы с сайта.</p>
+
+<h3>Убедитесь, что на сайте нет вредоносных файлов</h3>
+
+<p>Удалив взломанные файлы, убедитесь, что все последствия хакерской атаки устранены. С помощью инструмента "Просмотреть как Googlebot" снова проверьте, есть ли на сайте найденные вами ранее страницы с бессмысленным текстом. Если вы видите статус "Не найдено", это с большой вероятностью означает, что все в порядке.</p>
+
+<div class="tip">Также проверить наличие взломанного контента на сайте можно, следуя <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">этим инструкциям</a>.</div>
+
+<h2>Как предотвратить повторный взлом?</h2>
+
+<p>Устранение уязвимостей на сайте – важный заключительный этап работы. Недавнее исследование показало, что 20% взломанных сайтов снова подвергаются атаке в течение суток. Прежде всего вам нужно понять, как именно был взломан ваш сайт. Начните с изучения <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">этого руководства</a>. Если прояснить ситуацию не удалось, выполняйте действия, перечисленные в контрольном списке ниже.</p>
+
+<ul>
+<li>Регулярно обновляйте систему управления контентом, плагины, расширения и модули. Часто причиной взлома становится устаревшее программное обеспечение, на котором работает сайт. В некоторых системах управления контентом обновление выполняется автоматически.</li>
+<li>Регулярно сканируйте свой компьютер. Для поиска уязвимостей и вредоносных программ используйте любой популярный антивирус.</li>
+<li>Регулярно меняйте свои пароли. Периодическое изменение паролей к аккаунтам провайдера, FTP, системе управления контентом и т. д. снижает вероятность несанкционированного доступа к сайту.
+  Пароль для каждого аккаунта должен быть надежным и уникальным.</li>
+<li>Используйте <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D1%84%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F_%D0%B0%D1%83%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">двухфакторную аутентификацию</a> везде, где это возможно: она усложнит проникновение для хакеров, даже если они украдут ваш пароль.</li>
+<li>Есть немало надежных сервисов, которые помогут вам уберечь сайт от взлома. Воспользуйтесь их услугами.</li>
+</ul>
+
+<a name="resources"></a>
+<h2>Дополнительные ресурсы</h2>
+<p>Если вам по-прежнему не удается устранить проблемы на сайте, воспользуйтесь дополнительными ресурсами.</p>
+
+<p>Эти инструменты просканируют ваш сайт и помогут найти проблемный контент. Google не связан ни с одним из них, кроме VirusTotal.</p>
+
+<p>Вот несколько таких сервисов: <a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>. Обратите внимание, что проверка этими сканерами не является абсолютной гарантией удаления проблемного контента.</p>
+
+<p>Другие ресурсы Google, которые помогут вам устранить проблему:</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Справочный форум для веб-мастеров</a></li>
+<li><a href="/web/fundamentals/security/hacked/">Помощь по восстановлению взломанных сайтов</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google SafeBrowsing</a></li>
+</ul>
+
+<div class="alert">Отсутствует инструмент, который, по вашему мнению, может быть полезен? <a href="https://docs.google.com/a/  google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="voYeKygemXxQpSsj4TC5AfUbyuHWzoMwWwMBaPnMUvCB/+GeICZWcFPsNfkTA2yKrhrEkO/djoguK4tnJcrqXJ+wsE+tFKLdRQjytTrchinkpeA/GFKTKj/6rHbJmOv3qwUI9b2ZthvPFzCvc6kgQQ==">Сообщите нам об этом</a>.</div>
+
+
+</body></html>

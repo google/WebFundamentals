@@ -1,0 +1,85 @@
+project_path: /webmasters/hacked/_project.yaml
+book_path: /webmasters/hacked/_book.yaml
+landing_page:
+  rows:
+  - heading: У вас есть сайт и в результатах поиска вы видите это?
+    columns:
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-harm.png
+      - image_path: https://www.google.com/webmasters/hacked/example-malwarechrome.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-compromised.png
+      - image_path: https://www.google.com/webmasters/hacked/example-reportedattack.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-interstitial.png
+      - image_path: https://www.google.com/webmasters/hacked/example-phishing.png
+  - heading: Возможно, ваш сайт взломан
+    classname: devsite-landing-row-100
+    items:
+    - description: >
+        Жертвами злоумышленников ежедневно становятся тысячи веб-сайтов. О том, что
+        просматриваемая страница взломана, порой не подозревают не только посетители,
+        но и владелец сайта. Хакеры могут тайно разместить на странице вредоносный
+        код, регистрирующий нажатия клавиш пользователями, чтобы похитить их учетные
+        данные или завладеть сведениями о банковских и финансовых операциях, выполненных
+        в Интернете.
+  - heading: Подробнее о взломе сайтов
+    items:
+    - youtube_id: mbJvL61DOZg
+    - description: >
+        <strong>Из этого видео вы узнаете:</strong></br> <ul><li>как и почему взламывают
+        сайты;</li> <li>как восстановить сайт и удалить предупреждения в результатах
+        поиска;</li> <li>сколько времени займет устранение ущерба;</li> <li>как устранить
+        проблемы самостоятельно или с помощью специалистов.</li></ul>
+  - heading: Действуйте!
+    columns:
+    - items:
+      - heading: 1. Привлеките экспертов
+        description: >
+          Свяжитесь с поставщиком услуг хостинга и обратитесь за помощью к специалистам.
+        path: /web/fundamentals/security/hacked/support_team
+        icon:
+          icon_name: supervisor_account
+      - heading: 2. Закройте сайт на карантин
+        description: >
+          Предотвратите ещё больший ущерб.
+        path: /web/fundamentals/security/hacked/quarantine_site
+        icon:
+          icon_name: error_outline
+      - heading: 3. Используйте функции Search Console
+        description: >
+          C помощью Search Console определите тип взлома.
+        path: /web/fundamentals/security/hacked/use_search_console
+        icon:
+          icon_name: build
+      - heading: 4а. Оцените ущерб (спам)
+        description: >
+          В случае взлома с целью распространения спама определите, что нужно исправить.
+        path: /web/fundamentals/security/hacked/hacked_with_spam
+        icon:
+          icon_name: bug_report
+      - heading: 4б. Оцените ущерб (вредоносное ПО)
+        description: >
+          В случае взлома с целью внедрения вредоносного ПО определите, что нужно
+          исправить.
+        path: /web/fundamentals/security/hacked/hacked_with_malware
+        icon:
+          icon_name: bug_report
+      - heading: 5. Найдите уязвимость
+        description: >
+          Выясните, каким образом хакер получил доступ к вашему сайту.
+        path: /web/fundamentals/security/hacked/vulnerability
+        icon:
+          icon_name: search
+      - heading: 6. Устраните все уязвимости и выработайте стратегию защиты сайта
+        description: >
+          Исправьте ошибки, сделавшие ваш сайт уязвимым.
+        path: /web/fundamentals/security/hacked/clean_site
+        icon:
+          icon_name: verified_user
+      - heading: 7. Запросите проверку
+        description: >
+          Запросите отмену статуса "Сайт взломан".
+        path: /web/fundamentals/security/hacked/request_review
+        icon:
+          icon_name: done

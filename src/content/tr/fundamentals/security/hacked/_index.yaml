@@ -1,0 +1,86 @@
+project_path: /webmasters/hacked/_project.yaml
+book_path: /webmasters/hacked/_book.yaml
+landing_page:
+  rows:
+  - heading: Bir site sahibiyseniz ve şunlardan birini görüyorsanız...
+    columns:
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-harm.png
+      - image_path: https://www.google.com/webmasters/hacked/example-malwarechrome.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-compromised.png
+      - image_path: https://www.google.com/webmasters/hacked/example-reportedattack.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-interstitial.png
+      - image_path: https://www.google.com/webmasters/hacked/example-phishing.png
+  - heading: Saldırıya uğramış olabilirsiniz
+    classname: devsite-landing-row-100
+    items:
+    - description: >
+        Siber suçlular her gün binlerce web sitesinin güvenliğini ihlal etmektedir.
+        Saldırılar genellikle kullanıcılar tarafından görülmez ancak site sahibi dahil,
+        sayfayı görüntüleyen herkese zarar vermeye devam eder. Örneğin, bilgisayar
+        korsanı, site sahibi farkına varmadan siteye gizli bir kod yerleştirebilir
+        ve bu kodla, ziyaretçilerin bilgisayarlarındaki tuş vuruşlarını kaydederek
+        çevrimiçi bankacılık veya finansal işlemler için kullanılan giriş bilgilerini
+        çalabilir.
+  - heading: Saldırıya uğrama hakkında bilgi edinin
+    items:
+    - youtube_id: mbJvL61DOZg
+    - description: >
+        <strong>Bu videoda ele alınan konular:</strong></br> <ul><li>Siteler nasıl
+        ve niçin saldırıya uğrar?</li> <li>Siteyi kurtarma ve kullanıcıların karşılaştığı
+        uyarıları kaldırma süreci</li> <li>Siteyi düzeltmek için gereken yaklaşık
+        süre</li> <li>Sorunu kendi başınıza düzeltme veya bu konuda uzman birini işe
+        alma</li></ul>
+  - heading: Harekete geçin
+    columns:
+    - items:
+      - heading: 1. Ekip oluşturun
+        description: >
+          Barındırıcınızla iletişime geçin ve bir destek ekibi oluşturun.
+        path: /web/fundamentals/security/hacked/support_team
+        icon:
+          icon_name: supervisor_account
+      - heading: 2. Sitenizi karantinaya alın
+        description: >
+          Bilgisayar korsanının daha fazla zarar vermesini engelleyin.
+        path: /web/fundamentals/security/hacked/quarantine_site
+        icon:
+          icon_name: error_outline
+      - heading: 3. Search Console'u kullanın
+        description: >
+          Saldırının türünü belirlemenize yardımcı olması için Search Console'u kullanın.
+        path: /web/fundamentals/security/hacked/use_search_console
+        icon:
+          icon_name: build
+      - heading: 4A. Hasarı değerlendirin (spam)
+        description: >
+          Spam saldırıları için nelerin düzeltilmesi gerektiğini belirleyin.
+        path: /web/fundamentals/security/hacked/hacked_with_spam
+        icon:
+          icon_name: bug_report
+      - heading: 4B. Hasarı değerlendirin (kötü amaçlı yazılım)
+        description: >
+          Kötü amaçlı yazılım saldırıları için nelerin düzeltilmesi gerektiğini belirleyin.
+        path: /web/fundamentals/security/hacked/hacked_with_malware
+        icon:
+          icon_name: bug_report
+      - heading: 5. Güvenlik açığını bulun
+        description: >
+          Bilgisayar korsanının nasıl içeri girdiğini belirleyin.
+        path: /web/fundamentals/security/hacked/vulnerability
+        icon:
+          icon_name: search
+      - heading: 6. Sitenizi temizleyin ve bakımını yapın
+        description: >
+          Bilgisayar korsanının içeri girmesini sağlayan güvenlik açığını kapatın.
+        path: /web/fundamentals/security/hacked/clean_site
+        icon:
+          icon_name: verified_user
+      - heading: 7. İnceleme isteğinde bulunun
+        description: >
+          Google'dan saldırıya uğramış etiketini yeniden değerlendirmesini isteyin.
+        path: /web/fundamentals/security/hacked/request_review
+        icon:
+          icon_name: done

@@ -1,0 +1,91 @@
+project_path: /webmasters/hacked/_project.yaml
+book_path: /webmasters/hacked/_book.yaml
+landing_page:
+  rows:
+  - heading: Nếu bạn là chủ sở hữu trang web và bạn thấy một trong những điều này...
+    columns:
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-harm.png
+      - image_path: https://www.google.com/webmasters/hacked/example-malwarechrome.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-compromised.png
+      - image_path: https://www.google.com/webmasters/hacked/example-reportedattack.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-interstitial.png
+      - image_path: https://www.google.com/webmasters/hacked/example-phishing.png
+  - heading: Bạn có thể đã bị tấn công
+    classname: devsite-landing-row-100
+    items:
+    - description: >
+        Mỗi ngày, các tin tặc xâm nhập hàng ngàn trang web. Hành vi tấn công thường
+        không hiển thị với người dùng, nhưng vẫn có hại cho bất cứ ai xem trang -
+        bao gồm cả chủ sở hữu trang web. Ví dụ: trong khi chủ sở hữu trang web hoàn
+        toàn không hay biết, tin tặc có thể đã làm cho trang của họ bị nhiễm mã độc
+        hại. Mã này có thể ghi lại các thao tác gõ phím trên máy tính của khách truy
+        cập, đánh cắp thông tin đăng nhập cho các giao dịch ngân hàng trực tuyến hoặc
+        giao dịch tài chính. Nếu bạn không chắc liệu trang web của mình có bị tấn
+        công hay không, hãy bắt đầu bằng cách đọc hướng dẫn <a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">làm
+        thế nào để tôi biết trang web của mình bị tấn công?</a> của chúng tôi.
+  - heading: Tìm hiểu về tấn công
+    items:
+    - youtube_id: mbJvL61DOZg
+    - heading: "Video này bao gồm:"
+      description: >
+        <ul><li>Cách thức và lý do khiến trang web bị tấn công</li> <li>Quá trình
+        khôi phục trang web và xóa bất kỳ cảnh báo cho người dùng nào</li> <li>Thời
+        gian ước tính để khắc phục trang web</li> <li>Tự khắc phục hoặc thuê chuyên
+        gia</li></ul>
+  - heading: Thực hiện hành động
+    columns:
+    - items:
+      - heading: 1. Xây dựng nhóm
+        description: >
+          Liên hệ với nhà lưu trữ web của bạn và xây dựng một nhóm hỗ trợ.
+        path: /web/fundamentals/security/hacked/support_team
+        icon:
+          icon_name: supervisor_account
+      - heading: 2. Cách ly trang web của bạn
+        description: >
+          Ngăn chặn tin tặc gây thêm thiệt hại.
+        path: /web/fundamentals/security/hacked/quarantine_site
+        icon:
+          icon_name: error_outline
+      - heading: 3. Sử dụng Search Console
+        description: >
+          Sử dụng Search Console để giúp xác định kiểu tấn công.
+        path: /web/fundamentals/security/hacked/use_search_console
+        icon:
+          icon_name: build
+    - items:
+      - heading: 4A. Đánh giá thiệt hại (spam)
+        description: >
+          Đối với tấn công bằng spam, xác định những gì cần được khắc phục.
+        path: /web/fundamentals/security/hacked/hacked_with_spam
+        icon:
+          icon_name: bug_report
+      - heading: 4B. Đánh giá thiệt hại (phần mềm độc hại)
+        description: >
+          Đối với tấn công bằng phần mềm độc hại, xác định những gì cần được khắc
+          phục.
+        path: /web/fundamentals/security/hacked/hacked_with_malware
+        icon:
+          icon_name: bug_report
+    - items:
+      - heading: 5. Xác định lỗ hổng
+        description: >
+          Xác định cách tin tặc xâm nhập.
+        path: /web/fundamentals/security/hacked/vulnerability
+        icon:
+          icon_name: search
+      - heading: 6. Làm sạch và bảo trì trang web của bạn
+        description: >
+          Đóng lỗ hổng cho phép tin tặc xâm nhập.
+        path: /web/fundamentals/security/hacked/clean_site
+        icon:
+          icon_name: verified_user
+      - heading: 7. Yêu cầu xem xét lại
+        description: >
+          Yêu cầu Google xem xét lại nhãn bị tấn công của bạn
+        path: /web/fundamentals/security/hacked/request_review
+        icon:
+          icon_name: done

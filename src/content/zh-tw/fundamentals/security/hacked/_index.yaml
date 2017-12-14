@@ -1,0 +1,77 @@
+project_path: /webmasters/hacked/_project.yaml
+book_path: /webmasters/hacked/_book.yaml
+landing_page:
+  rows:
+  - heading: 如果您是網站擁有者，而且看到下列任一訊息...
+    columns:
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-harm.png
+      - image_path: https://www.google.com/webmasters/hacked/example-malwarechrome.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-compromised.png
+      - image_path: https://www.google.com/webmasters/hacked/example-reportedattack.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-interstitial.png
+      - image_path: https://www.google.com/webmasters/hacked/example-phishing.png
+  - heading: 您的網站可能已遭到駭客入侵
+    classname: devsite-landing-row-100
+    items:
+    - description: >
+        每天都有上千個網站遭到網路罪犯入侵。駭客入侵行為往往藏身於幕後，但是對瀏覽網頁的所有人都會造成損害，包括網站管理員在內。舉例來說，駭客可能在網站擁有者不知情的情況下，暗中在網站上植入惡意程式碼，藉此記錄訪客在電腦上輸入的資訊，進而竊取線上銀行或金融交易的登入憑證。
+  - heading: 瞭解駭客入侵方式
+    items:
+    - youtube_id: mbJvL61DOZg
+    - description: >
+        <strong>這部影片將說明下列事項：</strong></br> <ul><li>網站遭入侵的原因與方式</li> <li>如何修復網站以及移除對使用者顯示的警告</li>
+        <li>修復網站大致需要多少時間</li> <li>自行修復或聘請專業人員</li></ul>
+  - heading: 採取行動
+    columns:
+    - items:
+      - heading: 1. 建立小組
+        description: >
+          與網站代管商聯絡及建立支援小組。
+        path: /web/fundamentals/security/hacked/support_team
+        icon:
+          icon_name: supervisor_account
+      - heading: 2. 隔離您的網站
+        description: >
+          防止駭客造成更多危害。
+        path: /web/fundamentals/security/hacked/quarantine_site
+        icon:
+          icon_name: error_outline
+      - heading: 3. 使用 Search Console
+        description: >
+          使用 Search Console 找出駭客入侵類型。
+        path: /web/fundamentals/security/hacked/use_search_console
+        icon:
+          icon_name: build
+      - heading: 4A. 評估損害 (垃圾內容)
+        description: >
+          如果遭到垃圾內容入侵，請找出需要修復的部分。
+        path: /web/fundamentals/security/hacked/hacked_with_spam
+        icon:
+          icon_name: bug_report
+      - heading: 4B. 評估損害 (惡意軟體)
+        description: >
+          如果遭到惡意軟體入侵，請找出需要修復的部分。
+        path: /web/fundamentals/security/hacked/hacked_with_malware
+        icon:
+          icon_name: bug_report
+      - heading: 5. 識別漏洞
+        description: >
+          找出駭客入侵的途徑。
+        path: /web/fundamentals/security/hacked/vulnerability
+        icon:
+          icon_name: search
+      - heading: 6. 清理及維護您的網站
+        description: >
+          修補讓駭客入侵的漏洞。
+        path: /web/fundamentals/security/hacked/clean_site
+        icon:
+          icon_name: verified_user
+      - heading: 7. 要求審查
+        description: >
+          要求 Google 重新考量移除您網站的遭入侵標籤。
+        path: /web/fundamentals/security/hacked/request_review
+        icon:
+          icon_name: done

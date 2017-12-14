@@ -1,0 +1,185 @@
+<html devsite><head>
+  <title>De onzin-hack oplossen</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="wDLboSHSoOEqXBonRWn8UvxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmrFt8cYhV7gL+hr3agSW6ztGwMwktYT4qx+ixSxJY26fg=="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+<body>
+
+<p>Deze gids is speciaal ontwikkeld voor een type hack waarmee pagina's vol onzinzoekwoorden aan uw site worden toegevoegd. Dit noemen we de onzin-hack ('gibberish hack'). De gids is ontworpen voor gebruikers van <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">populaire contentmanagementsystemen</a> (CMS), maar is ook nuttig als u geen CMS gebruikt.</p>
+
+<p><strong>Opmerking:</strong> Weet u niet zeker of uw site is gehackt? Raadpleeg dan eerst onze gids <a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">Hoe u kunt controleren of uw site is gehackt</a>.</p>
+
+<aside class="note">We willen ervoor zorgen dat deze gids echt nuttig voor u is. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">Geef feedback</a> om de gids te verbeteren.</aside>
+
+<h2>Inhoudsopgave</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Stap 1: Identificatie van deze hack</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Stap 2: De hack oplossen</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Stap 3: Aanvullende bronnen</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/hacked/FAQs_for_hacked_sites">Veelgestelde vragen over gehackte sites</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>Identificatie van deze hack</h2>
+
+<p>Bij de onzin-hack worden er automatisch veel pagina's op uw site gemaakt met onbegrijpelijke zinnen vol zoekwoorden. Dit zijn pagina's die u niet heeft gemaakt, maar deze pagina's hebben mogelijk wel URL's die wellicht gebruikers aanspreken om zo klikken te genereren. Hackers doen dit zodat de gehackte pagina's worden weergegeven in Google Zoeken. Als mensen deze pagina's vervolgens proberen te bezoeken, worden ze doorverwezen naar een niet-gerelateerde pagina, zoals een pornosite.
+  Hackers verdienen geld wanneer mensen deze niet-gerelateerde pagina's bezoeken. Hier volgen enkele voorbeelden van het type bestanden dat u kunt tegenkomen op een site die is getroffen door de onzin-hack:</p>
+
+  <ul>
+    <li>www.example.com/cheap-hair-styles-cool.html</li>
+    <li>www.example.com/free-pictures-fun.html</li>
+    <li>www.example.com/nice-song-download-file.php</li>
+   </ul>
+
+<p>Soms worden deze bestanden weergegeven in een map met willekeurige tekens en worden er verschillende talen gehanteerd:</p>
+
+   <ul>
+   <li>www.example.com/jfwoea/cheap-hair-styles-cool.html</li>
+   <li>www.example.com/jfwoea/free-pictures-fun.html</li>
+   <li>www.example.com/jfwoea/www-ki-motn-dudh-photo.php</li>
+   <li>www.example.com/jfwoea/foto-cewe-zaman-sekarang.php</li>
+   </ul>
+
+<p>Begin door met de tool <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Beveiligingsproblemen</a> in Search Console te controleren of Google een dergelijke gehackte pagina op uw site heeft gedetecteerd. Soms kunt u pagina's als deze ontdekken door een Google-zoekvenster te openen en <code class="notranslate l10n-notranslate">site:<i>your site url</i></code> in te voeren met de URL op rootniveau van uw site. Hiermee ziet u de pagina's die Google voor uw site heeft geïndexeerd, inclusief de gehackte pagina's. Bekijk een aantal pagina's met zoekresultaten om te zien of u ongebruikelijke URL's tegenkomt. Als u geen gehackte content in Google Zoeken ziet, gebruikt u dezelfde zoektermen in een andere zoekmachine. U ziet hieronder een voorbeeld van hoe dat eruitziet.</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/GibberishKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<div class="tip">De zoekresultaten bevatten in dit geval veel pagina's die niet door de eigenaar van de site zijn gemaakt. Als u goed naar de beschrijvingen kijkt, ziet u voorbeelden van de onbegrijpelijke tekst die met deze hack wordt gegenereerd.</div>
+
+<p>Als u op een link naar een gehackte pagina klikt, wordt u meestal doorverwezen naar een andere site of ziet u een pagina vol onbegrijpelijke content. Het kan ook voorkomen dat u een bericht te zien krijgt waarin wordt aangegeven dat de pagina niet bestaat (bijvoorbeeld een 404-fout). Trap hier niet in. Hackers zullen proberen u te laten denken dat de pagina is verwijderd of hersteld terwijl de pagina nog steeds is gehackt. Dit doen ze door content te <a href="/webmasters/answer/66355" l10n-encrypted-href="uDM31iN8CLdSvuKmuk5DvFAVB44doULc4CE9XvK9iII=">verbergen</a> (cloaking). Controleer uw site op cloaking door uw site-URL in de tool <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Fetchen als Google</a> in te voeren. Met de tool 'Fetchen als Google' kunt u onderliggende verborgen content zien. </p>
+
+<p>Als u deze problemen tegenkomt, is uw site waarschijnlijk getroffen door dit type hack.</p>
+
+<a name="fixing"></a>
+<h2>De hack oplossen</h2>
+
+<p>Maak voordat u begint een offline kopie van bestanden voordat u deze verwijdert, voor het geval u deze later moet herstellen. Het is nog beter om een back-up van uw volledige site te maken voordat u het opschoningsproces start.
+  U kunt dit doen door alle bestanden op uw server offline op te slaan of door te zoeken naar de beste back-upmogelijkheden voor uw specifieke CMS.</p>
+
+<h3>Uw .htaccess-bestand controleren (twee stappen)</h3>
+
+<p>De onzin-hack leidt bezoekers van uw site om via het .htaccess-bestand.</p>
+
+<p><b>Stap 1</b></p>
+<p>Zoek naar het .htaccess-bestand op uw site. Als u niet zeker weet waar u dit kunt vinden en als u een CMS zoals WordPress, Joomla of Drupal gebruikt, zoekt u via een zoekmachine naar '. htaccess file location' in combinatie met de naam van uw CMS. U heeft afhankelijk van uw site mogelijk meerdere .htaccess-bestanden.
+  Maak een lijst van alle .htaccess-bestandslocaties.</p>
+
+<p><strong>Opmerking:</strong> Het .htaccess-bestand is vaak een verborgen bestand. Zorg ervoor dat u verborgen bestanden weergeeft wanneer u naar het bestand zoekt.</p>
+
+<p><b>Stap 2</b></p>
+<p>Vervang alle .htaccess-bestanden door een schone of standaardversie van het .htaccess-bestand. U kunt doorgaans een standaardversie van een .htaccess-bestand vinden door te zoeken naar 'default .htaccess file' en de naam van uw CMS. Voor sites met meerdere .htaccess-bestanden zoekt u naar een schone versie van elk bestand en vervangt u de oude bestanden.</p>
+
+<p>Als er geen standaard .htaccess aanwezig is en u nog nooit een .htaccess-bestand heeft geconfigureerd op uw site, is het .htaccess-bestand dat u op uw site heeft gevonden waarschijnlijk een schadelijk bestand. Sla voor de zekerheid een offline kopie van het .htaccess-bestand op en verwijder het .htaccess-bestand van uw site.</p>
+
+<h3>Andere schadelijke bestanden identificeren en verwijderen (vijf stappen)</h3>
+
+<p>De identificatie van schadelijke bestanden kan lastig zijn en veel tijd in beslag nemen. Neem de tijd wanneer u uw bestanden controleert. Maak een back-up van de bestanden op uw site als u dit nog niet heeft gedaan. Voer een Google-zoekopdracht uit naar 'back up site' en de naam van uw CMS om instructies te ontvangen voor het maken van een back-up van uw site.</p>
+
+<p><b>Stap 1</b></p>
+<p>Als u een CMS gebruikt, moet u alle kernbestanden (standaardbestanden) van de standaarddistributie van uw CMS opnieuw installeren. Alles wat u heeft toegevoegd (zoals thema's, modules of plug-ins), moet ook opnieuw worden geïnstalleerd. Zo zorgt u ervoor dat deze bestanden vrij zijn van gehackte content. U kunt een Google-zoekopdracht uitvoeren voor 'reinstall' en uw CMS-naam voor instructies over het herinstallatieproces. Als u plug-ins, modules, extensies of thema's gebruikt, moet u deze ook opnieuw installeren.</p>
+
+<p>Als u uw kernbestanden opnieuw installeert, gaan alle door u aangebrachte aanpassingen verloren. Zorg ervoor dat u een back-up maakt van uw database en alle bestanden voordat u opnieuw installeert.</p>
+
+<p><b>Stap 2</b></p>
+<p>U moet nu zoeken naar resterende schadelijke of gehackte bestanden. Dit is het moeilijkste en tijdrovendste deel van het proces, maar u bent na deze stap bijna klaar.</p>
+
+<p>Via deze hack worden er doorgaans twee typen bestanden achtergelaten: .txt-bestanden en .php-bestanden. De .txt-bestanden dienen als templatebestanden en met de .php-bestanden wordt vastgesteld welk type onbegrijpelijke content op uw site moet worden geladen. Begin door te zoeken naar de .txt-bestanden. Afhankelijk van hoe u verbinding maakt met uw site, ziet u mogelijk een zoekfunctie voor bestanden. Zoek naar '.txt' om alle bestanden met een .txt-extensie op te vragen. De meeste van deze bestanden zijn legitieme tekstbestanden zoals licentieovereenkomsten, readme-bestanden enzovoort. U zoekt in dit geval een specifieke set van .txt-bestanden die HTML-code bevatten waarmee spamtemplates worden gemaakt. Hieronder vindt u fragmenten van verschillende stukjes code die u in deze schadelijke .txt-bestanden kunt vinden.</p><p>
+
+</p><p>Hackers gebruiken zoekwoordvervanging om de spampagina's te maken. U ziet mogelijk een algemeen woord dat in het volledige gehackte bestand kan worden vervangen.</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  &lt;title&gt;{keyword}&lt;/title&gt;
+  &lt;meta name="description" content="{keyword}" /&gt;
+  &lt;meta name="keywords" content="{keyword}" /&gt;
+  &lt;meta property="og:title" content="{keyword}" /&gt;
+</pre>
+
+<p>Daarnaast bevatten de meeste van deze bestanden een type code waarmee spamlinks en -tekst buiten de zichtbare pagina worden geplaatst.</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  &lt;div style="position: absolute; top: -1000px; left: -1000px;"&gt;
+  Cheap prescription drugs
+  &lt;/div&gt;
+</pre>
+
+<p>Verwijder deze .txt-bestanden. Als deze allemaal in dezelfde map staan, kunt u de volledige map verwijderen.</p>
+
+<p><b>Stap 3</b></p>
+<p>De schadelijke PHP-bestanden zijn iets moeilijker op te sporen. Uw site kan een of meer schadelijke PHP-bestanden bevatten. Ze kunnen allemaal in dezelfde subdirectory zijn opgeslagen of verspreid over uw site.</p>
+
+<p>U hoeft niet elk PHP-bestand te openen en door te nemen. Begin door een lijst te maken van verdachte PHP-bestanden die u nader wilt onderzoeken. Hier volgen enkele manieren om te bepalen welke PHP-bestanden verdacht zijn:</p>
+
+<ul>
+<li>Aangezien u uw CMS-bestanden al opnieuw heeft geladen, hoeft u alleen te kijken naar bestanden die geen deel uitmaken van uw standaard CMS-bestanden of -mappen. Hiermee valt al een groot aantal PHP-bestanden af en houdt u een handjevol bestanden over om te controleren.</li>
+<li>Sorteer de bestanden op uw site op de laatst gewijzigde datum. Zoek naar bestanden die zijn gewijzigd binnen een paar maanden na de tijd dat u heeft ontdekt dat uw site is gehackt.</li>
+<li>Sorteer de bestanden op uw site op grootte. Zoek naar ongewoon grote bestanden.</li>
+</ul>
+
+<p><b>Stap 4</b></p>
+<p>Nu u een lijst van verdachte PHP-bestanden heeft, controleert u of deze schadelijk zijn. Als u onbekend bent met PHP, kan dit proces tijdrovender zijn. U kunt als voorbereiding <a href="https://php.net/docs.php">PHP-documentatie</a> doornemen.  Ook als coderen helemaal nieuw is voor u, zijn er echter wel een aantal basispatronen waarnaar u kunt zoeken om schadelijke bestanden te identificeren.</p>
+
+<p>Neem eerst de verdachte bestanden die u al heeft geïdentificeerd door om grote blokken tekst met een combinatie van ogenschijnlijk willekeurige letters en cijfers te achterhalen. Het grote tekstblok wordt meestal voorafgegaan door een combinatie van PHP-functies zoals base64_decode, rot13, eval, strrev, gzinflate. Hier volgt een voorbeeld van hoe een codeblok eruit kan zien. Soms wordt al deze code in een lange tekstregel gezet, waardoor deze kleiner lijkt dan deze eigenlijk is:</p>
+
+<p></p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks
+of texts. Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0VnZgk
+nbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2chVmcnBydv
+JGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2blRGI5xWZ0Fmb
+1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah1GIvRHIzlGa0B
+SZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch1GIlR2bjBCZlRXY
+jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+
+<p>Soms wordt de code niet door elkaar gezet en lijkt de code op normaal script. Als u niet zeker weet of de code schadelijk is, kunt u naar de <a href="http://productforums.google.com/forum/#    !forum/webmasters" l10n-encrypted-href="eFqttkEJXOrPtYqL1dS4hMlzk68vmg1gLAq//4NlIesuA+SSwS44WzEss142F1VLcbCLWvVm2pEwqt29pdWwH6rz+M3RfOj6o9TWwqB6UaE=">Helpforums voor webmasters</a> gaan om advies in te winnen van ervaren webmasters.</p>
+
+<p><b>Stap 5</b></p>
+<p>Nu u weet welke bestanden verdacht zijn, maakt u een back-up of lokale kopie door de bestanden op uw computer op te slaan voor het geval deze niet schadelijk zijn. Vervolgens verwijdert u de verdachte bestanden.</p>
+
+<h3>Controleren of uw site schoon is</h3>
+
+<p>Zodra u klaar bent met het verwijderen van gehackte bestanden, moet u controleren of alles goed is gegaan. Kunt u zich de onzinpagina's nog herinneren die u eerder heeft geïdentificeerd? Gebruik opnieuw de tool 'Fetchen als Google' om te controleren of deze pagina's nog aanwezig zijn. Als deze niet worden gevonden in 'Fetchen als Google', is de kans heel groot dat er niets meer aan de hand is.</p>
+
+<p>U kunt ook de stappen in de <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">probleemoplosser voor gehackte sites</a> volgen om te controleren of uw site nog gehackte content bevat.</p>
+
+<h3>Hoe voorkom ik dat ik opnieuw word gehackt?</h3>
+
+<p>Het oplossen van beveiligingsproblemen op uw site is een essentiële laatste stap om uw site helemaal te herstellen. Uit een recent onderzoek is gebleken dat 20% van de gehackte sites binnen één dag opnieuw wordt gehackt. Het is handig om precies te weten hoe uw site is gehackt. Lees de gids met de <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">meest voorkomende manieren waarop websites worden gehackt door spammers</a> om uw onderzoek te starten. Als u echter niet kunt achterhalen hoe uw site is gehackt, volgt hieronder een checklist met dingen die u kunt doen om het aantal beveiligingsproblemen op uw site te verminderen:</p>
+
+<ul>
+  <li><strong>Scan uw computer regelmatig:</strong> Gebruik een populaire virusscanner om te controleren op virussen of beveiligingsproblemen.</li>
+<li><strong>Wijzig uw wachtwoorden regelmatig:</strong> Door de wachtwoorden voor al uw websiteaccounts (zoals accounts voor uw hostingprovider, FTP en CMS) regelmatig te wijzigen, kunt u voorkomen dat onbevoegden toegang krijgen tot uw site. Het is belangrijk om een sterk, uniek wachtwoord voor elk account te gebruiken.</li>
+<li><strong>Gebruik<a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g=="> authenticatie in twee stappen (2FA)</a>:</strong> Overweeg 2FA in te schakelen voor elke service waarbij u moet inloggen. Met 2FA is het voor hackers moeilijker om in te loggen, zelfs als ze uw wachtwoord hebben buitgemaakt.</li>
+<li><strong>Update regelmatig uw CMS, plug-ins, extensies en modules:</strong> Hopelijk heeft u deze stap al uitgevoerd. Veel sites worden gehackt vanwege verouderde software die op een site wordt gebruikt. Sommige contentmanagementsystemen bieden ondersteuning voor automatische updates.</li>
+<li><strong>Overweeg u aan te melden voor een beveiligingsservice om uw site in de gaten te houden:</strong> Er zijn veel goede services beschikbaar die u tegen lage kosten kunnen helpen bij het controleren van uw site.
+  U kunt zich voor deze services aanmelden om uw site veilig te houden.</li>
+</ul>
+
+<a name="resources"></a>
+<h2>Aanvullende bronnen</h2>
+<p>Als u nog steeds problemen ondervindt bij het herstellen van uw site, zijn er nog een aantal bronnen die hulp kunnen bieden.</p>
+
+<p>Deze tools scannen uw site en kunnen problematische content opsporen. Google voert deze tools niet uit en biedt geen ondersteuning voor deze tools, behalve voor VirusTotal.</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">VirusTotal</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: Dit zijn een aantal tools die uw site kunnen controleren op problematische content. Deze scanners bieden geen garantie dat ze elk type problematische content kunnen opsporen.</p>
+
+<p>Hier volgen enkele aanvullende bronnen van Google die u kunnen helpen:</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Google-helpforum voor webmasters
+  </a></li>
+<li><a href="/web/fundamentals/security/hacked/">Google-hulp voor webmasters voor gehackte sites</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google SafeBrowsing</a></li>
+</ul>
+
+<div class="alert">Ontbreekt er iets wat volgens u nuttig is? <a href="https://docs.google.com/a  /google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="voYeKygemXxQpSsj4TC5AZV1HFx+9thIM0C4UiCOHzc03KC6nJ7AyWMICIX6+KL/rhrEkO/djoguK4tnJcrqXJ+wsE+tFKLdRQjytTrchinkpeA/GFKTKj/6rHbJmOv3qwUI9b2ZthvPFzCvc6kgQQ==">Geef feedback</a> om ons dit te laten weten.</div>
+
+
+
+</body></html>

@@ -1,0 +1,185 @@
+<html devsite><head>
+  <title>Jak naprawić szkody spowodowane atakiem wykorzystującym bezużyteczny tekst</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="wDLboSHSoOEqXBonRWn8UvxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmrFt8cYhV7gL+hr3agSW6ztGwMwktYT4qx+ixSxJY26fg=="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+<body>
+
+<p>W tym przewodniku omawiamy ataki hakerów polegające na dodawaniu do witryny stron z bezużytecznym tekstem zawierającym dużo słów kluczowych. Jest to tzw. atak z wykorzystaniem bezużytecznego tekstu. Narażeni są na niego użytkownicy <a href="https://pl.wikipedia.org/wiki/System_zarz%C4%85dzania_tre%C5%9Bci%C4%85" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">popularnych systemów zarządzania treścią</a> (CMS), ale podane tu informacje mogą Ci się przydać, nawet jeśli nie korzystasz z takiego systemu.</p>
+
+<p><strong>Uwaga:</strong> nie masz pewności, czy Twoja witryna nie została zaatakowana? Poczytaj, <a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">jak sprawdzić, czy witryna została zaatakowana przez hakerów</a>.</p>
+
+<aside class="note">Chcemy mieć pewność, że ten przewodnik jest naprawdę użyteczny. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">Napisz komentarz</a>, by pomóc nam go udoskonalić.</aside>
+
+<h2>Spis treści</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Krok 1. Jak rozpoznać ten rodzaj ataku</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Krok 2. Jak naprawić szkody spowodowane atakiem</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Krok 3. Dodatkowe zasoby</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/hacked/FAQs_for_hacked_sites">Witryny zaatakowane przez hakerów – najczęstsze pytania</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>Jak rozpoznać ten rodzaj ataku</h2>
+
+<p>Atak z wykorzystaniem bezużytecznego tekstu polega na automatycznym utworzeniu w witrynie wielu stron z pozbawionymi sensu zdaniami, zawierającymi słowa kluczowe. Nie są to strony utworzone przez Ciebie, ale wyświetlone na nich adresy URL mogą zachęcać użytkowników do kliknięcia. Celem hakerów jest wyświetlanie zhakowanych stron na wysokich pozycjach w wynikach wyszukiwania Google. Użytkownicy, którzy klikają te strony, są przekierowywani do witryn niepowiązanych z wynikiem wyszukiwania – np. do serwisów pornograficznych.
+  Odwiedziny na tych niepowiązanych stronach przynoszą zyski hakerom. Oto kilka przykładowych plików, które można znaleźć w witrynie po ataku z wykorzystaniem bezużytecznego tekstu:</p>
+
+  <ul>
+    <li>www.example.com/super-fryzury-tanio.html</li>
+    <li>www.example.com/darmowe-fajne-zdjecia.html</li>
+    <li>www.example.com/fajny-utwor-plik-do-pobrania.php</li>
+   </ul>
+
+<p>Czasem pojawiają się w folderze o nazwie składającej się z losowych znaków i utworzonej w różnych językach:</p>
+
+   <ul>
+   <li>www.example.com/jfwoea/super-fryzury-tanio.html</li>
+   <li>www.example.com/jfwoea/darmowe-fajne-zdjecia.html</li>
+   <li>www.example.com/jfwoea/www-ki-motn-dudh-photo.php</li>
+   <li>www.example.com/jfwoea/foto-cewe-zaman-sekarang.php</li>
+   </ul>
+
+<p>Najpierw skorzystaj z narzędzia <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Problemy dotyczące bezpieczeństwa</a> w Search Console i sprawdź, czy Google znajduje zmodyfikowane strony w Twojej witrynie. Czasem takie strony można również wykryć, wpisując <code class="notranslate l10n-notranslate">site:<i>your site url</i></code> w wyszukiwarkę Google i podając główny adres URL witryny. Spowoduje to wyświetlenie stron zindeksowanych przez Google w Twojej witrynie – w tym stron zmodyfikowanych przez hakerów. Przejrzyj kilka stron wyników wyszukiwania pod kątem nietypowych adresów URL. Jeśli za pomocą wyszukiwarki Google nie znajdziesz zmodyfikowanych treści, spróbuj wpisać te same słowa w inną wyszukiwarkę. Mogłoby to wyglądać tak:</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/GibberishKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<div class="tip">Zwróć uwagę, że w tych wynikach wyszukiwania pojawia się wiele stron, których nie utworzył właściciel witryny. Jeśli przyjrzysz się opisom, zauważysz przykłady bezużytecznego tekstu utworzonego przez hakera.</div>
+
+<p>Zazwyczaj kliknięcie linka do zmodyfikowanej strony powoduje przekierowanie do innej witryny lub wyświetlenie bezużytecznego tekstu. Możesz też zobaczyć komunikat, że strona nie istnieje (np. błąd 404). Nie daj się zwieść. Haker będzie usiłował Cię przekonać, że zmodyfikowana strona zniknęła lub została poprawiona. W tym celu zastosuje <a href="/webmasters/answer/66355" l10n-encrypted-href="uDM31iN8CLdSvuKmuk5DvFAVB44doULc4CE9XvK9iII=">maskowanie</a> treści. Aby sprawdzić, czy tak się nie stało, wpisz adres URL witryny do narzędzia <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Pobierz jako Google</a>. Pozwoli to zobaczyć ukryte treści. </p>
+
+<p>Jeśli stwierdzisz takie problemy, prawdopodobnie Twoja witryna została zaatakowana właśnie w ten sposób.</p>
+
+<a name="fixing"></a>
+<h2>Jak naprawić szkody spowodowane atakiem</h2>
+
+<p>Zanim zaczniesz usuwać pliki, zrób ich kopię offline na wypadek, gdyby trzeba je było później przywrócić. Jeszcze lepiej jest utworzyć kopię zapasową całej witryny przed przystąpieniem do jej czyszczenia.
+  Możesz zapisać offline wszystkie pliki z serwera lub poszukać najlepszych metod tworzenia kopii zapasowej dla Twojego systemu zarządzania treścią.</p>
+
+<h3>Sprawdzanie pliku .htaccess (dwa kroki)</h3>
+
+<p>W przypadku ataku z wykorzystaniem bezużytecznego tekstu użytkownicy są przekierowywani z Twojej witryny za pomocą pliku .htaccess.</p>
+
+<p><b>Krok 1</b></p>
+<p>Znajdź plik .htaccess w witrynie. Jeśli nie masz pewności, gdzie go szukać, a korzystasz z systemu CMS takiego jak WordPress, Joomla czy Drupal, wpisz w wyszukiwarkę „lokalizacja pliku .htaccess” oraz nazwę systemu CMS. Plików .htaccess może być więcej, w zależności od witryny.
+  Utwórz listę lokalizacji plików .htaccess.</p>
+
+<p><strong>Uwaga:</strong> plik .htaccess jest często plikiem ukrytym. Pamiętaj, by włączyć wyświetlanie ukrytych plików, gdy go szukasz.</p>
+
+<p><b>Krok 2</b></p>
+<p>Zastąp wszystkie pliki .htaccess ich wersją czystą lub domyślną. Domyślną wersję pliku .htaccess zwykle znajdziesz, wpisując w wyszukiwarkę „domyślny plik .htaccess” wraz z nazwą systemu CMS. W witrynach z wieloma plikami .htaccess trzeba znaleźć czystą wersję każdego pliku i zastąpić wszystkie.</p>
+
+<p>Jeśli nie ma domyślnego pliku .htaccess, a plik .htaccess w Twojej witrynie nie był przez Ciebie konfigurowany, znaleziony plik jest prawdopodobnie złośliwy. Zapisz kopię pliku (plików) .htaccess na wszelki wypadek offline, a następnie usuń plik .htaccess z witryny.</p>
+
+<h3>Znajdowanie i usuwanie innych złośliwych plików (pięć kroków)</h3>
+
+<p>Rozpoznawanie złośliwych plików może być trudne i czasochłonne. Nie spiesz się, gdy sprawdzasz pliki. To dobry moment, by utworzyć kopię zapasową plików w witrynie, jeśli jeszcze jej nie masz. Wyszukaj w Google „kopia zapasowa witryny” wraz z nazwą systemu CMS, by dowiedzieć się, jak utworzyć taką kopię.</p>
+
+<p><b>Krok 1</b></p>
+<p>Jeśli używasz systemu CMS, zainstaluj ponownie wszystkie podstawowe (domyślne) pliki, które znajdują się w domyślnej wersji Twojego systemu CMS (a także motywy, moduły i wtyczki). Będziesz mieć pewność, że nie są zmodyfikowane przez hakera. Wyszukaj w Google „ponowna instalacja” wraz z nazwą systemu CMS, by dowiedzieć się, jak przeprowadzić ten proces. Jeśli masz jakieś wtyczki, moduły, rozszerzenia lub motywy, pamiętaj, by je również zainstalować ponownie.</p>
+
+<p>Ponowna instalacja może spowodować utratę ewentualnych dostosowań. Zanim przystąpisz do ponownej instalacji, koniecznie utwórz kopię zapasową bazy danych i wszystkich plików.</p>
+
+<p><b>Krok 2</b></p>
+<p>Teraz musisz sprawdzić, czy w witrynie nie pozostały jeszcze jakieś złośliwe lub zmodyfikowane pliki. To najtrudniejsza i najbardziej czasochłonna część procesu, ale po niej niewiele już zostanie do zrobienia.</p>
+
+<p>Po ataku tego rodzaju w witrynie najczęściej pozostają dwa typy plików: .txt i .php. Pliki .txt służą jako szablony, natomiast pliki .php określają, jakiego rodzaju pozbawiona sensu zawartość ma zostać załadowana w witrynie. Zacznij od wyszukania plików .txt. W zależności od sposobu łączenia się z witryną powinna być dostępna jakaś opcja wyszukiwania plików. Wyszukaj „.txt”, by zobaczyć wszystkie pliki z rozszerzeniem .txt. Większość będzie prawidłowymi plikami tekstowymi, takimi jak umowy licencyjne, pliki readme itp. Ty szukasz szczególnego zbioru plików .txt, zawierających kod HTML stosowany do tworzenia spamerskich szablonów. Poniżej prezentujemy fragmenty różnych kawałków kodu, które mogą się znaleźć w złośliwych plikach .txt.</p><p>
+
+</p><p>Hakerzy tworzą spamerskie strony, posługując się metodą zastępowania słów kluczowych. Prawdopodobnie zobaczysz ogólne słowa, które można zastąpić innymi w całym modyfikowanym pliku.</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  &lt;title&gt;{keyword}&lt;/title&gt;
+  &lt;meta name="description" content="{keyword}" /&gt;
+  &lt;meta name="keywords" content="{keyword}" /&gt;
+  &lt;meta property="og:title" content="{keyword}" /&gt;
+</pre>
+
+<p>Ponadto większość tych plików zawiera pewien rodzaj kodu, który umieszcza spamerskie linki oraz spamerski tekst poza widoczną częścią strony.</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  &lt;div style="position: absolute; top: -1000px; left: -1000px;"&gt;
+  Cheap prescription drugs
+  &lt;/div&gt;
+</pre>
+
+<p>Usuń te pliki .txt. Jeśli wszystkie znajdują się w tym samym folderze, możesz usunąć cały folder.</p>
+
+<p><b>Krok 3</b></p>
+<p>Złośliwe pliki PHP jest wykryć trochę trudniej. W witrynie może znajdować się jeden taki plik lub więcej. Mogą być umieszczone w tym samym podkatalogu bądź rozproszone w całej witrynie.</p>
+
+<p>Nie obawiaj się, że trzeba będzie otwierać i sprawdzać każdy plik PHP. Zacznij od utworzenia listy podejrzanych plików PHP, które chcesz zbadać. Oto kilka sposobów sprawdzenia, które pliki PHP mogą być podejrzane:</p>
+
+<ul>
+<li>Jeśli pliki systemu CMS zostały załadowane ponownie, sprawdź tylko te elementy, które nie są domyślnymi plikami lub folderami tego systemu. W ten sposób wyeliminujesz dużą część plików PHP i zostaną Ci do sprawdzenia tylko nieliczne.</li>
+<li>Posortuj pliki w witrynie według daty ostatniej modyfikacji. Poszukaj plików, które były modyfikowane w ciągu kilku miesięcy od momentu, gdy udało Ci się wykryć atak na witrynę.</li>
+<li>Posortuj pliki w witrynie według rozmiaru. Poszukaj nietypowo dużych plików.</li>
+</ul>
+
+<p><b>Krok 4</b></p>
+<p>Gdy utworzysz listę podejrzanych plików PHP, sprawdź, czy są prawidłowe czy złośliwe. Jeśli nie znasz się za bardzo na PHP, może to zająć trochę czasu, pomyśl więc nad przejrzeniem <a href="https://php.net/docs.php">dokumentacji języka PHP</a>.  Ale nawet jeśli nie masz nic wspólnego z kodowaniem, warto poznać kilka podstawowych wzorców, których można szukać w podejrzanych plikach.</p>
+
+<p>Najpierw przejrzyj podejrzane pliki pod kątem dużych bloków tekstu zawierającego kombinacje pozornie przemieszanych liter i liczb. Taki blok zwykle poprzedza kombinacja funkcji PHP takich jak base64_decode, rot13, eval, strrev, gzinflate. Poniżej znajdziesz przykładowy blok kodu. Czasem taki kod może być ściśnięty w jeden długi wiersz tekstu, dzięki czemu będzie wydawał się mniejszy niż naprawdę jest:</p>
+
+<p></p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks
+of texts. Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0VnZgk
+nbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2chVmcnBydv
+JGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2blRGI5xWZ0Fmb
+1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah1GIvRHIzlGa0B
+SZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch1GIlR2bjBCZlRXY
+jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+
+<p>Czasem kod nie jest przemieszany i wygląda jak normalny skrypt. Jeśli nie masz pewności, czy kod jest nieprawidłowy, na <a href="http://productforums.google.com/forum/#    !forum/webmasters" l10n-encrypted-href="eFqttkEJXOrPtYqL1dS4hMlzk68vmg1gLAq//4NlIesuA+SSwS44WzEss142F1VLcbCLWvVm2pEwqt29pdWwH6rz+M3RfOj6o9TWwqB6UaE=">forach pomocy dla webmasterów</a> znajdziesz doświadczonych programistów, którzy pomogą Ci przejrzeć pliki.</p>
+
+<p><b>Krok 5</b></p>
+<p>Gdy wiesz już, które pliki są podejrzane, utwórz kopię zapasową lub lokalną – zapisz pliki na komputerze na wypadek, gdyby okazało się, że jednak nie są złośliwe, a potem usuń te podejrzane.</p>
+
+<h3>Sprawdzanie, czy witryna jest czysta</h3>
+
+<p>Gdy zdołasz się pozbyć zmodyfikowanych plików, sprawdź, czy Twoja ciężka praca przyniosła efekty. Pamiętasz znalezione wcześniej strony z bezużytecznym tekstem? Poszukaj ich za pomocą narzędzia Pobierz jako Google, by sprawdzić, czy wciąż istnieją. Jeśli uzyskasz odpowiedź „Nie znaleziono”, prawdopodobnie jest całkiem dobrze.</p>
+
+<p>Aby sprawdzić, czy w witrynie nie ma już zmodyfikowanych treści, możesz też wykonać kroki opisane w <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Narzędziu do rozwiązywania problemów z zaatakowanymi witrynami</a>.</p>
+
+<h3>Jak zapobiec ponownym atakom?</h3>
+
+<p>Zlikwidowanie luk w zabezpieczeniach witryny stanowi niezbędny etap naprawiania szkód. Zgodnie z niedawnymi badaniami 20% witryn zostaje ponownie zaatakowanych przed upływem jednego dnia. Wiedza o tym, jak doszło do ataku, bardzo Ci się przyda. Na początek poczytaj o <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">najczęściej spotykanych atakach spamerskich</a>. Jeśli nie jesteś w stanie dowiedzieć się, jak doszło do ataku, zapoznaj się z listą kontrolną rzeczy, które możesz zrobić, by ograniczyć luki w zabezpieczeniach witryny:</p>
+
+<ul>
+  <li><strong>Regularnie skanuj komputer:</strong> korzystaj z któregoś z popularnych programów antywirusowych i szukaj wirusów oraz luk w zabezpieczeniach.</li>
+<li><strong>Regularnie zmieniaj hasła:</strong> regularne zmienianie haseł do wszystkich kont powiązanych z witryną (FTP, CMS, konto u dostawcy usług hostingowych) może zapobiec nieautoryzowanemu dostępowi. Ważne, by dla każdego konta tworzyć silne, niepowtarzalne hasła.</li>
+<li><strong>Stosuj <a href="https://pl.wikipedia.org/wiki/Uwierzytelnianie_wielopoziomowe" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">uwierzytelnianie dwuskładnikowe</a>:</strong> zastanów się nad włączeniem go we wszystkich usługach, które wymagają logowania. Uwierzytelnianie dwuskładnikowe utrudnia hakerom zalogowanie się, nawet jeśli zdobędą Twoje hasło.</li>
+<li><strong>Regularnie aktualizuj system CMS, wtyczki, rozszerzenia i moduły:</strong> ten krok już prawdopodobnie masz za sobą. Wiele witryn ulega atakom z powodu nieaktualnego oprogramowania. Niektóre systemy CMS obsługują automatyczne aktualizacje.</li>
+<li><strong>Zastanów się nad subskrypcją usługi monitorowania Twojej witryny pod kątem bezpieczeństwa:</strong> dostępnych jest wiele ciekawych usług, które za niewielką opłatą pomogą Ci w tym zadaniu.
+  Rozważ, czy warto zarejestrować się w którejś z nich, by lepiej chronić witrynę.</li>
+</ul>
+
+<a name="resources"></a>
+<h2>Dodatkowe zasoby</h2>
+<p>Jeśli wciąż masz problem z naprawieniem szkód w witrynie, poniżej znajdziesz więcej zasobów, które mogą okazać się pomocne.</p>
+
+<p>Te narzędzia przeskanują witrynę i być może znajdą problematyczne treści. Oprócz VirusTotal żadne z nich nie jest obsługiwane przez Google.</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: to tylko część narzędzi, które mogą skanować witryny pod kątem podejrzanej zawartości. Pamiętaj, że nie gwarantują one wykrycia wszystkich treści, które stanowią zagrożenie.</p>
+
+<p>Dodatkowe zasoby Google, które mogą się przydać:</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Forum pomocy Google dla webmasterów
+  </a></li>
+<li><a href="/web/fundamentals/security/hacked/">Pomoc Google dla webmasterów stron, które zaatakowali hakerzy</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Bezpieczne przeglądanie Google</a></li>
+</ul>
+
+<div class="alert">Brakuje narzędzia, które Twoim zdaniem mogłoby się przydać? <a href="https://docs.google.com/a  /google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="voYeKygemXxQpSsj4TC5AZV1HFx+9thIM0C4UiCOHzc03KC6nJ7AyWMICIX6+KL/rhrEkO/djoguK4tnJcrqXJ+wsE+tFKLdRQjytTrchinkpeA/GFKTKj/6rHbJmOv3qwUI9b2ZthvPFzCvc6kgQQ==">Napisz komentarz</a> i daj nam znać.</div>
+
+
+
+</body></html>
