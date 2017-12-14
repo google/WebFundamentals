@@ -1,40 +1,47 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: &lt;link rel="modulepreload"&gt; offers a way of declaratively loading ES2015 modules ahead of time.
+description: &lt;link rel="modulepreload"&gt; offers a way of declaratively loading JavaScript modules ahead of time.
 
 {# wf_updated_on: 2017-12-14 #}
 {# wf_published_on: 2017-12-14 #}
-{# wf_tags: performance #}
+{# wf_tags: performance, modules #}
 {# wf_blink_components: Blink>Loader #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
-{# wf_featured_snippet: &lt;link rel="modulepreload"&gt; offers a way of declaratively loading ES2015 modules ahead of time. This article looks at how it works and why it's better for modules than &lt;link rel="preload"&gt;. #}
+{# wf_featured_snippet: &lt;link rel="modulepreload"&gt; offers a way of declaratively loading JavaScript modules ahead of time. This article looks at how it works and why it's better for modules than &lt;link rel="preload"&gt;. #}
 
 # Preloading modules {: .page-title }
 
 {% include "web/_shared/contributors/sgomes.html" %}
 
-Browsers are finally starting to natively support ES2015 modules, both with static and
-dynamic import support. This means it's now possible to write module-based
+Browsers are finally starting to natively support JavaScript modules, both with
+[static](https://jakearchibald.com/2017/es-modules-in-browsers/) and
+[dynamic](/web/updates/2017/11/dynamic-import)
+import support. This means it's now possible to write module-based
 JavaScript that runs natively in the browser, without transpilers or bundlers.
 
 Module-based development offers some real advantages in terms of cacheability,
-helping you reduce the number of bytes you need to ship to your users with a new release.
+helping you reduce the number of bytes you need to ship to your users.
 The finer granularity of the code also helps with the loading story, by letting you
 prioritise the critical code in your application.
 
-That said, dependency trees can get deep very quickly, and there wasn't really a
-good way of declaratively preloading modules until now.
+However, module dependencies introduce a loading problem, in that the browser needs
+to wait for a module to load before it finds out what its dependencies are. One way
+around this is by preloading the dependencies, so that the browsers knows about all
+the files ahead of time and can keep the connection busy.
+
+Until now, there wasn't really a good way of declaratively preloading modules.
 Chrome 64 ships with `<link rel="modulepreload">` enabled by default, a module-specific
 version of `<link rel="preload">` that solves a number of the latter's problems.
 
 Warning: It's still very much early days for modules in the browser, so while we
-encourage experimentation, we definitely do not recommend using this technology in
-production just yet!
+encourage experimentation, we do not recommend using this technology in production
+just yet!
 
 ## Wait, what's `<link rel="preload">`?
 
-Chrome added support for `<link rel="preload">` back in version 50, as a way of
-declaratively requesting resources ahead of time, before the browser needs them.
+[Chrome added support for `<link rel="preload">`](https://www.chromestatus.com/features/5757468554559488)
+back in version 50, as a way of declaratively requesting resources ahead of time,
+before the browser needs them.
 
 ```html
 <head>
@@ -70,15 +77,15 @@ change the `crossorigin` attribute in both your `<script>` and `<link>` to one
 of the other values, and you might not have an easy way of doing so if what you're
 trying to preload is a dependency of other modules.
 
-Furthermore, fetching the file is only the first step in actually running the code;
-it first has to be parsed and compiled by Chrome's JavaScript engine - V8. Ideally,
+Furthermore, fetching the file is only the first step in actually running the code.
+First, the browser has to parse and compile it. Ideally,
 this should happen ahead of time as well, so that when the module is needed, the code is
-ready to run. However, V8 parses and compiles modules differently from other JavaScript,
-and needs to know which of the two it's looking at. `<link rel="preload">` doesn't
+ready to run. However, V8 (Chrome's JavaScript engine) parses and compiles modules
+differently from other JavaScript. `<link rel="preload">` doesn't
 provide any way of indicating that the file being loaded is a module, so all the browser
-can do is load the file and put it in the cache. Only when a request for the module is
-made from a `<script type="module">` tag or another module will it be able to parse and
-compile the code as a module.
+can do is load the file and put it in the cache. Once the script is loaded using a
+`<script type="module">` tag (or it's loaded by another module), the browser parses
+and compiles the code as a JavaScript module.
 
 ## So is `<link rel="modulepreload">` just `<link rel="preload">` for modules?
 
@@ -104,9 +111,8 @@ The `<link rel="modulepreload">` spec actually allows for optionally loading not
 the requested module, but all of its dependency tree as well. Browsers don't have to
 do this, but they can.
 
-So what would be the best practice for preloading a module and its dependency tree
-(since you'll need the dependency tree to run it, anyway), across both browsers that
-implement recursive preloading and ones that don't?
+So what would be the best cross-browser solution for preloading a module and its
+dependency tree, since you'll need the full dependency tree to run the app?
 
 Browsers that choose to preload dependencies recursively should have robust deduplication
 of modules, so in general the best practice would be to declare the module and the flat list
@@ -114,6 +120,8 @@ of its dependencies, and trust the browser not to fetch the same module twice.
 
 ```html
 <head>
+  <!-- dog.js imports dog-head.js, which in turn imports
+       dog-head-mouth.js, and so on.  -->
   <link rel="modulepreload" href="dog.js">
   <link rel="modulepreload" href="dog-head.js">
   <link rel="modulepreload" href="dog-head-mouth.js">
@@ -121,7 +129,7 @@ of its dependencies, and trust the browser not to fetch the same module twice.
 </head>
 ```
 
-## So does this mean that modules are fast now?
+## Does preloading modules help performance?
 
 Preloading can help in maximizing bandwidth usage, by telling the browser about what
 it needs to fetch so that it's not stuck with nothing to do during those long roundtrips.
