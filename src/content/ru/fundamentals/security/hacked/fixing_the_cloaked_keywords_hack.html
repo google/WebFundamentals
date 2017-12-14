@@ -8,7 +8,7 @@
 
 <p>В этом руководстве описывается тип взлома, при котором на сайт добавляются страницы с множественными вхождениями ключевых слов и большим количеством бессмысленного текста. Оно предназначено для тех, кто использует <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">систему управления контентом</a>, однако может пригодиться и другим веб-мастерам.</p>
 
-<p><strong>Примечание.</strong> Если вы не можете точно определить, взломан ли ваш сайт, прочитайте сначала <a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">это руководство</a>.</p>
+<p><strong>Примечание.</strong> Если вы не можете точно определить, взломан ли ваш сайт, прочитайте сначала <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">это руководство</a>.</p>
 
 
 
@@ -20,7 +20,7 @@
 <p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Шаг 1. Идентификация этого типа взлома</a></li><p></p>
 <p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Шаг 2. Устранение последствий</a></li><p></p>
 <p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Шаг 3: Дополнительные ресурсы</a></li><p></p>
-<p></p><li><a href="/web/fundamentals/hacked/FAQs_for_hacked_sites">Часто задаваемые вопросы по взломанным сайтам</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">Часто задаваемые вопросы по взломанным сайтам</a></li><p></p>
 </ul>
 
 <a name="identifying"></a>
@@ -51,7 +51,7 @@
 
 <h3>Проверка файла .htaccess (3 этапа)</h3>
 
-<p>При этом виде взлома файл .htaccess используется для автоматического создания замаскированных страниц на сайте. Рекомендуем изучить <a href="https://httpd.apache.org/docs/current/howto/HTACCESS.html" l10n-encrypted-href="oxukPFo/pb0BlXrrDLS8MY7H/A2VvrDif6x7R0dUeR+8wuajVXML/gAzUrl+oK27sJoXxFM3eSyNYOSGo/0x9Q==">основы работы с .htaccess</a> на официальном сайте Apache, чтобы лучше понять, как взлом влияет на сайт. </p>
+<p>При этом виде взлома файл .htaccess используется для автоматического создания замаскированных страниц на сайте. Рекомендуем изучить <a href="https://httpd.apache.org/docs/current/howto/htaccess.html" l10n-encrypted-href="oxukPFo/pb0BlXrrDLS8MY7H/A2VvrDif6x7R0dUeR+8wuajVXML/gAzUrl+oK27sJoXxFM3eSyNYOSGo/0x9Q==">основы работы с .htaccess</a> на официальном сайте Apache, чтобы лучше понять, как взлом влияет на сайт. </p>
 
 <p><b>Этап 1</b></p>
 <p>Найдите на своем сайте файл .htaccess. Если вы не знаете, где он находится, и используете платформу для создания сайтов (например, WordPress, Joomla или Drupal), в поисковой системе введите запрос "как найти файл .htaccess" и укажите название платформы. Учтите, что таких файлов может быть несколько. Составьте список путей ко всем файлам .htaccess.

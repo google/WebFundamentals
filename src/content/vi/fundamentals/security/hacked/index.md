@@ -14,7 +14,7 @@ book_path: /web/fundamentals/_book.yaml
   </figcaption>
 </figure>
 
-Mỗi ngày, các tin tặc xâm nhập hàng ngàn trang web. Hành vi tấn công thường không hiển thị với người dùng, nhưng vẫn có hại cho bất cứ ai xem trang - bao gồm cả chủ sở hữu trang web. Ví dụ: trong khi chủ sở hữu trang web hoàn toàn không hay biết, tin tặc có thể đã làm cho trang của họ bị nhiễm mã độc hại. Mã này có thể ghi lại các thao tác gõ phím trên máy tính của khách truy cập, đánh cắp thông tin đăng nhập cho các giao dịch ngân hàng trực tuyến hoặc giao dịch tài chính. Nếu bạn không chắc liệu trang web của mình có bị tấn công hay không, hãy bắt đầu bằng cách đọc hướng dẫn <a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">làm thế nào để tôi biết trang web của mình bị tấn công?</a> của chúng tôi.
+Mỗi ngày, các tin tặc xâm nhập hàng ngàn trang web. Hành vi tấn công thường không hiển thị với người dùng, nhưng vẫn có hại cho bất cứ ai xem trang - bao gồm cả chủ sở hữu trang web. Ví dụ: trong khi chủ sở hữu trang web hoàn toàn không hay biết, tin tặc có thể đã làm cho trang của họ bị nhiễm mã độc hại. Mã này có thể ghi lại các thao tác gõ phím trên máy tính của khách truy cập, đánh cắp thông tin đăng nhập cho các giao dịch ngân hàng trực tuyến hoặc giao dịch tài chính. Nếu bạn không chắc liệu trang web của mình có bị tấn công hay không, hãy bắt đầu bằng cách đọc hướng dẫn <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">làm thế nào để tôi biết trang web của mình bị tấn công?</a> của chúng tôi.
 
 
 ## Tìm hiểu về tấn công

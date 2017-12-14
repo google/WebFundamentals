@@ -21,7 +21,7 @@ redirected to another site, or you will see a page full of gibberish
 content. However, you might also see a message suggesting that the page
 does not exist (for example, a 404 error). Don’t be fooled! Hackers will
 try to trick you into thinking the page is gone or fixed when it’s
-still hacked. They do this by [cloaking](/webmasters/answer/66355)
+still hacked. They do this by [cloaking](//support.google.com/webmasters/answer/66355)
 content. Check for cloaking by entering your site’s URLs in the
 [Fetch as Google](https://www.google.com/webmasters/tools/googlebot-fetch)
 tool. The Fetch as Google tool allows you to see the underlying hidden content.
