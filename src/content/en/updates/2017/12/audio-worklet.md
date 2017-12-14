@@ -10,6 +10,8 @@ book_path: /web/updates/_book.yaml
 
 # Enter AudioWorklet {: .page-title }
 
+{% include "web/_shared/contributors/hongchanchoi.html" %}
+
 Chrome 64 comes with a highly anticipated new feature in Web Audio API -
 [AudioWorklet](https://webaudio.github.io/web-audio-api/#AudioWorklet). This
 article introduces its concept and usage for those who are eager to create a
