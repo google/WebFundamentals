@@ -6,9 +6,7 @@ toc:
   path: /web/tools/workbox/guides/precache-files
 - title: "Route Requests"
   path: /web/tools/workbox/guides/route-requests
-- title: "Configure the Build Tools"
-  path: /web/tools/workbox/guides/configure-build-tools
-- title: "Configure the Runtime Options"
+- title: "Configure Workbox"
   path: /web/tools/workbox/guides/configure-workbox
 - title: "Handle Third-Party Requests"
   path: /web/tools/workbox/guides/handle-third-party-requests

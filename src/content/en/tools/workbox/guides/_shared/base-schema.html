@@ -124,7 +124,7 @@
     </p>
     <p>
       One or more
-      <a href="/web/tools/workbox/reference-docs/prerelease/module-workbox-build.html#.ManifestTransform"><code>ManifestTransform</code></a>
+      <a href="/web/tools/workbox/reference-docs/prerelease/module-workbox-build#.ManifestTransform"><code>ManifestTransform</code></a>
       functions, which will be applied sequentially against the generated manifest.
     </p>
     <p>
@@ -135,7 +135,7 @@
       <strong>Example:</strong>
     </p>
     <pre class="prettyprint">manifestTransforms: [
-  // Basic transformation to ignore a certain URL:
+  // Basic transformation to remove a certain URL:
   (entries) => entries.filter((entry) => entry.url !== 'ignored.html')
 ]</pre>
   </td>
@@ -151,8 +151,8 @@
     </p>
     <p>
       This value can be used to determine the maximum size of files that will be precached. This
-      prevents you from inadvertantly precaching very large files that might have been accidentally
-      match one of your patterns.
+      prevents you from inadvertantly precaching very large files that might have accidentally
+      matched one of your patterns.
     </p>
     <p>
       <strong>Example:</strong>

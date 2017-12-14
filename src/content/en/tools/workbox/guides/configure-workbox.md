@@ -6,7 +6,7 @@ description: A guide on how to configure Workbox.
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
-# Configure the Runtime Options {: .page-title }
+# Configure Workbox {: .page-title }
 
 {% include "web/tools/workbox/_shared/alpha.html" %}
 
