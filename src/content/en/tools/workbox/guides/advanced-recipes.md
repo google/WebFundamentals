@@ -54,7 +54,7 @@ function onNewServiceWorker(registration, callback) {
   }
 
   function listenInstalledStateChange() {
-    registration.installing.addEventListener('statechange', function() {
+    registration.installing.addEventListener('statechange', function(event) {
       if (event.target.state === 'installed') {
         // A new service worker is available, inform the user
         callback();
