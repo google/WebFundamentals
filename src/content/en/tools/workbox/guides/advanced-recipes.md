@@ -40,7 +40,7 @@ function showRefreshUI(registration) {
 
     button.disabled = true;
 
-    registration.waiting.postMessage('force-activate');
+    registration.waiting.postMessage('skipWaiting');
   });
 
   document.body.appendChild(button);
@@ -73,19 +73,9 @@ function onNewServiceWorker(registration, callback) {
 
 window.addEventListener('load', function() {
   // When the user asks to refresh the UI, we'll need to reload the window
-  navigator.serviceWorker.addEventListener('message', function(event) {
-    if (!event.data) {
-      return;
-    }
-
-    switch (event.data) {
-      case 'reload-window':
-        window.location.reload();
-        break;
-      default:
-        // NOOP
-        break;
-    }
+  navigator.serviceWorker.addEventListener('controllerchange', function(event) {
+    console.log('Controller loaded');
+    window.location.reload();
   });
 
   navigator.serviceWorker.register('/sw.js')
@@ -108,11 +98,10 @@ This code handles the verious possible lifecycles of the service worker
 and detects when a new service worker has become installed and is waiting to
 activate.
 
-When a waiting service worker is found we set up a message listener on
-`navigator.serviceWorker` so we know when to reload the window. When the
+When a waiting service worker is found we set up a 'controllerchange' listener
+on `navigator.serviceWorker` so we know when to reload the window. When the
 user clicks on the UI to refresh the page, we post a message to the new
-service worker telling it to force an activation. After this a message is
-posted to all windows telling them to reload.
+service worker telling it to `skipWaiting` meaning it'll start to activate.
 
 Note: This is one possible approach to refreshing the page on a new service
 worker. For a more thorough answer as well as an explanation of alternative
@@ -129,12 +118,8 @@ self.addEventListener('message', (event) => {
   }
 
   switch (event.data) {
-    case 'force-activate':
-      self.skipWaiting();
-      self.clients.claim();
-      self.clients.matchAll().then((clients) => {
-        clients.forEach((client) => client.postMessage('reload-window'));
-      });
+    case 'skipWaiting':
+
       break;
     default:
       // NOOP
@@ -143,10 +128,8 @@ self.addEventListener('message', (event) => {
 });
 ```
 
-This will receive a the 'force-activate' message and call `skipWaiting()` and
-`clients.claim()` so that the service worker activates immediately and controls
-all of the currently open windows. We then message each window with a
-'reload-window' message so each tab is refreshed with the latest content.
+This will receive a the 'skipWaiting' message and call `skipWaiting()`forcing
+the service worker to activate immediately.
 
 ## "Warm" the runtime cache
 
