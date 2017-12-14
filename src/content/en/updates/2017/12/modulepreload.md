@@ -26,7 +26,7 @@ prioritise the critical code in your application.
 
 However, module dependencies introduce a loading problem, in that the browser needs
 to wait for a module to load before it finds out what its dependencies are. One way
-around this is by preloading the dependencies, so that the browsers knows about all
+around this is by preloading the dependencies, so that the browser knows about all
 the files ahead of time and can keep the connection busy.
 
 Until now, there wasn't really a good way of declaratively preloading modules.
@@ -71,7 +71,7 @@ wastes the user's bandwidth and makes them wait longer, for no good reason.
 
 For `<script>` and `<link>` tags, you can set the credentials mode with the `crossorigin`
 attribute. However, it turns out that a `<script type="module">` with no
-`crossorigin` attribute means that the credentials mode is `omit`, which doesn't exist
+`crossorigin` attribute indicates a credentials mode of `omit`, which doesn't exist
 for `<link rel="preload">`. This means that you would have to
 change the `crossorigin` attribute in both your `<script>` and `<link>` to one
 of the other values, and you might not have an easy way of doing so if what you're
