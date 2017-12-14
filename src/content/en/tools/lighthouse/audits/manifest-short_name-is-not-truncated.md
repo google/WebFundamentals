@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Manifest's short_name won't be truncated when displayed on homescreen" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-09-21 #}
+{# wf_blink_components: N/A #}
 
 # Manifest's short_name Won't Be Truncated When Displayed on Homescreen {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 When a user adds your web app to the homescreen, the `short_name` property is
 displayed as the label next to your app's icon. If the `short_name` is longer
@@ -16,7 +17,7 @@ than 12 characters, it'll be truncated on the homescreen.
 Note that, if the `short_name` is not present, Chrome can fall back to the
 `name` property if it's short enough.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Make the `short_name` property in your Web App Manifest less than 12 characters.
 
@@ -29,11 +30,11 @@ Make the `short_name` property in your Web App Manifest less than 12 characters.
 Or, if you don't specify a `short_name` property in your manifest, make the
 `name` property less than 12 characters.
 
-Check out [Manifest Exists](manifest-exists#how)
+Check out [Manifest Exists](manifest-exists#recommendations)
 for a list of guides that teach you how to properly
 implement and test "Add to Homescreen" support in your app.
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 Lighthouse fetches the manifest and verifies that the `short_name` property is
 less than 12 characters. Note that since the `name` property can be used as a

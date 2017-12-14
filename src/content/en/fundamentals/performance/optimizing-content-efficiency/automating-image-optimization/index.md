@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Image formats!
 
-{# wf_updated_on: 2017-12-05 #}
+{# wf_updated_on: 2017-12-07 #}
 {# wf_published_on: 2017-11-16 #}
 
 # Automating image optimization {: .page-title }
@@ -2182,7 +2182,7 @@ Optionally you can also add a src attribute with a low quality image:
 </iframe>
 ```
 
-For the web version of this book, I paired Lazysizes (athough you can use any
+For the web version of this book, I paired Lazysizes (although you can use any
 alternative) with Cloudinary for on-demand responsive images. This allowed me
 the freedom to experiment with different values for scale, quality, format and
 whether or not to progressively load with minimal effort:

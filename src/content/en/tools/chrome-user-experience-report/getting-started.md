@@ -1,8 +1,9 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2017-11-29 #}
+{# wf_updated_on: 2017-12-12 #}
 {# wf_published_on: 2017-10-23 #}
+{# wf_blink_components: N/A #}
 
 # Chrome User Experience Report {: .page-title }
 
@@ -18,7 +19,7 @@ you will use to access the dataset, and basic knowledge of
 ### Access the dataset {: #access-dataset }
 
 The dataset is available at 
-<https://bigquery.cloud.google.com/dataset/chrome-ux-report:chrome_ux_report>. 
+<https://bigquery.cloud.google.com/dataset/chrome-ux-report:all>. 
 If you visit that page and get a prompt to create a project like the one below, 
 continue with the following steps to create a new GCP project. Otherwise, 
 you can skip to the next section and start querying the dataset.
@@ -64,7 +65,7 @@ Refer to the
 [methodology documentation](/web/tools/chrome-user-experience-report/) for an 
 overview of provided metrics, dimensions, and high-level overview of the schema. 
 For a more hands-on view, now that you have the GCP project setup, navigate to 
-<https://bigquery.cloud.google.com/table/chrome-ux-report:chrome_ux_report.201710>.
+<https://bigquery.cloud.google.com/table/chrome-ux-report:all.201710>.
 
 The dataset is a collection of tables in the format `YYYYMM`. The schema for 
 `201710` (October 2017) will be displayed, outlining the detailed structure of 
@@ -74,7 +75,7 @@ each row.
 
 With access to the dataset, querying it is straightforward:
 
-1. Navigate to [BigQuery](https://bigquery.cloud.google.com/dataset/chrome-ux-report:chrome_ux_report).
+1. Navigate to [BigQuery](https://bigquery.cloud.google.com/dataset/chrome-ux-report:all).
 1. Click **Compose Query** on top of the side panel.
 <img src="images/bq-compose.png" class="screenshot" alt="Composing a new query on BigQuery" />
 1. Enter your query in the main panel.
@@ -90,7 +91,7 @@ execute it.
 ```sql
 #standardSQL
 SELECT DISTINCT origin
-FROM `chrome-ux-report.chrome_ux_report.201710`
+FROM `chrome-ux-report.all.201710`
 WHERE origin LIKE '%://example.com'
 ```
 [Run it on BigQuery](https://bigquery.cloud.google.com/savedquery/920398604589:00943c51adc044588842b2e8230d43ce)
@@ -145,7 +146,7 @@ FROM (
   SELECT
     first_contentful_paint.histogram.bin AS bins
   FROM
-    `chrome-ux-report.chrome_ux_report.201710`
+    `chrome-ux-report.all.201710`
   WHERE
     origin = 'http://example.com')
 CROSS JOIN
@@ -234,7 +235,7 @@ SELECT
       bin.start < 1000
       AND origin = 'http://example.com')) AS density
 FROM
-  `chrome-ux-report.chrome_ux_report.201710`
+  `chrome-ux-report.all.201710`
 ```
 [Run it on BigQuery](https://bigquery.cloud.google.com/savedquery/920398604589:ed83e19409254d809cc82686c2ab26e1)
 
@@ -261,7 +262,7 @@ SELECT
       bin.end <= 1000
       AND origin = 'http://example.com')) AS density
 FROM
-  `chrome-ux-report.chrome_ux_report.201710`
+  `chrome-ux-report.all.201710`
 GROUP BY
   ect
 ORDER BY

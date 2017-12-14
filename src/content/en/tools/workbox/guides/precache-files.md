@@ -2,6 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with Workbox.
 
+{# wf_blink_components: N/A #}
 {# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-15 #}
 
@@ -288,3 +289,43 @@ gulp.task('build-sw', () => {
   });
 });
 ```
+
+### Using workbox-webpack-plugin
+
+**The webpack plugin has a different behavior to the CLI and workbox-build.**
+
+To use the webpack plugin you'll first need to install the plugin.
+
+<pre class="devsite-terminal">
+npm install workbox-webpack-plugin --save-dev
+</pre>
+
+Then you'll need to add it to your webpack config.
+
+```javascript
+const workboxPlugin = require('workbox-webpack-plugin');
+
+...
+
+plugins: [
+  ...
+
+  new workboxPlugin({
+    swSrc: './src/sw.js',
+    swDest: './dist/sw.js',
+    globDirectory: './dist/',
+    globPatterns: ['**/*.{html,js,css}'],
+  })
+]
+...
+```
+
+Then in your service worker, you'll need to add the following:
+
+```javascript
+workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
+```
+
+When the plugin is run, it'll add an `importScripts()` that will include
+a file that provides `self.__precacheManifest`. This will be the list of
+files to precache.

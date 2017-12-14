@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Uses Passive Event Listeners to Improve Scrolling Performance" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-11-30 #}
+{# wf_blink_components: N/A #}
 
 # Uses Passive Event Listeners to Improve Scrolling Performance  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Setting the `passive` option on your touch and wheel event listeners can
 improve scrolling performance.
@@ -21,7 +22,7 @@ for a technical deep-dive.
 [blog]: https://developers.google.com/web/updates/2016/06/passive-event-listeners
 [explainer]: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Add the `passive` flag to all of the event listeners that Lighthouse
 has identified. In general, add the `passive` flag to every `wheel`,
@@ -42,7 +43,7 @@ implement passive event listeners.
 
 [polyfill]: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 Lighthouse uses the following algorithm to flag potential passive event
 listener candidates:

@@ -47,6 +47,7 @@ const REMARK_WARNING_ONLY = [
 ];
 const RE_BOM = /^\uFEFF/;
 const RE_SRC_BASE = /src\/content\//;
+const RE_SRC_TRANSLATED_PATH = /^src\/content\/(?!en)..\/.*/;
 const RE_DATA_BASE = /src\/data\//;
 const RE_GULP_BASE = /^gulp-tasks\/?/;
 const ESLINT_RC_FILE = '.eslintrc';
@@ -334,6 +335,7 @@ function parseYAML(filename, contents) {
  * @return {Promise} The list of files
  */
 function getFiles() {
+  gutil.log(' Searching for files...');
   if (global.WF.options.testPath || global.WF.options.testAll) {
     return new Promise(function(resolve, reject) {
       let globs = ['./gulp-tasks/**/*', './gulpfile.js'];
@@ -343,14 +345,18 @@ function getFiles() {
       };
       if (global.WF.options.testPath) {
         const testPath = global.WF.options.testPath;
-        gutil.log(' ', 'Searching for files in', chalk.cyan(testPath));
+        if (global.WF.options.verbose) {
+          gutil.log(' ', 'Searching for files in', chalk.cyan(testPath));
+        }
         opts.srcBase = global.WF.options.testPath;
         globs.push('**/*');
       } else {
         opts.srcBase = './src/content';
         global.WF.options.lang.forEach(function(lang) {
           const testPath = `${opts.srcBase}/${lang}`;
-          gutil.log(' ', 'Searching for files in', chalk.cyan(testPath));
+          if (global.WF.options.verbose) {
+            gutil.log(' ', 'Searching for files in', chalk.cyan(testPath));
+          }
           globs.push(`${lang}/**/*`);
         });
       }
@@ -408,12 +414,8 @@ function testMarkdown(filename, contents, options) {
     let msg;
     let matched;
     let position;
-    let isInclude = wfRegEx.RE_MD_INCLUDE.test(contents);
-
-    if (wfRegEx.RE_DEVSITE_TRANSLATION.test(contents)) {
-      options.enforceLineLengths = false;
-      options.lastUpdateMaxDays = null;
-    }
+    const isInclude = wfRegEx.RE_MD_INCLUDE.test(contents);
+    const isTranslation = RE_SRC_TRANSLATED_PATH.test(filename);
 
     let pageType = PAGE_TYPES.ARTICLE;
     if (/page_type: landing/.test(contents)) {
@@ -483,7 +485,7 @@ function testMarkdown(filename, contents, options) {
 
     // Validate wf_updated
     matched = wfRegEx.RE_UPDATED_ON.exec(contents);
-    if (!isInclude) {
+    if (!isInclude && !isTranslation) {
       if (!matched) {
         msg = 'WF Tag `wf_updated_on` is missing (YYYY-MM-DD)';
         logError(filename, null, msg);
@@ -507,7 +509,7 @@ function testMarkdown(filename, contents, options) {
 
     // Validate wf_published
     matched = wfRegEx.RE_PUBLISHED_ON.exec(contents);
-    if (!isInclude) {
+    if (!isInclude && !isTranslation) {
       if (!matched) {
         msg = 'WF Tag `wf_published_on` is missing (YYYY-MM-DD)';
         logError(filename, null, msg);
@@ -559,20 +561,22 @@ function testMarkdown(filename, contents, options) {
 
     // Check for valid Blink components
     matched = wfRegEx.RE_BLINK_COMPONENTS.exec(contents);
-    if (options.blinkComponents) {
+    if (options.blinkComponents && !isInclude && !isTranslation) {
       if (matched) {
         position = {line: getLineNumber(contents, matched.index)};
-        matched[1].split(',').forEach(function(component) {
-          component = component.trim();
-          if (options.blinkComponents.indexOf(component) === -1) {
-            msg = `The component \`${component}\` is unknown or misspelled.`;
-            logError(filename, position, msg);
-          }
-        });
+        if (matched[1].trim().toUpperCase() !== 'N/A') {
+          matched[1].split(',').forEach(function(component) {
+            component = component.trim();
+            if (options.blinkComponents.indexOf(component) === -1) {
+              msg = `Unknown 'wf_blink_component' (${component}), see ` +
+                `https://goo.gl/VXmg9e`;
+              logError(filename, position, msg);
+            }
+          });
+        }
       } else {
-        msg = 'No `wf_blink_components` attribute found. Please check ' +
-          'https://goo.gl/MVeN2r and add if appropriate.';
-        logWarning(filename, null, msg);
+        msg = `No 'wf_blink_components' found, see https://goo.gl/VXmg9e`;
+        logError(filename, null, msg);
       }
     }
 
@@ -745,7 +749,7 @@ function testMarkdown(filename, contents, options) {
       remarkLintOptions.wfHeadingsAtLeast = 2;
     }
     remarkLintOptions.maximumLineLength = false;
-    if (options.enforceLineLengths) {
+    if (options.enforceLineLengths && !isTranslation) {
       remarkLintOptions.maximumLineLength = 100;
       contents = contents.replace(wfRegEx.RE_DESCRIPTION, '\n');
       contents = contents.replace(wfRegEx.RE_SNIPPET, '\n\n');
@@ -1000,6 +1004,7 @@ function testProject(filename, contents) {
           type: 'object',
           properties: {
             description: {type: 'string', required: true},
+            background: {type: 'string', required: false},
           },
           additionalProperties: false,
         },
@@ -1375,7 +1380,6 @@ gulp.task('test:travis-init', function() {
   github.authenticate({type: 'oauth', token: gitToken});
   return github.pullRequests.get(prOpts).then((prData) => {
     gutil.log('  ', `${prData.title} (${prData.number})`);
-    gutil.log('  ', prData.body);
     const body = prData.body;
     const ciFlags = wfRegEx.getMatch(/\[WF_IGNORE:(.*)\]/, body, '').split(',');
     if (ciFlags.indexOf('BLINK') >= 0) {
@@ -1393,6 +1397,9 @@ gulp.task('test:travis-init', function() {
     if (ciFlags.indexOf('NO_ESLINT') >= 0) {
       global.WF.options.ignoreESLint = true;
     }
+    if (ciFlags.indexOf('LAST_UPDATED') >= 0) {
+      global.WF.options.ignoreLastUpdated = true;
+    }
   });
 });
 
@@ -1401,14 +1408,31 @@ gulp.task('test:travis-init', function() {
  *****************************************************************************/
 
 gulp.task('test', ['test:travis-init'], function() {
+  if (global.WF.options.help) {
+    gutil.log(' ', chalk.cyan('--help'), 'Shows this message');
+    gutil.log(' ', chalk.cyan('--testAll'), 'Tests all files');
+    gutil.log(' ', chalk.cyan('--testMaster'), 'Tests all files like Travis');
+    gutil.log(' ', chalk.cyan('--testTests'), 'Tests the test files');
+    gutil.log(' ', chalk.cyan('--ignoreESLint'), 'Skips ESLinting');
+    gutil.log(' ', chalk.cyan('--ignoreBlink'), 'Skips wf_blink_components');
+    gutil.log(' ', chalk.cyan('--ignoreMaxLen'), 'Skips line length checks');
+    gutil.log(' ', chalk.cyan('--ignoreScript'), 'Skips <script> checks');
+    gutil.log(' ', chalk.cyan('--ignoreFileSize'), 'Skips file size checks');
+    gutil.log(' ', chalk.cyan('--ignoreLastUpdated'), 'Skips wf_updated_on');
+    gutil.log(' ', chalk.cyan('--ignoreCommentWidget'), 'Skips comment widget');
+  }
+
   if ((global.WF.options.testMaster) ||
       (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MASTER)) {
     global.WF.options.testAll = true;
     global.WF.options.ignoreBlink = true;
+    global.WF.options.ignoreMaxLen = true;
     global.WF.options.ignoreScript = true;
     global.WF.options.ignoreFileSize = true;
+    global.WF.options.ignoreLastUpdated = true;
     global.WF.options.ignoreCommentWidget = true;
   }
+
   let opts = {
     enforceLineLengths: true,
     lastUpdateMaxDays: 7,
@@ -1417,50 +1441,10 @@ gulp.task('test', ['test:travis-init'], function() {
     contributors: parseYAML(CONTRIBUTORS_FILE, readFile(CONTRIBUTORS_FILE)),
   };
 
-  // Supress ESLinter
-  if (global.WF.options.ignoreESLint) {
-    let msg = `${chalk.yellow('eslint_gulp')} check was skipped`;
-    logWarning('gulp-tasks/test.js', null, msg);
-  } else {
-    const esLintConfig = parseJSON(ESLINT_RC_FILE, readFile(ESLINT_RC_FILE));
-    eslinter = new ESlintEngine(esLintConfig);
-  }
-
-  // Supress wf_blink_components warnings
-  if (global.WF.options.ignoreBlink) {
-    let msg = `${chalk.yellow('wf_blink_components')} check was skipped`;
-    logWarning('gulp-tasks/test.js', null, msg);
-  } else {
-    opts.blinkComponents = parseJSON(BLINK_COMPONENTS_FILE,
-        readFile(BLINK_COMPONENTS_FILE));
-  }
-
-  // Supress max line length warnings
-  if (global.WF.options.ignoreMaxLen) {
-    let msg = `${chalk.yellow('max line length')} check was skipped`;
-    logWarning('gulp-tasks/test.js', null, msg);
-    opts.enforceLineLengths = false;
-  }
-
-  // Supress markdown script warnings
-  if (global.WF.options.ignoreScript) {
-    let msg = `${chalk.yellow('<script> tag')} check was skipped`;
-    logWarning('gulp-tasks/test.js', null, msg);
-    opts.ignoreScriptTags = true;
-  }
-
-  // Supress file size warnings
-  if (global.WF.options.ignoreFileSize) {
-    let msg = `${chalk.yellow('file size')} check was skipped`;
-    logWarning('gulp-tasks/test.js', null, msg);
-    opts.ignoreFileSize = true;
-  }
-
-  // Supress missing comment widget warnings
-  if (global.WF.options.ignoreCommentWidget) {
-    let msg = `${chalk.yellow('comment_widget')} check was skipped`;
-    logWarning('gulp-tasks/test.js', null, msg);
-    opts.ignoreMissingCommentWidget = true;
+  // Test all files
+  if (global.WF.options.testAll) {
+    let msg = `${chalk.cyan('--testAll')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
   }
 
   // Test the test files
@@ -1469,14 +1453,62 @@ gulp.task('test', ['test:travis-init'], function() {
     opts.lastUpdateMaxDays = false;
   }
 
-  // Test all files
-  if (global.WF.options.testAll) {
+  // Supress ESLinter
+  if (global.WF.options.ignoreESLint) {
+    let msg = `${chalk.cyan('--ignoreESLint')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
+  } else {
+    const esLintConfig = parseJSON(ESLINT_RC_FILE, readFile(ESLINT_RC_FILE));
+    eslinter = new ESlintEngine(esLintConfig);
+  }
+
+  // Supress wf_blink_components warnings
+  if (global.WF.options.ignoreBlink) {
+    let msg = `${chalk.cyan('--ignoreBlink')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
+  } else {
+    opts.blinkComponents = parseJSON(BLINK_COMPONENTS_FILE,
+        readFile(BLINK_COMPONENTS_FILE));
+  }
+
+  // Supress max line length warnings
+  if (global.WF.options.ignoreMaxLen) {
+    let msg = `${chalk.cyan('--ignoreMaxLen')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
     opts.enforceLineLengths = false;
+  }
+
+  // Supress markdown script warnings
+  if (global.WF.options.ignoreScript) {
+    let msg = `${chalk.cyan('--ignoreScript')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
+    opts.ignoreScriptTags = true;
+  }
+
+  // Supress file size warnings
+  if (global.WF.options.ignoreFileSize) {
+    let msg = `${chalk.cyan('--ignoreFileSize')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
+    opts.ignoreFileSize = true;
+  }
+
+  // Supress missing comment widget warnings
+  if (global.WF.options.ignoreCommentWidget) {
+    let msg = `${chalk.cyan('--ignoreCommentWidget')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
+    opts.ignoreMissingCommentWidget = true;
+  }
+
+  // Supress last updated warnings
+  if (global.WF.options.ignoreLastUpdated) {
+    let msg = `${chalk.cyan('--ignoreLastUpdated')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
     opts.lastUpdateMaxDays = false;
   }
 
   return getFiles()
     .then(function(files) {
+      gutil.log(chalk.green('Testing'), 'files...');
       return Promise.all(files.map(function(filename) {
         return testFile(filename, opts);
       }));

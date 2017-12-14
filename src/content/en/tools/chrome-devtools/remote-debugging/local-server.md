@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Host a site on a development machine web server, and then access the content from an Android device.
 
-{# wf_updated_on: 2016-04-07 #}
+{# wf_updated_on: 2017-11-27 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Access Local Servers {: .page-title }
@@ -18,8 +18,10 @@ machine and then view the site on an Android device.
 
 
 ### TL;DR {: .hide-from-toc }
-- Port forwarding enables you to view content from your development machine's web server on your Android device.
-- If your web server is using a custom domain, you can set up your Android device to access the content at that domain with custom domain mapping.
+- Port forwarding enables you to view content from your development machine's web server on your
+  Android device.
+- If your web server is using a custom domain, you can set up your Android device to access the
+  content at that domain with custom domain mapping.
 
 
 ## Set up port forwarding {:#port-forwarding}
@@ -39,7 +41,6 @@ To enable port forwarding:
    **Connected** status indicator. 
 1. In the **Inspect Devices** dialog in DevTools, enable **Port forwarding**.
 1. Click **Add rule**.
-
    ![adding a port forwarding rule](imgs/add-rule.png)
 1. In the **Device port** textfield on the left, enter the `localhost` port 
    number from which you want to be able to access the site on your Android 

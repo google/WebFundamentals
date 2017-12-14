@@ -92,10 +92,14 @@ toc:
   path: /web/tools/lighthouse/audits/optimize-images
 - title: Oversized Images
   path: /web/tools/lighthouse/audits/oversized-images
+- title: Page has unsuccessful HTTP status code
+  path: /web/tools/lighthouse/audits/successful-http-code
 - title: Page Load Is Fast Enough On 3G
   path: /web/tools/lighthouse/audits/fast-3g
 - title: Perceptual Speed Index
   path: /web/tools/lighthouse/audits/speed-index
+- title: Prevents Users From Pasting Into Password Fields
+  path: /web/tools/lighthouse/audits/password-pasting
 - title: Redirects HTTP Traffic To HTTPS
   path: /web/tools/lighthouse/audits/http-redirects-to-https
 - title: Registers A Service Worker
