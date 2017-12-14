@@ -2,9 +2,8 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to configure Workbox.
 
-{# wf_updated_on: 2017-12-13 #}
+{# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-15 #}
-{# wf_blink_components: Blink>ServiceWorker #}
 
 # Configure Workbox {: .page-title }
 
