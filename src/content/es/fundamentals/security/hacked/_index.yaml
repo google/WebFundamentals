@@ -1,0 +1,89 @@
+project_path: /webmasters/hacked/_project.yaml
+book_path: /webmasters/hacked/_book.yaml
+landing_page:
+  rows:
+  - heading: Si eres propietario de un sitio web y ves esto…
+    columns:
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-harm.png
+      - image_path: https://www.google.com/webmasters/hacked/example-malwarechrome.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-compromised.png
+      - image_path: https://www.google.com/webmasters/hacked/example-reportedattack.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-interstitial.png
+      - image_path: https://www.google.com/webmasters/hacked/example-phishing.png
+  - heading: Es posible que se haya pirateado tu sitio web
+    classname: devsite-landing-row-100
+    items:
+    - description: >
+        Todos los días, los ciberdelincuentes piratean miles de sitios web. Aunque
+        a menudo los usuarios no puedan ver las acciones de piratería, estas no dejan
+        de ser perjudiciales tanto para los que vean la página como para el propietario
+        del sitio web. Por ejemplo, sin que el propietario lo sepa, el hacker puede
+        haber infectado su sitio web con código dañino que registre las pulsaciones
+        de teclas en los equipos de los visitantes para robarles las credenciales
+        de inicio de sesión de una entidad bancaria o de transacciones financieras.
+  - heading: Más información acerca de la piratería
+    items:
+    - youtube_id: mbJvL61DOZg
+    - description: >
+        <strong>En este vídeo se tratan las cuestiones siguientes:</strong></br> <ul><li>Cómo
+        y por qué se piratean los sitios web</li> <li>Proceso de recuperación de un
+        sitio web y eliminación de las advertencias que recibe el usuario</li> <li>Tiempo
+        aproximado que conlleva corregir un sitio web</li> <li>Corregir personalmente
+        un sitio web o contratar a un profesional</li></ul>
+  - heading: Toma medidas
+    columns:
+    - items:
+      - heading: 1. Crea un equipo
+        description: >
+          Ponte en contacto con tu proveedor de alojamiento web y crea un equipo de
+          asistencia.
+        path: /web/fundamentals/security/hacked/support_team
+        icon:
+          icon_name: supervisor_account
+      - heading: 2. Pon el sitio web en cuarentena
+        description: >
+          Impide que el hacker haga más daño.
+        path: /web/fundamentals/security/hacked/quarantine_site
+        icon:
+          icon_name: error_outline
+      - heading: 3. Utiliza Search Console
+        description: >
+          Utiliza Search Console para poder identificar el tipo de piratería.
+        path: /web/fundamentals/security/hacked/use_search_console
+        icon:
+          icon_name: build
+      - heading: 4A. Evalúa los daños (spam)
+        description: >
+          Ante un caso de daños provocados por spam, descubre qué es lo que hay que
+          corregir.
+        path: /web/fundamentals/security/hacked/hacked_with_spam
+        icon:
+          icon_name: bug_report
+      - heading: 4B. Evalúa los daños (software malicioso)
+        description: >
+          Ante un caso de daños provocados por software malicioso, descubre qué es
+          lo que hay que corregir.
+        path: /web/fundamentals/security/hacked/hacked_with_malware
+        icon:
+          icon_name: bug_report
+      - heading: 5. Identifica la vulnerabilidad
+        description: >
+          Averigua cómo entró el hacker.
+        path: /web/fundamentals/security/hacked/vulnerability
+        icon:
+          icon_name: search
+      - heading: 6. Limpia el sitio web y haz tareas de mantenimiento
+        description: >
+          Acaba con la vulnerabilidad que permitió que el hacker entrara.
+        path: /web/fundamentals/security/hacked/clean_site
+        icon:
+          icon_name: verified_user
+      - heading: 7. Solicita una revisión
+        description: >
+          Pide a Google que quite la etiqueta de sitio web pirateado.
+        path: /web/fundamentals/security/hacked/request_review
+        icon:
+          icon_name: done

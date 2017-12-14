@@ -1,0 +1,190 @@
+<html devsite dir="rtl"><head>
+  <title>إصلاح الاستيلاء باستخدام كلمات رئيسية وروابط تم إخفاء هويتها</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="DGV7xNragN9HZ8y5MSlU2fxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmoLMiYpjArW9nlDUh5Fd/tj3ANwnrHrtJgc3J1GP4EyxKrz+M3RfOj6o9TWwqB6UaE="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body dir="rtl">
+
+<p>تم إنشاء هذا الدليل خصيصًا لتناول الاستيلاء عن طريق إضافة صفحات هراء مثقلة بالكلمات الرئيسية إلى موقعك الإلكتروني وهو ما نشير إليه باسم الاستيلاء بإضافة هراء، لذا فإن هذا الدليل مُعد لمستخدمي
+  <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">
+    أنظمة إدارة المحتوى الشائعة</a> (CMS) غير أنك ستستفيد منه حتى وإن لم تكن تستخدم هذه الأنظمة.</p>
+
+<p><strong>ملاحظة:</strong> ألست متأكدًا مما إذا كان موقعك قد تعرض للاستيلاء؟ ابدأ بقراءة دليل
+  <a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked"> كيفية التحقق
+  من تعرض موقعك للاستيلاء</a>.</p>
+
+
+
+<aside class="note">نود التأكد من أن هذا الدليل مفيد لك حقًا، لذا يرجى <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">
+  ترك تعليقاتك</a> لمساعدتنا في تحسينه.</aside>
+
+<h2>جدول المحتويات</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">الخطوة الأولى: تحديد هذا النوع من الاستيلاء</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">الخطوة الثانية: حل مشكلة الاستيلاء</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">الخطوة الثالثة: موارد إضافية</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/hacked/FAQs_for_hacked_sites">الأسئلة الشائعة بشأن مواقع الويب التي تم الاستيلاء عليها</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>تحديد هذا النوع من الاستيلاء</h2>
+
+<p>يؤدي الاستيلاء باستخدام الكلمات الرئيسية والروابط التي تم إخفاء هويتها إلى الإنشاء التلقائي لكثير من الصفحات التي تحتوي على نصوص وروابط وصور لا معنى لها، وتضم هذه الصفحات أحيانًا عناصر النموذج الأساسية من الموقع الأصلي لذا قد تبدو الصفحات للوهلة الأولى أجزاء عادية من الموقع إلى أن تشرع في قراءة المحتوى.</p>
+
+<p>ويتم إنشاء الصفحات التي تم الاستيلاء عليها للتلاعب بعوامل ترتيب نتائج بحث Google حيث يحاول المخترقون عادة تحقيق الربح من هذا من خلال بيع الروابط الموجودة على هذه الصفحات لأطراف خارجية مختلفة وعادة ما تعيد الصفحات الزائرين إلى صفحة غير ذات صلة مثل موقع إباحي يحقق فيه المخترقون المال.</p>
+
+<p>وللتحقق من هذه المشكلة، ابدأ بأداة <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">
+  مشكلات الأمان</a> في <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a> لتعرف إذا ما اكتشف محرك البحث Google أيًا من هذه الصفحات التي تم الاستيلاء عليها على موقعك. وأحيانًا يمكنك اكتشاف صفحات من هذه النوعية من خلال فتح نافذة بحث Google وكتابة <code class="notranslate l10n-notranslate">site:[your site]</code>، وهو ما يُظهر لك الصفحات التي فهرسها Google لموقعك بما في ذلك الصفحات التي تم الاستيلاء عليها. ألقِ نظرة على بضع صفحات من نتائج البحث لترى إذا ما يمكن تحديد عناوين URL مخالفة، وإذا لم تعثر على أي محتوى تم الاستيلاء عليه في بحث Google، فاستخدم نفس عبارات البحث مع محرك بحث مختلف، فقد تعرض محركات البحث الأخرى محتوى مُستَولى عليه قد أزاله Google من الفهرس.
+  وفي ما يلي مثال لما قد يبدو عليه هذا.</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<p l10n-encrypted-style="/eDMjbcyQ8YpGjRJggEDIBQTTm7qpsvvmfgxV6fkusE=" style="padding:0px 25px"><strong>ملاحظة:</strong> <em>لاحظ أن نتائج البحث هنا تتضمن الكثيرمن الصفحات التي لم ينشئها مالك الموقع الإلكتروني.وإذا أمعنت النظر في أوصاف نتيجة البحث الثانية والثالثة، سترى أمثلة لنصوص هراء أنشأها هذا النوع من الاستيلاء.</em></p>
+
+<p>وعند الانتقال إلى صفحة تم الاستيلاء عليها، ربما ترى رسالة تفيد بأن الصفحة غير موجودة (مثل خطأ 404)، فلا تنخدع حيث يحاول المخترقون خداعك لتعتقد بأن موقعك تم إصلاحه وهذا من خلال دفعك لتعتقد بأن الصفحات قيد الاستيلاء قد اختفت أو تم إصلاحها، وهم ينفذون هذا من خلال <a href="//support.google.com/webmasters/answer/66355" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9BJHSzkBQAHlU9iNsiuhPw">إخفاء هوية</a> المحتوى. ويمكنك التحقق من إخفاء الهوية بإدخال عناوين
+   URL لموقعك في أداة <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">
+  جلب مثل Google</a>، والتي تتيح لك رؤية المحتوى المخفي.
+  وفي ما يلي مثال لما تبدو عليه هذه الصفحات التي تم الاستيلاء عليها.</p>
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExamplePage.png" style="padding:0px 25px">
+
+
+<a name="fixing"></a>
+<h2>حل مشكلة الاستيلاء</h2>
+
+<p>قبل البدء، أنشئ نسخة بدون اتصال لأي ملفات قبل إزالتها في حال احتجت إلى استعادتها لاحقًا، وإن كان من الأفضل أن تحتفظ بنسخة احتياطية من موقعك بالكامل قبل بدء عملية التنظيف، ويمكنك عمل هذا بحفظ جميع الملفات على خادمك إلى مكان آخر أو البحث عن أفضل خيارات للاحتفاظ بنسخة احتياطية يناسب نظام إدارة المحتوى المُستخَدم لديك.</p>
+
+<h3>التحقق من ملف .htaccess (ثلاث خطوات)</h3>
+
+<p>تستخدم الكلمات الرئيسية والروابط التي تم إخفاء هويتها ملف .htaccess لإنشاء صفحات مخفية الهوية على موقعك بشكل تلقائي. ويمكنك التعرف على
+  <a href="https://httpd.apache.org/docs/current/howto/htaccess.html" l10n-encrypted-href="oxukPFo/pb0BlXrrDLS8MY7H/A2VvrDif6x7R0dUeR+8wuajVXML/gAzUrl+oK27sJoXxFM3eSyNYOSGo/0x9Q==">.أساسيات htaccess</a> على موقع Apache الرسمي
+  لمساعدتك في فهم كيفية تأثير هذا النوع من الاستيلاء على موقعك إلا أن هذا ليس واجبًا. </p>
+
+<p><b>الخطوة 1</b></p>
+<p>حدد موقع ملف .htaccess على موقعك الإلكتروني، وإذا لم تكن متأكدًا أين تجده وكنت تستخدم نظام إدارة محتوى مثل
+   WordPress أو Joomla أو Drupal، فابحث عن "موقع ملف .htaccess" في محرك البحث باستخدام اسم نظام إدارة المحتوى، وربما ترى عدة ملفات .htaccess ويتوقف هذا على موقعك، فأعدّ قائمة بجميع مواقع ملفات .htaccess.
+</p>
+
+<p><strong>ملاحظة:</strong> عادة ما يكون .htaccess "ملفًا مخفيًا"، فتأكد من تمكين إظهار الملفات المخفية عند البحث عنه.</p>
+
+
+<p><b>الخطوة 2</b></p>
+<p>افتح ملف .htaccess لعرض محتوياته، ويفترض أن يكون بمقدورك التعرف على شفرة مكونة من سطر واحد تبدو أحيانًا كما يلي:</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  RewriteRule (.*cj2fa.*|^tobeornottobe$) /injected_file.php?q=$1 [L]
+</pre>
+
+<p>يمكن أن تختلف المتغيرات المذكورة في هذا السطر، فيمكن أن يكون كلاً من "cj2fa" و"tobeornottobe" أي مزيج من الحروف أو الكلمات، والمهم أن تجد ملف .php المُشار إليه في هذا السطر. .</p>
+
+<p>دّون اسم ملف .php المذكور في ملف .htaccess، وفي هذا المثال اسم ملف .php هو
+  "injected_file.php" ولكن في الواقع اسم الملف لن يكون واضحًا بل يكون عادة مجموعة عشوائية
+  من الكلمات غير شيقة مثل "horsekeys.php" وpotatolake.php" وهكذا، هناك احتمال كبير بأن يكون ملف .php هذا ضارًا ونحتاج إلى تتبعه وإزالته في وقت لاحق.</p>
+
+<div class="alert">تذّكر أنه ليس جميع الأسطر التي بها RewriteRule وأن جميع ملفات .php في .htaccess تكون ضارة.
+  فإذا لم تكن متأكدًا من تأثير سطر الشفرة، يمكنك الحصول على المساعدة من مجموعة من مشرفي المواقع ذوي الخبرة في
+   <a href="https://support.google.com/webmasters/go/community" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhFJD1Yl7IKG6D/z+YJGpyzQKhraDV8RTvPIa5MbSVtR/w==">منتديات مساعدة مشرفي المواقع</a>.</div>
+
+<p><b>الخطوة 3</b></p>
+<p>استبدل جميع ملفات .htaccess بنسخة نظيفة أو افتراضية من ملف .htaccess، ويمكنك عادة العثور على النسخة الافتراضية من الملف بالبحث عن "ملف .htaccess الافتراضي" واسم نظام إدارة المحتوى. أما بالنسبة إلى المواقع التي لها عدة ملفات .htaccess، فابحث عن نسخة نظيفة لكل ملف ثم أجرِ الاستبدال.</p>
+
+<p>في حال عدم وجود ملف .htaccess افتراضي أو عدم تهيئة ملف على موقعك، فربما يكون ملف .htaccess الذي تجده على موقعك ضارًا، فاحفظ نسخة من ملف .htaccess في وضع عدم الاتصال -للاستخدام عند الحاجة - ثم احذف الملف من موقعك.</p>
+
+<h3>البحث عن الملفات الضارة الأخرى وإزالتها (5 خطوات)</h3>
+
+<p>يمكن أن تكون عملية البحث عن الملفات الضارة معقدة وتستغرق عدة ساعات، فأمهل نفسك الوقت الكافي عند فحص الملفات. كما أنه الوقت المناسب للاحتفاظ بنسخة احتياطية من الملفات على موقعك إذا لم تكن قد فعلت هذا حتى الآن. أجرِ بحثًا على Google عن "الاحتفاظ بنسخة احتياطية من الموقع الإلكتروني" واسم نظام إدارة المحتوى للحصول على تعليمات حول كيفية الاحتفاظ بنسخة احتياطية من موقعك.</p>
+
+<p><b>الخطوة 1</b></p>
+<p>إذا كنت تستخدم نظام إدارة المحتوى، فأعد تثبيت جميع الملفات الأساسية (الافتراضية) التي تصاحب التوزيع الافتراضي للنظام إلى جانب الملفات التي أضفتها (مثل المظاهر والوحدات والمكونات الإضافية)، حيث يساعد هذا في ضمان خلو هذه الملفات من المحتوى الذي تم الاستيلاء عليه. يمكنك إجراء بحث على Google عن "إعادة التثبيت" واسم نظام إدارة المحتوى للحصول على تعليمات حول عملية إعادة التثبيت. وفي حال كانت لديك أي مكونات إضافية أو وحدات أو إضافات أو مظاهر، فتأكد من إعادة تثبيتها هي الأخرى.</p>
+
+<div class="alert">يمكن أن تؤدي إعادة تثبيت الملفات الأساسية إلى فقدان أي تخصيصات أجريتها من قبل، فاحرص على إنشاء نسخة احتياطية من قاعدة البيانات وجميع الملفات قبل الإقدام على إعادة التثبيت.</div>
+
+<p><b>الخطوة 2</b></p>
+<p>ابدأ بالبحث عن ملف .php الذي حددته قبلاً في ملف .htaccess، وحسب آلية الوصول إلى الملفات على الخادم، ينبغي أن تظهر لك وظيفة للبحث عن الملفات، وابحث عن اسم الملف الضار، وإذا وجدته، فاحتفظ بنسخة احيتاطية منه وخزّنه في مكان آخر في حال احتجت إلى استرداده ثم احذفه من موقعك.</p>
+
+<p><b>الخطوة 3</b></p>
+<p>ابحث عن أي ملفات ضارة أو مُخترَقة متبقية، ربما تكون قد أزلت جميع المفات الضارة في الخطوتين السابقتين إلا أنه من الأفضل تنفيذ الخطوات التالية القليلة في حال يوجد المزيد من الملفات المتضررة على موقعك.</p>
+
+<p>لا تشغل بالك بفكرة أنه يجب عليك فتح كل ملف PHP والنظر فيه، بل ابدأ بإنشاء قائمة بملفات PHP المشبوهة التي ترغب في فحصها، وإليك بعض الطرق التي تساعدك في تحديد ملفات PHP المريبة:</p><p>
+
+</p><ul>
+<li>إذا كنت قد أعدت تحميل ملفات نظام إدارة المحتوى قبلاً، فانظر فقط في الملفات التي لا تمثل جزءًا من ملفات أو مجلدات النظام الافتراضية، ويفترض أن يستبعد هذا عددًا كبيرًا من ملفات PHP ويترك لك قدرًا قليلاً من الملفات التي يجب أن تفحصها.</li>
+<li>افرز الملفات على موقعك بحسب تاريخ آخر تعديل، وانظر في الملفات التي تم تعديلها خلال بضعة أشهر من اكتشافك الأول لتعرض موقعك للاستيلاء.</li>
+<li>افرز الملفات على موقعك بحسب الحجم، وانظر في الملفات الكبيرة بشكل غير عادي.</li>
+</ul>
+
+<p><b>الخطوة 4</b></p>
+<p>بعد أن أصبح لديك قائمة بملفات PHP المشبوهة، تحقق منها لتعرف ما إذا كانت عادية أم ضارة.
+  إذا كنت غير ملم بلغة PHP، فستستغرق هذه العملية المزيد من الوقت لذا ننصحك
+  بتحسين معرفتك والاطلاع على بعض <a href="https://php.net/docs.php">وثائق PHP</a>.
+  ولكن حتى وإن كنت جديدًا تمامًا في مجال الترميز، فهناك بعض الأنماط الأساسية التي يمكن البحث عنها لتحديد الملفات الضارة.</p>
+
+<p>دقق أولاً في الملفات المشبوهة التي حددتها قبلاً بحثًا عن قوالب نصية كبيرة بها أحرف وأرقام تبدو مختلطة. وعادة ما يكون قالب النص مسبوقًا بمزيج من دوال PHP مثل
+   base64_decode وrot13 وeval وstrrev وgzinflate. وفي ما يلي مثال للشكل المحتمل لقالب الشفرة، وأحيانًا يتم حشو هذه الشفرة كلها في سطر نص واحد طويل مما يجعلها تبدو أصغر مما هي عليه في الواقع.</p>
+
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks of texts.
+Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0Vn
+ZgknbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2c
+hVmcnBydvJGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2b
+lRGI5xWZ0Fmb1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah
+1GIvRHIzlGa0BSZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch
+1GIlR2bjBCZlRXYjNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+<p>في بعض الأحيان لا تظهر الشفرة مختلطة وتبدو تمامًا مثل النص البرمجي العادي، فإذا لم تكن متأكدًا مما إذا كانت الشفرة ضارة أم لا، فانتقل إلى
+   <a href="https://productforums.google.com/forum/#!forum/webmasters">منتديات مساعدة مشرفي المواقع</a> التي تضم مجموعة من مشرفي المواقع ذوي الخبرة والذين يمكنهم مساعدتك في فحص الملفات.</p>
+
+<p><b>الخطوة 5</b></p>
+<p>الآن وبعد أن عرفت الملفات المشبوهة، أنشئ نسخة احتياطية أو نسخة محلية منها بحفظها على جهاز الكمبيوتر تحوطًا في حال تبين أنها غير ضارة ثم احذف الملفات المشبوهة.</p>
+
+<h3>التحقق لمعرفة ما إذا أصبح موقعك نظيفًا أم لا</h3>
+
+<p>بعد الانتهاء من التخلص من الملفات التي تم الاستيلاء عليها، تحقق لترى مردود عملك الجاد. هل تذكر صفحات الهراء التي وجدتها قبلاً؟ استخدم أداة "جلب مثل Google" معها مرة أخرى لمعرفة هل مازالت موجودة أم لا، وإذا كانت الاستجابة "غير موجودة" في أداة جلب مثل Google، فهناك فرص بأن يكون موقعك في حالة جيدة.</p>
+
+<div class="tip">يمكنك أيضًا اتباع الخطوات الواردة في <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">
+  أداة حل مشكلات المواقع التي تم الاستيلاء عليها</a> للتحقق من استمرار وجود محتوى تم الاستيلاء عليه على موقعك.</div>
+
+<h2>كيف يمكنني الحيلولة دون تعرض موقعي للاستيلاء مرة أخرى؟</h2>
+
+<p>إن إصلاح الثغرات الأمنية الموجودة في موقعك خطوة ختامية أساسية لإصلاح موقعك حيث أظهرت دراسة أجريت حديثًا أن 20% من المواقع التي تم الاستيلاء عليها تتعرض للاستيلاء مرة أخرى في غضون يوم واحد كما كانت معرفة الطريقة التي تم بها الاستيلاء مفيدة. فاقرأ دليل
+  <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">أهم الطرق التي يستولي بها أصحاب الأسلوب غير المرغوب فيها على مواقع الويب</a> لبدء الفحص. ولكن إذا لم تتمكن من معرفة كيف تم الاستيلاء على موقعك، ففي ما يلي قائمة تحقق بالأشياء التي يمكنك فعلها للحد من الثغرات الأمنية على موقعك.</p>
+
+<ul>
+<li>تحديث نظام إدارة المحتوى والإضافات والوحدات بانتظام: نأمل أن تكون قد نفذّت هذه الخطوة من قبل فهناك الكثير من المواقع التي تتعرض للاستيلاء لأن البرنامج التي تعمل عليها غير محدثة علمًا بأن بعض أنظمة إدارة المحتوى تتيح التحديث التلقائي لها.</li>
+<li>فحص جهاز الكمبيوتر بانتظام: استخدم أي برنامج فحص فيروسات شائع للبحث عن الفيروسات أو الثغرات الأمنية.</li>
+<li>تغيير كلمات المرور بانتظام: يمكن للتغيير المنتظم لكلمات المرور إلى جميع حسابات موقعك -مثل موفر خدمة الاستضافة وبرتوكول نقل الملفات ونظام إدارة المحتوى-
+الحيلولة دون الوصول غير المصرح به إلى موقعك
+  كما أنه من المهم إنشاء كلمة مرور قوية فريدة لكل حساب.</li>
+<li>استخدام <a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">المصادقة الثنائية (2FA)</a>: ننصحك بتمكين المصادقة الثنائية لأي خدمة تتطلب تسجيل الدخول فهي تصّعب على المخترقين تسجيل الدخول حتى إذا تمكنوا من سرقة كلمة المرور بنجاح.</li>
+<li>التفكير في الاشتراك في خدمة أمان لمراقبة موقعك: هناك الكثير من الخدمات الرائعة التي يمكنها مساعدتك في مراقبة موقعك مقابل رسوم بسيطة، ففكر في التسجيل فيها للحفاظ على موقعك آمنًا.</li>
+</ul>
+
+<a name="resources"></a>
+<h2>موارد إضافية</h2>
+<p>إذا كنت لا تزال تواجه مشكلات في إصلاح موقعك، فهناك بعض الموارد الإضافية التي قد تساعدك.</p>
+
+<p>تفحص هذه الأدوات موقعك وربما يمكنها العثور على المحتوى المتسبب في المشكلة، هذا ولا يستخدم محرك بحث Google أو يتوافق مع أي من هذه الأدوات ما عدا VirusTotal.</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a> و<a href="https://aw-snap.info/">
+  Aw-snap.info</a> و<a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a> و<a href="https://www.quttera.com/">Quttera</a>: هذه بعض الأدوات التي يمكنها فحص موقعك بحثًا عن المحتوى الذي يمثل مشكلة. وتجدر الإشارة إلى أن أدوات الفحص هذه لا يمكنها أن تضمن التعرف على كل نوع من أنواع المحتوى الذي ينطوي على مشكلات.</p>
+
+<p>في ما يلي بعض الموارد الإضافية من Google والتي يمكنها مساعدتك:</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">منتدى مساعدة مشرفي المواقع من Google</a></li>
+<li><a href="/web/fundamentals/security/hacked/">مساعدة مشرفي المواقع من Google بشأن مواقع الويب التي تم الاستيلاء عليها</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">التصفح الآمن من Google</a></li>
+</ul>
+
+<div class="alert">هل هناك أداة تعتقد أنها ربما تكون مفيدة لم يتم ذكرها؟ <a href="https://docs.google.com/a/  google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="voYeKygemXxQpSsj4TC5AfUbyuHWzoMwWwMBaPnMUvCB/+GeICZWcFPsNfkTA2yKrhrEkO/djoguK4tnJcrqXJ+wsE+tFKLdRQjytTrchinkpeA/GFKTKj/6rHbJmOv3qwUI9b2ZthvPFzCvc6kgQQ==">اترك تعليقاتك
+  </a> وأخبرنا بها.</div>
+
+
+</body></html>
