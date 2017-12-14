@@ -15,11 +15,34 @@ description: Advanced recipes to use with Workbox.
 A common UX pattern for progressive web apps is to show a banner when a service
 worker has updated and waiting to install.
 
-To do this you'll need to add some code to your page and to your service worker.
+To do this you'll need to add some polyfill code to your page and to your service worker.
 
 **Add to your page**
 
 ```javascript
+// polyfill navigator.serviceWorker.waiting
+if (!('waiting' in navigator.serviceWorker)) {
+  navigator.serviceWorker.waiting = new Promise(function(resolve) {
+    navigator.serviceWorker.ready.then(function(reg) {
+      function awaitStateChange() {
+        reg.installing.addEventListener('statechange', function() {
+          if (this.state === 'installed') resolve(reg);
+        });
+      }
+      if (reg.waiting) resolve(reg);
+      if (reg.installing) awaitStateChange();
+      reg.addEventListener('updatefound', awaitStateChange);
+    })
+  });
+}
+
+// polyfill ServiceWorker.skipWaiting()
+if (!('skipWaiting' in ServiceWorker.prototype)) {
+  ServiceWorker.prototype.skipWaiting = function() {
+    this.postMessage('skipWaiting');
+  }
+}
+
 function showRefreshUI(registration) {
   // TODO: Display a toast or refresh UI.
 
@@ -40,68 +63,27 @@ function showRefreshUI(registration) {
 
     button.disabled = true;
 
-    registration.waiting.postMessage('skipWaiting');
+    registration.waiting.skipWaiting();
   });
 
   document.body.appendChild(button);
 };
 
-function onNewServiceWorker(registration, callback) {
-  if (registration.waiting) {
-    // SW is waiting to activate. Can occur if multiple clients open and
-    // one of the clients is refreshed.
-    return callback();
-  }
-
-  function listenInstalledStateChange() {
-    registration.installing.addEventListener('statechange', function(event) {
-      if (event.target.state === 'installed') {
-        // A new service worker is available, inform the user
-        callback();
-      }
-    });
-  };
-
-  if (registration.installing) {
-    return listenInstalledStateChange();
-  }
-
-  // We are currently controlled so a new SW may be found...
-  // Add a listener in case a new SW is found,
-  registration.addEventListener('updatefound', listenInstalledStateChange);
-}
-
-window.addEventListener('load', function() {
-  // When the user asks to refresh the UI, we'll need to reload the window
-  navigator.serviceWorker.addEventListener('controllerchange', function(event) {
-    console.log('Controller loaded');
-    window.location.reload();
-  });
-
-  navigator.serviceWorker.register('/sw.js')
-  .then(function (registration) {
-      // Track updates to the Service Worker.
-    if (!navigator.serviceWorker.controller) {
-      // The window client isn't currently controlled so it's a new service
-      // worker that will activate immediately
-      return;
-    }
-
-    onNewServiceWorker(registration, function() {
-      showRefreshUI(registration);
-    });
-  });
+navigator.serviceWorker.addEventListener('controllerchange', function() {
+  window.location.reload();
 });
+
+navigator.serviceWorker.waiting.then(showRefreshUI);
 ```
 
-This code handles the verious possible lifecycles of the service worker
+The polyfill handles the various possible lifecycles of the service worker
 and detects when a new service worker has become installed and is waiting to
 activate.
 
-When a waiting service worker is found we set up a 'controllerchange' listener
-on `navigator.serviceWorker` so we know when to reload the window. When the
-user clicks on the UI to refresh the page, we post a message to the new
-service worker telling it to `skipWaiting` meaning it'll start to activate.
+When a waiting service worker is found, we we tell the service worker to skip
+waiting (posting a message if necessary). After this, the `controllerchange`
+event will fire. The page should reload when the controller changes to
+ensure that all tabs are running the same version of the code.
 
 Note: This is one possible approach to refreshing the page on a new service
 worker. For a more thorough answer as well as an explanation of alternative
@@ -110,6 +92,9 @@ approaches this
 discuess a range of options.
 
 **Add to your service worker**
+
+This code supports the polyfill while we wait for `ServiceWorker.skipWaiting`
+to be available in all browsers.
 
 ```javascript
 self.addEventListener('message', (event) => {
@@ -128,7 +113,7 @@ self.addEventListener('message', (event) => {
 });
 ```
 
-This will receive a the 'skipWaiting' message and call `skipWaiting()`forcing
+This will receive a the 'skipWaiting' message and call `skipWaiting()`, forcing
 the service worker to activate immediately.
 
 ## "Warm" the runtime cache
