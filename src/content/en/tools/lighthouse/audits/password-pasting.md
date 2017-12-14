@@ -28,7 +28,7 @@ enabling pasting is a better security practice.
 ## Recommendations {: #recommendations }
 
 Remove the code that's preventing users from pasting into password fields. It's probably a call
-to `preventDefault()` within the `paste` event listener that's associated to the password field
+to `preventDefault()` within the `paste` event listener that's associated to the password
 input element.
 
 <pre class="prettyprint">let input = document.querySelector('input');
@@ -40,18 +40,18 @@ input.addEventListener('paste', (e) => {
 
 To quickly find and inspect the code that's preventing pasting, try enabling the **Clipboard** >
 `paste` checkbox in the [Event Listener Breakpoints][ELB] section of Chrome DevTools, then
-pasting into the password field. DevTools should pause on the first line of code in the `paste`
+pasting into a password field. DevTools should pause on the first line of code in the `paste`
 event listener.
 
-Note: If this method doesn't find the relevant code, the code that prevents pasting may be in a
-different event listener. If you have a URL that reproduces the issue, you can [open a ticket
-on the google/webfundamentals repository][ticket]. One of the teammates on the Google Web DevRel
-team will research how it works, so that the method can be added to this reference.
-
 [ELB]: /web/tools/chrome-devtools/javascript/breakpoints#event-listeners
-[ticket]: https://github.com/google/WebFundamentals/issues/new?title=[lighthouse]%20preventing%20password%20pasting&body=@kaycebasques%20please%20investigate%20%3CYOUR_URL_HERE%3E
 
 ## More information {: #more-info }
+
+Lighthouse gathers all `<input type="password">` elements, pastes some text into each element,
+and then verifies that the element's content has been set to the pasted text. If a page
+doesn't use `<input type="password">` for its password input fields, Lighthouse does't detect
+those elements. It's also possible to prevent pasting outside of a `paste` event listener.
+Lighthouse doesn't detect that scenario, either.
 
 [Audit source][src]{:.external}
 
