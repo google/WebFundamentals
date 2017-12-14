@@ -1,8 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-30 #}
+{# wf_updated_on: 2017-12-21 #}
 {# wf_published_on: 2015-01-01 #}
+{# wf_blink_components: N/A #}
 
 # Request a review {: .page-title }
 
@@ -96,7 +97,7 @@ protect users.
 * **If your request was approved,** verify that your site works as expected:
   pages load properly and links are clickable. To keep your site safe,
   we encourage all site owners to implement the maintenance and security
-  plan created in [Clean and maintain your site](clean_site). 
+  plan created in [Clean and maintain your site](clean_site).
 
     For more information, consider the following resources from
     [StopBadware](https://www.stopbadware.org):

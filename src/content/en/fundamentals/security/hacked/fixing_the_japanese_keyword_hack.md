@@ -1,8 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-30 #}
+{# wf_updated_on: 2017-12-21 #}
 {# wf_published_on: 2015-01-01 #}
+{# wf_blink_components: N/A #}
 
 # Fixing the gibberish hack {: .page-title }
 
@@ -30,7 +31,7 @@ Japanese text on your site in randomly generated directory names
 monetized using affiliate links to stores selling fake brand merchandise
 and then shown in Google search. Here’s an example of what one ofthese pages look like:
 
-With this type of hack, the hacker will typically add themselves as a 
+With this type of hack, the hacker will typically add themselves as a
 property owner in Search Console, in order to increase profits by
 manipulating your site’s settings like geotargeting or sitemaps.
 If you’ve received a notification that someone you don’t know has

@@ -1,13 +1,14 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-30 #}
+{# wf_updated_on: 2017-12-21 #}
 {# wf_published_on: 2015-01-01 #}
+{# wf_blink_components: N/A #}
 
 # Use Search Console {: .page-title }
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="jC7jja6ebBM" 
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jC7jja6ebBM"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -74,16 +75,16 @@ Search Console and make unwanted settings changes.
 1. Navigate to the main Search Console homepage by clicking the Search Console logo.
 2. Find your site, then click **Manage site.**
 3. Click **Add or remove users**.
-4. Be sure that all 
+4. Be sure that all
    [users and owners](https://www.support.google.com/webmasters/answer/44227)
    listed are authorized.
-5. Document the email address of any unauthorized user (in case it's helpful 
+5. Document the email address of any unauthorized user (in case it's helpful
    in the future), then delete the user from your site. For unauthorized
    owners, you'll need to both delete the owner and any possible verification
    tokens, such as a verification metatag on your homepage or a HTML file on
    your server.
    ([More information.](https://www.support.google.com/webmasters/answer/2454036))
-6. Investigate for unwanted settings changes in Search Console. Click the 
+6. Investigate for unwanted settings changes in Search Console. Click the
    <span class="material-icons">settings</span> Settings icon, then click
    [**Site Settings**](https://www.support.google.com/webmasters/answer/2454036)
    to check for possible undesirable changes by the hacker such as a lower

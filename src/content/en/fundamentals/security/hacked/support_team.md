@@ -1,8 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-30 #}
+{# wf_updated_on: 2017-12-21 #}
 {# wf_published_on: 2015-01-01 #}
+{# wf_blink_components: N/A #}
 
 # Build a support team {: .page-title }
 

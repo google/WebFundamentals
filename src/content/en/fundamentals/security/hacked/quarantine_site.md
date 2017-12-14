@@ -1,8 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-30 #}
+{# wf_updated_on: 2017-12-21 #}
 {# wf_published_on: 2015-01-01 #}
+{# wf_blink_components: N/A #}
 
 # Quarantine your site {: .page-title }
 
@@ -40,7 +41,7 @@ process will affect future ranking of your site in search results.
   Convey to your hoster that you'll soon need to toggle your site between
   online and offline for testing purposes as that may help them give you the
   most self-service method for taking your site offline.
-* Having your site return a 4xx or 5xx 
+* Having your site return a 4xx or 5xx
   [HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
   isn't enough to protect your users. Harmful content can still be returned to
   users with 404, 503, etc. *The 503 status code is a useful signal that your

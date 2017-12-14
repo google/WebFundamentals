@@ -1,8 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-30 #}
+{# wf_updated_on: 2017-12-21 #}
 {# wf_published_on: 2015-01-01 #}
+{# wf_blink_components: N/A #}
 
 # Clean and maintain your site {: .page-title }
 
@@ -44,7 +45,7 @@ We'll cover several actions in this step: 
 * Changing all passwords
 * Planning to keep your site secure
 
-### 1. Locate support resources 
+### 1. Locate support resources
 
 Locate support resources when dealing with loss of confidential information,
 such as with phishing pages.
@@ -128,7 +129,7 @@ First, check that this backup was created **before** your site was hacked.
 2. Make a backup file system copy of your server, including images and media
   files. If you have a database, backup the database as well.
 
-        tar -pczf full-backup-20120125-infected.tar.gz www/ 
+        tar -pczf full-backup-20120125-infected.tar.gz www/
         mysqldump -u root -p --all-databases | gzip -9 \
           > fulldb_backup-20120125-infected.sql
 
@@ -177,7 +178,7 @@ First, check that this backup was created **before** your site was hacked.
       well.
 
             tar -pczf full-backup-20120125-infected.tar.gz www/
-            mysqldump -u root -p --all-databases | gzip -9 \ 
+            mysqldump -u root -p --all-databases | gzip -9 \
               > fulldb_backup-20120125-infected.sql
 
     * If you don’t have a disk image, make two backups of the database and

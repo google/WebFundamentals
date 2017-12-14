@@ -1,8 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-30 #}
+{# wf_updated_on: 2017-12-21 #}
 {# wf_published_on: 2015-01-01 #}
+{# wf_blink_components: N/A #}
 
 # Fixing the cloaked keywords and links hack {: .page-title }
 
@@ -11,7 +12,7 @@ Note: Unsure whether or not your site is hacked? Start by reading our
 
 This guide is created specifically for a type of hack that adds keyword-heavy
 gibberish pages to your site which we’ll refer to as the cloaked keywords and
-links hack. It’s designed for users of 
+links hack. It’s designed for users of
 [popular Content Management Systems (CMSs)](https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS),
 but you’ll find this guide useful even if you don’t use a CMS.
 
